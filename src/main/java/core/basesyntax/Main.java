@@ -6,7 +6,6 @@ import core.basesyntax.model.IsoscelesTrapezoid;
 import core.basesyntax.model.Rectangle;
 import core.basesyntax.model.RightTriangle;
 import core.basesyntax.model.Square;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,7 +20,7 @@ public class Main {
         List<Figure> result = new ArrayList<>(initialCapacity);
         int iterator = 0;
         while (iterator < initialCapacity) {
-            switch((int) (Math.random() * 4)) {
+            switch ((int) (Math.random() * 4)) {
                 case 0 :
                     result.add(new Circle());
                     break;
@@ -40,7 +39,7 @@ public class Main {
                 default :
                     break;
             }
-        iterator++;
+            iterator++;
         }
         return result;
     }
