@@ -26,6 +26,11 @@ public class Rectangle extends Figure implements HasDiagonal {
         this.sideB = sideB;
     }
 
+    public static Rectangle generateFigure() {
+        return new Rectangle(Colors.randomColor().name().toLowerCase(),
+                (int)(Math.random() * 15) + 3, (int)(Math.random() * 15) + 3);
+    }
+
     @Override
     public double getArea() {
         return sideA * sideB;

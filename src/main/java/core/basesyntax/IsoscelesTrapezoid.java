@@ -36,6 +36,12 @@ public class IsoscelesTrapezoid extends Figure implements HasHeight, HasDiagonal
         this.side = side;
     }
 
+    public static IsoscelesTrapezoid generateFigure() {
+        return new IsoscelesTrapezoid(Colors.randomColor().name().toLowerCase(),
+                (int)(Math.random() * 15) + 3,
+                (int)(Math.random() * 27) + 3, (int)(Math.random() * 10) + 3);
+    }
+
     @Override
     public double getArea() {
         return (upSide + downSide) / 2 * Math.sqrt(side * side

@@ -8,6 +8,19 @@ public class RightTriangle extends Figure implements HasHeight {
         this.side = side;
     }
 
+    public double getSide() {
+        return side;
+    }
+
+    public void setSide(double side) {
+        this.side = side;
+    }
+
+    public static RightTriangle generateFigure() {
+        return new RightTriangle(Colors.randomColor().name().toLowerCase(),
+                (int)(Math.random() * 15) + 3);
+    }
+
     @Override
     public double getArea() {
         return 0.5 * side * getHeight();
@@ -29,4 +42,5 @@ public class RightTriangle extends Figure implements HasHeight {
     public double getHeight() {
         return side * Math.sqrt(3) / 2;
     }
+
 }

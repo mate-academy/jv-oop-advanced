@@ -16,6 +16,10 @@ public class Circle extends Figure implements HasDiagonal {
         this.radius = radius;
     }
 
+    public static Circle generateFigure() {
+        return new Circle(Colors.randomColor().name().toLowerCase(), (int)(Math.random() * 15) + 3);
+    }
+
     @Override
     public double getArea() {
         return Math.PI * radius * radius;
