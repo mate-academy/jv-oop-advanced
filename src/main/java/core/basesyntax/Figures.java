@@ -15,5 +15,6 @@ abstract class Figures implements Drawable {
     public void draw() {
         System.out.println("Figure has been drawn");
     }
+
     abstract int getArea();
 }
