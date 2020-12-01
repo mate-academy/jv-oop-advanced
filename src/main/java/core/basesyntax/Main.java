@@ -12,7 +12,7 @@ public class Main {
             figures[i] = Figures.getRandomFigure();
         }
 
-        for (Figures some: figures) {
+        for (Figures figure/element: figures) {
             some.displayInfo();
         }
     }
