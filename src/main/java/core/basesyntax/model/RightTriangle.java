@@ -2,16 +2,23 @@ package core.basesyntax.model;
 
 public class RightTriangle extends Figure {
 
-    private final int sideLength;
+    private final int hypotenuse;
+    private final int biggerCathetus;
+    private final int smallerCathetus;
 
-    public RightTriangle(int sideLength, Color color) {
-        this.sideLength = sideLength;
+    public RightTriangle(int hypotenuse, int biggerCathetus, int smallerCathetus, Color color) {
+        this.hypotenuse = hypotenuse;
+        this.biggerCathetus = biggerCathetus;
+        this.smallerCathetus = smallerCathetus;
         this.color = color;
-        this.area = Math.round(Math.pow(sideLength, 2) * Math.sqrt(3) / 4);
+        this.area = biggerCathetus * smallerCathetus / 2;
     }
 
     public RightTriangle() {
-        this((int) (Math.random() * 19) + 1, Color.randomColor());
+        this((int) (Math.random() * 20) + 1, 
+                (int) (Math.random() * 12) + 1, 
+                (int) (Math.random() * 9) + 1, 
+                Color.randomColor());
     }
 
     @Override
@@ -19,15 +26,29 @@ public class RightTriangle extends Figure {
         return new StringBuilder("Right triangle: ")
                 .append("area = ")
                 .append(this.area)
-                .append(", side length = ")
-                .append(this.sideLength)
+                .append(", hypotenuse length = ")
+                .append(this.hypotenuse)
+                .append(", cathetus = ")
+                .append("{")
+                .append(biggerCathetus)
+                .append(", ")
+                .append(smallerCathetus)
+                .append("}")
                 .append(", color = ")
                 .append(this.color)
                 .toString();
     }
 
-    public int getSideLength() {
-        return sideLength;
+    public int getHypotenuse() {
+        return hypotenuse;
+    }
+
+    public int getBiggerCathetus() {
+        return biggerCathetus;
+    }
+
+    public int getSmallerCathetus() {
+        return smallerCathetus;
     }
 
     public Color getColor() {
