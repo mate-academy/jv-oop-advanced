@@ -1,8 +1,7 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-   private int hypotenuse;
-   private int side;
+    private int side;
 
     public RightTriangle(String color, int side) {
         super(color);
@@ -12,12 +11,12 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        area = side * this.hypotenuse / 2;
+        area = this.side * this.side / 2;
     }
 
     @Override
     public String toString() {
-        return "Figure: triangle, area: " + area + " sq. units, hypotenuse: " +
-                hypotenuse + ", sides: " + side + ", color: " + color;
+        return "Figure: triangle, area: " + area
+                + " sq. units, sides: " + side + ", color: " + color;
     }
 }

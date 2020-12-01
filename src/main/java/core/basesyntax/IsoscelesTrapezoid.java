@@ -18,16 +18,16 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public void draw() {
         area = (topWidth + downWidth) * Math.sqrt(4 * (side * side)
-                -(downWidth * downWidth - 2 * topWidth * downWidth + topWidth * topWidth)) / 4;
+                - (downWidth * downWidth - 2 * topWidth * downWidth + topWidth * topWidth)) / 4;
         diagonal = Math.sqrt(side * side + topWidth * downWidth);
         height = Math.sqrt(4 * (side * side) - (downWidth * downWidth - 2
-                * topWidth * downWidth + topWidth*topWidth)) / 2;
+                * topWidth * downWidth + topWidth * topWidth)) / 2;
     }
 
     @Override
     public String toString() {
-        return "Figure: isosceles trapezoid, area: " + area + " sq. units, diagonal: " +
-                diagonal + ", top width: " + topWidth + ", down width: " + downWidth +
-                ", sides: " + side + ", height: " + height + ", color: " + color;
+        return "Figure: isosceles trapezoid, area: " + area + " sq. units, diagonal: "
+                + diagonal + ", top width: " + topWidth + ", down width: " + downWidth
+                + ", sides: " + side + ", height: " + height + ", color: " + color;
     }
 }
