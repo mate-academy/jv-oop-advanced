@@ -20,7 +20,7 @@ public class Main {
         List<Figure> result = new ArrayList<>(initialCapacity);
         int iterator = 0;
         while (iterator < initialCapacity) {
-            switch ((int) (Math.random() * 4)) {
+            switch ((int) (Math.random() * 5)) {
                 case 0 :
                     result.add(new Circle());
                     break;
@@ -33,10 +33,8 @@ public class Main {
                 case 3 :
                     result.add(new RightTriangle());
                     break;
-                case 4 :
-                    result.add(new Square());
-                    break;
                 default :
+                    result.add(new Square());
                     break;
             }
             iterator++;
