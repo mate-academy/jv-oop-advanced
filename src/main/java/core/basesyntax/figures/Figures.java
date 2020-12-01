@@ -1,7 +1,6 @@
 package core.basesyntax.figures;
 
 public abstract class Figures implements Displayable, Drawable {
-
     protected double area;
     protected Color color;
 
