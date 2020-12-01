@@ -8,7 +8,7 @@ public class Circle  extends Shape {
     private StringBuilder sb = new StringBuilder();
     private double roundness; // Окружность
 
-    public Circle(String name){
+    public Circle(String name) {
         super(name);
         rand = new Random();
         this.roundness = rand.nextInt(50);
@@ -25,7 +25,12 @@ public class Circle  extends Shape {
     }
 
     @Override
-    public void draw(){
+    public void draw() {
+        System.out.print( "******" +
+                         "*" +    "*" +
+                        "*" +      "*" +
+                         "*"+     "*" +
+                           "******" );
     }
 
     @Override
@@ -35,8 +40,7 @@ public class Circle  extends Shape {
                 .append("color: " + super.getColor()).toString();
     }
 
-    public double radius(){
-
+    public double radius() {
         return (int)(roundness / (2 * Math.PI));
     }
 }

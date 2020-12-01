@@ -28,6 +28,12 @@ public class RightTriangle extends Shape {
 
     @Override
     public void draw() {
+        System.out.println("*" +
+                           "**" +
+                           "***" +
+                           "****" +
+                           "*****" +
+                           "******");
     }
 
     @Override

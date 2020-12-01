@@ -10,7 +10,7 @@ public class Rectangle extends Shape {
     private int width;
 
 
-    public Rectangle (String name){
+    public Rectangle (String name) {
         super(name);
         rand = new Random();
         this.length = rand.nextInt(15);
@@ -28,7 +28,13 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    public void draw() {}
+    public void draw() {
+        System.out.println("****************" +
+                           "*" +          "*" +
+                           "*" +          "*" +
+                           "*" +          "*" +
+                           "***************");
+    }
 
     public String info() {
         return sb.append("Shape: ").append(super.getName()+ ", ").append("area: " + this.calculateArea() + " sq.units ")

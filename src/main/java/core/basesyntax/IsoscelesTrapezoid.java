@@ -29,7 +29,12 @@ public class IsoscelesTrapezoid  extends Shape {
     }
 
     @Override
-    public void draw() {}
+    public void draw() {
+        System.out.println("********" +
+                          "*" +    "*" +
+                         "*"  +      "*" +
+                        "**************");
+    }
 
     @Override
     public String info() {

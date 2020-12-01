@@ -25,7 +25,14 @@ public class Square extends Shape{
     }
 
     @Override
-    public void draw() {}
+    public void draw() {
+        System.out.println("***************" +
+                           "*" +         "*" +
+                           "*" +         "*" +
+                           "*" +         "*" +
+                           "*" +         "*" +
+                           "***************");
+    }
 
     public String info() {
         return sb.append("Shape: ").append(super.getName()+ ", ").append("area: " + this.calculateArea() + " sq.units ")

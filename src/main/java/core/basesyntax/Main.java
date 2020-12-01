@@ -5,7 +5,7 @@ import java.util.Random;
 
 public class Main implements Fillable {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Main main = new Main();
         Shape[] shapeArr = main.fill();
 
