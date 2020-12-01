@@ -31,7 +31,7 @@ public class Square extends Shape {
 
     public String info() {
         return sb.append(super.info()).append(",area: " + this.calculateArea() + " sq.units ")
-               .append("side length: " + this.sideLength() + " units ").toString();
+        .append("side length: " + this.sideLength() + " units ").toString();
     }
 
     public double sideLength() {

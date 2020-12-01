@@ -36,7 +36,7 @@ public class IsoscelesTrapezoid extends Shape {
     @Override
     public String info() {
         return sb.append(super.info()).append(",area: " + this.calculateArea() + " sq.units ")
-                .append("height: " + this.height() + " units ").toString();
+        .append("height: " + this.height() + " units ").toString();
     }
 
     public double averageLine() {
