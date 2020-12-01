@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements HasBisector {
+public class RightTriangle extends Figure implements HasBisector, Drawing {
     private double sideA;
     private double sideB;
 
@@ -24,11 +24,6 @@ public class RightTriangle extends Figure implements HasBisector {
 
     public void setSideB(double sideB) {
         this.sideB = sideB;
-    }
-
-    public static RightTriangle generateFigure() {
-        return new RightTriangle(Colors.randomColor().name().toLowerCase(),
-                (int)(Math.random() * 15) + 3, (int)(Math.random() * 15) + 3);
     }
 
     @Override

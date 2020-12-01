@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements HasHeight, HasDiagonal {
+public class IsoscelesTrapezoid extends Figure implements HasHeight, HasDiagonal, Drawing {
     private double downSide;
     private double upSide;
     private double side;
@@ -34,12 +34,6 @@ public class IsoscelesTrapezoid extends Figure implements HasHeight, HasDiagonal
 
     public void setSide(double side) {
         this.side = side;
-    }
-
-    public static IsoscelesTrapezoid generateFigure() {
-        return new IsoscelesTrapezoid(Colors.randomColor().name().toLowerCase(),
-                (int)(Math.random() * 15) + 3,
-                (int)(Math.random() * 27) + 3, (int)(Math.random() * 10) + 3);
     }
 
     @Override

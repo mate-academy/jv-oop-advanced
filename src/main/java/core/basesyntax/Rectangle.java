@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements HasDiagonal {
+public class Rectangle extends Figure implements HasDiagonal, Drawing {
     private double sideA;
     private double sideB;
 
@@ -24,11 +24,6 @@ public class Rectangle extends Figure implements HasDiagonal {
 
     public void setSideB(double sideB) {
         this.sideB = sideB;
-    }
-
-    public static Rectangle generateFigure() {
-        return new Rectangle(Colors.randomColor().name().toLowerCase(),
-                (int)(Math.random() * 15) + 3, (int)(Math.random() * 15) + 3);
     }
 
     @Override

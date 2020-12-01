@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements HasDiagonal {
+public class Circle extends Figure implements HasDiagonal, Drawing {
     private double radius;
 
     public Circle(String color, double radius) {
@@ -14,10 +14,6 @@ public class Circle extends Figure implements HasDiagonal {
 
     public void setRadius(double radius) {
         this.radius = radius;
-    }
-
-    public static Circle generateFigure() {
-        return new Circle(Colors.randomColor().name().toLowerCase(), (int)(Math.random() * 15) + 3);
     }
 
     @Override

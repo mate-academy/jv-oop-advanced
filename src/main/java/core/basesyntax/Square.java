@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends Figure implements HasDiagonal {
+public class Square extends Figure implements HasDiagonal, Drawing {
     private double side;
 
     public Square(String color, double side) {
@@ -15,10 +15,6 @@ public class Square extends Figure implements HasDiagonal {
 
     public double getSide() {
         return side;
-    }
-
-    public static Square generateFigure() {
-        return new Square(Colors.randomColor().name().toLowerCase(), (int)(Math.random() * 15) + 3);
     }
 
     @Override
@@ -42,5 +38,4 @@ public class Square extends Figure implements HasDiagonal {
     public double getDiagonal() {
         return Math.sqrt(2) * side;
     }
-
 }
