@@ -5,6 +5,7 @@ import java.util.Random;
 public class Square extends Shape{
 
     private Random rand;
+    private StringBuilder sb = new StringBuilder();
     private int sideA;
 
     public Square(String name, String color) {
@@ -27,7 +28,12 @@ public class Square extends Shape{
     public void draw() {}
 
     public String info() {
-        return null;
+        return sb.append("Shape: ").append(super.getName()+ ", ").append("area: " + this.calculateArea() + " sq.units")
+               .append("side length: " + this.sideLength() + " units ")
+                .append("color: " + super.getColor()).toString();
     }
 
+    public double sideLength() {
+        return perimeter() / 4;
+    }
 }
