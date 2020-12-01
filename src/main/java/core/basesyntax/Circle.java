@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Circle  extends Shape {
 
-    Random rand;
+    private Random rand;
     private StringBuilder sb = new StringBuilder();
     private double roundness; // Окружность
 

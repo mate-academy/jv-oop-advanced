@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Rectangle extends Shape {
 
-    Random rand;
+    private Random rand;
     private StringBuilder sb = new StringBuilder();
     private int length;
     private int width;

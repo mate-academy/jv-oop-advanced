@@ -4,11 +4,10 @@ import java.util.Random;
 
 public abstract class  Shape {
 
-    private Random rand;
     private String name;
     private String color;
 
-    public Shape(String name){
+    public Shape(String name) {
         this.name = name;
         this.color = randomColor();
     }
@@ -29,7 +28,7 @@ public abstract class  Shape {
 
     public abstract String info();
 
-    private String randomColor(){
+    private String randomColor() {
         String color = "";
         String[] array = {"white", "black", "yellow", "red", "orange",
                             "pink", "purple", "grey", "brown" , "golden",
