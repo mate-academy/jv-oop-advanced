@@ -9,7 +9,7 @@ public class RightTriangle extends Shape {
     private int sideA;
     private int sideB;
 
-    public RightTriangle(String name){
+    public RightTriangle(String name) {
         super(name);
         rand = new Random();
         this.sideA = rand.nextInt(10);
@@ -18,7 +18,7 @@ public class RightTriangle extends Shape {
 
     @Override
     public double calculateArea() {
-        return 1/2 * sideA * sideB;
+        return 1 / 2 * sideA * sideB;
     }
 
     @Override
@@ -28,22 +28,16 @@ public class RightTriangle extends Shape {
 
     @Override
     public void draw() {
-        System.out.println("*" +
-                           "**" +
-                           "***" +
-                           "****" +
-                           "*****" +
-                           "******");
+        System.out.println("Drawing Right Triangle");
     }
 
     @Override
     public String info() {
-        return sb.append("Shape: ").append(super.getName()+ ", ").append("area: " + this.calculateArea() + " sq.units ")
-                .append("hypotenuse: " + this.getHypotenuse() + " units ")
-                .append("color: " + super.getColor()).toString();
+        return sb.append(super.info()).append(",area: " + this.calculateArea() + " sq.units ")
+        .append("hypotenuse: " + this.getHypotenuse() + " units ").toString();
     }
 
-    public double getHypotenuse(){
+    public double getHypotenuse() {
         return (int)(Math.sqrt((sideA * sideA) + (sideB * sideB)));
     }
 }

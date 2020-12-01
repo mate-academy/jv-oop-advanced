@@ -9,8 +9,7 @@ public class Rectangle extends Shape {
     private int length;
     private int width;
 
-
-    public Rectangle (String name) {
+    public Rectangle(String name) {
         super(name);
         rand = new Random();
         this.length = rand.nextInt(15);
@@ -29,17 +28,12 @@ public class Rectangle extends Shape {
 
     @Override
     public void draw() {
-        System.out.println("****************" +
-                           "*" +          "*" +
-                           "*" +          "*" +
-                           "*" +          "*" +
-                           "***************");
+        System.out.println("Drawing Rectangle");
     }
 
     public String info() {
-        return sb.append("Shape: ").append(super.getName()+ ", ").append("area: " + this.calculateArea() + " sq.units ")
-                .append("diagonal: " + this.getDiagonal() + " units ")
-                .append("color: " + super.getColor()).toString();
+        return sb.append(super.info()).append(",area: " + this.calculateArea() + " sq.units ")
+        .append("diagonal: " + this.getDiagonal() + " units ").toString();
     }
 
     public double getDiagonal() {
