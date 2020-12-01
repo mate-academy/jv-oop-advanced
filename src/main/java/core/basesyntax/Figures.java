@@ -1,19 +1,19 @@
 package core.basesyntax;
 
-public class Figures {
+abstract class Figures implements Drawable {
     private Colors color;
-    private int area;
 
-    public Figures(Colors color, int area) {
+    public Figures(Colors color) {
         this.color = color;
-        this.area = area;
     }
 
     public String getColor() {
         return color.toString();
     }
 
-    public int getArea() {
-        return area;
+    @Override
+    public void draw() {
+        System.out.println("Figure has been drawn");
     }
+    abstract int getArea();
 }

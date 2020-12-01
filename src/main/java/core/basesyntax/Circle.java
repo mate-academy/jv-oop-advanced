@@ -1,15 +1,16 @@
 package core.basesyntax;
 
-public class Circle extends Figures implements Drawable {
+public class Circle extends Figures {
     private int radius;
 
-    public Circle(Colors color, int area, int radius) {
-        super(color, area);
+    public Circle(Colors color, int radius) {
+        super(color);
         this.radius = radius;
     }
 
-    public int getRadius() {
-        return radius;
+    @Override
+    public int getArea() {
+        return (int) (Math.PI * radius * radius);
     }
 
     @Override
@@ -21,6 +22,6 @@ public class Circle extends Figures implements Drawable {
     public String toString() {
         return "Shape: circle, area: "
                 + getArea() + " sq. units, radius: "
-                + getRadius() + " units, color: " + getColor().toLowerCase();
+                + radius + " units, color: " + getColor().toLowerCase();
     }
 }

@@ -1,15 +1,16 @@
 package core.basesyntax;
 
-public class Square extends Figures implements Drawable {
-    private int hight;
+public class Square extends Figures {
+    private int highSquare;
 
-    public Square(Colors color, int area, int hight) {
-        super(color, area);
-        this.hight = hight;
+    public Square(Colors color, int highSquare) {
+        super(color);
+        this.highSquare = highSquare;
     }
 
-    public int getHight() {
-        return hight;
+    @Override
+    public int getArea() {
+        return highSquare * highSquare;
     }
 
     @Override
@@ -20,8 +21,8 @@ public class Square extends Figures implements Drawable {
     @Override
     public String toString() {
         return "Shape: square, area: "
-                + getArea() + " sq. units, hight: "
-                + getHight() + " units, color: " + getColor().toLowerCase();
+                + getArea() + " sq. units, Square high: "
+                + highSquare + " units, color: " + getColor().toLowerCase();
 
     }
 }

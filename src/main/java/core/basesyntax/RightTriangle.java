@@ -1,15 +1,22 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figures implements Drawable {
-    private int hypotenuse;
+public class RightTriangle extends Figures {
+    private int firstCathetus;
+    private int secondCathetus;
 
-    public RightTriangle(Colors color, int area, int hypotenuse) {
-        super(color, area);
-        this.hypotenuse = hypotenuse;
+    public RightTriangle(Colors color, int firstCathetus, int secondCathetus) {
+        super(color);
+        this.firstCathetus = firstCathetus;
+        this.secondCathetus = secondCathetus;
     }
 
     public int getHypotenuse() {
-        return hypotenuse;
+        return (int) Math.sqrt(firstCathetus * firstCathetus + secondCathetus * secondCathetus);
+    }
+
+    @Override
+    public int getArea() {
+        return firstCathetus * secondCathetus / 2;
     }
 
     @Override

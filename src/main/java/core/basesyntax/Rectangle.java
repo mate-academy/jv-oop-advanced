@@ -1,15 +1,18 @@
 package core.basesyntax;
 
-public class Rectangle extends Figures implements Drawable {
+public class Rectangle extends Figures {
     private int sideLength;
+    private int height;
 
-    public Rectangle(Colors color, int area, int sideLength) {
-        super(color, area);
+    public Rectangle(Colors color, int sideLength, int height) {
+        super(color);
         this.sideLength = sideLength;
+        this.height = height;
     }
 
-    public int getSideLength() {
-        return sideLength;
+    @Override
+    public int getArea() {
+        return sideLength * height;
     }
 
     @Override
@@ -21,6 +24,6 @@ public class Rectangle extends Figures implements Drawable {
     public String toString() {
         return "Shape: rectangle, area: "
                 + getArea() + " sq. units, side length: "
-                + getSideLength() + " units, color: " + getColor().toLowerCase();
+                + sideLength + " units, color: " + getColor().toLowerCase();
     }
 }

@@ -1,15 +1,20 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figures implements Drawable {
-    private int trapHeight;
+public class IsoscelesTrapezoid extends Figures {
+    private int lowerBase;
+    private int upperBase;
+    private int highTrapezoid;
 
-    public IsoscelesTrapezoid(Colors color, int area, int trapHeight) {
-        super(color, area);
-        this.trapHeight = trapHeight;
+    public IsoscelesTrapezoid(Colors color, int lowerBase, int upperBase, int highTrapezoid) {
+        super(color);
+        this.lowerBase = lowerBase;
+        this.upperBase = upperBase;
+        this.highTrapezoid = highTrapezoid;
     }
 
-    public int getTrapHeight() {
-        return trapHeight;
+    @Override
+    public int getArea() {
+        return (lowerBase + upperBase) / 2 * highTrapezoid;
     }
 
     @Override
@@ -20,7 +25,7 @@ public class IsoscelesTrapezoid extends Figures implements Drawable {
     @Override
     public String toString() {
         return "Shape: isosceles trapezoid, area: "
-                + getArea() + " sq. units, height: "
-                + getTrapHeight() + " units, color: " + getColor().toLowerCase();
+                + getArea() + " sq. units, lower base: "
+                + lowerBase + " units, color: " + getColor().toLowerCase();
     }
 }
