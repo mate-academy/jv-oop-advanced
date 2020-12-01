@@ -1,35 +1,46 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements HasHeight {
-    private double side;
+public class RightTriangle extends Figure implements HasBisector {
+    private double sideA;
+    private double sideB;
 
-    public RightTriangle(String color, double side) {
+    public RightTriangle(String color, double sideA, double sideB) {
         super(color);
-        this.side = side;
+        this.sideA = sideA;
+        this.sideB = sideB;
     }
 
-    public double getSide() {
-        return side;
+    public double getSideA() {
+        return sideA;
     }
 
-    public void setSide(double side) {
-        this.side = side;
+    public void setSideA(double sideA) {
+        this.sideA = sideA;
+    }
+
+    public double getSideB() {
+        return sideB;
+    }
+
+    public void setSideB(double sideB) {
+        this.sideB = sideB;
     }
 
     public static RightTriangle generateFigure() {
         return new RightTriangle(Colors.randomColor().name().toLowerCase(),
-                (int)(Math.random() * 15) + 3);
+                (int)(Math.random() * 15) + 3, (int)(Math.random() * 15) + 3);
     }
 
     @Override
     public double getArea() {
-        return 0.5 * side * getHeight();
+        return 0.5 * sideA * sideB;
     }
 
     @Override
     public void infoAboutFigure() {
-        System.out.printf("Shape: right triangle, area: %.3f sq. units, side length: %s units,"
-                + " height: %.3f units, color: %s", getArea(), side, getHeight(), getColor());
+        System.out.printf("Shape: right triangle, area: %.3f sq. units, side A length: %s units,"
+                + " side B length: %s units, bisector length: %.3f units, color: %s",
+                getArea(), sideA, sideB, getBisector(), getColor());
         System.out.println();
     }
 
@@ -39,8 +50,7 @@ public class RightTriangle extends Figure implements HasHeight {
     }
 
     @Override
-    public double getHeight() {
-        return side * Math.sqrt(3) / 2;
+    public double getBisector() {
+        return Math.sqrt(2) * (sideB * sideA) / (sideB + sideA);
     }
-
 }

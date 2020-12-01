@@ -2,7 +2,7 @@ package core.basesyntax;
 
 public class FigureGenerator {
     public static Figure getFigure() {
-        int numberOfFigure = (int)(Math.random() * 4) + 1;
+        int numberOfFigure = (int)(Math.random() * 5) + 1;
         switch (numberOfFigure) {
             case 1 :
                 return Square.generateFigure();
