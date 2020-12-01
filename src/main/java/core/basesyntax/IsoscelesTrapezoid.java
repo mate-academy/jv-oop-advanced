@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class IsoscelesTrapezoid  extends Shape {
+public class IsoscelesTrapezoid extends Shape {
 
     private Random rand;
     private StringBuilder sb = new StringBuilder();
@@ -10,7 +10,7 @@ public class IsoscelesTrapezoid  extends Shape {
     private int sideB;
     private int sideC;
 
-    public IsoscelesTrapezoid(String name){
+    public IsoscelesTrapezoid(String name) {
         super(name);
         rand = new Random();
         this.sideA = rand.nextInt(10);
@@ -30,17 +30,13 @@ public class IsoscelesTrapezoid  extends Shape {
 
     @Override
     public void draw() {
-        System.out.println("********" +
-                          "*" +    "*" +
-                         "*"  +      "*" +
-                        "**************");
+        System.out.println("Drawing Isosceles Trapezoid");
     }
 
     @Override
     public String info() {
-        return sb.append("Shape: ").append(super.getName()+ ", ").append("area: " + this.calculateArea() + " sq.units ")
-                .append("height: " + this.height() + " units ")
-                .append("color: " + super.getColor()).toString();
+        return sb.append(super.info()).append("area: " + this.calculateArea() + " sq.units ")
+                .append("height: " + this.height() + " units ").toString();
     }
 
     public double averageLine() {
@@ -48,6 +44,6 @@ public class IsoscelesTrapezoid  extends Shape {
     }
 
     public double height() {
-        return Math.sqrt((sideC * sideC) - 1/4 * ((sideB * sideB) - (sideA * sideA)));
+        return Math.sqrt((sideC * sideC) - 1 / 4 * ((sideB * sideB) - (sideA * sideA)));
     }
 }

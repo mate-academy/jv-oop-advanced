@@ -2,14 +2,13 @@ package core.basesyntax;
 
 import java.util.Random;
 
-
 public class Main implements Fillable {
 
     public static void main(String[] args) {
         Main main = new Main();
         Shape[] shapeArr = main.fill();
 
-        for(Shape s : shapeArr){
+        for (Shape s : shapeArr) {
             System.out.println(s.info());
         }
     }
@@ -18,8 +17,8 @@ public class Main implements Fillable {
         Random rand = new Random();
         Shape[] shapeArr = new Shape[generateRandomArrayLength()];
         Shape shape = null;
-        for(int i = 0; i < shapeArr.length; i++){
-            switch (rand.nextInt(4)){
+        for (int i = 0; i < shapeArr.length; i++) {
+            switch (rand.nextInt(4)) {
                 case 0:
                     shape = new Square("square");
                     break;
@@ -35,6 +34,7 @@ public class Main implements Fillable {
                 case 4:
                     shape = new IsoscelesTrapezoid("trapezoid");
                     break;
+                default:
             }
             shapeArr[i] = shape;
         }

@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class Circle  extends Shape {
+public class Circle extends Shape {
 
     private Random rand;
     private StringBuilder sb = new StringBuilder();
@@ -16,7 +16,7 @@ public class Circle  extends Shape {
 
     @Override
     public double calculateArea() {
-        return (int)(radius() * Math.PI);
+        return (int) (radius() * Math.PI);
     }
 
     @Override
@@ -26,21 +26,17 @@ public class Circle  extends Shape {
 
     @Override
     public void draw() {
-        System.out.print( "******" +
-                         "*" +    "*" +
-                        "*" +      "*" +
-                         "*"+     "*" +
-                           "******" );
+        System.out.print("Drawing Circle");
     }
 
     @Override
     public String info() {
-        return sb.append("Shape: ").append(super.getName()+ ", ").append("area: " + this.calculateArea() + " sq.units ")
-                .append("radius: " + this.radius() + " units ")
-                .append("color: " + super.getColor()).toString();
+        return sb.append(super.info()).append("area: " + this.calculateArea() + " sq.unit,")
+        .append("radius:" + this.radius() + " units,").toString();
     }
 
     public double radius() {
-        return (int)(roundness / (2 * Math.PI));
+        return (int) (roundness / (2 * Math.PI));
     }
 }
+

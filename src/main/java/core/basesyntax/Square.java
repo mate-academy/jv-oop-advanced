@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class Square extends Shape{
+public class Square extends Shape {
 
     private Random rand;
     private StringBuilder sb = new StringBuilder();
@@ -26,18 +26,12 @@ public class Square extends Shape{
 
     @Override
     public void draw() {
-        System.out.println("***************" +
-                           "*" +         "*" +
-                           "*" +         "*" +
-                           "*" +         "*" +
-                           "*" +         "*" +
-                           "***************");
+        System.out.println("Drawing Square");
     }
 
     public String info() {
-        return sb.append("Shape: ").append(super.getName()+ ", ").append("area: " + this.calculateArea() + " sq.units ")
-               .append("side length: " + this.sideLength() + " units ")
-                .append("color: " + super.getColor()).toString();
+        return sb.append(super.info()).append("area: " + this.calculateArea() + " sq.units ")
+               .append("side length: " + this.sideLength() + " units ").toString();
     }
 
     public double sideLength() {
