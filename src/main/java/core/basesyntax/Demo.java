@@ -8,7 +8,8 @@ public class Demo {
         Figure rightTriangle = new RightTriangle("Blue", 5);
         Figure square = new Square("Yellow", 7);
 
-        Figure[] figures = new Figure[]{circle, isoscelesTrapezoid, rectangle, rightTriangle, square};
+        Figure[] figures = new Figure[]{circle, isoscelesTrapezoid,
+                rectangle, rightTriangle, square};
 
         for (Figure figure : figures) {
             System.out.println(figure.toString());

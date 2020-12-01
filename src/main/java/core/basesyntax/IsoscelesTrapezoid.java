@@ -17,9 +17,11 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        area = (topWidth + downWidth) * Math.sqrt(4*(side*side)-(downWidth*downWidth - 2*topWidth*downWidth + topWidth*topWidth)) / 4;
-        diagonal = Math.sqrt(side*side + topWidth*downWidth);
-        height = Math.sqrt(4*(side*side) - (downWidth*downWidth - 2*topWidth*downWidth + topWidth*topWidth)) / 2;
+        area = (topWidth + downWidth) * Math.sqrt(4 * (side * side)
+                -(downWidth * downWidth - 2 * topWidth * downWidth + topWidth * topWidth)) / 4;
+        diagonal = Math.sqrt(side * side + topWidth * downWidth);
+        height = Math.sqrt(4 * (side * side) - (downWidth * downWidth - 2
+                * topWidth * downWidth + topWidth*topWidth)) / 2;
     }
 
     @Override
