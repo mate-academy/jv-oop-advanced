@@ -24,5 +24,3 @@ public class Circle extends Figures implements Drawable {
                 + getRadius() + " units, color: " + getColor().toLowerCase();
     }
 }
-
-//radius

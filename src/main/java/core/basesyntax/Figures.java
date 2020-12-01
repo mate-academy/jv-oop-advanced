@@ -8,6 +8,7 @@ public class Figures {
         this.color = color;
         this.area = area;
     }
+
     public String getColor() {
         return color.toString();
     }

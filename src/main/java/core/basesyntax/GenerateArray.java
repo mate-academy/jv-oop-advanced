@@ -1,6 +1,5 @@
 package core.basesyntax;
 
-import java.util.ArrayList;
 import java.util.Random;
 
 /**
@@ -16,8 +15,7 @@ public class GenerateArray {
         for (int i = 0; i < x; i++) {
             randomArray[i] = random();
         }
-        for (Object print:
-             randomArray) {
+        for (Object print: randomArray) {
             System.out.println(print.toString());
         }
     }
@@ -41,7 +39,7 @@ public class GenerateArray {
         }
     }
 
-    static Colors colorRand(){
+    static Colors colorRand() {
         Random random = new Random();
         return color[random.nextInt(color.length)];
     }

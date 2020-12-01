@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figures implements Drawable{
+public class Rectangle extends Figures implements Drawable {
     private int sideLength;
 
     public Rectangle(Colors color, int area, int sideLength) {

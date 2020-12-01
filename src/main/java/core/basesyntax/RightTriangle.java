@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figures implements Drawable{
+public class RightTriangle extends Figures implements Drawable {
     private int hypotenuse;
 
     public RightTriangle(Colors color, int area, int hypotenuse) {
@@ -16,6 +16,7 @@ public class RightTriangle extends Figures implements Drawable{
     public void draw() {
         System.out.println("Right Triangle has been drawn");
     }
+
     @Override
     public String toString() {
         return "Shape: right triangle, area: "
@@ -23,5 +24,3 @@ public class RightTriangle extends Figures implements Drawable{
                 + getHypotenuse() + " units, color: " + getColor().toLowerCase();
     }
 }
-
-// multiply of cathetus

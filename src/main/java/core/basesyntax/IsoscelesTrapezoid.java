@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figures implements Drawable{
+public class IsoscelesTrapezoid extends Figures implements Drawable {
     private int trapHeight;
 
     public IsoscelesTrapezoid(Colors color, int area, int trapHeight) {
@@ -16,6 +16,7 @@ public class IsoscelesTrapezoid extends Figures implements Drawable{
     public void draw() {
         System.out.println("Isosceles Trapezoid has been drawn");
     }
+
     @Override
     public String toString() {
         return "Shape: isosceles trapezoid, area: "
@@ -23,6 +24,3 @@ public class IsoscelesTrapezoid extends Figures implements Drawable{
                 + getTrapHeight() + " units, color: " + getColor().toLowerCase();
     }
 }
-
-
-//trapezoid height
