@@ -2,7 +2,6 @@ package core.basesyntax;
 
 import core.basesyntax.figures.FigureGenerator;
 import core.basesyntax.figures.Figures;
-
 import java.util.Random;
 
 public class Main {
