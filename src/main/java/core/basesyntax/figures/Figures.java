@@ -1,13 +1,9 @@
 package core.basesyntax.figures;
 
-public abstract class Figures {
+public abstract class Figures implements Displayable, Drawable {
 
     protected double area;
     protected Color color;
-
-    public abstract void displayInfo();
-
-    public abstract void draw();
 
     public Color getColor() {
         return color;

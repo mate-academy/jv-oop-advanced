@@ -20,7 +20,7 @@ public enum Color {
     }
 
     public static Color getRandom() {
-        switch (random.nextInt(8)) {
+        switch (random.nextInt(Color.values().length)) {
             case 0:
                 return BLACK;
 
