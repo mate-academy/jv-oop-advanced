@@ -5,6 +5,7 @@ import java.util.Random;
 public class RightTriangle extends Shape {
 
     Random rand;
+    private StringBuilder sb = new StringBuilder();
     private int sideA;
     private int sideB;
 
@@ -22,7 +23,7 @@ public class RightTriangle extends Shape {
 
     @Override
     public double perimeter() {
-        return 0.0;
+        return sideA + sideB + getHypotenuse();
     }
 
     @Override
@@ -31,7 +32,12 @@ public class RightTriangle extends Shape {
 
     @Override
     public String info() {
-        return null;
+        return sb.append("Shape: ").append(super.getName()+ ", ").append("area: " + this.calculateArea() + " sq.units")
+                .append("hypotenuse: " + this.getHypotenuse() + " units ")
+                .append("color: " + super.getColor()).toString();
     }
 
+    public double getHypotenuse(){
+        return Math.sqrt((sideA * sideA) + (sideB * sideB));
+    }
 }
