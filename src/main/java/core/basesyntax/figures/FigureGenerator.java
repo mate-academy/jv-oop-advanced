@@ -1,23 +1,9 @@
-package core.basesyntax;
+package core.basesyntax.figures;
 
 import java.util.Random;
 
-public abstract class Figures {
+public class FigureGenerator {
     private static Random random = new Random();
-    double area;
-    Color color;
-
-    public abstract void displayInfo();
-
-    public abstract void draw();
-
-    public Color getColor() {
-        return color;
-    }
-
-    public double getArea() {
-        return area;
-    }
 
     public static Figures getRandomFigure() {
         switch (random.nextInt(5)) {

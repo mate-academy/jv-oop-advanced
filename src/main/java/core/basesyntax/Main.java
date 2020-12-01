@@ -1,5 +1,8 @@
 package core.basesyntax;
 
+import core.basesyntax.figures.FigureGenerator;
+import core.basesyntax.figures.Figures;
+
 import java.util.Random;
 
 public class Main {
@@ -9,11 +12,11 @@ public class Main {
         Figures[] figures = new Figures[random];
 
         for (int i = 0; i < random; i++) {
-            figures[i] = Figures.getRandomFigure();
+            figures[i] = FigureGenerator.getRandomFigure();
         }
 
-        for (Figures figure/element: figures) {
-            some.displayInfo();
+        for (Figures figure: figures) {
+            figure.displayInfo();
         }
     }
 }
