@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.figures;
 
 public class IsoscelesTrapezoid extends Shape {
     private double leg;
@@ -7,9 +7,9 @@ public class IsoscelesTrapezoid extends Shape {
 
     public IsoscelesTrapezoid() {
         super();
-        this.leg = (int) Math.random() * (11 - 1) + 1;
-        this.lowerBase = (int) Math.random() * (11 - 1) + 1;
-        this.upperBase = (int) Math.random() * (11 - 1) + 1;
+        this.leg = random.nextInt(20) + 1;
+        this.lowerBase = random.nextInt(20) + 1;
+        this.upperBase = random.nextInt(20) + 1;
         if (upperBase > lowerBase) {
             double temp = upperBase;
             upperBase = lowerBase;
@@ -34,12 +34,13 @@ public class IsoscelesTrapezoid extends Shape {
 
     @Override
     public void draw() {
-        System.out.println("Figure: isosceles trapezoid, perimeter: " + getPerimeter() +
-                ", area: " + getArea() +
-                " sq. units, leg: " + getLeg() +
-                " units, lower base: " + getLowerBase() +
-                " units, upper base: " + getUpperBase() +
-                " units, color: " + getColor() + ".");
+        System.out.format("Figure: isosceles trapezoid, perimeter: %.2f"
+                        + ", area: %.2f"
+                        + " sq. units, leg: %.2f", getPerimeter(), getArea(), getLeg());
+        System.out.format(" units, lower base: %.2f"
+                        + " units, upper base: %.2f"
+                        + " units, color: %s.%n", getLowerBase(), getUpperBase(), getColor());
+
     }
 
     public double getLeg() {

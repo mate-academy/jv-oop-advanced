@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.figures;
 
 public class Rectangle extends Shape {
     private double sideA;
@@ -6,8 +6,8 @@ public class Rectangle extends Shape {
 
     public Rectangle() {
         super();
-        this.sideA = (int) Math.random() * (11 - 1) + 1;
-        this.sideB = (int) Math.random() * (11 - 1) + 1;
+        this.sideA = random.nextInt(20) + 1;
+        this.sideB = random.nextInt(20) + 1;
     }
 
     @Override
@@ -27,12 +27,12 @@ public class Rectangle extends Shape {
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, perimeter: " + getPerimeter() +
-                ", area: " + getArea() +
-                " sq. units, sideA: " + getSideA() +
-                " units, sideB: " + getSideB() +
-                " units, diagonal: " + getDiagonal() +
-                " units, color: " + getColor() + ".");
+        System.out.format("Figure: rectangle, perimeter: %.2f"
+                        + ", area: %.2f"
+                        + " sq. units, sideA: %.2f", getPerimeter(), getArea(), getSideA());
+        System.out.format(" units, sideB: %.2f"
+                        + " units, diagonal: %.2f"
+                        + " units, color: %s.%n", getSideB(), getDiagonal(), getColor());
     }
 
     public double getSideA() {

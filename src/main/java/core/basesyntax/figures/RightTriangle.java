@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.figures;
 
 public class RightTriangle extends Shape {
     private double legA;
@@ -6,8 +6,8 @@ public class RightTriangle extends Shape {
 
     public RightTriangle() {
         super();
-        this.legA = (int) Math.random() * (11 - 1) + 1;
-        this.legB = (int) Math.random() * (11 - 1) + 1;
+        this.legA = random.nextInt(20) + 1;
+        this.legB = random.nextInt(20) + 1;
     }
 
     @Override
@@ -28,12 +28,13 @@ public class RightTriangle extends Shape {
 
     @Override
     public void draw() {
-        System.out.println("Figure: right triangle, perimeter: " + getPerimeter() +
-                ", area: " + getArea() +
-                " sq. units, legA: " + getLegA() +
-                " units, legB: " + getLegB() +
-                " units, hypotenuse: " + getHypotenuse() +
-                " units, color: " + getColor() + ".");
+        System.out.format("Figure: right triangle, perimeter: %.2f"
+                        + ", area: %.2f"
+                        + " sq. units, legA: %.2f", getPerimeter(), getArea(), getLegA());
+        System.out.format(" units, legB: %.2f"
+                        + " units, hypotenuse: %.2f"
+                        + " units, color: %s.%n", getLegB(), getHypotenuse(), getColor());
+
     }
 
     public double getLegA() {
