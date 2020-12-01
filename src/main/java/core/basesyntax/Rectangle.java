@@ -10,8 +10,8 @@ public class Rectangle extends Shape {
     private int width;
 
 
-    public Rectangle (String name, String color){
-        super(name,color);
+    public Rectangle (String name){
+        super(name);
         rand = new Random();
         this.length = rand.nextInt(15);
         this.width = rand.nextInt(15);

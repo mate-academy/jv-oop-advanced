@@ -8,9 +8,9 @@ public abstract class  Shape {
     private String name;
     private String color;
 
-    public Shape(String name, String color){
+    public Shape(String name){
         this.name = name;
-        this.color = color;
+        this.color = randomColor();
     }
 
     public String getName() {
@@ -28,6 +28,17 @@ public abstract class  Shape {
     public abstract void draw();
 
     public abstract String info();
-}
+
+    private String randomColor(){
+        String color = "";
+        String[] array = {"white", "black", "yellow", "red", "orange",
+                            "pink", "purple", "grey", "brown" , "golden",
+                            "green", "blue"};
+        int rand = (int)(Math.random() * array.length);
+        color += array[rand];
+        return color;
+        }
+    }
+
 
 

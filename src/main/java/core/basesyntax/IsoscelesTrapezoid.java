@@ -10,8 +10,8 @@ public class IsoscelesTrapezoid  extends Shape {
     private int sideB;
     private int sideC;
 
-    public IsoscelesTrapezoid(String name, String color){
-        super(name, color);
+    public IsoscelesTrapezoid(String name){
+        super(name);
         rand = new Random();
         this.sideA = rand.nextInt(10);
         this.sideB = rand.nextInt(20);

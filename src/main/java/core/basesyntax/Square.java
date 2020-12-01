@@ -8,8 +8,8 @@ public class Square extends Shape{
     private StringBuilder sb = new StringBuilder();
     private int sideA;
 
-    public Square(String name, String color) {
-        super(name, color);
+    public Square(String name) {
+        super(name);
         rand = new Random();
         this.sideA = rand.nextInt(15);
     }

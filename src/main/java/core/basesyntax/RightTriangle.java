@@ -9,8 +9,8 @@ public class RightTriangle extends Shape {
     private int sideA;
     private int sideB;
 
-    public RightTriangle(String name, String color, int sideA, int sideB){
-        super(name,color);
+    public RightTriangle(String name){
+        super(name);
         rand = new Random();
         this.sideA = rand.nextInt(10);
         this.sideB = rand.nextInt(15);
