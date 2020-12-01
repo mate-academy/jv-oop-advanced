@@ -2,7 +2,6 @@ package core.basesyntax;
 
 public class Square extends Shape implements Figure {
     private int sideLength;
-    private String color;
 
     public Square(int sideLength, String color) {
         this.sideLength = sideLength;
@@ -13,14 +12,17 @@ public class Square extends Shape implements Figure {
         return sideLength;
     }
 
+    @Override
     public void draw() {
         System.out.println("Draw the square");
     }
 
+    @Override
     public double getArea() {
         return sideLength * sideLength;
     }
 
+    @Override
     public String getColor() {
         return color;
     }

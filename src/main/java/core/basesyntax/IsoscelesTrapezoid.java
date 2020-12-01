@@ -4,7 +4,6 @@ public class IsoscelesTrapezoid extends Shape implements Figure {
     private int sideLength;
     private int widthA;
     private int widthB;
-    private String color;
 
     public IsoscelesTrapezoid(int sideLength, int widthA, int widthB, String color) {
         this.sideLength = sideLength;
@@ -17,15 +16,18 @@ public class IsoscelesTrapezoid extends Shape implements Figure {
         return sideLength;
     }
 
+    @Override
     public void draw() {
         System.out.println("Draw the isosceles trapezoid");
     }
 
+    @Override
     public double getArea() {
         return (double) (widthA + widthB) / 2
                 * Math.sqrt(sideLength * sideLength - Math.pow((widthA - widthB), 2) / 4);
     }
 
+    @Override
     public String getColor() {
         return color;
     }

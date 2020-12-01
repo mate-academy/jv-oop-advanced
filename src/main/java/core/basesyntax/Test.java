@@ -9,6 +9,15 @@ public class Test {
     public static void main(String[] args) {
         Random random = new Random();
         Shape[] shapes = new Shape[random.nextInt(10)];
+        fillShapes(shapes);
+
+        for (Shape shape : shapes) {
+            System.out.println(shape);
+        }
+    }
+
+    public static void fillShapes(Shape[] shapes) {
+        Random random = new Random();
         for (int i = 0; i < shapes.length; i++) {
             Shape shape = null;
             switch (random.nextInt(5)) {
@@ -34,10 +43,6 @@ public class Test {
                     break;
             }
             shapes[i] = shape;
-        }
-
-        for (Shape shape : shapes) {
-            System.out.println(shape);
         }
     }
 

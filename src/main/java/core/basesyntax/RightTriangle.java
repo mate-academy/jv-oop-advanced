@@ -3,7 +3,6 @@ package core.basesyntax;
 public class RightTriangle extends Shape implements Figure {
     private int sideA;
     private int sideB;
-    private String color;
 
     public RightTriangle(int sideA, int sideB, String color) {
         this.sideA = sideA;
@@ -15,14 +14,17 @@ public class RightTriangle extends Shape implements Figure {
         return Math.sqrt(sideA * sideA + sideB * sideB);
     }
 
+    @Override
     public void draw() {
         System.out.println("Draw the right triangle");
     }
 
+    @Override
     public double getArea() {
         return (double) sideA * sideB / 2;
     }
 
+    @Override
     public String getColor() {
         return color;
     }

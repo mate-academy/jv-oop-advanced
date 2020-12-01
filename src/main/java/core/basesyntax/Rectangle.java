@@ -3,7 +3,6 @@ package core.basesyntax;
 public class Rectangle extends Shape implements Figure {
     private int length;
     private int width;
-    private String color;
 
     public Rectangle(int length, int width, String color) {
         this.length = length;
@@ -19,14 +18,17 @@ public class Rectangle extends Shape implements Figure {
         return width;
     }
 
+    @Override
     public void draw() {
         System.out.println("Draw the rectangle");
     }
 
+    @Override
     public double getArea() {
         return length * width;
     }
 
+    @Override
     public String getColor() {
         return color;
     }
