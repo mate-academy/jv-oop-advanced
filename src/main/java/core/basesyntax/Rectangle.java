@@ -32,15 +32,14 @@ public class Rectangle extends Figure implements HasDiagonal, Drawing {
     }
 
     @Override
-    public void infoAboutFigure() {
-        System.out.printf("Shape: rectangle, area: %.2f sq. units, side A length: %s units,"
+    public String getInformation() {
+        return String.format("Shape: rectangle, area: %.2f sq. units, side A length: %s units,"
                         + " side B length: %s units, diagonal: %.3f units, color: %s",
                 getArea(), sideA, sideB, getDiagonal(), getColor());
-        System.out.println();
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println(" You draw " + getColor() + " rectangle!");
     }
 

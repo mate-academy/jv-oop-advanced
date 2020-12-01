@@ -22,14 +22,13 @@ public class Circle extends Figure implements HasDiagonal, Drawing {
     }
 
     @Override
-    public void infoAboutFigure() {
-        System.out.printf("Shape: circle, area: %.3f sq. units, radius: %s units,"
+    public String getInformation() {
+        return String.format("Shape: circle, area: %.3f sq. units, radius: %s units,"
                 + " diagonal: %s units, color: %s", getArea(), radius, getDiagonal(), getColor());
-        System.out.println();
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println(" You draw " + getColor() + " circle!");
     }
 

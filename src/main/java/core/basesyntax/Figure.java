@@ -17,5 +17,5 @@ public abstract class Figure {
 
     public abstract double getArea();
 
-    public abstract void infoAboutFigure();
+    public abstract String getInformation();
 }

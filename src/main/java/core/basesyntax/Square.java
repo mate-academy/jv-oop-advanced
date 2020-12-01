@@ -23,14 +23,13 @@ public class Square extends Figure implements HasDiagonal, Drawing {
     }
 
     @Override
-    public void infoAboutFigure() {
-        System.out.printf("Shape: square, area: %.2f sq. units, side length: %s units, diagonal:"
+    public String getInformation() {
+        return String.format("Shape: square, area: %.2f sq. units, side length: %s units, diagonal:"
                 + " %.3f units, color: %s", getArea(), side, getDiagonal(), getColor());
-        System.out.println();
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println(" You draw " + getColor() + " square!");
     }
 

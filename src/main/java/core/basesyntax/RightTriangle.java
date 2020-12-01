@@ -32,15 +32,14 @@ public class RightTriangle extends Figure implements HasBisector, Drawing {
     }
 
     @Override
-    public void infoAboutFigure() {
-        System.out.printf("Shape: right triangle, area: %.3f sq. units, side A length: %s units,"
+    public String getInformation() {
+        return String.format("Shape: right triangle, area: %.3f sq. units, side A length: %s units,"
                 + " side B length: %s units, bisector length: %.3f units, color: %s",
                 getArea(), sideA, sideB, getBisector(), getColor());
-        System.out.println();
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println(" You draw " + getColor() + " right triangle!");
     }
 

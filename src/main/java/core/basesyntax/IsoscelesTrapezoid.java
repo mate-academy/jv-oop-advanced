@@ -43,13 +43,12 @@ public class IsoscelesTrapezoid extends Figure implements HasHeight, HasDiagonal
     }
 
     @Override
-    public void infoAboutFigure() {
-        System.out.printf("Shape: isosceles trapezoid, area: %.3f sq. units,"
+    public String getInformation() {
+        return String.format("Shape: isosceles trapezoid, area: %.3f sq. units,"
                         + " up side length: %s units, down side length: %s units,"
                         + " sides length: %s units,"
                         + " height: %.3f units, diagonal: %.3f units, color: %s", getArea(),
                 upSide, downSide, side, getHeight(), getDiagonal(), getColor());
-        System.out.println();
     }
 
     @Override
@@ -58,7 +57,7 @@ public class IsoscelesTrapezoid extends Figure implements HasHeight, HasDiagonal
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println(" You draw " + getColor() + " isosceles trapezoid!");
     }
 

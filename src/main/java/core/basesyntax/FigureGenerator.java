@@ -24,33 +24,33 @@ public class FigureGenerator {
 
     }
 
-    public static Colors randomColor() {
+    private static Colors randomColor() {
         Random random = new Random();
         return Colors.values()[random.nextInt(Colors.values().length)];
     }
 
-    public static Circle generateCircle() {
+    private static Circle generateCircle() {
         return new Circle(FigureGenerator.randomColor().name().toLowerCase(),
                 (int)(Math.random() * 15) + 3);
     }
 
-    public static IsoscelesTrapezoid generateIsoscelesTrapezoid() {
+    private static IsoscelesTrapezoid generateIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(FigureGenerator.randomColor().name().toLowerCase(),
                 (int)(Math.random() * 15) + 3,
                 (int)(Math.random() * 27) + 3, (int)(Math.random() * 10) + 3);
     }
 
-    public static Rectangle generateRectangle() {
+    private static Rectangle generateRectangle() {
         return new Rectangle(FigureGenerator.randomColor().name().toLowerCase(),
                 (int)(Math.random() * 15) + 3, (int)(Math.random() * 15) + 3);
     }
 
-    public static RightTriangle generateRightTriangle() {
+    private static RightTriangle generateRightTriangle() {
         return new RightTriangle(FigureGenerator.randomColor().name().toLowerCase(),
                 (int)(Math.random() * 15) + 3, (int)(Math.random() * 15) + 3);
     }
 
-    public static Square generateSquare() {
+    private static Square generateSquare() {
         return new Square(FigureGenerator.randomColor().name().toLowerCase(),
                 (int)(Math.random() * 15) + 3);
     }
