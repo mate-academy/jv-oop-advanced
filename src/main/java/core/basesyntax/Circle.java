@@ -11,12 +11,12 @@ public class Circle  extends Shape {
     public Circle(String name){
         super(name);
         rand = new Random();
-        this.roundness = rand.nextInt(20);
+        this.roundness = rand.nextInt(50);
     }
 
     @Override
     public double calculateArea() {
-        return radius() * Math.PI;
+        return (int)(radius() * Math.PI);
     }
 
     @Override
@@ -25,17 +25,18 @@ public class Circle  extends Shape {
     }
 
     @Override
-    public void draw() {
+    public void draw(){
     }
 
     @Override
     public String info() {
-        return sb.append("Shape: ").append(super.getName()+ ", ").append("area: " + this.calculateArea() + " sq.units")
+        return sb.append("Shape: ").append(super.getName()+ ", ").append("area: " + this.calculateArea() + " sq.units ")
                 .append("radius: " + this.radius() + " units ")
                 .append("color: " + super.getColor()).toString();
     }
 
     public double radius(){
-        return roundness / (2 * Math.PI);
+
+        return (int)(roundness / (2 * Math.PI));
     }
 }

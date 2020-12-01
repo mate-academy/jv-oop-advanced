@@ -33,7 +33,7 @@ public class IsoscelesTrapezoid  extends Shape {
 
     @Override
     public String info() {
-        return sb.append("Shape: ").append(super.getName()+ ", ").append("area: " + this.calculateArea() + " sq.units")
+        return sb.append("Shape: ").append(super.getName()+ ", ").append("area: " + this.calculateArea() + " sq.units ")
                 .append("height: " + this.height() + " units ")
                 .append("color: " + super.getColor()).toString();
     }

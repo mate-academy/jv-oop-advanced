@@ -31,13 +31,13 @@ public class Rectangle extends Shape {
     public void draw() {}
 
     public String info() {
-        return sb.append("Shape: ").append(super.getName()+ ", ").append("area: " + this.calculateArea() + " sq.units")
+        return sb.append("Shape: ").append(super.getName()+ ", ").append("area: " + this.calculateArea() + " sq.units ")
                 .append("diagonal: " + this.getDiagonal() + " units ")
                 .append("color: " + super.getColor()).toString();
     }
 
     public double getDiagonal() {
-        return Math.sqrt((width * width) + (length * length));
+        return (int)(Math.sqrt((width * width) + (length * length)));
     }
 
 }

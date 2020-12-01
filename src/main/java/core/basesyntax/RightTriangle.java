@@ -32,12 +32,12 @@ public class RightTriangle extends Shape {
 
     @Override
     public String info() {
-        return sb.append("Shape: ").append(super.getName()+ ", ").append("area: " + this.calculateArea() + " sq.units")
+        return sb.append("Shape: ").append(super.getName()+ ", ").append("area: " + this.calculateArea() + " sq.units ")
                 .append("hypotenuse: " + this.getHypotenuse() + " units ")
                 .append("color: " + super.getColor()).toString();
     }
 
     public double getHypotenuse(){
-        return Math.sqrt((sideA * sideA) + (sideB * sideB));
+        return (int)(Math.sqrt((sideA * sideA) + (sideB * sideB)));
     }
 }

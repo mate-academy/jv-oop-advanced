@@ -28,7 +28,7 @@ public class Square extends Shape{
     public void draw() {}
 
     public String info() {
-        return sb.append("Shape: ").append(super.getName()+ ", ").append("area: " + this.calculateArea() + " sq.units")
+        return sb.append("Shape: ").append(super.getName()+ ", ").append("area: " + this.calculateArea() + " sq.units ")
                .append("side length: " + this.sideLength() + " units ")
                 .append("color: " + super.getColor()).toString();
     }
