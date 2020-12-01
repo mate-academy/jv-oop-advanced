@@ -1,7 +1,6 @@
 package core.basesyntax.model;
 
 public class RightTriangle extends Figure {
-
     private final int hypotenuse;
     private final int biggerCathetus;
     private final int smallerCathetus;
@@ -11,14 +10,7 @@ public class RightTriangle extends Figure {
         this.biggerCathetus = biggerCathetus;
         this.smallerCathetus = smallerCathetus;
         this.color = color;
-        this.area = biggerCathetus * smallerCathetus / 2;
-    }
-
-    public RightTriangle() {
-        this((int) (Math.random() * 20) + 1, 
-                (int) (Math.random() * 12) + 1, 
-                (int) (Math.random() * 9) + 1, 
-                Color.randomColor());
+        this.area = (biggerCathetus * smallerCathetus) / 2;
     }
 
     @Override

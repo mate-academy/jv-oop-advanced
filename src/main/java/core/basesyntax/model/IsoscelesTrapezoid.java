@@ -1,7 +1,6 @@
 package core.basesyntax.model;
 
 public class IsoscelesTrapezoid extends Figure {
-
     private final int sideAngle;
     private final int sideLength;
     private final int biggerBase;
@@ -14,17 +13,9 @@ public class IsoscelesTrapezoid extends Figure {
         this.smallerBase = smallerBase;
         this.biggerBase = biggerBase;
         this.color = color;
-        this.area = Math.round(((smallerBase + biggerBase) / 2)
+        this.area = ((smallerBase + biggerBase) / 2)
                 * Math.sqrt(Math.pow(sideLength, 2)
-                - ((Math.pow(biggerBase - smallerBase, 2)) / 4)));
-    }
-
-    public IsoscelesTrapezoid() {
-        this((int) (Math.random() * 99) + 1,
-                (int) (Math.random() * 9) + 1,
-                (int) (Math.random() * 12) + 1,
-                (int) (Math.random() * 15) + 1,
-                Color.randomColor());
+                - ((Math.pow(biggerBase - smallerBase, 2)) / 4));
     }
 
     @Override

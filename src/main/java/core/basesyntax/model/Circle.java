@@ -1,17 +1,12 @@
 package core.basesyntax.model;
 
 public class Circle extends Figure {
-
     private final int radius;
 
     public Circle(int radius, Color color) {
         this.radius = radius;
         this.color = color;
-        this.area = Math.round(Math.PI * Math.pow(radius, 2));
-    }
-
-    public Circle() {
-        this((int) (Math.random() * 19) + 1, Color.randomColor());
+        this.area = Math.PI * Math.pow(radius, 2);
     }
 
     @Override
@@ -33,5 +28,4 @@ public class Circle extends Figure {
     public Color getColor() {
         return this.color;
     }
-
 }

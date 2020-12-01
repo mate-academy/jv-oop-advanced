@@ -1,7 +1,6 @@
 package core.basesyntax.model;
 
 public class Rectangle extends IsoscelesTrapezoid {
-
     private final int perimeter;
 
     public Rectangle(int sideLength, int baseLength, Color color) {
@@ -9,10 +8,6 @@ public class Rectangle extends IsoscelesTrapezoid {
         this.area = sideLength * baseLength;
         this.perimeter = (sideLength + baseLength) * 2;
         this.color = color;
-    }
-
-    public Rectangle() {
-        this((int) (Math.random() * 5) + 1, (int) (Math.random() * 15) + 1, Color.randomColor());
     }
 
     @Override
@@ -34,5 +29,4 @@ public class Rectangle extends IsoscelesTrapezoid {
     public int getPerimeter() {
         return perimeter;
     }
-
 }
