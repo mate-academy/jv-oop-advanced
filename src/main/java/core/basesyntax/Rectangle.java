@@ -4,16 +4,17 @@ public class Rectangle extends Figure {
 
     private double sideOne;
     private double sideTwo;
-    private  String name;
+    private String name;
 
-    public Rectangle(String color, double sideOne, double sideTwo) {
+    public Rectangle(String color, double sideOne, double sideTwo, String name) {
         super(color);
         this.sideOne = sideOne;
         this.sideTwo = sideTwo;
+        this.name = name;
     }
 
     public double getArea() {
-        return getSideOne() * getSideTwo();
+        return Math.round(getSideOne() * getSideTwo());
     }
 
     public double getSideOne() {
@@ -29,7 +30,7 @@ public class Rectangle extends Figure {
     }
 
     public String draw() {
-        String returnLine = "Figure: rectangle, " + "area: " + getArea() + " sq. units, side one length: " +
+        String returnLine = "Figure: " + getName() + ", area: " + getArea() + " sq. units, side one length: " +
                 getSideOne() + " units, side two length: " + getSideTwo() + ", color: " + getColor();
         return returnLine;
     }

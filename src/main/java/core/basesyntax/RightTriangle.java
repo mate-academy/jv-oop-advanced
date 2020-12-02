@@ -4,15 +4,17 @@ public class RightTriangle extends Figure {
 
     private double sideOne;
     private double sideTwo;
+    private String name;
 
-    public RightTriangle(String color, double sideOne, double sideTwo) {
+    public RightTriangle(String color, double sideOne, double sideTwo, String name) {
         super(color);
         this.sideOne = sideOne;
         this.sideTwo = sideTwo;
+        this.name = name;
     }
 
     public double getArea() {
-        return getSideOne() * getSideTwo() * 0.5;
+        return Math.round(getSideOne() * getSideTwo() * 0.5);
     }
 
     public double getSideOne() {
@@ -23,8 +25,12 @@ public class RightTriangle extends Figure {
         return sideTwo;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public String draw() {
-        String returnLine = "Figure: right triangle, " + "area: " + getArea() + " sq. units, side one length: " +
+        String returnLine = "Figure: " + getName() + ", area: " + getArea() + " sq. units, side one length: " +
                 getSideOne() + " units, side two length: " + getSideTwo() + ", color: " + getColor();
         return returnLine;
     }

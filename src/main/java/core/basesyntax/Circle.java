@@ -17,7 +17,7 @@ public class Circle extends Figure {
     }
 
     public double getArea() {
-        return Math.PI * getRadius() * getRadius();
+        return Math.round(Math.PI * getRadius() * getRadius());
     }
 
     public String getName() {
@@ -25,7 +25,7 @@ public class Circle extends Figure {
     }
 
     public String draw() {
-        String returnLine = "Figure: " +  getName() + ",area: " + getArea() + " sq. units, radius: " +
+        String returnLine = "Figure: " +  getName() + ", area: " + getArea() + " sq. units, radius: " +
                 getRadius() + " units, color: " + getColor();
         return returnLine;
     }
