@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Trapezoid implements Figure {
+public class Trapezoid extends Shape implements Figure {
     private int bottomBase;
     private int topBase;
     private int height;
@@ -25,6 +25,6 @@ public class Trapezoid implements Figure {
 
     @Override
     public Color getColor() {
-        return new ColorProducer().insertRandomColor();
+        return getColorRandom();
     }
 }

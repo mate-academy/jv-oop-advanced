@@ -3,12 +3,12 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureProducer {
-    public static final int MAGIC_NUMBER = 5;
+    private static final int FIGURES_QUANTITY = 5;
 
     public Figure insertRandomFigure() {
         Random random = new Random();
 
-        switch (random.nextInt(MAGIC_NUMBER)) {
+        switch (random.nextInt(FIGURES_QUANTITY)) {
             case 0:
                 return new Square(random.nextInt(6));
             case 1:

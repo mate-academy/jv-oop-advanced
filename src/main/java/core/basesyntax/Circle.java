@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle implements Figure {
+public class Circle extends Shape implements Figure {
     private int radius;
 
     public Circle(int radius) {
@@ -20,6 +20,6 @@ public class Circle implements Figure {
 
     @Override
     public Color getColor() {
-        return new ColorProducer().insertRandomColor();
+        return getColorRandom();
     }
 }
