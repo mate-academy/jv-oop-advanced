@@ -4,14 +4,12 @@ import java.util.Random;
 
 public class Square extends Shape {
 
-    private Random rand;
-    private StringBuilder sb = new StringBuilder();
+    private StringBuilder message = new StringBuilder();
     private int sideA;
 
-    public Square(String name) {
+    public Square(String name, FigureProducer producer) {
         super(name);
-        rand = new Random();
-        this.sideA = rand.nextInt(15);
+        this.sideA = producer.generatorNumber();
     }
 
     @Override
@@ -30,7 +28,7 @@ public class Square extends Shape {
     }
 
     public String info() {
-        return sb.append(super.info()).append(",area: " + this.calculateArea() + " sq.units ")
+        return message.append(super.info()).append(",area: " + this.calculateArea() + " sq.units ")
         .append("side length: " + this.sideLength() + " units ").toString();
 
     }

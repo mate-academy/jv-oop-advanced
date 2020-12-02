@@ -1,19 +1,15 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Rectangle extends Shape {
 
-    private Random rand;
-    private StringBuilder sb = new StringBuilder();
+    private StringBuilder message = new StringBuilder();
     private int length;
     private int width;
 
-    public Rectangle(String name) {
+    public Rectangle(String name, FigureProducer producer) {
         super(name);
-        rand = new Random();
-        this.length = rand.nextInt(15);
-        this.width = rand.nextInt(15);
+        this.length = producer.generatorNumber();
+        this.width = producer.generatorNumber();
     }
 
     @Override
@@ -32,7 +28,7 @@ public class Rectangle extends Shape {
     }
 
     public String info() {
-        return sb.append(super.info()).append(",area: " + this.calculateArea() + " sq.units ")
+        return message.append(super.info()).append(",area: " + this.calculateArea() + " sq.units ")
         .append("diagonal: " + this.getDiagonal() + " units ").toString();
     }
 
