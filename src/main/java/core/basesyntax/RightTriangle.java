@@ -34,13 +34,13 @@ public class RightTriangle extends Figure {
 
     @Override
     public String draw() {
-        return "RightTriangle: " +
-                " colour: " + getColour() +
-                ", area: " + parsingValue(getArea()) +
-                ", cathetus one: " + parsingValue(sideOne) +
-                ", cathetus two: " + parsingValue(sideTwo) +
-                ", Hypotenuse: " + parsingValue(getHypotenuse()) + " units" +
-                ", perimeter: " + parsingValue(getPerimeter()) + " units";
+        return "RightTriangle: "
+                + " colour: " + getColour()
+                + ", area: " + parsingValue(getArea()) + " units"
+                + ", cathetus one: " + parsingValue(sideOne) + " units"
+                + ", cathetus two: " + parsingValue(sideTwo) + " units"
+                + ", Hypotenuse: " + parsingValue(getHypotenuse()) + " units"
+                + ", perimeter: " + parsingValue(getPerimeter()) + " units";
     }
 
 }

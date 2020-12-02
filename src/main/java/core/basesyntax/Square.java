@@ -27,11 +27,11 @@ public class Square extends Figure {
 
     @Override
     public String draw() {
-        return "Square:" +
-                " colour: " + getColour() +
-                ", area: " + parsingValue(getArea()) + " units" +
-                ", side: " + parsingValue(side) + " units" +
-                ", diagonal: " + parsingValue(getDiagonal()) + " units" +
-                ", perimeter: " + parsingValue(getPerimeter()) + " units";
+        return "Square:"
+                + " colour: " + getColour()
+                + ", area: " + parsingValue(getArea()) + " units"
+                + ", side: " + parsingValue(side) + " units"
+                + ", diagonal: " + parsingValue(getDiagonal()) + " units"
+                + ", perimeter: " + parsingValue(getPerimeter()) + " units";
     }
 }

@@ -25,7 +25,10 @@ public class FabricFigure {
     }
 
     private static Rectangle createRectangle() {
-        return new Rectangle(getRandom(MINVALUE, MAXVALUE), getRandom(MINVALUE, MAXVALUE), getRandomColour());
+        return new Rectangle(
+                getRandom(MINVALUE, MAXVALUE),
+                getRandom(MINVALUE, MAXVALUE),
+                getRandomColour());
     }
 
     private static Square createSquare() {
@@ -33,7 +36,10 @@ public class FabricFigure {
     }
 
     private static RightTriangle createRightTriangle() {
-        return new RightTriangle(getRandom(MINVALUE, MAXVALUE), getRandom(MINVALUE, MAXVALUE), getRandomColour());
+        return new RightTriangle(
+                getRandom(MINVALUE, MAXVALUE),
+                getRandom(MINVALUE, MAXVALUE),
+                getRandomColour());
     }
 
     private static Circle createCircle() {
@@ -41,7 +47,11 @@ public class FabricFigure {
     }
 
     private static IsoscelesTrapezoid createIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(getRandom(MINVALUE, MAXVALUE), getRandom(MINVALUE, MAXVALUE), getRandom(MINVALUE, MAXVALUE), getRandomColour());
+        return new IsoscelesTrapezoid(
+                getRandom(MINVALUE, MAXVALUE),
+                getRandom(MINVALUE, MAXVALUE),
+                getRandom(MINVALUE, MAXVALUE),
+                getRandomColour());
     }
 
     private static double getRandom(double min, double max) {
@@ -51,10 +61,4 @@ public class FabricFigure {
     private static Colour getRandomColour() {
         return Colour.values()[random.nextInt(Colour.values().length)];
     }
-
 }
-/*
-
-
-
- */

@@ -1,6 +1,5 @@
 package core.basesyntax;
 
-
 public abstract class Figure implements Drawable {
     private Colour colour;
     private double area;
@@ -24,6 +23,4 @@ public abstract class Figure implements Drawable {
     public abstract double getArea();
 
     public abstract double getPerimeter();
-
-
 }

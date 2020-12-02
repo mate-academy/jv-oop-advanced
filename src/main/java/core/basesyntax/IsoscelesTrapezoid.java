@@ -41,14 +41,14 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String draw() {
-        return "IsoscelesTrapezoid:" +
-                " high: " + parsingValue(getHigh()) +
-                " perimeter" + parsingValue(getPerimeter()) +
-                " area: " + parsingValue(getArea()) +
-                " color: " + getColour() +
-                " area: " + parsingValue(getArea()) +
-                " base top:" + parsingValue(topBase) +
-                " base bot:" + parsingValue(bottomBase) +
-                " base side :" + parsingValue(sideBase);
+        return "IsoscelesTrapezoid:"
+                + " high: " + parsingValue(getHigh())
+                + ", perimeter" + parsingValue(getPerimeter()) + " units"
+                + ", area: " + parsingValue(getArea()) + " units"
+                + ", color: " + getColour()
+                + ", area: " + parsingValue(getArea()) + " units"
+                + ", base top:" + parsingValue(topBase) + " units"
+                + ", base bot:" + parsingValue(bottomBase) + " units"
+                + ", base side :" + parsingValue(sideBase) + " units";
     }
 }
