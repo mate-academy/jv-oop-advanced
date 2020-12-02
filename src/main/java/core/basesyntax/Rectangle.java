@@ -30,8 +30,10 @@ public class Rectangle extends Figure {
     }
 
     public String draw() {
-        String returnLine = "Figure: " + getName() + ", area: " + getArea() + " sq. units, side one length: " +
-                getSideOne() + " units, side two length: " + getSideTwo() + ", color: " + getColor();
+        String returnLine = "Figure: " + getName() + ", area: " + getArea()
+                + " sq. units, side one length: " + getSideOne()
+                + " units, side two length: " + getSideTwo()
+                + ", color: " + getColor();
         return returnLine;
     }
 

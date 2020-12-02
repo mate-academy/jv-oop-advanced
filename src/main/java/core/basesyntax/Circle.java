@@ -9,7 +9,6 @@ public class Circle extends Figure {
         super(color);
         this.radius = radius;
         this.name = name;
-
     }
 
     public double getRadius() {
@@ -25,10 +24,9 @@ public class Circle extends Figure {
     }
 
     public String draw() {
-        String returnLine = "Figure: " +  getName() + ", area: " + getArea() + " sq. units, radius: " +
-                getRadius() + " units, color: " + getColor();
+        String returnLine = "Figure: " + getName() + ", area: " + getArea()
+                + " sq. units, radius: " + getRadius() + " units, color: "
+                + getColor();
         return returnLine;
     }
-
-
 }

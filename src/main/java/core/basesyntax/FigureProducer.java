@@ -3,10 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureProducer {
-    private final int AMOUNT_OF_FIGURES = 5;
+    private final int amountFigures = 5;
 
     public Figure get() {
-        int randomIndex = new Random().nextInt(AMOUNT_OF_FIGURES);
+        int randomIndex = new Random().nextInt(amountFigures);
         switch (randomIndex) {
             case 0:
                 return newCircle();
@@ -23,12 +23,14 @@ public class FigureProducer {
     }
 
     private Circle newCircle() {
-        Circle circle = new Circle(ColorProducer.get().toString().toLowerCase(), RandomLongProducer.get(), "circle");
+        Circle circle = new Circle(ColorProducer.get().toString().toLowerCase(),
+                RandomLongProducer.get(), "circle");
         return circle;
     }
 
     private IsoscelesTrapezoid newIsoscelesTrapezoid() {
-        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(ColorProducer.get().toString().toLowerCase(),
+        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(ColorProducer.get()
+                .toString().toLowerCase(),
                 RandomLongProducer.get(), RandomLongProducer.get(),
                 RandomLongProducer.get(), "isosceles trapezoid");
         return isoscelesTrapezoid;
@@ -41,14 +43,16 @@ public class FigureProducer {
     }
 
     private RightTriangle newRightTriangle() {
-        RightTriangle rightTriangle = new RightTriangle(ColorProducer.get().toString().toLowerCase(),
-                RandomLongProducer.get(), RandomLongProducer.get(), "right triangle");
+        RightTriangle rightTriangle = new RightTriangle(ColorProducer.get()
+                .toString().toLowerCase(),
+                RandomLongProducer.get(), RandomLongProducer.get(),
+                "right triangle");
         return rightTriangle;
     }
 
     private Square newSquare() {
-        Square square = new Square(ColorProducer.get().toString().toLowerCase(), RandomLongProducer.get(),
-                RandomLongProducer.get(), "square");
+        Square square = new Square(ColorProducer.get().toString().toLowerCase(),
+                RandomLongProducer.get(), RandomLongProducer.get(), "square");
         return square;
     }
 }

@@ -23,8 +23,9 @@ public class Square extends Figure {
     }
 
     public String draw() {
-        String returnLine = "Shape: " + getName() + ",area: " + getArea() + " sq. units, side: " +
-                getSide() + " units, color: " + getColor();
+        String returnLine = "Shape: " + getName() + ",area: " + getArea()
+                + " sq. units, side: " + getSide()
+                + " units, color: " + getColor();
         return returnLine;
     }
 }
