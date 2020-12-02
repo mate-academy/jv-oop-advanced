@@ -1,19 +1,30 @@
 package core.basesyntax;
 
-public class Circle extends Figure {
+public class Circle extends Figure implements Draw {
+
+    private int radius;
+
+    public Circle(int radius) {
+        this.radius = radius;
+    }
 
     @Override
     public void draw() {
-        System.out.println("Рисую круг");
+        System.out.println("Draw circle");
+    }
+
+    @Override
+    public double getArea() {
+        return Math.PI * radius * radius;
     }
 
     @Override
     public String getName() {
-        return "Круг";
+        return "Circle";
     }
 
     @Override
     public void unicMetod() {
-        System.out.println("Метод круга");
+        System.out.println("Metod circle");
     }
 }

@@ -6,8 +6,6 @@ public abstract class Figure {
     private int area;
     private String name;
 
-    public abstract void draw();
-
     public Color getColor() {
         return color;
     }
@@ -16,13 +14,7 @@ public abstract class Figure {
         this.color = color;
     }
 
-    public int getArea() {
-        return area;
-    }
-
-    public void setArea(int area) {
-        this.area = area;
-    }
+    public abstract double getArea();
 
     public abstract String getName();
 
