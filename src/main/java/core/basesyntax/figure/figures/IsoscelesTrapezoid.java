@@ -2,11 +2,9 @@ package core.basesyntax.figure.figures;
 
 import core.basesyntax.color.Color;
 import core.basesyntax.figure.Figure;
-import core.basesyntax.figure.Shape;
 
 public class IsoscelesTrapezoid extends Figure {
 
-    public static final Shape NAME = Shape.ISOSCELES_TRAPEZOID;
     private int upperSide;
     private int lowerSide;
     private int height;
@@ -57,7 +55,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String toString() {
-        return getColor() + " " + NAME + " with height, "
+        return getColor() + " " + getClass().getSimpleName() + " with height, "
                 + getHeight() + " units, lower side " + getLowerSide() + " units, upper side "
                 + getUpperSide() + " units, and square " + getSquare() + " sq. units.";
     }

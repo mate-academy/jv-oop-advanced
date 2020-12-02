@@ -2,11 +2,9 @@ package core.basesyntax.figure.figures;
 
 import core.basesyntax.color.Color;
 import core.basesyntax.figure.Figure;
-import core.basesyntax.figure.Shape;
 
 public class RightTriangle extends Figure {
 
-    public static final Shape NAME = Shape.RIGHT_TRIANGLE;
     private int base;
     private int height;
 
@@ -49,7 +47,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public String toString() {
-        return getColor() + " " + NAME + " with base "
+        return getColor() + " " + getClass().getSimpleName() + " with base "
                 + getBase() + " units, height " + getHeight()
                 + " units, and square " + getSquare() + " sq. units.";
     }

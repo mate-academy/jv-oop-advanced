@@ -2,11 +2,9 @@ package core.basesyntax.figure.figures;
 
 import core.basesyntax.color.Color;
 import core.basesyntax.figure.Figure;
-import core.basesyntax.figure.Shape;
 
 public class Rectangle extends Figure {
 
-    public static final Shape NAME = Shape.RECTANGLE;
     private int width;
     private int height;
 
@@ -45,7 +43,7 @@ public class Rectangle extends Figure {
     }
 
     public String toString() {
-        return getColor() + " " + NAME + " with height "
+        return getColor() + " " + getClass().getSimpleName() + " with height "
                 + getHeight() + " units, width " + getWidth()
                 + " units, and square " + getSquare() + " sq. units.";
     }

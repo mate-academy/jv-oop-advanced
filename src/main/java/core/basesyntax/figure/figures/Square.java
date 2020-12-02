@@ -2,11 +2,9 @@ package core.basesyntax.figure.figures;
 
 import core.basesyntax.color.Color;
 import core.basesyntax.figure.Figure;
-import core.basesyntax.figure.Shape;
 
 public class Square extends Figure {
 
-    public static final Shape NAME = Shape.SQUARE;
     private int side;
 
     public Square(Color color, int side) {
@@ -37,7 +35,7 @@ public class Square extends Figure {
 
     @Override
     public String toString() {
-        return getColor() + " " + NAME + " with side "
+        return getColor() + " " + getClass().getSimpleName() + " with side "
                 + getSide() + " units and square " + getSquare() + " sq. units.";
     }
 }

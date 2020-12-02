@@ -2,11 +2,9 @@ package core.basesyntax.figure.figures;
 
 import core.basesyntax.color.Color;
 import core.basesyntax.figure.Figure;
-import core.basesyntax.figure.Shape;
 
 public class Circle extends Figure {
 
-    public static final Shape NAME = Shape.CIRCLE;
     private int radius;
 
     public Circle(Color color, int radius) {
@@ -38,7 +36,7 @@ public class Circle extends Figure {
 
     @Override
     public String toString() {
-        return getColor() + " " + NAME
+        return getColor() + " " + getClass().getSimpleName()
                 + " with radius " + getRadius() + " units"
                 + " and square " + getSquare() + " sq. units.";
     }
