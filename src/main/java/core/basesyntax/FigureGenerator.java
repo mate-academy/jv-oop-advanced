@@ -26,7 +26,7 @@ public class FigureGenerator {
     }
 
     private static Colors getRandomColor() {
-        return Colors.values()[new Random().nextInt(3)];
+        return Colors.values()[new Random().nextInt(Colors.values().length)];
     }
 
     public static int getRandomNumber() {
