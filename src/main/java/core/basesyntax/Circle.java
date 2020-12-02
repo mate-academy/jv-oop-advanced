@@ -32,7 +32,7 @@ public class Circle extends Shape {
     }
 
     public double radius() {
-        return (int) (roundness / (2 * Math.PI));
+        return Math.round(roundness / (2 * Math.PI));
     }
 }
 

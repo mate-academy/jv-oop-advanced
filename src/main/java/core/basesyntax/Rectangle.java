@@ -33,7 +33,8 @@ public class Rectangle extends Shape {
     }
 
     public double getDiagonal() {
-        return (int)(Math.sqrt((width * width) + (length * length)));
+        double result = (Math.sqrt((width * width) + (length * length)));
+        return Math.round(result);
     }
 
 }
