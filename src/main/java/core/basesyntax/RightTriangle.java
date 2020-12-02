@@ -4,10 +4,10 @@ public class RightTriangle extends Shape {
     private double base;
     private double height;
 
-    RightTriangle(double base, double height, Colour colour) {
+    public RightTriangle(double base, double height, Colour colour) {
+        super(colour);
         this.base = base;
         this.height = height;
-        this.colour = colour;
     }
 
     @Override
@@ -18,6 +18,6 @@ public class RightTriangle extends Shape {
     @Override
     public void draw() {
         System.out.println("Right triangle: base = " + base + ", height = "
-                + height + ", area = " + calculateArea() + ", colour - " + colour);
+                + height + ", area = " + calculateArea() + ", colour - " + getColour());
     }
 }

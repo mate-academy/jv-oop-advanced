@@ -3,9 +3,9 @@ package core.basesyntax;
 public class Square extends Shape {
     private double side;
 
-    Square(double side, Colour colour) {
+    public Square(double side, Colour colour) {
+        super(colour);
         this.side = side;
-        this.colour = colour;
     }
 
     @Override
@@ -16,6 +16,6 @@ public class Square extends Shape {
     @Override
     public void draw() {
         System.out.println("Square: side = " + side + ", area = "
-                + calculateArea() + ", colour - " + colour);
+                + calculateArea() + ", colour - " + getColour());
     }
 }

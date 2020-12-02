@@ -1,10 +1,16 @@
 package core.basesyntax;
 
-public abstract class Shape {
-    protected Colour colour;
+public abstract class Shape implements Drawable {
+    private Colour colour;
+
+    public Shape(Colour colour) {
+        this.colour = colour;
+    }
 
     public abstract double calculateArea();
 
-    public abstract void draw();
+    public Colour getColour() {
+        return colour;
+    }
 
 }

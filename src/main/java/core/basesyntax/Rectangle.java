@@ -1,14 +1,13 @@
 package core.basesyntax;
 
 public class Rectangle extends Shape {
-
     private double sideA;
     private double sideB;
 
-    Rectangle(double sideA, double sideB, Colour colour) {
+    public Rectangle(double sideA, double sideB, Colour colour) {
+        super(colour);
         this.sideA = sideA;
         this.sideB = sideB;
-        this.colour = colour;
     }
 
     @Override
@@ -19,6 +18,6 @@ public class Rectangle extends Shape {
     @Override
     public void draw() {
         System.out.println("Rectangle: sides " + sideA + " and " + sideB + ", area = "
-                + calculateArea() + ", colour - " + colour);
+                + calculateArea() + ", colour - " + getColour());
     }
 }

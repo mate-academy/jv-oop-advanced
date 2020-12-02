@@ -5,11 +5,11 @@ public class IsoscelesTrapezoid extends Shape {
     private double sideB;
     private double height;
 
-    IsoscelesTrapezoid(double sideA, double sideB, double height, Colour colour) {
+    public IsoscelesTrapezoid(double sideA, double sideB, double height, Colour colour) {
+        super(colour);
         this.sideA = sideA;
         this.sideB = sideB;
         this.height = height;
-        this.colour = colour;
     }
 
     @Override
@@ -19,7 +19,7 @@ public class IsoscelesTrapezoid extends Shape {
 
     @Override
     public void draw() {
-        System.out.println("Trapezoid: sides=" + sideA + " and " + sideB
-                + ", height= " + height + ", area=" + calculateArea() + ", colour - " + colour);
+        System.out.println("Trapezoid: sides = " + sideA + " and " + sideB + ", height = "
+                + height + ", area = " + calculateArea() + ", colour - " + getColour());
     }
 }

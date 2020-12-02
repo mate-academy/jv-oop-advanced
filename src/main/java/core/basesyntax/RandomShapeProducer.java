@@ -3,9 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class RandomShapeProducer {
+    static final int NUMBER_OF_SHAPES = 5;
 
     public Shape getRandomShape() {
-        int randomGeneratedIndex = new Random().nextInt(5);
+        int randomGeneratedIndex = new Random().nextInt(NUMBER_OF_SHAPES);
         switch (randomGeneratedIndex) {
             case 0:
                 return getCircle();
