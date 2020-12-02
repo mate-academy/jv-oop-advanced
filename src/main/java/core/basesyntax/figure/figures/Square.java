@@ -7,9 +7,9 @@ import core.basesyntax.figure.Shape;
 public class Square extends Figure {
 
     public static final Shape NAME = Shape.SQUARE;
-    private double side;
+    private int side;
 
-    public Square(Color color, double side) {
+    public Square(Color color, int side) {
         super(color);
         this.side = side;
     }
@@ -19,17 +19,17 @@ public class Square extends Figure {
         return getSide() * getSide();
     }
 
-    public double getSide() {
+    public int getSide() {
         return side;
     }
 
-    public void setSide(double side) {
+    public void setSide(int side) {
         this.side = side;
     }
 
     @Override
     public String toString() {
         return getColor() + " " + NAME + " with side "
-                + getSide() + " and square " + getSquare();
+                + getSide() + " units and square " + getSquare() + " sq. units.";
     }
 }

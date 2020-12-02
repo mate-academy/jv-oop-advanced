@@ -7,10 +7,10 @@ import core.basesyntax.figure.Shape;
 public class Rectangle extends Figure {
 
     public static final Shape NAME = Shape.RECTANGLE;
-    private double width;
-    private double height;
+    private int width;
+    private int height;
 
-    public Rectangle(Color color, double height, double width) {
+    public Rectangle(Color color, int height, int width) {
         super(color);
         this.width = width;
         this.height = height;
@@ -21,24 +21,25 @@ public class Rectangle extends Figure {
         return getWidth() * getHeight();
     }
 
-    public double getWidth() {
+    public int getWidth() {
         return width;
     }
 
-    public void setWidth(double width) {
+    public void setWidth(int width) {
         this.width = width;
     }
 
-    public double getHeight() {
+    public int getHeight() {
         return height;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(int height) {
         this.height = height;
     }
 
     public String toString() {
-        return getColor() + " " + NAME + " with height, "
-                + getHeight() + " width " + getWidth() + ", and square " + getSquare();
+        return getColor() + " " + NAME + " with height "
+                + getHeight() + " units, width " + getWidth()
+                + " units, and square " + getSquare() + " sq. units.";
     }
 }

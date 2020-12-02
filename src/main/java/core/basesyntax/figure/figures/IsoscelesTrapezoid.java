@@ -7,11 +7,11 @@ import core.basesyntax.figure.Shape;
 public class IsoscelesTrapezoid extends Figure {
 
     public static final Shape NAME = Shape.ISOSCELES_TRAPEZOID;
-    private double upperSide;
-    private double lowerSide;
-    private double height;
+    private int upperSide;
+    private int lowerSide;
+    private int height;
 
-    public IsoscelesTrapezoid(Color color, double upperSide, double lowerSide, double height) {
+    public IsoscelesTrapezoid(Color color, int upperSide, int lowerSide, int height) {
         super(color);
         this.upperSide = upperSide;
         this.lowerSide = lowerSide;
@@ -23,34 +23,34 @@ public class IsoscelesTrapezoid extends Figure {
         return (getLowerSide() + getUpperSide()) * height / 2;
     }
 
-    public double getUpperSide() {
+    public int getUpperSide() {
         return upperSide;
     }
 
-    public void setUpperSide(double upperSide) {
+    public void setUpperSide(int upperSide) {
         this.upperSide = upperSide;
     }
 
-    public double getLowerSide() {
+    public int getLowerSide() {
         return lowerSide;
     }
 
-    public void setLowerSide(double lowerSide) {
+    public void setLowerSide(int lowerSide) {
         this.lowerSide = lowerSide;
     }
 
-    public double getHeight() {
+    public int getHeight() {
         return height;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(int height) {
         this.height = height;
     }
 
     @Override
     public String toString() {
         return getColor() + " " + NAME + " with height, "
-                + getHeight() + " lower side " + getLowerSide()
-                + ", upper side " + getUpperSide() + ", and square " + getSquare();
+                + getHeight() + " units, lower side " + getLowerSide() + " units, upper side "
+                + getUpperSide() + " units, and square " + getSquare() + " sq. units.";
     }
 }

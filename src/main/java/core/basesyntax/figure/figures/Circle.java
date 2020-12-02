@@ -7,30 +7,30 @@ import core.basesyntax.figure.Shape;
 public class Circle extends Figure {
 
     public static final Shape NAME = Shape.CIRCLE;
-    private double radius;
+    private int radius;
 
-    public Circle(Color color, double radius) {
+    public Circle(Color color, int radius) {
         super(color);
         this.radius = radius;
     }
 
     @Override
     public double getSquare() {
-        return Math.PI * radius * radius;
+        return (int) (Math.PI * radius * radius);
     }
 
-    public double getRadius() {
+    public int getRadius() {
         return radius;
     }
 
-    public void setRadius(double radius) {
+    public void setRadius(int radius) {
         this.radius = radius;
     }
 
     @Override
     public String toString() {
         return getColor() + " " + NAME
-                + " with radius " + getRadius()
-                + " and square " + getSquare();
+                + " with radius " + getRadius() + " units"
+                + " and square " + getSquare() + " sq. units.";
     }
 }

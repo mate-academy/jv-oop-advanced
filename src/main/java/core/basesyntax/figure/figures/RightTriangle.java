@@ -7,10 +7,10 @@ import core.basesyntax.figure.Shape;
 public class RightTriangle extends Figure {
 
     public static final Shape NAME = Shape.RIGHT_TRIANGLE;
-    private double base;
-    private double height;
+    private int base;
+    private int height;
 
-    public RightTriangle(Color color, double base, double height) {
+    public RightTriangle(Color color, int base, int height) {
         super(color);
         this.base = base;
         this.height = height;
@@ -21,25 +21,26 @@ public class RightTriangle extends Figure {
         return base * height / 2;
     }
 
-    public double getBase() {
+    public int getBase() {
         return base;
     }
 
-    public void setBase(double base) {
+    public void setBase(int base) {
         this.base = base;
     }
 
-    public double getHeight() {
+    public int getHeight() {
         return height;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(int height) {
         this.height = height;
     }
 
     @Override
     public String toString() {
         return getColor() + " " + NAME + " with base "
-                + getBase() + ", height " + getHeight() + ", and square " + getSquare();
+                + getBase() + " units, height " + getHeight()
+                + " units, and square " + getSquare() + " sq. units.";
     }
 }
