@@ -1,9 +1,13 @@
 package core.basesyntax;
 
-public interface Figure {
-    double getArea();
+import core.basesyntax.constant.Color;
+import core.basesyntax.producers.ColorProducer;
 
-    Color getColor();
+public abstract class Figure implements Drawable {
+    public abstract double getArea();
 
-    String getParametrInfo();
+    public Color getColor() {
+        return ColorProducer.getColor();
+    }
+
 }

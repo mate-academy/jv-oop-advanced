@@ -1,5 +1,6 @@
-package core.basesyntax;
+package core.basesyntax.producers;
 
+import core.basesyntax.constant.Color;
 import java.util.Random;
 
 public class ColorProducer {

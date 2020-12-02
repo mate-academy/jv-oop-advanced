@@ -1,15 +1,14 @@
 package core.basesyntax;
 
-import java.util.Random;
+import core.basesyntax.producers.FigureProducer;
+import core.basesyntax.producers.NumberProducer;
 
 public class Main {
     public static void main(String[] args) {
-        Figure[] figures = new Figure[new Random().nextInt(7) + 1];
+        Figure[] figures = new Figure[NumberProducer.getNumberListFigure()];
         for (int i = 0; i < figures.length; i++) {
             figures[i] = FigureProducer.get();
-            System.out.println("Figure: " + figures[i].getClass().getTypeName().substring(16)
-                    + ", area: " + figures[i].getArea() + ", info: " + figures[i].getParametrInfo()
-                    + ", color: " + figures[i].getColor());
+            System.out.println(figures[i].draw());
         }
     }
 }
