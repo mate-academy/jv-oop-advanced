@@ -4,10 +4,12 @@ import core.basesyntax.color.Color;
 import core.basesyntax.figure.Figure;
 import core.basesyntax.figure.Shape;
 
+import javax.print.attribute.standard.MediaSize;
+
 public class Circle extends Figure {
 
     private double radius;
-    private Shape name = Shape.CIRCLE;
+    public static final Shape NAME = Shape.CIRCLE;
 
     public Circle(Color color, double radius) {
         super(color);
@@ -23,12 +25,8 @@ public class Circle extends Figure {
         return radius;
     }
 
-    public void setRadius(double radius) {
-        this.radius = radius;
-    }
-
-    public String toString(){
-        return getColor() + " " + getName()
+    public String toString() {
+        return getColor() + " " + NAME
                 + " with radius " + getRadius()
                 + " and square " + getSquare();
     }
