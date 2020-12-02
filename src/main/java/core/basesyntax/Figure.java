@@ -3,7 +3,8 @@ package core.basesyntax;
 
 public abstract class Figure {
     protected Colour colour;
-    protected int area;
+    protected double area;
+
 
     public void draw() {
         System.out.println(getClass().getSimpleName() + " is draw");
@@ -13,5 +14,9 @@ public abstract class Figure {
         return colour.name();
     }
 
-    public abstract void getArea();
+    public double parsingValue(double value){
+        return Double.parseDouble(String.format("%.2f", value));
+    }
+
+    public abstract double getArea();
 }
