@@ -39,6 +39,6 @@ public class Rectangle extends Figure {
 
     public String toString() {
         return getColor() + " " + NAME + " with height, "
-                + getHeight() + "width " + getWidth() + ", and square " + getSquare();
+                + getHeight() + " width " + getWidth() + ", and square " + getSquare();
     }
 }

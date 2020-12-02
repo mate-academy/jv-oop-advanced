@@ -4,8 +4,6 @@ import core.basesyntax.color.Color;
 import core.basesyntax.figure.Figure;
 import core.basesyntax.figure.Shape;
 
-import javax.print.attribute.standard.MediaSize;
-
 public class Circle extends Figure {
 
     public static final Shape NAME = Shape.CIRCLE;

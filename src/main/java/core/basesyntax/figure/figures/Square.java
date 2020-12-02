@@ -28,7 +28,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return getColor() + " " + NAME + " with side "
                 + getSide() + " and square " + getSquare();
     }
