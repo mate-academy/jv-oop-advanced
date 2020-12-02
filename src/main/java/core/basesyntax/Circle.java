@@ -1,7 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements Draw {
-
+public class Circle extends Figure {
     private int radius;
 
     public Circle(int radius) {
@@ -24,7 +23,7 @@ public class Circle extends Figure implements Draw {
     }
 
     @Override
-    public void unicMetod() {
-        System.out.println("Metod circle");
+    public int getRadius() {
+        return radius;
     }
 }

@@ -1,7 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements Draw {
-
+public class IsoscelesTrapezoid extends Figure {
     private int sideA;
     private int sideB;
     private int sideH;
@@ -28,7 +27,7 @@ public class IsoscelesTrapezoid extends Figure implements Draw {
     }
 
     @Override
-    public void unicMetod() {
-        System.out.println("Metod trapezoid");
+    public int getHeight() {
+        return sideH;
     }
 }

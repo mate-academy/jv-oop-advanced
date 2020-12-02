@@ -1,7 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements Draw {
-
+public class RightTriangle extends Figure {
     private int sideA;
     private int sideB;
 
@@ -26,7 +25,7 @@ public class RightTriangle extends Figure implements Draw {
     }
 
     @Override
-    public void unicMetod() {
-        System.out.println("Metod right triangle");
+    public int getSide() {
+        return sideA;
     }
 }

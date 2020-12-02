@@ -1,10 +1,8 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public abstract class Figure implements Draw {
 
     private Color color;
-    private int area;
-    private String name;
 
     public Color getColor() {
         return color;
@@ -18,5 +16,15 @@ public abstract class Figure {
 
     public abstract String getName();
 
-    public abstract void unicMetod();
+    public int getRadius() {
+        return 0;
+    }
+
+    public int getHeight() {
+        return 0;
+    }
+
+    public int getSide() {
+        return 0;
+    }
 }
