@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class FigureProducer {
 
-    private ColorsProducer colorsProducer;
+    private static final int UNI_LENGTH = new Random().nextInt(100);
 
-    private int uniLength = new Random().nextInt(100);
+    private ColorsProducer colorsProducer;
 
     public FigureProducer(ColorsProducer colorsProducer) {
 
@@ -34,33 +34,33 @@ public class FigureProducer {
     }
 
     private Circle getCircle() {
-        Circle circle = new Circle(colorsProducer.getColor(), uniLength);
+        Circle circle = new Circle(colorsProducer.getColor(), UNI_LENGTH);
         circle.obtainArea();
         return circle;
     }
 
     private IsoscelesTrapezoid getIsoscelesTrapezoid() {
         IsoscelesTrapezoid isoscelesTrapezoid =
-                new IsoscelesTrapezoid(colorsProducer.getColor(), uniLength);
+                new IsoscelesTrapezoid(colorsProducer.getColor(), UNI_LENGTH);
         isoscelesTrapezoid.obtainArea();
         return isoscelesTrapezoid;
     }
 
     private Rectangle getRectangle() {
-        Rectangle rectangle = new Rectangle(colorsProducer.getColor(), uniLength);
+        Rectangle rectangle = new Rectangle(colorsProducer.getColor(), UNI_LENGTH);
         rectangle.obtainArea();
         return rectangle;
     }
 
     private RightTriangle getRightTriangle() {
         RightTriangle rightTriangle =
-                new RightTriangle(colorsProducer.getColor(), uniLength);
+                new RightTriangle(colorsProducer.getColor(), UNI_LENGTH);
         rightTriangle.obtainArea();
         return rightTriangle;
     }
 
     private Square getSquare() {
-        Square square = new Square(colorsProducer.getColor(), uniLength);
+        Square square = new Square(colorsProducer.getColor(), UNI_LENGTH);
         square.obtainArea();
         return square;
     }

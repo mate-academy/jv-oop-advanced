@@ -3,9 +3,9 @@ package core.basesyntax;
 public class Circle extends Figure {
     private int radius;
 
-    public Circle(Colors color, int uniLength) {
+    public Circle(Colors color, int radius) {
         super(color);
-        this.radius = uniLength;
+        this.radius = radius;
     }
 
     @Override
