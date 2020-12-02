@@ -58,7 +58,7 @@ public class FigureProduce {
 
     private double generateNumber() {
         int rndmz = -1;
-        while (rndmz<0){
+        while (rndmz < 0) {
             rndmz = random.nextInt();
         }
         return rndmz + random.nextDouble();

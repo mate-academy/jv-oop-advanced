@@ -1,7 +1,8 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-       private double radius;
+
+    private double radius;
 
     Circle(double radius, Color color) {
         super(color);
