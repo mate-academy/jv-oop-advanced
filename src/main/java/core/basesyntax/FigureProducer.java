@@ -4,10 +4,10 @@ import java.util.Random;
 
 public class FigureProducer {
 
-    public static final int COUNT_OF_FIGURE_IMPLEMENTATIONS = 5;
+    public static final int COUNT_OF_FIGURE = 5;
 
     public Figure get() {
-        int randomFigure = new Random().nextInt(COUNT_OF_FIGURE_IMPLEMENTATIONS);
+        int randomFigure = new Random().nextInt(COUNT_OF_FIGURE);
         ColourProducer colourProducer = new ColourProducer();
         switch (randomFigure) {
             case 0:
