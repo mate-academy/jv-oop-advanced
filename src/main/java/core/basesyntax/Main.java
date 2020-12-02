@@ -9,6 +9,7 @@ import core.basesyntax.figures.Square;
 import core.basesyntax.figures.Triangle;
 
 public class Main {
+    static final int COLORS = 6;
 
     public static void main(String[] args) {
 
@@ -19,7 +20,6 @@ public class Main {
 
     public static Shape[] generateFigures(int count) {
         Shape[] figures = new Shape[RandomNumber.getRandomNumber(count)];
-        final int COLORS = 6;
 
         for (int i = 0; i < figures.length; i++) {
             switch (RandomNumber.getRandomNumber(COLORS)) {
