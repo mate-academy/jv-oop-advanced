@@ -9,7 +9,8 @@ public class Rectangle extends Figure {
         super(color);
         this.weight = weight;
         this.height = height;
-        calculate();
+        calculateArea();
+        calculateDiagonal();
     }
 
     @Override
@@ -20,8 +21,11 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void calculate() {
+    public void calculateArea() {
         setArea(height * weight);
+    }
+
+    public void calculateDiagonal() {
         diagonal = Math.sqrt(height * height + weight * weight);
     }
 

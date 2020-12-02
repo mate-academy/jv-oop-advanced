@@ -6,7 +6,7 @@ public class Circle extends Figure {
     public Circle(Color color, int radius) {
         super(color);
         this.radius = radius;
-        calculate();
+        calculateArea();
     }
 
     @Override
@@ -16,7 +16,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public void calculate() {
+    public void calculateArea() {
         setArea(Math.PI * (getRadius() * getRadius()));
     }
 

@@ -16,7 +16,11 @@ public abstract class Figure implements Workable {
         return area;
     }
 
-    public void setArea(double area) {
+    protected void setArea(double area) {
+        if (area < 0) {
+            System.out.println("Negative number!");
+            return;
+        }
         this.area = area;
     }
 }

@@ -7,7 +7,8 @@ public class Square extends Figure {
     public Square(Color color, int side) {
         super(color);
         this.side = side;
-        calculate();
+        calculateArea();
+        calculateDiagonal();
     }
 
     @Override
@@ -17,8 +18,11 @@ public class Square extends Figure {
     }
 
     @Override
-    public void calculate() {
+    public void calculateArea() {
         setArea(side * side);
+    }
+
+    public void calculateDiagonal() {
         diagonal = Math.sqrt(2) * side;
     }
 

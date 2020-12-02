@@ -6,7 +6,7 @@ public class RightTriangle extends Figure {
     public RightTriangle(Color color, int side) {
         super(color);
         this.side = side;
-        calculate();
+        calculateArea();
     }
 
     @Override
@@ -16,7 +16,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void calculate() {
+    public void calculateArea() {
         setArea(this.side * this.side / 2);
     }
 
