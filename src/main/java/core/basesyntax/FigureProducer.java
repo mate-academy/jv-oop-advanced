@@ -17,13 +17,13 @@ public class FigureProducer implements Fillable {
                     shape = new Rectangle("rectangle", new FigureProducer());
                     break;
                 case 2:
-                    shape = new Circle("circle");
+                    shape = new Circle("circle", new FigureProducer());
                     break;
                 case 3:
                     shape = new RightTriangle("right triangle",new FigureProducer());
                     break;
                 case 4:
-                    shape = new IsoscelesTrapezoid("trapezoid");
+                    shape = new IsoscelesTrapezoid("trapezoid", new FigureProducer());
                     break;
                 default:
             }

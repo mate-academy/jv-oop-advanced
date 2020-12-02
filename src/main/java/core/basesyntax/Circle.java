@@ -1,17 +1,13 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Circle extends Shape {
 
-    private Random rand;
-    private StringBuilder sb = new StringBuilder();
-    private double roundness; // Окружность
+    private StringBuilder message = new StringBuilder();
+    private double roundness;
 
-    public Circle(String name) {
+    public Circle(String name, FigureProducer producer) {
         super(name);
-        rand = new Random();
-        this.roundness = rand.nextInt(50);
+        this.roundness = producer.generatorNumber();
     }
 
     @Override
@@ -31,7 +27,7 @@ public class Circle extends Shape {
 
     @Override
     public String info() {
-        return sb.append(super.info()).append(",area: " + this.calculateArea() + " sq.unit,")
+        return message.append(super.info()).append(",area: " + this.calculateArea() + " sq.unit,")
         .append("radius:" + this.radius() + " units,").toString();
     }
 

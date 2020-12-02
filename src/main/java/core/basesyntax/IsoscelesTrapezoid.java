@@ -1,21 +1,17 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class IsoscelesTrapezoid extends Shape {
 
-    private Random rand;
-    private StringBuilder sb = new StringBuilder();
+    private StringBuilder message = new StringBuilder();
     private int sideA;
     private int sideB;
     private int sideC;
 
-    public IsoscelesTrapezoid(String name) {
+    public IsoscelesTrapezoid(String name, FigureProducer producer) {
         super(name);
-        rand = new Random();
-        this.sideA = rand.nextInt(10);
-        this.sideB = rand.nextInt(20);
-        this.sideC = rand.nextInt(15);
+        this.sideA = producer.generatorNumber();
+        this.sideB = producer.generatorNumber();
+        this.sideC = producer.generatorNumber();
     }
 
     @Override
@@ -35,7 +31,7 @@ public class IsoscelesTrapezoid extends Shape {
 
     @Override
     public String info() {
-        return sb.append(super.info()).append(",area: " + this.calculateArea() + " sq.units ")
+        return message.append(super.info()).append(",area: " + this.calculateArea() + " sq.units ")
         .append("height: " + this.height() + " units ").toString();
     }
 
