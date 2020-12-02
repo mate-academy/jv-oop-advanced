@@ -21,7 +21,7 @@ public abstract class Shape {
 
     public abstract double calculateArea();
 
-    public abstract double perimeter();
+    public abstract double getPerimeter();
 
     public abstract void draw();
 

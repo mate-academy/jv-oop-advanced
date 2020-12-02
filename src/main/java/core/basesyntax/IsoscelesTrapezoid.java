@@ -20,7 +20,7 @@ public class IsoscelesTrapezoid extends Shape {
     }
 
     @Override
-    public double perimeter() {
+    public double getPerimeter() {
         return 2 * sideC + sideA + sideB;
     }
 

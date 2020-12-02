@@ -18,7 +18,7 @@ public class RightTriangle extends Shape {
     }
 
     @Override
-    public double perimeter() {
+    public double getPerimeter() {
         return sideA + sideB + getHypotenuse();
     }
 

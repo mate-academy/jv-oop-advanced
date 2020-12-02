@@ -12,12 +12,12 @@ public class Circle extends Shape {
 
     @Override
     public double calculateArea() {
-        return (int) (radius() * Math.PI);
+        return Math.round(getRadius() * Math.PI);
     }
 
     @Override
-    public double perimeter() {
-        return radius() * 2 * Math.PI;
+    public double getPerimeter() {
+        return getRadius() * 2 * Math.PI;
     }
 
     @Override
@@ -28,10 +28,10 @@ public class Circle extends Shape {
     @Override
     public String info() {
         return message.append(super.info()).append(",area: " + this.calculateArea() + " sq.unit,")
-        .append("radius:" + this.radius() + " units,").toString();
+        .append("radius:" + this.getRadius() + " units,").toString();
     }
 
-    public double radius() {
+    public double getRadius() {
         return Math.round(roundness / (2 * Math.PI));
     }
 }
