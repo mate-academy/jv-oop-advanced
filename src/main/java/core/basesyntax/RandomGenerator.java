@@ -3,11 +3,11 @@ package core.basesyntax;
 import java.util.Random;
 
 public class RandomGenerator {
-    private static final int TOTALNUMBER = 5;
+    private static final int TOTAL_NUMBER = 5;
     private static final Random random = new Random();
 
     public static Figure getRandomFigure() {
-        switch (random.nextInt(TOTALNUMBER)) {
+        switch (random.nextInt(TOTAL_NUMBER)) {
             case 0:
                 return new Circle(random.nextInt(50),
                         getColor());
@@ -36,8 +36,7 @@ public class RandomGenerator {
         return new Random().nextInt(50);
     }
 
-    public static Color getColor() {
-        Color[] hues = Color.values();
-        return hues[random.nextInt(hues.length)];
+    private static Color getColor() {
+        return Color.values()[random.nextInt(Color.values().length)];
     }
 }

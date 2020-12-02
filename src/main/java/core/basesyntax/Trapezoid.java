@@ -1,10 +1,10 @@
 package core.basesyntax;
 
-public class Trapezoid extends Figure implements Drawable {
+public class Trapezoid extends Figure {
 
-    private double baseA;
-    private double baseB;
-    private double height;
+    private final double baseA;
+    private final double baseB;
+    private final double height;
 
     public Trapezoid(double baseA, double baseB, double height, Color color) {
         this.baseA = baseA;

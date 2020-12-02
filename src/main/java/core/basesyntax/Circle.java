@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements Drawable {
+public class Circle extends Figure {
     private final double radius;
 
-    public Circle(double radius,Color color) {
+    public Circle(double radius, Color color) {
         this.radius = radius;
         this.color = color;
         this.area = Math.pow(radius,2) * Math.PI;
