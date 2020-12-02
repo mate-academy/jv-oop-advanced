@@ -15,21 +15,16 @@ public class IsoscelesTrapezoid extends Figure {
         setColor(color);
     }
     
+    @Override
+    public void draw() {
+        System.out.printf("IsoscelesTrapezoid, sideUP: %f units, sideDown: %f units, "
+                        + "side: %f units, area: %f sq. units, perimeter: %f units, "
+                        + "diagonal: %f units, color: %s%n",
+                sideUP, sideDown, side, getArea(), getPerimeter(), getDiagonal(), getColor());
+    }
+    
     public double getDiagonal() {
         return Math.sqrt(sideUP * sideDown + side * side
                 + ((sideDown * (side * side - side * side) / sideDown - sideUP)));
-    }
-    
-    @Override
-    public void draw() {
-        System.out.println("Draw isosceles trapezoid");
-    }
-    
-    @Override
-    public String getParameters() {
-        return String.format("IsoscelesTrapezoid, sideUP: %f units, sideDown: %f units, "
-                        + "side: %f units, area: %f sq. units, perimeter: %f units, "
-                        + "diagonal: %f units, color: %s",
-                sideUP, sideDown, side, getArea(), getPerimeter(),getDiagonal(), getColor());
     }
 }

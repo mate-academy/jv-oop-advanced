@@ -10,19 +10,14 @@ public class Square extends Figure {
         setColor(color);
     }
     
-    public double getDiagonal() {
-        return Math.sqrt(side * side * 2);
-    }
-    
     @Override
     public void draw() {
-        System.out.println("Draw square");
+        System.out.printf("Rectangle, side: %f units, area: %f sq. units, perimeter: %f units,"
+                        + "diagonal: %f units, color: %s%n",
+                side, getArea(), getPerimeter(), getDiagonal(), getColor());
     }
     
-    @Override
-    public String getParameters() {
-        return String.format("Rectangle, side: %f units, area: %f sq. units, "
-                        + "perimeter: %f units, diagonal: %f units, color: %s",
-                side, getArea(), getPerimeter(), getDiagonal(), getColor());
+    public double getDiagonal() {
+        return Math.sqrt(side * side * 2);
     }
 }

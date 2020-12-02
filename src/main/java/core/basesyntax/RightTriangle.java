@@ -12,20 +12,14 @@ public class RightTriangle extends Figure {
         setColor(color);
     }
     
-    public double getHypotenuse() {
-        return Math.sqrt(sideA * sideA + sideB * sideB);
-    }
-    
     @Override
     public void draw() {
-        System.out.println("Draw right triangle");
+        System.out.printf("Right triangle, sideA: %f units, sideB: %f units, hypotenuse: %f units, "
+                        + "area: %f sq. units, perimeter: %f units, color: %s%n",
+                sideA, sideB, getHypotenuse(), getArea(), getPerimeter(), getColor());
     }
     
-    @Override
-    public String getParameters() {
-        return String.format("Right triangle, sideA: %f units, sideB: %f units,"
-                        + "hypotenuse: %f units, area: %f sq. units, "
-                        + "perimeter: %f units, color: %s",
-                sideA, sideB, getHypotenuse(), getArea(), getPerimeter(), getColor());
+    public double getHypotenuse() {
+        return Math.sqrt(sideA * sideA + sideB * sideB);
     }
 }

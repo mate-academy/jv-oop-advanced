@@ -1,13 +1,9 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public abstract class Figure implements Drawable {
     private double area;
     private double perimeter;
     private Color color;
-    
-    public abstract void draw();
-    
-    public abstract String getIformation();
     
     public double getArea() {
         return area;
