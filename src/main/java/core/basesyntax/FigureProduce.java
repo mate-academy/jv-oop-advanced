@@ -4,12 +4,12 @@ import java.util.Random;
 
 public class FigureProduce {
 
-    public static final int COUNT_OF_MACHINE_IMPLEMENTATIONS = 4;
+    public static final int COUNT_OF_FIGURE_IMPLEMENTATIONS = 4;
     Random random = new Random();
     ColorProducer colorProducer = new ColorProducer();
 
     public Figure get() {
-        int randomGeneratedIndex = random.nextInt(COUNT_OF_MACHINE_IMPLEMENTATIONS);
+        int randomGeneratedIndex = random.nextInt(COUNT_OF_FIGURE_IMPLEMENTATIONS);
         switch (randomGeneratedIndex) {
             case 0:
                 return getRectangle();
@@ -26,34 +26,42 @@ public class FigureProduce {
     }
 
     private Figure getCircle() {
-        Figure circle = new Circle(random.nextDouble(), colorProducer.get());
+        Figure circle = new Circle(generateNumber(), colorProducer.get());
         return circle;
     }
 
     private Figure getRectangle() {
-        Figure rectangle = new Rectangle(random.nextDouble(),
-                random.nextDouble(), colorProducer.get());
+        Figure rectangle = new Rectangle(generateNumber(),
+                generateNumber(), colorProducer.get());
         return rectangle;
     }
 
     private Figure getSquare() {
-        Figure square = new Square(random.nextDouble(), colorProducer.get());
+        Figure square = new Square(generateNumber(), colorProducer.get());
         return square;
     }
 
     private Figure getTrapezoidIsosceles() {
-        Figure trapezoidIsosceles = new TrapezoidIsosceles(random.nextDouble(),
-                random.nextDouble(),
-                random.nextDouble(),
+        Figure trapezoidIsosceles = new TrapezoidIsosceles(generateNumber(),
+                generateNumber(),
+                generateNumber(),
                 colorProducer.get());
         return trapezoidIsosceles;
     }
 
     private Figure getTriangleRight() {
         Figure triangleRight = new TriangleRight(random.nextDouble(),
-                random.nextDouble(),
+                generateNumber(),
                 colorProducer.get());
         return triangleRight;
+    }
+
+    private double generateNumber() {
+        int rndmz = -1;
+        while (rndmz<0){
+            rndmz = random.nextInt();
+        }
+        return rndmz + random.nextDouble();
     }
 
 }
