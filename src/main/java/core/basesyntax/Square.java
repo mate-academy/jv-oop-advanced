@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Square extends Shape {
 
     private StringBuilder message = new StringBuilder();

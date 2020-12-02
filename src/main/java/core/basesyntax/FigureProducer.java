@@ -40,6 +40,4 @@ public class FigureProducer implements Fillable {
     public int generatorNumber() {
         return (int)(1 + Math.random() * 20);
     }
-
-
 }

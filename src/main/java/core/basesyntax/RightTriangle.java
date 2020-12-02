@@ -34,7 +34,7 @@ public class RightTriangle extends Shape {
     }
 
     public double getHypotenuse() {
-        double result =(Math.sqrt((sideA * sideA) + (sideB * sideB)));
+        double result = (Math.sqrt((sideA * sideA) + (sideB * sideB)));
         return Math.round(result);
     }
 }
