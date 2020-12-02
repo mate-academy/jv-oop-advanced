@@ -1,17 +1,17 @@
 package core.basesyntax;
 
-public class Square extends Figures {
-
+public class Square extends Figure {
     private int side;
     private double diagonal;
 
-    public void setParameters(int side) {
+    public Square(int side, Color color) {
+        super(side * side, color);
         this.side = side;
-        diagonal = Math.sqrt(2) * side;
+        setDiagonal();
     }
 
-    public void setArea() {
-        super.setArea(side * side);
+    private void setDiagonal() {
+        diagonal = Math.sqrt(2) * side;
     }
 
     public void printInfo() {

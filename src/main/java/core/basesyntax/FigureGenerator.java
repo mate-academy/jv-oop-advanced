@@ -3,43 +3,30 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureGenerator {
-    private static int AVAILABLESHAPESNUMBER = 5;
+    private static final int AVAILABLE_SHAPES_NUMBER = 5;
 
-    public Figures get() {
-        Random rand = new Random();
-        ColorProducer cp = new ColorProducer();
-        switch (rand.nextInt(AVAILABLESHAPESNUMBER)) {
+    public Figure getFigure() {
+        Random random = new Random();
+        ColorProducer colorProducer = new ColorProducer();
+        switch (random.nextInt(AVAILABLE_SHAPES_NUMBER)) {
             case 0:
-                Circle circle = new Circle();
-                circle.setColor(cp.get());
-                circle.setRadius(rand.nextInt(10));
-                circle.setArea();
+                Circle circle = new Circle(random.nextInt(10), colorProducer.getColor());
                 return circle;
 
             case 1:
-                IzoscelesTrapezoid trapezoid = new IzoscelesTrapezoid();
-                trapezoid.setColor(cp.get());
-                trapezoid.setParameters(rand.nextInt(10) + 2, rand.nextInt(10),
-                        rand.nextInt(10));
-                trapezoid.setArea();
+                IzoscelesTrapezoid trapezoid = new IzoscelesTrapezoid(random.nextInt(10) + 2,
+                        random.nextInt(10), random.nextInt(10), colorProducer.getColor());
                 return trapezoid;
             case 2:
-                Rectangle rectangle = new Rectangle();
-                rectangle.setColor(cp.get());
-                rectangle.setParameters(rand.nextInt(20), rand.nextInt(10));
-                rectangle.setArea();
+                Rectangle rectangle = new Rectangle(random.nextInt(20), random.nextInt(10),
+                        colorProducer.getColor());
                 return rectangle;
             case 3:
-                RightTriangle triangle = new RightTriangle();
-                triangle.setColor(cp.get());
-                triangle.setParameters(rand.nextInt(10), rand.nextInt(10));
-                triangle.setArea();
+                RightTriangle triangle = new RightTriangle(random.nextInt(10), random.nextInt(10),
+                        colorProducer.getColor());
                 return triangle;
             default:
-                Square square = new Square();
-                square.setColor(cp.get());
-                square.setParameters(rand.nextInt(10));
-                square.setArea();
+                Square square = new Square(random.nextInt(10), colorProducer.getColor());
                 return square;
 
         }
