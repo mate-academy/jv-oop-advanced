@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements GeometricObject {
+public class Circle extends Figure {
     private int radius;
 
     public void circle(int radius) {

@@ -1,10 +1,11 @@
 package core.basesyntax;
 
-public abstract class Figure {
-    Color color;
-    double area;
+public abstract class Figure implements GeometricObjectInfo {
+    private Color color;
+    private double area;
 
-    String displayInfo() {
-        return null;
-    }
+    public abstract double getArea();
+
+    public abstract Color getColor();
+
 }

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Triangle extends Figure implements GeometricObject {
+public class Triangle extends Figure {
     private int firstSide;
     private int secondSide;
     private int thirdSide;

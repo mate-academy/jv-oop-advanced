@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Trapezoid extends Figure implements GeometricObject {
+public class Trapezoid extends Figure {
     private int firstBase;
     private int secondBase;
     private int height;
@@ -37,20 +37,17 @@ public class Trapezoid extends Figure implements GeometricObject {
 
     @Override
     public double getArea() {
-
         return (firstBase + secondBase) / 2 * height;
     }
 
     @Override
     public Color getColor() {
-
         return ColorProducer.getColor();
     }
 
     @Override
     public String displayInfo() {
-
-        return "Figure:Trapezoid" + "," + "Color:" + getColor() + ","
-                + "Area:" + getArea() + "," + "Height:" + height;
+        return String.format("Figure:Trapezoid,Color:%s,Area:%s,Height:%d", getColor(),
+                getArea(), height);
     }
 }

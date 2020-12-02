@@ -3,8 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureProducer {
+    static final int FIGURES_VALUE = 4;
+
     public Figure get() {
-        int randomGeneratedIndex = new Random().nextInt(4);
+        int randomGeneratedIndex = new Random().nextInt(FIGURES_VALUE);
         switch (randomGeneratedIndex) {
             case 0:
                 return getCircle();
@@ -17,17 +19,21 @@ public class FigureProducer {
         }
     }
 
+    public int getRandom() {
+        return new Random().nextInt(10);
+    }
+
     private Circle getCircle() {
         Circle circle = new Circle();
-        circle.setRadius(new Random().nextInt(10));
+        circle.setRadius(getRandom());
         return circle;
     }
 
     private Triangle getTriangle() {
         Triangle triangle = new Triangle();
-        triangle.setFirstSide(new Random().nextInt(10));
-        triangle.setSecondSide(new Random().nextInt(10));
-        triangle.setThirdSide(new Random().nextInt(10));
+        triangle.setFirstSide(getRandom());
+        triangle.setSecondSide(getRandom());
+        triangle.setThirdSide(getRandom());
         return triangle;
     }
 
@@ -39,9 +45,9 @@ public class FigureProducer {
 
     private Trapezoid getTrapezoid() {
         Trapezoid trapezoid = new Trapezoid();
-        trapezoid.setFirstBase(new Random().nextInt(10));
-        trapezoid.setSecondBase(new Random().nextInt(10));
-        trapezoid.setHeight(new Random().nextInt(10));
+        trapezoid.setFirstBase(getRandom());
+        trapezoid.setSecondBase(getRandom());
+        trapezoid.setHeight(getRandom());
         return trapezoid;
     }
 }
