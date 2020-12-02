@@ -1,14 +1,9 @@
 package core.basesyntax;
 
 
-public abstract class Figure {
+public abstract class Figure implements Drawable{
     protected Colour colour;
     protected double area;
-
-
-    public void draw() {
-        System.out.println(getClass().getSimpleName() + " is draw");
-    }
 
     public String getColour() {
         return colour.name();
