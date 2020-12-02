@@ -5,7 +5,7 @@ public class ApplicationStarter {
         FiguresGenerator generator = new FiguresGenerator();
         Figure[] figures = generator.generateFiguresArray();
         for (Figure figure : figures) {
-            System.out.println(figure.getParameters());
+            figure.draw();
         }
     }
 }
