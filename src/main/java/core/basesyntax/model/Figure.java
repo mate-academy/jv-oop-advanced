@@ -1,8 +1,8 @@
 package core.basesyntax.model;
 
 public abstract class Figure implements Drawable {
-    private double area;
-    private Color color;
+    private final double area;
+    private final Color color;
 
     Figure(double area, Color color) {
         this.area = area;
