@@ -8,21 +8,20 @@ public class IsoscelesTrapezoid extends Figure {
 
     public IsoscelesTrapezoid(
             int sideAngle, int sideLength, int smallerBase, int biggerBase, Color color) {
+        super(((smallerBase + biggerBase) / 2)
+                * Math.sqrt(Math.pow(sideLength, 2)
+                - ((Math.pow(biggerBase - smallerBase, 2)) / 4)), color);
         this.sideLength = sideLength;
         this.sideAngle = sideAngle;
         this.smallerBase = smallerBase;
         this.biggerBase = biggerBase;
-        this.color = color;
-        this.area = ((smallerBase + biggerBase) / 2)
-                * Math.sqrt(Math.pow(sideLength, 2)
-                - ((Math.pow(biggerBase - smallerBase, 2)) / 4));
     }
 
     @Override
     public String draw() {
         return new StringBuilder("Trapezoid: ")
                 .append("area = ")
-                .append(this.area)
+                .append(this.getArea())
                 .append(", sides = ")
                 .append("{")
                 .append(this.biggerBase).append(", ")
@@ -32,7 +31,7 @@ public class IsoscelesTrapezoid extends Figure {
                 .append(", side angle = ")
                 .append(this.sideAngle)
                 .append(", color = ")
-                .append(this.color)
+                .append(this.getColor())
                 .toString();
     }
 
@@ -46,10 +45,6 @@ public class IsoscelesTrapezoid extends Figure {
 
     public int getBiggerBase() {
         return biggerBase;
-    }
-
-    public Color getColor() {
-        return this.color;
     }
 
     public int getSmallerBase() {

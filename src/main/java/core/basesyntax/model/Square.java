@@ -6,20 +6,19 @@ public class Square extends Rectangle {
     public Square(int sideLength, Color color) {
         super(sideLength, sideLength, color);
         this.diagonalLength = (int) Math.round(sideLength * Math.sqrt(2));
-        this.area = Math.pow(sideLength, 2);
     }
 
     @Override
     public String draw() {
         return new StringBuilder("Square: ")
                 .append("area = ")
-                .append(this.area)
+                .append(this.getArea())
                 .append(", side length = ")
                 .append(this.getSideLength())
-                .append(" diagonal length = ")
+                .append(", diagonal length = ")
                 .append(diagonalLength)
                 .append(", color = ")
-                .append(this.color)
+                .append(this.getColor())
                 .toString();
     }
 

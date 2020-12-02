@@ -5,16 +5,14 @@ public class Rectangle extends IsoscelesTrapezoid {
 
     public Rectangle(int sideLength, int baseLength, Color color) {
         super(90, sideLength, baseLength, baseLength, color);
-        this.area = sideLength * baseLength;
         this.perimeter = (sideLength + baseLength) * 2;
-        this.color = color;
     }
 
     @Override
     public String draw() {
         return new StringBuilder("Rectangle: ")
                 .append("area = ")
-                .append(this.area)
+                .append(this.getArea())
                 .append(", perimeter = ")
                 .append(this.perimeter)
                 .append(", sides = ")
@@ -22,7 +20,7 @@ public class Rectangle extends IsoscelesTrapezoid {
                 .append(this.getSideLength()).append(", ").append(this.getBiggerBase())
                 .append("}")
                 .append(", color = ")
-                .append(this.color)
+                .append(this.getColor())
                 .toString();
     }
 

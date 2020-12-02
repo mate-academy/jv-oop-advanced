@@ -6,18 +6,17 @@ public class RightTriangle extends Figure {
     private final int smallerCathetus;
 
     public RightTriangle(int hypotenuse, int biggerCathetus, int smallerCathetus, Color color) {
+        super((biggerCathetus * smallerCathetus) / 2, color);
         this.hypotenuse = hypotenuse;
         this.biggerCathetus = biggerCathetus;
         this.smallerCathetus = smallerCathetus;
-        this.color = color;
-        this.area = (biggerCathetus * smallerCathetus) / 2;
     }
 
     @Override
     public String draw() {
         return new StringBuilder("Right triangle: ")
                 .append("area = ")
-                .append(this.area)
+                .append(this.getArea())
                 .append(", hypotenuse length = ")
                 .append(this.hypotenuse)
                 .append(", cathetus = ")
@@ -27,7 +26,7 @@ public class RightTriangle extends Figure {
                 .append(smallerCathetus)
                 .append("}")
                 .append(", color = ")
-                .append(this.color)
+                .append(this.getColor())
                 .toString();
     }
 
@@ -41,9 +40,5 @@ public class RightTriangle extends Figure {
 
     public int getSmallerCathetus() {
         return smallerCathetus;
-    }
-
-    public Color getColor() {
-        return this.color;
     }
 }
