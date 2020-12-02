@@ -7,7 +7,7 @@ public abstract class Figure {
     
     public abstract void draw();
     
-    public abstract String getParameters();
+    public abstract String getIformation();
     
     public double getArea() {
         return area;
