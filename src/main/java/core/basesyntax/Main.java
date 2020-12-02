@@ -16,7 +16,7 @@ public class Main {
         Figure[] figures = new Figure[temptFate];
         for (Figure figure: figures) {
             figure = figureProducer.get();
-           System.out.println(figure.draw());
+            System.out.println(figure.draw());
         }
     }
 }
