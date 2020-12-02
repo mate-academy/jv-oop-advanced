@@ -36,4 +36,3 @@ public class Circle extends Shape {
         return Math.round(roundness / (2 * Math.PI));
     }
 }
-

@@ -43,4 +43,5 @@ public class IsoscelesTrapezoid extends Shape {
     public double getHeight() {
         return Math.sqrt((sideC * sideC) - 1 / 4 * ((sideB * sideB) - (sideA * sideA)));
     }
+
 }

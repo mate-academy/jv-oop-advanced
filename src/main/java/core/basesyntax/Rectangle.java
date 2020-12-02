@@ -37,5 +37,4 @@ public class Rectangle extends Shape {
         double result = (Math.sqrt((width * width) + (length * length)));
         return Math.round(result);
     }
-
 }

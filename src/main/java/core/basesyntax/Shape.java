@@ -24,6 +24,3 @@ public abstract class Shape implements Drawable {
         .append(", color: " + this.getColor()).toString();
     }
 }
-
-
-
