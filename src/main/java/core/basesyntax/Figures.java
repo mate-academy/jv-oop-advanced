@@ -12,5 +12,15 @@ public abstract class Figures implements Drawable, Displayable {
     }
 
     public abstract double getArea();
+
+    @Override
+    public void draw() {
+        System.out.println("Abstract Class Figures overridden");
+    }
+
+    @Override
+    public String displayInformation() {
+        return "Abstract Class Figures overridden";
+    }
 }
 
