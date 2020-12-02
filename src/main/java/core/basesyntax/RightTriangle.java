@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements HasBisector, Drawing {
+public class RightTriangle extends Figure implements HasBisector {
     private double sideA;
     private double sideB;
 
@@ -31,7 +31,6 @@ public class RightTriangle extends Figure implements HasBisector, Drawing {
         return 0.5 * sideA * sideB;
     }
 
-    @Override
     public String getFigureInformation() {
         return String.format("Shape: right triangle, area: %.3f sq. units, side A length: %s units,"
                 + " side B length: %s units, bisector length: %.3f units, color: %s",

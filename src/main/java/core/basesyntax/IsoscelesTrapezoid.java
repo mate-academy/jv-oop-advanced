@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements HasHeight, HasDiagonal, Drawing {
+public class IsoscelesTrapezoid extends Figure implements HasHeight, HasDiagonal {
     private double downSide;
     private double upSide;
     private double side;
@@ -42,7 +42,6 @@ public class IsoscelesTrapezoid extends Figure implements HasHeight, HasDiagonal
                 - Math.pow(upSide - downSide, 2) / 4);
     }
 
-    @Override
     public String getFigureInformation() {
         return String.format("Shape: isosceles trapezoid, area: %.3f sq. units,"
                         + " up side length: %s units, down side length: %s units,"

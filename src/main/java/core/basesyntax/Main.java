@@ -10,6 +10,7 @@ public class Main {
 
         for (Figure figure : arrayOfFigure) {
             System.out.println(figure.getFigureInformation());
+            figure.draw();
         }
     }
 }

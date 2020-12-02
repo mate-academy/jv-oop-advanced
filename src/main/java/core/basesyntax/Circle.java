@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements HasDiagonal, Drawing {
+public class Circle extends Figure implements HasDiagonal {
     private double radius;
 
     public Circle(String color, double radius) {
@@ -21,7 +21,6 @@ public class Circle extends Figure implements HasDiagonal, Drawing {
         return Math.PI * radius * radius;
     }
 
-    @Override
     public String getFigureInformation() {
         return String.format("Shape: circle, area: %.3f sq. units, radius: %s units,"
                 + " diagonal: %s units, color: %s", getArea(), radius, getDiagonal(), getColor());

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends Figure implements HasDiagonal, Drawing {
+public class Square extends Figure implements HasDiagonal {
     private double side;
 
     public Square(String color, double side) {
@@ -22,7 +22,6 @@ public class Square extends Figure implements HasDiagonal, Drawing {
         return side * side;
     }
 
-    @Override
     public String getFigureInformation() {
         return String.format("Shape: square, area: %.2f sq. units, side length: %s units, diagonal:"
                 + " %.3f units, color: %s", getArea(), side, getDiagonal(), getColor());

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements HasDiagonal, Drawing {
+public class Rectangle extends Figure implements HasDiagonal {
     private double sideA;
     private double sideB;
 
@@ -31,7 +31,6 @@ public class Rectangle extends Figure implements HasDiagonal, Drawing {
         return sideA * sideB;
     }
 
-    @Override
     public String getFigureInformation() {
         return String.format("Shape: rectangle, area: %.2f sq. units, side A length: %s units,"
                         + " side B length: %s units, diagonal: %.3f units, color: %s",
