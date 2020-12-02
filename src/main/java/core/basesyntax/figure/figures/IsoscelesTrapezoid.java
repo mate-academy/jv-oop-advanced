@@ -19,6 +19,14 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
+    public void draw() {
+        System.out.println("   ####  ");
+        System.out.println("  #    # ");
+        System.out.println(" #      # ");
+        System.out.println("##########");
+    }
+
+    @Override
     public double getSquare() {
         return (getLowerSide() + getUpperSide()) * height / 2;
     }
