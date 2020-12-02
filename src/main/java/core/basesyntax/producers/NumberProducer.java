@@ -7,7 +7,7 @@ public class NumberProducer {
         return new Random().nextInt(15) + 1;
     }
 
-    public static int getNumberListFigure() {
+    public static int getFigureListIndex() {
         return new Random().nextInt(10) + 1;
     }
 }

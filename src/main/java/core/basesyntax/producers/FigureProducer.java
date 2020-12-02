@@ -9,10 +9,10 @@ import core.basesyntax.shape.Square;
 import java.util.Random;
 
 public class FigureProducer {
-    public static final int COUNT_OF_FIGURE_IMPLEMENTATIONS = 5;
+    public static final int COUNT_OF_FIGURE = 5;
 
     public static Figure get() {
-        int randomGeneratedIndex = new Random().nextInt(COUNT_OF_FIGURE_IMPLEMENTATIONS);
+        int randomGeneratedIndex = new Random().nextInt(COUNT_OF_FIGURE);
         switch (randomGeneratedIndex) {
             case 0:
                 return new Square(NumberProducer.getNumber());
