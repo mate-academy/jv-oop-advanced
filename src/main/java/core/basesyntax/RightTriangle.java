@@ -4,7 +4,8 @@ public class RightTriangle extends Figure {
     private int sideA;
     private int sideB;
 
-    public RightTriangle(int sideA, int sideB) {
+    public RightTriangle(int sideA, int sideB, Color color) {
+        super(color);
         this.sideA = sideA;
         this.sideB = sideB;
     }
@@ -24,7 +25,6 @@ public class RightTriangle extends Figure {
         return "Right triangle";
     }
 
-    @Override
     public int getSide() {
         return sideA;
     }

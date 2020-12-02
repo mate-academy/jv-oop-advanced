@@ -5,7 +5,9 @@ public class IsoscelesTrapezoid extends Figure {
     private int sideB;
     private int sideH;
 
-    public IsoscelesTrapezoid(int sideA, int sideB, int sideH) {
+
+    public IsoscelesTrapezoid(int sideA, int sideB, int sideH, Color color) {
+        super(color);
         this.sideA = sideA;
         this.sideB = sideB;
         this.sideH = sideH;
@@ -26,7 +28,6 @@ public class IsoscelesTrapezoid extends Figure {
         return "Trapezoid";
     }
 
-    @Override
     public int getHeight() {
         return sideH;
     }

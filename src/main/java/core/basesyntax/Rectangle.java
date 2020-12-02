@@ -4,7 +4,8 @@ public class Rectangle extends Figure {
     private int sideA;
     private int sideB;
 
-    public Rectangle(int sideA, int sideB) {
+    public Rectangle(int sideA, int sideB, Color color) {
+        super(color);
         this.sideA = sideA;
         this.sideB = sideB;
     }
@@ -24,7 +25,6 @@ public class Rectangle extends Figure {
         return "Rectangle";
     }
 
-    @Override
     public int getSide() {
         return sideA;
     }
