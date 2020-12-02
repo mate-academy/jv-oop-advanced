@@ -1,17 +1,15 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.RandomNumber;
-
-public class IsoscelesTrapezoid extends Shape {
+public class IsoscelesTrapezoid extends Shape implements Angled {
     private double leg;
     private double lowerBase;
     private double upperBase;
 
-    public IsoscelesTrapezoid() {
+    public IsoscelesTrapezoid(int value1, int value2, int value3) {
         super();
-        this.leg = RandomNumber.getRandomNumber(20);
-        this.lowerBase = RandomNumber.getRandomNumber(20);
-        this.upperBase = RandomNumber.getRandomNumber(20);
+        this.leg = value1;
+        this.lowerBase = value2;
+        this.upperBase = value3;
         if (upperBase > lowerBase) {
             double temp = upperBase;
             upperBase = lowerBase;

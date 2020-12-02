@@ -1,13 +1,11 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.RandomNumber;
-
-public class Triangle extends Shape {
+public class Triangle extends Shape implements Angled {
     private double side;
 
-    public Triangle() {
+    public Triangle(int value) {
         super();
-        this.side = RandomNumber.getRandomNumber(20);
+        this.side = value;
     }
 
     @Override

@@ -1,13 +1,11 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.RandomNumber;
-
-public class Circle extends Shape {
+public class Circle extends Shape implements Rounded {
     private int radius;
 
-    public Circle() {
+    public Circle(int value) {
         super();
-        this.radius = RandomNumber.getRandomNumber(20);
+        this.radius = value;
     }
 
     @Override
@@ -16,7 +14,7 @@ public class Circle extends Shape {
     }
 
     @Override
-    public double getPerimeter() {
+    public double getCircumradius() {
         return Math.PI * 2 * radius;
     }
 
@@ -29,7 +27,7 @@ public class Circle extends Shape {
     public void draw() {
         System.out.format("Figure: circle, circumradius: %.2f"
                         + ", area: %.2f"
-                        + " sq. units, radius: %.2f", getPerimeter(), getArea(), getRadius());
+                        + " sq. units, radius: %.2f", getCircumradius(), getArea(), getRadius());
         System.out.format(" units, diameter: %.2f"
                         + " units, color: %s.%n", getDiameter(), getColor());
 
