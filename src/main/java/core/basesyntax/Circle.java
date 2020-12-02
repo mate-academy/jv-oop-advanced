@@ -1,11 +1,10 @@
 package core.basesyntax;
 
-public class Circle extends Figure{
-
+public class Circle extends Figure {
     private final double pi = 3.14;
     private double radius;
 
-    Circle(double radius, Color color){
+    Circle(double radius, Color color) {
         this.radius = radius;
         setColor(color);
         setArea((Math.pow(radius,2) * pi));
@@ -13,7 +12,7 @@ public class Circle extends Figure{
 
     @Override
     public double getArea() {
-       return super.getArea();
+        return super.getArea();
     }
 
     @Override
@@ -38,7 +37,7 @@ public class Circle extends Figure{
         super.setArea(area);
     }
 
-    public double getRadius(){
+    public double getRadius() {
         return radius;
     }
 }

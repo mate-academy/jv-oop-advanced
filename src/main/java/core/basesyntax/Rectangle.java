@@ -1,23 +1,23 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure{
+public class Rectangle extends Figure {
 
-    private double width;
+    private double base;
     private double height;
 
-    Rectangle(double width, double height, Color color){
-        setWidth(width);
+    Rectangle(double base, double height, Color color) {
+        setBase(base);
         setHeight(height);
         setColor(color);
-        setArea(width, height);
+        setArea(base, height);
     }
 
-    public double getWidth() {
-        return width;
+    public double getBase() {
+        return base;
     }
 
-    public void setWidth(double width) {
-        this.width = width;
+    public void setBase(double base) {
+        this.base = base;
     }
 
     public double getHeight() {
@@ -28,16 +28,13 @@ public class Rectangle extends Figure{
         this.height = height;
     }
 
-
+    public void setArea(double width, double height) {
+        super.setArea(width * height);
+    }
 
     @Override
     public double getArea() {
         return super.getArea();
-    }
-
-
-    public void setArea(double width, double height) {
-        super.setArea(width*height);
     }
 
     @Override
@@ -53,7 +50,7 @@ public class Rectangle extends Figure{
     @Override
     public String draw() {
         return "Figure: rectangle, area: " + getArea() + " sq. units"
-                + " height: " + getHeight() + " units, " + " width: "
-                + getWidth() + " units, color: " + getColor();
+                + " height: " + getHeight() + " units, width: "
+                + getBase() + " units, color: " + getColor();
     }
 }

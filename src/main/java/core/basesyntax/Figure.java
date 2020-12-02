@@ -7,24 +7,22 @@ public abstract class Figure {
 
     public double getArea() {
         return area;
-    };
+    }
 
-    public void setArea(double area){
+    public void setArea(double area) {
         this.area = area;
     }
 
-    public Color getColor(){
+    public Color getColor() {
         return color;
-       };
+    }
 
     public void setColor(Color color) {
         this.color = color;
-    };
-
-    public String draw(){
-        return "";
     }
 
-
+    public String draw() {
+        return "";
+    }
 
 }
