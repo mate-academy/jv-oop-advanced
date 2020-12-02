@@ -12,30 +12,6 @@ public class IsoscelesTrapezoid extends Shape implements Figure {
         this.highTrapezoid = highTrapezoid;
     }
 
-    public int getLowerBase() {
-        return lowerBase;
-    }
-
-    public int getUpperBase() {
-        return upperBase;
-    }
-
-    public int getHighTrapezoid() {
-        return highTrapezoid;
-    }
-
-    public void setLowerBase(int lowerBase) {
-        this.lowerBase = lowerBase;
-    }
-
-    public void setUpperBase(int upperBase) {
-        this.upperBase = upperBase;
-    }
-
-    public void setHighTrapezoid(int highTrapezoid) {
-        this.highTrapezoid = highTrapezoid;
-    }
-
     @Override
     public double getArea() {
         return (lowerBase + upperBase) / 2 * highTrapezoid;
