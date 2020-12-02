@@ -3,8 +3,9 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureGenerator {
+    static final int FIGURES_QUANTITY = 5;
+
     public static Figures getRandomFigure() {
-        final int FIGURES_QUANTITY = 5;
         switch (new Random().nextInt(FIGURES_QUANTITY)) {
             case 1:
                 return new Square(getRandomColor(), getRandomNumber());
