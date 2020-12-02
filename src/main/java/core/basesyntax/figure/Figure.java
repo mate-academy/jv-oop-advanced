@@ -2,7 +2,7 @@ package core.basesyntax.figure;
 
 import core.basesyntax.color.Color;
 
-public abstract class Figure implements Squared {
+public abstract class Figure implements Squared, Drawable {
 
     private Color color;
 
