@@ -5,13 +5,14 @@ import java.util.List;
 import java.util.Random;
 
 public class FigureGenerator {
+    public static final int NUMBER_OF_FIGURES = 5;
 
     public static List<Figure> generateRandomFigureList() {
-        int initialCapacity = (int) ((Math.random() + 3) * Figure.NUMBER_OF_FIGURES);
+        int initialCapacity = (int) ((Math.random() + 3) * NUMBER_OF_FIGURES);
         List<Figure> result = new ArrayList<>(initialCapacity);
         int iterator = 0;
         while (iterator < initialCapacity) {
-            switch ((int) (Math.random() * Figure.NUMBER_OF_FIGURES)) {
+            switch ((int) (Math.random() * NUMBER_OF_FIGURES)) {
                 case 0 :
                     result.add(generateRandomCircle());
                     break;
