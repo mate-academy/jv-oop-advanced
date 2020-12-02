@@ -10,7 +10,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.topBase = topBase;
         this.bottomBase = bottomBase;
         this.sideBase = sideBase;
-
     }
 
     public double getHigh() {
