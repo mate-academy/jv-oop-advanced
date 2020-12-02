@@ -1,13 +1,13 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private final double pi = 3.14;
+    private static final double PI = Math.PI;
     private double radius;
 
     Circle(double radius, Color color) {
         this.radius = radius;
         setColor(color);
-        setArea((Math.pow(radius,2) * pi));
+        setArea((Math.pow(radius,2) * PI));
     }
 
     @Override
