@@ -25,8 +25,8 @@ public class Square extends Shape {
         System.out.println("Drawing Square");
     }
 
-    public String info() {
-        return message.append(super.info()).append(",area: " + this.calculateArea() + " sq.units ")
+    public String displayInfo() {
+        return message.append(super.displayInfo()).append(",area: " + this.calculateArea() + " sq.units ")
         .append("side length: " + this.sideLength() + " units ").toString();
 
     }

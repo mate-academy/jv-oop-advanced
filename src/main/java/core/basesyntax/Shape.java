@@ -25,7 +25,7 @@ public abstract class Shape {
 
     public abstract void draw();
 
-    public String info() {
+    public String displayInfo() {
         return sb.append("Shape: ").append(this.getName())
         .append(", color: " + this.getColor()).toString();
     }

@@ -6,7 +6,7 @@ public class Main {
         Shape[] shapeArr = new FigureProducer().fill();
 
         for (Shape s : shapeArr) {
-            System.out.println(s.info());
+            System.out.println(s.displayInfo());
         }
     }
 }

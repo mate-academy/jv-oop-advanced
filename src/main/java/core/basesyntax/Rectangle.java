@@ -27,8 +27,8 @@ public class Rectangle extends Shape {
         System.out.println("Drawing Rectangle");
     }
 
-    public String info() {
-        return message.append(super.info()).append(",area: " + this.calculateArea() + " sq.units ")
+    public String displayInfo() {
+        return message.append(super.displayInfo()).append(",area: " + this.calculateArea() + " sq.units ")
         .append("diagonal: " + this.getDiagonal() + " units ").toString();
     }
 

@@ -26,8 +26,8 @@ public class Circle extends Shape {
     }
 
     @Override
-    public String info() {
-        return message.append(super.info()).append(",area: " + this.calculateArea() + " sq.unit,")
+    public String displayInfo() {
+        return message.append(super.displayInfo()).append(",area: " + this.calculateArea() + " sq.unit,")
         .append("radius:" + this.getRadius() + " units,").toString();
     }
 

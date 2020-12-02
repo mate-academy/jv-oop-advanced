@@ -28,8 +28,8 @@ public class RightTriangle extends Shape {
     }
 
     @Override
-    public String info() {
-        return message.append(super.info()).append(",area: " + this.calculateArea() + " sq.units ")
+    public String displayInfo() {
+        return message.append(super.displayInfo()).append(",area: " + this.calculateArea() + " sq.units ")
         .append("hypotenuse: " + this.getHypotenuse() + " units ").toString();
     }
 
