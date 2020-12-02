@@ -3,21 +3,14 @@ package core.basesyntax;
 public class Circle extends Figure {
     private int radius;
 
-    public void circle(int radius) {
-        this.radius = radius;
-    }
-
-    public int getRadius() {
-        return radius;
-    }
-
-    public void setRadius(int radius) {
+    protected Circle(int radius, Color color) {
+        super(Math.PI * radius * radius, color);
         this.radius = radius;
     }
 
     @Override
     public double getArea() {
-        return Math.PI * radius;
+        return area;
     }
 
     @Override

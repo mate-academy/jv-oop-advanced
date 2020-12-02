@@ -1,11 +1,19 @@
 package core.basesyntax;
 
 public abstract class Figure implements GeometricObjectInfo {
-    private Color color;
-    private double area;
+    Color color;
+    double area;
 
-    public abstract double getArea();
+    protected Figure(double area,Color color) {
+        this.color = color;
+        this.area = area;
+    }
 
-    public abstract Color getColor();
+    public Color getColor() {
+        return color;
+    }
 
+    public double getArea() {
+        return area;
+    }
 }

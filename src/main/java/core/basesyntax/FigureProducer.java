@@ -9,45 +9,23 @@ public class FigureProducer {
         int randomGeneratedIndex = new Random().nextInt(FIGURES_VALUE);
         switch (randomGeneratedIndex) {
             case 0:
-                return getCircle();
+                Circle circle = new Circle(getRandom(),ColorProducer.getColor());
+                return circle;
             case 1:
-                return getSquare();
+                Triangle triangle = new Triangle(getRandom(),getRandom(),ColorProducer.getColor());
+                return triangle;
             case 2:
-                return getTrapezoid();
+                Square square = new Square(getRandom(),ColorProducer.getColor());
+                return square;
             default:
-                return getTriangle();
+                Trapezoid trapezoid = new Trapezoid(getRandom(),getRandom(),
+                        getRandom(),ColorProducer.getColor());
+                return trapezoid;
         }
     }
 
     public int getRandom() {
-        return new Random().nextInt(10);
+        return new Random().nextInt(15);
     }
 
-    private Circle getCircle() {
-        Circle circle = new Circle();
-        circle.setRadius(getRandom());
-        return circle;
-    }
-
-    private Triangle getTriangle() {
-        Triangle triangle = new Triangle();
-        triangle.setFirstSide(getRandom());
-        triangle.setSecondSide(getRandom());
-        triangle.setThirdSide(getRandom());
-        return triangle;
-    }
-
-    private Square getSquare() {
-        Square square = new Square();
-        square.setSide(new Random().nextInt(10));
-        return square;
-    }
-
-    private Trapezoid getTrapezoid() {
-        Trapezoid trapezoid = new Trapezoid();
-        trapezoid.setFirstBase(getRandom());
-        trapezoid.setSecondBase(getRandom());
-        trapezoid.setHeight(getRandom());
-        return trapezoid;
-    }
 }
