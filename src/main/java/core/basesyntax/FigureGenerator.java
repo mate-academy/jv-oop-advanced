@@ -3,13 +3,11 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureGenerator {
-
-    private static final String[] colors = new String[]{"black", "white", "whatever"};
     private static final String[] figuresArray = new String[]{
             "circle", "right triangle", "rectangle", "square", "isosceles trapezoid"};
 
     public static Figure create() {
-        switch (figuresArray[new Random().nextInt(5)]) {
+        switch (figuresArray[new Random().nextInt(figuresArray.length)]) {
             case "circle":
                 return new Circle(getRandomColor(), getRandomNumber());
             case "right triangle":
@@ -22,13 +20,13 @@ public class FigureGenerator {
                 return new IsoscelesTrapezoid(getRandomColor(), getRandomNumber(),
                                                 getRandomNumber(), getRandomNumber());
             default:
-                System.exit(-1);
-                return new Circle(getRandomColor(), getRandomNumber());
+                System.exit(404);
+                return null;
         }
     }
 
-    public static String getRandomColor() {
-        return colors[new Random().nextInt(3)];
+    private static Colors getRandomColor() {
+        return Colors.values()[new Random().nextInt(3)];
     }
 
     public static int getRandomNumber() {

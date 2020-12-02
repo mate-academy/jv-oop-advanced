@@ -1,11 +1,10 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-
     private final int sideA;
     private final int sideB;
 
-    public Rectangle(String color, int sideA, int sideB) {
+    public Rectangle(Colors color, int sideA, int sideB) {
         super(sideA * sideB, color);
         this.sideA = sideA;
         this.sideB = sideB;
@@ -16,7 +15,7 @@ public class Rectangle extends Figure {
         System.out.println("Figure: rectangle, area: " + getArea()
                 + " sq. units, perimeter: "
                 + getPerimeter() + " units, diagonal: "
-                + getDiagonal() + " units, color: " + color);
+                + getDiagonal() + " units, color: " + getColor());
     }
 
     public double getPerimeter() {

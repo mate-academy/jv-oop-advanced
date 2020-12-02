@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Master {
-
     public static void main(String[] args) {
 
         Figure[] randomArrayOfRandomFigures = new Figure[FigureGenerator.getRandomNumber()];
@@ -10,7 +9,5 @@ public class Master {
             randomArrayOfRandomFigures[i] = FigureGenerator.create();
             randomArrayOfRandomFigures[i].draw();
         }
-
     }
-
 }
