@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends Shape implements Figure {
+public class Square extends Shape {
     private int side;
 
     public Square(int side) {
@@ -20,6 +20,6 @@ public class Square extends Shape implements Figure {
 
     @Override
     public Color getColor() {
-        return getColorRandom();
+        return super.getColor();
     }
 }

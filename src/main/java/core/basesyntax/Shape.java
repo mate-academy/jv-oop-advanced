@@ -1,13 +1,9 @@
 package core.basesyntax;
 
-public abstract class Shape {
-    private final Color color = new ColorProducer().insertRandomColor();
+public abstract class Shape extends ColorProducer implements Figure {
+    private final Color color = insertRandomColor();
 
-    public Color getColorRandom() {
+    public Color getColor() {
         return color;
     }
-
-    public abstract double getSquare();
-
-    public abstract Color getColor();
 }

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Shape implements Figure {
+public class Rectangle extends Shape {
     private int sideLength;
     private int sideWidth;
 
@@ -22,6 +22,6 @@ public class Rectangle extends Shape implements Figure {
 
     @Override
     public Color getColor() {
-        return getColorRandom();
+        return super.getColor();
     }
 }

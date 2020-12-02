@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Triangle extends Shape implements Figure {
+public class Triangle extends Shape {
     private int side1;
     private int side2;
 
@@ -22,6 +22,6 @@ public class Triangle extends Shape implements Figure {
 
     @Override
     public Color getColor() {
-        return getColorRandom();
+        return super.getColor();
     }
 }
