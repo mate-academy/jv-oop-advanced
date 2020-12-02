@@ -3,25 +3,18 @@ package core.basesyntax;
 public class Square extends Figure {
     private double firstLine;
 
-    public void setFirstLine(double firstLine) {
+    public Square(String name, double area, Color color, double firstLine) {
+        super(name, area, color);
         this.firstLine = firstLine;
     }
 
-    public void setName() {
-        super.setName("Square");
-    }
-
-    public void setArea() {
-        super.setArea((int) (this.firstLine * this.firstLine));
+    public double findPerimeter() {
+        return firstLine * 4;
     }
 
     @Override
-    public String uniqueFunction() {
-        return Integer.toString((int) (firstLine * 4));
-    }
-
-    @Override
-    public double getArea() {
-        return 0;
+    public void print() {
+        System.out.println("   " + getName() + "   " + getArea()
+                + "   " + getColor() + "   " + findPerimeter());
     }
 }

@@ -4,29 +4,19 @@ public class Rectangle extends Figure {
     private double firstLine;
     private double secondLine;
 
-    public void setFirstLine(double firstLine) {
+    public Rectangle(String name, double area, Color color, double firstLine, double secondLine) {
+        super(name, area, color);
         this.firstLine = firstLine;
-    }
-
-    public void setSecondLine(double secondLine) {
         this.secondLine = secondLine;
     }
 
-    public void setName() {
-        super.setName("Rectangle");
-    }
-
-    public void setArea() {
-        super.setArea((int) (this.firstLine * this.secondLine));
+    public double differenceBetweenLines() {
+        return this.firstLine - this.secondLine;
     }
 
     @Override
-    public String uniqueFunction() {
-        return Integer.toString((int) Math.sqrt(Math.pow(firstLine, 2) + Math.pow(secondLine, 2)));
-    }
-
-    @Override
-    public double getArea() {
-        return 0;
+    public void print() {
+        System.out.println("   " + getName() + "   " + getArea()
+                + "   " + getColor() + "  " + differenceBetweenLines());
     }
 }

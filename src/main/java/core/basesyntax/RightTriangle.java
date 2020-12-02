@@ -4,29 +4,20 @@ public class RightTriangle extends Figure {
     private double firstLine;
     private double secondLine;
 
-    public void setFirstLine(double firstLine) {
+    public RightTriangle(String name, double area, Color color,
+                         double firstLine, double secondLine) {
+        super(name, area, color);
         this.firstLine = firstLine;
-    }
-
-    public void setSecondLine(double secondLine) {
         this.secondLine = secondLine;
     }
 
-    public void setName() {
-        super.setName("Right Triangle");
-    }
-
-    public void setArea() {
-        super.setArea((int) ((this.firstLine * this.secondLine) / 2));
+    public double findHypotenuse() {
+        return Math.sqrt(Math.pow(firstLine, 2) + Math.pow(secondLine, 2));
     }
 
     @Override
-    public String uniqueFunction() {
-        return Integer.toString((int) Math.sqrt(Math.pow(firstLine, 2) + Math.pow(secondLine, 2)));
-    }
-
-    @Override
-    public double getArea() {
-        return 0;
+    public void print() {
+        System.out.println("   " + getName() + "   " + getArea()
+                + "   " + getColor() + "   " + findHypotenuse());
     }
 }

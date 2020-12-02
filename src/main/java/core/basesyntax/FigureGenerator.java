@@ -3,79 +3,71 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureGenerator {
-    public static final int COUNTER_OF_FIGURE_IMPLEMENTATION = 5;
+    private static final int COUNTER_OF_FIGURE_IMPLEMENTATION = 5;
 
     public Figure get() {
         int randomGeneratedIndex = new Random().nextInt(COUNTER_OF_FIGURE_IMPLEMENTATION);
         switch (randomGeneratedIndex) {
-            case 0:
-                return getCircle();
-            case 1:
-                return getIsoscelesTrapezoid();
-            case 2:
-                return getRectangle();
-            case 3:
-                return getRightTriangle();
-            default:
-                return getSquare();
+            case 0: return getCircle();
+            case 1: return getIsoscelesTrapezoid();
+            case 2: return getRectangle();
+            case 3: return getRightTriangle();
+            default: return getSquare();
         }
     }
 
     private Circle getCircle() {
-        Circle circle = new Circle();
-
-        circle.setName();
-        circle.setRadius(new Random().nextInt(10));
-        circle.setArea();
-        circle.setColor();
+        double randomRadius = (new Random().nextInt(10));
+        int numberOfColor = new Random().nextInt(Color.values().length);
+        Color colorOfCircle = Color.values()[numberOfColor];
+        Circle circle = new Circle("Circle", (Math.PI * randomRadius),
+                colorOfCircle, randomRadius);
 
         return circle;
     }
 
     private IsoscelesTrapezoid getIsoscelesTrapezoid() {
-        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
-
-        isoscelesTrapezoid.setName();
-        isoscelesTrapezoid.setFirstLine(new Random().nextInt(10));
-        isoscelesTrapezoid.setSecondLine(new Random().nextInt(10));
-        isoscelesTrapezoid.setHeight(new Random().nextInt(10));
-        isoscelesTrapezoid.setArea();
-        isoscelesTrapezoid.setColor();
+        double randomFirstLine = (new Random().nextInt(10));
+        double randomSecondLine = (new Random().nextInt(10));
+        double randomHeight = (new Random().nextInt(10));
+        int numberOfColor = new Random().nextInt(Color.values().length);
+        Color colorOfIsoscelesTrapezoid = Color.values()[numberOfColor];
+        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid("Isosceles Trapezoid",
+                ((randomFirstLine + randomSecondLine) / 2) * randomHeight,
+                colorOfIsoscelesTrapezoid, randomFirstLine, randomSecondLine, randomHeight);
 
         return isoscelesTrapezoid;
     }
 
     private Rectangle getRectangle() {
-        Rectangle rectangle = new Rectangle();
-
-        rectangle.setName();
-        rectangle.setFirstLine(new Random().nextInt(10));
-        rectangle.setSecondLine(new Random().nextInt(10));
-        rectangle.setArea();
-        rectangle.setColor();
+        double randomFirstLine = (new Random().nextInt(10));
+        double randomSecondLine = (new Random().nextInt(10));
+        int numberOfColor = new Random().nextInt(Color.values().length);
+        Color colorOfRectangle = Color.values()[numberOfColor];
+        Rectangle rectangle = new Rectangle("Rectangle", randomFirstLine * randomSecondLine,
+                colorOfRectangle, randomFirstLine, randomSecondLine);
 
         return rectangle;
     }
 
     private RightTriangle getRightTriangle() {
-        RightTriangle rightTriangle = new RightTriangle();
-
-        rightTriangle.setName();
-        rightTriangle.setFirstLine(new Random().nextInt(10));
-        rightTriangle.setSecondLine(new Random().nextInt(10));
-        rightTriangle.setArea();
-        rightTriangle.setColor();
+        double randomFirstLine = (new Random().nextInt(10));
+        double randomSecondLine = (new Random().nextInt(10));
+        int numberOfColor = new Random().nextInt(Color.values().length);
+        Color colorOfRightTriangle = Color.values()[numberOfColor];
+        RightTriangle rightTriangle = new RightTriangle("Right Triangle",
+                (randomFirstLine * randomSecondLine) / 2, colorOfRightTriangle,
+                randomFirstLine, randomSecondLine);
 
         return rightTriangle;
     }
 
     private Square getSquare() {
-        Square square = new Square();
-
-        square.setName();
-        square.setFirstLine(new Random().nextInt(10));
-        square.setArea();
-        square.setColor();
+        double randomFirstLine = (new Random().nextInt(10));
+        int numberOfColor = new Random().nextInt(Color.values().length);
+        Color colorOfSquare = Color.values()[numberOfColor];
+        Square square = new Square("Square", randomFirstLine * randomFirstLine,
+                colorOfSquare, randomFirstLine);
 
         return square;
     }

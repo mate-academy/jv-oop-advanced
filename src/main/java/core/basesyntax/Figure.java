@@ -1,29 +1,25 @@
 package core.basesyntax;
 
-import java.util.Random;
-
-public abstract class Figure implements HasArea {
+public abstract class Figure implements Print {
     private String name;
     private double area;
     private Color color;
 
-    public void setColor() {
-        int numberOfColor = new Random().nextInt(Color.values().length);
-        this.color = Color.values()[numberOfColor];
-    }
-
-    public void setName(String name) {
+    public Figure(String name, double area, Color color) {
         this.name = name;
-    }
-
-    public void setArea(int area) {
         this.area = area;
+        this.color = color;
     }
 
-    public abstract String uniqueFunction();
+    public String getName() {
+        return name;
+    }
 
-    public void print() {
-        System.out.println("Figure = " + this.name + "| area = " + this.area
-                + "| unique function = " + uniqueFunction() + "| color = " + this.color);
+    public double getArea() {
+        return area;
+    }
+
+    public Color getColor() {
+        return color;
     }
 }
