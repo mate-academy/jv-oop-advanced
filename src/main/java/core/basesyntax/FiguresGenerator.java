@@ -3,6 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FiguresGenerator {
+    private static final int COUNT_OF_FIGURES = 5;
+    
     private Random random = new Random();
     
     public Figure[] generateFiguresArray() {
@@ -14,7 +16,7 @@ public class FiguresGenerator {
     }
     
     private Figure generateFigure() {
-        switch (random.nextInt(5)) {
+        switch (random.nextInt(COUNT_OF_FIGURES)) {
             default:
             case 0:
                 return new Square(generateSide(), generateColor());
