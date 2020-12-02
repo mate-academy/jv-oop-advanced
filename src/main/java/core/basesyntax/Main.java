@@ -14,9 +14,7 @@ public class Main {
 
         Shape[] figures = generateFigures(10);
 
-        for (Shape shape: figures) {
-            shape.draw();
-        }
+        drawFigure(figures);
     }
 
     public static Shape[] generateFigures(int count) {
@@ -54,5 +52,11 @@ public class Main {
         }
 
         return figures;
+    }
+
+    public static void drawFigure(Shape[] figures) {
+        for (Shape shape: figures) {
+            shape.draw();
+        }
     }
 }
