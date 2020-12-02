@@ -13,17 +13,10 @@ public class Main {
         while (temptFate < 0) {
             temptFate = random.nextInt(100);
         }
-        Figure[] arr = new Figure[temptFate];
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = figureProducer.get();
-        }
-        for (Figure i: arr) {
-            printLine(i);
+        Figure[] figures = new Figure[temptFate];
+        for (Figure figure: figures) {
+            figure = figureProducer.get();
+           System.out.println(figure.draw());
         }
     }
-
-    public static void printLine(Figure figure) {
-        System.out.println(figure.draw());
-    }
-
 }
