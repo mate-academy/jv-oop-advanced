@@ -1,20 +1,18 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-
     private double sideOne;
     private double sideTwo;
     private String name;
 
-    public RightTriangle(String color, double sideOne, double sideTwo, String name) {
-        super(color);
+    public RightTriangle(double sideOne, double sideTwo, String name) {
         this.sideOne = sideOne;
         this.sideTwo = sideTwo;
         this.name = name;
     }
 
     public double getArea() {
-        return Math.round(getSideOne() * getSideTwo() * 0.5);
+        return Math.round((getSideOne() * getSideTwo()) * 0.5);
     }
 
     public double getSideOne() {
@@ -27,6 +25,10 @@ public class RightTriangle extends Figure {
 
     public String getName() {
         return name;
+    }
+
+    private String getColor() {
+        return ColorProducer.get().toString().toLowerCase();
     }
 
     public String draw() {

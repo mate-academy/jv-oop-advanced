@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-
     private double height;
     private double bottomBase;
     private double topBase;
@@ -9,7 +8,6 @@ public class IsoscelesTrapezoid extends Figure {
 
     public IsoscelesTrapezoid(String color, double height, double bottomBase,
                               double topBase, String name) {
-        super(color);
         this.height = height;
         this.bottomBase = bottomBase;
         this.topBase = topBase;
@@ -34,6 +32,10 @@ public class IsoscelesTrapezoid extends Figure {
 
     public String getName() {
         return name;
+    }
+
+    private String getColor() {
+        return ColorProducer.get().toString().toLowerCase();
     }
 
     public String draw() {
