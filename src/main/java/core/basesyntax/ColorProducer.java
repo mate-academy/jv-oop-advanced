@@ -2,7 +2,7 @@ package core.basesyntax;
 
 public class ColorProducer {
 
-    public String randomColor() {
+    public String generateRandomNumber() {
         String color = "";
         String[] array = {"white","black","yellow","red","orange",
                 "pink","purple","grey","brown","golden",

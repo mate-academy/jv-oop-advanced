@@ -16,7 +16,7 @@ public class IsoscelesTrapezoid extends Shape {
 
     @Override
     public double calculateArea() {
-        return this.averageLine() * this.height();
+        return this.getAverageLine() * this.getHeight();
     }
 
     @Override
@@ -33,14 +33,14 @@ public class IsoscelesTrapezoid extends Shape {
     public String displayInfo() {
         return message.append(super.displayInfo())
         .append(",area: " + this.calculateArea() + " sq.units ")
-        .append("height: " + this.height() + " units ").toString();
+        .append("height: " + this.getHeight() + " units ").toString();
     }
 
-    public double averageLine() {
+    public double getAverageLine() {
         return (sideB + sideA) / 2;
     }
 
-    public double height() {
+    public double getHeight() {
         return Math.sqrt((sideC * sideC) - 1 / 4 * ((sideB * sideB) - (sideA * sideA)));
     }
 }

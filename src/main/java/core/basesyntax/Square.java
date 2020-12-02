@@ -28,11 +28,11 @@ public class Square extends Shape {
     public String displayInfo() {
         return message.append(super.displayInfo())
         .append(",area: " + this.calculateArea() + " sq.units ")
-        .append("side length: " + this.sideLength() + " units ").toString();
+        .append("side length: " + this.getSideLength() + " units ").toString();
 
     }
 
-    public double sideLength() {
+    public double getSideLength() {
         return getPerimeter() / 4;
     }
 }

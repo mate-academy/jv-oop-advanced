@@ -8,7 +8,7 @@ public abstract class Shape {
 
     public Shape(String name, ColorProducer producer) {
         this.name = name;
-        this.color = producer.randomColor();
+        this.color = producer.generateRandomNumber();
     }
 
     public String getName() {
