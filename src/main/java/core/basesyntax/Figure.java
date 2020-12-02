@@ -27,6 +27,6 @@ public abstract class Figure implements Object {
 
     @Override
     public String draw() {
-        return null;
+        return "I am a figure.";
     }
 }
