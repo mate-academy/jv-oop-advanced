@@ -3,9 +3,11 @@ package core.basesyntax;
 import java.util.Random;
 
 public class ShapeProducer {
+    private static final int NUMBER_OF_SHAPES = 5;
+
     public static Shape getShape() {
         Random random = new Random();
-        int variant = random.nextInt(5);
+        int variant = random.nextInt(NUMBER_OF_SHAPES);
         Shape shape = null;
         switch (variant) {
             case 0:
