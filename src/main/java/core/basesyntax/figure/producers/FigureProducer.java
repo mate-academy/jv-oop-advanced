@@ -10,7 +10,7 @@ import java.util.Random;
 
 public class FigureProducer {
 
-    public static Figure getRandomFigure() {
+    public Figure getRandomFigure() {
         Random randomizer = new Random();
         int bound = 1000;
 
@@ -38,19 +38,11 @@ public class FigureProducer {
         }
     }
 
-    public static Figure[] getRandomFigures() {
-        Figure[] figures = new Figure[new Random().nextInt(Integer.MAX_VALUE - 8)];
-
-        int index = 0;
-
-        while (index < figures.length) {
-            figures[index++] = getRandomFigure();
-        }
-
-        return figures;
+    public Figure[] getRandomFigures() {
+        return getRandomFigures(Integer.MAX_VALUE - 8);
     }
 
-    public static Figure[] getRandomFigures(int amount) {
+    public Figure[] getRandomFigures(int amount) {
         Figure[] figures = new Figure[new Random().nextInt(amount + 1)];
 
         int index = 0;
@@ -60,15 +52,5 @@ public class FigureProducer {
         }
 
         return figures;
-    }
-
-    public static void print(Figure figure) {
-        System.out.println("Figure: " + figure.toString());
-    }
-
-    public static void print(Figure[] figures) {
-        for (Figure figure : figures) {
-            print(figure);
-        }
     }
 }
