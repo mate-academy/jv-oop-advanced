@@ -22,8 +22,4 @@ public abstract class Figure implements Squared {
     public Shape getName() {
         return name;
     }
-
-    public void setName(Shape name) {
-        this.name = name;
-    }
 }
