@@ -4,35 +4,34 @@ public class Square extends Figure {
     private double side;
 
     public Square(double side, Colour colour) {
-        this.colour = colour;
+        super(colour);
         this.side = side;
-        area = side * side;
     }
 
     public double getDiagonal() {
-        return parsingValue(Math.sqrt(2 * side));
+        return Math.sqrt(2 * side);
     }
 
     public double getSide() {
         return side;
     }
+
     public double getPerimeter() {
-        return parsingValue(side*4);
+        return side * 4;
     }
 
     @Override
     public double getArea() {
-        return parsingValue(area);
+        return side * side;
     }
 
     @Override
-    public String toString() {
+    public String draw() {
         return "Square:" +
-                " colour: " + colour +
-                ", area: " +  + getArea() + " units" +
-                ", side: " + side + " units" +
-                ", diagonal: " + this.getDiagonal() + " units" +
-                ", perimeter: " + this.getPerimeter() + " units";
-
+                " colour: " + getColour() +
+                ", area: " + parsingValue(getArea()) + " units" +
+                ", side: " + parsingValue(side) + " units" +
+                ", diagonal: " + parsingValue(getDiagonal()) + " units" +
+                ", perimeter: " + parsingValue(getPerimeter()) + " units";
     }
 }

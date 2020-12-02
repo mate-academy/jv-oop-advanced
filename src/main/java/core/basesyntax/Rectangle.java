@@ -5,6 +5,7 @@ public class Rectangle extends Figure {
     private double rectangularWidth;
 
     public Rectangle(double firstSide, double secondSide, Colour colour) {
+        super(colour);
         if (firstSide > secondSide) {
             this.rectangularLength = firstSide;
             this.rectangularWidth = secondSide;
@@ -12,8 +13,6 @@ public class Rectangle extends Figure {
             this.rectangularLength = secondSide;
             this.rectangularWidth = firstSide;
         }
-        this.colour = colour;
-        area = firstSide * secondSide;
     }
 
     public double getRectangularLength() {
@@ -25,28 +24,26 @@ public class Rectangle extends Figure {
     }
 
     public double getDiagonal() {
-        return parsingValue(Math.sqrt(rectangularLength * rectangularWidth));
+        return Math.sqrt(rectangularLength * rectangularWidth);
     }
 
     public double getPerimeter() {
-        return parsingValue(Math.sqrt(2 * (rectangularLength + rectangularWidth)));
+        return Math.sqrt(2 * (rectangularLength + rectangularWidth));
     }
 
     @Override
     public double getArea() {
-        return parsingValue(area);
+        return rectangularLength * rectangularWidth;
     }
 
     @Override
-    public String toString() {
+    public String draw() {
         return "Rectangle:" +
-                " colour: " + colour +
-                ", area: " + area +
-                ", Length: " + rectangularLength +
-                ", Width: " + rectangularWidth +
-                ", diagonal: " + this.getDiagonal() + " units" +
-                ", perimeter: " + this.getPerimeter() + " units";
-
-
+                " colour: " + getColour() +
+                ", area: " + parsingValue(getArea()) +
+                ", Length: " + parsingValue(rectangularLength) +
+                ", Width: " + parsingValue(rectangularWidth) +
+                ", diagonal: " + parsingValue(getDiagonal()) + " units" +
+                ", perimeter: " + parsingValue(getPerimeter()) + " units";
     }
 }
