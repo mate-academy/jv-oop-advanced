@@ -11,6 +11,7 @@ public class HelloWorld {
 
         for (int i = 0; i < figures.length; i++) {
             switch (random.nextInt(5)) {
+                default:
                 case 0:
                     figures[i] = new Circle();
                     break;
