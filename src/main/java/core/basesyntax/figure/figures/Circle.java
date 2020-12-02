@@ -8,8 +8,8 @@ import javax.print.attribute.standard.MediaSize;
 
 public class Circle extends Figure {
 
-    private double radius;
     public static final Shape NAME = Shape.CIRCLE;
+    private double radius;
 
     public Circle(Color color, double radius) {
         super(color);
@@ -25,6 +25,11 @@ public class Circle extends Figure {
         return radius;
     }
 
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+
+    @Override
     public String toString() {
         return getColor() + " " + NAME
                 + " with radius " + getRadius()
