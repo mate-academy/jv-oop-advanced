@@ -17,6 +17,13 @@ public class Rectangle extends Figure {
     }
 
     @Override
+    public void draw() {
+        System.out.println("#######");
+        System.out.println("#     #");
+        System.out.println("#######");
+    }
+
+    @Override
     public double getSquare() {
         return getWidth() * getHeight();
     }
