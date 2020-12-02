@@ -24,7 +24,7 @@ public class Trapezoid implements Figure {
     }
 
     @Override
-    public String getColor() {
-        return "orange";
+    public Color getColor() {
+        return new ColorProducer().insertRandomColor();
     }
 }

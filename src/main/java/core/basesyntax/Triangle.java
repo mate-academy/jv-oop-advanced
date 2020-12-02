@@ -21,7 +21,7 @@ public class Triangle implements Figure {
     }
 
     @Override
-    public String getColor() {
-        return "red";
+    public Color getColor() {
+        return new ColorProducer().insertRandomColor();
     }
 }

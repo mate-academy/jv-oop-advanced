@@ -5,5 +5,5 @@ public interface Figure {
 
     double getSquare();
 
-    String getColor();
+    Color getColor();
 }

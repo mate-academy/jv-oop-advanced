@@ -19,7 +19,7 @@ public class Square implements Figure {
     }
 
     @Override
-    public String getColor() {
-        return "black";
+    public Color getColor() {
+        return new ColorProducer().insertRandomColor();
     }
 }
