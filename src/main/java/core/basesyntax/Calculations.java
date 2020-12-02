@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public interface Сalculations {
+public interface Calculations {
     void doAllCalculations();
 }
