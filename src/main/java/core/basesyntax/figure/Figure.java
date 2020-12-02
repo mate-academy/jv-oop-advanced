@@ -5,6 +5,7 @@ import core.basesyntax.color.Color;
 public abstract class Figure implements Squared {
 
     private Color color;
+    private Shape name;
 
     public Figure(Color color) {
         this.color = color;
@@ -16,5 +17,13 @@ public abstract class Figure implements Squared {
 
     public void setColor(Color color) {
         this.color = color;
+    }
+
+    public Shape getName() {
+        return name;
+    }
+
+    public void setName(Shape name) {
+        this.name = name;
     }
 }
