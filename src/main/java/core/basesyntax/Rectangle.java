@@ -11,17 +11,18 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double areaFigure() {
+    public double findAreaFigure() {
         return side1 * side2;
     }
 
-    public int perimeter() {
+    public int findPerimeter() {
         return (side1 + side2) * 2;
     }
 
     @Override
-    public String drawn() {
-        return "Figure: rectangle, area: " + areaFigure() + " sq. units, perimeter: "
-                + perimeter() + " units, color: " + getColor();
+    public String draw() {
+        return "Figure: rectangle, area: " + findAreaFigure() + " sq. units, perimeter: "
+                + findPerimeter() + " units, color: " + getColor();
     }
 }
+

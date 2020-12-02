@@ -8,9 +8,7 @@ public class Main {
         Figure[] figures = new Figure[new Random().nextInt(5)];
         for (int i = 0; i < figures.length; i++) {
             figures[i] = generator.getFigure();
-        }
-        for (Figure figure : figures) {
-            System.out.println(figure.drawn());
+            System.out.println(figures[i].draw());
         }
     }
 }

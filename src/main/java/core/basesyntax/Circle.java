@@ -9,17 +9,17 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double areaFigure() {
+    public double findAreaFigure() {
         return 3.14 * radius * radius;
     }
 
-    public int diameter() {
+    public int findDiameter() {
         return radius * 2;
     }
 
     @Override
     public String draw() {
-        return "Figure: circle, area: " + areaFigure() + " sq. units, diameter: "
-                + diameter() + " units, color: " + getColor();
+        return "Figure: circle, area: " + findAreaFigure() + " sq. units, diameter: "
+                + findDiameter() + " units, color: " + getColor();
     }
 }

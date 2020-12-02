@@ -11,17 +11,17 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double areaFigure() {
+    public double findAreaFigure() {
         return (legA * legB) / 2;
     }
 
-    public double hypotenuse() {
+    public double findHypotenuse() {
         return Math.sqrt((legA * legA) + (legB * legB));
     }
 
     @Override
-    public String drawn() {
-        return "Figure: right triangle , area: " + areaFigure() + " sq. units, hypotenuse: "
-                + hypotenuse() + " units, color: " + getColor();
+    public String draw() {
+        return "Figure: right triangle , area: " + findAreaFigure() + " sq. units, hypotenuse: "
+                + findHypotenuse() + " units, color: " + getColor();
     }
 }

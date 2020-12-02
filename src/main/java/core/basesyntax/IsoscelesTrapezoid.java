@@ -13,17 +13,17 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double areaFigure() {
+    public double findAreaFigure() {
         return 0.5 * (baseSideA + baseSideB) * height;
     }
 
     public double middleLine() {
-        return areaFigure() / height;
+        return findAreaFigure() / height;
     }
 
     @Override
-    public String drawn() {
-        return "Figure: isosceles trapezoid , area: " + areaFigure() + " sq. units, middle line: "
-                + middleLine() + " units, color: " + getColor();
+    public String draw() {
+        return "Figure: isosceles trapezoid , area: " + findAreaFigure()
+                + " sq. units, middle line: " + middleLine() + " units, color: " + getColor();
     }
 }

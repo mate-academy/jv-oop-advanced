@@ -9,17 +9,17 @@ public class Square extends Figure {
     }
 
     @Override
-    public double areaFigure() {
+    public double findAreaFigure() {
         return side * side;
     }
 
-    public double diagonal() {
+    public double findDiagonal() {
         return 1.41 * side;
     }
 
     @Override
-    public String drawn() {
-        return "Figure: square, area: " + areaFigure() + " sq. units, diagonal: "
-                + diagonal() + " units, color: " + getColor();
+    public String draw() {
+        return "Figure: square, area: " + findAreaFigure() + " sq. units, diagonal: "
+                + findDiagonal() + " units, color: " + getColor();
     }
 }

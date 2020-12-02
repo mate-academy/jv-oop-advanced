@@ -3,10 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class GeneratorFigure {
-    private static final int COUNT_OF_FIGURE_IMPLEMENTATIONS = 5;
+    private static final int COUNT_OF_FIGURE = 5;
 
     public Figure getFigure() {
-        int randomGeneratedIndex = new Random().nextInt(COUNT_OF_FIGURE_IMPLEMENTATIONS);
+        int randomGeneratedIndex = new Random().nextInt(COUNT_OF_FIGURE);
         switch (randomGeneratedIndex) {
             case 0:
                 return new Square(getColor(),new Random().nextInt());
