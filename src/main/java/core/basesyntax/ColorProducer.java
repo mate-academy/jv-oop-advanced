@@ -11,5 +11,4 @@ public class ColorProducer {
         color += array[rand];
         return color;
     }
-
 }

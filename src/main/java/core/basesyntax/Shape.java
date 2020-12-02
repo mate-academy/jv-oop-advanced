@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Shape {
+public abstract class Shape implements Drawable {
 
     private String name;
     private String color;
@@ -18,12 +18,6 @@ public abstract class Shape {
     public String getColor() {
         return color;
     }
-
-    public abstract double calculateArea();
-
-    public abstract double getPerimeter();
-
-    public abstract void draw();
 
     public String displayInfo() {
         return message.append("Shape: ").append(this.getName())
