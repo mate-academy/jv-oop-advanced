@@ -4,11 +4,9 @@ import java.util.Random;
 
 public class Application {
     public static void main(String[] args) {
-        Random rnd = new Random();
-        int x = rnd.nextInt(10);
-        Object [] randomArray = new Object[x];
-        for (int i = 0; i < x; i++) {
-            randomArray[i] = FigureGenerator.random();
+        Figures [] randomArray = new Figures[new Random().nextInt(10)];
+        for (int i = 0; i < randomArray.length; i++) {
+            randomArray[i] = FigureGenerator.getRandomFigure();
         }
         for (Object print: randomArray) {
             System.out.println(print.toString());

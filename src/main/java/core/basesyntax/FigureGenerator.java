@@ -3,27 +3,27 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureGenerator {
-    public static Figures random() {
-        Random figures = new Random();
-        int y = figures.nextInt(5);
-        int randomSide = figures.nextInt(150);
-        int randomSide1 = figures.nextInt(150);
-        int randomSide2 = figures.nextInt(150);
-        switch (y) {
+    public static Figures getRandomFigure() {
+        switch (new Random().nextInt(5)) {
             case 1:
-                return new Square(colorRand(), randomSide);
+                return new Square(getRandomColor(), getRandomNumber());
             case 2:
-                return new IsoscelesTrapezoid(colorRand(), randomSide, randomSide1, randomSide2);
+                return new IsoscelesTrapezoid(getRandomColor(), getRandomNumber(),
+                        getRandomNumber(), getRandomNumber());
             case 3:
-                return new RightTriangle(colorRand(), randomSide, randomSide1);
+                return new RightTriangle(getRandomColor(), getRandomNumber(), getRandomNumber());
             case 4:
-                return new Rectangle(colorRand(), randomSide, randomSide1);
+                return new Rectangle(getRandomColor(), getRandomNumber(), getRandomNumber());
             default:
-                return new Circle(colorRand(), randomSide);
+                return new Circle(getRandomColor(), getRandomNumber());
         }
     }
 
-    private static Colors colorRand() {
+    private static int getRandomNumber() {
+        return new Random().nextInt(150);
+    }
+
+    private static Colors getRandomColor() {
         Colors[] color = Colors.values();
         Random random = new Random();
         return color[random.nextInt(color.length)];
