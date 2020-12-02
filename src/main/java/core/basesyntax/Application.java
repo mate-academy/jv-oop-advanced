@@ -8,7 +8,7 @@ public class Application {
         for (int i = 0; i < randomArray.length; i++) {
             randomArray[i] = FigureGenerator.getRandomFigure();
         }
-        for (Object print: randomArray) {
+        for (Figures print: randomArray) {
             System.out.println(print.toString());
         }
     }

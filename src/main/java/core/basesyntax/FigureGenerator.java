@@ -4,7 +4,8 @@ import java.util.Random;
 
 public class FigureGenerator {
     public static Figures getRandomFigure() {
-        switch (new Random().nextInt(5)) {
+        final int figuresQuantity = 5;
+        switch (new Random().nextInt(figuresQuantity)) {
             case 1:
                 return new Square(getRandomColor(), getRandomNumber());
             case 2:
