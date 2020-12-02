@@ -9,7 +9,7 @@ public class Main {
         FigureProducer figureProducer = new FigureProducer();
         for (int i = 0; i < figure.length; i++) {
             figure[i] = FigureProducer.getFigure();
-            figure[i].drawingFigures();
+            figure[i].drawFigure();
         }
     }
 }
