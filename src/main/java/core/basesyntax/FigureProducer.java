@@ -28,10 +28,9 @@ public class FigureProducer {
     }
 
     private IsoscelesTrapezoid newIsoscelesTrapezoid() {
-        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(ColorProducer.get()
-                .toString().toLowerCase(),
+        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(RandomLongProducer.get(),
                 RandomLongProducer.get(), RandomLongProducer.get(),
-                RandomLongProducer.get(), "isosceles trapezoid");
+                "isosceles trapezoid");
         return isoscelesTrapezoid;
     }
 
