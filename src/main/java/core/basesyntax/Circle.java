@@ -4,15 +4,16 @@ public class Circle extends Figures {
 
     private int radius;
 
-    public Circle(int radius, String color) {
-        super(radius, color);
+    public void setRadius(int radius) {
         this.radius = radius;
-        setArea(Math.PI * radius * radius);
     }
 
-    @Override
-    public void print() {
+    public void setArea() {
+        super.setArea(Math.PI * radius * radius);
+    }
+
+    public void printInfo() {
         System.out.println("Shape: circle, area: " + getArea() + " sq. units, radius: "
-                + getUniqueParameter() + " units, color: " + getColor());
+                + radius + " units, color: " + getColor());
     }
 }

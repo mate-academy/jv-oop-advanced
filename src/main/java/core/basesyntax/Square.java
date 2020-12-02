@@ -2,17 +2,20 @@ package core.basesyntax;
 
 public class Square extends Figures {
 
-    int side;
+    private int side;
+    private double diagonal;
 
-    public Square(int side, String color) {
-        super(side * Math.sqrt(2.0), color);
+    public void setParameters(int side) {
         this.side = side;
-        setArea(side * side);
+        diagonal = Math.sqrt(2) * side;
     }
 
-    @Override
-    public void print() {
-        System.out.println("Shape: square, area: " + getArea() + " sq. units, diagonal length: "
-                + getUniqueParameter() + " units, color: " + getColor());
+    public void setArea() {
+        super.setArea(side * side);
+    }
+
+    public void printInfo() {
+        System.out.println("Shape: square, area: " + getArea() + " sq. units, diagonal: "
+                + diagonal + " units, color: " + getColor());
     }
 }
