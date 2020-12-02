@@ -10,7 +10,7 @@ public class HelloWorld {
             figures[i] = new RandomFigure().getFigure();
         }
 
-        for (Figure figure: figures) {
+        for (Figure figure : figures) {
             figure.draw();
         }
     }

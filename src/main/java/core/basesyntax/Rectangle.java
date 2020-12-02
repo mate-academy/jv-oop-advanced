@@ -4,16 +4,11 @@ public class Rectangle extends Figure {
 
     private double sideA;
     private double sideB;
-    private String color;
 
-    public Rectangle(double sideOne, double sideTwo, String color) {
-        this.sideA = sideOne;
-        this.sideB = sideTwo;
-        this.color = color;
-    }
-
-    public void getSides() {
-        System.out.println("Side one : " + sideA + ", side two : " + sideB);
+    public Rectangle(double sideA, double sideB, String color) {
+        super(color);
+        this.sideA = sideA;
+        this.sideB = sideB;
     }
 
     @Override
@@ -21,19 +16,15 @@ public class Rectangle extends Figure {
         return sideA * sideB;
     }
 
+    public double getPerimeter() {
+        return (sideA + sideB) * 2;
+    }
+
     @Override
-    public String getColor() {
-        return this.color;
-    }
-
-    public double uniqueMethod() {
-        return ((sideA + sideB) * 2);
-    }
-
     public void draw() {
         System.out.println(getClass().getSimpleName() + ", area : " + getArea()
-                + " sq. units, " + "Its' perimeter " + uniqueMethod() + " units , color: "
-                + this.color.toLowerCase());
+                + " sq. units, " + "Its' perimeter " + getPerimeter() + " units , color: "
+                + this.getColor().toLowerCase());
     }
 
 }
