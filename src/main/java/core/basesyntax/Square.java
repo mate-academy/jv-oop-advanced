@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public class Square extends Shape implements Figure {
+public class Square extends Shape {
     private int sideLength;
 
-    public Square(int sideLength, String color) {
+    public Square(int sideLength, Color color) {
         this.sideLength = sideLength;
         this.color = color;
     }
@@ -23,13 +23,13 @@ public class Square extends Shape implements Figure {
     }
 
     @Override
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
     @Override
     public String toString() {
-        return "square, area: "
+        return "Shape: square, area: "
                 + getArea()
                 + " sq. units, side length: "
                 + sideLength

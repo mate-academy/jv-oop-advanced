@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public class Circle extends Shape implements Figure {
+public class Circle extends Shape {
     private int radius;
 
-    public Circle(int radius, String color) {
+    public Circle(int radius, Color color) {
         this.radius = radius;
         this.color = color;
     }
@@ -23,13 +23,13 @@ public class Circle extends Shape implements Figure {
     }
 
     @Override
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
     @Override
     public String toString() {
-        return "square, area: "
+        return "Shape: circle, area: "
                 + getArea()
                 + " sq. units, radius: "
                 + radius

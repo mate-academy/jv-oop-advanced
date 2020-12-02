@@ -1,10 +1,12 @@
 package core.basesyntax;
 
 public abstract class Shape {
-    String color;
-    double area;
+    protected Color color;
+    protected double area;
 
-    abstract double getArea();
+    public abstract double getArea();
 
-    abstract String getColor();
+    public abstract Color getColor();
+
+    public abstract void draw();
 }

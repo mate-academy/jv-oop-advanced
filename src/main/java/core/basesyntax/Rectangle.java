@@ -1,10 +1,10 @@
 package core.basesyntax;
 
-public class Rectangle extends Shape implements Figure {
+public class Rectangle extends Shape {
     private int length;
     private int width;
 
-    public Rectangle(int length, int width, String color) {
+    public Rectangle(int length, int width, Color color) {
         this.length = length;
         this.width = width;
         this.color = color;
@@ -29,13 +29,13 @@ public class Rectangle extends Shape implements Figure {
     }
 
     @Override
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
     @Override
     public String toString() {
-        return "rectangle, area: "
+        return "Shape: rectangle, area: "
                 + getArea()
                 + " sq. units, length: "
                 + length

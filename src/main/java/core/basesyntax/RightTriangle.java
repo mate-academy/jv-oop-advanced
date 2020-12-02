@@ -1,10 +1,10 @@
 package core.basesyntax;
 
-public class RightTriangle extends Shape implements Figure {
+public class RightTriangle extends Shape {
     private int sideA;
     private int sideB;
 
-    public RightTriangle(int sideA, int sideB, String color) {
+    public RightTriangle(int sideA, int sideB, Color color) {
         this.sideA = sideA;
         this.sideB = sideB;
         this.color = color;
@@ -25,13 +25,13 @@ public class RightTriangle extends Shape implements Figure {
     }
 
     @Override
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
     @Override
     public String toString() {
-        return "right triangle, area: "
+        return "Shape: right triangle, area: "
                 + getArea()
                 + " sq. units, hypotenuse: "
                 + getHypotenuse()

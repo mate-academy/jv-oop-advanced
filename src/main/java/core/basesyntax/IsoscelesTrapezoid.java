@@ -1,11 +1,11 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Shape implements Figure {
+public class IsoscelesTrapezoid extends Shape {
     private int sideLength;
     private int widthA;
     private int widthB;
 
-    public IsoscelesTrapezoid(int sideLength, int widthA, int widthB, String color) {
+    public IsoscelesTrapezoid(int sideLength, int widthA, int widthB, Color color) {
         this.sideLength = sideLength;
         this.widthA = widthA;
         this.widthB = widthB;
@@ -28,13 +28,13 @@ public class IsoscelesTrapezoid extends Shape implements Figure {
     }
 
     @Override
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
     @Override
     public String toString() {
-        return "isosceles trapezoid, area: "
+        return "Shape: isosceles trapezoid, area: "
                 + getArea()
                 + " sq. units, side length: "
                 + sideLength
