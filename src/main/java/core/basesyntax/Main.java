@@ -6,9 +6,14 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Shape[] figures = FigureOps.generateFigures(10);
+        drawFigure(FigureProducer.generateFigures(RandomNumber.getRandomNumber(20)));
 
-        FigureOps.drawFigure(figures);
+    }
+
+    public static void drawFigure(Shape[] figures) {
+        for (Shape shape: figures) {
+            shape.draw();
+        }
     }
 
 }

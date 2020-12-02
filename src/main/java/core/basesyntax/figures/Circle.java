@@ -1,10 +1,12 @@
 package core.basesyntax.figures;
 
-public class Circle extends Shape implements Rounded {
+import core.basesyntax.FigureProducer;
+
+public class Circle extends Shape implements Drawable {
     private int radius;
 
     public Circle(int value) {
-        super();
+        super(FigureProducer.generateColor());
         this.radius = value;
     }
 
@@ -14,20 +16,20 @@ public class Circle extends Shape implements Rounded {
     }
 
     @Override
-    public double getCircumradius() {
+    public double getPerimeter() {
         return Math.PI * 2 * radius;
     }
 
     @Override
     public String getColor() {
-        return color;
+        return super.getColor();
     }
 
     @Override
     public void draw() {
         System.out.format("Figure: circle, circumradius: %.2f"
                         + ", area: %.2f"
-                        + " sq. units, radius: %.2f", getCircumradius(), getArea(), getRadius());
+                        + " sq. units, radius: %.2f", getPerimeter(), getArea(), getRadius());
         System.out.format(" units, diameter: %.2f"
                         + " units, color: %s.%n", getDiameter(), getColor());
 

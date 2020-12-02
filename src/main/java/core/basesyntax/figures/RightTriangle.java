@@ -1,11 +1,13 @@
 package core.basesyntax.figures;
 
-public class RightTriangle extends Shape implements Angled {
+import core.basesyntax.FigureProducer;
+
+public class RightTriangle extends Shape implements Drawable {
     private double legA;
     private double legB;
 
     public RightTriangle(int value1, int value2) {
-        super();
+        super(FigureProducer.generateColor());
         this.legA = value1;
         this.legB = value2;
     }
@@ -23,7 +25,7 @@ public class RightTriangle extends Shape implements Angled {
 
     @Override
     public String getColor() {
-        return color;
+        return super.getColor();
     }
 
     @Override
@@ -34,7 +36,6 @@ public class RightTriangle extends Shape implements Angled {
         System.out.format(" units, legB: %.2f"
                         + " units, hypotenuse: %.2f"
                         + " units, color: %s.%n", getLegB(), getHypotenuse(), getColor());
-
     }
 
     public double getLegA() {

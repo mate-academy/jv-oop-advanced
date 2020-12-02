@@ -7,15 +7,21 @@ import core.basesyntax.figures.RightTriangle;
 import core.basesyntax.figures.Shape;
 import core.basesyntax.figures.Square;
 import core.basesyntax.figures.Triangle;
+import java.util.HashMap;
+import java.util.Map;
 
-public class FigureOps {
-    static final int COLORS = 6;
+public class FigureProducer {
+    private static final int NUMBER_OF_FIGURES = 6;
+    private static final int NUMBER_OF_COLORS = 3;
+    private static final HashMap<Integer, String> colors = new HashMap<>(
+            Map.of(1, "Red", 2, "Green", 3, "Blue")
+    );
 
     public static Shape[] generateFigures(int count) {
         Shape[] figures = new Shape[RandomNumber.getRandomNumber(count)];
 
         for (int i = 0; i < figures.length; i++) {
-            switch (RandomNumber.getRandomNumber(COLORS)) {
+            switch (RandomNumber.getRandomNumber(NUMBER_OF_FIGURES)) {
                 case 1: {
                     figures[i] = new Square(RandomNumber.getRandomNumber(20));
                     break;
@@ -50,9 +56,8 @@ public class FigureOps {
         return figures;
     }
 
-    public static void drawFigure(Shape[] figures) {
-        for (Shape shape: figures) {
-            shape.draw();
-        }
+    public static String generateColor() {
+        return colors.get(RandomNumber.getRandomNumber(NUMBER_OF_COLORS));
     }
+
 }

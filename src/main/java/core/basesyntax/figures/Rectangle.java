@@ -1,11 +1,13 @@
 package core.basesyntax.figures;
 
-public class Rectangle extends Shape implements Angled {
+import core.basesyntax.FigureProducer;
+
+public class Rectangle extends Shape implements Drawable {
     private double sideA;
     private double sideB;
 
     public Rectangle(int value1, int value2) {
-        super();
+        super(FigureProducer.generateColor());
         this.sideA = value1;
         this.sideB = value2;
     }
@@ -22,7 +24,7 @@ public class Rectangle extends Shape implements Angled {
 
     @Override
     public String getColor() {
-        return color;
+        return super.getColor();
     }
 
     @Override

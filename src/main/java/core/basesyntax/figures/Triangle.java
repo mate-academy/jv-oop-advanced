@@ -1,10 +1,12 @@
 package core.basesyntax.figures;
 
-public class Triangle extends Shape implements Angled {
+import core.basesyntax.FigureProducer;
+
+public class Triangle extends Shape implements Drawable {
     private double side;
 
     public Triangle(int value) {
-        super();
+        super(FigureProducer.generateColor());
         this.side = value;
     }
 
@@ -20,7 +22,7 @@ public class Triangle extends Shape implements Angled {
 
     @Override
     public String getColor() {
-        return color;
+        return super.getColor();
     }
 
     @Override

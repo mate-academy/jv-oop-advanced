@@ -1,12 +1,14 @@
 package core.basesyntax.figures;
 
-public class IsoscelesTrapezoid extends Shape implements Angled {
+import core.basesyntax.FigureProducer;
+
+public class IsoscelesTrapezoid extends Shape implements Drawable {
     private double leg;
     private double lowerBase;
     private double upperBase;
 
     public IsoscelesTrapezoid(int value1, int value2, int value3) {
-        super();
+        super(FigureProducer.generateColor());
         this.leg = value1;
         this.lowerBase = value2;
         this.upperBase = value3;
@@ -29,7 +31,7 @@ public class IsoscelesTrapezoid extends Shape implements Angled {
 
     @Override
     public String getColor() {
-        return color;
+        return super.getColor();
     }
 
     @Override
@@ -40,7 +42,6 @@ public class IsoscelesTrapezoid extends Shape implements Angled {
         System.out.format(" units, lower base: %.2f"
                         + " units, upper base: %.2f"
                         + " units, color: %s.%n", getLowerBase(), getUpperBase(), getColor());
-
     }
 
     public double getLeg() {
