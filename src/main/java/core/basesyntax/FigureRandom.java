@@ -3,8 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureRandom {
+    public static final int NUMBER = 5;
+
     public Figure get() {
-        int randomFigure = new Random().nextInt(5);
+        int randomFigure = new Random().nextInt(NUMBER);
         RandomColour randomColour = new RandomColour();
         switch (randomFigure) {
             case 0:
