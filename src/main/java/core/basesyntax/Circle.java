@@ -7,7 +7,7 @@ public class Circle extends Shape {
 
     public Circle(String name, FigureProducer producer) {
         super(name);
-        this.roundness = producer.generatorNumber();
+        this.roundness = producer.generateRandomNumber();
     }
 
     @Override

@@ -8,8 +8,8 @@ public class RightTriangle extends Shape {
 
     public RightTriangle(String name, FigureProducer producer) {
         super(name);
-        this.sideA = producer.generatorNumber();
-        this.sideB = producer.generatorNumber();
+        this.sideA = producer.generateRandomNumber();
+        this.sideB = producer.generateRandomNumber();
     }
 
     @Override

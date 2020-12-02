@@ -8,8 +8,8 @@ public class Rectangle extends Shape {
 
     public Rectangle(String name, FigureProducer producer) {
         super(name);
-        this.length = producer.generatorNumber();
-        this.width = producer.generatorNumber();
+        this.length = producer.generateRandomNumber();
+        this.width = producer.generateRandomNumber();
     }
 
     @Override

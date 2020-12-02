@@ -37,7 +37,7 @@ public class FigureProducer implements Fillable {
         return generator;
     }
 
-    public int generatorNumber() {
+    public int generateRandomNumber() {
         return (int)(1 + Math.random() * 20);
     }
 }

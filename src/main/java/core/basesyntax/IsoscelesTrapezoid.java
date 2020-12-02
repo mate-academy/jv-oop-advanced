@@ -9,9 +9,9 @@ public class IsoscelesTrapezoid extends Shape {
 
     public IsoscelesTrapezoid(String name, FigureProducer producer) {
         super(name);
-        this.sideA = producer.generatorNumber();
-        this.sideB = producer.generatorNumber();
-        this.sideC = producer.generatorNumber();
+        this.sideA = producer.generateRandomNumber();
+        this.sideB = producer.generateRandomNumber();
+        this.sideC = producer.generateRandomNumber();
     }
 
     @Override

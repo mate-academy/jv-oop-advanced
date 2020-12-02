@@ -7,7 +7,7 @@ public class Square extends Shape {
 
     public Square(String name, FigureProducer producer) {
         super(name);
-        this.sideA = producer.generatorNumber();
+        this.sideA = producer.generateRandomNumber();
     }
 
     @Override
