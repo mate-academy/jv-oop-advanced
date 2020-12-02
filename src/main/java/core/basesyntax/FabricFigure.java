@@ -6,9 +6,10 @@ public class FabricFigure {
     private static Random random = new Random();
     private static final double MINVALUE = 2;
     private static final double MAXVALUE = 25;
+    private static final int COUNT_FIGURES = 5;
 
     public static Figure createRandomFigure() {
-        switch (new Random().nextInt(5)) {
+        switch (new Random().nextInt(COUNT_FIGURES)) {
             case 0:
                 return createRectangle();
             case 1:

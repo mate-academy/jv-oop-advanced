@@ -4,9 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-/**
- * Feel free to remove this class and create your own.
- */
 public class Information {
     static void showAllFigure(List<Figure> list) {
         for (Figure figure : list) {
@@ -22,5 +19,4 @@ public class Information {
         showAllFigure(list);
 
     }
-
 }
