@@ -2,14 +2,14 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class FigureProduce {
+public class FigureProducer {
 
-    private static final int COUNT_OF_FIGURE_IMPLEMENTATIONS = 4;
+    private static final int COUNT_OF_FIGURE = 4;
     Random random = new Random();
     ColorProducer colorProducer = new ColorProducer();
 
     public Figure get() {
-        int randomGeneratedIndex = random.nextInt(COUNT_OF_FIGURE_IMPLEMENTATIONS);
+        int randomGeneratedIndex = random.nextInt(COUNT_OF_FIGURE);
         switch (randomGeneratedIndex) {
             case 0:
                 return getRectangle();
@@ -57,11 +57,11 @@ public class FigureProduce {
     }
 
     private double generateNumber() {
-        int rndmz = -1;
-        while (rndmz < 0) {
-            rndmz = random.nextInt();
+        int randoms = -1;
+        while (randoms < 0) {
+            randoms = random.nextInt();
         }
-        return rndmz + random.nextDouble();
+        return randoms + random.nextDouble();
     }
 
 }

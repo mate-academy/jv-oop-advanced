@@ -8,14 +8,14 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         Random random = new Random();
-        FigureProduce figureProduce = new FigureProduce();
+        FigureProducer figureProducer = new FigureProducer();
         int temptFate = -1;
         while (temptFate < 0) {
             temptFate = random.nextInt(100);
         }
         Figure[] arr = new Figure[temptFate];
         for (int i = 0; i < arr.length; i++) {
-            arr[i] = figureProduce.get();
+            arr[i] = figureProducer.get();
         }
         for (Figure i: arr) {
             printLine(i);
