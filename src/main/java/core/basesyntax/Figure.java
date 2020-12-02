@@ -13,6 +13,10 @@ public abstract class Figure implements IFigure {
         return color;
     }
 
+    public double getArea() {
+        return area;
+    }
+
     public abstract void setArea();
 
     public abstract void getInfo();
