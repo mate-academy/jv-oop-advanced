@@ -1,13 +1,15 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.RandomNumber;
+
 public class Rectangle extends Shape {
     private double sideA;
     private double sideB;
 
     public Rectangle() {
         super();
-        this.sideA = random.nextInt(20) + 1;
-        this.sideB = random.nextInt(20) + 1;
+        this.sideA = RandomNumber.getRandomNumber(20);
+        this.sideB = RandomNumber.getRandomNumber(20);
     }
 
     @Override

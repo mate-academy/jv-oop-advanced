@@ -1,10 +1,10 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.RandomNumber;
+
 import java.util.HashMap;
-import java.util.Random;
 
 public abstract class Shape implements Figure {
-    protected Random random = new Random();
     protected String color;
 
     public Shape() {
@@ -12,7 +12,7 @@ public abstract class Shape implements Figure {
         colors.put(1, "Red");
         colors.put(2, "Green");
         colors.put(3, "Blue");
-        this.color = colors.get(random.nextInt(3) + 1);
+        this.color = colors.get(RandomNumber.getRandomNumber(3));
     }
 
 }

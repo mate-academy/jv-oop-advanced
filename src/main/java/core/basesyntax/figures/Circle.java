@@ -1,11 +1,13 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.RandomNumber;
+
 public class Circle extends Shape {
     private int radius;
 
     public Circle() {
         super();
-        this.radius = random.nextInt(20) + 1;
+        this.radius = RandomNumber.getRandomNumber(20);
     }
 
     @Override

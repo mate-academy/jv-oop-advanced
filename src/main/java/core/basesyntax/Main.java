@@ -7,16 +7,24 @@ import core.basesyntax.figures.RightTriangle;
 import core.basesyntax.figures.Shape;
 import core.basesyntax.figures.Square;
 import core.basesyntax.figures.Triangle;
-import java.util.Random;
 
 public class Main {
 
     public static void main(String[] args) {
-        Random random = new Random();
-        Shape[] figures = new Shape[random.nextInt(10) + 1];
+
+        Shape[] figures = generateFigures(10);
+
+        for (Shape shape: figures) {
+            shape.draw();
+        }
+    }
+
+    public static Shape[] generateFigures(int count) {
+        Shape[] figures = new Shape[RandomNumber.getRandomNumber(count)];
+        final int COLORS = 6;
 
         for (int i = 0; i < figures.length; i++) {
-            switch (random.nextInt(6) + 1) {
+            switch (RandomNumber.getRandomNumber(COLORS)) {
                 case 1: {
                     figures[i] = new Square();
                     break;
@@ -45,8 +53,6 @@ public class Main {
             }
         }
 
-        for (Shape shape: figures) {
-            shape.draw();
-        }
+        return figures;
     }
 }
