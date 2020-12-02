@@ -6,9 +6,9 @@ public class Rectangle extends Figure {
     private double height;
 
     Rectangle(double base, double height, Color color) {
+        super(color);
         setBase(base);
         setHeight(height);
-        setColor(color);
         setArea(base, height);
     }
 
@@ -30,21 +30,6 @@ public class Rectangle extends Figure {
 
     public void setArea(double width, double height) {
         super.setArea(width * height);
-    }
-
-    @Override
-    public double getArea() {
-        return super.getArea();
-    }
-
-    @Override
-    public Color getColor() {
-        return super.getColor();
-    }
-
-    @Override
-    public void setColor(Color color) {
-        super.setColor(color);
     }
 
     @Override

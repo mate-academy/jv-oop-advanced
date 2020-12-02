@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class FigureProduce {
 
-    public static final int COUNT_OF_FIGURE_IMPLEMENTATIONS = 4;
+    private static final int COUNT_OF_FIGURE_IMPLEMENTATIONS = 4;
     Random random = new Random();
     ColorProducer colorProducer = new ColorProducer();
 

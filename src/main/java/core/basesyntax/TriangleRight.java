@@ -6,9 +6,9 @@ public class TriangleRight extends Figure {
     private double base;
 
     TriangleRight(double height, double base, Color color) {
+        super(color);
         setHeight(height);
         setBase(base);
-        setColor(color);
         setArea(getHeight(),getBase());
     }
 
@@ -28,23 +28,8 @@ public class TriangleRight extends Figure {
         this.height = height;
     }
 
-    @Override
-    public double getArea() {
-        return super.getArea();
-    }
-
     public void setArea(double height, double base) {
         super.setArea((0.5) * height * base);
-    }
-
-    @Override
-    public Color getColor() {
-        return super.getColor();
-    }
-
-    @Override
-    public void setColor(Color color) {
-        super.setColor(color);
     }
 
     @Override

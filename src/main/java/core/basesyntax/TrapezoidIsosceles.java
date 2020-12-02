@@ -7,10 +7,10 @@ public class TrapezoidIsosceles extends Figure {
     private double top;
 
     TrapezoidIsosceles(double base, double top, double height, Color color) {
+        super(color);
         setBase(base);
         setTop(top);
         setHeight(height);
-        setColor(color);
         setArea(getBase(),getTop(),getHeight());
     }
 
