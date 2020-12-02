@@ -4,11 +4,11 @@ public abstract class Shape {
 
     private String name;
     private String color;
-    private StringBuilder sb = new StringBuilder();
+    private StringBuilder message = new StringBuilder();
 
-    public Shape(String name) {
+    public Shape(String name, ColorProducer producer) {
         this.name = name;
-        this.color = randomColor();
+        this.color = producer.randomColor();
     }
 
     public String getName() {
@@ -26,18 +26,8 @@ public abstract class Shape {
     public abstract void draw();
 
     public String displayInfo() {
-        return sb.append("Shape: ").append(this.getName())
+        return message.append("Shape: ").append(this.getName())
         .append(", color: " + this.getColor()).toString();
-    }
-
-    private String randomColor() {
-        String color = "";
-        String[] array = {"white","black","yellow","red","orange",
-                          "pink","purple","grey","brown","golden",
-                          "green","blue"};
-        int rand = (int) (Math.random() * array.length);
-        color += array[rand];
-        return color;
     }
 }
 

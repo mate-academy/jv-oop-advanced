@@ -5,8 +5,8 @@ public class Circle extends Shape {
     private StringBuilder message = new StringBuilder();
     private double roundness;
 
-    public Circle(String name, FigureProducer producer) {
-        super(name);
+    public Circle(String name, FigureProducer producer, ColorProducer colorProducer) {
+        super(name,colorProducer);
         this.roundness = producer.generateRandomNumber();
     }
 
@@ -27,7 +27,8 @@ public class Circle extends Shape {
 
     @Override
     public String displayInfo() {
-        return message.append(super.displayInfo()).append(",area: " + this.calculateArea() + " sq.unit,")
+        return message.append(super.displayInfo())
+        .append(",area: " + this.calculateArea() + " sq.unit,")
         .append("radius:" + this.getRadius() + " units,").toString();
     }
 

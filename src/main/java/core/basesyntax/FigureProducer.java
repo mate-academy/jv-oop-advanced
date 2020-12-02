@@ -9,21 +9,23 @@ public class FigureProducer implements Fillable {
         Shape[] shapeArr = new Shape[generateRandomArrayLength()];
         Shape shape = null;
         for (int i = 0; i < shapeArr.length; i++) {
+            ColorProducer colorProducer = new ColorProducer();
+            FigureProducer figureProducer = new FigureProducer();
             switch (rand.nextInt(4)) {
                 case 0:
-                    shape = new Square("square", new FigureProducer());
+                    shape = new Square("square",figureProducer,colorProducer);
                     break;
                 case 1:
-                    shape = new Rectangle("rectangle", new FigureProducer());
+                    shape = new Rectangle("rectangle",figureProducer,colorProducer);
                     break;
                 case 2:
-                    shape = new Circle("circle", new FigureProducer());
+                    shape = new Circle("circle",figureProducer,colorProducer);
                     break;
                 case 3:
-                    shape = new RightTriangle("right triangle",new FigureProducer());
+                    shape = new RightTriangle("right triangle",figureProducer,colorProducer);
                     break;
                 case 4:
-                    shape = new IsoscelesTrapezoid("trapezoid", new FigureProducer());
+                    shape = new IsoscelesTrapezoid("trapezoid",figureProducer,colorProducer);
                     break;
                 default:
             }

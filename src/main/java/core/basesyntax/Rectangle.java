@@ -6,8 +6,8 @@ public class Rectangle extends Shape {
     private int length;
     private int width;
 
-    public Rectangle(String name, FigureProducer producer) {
-        super(name);
+    public Rectangle(String name, FigureProducer producer, ColorProducer colorProducer) {
+        super(name,colorProducer);
         this.length = producer.generateRandomNumber();
         this.width = producer.generateRandomNumber();
     }
@@ -28,7 +28,8 @@ public class Rectangle extends Shape {
     }
 
     public String displayInfo() {
-        return message.append(super.displayInfo()).append(",area: " + this.calculateArea() + " sq.units ")
+        return message.append(super.displayInfo())
+        .append(",area: " + this.calculateArea() + " sq.units ")
         .append("diagonal: " + this.getDiagonal() + " units ").toString();
     }
 

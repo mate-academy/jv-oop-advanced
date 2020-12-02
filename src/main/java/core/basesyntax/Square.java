@@ -5,8 +5,8 @@ public class Square extends Shape {
     private StringBuilder message = new StringBuilder();
     private int sideA;
 
-    public Square(String name, FigureProducer producer) {
-        super(name);
+    public Square(String name, FigureProducer producer, ColorProducer colorProducer) {
+        super(name,colorProducer);
         this.sideA = producer.generateRandomNumber();
     }
 
@@ -26,7 +26,8 @@ public class Square extends Shape {
     }
 
     public String displayInfo() {
-        return message.append(super.displayInfo()).append(",area: " + this.calculateArea() + " sq.units ")
+        return message.append(super.displayInfo())
+        .append(",area: " + this.calculateArea() + " sq.units ")
         .append("side length: " + this.sideLength() + " units ").toString();
 
     }

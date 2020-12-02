@@ -6,8 +6,8 @@ public class RightTriangle extends Shape {
     private int sideA;
     private int sideB;
 
-    public RightTriangle(String name, FigureProducer producer) {
-        super(name);
+    public RightTriangle(String name, FigureProducer producer, ColorProducer colorProducer) {
+        super(name, colorProducer);
         this.sideA = producer.generateRandomNumber();
         this.sideB = producer.generateRandomNumber();
     }
@@ -29,7 +29,8 @@ public class RightTriangle extends Shape {
 
     @Override
     public String displayInfo() {
-        return message.append(super.displayInfo()).append(",area: " + this.calculateArea() + " sq.units ")
+        return message.append(super.displayInfo())
+        .append(",area: " + this.calculateArea() + " sq.units ")
         .append("hypotenuse: " + this.getHypotenuse() + " units ").toString();
     }
 

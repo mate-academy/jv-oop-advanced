@@ -7,8 +7,8 @@ public class IsoscelesTrapezoid extends Shape {
     private int sideB;
     private int sideC;
 
-    public IsoscelesTrapezoid(String name, FigureProducer producer) {
-        super(name);
+    public IsoscelesTrapezoid(String name, FigureProducer producer, ColorProducer colorProducer) {
+        super(name, colorProducer);
         this.sideA = producer.generateRandomNumber();
         this.sideB = producer.generateRandomNumber();
         this.sideC = producer.generateRandomNumber();
@@ -31,7 +31,8 @@ public class IsoscelesTrapezoid extends Shape {
 
     @Override
     public String displayInfo() {
-        return message.append(super.displayInfo()).append(",area: " + this.calculateArea() + " sq.units ")
+        return message.append(super.displayInfo())
+        .append(",area: " + this.calculateArea() + " sq.units ")
         .append("height: " + this.height() + " units ").toString();
     }
 
