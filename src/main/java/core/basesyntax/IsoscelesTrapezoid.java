@@ -17,15 +17,15 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: isosceles trapezoid, area: " + area + " sq. units, diagonal: "
+        System.out.println("Figure: isosceles trapezoid, area: " + getArea() + " sq. units, diagonal: "
                 + diagonal + ", top width: " + topWidth + ", down width: " + downWidth
-                + ", sides: " + side + ", height: " + height + ", color: " + color);
+                + ", sides: " + side + ", height: " + height + ", color: " + getColor());
     }
 
     @Override
     public void calculate() {
-        area = (topWidth + downWidth) * Math.sqrt(4 * (side * side)
-                - (downWidth * downWidth - 2 * topWidth * downWidth + topWidth * topWidth)) / 4;
+        setArea((topWidth + downWidth) * Math.sqrt(4 * (side * side)
+                - (downWidth * downWidth - 2 * topWidth * downWidth + topWidth * topWidth)) / 4);
         diagonal = Math.sqrt(side * side + topWidth * downWidth);
         height = Math.sqrt(4 * (side * side) - (downWidth * downWidth - 2
                 * topWidth * downWidth + topWidth * topWidth)) / 2;

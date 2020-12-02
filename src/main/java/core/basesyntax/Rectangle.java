@@ -14,13 +14,13 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + area + " sq. units, diagonal: "
-                + diagonal + ", height: " + height + ", weight: " + weight + ", color: " + color);
+        System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, diagonal: "
+                + diagonal + ", height: " + height + ", weight: " + weight + ", color: " + getColor());
     }
 
     @Override
     public void calculate() {
-        area = height * weight;
+        setArea(height * weight);
         diagonal = Math.sqrt(height * height + weight * weight);
     }
 
