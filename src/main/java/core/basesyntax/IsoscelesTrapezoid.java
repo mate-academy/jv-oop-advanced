@@ -7,16 +7,23 @@ public class IsoscelesTrapezoid extends Figure {
     private double height;
     private double diagonal;
 
-    public IsoscelesTrapezoid(String color, int side, int topWidth, int downWidth) {
+    public IsoscelesTrapezoid(Color color, int side, int topWidth, int downWidth) {
         super(color);
         this.side = side;
         this.topWidth = topWidth;
         this.downWidth = downWidth;
-        draw();
+        calculate();
     }
 
     @Override
     public void draw() {
+        System.out.println("Figure: isosceles trapezoid, area: " + area + " sq. units, diagonal: "
+                + diagonal + ", top width: " + topWidth + ", down width: " + downWidth
+                + ", sides: " + side + ", height: " + height + ", color: " + color);
+    }
+
+    @Override
+    public void calculate() {
         area = (topWidth + downWidth) * Math.sqrt(4 * (side * side)
                 - (downWidth * downWidth - 2 * topWidth * downWidth + topWidth * topWidth)) / 4;
         diagonal = Math.sqrt(side * side + topWidth * downWidth);
@@ -24,10 +31,23 @@ public class IsoscelesTrapezoid extends Figure {
                 * topWidth * downWidth + topWidth * topWidth)) / 2;
     }
 
-    @Override
-    public String toString() {
-        return "Figure: isosceles trapezoid, area: " + area + " sq. units, diagonal: "
-                + diagonal + ", top width: " + topWidth + ", down width: " + downWidth
-                + ", sides: " + side + ", height: " + height + ", color: " + color;
+    public int getSide() {
+        return side;
+    }
+
+    public int getTopWidth() {
+        return topWidth;
+    }
+
+    public int getDownWidth() {
+        return downWidth;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public double getDiagonal() {
+        return diagonal;
     }
 }

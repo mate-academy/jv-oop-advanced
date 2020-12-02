@@ -5,22 +5,34 @@ public class Rectangle extends Figure {
     private int weight;
     private double diagonal;
 
-    public Rectangle(String color, int weight, int height) {
+    public Rectangle(Color color, int weight, int height) {
         super(color);
         this.weight = weight;
         this.height = height;
-        draw();
+        calculate();
     }
 
     @Override
     public void draw() {
+        System.out.println("Figure: rectangle, area: " + area + " sq. units, diagonal: "
+                + diagonal + ", height: " + height + ", weight: " + weight + ", color: " + color);
+    }
+
+    @Override
+    public void calculate() {
         area = height * weight;
         diagonal = Math.sqrt(height * height + weight * weight);
     }
 
-    @Override
-    public String toString() {
-        return "Figure: rectangle, area: " + area + " sq. units, diagonal: "
-                + diagonal + ", height: " + height + ", weight: " + weight + ", color: " + color;
+    public int getHeight() {
+        return height;
+    }
+
+    public int getWeight() {
+        return weight;
+    }
+
+    public double getDiagonal() {
+        return diagonal;
     }
 }
