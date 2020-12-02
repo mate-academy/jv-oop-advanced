@@ -9,7 +9,7 @@ public class Main {
         }
 
         for (Figure figure : arrayOfFigure) {
-            System.out.println(figure.getInformation());
+            System.out.println(figure.getFigureInformation());
         }
     }
 }

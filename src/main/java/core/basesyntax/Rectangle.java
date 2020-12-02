@@ -32,7 +32,7 @@ public class Rectangle extends Figure implements HasDiagonal, Drawing {
     }
 
     @Override
-    public String getInformation() {
+    public String getFigureInformation() {
         return String.format("Shape: rectangle, area: %.2f sq. units, side A length: %s units,"
                         + " side B length: %s units, diagonal: %.3f units, color: %s",
                 getArea(), sideA, sideB, getDiagonal(), getColor());

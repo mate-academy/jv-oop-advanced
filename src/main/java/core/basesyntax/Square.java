@@ -23,7 +23,7 @@ public class Square extends Figure implements HasDiagonal, Drawing {
     }
 
     @Override
-    public String getInformation() {
+    public String getFigureInformation() {
         return String.format("Shape: square, area: %.2f sq. units, side length: %s units, diagonal:"
                 + " %.3f units, color: %s", getArea(), side, getDiagonal(), getColor());
     }

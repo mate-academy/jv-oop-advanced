@@ -22,7 +22,7 @@ public class Circle extends Figure implements HasDiagonal, Drawing {
     }
 
     @Override
-    public String getInformation() {
+    public String getFigureInformation() {
         return String.format("Shape: circle, area: %.3f sq. units, radius: %s units,"
                 + " diagonal: %s units, color: %s", getArea(), radius, getDiagonal(), getColor());
     }

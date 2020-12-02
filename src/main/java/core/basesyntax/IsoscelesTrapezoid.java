@@ -43,7 +43,7 @@ public class IsoscelesTrapezoid extends Figure implements HasHeight, HasDiagonal
     }
 
     @Override
-    public String getInformation() {
+    public String getFigureInformation() {
         return String.format("Shape: isosceles trapezoid, area: %.3f sq. units,"
                         + " up side length: %s units, down side length: %s units,"
                         + " sides length: %s units,"
