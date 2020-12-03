@@ -1,22 +1,25 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements Area, Perimeter {
+public class RightTriangle extends Figure implements Perimeter {
+    protected int sideLengthA;
+    protected int sideLengthB;
+
     @Override
-    public int areaFigure() {
+    public int getArea() {
         return sideLengthA * sideLengthB / 2;
     }
 
     @Override
-    public int perimeterFigure() {
+    public int getPerimeter() {
         return sideLengthA + sideLengthB + getHypotenuse();
     }
 
     @Override
     public void printParameter() {
         System.out.println(" Figure: RightTriangle, area: "
-                + areaFigure() + " sq. units, hypotenuse: "
+                + getArea() + " sq. units, hypotenuse: "
                 + getHypotenuse() + " units, perimeter: "
-                + perimeterFigure() + " units, side length B: "
+                + getPerimeter() + " units, side length B: "
                 + sideLengthB + " units, side length A: "
                 + sideLengthA + " units, color: " + color);
     }

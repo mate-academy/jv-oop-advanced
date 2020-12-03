@@ -1,21 +1,23 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Area, Perimeter {
+public class Rectangle extends Figure implements Perimeter {
+    protected int sideLengthA;
+    protected int sideLengthB;
 
     @Override
-    public int perimeterFigure() {
+    public int getPerimeter() {
         return sideLengthB * 2 + sideLengthA * 2;
     }
 
     @Override
-    public int areaFigure() {
+    public int getArea() {
         return sideLengthA * sideLengthB;
     }
 
     @Override
     public void printParameter() {
-        System.out.println(" Figure: Rectangle, area: " + areaFigure()
-                + " sq. units, perimeter: " + perimeterFigure()
+        System.out.println(" Figure: Rectangle, area: " + getArea()
+                + " sq. units, perimeter: " + getPerimeter()
                 + " units, side length B: " + sideLengthB + " units, side length A: "
                 + sideLengthA + " units, color: " + color);
     }
@@ -34,10 +36,6 @@ public class Rectangle extends Figure implements Area, Perimeter {
 
     public void setSideLengthB(int sideLengthB) {
         this.sideLengthA = sideLengthB;
-    }
-
-    public Color getColor() {
-        return color;
     }
 
     public void setColor(Color color) {

@@ -1,9 +1,11 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public abstract class Figure implements Area, Parameter {
     protected Color color;
-    protected int sideLengthA;
-    protected int sideLengthB;
 
-    public abstract void printParameter();
+    public Color getColor() {
+        return color;
+    }
+
+    //public abstract void printParameter();
 }
