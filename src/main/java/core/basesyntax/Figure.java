@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.awt.*;
-
 public abstract class Figure implements Calculations, Drawing {
     private Colors color;
     private double area;
