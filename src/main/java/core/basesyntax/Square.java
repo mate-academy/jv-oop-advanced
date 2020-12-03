@@ -1,11 +1,10 @@
 package core.basesyntax;
 
-import java.util.Random;
-
-public class Square extends Figure implements ColorCreator {
+public class Square extends Figure {
     private int width;
 
-    public Square(int width) {
+    public Square(int width, Color color) {
+        super(color);
         this.width = width;
     }
 
@@ -27,13 +26,7 @@ public class Square extends Figure implements ColorCreator {
     }
 
     @Override
-    public Color getColor() {
-        int randomInteger = new Random().nextInt(Color.values().length);
-        return Color.values()[randomInteger];
-    }
-
-    @Override
-    public String onScreen() {
+    public String drawFigure() {
         return "Figure: square, area: " + countArea() + " sq. units, width "
                 + showWidth() + ", color: " + getColor().name().toLowerCase();
     }

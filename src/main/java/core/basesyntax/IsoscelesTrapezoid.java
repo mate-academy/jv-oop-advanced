@@ -1,13 +1,12 @@
 package core.basesyntax;
 
-import java.util.Random;
-
-public class IsoscelesTrapezoid extends Figure implements ColorCreator {
+public class IsoscelesTrapezoid extends Figure {
     private int widthUp;
     private int widthDown;
     private int height;
 
-    public IsoscelesTrapezoid(int widthUp, int widthDown, int height) {
+    public IsoscelesTrapezoid(int widthUp, int widthDown, int height, Color color) {
+        super(color);
         this.widthUp = widthUp;
         this.widthDown = widthDown;
         this.height = height;
@@ -47,13 +46,7 @@ public class IsoscelesTrapezoid extends Figure implements ColorCreator {
     }
 
     @Override
-    public Color getColor() {
-        int randomInteger = new Random().nextInt(Color.values().length);
-        return Color.values()[randomInteger];
-    }
-
-    @Override
-    public String onScreen() {
+    public String drawFigure() {
         return "Figure: circle, area: " + countArea() + " sq. units, height "
                 + showHeight() + ", color: " + getColor().name().toLowerCase();
     }

@@ -1,11 +1,10 @@
 package core.basesyntax;
 
-import java.util.Random;
-
-public class Circle extends Figure implements ColorCreator {
+public class Circle extends Figure {
     private int radius;
 
-    public Circle(int radius) {
+    public Circle(int radius, Color color) {
+        super(color);
         this.radius = radius;
     }
 
@@ -23,13 +22,7 @@ public class Circle extends Figure implements ColorCreator {
     }
 
     @Override
-    public Color getColor() {
-        int randomInteger = new Random().nextInt(Color.values().length);
-        return Color.values()[randomInteger];
-    }
-
-    @Override
-    public String onScreen() {
+    public String drawFigure() {
         return "Figure: circle, area: " + countArea() + " sq. units, radius "
                 + radius + ", color: " + getColor().name().toLowerCase();
     }

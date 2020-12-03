@@ -1,12 +1,11 @@
 package core.basesyntax;
 
-import java.util.Random;
-
-public class Rectangle extends Figure implements ColorCreator {
+public class Rectangle extends Figure {
     private int length;
     private int height;
 
-    public Rectangle(int length, int height) {
+    public Rectangle(int length, int height, Color color) {
+        super(color);
         this.length = length;
         this.height = height;
     }
@@ -37,13 +36,7 @@ public class Rectangle extends Figure implements ColorCreator {
     }
 
     @Override
-    public Color getColor() {
-        int randomInteger = new Random().nextInt(Color.values().length);
-        return Color.values()[randomInteger];
-    }
-
-    @Override
-    public String onScreen() {
+    public String drawFigure() {
         return "Figure: rectangle, area: " + countArea() + " sq. units, length "
                 + showLength() + ", color: " + getColor().name().toLowerCase();
     }

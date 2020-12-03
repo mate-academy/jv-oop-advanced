@@ -1,12 +1,11 @@
 package core.basesyntax;
 
-import java.util.Random;
-
-public class RightTriangle extends Figure implements ColorCreator {
+public class RightTriangle extends Figure {
     private int width;
     private int height;
 
-    public RightTriangle(int width, int height) {
+    public RightTriangle(int width, int height, Color color) {
+        super(color);
         this.width = width;
         this.height = height;
     }
@@ -37,13 +36,7 @@ public class RightTriangle extends Figure implements ColorCreator {
     }
 
     @Override
-    public Color getColor() {
-        int randomInteger = new Random().nextInt(Color.values().length);
-        return Color.values()[randomInteger];
-    }
-
-    @Override
-    public String onScreen() {
+    public String drawFigure() {
         return "Figure: right triangle, area: " + countArea() + " sq. units, hypotenuse "
                 + countHypotenuse() + ", color: " + getColor().name().toLowerCase();
     }
