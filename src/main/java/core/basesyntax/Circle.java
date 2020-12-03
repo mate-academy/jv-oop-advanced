@@ -13,16 +13,6 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double getArea() {
-        return area;
-    }
-
-    @Override
-    public Color getColor() {
-        return color;
-    }
-
-    @Override
     public String draw() {
         return "Figure:Circle" + "," + "Color:" + getColor() + ","
                 + "Area:" + getArea() + "," + "Radius:" + getRadius();

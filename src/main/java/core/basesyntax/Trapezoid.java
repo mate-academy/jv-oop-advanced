@@ -17,16 +17,6 @@ public class Trapezoid extends Figure {
     }
 
     @Override
-    public double getArea() {
-        return (firstBase + secondBase) / 2 * height;
-    }
-
-    @Override
-    public Color getColor() {
-        return color;
-    }
-
-    @Override
     public String draw() {
         return String.format("Figure:Trapezoid,Color:%s,Area:%s,Height:%d", getColor(),
                 getArea(), getHeight());

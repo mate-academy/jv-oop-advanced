@@ -14,13 +14,7 @@ public class Triangle extends Figure {
         return height;
     }
 
-    @Override
-    public double getArea() {
-        return area;
-    }
-
-    @Override
-    public Color getColor() {
+    private int getColor(int color) {
         return color;
     }
 
