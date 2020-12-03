@@ -6,7 +6,7 @@ public class FigureProducer {
     private static final int COUNT_OF_FIGURES_IMPLEMENTATION = 5;
     private ColorProducer colorProducer = new ColorProducer();
 
-    public Figures get() {
+    public Figure get() {
         int randomGeneratedNumber = new Random().nextInt(COUNT_OF_FIGURES_IMPLEMENTATION);
         switch (randomGeneratedNumber) {
             case 0:
