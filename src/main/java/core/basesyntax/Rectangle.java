@@ -10,6 +10,10 @@ public class Rectangle extends Figures {
         this.sideB = sideB;
     }
 
+    public int getSideA() {
+        return sideA;
+    }
+
     @Override
     public double getArea() {
         return sideA * sideB;

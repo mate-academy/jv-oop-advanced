@@ -8,6 +8,10 @@ public class Square extends Figures {
         this.side = side;
     }
 
+    public int getSide() {
+        return side;
+    }
+
     @Override
     public double getArea() {
         return side * side;

@@ -12,6 +12,10 @@ public class IsoscelesTrapezoid extends Figures {
         this.trapezoidHeight = trapezoidHeight;
     }
 
+    public int getLowerBase() {
+        return lowerBase;
+    }
+
     @Override
     public double getArea() {
         return (lowerBase + upperBase) / 2 * trapezoidHeight;
