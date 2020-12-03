@@ -3,10 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureGenerator {
-    private static final int COUNTER_OF_FIGURE_IMPLEMENTATION = 5;
+    private static final int COUNTER_OF_FIGURE = 5;
 
     public Figure get() {
-        int randomGeneratedIndex = new Random().nextInt(COUNTER_OF_FIGURE_IMPLEMENTATION);
+        int randomGeneratedIndex = new Random().nextInt(COUNTER_OF_FIGURE);
         switch (randomGeneratedIndex) {
             case 0: return getCircle();
             case 1: return getIsoscelesTrapezoid();
