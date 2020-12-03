@@ -38,12 +38,9 @@ public class Rectangle extends Figure {
 
     @Override
     public String draw() {
-        return "Rectangle:"
-                + " colour: " + getColour()
-                + ", area: " + parsingValue(getArea()) + " units"
-                + ", Length: " + parsingValue(rectangularLength) + " units"
-                + ", Width: " + parsingValue(rectangularWidth) + " units"
-                + ", diagonal: " + parsingValue(getDiagonal()) + " units"
-                + ", perimeter: " + parsingValue(getPerimeter()) + " units";
+        return String.format("Rectangle: Length: %.2f units, perimeter: %.2f units,"
+                        + " area: %.2f units, color: %s, width: %.2f units, diagonal: %.2f.",
+                rectangularLength, getPerimeter(), getArea(),
+                getColour(), rectangularWidth, getDiagonal());
     }
 }

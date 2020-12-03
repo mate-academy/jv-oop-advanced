@@ -20,11 +20,8 @@ public class Circle extends Figure {
 
     @Override
     public String draw() {
-        return "Circle:"
-                + " colour: " + getColour()
-                + ", radius: " + parsingValue(radius) + " units"
-                + " perimeter " + parsingValue(getPerimeter()) + " units"
-                + ", area: " + parsingValue(getArea()) + " units";
-
+        return String.format("Circle: radius: %.2f units, perimeter: %.2f units,"
+                        + " area: %.2f units, color: %s.",
+                radius, getPerimeter(), getArea(), getColour());
     }
 }

@@ -6,8 +6,8 @@ public class RightTriangle extends Figure {
 
     public RightTriangle(double sideOne, double sideTwo, Colour colour) {
         super(colour);
-        this.sideOne = parsingValue(sideOne);
-        this.sideTwo = parsingValue(sideTwo);
+        this.sideOne = sideOne;
+        this.sideTwo = sideTwo;
     }
 
     public double getSideOne() {
@@ -34,13 +34,10 @@ public class RightTriangle extends Figure {
 
     @Override
     public String draw() {
-        return "RightTriangle: "
-                + " colour: " + getColour()
-                + ", area: " + parsingValue(getArea()) + " units"
-                + ", cathetus one: " + parsingValue(sideOne) + " units"
-                + ", cathetus two: " + parsingValue(sideTwo) + " units"
-                + ", Hypotenuse: " + parsingValue(getHypotenuse()) + " units"
-                + ", perimeter: " + parsingValue(getPerimeter()) + " units";
+        return String.format("RightTriangle: cathetus one: %.2f units, perimeter: %.2f units,"
+                        + " area: %.2f units, color: %s, cathetus two: %.2f units,"
+                        + " Hypotenuse: %.2f.",
+                sideOne, getPerimeter(), getArea(),
+                getColour(), sideTwo, getHypotenuse());
     }
-
 }

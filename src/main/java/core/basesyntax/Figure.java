@@ -16,10 +16,6 @@ public abstract class Figure implements Drawable {
         this.colour = colour;
     }
 
-    public double parsingValue(double value) {
-        return Double.parseDouble(String.format("%.2f", value));
-    }
-
     public abstract double getArea();
 
     public abstract double getPerimeter();
