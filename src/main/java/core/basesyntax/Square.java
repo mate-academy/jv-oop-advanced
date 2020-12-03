@@ -16,11 +16,6 @@ public class Square extends Figure {
         this.side = side;
     }
 
-    @Override
-    public Color getColor() {
-        return super.getColor();
-    }
-
     public void setColor(Color color) {
         super.setColor(color);
     }

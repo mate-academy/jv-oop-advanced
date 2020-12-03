@@ -3,7 +3,11 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FiguresFactory {
-    static final int NUMBER_OF_FIGURES = 5;
+    private static final int NUMBER_OF_FIGURES = 5;
+
+    public static int getNumberOfFigures() {
+        return NUMBER_OF_FIGURES;
+    }
 
     public Figure getFigure(int type) {
         switch (type) {

@@ -26,11 +26,6 @@ public class Rectangle extends Figure {
         this.sideB = sideB;
     }
 
-    @Override
-    public Color getColor() {
-        return super.getColor();
-    }
-
     public void setColor(Color color) {
         super.setColor(color);
     }

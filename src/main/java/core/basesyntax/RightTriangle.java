@@ -32,11 +32,6 @@ public class RightTriangle extends Figure {
         return hypotenuse;
     }
 
-    @Override
-    public Color getColor() {
-        return super.getColor();
-    }
-
     public void setColor(Color color) {
         super.setColor(color);
     }

@@ -9,7 +9,7 @@ public class Main {
 
         for (int i = 0; i < figures.length; i++) {
             figures[i] = figuresFactory.getFigure(new Random()
-                    .nextInt(FiguresFactory.NUMBER_OF_FIGURES));
+                    .nextInt(FiguresFactory.getNumberOfFigures()));
         }
 
         for (Figure figure : figures) {

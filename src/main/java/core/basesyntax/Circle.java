@@ -16,11 +16,6 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
-    @Override
-    public Color getColor() {
-        return super.getColor();
-    }
-
     public void setColor(Color color) {
         super.setColor(color);
     }

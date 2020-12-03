@@ -36,10 +36,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.side = side;
     }
 
-    public Color getColor() {
-        return super.getColor();
-    }
-
     public void setColor(Color color) {
         super.setColor(color);
     }
