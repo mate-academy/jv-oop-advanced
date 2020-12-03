@@ -1,12 +1,10 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.FigureProducer;
-
 public class Triangle extends Shape implements Drawable {
     private double side;
 
-    public Triangle(int value) {
-        super(FigureProducer.generateColor());
+    public Triangle(int value, String color) {
+        super(color);
         this.side = value;
     }
 
@@ -18,11 +16,6 @@ public class Triangle extends Shape implements Drawable {
     @Override
     public double getPerimeter() {
         return side * 3;
-    }
-
-    @Override
-    public String getColor() {
-        return super.getColor();
     }
 
     @Override

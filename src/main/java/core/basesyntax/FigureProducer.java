@@ -23,30 +23,42 @@ public class FigureProducer {
         for (int i = 0; i < figures.length; i++) {
             switch (RandomNumber.getRandomNumber(NUMBER_OF_FIGURES)) {
                 case 1: {
-                    figures[i] = new Square(RandomNumber.getRandomNumber(20));
+                    figures[i] = new Square(
+                            RandomNumber.getRandomNumber(20),
+                            FigureProducer.generateColor());
                     break;
                 }
                 case 2: {
-                    figures[i] = new Triangle(RandomNumber.getRandomNumber(20));
+                    figures[i] = new Triangle(
+                            RandomNumber.getRandomNumber(20),
+                            FigureProducer.generateColor());
                     break;
                 }
                 case 3: {
-                    figures[i] = new Rectangle(RandomNumber.getRandomNumber(20),
-                            RandomNumber.getRandomNumber(20));
+                    figures[i] = new Rectangle(
+                            RandomNumber.getRandomNumber(20),
+                            RandomNumber.getRandomNumber(20),
+                            FigureProducer.generateColor());
                     break;
                 }
                 case 4: {
                     figures[i] = new RightTriangle(RandomNumber.getRandomNumber(20),
-                            RandomNumber.getRandomNumber(20));
+                            RandomNumber.getRandomNumber(20),
+                            FigureProducer.generateColor());
                     break;
                 }
                 case 5: {
-                    figures[i] = new Circle(RandomNumber.getRandomNumber(20));
+                    figures[i] = new Circle(
+                            RandomNumber.getRandomNumber(20),
+                            FigureProducer.generateColor());
                     break;
                 }
                 case 6: {
-                    figures[i] = new IsoscelesTrapezoid(RandomNumber.getRandomNumber(20),
-                            RandomNumber.getRandomNumber(20), RandomNumber.getRandomNumber(20));
+                    figures[i] = new IsoscelesTrapezoid(
+                            RandomNumber.getRandomNumber(20),
+                            RandomNumber.getRandomNumber(20),
+                            RandomNumber.getRandomNumber(20),
+                            FigureProducer.generateColor());
                     break;
                 }
                 default: break;

@@ -1,31 +1,24 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.FigureProducer;
-
-public class RightTriangle extends Shape implements Drawable {
+public class RightTriangle extends Shape {
     private double legA;
     private double legB;
 
-    public RightTriangle(int value1, int value2) {
-        super(FigureProducer.generateColor());
+    public RightTriangle(int value1, int value2, String color) {
+        super(color);
         this.legA = value1;
         this.legB = value2;
     }
 
     @Override
     public double getArea() {
-        double s = (legA + legB + getHypotenuse()) / 2; // Heron
+        double s = (legA + legB + getHypotenuse()) / 2;
         return Math.sqrt(s * (s - legA) * (s - legB) * (s - getHypotenuse()));
     }
 
     @Override
     public double getPerimeter() {
         return legA + legB + getHypotenuse();
-    }
-
-    @Override
-    public String getColor() {
-        return super.getColor();
     }
 
     @Override

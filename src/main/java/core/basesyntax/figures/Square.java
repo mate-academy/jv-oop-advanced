@@ -1,12 +1,10 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.FigureProducer;
-
-public class Square extends Shape implements Drawable {
+public class Square extends Shape {
     private double side;
 
-    public Square(int value) {
-        super(FigureProducer.generateColor());
+    public Square(int value, String color) {
+        super(color);
         this.side = value;
     }
 
@@ -18,11 +16,6 @@ public class Square extends Shape implements Drawable {
     @Override
     public double getPerimeter() {
         return side * 4;
-    }
-
-    @Override
-    public String getColor() {
-        return super.getColor();
     }
 
     @Override

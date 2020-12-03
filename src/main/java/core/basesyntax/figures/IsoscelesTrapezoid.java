@@ -1,14 +1,12 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.FigureProducer;
-
-public class IsoscelesTrapezoid extends Shape implements Drawable {
+public class IsoscelesTrapezoid extends Shape {
     private double leg;
     private double lowerBase;
     private double upperBase;
 
-    public IsoscelesTrapezoid(int value1, int value2, int value3) {
-        super(FigureProducer.generateColor());
+    public IsoscelesTrapezoid(int value1, int value2, int value3, String color) {
+        super(color);
         this.leg = value1;
         this.lowerBase = value2;
         this.upperBase = value3;
@@ -27,11 +25,6 @@ public class IsoscelesTrapezoid extends Shape implements Drawable {
     @Override
     public double getPerimeter() {
         return upperBase + lowerBase + leg * 2;
-    }
-
-    @Override
-    public String getColor() {
-        return super.getColor();
     }
 
     @Override

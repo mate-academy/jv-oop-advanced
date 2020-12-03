@@ -1,12 +1,10 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.FigureProducer;
-
-public class Circle extends Shape implements Drawable {
+public class Circle extends Shape {
     private int radius;
 
-    public Circle(int value) {
-        super(FigureProducer.generateColor());
+    public Circle(int value, String color) {
+        super(color);
         this.radius = value;
     }
 
@@ -18,11 +16,6 @@ public class Circle extends Shape implements Drawable {
     @Override
     public double getPerimeter() {
         return Math.PI * 2 * radius;
-    }
-
-    @Override
-    public String getColor() {
-        return super.getColor();
     }
 
     @Override

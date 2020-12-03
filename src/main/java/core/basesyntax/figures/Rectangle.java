@@ -1,13 +1,11 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.FigureProducer;
-
-public class Rectangle extends Shape implements Drawable {
+public class Rectangle extends Shape {
     private double sideA;
     private double sideB;
 
-    public Rectangle(int value1, int value2) {
-        super(FigureProducer.generateColor());
+    public Rectangle(int value1, int value2, String color) {
+        super(color);
         this.sideA = value1;
         this.sideB = value2;
     }
@@ -20,11 +18,6 @@ public class Rectangle extends Shape implements Drawable {
     @Override
     public double getPerimeter() {
         return sideA * 2 + sideB * 2;
-    }
-
-    @Override
-    public String getColor() {
-        return super.getColor();
     }
 
     @Override
