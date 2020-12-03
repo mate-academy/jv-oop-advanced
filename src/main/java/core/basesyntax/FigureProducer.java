@@ -28,7 +28,7 @@ public class FigureProducer {
         Rectangle rectangle = new Rectangle();
         rectangle.setSides(new Random().nextInt(100), new Random().nextInt(100));
         rectangle.setColor(colorProducer.get());
-        rectangle.setArea();
+        rectangle.calculateArea();
         return rectangle;
     }
 
@@ -36,7 +36,7 @@ public class FigureProducer {
         Square square = new Square();
         square.setSide(new Random().nextInt(100));
         square.setColor(colorProducer.get());
-        square.setArea();
+        square.calculateArea();
         return square;
     }
 
@@ -45,7 +45,7 @@ public class FigureProducer {
         isoscelesTrapezoid.setIsoscelesTrapezoid(new Random().nextInt(100),
                 new Random().nextInt(100), new Random().nextInt(100));
         isoscelesTrapezoid.setColor(colorProducer.get());
-        isoscelesTrapezoid.setArea();
+        isoscelesTrapezoid.calculateArea();
         return isoscelesTrapezoid;
     }
 
@@ -53,7 +53,7 @@ public class FigureProducer {
         Circle circle = new Circle();
         circle.setRadius(new Random().nextInt(100));
         circle.setColor(colorProducer.get());
-        circle.setArea();
+        circle.calculateArea();
         return circle;
     }
 
@@ -61,7 +61,7 @@ public class FigureProducer {
         RightTriangle rightTriangle = new RightTriangle();
         rightTriangle.setLegs(new Random().nextInt(100), new Random().nextInt(100));
         rightTriangle.setColor(colorProducer.get());
-        rightTriangle.setArea();
+        rightTriangle.calculateArea();
         return rightTriangle;
     }
 

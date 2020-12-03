@@ -16,7 +16,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public void setArea() {
+    public void calculateArea() {
         this.area = Math.PI * radius * radius;
     }
 

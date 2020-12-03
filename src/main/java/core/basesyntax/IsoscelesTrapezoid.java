@@ -18,7 +18,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public void setArea() {
+    public void calculateArea() {
         this.area = height * (upperBase + lowerBase) / 2;
     }
 

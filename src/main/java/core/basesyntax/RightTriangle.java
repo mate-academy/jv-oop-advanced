@@ -23,7 +23,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void setArea() {
+    public void calculateArea() {
         this.area = 0.5 * firstLeg * secondLeg;
     }
 
