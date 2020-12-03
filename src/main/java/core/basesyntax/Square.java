@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class Square extends Figure implements Area, ColorCreator {
+public class Square extends Figure implements ColorCreator {
     private int width;
 
     public Square(int width) {

@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class RightTriangle extends Figure implements Area, ColorCreator {
+public class RightTriangle extends Figure implements ColorCreator {
     private int width;
     private int height;
 

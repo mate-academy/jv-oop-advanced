@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class Circle extends Figure implements Area, ColorCreator {
+public class Circle extends Figure implements ColorCreator {
     private int radius;
 
     public Circle(int radius) {

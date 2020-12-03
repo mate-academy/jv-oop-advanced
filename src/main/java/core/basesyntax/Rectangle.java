@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class Rectangle extends Figure implements Area, ColorCreator {
+public class Rectangle extends Figure implements ColorCreator {
     private int length;
     private int height;
 

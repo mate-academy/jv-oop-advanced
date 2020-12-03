@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class IsoscelesTrapezoid extends Figure implements Area, ColorCreator {
+public class IsoscelesTrapezoid extends Figure implements ColorCreator {
     private int widthUp;
     private int widthDown;
     private int height;

@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public abstract class Figure implements Area {
     public abstract String onScreen();
 }
