@@ -3,12 +3,11 @@ package core.basesyntax;
 public class Rectangle extends Figure {
     private double sideA;
     private double sideB;
-    private Color color;
 
     public Rectangle(double sideA, double sideB, Color color) {
         this.sideA = sideA;
         this.sideB = sideB;
-        this.color = color;
+        super.setColor(color);
     }
 
     public double getSideA() {
@@ -29,11 +28,11 @@ public class Rectangle extends Figure {
 
     @Override
     public Color getColor() {
-        return color;
+        return super.getColor();
     }
 
     public void setColor(Color color) {
-        this.color = color;
+        super.setColor(color);
     }
 
     @Override

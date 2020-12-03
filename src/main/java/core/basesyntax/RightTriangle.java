@@ -4,13 +4,12 @@ public class RightTriangle extends Figure {
     private double cathetusA;
     private double cathetusB;
     private double hypotenuse;
-    private Color color;
 
     public RightTriangle(double cathetusA, double cathetusB, Color color) {
         this.cathetusA = cathetusA;
         this.cathetusB = cathetusB;
         this.hypotenuse = Math.sqrt(Math.pow(cathetusA, 2) + Math.pow(cathetusB, 2));
-        this.color = color;
+        super.setColor(color);
     }
 
     public double getCathetusA() {
@@ -35,11 +34,11 @@ public class RightTriangle extends Figure {
 
     @Override
     public Color getColor() {
-        return color;
+        return super.getColor();
     }
 
     public void setColor(Color color) {
-        this.color = color;
+        super.setColor(color);
     }
 
     @Override

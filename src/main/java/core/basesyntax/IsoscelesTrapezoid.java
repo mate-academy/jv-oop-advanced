@@ -4,13 +4,12 @@ public class IsoscelesTrapezoid extends Figure {
     private double botLength;
     private double topLength;
     private double side;
-    private Color color;
 
     public IsoscelesTrapezoid(double botLength, double topLength, double side, Color color) {
         this.botLength = botLength;
         this.topLength = topLength;
         this.side = side;
-        this.color = color;
+        super.setColor(color);
     }
 
     public double getBotLength() {
@@ -38,11 +37,11 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     public Color getColor() {
-        return color;
+        return super.getColor();
     }
 
     public void setColor(Color color) {
-        this.color = color;
+        super.setColor(color);
     }
 
     @Override
