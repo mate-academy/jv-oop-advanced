@@ -1,5 +1,7 @@
 package core.basesyntax;
 
+import java.awt.*;
+
 public abstract class Figure implements Calculations, Drawing {
     private Colors color;
     private double area;
@@ -16,8 +18,8 @@ public abstract class Figure implements Calculations, Drawing {
         this.area = area;
     }
 
-    public void generateColor() {
-        this.color = GenerateColor.get();
+    public void setColor(Colors color) {
+        this.color = color;
     }
 
     public abstract void calculateArea();

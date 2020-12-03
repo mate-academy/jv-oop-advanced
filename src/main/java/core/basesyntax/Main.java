@@ -8,7 +8,7 @@ public class Main {
         getAndPrintFigure(figures);
     }
 
-    public static void getAndPrintFigure(Figure[] figures) {
+    private static void getAndPrintFigure(Figure[] figures) {
         for (int i = 0; i < figures.length; i++) {
             figures[i] = new FigureGenerate().get();
             figures[i].draw();

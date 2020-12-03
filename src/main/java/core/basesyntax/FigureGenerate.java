@@ -55,7 +55,7 @@ public class FigureGenerate {
 
     private void doCalculationAndGenerateColor(Figure figure) {
         figure.doAllCalculations();
-        figure.generateColor();
+        figure.setColor(GenerateColor.get());
     }
 
 }
