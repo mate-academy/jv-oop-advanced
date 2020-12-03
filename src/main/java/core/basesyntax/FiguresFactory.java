@@ -5,11 +5,8 @@ import java.util.Random;
 public class FiguresFactory {
     private static final int NUMBER_OF_FIGURES = 5;
 
-    public static int getNumberOfFigures() {
-        return NUMBER_OF_FIGURES;
-    }
-
-    public Figure getFigure(int type) {
+    public Figure getFigure() {
+        int type = new Random().nextInt(NUMBER_OF_FIGURES);
         switch (type) {
             case 0:
                 return new Square(randomParameter(), new ColorProducer().get());

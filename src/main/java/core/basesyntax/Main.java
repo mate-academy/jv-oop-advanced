@@ -8,8 +8,7 @@ public class Main {
         Figure[] figures = new Figure[new Random().nextInt(50) + 1]; // 1 <= figures.length <= 50
 
         for (int i = 0; i < figures.length; i++) {
-            figures[i] = figuresFactory.getFigure(new Random()
-                    .nextInt(FiguresFactory.getNumberOfFigures()));
+            figures[i] = figuresFactory.getFigure();
         }
 
         for (Figure figure : figures) {
