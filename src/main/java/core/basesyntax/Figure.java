@@ -7,5 +7,4 @@ public abstract class Figure implements Area, Parameter {
         return color;
     }
 
-    //public abstract void printParameter();
 }

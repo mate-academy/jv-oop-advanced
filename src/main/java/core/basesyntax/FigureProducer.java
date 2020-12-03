@@ -3,8 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureProducer {
-    public static final int COUNT_OF_FIGURE_IMPLEMENTATIONS = 5;
-    ColorProducer color = new ColorProducer();
+    private static final int COUNT_OF_FIGURE_IMPLEMENTATIONS = 5;
+    private ColorProducer color = new ColorProducer();
 
     public Figure get() {
         int randomGeneratedIndex = new Random().nextInt(COUNT_OF_FIGURE_IMPLEMENTATIONS);
