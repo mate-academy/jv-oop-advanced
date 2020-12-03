@@ -8,9 +8,18 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
+    public int getRadius() {
+        return radius;
+    }
+
     @Override
     public double getArea() {
         return area;
+    }
+
+    @Override
+    void draw() {
+        System.out.println("Circle was drew");
     }
 
     @Override
@@ -21,6 +30,6 @@ public class Circle extends Figure {
     @Override
     public String displayInfo() {
         return "Figure:Circle" + "," + "Color:" + getColor() + ","
-                + "Area:" + getArea() + "," + "Radius:" + radius;
+                + "Area:" + getArea() + "," + "Radius:" + getRadius();
     }
 }

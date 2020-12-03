@@ -8,13 +8,18 @@ public class Square extends Figure {
         this.side = side;
     }
 
-    public void setSide(int side) {
-        this.side = side;
+    private int getSide() {
+        return side;
     }
 
     @Override
     public double getArea() {
         return area;
+    }
+
+    @Override
+    void draw() {
+        System.out.println("Square was drew");
     }
 
     @Override
@@ -25,7 +30,7 @@ public class Square extends Figure {
     @Override
     public String displayInfo() {
         return "Figure:Square" + "," + "Color:" + getColor() + ","
-                + "Area:" + getArea() + "," + "Side:" + side;
+                + "Area:" + getArea() + "," + "Side:" + getSide();
     }
 
 }

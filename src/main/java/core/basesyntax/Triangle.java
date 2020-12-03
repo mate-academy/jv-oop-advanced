@@ -10,9 +10,18 @@ public class Triangle extends Figure {
         this.height = height;
     }
 
+    private int getHeight() {
+        return height;
+    }
+
     @Override
     public double getArea() {
         return area;
+    }
+
+    @Override
+    void draw() {
+        System.out.println("Triangle was drew");
     }
 
     @Override
@@ -23,6 +32,6 @@ public class Triangle extends Figure {
     @Override
     public String displayInfo() {
         return "Figure:Triangle" + "," + "Color:" + getColor() + ","
-                + "Area:" + getArea() + "," + "Height:" + height;
+                + "Area:" + getArea() + "," + "Height:" + getHeight();
     }
 }
