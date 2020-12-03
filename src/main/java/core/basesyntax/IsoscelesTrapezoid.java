@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private final String NAME = "Isosceles Trapezoid";
+    public static final String NAME = "Isosceles Trapezoid";
     private int bottomSide;
     private int topSide;
     private int heigth;

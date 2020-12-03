@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private final String NAME = "Rectangle";
+    public static final String NAME = "Rectangle";
     private int length;
     private int width;
 
