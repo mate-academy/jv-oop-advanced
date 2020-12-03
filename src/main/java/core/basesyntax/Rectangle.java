@@ -4,8 +4,8 @@ public class Rectangle extends Figure {
     private double firstLine;
     private double secondLine;
 
-    public Rectangle(String name, double area, Color color, double firstLine, double secondLine) {
-        super(name, area, color);
+    public Rectangle(String name, Color color, double firstLine, double secondLine) {
+        super(name, firstLine * secondLine, color);
         this.firstLine = firstLine;
         this.secondLine = secondLine;
     }

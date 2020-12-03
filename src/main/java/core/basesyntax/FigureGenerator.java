@@ -20,7 +20,7 @@ public class FigureGenerator {
         double randomRadius = (new Random().nextInt(10));
         int numberOfColor = new Random().nextInt(Color.values().length);
         Color colorOfCircle = Color.values()[numberOfColor];
-        Circle circle = new Circle("Circle", (Math.PI * randomRadius),
+        Circle circle = new Circle("Circle",
                 colorOfCircle, randomRadius);
 
         return circle;
@@ -33,7 +33,6 @@ public class FigureGenerator {
         int numberOfColor = new Random().nextInt(Color.values().length);
         Color colorOfIsoscelesTrapezoid = Color.values()[numberOfColor];
         IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid("Isosceles Trapezoid",
-                ((randomFirstLine + randomSecondLine) / 2) * randomHeight,
                 colorOfIsoscelesTrapezoid, randomFirstLine, randomSecondLine, randomHeight);
 
         return isoscelesTrapezoid;
@@ -44,7 +43,7 @@ public class FigureGenerator {
         double randomSecondLine = (new Random().nextInt(10));
         int numberOfColor = new Random().nextInt(Color.values().length);
         Color colorOfRectangle = Color.values()[numberOfColor];
-        Rectangle rectangle = new Rectangle("Rectangle", randomFirstLine * randomSecondLine,
+        Rectangle rectangle = new Rectangle("Rectangle",
                 colorOfRectangle, randomFirstLine, randomSecondLine);
 
         return rectangle;
@@ -56,8 +55,7 @@ public class FigureGenerator {
         int numberOfColor = new Random().nextInt(Color.values().length);
         Color colorOfRightTriangle = Color.values()[numberOfColor];
         RightTriangle rightTriangle = new RightTriangle("Right Triangle",
-                (randomFirstLine * randomSecondLine) / 2, colorOfRightTriangle,
-                randomFirstLine, randomSecondLine);
+                colorOfRightTriangle, randomFirstLine, randomSecondLine);
 
         return rightTriangle;
     }
@@ -66,8 +64,7 @@ public class FigureGenerator {
         double randomFirstLine = (new Random().nextInt(10));
         int numberOfColor = new Random().nextInt(Color.values().length);
         Color colorOfSquare = Color.values()[numberOfColor];
-        Square square = new Square("Square", randomFirstLine * randomFirstLine,
-                colorOfSquare, randomFirstLine);
+        Square square = new Square("Square", colorOfSquare, randomFirstLine);
 
         return square;
     }

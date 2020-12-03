@@ -4,9 +4,9 @@ public class RightTriangle extends Figure {
     private double firstLine;
     private double secondLine;
 
-    public RightTriangle(String name, double area, Color color,
+    public RightTriangle(String name, Color color,
                          double firstLine, double secondLine) {
-        super(name, area, color);
+        super(name, (firstLine * secondLine) / 2, color);
         this.firstLine = firstLine;
         this.secondLine = secondLine;
     }
