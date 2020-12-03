@@ -16,8 +16,4 @@ public abstract class Figure implements IFigure {
     public double getArea() {
         return area;
     }
-
-    public abstract void calculateArea();
-
-    public abstract void getInfo();
 }
