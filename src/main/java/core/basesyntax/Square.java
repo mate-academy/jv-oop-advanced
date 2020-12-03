@@ -9,6 +9,8 @@ public class Square extends Figure {
         this.side = side;
         this.color = color;
 
+        area = side * side;
+
         super.setColor(color);
 
     }
@@ -19,7 +21,6 @@ public class Square extends Figure {
 
     @Override
     public double getArea(double area) {
-        area = side * side;
         return area;
     }
 

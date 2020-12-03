@@ -12,13 +12,14 @@ public class IsoscelesTrapezoid extends Figure {
         this.sideSmaller = sideSmaller;
         this.height = height;
 
+        area = ((sideBigger + sideSmaller) / 2) * height;
+
         super.setColor(color);
 
     }
 
     @Override
     public double getArea(double v) {
-        area = ((sideBigger + sideSmaller) / 2) * height;
         return area;
     }
 

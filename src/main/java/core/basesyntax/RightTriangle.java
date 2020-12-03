@@ -12,13 +12,14 @@ public class RightTriangle extends Figure {
         this.cathetusB = catathetusB;
         this.hypotenuse = hypotenuse;
 
+        area = cathetusA * cathetusB / 2;
+
         super.setColor(color);
 
     }
 
     @Override
     public double getArea(double area) {
-        area = cathetusA * cathetusB / 2;
         return area;
     }
 

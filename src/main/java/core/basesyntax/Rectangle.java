@@ -9,13 +9,14 @@ public class Rectangle extends Figure {
         this.sideA = sideA;
         this.sideB = sideB;
 
+        area = sideA * sideB;
+
         super.setColor(color);
 
     }
 
     @Override
     public double getArea(double area) {
-        area = sideA * sideB;
         return area;
     }
 
