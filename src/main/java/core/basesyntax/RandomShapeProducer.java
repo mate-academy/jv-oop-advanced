@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class RandomShapeProducer {
-    static final int NUMBER_OF_SHAPES = 5;
+    private static final int NUMBER_OF_SHAPES = 5;
 
     public Shape getRandomShape() {
         int randomGeneratedIndex = new Random().nextInt(NUMBER_OF_SHAPES);
