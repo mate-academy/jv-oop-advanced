@@ -1,34 +1,29 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Rectangle extends Figure {
-    private int length = 0;
-    private int width = 0;
+    private String name = "rectangle";
+    private double width;
+    private double length;
 
-    private void setData() {
-        while (width < 5) {
-            this.width = new Random().nextInt(100);
-        }
-        while (length < width) {
-            this.width = new Random().nextInt(100);
-        }
+    public Rectangle(double width, double length, Color color) {
+        this.width = width;
+        this.length = length;
+        this.color = color;
     }
 
-    @Override
-    public String getName() {
-        return "rectangle";
+    public double getDiagonal() {
+        return Math.sqrt(Math.pow(length, 2) + Math.pow(width, 2));
     }
 
     @Override
     public double getArea() {
-        setData();
         return length * width;
     }
 
     @Override
-    public void printUniqueParameters() {
-        System.out.print("diagonal: "
-                + (double) Math.sqrt(Math.pow(length, 2) * Math.pow(width, 2)) + " units,");
+    public void draw() {
+        System.out.println("Shape: " + name + ", area: " + String.format("%.1f", getArea())
+                + " sq. units, diagonal: " + String.format("%.1f", getDiagonal())
+                + " units, color: " + color);
     }
 }

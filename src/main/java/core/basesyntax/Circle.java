@@ -1,29 +1,27 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Circle extends Figure {
-    private int radius = 0;
+    private String name = "circle";
+    private double radius;
 
-    public void setData() {
-        while (radius < 3) {
-            this.radius = new Random().nextInt(300);
-        }
+    public Circle(double radius, Color color) {
+        this.radius = radius;
+        this.color = color;
     }
 
-    @Override
-    public String getName() {
-        return "circle";
+    public double getDiameter() {
+        return radius * 2;
     }
 
     @Override
     public double getArea() {
-        setData();
         return radius * radius * Math.PI;
     }
 
     @Override
-    public void printUniqueParameters() {
-        System.out.print("diameter: " + radius * 2 + " units,");
+    public void draw() {
+        System.out.println("Shape: " + name + ", area: " + String.format("%.1f", getArea())
+                + " sq. units, diameter: " + String.format("%.1f", getDiameter())
+                + " units, color: " + color);
     }
 }

@@ -1,41 +1,38 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class IsoscelesTrapezoid extends Figure {
-    private int sides = 0;
-    private int bottomBase = 0;
-    private int topBase = 0;
+    private String name = "isoscelesTrapezoid";
+    private double bottomBase;
+    private double topBase;
+    private double side;
     private double height;
 
-    private void setData() {
-        while (topBase < 5) {
-            this.topBase = new Random().nextInt(50);
-        }
-        while (bottomBase < topBase) {
-            this.bottomBase = new Random().nextInt(100);
-        }
-        while (sides <= 0 && sides < (bottomBase - topBase) / 2) {
-            this.sides = new Random().nextInt(5000);
-        }
-        this.height = (double) Math.sqrt(Math.pow(sides, 2)
-                - (Math.pow(bottomBase - topBase, 2) / 4));
+    public IsoscelesTrapezoid(double bottomBase, double topBase, double height, Color color) {
+        this.bottomBase = bottomBase;
+        this.topBase = topBase;
+        this.height = height;
+        this.color = color;
     }
 
-    @Override
-    public String getName() {
-        return "isoscelesTrapezoid";
+    private void setData() {
+        this.side = (double) Math.sqrt(Math.pow(height, 2)
+                + (Math.pow(bottomBase - topBase, 2) / 4));
+    }
+
+    public double getPerimeter() {
+        setData();
+        return side * 2 + topBase + bottomBase;
     }
 
     @Override
     public double getArea() {
-        setData();
-        return (double) (topBase + bottomBase) / 2 * height;
+        return (topBase + bottomBase) / 2 * height;
     }
 
     @Override
-    public void printUniqueParameters() {
-        System.out.print("perimeter: " + sides * 2 + topBase + bottomBase + " units,");
+    public void draw() {
+        System.out.println("Shape: " + name + ", area: " + String.format("%.1f", getArea())
+                + " sq. units, perimeter: " + String.format("%.1f", getPerimeter())
+                + " units, color: " + color);
     }
-
 }

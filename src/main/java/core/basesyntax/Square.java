@@ -1,29 +1,27 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Square extends Figure {
-    private int sizeSide = 0;
+    private String name = "square";
+    private double side;
 
-    private void setSideLength() {
-        while (sizeSide < 5) {
-            this.sizeSide = new Random().nextInt(50);
-        }
+    public Square(double side, Color color) {
+        this.side = side;
+        this.color = color;
     }
 
-    @Override
-    public String getName() {
-        return "square";
+    public double getSide() {
+        return side;
     }
 
     @Override
     public double getArea() {
-        setSideLength();
-        return sizeSide * sizeSide;
+        return side * side;
     }
 
     @Override
-    public void printUniqueParameters() {
-        System.out.print("side length: " + sizeSide + " units,");
+    public void draw() {
+        System.out.println("Shape: " + name + ", area: " + String.format("%.1f", getArea())
+                + " sq. units, side: " + String.format("%.1f", getSide())
+                + " units, color: " + color);
     }
 }
