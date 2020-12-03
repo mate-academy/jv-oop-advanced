@@ -1,4 +1,4 @@
-d# jv-oop-advanced
+# jv-oop-advanced
 
 __Solve the task using OOP principles__
 

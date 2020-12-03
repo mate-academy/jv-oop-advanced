@@ -3,8 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureProducer {
+    private static final int QUANTITYDIFFERENTFIGURES = 4;
+    
     protected Figure getRandomFigure() {
-        int randomGeneratedIndex = new Random().nextInt(4);
+        int randomGeneratedIndex = new Random().nextInt(QUANTITYDIFFERENTFIGURES);
         switch (randomGeneratedIndex) {
             case 0:
                 return getCircle();
