@@ -8,7 +8,7 @@ public class FigureProducer {
     private ColorProducer colorProducer = new ColorProducer();
 
     public Figure get() {
-        int randomGeneratedIndex = new Random().nextInt(COUNT_OF_FIGURE_IMPLEMENTATIONS);
+        int randomGeneratedIndex = new Random().nextInt(COUNT_OF_FIGURE);
         switch (randomGeneratedIndex) {
             case 0:
                 return getRectangle();
