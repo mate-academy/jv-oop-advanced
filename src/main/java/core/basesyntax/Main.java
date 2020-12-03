@@ -8,7 +8,7 @@ public class Main {
         Figure[] figure = new Figure[new Random().nextInt(10)];
         FigureProducer figureProducer = new FigureProducer();
         for (int i = 0; i < figure.length; i++) {
-            figure[i] = FigureProducer.getFigure();
+            figure[i] = figureProducer.getFigure();
             figure[i].drawFigure();
         }
     }

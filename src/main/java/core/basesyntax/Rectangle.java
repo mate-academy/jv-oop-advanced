@@ -10,10 +10,18 @@ public class Rectangle extends Figure {
         this.sideB = sideB;
     }
 
+    public int getSideA(){
+        return sideA;
+    }
+
+    public int getSideB(){
+        return sideB;
+    }
+
     @Override
     public void drawFigure() {
         System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, "
-                + "sideA length: " + sideA + " units, " + "sideB length: " + sideB
+                + "sideA length: " + getSideA() + " units, " + "sideB length: " + getSideB()
                 + " color = " + getColor());
     }
 }

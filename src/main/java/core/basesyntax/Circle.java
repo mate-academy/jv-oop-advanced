@@ -8,10 +8,14 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
+    public int getRadius(){
+        return radius;
+    }
+
     @Override
     public void drawFigure() {
         System.out.println("Figure: circle, area: " + getArea() + " sq. units, "
-                + "radius length: " + radius + " units, "
+                + "radius length: " + getRadius() + " units, "
                 + "color = " + getColor());
     }
 }

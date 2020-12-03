@@ -12,12 +12,24 @@ public class IsoscelesTrapezoid extends Figure {
         this.height = height;
     }
 
+    public int getSideA(){
+        return sideA;
+    }
+
+    public int getSideB(){
+        return sideB;
+    }
+
+    public int getHeight(){
+        return height;
+    }
+
     @Override
     public void drawFigure() {
         System.out.println("Figure: isosceles trapezoid, area: " + getArea() + " sq. units, "
-                + "height length: " + height + " units, "
-                + "sideA length: " + sideA + " units, "
-                + "sideB length: " + sideB + " units, "
+                + "height length: " + getHeight() + " units, "
+                + "sideA length: " + getSideA() + " units, "
+                + "sideB length: " + getSideB() + " units, "
                 + "color = " + getColor());
     }
 }
