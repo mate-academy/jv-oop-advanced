@@ -3,11 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureProducer {
-    public final int figure = 5;
+    public final int NUMBER_OF_FIGURES = 5;
 
     public Figure getFigure() {
-        int randomNumberFigure = new Random().nextInt(figure);
-        // I don't know, maybe I must write a method for random size selection
+        int randomNumberFigure = new Random().nextInt(NUMBER_OF_FIGURES);
         switch (randomNumberFigure) {
             case 0:
                 return new IsoscelesTrapezoid(ColorProducer.getColor(), new Random().nextInt(50),
