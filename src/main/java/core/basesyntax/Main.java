@@ -10,7 +10,7 @@ public class Main {
 
         for (Figure figure: figures) {
             figure = figureProducer.get();
-            System.out.println(figure.displayInfo());
+            System.out.println(figure.draw());
         }
     }
 }

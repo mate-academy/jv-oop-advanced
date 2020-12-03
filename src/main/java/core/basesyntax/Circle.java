@@ -18,17 +18,12 @@ public class Circle extends Figure {
     }
 
     @Override
-    void draw() {
-        System.out.println("Circle was drew");
-    }
-
-    @Override
     public Color getColor() {
         return ColorProducer.getColor();
     }
 
     @Override
-    public String displayInfo() {
+    public String draw() {
         return "Figure:Circle" + "," + "Color:" + getColor() + ","
                 + "Area:" + getArea() + "," + "Radius:" + getRadius();
     }

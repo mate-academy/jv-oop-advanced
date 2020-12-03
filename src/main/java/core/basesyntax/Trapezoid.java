@@ -22,17 +22,12 @@ public class Trapezoid extends Figure {
     }
 
     @Override
-    void draw() {
-        System.out.println("Trapezoid was drew");
-    }
-
-    @Override
     public Color getColor() {
         return ColorProducer.getColor();
     }
 
     @Override
-    public String displayInfo() {
+    public String draw() {
         return String.format("Figure:Trapezoid,Color:%s,Area:%s,Height:%d", getColor(),
                 getArea(), getHeight());
     }

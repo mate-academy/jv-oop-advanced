@@ -25,7 +25,7 @@ public class FigureProducer {
     }
 
     public int getRandom() {
-        return new Random().nextInt(15 + 1);
+        return new Random().nextInt(15) + 1;
     }
 
 }

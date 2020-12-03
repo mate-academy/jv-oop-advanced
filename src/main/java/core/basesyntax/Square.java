@@ -18,17 +18,12 @@ public class Square extends Figure {
     }
 
     @Override
-    void draw() {
-        System.out.println("Square was drew");
-    }
-
-    @Override
     public Color getColor() {
         return ColorProducer.getColor();
     }
 
     @Override
-    public String displayInfo() {
+    public String draw() {
         return "Figure:Square" + "," + "Color:" + getColor() + ","
                 + "Area:" + getArea() + "," + "Side:" + getSide();
     }

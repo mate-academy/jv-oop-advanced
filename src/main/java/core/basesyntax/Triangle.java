@@ -20,17 +20,12 @@ public class Triangle extends Figure {
     }
 
     @Override
-    void draw() {
-        System.out.println("Triangle was drew");
-    }
-
-    @Override
     public Color getColor() {
         return color;
     }
 
     @Override
-    public String displayInfo() {
+    public String draw() {
         return "Figure:Triangle" + "," + "Color:" + getColor() + ","
                 + "Area:" + getArea() + "," + "Height:" + getHeight();
     }

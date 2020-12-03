@@ -17,5 +17,4 @@ public abstract class Figure implements GeometricObjectInfo {
         return area;
     }
 
-    abstract void draw();
 }
