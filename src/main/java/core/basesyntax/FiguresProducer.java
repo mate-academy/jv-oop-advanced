@@ -3,9 +3,9 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FiguresProducer {
-    static final int NUMBER_OF_FIGURES = 4;
-    static final int POSSIBLE_ARGUMENT = 20;
-    static final int POSSIBLE_FIGURES = 20;
+    private static final int NUMBER_OF_FIGURES = 4;
+    private static final int POSSIBLE_ARGUMENT = 20;
+    private static final int POSSIBLE_FIGURES = 20;
 
     public int getRandomNumber() {
         return new Random().nextInt(POSSIBLE_ARGUMENT);
