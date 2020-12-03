@@ -1,6 +1,7 @@
 package core.basesyntax.shape;
 
 import core.basesyntax.Figure;
+import core.basesyntax.producers.ColorProducer;
 
 public class IsoscelesTrapezoid extends Figure {
     private int sideA;
@@ -8,6 +9,7 @@ public class IsoscelesTrapezoid extends Figure {
     private int height;
 
     public IsoscelesTrapezoid(int sideA, int sideB, int height) {
+        super(ColorProducer.getColor());
         this.sideA = sideA;
         this.sideB = sideB;
         this.height = height;

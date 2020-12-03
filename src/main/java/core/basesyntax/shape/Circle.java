@@ -1,11 +1,13 @@
 package core.basesyntax.shape;
 
 import core.basesyntax.Figure;
+import core.basesyntax.producers.ColorProducer;
 
 public class Circle extends Figure {
     private int radius;
 
     public Circle(int radius) {
+        super(ColorProducer.getColor());
         this.radius = radius;
     }
 

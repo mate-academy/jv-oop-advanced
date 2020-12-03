@@ -1,12 +1,14 @@
 package core.basesyntax.shape;
 
 import core.basesyntax.Figure;
+import core.basesyntax.producers.ColorProducer;
 
 public class RightTriangle extends Figure {
     private int legA;
     private int legB;
 
     public RightTriangle(int legA, int legB) {
+        super(ColorProducer.getColor());
         this.legA = legA;
         this.legB = legB;
     }
