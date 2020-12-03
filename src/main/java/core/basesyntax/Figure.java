@@ -1,8 +1,8 @@
 package core.basesyntax;
 
 public abstract class Figure implements GeometricObjectInfo {
-    Color color;
-    double area;
+    protected Color color;
+    protected double area;
 
     protected Figure(double area,Color color) {
         this.color = color;
