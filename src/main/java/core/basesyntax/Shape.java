@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Shape implements Figure {
+public abstract class Shape implements Drawable, AreaFinder {
     private double area;
     private String color;
 
@@ -14,9 +14,5 @@ public abstract class Shape implements Figure {
 
     public void setColor(String color) {
         this.color = color;
-    }
-
-    public double getArea() {
-        return area;
     }
 }

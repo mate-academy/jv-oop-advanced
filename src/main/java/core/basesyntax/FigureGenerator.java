@@ -5,7 +5,7 @@ import java.util.Random;
 public class FigureGenerator {
     private static final int NumberOfFigures = 5;
 
-    public static Figure createFigure() {
+    public static Drawable createFigure() {
         switch (new Random().nextInt(NumberOfFigures)) {
             case 1:
                 return new Circle(getRandomNumber(), getRandomColor());
