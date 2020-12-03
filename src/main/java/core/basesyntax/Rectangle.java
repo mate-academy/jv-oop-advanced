@@ -1,16 +1,13 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Rectangle extends Figure {
     private int side1;
     private int side2;
 
-    public Rectangle() {
-        this.side1 = new Random().nextInt(10);
-        this.side2 = new Random().nextInt(10);
+    public Rectangle(int side1, int side2) {
+        setSide1(side1);
+        setSide2(side2);
         setColor();
-        toString();
     }
 
     public double getSide1() {
@@ -39,8 +36,8 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String toString() {
-        return super.toString() + " rectangle,"
+    public String draw() {
+        return super.draw() + " rectangle,"
                 + " area: " + getArea()
                 + " color: " + getColor()
                 + " side1: " + getSide1()

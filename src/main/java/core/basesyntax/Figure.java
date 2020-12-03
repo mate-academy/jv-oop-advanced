@@ -2,13 +2,10 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public abstract class Figure implements Figuring {
+public abstract class Figure implements Figuring,Drawable {
     private Color color;
     private double area;
 
-    public abstract double getArea();
-
-    @Override
     public Color getColor() {
         return color;
     }
@@ -19,7 +16,7 @@ public abstract class Figure implements Figuring {
     }
 
     @Override
-    public String toString() {
+    public String draw() {
         return "Figure: ";
     }
 }

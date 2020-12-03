@@ -1,23 +1,20 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class RightTriangle extends Figure {
     private int side1;
     private int side2;
 
-    public RightTriangle() {
-        this.side1 = new Random().nextInt(10);
-        this.side2 = new Random().nextInt(10);
+    public RightTriangle(int side1, int side2) {
+        setSide1(side1);
+        setSide2(side2);
         setColor();
-        toString();
     }
 
     public int getSide1() {
         return side1;
     }
 
-    public void setSide(int side1) {
+    public void setSide1(int side1) {
         this.side1 = side1;
     }
 
@@ -26,7 +23,7 @@ public class RightTriangle extends Figure {
     }
 
     public void setSide2(int side2) {
-        this.side1 = side2;
+        this.side2 = side2;
     }
 
     @Override
@@ -39,8 +36,8 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String toString() {
-        return super.toString() + " rightTriangle, "
+    public String draw() {
+        return super.draw() + " rightTriangle, "
                 + " area: " + getArea()
                 + " color: " + getColor()
                 + " side1: " + getSide1()

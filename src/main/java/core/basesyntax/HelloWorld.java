@@ -5,7 +5,7 @@ package core.basesyntax;
  */
 public class HelloWorld {
     public static void main(String [] args) {
-        FiguresProducer fp = new FiguresProducer();
-        fp.getRandomFigure();
+        FiguresProducer figuresProducer = new FiguresProducer();
+        figuresProducer.getRandomFigure();
     }
 }

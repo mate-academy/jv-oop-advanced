@@ -1,18 +1,19 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Circle extends Figure {
     private int radius;
 
-    public Circle() {
-        this.radius = new Random().nextInt(10);
+    public Circle(int radius) {
+        setRadius(radius);
         setColor();
-        toString();
     }
 
-    public double getRadius() {
-        return radius;
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+
+    public int getRadius() {
+        return this.radius;
     }
 
     @Override
@@ -25,9 +26,9 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String toString() {
+    public String draw() {
 
-        return super.toString() + " circle, "
+        return super.draw() + " circle, "
                 + " area: " + getArea()
                 + " color: " + getColor()
                 + " radius: " + getRadius()
