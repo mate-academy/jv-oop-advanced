@@ -10,11 +10,11 @@ public class Rectangle extends Figure {
         this.sideB = sideB;
     }
 
-    public int getSideA(){
+    public int getSideA() {
         return sideA;
     }
 
-    public int getSideB(){
+    public int getSideB() {
         return sideB;
     }
 

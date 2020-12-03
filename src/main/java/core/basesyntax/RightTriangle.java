@@ -10,11 +10,11 @@ public class RightTriangle extends Figure {
         this.side = side;
     }
 
-    public int getSide(){
+    public int getSide() {
         return this.side;
     }
 
-    public int getHeight(){
+    public int getHeight() {
         return height;
     }
 

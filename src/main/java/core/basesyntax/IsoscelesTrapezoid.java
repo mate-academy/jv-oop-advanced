@@ -12,15 +12,15 @@ public class IsoscelesTrapezoid extends Figure {
         this.height = height;
     }
 
-    public int getSideA(){
+    public int getSideA() {
         return sideA;
     }
 
-    public int getSideB(){
+    public int getSideB() {
         return sideB;
     }
 
-    public int getHeight(){
+    public int getHeight() {
         return height;
     }
 
