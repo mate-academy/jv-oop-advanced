@@ -4,7 +4,8 @@ public class Square extends Figure {
     private double side;
     private String name;
 
-    public Square(int side, double area, String name) {
+    public Square(Color color, int side, double area, String name) {
+        super(color);
         this.side = side;
         this.name = name;
     }
@@ -21,14 +22,10 @@ public class Square extends Figure {
         return name;
     }
 
-    private String getColor() {
-        return ColorProducer.get().toString().toLowerCase();
-    }
-
     public String draw() {
         String returnLine = "Shape: " + getName() + ", area: " + getArea()
-                + " sq. units, side: " + getSide()
-                + " units, color: " + getColor();
+                + " sq. units, side: " + getSide() + " units, color: "
+                + getColor().toString().toLowerCase();
         return returnLine;
     }
 }

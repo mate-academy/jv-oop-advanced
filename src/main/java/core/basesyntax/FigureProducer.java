@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureProducer {
-    static final int AMOUNT_FIGURES = 5;
+    private static final int AMOUNT_FIGURES = 5;
 
     public Figure get() {
         int randomIndex = new Random().nextInt(AMOUNT_FIGURES);
@@ -23,32 +23,34 @@ public class FigureProducer {
     }
 
     private Circle newCircle() {
-        Circle circle = new Circle(RandomLongProducer.get(), "circle");
+        Circle circle = new Circle(ColorProducer.get(),
+                RandomLongProducer.get(), "circle");
         return circle;
     }
 
     private IsoscelesTrapezoid newIsoscelesTrapezoid() {
-        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(RandomLongProducer.get(),
+        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(ColorProducer.get(),
                 RandomLongProducer.get(), RandomLongProducer.get(),
-                "isosceles trapezoid");
+                RandomLongProducer.get(), "isosceles trapezoid");
         return isoscelesTrapezoid;
     }
 
     private Rectangle newRectangle() {
-        Rectangle rectangle = new Rectangle(RandomLongProducer.get(),
+        Rectangle rectangle = new Rectangle(ColorProducer.get(), RandomLongProducer.get(),
                 RandomLongProducer.get(), "rectangle");
         return rectangle;
     }
 
     private RightTriangle newRightTriangle() {
-        RightTriangle rightTriangle = new RightTriangle(RandomLongProducer.get(),
-                RandomLongProducer.get(), "right triangle");
+        RightTriangle rightTriangle = new RightTriangle(ColorProducer.get(),
+                RandomLongProducer.get(), RandomLongProducer.get(),
+                "right triangle");
         return rightTriangle;
     }
 
     private Square newSquare() {
-        Square square = new Square(RandomLongProducer.get(), RandomLongProducer.get(),
-                "square");
+        Square square = new Square(ColorProducer.get(), RandomLongProducer.get(),
+                RandomLongProducer.get(), "square");
         return square;
     }
 }
