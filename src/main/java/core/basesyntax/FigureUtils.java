@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import core.basesyntax.figure.Figure;
 
-public class FigurePrinter {
+public class FigureUtils {
 
     public void print(Figure figure) {
         System.out.println("Figure: " + figure.toString());
