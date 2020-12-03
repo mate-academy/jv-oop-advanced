@@ -19,18 +19,15 @@ public class Circle extends Figure {
     }
 
     @Override
-    public void doAllCalculations() {
-        calculateArea();
-    }
-
-    @Override
-    public void calculateArea() {
-        setArea(Math.PI * radius * radius);
+    public double calculateArea() {
+        double area = Math.PI * radius * radius;
+        setArea(area);
+        return area;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: Circle, area: " + Math.round(getArea())
+        System.out.println("Figure: Circle, area: " + calculateArea()
                 + " sq. units, radius: " + radius
                 + " units, color: " + getColor());
     }

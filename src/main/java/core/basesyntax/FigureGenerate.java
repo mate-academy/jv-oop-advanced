@@ -23,39 +23,35 @@ public class FigureGenerate {
 
     private Figure getSquare() {
         Figure square = new Square(new Random().nextInt(10));
-        doCalculationAndGenerateColor(square);
+        square.setColor(GenerateColor.get());
         return square;
     }
 
     private Figure getCircle() {
         Figure circle = new Circle(new Random().nextInt(5));
-        doCalculationAndGenerateColor(circle);
+        circle.setColor(GenerateColor.get());
+        ;
         return circle;
     }
 
     private Figure getRectangle() {
         Figure rectangle = new Rectangle(new Random().nextInt(10), new Random().nextInt(15));
-        doCalculationAndGenerateColor(rectangle);
+        rectangle.setColor(GenerateColor.get());
         return rectangle;
     }
 
     private Figure getRightTriangle() {
         Figure rightTriangle = new RightTriangle(new Random().nextInt(10),
                 new Random().nextInt(10));
-        doCalculationAndGenerateColor(rightTriangle);
+        rightTriangle.setColor(GenerateColor.get());
         return rightTriangle;
     }
 
     private Figure getIsoscelesTrapezoid() {
         Figure isoscelesTrapezoid = new IsoscelesTrapezoid(new Random().nextInt(5),
                 new Random().nextInt(15));
-        doCalculationAndGenerateColor(isoscelesTrapezoid);
+        isoscelesTrapezoid.setColor(GenerateColor.get());
         return isoscelesTrapezoid;
-    }
-
-    private void doCalculationAndGenerateColor(Figure figure) {
-        figure.doAllCalculations();
-        figure.setColor(GenerateColor.get());
     }
 
 }

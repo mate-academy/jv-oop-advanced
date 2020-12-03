@@ -33,25 +33,21 @@ public class IsoscelesTrapezoid extends Figure {
         return height;
     }
 
-    public void calculateHeight() {
-        height = 2 * getArea() / (upperSide + lowerSide);
+    public double calculateHeight() {
+        return 2 * getArea() / (upperSide + lowerSide);
     }
 
     @Override
-    public void doAllCalculations() {
-        calculateArea();
-        calculateHeight();
-    }
-
-    @Override
-    public void calculateArea() {
-        setArea(Math.sqrt(upperSide + lowerSide) + (upperSide + lowerSide) / 2);
+    public double calculateArea() {
+        double area = Math.sqrt(upperSide + lowerSide) + (upperSide + lowerSide) / 2;
+        setArea(area);
+        return area;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: Isosceles trapezoid, area: " + Math.round(getArea())
-                + " sq. units, height: " + Math.round(height)
+        System.out.println("Figure: Isosceles trapezoid, area: " + calculateArea()
+                + " sq. units, height: " + calculateHeight()
                 + " units, color: " + getColor());
     }
 }

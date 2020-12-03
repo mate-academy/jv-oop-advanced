@@ -2,7 +2,6 @@ package core.basesyntax;
 
 public class Square extends Figure {
     private int side;
-    private int perimeter;
 
     public Square() {
     }
@@ -19,29 +18,21 @@ public class Square extends Figure {
         this.side = side;
     }
 
-    public int getPerimeter() {
-        return perimeter;
-    }
-
-    public void calculatePerimeter() {
-        this.perimeter = side * 4;
+    public int calculatePerimeter() {
+        return side * 4;
     }
 
     @Override
-    public void doAllCalculations() {
-        calculatePerimeter();
-        calculateArea();
-    }
-
-    @Override
-    public void calculateArea() {
-        setArea(side * side);
+    public double calculateArea() {
+        double area = side * side;
+        setArea(area);
+        return area;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: Square, area: " + getArea()
-                + " sq. units, perimeter: " + perimeter
+        System.out.println("Figure: Square, area: " + calculateArea()
+                + " sq. units, perimeter: " + calculatePerimeter()
                 + " units, color: " + getColor());
     }
 }

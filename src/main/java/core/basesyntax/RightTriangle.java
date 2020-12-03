@@ -3,7 +3,6 @@ package core.basesyntax;
 public class RightTriangle extends Figure {
     private int firstKatet;
     private int secondKatet;
-    private double hypotenuse;
 
     public RightTriangle() {
     }
@@ -29,29 +28,21 @@ public class RightTriangle extends Figure {
         this.secondKatet = secondKatet;
     }
 
-    public double getHypotenuse() {
-        return hypotenuse;
-    }
-
-    public void calculateHypotenuse() {
-        hypotenuse = Math.sqrt(firstKatet * firstKatet + secondKatet * secondKatet);
+    public double calculateHypotenuse() {
+        return Math.sqrt(firstKatet * firstKatet + secondKatet * secondKatet);
     }
 
     @Override
-    public void calculateArea() {
-        setArea((firstKatet * secondKatet) / 2);
-    }
-
-    @Override
-    public void doAllCalculations() {
-        calculateHypotenuse();
-        calculateArea();
+    public double calculateArea() {
+        double area = (firstKatet * secondKatet) / 2;
+        setArea(area);
+        return area;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: Right triangle, area: " + getArea()
-                + " sq. units, hypotenuse: " + hypotenuse
+        System.out.println("Figure: Right triangle, area: " + calculateArea()
+                + " sq. units, hypotenuse: " + calculateHypotenuse()
                 + " units, color: " + getColor());
     }
 }

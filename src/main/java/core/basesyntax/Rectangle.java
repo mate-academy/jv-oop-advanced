@@ -33,24 +33,21 @@ public class Rectangle extends Figure {
         return diagonal;
     }
 
-    public void calculateDiagonal() {
-        diagonal = Math.sqrt(height * height + width * width);
+    public double calculateDiagonal() {
+        return Math.sqrt(height * height + width * width);
     }
 
     @Override
-    public void doAllCalculations() {
-
-    }
-
-    @Override
-    public void calculateArea() {
-        setArea(width * height);
+    public double calculateArea() {
+        double area = width * height;
+        setArea(area);
+        return area;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: Rectangle, area: " + getArea()
-                + " sq. units, diagonal: " + diagonal
+        System.out.println("Figure: Rectangle, area: " + calculateArea()
+                + " sq. units, diagonal: " + calculateDiagonal()
                 + " units, color: " + getColor());
     }
 
