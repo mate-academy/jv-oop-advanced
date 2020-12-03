@@ -23,7 +23,7 @@ public class Trapezoid extends Figure {
 
     @Override
     public Color getColor() {
-        return ColorProducer.getColor();
+        return color;
     }
 
     @Override

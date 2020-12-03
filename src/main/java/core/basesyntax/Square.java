@@ -19,7 +19,7 @@ public class Square extends Figure {
 
     @Override
     public Color getColor() {
-        return ColorProducer.getColor();
+        return color;
     }
 
     @Override
