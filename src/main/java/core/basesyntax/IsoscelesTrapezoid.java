@@ -5,47 +5,30 @@ public class IsoscelesTrapezoid extends Figure {
     private double sideBigger;
     private double sideSmaller;
     private double height;
-    private Color color;
 
     public IsoscelesTrapezoid(double sideBigger, double sideSmaller,
-                              double height, Color randomColorIndex) {
+                              double height, Color color) {
         this.sideBigger = sideBigger;
         this.sideSmaller = sideSmaller;
         this.height = height;
-        this.color = randomColorIndex;
 
-        draw();
-    }
-
-    @Override
-    public Enum getColor() {
-        setColor(color);
-        return super.getColor();
-    }
-
-    @Override
-    public void setColor(Enum color) {
         super.setColor(color);
+
     }
 
     @Override
-    public void setArea(double area) {
-        super.setArea(area);
-    }
-
-    @Override
-    public double getArea() {
-        setArea(((sideBigger + sideSmaller) / 2) * height);
-        return super.getArea();
+    public double getArea(double v) {
+        area = ((sideBigger + sideSmaller) / 2) * height;
+        return area;
     }
 
     @Override
     public void draw() {
-        System.out.println("Isosceles Trapezoid , area : " + getArea() + " sq.units ,"
+        System.out.println("Isosceles Trapezoid , area : " + getArea(area) + " sq.units ,"
                             + " Bigger side : " + getSideBigger() + " units, "
                             + " Smaller side : " + getSideSmaller() + " units, "
                             + " Height length: " + getHeight() + " units, "
-                            + "Color = " + getColor());
+                            + "Color = " + super.getColor());
     }
 
     public double getSideBigger() {

@@ -1,12 +1,8 @@
 package core.basesyntax;
 
 public interface Drawable {
-    default void draw() {
+    void draw();
 
-    }
-
-    default void setArea(){
-
-    }
+    double getArea(double area);
 
 }

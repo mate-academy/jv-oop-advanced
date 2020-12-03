@@ -3,37 +3,24 @@ package core.basesyntax;
 public class Circle extends Figure {
     private double area;
     private double radius;
-    private Color color;
 
-    public Circle(double radius, Color randomColorIndex) {
+    public Circle(double radius, Color color) {
         this.radius = radius;
-        this.color = randomColorIndex;
 
-        draw();
-    }
-
-    @Override
-    public Enum getColor() {
-        setColor(color);
-        return super.getColor();
-    }
-
-    @Override
-    public void setColor(Enum color) {
         super.setColor(color);
     }
 
     @Override
-    public double getArea() {
-        setArea(Math.PI * radius * radius);
-        return super.getArea();
+    public double getArea(double area) {
+        area = Math.PI * radius * radius;
+        return area;
     }
 
     @Override
     public void draw() {
-        System.out.println("Circle , area : " + getArea()
+        System.out.println("Circle , area : " + getArea(area)
                            + " , Radius = " + getRadius()
-                            + " , Color = " + getColor());
+                            + " , Color = " + super.getColor());
     }
 
     public void setRadius(int radius) {

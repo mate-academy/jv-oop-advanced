@@ -9,7 +9,7 @@ public class Main {
         Figure[] figuresArray = new Figure[new Random().nextInt(FiguresList.values().length)];
 
         for (int i = 0; i < figuresArray.length; i++) {
-            figureMaker.getFigure();
+            figureMaker.getFigure().draw();
         }
 
     }

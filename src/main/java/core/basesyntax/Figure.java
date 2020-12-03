@@ -1,23 +1,14 @@
 package core.basesyntax;
 
 public abstract class Figure implements Drawable {
-    private double area;
-    private Enum color;
+    private Color color;
 
-    public Enum getColor() {
+    public Color getColor() {
         return color;
     }
 
-    public void setColor(Enum color) {
+    public void setColor(Color color) {
         this.color = color;
-    }
-
-    public void setArea(double area) {
-        this.area = area;
-    }
-
-    public double getArea() {
-        return this.area;
     }
 
 }

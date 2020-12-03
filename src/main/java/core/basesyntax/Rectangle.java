@@ -4,44 +4,27 @@ public class Rectangle extends Figure {
     private double area;
     private double sideA;
     private double sideB;
-    private Color color;
 
-    public Rectangle(double sideA, double sideB, Color randomColorIndex) {
+    public Rectangle(double sideA, double sideB, Color color) {
         this.sideA = sideA;
         this.sideB = sideB;
-        this.color = randomColorIndex;
 
-        draw();
-    }
-
-    @Override
-    public Enum getColor() {
-        setColor(color);
-        return super.getColor();
-    }
-
-    @Override
-    public void setColor(Enum color) {
         super.setColor(color);
+
     }
 
     @Override
-    public void setArea(double area) {
-        super.setArea(area);
-    }
-
-    @Override
-    public double getArea() {
-        setArea(sideA * sideB);
-        return super.getArea();
+    public double getArea(double area) {
+        area = sideA * sideB;
+        return area;
     }
 
     @Override
     public void draw() {
-        System.out.println("Rectangle, area : " + getArea() + " sq.units ,"
+        System.out.println("Rectangle, area : " + getArea(area) + " sq.units ,"
                             + " side A : " + getSideA() + " units, "
                             + " side B : " + getSideB() + " units, "
-                            + "Color = " + getColor());
+                            + "Color = " + super.getColor());
     }
 
     public double getSideA() {

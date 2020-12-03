@@ -5,41 +5,29 @@ public class Square extends Figure {
     private double side;
     private Color color;
 
-    public Square(double side, Color randomColorIndex) {
+    public Square(double side, Color color) {
         this.side = side;
-        this.color = randomColorIndex;
+        this.color = color;
 
-        draw();
-
-    }
-
-    @Override
-    public Enum getColor() {
-        setColor(color);
-        return super.getColor();
-    }
-
-    @Override
-    public void setColor(Enum color) {
         super.setColor(color);
+
     }
 
-    @Override
     public void setArea() {
 
     }
 
     @Override
-    public double getArea() {
-        setArea(side * side);
-        return super.getArea();
+    public double getArea(double area) {
+        area = side * side;
+        return area;
     }
 
     @Override
     public void draw() {
-        System.out.println(" Square : Area : " + getArea() + " sq.units ,"
+        System.out.println(" Square : Area : " + getArea(area) + " sq.units ,"
                              + " Side : " + getSide() + " units, "
-                             + "Color = " + getColor());
+                             + "Color = " + super.getColor());
     }
 
     public double getSide() {
