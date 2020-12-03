@@ -1,8 +1,6 @@
 package core.basesyntax;
 
-import java.util.Random;
-
-public abstract class Figure implements Figuring,Drawable {
+public abstract class Figure implements Figuring, Drawable {
     private Color color;
     private double area;
 
@@ -10,13 +8,16 @@ public abstract class Figure implements Figuring,Drawable {
         return color;
     }
 
-    public void setColor() {
-        int randomGenaratedIndex = new Random().nextInt(Color.values().length);
-        this.color = Color.values()[randomGenaratedIndex];
+    public void setColor(Color color) {
+        this.color = color;
     }
 
     @Override
-    public String draw() {
-        return "Figure: ";
+    public double getArea() {
+        return area;
+    }
+
+    public void setArea(double area) {
+        this.area = area;
     }
 }

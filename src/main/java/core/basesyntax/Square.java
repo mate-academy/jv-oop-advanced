@@ -3,9 +3,9 @@ package core.basesyntax;
 public class Square extends Figure {
     private int side;
 
-    public Square(int side) {
-        setSide(side);
-        setColor();
+    public Square(int side, Color color) {
+        this.side = side;
+        setColor(color);
     }
 
     public double getSide() {
@@ -27,7 +27,7 @@ public class Square extends Figure {
 
     @Override
     public String draw() {
-        return super.draw() + " square, "
+        return "Figure:" + " square, "
                + " area: " + getArea()
                + " color: " + getColor()
                + " side: " + getSide()

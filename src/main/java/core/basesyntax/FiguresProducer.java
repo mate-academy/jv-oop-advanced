@@ -3,12 +3,17 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FiguresProducer {
-    static final int NUMBER_OF_FIGURES = 4;//total numbers of different elements (Figures)
-    static final int POSSIBLE_ARGUMENT = 20;//max argument (excluded)
-    static final int POSSIBLE_FIGURES = 20;//max Figures can be generated(excluded)
+    static final int NUMBER_OF_FIGURES = 4;
+    static final int POSSIBLE_ARGUMENT = 20;
+    static final int POSSIBLE_FIGURES = 20;
 
     public int getRandomNumber() {
         return new Random().nextInt(POSSIBLE_ARGUMENT);
+    }
+
+    public Color getRandomColor() {
+        int randomGenaratedIndex = new Random().nextInt(Color.values().length);
+        return Color.values()[randomGenaratedIndex];
     }
 
     public Figure[] getRandomFigure() {
@@ -18,21 +23,23 @@ public class FiguresProducer {
             int randomGenaratedIndex = new Random().nextInt(NUMBER_OF_FIGURES);
             switch (randomGenaratedIndex) {
                 case 0:
-                    figureArray[i] = new Circle(getRandomNumber());
+                    figureArray[i] = new Circle(getRandomNumber(),getRandomColor());
                     continue;
                 case 1:
                     figureArray[i] = new IsoscelesTrapezoid(getRandomNumber(),
-                            getRandomNumber(),getRandomNumber());
+                            getRandomNumber(),getRandomNumber(),getRandomColor());
                     continue;
                 case 2:
-                    figureArray[i] = new Rectangle(getRandomNumber(),getRandomNumber());
+                    figureArray[i] = new Rectangle(getRandomNumber(),
+                            getRandomNumber(),getRandomColor());
                     continue;
                 case 3:
-                    figureArray[i] = new RightTriangle(getRandomNumber(),getRandomNumber());
+                    figureArray[i] = new RightTriangle(getRandomNumber(),
+                            getRandomNumber(),getRandomColor());
                     continue;
                 case 4:
                 default:
-                    figureArray[i] = new Square(getRandomNumber());
+                    figureArray[i] = new Square(getRandomNumber(),getRandomColor());
                     continue;
             }
         }

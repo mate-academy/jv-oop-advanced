@@ -4,10 +4,10 @@ public class RightTriangle extends Figure {
     private int side1;
     private int side2;
 
-    public RightTriangle(int side1, int side2) {
+    public RightTriangle(int side1, int side2, Color color) {
         setSide1(side1);
         setSide2(side2);
-        setColor();
+        setColor(color);
     }
 
     public int getSide1() {
@@ -37,7 +37,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public String draw() {
-        return super.draw() + " rightTriangle, "
+        return "Figure:" + " rightTriangle, "
                 + " area: " + getArea()
                 + " color: " + getColor()
                 + " side1: " + getSide1()

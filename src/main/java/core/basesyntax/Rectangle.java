@@ -4,10 +4,10 @@ public class Rectangle extends Figure {
     private int side1;
     private int side2;
 
-    public Rectangle(int side1, int side2) {
+    public Rectangle(int side1, int side2, Color color) {
         setSide1(side1);
         setSide2(side2);
-        setColor();
+        setColor(color);
     }
 
     public double getSide1() {
@@ -37,7 +37,7 @@ public class Rectangle extends Figure {
 
     @Override
     public String draw() {
-        return super.draw() + " rectangle,"
+        return "Figure:" + " rectangle,"
                 + " area: " + getArea()
                 + " color: " + getColor()
                 + " side1: " + getSide1()

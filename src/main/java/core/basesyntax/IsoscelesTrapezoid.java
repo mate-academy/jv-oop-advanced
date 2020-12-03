@@ -5,11 +5,11 @@ public class IsoscelesTrapezoid extends Figure {
     private int highSide;
     private int side;
 
-    public IsoscelesTrapezoid(int lowSide,int highSide,int side) {
+    public IsoscelesTrapezoid(int lowSide,int highSide,int side,Color color) {
         setLowSide(lowSide);
         setHighSide(highSide);
         setSide(side);
-        setColor();
+        setColor(color);
     }
 
     public double getLowSide() {
@@ -48,7 +48,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String draw() {
-        return super.draw() + " isoscelesTrapezoid, "
+        return "Figure:" + " isoscelesTrapezoid, "
                 + " area: " + getArea()
                 + " color: " + getColor()
                 + " lowSide: " + getLowSide()
