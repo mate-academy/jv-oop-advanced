@@ -12,8 +12,10 @@ public class IsoscelesTrapezoid extends Figure {
     public void obtainArea() {
         double sideA = parallelSide / 2;
         double sideB = parallelSide * 1.5;
-        double p = (sideA + sideB + (parallelSide * 2)) / 2;
-        double area = Math.sqrt((p - sideA) * (p - sideB) * Math.pow((p - parallelSide), 2));
+        double semiPerimeterOfTrapezoid = (sideA + sideB + (parallelSide * 2)) / 2;
+        double area = Math.sqrt((semiPerimeterOfTrapezoid - sideA)
+                * (semiPerimeterOfTrapezoid - sideB)
+                * Math.pow((semiPerimeterOfTrapezoid - parallelSide), 2));
         setArea(area);
     }
 
