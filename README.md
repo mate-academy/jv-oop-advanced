@@ -4,7 +4,7 @@ __Solve the task using OOP principles__
 
 Task:
 1. There are some figures of the following types: square, rectangle, right triangle, circle, isosceles trapezoid.
-2. We can draw each figure, and obtain its area and color.
+2. We can draw each figure, and obtain its area and color. (`draw` - means print all properties of a figure in the console using System.out.println())
 3. Each figure should have unique method: return the radius, hypotenuse length, side length, etc.
 4. We need to generate an array of figures with random parameters, number of objects in the array is also unknown.
 5. After generating the array, we need to display the entire list of objects that we have, for example:
