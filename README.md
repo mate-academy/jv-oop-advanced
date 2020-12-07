@@ -17,5 +17,4 @@ For this purpose create two more classes (`ColorProducer` - for generating rando
  Figure: triangle, area: 12.5 sq. units, hypotenuse: 7.1 units, color: yellow
 ```
 
-
 #### [Try to avoid these common mistakes, while solving task](https://mate-academy.github.io/jv-program-common-mistakes/java-core/abstract-class-interface/oop-advanced)
