@@ -9,7 +9,7 @@ Task:
 P.S
 `draw` - means print figure and all its' properties in the console using System.out.println()  
 1. We need to generate an array of figures with random parameters, number of objects in the array is also unknown.
-For this purpose create two more classes (`ColorSupplier` - for generating random color and `FigureSupplier` - for generating figure with random properties)
+For this purpose create two more classes (`ColorSupplier` - for raw and `FigureSupplier` - for generating figure with random properties)
 1. After generating the array, we need to display the entire list of objects that we have, for example:
 
 ```
