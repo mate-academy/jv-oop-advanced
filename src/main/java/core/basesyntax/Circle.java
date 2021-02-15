@@ -3,18 +3,14 @@ package core.basesyntax;
 public class Circle extends Figure {
     private int radius;
 
-    public Circle(int radius) {
-        super(new ColorSupplier().get());
+    public Circle(int radius, Color color) {
+        super(color);
         this.radius = radius;
     }
 
     @Override
     public double getArea() {
         return Math.floor(Math.PI * radius * radius);
-    }
-
-    public void circleHello() {
-        System.out.println("Circle say hello!");
     }
 
     @Override

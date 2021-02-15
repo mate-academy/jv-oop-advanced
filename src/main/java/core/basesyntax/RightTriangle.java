@@ -4,8 +4,8 @@ public class RightTriangle extends Figure {
     private int sideOne;
     private int sideTwo;
 
-    public RightTriangle(int sideOne, int sideTwo) {
-        super(new ColorSupplier().get());
+    public RightTriangle(int sideOne, int sideTwo, Color color) {
+        super(color);
         this.sideOne = sideOne;
         this.sideTwo = sideTwo;
     }

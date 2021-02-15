@@ -4,7 +4,6 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        new Circle(9);
 
         FigureSupplier figureSupplier = new FigureSupplier();
         int countOfFigure = new Random().nextInt(10);

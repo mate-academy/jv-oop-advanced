@@ -5,8 +5,8 @@ public class IsoscelesTrapezoid extends Figure implements Draw {
     private int sideB;
     private int sideC;
 
-    public IsoscelesTrapezoid(int sideA, int sideB, int sideC) {
-        super(new ColorSupplier().get());
+    public IsoscelesTrapezoid(int sideA, int sideB, int sideC, Color color) {
+        super(color);
         this.sideA = sideA;
         this.sideB = sideB;
         this.sideC = sideC;
