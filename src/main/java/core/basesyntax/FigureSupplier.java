@@ -1,8 +1,9 @@
 package core.basesyntax;
 
 public class FigureSupplier extends RandomNumber {
-    String[] figureList = new String[]{"Circle", "Rectangle", "Square", "RightTriangle", "IsoscelesTrapezoid"};
-    String figure;
+    private String[] figureList =
+            new String[]{"Circle", "Rectangle", "Square", "RightTriangle", "IsoscelesTrapezoid"};
+    private String figure;
 
     private String getRandomFigure() {
         return getProperty(figureList);
@@ -21,7 +22,11 @@ public class FigureSupplier extends RandomNumber {
             case "Right Triangle":
                 return new RightTriangle((int) getRandomNumber(10), (int) getRandomNumber(10));
             default:
-                return new IsoscelesTrapezoid((int) getRandomNumber(10), (int) getRandomNumber(10), (int) getRandomNumber(10));
+                return new IsoscelesTrapezoid(
+                        (int) getRandomNumber(10),
+                        (int) getRandomNumber(10),
+                        (int) getRandomNumber(10)
+                );
         }
     }
 }

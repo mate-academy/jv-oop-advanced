@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.awt.*;
-
 /**
  * Feel free to remove this class and create your own.
  */

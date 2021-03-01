@@ -16,6 +16,9 @@ public class RightTriangle extends Figure implements Behaviour {
 
     @Override
     public void draw() {
-        System.out.println("Right triangle with color: " + getColor() + ", base: " + base + " and height: " + height);
+        System.out.println("Right triangle with color: "
+                + getColor() + ", base: "
+                + base + " and height: "
+                + height);
     }
 }

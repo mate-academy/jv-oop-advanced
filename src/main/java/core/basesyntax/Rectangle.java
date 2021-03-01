@@ -16,6 +16,8 @@ public class Rectangle extends Figure implements Behaviour {
 
     @Override
     public void draw() {
-        System.out.println("Rectangle with color: " + getColor() + ", width: " + width + " and height: " + height);
+        System.out.println("Rectangle with color: " + getColor()
+                + ", width: " + width
+                + " and height: " + height);
     }
 }
