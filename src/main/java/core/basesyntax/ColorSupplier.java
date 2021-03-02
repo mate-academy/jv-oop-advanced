@@ -1,10 +1,12 @@
 package core.basesyntax;
 
-public class ColorSupplier extends RandomNumber {
-    private String[] colorList =
+import java.util.Random;
+
+public class ColorSupplier {
+    private static final String[] colorList =
             new String[]{"yellow", "orange", "blue", "white", "black", "brown", "purple", "green"};
 
-    public String getRandomColor() {
-        return getProperty(colorList);
+    public static String getRandomColor() {
+        return colorList[new Random().nextInt(colorList.length)];
     }
 }

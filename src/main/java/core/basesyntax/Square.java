@@ -1,9 +1,10 @@
 package core.basesyntax;
 
-public class Square extends Figure implements Behaviour {
+public class Square extends BaseFigure implements Behaviour {
     private double side;
 
     public Square(double side) {
+        super();
         this.side = side;
     }
 

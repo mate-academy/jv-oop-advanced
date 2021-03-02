@@ -1,10 +1,11 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Behaviour {
+public class Rectangle extends BaseFigure implements Behaviour {
     private int width;
     private int height;
 
     public Rectangle(int width, int height) {
+        super();
         this.width = width;
         this.height = height;
     }

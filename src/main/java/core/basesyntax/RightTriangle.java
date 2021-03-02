@@ -1,10 +1,11 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements Behaviour {
+public class RightTriangle extends BaseFigure implements Behaviour {
     private int base;
     private int height;
 
     public RightTriangle(int base, int height) {
+        super();
         this.base = base;
         this.height = height;
     }

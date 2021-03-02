@@ -1,9 +1,10 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements Behaviour {
+public class Circle extends BaseFigure implements Behaviour {
     private int radius;
 
     public Circle(int radius) {
+        super();
         this.radius = radius;
     }
 

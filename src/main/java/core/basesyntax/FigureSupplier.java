@@ -1,31 +1,30 @@
 package core.basesyntax;
 
-public class FigureSupplier extends RandomNumber {
-    private String[] figureList =
+import java.util.Random;
+
+public class FigureSupplier {
+    private static final String[] figureList =
             new String[]{"Circle", "Rectangle", "Square", "RightTriangle", "IsoscelesTrapezoid"};
-    private String figure;
+    private static Random random = new Random();
+    private static final int LIMIT = 10;
 
-    private String getRandomFigure() {
-        return getProperty(figureList);
-    }
-
-    public Figure getFigureProperty() {
-        figure = getRandomFigure();
+    public static BaseFigure getFigureProperty() {
+        String figure = figureList[random.nextInt(figureList.length)];
 
         switch (figure) {
             case "Circle":
-                return new Circle((int) getRandomNumber(10));
+                return new Circle(random.nextInt(LIMIT));
             case "Rectangle":
-                return new Rectangle((int) getRandomNumber(10), (int) getRandomNumber(10));
+                return new Rectangle(random.nextInt(LIMIT), random.nextInt(LIMIT));
             case "Square":
-                return new Square((int) getRandomNumber(10));
-            case "Right Triangle":
-                return new RightTriangle((int) getRandomNumber(10), (int) getRandomNumber(10));
+                return new Square(random.nextInt(LIMIT));
+            case "RightTriangle":
+                return new RightTriangle(random.nextInt(LIMIT), random.nextInt(LIMIT));
             default:
                 return new IsoscelesTrapezoid(
-                        (int) getRandomNumber(10),
-                        (int) getRandomNumber(10),
-                        (int) getRandomNumber(10)
+                        random.nextInt(LIMIT),
+                        random.nextInt(LIMIT),
+                        random.nextInt(LIMIT)
                 );
         }
     }
