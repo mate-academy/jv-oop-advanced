@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class BaseFigure {
+public abstract class BaseFigure {
     private String color;
 
     public BaseFigure() {

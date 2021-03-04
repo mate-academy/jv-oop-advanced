@@ -5,7 +5,8 @@ package core.basesyntax;
  */
 public class Main {
     public static void main(String[] args) {
-        FigureSupplier figureSupplier = new FigureSupplier();
-        BaseFigure randomFigure = figureSupplier.getFigureProperty();
+        Behaviour randomFigure = FigureSupplier.getFigureProperty();
+        randomFigure.draw();
     }
 }
+

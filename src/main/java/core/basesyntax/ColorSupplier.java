@@ -7,6 +7,6 @@ public class ColorSupplier {
             new String[]{"yellow", "orange", "blue", "white", "black", "brown", "purple", "green"};
 
     public static String getRandomColor() {
-        return colorList[new Random().nextInt(colorList.length)];
+        return colorList[new Random().nextInt(colorList.length - 1)];
     }
 }

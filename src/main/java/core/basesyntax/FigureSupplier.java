@@ -5,10 +5,10 @@ import java.util.Random;
 public class FigureSupplier {
     private static final String[] figureList =
             new String[]{"Circle", "Rectangle", "Square", "RightTriangle", "IsoscelesTrapezoid"};
-    private static Random random = new Random();
+    private static final Random random = new Random();
     private static final int LIMIT = 10;
 
-    public static BaseFigure getFigureProperty() {
+    public static Behaviour getFigureProperty() {
         String figure = figureList[random.nextInt(figureList.length)];
 
         switch (figure) {
