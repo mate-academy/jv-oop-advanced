@@ -32,10 +32,16 @@ public abstract class Figure implements Shape {
     }
 
     public String getColor() {
+        if (color == null) {
+            throw new NullPointerException("color is null.");
+        }
         return color;
     }
 
     public String getIdentification() {
+        if (color == null) {
+            throw new NullPointerException("identification is null.");
+        }
         return identification;
     }
 
