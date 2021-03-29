@@ -7,7 +7,8 @@ public class FigureSupplier {
             new Circle(new Random().nextInt(100), ColorSupplier.randomColor()),
             new Triangle(new Random().nextInt(100), ColorSupplier.randomColor()),
             new Square(new Random().nextInt(100), ColorSupplier.randomColor()),
-            new Rectangle(new Random().nextInt(100), new Random().nextInt(100), ColorSupplier.randomColor()),
+            new Rectangle(new Random().nextInt(100), new Random().nextInt(100),
+                    ColorSupplier.randomColor()),
             new IsoscelesTrapezoid(new Random().nextInt(100), new Random().nextInt(100),
                     new Random().nextInt(100), ColorSupplier.randomColor())};
 

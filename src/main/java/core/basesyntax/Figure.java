@@ -4,6 +4,11 @@ public abstract class Figure implements AreaCalculator, FigureDrawer {
     private String color;
     private String figureName;
 
+    public Figure(String color, String figureName) {
+        this.color = color;
+        this.figureName = figureName;
+    }
+
     public String getColor() {
         return color;
     }
@@ -17,11 +22,6 @@ public abstract class Figure implements AreaCalculator, FigureDrawer {
     }
 
     public void setFigureName(String figureName) {
-        this.figureName = figureName;
-    }
-
-    public Figure(String color, String figureName) {
-        this.color = color;
         this.figureName = figureName;
     }
 }
