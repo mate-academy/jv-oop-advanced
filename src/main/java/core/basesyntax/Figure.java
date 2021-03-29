@@ -1,8 +1,13 @@
 package core.basesyntax;
 
-public abstract class Figure implements FiguresBehavior {
+public abstract class Figure implements CalculateArea, FigureDrawing {
     private String name;
     private String color;
+
+    public Figure(String name, String color) {
+        this.name = name;
+        this.color = color;
+    }
 
     public String getName() {
         return name;

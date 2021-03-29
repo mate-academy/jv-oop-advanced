@@ -4,18 +4,16 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class MainFigureTest {
+    private static final int RANDOM_LIMIT = 50;
+
     public static void main(String[] args) {
         Random random = new Random();
-
-        int numberOfFigures = random.nextInt(20);
-
         ArrayList<Figure> figureArrayList = new ArrayList<>();
 
-        while (numberOfFigures > 0) {
+        for (int i = random.nextInt(RANDOM_LIMIT); i > 0; i--) {
             figureArrayList.add(FigureSupplier.generateFigure());
-            numberOfFigures--;
         }
 
-        figureArrayList.forEach(FiguresBehavior::drawFigure);
+        figureArrayList.forEach(FigureDrawing::drawFigure);
     }
 }

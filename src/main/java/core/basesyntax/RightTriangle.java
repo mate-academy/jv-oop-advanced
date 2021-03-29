@@ -5,8 +5,7 @@ public class RightTriangle extends Figure {
     private int sideB;
 
     public RightTriangle(String name, String color, int sideA, int sideB) {
-        setName(name);
-        setColor(color);
+        super(name, color);
         this.sideA = sideA;
         this.sideB = sideB;
     }
@@ -28,8 +27,7 @@ public class RightTriangle extends Figure {
     }
 
     public double getHypotenuse() {
-        double hypotenuse = Math.hypot(sideA, sideB);
-        return Math.round(hypotenuse * 100.0) / 100.0;
+        return Math.hypot(sideA, sideB);
     }
 
     @Override
