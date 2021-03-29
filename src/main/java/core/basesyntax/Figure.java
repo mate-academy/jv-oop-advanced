@@ -7,7 +7,7 @@ public abstract class Figure implements Shape {
     private String identification;
     private String color;
 
-    public Figure () {
+    public Figure() {
         generateColor();
     }
 
