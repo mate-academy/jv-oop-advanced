@@ -6,16 +6,32 @@ public class FigureSupplier {
     static final int RANDOM_LIMIT = 100;
 
     public Figure getRandomFigure() {
-        final Figure[] figures = new Figure[] {
-                new Circle(new Random().nextInt(RANDOM_LIMIT), ColorSupplier.randomColor()),
-                new Triangle(new Random().nextInt(RANDOM_LIMIT), ColorSupplier.randomColor()),
-                new Square(new Random().nextInt(RANDOM_LIMIT), ColorSupplier.randomColor()),
-                new Rectangle(new Random().nextInt(RANDOM_LIMIT),
+        int indexOfFiguresType = (new Random().nextInt(5));
+        Figure result;
+        switch (indexOfFiguresType) {
+            case 1 :
+                result = new Triangle(new Random().nextInt(RANDOM_LIMIT),
+                        ColorSupplier.randomColor());
+                break;
+            case 2 :
+                result = new Square(new Random().nextInt(RANDOM_LIMIT),
+                        ColorSupplier.randomColor());
+                break;
+            case 3 :
+                result = new Rectangle(new Random().nextInt(RANDOM_LIMIT),
                         new Random().nextInt(RANDOM_LIMIT),
-                        ColorSupplier.randomColor()),
-                new IsoscelesTrapezoid(new Random().nextInt(RANDOM_LIMIT),
+                        ColorSupplier.randomColor());
+                break;
+            case 4 :
+                result = new IsoscelesTrapezoid(new Random().nextInt(RANDOM_LIMIT),
                         new Random().nextInt(RANDOM_LIMIT),
-                        new Random().nextInt(RANDOM_LIMIT), ColorSupplier.randomColor())};
-        return figures[new Random().nextInt(figures.length)];
+                        new Random().nextInt(RANDOM_LIMIT), ColorSupplier.randomColor());
+                break;
+            default :
+                result = new Circle(new Random().nextInt(RANDOM_LIMIT),
+                        ColorSupplier.randomColor());
+                break;
+        }
+        return result;
     }
 }
