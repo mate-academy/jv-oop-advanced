@@ -7,19 +7,18 @@ public class Circle extends Figure {
     private int radius;
 
     public Circle(String name) {
-        this.name = name;
-        color = ColorSupplier.getRandomColor();
+        super(name);
         radius = (int)((Math.random() * 10) + 1);
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return Math.PI * radius;
     }
 
     @Override
     public void draw() {
         System.out.printf("Figure: %s, area: %.1f sq. cm, radius: %d cm, color: %s\n",
-                name, area(), radius, color);
+                getName(), getArea(), radius, getColor());
     }
 }

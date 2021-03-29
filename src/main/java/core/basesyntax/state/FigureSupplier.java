@@ -7,22 +7,22 @@ import core.basesyntax.figures.RightTriangle;
 import core.basesyntax.figures.Square;
 
 public class FigureSupplier {
-    private static String []figureArr = {"Circle", "Isosceles Trapezoid", "Rectangle",
+    private static String [] figureArray = {"Circle", "Isosceles Trapezoid", "Rectangle",
             "Right Triangle", "Square"};
 
     public static Figure getRandomFigure() {
-        int rndNum = (int)(Math.random() * figureArr.length);
+        int randomNumber = (int)(Math.random() * figureArray.length);
 
-        if (rndNum == 0) {
-            return new Circle(figureArr[rndNum]);
-        } else if (rndNum == 1) {
-            return new IsoscelesTrapezoid(figureArr[rndNum]);
-        } else if (rndNum == 2) {
-            return new Rectangle(figureArr[rndNum]);
-        } else if (rndNum == 3) {
-            return new RightTriangle(figureArr[rndNum]);
+        if (randomNumber == 0) {
+            return new Circle(figureArray[randomNumber]);
+        } else if (randomNumber == 1) {
+            return new IsoscelesTrapezoid(figureArray[randomNumber]);
+        } else if (randomNumber == 2) {
+            return new Rectangle(figureArray[randomNumber]);
+        } else if (randomNumber == 3) {
+            return new RightTriangle(figureArray[randomNumber]);
         } else {
-            return new Square(figureArr[rndNum]);
+            return new Square(figureArray[randomNumber]);
         }
     }
 }

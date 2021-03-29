@@ -1,16 +1,26 @@
 package core.basesyntax.state;
 
-import core.basesyntax.behavior.FigureProperties;
+import core.basesyntax.behavior.FigureArea;
+import core.basesyntax.behavior.FigureInformation;
 
-public abstract class Figure implements FigureProperties {
-    protected String name;
-    protected String color = "Black";
+public abstract class Figure implements FigureInformation, FigureArea {
+    private String name;
+    private String color;
 
-    public Figure() {
-
+    public Figure(String name) {
+        this.name = name;
+        color = ColorSupplier.getRandomColor();
     }
 
-    public void setColor(String color) {
+    public String getName() {
+        return name;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String name, String color) {
         this.color = color;
     }
 
