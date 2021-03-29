@@ -7,7 +7,6 @@ public class ColorSupplier {
 
     public static String generateColor() {
         Random random = new Random();
-
         int colorNumber = random.nextInt(COLOR_RANDOM_LIMIT);
 
         switch (colorNumber) {

@@ -8,7 +8,6 @@ public class FigureSupplier {
 
     public static Figure generateFigure() {
         Random random = new Random();
-
         int figureNumber = random.nextInt(FIGURE_RANDOM_LIMIT);
 
         switch (figureNumber) {

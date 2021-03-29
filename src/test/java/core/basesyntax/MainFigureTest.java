@@ -14,6 +14,6 @@ public class MainFigureTest {
             figureArrayList.add(FigureSupplier.generateFigure());
         }
 
-        figureArrayList.forEach(FigureDrawing::drawFigure);
+        figureArrayList.forEach(FigureDrawer::drawFigure);
     }
 }
