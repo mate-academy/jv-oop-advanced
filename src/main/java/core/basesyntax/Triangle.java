@@ -3,14 +3,9 @@ package core.basesyntax;
 public class Triangle extends Figure {
     private double hypotenuse;
 
-    public Triangle() {
-
-    }
-
     public Triangle(double hypotenuse, String color) {
+        super(color, "triangle");
         this.hypotenuse = hypotenuse;
-        setColor(color);
-        setFigureName("triangle");
     }
 
     @Override
@@ -22,10 +17,5 @@ public class Triangle extends Figure {
     public String drawFigure() {
         return "Figure: " + getFigureName() + ", area: " + getArea() + " sq. units"
                 + ", hypotenuse: " + hypotenuse + " units, color: " + getColor();
-    }
-
-    @Override
-    public Figure getRandomFigure() {
-        return new Triangle((int)(Math.random() * 100), ColorSupplier.randomColor());
     }
 }

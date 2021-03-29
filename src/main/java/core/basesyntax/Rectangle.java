@@ -1,36 +1,24 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private double side1;
-    private double side2;
+    private double firstSide;
+    private double secondSide;
 
-    public Rectangle() {
-
-    }
-
-    public Rectangle(double side1, double side2, String color) {
-        this.side1 = side1;
-        this.side2 = side2;
-        setColor(color);
-        setFigureName("rectangle");
+    public Rectangle(double side1, double secondSide, String color) {
+        super(color, "rectangle");
+        this.firstSide = side1;
+        this.secondSide = secondSide;
     }
 
     @Override
     public double getArea() {
-        return side1 * side2;
+        return firstSide * secondSide;
     }
 
     @Override
     public String drawFigure() {
         return "Figure: " + getFigureName() + ", area: " + getArea() + " sq. units"
-                + ", first side: " + side1 + ", second side: " + side2
+                + ", first side: " + firstSide + ", second side: " + secondSide
                 + " units, color: " + getColor();
     }
-
-    @Override
-    public Figure getRandomFigure() {
-        return new Rectangle((int)(Math.random() * 100),
-                                  (int)(Math.random() * 100), ColorSupplier.randomColor());
-    }
-
 }

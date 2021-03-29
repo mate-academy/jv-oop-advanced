@@ -2,37 +2,26 @@ package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
     private double side;
-    private double base1;
-    private double base2;
+    private double firstBase;
+    private double secondBase;
 
-    public IsoscelesTrapezoid() {
-
-    }
-
-    public IsoscelesTrapezoid(double base1, double base2, double side, String color) {
+    public IsoscelesTrapezoid(double firstBase, double secondBase, double side, String color) {
+        super(color, "isosceles trapezoid");
         this.side = side;
-        this.base1 = base1;
-        this.base2 = base2;
-        setColor(color);
-        setFigureName("isosceles trapezoid");
+        this.firstBase = firstBase;
+        this.secondBase = secondBase;
     }
 
     @Override
     public double getArea() {
-        return ((base1 + base2) / 4) * Math.sqrt((4 * (side * side))
-                - ((base1 - base2) * (base1 - base2)));
+        return ((firstBase + secondBase) / 4) * Math.sqrt((4 * (side * side))
+                - ((firstBase - secondBase) * (firstBase - secondBase)));
     }
 
     @Override
     public String drawFigure() {
         return "Figure: " + getFigureName() + ", area: " + getArea() + " sq. units"
-                + ", bottom base: " + base1 + ", top base: " + base2
+                + ", bottom base: " + firstBase + ", top base: " + secondBase
                 + ", side: " + side + " units, color: " + getColor();
-    }
-
-    @Override
-    public Figure getRandomFigure() {
-        return new IsoscelesTrapezoid((int)(Math.random() * 100), (int)(Math.random() * 100),
-                                     (int)(Math.random() * 100), ColorSupplier.randomColor());
     }
 }

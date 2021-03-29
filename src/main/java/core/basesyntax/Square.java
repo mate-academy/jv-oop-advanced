@@ -3,14 +3,9 @@ package core.basesyntax;
 public class Square extends Figure {
     private double side;
 
-    public Square() {
-
-    }
-
     public Square(double side, String color) {
+        super(color, "square");
         this.side = side;
-        setColor(color);
-        setFigureName("square");
     }
 
     @Override
@@ -22,10 +17,5 @@ public class Square extends Figure {
     public String drawFigure() {
         return "Figure: " + getFigureName() + ", area: " + getArea() + " sq. units"
                 + ", side: " + side + " units, color: " + getColor();
-    }
-
-    @Override
-    public Figure getRandomFigure() {
-        return new Square((int)(Math.random() * 100), ColorSupplier.randomColor());
     }
 }
