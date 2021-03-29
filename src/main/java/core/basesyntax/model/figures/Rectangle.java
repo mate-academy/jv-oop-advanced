@@ -2,23 +2,7 @@ package core.basesyntax.model.figures;
 
 import core.basesyntax.Figure;
 
-/**
- * Реализовать класс расширяющий Figure.
- * Вывести информацию о прямоугольнике.
- * Реализовать метод для рассчета площади.
- * Создать сеттеры для приватных полей.
- * Иметь доступ к приватным полям класса через геттеры.
- * Вернуть объект Rectangle через метод getFigure().
- * Создать поля:
- * length -> длина
- * width -> ширина
- * Реализовать пустой конструктор Rectangle(){}.
- * Реализовать перегруженный конструктор Rectangle(double length, double width) {}.
- * Переопределить методы интерфейса Shape.
- */
-
 public class Rectangle extends Figure {
-
     private double length;
     private double width;
 
@@ -26,17 +10,9 @@ public class Rectangle extends Figure {
 
     }
 
-    /**
-     * Инициализировать переменную length.
-     * Инициализировать переменную width.
-     * Инициализировать цвет фигуры.
-     * Инициализировать название фигуры.
-     */
-
     public Rectangle(double length, double width) {
         this.length = length;
         this.width = width;
-        generateColor();
         setIdentification("rectangle");
     }
 

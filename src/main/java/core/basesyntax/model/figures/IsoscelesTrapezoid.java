@@ -2,25 +2,7 @@ package core.basesyntax.model.figures;
 
 import core.basesyntax.Figure;
 
-/**
- * Реализовать класс расширяющий Figure.
- * Вывести информацию о прямоугольном треугольнике.
- * Реализовать метод для рассчета площади.
- * Создать сеттеры для приватных полей.
- * Иметь доступ к приватным полям класса через геттеры.
- * Вернуть объект IsoscelesTrapezoid через метод getFigure().
- * Создать поля:
- * baseA -> основа А
- * baseB -> основа B
- * side -> сторона
- * Реализовать пустой конструктор IsoscelesTrapezoid(){}.
- * Реализовать перегруженный конструктор
- * IsoscelesTrapezoid(double baseA, double baseB, double side) {}.
- * Переопределить методы интерфейса Shape.
- */
-
 public class IsoscelesTrapezoid extends Figure {
-
     private double baseA;
     private double baseB;
     private double side;
@@ -29,19 +11,10 @@ public class IsoscelesTrapezoid extends Figure {
 
     }
 
-    /**
-     * Инициализировать переменную baseA.
-     * Инициализировать переменную baseB.
-     * Инициализировать переменную side.
-     * Инициализировать цвет фигуры.
-     * Инициализировать название фигуры.
-     */
-
     public IsoscelesTrapezoid(double baseA, double baseB, double side) {
         this.baseA = baseA;
         this.baseB = baseB;
         this.side = side;
-        generateColor();
         setIdentification("isosceles trapezoid");
     }
 

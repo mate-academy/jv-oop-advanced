@@ -2,36 +2,15 @@ package core.basesyntax.model.figures;
 
 import core.basesyntax.Figure;
 
-/**
- * Реализовать класс расширяющий Figure.
- * Вывести информацию о квадрате.
- * Реализовать метод для рассчета площади.
- * Создать сеттеры для приватных полей.
- * Иметь доступ к приватным полям класса через геттеры.
- * Вернуть объект Square через метод getFigure().
- * Создать поле side -> сторона квадрата.
- * Реализовать пустой конструктор Square(){}.
- * Реализовать перегруженный конструктор Square(double side) {}.
- * Переопределить методы интерфейса Shape.
- */
-
 public class Square extends Figure {
-
     private double side;
 
     public Square() {
 
     }
 
-    /**
-     * Инициализировать переменную side.
-     * Инициализировать цвет фигуры.
-     * Инициализировать название фигуры.
-     */
-
     public Square(double side) {
         this.side = side;
-        generateColor();
         setIdentification("square");
     }
 

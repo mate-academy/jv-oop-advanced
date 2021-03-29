@@ -1,12 +1,9 @@
 package core.basesyntax.model.state;
 
-/**
- * Класс должен генерировать случайный цвет.
- * Инициализировать массив строк COLORS.
- * Создать метод для генерации случайного цвета.
- */
+import java.util.Random;
 
 public class ColorSupplier {
+    private static  Random random = new Random();
 
     private static final String[] COLORS = new String[]{
             "blue", "yellow", "red", "white",
@@ -14,11 +11,7 @@ public class ColorSupplier {
             "brown", "pink", "gray", "golden"
     };
 
-    /**
-     * Вернуть случайный элемент массива COLORS.
-     */
-
     public static String generateColor() {
-        return COLORS[(int) (Math.random() * COLORS.length)];
+        return COLORS[random.nextInt(COLORS.length)];
     }
 }

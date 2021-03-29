@@ -6,25 +6,16 @@ import core.basesyntax.model.figures.IsoscelesTrapezoid;
 import core.basesyntax.model.figures.Rectangle;
 import core.basesyntax.model.figures.RightTriangle;
 import core.basesyntax.model.figures.Square;
-
-/**
- * Класс должен возвращать случайный объект Figure.
- * Создать массив существующих фигур.
- * Создать метод, который вернет случайный объект Figure.
- */
+import java.util.Random;
 
 public class FigureSupplier {
-
+    private static Random random = new Random();
     private static final Figure[] FIGURES = new Figure[]{
             new Circle(), new Rectangle(), new Square(),
             new RightTriangle(), new IsoscelesTrapezoid()
     };
 
-    /**
-     * Вернуть случайный объект Figure.
-     */
-
     public static Figure generateFigure() {
-        return FIGURES[(int)(Math.random() * FIGURES.length)].getFigure();
+        return FIGURES[random.nextInt(FIGURES.length)].getFigure();
     }
 }
