@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final Figure[] FIGURES = new Figure[] {
-            new Circle(new Random().nextInt(100), ColorSupplier.randomColor()),
+            new Circle(100, ColorSupplier.randomColor()),
             new Triangle(new Random().nextInt(100), ColorSupplier.randomColor()),
             new Square(new Random().nextInt(100), ColorSupplier.randomColor()),
             new Rectangle(new Random().nextInt(100), new Random().nextInt(100),
