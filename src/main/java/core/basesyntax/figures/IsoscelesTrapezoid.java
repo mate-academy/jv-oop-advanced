@@ -1,6 +1,5 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.state.ColorSupplier;
 import core.basesyntax.state.Figure;
 
 public class IsoscelesTrapezoid extends Figure {
@@ -22,7 +21,8 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.printf("Figure: %s, area: %.1f sq. cm, first base: %d cm, second base: %d cm, "
-                + "height: %d cm, color: %s\n", getName(), getArea(), baseA, baseB, height, getColor());
+        System.out.printf("Figure: %s, area: %.1f sq. cm, first base: %d cm, "
+                + "second base: %d cm, height: %d cm, color: %s\n",
+                getName(), getArea(), baseA, baseB, height, getColor());
     }
 }

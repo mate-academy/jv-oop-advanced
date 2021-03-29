@@ -1,6 +1,5 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.state.ColorSupplier;
 import core.basesyntax.state.Figure;
 
 public class RightTriangle extends Figure {
