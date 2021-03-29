@@ -8,11 +8,7 @@ public abstract class Figure implements Shape {
     private String color;
 
     public Figure() {
-        generateColor();
-    }
-
-    protected void generateColor() {
-        color = ColorSupplier.generateColor();
+      color = ColorSupplier.generateColor();
     }
 
     protected void setIdentification(String identification) {
