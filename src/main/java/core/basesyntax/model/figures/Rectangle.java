@@ -6,10 +6,6 @@ public class Rectangle extends Figure {
     private double length;
     private double width;
 
-    public Rectangle() {
-
-    }
-
     public Rectangle(double length, double width) {
         this.length = length;
         this.width = width;
@@ -34,18 +30,14 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getIdentification() + ", area: "
-                + area() + " sq. units, length: " + getLength() + " units, width: "
+        System.out.println("Figure: " + getIdentification() + ", getArea: "
+                + getArea() + " sq. units, length: " + getLength() + " units, width: "
                 + getWidth() + " units, color: " + getColor());
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return length * width;
     }
 
-    @Override
-    public Figure getFigure() {
-        return new Rectangle(Math.random() * 50, Math.random() * 50);
-    }
 }

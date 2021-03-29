@@ -7,10 +7,6 @@ public class IsoscelesTrapezoid extends Figure {
     private double baseB;
     private double side;
 
-    public IsoscelesTrapezoid() {
-
-    }
-
     public IsoscelesTrapezoid(double baseA, double baseB, double side) {
         this.baseA = baseA;
         this.baseB = baseB;
@@ -44,20 +40,15 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getIdentification() + ", area: "
-                + area() + " sq. units, baseA: " + baseA + " units, baseB: "
+        System.out.println("Figure: " + getIdentification() + ", getArea: "
+                + getArea() + " sq. units, baseA: " + baseA + " units, baseB: "
                 + baseB + " units, side: " + side + " units, color: " + getColor());
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         double s = (baseA + baseB + side * side) / 2;
         return Math.sqrt(s * (s - baseA) * (s - baseB) * (s - side));
     }
 
-    @Override
-    public Figure getFigure() {
-        return new IsoscelesTrapezoid(Math.random() * 50,
-                Math.random() * 50, Math.random() * 50);
-    }
 }

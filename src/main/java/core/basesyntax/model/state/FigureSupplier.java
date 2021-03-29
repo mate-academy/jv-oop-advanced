@@ -9,13 +9,18 @@ import core.basesyntax.model.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static Random random = new Random();
-    private static final Figure[] FIGURES = new Figure[]{
-            new Circle(), new Rectangle(), new Square(),
-            new RightTriangle(), new IsoscelesTrapezoid()
+    private Random random = new Random();
+    private int limitValue = random.nextInt(100);
+
+    private final Figure[] figures = new Figure[]{
+            new Circle(limitValue),
+            new Rectangle(limitValue, limitValue),
+            new Square(limitValue),
+            new RightTriangle(limitValue, limitValue),
+            new IsoscelesTrapezoid(limitValue, limitValue, limitValue)
     };
 
-    public static Figure generateFigure() {
-        return FIGURES[random.nextInt(FIGURES.length)].getFigure();
+    public Figure generateFigure() {
+        return figures[random.nextInt(figures.length)];
     }
 }

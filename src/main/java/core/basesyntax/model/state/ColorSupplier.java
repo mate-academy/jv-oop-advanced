@@ -4,7 +4,6 @@ import java.util.Random;
 
 public class ColorSupplier {
     private static Random random = new Random();
-
     private static final String[] COLORS = new String[]{
             "blue", "yellow", "red", "white",
             "black", "green", "orange", "purple",

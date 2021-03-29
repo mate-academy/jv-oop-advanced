@@ -6,10 +6,6 @@ public class RightTriangle extends Figure {
     private double legA;
     private double legB;
 
-    public RightTriangle() {
-
-    }
-
     public RightTriangle(double legA, double legB) {
         this.legA = legA;
         this.legB = legB;
@@ -38,19 +34,15 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getIdentification() + ", area: "
-                + area() + " sq. units, hypotenuse: " + hypotenuse() + "sq. units, legA: "
+        System.out.println("Figure: " + getIdentification() + ", getArea: "
+                + getArea() + " sq. units, hypotenuse: " + hypotenuse() + "sq. units, legA: "
                 + getLegA() + " units, legB: "
                 + getLegB() + "units, color: " + getColor());
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return (legA * legB) / 2;
     }
 
-    @Override
-    public Figure getFigure() {
-        return new RightTriangle(Math.random() * 50, Math.random() * 50);
-    }
 }

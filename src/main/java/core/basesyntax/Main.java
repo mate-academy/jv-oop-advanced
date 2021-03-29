@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 import core.basesyntax.model.state.FigureSupplier;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,10 +10,11 @@ public class Main {
     }
 
     private static Figure[] create() {
-        int size = (int) (Math.random() * 25);
+        FigureSupplier figureSupplier = new FigureSupplier();
+        int size = (int) (new Random().nextInt(25));
         Figure[] figures = new Figure[size];
         for (int i = 0; i < figures.length; i++) {
-            figures[i] = FigureSupplier.generateFigure();
+            figures[i] = figureSupplier.generateFigure();
         }
         return figures;
     }
