@@ -28,7 +28,8 @@ public class FigureSupplier {
                         random.nextInt(INT_BOUND_LIMIT), random.nextInt(INT_BOUND_LIMIT),
                         random.nextInt(INT_BOUND_LIMIT));
             default:
-                return null;
+                return new Square("Square", ColorSupplier.generateColor(),
+                        random.nextInt(INT_BOUND_LIMIT));
         }
     }
 }
