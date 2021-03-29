@@ -1,9 +1,10 @@
 package core.basesyntax;
 
-import core.basesyntax.model.behavior.Shape;
+import core.basesyntax.model.behavior.Areable;
+import core.basesyntax.model.behavior.Drawable;
 import core.basesyntax.model.state.ColorSupplier;
 
-public abstract class Figure implements Shape {
+public abstract class Figure implements Areable, Drawable {
     private String identification;
     private String color;
 
