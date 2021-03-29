@@ -1,12 +1,12 @@
 package core.basesyntax;
 
 public class Main {
+    static final int ARRAY_LIMIT = 10;
+
     public static void main(String[] args) {
-        final int arrayLimit = 10;
-        Figure[] figures = new Figure[arrayLimit];
+        Figure[] figures = new Figure[ARRAY_LIMIT];
         for (int i = 0; i < figures.length; i++) {
-            FigureSupplier supplier = new FigureSupplier();
-            figures[i] = supplier.getRandomFigure();
+            figures[i] = new FigureSupplier().getRandomFigure();
         }
 
         for (Figure figure : figures) {
