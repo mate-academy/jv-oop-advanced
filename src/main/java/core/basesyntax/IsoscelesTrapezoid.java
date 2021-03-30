@@ -1,10 +1,10 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure implements State {
-    private double topSide = 0;
-    private double botSide = 0;
-    private double lrSide = 0;
-    private String color = RED;
+    private double topSide;
+    private double botSide;
+    private double lrSide;
+    private String color;
 
     public IsoscelesTrapezoid(double topSide, double botSide, double lrSide) {
         if (topSide > 0 && botSide > 0 && lrSide > 0) {
@@ -12,6 +12,7 @@ public class IsoscelesTrapezoid extends Figure implements State {
                 this.topSide = topSide;
                 this.botSide = botSide;
                 this.lrSide = lrSide;
+                color = RED;
             } else {
                 System.out.println("Top side should be less than bottom!");
             }

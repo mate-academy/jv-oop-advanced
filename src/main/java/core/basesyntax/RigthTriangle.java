@@ -1,10 +1,10 @@
 package core.basesyntax;
 
 public class RigthTriangle extends Figure implements State {
-    private double leg1 = 0;
-    private double leg2 = 0;
-    private double hypotenuse = 0;
-    private String color = BLUE;
+    private double leg1;
+    private double leg2;
+    private double hypotenuse;
+    private String color;
 
     public RigthTriangle(double leg1, double leg2, double hypotenuse) {
         if (leg1 > 0 && leg2 > 0 && hypotenuse > 0) {
@@ -12,6 +12,7 @@ public class RigthTriangle extends Figure implements State {
                 this.leg1 = leg1;
                 this.leg2 = leg2;
                 this.hypotenuse = hypotenuse;
+                color = BLUE;
             } else {
                 System.out.println("Pythagorean theorem is not met");
             }

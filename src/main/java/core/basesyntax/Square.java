@@ -1,12 +1,13 @@
 package core.basesyntax;
 
 public class Square extends Figure implements State {
-    private double sideLen = 0;
-    private String color = RED;
+    private double sideLen;
+    private String color;
 
     public Square(double side) {
         if (side > 0) {
             this.sideLen = side;
+            color = RED;
         } else {
             System.out.println("Side cannot be less than 0 or equal 0");
         }

@@ -1,12 +1,13 @@
 package core.basesyntax;
 
 public class Circle extends Figure implements State {
-    private double radius = 0;
-    private String color = BLACK;
+    private double radius;
+    private String color;
 
     public Circle(double radius) {
         if (radius > 0) {
             this.radius = radius;
+            color = BLACK;
         } else {
             System.out.println("Radius cannot be less than 0 or equal 0");
         }
