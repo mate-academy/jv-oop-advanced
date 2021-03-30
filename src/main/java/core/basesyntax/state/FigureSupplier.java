@@ -7,7 +7,7 @@ import core.basesyntax.figures.RightTriangle;
 import core.basesyntax.figures.Square;
 
 public class FigureSupplier {
-    private static int randomNumber = 10;
+    private static final int RANDOM_NUMBER = 10;
     private static String [] figureArray = {"Circle", "Isosceles Trapezoid", "Rectangle",
             "Right Triangle", "Square"};
 
@@ -38,6 +38,6 @@ public class FigureSupplier {
     }
 
     private static int getRandomNumber() {
-        return (int)((Math.random() * randomNumber) + 1);
+        return (int)((Math.random() * RANDOM_NUMBER) + 1);
     }
 }
