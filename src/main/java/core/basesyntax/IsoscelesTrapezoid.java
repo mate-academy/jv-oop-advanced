@@ -5,8 +5,8 @@ public class IsoscelesTrapezoid extends Figure {
     private double sizeOfTop;
     private double sizeOfBottom;
 
-    public IsoscelesTrapezoid(double sizeOfSide, double sizeOfBottom) {
-        super("Isosceles trapezoid");
+    public IsoscelesTrapezoid(double sizeOfSide, double sizeOfBottom, String color) {
+        super("Isosceles trapezoid", color);
         this.sizeOfSide = sizeOfSide;
         this.sizeOfBottom = sizeOfBottom;
         this.sizeOfTop = FigureSupplier.lengthGen(sizeOfBottom, sizeOfSide);

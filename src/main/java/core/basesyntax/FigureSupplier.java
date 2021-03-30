@@ -16,15 +16,15 @@ public class FigureSupplier {
 
         switch ((int)(Math.random() * (FIRST)) + 1) {
             case 1 :
-                return new Square(lengthGen());
+                return new Square(lengthGen(), ColorSupplier.colorGen());
             case 2 :
-                return new Rectangle(lengthGen(),lengthGen());
+                return new Rectangle(lengthGen(),lengthGen(), ColorSupplier.colorGen());
             case 3 :
-                return new Circle(lengthGen());
+                return new Circle(lengthGen(), ColorSupplier.colorGen());
             case 4 :
-                return new IsoscelesTrapezoid(lengthGen(), lengthGen());
+                return new IsoscelesTrapezoid(lengthGen(), lengthGen(), ColorSupplier.colorGen());
             default :
-                return new RightTriangle(lengthGen(), lengthGen());
+                return new RightTriangle(lengthGen(), lengthGen(), ColorSupplier.colorGen());
         }
     }
 }

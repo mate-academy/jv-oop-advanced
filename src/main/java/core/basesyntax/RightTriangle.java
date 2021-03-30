@@ -5,8 +5,8 @@ public class RightTriangle extends Figure {
     private double sizeofSecondLeg;
     private double sizeOfHypotenuse;
 
-    public RightTriangle(double sizeOfFirstLeg, double sizeofSecondLeg) {
-        super("Right triangle");
+    public RightTriangle(double sizeOfFirstLeg, double sizeofSecondLeg, String color) {
+        super("Right triangle",color);
         this.sizeOfFirstLeg = sizeOfFirstLeg;
         this.sizeofSecondLeg = sizeofSecondLeg;
         this.sizeOfHypotenuse = Math.sqrt(sizeOfFirstLeg * sizeOfFirstLeg
