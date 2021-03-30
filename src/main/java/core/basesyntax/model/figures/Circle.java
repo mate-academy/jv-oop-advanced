@@ -5,9 +5,9 @@ import core.basesyntax.Figure;
 public class Circle extends Figure {
     private double radius;
 
-    public Circle(double radius) {
+    public Circle(double radius, String color, String identification) {
+        super(color, identification);
         this.radius = radius;
-        setIdentification("circle");
     }
 
     public void setRadius(double radius) {

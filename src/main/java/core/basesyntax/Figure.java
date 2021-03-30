@@ -1,19 +1,15 @@
 package core.basesyntax;
 
-import core.basesyntax.model.behavior.Areable;
+import core.basesyntax.model.behavior.AreaCalculator;
 import core.basesyntax.model.behavior.Drawable;
-import core.basesyntax.model.state.ColorSupplier;
 
-public abstract class Figure implements Areable, Drawable {
+public abstract class Figure implements AreaCalculator, Drawable {
     private String identification;
     private String color;
 
-    public Figure() {
-        color = ColorSupplier.generateColor();
-    }
-
-    protected void setIdentification(String identification) {
+    public Figure(String color, String identification) {
         this.identification = identification;
+        this.color = color;
     }
 
     public String getColor() {

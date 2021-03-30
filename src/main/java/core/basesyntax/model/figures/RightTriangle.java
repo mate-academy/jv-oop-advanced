@@ -6,10 +6,10 @@ public class RightTriangle extends Figure {
     private double legA;
     private double legB;
 
-    public RightTriangle(double legA, double legB) {
+    public RightTriangle(double legA, double legB, String color, String identification) {
+        super(color, identification);
         this.legA = legA;
         this.legB = legB;
-        setIdentification("right triangle");
     }
 
     public void setLegA(double legA) {

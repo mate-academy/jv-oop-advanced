@@ -1,5 +1,5 @@
 package core.basesyntax.model.behavior;
 
-public interface Areable {
+public interface AreaCalculator {
     double getArea();
 }

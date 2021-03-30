@@ -6,10 +6,10 @@ public class Rectangle extends Figure {
     private double length;
     private double width;
 
-    public Rectangle(double length, double width) {
+    public Rectangle(double length, double width, String color, String identification) {
+        super(color, identification);
         this.length = length;
         this.width = width;
-        setIdentification("rectangle");
     }
 
     public void setLength(double length) {

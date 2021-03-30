@@ -7,11 +7,12 @@ public class IsoscelesTrapezoid extends Figure {
     private double baseB;
     private double side;
 
-    public IsoscelesTrapezoid(double baseA, double baseB, double side) {
+    public IsoscelesTrapezoid(double baseA, double baseB, double side, String color,
+                              String identification) {
+        super(color, identification);
         this.baseA = baseA;
         this.baseB = baseB;
         this.side = side;
-        setIdentification("isosceles trapezoid");
     }
 
     public void setBaseA(double baseA) {
