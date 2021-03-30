@@ -7,11 +7,11 @@ public class IsoscelesTrapezoid extends Figure {
     private int baseB;
     private int height;
 
-    public IsoscelesTrapezoid(String name) {
-        super(name);
-        baseA = (int)((Math.random() * 10) + 1);
-        baseB = (int)((Math.random() * 10) + 1);
-        height = (int)((Math.random() * 10) + 1);
+    public IsoscelesTrapezoid(String name, String color) {
+        super(name, color);
+        baseA = getRandomNumber();
+        baseB = getRandomNumber();
+        height = getRandomNumber();
     }
 
     @Override

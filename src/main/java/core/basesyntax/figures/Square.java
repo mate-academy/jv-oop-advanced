@@ -5,9 +5,9 @@ import core.basesyntax.state.Figure;
 public class Square extends Figure {
     private int side;
 
-    public Square(String name) {
-        super(name);
-        side = (int)((Math.random() * 10) + 1);
+    public Square(String name, String color) {
+        super(name, color);
+        side = getRandomNumber();
     }
 
     @Override

@@ -6,10 +6,10 @@ public class Rectangle extends Figure {
     private int length;
     private int width;
 
-    public Rectangle(String name) {
-        super(name);
-        length = (int)((Math.random() * 10) + 1);
-        width = (int)((Math.random() * 10) + 1);
+    public Rectangle(String name, String color) {
+        super(name, color);
+        length = getRandomNumber();
+        width = getRandomNumber();
     }
 
     @Override

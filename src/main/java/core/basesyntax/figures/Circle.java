@@ -5,9 +5,9 @@ import core.basesyntax.state.Figure;
 public class Circle extends Figure {
     private int radius;
 
-    public Circle(String name) {
-        super(name);
-        radius = (int)((Math.random() * 10) + 1);
+    public Circle(String name, String color) {
+        super(name, color);
+        radius = getRandomNumber();
     }
 
     @Override

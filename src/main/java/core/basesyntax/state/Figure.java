@@ -1,15 +1,15 @@
 package core.basesyntax.state;
 
-import core.basesyntax.behavior.FigureArea;
-import core.basesyntax.behavior.FigureInformation;
+import core.basesyntax.behavior.AreaCalculator;
+import core.basesyntax.behavior.Drawable;
 
-public abstract class Figure implements FigureInformation, FigureArea {
+public abstract class Figure implements Drawable, AreaCalculator {
     private String name;
     private String color;
 
-    public Figure(String name) {
+    public Figure(String name, String color) {
         this.name = name;
-        color = ColorSupplier.getRandomColor();
+        this.color = color;
     }
 
     public String getName() {
@@ -20,8 +20,8 @@ public abstract class Figure implements FigureInformation, FigureArea {
         return color;
     }
 
-    public void setColor(String name, String color) {
-        this.color = color;
+    public int getRandomNumber() {
+        return (int)((Math.random() * 10) + 1);
     }
 
 }

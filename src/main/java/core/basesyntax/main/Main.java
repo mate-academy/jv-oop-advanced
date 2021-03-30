@@ -5,7 +5,8 @@ import core.basesyntax.state.FigureSupplier;
 
 public class Main {
     public static void main(String[] args) {
-        Figure[] randomFigureArray = new Figure[(int)((Math.random() * 5) + 1)];
+        int figuresNumber = 5;
+        Figure[] randomFigureArray = new Figure[(int)((Math.random() * figuresNumber) + 1)];
 
         for (int i = 0; i < randomFigureArray.length; i++) {
             randomFigureArray[i] = FigureSupplier.getRandomFigure();

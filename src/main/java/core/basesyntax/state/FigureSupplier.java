@@ -13,16 +13,18 @@ public class FigureSupplier {
     public static Figure getRandomFigure() {
         int randomNumber = (int)(Math.random() * figureArray.length);
 
-        if (randomNumber == 0) {
-            return new Circle(figureArray[randomNumber]);
-        } else if (randomNumber == 1) {
-            return new IsoscelesTrapezoid(figureArray[randomNumber]);
-        } else if (randomNumber == 2) {
-            return new Rectangle(figureArray[randomNumber]);
-        } else if (randomNumber == 3) {
-            return new RightTriangle(figureArray[randomNumber]);
-        } else {
-            return new Square(figureArray[randomNumber]);
+        switch (randomNumber) {
+            case 0:
+                return new Circle(figureArray[randomNumber], ColorSupplier.getRandomColor());
+            case 1:
+                return new IsoscelesTrapezoid(figureArray[randomNumber], ColorSupplier.getRandomColor());
+            case 2:
+                return new Rectangle(figureArray[randomNumber], ColorSupplier.getRandomColor());
+            case 3:
+                return new RightTriangle(figureArray[randomNumber], ColorSupplier.getRandomColor());
+            default:
+                return new Square(figureArray[randomNumber], ColorSupplier.getRandomColor());
         }
+
     }
 }
