@@ -6,10 +6,10 @@ public class RightTriangle extends Figure {
     private int sideA;
     private int sideB;
 
-    public RightTriangle(String name, String color) {
+    public RightTriangle(String name, String color, int sideA, int sideB) {
         super(name, color);
-        sideA = getRandomNumber();
-        sideB = getRandomNumber();
+        this.sideA = sideA;
+        this.sideB = sideB;
     }
 
     @Override

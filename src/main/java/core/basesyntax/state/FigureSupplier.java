@@ -15,17 +15,26 @@ public class FigureSupplier {
 
         switch (randomNumber) {
             case 0:
-                return new Circle(figureArray[randomNumber], ColorSupplier.getRandomColor());
+                return new Circle(figureArray[randomNumber], ColorSupplier.getRandomColor(),
+                        getRandomNumber());
             case 1:
                 return new IsoscelesTrapezoid(figureArray[randomNumber],
-                        ColorSupplier.getRandomColor());
+                        ColorSupplier.getRandomColor(), getRandomNumber(),
+                        getRandomNumber(), getRandomNumber());
             case 2:
-                return new Rectangle(figureArray[randomNumber], ColorSupplier.getRandomColor());
+                return new Rectangle(figureArray[randomNumber], ColorSupplier.getRandomColor(),
+                        getRandomNumber(), getRandomNumber());
             case 3:
-                return new RightTriangle(figureArray[randomNumber], ColorSupplier.getRandomColor());
+                return new RightTriangle(figureArray[randomNumber], ColorSupplier.getRandomColor(),
+                        getRandomNumber(), getRandomNumber());
             default:
-                return new Square(figureArray[randomNumber], ColorSupplier.getRandomColor());
+                return new Square(figureArray[randomNumber], ColorSupplier.getRandomColor(),
+                        getRandomNumber());
         }
 
+    }
+
+    private static int getRandomNumber() {
+        return (int)((Math.random() * 10) + 1);
     }
 }

@@ -20,8 +20,4 @@ public abstract class Figure implements Drawable, AreaCalculator {
         return color;
     }
 
-    public int getRandomNumber() {
-        return (int)((Math.random() * 10) + 1);
-    }
-
 }
