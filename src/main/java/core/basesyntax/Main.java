@@ -2,20 +2,11 @@ package core.basesyntax;
 
 public class Main {
     public static void main(String[] args) {
+        Figure[] figureArray = new Figure[(int)Math.random() * 15 + 10];
 
-        Square sqr = new Square();
-        sqr.drawFigure();
-
-        Rectangle rect = new Rectangle();
-        rect.drawFigure();
-
-        RightTriangle triangle = new RightTriangle();
-        triangle.drawFigure();
-
-        Circle circle = new Circle();
-        circle.drawFigure();
-
-        IsoscelesTrapezoid trapezoid = new IsoscelesTrapezoid();
-        trapezoid.drawFigure();
+        for (int i = 0; i < figureArray.length; i++) {
+            figureArray[i] = new FigureSupplier().figureGenerator();
+            figureArray[i].drawFigure();
+        }
     }
 }

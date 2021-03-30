@@ -5,34 +5,26 @@ public class RightTriangle extends Figure {
     private double sizeofSecondLeg;
     private double sizeOfHypotenuse;
 
-    public RightTriangle(int sizeOfFirstLeg, int sizeofSecondLeg) {
+    public RightTriangle(double sizeOfFirstLeg, double sizeofSecondLeg) {
+        super(ColorSupplier.colorGen(), "Right triangle");
         this.sizeOfFirstLeg = sizeOfFirstLeg;
         this.sizeofSecondLeg = sizeofSecondLeg;
         this.sizeOfHypotenuse = Math.sqrt(sizeOfFirstLeg * sizeOfFirstLeg
                 + sizeofSecondLeg * sizeofSecondLeg);
-        this.color = ColorSupplier.colorGen();
-    }
-
-    public RightTriangle() {
-        this.sizeOfFirstLeg = FigureSupplier.lengthGen();
-        this.sizeofSecondLeg = FigureSupplier.lengthGen();
-        this.sizeOfHypotenuse = Math.sqrt(sizeOfFirstLeg * sizeOfFirstLeg
-                + sizeofSecondLeg * sizeofSecondLeg);
-        this.color = ColorSupplier.colorGen();
     }
 
     @Override
-    public double calcArea() {
+    public double calculateArea() {
         return sizeofSecondLeg * sizeOfFirstLeg / 2;
     }
 
     @Override
     public void drawFigure() {
-        System.out.println("Figure: right triangle,"
-                + " area : " + this.calcArea() + " sq. units,"
+        System.out.println("Figure:" + getName()
+                + " area : " + this.calculateArea() + " sq. units,"
                 + " first leg length : " + this.sizeOfFirstLeg
                 + " second leg length : " + this.sizeofSecondLeg
                 + " hypotenuse length : " + this.sizeOfHypotenuse
-                + " color: " + color);
+                + " color: " + getColor());
     }
 }

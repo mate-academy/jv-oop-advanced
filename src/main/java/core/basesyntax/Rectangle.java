@@ -4,29 +4,23 @@ public class Rectangle extends Figure {
     private double sizeOfFirstSide;
     private double sizeOfSecondSide;
 
-    public Rectangle(int sizeOfFirstSide, int sizeOfSecondSide) {
+    public Rectangle(double sizeOfFirstSide, double sizeOfSecondSide) {
+        super(ColorSupplier.colorGen(), "Rectangle");
         this.sizeOfFirstSide = sizeOfFirstSide;
         this.sizeOfSecondSide = sizeOfSecondSide;
-        this.color = ColorSupplier.colorGen();
-    }
-
-    public Rectangle() {
-        this.sizeOfFirstSide = FigureSupplier.lengthGen();
-        this.sizeOfSecondSide = FigureSupplier.lengthGen();
-        this.color = ColorSupplier.colorGen();
     }
 
     @Override
-    public double calcArea() {
+    public double calculateArea() {
         return this.sizeOfSecondSide * this.sizeOfFirstSide;
     }
 
     @Override
     public void drawFigure() {
-        System.out.println("Figure: rectangle,"
-                + " area : " + this.calcArea() + " sq. units,"
+        System.out.println("Figure:" + getName()
+                + " area : " + this.calculateArea() + " sq. units,"
                 + " first side length : " + this.sizeOfFirstSide
                 + " second side length : " + this.sizeOfSecondSide
-                + " color: " + color);
+                + " color: " + getColor());
     }
 }

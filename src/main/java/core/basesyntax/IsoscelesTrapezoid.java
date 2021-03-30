@@ -5,22 +5,15 @@ public class IsoscelesTrapezoid extends Figure {
     private double sizeOfTop;
     private double sizeOfBottom;
 
-    public IsoscelesTrapezoid(double sizeOfSide, double sizeOfTop, double sizeOfBottom) {
+    public IsoscelesTrapezoid(double sizeOfSide, double sizeOfBottom) {
+        super(ColorSupplier.colorGen(),"Isosceles trapezoid");
         this.sizeOfSide = sizeOfSide;
         this.sizeOfBottom = sizeOfBottom;
-        this.sizeOfTop = sizeOfTop;
-        this.color = ColorSupplier.colorGen();
-    }
-
-    public IsoscelesTrapezoid() {
-        this.sizeOfTop = FigureSupplier.lengthGen();
-        this.sizeOfSide = FigureSupplier.lengthGen();
-        this.sizeOfBottom = FigureSupplier.lengthGen(sizeOfTop, sizeOfSide);
-        this.color = ColorSupplier.colorGen();
+        this.sizeOfTop = FigureSupplier.lengthGen(sizeOfBottom, sizeOfSide);
     }
 
     @Override
-    public double calcArea() {
+    public double calculateArea() {
         if (sizeOfBottom - sizeOfTop + 2 * sizeOfSide < 0
                 || sizeOfTop - sizeOfBottom + 2 * sizeOfSide < 0) {
             System.out.println("there is no such isosceles trapezoid");
@@ -34,11 +27,11 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void drawFigure() {
-        System.out.println("Figure: isosceles trapezoid,"
-                + " area : " + this.calcArea() + " sq. units,"
+        System.out.println("Figure:" + getName()
+                + " area : " + this.calculateArea() + " sq. units,"
                 + " top length : " + this.sizeOfTop
                 + " bot length : " + this.sizeOfBottom
                 + " side length : " + this.sizeOfSide
-                + " color: " + color);
+                + " color: " + getColor());
     }
 }

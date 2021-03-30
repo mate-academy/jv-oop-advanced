@@ -3,26 +3,21 @@ package core.basesyntax;
 public class Square extends Figure {
     private double sizeOfSide;
 
-    public Square(int sizeOfSide) {
+    public Square(double sizeOfSide) {
+        super(ColorSupplier.colorGen(), "Square");
         this.sizeOfSide = sizeOfSide;
-        this.color = ColorSupplier.colorGen();
-    }
-
-    public Square() {
-        this.sizeOfSide = FigureSupplier.lengthGen();
-        this.color = ColorSupplier.colorGen();
     }
 
     @Override
-    public double calcArea() {
+    public double calculateArea() {
         return this.sizeOfSide * this.sizeOfSide;
     }
 
     @Override
     public void drawFigure() {
-        System.out.println("Figure: square,"
-                + " area : " + calcArea() + " sq. units,"
+        System.out.println("Figure:" + getName()
+                + " area : " + calculateArea() + " sq. units,"
                 + " side length : " + sizeOfSide
-                + " color: " + color);
+                + " color: " + getColor());
     }
 }
