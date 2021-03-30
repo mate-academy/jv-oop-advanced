@@ -17,6 +17,7 @@ public class Main<figure> {
                 Figure isoscelesTrapezoid = new IsoscelesTrapezoid(random.nextInt(sizeMax), random.nextInt(sizeMax), random.nextInt(sizeMax));
             case 3:
                 Figure rightTriangle = new RightTriangle(random.nextInt(sizeMax));
+                return;
             default:
                 Figure square = new Square(random.nextInt(sizeMax));
         }
