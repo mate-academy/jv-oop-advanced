@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RigthTriangle extends Figure implements State {
+public class RigthTriangle extends Behaviour implements State {
     private double leg1;
     private double leg2;
     private double hypotenuse;

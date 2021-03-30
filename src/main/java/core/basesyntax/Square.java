@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends Figure implements State {
+public class Square extends Behaviour implements State {
     private double sideLen;
     private String color;
 

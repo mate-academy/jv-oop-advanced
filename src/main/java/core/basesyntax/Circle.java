@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements State {
+public class Circle extends Behaviour implements State {
     private double radius;
     private String color;
 

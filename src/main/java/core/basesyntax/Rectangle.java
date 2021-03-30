@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements State {
+public class Rectangle extends Behaviour implements State {
     private double side1;
     private double side2;
     private String color;

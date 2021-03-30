@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements State {
+public class IsoscelesTrapezoid extends Behaviour implements State {
     private double topSide;
     private double botSide;
     private double lrSide;
