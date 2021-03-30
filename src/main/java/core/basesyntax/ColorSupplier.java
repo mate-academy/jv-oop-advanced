@@ -1,9 +1,10 @@
 package core.basesyntax;
 
 public class ColorSupplier {
+    private static final int FIGURE_NUMBER = 5;
+
     public static String getColour() {
-        int random = (int) (Math.random() * (5 - 1)) + 1;
-        switch (random) {
+        switch ((int) Math.random() * FIGURE_NUMBER + 1) {
             case 1:
                 return "blue";
             case 2:
