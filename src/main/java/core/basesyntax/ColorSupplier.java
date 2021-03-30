@@ -1,10 +1,10 @@
 package core.basesyntax;
 
 public class ColorSupplier {
-    private static final int FIGURE_NUMBER = 5;
+    private static final int RANDOM_COLOUR_LIMIT = 5;
 
     public static String getColour() {
-        switch ((int) Math.random() * FIGURE_NUMBER + 1) {
+        switch ((int) ((Math.random() * RANDOM_COLOUR_LIMIT) + 1)) {
             case 1:
                 return "blue";
             case 2:
