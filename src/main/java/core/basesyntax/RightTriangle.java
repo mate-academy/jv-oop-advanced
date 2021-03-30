@@ -1,13 +1,13 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private int side1;
-    private int side2;
+    private int sideOne;
+    private int sideTwo;
 
-    public RightTriangle(String figureProperty, String color, int side1, int side2) {
+    public RightTriangle(String figureProperty, String color, int sideOne, int sideTwo) {
         super(figureProperty, color);
-        this.side1 = side1;
-        this.side2 = side2;
+        this.sideOne = sideOne;
+        this.sideTwo = sideTwo;
     }
 
     @Override
@@ -19,26 +19,26 @@ public class RightTriangle extends Figure {
 
     @Override
     public double getParameters() {
-        return side1 * side2 / 2.0;
+        return sideOne * sideTwo / 2.0;
     }
 
-    public int getSide1() {
-        return side1;
+    public int getSideOne() {
+        return sideOne;
     }
 
-    public int getSide2() {
-        return side2;
+    public int getSideTwo() {
+        return sideTwo;
     }
 
-    public void setSide1() {
-        this.side1 = side1;
+    public void setSideOne() {
+        this.sideOne = sideOne;
     }
 
-    public void setSide2() {
-        this.side2 = side2;
+    public void setSideTwo() {
+        this.sideTwo = sideTwo;
     }
 
     public double hypotenuse() {
-        return Math.hypot(side1, side2);
+        return Math.hypot(sideOne, sideTwo);
     }
 }

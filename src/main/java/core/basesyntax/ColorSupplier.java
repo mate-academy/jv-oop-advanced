@@ -26,7 +26,6 @@ public class ColorSupplier {
                 return "purple";
             default:
                 return "gray";
-
         }
     }
 }

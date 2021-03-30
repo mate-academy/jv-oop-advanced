@@ -14,7 +14,6 @@ public class FigureSupplier {
             case 0:
                 return new Circle("Circle", ColorSupplier.colorGenerator(),
                         random.nextInt(VALUE_LIMIT));
-
             case 1:
                 return new Rectangle("Rectangle", ColorSupplier.colorGenerator(),
                         random.nextInt(VALUE_LIMIT), random.nextInt(VALUE_LIMIT));
@@ -29,6 +28,5 @@ public class FigureSupplier {
                 return new Square("Square", ColorSupplier.colorGenerator(),
                         random.nextInt(VALUE_LIMIT));
         }
-
     }
 }
