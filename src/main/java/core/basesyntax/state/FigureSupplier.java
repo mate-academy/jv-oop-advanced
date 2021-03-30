@@ -7,34 +7,37 @@ import core.basesyntax.figures.RightTriangle;
 import core.basesyntax.figures.Square;
 
 public class FigureSupplier {
+    private static int randomNumber = 10;
     private static String [] figureArray = {"Circle", "Isosceles Trapezoid", "Rectangle",
             "Right Triangle", "Square"};
 
     public static Figure getRandomFigure() {
-        int randomNumber = (int)(Math.random() * figureArray.length);
+        int randomFigureNumber = (int)(Math.random() * figureArray.length);
 
-        switch (randomNumber) {
+        switch (randomFigureNumber) {
             case 0:
-                return new Circle(figureArray[randomNumber], ColorSupplier.getRandomColor(),
+                return new Circle(figureArray[randomFigureNumber], ColorSupplier.getRandomColor(),
                         getRandomNumber());
             case 1:
-                return new IsoscelesTrapezoid(figureArray[randomNumber],
+                return new IsoscelesTrapezoid(figureArray[randomFigureNumber],
                         ColorSupplier.getRandomColor(), getRandomNumber(),
                         getRandomNumber(), getRandomNumber());
             case 2:
-                return new Rectangle(figureArray[randomNumber], ColorSupplier.getRandomColor(),
+                return new Rectangle(figureArray[randomFigureNumber],
+                        ColorSupplier.getRandomColor(),
                         getRandomNumber(), getRandomNumber());
             case 3:
-                return new RightTriangle(figureArray[randomNumber], ColorSupplier.getRandomColor(),
+                return new RightTriangle(figureArray[randomFigureNumber],
+                        ColorSupplier.getRandomColor(),
                         getRandomNumber(), getRandomNumber());
             default:
-                return new Square(figureArray[randomNumber], ColorSupplier.getRandomColor(),
+                return new Square(figureArray[randomFigureNumber], ColorSupplier.getRandomColor(),
                         getRandomNumber());
         }
 
     }
 
     private static int getRandomNumber() {
-        return (int)((Math.random() * 10) + 1);
+        return (int)((Math.random() * randomNumber) + 1);
     }
 }
