@@ -17,7 +17,8 @@ public class FigureSupplier {
             case 0:
                 return new Circle(figureArray[randomNumber], ColorSupplier.getRandomColor());
             case 1:
-                return new IsoscelesTrapezoid(figureArray[randomNumber], ColorSupplier.getRandomColor());
+                return new IsoscelesTrapezoid(figureArray[randomNumber],
+                        ColorSupplier.getRandomColor());
             case 2:
                 return new Rectangle(figureArray[randomNumber], ColorSupplier.getRandomColor());
             case 3:
