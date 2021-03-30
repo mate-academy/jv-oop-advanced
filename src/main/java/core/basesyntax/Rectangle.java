@@ -5,7 +5,7 @@ public class Rectangle extends Figure {
     private double sizeOfSecondSide;
 
     public Rectangle(double sizeOfFirstSide, double sizeOfSecondSide) {
-        super(ColorSupplier.colorGen(), "Rectangle");
+        super("Rectangle");
         this.sizeOfFirstSide = sizeOfFirstSide;
         this.sizeOfSecondSide = sizeOfSecondSide;
     }

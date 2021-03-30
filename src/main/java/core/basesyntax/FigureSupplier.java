@@ -2,13 +2,14 @@ package core.basesyntax;
 
 public class FigureSupplier {
     private static final int FIRST = 5;
+    private static final int LENGTH_RANDOM_LIMIT = 100;
 
     public static double lengthGen() {
-        return Math.random() * 100 + 1;
+        return Math.random() * LENGTH_RANDOM_LIMIT + 1;
     }
 
-    public static double lengthGen(double value1, double value2) {
-        return Math.random() * (2 * value2 + 1) + value1;
+    public static double lengthGen(double topSide, double side) {
+        return Math.random() * (2 * side + 1) + topSide;
     }
 
     public Figure figureGenerator() {
@@ -22,10 +23,8 @@ public class FigureSupplier {
                 return new Circle(lengthGen());
             case 4 :
                 return new IsoscelesTrapezoid(lengthGen(), lengthGen());
-            case 5 :
-                return new RightTriangle(lengthGen(), lengthGen());
             default :
-                return null;
+                return new RightTriangle(lengthGen(), lengthGen());
         }
     }
 }

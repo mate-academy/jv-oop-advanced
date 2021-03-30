@@ -1,11 +1,11 @@
 package core.basesyntax;
 
-public abstract class Figure implements Behavior, Drawing {
+public abstract class Figure implements AreaCalculator, Drawer {
     private String color;
     private String name;
 
-    Figure(String color, String name) {
-        this.color = color;
+    Figure(String name) {
+        this.color = ColorSupplier.colorGen();
         this.name = name;
     }
 

@@ -4,7 +4,7 @@ public class Square extends Figure {
     private double sizeOfSide;
 
     public Square(double sizeOfSide) {
-        super(ColorSupplier.colorGen(), "Square");
+        super("Square");
         this.sizeOfSide = sizeOfSide;
     }
 
