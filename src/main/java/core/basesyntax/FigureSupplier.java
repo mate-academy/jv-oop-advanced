@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private Square square;
+    private Shape shape;
     private IsoscelesTrapezoid isoscelesTrapezoid;
     private RightTriangle rightTriangle;
     private Rectangle rectangle;
