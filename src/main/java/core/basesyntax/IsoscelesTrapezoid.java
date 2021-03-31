@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figures implements Behaviour {
+public class IsoscelesTrapezoid extends Figures {
     private int topSide;
     private int bottomSide;
     private int height;
@@ -37,7 +37,7 @@ public class IsoscelesTrapezoid extends Figures implements Behaviour {
     }
 
     @Override
-    public void getDraw() {
+    public void draw() {
         System.out.println("Figure: " + getName() + ", area: "
                 + (int) getArea() + " sq. units, top side length: " + getTopSide()
                 + " units, bottom side length: " + getBottomSide()

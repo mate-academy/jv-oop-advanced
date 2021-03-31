@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figures implements Behaviour {
+public class RightTriangle extends Figures {
     private int triangleSide;
 
     public RightTriangle(String name, String color, int triangleSide) {
@@ -17,7 +17,7 @@ public class RightTriangle extends Figures implements Behaviour {
     }
 
     @Override
-    public void getDraw() {
+    public void draw() {
         System.out.println("Figure: " + getName() + ", area: "
                 + (int) getArea() + " sq. units, side length: " + getTriangleSide()
                 + " units, color: " + getColor());

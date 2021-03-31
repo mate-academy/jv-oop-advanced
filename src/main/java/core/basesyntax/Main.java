@@ -11,7 +11,7 @@ public class Main {
         }
 
         for (Figures object : figuresList) {
-            object.getDraw();
+            object.draw();
         }
     }
 }
