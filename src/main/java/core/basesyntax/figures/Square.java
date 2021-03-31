@@ -24,6 +24,5 @@ public class Square implements Shape {
                 + getArea() + " sq. units, side: "
                 + side + " units: color" + color);
     }
-
 }
 

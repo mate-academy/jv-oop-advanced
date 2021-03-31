@@ -26,6 +26,5 @@ public class Rectangle implements Shape {
                 + getArea() + " sq. units, width: " + width + " sq. units, height: "
                 + height + " units: color" + color);
     }
-
 }
 

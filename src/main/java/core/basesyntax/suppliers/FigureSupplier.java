@@ -41,5 +41,4 @@ public class FigureSupplier {
                         "Square", colorSupplier.getColor());
         }
     }
-
 }
