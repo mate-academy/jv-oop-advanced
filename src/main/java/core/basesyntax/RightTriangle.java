@@ -18,7 +18,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String drawArea() {
-        return super.drawArea() + ", hipotenuse: " + getHipitenuse() + " units.";
+    public String draw() {
+        return super.draw() + ", hipotenuse: " + getHipitenuse() + " units.";
     }
 }

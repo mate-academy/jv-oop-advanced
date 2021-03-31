@@ -16,8 +16,8 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String drawArea() {
-        return super.drawArea() + ", first side: " + this.firstSide + ", second side: "
+    public String draw() {
+        return super.draw() + ", first side: " + this.firstSide + ", second side: "
                 + this.secondSide + " units.";
     }
 }

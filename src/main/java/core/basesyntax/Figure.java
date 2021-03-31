@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public abstract class Figure implements DrawingArea {
     private String color;
     private String typeOfFigure;
     private int area;
@@ -42,7 +42,8 @@ public abstract class Figure {
         return totalArea;
     }
 
-    public String drawArea() {
+    @Override
+    public String draw() {
         return "Fugure: " + getTypeOfFigure() + ", color: "
                 + getColor() + ", area: "
                 + getArea() + " sq. units";

@@ -16,7 +16,7 @@ public class IsoscelesTrapezoi extends Figure {
     }
 
     @Override
-    public String drawArea() {
-        return super.drawArea() + ", high: " + this.high + ", avrgLine: " + this.avrgLine;
+    public String draw() {
+        return super.draw() + ", high: " + this.high + ", avrgLine: " + this.avrgLine;
     }
 }
