@@ -57,7 +57,7 @@ public class IsoscelesTrapezoid extends FigureMain implements AreaMethod, Draw {
                 + getArea()
                 + ", sq.units, base1 : "
                 + getBase1() + ", base2 : "
-                + getBase2() + ", height = "
+                + getBase2() + ", height : "
                 + getHeight() + ", color : "
                 + getColor());
     }

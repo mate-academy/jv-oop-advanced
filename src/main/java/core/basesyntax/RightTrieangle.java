@@ -45,7 +45,7 @@ public class RightTrieangle extends FigureMain implements AreaMethod, Draw {
         System.out.println("Figure : "
                 + getName() + ", area: "
                 + getArea() + " sq.units, radius : "
-                + getBase() + ", perpendicular ="
+                + getBase() + ", perpendicular : "
                 + getPerpendicular()
                 + ", color : "
                 + getColor());

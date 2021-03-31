@@ -7,7 +7,7 @@ public class ColorSupplier {
     public static final int max = 6;
 
     public static String getNewColor() {
-        ColorSupplier colorSupplier = new ColorSupplier();
+
         Random random = new Random();
         int number = random.nextInt(max);
         switch (number) {

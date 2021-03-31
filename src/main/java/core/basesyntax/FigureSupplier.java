@@ -3,12 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier extends ColorSupplier {
-    public static final int random1 = 3;
     public static final int max = 200;
-
     public static final int count = 5;
 
-    private FigureSupplier color = new FigureSupplier();
+    private ColorSupplier color = new ColorSupplier();
 
     public static FigureMain getRandom() {
 

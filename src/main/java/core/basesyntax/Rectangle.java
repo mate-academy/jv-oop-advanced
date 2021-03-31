@@ -46,7 +46,7 @@ public class Rectangle extends FigureMain implements AreaMethod, Draw {
                 + ", area: "
                 + getArea()
                 + " sq.units, wight : "
-                + getWidth() + ", color : "
+                + getWidth() + ", length : "
                 + getLength() + ", color : "
                 + getColor());
     }
