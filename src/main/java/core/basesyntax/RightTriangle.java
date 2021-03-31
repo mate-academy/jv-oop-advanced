@@ -1,29 +1,32 @@
 package core.basesyntax;
 
 public class RightTriangle extends Shapes implements Behaviour {
-    @Override
-    public void draw() {
-
+    private int height;
+    private int leg;
+    public void setHeightLeg(int height, int leg) {
+        this.height = height;
+        this.leg = leg;
     }
 
-    @Override
-    public void area() {
 
+    @Override
+    public int area() {
+        return height * leg;
     }
 
-    @Override
+   /* @Override
     void color() {
 
-    }
+    }*/
 
     @Override
     void figure() {
-
+    System.out.println("RightTriangle");
     }
 
     @Override
     void uniqueProperty() {
-
+    System.out.println("Have 3 corners");
     }
 }
 
