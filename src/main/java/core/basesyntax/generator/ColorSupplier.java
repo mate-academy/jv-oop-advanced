@@ -27,7 +27,6 @@ public class ColorSupplier {
                 color = "Haven`t color";
                 break;
         }
-
         return color;
     }
 }
