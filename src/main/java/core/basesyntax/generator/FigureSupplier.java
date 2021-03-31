@@ -11,7 +11,7 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int NUMBER_OF_FIGURES = 5;
 
-    public static Figure[] generateFigure(int figuresCount) {
+    public  Figure[] generateFigure(int figuresCount) {
         Figure[] figures = new Figure[figuresCount];
         Random random = new Random();
         ColorSupplier colorSupplier = new ColorSupplier();
@@ -51,4 +51,3 @@ public class FigureSupplier {
         return figures;
     }
 }
-

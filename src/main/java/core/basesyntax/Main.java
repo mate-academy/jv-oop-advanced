@@ -6,7 +6,9 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         Random random = new Random();
-        Figure[] figures = FigureSupplier.generateFigure(50);
+        int figureCount = random.nextInt(); // You can change it if you want
+        FigureSupplier figureSupplier = new FigureSupplier();
+        Figure[] figures = figureSupplier.generateFigure(figureCount);
         for (Figure figure : figures) {
             figure.draw();
         }
