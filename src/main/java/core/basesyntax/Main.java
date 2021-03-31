@@ -5,16 +5,23 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         Random r = new Random();
+
         int num = r.nextInt(10000) + 1;
+        Figure[] figArray = new Figure[num];
+        fillArray(figArray);
+        showFigureArray(figArray);
+    }
+
+    public static void fillArray(Figure[] figArr) {
         FigureSupplier figSup = new FigureSupplier();
         ColorSupplier randColor = new ColorSupplier();
-        Figure[] figArray = new Figure[num];
 
-        for (int i = 0; i < num; i++) {
-            figArray[i] = figSup.randFigureProper();
-            randColor.generateColor(figArray[i]);
+        for (int i = 0; i < figArr.length; i++) {
+            do {
+                figArr[i] = figSup.randFigureProper();
+            } while (figArr[i] == null);
+            randColor.generateColor(figArr[i]);
         }
-        showFigureArray(figArray);
     }
 
     public static void showFigureArray(Figure[] figArr) {

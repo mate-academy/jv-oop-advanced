@@ -1,27 +1,24 @@
 package core.basesyntax;
 
 public class Circle extends Figure implements State {
-    private double radius;
+    private final double radius;
     private String color;
 
     public Circle(double radius) {
-        if (radius > 0) {
-            this.radius = radius;
-            color = BLACK;
-        } else {
-            System.out.println("Radius cannot be less than 0 or equal 0");
-        }
+        this.radius = radius;
+        color = BLACK;
+
     }
 
     @Override
-    public double countArea() {
+    public double calculateArea() {
         return Math.PI * radius * radius;
     }
 
     @Override
     public void drawFigure() {
-        System.out.printf("Figure: Circle, area %f sq. units, %s, color %s\n",
-                countArea(), uniqueProperty(), color);
+        System.out.printf("Figure: circle, area %f sq. units, %s, color %s\n",
+                calculateArea(), uniqueProperty(), color);
     }
 
     @Override
