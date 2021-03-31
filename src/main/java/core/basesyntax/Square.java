@@ -1,28 +1,30 @@
 package core.basesyntax;
 
-public class Square extends  Shapes implements  Behaviour{
-    private  int side;
-    public void  setSide (int side) {
+public class Square extends Shapes implements Area, Draw {
+    private int side;
+
+    public void Square(int side) {
         this.side = side;
     }
+
     @Override
-    public int area() {
-    return side * side;
+    public String getDraw() {
+        return ("Picture: " + ",area: " + getArea() + "side length: " + side);
     }
 
-   /* @Override
-    void color() {
-
-    }*/
+    @Override
+    public int getArea() {
+        return side * side;
+    }
 
     @Override
-    void figure() {
-     System.out.println("Square");
+     public String figure() {
+        return "Square";
     }
 
     @Override
     void uniqueProperty() {
-    System.out.println("Have 4 corners 90 degrees");
+        System.out.println("Have 4 corners 90 degrees");
     }
 }
 

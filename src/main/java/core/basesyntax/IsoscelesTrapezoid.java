@@ -1,30 +1,29 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Shapes implements Behaviour{
+public class IsoscelesTrapezoid extends Shapes implements Area,Draw {
     private int side;
     private int height;
 
-    public void setSide(int side, int height) {
+    public void IsoscelesTrapezoid(int side, int height) {
         this.height = height;
         this.side = side;
     }
-    /* @Override
-    public void draw() {
-
-    }*/
 
     @Override
-    public int area() {
+    public String getDraw() {
+        return ("Picture: " + ",area: " + getArea() + ",side length: " + side+", height: "+height);
+    }
+
+    @Override
+    public int getArea() {
         return side * height;
     }
-    /*@Override
-    void color() {
 
-    }*/
+
 
     @Override
-    void figure() {
-    System.out.println("IsoscelesTrapezoid");
+    String figure() {
+    return "IsoscelesTrapezoid";
     }
 
     @Override

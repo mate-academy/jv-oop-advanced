@@ -3,10 +3,11 @@ package core.basesyntax;
 import java.util.Random;
 
 public class ColorSupplier {
+    private final static int LIMIT = 5;
     public String RandomColor() {
         String color = "";
         Random random = new Random();
-        int ran = random.nextInt(5);
+        int ran = random.nextInt(LIMIT);
         switch (ran) {
             case 1:
                 color = "green";

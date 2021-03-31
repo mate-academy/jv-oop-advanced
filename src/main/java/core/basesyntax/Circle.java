@@ -1,23 +1,25 @@
 package core.basesyntax;
 
-public class Circle extends Shapes implements Behaviour{
+public class Circle extends Shapes implements Area, Draw {
     private int radius;
-    public void setRadius(int radius){
+
+    public void Circle(int radius) {
         this.radius = radius;
     }
 
     @Override
-    public int area() {
+    public int getArea() {
         return (int) (Math.PI * radius);
     }
-    /*@Override
-    void color() {
-
-    }*/
 
     @Override
-    void figure() {
-    System.out.println("Circle");
+    public String getDraw() {
+        return ("Picture: " + ",area: " + getArea() + "radius : " + radius);
+    }
+
+    @Override
+    String figure() {
+        return "Circle";
     }
 
     @Override
