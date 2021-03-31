@@ -1,4 +1,7 @@
 package core.basesyntax;
 
-public class Shapes {
+public abstract class Shapes {
+    abstract void figure();
+    abstract void color();
+    abstract void uniqueProperty();
 }
