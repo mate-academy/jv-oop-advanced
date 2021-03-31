@@ -1,6 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.*;
+import core.basesyntax.Area;
+import core.basesyntax.Draw;
+import core.basesyntax.Figure;
 
 public class IsoscelesTrapezoid extends Figure implements Draw, Area {
 
@@ -39,7 +41,6 @@ public class IsoscelesTrapezoid extends Figure implements Draw, Area {
         return height;
     }
 
-
     @Override
     public double getArea() {
         return (getSideA() + getSideB()) / 2 * getHeight();
@@ -47,6 +48,8 @@ public class IsoscelesTrapezoid extends Figure implements Draw, Area {
 
     @Override
     public String getDraw() {
-        return "Figure: isosceles trapezoid, area: " + getArea() + " sq. units, side a length: " + getSideA() + " units, side b length: " + getSideB() + " units, height length: " + getHeight() + " units, color: " + getColor();
+        return "Figure: isosceles trapezoid, area: " + getArea() + " sq. units, side a length: "
+                + getSideA() + " units, side b length: " + getSideB() + " units, height length: "
+                + getHeight() + " units, color: " + getColor();
     }
 }

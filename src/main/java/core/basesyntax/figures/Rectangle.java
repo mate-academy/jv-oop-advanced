@@ -1,6 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.*;
+import core.basesyntax.Area;
+import core.basesyntax.Draw;
+import core.basesyntax.Figure;
 
 public class Rectangle extends Figure implements Draw, Area {
 
@@ -16,6 +18,7 @@ public class Rectangle extends Figure implements Draw, Area {
     public void setSideA(double sideA) {
         this.sideA = sideA;
     }
+
     public double getSideA() {
         return sideA;
     }
@@ -32,8 +35,11 @@ public class Rectangle extends Figure implements Draw, Area {
     public double getArea() {
         return sideA * sideB;
     }
+
     @Override
     public String getDraw() {
-        return "Figure: rectangle, area: " + getArea() + " sq. units, side a length: " + getSideA() + " units, side b length: " + getSideB() + " units, color: " + getColor();
+        return "Figure: rectangle, area: " + getArea() + " sq. units, side a length: "
+                + getSideA() + " units, side b length: " + getSideB() + " units, color: "
+                + getColor();
     }
 }

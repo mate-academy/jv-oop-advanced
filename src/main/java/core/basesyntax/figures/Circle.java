@@ -8,7 +8,6 @@ public class Circle extends Figure implements Draw, Area {
 
     private double radius;
 
-
     public Circle(String color, double radius) {
         this.radius = radius;
         setColor(color);
@@ -24,12 +23,14 @@ public class Circle extends Figure implements Draw, Area {
 
     @Override
     public double getArea() {
-        return  (Math.PI * radius * radius);
+        return (Math.PI * radius * radius);
     }
 
     @Override
     public String getDraw() {
-        return "Figure: circle, area: " + getArea() + " sq. units, radius length: " + getRadius() + " units, color: " + getColor();
+        return "Figure: circle, area: " + getArea() + " sq. units, radius length: "
+                + getRadius() + " units, color: " + getColor();
+
     }
 
 }

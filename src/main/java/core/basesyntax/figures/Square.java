@@ -1,6 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.*;
+import core.basesyntax.Area;
+import core.basesyntax.Draw;
+import core.basesyntax.Figure;
 
 public class Square extends Figure implements Draw, Area {
 
@@ -10,6 +12,7 @@ public class Square extends Figure implements Draw, Area {
         this.sideA = sideA;
         setColor(color);
     }
+
     public void setSideA(double sideA) {
         this.sideA = sideA;
     }
@@ -25,6 +28,7 @@ public class Square extends Figure implements Draw, Area {
 
     @Override
     public String getDraw() {
-        return "Figure: square, area: " + getArea() + " sq. units, side length: " + getSideA() + " units, color: " + getColor();
+        return "Figure: square, area: " + getArea() + " sq. units, side length: "
+                + getSideA() + " units, color: " + getColor();
     }
 }
