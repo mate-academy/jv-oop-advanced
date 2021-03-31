@@ -14,15 +14,20 @@ public class FigureSupplier {
             case 1:
                 return new Square(ColorSupplier.getRandomColor(), random.nextInt(MAX));
             case 2:
-                return new Rectangle(ColorSupplier.getRandomColor(), random.nextInt(MAX), random.nextInt(MAX));
+                return new Rectangle(ColorSupplier.getRandomColor(), random.nextInt(MAX),
+                        random.nextInt(MAX));
             case 3:
-                return new IsoscelesTrapezoid(ColorSupplier.getRandomColor(), random.nextInt(MAX), random.nextInt(MAX), random.nextInt(MAX));
+                return new IsoscelesTrapezoid(ColorSupplier.getRandomColor(),
+                        random.nextInt(MAX), random.nextInt(MAX), random.nextInt(MAX));
             case 4:
-                return new Circle(ColorSupplier.getRandomColor(), random.nextInt(MAX));
+                return new Circle(ColorSupplier.getRandomColor(),
+                        random.nextInt(MAX));
             case 5:
-                return new RightTriangle(ColorSupplier.getRandomColor(), random.nextInt(MAX));
+                return new RightTriangle(ColorSupplier.getRandomColor(),
+                        random.nextInt(MAX));
             default:
-                return new Circle(ColorSupplier.getRandomColor(), random.nextInt(MAX));
+                return new Circle(ColorSupplier.getRandomColor(),
+                        random.nextInt(MAX));
         }
     }
 }
