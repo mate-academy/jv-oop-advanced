@@ -6,7 +6,7 @@ public class FigureSupplier {
     private static final int COUNT_FIGURE = 5;
     private static final int MAX_VALUE = 50;
 
-    public static Figure figure() {
+    public Figure getRandomFigure() {
         Random random = new Random();
         int choose = random.nextInt(COUNT_FIGURE);
 
