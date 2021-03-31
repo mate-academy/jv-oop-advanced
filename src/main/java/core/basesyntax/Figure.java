@@ -1,17 +1,18 @@
 package core.basesyntax;
 
-public abstract class Figure {
-    public abstract double area();
-    public abstract String draw();
+public class Figure implements Draw{
+    private String color;
 
-    private Double sideA;
-
-    public void setSideA(double sideA) {
-        this.sideA = sideA;
+    public void setColor(String color) {
+        this.color = color;
     }
 
-    public double getSideA() {
-        return sideA;
+    public String getColor() {
+        return color;
     }
 
+    @Override
+    public String getDraw() {
+        return null;
+    }
 }

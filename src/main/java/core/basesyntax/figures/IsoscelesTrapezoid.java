@@ -1,15 +1,34 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.ColorSupplier;
+import core.basesyntax.*;
 
-import core.basesyntax.FigureSupplier;
+public class IsoscelesTrapezoid extends Figure implements Draw, Area {
 
-public class IsoscelesTrapezoid extends Rectangle implements ColorSupplier, FigureSupplier {
-
+    private Double sideA;
+    private Double sideB;
     private double height;
 
-    public IsoscelesTrapezoid(double sideA, double sideB) {
-        super(sideA, sideB);
+    public IsoscelesTrapezoid(String color, double sideA, double sideB, double height) {
+        this.sideA = sideA;
+        this.sideB = sideB;
+        this.height = height;
+        setColor(color);
+    }
+
+    public void setSideA(double sideA) {
+        this.sideA = sideA;
+    }
+
+    public Double getSideA() {
+        return sideA;
+    }
+
+    public void setSideB(double sideB) {
+        this.sideB = sideB;
+    }
+
+    public double getSideB() {
+        return sideB;
     }
 
     public void setHeight(double height) {
@@ -20,19 +39,14 @@ public class IsoscelesTrapezoid extends Rectangle implements ColorSupplier, Figu
         return height;
     }
 
-    public IsoscelesTrapezoid(double sideA, double sideB, double height) {
-        setSideA(sideA);
-        setSideB(sideB);
-        this.height = height;
+
+    @Override
+    public double getArea() {
+        return (getSideA() + getSideB()) / 2 * getHeight();
     }
 
     @Override
-    public double area() {
-        return (getSideA() + getSideB()) / 2 * height;
-    }
-
-    @Override
-    public String draw() {
-        return "Figure: isosceles trapezoid, area: " + area() + " sq. units, side a length: " + getSideA() + " units, side b length: " + getSideB() + " units, height length: " + getHeight() + " units, color: " + ColorSupplier.getColor();
+    public String getDraw() {
+        return "Figure: isosceles trapezoid, area: " + getArea() + " sq. units, side a length: " + getSideA() + " units, side b length: " + getSideB() + " units, height length: " + getHeight() + " units, color: " + getColor();
     }
 }

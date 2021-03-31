@@ -1,13 +1,23 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.ColorSupplier;
-import core.basesyntax.Figure;
-import core.basesyntax.FigureSupplier;
+import core.basesyntax.*;
 
-public class Rectangle extends Figure implements ColorSupplier, FigureSupplier {
+public class Rectangle extends Figure implements Draw, Area {
+
+    private Double sideA;
     private Double sideB;
 
-    public Rectangle() {
+    public Rectangle(String color, double sideA, double sideB) {
+        this.sideA = sideA;
+        this.sideB = sideB;
+        setColor(color);
+    }
+
+    public void setSideA(double sideA) {
+        this.sideA = sideA;
+    }
+    public double getSideA() {
+        return sideA;
     }
 
     public void setSideB(double sideB) {
@@ -18,17 +28,12 @@ public class Rectangle extends Figure implements ColorSupplier, FigureSupplier {
         return sideB;
     }
 
-    public  Rectangle(double sideA, double sideB) {
-        setSideA(sideA);
-        this.sideB = sideB;
-    }
-
     @Override
-    public double area() {
-        return getSideA() * sideB;
+    public double getArea() {
+        return sideA * sideB;
     }
     @Override
-    public String draw() {
-        return "Figure: rectangle, area: " + area() + " sq. units, side a length: " + getSideA() + " units, side b length: " + sideB + " units, color: " + ColorSupplier.getColor();
+    public String getDraw() {
+        return "Figure: rectangle, area: " + getArea() + " sq. units, side a length: " + getSideA() + " units, side b length: " + getSideB() + " units, color: " + getColor();
     }
 }
