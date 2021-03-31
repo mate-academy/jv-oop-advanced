@@ -1,16 +1,16 @@
 package core.basesyntax.figure;
 
 import core.basesyntax.Figure;
-import core.basesyntax.IShape;
+import core.basesyntax.generator.ColorSupplier;
 
-public class Rectangle extends Figure implements IShape {
+public class Rectangle extends Figure {
     private double weight;
     private double length;
 
     public Rectangle(double weight, double length, String name) {
+        super(ColorSupplier.setColors(), name);
         this.weight = weight;
         this.length = length;
-        setName(name);
     }
 
     @Override

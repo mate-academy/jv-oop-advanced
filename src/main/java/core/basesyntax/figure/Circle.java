@@ -1,14 +1,14 @@
 package core.basesyntax.figure;
 
 import core.basesyntax.Figure;
-import core.basesyntax.IShape;
+import core.basesyntax.generator.ColorSupplier;
 
-public class Circle extends Figure implements IShape {
+public class Circle extends Figure {
     private double radius;
 
     public Circle(double radius, String name) {
+        super(ColorSupplier.setColors(), name);
         this.radius = radius;
-        setName(name);
     }
 
     @Override

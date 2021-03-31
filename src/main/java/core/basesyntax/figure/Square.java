@@ -1,14 +1,14 @@
 package core.basesyntax.figure;
 
 import core.basesyntax.Figure;
-import core.basesyntax.IShape;
+import core.basesyntax.generator.ColorSupplier;
 
-public class Square extends Figure implements IShape {
+public class Square extends Figure {
     private double side;
 
     public Square(double side, String name) {
+        super(ColorSupplier.setColors(), name);
         this.side = side;
-        setName(name);
     }
 
     @Override

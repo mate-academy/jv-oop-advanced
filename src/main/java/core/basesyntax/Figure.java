@@ -1,18 +1,17 @@
 package core.basesyntax;
 
-public abstract class Figure implements IShape {
+public abstract class Figure implements Drawable, AreaCalculator {
     private String color;
     private String name;
+
+    public Figure(String color, String name) {
+        this.color = color;
+        this.name = name;
+    }
 
     public String getColor() {
         return color;
     }
-
-    @Override
-    public abstract void draw();
-
-    @Override
-    public abstract double getArea();
 
     public String getName() {
         return name;

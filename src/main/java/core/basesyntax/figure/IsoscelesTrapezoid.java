@@ -1,18 +1,18 @@
 package core.basesyntax.figure;
 
 import core.basesyntax.Figure;
-import core.basesyntax.IShape;
+import core.basesyntax.generator.ColorSupplier;
 
-public class IsoscelesTrapezoid extends Figure implements IShape {
+public class IsoscelesTrapezoid extends Figure {
     private double height;
     private double sideA;
     private double sideB;
 
     public IsoscelesTrapezoid(double sideA, double sideB, double height, String name) {
+        super(ColorSupplier.setColors(), name);
         this.height = height;
         this.sideA = sideA;
         this.sideB = sideB;
-        setName(name);
     }
 
     @Override

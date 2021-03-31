@@ -1,16 +1,16 @@
 package core.basesyntax.figure;
 
 import core.basesyntax.Figure;
-import core.basesyntax.IShape;
+import core.basesyntax.generator.ColorSupplier;
 
-public class RightTriangle extends Figure implements IShape {
+public class RightTriangle extends Figure {
     private double legA;
     private double legB;
 
     public RightTriangle(double legA, double legB, String name) {
+        super(ColorSupplier.setColors(), name);
         this.legA = legA;
         this.legB = legB;
-        setName(name);
     }
 
     @Override
@@ -20,7 +20,6 @@ public class RightTriangle extends Figure implements IShape {
 
     @Override
     public void draw() {
-
         System.out.println("Figure: " + this.getName()
                 + ", area: " + this.getArea()
                 + " sq. units, leg a: " + this.legA
