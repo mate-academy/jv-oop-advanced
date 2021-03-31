@@ -10,6 +10,7 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator, Drawer
         name = "isosceles trapezoid";
         height = FigureSupplier.getRandomProperties();
     }
+
     @Override
     public String getName() {
         return name;
@@ -32,6 +33,9 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator, Drawer
 
     @Override
     public String draw() {
-        return "Figure: " + getName() + ", area: " + getArea() + ", height: " + getUniqueProp() + ", color: " + getColor();
+        return "Figure: " + getName()
+            + ", area: " + getArea()
+            + ", height: " + getUniqueProp()
+            + ", color: " + getColor();
     }
 }

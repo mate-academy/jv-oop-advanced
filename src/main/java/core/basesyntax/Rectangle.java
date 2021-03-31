@@ -5,10 +5,12 @@ public class Rectangle extends Figure implements AreaCalculator, Drawer {
     private final double height = FigureSupplier.getRandomProperties();
     private final String name;
     private final double perimeter;
+
     public Rectangle() {
         name = "rectangle";
         perimeter = weight + height;
     }
+
     @Override
     public String getName() {
         return name;
@@ -31,7 +33,10 @@ public class Rectangle extends Figure implements AreaCalculator, Drawer {
 
     @Override
     public String draw() {
-        return "Figure: " + getName() + ", area: " + getArea() + ", perimeter: " + getUniqueProp() + ", color: " + getColor();
+        return "Figure: " + getName()
+            + ", area: " + getArea()
+            + ", perimeter: " + getUniqueProp()
+            + ", color: " + getColor();
 
     }
 }

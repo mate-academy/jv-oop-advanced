@@ -6,10 +6,12 @@ public class RightTriangle extends Figure implements AreaCalculator, Drawer {
     private final double hypotenuse = Math.sqrt(Math.pow(oneSide, 2) + Math.pow(secondSide, 2));
     private final String name;
     private final double height;
+
     public RightTriangle() {
         name = "right triangle";
         height = oneSide * secondSide / hypotenuse;
     }
+
     @Override
     public String getName() {
         return name;
@@ -32,6 +34,9 @@ public class RightTriangle extends Figure implements AreaCalculator, Drawer {
 
     @Override
     public String draw() {
-        return "Figure: " + getName() + ", area: " + getArea() + ", height: " + getUniqueProp() + ", color: " + getColor();
+        return "Figure: " + getName()
+            + ", area: " + getArea()
+            + ", height: " + getUniqueProp()
+            + ", color: " + getColor();
     }
 }

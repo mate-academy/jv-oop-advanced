@@ -31,6 +31,9 @@ public class Circle extends Figure implements AreaCalculator, Drawer {
 
     @Override
     public String draw() {
-        return "Figure: " + getName() + ", area: " + getArea() + ", radius: " + getUniqueProp() + ", color: " + getColor();
+        return "Figure: " + getName()
+              + ", area: " + getArea()
+              + ", radius: " + getUniqueProp()
+              + ", color: " + getColor();
     }
 }
