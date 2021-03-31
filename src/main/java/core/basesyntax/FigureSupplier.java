@@ -79,11 +79,13 @@ public class FigureSupplier {
     }
 
     private Figure generateSquare() {
-        return new Square(randomColorGenerator.generateColor(), new Random().nextInt(RANDOM_INT_LIMIT));
+        return new Square(randomColorGenerator.generateColor(),
+                new Random().nextInt(RANDOM_INT_LIMIT));
     }
 
     private Figure generateCircle() {
-        return new Circle(randomColorGenerator.generateColor(), new Random().nextInt(RANDOM_INT_LIMIT));
+        return new Circle(randomColorGenerator.generateColor(),
+                new Random().nextInt(RANDOM_INT_LIMIT));
     }
 }
 
