@@ -1,42 +1,30 @@
 public class IsoscelesTrapezoid extends Figure {
-    private double base;
-    private double top;
-    private double height;
+    private int base;
+    private int top;
+    private int height;
 
-    public IsoscelesTrapezoid(String color, double base, double top, double height) {
+    public IsoscelesTrapezoid(String color, int base, int top, int height) {
         super(color);
         this.base = base;
         this.top = top;
         this.height = height;
     }
 
-    public double getBase() {
+    public int getBase() {
         return base;
     }
 
-    public double getTop() {
+    public int getTop() {
         return top;
     }
 
-    public double getHeight() {
+    public int getHeight() {
         return height;
-    }
-
-    public void setBase(double base) {
-        this.base = base;
-    }
-
-    public void setTop(double top) {
-        this.top = top;
-    }
-
-    public void setHeight(double height) {
-        this.height = height;
     }
 
     @Override
     public double getArea() {
-        return Math.round(((height / 2) * (base + top) * 100) / 100.0);
+        return (height / 2) * (base + top);
     }
 
     @Override

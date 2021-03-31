@@ -1,38 +1,30 @@
 public class Rectangle extends Figure {
-    private double width;
-    private double length;
+    private int width;
+    private int length;
 
-    public Rectangle(String color, double width, double length) {
+    public Rectangle(String color, int width, int length) {
         super(color);
         this.width = width;
         this.length = length;
     }
 
-    public double getWidth() {
+    public int getWidth() {
         return width;
     }
 
-    public double getLength() {
+    public int getLength() {
         return length;
-    }
-
-    public void setWidth(double width) {
-        this.width = width;
-    }
-
-    public void setLength(double length) {
-        this.length = length;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: Rectangle, area: " + getArea() + ", length: "
-                + Math.round(getLength()) + ", width: " + Math.round(getWidth())
-                + ", color: " + getColor());
+        System.out.println("Figure: Rectangle, area: " + String.format("%.2f", getArea())
+                + ", length: " + getLength() + ", width: " + getWidth() + ", color: "
+                + getColor());
     }
 
     @Override
     public double getArea() {
-        return Math.round((width * length * 100) / 100.0);
+        return width * length;
     }
 }

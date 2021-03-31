@@ -1,28 +1,24 @@
 public class Circle extends Figure {
-    private double radius;
+    private int radius;
 
-    public Circle(String color, double radius) {
+    public Circle(String color, int radius) {
         super(color);
         this.radius = radius;
     }
 
-    public double getRadius() {
-        double radius = this.radius;
+    public int getRadius() {
+        int radius = this.radius;
         return radius;
-    }
-
-    public void setRadius(double radius) {
-        this.radius = radius;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: Circle, area: " + getArea() + ", radius: "
-                + Math.round(getRadius()) + ", color: " + getColor());
+        System.out.println("Figure: Circle, area: " + String.format("%.2f", getArea())
+                + ", radius: " + getRadius() + ", color: " + getColor());
     }
 
     @Override
     public double getArea() {
-        return Math.round((Math.PI * radius * radius * 100) / 100.0);
+        return Math.PI * radius * radius;
     }
 }
