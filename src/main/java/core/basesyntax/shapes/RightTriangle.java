@@ -26,7 +26,7 @@ public class RightTriangle extends Shape implements AreaCalculable, Drawable {
         //Figure: triangle, area: 12.5 sq. units, hypotenuse: 7.1 units, color: yellow
         System.out.printf("Figure: " + this.getName() + ", "
                         + "area: %.1f" + " sq. units, "
-                        + " hypotenuse: %.1f" + " units, "
+                        + "hypotenuse: %.1f" + " units, "
                         + "color: " + this.getColor() + "\n",
                 getArea(), getHypotenuse());
     }

@@ -10,7 +10,8 @@ public class HelloWorld {
     private static final int SHAPES_LIMIT = 10;
 
     public static void main(String[] args) {
-        Drawable[] shapeArray = new Drawable[(int) (Math.random() * SHAPES_LIMIT) + 1]; // minimum size of array = 1
+        // minimum size of array = 1
+        Drawable[] shapeArray = new Drawable[(int) (Math.random() * SHAPES_LIMIT) + 1];
         FigureSupplier figureSupplier = new FigureSupplier();
 
         for (int i = 0; i < shapeArray.length; i++) {

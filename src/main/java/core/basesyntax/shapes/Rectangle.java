@@ -4,7 +4,6 @@ public class Rectangle extends Shape implements AreaCalculable, Drawable {
     private double width;
     private double height;
 
-
     public Rectangle(String name, String color, double width, double height) {
         super(name, color);
         this.width = width;

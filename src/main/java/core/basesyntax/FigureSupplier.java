@@ -1,6 +1,11 @@
 package core.basesyntax;
 
-import core.basesyntax.shapes.*;
+import core.basesyntax.shapes.Circle;
+import core.basesyntax.shapes.IsoscelesTrapezoid;
+import core.basesyntax.shapes.Rectangle;
+import core.basesyntax.shapes.RightTriangle;
+import core.basesyntax.shapes.Shape;
+import core.basesyntax.shapes.Square;
 
 public class FigureSupplier {
 
@@ -33,7 +38,7 @@ public class FigureSupplier {
                         (int) (Math.random() * LENGTH_LIMIT) + 1,
                         (int) (Math.random() * WIDTH_LIMIT) + 1);
             case 4:
-                return new RightTriangle("right triangle",
+                return new RightTriangle("triangle",
                         color.generateColor(),
                         (int) (Math.random() * LENGTH_LIMIT) + 1,
                         (int) (Math.random() * WIDTH_LIMIT) + 1);
