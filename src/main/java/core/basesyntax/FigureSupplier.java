@@ -5,7 +5,15 @@ public class FigureSupplier {
     private static final int RANDOM_LIMIT = 50;
     private ColorSupplier color = new ColorSupplier();
 
-    protected Figure generateFigure() {
+    protected Figure[] generateFigures() {
+        Figure[] figures = new Figure[(int) (Math.random() * RANDOM_LIMIT)];
+        for (int i = 0; i < figures.length; i++) {
+            figures[i] = generateFigure();
+        }
+        return figures;
+    }
+
+    private Figure generateFigure() {
         Figure figure;
         int randomFigure = (int) (Math.random() * FIGURES_QUANTITY);
         switch (randomFigure) {
