@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.text.DecimalFormat;
 import java.util.Random;
 
-public class RightTriangle extends Shape implements CalculateArea {
+public class RightTriangle extends Shape implements AreaCalculator {
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
     private DecimalFormat df = new DecimalFormat("####.##");

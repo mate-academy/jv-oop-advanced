@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class Circle extends Shape implements CalculateArea {
+public class Circle extends Shape implements AreaCalculator {
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
 

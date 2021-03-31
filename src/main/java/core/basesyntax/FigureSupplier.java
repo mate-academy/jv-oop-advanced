@@ -4,10 +4,6 @@ import java.util.Random;
 
 public class FigureSupplier {
     private Shape shape;
-    private IsoscelesTrapezoid isoscelesTrapezoid;
-    private RightTriangle rightTriangle;
-    private Rectangle rectangle;
-    private Circle circle;
     private Random random = new Random();
 
     public Shape createShape() {
