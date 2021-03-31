@@ -30,24 +30,21 @@ public class FigureSupplier {
     private Figure createCircle() {
         String color = colorGenerator.randomColor();
         int radius = getRandomNumber();
-        Figure circle = new Circle(radius, color, "radius");
-        return circle;
+        return new Circle(radius, color, "radius");
     }
 
     private Figure createIsoscelesTrapezoid() {
         String color = colorGenerator.randomColor();
         int height = getRandomNumber();
         int mediumLine = getRandomNumber();
-        Figure isoscelesTrapezoid = new IsoscelesTrapezoid(height,mediumLine,color,"medium line");
-        return isoscelesTrapezoid;
+        return new IsoscelesTrapezoid(height,mediumLine,color,"medium line");
     }
 
     private Figure createRectangle() {
         String color = colorGenerator.randomColor();
         int height = getRandomNumber();
         int width = getRandomNumber();
-        Figure rectangle = new Rectangle(height, width, color, "width");
-        return rectangle;
+        return new Rectangle(height, width, color, "width");
     }
 
     private Figure createRightTriangle() {
@@ -60,15 +57,13 @@ public class FigureSupplier {
             legTwo = getRandomNumber();
             hypotenuse = getRandomNumber();
         }
-        Figure rightTriangle = new RightTriangle(legOne, legTwo, hypotenuse,
+        return new RightTriangle(legOne, legTwo, hypotenuse,
                 color, "hypotenuse");
-        return rightTriangle;
     }
 
     private Figure createSquare() {
         String color = colorGenerator.randomColor();
         int side = getRandomNumber();
-        Figure square = new Square(side, color, "side");
-        return square;
+        return new Square(side, color, "side");
     }
 }
