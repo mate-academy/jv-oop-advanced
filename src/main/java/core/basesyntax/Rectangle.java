@@ -1,41 +1,29 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements AreaCalculator, Drawer {
-    private final double weight = FigureSupplier.getRandomProperties();
-    private final double height = FigureSupplier.getRandomProperties();
-    private final String name;
-    private final double perimeter;
+public class Rectangle extends Figure {
+    private double width;
+    private double height;
 
     public Rectangle() {
-        name = "rectangle";
-        perimeter = weight + height;
+        super("rectangle");
+        this.width = FigureSupplier.getRandomProperties();
+        this.height = FigureSupplier.getRandomProperties();
     }
 
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public String getColor() {
-        return ColorSupplier.getRandomColor();
-    }
-
-    @Override
-    public double getUniqueProp() {
-        return perimeter;
+    public double getPerimeter() {
+        return 2 * (width + height);
     }
 
     @Override
     public double getArea() {
-        return weight * height;
+        return width * height;
     }
 
     @Override
     public String draw() {
         return "Figure: " + getName()
             + ", area: " + getArea()
-            + ", perimeter: " + getUniqueProp()
+            + ", perimeter: " + getPerimeter()
             + ", color: " + getColor();
 
     }

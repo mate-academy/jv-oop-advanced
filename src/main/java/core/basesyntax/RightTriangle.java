@@ -1,42 +1,33 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements AreaCalculator, Drawer {
-    private final double oneSide = FigureSupplier.getRandomProperties();
-    private final double secondSide = FigureSupplier.getRandomProperties();
-    private final double hypotenuse = Math.sqrt(Math.pow(oneSide, 2) + Math.pow(secondSide, 2));
-    private final String name;
-    private final double height;
+public class RightTriangle extends Figure {
+    private double oneSide;
+    private double secondSide;
 
     public RightTriangle() {
-        name = "right triangle";
-        height = oneSide * secondSide / hypotenuse;
+        super("right triangle");
+        this.oneSide = FigureSupplier.getRandomProperties();
+        this.secondSide = FigureSupplier.getRandomProperties();
     }
 
-    @Override
-    public String getName() {
-        return name;
+    public double getHypotenuse() {
+        return Math.sqrt(Math.pow(oneSide, 2) + Math.pow(secondSide, 2));
     }
 
-    @Override
-    public String getColor() {
-        return ColorSupplier.getRandomColor();
-    }
-
-    @Override
-    public double getUniqueProp() {
-        return height;
+    public double getHeight() {
+        return oneSide * secondSide / getHypotenuse();
     }
 
     @Override
     public double getArea() {
-        return 0.5 * hypotenuse * height;
+        return 0.5 * getHypotenuse() * getHeight();
     }
 
     @Override
     public String draw() {
         return "Figure: " + getName()
             + ", area: " + getArea()
-            + ", height: " + getUniqueProp()
+            + ", height: " + getHeight()
             + ", color: " + getColor();
     }
 }

@@ -1,41 +1,31 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements AreaCalculator, Drawer {
-    private final double firstBaseSide = FigureSupplier.getRandomProperties();
-    private final double secondBaseSide = FigureSupplier.getRandomProperties();
-    private final String name;
-    private final double height;
+public class IsoscelesTrapezoid extends Figure {
+    private double firstBaseSide;
+    private double secondBaseSide;
+    private double height;
 
     public IsoscelesTrapezoid() {
-        name = "isosceles trapezoid";
-        height = FigureSupplier.getRandomProperties();
+        super("isosceles trapezoid");
+        this.firstBaseSide = FigureSupplier.getRandomProperties();
+        this.secondBaseSide = FigureSupplier.getRandomProperties();
+        this.height = FigureSupplier.getRandomProperties();
     }
 
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public String getColor() {
-        return ColorSupplier.getRandomColor();
-    }
-
-    @Override
-    public double getUniqueProp() {
+    public double getHeight() {
         return height;
     }
 
     @Override
     public double getArea() {
-        return ((firstBaseSide + secondBaseSide) / 2) * height;
+        return ((firstBaseSide + secondBaseSide) / 2) * getHeight();
     }
 
     @Override
     public String draw() {
         return "Figure: " + getName()
             + ", area: " + getArea()
-            + ", height: " + getUniqueProp()
+            + ", height: " + getHeight()
             + ", color: " + getColor();
     }
 }

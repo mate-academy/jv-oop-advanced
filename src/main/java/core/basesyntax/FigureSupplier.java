@@ -6,7 +6,7 @@ public class FigureSupplier {
     private static final Rectangle r = new Rectangle();
     private static final RightTriangle rt = new RightTriangle();
     private static final Square s = new Square();
-    private static final String[] figures =
+    private static final String[] NUMBER_OF_FIGURES =
             {it.draw(), it.draw(), c.draw(), r.draw(), rt.draw(), s.draw()};
 
     public static double getRandomProperties() {
@@ -15,15 +15,22 @@ public class FigureSupplier {
         return (int) ((Math.random() * (max - min)) + min);
     }
 
-    public static String getRandomFigures() {
+    public Figure getRandomFigure() {
         int min = 1;
-        int max = figures.length;
+        int max = NUMBER_OF_FIGURES.length;
         int randomNumber = (int) (Math.random() * (max - min)) + min;
-        StringBuilder sb = new StringBuilder();
-        while (randomNumber != 0 && randomNumber <= figures.length) {
-            sb.append(figures[randomNumber]).append("\n");
-            randomNumber--;
+        if (randomNumber == 1) {
+            return new Circle();
+        } else if (randomNumber == 2) {
+            return new IsoscelesTrapezoid();
+        } else if (randomNumber == 3) {
+            return new Rectangle();
+        } else if (randomNumber == 4) {
+            return new RightTriangle();
+        } else if (randomNumber == 5) {
+            return new Square();
+        } else {
+            return null;
         }
-        return sb.toString();
     }
 }

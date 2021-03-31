@@ -1,26 +1,14 @@
 package core.basesyntax;
 
-public class Square extends Figure implements AreaCalculator, Drawer {
-    private final String name;
-    private final double side;
+public class Square extends Figure {
+    private double side;
 
     public Square() {
-        name = "square";
+        super("square");
         side = FigureSupplier.getRandomProperties();
     }
 
-    @Override
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public String getColor() {
-        return ColorSupplier.getRandomColor();
-    }
-
-    @Override
-    public double getUniqueProp() {
+    public double getSide() {
         return side;
     }
 
@@ -33,7 +21,7 @@ public class Square extends Figure implements AreaCalculator, Drawer {
     public String draw() {
         return "Figure: " + getName()
                 + ", area: " + getArea()
-                + ", side: " + getUniqueProp()
+                + ", side: " + getSide()
                 + ", color: " + getColor();
     }
 }
