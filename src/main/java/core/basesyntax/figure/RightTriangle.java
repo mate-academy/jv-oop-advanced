@@ -20,7 +20,6 @@ public class RightTriangle extends Figure implements IShape {
 
     @Override
     public void draw() {
-
         System.out.println("Figure: " + this.getName()
                 + ", area: " + this.getArea()
                 + " sq. units, leg a: " + this.legA
