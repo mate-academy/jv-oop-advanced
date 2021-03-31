@@ -1,13 +1,12 @@
 package core.basesyntax.figure;
 
 import core.basesyntax.Figure;
-import core.basesyntax.generator.ColorSupplier;
 
 public class Circle extends Figure {
     private double radius;
 
-    public Circle(double radius, String name) {
-        super(ColorSupplier.setColors(), name);
+    public Circle(double radius, String name, String color) {
+        super(color, name);
         this.radius = radius;
     }
 
@@ -18,21 +17,9 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + this.getName()
-                + ", area: " + this.getArea()
-                + " sq. units, radius: " + this.radius
-                + " units, color: " + this.getColor());
-    }
-
-    public double getRadius() {
-        return radius;
-    }
-
-    public void setRadius(double radius) {
-        if (radius < 0) {
-            System.out.println("Radius cannot be less 0");
-            return;
-        }
-        this.radius = radius;
+        System.out.println("Figure: " + getName()
+                + ", area: " + getArea()
+                + " sq. units, radius: " + radius
+                + " units, color: " + getColor());
     }
 }

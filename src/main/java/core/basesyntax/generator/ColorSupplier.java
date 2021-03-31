@@ -3,11 +3,13 @@ package core.basesyntax.generator;
 import java.util.Random;
 
 public class ColorSupplier {
-    public static String setColors() {
+    private static final int NUMBER_OF_COLORS = 5;
+
+    public String setColors() {
         Random random = new Random();
         String color;
-        int p = random.nextInt(Generator.getNumberOfColors());
-        switch (p) {
+        int colorNumber = random.nextInt(NUMBER_OF_COLORS);
+        switch (colorNumber) {
             case 0:
                 color = Colors.RED.toString();
                 break;
@@ -27,7 +29,6 @@ public class ColorSupplier {
                 color = "Haven`t color";
                 break;
         }
-
         return color;
     }
 }
