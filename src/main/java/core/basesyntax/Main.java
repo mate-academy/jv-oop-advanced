@@ -10,7 +10,6 @@ public class Main {
         for (Shape shape : shapes) {
             shape.draw();
         }
-
     }
 
     public static Shape[] getShapes() {

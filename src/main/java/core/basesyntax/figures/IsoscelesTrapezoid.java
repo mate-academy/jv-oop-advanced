@@ -28,6 +28,5 @@ public class IsoscelesTrapezoid implements Shape {
         System.out.println("Figure: " + name + ", getArea: "
                 + getArea() + " sq. units, sideA: " + sideA + " sq. units, sideB"
                 + sideB + " units: color" + color);
-
     }
 }

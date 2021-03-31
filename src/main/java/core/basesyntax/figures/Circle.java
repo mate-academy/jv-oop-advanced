@@ -23,6 +23,5 @@ public class Circle implements Shape {
         System.out.println("Figure: " + name + ", getArea: "
                 + getArea() + " sq. units, radius: "
                 + radius + " units: color" + color);
-
     }
 }
