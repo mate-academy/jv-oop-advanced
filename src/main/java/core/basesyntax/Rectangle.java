@@ -1,24 +1,24 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private double sideA;
-    private double sideB;
+    private double length;
+    private double width;
 
-    public Rectangle(double sideA, double sideB, String figureColor) {
-        super("Rectangle", figureColor);
-        this.sideA = sideA;
-        this.sideB = sideB;
+    public Rectangle(double length, double width, String color) {
+        super("Rectangle", color);
+        this.length = length;
+        this.width = width;
     }
 
     @Override
     public double getArea() {
-        return sideA * sideB;
+        return length * width;
     }
 
     @Override
-    public String drawFigure() {
+    public String draw() {
         return "Figure: " + getFigureName() + ", area: " + getArea()
-                + " sq. units, side A length: " + sideA + " units, side B length: "
-                + sideB + " units, color: " + getFigureColor();
+                + " sq. units, side 1: " + length + " units, side 2: "
+                + width + " units, color: " + getFigureColor();
     }
 }

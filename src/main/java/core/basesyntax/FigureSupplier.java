@@ -3,28 +3,30 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    static final int LENGTH_MAX = 75;
+    private static final int LENGTH_MAX = 75;
 
     public Figure getRandomFigure() {
-        int allFigures = (new Random().nextInt(5));
-        switch (allFigures) {
+        int numberOfFigures = new Random().nextInt(5);
+        ColorSupplier colorSupplier = new ColorSupplier();
+        Random random = new Random();
+        switch (numberOfFigures) {
             case 1 :
-                return new Triangle(new Random().nextInt(LENGTH_MAX),
-                        ColorSupplier.getRandomColor());
+                return new Triangle(random.nextInt(LENGTH_MAX),
+                        colorSupplier.getRandomColor());
             case 2 :
-                return new Square(new Random().nextInt(LENGTH_MAX),
-                        ColorSupplier.getRandomColor());
+                return new Square(random.nextInt(LENGTH_MAX),
+                        colorSupplier.getRandomColor());
             case 3 :
-                return new Rectangle(new Random().nextInt(LENGTH_MAX),
-                        new Random().nextInt(LENGTH_MAX),
-                        ColorSupplier.getRandomColor());
+                return new Rectangle(random.nextInt(LENGTH_MAX),
+                        random.nextInt(LENGTH_MAX),
+                        colorSupplier.getRandomColor());
             case 4 :
-                return new IsoscelesTrapezoid(new Random().nextInt(LENGTH_MAX),
-                        new Random().nextInt(LENGTH_MAX),
-                        new Random().nextInt(LENGTH_MAX), ColorSupplier.getRandomColor());
+                return new IsoscelesTrapezoid(random.nextInt(LENGTH_MAX),
+                        random.nextInt(LENGTH_MAX),
+                        random.nextInt(LENGTH_MAX), colorSupplier.getRandomColor());
             default :
-                return new Circle(new Random().nextInt(LENGTH_MAX),
-                        ColorSupplier.getRandomColor());
+                return new Circle(random.nextInt(LENGTH_MAX),
+                        colorSupplier.getRandomColor());
         }
     }
 }

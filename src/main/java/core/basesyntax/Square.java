@@ -3,8 +3,8 @@ package core.basesyntax;
 public class Square extends Figure {
     private double side;
 
-    public Square(double side, String figureColor) {
-        super("Square", figureColor);
+    public Square(double side, String color) {
+        super("Square", color);
         this.side = side;
     }
 
@@ -14,8 +14,8 @@ public class Square extends Figure {
     }
 
     @Override
-    public String drawFigure() {
+    public String draw() {
         return "Figure: " + getFigureName() + ", area: " + getArea() + " sq. units, side length: "
-                + side + "units, color: " + getFigureColor();
+                + side + " units, color: " + getFigureColor();
     }
 }
