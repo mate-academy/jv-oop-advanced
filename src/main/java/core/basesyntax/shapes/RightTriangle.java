@@ -24,6 +24,7 @@ public class RightTriangle extends Shape implements AreaCalculable, Drawable {
     @Override
     public void draw() {
         //Figure: triangle, area: 12.5 sq. units, hypotenuse: 7.1 units, color: yellow
+        // must use printf()?
         System.out.println("Figure: " + this.getName() + ", "
                 + "area: " + getArea() + " sq. units, "
                 + " hypotenuse: " + getHypotenuse() + " units, "
