@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements DrawingArea {
+public abstract class Figure implements DrawingArea, CalculatorArea {
     private String color;
     private String typeOfFigure;
     private int area;
@@ -34,7 +34,8 @@ public abstract class Figure implements DrawingArea {
         this.typeOfFigure = typeOfFigure;
     }
 
-    public static int calculateArea(Figure[] figures) {
+    @Override
+    public int calculateArea(Figure[] figures) {
         int totalArea = 0;
         for (Figure figure : figures) {
             totalArea += figure.getArea();
