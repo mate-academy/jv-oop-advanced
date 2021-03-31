@@ -1,18 +1,26 @@
 package core.basesyntax;
 
-public class Rectangle extends  Shapes{
+public class Rectangle extends Shapes implements Behaviour {
     @Override
-    void color() {
+    public void draw() {
 
     }
 
     @Override
-    void figure() {
-
+    public void area() {
     }
+        @Override
+        void color () {
 
-    @Override
-    void uniqueProperty() {
+        }
 
+        @Override
+        void figure () {
+
+        }
+
+        @Override
+        void uniqueProperty () {
+
+        }
     }
-}

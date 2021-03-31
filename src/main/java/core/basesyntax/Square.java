@@ -1,6 +1,16 @@
 package core.basesyntax;
 
-public class Square extends  Shapes{
+public class Square extends  Shapes implements  Behaviour{
+    @Override
+    public void draw() {
+
+    }
+
+    @Override
+    public void area() {
+
+    }
+
     @Override
     void color() {
 
@@ -13,7 +23,7 @@ public class Square extends  Shapes{
 
     @Override
     void uniqueProperty() {
-        
+
     }
 }
 

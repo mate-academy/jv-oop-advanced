@@ -1,6 +1,16 @@
 package core.basesyntax;
 
-public class RightTriangle extends Shapes{
+public class RightTriangle extends Shapes implements Behaviour {
+    @Override
+    public void draw() {
+
+    }
+
+    @Override
+    public void area() {
+
+    }
+
     @Override
     void color() {
 
@@ -16,3 +26,4 @@ public class RightTriangle extends Shapes{
 
     }
 }
+
