@@ -1,18 +1,20 @@
 package core.basesyntax;
+
+import core.basesyntax.figures.Figure;
 import java.util.Random;
 
 public class Main {
-    public final static int COUNTFIGURES = 10;
+    public static final int COUNT_FIGURES = 10;
 
     public static void main(String[] args) {
         Random random = new Random();
-        Figure[] allFigure = new Figure[random.nextInt(COUNTFIGURES)];
+        Figure[] allFigure = new Figure[random.nextInt(COUNT_FIGURES)];
 
-        for(int i = 0; i < allFigure.length; i++) {
+        for (int i = 0; i < allFigure.length; i++) {
             allFigure[i] = new FigureSupplier().getFigure();
         }
 
-        for(Figure f : allFigure) {
+        for (Figure f : allFigure) {
             f.draw();
         }
     }

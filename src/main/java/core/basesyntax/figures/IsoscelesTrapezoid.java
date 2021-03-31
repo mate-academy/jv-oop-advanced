@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.figures;
 
 public class IsoscelesTrapezoid extends Figure {
     private int hide;
@@ -13,23 +13,28 @@ public class IsoscelesTrapezoid extends Figure {
     public void setHide(int hide) {
         this.hide = hide;
     }
-    public int getHide(){
+
+    public int getHide() {
         return hide;
     }
 
-    public void setMiddleLine (int middleLine) {
+    public void setMiddleLine(int middleLine) {
         this.middleLine = middleLine;
     }
-    public int getMiddleLine(){
+
+    public int getMiddleLine() {
         return middleLine;
     }
 
+    @Override
     public void draw() {
-        System.out.println("Figure: circle, area: " + (hide*middleLine) + " sq. units, hide: " + hide
-                + " middleLine: " + middleLine + " units, color: " + super.getColor());
+        System.out.println("Figure: circle, area: " + (hide * middleLine)
+                + " sq. units, hide: " + hide
+                + " units, middleLine: " + middleLine + " units, color: " + super.getColor());
     }
 
-    public void area() {
-        System.out.println("Area: " + hide*middleLine);
+    @Override
+    public double area() {
+        return hide * middleLine;
     }
 }

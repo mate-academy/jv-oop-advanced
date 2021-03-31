@@ -1,4 +1,7 @@
-package core.basesyntax;
+package core.basesyntax.figures;
+
+import core.basesyntax.Area;
+import core.basesyntax.Draw;
 
 public abstract class Figure implements Area, Draw {
     private String color;
@@ -7,11 +10,11 @@ public abstract class Figure implements Area, Draw {
         this.color = color;
     }
 
-    public void setColor (String color) {
+    public void setColor(String color) {
         this.color = color;
     }
 
-    public String getColor(){
+    public String getColor() {
         return color;
     }
 }
