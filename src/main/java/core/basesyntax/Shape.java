@@ -1,22 +1,11 @@
 package core.basesyntax;
 
 public abstract class Shape implements AreaCalculator, DrawFigure {
-    private String name;
-    private String color;
+    protected String name;
+    protected String color;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
+    public Shape(String name, String color) {
         this.name = name;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
         this.color = color;
     }
 }

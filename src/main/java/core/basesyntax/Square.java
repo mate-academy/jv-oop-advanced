@@ -1,17 +1,13 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Square extends Shape {
-    private ColorSupplier colorSupplier = new ColorSupplier();
-    private Random random = new Random();
-
     private int sideA;
 
-    public Square() {
-        this.setName("Square");
-        this.setColor(colorSupplier.randomColor());
-        this.sideA = random.nextInt(20);
+    public Square(String name, String color, int sideA) {
+        super(name, color);
+        this.name = name;
+        this.color = color;
+        this.sideA = sideA;
     }
 
     @Override
@@ -22,10 +18,10 @@ public class Square extends Shape {
     @Override
     public String draw() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Figure: ").append(this.getName()).append(" , area: ")
+        sb.append("Figure: ").append(this.name).append(" , area: ")
                 .append(this.calculateArea())
                 .append(" sq. units, All sides equals: ").append(this.sideA)
-                .append(" , color: ").append(this.getColor());
+                .append(" , color: ").append(this.color);
         return sb.toString();
     }
 }

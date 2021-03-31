@@ -1,18 +1,14 @@
 package core.basesyntax;
 
-import java.util.Random;
-
-public class Circle extends Shape implements AreaCalculator {
-    private ColorSupplier colorSupplier = new ColorSupplier();
-    private Random random = new Random();
-
+public class Circle extends Shape {
     private int radius;
     private int diameter;
 
-    public Circle() {
-        this.setName("Circle");
-        this.setColor(colorSupplier.randomColor());
-        this.radius = random.nextInt(20);
+    public Circle(String name, String color, int radius) {
+        super(name, color);
+        this.name = name;
+        this.color = color;
+        this.radius = radius;
         this.diameter = radius * 2;
     }
 
@@ -24,10 +20,10 @@ public class Circle extends Shape implements AreaCalculator {
     @Override
     public String draw() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Figure: ").append(this.getName())
+        sb.append("Figure: ").append(this.name)
                 .append(" , area: ").append(this.calculateArea())
                 .append("sq. units, diameter: ")
-                .append(this.diameter).append(" , color: ").append(this.getColor());
+                .append(this.diameter).append(" , color: ").append(this.color);
         return sb.toString();
     }
 }

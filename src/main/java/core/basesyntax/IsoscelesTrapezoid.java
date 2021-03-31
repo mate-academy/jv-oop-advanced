@@ -1,11 +1,8 @@
 package core.basesyntax;
 
 import java.text.DecimalFormat;
-import java.util.Random;
 
 public class IsoscelesTrapezoid extends Shape {
-    private ColorSupplier colorSupplier = new ColorSupplier();
-    private Random random = new Random();
     private DecimalFormat df = new DecimalFormat("####.##");
 
     private int sideA;
@@ -14,30 +11,38 @@ public class IsoscelesTrapezoid extends Shape {
     private double diagonal;
     private double height;
 
-    public IsoscelesTrapezoid() {
-        this.setName("Isosceles Trapezoid");
-        this.setColor(colorSupplier.randomColor());
-        this.sideA = random.nextInt(20);
-        this.sideB = random.nextInt(20);
-        this.sideC = random.nextInt(20);
-        this.diagonal = Math.sqrt((sideA * sideB) + Math.pow(sideC, 2));
-        this.height = Math.sqrt(Math.pow(diagonal, 2));
+    public IsoscelesTrapezoid(String name, String color, int sideA, int sideB, int sideC) {
+        super(name,color);
+        this.sideA = sideA;
+        this.sideB = sideB;
+        this.sideC = sideC;
+    }
+
+    public double setDiagonal() {
+        this.diagonal = Math.sqrt((this.sideA * this.sideB) + Math.pow(this.sideC, 2));
+        return diagonal;
+    }
+
+    public double setHeight() {
+        this.height = Math.sqrt((Math.pow(this.setDiagonal(), 2)
+                - Math.pow((double)(this.sideA + this.sideB) / 2, 2)));
+        return height;
     }
 
     @Override
     public double calculateArea() {
-        return (height / 2) * (sideA + sideB);
+        return (this.setHeight() / 2) * (this.sideA + this.sideB);
     }
 
     @Override
     public String draw() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Figure: ").append(this.getName()).append(" , area: ")
+        sb.append("Figure: ").append(this.name).append(" , area: ")
                 .append(df.format(this.calculateArea()))
-                .append(" sq. units, height: ").append(df.format(this.height))
+                .append(" sq. units, height: ").append(df.format(this.setHeight()))
                 .append(" , diagonal: ")
-                .append(df.format(this.diagonal))
-                .append(" , color: ").append(this.getColor());
+                .append(df.format(this.setDiagonal()))
+                .append(" , color: ").append(this.color);
         return sb.toString();
     }
 }

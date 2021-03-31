@@ -1,23 +1,21 @@
 package core.basesyntax;
 
 import java.text.DecimalFormat;
-import java.util.Random;
 
-public class RightTriangle extends Shape implements AreaCalculator {
-    private Random random = new Random();
-    private ColorSupplier colorSupplier = new ColorSupplier();
+public class RightTriangle extends Shape {
     private DecimalFormat df = new DecimalFormat("####.##");
 
     private int sideA;
     private int sideB;
     private double hypotenuse;
 
-    public RightTriangle() {
-        this.setName("Triangle");
-        this.setColor(colorSupplier.randomColor());
-        this.sideA = random.nextInt(20);
-        this.sideB = random.nextInt(20);
-        this.hypotenuse = Math.sqrt(Math.pow(sideA, 2) + Math.pow(sideB, 2));
+    public RightTriangle(String name, String color, int sideA, int sideB) {
+        super(name, color);
+        this.name = name;
+        this.color = color;
+        this.sideA = sideA;
+        this.sideB = sideB;
+        this.hypotenuse = Math.sqrt(Math.pow(this.sideA,2) + Math.pow(this.sideB,2));
     }
 
     @Override
@@ -28,10 +26,10 @@ public class RightTriangle extends Shape implements AreaCalculator {
     @Override
     public String draw() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Figure: ").append(this.getName()).append(" , area: ")
+        sb.append("Figure: ").append(this.name).append(" , area: ")
                 .append(this.calculateArea())
                 .append(" sq. units, hypotenuse: ").append(df.format(this.hypotenuse))
-                .append(" , color: ").append(this.getColor());
+                .append(" , color: ").append(this.color);
         return sb.toString();
     }
 }
