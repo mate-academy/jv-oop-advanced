@@ -86,3 +86,4 @@ public class FigureSupplier {
         return new Circle(randomColorGenerator.generateColor(), new Random().nextInt(RANDOM_INT_LIMIT));
     }
 }
+
