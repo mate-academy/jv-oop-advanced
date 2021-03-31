@@ -5,8 +5,6 @@ public class Square extends Shape {
 
     public Square(String name, String color, int sideA) {
         super(name, color);
-        this.name = name;
-        this.color = color;
         this.sideA = sideA;
     }
 
@@ -18,10 +16,10 @@ public class Square extends Shape {
     @Override
     public String draw() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Figure: ").append(this.name).append(" , area: ")
+        sb.append("Figure: ").append(this.getName()).append(" , area: ")
                 .append(this.calculateArea())
                 .append(" sq. units, All sides equals: ").append(this.sideA)
-                .append(" , color: ").append(this.color);
+                .append(" , color: ").append(this.getColor());
         return sb.toString();
     }
 }

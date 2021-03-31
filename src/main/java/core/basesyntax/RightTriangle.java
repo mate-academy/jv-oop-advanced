@@ -11,8 +11,6 @@ public class RightTriangle extends Shape {
 
     public RightTriangle(String name, String color, int sideA, int sideB) {
         super(name, color);
-        this.name = name;
-        this.color = color;
         this.sideA = sideA;
         this.sideB = sideB;
         this.hypotenuse = Math.sqrt(Math.pow(this.sideA,2) + Math.pow(this.sideB,2));
@@ -26,10 +24,10 @@ public class RightTriangle extends Shape {
     @Override
     public String draw() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Figure: ").append(this.name).append(" , area: ")
+        sb.append("Figure: ").append(this.getName()).append(" , area: ")
                 .append(this.calculateArea())
                 .append(" sq. units, hypotenuse: ").append(df.format(this.hypotenuse))
-                .append(" , color: ").append(this.color);
+                .append(" , color: ").append(this.getColor());
         return sb.toString();
     }
 }

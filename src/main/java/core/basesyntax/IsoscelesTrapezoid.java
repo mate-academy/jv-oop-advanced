@@ -37,12 +37,12 @@ public class IsoscelesTrapezoid extends Shape {
     @Override
     public String draw() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Figure: ").append(this.name).append(" , area: ")
+        sb.append("Figure: ").append(this.getName()).append(" , area: ")
                 .append(df.format(this.calculateArea()))
                 .append(" sq. units, height: ").append(df.format(this.setHeight()))
                 .append(" , diagonal: ")
                 .append(df.format(this.setDiagonal()))
-                .append(" , color: ").append(this.color);
+                .append(" , color: ").append(this.getColor());
         return sb.toString();
     }
 }

@@ -19,7 +19,7 @@ public class FigureSupplier {
                 new Rectangle("Rectangle", colorSupplier.randomColor(),
                         random.nextInt(20), random.nextInt(20)),
                 new Circle("Circle", colorSupplier.randomColor(), random.nextInt(20))};
-        int intGen = random.nextInt(shapes.length - 1);
+        int intGen = random.nextInt(shapes.length);
 
         return shapes[intGen];
     }

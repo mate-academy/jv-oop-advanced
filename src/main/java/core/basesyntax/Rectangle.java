@@ -6,8 +6,6 @@ public class Rectangle extends Shape {
 
     public Rectangle(String name, String color, int sideA, int sideB) {
         super(name, color);
-        this.name = name;
-        this.color = color;
         this.sideA = sideA;
         this.sideB = sideB;
     }
@@ -20,9 +18,9 @@ public class Rectangle extends Shape {
     @Override
     public String draw() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Figure: ").append(this.name).append(" , area: ")
+        sb.append("Figure: ").append(this.getName()).append(" , area: ")
                 .append(this.calculateArea())
-                .append(" , color: ").append(this.color);
+                .append(" , color: ").append(this.getColor());
         return sb.toString();
     }
 }

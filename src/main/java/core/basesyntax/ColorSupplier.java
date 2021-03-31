@@ -8,7 +8,6 @@ public class ColorSupplier {
     public String randomColor() {
         String[] colors = { "red", "blue", "black", "gray", "pink", "yellow", "violet", "purple",
                 "brown", "gold", "white", "silver", "orange", "transparent" };
-        int ranInt = random.nextInt(colors.length);
-        return colors[ranInt];
+        return colors[random.nextInt(colors.length)];
     }
 }
