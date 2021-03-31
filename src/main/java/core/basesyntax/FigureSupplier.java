@@ -5,9 +5,9 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int MAX_NUM_FOR_FIGURES = 5;
     private static final int MAX_LENGTH = 25;
-    Random random = new Random();
 
     public Figure getFigure() {
+        Random random = new Random();
         ColorSupplier supplier = new ColorSupplier();
         int numberOfFigures = random.nextInt(MAX_NUM_FOR_FIGURES);
         switch (numberOfFigures) {
@@ -23,7 +23,8 @@ public class FigureSupplier {
                                          random.nextInt(MAX_LENGTH));
             default:
                 return new IsoscelesTrapezoid(supplier.getColor(), "isosceles trapezoid",
-                        random.nextInt(MAX_LENGTH), random.nextInt(MAX_LENGTH), random.nextInt(MAX_LENGTH));
+                        random.nextInt(MAX_LENGTH), random.nextInt(MAX_LENGTH),
+                        random.nextInt(MAX_LENGTH));
         }
     }
 

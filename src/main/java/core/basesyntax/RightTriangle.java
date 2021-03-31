@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure{
+public class RightTriangle extends Figure {
     private double side;
 
     public RightTriangle(String color, String figuresName, double side) {
@@ -10,12 +10,12 @@ public class RightTriangle extends Figure{
 
     @Override
     public double getArea() {
-        return ((Math.sqrt(3) * side * side)/4);
+        return ((Math.sqrt(3) * side * side) / 4);
     }
 
     @Override
     public void drawFigure() {
-        System.out.println("Figure: " + getFiguresName()+ "area: " + getArea() +
-                " sq.units, sides length: " + side + " units, color: " );
+        System.out.println("Figure: " + getFiguresName() + ", area: " + getArea()
+                + " sq. units, sides length: " + side + " units, color: " + getColor());
     }
 }
