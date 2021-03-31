@@ -25,7 +25,7 @@ public class FigureSupplier {
                 figure = getNewSquare();
                 break;
             default:
-                figure = null;
+                figure = getNewCircle();;
         }
         return figure;
     }
