@@ -1,24 +1,24 @@
 package core.basesyntax;
 
-public class Rectangle extends Shapes implements Area,Draw {
+public class Rectangle extends Shapes implements Area, Draw {
     private int side1;
     private int side2;
 
-    public void Shaped(int side1, int side2) {
+    public Rectangle(int side1, int side2, String color) {
+        super(color);
         this.side1 = side1;
         this.side2 = side2;
     }
 
     @Override
     public String getDraw() {
-        return ("Picture: " + ",area: " + getArea() + ",side1: " + side1 +" ,side2: "+side2);
+        return ("Picture: " + ",area: " + getArea() + ",side1: " + side1 + " ,side2: " + side2);
     }
 
     @Override
     public int getArea() {
         return side1 * side2;
     }
-
 
     @Override
     String figure() {

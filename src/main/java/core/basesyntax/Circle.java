@@ -3,13 +3,14 @@ package core.basesyntax;
 public class Circle extends Shapes implements Area, Draw {
     private int radius;
 
-    public void Circle(int radius) {
+    public Circle(int radius, String color) {
+        super(color);
         this.radius = radius;
     }
 
     @Override
     public int getArea() {
-        return (int) (Math.PI * radius);
+        return (int) (Math.PI * radius * radius);
     }
 
     @Override
@@ -24,6 +25,6 @@ public class Circle extends Shapes implements Area, Draw {
 
     @Override
     void uniqueProperty() {
-        System.out.println("Haven`t corners");
+        System.out.println("Haven't corners");
     }
 }

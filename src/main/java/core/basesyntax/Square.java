@@ -3,13 +3,14 @@ package core.basesyntax;
 public class Square extends Shapes implements Area, Draw {
     private int side;
 
-    public void Square(int side) {
+    public Square(int side, String color) {
+        super(color);
         this.side = side;
     }
 
     @Override
     public String getDraw() {
-        return ("Picture: " + ",area: " + getArea() + "side length: " + side);
+        return ("Figure: " + ",area: " + getArea() + "side length: " + side);
     }
 
     @Override
@@ -18,7 +19,7 @@ public class Square extends Shapes implements Area, Draw {
     }
 
     @Override
-     public String figure() {
+    public String figure() {
         return "Square";
     }
 

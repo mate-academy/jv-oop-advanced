@@ -4,7 +4,8 @@ public class RightTriangle extends Shapes implements Area, Draw {
     private int height;
     private int leg;
 
-    public void RightTriangle(int height, int leg) {
+    public RightTriangle(int height, int leg, String color) {
+        super(color);
         this.height = height;
         this.leg = leg;
     }
@@ -18,7 +19,6 @@ public class RightTriangle extends Shapes implements Area, Draw {
     public int getArea() {
         return height * leg;
     }
-
 
     @Override
     String figure() {
