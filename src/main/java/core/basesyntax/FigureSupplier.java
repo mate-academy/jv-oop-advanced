@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class FigureSupplier {
-    private static final int FIRST = 5;
+    private static final int FIGURE_NUMBER = 5;
     private static final int LENGTH_RANDOM_LIMIT = 100;
 
     public static double lengthGen() {
@@ -14,7 +14,7 @@ public class FigureSupplier {
 
     public Figure figureGenerator() {
 
-        switch ((int)(Math.random() * (FIRST)) + 1) {
+        switch ((int)(Math.random() * (FIGURE_NUMBER)) + 1) {
             case 1 :
                 return new Square(lengthGen(), ColorSupplier.colorGen());
             case 2 :
