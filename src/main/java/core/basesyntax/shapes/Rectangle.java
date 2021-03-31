@@ -1,6 +1,6 @@
 package core.basesyntax.shapes;
 
-public class Rectangle extends Shape implements Drawable {
+public class Rectangle extends Shape implements AreaCalculable, Drawable {
     private double width;
     private double height;
 

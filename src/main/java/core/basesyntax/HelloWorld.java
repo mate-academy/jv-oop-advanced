@@ -1,28 +1,26 @@
 package core.basesyntax;
 
+import core.basesyntax.shapes.AreaCalculable;
+import core.basesyntax.shapes.Drawable;
+import core.basesyntax.shapes.Shape;
+
 /**
  * Feel free to remove this class and create your own.
  */
 public class HelloWorld {
 
-    /*
-    Решаем задачу по принципам ООП
+    private static final int SHAPES_LIMIT = 10;
 
-    Задача:
+    public static void main(String[] args) {
+        Drawable[] shapeArray = new Drawable[(int) (Math.random() * SHAPES_LIMIT)];
+        FigureSupplier figureSupplier = new FigureSupplier();
 
-    Есть фигуры следующих типов: квадрат, прямоугольник, прямоугольный треугольник, круг, равнобедренная трапеция.
-    У всех фигур есть: состояние - каждая фигура имеет цвет и уникальное свойство, поведение - мы можем получить
-    площадь фигур и нарисовать ее.
+        for (int i = 0; i < shapeArray.length; i++) {
+            shapeArray[i] = (Drawable) figureSupplier.generateShape();
+        }
 
-    Подумайте, где вы будете объявлять каждый функционал: класс верхнего уровня / интерфейс / класс нижнего уровня.
-
-    P.S draw - означает вывод рисунка и всех его свойств в консоли с помощью System.out.println ()
-    Нам нужно сгенерировать массив фигур со случайными параметрами, количество объектов в массиве также неизвестно.
-    Для этого создайте еще два класса (ColorSupplier - для генерации случайного цвета
-    и FigureSupplier - для генерации фигуры со случайными свойствами).
-
-    После генерации массива нам нужно отобразить весь список объектов, которые у нас есть, например:
-    Рисунок: квадрат, площадь: 25 кв. Шт., Длина стороны: 5 шт., Цвет: синий
-    Рисунок: треугольник, площадь: 12,5 кв. Единиц, гипотенуза: 7,1 единиц, цвет: желтый
-     */
+        for (Drawable shape : shapeArray) {
+            shape.draw();
+        }
+    }
 }

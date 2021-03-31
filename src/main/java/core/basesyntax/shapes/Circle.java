@@ -1,6 +1,6 @@
 package core.basesyntax.shapes;
 
-public class Circle extends Shape implements Drawable{
+public class Circle extends Shape implements AreaCalculable, Drawable {
     private double radius;
 
     public Circle(String name, String color, double radius) {
@@ -21,8 +21,8 @@ public class Circle extends Shape implements Drawable{
     public void draw() {
         //Figure: Circle, area: 12.5 sq. units, radius: 7.1 units, color: yellow
         System.out.println("Figure: " + this.getName() + ", "
-                            + "area: " + getArea() + " sq. units, "
-                            + "radius: " + getRadius() + " units, "
-                            + "color: " + this.getColor());
+                + "area: " + getArea() + " sq. units, "
+                + "radius: " + getRadius() + " units, "
+                + "color: " + this.getColor());
     }
 }

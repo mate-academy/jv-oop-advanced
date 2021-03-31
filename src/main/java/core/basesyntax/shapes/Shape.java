@@ -16,7 +16,4 @@ public abstract class Shape {
     public String getColor() {
         return color;
     }
-
-    /* Gets the shape`s area */
-    public abstract double getArea();
 }

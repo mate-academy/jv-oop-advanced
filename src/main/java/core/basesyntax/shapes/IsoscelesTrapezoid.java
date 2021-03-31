@@ -1,6 +1,6 @@
 package core.basesyntax.shapes;
 
-public class IsoscelesTrapezoid extends Shape implements Drawable{
+public class IsoscelesTrapezoid extends Shape implements AreaCalculable, Drawable {
     private double lowerBase;
     private double upperBase;
     private double height;
@@ -14,7 +14,7 @@ public class IsoscelesTrapezoid extends Shape implements Drawable{
 
     @Override
     public double getArea() {
-        return (lowerBase + upperBase) * height / 2 ;
+        return (lowerBase + upperBase) * height / 2;
     }
 
     public double getLowerBase() {
