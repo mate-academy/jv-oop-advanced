@@ -1,20 +1,24 @@
 package core.basesyntax;
-
+import java.util.Random;
 public class Main {
     public static void main(String[] args) {
-        Behaviour square = new Square(10.1);
-        square.drawFigure();
+        Random r = new Random();
+        int num = r.nextInt(10000) + 1;
 
-        Behaviour rectangle = new Rectangle(17, 10);
-        rectangle.drawFigure();
+        FigureSupplier figSup = new FigureSupplier();
+        ColorSupplier randColor = new ColorSupplier();
+        Figure[] figArray = new Figure[num];
 
-        Behaviour rigthTriangle = new RigthTriangle(3, 4, 5);
-        rigthTriangle.drawFigure();
+        for(int i = 0; i < num; i++) {
+            figArray[i] = figSup.randFigureProper();
+            randColor.generateColor(figArray[i]);
+        }
+        showFigureArray(figArray);
+    }
 
-        Behaviour circle = new Circle(132.3);
-        circle.drawFigure();
-
-        Behaviour trap = new IsoscelesTrapezoid(5, 10, 17);
-        trap.drawFigure();
+    public static void showFigureArray(Figure[] figArr){
+        for(Figure fig: figArr) {
+            fig.drawFigure();
+        }
     }
 }

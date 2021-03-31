@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends Behaviour implements State {
+public class Square extends Figure implements State {
     private double sideLen;
     private String color;
 
@@ -22,6 +22,11 @@ public class Square extends Behaviour implements State {
     public void drawFigure() {
         System.out.printf("Figure: square, area %f sq. units, %s, color %s\n",
                 countArea(), uniqueProperty(), color);
+    }
+
+    @Override
+    public void setColor(String color){
+        this.color = color;
     }
 
     public String uniqueProperty() {

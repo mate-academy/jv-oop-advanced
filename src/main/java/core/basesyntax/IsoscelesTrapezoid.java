@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Behaviour implements State {
+public class IsoscelesTrapezoid extends Figure implements State {
     private double topSide;
     private double botSide;
     private double lrSide;
@@ -31,6 +31,11 @@ public class IsoscelesTrapezoid extends Behaviour implements State {
     public void drawFigure() {
         System.out.printf("Figure: square, area %f sq. units, %s, color %s\n",
                 countArea(), uniqueProperty(), color);
+    }
+
+    @Override
+    public void setColor(String color){
+        this.color = color;
     }
 
     public String uniqueProperty() {

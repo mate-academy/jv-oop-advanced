@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Behaviour implements State {
+public class Rectangle extends Figure implements State {
     private double side1;
     private double side2;
     private String color;
@@ -24,6 +24,11 @@ public class Rectangle extends Behaviour implements State {
     public void drawFigure() {
         System.out.printf("Figure: rectangle, area %f sq. units, %s, color %s\n",
                 countArea(), uniqueProperty(), color);
+    }
+
+    @Override
+    public void setColor(String color){
+        this.color = color;
     }
 
     public String uniqueProperty() {

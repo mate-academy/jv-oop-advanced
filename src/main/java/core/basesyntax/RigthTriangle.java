@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RigthTriangle extends Behaviour implements State {
+public class RigthTriangle extends Figure implements State {
     private double leg1;
     private double leg2;
     private double hypotenuse;
@@ -30,6 +30,11 @@ public class RigthTriangle extends Behaviour implements State {
     public void drawFigure() {
         System.out.printf("Figure: triangle, area %f sq. units, %s, color %s\n",
                 countArea(), uniqueProperty(), color);
+    }
+
+    @Override
+    public void setColor(String color){
+        this.color = color;
     }
 
     public String uniqueProperty() {
