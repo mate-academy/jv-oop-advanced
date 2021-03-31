@@ -3,32 +3,28 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureGenerator {
-    private static final int NumberOfFigures = 5;
-    private static final int LimitNumber = 100;
+    private static final int NUMBER_OF_FIGURES = 5;
+    private static final int LIMIT_NUMBER = 100;
 
-    public static Figure createFigure() {
-        switch (new Random().nextInt(NumberOfFigures)) {
+    public Figure createFigure() {
+        Random random = new Random();
+        ColorGenerator colorGenerator = new ColorGenerator();
+
+        switch (new Random().nextInt(NUMBER_OF_FIGURES)) {
             case 1:
-                return new Circle(getRandomNumber(), getRandomColor());
+                return new Circle(random.nextInt(LIMIT_NUMBER), colorGenerator.getRandomColor());
             case 2:
-                return new RightTriangle(getRandomNumber(), getRandomNumber(),
-                        getRandomNumber(), getRandomColor());
+                return new RightTriangle(random.nextInt(LIMIT_NUMBER), random.nextInt(LIMIT_NUMBER),
+                        random.nextInt(LIMIT_NUMBER), colorGenerator.getRandomColor());
             case 3:
-                return new Rectangle(getRandomNumber(), getRandomNumber(), getRandomColor());
+                return new Rectangle(random.nextInt(LIMIT_NUMBER), random.nextInt(LIMIT_NUMBER),
+                        colorGenerator.getRandomColor());
             case 4:
-                return new Square(getRandomNumber(), getRandomColor());
+                return new Square(random.nextInt(LIMIT_NUMBER), colorGenerator.getRandomColor());
             default:
-                return new IsoscelesTrapezoid(getRandomNumber(),
-                        getRandomNumber(), getRandomNumber(), getRandomColor());
+                return new IsoscelesTrapezoid(random.nextInt(LIMIT_NUMBER),
+                        random.nextInt(LIMIT_NUMBER), random.nextInt(LIMIT_NUMBER),
+                        colorGenerator.getRandomColor());
         }
-    }
-
-    private static String getRandomColor() {
-        int randomGenerateIndex = new Random().nextInt(Color.values().length);
-        return Color.values()[randomGenerateIndex].toString();
-    }
-
-    public static int getRandomNumber() {
-        return new Random().nextInt(LimitNumber);
     }
 }

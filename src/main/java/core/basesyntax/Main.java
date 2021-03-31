@@ -3,14 +3,14 @@ package core.basesyntax;
 import java.util.Random;
 
 public class Main {
-    private static final int LimitNumber = 10;
+    private static final int LIMIT_NUMBER = 10;
 
     public static void main(String[] args) {
-        FigureGenerator[] randomFiguresArray =
-                new FigureGenerator[new Random().nextInt(LimitNumber)];
-        Figure[] figures = new Figure[randomFiguresArray.length];
-        for (int i = 0; i < randomFiguresArray.length; i++) {
-            figures[i] = FigureGenerator.createFigure();
+        FigureGenerator randomFiguresGenerator = new FigureGenerator();
+        int figuresArrayLength = new Random().nextInt(LIMIT_NUMBER);
+        Figure[] figures = new Figure[figuresArrayLength];
+        for (int i = 0; i < figures.length; i++) {
+            figures[i] = randomFiguresGenerator.createFigure();
         }
         for (Figure figure : figures) {
             figure.draw();
