@@ -27,27 +27,27 @@ public class FigureSupplier {
         return new Random().nextInt(range);
     }
 
-    private Figure createCircle() {
+    private Circle createCircle() {
         String color = colorGenerator.randomColor();
         int radius = getRandomNumber();
         return new Circle(radius, color, "radius");
     }
 
-    private Figure createIsoscelesTrapezoid() {
+    private IsoscelesTrapezoid createIsoscelesTrapezoid() {
         String color = colorGenerator.randomColor();
         int height = getRandomNumber();
         int mediumLine = getRandomNumber();
         return new IsoscelesTrapezoid(height,mediumLine,color,"medium line");
     }
 
-    private Figure createRectangle() {
+    private Rectangle createRectangle() {
         String color = colorGenerator.randomColor();
         int height = getRandomNumber();
         int width = getRandomNumber();
         return new Rectangle(height, width, color, "width");
     }
 
-    private Figure createRightTriangle() {
+    private RightTriangle createRightTriangle() {
         String color = colorGenerator.randomColor();
         int legOne = 0;
         int legTwo = 0;
@@ -61,7 +61,7 @@ public class FigureSupplier {
                 color, "hypotenuse");
     }
 
-    private Figure createSquare() {
+    private Square createSquare() {
         String color = colorGenerator.randomColor();
         int side = getRandomNumber();
         return new Square(side, color, "side");
