@@ -5,9 +5,9 @@ import java.util.Random;
 public class ColorSupplier {
     public static final int COLORS = 7;
 
-    public static String coloring() {
-        Random rand = new Random();
-        int colorNumber = rand.nextInt(COLORS);
+    public static String getRandomColor() {
+        Random random = new Random();
+        int colorNumber = random.nextInt(COLORS);
 
         switch (colorNumber) {
             case 1:
@@ -23,7 +23,7 @@ public class ColorSupplier {
             case 6:
                 return "yellow";
             case 7:
-                return "browm";
+                return "brown";
             default:
                 return "red";
         }
