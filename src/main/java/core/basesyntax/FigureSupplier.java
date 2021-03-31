@@ -1,13 +1,7 @@
 package core.basesyntax;
 
 public class FigureSupplier {
-    private static final Circle c = new Circle();
-    private static final IsoscelesTrapezoid it = new IsoscelesTrapezoid();
-    private static final Rectangle r = new Rectangle();
-    private static final RightTriangle rt = new RightTriangle();
-    private static final Square s = new Square();
-    private static final String[] NUMBER_OF_FIGURES =
-            {it.draw(), it.draw(), c.draw(), r.draw(), rt.draw(), s.draw()};
+    private final int numberOfFigures = 5;
 
     public static double getRandomProperties() {
         double max = 1.0;
@@ -17,7 +11,7 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int min = 1;
-        int max = NUMBER_OF_FIGURES.length;
+        int max = numberOfFigures;
         int randomNumber = (int) (Math.random() * (max - min)) + min;
         if (randomNumber == 1) {
             return new Circle();

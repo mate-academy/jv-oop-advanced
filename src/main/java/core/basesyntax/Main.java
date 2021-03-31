@@ -8,6 +8,7 @@ public class Main {
         int number = new Random().nextInt(5);
         for (int i = 0; i < number; i++) {
             System.out.println(fs.getRandomFigure().draw());
+
         }
     }
 }
