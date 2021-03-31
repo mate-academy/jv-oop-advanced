@@ -11,13 +11,13 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public int getArea() {
-        return this.firstSide * this.secondSide;
-    }
-
-    @Override
     public String draw() {
         return super.draw() + ", first side: " + this.firstSide + ", second side: "
                 + this.secondSide + " units.";
+    }
+
+    @Override
+    public double calculateArea() {
+        return this.firstSide * this.secondSide;
     }
 }

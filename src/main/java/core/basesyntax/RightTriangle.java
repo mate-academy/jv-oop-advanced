@@ -1,24 +1,24 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private int hipitenuse;
+    private int hipotenuse;
 
-    public RightTriangle(String color, int hipitenuse) {
+    public RightTriangle(String color, int hipotenuse) {
         super(color, "right triangle");
-        this.hipitenuse = hipitenuse;
+        this.hipotenuse = hipotenuse;
     }
 
-    public int getHipitenuse() {
-        return hipitenuse;
+    public int getHipotenuse() {
+        return hipotenuse;
     }
 
     @Override
-    public int getArea() {
-        return (int) (Math.sqrt(3) / 4) * (this.hipitenuse * this.hipitenuse);
+    public double calculateArea() {
+        return (Math.sqrt(3) / 4) * (this.hipotenuse * this.hipotenuse);
     }
 
     @Override
     public String draw() {
-        return super.draw() + ", hipotenuse: " + getHipitenuse() + " units.";
+        return super.draw() + ", hipotenuse: " + getHipotenuse() + " units.";
     }
 }

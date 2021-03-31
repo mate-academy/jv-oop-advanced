@@ -1,21 +1,12 @@
 package core.basesyntax;
 
-public abstract class Figure implements DrawingArea, CalculatorArea {
+public abstract class Figure implements Drawable, AreaCalculator {
     private String color;
     private String typeOfFigure;
-    private int area;
 
     public Figure(String color, String typeOfFigure) {
         this.color = color;
         this.typeOfFigure = typeOfFigure;
-    }
-
-    public int getArea() {
-        return area;
-    }
-
-    public void setArea(int area) {
-        this.area = area;
     }
 
     public String getColor() {
@@ -35,18 +26,9 @@ public abstract class Figure implements DrawingArea, CalculatorArea {
     }
 
     @Override
-    public int calculateArea(Figure[] figures) {
-        int totalArea = 0;
-        for (Figure figure : figures) {
-            totalArea += figure.getArea();
-        }
-        return totalArea;
-    }
-
-    @Override
     public String draw() {
         return "Fugure: " + getTypeOfFigure() + ", color: "
                 + getColor() + ", area: "
-                + getArea() + " sq. units";
+                + (double) Math.round(calculateArea() * 100) / 100 + " sq. units";
     }
 }
