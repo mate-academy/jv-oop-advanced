@@ -1,24 +1,27 @@
 package core.basesyntax;
 
-public class Rectangle extends FiguresState implements FiguresArea, DrawProperties {
+public class Rectangle extends Figure implements AreaCalculator, Drawer {
     private final double weight = FigureSupplier.getRandomProperties();
     private final double height = FigureSupplier.getRandomProperties();
-    private final double perimeter = weight + height;
-
+    private final String name;
+    private final double perimeter;
+    public Rectangle() {
+        name = "rectangle";
+        perimeter = weight + height;
+    }
     @Override
     public String getName() {
-        String name = "Rectangle";
-        return "Figure: " + name;
+        return name;
     }
 
     @Override
     public String getColor() {
-        return "color: " + ColorSupplier.getRandomColor();
+        return ColorSupplier.getRandomColor();
     }
 
     @Override
-    public String getUniqueProp() {
-        return "perimeter: " + perimeter;
+    public double getUniqueProp() {
+        return perimeter;
     }
 
     @Override
@@ -27,7 +30,8 @@ public class Rectangle extends FiguresState implements FiguresArea, DrawProperti
     }
 
     @Override
-    public String drawIt() {
-        return getName() + ", area: " + getArea() + ", " + getUniqueProp() + ", " + getColor();
+    public String draw() {
+        return "Figure: " + getName() + ", area: " + getArea() + ", perimeter: " + getUniqueProp() + ", color: " + getColor();
+
     }
 }

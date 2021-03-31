@@ -1,8 +1,7 @@
 package core.basesyntax;
 
 public class Main {
-
     public static void main(String[] args) {
-        System.out.println(Runner.getRandomFigures());
+            System.out.println(FigureSupplier.getRandomFigures());
     }
 }

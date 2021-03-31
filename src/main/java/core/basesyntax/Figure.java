@@ -1,9 +1,12 @@
 package core.basesyntax;
 
-public abstract class FiguresState {
+public abstract class Figure {
     public abstract String getName();
 
     public abstract String getColor();
 
-    public abstract String getUniqueProp();
+    public abstract double getUniqueProp();
+
+    public Figure() {
+    }
 }

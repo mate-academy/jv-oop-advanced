@@ -1,25 +1,28 @@
 package core.basesyntax;
 
-public class RightTriangle extends FiguresState implements FiguresArea, DrawProperties {
+public class RightTriangle extends Figure implements AreaCalculator, Drawer {
     private final double oneSide = FigureSupplier.getRandomProperties();
     private final double secondSide = FigureSupplier.getRandomProperties();
     private final double hypotenuse = Math.sqrt(Math.pow(oneSide, 2) + Math.pow(secondSide, 2));
-    private final double height = oneSide * secondSide / hypotenuse;
-
+    private final String name;
+    private final double height;
+    public RightTriangle() {
+        name = "right triangle";
+        height = oneSide * secondSide / hypotenuse;
+    }
     @Override
     public String getName() {
-        String name = "Right Triangle";
-        return "Figure: " + name;
+        return name;
     }
 
     @Override
     public String getColor() {
-        return "color: " + ColorSupplier.getRandomColor();
+        return ColorSupplier.getRandomColor();
     }
 
     @Override
-    public String getUniqueProp() {
-        return "height: " + height;
+    public double getUniqueProp() {
+        return height;
     }
 
     @Override
@@ -28,7 +31,7 @@ public class RightTriangle extends FiguresState implements FiguresArea, DrawProp
     }
 
     @Override
-    public String drawIt() {
-        return getName() + ", area: " + getArea() + ", " + getUniqueProp() + ", " + getColor();
+    public String draw() {
+        return "Figure: " + getName() + ", area: " + getArea() + ", height: " + getUniqueProp() + ", color: " + getColor();
     }
 }

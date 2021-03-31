@@ -1,21 +1,27 @@
 package core.basesyntax;
 
-public class Circle extends FiguresState implements FiguresArea, DrawProperties {
-    private final double radius = FigureSupplier.getRandomProperties();
+public class Circle extends Figure implements AreaCalculator, Drawer {
+    private final String name;
+    private final double radius;
 
+    public Circle() {
+        name = "circle";
+        radius = FigureSupplier.getRandomProperties();
+    }
+
+    @Override
     public String getName() {
-        String name = "Circle";
-        return "Figure: " + name;
+        return name;
     }
 
     @Override
     public String getColor() {
-        return "color: " + ColorSupplier.getRandomColor();
+        return ColorSupplier.getRandomColor();
     }
 
     @Override
-    public String getUniqueProp() {
-        return "radius: " + radius;
+    public double getUniqueProp() {
+        return radius;
     }
 
     @Override
@@ -24,7 +30,7 @@ public class Circle extends FiguresState implements FiguresArea, DrawProperties 
     }
 
     @Override
-    public String drawIt() {
-        return getName() + ", area: " + getArea() + ", " + getUniqueProp() + ", " + getColor();
+    public String draw() {
+        return "Figure: " + getName() + ", area: " + getArea() + ", radius: " + getUniqueProp() + ", color: " + getColor();
     }
 }
