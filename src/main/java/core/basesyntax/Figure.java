@@ -1,22 +1,17 @@
 package core.basesyntax;
 
-public abstract class FigureState {
-    private String figureName;
+public abstract class Figure implements FigureBehavior {
+    private Color color;
 
-    private String uniqueProperty;
-
-    public String getFigureName() {
-        return figureName;
-    }
-    public void setFigureName(String figureName) {
-        this.figureName = figureName;
+    public Figure(Color color) {
+        this.color = color;
     }
 
-    public String getFigureName() {
-        return figureName;
-    }
-    public void setFigureName(String figureName) {
-        this.figureName = figureName;
+    public Color getColor() {
+        return color;
     }
 
+    public void setColor(Color color) {
+        this.color = color;
+    }
 }

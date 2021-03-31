@@ -1,4 +1,7 @@
 package core.basesyntax;
 
-public interface Figure {
+public abstract interface FigureBehavior {
+    public abstract double getArea();
+
+    abstract void drawFigure();
 }
