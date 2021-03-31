@@ -1,23 +1,29 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements FigureArea {
-    private final int catted1;
-    private final int catted2;
-    private final int hypotenuse;
+public class RightTriangle extends Figure {
+    private int legOne;
+    private int legTwo;
+    private int hypotenuse;
 
-    public RightTriangle(int catted1, int catted2, int hypotenuse, String color, String property) {
-        setColor(color);
-        setProperty(property);
-        this.catted1 = catted1;
-        this.catted2 = catted2;
+    public RightTriangle(int legOne, int legTwo, int hypotenuse, String color, String property) {
+        super(color, property);
+        this.legOne = legOne;
+        this.legTwo = legTwo;
         this.hypotenuse = hypotenuse;
-        setPropertyLength(hypotenuse);
-        areaCalculate();
+        calculateArea();
     }
 
     @Override
-    public void areaCalculate() {
-        setArea(0.5 * catted1 * catted2);
+    public double calculateArea() {
+        return (0.5 * legOne * legTwo);
+    }
+
+    @Override
+    public String draw() {
+        return "Figure{RightTriangle , area: "
+                + String.format("%.1f", calculateArea()) + " sq. units, "
+                + getProperty() + ": " + hypotenuse
+                + " units, color: " + getColor()
+                + '}';
     }
 }
-

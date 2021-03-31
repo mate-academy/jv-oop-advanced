@@ -1,20 +1,27 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements FigureArea {
-    private final int height;
-    private final int mediumLine;
+public class IsoscelesTrapezoid extends Figure {
+    private int height;
+    private int mediumLine;
 
     public IsoscelesTrapezoid(int height,int mediumLine,String color, String property) {
-        setColor(color);
-        setProperty(property);
+        super(color, property);
         this.height = height;
         this.mediumLine = mediumLine;
-        setPropertyLength(mediumLine);
-        areaCalculate();
+        calculateArea();
     }
 
     @Override
-    public void areaCalculate() {
-        setArea(height * mediumLine);
+    public double calculateArea() {
+        return (height * mediumLine);
+    }
+
+    @Override
+    public String draw() {
+        return "Figure{Isosceles Trapezoid , area: "
+                + String.format("%.1f", calculateArea()) + " sq. units, "
+                + getProperty() + ": " + mediumLine
+                + " units, color: " + getColor()
+                + '}';
     }
 }

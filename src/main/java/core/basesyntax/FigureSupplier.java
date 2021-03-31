@@ -1,11 +1,13 @@
 package core.basesyntax;
 
-public class FigureSupplier {
-    private final ColorSupplier colorGenerator = new ColorSupplier();
-    private String color;
+import java.util.Random;
 
-    public Figure randomFigure() {
-        int number = (int)((Math.random() * 5) + 1);
+public class FigureSupplier {
+    private ColorSupplier colorGenerator = new ColorSupplier();
+
+    public Figure getRandomFigure() {
+        int numberOfFigures = 5;
+        int number = new Random().nextInt(numberOfFigures);
         switch (number) {
             case 1:
                 return createCircle();
@@ -15,58 +17,57 @@ public class FigureSupplier {
                 return createRectangle();
             case 4:
                 return createRightTriangle();
-            case 5:
-                return createSquare();
             default:
                 return createSquare();
         }
     }
 
-    public int randomProperty() {
-        return (int)((Math.random() * 100) + 1);
+    public int getRandomNumber() {
+        int range = 100;
+        return new Random().nextInt(range);
     }
 
     private Figure createCircle() {
-        color = colorGenerator.randomColor();
-        int radius = randomProperty();
+        String color = colorGenerator.randomColor();
+        int radius = getRandomNumber();
         Figure circle = new Circle(radius, color, "radius");
         return circle;
     }
 
     private Figure createIsoscelesTrapezoid() {
-        color = colorGenerator.randomColor();
-        int height = randomProperty();
-        int mediumLine = randomProperty();
+        String color = colorGenerator.randomColor();
+        int height = getRandomNumber();
+        int mediumLine = getRandomNumber();
         Figure isoscelesTrapezoid = new IsoscelesTrapezoid(height,mediumLine,color,"medium line");
         return isoscelesTrapezoid;
     }
 
     private Figure createRectangle() {
-        color = colorGenerator.randomColor();
-        int height = randomProperty();
-        int width = randomProperty();
+        String color = colorGenerator.randomColor();
+        int height = getRandomNumber();
+        int width = getRandomNumber();
         Figure rectangle = new Rectangle(height, width, color, "width");
         return rectangle;
     }
 
     private Figure createRightTriangle() {
-        color = colorGenerator.randomColor();
-        int catted1 = 0;
-        int catted2 = 0;
+        String color = colorGenerator.randomColor();
+        int legOne = 0;
+        int legTwo = 0;
         int hypotenuse = 0;
-        while (catted1 + catted2 <= hypotenuse) {
-            catted1 = randomProperty();
-            catted2 = randomProperty();
-            hypotenuse = randomProperty();
+        while (legOne + legTwo <= hypotenuse) {
+            legOne = getRandomNumber();
+            legTwo = getRandomNumber();
+            hypotenuse = getRandomNumber();
         }
-        Figure rightTriangle = new RightTriangle(catted1, catted2, hypotenuse,
+        Figure rightTriangle = new RightTriangle(legOne, legTwo, hypotenuse,
                 color, "hypotenuse");
         return rightTriangle;
     }
 
     private Figure createSquare() {
-        color = colorGenerator.randomColor();
-        int side = randomProperty();
+        String color = colorGenerator.randomColor();
+        int side = getRandomNumber();
         Figure square = new Square(side, color, "side");
         return square;
     }

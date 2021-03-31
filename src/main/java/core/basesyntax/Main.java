@@ -3,12 +3,12 @@ package core.basesyntax;
 public class Main {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        int randomMassLength = figureSupplier.randomProperty();
-        Figure[] figures = new Figure[randomMassLength];
+        int randomArrayLength = figureSupplier.getRandomNumber();
+        Figure[] figures = new Figure[randomArrayLength];
 
-        for (int i = 0;i < randomMassLength;i++) {
-            figures[i] = figureSupplier.randomFigure();
-            System.out.println(figures[i].draw(figures[i]));
+        for (int i = 0; i < randomArrayLength; i++) {
+            figures[i] = figureSupplier.getRandomFigure();
+            System.out.println(figures[i].draw());
         }
     }
 }

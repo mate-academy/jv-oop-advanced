@@ -1,19 +1,13 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public class ColorSupplier {
-    private String[] colors = new String[] {"black", "white", "green", "red", "gray", "purple",
-            "pink", "yellow", "brown", "blue", "orange"};
-
-    public String[] getColors() {
-        return colors;
-    }
-
-    public void setColors(String[] colors) {
-        this.colors = colors;
-    }
+    private final String[] colors = new String[] {"black", "white", "green", "red", "gray",
+            "purple", "pink", "yellow", "brown", "blue", "orange"};
 
     public String randomColor() {
-        int randomNumber = (int)((Math.random() * colors.length) + 1);
-        return colors[randomNumber - 1];
+        int randomNumber = new Random().nextInt(colors.length);
+        return colors[randomNumber];
     }
 }

@@ -1,18 +1,25 @@
 package core.basesyntax;
 
-public class Square extends Figure implements FigureArea {
-    private final int side;
+public class Square extends Figure {
+    private int side;
 
     public Square(int side, String color, String property) {
-        setColor(color);
-        setProperty(property);
+        super(color, property);
         this.side = side;
-        setPropertyLength(side);
-        areaCalculate();
+        calculateArea();
     }
 
     @Override
-    public void areaCalculate() {
-        setArea(Math.pow(side,2));
+    public double calculateArea() {
+        return (Math.pow(side, 2));
+    }
+
+    @Override
+    public String draw() {
+        return "Figure{Square , area: "
+                + String.format("%.1f", calculateArea()) + " sq. units, "
+                + getProperty() + ": " + side
+                + " units, color: " + getColor()
+                + '}';
     }
 }
