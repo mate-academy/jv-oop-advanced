@@ -12,6 +12,7 @@ public class FigureSupplier extends ColorSupplier {
         Random random = new Random();
         int figure = random.nextInt(4);
         int size = 100;
+
         switch (figure) {
             case 0:
                 return new Circle(ColorSupplier.getColor(), random.nextInt(size));
