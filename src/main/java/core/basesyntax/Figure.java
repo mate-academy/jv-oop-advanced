@@ -1,26 +1,27 @@
 package core.basesyntax;
 
-public abstract class Figure {
-    private String name;
-    private String color;
-    private Property property;
+public abstract class Figure implements Drawable {
+    private final String name;
+    private final String color;
+    private final String uniqueProperty;
 
-    public Figure(String name, String color, Property property) {
+    public Figure(String name, String color, String uniqueProperty) {
         this.name = name;
         this.color = color;
-        this.property = property;
-    }
-
-    public void draw() {
-        System.out.printf("Figure: %s, area: %.2f sq. units, %s length: %.2f units, color: %s%n",
-                name, calculateArea(), property.getName(),
-                property.getValue(), color);
+        this.uniqueProperty = uniqueProperty;
     }
 
     public abstract double calculateArea();
 
-    public Property getProperty() {
-        return property;
+    public String getUniqueProperty() {
+        return uniqueProperty;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public String getColor() {
+        return color;
+    }
 }
