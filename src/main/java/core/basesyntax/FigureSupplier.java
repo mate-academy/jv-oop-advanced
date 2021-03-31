@@ -1,13 +1,16 @@
 package core.basesyntax;
+
 import java.util.Random;
+
 public class FigureSupplier {
-    double MIN = 1e-10;
-    double MAX = 100000;
-    public Figure randFigureProper(){
+    private static final double MIN = 1e-10;
+    private static final double MAX = 100000;
+
+    public Figure randFigureProper() {
         Random r = new Random();
         Figure f;
         int num = r.nextInt(4);
-        switch(num) {
+        switch (num) {
             case 0:
                 f = new Square(MIN + (MAX - MIN) * r.nextDouble());
                 return f;

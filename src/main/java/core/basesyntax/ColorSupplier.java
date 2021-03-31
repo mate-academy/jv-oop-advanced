@@ -1,10 +1,11 @@
 package core.basesyntax;
+
 import java.util.Random;
 
 public class ColorSupplier {
     public void generateColor(Figure figure) {
         Random rand = new Random();
-        switch(rand.nextInt(3)) {
+        switch (rand.nextInt(3)) {
             case 0:
                 figure.setColor(State.RED);
                 break;

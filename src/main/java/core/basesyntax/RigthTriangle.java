@@ -33,7 +33,7 @@ public class RigthTriangle extends Figure implements State {
     }
 
     @Override
-    public void setColor(String color){
+    public void setColor(String color) {
         this.color = color;
     }
 
