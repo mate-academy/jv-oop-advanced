@@ -1,26 +1,28 @@
 package core.basesyntax;
 
 public class Trapezoid extends Figure {
-    private final int side1;
-    private final int side2;
+    private final int sideOne;
+    private final int sideTwo;
     private final int height;
+    private final String uniqueProperty;
 
-    public Trapezoid(String color, int side1, int side2, int height) {
-        super("trapezoid", color,"height");
-        this.side1 = side1;
-        this.side2 = side2;
+    public Trapezoid(String color, int sideOne, int sideTwo, int height) {
+        super("trapezoid", color);
+        this.sideOne = sideOne;
+        this.sideTwo = sideTwo;
         this.height = height;
+        this.uniqueProperty = "height";
     }
 
     @Override
     public double calculateArea() {
-        return ((side1 + side2) * height) / 2D;
+        return ((sideOne + sideTwo) * height) / 2D;
     }
 
     @Override
     public void draw() {
         System.out.printf("Figure: %s, area: %.2f sq. units, %s length: %d units, color: %s%n",
-                getUniqueProperty(), calculateArea(), getName(),
+                uniqueProperty, calculateArea(), getName(),
                 height, getColor());
     }
 }

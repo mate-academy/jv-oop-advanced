@@ -62,12 +62,12 @@ public class FigureSupplier {
     }
 
     private Figure generateRectangle() {
-        int side1 = new Random().nextInt(RANDOM_INT_LIMIT);
-        int side2 = new Random().nextInt(RANDOM_INT_LIMIT);
-        while (side2 == side1) {
-            side2 = new Random().nextInt(RANDOM_INT_LIMIT);
+        int sideOne = new Random().nextInt(RANDOM_INT_LIMIT);
+        int sideTwo = new Random().nextInt(RANDOM_INT_LIMIT);
+        while (sideTwo == sideOne) {
+            sideTwo = new Random().nextInt(RANDOM_INT_LIMIT);
         }
-        return new Rectangle(randomColorGenerator.generateColor(), side1, side2);
+        return new Rectangle(randomColorGenerator.generateColor(), sideOne, sideTwo);
     }
 
     private Figure generateTriangle() {
