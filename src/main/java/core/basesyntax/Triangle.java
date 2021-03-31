@@ -19,7 +19,7 @@ public class Triangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.printf("Figure: %s, area: %.2f sq. units, hypotenuse length: %d units, color: %s%n",
-                getName(), calculateArea(), hypotenuse, getColor());
+        System.out.printf("Figure: %s, area: %.2f sq. units, hypotenuse length: %d units, "
+                + "color: %s%n", getName(), calculateArea(), hypotenuse, getColor());
     }
 }
