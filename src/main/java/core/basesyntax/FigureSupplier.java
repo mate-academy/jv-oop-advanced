@@ -1,28 +1,57 @@
 package core.basesyntax;
 
 public class FigureSupplier {
-    private static final Figure[] FIGURES = {
-            new IsoscelesTrapezoid(), new RightTriangle(),
-            new Rectangle(), new Circle(), new Square()
-    };
+    private static final int FIGURES_QUANTITY = 5;
+    private static final int RANDOM_LIMIT = 50;
+    private ColorSupplier color = new ColorSupplier();
 
-    protected static Figure generateFigure() {
-        Figure figure = FIGURES[(int) (Math.random()
-                * FIGURES.length)];
-        if (figure.getClass().equals(Circle.class)) {
-            figure = new Circle(ColorSupplier.colorGenerator(), Math.random() * 50);
-        } else if (figure.getClass().equals(IsoscelesTrapezoid.class)) {
-            figure = new IsoscelesTrapezoid(ColorSupplier.colorGenerator(),
-                    Math.random() * 50, Math.random() * 50, Math.random() * 50);
-        } else if (figure.getClass().equals(Rectangle.class)) {
-            figure = new Rectangle(ColorSupplier.colorGenerator(),
-                    Math.random() * 50, Math.random() * 50);
-        } else if (figure.getClass().equals(RightTriangle.class)) {
-            figure = new RightTriangle(ColorSupplier.colorGenerator(),
-                    Math.random() * 50, Math.random() * 50);
-        } else if (figure.getClass().equals(Square.class)) {
-            figure = new Square(ColorSupplier.colorGenerator(), Math.random() * 50);
+    protected Figure generateFigure() {
+        Figure figure;
+        int randomFigure = (int) (Math.random() * FIGURES_QUANTITY);
+        switch (randomFigure) {
+            case 0:
+                figure = getNewCircle();
+                break;
+            case 1:
+                figure = getNewIsoscelesTrapezoid();
+                break;
+            case 2:
+                figure = getNewRectangle();
+                break;
+            case 3:
+                figure = getNewRightTriangle();
+                break;
+            case 4:
+                figure = getNewSquare();
+                break;
+            default:
+                figure = null;
         }
         return figure;
     }
+
+    private Circle getNewCircle() {
+        return new Circle(color.colorGenerator(), Math.random() * RANDOM_LIMIT);
+    }
+
+    private IsoscelesTrapezoid getNewIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(color.colorGenerator(),
+                Math.random() * RANDOM_LIMIT, Math.random() * RANDOM_LIMIT,
+                Math.random() * RANDOM_LIMIT);
+    }
+
+    private Rectangle getNewRectangle() {
+        return new Rectangle(color.colorGenerator(),
+                Math.random() * RANDOM_LIMIT, Math.random() * RANDOM_LIMIT);
+    }
+
+    private RightTriangle getNewRightTriangle() {
+        return new RightTriangle(color.colorGenerator(),
+                Math.random() * RANDOM_LIMIT, Math.random() * RANDOM_LIMIT);
+    }
+
+    private Square getNewSquare() {
+        return new Square(color.colorGenerator(), Math.random() * RANDOM_LIMIT);
+    }
+
 }

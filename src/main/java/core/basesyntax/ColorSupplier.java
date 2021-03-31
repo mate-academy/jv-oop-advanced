@@ -11,8 +11,9 @@ public class ColorSupplier {
             "lavender", "violet", "olive",
             "cyan", "maroon", "beige"
     };
+    private static final int COLORS_QUANTITY = COLORS.length;
 
-    protected static String colorGenerator() {
-        return COLORS[(int) (Math.random() * COLORS.length)];
+    protected String colorGenerator() {
+        return COLORS[(int) (Math.random() * COLORS_QUANTITY)];
     }
 }
