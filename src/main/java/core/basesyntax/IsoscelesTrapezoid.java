@@ -5,37 +5,37 @@ public class IsoscelesTrapezoid extends Figure {
     private double baseB;
     private double side;
 
-    protected IsoscelesTrapezoid() {
+    public IsoscelesTrapezoid() {
     }
 
-    protected IsoscelesTrapezoid(String color, double baseA, double baseB, double side) {
+    public IsoscelesTrapezoid(String color, double baseA, double baseB, double side) {
         super(color);
         this.baseA = baseA;
         this.baseB = baseB;
         this.side = side;
     }
 
-    protected double getBaseA() {
+    public double getBaseA() {
         return baseA;
     }
 
-    protected void setBaseA(double baseA) {
+    public void setBaseA(double baseA) {
         this.baseA = baseA;
     }
 
-    protected double getBaseB() {
+    public double getBaseB() {
         return baseB;
     }
 
-    protected void setBaseB(double baseB) {
+    public void setBaseB(double baseB) {
         this.baseB = baseB;
     }
 
-    protected double getSide() {
+    public double getSide() {
         return side;
     }
 
-    protected void setSide(double side) {
+    public void setSide(double side) {
         this.side = side;
     }
 
@@ -50,14 +50,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double getArea() {
-        double semiPerimeter = (baseA + baseB + side + side) / 2;
-        return ((baseA + baseB) / 4)
-                * Math.sqrt(4 * Math.pow(side, 2) - Math.pow(baseA - baseB, 2));
-    }
-
-    @Override
-    public Figure getRandomFigure() {
-        return new IsoscelesTrapezoid(ColorSupplier.colorGenerator(),
-                Math.random() * 100, Math.random() * 100, Math.random() * 100);
+        return ((baseA + baseB) / 2)
+                * Math.sqrt((side * side) - Math.pow((baseA - baseB), 2) / 4);
     }
 }

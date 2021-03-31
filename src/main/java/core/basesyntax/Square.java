@@ -3,19 +3,19 @@ package core.basesyntax;
 public class Square extends Figure {
     private double side;
 
-    protected Square() {
+    public Square() {
     }
 
-    protected Square(String color, double side) {
+    public Square(String color, double side) {
         super(color);
         this.side = side;
     }
 
-    protected double getSide() {
+    public double getSide() {
         return side;
     }
 
-    protected void setSide(double side) {
+    public void setSide(double side) {
         this.side = side;
     }
 
@@ -29,10 +29,5 @@ public class Square extends Figure {
     @Override
     public double getArea() {
         return Math.pow(side, 2);
-    }
-
-    @Override
-    public Figure getRandomFigure() {
-        return new Square(ColorSupplier.colorGenerator(), Math.random() * 100);
     }
 }

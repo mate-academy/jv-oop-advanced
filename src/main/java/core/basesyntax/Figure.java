@@ -1,12 +1,12 @@
 package core.basesyntax;
 
-public abstract class Figure implements Shape {
-    protected String color;
+public abstract class Figure implements Shape, AreaSumming {
+    private String color;
 
     public Figure() {
     }
 
-    protected Figure(String color) {
+    public Figure(String color) {
         this.color = color;
     }
 

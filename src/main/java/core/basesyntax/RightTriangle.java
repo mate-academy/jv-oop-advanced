@@ -4,7 +4,7 @@ public class RightTriangle extends Figure {
     private double legA;
     private double legB;
 
-    protected RightTriangle() {
+    public RightTriangle() {
     }
 
     public RightTriangle(String color, double legA, double legB) {
@@ -13,19 +13,19 @@ public class RightTriangle extends Figure {
         this.legB = legB;
     }
 
-    protected double getLegA() {
+    public double getLegA() {
         return legA;
     }
 
-    protected void setLegA(double legA) {
+    public void setLegA(double legA) {
         this.legA = legA;
     }
 
-    protected double getLegB() {
+    public double getLegB() {
         return legB;
     }
 
-    protected void setLegB(double legB) {
+    public void setLegB(double legB) {
         this.legB = legB;
     }
 
@@ -39,12 +39,6 @@ public class RightTriangle extends Figure {
     @Override
     public double getArea() {
         return (legA * legB) / 2;
-    }
-
-    @Override
-    public Figure getRandomFigure() {
-        return new RightTriangle(ColorSupplier.colorGenerator(),
-                Math.random() * 100, Math.random() * 100);
     }
 
     private double getHypotenuse(double legA, double legB) {

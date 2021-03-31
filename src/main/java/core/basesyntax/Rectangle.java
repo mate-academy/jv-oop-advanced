@@ -4,28 +4,28 @@ public class Rectangle extends Figure {
     private double length;
     private double width;
 
-    protected Rectangle() {
+    public Rectangle() {
     }
 
-    protected Rectangle(String color, double length, double width) {
+    public Rectangle(String color, double length, double width) {
         super(color);
         this.length = length;
         this.width = width;
     }
 
-    protected double getLength() {
+    public double getLength() {
         return length;
     }
 
-    protected void setLength(double length) {
+    public void setLength(double length) {
         this.length = length;
     }
 
-    protected double getWidth() {
+    public double getWidth() {
         return width;
     }
 
-    protected void setWidth(double width) {
+    public void setWidth(double width) {
         this.width = width;
     }
 
@@ -40,11 +40,5 @@ public class Rectangle extends Figure {
     @Override
     public double getArea() {
         return length * width;
-    }
-
-    @Override
-    public Figure getRandomFigure() {
-        return new Rectangle(ColorSupplier.colorGenerator(),
-                Math.random() * 100, Math.random() * 100);
     }
 }
