@@ -1,7 +1,12 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements Drawable {
-    private double radius = Math.random() * 10;
+public class Circle extends Figure {
+    public static final int RANGE = 10;
+    private double radius;
+
+    public Circle() {
+        this.radius = Math.random() * RANGE;
+    }
 
     public double getRadius() {
         return radius;
@@ -17,9 +22,9 @@ public class Circle extends Figure implements Drawable {
     }
 
     @Override
-    public String drawFigure() {
-        return "Figure: circle, area: " + String.format("%.1f", getArea())
+    public void drawFigure() {
+        System.out.println("Figure: circle, area: " + String.format("%.1f", getArea())
                 + " sq. units, radius: " + String.format("%.1f", radius)
-                + " units, color:" + getColor();
+                + " units, color:" + getColor());
     }
 }

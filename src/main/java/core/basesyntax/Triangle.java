@@ -1,9 +1,14 @@
 package core.basesyntax;
 
 public class Triangle extends Figure implements Drawable {
-    private double length = Math.random() * 10;
-    private double width = Math.random() * 10;
-    private double hypotenuse = Math.sqrt(length * length + width * width);
+    public static final int RANGE = 10;
+    private double length;
+    private double width;
+
+    public Triangle() {
+        this.length = Math.random() * RANGE;
+        this.width = Math.random() * RANGE;
+    }
 
     public double getLength() {
         return length;
@@ -22,11 +27,7 @@ public class Triangle extends Figure implements Drawable {
     }
 
     public double getHypotenuse() {
-        return hypotenuse;
-    }
-
-    public void setHypotenuse(double hypotenuse) {
-        this.hypotenuse = hypotenuse;
+        return Math.sqrt(length * length + width * width);
     }
 
     @Override
@@ -35,9 +36,9 @@ public class Triangle extends Figure implements Drawable {
     }
 
     @Override
-    public String drawFigure() {
-        return "Figure: triangle, area: " + String.format("%.1f", getArea())
-                + " sq. units, hypotenuse: " + String.format("%.1f", hypotenuse)
-                + " units, color: " + getColor();
+    public void drawFigure() {
+        System.out.println("Figure: triangle, area: " + String.format("%.1f", getArea())
+                + " sq. units, hypotenuse: " + String.format("%.1f", getHypotenuse())
+                + " units, color: " + getColor());
     }
 }

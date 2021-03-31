@@ -1,8 +1,14 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Drawable {
-    private double length = Math.random() * 10;
-    private double width = Math.random() * 10;
+public class Rectangle extends Figure {
+    public static final int RANGE = 10;
+    private double length;
+    private double width;
+
+    public Rectangle() {
+        this.length = Math.random() * RANGE;
+        this.width = Math.random() * RANGE;
+    }
 
     public double getLength() {
         return length;
@@ -26,10 +32,10 @@ public class Rectangle extends Figure implements Drawable {
     }
 
     @Override
-    public String drawFigure() {
-        return "Figure: rectangle, area: " + String.format("%.1f", getArea())
+    public void drawFigure() {
+        System.out.println("Figure: rectangle, area: " + String.format("%.1f", getArea())
                 + " sq. units, length: " + String.format("%.1f", length)
                 + " units, height: " + String.format("%.1f", width)
-                + " units, color: " + getColor();
+                + " units, color: " + getColor());
     }
 }
