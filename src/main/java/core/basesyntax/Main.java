@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class Main {
-    static final int ARRAY_LIMIT = 10;
+    private static final int ARRAY_LIMIT = 10;
 
     public static void main(String[] args) {
         Figure[] figures = new Figure[new Random().nextInt(ARRAY_LIMIT)];
