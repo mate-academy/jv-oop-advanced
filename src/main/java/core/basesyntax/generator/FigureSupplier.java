@@ -9,7 +9,6 @@ import core.basesyntax.figure.Square;
 import java.util.Random;
 
 public class FigureSupplier extends Generator {
-
     public static Figure[] generateFigure(int num) {
         Figure[] figures = new Figure[num];
         Random random = new Random();
