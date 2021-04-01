@@ -10,7 +10,7 @@ public class Square extends Shape {
 
     @Override
     public String draw() {
-        return ("Figure: " + ",area: " + getArea() + "side length: " + side);
+        return ("Figure: " + figure() + " ,area: " + getArea() + "side length: " + side);
     }
 
     @Override

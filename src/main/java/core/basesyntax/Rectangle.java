@@ -12,7 +12,7 @@ public class Rectangle extends Shape {
 
     @Override
     public String draw() {
-        return ("Picture: " + ",area: " + getArea() + ",sideFirst: " + sideSecond
+        return ("Figure: " + figure() + " ,area: " + getArea() + ",sideFirst: " + sideSecond
                 + " ,sideSecond: " + sideSecond);
     }
 

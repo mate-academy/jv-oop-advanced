@@ -9,9 +9,13 @@ public class HelloWorld {
         FigureSupplier supplier = new FigureSupplier();
         Random random = new Random();
         Shape[] shapes = new Shape[random.nextInt(ARRAY_LENGTH_LIMIT)];
+        for (int i = 0; i < shapes.length; i++) {
+            shapes[i] = supplier.getRandomFigure();
+        }
 
         for (Shape shaped : shapes) {
             System.out.println(shaped.draw());
         }
     }
 }
+

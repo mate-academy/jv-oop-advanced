@@ -15,7 +15,7 @@ public class Circle extends Shape {
 
     @Override
     public String draw() {
-        return ("Picture: " + ",area: " + getArea() + "radius : " + radius);
+        return ("Figure: " + figure() + " ,area: " + getArea() + "radius : " + radius);
     }
 
     @Override

@@ -12,7 +12,7 @@ public class RightTriangle extends Shape {
 
     @Override
     public String draw() {
-        return ("Picture: " + ",area: " + getArea() + "leg length: " + leg);
+        return ("Figure: " + figure() + " ,area: " + getArea() + "leg length: " + leg);
     }
 
     @Override
