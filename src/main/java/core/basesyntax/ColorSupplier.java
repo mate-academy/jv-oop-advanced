@@ -3,7 +3,6 @@ package core.basesyntax;
 import java.util.Random;
 
 public class ColorSupplier {
-
     private static final String RED_COLOR = "red";
     private static final String BLUE_COLOR = "blue";
     private static final String GREEN_COLOR = "green";
