@@ -4,7 +4,7 @@ import core.basesyntax.generator.FigureSupplier;
 import java.util.Random;
 
 public class Main {
-    static final int FIGURE_COUNT = 50;
+    private static final int FIGURE_COUNT = 50;
 
     public static void main(String[] args) {
         Random random = new Random();
