@@ -14,7 +14,7 @@ public class FigureGenerator {
             case 1:
                 return new Circle(random.nextInt(LIMIT_NUMBER), colorGenerator.getRandomColor());
             case 2:
-                return new RightTriangle(random.nextInt(LIMIT_NUMBER), random.nextInt(LIMIT_NUMBER),
+                return new RightTriangle(random.nextInt(LIMIT_NUMBER),
                         random.nextInt(LIMIT_NUMBER), colorGenerator.getRandomColor());
             case 3:
                 return new Rectangle(random.nextInt(LIMIT_NUMBER), random.nextInt(LIMIT_NUMBER),

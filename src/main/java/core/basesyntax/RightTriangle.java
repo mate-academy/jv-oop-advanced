@@ -4,7 +4,7 @@ public class RightTriangle extends Figure {
     private int sideOne;
     private int sideTwo;
 
-    public RightTriangle(int sideOne, int sideTwo, int hypotenuse, String color) {
+    public RightTriangle(int sideOne, int sideTwo, String color) {
         super(color);
         this.sideOne = sideOne;
         this.sideTwo = sideTwo;
@@ -12,7 +12,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public double findArea() {
-        return (sideOne * sideTwo) / 2;
+        return sideOne * sideTwo / 2;
     }
 
     @Override
