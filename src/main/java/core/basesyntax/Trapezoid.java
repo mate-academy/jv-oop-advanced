@@ -1,19 +1,20 @@
 package core.basesyntax;
 
-public class Trapezoid extends Figure implements Shape {
+public class Trapezoid extends Figure {
     private int height;
     private int midline;
 
     public Trapezoid(int height, int midline, Color color) {
+        super(color);
         this.height = height;
         this.midline = midline;
-        this.color = color;
     }
 
+
     @Override
-    void draw() {
-        System.out.println("I am " + color.toString().toLowerCase()
-                + " rectangle, my height is " + height
+    public void draw() {
+        System.out.println("I am " + getColor()
+                + " trapezoid, my height is " + height
                 + " my midline is " + midline
                 + " and my area is " + String.format("%.2f", getArea()));
     }

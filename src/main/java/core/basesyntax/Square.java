@@ -1,16 +1,16 @@
 package core.basesyntax;
 
-public class Square extends Figure implements Shape {
+public class Square extends Figure  {
     private int side;
 
     public Square(int side, Color color) {
+        super(color);
         this.side = side;
-        this.color = color;
     }
 
     @Override
-    void draw() {
-        System.out.println("I am " + color.toString().toLowerCase()
+    public void draw() {
+        System.out.println("I am " + getColor()
                 + " square, my side is " + side
                 + " and my area is " + String.format("%.2f", getArea()));
     }

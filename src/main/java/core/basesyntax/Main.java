@@ -3,8 +3,9 @@ package core.basesyntax;
 import java.util.Random;
 
 public class Main {
-    public static void main(String[] args) {
-        int figuresNumber = new Random().nextInt(10) + 1;
+   public static void main(String[] args) {
+        final int MAX_NUMBER = 10;
+        int figuresNumber = new Random().nextInt(MAX_NUMBER);
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figuresList = new Figure[figuresNumber];
 

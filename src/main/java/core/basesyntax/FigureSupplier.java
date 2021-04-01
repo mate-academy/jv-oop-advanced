@@ -4,20 +4,21 @@ import java.util.Random;
 
 public class FigureSupplier {
     public Figure getRandomFigure() {
+        final int NUMBER_OF_FIGURES_TYPES = 5;
+        final int MAX_VALUE = 10;
         Random figureNumber = new Random();
         Random figurePart = new Random();
         ColorSupplier colorSupplier = new ColorSupplier();
 
-        switch (figureNumber.nextInt(5) + 1) {
-            case 1: return new Circle(figurePart.nextInt(10) + 1, colorSupplier.getRandomColor());
-            case 2: return new Square(figurePart.nextInt(10) + 1, colorSupplier.getRandomColor());
-            case 3: return new Triangle(figureNumber.nextInt(10) + 1, figureNumber.nextInt(10) + 1,
+        switch (figureNumber.nextInt(NUMBER_OF_FIGURES_TYPES)) {
+            case 0: return new Circle(figurePart.nextInt(MAX_VALUE) + 1, colorSupplier.getRandomColor());
+            case 1: return new Square(figurePart.nextInt(MAX_VALUE) + 1, colorSupplier.getRandomColor());
+            case 2: return new Triangle(figurePart.nextInt(MAX_VALUE) + 1, figurePart.nextInt(MAX_VALUE) + 1,
                     colorSupplier.getRandomColor());
-            case 4: return new Rectangle(figureNumber.nextInt(10) + 1, figureNumber.nextInt(10) + 1,
+            case 3: return new Rectangle(figurePart.nextInt(MAX_VALUE) + 1, figurePart.nextInt(MAX_VALUE) + 1,
                     colorSupplier.getRandomColor());
-            case 5: return new Trapezoid(figureNumber.nextInt(10) + 1, figureNumber.nextInt(10) + 1,
+            default: return new Trapezoid(figurePart.nextInt(MAX_VALUE) + 1, figurePart.nextInt(MAX_VALUE) + 1,
                     colorSupplier.getRandomColor());
-            default: return null;
         }
     }
 }
