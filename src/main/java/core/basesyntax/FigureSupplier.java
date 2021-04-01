@@ -2,10 +2,11 @@ package core.basesyntax;
 
 public class FigureSupplier {
     public static final int RANDOM_LIMIT = 342;
+    public static final int FIGURE_VARIETY = 5;
 
     public Figure getRandomFigure() {
         ColorSupplier colorSupplier = new ColorSupplier();
-        int figureIndex = (int) (Math.random() * 5);
+        int figureIndex = (int) (Math.random() * FIGURE_VARIETY);
 
         switch (figureIndex) {
             case 1: Figure randomSquare = new Square("square",
