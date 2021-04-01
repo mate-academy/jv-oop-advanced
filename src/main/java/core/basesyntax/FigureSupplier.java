@@ -3,10 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int FIGURE_NUMBER = 5; // константа максимальної кількості фігур
-    private static final int MAX = 20; // константа максимального значення якее може зарандомитись
+    private static final int FIGURE_NUMBER = 5;
+    private static final int MAX = 20;
 
-    public static Figure figureRand() {
+    public Figure getRandomFigure() {
         Random random = new Random();
         int number = random.nextInt(FIGURE_NUMBER);
 

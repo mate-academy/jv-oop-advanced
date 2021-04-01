@@ -35,8 +35,8 @@ public class Rectangle extends Figure {
     public void draw() {
         System.out.println("Figure: "
                 + getName() + ", area: "
-                + getArea() + " sq. units, side1 length: "
-                + getLength() + " sq. units, side2 length: "
+                + getArea() + " sq. units,  length: "
+                + getLength() + " sq. units, width: "
                 + getWidth() + " units, color: "
                 + getColor());
     }

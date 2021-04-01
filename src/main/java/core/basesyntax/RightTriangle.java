@@ -3,9 +3,9 @@ package core.basesyntax;
 public class RightTriangle extends Figure {
     private int leg;
 
-    public RightTriangle(String color,int side1) {
+    public RightTriangle(String color,int leg) {
         super("right triangle", color);
-        this.leg = side1;
+        this.leg = leg;
     }
 
     public int getLeg() {
@@ -26,7 +26,7 @@ public class RightTriangle extends Figure {
         System.out.println("Figure: "
                 + getName() + ", area: "
                 + getArea() + " sq.units , side length: "
-                + getLeg() + " unuts, color: "
+                + getLeg() + " units, color: "
                 + getColor());
     }
 }

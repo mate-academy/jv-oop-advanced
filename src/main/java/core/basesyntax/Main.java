@@ -8,9 +8,9 @@ public class Main {
     public static void main(String[] args) {
         Random random = new Random();
         Figure[] figures = new Figure[random.nextInt(MAX)];
-
+        FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < figures.length; i++) {
-            figures[i] = FigureSupplier.figureRand();
+            figures[i] = figureSupplier.getRandomFigure();
         }
         for (Figure figure: figures) {
             figure.draw();
