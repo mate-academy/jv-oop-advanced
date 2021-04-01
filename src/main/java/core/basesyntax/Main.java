@@ -2,7 +2,7 @@ package core.basesyntax;
 
 public class Main {
     public static void main(String[] args) {
-        int figuresNumber = 20;
+        final int figuresNumber = 20;
 
         Figure[] randomFigureArray = new Figure[(int)((Math.random() * figuresNumber))];
 

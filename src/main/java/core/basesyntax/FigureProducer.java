@@ -1,8 +1,7 @@
 package core.basesyntax;
 
 public class FigureProducer {
-    private final int randomNumber = 5;
-    private String [] figureArr = { "SQUARE", "RECTANGLE", "RIGHT TRIANGLE",
+    private final String [] figureArr = { "SQUARE", "RECTANGLE", "RIGHT TRIANGLE",
             "CIRCLE", "ISOSCELES TRAPEZOID" };
 
     public Figure getRandomFigure() {
@@ -34,6 +33,7 @@ public class FigureProducer {
     }
 
     private int getRandomNumber() {
+        final int randomNumber = 5;
         return (int)((Math.random() * randomNumber) + 1);
     }
 }
