@@ -4,7 +4,8 @@ import java.util.Random;
 
 public class FigureSupplier {
     public Figure get() {
-        int randomGeneratedIndex = new Random().nextInt(5);
+        final int RandomNumber = 10;
+        int randomGeneratedIndex = new Random().nextInt(RandomNumber);
 
         switch (randomGeneratedIndex) {
             case 0:
@@ -23,7 +24,7 @@ public class FigureSupplier {
 
     private int getRandomInt() {
         Random random = new Random();
-        return random.nextInt(20);
+        return random.nextInt(50);
     }
 
     private Color getRandomColor() {

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements GetArea {
+public class RightTriangle extends Figure {
     private int sideOne;
     private int sideTwo;
 

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements GetArea {
+public class Circle extends Figure {
     private int radius;
 
     public Circle(int radius, Color color) {
@@ -18,7 +18,7 @@ public class Circle extends Figure implements GetArea {
         System.out.println("Figure: Circle, "
                 + "area:"
                 + getArea()
-                + ", radius"
+                + ", radius: "
                 + radius
                 + ", color:"
                 + getColor());

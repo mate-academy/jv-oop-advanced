@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapesoid extends Figure implements GetArea {
+public class IsoscelesTrapesoid extends Figure {
     private int sideOne;
     private int sideTwo;
     private int sideThree;
