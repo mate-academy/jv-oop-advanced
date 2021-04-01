@@ -1,6 +1,5 @@
 package core.basesyntax;
 
-import core.basesyntax.shapes.Drawable;
 import core.basesyntax.shapes.Shape;
 
 /**
@@ -11,7 +10,6 @@ public class HelloWorld {
     private static final int SHAPES_LIMIT = 10;
 
     public static void main(String[] args) {
-        // minimum size of array = 1
         Shape[] shapeArray = new Shape[(int) (Math.random() * SHAPES_LIMIT) + 1];
         FigureSupplier figureSupplier = new FigureSupplier();
 

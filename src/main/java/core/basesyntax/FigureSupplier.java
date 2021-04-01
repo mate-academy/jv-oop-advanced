@@ -24,7 +24,7 @@ public class FigureSupplier {
             case 1:
                 return new Circle("circle",
                         color.generateColor(),
-                        (int) (Math.random() * RADIUS_LIMIT) + 1); // for only radius >= 1
+                        (int) (Math.random() * RADIUS_LIMIT) + 1);
             case 2:
                 return new IsoscelesTrapezoid("isosceles trapezoid",
                         color.generateColor(),

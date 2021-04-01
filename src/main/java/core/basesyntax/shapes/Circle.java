@@ -19,7 +19,6 @@ public class Circle extends Shape {
 
     @Override
     public void draw() {
-        //Example output : Figure: Circle, area: 12.5 sq. units, radius: 7.1 units, color: yellow
         System.out.printf("Figure: " + this.getName() + ", "
                         + "area: %.1f" + " sq. units, "
                         + "radius: " + getRadius() + " units, "

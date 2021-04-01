@@ -23,7 +23,6 @@ public class RightTriangle extends Shape {
 
     @Override
     public void draw() {
-        //Figure: triangle, area: 12.5 sq. units, hypotenuse: 7.1 units, color: yellow
         System.out.printf("Figure: " + this.getName() + ", "
                         + "area: %.1f" + " sq. units, "
                         + "hypotenuse: %.1f" + " units, "

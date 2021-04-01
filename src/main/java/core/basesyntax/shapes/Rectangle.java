@@ -25,7 +25,6 @@ public class Rectangle extends Shape {
 
     @Override
     public void draw() {
-        // Figure: rectangle, area: 12.5 sq. units, hypotenuse: 7.1 units, color: yellow
         System.out.println("Figure: " + this.getName() + ", "
                 + "area: " + getArea() + " sq. units, "
                 + "width: " + getWidth() + " units, "
