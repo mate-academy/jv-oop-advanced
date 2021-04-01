@@ -9,14 +9,14 @@ public class Main {
 
     public static void main(String[] args) {
         Random number = new Random();
-        List<Figure> figuresList = new ArrayList<>();
+        List<Figure> figuresList = new ArrayList();
 
         for (int i = 0; i < number.nextInt(NUMBER_LIMIT) + 1; i++) {
             figuresList.add(FigureSupplier.getFigure());
         }
 
         for (Figure figure : figuresList) {
-            System.out.println(figure.draw());
+            figure.draw();
         }
     }
 }
