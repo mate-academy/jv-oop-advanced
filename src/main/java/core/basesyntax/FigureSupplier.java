@@ -3,11 +3,12 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int NUMBER_OF_FIGURES = 5;
+    private static final int RANGE = 100;
     private ColorSupplier colorGenerator = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int numberOfFigures = 5;
-        int number = new Random().nextInt(numberOfFigures);
+        int number = new Random().nextInt(NUMBER_OF_FIGURES);
         switch (number) {
             case 1:
                 return createCircle();
@@ -23,47 +24,39 @@ public class FigureSupplier {
     }
 
     public int getRandomNumber() {
-        int range = 100;
-        return new Random().nextInt(range);
+        return new Random().nextInt(RANGE);
     }
 
     private Circle createCircle() {
-        String color = colorGenerator.randomColor();
+        String color = colorGenerator.getRandomColor();
         int radius = getRandomNumber();
-        return new Circle(radius, color, "radius");
+        return new Circle(radius, color);
     }
 
     private IsoscelesTrapezoid createIsoscelesTrapezoid() {
-        String color = colorGenerator.randomColor();
+        String color = colorGenerator.getRandomColor();
         int height = getRandomNumber();
         int mediumLine = getRandomNumber();
-        return new IsoscelesTrapezoid(height,mediumLine,color,"medium line");
+        return new IsoscelesTrapezoid(height, mediumLine, color);
     }
 
     private Rectangle createRectangle() {
-        String color = colorGenerator.randomColor();
+        String color = colorGenerator.getRandomColor();
         int height = getRandomNumber();
         int width = getRandomNumber();
-        return new Rectangle(height, width, color, "width");
+        return new Rectangle(height, width, color);
     }
 
     private RightTriangle createRightTriangle() {
-        String color = colorGenerator.randomColor();
-        int legOne = 0;
-        int legTwo = 0;
-        int hypotenuse = 0;
-        while (legOne + legTwo <= hypotenuse) {
-            legOne = getRandomNumber();
-            legTwo = getRandomNumber();
-            hypotenuse = getRandomNumber();
-        }
-        return new RightTriangle(legOne, legTwo, hypotenuse,
-                color, "hypotenuse");
+        String color = colorGenerator.getRandomColor();
+        int legOne = getRandomNumber();
+        int legTwo = getRandomNumber();
+        return new RightTriangle(legOne, legTwo, color);
     }
 
     private Square createSquare() {
-        String color = colorGenerator.randomColor();
+        String color = colorGenerator.getRandomColor();
         int side = getRandomNumber();
-        return new Square(side, color, "side");
+        return new Square(side, color);
     }
 }

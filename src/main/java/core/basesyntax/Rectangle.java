@@ -4,11 +4,10 @@ public class Rectangle extends Figure {
     private int height;
     private int width;
 
-    public Rectangle(int height, int width, String color, String property) {
-        super(color, property);
+    public Rectangle(int height, int width, String color) {
+        super(color);
         this.height = height;
         this.width = width;
-        calculateArea();
     }
 
     @Override
@@ -20,7 +19,7 @@ public class Rectangle extends Figure {
     public String draw() {
         return "Figure{Rectangle , area: "
                 + String.format("%.1f", calculateArea()) + " sq. units, "
-                + getProperty() + ": " + width
+                + "width: " + width
                 + " units, color: " + getColor()
                 + '}';
     }

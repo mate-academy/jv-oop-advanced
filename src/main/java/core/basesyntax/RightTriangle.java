@@ -3,14 +3,11 @@ package core.basesyntax;
 public class RightTriangle extends Figure {
     private int legOne;
     private int legTwo;
-    private int hypotenuse;
 
-    public RightTriangle(int legOne, int legTwo, int hypotenuse, String color, String property) {
-        super(color, property);
+    public RightTriangle(int legOne, int legTwo, String color) {
+        super(color);
         this.legOne = legOne;
         this.legTwo = legTwo;
-        this.hypotenuse = hypotenuse;
-        calculateArea();
     }
 
     @Override
@@ -22,7 +19,7 @@ public class RightTriangle extends Figure {
     public String draw() {
         return "Figure{RightTriangle , area: "
                 + String.format("%.1f", calculateArea()) + " sq. units, "
-                + getProperty() + ": " + hypotenuse
+                + "leg one: " + legOne
                 + " units, color: " + getColor()
                 + '}';
     }

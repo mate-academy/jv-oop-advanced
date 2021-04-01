@@ -4,11 +4,10 @@ public class IsoscelesTrapezoid extends Figure {
     private int height;
     private int mediumLine;
 
-    public IsoscelesTrapezoid(int height,int mediumLine,String color, String property) {
-        super(color, property);
+    public IsoscelesTrapezoid(int height, int mediumLine, String color) {
+        super(color);
         this.height = height;
         this.mediumLine = mediumLine;
-        calculateArea();
     }
 
     @Override
@@ -20,7 +19,7 @@ public class IsoscelesTrapezoid extends Figure {
     public String draw() {
         return "Figure{Isosceles Trapezoid , area: "
                 + String.format("%.1f", calculateArea()) + " sq. units, "
-                + getProperty() + ": " + mediumLine
+                + "medium line: " + mediumLine
                 + " units, color: " + getColor()
                 + '}';
     }
