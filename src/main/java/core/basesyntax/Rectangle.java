@@ -1,13 +1,12 @@
 package core.basesyntax;
 
-import core.basesyntax.interfaces.Calculatable;
-import core.basesyntax.interfaces.Drawable;
+import core.basesyntax.suppliers.Colors;
 
-public class Rectangle extends Figure implements Calculatable, Drawable {
+public class Rectangle extends Figure {
     private double width;
     private double length;
 
-    public Rectangle(String name, Enum color, double width, double length) {
+    public Rectangle(String name, Colors color, double width, double length) {
         super(name, color);
         this.width = width;
         this.length = length;

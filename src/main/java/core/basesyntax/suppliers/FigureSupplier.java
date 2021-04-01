@@ -19,9 +19,7 @@ public class FigureSupplier {
 
     public Figure[] generateFigures() {
         Figure[] randomFigures = new Figure[random.nextInt(MAX_ARRAY_LENGTH)];
-
         for (int i = 0; i < randomFigures.length; i++) {
-
             switch (random.nextInt(NUMBER_OF_FIGURES)) {
                 case 0:
                     randomFigures[i] = getNewRandomSquare();
@@ -35,50 +33,42 @@ public class FigureSupplier {
                 case 3:
                     randomFigures[i] = getNewRandomCircle();
                     break;
-                case 4:
-                    randomFigures[i] = getNewRandomIsoscelesTrapezoid();
-                    break;
                 default:
+                    randomFigures[i] = getNewRandomIsoscelesTrapezoid();
                     break;
             }
         }
-
         return randomFigures;
     }
 
-    public Square getNewRandomSquare() {
+    private Square getNewRandomSquare() {
         double length = generateFigureValue();
-
         return new Square("Square", colorSupplier.generateColor(), length);
     }
 
-    public Figure getNewRandomRightTriangle() {
+    private Figure getNewRandomRightTriangle() {
         double baseLength = generateFigureValue();
         double height = generateFigureValue();
-
         return new RightTriangle("Right Triangle", colorSupplier.generateColor(),
                 baseLength, height);
     }
 
-    public Figure getNewRandomRectangle() {
+    private Figure getNewRandomRectangle() {
         double width = generateFigureValue();
         double length = generateFigureValue();
-
         return new Rectangle("Rectangle", colorSupplier.generateColor(), width, length);
     }
 
-    public Figure getNewRandomIsoscelesTrapezoid() {
+    private Figure getNewRandomIsoscelesTrapezoid() {
         double sideA = generateFigureValue();
         double sideB = generateFigureValue();
         double height = generateFigureValue();
-
         return new IsoscelesTrapezoid("Isosceles Trapezoid", colorSupplier.generateColor(),
                 sideA, sideB, height);
     }
 
-    public Figure getNewRandomCircle() {
+    private Figure getNewRandomCircle() {
         double radius = generateFigureValue();
-
         return new Circle("Circle", colorSupplier.generateColor(), radius);
     }
 

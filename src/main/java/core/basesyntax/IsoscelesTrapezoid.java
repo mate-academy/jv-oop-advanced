@@ -1,55 +1,55 @@
 package core.basesyntax;
 
-import core.basesyntax.interfaces.Calculatable;
-import core.basesyntax.interfaces.Drawable;
+import core.basesyntax.suppliers.Colors;
 
-public class IsoscelesTrapezoid extends Figure implements Calculatable, Drawable {
-    private double sideA;
-    private double sideB;
+public class IsoscelesTrapezoid extends Figure {
+    private double firstBase;
+    private double secondBase;
     private double height;
 
-    public IsoscelesTrapezoid(String name, Enum color, double sideA, double sideB, double height) {
+    public IsoscelesTrapezoid(String name, Colors color, double firstBase,
+                              double secondBase, double height) {
         super(name, color);
-        this.sideA = sideA;
-        this.sideB = sideB;
+        this.firstBase = firstBase;
+        this.secondBase = secondBase;
         this.height = height;
     }
 
-    public double getSideA() {
-        return sideA;
+    public double getfirstBase() {
+        return firstBase;
     }
 
-    public void setSideA(double sideA) {
-        this.sideA = sideA;
+    public void setfirstBase(double firstBase) {
+        this.firstBase = firstBase;
     }
 
-    public double getSideB() {
-        return sideB;
+    public double getsecondBase() {
+        return secondBase;
     }
 
-    public void setSideB(double sideB) {
-        this.sideB = sideB;
+    public void setsecondBase(double secondBase) {
+        this.secondBase = secondBase;
     }
 
-    public double getLegs() {
+    public double getHeight() {
         return height;
     }
 
-    public void setLegs(double legs) {
-        this.height = legs;
+    public void setHeight(double height) {
+        this.height = height;
     }
 
     @Override
     public double getArea() {
-        return (sideA + sideB) * (height) / 2;
+        return (firstBase + secondBase) * (height) / 2;
     }
 
     @Override
     public void drawFigure() {
         System.out.println("Figure: " + getName() + ", " + "area: "
                 + String.format("%.2f", getArea()) + " sq. units, "
-                + "sideA: " + String.format("%.2f", sideA)
-                + " sideB: " + String.format("%.2f", sideB)
+                + "firstBase: " + String.format("%.2f", firstBase)
+                + " secondBase: " + String.format("%.2f", secondBase)
                 + " height: " + String.format("%.2f", height)
                 + " units, " + "color: " + getColor());
     }

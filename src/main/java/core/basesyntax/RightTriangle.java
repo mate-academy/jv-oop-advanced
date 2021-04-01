@@ -1,45 +1,44 @@
 package core.basesyntax;
 
-import core.basesyntax.interfaces.Calculatable;
-import core.basesyntax.interfaces.Drawable;
+import core.basesyntax.suppliers.Colors;
 
-public class RightTriangle extends Figure implements Calculatable, Drawable {
-    private double baseLength;
-    private double height;
+public class RightTriangle extends Figure {
+    private double firstLeg;
+    private double secondLeg;
 
-    public RightTriangle(String name, Enum color, double baseLength, double height) {
+    public RightTriangle(String name, Colors color, double firstLeg, double secondLeg) {
         super(name, color);
-        this.baseLength = baseLength;
-        this.height = height;
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
     }
 
-    public double getBaseLength() {
-        return baseLength;
+    public double getfirstLeg() {
+        return firstLeg;
     }
 
-    public void setBaseLength(double baseLength) {
-        this.baseLength = baseLength;
+    public void setfirstLeg(double firstLeg) {
+        this.firstLeg = firstLeg;
     }
 
-    public double getHeight() {
-        return height;
+    public double getsecondLeg() {
+        return secondLeg;
     }
 
-    public void setHeight(double height) {
-        this.height = height;
+    public void setsecondLeg(double secondLeg) {
+        this.secondLeg = secondLeg;
     }
 
     @Override
     public double getArea() {
-        return baseLength * height / 2;
+        return firstLeg * secondLeg / 2;
     }
 
     @Override
     public void drawFigure() {
         System.out.println("Figure: " + getName() + ", " + "area: "
                 + String.format("%.2f", getArea()) + " sq. units, "
-                + "base length: " + String.format("%.2f", baseLength)
-                + " height: " + String.format("%.2f", height)
+                + "base length: " + String.format("%.2f", firstLeg)
+                + " secondLeg: " + String.format("%.2f", secondLeg)
                 + " units, " + "color: " + getColor());
     }
 }

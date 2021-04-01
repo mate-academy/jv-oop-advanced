@@ -1,12 +1,11 @@
 package core.basesyntax;
 
-import core.basesyntax.interfaces.Calculatable;
-import core.basesyntax.interfaces.Drawable;
+import core.basesyntax.suppliers.Colors;
 
-public class Circle extends Figure implements Calculatable, Drawable {
+public class Circle extends Figure {
     private double radius;
 
-    public Circle(String name, Enum color, double radius) {
+    public Circle(String name, Colors color, double radius) {
         super(name, color);
         this.radius = radius;
     }

@@ -7,6 +7,6 @@ public class ColorSupplier {
     private Random random = new Random();
 
     public Colors generateColor() {
-        return colorArray[random.nextInt(colorArray.length - 1)];
+        return colorArray[random.nextInt(colorArray.length)];
     }
 }

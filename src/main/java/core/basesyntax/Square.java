@@ -1,33 +1,32 @@
 package core.basesyntax;
 
-import core.basesyntax.interfaces.Calculatable;
-import core.basesyntax.interfaces.Drawable;
+import core.basesyntax.suppliers.Colors;
 
-public class Square extends Figure implements Calculatable, Drawable {
-    private double length;
+public class Square extends Figure {
+    private double side;
 
-    public Square(String name, Enum color, double length) {
+    public Square(String name, Colors color, double side) {
         super(name, color);
-        this.length = length;
+        this.side = side;
     }
 
-    public double getLength() {
-        return length;
+    public double getside() {
+        return side;
     }
 
-    public void setLength(double length) {
-        this.length = length;
+    public void setside(double side) {
+        this.side = side;
     }
 
     @Override
     public double getArea() {
-        return length * length;
+        return side * side;
     }
 
     @Override
     public void drawFigure() {
         System.out.println("Figure: " + getName() + ", " + "area: "
-                + String.format("%.2f", getArea()) + " sq. units, " + "side length: "
-                + String.format("%.2f", length) + " units, " + "color: " + getColor());
+                + String.format("%.2f", getArea()) + " sq. units, " + "side side: "
+                + String.format("%.2f", side) + " units, " + "color: " + getColor());
     }
 }
