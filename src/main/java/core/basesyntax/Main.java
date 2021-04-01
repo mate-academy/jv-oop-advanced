@@ -2,10 +2,7 @@ package core.basesyntax;
 
 import core.basesyntax.shapes.Shape;
 
-/**
- * Feel free to remove this class and create your own.
- */
-public class HelloWorld {
+public class Main {
 
     private static final int SHAPES_LIMIT = 10;
 
