@@ -2,13 +2,12 @@ import core.basesyntax.Figure;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int NUM = 5;
-    public static final int VALUE = 30;
-    private final ColourSupplier colour = new ColourSupplier();
+    public static final int RANDOM_FIGURE = 5;
+    public static final int RANDOM_VALUE = 30;
+    private final Random random = new Random();
 
     public Figure getFigure() {
-        Random random = new Random();
-        int randomFigure = random.nextInt(NUM);
+        int randomFigure = random.nextInt(RANDOM_FIGURE);
         switch (randomFigure) {
             case 1:
                 return getNewCircle();
@@ -25,40 +24,35 @@ public class FigureSupplier {
     }
 
     private RightTriangle getNewTriangle() {
-        Random random = new Random();
-        int randomBase = random.nextInt(VALUE);
-        int randomHeight = random.nextInt(VALUE);
+        int randomBase = random.nextInt(RANDOM_VALUE);
+        int randomHeight = random.nextInt(RANDOM_VALUE);
         return new RightTriangle(randomBase, randomHeight,
-                ColourSupplier.getColour(colour.getColours()));
+                ColorSupplier.getColour());
     }
 
     private Circle getNewCircle() {
-        Random random = new Random();
-        int randomRadius = random.nextInt(VALUE);
-        return new Circle(randomRadius,ColourSupplier.getColour(colour.getColours()));
+        int randomRadius = random.nextInt(RANDOM_VALUE);
+        return new Circle(randomRadius, ColorSupplier.getColour());
     }
 
     private Square getNeSquare() {
-        Random random = new Random();
-        int randomSide = random.nextInt(VALUE);
-        return new Square(randomSide,ColourSupplier.getColour(colour.getColours()));
+        int randomSide = random.nextInt(RANDOM_VALUE);
+        return new Square(randomSide, ColorSupplier.getColour());
     }
 
     private Rectangle getNewRectangle() {
-        Random random = new Random();
-        int randomWidth = random.nextInt(VALUE);
-        int randomHeight = random.nextInt(VALUE);
+        int randomWidth = random.nextInt(RANDOM_VALUE);
+        int randomHeight = random.nextInt(RANDOM_VALUE);
         return new Rectangle(randomWidth, randomHeight,
-                ColourSupplier.getColour(colour.getColours()));
+                ColorSupplier.getColour());
     }
 
     private IsoscelesTrapezoid getNewTrapezoid() {
-        Random random = new Random();
-        int randomSideA = random.nextInt(VALUE);
-        int randomSideB = random.nextInt(VALUE);
-        int randomHeight = random.nextInt(VALUE);
+        int randomSideA = random.nextInt(RANDOM_VALUE);
+        int randomSideB = random.nextInt(RANDOM_VALUE);
+        int randomHeight = random.nextInt(RANDOM_VALUE);
         return new IsoscelesTrapezoid(randomSideA, randomSideB, randomHeight,
-                ColourSupplier.getColour(colour.getColours()));
+                ColorSupplier.getColour());
     }
 
 }

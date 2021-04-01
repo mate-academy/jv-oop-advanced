@@ -1,26 +1,25 @@
 import core.basesyntax.Figure;
 
 public class RightTriangle extends Figure {
-    private final double base;
-    private final double height;
+    private double firstLeg;
+    private double secondLeg;
 
-    public RightTriangle(int base, int height, String color) {
+    public RightTriangle(int firstLeg, int secondLeg, String color) {
         super(color, "right triangle");
-        this.base = base;
-        this.height = height;
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
     }
 
     @Override
     public double getArea() {
-        return (base * height) / 2;
+        return (firstLeg * secondLeg) / 2;
     }
 
     @Override
     public String draw() {
-        return "Shape: " + getFigure() + ", area: " + getArea() + " sq. units"
-                    + ", base: " + base + ", height: " + height
+        return "Figure: " + getName() + ", area: " + getArea() + " sq. units"
+                    + ", firstLeg: " + firstLeg + ", secondLeg: " + secondLeg
                     + " units, color: " + getColor();
     }
-
 }
 

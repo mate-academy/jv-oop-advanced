@@ -1,12 +1,12 @@
 package core.basesyntax;
 
-public abstract class Figure implements Area, Draw {
+public abstract class Figure implements AreaCalculator, Drawable {
     private String color;
-    private String figure;
+    private String name;
 
-    public Figure(String color, String figure) {
+    public Figure(String color, String name) {
         this.color = color;
-        this.figure = figure;
+        this.name = name;
     }
 
     public void setColor(String color) {
@@ -17,12 +17,11 @@ public abstract class Figure implements Area, Draw {
         return color;
     }
 
-    public void setFigure(String figure) {
-        this.figure = figure;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getFigure() {
-        return figure;
+    public String getName() {
+        return name;
     }
-
 }
