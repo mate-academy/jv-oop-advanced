@@ -4,7 +4,6 @@ import core.basesyntax.shapes.Shape;
 import java.util.Random;
 
 public class Main {
-
     private static final int MINIMAL_SIZE_OF_SHAPES_ARRAY = 1;
     private static final int SHAPES_LIMIT = 10;
 
