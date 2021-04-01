@@ -3,7 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int NUMBER_OF_FIGURE = 5;
+    private static final int NUMBER_OF_FIGURE = 5;
+    private static final int NUMBER_OF_RANGE = 10;
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure get() {
@@ -27,6 +28,6 @@ public class FigureSupplier {
     }
 
     private int getSize() {
-        return new Random().nextInt(10);
+        return new Random().nextInt(NUMBER_OF_RANGE);
     }
 }
