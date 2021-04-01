@@ -1,10 +1,10 @@
 package core.basesyntax;
 
-public class Square extends Figures {
+public class Square extends Figure {
     private final int side;
 
-    public Square(String color, int side) {
-        super(color);
+    public Square(String color, String name, int side) {
+        super(color, name);
         this.side = side;
     }
 
@@ -14,18 +14,16 @@ public class Square extends Figures {
     }
 
     @Override
-    public void getDraw() {
-        String name = "square";
-        System.out.println("Figure: " + name + ","
+    public void draw() {
+        System.out.println("Figure: " + getNameFigure() + ","
                 + " area:" + getArea() + " sq. units, side length: "
-                + side + " units, color: " + getColor());
+                + side + " units, color: " + getColorFigure());
     }
 
     @Override
     public String toString() {
         return "Square{"
                 + "side=" + side
-                + ", color='" + getColor() + '\''
                 + '}';
     }
 }

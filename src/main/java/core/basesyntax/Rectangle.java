@@ -1,35 +1,33 @@
 package core.basesyntax;
 
-public class Rectangle extends Figures {
-    private final int littleSide;
-    private final int bigSide;
+public class Rectangle extends Figure {
+    private final int width;
+    private final int length;
 
-    public Rectangle(String color, int littleSide, int bigSide) {
-        super(color);
-        this.littleSide = littleSide;
-        this.bigSide = bigSide;
+    public Rectangle(String color, String name, int width, int length) {
+        super(color, name);
+        this.width = width;
+        this.length = length;
     }
 
     @Override
     public double getArea() {
-        return littleSide * bigSide;
+        return width * length;
     }
 
     @Override
-    public void getDraw() {
-        String name = "rectangle";
-        System.out.println("Figure: " + name + "," + " area:"
-                + getArea() + " sq. units, littleSide length: "
-                + littleSide + " units, bigSide length:  "
-                + bigSide + " units, color: " + getColor());
+    public void draw() {
+        System.out.println("Figure: " + getNameFigure() + "," + " area:"
+                + getArea() + " sq. units, width length: "
+                + width + " units, length length:  "
+                + length + " units, color: " + getColorFigure());
     }
 
     @Override
     public String toString() {
         return "Rectangle{"
-                + "littleSide=" + littleSide
-                + ", bigSide=" + bigSide
-                + ", color='" + getColor() + '\''
+                + "width=" + width
+                + ", length=" + length
                 + '}';
     }
 }

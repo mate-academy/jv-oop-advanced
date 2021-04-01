@@ -1,11 +1,11 @@
 package core.basesyntax;
 
-public class Circle extends Figures {
-    private final String name = "circle";
+public class Circle extends Figure {
+
     private final int radius;
 
-    public Circle(String color, int radius) {
-        super(color);
+    public Circle(String color, String name, int radius) {
+        super(color, name);
         this.radius = radius;
     }
 
@@ -15,17 +15,15 @@ public class Circle extends Figures {
     }
 
     @Override
-    public void getDraw() {
-        System.out.println("Figure: " + name + "," + " area:" + getArea()
-                + " sq. units, radius length: " + radius + " units, color: " + getColor());
+    public void draw() {
+        System.out.println("Figure: " + getNameFigure() + "," + " area:" + getArea()
+                + " sq. units, radius length: " + radius + " units, color: " + getColorFigure());
     }
 
     @Override
     public String toString() {
         return "Circle{"
-                + "name='" + name + '\''
-                + ", radius=" + radius
-                + ", color='" + getColor() + '\''
+                + "radius=" + radius
                 + '}';
     }
 }

@@ -1,15 +1,13 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figures {
+public class RightTriangle extends Figure {
     private final int firstLeg;
     private final int secondLeg;
-    private final int hypotenuse;
 
-    public RightTriangle(String color, int firstLeg, int secondLeg, int hypotenuse) {
-        super(color);
+    public RightTriangle(String color, String name, int firstLeg, int secondLeg) {
+        super(color, name);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        this.hypotenuse = hypotenuse;
     }
 
     @Override
@@ -18,22 +16,19 @@ public class RightTriangle extends Figures {
     }
 
     @Override
-    public void getDraw() {
-        String name = "rightTriangle";
-        System.out.println("Figure: " + name + ","
+    public void draw() {
+        System.out.println("Figure: " + getNameFigure() + ","
                 + " area:" + getArea() + " sq. units, side length: "
-                + firstLeg + " units, " + secondLeg + " units, "
-                + hypotenuse + " units, color: " + getColor());
+                + firstLeg + " units, " + secondLeg
+                + " units, color: " + getColorFigure());
 
     }
 
     @Override
     public String toString() {
         return "RightTriangle{"
-                + "firstLeg" + firstLeg
+                + "firstLeg=" + firstLeg
                 + ", secondLeg=" + secondLeg
-                + ", hypotenuse=" + hypotenuse
-                + ", color='" + getColor() + '\''
                 + '}';
     }
 }
