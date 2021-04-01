@@ -6,20 +6,23 @@ public class FigureSupplier {
     private Shape shape;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
-    private final int valueGenerator = random.nextInt(20);
+
+    public int setValueGenerator() {
+        return random.nextInt(50);
+    }
 
     public Shape createShape() {
         Shape[] shapes = {
                 new IsoscelesTrapezoid("Isosceles Trapezoid",
-                colorSupplier.randomColor(), valueGenerator,
-                        valueGenerator, valueGenerator),
+                colorSupplier.randomColor(), this.setValueGenerator(),
+                        this.setValueGenerator(), this.setValueGenerator()),
                 new RightTriangle("Right Triangle", colorSupplier.randomColor(),
-                        valueGenerator,
-                        valueGenerator),
-                new Square("Square", colorSupplier.randomColor(), valueGenerator),
+                        this.setValueGenerator(),
+                        this.setValueGenerator()),
+                new Square("Square", colorSupplier.randomColor(), this.setValueGenerator()),
                 new Rectangle("Rectangle", colorSupplier.randomColor(),
-                        valueGenerator, valueGenerator),
-                new Circle("Circle", colorSupplier.randomColor(), valueGenerator)};
+                        this.setValueGenerator(), this.setValueGenerator()),
+                new Circle("Circle", colorSupplier.randomColor(), this.setValueGenerator())};
         int intGen = random.nextInt(shapes.length);
 
         return shapes[intGen];
