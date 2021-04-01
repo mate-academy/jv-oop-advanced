@@ -20,6 +20,6 @@ public class RightRectangle extends Figure{
 
     @Override
     public void draw() {
-
+//commit
     }
 }
