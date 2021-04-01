@@ -5,7 +5,7 @@ import java.util.Random;
 public class ColorSupplier {
     private static final int COLOR_COUNT = 6;
 
-    public static String getRandomColor() {
+    public String getRandomColor() {
         Random random = new Random();
         ColorSupplier colorSupplier = new ColorSupplier();
         int color = random.nextInt(COLOR_COUNT);
