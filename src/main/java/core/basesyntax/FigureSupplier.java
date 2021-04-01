@@ -3,7 +3,6 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-
     public static final int VALUE_BOUND = 1000;
     public static final int AMOUNT_OF_SHAPES = 4;
 
