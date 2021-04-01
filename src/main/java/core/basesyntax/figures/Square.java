@@ -3,11 +3,10 @@ package core.basesyntax.figures;
 import core.basesyntax.Figure;
 
 public class Square extends Figure {
-    private String color;
     private double sideA;
 
     public Square(String color, double side) {
-        this.color = color;
+        super(color);
         this.sideA = side;
     }
 

@@ -3,12 +3,11 @@ package core.basesyntax.figures;
 import core.basesyntax.Figure;
 
 public class RightTriangle extends Figure {
-    private String color;
     private double sideA;
     private double height;
 
     public RightTriangle(String color, double sideA, double height) {
-        this.color = color;
+        super(color);
         this.sideA = sideA;
         this.height = height;
     }

@@ -1,11 +1,11 @@
 package core.basesyntax.utils.factory;
 
-import static core.basesyntax.utils.constants.Constant.RandomArrayLengthValue.MAX_ARRAY_SIZE;
-
 import core.basesyntax.Figure;
+
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int MAX_ARRAY_SIZE = 40;
     private final FigureFactory factory = new FigureFactory();
 
     public Figure[] generateRandomFigures() {

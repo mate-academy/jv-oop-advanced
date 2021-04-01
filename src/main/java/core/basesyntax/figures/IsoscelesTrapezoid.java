@@ -3,13 +3,12 @@ package core.basesyntax.figures;
 import core.basesyntax.Figure;
 
 public class IsoscelesTrapezoid extends Figure {
-    private String color;
     private double sideA;
     private double sideB;
     private double height;
 
     public IsoscelesTrapezoid(String color, double sideA, double sideB, double height) {
-        this.color = color;
+        super(color);
         this.sideA = sideA;
         this.sideB = sideB;
         this.height = height;
@@ -26,6 +25,6 @@ public class IsoscelesTrapezoid extends Figure {
                 + calculateArea() + " sq. units, sideA length: " + this.sideA
                 + " units, sideA length: " + this.sideB
                 + " units, sideA length: " + this.height
-                + " units, color: " + this.color);
+                + " units, color: " + super.color);
     }
 }

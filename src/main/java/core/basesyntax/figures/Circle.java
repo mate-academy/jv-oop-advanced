@@ -3,11 +3,10 @@ package core.basesyntax.figures;
 import core.basesyntax.Figure;
 
 public class Circle extends Figure {
-    private String color;
     private double radius;
 
     public Circle(String color, double radius) {
-        this.color = color;
+        super(color);
         this.radius = radius;
     }
 
