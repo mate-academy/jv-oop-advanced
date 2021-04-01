@@ -23,26 +23,26 @@ public class FigureSupplier {
         }
     }
 
-    public Circle getNewCircle() {
+    private Circle getNewCircle() {
         int radius = random.nextInt(MAX_NUMBER);
         String color = colorSupplier.getRandomColor();
         return new Circle("circle", color, radius);
     }
 
-    public Rectangle getNewRectangle() {
+    private Rectangle getNewRectangle() {
         int width = random.nextInt(MAX_NUMBER);
         int length = random.nextInt(MAX_NUMBER);
         String color = colorSupplier.getRandomColor();
         return new Rectangle("rectangle", color, width, length);
     }
 
-    public Square getNewSquare() {
+    private Square getNewSquare() {
         int side = random.nextInt(MAX_NUMBER);
         String color = colorSupplier.getRandomColor();
         return new Square("square", color, side);
     }
 
-    public IsoscelesTrapezoid getNewIsoscelesTrapezoid() {
+    private IsoscelesTrapezoid getNewIsoscelesTrapezoid() {
         int firstBase = random.nextInt(MAX_NUMBER);
         int secondBase = random.nextInt(MAX_NUMBER);
         int height = random.nextInt(MAX_NUMBER);
@@ -50,7 +50,7 @@ public class FigureSupplier {
         return new IsoscelesTrapezoid("isosceles trapezoid", color, firstBase, secondBase, height);
     }
 
-    public RightTriangle getNewRightTriangle() {
+    private RightTriangle getNewRightTriangle() {
         int sideA = random.nextInt(MAX_NUMBER);
         int sideB = random.nextInt(MAX_NUMBER);
         String color = colorSupplier.getRandomColor();
