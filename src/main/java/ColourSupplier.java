@@ -13,10 +13,9 @@ public class ColourSupplier {
         this.colours = colours;
     }
 
-    public static String getColour(String[] colours) {
+    public String getColour() {
         Random random = new Random();
         int randomColour = random.nextInt(colours.length);
         return colours[randomColour];
     }
 }
-
