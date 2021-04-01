@@ -6,6 +6,7 @@ public class FigureSupplier {
     private static final int FIGURES_NUMBER = 5;
     private static final int MAX_NUMBER = 10;
     private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getFigure() {
         switch (random.nextInt(FIGURES_NUMBER)) {
@@ -24,35 +25,35 @@ public class FigureSupplier {
 
     public Circle getNewCircle() {
         int radius = random.nextInt(MAX_NUMBER);
-        String color = ColorSupplier.colorFigures();
+        String color = colorSupplier.getRandomColor();
         return new Circle("circle", color, radius);
     }
 
     public Rectangle getNewRectangle() {
-        int sideA = random.nextInt(MAX_NUMBER);
-        int sideB = random.nextInt(MAX_NUMBER);
-        String color = ColorSupplier.colorFigures();
-        return new Rectangle("rectangle", color, sideA, sideB);
+        int width = random.nextInt(MAX_NUMBER);
+        int length = random.nextInt(MAX_NUMBER);
+        String color = colorSupplier.getRandomColor();
+        return new Rectangle("rectangle", color, width, length);
     }
 
     public Square getNewSquare() {
         int side = random.nextInt(MAX_NUMBER);
-        String color = ColorSupplier.colorFigures();
+        String color = colorSupplier.getRandomColor();
         return new Square("square", color, side);
     }
 
     public IsoscelesTrapezoid getNewIsoscelesTrapezoid() {
-        int sideA = random.nextInt(MAX_NUMBER);
-        int sideB = random.nextInt(MAX_NUMBER);
+        int firstBase = random.nextInt(MAX_NUMBER);
+        int secondBase = random.nextInt(MAX_NUMBER);
         int height = random.nextInt(MAX_NUMBER);
-        String color = ColorSupplier.colorFigures();
-        return new IsoscelesTrapezoid("isosceles trapezoid", color, sideA, sideB, height);
+        String color = colorSupplier.getRandomColor();
+        return new IsoscelesTrapezoid("isosceles trapezoid", color, firstBase, secondBase, height);
     }
 
     public RightTriangle getNewRightTriangle() {
         int sideA = random.nextInt(MAX_NUMBER);
         int sideB = random.nextInt(MAX_NUMBER);
-        String color = ColorSupplier.colorFigures();
+        String color = colorSupplier.getRandomColor();
         return new RightTriangle("right triangle", color, sideA, sideB);
     }
 }

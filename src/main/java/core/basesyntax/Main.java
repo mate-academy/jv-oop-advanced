@@ -3,9 +3,11 @@ package core.basesyntax;
 import java.util.Random;
 
 public class Main {
+
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        Figure[] figures = new Figure[new Random().nextInt(5)];
+        int maxSize = new Random().nextInt(100);
+        Figure[] figures = new Figure[maxSize];
 
         for (int i = 0; i < figures.length; i++) {
             figures[i] = figureSupplier.getFigure();
