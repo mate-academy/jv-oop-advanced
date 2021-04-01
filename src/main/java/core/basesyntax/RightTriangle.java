@@ -43,18 +43,20 @@ public class RightTriangle extends Figure {
         math1 /= 2;
         double math = (math1 - sideAB) * (math1 - sideBC);
         setArea(math);
+        getArea();
     }
 
     @Override
     public void calculateBorderline() {
-        setBorderLength(sideAB + sideBC + sideAC);
+        setBorderline(sideAB + sideBC + sideAC);
+        getBorderline();
     }
 
     @Override
     public void drawFigure() {
         System.out.println("Figure: " + getSymbol() + " - " + getName()
                 + " (area: " + getArea() + " sq units;"
-                + " border length (perimeter): " + getBorderLength() + " units;"
+                + " borderline (perimeter): " + getBorderline() + " units;"
                 + " sides length: " + getSideAB() + " units, " + getSideBC() + " units, "
                 + getSideAC() + " units;"
                 + " color " + getColor() + ")");

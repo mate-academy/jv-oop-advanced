@@ -8,7 +8,7 @@ public class FigureSupplier {
         int figureRandom;
         int j = 0;
 
-        while (!tes.toString().equals("12345")) {
+        while (!tes.toString().equals("123456")) {
             figureRandom = (int) (Math.random() * 6 + 1);
             //System.out.println(FigureRandom);
             int a = (int) (Math.random() * 25 + 1);

@@ -24,18 +24,20 @@ public class Circle extends Figure {
     public void calculateArea() {
         double math = Math.PI * radius * radius;
         setArea(math);
+        getArea();
     }
 
     @Override
     public void calculateBorderline() {
-        setBorderLength(2 * Math.PI * radius);
+        setBorderline(2 * Math.PI * radius);
+        getBorderline();
     }
 
     @Override
     public void drawFigure() {
         System.out.println("Figure: " + getSymbol() + " - " + getName()
                         + " (area: " + getArea() + " sq units;"
-                        + " border length (circumference): " + getBorderLength() + " units;"
+                        + " borderline (circumference): " + getBorderline() + " units;"
                         + " diameter length: " + getDiameter() + " units;"
                         + " color " + getColor() + ")");
     }

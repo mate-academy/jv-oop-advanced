@@ -6,7 +6,7 @@ public class IsoscelesTrapezoid extends Figure {
     private double sideAD;
 
     public IsoscelesTrapezoid(double newAB, double newBC, double newAD, String newColor) {
-        if (newAB == newBC) {
+        if (newAB == newBC && newBC == newAD) {
             setName("square");
             setSymbol("■");
         } else if (newAB == newAD) {
@@ -44,29 +44,26 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void calculateArea() {
-        double math1 = getSideBC() + getSideAD();
-        math1 /= 2;
-        double math21;
-        math21 = getSideAB() * getSideAB();
-        double math22 = (getSideAD() - getSideBC()) * (getSideAD() - getSideBC());
-        math22 /= 4;
-        double math2 = math21 - math22;
-        math2 = Math.sqrt(math2);
-        double math = math1 * math2;
+        double math1 = (2 * getSideAB() + getSideBC() + getSideAD()) / 2;
+        double math2 = (math1 - getSideAB()) * (math1 - getSideAB())
+                        * (math1 - getSideBC()) * (math1 - getSideAD());
+        double math = Math.sqrt(math2);
         setArea(math);
+        getBorderline();
     }
 
     @Override
     public void calculateBorderline() {
-        setBorderLength(sideAB + sideBC * 2 + sideAD);
+        setBorderline(sideAB + sideBC * 2 + sideAD);
+        getBorderline();
     }
 
     @Override
     public void drawFigure() {
         System.out.println("Figure: " + getSymbol() + " - " + getName()
                 + " (area: " + getArea() + " sq units;"
-                + " border length (perimeter): " + getBorderLength() + " units;"
-                + " sides length: " + getSideAB() + " units, " + getSideBC() + " units, "
+                + " borderline (perimeter): " + getBorderline() + " units;"
+                + " sides length: " + getSideAB() + " units, " + getSideBC()
                 + " units, " + getSideCD() + " units, " + getSideAD() + " units;"
                 + " color " + getColor() + ")");
     }

@@ -5,7 +5,7 @@ public abstract class Figure implements AreaCalculator, BorderCalculator, Figure
     private String symbol;
     private String color;
     private double area;
-    private double borderLength;
+    private double borderline;
 
     public void setName(String name) {
         this.name = name;
@@ -29,8 +29,8 @@ public abstract class Figure implements AreaCalculator, BorderCalculator, Figure
         this.area = area;
     }
 
-    public void setBorderLength(double borderLength) {
-        this.borderLength = borderLength;
+    public void setBorderline(double borderline) {
+        this.borderline = borderline;
     }
 
     public String getName() {
@@ -45,8 +45,8 @@ public abstract class Figure implements AreaCalculator, BorderCalculator, Figure
         return area;
     }
 
-    public double getBorderLength() {
-        return borderLength;
+    public double getBorderline() {
+        return borderline;
     }
 
     public String getColor() {
