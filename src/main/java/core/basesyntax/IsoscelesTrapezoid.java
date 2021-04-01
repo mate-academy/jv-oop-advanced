@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Shapes {
+public class IsoscelesTrapezoid extends Shape {
     private int side;
     private int height;
 
@@ -22,7 +22,7 @@ public class IsoscelesTrapezoid extends Shapes {
     }
 
     @Override
-    String figure() {
+    public String figure() {
         return "IsoscelesTrapezoid";
     }
 

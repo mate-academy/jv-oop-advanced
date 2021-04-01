@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Shapes {
+public class Rectangle extends Shape {
     private int side1;
     private int side2;
 
@@ -21,7 +21,7 @@ public class Rectangle extends Shapes {
     }
 
     @Override
-    String figure() {
+    public String figure() {
         return "Rectangle";
     }
 

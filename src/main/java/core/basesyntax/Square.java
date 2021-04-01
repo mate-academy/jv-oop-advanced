@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends Shapes {
+public class Square extends Shape {
     private int side;
 
     public Square(int side, String color) {
@@ -28,5 +28,3 @@ public class Square extends Shapes {
         System.out.println("Have 4 corners 90 degrees");
     }
 }
-
-

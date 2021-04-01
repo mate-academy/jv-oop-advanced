@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Shapes {
+public class RightTriangle extends Shape {
     private int height;
     private int leg;
 
@@ -21,7 +21,7 @@ public class RightTriangle extends Shapes {
     }
 
     @Override
-    String figure() {
+    public String figure() {
         return "RightTriangle";
     }
 
@@ -30,4 +30,3 @@ public class RightTriangle extends Shapes {
         System.out.println("Have 3 corners");
     }
 }
-

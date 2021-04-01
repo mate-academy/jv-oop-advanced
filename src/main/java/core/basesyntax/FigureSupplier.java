@@ -7,13 +7,13 @@ public class FigureSupplier {
     private static final int LIMIT_SIDE_SHAPES = 10;
     private ColorSupplier color = new ColorSupplier();
 
-    public Shapes[] randomFigure() {
+    public Shape[] randomFigure() {
 
         Random random = new Random();
-        int ran1 = random.nextInt(LIMIT);
-        Shapes[] shape = new Shapes[ran1];
+        int randomNumber = random.nextInt(LIMIT);
+        Shape[] shape = new Shape[randomNumber];
         for (int i = 0; i < shape.length; i++) {
-            switch (ran1) {
+            switch (randomNumber) {
                 case 1:
 
                     shape[i] = new Circle(random.nextInt(LIMIT_SIDE_SHAPES),
@@ -31,12 +31,13 @@ public class FigureSupplier {
                             random.nextInt(LIMIT_SIDE_SHAPES), color.randomColor());
                     break;
                 case 5:
+                default:
+
                     shape[i] = new RightTriangle(random.nextInt(LIMIT_SIDE_SHAPES),
                             random.nextInt(LIMIT_SIDE_SHAPES),
                             color.randomColor());
                     break;
-                default:
-                    break;
+
             }
 
         }
@@ -44,6 +45,3 @@ public class FigureSupplier {
     }
 
 }
-
-
-
