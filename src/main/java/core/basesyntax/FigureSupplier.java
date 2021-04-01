@@ -9,13 +9,13 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int NUM_FIGURES = 5;
-    public static final int MAX_LENGTH = 10;
+    public static final int FIGURES_NUMBER = 5;
+    public static final int FIGURES_COUNT = 10;
     private final Random random = new Random();
-    private final ColorSupplier colorRandom = new ColorSupplier();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getFigure() {
-        switch (random.nextInt(NUM_FIGURES)) {
+        switch (random.nextInt(FIGURES_NUMBER)) {
             case 0 : return getNewSquare();
             case 1 : return getNewRectangle();
             case 2 : return getNewRightTriangle();
@@ -25,39 +25,39 @@ public class FigureSupplier {
     }
 
     private Circle getNewCircle() {
-        int radius = random.nextInt(MAX_LENGTH) + 1;
-        String color = colorRandom.getNewColor();
+        int radius = random.nextInt(FIGURES_COUNT) + 1;
+        String color = colorSupplier.getNewColor();
 
         return new Circle(radius, color);
     }
 
     private Square getNewSquare() {
-        int side = random.nextInt(MAX_LENGTH) + 1;
-        String color = colorRandom.getNewColor();
+        int side = random.nextInt(FIGURES_COUNT) + 1;
+        String color = colorSupplier.getNewColor();
 
         return new Square(side, color);
     }
 
     private Rectangle getNewRectangle() {
-        int sideA = random.nextInt(MAX_LENGTH) + 1;
-        int sideB = random.nextInt(MAX_LENGTH) + 1;
-        String color = colorRandom.getNewColor();
+        int sideA = random.nextInt(FIGURES_COUNT) + 1;
+        int sideB = random.nextInt(FIGURES_COUNT) + 1;
+        String color = colorSupplier.getNewColor();
 
         return new Rectangle(sideA, sideB, color);
     }
 
     private RightTriangle getNewRightTriangle() {
-        int sideA = random.nextInt(MAX_LENGTH) + 1;
-        int sideB = random.nextInt(MAX_LENGTH) + 1;
-        String color = colorRandom.getNewColor();
+        int sideA = random.nextInt(FIGURES_COUNT) + 1;
+        int sideB = random.nextInt(FIGURES_COUNT) + 1;
+        String color = colorSupplier.getNewColor();
 
         return new RightTriangle(sideA, sideB, color);
     }
 
     private IsoscelesTrapezoid getNewIsoscelesTrapezoid() {
-        int hide = random.nextInt(MAX_LENGTH) + 1;
-        int middleLine = random.nextInt(MAX_LENGTH) + 1;
-        String color = colorRandom.getNewColor();
+        int hide = random.nextInt(FIGURES_COUNT) + 1;
+        int middleLine = random.nextInt(FIGURES_COUNT) + 1;
+        String color = colorSupplier.getNewColor();
 
         return new IsoscelesTrapezoid(hide, middleLine, color);
     }

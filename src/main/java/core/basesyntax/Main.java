@@ -14,8 +14,8 @@ public class Main {
             allFigure[i] = new FigureSupplier().getFigure();
         }
 
-        for (Figure f : allFigure) {
-            f.draw();
+        for (Figure figure : allFigure) {
+            figure.draw();
         }
     }
 }

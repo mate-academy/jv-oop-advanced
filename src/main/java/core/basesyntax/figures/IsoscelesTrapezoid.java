@@ -34,7 +34,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double area() {
+    public double calculateArea() {
         return hide * middleLine;
     }
 }
