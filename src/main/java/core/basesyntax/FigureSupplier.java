@@ -5,7 +5,7 @@ import java.util.Random;
 public class FigureSupplier {
     private static final double MIN = 1e-10;
     private static final double MAX = 100000;
-    private Random rand = new Random();
+    private final Random rand = new Random();
 
     public Figure randFigureProper() {
         Figure f;

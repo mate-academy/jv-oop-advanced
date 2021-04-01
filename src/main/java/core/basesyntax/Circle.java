@@ -1,13 +1,11 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements State {
+public class Circle extends Figure implements AreaCalculator, Draw {
     private final double radius;
-    private String color;
 
     public Circle(double radius) {
+        super(Color.BLACK);
         this.radius = radius;
-        color = BLACK;
-
     }
 
     @Override
@@ -22,10 +20,6 @@ public class Circle extends Figure implements State {
     }
 
     @Override
-    public void setColor(String color) {
-        this.color = color;
-    }
-
     public String uniqueProperty() {
         return String.format("Radius length: %f units", radius);
     }

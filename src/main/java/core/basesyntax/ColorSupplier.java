@@ -7,16 +7,16 @@ public class ColorSupplier {
         Random rand = new Random();
         switch (rand.nextInt(3)) {
             case 0:
-                figure.setColor(State.RED);
+                figure.setColor(Color.RED);
                 break;
             case 1:
-                figure.setColor(State.BLACK);
+                figure.setColor(Color.BLACK);
                 break;
             case 2:
-                figure.setColor(State.BLUE);
+                figure.setColor(Color.BLUE);
                 break;
             case 3:
-                figure.setColor(State.GREEN);
+                figure.setColor(Color.GREEN);
                 break;
             default:
                 break;
