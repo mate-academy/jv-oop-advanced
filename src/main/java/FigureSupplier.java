@@ -29,7 +29,7 @@ public class FigureSupplier {
         int randomBase = random.nextInt(VALUE);
         int randomHeight = random.nextInt(VALUE);
         return new RightTriangle(randomBase, randomHeight,
-                ColourSupplier.getColour(colour.getColours()));
+                colourSupplier.getRandomColour());
     }
 
     private Circle getNewCircle() {
@@ -62,4 +62,3 @@ public class FigureSupplier {
     }
 
 }
-
