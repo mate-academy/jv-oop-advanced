@@ -5,9 +5,11 @@ import java.util.Random;
 public class FigureSupplier {
     public static Figure getRandomFigure() {
         Random randomN = new Random();
-        int a = randomN.nextInt(4) + 1;
         Random value = new Random();
-        int v = value.nextInt(1000) + 1;
+        final int upperValueBound = 1000;
+        final int amountOfShapes = 4;
+        int a = randomN.nextInt(amountOfShapes) + 1;
+        int v = value.nextInt(upperValueBound) + 1;
         switch (a) {
             case 1:
                 Square square = new Square();
