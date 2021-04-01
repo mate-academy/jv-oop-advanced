@@ -3,14 +3,14 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int FIGURES = 5;
-    private static final int RANDOM_NUMBERS = 100;
+    private static final int MAX_NUMBERS_OF_FIGURES = 5;
+    private static final int MAX_RANDOM_NUMBERS = 100;
 
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
 
     public Figure getRandomFigure() {
-        int number = random.nextInt(FIGURES - 1) + 1;
+        int number = random.nextInt(MAX_NUMBERS_OF_FIGURES);
         switch (number) {
             case 1:
                 return getNewSquare();
@@ -26,58 +26,42 @@ public class FigureSupplier {
     }
 
     private Circle getNewCircle() {
-        int radius = random.nextInt(RANDOM_NUMBERS - 1) + 1;
-        String color = colorSupplier.setColor();
+        int radius = random.nextInt(MAX_RANDOM_NUMBERS);
+        String color = colorSupplier.getRandomColor();
 
         return new Circle(radius, color);
     }
 
     private Square getNewSquare() {
-        int sideA = random.nextInt(RANDOM_NUMBERS - 1) + 1;
-        String color = colorSupplier.setColor();
+        int sideOfSquare = random.nextInt(MAX_RANDOM_NUMBERS);
+        String color = colorSupplier.getRandomColor();
 
-        return new Square(sideA, color);
+        return new Square(sideOfSquare, color);
     }
 
     private RightTriangle getNewRightTriangle() {
-        int hypotenuse = random.nextInt(RANDOM_NUMBERS - 1) + 1;
-        int cathetusA = random.nextInt(RANDOM_NUMBERS - 1) + 1;
-        int cathetusB = random.nextInt(RANDOM_NUMBERS - 1) + 1;
-        String color = colorSupplier.setColor();
+        int hypotenuse = random.nextInt(MAX_RANDOM_NUMBERS);
+        int firstLeg = random.nextInt(MAX_RANDOM_NUMBERS);
+        int secondLeg = random.nextInt(MAX_RANDOM_NUMBERS);
+        String color = colorSupplier.getRandomColor();
 
-        return new RightTriangle(hypotenuse, cathetusA, cathetusB, color);
+        return new RightTriangle(hypotenuse, firstLeg, secondLeg, color);
     }
 
     private IsoscelesTrapezoid getNewIsoscelesTrapezoid() {
-        int height = random.nextInt(RANDOM_NUMBERS - 1) + 1;
-        int sideA = random.nextInt(RANDOM_NUMBERS - 1) + 1;
-        int sideB = random.nextInt(RANDOM_NUMBERS - 1) + 1;
-        String color = colorSupplier.setColor();
+        int height = random.nextInt(MAX_RANDOM_NUMBERS);
+        int firstBase = random.nextInt(MAX_RANDOM_NUMBERS);
+        int secondBase = random.nextInt(MAX_RANDOM_NUMBERS);
+        String color = colorSupplier.getRandomColor();
 
-        return new IsoscelesTrapezoid(height, sideA, sideB, color);
+        return new IsoscelesTrapezoid(height, firstBase, secondBase, color);
     }
 
     private Rectangle getNewRectangle() {
-        int sideA = random.nextInt(RANDOM_NUMBERS - 1) + 1;
-        int sideB = random.nextInt(RANDOM_NUMBERS - 1) + 1;
-        String color = colorSupplier.setColor();
+        int width = random.nextInt(MAX_RANDOM_NUMBERS);
+        int length = random.nextInt(MAX_RANDOM_NUMBERS);
+        String color = colorSupplier.getRandomColor();
 
-        return new Rectangle(sideA, sideB, color);
-    }
-
-    public Random getRandom() {
-        return random;
-    }
-
-    public void setRandom(Random random) {
-        this.random = random;
-    }
-
-    public ColorSupplier getColorSupplier() {
-        return colorSupplier;
-    }
-
-    public void setColorSupplier(ColorSupplier colorSupplier) {
-        this.colorSupplier = colorSupplier;
+        return new Rectangle(width, length, color);
     }
 }

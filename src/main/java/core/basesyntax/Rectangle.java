@@ -1,28 +1,23 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Shape {
-    private int sideA;
-    private int sideB;
+public class Rectangle extends Figure {
+    private int width;
+    private int length;
 
-    public Rectangle(int sideA, int sideB, String color) {
+    public Rectangle(int width, int length, String color) {
         super(color);
-        this.sideA = sideA;
-        this.sideB = sideB;
-    }
-
-    public void setParameters(int sideA, int sideB) {
-        this.sideA = sideA;
-        this.sideB = sideB;
+        this.width = width;
+        this.length = length;
     }
 
     @Override
     public double getArea() {
-        return Math.round(sideA * sideB);
+        return Math.round(width * length);
     }
 
     @Override
-    public void draw() {
+    public void getDraw() {
         System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, side weight: "
-                + sideB + " units, color: " + getColor());
+                + length + " units, color: " + getColor());
     }
 }

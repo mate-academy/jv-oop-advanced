@@ -1,31 +1,25 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements Shape {
+public class RightTriangle extends Figure {
     private int hypotenuse;
-    private int cathetusA;
-    private int cathetusB;
+    private int firstLeg;
+    private int secondLeg;
 
-    public RightTriangle(int hypotenuse, int cathetusA, int cathetusB, String color) {
+    public RightTriangle(int hypotenuse, int firstLeg, int secondLeg, String color) {
         super(color);
         this.hypotenuse = hypotenuse;
-        this.cathetusA = cathetusA;
-        this.cathetusB = cathetusB;
-    }
-
-    public void setParameters(int hypotenuse, int cathetusA, int cathetusB) {
-        this.hypotenuse = hypotenuse;
-        this.cathetusA = cathetusA;
-        this.cathetusB = cathetusB;
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
     }
 
     @Override
     public double getArea() {
-        return Math.round((cathetusA * cathetusB) / 2.0);
+        return Math.round((firstLeg * secondLeg) / 2.0);
     }
 
     @Override
-    public void draw() {
-        System.out.println("Figure: right triangle, area: " + getArea() + " sq. units, side "
+    public void getDraw() {
+        System.out.println("Figure: right triangle, area: " + getArea() + " sq. units, hypotenuse "
                 + "hypotenuse: " + hypotenuse + " units, color: " + getColor());
     }
 }
