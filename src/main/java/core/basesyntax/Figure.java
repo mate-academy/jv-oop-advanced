@@ -1,25 +1,25 @@
 package core.basesyntax;
 
-public abstract class Figure implements Area {
+public abstract class Figure implements AreaCalculator, FigureDraw {
     private String colour;
-    private String property;
     private String type;
+    private String property;
 
     public Figure() {
     }
 
     public Figure(String type, String colour, String property) {
         this.colour = colour;
-        this.property = property;
         this.type = type;
-    }
-
-    public String getColour() {
-        return colour;
+        this.property = property;
     }
 
     public String getProperty() {
         return property;
+    }
+
+    public String getColour() {
+        return colour;
     }
 
     public String getType() {

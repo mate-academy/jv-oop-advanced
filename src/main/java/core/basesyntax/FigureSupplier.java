@@ -61,7 +61,7 @@ public class FigureSupplier extends Figure {
     }
 
     @Override
-    public double calcArea() {
+    public double calculateArea() {
         return 0;
     }
 }
