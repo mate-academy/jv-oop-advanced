@@ -3,10 +3,10 @@ package core.basesyntax.figure;
 import core.basesyntax.Figure;
 
 public class Rectangle extends Figure {
-    private double width;
-    private double length;
+    private int width;
+    private int length;
 
-    public Rectangle(double weight, double length, String name, String color) {
+    public Rectangle(int weight, int length, String name, String color) {
         super(color, name);
         this.width = weight;
         this.length = length;

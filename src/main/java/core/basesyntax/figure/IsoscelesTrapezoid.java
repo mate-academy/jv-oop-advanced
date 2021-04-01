@@ -3,11 +3,11 @@ package core.basesyntax.figure;
 import core.basesyntax.Figure;
 
 public class IsoscelesTrapezoid extends Figure {
-    private double height;
-    private double topBase;
-    private double bottomBase;
+    private int height;
+    private int topBase;
+    private int bottomBase;
 
-    public IsoscelesTrapezoid(double sideA, double sideB, double height,
+    public IsoscelesTrapezoid(int sideA, int sideB, int height,
                               String name, String color) {
         super(color, name);
         this.height = height;

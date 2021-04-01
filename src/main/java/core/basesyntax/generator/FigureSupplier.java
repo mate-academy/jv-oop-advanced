@@ -10,8 +10,9 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int NUMBER_OF_FIGURES = 5;
+    private static final int UPPER_BOTTOM = 16;
 
-    public Figure[] generateFigure(int figuresCount) {
+    public Figure[] generateFigures(int figuresCount) {
         Figure[] figures = new Figure[figuresCount];
         Random random = new Random();
         ColorSupplier colorSupplier = new ColorSupplier();
@@ -20,32 +21,28 @@ public class FigureSupplier {
             int figureNumber = random.nextInt(NUMBER_OF_FIGURES);
             switch (figureNumber) {
                 case 0:
-                    figures[i] = new Circle(random.nextDouble() + random.nextInt(), "circle",
-                            colorSupplier.setColors());
+                    figures[i] = new Circle(random.nextInt(UPPER_BOTTOM), "circle",
+                            colorSupplier.getRandomColor());
                     break;
                 case 1:
-                    figures[i] = new IsoscelesTrapezoid(random.nextDouble() + random.nextInt(),
-                            random.nextDouble()
-                                    + random.nextInt(), random.nextDouble()
-                            + random.nextInt(), "isosceles trapezoid",
-                            colorSupplier.setColors());
+                    figures[i] = new IsoscelesTrapezoid(random.nextInt(UPPER_BOTTOM),
+                            random.nextInt(UPPER_BOTTOM),
+                            random.nextInt(UPPER_BOTTOM), "isosceles trapezoid",
+                            colorSupplier.getRandomColor());
                     break;
                 case 2:
-                    figures[i] = new Rectangle(random.nextDouble() + random.nextInt(),
-                            random.nextDouble()
-                                    + random.nextInt(), "rectangle", colorSupplier.setColors());
+                    figures[i] = new Rectangle(random.nextInt(UPPER_BOTTOM),
+                            random.nextInt(UPPER_BOTTOM), "rectangle",
+                            colorSupplier.getRandomColor());
                     break;
                 case 3:
-                    figures[i] = new RightTriangle(random.nextDouble() + random.nextInt(),
-                            random.nextDouble()
-                                    + random.nextInt(), "right triangle",
-                            colorSupplier.setColors());
-                    break;
-                case 4:
-                    figures[i] = new Square(random.nextDouble() + random.nextInt(),
-                            "square", colorSupplier.setColors());
+                    figures[i] = new RightTriangle(random.nextInt(UPPER_BOTTOM),
+                            random.nextInt(UPPER_BOTTOM), "right triangle",
+                            colorSupplier.getRandomColor());
                     break;
                 default:
+                    figures[i] = new Square(random.nextInt(UPPER_BOTTOM),
+                            "square", colorSupplier.getRandomColor());
                     break;
             }
         }

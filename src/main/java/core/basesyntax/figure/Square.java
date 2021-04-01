@@ -3,9 +3,9 @@ package core.basesyntax.figure;
 import core.basesyntax.Figure;
 
 public class Square extends Figure {
-    private double side;
+    private int side;
 
-    public Square(double side, String name, String color) {
+    public Square(int side, String name, String color) {
         super(color, name);
         this.side = side;
     }
