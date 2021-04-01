@@ -6,7 +6,7 @@ public class FigureSupplier extends ColorSupplier {
     public static final int MAX = 200;
     public static final int COUNT = 5;
 
-    private ColorSupplier color;
+    private ColorSupplier color = new ColorSupplier();
 
     public Figure getRandomFigure() {
 
