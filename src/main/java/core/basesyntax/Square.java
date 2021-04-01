@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public class Square extends Figure {
+public class Square extends Figure implements GetArea {
     private int length;
 
-    public Square(int length, Colors colors) {
+    public Square(int length, Color colors) {
         super(colors);
         this.length = length;
     }

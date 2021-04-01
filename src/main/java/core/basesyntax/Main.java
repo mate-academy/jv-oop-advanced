@@ -5,14 +5,12 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        int countOfFigures = new Random().nextInt(10);
+        int countOfFigures = new Random().nextInt(5);
         Figure[] figures = new Figure[countOfFigures];
 
-        int i = 0;
-        while (i < countOfFigures) {
+        for (int i = 0; i < countOfFigures; i++) {
             figures[i] = figureSupplier.get();
             figures[i].draw();
-            i++;
         }
     }
 }

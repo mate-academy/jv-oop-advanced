@@ -1,10 +1,10 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure {
+public class Rectangle extends Figure implements GetArea {
     private int width;
     private int height;
 
-    public Rectangle(int width, int height, Colors colors) {
+    public Rectangle(int width, int height, Color colors) {
         super(colors);
         this.width = width;
         this.height = height;

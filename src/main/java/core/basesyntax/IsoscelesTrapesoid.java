@@ -1,11 +1,11 @@
 package core.basesyntax;
 
-public class IsoscelesTrapesoid extends Figure {
+public class IsoscelesTrapesoid extends Figure implements GetArea {
     private int sideOne;
     private int sideTwo;
     private int sideThree;
 
-    public IsoscelesTrapesoid(int sideOne, int sideTwo, int sideThree, Colors colors) {
+    public IsoscelesTrapesoid(int sideOne, int sideTwo, int sideThree, Color colors) {
         super(colors);
         this.sideOne = sideOne;
         this.sideTwo = sideTwo;

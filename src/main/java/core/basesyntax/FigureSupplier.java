@@ -26,7 +26,7 @@ public class FigureSupplier {
         return random.nextInt(20);
     }
 
-    private Colors getRandomColor() {
+    private Color getRandomColor() {
         return new ColorSupplier().get();
     }
 }
