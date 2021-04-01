@@ -19,32 +19,32 @@ public class FigureSupplier {
 
     public Shape generateShape() {
         int figureType = (int) (Math.random() * TOTAL_SHAPE_NUMBER);
-        ColorSupplier color = new ColorSupplier();
+        ColorSupplier colorSupplier = new ColorSupplier();
         switch (figureType) {
             case 1:
                 return new Circle("circle",
-                        color.generateColor(),
+                        colorSupplier.generateColor(),
                         (int) (Math.random() * RADIUS_LIMIT) + 1);
             case 2:
                 return new IsoscelesTrapezoid("isosceles trapezoid",
-                        color.generateColor(),
+                        colorSupplier.generateColor(),
                         // lower base should be longer than upper base. always
                         (int) (Math.random() * LOWER_BASE_EXCESS_UPPER_BASE) + MINIMAL_LOWER_BASE,
                         (int) (Math.random() * UPPER_BASE) + 1,
                         (int) (Math.random() * WIDTH_LIMIT) + 1);
             case 3:
                 return new Rectangle("rectangle",
-                        color.generateColor(),
+                        colorSupplier.generateColor(),
                         (int) (Math.random() * LENGTH_LIMIT) + 1,
                         (int) (Math.random() * WIDTH_LIMIT) + 1);
             case 4:
                 return new RightTriangle("triangle",
-                        color.generateColor(),
+                        colorSupplier.generateColor(),
                         (int) (Math.random() * LENGTH_LIMIT) + 1,
                         (int) (Math.random() * WIDTH_LIMIT) + 1);
             default:
                 return new Square("square",
-                        color.generateColor(),
+                        colorSupplier.generateColor(),
                         (int) (Math.random() * LENGTH_LIMIT) + 1);
         }
     }
