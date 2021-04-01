@@ -8,23 +8,30 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier extends ColorSupplier {
-    static Figure getFigure() {
-        Random random = new Random();
-        int figure = random.nextInt(4);
-        int size = 100;
+    private static final int LIMIT_SIZE = 100;
+    private static final int NUM_OF_FIGURES = 4;
 
+    public Figure getFigure() {
+        Random random = new Random();
+        int figure = random.nextInt(NUM_OF_FIGURES);
         switch (figure) {
             case 0:
-                return new Circle(ColorSupplier.getColor(), random.nextInt(size));
+                return new Circle(new ColorSupplier().getColor(),
+                        random.nextInt(LIMIT_SIZE));
             case 1:
-                return new Rectangle(ColorSupplier.getColor(), random.nextInt(size),
-                        random.nextInt(size));
+                return new Rectangle(new ColorSupplier().getColor(),
+                        random.nextInt(LIMIT_SIZE),
+                        random.nextInt(LIMIT_SIZE));
             case 2:
-                return new IsoscelesTrapezoid(ColorSupplier.getColor(), random.nextInt(size),
-                        random.nextInt(size), random.nextInt(size));
+                return new IsoscelesTrapezoid(new ColorSupplier().getColor(),
+                        random.nextInt(LIMIT_SIZE),
+                        random.nextInt(LIMIT_SIZE),
+                        random.nextInt(LIMIT_SIZE));
             case 3:
-                return new RightTriangle(ColorSupplier.getColor(), random.nextInt(size));
+                return new RightTriangle(new ColorSupplier().getColor(),
+                        random.nextInt(LIMIT_SIZE));
             default:
-                return new Square(ColorSupplier.getColor(), random.nextInt(size)); }
+                return new Square(new ColorSupplier().getColor(),
+                        random.nextInt(LIMIT_SIZE)); }
     }
 }

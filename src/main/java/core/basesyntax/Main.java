@@ -8,8 +8,8 @@ public class Main {
         int randomNumOfFigures = random.nextInt(15) + 2;
         Figure[] figures = new Figure[randomNumOfFigures];
         for (int i = 0; i < randomNumOfFigures; i++) {
-            figures[i] = FigureSupplier.getFigure();
-            System.out.println(figures[i].getDraw());
+            figures[i] = new FigureSupplier().getFigure();
+            System.out.println(figures[i].draw());
         }
     }
 }

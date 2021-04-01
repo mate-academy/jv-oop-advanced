@@ -1,10 +1,10 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Area;
-import core.basesyntax.Draw;
+import core.basesyntax.AreaCalculator;
+import core.basesyntax.Drawable;
 import core.basesyntax.Figure;
 
-public class Rectangle extends Figure implements Draw, Area {
+public class Rectangle extends Figure implements Drawable, AreaCalculator {
 
     private Double sideA;
     private Double sideB;
@@ -37,7 +37,7 @@ public class Rectangle extends Figure implements Draw, Area {
     }
 
     @Override
-    public String getDraw() {
+    public String draw() {
         return "Figure: rectangle, area: " + getArea() + " sq. units, side a length: "
                 + getSideA() + " units, side b length: " + getSideB() + " units, color: "
                 + getColor();

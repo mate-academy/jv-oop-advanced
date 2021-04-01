@@ -1,10 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Area;
-import core.basesyntax.Draw;
 import core.basesyntax.Figure;
 
-public class Circle extends Figure implements Draw, Area {
+public class Circle extends Figure {
 
     private double radius;
 
@@ -27,10 +25,8 @@ public class Circle extends Figure implements Draw, Area {
     }
 
     @Override
-    public String getDraw() {
+    public String draw() {
         return "Figure: circle, area: " + getArea() + " sq. units, radius length: "
                 + getRadius() + " units, color: " + getColor();
-
     }
-
 }

@@ -1,10 +1,10 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Area;
-import core.basesyntax.Draw;
+import core.basesyntax.AreaCalculator;
+import core.basesyntax.Drawable;
 import core.basesyntax.Figure;
 
-public class RightTriangle extends Figure implements Draw, Area {
+public class RightTriangle extends Figure implements Drawable, AreaCalculator {
 
     private Double sideA;
     private String color;
@@ -29,7 +29,7 @@ public class RightTriangle extends Figure implements Draw, Area {
     }
 
     @Override
-    public String getDraw() {
+    public String draw() {
         return "Figure: right triangle, area: " + getArea() + " sq. units, side length: "
                 + getSideA() + " units, color: " + getColor();
     }
