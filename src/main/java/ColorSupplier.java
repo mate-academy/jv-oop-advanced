@@ -1,6 +1,6 @@
 import java.util.Random;
 
-public class ColourSupplier {
+public class ColorSupplier {
     public static final String[] COLOURS = new String[]{
         "brown", "blue", "yellow", "white", "black", "green", "grey", "orange"
     };

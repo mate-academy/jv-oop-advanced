@@ -4,8 +4,8 @@ import java.util.Random;
 public class FigureSupplier {
     public static final int FIGURES_NUMBER = 5;
     public static final int RANDOM_NUMBER = 30;
-    public static final Random random = new Random();
-    public static final ColourSupplier colourSupplier = new ColourSupplier();
+    private Random random = new Random();
+    private ColorSupplier colourSupplier = new ColorSupplier();
 
     public Figure getFigure() {
         int randomFigure = random.nextInt(FIGURES_NUMBER);
