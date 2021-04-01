@@ -1,7 +1,7 @@
 package core.basesyntax.suppliers;
 
-import core.basesyntax.behavior.Shape;
 import core.basesyntax.figures.Circle;
+import core.basesyntax.figures.Figure;
 import core.basesyntax.figures.IsoscelesTrapezoid;
 import core.basesyntax.figures.Rectangle;
 import core.basesyntax.figures.RightTriangle;
@@ -12,7 +12,7 @@ public class FigureSupplier {
     private static final int COUNT_FIGURES = 5;
     private static final int LIMIT_VALUE = 100;
 
-    public Shape getFigure() {
+    public Figure getFigure() {
         ColorSupplier colorSupplier = new ColorSupplier();
         Random random = new Random();
         int target = random.nextInt(COUNT_FIGURES);

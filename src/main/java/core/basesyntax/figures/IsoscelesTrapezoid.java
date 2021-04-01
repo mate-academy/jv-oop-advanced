@@ -1,18 +1,13 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.behavior.Shape;
-
-public class IsoscelesTrapezoid implements Shape {
-    private String name;
-    private String color;
+public class IsoscelesTrapezoid extends Figure {
     private double sideA;
     private double sideB;
     private double height;
 
     public IsoscelesTrapezoid(double sideA, double sideB, double height,
                               String name, String color) {
-        this.name = name;
-        this.color = color;
+        super(name, color);
         this.sideA = sideA;
         this.sideB = sideB;
         this.height = height;
@@ -25,8 +20,8 @@ public class IsoscelesTrapezoid implements Shape {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + name + ", getArea: "
+        System.out.println("Figure: " + getName() + ", getArea: "
                 + getArea() + " sq. units, sideA: " + sideA + " sq. units, sideB"
-                + sideB + " units: color" + color);
+                + sideB + " units: color " + getColor());
     }
 }

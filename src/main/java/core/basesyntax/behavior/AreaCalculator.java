@@ -1,7 +1,5 @@
 package core.basesyntax.behavior;
 
-public interface Shape {
+public interface AreaCalculator {
     double getArea();
-
-    void draw();
 }

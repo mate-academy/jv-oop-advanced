@@ -1,16 +1,11 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.behavior.Shape;
-
-public class Rectangle implements Shape {
-    private String name;
-    private String color;
+public class Rectangle extends Figure {
     private double width;
     private double height;
 
     public Rectangle(double width, double height, String name, String color) {
-        this.name = name;
-        this.color = color;
+        super(name, color);
         this.width = width;
         this.height = height;
     }
@@ -22,9 +17,8 @@ public class Rectangle implements Shape {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + name + ", getArea: "
+        System.out.println("Figure: " + getName() + ", getArea: "
                 + getArea() + " sq. units, width: " + width + " sq. units, height: "
-                + height + " units: color" + color);
+                + height + " units: color " + getColor());
     }
 }
-

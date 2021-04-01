@@ -1,15 +1,10 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.behavior.Shape;
-
-public class Circle implements Shape {
-    private String name;
-    private String color;
+public class Circle extends Figure {
     private double radius;
 
     public Circle(double radius, String name, String color) {
-        this.name = name;
-        this.color = color;
+        super(name, color);
         this.radius = radius;
     }
 
@@ -20,8 +15,8 @@ public class Circle implements Shape {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + name + ", getArea: "
+        System.out.println("Figure: " + getName() + ", getArea: "
                 + getArea() + " sq. units, radius: "
-                + radius + " units: color" + color);
+                + radius + " units: color " + getColor());
     }
 }
