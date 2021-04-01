@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 import core.basesyntax.shapes.Shape;
-
 import java.util.Random;
 
 public class Main {

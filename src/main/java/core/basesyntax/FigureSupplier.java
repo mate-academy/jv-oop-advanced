@@ -6,7 +6,6 @@ import core.basesyntax.shapes.Rectangle;
 import core.basesyntax.shapes.RightTriangle;
 import core.basesyntax.shapes.Shape;
 import core.basesyntax.shapes.Square;
-
 import java.util.Random;
 
 public class FigureSupplier {
