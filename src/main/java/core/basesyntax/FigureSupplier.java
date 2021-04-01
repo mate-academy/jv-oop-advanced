@@ -30,7 +30,6 @@ public class FigureSupplier {
             case 2:
                 return new IsoscelesTrapezoid("isosceles trapezoid",
                         colorSupplier.generateColor(),
-                        // lower base should be longer than upper base. always
                         MINIMAL_LOWER_BASE + random.nextInt(LOWER_BASE_EXCESS_UPPER_BASE),
                         random.nextInt(UPPER_BASE),
                         random.nextInt(WIDTH_LIMIT));
