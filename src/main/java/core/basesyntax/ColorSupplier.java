@@ -3,11 +3,12 @@ package core.basesyntax;
 import java.util.Random;
 
 public class ColorSupplier {
-    private static final int COLOR = 6;
+    private static final int COLOR_COUNT = 6;
 
-    public static String colorGenerator() {
+    public static String getRandomColor() {
         Random random = new Random();
-        int color = random.nextInt(COLOR);
+        ColorSupplier colorSupplier = new ColorSupplier();
+        int color = random.nextInt(COLOR_COUNT);
 
         switch (color) {
             case 1:

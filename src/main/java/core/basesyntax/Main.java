@@ -9,8 +9,9 @@ public class Main {
     public static void main(String[] args) {
         Random random = new Random();
         ArrayList<Figure> figuresArrayList = new ArrayList<>();
+        FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = random.nextInt(LIMIT); i > 0; i--) {
-            figuresArrayList.add(FigureSupplier.figureGenerator());
+            figuresArrayList.add(figureSupplier.getRandomFigure());
         }
         figuresArrayList.forEach(Drawer::draw);
     }

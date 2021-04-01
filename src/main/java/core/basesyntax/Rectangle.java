@@ -12,7 +12,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure " + getFigureProperty() + ", area: " + getArea()
+        System.out.println("Figure " + getName() + ", area: " + getArea()
                 + " square units, length: " + getLength() + " units, width: "
                 + getWidth() + " units, color " + getColor());
     }
@@ -29,5 +29,4 @@ public class Rectangle extends Figure {
     public int getLength() {
         return length;
     }
-
 }

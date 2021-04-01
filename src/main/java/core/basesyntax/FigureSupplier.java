@@ -3,32 +3,30 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int FIGURE = 5;
-    private static final int VALUE = 20;
+    private static final int FIGURE_COUNT = 5;
+    private static final int MAX_PROPERTY_VALUE = 20;
 
-    public static Figure figureGenerator() {
+    public Figure getRandomFigure() {
         Random random = new Random();
-        int figure = random.nextInt(FIGURE);
-
+        ColorSupplier colorSupplier = new ColorSupplier();
+        int figure = random.nextInt(FIGURE_COUNT);
         switch (figure) {
             case 0:
-                return new Circle("Circle", ColorSupplier.colorGenerator(),
-                        random.nextInt(VALUE));
+                return new Circle("Circle", ColorSupplier.getRandomColor(),
+                        random.nextInt(MAX_PROPERTY_VALUE));
             case 1:
-                return new IsoscelesTrapezoid("IsoscelesTrapezoid", ColorSupplier.colorGenerator(),
-                        random.nextInt(VALUE), random.nextInt(VALUE),
-                        random.nextInt(VALUE));
+                return new IsoscelesTrapezoid("IsoscelesTrapezoid", ColorSupplier.getRandomColor(),
+                        random.nextInt(MAX_PROPERTY_VALUE), random.nextInt(MAX_PROPERTY_VALUE),
+                        random.nextInt(MAX_PROPERTY_VALUE));
             case 2:
-
-                return new Rectangle("Rectangle", ColorSupplier.colorGenerator(),
-                        random.nextInt(VALUE), random.nextInt(VALUE));
+                return new Rectangle("Rectangle", ColorSupplier.getRandomColor(),
+                        random.nextInt(MAX_PROPERTY_VALUE), random.nextInt(MAX_PROPERTY_VALUE));
             case 3:
-                return new RightTriangle("RightTriangle", ColorSupplier.colorGenerator(),
-                        random.nextInt(VALUE), random.nextInt(VALUE));
+                return new RightTriangle("RightTriangle", ColorSupplier.getRandomColor(),
+                        random.nextInt(MAX_PROPERTY_VALUE), random.nextInt(MAX_PROPERTY_VALUE));
             default:
-                return new Square("Square", ColorSupplier.colorGenerator(),
-                        random.nextInt(VALUE));
+                return new Square("Square", ColorSupplier.getRandomColor(),
+                        random.nextInt(MAX_PROPERTY_VALUE));
         }
     }
 }
-

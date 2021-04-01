@@ -3,14 +3,14 @@ package core.basesyntax;
 public class Circle extends Figure {
     private final double radius;
 
-    public Circle(String figureProperty, String color, double radius) {
-        super(figureProperty, color);
+    public Circle(String name, String color, double radius) {
+        super(name, color);
         this.radius = radius;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getFigureProperty() + ", area: "
+        System.out.println("Figure: " + getName() + ", area: "
                 + getArea() + " square units, radius: "
                 + getRadius() + " units, color: " + getColor());
     }
@@ -23,5 +23,4 @@ public class Circle extends Figure {
     public double getRadius() {
         return radius;
     }
-
 }
