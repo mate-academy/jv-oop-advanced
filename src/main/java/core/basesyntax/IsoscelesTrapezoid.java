@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Shapes implements Area, Draw {
+public class IsoscelesTrapezoid extends Shapes {
     private int side;
     private int height;
 
@@ -11,7 +11,7 @@ public class IsoscelesTrapezoid extends Shapes implements Area, Draw {
     }
 
     @Override
-    public String getDraw() {
+    public String draw() {
         return ("Picture: " + ",area: " + getArea() + ",side length: " + side
                 + ", height: " + height);
     }

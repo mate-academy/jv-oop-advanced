@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Shapes implements Area, Draw {
+public class RightTriangle extends Shapes {
     private int height;
     private int leg;
 
@@ -11,7 +11,7 @@ public class RightTriangle extends Shapes implements Area, Draw {
     }
 
     @Override
-    public String getDraw() {
+    public String draw() {
         return ("Picture: " + ",area: " + getArea() + "leg length: " + leg);
     }
 

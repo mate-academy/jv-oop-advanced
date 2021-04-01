@@ -3,14 +3,14 @@ package core.basesyntax;
 import java.util.Random;
 
 public class ColorSupplier {
-    private static final int LIMIT = 6;
+    private static final int RANDOM_LIMIT = 6;
 
     public String randomColor() {
 
         String color = "";
         Random random = new Random();
-        int ran = random.nextInt(LIMIT);
-        switch (ran) {
+
+        switch (random.nextInt(RANDOM_LIMIT)) {
             case 1:
                 color = "green";
                 break;
@@ -24,10 +24,10 @@ public class ColorSupplier {
                 color = "black";
                 break;
             case 5:
+            default:
                 color = "red";
                 break;
-            default:
-                break;
+
         }
         return color;
     }

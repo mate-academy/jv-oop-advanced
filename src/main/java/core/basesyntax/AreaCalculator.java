@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-interface Area {
+interface AreaCalculator {
     int getArea();
 }
 

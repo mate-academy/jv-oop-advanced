@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Shapes implements Area, Draw {
+public class Circle extends Shapes {
     private int radius;
 
     public Circle(int radius, String color) {
@@ -14,7 +14,7 @@ public class Circle extends Shapes implements Area, Draw {
     }
 
     @Override
-    public String getDraw() {
+    public String draw() {
         return ("Picture: " + ",area: " + getArea() + "radius : " + radius);
     }
 
