@@ -1,8 +1,8 @@
 import core.basesyntax.Figure;
 
 public class IsoscelesTrapezoid extends Figure {
-    private final double sideA;
-    private final double sideB;
+    private double firstBase;
+    private double secondBase;
     private final int height;
 
     public IsoscelesTrapezoid(int sideA, int sideB, int height, String color) {
