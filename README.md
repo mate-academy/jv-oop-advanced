@@ -13,8 +13,8 @@ For this purpose create two more classes (`ColorSupplier` - for generating rando
 1. After generating the array, we need to display the entire list of objects that we have, for example:
 
 ```
- Figure: square, area: 25 sq. units, side length: 5 units, color: blue
- Figure: triangle, area: 12.5 sq. units, hypotenuse: 7.1 units, color: yellow
+ Shape: square, area: 25 sq. units, side length: 5 units, color: blue
+ Shape: triangle, area: 12.5 sq. units, hypotenuse: 7.1 units, color: yellow
 ```
 
 #### [Try to avoid these common mistakes, while solving task](https://mate-academy.github.io/jv-program-common-mistakes/java-core/abstract-class-interface/oop-advanced)
