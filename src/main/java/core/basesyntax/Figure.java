@@ -2,9 +2,11 @@ package core.basesyntax;
 
 public abstract class Figure implements AreaCalculator, Drawer {
     private String name;
+    private String color;
 
-    public Figure(String name) {
+    public Figure(String name, String color) {
         this.name = name;
+        this.color = color;
     }
 
     public String getName() {
@@ -12,6 +14,6 @@ public abstract class Figure implements AreaCalculator, Drawer {
     }
 
     public String getColor() {
-        return new ColorSupplier().getRandomColor();
+        return color;
     }
 }

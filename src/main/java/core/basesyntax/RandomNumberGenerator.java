@@ -1,17 +1,15 @@
 package core.basesyntax;
 
 public class RandomNumberGenerator {
-    public double getRandomProperties() {
-        double max = 1.0;
-        double min = 15.0;
-        return (int) ((Math.random() * (max - min)) + min);
+    public static final int MAX = 15;
+    public static final int MIN = 1;
+    public static final int NUMBER_OF_FIGURES = 5;
+
+    public double getRandomProperty() {
+        return (int) ((Math.random() * (MAX - MIN)) + MIN);
     }
 
     public int getRandomNumber() {
-        int numberOfFigures = 5;
-        int min = 1;
-        int max = numberOfFigures;
-        int randomNumber = (int) (Math.random() * (max - min)) + min;
-        return randomNumber;
+        return (int) (Math.random() * (NUMBER_OF_FIGURES - MIN)) + MIN;
     }
 }

@@ -2,17 +2,25 @@ package core.basesyntax;
 
 public class FigureSupplier {
     public Figure getRandomFigure() {
-        int randomNumber = new RandomNumberGenerator().getRandomNumber();
+        RandomNumberGenerator numberGenerator = new RandomNumberGenerator();
+        ColorSupplier colorSupplier = new ColorSupplier();
+        String randomColor = colorSupplier.getRandomColor();
+        double randomProperty = numberGenerator.getRandomProperty();
+        int randomNumber = numberGenerator.getRandomNumber();
+
         if (randomNumber == 1) {
-            return new Circle("circle");
+            return new Circle("circle", randomColor, randomProperty);
         } else if (randomNumber == 2) {
-            return new IsoscelesTrapezoid("isosceles trapezoid");
+            return new IsoscelesTrapezoid("isosceles trapezoid",
+                    randomColor, 10, 12, randomProperty);
         } else if (randomNumber == 3) {
-            return new Rectangle("rectangle");
+            return new Rectangle("rectangle",
+                    randomColor, 8, randomProperty);
         } else if (randomNumber == 4) {
-            return new RightTriangle("right triangle");
+            return new RightTriangle("right triangle",
+                    randomColor, 12, 14);
         } else if (randomNumber == 5) {
-            return new Square("square");
+            return new Square("square", randomColor, randomProperty);
         } else {
             return null;
         }

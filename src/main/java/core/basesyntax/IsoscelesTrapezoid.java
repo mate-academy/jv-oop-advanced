@@ -5,11 +5,12 @@ public class IsoscelesTrapezoid extends Figure {
     private double secondBaseSide;
     private double height;
 
-    public IsoscelesTrapezoid(String name) {
-        super(name);
-        this.firstBaseSide = new RandomNumberGenerator().getRandomProperties();
-        this.secondBaseSide = new RandomNumberGenerator().getRandomProperties();
-        this.height = new RandomNumberGenerator().getRandomProperties();
+    public IsoscelesTrapezoid(String name, String color, double firstBaseSide,
+                              double secondBaseSide, double height) {
+        super(name, color);
+        this.firstBaseSide = firstBaseSide;
+        this.secondBaseSide = secondBaseSide;
+        this.height = height;
     }
 
     public double getHeight() {

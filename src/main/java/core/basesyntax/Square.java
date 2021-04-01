@@ -3,9 +3,9 @@ package core.basesyntax;
 public class Square extends Figure {
     private double side;
 
-    public Square(String name) {
-        super(name);
-        side = new RandomNumberGenerator().getRandomProperties();
+    public Square(String name, String color, double side) {
+        super(name, color);
+        this.side = side;
     }
 
     public double getSide() {
