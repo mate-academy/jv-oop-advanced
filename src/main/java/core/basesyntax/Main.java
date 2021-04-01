@@ -10,7 +10,7 @@ public class Main {
         Random random = new Random();
         Figure[] figures = new Figure[random.nextInt(ARRAYLENGTH)];
         for (int i = 0; i < figures.length; i++) {
-            figures[i] = new FigureSupplier().getFigure();
+            figures[i] = new FigureGeneration().getFigure();
         }
         for (Figure figure : figures) {
             figure.draw();
