@@ -4,10 +4,10 @@ public class Rectangle extends Figure {
     private double width;
     private double height;
 
-    public Rectangle() {
-        super("rectangle");
-        this.width = FigureSupplier.getRandomProperties();
-        this.height = FigureSupplier.getRandomProperties();
+    public Rectangle(String name) {
+        super(name);
+        this.width = new RandomNumberGenerator().getRandomProperties();
+        this.height = new RandomNumberGenerator().getRandomProperties();
     }
 
     public double getPerimeter() {

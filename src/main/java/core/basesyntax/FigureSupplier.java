@@ -1,28 +1,18 @@
 package core.basesyntax;
 
 public class FigureSupplier {
-    private final int numberOfFigures = 5;
-
-    public static double getRandomProperties() {
-        double max = 1.0;
-        double min = 15.0;
-        return (int) ((Math.random() * (max - min)) + min);
-    }
-
     public Figure getRandomFigure() {
-        int min = 1;
-        int max = numberOfFigures;
-        int randomNumber = (int) (Math.random() * (max - min)) + min;
+        int randomNumber = new RandomNumberGenerator().getRandomNumber();
         if (randomNumber == 1) {
-            return new Circle();
+            return new Circle("circle");
         } else if (randomNumber == 2) {
-            return new IsoscelesTrapezoid();
+            return new IsoscelesTrapezoid("isosceles trapezoid");
         } else if (randomNumber == 3) {
-            return new Rectangle();
+            return new Rectangle("rectangle");
         } else if (randomNumber == 4) {
-            return new RightTriangle();
+            return new RightTriangle("right triangle");
         } else if (randomNumber == 5) {
-            return new Square();
+            return new Square("square");
         } else {
             return null;
         }

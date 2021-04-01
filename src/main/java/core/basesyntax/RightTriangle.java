@@ -4,10 +4,10 @@ public class RightTriangle extends Figure {
     private double oneSide;
     private double secondSide;
 
-    public RightTriangle() {
-        super("right triangle");
-        this.oneSide = FigureSupplier.getRandomProperties();
-        this.secondSide = FigureSupplier.getRandomProperties();
+    public RightTriangle(String name) {
+        super(name);
+        this.oneSide = new RandomNumberGenerator().getRandomProperties();
+        this.secondSide = new RandomNumberGenerator().getRandomProperties();
     }
 
     public double getHypotenuse() {

@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public abstract class Figure implements AreaCalculator, Drawer {
-    private ColorSupplier cs = new ColorSupplier();
     private String name;
 
     public Figure(String name) {
@@ -13,6 +12,6 @@ public abstract class Figure implements AreaCalculator, Drawer {
     }
 
     public String getColor() {
-        return cs.getRandomColor();
+        return new ColorSupplier().getRandomColor();
     }
 }

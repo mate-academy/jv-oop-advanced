@@ -3,9 +3,9 @@ package core.basesyntax;
 public class Circle extends Figure {
     private double radius;
 
-    public Circle() {
-        super("circle");
-        radius = FigureSupplier.getRandomProperties();
+    public Circle(String name) {
+        super(name);
+        radius = new RandomNumberGenerator().getRandomProperties();
     }
 
     public double getRadius() {
