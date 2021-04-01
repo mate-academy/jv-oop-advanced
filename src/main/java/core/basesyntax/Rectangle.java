@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends FigureMain implements AreaMethod, Draw {
+public class Rectangle extends Figure {
     private int width;
     private int length;
 
@@ -8,14 +8,6 @@ public class Rectangle extends FigureMain implements AreaMethod, Draw {
         super(name, color);
         this. width = width;
         this.length = length;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     @Override

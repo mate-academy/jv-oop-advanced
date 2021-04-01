@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTrieangle extends FigureMain implements AreaMethod, Draw {
+public class RightTrieangle extends Figure {
     private int base;
     private int perpendicular;
 
@@ -8,15 +8,6 @@ public class RightTrieangle extends FigureMain implements AreaMethod, Draw {
         super(name, color);
         this.base = base;
         this.perpendicular = perpendicular;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-
-    }
-
-    public String getName() {
-        return name;
     }
 
     @Override

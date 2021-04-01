@@ -3,30 +3,29 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier extends ColorSupplier {
-    public static final int max = 200;
-    public static final int count = 5;
+    public static final int MAX = 200;
+    public static final int COUNT = 5;
 
-    private ColorSupplier color = new ColorSupplier();
+    private ColorSupplier color;
 
-    public static FigureMain getRandom() {
+    public Figure getRandomFigure() {
 
-        final Random random = new Random();
-        int nubmer = random.nextInt(count);
-        int max = 200;
-        switch (nubmer) {
+        Random random = new Random();
+        int switchNumber = random.nextInt(COUNT);
+        switch (switchNumber) {
             case 1:
-                return new Rectangle("Rectangle",getNewColor(), random.nextInt(max),
-                        random.nextInt(max));
+                return new Rectangle("Rectangle", color.getNewColor(), random.nextInt(MAX),
+                        random.nextInt(MAX));
             case 2:
-                return new Square("Square", getNewColor(),random.nextInt(max));
+                return new Square("Square", color.getNewColor(),random.nextInt(MAX));
             case 3:
-                return new RightTrieangle("RightTrieangle",getNewColor(),
-                           random.nextInt(max), random.nextInt(max));
+                return new RightTrieangle("RightTrieangle",color.getNewColor(),
+                           random.nextInt(MAX), random.nextInt(MAX));
             case 4:
-                return new Circle("Circle", getNewColor(), random.nextInt(max));
+                return new Circle("Circle", color.getNewColor(), random.nextInt(MAX));
             default:
-                return new IsoscelesTrapezoid("IsoscelesTrapezoid", getNewColor(),
-                           random.nextInt(max), random.nextInt(max), random.nextInt(max));
+                return new IsoscelesTrapezoid("IsoscelesTrapezoid", color.getNewColor(),
+                           random.nextInt(MAX), random.nextInt(MAX), random.nextInt(MAX));
         }
     }
 }

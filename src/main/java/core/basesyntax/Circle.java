@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends FigureMain implements AreaMethod, Draw {
+public class Circle extends Figure {
 
     private int radius;
 
@@ -12,14 +12,6 @@ public class Circle extends FigureMain implements AreaMethod, Draw {
     @Override
     public double getArea() {
         return radius * Math.PI;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public int getRadius() {

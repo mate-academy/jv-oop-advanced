@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends FigureMain implements AreaMethod, Draw {
+public class IsoscelesTrapezoid extends Figure {
     private int base1;
     private int base2;
     private int height;
@@ -10,14 +10,6 @@ public class IsoscelesTrapezoid extends FigureMain implements AreaMethod, Draw {
         this.base1 = base1;
         this.base2 = base2;
         this.height = height;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        super.name = name;
     }
 
     @Override

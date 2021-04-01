@@ -1,20 +1,12 @@
 package core.basesyntax;
 
-public class Square extends FigureMain implements AreaMethod, Draw {
+public class Square extends Figure {
 
     private int side;
 
     public Square(String name, String color, int side) {
         super(name, color);
         this.side = side;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     @Override

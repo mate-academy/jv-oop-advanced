@@ -1,11 +1,11 @@
 package core.basesyntax;
 
-public abstract class FigureMain implements Draw {
+public abstract class Figure implements AreaMethod, Drawable {
 
-    protected String name;
+    private String name;
     private String color;
 
-    public FigureMain(String name, String color) {
+    public Figure(String name, String color) {
         this.name = name;
         this.color = color;
     }
