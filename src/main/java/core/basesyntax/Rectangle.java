@@ -1,23 +1,24 @@
 package core.basesyntax;
 
 public class Rectangle extends Shape {
-    private int side1;
-    private int side2;
+    private int sideFirst;
+    private int sideSecond;
 
-    public Rectangle(int side1, int side2, String color) {
+    public Rectangle(int sideFirst, int sideSecond, String color) {
         super(color);
-        this.side1 = side1;
-        this.side2 = side2;
+        this.sideFirst = sideFirst;
+        this.sideSecond = sideSecond;
     }
 
     @Override
     public String draw() {
-        return ("Picture: " + ",area: " + getArea() + ",side1: " + side1 + " ,side2: " + side2);
+        return ("Picture: " + ",area: " + getArea() + ",sideFirst: " + sideSecond
+                + " ,sideSecond: " + sideSecond);
     }
 
     @Override
     public int getArea() {
-        return side1 * side2;
+        return sideFirst * sideSecond;
     }
 
     @Override

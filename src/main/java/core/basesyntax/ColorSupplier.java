@@ -6,7 +6,6 @@ public class ColorSupplier {
     private static final int RANDOM_LIMIT = 6;
 
     public String randomColor() {
-
         String color = "";
         Random random = new Random();
 
@@ -27,7 +26,6 @@ public class ColorSupplier {
             default:
                 color = "red";
                 break;
-
         }
         return color;
     }

@@ -7,15 +7,13 @@ public class FigureSupplier {
     private static final int LIMIT_SIDE_SHAPES = 10;
     private ColorSupplier color = new ColorSupplier();
 
-    public Shape[] randomFigure() {
-
+    public Shape[] getRandomFigure() {
         Random random = new Random();
         int randomNumber = random.nextInt(LIMIT);
         Shape[] shape = new Shape[randomNumber];
         for (int i = 0; i < shape.length; i++) {
             switch (randomNumber) {
                 case 1:
-
                     shape[i] = new Circle(random.nextInt(LIMIT_SIDE_SHAPES),
                             color.randomColor());
                     break;
@@ -37,7 +35,6 @@ public class FigureSupplier {
                             random.nextInt(LIMIT_SIDE_SHAPES),
                             color.randomColor());
                     break;
-
             }
 
         }
