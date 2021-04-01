@@ -1,12 +1,12 @@
 package core.basesyntax;
 
 public class FigureProducer {
-
     private static final int RANDOM_NUMBER = 5;
-    private static String [] figureArr = { "SQUARE", "RECTANGLE", "RIGHT TRIANGLE",
+    private static final String [] figureArr = { "SQUARE", "RECTANGLE", "RIGHT TRIANGLE",
             "CIRCLE", "ISOSCELES TRAPEZOID" };
 
     public static Figure getRandomFigure() {
+        ColorSupplier colorSupplier = new ColorSupplier();
         int randomFigureNumber = (int)(Math.random() * figureArr.length);
 
         switch (randomFigureNumber) {
