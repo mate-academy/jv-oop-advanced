@@ -1,21 +1,36 @@
 package core.basesyntax;
 
 public class FigureSupplier {
-    public static final int RANGE = 5;
+    public static final int CASE_RANGE = 5;
+    public static final int RANDOM_VALUE_RANGE = 10;
 
-    public static Figure getFigure() {
-        int caseChoice = (int) (Math.random() * RANGE);
+    public Figure getFigure() {
+        int caseChoice = (int) (Math.random() * CASE_RANGE);
         switch (caseChoice) {
             case 0:
-                return new Square();
+                String color1 = new ColorSupplier().assignColor();
+                double side = RANDOM_VALUE_RANGE;
+                return new Square(side, color1);
             case 1:
-                return new Rectangle();
+                String color2 = new ColorSupplier().assignColor();
+                double length = Math.random() * RANDOM_VALUE_RANGE;
+                double width = Math.random() * RANDOM_VALUE_RANGE;
+                return new Rectangle(length, width, color2);
             case 2:
-                return new Triangle();
+                String color3 = new ColorSupplier().assignColor();
+                double longSide = Math.random() * RANDOM_VALUE_RANGE;
+                double shortSide = Math.random() * RANDOM_VALUE_RANGE;
+                return new Triangle(longSide, shortSide, color3);
             case 3:
-                return new Circle();
+                String color4 = new ColorSupplier().assignColor();
+                double radius = Math.random() * RANDOM_VALUE_RANGE;
+                return new Circle(radius, color4);
             default:
-                return new IsTrapezoid();
+                String color5 = new ColorSupplier().assignColor();
+                double base = Math.random() * RANDOM_VALUE_RANGE;
+                double top = Math.random() * RANDOM_VALUE_RANGE;
+                double height = Math.random() * RANDOM_VALUE_RANGE;
+                return new IsTrapezoid(base, top, height, color5);
         }
     }
 }

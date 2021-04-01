@@ -1,11 +1,11 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    public static final int RANGE = 10;
     private double radius;
 
-    public Circle() {
-        this.radius = Math.random() * RANGE;
+    public Circle(Double radius, String color) {
+        super(color);
+        this.radius = radius;
     }
 
     public double getRadius() {
@@ -22,7 +22,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println("Figure: circle, area: " + String.format("%.1f", getArea())
                 + " sq. units, radius: " + String.format("%.1f", radius)
                 + " units, color:" + getColor());

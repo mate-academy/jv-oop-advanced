@@ -1,41 +1,41 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    public static final int RANGE = 10;
-    private double length;
-    private double width;
+    private double longSide;
+    private double shortSide;
 
-    public Rectangle() {
-        this.length = Math.random() * RANGE;
-        this.width = Math.random() * RANGE;
+    public Rectangle(double longSide, double shortSide, String color) {
+        super(color);
+        this.longSide = longSide;
+        this.shortSide = shortSide;
     }
 
     public double getLength() {
-        return length;
+        return longSide;
     }
 
-    public void setLength(double length) {
-        this.length = length;
+    public void setLength(double longSide) {
+        this.longSide = longSide;
     }
 
-    public double getWidth() {
-        return width;
+    public double getShortSide() {
+        return shortSide;
     }
 
-    public void setWidth(double width) {
-        this.width = width;
+    public void setShortSide(double shortSide) {
+        this.shortSide = shortSide;
     }
 
     @Override
     public double getArea() {
-        return length * width;
+        return longSide * shortSide;
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println("Figure: rectangle, area: " + String.format("%.1f", getArea())
-                + " sq. units, length: " + String.format("%.1f", length)
-                + " units, height: " + String.format("%.1f", width)
+                + " sq. units, length: " + String.format("%.1f", longSide)
+                + " units, height: " + String.format("%.1f", shortSide)
                 + " units, color: " + getColor());
     }
 }

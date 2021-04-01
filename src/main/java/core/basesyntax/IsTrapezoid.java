@@ -1,15 +1,15 @@
 package core.basesyntax;
 
 public class IsTrapezoid extends Figure implements Drawable {
-    public static final int RANGE = 10;
     private double base;
     private double top;
     private double height;
 
-    public IsTrapezoid() {
-        this.base = Math.random() * RANGE;
-        this.top = Math.random() * RANGE;
-        this.height = Math.random() * RANGE;
+    public IsTrapezoid(Double base, Double top, Double height, String color) {
+        super(color);
+        this.base = base;
+        this.top = top;
+        this.height = height;
     }
 
     public double getBase() {
@@ -42,7 +42,7 @@ public class IsTrapezoid extends Figure implements Drawable {
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println("Figure: isosceles trapezoid, area: "
                 + String.format("%.1f", getArea())
                 + " sq. units, height: " + String.format("%.1f", height)

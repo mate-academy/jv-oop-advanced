@@ -1,13 +1,13 @@
 package core.basesyntax;
 
 public class Triangle extends Figure implements Drawable {
-    public static final int RANGE = 10;
     private double length;
     private double width;
 
-    public Triangle() {
-        this.length = Math.random() * RANGE;
-        this.width = Math.random() * RANGE;
+    public Triangle(double length, double width, String color) {
+        super(color);
+        this.length = length;
+        this.width = width;
     }
 
     public double getLength() {
@@ -36,7 +36,7 @@ public class Triangle extends Figure implements Drawable {
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println("Figure: triangle, area: " + String.format("%.1f", getArea())
                 + " sq. units, hypotenuse: " + String.format("%.1f", getHypotenuse())
                 + " units, color: " + getColor());
