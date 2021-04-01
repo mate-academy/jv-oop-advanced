@@ -16,7 +16,5 @@ public class Main {
         for (Figure figure: figures) {
             figure.draw();
         }
-        String newString = "Hello";
-        System.out.println(newString.substring(2,4));
     }
 }
