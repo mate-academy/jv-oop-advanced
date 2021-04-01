@@ -8,7 +8,6 @@ public class FigureSupplier {
 
     private ColorSupplier colorSupplier = new ColorSupplier();
 
-
     public Figure createRandomFigure() {
         Random random = new Random();
         String color = colorSupplier.generateRandomColor();
