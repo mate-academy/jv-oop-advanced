@@ -10,22 +10,6 @@ public class Rectangle extends Figure {
         this.height = height;
     }
 
-    public void setHeight(int height) {
-        this.height = height;
-    }
-
-    public void setWidth(int width) {
-        this.width = width;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public int getWidth() {
-        return width;
-    }
-
     @Override
     public double getArea() {
         return width * height;

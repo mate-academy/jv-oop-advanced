@@ -14,22 +14,6 @@ public class IsoscelesTrapezoid extends Figure implements Drawable, AreaCalculat
         this.height = height;
     }
 
-    public double getFirstBase() {
-        return firstBase;
-    }
-
-    public double getSecondBase() {
-        return secondBase;
-    }
-
-    public void setFirstBase(double firstBase) {
-        this.firstBase = firstBase;
-    }
-
-    public void setSecondBase(double secondBase) {
-        this.secondBase = secondBase;
-    }
-
     @Override
     public double getArea() {
         return (firstBase + secondBase) / 2 * height;
