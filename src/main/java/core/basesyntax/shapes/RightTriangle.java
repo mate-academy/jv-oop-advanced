@@ -1,6 +1,6 @@
 package core.basesyntax.shapes;
 
-public class RightTriangle extends Shape implements AreaCalculable, Drawable {
+public class RightTriangle extends Shape {
     private double width;
     private double height;
     private double hypotenuse;

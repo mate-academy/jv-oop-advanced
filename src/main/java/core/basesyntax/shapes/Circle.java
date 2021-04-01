@@ -1,6 +1,6 @@
 package core.basesyntax.shapes;
 
-public class Circle extends Shape implements AreaCalculable, Drawable {
+public class Circle extends Shape {
     private double radius;
 
     public Circle(String name, String color, double radius) {

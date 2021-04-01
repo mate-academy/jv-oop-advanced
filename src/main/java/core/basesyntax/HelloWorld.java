@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 import core.basesyntax.shapes.Drawable;
+import core.basesyntax.shapes.Shape;
 
 /**
  * Feel free to remove this class and create your own.
@@ -11,14 +12,14 @@ public class HelloWorld {
 
     public static void main(String[] args) {
         // minimum size of array = 1
-        Drawable[] shapeArray = new Drawable[(int) (Math.random() * SHAPES_LIMIT) + 1];
+        Shape[] shapeArray = new Shape[(int) (Math.random() * SHAPES_LIMIT) + 1];
         FigureSupplier figureSupplier = new FigureSupplier();
 
         for (int i = 0; i < shapeArray.length; i++) {
-            shapeArray[i] = (Drawable) figureSupplier.generateShape();
+            shapeArray[i] = figureSupplier.generateShape();
         }
 
-        for (Drawable shape : shapeArray) {
+        for (Shape shape : shapeArray) {
             shape.draw();
         }
     }

@@ -1,6 +1,6 @@
 package core.basesyntax.shapes;
 
-public class Square extends Shape implements AreaCalculable, Drawable {
+public class Square extends Shape {
     private double side;
 
     public Square(String name, String color, double side) {
