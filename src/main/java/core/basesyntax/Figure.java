@@ -7,8 +7,6 @@ public abstract class Figure implements AreaCalculator, BorderCalculator, Figure
     private double area;
     private double borderline;
 
-    public Figure() {}
-
     public void setName(String name) {
         this.name = name;
     }
