@@ -3,11 +3,13 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+
+    public static final int VALUE_BOUND = 1000;
+    public static final int AMOUNT_OF_SHAPES = 4;
+
     public Figure getRandomFigure() {
         Random randomNumber = new Random();
         Random randomValueOfField = new Random();
-        final int VALUE_BOUND = 1000;
-        final int AMOUNT_OF_SHAPES = 4;
         int shapeCase = randomNumber.nextInt(AMOUNT_OF_SHAPES) + 1;
         int firstRandomValue = randomValueOfField.nextInt(VALUE_BOUND) + 1;
         int secondRandomValue = randomValueOfField.nextInt(VALUE_BOUND) + 1;
