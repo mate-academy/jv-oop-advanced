@@ -3,27 +3,28 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int RAND_NUMBER = 50;
-    private static final int RAND_FIGURE = 5;
-    private static ColorSupplier colorSupplier = new ColorSupplier();
+    private static final int MAX_VALUE = 50;
+    private static final int FIGURE_COUNT = 5;
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figure randomFigure() {
-        int randomNumber = new Random().nextInt(RAND_FIGURE);
+    public Figure getRandomFigure() {
+        int randomNumber = new Random().nextInt(FIGURE_COUNT);
+        int randomValue = new Random().nextInt(MAX_VALUE);
         switch (randomNumber) {
             case 1:
-                return new Square(colorSupplier.randomColor(), new Random().nextInt(RAND_NUMBER));
+                return new Square(colorSupplier.getRandomColor(), randomValue);
             case 2:
-                return new Rectangle(colorSupplier.randomColor(), new Random().nextInt(RAND_NUMBER),
-                        new Random().nextInt(RAND_NUMBER));
+                return new Rectangle(colorSupplier.getRandomColor(), randomValue,
+                        randomValue);
             case 3:
-                return new RightTriangle(colorSupplier.randomColor(),
-                        new Random().nextInt(RAND_NUMBER));
+                return new RightTriangle(colorSupplier.getRandomColor(),
+                        randomValue);
             case 4:
-                return new IsoscelesTrapezoid(colorSupplier.randomColor(),
-                        new Random().nextInt(RAND_NUMBER),
-                        new Random().nextInt(RAND_NUMBER));
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        randomValue,
+                        randomValue);
             default:
-                return new Circle(colorSupplier.randomColor(), new Random().nextInt(RAND_NUMBER));
+                return new Circle(colorSupplier.getRandomColor(), randomValue);
         }
     }
 }
