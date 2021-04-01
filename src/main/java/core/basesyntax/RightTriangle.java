@@ -4,7 +4,6 @@ import java.text.DecimalFormat;
 
 public class RightTriangle extends Shape {
     private DecimalFormat df = new DecimalFormat("####.##");
-
     private int sideA;
     private int sideB;
     private double hypotenuse;

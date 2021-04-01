@@ -4,7 +4,6 @@ import java.text.DecimalFormat;
 
 public class IsoscelesTrapezoid extends Shape {
     private DecimalFormat df = new DecimalFormat("####.##");
-
     private int sideA;
     private int sideB;
     private int sideC;

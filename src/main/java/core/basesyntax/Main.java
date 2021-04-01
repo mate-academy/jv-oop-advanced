@@ -9,6 +9,5 @@ public class Main {
         for (Shape shape : array) {
             System.out.println(shape.draw() + "\n");
         }
-
     }
 }
