@@ -4,30 +4,21 @@ import java.util.Random;
 
 public class ColorSupplier {
     private static final int NUM_COLORS = 5;
-    private static Random random = new Random();
+    private Random random = new Random();
 
     public String getRandomColor() {
-        int colors = random.nextInt(NUM_COLORS) + 1;
-        String color = "";
+        int colors = random.nextInt(NUM_COLORS);
         switch (colors) {
+            case 0:
+                return "blue";
             case 1:
-                color = "blue";
-                break;
+                return "yellow";
             case 2:
-                color = "yellow";
-                break;
+                return "red";
             case 3:
-                color = "red";
-                break;
-            case 4:
-                color = "black";
-                break;
-            case 5:
-                color = "green";
-                break;
+                return "black";
             default:
-                break;
+                return "green";
         }
-        return color;
     }
 }

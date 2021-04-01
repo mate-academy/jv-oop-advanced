@@ -1,56 +1,56 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private int sideA;
-    private int sideB;
-    private int sideEqual;
+    private int firstBase;
+    private int secondBase;
+    private int height;
 
-    public IsoscelesTrapezoid(int sideA, int sideB, int sideEqual,
-                              String color, String nameFigure) {
-        super(color, nameFigure);
-        this.sideA = sideA;
-        this.sideB = sideB;
-        this.sideEqual = sideEqual;
+    public IsoscelesTrapezoid(int firstBase, int secondBase, int height,
+                              String color, String name) {
+        super(color, name);
+        this.firstBase = firstBase;
+        this.secondBase = secondBase;
+        this.height = height;
     }
 
-    public int getSideA() {
-        return sideA;
+    public int getFirstBase() {
+        return firstBase;
     }
 
-    public void setSideA(int sideA) {
-        this.sideA = sideA;
+    public void setFirstBase(int firstBase) {
+        this.firstBase = firstBase;
     }
 
-    public int getSideB() {
-        return sideB;
+    public int getSecondBase() {
+        return secondBase;
     }
 
-    public void setSideB(int sideB) {
-        this.sideB = sideB;
+    public void setSecondBase(int secondBase) {
+        this.secondBase = secondBase;
     }
 
-    public int getSideEqual() {
-        return sideEqual;
+    public int getHeight() {
+        return height;
     }
 
-    public void setSideEqual(int sideEqual) {
-        this.sideEqual = sideEqual;
+    public void setHeight(int height) {
+        this.height = height;
     }
 
     @Override
     public double getArea() {
-        return (this.sideA + this.sideB) / (double) 2
-                * Math.sqrt((this.sideEqual * this.sideEqual)
-                - ((this.sideB - this.sideA) * (this.sideB - this.sideA))
+        return (this.firstBase + this.secondBase) / (double) 2
+                * Math.sqrt((this.height * this.height)
+                - ((this.secondBase - this.firstBase) * (this.secondBase - this.firstBase))
                 / (double) 4);
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getNameFigures() + ", area: "
-                + getArea() + " sq. units, sideA length: " + getSideA()
-                + " units, sideB length: " + getSideB()
-                + " units, sideEqual length: " + getSideEqual()
+        System.out.println("Figure: " + getName() + ", area: "
+                + getArea() + " sq. units, firstBase length: " + getFirstBase()
+                + " units, secondBase length: " + getSecondBase()
+                + " units, height length: " + getHeight()
                 + " units, color: " + getColor());
     }
 }

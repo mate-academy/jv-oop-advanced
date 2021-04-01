@@ -1,44 +1,44 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private int legTriangleA;
-    private int legTriangleB;
+    private int firstLeg;
+    private int secondLeg;
 
-    public RightTriangle(int legTriangleA, int legTriangleB, String color, String nameFigure) {
-        super(color, nameFigure);
-        this.legTriangleA = legTriangleA;
-        this.legTriangleB = legTriangleB;
+    public RightTriangle(int firstLeg, int secondLeg, String color, String name) {
+        super(color, name);
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
     }
 
-    public int getLegTriangleA() {
-        return legTriangleA;
+    public int getFirstLeg() {
+        return firstLeg;
     }
 
-    public void setLegTriangleA(int legTriangleA) {
-        this.legTriangleA = legTriangleA;
+    public void setFirstLeg(int firstLeg) {
+        this.firstLeg = firstLeg;
     }
 
-    public int getLegTriangleB() {
-        return legTriangleB;
+    public int getSecondLeg() {
+        return secondLeg;
     }
 
-    public void setLegTriangleB(int legTriangleB) {
-        this.legTriangleB = legTriangleB;
+    public void setSecondLeg(int secondLeg) {
+        this.secondLeg = secondLeg;
     }
 
     public double getHypotenuse() {
-        return Math.sqrt(this.legTriangleA * this.legTriangleA
-                + this.legTriangleB * this.legTriangleB);
+        return Math.sqrt(this.firstLeg * this.firstLeg
+                + this.secondLeg * this.secondLeg);
     }
 
     @Override
     public double getArea() {
-        return (this.legTriangleA * this.legTriangleB) / (double) 2;
+        return (this.firstLeg * this.secondLeg) / (double) 2;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getNameFigures() + ", area: " + getArea()
+        System.out.println("Figure: " + getName() + ", area: " + getArea()
                 + " sq. units, hypotenuse: " + getHypotenuse()
                 + " units, color: " + getColor());
     }
