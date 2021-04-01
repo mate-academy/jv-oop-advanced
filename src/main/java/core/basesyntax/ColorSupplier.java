@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class ColorSupplier {
-    static final int LIMIT_COLOR_NUMBERS = 9;
+    public static final int LIMIT_COLOR_NUMBERS = 9;
 
     public String getRandomColor() {
         Random randomNumber = new Random();

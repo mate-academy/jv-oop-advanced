@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements AreaCalculator, FigureDrawer {
+public class RightTriangle extends Figure {
     private double sideA;
     private double sideB;
 
@@ -31,5 +31,3 @@ public class RightTriangle extends Figure implements AreaCalculator, FigureDrawe
                 + getColor();
     }
 }
-
-
