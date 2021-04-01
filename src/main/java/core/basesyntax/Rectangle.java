@@ -1,11 +1,35 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    double side1;
-    double side2;
-    double side3;
+    private double side1;
+    private double side2;
+    private double side3;
 
-    public Rectangle(double side1, double side2, double side3) {
+    public void setSide1(double side1) {
+        this.side1 = side1;
+    }
+
+    public void setSide2(double side2) {
+        this.side2 = side2;
+    }
+
+    public void setSide3(double side3) {
+        this.side3 = side3;
+    }
+
+    public double getSide1() {
+        return side1;
+    }
+
+    public double getSide2() {
+        return side2;
+    }
+
+    public double getSide3() {
+        return side3;
+    }
+
+    public void setRectangle(double side1, double side2, double side3) {
         if ((side1 + side2 > side3) && (side2 + side3 > side1) && (side1 + side3 > side2)) {
             this.side1 = side1;
             this.side2 = side2;
@@ -15,12 +39,12 @@ public class Rectangle extends Figure {
 
     @Override
     public void calculateArea() {
-        this.area = (side1 + side2 + side3) / 2;
+        setArea((side1 + side2 + side3) / 2);
     }
 
     @Override
     public void draw() {
-        System.out.println("Hello, my name is Square, my area: " + area
-                + " my side: " + side + " my color: " + getColor());
+        System.out.println("Hello, my name is Rectangle, my area: " + getArea()
+                + " my side: " + side1 + " " + side2 + " " + side3 + " my color: " + getColor());
     }
 }

@@ -1,20 +1,23 @@
 package core.basesyntax;
 
-public abstract class Figure {
-    double area;
-    Color color;
-
-    public void setColor(Color color) {
-        this.color = color;
-    }
-
-    public Color getColor() {
-        return color;
-    }
+public abstract class Figure extends ColorSupplier implements AreaCalculator, Drawer {
+    private double area;
+    private Color color;
 
     public double getArea() {
         return area;
     }
-    public abstract void calculateArea();
-    public abstract void draw();
+
+    public void setArea(double area) {
+        this.area = area;
+    }
+
+    @Override
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
 }
