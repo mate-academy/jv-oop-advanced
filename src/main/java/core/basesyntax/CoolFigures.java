@@ -7,8 +7,9 @@ public class CoolFigures {
 
     public static Figure[] drawArrayOfRandomFigures(int n) {
         Figure[] randomFigures = new Figure[n];
+        FigureSupplier newFigure = new FigureSupplier();
         for (int i = 0; i < n; i++) {
-            randomFigures[i] = FigureSupplier.getRandomFigure();
+            randomFigures[i] = newFigure.getRandomFigure();
         }
         return randomFigures;
     }

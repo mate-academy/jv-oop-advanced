@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static Figure getRandomFigure() {
+    public Figure getRandomFigure() {
         Random randomNumber = new Random();
         Random randomValueOfField = new Random();
         final int upperValueBound = 1000;
