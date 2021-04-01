@@ -29,12 +29,12 @@ public class RightTriangle extends Figure {
     @Override
     public void drawShape() {
         System.out.println(String.format("%s%.1f%s%.1f%s%s",
-                "Figure: right triangle, area: ", this.getArea(), " sq. units, hypotenuse: ",
+                "Figure: right triangle, area: ", this.calculateArea(), " sq. units, hypotenuse: ",
                 getHypotenuse(this.legA, this.legB), " units, color: ", this.getColor()));
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return (legA * legB) / 2;
     }
 

@@ -29,13 +29,13 @@ public class Rectangle extends Figure {
     @Override
     public void drawShape() {
         System.out.println(String.format("%s%.1f%s%.1f%s%.1f%s%s",
-                "Figure: rectangle, area: ", this.getArea(), " sq. units, length: ",
+                "Figure: rectangle, area: ", this.calculateArea(), " sq. units, length: ",
                 this.getLength(), " units, width: ",
                 this.getWidth(), " units, color: ", this.getColor()));
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return length * width;
     }
 }
