@@ -5,6 +5,7 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int LENGTH_MAX = 20;
     private static final int FIGURE_AMOUNT = 5;
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public int createLength() {
         Random random = new Random();
@@ -16,18 +17,18 @@ public class FigureSupplier {
         int number = random.nextInt(FIGURE_AMOUNT);
         switch (number) {
             case 0:
-                return new Circle(ColorSupplier.chooseColor(), createLength());
+                return new Circle(colorSupplier.generateColor(), createLength());
             case 1:
-                return new RightTriangle(ColorSupplier.chooseColor(), createLength(),
+                return new RightTriangle(colorSupplier.generateColor(), createLength(),
                         createLength());
             case 2:
-                return new Square(ColorSupplier.chooseColor(),
+                return new Square(colorSupplier.generateColor(),
                         createLength());
             case 3:
-                return new IsoscelesTrapezoid(ColorSupplier.chooseColor(),
+                return new IsoscelesTrapezoid(colorSupplier.generateColor(),
                         createLength(), createLength(), createLength());
             default:
-                return new Rectangle(ColorSupplier.chooseColor(),
+                return new Rectangle(colorSupplier.generateColor(),
                         createLength(), createLength());
         }
     }
