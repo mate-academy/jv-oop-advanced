@@ -1,8 +1,8 @@
 import core.basesyntax.Figure;
 
 public class RightTriangle extends Figure {
-    private final double base;
-    private final double height;
+    private double firstLeg;
+    private double secondLeg;
 
     public RightTriangle(int base, int height, String color) {
         super(color, "right triangle");
@@ -23,4 +23,3 @@ public class RightTriangle extends Figure {
     }
 
 }
-
