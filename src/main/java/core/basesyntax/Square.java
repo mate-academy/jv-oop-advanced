@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends Figure implements GetArea,DrawFigure {
+public class Square extends Figure {
     private int size;
 
     public Square(String color, String name, int size) {

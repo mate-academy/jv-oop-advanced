@@ -3,11 +3,12 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier extends FigureGeneration {
+    public static final int NUMBERFIGURE = 5;
 
-    public static Figure getFigure() {
-        int numberFigure = 5;
+    public Figure getFigure() {
+
         Random random = new Random();
-        int randomFigure = random.nextInt(numberFigure);
+        int randomFigure = random.nextInt(NUMBERFIGURE);
         Figure figure = null;
         switch (randomFigure) {
             case 0:

@@ -8,7 +8,7 @@ public class FigureGeneration {
         Random random = new Random();
         int radius = random.nextInt(10) + 1;
         String name = "Circle";
-        String color = ColorSupplier.getColor();
+        String color = new ColorSupplier().getColor();
         return new Circle(color,name,radius);
     }
 
@@ -16,7 +16,7 @@ public class FigureGeneration {
         Random random = new Random();
         int size = random.nextInt(10) + 1;
         String name = "Square";
-        String color = ColorSupplier.getColor();
+        String color = new ColorSupplier().getColor();
         return new Square(color,name,size);
     }
 
@@ -25,7 +25,7 @@ public class FigureGeneration {
         int firstLeg = random.nextInt(10) + 1;
         int secondLeg = random.nextInt(10) + 1;
         String name = "Triangle";
-        String color = ColorSupplier.getColor();
+        String color = new ColorSupplier().getColor();
         return new RightTriangle(color,name,firstLeg,secondLeg);
     }
 
@@ -34,7 +34,7 @@ public class FigureGeneration {
         int length = random.nextInt(10) + 1;
         int width = random.nextInt(10) + 1;
         String name = "Rectangle";
-        String color = ColorSupplier.getColor();
+        String color = new ColorSupplier().getColor();
         return new Rectangle(color,name,length,width);
     }
 
@@ -44,7 +44,7 @@ public class FigureGeneration {
         int lowBase = random.nextInt(10) + 1;
         int height = random.nextInt(10) + 1;
         String name = "Trapezoid";
-        String color = ColorSupplier.getColor();
+        String color = new ColorSupplier().getColor();
         return new IsoscelesTrapezoid(color,name,topBase,lowBase,height);
     }
 }
