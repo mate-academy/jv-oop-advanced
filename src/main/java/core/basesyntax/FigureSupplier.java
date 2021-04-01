@@ -6,7 +6,7 @@ public class FigureSupplier extends ColorSupplier {
     public static final int MAX = 200;
     public static final int COUNT = 5;
 
-    private ColorSupplier color = new ColorSupplier();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
 
@@ -14,21 +14,18 @@ public class FigureSupplier extends ColorSupplier {
         int switchNumber = random.nextInt(COUNT);
         switch (switchNumber) {
             case 1:
-                return new Rectangle("Rectangle", color.getNewColor(), random.nextInt(MAX),
+                return new Rectangle("Rectangle", colorSupplier.getNewColor(), random.nextInt(MAX),
                         random.nextInt(MAX));
             case 2:
-                return new Square("Square", color.getNewColor(),random.nextInt(MAX));
+                return new Square("Square", colorSupplier.getNewColor(),random.nextInt(MAX));
             case 3:
-                return new RightTrieangle("RightTrieangle",color.getNewColor(),
+                return new RightTrieangle("RightTrieangle", colorSupplier.getNewColor(),
                            random.nextInt(MAX), random.nextInt(MAX));
             case 4:
-                return new Circle("Circle", color.getNewColor(), random.nextInt(MAX));
+                return new Circle("Circle", colorSupplier.getNewColor(), random.nextInt(MAX));
             default:
-                return new IsoscelesTrapezoid("IsoscelesTrapezoid", color.getNewColor(),
+                return new IsoscelesTrapezoid("IsoscelesTrapezoid", colorSupplier.getNewColor(),
                            random.nextInt(MAX), random.nextInt(MAX), random.nextInt(MAX));
         }
     }
 }
-
-
-

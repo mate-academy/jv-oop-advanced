@@ -6,7 +6,6 @@ public class Main {
     public static final int RANDOM_COUNT = 50;
 
     public static void main(String[] args) {
-
         Random random = new Random();
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figures = new Figure[random.nextInt(RANDOM_COUNT)];
