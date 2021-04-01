@@ -1,7 +1,6 @@
 package core.basesyntax.utils.factory;
 
 import core.basesyntax.Figure;
-
 import java.util.Random;
 
 public class FigureSupplier {

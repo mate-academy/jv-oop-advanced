@@ -22,6 +22,6 @@ public class RightTriangle extends Figure {
         System.out.println("Figure: " + getClass().getSimpleName().toLowerCase() + ", area: "
                 + calculateArea() + " sq. units, sideA length: " + this.sideA
                 + " units, sideA length: " + this.height
-                + " units, color: " + this.color);
+                + " units, color: " + this.getColor());
     }
 }

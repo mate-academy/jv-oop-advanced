@@ -1,9 +1,12 @@
 package core.basesyntax.utils.factory;
 
 import core.basesyntax.Figure;
-import core.basesyntax.figures.*;
+import core.basesyntax.figures.Circle;
+import core.basesyntax.figures.IsoscelesTrapezoid;
+import core.basesyntax.figures.Rectangle;
+import core.basesyntax.figures.RightTriangle;
+import core.basesyntax.figures.Square;
 import core.basesyntax.utils.ColorSupplier;
-
 import java.util.Random;
 
 public class FigureFactory {

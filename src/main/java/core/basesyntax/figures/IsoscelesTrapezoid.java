@@ -25,6 +25,6 @@ public class IsoscelesTrapezoid extends Figure {
                 + calculateArea() + " sq. units, sideA length: " + this.sideA
                 + " units, sideA length: " + this.sideB
                 + " units, sideA length: " + this.height
-                + " units, color: " + super.color);
+                + " units, color: " + this.getColor());
     }
 }
