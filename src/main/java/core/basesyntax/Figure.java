@@ -1,8 +1,12 @@
 package core.basesyntax;
 
-public abstract class Figure extends ColorSupplier implements AreaCalculator, Drawer {
+public abstract class Figure implements AreaCalculator, Drawer {
     private double area;
     private Color color;
+
+    public Figure(Color color) {
+        this.color = color;
+    }
 
     public double getArea() {
         return area;
@@ -12,12 +16,8 @@ public abstract class Figure extends ColorSupplier implements AreaCalculator, Dr
         this.area = area;
     }
 
-    @Override
     public Color getColor() {
         return color;
     }
 
-    public void setColor(Color color) {
-        this.color = color;
-    }
 }
