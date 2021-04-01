@@ -33,14 +33,14 @@ public class RightTriangle extends Figure {
     @Override
     public String drawFigure() {
         return "Figure:" + getId()
-                + ", Area " + getAreaCalculate()
+                + ", Area " + calculateArea()
                 + " sq, "
                 + "hypotenuse: " + hypotenuse()
                 + ", color " + getColor();
     }
 
     @Override
-    public double getAreaCalculate() {
+    public double calculateArea() {
         return base * height / 2;
     }
 }

@@ -8,7 +8,7 @@ public class ColorSupplier {
             "black", "green", "blue","yellow", "pink"
     };
 
-    public static String colorsFigure() {
+    public String generateRandomColor() {
         return COLORS[random.nextInt(COLORS.length)];
     }
 }

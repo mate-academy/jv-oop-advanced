@@ -29,7 +29,7 @@ public class Rectangle extends Figure {
     @Override
     public String drawFigure() {
         return "Figure:" + getId()
-                + ", Area " + getAreaCalculate()
+                + ", Area " + calculateArea()
                 + " sq, "
                 + "side length " + height
                 + ", color " + getColor();
@@ -37,7 +37,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double getAreaCalculate() {
+    public double calculateArea() {
         return weight * height;
     }
 }

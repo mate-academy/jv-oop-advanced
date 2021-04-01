@@ -39,7 +39,7 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public String drawFigure() {
         return "Figure:" + getId()
-                + ", Area " + getAreaCalculate()
+                + ", Area " + calculateArea()
                 + " sq, "
                 + "height: " + height
                 + ", color " + getColor();
@@ -47,7 +47,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double getAreaCalculate() {
+    public double calculateArea() {
         return (sideA + sideB) * height / 2;
     }
 }
