@@ -4,41 +4,30 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static Figure getRandomFigure() {
-        Random randomN = new Random();
-        Random value = new Random();
+        Random randomNumber = new Random();
+        Random randomValueOfField = new Random();
         final int upperValueBound = 1000;
         final int amountOfShapes = 4;
-        int a = randomN.nextInt(amountOfShapes) + 1;
-        int v = value.nextInt(upperValueBound) + 1;
-        switch (a) {
+        int shapeCase = randomNumber.nextInt(amountOfShapes) + 1;
+        int randomValue = randomValueOfField.nextInt(upperValueBound) + 1;
+        switch (shapeCase) {
             case 1:
-                Square square = new Square();
-                square.setSide(v);
-                square.setColor(ColorSupplier.getRandomColor());
+                Square square = new Square(ColorSupplier.getRandomColor(), randomValue);
                 return square;
             case 2:
-                Rectangle rectangle = new Rectangle();
-                rectangle.setHeight(v);
-                rectangle.setWidth(v);
-                rectangle.setColor(ColorSupplier.getRandomColor());
+                Rectangle rectangle = new Rectangle(ColorSupplier.getRandomColor(), randomValue,
+                        randomValue);
                 return rectangle;
             case 3:
-                RightTriangle rightTriangle = new RightTriangle();
-                rightTriangle.setBase(v);
-                rightTriangle.setHeight(v);
-                rightTriangle.setColor(ColorSupplier.getRandomColor());
+                RightTriangle rightTriangle = new RightTriangle(ColorSupplier.getRandomColor(),
+                        randomValue, randomValue);
                 return rightTriangle;
             case 4:
-                Circle circle = new Circle();
-                circle.setRadius(v);
-                circle.setColor(ColorSupplier.getRandomColor());
+                Circle circle = new Circle(ColorSupplier.getRandomColor(), randomValue);
                 return circle;
             case 5:
-                IsoscelesTrapezoid trapezoid = new IsoscelesTrapezoid();
-                trapezoid.setUpBase(v);
-                trapezoid.setDownBase(v);
-                trapezoid.setTrapezoidHeight(v);
-                trapezoid.setColor(ColorSupplier.getRandomColor());
+                IsoscelesTrapezoid trapezoid = new IsoscelesTrapezoid(ColorSupplier.getRandomColor()
+                        , randomValue, randomValue, randomValue);
                 return trapezoid;
             default:
                 break;

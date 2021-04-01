@@ -1,14 +1,12 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements Area {
+public class RightTriangle extends Figure {
     private int base;
     private int height;
 
-    public void setBase(int base) {
+    public RightTriangle(Color color, int base, int height) {
+        super(color);
         this.base = base;
-    }
-
-    public void setHeight(int height) {
         this.height = height;
     }
 

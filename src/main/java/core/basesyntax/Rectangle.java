@@ -1,14 +1,12 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Area {
+public class Rectangle extends Figure {
     private int height;
     private int width;
 
-    public void setHeight(int height) {
+    public Rectangle(Color color, int height, int width) {
+        super(color);
         this.height = height;
-    }
-
-    public void setWidth(int width) {
         this.width = width;
     }
 

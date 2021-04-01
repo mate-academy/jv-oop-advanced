@@ -1,9 +1,16 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements Area {
+public class IsoscelesTrapezoid extends Figure {
     private int upBase;
     private int downBase;
     private int trapezoidHeight;
+
+    public IsoscelesTrapezoid(Color color, int upBase, int downBase, int trapezoidHeight) {
+        super(color);
+        this.upBase = upBase;
+        this.downBase = downBase;
+        this.trapezoidHeight = trapezoidHeight;
+    }
 
     public void setUpBase(int upBase) {
         this.upBase = upBase;
