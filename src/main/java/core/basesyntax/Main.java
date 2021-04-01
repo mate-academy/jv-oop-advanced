@@ -1,14 +1,17 @@
 package core.basesyntax;
 
 public class Main {
+    public static final int RANDOM_LIMIT = 23;
+
     public static void main(String[] args) {
-        Figure[] figuresList = new Figure[(int) (Math.random() * 23)];
+        Figure[] figuresList = new Figure[(int) (Math.random() * RANDOM_LIMIT)];
+        FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < figuresList.length; i++) {
-            figuresList[i] = new FigureSupplier().randomFigure();
+            figuresList[i] = figureSupplier.getRandomFigure();
         }
 
-        for (int i = 0; i < figuresList.length; i++) {
-            System.out.println(figuresList[i].figureDraw());
+        for (Figure figure : figuresList) {
+            System.out.println(figure.draw());
         }
     }
 }
