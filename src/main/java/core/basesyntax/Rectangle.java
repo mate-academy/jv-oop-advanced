@@ -16,8 +16,8 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "Figure: rectangle, area: " + this.getArea() + " sq. units, width: " + this.height
-                + " units, color: " + this.getColor();
+    public void draw() {
+        System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, width: " + height
+                + " units, color: " + getColor());
     }
 }

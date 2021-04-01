@@ -6,32 +6,27 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         Random randomNumber = new Random();
         Random randomValueOfField = new Random();
-        final int upperValueBound = 1000;
-        final int amountOfShapes = 4;
-        int shapeCase = randomNumber.nextInt(amountOfShapes) + 1;
-        int randomValue = randomValueOfField.nextInt(upperValueBound) + 1;
+        final int VALUE_BOUND = 1000;
+        final int AMOUNT_OF_SHAPES = 4;
+        int shapeCase = randomNumber.nextInt(AMOUNT_OF_SHAPES) + 1;
+        int firstRandomValue = randomValueOfField.nextInt(VALUE_BOUND) + 1;
+        int secondRandomValue = randomValueOfField.nextInt(VALUE_BOUND) + 1;
+        int thirdRandomValue = randomValueOfField.nextInt(VALUE_BOUND) + 1;
         switch (shapeCase) {
             case 1:
-                Square square = new Square(ColorSupplier.getRandomColor(), randomValue);
-                return square;
+                return new Square(ColorSupplier.getRandomColor(), firstRandomValue);
             case 2:
-                Rectangle rectangle = new Rectangle(ColorSupplier.getRandomColor(), randomValue,
-                        randomValue);
-                return rectangle;
+                return new Rectangle(ColorSupplier.getRandomColor(), firstRandomValue,
+                        secondRandomValue);
             case 3:
-                RightTriangle rightTriangle = new RightTriangle(ColorSupplier.getRandomColor(),
-                        randomValue, randomValue);
-                return rightTriangle;
+                return new RightTriangle(ColorSupplier.getRandomColor(), firstRandomValue,
+                        secondRandomValue);
             case 4:
-                Circle circle = new Circle(ColorSupplier.getRandomColor(), randomValue);
-                return circle;
+                return new Circle(ColorSupplier.getRandomColor(), firstRandomValue);
             case 5:
-                IsoscelesTrapezoid trapezoid = new IsoscelesTrapezoid(ColorSupplier.getRandomColor()
-                        , randomValue, randomValue, randomValue);
-                return trapezoid;
             default:
-                break;
+                return new IsoscelesTrapezoid(ColorSupplier.getRandomColor(), firstRandomValue,
+                        secondRandomValue, thirdRandomValue);
         }
-        return null;
     }
 }

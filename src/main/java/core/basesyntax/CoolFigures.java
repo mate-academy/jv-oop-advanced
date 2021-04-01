@@ -1,8 +1,13 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public class CoolFigures {
     public static void main(String[] args) {
-        printFigures(drawArrayOfRandomFigures(6));
+        Random random = new Random();
+        int bound = 15;
+        int numberOfShapes = random.nextInt(bound);
+        printFigures(drawArrayOfRandomFigures(numberOfShapes + 1));
     }
 
     public static Figure[] drawArrayOfRandomFigures(int n) {
@@ -16,7 +21,7 @@ public class CoolFigures {
 
     public static void printFigures(Figure[] figures) {
         for (Figure figure : figures) {
-            System.out.println(figure);
+            figure.draw();
         }
     }
 }
