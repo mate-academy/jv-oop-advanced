@@ -1,4 +1,4 @@
-public abstract class Figure implements Drawable, CalculatingArea {
+public abstract class Figure implements Drawable, AreaCalculator {
     private String color;
 
     public Figure(String color) {

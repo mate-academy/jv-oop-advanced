@@ -1,30 +1,30 @@
 public class RightTriangle extends Figure {
-    private int cathetus1;
-    private int cathetus2;
+    private int firstLeg;
+    private int secondLeg;
 
-    public RightTriangle(String color, int cathetus1, int cathetus2) {
+    public RightTriangle(String color, int firstLeg, int secondLeg) {
         super(color);
-        this.cathetus1 = cathetus1;
-        this.cathetus2 = cathetus2;
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
     }
 
-    public int getCathetus1() {
-        return cathetus1;
+    public int getFirstLeg() {
+        return firstLeg;
     }
 
-    public int getCathetus2() {
-        return cathetus2;
+    public int getSecondLeg() {
+        return secondLeg;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure : RightTriangle, area: " + String.format("%.2f", getArea())
-                + ", cathetus1: " + getCathetus1() + ", cathetus2: "
-                + getCathetus2() + ", color: " + getColor());
+                + ", cathetus1: " + getFirstLeg() + ", cathetus2: "
+                + getSecondLeg() + ", color: " + getColor());
     }
 
     @Override
     public double getArea() {
-        return 0.5 * cathetus1 * cathetus2;
+        return 0.5 * firstLeg * secondLeg;
     }
 }

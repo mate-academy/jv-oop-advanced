@@ -1,14 +1,13 @@
 public class ColorSupplier {
-    static final int MAX_RANDOM_VALUE = 5;
-    static final String COLOR_BLUE = "blue";
-    static final String COLOR_GREEN = "green";
-    static final String COLOR_RED = "red";
-    static final String COLOR_YELLOW = "yellow";
-    static final String COLOR_ORANGE = "orange";
-    static final String COLOR_WHITE = "white";
+    public static final int MAX_RANDOM_VALUE = 5;
+    public static final String COLOR_BLUE = "blue";
+    public static final String COLOR_GREEN = "green";
+    public static final String COLOR_RED = "red";
+    public static final String COLOR_YELLOW = "yellow";
+    public static final String COLOR_ORANGE = "orange";
+    public static final String COLOR_WHITE = "white";
 
-    String getRandomColor() {
-
+    public String getRandomColor() {
         int choice = (int) (1 + (Math.random() * MAX_RANDOM_VALUE));
         String color = "";
         switch (choice) {
@@ -31,7 +30,7 @@ public class ColorSupplier {
                 color = COLOR_WHITE;
                 break;
             default:
-                break;
+                return COLOR_WHITE;
         }
         return color;
     }
