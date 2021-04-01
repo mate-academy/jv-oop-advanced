@@ -7,6 +7,8 @@ import core.basesyntax.shapes.RightTriangle;
 import core.basesyntax.shapes.Shape;
 import core.basesyntax.shapes.Square;
 
+import java.util.Random;
+
 public class FigureSupplier {
 
     private static final int TOTAL_SHAPE_NUMBER = 5;
@@ -18,34 +20,35 @@ public class FigureSupplier {
     private static final int MINIMAL_LOWER_BASE = 51;
 
     public Shape generateShape() {
-        int figureType = (int) (Math.random() * TOTAL_SHAPE_NUMBER);
+        Random random = new Random();
+        int figureType = random.nextInt(TOTAL_SHAPE_NUMBER);
         ColorSupplier colorSupplier = new ColorSupplier();
         switch (figureType) {
             case 1:
                 return new Circle("circle",
                         colorSupplier.generateColor(),
-                        (int) (Math.random() * RADIUS_LIMIT) + 1);
+                        random.nextInt(RADIUS_LIMIT));
             case 2:
                 return new IsoscelesTrapezoid("isosceles trapezoid",
                         colorSupplier.generateColor(),
                         // lower base should be longer than upper base. always
-                        (int) (Math.random() * LOWER_BASE_EXCESS_UPPER_BASE) + MINIMAL_LOWER_BASE,
-                        (int) (Math.random() * UPPER_BASE) + 1,
-                        (int) (Math.random() * WIDTH_LIMIT) + 1);
+                        MINIMAL_LOWER_BASE + random.nextInt(LOWER_BASE_EXCESS_UPPER_BASE),
+                        random.nextInt(UPPER_BASE),
+                        random.nextInt(WIDTH_LIMIT));
             case 3:
                 return new Rectangle("rectangle",
                         colorSupplier.generateColor(),
-                        (int) (Math.random() * LENGTH_LIMIT) + 1,
-                        (int) (Math.random() * WIDTH_LIMIT) + 1);
+                        random.nextInt(LENGTH_LIMIT),
+                        random.nextInt(WIDTH_LIMIT));
             case 4:
                 return new RightTriangle("triangle",
                         colorSupplier.generateColor(),
-                        (int) (Math.random() * LENGTH_LIMIT) + 1,
-                        (int) (Math.random() * WIDTH_LIMIT) + 1);
+                        random.nextInt(LENGTH_LIMIT),
+                        random.nextInt(WIDTH_LIMIT));
             default:
                 return new Square("square",
                         colorSupplier.generateColor(),
-                        (int) (Math.random() * LENGTH_LIMIT) + 1);
+                        random.nextInt(LENGTH_LIMIT));
         }
     }
 }
