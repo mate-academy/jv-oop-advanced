@@ -17,20 +17,20 @@ public class IsoscelesTrapezoid extends Shape {
         this.sideC = sideC;
     }
 
-    public double setDiagonal() {
+    public double getDiagonal() {
         this.diagonal = Math.sqrt((this.sideA * this.sideB) + Math.pow(this.sideC, 2));
         return diagonal;
     }
 
-    public double setHeight() {
-        this.height = Math.sqrt((Math.pow(this.setDiagonal(), 2)
+    public double getHeight() {
+        this.height = Math.sqrt((Math.pow(this.getDiagonal(), 2)
                 - Math.pow((double)(this.sideA + this.sideB) / 2, 2)));
         return height;
     }
 
     @Override
     public double calculateArea() {
-        return (this.setHeight() / 2) * (this.sideA + this.sideB);
+        return (this.getHeight() / 2) * (this.sideA + this.sideB);
     }
 
     @Override
@@ -38,9 +38,9 @@ public class IsoscelesTrapezoid extends Shape {
         StringBuilder sb = new StringBuilder();
         sb.append("Figure: ").append(this.getName()).append(" , area: ")
                 .append(df.format(this.calculateArea()))
-                .append(" sq. units, height: ").append(df.format(this.setHeight()))
+                .append(" sq. units, height: ").append(df.format(this.getHeight()))
                 .append(" , diagonal: ")
-                .append(df.format(this.setDiagonal()))
+                .append(df.format(this.getDiagonal()))
                 .append(" , color: ").append(this.getColor());
         return sb.toString();
     }
