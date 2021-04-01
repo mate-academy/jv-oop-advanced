@@ -9,7 +9,6 @@ import core.basesyntax.shapes.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-
     private static final int TOTAL_SHAPE_NUMBER = 5;
     private static final int RADIUS_LIMIT = 10;
     private static final int LENGTH_LIMIT = 50;
