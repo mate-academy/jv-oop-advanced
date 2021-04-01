@@ -6,7 +6,7 @@ public class FigureSupplier {
     private static final int FIGURE_LIMIT = 5;
     private static final int VALUE_LIMIT = 20;
 
-    public static Figures figuresRandomGenerator() {
+    public static Figure generateRandomFigure() {
         Random number = new Random();
         int randomFigureNumber = number.nextInt(FIGURE_LIMIT);
 
@@ -29,7 +29,8 @@ public class FigureSupplier {
                 return new Square("Square", ColorSupplier.colorRandomizer(),
                         number.nextInt(VALUE_LIMIT));
             default:
-                return null;
+                return new Square("Square", ColorSupplier.colorRandomizer(),
+                        number.nextInt(VALUE_LIMIT));
         }
     }
 }

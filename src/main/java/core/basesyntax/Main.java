@@ -1,17 +1,22 @@
 package core.basesyntax;
 
 import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class Main {
-    public static void main(String[] args) {
-        ArrayList<Figures> figuresList = new ArrayList<>();
+    private static final int RANDOM_MAX_LIST_LENGTH = 20;
 
-        for (int i = 0; i < 10; i++) {
-            figuresList.add(FigureSupplier.figuresRandomGenerator());
+    public static void main(String[] args) {
+        Random number = new Random();
+        List<Figure> figuresList = new ArrayList();
+
+        for (int i = 0; i < number.nextInt(RANDOM_MAX_LIST_LENGTH) + 1; i++) {
+            figuresList.add(FigureSupplier.generateRandomFigure());
         }
 
-        for (Figures object : figuresList) {
-            object.draw();
+        for (Figure figure : figuresList) {
+            figure.draw();
         }
     }
 }
