@@ -5,9 +5,6 @@ public abstract class Figure implements AreaCalculator, FigureDraw {
     private String type;
     private String property;
 
-    public Figure() {
-    }
-
     public Figure(String type, String colour, String property) {
         this.colour = colour;
         this.type = type;

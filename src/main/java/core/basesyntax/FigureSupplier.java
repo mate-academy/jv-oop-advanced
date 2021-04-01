@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class FigureSupplier extends Figure {
+public class FigureSupplier {
     private static final int RANDOM_FIGURE = 5;
     private static final int RANDOM_PROPERTY = 3;
     private static final int RANDOM_VALUE = 20;
@@ -63,11 +63,6 @@ public class FigureSupplier extends Figure {
             }
         }
         return figureList;
-    }
-
-    @Override
-    public double calculateArea() {
-        return 0;
     }
 }
 
