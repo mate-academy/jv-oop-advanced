@@ -13,14 +13,12 @@ public class Main {
     }
 
     public static void fillArray(Figure[] figArr) {
-        FigureSupplier figSup = new FigureSupplier();
-        ColorSupplier randColor = new ColorSupplier();
+        FigureSupplier figureSupplier = new FigureSupplier();
 
         for (int i = 0; i < figArr.length; i++) {
             do {
-                figArr[i] = figSup.randomFigureProper();
+                figArr[i] = figureSupplier.getRandomFigure();
             } while (figArr[i] == null);
-            randColor.generateColor(figArr[i]);
         }
     }
 

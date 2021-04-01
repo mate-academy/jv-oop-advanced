@@ -5,25 +5,26 @@ import java.util.Random;
 public class FigureSupplier {
     private static final double MIN = 1e-10;
     private static final double MAX = 100000;
-    private final int numberOfFigures = 5;
+    private static final int FIGURES_NUMBER = 5;
     private final Random random = new Random();
+    ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figure randomFigureProper() {
+    public Figure getRandomFigure() {
         Figure figure;
-        int num = random.nextInt(numberOfFigures);
+        int num = random.nextInt(FIGURES_NUMBER);
         switch (num) {
             case 0:
-                figure = new Square(MIN + (MAX - MIN) * random.nextDouble(), Color.BLACK);
+                figure = new Square(MIN + (MAX - MIN) * random.nextDouble(), colorSupplier.generateColor());
                 return figure;
             case 1:
                 figure = new Rectangle(MIN + (MAX - MIN) * random.nextDouble(),
-                        MIN + (MAX - MIN) * random.nextDouble(), Color.BLACK);
+                        MIN + (MAX - MIN) * random.nextDouble(), colorSupplier.generateColor());
                 return figure;
             case 2:
                 figure = checkTriangleSides();
                 return figure;
             case 3:
-                figure = new Circle(MIN + (MAX - MIN) * random.nextDouble(), Color.BLACK);
+                figure = new Circle(MIN + (MAX - MIN) * random.nextDouble(), colorSupplier.generateColor());
                 return figure;
             case 4:
                 figure = checkTrapezoidSides();
@@ -35,22 +36,21 @@ public class FigureSupplier {
     }
 
     private Figure checkTriangleSides() {
-        double leg1 = MIN + (MAX - MIN) * random.nextDouble();
-        double leg2 = MIN + (MAX - MIN) * random.nextDouble();
-        double hypotenuse = MIN + (MAX - MIN) * random.nextDouble();
-        if (hypotenuse * hypotenuse != leg1 * leg1 + leg2 * leg2) {
-            return null;
-        }
-        return new RigthTriangle(leg1, leg2, hypotenuse, Color.BLACK);
+        double legOne = MIN + (MAX - MIN) * random.nextDouble();
+        double legTwo = MIN + (MAX - MIN) * random.nextDouble();
+        double hypotenuse = Math.sqrt(legOne * legOne + legTwo * legTwo);
+
+        return new RigthTriangle(legOne, legTwo, hypotenuse, colorSupplier.generateColor());
     }
 
     private Figure checkTrapezoidSides() {
         double topSide = MIN + (MAX - MIN) * random.nextDouble();
         double botSide = MIN + (MAX - MIN) * random.nextDouble();
         double lrSide = MIN + (MAX - MIN) * random.nextDouble();
-        if (topSide < botSide) {
-            return null;
+        while (topSide < botSide) {
+            topSide = MIN + (MAX - MIN) * random.nextDouble();
+            botSide = MIN + (MAX - MIN) * random.nextDouble();
         }
-        return new IsoscelesTrapezoid(topSide, botSide, lrSide, Color.BLACK);
+        return new IsoscelesTrapezoid(topSide, botSide, lrSide, colorSupplier.generateColor());
     }
 }

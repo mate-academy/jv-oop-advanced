@@ -3,25 +3,21 @@ package core.basesyntax;
 import java.util.Random;
 
 public class ColorSupplier {
-    private final int numberOfColors = 4;
+    private static final int COLORS_NUMBER = 4;
 
-    public void generateColor(Figure figure) {
+    public Color generateColor() {
         Random random = new Random();
-        switch (random.nextInt(numberOfColors)) {
+        switch (random.nextInt(COLORS_NUMBER)) {
             case 0:
-                figure.setColor(Color.RED);
-                break;
+                return Color.RED;
             case 1:
-                figure.setColor(Color.BLACK);
-                break;
+                return Color.BLACK;
             case 2:
-                figure.setColor(Color.BLUE);
-                break;
+                return Color.BLUE;
             case 3:
-                figure.setColor(Color.GREEN);
-                break;
+                return Color.GREEN;
             default:
-                break;
+                return Color.BLACK;
         }
     }
 }
