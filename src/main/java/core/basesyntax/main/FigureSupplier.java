@@ -10,10 +10,16 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int FIGURES_COUNT = 5;
-    private final ColorSupplier colorSupplier = new ColorSupplier();
+    public static final int RANDOM_DOUBLE_MULTIPLE = 100;
+    private final ColorSupplier colorSupplier;
+    private Random random;
+
+    public FigureSupplier() {
+        colorSupplier = new ColorSupplier();
+        random = new Random();
+    }
 
     public Figure getRandomFigure() {
-        Random random = new Random();
         int num = random.nextInt(FIGURES_COUNT) + 1;
         String figureColor = colorSupplier.generateColor().toString().toLowerCase();
         switch (num) {
@@ -30,17 +36,15 @@ public class FigureSupplier {
                 return new RightTriangle(figureColor, getRandomDouble(),
                         getRandomDouble());
             }
-            case 5: {
+            case 5:
+            default: {
                 return new IsoscelesTrapezoid(figureColor, getRandomDouble(),
                         getRandomDouble(), getRandomDouble());
             }
-            default:
-                throw new IllegalStateException("Unexpected value: " + num);
         }
     }
 
     private double getRandomDouble() {
-        Random random = new Random();
-        return (random.nextDouble() * 100);
+        return (random.nextDouble() * RANDOM_DOUBLE_MULTIPLE);
     }
 }

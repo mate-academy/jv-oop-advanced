@@ -3,28 +3,28 @@ package core.basesyntax.main;
 import java.util.Random;
 
 public class ColorSupplier {
-
-    public Colors generateColor() {
+    public final int COLOR_COUNT = 8;
+    public Color generateColor() {
         Random random = new Random();
-        int number = random.nextInt(Colors.values().length) + 1;
+        int number = random.nextInt(COLOR_COUNT) + 1;
 
         switch (number) {
             case 1:
-                return Colors.RED;
+                return Color.RED;
             case 2:
-                return Colors.ORANGE;
+                return Color.ORANGE;
             case 3:
-                return Colors.YELLOW;
+                return Color.YELLOW;
             case 4:
-                return Colors.GREEN;
+                return Color.GREEN;
             case 5:
-                return Colors.BLUE;
+                return Color.BLUE;
             case 6:
-                return Colors.PINK;
+                return Color.PINK;
             case 7:
-                return Colors.WHITE;
+                return Color.WHITE;
             case 8:
-                return Colors.BLACK;
+                return Color.BLACK;
             default:
                 throw new IllegalStateException("Unexpected value: " + number);
         }
