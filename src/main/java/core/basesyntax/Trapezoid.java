@@ -10,7 +10,6 @@ public class Trapezoid extends Figure {
         this.midline = midline;
     }
 
-
     @Override
     public void draw() {
         System.out.println("I am " + getColor()

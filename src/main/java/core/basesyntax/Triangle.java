@@ -8,7 +8,7 @@ public class Triangle extends Figure {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-            }
+    }
 
     public void draw() {
         System.out.println("I am " + getColor()
