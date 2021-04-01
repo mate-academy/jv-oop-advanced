@@ -6,10 +6,9 @@ public class FigureSupplier {
     private Shape shape;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
-    private final int VALUE_LIMIT = random.nextInt(50);
 
     private int generateRandomValue() {
-        return random.nextInt(VALUE_LIMIT);
+        return random.nextInt(50);
     }
 
     public Shape createShape() {
