@@ -10,7 +10,8 @@ public class FigureSupplier {
             case 0:
                 return new Circle(getRandomInt(), getRandomColor());
             case 1:
-                return new IsoscelesTrapesoid(getRandomInt(), getRandomInt(), getRandomInt(), getRandomColor());
+                return new IsoscelesTrapesoid(getRandomInt(), getRandomInt(),
+                        getRandomInt(), getRandomColor());
             case 2:
                 return new Rectangle(getRandomInt(), getRandomInt(), getRandomColor());
             case 3:

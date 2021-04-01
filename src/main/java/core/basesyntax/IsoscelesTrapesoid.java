@@ -1,24 +1,35 @@
 package core.basesyntax;
 
-public class IsoscelesTrapesoid extends  Figure{
-    private int side_one;
-    private int side_two;
-    private int side_three;
+public class IsoscelesTrapesoid extends Figure {
+    private int sideOne;
+    private int sideTwo;
+    private int sideThree;
 
-    public IsoscelesTrapesoid(int side_one, int side_two, int side_three, Colors colors) {
+    public IsoscelesTrapesoid(int sideOne, int sideTwo, int sideThree, Colors colors) {
         super(colors);
-        this.side_one = side_one;
-        this.side_two = side_two;
-        this.side_three = side_three;
+        this.sideOne = sideOne;
+        this.sideTwo = sideTwo;
+        this.sideThree = sideThree;
     }
 
     @Override
     public double getArea() {
-        return ((side_one + side_two) / 2) * (Math.sqrt((side_three * side_three) - ((side_one - side_two) * (side_one - side_two)) / 4));
+        return ((sideOne + sideTwo) / 2) * (Math.sqrt((sideThree * sideThree)
+                - ((sideOne - sideTwo) * (sideOne - sideTwo)) / 4));
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: IsoscelesTrapesoid; " + "area:" + getArea() + ", side_one: " + side_one + ", side_two: " + side_two + ", side_three: " + side_three + ", color: " + getColor());
+        System.out.println("Figure: IsoscelesTrapesoid; "
+                + "area:"
+                + getArea()
+                + ", side_one: "
+                + sideOne
+                + ", side_two: "
+                + sideTwo
+                + ", side_three: "
+                + sideThree
+                + ", color: "
+                + getColor());
     }
 }
