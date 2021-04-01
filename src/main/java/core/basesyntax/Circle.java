@@ -8,8 +8,8 @@ public class Circle extends Figure {
         setSymbol("●");
         radius = newRadius;
         super.setColor(newColor);
-        mathArea();
-        mathLength();
+        calculateArea();
+        calculateBorderline();
     }
 
     public double getDiameter() {
@@ -21,16 +21,14 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double mathArea() {
+    public void calculateArea() {
         double math = Math.PI * radius * radius;
         setArea(math);
-        return getArea();
     }
 
     @Override
-    public double mathLength() {
+    public void calculateBorderline() {
         setBorderLength(2 * Math.PI * radius);
-        return getArea();
     }
 
     @Override

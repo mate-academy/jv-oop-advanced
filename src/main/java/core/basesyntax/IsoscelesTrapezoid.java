@@ -21,8 +21,8 @@ public class IsoscelesTrapezoid extends Figure {
         sideBC = newBC;
         sideAD = newAD;
         super.setColor(newColor);
-        mathArea();
-        mathLength();
+        calculateArea();
+        calculateBorderline();
     }
 
     public double getSideAB() {
@@ -43,7 +43,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double mathArea() {
+    public void calculateArea() {
         double math1 = getSideBC() + getSideAD();
         math1 /= 2;
         double math21;
@@ -54,13 +54,11 @@ public class IsoscelesTrapezoid extends Figure {
         math2 = Math.sqrt(math2);
         double math = math1 * math2;
         setArea(math);
-        return getArea();
     }
 
     @Override
-    public double mathLength() {
+    public void calculateBorderline() {
         setBorderLength(sideAB + sideBC * 2 + sideAD);
-        return getArea();
     }
 
     @Override

@@ -1,21 +1,21 @@
 package core.basesyntax;
 
-public abstract class Figure implements FigureMath, FigureDrawer {
+public abstract class Figure implements AreaCalculator, BorderCalculator, FigureDrawer {
     private String name;
     private String symbol;
     private String color;
     private double area;
     private double borderLength;
 
-    void setName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    void setSymbol(String symbol) {
+    public void setSymbol(String symbol) {
         this.symbol = symbol;
     }
 
-    void setColor(String color) {
+    public void setColor(String color) {
         if (color.length() != 6) {
             this.color = "#" + ColorSupplier.getRandomColor();
             System.out.println("Your color is wrong and changed to new!\n"
@@ -25,11 +25,11 @@ public abstract class Figure implements FigureMath, FigureDrawer {
         }
     }
 
-    void setArea(double area) {
+    public void setArea(double area) {
         this.area = area;
     }
 
-    void setBorderLength(double borderLength) {
+    public void setBorderLength(double borderLength) {
         this.borderLength = borderLength;
     }
 

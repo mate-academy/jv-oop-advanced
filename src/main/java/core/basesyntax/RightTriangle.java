@@ -21,8 +21,8 @@ public class RightTriangle extends Figure {
             sideAC = newAC;
         }
         super.setColor(newColor);
-        mathArea();
-        mathLength();
+        calculateArea();
+        calculateBorderline();
     }
 
     public double getSideAB() {
@@ -38,18 +38,16 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double mathArea() {
+    public void calculateArea() {
         double math1 = getSideAB() + getSideBC() + getSideAC();
         math1 /= 2;
         double math = (math1 - sideAB) * (math1 - sideBC);
         setArea(math);
-        return getArea();
     }
 
     @Override
-    public double mathLength() {
+    public void calculateBorderline() {
         setBorderLength(sideAB + sideBC + sideAC);
-        return getArea();
     }
 
     @Override
