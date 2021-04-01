@@ -1,11 +1,19 @@
 import core.basesyntax.Figure;
 
 public class Square extends Figure {
-    private final int side;
+    private int side;
 
     public Square(int side, String color) {
         super(color, "square");
         this.side = side;
+    }
+
+    public void setSide(int side) {
+        this.side = side;
+    }
+
+    public int getSide() {
+        return side;
     }
 
     @Override

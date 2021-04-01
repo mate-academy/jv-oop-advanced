@@ -1,10 +1,18 @@
 import core.basesyntax.Figure;
 
 public class Circle extends Figure {
-    private final double radius;
+    private double radius;
 
     public Circle(int radius, String color) {
         super(color, "circle");
+        this.radius = radius;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(double radius) {
         this.radius = radius;
     }
 
