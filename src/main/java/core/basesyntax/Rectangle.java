@@ -27,12 +27,13 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void drawerFigure() {
-        System.out.println("Figure:" + getId()
+    public String drawFigure() {
+        return "Figure:" + getId()
                 + ", Area " + getAreaCalculate()
                 + " sq, "
                 + "side length " + height
-                + ", color " + getColor());
+                + ", color " + getColor();
+
     }
 
     @Override

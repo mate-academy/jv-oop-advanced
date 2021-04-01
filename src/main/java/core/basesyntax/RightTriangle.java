@@ -31,12 +31,12 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void drawerFigure() {
-        System.out.println("Figure:" + getId()
+    public String drawFigure() {
+        return "Figure:" + getId()
                 + ", Area " + getAreaCalculate()
                 + " sq, "
                 + "hypotenuse: " + hypotenuse()
-                + ", color " + getColor());
+                + ", color " + getColor();
     }
 
     @Override

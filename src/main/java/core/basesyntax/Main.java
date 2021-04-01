@@ -3,25 +3,16 @@ package core.basesyntax;
 import java.util.Random;
 
 public class Main {
+    private static final int ARRAY_LIMIT = 10;
+
     public static void main(String[] args) {
-        Figure[] newFigure = buildNewFigure();
-        show(newFigure);
-        
-    }
-
-    private static Figure[] buildNewFigure() {
-        FigureSupplier supplier = new FigureSupplier();
-        int size = (int) (new Random().nextInt(5));
-        Figure[] figures = new Figure[size];
+        Figure[] figures = new Figure[new Random().nextInt(ARRAY_LIMIT)];
         for (int i = 0; i < figures.length; i++) {
-            figures[i] = supplier.createRandomFigure();
+            figures[i] = new FigureSupplier().createRandomFigure();
         }
-        return figures;
-    }
 
-    private static void show(Figure[] newFigure) {
-        for (Figure figure : newFigure) {
-            figure.drawerFigure();
+        for (Figure figure : figures) {
+            System.out.println(figure.drawFigure());
         }
     }
 }
