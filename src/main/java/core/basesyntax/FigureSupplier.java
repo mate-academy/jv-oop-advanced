@@ -3,6 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier extends Figure {
+    private static final int RANDOM_FIGURE = 5;
+    private static final int RANDOM_PROPERTY = 3;
+    private static final int RANDOM_VALUE = 20;
+
     public Figure[] figureGen() {
         ColorSupplier parseColor = new ColorSupplier();
 
@@ -19,39 +23,40 @@ public class FigureSupplier extends Figure {
         String[] rectangleProperties = new String[]{"nothing to see here",
                 "rectangular shape", "nothing to be added"};
 
-        Random figure = new Random();
-        int randomFigure = figure.nextInt(5);
         Random property = new Random();
+        Random randomValues = new Random();
+        Random figure = new Random();
 
-        Random randValues = new Random();
+        int arrayLength = randomValues.nextInt(RANDOM_VALUE);
+        Figure[] figureList = new Figure[arrayLength];
 
-        int randomValue = randValues.nextInt(20);
-        Figure[] figureList = new Figure[randomValue];
-
-        for (int i = 0; i < randomValue; i++) {
-            switch (figure.nextInt(5)) {
+        for (int i = 0; i < arrayLength; i++) {
+            switch (figure.nextInt(RANDOM_FIGURE)) {
                 case 0:
                     figureList[i] = new Circle(figures[0], parseColor.randomColor(),
-                            circleProperties[property.nextInt(3)], randValues.nextInt(20));
+                            circleProperties[property.nextInt(RANDOM_PROPERTY)],
+                            randomValues.nextInt(RANDOM_VALUE));
                     break;
                 case 1:
                     figureList[i] = new RightTriangle(figures[1], parseColor.randomColor(),
-                            triangleProperties[property.nextInt(3)], randValues.nextInt(20),
-                            randValues.nextInt(20));
+                            triangleProperties[property.nextInt(RANDOM_PROPERTY)],
+                            randomValues.nextInt(RANDOM_VALUE), randomValues.nextInt(RANDOM_VALUE));
                     break;
                 case 2:
                     figureList[i] = new IsoscelesTrapezoid(figures[2], parseColor.randomColor(),
-                            trapezoidProperties[property.nextInt(3)], randValues.nextInt(20),
-                            randValues.nextInt(20), randValues.nextInt(20));
+                            trapezoidProperties[property.nextInt(RANDOM_PROPERTY)],
+                            randomValues.nextInt(RANDOM_VALUE), randomValues.nextInt(RANDOM_VALUE),
+                            randomValues.nextInt(RANDOM_VALUE));
                     break;
                 case 3:
                     figureList[i] = new Square(figures[3], parseColor.randomColor(),
-                            squareProperties[property.nextInt(3)], randValues.nextInt(20));
+                            squareProperties[property.nextInt(RANDOM_PROPERTY)],
+                            randomValues.nextInt(RANDOM_VALUE));
                     break;
                 case 4:
                     figureList[i] = new Rectangle(figures[4], parseColor.randomColor(),
-                            rectangleProperties[property.nextInt(3)], randValues.nextInt(20),
-                            randValues.nextInt(20));
+                            rectangleProperties[property.nextInt(RANDOM_PROPERTY)],
+                            randomValues.nextInt(RANDOM_VALUE), randomValues.nextInt(RANDOM_VALUE));
                     break;
                 default:
                     break;
