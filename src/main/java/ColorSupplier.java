@@ -26,9 +26,6 @@ public class ColorSupplier {
             case 5:
                 color = COLOR_ORANGE;
                 break;
-            case 6:
-                color = COLOR_WHITE;
-                break;
             default:
                 return COLOR_WHITE;
         }

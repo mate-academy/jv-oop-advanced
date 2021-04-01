@@ -24,11 +24,6 @@ public class FigureSupplier {
                 figure = new Square(colorSupplier.getRandomColor(), (int) (Math.random()
                         * Main.MAX_RANDOM_VALUE));
                 break;
-            case 5:
-                figure = new IsoscelesTrapezoid(colorSupplier.getRandomColor(), (int) (Math.random()
-                        * Main.MAX_RANDOM_VALUE), (int) (Math.random() * Main.MAX_RANDOM_VALUE),
-                        (int) (Math.random() * Main.MAX_RANDOM_VALUE));
-                break;
             default:
                 figure = new IsoscelesTrapezoid(colorSupplier.getRandomColor(), (int) (Math.random()
                         * Main.MAX_RANDOM_VALUE), (int) (Math.random() * Main.MAX_RANDOM_VALUE),

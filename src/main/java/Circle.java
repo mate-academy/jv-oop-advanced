@@ -7,7 +7,6 @@ public class Circle extends Figure {
     }
 
     public int getRadius() {
-        int radius = this.radius;
         return radius;
     }
 
