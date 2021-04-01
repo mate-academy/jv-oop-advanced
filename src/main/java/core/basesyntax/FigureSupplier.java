@@ -7,14 +7,15 @@ public class FigureSupplier {
     private static final double MAX = 100000;
     private static final int FIGURES_NUMBER = 5;
     private final Random random = new Random();
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         Figure figure;
         int num = random.nextInt(FIGURES_NUMBER);
         switch (num) {
             case 0:
-                figure = new Square(MIN + (MAX - MIN) * random.nextDouble(), colorSupplier.generateColor());
+                figure = new Square(MIN + (MAX - MIN) * random.nextDouble(),
+                        colorSupplier.generateColor());
                 return figure;
             case 1:
                 figure = new Rectangle(MIN + (MAX - MIN) * random.nextDouble(),
@@ -24,7 +25,8 @@ public class FigureSupplier {
                 figure = checkTriangleSides();
                 return figure;
             case 3:
-                figure = new Circle(MIN + (MAX - MIN) * random.nextDouble(), colorSupplier.generateColor());
+                figure = new Circle(MIN + (MAX - MIN) * random.nextDouble(),
+                        colorSupplier.generateColor());
                 return figure;
             case 4:
                 figure = checkTrapezoidSides();
