@@ -4,23 +4,32 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         RandomNumberGenerator numberGenerator = new RandomNumberGenerator();
         ColorSupplier colorSupplier = new ColorSupplier();
-        String randomColor = colorSupplier.getRandomColor();
-        double randomProperty = numberGenerator.getRandomProperty();
         int randomNumber = numberGenerator.getRandomNumber();
 
         if (randomNumber == 1) {
-            return new Circle("circle", randomColor, randomProperty);
+            return new Circle("circle",
+                    colorSupplier.getRandomColor(),
+                    numberGenerator.getRandomProperty());
         } else if (randomNumber == 2) {
             return new IsoscelesTrapezoid("isosceles trapezoid",
-                    randomColor, 10, 12, randomProperty);
+                    colorSupplier.getRandomColor(),
+                    numberGenerator.getRandomNumber(),
+                    numberGenerator.getRandomNumber(),
+                    numberGenerator.getRandomProperty());
         } else if (randomNumber == 3) {
             return new Rectangle("rectangle",
-                    randomColor, 8, randomProperty);
+                    colorSupplier.getRandomColor(),
+                    numberGenerator.getRandomNumber(),
+                    numberGenerator.getRandomProperty());
         } else if (randomNumber == 4) {
             return new RightTriangle("right triangle",
-                    randomColor, 12, 14);
+                    colorSupplier.getRandomColor(),
+                    numberGenerator.getRandomNumber(),
+                    numberGenerator.getRandomNumber());
         } else if (randomNumber == 5) {
-            return new Square("square", randomColor, randomProperty);
+            return new Square("square",
+                    colorSupplier.getRandomColor(),
+                    numberGenerator.getRandomProperty());
         } else {
             return null;
         }
