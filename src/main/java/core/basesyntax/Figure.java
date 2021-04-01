@@ -2,7 +2,7 @@ package core.basesyntax;
 
 public abstract class Figure implements Area, Draw {
     private String color;
-    private String figure;
+    private String name;
 
     public Figure(String color, String figure) {
         this.color = color;
