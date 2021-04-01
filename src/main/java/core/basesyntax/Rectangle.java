@@ -32,7 +32,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println("Figure is Rectangle"
                 + ",Color is " + getColor()
                 + ", Top Side = " + topSide

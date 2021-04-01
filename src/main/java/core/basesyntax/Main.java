@@ -3,18 +3,17 @@ package core.basesyntax;
 import java.util.Random;
 
 public class Main {
-    public static final int MAX = 12;
+    public static final int FIGURE_NUMBER_LIMIT = 12;
 
     public static void main(String[] args) {
-        Random random = new Random();
-        Figure[] figures = new Figure[random.nextInt(MAX)];
+        Figure[] figures = new Figure[new Random().nextInt(FIGURE_NUMBER_LIMIT)];
 
         for (int i = 0; i < figures.length; i++) {
-            figures[i] = FigureSupplier.randomFigure();
+            figures[i] = new FigureSupplier().getRandomFigure();
         }
 
-        for (Figure res : figures) {
-            res.drawFigure();
+        for (Figure figure : figures) {
+            figure.draw();
         }
     }
 }
