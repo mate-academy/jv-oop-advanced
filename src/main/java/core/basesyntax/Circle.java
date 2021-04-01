@@ -3,8 +3,8 @@ package core.basesyntax;
 public class Circle extends Figure implements AreaCalculator, Draw {
     private final double radius;
 
-    public Circle(double radius) {
-        super(Color.BLACK);
+    public Circle(double radius, Color color) {
+        super(color);
         this.radius = radius;
     }
 

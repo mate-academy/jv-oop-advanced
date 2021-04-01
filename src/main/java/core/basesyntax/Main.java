@@ -18,7 +18,7 @@ public class Main {
 
         for (int i = 0; i < figArr.length; i++) {
             do {
-                figArr[i] = figSup.randFigureProper();
+                figArr[i] = figSup.randomFigureProper();
             } while (figArr[i] == null);
             randColor.generateColor(figArr[i]);
         }

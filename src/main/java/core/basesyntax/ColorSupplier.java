@@ -3,9 +3,11 @@ package core.basesyntax;
 import java.util.Random;
 
 public class ColorSupplier {
+    private final int numberOfColors = 4;
+
     public void generateColor(Figure figure) {
-        Random rand = new Random();
-        switch (rand.nextInt(3)) {
+        Random random = new Random();
+        switch (random.nextInt(numberOfColors)) {
             case 0:
                 figure.setColor(Color.RED);
                 break;

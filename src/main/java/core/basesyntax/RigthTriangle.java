@@ -5,8 +5,8 @@ public class RigthTriangle extends Figure {
     private final double leg2;
     private final double hypotenuse;
 
-    public RigthTriangle(double leg1, double leg2, double hypotenuse) {
-        super(Color.BLACK);
+    public RigthTriangle(double leg1, double leg2, double hypotenuse, Color color) {
+        super(color);
         this.leg1 = leg1;
         this.leg2 = leg2;
         this.hypotenuse = hypotenuse;

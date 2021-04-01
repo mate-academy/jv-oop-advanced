@@ -5,28 +5,29 @@ import java.util.Random;
 public class FigureSupplier {
     private static final double MIN = 1e-10;
     private static final double MAX = 100000;
-    private final Random rand = new Random();
+    private final int numberOfFigures = 5;
+    private final Random random = new Random();
 
-    public Figure randFigureProper() {
-        Figure f;
-        int num = rand.nextInt(5);
+    public Figure randomFigureProper() {
+        Figure figure;
+        int num = random.nextInt(numberOfFigures);
         switch (num) {
             case 0:
-                f = new Square(MIN + (MAX - MIN) * rand.nextDouble());
-                return f;
+                figure = new Square(MIN + (MAX - MIN) * random.nextDouble(), Color.BLACK);
+                return figure;
             case 1:
-                f = new Rectangle(MIN + (MAX - MIN) * rand.nextDouble(),
-                        MIN + (MAX - MIN) * rand.nextDouble());
-                return f;
+                figure = new Rectangle(MIN + (MAX - MIN) * random.nextDouble(),
+                        MIN + (MAX - MIN) * random.nextDouble(), Color.BLACK);
+                return figure;
             case 2:
-                f = checkTriangleSides();
-                return f;
+                figure = checkTriangleSides();
+                return figure;
             case 3:
-                f = new Circle(MIN + (MAX - MIN) * rand.nextDouble());
-                return f;
+                figure = new Circle(MIN + (MAX - MIN) * random.nextDouble(), Color.BLACK);
+                return figure;
             case 4:
-                f = checkTrapezoidSides();
-                return f;
+                figure = checkTrapezoidSides();
+                return figure;
             default:
                 break;
         }
@@ -34,22 +35,22 @@ public class FigureSupplier {
     }
 
     private Figure checkTriangleSides() {
-        double leg1 = MIN + (MAX - MIN) * rand.nextDouble();
-        double leg2 = MIN + (MAX - MIN) * rand.nextDouble();
-        double hypotenuse = MIN + (MAX - MIN) * rand.nextDouble();
+        double leg1 = MIN + (MAX - MIN) * random.nextDouble();
+        double leg2 = MIN + (MAX - MIN) * random.nextDouble();
+        double hypotenuse = MIN + (MAX - MIN) * random.nextDouble();
         if (hypotenuse * hypotenuse != leg1 * leg1 + leg2 * leg2) {
             return null;
         }
-        return new RigthTriangle(leg1, leg2, hypotenuse);
+        return new RigthTriangle(leg1, leg2, hypotenuse, Color.BLACK);
     }
 
     private Figure checkTrapezoidSides() {
-        double topSide = MIN + (MAX - MIN) * rand.nextDouble();
-        double botSide = MIN + (MAX - MIN) * rand.nextDouble();
-        double lrSide = MIN + (MAX - MIN) * rand.nextDouble();
+        double topSide = MIN + (MAX - MIN) * random.nextDouble();
+        double botSide = MIN + (MAX - MIN) * random.nextDouble();
+        double lrSide = MIN + (MAX - MIN) * random.nextDouble();
         if (topSide < botSide) {
             return null;
         }
-        return new IsoscelesTrapezoid(topSide, botSide, lrSide);
+        return new IsoscelesTrapezoid(topSide, botSide, lrSide, Color.BLACK);
     }
 }
