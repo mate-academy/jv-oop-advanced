@@ -25,44 +25,33 @@ public class FigureSupplier {
     private Rectangle getRectangle() {
         Random random = new Random();
         Rectangle rectangle = new Rectangle(colorSupplier.getColor(),
-                random.nextDouble(), random.nextDouble(), random.nextDouble());
-        rectangle.calculateArea();
-        rectangle.draw();
+                random.nextDouble(), random.nextDouble());
         return rectangle;
     }
 
     private Square getSquare() {
         Random random = new Random();
         Square square = new Square(colorSupplier.getColor(), random.nextDouble());
-        square.calculateArea();
-        square.draw();
         return square;
     }
 
     private IsoscelesTrapezoid getIsoscelesTrapezoid() {
         Random random = new Random();
         IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(colorSupplier.getColor(),
-                random.nextDouble(), random.nextDouble(), random.nextDouble(),
-                random.nextDouble(), random.nextDouble());
-        isoscelesTrapezoid.calculateArea();
-        isoscelesTrapezoid.draw();
+                random.nextDouble(), random.nextDouble(), random.nextDouble());
         return isoscelesTrapezoid;
     }
 
     private Circle getCircle() {
         Random random = new Random();
         Circle circle = new Circle(colorSupplier.getColor(), random.nextDouble());
-        circle.calculateArea();
-        circle.draw();
         return circle;
     }
 
     private RightTriangle getRightTriangle() {
         Random random = new Random();
         RightTriangle rightTriangle = new RightTriangle(colorSupplier.getColor(),
-                random.nextDouble(), random.nextDouble(), random.nextDouble());
-        rightTriangle.calculateArea();
-        rightTriangle.draw();
+                random.nextDouble(), random.nextDouble());
         return rightTriangle;
     }
 }
