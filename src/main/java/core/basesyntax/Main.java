@@ -1,10 +1,11 @@
 package core.basesyntax;
 
 public class Main {
-    public static void main(String[] args) {
-        final int figuresNumber = 20;
+    private static final int FIGURES_NUMBER = 20;
 
-        Figure[] randomFigureArray = new Figure[(int)((Math.random() * figuresNumber))];
+    public static void main(String[] args) {
+
+        Figure[] randomFigureArray = new Figure[(int)((Math.random() * FIGURES_NUMBER))];
 
         FigureProducer figureProducer = new FigureProducer();
         for (int i = 0; i < randomFigureArray.length; i++) {

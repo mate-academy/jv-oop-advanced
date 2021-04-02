@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 public class ColorSupplier {
-    private final String [] colors = {"RED", "ORANGE", "GREEN", "GRAY", "YELLOW"};
+    private static final String [] COLORS = {"RED", "ORANGE", "GREEN", "GRAY", "YELLOW"};
 
     public String getRandomColor() {
-        return colors[(int)(Math.random() * colors.length)];
+        return COLORS[(int)(Math.random() * COLORS.length)];
     }
 }
