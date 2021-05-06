@@ -2,15 +2,15 @@ package core.basesyntax;
 
 import static core.basesyntax.Main.rnd;
 
-public class IsoscelesTrapezoid extends Figure implements Figures{
+public class IsoscelesTrapezoid extends Figure implements Figures {
     int side1;
     int side2;
     int height;
 
     public IsoscelesTrapezoid() {
-        this.side1 = rnd(1,15);
-        this.side2 = rnd(1,15);
-        this.height = rnd(1,15);
+        this.side1 = rnd(1, 15);
+        this.side2 = rnd(1, 15);
+        this.height = rnd(1, 15);
         this.area = area();
         this.name = "isosceles trapezoid";
         this.color = new ColorSupplier().getRandomColor();

@@ -2,13 +2,13 @@ package core.basesyntax;
 
 import static core.basesyntax.Main.rnd;
 
-public class Rectangle extends Figure implements Figures{
+public class Rectangle extends Figure implements Figures {
     int side1;
     int side2;
 
     public Rectangle() {
-        this.side1 = rnd(1,15);
-        this.side2 = rnd(1,15);
+        this.side1 = rnd(1, 15);
+        this.side2 = rnd(1, 15);
         this.area = area();
         this.name = "rectangle";
         this.color = new ColorSupplier().getRandomColor();
