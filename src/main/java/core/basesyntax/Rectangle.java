@@ -1,10 +1,8 @@
 package core.basesyntax;
 
-import static core.basesyntax.Main.rnd;
-
 public class Rectangle extends Figure implements Figures {
-    int side1;
-    int side2;
+    private int side1;
+    private int side2;
 
     public Rectangle() {
         this.side1 = Main.rnd(1, 15);
@@ -19,10 +17,10 @@ public class Rectangle extends Figure implements Figures {
     }
 
     public String toString() {
-        return "Figure: " + name +
-                ", area: " + area +
-                " sq.units, side1: " + side1 +
-                " units, side2: " + side2 +
-                " units, color: " + color;
+        return "Figure: " + name
+                + ", area: " + area
+                + " sq.units, side1: " + side1
+                + " units, side2: " + side2
+                + " units, color: " + color;
     }
 }

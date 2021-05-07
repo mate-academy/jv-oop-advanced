@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import static core.basesyntax.Main.rnd;
-
 public class FigureSupplier {
     public Figure getRandomFigure() {
         int i = Main.rnd(5);
@@ -21,7 +19,8 @@ public class FigureSupplier {
             case (4):
                 return new IsoscelesTrapezoid();
 
+            default:
+                return null;
         }
-        return null;
     }
 }

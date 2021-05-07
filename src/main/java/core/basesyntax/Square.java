@@ -1,9 +1,7 @@
 package core.basesyntax;
 
-import static core.basesyntax.Main.rnd;
-
 public class Square extends Figure implements Figures {
-    int side;
+    private int side;
 
     public Square() {
         this.side = Main.rnd(1, 15);
@@ -17,9 +15,9 @@ public class Square extends Figure implements Figures {
     }
 
     public String toString() {
-        return "Figure: " + name +
-                ", area: " + area +
-                " sq.units, side: " + side +
-                " units, color: " + color;
+        return "Figure: " + name
+                + ", area: " + area
+                + " sq.units, side: " + side
+                + " units, color: " + color;
     }
 }

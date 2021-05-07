@@ -2,8 +2,8 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class Circle extends Figure implements Figures{
-    int radius;
+public class Circle extends Figure implements Figures {
+    private int radius;
 
     public Circle() {
         this.radius = 1 + new Random().nextInt(10);
@@ -17,9 +17,9 @@ public class Circle extends Figure implements Figures{
     }
 
     public String toString() {
-        return "Figure: " + name +
-                ", area: " + area +
-                " sq.units, radius: " + radius +
-                " units, color: " + color;
+        return "Figure: " + name
+                + ", area: " + area
+                + " sq.units, radius: " + radius
+                + " units, color: " + color;
     }
 }

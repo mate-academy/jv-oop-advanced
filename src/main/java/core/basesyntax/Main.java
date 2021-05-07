@@ -1,19 +1,13 @@
 package core.basesyntax;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        List<Figure> figures = new ArrayList<>();
         int manyFigures = 10;
 
         for (int i = 0; i < manyFigures; ++i) {
-            figures.add((new FigureSupplier()).getRandomFigure());
-        }
-        for (Figure figure : figures) {
-            System.out.println(figure.toString());
+            System.out.println(new FigureSupplier().getRandomFigure().toString());
         }
     }
 

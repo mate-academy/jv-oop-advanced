@@ -1,11 +1,9 @@
 package core.basesyntax;
 
-import static core.basesyntax.Main.rnd;
-
 public class IsoscelesTrapezoid extends Figure implements Figures {
-    int side1;
-    int side2;
-    int height;
+    private int side1;
+    private int side2;
+    private int height;
 
     public IsoscelesTrapezoid() {
         this.side1 = Main.rnd(1, 15);
@@ -21,11 +19,11 @@ public class IsoscelesTrapezoid extends Figure implements Figures {
     }
 
     public String toString() {
-        return "Figure: " + name +
-                ", area: " + area +
-                " sq.units, side1: " + side1 +
-                " sq.units, side2: " + side2 +
-                " units, height: " + height +
-                " units, color: " + color;
+        return "Figure: " + name
+                + ", area: " + area
+                + " sq.units, side1: " + side1
+                + " sq.units, side2: " + side2
+                + " units, height: " + height
+                + " units, color: " + color;
     }
 }
