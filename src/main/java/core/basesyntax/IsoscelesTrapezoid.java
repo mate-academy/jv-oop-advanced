@@ -1,26 +1,25 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements Figures {
+public class IsoscelesTrapezoid extends Figure {
     private int side1;
     private int side2;
     private int height;
 
-    public IsoscelesTrapezoid() {
-        this.side1 = Main.rnd(1, 15);
-        this.side2 = Main.rnd(1, 15);
-        this.height = Main.rnd(1, 15);
-        this.area = area();
-        this.name = "isosceles trapezoid";
-        this.color = new ColorSupplier().getRandomColor();
+    public IsoscelesTrapezoid(String name, int side1, int side2, int height, String color) {
+        this.side1 = side1;
+        this.side2 = side2;
+        this.height = height;
+        this.name = name;
+        this.color = color;
     }
 
-    public double area() {
-        return ((double) this.side1 + this.side2) / 2 * this.height;
+    public double getArea() {
+        return ((double) side1 + side2) / 2 * height;
     }
 
-    public String toString() {
+    public String printFigure() {
         return "Figure: " + name
-                + ", area: " + area
+                + ", area: " + getArea()
                 + " sq.units, side1: " + side1
                 + " sq.units, side2: " + side2
                 + " units, height: " + height

@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public interface Figures {
-    String toString();
+    String printFigure();
 
-    double area();
+    double getArea();
 }

@@ -1,24 +1,23 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements Figures {
+public class RightTriangle extends Figure {
     private int side;
     private int height;
 
-    public RightTriangle() {
-        this.side = Main.rnd(1, 15);
-        this.height = Main.rnd(1, 14);
-        name = "right triangle";
-        area = area();
-        color = new ColorSupplier().getRandomColor();
+    public RightTriangle(String name, int side, int height, String color) {
+        this.side = side;
+        this.height = height;
+        this.name = name;
+        this.color = color;
     }
 
-    public double area() {
+    public double getArea() {
         return ((double) side * height) / 2;
     }
 
-    public String toString() {
+    public String printFigure() {
         return "Figure: " + name
-                + ", area: " + area
+                + ", area: " + getArea()
                 + " sq.units, side: " + side
                 + " units, height: " + height
                 + " units, color: " + color;

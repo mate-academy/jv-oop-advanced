@@ -1,9 +1,8 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public abstract class Figure implements Figures {
     protected String name;
     protected String color;
-    protected double area;
 
-    public abstract double area();
+    public abstract double getArea();
 }

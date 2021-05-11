@@ -1,24 +1,21 @@
 package core.basesyntax;
 
-import java.util.Random;
-
-public class Circle extends Figure implements Figures {
+public class Circle extends Figure {
     private int radius;
 
-    public Circle() {
-        this.radius = 1 + new Random().nextInt(10);
-        this.area = area();
-        this.name = "circle";
-        this.color = new ColorSupplier().getRandomColor();
+    public Circle(String name, int radius, String color) {
+        this.radius = radius;
+        this.name = name;
+        this.color = color;
     }
 
-    public double area() {
-        return Math.PI * this.radius * this.radius;
+    public double getArea() {
+        return Math.PI * radius * radius;
     }
 
-    public String toString() {
+    public String printFigure() {
         return "Figure: " + name
-                + ", area: " + area
+                + ", area: " + getArea()
                 + " sq.units, radius: " + radius
                 + " units, color: " + color;
     }
