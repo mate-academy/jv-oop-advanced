@@ -2,7 +2,8 @@ package core.basesyntax;
 
 public class ColorSupplier {
     public String getRandomColor() {
-        int choice = (int)(Math.random() * 5 + 1);
+        int colorAmount = 5;
+        int choice = (int)(Math.random() * colorAmount + 1);
         switch (choice) {
             case 1 :
                 return "white";
