@@ -3,9 +3,9 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-     ColorSupplier supplier = new ColorSupplier();
+    private ColorSupplier supplier = new ColorSupplier();
 
-     Random generator = new Random();
+    private Random generator = new Random();
 
     public Drawable getRandomFigure() {
         String color = supplier.getRandomColor();
