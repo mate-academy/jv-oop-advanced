@@ -9,7 +9,8 @@ public class FigureSupplier {
 
     public Drawable getRandomFigure() {
         String color = supplier.getRandomColor();
-        int choice = (int)(Math.random() * 5 + 1);
+        int figuresAmount = 5;
+        int choice = (int)(Math.random() * figuresAmount + 1);
         switch (choice) {
             case 1:
                 return new Circle(color, generator.nextInt(10) + 1);
