@@ -4,22 +4,21 @@ public class Rectangle extends Figure implements FigureArea {
     private final int sideA;
     private final int sideB;
 
-    public Rectangle(int sideA, int sideB, String name, String color) {
+    public Rectangle(String name, String color, int sideA, int sideB) {
+        super(name, color);
         this.sideA = sideA;
         this.sideB = sideB;
-        this.color = color;
-        this.name = name;
     }
 
-    public double getArea() {
-        return area = sideA * sideB;
+    public double getAreaFigures() {
+        return getArea(sideA * sideB);
     }
 
     public void printDraw() {
-        System.out.println("Figure: " + name
-                + ", area: " + getArea() + " sq.units, "
+        System.out.println("Figure: " + getName()
+                + ", area: " + getAreaFigures() + " sq.units, "
                 + "sideA: " + sideA + " units, "
                 + "sideB: " + sideB + " units "
-                + "color: " + color);
+                + "color: " + getColor());
     }
 }

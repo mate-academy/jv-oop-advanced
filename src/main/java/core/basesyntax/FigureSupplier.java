@@ -1,41 +1,45 @@
 package core.basesyntax;
 
 public class FigureSupplier {
-    public static Figure getRandomFigure() {
+    public static final int RANDOM_SIZE = 10;
+    public static final int RANDOM_FIGURE = 5;
+
+    public Figure getRandomFigure() {
         String nameCircle = "circle";
-        int randomR = (int) (Math.random() * 10);
+        int randomR = (int) (Math.random() * RANDOM_SIZE);
         ColorSupplier colorCircle = new ColorSupplier();
-        Figure circle = new Circle(randomR, nameCircle,
-                colorCircle.getRandomColor());
+        Figure circle = new Circle(nameCircle,
+                colorCircle.getRandomColor(), randomR);
 
         String nameTrapezoid = "isoscelesTrapezoid";
-        int randomTop = (int) (Math.random() * 10);
-        int randomBottom = (int) (Math.random() * 10) + 1;
+        int randomTop = (int) (Math.random() * RANDOM_SIZE);
+        int randomBottom = (int) (Math.random() * RANDOM_SIZE) + 1;
         ColorSupplier colorTrapezoid = new ColorSupplier();
-        int randomHeight = (int) (Math.random() * 10) + 1;
-        Figure isoscelesTrapezoid = new IsoscelesTrapezoid(randomTop,
-                randomBottom, randomHeight,
-                nameTrapezoid, colorTrapezoid.getRandomColor());
+        int randomHeight = (int) (Math.random() * RANDOM_SIZE) + 1;
+        Figure isoscelesTrapezoid = new IsoscelesTrapezoid(nameTrapezoid,
+                colorTrapezoid.getRandomColor(), randomTop,
+                randomBottom, randomHeight);
 
         String nameSquare = "square";
-        int randomSide = (int) (Math.random() * 10) + 1;
+        int randomSide = (int) (Math.random() * RANDOM_SIZE) + 1;
         ColorSupplier colorSquare = new ColorSupplier();
-        Figure square = new Square(randomSide, nameSquare,
-                colorSquare.getRandomColor());
+        Figure square = new Square(nameSquare,
+                colorSquare.getRandomColor(), randomSide);
 
         String nameRectangle = "rectangle";
-        int randomSideA = (int) (Math.random() * 10);
-        int randomSideB = (int) (Math.random() * 10) + 1;
+        int randomSideA = (int) (Math.random() * RANDOM_SIZE);
+        int randomSideB = (int) (Math.random() * RANDOM_SIZE) + 1;
         ColorSupplier colorRectangle = new ColorSupplier();
-        Figure rectangle = new Rectangle(randomSideA, randomSideB,
-                nameRectangle, colorRectangle.getRandomColor());
+        Figure rectangle = new Rectangle(nameRectangle,
+                colorRectangle.getRandomColor(),
+                randomSideA, randomSideB);
 
         String nameRightTriangle = "RightTriangle";
-        int randomLegA = (int) (Math.random() * 10);
-        int randomLegB = (int) (Math.random() * 10);
+        int randomLegA = (int) (Math.random() * RANDOM_SIZE);
+        int randomLegB = (int) (Math.random() * RANDOM_SIZE);
         ColorSupplier colorRightTriangle = new ColorSupplier();
-        Figure rightTriangle = new RightTriangle(randomLegA, randomLegB,
-                nameRightTriangle, colorRightTriangle.getRandomColor());
+        Figure rightTriangle = new RightTriangle(nameRightTriangle,
+                colorRightTriangle.getRandomColor(), randomLegA, randomLegB);
 
         Figure[] figures = new Figure[]{
                 circle,
@@ -44,7 +48,7 @@ public class FigureSupplier {
                 rectangle,
                 rightTriangle
         };
-        int randomFigure = (int) (Math.random() * 5);
+        int randomFigure = (int) (Math.random() * RANDOM_FIGURE);
         return figures[randomFigure];
     }
 }

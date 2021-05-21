@@ -3,20 +3,19 @@ package core.basesyntax;
 public class Circle extends Figure implements FigureArea {
     private final int radius;
 
-    public Circle(int radius, String name, String color) {
+    public Circle(String name, String color, int radius) {
+        super(name, color);
         this.radius = radius;
-        this.name = name;
-        this.color = color;
     }
 
-    public double getArea() {
-        return area = Math.PI * radius * radius;
+    public double getAreaFigures() {
+        return getArea(Math.PI * radius * radius);
     }
 
     public void printDraw() {
-        System.out.println("Figure: " + name
-                + ",area: " + getArea() + " sq.units, "
+        System.out.println("Figure: " + getName()
+                + ", area: " + getAreaFigures() + " sq.units, "
                 + "radius: " + radius + " units, "
-                + "color: " + color);
+                + "color: " + getColor());
     }
 }
