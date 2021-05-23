@@ -12,3 +12,4 @@ public abstract class Figure implements Drawable,CalcArea {
     }
 }
 
+
