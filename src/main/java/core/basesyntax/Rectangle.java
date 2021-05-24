@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements FigureArea {
+public class Rectangle extends Figure implements Drawable {
     private final int sideA;
     private final int sideB;
 
@@ -10,15 +10,23 @@ public class Rectangle extends Figure implements FigureArea {
         this.sideB = sideB;
     }
 
+    public int getSideA() {
+        return sideA;
+    }
+
+    public int getSideB() {
+        return sideB;
+    }
+
     public double getAreaFigures() {
         return getArea(sideA * sideB);
     }
 
-    public void printDraw() {
+    public void draw() {
         System.out.println("Figure: " + getName()
                 + ", area: " + getAreaFigures() + " sq.units, "
-                + "sideA: " + sideA + " units, "
-                + "sideB: " + sideB + " units "
+                + "sideA: " + getSideA() + " units, "
+                + "sideB: " + getSideB() + " units "
                 + "color: " + getColor());
     }
 }

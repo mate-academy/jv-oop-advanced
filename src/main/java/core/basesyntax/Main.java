@@ -7,10 +7,10 @@ public class Main {
     public static void main(String[] args) {
         int randomQuantity = (int) (Math.random() * RANDOM_QUANTITY);
         FigureSupplier figuresupplier = new FigureSupplier();
-        FigureArea[] figures = new FigureArea[randomQuantity];
+        Drawable[] figures = new Drawable[randomQuantity];
         for (int i = 0; i < figures.length; i++) {
             figures[i] = figuresupplier.getRandomFigure();
-            figures[i].printDraw();
+            figures[i].draw();
         }
     }
 }

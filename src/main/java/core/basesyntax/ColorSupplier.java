@@ -16,7 +16,7 @@ public class ColorSupplier {
                 "gold",
                 "brown"
         };
-        int number = (int) (Math.random() * 12);
-        return colors[number];
+        int randomColorIndex = (int) (Math.random() * colors.length);
+        return colors[randomColorIndex];
     }
 }
