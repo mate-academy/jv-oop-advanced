@@ -8,12 +8,12 @@ public class RightTriangle extends Figure {
     public RightTriangle(double firstLeg, double secondLeg, String color) {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        this.color = color;
+        this.setColor(color);
     }
 
     @Override
     public String toString() {
-        return "RightTriangle{"
+        return "Right Triangle{"
                 + "area="
                 + getArea()
                 + " sq.units"
@@ -24,7 +24,7 @@ public class RightTriangle extends Figure {
                 + secondLeg
                 + " units"
                 + ", color='"
-                + color
+                + getColor()
                 + '\''
                 + '}';
     }

@@ -8,7 +8,7 @@ public class Rectangle extends Figure {
     public Rectangle(double sideA, double sideB, String color) {
         this.sideA = sideA;
         this.sideB = sideB;
-        this.color = color;
+        this.setColor(color);
     }
 
     @Override
@@ -24,7 +24,7 @@ public class Rectangle extends Figure {
                 + sideB
                 + " units"
                 + ", color='"
-                + color
+                + getColor()
                 + '\''
                 + '}';
     }

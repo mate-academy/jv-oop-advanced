@@ -12,7 +12,7 @@ public class Program {
         int count = new Random().nextInt(100) + 1;
         List<Figure> figures = new ArrayList<>(count);
         for (int i = 0; i < count; i++) {
-            figures.add(FigureSupplier.getFigure());
+            figures.add(FigureSupplier.getFigure(new Random().nextInt(100) + 1));
         }
         for (Figure figure : figures) {
             figure.draw();
