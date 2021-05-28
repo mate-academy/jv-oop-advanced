@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class ColorSupplier {
     public static String getRandomColor() {
-        String color = null;
+        String color;
         switch (new Random().nextInt(10) + 1) {
             case 1:
                 color = "white";
@@ -35,6 +35,9 @@ public class ColorSupplier {
                 break;
             case 10:
                 color = "black";
+                break;
+            default:
+                color = "unknown color";
         }
         return color;
     }
