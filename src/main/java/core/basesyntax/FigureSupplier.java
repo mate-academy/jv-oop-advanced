@@ -3,30 +3,32 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static Random random = new Random();
-
     public static Figure getRandomFigure() {
-        switch (random.nextInt(6)) {
+        switch ((int) (Math.random() * 6)) {
             case 1:
-                return new Circle(ColorSupplier.getRandomColor(), random.nextInt(1000) * Math.random());
+                return new Circle(ColorSupplier.getRandomColor(), getRandomDouble());
             case 2:
                 return new IsoscelesTrapezoid(ColorSupplier.getRandomColor(),
-                        random.nextInt(1000) * Math.random(),
-                        random.nextInt(1000) * Math.random(),
-                        random.nextInt(1000) * Math.random());
+                        getRandomDouble(),
+                        getRandomDouble(),
+                        getRandomDouble());
             case 3:
                 return new Rectangle(ColorSupplier.getRandomColor(),
-                        random.nextInt(1000) * Math.random(),
-                        random.nextInt(1000) * Math.random());
+                        getRandomDouble(),
+                        getRandomDouble());
             case 4:
                 return new RightTriangle(ColorSupplier.getRandomColor(),
-                        random.nextInt(1000) * Math.random(),
-                        random.nextInt(1000) * Math.random());
+                        getRandomDouble(),
+                        getRandomDouble());
             case 5:
                 return new Square(ColorSupplier.getRandomColor(),
-                        random.nextInt(1000) * Math.random());
+                        getRandomDouble());
             default:
                 return getRandomFigure();
         }
+    }
+
+    private static double getRandomDouble() { // The method gives a beautiful value rounded to the hundredths
+        return Math.round(Math.random() * 100000) / 100.0;
     }
 }
