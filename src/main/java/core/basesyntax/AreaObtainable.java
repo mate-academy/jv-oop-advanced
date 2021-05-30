@@ -1,5 +1,6 @@
 package core.basesyntax;
 
 public interface AreaObtainable {
-    double getArea();
+
+  double getArea();
 }
