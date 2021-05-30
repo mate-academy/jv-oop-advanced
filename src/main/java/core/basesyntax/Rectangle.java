@@ -23,9 +23,4 @@ public class Rectangle extends Figure {
     public double getArea() {
         return sideA * sideB;
     }
-
-    @Override
-    public void draw() {
-        System.out.println("Figure: " + this);
-    }
 }

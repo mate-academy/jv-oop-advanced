@@ -5,7 +5,8 @@ import java.util.Random;
 public class ColorSupplier {
     public String getRandomColor() {
         String color;
-        switch (new Random().nextInt(10) + 1) {
+        int countColors = 10;
+        switch (new Random().nextInt(countColors) + 1) {
             case 1:
                 color = "white";
                 break;

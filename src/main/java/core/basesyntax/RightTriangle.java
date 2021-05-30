@@ -23,9 +23,4 @@ public class RightTriangle extends Figure {
     public double getArea() {
         return firstLeg * secondLeg / 2;
     }
-
-    @Override
-    public void draw() {
-        System.out.println("Figure: " + this);
-    }
 }

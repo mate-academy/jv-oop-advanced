@@ -5,8 +5,9 @@ import java.util.Random;
 public class FigureSupplier {
     public Figure getFigure(int basicSize) {
         Figure figure;
+        int countFigures = 5;
         Random random = new Random();
-        switch (random.nextInt(5) + 1) {
+        switch (random.nextInt(countFigures) + 1) {
             case 1:
                 figure = new Circle(random.nextDouble() * basicSize,
                         new ColorSupplier().getRandomColor());
