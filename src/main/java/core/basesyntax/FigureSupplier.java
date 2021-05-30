@@ -7,7 +7,7 @@ public class FigureSupplier {
             case 1:
                 return new Circle(ColorSupplier.getRandomColor(), getRandomDouble());
             case 2:
-                return new IsoscelesTrapezoid(ColorSupplier.getRandomColor(),
+                return new Trapezoid(ColorSupplier.getRandomColor(),
                         getRandomDouble(),
                         getRandomDouble(),
                         getRandomDouble());
