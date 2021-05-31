@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class App {
-
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier(new ColorSupplier());
         Figure[] figures = new Figure[(int) (Math.random() * 20)];

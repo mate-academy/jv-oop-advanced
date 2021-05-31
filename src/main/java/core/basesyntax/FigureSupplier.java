@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class FigureSupplier {
-
     private ColorSupplier colorSupplier;
 
     public FigureSupplier(ColorSupplier colorSupplier) {

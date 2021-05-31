@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Trapezoid extends Figure {
-
     private double lowerBase;
     private double upperBase;
     private double lateralSide;
