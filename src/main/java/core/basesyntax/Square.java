@@ -1,2 +1,5 @@
-package core.basesyntax;public class Square {
+package core.basesyntax;
+
+public class Square extends Figure {
+
 }

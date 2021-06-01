@@ -1,2 +1,7 @@
-package core.basesyntax;public class Figure {
+package core.basesyntax;
+
+import java.awt.*;
+
+public abstract class Figure {
+
 }
