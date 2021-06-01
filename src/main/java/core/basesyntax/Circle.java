@@ -10,7 +10,8 @@ public class Circle extends Figure implements AreaCalculator {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + name + "; " + "Area: " + calculateArea() + "; " + "Radius: " + radius + "; " + "Color: " + color + ";");
+        System.out.println("Figure: " + getName() + "; " + "Area: " + calculateArea()
+                + "; " + "Radius: " + radius + "; " + "Color: " + getColor() + ";");
     }
 
     @Override

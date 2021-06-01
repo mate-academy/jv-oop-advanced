@@ -13,7 +13,8 @@ public class FigureSupplier {
         switch (figureNumber) {
             case 0:
                 colorSupplier = new ColorSupplier();
-                return new Circle("Circle", colorSupplier.getRandomColor(), getRandomDoubleValue());
+                return new Circle("Circle", colorSupplier.getRandomColor(),
+                        getRandomDoubleValue());
             case 1:
                 colorSupplier = new ColorSupplier();
                 return new IsoscelesTrapezoid("IsoscelesTrapezoid",
@@ -26,10 +27,12 @@ public class FigureSupplier {
             case 3:
                 colorSupplier = new ColorSupplier();
                 double side = getRandomDoubleValue();
-                return new RightTriangle("Triangle", colorSupplier.getRandomColor(), side, side);
+                return new RightTriangle("Triangle", colorSupplier.getRandomColor(),
+                        side, side);
             case 4:
                 colorSupplier = new ColorSupplier();
-                return new Square("Square", colorSupplier.getRandomColor(), getRandomDoubleValue());
+                return new Square("Square", colorSupplier.getRandomColor(),
+                        getRandomDoubleValue());
             default:
                 return null;
         }

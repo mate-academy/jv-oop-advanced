@@ -12,8 +12,10 @@ public class Rectangle extends Figure implements AreaCalculator {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + name + "; " + "Area: " + calculateArea() + "; " + "First side: " + firstSide + "; " +
-                "Second side: " + secondSide + "; " + "Color: " + color + ";");
+        System.out.println("Figure: " + getName() + "; " + "Area: " + calculateArea()
+                + "; " + "First side: " + firstSide + "; "
+                + "Second side: " + secondSide + "; " + "Color: "
+                + getColor() + ";");
     }
 
     @Override

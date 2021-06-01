@@ -5,7 +5,8 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
     private double bottomSide;
     private double height;
 
-    public IsoscelesTrapezoid(String name, String color, double upperSide, double bottomSide, double height) {
+    public IsoscelesTrapezoid(String name, String color, double upperSide,
+                              double bottomSide, double height) {
         super(name, color);
         this.upperSide = upperSide;
         this.bottomSide = bottomSide;
@@ -14,8 +15,10 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + name + "; " + "Area: " + calculateArea() + "; " + "Upper side: " + upperSide +
-                "Bottom side: " + bottomSide + "; " + "Height: " + height + "; " + "Color: " + color + ";");
+        System.out.println("Figure: " + getName() + "; " + "Area: "
+                + calculateArea() + "; " + "Upper side: " + upperSide
+                + "Bottom side: " + bottomSide + "; " + "Height: " + height
+                + "; " + "Color: " + getColor() + ";");
     }
 
     @Override
