@@ -31,7 +31,7 @@ public class FigureSupplier {
                 colorSupplier = new ColorSupplier();
                 return new Square("Square", colorSupplier.getRandomColor(), getRandomDoubleValue());
             default:
-                return new Figure();
+                return null;
         }
     }
 
