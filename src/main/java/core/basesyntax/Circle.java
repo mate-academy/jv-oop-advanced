@@ -1,16 +1,16 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements AreaCalculatable {
+public class Circle extends Figure implements AreaCalculator, Drawable {
     private double radius;
 
-    public Circle(String name, String color, double area, double radius) {
-        super(name, color, area);
+    public Circle(String name, String color, double radius) {
+        super(name, color);
         this.radius = radius;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + "; " + "Area: " + area + "; " + "Raduis: " + radius + "; " + "Color: " + color + ";");
+        System.out.println("Figure: " + "; " + "Area: " + calculateArea() + "; " + "Raduis: " + radius + "; " + "Color: " + color + ";");
     }
 
     @Override

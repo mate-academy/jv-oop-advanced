@@ -1,12 +1,12 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements AreaCalculatable {
+public class IsoscelesTrapezoid extends Figure implements AreaCalculator, Drawable {
     private double upperSide;
     private double bottomSide;
     private double height;
 
-    public IsoscelesTrapezoid(String name, String color, double area, double upperSide, double bottomSide, double height) {
-        super(name, color, area);
+    public IsoscelesTrapezoid(String name, String color, double upperSide, double bottomSide, double height) {
+        super(name, color);
         this.upperSide = upperSide;
         this.bottomSide = bottomSide;
         this.height = height;
@@ -14,7 +14,7 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculatable {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + "; " + "Area: " + area + "; " + "Upper side: " + upperSide +
+        System.out.println("Figure: " + "; " + "Area: " + calculateArea() + "; " + "Upper side: " + upperSide +
                 "Bottom side: " + bottomSide + "; " + "Height: " + height + "; " + "Color: " + color + ";");
     }
 
