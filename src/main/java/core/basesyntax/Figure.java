@@ -1,8 +1,18 @@
 package core.basesyntax;
 
 public abstract class Figure {
-    ColorSupplier colorSupplier = new ColorSupplier();
-    String color = colorSupplier.getRandomColor();
-    double square;
+    String name;
+    String color;
+    double area;
 
+    public Figure() {
+
+    }
+    public Figure(String name, String color, double area) {
+        this.name = name;
+        this.color = color;
+        this.area = area;
+    }
+
+    public abstract void draw();
 }
