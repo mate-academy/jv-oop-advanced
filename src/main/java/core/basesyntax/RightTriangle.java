@@ -12,7 +12,7 @@ public class RightTriangle extends Figure implements AreaCalculator {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + "; " + "Area: " + calculateArea() + "; " + "Leg: " + firstLeg +
+        System.out.println("Figure: " + name + "; " + "Area: " + calculateArea() + "; " + "Leg: " + firstLeg  + "; " +
                 "Leg: " + secondLeg + "; " + "Color: " + color + ";");
     }
 

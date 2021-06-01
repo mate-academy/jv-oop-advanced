@@ -10,7 +10,7 @@ public class Square extends Figure implements AreaCalculator {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + "; " + "Area: " + calculateArea() + "; " + "Side: " + side + "; " + "Color: " + color + ";");
+        System.out.println("Figure: " + name + "; " + "Area: " + calculateArea() + "; " + "Side: " + side + "; " + "Color: " + color + ";");
     }
 
     @Override
