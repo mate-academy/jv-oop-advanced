@@ -4,7 +4,7 @@ public class Rectangle extends Figure implements Drawable {
     double firstSide;
     double secondSide;
     @Override
-    public double draw() {
+    public double calculateArea() {
         return firstSide * secondSide;
     }
 }

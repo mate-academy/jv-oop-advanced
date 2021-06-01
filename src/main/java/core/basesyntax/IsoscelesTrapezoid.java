@@ -5,7 +5,7 @@ public class IsoscelesTrapezoid extends Figure implements Drawable {
     double bottomSide;
     double height;
     @Override
-    public double draw() {
+    public double calculateArea() {
         return height / 2 * (upperSide + bottomSide);
     }
 }

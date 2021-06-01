@@ -8,7 +8,7 @@ public class Circle extends Figure implements Drawable {
     }
 
     @Override
-    public double draw() {
+    public double calculateArea() {
         return 2 * Math.PI * radius;
     }
 }
