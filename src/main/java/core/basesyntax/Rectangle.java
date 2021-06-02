@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Shape implements Printable {
+public class Rectangle extends Shape implements Printable, Drawable {
     private double height;
     private double width;
 

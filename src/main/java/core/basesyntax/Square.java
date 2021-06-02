@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends Shape implements Printable {
+public class Square extends Shape implements Printable, Drawable {
     private double side;
 
     public Square(Color color, double side) {

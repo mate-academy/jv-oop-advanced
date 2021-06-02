@@ -8,7 +8,7 @@ public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Shape getRandomFigure() {
-        Color color = Color.valueOf(colorSupplier.getRandomColor());
+        Color color = colorSupplier.getRandomColor();
         int shapeKind = new Random().nextInt(RANDOM_NUMBER);
         switch (shapeKind) {
             case 0:

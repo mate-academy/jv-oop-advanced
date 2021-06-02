@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Shape implements Printable {
+public class Circle extends Shape implements Printable, Drawable {
     private double radius;
 
     public Circle(Color color, double radius) {
