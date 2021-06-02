@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public interface Figure {
+public interface Printable {
     double figureArea();
 
     void drawFigure();

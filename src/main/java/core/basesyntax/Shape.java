@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Shape implements Figure {
+public abstract class Shape {
     private Color color;
 
     Shape(Color color) {
@@ -10,4 +10,6 @@ public abstract class Shape implements Figure {
     public Color getColor() {
         return color;
     }
+
+    public abstract void drawFigure();
 }

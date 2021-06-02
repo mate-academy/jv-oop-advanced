@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Shape {
+public class RightTriangle extends Shape implements Printable {
     private double sideA;
     private double sideB;
 

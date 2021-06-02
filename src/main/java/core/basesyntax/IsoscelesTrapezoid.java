@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Shape {
+public class IsoscelesTrapezoid extends Shape implements Printable {
     private double downSide;
     private double upSide;
     private double height;
