@@ -8,7 +8,6 @@ public class Rectangle extends Figure {
         super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
-        this.area = calculateArea();
     }
 
     @Override
@@ -19,7 +18,7 @@ public class Rectangle extends Figure {
     @Override
     public String draw() {
         return "Figure: rectangle, "
-                + "area: " + area + " sq.unit, "
+                + "area: " + calculateArea() + " sq.unit, "
                 + "sides: " + firstSide + " " + secondSide + " units, "
                 + "color: " + color.name().toLowerCase();
     }

@@ -6,12 +6,11 @@ public class Circle extends Figure {
     public Circle(Color color, double radius) {
         super(color);
         this.radius = radius;
-        this.area = calculateArea();
     }
 
     public String draw() {
         return "Figure: circle, "
-                + "area: " + area + " sq.units "
+                + "area: " + calculateArea() + " sq.units "
                 + "radius: " + radius + " units "
                 + "color: " + color.name().toLowerCase();
     }

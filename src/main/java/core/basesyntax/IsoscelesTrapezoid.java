@@ -10,7 +10,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.firstBase = firstBase;
         this.secondBase = secondBase;
         this.side = side;
-        this.area = calculateArea();
     }
 
     @Override
@@ -23,7 +22,7 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public String draw() {
         return "Figure: rectangle, "
-                + "area: " + area + " sq.unit, "
+                + "area: " + calculateArea() + " sq.unit, "
                 + "sides: " + firstBase + " " + secondBase + " units, "
                 + "color: " + color.name().toLowerCase();
     }
