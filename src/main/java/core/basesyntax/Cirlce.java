@@ -15,8 +15,8 @@ public class Cirlce extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: Cirlce, area: " + getArea() +
-                " sq.units, radius: " + radius
+        System.out.println("Figure: Cirlce, area: " + getArea()
+                + " sq.units, radius: " + radius
                 + " units: color " + getColor());
     }
 }
