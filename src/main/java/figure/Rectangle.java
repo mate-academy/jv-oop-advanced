@@ -11,10 +11,6 @@ public class Rectangle extends Figure {
         this.secondSide = secondSide;
     }
 
-    public Rectangle(){
-
-    }
-
     public Double getFirstSide(Double firstSide) {
         return firstSide;
     }
@@ -42,6 +38,6 @@ public class Rectangle extends Figure {
                 .append(" color : ").append(getColor())
                 .append(" area : ").append(getArea()).append(" sq.units")
                 .append(" first side : ").append(this.firstSide).append(" units")
-                .append(" second side : ").append(this.secondSide).append(" units").toString());
+                .append(" second side : ").append(this.secondSide).append(" units"));
     }
 }

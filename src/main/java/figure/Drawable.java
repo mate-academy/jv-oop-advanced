@@ -1,5 +1,5 @@
 package figure;
 
-public interface GetInfo {
+public interface Drawable {
     void draw();
 }

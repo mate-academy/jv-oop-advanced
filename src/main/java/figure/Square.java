@@ -10,10 +10,6 @@ public class Square extends Figure {
         this.side = side;
     }
 
-    public Square() {
-
-    }
-
     public Double getSide(Double side) {
         return side;
     }
@@ -32,6 +28,6 @@ public class Square extends Figure {
         System.out.println(new StringBuilder().append("Figure : ").append(getType())
                 .append(" color : ").append(getColor())
                 .append(" area : ").append(getArea()).append(" sq.units")
-                .append(" side : ").append(this.side).append(" units").toString());
+                .append(" side : ").append(this.side).append(" units"));
     }
 }

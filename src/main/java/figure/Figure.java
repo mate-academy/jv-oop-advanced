@@ -1,6 +1,6 @@
 package figure;
 
-public class Figure implements AreaCalculator, GetInfo {
+public class Figure implements AreaCalculator, Drawable {
     private String type = "non type";
     private String color;
 
@@ -37,6 +37,6 @@ public class Figure implements AreaCalculator, GetInfo {
     public void draw() {
         System.out.println(new StringBuilder().append("Figure - type : ").append(this.type)
                 .append(" color : ").append(this.color)
-                .append(" area : ").append(getArea()).append(" sq.units").toString());
+                .append(" area : ").append(getArea()).append(" sq.units"));
     }
 }

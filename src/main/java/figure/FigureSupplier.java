@@ -5,7 +5,7 @@ import java.util.Random;
 public class FigureSupplier extends ColorSupplier {
     public static final int FIGURE_COUNT = 5;
     public static final int FIGURE_RANDOM_UNIT = 100;
-    private static String[] figures = {"circle", "rectangle",
+    private static final String[] figures = {"circle", "rectangle",
             "right triangle", "isosceles trapezoid", "square"};
 
     public static String getTypeName(int typeNumber) {

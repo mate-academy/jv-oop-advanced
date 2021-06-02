@@ -11,10 +11,6 @@ public class RightTriangle extends Figure {
         this.secondLeg = secondLeg;
     }
 
-    RightTriangle(){
-
-    }
-
     public Double getFirstLeg(Double firstLeg) {
         return firstLeg;
     }

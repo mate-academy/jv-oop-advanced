@@ -1,36 +1,32 @@
 package figure;
 
 public class IsoscelesTrapezoid extends Figure {
-    private Double firstbase;
-    private Double secondbase;
+    private Double firstBase;
+    private Double secondBase;
     private Double height;
 
-    public IsoscelesTrapezoid(String color, Double firstbase, Double secondbase, Double height) {
+    public IsoscelesTrapezoid(String color, Double firstBase, Double secondBase, Double height) {
         this.setType(FigureSupplier.getTypeName(3));
         this.setColor(color);
-        this.firstbase = firstbase;
-        this.secondbase = secondbase;
+        this.firstBase = firstBase;
+        this.secondBase = secondBase;
         this.height = height;
     }
 
-    IsoscelesTrapezoid() {
-
+    public Double getFirstBase(Double firstBase) {
+        return firstBase;
     }
 
-    public Double getFirstbase(Double firstbase) {
-        return firstbase;
+    public void setFirstBase(Double firstBase) {
+        this.firstBase = firstBase;
     }
 
-    public void setFirstbase(Double firstbase) {
-        this.firstbase = firstbase;
+    public Double getSecondBase(Double secondBase) {
+        return secondBase;
     }
 
-    public Double getSecondbase(Double secondbase) {
-        return secondbase;
-    }
-
-    public void setSecondbase(Double secondbase) {
-        this.secondbase = secondbase;
+    public void setSecondBase(Double secondBase) {
+        this.secondBase = secondBase;
     }
 
     public Double getHeight(Double height) {
@@ -43,7 +39,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public Double getArea() {
-        return 0.5 * (firstbase + secondbase) * height;
+        return 0.5 * (firstBase + secondBase) * height;
     }
 
     @Override
@@ -51,8 +47,8 @@ public class IsoscelesTrapezoid extends Figure {
         System.out.println(new StringBuilder().append("Figure : ").append(getType())
                 .append(" color : ").append(getColor())
                 .append(" area : ").append(getArea()).append(" sq.units")
-                .append(" first base : ").append(this.firstbase).append(" units")
-                .append(" second base : ").append(this.secondbase).append(" units")
-                .append(" height : ").append(this.height).append(" units").toString());
+                .append(" first base : ").append(this.firstBase).append(" units")
+                .append(" second base : ").append(this.secondBase).append(" units")
+                .append(" height : ").append(this.height).append(" units"));
     }
 }

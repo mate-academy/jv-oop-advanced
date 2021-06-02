@@ -9,10 +9,6 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
-    public Circle() {
-
-    }
-
     public Double getRadius(Double radius) {
         return radius;
     }
@@ -31,6 +27,6 @@ public class Circle extends Figure {
         System.out.println(new StringBuilder().append("Figure : ").append(getType())
                 .append(" color : ").append(getColor())
                 .append(" area : ").append(getArea()).append(" sq.units")
-                .append(" radius : ").append(this.radius).append(" units").toString());
+                .append(" radius : ").append(this.radius).append(" units"));
     }
 }
