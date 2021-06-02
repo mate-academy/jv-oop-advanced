@@ -7,34 +7,29 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         Random random = new Random();
-        ColorSupplier colorSupplier;
+        ColorSupplier colorSupplier = new ColorSupplier();
         int figureNumber = random.nextInt(FIGURE_COUNT);
 
         switch (figureNumber) {
             case 0:
-                colorSupplier = new ColorSupplier();
                 return new Circle("Circle", colorSupplier.getRandomColor(),
                         getRandomDoubleValue());
             case 1:
-                colorSupplier = new ColorSupplier();
                 return new IsoscelesTrapezoid("IsoscelesTrapezoid",
                         colorSupplier.getRandomColor(), getRandomDoubleValue(),
                         getRandomDoubleValue(), getRandomDoubleValue());
             case 2:
-                colorSupplier = new ColorSupplier();
                 return new Rectangle("Rectangle", colorSupplier.getRandomColor(),
                         getRandomDoubleValue(), getRandomDoubleValue());
             case 3:
-                colorSupplier = new ColorSupplier();
                 double side = getRandomDoubleValue();
                 return new RightTriangle("Triangle", colorSupplier.getRandomColor(),
                         side, side);
             case 4:
-                colorSupplier = new ColorSupplier();
                 return new Square("Square", colorSupplier.getRandomColor(),
                         getRandomDoubleValue());
             default:
-                return null;
+                return new Circle("error", "error", 0);
         }
     }
 
