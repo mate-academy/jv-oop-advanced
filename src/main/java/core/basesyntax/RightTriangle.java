@@ -1,13 +1,13 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements Area {
+public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
     public RightTriangle(double firstLeg, double secondLeg, String color) {
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        setColor(color);
     }
 
     @Override
@@ -15,20 +15,10 @@ public class RightTriangle extends Figure implements Area {
         return (firstLeg * secondLeg) / 2;
     }
 
-    @Override
     public void draw() {
-        System.out.println("Figure: right triangle, area: "
-                +
-                getArea()
-                +
-                " sq.units, firstLeg: " + firstLeg
-                +
-                " units, secondLeg "
-                +
-                secondLeg
-                +
-                " units, color: "
-                +
-                getColor());
+        System.out.printf("Figure: right triangle, area: %1f sq.units, "
+                        +
+                        "firstLeg: %2f units, secondLeg: %3f units, color: %1s%n",
+                getArea(), firstLeg, secondLeg, getColor());
     }
 }
