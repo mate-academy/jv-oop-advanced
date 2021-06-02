@@ -18,6 +18,6 @@ public class Circle extends Figure {
 
     @Override
     public double calculateArea() {
-        return (int)(Math.PI * 100) / 100.0 * radius * radius;
+        return (int)(Math.PI * radius * radius * 1000) / 1000.0;
     }
 }

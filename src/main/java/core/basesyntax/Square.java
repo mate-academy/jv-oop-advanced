@@ -10,15 +10,15 @@ public class Square extends Figure {
     }
 
     @Override
-    public double calculateArea() {
-        return side * side;
-    }
-
-    @Override
     public String draw() {
         return "Figure: square, "
                 + "area: " + area + " sq.unit, "
                 + "side: " + side + " units, "
                 + "color: " + color.name().toLowerCase();
+    }
+
+    @Override
+    public double calculateArea() {
+        return (int)(side * side * 1000) / 1000.0;
     }
 }

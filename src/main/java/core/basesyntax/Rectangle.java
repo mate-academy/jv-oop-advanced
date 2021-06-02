@@ -13,7 +13,7 @@ public class Rectangle extends Figure {
 
     @Override
     public double calculateArea() {
-        return firstSide * secondSide;
+        return (int)(firstSide * secondSide * 0.5 * 1000) / 1000.0;
     }
 
     @Override
