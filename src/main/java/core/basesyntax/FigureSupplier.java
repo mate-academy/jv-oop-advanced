@@ -5,11 +5,10 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int FIGURES = 5;
 
-    public Object getRandomFigure() {
+    public Figure getRandomFigure() {
         ColorSupplier colorSupplier = new ColorSupplier();
         Random random = new Random();
         double generatedDouble = Math.ceil(Math.random() * 10);
-        int limit = (int) Math.ceil(Math.random() * FIGURES);
         int target = random.nextInt(FIGURES);
         switch (target) {
             case 0:

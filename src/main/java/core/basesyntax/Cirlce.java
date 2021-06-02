@@ -5,7 +5,7 @@ public class Cirlce extends Figure {
 
     public Cirlce(String color, double radius) {
         super(color);
-
+        this.radius = radius;
     }
 
     @Override
