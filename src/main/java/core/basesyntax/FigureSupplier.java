@@ -33,7 +33,9 @@ public class FigureSupplier {
                 System.out.println(isoscelesTrapezoid.getInformationOfFigure());
                 return isoscelesTrapezoid;
             default:
-                return null;
+                Figure circle1 = new Circle(colorSupplier.getRandomColor(), 1 + Math.random() * 20);
+                System.out.println(circle1.getInformationOfFigure());
+                return circle1;
         }
     }
 }
