@@ -15,7 +15,7 @@ public class Circle extends Shape implements Printable, Drawable {
 
     @Override
     public void drawFigure() {
-        System.out.println(String.format("Figure: circle, area: %s, radius: %s, color: %s",
-                figureArea(), radius, getColor()));
+        System.out.printf("Figure: circle, area: %s, radius: %s, color: %s%n",
+                figureArea(), radius, getColor());
     }
 }

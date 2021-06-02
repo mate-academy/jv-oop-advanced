@@ -17,7 +17,7 @@ public class Rectangle extends Shape implements Printable, Drawable {
 
     @Override
     public void drawFigure() {
-        System.out.println(String.format("Figure: rectangle, area: %s, height: %s, width: %s",
-                figureArea(), height, width, getColor()));
+        System.out.printf("Figure: rectangle, area: %s, height: %s, width: %s, color: %s%n",
+                figureArea(), height, width, getColor());
     }
 }

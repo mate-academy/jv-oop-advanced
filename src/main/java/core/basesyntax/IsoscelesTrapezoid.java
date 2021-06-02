@@ -19,8 +19,8 @@ public class IsoscelesTrapezoid extends Shape implements Printable, Drawable {
 
     @Override
     public void drawFigure() {
-        System.out.println(String.format("Figure: isosceles trapezoid, area %s,"
-                        + " downSide %s, upSide %s, height %s, color %s.", figureArea(), downSide,
-                        upSide, height, getColor()));
+        System.out.printf("Figure: isosceles trapezoid, area %s,"
+                        + " downSide %s, upSide %s, height %s, color %s.%n", figureArea(), downSide,
+                        upSide, height, getColor());
     }
 }

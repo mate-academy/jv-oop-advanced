@@ -15,7 +15,7 @@ public class Square extends Shape implements Printable, Drawable {
 
     @Override
     public void drawFigure() {
-        System.out.println(String.format("Figure: square, area: %s, side: %s, color: %s",
-                figureArea(), side, getColor()));
+        System.out.printf("Figure: square, area: %s, side: %s, color: %s%n",
+                figureArea(), side, getColor());
     }
 }

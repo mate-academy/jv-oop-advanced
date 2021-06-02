@@ -17,7 +17,7 @@ public class RightTriangle extends Shape implements Printable, Drawable {
 
     @Override
     public void drawFigure() {
-        System.out.println(String.format("Figure: right triangle, area: %s, sideA: %s, sideB: %s,"
-                + " color: %s", figureArea(), sideA, sideB, getColor()));
+        System.out.printf("Figure: right triangle, area: %s, sideA: %s, sideB: %s,"
+                + " color: %s%n", figureArea(), sideA, sideB, getColor());
     }
 }
