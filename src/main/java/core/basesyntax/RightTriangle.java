@@ -11,13 +11,13 @@ public class RightTriangle extends Shape {
     }
 
     @Override
-    double figureArea() {
+    public double figureArea() {
         return sideA * sideB / 2;
     }
 
     @Override
-    void drawFigure() {
+    public void drawFigure() {
         System.out.println(String.format("Figure: right triangle, area: %s, sideA: %s, sideB: %s,"
-                + " color: %s", figureArea(), sideA, sideB, color));
+                + " color: %s", figureArea(), sideA, sideB, getColor()));
     }
 }

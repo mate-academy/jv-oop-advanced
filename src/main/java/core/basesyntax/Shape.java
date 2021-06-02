@@ -1,13 +1,13 @@
 package core.basesyntax;
 
-public abstract class Shape {
-    public Color color;
+public abstract class Shape implements Figure {
+    private Color color;
 
-    public Shape(Color color) {
+    Shape(Color color) {
         this.color = color;
     }
 
-    abstract double figureArea();
-
-    abstract void drawFigure();
+    public Color getColor() {
+        return color;
+    }
 }
