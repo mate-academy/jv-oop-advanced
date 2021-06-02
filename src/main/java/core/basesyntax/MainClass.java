@@ -7,12 +7,13 @@ import java.util.Random;
  */
 public class MainClass {
     public static void main(String[] args) {
-        Random rnd = new Random();
-        Figure [] array = new Figure[rnd.nextInt(15) + 1];
+        Random random = new Random();
+        final int arrayOfFigureLength = random.nextInt(15) + 1;
+        Figure [] array = new Figure[arrayOfFigureLength];
+        FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < array.length; i++) {
-            array[i] = new FigureSupplier().getRandomFigure();
+            array[i] = figureSupplier.getRandomFigure();
         }
-        System.out.println(array.length);
         for (int i = 0; i < array.length; i++) {
             array[i].draw();
         }

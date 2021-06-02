@@ -18,8 +18,7 @@ public class Rectangle extends Figure {
         this.side = side;
     }
 
-    public int getLeg()
-    {
+    public int getLeg() {
         return leg;
     }
 

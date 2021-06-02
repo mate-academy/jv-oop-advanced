@@ -17,7 +17,7 @@ public class Circle extends Figure {
     }
 
     public double areaCalculator() {
-        return (Math.PI * radius * radius);
+        return Math.PI * radius * radius;
     }
 
     public void draw() {
