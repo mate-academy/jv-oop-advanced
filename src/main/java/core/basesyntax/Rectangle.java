@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figures{
+public class Rectangle extends Figures {
     private double sideA;
     private double sideB;
 
@@ -17,6 +17,7 @@ public class Rectangle extends Figures{
     public double getSideB() {
         return sideB;
     }
+
     @Override
     public double getArea() {
         return sideA * sideB;
@@ -24,8 +25,8 @@ public class Rectangle extends Figures{
 
     @Override
     public void draw() {
-        System.out.println("Figure" + getName() + " is " + getColor()
-                + "and has area: " + getArea() + "sq. units, because has sides:"
+        System.out.println("Figure " + getName() + " is " + getColor().toLowerCase()
+                + " and has area: " + getArea() + " sq. units, because has sides: "
                 + getSideA() + ", " + getSideB());
     }
 }
