@@ -8,29 +8,48 @@ import figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int UPPER_LIMIT = 10;
-    private static final int NUMBER_OF_FIGURES = 6;
+    private static final int upperLimit = 10;
+    private static final int numberOfFigures = 6;
 
+    public static Figure[] getRandomFigureArray() {
+        FigureSupplier figureSupplier = new FigureSupplier();
+        Figure[] figures = new Figure[new Random().nextInt(6)];
+        for (int i = 0; i < figures.length; i++) {
+            figures[i] = figureSupplier.getRandomFigure();
+        }
+        return figures;
+    }
 
+    public void printFiguresArray(Figure[] figures) {
+        for (int i = 0; i < figures.length; i++) {
+            System.out.println(figures[i]);
+        }
+    }
 
     public Figure getRandomFigure() {
-        switch (new Random().nextInt(NUMBER_OF_FIGURES)) {
+        Figure figure;
+        switch (new Random().nextInt(numberOfFigures)) {
             case 1:
-                return new Circle(new Random().nextInt(UPPER_LIMIT));
+                figure = new Circle(new Random().nextInt(upperLimit));
+                return figure;
             case 2:
-                return new Square(new Random().nextInt(UPPER_LIMIT));
+                figure = new Square(new Random().nextInt(upperLimit));
+                return figure;
             case 3:
-                return new IsoscelesTrapezoid(new Random()
-                        .nextInt(UPPER_LIMIT),
-                        new Random().nextInt(UPPER_LIMIT),
-                        new Random().nextInt(UPPER_LIMIT));
+                figure = new IsoscelesTrapezoid(new Random()
+                        .nextInt(upperLimit),
+                        new Random().nextInt(upperLimit),
+                        new Random().nextInt(upperLimit));
+                return figure;
             case 4:
-                return new Rectangle(new Random().nextInt(UPPER_LIMIT),
-                        new Random().nextInt(UPPER_LIMIT));
+                figure = new Rectangle(new Random().nextInt(upperLimit),
+                        new Random().nextInt(upperLimit));
+                return figure;
             case 5:
-                return new RightTriangle(new Random().nextInt(UPPER_LIMIT),
-                        new Random().nextInt(UPPER_LIMIT),
-                        new Random().nextInt(UPPER_LIMIT));
+                figure = new RightTriangle(new Random().nextInt(upperLimit),
+                        new Random().nextInt(upperLimit),
+                        new Random().nextInt(upperLimit));
+                return figure;
             default:
                 return new Rectangle(1, 1);
         }

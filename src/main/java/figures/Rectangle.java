@@ -1,15 +1,11 @@
 package figures;
 
-import behavior.ColorSupplier;
 import behavior.Figure;
-import behavior.GetAreaAble;
 
-public class Rectangle extends Figure implements GetAreaAble {
-    private final double sideA;
-    private final double sideB;
-    private final String name = "Rectangle";
-
-    ColorSupplier colorSupplier = new ColorSupplier();
+public class Rectangle extends Figure {
+    private double sideA;
+    private double sideB;
+    private String name = "Rectangle";
 
     public Rectangle(double sideA, double sideB) {
         this.sideA = sideA;
@@ -24,6 +20,6 @@ public class Rectangle extends Figure implements GetAreaAble {
     @Override
     public String toString() {
         return "Figure: " + name + ", area: " + getArea() + " sq.units, sideA: "
-                + sideA + " units, sideB: " + sideB + " units, color: " + colorSupplier.getRandomColor();
+                + sideA + " units, sideB: " + sideB + " units, color: " + getRandomColor();
     }
 }
