@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Shape implements Drawable{
+public abstract class Shape implements Drawable {
     private Color color;
 
     Shape(Color color) {
