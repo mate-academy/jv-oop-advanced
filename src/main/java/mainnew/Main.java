@@ -1,13 +1,12 @@
-package main2;
+package mainnew;
 
 import behavior.Figure;
 import behavior.FigureSupplier;
 
-import java.util.Random;
-
 public class Main {
     public static void main(String[] args) {
+        FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figures = FigureSupplier.getRandomFigureArray();
-        FigureSupplier.printFiguresArray(figures);
+        figureSupplier.printFiguresArray(figures);
     }
 }

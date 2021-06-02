@@ -1,4 +1,4 @@
-package state;
+package behavior;
 
 public enum Colors {
     Red,

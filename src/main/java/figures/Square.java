@@ -1,14 +1,23 @@
-package state;
+package figures;
 
-public class Square implements Shape {
-    double side;
+import behavior.Figure;
 
-    public void setSide(double side) {
+public class Square extends Figure {
+    private double side;
+    private String name = "Square";
+
+    public Square(double side) {
         this.side = side;
     }
 
     @Override
     public double getArea() {
-        return 0;
+        return side * side;
+    }
+
+    @Override
+    public String toString() {
+        return "Figure: " + name + ", area: " + getArea() + " sq.units, side: "
+                + side + " units, color: " + getRandomColor();
     }
 }
