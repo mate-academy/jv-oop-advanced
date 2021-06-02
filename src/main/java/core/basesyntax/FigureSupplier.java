@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class FigureSupplier {
 
-    public static Figure getRandomFigure() {
+    public Figure getRandomFigure() {
         switch (new Random().nextInt(4)) {
             case 0:
                 return new Circle();

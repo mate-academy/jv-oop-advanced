@@ -8,7 +8,7 @@ public class Rectangle extends Figure{
 
     public Rectangle() {
         super.title = "rectangle";
-        super.color = ColorSupplier.getRandomColor();
+        super.color = new ColorSupplier().getRandomColor();
 
         while (!(this.bigSide >= 50) && !(this.smallSide > 0 && this.smallSide < 50)) {
             this.bigSide = new Random().nextInt();

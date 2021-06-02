@@ -11,7 +11,7 @@ public class IsoscelesTrapezoid extends Figure{
 
     public IsoscelesTrapezoid() {
         super.title = "isosceles trapezoid";
-        super.color = ColorSupplier.getRandomColor();
+        super.color = new ColorSupplier().getRandomColor();
 
         while (!(highFoundation > lowFoundation)) {
             this.highFoundation = new Random().nextInt(100);

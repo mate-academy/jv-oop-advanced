@@ -8,7 +8,7 @@ public class RightTriangle extends Figure{
 
     public RightTriangle() {
         super.title = "right triangle";
-        super.color = ColorSupplier.getRandomColor();
+        super.color = new ColorSupplier().getRandomColor();
         this.firstLeg = new Random().nextInt(100);
         this.secondLeg = new Random().nextInt(100);
     }

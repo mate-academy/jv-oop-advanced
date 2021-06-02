@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class ColorSupplier {
-    static String getRandomColor() {
+    public String getRandomColor() {
         switch (new Random().nextInt(2)) {
             case 0:
                 return "blue";

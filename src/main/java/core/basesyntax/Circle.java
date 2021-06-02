@@ -5,7 +5,7 @@ public class Circle extends Figure {
 
     public Circle() {
         super.title = "circle";
-        super.color = ColorSupplier.getRandomColor();
+        super.color = new ColorSupplier().getRandomColor();
     }
 
     @Override

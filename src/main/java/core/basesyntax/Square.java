@@ -7,7 +7,7 @@ public class Square extends Figure {
 
     public Square() {
         super.title = "squar";
-        super.color = ColorSupplier.getRandomColor();
+        super.color = new ColorSupplier().getRandomColor();
         this.side = new Random().nextInt(100);
     }
 
