@@ -1,10 +1,8 @@
 package behavior;
 
-public abstract class Figure extends ColorSupplier {
+public abstract class Figure {
     private Colors color;
 
     protected Figure() {
     }
-
-    public abstract double getArea();
 }

@@ -1,10 +1,14 @@
 package figures;
 
+import behavior.ColorSupplier;
 import behavior.Figure;
+import behavior.GetAreaAble;
 
-public class Square extends Figure {
-    private double side;
-    private String name = "Square";
+public class Square extends Figure implements GetAreaAble {
+    private final double side;
+    private final String name = "Square";
+
+    ColorSupplier colorSupplier = new ColorSupplier();
 
     public Square(double side) {
         this.side = side;
@@ -18,6 +22,6 @@ public class Square extends Figure {
     @Override
     public String toString() {
         return "Figure: " + name + ", area: " + getArea() + " sq.units, side: "
-                + side + " units, color: " + getRandomColor();
+                + side + " units, color: " + colorSupplier.getRandomColor();
     }
 }
