@@ -1,39 +1,15 @@
 package figure;
 
 public class IsoscelesTrapezoid extends Figure {
-    private Double firstBase;
-    private Double secondBase;
-    private Double height;
+    private final Double firstBase;
+    private final Double secondBase;
+    private final Double height;
 
     public IsoscelesTrapezoid(String color, Double firstBase, Double secondBase, Double height) {
         this.setType(FigureSupplier.getTypeName(3));
         this.setColor(color);
         this.firstBase = firstBase;
         this.secondBase = secondBase;
-        this.height = height;
-    }
-
-    public Double getFirstBase(Double firstBase) {
-        return firstBase;
-    }
-
-    public void setFirstBase(Double firstBase) {
-        this.firstBase = firstBase;
-    }
-
-    public Double getSecondBase(Double secondBase) {
-        return secondBase;
-    }
-
-    public void setSecondBase(Double secondBase) {
-        this.secondBase = secondBase;
-    }
-
-    public Double getHeight(Double height) {
-        return height;
-    }
-
-    public void setHeight(Double height) {
         this.height = height;
     }
 
@@ -44,11 +20,10 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println(new StringBuilder().append("Figure : ").append(getType())
-                .append(" color : ").append(getColor())
-                .append(" area : ").append(getArea()).append(" sq.units")
-                .append(" first base : ").append(this.firstBase).append(" units")
-                .append(" second base : ").append(this.secondBase).append(" units")
-                .append(" height : ").append(this.height).append(" units"));
+        System.out.println("Figure : " + getType() + " color : " + getColor()
+                + " area : " + getArea()
+                + " sq.units" + " first base : " + this.firstBase + " units"
+                + " second base : " + this.secondBase + " units"
+                + " height : " + this.height + " units");
     }
 }

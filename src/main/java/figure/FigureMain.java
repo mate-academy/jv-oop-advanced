@@ -12,8 +12,8 @@ public class FigureMain extends FigureSupplier {
         Figure figureFour = new IsoscelesTrapezoid(getRandomColor(),
                 getRandomFigureValue(),5.84, 11.66);
         figureFour.draw();
-        Figure figureFive = new RightTriangle(getRandomColor(),
-                getRandomFigureValue(),getRandomFigureValue());
+        Figure figureFive;
+        figureFive = getRandomFigure();
         figureFive.draw();
     }
 }

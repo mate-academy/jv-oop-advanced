@@ -35,8 +35,7 @@ public class Figure implements AreaCalculator, Drawable {
 
     @Override
     public void draw() {
-        System.out.println(new StringBuilder().append("Figure - type : ").append(this.type)
-                .append(" color : ").append(this.color)
-                .append(" area : ").append(getArea()).append(" sq.units"));
+        System.out.println("Figure - type : " + this.type + " color : " + this.color
+                + " area : " + getArea() + " sq.units");
     }
 }

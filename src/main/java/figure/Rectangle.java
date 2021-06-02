@@ -1,29 +1,13 @@
 package figure;
 
 public class Rectangle extends Figure {
-    private Double firstSide;
-    private Double secondSide;
+    private final Double firstSide;
+    private final Double secondSide;
 
     public Rectangle(String color, Double firstSide, Double secondSide) {
         this.setType(FigureSupplier.getTypeName(1));
         this.setColor(color);
         this.firstSide = firstSide;
-        this.secondSide = secondSide;
-    }
-
-    public Double getFirstSide(Double firstSide) {
-        return firstSide;
-    }
-
-    public void setFirstSide(Double firstSide) {
-        this.firstSide = firstSide;
-    }
-
-    public Double getSecondSide(Double secondSide) {
-        return secondSide;
-    }
-
-    public void setSecondSide(Double secondSide) {
         this.secondSide = secondSide;
     }
 
@@ -34,10 +18,9 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println(new StringBuilder().append("Figure : ").append(getType())
-                .append(" color : ").append(getColor())
-                .append(" area : ").append(getArea()).append(" sq.units")
-                .append(" first side : ").append(this.firstSide).append(" units")
-                .append(" second side : ").append(this.secondSide).append(" units"));
+        System.out.println("Figure : " + getType() + " color : " + getColor()
+                + " area : " + getArea() + " sq.units"
+                + " first side : " + this.firstSide + " units"
+                + " second side : " + this.secondSide + " units");
     }
 }
