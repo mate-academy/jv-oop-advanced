@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public class FigureSupplier {
+    private static final int NUMBER_OF_FOGURES = 6;
     private ColorSupplier colorSupplier;
 
     public FigureSupplier(ColorSupplier colorSupplier) {
@@ -8,7 +9,7 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        switch ((int) (Math.random() * 6)) {
+        switch ((int) (Math.random() * NUMBER_OF_FOGURES)) {
             case 1:
                 return new Circle(colorSupplier.getRandomColor(), getRandomDouble());
             case 2:
@@ -32,7 +33,6 @@ public class FigureSupplier {
         }
     }
 
-    // The method gives a beautiful value rounded to the hundredths
     private double getRandomDouble() {
         return Math.round(Math.random() * 100000) / 100.0;
     }
