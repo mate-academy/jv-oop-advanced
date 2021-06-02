@@ -2,13 +2,11 @@ package core.basesyntax;
 
 public class Main {
     public static void main(String[] args) {
-        Figure sc = new Square("red", 4);
-        System.out.println(sc.getInformationOfFigure());
-        Figure rc = new Rectangle("blue", 4, 9);
-        System.out.println(rc.getInformationOfFigure());
-        Figure rt = new RightTriangle("black", 7, 5);
-        System.out.println(rt.getInformationOfFigure());
-        Figure ci = new Circle("sdf", 7);
-        System.out.println(ci.getInformationOfFigure());
+        int value = (int) (1 + Math.random() * 10);
+        Figure[] figures = new Figure[value];
+        FigureSupplier figureSupplier = new FigureSupplier();
+        for (int i = 0; i < value; i++) {
+            figures[i] = figureSupplier.getRandomFigure();
+        }
     }
 }

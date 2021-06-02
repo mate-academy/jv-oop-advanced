@@ -15,7 +15,7 @@ public class Square extends Figure {
 
     @Override
     public String getInformationOfFigure() {
-
-        return "Square, area: " + getArea() + " sq. units, size " + size + " units, color: " + getColor();
+        return "Square, area: " + getArea()
+                + " sq. units, size " + size + " units, color: " + getColor();
     }
 }

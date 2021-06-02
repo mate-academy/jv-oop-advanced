@@ -1,6 +1,7 @@
 package core.basesyntax;
 
-public interface Behavior {
+public interface BehaviorAreaFigure {
     double getArea();
+
     String getInformationOfFigure();
 }
