@@ -5,7 +5,7 @@ import java.util.Random;
 public class FigureSupplier {
 
     public Figure getRandomFigure() {
-        int getRandomIndex = new Random().nextInt(5);
+        int getRandomIndex = new Random().nextInt(6);
         ColorSupplier supplier = new ColorSupplier();
         switch (getRandomIndex) {
             case 1:
@@ -19,8 +19,10 @@ public class FigureSupplier {
                         4);
             case 4:
                 return new Square(supplier.getRandomColor(), 4);
-            default:
+            case 5:
                 return new RightTriangle(supplier.getRandomColor(), 4, 5);
+            default:
+                return getRandomFigure();
         }
     }
 }
