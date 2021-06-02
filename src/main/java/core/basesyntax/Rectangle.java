@@ -11,8 +11,8 @@ public class Rectangle extends Figure{
         super.color = new ColorSupplier().getRandomColor();
 
         while (!(this.bigSide >= 50) && !(this.smallSide > 0 && this.smallSide < 50)) {
-            this.bigSide = new Random().nextInt();
-            this.smallSide = new Random().nextInt();
+            this.bigSide = new Random().nextInt(100);
+            this.smallSide = new Random().nextInt(100);
         }
     }
 
