@@ -9,7 +9,7 @@ public class Main {
         Random random = new Random();
         FigureSupplier figureSupplier = new FigureSupplier();
 
-        Figure[] figureArray = new Figure[random.nextInt(MAX_ARRAY_SIZE + 1)];
+        Figure[] figureArray = new Figure[random.nextInt(MAX_ARRAY_SIZE) + 1];
 
         for (int i = 0; i < figureArray.length; i++) {
             figureArray[i] = figureSupplier.getRandomFigure();

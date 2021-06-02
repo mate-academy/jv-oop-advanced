@@ -3,10 +3,6 @@ package core.basesyntax;
 public class RightTriange extends Figure {
     private double side;
 
-    public RightTriange() {
-
-    }
-
     public RightTriange(String color, double side) {
         super.setColor(color);
         this.side = side;
