@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class IsoscelesTrapezoid extends Figure{
+public class IsoscelesTrapezoid extends Figure {
     private double highFoundation;
     private double lowFoundation;
     private double side;

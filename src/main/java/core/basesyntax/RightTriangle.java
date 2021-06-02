@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class RightTriangle extends Figure{
+public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
