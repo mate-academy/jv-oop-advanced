@@ -3,9 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int MAXFIGURES = 5;
 
     public Figure getRandomFigure() {
-        switch (new Random().nextInt(4)) {
+        switch (new Random().nextInt(MAXFIGURES)) {
             case 0:
                 return new Circle();
             case 1:
@@ -15,19 +16,8 @@ public class FigureSupplier {
             case 3:
                 return new RightTriangle();
             case 4:
-                return new Square();
             default:
-                return new Figure() {
-                    @Override
-                    public double getArea() {
-                        return 0;
-                    }
-
-                    @Override
-                    public void draw() {
-                        System.out.println("I am figure!");
-                    }
-                };
+                return new Square();
         }
     }
 }

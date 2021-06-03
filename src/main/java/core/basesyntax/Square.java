@@ -6,9 +6,8 @@ public class Square extends Figure {
     private int side;
 
     public Square() {
-        super.title = "squar";
-        super.color = new ColorSupplier().getRandomColor();
-        this.side = new Random().nextInt(100);
+        super("squar", new ColorSupplier().getRandomColor());
+        side = new Random().nextInt(100);
     }
 
     @Override
@@ -20,13 +19,13 @@ public class Square extends Figure {
     public void draw() {
         StringBuilder drawBuilder = new StringBuilder();
         drawBuilder.append("Figure: ")
-                .append(super.title)
+                .append(getTitle())
                 .append(", area: ")
                 .append(getArea())
                 .append(" sq.units, side: ")
-                .append(this.side)
+                .append(side)
                 .append(" units, color: ")
-                .append(super.color);
+                .append(getColor());
         System.out.println(drawBuilder.toString());
     }
 }

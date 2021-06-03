@@ -10,18 +10,14 @@ public class IsoscelesTrapezoid extends Figure {
     private double height;
 
     public IsoscelesTrapezoid() {
-        super.title = "isosceles trapezoid";
-        super.color = new ColorSupplier().getRandomColor();
+        super("isosceles trapezoid", new ColorSupplier().getRandomColor());
 
-        while (!(highFoundation > lowFoundation)) {
-            this.highFoundation = new Random().nextInt(100);
-            this.lowFoundation = new Random().nextInt(100);
-        }
-
-        this.side = new Random().nextInt(100);
-        this.middleLine = (this.lowFoundation + this.highFoundation) / 2;
-        this.height = Math.sqrt((this.side * this.side) - (this.lowFoundation - this.highFoundation)
-                * (this.lowFoundation - this.highFoundation) / 4);
+        highFoundation = new Random().nextInt(100);
+        lowFoundation = new Random().nextInt(100);
+        side = new Random().nextInt(100);
+        middleLine = (lowFoundation + highFoundation) / 2;
+        height = Math.sqrt((side * side) - (lowFoundation - highFoundation)
+                * (lowFoundation - highFoundation) / 4);
     }
 
     @Override
@@ -33,21 +29,21 @@ public class IsoscelesTrapezoid extends Figure {
     public void draw() {
         StringBuilder drawBuilder = new StringBuilder();
         drawBuilder.append("Figure: ")
-                .append(super.title)
+                .append(getTitle())
                 .append(", area: ")
                 .append(getArea())
                 .append(" sq.units, highFoundation: ")
-                .append(this.highFoundation)
+                .append(highFoundation)
                 .append(" units, lowFoundation: ")
-                .append(this.lowFoundation)
+                .append(lowFoundation)
                 .append(" units, middleLine: ")
-                .append(this.middleLine)
+                .append(middleLine)
                 .append(" units, height: ")
-                .append(this.height)
+                .append(height)
                 .append(" units, side: ")
-                .append(this.side)
+                .append(side)
                 .append(" units, color: ")
-                .append(super.color);
+                .append(getColor());
         System.out.println(drawBuilder.toString());
     }
 }
