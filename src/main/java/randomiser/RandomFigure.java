@@ -6,69 +6,60 @@ import figures.IsoscelesTrapezoid;
 import figures.Rectangle;
 import figures.RightTriangle;
 import figures.Square;
-import java.util.Random;
 
 public class RandomFigure {
-    private static final Random rnd = new Random();
-    private static final int NUMBER_OF_FIGURES = 5;
-    private static final int LIMIT_OF_VARIABLE = 25;
+    private static final int COUNT_FIGURES = 5;
+    private static final int LIMIT = 25;
+    private RandomUtil randomUtil;
+    private RandomColor randomColor;
 
-    private RandomFigure() {
+    public RandomFigure() {
+        randomUtil = new RandomUtil();
+        randomColor = new RandomColor();
     }
 
-    public static Figure[] getRandomFigures() {
-        Figure[] figures = new Figure[LIMIT_OF_VARIABLE];
+    public Figure[] getRandomFigures() {
+        Figure[] figures = new Figure[LIMIT];
         int randomIndex;
-        Color randomColor;
+        Color color;
 
-        for (int i = 0; i < LIMIT_OF_VARIABLE; i++) {
-            randomIndex = RandomColor.getRandomIndex();
-            randomColor = RandomColor.getRandomColor();
-            switch (randomIndex) {
-                case 0:
-                    figures[i] = new IsoscelesTrapezoid(randomColor, getDouble(), getDouble(),
-                        getDouble());
-                    break;
-                case 1:
-                    figures[i] = new Circle(randomColor, rnd.nextDouble() * 10);
-                    break;
-                case 2:
-                    figures[i] = new Square(randomColor, getDouble());
-                    break;
-                case 3:
-                    figures[i] = new RightTriangle(randomColor, getDouble(), getDouble());
-                    break;
-                case 4:
-                    figures[i] = new Rectangle(randomColor, getDouble(), getDouble());
-                    break;
-                default:
-                    figures[i] = getFigure();
-                    break;
-            }
+        for (int i = 0; i < LIMIT; i++) {
+            randomIndex = randomUtil.getRandomIndex(COUNT_FIGURES);
+            color = this.randomColor.getRandomColor();
+            getRandomFigure(figures, randomIndex, color, i);
         }
         return figures;
     }
 
-    private static Figure getFigure() {
-        return new Figure(Color.WHITE) {
-            @Override
-            public double getSquare() {
-                return 0;
-            }
-
-            @Override
-            public double getPerimeter() {
-                return 0;
-            }
-
-            @Override
-            public void draw() {
-
-            }
-        };
+    private void getRandomFigure(Figure[] figures, int randomIndex, Color color, int i) {
+        switch (randomIndex) {
+            case 0:
+                figures[i] = new IsoscelesTrapezoid(color,
+                    randomUtil.getDouble(LIMIT),
+                    randomUtil.getDouble(LIMIT),
+                    randomUtil.getDouble(LIMIT));
+                break;
+            case 1:
+                figures[i] = new Circle(color, randomUtil.getRandomIndex(LIMIT));
+                break;
+            case 2:
+                figures[i] = new Square(color, randomUtil.getDouble(LIMIT));
+                break;
+            case 3:
+                figures[i] = new RightTriangle(color, randomUtil.getDouble(LIMIT),
+                    randomUtil.getDouble(LIMIT));
+                break;
+            case 4:
+                figures[i] = new Rectangle(color, randomUtil.getDouble(LIMIT),
+                    randomUtil.getDouble(LIMIT));
+                break;
+            default:
+                figures[i] = getEmptyFigure();
+                break;
+        }
     }
 
-    private static double getDouble() {
-        return rnd.nextDouble() + rnd.nextInt(LIMIT_OF_VARIABLE);
+    private static Figure getEmptyFigure() {
+        return new Circle(Color.BLACK, 1);
     }
 }

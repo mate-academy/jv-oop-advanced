@@ -27,14 +27,13 @@ public class Circle extends Figure {
 
     @Override
     public double getPerimeter() {
-
         return 2 * Math.PI * radius;
     }
 
     @Override
     public void draw() {
-        System.out
-                .printf("Figure: circle, area: %.2f sq.units, radius: %.2f units, color: %s",
+        System.out.printf("Figure: circle, area: %.2f"
+                + " sq.units, radius: %.2f units, color: %s",
                 getSquare(),
                 radius, super.getColor());
     }
