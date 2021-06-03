@@ -27,5 +27,4 @@ public class IsoscelesTrapezoid extends Figure {
                         "lowerLeg: %4f units, color: %1s%n",
                 getArea(), sideLeg, upperLeg, lowerLeg, getColor());
     }
-
 }
