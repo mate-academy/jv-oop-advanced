@@ -14,22 +14,22 @@ public class FigureSupplier extends ColorSupplier {
         int randNum = new Random().ints(1, 5).findFirst().getAsInt(); ;
         Figure suplier;
         switch (randNum) {
-            case 1: suplier = new Circle(getRandomColor(), randDouble());
-                    return suplier;
-            case 2: suplier = new Square(getRandomColor(), randDouble());
-                return suplier;
-            case 3: suplier = new Rectangle(getRandomColor(), randDouble(), randDouble());
-                return suplier;
-            case 4: suplier = new RightTriangle(getRandomColor(), randDouble(), randDouble());
-                return suplier;
-            case 5: suplier = new IsoscelesTrapezoid(getRandomColor(),
+            case 1: return  new Circle(getRandomColor(), randDouble());
+
+            case 2: return  new Square(getRandomColor(), randDouble());
+
+            case 3: return  new Rectangle(getRandomColor(), randDouble(), randDouble());
+
+            case 4: return  new RightTriangle(getRandomColor(), randDouble(), randDouble());
+
+            case 5: return  new IsoscelesTrapezoid(getRandomColor(),
                     randDouble(),
                     randDouble(),
                     randDouble(),
                     randDouble());
-                return suplier;
-            default: suplier = new Square(getRandomColor(), randDouble());
-                    return suplier;
+
+            default: return  new Square(getRandomColor(), randDouble());
+
         }
     }
 
