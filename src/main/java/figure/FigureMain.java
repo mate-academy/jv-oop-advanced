@@ -7,9 +7,10 @@ public class FigureMain {
 
     public static void main(String[] args) {
         int countToCreate = new Random().nextInt(FIGURES_COUNT_TO_CREATE) + 1;
+        FigureSupplier figureSupplier = new FigureSupplier(new ColorSupplier());
         Figure[] figures = new Figure[countToCreate];
         for (int i = 0; i < countToCreate; i++) {
-            figures[i] = new FigureSupplier(new ColorSupplier()).getRandomFigure();
+            figures[i] = figureSupplier.getRandomFigure();
         }
         for (Figure element : figures) {
             element.draw();
