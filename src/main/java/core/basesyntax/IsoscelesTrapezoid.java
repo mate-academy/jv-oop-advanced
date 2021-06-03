@@ -16,10 +16,10 @@ public class IsoscelesTrapezoid extends Figure {
         this.leftBase = leftBase;
         this.rightBase = rightBase;
         setColor(color);
-        areaCalculate();
+        calculateArea();
     }
 
-    public void areaCalculate() {
+    public void calculateArea() {
 
         setArea((upBase + downBase) * ((upBase + downBase) / 2) / 2);
     }

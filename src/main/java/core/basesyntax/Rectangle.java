@@ -8,7 +8,7 @@ public class Rectangle extends Figure {
         setColor(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
-        areaCalculate();
+        calculateArea();
     }
 
     @Override
@@ -19,7 +19,7 @@ public class Rectangle extends Figure {
                 + " units, color: " + getColor());
     }
 
-    public void areaCalculate() {
+    public void calculateArea() {
         setArea(firstSide * secondSide);
     }
 }
