@@ -22,7 +22,7 @@ public class RandomFigure {
         Color randomColor;
 
         for (int i = 0; i < LIMIT_OF_VARIABLE; i++) {
-            randomIndex = rnd.nextInt(NUMBER_OF_FIGURES);
+            randomIndex = RandomColor.getRandomIndex();
             randomColor = RandomColor.getRandomColor();
             switch (randomIndex) {
                 case 0:
