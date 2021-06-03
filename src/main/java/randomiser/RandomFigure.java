@@ -18,28 +18,28 @@ public class RandomFigure {
 
     public static Figure[] getRandomFigures() {
         Figure[] figures = new Figure[LIMIT_OF_VARIABLE];
-        int temp;
-        Color color;
+        int randomIndex;
+        Color randomColor;
 
         for (int i = 0; i < LIMIT_OF_VARIABLE; i++) {
-            temp = rnd.nextInt(NUMBER_OF_FIGURES);
-            color = RandomColor.getRandomColor();
-            switch (temp) {
+            randomIndex = rnd.nextInt(NUMBER_OF_FIGURES);
+            randomColor = RandomColor.getRandomColor();
+            switch (randomIndex) {
                 case 0:
-                    figures[i] = new IsoscelesTrapezoid(color, getDouble(), getDouble(),
+                    figures[i] = new IsoscelesTrapezoid(randomColor, getDouble(), getDouble(),
                         getDouble());
                     break;
                 case 1:
-                    figures[i] = new Circle(color, rnd.nextDouble() * 10);
+                    figures[i] = new Circle(randomColor, rnd.nextDouble() * 10);
                     break;
                 case 2:
-                    figures[i] = new Square(color, getDouble());
+                    figures[i] = new Square(randomColor, getDouble());
                     break;
                 case 3:
-                    figures[i] = new RightTriangle(color, getDouble(), getDouble());
+                    figures[i] = new RightTriangle(randomColor, getDouble(), getDouble());
                     break;
                 case 4:
-                    figures[i] = new Rectangle(color, getDouble(), getDouble());
+                    figures[i] = new Rectangle(randomColor, getDouble(), getDouble());
                     break;
                 default:
                     figures[i] = getFigure();

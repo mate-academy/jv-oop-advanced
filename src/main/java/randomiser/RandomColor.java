@@ -6,8 +6,8 @@ public class RandomColor {
     private static final Random rnd = new Random();
 
     public static Color getRandomColor() {
-        int i = rnd.nextInt(Color.values().length);
-        return Color.values()[i];
+        int randomIndex = rnd.nextInt(Color.values().length);
+        return Color.values()[randomIndex];
     }
 }
 
