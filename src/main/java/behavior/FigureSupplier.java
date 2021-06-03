@@ -12,25 +12,28 @@ public class FigureSupplier {
     private static final int NUMBER_OF_FIGURES = 6;
 
     public Figure getRandomFigure() {
+        ColorSupplier colorSupplier = new ColorSupplier();
         switch (new Random().nextInt(NUMBER_OF_FIGURES)) {
             case 1:
-                return new Circle(new Random().nextInt(UPPER_LIMIT));
+                return new Circle(colorSupplier.getRandomColor(), "Circle",
+                       new Random().nextInt(UPPER_LIMIT));
             case 2:
-                return new Square(new Random().nextInt(UPPER_LIMIT));
+                return new Square(colorSupplier.getRandomColor(), "Square",
+                       new Random().nextInt(UPPER_LIMIT));
             case 3:
-                return new IsoscelesTrapezoid(new Random()
-                        .nextInt(UPPER_LIMIT),
-                        new Random().nextInt(UPPER_LIMIT),
-                        new Random().nextInt(UPPER_LIMIT));
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), "IsoscelessTrapezoid",
+                       new Random().nextInt(UPPER_LIMIT),
+                       new Random().nextInt(UPPER_LIMIT),
+                       new Random().nextInt(UPPER_LIMIT));
             case 4:
-                return new Rectangle(new Random().nextInt(UPPER_LIMIT),
-                        new Random().nextInt(UPPER_LIMIT));
-            case 5:
-                return new RightTriangle(new Random().nextInt(UPPER_LIMIT),
-                        new Random().nextInt(UPPER_LIMIT),
-                        new Random().nextInt(UPPER_LIMIT));
+                return new Rectangle(colorSupplier.getRandomColor(), "Rectangle",
+                       new Random().nextInt(UPPER_LIMIT),
+                       new Random().nextInt(UPPER_LIMIT));
             default:
-                return new Rectangle(1, 1);
+                return new RightTriangle(colorSupplier.getRandomColor(), "RightTriangle",
+                       new Random().nextInt(UPPER_LIMIT),
+                       new Random().nextInt(UPPER_LIMIT),
+                       new Random().nextInt(UPPER_LIMIT));
         }
     }
 }

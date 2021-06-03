@@ -1,5 +1,5 @@
 package behavior;
 
-public interface GetAreaAble {
+public interface AreaCalculator {
     double getArea();
 }

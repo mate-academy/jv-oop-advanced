@@ -1,16 +1,12 @@
 package figures;
 
-import behavior.ColorSupplier;
 import behavior.Figure;
-import behavior.GetAreaAble;
 
-public class Square extends Figure implements GetAreaAble {
+public class Square extends Figure {
     private final double side;
-    private final String name = "Square";
 
-    private ColorSupplier colorSupplier = new ColorSupplier();
-
-    public Square(double side) {
+    public Square(String color, String name, double side) {
+        super(color, name);
         this.side = side;
     }
 
@@ -20,8 +16,8 @@ public class Square extends Figure implements GetAreaAble {
     }
 
     @Override
-    public String toString() {
-        return "Figure: " + name + ", area: " + getArea() + " sq.units, side: "
-                + side + " units, color: " + colorSupplier.getRandomColor();
+    public void draw() {
+        System.out.println("Figure: " + getName() + ", area: " + getArea() + " sq.units, side: "
+                + side + " units, color: " + getColor());
     }
 }

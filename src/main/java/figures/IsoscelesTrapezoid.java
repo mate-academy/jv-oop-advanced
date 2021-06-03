@@ -1,18 +1,14 @@
 package figures;
 
-import behavior.ColorSupplier;
 import behavior.Figure;
-import behavior.GetAreaAble;
 
-public class IsoscelesTrapezoid extends Figure implements GetAreaAble {
+public class IsoscelesTrapezoid extends Figure {
     private final double side;
     private final double up;
     private final double base;
-    private final String name = "Isosceles Trapezoid";
 
-    private ColorSupplier colorSupplier = new ColorSupplier();
-
-    public IsoscelesTrapezoid(double side, double up, double base) {
+    public IsoscelesTrapezoid(String color, String name, double side, double up, double base) {
+        super(color, name);
         this.side = side;
         this.up = up;
         this.base = base;
@@ -27,9 +23,9 @@ public class IsoscelesTrapezoid extends Figure implements GetAreaAble {
     }
 
     @Override
-    public String toString() {
-        return "Figure: " + name + ", area: " + getArea() + " sq.units, side: "
+    public void draw() {
+        System.out.println("Figure: " + getName() + ", area: " + getArea() + " sq.units, side: "
                 + side + " units, up: " + up + " units, base: "
-                + base + " units, color: " + colorSupplier.getRandomColor();
+                + base + " units, color: " + getColor());
     }
 }

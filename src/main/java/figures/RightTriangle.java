@@ -1,18 +1,15 @@
 package figures;
 
-import behavior.ColorSupplier;
 import behavior.Figure;
-import behavior.GetAreaAble;
 
-public class RightTriangle extends Figure implements GetAreaAble {
+public class RightTriangle extends Figure {
     private final double sideLeft;
     private final double sideRight;
     private final double baseOfRectangle;
-    private final String name = "Right Triangle";
 
-    private ColorSupplier colorSupplier = new ColorSupplier();
-
-    public RightTriangle(double sideLeft, double sideRight, double baseOfRectangle) {
+    public RightTriangle(String color, String name, double sideLeft,
+                         double sideRight, double baseOfRectangle) {
+        super(color, name);
         this.sideLeft = sideLeft;
         this.sideRight = sideRight;
         this.baseOfRectangle = baseOfRectangle;
@@ -26,9 +23,9 @@ public class RightTriangle extends Figure implements GetAreaAble {
     }
 
     @Override
-    public String toString() {
-        return "Figure: " + name + ", area: " + getArea() + " sq.units, sideLeft: "
+    public void draw() {
+        System.out.println("Figure: " + getName() + ", area: " + getArea() + " sq.units, sideLeft: "
                 + sideLeft + " units, sideRight: " + sideRight + " units, base: "
-                + baseOfRectangle + " units, color: " + colorSupplier.getRandomColor();
+                + baseOfRectangle + " units, color: " + getColor());
     }
 }

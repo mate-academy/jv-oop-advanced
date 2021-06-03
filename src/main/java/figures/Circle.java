@@ -1,16 +1,12 @@
 package figures;
 
-import behavior.ColorSupplier;
 import behavior.Figure;
-import behavior.GetAreaAble;
 
-public class Circle extends Figure implements GetAreaAble {
-    private final double radius;
-    private final String name = "Circle";
+public class Circle extends Figure {
+    private double radius;
 
-    private ColorSupplier colorSupplier = new ColorSupplier();
-
-    public Circle(double radius) {
+    public Circle(String color, String name, double radius) {
+        super(color, name);
         this.radius = radius;
     }
 
@@ -20,8 +16,9 @@ public class Circle extends Figure implements GetAreaAble {
     }
 
     @Override
-    public String toString() {
-        return "Figure: " + name + ", area: " + getArea() + " sq.units, radius: " + radius
-                + " units, color: " + colorSupplier.getRandomColor();
+    public void draw() {
+        System.out.println("Figure: " + getName() + ", area: "
+                + getArea() + " sq.units, radius: " + radius
+                + " units, color: " + getColor());
     }
 }
