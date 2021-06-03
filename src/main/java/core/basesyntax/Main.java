@@ -4,16 +4,15 @@ import core.basesyntax.suppliers.FigureSupplier;
 
 import java.util.Random;
 
-public class Main extends FigureSupplier {
+public class Main{
+    public static final int sizeArray = 5;
+
     public static void main(String[] args) {
-        Figure[] figures = new Figure[randInts(1,20)];
+        FigureSupplier figureSupplier = new FigureSupplier();
+        Figure[] figures = new Figure[sizeArray];
         for (int i = 0; i < figures.length; i++) {
-            figures[i] = getRandomFigure();
+            figures[i] = figureSupplier.getRandomFigure();
             figures[i].draw();
         }
-    }
-
-    public static int randInts(int min, int max) {
-        return 1 + (100 - 1) * (new Random().nextInt());
     }
 }
