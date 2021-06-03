@@ -10,9 +10,9 @@ import java.util.Random;
 
 public class FigureSupplier extends ColorSupplier {
 
-    public static Figure getRandomFigure() {
+    public  Figure getRandomFigure() {
         int randNum = new Random().ints(1, 5).findFirst().getAsInt(); ;
-        Figure suplier;
+
         switch (randNum) {
             case 1: return  new Circle(getRandomColor(), randDouble());
 
@@ -33,7 +33,7 @@ public class FigureSupplier extends ColorSupplier {
         }
     }
 
-    public static double randDouble() {
+    private double randDouble() {
         return 1 + (100 - 1) * (new Random().nextDouble());
     }
 }
