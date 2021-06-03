@@ -12,7 +12,7 @@ public class FigureSupplier {
         this.colorSupplier = colorSupplier;
     }
 
-    public static Figure getRandomFigure() {
+    public Figure getRandomFigure() {
         switch (new Random().nextInt(NUMBER_OF_FIGURES)) {
             case 1:
                 return new Circle(ColorSupplier.getRandomColor(), getRandomDouble());
