@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure {
+public class IsoscelesTrapezoid extends Figure implements Drow {
     private final double side1;
     private final double side2;
     private final double height;
@@ -18,7 +18,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    String getInfo() {
+    public String getInfo() {
         return "Figure: isosceles trapezoid, area: " + getArea() + " sq.units, side1: " + side1
                 + " side2: " + side2 + " height: " + height + " units, color: " + getColor();
     }

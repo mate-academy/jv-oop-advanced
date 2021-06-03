@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure {
+public class Circle extends Figure implements Drow {
     private double radius;
 
     public Circle(String color, double radius) {
@@ -14,7 +14,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    String getInfo() {
+    public String getInfo() {
         return "Figure: circle, area: " + getArea() + " sq.units, radius: "
                 + radius + " units, color: " + getColor();
     }

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public abstract class Figure implements Drow {
     private final String color;
 
     public Figure(String color) {
@@ -12,6 +12,4 @@ public abstract class Figure {
     }
 
     abstract double getArea();
-
-    abstract String getInfo();
 }

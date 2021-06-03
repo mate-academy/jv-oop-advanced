@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure {
+public class RightTriangle extends Figure implements Drow {
     private double side1;
     private double height;
 
@@ -16,7 +16,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    String getInfo() {
+    public String getInfo() {
         return "Figure: right triangle, area: " + getArea() + " sq.units, side1: " + side1
                 + " height: " + height + " units, color: " + getColor();
     }
