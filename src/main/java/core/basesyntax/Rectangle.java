@@ -4,10 +4,10 @@ public class Rectangle extends Figure {
     private double firstSide;
     private double secondSide;
 
-    public Rectangle(double firstSide, double secondSide, String color) {
+    public Rectangle(String color, double firstSide, double secondSide) {
+        super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
-        this.color = color;
     }
 
     @Override
@@ -18,7 +18,7 @@ public class Rectangle extends Figure {
     @Override
     public String draw() {
         return String.format("Figure: Rectangle, area: %.2f sq.units, firstSide: %.3f units, "
-                + "secondSide: %.3f units, color: %s", getArea(), firstSide, secondSide, color);
+                + "secondSide: %.3f units, color: %s", getArea(), firstSide,
+                secondSide, getColor());
     }
-
 }
