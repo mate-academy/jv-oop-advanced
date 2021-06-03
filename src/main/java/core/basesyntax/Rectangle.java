@@ -9,6 +9,7 @@ public class Rectangle extends Figure {
         this.firstSide = firstSide;
         this.secondSide = secondSide;
     }
+
     @Override
     public void draw() {
         System.out.println("Figure: circle, area: " + calculateArea()
