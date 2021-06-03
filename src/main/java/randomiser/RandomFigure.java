@@ -10,18 +10,19 @@ import java.util.Random;
 
 public class RandomFigure {
     private static final Random rnd = new Random();
+    private static final int NUMBER_OF_FIGURES = 5;
+    private static final int LIMIT_OF_VARIABLE = 25;
 
     private RandomFigure() {
     }
 
     public static Figure[] getRandomFigures() {
-        Figure[] figures = new Figure[rnd.nextInt(10)];
-
+        Figure[] figures = new Figure[LIMIT_OF_VARIABLE];
         int temp;
         Color color;
 
-        for (int i = 0; i < figures.length; i++) {
-            temp = rnd.nextInt(5);
+        for (int i = 0; i < LIMIT_OF_VARIABLE; i++) {
+            temp = rnd.nextInt(NUMBER_OF_FIGURES);
             color = RandomColor.getRandomColor();
             switch (temp) {
                 case 0:
@@ -56,7 +57,7 @@ public class RandomFigure {
             }
 
             @Override
-            protected double getPerimeter() {
+            public double getPerimeter() {
                 return 0;
             }
 
@@ -68,6 +69,6 @@ public class RandomFigure {
     }
 
     private static double getDouble() {
-        return rnd.nextDouble() + rnd.nextInt(25);
+        return rnd.nextDouble() + rnd.nextInt(LIMIT_OF_VARIABLE);
     }
 }

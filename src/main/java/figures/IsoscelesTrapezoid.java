@@ -14,10 +14,6 @@ public class IsoscelesTrapezoid extends Rectangle {
         return height;
     }
 
-    public void setHeight(double height) {
-        this.height = height;
-    }
-
     private double cornerA() {
         return height / ((getFirstSide() - getSecondSide()) / 2);
     }

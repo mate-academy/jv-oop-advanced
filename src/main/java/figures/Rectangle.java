@@ -16,16 +16,8 @@ public class Rectangle extends Figure {
         return firstSide;
     }
 
-    public void setFirstSide(double firstSide) {
-        this.firstSide = firstSide;
-    }
-
     public double getSecondSide() {
         return secondSide;
-    }
-
-    public void setSecondSide(double secondSide) {
-        this.secondSide = secondSide;
     }
 
     @Override

@@ -2,7 +2,7 @@ package figures;
 
 import randomiser.Color;
 
-public abstract class Figure implements Drawable {
+public abstract class Figure implements Drawable, SquareCalculate, PerimeterCalculate {
     protected Color color;
 
     public Figure(Color color) {
@@ -12,14 +12,6 @@ public abstract class Figure implements Drawable {
     public Color getColor() {
         return color;
     }
-
-    public void setColor(Color color) {
-        this.color = color;
-    }
-
-    public abstract double getSquare();
-
-    protected abstract double getPerimeter();
 
     @Override
     public void draw() {
