@@ -3,12 +3,15 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    static final int SIZE_OF_SIDES = 50;
+    static final int COUNT_OF_FIGURES = 5;
+
     public int getRandomNum() {
-        return new Random().nextInt(50);
+        return new Random().nextInt(SIZE_OF_SIDES);
     }
 
     public Figure getRandomFigure() {
-        int randomIndex = new Random().nextInt(5);
+        int randomIndex = new Random().nextInt(COUNT_OF_FIGURES);
         ColorSupplier supplier = new ColorSupplier();
         switch (randomIndex) {
             case 1:
