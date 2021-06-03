@@ -2,9 +2,7 @@ package core.basesyntax;
 
 import core.basesyntax.suppliers.FigureSupplier;
 
-import java.util.Random;
-
-public class Main{
+public class Main {
     public static final int sizeArray = 5;
 
     public static void main(String[] args) {
