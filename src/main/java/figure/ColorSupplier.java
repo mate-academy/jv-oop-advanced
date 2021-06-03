@@ -8,6 +8,6 @@ public class ColorSupplier {
             "purple", "red", "white", "yellow"};
 
     public static String getRandomColor() {
-        return colors[Integer.parseInt(String.valueOf(new Random().nextInt(colors.length)))];
+        return colors[(new Random().nextInt(colors.length))];
     }
 }
