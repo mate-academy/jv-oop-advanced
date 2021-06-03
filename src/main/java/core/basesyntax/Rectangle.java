@@ -4,6 +4,13 @@ public class Rectangle extends Figure {
     private double firstSide;
     private double secondSide;
 
+    public Rectangle(String color, double firstSide, double secondSide) {
+        setColor(color);
+        this.firstSide = firstSide;
+        this.secondSide = secondSide;
+        calculateArea();
+    }
+
     public double getFirstSide() {
         return firstSide;
     }
@@ -18,13 +25,6 @@ public class Rectangle extends Figure {
     }
 
     public void setSecondSide(double secondSide) {
-        this.secondSide = secondSide;
-        calculateArea();
-    }
-
-    public Rectangle(String color, double firstSide, double secondSide) {
-        setColor(color);
-        this.firstSide = firstSide;
         this.secondSide = secondSide;
         calculateArea();
     }

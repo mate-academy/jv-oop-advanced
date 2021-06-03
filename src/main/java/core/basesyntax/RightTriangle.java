@@ -5,6 +5,15 @@ public class RightTriangle extends Figure {
     private double secondSide;
     private double hypotenuse;
 
+    public RightTriangle(String color, double firstSide, double secondSide) {
+        setColor(color);
+        this.firstSide = firstSide;
+        this.secondSide = secondSide;
+        this.hypotenuse = Math.sqrt(Math.pow(firstSide, 2) + Math.pow(secondSide, 2));
+        calculateArea();
+
+    }
+
     public double getFirstSide() {
         return firstSide;
     }
@@ -30,15 +39,6 @@ public class RightTriangle extends Figure {
 
     public void setHypotenuse(double hypotenuse) {
         this.hypotenuse = hypotenuse;
-        calculateArea();
-
-    }
-
-    public RightTriangle(String color, double firstSide, double secondSide) {
-        setColor(color);
-        this.firstSide = firstSide;
-        this.secondSide = secondSide;
-        this.hypotenuse = Math.sqrt(Math.pow(firstSide, 2) + Math.pow(secondSide, 2));
         calculateArea();
 
     }
