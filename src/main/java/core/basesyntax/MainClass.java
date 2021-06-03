@@ -5,8 +5,9 @@ public class MainClass {
 
     public static void main(String[] args) {
         Figure[] figures = new Figure[MAGIC_NUMBER];
+        FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < figures.length; i++) {
-            figures[i] = new FigureSupplier().getRandomFigure();
+            figures[i] = figureSupplier.getRandomFigure();
         }
         for (Figure temp : figures) {
             temp.draw();
