@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class ProgramMain {
-    private static final int MAXFIGURES = 5;
+    private static final int UPPER_BOUND = 5;
 
     public static void main(String[] args) {
         Figure[] figures = new Figure[new Random().nextInt(MAXFIGURES)];
