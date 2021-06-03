@@ -6,10 +6,10 @@ public class Rectangle extends Figure {
     private int bigSide;
     private int smallSide;
 
-    public Rectangle() {
-        super("rectangle", new ColorSupplier().getRandomColor());
-        bigSide = new Random().nextInt(100);
-        smallSide = new Random().nextInt(100);
+    public Rectangle(String title, String color, int bigSide, int smallSide) {
+        super(title, color);
+        this.bigSide = bigSide;
+        this.smallSide = smallSide;
     }
 
     @Override

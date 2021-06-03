@@ -5,9 +5,9 @@ import java.util.Random;
 public class Square extends Figure {
     private int side;
 
-    public Square() {
-        super("squar", new ColorSupplier().getRandomColor());
-        side = new Random().nextInt(100);
+    public Square(String title, String color, int side) {
+        super(title, color);
+        this.side = side;
     }
 
     @Override

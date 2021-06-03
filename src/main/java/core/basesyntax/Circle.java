@@ -5,9 +5,9 @@ import java.util.Random;
 public class Circle extends Figure {
     private double radius;
 
-    public Circle() {
-        super("circle", new ColorSupplier().getRandomColor());
-        radius = new Random().nextInt(100);
+    public Circle(String title, String color, int radius) {
+        super(title, color);
+        this.radius = radius;
     }
 
     @Override

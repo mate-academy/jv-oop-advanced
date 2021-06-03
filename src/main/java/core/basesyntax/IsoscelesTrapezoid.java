@@ -9,12 +9,12 @@ public class IsoscelesTrapezoid extends Figure {
     private double middleLine;
     private double height;
 
-    public IsoscelesTrapezoid() {
-        super("isosceles trapezoid", new ColorSupplier().getRandomColor());
+    public IsoscelesTrapezoid(String title, String color, int highFoundation, int side, int lowFoundation) {
+        super(title, color);
 
-        highFoundation = new Random().nextInt(100);
-        lowFoundation = new Random().nextInt(100);
-        side = new Random().nextInt(100);
+        this.highFoundation = highFoundation;
+        this.lowFoundation = lowFoundation;
+        this.side = side;
         middleLine = (lowFoundation + highFoundation) / 2;
         height = Math.sqrt((side * side) - (lowFoundation - highFoundation)
                 * (lowFoundation - highFoundation) / 4);
