@@ -1,11 +1,12 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements GetArea {
+public class RightTriangle extends Figure {
 
     private double side;
     private double height;
 
-    public RightTriangle(double side, double height) {
+    public RightTriangle(double side, double height, String color) {
+        super(color);
         this.side = side;
         this.height = height;
     }

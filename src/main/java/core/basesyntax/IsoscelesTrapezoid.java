@@ -1,13 +1,18 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements GetArea {
+public class IsoscelesTrapezoid extends Figure {
 
     private double sideA;
     private double sideB;
     private double sideC;
     private double sideD;
 
-    public IsoscelesTrapezoid(double sideA, double sideB, double sideC, double sideD) {
+    public IsoscelesTrapezoid(double sideA,
+                              double sideB,
+                              double sideC,
+                              double sideD,
+                              String color) {
+        super(color);
         this.sideA = sideA;
         this.sideB = sideB;
         this.sideC = sideC;

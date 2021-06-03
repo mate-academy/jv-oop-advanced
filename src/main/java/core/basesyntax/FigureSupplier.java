@@ -3,24 +3,39 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int FIGURE_COUNT = 4;
+    private int upperBound;
+    private ColorSupplier colorSupplier;
+
+    public FigureSupplier(ColorSupplier colorSupplier, int upperBound) {
+        this.colorSupplier = colorSupplier;
+        this.upperBound = upperBound;
+    }
 
     public Figure getRandomFigure() {
-        Random randomNumber = new Random();
-        switch (randomNumber.nextInt(4)) {
+        switch (getRandomNumber(FIGURE_COUNT)) {
             case 0:
-                return new Square(randomNumber.nextInt(100));
+                return new Square(getRandomNumber(upperBound), colorSupplier.getRandomColor());
             case 1:
-                return new RightTriangle(randomNumber.nextInt(100),
-                        randomNumber.nextInt(100));
+                return new RightTriangle(getRandomNumber(upperBound),
+                        getRandomNumber(upperBound),
+                        colorSupplier.getRandomColor());
             case 2:
-                return new Rectangle(randomNumber.nextInt(100),
-                        randomNumber.nextInt(100));
+                return new Rectangle(getRandomNumber(upperBound),
+                        getRandomNumber(upperBound),
+                        colorSupplier.getRandomColor());
             default:
-                return new IsoscelesTrapezoid(randomNumber.nextInt(100),
-                        randomNumber.nextInt(100),
-                        randomNumber.nextInt(100),
-                        randomNumber.nextInt(100));
+                return new IsoscelesTrapezoid(getRandomNumber(upperBound),
+                        getRandomNumber(upperBound),
+                        getRandomNumber(upperBound),
+                        getRandomNumber(upperBound),
+                        colorSupplier.getRandomColor());
         }
+    }
+
+    public int getRandomNumber(int bound) {
+        Random randomNumber = new Random();
+        return randomNumber.nextInt(bound);
     }
 
 }

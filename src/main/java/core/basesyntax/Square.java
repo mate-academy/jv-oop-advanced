@@ -1,10 +1,11 @@
 package core.basesyntax;
 
-public class Square extends Figure implements GetArea {
+public class Square extends Figure {
 
     private double side;
 
-    public Square(double side) {
+    public Square(double side, String color) {
+        super(color);
         this.side = side;
     }
 
