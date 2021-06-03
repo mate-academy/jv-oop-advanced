@@ -13,7 +13,7 @@ public class Square extends Figure {
         return "Figure: square, "
                 + "area: " + calculateArea() + " sq.unit, "
                 + "side: " + side + " units, "
-                + "color: " + color.name().toLowerCase();
+                + "color: " + getColor().name().toLowerCase();
     }
 
     @Override

@@ -12,7 +12,7 @@ public class Circle extends Figure {
         return "Figure: circle, "
                 + "area: " + calculateArea() + " sq.units "
                 + "radius: " + radius + " units "
-                + "color: " + color.name().toLowerCase();
+                + "color: " + getColor().name().toLowerCase();
     }
 
     @Override

@@ -20,6 +20,6 @@ public class Rectangle extends Figure {
         return "Figure: rectangle, "
                 + "area: " + calculateArea() + " sq.unit, "
                 + "sides: " + firstSide + " " + secondSide + " units, "
-                + "color: " + color.name().toLowerCase();
+                + "color: " + getColor().name().toLowerCase();
     }
 }

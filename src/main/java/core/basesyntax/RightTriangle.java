@@ -20,6 +20,6 @@ public class RightTriangle extends Figure {
         return "Figure: right triangle, "
                 + "area: " + calculateArea() + " sq.unit, "
                 + "sides: " + firstLeg + " " + secondLeg + " units, "
-                + "color: " + color.name().toLowerCase();
+                + "color: " + getColor().name().toLowerCase();
     }
 }
