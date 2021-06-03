@@ -4,6 +4,7 @@ public class IsoscelesTrapezoid extends Figure {
     private double upBase;
     private double downBase;
     private double leftBase;
+    private double rightBase;
 
     public double getUpBase() {
         return upBase;
@@ -41,18 +42,16 @@ public class IsoscelesTrapezoid extends Figure {
         calculateArea();
     }
 
-    private double rightBase;
-
     public IsoscelesTrapezoid(String color,
                               double upBase,
                               double downBase,
                               double leftBase,
                               double rightBase) {
+        setColor(color);
         this.upBase = upBase;
         this.downBase = downBase;
         this.leftBase = leftBase;
         this.rightBase = rightBase;
-        setColor(color);
         calculateArea();
     }
 
