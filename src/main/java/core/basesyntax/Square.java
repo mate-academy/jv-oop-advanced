@@ -1,26 +1,24 @@
 package core.basesyntax;
 
-import java.util.Random;
+public class Square extends Figure {
+    private double firstLeg;
+    private double secondLeg;
 
-public class Square extends FigureDraw implements AreaCalculator {
-
-    private Double firstLeg;
-    private Double secondLeg;
-
-    Square() {
-        firstLeg = new Random().nextInt(10) * 1.00 + 1.00;
-        secondLeg = firstLeg;
+    Square(String color, double firstLeg) {
+        super(color);
+        this.firstLeg = firstLeg;
+        this.secondLeg = firstLeg;
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return firstLeg * secondLeg;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: square, area: " + getArea() + " sq.units, sides: firstLeg "
-                + firstLeg + " units, secondLeg " + secondLeg + " units, color: "
-                + ColorSupplier.getRandomColor());
+        System.out.println("FIGURES: square, area: " + calculateArea()
+                + " sq.units, sides: firstLeg " + firstLeg
+                + " units, secondLeg " + secondLeg + " units, color: " + getColor());
     }
 }

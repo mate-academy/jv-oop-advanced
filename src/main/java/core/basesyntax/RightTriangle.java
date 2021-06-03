@@ -1,26 +1,24 @@
 package core.basesyntax;
 
-import java.util.Random;
+public class RightTriangle extends Figure {
+    private double firstLeg;
+    private double secondLeg;
 
-public class RightTriangle extends FigureDraw implements AreaCalculator {
-
-    private Double firstLeg;
-    private Double secondLeg;
-
-    RightTriangle() {
-        firstLeg = new Random().nextInt(10) * 1.00 + 1.00;
-        secondLeg = firstLeg;
+    RightTriangle(String color, double firstLeg, double secondLeg) {
+        super(color);
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return firstLeg * secondLeg / 2;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: rightTriangle, area: " + getArea()
-                + " sq.units, sides: firstLeg " + firstLeg + " units, secondLeg "
-                + secondLeg + " units, color: " + ColorSupplier.getRandomColor());
+        System.out.println("FIGURES: rightTriangle, area: " + calculateArea()
+                + " sq.units, sides: firstLeg " + firstLeg
+                + " units, secondLeg " + secondLeg + " units, color: " + getColor());
     }
 }

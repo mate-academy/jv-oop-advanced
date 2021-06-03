@@ -1,30 +1,29 @@
 package core.basesyntax;
 
-import java.util.Random;
+public class IsoscelesTrapezoid extends Figure {
+    private double firstLeg;
+    private double secondLeg;
+    private double heigh;
 
-public class IsoscelesTrapezoid extends FigureDraw implements AreaCalculator {
-
-    private Double firstLeg;
-    private Double secondLeg;
-    private Double heigh;
-
-    IsoscelesTrapezoid() {
-        firstLeg = new Random().nextInt(10) * 1.00 + 1.00;
-        secondLeg = new Random().nextInt(10) * 1.00 + 1.00;
-        heigh = new Random().nextInt(10) * 1.00 + 1.00;
+    public IsoscelesTrapezoid(String color, double firstLeg, double secondLeg, double heigh) {
+        super(color);
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
+        this.heigh = heigh;
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return (firstLeg + secondLeg) * heigh / 2;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: isoscelesTrapezoid, area: " + getArea()
+        System.out.println("FIGURES: isoscelesTrapezoid, area: " + calculateArea()
                 + " sq.units, sides: firstLeg "
-                + firstLeg + " units, secondLeg " + secondLeg + " units, heigh " + heigh
-                + " units, color: " + ColorSupplier.getRandomColor());
+                + firstLeg + " units, secondLeg " + secondLeg
+                + " units, heigh " + heigh
+                + " units, color: " + getColor());
     }
 }
 

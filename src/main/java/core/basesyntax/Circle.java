@@ -1,23 +1,21 @@
 package core.basesyntax;
 
-import java.util.Random;
+public class Circle extends Figure {
+    private double radius;
 
-public class Circle extends FigureDraw implements AreaCalculator {
-
-    private Double radius;
-
-    Circle() {
-        radius = new Random().nextInt(10) * 1.00 + 1.00;
+    public Circle(String color, double radius) {
+        super(color);
+        this.radius = radius;
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return Math.round(radius * radius * Math.PI);
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: circle, area: " + getArea() + " sq.units, radius: "
-                + radius + " units, color: " + ColorSupplier.getRandomColor());
+        System.out.println("FIGURES: circle, area: " + calculateArea() + " sq.units, radius: "
+                + radius + " units, color: " + getColor());
     }
 }
