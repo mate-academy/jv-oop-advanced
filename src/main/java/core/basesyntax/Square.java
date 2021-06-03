@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends Shape implements Printable, Drawable {
+public class Square extends Shape {
     private double side;
 
     public Square(Color color, double side) {
@@ -9,13 +9,13 @@ public class Square extends Shape implements Printable, Drawable {
     }
 
     @Override
-    public double figureArea() {
+    public double calculateArea() {
         return side * side;
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.printf("Figure: square, area: %s, side: %s, color: %s%n",
-                figureArea(), side, getColor());
+                calculateArea(), side, getColor());
     }
 }

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Shape implements Printable, Drawable {
+public class RightTriangle extends Shape {
     private double sideA;
     private double sideB;
 
@@ -11,13 +11,13 @@ public class RightTriangle extends Shape implements Printable, Drawable {
     }
 
     @Override
-    public double figureArea() {
+    public double calculateArea() {
         return sideA * sideB / 2;
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.printf("Figure: right triangle, area: %s, sideA: %s, sideB: %s,"
-                + " color: %s%n", figureArea(), sideA, sideB, getColor());
+                + " color: %s%n", calculateArea(), sideA, sideB, getColor());
     }
 }

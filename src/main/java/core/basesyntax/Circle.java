@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Shape implements Printable, Drawable {
+public class Circle extends Shape {
     private double radius;
 
     public Circle(Color color, double radius) {
@@ -9,13 +9,13 @@ public class Circle extends Shape implements Printable, Drawable {
     }
 
     @Override
-    public double figureArea() {
+    public double calculateArea() {
         return Math.PI * radius * radius;
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.printf("Figure: circle, area: %s, radius: %s, color: %s%n",
-                figureArea(), radius, getColor());
+                calculateArea(), radius, getColor());
     }
 }
