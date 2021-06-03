@@ -4,19 +4,7 @@ import core.basesyntax.*;
 import core.basesyntax.suppliers.ColorSupplier;
 
 import java.util.Random;
-/*  -rand number
-    -add switch case and number every number its figure
-    -return figure
-*
 
-     figures:
-     1.Circle
-     2.Square
-     3.Rectangle
-     4.RightTriangle
-     5.IsoscelesTrapezoid
-
-* */
 
 
 public class FigureSupplier extends ColorSupplier {
@@ -35,7 +23,7 @@ public class FigureSupplier extends ColorSupplier {
                 return suplier;
             case 5: suplier = new IsoscelesTrapezoid(getRandomColor(), randDouble(), randDouble(), randDouble(), randDouble());
                 return suplier;
-            default: suplier = new Figure(){
+            default: suplier = new Square(getRandomColor(), randDouble());{
             };
                     return suplier;
 

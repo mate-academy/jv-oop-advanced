@@ -1,26 +1,28 @@
 package core.basesyntax;
 
-import core.basesyntax.behavior.Draw;
 
-public class Rectangle extends  Figure implements Draw, AreaCalculater {
+
+public class Rectangle extends Figure  {
     private double firstSide;
     private double secondSide;
 
     public Rectangle(String color, double firstSide, double secondSide) {
-        this.color = color;
+        setColor(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
-        area();
+        areaCalculate();
     }
 
     @Override
-    public Figure draw() {
+    public void draw() {
+        System.out.println("Figure: circle, area: " + getArea()
+                + " sq.units, firstSide: " + firstSide
+                + " units, secondSide: " + secondSide
+                + " units, color: " + getColor());
+    }
+    public void areaCalculate() {
 
-        return null;
+        setArea(firstSide * secondSide);
     }
 
-    @Override
-    public void area() {
-      this.area = firstSide * secondSide;
-    }
 }

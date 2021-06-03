@@ -1,27 +1,25 @@
 package core.basesyntax;
 
-import core.basesyntax.behavior.Draw;
 
-public class Square extends Figure implements Draw, AreaCalculater {
+
+public class Square extends Figure{
     private double side;
 
-
-
     public Square(String color,double side) {
-        this.color = color;
+        setColor(color);
         this.side = side;
-        area();
-    }
-
-
-    @Override
-    public Figure draw() {
-
-        return null;
+        areaCalculate();
     }
 
     @Override
-    public void area() {
-        area = side * side;
+    public void areaCalculate() {
+        setArea(side * side);
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Figure: square, area: " + getArea()
+                + " sq.units, firstSide: " + side
+                + " units, color: " + getColor());
     }
 }

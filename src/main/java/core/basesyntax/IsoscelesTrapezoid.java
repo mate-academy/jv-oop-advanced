@@ -1,8 +1,8 @@
 package core.basesyntax;
 
-import core.basesyntax.behavior.Draw;
 
-public class IsoscelesTrapezoid extends Figure implements Draw, AreaCalculater {
+
+public class IsoscelesTrapezoid extends Figure {
     private double upBase;
     private double downBase;
     private double leftBase;
@@ -13,18 +13,24 @@ public class IsoscelesTrapezoid extends Figure implements Draw, AreaCalculater {
         this.downBase = downBase;
         this.leftBase = leftBase;
         this.rightBase = rightBase;
-        this.color = color;
-        area();
+        setColor(color);
+        areaCalculate();
+    }
+
+
+
+    public void areaCalculate() {
+
+        setArea((upBase + downBase) * ((upBase + downBase) / 2) / 2);
     }
 
     @Override
-    public Figure draw() {
-
-        return null;
-    }
-
-    @Override
-    public void area() {
-        this.area = (upBase + downBase) * ((upBase + downBase) / 2) / 2;
+    public void draw() {
+        System.out.println("Figure:  isosceles trapezoid, area: " + getArea()
+                + " sq.units, upBase: " + upBase
+                + " units, downBase: " + downBase
+                + " units, rightBase: " + rightBase
+                + " units, leftBase: " + leftBase
+                + " units, color: " + getColor());
     }
 }

@@ -11,16 +11,14 @@ import java.util.Random;
 public class Main extends FigureSupplier {
     public static void main(String[] args) {
 
-      //Figure figure = getRandomFigure();
-
-      Figure circle = new Circle("RED",2).draw();
-
-      Figure[] figures = new Figure[new Random().ints(2, 21).findFirst().getAsInt()];
-      for (int i = 0; i < figures.length; i++) {
-          figures[i] = getRandomFigure();
-      }
+   Figure[] figures = new Figure[5];
+   for (int i = 0; i < figures.length; i++) {
+       figures[i] = getRandomFigure();
+       figures[i].draw();
+   }
 
 
 
     }
+
 }
