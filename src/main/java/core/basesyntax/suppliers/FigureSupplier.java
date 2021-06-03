@@ -9,11 +9,8 @@ import core.basesyntax.Square;
 import java.util.Random;
 
 public class FigureSupplier extends ColorSupplier {
-    private static final int RANDOM_MIN = 1;
-    private static final int RANDOM_MAX = 5;
-
     public Figure getRandomFigure() {
-        int randNum = new Random().ints(RANDOM_MIN, RANDOM_MAX).findFirst().getAsInt();
+        int randNum = new Random().ints(1, 5).findFirst().getAsInt();
         switch (randNum) {
             case 1: return new Circle(getRandomColor(), randDouble());
             case 2: return new Square(getRandomColor(), randDouble());
