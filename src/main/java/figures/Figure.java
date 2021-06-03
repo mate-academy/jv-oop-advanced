@@ -1,10 +1,28 @@
 package figures;
 
-public interface Figure {
+import randomiser.Color;
 
-    double getSquare();
+public abstract class Figure implements Drawable {
+    protected Color color;
 
-    double getPerimeter();
+    public Figure(Color color) {
+        this.color = color;
+    }
 
-    void draw();
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    public abstract double getSquare();
+
+    protected abstract double getPerimeter();
+
+    @Override
+    public void draw() {
+        System.out.println();
+    }
 }

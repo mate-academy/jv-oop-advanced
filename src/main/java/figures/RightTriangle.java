@@ -2,27 +2,14 @@ package figures;
 
 import randomiser.Color;
 
-public class RightTriangle implements Figure {
-
-    private Color color;
+public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
-    public RightTriangle() {
-    }
-
     public RightTriangle(Color color, double firstLeg, double secondLeg) {
-        this.color = color;
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-    }
-
-    public Color getColor() {
-        return color;
-    }
-
-    public void setColor(Color color) {
-        this.color = color;
     }
 
     public double getFirstLeg() {

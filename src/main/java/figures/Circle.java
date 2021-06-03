@@ -4,24 +4,12 @@ import static java.lang.Math.pow;
 
 import randomiser.Color;
 
-public class Circle implements Figure {
-    private Color color;
+public class Circle extends Figure {
     private double radius;
 
-    public Circle() {
-    }
-
     public Circle(Color color, double radius) {
-        this.color = color;
+        super(color);
         this.radius = radius;
-    }
-
-    public Color getColor() {
-        return color;
-    }
-
-    public void setColor(Color color) {
-        this.color = color;
     }
 
     public double getRadius() {
@@ -48,6 +36,6 @@ public class Circle implements Figure {
         System.out
                 .printf("Figure: circle, area: %.2f sq.units, radius: %.2f units, color: %s",
                 getSquare(),
-                radius, color);
+                radius, super.getColor());
     }
 }

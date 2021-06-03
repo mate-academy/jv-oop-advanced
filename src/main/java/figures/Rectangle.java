@@ -2,27 +2,14 @@ package figures;
 
 import randomiser.Color;
 
-public class Rectangle implements Figure {
-
-    private Color color;
+public class Rectangle extends Figure {
     private double firstSide;
     private double secondSide;
 
-    public Rectangle() {
-    }
-
     public Rectangle(Color color, double firstLeg, double secondLeg) {
-        this.color = color;
+        super(color);
         this.firstSide = firstLeg;
         this.secondSide = secondLeg;
-    }
-
-    public Color getColor() {
-        return color;
-    }
-
-    public void setColor(Color color) {
-        this.color = color;
     }
 
     public double getFirstSide() {

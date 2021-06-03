@@ -9,7 +9,6 @@ import figures.Square;
 import java.util.Random;
 
 public class RandomFigure {
-
     private static final Random rnd = new Random();
 
     private RandomFigure() {
@@ -50,14 +49,14 @@ public class RandomFigure {
     }
 
     private static Figure getFigure() {
-        return new Figure() {
+        return new Figure(Color.WHITE) {
             @Override
             public double getSquare() {
                 return 0;
             }
 
             @Override
-            public double getPerimeter() {
+            protected double getPerimeter() {
                 return 0;
             }
 

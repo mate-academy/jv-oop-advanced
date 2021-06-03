@@ -3,11 +3,7 @@ package figures;
 import randomiser.Color;
 
 public class IsoscelesTrapezoid extends Rectangle {
-
     private double height;
-
-    public IsoscelesTrapezoid() {
-    }
 
     public IsoscelesTrapezoid(Color color, double firstSide, double secondSide, double height) {
         super(color, firstSide, secondSide);

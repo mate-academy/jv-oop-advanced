@@ -3,10 +3,6 @@ package figures;
 import randomiser.Color;
 
 public class Square extends Rectangle {
-
-    public Square() {
-    }
-
     public Square(Color color, double firstSide) {
         super(color, firstSide, firstSide);
     }
