@@ -5,7 +5,6 @@ import java.util.Random;
 public class Main {
 
     public static void main(String[] args) {
-
         int upperBound = 100;
         int figureAmountBound = 10;
 
@@ -21,7 +20,5 @@ public class Main {
         for (Figure figure : figures) {
             System.out.println(figure.draw());
         }
-
     }
-
 }

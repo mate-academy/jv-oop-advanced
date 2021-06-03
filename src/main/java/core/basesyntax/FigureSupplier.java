@@ -15,7 +15,8 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         switch (getRandomNumber(FIGURE_COUNT)) {
             case 0:
-                return new Square(getRandomNumber(upperBound), colorSupplier.getRandomColor());
+                return new Square(getRandomNumber(upperBound),
+                        colorSupplier.getRandomColor());
             case 1:
                 return new RightTriangle(getRandomNumber(upperBound),
                         getRandomNumber(upperBound),
@@ -33,7 +34,7 @@ public class FigureSupplier {
         }
     }
 
-    public int getRandomNumber(int bound) {
+    private int getRandomNumber(int bound) {
         Random randomNumber = new Random();
         return randomNumber.nextInt(bound);
     }

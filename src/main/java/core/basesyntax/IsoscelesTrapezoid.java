@@ -27,17 +27,11 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String draw() {
-        return "Figure : Isosceles Trapezoid, area : "
-                + getArea()
-                + ", sideA : "
-                + sideA
-                + ", sideB : "
-                + sideB
-                + ", sideC : "
-                + sideC
-                + ", sideD : "
-                + sideD
-                + ", color : "
-                + super.getColor();
+        return "Figure : Isosceles Trapezoid, area : " + getArea()
+                + ", sideA : " + sideA
+                + ", sideB : " + sideB
+                + ", sideC : " + sideC
+                + ", sideD : " + sideD
+                + ", color : " + super.getColor();
     }
 }
