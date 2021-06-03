@@ -4,11 +4,12 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int FIGURES = 5;
+    private static final int UPPER_BOUND = 50;
 
     public Figure getRandomFigure() {
         ColorSupplier colorSupplier = new ColorSupplier();
         Random random = new Random();
-        double generatedDouble = Math.ceil(Math.random() * 10);
+        double generatedDouble = Math.ceil(Math.random() * UPPER_BOUND);
         int target = random.nextInt(FIGURES);
         switch (target) {
             case 0:
