@@ -8,7 +8,6 @@ public class Rectangle extends Figure {
         setColor(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
-        calculateArea();
     }
 
     public double getFirstSide() {

@@ -10,8 +10,6 @@ public class RightTriangle extends Figure {
         this.firstSide = firstSide;
         this.secondSide = secondSide;
         this.hypotenuse = Math.sqrt(Math.pow(firstSide, 2) + Math.pow(secondSide, 2));
-        calculateArea();
-
     }
 
     public double getFirstSide() {
