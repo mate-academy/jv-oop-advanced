@@ -9,25 +9,6 @@ public class Rectangle extends Figure {
         this.firstSide = firstSide;
         this.secondSide = secondSide;
     }
-
-    public double getFirstSide() {
-        return firstSide;
-    }
-
-    public void setFirstSide(double firstSide) {
-        this.firstSide = firstSide;
-        calculateArea();
-    }
-
-    public double getSecondSide() {
-        return secondSide;
-    }
-
-    public void setSecondSide(double secondSide) {
-        this.secondSide = secondSide;
-        calculateArea();
-    }
-
     @Override
     public void draw() {
         System.out.println("Figure: circle, area: " + calculateArea()
