@@ -24,7 +24,8 @@ public class FigureSupplier {
                         randomNumber.nextInt(100), randomNumber.nextInt(100));
             case 4:
             default:
-                return new Square("square", colorSupplier.getRandomColor(), randomNumber.nextInt(100));
+                return new Square("square", colorSupplier.getRandomColor(),
+                        randomNumber.nextInt(100));
         }
     }
 }

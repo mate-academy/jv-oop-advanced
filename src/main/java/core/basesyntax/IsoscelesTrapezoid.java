@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class IsoscelesTrapezoid extends Figure {
     private double highFoundation;
     private double lowFoundation;
@@ -9,7 +7,8 @@ public class IsoscelesTrapezoid extends Figure {
     private double middleLine;
     private double height;
 
-    public IsoscelesTrapezoid(String title, String color, int highFoundation, int side, int lowFoundation) {
+    public IsoscelesTrapezoid(String title, String color, int highFoundation,
+                              int side, int lowFoundation) {
         super(title, color);
 
         this.highFoundation = highFoundation;
