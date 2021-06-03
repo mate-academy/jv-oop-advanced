@@ -14,7 +14,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String getInformationOfFigure() {
+    public String getPrinting() {
         return "Circle, area: " + getArea()
                 + " sq. units, radius " + radius + " units, color: " + getColor();
     }

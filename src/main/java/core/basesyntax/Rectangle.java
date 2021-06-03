@@ -16,7 +16,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String getInformationOfFigure() {
+    public String getPrinting() {
         return "Rectangle, area: " + getArea() + " sq. units, sizeA " + sizeA
                 + " units sizeB " + sizeB + " units, color: " + getColor();
     }

@@ -5,31 +5,33 @@ import java.util.Random;
 public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
 
+    private int getRandomLength() {
+        return (new Random().nextInt(20));
+    }
+
     public Figure getRandomFigure() {
         int getRandomIndex = new Random().nextInt(5);
 
         switch (getRandomIndex) {
             case 1:
-                Figure square = new Square(colorSupplier.getRandomColor(), 1 + Math.random() * 20);
+                Figure square = new Square(colorSupplier.getRandomColor(), getRandomLength());
                 return square;
             case 2:
                 Figure rectangle = new Rectangle(colorSupplier.getRandomColor(),
-                        1 + Math.random() * 20, 1 + Math.random() * 20);
+                        getRandomLength(), getRandomLength());
                 return rectangle;
             case 3:
                 Figure rightTriangle = new RightTriangle(colorSupplier.getRandomColor(),
-                        1 + Math.random() * 20, 1 + Math.random() * 20);
+                        getRandomLength(), getRandomLength());
                 return rightTriangle;
             case 4:
-                Figure circle = new Circle(colorSupplier.getRandomColor(), 1 + Math.random() * 20);
+                Figure circle = new Circle(colorSupplier.getRandomColor(), getRandomLength());
                 return circle;
             case 5:
-                Figure isoscelesTrapezoid = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        1 + Math.random() * 20, 1 + Math.random() * 20, 1 + Math.random() * 20);
-                return isoscelesTrapezoid;
             default:
-                Figure circle1 = new Circle(colorSupplier.getRandomColor(), 1 + Math.random() * 20);
-                return circle1;
+                Figure isoscelesTrapezoid = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        getRandomLength(), getRandomLength(), getRandomLength());
+                return isoscelesTrapezoid;
         }
     }
 }
