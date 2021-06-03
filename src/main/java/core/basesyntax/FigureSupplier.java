@@ -3,14 +3,11 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int INDEX_FIGURE = 5;
     private ColorSupplier colorSupplier = new ColorSupplier();
 
-    private int getRandomLength() {
-        return (new Random().nextInt(20));
-    }
-
     public Figure getRandomFigure() {
-        int getRandomIndex = new Random().nextInt(5);
+        int getRandomIndex = new Random().nextInt(INDEX_FIGURE);
 
         switch (getRandomIndex) {
             case 1:
@@ -33,5 +30,9 @@ public class FigureSupplier {
                         getRandomLength(), getRandomLength(), getRandomLength());
                 return isoscelesTrapezoid;
         }
+    }
+
+    private int getRandomLength() {
+        return (new Random().nextInt(20));
     }
 }

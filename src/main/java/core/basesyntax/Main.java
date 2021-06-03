@@ -1,8 +1,12 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public class Main {
+    static final int NUMBER_MAX_DIAPASON = 10;
+
     public static void main(String[] args) {
-        int value = (int) (1 + Math.random() * 10);
+        int value = new Random().nextInt(NUMBER_MAX_DIAPASON);;
         Figure[] figures = new Figure[value];
         FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < value; i++) {
