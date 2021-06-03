@@ -11,7 +11,7 @@ public class RandomColor {
         return Color.values()[randomIndex];
     }
 
-    public static int getRandomIndex(){
+    public static int getRandomIndex() {
         return rnd.nextInt(NUMBER_OF_FIGURES);
     }
 }
