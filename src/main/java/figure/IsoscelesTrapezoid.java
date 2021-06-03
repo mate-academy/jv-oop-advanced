@@ -1,12 +1,11 @@
 package figure;
 
 public class IsoscelesTrapezoid extends Figure {
-    private final Double firstBase;
-    private final Double secondBase;
-    private final Double height;
+    private Double firstBase;
+    private Double secondBase;
+    private Double height;
 
     public IsoscelesTrapezoid(String color, Double firstBase, Double secondBase, Double height) {
-        this.setType(FigureSupplier.getTypeName(3));
         this.setColor(color);
         this.firstBase = firstBase;
         this.secondBase = secondBase;
@@ -20,7 +19,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure : " + getType() + " color : " + getColor()
+        System.out.println("Figure : " + "IsoscelesTrapezoid" + " color : " + getColor()
                 + " area : " + getArea()
                 + " sq.units" + " first base : " + this.firstBase + " units"
                 + " second base : " + this.secondBase + " units"

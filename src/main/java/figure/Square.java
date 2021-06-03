@@ -1,12 +1,10 @@
 package figure;
 
 public class Square extends Figure {
-    private final Double side;
+    private Double side;
 
     public Square(String color, Double side) {
-        this.setType(FigureSupplier.getTypeName(4));
         this.setColor(color);
-        this.setType("square");
         this.side = side;
     }
 
@@ -17,7 +15,7 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure : " + getType()
+        System.out.println("Figure : " + "Square"
                 + " color : " + getColor()
                 + " area : " + getArea() + " sq.units"
                 + " side : " + this.side + " units");

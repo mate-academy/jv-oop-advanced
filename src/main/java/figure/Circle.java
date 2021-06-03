@@ -1,10 +1,9 @@
 package figure;
 
 public class Circle extends Figure {
-    private final Double radius;
+    private Double radius;
 
     public Circle(String color, Double radius) {
-        this.setType(FigureSupplier.getTypeName(0));
         this.setColor(color);
         this.radius = radius;
     }
@@ -16,7 +15,7 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure : " + getType()
+        System.out.println("Figure : " + "Circle"
                 + " color : " + getColor() + " area : " + getArea() + " sq.units"
                 + " radius : " + this.radius + " units");
     }

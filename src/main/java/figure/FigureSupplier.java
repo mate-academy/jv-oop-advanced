@@ -5,16 +5,6 @@ import java.util.Random;
 public class FigureSupplier extends ColorSupplier {
     public static final int FIGURE_COUNT = 5;
     public static final int FIGURE_RANDOM_UNIT = 100;
-    private static final String[] figures = {"circle", "rectangle",
-            "right triangle", "isosceles trapezoid", "square"};
-
-    public static String getTypeName(int typeNumber) {
-        return figures[typeNumber];
-    }
-
-    public static Double getRandomFigureValue() {
-        return (new Random().nextInt(FIGURE_RANDOM_UNIT) + 1) * 0.01d;
-    }
 
     public static Figure getRandomFigure() {
         Figure figure;
@@ -23,9 +13,6 @@ public class FigureSupplier extends ColorSupplier {
         Double randomNumberTwo = (new Random().nextInt(FIGURE_RANDOM_UNIT) + 1) * 0.01d;
         Double randomNumberThree = (new Random().nextInt(FIGURE_RANDOM_UNIT) + 1) * 0.01d;
         switch (randomIndex) {
-            case 0:
-                figure = new Circle(getRandomColor(), randomNumberOne);
-                break;
             case 1:
                 figure = new Rectangle(getRandomColor(), randomNumberOne, randomNumberTwo);
                 break;
@@ -40,9 +27,17 @@ public class FigureSupplier extends ColorSupplier {
                 figure = new Square(getRandomColor(),randomNumberOne);
                 break;
             default:
-                figure = new Figure(getRandomColor());
+                figure = new Circle(getRandomColor(), randomNumberOne);
                 break;
         }
         return figure;
+    }
+
+    public static Figure[] createRandomArrayOfFigures(int countFigure) {
+        Figure[] figuresArray = new Figure[countFigure];
+        for (int i = 0; i < countFigure; i++) {
+            figuresArray[i] = getRandomFigure();
+        }
+        return figuresArray;
     }
 }
