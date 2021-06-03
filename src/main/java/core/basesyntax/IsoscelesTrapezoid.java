@@ -9,32 +9,13 @@ public class IsoscelesTrapezoid extends Figure {
     public IsoscelesTrapezoid(String color,
                               double upBase,
                               double downBase,
-                              double rightBase,
-                              double leftBase) {
-        setColor(color);
+                              double leftBase,
+                              double rightBase) {
         this.upBase = upBase;
         this.downBase = downBase;
         this.leftBase = leftBase;
         this.rightBase = rightBase;
-        calculateArea();
-    }
-
-    public double getUpBase() {
-        return upBase;
-    }
-
-    public void setUpBase(double upBase) {
-        this.upBase = upBase;
-        calculateArea();
-    }
-
-    public double getDownBase() {
-        return downBase;
-    }
-
-    public void setDownBase(double downBase) {
-        this.downBase = downBase;
-        calculateArea();
+        setColor(color);
     }
 
     public double getLeftBase() {
@@ -43,7 +24,6 @@ public class IsoscelesTrapezoid extends Figure {
 
     public void setLeftBase(double leftBase) {
         this.leftBase = leftBase;
-        calculateArea();
     }
 
     public double getRightBase() {
@@ -52,7 +32,6 @@ public class IsoscelesTrapezoid extends Figure {
 
     public void setRightBase(double rightBase) {
         this.rightBase = rightBase;
-        calculateArea();
     }
 
     public double calculateArea() {
@@ -61,7 +40,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure:  isosceles trapezoid, area: " + calculateArea()
+        System.out.println("Figure:  isosceles trapezoid, area: " + getArea()
                 + " sq.units, upBase: " + upBase
                 + " units, downBase: " + downBase
                 + " units, rightBase: " + rightBase
