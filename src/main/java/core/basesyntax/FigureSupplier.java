@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class FigureSupplier extends ColorSupplier {
+public class FigureSupplier {
     private static final int MAX_FIGURES_SIZE = 10;
     private static final int NUMBER_OF_FIGURES = 5;
 
@@ -13,19 +13,20 @@ public class FigureSupplier extends ColorSupplier {
     }
 
     public Figure getRandomFigure() {
+        ColorSupplier colorSupplier = new ColorSupplier();
         switch (new Random().nextInt(NUMBER_OF_FIGURES)) {
             case 1:
-                return new Circle(getRandomColor(), getRandomDouble());
+                return new Circle(colorSupplier.getRandomColor(), getRandomDouble());
             case 2:
-                return new Rectangle(getRandomColor(), getRandomDouble(),
+                return new Rectangle(colorSupplier.getRandomColor(), getRandomDouble(),
                             getRandomDouble());
             case 3:
-                return new RightTriangle(getRandomColor(), getRandomDouble(),
+                return new RightTriangle(colorSupplier.getRandomColor(), getRandomDouble(),
                             getRandomDouble());
             case 4:
-                return new Square(getRandomColor(), getRandomDouble());
+                return new Square(colorSupplier.getRandomColor(), getRandomDouble());
             default:
-                return new IsoscelesTrapezoid(getRandomColor(), getRandomDouble(),
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomDouble(),
                             getRandomDouble(), getRandomDouble());
         }
     }
