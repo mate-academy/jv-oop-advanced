@@ -9,6 +9,7 @@ public class RandomColor {
     }
 
     public Color getRandomColor() {
-        return Color.values()[randomUtil.getRandomIndex(NUMBER_COLORS)];
+        return Color.values()
+            [randomUtil.getRandomIndex(NUMBER_COLORS)];
     }
 }

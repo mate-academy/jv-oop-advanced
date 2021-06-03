@@ -20,46 +20,30 @@ public class RandomFigure {
 
     public Figure[] getRandomFigures() {
         Figure[] figures = new Figure[LIMIT];
-        int randomIndex;
-        Color color;
-
         for (int i = 0; i < LIMIT; i++) {
-            randomIndex = randomUtil.getRandomIndex(COUNT_FIGURES);
-            color = this.randomColor.getRandomColor();
-            getRandomFigure(figures, randomIndex, color, i);
+            figures[i] = getRandomFigure();
         }
         return figures;
     }
 
-    private void getRandomFigure(Figure[] figures, int randomIndex, Color color, int i) {
+    private Figure getRandomFigure() {
+        int randomIndex = randomUtil.getRandomIndex(COUNT_FIGURES);
         switch (randomIndex) {
             case 0:
-                figures[i] = new IsoscelesTrapezoid(color,
+                return new IsoscelesTrapezoid(randomColor.getRandomColor(),
                     randomUtil.getDouble(LIMIT),
                     randomUtil.getDouble(LIMIT),
                     randomUtil.getDouble(LIMIT));
-                break;
             case 1:
-                figures[i] = new Circle(color, randomUtil.getRandomIndex(LIMIT));
-                break;
+                return new Circle(randomColor.getRandomColor(), randomUtil.getRandomIndex(LIMIT));
             case 2:
-                figures[i] = new Square(color, randomUtil.getDouble(LIMIT));
-                break;
+                return new Square(randomColor.getRandomColor(), randomUtil.getDouble(LIMIT));
             case 3:
-                figures[i] = new RightTriangle(color, randomUtil.getDouble(LIMIT),
+                return new RightTriangle(randomColor.getRandomColor(), randomUtil.getDouble(LIMIT),
                     randomUtil.getDouble(LIMIT));
-                break;
-            case 4:
-                figures[i] = new Rectangle(color, randomUtil.getDouble(LIMIT),
-                    randomUtil.getDouble(LIMIT));
-                break;
             default:
-                figures[i] = getEmptyFigure();
-                break;
+                return new Rectangle(randomColor.getRandomColor(), randomUtil.getDouble(LIMIT),
+                    randomUtil.getDouble(LIMIT));
         }
-    }
-
-    private static Figure getEmptyFigure() {
-        return new Circle(Color.BLACK, 1);
     }
 }
