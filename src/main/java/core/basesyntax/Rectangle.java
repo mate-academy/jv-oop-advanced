@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Drow {
+public class Rectangle extends Figure {
     private final double side1;
     private final double side2;
 
@@ -12,7 +12,7 @@ public class Rectangle extends Figure implements Drow {
     }
 
     @Override
-    double getArea() {
+    public double getArea() {
         return side1 * side2;
     }
 

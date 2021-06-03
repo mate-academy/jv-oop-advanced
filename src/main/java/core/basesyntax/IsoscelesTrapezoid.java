@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements Drow {
+public class IsoscelesTrapezoid extends Figure {
     private final double side1;
     private final double side2;
     private final double height;
@@ -13,7 +13,7 @@ public class IsoscelesTrapezoid extends Figure implements Drow {
     }
 
     @Override
-    double getArea() {
+    public double getArea() {
         return (height * side1 * side2) / 2;
     }
 

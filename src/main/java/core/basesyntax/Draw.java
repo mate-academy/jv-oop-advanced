@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public interface Drow {
+public interface Draw {
     String getInfo();
 }

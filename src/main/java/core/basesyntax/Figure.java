@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements Drow {
+public abstract class Figure implements Draw, AreaCalculator {
     private final String color;
 
     public Figure(String color) {
@@ -10,6 +10,4 @@ public abstract class Figure implements Drow {
     public String getColor() {
         return color;
     }
-
-    abstract double getArea();
 }
