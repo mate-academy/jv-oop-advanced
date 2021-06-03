@@ -6,7 +6,6 @@ public class Circle extends Figure {
     public Circle(String color, double radius) {
         setColor(color);
         this.radius = radius;
-        calculateArea();
     }
 
     public void setRadius(double radius) {
