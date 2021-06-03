@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public interface FigureDescription {
+public interface Drawable {
     void draw();
 }
