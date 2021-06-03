@@ -9,8 +9,8 @@ public class MainClass {
         for (int i = 0; i < figures.length; i++) {
             figures[i] = figureSupplier.getRandomFigure();
         }
-        for (Figure temp : figures) {
-            temp.draw();
+        for (Figure figure : figures) {
+            figure.draw();
         }
     }
 }
