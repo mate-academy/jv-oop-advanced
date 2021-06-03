@@ -1,8 +1,6 @@
 package core.basesyntax;
 
-
-
-public class RightTriangle extends Figure  {
+public class RightTriangle extends Figure {
     private double firstSide;
     private double secondSide;
     private double hypotenuse;
@@ -14,16 +12,11 @@ public class RightTriangle extends Figure  {
         this.hypotenuse = Math.sqrt(Math.pow(firstSide, 2) + Math.pow(secondSide, 2));
         areaCalculate();
 
-
     }
-
-
-
-
 
     @Override
     public void areaCalculate() {
-        setArea( 0.5 * firstSide * secondSide);
+        setArea(0.5 * firstSide * secondSide);
     }
 
     @Override

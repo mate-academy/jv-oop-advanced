@@ -1,8 +1,6 @@
 package core.basesyntax;
 
-
-
-public class Rectangle extends Figure  {
+public class Rectangle extends Figure {
     private double firstSide;
     private double secondSide;
 
@@ -20,9 +18,8 @@ public class Rectangle extends Figure  {
                 + " units, secondSide: " + secondSide
                 + " units, color: " + getColor());
     }
-    public void areaCalculate() {
 
+    public void areaCalculate() {
         setArea(firstSide * secondSide);
     }
-
 }

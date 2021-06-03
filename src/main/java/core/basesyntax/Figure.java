@@ -24,10 +24,4 @@ public abstract class Figure implements Draw, AreaCalculator {
         return color;
     }
 
-    Figure() {
-
-    }
-
-
-
 }
