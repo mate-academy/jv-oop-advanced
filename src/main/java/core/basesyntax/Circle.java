@@ -10,7 +10,6 @@ public class Circle extends Figure {
 
     public void setRadius(double radius) {
         this.radius = radius;
-        calculateArea();
     }
 
     @Override
