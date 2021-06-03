@@ -7,7 +7,7 @@ public class ColorSupplier {
             "green", "grey", "magenta", "orange",
             "purple", "red", "white", "yellow"};
 
-    public static String getRandomColor() {
+    public String getRandomColor() {
         return colors[(new Random().nextInt(colors.length))];
     }
 }
