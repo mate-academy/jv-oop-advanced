@@ -8,9 +8,9 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        int getRandomIndex = new Random().nextInt(5);
+        int randomIndex = new Random().nextInt(5);
         ColorSupplier supplier = new ColorSupplier();
-        switch (getRandomIndex) {
+        switch (randomIndex) {
             case 1:
                 return new Circle(supplier.getRandomColor(), getRandomNum());
             case 2:
