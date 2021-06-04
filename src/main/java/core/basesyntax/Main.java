@@ -1,5 +1,6 @@
 package core.basesyntax;
 
+import core.basesyntax.suppliers.ColorSupplier;
 import core.basesyntax.suppliers.FigureSupplier;
 
 public class Main {
