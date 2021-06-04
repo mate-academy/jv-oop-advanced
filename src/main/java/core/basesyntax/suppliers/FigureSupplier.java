@@ -19,9 +19,13 @@ public class FigureSupplier {
             case 1: return new Circle(figureColor.getRandomColor(), randDouble());
             case 2: return new Square(figureColor.getRandomColor(), randDouble());
             case 3: return new Rectangle(figureColor.getRandomColor(), randDouble(), randDouble());
-            case 4: return new RightTriangle(figureColor.getRandomColor(), randDouble(), randDouble());
-            case 5: return new IsoscelesTrapezoid(figureColor.getRandomColor(), randDouble(), randDouble(),
-                                                                    randDouble(), randDouble());
+            case 4: return new RightTriangle(figureColor.getRandomColor(),
+                                                                randDouble(),
+                                                                randDouble());
+            case 5: return new IsoscelesTrapezoid(figureColor.getRandomColor(), randDouble(),
+                                                                                randDouble(),
+                                                                                randDouble(),
+                                                                                randDouble());
             default: return new Square(figureColor.getRandomColor(), randDouble());
         }
     }
