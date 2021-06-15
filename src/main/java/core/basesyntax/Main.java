@@ -7,11 +7,11 @@ public class Main {
         Figure[] figures = new Figure[MAX_FIGURES_COUNT];
         int random = 1 + (int)(Math.random() * MAX_FIGURES_COUNT);
 
-        for (int i = 1; i <= random; i++) {
+        for (int i = 0; i <= random - 1; i++) {
             figures[i] = FigureSupplier.getRandomFigure();
         };
 
-        for (int i = 1; i <= random; i++) {
+        for (int i = 0; i <= random - 1; i++) {
             figures[i].draw();
         };
     }
