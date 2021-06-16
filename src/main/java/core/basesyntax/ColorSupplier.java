@@ -23,7 +23,7 @@ public class ColorSupplier {
         colors[4] = "brown";
 
         Random random = new Random();
-        setColor(colors[random.nextInt(6)]);
+        setColor(colors[random.nextInt(5)]);
 
         return color;
     }
