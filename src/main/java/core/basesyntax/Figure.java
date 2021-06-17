@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Figure implements Drawing {
+public abstract class Figure implements Drawing {
     private String name;
     private String color;
     private double area;
@@ -37,8 +37,8 @@ public class Figure implements Drawing {
 
     @Override
     public void draw() {
-        System.out.println(new StringBuilder().append("Figure: ").append(getName())
-                .append(", ").append("area: ").append(getArea())
-                .append(", ").append("color: ").append(getColor()).toString());
+        System.out.println("Figure: " + getName()
+                + ", " + "area: " + getArea()
+                + ", " + "color: " + getColor());
     }
 }

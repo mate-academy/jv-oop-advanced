@@ -2,7 +2,9 @@ package core.basesyntax;
 
 public class FigureSupplier {
     public Figure[] getRandomFigure() {
-        Figure[] figures = new Figure[5];
+        int figureAmount = 5;
+
+        Figure[] figures = new Figure[figureAmount];
 
         figures[0] = new Square("square", Math.random() * 10,
                 Math.random() * 10, ColorSupplier.getRandomColor());

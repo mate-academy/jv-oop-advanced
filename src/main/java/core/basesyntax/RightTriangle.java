@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements Drawing {
+public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
@@ -25,10 +25,9 @@ public class RightTriangle extends Figure implements Drawing {
 
     @Override
     public void draw() {
-        System.out.println(new StringBuilder().append("Figure: ").append(getName())
-                .append(", ").append("area: ").append(getArea()).append(", ")
-                .append("firstLeg: ").append(getFirstLeg()).append(", ")
-                .append("secondLeg: ").append(getSecondLeg()).append(", ")
-                .append("color: ").append(getColor()).toString());
+        System.out.println("Figure: " + getName() + ", "
+                + "area: " + getArea() + ", " + "firstLeg: "
+                + getFirstLeg() + ", " + "secondLeg: "
+                + getSecondLeg() + ", " + "color: " + getColor());
     }
 }
