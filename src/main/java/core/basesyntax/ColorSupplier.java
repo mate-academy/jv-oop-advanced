@@ -4,8 +4,8 @@ public class ColorSupplier {
     public static final int COLOR_COUNT = 7;
 
     public static String getRandomColor() {
-        int random = 1 + (int)(Math.random() * COLOR_COUNT);
-        switch (random) {
+        int colorChoice = 1 + (int)(Math.random() * COLOR_COUNT);
+        switch (colorChoice) {
             case 1:
                 return "Red";
             case 2:
@@ -21,7 +21,8 @@ public class ColorSupplier {
             case 7:
                 return "Violet";
             default:
-                System.out.println("Something wrong with color number randomizer, you'll get default color");
+                System.out.println("Something wrong with color number randomizer, "
+                        + "you'll get default color");
                 return "Transparent";
         }
     }
