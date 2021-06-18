@@ -17,6 +17,6 @@ public class ColorSupplier {
 
         Random random = new Random();
 
-        return colors[random.nextInt(5)];
+        return colors[random.nextInt(colors.length)];
     }
 }

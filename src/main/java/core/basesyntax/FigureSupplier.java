@@ -20,7 +20,7 @@ public class FigureSupplier {
         Figure[] figureArrayForReturn = new Figure[(int) (1 + Math.random() * 20)];
 
         for (int i = 0; i < figureArrayForReturn.length; i++) {
-            figureArrayForReturn[i] = figures[(int) (Math.random() * 5)];
+            figureArrayForReturn[i] = figures[(int) (Math.random() * figures.length)];
         }
 
         return figureArrayForReturn;
