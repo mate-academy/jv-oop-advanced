@@ -29,6 +29,6 @@ public class Rectangle extends Figure implements GetArea {
     public String printInfo() {
         return "Figure: rectangle, area: " + Math.floor(getArea() * 100) / 100
                 + " sq.units, first side: " + getSideA() + " units, second side: "
-                + getSideB() + " units, color " + getColor();
+                + getSideB() + " units, color: " + getColor();
     }
 }

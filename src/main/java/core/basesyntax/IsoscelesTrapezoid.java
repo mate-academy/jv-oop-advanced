@@ -38,6 +38,6 @@ public class IsoscelesTrapezoid extends Figure implements GetArea {
     public String printInfo() {
         return "Figure: isosceles trapezoid, area: " + Math.floor(getArea() * 100) / 100
                 + " sq.units, top side: " + getTopSide() + " units, bottom side: " + getBottomSide()
-                + " units, height: " + getHeight() + ", color " + getColor();
+                + " units, height: " + getHeight() + ", color: " + getColor();
     }
 }
