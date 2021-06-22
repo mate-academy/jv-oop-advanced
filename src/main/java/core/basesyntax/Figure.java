@@ -1,11 +1,10 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public abstract class Figure implements Drawing{
+    private String name;
     private String color;
-
-    abstract void Parameter ();
-
-    abstract void Area ();
-
-
+    public abstract String getName();
+    public abstract String getColor();
+    public abstract void setColor(String color);
+    abstract double area();
 }
