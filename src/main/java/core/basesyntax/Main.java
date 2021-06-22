@@ -8,7 +8,8 @@ public class Main {
         int figureArrayCount = new Random().nextInt(20);
         String[] resultArray = new String[figureArrayCount];
 
-        //creating random Figure with random parameters and adding description of each new object to our array,
+        //creating random Figure with random parameters and adding
+        // description of each new object to our array,
         //in the end of each iteration printing info
         for (int i = 0; i < resultArray.length; i++) {
             FigureSupplier randomFigure = new FigureSupplier();

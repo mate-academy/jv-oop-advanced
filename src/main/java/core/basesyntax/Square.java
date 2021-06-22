@@ -1,8 +1,6 @@
 package core.basesyntax;
 
-import java.util.Random;
-
-public class Square extends Figure implements Drawing{
+public class Square extends Figure implements Drawing {
     private String color;
     private double side;
 
@@ -11,7 +9,7 @@ public class Square extends Figure implements Drawing{
     }
 
     //getter for name
-    public String getName () {
+    public String getName() {
         return "Square";
     }
 
@@ -42,7 +40,7 @@ public class Square extends Figure implements Drawing{
     // returning general info via String for our object
     @Override
     public String toDrawInfo() {
-        return ("Figure: " + getName() + ", " + "area: " + area() + " sq.units, " + "side: " + getSide() + " units, " +
-                "color: " + getColor());
+        return ("Figure: " + getName() + ", " + "area: " + area() + " sq.units, "
+                + "side: " + getSide() + " units, " + "color: " + getColor());
     }
 }

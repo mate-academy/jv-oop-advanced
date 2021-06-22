@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class IsoscelesTrapezoid extends Figure implements Drawing {
     private String color;
     private double upperBase;
@@ -16,7 +14,7 @@ public class IsoscelesTrapezoid extends Figure implements Drawing {
     }
 
     //getter for name
-    public String getName () {
+    public String getName() {
         return "IsoscelesTrapezoid";
     }
 
@@ -65,8 +63,9 @@ public class IsoscelesTrapezoid extends Figure implements Drawing {
     // returning general info via String for our object
     @Override
     public String toDrawInfo() {
-        return ("Figure: " + getName() + ", " + "area: " + area() + " sq.units, " + "lowerBase: " + getLowerBase() +
-                " units, " + "upperBase: " + getUpperBase() + " units, " + "height: " + getHeight() + " units, " +
-                "color: " + getColor());
+        return ("Figure: " + getName() + ", " + "area: " + area() + " sq.units, "
+                + "lowerBase: " + getLowerBase() + " units, " + "upperBase: "
+                + getUpperBase() + " units, " + "height: " + getHeight()
+                + " units, " + "color: " + getColor());
     }
 }

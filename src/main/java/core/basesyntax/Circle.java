@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Circle extends Figure implements Drawing {
     private String color;
     private double radius;
@@ -11,7 +9,7 @@ public class Circle extends Figure implements Drawing {
     }
 
     //getter for name
-    public String getName () {
+    public String getName() {
         return "Circle";
     }
 
@@ -42,7 +40,7 @@ public class Circle extends Figure implements Drawing {
     // returning general info via String for our object
     @Override
     public String toDrawInfo() {
-        return ("Figure: " + getName() + ", " + "area: " + area() + " sq.units, " + "radius: " + getRadius() +
-                " units, " + "color: " + getColor());
+        return ("Figure: " + getName() + ", " + "area: " + area() + " sq.units, "
+                + "radius: " + getRadius() + " units, " + "color: " + getColor());
     }
 }

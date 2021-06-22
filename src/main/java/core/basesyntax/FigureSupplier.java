@@ -17,7 +17,8 @@ public class FigureSupplier {
         //initializing Figure to be returned after switch-case statement
         Figure result;
 
-        //choosing our Figure class based on random int from figureNum and then adding random parameters
+        //choosing our Figure class based on random int from figureNum
+        // and then adding random parameters
         switch (figureNum) {
             case 0:
                 double randomSide = new Random().nextDouble() * randomRange;
@@ -46,8 +47,9 @@ public class FigureSupplier {
             default:
                 result = new Square(0.0);
         }
+
         //setting random color to Figure object
         result.setColor(randomColor.getRandomColor());
-        return  result;
+        return result;
     }
 }

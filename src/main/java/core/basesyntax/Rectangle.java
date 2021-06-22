@@ -1,8 +1,6 @@
 package core.basesyntax;
 
-import java.util.Random;
-
-public class Rectangle extends Figure implements Drawing{
+public class Rectangle extends Figure implements Drawing {
     private String color;
     private double sideA;
     private double sideB;
@@ -13,9 +11,10 @@ public class Rectangle extends Figure implements Drawing{
     }
 
     //getter for name
-    public String getName () {
+    public String getName() {
         return "Rectangle";
     }
+
     //getter and setter for color
     public String getColor() {
         return color;
@@ -52,7 +51,8 @@ public class Rectangle extends Figure implements Drawing{
     // returning general info via String for our object
     @Override
     public String toDrawInfo() {
-        return ("Figure: " + getName() + ", " + "area: " + area() + " sq.units, " + "sideA: " + getSideA() + " units, "
-                + "sideB: " + getSideB() + " units, " + "color: " + getColor());
+        return ("Figure: " + getName() + ", " + "area: " + area() + " sq.units, " + "sideA: "
+                + getSideA() + " units, " + "sideB: " + getSideB() + " units, " + "color: "
+                + getColor());
     }
 }
