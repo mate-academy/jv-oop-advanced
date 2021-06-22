@@ -52,7 +52,7 @@ public class Rectangle extends Figure implements Drawing{
     // returning general info via String for our object
     @Override
     public String toDrawInfo() {
-        return ("Figure: " + getName() + ", " + "area: " + area() + " sq.units, " + "sideA: " + getSideA() + " units, " +
-                "sideB: " + getSideB() + " units, " + "color: " + getColor());
+        return ("Figure: " + getName() + ", " + "area: " + area() + " sq.units, " + "sideA: " + getSideA() + " units, "
+                + "sideB: " + getSideB() + " units, " + "color: " + getColor());
     }
 }

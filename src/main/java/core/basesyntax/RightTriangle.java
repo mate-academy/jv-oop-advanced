@@ -53,7 +53,7 @@ public class RightTriangle extends  Figure implements Drawing {
     // returning general info via String for our object
     @Override
     public String toDrawInfo() {
-        return ("Figure: " + getName() + ", " + "area: " + area() + " sq.units, " + "firstLeg: " + getFirstLeg() + " units, "
-                + "secondLeg: " + getSecondLeg() + " units, " + "color: " + getColor());
+        return ("Figure: " + getName() + ", " + "area: " + area() + " sq.units, " + "firstLeg: " + getFirstLeg() +
+                " units, " + "secondLeg: " + getSecondLeg() + " units, " + "color: " + getColor());
     }
 }

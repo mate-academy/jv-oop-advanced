@@ -66,6 +66,7 @@ public class IsoscelesTrapezoid extends Figure implements Drawing {
     @Override
     public String toDrawInfo() {
         return ("Figure: " + getName() + ", " + "area: " + area() + " sq.units, " + "lowerBase: " + getLowerBase() +
-                " units, " + "upperBase: " + getUpperBase() + " units, " + "height: " + getHeight() + " units, " + "color: " + getColor());
+                " units, " + "upperBase: " + getUpperBase() + " units, " + "height: " + getHeight() + " units, " +
+                "color: " + getColor());
     }
 }
