@@ -29,12 +29,14 @@ public class FigureSupplier {
                 double randomUpperBase = new Random().nextDouble() * randomRange;
                 double randomLowerBase = new Random().nextDouble() * randomRange;
                 double randomHeight = new Random().nextDouble() * randomRange;
-                return new IsoscelesTrapezoid(randomUpperBase, randomLowerBase, randomHeight, color);
+                return new IsoscelesTrapezoid(randomUpperBase, randomLowerBase, randomHeight,
+                        color);
             case 4:
                 double randomFirstLeg = new Random().nextDouble() * randomRange;
                 double randomSecondLeg = new Random().nextDouble() * randomRange;
                 return new RightTriangle(randomFirstLeg, randomSecondLeg, color);
+            default:
+                return new Square(0.00, null);
         }
-        return new Square(0.00, null);
     }
 }

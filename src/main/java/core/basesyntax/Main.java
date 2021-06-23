@@ -7,7 +7,6 @@ public class Main {
         int figureArrayCount = new Random().nextInt(20);
         String[] resultArray = new String[figureArrayCount];
 
-
         for (int i = 0; i < resultArray.length; i++) {
             FigureSupplier randomFigure = new FigureSupplier();
             Figure resultingFigure = randomFigure.getRandomFigure();
