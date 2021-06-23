@@ -9,7 +9,6 @@ public class ColorSupplier {
                 "White", "Green", "Brown"};
         Random resultIndex = new Random();
 
-        //returning String from array by random index
         return figureArray[resultIndex.nextInt(figureArray.length)];
     }
 }

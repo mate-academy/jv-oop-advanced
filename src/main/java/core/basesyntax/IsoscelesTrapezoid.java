@@ -1,24 +1,22 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements Drawing {
+public class IsoscelesTrapezoid extends Figure {
     private String color;
     private double upperBase;
     private double lowerBase;
     private double height;
 
-    public IsoscelesTrapezoid(double upperBase, double lowerBase, double height) {
+    public IsoscelesTrapezoid(double upperBase, double lowerBase, double height, String color) {
         this.upperBase = upperBase;
         this.lowerBase = lowerBase;
         this.height = height;
-
+        this.color = color;
     }
 
-    //getter for name
     public String getName() {
         return "IsoscelesTrapezoid";
     }
 
-    //getter and setter for color
     public String getColor() {
         return color;
     }
@@ -27,7 +25,6 @@ public class IsoscelesTrapezoid extends Figure implements Drawing {
         this.color = color;
     }
 
-    //getter and setter for upperBase
     public double getUpperBase() {
         return upperBase;
     }
@@ -36,7 +33,6 @@ public class IsoscelesTrapezoid extends Figure implements Drawing {
         this.upperBase = upperBase;
     }
 
-    //getter and setter for lowerBase
     public double getLowerBase() {
         return lowerBase;
     }
@@ -45,7 +41,6 @@ public class IsoscelesTrapezoid extends Figure implements Drawing {
         this.lowerBase = lowerBase;
     }
 
-    //getter and setter for height
     public double getHeight() {
         return height;
     }
@@ -54,15 +49,13 @@ public class IsoscelesTrapezoid extends Figure implements Drawing {
         this.height = height;
     }
 
-    //method for area
     @Override
     double area() {
         return (upperBase + lowerBase) / 2.0 * height;
     }
 
-    // returning general info via String for our object
     @Override
-    public String toDrawInfo() {
+    public String drawInfo() {
         return ("Figure: " + getName() + ", " + "area: " + area() + " sq.units, "
                 + "lowerBase: " + getLowerBase() + " units, " + "upperBase: "
                 + getUpperBase() + " units, " + "height: " + getHeight()

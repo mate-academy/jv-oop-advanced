@@ -1,21 +1,20 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements Drawing {
+public class RightTriangle extends Figure {
     private String color;
     private double firstLeg;
     private double secondLeg;
 
-    public RightTriangle(double firstLeg, double secondLeg) {
+    public RightTriangle(double firstLeg, double secondLeg, String color) {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
+        this.color = color;
     }
 
-    //getter for name
     public String getName() {
         return "RightTriangle";
     }
 
-    //getter and setter for color
     public String getColor() {
         return color;
     }
@@ -24,7 +23,6 @@ public class RightTriangle extends Figure implements Drawing {
         this.color = color;
     }
 
-    //getter and setter for firstLeg
     public double getFirstLeg() {
         return firstLeg;
     }
@@ -33,7 +31,6 @@ public class RightTriangle extends Figure implements Drawing {
         this.firstLeg = firstLeg;
     }
 
-    //getter and setter for secondLeg
     public double getSecondLeg() {
         return secondLeg;
     }
@@ -42,15 +39,13 @@ public class RightTriangle extends Figure implements Drawing {
         this.secondLeg = secondLeg;
     }
 
-    //method for area
     @Override
     double area() {
         return (this.firstLeg * this.secondLeg) / 2.0;
     }
 
-    // returning general info via String for our object
     @Override
-    public String toDrawInfo() {
+    public String drawInfo() {
         return ("Figure: " + getName() + ", " + "area: " + area() + " sq.units, " + "firstLeg: "
                 + getFirstLeg() + " units, " + "secondLeg: " + getSecondLeg() + " units, "
                 + "color: " + getColor());

@@ -1,21 +1,20 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Drawing {
+public class Rectangle extends Figure {
     private String color;
     private double sideA;
     private double sideB;
 
-    public Rectangle(double sideA, double sideB) {
+    public Rectangle(double sideA, double sideB, String color) {
         this.sideA = sideA;
         this.sideB = sideB;
+        this.color = color;
     }
 
-    //getter for name
     public String getName() {
         return "Rectangle";
     }
 
-    //getter and setter for color
     public String getColor() {
         return color;
     }
@@ -24,7 +23,6 @@ public class Rectangle extends Figure implements Drawing {
         this.color = color;
     }
 
-    //getter and setter for sideA
     public double getSideA() {
         return sideA;
     }
@@ -33,7 +31,6 @@ public class Rectangle extends Figure implements Drawing {
         this.sideA = sideA;
     }
 
-    //getter and setter for sideB
     public double getSideB() {
         return sideB;
     }
@@ -42,15 +39,13 @@ public class Rectangle extends Figure implements Drawing {
         this.sideB = sideB;
     }
 
-    //method for area
     @Override
     double area() {
         return this.sideA * this.sideB;
     }
 
-    // returning general info via String for our object
     @Override
-    public String toDrawInfo() {
+    public String drawInfo() {
         return ("Figure: " + getName() + ", " + "area: " + area() + " sq.units, " + "sideA: "
                 + getSideA() + " units, " + "sideB: " + getSideB() + " units, " + "color: "
                 + getColor());
