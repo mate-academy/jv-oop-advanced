@@ -26,7 +26,7 @@ public class FigureSupplier {
         }
     }
 
-    int getLength() {
+    private int getLength() {
         return new Random().nextInt(100);
     }
 }
