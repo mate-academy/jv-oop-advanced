@@ -5,9 +5,9 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
     private static final int MAX_FIGURE_PART_SIZE = 10;
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        ColorSupplier colorSupplier = new ColorSupplier();
         Random random = new Random();
         int figureNumber = random.nextInt(FIGURE_COUNT);
 
