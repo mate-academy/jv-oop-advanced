@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class ColorSupplier {
     private int colorNumber;
 
@@ -13,20 +11,15 @@ public class ColorSupplier {
         String color;
         switch (colorNumber) {
             case 0:
-                color = "Red";
-                break;
+                return "Red";
             case 1:
-                color = "Green";
-                break;
+                return "Green";
             case 2:
-                color = "Blue";
-                break;
+                return "Blue";
             case 3:
-                color = "Pink";
-                break;
+                return "Pink";
             default:
-                color = "Yellow";
+                return "Yellow";
         }
-        return color;
     }
 }

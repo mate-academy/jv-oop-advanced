@@ -1,4 +1,5 @@
 package core.basesyntax;
+
 import java.util.Random;
 
 /*
@@ -13,34 +14,34 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         Random random = new Random();
-        int figureNumber = random.nextInt(FIGURE_COUNT);
-        int colorNumber = random.nextInt(COLOR_COUNT);
 
+        int colorNumber = random.nextInt(COLOR_COUNT);
+        ColorSupplier colorSupplier = new ColorSupplier(colorNumber);
+        String figureColor = colorSupplier.getRandomColor();
+
+        int figureNumber = random.nextInt(FIGURE_COUNT);
         switch (figureNumber) {
             case 0:
                 Random random0 = new Random();
                 double randomSquareSide = random0.nextDouble() * FACTOR;
-                figure = new Square(randomSquareSide);
-                figure.calculateArea();
-                figure.chooseFigureColor(colorNumber);
+                figure = new Square(randomSquareSide, figureColor);
                 break;
 
             case 1:
                 Random random1 = new Random();
-                double randomRightTriangleKatetA = random1.nextDouble() * FACTOR;
-                double randomRightTriangleKatetB = random1.nextDouble() * FACTOR;
-                figure = new RightTriangle(randomRightTriangleKatetA, randomRightTriangleKatetB);
-                figure.calculateArea();
-                figure.chooseFigureColor(colorNumber);
+                double randomRightTriangleKatetA = random1.nextDouble()
+                        * FACTOR;
+                double randomRightTriangleKatetB = random1.nextDouble()
+                        * FACTOR;
+                figure = new RightTriangle(randomRightTriangleKatetA,
+                        randomRightTriangleKatetB, figureColor);
                 break;
 
             case 2:
                 Random random2 = new Random();
                 double randomRectangleSideA = random2.nextDouble() * FACTOR;
                 double randomRectangleSideB = random2.nextDouble() * FACTOR;
-                figure = new Rectangle(randomRectangleSideA, randomRectangleSideB);
-                figure.calculateArea();
-                figure.chooseFigureColor(colorNumber);
+                figure = new Rectangle(randomRectangleSideA, randomRectangleSideB, figureColor);
                 break;
 
             case 3:
@@ -51,17 +52,14 @@ public class FigureSupplier {
 
                 figure = new IsoscelesTrapezoid(randomIsoscelesTrapezoidOsnovaA,
                                                 randomIsoscelesTrapezoidOsnovaB,
-                                                randomIsoscelesTrapezoidRebro);
-                figure.calculateArea();
-                figure.chooseFigureColor(colorNumber);
+                                                randomIsoscelesTrapezoidRebro,
+                                                figureColor);
                 break;
 
             default:
                 Random random4 = new Random();
                 double randomRectangleRadius = random4.nextDouble() * FACTOR;
-                figure = new Circle(randomRectangleRadius);
-                figure.calculateArea();
-                figure.chooseFigureColor(colorNumber);
+                figure = new Circle(randomRectangleRadius, figureColor);
                 break;
         }
 
