@@ -25,7 +25,7 @@ public class FigureSupplier {
                 int a = random.nextInt(sideLength);
                 int b = random.nextInt(sideLength);
                 int c = random.nextInt(sideLength);
-                figure = new IsoscelesTrapezoid((a > b)? a : b, (a > b)? b : a, c);
+                figure = new IsoscelesTrapezoid((a > b) ? a : b, (a > b) ? b : a, c);
                 break;
             default:
                 figure = new Square(random.nextInt(sideLength));

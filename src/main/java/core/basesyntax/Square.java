@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends Figure implements AreaCalculator, InfoBox{
+public class Square extends Figure implements AreaCalculator, InfoBox {
     private double side;
 
     // CONSTRUCTORS
@@ -25,6 +25,7 @@ public class Square extends Figure implements AreaCalculator, InfoBox{
 
     @Override
     public void draw() {
-        System.out.println("Square, area: " + getArea() + " sq.units, side: " + side + " units, color: " + getColor());
+        System.out.println("Square, area: " + getArea() + " sq.units, side: " + side
+                + " units, color: " + getColor());
     }
 }

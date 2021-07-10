@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements AreaCalculator, InfoBox{
+public class IsoscelesTrapezoid extends Figure implements AreaCalculator, InfoBox {
     private double baseBottom;
     private double baseUp;
     private double side;
@@ -41,12 +41,13 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator, InfoBo
     @Override
     public double getArea() {
         double s = (baseUp + baseBottom + 2 * side) / 2;
-        return Math.sqrt((s - baseUp) * (s - baseBottom) * (s - side) *(s - side));
+        return Math.sqrt((s - baseUp) * (s - baseBottom) * (s - side) * (s - side));
     }
 
     @Override
     public void draw() {
         System.out.println("Isosceles trapezoid, area: " + getArea() + " sq.units, side: " + side
-                + " units, up base: " + baseUp + "units, bottom base:" + baseBottom + "units, color: " + getColor());
+                + " units, up base: " + baseUp + "units, bottom base:" + baseBottom
+                + "units, color: " + getColor());
     }
 }

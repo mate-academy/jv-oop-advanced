@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements AreaCalculator, InfoBox{
+public class Circle extends Figure implements AreaCalculator, InfoBox {
     private double radius;
 
     // CONSTRUCTORS
@@ -25,6 +25,7 @@ public class Circle extends Figure implements AreaCalculator, InfoBox{
 
     @Override
     public void draw() {
-        System.out.println("Circle, area: " + getArea() + " sq.units, radius: " + radius + " units, color: " + getColor());
+        System.out.println("Circle, area: " + getArea() + " sq.units, radius: " + radius
+                + " units, color: " + getColor());
     }
 }

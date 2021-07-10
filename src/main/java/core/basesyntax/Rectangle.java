@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements AreaCalculator, InfoBox{
+public class Rectangle extends Figure implements AreaCalculator, InfoBox {
     private double sideA;
     private double sideB;
 
@@ -35,7 +35,7 @@ public class Rectangle extends Figure implements AreaCalculator, InfoBox{
 
     @Override
     public void draw() {
-        System.out.println("Rectangle, area: " + getArea() + " sq.units, side A: " + sideA + " units, side B: "
-                + sideB + "units, color: " + getColor());
+        System.out.println("Rectangle, area: " + getArea() + " sq.units, side A: " + sideA
+                + " units, side B: " + sideB + "units, color: " + getColor());
     }
 }

@@ -49,7 +49,7 @@ public class ColorSupplier {
         return color;
     }
 
-    public String getRandomColor(){
+    public String getRandomColor() {
         Random random = new Random();
         int colorNumber = random.nextInt(COLOR_COUNT);
         return getColorByNumber(colorNumber);
