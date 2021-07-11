@@ -1,7 +1,5 @@
 package core.basesyntax.util;
 
-import core.basesyntax.util.AreaCalculator;
-
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
@@ -13,8 +11,8 @@ public abstract class Figure implements AreaCalculator, Drawer {
     }
 
     /**
-     * @param childParams - map where keys represents method names that need to be called for setting data for
-     *                    required fields and values - the data to be set.
+     * @param childParams - map where keys represents method names that need to be called
+     *                    for setting data for required fields and values - the data to be set.
      */
     public void setupAdditionalParams(HashMap<String, Object> childParams) {
         String[] keys = childParams.keySet().toArray(new String[0]);
