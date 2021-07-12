@@ -1,16 +1,14 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements AreaCalculator, InfoBox {
+public class Rectangle extends Figure {
     private double sideA;
     private double sideB;
 
-    // CONSTRUCTORS
     public Rectangle(double sideA, double sideB) {
         this.sideA = sideA;
         this.sideB = sideB;
     }
 
-    // GETTERS & SETTERS
     public double getSideA() {
         return sideA;
     }
@@ -27,7 +25,6 @@ public class Rectangle extends Figure implements AreaCalculator, InfoBox {
         this.sideB = sideB;
     }
 
-    // BODY
     @Override
     public double getArea() {
         return sideA * sideB;
@@ -36,6 +33,6 @@ public class Rectangle extends Figure implements AreaCalculator, InfoBox {
     @Override
     public void draw() {
         System.out.println("Rectangle, area: " + getArea() + " sq.units, side A: " + sideA
-                + " units, side B: " + sideB + "units, color: " + getColor());
+                + " units, side B: " + sideB + " units, color: " + getColor());
     }
 }

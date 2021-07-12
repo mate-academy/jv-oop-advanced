@@ -5,48 +5,26 @@ import java.util.Random;
 public class ColorSupplier {
     public static final int COLOR_COUNT = 9;
 
-    private static final String ORANGE = "Orange";
-    private static final String YELLOW = "Yellow";
-    private static final String GREEN = "Green";
-    private static final String BLUE = "Blue";
-    private static final String RED = "Red";
-    private static final String CYAN = "Cyan";
-    private static final String PURPLE = "Purple";
-    private static final String WHITE = "White";
-    private static final String BLACK = "Black";
-
     public String getColorByNumber(int colorNumber) {
-        String color;
         switch (colorNumber) {
             case 2:
-                color = ORANGE;
-                break;
+                return "Orange";
             case 3:
-                color = YELLOW;
-                break;
+                return "Yellow";
             case 4:
-                color = GREEN;
-                break;
+                return "Green";
             case 5:
-                color = BLUE;
-                break;
+                return "Blue";
             case 6:
-                color = RED;
-                break;
+                return "Red";
             case 7:
-                color = CYAN;
-                break;
+                return "Cyan";
             case 8:
-                color = PURPLE;
-                break;
+                return "Purple";
             case 9:
-                color = WHITE;
-                break;
-            default:
-                color = BLACK;
-                break;
+                return "White";
         }
-        return color;
+        return "Black";
     }
 
     public String getRandomColor() {

@@ -1,15 +1,8 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public abstract class Figure implements AreaCalculator, InfoBox {
     private String color;
 
-    // CONSTRUCTORS
-    public Figure() {
-        ColorSupplier cs = new ColorSupplier();
-        this.color = cs.getRandomColor();
-    }
-
-    // GETTERS & SETTERS
     public String getColor() {
         return color;
     }

@@ -1,18 +1,16 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements AreaCalculator, InfoBox {
+public class IsoscelesTrapezoid extends Figure {
     private double baseBottom;
     private double baseUp;
     private double side;
 
-    // CONSTRUCTORS
     public IsoscelesTrapezoid(double baseBottom, double baseUp, double side) {
         this.baseBottom = baseBottom;
         this.baseUp = baseUp;
         this.side = side;
     }
 
-    // GETTERS & SETTERS
     public double getBaseBottom() {
         return baseBottom;
     }
@@ -37,7 +35,6 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator, InfoBo
         this.side = side;
     }
 
-    // BODY
     @Override
     public double getArea() {
         double s = (baseUp + baseBottom + 2 * side) / 2;

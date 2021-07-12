@@ -1,14 +1,12 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements AreaCalculator, InfoBox {
+public class Circle extends Figure {
     private double radius;
 
-    // CONSTRUCTORS
     public Circle(double radius) {
         this.radius = radius;
     }
 
-    // GETTERS & SETTERS
     public double getRadius() {
         return radius;
     }
@@ -17,7 +15,6 @@ public class Circle extends Figure implements AreaCalculator, InfoBox {
         this.radius = radius;
     }
 
-    // BODY
     @Override
     public double getArea() {
         return Math.PI * radius * radius;

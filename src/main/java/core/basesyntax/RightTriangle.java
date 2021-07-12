@@ -1,16 +1,14 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements AreaCalculator, InfoBox {
+public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
-    // CONSTRUCTORS
     public RightTriangle(double firstLeg, double secondLeg) {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
 
-    // GETTERS & SETTERS
     public double getFirstLeg() {
         return firstLeg;
     }
@@ -27,7 +25,6 @@ public class RightTriangle extends Figure implements AreaCalculator, InfoBox {
         this.secondLeg = secondLeg;
     }
 
-    // BODY
     @Override
     public double getArea() {
         return firstLeg * secondLeg / 2;
