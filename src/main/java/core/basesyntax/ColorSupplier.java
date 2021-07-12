@@ -23,8 +23,9 @@ public class ColorSupplier {
                 return "Purple";
             case 9:
                 return "White";
+            default:
+                return "Black";
         }
-        return "Black";
     }
 
     public String getRandomColor() {
