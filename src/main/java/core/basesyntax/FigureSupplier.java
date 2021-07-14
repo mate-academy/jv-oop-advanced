@@ -3,9 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int FIGURE_COUNT = 5;
-    public static final int FIGURE_SIDE = 50;
+    private static final int FIGURE_COUNT = 5;
+    private static final int FIGURE_SIDE = 50;
     private Random random = new Random();
+    private ColorSupplier supplier = new ColorSupplier();
 
     public int getRandomNumber() {
         return random.nextInt(FIGURE_SIDE);
@@ -13,7 +14,6 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
-        ColorSupplier supplier = new ColorSupplier();
         switch (figureNumber) {
             case 1:
                 return new Circle(supplier.getRandomColor(),
