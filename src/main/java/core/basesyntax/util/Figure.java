@@ -3,12 +3,12 @@ package core.basesyntax.util;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public abstract class Figure implements AreaCalculator, Drawer {
+    private Logger logger = MyLogger.getLogger(FigureSupplier.class.getName());
     private String color;
-
-    public Figure() {
-    }
 
     /**
      * @param childParams - map where keys represents method names that need to be called
@@ -33,7 +33,7 @@ public abstract class Figure implements AreaCalculator, Drawer {
         try {
             c = Class.forName(this.getClass().getName());
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            logger.log(Level.WARNING, e.fillInStackTrace().toString());
         }
 
         if (c != null) {
@@ -41,14 +41,14 @@ public abstract class Figure implements AreaCalculator, Drawer {
             try {
                 method = c.getDeclaredMethod(methodName, value.getClass());
             } catch (NoSuchMethodException e) {
-                e.printStackTrace();
+                logger.log(Level.WARNING, e.fillInStackTrace().toString());
             }
             try {
                 method.invoke(this, value);
             } catch (IllegalAccessException e) {
-                e.printStackTrace();
+                logger.log(Level.WARNING, e.fillInStackTrace().toString());
             } catch (InvocationTargetException e) {
-                e.printStackTrace();
+                logger.log(Level.WARNING, e.fillInStackTrace().toString());
             }
         }
     }

@@ -4,13 +4,16 @@ import core.basesyntax.enums.Figures;
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class FigureSupplier {
-    private static Random rnd = new Random();
+    private Logger logger = MyLogger.getLogger(FigureSupplier.class.getName());
+    private Random rnd = new Random();
     private static final int BOUND = 100;
 
-    public static Figure[] getRandomFigures(int bound) {
-        Figure[] arr = new Figure[rnd.nextInt(bound)];
+    public Figure[] getRandomFigures(int maxFiguresQuantity) {
+        Figure[] arr = new Figure[rnd.nextInt(maxFiguresQuantity)];
 
         for (int i = 0; i < arr.length; i++) {
             arr[i] = getRandomFigure();
@@ -19,7 +22,7 @@ public class FigureSupplier {
         return arr;
     }
 
-    private static Figure getRandomFigure() {
+    private Figure getRandomFigure() {
         int index = rnd.nextInt(Figures.values().length);
         String figureName = "core.basesyntax.figures." + Figures.values()[index].toString();
 
@@ -29,15 +32,15 @@ public class FigureSupplier {
             Class<Figure> cls = (Class<Figure>) Class.forName(figureName);
             figure = cls.getDeclaredConstructor().newInstance();
         } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            logger.log(Level.WARNING, e.fillInStackTrace().toString());
         } catch (InstantiationException e) {
-            e.printStackTrace();
+            logger.log(Level.WARNING, e.fillInStackTrace().toString());
         } catch (IllegalAccessException e) {
-            e.printStackTrace();
+            logger.log(Level.WARNING, e.fillInStackTrace().toString());
         } catch (InvocationTargetException e) {
-            e.printStackTrace();
+            logger.log(Level.WARNING, e.fillInStackTrace().toString());
         } catch (NoSuchMethodException e) {
-            e.printStackTrace();
+            logger.log(Level.WARNING, e.fillInStackTrace().toString());
         }
 
         if (figure != null) {
@@ -48,7 +51,7 @@ public class FigureSupplier {
         return figure;
     }
 
-    private static void setupFigureWithRandomParams(Figure figure) {
+    private void setupFigureWithRandomParams(Figure figure) {
         HashMap<String, Object> childParams = new HashMap<>();
         String simpleName = figure.getClass().getSimpleName();
 
@@ -92,7 +95,7 @@ public class FigureSupplier {
         }
     }
 
-    private static Double getRndNum() {
+    private Double getRndNum() {
         Double result = Double.valueOf(rnd.nextInt(BOUND));
         if (result < 1) {
             getRndNum();
