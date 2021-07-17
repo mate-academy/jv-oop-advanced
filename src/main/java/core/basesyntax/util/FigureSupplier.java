@@ -8,9 +8,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class FigureSupplier {
+    private static final int BOUND = 100;
     private Logger logger = MyLogger.getLogger(FigureSupplier.class.getName());
     private Random rnd = new Random();
-    private static final int BOUND = 100;
 
     public Figure[] getRandomFigures(int maxFiguresQuantity) {
         Figure[] arr = new Figure[rnd.nextInt(maxFiguresQuantity)];
