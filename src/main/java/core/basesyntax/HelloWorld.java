@@ -8,7 +8,12 @@ import core.basesyntax.util.FigureSupplier;
  */
 public class HelloWorld {
     public static void main(String[] args) {
-        Figure[] figures = FigureSupplier.getRandomFigures(100);
-        FigureSupplier.drawFigures(figures);
+        FigureSupplier figureSupplier = new FigureSupplier();
+        Figure[] figures = figureSupplier.getRandomFigures(100);
+
+        // draw all figures
+        for (int i = 0; i < figures.length; i++) {
+            figures[i].draw();
+        }
     }
 }

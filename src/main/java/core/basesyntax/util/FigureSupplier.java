@@ -100,10 +100,4 @@ public class FigureSupplier {
 
         return result;
     }
-
-    public static void drawFigures(Figure[] figures) {
-        for (int i = 0; i < figures.length; i++) {
-            figures[i].draw();
-        }
-    }
 }
