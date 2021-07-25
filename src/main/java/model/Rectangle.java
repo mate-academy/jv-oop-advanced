@@ -1,0 +1,52 @@
+package model;
+
+public class Rectangle extends Figure implements FiguresBehaviour {
+    private int sideA;
+    private int sideB;
+
+    public Rectangle(String color) {
+        super(color);
+    }
+
+    public int getSideA() {
+        return sideA;
+    }
+
+    public void setSideA(int sideA) {
+        this.sideA = sideA;
+    }
+
+    public int getSideB() {
+        return sideB;
+    }
+
+    public void setSideB(int sideB) {
+        this.sideB = sideB;
+    }
+
+    @Override
+    public String getFigureName() {
+        return "rectangle";
+    }
+
+    @Override
+    public double getArea() {
+        return sideA * sideB;
+    }
+
+    @Override
+    public void drow() {
+        System.out.println("Figure: " + getFigureName()
+                + ", area: " + getArea() + " sq.units"
+                + ", firstLeg: " + getSideA() + " units"
+                + ", secondLeg:  " + getSideB() + " units"
+                + ", color: " + getColor());
+    }
+
+    @Override
+    public void setParams(int[] params) {
+        setSideA(params[0]);
+        setSideB(params[1]);
+    }
+
+}

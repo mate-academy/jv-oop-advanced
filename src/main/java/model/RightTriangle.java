@@ -1,0 +1,51 @@
+package model;
+
+public class RightTriangle extends Figure implements FiguresBehaviour {
+    private int baseA;
+    private int height;
+
+    public RightTriangle(String color) {
+        super(color);
+    }
+
+    public int getBaseA() {
+        return baseA;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    @Override
+    public String getFigureName() {
+        return "triangle";
+    }
+
+    public void setBaseA(int baseA) {
+        this.baseA = baseA;
+    }
+
+    public void setHeight(int sideC) {
+        this.height = sideC;
+    }
+
+    @Override
+    public double getArea() {
+        return (baseA) * height * 0.5;
+    }
+
+    @Override
+    public void drow() {
+        System.out.println("Figure: " + getFigureName()
+                + ", area: " + getArea() + " sq.units"
+                + ", firstLeg: " + getBaseA() + " units"
+                + ", secondLeg: " + getHeight() + " units"
+                + ", color: " + getColor());
+    }
+
+    @Override
+    public void setParams(int[] params) {
+        setBaseA(params[0]);
+        setHeight(params[1]);
+    }
+}
