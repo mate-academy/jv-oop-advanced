@@ -1,12 +1,15 @@
 package core.basesyntax;
 
-public class Square extends Figure {
+public class Square extends Figure implements AreaCalculator{
+    double side;
 
     @Override
     public void draw() {
 
     }
-    public String toString(){
-        return null;
+
+    @Override
+    public double getArea() {
+        return side * side;
     }
 }

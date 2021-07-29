@@ -2,6 +2,8 @@ package core.basesyntax;
 
 public class ColorSupplier {
     public String getRandomColor() {
-        return null;
+        Colors[] colorsArray = Colors.values();
+        int randomValue = (int) Math.random() * colorsArray.length;
+        return colorsArray[randomValue].color;
     }
 }
