@@ -21,21 +21,8 @@ public class MainApp {
         ArrayList<Figure> figures = new ArrayList<>();
         figures = mainApp.getListFigures();
         for (Figure figure : figures) {
-            figure.drow();
+            figure.draw();
         }
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -14,19 +14,25 @@ public class FigureSupplier {
 
         switch (figureNumber) {
             case 1:
-                Figure square = new Square(value1);
+                Figure square = new Square(value1, new ColorSupplier().getRandomColor());
                 return square;
             case 2:
-                Figure rectangle = new Rectangle(value1, value2);
+                Figure rectangle = new Rectangle(
+                        value1, value2, new ColorSupplier().getRandomColor()
+                );
                 return rectangle;
             case 3:
-                Figure rightTriangle = new RightTriangle(value1, value2);
+                Figure rightTriangle = new RightTriangle(
+                        value1, value2, new ColorSupplier().getRandomColor()
+                );
                 return rightTriangle;
             case 4:
-                Figure circle = new Circle(value1);
+                Figure circle = new Circle(value1, new ColorSupplier().getRandomColor());
                 return circle;
             default:
-                Figure isoscelesTrapezoid = new IsoscelesTrapezoid(value1, value2, value3);
+                Figure isoscelesTrapezoid = new IsoscelesTrapezoid(
+                        value1, value2, value3, new ColorSupplier().getRandomColor()
+                );
                 return isoscelesTrapezoid;
         }
     }
