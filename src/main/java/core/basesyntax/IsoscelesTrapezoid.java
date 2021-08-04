@@ -6,7 +6,7 @@ public class IsoscelesTrapezoid extends Figure {
     private int side;
 
     public IsoscelesTrapezoid(String color,int bottom, int top, int side) {
-        setColor(color);
+        super(color);
         this.bottom = bottom;
         this.top = top;
         this.side = side;
