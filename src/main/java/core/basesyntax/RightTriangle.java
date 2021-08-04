@@ -1,16 +1,23 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure implements AreaCalculator {
-    double firstLeg;
-    double secondLeg;
+    int firstLeg;
+    int secondLeg;
 
-    @Override
-    public void draw() {
-        System.out.println("Figure: ");
+    public RightTriangle(int firstLeg, int secondLeg) {
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
     }
 
     @Override
-    public double getArea() {
-        return (double) firstLeg * secondLeg / 2;
+    public void draw() {
+        System.out.println("Figure: right triangle, area: " + getArea()
+                + " sq.units, first leg: " + firstLeg
+                + " units, secondLeg: " + secondLeg);
+    }
+
+    @Override
+    public String getArea() {
+        return String.format("%.1f", (double) (firstLeg * secondLeg / 2));
     }
 }
