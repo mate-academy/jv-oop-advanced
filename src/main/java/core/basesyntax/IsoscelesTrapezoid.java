@@ -17,8 +17,8 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
                 + getArea()
                 + " sq.units, base: " + base
                 + " units, top: " + top
-                + ", height: " + height
-                + ", color: " + color);
+                + " units, height: " + height
+                + " units, color: " + color);
     }
 
     @Override

@@ -13,7 +13,8 @@ public class RightTriangle extends Figure implements AreaCalculator {
     public void draw() {
         System.out.println("Figure: right triangle, area: " + getArea()
                 + " sq.units, first leg: " + firstLeg
-                + " units, secondLeg: " + secondLeg);
+                + " units, secondLeg: " + secondLeg
+                + " units, color: " + color);
     }
 
     @Override
