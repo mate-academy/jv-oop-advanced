@@ -1,6 +1,8 @@
 package core.basesyntax;
 
-import static core.basesyntax.MainApp.*;
+import static core.basesyntax.MainApp.FIGURE_COUNT;
+import static core.basesyntax.MainApp.MAX_LENGTH;
+import static core.basesyntax.MainApp.MIN_LENGTH;
 
 public class FigureSupplier {
     public Figure getRandomFigure() {
