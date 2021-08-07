@@ -12,10 +12,6 @@ public class Square extends Figure {
         return side;
     }
 
-    public void setSide(int side) {
-        this.side = side;
-    }
-
     @Override
     public void draw() {
         System.out.println("Figure: square, area: " + getArea()
