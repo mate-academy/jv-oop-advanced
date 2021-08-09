@@ -6,6 +6,7 @@ public class HelloWorld {
         int max = 10;
         int randomNum = min + (int)(Math.random() * max);
         Figure[] list = new Figure[randomNum];
+
         for (int i = 0; i < randomNum; i++) {
             FigureSupplier newFigure = new FigureSupplier();
             list[i] = newFigure.getRandomFigure();
