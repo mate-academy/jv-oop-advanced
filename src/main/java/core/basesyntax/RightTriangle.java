@@ -20,14 +20,14 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: right triangle, area: " + getArea()
+        System.out.println("Figure: right triangle, area: " + String.format("%.1f", getArea())
                 + " sq.units, first leg: " + getFirstLeg()
                 + " units, secondLeg: " + getSecondLeg()
                 + " units, color: " + getColor());
     }
 
     @Override
-    public String getArea() {
-        return String.format("%.1f", (double) (getFirstLeg() * getSecondLeg() / 2));
+    public double getArea() {
+        return getFirstLeg() * getSecondLeg() / 2;
     }
 }

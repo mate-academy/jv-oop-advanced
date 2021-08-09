@@ -1,10 +1,10 @@
 package core.basesyntax;
 
-import static core.basesyntax.MainApp.FIGURE_COUNT;
-import static core.basesyntax.MainApp.MAX_LENGTH;
-import static core.basesyntax.MainApp.MIN_LENGTH;
-
 public class FigureSupplier {
+    private static final int FIGURE_COUNT = 5;
+    private static final int MAX_LENGTH = 5;
+    private static final int MIN_LENGTH = 1;
+
     public Figure getRandomFigure() {
         int figureValue = (int) (Math.random() * FIGURE_COUNT) + 1;
         Figure randomFigure;
