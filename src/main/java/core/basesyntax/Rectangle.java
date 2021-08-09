@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements FigurePainter, AreaCalculator {
+public class Rectangle extends Figure {
     private int sideA;
     private int sideB;
 
@@ -12,7 +12,7 @@ public class Rectangle extends Figure implements FigurePainter, AreaCalculator {
 
     @Override
     public void drawFigure() {
-        System.out.println("Figure: rectangle, area: " + getArea() + ", sideA: " + sideA
+        System.out.println("Figure: rectangle, area: " + getArea() + " sq.units, sideA: " + sideA
                 + " units, sideB: " + sideB + " units, color: " + getColor());
     }
 

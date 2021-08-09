@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements FigurePainter, AreaCalculator {
+public class RightTriangle extends Figure {
     private int sideA;
     private int sideB;
 
@@ -12,8 +12,8 @@ public class RightTriangle extends Figure implements FigurePainter, AreaCalculat
 
     @Override
     public void drawFigure() {
-        System.out.println("Figure: right triangle, area: " + getArea() + ", sideA: " + sideA
-                + " units, sideB: " + sideB + " units, color: " + getColor());
+        System.out.println("Figure: right triangle, area: " + getArea() + " sq.units, sideA: "
+                + sideA + " units, sideB: " + sideB + " units, color: " + getColor());
     }
 
     @Override

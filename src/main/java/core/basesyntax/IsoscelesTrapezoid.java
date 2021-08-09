@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.text.DecimalFormat;
 
-public class IsoscelesTrapezoid extends Figure implements FigurePainter, AreaCalculator {
+public class IsoscelesTrapezoid extends Figure {
     private int sideA;
     private int sideB;
     private int sideC;
@@ -17,8 +17,8 @@ public class IsoscelesTrapezoid extends Figure implements FigurePainter, AreaCal
     @Override
     public void drawFigure() {
         System.out.println("Figure: isosceles trapezoid, area: "
-                + new DecimalFormat("#.##").format(getArea()) + ", sideA: " + sideA
-                + " units, sideB: " + sideB + ", sideC: " + sideC + " units, units, color: "
+                + new DecimalFormat("#.##").format(getArea()) + " sq.units, sideA: " + sideA
+                + " units, sideB: " + sideB + " units, sideC: " + sideC + " units, color: "
                 + getColor());
     }
 

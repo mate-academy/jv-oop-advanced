@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.text.DecimalFormat;
 
-public class Circle extends Figure implements FigurePainter, AreaCalculator {
+public class Circle extends Figure {
     private int radius;
 
     public Circle(int radius, String color) {
@@ -13,7 +13,7 @@ public class Circle extends Figure implements FigurePainter, AreaCalculator {
     @Override
     public void drawFigure() {
         System.out.println("Figure: circle, area: "
-                + new DecimalFormat("#.##").format(getArea()) + ", radius: " + radius
+                + new DecimalFormat("#.##").format(getArea()) + " sq.units, radius: " + radius
                 + " units, color: " + getColor());
     }
 
