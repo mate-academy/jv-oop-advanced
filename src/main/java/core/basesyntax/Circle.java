@@ -1,8 +1,7 @@
 package core.basesyntax;
 
-
-public class Circle extends Figure implements FigureDrawer {
-    private double radius;
+public class Circle extends Figure {
+    private int radius;
 
     public Circle(String nameFigure, int radius, String colour) {
         this.radius = radius;
@@ -10,7 +9,7 @@ public class Circle extends Figure implements FigureDrawer {
         this.setColour(colour);
     }
 
-    private static double round (double value, int precision) {
+    private static double round(double value, int precision) {
         int scale = (int) Math.pow(10, precision);
         return (double) Math.round(value * scale) / scale;
     }
@@ -24,4 +23,3 @@ public class Circle extends Figure implements FigureDrawer {
                 + " units, color: " + this.getColour());
     }
 }
-

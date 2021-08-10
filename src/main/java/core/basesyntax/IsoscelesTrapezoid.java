@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements FigureDrawer {
-    private double bottomSide;
-    private double topSide;
-    private double height;
+public class IsoscelesTrapezoid extends Figure {
+    private int bottomSide;
+    private int topSide;
+    private int height;
 
     public IsoscelesTrapezoid(String name, int bottomSide, int topSide, int height, String colour) {
         this.setNameFigure(name);

@@ -7,10 +7,7 @@ public class ColorSupplier {
     private final Random random = new Random();
 
     public String getRandomColor() {
-        return random.nextInt(MaxRandomNumber) == 5 ? "purple" :
-                (random.nextInt(MaxRandomNumber) == 4 ? "blue" :
-                (random.nextInt(MaxRandomNumber) == 3 ? "green" :
-                        (random.nextInt(MaxRandomNumber) == 2 ? "yellow" :
-                        (random.nextInt(MaxRandomNumber) == 1 ? "red" : "orange"))));
+        String[] listOfColours = new String[]{"purple", "blue", "green", "yellow", "red", "orange"};
+        return listOfColours[random.nextInt(MaxRandomNumber)];
     }
 }

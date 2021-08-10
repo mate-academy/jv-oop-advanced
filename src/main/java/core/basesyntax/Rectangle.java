@@ -1,8 +1,8 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements FigureDrawer {
-    private double height;
-    private double weight;
+public class Rectangle extends Figure {
+    private int height;
+    private int weight;
 
     public Rectangle(String nameFigure, int height, int weight, String colour) {
         this.setNameFigure(nameFigure);

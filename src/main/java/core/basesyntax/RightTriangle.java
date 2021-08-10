@@ -1,8 +1,8 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements FigureDrawer {
-    private double firstLeg;
-    private double secondLeg;
+public class RightTriangle extends Figure {
+    private int firstLeg;
+    private int secondLeg;
 
     public RightTriangle(String nameFigure, int firstLeg, int secondLeg, String colour) {
         this.setNameFigure(nameFigure);
