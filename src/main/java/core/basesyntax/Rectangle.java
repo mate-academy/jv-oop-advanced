@@ -1,8 +1,8 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private int height;
-    private int weight;
+    private final int height;
+    private final int weight;
 
     public Rectangle(String nameFigure, int height, int weight, String colour) {
         this.setNameFigure(nameFigure);
