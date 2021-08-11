@@ -21,7 +21,7 @@ public class IsoscelesTrapezoid extends Figure {
     public void draw() {
         System.out.println(new StringBuilder().append(" Figure: isosceles trapezoid, area: ")
                 .append(this.getArea()).append(" sq.units, baseA: ")
-                .append(this.getBaseA()).append(" units,  baseB: ")
+                .append(this.getBaseA()).append(" units, baseB: ")
                 .append(this.getBaseB()).append(" units, ")
                 .append("height: ").append(this.getHeight()).append(" units, color: ")
                 .append(this.getColor()).toString());
