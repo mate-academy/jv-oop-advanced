@@ -31,4 +31,12 @@ public class RightTriangle extends Figure {
     public int getSecondLeg() {
         return this.secondLeg;
     }
+
+    public void setFirstLeg(int firstLeg) {
+        this.firstLeg = firstLeg;
+    }
+
+    public void setSecondLeg(int secondLeg) {
+        this.secondLeg = secondLeg;
+    }
 }

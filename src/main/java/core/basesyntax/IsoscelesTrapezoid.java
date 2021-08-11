@@ -38,4 +38,16 @@ public class IsoscelesTrapezoid extends Figure {
     public int getBaseA() {
         return this.baseA;
     }
+
+    public void setBaseA(int baseA) {
+        this.baseA = baseA;
+    }
+
+    public void setBaseB(int baseB) {
+        this.baseB = baseB;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
 }

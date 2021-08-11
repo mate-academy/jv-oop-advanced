@@ -25,4 +25,8 @@ public class Square extends Figure {
     public int getSide() {
         return side;
     }
+
+    public void setSide(int side) {
+        this.side = side;
+    }
 }
