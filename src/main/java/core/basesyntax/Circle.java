@@ -15,10 +15,10 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println(" Figure: circle, area: " +
-                this.getArea() + " sq.units, radius: " +
-                this.getRadius() + " units, color: " +
-                this.getColor());
+        System.out.println(" Figure: circle, area: "
+                + this.getArea() + " sq.units, radius: "
+                + this.getRadius() + " units, color: "
+                + this.getColor());
     }
 
     public int getRadius() {
