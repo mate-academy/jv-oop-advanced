@@ -17,11 +17,11 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println(new StringBuilder().append(" Figure: right triangle, area: ")
-                .append(this.getArea()).append(" sq.units, firstLeg: ")
-                .append(this.getFirstLeg()).append(" units, ")
-                .append("secondLeg: ").append(this.getSecondLeg()).append(" units, color: ")
-                .append(this.getColor()).toString());
+        System.out.println(" Figure: right triangle, area: " +
+                this.getArea() + " sq.units, firstLeg: " +
+                this.getFirstLeg() + " units, " +
+                "secondLeg: " + this.getSecondLeg() + " units, color: " +
+                this.getColor());
     }
 
     public int getFirstLeg() {
