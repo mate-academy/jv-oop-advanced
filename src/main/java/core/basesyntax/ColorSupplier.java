@@ -1,8 +1,10 @@
 package core.basesyntax;
 
 public class ColorSupplier {
+    static final int COLORS_COUNT = 6;
+
     public String getRandomColor() {
-        int num = (int) (Math.random() * 6);
+        int num = (int) (Math.random() * COLORS_COUNT);
         switch (num) {
             case 0:
                 return "Black";

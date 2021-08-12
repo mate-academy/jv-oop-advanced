@@ -1,24 +1,27 @@
 package core.basesyntax;
 
 public class FigureSupplier {
+    private ColorSupplier colors = new ColorSupplier();
+    static final int FIGURE_COUNT = 6;
+    static final int MAX_FACTOR = 10;
+
     public Figure getRandomFigure() {
-        double num = Math.random() * 6;
-        int count = (int) num;
-        double side = Math.random() * 10;
-        ColorSupplier color = new ColorSupplier();
+        String color = colors.getRandomColor();
+        double num = Math.ceil(Math.random() * FIGURE_COUNT);
+        int count = (int) (Math.random() * FIGURE_COUNT);
+        double side = Math.ceil(Math.random() * MAX_FACTOR);
+
         switch (count) {
             case 1:
-                return new Square("Square", color.getRandomColor(), Math.ceil(side));
+                return new Square("Square", color, side);
             case 2:
-                return new Rectangle("Rectangle", color.getRandomColor(), Math.ceil(side),
-                                      Math.abs(Math.ceil(side) - Math.ceil(num)));
+                return new Rectangle("Rectangle", color, side, Math.abs(side - num));
             case 3:
-                return new RightTriangle("RightTriangle", color.getRandomColor(), Math.ceil(side));
+                return new RightTriangle("RightTriangle", color, side);
             case 4:
-                return new Circle("Circle", color.getRandomColor(), Math.ceil(side));
+                return new Circle("Circle", color, side);
             default:
-                return new IsoscelesTrapezoid("IsoscelesTrapezoid", color.getRandomColor(),
-                           Math.ceil(side), Math.ceil(side + num), Math.abs(Math.ceil(side)));
+                return new IsoscelesTrapezoid("IsoscelesTrapezoid", color, side, side + num, side);
         }
     }
 }

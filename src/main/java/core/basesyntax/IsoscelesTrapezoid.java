@@ -31,11 +31,11 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     public void draw() {
-        System.out.println("Figure: " + IsoscelesTrapezoid.this.getName() + ", "
-                + "color: " + IsoscelesTrapezoid.this.getColor() + ", "
-                + "up-side: " + IsoscelesTrapezoid.this.getUpSide() + " " + "units, "
-                + "down-side: " + IsoscelesTrapezoid.this.getDownSide() + " " + "units, "
-                + "back-side: " + IsoscelesTrapezoid.this.getBackSide() + " " + "units, "
+        System.out.println("Figure: " + getName() + ", "
+                + "color: " + getColor() + ", "
+                + "up-side: " + getUpSide() + " " + "units, "
+                + "down-side: " + getDownSide() + " " + "units, "
+                + "back-side: " + getBackSide() + " " + "units, "
                 + "area: " + obtainArea() + " " + "sq.units");
     }
 }

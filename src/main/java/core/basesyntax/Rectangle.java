@@ -23,10 +23,10 @@ public class Rectangle extends Figure {
     }
 
     public void draw() {
-        System.out.println("Figure: " + Rectangle.this.getName() + ", "
-                    + "color: " + Rectangle.this.getColor() + ", "
-                    + "sideA: " + Rectangle.this.getSideA() + " " + "units, "
-                    + "sideB: " + Rectangle.this.getSideB() + " " + "units, "
+        System.out.println("Figure: " + getName() + ", "
+                    + "color: " + getColor() + ", "
+                    + "sideA: " + getSideA() + " " + "units, "
+                    + "sideB: " + getSideB() + " " + "units, "
                     + "area: " + obtainArea() + " " + "sq.units");
 
     }
