@@ -1,8 +1,8 @@
 package core.basesyntax;
 
 public class FigureSupplier {
-    static final int FIGURE_COUNT = 6;
-    static final int MAX_FACTOR = 10;
+    private static final int FIGURE_COUNT = 6;
+    private static final int MAX_FACTOR = 10;
     private ColorSupplier colors = new ColorSupplier();
 
     public Figure getRandomFigure() {
