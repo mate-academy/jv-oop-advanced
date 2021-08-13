@@ -9,11 +9,7 @@ public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public int getRandomInt() {
-        int number = 0;
-        while (number == 0) {
-            number = random.nextInt(RANGE_MAX);
-        }
-        return number;
+        return random.nextInt(RANGE_MAX) + 1;
     }
 
     public Figure getRandomFigure() {
