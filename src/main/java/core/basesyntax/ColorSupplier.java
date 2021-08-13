@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class ColorSupplier {
-    static final int COLORS_COUNT = 6;
+    private static final int COLORS_COUNT = 6;
 
     public String getRandomColor() {
         int num = (int) (Math.random() * COLORS_COUNT);
