@@ -16,7 +16,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public void drawing() {
+    public void draw() {
         DecimalFormat decimalFormat = new DecimalFormat("#.#");
         System.out.println("Figure: " + this.name + ", area: " + decimalFormat.format(area())
                 + " sq.units, radius: " + radius + " units, " + "color: " + this.color);

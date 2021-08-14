@@ -6,15 +6,21 @@ import core.figureclasses.IsoscelesTrapezoid;
 import core.figureclasses.Rectangle;
 import core.figureclasses.RightTriangle;
 import core.figureclasses.Square;
-import core.interfaces.Constants;
 import java.util.Random;
 
-public class FigureSupplier implements Constants {
-    public Figure getRandomFigure() {
-        Random random = new Random();
-        String figure = FIGURE[random.nextInt(FIGURE_NUMBER)];
+public class FigureSupplier {
+    private static final int FIGURE_NUMBER = 4;
+    private static final String[] FIGURE = new String[] {"circle", "isosceles trapezoid",
+            "rectangle", "right triangle", "square"};
+    private static final int NUMBER_SIZE = 10;
 
-        switch (figure) {
+    private final Random random = new Random();
+    private final ColorSupplier colorFigure = new ColorSupplier();
+
+    public Figure getRandomFigure() {
+        String figureType = FIGURE[random.nextInt(FIGURE_NUMBER)];
+
+        switch (figureType) {
             case "circle":
                 return new Circle("circle", getColor(), randomNumber());
             case "isosceles trapezoid":
@@ -31,12 +37,10 @@ public class FigureSupplier implements Constants {
     }
 
     private String getColor() {
-        ColorSupplier colorFigure = new ColorSupplier();
         return colorFigure.getRandomColor();
     }
 
     private int randomNumber() {
-        Random random = new Random();
         return random.nextInt(NUMBER_SIZE);
     }
 }

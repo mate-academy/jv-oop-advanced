@@ -1,11 +1,15 @@
 package core.creatorclasses;
 
-import core.interfaces.Constants;
 import java.util.Random;
 
-public class ColorSupplier implements Constants {
+public class ColorSupplier {
+    private static final String[] COLORS = new String[] {"red", "yellow", "blue", "black",
+            "grey", "white", "green", "orange"};
+    private static final int COLORS_NUMBER = 7;
+
+    private final Random rand = new Random();
+
     public String getRandomColor() {
-        Random rand = new Random();
-        return COLORS[rand.nextInt(NUMBER)];
+        return COLORS[rand.nextInt(COLORS_NUMBER)];
     }
 }

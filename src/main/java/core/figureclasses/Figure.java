@@ -1,9 +1,9 @@
 package core.figureclasses;
 
 import core.interfaces.AreaCalculator;
-import core.interfaces.Draw;
+import core.interfaces.Drawable;
 
-public abstract class Figure implements AreaCalculator, Draw {
+public abstract class Figure implements AreaCalculator, Drawable {
     protected String name;
     protected String color;
 
