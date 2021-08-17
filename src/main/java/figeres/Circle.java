@@ -1,6 +1,6 @@
 package figeres;
 
-public class Circle extends Figure implements Drawable {
+public class Circle extends Figure {
     private int radius;
 
     public Circle(String color, int radius) {
@@ -18,13 +18,13 @@ public class Circle extends Figure implements Drawable {
 
     @Override
     public void draw() {
-        System.out.println("Figure: circle, area: " + getArea() + " sq.units"
-                + ", radius: " + getRadius() + " units"
-                + ", color: " + getColor());
+        System.out.printf("Figure: circle, area: %4.2f sq.units"
+                + ", radius: %2d units"
+                + ", color: %s%n", getArea(), getRadius(), getColor());
     }
 
     @Override
     public double getArea() {
-        return 0;
+        return Math.PI * radius * radius;
     }
 }

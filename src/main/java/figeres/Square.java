@@ -1,6 +1,6 @@
 package figeres;
 
-public class Square extends Figure implements Drawable {
+public class Square extends Figure {
     private int side;
 
     public Square(String color, int side) {
@@ -18,9 +18,9 @@ public class Square extends Figure implements Drawable {
 
     @Override
     public void draw() {
-        System.out.println("Figure: square, area: " + getArea() + " sq.units"
-                + ", side: " + getSide() + " units"
-                + ", color: " + getColor());
+        System.out.printf("Figure: square, area: %4.2f sq.units"
+                + ", side: %2d units"
+                + ", color: %s%n", getArea(), getSide(), getColor());
     }
 
     @Override

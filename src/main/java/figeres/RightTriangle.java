@@ -1,6 +1,6 @@
 package figeres;
 
-public class RightTriangle extends Figure implements Drawable {
+public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
@@ -28,10 +28,10 @@ public class RightTriangle extends Figure implements Drawable {
 
     @Override
     public void draw() {
-        System.out.println("Figure: right triangle, area: " + getArea() + " sq.units"
-                + ", firstLeg: " + getFirstLeg() + " units"
-                + ", secondLeg: " + getSecondLeg() + " units"
-                + ", color: " + getColor());
+        System.out.printf("Figure: right triangle, area: %4.2f sq.units"
+                + ", firstLeg: %2d units"
+                + ", secondLeg: %2d units"
+                + ", color: %s%n", getArea(), getFirstLeg(), getSecondLeg(), getColor());
     }
 
     @Override

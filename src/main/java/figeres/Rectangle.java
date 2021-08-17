@@ -1,6 +1,6 @@
 package figeres;
 
-public class Rectangle extends Figure implements Drawable {
+public class Rectangle extends Figure {
     private int height;
     private int width;
 
@@ -28,10 +28,10 @@ public class Rectangle extends Figure implements Drawable {
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + getArea() + " sq.units"
-                + ", height: " + getHeight() + " units"
-                + ", width: " + getWidth() + " units"
-                + ", color: " + getColor());
+        System.out.printf("Figure: rectangle, area: %4.2f sq.units"
+                + ", height: %2d units"
+                + ", width: %2d units"
+                + ", color: %s%n", getArea(), getHeight(), getWidth(), getColor());
     }
 
     @Override

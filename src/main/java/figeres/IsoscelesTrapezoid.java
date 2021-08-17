@@ -1,6 +1,6 @@
 package figeres;
 
-public class IsoscelesTrapezoid extends Figure implements Drawable {
+public class IsoscelesTrapezoid extends Figure {
     private int height;
     private int topLeg;
     private int bottomLeg;
@@ -38,11 +38,11 @@ public class IsoscelesTrapezoid extends Figure implements Drawable {
 
     @Override
     public void draw() {
-        System.out.println("Figure: isosceles trapezoid, area: " + getArea() + " sq.units"
-                + ", height: " + getHeight() + " units"
-                + ", topLeg: " + getTopLeg() + " units"
-                + ", bottomLeg: " + getBottomLeg() + " units"
-                + ", color: " + getColor());
+        System.out.printf("Figure: isosceles trapezoid, area: %4.2f sq.units"
+                + ", height: %2d units"
+                + ", topLeg: %2d units"
+                + ", bottomLeg: %2d units"
+                + ", color: %s%n", getArea(), getHeight(), getTopLeg(), getBottomLeg(), getColor());
     }
 
     @Override
