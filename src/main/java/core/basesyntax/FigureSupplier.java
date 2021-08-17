@@ -10,24 +10,48 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
-        int firstSide = random.nextInt(MAX_SIDE_LENGTH);
         String color = colorSupplier.getRandomColor();
 
         switch (figureNumber) {
             case 1:
-                return new Square(firstSide, color);
+                return createSquare(color);
             case 2:
-                int secondSide = random.nextInt(MAX_SIDE_LENGTH);
-                return new Rectangle(firstSide, secondSide, color);
+                return createRectangle(color);
             case 3:
-                return new Circle(firstSide, color);
+                return createCircle(color);
             case 4:
-                int secondLeg = random.nextInt(MAX_SIDE_LENGTH);
-                return new RightTriangle(firstSide, secondLeg, color);
+                return createTriangle(color);
             default:
-                int botSide = random.nextInt(MAX_SIDE_LENGTH);
-                int height = random.nextInt(MAX_SIDE_LENGTH);
-                return new IsoscelesTrapezoid(firstSide, botSide, height, color);
+                return createTrapezoid(color);
         }
+    }
+
+    private Figure createSquare(String color) {
+        int side = random.nextInt(MAX_SIDE_LENGTH);
+        return new Square(side, color);
+    }
+
+    private Figure createRectangle(String color) {
+        int firstSide = random.nextInt(MAX_SIDE_LENGTH);
+        int secondSide = random.nextInt(MAX_SIDE_LENGTH);
+        return new Rectangle(firstSide, secondSide, color);
+    }
+
+    private Figure createCircle(String color) {
+        int radius = random.nextInt(MAX_SIDE_LENGTH);
+        return new Circle(radius, color);
+    }
+
+    private Figure createTriangle(String color) {
+        int firstLeg = random.nextInt(MAX_SIDE_LENGTH);
+        int secondLeg = random.nextInt(MAX_SIDE_LENGTH);
+        return new RightTriangle(firstLeg, secondLeg, color);
+    }
+
+    private Figure createTrapezoid(String color) {
+        int topSide = random.nextInt(MAX_SIDE_LENGTH);
+        int botSide = random.nextInt(MAX_SIDE_LENGTH);
+        int height = random.nextInt(MAX_SIDE_LENGTH);
+        return new IsoscelesTrapezoid(topSide, botSide, height, color);
     }
 }
