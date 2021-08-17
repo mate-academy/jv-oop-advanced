@@ -6,8 +6,7 @@ public class IsoscelesTrapezoid extends Figure {
         setArea((a + b) / 2 * h);
     }
 
-    @Override
-    public String toString() {
+    public String drawFigure() {
         return "Figure: " + this.getName()
                 + ", area: " + this.getArea() + " sq.units, "
                 + "color: " + this.getColor();
