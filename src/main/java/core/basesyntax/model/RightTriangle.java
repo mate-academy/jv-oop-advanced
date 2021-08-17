@@ -3,12 +3,12 @@ package core.basesyntax.model;
 import core.basesyntax.FigureArea;
 
 public class RightTriangle extends Figure {
-    private int firstLeg;
-    private int secondLeg;
+    private float side;
+    private float height;
 
     @Override
     public double getArea() {
-        return 0;
+        return side * height / 2;
     }
 
     @Override
