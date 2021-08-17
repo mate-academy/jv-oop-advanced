@@ -3,7 +3,7 @@ package core.basesyntax;
 public class ColorSupplier {
     public String getRandomColor() {
         String figureColor;
-        switch ((int) (Math.random() * 7)) {
+        switch ((int) (Math.random() * 8)) {
             case 0:
                 figureColor = "yellow";
                 break;
