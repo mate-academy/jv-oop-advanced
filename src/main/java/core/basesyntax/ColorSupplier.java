@@ -7,17 +7,6 @@ public class ColorSupplier {
 
     public Colour getRandomColour() {
         int colourNumber = random.nextInt(4);
-        Colour colour;
-        switch (colourNumber) {
-            case 1: colour = Colour.green;
-                break;
-            case 2: colour = Colour.blue;
-                break;
-            case 3: colour = Colour.black;
-                break;
-            default: colour = Colour.yellow;
-                break;
-        }
-        return colour;
+        return Colour.values()[colourNumber];
     }
 }

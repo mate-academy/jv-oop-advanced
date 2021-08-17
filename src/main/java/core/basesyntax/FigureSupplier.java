@@ -5,22 +5,37 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
     private Random random = new Random();
-    private IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(
-            random.nextInt(100), random.nextInt(100), random.nextInt(100));
-    private Circle circle = new Circle(random.nextInt(100));
-    private RightTriangle rightTriangle = new RightTriangle(
-            random.nextInt(100), random.nextInt(100));
-    private Rectangle rectangle = new Rectangle(random.nextInt(100),random.nextInt(100));
-    private Square square = new Square(random.nextInt(100));
+
+    private IsoscelesTrapezoid isoscelesTrapezoidMaker() {
+        return new IsoscelesTrapezoid(
+                random.nextInt(100), random.nextInt(100), random.nextInt(100));
+    }
+
+    private Circle circleMaker() {
+        return new Circle(random.nextInt(100));
+    }
+
+    private RightTriangle rightTriangleMaker() {
+        return new RightTriangle(
+                random.nextInt(100), random.nextInt(100));
+    }
+
+    private Rectangle rectangleMaker() {
+        return new Rectangle(random.nextInt(100), random.nextInt(100));
+    }
+
+    private Square squareMaker() {
+        return new Square(random.nextInt(100));
+    }
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
         switch (figureNumber) {
-            case 0: return isoscelesTrapezoid;
-            case 1: return circle;
-            case 2: return rightTriangle;
-            case 3: return rectangle;
-            default: return square;
+            case 0: return isoscelesTrapezoidMaker();
+            case 1: return circleMaker();
+            case 2: return rightTriangleMaker();
+            case 3: return rectangleMaker();
+            default: return squareMaker();
         }
     }
 }
