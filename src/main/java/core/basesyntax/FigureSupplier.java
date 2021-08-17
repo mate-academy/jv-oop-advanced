@@ -11,18 +11,6 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        /*Figure isoscelesTrapezoid = new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(),
-                getRandomNumber(), getRandomNumber(), getRandomNumber());
-        Figure circle = new Circle(new ColorSupplier().getRandomColor(), getRandomNumber());
-        Figure rightTriangle = new RightTriangle(new ColorSupplier().getRandomColor(),
-                getRandomNumber(), getRandomNumber());
-        Figure rectangle = new Rectangle(new ColorSupplier().getRandomColor(), getRandomNumber(),
-                getRandomNumber());
-        Figure square = new Square(new ColorSupplier().getRandomColor(), getRandomNumber());
-
-        Figure[] figures = {isoscelesTrapezoid, circle, rightTriangle, rectangle, square};
-        return figures[new Random().nextInt(FIGURE_COUNT)];*/
-        //Figure randomFigure;
         String randomColor = new ColorSupplier().getRandomColor();
         switch (new Random().nextInt(FIGURE_COUNT)) {
             case (0):
