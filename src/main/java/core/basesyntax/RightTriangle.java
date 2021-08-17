@@ -3,40 +3,40 @@ package core.basesyntax;
 import java.text.DecimalFormat;
 
 public class RightTriangle extends Figure {
-    private int legA;
-    private int legB;
+    private int firstCathetus;
+    private int secondCathetus;
 
-    public RightTriangle(String color, int legA, int legB) {
+    public RightTriangle(String color, int firstCathetus, int secondCathetus) {
         super(color);
-        this.legA = legA;
-        this.legB = legB;
+        this.firstCathetus = firstCathetus;
+        this.secondCathetus = secondCathetus;
     }
 
     public int getLegA() {
-        return legA;
+        return firstCathetus;
     }
 
     public void setLegA(int legA) {
-        this.legA = legA;
+        this.firstCathetus = legA;
     }
 
     public int getLegB() {
-        return legB;
+        return secondCathetus;
     }
 
     public void setLegB(int legB) {
-        this.legB = legB;
+        this.secondCathetus = legB;
     }
 
     @Override
     public double getArea() {
-        return (double) (legA * legB / 2);
+        return (double) (firstCathetus * secondCathetus / 2);
     }
 
     @Override
     public String getInformation() {
         return "Figure: right triangle, area: " + new DecimalFormat("#.##").format(getArea())
-                + " sq.units, legA: " + legA + " units, legB " + legB
+                + " sq.units, legA: " + firstCathetus + " units, legB " + secondCathetus
                 + " units, color: " + getColor();
     }
 }
