@@ -3,17 +3,9 @@ package suppliers;
 import java.util.Random;
 
 public class ColorSupplier {
-    private String[] colours = {"white", "black", "red", "orange",
+    public static final String[] colours = {"white", "black", "red", "orange",
             "yellow", "green", "blue", "purple"};
     private Random random = new Random();
-
-    public String[] getColours() {
-        return colours;
-    }
-
-    public void setColours(String[] colours) {
-        this.colours = colours;
-    }
 
     public Random getRandom() {
         return random;
