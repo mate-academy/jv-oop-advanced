@@ -1,9 +1,9 @@
 package model;
 
-public class Square extends Figure implements FiguresBehaviour {
+public class Square extends Figure {
     private int side;
 
-    public Square(String color) {
+    public Square(Color color) {
         super(color);
     }
 
@@ -34,7 +34,8 @@ public class Square extends Figure implements FiguresBehaviour {
     }
 
     @Override
-    public void setParams(int[] params) {
+    public void setParams(int[] params, Color color) {
         setSide(params[0]);
+        setColour(color);
     }
 }

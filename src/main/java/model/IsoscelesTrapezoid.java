@@ -1,11 +1,11 @@
 package model;
 
-public class IsoscelesTrapezoid extends Figure implements FiguresBehaviour {
+public class IsoscelesTrapezoid extends Figure {
     private int baseA;
     private int baseB;
     private int height;
 
-    public IsoscelesTrapezoid(String color) {
+    public IsoscelesTrapezoid(Color color) {
         super(color);
     }
 
@@ -53,9 +53,10 @@ public class IsoscelesTrapezoid extends Figure implements FiguresBehaviour {
     }
 
     @Override
-    public void setParams(int[] params) {
+    public void setParams(int[] params, Color color) {
         setBaseA(params[0]);
         setBaseB(params[1]);
         setHeight(params[2]);
+        setColour(color);
     }
 }

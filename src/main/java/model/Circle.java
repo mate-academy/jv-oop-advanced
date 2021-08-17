@@ -1,9 +1,9 @@
 package model;
 
-class Circle extends Figure implements FiguresBehaviour {
+class Circle extends Figure {
     private int radius;
 
-    public Circle(String color) {
+    public Circle(Color color) {
         super(color);
     }
 
@@ -37,8 +37,9 @@ class Circle extends Figure implements FiguresBehaviour {
     }
 
     @Override
-   public void setParams(int[] params) {
+    public void setParams(int[] params, Color color) {
         setRadius(params[0]);
+        setColour(color);
     }
 }
 

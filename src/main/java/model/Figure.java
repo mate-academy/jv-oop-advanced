@@ -1,17 +1,17 @@
 package model;
 
-public abstract class Figure {
-    private String color;
+public abstract class Figure implements InformationWriter, SquareCalculator {
+    private Color color;
     private String figureName;
 
-    public Figure(String color) {
+    public Figure(Color color) {
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
-    public void setColour(String colour) {
+    public void setColour(Color colour) {
         this.color = colour;
     }
 
@@ -23,13 +23,7 @@ public abstract class Figure {
         this.figureName = figuretype;
     }
 
-    public void drow() {
-        System.out.println("Info about figure");
-    }
-
     public abstract double getArea();
 
-    public void setParams(int[] params) {
-
-    }
+    public abstract void setParams(int[] params, Color color);
 }

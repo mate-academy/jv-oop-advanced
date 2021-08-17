@@ -1,10 +1,10 @@
 package model;
 
-public class Rectangle extends Figure implements FiguresBehaviour {
+public class Rectangle extends Figure {
     private int sideA;
     private int sideB;
 
-    public Rectangle(String color) {
+    public Rectangle(Color color) {
         super(color);
     }
 
@@ -44,9 +44,10 @@ public class Rectangle extends Figure implements FiguresBehaviour {
     }
 
     @Override
-    public void setParams(int[] params) {
+    public void setParams(int[] params, Color color) {
         setSideA(params[0]);
         setSideB(params[1]);
+        setColour(color);
     }
 
 }

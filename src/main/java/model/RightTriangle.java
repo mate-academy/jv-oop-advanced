@@ -1,10 +1,10 @@
 package model;
 
-public class RightTriangle extends Figure implements FiguresBehaviour {
+public class RightTriangle extends Figure {
     private int baseA;
     private int height;
 
-    public RightTriangle(String color) {
+    public RightTriangle(Color color) {
         super(color);
     }
 
@@ -44,8 +44,9 @@ public class RightTriangle extends Figure implements FiguresBehaviour {
     }
 
     @Override
-    public void setParams(int[] params) {
+    public void setParams(int[] params, Color color) {
         setBaseA(params[0]);
         setHeight(params[1]);
+        setColour(color);
     }
 }

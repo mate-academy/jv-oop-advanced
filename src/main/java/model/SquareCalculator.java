@@ -1,5 +1,5 @@
 package model;
 
-public interface FiguresBehaviour {
+public interface SquareCalculator {
     double getArea();
 }
