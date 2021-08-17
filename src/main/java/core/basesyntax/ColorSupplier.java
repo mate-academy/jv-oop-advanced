@@ -1,9 +1,15 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public class ColorSupplier {
+    public static final int MAX_NUMBER_OF_COLOR = 8;
+    private Random random = new Random();
+
     public String getRandomColor() {
+        int colorNumber = random.nextInt(MAX_NUMBER_OF_COLOR);
         String figureColor;
-        switch ((int) (Math.random() * 8)) {
+        switch (colorNumber) {
             case 0:
                 figureColor = "yellow";
                 break;
@@ -26,10 +32,8 @@ public class ColorSupplier {
                 figureColor = "magenta";
                 break;
             case 7:
-                figureColor = "black";
-                break;
             default:
-                figureColor = "white";
+                figureColor = "black";
                 break;
         }
         return figureColor;
