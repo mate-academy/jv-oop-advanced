@@ -3,16 +3,16 @@ package core.basesyntax;
 public class Square extends Figure {
     private int side;
 
+    public Square(String figureColor, int side) {
+        super(figureColor);
+        this.side = side;
+    }
+
     public int getSide() {
         return side;
     }
 
     public void setSide(int side) {
-        this.side = side;
-    }
-
-    public Square(String figureColor, int side) {
-        super(figureColor);
         this.side = side;
     }
 
