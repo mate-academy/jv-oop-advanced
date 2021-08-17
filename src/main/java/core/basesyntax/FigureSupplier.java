@@ -10,11 +10,13 @@ public class FigureSupplier {
                 break;
             case 1:
                 randomFigure = new Rectangle(new ColorSupplier().getRandomColor(),
-                        (int) (Math.random() * 100) + 1, (int) (Math.random() * 100) + 1);
+                        (int) (Math.random() * 100) + 1,
+                        (int) (Math.random() * 100) + 1);
                 break;
             case 2:
                 randomFigure = new RightTriangle(new ColorSupplier().getRandomColor(),
-                        (int) (Math.random() * 100) + 1, (int) (Math.random() * 100) + 1);
+                        (int) (Math.random() * 100) + 1,
+                        (int) (Math.random() * 100) + 1);
                 break;
             case 3:
                 randomFigure = new Circle(new ColorSupplier().getRandomColor(),
@@ -23,7 +25,8 @@ public class FigureSupplier {
             case 4:
             default:
                 randomFigure = new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(),
-                        (int) (Math.random() * 100) + 1, (int) (Math.random() * 100) + 1,
+                        (int) (Math.random() * 100) + 1,
+                        (int) (Math.random() * 100) + 1,
                         (int) (Math.random() * 100) + 1);
                 break;
         }
