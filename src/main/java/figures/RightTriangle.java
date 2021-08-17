@@ -1,4 +1,4 @@
-package figeres;
+package figures;
 
 public class RightTriangle extends Figure {
     private int firstLeg;

@@ -1,4 +1,4 @@
-package figeres;
+package figures;
 
 public class Rectangle extends Figure {
     private int height;

@@ -1,4 +1,4 @@
-package figeres;
+package figures;
 
 public class Square extends Figure {
     private int side;

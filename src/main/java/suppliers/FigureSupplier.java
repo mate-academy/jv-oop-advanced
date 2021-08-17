@@ -1,11 +1,11 @@
 package suppliers;
 
-import figeres.Circle;
-import figeres.Figure;
-import figeres.IsoscelesTrapezoid;
-import figeres.Rectangle;
-import figeres.RightTriangle;
-import figeres.Square;
+import figures.Circle;
+import figures.Figure;
+import figures.IsoscelesTrapezoid;
+import figures.Rectangle;
+import figures.RightTriangle;
+import figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {

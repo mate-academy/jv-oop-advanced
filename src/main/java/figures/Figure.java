@@ -1,4 +1,4 @@
-package figeres;
+package figures;
 
 public abstract class Figure implements AreaCalculator, Drawable {
     private String color;

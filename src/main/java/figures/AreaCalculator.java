@@ -1,4 +1,4 @@
-package figeres;
+package figures;
 
 public interface AreaCalculator {
     double getArea();
