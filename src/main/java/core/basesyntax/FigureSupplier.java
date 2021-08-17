@@ -5,11 +5,13 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
     private Random random = new Random();
-    private IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(10, 12, 5);
-    private Circle circle = new Circle(10);
-    private RightTriangle rightTriangle = new RightTriangle(10, 15);
-    private Rectangle rectangle = new Rectangle(10,15);
-    private Square square = new Square(10);
+    private IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(
+            random.nextInt(100), random.nextInt(100), random.nextInt(100));
+    private Circle circle = new Circle(random.nextInt(100));
+    private RightTriangle rightTriangle = new RightTriangle(
+            random.nextInt(100), random.nextInt(100));
+    private Rectangle rectangle = new Rectangle(random.nextInt(100),random.nextInt(100));
+    private Square square = new Square(random.nextInt(100));
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);

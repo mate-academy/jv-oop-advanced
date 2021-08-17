@@ -5,17 +5,17 @@ import java.util.Random;
 public class ColorSupplier {
     private Random random = new Random();
 
-    public String getRandomColour() {
+    public Colour getRandomColour() {
         int colourNumber = random.nextInt(4);
-        String colour;
+        Colour colour;
         switch (colourNumber) {
-            case 1: colour = "black";
+            case 1: colour = Colour.green;
                 break;
-            case 2: colour = "white";
+            case 2: colour = Colour.blue;
                 break;
-            case 3: colour = "red";
+            case 3: colour = Colour.black;
                 break;
-            default: colour = "yellow";
+            default: colour = Colour.yellow;
                 break;
         }
         return colour;
