@@ -11,21 +11,23 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
         int firstSide = random.nextInt(MAX_SIDE_LENGTH);
-        int secondSide = random.nextInt(MAX_SIDE_LENGTH);
-        int thirdSide = random.nextInt(MAX_SIDE_LENGTH);
         String color = colorSupplier.getRandomColor();
 
         switch (figureNumber) {
             case 1:
                 return new Square(firstSide, color);
             case 2:
+                int secondSide = random.nextInt(MAX_SIDE_LENGTH);
                 return new Rectangle(firstSide, secondSide, color);
             case 3:
                 return new Circle(firstSide, color);
             case 4:
-                return new RightTriangle(firstSide, secondSide, color);
+                int secondLeg = random.nextInt(MAX_SIDE_LENGTH);
+                return new RightTriangle(firstSide, secondLeg, color);
             default:
-                return new IsoscelesTrapezoid(firstSide, secondSide, thirdSide, color);
+                int botSide = random.nextInt(MAX_SIDE_LENGTH);
+                int height = random.nextInt(MAX_SIDE_LENGTH);
+                return new IsoscelesTrapezoid(firstSide, botSide, height, color);
         }
     }
 }
