@@ -6,5 +6,4 @@ public class ColorSupplier {
     public String getRandomColor() {
         return COLORS[(int) (Math.random() * COLORS.length)];
     }
-
 }

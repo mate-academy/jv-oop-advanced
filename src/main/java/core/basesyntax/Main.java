@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class Main {
     private static final FigureSupplier FIGURE_SUPPLIER = new FigureSupplier();
+    private static final int NUMBER_FOR_RANDOM = 10;
 
     public static void main(String[] args) {
         Figure[] figures = new Figure[randomInt()];
@@ -15,7 +16,7 @@ public class Main {
         }
     }
 
-    public static final int randomInt() {
-        return new Random().nextInt(10);
+    private static int randomInt() {
+        return new Random().nextInt(NUMBER_FOR_RANDOM);
     }
 }
