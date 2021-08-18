@@ -1,22 +1,17 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Main {
     private static final FigureSupplier FIGURE_SUPPLIER = new FigureSupplier();
-    private static final int NUMBER_FOR_RANDOM = 10;
+    private static final int MAX_FIGURES_ARRAY_LENGTH = 10;
 
     public static void main(String[] args) {
-        Figure[] figures = new Figure[randomInt()];
+        RandomNumberFigures ranodmNumberFigures = new RandomNumberFigures();
+        Figure[] figures = new Figure[ranodmNumberFigures.randomInt(MAX_FIGURES_ARRAY_LENGTH)];
         for (int i = 0; i < figures.length; i++) {
             figures[i] = FIGURE_SUPPLIER.getRandomFigure();
         }
         for (int i = 0; i < figures.length; i++) {
-            System.out.println(figures[i].toString());
+            System.out.println(figures[i].drawFigure());
         }
-    }
-
-    private static int randomInt() {
-        return new Random().nextInt(NUMBER_FOR_RANDOM);
     }
 }
