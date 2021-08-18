@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import static java.lang.Math.random;
-
 public class ColorSupplier {
     private static String[] colors = new String[]{"yellow", "red", "blue", "green", "white"};
 

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-import static core.basesyntax.ColorSupplier.*;
+import static core.basesyntax.ColorSupplier.getRandomColor;
 
 public class FigureSupplier {
     public static Figure getRandomFigure() {
@@ -9,7 +9,8 @@ public class FigureSupplier {
             case 0:
                 return new Circle(getRandomColor(), getRandomInt());
             case 1:
-                return new IsoscelesTrapezoid(getRandomColor(), getRandomInt(), getRandomInt(), getRandomInt());
+                return new IsoscelesTrapezoid(getRandomColor(), getRandomInt(),
+                        getRandomInt(), getRandomInt());
             case 2:
                 return new Rectangle(getRandomColor(), getRandomInt(), getRandomInt());
             case 3:
