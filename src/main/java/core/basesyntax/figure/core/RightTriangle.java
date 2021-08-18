@@ -1,7 +1,5 @@
 package core.basesyntax.figure.core;
 
-import java.util.Random;
-
 public class RightTriangle extends Figure {
     private double hypotenuse;
     private double legA;
@@ -12,10 +10,6 @@ public class RightTriangle extends Figure {
         this.hypotenuse = Math.sqrt((legA * legA) + (legB * legB));
         this.legA = legA;
         this.legB = legB;
-    }
-
-    public RightTriangle(String colorOfFigure, Random random) {
-        this(colorOfFigure, random.nextDouble() * 10, random.nextDouble() * 10);
     }
 
     public double getHypotenuse() {

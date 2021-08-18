@@ -13,37 +13,31 @@ public enum Color {
     },
     GRAY {
         public String asLowerCase() {
-
             return GRAY.toString().toLowerCase();
         }
     },
     WHITE {
         public String asLowerCase() {
-
             return WHITE.toString().toLowerCase();
         }
     },
     BLACK {
         public String asLowerCase() {
-
             return BLACK.toString().toLowerCase();
         }
     },
     BLUE {
         public String asLowerCase() {
-
             return BLUE.toString().toLowerCase();
         }
     },
     PURPLE {
         public String asLowerCase() {
-
             return PURPLE.toString().toLowerCase();
         }
     },
     PINK {
         public String asLowerCase() {
-
             return PINK.toString().toLowerCase();
         }
     };

@@ -1,17 +1,11 @@
 package core.basesyntax.figure.core;
 
-import java.util.Random;
-
 public class Square extends Figure {
     private double side;
 
     public Square(String colorOfFigure, double side) {
         super(colorOfFigure);
         this.side = side;
-    }
-
-    public Square(String colorOfFigure, Random random) {
-        this(colorOfFigure, random.nextDouble() * 10);
     }
 
     public double getSide() {

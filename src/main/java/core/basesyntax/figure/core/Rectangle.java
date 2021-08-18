@@ -1,7 +1,5 @@
 package core.basesyntax.figure.core;
 
-import java.util.Random;
-
 public class Rectangle extends Figure {
     private double width;
     private double length;
@@ -10,10 +8,6 @@ public class Rectangle extends Figure {
         super(colorOfFigure);
         this.width = width;
         this.length = length;
-    }
-
-    public Rectangle(String colorOfFigure, Random random) {
-        this(colorOfFigure, random.nextDouble() * 10, random.nextDouble() * 10);
     }
 
     public double getWidth() {

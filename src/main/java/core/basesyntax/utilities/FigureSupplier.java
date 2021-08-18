@@ -9,30 +9,38 @@ import core.basesyntax.figure.core.Square;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int RANDOM_RANGE = 10;
+    private static final int NUMBER_OF_TYPES_OF_FIGURE = 5;
+
     public Figure getRandomFigure() {
+
         Random random = new Random();
         ColorSupplier colorSupplier = new ColorSupplier();
         Figure returnFigure;
-        switch (random.nextInt(5)) {
+        switch (random.nextInt(NUMBER_OF_TYPES_OF_FIGURE)) {
             case (0):
                 returnFigure =
-                        new Circle(colorSupplier.getRandomColor(), random);
+                        new Circle(colorSupplier.getRandomColor(), random.nextInt(RANDOM_RANGE));
                 break;
             case (1):
                 returnFigure =
-                        new Square(colorSupplier.getRandomColor(), random);
+                        new Square(colorSupplier.getRandomColor(), random.nextInt(RANDOM_RANGE));
                 break;
             case (2):
                 returnFigure =
-                        new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random);
+                        new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                                random.nextInt(RANDOM_RANGE), random.nextInt(RANDOM_RANGE),
+                                random.nextInt(RANDOM_RANGE));
                 break;
             case (3):
                 returnFigure =
-                        new Rectangle(colorSupplier.getRandomColor(), random);
+                        new Rectangle(colorSupplier.getRandomColor(),
+                                random.nextInt(RANDOM_RANGE), random.nextInt(RANDOM_RANGE));
                 break;
             case (4):
                 returnFigure =
-                        new RightTriangle(colorSupplier.getRandomColor(), random);
+                        new RightTriangle(colorSupplier.getRandomColor(),
+                                random.nextInt(RANDOM_RANGE), random.nextInt(RANDOM_RANGE));
                 break;
             default:
                 returnFigure = null;
