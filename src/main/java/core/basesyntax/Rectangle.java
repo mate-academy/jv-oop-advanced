@@ -16,7 +16,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String getDrow() {
+    public String drow() {
         return "Figure: " + getName() + ", area: " + getArea() + " sq.units, "
                     + "length: " + length + " units, " + "width: "
                     + width + " units, " + "color: " + getColor();

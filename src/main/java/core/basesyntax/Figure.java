@@ -15,7 +15,7 @@ public abstract class Figure implements AreaCalculator, DrowFigure {
     }
 
     @Override
-    public String getDrow() {
+    public String drow() {
         return null;
     }
 
