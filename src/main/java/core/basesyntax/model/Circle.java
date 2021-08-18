@@ -1,9 +1,17 @@
 package core.basesyntax.model;
 
+import core.basesyntax.ColorSupplier;
 import core.basesyntax.FigureArea;
+import core.basesyntax.FigureSupplier;
 
 public class Circle extends Figure {
-    private int radius;
+    private final int radius;
+
+    public Circle() {
+        this.radius = Figure.getRandomNumber();
+        super.setColour(ColorSupplier.getRandomColor());
+    }
+
 
     @Override
     public double getArea() {
@@ -13,6 +21,7 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
+        System.out.println();
 
     }
 }
