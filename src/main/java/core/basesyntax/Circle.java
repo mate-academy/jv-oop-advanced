@@ -17,9 +17,8 @@ public class Circle extends Figure implements AreaCalculator, InfoFigure {
     public void draw() {
         System.out.println(this.name + ", area: "
                 + getArea() + " sq.units, "
-                + this.radius + " units, "
+                + this.radius + " units, color: "
+                + getColor()
         );
     }
-
-
 }

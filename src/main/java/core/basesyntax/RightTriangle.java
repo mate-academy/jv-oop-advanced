@@ -5,7 +5,6 @@ public class RightTriangle extends Figure implements AreaCalculator, InfoFigure 
     private int firstLeg;
     private int secondLeg;
 
-
     public void setFirstLeg(int firstLeg) {
         this.firstLeg = firstLeg;
     }
@@ -24,7 +23,8 @@ public class RightTriangle extends Figure implements AreaCalculator, InfoFigure 
         System.out.println(this.name + ", area: "
                 + getArea() + " sq.units, "
                 + this.firstLeg + " units, "
-                + this.secondLeg + " units, "
+                + this.secondLeg + " units, color: "
+                + getColor()
         );
     }
 }

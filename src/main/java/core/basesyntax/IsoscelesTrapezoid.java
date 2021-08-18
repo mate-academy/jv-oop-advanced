@@ -29,7 +29,8 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator, InfoFi
                 + getArea() + " sq.units, "
                 + this.upSide + " units, "
                 + this.downSide + " units, "
-                + this.height + " units, "
+                + this.height + " units, color: "
+                + getColor()
         );
     }
 }

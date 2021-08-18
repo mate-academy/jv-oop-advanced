@@ -17,7 +17,7 @@ public class Square extends Figure implements AreaCalculator, InfoFigure {
     public void draw() {
         System.out.println(this.name + ", area: "
                 + getArea() + " sq.units, "
-                + this.side + " units, "
+                + this.side + " units, color: "
                 + getColor());
     }
 }
