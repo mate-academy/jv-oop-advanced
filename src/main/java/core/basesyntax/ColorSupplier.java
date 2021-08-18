@@ -6,4 +6,3 @@ public class ColorSupplier {
         return Colors.values()[randomNumber].name().toLowerCase();
     }
 }
-
