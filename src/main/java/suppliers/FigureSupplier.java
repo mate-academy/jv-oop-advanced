@@ -13,22 +13,6 @@ public class FigureSupplier {
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Random getRandom() {
-        return random;
-    }
-
-    public void setRandom(Random random) {
-        this.random = random;
-    }
-
-    public ColorSupplier getColorSupplier() {
-        return colorSupplier;
-    }
-
-    public void setColorSupplier(ColorSupplier colorSupplier) {
-        this.colorSupplier = colorSupplier;
-    }
-
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
         Figure figure;
