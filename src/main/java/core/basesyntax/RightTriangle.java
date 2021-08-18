@@ -4,7 +4,7 @@ public class RightTriangle extends Figure {
     private int firstLegLength;
     private int secondLegLength;
 
-    public RightTriangle(int firstLegLength, int secondLegLength, Color color) {
+    public RightTriangle(int firstLegLength, int secondLegLength, String color) {
         this.firstLegLength = firstLegLength;
         this.secondLegLength = secondLegLength;
         super.setFigureColor(color);

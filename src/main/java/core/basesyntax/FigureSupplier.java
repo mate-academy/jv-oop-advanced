@@ -7,28 +7,28 @@ public class FigureSupplier {
     private static final int MAX_VALUE = 127;
     private static final int NUMBER_OF_FIGURES = 5;
     private Random random = new Random();
-    private int firstRandomNum = random.nextInt((MAX_VALUE - MIN_VALUE) + 1) + MIN_VALUE;
-    private int secondRandomNum = random.nextInt((MAX_VALUE - MIN_VALUE) + 1) + MIN_VALUE
-            + random.nextInt(MAX_VALUE);
-    private int thirdRandomNum = firstRandomNum + secondRandomNum;
+
+    private int getRandomNum() {
+        return random.nextInt((MAX_VALUE - MIN_VALUE) + 1) + MIN_VALUE;
+    }
 
     public Figure getRandomFigure() {
         int randomFigureIndex = random.nextInt(NUMBER_OF_FIGURES);
         ColorSupplier colorSupplier = new ColorSupplier();
-        Color randomColor = colorSupplier.getRandomColor();
+        String randomColor = colorSupplier.getRandomColor();
 
         switch (randomFigureIndex) {
             case 0:
-                return new IsoscelesTrapezoid(firstRandomNum, secondRandomNum,
-                        thirdRandomNum, randomColor);
+                return new IsoscelesTrapezoid(getRandomNum(), getRandomNum(),
+                        getRandomNum(), randomColor);
             case 1:
-                return new Circle(firstRandomNum, randomColor);
+                return new Circle(getRandomNum(), randomColor);
             case 2:
-                return new RightTriangle(firstRandomNum, secondRandomNum, randomColor);
+                return new RightTriangle(getRandomNum(), getRandomNum(), randomColor);
             case 3:
-                return new Square(firstRandomNum, randomColor);
+                return new Square(getRandomNum(), randomColor);
             default:
-                return new Rectangle(firstRandomNum, secondRandomNum, randomColor);
+                return new Rectangle(getRandomNum(), getRandomNum(), randomColor);
         }
     }
 }
