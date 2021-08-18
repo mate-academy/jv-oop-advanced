@@ -1,12 +1,10 @@
 package core.basesyntax;
 
-public abstract class Figure implements Drawable {
+public abstract class Figure implements Drawable, AreaCalculator {
     private static ColorSupplier supplier = new ColorSupplier();
     protected String color;
 
-    public Figure() {
-        this.color = supplier.getRandomColor();
+    public Figure(String color) {
+        this.color = color;
     }
-
-    public abstract double getArea();
 }
