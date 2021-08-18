@@ -8,9 +8,8 @@ public class Main {
         for (int i = 0; i < figures.length; i++) {
             figures[i] = figureSupplier.getRandomFigure();
         }
-
         for (Figure figure: figures) {
-            figure.drawFigure();
+            figure.draw();
         }
     }
 }

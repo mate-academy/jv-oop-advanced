@@ -4,7 +4,7 @@ public class RightTriangle extends Figure {
     private int firstLegLength;
     private int secondLegLength;
 
-    public RightTriangle(int firstLegLength, int secondLegLength, String color) {
+    public RightTriangle(int firstLegLength, int secondLegLength, Colors color) {
         this.firstLegLength = firstLegLength;
         this.secondLegLength = secondLegLength;
         super.setFigureColor(color);
@@ -32,7 +32,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println("Figure: right triangle"
                 + ", area: " + getArea() + " sq.units"
                 + ", first base length: " + firstLegLength
