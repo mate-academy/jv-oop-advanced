@@ -4,7 +4,6 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int NUMBER_COLOR = 6;
-
     private static final String [] FIGURE = {"Square", "Rectangle", "RightTriangle", "IsoscelesTrapezoid",
             "Circle"};
     public double getRandomNumber() {
