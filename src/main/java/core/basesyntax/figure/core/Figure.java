@@ -1,9 +1,7 @@
-package core.basesyntax.figureClasses;
-
-import core.basesyntax.colors.Color;
+package core.basesyntax.figure.core;
 
 public abstract class Figure {
-    String colorOfFigure;
+    private String colorOfFigure;
 
     public Figure(String colorOfFigure) {
         this.colorOfFigure = colorOfFigure;

@@ -1,6 +1,4 @@
-package core.basesyntax.figureClasses;
-
-import core.basesyntax.colors.Color;
+package core.basesyntax.figure.core;
 
 import java.util.Random;
 
@@ -9,7 +7,8 @@ public class IsoscelesTrapezoid extends Figure {
     private double bottomSide;
     private double height;
 
-    public IsoscelesTrapezoid(String colorOfFigure, double topSide, double bottomSide, double height) {
+    public IsoscelesTrapezoid(String colorOfFigure, double topSide,
+                              double bottomSide, double height) {
         super(colorOfFigure);
         this.topSide = topSide;
         this.bottomSide = bottomSide;
@@ -17,7 +16,8 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     public IsoscelesTrapezoid(String colorOfFigure, Random random) {
-        this(colorOfFigure, random.nextDouble() * 10, random.nextDouble() * 10, random.nextDouble() * 10);
+        this(colorOfFigure, random.nextDouble() * 10,
+                random.nextDouble() * 10, random.nextDouble() * 10);
     }
 
     public double getTopSide() {

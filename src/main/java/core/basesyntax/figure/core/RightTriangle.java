@@ -1,6 +1,4 @@
-package core.basesyntax.figureClasses;
-
-import core.basesyntax.colors.Color;
+package core.basesyntax.figure.core;
 
 import java.util.Random;
 
@@ -53,6 +51,7 @@ public class RightTriangle extends Figure {
     public void drawFigure() {
         System.out.println("Figure: right triangle, area: " + obtainTheArea()
                 + " sq.units, leg A: " + getLegA() + " units, leg B: " + getLegB()
-                + " units, hypotenuse: " + getHypotenuse() + " units, color: " + getColorOfFigure());
+                + " units, hypotenuse: " + getHypotenuse() + " units, color: "
+                + getColorOfFigure());
     }
 }

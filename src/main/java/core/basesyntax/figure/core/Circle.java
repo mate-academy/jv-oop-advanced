@@ -1,6 +1,4 @@
-package core.basesyntax.figureClasses;
-
-import core.basesyntax.colors.Color;
+package core.basesyntax.figure.core;
 
 import java.util.Random;
 
