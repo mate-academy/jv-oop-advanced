@@ -5,7 +5,8 @@ import java.util.List;
 import java.util.Random;
 
 public class Main {
-    public static final int MAX_FIGURES_IN_LIST= 20;
+    public static final int MAX_FIGURES_IN_LIST = 20;
+
     public static void main(String[] args) {
         List<Figure> figureList = new ArrayList<>();
         Random random = new Random();
