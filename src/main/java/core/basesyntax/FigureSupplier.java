@@ -1,25 +1,31 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public class FigureSupplier {
+    private static final int NUMBER_COLOR = 6;
+
+    private static final String [] FIGURE = {"Square", "Rectangle", "Triangle", "Trapeze", "Circl"};
 
     public double getNum() {
-        return Math.random() * 5 + 1;
+        return new Random().nextInt(NUMBER_COLOR) + 1;
     }
 
-    public Figures getRandomFigure() {
-        String randomColor = new ColorSupplier().getRandomColor();
-        double randomNumber = Math.random() * 4 + 1;
-        if ((int)randomNumber == 1) {
-            return new Square(randomColor, (int) getNum());
-        } else if ((int) randomNumber == 2) {
-            return new Rectangle(randomColor, (int) getNum(), (int) getNum());
-        } else if ((int)randomNumber == 3) {
-            return new RightTriangle(randomColor, (int) getNum(), (int) getNum());
-        } else if ((int)randomNumber == 5) {
-            return new IsoscelesTrapezoid(randomColor, (int) getNum(), (int) getNum(),
+    public Figure getRandomFigure() {
+        String color = new ColorSupplier().getRandomColor();
+
+        int figure = new Random().nextInt(FIGURE.length);
+        if (FIGURE[figure].equals("Square")) {
+            return new Square(color, FIGURE[figure], (int) getNum());
+        } else if (FIGURE[figure].equals("Rectangle")) {
+            return new Rectangle(color, FIGURE[figure], (int) getNum(), (int) getNum());
+        } else if (FIGURE[figure].equals("Triangle")) {
+            return new RightTriangle(color, FIGURE[figure],(int) getNum(), (int) getNum());
+        } else if (FIGURE[figure].equals("Trapeze")) {
+            return new IsoscelesTrapezoid(color, FIGURE[figure], (int) getNum(), (int) getNum(),
                     (int) getNum());
         } else {
-            return new Circle(randomColor, (int) getNum());
+            return new Circle(color, FIGURE[figure], (int) getNum());
         }
     }
 }
