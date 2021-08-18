@@ -43,5 +43,3 @@ class Circle extends Figure {
         setColour(color);
     }
 }
-
-

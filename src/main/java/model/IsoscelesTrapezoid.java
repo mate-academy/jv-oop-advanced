@@ -50,8 +50,8 @@ public class IsoscelesTrapezoid extends Figure {
     public void drow() {
         System.out.println("Figure: " + getFigureName()
                 + ", area: " + getArea() + " sq.units"
-                + ", firstLeg: " + getBaseA() + " units"
-                + ", secondLeg:  " + getBaseB() + " units"
+                + ", first side: " + getBaseA() + " units"
+                + ", second side:  " + getBaseB() + " units"
                 + ", height: " + getHeight() + " units"
                 + ", color: " + getColor());
     }

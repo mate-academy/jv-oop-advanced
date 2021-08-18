@@ -18,10 +18,4 @@ public abstract class Figure implements Drawable, SquareCalculator {
     public String getFigureName() {
         return figureName;
     }
-
-    public void setFigureName(String figuretype) {
-        this.figureName = figuretype;
-    }
-
-    public abstract double getArea();
 }
