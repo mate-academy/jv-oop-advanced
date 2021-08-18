@@ -1,7 +1,6 @@
 package core.basesyntax.model;
 
 import core.basesyntax.ColorSupplier;
-import core.basesyntax.FigureArea;
 
 public class RightTriangle extends Figure {
     private final float side;
@@ -20,6 +19,10 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-
+        System.out.println("Figure: RightTriangle, area: " + getArea()
+                + " sq.units, side: " + side
+                + ", height: " + height
+                + ", colour: " + getColour());
     }
+
 }

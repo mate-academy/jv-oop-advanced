@@ -1,9 +1,8 @@
 package core.basesyntax.model;
 
 import core.basesyntax.ColorSupplier;
-import core.basesyntax.FigureArea;
 
-public class Rectangle extends Figure{
+public class Rectangle extends Figure {
     private final int sideA;
     private final int sideB;
 
@@ -13,7 +12,6 @@ public class Rectangle extends Figure{
         super.setColour(ColorSupplier.getRandomColor());
     }
 
-
     @Override
     public double getArea() {
         return sideA * sideB;
@@ -21,6 +19,10 @@ public class Rectangle extends Figure{
 
     @Override
     public void draw() {
-
+        System.out.println("Figure: rectangle, area: " + getArea()
+                        + " sq.units, sideA: " + sideA
+                        + ", sideB: " + sideB
+                        + ", colour: " + getColour());
     }
+
 }

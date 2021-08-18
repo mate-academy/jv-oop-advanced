@@ -1,7 +1,6 @@
 package core.basesyntax.model;
 
 import core.basesyntax.ColorSupplier;
-import core.basesyntax.FigureArea;
 
 public class IsoscelesTrapezoid extends Figure {
     private final double sideA;
@@ -20,9 +19,13 @@ public class IsoscelesTrapezoid extends Figure {
         return (sideA + sideB) * 2 / height;
     }
 
-
     @Override
     public void draw() {
-
+        System.out.println("Figure: IsoscelesTrapezoid, area: " + getArea()
+                + " sq.units, sideA: " + sideA
+                + ", sideB: " + sideB
+                + ", height: " + height
+                + ", colour: " + getColour());
     }
+
 }

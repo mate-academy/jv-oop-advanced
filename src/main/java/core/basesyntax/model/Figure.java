@@ -4,7 +4,7 @@ import core.basesyntax.Drawable;
 import core.basesyntax.FigureArea;
 
 public abstract class Figure implements FigureArea, Drawable {
-    public String colour;
+    private String colour;
 
     public static int getRandomNumber() {
         return (int) (Math.random() * 20);
