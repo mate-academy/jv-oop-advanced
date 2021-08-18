@@ -5,40 +5,20 @@ import java.util.Random;
 public class FigureSupplier {
     private Random random = new Random();
 
-    private Circle circle() {
-        return new Circle(random.nextInt(100));
-    }
-
-    private IsoscelesTrapezoid isoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(
-                random.nextInt(100), random.nextInt(100), random.nextInt(100));
-    }
-
-    private Rectangle rectangle() {
-        return new Rectangle(random.nextInt(100), random.nextInt(100));
-    }
-
-    private RightTriangle rightTriangle() {
-        return new RightTriangle(random.nextInt(100), random.nextInt(100));
-    }
-
-    private Square square() {
-        return new Square(random.nextInt(100));
-    }
-
     public Figure getRandomFigure() {
         int figureRandom = random.nextInt(5);
         switch (figureRandom) {
             case 0:
-                return circle();
+                return new Circle(random.nextInt(40));
             case 1:
-                return isoscelesTrapezoid();
+                return new IsoscelesTrapezoid(random.nextInt(40),
+                        random.nextInt(40), random.nextInt(40));
             case 2:
-                return rectangle();
+                return new Rectangle(random.nextInt(40), random.nextInt(40));
             case 3:
-                return rightTriangle();
+                return new RightTriangle(random.nextInt(40), random.nextInt(40));
             default:
-                return square();
+                return new Square(random.nextInt(40));
         }
     }
 }

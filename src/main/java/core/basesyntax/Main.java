@@ -7,7 +7,7 @@ public class Main {
         Random random = new Random();
         FigureSupplier figureSupplier = new FigureSupplier();
         ColorSupplier colorSupplier = new ColorSupplier();
-        Figure[] figures = new Figure[random.nextInt(40)];
+        Figure[] figures = new Figure[random.nextInt(10)];
         for (int i = 0; i < figures.length; i++) {
             figures[i] = figureSupplier.getRandomFigure();
             figures[i].setColor(colorSupplier.getRandomColor());
