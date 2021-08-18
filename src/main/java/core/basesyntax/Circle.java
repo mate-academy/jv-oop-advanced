@@ -31,5 +31,3 @@ public class Circle extends Figure {
         System.out.println(squareStringBuilder);
     }
 }
-
-
