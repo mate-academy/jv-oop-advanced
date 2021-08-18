@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 public class FigureSupplier {
-    private final int FIGURE_COUNT = 5;
-    private final int RANDOM_VALUE = 20;
-    private final int MIN_VALUE = 1;
+    private static final int FIGURE_COUNT = 5;
+    private static final int RANDOM_VALUE = 20;
+    private static final int MIN_VALUE = 1;
 
     public Figure getRandomFigure() {
         int randomNumber = (int) (Math.random() * FIGURE_COUNT);
