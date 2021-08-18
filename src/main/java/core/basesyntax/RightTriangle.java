@@ -27,14 +27,14 @@ public class RightTriangle extends Figure implements Drawing {
 
     @Override
     public double getArea() {
-        return (firstLeg * secondLeg) / 2;
+        return (firstLeg * secondLeg) / 2.0;
     }
 
     @Override
     public void draw() {
         StringBuilder sb = new StringBuilder();
         System.out.println(
-                sb.append("Figure: rectangle, area: ")
+                sb.append("Figure: RightTriangle, area: ")
                         .append(getArea())
                         .append(" sq.units, firstLeg: ")
                         .append(firstLeg)
