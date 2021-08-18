@@ -3,7 +3,7 @@ package suppliers;
 import java.util.Random;
 
 public class ColorSupplier {
-    public static final String[] COLORS = {"white", "black", "red", "orange",
+    static final String[] COLORS = {"white", "black", "red", "orange",
             "yellow", "green", "blue", "purple"};
     private Random random = new Random();
 
