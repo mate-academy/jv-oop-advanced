@@ -4,16 +4,12 @@ import java.util.Random;
 
 public class FigureSupplier {
     public Figure getRandomFigure() {
-        Figure figure = new Figure() {
-            @Override
-            public void draw() {
-
-            }
-        };
+        Figure figure;
 
         switch (new Random().nextInt(5) + 1) {
             case 1:
-                figure =  new Square();
+            default:
+                figure = new Square();
                 break;
             case 2:
                 figure = new Rectangle();
@@ -28,6 +24,6 @@ public class FigureSupplier {
                 figure = new IsoscelesTrapezoid();
                 break;
         }
-         return figure;
+        return figure;
     }
 }

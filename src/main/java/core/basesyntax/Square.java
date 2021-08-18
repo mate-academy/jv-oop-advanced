@@ -10,7 +10,6 @@ public class Square extends Figure {
         this.side = new Random().nextInt(10);
     }
 
-
     @Override
     public void draw() {
         System.out.println("square, area: " + this.side * this.side + " sq.units, side: "
