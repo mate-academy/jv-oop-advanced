@@ -8,10 +8,6 @@ public class FigureSupplier {
     private static final int NUMBER_OF_FIGURES = 5;
     private Random random = new Random();
 
-    private int getRandomNum() {
-        return random.nextInt((MAX_VALUE - MIN_VALUE) + 1) + MIN_VALUE;
-    }
-
     public Figure getRandomFigure() {
         int randomFigureIndex = random.nextInt(NUMBER_OF_FIGURES);
         ColorSupplier colorSupplier = new ColorSupplier();
@@ -30,5 +26,9 @@ public class FigureSupplier {
             default:
                 return new Rectangle(getRandomNum(), getRandomNum(), randomColor);
         }
+    }
+
+    private int getRandomNum() {
+        return random.nextInt((MAX_VALUE - MIN_VALUE) + 1) + MIN_VALUE;
     }
 }
