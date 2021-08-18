@@ -3,7 +3,11 @@ package core.basesyntax;
 public abstract class Figure {
     public String color;
 
-    public abstract void area();
+    public Figure(String color) {
+        this.color = color;
+    }
+
+    public abstract double area();
 
     public abstract void draw();
 }
