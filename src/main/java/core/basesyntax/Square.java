@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends Figure implements AreaCalculator, InfoFigure {
+public class Square extends Figure implements AreaCalculator, InformationAboutFigure {
     private final String name = "square";
     private int side;
 
@@ -14,7 +14,7 @@ public class Square extends Figure implements AreaCalculator, InfoFigure {
     }
 
     @Override
-    public void draw() {
+    public void figureInfo() {
         System.out.println(this.name + ", area: "
                 + getArea() + " sq.units, "
                 + this.side + " units, color: "

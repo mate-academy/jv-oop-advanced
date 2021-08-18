@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements AreaCalculator, InfoFigure {
+public class IsoscelesTrapezoid extends Figure implements AreaCalculator, InformationAboutFigure {
     private final String name = "isosceles trapezoid";
     private int upSide;
     private int downSide;
@@ -24,7 +24,7 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator, InfoFi
     }
 
     @Override
-    public void draw() {
+    public void figureInfo() {
         System.out.println(this.name + ", area: "
                 + getArea() + " sq.units, "
                 + this.upSide + " units, "

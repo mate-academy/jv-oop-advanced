@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Figure implements InfoFigure {
+public class Figure implements InformationAboutFigure {
     private String color;
 
     public void setColor(String color) {
@@ -11,7 +11,7 @@ public class Figure implements InfoFigure {
         return color;
     }
 
-    public void draw() {
+    public void figureInfo() {
 
     }
 }
