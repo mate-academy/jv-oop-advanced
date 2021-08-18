@@ -19,7 +19,8 @@ public class FigureSupplier {
         Figure figure;
         switch (figureNumber) {
             case 0 :
-                figure = new Square(colorSupplier.getRandomColor(), random.nextInt(MAX_SIZE_OF_FIGURE));
+                figure = new Square(colorSupplier.getRandomColor(),
+                        random.nextInt(MAX_SIZE_OF_FIGURE));
                 break;
             case 1 :
                 figure = new Rectangle(colorSupplier.getRandomColor(),
@@ -39,7 +40,8 @@ public class FigureSupplier {
                         random.nextInt(MAX_SIZE_OF_FIGURE));
                 break;
             default :
-                figure = new Square(colorSupplier.getRandomColor(), random.nextInt(MAX_SIZE_OF_FIGURE));
+                figure = new Square(colorSupplier.getRandomColor(),
+                        random.nextInt(MAX_SIZE_OF_FIGURE));
                 break;
         }
         return figure;
