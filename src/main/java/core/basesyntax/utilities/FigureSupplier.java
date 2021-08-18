@@ -43,7 +43,8 @@ public class FigureSupplier {
                                 random.nextInt(RANDOM_RANGE), random.nextInt(RANDOM_RANGE));
                 break;
             default:
-                returnFigure = null;
+                returnFigure = new RightTriangle(colorSupplier.getRandomColor(),
+                        random.nextInt(RANDOM_RANGE), random.nextInt(RANDOM_RANGE));
         }
         return returnFigure;
     }
