@@ -14,28 +14,28 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         ColorSupplier colorSupplier = new ColorSupplier();
+        Figure figure;
         switch (nameFigure[RANDOM]) {
             case CIRCLE:
-                Figure f1 = new Circle(
+                figure = new Circle(
                         CIRCLE, myRandom(), colorSupplier.getRandomColor());
-                return f1;
+                return figure;
             case ISOSCELES_TRAPEZOID:
-                Figure f2 = new IsoscelesTrapezoid(ISOSCELES_TRAPEZOID,
+                figure = new IsoscelesTrapezoid(ISOSCELES_TRAPEZOID,
                         myRandom(), myRandom(), myRandom(), colorSupplier.getRandomColor());
-                return f2;
+                return figure;
             case RECTANGLE:
-                Figure f3 = new Rectangle(
+                figure = new Rectangle(
                         RECTANGLE, myRandom(), myRandom(), colorSupplier.getRandomColor());
-                return f3;
+                return figure;
             case RIGHT_TRIANGLE:
-                Figure f4 = new RightTriangle(
+                figure = new RightTriangle(
                         RIGHT_TRIANGLE, myRandom(), myRandom(), colorSupplier.getRandomColor());
-                return f4;
+                return figure;
             default:
-                Figure f5 = new Square(
+                figure = new Square(
                         SQUARE, myRandom(), colorSupplier.getRandomColor());
-                return f5;
-
+                return figure;
         }
     }
 

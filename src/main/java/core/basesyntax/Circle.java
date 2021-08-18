@@ -8,6 +8,7 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
+    @Override
     public String drawFigure() {
         return "Figure: " + this.getName()
                 + ", area: " + this.getAria() + " sq.units, "

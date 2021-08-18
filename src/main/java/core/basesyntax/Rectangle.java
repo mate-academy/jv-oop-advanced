@@ -10,6 +10,7 @@ public class Rectangle extends Figure {
         this.secondSide = secondSide;
     }
 
+    @Override
     public String drawFigure() {
         return "Figure: " + this.getName()
                 + ", area: " + this.getAria() + " sq.units, "
