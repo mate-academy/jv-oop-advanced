@@ -6,9 +6,8 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         Random random = new Random();
         ColorSupplier colorSupplier = new ColorSupplier();
-        //creating an array with dimensions of figure
-        int[] finalInt = new int[3];
-        int randomLimit = 101;
+        final int[] finalInt = new int[3];
+        final int randomLimit = 101;
         finalInt[0] = random.nextInt(randomLimit) + 1;
         finalInt[1] = random.nextInt(randomLimit) + 1;
         finalInt[2] = random.nextInt(randomLimit) + 1;
