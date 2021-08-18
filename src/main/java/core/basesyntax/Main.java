@@ -7,8 +7,8 @@ public class Main {
         Figure[] figurs = new Figure[randomLength];
         for (int i = 0; i < figurs.length; i++) {
             figurs[i] = figureSupplier.getRandomFigure();
-                System.out.println(figurs[i].drow());
-            }
+            System.out.println(figurs[i].drow());
         }
     }
+}
 

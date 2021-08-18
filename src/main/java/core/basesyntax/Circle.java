@@ -1,11 +1,23 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
+    private ColorSupplier colorSupplier = new ColorSupplier();
+    private String name;
+    private String color;
     private int radius;
 
-    public Circle(String name, String color) {
-        super(name, color);
+    public Circle() {
+        this.name = "circle";
+        this.color = colorSupplier.getRandomColor();
         this.radius = (int)(Math.random() * 100);
+    }
+
+    public int getRadius() {
+        return radius;
+    }
+
+    public void setRadius(int radius) {
+        this.radius = radius;
     }
 
     @Override
@@ -15,7 +27,7 @@ public class Circle extends Figure {
 
     @Override
     public String drow() {
-        return "Figure: " + getName() + ", area: " + getArea() + " sq.units, "
-                    + "radius: " + radius + " units, " + "color: " + getColor();
+        return "Figure: " + name + ", area: " + getArea() + " sq.units, "
+                    + "radius: " + radius + " units, " + "color: " + color;
     }
 }
