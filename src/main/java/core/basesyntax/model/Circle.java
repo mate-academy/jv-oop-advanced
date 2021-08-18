@@ -1,0 +1,31 @@
+package core.basesyntax.model;
+
+public class Circle extends Figure {
+    private static double Pi = Math.PI;
+    private int radius;
+
+    public Circle(String color, int radius) {
+        super(color);
+        this.radius = radius;
+    }
+
+    public int getRadius() {
+        return radius;
+    }
+
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Figure: " + getClass().getSimpleName()
+                + ", area: " + getArea() + " sq.units," + " radius: " + getRadius() + " units,"
+                + " color: " + getFigureColor());
+    }
+
+    @Override
+    public double getArea() {
+        return Pi * radius * radius;
+    }
+}
