@@ -11,7 +11,7 @@ public class Figure implements InformationAboutFigure {
         return color;
     }
 
-    public void figureInfo() {
+    public void draw() {
 
     }
 }

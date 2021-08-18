@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure implements AreaCalculator, InformationAboutFigure {
-    private final String name = "isosceles trapezoid";
     private int upSide;
     private int downSide;
     private int height;
@@ -24,13 +23,10 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator, Inform
     }
 
     @Override
-    public void figureInfo() {
-        System.out.println(this.name + ", area: "
-                + getArea() + " sq.units, "
-                + this.upSide + " units, "
-                + this.downSide + " units, "
-                + this.height + " units, color: "
-                + getColor()
-        );
+    public void draw() {
+        String out = String.format("Figure: isosceles trapezoid, area: %,.2f sq.units, %d units"
+                        + ", %d units, %d units, color: %s",
+                        getArea(), this.upSide, this.downSide, this.height, getColor());
+        System.out.println(out);
     }
 }

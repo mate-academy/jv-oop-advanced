@@ -19,12 +19,10 @@ public class RightTriangle extends Figure implements AreaCalculator, Information
     }
 
     @Override
-    public void figureInfo() {
-        System.out.println(this.name + ", area: "
-                + getArea() + " sq.units, "
-                + this.firstLeg + " units, "
-                + this.secondLeg + " units, color: "
-                + getColor()
-        );
+    public void draw() {
+        String out = String.format("Figure: right triangle, area: %,.2f sq.units,"
+                        + " %d units, %d units, color: %s",
+                        getArea(), this.firstLeg, this.secondLeg, getColor());
+        System.out.println(out);
     }
 }
