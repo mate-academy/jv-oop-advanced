@@ -6,6 +6,17 @@ public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
     private Random random = new Random();
 
+    public Figure getRandomFigure() {
+        int figureNumber = random.nextInt(FIGURE_COUNT);
+        switch (figureNumber) {
+            case 0: return isoscelesTrapezoidMaker();
+            case 1: return circleMaker();
+            case 2: return rightTriangleMaker();
+            case 3: return rectangleMaker();
+            default: return squareMaker();
+        }
+    }
+
     private IsoscelesTrapezoid isoscelesTrapezoidMaker() {
         return new IsoscelesTrapezoid(
                 random.nextInt(100), random.nextInt(100), random.nextInt(100));
@@ -26,16 +37,5 @@ public class FigureSupplier {
 
     private Square squareMaker() {
         return new Square(random.nextInt(100));
-    }
-
-    public Figure getRandomFigure() {
-        int figureNumber = random.nextInt(FIGURE_COUNT);
-        switch (figureNumber) {
-            case 0: return isoscelesTrapezoidMaker();
-            case 1: return circleMaker();
-            case 2: return rightTriangleMaker();
-            case 3: return rectangleMaker();
-            default: return squareMaker();
-        }
     }
 }
