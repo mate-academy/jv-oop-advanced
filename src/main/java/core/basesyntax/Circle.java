@@ -7,8 +7,10 @@ public class Circle extends Figure implements Behavior{
         return radius;
     }
 
-    public void getCircle(int radius) {
+    public  Circle(int radius, String color, String name) {
         this.radius = radius;
+        super.setColor(color);
+        super.setName(name);
     }
 
     @Override

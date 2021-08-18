@@ -5,10 +5,12 @@ public class IsoscelesTrapezoid extends Figure implements Behavior{
     private int secondLeg;
     private int height;
 
-    public void setParameter(int firstLeg, int secondLeg, int height) {
+    public void setParameter(int firstLeg, int secondLeg, int height, String color, String name) {
         this.height = height;
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
+        super.setColor(color);
+        super.setName(name);
     }
 
     public void setFirstLeg(int firstLeg) {

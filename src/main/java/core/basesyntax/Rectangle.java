@@ -4,9 +4,12 @@ public class Rectangle extends Figure implements Behavior {
     private int firstLeg;
     private int secondLeg;
 
-    public Rectangle(int firstLeg, int secondLeg) {
+    public void setRectangle(int firstLeg, int secondLeg, String color, String name) {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
+        super.setName(name);
+        super.setColor(color);
+
     }
 
     public int getFirstLeg() {

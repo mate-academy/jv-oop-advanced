@@ -1,7 +1,8 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public abstract class Figure  {
     private String color;
+    private String name;
 
 
     public String getColor() {
@@ -10,5 +11,6 @@ public abstract class Figure {
     public void setColor(String color) {
         this.color = color;
     }
-
+    public String getName() { return name; }
+    public void setName(String name) { this.name = name; }
 }

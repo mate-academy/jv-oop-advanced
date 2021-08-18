@@ -7,8 +7,10 @@ public class Square extends Figure implements Behavior {
         return leg;
     }
 
-    public void setLeg(int leg) {
+    public Square(int leg, String color, String name) {
         this.leg = leg;
+        super.setColor(color);
+        super.setName(name);
     }
 
     @Override
