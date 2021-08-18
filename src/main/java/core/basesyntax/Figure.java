@@ -1,8 +1,7 @@
 package core.basesyntax;
 
 public class Figure extends FigureSupplier implements Draw {
-    public static final int FIGURE_COUNT = (int) (1 + (Math.random() * ((5 - 1) + 1)));
-    private String color = getRandomColor();
+    private String color;
 
     public void setColor(String color) {
         this.color = color;

@@ -3,7 +3,7 @@ package core.basesyntax;
 public class Circle extends Figure implements AreaCalculator, Draw {
     private int radius;
 
-    public Circle(){
+    public Circle() {
 
     }
 

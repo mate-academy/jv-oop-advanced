@@ -1,8 +1,14 @@
 package core.basesyntax;
 
-public class CollorSupplier {
+public class ColorSupplier {
+    protected final Randomizer randomizer;
+
+    public ColorSupplier() {
+        this.randomizer = new Randomizer();
+    }
+
     public String getRandomColor() {
-        switch ((int) (Math.random() * 5)) {
+        switch (randomizer.getRandomNumber()) {
             case 1: return "yellow";
             case 2: return "green";
             case 3: return "pink";

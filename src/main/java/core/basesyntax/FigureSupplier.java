@@ -1,19 +1,28 @@
 package core.basesyntax;
 
-public class FigureSupplier extends CollorSupplier {
+public class FigureSupplier extends ColorSupplier {
     public Figure getRandomFigure() {
-        switch ((int) (Math.random() * 5)) {
-            case 1:
-                return new RightTriangle(Figure.FIGURE_COUNT, Figure.FIGURE_COUNT);
-            case 2:
-                return new Circle(Figure.FIGURE_COUNT);
+        Figure figure;
+        switch (randomizer.getRandomNumber()) {
+            case 1: figure = new RightTriangle(randomizer.getRandomNumber(),
+                    randomizer.getRandomNumber());
+                figure.setColor(getRandomColor());
+                return figure;
+            case 2: figure = new Circle(randomizer.getRandomNumber());
+                figure.setColor(getRandomColor());
+                return figure;
             case 3:
-                return new Square(Figure.FIGURE_COUNT);
-            case 4:
-                return new IsoscelesTrapezoid(Figure.FIGURE_COUNT,
-                        Figure.FIGURE_COUNT, Figure.FIGURE_COUNT);
+                figure = new Square(randomizer.getRandomNumber());
+                figure.setColor(getRandomColor());
+                return figure;
+            case 4: figure = new IsoscelesTrapezoid(randomizer.getRandomNumber(),
+                    randomizer.getRandomNumber(), randomizer.getRandomNumber());
+                figure.setColor(getRandomColor());
+                return figure;
             default:
-                return new Rectangle(Figure.FIGURE_COUNT, Figure.FIGURE_COUNT);
+                figure = new Rectangle(randomizer.getRandomNumber(), randomizer.getRandomNumber());
+                figure.setColor(getRandomColor());
+                return figure;
         }
     }
 }

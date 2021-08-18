@@ -1,13 +1,12 @@
 package core.basesyntax;
 
-import static core.basesyntax.Figure.FIGURE_COUNT;
-
 public class Main {
     public static void main(String[] args) {
-        Random random = new Random();
-        Figure[] figure = new Figure[(int) FIGURE_COUNT];
+        Figure figurea = new Square();
+        Randomizer randomizer = new Randomizer();
+        Figure[] figure = new Figure[randomizer.getRandomNumber()];
         for (int i = 0; i < figure.length; i++) {
-            figure[i] = random.getRandomFigure();
+            figure[i] = figurea.getRandomFigure();
         }
         for (Figure figures : figure) {
             figures.draw();
