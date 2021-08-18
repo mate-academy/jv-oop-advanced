@@ -5,7 +5,7 @@ import java.util.Random;
 import suppliers.FigureSupplier;
 
 public class MainApp {
-    static final int MAX_NUMBER_OF_FIGURES = 10;
+    private static final int MAX_NUMBER_OF_FIGURES = 10;
 
     public static void main(String[] args) {
         Random random = new Random();

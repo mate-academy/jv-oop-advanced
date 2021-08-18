@@ -9,8 +9,8 @@ import figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    static final int FIGURE_COUNT = 5;
-    static final int MAX_SIZE_OF_FIGURE = 20;
+    private static final int FIGURE_COUNT = 5;
+    private static final int MAX_SIZE_OF_FIGURE = 20;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
