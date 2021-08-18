@@ -4,11 +4,12 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_SIZE = 100;
+    private static final int FIGURES_NUMBER = 4;
 
     public Figure getRandomFigure() {
         Random random = new Random();
         String color = new ColorSupplier().getRandomColor();
-        switch (random.nextInt(4)) {
+        switch (random.nextInt(FIGURES_NUMBER)) {
             case 0:
                 return new Rectangle(random.nextInt(MAX_SIZE) + 1, random.nextInt(MAX_SIZE) + 1,
                         color);
