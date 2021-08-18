@@ -45,7 +45,7 @@ public class FigureSupplier {
                 isoscelesTrapezoid.setHeight(randomNumber(RANDOM_SIDE_RANGE));
                 return isoscelesTrapezoid;
             default:
-                return new Figure();
+                return new Square();
         }
     }
 }

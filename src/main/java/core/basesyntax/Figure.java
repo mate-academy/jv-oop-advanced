@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Figure implements InformationAboutFigure {
+public abstract class Figure implements InformationAboutFigure, AreaCalculator {
     private String color;
 
     public void setColor(String color) {
@@ -11,7 +11,6 @@ public class Figure implements InformationAboutFigure {
         return color;
     }
 
-    public void draw() {
-
-    }
+    //public void draw() {
+    //}
 }
