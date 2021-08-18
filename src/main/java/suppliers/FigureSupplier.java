@@ -10,11 +10,6 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
-    public static final int SQUARE = 0;
-    public static final int RECTANGLE = 1;
-    public static final int RIGHT_TRIANGLE = 2;
-    public static final int CIRCLE = 3;
-    public static final int ISOSCELES_TRAPEZOID = 4;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -22,22 +17,22 @@ public class FigureSupplier {
         int figureNumber = random.nextInt(FIGURE_COUNT);
         Figure figure;
         switch (figureNumber) {
-            case SQUARE:
+            case 0 :
                 figure = new Square(colorSupplier.getRandomColor(), random.nextInt(20));
                 break;
-            case RECTANGLE:
+            case 1 :
                 figure = new Rectangle(colorSupplier.getRandomColor(),
                         random.nextInt(20), random.nextInt(20));
                 break;
-            case RIGHT_TRIANGLE:
+            case 2 :
                 figure = new RightTriangle(colorSupplier.getRandomColor(),
                         random.nextInt(20), random.nextInt(20));
                 break;
-            case CIRCLE:
+            case 3 :
                 figure = new Circle(colorSupplier.getRandomColor(),
                         random.nextInt(20));
                 break;
-            case ISOSCELES_TRAPEZOID:
+            case 4 :
                 figure = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                         random.nextInt(20), random.nextInt(20), random.nextInt(20));
                 break;
