@@ -6,18 +6,23 @@ public class ColorSupplier {
     private static final int RED = 1;
     private static final int YELLOW = 2;
     private static final int GREEN = 3;
-    private static final int RANDOM = new Random().nextInt(3);
+    private static final String[] COLORS = new String[]{"Red", "Yellow", "Green"};
 
     public String getRandomColor() {
-        switch (RANDOM) {
+        int random = getRandomInt();
+        switch (random) {
             case RED:
-                return "Red";
+                return COLORS[0];
             case YELLOW:
-                return "Yellow";
+                return COLORS[1];
             case GREEN:
-                return "Green";
+                return COLORS[2];
             default:
                 return "Color";
         }
+    }
+
+    private int getRandomInt() {
+        return new Random().nextInt(3);
     }
 }
