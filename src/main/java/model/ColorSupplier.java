@@ -1,10 +1,12 @@
 package model;
 
-public class ColorSupplier {
-    private static Object Color;
+import java.util.Random;
 
-    public static Color getRandomColor() {
-        return model.Color.values()[(int)Math.floor(Math.random() * model.Color.values().length)];
+public class ColorSupplier {
+    private Random random = new Random();
+
+    public Color getRandomColor() {
+        return model.Color.values()[random.nextInt(Color.values().length)];
     }
 }
 

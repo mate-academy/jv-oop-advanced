@@ -5,6 +5,7 @@ import java.util.Random;
 public class FigureSupplier {
     public Figure getRandomFigure() {
         Random random = new Random();
+        ColorSupplier colorSupplier = new ColorSupplier();
         //creating an array with dimensions of figure
         int[] finalInt = new int[3];
         finalInt[0] = random.nextInt(101) + 1;
@@ -14,33 +15,22 @@ public class FigureSupplier {
         switch (random.nextInt() % 5) {
             case (0):
                 // creating circle
-                Circle circle = new Circle(ColorSupplier.getRandomColor());
-                circle.setParams(finalInt, ColorSupplier.getRandomColor());
-                return circle;
+                return new Circle(finalInt, colorSupplier.getRandomColor());
             case (1):
                 //creating isosceles trapezoid
-                IsoscelesTrapezoid trapezoid =
-                        new IsoscelesTrapezoid(ColorSupplier.getRandomColor());
-                trapezoid.setParams(finalInt, ColorSupplier.getRandomColor());
-                return trapezoid;
+                return new IsoscelesTrapezoid(finalInt, colorSupplier.getRandomColor());
 
             case (2):
                 //creating rectangle
-                Rectangle rectangle = new Rectangle(ColorSupplier.getRandomColor());
-                rectangle.setParams(finalInt, ColorSupplier.getRandomColor());
-                return rectangle;
+                return new Rectangle(finalInt, colorSupplier.getRandomColor());
 
             case (3):
                 //creating right triangle
-                RightTriangle rightTriangle = new RightTriangle(ColorSupplier.getRandomColor());
-                rightTriangle.setParams(finalInt, ColorSupplier.getRandomColor());
-                return rightTriangle;
+                return new RightTriangle(finalInt, colorSupplier.getRandomColor());
 
             default:
                 //creating square
-                Square square = new Square(ColorSupplier.getRandomColor());
-                square.setParams(finalInt, ColorSupplier.getRandomColor());
-                return square;
+                return new Square(finalInt, colorSupplier.getRandomColor());
 
         }
     }

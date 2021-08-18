@@ -4,8 +4,11 @@ public class Rectangle extends Figure {
     private int sideA;
     private int sideB;
 
-    public Rectangle(Color color) {
+    public Rectangle(int[] params, Color color) {
         super(color);
+        setSideA(params[0]);
+        setSideB(params[1]);
+        setColour(color);
     }
 
     public int getSideA() {
@@ -43,7 +46,6 @@ public class Rectangle extends Figure {
                 + ", color: " + getColor());
     }
 
-    @Override
     public void setParams(int[] params, Color color) {
         setSideA(params[0]);
         setSideB(params[1]);

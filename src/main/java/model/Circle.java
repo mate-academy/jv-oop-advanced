@@ -3,8 +3,10 @@ package model;
 class Circle extends Figure {
     private int radius;
 
-    public Circle(Color color) {
+    public Circle(int[] params, Color color) {
         super(color);
+        setRadius(params[0]);
+        setColour(color);
     }
 
     public int getRadius() {
@@ -36,8 +38,7 @@ class Circle extends Figure {
                 + ", color: " + getColor());
     }
 
-    @Override
-    public void setParams(int[] params, Color color) {
+    private void setParams(int[] params, Color color) {
         setRadius(params[0]);
         setColour(color);
     }

@@ -1,6 +1,6 @@
 package model;
 
-public abstract class Figure implements InformationWriter, SquareCalculator {
+public abstract class Figure implements Drawable, SquareCalculator {
     private Color color;
     private String figureName;
 
@@ -11,8 +11,8 @@ public abstract class Figure implements InformationWriter, SquareCalculator {
         return color;
     }
 
-    public void setColour(Color colour) {
-        this.color = colour;
+    public void setColour(Color color) {
+        this.color = color;
     }
 
     public String getFigureName() {
@@ -24,6 +24,4 @@ public abstract class Figure implements InformationWriter, SquareCalculator {
     }
 
     public abstract double getArea();
-
-    public abstract void setParams(int[] params, Color color);
 }

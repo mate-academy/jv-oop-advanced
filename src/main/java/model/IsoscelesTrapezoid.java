@@ -5,8 +5,12 @@ public class IsoscelesTrapezoid extends Figure {
     private int baseB;
     private int height;
 
-    public IsoscelesTrapezoid(Color color) {
+    public IsoscelesTrapezoid(int[] params, Color color) {
         super(color);
+        setBaseA(params[0]);
+        setBaseB(params[1]);
+        setHeight(params[2]);
+        setColour(color);
     }
 
     public int getBaseA() {
@@ -52,7 +56,6 @@ public class IsoscelesTrapezoid extends Figure {
                 + ", color: " + getColor());
     }
 
-    @Override
     public void setParams(int[] params, Color color) {
         setBaseA(params[0]);
         setBaseB(params[1]);

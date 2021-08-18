@@ -3,8 +3,10 @@ package model;
 public class Square extends Figure {
     private int side;
 
-    public Square(Color color) {
+    public Square(int[] params, Color color) {
         super(color);
+        setSide(params[0]);
+        setColour(color);
     }
 
     public int getSide() {
@@ -33,7 +35,6 @@ public class Square extends Figure {
                 + ", color: " + getColor());
     }
 
-    @Override
     public void setParams(int[] params, Color color) {
         setSide(params[0]);
         setColour(color);

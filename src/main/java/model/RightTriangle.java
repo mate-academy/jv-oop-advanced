@@ -4,8 +4,11 @@ public class RightTriangle extends Figure {
     private int baseA;
     private int height;
 
-    public RightTriangle(Color color) {
+    public RightTriangle(int[] params, Color color) {
         super(color);
+        setBaseA(params[0]);
+        setHeight(params[1]);
+        setColour(color);
     }
 
     public int getBaseA() {
@@ -43,7 +46,6 @@ public class RightTriangle extends Figure {
                 + ", color: " + getColor());
     }
 
-    @Override
     public void setParams(int[] params, Color color) {
         setBaseA(params[0]);
         setHeight(params[1]);
