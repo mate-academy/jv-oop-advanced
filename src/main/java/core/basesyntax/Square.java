@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square {
+public class Square extends Figure implements Behavior {
     private int leg;
 
     public int getLeg() {
@@ -9,5 +9,10 @@ public class Square {
 
     public void setLeg(int leg) {
         this.leg = leg;
+    }
+
+    @Override
+    public double getArea() {
+        return leg * leg;
     }
 }
