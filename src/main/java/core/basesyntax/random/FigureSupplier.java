@@ -9,12 +9,8 @@ import core.basesyntax.figuretype.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int MAX_VALUE = 10;
+    public static final int MAX_VALUE = 10;
     private Random random = new Random();
-
-    public int getMaxValue() {
-        return MAX_VALUE;
-    }
 
     public Figure getRandomFigure() {
         ColorSupplier randomColor = new ColorSupplier();
