@@ -3,50 +3,25 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private Figure circle() {
-        Circle circle = new Circle();
-        circle.draw();
-        return null;
-    }
-
-    private Figure square() {
-        Square square = new Square();
-        square.draw();
-        return null;
-    }
-
-    private Figure rectangle() {
-        Rectangle rectangle = new Rectangle();
-        rectangle.draw();
-        return null;
-    }
-
-    private Figure rightTriangle() {
-        RightTriangle rightTriangle = new RightTriangle();
-        rightTriangle.draw();
-        return null;
-    }
-
-    private Figure isoscelesTrapezoid() {
-        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
-        isoscelesTrapezoid.draw();
-        return null;
-    }
-
     public Figure getRandomFigure() {
+        ColorSupplier colorSupplier = new ColorSupplier();
         Random random = new Random();
         int randomFigure = random.nextInt(5) + 1;
         switch (randomFigure) {
             case 1:
-                return circle();
+                return new Circle(Math.random() * 10, colorSupplier.getRandomColor());
             case 2:
-                return square();
+                return new Square(Math.random() * 10, colorSupplier.getRandomColor());
             case 3:
-                return rectangle();
+                return new Rectangle(Math.random() * 10,
+                        Math.random() * 10,
+                        colorSupplier.getRandomColor());
             case 4:
-                return rightTriangle();
+                return new RightTriangle(Math.random() * 10,
+                        Math.random() * 10,
+                        colorSupplier.getRandomColor());
             case 5:
-                return isoscelesTrapezoid();
+                return new IsoscelesTrapezoid(Math.random() * 10, colorSupplier.getRandomColor());
             default:
                 break;
         }

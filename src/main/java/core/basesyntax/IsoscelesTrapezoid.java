@@ -1,28 +1,22 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private double height = Math.random() * 10;
+    private double height;
+
+    public IsoscelesTrapezoid(double height, String color) {
+        super(color);
+        this.height = height;
+    }
 
     @Override
     public void draw() {
-        System.out.printf("Figure: %s, area: %.1f sq.units,"
+        System.out.printf("Figure: isosceles trapezoid, area: %.1f sq.units,"
                 + " height: %.1f units, "
-                + "color: %s%n", name(), getArea(), height, color());
+                + "color: %s%n", getArea(), height, getColor());
     }
 
     @Override
     public double getArea() {
         return height * height;
-    }
-
-    @Override
-    public String color() {
-        ColorSupplier colorSupplier = new ColorSupplier();
-        return colorSupplier.getRandomColor();
-    }
-
-    @Override
-    public String name() {
-        return "isosceles trapezoid";
     }
 }
