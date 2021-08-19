@@ -12,7 +12,6 @@ public class FigureSupplier {
         int randomIndexForFigure = rand.nextInt(randomForFigures);
         ColorSupplier colorSupplier = new ColorSupplier();
         String randomColor = colorSupplier.getRandomColor().toString();
-
         switch (randomForFigures) {
             case 0:
                 return new Circle(getRandomLeg(), randomColor);
