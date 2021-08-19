@@ -17,32 +17,51 @@ public class FigureSupplier {
 
         switch (numberOfFigure) {
             case 0:
-                randomFigure = new Square(new ColorSupplier().getRandomColor(),
-                        getRandomNumber(MAX_SIZE_OF_UNITS));
-                break;
+                return createSquare();
             case 1:
-                randomFigure = new Rectangle(new ColorSupplier().getRandomColor(),
-                        getRandomNumber(MAX_SIZE_OF_UNITS),
-                        getRandomNumber(MAX_SIZE_OF_UNITS));
-                break;
+                return createRectangle();
             case 2:
-                randomFigure = new RightTriangle(new ColorSupplier().getRandomColor(),
-                        getRandomNumber(MAX_SIZE_OF_UNITS),
-                        getRandomNumber(MAX_SIZE_OF_UNITS));
-                break;
+                return createRightTriangle();
             case 3:
-                randomFigure = new Circle(new ColorSupplier().getRandomColor(),
-                        getRandomNumber(MAX_SIZE_OF_UNITS));
-                break;
+                return createCircle();
             case 4:
             default:
-                randomFigure = new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(),
-                        getRandomNumber(MAX_SIZE_OF_UNITS),
-                        getRandomNumber(MAX_SIZE_OF_UNITS),
-                        getRandomNumber(MAX_SIZE_OF_UNITS),
-                        getRandomNumber(MAX_SIZE_OF_UNITS));
-                break;
+                return createIsoscelesTrapezoid();
         }
-        return randomFigure;
+    }
+
+    private Figure createRectangle() {
+        int length = random.nextInt(MAX_SIZE_OF_UNITS);
+        int width = random.nextInt(MAX_SIZE_OF_UNITS);
+        String color = new ColorSupplier().getRandomColor();
+        return new Rectangle(color, length, width);
+    }
+
+    private Figure createSquare() {
+        int side = random.nextInt(MAX_SIZE_OF_UNITS);
+        String color = new ColorSupplier().getRandomColor();
+        return new Square(color, side);
+    }
+
+    private Figure createRightTriangle() {
+        int firstLeg = random.nextInt(MAX_SIZE_OF_UNITS);
+        int secondLeg = random.nextInt(MAX_SIZE_OF_UNITS);
+        String color = new ColorSupplier().getRandomColor();
+        return new RightTriangle(color, firstLeg, secondLeg);
+    }
+
+    private Figure createCircle() {
+        int radius = getRandomNumber(MAX_SIZE_OF_UNITS);
+        String color = new ColorSupplier().getRandomColor();
+        return new Circle(color, radius);
+    }
+
+    private Figure createIsoscelesTrapezoid() {
+        int topSide = getRandomNumber(MAX_SIZE_OF_UNITS);
+        int bottomSide = getRandomNumber(MAX_SIZE_OF_UNITS);
+        int side = getRandomNumber(MAX_SIZE_OF_UNITS);
+        int height = getRandomNumber(MAX_SIZE_OF_UNITS);
+        String color = new ColorSupplier().getRandomColor();
+        return new IsoscelesTrapezoid(color, topSide, bottomSide, side, height);
     }
 }
