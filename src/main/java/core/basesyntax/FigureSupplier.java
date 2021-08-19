@@ -9,11 +9,13 @@ import core.basesyntax.model.Square;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int NUMBER_OF_FIGURES = 5;
+    private static final int RANDOM_SIDE = 50;
+
     private final Random random = new Random();
-    private final int randomNumber = random.nextInt(50);
 
     public Figure getRandomFigure() {
-        int someFigure = random.nextInt(5);
+        int someFigure = random.nextInt(NUMBER_OF_FIGURES);
         switch (someFigure) {
             case 0:
                 return newCircle();
@@ -30,26 +32,26 @@ public class FigureSupplier {
     }
 
     private Circle newCircle() {
-        return new Circle(random.nextInt(randomNumber));
+        return new Circle(random.nextInt(RANDOM_SIDE));
     }
 
     private Rectangle newRectangle() {
-        return new Rectangle(random.nextInt(randomNumber),
-                random.nextInt(randomNumber));
+        return new Rectangle(random.nextInt(RANDOM_SIDE),
+                random.nextInt(RANDOM_SIDE));
     }
 
     private RightTriangle newRightTriangle() {
-        return new RightTriangle(random.nextInt(randomNumber),
-                random.nextInt(randomNumber));
+        return new RightTriangle(random.nextInt(RANDOM_SIDE),
+                random.nextInt(RANDOM_SIDE));
     }
 
     private Square newSquare() {
-        return new Square(random.nextInt(randomNumber));
+        return new Square(random.nextInt(RANDOM_SIDE));
     }
 
     private IsoscelesTrapezoid newIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(random.nextInt(randomNumber),
-                random.nextInt(randomNumber),
-                random.nextInt(randomNumber));
+        return new IsoscelesTrapezoid(random.nextInt(RANDOM_SIDE),
+                random.nextInt(RANDOM_SIDE),
+                random.nextInt(RANDOM_SIDE));
     }
 }
