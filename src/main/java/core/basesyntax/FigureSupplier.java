@@ -1,11 +1,13 @@
 package core.basesyntax;
 
 public class FigureSupplier {
+    private static final int FIGURE_SIZE = 100;
+    private static final int FIGURE_COUNT = 5;
 
     public Figure getRandomFigure() {
-        String figureColor = new ColorSupplie().getRandomColor();
-        int size = (int) (Math.random() * 100);
-        switch ((int) (Math.random() * 5)) {
+        String figureColor = new ColorSupplier().getRandomColor();
+        int size = (int) (Math.random() * FIGURE_SIZE);
+        switch ((int) (Math.random() * FIGURE_COUNT)) {
             case 0:
                 return new Circle(figureColor, size);
             case 1:
