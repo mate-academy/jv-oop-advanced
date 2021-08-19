@@ -27,14 +27,14 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double obtainArea() {
+    public double getArea() {
         return firstSide * secondSide;
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         StringBuilder squareStringBuilder = new StringBuilder();
-        String area = String.format("%.2f", obtainArea()).replace(',', '.');
+        String area = String.format("%.2f", getArea()).replace(',', '.');
         squareStringBuilder.append("Figure: rectangle, color: ").append(getFigureColor())
                 .append(", firstSide: ").append(firstSide).append(" units")
                 .append(", secondSide: ").append(secondSide).append(" units")

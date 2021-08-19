@@ -12,7 +12,7 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < figures.length; i++) {
             figures[i] = figureSupplier.getRandomFigure();
-            figures[i].drawFigure();
+            figures[i].draw();
         }
     }
 }

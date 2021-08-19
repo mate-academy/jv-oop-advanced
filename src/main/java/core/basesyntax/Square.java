@@ -17,14 +17,14 @@ public class Square extends Figure {
     }
 
     @Override
-    public double obtainArea() {
+    public double getArea() {
         return side * side;
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         StringBuilder squareStringBuilder = new StringBuilder();
-        String area = String.format("%.2f", obtainArea()).replace(',', '.');
+        String area = String.format("%.2f", getArea()).replace(',', '.');
         squareStringBuilder.append("Figure: square, color: ").append(getFigureColor())
                 .append(", side: ").append(side).append(" units")
                 .append(", area: ").append(area).append(" sq.units");

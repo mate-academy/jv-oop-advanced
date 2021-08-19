@@ -37,14 +37,14 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double obtainArea() {
+    public double getArea() {
         return (firstBase + secondBase) / 2 * height;
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         StringBuilder squareStringBuilder = new StringBuilder();
-        String area = String.format("%.2f", obtainArea()).replace(',', '.');
+        String area = String.format("%.2f", this.getArea()).replace(',', '.');
         squareStringBuilder.append("Figure: isosceles trapezoid, color: ").append(getFigureColor())
                 .append(", firstBase: ").append(firstBase).append(" units")
                 .append(", secondBase: ").append(secondBase).append(" units")

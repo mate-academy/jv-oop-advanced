@@ -6,6 +6,11 @@ public class FigureSupplier {
     public static final int MAX_NUMBER_OF_FIGURE = 5;
     public static final int SIZE_OF_UNITS = 100;
     private Random random = new Random();
+    private ColorSupplier colorSupplier;
+
+    {
+        colorSupplier = new ColorSupplier();
+    }
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(MAX_NUMBER_OF_FIGURE);

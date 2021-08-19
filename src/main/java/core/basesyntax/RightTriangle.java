@@ -27,14 +27,14 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double obtainArea() {
+    public double getArea() {
         return firstLeg * secondLeg / 2;
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         StringBuilder squareStringBuilder = new StringBuilder();
-        String area = String.format("%.2f", obtainArea()).replace(',', '.');
+        String area = String.format("%.2f", getArea()).replace(',', '.');
         squareStringBuilder.append("Figure: right triangle, color: ").append(getFigureColor())
                 .append(", firstLeg: ").append(firstLeg).append(" units")
                 .append(", secondLeg: ").append(secondLeg).append(" units")
