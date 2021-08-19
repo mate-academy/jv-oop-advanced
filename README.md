@@ -4,10 +4,10 @@ __Solve the task using OOP principles__
 
 Task:
 
-There are some figure of the following types: square, rectangle, right triangle, circle, isosceles trapezoid.
+There are some figures of the following types: square, rectangle, right triangle, circle, isosceles trapezoid.
 
 All figure have 
-- **state** (all figure have `color`, but each figure type can also have one or several unique properties (`radius` for circle, `firstLeg` and `secondLeg` for right triangle, and so on).
+- **state** (all figures have `color`, but each figure type can also have one or several unique properties (`radius` for circle, `firstLeg` and `secondLeg` for right triangle, and so on).
 - **behaviour** - we can obtain the area of any figure and are able to draw it. To 'draw' means to print out all information about a figure using `System.out.println()`. 
    
 Think where you should declare these fields and methods: top level class / interface / bottom level classes.  
