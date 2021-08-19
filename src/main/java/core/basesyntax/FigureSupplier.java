@@ -3,8 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public final static int NUMBER_OF_FIGURES = 5;
-    public final static int MAX_SIZE_OF_UNITS = 10;
+    public static final int NUMBER_OF_FIGURES = 5;
+    public static final int MAX_SIZE_OF_UNITS = 10;
     private Random random = new Random();
 
     public Figure getRandomFigure() {
@@ -33,10 +33,10 @@ public class FigureSupplier {
             case 4:
             default:
                 randomFigure = new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(),
-                        random.nextInt(MAX_SIZE_OF_UNITS)+ 1,
-                        random.nextInt(MAX_SIZE_OF_UNITS)+ 1,
-                        random.nextInt(MAX_SIZE_OF_UNITS)+ 1,
-                        random.nextInt(MAX_SIZE_OF_UNITS)+ 1);
+                        random.nextInt(MAX_SIZE_OF_UNITS) + 1,
+                        random.nextInt(MAX_SIZE_OF_UNITS) + 1,
+                        random.nextInt(MAX_SIZE_OF_UNITS) + 1,
+                        random.nextInt(MAX_SIZE_OF_UNITS) + 1);
                 break;
         }
         return randomFigure;

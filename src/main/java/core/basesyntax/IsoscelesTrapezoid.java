@@ -11,8 +11,9 @@ public class IsoscelesTrapezoid extends Figure {
         this.topSide = topSide;
         this.bottomSide = bottomSide;
         this.side = side;
-        this.height =height;
+        this.height = height;
     }
+
     public void setHeight(int height) {
         this.height = height;
     }
@@ -52,8 +53,11 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: isosceles trapezoid, area " + getArea() + " sq.units," + "top side: "
-                + getTopSide() + " units," + " bottom side: " + getBottomSide() +" units," + " side:"
-                + getSide() + ", height: " + getHeight() + " color: " + getColor());
+        System.out.println("Figure: isosceles trapezoid, area "
+                + getArea() + " sq.units," + "top side: "
+                + getTopSide() + " units," + " bottom side: "
+                + getBottomSide() + " units," + " side:"
+                + getSide() + ", height: " + getHeight()
+                + " color: " + getColor());
     }
 }

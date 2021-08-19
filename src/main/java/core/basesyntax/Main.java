@@ -3,8 +3,9 @@ package core.basesyntax;
 import java.util.Random;
 
 public class Main {
+    static final int SIZE_OF_ARRAY = 5;
+
     public static void main(String[] args) {
-        final int SIZE_OF_ARRAY = 5;
         Random random = new Random();
 
         int arraySize = random.nextInt(SIZE_OF_ARRAY) + 1;
