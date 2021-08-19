@@ -1,11 +1,6 @@
 public class Circle extends Figure {
     private double radius;
 
-    public Circle(String name, String color) {
-        super(name, color);
-        this.radius = Math.random();
-    }
-
     public Circle(String name, String color, double radius) {
         super(name, color);
         this.radius = radius;

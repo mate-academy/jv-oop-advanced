@@ -1,5 +1,3 @@
-public interface FigureInterface {
+public interface InfoDrawer {
     abstract void draw();
-
-    abstract double areaValue();
 }

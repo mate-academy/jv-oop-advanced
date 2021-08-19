@@ -1,4 +1,4 @@
-public abstract class Figure implements FigureInterface {
+public abstract class Figure implements InfoDrawer, AreaCalculator {
     private String name;
     private String color;
 
