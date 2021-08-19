@@ -1,16 +1,15 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private static final int MAX_SIDE = 30;
     private int high;
     private int upperBase;
     private int bottomBase;
 
-    public IsoscelesTrapezoid() {
-        high = this.getRandom().nextInt(MAX_SIDE - 5);
-        upperBase = this.getRandom().nextInt(MAX_SIDE - 5);
-        bottomBase = this.getRandom().nextInt(MAX_SIDE);
-        super.setColor();
+    public IsoscelesTrapezoid(int high, int upperBase, int bottomBase, String color) {
+        super(color);
+        this.high = high;
+        this.upperBase = upperBase;
+        this.bottomBase = bottomBase;
     }
 
     public int getHigh() {

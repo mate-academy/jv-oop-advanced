@@ -1,12 +1,11 @@
 package core.basesyntax;
 
 public class RigthTriangle extends Figure {
-    private static final int MAX_SIDE = 15;
     private int side;
 
-    public RigthTriangle() {
-        side = this.getRandom().nextInt(MAX_SIDE);
-        this.setColor();
+    public RigthTriangle(int side, String color) {
+        super(color);
+        this.side = side;
     }
 
     public int getSide() {

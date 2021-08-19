@@ -1,12 +1,11 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private static final int MAX_RADIUS = 15;
     private int radius;
 
-    public Circle() {
-        radius = this.getRandom().nextInt(MAX_RADIUS);
-        this.setColor();
+    public Circle(int radius, String color) {
+        super(color);
+        this.radius = radius;
     }
 
     public int getRadius() {
@@ -15,7 +14,7 @@ public class Circle extends Figure {
 
     @Override
     public Double getArea() {
-        return Math.PI * this.radius * this.radius;
+        return Math.PI * radius * radius;
     }
 
     @Override

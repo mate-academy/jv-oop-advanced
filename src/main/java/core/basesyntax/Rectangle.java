@@ -1,14 +1,13 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private static final int MAX_SIDE = 20;
     private int sideA;
     private int sideB;
 
-    public Rectangle() {
-        sideA = this.getRandom().nextInt(MAX_SIDE);
-        sideB = this.getRandom().nextInt(MAX_SIDE);
-        this.setColor();
+    public Rectangle(int sideA, int sideB, String color) {
+        super(color);
+        this.sideA = sideA;
+        this.sideB = sideB;
     }
 
     public int getSideA() {

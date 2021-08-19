@@ -1,12 +1,11 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    public static final int MAX_SIDE = 15;
     private int side;
 
-    public Square() {
-        this.side = this.getRandom().nextInt(MAX_SIDE);
-        this.setColor();
+    public Square(int side, String color) {
+        super(color);
+        this.side = side;
     }
 
     public int getSide() {
