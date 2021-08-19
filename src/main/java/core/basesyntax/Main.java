@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Randomizer randomizer = new Randomizer();
         FigureSupplier figureSupplier = new FigureSupplier();
-        Figure[] figures = new Figure[randomizer.getRandomNumber(1, 5)];
+        Figure[] figures = new Figure[randomizer.getRandomNumber(Randomizer.MIN, Randomizer.MAX)];
         for (int i = 0; i < figures.length; i++) {
             figures[i] = figureSupplier.getRandomFigure();
         }

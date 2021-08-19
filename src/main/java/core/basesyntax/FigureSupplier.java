@@ -5,25 +5,29 @@ public class FigureSupplier {
         ColorSupplier colorSupplier = new ColorSupplier();
         Randomizer randomizer = new Randomizer();
         Figure figure;
-        switch (randomizer.getRandomNumber(1, 5)) {
-            case 1: figure = new RightTriangle(randomizer.getRandomNumber(1, 5),
-                    randomizer.getRandomNumber(1, 5));
+        switch (randomizer.getRandomNumber(Randomizer.MIN, Randomizer.MAX)) {
+            case 1:
+                figure = new RightTriangle(
+                randomizer.getRandomNumber(Randomizer.MIN, Randomizer.MAX),
+                    randomizer.getRandomNumber(Randomizer.MIN, Randomizer.MAX));
                 figure.setColor(colorSupplier.getRandomColor());
                 return figure;
-            case 2: figure = new Circle(randomizer.getRandomNumber(1, 5));
+            case 2: figure = new Circle(randomizer.getRandomNumber(Randomizer.MIN, Randomizer.MAX));
                 figure.setColor(colorSupplier.getRandomColor());
                 return figure;
-            case 3:
-                figure = new Square(randomizer.getRandomNumber(1, 5));
+            case 3: figure = new Square(randomizer.getRandomNumber(Randomizer.MIN, Randomizer.MAX));
                 figure.setColor(colorSupplier.getRandomColor());
                 return figure;
-            case 4: figure = new IsoscelesTrapezoid(randomizer.getRandomNumber(1, 5),
-                    randomizer.getRandomNumber(1, 5), randomizer.getRandomNumber(1, 5));
+            case 4:
+                figure = new IsoscelesTrapezoid(
+                randomizer.getRandomNumber(Randomizer.MIN, Randomizer.MAX),
+                    randomizer.getRandomNumber(Randomizer.MIN, Randomizer.MAX),
+                    randomizer.getRandomNumber(Randomizer.MIN, Randomizer.MAX));
                 figure.setColor(colorSupplier.getRandomColor());
                 return figure;
             default:
-                figure = new Rectangle(randomizer.getRandomNumber(1, 5),
-                        randomizer.getRandomNumber(1, 5));
+                figure = new Rectangle(randomizer.getRandomNumber(Randomizer.MIN, Randomizer.MAX),
+                        randomizer.getRandomNumber(Randomizer.MIN, Randomizer.MAX));
                 figure.setColor(colorSupplier.getRandomColor());
                 return figure;
         }
