@@ -25,7 +25,9 @@ public class FigureSupplier {
 
     private IsoscelesTrapezoid isoscelesTrapezoid() {
         return new IsoscelesTrapezoid(
-                random.nextInt(RANDOM_RANGE), random.nextInt(RANDOM_RANGE), random.nextInt(RANDOM_RANGE));
+                random.nextInt(RANDOM_RANGE),
+                random.nextInt(RANDOM_RANGE),
+                random.nextInt(RANDOM_RANGE));
     }
 
     private Circle circle() {
@@ -34,11 +36,13 @@ public class FigureSupplier {
 
     private RightTriangle rightTriangle() {
         return new RightTriangle(
-                random.nextInt(RANDOM_RANGE), random.nextInt(RANDOM_RANGE));
+                random.nextInt(RANDOM_RANGE),
+                random.nextInt(RANDOM_RANGE));
     }
 
     private Rectangle rectangle() {
-        return new Rectangle(random.nextInt(RANDOM_RANGE), random.nextInt(RANDOM_RANGE));
+        return new Rectangle(random.nextInt(RANDOM_RANGE),
+                random.nextInt(RANDOM_RANGE));
     }
 
     private Square square() {
