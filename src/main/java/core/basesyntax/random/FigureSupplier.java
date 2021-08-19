@@ -37,7 +37,7 @@ public class FigureSupplier {
         Circle circle = new Circle();
         circle.setRadius(getRandomValue(MAX_VALUE));
         circle.setColor(color);
-        return  circle;
+        return circle;
     }
 
     private IsoscelesTrapezoid isoscelesTrapezoid() {
@@ -46,7 +46,7 @@ public class FigureSupplier {
         isoscelesTrapezoid.setRightSide(getRandomValue(MAX_VALUE));
         isoscelesTrapezoid.setHeight(getRandomValue(MAX_VALUE));
         isoscelesTrapezoid.setColor(color);
-        return  isoscelesTrapezoid;
+        return isoscelesTrapezoid;
     }
 
     private Rectangle rectangle() {
