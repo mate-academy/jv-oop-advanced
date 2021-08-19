@@ -1,14 +1,14 @@
 package core.basesyntax;
 
-public abstract class Figure implements AreaCalculator, DrowFigure {
+public abstract class Figure implements AreaCalculator, Drowable {
     @Override
     public double getArea() {
         return 0;
     }
 
     @Override
-    public String drow() {
-        return null;
+    public void drow() {
+
     }
 
 }

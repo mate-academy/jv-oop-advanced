@@ -2,16 +2,25 @@ package core.basesyntax;
 
 public class RightTriangle extends Figure {
     private ColorSupplier colorSupplier = new ColorSupplier();
-    private String name;
-    private String color;
-    private int firsLeg;
-    private int secondLeg;
+    private String name = "right triangle";
+    private String color = colorSupplier.getRandomColor();
+    private int firsLeg = (int)(Math.random() * 100);
+    private int secondLeg = (int)(Math.random() * 100);
 
-    public RightTriangle() {
-        this.name = "right triangle";
-        this.color = colorSupplier.getRandomColor();
-        this.firsLeg = (int)(Math.random() * 100);
-        this.secondLeg = (int)(Math.random() * 100);
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public int getFirsLeg() {
@@ -36,9 +45,9 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String drow() {
-        return "Figure: " + name + ", area: " + getArea() + " sq.units, "
+    public void drow() {
+        System.out.println("Figure: " + name + ", area: " + getArea() + " sq.units, "
                     + "firstLeg: " + firsLeg + " units, " + "secondLeg: "
-                    + secondLeg + " units, " + "color: " + color;
+                    + secondLeg + " units, " + "color: " + color);
     }
 }

@@ -2,16 +2,25 @@ package core.basesyntax;
 
 public class Rectangle extends Figure {
     private ColorSupplier colorSupplier = new ColorSupplier();
-    private String name;
-    private String color;
-    private int length;
-    private int width;
+    private String name = "rectangle";
+    private String color = colorSupplier.getRandomColor();
+    private int length = (int)(Math.random() * 100);
+    private int width = (int)(Math.random() * 100);
 
-    public Rectangle() {
-        this.name = "rectangle";
-        this.color = colorSupplier.getRandomColor();
-        this.length = (int)(Math.random() * 100);
-        this.width = (int)(Math.random() * 100);
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public int getLength() {
@@ -36,9 +45,9 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String drow() {
-        return "Figure: " + name + ", area: " + getArea() + " sq.units, "
+    public void drow() {
+        System.out.println("Figure: " + name + ", area: " + getArea() + " sq.units, "
                     + "length: " + length + " units, " + "width: "
-                    + width + " units, " + "color: " + color;
+                    + width + " units, " + "color: " + color);
     }
 }
