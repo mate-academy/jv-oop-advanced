@@ -1,14 +1,16 @@
 package core.basesyntax.figuretype;
 
-import core.basesyntax.figure.Area;
-import core.basesyntax.figure.Draw;
 import core.basesyntax.figure.Figure;
 import java.util.Locale;
 
-public class IsoscelesTrapezoid extends Figure implements Area, Draw {
+public class IsoscelesTrapezoid extends Figure {
     private int leftSide;
     private int rightSide;
     private int height;
+
+    public IsoscelesTrapezoid() {
+        setName("isosceles trapezoid");
+    }
 
     @Override
     public String getArea() {
@@ -17,12 +19,12 @@ public class IsoscelesTrapezoid extends Figure implements Area, Draw {
 
     @Override
     public void toDraw() {
-        StringBuilder builder = new StringBuilder();
-        builder.append("Figure: ").append(getName()).append(", area: ")
+        StringBuilder informationBuilder = new StringBuilder();
+        informationBuilder.append("Figure: ").append(getName()).append(", area: ")
                 .append(getArea()).append(" sq.units, left side: ").append(getLeftSide())
                 .append(" units, right side: ").append(getRightSide()).append(" units, height: ")
                 .append(getHeight()).append(" units, color: ").append(getColor());
-        System.out.println(builder.toString());
+        System.out.println(informationBuilder.toString());
     }
 
     public int getLeftSide() {

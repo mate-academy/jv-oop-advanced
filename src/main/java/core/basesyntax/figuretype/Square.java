@@ -1,12 +1,14 @@
 package core.basesyntax.figuretype;
 
-import core.basesyntax.figure.Area;
-import core.basesyntax.figure.Draw;
 import core.basesyntax.figure.Figure;
 import java.util.Locale;
 
-public class Square extends Figure implements Area, Draw {
+public class Square extends Figure {
     private int side;
+
+    public Square() {
+        setName("square");
+    }
 
     @Override
     public String getArea() {
@@ -15,11 +17,11 @@ public class Square extends Figure implements Area, Draw {
 
     @Override
     public void toDraw() {
-        StringBuilder builder = new StringBuilder();
-        builder.append("Figure: ").append(getName()).append(", area: ")
+        StringBuilder informationBuilder = new StringBuilder();
+        informationBuilder.append("Figure: ").append(getName()).append(", area: ")
                 .append(getArea()).append(" sq.units, side: ")
                 .append(getSide()).append(" units, color: ").append(getColor());
-        System.out.println(builder.toString());
+        System.out.println(informationBuilder.toString());
     }
 
     public int getSide() {
