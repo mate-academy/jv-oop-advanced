@@ -7,6 +7,7 @@ public class RightTriangle extends Figure {
         this.side = side;
     }
 
+    @Override
     public double getArea() {
         return (side * side * Math.sqrt(3)) / 4;
     }
