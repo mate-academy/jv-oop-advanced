@@ -1,13 +1,9 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements AreaCalculator, Draw {
+public class IsoscelesTrapezoid extends Figure {
     private int parallelSideA;
     private int parallelSideB;
     private int height;
-
-    public IsoscelesTrapezoid() {
-
-    }
 
     public IsoscelesTrapezoid(int parallelSideA, int parallelSideB, int height) {
         this.parallelSideA = parallelSideA;
@@ -29,7 +25,7 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator, Draw {
 
     @Override
     public int getArea() {
-        return ((this.parallelSideA + this.parallelSideB) / 2) * this.height;
+        return ((parallelSideA + parallelSideB) / 2) * height;
     }
 
     @Override

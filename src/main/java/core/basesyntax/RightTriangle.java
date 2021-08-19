@@ -1,12 +1,8 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements AreaCalculator, Draw {
+public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
-
-    public RightTriangle() {
-
-    }
 
     public RightTriangle(int firstLeg, int secondLeg) {
         this.firstLeg = firstLeg;
@@ -23,7 +19,7 @@ public class RightTriangle extends Figure implements AreaCalculator, Draw {
 
     @Override
     public int getArea() {
-        return (this.firstLeg * this.secondLeg) / 2;
+        return (firstLeg * secondLeg) / 2;
     }
 
     @Override

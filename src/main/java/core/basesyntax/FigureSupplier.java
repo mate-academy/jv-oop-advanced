@@ -2,6 +2,7 @@ package core.basesyntax;
 
 public class FigureSupplier extends ColorSupplier {
     public Figure getRandomFigure() {
+        Randomizer randomizer = new Randomizer();
         Figure figure;
         switch (randomizer.getRandomNumber()) {
             case 1: figure = new RightTriangle(randomizer.getRandomNumber(),

@@ -2,14 +2,14 @@ package core.basesyntax;
 
 public class Main {
     public static void main(String[] args) {
-        Figure figurea = new Square();
         Randomizer randomizer = new Randomizer();
-        Figure[] figure = new Figure[randomizer.getRandomNumber()];
-        for (int i = 0; i < figure.length; i++) {
-            figure[i] = figurea.getRandomFigure();
+        FigureSupplier figureSupplier = new FigureSupplier();
+        Figure[] figures = new Figure[randomizer.getRandomNumber()];
+        for (int i = 0; i < figures.length; i++) {
+            figures[i] = figureSupplier.getRandomFigure();
         }
-        for (Figure figures : figure) {
-            figures.draw();
+        for (Figure figure : figures) {
+            figure.draw();
         }
     }
 }

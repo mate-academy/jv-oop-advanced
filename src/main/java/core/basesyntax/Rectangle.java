@@ -1,12 +1,8 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements AreaCalculator, Draw {
+public class Rectangle extends Figure {
     private int width;
     private int height;
-
-    public Rectangle() {
-
-    }
 
     public Rectangle(int width, int height) {
         this.width = width;
@@ -23,7 +19,7 @@ public class Rectangle extends Figure implements AreaCalculator, Draw {
 
     @Override
     public int getArea() {
-        return this.width * this.height;
+        return width * height;
     }
 
     @Override

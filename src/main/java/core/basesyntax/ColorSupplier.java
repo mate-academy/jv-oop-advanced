@@ -1,11 +1,7 @@
 package core.basesyntax;
 
 public class ColorSupplier {
-    protected final Randomizer randomizer;
-
-    public ColorSupplier() {
-        this.randomizer = new Randomizer();
-    }
+    private final Randomizer randomizer = new Randomizer();
 
     public String getRandomColor() {
         switch (randomizer.getRandomNumber()) {
