@@ -10,9 +10,9 @@ public class Circle extends Figure {
 
     @Override
     public String drawFigure() {
-        return "Figure: " + this.getName()
-                + ", area: " + this.getArea()
-                + "color: " + this.getColor();
+        return "Figure: " + getName()
+                + ", area: " + getArea()
+                + "color: " + getColor();
     }
 
     @Override
