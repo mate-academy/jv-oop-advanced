@@ -4,35 +4,34 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_NUMBERS = 5;
+    private static final int COEFICIENT_RANDOM = 10;
 
     public Figure getRandomFigure() {
         Figure figure;
-
-        switch (new Random().nextInt(MAX_NUMBERS) + 1) {
-            case 1:
-            default:
+        switch (new Random().nextInt(MAX_NUMBERS)) {
+            case 0:
                 figure = new Square(new ColorSupplier().getRandomColor(),
-                                    new Random().nextInt(10));
+                                    new Random().nextInt(COEFICIENT_RANDOM));
+                break;
+            case 1:
+                figure = new Rectangle(new ColorSupplier().getRandomColor(),
+                                       new Random().nextInt(COEFICIENT_RANDOM),
+                                       new Random().nextInt(COEFICIENT_RANDOM));
                 break;
             case 2:
-                figure = new Rectangle(new ColorSupplier().getRandomColor(),
-                                       new Random().nextInt(10),
-                                       new Random().nextInt(10));
+                figure = new RightTriangle(new ColorSupplier().getRandomColor(),
+                                           new Random().nextInt(COEFICIENT_RANDOM),
+                                           new Random().nextInt(COEFICIENT_RANDOM));
                 break;
             case 3:
-                figure = new RightTriangle(new ColorSupplier().getRandomColor(),
-                                           new Random().nextInt(10),
-                                           new Random().nextInt(10));
-                break;
-            case 4:
                 figure = new Circle(new ColorSupplier().getRandomColor(),
-                                    new Random().nextInt(10));
+                                    new Random().nextInt(COEFICIENT_RANDOM));
                 break;
-            case 5:
+            default:
                 figure = new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(),
-                                                new Random().nextInt(7),
-                                                new Random().nextInt(13),
-                                                new Random().nextInt(10));
+                                                new Random().nextInt(COEFICIENT_RANDOM),
+                                                new Random().nextInt(COEFICIENT_RANDOM),
+                                                new Random().nextInt(COEFICIENT_RANDOM));
                 break;
         }
         return figure;
