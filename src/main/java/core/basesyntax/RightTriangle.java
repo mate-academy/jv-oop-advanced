@@ -10,11 +10,21 @@ public class RightTriangle extends Figure {
         this.secondSide = secondSide;
     }
 
+    public int getFirstSide() {
+        return firstSide;
+    }
+
+    public int getSecondSide() {
+        return secondSide;
+    }
+
     @Override
     public String drawFigure() {
         return "Figure: " + getName()
                 + ", area: " + getArea()
-                + "color: " + getColor();
+                + "color: " + getColor()
+                + "first side: " + getFirstSide()
+                + "second side: " + getSecondSide();
     }
 
     @Override

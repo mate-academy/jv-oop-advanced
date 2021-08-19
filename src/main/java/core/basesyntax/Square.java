@@ -8,11 +8,16 @@ public class Square extends Figure {
         this.side = side;
     }
 
+    public int getSide() {
+        return side;
+    }
+
     @Override
     public String drawFigure() {
         return "Figure: " + getName()
                 + ", area: " + getArea()
-                + "color: " + getColor();
+                + "color: " + getColor()
+                + "side: " + getSide();
     }
 
     @Override

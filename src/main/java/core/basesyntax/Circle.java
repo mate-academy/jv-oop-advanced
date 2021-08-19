@@ -8,11 +8,16 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
+    public double getRadius() {
+        return radius;
+    }
+
     @Override
     public String drawFigure() {
         return "Figure: " + getName()
                 + ", area: " + getArea()
-                + "color: " + getColor();
+                + "color: " + getColor()
+                + "radius: " + getRadius();
     }
 
     @Override
