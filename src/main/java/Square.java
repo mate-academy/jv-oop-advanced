@@ -1,29 +1,27 @@
-public class Square extends Figure implements FigureInterface {
+public class Square extends Figure {
     private double side;
 
-    public Square() {
-    }
-
-    public Square(String name) {
-        super(name);
-        this.side = Math.random();
+    public Square(String name, String color, double side) {
+        super(name, color);
+        this.side = side;
     }
 
     @Override
     public void draw() {
+        System.out.println(toString());
 
     }
 
     @Override
     public double areaValue() {
-        return this.side * this.side;
+        return side * side;
     }
 
     @Override
     public String toString() {
         return "Square{"
-                + "name='" + this.getName() + '\''
-                + ", area=" + this.getArea() + ", color='" + this.getColor() + '\''
+                + "name='" + getName() + '\''
+                + ", area=" + areaValue() + ", color='" + getColor() + '\''
                 + ", side=" + side
                 + '}';
     }

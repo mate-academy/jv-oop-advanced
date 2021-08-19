@@ -1,15 +1,10 @@
 public abstract class Figure implements FigureInterface {
-    protected double area;
     private String name;
     private String color;
 
-    public Figure() {
-    }
-
-    public Figure(String name) {
+    public Figure(String name, String color) {
         this.name = name;
-        ColorSupplier colorSupplier = new ColorSupplier();
-        this.color = colorSupplier.getRandomColor();
+        this.color = color;
     }
 
     public String getName() {
@@ -28,19 +23,11 @@ public abstract class Figure implements FigureInterface {
         this.color = color;
     }
 
-    public double getArea() {
-        return area;
-    }
-
-    public void setArea(double area) {
-        this.area = area;
-    }
-
-    @Override
+    /*@Override
     public String toString() {
         return "Figure{"
                 + "name='" + name + '\''
                 + ", color='" + color + '\''
                 + '}';
-    }
+    }*/
 }

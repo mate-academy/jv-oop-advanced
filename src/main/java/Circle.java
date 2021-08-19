@@ -1,10 +1,14 @@
-public class Circle extends Figure implements FigureInterface {
+public class Circle extends Figure {
     private double radius;
 
-    public Circle(String name) {
-        super(name);
+    public Circle(String name, String color) {
+        super(name, color);
         this.radius = Math.random();
-        this.area = areaValue();
+    }
+
+    public Circle(String name, String color, double radius) {
+        super(name, color);
+        this.radius = radius;
     }
 
     public void draw() {
@@ -13,7 +17,7 @@ public class Circle extends Figure implements FigureInterface {
 
     @Override
     public double areaValue() {
-        return this.getRadius() * this.getRadius() * Math.PI;
+        return getRadius() * getRadius() * Math.PI;
     }
 
     public double getRadius() {
@@ -27,10 +31,10 @@ public class Circle extends Figure implements FigureInterface {
     @Override
     public String toString() {
         return "Circle{"
-                + "name='" + this.getName() + '\''
-                + ", area=" + this.getArea() + '\''
+                + "name='" + getName() + '\''
+                + ", area=" + areaValue() + '\''
                 + ", radius=" + radius + '\''
-                + ", color='" + this.getColor() + '\''
+                + ", color='" + getColor() + '\''
                 + '}';
     }
 }

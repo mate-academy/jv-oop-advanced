@@ -1,12 +1,11 @@
-public class Rectangle extends Figure implements FigureInterface {
+public class Rectangle extends Figure {
     private double width;
     private double height;
 
-    public Rectangle(String name) {
-        super(name);
-        this.width = Math.random();
-        this.height = Math.random();
-
+    public Rectangle(String name, String color, double width, double height) {
+        super(name, color);
+        this.width = width;
+        this.height = height;
     }
 
     @Override
@@ -22,9 +21,9 @@ public class Rectangle extends Figure implements FigureInterface {
     @Override
     public String toString() {
         return "Rectangle{"
-                + "name='" + this.getName() + '\''
-                + ", area=" + this.getArea() + '\''
-                + ", color='" + this.getColor() + '\''
+                + "name='" + getName() + '\''
+                + ", area=" + areaValue() + '\''
+                + ", color='" + getColor() + '\''
                 + ", width=" + width
                 + ", height=" + height
                 + '}';

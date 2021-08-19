@@ -1,14 +1,13 @@
-public class Trapezoid extends Figure implements FigureInterface {
+public class Trapezoid extends Figure {
     private double height;
     private double baseUp;
     private double baseDown;
 
-    public Trapezoid(String name) {
-        super(name);
-        this.height = Math.random();
-        this.baseUp = Math.random();
-        this.baseDown = Math.random();
-        this.area = areaValue();
+    public Trapezoid(String name, String color, double height, double baseUp, double baseDown) {
+        super(name, color);
+        this.height = height;
+        this.baseUp = baseUp;
+        this.baseDown = baseDown;
     }
 
     @Override
@@ -24,9 +23,9 @@ public class Trapezoid extends Figure implements FigureInterface {
     @Override
     public String toString() {
         return "Trapezoid{"
-                + "name='" + this.getName() + '\''
-                + ", area=" + this.getArea()
-                + ", color='" + this.getColor() + '\''
+                + "name='" + getName() + '\''
+                + ", area=" + areaValue()
+                + ", color='" + getColor() + '\''
                 + ", height=" + height
                 + ", baseUp=" + baseUp
                 + ", baseDown=" + baseDown

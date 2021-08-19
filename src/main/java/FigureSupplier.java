@@ -1,23 +1,20 @@
-import java.util.Random;
-
 public class FigureSupplier {
     public Figure getRandomFigure() {
-        String[] nameFigure = new String[]{"circle", "square", "rectangle",
-                "right triangle", "isosceles trapezoid"};
-        int randomShape = new Random().nextInt(nameFigure.length);
-        switch (nameFigure[randomShape]) {
-            case "circle":
-                return new Circle(nameFigure[randomShape]);
-            case "square":
-                return new Square(nameFigure[randomShape]);
-            case "rectangle":
-                return new Rectangle(nameFigure[randomShape]);
-            case "right triangle":
-                return new Triangle(nameFigure[randomShape]);
-            case "isosceles trapezoid":
-                return new Trapezoid(nameFigure[randomShape]);
+        ColorSupplier colorSupplier = new ColorSupplier();
+        String color = colorSupplier.getRandomColor();
+        int typeFigure = (int) (Math.random() * (5 + 1) + 1);
+        switch (typeFigure) {
+            case 1:
+                return new Circle("circle", color, Math.random());
+            case 2:
+                return new Square("square", color, Math.random());
+            case 3:
+                return new Rectangle("rectangle", color, Math.random(), Math.random());
+            case 4:
+                return new Triangle("right triangle", color, Math.random(), Math.random());
             default:
-                return null;
+                return new Trapezoid("isosceles trapezoid", color, Math.random(), Math.random(),
+                        Math.random());
         }
     }
 }
