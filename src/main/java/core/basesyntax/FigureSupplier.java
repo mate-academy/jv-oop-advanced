@@ -1,37 +1,75 @@
 package core.basesyntax;
 
-//import java.util.Random;
+import java.util.Random;
 
 public class FigureSupplier {
+    private static final int FIGURE_COUNT = 4;
+    private static final int FIGURE_PARAMETER = 20;
+    private Random random = new Random();
     private String figureType;
 
     public String getFigureType() {
         return figureType;
     }
 
-    //public static final int FIGURE_COUNT = 5;
-    //public static final int FIGURE_PARAMETER = 20;
-    //private Random random = new Random();
+    private int getRandom5() {
+        int figureNumber = random.nextInt(FIGURE_COUNT) + 1;
+        return figureNumber;
+    }
 
-    public ScaleFigure getRandomFigure() {
-        //int figureNumber = random.nextInt(FIGURE_COUNT);
-        //int figureParameter = random.nextInt(FIGURE_PARAMETER);
+    private int getRandom20() {
+        int figureParameter = random.nextInt(FIGURE_PARAMETER) + 1;
+        return figureParameter;
+    }
+
+    private Circle generateCircle() {
         ColorSupplier newColor = new ColorSupplier();
-        switch ((int) (Math.random() * 5)) {
+        Circle outCircle = new Circle(getRandom20(), newColor.getRandomColor());
+        return outCircle;
+    }
+
+    private IsoscelesTrapezoid generateTrapezoid() {
+        ColorSupplier newColor = new ColorSupplier();
+        IsoscelesTrapezoid outFigure =
+                new IsoscelesTrapezoid(getRandom20(), getRandom20(),
+                        getRandom20(), newColor.getRandomColor());
+        return outFigure;
+    }
+
+    private Square generateSquare() {
+        ColorSupplier newColor = new ColorSupplier();
+        Square outFigure =
+                new Square(getRandom20(), newColor.getRandomColor());
+        return outFigure;
+    }
+
+    private RightTriangle generateRightTriangle() {
+        ColorSupplier newColor = new ColorSupplier();
+        RightTriangle outFigure =
+                new RightTriangle(getRandom20(), getRandom20(), newColor.getRandomColor());
+        return outFigure;
+    }
+
+    private Rectangle generateRectangle() {
+        ColorSupplier newColor = new ColorSupplier();
+        Rectangle outFigure =
+                new Rectangle(getRandom20(), getRandom20(), newColor.getRandomColor());
+        return outFigure;
+    }
+
+    public Figure getRandomFigure() {
+
+        switch (getRandom5()) {
             case 1:
-                return new Circle((int) (Math.random() * 10), newColor.getRandomColor());
+                return generateCircle();
             case 2:
-                return new Square((int) (Math.random() * 10), newColor.getRandomColor());
+                return generateSquare();
             case 3:
-                return new RightTriangle((int) (Math.random() * 10),
-                        (int) (Math.random() * 10), newColor.getRandomColor());
+                return generateRightTriangle();
             case 4:
-                return new Rectangle((int) (Math.random() * 10),
-                        (int) (Math.random() * 10), newColor.getRandomColor());
+                return generateRectangle();
             default:
-                return new IsoscelesTrapezoid((int) (Math.random() * 10),
-                        (int) (Math.random() * 10), (int) (Math.random() * 10),
-                        newColor.getRandomColor());
+                return generateTrapezoid();
         }
     }
 }
