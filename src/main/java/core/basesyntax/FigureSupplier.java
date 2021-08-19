@@ -6,6 +6,7 @@ public class FigureSupplier {
     private static final int MAX_SIZE = 100;
     private static final int MIN_SIZE = 1;
     private static final int FIGURES_NUMBER = 4;
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
         Random random = new Random();
@@ -25,7 +26,6 @@ public class FigureSupplier {
     }
 
     private int randomSize() {
-        Random random = new Random();
         return random.nextInt(MAX_SIZE) + MIN_SIZE;
     }
 }
