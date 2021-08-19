@@ -1,6 +1,6 @@
 package core.basesyntax.model;
 
-public class RightTriangle extends Figure implements Draw, GetArea {
+public class RightTriangle extends Figure {
     private double lengthLeg;
     private double height;
     private ColorSupplier colorRightTriangle = new ColorSupplier();
@@ -24,14 +24,14 @@ public class RightTriangle extends Figure implements Draw, GetArea {
     }
 
     @Override
-    public double areaOfFigure() {
+    public double CalculateArea() {
         return lengthLeg * height;
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         new StringBuilder().append("Figure: Right_triangle, area: ")
-                .append(areaOfFigure())
+                .append(CalculateArea())
                 .append(" sq.units, side: ")
                 .append(getLengthLeg())
                 .append(" units, height: ")

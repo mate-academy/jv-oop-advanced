@@ -11,10 +11,9 @@ public class Main {
         int randomArray = new Random().nextInt(MAX_ARRAY);
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] randomFigure = new Figure[randomArray];
-
         for (int i = 0; i <= randomFigure.length; i++) {
             randomFigure[i] = figureSupplier.getRandomFigure();
-            randomFigure[i].drawFigure();
+            randomFigure[i].draw();
         }
     }
 }

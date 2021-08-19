@@ -1,6 +1,6 @@
 package core.basesyntax.model;
 
-public class Circle extends Figure implements Draw, GetArea {
+public class Circle extends Figure {
     private double radius;
 
     public Circle(String color, double radius) {
@@ -13,14 +13,14 @@ public class Circle extends Figure implements Draw, GetArea {
     }
 
     @Override
-    public double areaOfFigure() {
+    public double CalculateArea() {
         return Math.PI * radius * radius;
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         new StringBuilder().append("Figure: Circle, area: ")
-                .append(areaOfFigure())
+                .append(CalculateArea())
                 .append(" sq.units, radius: ")
                 .append(getRadius())
                 .append(" units, color: ")

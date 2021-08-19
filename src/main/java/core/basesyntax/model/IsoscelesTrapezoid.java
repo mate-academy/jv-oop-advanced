@@ -1,6 +1,6 @@
 package core.basesyntax.model;
 
-public class IsoscelesTrapezoid extends Figure implements Draw, GetArea {
+public class IsoscelesTrapezoid extends Figure {
     private double firstLeg;
     private double secondLeg;
     private double height;
@@ -25,14 +25,14 @@ public class IsoscelesTrapezoid extends Figure implements Draw, GetArea {
     }
 
     @Override
-    public double areaOfFigure() {
+    public double CalculateArea() {
         return (firstLeg + secondLeg) / 2 * height;
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         new StringBuilder().append("Figure: Isosceles trapezoid, area: ")
-                .append(areaOfFigure())
+                .append(CalculateArea())
                 .append(" sq.units, side: ")
                 .append(getFirstLeg())
                 .append(" units, other side: ")

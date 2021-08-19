@@ -1,6 +1,6 @@
 package core.basesyntax.model;
 
-public class Rectangle extends Figure implements Draw, GetArea {
+public class Rectangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
@@ -19,15 +19,15 @@ public class Rectangle extends Figure implements Draw, GetArea {
     }
 
     @Override
-    public double areaOfFigure() {
+    public double CalculateArea() {
         return firstLeg * secondLeg;
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println(
                 new StringBuilder().append("Figure: Rectangle, area: ")
-                        .append(areaOfFigure())
+                        .append(CalculateArea())
                         .append(" sq.units, side: ")
                         .append(getFirstLeg())
                         .append(" units, other side: ")
