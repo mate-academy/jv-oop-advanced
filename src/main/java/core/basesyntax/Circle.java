@@ -4,18 +4,27 @@ public class Circle extends Figure {
     private int radius;
 
     public Circle(int radius, String color) {
+        super(color);
         this.radius = radius;
-        super.setType("Circle");
+        super.setType("circle");
         super.setColor(color);
     }
 
+    public int getRadius() {
+        return radius;
+    }
+
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+
     @Override
-    public double area() {
+    public double getArea() {
         return radius * radius * Math.PI;
     }
 
-    public void info() {
+    public void getInfo() {
         System.out.printf("Figure: %s, area: %s sq.units, radius: %s units, color: %s%n",
-                getType(), area(), radius, getColor());
+                getType(), getArea(), radius, getColor());
     }
 }
