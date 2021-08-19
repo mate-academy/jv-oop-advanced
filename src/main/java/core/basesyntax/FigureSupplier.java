@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int NUMBER_OF_FIGURES = 5;
+    private static final int MAX_SIDE_LENGTH = 100;
     private Random random = new Random();
 
     public Figure getRandomFigure() {
@@ -23,23 +24,31 @@ public class FigureSupplier {
     }
 
     private Figure circleMaker() {
-        return new Circle(random.nextInt(100) + 1);
+        int radius = random.nextInt(MAX_SIDE_LENGTH) + 1;
+        return new Circle(radius);
     }
 
     private Figure isoscelesTrapezoidMaker() {
-        return new IsoscelesTrapezoid(random.nextInt(100) + 1,
-                random.nextInt(100) + 1, random.nextInt(100) + 1);
+        int topSide = random.nextInt(MAX_SIDE_LENGTH) + 1;
+        int botSide = random.nextInt(MAX_SIDE_LENGTH) + 1;
+        int height = random.nextInt(MAX_SIDE_LENGTH) + 1;
+        return new IsoscelesTrapezoid(topSide, botSide, height);
     }
 
     private Figure rectangleMaker() {
-        return new Rectangle(random.nextInt(100) + 1, random.nextInt(100) + 1);
+        int width = random.nextInt(MAX_SIDE_LENGTH) + 1;
+        int height = random.nextInt(MAX_SIDE_LENGTH) + 1;
+        return new Rectangle(width, height);
     }
 
     private Figure rightTriangleMaker() {
-        return new RightTriangle(random.nextInt(100) + 1, random.nextInt(100) + 1);
+        int firstLeg = random.nextInt(MAX_SIDE_LENGTH) + 1;
+        int secondLeg = random.nextInt(MAX_SIDE_LENGTH) + 1;
+        return new RightTriangle(firstLeg, secondLeg);
     }
 
     private Figure squareMaker() {
-        return new Square(random.nextInt(100) + 1);
+        int side = random.nextInt(MAX_SIDE_LENGTH) + 1;
+        return new Square(side);
     }
 }

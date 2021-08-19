@@ -28,7 +28,7 @@ public class IsoscelesTrapezoid extends Figure {
                         .append(" units, height: ")
                         .append(height)
                         .append(" units, color: ")
-                        .append(this.getColour())
+                        .append(this.getColor())
         );
     }
 }

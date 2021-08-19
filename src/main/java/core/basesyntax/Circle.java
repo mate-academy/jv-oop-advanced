@@ -20,7 +20,7 @@ public class Circle extends Figure {
                         .append(" sq.units, radius: ")
                         .append(radius)
                         .append(" units, color: ")
-                        .append(this.getColour())
+                        .append(this.getColor())
         );
     }
 }

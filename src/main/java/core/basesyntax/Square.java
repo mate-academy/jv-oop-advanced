@@ -20,7 +20,7 @@ public class Square extends Figure {
                         .append(" sq.units, side: ")
                         .append(side)
                         .append(" units, color: ")
-                        .append(this.getColour())
+                        .append(this.getColor())
         );
     }
 }
