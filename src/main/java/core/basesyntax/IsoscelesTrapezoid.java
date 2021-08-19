@@ -13,14 +13,14 @@ public class IsoscelesTrapezoid extends Figure {
 
     public double getArea() {
         return ((double)(downSide + upSide) / 2) * Math.sqrt(lateralSides * lateralSides
-                - (Math.pow((downSide - upSide), 2) / 4));
+                - (Math.pow(Math.abs(downSide - upSide), 2) / 4));
     }
 
     @Override
     public void draw() {
         System.out.println(new StringBuilder("Figure: isosceles trapezoid, area: ")
                 .append(dF.format(getArea())).append(" sq.units, up side: ")
-                .append(" units, down side: ").append(downSide)
+                .append(upSide).append(" units, down side: ").append(downSide)
                 .append(" units, lateral sides: ").append(lateralSides)
                 .append(" units" + ", color: ").append(getColor()));
     }
