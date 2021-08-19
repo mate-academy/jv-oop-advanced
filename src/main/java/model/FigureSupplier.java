@@ -7,9 +7,9 @@ public class FigureSupplier {
         Random random = new Random();
         ColorSupplier colorSupplier = new ColorSupplier();
         final int randomLimit = 101;
-        final int[] finalInt = new int[3];
-        final int parametsCount = 3;
-        for (int i = 0; i < parametsCount; i++) {
+        final int parametrsCount = 3;
+        final int[] finalInt = new int[parametrsCountnt];
+        for (int i = 0; i < parametrsCount; i++) {
             finalInt[i] = random.nextInt(randomLimit) + 1;
         }
         switch (random.nextInt() % 5) {
