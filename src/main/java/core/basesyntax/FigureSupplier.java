@@ -5,31 +5,60 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int FIGURE_LIMIT = 5;
     private Random random = new Random();
-    private int randomSideOne = random.nextInt(100);
-    private int randomSideTwo = random.nextInt(100);
-    private int randomSideThree = random.nextInt(100);
     private ColorSupplier colorSupplier = new ColorSupplier();
-    private String color = colorSupplier.getRandomColor();
+
+    private Figure createCircle() {
+        int radius = random.nextInt(100);
+        String color = colorSupplier.getRandomColor();
+        return new Circle(color, radius);
+    }
+
+    private Figure createIsoscelesTrapezoid() {
+        int baseOne = random.nextInt(100);
+        int baseTwo = random.nextInt(100);
+        int height = random.nextInt(50);
+        String color = colorSupplier.getRandomColor();
+        return new IsoscelesTrapezoid(color, baseOne, baseTwo, height);
+    }
+
+    private Figure createRectangle() {
+        int length = random.nextInt(100);
+        int width = random.nextInt(100);
+        String color = colorSupplier.getRandomColor();
+        return new Rectangle(color, length, width);
+    }
+
+    private Figure createRightTriangle() {
+        int firstLeg = random.nextInt(100);
+        int secondLeg = random.nextInt(100);
+        String color = colorSupplier.getRandomColor();
+        return new RightTriangle(color, firstLeg, secondLeg);
+    }
+
+    private Figure createSquare() {
+        int side = random.nextInt(100);
+        String color = colorSupplier.getRandomColor();
+        return new Square(color, side);
+    }
 
     public Figure getRandomFigure() {
         int randomCase = random.nextInt(FIGURE_LIMIT) + 1;
         Figure figure = null;
         switch (randomCase) {
             case 1:
-                figure = new Circle(color, randomSideOne);
+                figure = createCircle();
                 break;
             case 2:
-                figure = new IsoscelesTrapezoid(color, randomSideOne,
-                            randomSideTwo, randomSideThree);
+                figure = createIsoscelesTrapezoid();
                 break;
             case 3:
-                figure = new Rectangle(color, randomSideOne, randomSideTwo);
+                figure = createRectangle();
                 break;
             case 4:
-                figure = new RightTriangle(color, randomSideOne, randomSideThree);
+                figure = createRightTriangle();
                 break;
             case 5:
-                figure = new Square(color, randomSideTwo);
+                figure = createSquare();
                 break;
             default:
                 break;
