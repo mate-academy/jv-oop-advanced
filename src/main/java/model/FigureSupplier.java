@@ -3,15 +3,15 @@ package model;
 import java.util.Random;
 
 public class FigureSupplier {
-    static final int randomLimit = 101;
-    static final int parametrsCount = 3;
-    static final int[] finalInt = new int[parametrsCount];
+    static final int RANDOM_LIMIT = 101;
+    static final int PARAMETRS_COUNT = 3;
+    static final int[] finalInt = new int[PARAMETRS_COUNT];
 
     public Figure getRandomFigure() {
         Random random = new Random();
         ColorSupplier colorSupplier = new ColorSupplier();
-        for (int i = 0; i < parametrsCount; i++) {
-            finalInt[i] = random.nextInt(randomLimit) + 1;
+        for (int i = 0; i < PARAMETRS_COUNT; i++) {
+            finalInt[i] = random.nextInt(RANDOM_LIMIT) + 1;
         }
         switch (random.nextInt() % 5) {
             case (0):
