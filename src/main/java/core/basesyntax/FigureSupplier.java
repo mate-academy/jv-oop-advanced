@@ -13,20 +13,22 @@ public class FigureSupplier {
         ColorSupplier randomColor = new ColorSupplier();
         Random random = new Random();
         int randomNumber = random.nextInt(4);
+        int randomNumber1 = random.nextInt(100);
+        int randomNumber2 = random.nextInt(100);
+        int randomNumber3 = random.nextInt(100);
         switch (randomNumber) {
             case (0):
-                return new Circle(randomColor.getRandomColor(), random.nextInt(100));
+                return new Circle(randomColor.getRandomColor(), randomNumber1);
             case (1):
                 return new IsoscelesTrapezoid(randomColor.getRandomColor(),
-                        random.nextInt(100), random.nextInt(100), random.nextInt(100));
+                        randomNumber1, randomNumber2, randomNumber3);
             case (2):
-                return new Rectangle(randomColor.getRandomColor(),
-                        random.nextInt(100), random.nextInt(100));
+                return new Rectangle(randomColor.getRandomColor(), randomNumber1, randomNumber2);
             case (3):
                 return new RightTriangle(randomColor.getRandomColor(),
-                        random.nextInt(100), random.nextInt(100));
+                        randomNumber1, randomNumber2);
             case (4):
-                return new Square(randomColor.getRandomColor(), random.nextInt(100));
+                return new Square(randomColor.getRandomColor(), randomNumber1);
             default:
                 System.out.println("Mistake something went wrong!");
         }
