@@ -10,7 +10,7 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
         for (Figure figure : figures) {
             figure = figureSupplier.getRandomFigure();
-            System.out.println(figure.drawTheFigure());
+            System.out.println(figure.draw());
         }
     }
 }

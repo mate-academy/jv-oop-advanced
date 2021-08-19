@@ -4,32 +4,40 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int RANDOM_COUNTER = 10;
+    private Random random = new Random();
+
+    private int getSmallerRandomNumber() {
+        return random.nextInt(RANDOM_COUNTER) + 1;
+    }
+
+    private int getBiggerRandomNumber() {
+        return random.nextInt(RANDOM_COUNTER) + 11;
+    }
 
     public Figure getRandomFigure() {
-        Random random = new Random();
         String[] figure = {"Circle", "IsoscelesTrapezoid", "Rectangle", "RightTriangle", "Square"};
         int i = random.nextInt(figure.length);
-        switch (figure[i]) {
-            case "Circle":
+        switch (i) {
+            case 0 :
                 return new Circle(ColorSupplier.getRandomColor(),
-                        random.nextInt(RANDOM_COUNTER) + 1);
-            case "IsoscelesTrapezoid":
+                        getSmallerRandomNumber());
+            case 1:
                 return new IsoscelesTrapezoid(ColorSupplier.getRandomColor(),
-                        random.nextInt(RANDOM_COUNTER) + 1,
-                        random.nextInt(RANDOM_COUNTER) + 12,
-                        random.nextInt(RANDOM_COUNTER) + 1);
-            case "Rectangle":
+                        getSmallerRandomNumber(),
+                        getBiggerRandomNumber(),
+                        getSmallerRandomNumber());
+            case 2:
                 return new Rectangle(ColorSupplier.getRandomColor(),
-                        random.nextInt(RANDOM_COUNTER) + 11,
-                        random.nextInt(RANDOM_COUNTER) + 1);
-            case "RightTriangle":
+                        getBiggerRandomNumber(),
+                        getSmallerRandomNumber());
+            case 3:
                 return new RightTriangle(ColorSupplier.getRandomColor(),
-                        random.nextInt(RANDOM_COUNTER) + 1,
-                        random.nextInt(RANDOM_COUNTER) + 1);
+                        getSmallerRandomNumber(),
+                        getSmallerRandomNumber());
 
             default:
                 return new Square(ColorSupplier.getRandomColor(),
-                        random.nextInt(RANDOM_COUNTER) + 1);
+                        getSmallerRandomNumber());
         }
     }
 }
