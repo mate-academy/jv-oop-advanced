@@ -7,39 +7,50 @@ public class FigureSupplier {
     private static final int SIZE_OF_UNITS = 50;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
-    private Figure figure;
-
-    public int getRandomNumber() {
-        return random.nextInt(SIZE_OF_UNITS);
-    }
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
+        String color = colorSupplier.getRandomColor();
         switch (figureNumber) {
             case 0:
-                figure = new Circle(colorSupplier.getRandomColor(), getRandomNumber());
-                break;
+                return newCircle(color);
             case 1:
-                figure = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        getRandomNumber(),
-                        getRandomNumber(),
-                        getRandomNumber());
-                break;
+                return newRightTriangle(color);
             case 2:
-                figure = new Rectangle(colorSupplier.getRandomColor(),
-                        getRandomNumber(),
-                        getRandomNumber());
-                break;
+                return newIsoscelesTrapezoid(color);
             case 3:
-                figure = new RightTriangle(colorSupplier.getRandomColor(),
-                        getRandomNumber(),
-                        getRandomNumber());
-                break;
+                return newSquare(color);
             default:
-                figure = new Square(colorSupplier.getRandomColor(),
-                        getRandomNumber());
-                break;
+                return newRectangle(color);
         }
-        return figure;
+    }
+
+    private Figure newCircle(String color) {
+        int radius = random.nextInt(SIZE_OF_UNITS);
+        return new Circle(color, radius);
+    }
+
+    private Figure newRightTriangle(String color) {
+        int firstLeg = random.nextInt(SIZE_OF_UNITS);
+        int secondLeg = random.nextInt(SIZE_OF_UNITS);
+        return new RightTriangle(color,firstLeg, secondLeg);
+    }
+
+    private Figure newIsoscelesTrapezoid(String color) {
+        int bottomSide = random.nextInt(SIZE_OF_UNITS);
+        int topSide = random.nextInt(SIZE_OF_UNITS);
+        int height = random.nextInt(SIZE_OF_UNITS);
+        return new IsoscelesTrapezoid(color, bottomSide, topSide, height);
+    }
+
+    private Figure newSquare(String color) {
+        int side = random.nextInt(SIZE_OF_UNITS);
+        return new Square(color, side);
+    }
+
+    private Figure newRectangle(String color) {
+        int sideA = random.nextInt(SIZE_OF_UNITS);
+        int sideB = random.nextInt(SIZE_OF_UNITS);
+        return new Rectangle(color, sideA, sideB);
     }
 }
