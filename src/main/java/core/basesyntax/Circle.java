@@ -18,6 +18,6 @@ public class Circle extends Figure {
 
     @Override
     public double areaCalculator() {
-        return Math.PI * (radius * radius);
+        return Math.PI * radius * radius;
     }
 }

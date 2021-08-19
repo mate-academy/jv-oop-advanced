@@ -10,10 +10,4 @@ public abstract class Figure implements InfoDrawer, AreaCalculator {
     public Color getColor() {
         return color;
     }
-
-    @Override
-    public abstract double areaCalculator();
-
-    @Override
-    public abstract void drawFigure();
 }
