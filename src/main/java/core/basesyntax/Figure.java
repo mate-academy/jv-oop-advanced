@@ -10,4 +10,6 @@ public abstract class Figure implements FigureBehaviour {
     public String getColor() {
         return color;
     }
+
+    public abstract double getArea();
 }
