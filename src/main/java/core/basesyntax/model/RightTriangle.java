@@ -24,14 +24,14 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double CalculateArea() {
+    public double calculateArea() {
         return lengthLeg * height;
     }
 
     @Override
     public void draw() {
         new StringBuilder().append("Figure: Right_triangle, area: ")
-                .append(CalculateArea())
+                .append(calculateArea())
                 .append(" sq.units, side: ")
                 .append(getLengthLeg())
                 .append(" units, height: ")

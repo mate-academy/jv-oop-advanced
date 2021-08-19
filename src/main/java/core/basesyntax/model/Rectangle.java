@@ -19,7 +19,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double CalculateArea() {
+    public double calculateArea() {
         return firstLeg * secondLeg;
     }
 
@@ -27,7 +27,7 @@ public class Rectangle extends Figure {
     public void draw() {
         System.out.println(
                 new StringBuilder().append("Figure: Rectangle, area: ")
-                        .append(CalculateArea())
+                        .append(calculateArea())
                         .append(" sq.units, side: ")
                         .append(getFirstLeg())
                         .append(" units, other side: ")
