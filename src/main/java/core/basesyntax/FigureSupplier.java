@@ -5,8 +5,8 @@ import java.util.Random;
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 20;
     private static final int MAX_INTEGER_NUMBER = 100;
-    private static final Random random = new Random();
-    private static final ColorSupplier colorSupplier = new ColorSupplier();
+    private Random random = new Random();
+    private  ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         String figureType = getRandomFigureType();
@@ -38,10 +38,6 @@ public class FigureSupplier {
     private Figure getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                 getRandomInt(), getRandomInt(), getRandomInt());
-    }
-
-    public int getRandomArrayLength() {
-        return getRandomInt(FIGURE_COUNT);
     }
 
     private int getRandomInt(int n) {
