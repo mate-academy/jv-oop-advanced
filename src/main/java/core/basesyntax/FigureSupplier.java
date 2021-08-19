@@ -1,28 +1,34 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public class FigureSupplier {
+    public static final int FIGURE_COUNT = 5;
+    private Random random = new Random();
+    private Figure figure;
+
     public Figure getRandomFigure() {
-        Figure figure = new Circle();
-        int figureNumber = (int) (1 + Math.random() * (6 - 1));
+        ColorSupplier colorSupplier = new ColorSupplier();
+        int figureNumber = random.nextInt(FIGURE_COUNT);
         switch (figureNumber) {
+            case 0:
+                figure = new Circle(random.nextInt(10), colorSupplier.getRandomColor());
+                break;
             case 1:
-                figure = new Circle(Math.random() * 10);
+                figure = new IsoscelesTrapezoid(random.nextInt(10),
+                        random.nextInt(10), random.nextInt(10),
+                        colorSupplier.getRandomColor());
                 break;
             case 2:
-                figure = new IsoscelesTrapezoid(Math.random() * 10,
-                        Math.random() * 10,
-                        Math.random() * 10);
+                figure = new Rectangle(random.nextInt(10), random.nextInt(10),
+                        colorSupplier.getRandomColor());
                 break;
             case 3:
-                figure = new Rectangle(Math.random() * 10,
-                        Math.random() * 10);
+                figure = new RightTriangle(random.nextInt(10), random.nextInt(10),
+                        colorSupplier.getRandomColor());
                 break;
             case 4:
-                figure = new RightTriangle(Math.random() * 10,
-                        Math.random() * 10);
-                break;
-            case 5:
-                figure = new Square(Math.random() * 10);
+                figure = new Square(random.nextInt(10), colorSupplier.getRandomColor());
                 break;
             default:
                 break;

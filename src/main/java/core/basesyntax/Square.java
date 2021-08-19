@@ -3,7 +3,8 @@ package core.basesyntax;
 public class Square extends Figure implements AreaCalculator {
     private double side;
 
-    public Square(double side) {
+    public Square(double side, String color) {
+        super(color);
         this.side = side;
     }
 
