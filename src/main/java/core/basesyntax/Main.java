@@ -11,7 +11,6 @@ public class Main {
         for (int i = 0; i < randomNumber; i++) {
             figures[i] = supplier.getRandomFigure();
             figures[i].draw();
-
         }
     }
 }
