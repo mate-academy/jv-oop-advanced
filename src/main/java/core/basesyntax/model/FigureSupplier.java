@@ -8,7 +8,7 @@ public class FigureSupplier {
     private Random random = new Random();
 
     private double getRandomNum() {
-        return random.nextDouble() + RANDOM_MAX_VALUE - 1.2;
+        return random.nextDouble() + FIGURE_COUNT - RANDOM_MAX_VALUE;
     }
 
     public Figure getRandomFigure() {

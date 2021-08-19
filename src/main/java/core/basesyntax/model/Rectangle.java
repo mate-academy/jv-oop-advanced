@@ -1,9 +1,8 @@
 package core.basesyntax.model;
 
-public class Rectangle extends Figure implements FigureRealisation {
+public class Rectangle extends Figure implements Draw, GetArea {
     private double firstLeg;
     private double secondLeg;
-    private ColorSupplier colorRectangle = new ColorSupplier();
 
     public Rectangle(String color, double firstLeg, double secondLeg) {
         super(color);
@@ -17,10 +16,6 @@ public class Rectangle extends Figure implements FigureRealisation {
 
     public double getSecondLeg() {
         return secondLeg;
-    }
-
-    public ColorSupplier getColorRectangle() {
-        return colorRectangle;
     }
 
     @Override
@@ -38,6 +33,6 @@ public class Rectangle extends Figure implements FigureRealisation {
                         .append(" units, other side: ")
                         .append(getSecondLeg())
                         .append(", color: ")
-                        .append(getColorRectangle().getRandomColor()));
+                        .append(getColor()));
     }
 }

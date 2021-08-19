@@ -1,6 +1,6 @@
 package core.basesyntax.model;
 
-public class RightTriangle extends Figure implements FigureRealisation {
+public class RightTriangle extends Figure implements Draw, GetArea {
     private double lengthLeg;
     private double height;
     private ColorSupplier colorRightTriangle = new ColorSupplier();

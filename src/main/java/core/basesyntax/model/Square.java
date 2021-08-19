@@ -1,9 +1,8 @@
 package core.basesyntax.model;
 
-public class Square extends Figure implements FigureRealisation {
+public class Square extends Figure implements Draw, GetArea {
     private double firstLeg;
     private double secondLeg;
-    private ColorSupplier colorSquare = new ColorSupplier();
 
     public Square(String color, double firstLeg, double secondLeg) {
         super(color);
@@ -17,10 +16,6 @@ public class Square extends Figure implements FigureRealisation {
 
     public double getSecondLeg() {
         return secondLeg;
-    }
-
-    public ColorSupplier getColorSquare() {
-        return colorSquare;
     }
 
     @Override
@@ -38,6 +33,6 @@ public class Square extends Figure implements FigureRealisation {
                         .append(" units, other side: ")
                         .append(getSecondLeg())
                         .append(", color: ")
-                        .append(getColorSquare().getRandomColor()));
+                        .append(getColor()));
     }
 }

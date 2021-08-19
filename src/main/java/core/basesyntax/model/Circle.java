@@ -1,8 +1,7 @@
 package core.basesyntax.model;
 
-public class Circle extends Figure implements FigureRealisation {
+public class Circle extends Figure implements Draw, GetArea {
     private double radius;
-    private ColorSupplier colorCircle = new ColorSupplier();
 
     public Circle(String color, double radius) {
         super(color);
@@ -11,10 +10,6 @@ public class Circle extends Figure implements FigureRealisation {
 
     public double getRadius() {
         return this.radius;
-    }
-
-    public ColorSupplier getColorCircle() {
-        return colorCircle;
     }
 
     @Override
@@ -30,6 +25,6 @@ public class Circle extends Figure implements FigureRealisation {
                 .append(" sq.units, radius: ")
                 .append(getRadius())
                 .append(" units, color: ")
-                .append(getColorCircle().getRandomColor());
+                .append(getColor());
     }
 }

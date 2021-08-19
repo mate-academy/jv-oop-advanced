@@ -1,10 +1,9 @@
 package core.basesyntax.model;
 
-public class IsoscelesTrapezoid extends Figure implements FigureRealisation {
+public class IsoscelesTrapezoid extends Figure implements Draw, GetArea {
     private double firstLeg;
     private double secondLeg;
     private double height;
-    private ColorSupplier colorIsoscelesTrapezoid = new ColorSupplier();
 
     public IsoscelesTrapezoid(String color, double firstLeg, double secondLeg, double height) {
         super(color);
@@ -25,10 +24,6 @@ public class IsoscelesTrapezoid extends Figure implements FigureRealisation {
         return height;
     }
 
-    public ColorSupplier getColorIsoscelesTrapezoid() {
-        return colorIsoscelesTrapezoid;
-    }
-
     @Override
     public double areaOfFigure() {
         return (firstLeg + secondLeg) / 2 * height;
@@ -45,7 +40,7 @@ public class IsoscelesTrapezoid extends Figure implements FigureRealisation {
                 .append(" units, height: ")
                 .append(getHeight())
                 .append(", color: ")
-                .append(getColorIsoscelesTrapezoid().getRandomColor());
+                .append(getColor());
     }
 }
 

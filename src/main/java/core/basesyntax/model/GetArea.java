@@ -1,7 +1,5 @@
 package core.basesyntax.model;
 
-public interface FigureRealisation {
+public interface GetArea {
     double areaOfFigure();
-
-    void drawFigure();
 }
