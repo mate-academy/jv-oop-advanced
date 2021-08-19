@@ -15,7 +15,7 @@ public class HelloWorld {
         FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < arrOfFigures.length; i++) {
             arrOfFigures[i] = figureSupplier.getRandomFigure();
-            arrOfFigures[i].drawFigure();
+            arrOfFigures[i].draw();
         }
     }
 }
