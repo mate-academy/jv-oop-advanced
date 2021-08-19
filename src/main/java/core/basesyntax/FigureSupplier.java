@@ -6,7 +6,7 @@ public class FigureSupplier {
     public static final int FIGURE_COUNT = 20;
     private static final int MAX_INTEGER_NUMBER = 100;
     private Random random = new Random();
-    private  ColorSupplier colorSupplier = new ColorSupplier();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         String figureType = getRandomFigureType();
