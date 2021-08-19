@@ -12,19 +12,20 @@ public class FigureSupplier {
         String color = new ColorSupplier().getRandomColor();
         switch (random.nextInt(FIGURES_NUMBER)) {
             case 0:
-                return new Rectangle(random.nextInt(MAX_SIZE) + MIN_SIZE, random.nextInt(MAX_SIZE)
-                        + MIN_SIZE, color);
+                return new Rectangle(randomSize(), randomSize(), color);
             case 1:
-                return new Circle(random.nextInt(MAX_SIZE) + MIN_SIZE, color);
+                return new Circle(randomSize(), color);
             case 2:
-                return new RightTriangle(random.nextInt(MAX_SIZE) + MIN_SIZE,
-                        random.nextInt(MAX_SIZE) + MIN_SIZE, color);
+                return new RightTriangle(randomSize(), randomSize(), color);
             case 3:
-                return new IsoscelesTrapezoid(random.nextInt(MAX_SIZE) + MIN_SIZE,
-                        random.nextInt(MAX_SIZE) + MIN_SIZE,
-                        random.nextInt(MAX_SIZE) + MIN_SIZE, color);
+                return new IsoscelesTrapezoid(randomSize(), randomSize(), randomSize(), color);
             default:
-                return new Square(random.nextInt(MAX_SIZE) + MIN_SIZE, color);
+                return new Square(randomSize(), color);
         }
+    }
+
+    private int randomSize() {
+        Random random = new Random();
+        return random.nextInt(MAX_SIZE) + MIN_SIZE;
     }
 }

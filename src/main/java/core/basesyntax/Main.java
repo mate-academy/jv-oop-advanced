@@ -14,9 +14,7 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < (random.nextInt(MAX_FIGURES_IN_LIST) + MIN_FIGURES_IN_LIST); i++) {
             figureList.add(figureSupplier.getRandomFigure());
-        }
-        for (Figure figure : figureList) {
-            figure.printFigure();
+            figureList.get(i).draw();
         }
     }
 }
