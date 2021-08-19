@@ -9,26 +9,53 @@ import core.basesyntax.figure.Square;
 import java.util.Random;
 
 public class FigureSupplier {
+    private Random random = new Random();
+    private ColorSupplier randomColor = new ColorSupplier();
+
+    private Figure getCircle() {
+        int radius = this.random.nextInt(100);
+        return new Circle(this.randomColor.getRandomColor(), radius);
+    }
+
+    private Figure getIsoscelesTrapezoid() {
+        int topSide = this.random.nextInt(100);
+        int botSide = this.random.nextInt(100);
+        int height = this.random.nextInt(100);
+        return new IsoscelesTrapezoid(this.randomColor.getRandomColor(),
+                topSide, botSide, height);
+    }
+
+    private Figure getRectangle() {
+        int height = this.random.nextInt(100);
+        int width = this.random.nextInt(100);
+        return new Rectangle(this.randomColor.getRandomColor(), height, width);
+    }
+
+    private Figure getRightTriangle() {
+        int firstLeg = this.random.nextInt(100);
+        int secondLeg = this.random.nextInt(100);
+        return new RightTriangle(this.randomColor.getRandomColor(),
+                firstLeg, secondLeg);
+    }
+
+    private Figure getSquare() {
+        int side = this.random.nextInt(100);
+        return new Square(this.randomColor.getRandomColor(), side);
+    }
+
     public Figure getRandomFigure() {
-        ColorSupplier randomColor = new ColorSupplier();
-        Random random = new Random();
-        int randomNumber = random.nextInt(4);
-        int randomNumber1 = random.nextInt(100);
-        int randomNumber2 = random.nextInt(100);
-        int randomNumber3 = random.nextInt(100);
+        int randomNumber = this.random.nextInt(4);
         switch (randomNumber) {
             case (0):
-                return new Circle(randomColor.getRandomColor(), randomNumber1);
+                return this.getCircle();
             case (1):
-                return new IsoscelesTrapezoid(randomColor.getRandomColor(),
-                        randomNumber1, randomNumber2, randomNumber3);
+                return this.getIsoscelesTrapezoid();
             case (2):
-                return new Rectangle(randomColor.getRandomColor(), randomNumber1, randomNumber2);
+                return this.getRectangle();
             case (3):
-                return new RightTriangle(randomColor.getRandomColor(),
-                        randomNumber1, randomNumber2);
+                return this.getRightTriangle();
             case (4):
-                return new Square(randomColor.getRandomColor(), randomNumber1);
+                return this.getSquare();
             default:
                 System.out.println("Mistake something went wrong!");
         }
