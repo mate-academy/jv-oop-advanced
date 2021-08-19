@@ -27,6 +27,7 @@ public class FigureSupplier {
     }
 
     private int getRandomNum() {
-        return (int)(Math.random() * (MAX_RANDOM_NUMBER - MIN_RANDOM_NUMBER + 1) + MIN_RANDOM_NUMBER);
+        return (int)(Math.random()
+                * (MAX_RANDOM_NUMBER - MIN_RANDOM_NUMBER + 1) + MIN_RANDOM_NUMBER);
     }
 }
