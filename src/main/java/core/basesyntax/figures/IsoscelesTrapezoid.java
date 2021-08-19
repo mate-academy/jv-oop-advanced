@@ -1,0 +1,58 @@
+package core.basesyntax.figures;
+
+import core.basesyntax.services.AreaCalculator;
+import core.basesyntax.services.ColorSupplier;
+
+public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
+    private int height;
+    private int bottomSide;
+    private int topSide;
+
+    public IsoscelesTrapezoid(int height, int bottomSide, int topSide) {
+        this.height = height;
+        this.bottomSide = bottomSide;
+        this.topSide = topSide;
+        super.setColor(draw());
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public int getBottomSide() {
+        return bottomSide;
+    }
+
+    public void setBottomSide(int bottomSide) {
+        this.bottomSide = bottomSide;
+    }
+
+    public int getTopSide() {
+        return topSide;
+    }
+
+    public void setTopSide(int topSide) {
+        this.topSide = topSide;
+    }
+
+    @Override
+    public void getInfo() {
+        System.out.println("Figure: isosceles trapezoid, area: " + getArea() + " sq.units, height: "
+                + getHeight() + " units, color: " + super.getColor());
+
+    }
+
+    @Override
+    public double getArea() {
+        return (double) ((bottomSide + topSide) / 2) * height;
+    }
+
+    @Override
+    public String draw() {
+        return new ColorSupplier().getRandomColor();
+    }
+}
