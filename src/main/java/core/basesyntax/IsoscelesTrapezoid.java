@@ -1,27 +1,16 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private ColorSupplier colorSupplier = new ColorSupplier();
-    private String name = "Isosceles trapezoid";
-    private String color = colorSupplier.getRandomColor();
-    private int baseOne = (int)(Math.random() * 100);
-    private int baseTwo = (int)(Math.random() * 100);
-    private int height = (int)(Math.random() * 100);
+    private int baseOne;
+    private int baseTwo;
+    private int height;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
+    public IsoscelesTrapezoid(String color, int baseOne, int baseTwo, int height) {
+        super.setColor(color);
+        super.setName("isosceles trapezoid");
+        this.baseOne = baseOne;
+        this.baseTwo = baseTwo;
+        this.height = height;
     }
 
     public int getBaseOne() {
@@ -55,8 +44,8 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void drow() {
-        System.out.println("Figure: " + name + ", area: " + getArea() + " sq.units, "
+        System.out.println("Figure: " + getName() + ", area: " + getArea() + " sq.units, "
                     + "baseOne: " + baseOne + " units, " + "baseTwo: " + baseTwo
-                    + " units, " + "height: " + height + " units, " + "color: " + color);
+                    + " units, " + "height: " + height + " units, " + "color: " + getColor());
     }
 }
