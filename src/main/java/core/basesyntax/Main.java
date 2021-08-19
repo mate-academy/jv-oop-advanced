@@ -2,7 +2,6 @@ package core.basesyntax;
 
 import core.basesyntax.model.Figure;
 import core.basesyntax.model.FigureSupplier;
-
 import java.util.Random;
 
 public class Main {
