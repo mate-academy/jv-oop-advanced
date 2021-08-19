@@ -3,9 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class Main {
+    private static final int CONST_NUMBER = 10;
+
     public static void main(String[] args) {
-        final int constNumber = 10;
-        Figure[] figures = new Figure[new Random().nextInt(constNumber)];
+        Figure[] figures = new Figure[new Random().nextInt(CONST_NUMBER)];
         FigureSupplier figureSupplier = new FigureSupplier();
         for (Figure figure : figures) {
             figure = figureSupplier.getRandomFigure();
