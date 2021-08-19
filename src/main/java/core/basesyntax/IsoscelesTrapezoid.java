@@ -1,5 +1,7 @@
 package core.basesyntax;
 
+import java.util.Locale;
+
 public class IsoscelesTrapezoid extends Figure {
     private int height;
     private int top;
@@ -19,7 +21,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println(String.format("Figure: isosceles trapezoid, "
+        System.out.println(String.format(Locale.US, "Figure: isosceles trapezoid, "
                         + "area: %.1f sq.units, height: %d units, "
                         + "top: %d, bottom: %d color: %s",
                 area(), this.height, this.top, this.bottom, this.getColor()));

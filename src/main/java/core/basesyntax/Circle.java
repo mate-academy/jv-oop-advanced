@@ -1,5 +1,7 @@
 package core.basesyntax;
 
+import java.util.Locale;
+
 public class Circle extends Figure {
     private int radius;
 
@@ -15,7 +17,7 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println(String.format("Figure: circle, "
+        System.out.println(String.format(Locale.US, "Figure: circle, "
                          + "area: %.1f sq.units, radius: %d units, color: %s",
                  area(), this.radius, this.getColor()));
     }

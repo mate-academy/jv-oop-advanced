@@ -1,5 +1,7 @@
 package core.basesyntax;
 
+import java.util.Locale;
+
 public class Rectangle extends Figure {
     private int height;
     private int width;
@@ -17,7 +19,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println(String.format("Figure: rectangle, "
+        System.out.println(String.format(Locale.US, "Figure: rectangle, "
                         + "area: %.1f sq.units, height: %d units, width: %d color: %s",
                 area(), this.height, this.width, this.getColor()));
     }
