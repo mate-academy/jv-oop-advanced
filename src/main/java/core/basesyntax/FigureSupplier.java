@@ -1,12 +1,14 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
     private static final int RANDOM_VALUE = 20;
-    private static final int MIN_VALUE = 1;
+    private static final Random RANDOM = new Random();
 
     public Figure getRandomFigure() {
-        int randomNumber = (int) (Math.random() * FIGURE_COUNT);
+        int randomNumber = RANDOM.nextInt(FIGURE_COUNT);
         switch (randomNumber) {
             case 0: return createCircle();
             case 1: return createIsoscelesTrapezoid();
@@ -17,27 +19,27 @@ public class FigureSupplier {
     }
 
     private Figure createCircle() {
-        return new Circle((int) (Math.random() * RANDOM_VALUE + MIN_VALUE));
+        return new Circle(RANDOM.nextInt(RANDOM_VALUE));
     }
 
     private Figure createIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(
-                (int) (Math.random() * RANDOM_VALUE + MIN_VALUE),
-                (int) (Math.random() * RANDOM_VALUE + MIN_VALUE),
-                (int) (Math.random() * RANDOM_VALUE + MIN_VALUE));
+                RANDOM.nextInt(RANDOM_VALUE),
+                RANDOM.nextInt(RANDOM_VALUE),
+                RANDOM.nextInt(RANDOM_VALUE));
     }
 
     private Figure createRectangle() {
         return new Rectangle(
-                (int) (Math.random() * RANDOM_VALUE + MIN_VALUE),
-                (int) (Math.random() * RANDOM_VALUE + MIN_VALUE));
+                RANDOM.nextInt(RANDOM_VALUE),
+                RANDOM.nextInt(RANDOM_VALUE));
     }
 
     private Figure createRightTriangle() {
-        return new RightTriangle((int) (Math.random() * RANDOM_VALUE + MIN_VALUE));
+        return new RightTriangle(RANDOM.nextInt(RANDOM_VALUE));
     }
 
     private Figure createSquare() {
-        return new Square((int) (Math.random() * RANDOM_VALUE + MIN_VALUE));
+        return new Square(RANDOM.nextInt(RANDOM_VALUE));
     }
 }

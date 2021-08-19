@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.text.DecimalFormat;
 
-public interface PrintInfo {
+public interface Drawable {
     DecimalFormat dF = new DecimalFormat("############.#");
 
     void draw();
