@@ -6,10 +6,10 @@ public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
-    public RightTriangle() {
-        super();
-        this.firstLeg = new Random().nextInt(10);
-        this.secondLeg = new Random().nextInt(10);
+    public RightTriangle(String color, int firstLeg, int secondLeg) {
+        super(color);
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
     }
 
     @Override

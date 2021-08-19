@@ -11,19 +11,28 @@ public class FigureSupplier {
         switch (new Random().nextInt(MAX_NUMBERS) + 1) {
             case 1:
             default:
-                figure = new Square();
+                figure = new Square(new ColorSupplier().getRandomColor(),
+                                    new Random().nextInt(10));
                 break;
             case 2:
-                figure = new Rectangle();
+                figure = new Rectangle(new ColorSupplier().getRandomColor(),
+                                       new Random().nextInt(10),
+                                       new Random().nextInt(10));
                 break;
             case 3:
-                figure = new RightTriangle();
+                figure = new RightTriangle(new ColorSupplier().getRandomColor(),
+                                           new Random().nextInt(10),
+                                           new Random().nextInt(10));
                 break;
             case 4:
-                figure = new Circle();
+                figure = new Circle(new ColorSupplier().getRandomColor(),
+                                    new Random().nextInt(10));
                 break;
             case 5:
-                figure = new IsoscelesTrapezoid();
+                figure = new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(),
+                                                new Random().nextInt(7),
+                                                new Random().nextInt(13),
+                                                new Random().nextInt(10));
                 break;
         }
         return figure;
