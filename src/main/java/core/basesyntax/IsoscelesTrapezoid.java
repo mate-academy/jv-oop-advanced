@@ -24,7 +24,7 @@ public class IsoscelesTrapezoid extends Figure {
                     + ", first base length: " + legA
                     + ", second base length: " + legB
                     + ", height: " + height
-                    + ", color: " + super.getColor());
+                    + ", color: " + getColor());
     }
 }
 
