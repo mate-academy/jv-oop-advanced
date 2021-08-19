@@ -6,9 +6,9 @@ import core.basesyntax.model.FigureSupplier;
 public class Main {
     public static void main(String[] args) {
         Figure[] figures = new Figure[FigureSupplier.FIGURE_COUNT];
-        FigureSupplier fs = new FigureSupplier();
+        FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < figures.length; i++) {
-            figures[i] = fs.getRandomFigure();
+            figures[i] = figureSupplier.getRandomFigure();
             figures[i].draw();
         }
     }
