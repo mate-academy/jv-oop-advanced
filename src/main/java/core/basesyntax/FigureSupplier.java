@@ -25,6 +25,35 @@ public class FigureSupplier {
         }
     }
 
+    private Figure createRectangle(String color) {
+        int height = randomSize();
+        int width = randomSize();
+        return new Rectangle(height, width, color);
+    }
+
+    private Figure createCircle(String color) {
+        int radius = randomSize();
+        return new Circle(radius, color);
+    }
+
+    private Figure createRightTriangle(String color) {
+        int firstLeg = randomSize();
+        int secondLeg = randomSize();
+        return new RightTriangle(firstLeg, secondLeg, color);
+    }
+
+    private Figure createIsoscelesTrapezoid(String color) {
+        int baseUp = randomSize();
+        int baseDown = randomSize();
+        int height = randomSize();
+        return new IsoscelesTrapezoid(baseUp, baseDown, height, color);
+    }
+
+    private Figure createSquare(String color) {
+        int side = randomSize();
+        return new Square(side, color);
+    }
+
     private int randomSize() {
         return random.nextInt(MAX_SIZE) + MIN_SIZE;
     }
