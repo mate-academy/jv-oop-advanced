@@ -3,8 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int FIGURE_COUNT = 20;
-    private static final int MAX_INTEGER_NUMBER = 100;
+    private static final int MAX_FIGURE_PARAMETER_VALUE = 100;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -40,12 +39,8 @@ public class FigureSupplier {
                 getRandomInt(), getRandomInt(), getRandomInt());
     }
 
-    private int getRandomInt(int n) {
-        return random.nextInt(n) + 1;
-    }
-
     private int getRandomInt() {
-        return getRandomInt(MAX_INTEGER_NUMBER);
+        return random.nextInt(MAX_FIGURE_PARAMETER_VALUE) + 1;
     }
 
     private String getRandomFigureType() {
