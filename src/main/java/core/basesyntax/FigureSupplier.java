@@ -8,34 +8,37 @@ import core.basesyntax.fiqures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final int maxValue = 4;
-    private Random random = new Random();
+    private static final int MAX_VALUE = 4;
+    private static final int MAX_SIZE = 10;
 
     public Figure getRandomFigure() {
-        int figureNumber = random.nextInt(maxValue);
-        Figure rez = new Circle(new Random().nextInt(10));
+        int figureNumber = new Random().nextInt(MAX_VALUE);
+        Figure figure;
         switch (figureNumber) {
             case 0:
-                rez = new Circle(new Random().nextInt(10));
+                figure = new Circle(new Random().nextInt(MAX_SIZE));
+                figure.setColor();
                 break;
             case 1:
-                rez = new IsoscelesTrapezoid(new Random().nextInt(10),
-                        new Random().nextInt(10));
+                figure = new IsoscelesTrapezoid(new Random().nextInt(MAX_SIZE),
+                        new Random().nextInt(MAX_SIZE));
+                figure.setColor();
                 break;
             case 2:
-                rez = new Rectangle(new Random().nextInt(10),
-                        new Random().nextInt(10));
+                figure = new Rectangle(new Random().nextInt(MAX_SIZE),
+                        new Random().nextInt(MAX_SIZE));
+                figure.setColor();
                 break;
             case 3:
-                rez = new RightTriangle(new Random().nextInt(10),
-                        new Random().nextInt(10));
-                break;
-            case 4:
-                rez = new Square(new Random().nextInt(10));
+                figure = new RightTriangle(new Random().nextInt(MAX_SIZE),
+                        new Random().nextInt(MAX_SIZE));
+                figure.setColor();
                 break;
             default:
+                figure = new Square(new Random().nextInt(MAX_SIZE));
+                figure.setColor();
                 break;
         }
-        return rez;
+        return figure;
     }
 }

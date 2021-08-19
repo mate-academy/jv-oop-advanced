@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure extends FigureSupplier implements CollorSupplier, GetArray {
+public abstract class Figure extends CollorSupplier implements AreaCalculator, InformationDrawer {
     private String color;
 
     public void setColor() {
@@ -9,14 +9,5 @@ public abstract class Figure extends FigureSupplier implements CollorSupplier, G
 
     public String getColor() {
         return this.color;
-    }
-
-    public abstract double getArea();
-
-    public abstract void draw();
-
-    @Override
-    public Figure[] getArray() {
-        return GetArray.super.getArray();
     }
 }

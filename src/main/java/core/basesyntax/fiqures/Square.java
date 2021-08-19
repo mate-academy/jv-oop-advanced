@@ -7,7 +7,6 @@ public class Square extends Figure {
 
     public Square(int side) {
         this.side = side;
-        setColor();
     }
 
     @Override

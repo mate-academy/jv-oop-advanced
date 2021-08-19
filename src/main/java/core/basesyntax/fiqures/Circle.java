@@ -7,7 +7,6 @@ public class Circle extends Figure {
 
     public Circle(int radius) {
         this.radius = radius;
-        setColor();
     }
 
     @Override
