@@ -1,28 +1,30 @@
 package core.basesyntax;
 
-public class FigureSupplier extends ColorSupplier {
+public class FigureSupplier {
     public Figure getRandomFigure() {
+        ColorSupplier colorSupplier = new ColorSupplier();
         Randomizer randomizer = new Randomizer();
         Figure figure;
-        switch (randomizer.getRandomNumber()) {
-            case 1: figure = new RightTriangle(randomizer.getRandomNumber(),
-                    randomizer.getRandomNumber());
-                figure.setColor(getRandomColor());
+        switch (randomizer.getRandomNumber(1, 5)) {
+            case 1: figure = new RightTriangle(randomizer.getRandomNumber(1, 5),
+                    randomizer.getRandomNumber(1, 5));
+                figure.setColor(colorSupplier.getRandomColor());
                 return figure;
-            case 2: figure = new Circle(randomizer.getRandomNumber());
-                figure.setColor(getRandomColor());
+            case 2: figure = new Circle(randomizer.getRandomNumber(1, 5));
+                figure.setColor(colorSupplier.getRandomColor());
                 return figure;
             case 3:
-                figure = new Square(randomizer.getRandomNumber());
-                figure.setColor(getRandomColor());
+                figure = new Square(randomizer.getRandomNumber(1, 5));
+                figure.setColor(colorSupplier.getRandomColor());
                 return figure;
-            case 4: figure = new IsoscelesTrapezoid(randomizer.getRandomNumber(),
-                    randomizer.getRandomNumber(), randomizer.getRandomNumber());
-                figure.setColor(getRandomColor());
+            case 4: figure = new IsoscelesTrapezoid(randomizer.getRandomNumber(1, 5),
+                    randomizer.getRandomNumber(1, 5), randomizer.getRandomNumber(1, 5));
+                figure.setColor(colorSupplier.getRandomColor());
                 return figure;
             default:
-                figure = new Rectangle(randomizer.getRandomNumber(), randomizer.getRandomNumber());
-                figure.setColor(getRandomColor());
+                figure = new Rectangle(randomizer.getRandomNumber(1, 5),
+                        randomizer.getRandomNumber(1, 5));
+                figure.setColor(colorSupplier.getRandomColor());
                 return figure;
         }
     }

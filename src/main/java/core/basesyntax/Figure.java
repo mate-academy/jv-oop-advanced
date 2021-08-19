@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Figure implements InformationDrawer, AreaCalculator {
+abstract class Figure implements InformationDrawer, AreaCalculator {
     private String color;
 
     public void setColor(String color) {
@@ -9,15 +9,5 @@ public class Figure implements InformationDrawer, AreaCalculator {
 
     public String getColor() {
         return color;
-    }
-
-    @Override
-    public void draw() {
-
-    }
-
-    @Override
-    public int getArea() {
-        return 0;
     }
 }

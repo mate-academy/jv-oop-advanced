@@ -22,4 +22,3 @@ public class Square extends Figure {
                 + getSide() + ", color: " + getColor());
     }
 }
-
