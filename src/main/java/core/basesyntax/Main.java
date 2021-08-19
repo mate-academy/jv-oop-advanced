@@ -4,11 +4,12 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        Figure[] figures = new Figure[new Random().nextInt(10)];
+        final int constNumber = 10;
+        Figure[] figures = new Figure[new Random().nextInt(constNumber)];
         FigureSupplier figureSupplier = new FigureSupplier();
-        for (Figure test : figures) {
-            test = figureSupplier.getRandomFigure();
-            System.out.println(test.getInformation());
+        for (Figure figure : figures) {
+            figure = figureSupplier.getRandomFigure();
+            System.out.println(figure.getInformation());
         }
     }
 }

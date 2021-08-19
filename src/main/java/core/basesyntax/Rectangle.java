@@ -36,6 +36,7 @@ public class Rectangle extends Figure {
     @Override
     public String getInformation() {
         return "Figure: rectangle, area: " + new DecimalFormat("#.#").format(getArea())
-                + " sq.units, sideA: " + sideA + " units, sideB: " + sideB + "color: " + getColor();
+                + " sq.units, sideA: " + sideA + " units, sideB: " + sideB
+                + " units, color: " + getColor();
     }
 }
