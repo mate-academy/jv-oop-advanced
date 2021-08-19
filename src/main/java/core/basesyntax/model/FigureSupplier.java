@@ -5,6 +5,7 @@ import java.util.Random;
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
     public static final double RANDOM_MAX_VALUE = 3;
+
     private Random random = new Random();
 
     private double getRandomNum() {

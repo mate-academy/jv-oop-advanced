@@ -5,8 +5,10 @@ import core.basesyntax.model.FigureSupplier;
 import java.util.Random;
 
 public class Main {
+    public static final int MAX_ARRAY = 10;
+
     public static void main(String[] args) {
-        int randomArray = new Random().nextInt(5);
+        int randomArray = new Random().nextInt(MAX_ARRAY);
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] randomFigure = new Figure[randomArray];
 
