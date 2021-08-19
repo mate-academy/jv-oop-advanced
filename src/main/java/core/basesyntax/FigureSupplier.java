@@ -2,17 +2,18 @@ package core.basesyntax;
 
 public class FigureSupplier {
     private static final int FIGURES_AMOUNT = 5;
+    private static final int MAX_VALUE = 100;
 
-    private static int getFigureNumber() {
-        return (int) (1 + Math.random() * FIGURES_AMOUNT);
+    private int getRandomNumber(int figuresAmount) {
+        return (int) (1 + Math.random() * figuresAmount);
     }
 
-    private static int getRandomNumber() {
-        return (int) (1 + Math.random() * 100);
+    private int getRandomNumber() {
+        return (int) (1 + Math.random() * MAX_VALUE);
     }
 
     public Figure getRandomFigure() {
-        switch (getFigureNumber()) {
+        switch (getRandomNumber(FIGURES_AMOUNT)) {
             case 1:
                 return new RightTriangle(getRandomNumber(),
                         getRandomNumber(),
@@ -31,7 +32,8 @@ public class FigureSupplier {
             case 5:
                 return new Circle(getRandomNumber(), new ColorSupplier().getRandomColor());
             default:
-                throw new IllegalStateException("Unexpected value: " + getFigureNumber());
+                throw new IllegalStateException("Unexpected value: "
+                                                 + getRandomNumber(FIGURES_AMOUNT));
         }
     }
 }

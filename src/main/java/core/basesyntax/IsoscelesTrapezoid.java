@@ -1,31 +1,32 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private int firstLength;
-    private int secondLength;
+    private int firstLengthOfTrapezoid;
+    private int secondLengthOfTrapezoid;
     private int heightOfTrapezoid;
 
-    public IsoscelesTrapezoid(int firstLength,
-                              int secondLength,
+    public IsoscelesTrapezoid(int firstLengthOfTrapezoid,
+                              int secondLengthOfTrapezoid,
                               int heightOfTrapezoid,
                               Color color) {
         super(color);
-        this.firstLength = firstLength;
-        this.secondLength = secondLength;
+        this.firstLengthOfTrapezoid = firstLengthOfTrapezoid;
+        this.secondLengthOfTrapezoid = secondLengthOfTrapezoid;
         this.heightOfTrapezoid = heightOfTrapezoid;
     }
 
     @Override
-    public String toString() {
-        return "IsoscelesTrapezoid: "
-                + "firstLength = " + firstLength
-                + ", secondLength = " + secondLength
+    public void drawFigure() {
+        System.out.println("IsoscelesTrapezoid: "
+                + "firstLength = " + firstLengthOfTrapezoid
+                + ", secondLength = " + secondLengthOfTrapezoid
                 + ", heightOfTrapezoid = " + heightOfTrapezoid
-                + ',' + super.toString();
+                + ", color = " + getColor()
+                + ", area = " + areaCalculator() + '.');
     }
 
     @Override
     public double areaCalculator() {
-        return (double)(firstLength + secondLength) * heightOfTrapezoid / 2;
+        return (double)(firstLengthOfTrapezoid + secondLengthOfTrapezoid) * heightOfTrapezoid / 2;
     }
 }

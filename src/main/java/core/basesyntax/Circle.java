@@ -9,10 +9,11 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "Circle: "
+    public void drawFigure() {
+        System.out.println("Circle: "
                 + "radius = " + radius
-                + ',' + super.toString();
+                + ", color = " + getColor()
+                + ", area = " + areaCalculator() + '.');
     }
 
     @Override

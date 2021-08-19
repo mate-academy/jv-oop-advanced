@@ -1,22 +1,19 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public abstract class Figure implements InfoDrawer, AreaCalculator {
     private Color color;
-    private double area;
 
     public Figure(Color color) {
         this.color = color;
     }
 
-    public void setArea(double area) {
-        this.area = area;
+    public Color getColor() {
+        return color;
     }
 
     @Override
-    public String toString() {
-        return " color = " + color
-                + ", area = " + area + '.';
-    }
-
     public abstract double areaCalculator();
+
+    @Override
+    public abstract void drawFigure();
 }

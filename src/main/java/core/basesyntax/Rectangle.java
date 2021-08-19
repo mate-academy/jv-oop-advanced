@@ -1,25 +1,26 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private int firstSide;
-    private int secondSide;
+    private int firstSideOfRectangle;
+    private int secondSideOfRectangle;
 
-    public Rectangle(int firstSide, int secondSide, Color color) {
+    public Rectangle(int firstSideOfRectangle, int secondSideOfRectangle, Color color) {
         super(color);
-        this.firstSide = firstSide;
-        this.secondSide = secondSide;
+        this.firstSideOfRectangle = firstSideOfRectangle;
+        this.secondSideOfRectangle = secondSideOfRectangle;
     }
 
     @Override
-    public String toString() {
-        return "Rectangle: "
-                + "firstSide = " + firstSide
-                + ", secondSide = " + secondSide
-                + ',' + super.toString();
+    public void drawFigure() {
+        System.out.println("Rectangle: "
+                + "firstSide = " + firstSideOfRectangle
+                + ", secondSide = " + secondSideOfRectangle
+                + ", color = " + getColor()
+                + ", area = " + areaCalculator() + '.');
     }
 
     @Override
     public double areaCalculator() {
-        return firstSide * secondSide;
+        return firstSideOfRectangle * secondSideOfRectangle;
     }
 }

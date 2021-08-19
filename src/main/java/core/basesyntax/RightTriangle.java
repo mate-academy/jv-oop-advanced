@@ -11,11 +11,12 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "RightTriangle: "
+    public void drawFigure() {
+        System.out.println("RightTriangle: "
                 + "baseOfTriangle = " + baseOfTriangle
                 + ", heightOfTriangle = " + heightOfTriangle
-                + ',' + super.toString();
+                + ", color = " + getColor()
+                + ", area = " + areaCalculator() + '.');
     }
 
     @Override
