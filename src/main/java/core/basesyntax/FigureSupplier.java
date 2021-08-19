@@ -8,7 +8,7 @@ public class FigureSupplier {
     private static final double min = 5;
     private static final int randomForFigures = 5;
 
-    public Figure randomFigureSupplier() {
+    public Figure hetRandomFigure() {
         int randomIndexForFigure = rand.nextInt(randomForFigures);
         ColorSupplier color = new ColorSupplier();
         String randomColor = color.getRandomColor().toString();
