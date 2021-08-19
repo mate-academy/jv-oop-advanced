@@ -5,7 +5,7 @@ import java.util.Random;
 public class ColorSupplier {
 
     enum Colors {
-        red, orange, yellow, green, blue, violet
+        RED, ORANGE, YELLOW, GREEN, BLUE, VIOLET
     }
 
     public static String getRandomColor() {
