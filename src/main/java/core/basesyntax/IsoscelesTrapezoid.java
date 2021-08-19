@@ -1,50 +1,43 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
+    private int trapezoidBottomSide;
+    private int trapezoidTopSide;
+    private int trapezoidSide;
 
-    private int bottomSide;
-    private int topSide;
-    private int leftSide;
-    private int rightSide;
-
-    public IsoscelesTrapezoid(String name, String color, int bottomSide, int topSide,
-                              int leftSide, int rightSide) {
+    public IsoscelesTrapezoid(String name, String color, int trapezoidBottomSide,
+                              int trapezoidTopSide, int trapezoidSide) {
         super(name, color);
-        this.bottomSide = bottomSide;
-        this.topSide = topSide;
-        this.leftSide = leftSide;
-        this.rightSide = rightSide;
+        this.trapezoidBottomSide = trapezoidBottomSide;
+        this.trapezoidTopSide = trapezoidTopSide;
+        this.trapezoidSide = trapezoidSide;
     }
 
-    public int getBottomSide() {
-        return bottomSide;
+    public int getTrapezoidBottomSide() {
+        return trapezoidBottomSide;
     }
 
-    public int getTopSide() {
-        return topSide;
+    public int getTrapezoidTopSide() {
+        return trapezoidTopSide;
     }
 
-    public int getLeftSide() {
-        return leftSide;
-    }
-
-    public int getRightSide() {
-        return rightSide;
+    public int getTrapezoidSide() {
+        return trapezoidSide;
     }
 
     @Override
     public double countArea() {
-        int difference = (topSide - bottomSide) / 2;
+        int difference = (trapezoidTopSide - trapezoidBottomSide) / 2;
         difference = (difference < 0) ? difference * (-1) : difference;
-        double height = Math.sqrt((difference * difference) + (leftSide * leftSide));
-        double area = (bottomSide + topSide) / 2 * height;
+        double height = Math.sqrt((difference * difference) + (trapezoidSide * trapezoidSide));
+        double area = (trapezoidBottomSide + trapezoidTopSide) / 2 * height;
         return area;
     }
 
     @Override
     public void printInfo() {
         System.out.println("Figure: " + getName() + ", area: " + countArea() + ", bottom side: "
-                + bottomSide + ", top side: " + topSide + ", left side: "
-                + leftSide + ", right side: " + rightSide);
+                + trapezoidBottomSide + ", top side: " + trapezoidTopSide + ", left side: "
+                + trapezoidSide + ", right side: " + trapezoidBottomSide);
     }
 }

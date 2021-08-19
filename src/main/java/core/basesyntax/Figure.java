@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements AreaCounter, Informable {
+public abstract class Figure implements AreaCalculator, Informable {
     private String color;
     private String name;
 

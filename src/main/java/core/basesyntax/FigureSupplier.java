@@ -7,47 +7,39 @@ public class FigureSupplier {
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Random getRandom() {
-        return random;
-    }
-
     public Figure getRandomFigure() {
-
         String figureColor = colorSupplier.getRandomColor();
-        int figuresCount = random.nextInt(FIGURE_COUNT);
-
         int figureNumber = random.nextInt(FIGURE_COUNT);
-        int bottomSideNumber = random.nextInt(FIGURE_COUNT);
-        int topSideNumber = random.nextInt(FIGURE_COUNT);
-        int leftSideNumber = random.nextInt(FIGURE_COUNT);
-        int rightSideNumber = random.nextInt(FIGURE_COUNT);
         switch (figureNumber) {
             case 1:
+                int squareSide = random.nextInt(FIGURE_COUNT);
                 Figure square = new Square("Square", figureColor,
-                        bottomSideNumber, bottomSideNumber,
-                        bottomSideNumber, bottomSideNumber);
+                        squareSide);
                 return square;
             case 2:
+                int triangleSide = random.nextInt(FIGURE_COUNT);
                 Figure rightTriangle = new RightTriangle("Right Triangle",
-                        figureColor, topSideNumber * 5,
-                        topSideNumber * 4,topSideNumber * 3);
+                        figureColor, triangleSide * 5,
+                        triangleSide * 4,triangleSide * 3);
                 return rightTriangle;
             case 3:
-                topSideNumber = (topSideNumber == bottomSideNumber)
-                        ? topSideNumber + 1 : topSideNumber;
-                Figure rectangle = new Rectangle("Rectangle", figureColor,
-                        bottomSideNumber, bottomSideNumber,
-                        topSideNumber, topSideNumber);
+                int bottomSide = random.nextInt(FIGURE_COUNT);
+                int leftSide = random.nextInt(FIGURE_COUNT);
+                Figure rectangle = new Rectangle("Rectangle", figureColor, bottomSide, leftSide);
                 return rectangle;
             case 4:
-                topSideNumber = (topSideNumber == bottomSideNumber)
-                        ? topSideNumber + 1 : topSideNumber;
+                int trapezoidSide = random.nextInt(FIGURE_COUNT);
+                int trapezoidTopSide = random.nextInt(FIGURE_COUNT);
+                int trapezoidBottomSide = random.nextInt(FIGURE_COUNT);
+                trapezoidTopSide = (trapezoidTopSide == trapezoidBottomSide)
+                        ? trapezoidTopSide + 1 : trapezoidTopSide;
                 Figure isosclesTrapezoid = new IsoscelesTrapezoid("Isoscles Trapezoid",
-                        figureColor, bottomSideNumber,
-                        topSideNumber, leftSideNumber,leftSideNumber);
+                        figureColor, trapezoidBottomSide,
+                        trapezoidTopSide, trapezoidSide);
                 return isosclesTrapezoid;
             default:
-                Figure circle = new Circle("Circle", figureColor, topSideNumber);
+                int circleNumber = random.nextInt(FIGURE_COUNT);
+                Figure circle = new Circle("Circle", figureColor, circleNumber);
                 return circle;
         }
     }
