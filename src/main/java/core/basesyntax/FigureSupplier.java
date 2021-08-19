@@ -14,7 +14,6 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         String color = new ColorSupplier().getRandomColor();
         int figureNumber = randomNumber(FIGURE_COUNT);
-
         switch (figureNumber) {
             case 1:
                 Square square = new Square();
