@@ -6,7 +6,7 @@ public enum ColorList {
         BLACK,
         BLUE,
         LILAC,
-        TURQUOiSE,
+        TURQUOISE,
         YELLOW,
-        NAVY BLUE
+        PINK
 }
