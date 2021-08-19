@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Draw {
+public class Rectangle extends Figure {
     private int width;
     private int height;
 
@@ -31,7 +31,7 @@ public class Rectangle extends Figure implements Draw {
     }
 
     @Override
-    public void drawing() {
+    public void draw() {
         System.out.println(
                 new StringBuilder().append("Figure: RightTriangle, area: ")
                         .append(this.getArea())

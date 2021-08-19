@@ -12,7 +12,7 @@ public class Main {
         for (int i = 0; i < figures.length; i++) {
             figures[i] = figureSupplier.getRandomFigure();
             figures[i].setColor(colorSupplier.getRandomColor());
-            figures[i].drawing();
+            figures[i].draw();
         }
     }
 }

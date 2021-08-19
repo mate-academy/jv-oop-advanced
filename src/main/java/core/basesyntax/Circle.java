@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements Draw {
+public class Circle extends Figure {
     private int radius;
 
     public Circle(int radius) {
@@ -21,7 +21,7 @@ public class Circle extends Figure implements Draw {
     }
 
     @Override
-    public void drawing() {
+    public void draw() {
         System.out.println(
                 new StringBuilder().append("Figure: Circle, area: ")
                         .append(this.getArea())
