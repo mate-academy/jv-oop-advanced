@@ -6,7 +6,7 @@ public class FigureSupplier {
     private static final int MAX_NUMBERS = 5;
     private static final int COEFICIENT_RANDOM = 10;
 
-    public Figure getRandomFigure() {
+    public static Figure getRandomFigure() {
         Figure figure;
         switch (new Random().nextInt(MAX_NUMBERS)) {
             case 0:
