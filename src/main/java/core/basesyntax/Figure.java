@@ -1,9 +1,8 @@
 package core.basesyntax;
 
-public abstract class Figure implements Informable, AreaCounter {
+public abstract class Figure implements AreaCounter, Informable {
     private String color;
     private String name;
-    private double area;
 
     public Figure(String name, String color) {
         this.name = name;
@@ -24,13 +23,5 @@ public abstract class Figure implements Informable, AreaCounter {
 
     public String getName() {
         return name;
-    }
-
-    public void setArea(double area) {
-        this.area = area;
-    }
-
-    public double getArea() {
-        return area;
     }
 }

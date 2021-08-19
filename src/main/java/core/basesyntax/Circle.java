@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements Informable, AreaCounter {
+public class Circle extends Figure {
     private int radius;
 
     public Circle(String name, String color, int radius) {
@@ -9,14 +9,15 @@ public class Circle extends Figure implements Informable, AreaCounter {
     }
 
     @Override
-    public void countArea() {
+    public double countArea() {
         double area = 0;
         area = Math.PI * radius * 2;
-        super.setArea(area);
+        return area;
     }
 
     @Override
     public void printInfo() {
-        System.out.println("Figure: " + getName() + ", area: " + getArea() + ", radius: " + radius);
+        System.out.println("Figure: " + getName() + ", area: "
+                + countArea() + ", radius: " + radius);
     }
 }
