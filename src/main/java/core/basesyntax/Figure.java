@@ -1,7 +1,15 @@
 package core.basesyntax;
 
-public interface Figure {
-    String informationFigure();
+public abstract class Figure implements DrawFigure {
+    public String name() {
+        return null;
+    }
 
-    double getArea();
+    public String color() {
+        return null;
+    }
+
+    public double getArea() {
+        return 0;
+    }
 }

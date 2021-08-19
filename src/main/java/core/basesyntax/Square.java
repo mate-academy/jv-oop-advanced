@@ -1,14 +1,24 @@
 package core.basesyntax;
 
-public class Square extends ColorSupplier implements Figure {
+public class Square extends Figure {
     private double side = Math.random() * 10;
 
     @Override
-    public String informationFigure() {
-        System.out.printf("Figure: square, area: %.1f", getArea());
-        System.out.printf(" sq.units, side: %.1f", side);
-        System.out.println(" units, color: " + getRandomColor());
-        return null;
+    public void draw() {
+        System.out.printf("Figure: %s, area: %.1f sq.units, "
+                + "side: %.1f units, "
+                + "color: %s%n", name(), getArea(), side, color());
+    }
+
+    @Override
+    public String name() {
+        return "square";
+    }
+
+    @Override
+    public String color() {
+        ColorSupplier colorSupplier = new ColorSupplier();
+        return colorSupplier.getRandomColor();
     }
 
     @Override

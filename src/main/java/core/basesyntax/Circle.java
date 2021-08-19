@@ -1,15 +1,24 @@
 package core.basesyntax;
 
-public class Circle extends ColorSupplier implements Figure {
+public class Circle extends Figure {
     private double radius = Math.random() * 10;
 
     @Override
-    public String informationFigure() {
-        System.out.printf("Figure: circle, area: %.1f", getArea());
-        System.out.printf(" sq.units, radius: %.1f", radius);
-        System.out.printf(" units, diagonal: %.1f", radius * 2);
-        System.out.println(" units, color: " + getRandomColor());
-        return null;
+    public void draw() {
+        System.out.printf("Figure: %s, area: %.1f sq.units,"
+                + " radius: %.1f units, diagonal: %.1f units, "
+                + "color: %s%n", name(), getArea(), radius, radius * 2, color());
+    }
+
+    @Override
+    public String name() {
+        return "circle";
+    }
+
+    @Override
+    public String color() {
+        ColorSupplier colorSupplier = new ColorSupplier();
+        return colorSupplier.getRandomColor();
     }
 
     @Override
