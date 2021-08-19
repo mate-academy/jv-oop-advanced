@@ -1,17 +1,14 @@
 package core.basesyntax.model;
 
-import core.basesyntax.ColorSupplier;
-
 public class IsoscelesTrapezoid extends Figure {
     private final double sideA;
     private final double sideB;
     private final double height;
 
-    public IsoscelesTrapezoid() {
-        this.sideA = Figure.getRandomNumber();
-        this.sideB = Figure.getRandomNumber();
-        this.height = Figure.getRandomNumber();
-        super.setColour(ColorSupplier.getRandomColor());
+    public IsoscelesTrapezoid(double sideA, double sideB, double height) {
+        this.sideA = sideA;
+        this.sideB = sideB;
+        this.height = height;
     }
 
     @Override

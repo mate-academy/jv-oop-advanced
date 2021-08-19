@@ -1,13 +1,10 @@
 package core.basesyntax.model;
 
-import core.basesyntax.ColorSupplier;
-
 public class Circle extends Figure {
     private final int radius;
 
-    public Circle() {
-        this.radius = Figure.getRandomNumber();
-        super.setColour(ColorSupplier.getRandomColor());
+    public Circle(int radius) {
+        this.radius = radius;
     }
 
     @Override

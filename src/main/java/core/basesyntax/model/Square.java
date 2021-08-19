@@ -1,13 +1,11 @@
 package core.basesyntax.model;
 
-import core.basesyntax.ColorSupplier;
-
 public class Square extends Figure {
     private final int side;
 
-    public Square() {
-        this.side = Figure.getRandomNumber();
-        super.setColour(ColorSupplier.getRandomColor());
+    public Square(int side) {
+        this.side = side;
+
     }
 
     @Override

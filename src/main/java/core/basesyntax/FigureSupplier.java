@@ -6,25 +6,50 @@ import core.basesyntax.model.IsoscelesTrapezoid;
 import core.basesyntax.model.Rectangle;
 import core.basesyntax.model.RightTriangle;
 import core.basesyntax.model.Square;
+import java.util.Random;
 
 public class FigureSupplier {
+    private final Random random = new Random();
+    private final int randomNumber = random.nextInt(50);
+
     public Figure getRandomFigure() {
-        String[] figures = {"Circle", "Square", "Rectangle", "RightTriangle", "IsoscelesTrapezoid"};
-        String someFigure = figures[(int) (Math.random() * 4)];
+        int someFigure = random.nextInt(5);
         switch (someFigure) {
-            case "Circle" :
-                return new Circle();
-            case "Square" :
-                return new Square();
-            case "Rectangle" :
-                return new Rectangle();
-            case "RightTriangle" :
-                return new RightTriangle();
-            case "IsoscelesTrapezoid" :
-                return new IsoscelesTrapezoid();
+            case 0:
+                return newCircle();
+            case 1:
+                return newRectangle();
+            case 2:
+                return newSquare();
+            case 3:
+                return newIsoscelesTrapezoid();
             default:
-                break;
+                return newRightTriangle();
         }
-        return new Circle();
+
+    }
+
+    private Circle newCircle() {
+        return new Circle(random.nextInt(randomNumber));
+    }
+
+    private Rectangle newRectangle() {
+        return new Rectangle(random.nextInt(randomNumber),
+                random.nextInt(randomNumber));
+    }
+
+    private RightTriangle newRightTriangle() {
+        return new RightTriangle(random.nextInt(randomNumber),
+                random.nextInt(randomNumber));
+    }
+
+    private Square newSquare() {
+        return new Square(random.nextInt(randomNumber));
+    }
+
+    private IsoscelesTrapezoid newIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(random.nextInt(randomNumber),
+                random.nextInt(randomNumber),
+                random.nextInt(randomNumber));
     }
 }

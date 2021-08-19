@@ -1,15 +1,13 @@
 package core.basesyntax.model;
 
-import core.basesyntax.ColorSupplier;
-
 public class Rectangle extends Figure {
     private final int sideA;
     private final int sideB;
 
-    public Rectangle() {
-        this.sideA = Figure.getRandomNumber();
-        this.sideB = Figure.getRandomNumber();
-        super.setColour(ColorSupplier.getRandomColor());
+    public Rectangle(int sideA, int sideB) {
+        this.sideA = sideA;
+        this.sideB = sideB;
+
     }
 
     @Override

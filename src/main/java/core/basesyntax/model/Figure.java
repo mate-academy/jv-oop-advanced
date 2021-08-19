@@ -1,20 +1,16 @@
 package core.basesyntax.model;
 
+import core.basesyntax.AreaCalculator;
 import core.basesyntax.Drawable;
-import core.basesyntax.FigureArea;
 
-public abstract class Figure implements FigureArea, Drawable {
-    private String colour;
+public abstract class Figure implements AreaCalculator, Drawable {
+    private Colour colour;
 
-    public static int getRandomNumber() {
-        return (int) (Math.random() * 20);
-    }
-
-    public String getColour() {
+    public Colour getColour() {
         return colour;
     }
 
-    public void setColour(String colour) {
+    public void setColour(Colour colour) {
         this.colour = colour;
     }
 }

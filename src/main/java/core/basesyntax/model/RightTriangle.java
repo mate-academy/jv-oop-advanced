@@ -1,15 +1,13 @@
 package core.basesyntax.model;
 
-import core.basesyntax.ColorSupplier;
-
 public class RightTriangle extends Figure {
     private final float side;
     private final float height;
 
-    public RightTriangle() {
-        this.side = Figure.getRandomNumber();
-        this.height = Figure.getRandomNumber();
-        super.setColour(ColorSupplier.getRandomColor());
+    public RightTriangle(float side, float height) {
+        this.side = side;
+        this.height = height;
+
     }
 
     @Override
