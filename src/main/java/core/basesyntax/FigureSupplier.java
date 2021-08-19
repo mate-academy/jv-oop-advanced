@@ -20,7 +20,6 @@ public class FigureSupplier {
                 square.setColor(color);
                 square.setSide(randomNumber(RANDOM_SIDE_RANGE));
                 return square;
-
             case 2:
                 Circle circle = new Circle();
                 circle.setColor(color);
@@ -40,7 +39,10 @@ public class FigureSupplier {
                 isoscelesTrapezoid.setHeight(randomNumber(RANDOM_SIDE_RANGE));
                 return isoscelesTrapezoid;
             default:
-                return new Square();
+                Square square1 = new Square();
+                square1.setColor(color);
+                square1.setSide(randomNumber(RANDOM_SIDE_RANGE));
+                return square1;
         }
     }
 }
