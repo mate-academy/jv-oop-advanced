@@ -9,7 +9,6 @@ public class FigureSupplier {
         int randomIndex = (int)(Math.random() * 5);
         ColorSupplier colorSupplier = new ColorSupplier();
         String randomColor = colorSupplier.getRandomColor();
-
         switch (randomIndex) {
             case 0:
                 return new Circle(getRandomNum(), randomColor);
