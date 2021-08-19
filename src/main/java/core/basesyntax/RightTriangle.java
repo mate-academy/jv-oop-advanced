@@ -4,14 +4,19 @@ public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
-    public int getFirstLeg() { return firstLeg;}
-    public int getSecondLeg() {return secondLeg;}
-
     public RightTriangle(int firstLeg, int secondLeg, String color, String name) {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
         super.setColor(color);
         super.setName(name);
+    }
+
+    public int getFirstLeg() {
+        return firstLeg;
+    }
+
+    public int getSecondLeg() {
+        return secondLeg;
     }
 
     @Override
