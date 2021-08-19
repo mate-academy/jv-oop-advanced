@@ -13,12 +13,12 @@ public class RightTriangle extends Figure {
     @Override
     public String drawFigure() {
         return "Figure: " + this.getName()
-                + ", area: " + this.getAria() + " sq.units, "
+                + ", area: " + this.getArea()
                 + "color: " + this.getColor();
     }
 
     @Override
-    public double getAria() {
+    public double getArea() {
         return firstSide * secondSide / 2;
     }
 }

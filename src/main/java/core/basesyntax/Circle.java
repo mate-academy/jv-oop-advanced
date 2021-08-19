@@ -11,12 +11,12 @@ public class Circle extends Figure {
     @Override
     public String drawFigure() {
         return "Figure: " + this.getName()
-                + ", area: " + this.getAria() + " sq.units, "
+                + ", area: " + this.getArea()
                 + "color: " + this.getColor();
     }
 
     @Override
-    public double getAria() {
+    public double getArea() {
         return Math.PI * radius * radius;
     }
 }
