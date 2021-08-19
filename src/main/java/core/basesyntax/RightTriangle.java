@@ -16,7 +16,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String getDraw() {
+    public String draw() {
         return "Figure " + getType() + ", area " + getArea() + " sq.u., firstLeg "
                 + firstLeg + " and secondLeg " + secondLeg + " u., color " + getColor();
     }
