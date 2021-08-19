@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class FigureSupplier {
     private Random rand = new Random();
-    private double max = 100;
-    private double min = 5;
-    private int randomForFigures = 5;
+    private static final double max = 100;
+    private static final double min = 5;
+    private static final int randomForFigures = 5;
 
     public Figure randomFigureSupplier() {
         int randomIndexForFigure = rand.nextInt(randomForFigures);
