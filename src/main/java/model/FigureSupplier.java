@@ -3,12 +3,13 @@ package model;
 import java.util.Random;
 
 public class FigureSupplier {
+    static final int randomLimit = 101;
+    static final int parametrsCount = 3;
+    static final int[] finalInt = new int[parametrsCount];
+
     public Figure getRandomFigure() {
         Random random = new Random();
         ColorSupplier colorSupplier = new ColorSupplier();
-        final int randomLimit = 101;
-        final int parametrsCount = 3;
-        final int[] finalInt = new int[parametrsCount];
         for (int i = 0; i < parametrsCount; i++) {
             finalInt[i] = random.nextInt(randomLimit) + 1;
         }
