@@ -13,47 +13,46 @@ public class FigureSupplier {
     }
 
     private int getRandom5() {
-        int figureNumber = random.nextInt(FIGURE_COUNT) + 1;
+        int figureNumber = random.nextInt(FIGURE_COUNT);
         return figureNumber;
     }
 
-    private int getRandom20() {
-        int figureParameter = random.nextInt(FIGURE_PARAMETER) + 1;
-        return figureParameter;
-    }
-
     private Circle generateCircle() {
-        ColorSupplier newColor = new ColorSupplier();
-        Circle outCircle = new Circle(getRandom20(), newColor.getRandomColor());
+        ColorSupplier newColorSupplier = new ColorSupplier();
+        Circle outCircle = new Circle(random.nextInt(FIGURE_PARAMETER),
+                newColorSupplier.getRandomColor());
         return outCircle;
     }
 
     private IsoscelesTrapezoid generateTrapezoid() {
-        ColorSupplier newColor = new ColorSupplier();
+        ColorSupplier newColorSupplier = new ColorSupplier();
         IsoscelesTrapezoid outFigure =
-                new IsoscelesTrapezoid(getRandom20(), getRandom20(),
-                        getRandom20(), newColor.getRandomColor());
+                new IsoscelesTrapezoid(random.nextInt(FIGURE_PARAMETER),
+                        random.nextInt(FIGURE_PARAMETER),
+                        random.nextInt(FIGURE_PARAMETER), newColorSupplier.getRandomColor());
         return outFigure;
     }
 
     private Square generateSquare() {
-        ColorSupplier newColor = new ColorSupplier();
+        ColorSupplier newColorSupplier = new ColorSupplier();
         Square outFigure =
-                new Square(getRandom20(), newColor.getRandomColor());
+                new Square(random.nextInt(FIGURE_PARAMETER), newColorSupplier.getRandomColor());
         return outFigure;
     }
 
     private RightTriangle generateRightTriangle() {
-        ColorSupplier newColor = new ColorSupplier();
+        ColorSupplier newColorSupplier = new ColorSupplier();
         RightTriangle outFigure =
-                new RightTriangle(getRandom20(), getRandom20(), newColor.getRandomColor());
+                new RightTriangle(random.nextInt(FIGURE_PARAMETER),
+                        random.nextInt(FIGURE_PARAMETER), newColorSupplier.getRandomColor());
         return outFigure;
     }
 
     private Rectangle generateRectangle() {
-        ColorSupplier newColor = new ColorSupplier();
+        ColorSupplier newColorSupplier = new ColorSupplier();
         Rectangle outFigure =
-                new Rectangle(getRandom20(), getRandom20(), newColor.getRandomColor());
+                new Rectangle(random.nextInt(FIGURE_PARAMETER),
+                        random.nextInt(FIGURE_PARAMETER), newColorSupplier.getRandomColor());
         return outFigure;
     }
 
