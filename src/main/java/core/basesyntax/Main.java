@@ -14,7 +14,7 @@ public class Main {
             figures[i] = figureSupplier.getRandomFigure();
         }
         for (Figure figure : figures) {
-            figure.getInfo();
+            figure.draw();
         }
     }
 }

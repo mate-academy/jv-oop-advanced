@@ -26,7 +26,8 @@ public class Rectangle extends Figure {
         this.secondSide = secondSide;
     }
 
-    public void getInfo() {
+    @Override
+    public void draw() {
         System.out.println("Figure: rectangle, area: " + getArea() + " sq.units, color: "
                 + getColor());
     }
