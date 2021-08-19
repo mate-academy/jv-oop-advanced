@@ -10,13 +10,11 @@ public class Main {
     public static void main(String[] args) {
         Figure[] figures = new Figure[new Random().nextInt(MAX_FIGURES_COUNT)];
         FigureSupplier figureSupplier = new FigureSupplier();
-        Figure figure;
         for (int i = 0; i < figures.length; i++) {
-            figure = figureSupplier.getRandomFigure();
-            figures[i] = figure;
+            figures[i] = figureSupplier.getRandomFigure();
         }
-        for (Figure f : figures) {
-            f.getInfo();
+        for (Figure figure : figures) {
+            figure.getInfo();
         }
     }
 }

@@ -1,16 +1,13 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.services.AreaCalculator;
-import core.basesyntax.services.ColorSupplier;
-
-public class RightTriangle extends Figure implements AreaCalculator {
+public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
-    public RightTriangle(int firstLeg, int secondLeg) {
+    public RightTriangle(String color, int firstLeg, int secondLeg) {
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        super.setColor(draw());
     }
 
     public int getFirstLeg() {
@@ -29,11 +26,9 @@ public class RightTriangle extends Figure implements AreaCalculator {
         this.secondLeg = secondLeg;
     }
 
-    @Override
     public void getInfo() {
         System.out.println("Figure: right triangle, area: " + getArea() + " sq.units, color: "
                 + getColor());
-
     }
 
     @Override
@@ -41,8 +36,4 @@ public class RightTriangle extends Figure implements AreaCalculator {
         return 0.5 * firstLeg * secondLeg;
     }
 
-    @Override
-    public String draw() {
-        return new ColorSupplier().getRandomColor();
-    }
 }

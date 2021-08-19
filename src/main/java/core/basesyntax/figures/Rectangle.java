@@ -1,16 +1,13 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.services.AreaCalculator;
-import core.basesyntax.services.ColorSupplier;
-
-public class Rectangle extends Figure implements AreaCalculator {
+public class Rectangle extends Figure {
     private int firstSide;
     private int secondSide;
 
-    public Rectangle(int firstSide, int secondSide) {
+    public Rectangle(String color, int firstSide, int secondSide) {
+        super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
-        super.setColor(draw());
     }
 
     public int getFirstSide() {
@@ -29,7 +26,6 @@ public class Rectangle extends Figure implements AreaCalculator {
         this.secondSide = secondSide;
     }
 
-    @Override
     public void getInfo() {
         System.out.println("Figure: rectangle, area: " + getArea() + " sq.units, color: "
                 + getColor());
@@ -40,8 +36,4 @@ public class Rectangle extends Figure implements AreaCalculator {
         return firstSide * secondSide;
     }
 
-    @Override
-    public String draw() {
-        return new ColorSupplier().getRandomColor();
-    }
 }
