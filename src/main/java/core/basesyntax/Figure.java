@@ -19,5 +19,4 @@ public abstract class Figure implements Area, PrintInfo {
     public String getType() {
         return type;
     }
-
 }

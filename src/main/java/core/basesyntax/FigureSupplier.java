@@ -53,5 +53,4 @@ public class FigureSupplier {
         int height = random.nextInt(UNITS);
         return new IsoscelesTrapezoid(sideA, sideB, height, color);
     }
-
 }
