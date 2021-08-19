@@ -31,5 +31,3 @@ public class FigureSupplier {
         return (Math.floor(Math.random() * (MAX - MIN + 1) + MIN));
     }
 }
-
-
