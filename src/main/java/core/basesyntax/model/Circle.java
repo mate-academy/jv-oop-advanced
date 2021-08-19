@@ -14,7 +14,6 @@ public class Circle extends Figure implements Draw, GetArea {
 
     @Override
     public double areaOfFigure() {
-
         return Math.PI * radius * radius;
     }
 
