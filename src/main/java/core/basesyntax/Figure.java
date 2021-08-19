@@ -1,10 +1,10 @@
 package core.basesyntax;
 
 public abstract class Figure implements FigureBehaviour {
-    private final String color;
+    private String color;
 
-    public Figure() {
-        this.color = new ColorSupplier().getRandomColor();
+    public Figure(String color) {
+        this.color = color;
     }
 
     public String getColor() {

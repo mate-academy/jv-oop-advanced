@@ -1,13 +1,11 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Square extends Figure {
     private int side;
 
-    public Square() {
-        super();
-        this.side = new Random().nextInt(10);
+    public Square(String color, int side) {
+        super(color);
+        this.side = side;
     }
 
     @Override
