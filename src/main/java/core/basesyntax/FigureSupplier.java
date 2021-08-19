@@ -3,10 +3,12 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int MAX_NUMBERS = 5;
+
     public Figure getRandomFigure() {
         Figure figure;
 
-        switch (new Random().nextInt(5) + 1) {
+        switch (new Random().nextInt(MAX_NUMBERS) + 1) {
             case 1:
             default:
                 figure = new Square();
