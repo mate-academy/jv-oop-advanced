@@ -35,5 +35,4 @@ public class RightTriangle extends Figure {
     public double getArea() {
         return 0.5 * firstLeg * secondLeg;
     }
-
 }

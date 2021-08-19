@@ -46,5 +46,4 @@ public class IsoscelesTrapezoid extends Figure {
     public double getArea() {
         return (double) ((bottomSide + topSide) / 2) * height;
     }
-
 }

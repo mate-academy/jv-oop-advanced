@@ -35,5 +35,4 @@ public class Rectangle extends Figure {
     public double getArea() {
         return firstSide * secondSide;
     }
-
 }
