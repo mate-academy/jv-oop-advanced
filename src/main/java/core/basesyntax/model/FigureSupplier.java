@@ -8,10 +8,6 @@ public class FigureSupplier {
 
     private Random random = new Random();
 
-    private double getRandomNum() {
-        return random.nextDouble() + FIGURE_COUNT - RANDOM_MAX_VALUE;
-    }
-
     public Figure getRandomFigure() {
         int randomNumber = random.nextInt(FIGURE_COUNT);
         ColorSupplier colorSupplier = new ColorSupplier();
@@ -32,5 +28,10 @@ public class FigureSupplier {
                 return new Square(colorSupplier.getRandomColor(),
                         getRandomNum(), getRandomNum());
         }
+    }
+
+    private double getRandomNum() {
+        return random.nextDouble() + FIGURE_COUNT - RANDOM_MAX_VALUE;
+
     }
 }
