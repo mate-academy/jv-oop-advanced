@@ -10,7 +10,9 @@ public enum Color {
     PURPLE("purple"),
     BLUE("blue"),
     GREEN("green");
+
     private String code;
+
     Color(String code) {
         this.code = code;
     }
