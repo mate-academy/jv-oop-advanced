@@ -5,9 +5,9 @@ public class Main {
 
         FigureSupplier supplier = new FigureSupplier();
         Figure circle = supplier.getRandomFigure();
+        Figure trapezoid = new IsoscelesTrapezoid(5,9, 4,"pink", "trapezoid");
 
-
-        System.out.println();
+        trapezoid.draw();
     }
 
 }

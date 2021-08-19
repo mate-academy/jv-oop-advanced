@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends Figure implements Behavior {
+public class Square extends Figure {
     private int leg;
 
     public int getLeg() {
@@ -16,5 +16,13 @@ public class Square extends Figure implements Behavior {
     @Override
     public double getArea() {
         return leg * leg;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Figure: " + super.getName()
+                + ", area: " + getArea()
+                + " sq.units, firstLeg: " + getLeg()
+                + ", color: " + getColor());
     }
 }

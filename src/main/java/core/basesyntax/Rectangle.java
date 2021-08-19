@@ -1,10 +1,10 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Behavior {
+public class Rectangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
-    public void setRectangle(int firstLeg, int secondLeg, String color, String name) {
+    public Rectangle(int firstLeg, int secondLeg, String color, String name) {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
         super.setName(name);
@@ -23,5 +23,14 @@ public class Rectangle extends Figure implements Behavior {
     @Override
     public double getArea() {
         return firstLeg  * secondLeg;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Figure: " + super.getName()
+                + ", area: " + getArea()
+                + " sq.units, firstLeg: " + getFirstLeg()
+                + ", secondLeg: " + getSecondLeg()
+                + ", color: " + getColor());
     }
 }

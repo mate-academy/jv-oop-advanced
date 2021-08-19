@@ -26,13 +26,9 @@ public class FigureSupplier extends ColorSupplier{
             case 1:
                 return new Circle(figureLeg, getRandomColor(), "circle");
             case 2:
-                IsoscelesTrapezoid trapezoid = new IsoscelesTrapezoid();
-                trapezoid.setParameter(figureLeg, figureLeg, figureLeg, getRandomColor(), "trapezoid");
-                return trapezoid;
+                return new IsoscelesTrapezoid(figureLeg, figureLeg, figureLeg, getRandomColor(), "trapezoid");
             case 3:
-                Rectangle rectangle = new Rectangle();
-                rectangle.setRectangle(figureLeg, figureLeg, getRandomColor(), "rectangle");
-                return rectangle;
+                return new Rectangle(figureLeg, figureLeg, getRandomColor(), "rectangle");
             case 4:
                 return new RightTriangle(figureLeg,figureLeg, getRandomColor(),"triangle");
             case 5:
