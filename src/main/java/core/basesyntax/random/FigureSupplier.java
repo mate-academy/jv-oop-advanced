@@ -11,51 +11,64 @@ import java.util.Random;
 public class FigureSupplier {
     public static final int MAX_VALUE = 10;
     private Random random = new Random();
+    private ColorSupplier randomColor = new ColorSupplier();
+    private String color = randomColor.getRandomColor();
 
     public Figure getRandomFigure() {
-        ColorSupplier randomColor = new ColorSupplier();
-        String color = randomColor.getRandomColor();
-        Figure resultFigure;
         switch (random.nextInt(MAX_VALUE)) {
             case 0:
-                Circle circle = new Circle();
-                circle.setRadius(getRandomValue(MAX_VALUE));
-                circle.setColor(color);
-                resultFigure = circle;
-                break;
+                return circle();
             case 1:
-                IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
-                isoscelesTrapezoid.setLeftSide(getRandomValue(MAX_VALUE));
-                isoscelesTrapezoid.setRightSide(getRandomValue(MAX_VALUE));
-                isoscelesTrapezoid.setHeight(getRandomValue(MAX_VALUE));
-                isoscelesTrapezoid.setColor(color);
-                resultFigure = isoscelesTrapezoid;
-                break;
+                return isoscelesTrapezoid();
             case 2:
-                Rectangle rectangle = new Rectangle();
-                rectangle.setLength(getRandomValue(MAX_VALUE));
-                rectangle.setWidth(getRandomValue(MAX_VALUE));
-                rectangle.setColor(color);
-                resultFigure = rectangle;
-                break;
+                return rectangle();
             case 3:
-                RightTriangle rightTriangle = new RightTriangle();
-                rightTriangle.setFirstLeg(getRandomValue(MAX_VALUE));
-                rightTriangle.setSecondLeg(getRandomValue(MAX_VALUE));
-                rightTriangle.setColor(color);
-                resultFigure = rightTriangle;
-                break;
+                return rightTriangle();
             default:
-                Square square = new Square();
-                square.setSide(getRandomValue(MAX_VALUE));
-                square.setColor(color);
-                resultFigure = square;
-                break;
+                return square();
         }
-        return resultFigure;
     }
 
     public int getRandomValue(int maxValue) {
         return random.nextInt(maxValue);
+    }
+
+    private Circle circle() {
+        Circle circle = new Circle();
+        circle.setRadius(getRandomValue(MAX_VALUE));
+        circle.setColor(color);
+        return  circle;
+    }
+
+    private IsoscelesTrapezoid isoscelesTrapezoid() {
+        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
+        isoscelesTrapezoid.setLeftSide(getRandomValue(MAX_VALUE));
+        isoscelesTrapezoid.setRightSide(getRandomValue(MAX_VALUE));
+        isoscelesTrapezoid.setHeight(getRandomValue(MAX_VALUE));
+        isoscelesTrapezoid.setColor(color);
+        return  isoscelesTrapezoid;
+    }
+
+    private Rectangle rectangle() {
+        Rectangle rectangle = new Rectangle();
+        rectangle.setLength(getRandomValue(MAX_VALUE));
+        rectangle.setWidth(getRandomValue(MAX_VALUE));
+        rectangle.setColor(color);
+        return rectangle;
+    }
+
+    private RightTriangle rightTriangle() {
+        RightTriangle rightTriangle = new RightTriangle();
+        rightTriangle.setFirstLeg(getRandomValue(MAX_VALUE));
+        rightTriangle.setSecondLeg(getRandomValue(MAX_VALUE));
+        rightTriangle.setColor(color);
+        return rightTriangle;
+    }
+
+    private Square square() {
+        Square square = new Square();
+        square.setSide(getRandomValue(MAX_VALUE));
+        square.setColor(color);
+        return square;
     }
 }
