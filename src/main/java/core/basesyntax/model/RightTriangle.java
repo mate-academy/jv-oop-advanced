@@ -1,10 +1,10 @@
 package core.basesyntax.model;
 
 public class RightTriangle extends Figure {
-    private final float side;
-    private final float height;
+    private final double side;
+    private final double height;
 
-    public RightTriangle(float side, float height) {
+    public RightTriangle(double side, double height) {
         this.side = side;
         this.height = height;
 
