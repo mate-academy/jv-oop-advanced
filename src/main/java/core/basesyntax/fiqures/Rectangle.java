@@ -17,11 +17,6 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String getColor() {
-        return super.getColor();
-    }
-
-    @Override
     public void draw() {
         System.out.println("Figure: Rectangle, area: " + getArea() + "sq.units, firstSide: "
                 + firstSide + ", secondSide: " + secondSide + ", color: " + getColor());
