@@ -4,27 +4,43 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
-    private static final int RANDOM_RANGE = 40;
-
     private Random random = new Random();
 
     public Figure getRandomFigure() {
-        int figureRandom = random.nextInt(FIGURE_COUNT);
-        switch (figureRandom) {
+        int figureNumber = random.nextInt(FIGURE_COUNT);
+        switch (figureNumber) {
             case 0:
-                return new Circle(random.nextInt(RANDOM_RANGE));
+                return isoscelesTrapezoid();
             case 1:
-                return new IsoscelesTrapezoid(random.nextInt(RANDOM_RANGE),
-                        random.nextInt(RANDOM_RANGE),
-                        random.nextInt(RANDOM_RANGE));
+                return circle();
             case 2:
-                return new Rectangle(random.nextInt(RANDOM_RANGE),
-                        random.nextInt(RANDOM_RANGE));
+                return rightTriangle();
             case 3:
-                return new RightTriangle(random.nextInt(RANDOM_RANGE),
-                        random.nextInt(RANDOM_RANGE));
+                return rectangle();
             default:
-                return new Square(random.nextInt(RANDOM_RANGE));
+                return square();
         }
+    }
+
+    private IsoscelesTrapezoid isoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(
+                random.nextInt(100), random.nextInt(100), random.nextInt(100));
+    }
+
+    private Circle circle() {
+        return new Circle(random.nextInt(100));
+    }
+
+    private RightTriangle rightTriangle() {
+        return new RightTriangle(
+                random.nextInt(100), random.nextInt(100));
+    }
+
+    private Rectangle rectangle() {
+        return new Rectangle(random.nextInt(100), random.nextInt(100));
+    }
+
+    private Square square() {
+        return new Square(random.nextInt(100));
     }
 }
