@@ -1,6 +1,6 @@
 package core.basesyntax.figure;
 
-public class Figure implements InformationDrawer, AreaCalculator {
+public abstract class Figure implements InformationDrawer, AreaCalculator {
     private String color;
     private String name;
 
@@ -18,15 +18,5 @@ public class Figure implements InformationDrawer, AreaCalculator {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    @Override
-    public void toDraw() {
-
-    }
-
-    @Override
-    public String getArea() {
-        return null;
     }
 }

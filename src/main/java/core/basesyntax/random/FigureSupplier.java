@@ -15,7 +15,7 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         ColorSupplier randomColor = new ColorSupplier();
         String color = randomColor.getRandomColor();
-        Figure resultFigure = new Figure();
+        Figure resultFigure;
         switch (random.nextInt(maxValue)) {
             case 0:
                 Circle circle = new Circle();
