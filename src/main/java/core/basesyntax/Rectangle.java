@@ -20,12 +20,12 @@ public class Rectangle extends Figure {
 
     @Override
     public Double getArea() {
-        return (double)sideA * sideB;
+        return (double) sideA * sideB;
     }
 
     @Override
     public void draw() {
         System.out.format("Figure: rectangle, area: %f, sideA: %d, sideB: %d, color: %s",
-                this.getArea(), this.getSideA(), this.getSideB(), this.getColor());
+                getArea(), getSideA(), getSideB(), getColor());
     }
 }

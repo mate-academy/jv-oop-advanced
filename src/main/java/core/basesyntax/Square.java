@@ -20,6 +20,6 @@ public class Square extends Figure {
     @Override
     public void draw() {
         System.out.format("Figure: square, area: %f, side: %d, color: %s",
-                this.getArea(), this.getSide(), this.getColor());
+                getArea(), getSide(), getColor());
     }
 }

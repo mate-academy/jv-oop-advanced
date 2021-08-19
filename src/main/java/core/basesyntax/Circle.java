@@ -20,6 +20,6 @@ public class Circle extends Figure {
     @Override
     public void draw() {
         System.out.format("Figure: circle, area: %f, radius: %d, color: %s",
-                this.getArea(), this.getRadius(), this.getColor());
+                getArea(), getRadius(), getColor());
     }
 }

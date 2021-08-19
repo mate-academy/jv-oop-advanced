@@ -33,7 +33,6 @@ public class IsoscelesTrapezoid extends Figure {
     public void draw() {
         System.out.format("Figure: isosceles trapezoid, area: %f, side: %d, bottomBase: %d"
                         + ", upperBase: %d, color: %s",
-                this.getArea(), this.getHigh(), this.getBottomBase(),
-                this.getUpperBase(), this.getColor());
+                getArea(), getHigh(), getBottomBase(), getUpperBase(), getColor());
     }
 }
