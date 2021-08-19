@@ -25,5 +25,4 @@ public class IsoscelesTrapezoid extends Figure {
                 .append(" units, lateral sides: ").append(lateralSides)
                 .append(" units" + ", color: ").append(getColor()));
     }
-
 }
