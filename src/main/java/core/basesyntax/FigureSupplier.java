@@ -3,13 +3,13 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int FIGURE_COUNT = 5;
+    public static final int FIGURE_TYPE_COUNT = 5;
     public static final int MAX_LENGTH = 15;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int figureNumber = random.nextInt(FIGURE_COUNT);
+        int figureNumber = random.nextInt(FIGURE_TYPE_COUNT);
         String color = colorSupplier.getFigureColor();
         switch (figureNumber) {
             case 1: return createSquare(color);
