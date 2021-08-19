@@ -19,27 +19,30 @@ public class FigureSupplier {
     }
 
     private Figure createCircle() {
-        return new Circle(RANDOM.nextInt(RANDOM_VALUE));
+        int radius = RANDOM.nextInt(RANDOM_VALUE);
+        return new Circle(radius);
     }
 
     private Figure createIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(
-                RANDOM.nextInt(RANDOM_VALUE),
-                RANDOM.nextInt(RANDOM_VALUE),
-                RANDOM.nextInt(RANDOM_VALUE));
+        int upSide = RANDOM.nextInt(RANDOM_VALUE);
+        int downSide = RANDOM.nextInt(RANDOM_VALUE);
+        int lateralSides = RANDOM.nextInt(RANDOM_VALUE);
+        return new IsoscelesTrapezoid(upSide, downSide, lateralSides);
     }
 
     private Figure createRectangle() {
-        return new Rectangle(
-                RANDOM.nextInt(RANDOM_VALUE),
-                RANDOM.nextInt(RANDOM_VALUE));
+        int firstLeg = RANDOM.nextInt(RANDOM_VALUE);
+        int secondLeg = RANDOM.nextInt(RANDOM_VALUE);
+        return new Rectangle(firstLeg, secondLeg);
     }
 
     private Figure createRightTriangle() {
-        return new RightTriangle(RANDOM.nextInt(RANDOM_VALUE));
+        int side = RANDOM.nextInt(RANDOM_VALUE);
+        return new RightTriangle(side);
     }
 
     private Figure createSquare() {
-        return new Square(RANDOM.nextInt(RANDOM_VALUE));
+        int side = RANDOM.nextInt(RANDOM_VALUE);
+        return new Square(side);
     }
 }
