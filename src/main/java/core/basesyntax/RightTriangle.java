@@ -21,4 +21,3 @@ public class RightTriangle extends Figure {
                 + "color: %s%n", getType(), area(), sideA, sideB, getColor());
     }
 }
-
