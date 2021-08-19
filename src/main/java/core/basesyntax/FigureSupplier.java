@@ -10,7 +10,7 @@ public class FigureSupplier {
 
     public Figure hetRandomFigure() {
         int randomIndexForFigure = rand.nextInt(randomForFigures);
-        ColorSupplier color = new ColorSupplier();
+        ColorSupplier colorSupplier = new ColorSupplier();
         String randomColor = color.getRandomColor().toString();
 
         switch (randomForFigures) {
