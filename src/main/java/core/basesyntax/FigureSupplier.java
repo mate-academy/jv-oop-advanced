@@ -4,72 +4,59 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int MAX_NUMBER_OF_FIGURE = 5;
-    public static final int SIZE_OF_UNITS = 100;
+    public static final int SIZE_OF_UNITS = 15;
     private Random random = new Random();
-    private ColorSupplier colorSupplier;
-    private ColorSupplier randomColor;
 
     private Figure getCircle() {
-        int radius = this.random.nextInt(100);
-        return new Circle(this.randomColor.getRandomColor(), radius);
+        int radius = this.random.nextInt(SIZE_OF_UNITS);
+        ColorSupplier newColorSupplier = new ColorSupplier();
+        return new Circle(newColorSupplier.getRandomColor(), radius);
     }
 
     private Figure getIsoscelesTrapezoid() {
-        int topSide = this.random.nextInt(100);
-        int botSide = this.random.nextInt(100);
-        int height = this.random.nextInt(100);
-        return new IsoscelesTrapezoid(this.randomColor.getRandomColor(),
+        int topSide = this.random.nextInt(SIZE_OF_UNITS);
+        int botSide = this.random.nextInt(SIZE_OF_UNITS);
+        int height = this.random.nextInt(SIZE_OF_UNITS);
+        ColorSupplier newColorSupplier = new ColorSupplier();
+        return new IsoscelesTrapezoid(newColorSupplier.getRandomColor(),
                 topSide, botSide, height);
     }
 
     private Figure getRectangle() {
-        int height = this.random.nextInt(100);
-        int width = this.random.nextInt(100);
-        return new Rectangle(this.randomColor.getRandomColor(), height, width);
+        int height = this.random.nextInt(SIZE_OF_UNITS);
+        int width = this.random.nextInt(SIZE_OF_UNITS);
+        ColorSupplier newColorSupplier = new ColorSupplier();
+        return new Rectangle(newColorSupplier.getRandomColor(), height, width);
     }
 
     private Figure getRightTriangle() {
-        int firstLeg = this.random.nextInt(100);
-        int secondLeg = this.random.nextInt(100);
-        return new RightTriangle(this.randomColor.getRandomColor(),
+        int firstLeg = this.random.nextInt(SIZE_OF_UNITS);
+        int secondLeg = this.random.nextInt(SIZE_OF_UNITS);
+        ColorSupplier newColorSupplier = new ColorSupplier();
+        return new RightTriangle(newColorSupplier.getRandomColor(),
                 firstLeg, secondLeg);
     }
 
     private Figure getSquare() {
-        int side = this.random.nextInt(100);
-        return new Square(this.randomColor.getRandomColor(), side);
+        int side = this.random.nextInt(SIZE_OF_UNITS);
+        ColorSupplier newColorSupplier = new ColorSupplier();
+        return new Square(newColorSupplier.getRandomColor(), side);
     }
 
     Figure getRandomFigure() {
         int figureNumber = random.nextInt(MAX_NUMBER_OF_FIGURE);
-        Figure randomFigure;
+        //Figure randomFigure;
         switch (figureNumber) {
             case 0:
-                randomFigure = new Square(new ColorSupplier().getRandomColor(),
-                        random.nextInt(SIZE_OF_UNITS) + 1);
-                break;
+                return getSquare();
             case 1:
-                randomFigure = new Rectangle(new ColorSupplier().getRandomColor(),
-                        random.nextInt(SIZE_OF_UNITS) + 1,
-                        random.nextInt(SIZE_OF_UNITS) + 1);
-                break;
+                return getRectangle();
             case 2:
-                randomFigure = new RightTriangle(new ColorSupplier().getRandomColor(),
-                        random.nextInt(SIZE_OF_UNITS) + 1,
-                        random.nextInt(SIZE_OF_UNITS) + 1);
-                break;
+                return getRightTriangle();
             case 3:
-                randomFigure = new Circle(new ColorSupplier().getRandomColor(),
-                        random.nextInt(SIZE_OF_UNITS) + 1);
-                break;
-            case 4:
+                return getCircle();
             default:
-                randomFigure = new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(),
-                        random.nextInt(SIZE_OF_UNITS) + 1,
-                        random.nextInt(SIZE_OF_UNITS) + 1,
-                        random.nextInt(SIZE_OF_UNITS) + 1);
-                break;
+                return getIsoscelesTrapezoid();
         }
-        return randomFigure;
     }
 }
