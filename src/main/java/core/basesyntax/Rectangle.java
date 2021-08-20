@@ -9,7 +9,6 @@ public class Rectangle extends Figure {
         this.sideA = sideA;
         this.sideB = sideB;
         super.setType("rectangle");
-        super.setColor(color);
     }
 
     public int getSideA() {

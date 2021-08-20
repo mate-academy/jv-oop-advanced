@@ -11,7 +11,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.sideB = sideB;
         this.height = height;
         super.setType("isosceles trapezoid");
-        super.setColor(color);
     }
 
     public int getSideA() {

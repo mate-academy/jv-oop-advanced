@@ -9,7 +9,6 @@ public class RightTriangle extends Figure {
         this.sideA = sideA;
         this.sideB = sideB;
         super.setType("right triangle");
-        super.setColor(color);
     }
 
     public int getSideA() {
