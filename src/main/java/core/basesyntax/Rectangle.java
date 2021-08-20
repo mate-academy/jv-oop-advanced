@@ -32,8 +32,8 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String drawer() {
-        return "Figure: rectangle, area: " + (int) (Math.random() * getArea())
+    public String draw() {
+        return "Figure: rectangle, area: " + getArea()
                 + " sq.units, sideA: " + sideA + " units, sideB "
                 + sideB + " units, color: " + getColor();
     }

@@ -22,8 +22,8 @@ public class Square extends Figure {
     }
 
     @Override
-    public String drawer() {
-        return "Figure: square, area: " + (int) (Math.random() * getArea())
+    public String draw() {
+        return "Figure: square, area: " + getArea()
                 + " sq.units, side: " + side + " units, color: " + getColor();
     }
 }

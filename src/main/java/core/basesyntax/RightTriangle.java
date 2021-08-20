@@ -32,8 +32,8 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String drawer() {
-        return "Figure: right triangle, area: " + (int) (Math.random() * getArea())
+    public String draw() {
+        return "Figure: right triangle, area: " + getArea()
                 + " sq.units, firstLeg: " + firstLeg + " units, secondLeg "
                 + secondLeg + " units, color: " + getColor();
     }

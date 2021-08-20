@@ -18,12 +18,12 @@ public class Circle extends Figure {
 
     @Override
     public double getArea() {
-        return Math.PI * (radius * radius);
+        return Math.PI * radius * radius;
     }
 
     @Override
-    public String drawer() {
-        return "Figure: circle, area: " + (int) (Math.random() * getArea())
+    public String draw() {
+        return "Figure: circle, area: " + getArea()
                 + " sq.units, radius: " + radius + " units, color: " + getColor();
     }
 }

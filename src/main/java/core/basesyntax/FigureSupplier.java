@@ -4,9 +4,6 @@ public class FigureSupplier {
     private static final int NUMBER_COUNT = 7;
     private static final int FIGURE_COUNT = 5;
 
-    public int getRandomNumber() {
-        return (int) (Math.random() * NUMBER_COUNT);
-    }
 
     public Figure getRandomFigure() {
         String randomColor = new ColorSupplier().getRandomColor();
@@ -23,5 +20,8 @@ public class FigureSupplier {
                 return new IsoscelesTrapezoid(randomColor, getRandomNumber(), getRandomNumber(),
                         getRandomNumber());
         }
+    }
+    private int getRandomNumber() {
+        return (int) (Math.random() * NUMBER_COUNT);
     }
 }

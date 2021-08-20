@@ -43,8 +43,8 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String drawer() {
-        return "Figure: isosceles trapezoid, area: " + (int) (Math.random() * getArea())
+    public String draw() {
+        return "Figure: isosceles trapezoid, area: " + getArea()
                 + " sq.units, height: " + height + " units, firstIsoscelesTrapezoid: "
                 + firstIsoscelesTrapezoid + " units, secondIsoscelesTrapezoid: "
                 + secondIsoscelesTrapezoid + " units, color: " + getColor();
