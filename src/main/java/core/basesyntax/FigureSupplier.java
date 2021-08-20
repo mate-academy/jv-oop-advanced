@@ -12,10 +12,10 @@ public class FigureSupplier {
             {CIRCLE, ISOSCELES_TRAPEZOID, RECTANGLE, RIGHT_TRIANGLE, SQUARE};
 
     public Figure getRandomFigure() {
-        int random = getRandomNumber();
+        int randomIndex = getRandomNumber();
         ColorSupplier colorSupplier = new ColorSupplier();
         Figure figure;
-        switch (FIGURES[random]) {
+        switch (FIGURES[randomIndex ]) {
             case CIRCLE:
                 figure = new Circle(
                         CIRCLE, getRandomNumber(), colorSupplier.getRandomColor());
