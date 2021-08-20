@@ -22,11 +22,11 @@ public class IsoscelesTrapezoid extends Figure {
                 + ", secondLength = " + secondLengthOfTrapezoid
                 + ", heightOfTrapezoid = " + heightOfTrapezoid
                 + ", color = " + getColor()
-                + ", area = " + areaCalculator() + '.');
+                + ", area = " + calculateArea() + '.');
     }
 
     @Override
-    public double areaCalculator() {
+    public double calculateArea() {
         return (double)(firstLengthOfTrapezoid + secondLengthOfTrapezoid) * heightOfTrapezoid / 2;
     }
 }

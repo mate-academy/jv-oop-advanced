@@ -16,11 +16,11 @@ public class RightTriangle extends Figure {
                 + "baseOfTriangle = " + baseOfTriangle
                 + ", heightOfTriangle = " + heightOfTriangle
                 + ", color = " + getColor()
-                + ", area = " + areaCalculator() + '.');
+                + ", area = " + calculateArea() + '.');
     }
 
     @Override
-    public double areaCalculator() {
+    public double calculateArea() {
         return 0.5 * baseOfTriangle * heightOfTriangle;
     }
 }

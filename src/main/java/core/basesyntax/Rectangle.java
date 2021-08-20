@@ -16,11 +16,11 @@ public class Rectangle extends Figure {
                 + "firstSide = " + firstSideOfRectangle
                 + ", secondSide = " + secondSideOfRectangle
                 + ", color = " + getColor()
-                + ", area = " + areaCalculator() + '.');
+                + ", area = " + calculateArea() + '.');
     }
 
     @Override
-    public double areaCalculator() {
+    public double calculateArea() {
         return firstSideOfRectangle * secondSideOfRectangle;
     }
 }
