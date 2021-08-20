@@ -1,3 +1,3 @@
 public interface AreaCalculator {
-    abstract double areaValue();
+    double getArea();
 }

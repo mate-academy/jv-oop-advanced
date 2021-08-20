@@ -6,12 +6,13 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
+    @Override
     public void draw() {
         System.out.println(toString());
     }
 
     @Override
-    public double areaValue() {
+    public double getArea() {
         return getRadius() * getRadius() * Math.PI;
     }
 
@@ -27,7 +28,7 @@ public class Circle extends Figure {
     public String toString() {
         return "Circle{"
                 + "name='" + getName() + '\''
-                + ", area=" + areaValue() + '\''
+                + ", area=" + getArea() + '\''
                 + ", radius=" + radius + '\''
                 + ", color='" + getColor() + '\''
                 + '}';

@@ -12,7 +12,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public double areaValue() {
+    public double getArea() {
         return side * side;
     }
 
@@ -20,7 +20,7 @@ public class Square extends Figure {
     public String toString() {
         return "Square{"
                 + "name='" + getName() + '\''
-                + ", area=" + areaValue() + ", color='" + getColor() + '\''
+                + ", area=" + getArea() + ", color='" + getColor() + '\''
                 + ", side=" + side
                 + '}';
     }

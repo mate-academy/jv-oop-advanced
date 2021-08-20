@@ -14,7 +14,7 @@ public class Triangle extends Figure {
     }
 
     @Override
-    public double areaValue() {
+    public double getArea() {
         return (firstSide * secondSide) / 2;
     }
 
@@ -22,7 +22,7 @@ public class Triangle extends Figure {
     public String toString() {
         return "Triangle{"
                 + "name='" + getName() + '\''
-                + ", area=" + areaValue()
+                + ", area=" + getArea()
                 + ", color='" + getColor() + '\''
                 + ", firstSide=" + firstSide
                 + ", secondSide=" + secondSide

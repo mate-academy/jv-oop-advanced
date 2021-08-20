@@ -9,7 +9,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double areaValue() {
+    public double getArea() {
         return width * height;
     }
 
@@ -22,7 +22,7 @@ public class Rectangle extends Figure {
     public String toString() {
         return "Rectangle{"
                 + "name='" + getName() + '\''
-                + ", area=" + areaValue() + '\''
+                + ", area=" + getArea() + '\''
                 + ", color='" + getColor() + '\''
                 + ", width=" + width
                 + ", height=" + height

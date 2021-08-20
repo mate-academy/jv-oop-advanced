@@ -16,7 +16,7 @@ public class Trapezoid extends Figure {
     }
 
     @Override
-    public double areaValue() {
+    public double getArea() {
         return (baseDown + baseUp) * height / 2;
     }
 
@@ -24,7 +24,7 @@ public class Trapezoid extends Figure {
     public String toString() {
         return "Trapezoid{"
                 + "name='" + getName() + '\''
-                + ", area=" + areaValue()
+                + ", area=" + getArea()
                 + ", color='" + getColor() + '\''
                 + ", height=" + height
                 + ", baseUp=" + baseUp
