@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Area {
+public class Rectangle extends Figure {
     private int firstSide;
     private int secondSide;
 
@@ -16,7 +16,7 @@ public class Rectangle extends Figure implements Area {
     }
 
     @Override
-    public void getInformation() {
+    public void draw() {
         System.out.println("Figure: rectangle, area: " + getArea() + " sq.units, sides: "
                 + firstSide + " and " + secondSide + " units, color: " + color);
     }
