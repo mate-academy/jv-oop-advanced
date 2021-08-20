@@ -24,36 +24,41 @@ public class FigureSupplier {
     }
 
     private Figure createCircle() {
-        return new Circle(random.nextInt(9) + 1,
-                colorSupplier.getRandomColor(),
-                "circle");
+        int radius = random.nextInt(9) + 1;
+        String name = "circle";
+        String color = colorSupplier.getRandomColor();
+        return new Circle(radius, color,name);
     }
 
     private Figure createIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(random.nextInt(9) + 1,
-                random.nextInt(9) + 1,
-                random.nextInt(9) + 1,
-                colorSupplier.getRandomColor(),
-                "trapezoid");
+        int firstLeg = random.nextInt(9) + 1;
+        int secondLeg = random.nextInt(9) + 1;
+        int height = random.nextInt(9) + 1;
+        String name = "trapezoid";
+        String color = colorSupplier.getRandomColor();
+        return new IsoscelesTrapezoid(firstLeg, secondLeg, height, color, name);
     }
 
     private Figure createRectangle() {
-        return new Rectangle(random.nextInt(9) + 1,
-                random.nextInt(9) + 1,
-                colorSupplier.getRandomColor(),
-                "rectangle");
+        int firstLeg = random.nextInt(9) + 1;
+        int secondLeg = random.nextInt(9) + 1;
+        String name = "rectangle";
+        String color = colorSupplier.getRandomColor();
+        return new Rectangle(firstLeg, secondLeg, color, name);
     }
 
     private Figure createRightTriangle() {
-        return new RightTriangle(random.nextInt(9) + 1,
-                random.nextInt(9) + 1,
-                colorSupplier.getRandomColor(),
-                "triangle");
+        int firstLeg = random.nextInt(9) + 1;
+        int secondLeg = random.nextInt(9) + 1;
+        String name = "triangle";
+        String color = colorSupplier.getRandomColor();
+        return new RightTriangle(firstLeg, secondLeg, color, name);
     }
 
     private Figure createSquare() {
-        return new Square(random.nextInt(9) + 1,
-                colorSupplier.getRandomColor(),
-                "square");
+        int leg = random.nextInt(9) + 1;
+        String name = "square";
+        String color = colorSupplier.getRandomColor();
+        return new Square(leg, color, name);
     }
 }
