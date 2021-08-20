@@ -14,16 +14,23 @@ public class FigureSupplier {
         String randomColor = colorSupplier.getRandomColor().toString();
         switch (RANDOM_FOR_FIGURES) {
             case 0:
-                return new Circle(getRandomFigureParameter(), randomColor);
+                return new Circle(getRandomFigureParameter(),
+                        randomColor);
             case 1:
-                return new IsoscelesTrapezoid(getRandomFigureParameter(), getRandomFigureParameter(),
+                return new IsoscelesTrapezoid(getRandomFigureParameter(),
+                        getRandomFigureParameter(),
                         getRandomFigureParameter(), randomColor);
             case 2:
-                return new Rectangle(getRandomFigureParameter(), getRandomFigureParameter(), randomColor);
+                return new Rectangle(getRandomFigureParameter(),
+                        getRandomFigureParameter(),
+                        randomColor);
             case 3:
-                return new Square(getRandomFigureParameter(), randomColor);
+                return new Square(getRandomFigureParameter(),
+                        randomColor);
             default:
-                return new RightTriangle(getRandomFigureParameter(), getRandomFigureParameter(), randomColor);
+                return new RightTriangle(getRandomFigureParameter(),
+                        getRandomFigureParameter(),
+                        randomColor);
         }
     }
 
