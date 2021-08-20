@@ -4,7 +4,6 @@ public class FigureSupplier {
     private static final int NUMBER_COUNT = 7;
     private static final int FIGURE_COUNT = 5;
 
-
     public Figure getRandomFigure() {
         String randomColor = new ColorSupplier().getRandomColor();
         switch ((int) (Math.random() * FIGURE_COUNT)) {
@@ -21,6 +20,7 @@ public class FigureSupplier {
                         getRandomNumber());
         }
     }
+
     private int getRandomNumber() {
         return (int) (Math.random() * NUMBER_COUNT);
     }
