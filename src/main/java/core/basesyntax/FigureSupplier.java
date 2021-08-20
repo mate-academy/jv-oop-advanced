@@ -12,27 +12,31 @@ public class FigureSupplier {
         int figureNumber = random.nextInt(FIGURE_COUNT);
         switch (figureNumber) {
             case 0:
-                figure = new Circle(random.nextInt(10), colorSupplier.getRandomColor());
+                figure = new Circle(getRandomNumber(), colorSupplier.getRandomColor());
                 break;
             case 1:
-                figure = new IsoscelesTrapezoid(random.nextInt(10),
-                        random.nextInt(10), random.nextInt(10),
+                figure = new IsoscelesTrapezoid(getRandomNumber(),
+                        getRandomNumber(), getRandomNumber(),
                         colorSupplier.getRandomColor());
                 break;
             case 2:
-                figure = new Rectangle(random.nextInt(10), random.nextInt(10),
+                figure = new Rectangle(getRandomNumber(), getRandomNumber(),
                         colorSupplier.getRandomColor());
                 break;
             case 3:
-                figure = new RightTriangle(random.nextInt(10), random.nextInt(10),
+                figure = new RightTriangle(getRandomNumber(), getRandomNumber(),
                         colorSupplier.getRandomColor());
                 break;
             case 4:
-                figure = new Square(random.nextInt(10), colorSupplier.getRandomColor());
+                figure = new Square(getRandomNumber(), colorSupplier.getRandomColor());
                 break;
             default:
                 break;
         }
         return figure;
+    }
+
+    private double getRandomNumber() {
+        return random.nextInt(10);
     }
 }
