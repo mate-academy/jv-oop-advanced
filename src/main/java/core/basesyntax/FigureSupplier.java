@@ -7,6 +7,31 @@ public class FigureSupplier {
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
+    public Figure getRandomFigure() {
+        int randomCase = random.nextInt(FIGURE_LIMIT) + 1;
+        Figure figure = null;
+        switch (randomCase) {
+            case 1:
+                figure = createCircle();
+                break;
+            case 2:
+                figure = createIsoscelesTrapezoid();
+                break;
+            case 3:
+                figure = createRectangle();
+                break;
+            case 4:
+                figure = createRightTriangle();
+                break;
+            case 5:
+                figure = createSquare();
+                break;
+            default:
+                break;
+        }
+        return figure;
+    }
+
     private Figure createCircle() {
         int radius = random.nextInt(100);
         String color = colorSupplier.getRandomColor();
@@ -39,31 +64,6 @@ public class FigureSupplier {
         int side = random.nextInt(100);
         String color = colorSupplier.getRandomColor();
         return new Square(color, side);
-    }
-
-    public Figure getRandomFigure() {
-        int randomCase = random.nextInt(FIGURE_LIMIT) + 1;
-        Figure figure = null;
-        switch (randomCase) {
-            case 1:
-                figure = createCircle();
-                break;
-            case 2:
-                figure = createIsoscelesTrapezoid();
-                break;
-            case 3:
-                figure = createRectangle();
-                break;
-            case 4:
-                figure = createRightTriangle();
-                break;
-            case 5:
-                figure = createSquare();
-                break;
-            default:
-                break;
-        }
-        return figure;
     }
 }
 
