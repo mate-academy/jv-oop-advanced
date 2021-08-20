@@ -1,26 +1,26 @@
 package core.basesyntax.model;
 
 public class Rectangle extends Figure {
-    private double firstLeg;
-    private double secondLeg;
+    private double width;
+    private double height;
 
-    public Rectangle(String color, double firstLeg, double secondLeg) {
+    public Rectangle(String color, double width, double height) {
         super(color);
-        this.firstLeg = firstLeg;
-        this.secondLeg = secondLeg;
+        this.width = width;
+        this.height = height;
     }
 
-    public double getFirstLeg() {
-        return firstLeg;
+    public double getWidth() {
+        return width;
     }
 
-    public double getSecondLeg() {
-        return secondLeg;
+    public double getHeight() {
+        return height;
     }
 
     @Override
     public double calculateArea() {
-        return firstLeg * secondLeg;
+        return width * height;
     }
 
     @Override
@@ -29,9 +29,9 @@ public class Rectangle extends Figure {
                 new StringBuilder().append("Figure: Rectangle, area: ")
                         .append(calculateArea())
                         .append(" sq.units, side: ")
-                        .append(getFirstLeg())
+                        .append(getWidth())
                         .append(" units, other side: ")
-                        .append(getSecondLeg())
+                        .append(getHeight())
                         .append(", color: ")
                         .append(getColor()));
     }

@@ -32,6 +32,5 @@ public class FigureSupplier {
 
     private double getRandomNum() {
         return random.nextDouble() + FIGURE_COUNT - RANDOM_MAX_VALUE;
-
     }
 }

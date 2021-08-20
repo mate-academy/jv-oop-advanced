@@ -1,13 +1,12 @@
 package core.basesyntax.model;
 
 public class RightTriangle extends Figure {
-    private double lengthLeg;
+    private double leg;
     private double height;
-    private ColorSupplier colorRightTriangle = new ColorSupplier();
 
-    public RightTriangle(String color, double lengthLeg, double height) {
+    public RightTriangle(String color, double leg, double height) {
         super(color);
-        this.lengthLeg = lengthLeg;
+        this.leg = leg;
         this.height = height;
     }
 
@@ -16,16 +15,12 @@ public class RightTriangle extends Figure {
     }
 
     public double getLengthLeg() {
-        return lengthLeg;
-    }
-
-    public ColorSupplier getColorRightTriangle() {
-        return colorRightTriangle;
+        return leg;
     }
 
     @Override
     public double calculateArea() {
-        return lengthLeg * height;
+        return leg * height / 2;
     }
 
     @Override
@@ -37,6 +32,6 @@ public class RightTriangle extends Figure {
                 .append(" units, height: ")
                 .append(getHeight())
                 .append(", color: ")
-                .append(getColorRightTriangle().getRandomColor());
+                .append(getColor());
     }
 }
