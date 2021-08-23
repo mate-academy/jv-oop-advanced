@@ -3,7 +3,7 @@ package core.basesyntax;
 public abstract class Figure implements Drawable, AreaCalculator {
     private String figureColor;
 
-    public Figure(String figureColor) {
+    protected Figure(String figureColor) {
         this.figureColor = figureColor;
     }
 
