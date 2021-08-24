@@ -7,13 +7,13 @@ import java.util.Random;
  */
 public class HelloWorld {
     public static void main(String[] args) {
-        Random random = new Random(); // we need to generate an array number of objects in the array is  unknown
+        Random random = new Random();
         FigureSupplier randomFigure = new FigureSupplier(); // figure must be random
-        Figure[] figures = new Figure[random.nextInt(20)]; // we need to generate an array of figures with random parameters, number of objects in the array is also unknown
+        Figure[] figures = new Figure[random.nextInt(20)];
         // create random figure array and draw each figure
-        for (int figureIndex = 0; figureIndex < figures.length; figureIndex++ ) {
+        for (int figureIndex = 0; figureIndex < figures.length; figureIndex++) {
             figures[figureIndex] = randomFigure.getRandomFigure();
-            System.out.println(figures[figureIndex].presentation);
+            System.out.println(figures[figureIndex].getPresentation());
         }
     }
 }

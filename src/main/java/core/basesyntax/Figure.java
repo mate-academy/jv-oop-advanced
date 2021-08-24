@@ -1,7 +1,24 @@
 package core.basesyntax;
-// there are some figures of the following types: square, rectangle, right triangle, circle, isosceles trapezoid.
+
+// there are some figures
 public abstract class Figure {
-    public String color; // all figures have color
-    public float area; // all figures have area
-    public String presentation; // all figures have draw presentation on screen
+    private String color; // all figures have color
+    private String presentation; // all figures have draw presentation on screen
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public String getPresentation() {
+        return presentation;
+    }
+
+    public void setPresentation(String presentation) {
+        this.presentation = presentation;
+    }
+
 }
