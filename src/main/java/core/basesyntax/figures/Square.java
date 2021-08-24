@@ -1,6 +1,5 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Area;
 import core.basesyntax.Figure;
 
 public class Square extends Figure {
@@ -13,7 +12,6 @@ public class Square extends Figure {
 
     @Override
     public double obtainArea() {
-
         return side * side;
     }
 

@@ -1,6 +1,5 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Area;
 import core.basesyntax.Figure;
 
 public class Circle extends Figure {

@@ -1,6 +1,5 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Area;
 import core.basesyntax.Figure;
 
 public class RightTriangle extends Figure {
@@ -15,7 +14,6 @@ public class RightTriangle extends Figure {
 
     @Override
     public double obtainArea() {
-
         return firstLeg * secondLeg / 2;
     }
 
