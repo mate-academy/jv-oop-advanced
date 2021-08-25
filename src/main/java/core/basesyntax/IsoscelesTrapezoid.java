@@ -20,18 +20,18 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        String trapezoidInfo = "Figure: " +
-                name +
-                ", area: " +
-                getArea() +
-                " sq.units, long side: " +
-                longSide +
-                " units, short side: " +
-                shortSide +
-                " units, height: " +
-                height +
-                " units, color: " +
-                getColor();
+        String trapezoidInfo = "Figure: "
+                + name
+                + ", area: "
+                + getArea()
+                + " sq.units, long side: "
+                + longSide
+                + " units, short side: "
+                + shortSide
+                + " units, height: "
+                + height
+                + " units, color: "
+                + getColor();
         System.out.println(trapezoidInfo);
     }
 }

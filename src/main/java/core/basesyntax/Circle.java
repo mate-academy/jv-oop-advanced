@@ -8,7 +8,7 @@ public class Circle extends Figure {
         super(color);
         this.radius = radius;
     }
-String area = "area " + getArea();
+
     @Override
     public double getArea() {
         return Math.PI * radius * radius;
@@ -16,14 +16,14 @@ String area = "area " + getArea();
 
     @Override
     public void draw() {
-        String circleInfo = "Figure " +
-                name +
-                ", area: " +
-                getArea() +
-                " sq.units, radius " +
-                radius +
-                " units, color: " +
-                getColor();
+        String circleInfo = "Figure "
+                + name
+                + ", area: "
+                + getArea()
+                + " sq.units, radius "
+                + radius
+                + " units, color: "
+                + getColor();
         System.out.println(circleInfo);
     }
 }

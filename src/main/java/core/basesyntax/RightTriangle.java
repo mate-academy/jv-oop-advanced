@@ -18,16 +18,16 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        String triangleidInfo = "Figure: " +
-                name +
-                ", area: " +
-                getArea() +
-                " sq.units, first leg: " +
-                firstLeg +
-                " units, height: " +
-                height +
-                " units, color: " +
-                getColor();
+        String triangleidInfo = "Figure: "
+                + name
+                + ", area: "
+                + getArea()
+                + " sq.units, first leg: "
+                + firstLeg
+                + " units, height: "
+                + height
+                + " units, color: "
+                + getColor();
         System.out.println(triangleidInfo);
     }
 }

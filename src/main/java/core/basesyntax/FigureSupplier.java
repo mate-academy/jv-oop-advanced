@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class FigureSupplier extends ColorSupplier{
+public class FigureSupplier extends ColorSupplier {
     private Figure figure;
 
     public Figure getRandomFigure() {
@@ -43,7 +43,5 @@ public class FigureSupplier extends ColorSupplier{
         }
         return figure;
     }
-
-
-    }
+}
 
