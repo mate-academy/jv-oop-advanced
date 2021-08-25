@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements AreaCalculator, FigureDraw {
+public class IsoscelesTrapezoid extends Figure {
     private double longSide;
     private double shortSide;
     private double height;
@@ -20,20 +20,18 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator, Figure
 
     @Override
     public void draw() {
-        StringBuilder trapezoidInfo = new StringBuilder();
-        trapezoidInfo
-             .append("Figure: ")
-             .append(name)
-             .append(", area: ")
-             .append(getArea())
-             .append(" sq.units, long side: ")
-             .append(longSide)
-             .append(" units, short side: ")
-             .append(shortSide)
-             .append(" units, height: ")
-             .append(height)
-             .append(" units, color: ")
-                .append(getColor());
+        String trapezoidInfo = "Figure: " +
+                name +
+                ", area: " +
+                getArea() +
+                " sq.units, long side: " +
+                longSide +
+                " units, short side: " +
+                shortSide +
+                " units, height: " +
+                height +
+                " units, color: " +
+                getColor();
         System.out.println(trapezoidInfo);
     }
 }

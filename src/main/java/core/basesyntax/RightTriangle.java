@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements AreaCalculator, FigureDraw {
+public class RightTriangle extends Figure {
     private double firstLeg;
     private double height;
     private String name = "Right Triangle";
@@ -18,18 +18,16 @@ public class RightTriangle extends Figure implements AreaCalculator, FigureDraw 
 
     @Override
     public void draw() {
-        StringBuilder triangleidInfo = new StringBuilder();
-        triangleidInfo
-                .append("Figure: ")
-                .append(name)
-                .append(", area: ")
-                .append(getArea())
-                .append(" sq.units, first leg: ")
-                .append(firstLeg)
-                .append(" units, height: ")
-                .append(height)
-                .append(" units, color: ")
-                .append(getColor());
+        String triangleidInfo = "Figure: " +
+                name +
+                ", area: " +
+                getArea() +
+                " sq.units, first leg: " +
+                firstLeg +
+                " units, height: " +
+                height +
+                " units, color: " +
+                getColor();
         System.out.println(triangleidInfo);
     }
 }

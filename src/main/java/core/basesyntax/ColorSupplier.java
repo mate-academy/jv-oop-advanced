@@ -5,26 +5,22 @@ public class ColorSupplier {
 
     public String getRandomColor() {
 
-        int randomColorNumber = (int) Math.random() * 3;
+        int randomColorNumber = (int) (Math.random() * 3);
 
         switch (randomColorNumber) {
             case 0: {
-                color = "Red";
+                return "Red";
             }
-            break;
             case 1: {
-                color = "Green";
+                return "Green";
             }
-            break;
             case 2: {
-                color = "Blue";
+                return "Blue";
             }
-            break;
             default: {
-                System.out.println("The color isn`t available");
+                return "The color isn`t available";
             }
         }
 
-        return color;
     }
 }
