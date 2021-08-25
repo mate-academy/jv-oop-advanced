@@ -13,7 +13,7 @@ public class HelloWorld {
         // create random figure array and draw each figure
         for (int figureIndex = 0; figureIndex < figures.length; figureIndex++) {
             figures[figureIndex] = randomFigure.getRandomFigure();
-            System.out.println(figures[figureIndex].getPresentation());
+            figures[figureIndex].draw();
         }
     }
 }

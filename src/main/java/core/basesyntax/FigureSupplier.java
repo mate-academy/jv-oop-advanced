@@ -3,19 +3,17 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int FIGURE_COUNT = 5; // range for random int values generator
-    private final Figure[] figures = new Figure[FIGURE_COUNT]; // array of possible figures
-    private final Random random = new Random(); // random int values generator
+    private static final int FIGURE_COUNT = 5;
+    private final Figure[] figures = new Figure[FIGURE_COUNT];
+    private final Random random = new Random();
+    private final ColorSupplier randomColor = new ColorSupplier();
 
-    // constructor for array possible figures initialize
+    // random figures with random colors
     public FigureSupplier() {
-        // random figure color
-        ColorSupplier randomColor = new ColorSupplier();
         figures[0] = new Circle(random.nextInt(20),
                 randomColor.getRandomColor());
         figures[1] = new IsoscelesTrapezoid(random.nextInt(20),
-                random.nextInt(20),
-                random.nextInt(20),
+                random.nextInt(20), random.nextInt(20),
                 randomColor.getRandomColor());
         figures[2] = new Rectangle(random.nextInt(20),
                 random.nextInt(20),
@@ -27,7 +25,6 @@ public class FigureSupplier {
                 randomColor.getRandomColor());
     }
 
-    // get random figure of possible figures
     public Figure getRandomFigure() {
         return figures[random.nextInt(FIGURE_COUNT)];
     }
