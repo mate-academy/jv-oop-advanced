@@ -1,21 +1,24 @@
 package core.basesyntax;
 
-import core.basesyntax.figures.*;
-
+import core.basesyntax.figures.Circle;
+import core.basesyntax.figures.IsoscelesTrapezoid;
+import core.basesyntax.figures.Rectangle;
+import core.basesyntax.figures.RightTriangle;
+import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final ColorSupplier colorSupplier = new ColorSupplier();
+    private static final Random random = new Random();
+    private static final ColorSupplier sp = new ColorSupplier();
     private static final Figure[] figuresArray = new Figure[]{
-            new Circle(12, colorSupplier.getRandomColor()),
-            new IsoscelesTrapezoid(15, 18, colorSupplier.getRandomColor()),
-            new Rectangle(18, 23, colorSupplier.getRandomColor()),
-            new RightTriangle(12, 16, colorSupplier.getRandomColor()),
-            new Square(12, colorSupplier.getRandomColor())
+            new Circle(random.nextInt(12), sp.getRandomColor()),
+            new IsoscelesTrapezoid(random.nextInt(16), random.nextInt(24), sp.getRandomColor()),
+            new Rectangle(random.nextInt(17), random.nextInt(19), sp.getRandomColor()),
+            new RightTriangle(random.nextInt(12), random.nextInt(14), sp.getRandomColor()),
+            new Square(random.nextInt(24), sp.getRandomColor())
     };
 
     public Figure getRandomFigure() {
-        Random random = new Random();
         return figuresArray[random.nextInt(figuresArray.length)];
     }
 }

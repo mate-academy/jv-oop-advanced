@@ -3,11 +3,19 @@ package core.basesyntax.figures;
 import core.basesyntax.Figure;
 
 public class Square extends Figure {
-    double side;
+    private double side;
 
     public Square(double side, String color) {
         this.side = side;
-        this.color = color;
+        setColor(color);
+    }
+
+    public double getSide() {
+        return side;
+    }
+
+    public void setSide(double side) {
+        this.side = side;
     }
 
     @Override
@@ -17,7 +25,12 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("square area: " + obtainArea() + " side: " + side + " color: " + color);
+        System.out.println("square area: "
+                + obtainArea()
+                + " side: "
+                + side
+                + " color: "
+                + getColor());
     }
 }
 
