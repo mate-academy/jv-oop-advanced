@@ -1,11 +1,12 @@
 package core.basesyntax;
 
-public class FigureSupplier extends ColorSupplier {
+public class FigureSupplier {
     private Figure figure;
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
 
-        String randomColor = getRandomColor();
+        String randomColor = this.colorSupplier.getRandomColor();
         double radius = Math.random() * 20;
         int randomFigureNumber = (int) (Math.random() * 5);
         double side = Math.random() * 20;

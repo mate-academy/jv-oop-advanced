@@ -4,7 +4,6 @@ public class IsoscelesTrapezoid extends Figure {
     private double longSide;
     private double shortSide;
     private double height;
-    private String name = "Isosceles Trapezoid";
 
     public IsoscelesTrapezoid(String color, double longSide, double shortSide, double height) {
         super(color);
@@ -21,7 +20,7 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public void draw() {
         String trapezoidInfo = "Figure: "
-                + name
+                + this.getClass().getSimpleName()
                 + ", area: "
                 + getArea()
                 + " sq.units, long side: "

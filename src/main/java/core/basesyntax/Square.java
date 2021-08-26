@@ -2,7 +2,6 @@ package core.basesyntax;
 
 public class Square extends Figure {
     private double side;
-    private String name = "Square";
 
     public Square(String color, double side) {
         super(color);
@@ -17,7 +16,7 @@ public class Square extends Figure {
     @Override
     public void draw() {
         String squareInfo = "Figure: "
-                + name
+                + this.getClass().getSimpleName()
                 + ", area: "
                 + getArea()
                 + " sq.units, side: "

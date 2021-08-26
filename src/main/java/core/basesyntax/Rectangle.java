@@ -3,7 +3,6 @@ package core.basesyntax;
 public class Rectangle extends Figure {
     private double longSide;
     private double shortSide;
-    private String name = "Rectangle";
 
     public Rectangle(String color, double longSide, double shortSide) {
         super(color);
@@ -19,7 +18,7 @@ public class Rectangle extends Figure {
     @Override
     public void draw() {
         String rectangleInfo = "Figure: "
-                + name
+                + this.getClass().getSimpleName()
                 + ", area: "
                 + getArea()
                 + " sq.units, long side: "
