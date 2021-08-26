@@ -20,18 +20,16 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        StringBuilder rectangleBuilder = new StringBuilder();
-        rectangleBuilder
-                .append("Figure: ")
-                .append(FigureTypes.RECTANGLE)
-                .append(", area: ")
-                .append(getArea())
-                .append(" sq.units, length: ")
-                .append(length)
-                .append(" units, width: ")
-                .append(width)
-                .append(" units, color: ")
-                .append(getColor());
-        System.out.println(rectangleBuilder);
+        String rectangleInfo = "Figure: "
+                + FigureTypes.RECTANGLE
+                + ", area: "
+                + getArea()
+                + " sq.units, length: "
+                + length
+                + " units, width: "
+                + width
+                + " units, color: "
+                + getColor();
+        System.out.println(rectangleInfo);
     }
 }

@@ -18,16 +18,14 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        StringBuilder circleStringBuilder = new StringBuilder();
-        circleStringBuilder
-                .append("Figure: ")
-                .append(FigureTypes.CIRCLE)
-                .append(", area: ")
-                .append(getArea())
-                .append(" sq.units, radius: ")
-                .append(radius)
-                .append(" units, color: ")
-                .append(getColor());
-        System.out.println(circleStringBuilder);
+        String circleInfo = "Figure: "
+                + FigureTypes.CIRCLE
+                + ", area: "
+                + getArea()
+                + " sq.units, radius: "
+                + radius
+                + " units, color: "
+                + getColor();
+        System.out.println(circleInfo);
     }
 }

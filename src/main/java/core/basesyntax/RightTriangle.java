@@ -20,18 +20,16 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        StringBuilder triangleBuilder = new StringBuilder();
-        triangleBuilder
-                .append("Figure: ")
-                .append(FigureTypes.RIGHTTRIANGLE)
-                .append(", area: ")
-                .append(getArea())
-                .append(" sq.units, firstLeg: ")
-                .append(firstLeg)
-                .append(" units, secondLeg: ")
-                .append(secondLeg)
-                .append(" units, color: ")
-                .append(getColor());
-        System.out.println(triangleBuilder);
+        String triangleInfo = "Figure: "
+                + FigureTypes.RIGHTTRIANGLE
+                + ", area: "
+                + getArea()
+                + " sq.units, firstLeg: "
+                + firstLeg
+                + " units, secondLeg: "
+                + secondLeg
+                + " units, color: "
+                + getColor();
+        System.out.println(triangleInfo);
     }
 }

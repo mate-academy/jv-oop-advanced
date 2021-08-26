@@ -18,16 +18,14 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        StringBuilder squareBuilder = new StringBuilder();
-        squareBuilder
-                .append("Figure: ")
-                .append(FigureTypes.SQUARE)
-                .append(", area: ")
-                .append(getArea())
-                .append(" sq.units, side: ")
-                .append(side)
-                .append(" units, color: ")
-                .append(getColor());
-        System.out.println(squareBuilder);
+        String squareInfo = "Figure: "
+                + FigureTypes.SQUARE
+                + ", area: "
+                + getArea()
+                + " sq.units, side: "
+                + side
+                + " units, color: "
+                + getColor();
+        System.out.println(squareInfo);
     }
 }
