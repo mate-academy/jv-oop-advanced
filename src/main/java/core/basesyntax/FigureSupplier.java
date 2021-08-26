@@ -6,18 +6,18 @@ import java.util.Random;
 public class FigureSupplier {
     private final ColorSupplier colorGenerator = new ColorSupplier();
     private final Random randomIntGenerator = new Random();
-    private final int figureCount = 5;
+    private final int intCount = 20;
 
     public Color getColorGen() {
         return colorGenerator.getRandomColor();
     }
 
     public int getRandomIntGen() {
-        return randomIntGenerator.nextInt(20);
+        return randomIntGenerator.nextInt(intCount);
     }
 
     public Figure getRandomFigure() {
-        int figureNumber = randomIntGenerator.nextInt(figureCount);
+        int figureNumber = randomIntGenerator.nextInt(FigureTypes.values().length);
         switch (figureNumber) {
             case 0:
                 return new Square(getRandomIntGen(), getColorGen(), FigureTypes.SQUARE);
