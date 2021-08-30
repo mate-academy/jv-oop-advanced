@@ -9,16 +9,60 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final Random random = new Random();
+    private static final int FIGURE_TYPE_COUNT = 5;
     private static final ColorSupplier sp = new ColorSupplier();
-    private static final Figure[] figuresArray = new Figure[]{
-            new Circle(random.nextInt(12), sp.getRandomColor()),
-            new IsoscelesTrapezoid(random.nextInt(16), random.nextInt(24), sp.getRandomColor()),
-            new Rectangle(random.nextInt(17), random.nextInt(19), sp.getRandomColor()),
-            new RightTriangle(random.nextInt(12), random.nextInt(14), sp.getRandomColor()),
-            new Square(random.nextInt(24), sp.getRandomColor())
-    };
+
+    private Circle getRandomCircle() {
+        return new Circle(
+                random.nextInt(22),
+                sp.getRandomColor());
+    }
+
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(
+                random.nextInt(25),
+                random.nextInt(24),
+                sp.getRandomColor());
+    }
+
+    private Rectangle getRandomRectangle() {
+        return new Rectangle(
+                random.nextInt(25),
+                random.nextInt(36),
+                sp.getRandomColor());
+    }
+
+    private RightTriangle getRandomRightTriangle() {
+        return new RightTriangle(
+                random.nextInt(33),
+                random.nextInt(25),
+                sp.getRandomColor());
+    }
+
+    private Square getRandomSquare() {
+        return new Square(
+                random.nextInt(25),
+                sp.getRandomColor());
+    }
 
     public Figure getRandomFigure() {
-        return figuresArray[random.nextInt(figuresArray.length)];
+        int figureType = random.nextInt(FIGURE_TYPE_COUNT);
+        switch (figureType) {
+            case 1: {
+                return getRandomCircle();
+            }
+            case 2: {
+                return getRandomIsoscelesTrapezoid();
+            }
+            case 3: {
+                return getRandomRectangle();
+            }
+            case 4: {
+                return getRandomRightTriangle();
+            }
+            default: {
+                return getRandomSquare();
+            }
+        }
     }
 }

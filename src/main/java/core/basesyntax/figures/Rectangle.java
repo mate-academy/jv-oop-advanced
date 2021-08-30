@@ -10,7 +10,7 @@ public class Rectangle extends Figure implements Area {
     public Rectangle(double length, double width, String color) {
         this.length = length;
         this.width = width;
-        setColor(color);
+        this.color = color;
     }
 
     public double getLength() {
@@ -44,6 +44,6 @@ public class Rectangle extends Figure implements Area {
                 + " width "
                 + width
                 + " color: "
-                + getColor());
+                + color);
     }
 }

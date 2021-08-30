@@ -7,7 +7,7 @@ public class Circle extends Figure {
 
     public Circle(double radius, String color) {
         this.radius = radius;
-        setColor(color);
+        this.color = color;
     }
 
     public double getRadius() {
@@ -31,7 +31,7 @@ public class Circle extends Figure {
                 + " radius: "
                 + radius
                 + " color: "
-                + getColor());
+                + color);
 
     }
 }

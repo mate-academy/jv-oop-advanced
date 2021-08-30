@@ -9,7 +9,7 @@ public class IsoscelesTrapezoid extends Figure {
     public IsoscelesTrapezoid(double base, double height, String color) {
         this.base = base;
         this.height = height;
-        setColor(color);
+        this.color = color;
     }
 
     public double getBase() {
@@ -43,6 +43,6 @@ public class IsoscelesTrapezoid extends Figure {
                 + " height "
                 + height
                 + " color: "
-                + getColor());
+                + color);
     }
 }

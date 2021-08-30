@@ -9,7 +9,7 @@ public class RightTriangle extends Figure {
     public RightTriangle(double firstLeg, double secondLeg, String color) {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        setColor(color);
+        this.color = color;
     }
 
     public double getFirstLeg() {
@@ -42,6 +42,6 @@ public class RightTriangle extends Figure {
                 + " secondLeg "
                 + secondLeg
                 + " color: "
-                + getColor());
+                + color);
     }
 }

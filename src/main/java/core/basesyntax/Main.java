@@ -3,14 +3,9 @@ package core.basesyntax;
 public class Main {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        Figure[] figures = new Figure[]{figureSupplier.getRandomFigure(),
-                figureSupplier.getRandomFigure(),
-                figureSupplier.getRandomFigure(),
-                figureSupplier.getRandomFigure(),
-                figureSupplier.getRandomFigure()
-        };
-        for (Figure figure : figures) {
-            figure.draw();
+        for (int i = 0; i < 5; i++) {
+            figureSupplier.getRandomFigure().draw();
         }
     }
 }
+
