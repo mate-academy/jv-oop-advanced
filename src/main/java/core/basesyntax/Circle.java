@@ -1,23 +1,28 @@
 package core.basesyntax;
 
-public class Circle extends FigureSupplier implements Area, AreaDrawing {
-    private double randRadius = getSide();
+public class Circle extends Figure {
+
+    private FigureSupplier side = new FigureSupplier();
+
+    private double randRadius = side.getSide();
 
     @Override
     public String areaName() {
-        String circleName = "circle";
+        String circleName = this.getClass().getSimpleName();
         return circleName;
     }
 
     @Override
-    public double area() {
+    public double calculateArea() {
         double circleArea = Math.PI * randRadius * randRadius;
         return circleArea;
     }
 
-    public void circleToShow() {
-        String part1 = "Figure: " + areaName() + ", area: " + area() + " sq. units, radius: ";
-        String part2 = randRadius + " units, color: " + getColors();
-        System.out.println(part1 + part2);
+    @Override
+    public String toString() {
+        return "Figure: " + areaName() + ", area: " + calculateArea() + " sq. units, radius: "
+                + randRadius + " units, color: " + getColor();
+
     }
+
 }

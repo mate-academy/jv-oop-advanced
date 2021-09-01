@@ -2,28 +2,47 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class FigureSupplier extends Figure {
-
+public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
     private Random random = new Random();
 
-    @Override
     public double getSide() {
         double sideSize = random.nextInt(FIGURE_COUNT) + 1;
         return sideSize;
     }
 
-    public int getRandomFigure() {
+    public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT) + 1;
-        return figureNumber;
+        Triangle triangle = new Triangle();
+        Circle circle = new Circle();
+        Rectangle rectangle = new Rectangle();
+        Square square = new Square();
+        IsoscelesTrapezoid trapezoid = new IsoscelesTrapezoid();
+        Figure figure = null;
+        switch (figureNumber) {
+            case 1:
+                figure = triangle;
+                break;
+            case 2:
+                figure = circle;
+                break;
+            case 3:
+                figure = square;
+                break;
+            case 4:
+                figure = rectangle;
+                break;
+            case 5:
+                figure = trapezoid;
+                break;
+            default:
+                figure = trapezoid;
+        }
+        return figure;
+
     }
 
-    @Override
-    public String getColors() {
-        String[] colors = new String[]{"blue", "red", "yellow", "white", "black"};
-        int numberOfColors = colors.length;
-        int pickColor = random.nextInt(numberOfColors);
-        String colorChoice = colors[pickColor];
-        return colorChoice;
+    public void showFigure() {
+        System.out.println(getRandomFigure().toString());
     }
 }

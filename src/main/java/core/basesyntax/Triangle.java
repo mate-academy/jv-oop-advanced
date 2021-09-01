@@ -1,26 +1,28 @@
 package core.basesyntax;
 
-public class Triangle extends FigureSupplier implements Area, AreaDrawing {
+public class Triangle extends Figure {
+    private FigureSupplier side = new FigureSupplier();
 
-    private double firstLeg = getSide();
-    private double secondLeg = getSide();
+    private double firstLeg = side.getSide();
+    private double secondLeg = side.getSide();
 
     @Override
-    public double area() {
+    public double calculateArea() {
         double triangleArea = (firstLeg * secondLeg) / 2;
         return triangleArea;
     }
 
     @Override
     public String areaName() {
-        String triangleName = "triangle";
+        String triangleName = this.getClass().getSimpleName();
         return triangleName;
     }
 
-    public void triangleToShow() {
-        String part1 = "Figure: " + areaName() + ", area: " + area() + " sq. units, first Leg: ";
-        String part2 = firstLeg + " units, second Leg: " + secondLeg;
-        String part3 = " units, color: " + getColors();
-        System.out.println(part1 + part2 + part3);
+    @Override
+    public String toString() {
+        return "Figure: " + areaName() + ", area: " + calculateArea() + " sq. units, first Leg: "
+                + firstLeg + " units, second Leg: " + secondLeg
+                + " units, color: " + getColor();
+
     }
 }

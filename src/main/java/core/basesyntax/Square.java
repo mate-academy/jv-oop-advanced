@@ -1,23 +1,25 @@
 package core.basesyntax;
 
-public class Square extends FigureSupplier implements Area, AreaDrawing {
-    private double randSide = getSide();
+public class Square extends Figure {
+    private FigureSupplier side = new FigureSupplier();
+    private double randSide = side.getSide();
 
     @Override
-    public double area() {
+    public double calculateArea() {
         double squareArea = randSide * randSide;
         return squareArea;
     }
 
     @Override
     public String areaName() {
-        String squareName = "square";
+        String squareName = this.getClass().getSimpleName();
         return squareName;
     }
 
-    public void squareToShow() {
-        String part1 = "Figure: " + areaName() + ", area: " + area() + " sq. units, side: ";
-        String part2 = randSide + " units, color: " + getColors();
-        System.out.println(part1 + part2);
+    @Override
+    public String toString() {
+        return "Figure: " + areaName() + ", area: " + calculateArea() + " sq. units, side: "
+                + randSide + " units, color: " + getColor();
     }
+
 }

@@ -1,25 +1,29 @@
 package core.basesyntax;
 
-public class Rectangle extends FigureSupplier implements Area, AreaDrawing {
-    private double randFirstSide = getSide();
-    private double randSecondSide = getSide();
+public class Rectangle extends Figure {
+
+    private FigureSupplier side = new FigureSupplier();
+    private double randFirstSide = side.getSide();
+    private double randSecondSide = side.getSide();
 
     @Override
-    public double area() {
+    public double calculateArea() {
         double rectangleArea = randFirstSide * randSecondSide;
         return rectangleArea;
     }
 
     @Override
     public String areaName() {
-        String rectangleName = "rectangle";
+        String rectangleName = this.getClass().getSimpleName();
         return rectangleName;
     }
 
-    public void rectangleToShow() {
-        String part1 = "Figure: " + areaName() + ", area: " + area() + " sq. units, first side: ";
-        String part2 = randFirstSide + " units, second side: ";
-        String part3 = randSecondSide + " units, color: " + getColors();
-        System.out.println(part1 + part2 + part3);
+    @Override
+    public String toString() {
+        return "Figure: " + areaName() + ", area: " + calculateArea() + " sq. units, first side: "
+                + randFirstSide + " units, second side: "
+                + randSecondSide + " units, color: " + getColor();
+
     }
+
 }

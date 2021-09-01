@@ -1,12 +1,13 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends FigureSupplier implements Area, AreaDrawing {
-    private double aside = getSide();
-    private double bside = getSide();
-    private double cside = getSide();
+public class IsoscelesTrapezoid extends Figure {
+    private FigureSupplier side = new FigureSupplier();
+    private double aside = side.getSide();
+    private double bside = side.getSide();
+    private double cside = side.getSide();
 
     @Override
-    public double area() {
+    public double calculateArea() {
         double h = Math.sqrt(Math.pow(cside, 2) - Math.pow((aside - bside) / 2, 2));
         double trapezoidArea = 0.5 * (aside + bside) * h;
         return trapezoidArea;
@@ -14,14 +15,17 @@ public class IsoscelesTrapezoid extends FigureSupplier implements Area, AreaDraw
 
     @Override
     public String areaName() {
-        String trapezoidName = "isosceles trapezoid";
+        String trapezoidName = this.getClass().getSimpleName();
         return trapezoidName;
     }
 
-    public void trapezoidToShow() {
-        String part1 = "Figure: " + areaName() + ", area: " + area() + " sq. units, bottom side: ";
-        String part2 = aside + " units, top side: " + bside + " units, leg side: ";
-        String part3 = cside + " units, color: " + getColors();
-        System.out.println(part1 + part2 + part3);
+    @Override
+    public String toString() {
+        return "Figure: " + areaName() + ", area: " + calculateArea()
+                + " sq. units, bottom side: "
+                + aside + " units, top side: " + bside + " units, leg side: "
+                + cside + " units, color: " + getColor();
+
     }
+
 }
