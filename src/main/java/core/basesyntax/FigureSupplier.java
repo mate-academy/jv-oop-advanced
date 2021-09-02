@@ -5,44 +5,27 @@ import java.util.Random;
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
     private Random random = new Random();
+    private Circle circle = new Circle(getSide(), ColourSupplier.getRandomColors());
+    private Square square = new Square(getSide(), ColourSupplier.getRandomColors());
+    private Triangle triangle = new Triangle(getSide(), ColourSupplier.getRandomColors());
+    private Rectangle rectangle = new Rectangle(getSide(), ColourSupplier.getRandomColors());
+    private IsoscelesTrapezoid zoid = new IsoscelesTrapezoid(getSide(),
+            ColourSupplier.getRandomColors());
+    private String[] figures = new String[]{circle.toString(), square.toString(),
+            triangle.toString(), rectangle.toString(), zoid.toString()};
+
+    public String[] getFigures() {
+        return figures;
+    }
 
     public double getSide() {
         double sideSize = random.nextInt(FIGURE_COUNT) + 1;
         return sideSize;
     }
 
-    public Figure getRandomFigure() {
+    public int getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT) + 1;
-        Triangle triangle = new Triangle();
-        Circle circle = new Circle();
-        Rectangle rectangle = new Rectangle();
-        Square square = new Square();
-        IsoscelesTrapezoid trapezoid = new IsoscelesTrapezoid();
-        Figure figure = null;
-        switch (figureNumber) {
-            case 1:
-                figure = triangle;
-                break;
-            case 2:
-                figure = circle;
-                break;
-            case 3:
-                figure = square;
-                break;
-            case 4:
-                figure = rectangle;
-                break;
-            case 5:
-                figure = trapezoid;
-                break;
-            default:
-                figure = trapezoid;
-        }
-        return figure;
-
+        return figureNumber;
     }
 
-    public void showFigure() {
-        System.out.println(getRandomFigure().toString());
-    }
 }

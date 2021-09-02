@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public interface AreaDrawing {
+public interface Drawable {
     String areaName();
 }

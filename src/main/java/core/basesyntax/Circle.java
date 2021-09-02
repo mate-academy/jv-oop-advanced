@@ -1,10 +1,12 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
+    private double randRadius;
 
-    private FigureSupplier side = new FigureSupplier();
-
-    private double randRadius = side.getSide();
+    public Circle(double side, String color) {
+        this.randRadius = side;
+        this.color = color;
+    }
 
     @Override
     public String areaName() {
@@ -13,15 +15,15 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double calculateArea() {
+    public double draw() {
         double circleArea = Math.PI * randRadius * randRadius;
         return circleArea;
     }
 
     @Override
     public String toString() {
-        return "Figure: " + areaName() + ", area: " + calculateArea() + " sq. units, radius: "
-                + randRadius + " units, color: " + getColor();
+        return "Figure: " + areaName() + ", area: " + draw() + " sq. units, radius: "
+                + randRadius + " units, color: " + color;
 
     }
 

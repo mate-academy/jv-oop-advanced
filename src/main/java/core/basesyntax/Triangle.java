@@ -1,13 +1,17 @@
 package core.basesyntax;
 
 public class Triangle extends Figure {
-    private FigureSupplier side = new FigureSupplier();
+    private double firstLeg;
+    private double secondLeg;
 
-    private double firstLeg = side.getSide();
-    private double secondLeg = side.getSide();
+    public Triangle(double side, String color) {
+        this.firstLeg = side;
+        this.secondLeg = side;
+        this.color = color;
+    }
 
     @Override
-    public double calculateArea() {
+    public double draw() {
         double triangleArea = (firstLeg * secondLeg) / 2;
         return triangleArea;
     }
@@ -20,9 +24,9 @@ public class Triangle extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: " + areaName() + ", area: " + calculateArea() + " sq. units, first Leg: "
+        return "Figure: " + areaName() + ", area: " + draw() + " sq. units, first Leg: "
                 + firstLeg + " units, second Leg: " + secondLeg
-                + " units, color: " + getColor();
+                + " units, color: " + color;
 
     }
 }

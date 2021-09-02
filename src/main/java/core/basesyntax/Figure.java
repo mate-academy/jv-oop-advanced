@@ -1,8 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure extends ColourSupplier implements Area, AreaDrawing {
-    public String getColor() {
-        String colors = getColors();
-        return colors;
-    }
+public abstract class Figure implements Area, Drawable {
+    protected String color;
+
 }

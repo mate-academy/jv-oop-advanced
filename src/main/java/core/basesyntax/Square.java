@@ -1,11 +1,15 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    private FigureSupplier side = new FigureSupplier();
-    private double randSide = side.getSide();
+    private double randSide;
+
+    public Square(double side, String color) {
+        this.randSide = side;
+        this.color = color;
+    }
 
     @Override
-    public double calculateArea() {
+    public double draw() {
         double squareArea = randSide * randSide;
         return squareArea;
     }
@@ -18,8 +22,8 @@ public class Square extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: " + areaName() + ", area: " + calculateArea() + " sq. units, side: "
-                + randSide + " units, color: " + getColor();
+        return "Figure: " + areaName() + ", area: " + draw() + " sq. units, side: "
+                + randSide + " units, color: " + color;
     }
 
 }

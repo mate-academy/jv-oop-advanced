@@ -1,13 +1,17 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
+    private double randFirstSide;
+    private double randSecondSide;
 
-    private FigureSupplier side = new FigureSupplier();
-    private double randFirstSide = side.getSide();
-    private double randSecondSide = side.getSide();
+    public Rectangle(double side, String color) {
+        this.randFirstSide = side;
+        this.randSecondSide = side;
+        this.color = color;
+    }
 
     @Override
-    public double calculateArea() {
+    public double draw() {
         double rectangleArea = randFirstSide * randSecondSide;
         return rectangleArea;
     }
@@ -20,9 +24,9 @@ public class Rectangle extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: " + areaName() + ", area: " + calculateArea() + " sq. units, first side: "
+        return "Figure: " + areaName() + ", area: " + draw() + " sq. units, first side: "
                 + randFirstSide + " units, second side: "
-                + randSecondSide + " units, color: " + getColor();
+                + randSecondSide + " units, color: " + color;
 
     }
 
