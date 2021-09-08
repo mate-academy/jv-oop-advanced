@@ -3,9 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    public static final String[] FIGURE_LIST = {"circle", "square", "right triangle",
+            "rectangle", "isosceles trapezoid"};
     private Random random = new Random();
     private ColorSupplier color = new ColorSupplier();
-    private static final String[] FIGURE_LIST = {"circle", "square", "right triangle", "rectangle", "isosceles trapezoid"};
 
     public Figure getRandomFigure() {
         int randomNumber = random.nextInt(FIGURE_LIST.length);
@@ -54,8 +55,10 @@ public class FigureSupplier {
         int randomUpperSide = random.nextInt(10) + 1;
         int randomLowerSide = random.nextInt(10) + 1;
         int randomLeg = random.nextInt(10) + 1;
-        int randomHeight = random.nextInt(10) + 1;
-        return new IsoscelesTrapezoid(randomColor, randomUpperSide, randomLowerSide, randomHeight, randomLeg);
+        int randomHeight =
+                random.nextInt(10) + 1;
+        return new IsoscelesTrapezoid(randomColor, randomUpperSide,
+                randomLowerSide, randomHeight, randomLeg);
     }
 }
 
