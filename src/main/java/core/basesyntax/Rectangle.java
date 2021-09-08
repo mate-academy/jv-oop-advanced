@@ -5,7 +5,7 @@ public class Rectangle extends Figure {
     private double width;
 
     public Rectangle(String color, double height, double width) {
-        this.color = color;
+        super(color);
         this.height = height;
         this.width = width;
     }
@@ -17,6 +17,6 @@ public class Rectangle extends Figure {
 
     @Override
     public void drawFigure() {
-        System.out.println("Figure: rectangle, " + "area: " + getArea() + " sq.units," + " height: " + height + " units," + " width: " + width + " units," + " color: " + color);
+        System.out.println("Figure: rectangle, " + "area: " + getArea() + " sq.units," + " height: " + height + " units," + " width: " + width + " units," + " color: " + getColor());
     }
 }

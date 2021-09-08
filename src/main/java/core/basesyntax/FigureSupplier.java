@@ -3,13 +3,13 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public Random randomObjectInitialization = new Random();
-    public ColorSupplier colorSupplierObjectInitialization = new ColorSupplier();
-    public final String[] figures = {"circle", "square", "right triangle", "rectangle", "isosceles trapezoid"};
+    private Random random = new Random();
+    private ColorSupplier color = new ColorSupplier();
+    private static final String[] FIGURE_LIST = {"circle", "square", "right triangle", "rectangle", "isosceles trapezoid"};
 
     public Figure getRandomFigure() {
-        int randomNumber = randomObjectInitialization.nextInt(figures.length);
-        String figureFromFigures = figures[randomNumber];
+        int randomNumber = random.nextInt(FIGURE_LIST.length);
+        String figureFromFigures = FIGURE_LIST[randomNumber];
         switch (figureFromFigures) {
             case "circle":
                 return getRandomCircle();
@@ -24,37 +24,37 @@ public class FigureSupplier {
         }
     }
 
-    public Circle getRandomCircle() {
-        String randomColor = colorSupplierObjectInitialization.getRandomColor();
-        int randomRadius = randomObjectInitialization.nextInt(10) + 1;
+    private Circle getRandomCircle() {
+        String randomColor = color.getRandomColor();
+        int randomRadius = random.nextInt(10) + 1;
         return new Circle(randomColor, randomRadius);
     }
 
-    public Square getRandomSquare() {
-        String randomColor = colorSupplierObjectInitialization.getRandomColor();
-        int randomSide = randomObjectInitialization.nextInt(10) + 1;
+    private Square getRandomSquare() {
+        String randomColor = color.getRandomColor();
+        int randomSide = random.nextInt(10) + 1;
         return new Square(randomColor, randomSide);
     }
 
-    public RightTriangle getRandomRightTriangle() {
-        String randomColor = colorSupplierObjectInitialization.getRandomColor();
-        int randomLeg = randomObjectInitialization.nextInt(10) + 1;
+    private RightTriangle getRandomRightTriangle() {
+        String randomColor = color.getRandomColor();
+        int randomLeg = random.nextInt(10) + 1;
         return new RightTriangle(randomColor, randomLeg);
     }
 
-    public Rectangle getRandomRectangle() {
-        String randomColor = colorSupplierObjectInitialization.getRandomColor();
-        int randomHeight = randomObjectInitialization.nextInt(10) + 1;
-        int randomWidth = randomObjectInitialization.nextInt(10) + 1;
+    private Rectangle getRandomRectangle() {
+        String randomColor = color.getRandomColor();
+        int randomHeight = random.nextInt(10) + 1;
+        int randomWidth = random.nextInt(10) + 1;
         return new Rectangle(randomColor, randomHeight, randomWidth);
     }
 
-    public IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
-        String randomColor = colorSupplierObjectInitialization.getRandomColor();
-        int randomUpperSide = randomObjectInitialization.nextInt(10) + 1;
-        int randomLowerSide = randomObjectInitialization.nextInt(10) + 1;
-        int randomLeg = randomObjectInitialization.nextInt(10) + 1;
-        int randomHeight = randomObjectInitialization.nextInt(10) + 1;
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+        String randomColor = color.getRandomColor();
+        int randomUpperSide = random.nextInt(10) + 1;
+        int randomLowerSide = random.nextInt(10) + 1;
+        int randomLeg = random.nextInt(10) + 1;
+        int randomHeight = random.nextInt(10) + 1;
         return new IsoscelesTrapezoid(randomColor, randomUpperSide, randomLowerSide, randomHeight, randomLeg);
     }
 }
