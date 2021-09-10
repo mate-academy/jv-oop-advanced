@@ -25,7 +25,7 @@ public class MainApp {
             radius = Math.abs(figure.nextInt(10) + 1);
             color = colorSupplier.getRandomColor();
             Figure randomFigure = figureSupplier.getRandomFigure();
-            randomFigure.getParameters(sideA, sideB, height, firstLeg, secondLeg, radius, color);
+            randomFigure.setParameters(sideA, sideB, height, firstLeg, secondLeg, radius, color);
             System.out.println(randomFigure.behaviour());
         }
     }

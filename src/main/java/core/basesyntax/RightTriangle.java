@@ -6,7 +6,7 @@ public class RightTriangle extends Figure implements AreaCalculator, Draw {
     private String color;
 
     @Override
-    public void getParameters(int sideA,int sideB,int height,int firstLeg,
+    public void setParameters(int sideA,int sideB,int height,int firstLeg,
                               int secondLeg,int radius, String color) {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;

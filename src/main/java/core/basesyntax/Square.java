@@ -11,7 +11,7 @@ public class Square extends Figure implements AreaCalculator, Draw {
     }
 
     @Override
-    public void getParameters(int sideA,int sideB,int height,
+    public void setParameters(int sideA,int sideB,int height,
                               int firstLeg,int secondLeg,int radius, String color) {
         this.side = sideA;
         this.color = color;

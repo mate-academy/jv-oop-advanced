@@ -5,7 +5,7 @@ public class Circle extends Figure implements AreaCalculator, Draw {
     private String color;
 
     @Override
-    public void getParameters(int sideA,int sideB,int height,int firstLeg,
+    public void setParameters(int sideA,int sideB,int height,int firstLeg,
                            int secondLeg,int radius, String color) {
         this.radius = radius;
         this.color = color;
