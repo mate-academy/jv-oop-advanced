@@ -2,45 +2,48 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class FigureSupplier {
-    public static String getRandomFigure() {
+public class FigureSupplier extends ColorSupplier {
+    public Figure getRandomFigure() {
+        String color = "";
         Random figure = new Random();
         int num = figure.nextInt(5) + 1;
-        String info = "";
 
         switch (num) {
             case (1):
-                IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
-                isoscelesTrapezoid.setParameters(Math.abs(figure.nextInt(10) + 1),
-                        Math.abs(figure.nextInt(10) + 1),Math.abs(figure.nextInt(10) + 1));
-                info = isoscelesTrapezoid.behaviour();
-                break;
+                return new IsoscelesTrapezoid();
             case (2):
-                Square square = new Square();
-                square.setParameters(Math.abs(figure.nextInt(10) + 1));
-                info = square.behaviour();
-                break;
+                return new Square();
             case (3):
-                RightTriangle rightTriangle = new RightTriangle();
-                rightTriangle.setParameters(Math.abs(figure.nextInt(10) + 1),
-                        Math.abs(figure.nextInt(10) + 1));
-                info = rightTriangle.behaviour();
-                break;
+                return new RightTriangle();
             case (4):
-                Circle circle = new Circle();
-                circle.setParameters(Math.abs(figure.nextInt(10) + 1));
-                info = circle.behaviour();
-                break;
+                return new Circle();
             case (5):
-                Rectangle rectangle = new Rectangle();
-                rectangle.setParameters(Math.abs(figure.nextInt(10) + 1),
-                        Math.abs(figure.nextInt(10) + 1));
-                info = rectangle.behaviour();
-                break;
+                return new Rectangle();
             default:
-                info = "";
+                return new Square();
         }
-        return info;
     }
 
+    /*public static void main(String[] args) {
+        int sideA;
+        int sideB;
+        int height;
+        int firstLeg;
+        int secondLeg;
+        int radius;
+        Random figure = new Random();
+        int num = figure.nextInt(5) + 1;
+        for (int i = 0; i < num; i++) {
+            sideA = Math.abs(figure.nextInt(10) + 1);
+            sideB = Math.abs(figure.nextInt(10) + 1);
+            height = Math.abs(figure.nextInt(10) + 1);
+            firstLeg = Math.abs(figure.nextInt(10) + 1);
+            secondLeg = Math.abs(figure.nextInt(10) + 1);
+            radius = Math.abs(figure.nextInt(10) + 1);
+            Figure temp = getRandomFigure();
+            temp.Parameters(sideA, sideB, height, firstLeg, secondLeg, radius, getRandomColor());
+            double a = temp.getArea();
+            System.out.println(temp.behaviour());
+        }
+    }*/
 }

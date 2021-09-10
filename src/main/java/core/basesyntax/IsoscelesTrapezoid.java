@@ -1,14 +1,18 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends ColorSupplier implements Figure {
-    private int sideA;
-    private int sideB;
-    private int height;
+public class IsoscelesTrapezoid extends Figure implements AreaCalculator, Draw {
+    private double sideA;
+    private double sideB;
+    private double height;
+    private String color;
 
-    public void setParameters(int sideA,int sideB, int h) {
+    @Override
+    public void getParameters(int sideA,int sideB,int height,
+                              int firstLeg,int secondLeg,int radius, String color) {
         this.sideA = sideA;
         this.sideB = sideB;
-        this.height = h;
+        this.height = height;
+        this.color = color;
     }
 
     @Override
@@ -17,9 +21,16 @@ public class IsoscelesTrapezoid extends ColorSupplier implements Figure {
     }
 
     @Override
+    public String draw() {
+        return color;
+    }
+
+    @Override
     public String behaviour() {
         return "Figure: isosceles trapezoid, area: " + getArea() + " sq.units, sideA: " + sideA
-                + " units, sideB: " + sideB + " units, height: " + height
-                + " color: " + getRandomColor();
+                + " units, sideB: " + sideB
+                + " units, height: " + height
+                + " units, color: " + draw();
     }
+
 }
