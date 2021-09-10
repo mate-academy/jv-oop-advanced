@@ -6,11 +6,11 @@ public class MainApp {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
         Random figure = new Random();
-        int num = figure.nextInt(5) + 1;
+        final int num = figure.nextInt(5) + 1;
 
         for (int i = 0; i < num; i++) {
             Figure randomFigure = figureSupplier.getRandomFigure();
-            System.out.println(randomFigure.behaviour());
+            System.out.println(randomFigure.draw());
         }
     }
 }

@@ -1,13 +1,11 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements AreaCalculator, Draw {
+public class Rectangle extends Figure {
     private double sideA;
     private int sideB;
     private String color;
 
-    @Override
-    public void setParameters(int sideA,int sideB,int height,int firstLeg,
-                              int secondLeg,int radius, String color) {
+    public Rectangle(int sideA,int sideB, String color) {
         this.sideA = sideA;
         this.sideB = sideB;
         this.color = color;
@@ -20,12 +18,7 @@ public class Rectangle extends Figure implements AreaCalculator, Draw {
 
     @Override
     public String draw() {
-        return color;
-    }
-
-    @Override
-    public String behaviour() {
         return "Figure: rectangle, area: " + getArea() + " sq.units, sideA: " + sideA
-                + " units, sideB: " + sideB + " units, color: " + draw();
+                + " units, sideB: " + sideB + " units, color: " + color;
     }
 }

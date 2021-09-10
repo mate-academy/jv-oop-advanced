@@ -4,40 +4,45 @@ import java.util.Random;
 
 public class FigureSupplier extends ColorSupplier {
     public Figure getRandomFigure() {
-        Figure temp = null;
-        Random figure = new Random();
-        int num = figure.nextInt(5) + 1;
-        int sideA = Math.abs(figure.nextInt(10) + 1);
-        int sideB = Math.abs(figure.nextInt(10) + 1);
-        int height = Math.abs(figure.nextInt(10) + 1);
-        int firstLeg = Math.abs(figure.nextInt(10) + 1);
-        int secondLeg = Math.abs(figure.nextInt(10) + 1);
-        int radius = Math.abs(figure.nextInt(10) + 1);
-        String color = getRandomColor();
+        final int figureCount = 5;
+        Figure temporaryFigure = null;
+        Random randomNumber = new Random();
+        int num = randomNumber.nextInt(figureCount) + 1;
+        final int sideA;
+        final int sideB;
+        final int height;
+        final int firstLeg;
+        final int secondLeg;
+        final int radius;
+        final String color = getRandomColor();
 
         switch (num) {
             case (1):
-                temp = new IsoscelesTrapezoid();
-                temp.setParameters(sideA, sideB, height, firstLeg, secondLeg, radius, color);
-                return temp;
+                sideA = Math.abs(randomNumber.nextInt(figureCount) + 1);
+                sideB = Math.abs(randomNumber.nextInt(figureCount) + 1);
+                height = Math.abs(randomNumber.nextInt(figureCount) + 1);
+                temporaryFigure = new IsoscelesTrapezoid(sideA,sideB,height,color);
+                return temporaryFigure;
             case (2):
-                temp = new Square();
-                temp.setParameters(sideA, sideB, height, firstLeg, secondLeg, radius, color);
-                return temp;
+                sideA = Math.abs(randomNumber.nextInt(figureCount) + 1);
+                temporaryFigure = new Square(sideA,color);
+                return temporaryFigure;
             case (3):
-                temp = new RightTriangle();
-                temp.setParameters(sideA, sideB, height, firstLeg, secondLeg, radius, color);
-                return temp;
+                firstLeg = Math.abs(randomNumber.nextInt(figureCount) + 1);
+                secondLeg = Math.abs(randomNumber.nextInt(figureCount) + 1);
+                temporaryFigure = new RightTriangle(firstLeg,secondLeg,color);
+                return temporaryFigure;
             case (4):
-                temp = new Circle();
-                temp.setParameters(sideA, sideB, height, firstLeg, secondLeg, radius, color);
-                return temp;
+                radius = Math.abs(randomNumber.nextInt(figureCount) + 1);
+                temporaryFigure = new Circle(radius,color);
+                return temporaryFigure;
             case (5):
-                temp = new Rectangle();
-                temp.setParameters(sideA, sideB, height, firstLeg, secondLeg, radius, color);
-                return temp;
+                sideA = Math.abs(randomNumber.nextInt(figureCount) + 1);
+                sideB = Math.abs(randomNumber.nextInt(figureCount) + 1);
+                temporaryFigure = new Rectangle(sideA,sideB,color);
+                return temporaryFigure;
             default:
-                return temp;
+                return temporaryFigure;
         }
     }
 }

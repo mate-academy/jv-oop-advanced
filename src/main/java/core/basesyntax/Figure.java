@@ -1,17 +1,9 @@
 package core.basesyntax;
 
-public abstract class Figure implements AreaCalculator, Draw {
-    public void setParameters(int sideA,int sideB,int height,int firstLeg,
-                           int secondLeg,int radius, String color) {
-        /*int sideA;
-        int sideB;
-        int height;
-        int firstLeg;
-        int secondLeg;
-        int radius;*/
-    }
+public abstract class Figure implements AreaCalculator, Drawer {
+    private String color;
 
-    public String behaviour() {
-        return null;
+    public void setString(String color) {
+        this.color = color;
     }
 }
