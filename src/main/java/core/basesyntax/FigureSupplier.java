@@ -4,46 +4,40 @@ import java.util.Random;
 
 public class FigureSupplier extends ColorSupplier {
     public Figure getRandomFigure() {
-        String color = "";
+        Figure temp = null;
         Random figure = new Random();
         int num = figure.nextInt(5) + 1;
+        int sideA = Math.abs(figure.nextInt(10) + 1);
+        int sideB = Math.abs(figure.nextInt(10) + 1);
+        int height = Math.abs(figure.nextInt(10) + 1);
+        int firstLeg = Math.abs(figure.nextInt(10) + 1);
+        int secondLeg = Math.abs(figure.nextInt(10) + 1);
+        int radius = Math.abs(figure.nextInt(10) + 1);
+        String color = getRandomColor();
 
         switch (num) {
             case (1):
-                return new IsoscelesTrapezoid();
+                temp = new IsoscelesTrapezoid();
+                temp.setParameters(sideA, sideB, height, firstLeg, secondLeg, radius, color);
+                return temp;
             case (2):
-                return new Square();
+                temp = new Square();
+                temp.setParameters(sideA, sideB, height, firstLeg, secondLeg, radius, color);
+                return temp;
             case (3):
-                return new RightTriangle();
+                temp = new RightTriangle();
+                temp.setParameters(sideA, sideB, height, firstLeg, secondLeg, radius, color);
+                return temp;
             case (4):
-                return new Circle();
+                temp = new Circle();
+                temp.setParameters(sideA, sideB, height, firstLeg, secondLeg, radius, color);
+                return temp;
             case (5):
-                return new Rectangle();
+                temp = new Rectangle();
+                temp.setParameters(sideA, sideB, height, firstLeg, secondLeg, radius, color);
+                return temp;
             default:
-                return new Square();
+                return temp;
         }
     }
-
-    /*public static void main(String[] args) {
-        int sideA;
-        int sideB;
-        int height;
-        int firstLeg;
-        int secondLeg;
-        int radius;
-        Random figure = new Random();
-        int num = figure.nextInt(5) + 1;
-        for (int i = 0; i < num; i++) {
-            sideA = Math.abs(figure.nextInt(10) + 1);
-            sideB = Math.abs(figure.nextInt(10) + 1);
-            height = Math.abs(figure.nextInt(10) + 1);
-            firstLeg = Math.abs(figure.nextInt(10) + 1);
-            secondLeg = Math.abs(figure.nextInt(10) + 1);
-            radius = Math.abs(figure.nextInt(10) + 1);
-            Figure temp = getRandomFigure();
-            temp.Parameters(sideA, sideB, height, firstLeg, secondLeg, radius, getRandomColor());
-            double a = temp.getArea();
-            System.out.println(temp.behaviour());
-        }
-    }*/
 }
