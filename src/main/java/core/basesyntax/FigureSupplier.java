@@ -3,7 +3,7 @@ package core.basesyntax;
 public class FigureSupplier extends ColorSupplier {
 
     private double randomDouble() {
-         return Math.random() * 101;
+        return Math.random() * 101;
     }
 
     public Figure getRandomFigure() {
@@ -11,21 +11,19 @@ public class FigureSupplier extends ColorSupplier {
         int getFigureNumber = (int) (Math.random() * 5);
         switch (getFigureNumber) {
             case 0:
-                result = new Square(getRandomColor(), randomDouble());
+                result = new Square(randomDouble());
                 break;
             case 1:
-                result = new Circle(getRandomColor(), randomDouble());
+                result = new Circle(randomDouble());
                 break;
             case 2:
-                result = new Rectangle(getRandomColor(), randomDouble(), randomDouble());
+                result = new Rectangle(randomDouble(), randomDouble());
                 break;
             case 3:
-                result = new RightTriangle(getRandomColor(), randomDouble(), randomDouble());
+                result = new RightTriangle(randomDouble(), randomDouble());
                 break;
             default:
-
-                result = new IsoscelesTrapezoid(getRandomColor(),
-                        randomDouble(), randomDouble(), randomDouble());
+                result = new IsoscelesTrapezoid(randomDouble(), randomDouble(), randomDouble());
         }
         return result;
     }

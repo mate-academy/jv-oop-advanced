@@ -6,9 +6,9 @@ public class Main {
 
         FigureSupplier figureSupplier = new FigureSupplier();
 
-        int lenghtArray = 1 + (int) (Math.random() * 11);
-        Figure[] figures = new Figure[lenghtArray];
-        for (int i = 0; i < lenghtArray; i++) {
+        int arrayLenght = 1 + (int) (Math.random() * 11);
+        Figure[] figures = new Figure[arrayLenght];
+        for (int i = 0; i < arrayLenght; i++) {
             figures[i] = figureSupplier.getRandomFigure();
             System.out.println(figures[i].draw());
         }

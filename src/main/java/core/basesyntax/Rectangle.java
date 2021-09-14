@@ -4,8 +4,7 @@ public class Rectangle extends Figure {
     private double length;
     private double height;
 
-    public Rectangle(String color, double length, double height) {
-        this.color = color;
+    public Rectangle(double length, double height) {
         this.height = length;
         this.length = height;
     }
@@ -19,6 +18,6 @@ public class Rectangle extends Figure {
     public String draw() {
         return "Figure: " + this.getClass().getSimpleName() + ", area: "
                 + getArea() + " sq.units, lenght: " + length
-                + " units, height: " + height + " units, color: " + color;
+                + " units, height: " + height + " units, color: " + getRandomColor();
     }
 }
