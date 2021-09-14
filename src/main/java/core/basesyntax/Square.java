@@ -1,13 +1,11 @@
 package core.basesyntax;
 
-import java.util.Random;
-
-public class Square extends Figure implements AreaCalculator, FigureDraw {
+public class Square extends Figure {
     private int side;
 
-    public Square() {
-        this.setColor(new ColorSupplier().getRandomColor());
-        this.side = new Random().nextInt(10) + 1;
+    public Square(String color, int side) {
+        this.setColor(color);
+        this.side = side;
     }
 
     @Override

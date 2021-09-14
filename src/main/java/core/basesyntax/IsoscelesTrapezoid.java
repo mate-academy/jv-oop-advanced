@@ -1,17 +1,15 @@
 package core.basesyntax;
 
-import java.util.Random;
-
-public class IsoscelesTrapezoid extends Figure implements AreaCalculator, FigureDraw {
+public class IsoscelesTrapezoid extends Figure {
     private int upperBase;
     private int lowerBase;
     private int height;
 
-    public IsoscelesTrapezoid() {
-        this.setColor(new ColorSupplier().getRandomColor());
-        this.upperBase = new Random().nextInt(10) + 1;
-        this.lowerBase = new Random().nextInt(10) + 1;
-        this.height = new Random().nextInt(10) + 1;
+    public IsoscelesTrapezoid(String color, int upperBase, int lowerBase, int height) {
+        this.setColor(color);
+        this.upperBase = upperBase;
+        this.lowerBase = lowerBase;
+        this.height = height;
     }
 
     @Override

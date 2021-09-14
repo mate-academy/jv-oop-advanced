@@ -10,15 +10,24 @@ public class FigureSupplier {
         int figureNumber = random.nextInt(FIGURE_COUNT);
         switch (figureNumber) {
             case 1:
-                return new Square();
+                return new Square(new ColorSupplier().getRandomColor(),
+                        new Random().nextInt(10) + 1);
             case 2:
-                return new Circle();
+                return new Circle(new ColorSupplier().getRandomColor(),
+                        new Random().nextInt(10) + 1);
             case 3:
-                return new IsoscelesTrapezoid();
+                return new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(),
+                        new Random().nextInt(10) + 1,
+                        new Random().nextInt(10) + 1,
+                        new Random().nextInt(10) + 1);
             case 4:
-                return new Rectangle();
+                return new Rectangle(new ColorSupplier().getRandomColor(),
+                        new Random().nextInt(10) + 1,
+                        new Random().nextInt(10) + 1);
             default:
-                return new RightTriangle();
+                return new RightTriangle(new ColorSupplier().getRandomColor(),
+                        new Random().nextInt(10) + 1,
+                        new Random().nextInt(10) + 1);
         }
     }
 }
