@@ -1,15 +1,13 @@
 package core.basesyntax;
 
-import java.util.Random;
-
-public class RightTriangle extends Figure implements AreaCalculator, FigureDraw{
+public class RightTriangle extends Figure {
     private int base;
     private int height;
 
-    public RightTriangle() {
-        this.color = new ColorSupplier().getRandomColor();
-        this.base = new Random().nextInt(10) + 1;
-        this.height = new Random().nextInt(10) + 1;
+    public RightTriangle(String color, int base, int height) {
+        this.setColor(color);
+        this.base = base;
+        this.height = height;
     }
 
     @Override
@@ -18,8 +16,8 @@ public class RightTriangle extends Figure implements AreaCalculator, FigureDraw{
     }
 
     @Override
-    public void Draw() {
+    public void draw() {
         System.out.println("Figure: RightTriangle, area: " + getArea() + " sq.units, base: " + base
-                + " units, height: " + height + " units, color: " + color);
+                + " units, height: " + height + " units, color: " + getColor());
     }
 }

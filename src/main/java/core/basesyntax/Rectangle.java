@@ -1,15 +1,13 @@
 package core.basesyntax;
 
-import java.util.Random;
-
-public class Rectangle extends Figure implements AreaCalculator, FigureDraw{
+public class Rectangle extends Figure {
     private int sideA;
     private int sideB;
 
-    public Rectangle() {
-        this.color = new ColorSupplier().getRandomColor();
-        this.sideA = new Random().nextInt(10) + 1;
-        this.sideB = new Random().nextInt(10) + 1;
+    public Rectangle(String color, int sideA, int sideB) {
+        this.setColor(color);
+        this.sideA = sideA;
+        this.sideB = sideB;
     }
 
     @Override
@@ -18,8 +16,8 @@ public class Rectangle extends Figure implements AreaCalculator, FigureDraw{
     }
 
     @Override
-    public void Draw() {
+    public void draw() {
         System.out.println("Figure: Rectangle, area: " + getArea() + " sq.units, sideA: "
-                + sideA + " units, sideB: " + sideB + " units, color: " + color);
+                + sideA + " units, sideB: " + sideB + " units, color: " + getColor());
     }
 }
