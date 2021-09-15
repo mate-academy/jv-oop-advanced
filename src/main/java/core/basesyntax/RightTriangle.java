@@ -4,7 +4,8 @@ public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
-    public RightTriangle(double firstLeg, double secondLeg) {
+    public RightTriangle(String color, double firstLeg, double secondLeg) {
+        this.color = color;
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
@@ -18,6 +19,6 @@ public class RightTriangle extends Figure {
     public String draw() {
         return "Figure: " + this.getClass().getSimpleName() + ", area: "
                 + getArea() + " sq.units, firstLeg: " + firstLeg
-                + " units, secondLeg: " + secondLeg + " units, color: " + getRandomColor();
+                + " units, secondLeg: " + secondLeg + " units, color: " + color;
     }
 }

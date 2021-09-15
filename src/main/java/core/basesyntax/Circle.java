@@ -3,7 +3,8 @@ package core.basesyntax;
 public class Circle extends Figure {
     private double radius;
 
-    public Circle(double radius) {
+    public Circle(String color, double radius) {
+        this.color = color;
         this.radius = radius;
     }
 
@@ -14,9 +15,8 @@ public class Circle extends Figure {
 
     @Override
     public String draw() {
-        String a = "Figure: " + this.getClass().getSimpleName() + ", area: " + getArea();
-        String b = " sq.units, radius: " + radius + " units, color: " + getRandomColor();
-        return a + b;
+        return "Figure: " + this.getClass().getSimpleName() + ", area: " + getArea()
+            + " sq.units, radius: " + radius + " units, color: " + color;
     }
 }
 
