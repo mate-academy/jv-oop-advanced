@@ -4,10 +4,6 @@ public class FigureSupplier {
 
     private ColorSupplier colorSupplier = new ColorSupplier();
 
-    private double randomDouble() {
-        return Math.random() * 101;
-    }
-
     public Figure getRandomFigure() {
         Figure result;
         int getFigureNumber = (int) (Math.random() * 5);
@@ -32,8 +28,8 @@ public class FigureSupplier {
         }
         return result;
     }
+
+    private double randomDouble() {
+        return Math.random() * 101;
+    }
 }
-
-
-
-

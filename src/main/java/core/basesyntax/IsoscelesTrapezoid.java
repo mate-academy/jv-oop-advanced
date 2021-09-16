@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure {
+public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
     private double downSide;
     private double topSide;
     private double height;
@@ -25,4 +25,3 @@ public class IsoscelesTrapezoid extends Figure {
                 + height + " units, color: " + color;
     }
 }
-

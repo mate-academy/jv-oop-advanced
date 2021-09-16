@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure {
+public class Circle extends Figure implements AreaCalculator {
     private double radius;
 
     public Circle(String color, double radius) {
@@ -19,4 +19,3 @@ public class Circle extends Figure {
             + " sq.units, radius: " + radius + " units, color: " + color;
     }
 }
-
