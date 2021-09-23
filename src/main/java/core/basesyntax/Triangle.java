@@ -1,12 +1,12 @@
 package core.basesyntax;
 
-public class Triangle extends Figure implements Drawable, AreaCalculator {
+public class Triangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
-    public Triangle() {
-        this.firstLeg = 1 + Math.random() * 15;
-        this.secondLeg = 1 + Math.random() * 15;
+    public Triangle(double firstLeg, double secondLeg) {
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
     }
 
     public double getFirstLeg() {

@@ -3,8 +3,8 @@ package core.basesyntax;
 public class Circle extends Figure {
     private double radius;
 
-    public Circle() {
-        this.radius = 1 + Math.random() * 15;
+    public Circle(double radius) {
+        this.radius = radius;
     }
 
     public double getRadius() {
@@ -13,7 +13,7 @@ public class Circle extends Figure {
 
     @Override
     public double getArea() {
-        return radius * radius * 3.14;
+        return radius * radius * Math.PI;
     }
 
     @Override

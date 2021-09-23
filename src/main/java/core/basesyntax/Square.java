@@ -3,8 +3,8 @@ package core.basesyntax;
 public class Square extends Figure {
     private double side;
 
-    public Square() {
-        this.side = 1 + Math.random() * 20;
+    public Square(double side) {
+        this.side = side;
     }
 
     public double getSide() {

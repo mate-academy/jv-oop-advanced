@@ -1,12 +1,12 @@
 package core.basesyntax;
 
-public class Trapezoid extends Figure implements Drawable, AreaCalculator {
+public class Trapezoid extends Figure {
     private double base;
     private double top;
 
-    public Trapezoid() {
-        this.base = 1 + Math.random() * 15;
-        this.top = 1 + Math.random() * 15;
+    public Trapezoid(double base, double top) {
+        this.base = base;
+        this.top = top;
     }
 
     @Override
