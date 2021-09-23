@@ -13,7 +13,7 @@ public class Circle extends Figure {
 
     @Override
     public double getArea() {
-        return radius * radius * 3.14;
+        return radius * radius * Math.PI;
     }
 
     @Override
