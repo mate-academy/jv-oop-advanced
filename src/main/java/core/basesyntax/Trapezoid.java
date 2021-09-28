@@ -4,7 +4,8 @@ public class Trapezoid extends Figure {
     private double base;
     private double top;
 
-    public Trapezoid(double base, double top) {
+    public Trapezoid(double base, double top, String color) {
+        super(color);
         this.base = base;
         this.top = top;
     }
