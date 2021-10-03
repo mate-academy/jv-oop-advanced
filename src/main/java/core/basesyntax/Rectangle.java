@@ -1,8 +1,12 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements FigureInterface {
+public class Rectangle extends Figure implements FigureArea {
 
-        public int sideA, sideB;
+    private int sideA, sideB;
+
+    public Rectangle() {
+
+    }
 
     public Rectangle(int sideA, int sideB, String color) {
         this.sideA = sideA;
@@ -11,13 +15,17 @@ public class Rectangle extends Figure implements FigureInterface {
     }
 
     @Override
-        public double calculateArea() {
+        public double AreaCalculator() {
             return sideA * sideB;
         }
 
     @Override
     public void drawInfo() {
-        System.out.println("Figure: rectangle, area: " + calculateArea() +
-                " sq.units, sideA: " + sideA + " units, sideB: " + sideB + " units, color: " + color);
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("Figure: rectangle, area: ").append(AreaCalculator())
+                     .append(" sq.units, sideA: ").append(sideA)
+                     .append(" units, sideB: ").append(sideB)
+                     .append(" units, color: ").append(color);
+        System.out.println(stringBuilder);
     }
 }

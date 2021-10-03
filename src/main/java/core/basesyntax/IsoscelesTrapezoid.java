@@ -1,8 +1,12 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements FigureInterface {
+public class IsoscelesTrapezoid extends Figure implements FigureArea {
 
-    public int height, sideA, sideB;
+    private int height, sideA, sideB;
+
+    public IsoscelesTrapezoid() {
+
+    }
 
     public IsoscelesTrapezoid(int sideA, int sideB, int height, String color) {
         this.sideA = sideA;
@@ -12,14 +16,18 @@ public class IsoscelesTrapezoid extends Figure implements FigureInterface {
     }
 
     @Override
-    public double calculateArea() {
+    public double AreaCalculator() {
         return ((double) height * (sideA + sideB)) / 2;
     }
 
     @Override
     public void drawInfo() {
-        System.out.println("Figure: isosceles trapezoid, area: " + calculateArea() +
-                " sq.units, sideA: " + sideA + " units, sideB: " + sideB +
-                " units, height: " + height + " color: " + color);
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("Figure: isosceles trapezoid, area: ").append(AreaCalculator())
+                .append(" sq.units, sideA: ").append(sideA)
+                .append(" units, sideB: ").append(sideB)
+                .append(" units, height: ").append(height)
+                .append(" units, color: ").append(color);
+        System.out.println(stringBuilder);
     }
 }

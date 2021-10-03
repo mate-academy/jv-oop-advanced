@@ -1,16 +1,12 @@
 package core.basesyntax;
 
-public class Figure {
+public class Figure implements FigureDraw {
     public String color;
 
-    public Figure() {
-    }
-
-    public Figure(String color) {
-        this.color = color;
-    }
-
+    @Override
     public void drawInfo() {
-        System.out.println("Figure ");
+        System.out.println("This is a figure");
     }
+
+
 }

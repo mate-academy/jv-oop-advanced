@@ -1,21 +1,29 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements FigureInterface {
+public class Circle extends Figure implements FigureArea {
 
-    public int radius;
+    private int radius;
+
+    public Circle() {
+
+    }
 
     public Circle(int radius, String color) {
         this.radius = radius;
         this.color = color;
     }
+
     @Override
-    public double calculateArea() {
+    public double AreaCalculator() {
         return (3.1416 * radius * radius / 2) ;
     }
 
     @Override
     public void drawInfo() {
-        System.out.println("Figure: circle, area: " + calculateArea() +
-                " sq.units, radius: " + radius + " units, color: " + color);
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("Figure: circle, area: ").append(AreaCalculator())
+                .append(" sq.units, radius: ").append(radius)
+                .append(" units, color: ").append(color);
+        System.out.println(stringBuilder);
     }
 }
