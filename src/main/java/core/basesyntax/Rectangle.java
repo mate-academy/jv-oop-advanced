@@ -2,7 +2,8 @@ package core.basesyntax;
 
 public class Rectangle extends Figure implements FigureArea {
 
-    private int sideA, sideB;
+    private int sideA;
+    private int sideB;
 
     public Rectangle() {
 
@@ -11,21 +12,21 @@ public class Rectangle extends Figure implements FigureArea {
     public Rectangle(int sideA, int sideB, String color) {
         this.sideA = sideA;
         this.sideB = sideB;
-        this.color = color;
+        setColor(color);
     }
 
     @Override
-        public double AreaCalculator() {
-            return sideA * sideB;
-        }
+    public double areaCalculator() {
+        return sideA * sideB;
+    }
 
     @Override
     public void drawInfo() {
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("Figure: rectangle, area: ").append(AreaCalculator())
+        stringBuilder.append("Figure: rectangle, area: ").append(areaCalculator())
                      .append(" sq.units, sideA: ").append(sideA)
                      .append(" units, sideB: ").append(sideB)
-                     .append(" units, color: ").append(color);
+                     .append(" units, color: ").append(getColor());
         System.out.println(stringBuilder);
     }
 }

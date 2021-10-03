@@ -10,20 +10,20 @@ public class Circle extends Figure implements FigureArea {
 
     public Circle(int radius, String color) {
         this.radius = radius;
-        this.color = color;
+        setColor(color);
     }
 
     @Override
-    public double AreaCalculator() {
-        return (3.1416 * radius * radius / 2) ;
+    public double areaCalculator() {
+        return (3.1416 * radius * radius / 2);
     }
 
     @Override
     public void drawInfo() {
         StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("Figure: circle, area: ").append(AreaCalculator())
+        stringBuilder.append("Figure: circle, area: ").append(areaCalculator())
                 .append(" sq.units, radius: ").append(radius)
-                .append(" units, color: ").append(color);
+                .append(" units, color: ").append(getColor());
         System.out.println(stringBuilder);
     }
 }
