@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public interface getAreable {
+public interface GetAreable {
     double getArea();
 }
