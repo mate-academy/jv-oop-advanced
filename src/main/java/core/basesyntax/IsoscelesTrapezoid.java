@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements FigureArea {
+public class IsoscelesTrapezoid extends Figure {
 
     private int height;
     private int sideA;
@@ -10,11 +10,10 @@ public class IsoscelesTrapezoid extends Figure implements FigureArea {
 
     }
 
-    public IsoscelesTrapezoid(int sideA, int sideB, int height, String color) {
+    public IsoscelesTrapezoid(int sideA, int sideB, int height) {
         this.sideA = sideA;
         this.sideB = sideB;
         this.height = height;
-        setColor(color);
     }
 
     @Override
@@ -24,12 +23,10 @@ public class IsoscelesTrapezoid extends Figure implements FigureArea {
 
     @Override
     public void drawInfo() {
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("Figure: isosceles trapezoid, area: ").append(areaCalculator())
-                .append(" sq.units, sideA: ").append(sideA)
-                .append(" units, sideB: ").append(sideB)
-                .append(" units, height: ").append(height)
-                .append(" units, color: ").append(getColor());
-        System.out.println(stringBuilder);
+        System.out.println("Figure: isosceles trapezoid, area: " + areaCalculator()
+                + " sq.units, sideA: " + sideA
+                + " units, sideB: " + sideB
+                + " units, height: " + height
+                + " units, color: " + getColor());
     }
 }
