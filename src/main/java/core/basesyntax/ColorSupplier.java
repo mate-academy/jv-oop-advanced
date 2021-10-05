@@ -3,7 +3,6 @@ package core.basesyntax;
 import java.util.Random;
 
 public class ColorSupplier {
-    public static final int FIGURE_COUNT = 6;
 
     private String [] randomColor = new String[] {"Red","Blue","White","Multicolor","Gray","Brown"};
 

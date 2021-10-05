@@ -7,7 +7,6 @@ public class FigureSupplier {
     public static final int FIGURE_RANDOM_COUNT = 20;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
-    private String color = colorSupplier.getRandomColor();
 
     public Figure getRandomFigure() {
 
