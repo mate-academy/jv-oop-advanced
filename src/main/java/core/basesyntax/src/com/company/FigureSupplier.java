@@ -11,5 +11,6 @@ public class FigureSupplier {
         //generate a specific figure based on the `figureNumber` value
         return random.nextInt(FIGURE_COUNT);
     }
+
 }
 

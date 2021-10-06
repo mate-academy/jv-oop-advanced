@@ -11,5 +11,4 @@ public class Circle implements Figure {
     public double getArea() {
         return Math.PI * radius * radius;
     }
-
 }
