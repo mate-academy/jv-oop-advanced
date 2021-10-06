@@ -13,4 +13,5 @@ public class RightTriangle implements Figure {
     public double getArea() {
         return baseTriangle * heightTriangle / 2;
     }
+
 }

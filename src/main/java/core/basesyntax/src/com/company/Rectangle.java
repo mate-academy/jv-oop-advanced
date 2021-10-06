@@ -1,7 +1,6 @@
 package com.company;
 
 public class Rectangle implements Figure {
-    //    public class Rectangle extends Figure {
     public int sideA;
     public int sideB;
 
@@ -14,5 +13,4 @@ public class Rectangle implements Figure {
     public double getArea() {
         return sideA * sideB;
     }
-
 }

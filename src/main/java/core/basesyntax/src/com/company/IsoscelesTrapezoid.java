@@ -15,5 +15,4 @@ public class IsoscelesTrapezoid implements Figure {
     public double getArea() {
         return (baseIsTrapezoid + upbaseIsTrapezoid) / 2 * heihgtIsTrapezoid;
     }
-
 }
