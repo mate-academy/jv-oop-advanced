@@ -19,7 +19,10 @@ For this purpose create two more classes:
 - `ColorSupplier` with `public String getRandomColor()` method - for generating random color, 
 - and `FigureSupplier` with `public Figure getRandomFigure()` method - for generating figure with random properties.
 
-**The other half** of figures should be **white circles with radius 10**. (you should create this objects manually)
+**The other half** of figures should have the same, default parameters. 
+
+For this purpose create new method in the `FigureSupplier` classes:
+- `public Figure getDefaultFigure()` - this method should always return white circle with radius 10.
 
 After generating the array, we need to display the entire list of objects that we have, for example:
 
