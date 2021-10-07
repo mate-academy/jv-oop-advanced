@@ -21,7 +21,7 @@ For this purpose create two more classes:
 
 **The other half** of figures should have the same, default parameters. 
 
-For this purpose create new method in the `FigureSupplier` classes:
+For this purpose create a new method in the `FigureSupplier` class:
 - `public Figure getDefaultFigure()` - this method should always return white circle with radius 10.
 
 After generating the array, we need to display the entire list of objects that we have, for example:
