@@ -10,19 +10,19 @@ public class FigureSupplier {
         Figure figureObj = null;
         switch (figureElem) {
             case SQUARE:
-                figureObj = new Square();
+                figureObj = new Square(randGen.nextInt(20));
                 break;
             case RECTANGLE:
-                figureObj = new Rectangle();
+                figureObj = new Rectangle(randGen.nextInt(20), randGen.nextInt(20));
                 break;
             case RIGHT_TRIANGLE:
-                figureObj = new RightTriangle();
+                figureObj = new RightTriangle(randGen.nextInt(20), randGen.nextInt(20));
                 break;
             case CIRCLE:
-                figureObj = new Circle();
+                figureObj = new Circle(randGen.nextInt(20));
                 break;
             case ISOSCELES_TRAPEZOID:
-                figureObj = new IsoscelesTrapezoid();
+                figureObj = new IsoscelesTrapezoid(randGen.nextInt(20), randGen.nextInt(20), randGen.nextInt(20));
                 break;
 /*
             default:
