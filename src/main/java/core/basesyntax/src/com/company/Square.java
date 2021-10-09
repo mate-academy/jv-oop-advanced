@@ -11,4 +11,5 @@ public class Square implements Figure {
     public double getArea() {
         return side * side;
     }
+
 }

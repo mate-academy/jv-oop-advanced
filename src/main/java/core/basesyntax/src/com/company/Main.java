@@ -11,14 +11,11 @@ public class Main {
         final int FIGURE_COUNT = 5;
 
         String[] myFigure = {"square","rectangle","right triangle","circle","isosceles trapezoid"};
-
         FigureSupplier figureSupplier = new FigureSupplier();
-
         int quantityFigures = random.nextInt(FIGURE_COUNT)+1;
 
         // array for excluding repeating
         int[] numbersFigures = new int[FIGURE_COUNT];
-
         for (int i = 0; i < quantityFigures; i++) {
 
             StringBuilder dimentions = new StringBuilder();
@@ -32,9 +29,7 @@ public class Main {
             }
 
             StringBuilder outputFigure = new StringBuilder();
-
             outputFigure.append("Figure: ").append(myFigure[figureNumber]).append(", ");
-
             outputFigure.append(figureSupplier.getRandomFigure(figureNumber));
 
             ColorSupplier colourFigure = new ColorSupplier();

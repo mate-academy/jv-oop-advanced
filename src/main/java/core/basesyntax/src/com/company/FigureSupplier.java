@@ -5,7 +5,6 @@ import java.util.Random;
 public class FigureSupplier {
 
     private Random random = new Random();
-
     public String getRandomFigure(int figureNumber) {
 
         double area = 0;

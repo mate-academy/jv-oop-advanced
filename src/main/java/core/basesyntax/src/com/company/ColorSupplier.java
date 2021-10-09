@@ -11,4 +11,5 @@ public class ColorSupplier {
         int pos = random.nextInt(colors.length);
         return colors[pos];
     }
+
 }
