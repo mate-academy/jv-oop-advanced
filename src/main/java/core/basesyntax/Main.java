@@ -8,8 +8,9 @@ public class Main {
         int numOfFigures = randGen.nextInt(10);
         System.out.println("Number of figures is: " + numOfFigures);
         Figure[] figures = new Figure[numOfFigures];
+        FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < numOfFigures; i++) {
-            figures[i] = FigureSupplier.getRandomFigure();
+            figures[i] = figureSupplier.getRandomFigure();
             System.out.println(i+1);
             figures[i].draw();
         }
