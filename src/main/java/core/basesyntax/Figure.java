@@ -1,8 +1,6 @@
 package core.basesyntax;
 
-import java.awt.*;
-
-public abstract class Figure {
+public abstract class Figure implements Drawable, AreaCalculator {
     private String type;
     private final String color;
     public Figure() {
@@ -20,5 +18,4 @@ public abstract class Figure {
     }
     public abstract double getArea();
     public abstract void draw();
-
 }
