@@ -8,30 +8,32 @@ public class FigureSupplier {
         int figurePos = randGen.nextInt(FiguresSet.values().length);
         FiguresSet figureElem = FiguresSet.values()[figurePos];
         Figure figureObj = null;
+        ColorSupplier colorSupplier = new ColorSupplier();
+        String color = colorSupplier.getRandomColor();
         switch (figureElem) {
             case SQUARE:
                 int side = randGen.nextInt(20) + 1;
-                figureObj = new Square(side);
+                figureObj = new Square(color, side);
                 break;
             case RECTANGLE:
                 int sideA = randGen.nextInt(20) + 1;
                 int sideB = randGen.nextInt(20) + 1;
-                figureObj = new Rectangle(sideA, sideB);
+                figureObj = new Rectangle(color, sideA, sideB);
                 break;
             case RIGHT_TRIANGLE:
                 int firstLeg = randGen.nextInt(20) + 1;
                 int secondLeg = randGen.nextInt(20) + 1;
-                figureObj = new RightTriangle(firstLeg, secondLeg);
+                figureObj = new RightTriangle(color, firstLeg, secondLeg);
                 break;
             case CIRCLE:
                 int radius = randGen.nextInt(20) + 1;
-                figureObj = new Circle(radius);
+                figureObj = new Circle(color, radius);
                 break;
             case ISOSCELES_TRAPEZOID:
                 int baseA = randGen.nextInt(20) + 1;
                 int baseB = randGen.nextInt(20) + 1;
                 int height = randGen.nextInt(20) + 1;
-                figureObj = new IsoscelesTrapezoid(baseA, baseB, height);
+                figureObj = new IsoscelesTrapezoid(color, baseA, baseB, height);
                 break;
 /*
             default:

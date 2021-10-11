@@ -2,10 +2,10 @@ package core.basesyntax;
 
 public abstract class Figure implements Drawable, AreaCalculator {
     private String type;
-    private final String color;
-    public Figure() {
+    private String color;
+    public Figure(String color) {
         this.type = "Figure";
-        this.color = ColorSupplier.getRandomColor();
+        this.color = color;
     }
     public void setType(String type) {
         this.type = type;
