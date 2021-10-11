@@ -5,7 +5,7 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         Random randGen = new Random();
-        int numOfFigures = randGen.nextInt(10);
+        int numOfFigures = randGen.nextInt(10) + 1;
         System.out.println("Number of figures is: " + numOfFigures);
         Figure[] figures = new Figure[numOfFigures];
         FigureSupplier figureSupplier = new FigureSupplier();
