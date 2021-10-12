@@ -38,6 +38,7 @@ public class FigureSupplier {
         }
         return randomFigure;
     }
+
     private enum FiguresSet {
         SQUARE,
         RECTANGLE,

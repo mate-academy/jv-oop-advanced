@@ -10,6 +10,7 @@ public class ColorSupplier {
         String colorS = colorE.toString();
         return colorS;
     }
+
     private enum ColorsSet { //https://www.w3schools.com/colors/colors_names.asp
         AliceBlue,
         AntiqueWhite,
@@ -158,6 +159,6 @@ public class ColorSupplier {
         White,
         WhiteSmoke,
         Yellow,
-        YellowGreen
+        YellowGreen;
     }
 }

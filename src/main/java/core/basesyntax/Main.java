@@ -11,7 +11,7 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < numOfFigures; i++) {
             figures[i] = figureSupplier.getRandomFigure();
-            System.out.println(i+1);
+            System.out.println(i + 1);
             figures[i].draw();
         }
     }
