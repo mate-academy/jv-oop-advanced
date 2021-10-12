@@ -4,12 +4,12 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int RANDOM_PROP_LIMIT = 20;
+    private Random randGen = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        Random randGen = new Random();
         int figurePos = randGen.nextInt(FiguresSet.values().length);
         FiguresSet figureElem = FiguresSet.values()[figurePos];
-        ColorSupplier colorSupplier = new ColorSupplier();
         String color = colorSupplier.getRandomColor();
         switch (figureElem) {
             case SQUARE:
