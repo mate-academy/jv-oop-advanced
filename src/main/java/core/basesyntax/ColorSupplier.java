@@ -3,12 +3,12 @@ package core.basesyntax;
 import java.util.Random;
 
 public class ColorSupplier {
+    private Random randGen = new Random();
+
     public String getRandomColor() {
-        Random randGen = new Random();
         int colorPos = randGen.nextInt(ColorsSet.values().length);
         ColorsSet colorE = ColorsSet.values()[colorPos];
-        String colorS = colorE.toString();
-        return colorS;
+        return colorE.toString();
     }
 
     private enum ColorsSet { //https://www.w3schools.com/colors/colors_names.asp
@@ -159,6 +159,6 @@ public class ColorSupplier {
         White,
         WhiteSmoke,
         Yellow,
-        YellowGreen;
+        YellowGreen
     }
 }
