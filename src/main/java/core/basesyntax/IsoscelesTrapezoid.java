@@ -1,19 +1,23 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure {
-    private final String name = "Rectangle";
+public class IsoscelesTrapezoid extends Figure {
+    private final String name = "Isosceles Trapezoid";
     int sideA;
     int sideB;
+    int height;
 
-    public Rectangle(String color, int sideA, int sideB) {
+
+    public IsoscelesTrapezoid (String color, int sideA, int sideB, int height) {
         super.color = color;
         this.sideA = sideA;
         this.sideB = sideB;
+        this.height = height;
     }
-    
+
+
     @Override
     public int getArea() {
-        return sideA * sideB;
+        return (sideA + sideB) / 2 * height;
     }
 
     @Override
@@ -28,7 +32,9 @@ public class Rectangle extends Figure {
         draw.append(", area: " +  getArea() + " sq.units");
         draw.append(", sideA: " + sideA);
         draw.append(", sideB: " + sideB);
+        draw.append(", height: " + height);
         draw.append(", color: " + color);
         System.out.println(draw.toString());
     }
+
 }
