@@ -62,7 +62,7 @@ public class FigureSupplier {
         return new Square(color, side);
     }
 
-    private int getRandomSize(){
+    private int getRandomSize() {
         return new Random().nextInt(MAX_SIZE);
     }
 }
