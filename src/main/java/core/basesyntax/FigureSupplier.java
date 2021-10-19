@@ -16,7 +16,6 @@ public class FigureSupplier {
     public Figure getRandom() {
         String color = colorSupplier.getRandomColor();
         int randomIndex = random.nextInt(AMOUNT_FIGURES);
-        System.out.println(randomIndex);
         switch (randomIndex) {
             case 0:
                 return getRandomCircle(color);
@@ -35,7 +34,9 @@ public class FigureSupplier {
     }
 
     private float getRandomUnits() {
-        return (float) Math.random() * (MAX_UNITS - MIN_UNITS);
+        return (float)random.ints(1000, 10000)
+                .findFirst()
+                .getAsInt() / 100;
     }
 
     private Figure getRandomCircle(String color) {
