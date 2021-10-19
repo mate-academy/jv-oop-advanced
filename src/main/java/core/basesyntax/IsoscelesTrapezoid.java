@@ -1,18 +1,16 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid implements Figure {
+public class IsoscelesTrapezoid {
     private double baseIsTrapezoid;
     private double upbaseIsTrapezoid;
     private double heihgtIsTrapezoid;
 
-    public IsoscelesTrapezoid(int baseIsTrapezoid, int upbaseIsTrapezoid, int heihgtIsTrapezoid) {
-        this.baseIsTrapezoid = baseIsTrapezoid;
-        this.upbaseIsTrapezoid = upbaseIsTrapezoid;
-        this.heihgtIsTrapezoid = heihgtIsTrapezoid;
-    }
-
-    @Override
-    public double getArea() {
-        return (baseIsTrapezoid + upbaseIsTrapezoid) / 2 * heihgtIsTrapezoid;
+    public IsoscelesTrapezoid(int baseIsTrapezoid, int upbaseIsTrapezoid, int heihgtIsTrapezoid,
+                              String color) {
+        double area = (baseIsTrapezoid + upbaseIsTrapezoid) / 2 * heihgtIsTrapezoid;
+        Draw draw = new Draw();
+        draw.draw("isosceles trapezoid", area, "baseIsTrapezoid: " + baseIsTrapezoid
+                + ", upbaseIsTrapezoid: " + upbaseIsTrapezoid
+                + ", heihgtIsTrapezoid: " + heihgtIsTrapezoid, color);
     }
 }

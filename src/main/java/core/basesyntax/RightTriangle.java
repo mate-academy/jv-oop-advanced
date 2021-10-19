@@ -1,16 +1,13 @@
 package core.basesyntax;
 
-public class RightTriangle implements Figure {
+public class RightTriangle {
     private double baseTriangle;
     private double heightTriangle;
 
-    public RightTriangle(int baseTriangle, int heightTriangle) {
-        this.baseTriangle = baseTriangle;
-        this.heightTriangle = heightTriangle;
-    }
-
-    @Override
-    public double getArea() {
-        return baseTriangle * heightTriangle / 2;
+    public RightTriangle(int baseTriangle, int heightTriangle, String color) {
+        double area = baseTriangle * heightTriangle / 2;
+        Draw draw = new Draw();
+        draw.draw("right triangle", area, "baseTriangle: " + baseTriangle
+                + ", heightTriangle: " + heightTriangle, color);
     }
 }

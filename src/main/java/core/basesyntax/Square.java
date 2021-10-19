@@ -1,14 +1,11 @@
 package core.basesyntax;
 
-public class Square implements Figure {
-    private int side;
+public class Square {
+    private double side;
 
-    public Square(int side) {
-        this.side = side;
-    }
-
-    @Override
-    public double getArea() {
-        return side * side;
+    public Square(int side, String color) {
+        double area = side * side;
+        Draw draw = new Draw();
+        draw.draw("square", area, "side: " + side, color);
     }
 }
