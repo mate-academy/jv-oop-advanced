@@ -31,7 +31,7 @@ public class FigureSupplier {
             default:
                 break;
         }
-        return null;
+        return getRandomSquare(color);
     }
 
     private float getRandomUnits() {
