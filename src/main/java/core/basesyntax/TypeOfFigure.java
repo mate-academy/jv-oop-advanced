@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public enum Type {
+public enum TypeOfFigure {
     CIRCLE,
     TRIANGLE,
     SQUARE,
