@@ -25,7 +25,7 @@ public class Circle extends Figure {
     public void draw() {
         System.out.println(new StringBuilder().append("Figure: circle, area: ")
                 .append(area()).append(" sq.units, radius: ")
-                .append(getRadius()).append(" units, color: ").append(getColor()));
+                .append(getRadius()).append(" units, color: ").append(getColor().toLowerCase()));
     }
 }
 

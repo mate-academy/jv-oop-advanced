@@ -35,6 +35,6 @@ public class Rectangle extends Figure {
     public void draw() {
         System.out.println(new StringBuilder().append("Figure: rectangle, area: ").append(area())
                 .append(" sq.units, leftLeg: ").append(getLeftLeg()).append(" units, rightLeg: ")
-                .append(getRightLeg()).append(" units, color: ").append(getColor()));
+                .append(getRightLeg()).append(" units, color: ").append(getColor().toLowerCase()));
     }
 }

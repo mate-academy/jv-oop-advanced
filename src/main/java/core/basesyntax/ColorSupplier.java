@@ -7,7 +7,8 @@ public class ColorSupplier {
 
     public String getRandomColor() {
         int colorNumber = new Random().nextInt(COLORS_COUNT);
-        switch (colorNumber) {
+        return Colors.values()[colorNumber].toString();
+        /*switch (colorNumber) {
             case 0:
                 return "white";
             case 1:
@@ -25,6 +26,6 @@ public class ColorSupplier {
             default:
                 break;
         }
-        return "";
+        return "";*/
     }
 }

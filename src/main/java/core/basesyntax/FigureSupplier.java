@@ -14,28 +14,28 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int figureNumber = randomFigure.nextInt(FIGURE_COUNT);
+        String figureColor = new ColorSupplier().getRandomColor();
+        int sizeOfFigure = getFigureSide();
         switch (figureNumber) {
             case 0:
-                return new Square(new ColorSupplier().getRandomColor(), getFigureSide());
+                return new Square(figureColor, sizeOfFigure);
             case 1:
-                return new Circle(new ColorSupplier().getRandomColor(), getFigureSide());
+                return new Circle(figureColor, sizeOfFigure);
             case 2:
-                return new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(), getFigureSide(),
-                        getFigureSide(), getFigureSide());
+                return new IsoscelesTrapezoid(figureColor, sizeOfFigure, sizeOfFigure,
+                        sizeOfFigure);
             case 3:
-                return new Rectangle(new ColorSupplier().getRandomColor(), getFigureSide(),
-                        getFigureSide());
+                return new Rectangle(figureColor, sizeOfFigure, sizeOfFigure);
             case 4:
-                return new RightTriangle(new ColorSupplier().getRandomColor(), getFigureSide(),
-                        getFigureSide());
+                return new RightTriangle(figureColor, sizeOfFigure, sizeOfFigure);
             default:
                 break;
         }
-        return new Square(new ColorSupplier().getRandomColor(), getFigureSide());
+        return new Square(figureColor, sizeOfFigure); // is this correct to do like this
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", 10);
+        return new Circle(Colors.WHITE.toString().toLowerCase(), 10);
     }
 }
 

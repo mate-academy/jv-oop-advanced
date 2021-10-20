@@ -47,6 +47,6 @@ public class IsoscelesTrapezoid extends Figure {
                 .append(area()).append(" sq.units, height: ").append(getHeight())
                 .append(" units, biggerWidth: ").append(getBiggerWidth())
                 .append(" units, lessWidth: ").append(getLessWidth())
-                .append(" units, color: ").append(getColor()));
+                .append(" units, color: ").append(getColor().toLowerCase()));
     }
 }

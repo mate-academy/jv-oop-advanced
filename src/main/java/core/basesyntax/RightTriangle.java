@@ -16,6 +16,6 @@ public class RightTriangle extends Rectangle {
         System.out.println(new StringBuilder().append("Figure: rightTriangle, area: ")
                 .append(area()).append(" sq.units, leftLeg: ").append(getLeftLeg())
                 .append(" units, rightLeg: ").append(getRightLeg()).append(" units, color: ")
-                .append(getColor()));
+                .append(getColor().toLowerCase()));
     }
 }
