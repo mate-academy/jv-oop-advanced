@@ -4,12 +4,13 @@ public class Figure {
     private float area = 0;
     private String color = null;
 
-    public Figure() {
-    }
-
     Figure(float area, Colors color){
         this.area = area;
         this.color = color.toString();
+    }
+
+    public Figure() {
+
     }
 
     public void setArea(float area) {

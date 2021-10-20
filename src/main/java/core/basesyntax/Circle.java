@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Circle extends Figure implements ArreaCounter{
-    float radius = 0;
+    private float radius = 0;
     Circle(float radius, Colors color ){
         super();
         countArea();
