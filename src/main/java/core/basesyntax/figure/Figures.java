@@ -1,4 +1,4 @@
-package core.basesyntax.misc;
+package core.basesyntax.figure;
 
 public enum Figures {
     SQUARE,

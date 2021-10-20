@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.figure;
 
 import core.basesyntax.misc.AreaCalculator;
 import core.basesyntax.misc.Draw;
