@@ -3,6 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int DEFAULT_FIGURE = 10;
+    private static final int RANDOM_RANGE = 5;
 
     public Figure getRandomFigure() {
         Random random = new Random();
@@ -11,29 +13,36 @@ public class FigureSupplier {
         int randomFig = random.nextInt(5);
         switch (randomFig) {
             case 1 :
-                figure = new Circle(colorSupplier.getRandomColor(), 5 + random.nextInt(5));
+                int radius = RANDOM_RANGE + random.nextInt(RANDOM_RANGE);
+                figure = new Circle(colorSupplier.getRandomColor(),
+                        radius);
                 break;
             case 2 :
-                figure = new Rectangle(colorSupplier.getRandomColor(),
-                        5 + random.nextInt(5), 5 + random.nextInt(5));
+                int sideA = RANDOM_RANGE + random.nextInt(RANDOM_RANGE);
+                int sideB = RANDOM_RANGE + random.nextInt(RANDOM_RANGE);
+                figure = new Rectangle(colorSupplier.getRandomColor(), sideA, sideB);
                 break;
             case 3 :
-                figure = new RightTriangle(colorSupplier.getRandomColor(),
-                        5 + random.nextInt(5), 5 + random.nextInt(5));
+                int firstLeg = RANDOM_RANGE + random.nextInt(RANDOM_RANGE);
+                int secondLeg = RANDOM_RANGE + random.nextInt(RANDOM_RANGE);
+                figure = new RightTriangle(colorSupplier.getRandomColor(), firstLeg, secondLeg);
                 break;
             case 4 :
+                int legs = RANDOM_RANGE + random.nextInt(RANDOM_RANGE);
+                int upperSide = RANDOM_RANGE + random.nextInt(RANDOM_RANGE);
+                int lowerSide = RANDOM_RANGE + random.nextInt(RANDOM_RANGE);
                 figure = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        5 + random.nextInt(5), 10 + random.nextInt(5),
-                        5 + random.nextInt(5));
+                        legs, upperSide, lowerSide);
                 break;
             default :
-                figure = new Square(colorSupplier.getRandomColor(), 5 + random.nextInt(5));
+                int side = RANDOM_RANGE + random.nextInt(RANDOM_RANGE);
+                figure = new Square(colorSupplier.getRandomColor(), side);
                 break;
         }
         return figure;
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", 10);
+        return new Circle("white", DEFAULT_FIGURE);
     }
 }
