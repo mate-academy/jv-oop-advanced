@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class Main {
-    public static final int MAX_LENGTH_OF_ARRAY = 6;
+    private static final int MAX_LENGTH_OF_ARRAY = 6;
 
     public static void main(String[] args) {
         Random random = new Random();

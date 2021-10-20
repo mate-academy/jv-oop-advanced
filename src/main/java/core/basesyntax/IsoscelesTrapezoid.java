@@ -24,6 +24,6 @@ public class IsoscelesTrapezoid extends Figure {
                 + ", upperTradezoid: " + upperTrapezoid + " units"
                 + ", lowerTradezoid: " + lowerTrapezoid + " units"
                 + ", height: " + height + " units"
-                + ", color: " + this.getColor());
+                + ", color: " + getColor());
     }
 }
