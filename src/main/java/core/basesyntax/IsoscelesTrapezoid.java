@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements Drowable {
+public class IsoscelesTrapezoid extends Figure {
     private int height;
     private int upperSide;
     private int lowerSide;
@@ -13,13 +13,13 @@ public class IsoscelesTrapezoid extends Figure implements Drowable {
     }
 
     @Override
-    public void drow() {
+    public void draw() {
         System.out.println("Name: " + getClass().getSimpleName()
-                + " Color: " + this.getColor()
-                + " Height: " + height + " units."
-                + " UpperSide: " + upperSide + " units."
-                + " LowerSide: " + lowerSide + " units."
-                + " Area: " + getArea() + " sq.units.");
+                + ", Color: " + this.getColor()
+                + ", Height: " + height + " units."
+                + ", UpperSide: " + upperSide + " units."
+                + ", LowerSide: " + lowerSide + " units."
+                + ", Area: " + getArea() + " sq.units.");
     }
 
     @Override

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends Figure implements Drowable {
+public class Square extends Figure {
     private int side;
 
     public Square(Color color, int side) {
@@ -9,11 +9,11 @@ public class Square extends Figure implements Drowable {
     }
 
     @Override
-    public void drow() {
+    public void draw() {
         System.out.println("Name: " + getClass().getSimpleName()
-                + " Color: " + this.getColor()
-                + " Side: " + side + " units."
-                + " Area: " + getArea() + " sq.units.");
+                + ", Color: " + this.getColor()
+                + ", Side: " + side + " units."
+                + ", Area: " + getArea() + " sq.units.");
     }
 
     @Override

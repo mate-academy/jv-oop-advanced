@@ -3,45 +3,55 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public Figure getRandomFigure() {
-        ColorSupplier colorSupplier = new ColorSupplier();
-        if (getGeometricFigure().equals(GeometricFigure.CIRCLE)) {
-            return new Circle(colorSupplier.getRandomColor(), getRandomLength());
-        }
-        if (getGeometricFigure().equals(GeometricFigure.SQUARE)) {
-            return new Square(colorSupplier.getRandomColor(), getRandomLength());
-        }
-        if (getGeometricFigure().equals(GeometricFigure.RECTANGLE)) {
-            return new Rectangle(colorSupplier.getRandomColor(),
-                    getRandomLength(), getRandomLength());
-        }
-        if (getGeometricFigure().equals(GeometricFigure.RIGHT_TRIANGLE)) {
-            return new RightTriangle(colorSupplier.getRandomColor(),
-                    getRandomLength(), getRandomLength());
-        }
-        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                getRandomLength(),getRandomLength(),getRandomLength());
-    }
+    public static final int FIGURE_COUNT = 5;
 
-    public int getRandomLength() {
-        Random random = new Random();
-        return random.nextInt(100);
+    public Figure getRandomFigure() {
+        int figureNumber = new Random().nextInt(FIGURE_COUNT);
+        switch (figureNumber) {
+            case 0:
+                return getRandomSquareObject();
+            case 1:
+                return getRandomCircleObject();
+            case 2:
+                return getRandomRightTriangleObject();
+            case 3:
+                return getRandomRectangleObject();
+            default:
+                return getRandomIsoscelesTrapezoidObject();
+        }
     }
 
     public Figure getDefaultFigure() {
         return new Circle(Color.WHITE, 10);
     }
 
-    public GeometricFigure getGeometricFigure() {
-        GeometricFigure[] figures = GeometricFigure.values();
-        return figures[new Random().nextInt(GeometricFigure.values().length)];
+    public Figure getRandomCircleObject() {
+        Color color = new ColorSupplier().getRandomColor();
+        int randomLength = new Random().nextInt(20);
+        return new Circle(color, randomLength);
     }
 
-    public enum GeometricFigure {
-        CIRCLE,
-        SQUARE,
-        RECTANGLE,
-        RIGHT_TRIANGLE,
-        ISOSCELES_TRAPEZOID
+    public Figure getRandomIsoscelesTrapezoidObject() {
+        Color color = new ColorSupplier().getRandomColor();
+        int randomLength = new Random().nextInt(20);
+        return new IsoscelesTrapezoid(color, randomLength, randomLength, randomLength);
+    }
+
+    public Figure getRandomRectangleObject() {
+        Color color = new ColorSupplier().getRandomColor();
+        int randomLength = new Random().nextInt(20);
+        return new Rectangle(color, randomLength, randomLength);
+    }
+
+    public Figure getRandomRightTriangleObject() {
+        Color color = new ColorSupplier().getRandomColor();
+        int randomLength = new Random().nextInt(20);
+        return new RightTriangle(color, randomLength, randomLength);
+    }
+
+    public Figure getRandomSquareObject() {
+        Color color = new ColorSupplier().getRandomColor();
+        int randomLength = new Random().nextInt(20);
+        return new Square(color, randomLength);
     }
 }

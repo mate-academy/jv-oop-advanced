@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Drowable {
+public class Rectangle extends Figure {
     private int upperSide;
     private int lowerSide;
 
@@ -11,12 +11,12 @@ public class Rectangle extends Figure implements Drowable {
     }
 
     @Override
-    public void drow() {
+    public void draw() {
         System.out.println("Name: " + getClass().getSimpleName()
-                + " Color: " + this.getColor()
-                + " UpperSide: " + upperSide + " units."
-                + " LowerSide: " + lowerSide + " units."
-                + " Area: " + getArea() + " sq.units.");
+                + ", Color: " + this.getColor()
+                + ", UpperSide: " + upperSide + " units."
+                + ", LowerSide: " + lowerSide + " units."
+                + ", Area: " + getArea() + " sq.units.");
     }
 
     @Override

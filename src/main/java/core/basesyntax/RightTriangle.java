@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements Drowable {
+public class RightTriangle extends Figure {
     private int height;
     private int side;
 
@@ -11,12 +11,12 @@ public class RightTriangle extends Figure implements Drowable {
     }
 
     @Override
-    public void drow() {
+    public void draw() {
         System.out.println("Name: " + getClass().getSimpleName()
-                + " Color: " + this.getColor()
-                + " Hypotenyse: " + height + " units."
-                + " Side: " + side + " units."
-                + " Area: " + getArea() + " sq.units.");
+                + ", Color: " + this.getColor()
+                + ", Hypotenyse: " + height + " units."
+                + ", Side: " + side + " units."
+                + ", Area: " + getArea() + " sq.units.");
     }
 
     @Override

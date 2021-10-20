@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements Drowable {
+public class Circle extends Figure {
     private int radius;
 
     public Circle(Color color, int radius) {
@@ -14,10 +14,10 @@ public class Circle extends Figure implements Drowable {
     }
 
     @Override
-    public void drow() {
+    public void draw() {
         System.out.println("Name: " + getClass().getSimpleName()
-                + " Color: " + this.getColor()
-                + " Radius: " + radius + " units."
-                + " Area: " + getArea() + " sq.units.");
+                + ", Color: " + this.getColor()
+                + ", Radius: " + radius + " units."
+                + ", Area: " + getArea() + " sq.units.");
     }
 }
