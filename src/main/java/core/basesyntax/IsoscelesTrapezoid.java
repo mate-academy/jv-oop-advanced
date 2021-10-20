@@ -2,18 +2,16 @@ package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
     private final String name = "Isosceles Trapezoid";
-    int sideA;
-    int sideB;
-    int height;
+    private int sideA;
+    private int sideB;
+    private int height;
 
-
-    public IsoscelesTrapezoid (String color, int sideA, int sideB, int height) {
-        super.color = color;
+    public IsoscelesTrapezoid(String color, int sideA, int sideB, int height) {
+        setColor(color);;
         this.sideA = sideA;
         this.sideB = sideB;
         this.height = height;
     }
-
 
     @Override
     public int getArea() {
@@ -29,11 +27,11 @@ public class IsoscelesTrapezoid extends Figure {
     public void draw() {
         StringBuilder draw = new StringBuilder();
         draw.append("Figure: " + getName());
-        draw.append(", area: " +  getArea() + " sq.units");
+        draw.append(", area: " + getArea() + " sq.units");
         draw.append(", sideA: " + sideA);
         draw.append(", sideB: " + sideB);
         draw.append(", height: " + height);
-        draw.append(", color: " + color);
+        draw.append(", color: " + getColor());
         System.out.println(draw.toString());
     }
 

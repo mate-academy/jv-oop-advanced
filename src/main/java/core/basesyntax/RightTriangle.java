@@ -2,11 +2,11 @@ package core.basesyntax;
 
 public class RightTriangle extends Figure {
     private final String name = "Right Triangle";
-    int firstLeg;
-    int secondLeg;
+    private int firstLeg;
+    private int secondLeg;
 
     public RightTriangle(String color, int firstLeg, int secondLeg) {
-        super.color = color;
+        setColor(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
@@ -24,10 +24,10 @@ public class RightTriangle extends Figure {
     public void draw() {
         StringBuilder draw = new StringBuilder();
         draw.append("Figure: " + getName());
-        draw.append(", area: " +  getArea() + " sq.units");
+        draw.append(", area: " + getArea() + " sq.units");
         draw.append(", firstLeg: " + firstLeg);
         draw.append(", secondLeg: " + secondLeg);
-        draw.append(", color: " + color);
+        draw.append(", color: " + getColor());
         System.out.println(draw.toString());
     }
 }
