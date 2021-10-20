@@ -1,15 +1,11 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Drawable, AreaCalculator {
+public class Rectangle extends Figure {
     private int sideA;
     private int sideB;
 
-    public Rectangle(String color) {
-        this.setColor(color);
-    }
-
     public Rectangle(String color, int sideA, int sideB) {
-        this.setColor(color);
+        super(color);
         this.sideA = sideA;
         this.sideB = sideB;
     }
@@ -32,13 +28,13 @@ public class Rectangle extends Figure implements Drawable, AreaCalculator {
 
     @Override
     public double getArea() {
-        return this.sideA * this.sideB;
+        return sideA * sideB;
     }
 
     @Override
-    public void toDraw() {
-        System.out.println("Figure: rectangle, area: " + this.getArea()
-                + " sq.units, sideA: " + this.getSideA() + " units, sideB: "
-                + this.getSideB() + " units, color: " + this.getColor());
+    public void draw() {
+        System.out.println("Figure: rectangle, area: " + getArea()
+                + " sq.units, sideA: " + getSideA() + " units, sideB: "
+                + getSideB() + " units, color: " + getColor());
     }
 }
