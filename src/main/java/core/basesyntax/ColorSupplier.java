@@ -5,15 +5,8 @@ import java.util.Random;
 public class ColorSupplier {
     public String getRandomColor() {
         Random random = new Random();
-        String[] colors = new String[]{
-                "red",
-                "orange",
-                "yellow",
-                "green",
-                "blue",
-                "dark blue",
-                "purple"};
+        Colors[] colors = Colors.values();
         int index = random.nextInt(colors.length);
-        return colors[index];
+        return colors[index].toString().toLowerCase();
     }
 }
