@@ -9,7 +9,7 @@ public class Main {
         }
         System.out.println(figureList.length);
         for (Figure figureInfo: figureList) {
-            figureInfo.infoAboutFigure();
+            figureInfo.draw();
         }
     }
 }

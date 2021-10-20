@@ -37,17 +37,12 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    double area() {
+    public double area() {
         return (getBiggerWidth() + getLessWidth()) / 2 * getHeight();
     }
 
     @Override
-    String nameOfFigure() {
-        return "isoscelesTrapezoid";
-    }
-
-    @Override
-    void infoAboutFigure() {
+    public void draw() {
         System.out.println(new StringBuilder().append("Figure: isoscelesTrapezoid, area: ")
                 .append(area()).append(" sq.units, height: ").append(getHeight())
                 .append(" units, biggerWidth: ").append(getBiggerWidth())

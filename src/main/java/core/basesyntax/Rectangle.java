@@ -27,17 +27,12 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    double area() {
+    public double area() {
         return getLeftLeg() * getRightLeg();
     }
 
     @Override
-    String nameOfFigure() {
-        return "rectangle";
-    }
-
-    @Override
-    void infoAboutFigure() {
+    public void draw() {
         System.out.println(new StringBuilder().append("Figure: rectangle, area: ").append(area())
                 .append(" sq.units, leftLeg: ").append(getLeftLeg()).append(" units, rightLeg: ")
                 .append(getRightLeg()).append(" units, color: ").append(getColor()));

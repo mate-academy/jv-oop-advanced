@@ -17,17 +17,12 @@ public class Square extends Figure {
     }
 
     @Override
-    double area() {
+    public double area() {
         return getLeg() * getLeg();
     }
 
     @Override
-    String nameOfFigure() {
-        return "square";
-    }
-
-    @Override
-    void infoAboutFigure() {
+    public void draw() {
         System.out.println(new StringBuilder().append("Figure: square, area: ").append(area())
                 .append(" sq.units, side: ").append(getLeg()).append(" units, color: ")
                 .append(getColor()));
