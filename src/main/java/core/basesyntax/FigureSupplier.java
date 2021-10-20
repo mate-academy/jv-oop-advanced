@@ -3,32 +3,35 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private ColorSuplier colorsuplier = new ColorSuplier();
+    private Random random = new Random();
+    private final int figurecount = 5;
+    private final int parametercount = 100;
+
     public Figure getRandomFigure() {
-        ColorSuplier colorsuplier = new ColorSuplier();
-        Random random = new Random();
-        int index = random.nextInt(4);
-        if (index == 0) {
-            int side = random.nextInt(100);
+        int index = random.nextInt(figurecount);
+        if (index == 1) {
+            int side = random.nextInt(parametercount);
             String color = colorsuplier.getRandomColor();
             return new Square(side, color);
-        } else if (index == 1) {
-            int breadth = random.nextInt(100);
-            int length = random.nextInt(100);
+        } else if (index == 2) {
+            int breadth = random.nextInt(parametercount);
+            int length = random.nextInt(parametercount);
             String color = colorsuplier.getRandomColor();
             return new Rectangle(breadth, length, color);
-        } else if (index == 2) {
-            int base = random.nextInt(100);
-            int height = random.nextInt(100);
+        } else if (index == 3) {
+            int base = random.nextInt(parametercount);
+            int height = random.nextInt(parametercount);
             String color = colorsuplier.getRandomColor();
             return new RightTriangle(base, height, color);
-        } else if (index == 3) {
-            int radius = random.nextInt(100);
+        } else if (index == 4) {
+            int radius = random.nextInt(parametercount);
             String color = colorsuplier.getRandomColor();
             return new Circle(radius, color);
         } else {
-            int botbase = random.nextInt(100);
-            int topbase = random.nextInt(100);
-            int height = random.nextInt(100);
+            int botbase = random.nextInt(parametercount);
+            int topbase = random.nextInt(parametercount);
+            int height = random.nextInt(parametercount);
             String color = colorsuplier.getRandomColor();
             return new IsoscelesTrapezoid(botbase, topbase, height, color);
         }

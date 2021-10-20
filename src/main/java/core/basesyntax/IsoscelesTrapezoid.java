@@ -20,9 +20,9 @@ public class IsoscelesTrapezoid extends Figure implements Areacount,Figuredrawin
     @Override
     public String draw() {
         StringBuilder builder = new StringBuilder();
-        builder.append("Figure: ").append("right triangle, ").append("area: ").append(getArea())
-                .append(" sq.units, ").append("botbase: ").append(botbase).append(" units, ")
-                .append("topbase: ").append(topbase).append(" units, ")
+        builder.append("Figure: ").append("isosceles trapezoid, ").append("area: ")
+                .append(getArea()).append(" sq.units, ").append("botbase: ").append(botbase)
+                .append(" units, ").append("topbase: ").append(topbase).append(" units, ")
                 .append("height: ").append(" units, ").append(height).append(" units, ")
                 .append("color: ").append(getColor());
         return builder.toString();

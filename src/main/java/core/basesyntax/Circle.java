@@ -16,7 +16,7 @@ public class Circle extends Figure implements Areacount,Figuredrawing {
     @Override
     public String draw() {
         StringBuilder builder = new StringBuilder();
-        builder.append("Figure: ").append("square, ").append("area: ").append(getArea())
+        builder.append("Figure: ").append("circle, ").append("area: ").append(getArea())
                 .append(" sq.units, ").append("radius: ").append(radius)
                 .append(" units, ").append("color: ").append(getColor());
         return builder.toString();
