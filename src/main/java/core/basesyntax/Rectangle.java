@@ -1,10 +1,12 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure  implements AreaFigure{
-    float firstLeg = 5;
-    float secondLeg = 4;
+public class Rectangle extends Figure implements AreaFigure, DrawFigure {
+    private float firstLeg = 5;
+    private float secondLeg = 4;
 
-    public Rectangle() {}
+    public Rectangle() {
+    }
+
     public Rectangle(float firstLeg, float secondLeg) {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
@@ -19,6 +21,6 @@ public class Rectangle extends Figure  implements AreaFigure{
         return "Figure: rectangle, area: " + area()
                 + " sq.units, firstLeg: " + firstLeg
                 + " sq.units, secondLeg: " + secondLeg
-                + " units, color: " + color;
+                + " units, color: " + getColor();
     }
 }

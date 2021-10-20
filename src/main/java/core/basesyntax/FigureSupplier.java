@@ -5,7 +5,8 @@ import java.util.Random;
 public class FigureSupplier {
     private Random random = new Random();
     private Figure figure;
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private ColorSupplier colorSupplier = new ColorSupplier();
+
     public Figure getDefaultFigure() {
         Figures[] values = Figures.values();
         switch (values[random.nextInt(values.length)].toString()) {
@@ -27,7 +28,7 @@ public class FigureSupplier {
             default:
                 return null;
         }
-        figure.color = colorSupplier.getRandomColor();
+        figure.setColor(colorSupplier.getRandomColor());
         return figure;
     }
 
@@ -55,7 +56,7 @@ public class FigureSupplier {
             default:
                 return null;
         }
-        figure.color = colorSupplier.getRandomColor();
+        figure.setColor(colorSupplier.getRandomColor());
         return figure;
     }
 }
