@@ -26,7 +26,6 @@ public class FigureSupplier {
                 figure = new Square();
                 break;
             default:
-                return null;
         }
         figure.setColor(colorSupplier.getRandomColor());
         return figure;
@@ -54,7 +53,6 @@ public class FigureSupplier {
                 figure = new Square(random1);
                 break;
             default:
-                return null;
         }
         figure.setColor(colorSupplier.getRandomColor());
         return figure;
