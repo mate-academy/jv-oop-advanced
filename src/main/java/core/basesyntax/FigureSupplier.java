@@ -5,12 +5,12 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int DEFAULT_RADIUS = 10;
     private static final int MAX_LENGTH_OF_SIDE = 10;
-    private Random randomFigure = new Random();
-    private Random randomSide = new Random();
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private static final Random RANDOM_FIGURE = new Random();
+    private static final Random RANDOM_SIDE = new Random();
+    private static final ColorSupplier COLOR_SUPPLIER = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int figureIndex = randomFigure.nextInt(Figures.values().length);
+        int figureIndex = RANDOM_FIGURE.nextInt(Figures.values().length);
         switch (figureIndex) {
             case 0:
                 return getCircle();
@@ -28,35 +28,35 @@ public class FigureSupplier {
     }
 
     public Figure getCircle() {
-        String color = colorSupplier.getRandomColor().toString();
-        int radius = randomSide.nextInt(MAX_LENGTH_OF_SIDE);
+        String color = COLOR_SUPPLIER.getRandomColor().toString();
+        int radius = RANDOM_SIDE.nextInt(MAX_LENGTH_OF_SIDE);
         return new Circle(color, radius);
     }
 
     public Figure getSquare() {
-        String color = colorSupplier.getRandomColor().toString();
-        int sideOfSquare = randomSide.nextInt(MAX_LENGTH_OF_SIDE);
+        String color = COLOR_SUPPLIER.getRandomColor().toString();
+        int sideOfSquare = RANDOM_SIDE.nextInt(MAX_LENGTH_OF_SIDE);
         return new Square(color, sideOfSquare);
     }
 
     public Figure getRectangle() {
-        String color = colorSupplier.getRandomColor().toString();
-        int firstLegOfRectangle = randomSide.nextInt(MAX_LENGTH_OF_SIDE);
-        int secondLegOfRectangle = randomSide.nextInt(MAX_LENGTH_OF_SIDE);
+        String color = COLOR_SUPPLIER.getRandomColor().toString();
+        int firstLegOfRectangle = RANDOM_SIDE.nextInt(MAX_LENGTH_OF_SIDE);
+        int secondLegOfRectangle = RANDOM_SIDE.nextInt(MAX_LENGTH_OF_SIDE);
         return new Rectangle(color, firstLegOfRectangle, secondLegOfRectangle);
     }
 
     public Figure getTriangle() {
-        String color = colorSupplier.getRandomColor().toString();
-        int sideOfTriangle = randomSide.nextInt(MAX_LENGTH_OF_SIDE);
+        String color = COLOR_SUPPLIER.getRandomColor().toString();
+        int sideOfTriangle = RANDOM_SIDE.nextInt(MAX_LENGTH_OF_SIDE);
         return new RightTriangle(color, sideOfTriangle);
     }
 
     public Figure getTrapezoid() {
-        String color = colorSupplier.getRandomColor().toString();
-        int topSide = randomSide.nextInt(MAX_LENGTH_OF_SIDE);
-        int downSide = randomSide.nextInt(MAX_LENGTH_OF_SIDE);
-        int heightOfTrapezoid = randomSide.nextInt(MAX_LENGTH_OF_SIDE);
+        String color = COLOR_SUPPLIER.getRandomColor().toString();
+        int topSide = RANDOM_SIDE.nextInt(MAX_LENGTH_OF_SIDE);
+        int downSide = RANDOM_SIDE.nextInt(MAX_LENGTH_OF_SIDE);
+        int heightOfTrapezoid = RANDOM_SIDE.nextInt(MAX_LENGTH_OF_SIDE);
         return new IsoscelesTrapezoid(color, topSide, downSide, heightOfTrapezoid);
     }
 
