@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int MAX_FIGURE_NUMBER = 5;
+    public static final int CONSTANT_RADIUS = 10;
     private final Random figureRandom = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random sideRandom = new Random();
@@ -27,7 +28,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.name(), 10);
+        return new Circle(Color.WHITE.name(), CONSTANT_RADIUS);
     }
 
     public Circle getRandomCircle() {
