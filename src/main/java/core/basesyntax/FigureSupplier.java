@@ -5,17 +5,17 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int MAX_UNITS = 100;
     private static final int MIN_UNITS = 10;
-    private static final int AMOUNT_FIGURES = 5;
+    private static final int FIGURE_COUNT = 5;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
     public Figure getDefault() {
-        return new Circle(10, Colors.WHITE.toString());
+        return new Circle(10, Color.WHITE.toString());
     }
 
     public Figure getRandom() {
         String color = colorSupplier.getRandomColor();
-        int randomIndex = random.nextInt(AMOUNT_FIGURES);
+        int randomIndex = random.nextInt(FIGURE_COUNT);
         switch (randomIndex) {
             case 0:
                 return getRandomCircle(color);
@@ -34,7 +34,7 @@ public class FigureSupplier {
     }
 
     private float getRandomUnits() {
-        return (float)random.ints(1000, 10000)
+        return (float)random.ints(MIN_UNITS * 100, MAX_UNITS * 100)
                 .findFirst()
                 .getAsInt() / 100;
     }
