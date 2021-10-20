@@ -5,7 +5,7 @@ import core.basesyntax.figures.Figure;
 /**
  * Feel free to remove this class and create your own.
  */
-public class HelloWorld {
+public class App {
 
     public static void main(String[] args) {
         Figure[] figures = new Figure[8];
