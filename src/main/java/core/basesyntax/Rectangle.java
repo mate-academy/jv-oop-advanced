@@ -33,13 +33,9 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: "
-                + getArea()
-                + " sq.units, first leg: "
-                + getFirstLeg()
-                + " units, second leg: "
-                + getSecondLeg()
-                + " units, color: "
-                + getColor());
+        System.out.println("Figure: rectangle, area: " + getArea()
+                + " sq.units, first leg: " + getFirstLeg()
+                + " units, second leg: " + getSecondLeg()
+                + " units, color: " + getColor());
     }
 }
