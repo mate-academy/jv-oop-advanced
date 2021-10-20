@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements Areacount {
+public class Circle extends Figure implements Areacount,Figuredrawing {
     private int radius;
 
     public Circle(int radius,String color) {
@@ -14,7 +14,16 @@ public class Circle extends Figure implements Areacount {
     }
 
     @Override
+    public String draw() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("Figure: ").append("square, ").append("area: ").append(getArea())
+                .append(" sq.units, ").append("radius: ").append(radius)
+                .append(" units, ").append("color: ").append(getColor());
+        return builder.toString();
+    }
+
+    @Override
     public String toString() {
-        return "Circle{" + "area: " + getArea() + " || " + "color: " + getColor() + '}';
+        return draw();
     }
 }

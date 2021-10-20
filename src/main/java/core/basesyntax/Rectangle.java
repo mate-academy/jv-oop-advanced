@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Areacount {
+public class Rectangle extends Figure implements Areacount,Figuredrawing {
     private int breadth;
     private int length;
 
@@ -16,7 +16,17 @@ public class Rectangle extends Figure implements Areacount {
     }
 
     @Override
+    public String draw() {
+        StringBuilder builder = new StringBuilder();
+        builder.append("Figure: ").append("rectangle, ").append("area: ").append(getArea())
+                .append(" sq.units, ").append("breadth: ").append(breadth)
+                .append(" units, ").append("length: ").append(length)
+                .append(" units, ").append("color: ").append(getColor());
+        return builder.toString();
+    }
+
+    @Override
     public String toString() {
-        return "Rectangle{" + "area: " + getArea() + " || " + "color: " + getColor() + '}';
+        return draw();
     }
 }
