@@ -2,20 +2,20 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class Figure {
-    protected static final int MAX_NUMBER = 10;
-    protected String color;
-    protected double area;
-    protected Random random = new Random();
+public abstract class Figure {
+    private static final int MAX_NUMBER = 10;
+    private Random random = new Random();
 
-    public Figure() {
+    public String getColor() {
         ColorSupplier color = new ColorSupplier();
-        this.color = color.getRandomColor();
+        return color.getRandomColor();
     }
 
-    @Override
-    public String toString() {
-        return "Figure: NO NAME, color: "
-                + color;
+    public int getNumber() {
+        return random.nextInt(MAX_NUMBER);
     }
+
+    public abstract double getArea();
+
+    public abstract String toString();
 }

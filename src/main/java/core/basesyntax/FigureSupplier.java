@@ -17,10 +17,8 @@ public class FigureSupplier {
                 return new Square();
             case ("RIGHT_TRIANGLE"):
                 return new RightTriangle();
-            case ("ISOSCELES_TRAPEZOID"):
-                return new IsoscelesTrapezoid();
             default:
-                return new Figure();
+                return new IsoscelesTrapezoid();
         }
     }
 }

@@ -5,9 +5,8 @@ public class Rectangle extends Figure {
     private int secondSide;
 
     public Rectangle() {
-        this.firstSide = random.nextInt(MAX_NUMBER);
-        this.secondSide = random.nextInt(MAX_NUMBER);
-        area = getArea();
+        this.firstSide = getNumber();
+        this.secondSide = getNumber();
     }
 
     public double getArea() {
@@ -17,9 +16,9 @@ public class Rectangle extends Figure {
     @Override
     public String toString() {
         return "Figure: rectangle, area: "
-                + String.format("%.2f", area) + " sq.units, first side: "
+                + String.format("%.2f", getArea()) + " sq.units, first side: "
                 + firstSide + " units, second side: "
                 + secondSide + " units, color: "
-                + color;
+                + getColor();
     }
 }

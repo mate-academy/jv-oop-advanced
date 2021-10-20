@@ -5,9 +5,8 @@ public class RightTriangle extends Figure {
     private int secondLeg;
 
     public RightTriangle() {
-        this.firstLeg = random.nextInt(MAX_NUMBER);
-        this.secondLeg = random.nextInt(MAX_NUMBER);
-        area = getArea();
+        this.firstLeg = getNumber();
+        this.secondLeg = getNumber();
     }
 
     public double getArea() {
@@ -17,9 +16,9 @@ public class RightTriangle extends Figure {
     @Override
     public String toString() {
         return "Figure: right triangle, area: "
-                + String.format("%.2f", area) + " sq.units, first leg: "
+                + String.format("%.2f", getArea()) + " sq.units, first leg: "
                 + firstLeg + " units, second leg: "
                 + secondLeg + " units, color: "
-                + color;
+                + getColor();
     }
 }

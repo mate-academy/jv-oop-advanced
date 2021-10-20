@@ -4,8 +4,7 @@ public class Square extends Figure {
     private int side;
 
     public Square() {
-        this.side = random.nextInt(MAX_NUMBER);
-        area = getArea();
+        this.side = getNumber();
     }
 
     public double getArea() {
@@ -15,8 +14,8 @@ public class Square extends Figure {
     @Override
     public String toString() {
         return "Figure: square, area: "
-               + String.format("%.2f", area) + " sq.units, side: "
+               + String.format("%.2f", getArea()) + " sq.units, side: "
                + side + " units, color: "
-               + color;
+               + getColor();
     }
 }
