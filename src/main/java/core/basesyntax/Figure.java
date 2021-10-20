@@ -4,7 +4,7 @@ public class Figure {
     private float area = 0;
     private String color = null;
 
-    Figure(float area, Colors color){
+    Figure(float area, Colors color) {
         this.area = area;
         this.color = color.toString();
     }
@@ -22,19 +22,20 @@ public class Figure {
     }
 
     public float getArea() {
-        if(area == 0) {
+        if (area == 0) {
             System.out.println("unknown figure");
         }
         return area;
     }
 
     public String getColor() {
-        if(color == null) {
+        if (color == null) {
             System.out.println();
             return "unknown color";
         }
         return color;
     }
+
     @Override
     public String toString() {
         return "Figure" + "have area=" + area + ", color=" + color;

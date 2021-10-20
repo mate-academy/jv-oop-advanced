@@ -1,11 +1,11 @@
 package core.basesyntax;
 
-public class Isosceles_trapezoid extends Figure implements ArreaCounter {
+public class IsoscelesTrapezoid extends Figure implements ArreaCounter {
     private int bottomBase;
     private int upperBase;
     private int edge;
 
-    public Isosceles_trapezoid(int bottomBase, int upperBase, int edge, Colors colors){
+    public IsoscelesTrapezoid(int bottomBase, int upperBase, int edge, Colors colors) {
         super();
         this.bottomBase = bottomBase;
         this.upperBase = upperBase;
@@ -17,7 +17,7 @@ public class Isosceles_trapezoid extends Figure implements ArreaCounter {
     @Override
     public void countArea() {
         float result;
-//        Brahmagupta formula
+        //Brahmagupta formula
         float p = upperBase + bottomBase + 2 * edge;
         result = (float) (Math.sqrt(p - upperBase) * (p - bottomBase) * (p - edge) * (p - edge));
         setArea(result);
