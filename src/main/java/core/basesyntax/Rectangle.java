@@ -30,6 +30,5 @@ public class Rectangle extends Figure {
                 + " units, "
                 + "color: "
                 + getColor());
-
     }
 }
