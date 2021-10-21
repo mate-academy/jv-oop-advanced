@@ -1,23 +1,24 @@
 package core.basesyntax.figures;
 
-public class Triangle extends Figure implements Special {
+public class Triangle extends Figure {
+    private String name;
     private int radius;
 
-    public Triangle(String name, String color, int radius) {
-        super(name, color);
+    public Triangle(String color, String name, int radius) {
+        super(color);
+        this.name = name;
         this.radius = radius;
     }
 
     @Override
-    public void about() {
-        System.out.println("Figure " + getName()
+    public void draw() {
+        System.out.println("Figure " + name
                 + ", with color " + getColor()
-                + ", and " + radius + " radius" + ", has legs " + hasLeg());
+                + ", and " + radius + " radius" + ", has legs " + getArea());
     }
 
     @Override
-    public boolean hasLeg() {
+    public boolean getArea() {
         return true;
     }
-
 }

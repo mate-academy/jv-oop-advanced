@@ -1,16 +1,23 @@
 package core.basesyntax.figures;
 
 public class Square extends Figure {
+    private String name;
     private int radius;
 
-    public Square(String name, String color, int radius) {
-        super(name, color);
+    public Square(String color, String name, int radius) {
+        super(color);
+        this.name = name;
         this.radius = radius;
     }
 
     @Override
-    public void about() {
-        System.out.println("Figure " + getName()
+    public boolean getArea() {
+        return false;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Figure " + name
                 + ", with color " + getColor()
                 + ", and " + radius + " radius");
     }
