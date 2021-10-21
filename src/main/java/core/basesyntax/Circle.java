@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements Shape {
-    private final double radius;
+public class Circle extends Figure implements AreaCalculator {
+    private final int radius;
 
-    public Circle(String color, double radius) {
+    public Circle(String color, int radius) {
         super(color);
         this.radius = radius;
     }
@@ -18,7 +18,7 @@ public class Circle extends Figure implements Shape {
     }
 
     @Override
-    public void printInfo() {
+    public void draw() {
         System.out.println("Figure: circle, area: " + getArea() + " sq.units, radius: "
                 + getRadius() + " units, color: " + getColor());
     }

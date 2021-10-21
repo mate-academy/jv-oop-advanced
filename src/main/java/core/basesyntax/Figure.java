@@ -11,5 +11,5 @@ public abstract class Figure {
         return color;
     }
 
-    public abstract void printInfo();
+    public abstract void draw();
 }

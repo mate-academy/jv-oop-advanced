@@ -1,10 +1,10 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Shape {
-    private final double length;
-    private final double weight;
+public class Rectangle extends Figure implements AreaCalculator {
+    private final int length;
+    private final int weight;
 
-    public Rectangle(String color, double length, double weight) {
+    public Rectangle(String color, int length, int weight) {
         super(color);
         this.length = length;
         this.weight = weight;
@@ -24,7 +24,7 @@ public class Rectangle extends Figure implements Shape {
     }
 
     @Override
-    public void printInfo() {
+    public void draw() {
         System.out.println("Figure: rectangle, area: " + getArea() + " sq.units, length: "
                 + getLength() + " units, weight: " + getWeight() + " units, color: " + getColor());
     }
