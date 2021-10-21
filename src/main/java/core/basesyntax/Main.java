@@ -8,8 +8,6 @@ public class Main {
 
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        Figure randomFigure = figureSupplier.getRandomFigure();
-        Figure defaultFigure = figureSupplier.getDefaultFigure();
         Figure[] figuresArray = new Figure[MAX_NUMBER];
         for (int i = 0; i < figuresArray.length; i++) {
             if (i < figuresArray.length / 2) {
