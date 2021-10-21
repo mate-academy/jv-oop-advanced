@@ -17,18 +17,9 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: "
-                + "rectangle, "
-                + "area: "
-                + getArea()
-                + " sq.units, "
-                + "height: "
-                + height
-                + " units, "
-                + "wigth: "
-                + wigth
-                + " units, "
-                + "color: "
-                + getColor());
+        System.out.println("Figure: isoscelesTrapezoid, area: " + getArea()
+                + " sq.units, height: " + height
+                + " sq.units, wigth: " + wigth
+                + " units, color: " + getColor());
     }
 }
