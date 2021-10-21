@@ -1,15 +1,14 @@
 package core.figures;
 
 import java.text.DecimalFormat;
-import randomizers.sourcerand.Colors;
+import randomizers.sourcerand.Color;
 
 public class Rectangle extends Figure {
-
     private final int sideA;
     private final int sideB;
 
-    public Rectangle(Colors figureColor, int sideA, int sideB) {
-        super(figureColor);
+    public Rectangle(Color color, int sideA, int sideB) {
+        super(color);
         this.sideA = sideA;
         this.sideB = sideB;
     }
@@ -24,6 +23,6 @@ public class Rectangle extends Figure {
         return "Figure: Rectangle;\n"
                 + "SideA: " + sideA + ", SideB: " + sideB
                 + ";\n" + "Area: " + new DecimalFormat("#.##").format(calculateArea())
-                + ";\n" + "Color: " + getFigureColor() + "\n\n";
+                + ";\n" + "Color: " + getColor() + "\n\n";
     }
 }

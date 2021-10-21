@@ -1,14 +1,13 @@
 package core.figures;
 
 import java.text.DecimalFormat;
-import randomizers.sourcerand.Colors;
+import randomizers.sourcerand.Color;
 
 public class Circle extends Figure {
-
     private final int radius;
 
-    public Circle(Colors figureColor, int radius) {
-        super(figureColor);
+    public Circle(Color color, int radius) {
+        super(color);
         this.radius = radius;
     }
 
@@ -22,6 +21,6 @@ public class Circle extends Figure {
         return "Figure: Circle;\n"
                 + "Radius: " + radius
                 + ";\n" + "Area: " + new DecimalFormat("#.##").format(calculateArea())
-                + ";\n" + "Color: " + getFigureColor() + "\n\n";
+                + ";\n" + "Color: " + getColor() + "\n\n";
     }
 }

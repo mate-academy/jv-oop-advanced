@@ -1,6 +1,6 @@
 package randomizers.sourcerand;
 
-public enum Colors {
+public enum Color {
     BLACK,
     WHITE,
     BLUE,

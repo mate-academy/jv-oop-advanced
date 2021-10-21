@@ -1,14 +1,14 @@
 package randomizers;
 
 import java.util.Random;
-import randomizers.sourcerand.Colors;
+import randomizers.sourcerand.Color;
 
 public class ColorSupplier {
-    private static final Colors[] COLORS = Colors.values();
+    private static final Color[] COLORS = Color.values();
     private static final int SIZE = COLORS.length;
     private static final Random RANDOM = new Random();
 
-    public Colors getRandomColor() {
+    public Color getRandomColor() {
         return COLORS[RANDOM.nextInt(SIZE)];
     }
 }
