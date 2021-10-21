@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.util.Arrays;
-
 public class Main {
     private static final int ARRAY_LENGTH = 6;
 
@@ -14,7 +12,7 @@ public class Main {
             } else {
                 figures[i] = figureSupplier.getDefault();
             }
+            figures[i].printInfo();
         }
-        Arrays.stream(figures).forEach(figure -> figure.printInfo());
     }
 }
