@@ -3,7 +3,7 @@ package core.basesyntax;
 import core.basesyntax.models.Figure;
 import core.basesyntax.suppliers.FigureSupplier;
 
-public class HelloWorld {
+public class Main {
     static final int ARRAY_LENGTH = 6;
 
     public static void main(String[] args) {
