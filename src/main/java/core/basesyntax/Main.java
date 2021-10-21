@@ -2,8 +2,9 @@ package core.basesyntax;
 
 public class Main {
     public static void main(String[] args) {
+        final int numberCycles = 6;
         FigureSupplier figureSupplier = new FigureSupplier();
-        Figure[] figures = new Figure[6];
+        Figure[] figures = new Figure[numberCycles];
         figures[0] = figureSupplier.getRandomFigure();
         figures[1] = figureSupplier.getRandomFigure();
         figures[2] = figureSupplier.getRandomFigure();
