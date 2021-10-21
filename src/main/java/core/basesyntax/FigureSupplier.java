@@ -13,23 +13,26 @@ public class FigureSupplier {
         Figure figure = null;
         switch (figures[index]) {
             case ("circle"): {
-                figure =  new Circle(color.getRandomColor(), random.nextInt(10) + 1);
+                figure = new Circle(color.getRandomColor(), random.nextInt(10) + 1);
                 break;
             }
             case ("square"): {
-                figure =  new Square(color.getRandomColor(), random.nextInt(10) + 1);
+                figure = new Square(color.getRandomColor(), random.nextInt(10) + 1);
                 break;
             }
             case ("triangle"): {
-                figure =  new RightTriangle(color.getRandomColor(), random.nextInt(10) + 1);
+                figure = new RightTriangle(color.getRandomColor(), random.nextInt(10) + 1);
                 break;
             }
             case ("trapezoid"): {
-                figure =  new IsoscelesTrapezoid(color.getRandomColor(), random.nextInt(10) + 1,
+                figure = new IsoscelesTrapezoid(color.getRandomColor(), random.nextInt(10) + 1,
                         + random.nextInt(10) + 1, random.nextInt(10) + 1);
-            }
-            default:
                 break;
+            }
+            default: {
+                figure = getDefaultFigure();
+                break;
+            }
         }
         return figure;
     }
