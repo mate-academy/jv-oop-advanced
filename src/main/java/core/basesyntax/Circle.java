@@ -1,10 +1,10 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements AreaCalculator {
+public class Circle extends Figure {
     private double radius;
 
-    public Circle(String color, String name, double radius) {
-        super(color, name);
+    public Circle(String color, double radius) {
+        super(color);
         this.radius = radius;
     }
 
@@ -16,7 +16,7 @@ public class Circle extends Figure implements AreaCalculator {
 
     @Override
     public String draw() {
-        return "Figure: " + getName().toLowerCase() + ", area: " + getArea() + " sq.units, radius: "
+        return "Figure: circle, area: " + getArea() + " sq.units, radius: "
                 + radius + " units, color: " + getColor();
     }
 }
