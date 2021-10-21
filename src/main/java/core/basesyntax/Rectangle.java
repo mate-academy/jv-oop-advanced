@@ -4,9 +4,10 @@ public class Rectangle extends Figure {
     private int firstSide;
     private int secondSide;
 
-    public Rectangle() {
-        this.firstSide = getNumber();
-        this.secondSide = getNumber();
+    public Rectangle(String color, int firstSide, int secondSide) {
+        super(color);
+        this.firstSide = firstSide;
+        this.secondSide = secondSide;
     }
 
     public double getArea() {
@@ -14,7 +15,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String toString() {
+    public String getInfo() {
         return "Figure: rectangle, area: "
                 + String.format("%.2f", getArea()) + " sq.units, first side: "
                 + firstSide + " units, second side: "
