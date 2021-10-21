@@ -32,7 +32,7 @@ public class FigureSupplier {
                         random.nextDouble() * 100);
             }
             default: {
-                return null;
+                return getDefaultFigure();
             }
         }
     }
