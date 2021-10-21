@@ -5,6 +5,8 @@ import java.util.Random;
 public class FigureSupplier {
     private Figure figure;
     private ColorSupplier colorSupplier = new ColorSupplier();
+    String color = colorSupplier.getRandomColor();
+    Random random = new Random();
 
     public Figure getDefaultFigure() {
         Figure circle = new Circle(10);
@@ -13,23 +15,27 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        Figures[] values = Figures.values();
         Random random = new Random();
-        switch (random.nextInt(values.length)) {
+        switch (random.nextInt(5)) {
             case 0:
                 figure = getRandomCircle();
+                figure.setColor(color);
                 break;
             case 1:
                 figure = getRandomIsoscelesTrapezoid();
+                figure.setColor(color);
                 break;
             case 2:
                 figure = getRandomRectangle();
+                figure.setColor(color);
                 break;
             case 3:
                 figure = getRandomRightTriangle();
+                figure.setColor(color);
                 break;
             case 4:
                 figure = getRandomSquare();
+                figure.setColor(color);
                 break;
             default:
         }
@@ -37,42 +43,32 @@ public class FigureSupplier {
     }
 
     public Figure getRandomCircle() {
-        Random random = new Random();
         float radius = 20 * random.nextFloat();
-        Figure figure = new Circle(radius);
-        return figure;
+        return new Circle(radius);
     }
 
     public Figure getRandomIsoscelesTrapezoid() {
-        Random random = new Random();
         float innerSide = 20 * random.nextFloat();
         float downSide = 20 * random.nextFloat();
         float heightTrapezoid = 20 * random.nextFloat();
-        Figure figure = new IsoscelesTrapezoid(innerSide, downSide, heightTrapezoid);
-        return figure;
+        return new IsoscelesTrapezoid(innerSide, downSide, heightTrapezoid);
     }
 
     public Figure getRandomRectangle() {
-        Random random = new Random();
         float firstLeg = 20 * random.nextFloat();
         float secondLeg = 20 * random.nextFloat();
-        Figure figure = new Rectangle(firstLeg, secondLeg);
-        return figure;
+        return new Rectangle(firstLeg, secondLeg);
     }
 
     public Figure getRandomRightTriangle() {
-        Random random = new Random();
         float firstLeg = 20 * random.nextFloat();
         float secondLeg = 20 * random.nextFloat();
-        Figure figure = new Rectangle(firstLeg, secondLeg);
-        return figure;
+        return new RightTriangle(firstLeg, secondLeg);
     }
 
     public Figure getRandomSquare() {
-        Random random = new Random();
         float side = 20 * random.nextFloat();
-        Figure figure = new Square(side);
-        return figure;
+        return new Square(side);
     }
 
 }

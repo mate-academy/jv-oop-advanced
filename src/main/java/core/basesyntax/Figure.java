@@ -4,8 +4,6 @@ public abstract class Figure implements AreaCalculator, Drawable {
     private String color;
 
     public Figure() {
-        ColorSupplier colorSupplier = new ColorSupplier();
-        color = colorSupplier.getRandomColor();
     }
 
     public void setColor(String color) {

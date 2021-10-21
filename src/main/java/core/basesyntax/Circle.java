@@ -3,9 +3,6 @@ package core.basesyntax;
 public class Circle extends Figure {
     private float radius;
 
-    public Circle() {
-    }
-
     public Circle(float radius) {
         this.radius = radius;
     }
@@ -19,7 +16,7 @@ public class Circle extends Figure {
         return (float) Math.PI * radius * radius;
     }
 
-    public String toString() {
+    public String draw() {
         return "Figure: circle, area: " + area()
                 + " sq.units, radius: " + radius + " units, color: "
                 + getColor();

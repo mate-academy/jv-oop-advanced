@@ -1,17 +1,17 @@
 package core.basesyntax;
 
 public class Main {
+    public static final int NUMBER_CYCLES = 6;
     public static void main(String[] args) {
-        final int numberCycles = 6;
-        Figure[] figures = new Figure[numberCycles];
-        for (int i = 0; i < numberCycles; i++) {
+        Figure[] figures = new Figure[NUMBER_CYCLES];
+        for (int i = 0; i < NUMBER_CYCLES; i++) {
             FigureSupplier figureSupplier = new FigureSupplier();
-            if (i < numberCycles / 2) {
+            if (i < NUMBER_CYCLES / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
-            System.out.println(figures[i]);
+            System.out.println(figures[i].draw());
         }
     }
 }

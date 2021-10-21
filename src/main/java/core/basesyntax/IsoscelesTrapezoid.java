@@ -5,9 +5,6 @@ public class IsoscelesTrapezoid extends Figure {
     private float downSide;
     private float heightTrapezoid;
 
-    public IsoscelesTrapezoid() {
-    }
-
     public IsoscelesTrapezoid(float innerSide, float downSide, float heightTrapezoid) {
         this.innerSide = innerSide;
         this.downSide = downSide;
@@ -19,7 +16,7 @@ public class IsoscelesTrapezoid extends Figure {
         return (innerSide + downSide) / 2 * heightTrapezoid;
     }
 
-    public String toString() {
+    public String draw() {
         return "Figure: isosceles trapezoid, area: " + area()
                 + " sq.units, innerSide: " + innerSide
                 + " sq.units, downSide: " + downSide
