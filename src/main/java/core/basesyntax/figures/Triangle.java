@@ -12,21 +12,13 @@ public class Triangle extends Figure {
         this.rightLeg = rightLeg;
     }
 
-    public int getLeftLeg() {
-        return leftLeg;
-    }
-
-    public int getRightLeg() {
-        return rightLeg;
-    }
-
     @Override
     public void draw() {
         System.out.println("Figure " + getClass().getSimpleName()
                 + ", with color " + getColor()
                 + ", and " + getArea() + " radius"
-                + " leftLeg " + getLeftLeg()
-                + " rightLeg " + getRightLeg());
+                + " leftLeg " + leftLeg
+                + " rightLeg " + rightLeg);
     }
 
     @Override
