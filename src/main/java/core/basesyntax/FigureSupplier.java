@@ -27,7 +27,6 @@ public class FigureSupplier {
                 break;
             default:
         }
-        figure.setColor(colorSupplier.getRandomColor());
         return figure;
     }
 
@@ -54,7 +53,6 @@ public class FigureSupplier {
                 break;
             default:
         }
-        figure.setColor(colorSupplier.getRandomColor());
         return figure;
     }
 }
