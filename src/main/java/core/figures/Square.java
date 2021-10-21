@@ -1,12 +1,11 @@
 package core.figures;
 
 import java.text.DecimalFormat;
-import randomizers.sourcerand.Color;
 
 public class Square extends Figure {
     private final int side;
 
-    public Square(Color color, int side) {
+    public Square(String color, int side) {
         super(color);
         this.side = side;
     }

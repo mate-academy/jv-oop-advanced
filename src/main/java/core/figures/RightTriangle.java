@@ -1,13 +1,12 @@
 package core.figures;
 
 import java.text.DecimalFormat;
-import randomizers.sourcerand.Color;
 
 public class RightTriangle extends Figure {
     private final int sideA;
     private final int sideB;
 
-    public RightTriangle(Color color, int sideA, int sideB) {
+    public RightTriangle(String color, int sideA, int sideB) {
         super(color);
         this.sideA = sideA;
         this.sideB = sideB;

@@ -1,13 +1,12 @@
 package core.figures;
 
 import java.text.DecimalFormat;
-import randomizers.sourcerand.Color;
 
 public class Rectangle extends Figure {
     private final int sideA;
     private final int sideB;
 
-    public Rectangle(Color color, int sideA, int sideB) {
+    public Rectangle(String color, int sideA, int sideB) {
         super(color);
         this.sideA = sideA;
         this.sideB = sideB;

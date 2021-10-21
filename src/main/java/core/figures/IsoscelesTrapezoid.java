@@ -1,14 +1,13 @@
 package core.figures;
 
 import java.text.DecimalFormat;
-import randomizers.sourcerand.Color;
 
 public class IsoscelesTrapezoid extends Figure {
     private final int baseA;
     private final int baseB;
     private final int height;
 
-    public IsoscelesTrapezoid(Color color, int baseA, int baseB, int height) {
+    public IsoscelesTrapezoid(String color, int baseA, int baseB, int height) {
         super(color);
         this.baseA = baseA;
         this.baseB = baseB;

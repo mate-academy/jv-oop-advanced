@@ -7,7 +7,6 @@ public class Main {
 
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-
         for (int i = 0; i < NUMBER_OF_FIGURES; i++) {
             if (i >= NUMBER_OF_FIGURES / 2) {
                 System.out.println(figureSupplier.getDefaultFigure().drawFigure());
