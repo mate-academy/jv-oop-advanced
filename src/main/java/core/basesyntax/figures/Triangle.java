@@ -5,6 +5,22 @@ public class Triangle extends Figure {
     private int leftLeg;
     private int rightLeg;
 
+    public int getLeftLeg() {
+        return leftLeg;
+    }
+
+    public void setLeftLeg(int leftLeg) {
+        this.leftLeg = leftLeg;
+    }
+
+    public int getRightLeg() {
+        return rightLeg;
+    }
+
+    public void setRightLeg(int rightLeg) {
+        this.rightLeg = rightLeg;
+    }
+
     public Triangle(String color, int radius, int leftLeg, int rightLeg) {
         super(color);
         this.radius = radius;
@@ -17,8 +33,8 @@ public class Triangle extends Figure {
         System.out.println("Figure " + getClass().getSimpleName()
                 + ", with color " + getColor()
                 + ", and " + getArea() + " radius"
-                + " leftLeg " + leftLeg
-                + " rightLeg " + rightLeg);
+                + " leftLeg " + getLeftLeg()
+                + " rightLeg " + getRightLeg());
     }
 
     @Override
