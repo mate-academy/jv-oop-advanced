@@ -3,7 +3,7 @@ package core.basesyntax.figure;
 import core.basesyntax.misc.AreaCalculator;
 import core.basesyntax.misc.Drawable;
 
-public abstract class Figure implements Drawable,AreaCalculator {
+public abstract class Figure implements Drawable, AreaCalculator {
     private String color;
     private String type;
 
