@@ -4,9 +4,9 @@ public class Square extends Figure {
     private int side;
 
     public Square(int side, String color) {
-        this.setColor(color);
-        this.side = side;
+        super.setColor(color);
         super.setType("square");
+        this.side = side;
     }
 
     public int getSide() {

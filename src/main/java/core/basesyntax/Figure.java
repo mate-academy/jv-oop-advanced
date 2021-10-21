@@ -17,9 +17,8 @@ public abstract class Figure implements InformationPrint, AreaCalculator {
         return color;
     }
 
-    public Figure setColor(String color) {
+    public void setColor(String color) {
         this.color = color;
-        return this;
     }
 
 }

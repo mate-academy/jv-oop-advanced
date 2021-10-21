@@ -4,21 +4,20 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int UNITS = 1000;
+    private static final String[] FIGURES = new String[]{"CIRCLE", "RECTANGLE", "RIGHT_TRIANGLE",
+            "SQUARE", "IsoscelesTrapezoid", "RightTriangle"};
+    private static final int RADIUS_OF_CIRCLE = 10;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
         String color = colorSupplier.getRandomColor();
-        int index = new Random().nextInt(Figures.values().length);
-        Figures figures = Figures.values()[index];
-        return figures == Figures.Circle ? getCircle(color) : figures == Figures.IsoscelesTrapezoid
-                ? getIsoscelesTrapezoid(color) : figures == Figures.Rectangle ? getRectangle(color)
-                : figures == Figures.RightTriangle ? getRightTriangle(color) : getSquare(color);
-    }
-
-    private Figure getCircle(String color) {
-        int side = random.nextInt(UNITS);
-        return new Circle(side, color);
+        int index = new Random().nextInt(FIGURES.length);
+        return FIGURES[index].equals("Circle") ? getDefaultFigure() :
+                FIGURES[index].equals("IsoscelesTrapezoid") ? getIsoscelesTrapezoid(color) :
+                        FIGURES[index].equals("Rectangle") ? getRectangle(color)
+                                : FIGURES[index].equals("RightTriangle")
+                                ? getRightTriangle(color) : getSquare(color);
     }
 
     private Figure getIsoscelesTrapezoid(String color) {
@@ -43,5 +42,11 @@ public class FigureSupplier {
     private Figure getSquare(String color) {
         int side = random.nextInt(UNITS);
         return new Square(side, color);
+    }
+
+    public Figure getDefaultFigure() {
+        int radius = RADIUS_OF_CIRCLE;
+        String color = Color.WHITE.toString();
+        return new Circle(radius, color);
     }
 }

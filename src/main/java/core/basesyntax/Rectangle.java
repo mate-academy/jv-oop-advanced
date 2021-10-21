@@ -5,10 +5,10 @@ public class Rectangle extends Figure {
     private int sideB;
 
     public Rectangle(int sideA, int sideB, String color) {
-        this.setColor(color);
+        super.setColor(color);
+        super.setType("rectangle");
         this.sideA = sideA;
         this.sideB = sideB;
-        super.setType("rectangle");
     }
 
     public int getSideA() {

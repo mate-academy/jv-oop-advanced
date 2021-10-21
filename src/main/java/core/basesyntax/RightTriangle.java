@@ -5,10 +5,10 @@ public class RightTriangle extends Figure {
     private int secondLeg;
 
     public RightTriangle(int firstLeg, int secondLeg, String color) {
-        this.setColor(color);
+        super.setColor(color);
+        super.setType("right triangle");
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        this.setType("right triangle");
     }
 
     public int getFirstLeg() {
