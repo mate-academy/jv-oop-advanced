@@ -6,8 +6,6 @@ public class Circle extends Shape {
     public Circle(int radius, String color) {
         super(color);
         this.radius = radius;
-        float valueOfArea = countArea();
-        setArea(valueOfArea);
     }
 
     @Override
@@ -16,7 +14,8 @@ public class Circle extends Shape {
     }
 
     public void draw() {
-        System.out.println("Circle, " + "area: " + getArea() + " sq.units" + " radius: "
-                + radius + " units" + ", color: " + getColor());
+        System.out.printf("Circle, area: %.2f sq.units,"
+                + " radius: %d units, color: "
+                + getColor() + "\n", countArea(), radius);
     }
 }

@@ -16,7 +16,7 @@ public class Square extends Shape {
 
     @Override
     public void draw() {
-        System.out.println( "Square, " + "area: " + getArea() + " sq.units" + " side: " + side
-                + " units" + ", color: " + getColor());
+        System.out.printf("Square, area: %.2f sq.units  side: %d units,"
+                          + " color: " + getColor() + "\n", countArea(), side);
     }
 }

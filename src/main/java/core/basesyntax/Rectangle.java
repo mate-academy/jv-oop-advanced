@@ -8,8 +8,6 @@ public class Rectangle extends Shape {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        float valueOfArea = countArea();
-        setArea(valueOfArea);
     }
 
     @Override
@@ -19,10 +17,9 @@ public class Rectangle extends Shape {
 
     @Override
     public void draw() {
-        System.out.println("Rectangle, " + "area: " + getArea() + " sq.units"
-                + "  this.firstLeg: " + this.firstLeg
-                + " units" + " secondLeg: " + secondLeg
-                + " units" + ", color: " + getColor());
+        System.out.printf("Rectangle, area: %.2f sq.units firstLeg: %d units,"
+                        + " secondLeg: %d units, color: " + getColor() + "\n",
+                        countArea(), firstLeg, secondLeg);
     }
 }
 

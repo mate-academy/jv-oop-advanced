@@ -7,7 +7,6 @@ public class RightTriangle extends Shape {
         super(color);
         this.side = side;
         float valueOfArea = countArea();
-        setArea(valueOfArea);
     }
 
     @Override
@@ -17,7 +16,8 @@ public class RightTriangle extends Shape {
 
     @Override
     public void draw() {
-        System.out.println("RightTriangle, " + "area: " + getArea() + " sq.units" + " side: " + side
-                + " units" + ", color: " + getColor());
+        System.out.printf("RightTriangle, area: %.2f sq.units,"
+                        + " side: %d units, color: " + getColor() + "\n",
+                        countArea(), side);
     }
 }

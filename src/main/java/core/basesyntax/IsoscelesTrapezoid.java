@@ -10,22 +10,20 @@ public class IsoscelesTrapezoid extends Shape {
         this.bottomBase = bottomBase;
         this.upperBase = upperBase;
         this.edge = edge;
-        float valueOfArea = countArea();
-        setArea(valueOfArea);
     }
 
     @Override
     public float countArea() {
         //Brahmagupta formula
         float p = upperBase + bottomBase + 2 * edge;
-        return (float) (Math.sqrt(p - upperBase) * (p - bottomBase) * (p - edge) * (p - edge));
+        return (float) (Math.sqrt((p - upperBase) * (p - bottomBase) * (p - edge) * (p - edge)));
     }
 
     @Override
     public void draw() {
-        System.out.println("IsoscelesTrapezoid, " + "area: " + getArea()
-                + " sq.units" + " bottomBase: " + bottomBase
-                + " units" + " upperBase: " + upperBase + " units" + " edge: "
-                + " units" + ", color: " + getColor());
+        System.out.printf("IsoscelesTrapezoid, area: "
+                        + "%.2f sq.units bottomBase: %d units, "
+                        + "upperBase: %d units, edge: %d units, color: " + getColor() + "\n",
+                         countArea(), bottomBase, upperBase, edge);
     }
 }

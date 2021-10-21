@@ -41,6 +41,7 @@ public class FigureSupplier {
                 int randomSide = random.nextInt(100);
                 return new RightTriangle(randomSide, randomColor);
             }
+            case 5:
             default: {
                 //Square
                 int randomSide = random.nextInt(100);
