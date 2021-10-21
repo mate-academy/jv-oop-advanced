@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Figure implements Areacounter,Drawable {
+public abstract class Figure implements AreaCounter, Drawable {
     private String color;
 
     public Figure(String color) {
@@ -15,13 +15,4 @@ public class Figure implements Areacounter,Drawable {
         return color;
     }
 
-    @Override
-    public String draw() {
-        return null;
-    }
-
-    @Override
-    public double getArea() {
-        return 0;
-    }
 }
