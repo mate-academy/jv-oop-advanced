@@ -12,11 +12,12 @@ public class Circle extends Shape implements AreaCounter {
 
     @Override
     public float countArea() {
-        return  (float) (Math.PI * radius * radius);
+        return (float) (Math.PI * radius * radius);
     }
 
     @Override
     public String toString() {
-        return "Circle, " + "area: " + getArea() + " sq.units" + " radius: " + radius + " units" + ", color: " + getColor();
+        return "Circle, " + "area: " + getArea() + " sq.units" + " radius: "
+                + radius + " units" + ", color: " + getColor();
     }
 }

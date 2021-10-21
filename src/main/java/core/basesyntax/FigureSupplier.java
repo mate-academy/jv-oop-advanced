@@ -27,7 +27,8 @@ public class FigureSupplier {
                 int randomBottomBase = random.nextInt(100);
                 int randomUpperBase = random.nextInt(100);
                 int randomEdge = random.nextInt(100);
-                return new IsoscelesTrapezoid(randomBottomBase, randomUpperBase, randomEdge, randomColor);
+                return new IsoscelesTrapezoid(randomBottomBase,
+                        randomUpperBase, randomEdge, randomColor);
             }
             case 3 : {
                 //Rectangle

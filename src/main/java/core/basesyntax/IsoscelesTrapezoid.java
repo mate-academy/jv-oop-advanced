@@ -18,12 +18,13 @@ public class IsoscelesTrapezoid extends Shape implements AreaCounter {
     public float countArea() {
         //Brahmagupta formula
         float p = upperBase + bottomBase + 2 * edge;
-        return  (float) (Math.sqrt(p - upperBase) * (p - bottomBase) * (p - edge) * (p - edge));
+        return (float) (Math.sqrt(p - upperBase) * (p - bottomBase) * (p - edge) * (p - edge));
     }
 
     @Override
     public String toString() {
-        return "IsoscelesTrapezoid, " + "area: " + getArea() + " sq.units" + " bottomBase: " + bottomBase
+        return "IsoscelesTrapezoid, " + "area: " + getArea()
+                + " sq.units" + " bottomBase: " + bottomBase
                 + " units" + " upperBase: " + upperBase + " units" + " edge: "
                 + " units" + ", color: " + getColor();
     }

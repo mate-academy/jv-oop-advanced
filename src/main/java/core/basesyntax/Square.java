@@ -12,7 +12,7 @@ public class Square extends Shape implements AreaCounter {
 
     @Override
     public float countArea() {
-        return  (float) (side * side);
+        return (float) (side * side);
     }
 
     @Override

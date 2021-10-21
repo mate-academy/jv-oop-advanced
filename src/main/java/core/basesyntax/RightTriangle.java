@@ -12,7 +12,7 @@ public class RightTriangle extends Shape implements AreaCounter {
 
     @Override
     public float countArea() {
-        return  (float) (side * side * Math.sqrt(3.0 / 4.0));
+        return (float) (side * side * Math.sqrt(3.0 / 4.0));
     }
 
     @Override

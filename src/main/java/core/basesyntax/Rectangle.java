@@ -19,8 +19,10 @@ public class Rectangle extends Shape implements AreaCounter {
 
     @Override
     public String toString() {
-        return "Rectangle, " + "area: " + getArea() + " sq.units" + "  this.firstLeg: " +  this.firstLeg
-                + " units" + " secondLeg: " + secondLeg + " units" + ", color: " + getColor();
+        return "Rectangle, " + "area: " + getArea() + " sq.units"
+                + "  this.firstLeg: " + this.firstLeg
+                + " units" + " secondLeg: " + secondLeg
+                + " units" + ", color: " + getColor();
     }
 }
 
