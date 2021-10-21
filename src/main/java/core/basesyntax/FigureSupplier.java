@@ -35,20 +35,20 @@ public class FigureSupplier {
         float random1 = 20 * random.nextFloat();
         float random2 = 20 * random.nextFloat();
         float random3 = 20 * random.nextFloat();
-        switch (values[random.nextInt(values.length)].toString()) {
-            case "CIRCLE":
+        switch (random.nextInt(values.length)) {
+            case 0:
                 figure = new Circle(random1);
                 break;
-            case "ISOSCELES_TRAPEZOID":
+            case 1:
                 figure = new IsoscelesTrapezoid(random1, random2, random3);
                 break;
-            case "RECTANGLE":
+            case 2:
                 figure = new Rectangle(random1, random2);
                 break;
-            case "RIGHT_TRIANGLE":
+            case 3:
                 figure = new RightTriangle(random1, random2);
                 break;
-            case "SQUARE":
+            case 4:
                 figure = new Square(random1);
                 break;
             default:
