@@ -14,11 +14,11 @@ public class Triangle extends Figure {
     public void draw() {
         System.out.println("Figure " + name
                 + ", with color " + getColor()
-                + ", and " + radius + " radius" + ", has legs " + getArea());
+                + ", and " + getArea() + " radius");
     }
 
     @Override
-    public boolean getArea() {
-        return true;
+    public double getArea() {
+        return radius * radius;
     }
 }

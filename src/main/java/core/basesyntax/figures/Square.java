@@ -11,14 +11,14 @@ public class Square extends Figure {
     }
 
     @Override
-    public boolean getArea() {
-        return false;
+    public double getArea() {
+        return radius * radius;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure " + name
                 + ", with color " + getColor()
-                + ", and " + radius + " radius");
+                + ", and " + getArea() + " radius");
     }
 }

@@ -9,10 +9,12 @@ import core.basesyntax.figures.Trapezoid;
 import core.basesyntax.figures.Triangle;
 import java.util.Random;
 
-public class FigureSupplier extends ColorSupplier {
+public class FigureSupplier {
     private static final int MAX_NUMBER = 6;
     private static final int RANDOM_RADIUS = 15;
+    private static final int DEFAULT_RADIUS = 10;
     private static final Random random = new Random();
+    private static final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         switch (random.nextInt(MAX_NUMBER)) {
@@ -32,31 +34,32 @@ public class FigureSupplier extends ColorSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("Default: Circle", Color.WHITE.toString().toLowerCase(), 10);
+        return new Circle(Circle.class.getSimpleName(),
+                Color.WHITE.toString().toLowerCase(), DEFAULT_RADIUS);
     }
 
     private Figure circle() {
-        return new Circle(getRandomColor().toLowerCase(),
+        return new Circle(colorSupplier.getRandomColor().toLowerCase(),
                 Circle.class.getSimpleName(), random.nextInt(RANDOM_RADIUS));
     }
 
     private Figure rectangle() {
-        return new Rectangle(getRandomColor().toLowerCase(),
+        return new Rectangle(colorSupplier.getRandomColor().toLowerCase(),
                 Rectangle.class.getSimpleName(), random.nextInt(RANDOM_RADIUS));
     }
 
     private Figure square() {
-        return new Square(getRandomColor().toLowerCase(),
+        return new Square(colorSupplier.getRandomColor().toLowerCase(),
                 Square.class.getSimpleName(), random.nextInt(RANDOM_RADIUS));
     }
 
     private Figure trapezoid() {
-        return new Trapezoid(getRandomColor().toLowerCase(),
+        return new Trapezoid(colorSupplier.getRandomColor().toLowerCase(),
                 Trapezoid.class.getSimpleName(), random.nextInt(RANDOM_RADIUS));
     }
 
     private Figure triangle() {
-        return new Triangle(getRandomColor().toLowerCase(),
+        return new Triangle(colorSupplier.getRandomColor().toLowerCase(),
                 Triangle.class.getSimpleName(), random.nextInt(RANDOM_RADIUS));
     }
 }

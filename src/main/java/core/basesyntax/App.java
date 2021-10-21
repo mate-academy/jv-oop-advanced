@@ -3,13 +3,13 @@ package core.basesyntax;
 import core.basesyntax.figures.Figure;
 
 public class App {
-    private static final int COUNTER = 8;
+    private static final int FIGURES_LENGTH = 8;
 
     public static void main(String[] args) {
-        Figure[] figures = new Figure[COUNTER];
+        Figure[] figures = new Figure[FIGURES_LENGTH];
         FigureSupplier figureSupplier = new FigureSupplier();
-        for (int i = 0; i < COUNTER; i++) {
-            if (i < 4) {
+        for (int i = 0; i < FIGURES_LENGTH; i++) {
+            if (i < 5) {
                 figures[i] = figureSupplier.getRandomFigure();
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();

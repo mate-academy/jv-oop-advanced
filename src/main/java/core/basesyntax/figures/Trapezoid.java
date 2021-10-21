@@ -14,11 +14,11 @@ public class Trapezoid extends Figure {
     public void draw() {
         System.out.println("Figure " + name
                 + ", with color " + getColor()
-                + ", and " + radius + " radius");
+                + ", and " + getArea() + " radius");
     }
 
     @Override
-    public boolean getArea() {
-        return false;
+    public double getArea() {
+        return radius * radius;
     }
 }
