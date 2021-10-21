@@ -2,9 +2,15 @@ package core.basesyntax;
 
 public class Circle extends Figure {
     private float radius;
-    public Circle() {}
+
+    public Circle() {
+    }
 
     public Circle(float radius) {
+        this.radius = radius;
+    }
+
+    public void setRadius(float radius) {
         this.radius = radius;
     }
 

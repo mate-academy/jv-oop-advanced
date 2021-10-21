@@ -3,7 +3,7 @@ package core.basesyntax;
 public class IsoscelesTrapezoid extends Figure {
     private float innerSide;
     private float downSide;
-    private     float heightTrapezoid;
+    private float heightTrapezoid;
 
     public IsoscelesTrapezoid() {
     }

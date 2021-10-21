@@ -3,58 +3,76 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private Random random = new Random();
     private Figure figure;
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getDefaultFigure() {
-        Figures[] values = Figures.values();
-        switch (values[random.nextInt(values.length)].toString()) {
-            case "CIRCLE":
-                figure = new Circle();
-                break;
-            case "ISOSCELES_TRAPEZOID":
-                figure = new IsoscelesTrapezoid();
-                break;
-            case "RECTANGLE":
-                figure = new Rectangle();
-                break;
-            case "RIGHT_TRIANGLE":
-                figure = new RightTriangle();
-                break;
-            case "SQUARE":
-                figure = new Square();
-                break;
-            default:
-        }
-        return figure;
+        Figure circle = new Circle(10);
+        circle.setColor("WHITE");
+        return circle;
     }
 
     public Figure getRandomFigure() {
         Figures[] values = Figures.values();
-        float random1 = 20 * random.nextFloat();
-        float random2 = 20 * random.nextFloat();
-        float random3 = 20 * random.nextFloat();
+        Random random = new Random();
         switch (random.nextInt(values.length)) {
             case 0:
-                figure = new Circle(random1);
+                figure = getRandomCircle();
                 break;
             case 1:
-                figure = new IsoscelesTrapezoid(random1, random2, random3);
+                figure = getRandomIsoscelesTrapezoid();
                 break;
             case 2:
-                figure = new Rectangle(random1, random2);
+                figure = getRandomRectangle();
                 break;
             case 3:
-                figure = new RightTriangle(random1, random2);
+                figure = getRandomRightTriangle();
                 break;
             case 4:
-                figure = new Square(random1);
+                figure = getRandomSquare();
                 break;
             default:
         }
         return figure;
     }
 
+    public Figure getRandomCircle() {
+        Random random = new Random();
+        float radius = 20 * random.nextFloat();
+        Figure figure = new Circle(radius);
+        return figure;
+    }
+
+    public Figure getRandomIsoscelesTrapezoid() {
+        Random random = new Random();
+        float innerSide = 20 * random.nextFloat();
+        float downSide = 20 * random.nextFloat();
+        float heightTrapezoid = 20 * random.nextFloat();
+        Figure figure = new IsoscelesTrapezoid(innerSide, downSide, heightTrapezoid);
+        return figure;
+    }
+
+    public Figure getRandomRectangle() {
+        Random random = new Random();
+        float firstLeg = 20 * random.nextFloat();
+        float secondLeg = 20 * random.nextFloat();
+        Figure figure = new Rectangle(firstLeg, secondLeg);
+        return figure;
+    }
+
+    public Figure getRandomRightTriangle() {
+        Random random = new Random();
+        float firstLeg = 20 * random.nextFloat();
+        float secondLeg = 20 * random.nextFloat();
+        Figure figure = new Rectangle(firstLeg, secondLeg);
+        return figure;
+    }
+
+    public Figure getRandomSquare() {
+        Random random = new Random();
+        float side = 20 * random.nextFloat();
+        Figure figure = new Square(side);
+        return figure;
+    }
 
 }
