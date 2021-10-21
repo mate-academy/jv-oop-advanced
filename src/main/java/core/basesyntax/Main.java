@@ -1,9 +1,10 @@
 package core.basesyntax;
 
 public class Main {
+    public static final int FIGURE_ARRAY_LENGTH = 6;
+
     public static void main(String[] args) {
-        final int FL = 6;
-        Figure[] figures = new Figure[FL];
+        Figure[] figures = new Figure[FIGURE_ARRAY_LENGTH];
         FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < figures.length; i++) {
             if (i <= figures.length / 2 - 1) {
@@ -13,6 +14,5 @@ public class Main {
             }
             figures[i].draw();
         }
-
     }
 }
