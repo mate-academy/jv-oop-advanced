@@ -6,7 +6,7 @@ public class IsoscelesTrapezoid extends Figure {
     private int lowerSide;
 
     IsoscelesTrapezoid(){
-}
+    }
 
     public void setHeight(int height) {
         this.height = height;
@@ -27,9 +27,9 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: isosceles trapezoid, area: " + getArea() +
-                            " sq.units, upperSide: " + upperSide +
-                            " units, lowerSide: " + lowerSide + " units, height: " +
-                            height + " units, color: " + color);
+        System.out.println("Figure: isosceles trapezoid, area: " + getArea()
+                            + " sq.units, upperSide: " + upperSide
+                            + " units, lowerSide: " + lowerSide + " units, height: "
+                            + height + " units, color: " + color);
     }
 }
