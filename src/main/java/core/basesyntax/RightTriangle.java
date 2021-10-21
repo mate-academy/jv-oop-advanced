@@ -1,23 +1,13 @@
 package core.basesyntax;
 
-public class RightTriangle implements Area, Draw {
+public class RightTriangle extends Figure {
     private double baseTriangle;
     private double heightTriangle;
-    private String color;
 
-    public double getBaseTriangle() {
-        return baseTriangle;
-    }
-
-    public double getHeightTriangle() {
-        return heightTriangle;
-    }
-
-    public void getRightTriangle(int baseTriangle, int heightTriangle, String color) {
+    public RightTriangle(int baseTriangle, int heightTriangle, String color) {
         this.baseTriangle = baseTriangle;
         this.heightTriangle = heightTriangle;
         this.color = color;
-        draw();
     }
 
     @Override
@@ -27,8 +17,8 @@ public class RightTriangle implements Area, Draw {
 
     @Override
     public void draw() {
-        System.out.println("Figure: right triangle, area: " + getArea() + " sq.units, "
-                + "baseTriangle: " + getBaseTriangle()
-                + ", heightTriangle: " + getHeightTriangle() + " units, color: " + color);
+        System.out.println("Figure: " + this.getClass().getSimpleName() + ", area: "
+                + getArea() + " sq.units, baseTriangle: " + baseTriangle
+                + ", heightTriangle: " + heightTriangle + " units, color: " + color);
     }
 }

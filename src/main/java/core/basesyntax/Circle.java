@@ -1,17 +1,12 @@
 package core.basesyntax;
 
-public class Circle implements Area, Draw {
+public class Circle extends Figure {
     private int radius;
     private String color;
 
-    public int getRadius() {
-        return radius;
-    }
-
-    public void getCircle(int radius, String color) {
+    public Circle(int radius, String color) {
         this.radius = radius;
         this.color = color;
-        draw();
     }
 
     @Override
@@ -21,7 +16,8 @@ public class Circle implements Area, Draw {
 
     @Override
     public void draw() {
-        System.out.println("Figure: circle, area: " + getArea() + " sq.units, radius "
-                + getRadius() + " units, color: " + color);
+        System.out.println("Figure: " + this.getClass().getSimpleName() + ", area: "
+                + getArea() + " sq.units, radius "
+                + radius + " units, color: " + color);
     }
 }

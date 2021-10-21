@@ -1,23 +1,13 @@
 package core.basesyntax;
 
-public class Rectangle implements Area, Draw {
+public class Rectangle extends Figure {
     private int sideA;
     private int sideB;
-    private String color;
 
-    public int getSideA() {
-        return sideA;
-    }
-
-    public int getSideB() {
-        return sideB;
-    }
-
-    public void getRectangle(int sideA, int sideB, String color) {
+    public Rectangle(int sideA, int sideB, String color) {
         this.sideA = sideA;
         this.sideB = sideB;
         this.color = color;
-        draw();
     }
 
     @Override
@@ -27,8 +17,8 @@ public class Rectangle implements Area, Draw {
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + getArea() + " sq.units, "
-                + "sideA: " + getSideA()
-                + ", sideB: " + getSideB() + " units, color: " + color);
+        System.out.println("Figure: " + this.getClass().getSimpleName() + ", area: "
+                + getArea() + " sq.units, " + "sideA: " + sideA
+                + ", sideB: " + sideB + " units, color: " + color);
     }
 }

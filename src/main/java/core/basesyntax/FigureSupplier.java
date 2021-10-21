@@ -5,40 +5,24 @@ import java.util.Random;
 public class FigureSupplier extends ColorSupplier {
 
     private Random random = new Random();
-    private String[] myFigure = {"square","rectangle","right triangle","circle",
-            "isosceles trapezoid"};
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
-    public void getRandomFigure(int figureNumber) {
-
-        ColorSupplier colorSupplier = new ColorSupplier();
-
+    public Figure getRandomFigure() {
+        int figureNumber = random.nextInt(MainFigure.figureCount);
         switch (figureNumber) {
-            case (0):
-                Square square = new Square();
-                square.getSquare(random.nextInt(25) + 1, colorSupplier.getRandomColor());
-                break;
-            case (1):
-                Rectangle rectangle = new Rectangle();
-                rectangle.getRectangle(random.nextInt(25) + 1,
-                        random.nextInt(25) + 1, colorSupplier.getRandomColor());
-                break;
-            case (2):
-                RightTriangle rightTriangle = new RightTriangle();
-                rightTriangle.getRightTriangle(random.nextInt(25) + 1,
-                        random.nextInt(25) + 1, colorSupplier.getRandomColor());
-                break;
-            case (3):
-                Circle circle = new Circle();
-                circle.getCircle(random.nextInt(25) + 1, colorSupplier.getRandomColor());
-                break;
-            case (4):
-                IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
-                isoscelesTrapezoid.getIsoscelesTrapezoid(
-                        random.nextInt(25) + 1,
-                        random.nextInt(25) + 1,
-                        random.nextInt(25) + 1, colorSupplier.getRandomColor());
-                break;
-            default: break;
+            case 0:
+                return new Square(random.nextInt(25), colorSupplier.getRandomColor());
+            case 1:
+                return new Rectangle(random.nextInt(25), random.nextInt(25),
+                        colorSupplier.getRandomColor());
+            case 2:
+                return new RightTriangle(random.nextInt(25), random.nextInt(25),
+                        colorSupplier.getRandomColor());
+            case 3:
+                return new Circle(random.nextInt(25), colorSupplier.getRandomColor());
+            default:
+                return new IsoscelesTrapezoid(random.nextInt(25), random.nextInt(25),
+                        random.nextInt(25), colorSupplier.getRandomColor());
         }
     }
 }
