@@ -1,5 +1,5 @@
 package core.basesyntax;
 
 public interface AreaFigure {
-    float area();
+    abstract float area();
 }

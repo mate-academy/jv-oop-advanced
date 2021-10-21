@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements AreaFigure, DrawFigure {
+public class Rectangle extends Figure {
     private float firstLeg = 5;
     private float secondLeg = 4;
 
