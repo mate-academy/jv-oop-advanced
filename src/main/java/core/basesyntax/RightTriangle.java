@@ -1,17 +1,23 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements ArreaCounter {
+public class RightTriangle extends Shape implements AreaCounter {
     private int side = 0;
 
-    RightTriangle(int side, Colors color) {
-        super();
-        countArea();
-        this.setColor(color);
+    RightTriangle(int side, String color) {
+        super("Rectangle", color);
+        this.side = side;
+        float valueOfArea = countArea();
+        setArea(valueOfArea);
     }
 
     @Override
-    public void countArea() {
-        float result = (float) (side * side * Math.sqrt(3 / 4));
-        setArea(result);
+    public float countArea() {
+        return  (float) (side * side * Math.sqrt(3.0 / 4.0));
+    }
+
+    @Override
+    public String toString() {
+        return "RightTriangle, " + "area: " + getArea() + " sq.units" + " side: " + side
+                + " units" + ", color: " + getColor();
     }
 }

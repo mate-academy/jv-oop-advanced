@@ -1,18 +1,26 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements ArreaCounter {
-    private int firstLeg = 0;
-    private int secondLeg = 0;
+public class Rectangle extends Shape implements AreaCounter {
+    private int firstLeg;
+    private int secondLeg;
 
-    Rectangle(int firstLeg, int secondLeg, Colors color) {
-        super();
-        countArea();
-        this.setColor(color);
+    public Rectangle(int firstLeg, int secondLeg, String color) {
+        super("Rectangle",color);
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
+        float valueOfArea = countArea();
+        setArea(valueOfArea);
     }
 
     @Override
-    public void countArea() {
-        float result = (float) (firstLeg * secondLeg);
-        setArea(result);
+    public float countArea() {
+        return (float) (firstLeg * secondLeg);
+    }
+
+    @Override
+    public String toString() {
+        return "Rectangle, " + "area: " + getArea() + " sq.units" + "  this.firstLeg: " +  this.firstLeg
+                + " units" + " secondLeg: " + secondLeg + " units" + ", color: " + getColor();
     }
 }
+

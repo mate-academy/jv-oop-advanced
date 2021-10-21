@@ -1,17 +1,23 @@
 package core.basesyntax;
 
-public class Square extends Figure implements ArreaCounter {
-    private int side = 0;
+public class Square extends Shape implements AreaCounter {
+    private int side;
 
-    Square(int side, Colors color) {
-        super();
-        countArea();
-        this.setColor(color);
+    Square(int side, String color) {
+        super("Square", color);
+        this.side = side;
+        float valueOfArea = countArea();
+        setArea(valueOfArea);
     }
 
     @Override
-    public void countArea() {
-        float result = (float) (side * side);
-        setArea(result);
+    public float countArea() {
+        return  (float) (side * side);
+    }
+
+    @Override
+    public String toString() {
+        return "Square, " + "area: " + getArea() + " sq.units" + " side: " + side
+                + " units" + ", color: " + getColor();
     }
 }
