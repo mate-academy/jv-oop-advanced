@@ -8,7 +8,8 @@ public class Rhombus extends Figure {
 
     @Override
     public void countArea() {
-        this.setArea(Math.ceil(this.side * this.side * Math.sin(Math.toRadians(this.angle)) * 10) / 10);
+        this.setArea(Math.ceil(this.side * this.side
+                * Math.sin(Math.toRadians(this.angle)) * 10) / 10);
     }
 
     @Override
@@ -23,6 +24,6 @@ public class Rhombus extends Figure {
     @Override
     public void randomAttributes() {
         this.angle = new Random().nextInt(89) + 1;
-        this.side = new Random().nextInt(this.BOUNDRANDOM) + 1;
+        this.side = new Random().nextInt(this.getBoundRandom()) + 1;
     }
 }

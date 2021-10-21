@@ -18,9 +18,8 @@ public class Square extends Figure {
                 + " units, color: " + this.getColor());
     }
 
-
     @Override
     public void randomAttributes() {
-        this.side = new Random().nextInt(this.BOUNDRANDOM) + 1;
+        this.side = new Random().nextInt(this.getBoundRandom()) + 1;
     }
 }

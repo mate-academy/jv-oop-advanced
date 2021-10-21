@@ -24,6 +24,6 @@ public class Circle extends Figure {
 
     @Override
     public void randomAttributes() {
-        this.radius = new Random().nextInt(this.BOUNDRANDOM) + 1;
+        this.radius = new Random().nextInt(this.getBoundRandom()) + 1;
     }
 }

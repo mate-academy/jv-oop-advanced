@@ -24,9 +24,9 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void randomAttributes() {
-        this.sideA = new Random().nextInt(this.BOUNDRANDOM) + 1;
-        this.sideC = new Random().nextInt(this.BOUNDRANDOM) + 10;
-        this.height = new Random().nextInt(this.BOUNDRANDOM) + 1;
+        this.sideA = new Random().nextInt(this.getBoundRandom()) + 1;
+        this.sideC = new Random().nextInt(this.getBoundRandom()) + 10;
+        this.height = new Random().nextInt(this.getBoundRandom()) + 1;
 
     }
 }

@@ -2,7 +2,7 @@ package core.basesyntax;
 
 public abstract class Figure implements Drawable, AreaCalculator {
     private ShapeFigure figure;
-    final int BOUNDRANDOM = 10;
+    private final int boundRandom = 10;
     private double area;
     private Color color;
 
@@ -30,5 +30,9 @@ public abstract class Figure implements Drawable, AreaCalculator {
 
     public void setColor(Color color) {
         this.color = color;
+    }
+
+    public int getBoundRandom() {
+        return boundRandom;
     }
 }

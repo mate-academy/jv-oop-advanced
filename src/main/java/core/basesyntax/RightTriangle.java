@@ -20,10 +20,9 @@ public class RightTriangle extends Figure {
                 + " units, color: " + this.getColor());
     }
 
-
     @Override
     public void randomAttributes() {
-        this.firstLeg = new Random().nextInt(this.BOUNDRANDOM) + 1;
-        this.secondLeg = new Random().nextInt(this.BOUNDRANDOM) + 1;
+        this.firstLeg = new Random().nextInt(this.getBoundRandom()) + 1;
+        this.secondLeg = new Random().nextInt(this.getBoundRandom()) + 1;
     }
 }
