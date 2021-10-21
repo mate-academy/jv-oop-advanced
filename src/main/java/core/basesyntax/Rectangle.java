@@ -1,13 +1,13 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Areacount,Figuredrawing {
+public class Rectangle extends Figure {
     private int breadth;
     private int length;
 
     public Rectangle(int breadth,int length,String color) {
+        super(color);
         this.breadth = breadth;
         this.length = length;
-        setColor(color);
     }
 
     @Override

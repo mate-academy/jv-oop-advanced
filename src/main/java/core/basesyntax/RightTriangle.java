@@ -1,13 +1,13 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements Areacount,Figuredrawing {
+public class RightTriangle extends Figure {
     private int base;
     private int height;
 
     public RightTriangle(int base, int height,String color) {
+        super(color);
         this.base = base;
         this.height = height;
-        setColor(color);
     }
 
     @Override
