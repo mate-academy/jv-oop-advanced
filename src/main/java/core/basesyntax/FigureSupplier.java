@@ -19,46 +19,45 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         switch (random.nextInt(MAX_NUMBER)) {
             case 1:
-                return circle();
+                return getRandomCircle();
             case 2:
-                return rectangle();
+                return getRandomRectangle();
             case 3:
-                return square();
+                return getRandomSquare();
             case 4:
-                return trapezoid();
+                return getRandomTrapezoid();
             case 5:
-                return triangle();
+                return getRandomTriangle();
             default:
                 return getDefaultFigure();
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(
-                Color.WHITE.toString().toLowerCase(), DEFAULT_RADIUS);
+        return new Circle(Color.WHITE.toString().toLowerCase(), DEFAULT_RADIUS);
     }
 
-    private Figure circle() {
+    private Figure getRandomCircle() {
         return new Circle(colorSupplier.getRandomColor().toLowerCase(),
                 random.nextInt(RANDOM_RADIUS));
     }
 
-    private Figure rectangle() {
+    private Figure getRandomRectangle() {
         return new Rectangle(colorSupplier.getRandomColor().toLowerCase(),
                 random.nextInt(RANDOM_RADIUS));
     }
 
-    private Figure square() {
+    private Figure getRandomSquare() {
         return new Square(colorSupplier.getRandomColor().toLowerCase(),
                  random.nextInt(RANDOM_RADIUS));
     }
 
-    private Figure trapezoid() {
+    private Figure getRandomTrapezoid() {
         return new Trapezoid(colorSupplier.getRandomColor().toLowerCase(),
                  random.nextInt(RANDOM_RADIUS));
     }
 
-    private Figure triangle() {
+    private Figure getRandomTriangle() {
         return new Triangle(colorSupplier.getRandomColor().toLowerCase(),
                  random.nextInt(RANDOM_RADIUS));
     }
