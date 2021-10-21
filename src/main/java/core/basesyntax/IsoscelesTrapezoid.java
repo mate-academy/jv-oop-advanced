@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private float innerSide = 2;
-    private float downSide = 10;
-    private     float heightTrapezoid = 5;
+    private float innerSide;
+    private float downSide;
+    private     float heightTrapezoid;
 
     public IsoscelesTrapezoid() {
     }

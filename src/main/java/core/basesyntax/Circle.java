@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private float radius = 1;
+    private float radius;
 
     public Circle() {
     }

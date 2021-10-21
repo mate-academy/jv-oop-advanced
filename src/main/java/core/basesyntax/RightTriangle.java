@@ -1,8 +1,8 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private float firstLeg = 5;
-    private float secondLeg = 4;
+    private float firstLeg;
+    private float secondLeg;
 
     public RightTriangle() {
     }
