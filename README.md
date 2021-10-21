@@ -12,10 +12,17 @@ All figures have
    
 Think where you should declare these fields and methods: top level class / interface / bottom level classes.  
 
-We need to generate an array of figures with random parameters, number of objects in the array is also unknown.
+In the `main()` method we need to create an array of figures (the size of array can be 3 or 6, it doesn't matter).
+**The first half** of figures in this array should be generated with random parameters. 
+
 For this purpose create two more classes:
 - `ColorSupplier` with `public String getRandomColor()` method - for generating random color, 
 - and `FigureSupplier` with `public Figure getRandomFigure()` method - for generating figure with random properties.
+
+**The other half** of figures should have the same, default parameters. 
+
+For this purpose create a new method in the `FigureSupplier` class:
+- `public Figure getDefaultFigure()` - this method should always return white circle with radius 10.
 
 After generating the array, we need to display the entire list of objects that we have, for example:
 
