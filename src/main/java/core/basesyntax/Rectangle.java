@@ -5,7 +5,7 @@ public class Rectangle extends Shape {
     private int secondLeg;
 
     public Rectangle(int firstLeg, int secondLeg, String color) {
-        super("Rectangle",color);
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
         float valueOfArea = countArea();

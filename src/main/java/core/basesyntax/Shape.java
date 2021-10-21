@@ -1,12 +1,10 @@
 package core.basesyntax;
 
 public class Shape implements AreaCounter {
-    private String shapeName;
     private float area;
     private String color;
 
-    public Shape(String shapeName, String color) {
-        this.shapeName = shapeName;
+    public Shape(String color) {
         this.color = color;
     }
 
@@ -16,10 +14,6 @@ public class Shape implements AreaCounter {
 
     public String getColor() {
         return color;
-    }
-
-    public void setShapeName(String shapeName) {
-        this.shapeName = shapeName;
     }
 
     public void setArea(float area) {

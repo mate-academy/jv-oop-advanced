@@ -4,7 +4,7 @@ public class RightTriangle extends Shape {
     private int side;
 
     public RightTriangle(int side, String color) {
-        super("Rectangle", color);
+        super(color);
         this.side = side;
         float valueOfArea = countArea();
         setArea(valueOfArea);

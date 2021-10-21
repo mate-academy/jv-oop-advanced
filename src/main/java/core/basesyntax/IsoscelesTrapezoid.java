@@ -6,7 +6,7 @@ public class IsoscelesTrapezoid extends Shape {
     private int edge;
 
     public IsoscelesTrapezoid(int bottomBase, int upperBase, int edge, String color) {
-        super("IsoscelesTrapezoid", color);
+        super(color);
         this.bottomBase = bottomBase;
         this.upperBase = upperBase;
         this.edge = edge;
