@@ -1,10 +1,16 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private int sideOne;
-    private int sideTwo;
+    private double sideOne;
+    private double sideTwo;
 
-    public int getSideOne() {
+    public Rectangle(String color, double sideOne, double sideTwo) {
+        super(color);
+        this.sideOne = sideOne;
+        this.sideTwo = sideTwo;
+    }
+
+    public double getSideOne() {
         return sideOne;
     }
 
@@ -12,17 +18,11 @@ public class Rectangle extends Figure {
         this.sideOne = sideOne;
     }
 
-    public int getSideTwo() {
+    public double getSideTwo() {
         return sideTwo;
     }
 
     public void setSideTwo(int sideTwo) {
-        this.sideTwo = sideTwo;
-    }
-
-    public Rectangle(String color, int sideOne, int sideTwo) {
-        super(color);
-        this.sideOne = sideOne;
         this.sideTwo = sideTwo;
     }
 
@@ -33,7 +33,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println( "Figure: rectangle, area = " + getArea() + " sq.units,"
+        System.out.println("Figure: rectangle, area = " + getArea() + " sq.units,"
                 + " side one = " + sideOne + " units,"
                 + " side two = " + sideTwo + " units,"
                 + " color = " + getColor());
