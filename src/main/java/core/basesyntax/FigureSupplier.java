@@ -29,9 +29,8 @@ public class FigureSupplier {
             case 4:
                 return getRandomSquare(color);
             default:
-                break;
+                return getRandomSquare(color);
         }
-        return getRandomSquare(color);
     }
 
     private float getRandomUnits() {
