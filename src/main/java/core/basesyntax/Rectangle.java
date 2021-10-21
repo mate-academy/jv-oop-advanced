@@ -1,8 +1,8 @@
 package core.basesyntax;
 
 public class Rectangle extends Shape {
-    private int firstLeg;
-    private int secondLeg;
+    private final int firstLeg;
+    private final int secondLeg;
 
     public Rectangle(int firstLeg, int secondLeg, String color) {
         super(color);
@@ -18,11 +18,11 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    public String toString() {
-        return "Rectangle, " + "area: " + getArea() + " sq.units"
+    public void draw() {
+        System.out.println("Rectangle, " + "area: " + getArea() + " sq.units"
                 + "  this.firstLeg: " + this.firstLeg
                 + " units" + " secondLeg: " + secondLeg
-                + " units" + ", color: " + getColor();
+                + " units" + ", color: " + getColor());
     }
 }
 

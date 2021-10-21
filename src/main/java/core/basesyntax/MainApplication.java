@@ -12,7 +12,7 @@ public class MainApplication {
         }
         // displaying the entire list of shapes
         for (Shape figure : figures) {
-            System.out.println(figure);
+            figure.draw();
         }
     }
 }

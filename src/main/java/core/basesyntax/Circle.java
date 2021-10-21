@@ -15,9 +15,8 @@ public class Circle extends Shape {
         return (float) (Math.PI * radius * radius);
     }
 
-    @Override
-    public String toString() {
-        return "Circle, " + "area: " + getArea() + " sq.units" + " radius: "
-                + radius + " units" + ", color: " + getColor();
+    public void draw() {
+        System.out.println("Circle, " + "area: " + getArea() + " sq.units" + " radius: "
+                + radius + " units" + ", color: " + getColor());
     }
 }

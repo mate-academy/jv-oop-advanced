@@ -6,8 +6,7 @@ public class Square extends Shape {
     public Square(int side, String color) {
         super(color);
         this.side = side;
-        float valueOfArea = countArea();
-        setArea(valueOfArea);
+        countArea();
     }
 
     @Override
@@ -16,8 +15,8 @@ public class Square extends Shape {
     }
 
     @Override
-    public String toString() {
-        return "Square, " + "area: " + getArea() + " sq.units" + " side: " + side
-                + " units" + ", color: " + getColor();
+    public void draw() {
+        System.out.println( "Square, " + "area: " + getArea() + " sq.units" + " side: " + side
+                + " units" + ", color: " + getColor());
     }
 }

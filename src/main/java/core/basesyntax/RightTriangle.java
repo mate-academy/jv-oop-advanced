@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class RightTriangle extends Shape {
-    private int side;
+    private final int side;
 
     public RightTriangle(int side, String color) {
         super(color);
@@ -16,8 +16,8 @@ public class RightTriangle extends Shape {
     }
 
     @Override
-    public String toString() {
-        return "RightTriangle, " + "area: " + getArea() + " sq.units" + " side: " + side
-                + " units" + ", color: " + getColor();
+    public void draw() {
+        System.out.println("RightTriangle, " + "area: " + getArea() + " sq.units" + " side: " + side
+                + " units" + ", color: " + getColor());
     }
 }

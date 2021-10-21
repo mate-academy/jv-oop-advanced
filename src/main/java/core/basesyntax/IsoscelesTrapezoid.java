@@ -22,10 +22,10 @@ public class IsoscelesTrapezoid extends Shape {
     }
 
     @Override
-    public String toString() {
-        return "IsoscelesTrapezoid, " + "area: " + getArea()
+    public void draw() {
+        System.out.println("IsoscelesTrapezoid, " + "area: " + getArea()
                 + " sq.units" + " bottomBase: " + bottomBase
                 + " units" + " upperBase: " + upperBase + " units" + " edge: "
-                + " units" + ", color: " + getColor();
+                + " units" + ", color: " + getColor());
     }
 }
