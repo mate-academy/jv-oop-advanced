@@ -1,26 +1,26 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private int lengthRectangle;
-    private int breadthRectangle;
+    private int length;
+    private int width;
 
-    public Rectangle(String color, int lengthRectangle, int breadthRectangle) {
+    public Rectangle(String color, int length, int width) {
         super(color);
-        this.lengthRectangle = lengthRectangle;
-        this.breadthRectangle = breadthRectangle;
+        this.length = length;
+        this.width = width;
     }
 
     @Override
     public double getArea() {
-        return lengthRectangle * breadthRectangle;
+        return length * width;
     }
 
     @Override
-    public void drawInfo() {
+    public void draw() {
         System.out.println(String.format(
-                "Figure: %s, area: %s sq.units, lengthRectangle: %d units,"
-                + " breadthRectangle: %d units, color: %s",
+                "Figure: %s, area: %s sq.units, length: %d units,"
+                + " width: %d units, color: %s",
                 getClass().getSimpleName(), getArea(),
-                lengthRectangle, breadthRectangle, getColor()));
+                length, width, getColor()));
     }
 }
