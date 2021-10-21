@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends Figure implements CalculateArea, Printer {
+public class Square extends Figure implements AreaCalculator, Printer {
     private double side;
 
     public Square(Color color, double side) {
