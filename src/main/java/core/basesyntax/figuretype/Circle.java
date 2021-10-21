@@ -5,13 +5,9 @@ import core.basesyntax.figure.Figure;
 public class Circle extends Figure {
     private int radius;
 
-    public Circle(String color, String type, int radius) {
-        super(color, type);
+    public Circle(String color, int radius) {
+        super(color);
         this.radius = radius;
-    }
-
-    public double getRadius() {
-        return radius;
     }
 
     @Override
@@ -21,8 +17,8 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        System.out.printf("Figure: %s, area: %.1f sq.units, radius: %s"
+        System.out.printf("Figure: circle, area: %.1f sq.units, radius: %s"
                         + " units, color: %s%n",
-                getType(), getArea(), radius, getColor());
+                getArea(), radius, getColor());
     }
 }

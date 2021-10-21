@@ -14,29 +14,30 @@ public class FigureSupplier {
     private ColorSupplier colorSupply = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int r1 = random.nextInt(UNITS);
-        int r2 = random.nextInt(UNITS);
-        int r3 = random.nextInt(UNITS);
         String color = colorSupply.getRandomColor();
         Figures type = Figures.values()[random.nextInt(Figures.values().length)];
-        String typeName = type.toString().toLowerCase();
         switch (type) {
             case SQUARE:
-                return new Square(color, typeName, r1);
+                return new Square(color, getRandomNum());
             case RECTANGLE:
-                return new Rectangle(color, typeName, r1, r2);
+                return new Rectangle(color, getRandomNum(), getRandomNum());
             case RIGHT_TRIANGLE:
-                return new RightTriangle(color, typeName, r1, r2);
+                return new RightTriangle(color, getRandomNum(), getRandomNum());
             case CIRCLE:
-                return new Circle(color, typeName, r1);
+                return new Circle(color, getRandomNum());
             case ISOSCELES_TRAPEZOID:
-                return new IsoscelesTrapezoid(color, typeName, r1, r2, r3);
+                return new IsoscelesTrapezoid(color, getRandomNum(),
+                        getRandomNum(), getRandomNum());
             default:
                 throw new IllegalArgumentException(type + " is not implemented");
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", "circle", 10);
+        return new Circle("white", 10);
+    }
+
+    public int getRandomNum() {
+        return random.nextInt(UNITS);
     }
 }
