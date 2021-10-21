@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements AreaCalculator, InformationPrinter {
+public class Circle extends Figure {
     private double radius;
     
     public Circle(double radius, String color) {
@@ -20,9 +20,9 @@ public class Circle extends Figure implements AreaCalculator, InformationPrinter
         this.radius = radius;
     }
     
-    public void drawIt() {
+    public void draw() {
         System.out.println("Figure - circle, color - " + getColor()
                 + ", area - " + getArea()
-                + ", radius - " + getRadius());
+                + ", radius - " + radius);
     }
 }

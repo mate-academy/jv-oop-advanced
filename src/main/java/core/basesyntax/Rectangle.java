@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements AreaCalculator, InformationPrinter {
+public class Rectangle extends Figure {
     private double sideA;
     private double sideB;
 
@@ -26,11 +26,11 @@ public class Rectangle extends Figure implements AreaCalculator, InformationPrin
         this.sideB = sideB;
     }
     
-    public void drawIt() {
+    public void draw() {
         System.out.println("Figure - rectangle, color - " + getColor()
                 + ", area - " + getArea()
-                + ", first side - " + getSideA()
-                + ", second side - " + getSideB());
+                + ", first side - " + sideA
+                + ", second side - " + sideB);
     }
     
     public double getArea() {

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements AreaCalculator, InformationPrinter {
+public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
@@ -30,10 +30,10 @@ public class RightTriangle extends Figure implements AreaCalculator, Information
         return (firstLeg * secondLeg) / 2;
     }
     
-    public void drawIt() {
+    public void draw() {
         System.out.println("Figure - right triangle, color - " + getColor()
                 + ", area - " + getArea()
-                + ", first leg - " + getFirstLeg()
-                + ", second leg - " + getSecondLeg());
+                + ", first leg - " + firstLeg
+                + ", second leg - " + secondLeg);
     }
 }
