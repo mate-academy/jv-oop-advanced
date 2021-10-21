@@ -3,8 +3,11 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSuplier {
+    private Random random = new Random();
+    private ColorSuplier colorSuplier = new ColorSuplier();
+
     public Figure getRandomFigure() {
-        int indexShapeFigure = new Random().nextInt(ShapeFigure.values().length);
+        int indexShapeFigure = random.nextInt(ShapeFigure.values().length);
         Figure figure;
         switch (indexShapeFigure) {
             case 0:
@@ -29,10 +32,9 @@ public class FigureSuplier {
                 figure = new Circle();
                 break;
         }
-        int indexColor = new Random().nextInt(Color.values().length);
         figure.randomAttributes();
         figure.setFigure(ShapeFigure.values()[indexShapeFigure]);
-        figure.setColor(Color.values()[indexColor]);
+        figure.setColor(colorSuplier.getRondomColor());
         figure.countArea();
         return figure;
     }
@@ -40,7 +42,7 @@ public class FigureSuplier {
     public Figure getDafaultFigure() {
         Circle circle = new Circle();
         circle.setFigure(ShapeFigure.circle);
-        circle.setColor(Color.white);
+        circle.setColor(Color.white.toString());
         circle.setRadius(10);
         circle.countArea();
         return circle;

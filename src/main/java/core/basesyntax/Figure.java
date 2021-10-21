@@ -4,7 +4,7 @@ public abstract class Figure implements Drawable, AreaCalculator {
     private ShapeFigure figure;
     private final int boundRandom = 10;
     private double area;
-    private Color color;
+    private String color;
 
     public abstract void randomAttributes();
 
@@ -24,11 +24,11 @@ public abstract class Figure implements Drawable, AreaCalculator {
         this.area = area;
     }
 
-    public Color getColor() {
+    public String getColor() {
         return color;
     }
 
-    public void setColor(Color color) {
+    public void setColor(String color) {
         this.color = color;
     }
 
