@@ -55,4 +55,6 @@ public class FigureSupplier {
         }
         return figure;
     }
+
+
 }
