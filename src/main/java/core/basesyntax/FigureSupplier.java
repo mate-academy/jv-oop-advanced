@@ -16,31 +16,31 @@ public class FigureSupplier {
                 : figures == Figures.RightTriangle ? getRightTriangle(color) : getSquare(color);
     }
 
-    public Figure getCircle(String color) {
+    private Figure getCircle(String color) {
         int side = random.nextInt(UNITS);
         return new Circle(side, color);
     }
 
-    public Figure getIsoscelesTrapezoid(String color) {
+    private Figure getIsoscelesTrapezoid(String color) {
         int sideA = random.nextInt(UNITS);
         int sideB = random.nextInt(UNITS);
         int height = random.nextInt(UNITS);
         return new IsoscelesTrapezoid(sideA, sideB, height, color);
     }
 
-    public Figure getRectangle(String color) {
+    private Figure getRectangle(String color) {
         int sideA = random.nextInt(UNITS);
         int sideB = random.nextInt(UNITS);
         return new Rectangle(sideA, sideB, color);
     }
 
-    public Figure getRightTriangle(String color) {
+    private Figure getRightTriangle(String color) {
         int firstLeg = random.nextInt(UNITS);
         int secondLeg = random.nextInt(UNITS);
         return new RightTriangle(firstLeg, secondLeg, color);
     }
 
-    public Figure getSquare(String color) {
+    private Figure getSquare(String color) {
         int side = random.nextInt(UNITS);
         return new Square(side, color);
     }
