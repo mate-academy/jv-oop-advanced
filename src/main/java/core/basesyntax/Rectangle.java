@@ -11,13 +11,13 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double findArea() {
+    public double getArea() {
         return sideA * sideB;
     }
 
     @Override
-    public void printInfo() {
+    public void draw() {
         System.out.printf("Figure: rectangle, area: %.1f sq.units, sideA: %.1f units, "
-                + "sideB: %.1f units, color: %s\n", findArea(), sideA, sideB, super.getColor());
+                + "sideB: %.1f units, color: %s\n", getArea(), sideA, sideB, getColor());
     }
 }

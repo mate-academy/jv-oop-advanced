@@ -11,7 +11,7 @@ public class Main {
                     ? figureSupplier.getRandomFigure() : figureSupplier.getDefaultFigure();
         }
         for (Figure figure: figures) {
-            figure.printInfo();
+            figure.draw();
         }
     }
 }
