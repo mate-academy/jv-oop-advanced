@@ -9,7 +9,7 @@ public class App {
         Figure[] figures = new Figure[FIGURES_LENGTH];
         FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < FIGURES_LENGTH; i++) {
-            if (i < 5) {
+            if (i < FIGURES_LENGTH / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();

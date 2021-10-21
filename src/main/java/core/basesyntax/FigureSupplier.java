@@ -64,6 +64,8 @@ public class FigureSupplier {
     private Figure getRandomTriangle() {
         String color = colorSupplier.getRandomColor().toLowerCase();
         int radius = random.nextInt(RANDOM_RADIUS);
-        return new Triangle(color, radius);
+        int leftLeg = random.nextInt(RANDOM_RADIUS);
+        int rightLeg = random.nextInt(RANDOM_RADIUS);
+        return new Triangle(color, radius, leftLeg, rightLeg);
     }
 }
