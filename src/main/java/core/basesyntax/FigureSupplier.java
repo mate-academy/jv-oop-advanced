@@ -6,11 +6,12 @@ public class FigureSupplier {
     private static final int MAX_UNITS = 100;
     private static final int MIN_UNITS = 10;
     private static final int FIGURE_COUNT = 5;
+    private static final int DEFAULT_RADIUS = 10;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
     public Figure getDefault() {
-        return new Circle(10, Color.WHITE.toString());
+        return new Circle(DEFAULT_RADIUS, Color.WHITE.name());
     }
 
     public Figure getRandom() {
