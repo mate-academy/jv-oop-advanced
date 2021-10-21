@@ -17,18 +17,9 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: "
-                + "rightTriangle, "
-                + "area: "
-                + getArea()
-                + " sq.units, "
-                + "firstLeg: "
-                + firstLeg
-                + " units, "
-                + "secondLeg: "
-                + secondLeg
-                + " units, "
-                + "color: "
-                + getColor());
+        System.out.println("Figure: isoscelesTrapezoid, area: " + getArea()
+                + " sq.units, firstLeg: " + firstLeg
+                + " sq.units, dsecondLeg: " + secondLeg
+                + " units, color: " + getColor());
     }
 }
