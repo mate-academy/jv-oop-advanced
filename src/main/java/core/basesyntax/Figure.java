@@ -3,7 +3,7 @@ package core.basesyntax;
 public abstract class Figure implements AreaCalculator, FigureInfo {
     private String color;
 
-    Figure(String color) {
+    public Figure(String color) {
         this.color = color;
     }
 

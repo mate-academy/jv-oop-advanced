@@ -1,14 +1,34 @@
 package core.basesyntax;
 
-public class RightTriangle extends Rectangle {
+public class RightTriangle extends Figure {
+    private int leftLeg;
+    private int rightLeg;
 
-    RightTriangle(String color, int leftLeg, int rightLeg) {
-        super(color, leftLeg, rightLeg);
+    public RightTriangle(String color, int leftLeg, int rightLeg) {
+        super(color);
+        this.leftLeg = leftLeg;
+        this.rightLeg = rightLeg;
+    }
+
+    public int getLeftLeg() {
+        return leftLeg;
+    }
+
+    public void setLeftLeg(int leftLeg) {
+        this.leftLeg = leftLeg;
+    }
+
+    public int getRightLeg() {
+        return rightLeg;
+    }
+
+    public void setRightLeg(int rightLeg) {
+        this.rightLeg = rightLeg;
     }
 
     @Override
     public double area() {
-        return super.area() / 2;
+        return leftLeg * rightLeg / 2;
     }
 
     @Override
