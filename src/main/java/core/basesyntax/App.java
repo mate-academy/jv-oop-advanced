@@ -4,6 +4,7 @@ import core.basesyntax.figures.Figure;
 
 public class App {
     private static final int COUNTER = 8;
+
     public static void main(String[] args) {
         Figure[] figures = new Figure[COUNTER];
         FigureSupplier figureSupplier = new FigureSupplier();

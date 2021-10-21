@@ -10,7 +10,6 @@ public class Trapezoid extends Figure {
         this.radius = radius;
     }
 
-
     @Override
     public void draw() {
         System.out.println("Figure " + name
