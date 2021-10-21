@@ -1,12 +1,12 @@
 package core.basesyntax;
 
-abstract class Figure implements FigureBehaviour{
+abstract class Figure implements AreaCalculator, Drawable {
     private String color;
 
-    public Figure () {
+    public Figure() {
     }
 
-    public Figure (String color) {
+    public Figure(String color) {
         this.color = color;
     }
 

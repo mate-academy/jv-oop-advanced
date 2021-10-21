@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends Figure implements FigureBehaviour{
+public class Square extends Figure {
     private double squareSide;
 
     public Square(String color, double squareSide) {
@@ -10,7 +10,8 @@ public class Square extends Figure implements FigureBehaviour{
 
     @Override
     public void draw() {
-        System.out.println("This " + getColor() + " square has side " + squareSide + " and area " + getArea());
+        System.out.println("This " + getColor() + " square has side "
+                + squareSide + " and area " + getArea());
     }
 
     @Override

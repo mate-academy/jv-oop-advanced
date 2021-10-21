@@ -19,23 +19,22 @@ public class FigureSupplier {
             case "RIGHT TRIANGLE": {
                 return new RightTriangle(colorSupplier.getRandomColor(),
                         random.nextDouble() * 100, random.nextDouble() * 100);
-                }
+            }
             case "CIRCLE": {
                 return new Circle(colorSupplier.getRandomColor(),random.nextDouble() * 100);
-                }
+            }
             case "SQUARE": {
                 return new Square(colorSupplier.getRandomColor(),random.nextDouble() * 100);
             }
             case "ISOSCELES TRAPEZOID": {
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),random.nextDouble() * 100,
-                        random.nextDouble() * 100, random.nextDouble() * 100);
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        random.nextDouble() * 100, random.nextDouble() * 100,
+                        random.nextDouble() * 100);
             }
             default: {
                 return null;
             }
-
         }
-
     }
 
     public Figure getDefaultFigure() {

@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public class MainApp {
-    public static void main() {
-        final int sizeOfArray = 6;
-        Figure figures[] = new Figure[sizeOfArray];
+public class Main {
+    public static void main(String[] args) {
+        final int sizeOfArray = 8;
+        Figure[] figures = new Figure[sizeOfArray];
         FigureSupplier figureSupplier = new FigureSupplier();
 
         for (int i = 0; i < sizeOfArray / 2; i++) {

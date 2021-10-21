@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements FigureBehaviour{
+public class Rectangle extends Figure {
     private double sideA;
     private double sideB;
 
@@ -12,7 +12,8 @@ public class Rectangle extends Figure implements FigureBehaviour{
 
     @Override
     public void draw() {
-        System.out.println("This " + getColor() + " rectangle has sides " + sideA + " and " + sideB + " and area " + getArea());
+        System.out.println("This " + getColor() + " rectangle has sides "
+                + sideA + " and " + sideB + " and area " + getArea());
     }
 
     @Override
