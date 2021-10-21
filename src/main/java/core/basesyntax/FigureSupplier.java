@@ -34,32 +34,32 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Circle.class.getSimpleName(),
+        return new Circle(
                 Color.WHITE.toString().toLowerCase(), DEFAULT_RADIUS);
     }
 
     private Figure circle() {
         return new Circle(colorSupplier.getRandomColor().toLowerCase(),
-                Circle.class.getSimpleName(), random.nextInt(RANDOM_RADIUS));
+                random.nextInt(RANDOM_RADIUS));
     }
 
     private Figure rectangle() {
         return new Rectangle(colorSupplier.getRandomColor().toLowerCase(),
-                Rectangle.class.getSimpleName(), random.nextInt(RANDOM_RADIUS));
+                random.nextInt(RANDOM_RADIUS));
     }
 
     private Figure square() {
         return new Square(colorSupplier.getRandomColor().toLowerCase(),
-                Square.class.getSimpleName(), random.nextInt(RANDOM_RADIUS));
+                 random.nextInt(RANDOM_RADIUS));
     }
 
     private Figure trapezoid() {
         return new Trapezoid(colorSupplier.getRandomColor().toLowerCase(),
-                Trapezoid.class.getSimpleName(), random.nextInt(RANDOM_RADIUS));
+                 random.nextInt(RANDOM_RADIUS));
     }
 
     private Figure triangle() {
         return new Triangle(colorSupplier.getRandomColor().toLowerCase(),
-                Triangle.class.getSimpleName(), random.nextInt(RANDOM_RADIUS));
+                 random.nextInt(RANDOM_RADIUS));
     }
 }

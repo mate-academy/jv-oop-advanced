@@ -1,12 +1,10 @@
 package core.basesyntax.figures;
 
 public class Rectangle extends Figure {
-    private String name;
     private int radius;
 
-    public Rectangle(String color, String name, int radius) {
+    public Rectangle(String color, int radius) {
         super(color);
-        this.name = name;
         this.radius = radius;
     }
 
@@ -17,7 +15,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure " + name
+        System.out.println("Figure " + Rectangle.class.getSimpleName()
                 + ", with color " + getColor()
                 + ", and " + getArea() + " radius");
     }
