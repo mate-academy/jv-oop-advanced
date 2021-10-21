@@ -9,6 +9,7 @@ public class FigureSupplier {
     private static final int RADIUS_OF_CIRCLE = 10;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
+
     public Figure getRandomFigure() {
         String color = colorSupplier.getRandomColor();
         int index = new Random().nextInt(FIGURES.length);
