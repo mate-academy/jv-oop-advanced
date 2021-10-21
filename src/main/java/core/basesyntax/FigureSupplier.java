@@ -35,22 +35,27 @@ public class FigureSupplier extends ColorSupplier {
     }
 
     private Figure circle() {
-        return new Circle("Circle", getRandomColor().toLowerCase(), random.nextInt(15));
+        return new Circle(getRandomColor().toLowerCase(),
+                Circle.class.getSimpleName(), random.nextInt(15));
     }
 
     private Figure rectangle() {
-        return new Rectangle("Rectangle", getRandomColor().toLowerCase(), random.nextInt(15));
+        return new Rectangle(getRandomColor().toLowerCase(),
+                Rectangle.class.getName(), random.nextInt(15));
     }
 
     private Figure square() {
-        return new Square("Square", getRandomColor().toLowerCase(), random.nextInt(15));
+        return new Square(getRandomColor().toLowerCase(),
+                Square.class.getSimpleName(), random.nextInt(15));
     }
 
     private Figure trapezoid() {
-        return new Trapezoid("Trapezoid", getRandomColor().toLowerCase(), random.nextInt(15));
+        return new Trapezoid(getRandomColor().toLowerCase(),
+                Trapezoid.class.getSimpleName(), random.nextInt(15));
     }
 
     private Figure triangle() {
-        return new Triangle("Triangle", getRandomColor().toLowerCase(), random.nextInt(15));
+        return new Triangle(getRandomColor().toLowerCase(),
+                Triangle.class.getSimpleName(), random.nextInt(15));
     }
 }
