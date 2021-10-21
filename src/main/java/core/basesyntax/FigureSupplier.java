@@ -11,6 +11,7 @@ import java.util.Random;
 
 public class FigureSupplier extends ColorSupplier {
     private static final int MAX_NUMBER = 6;
+    private static final int RANDOM_RADIUS = 15;
     private static final Random random = new Random();
 
     public Figure getRandomFigure() {
@@ -36,26 +37,26 @@ public class FigureSupplier extends ColorSupplier {
 
     private Figure circle() {
         return new Circle(getRandomColor().toLowerCase(),
-                Circle.class.getSimpleName(), random.nextInt(15));
+                Circle.class.getSimpleName(), random.nextInt(RANDOM_RADIUS));
     }
 
     private Figure rectangle() {
         return new Rectangle(getRandomColor().toLowerCase(),
-                Rectangle.class.getName(), random.nextInt(15));
+                Rectangle.class.getName(), random.nextInt(RANDOM_RADIUS));
     }
 
     private Figure square() {
         return new Square(getRandomColor().toLowerCase(),
-                Square.class.getSimpleName(), random.nextInt(15));
+                Square.class.getSimpleName(), random.nextInt(RANDOM_RADIUS));
     }
 
     private Figure trapezoid() {
         return new Trapezoid(getRandomColor().toLowerCase(),
-                Trapezoid.class.getSimpleName(), random.nextInt(15));
+                Trapezoid.class.getSimpleName(), random.nextInt(RANDOM_RADIUS));
     }
 
     private Figure triangle() {
         return new Triangle(getRandomColor().toLowerCase(),
-                Triangle.class.getSimpleName(), random.nextInt(15));
+                Triangle.class.getSimpleName(), random.nextInt(RANDOM_RADIUS));
     }
 }
