@@ -42,7 +42,7 @@ public class FigureSupplier extends ColorSupplier {
 
     private Figure rectangle() {
         return new Rectangle(getRandomColor().toLowerCase(),
-                Rectangle.class.getName(), random.nextInt(RANDOM_RADIUS));
+                Rectangle.class.getSimpleName(), random.nextInt(RANDOM_RADIUS));
     }
 
     private Figure square() {
