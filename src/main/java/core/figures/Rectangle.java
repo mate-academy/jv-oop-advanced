@@ -18,7 +18,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String drawFigure() {
+    public String draw() {
         return "Figure: Rectangle;\n"
                 + "SideA: " + sideA + ", SideB: " + sideB
                 + ";\n" + "Area: " + new DecimalFormat("#.##").format(calculateArea())

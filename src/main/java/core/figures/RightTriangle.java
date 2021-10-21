@@ -18,7 +18,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String drawFigure() {
+    public String draw() {
         return "Figure: RightTriangle;\n"
                 + "SideA: " + sideA + ", SideB: " + sideB
                 + ";\n" + "Area: " + new DecimalFormat("#.##").format(calculateArea())

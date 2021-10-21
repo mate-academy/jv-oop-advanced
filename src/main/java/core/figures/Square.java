@@ -16,7 +16,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public String drawFigure() {
+    public String draw() {
         return "Figure: Square;\n"
                 + "Side: " + side
                 + ";\n" + "Area: " + new DecimalFormat("#.##").format(calculateArea())

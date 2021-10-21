@@ -16,7 +16,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String drawFigure() {
+    public String draw() {
         return "Figure: Circle;\n"
                 + "Radius: " + radius
                 + ";\n" + "Area: " + new DecimalFormat("#.##").format(calculateArea())

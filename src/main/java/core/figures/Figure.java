@@ -6,8 +6,8 @@ import core.interfaces.Drawer;
 public abstract class Figure implements Drawer, AreaCalculator {
     private String color;
 
-    public Figure(String figureColor) {
-        this.color = figureColor;
+    public Figure(String color) {
+        this.color = color;
     }
 
     public String getColor() {

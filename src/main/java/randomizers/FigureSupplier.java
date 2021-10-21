@@ -16,8 +16,8 @@ public class FigureSupplier {
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        int i = random.nextInt(4);
-        switch (i) {
+        int index = random.nextInt(4);
+        switch (index) {
             case 0:
                 return getRandomCircle();
             case 1:

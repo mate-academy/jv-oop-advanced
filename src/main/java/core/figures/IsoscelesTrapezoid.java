@@ -20,7 +20,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String drawFigure() {
+    public String draw() {
         return "Figure: Square;\n"
                 + "BaseA: " + baseA + ", BaseB: " + baseB + ", Height: " + height
                 + ";\n" + "Area: " + new DecimalFormat("#.##").format(calculateArea())
