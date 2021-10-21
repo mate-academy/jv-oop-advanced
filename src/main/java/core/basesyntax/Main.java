@@ -2,6 +2,7 @@ package core.basesyntax;
 
 public class Main {
     public static final int NUMBER_CYCLES = 6;
+
     public static void main(String[] args) {
         Figure[] figures = new Figure[NUMBER_CYCLES];
         for (int i = 0; i < NUMBER_CYCLES; i++) {

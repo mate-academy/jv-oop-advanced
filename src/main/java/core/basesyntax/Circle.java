@@ -7,10 +7,6 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
-    public void setRadius(float radius) {
-        this.radius = radius;
-    }
-
     @Override
     public float area() {
         return (float) Math.PI * radius * radius;
