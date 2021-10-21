@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 import core.basesyntax.figures.Circle;
-import core.basesyntax.figures.Color;
 import core.basesyntax.figures.Figure;
 import core.basesyntax.figures.Rectangle;
 import core.basesyntax.figures.Square;
@@ -17,7 +16,8 @@ public class FigureSupplier {
     private static final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        switch (random.nextInt(MAX_NUMBER)) {
+        int randomIndex = random.nextInt(MAX_NUMBER);
+        switch (randomIndex) {
             case 1:
                 return getRandomCircle();
             case 2:
@@ -27,38 +27,43 @@ public class FigureSupplier {
             case 4:
                 return getRandomTrapezoid();
             case 5:
-                return getRandomTriangle();
             default:
-                return getDefaultFigure();
+                return getRandomTriangle();
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.toString().toLowerCase(), DEFAULT_RADIUS);
+        String color = colorSupplier.getRandomColor().toLowerCase();
+        return new Circle(color, DEFAULT_RADIUS);
     }
 
     private Figure getRandomCircle() {
-        return new Circle(colorSupplier.getRandomColor().toLowerCase(),
-                random.nextInt(RANDOM_RADIUS));
+        String color = colorSupplier.getRandomColor().toLowerCase();
+        int radius = random.nextInt(RANDOM_RADIUS);
+        return new Circle(color, radius);
     }
 
     private Figure getRandomRectangle() {
-        return new Rectangle(colorSupplier.getRandomColor().toLowerCase(),
-                random.nextInt(RANDOM_RADIUS));
+        String color = colorSupplier.getRandomColor().toLowerCase();
+        int radius = random.nextInt(RANDOM_RADIUS);
+        return new Rectangle(color, radius);
     }
 
     private Figure getRandomSquare() {
-        return new Square(colorSupplier.getRandomColor().toLowerCase(),
-                 random.nextInt(RANDOM_RADIUS));
+        String color = colorSupplier.getRandomColor().toLowerCase();
+        int radius = random.nextInt(RANDOM_RADIUS);
+        return new Square(color, radius);
     }
 
     private Figure getRandomTrapezoid() {
-        return new Trapezoid(colorSupplier.getRandomColor().toLowerCase(),
-                 random.nextInt(RANDOM_RADIUS));
+        String color = colorSupplier.getRandomColor().toLowerCase();
+        int radius = random.nextInt(RANDOM_RADIUS);
+        return new Trapezoid(color, radius);
     }
 
     private Figure getRandomTriangle() {
-        return new Triangle(colorSupplier.getRandomColor().toLowerCase(),
-                 random.nextInt(RANDOM_RADIUS));
+        String color = colorSupplier.getRandomColor().toLowerCase();
+        int radius = random.nextInt(RANDOM_RADIUS);
+        return new Triangle(color, radius);
     }
 }
