@@ -27,7 +27,6 @@ public class FigureSupplier {
             case 3:
                 return getRandomRightTriangle(color);
             case 4:
-                return getRandomSquare(color);
             default:
                 return getRandomSquare(color);
         }
