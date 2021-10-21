@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Shape implements AreaCounter {
+public class Circle extends Shape {
     private int radius;
 
     public Circle(int radius, String color) {

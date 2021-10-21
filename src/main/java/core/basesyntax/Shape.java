@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Shape {
+public class Shape implements AreaCounter {
     private String shapeName;
     private float area;
     private String color;
@@ -24,5 +24,10 @@ public class Shape {
 
     public void setArea(float area) {
         this.area = area;
+    }
+
+    @Override
+    public float countArea() {
+        return 0;
     }
 }

@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public class RightTriangle extends Shape implements AreaCounter {
+public class RightTriangle extends Shape {
     private int side = 0;
 
-    RightTriangle(int side, String color) {
+    public RightTriangle(int side, String color) {
         super("Rectangle", color);
         this.side = side;
         float valueOfArea = countArea();

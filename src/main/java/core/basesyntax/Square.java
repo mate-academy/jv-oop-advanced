@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public class Square extends Shape implements AreaCounter {
+public class Square extends Shape {
     private int side;
 
-    Square(int side, String color) {
+    public Square(int side, String color) {
         super("Square", color);
         this.side = side;
         float valueOfArea = countArea();

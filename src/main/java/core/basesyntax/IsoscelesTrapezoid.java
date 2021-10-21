@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Shape implements AreaCounter {
+public class IsoscelesTrapezoid extends Shape {
     private int bottomBase;
     private int upperBase;
     private int edge;

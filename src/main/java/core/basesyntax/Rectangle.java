@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Shape implements AreaCounter {
+public class Rectangle extends Shape {
     private int firstLeg;
     private int secondLeg;
 
