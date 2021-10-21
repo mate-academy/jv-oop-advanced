@@ -3,70 +3,60 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    /*
-    //First time I guessed that it will be a great idea, but after reading a checklist
-    //I found it useless. I will let it lay here, just in case it may become helpful once
+    static final int AMOUNT_OF_FIGURES = 5;
 
-    public Figure[] generateRandomFigureList(Figure[] figures) {
-        for (int i = 0; i < figures.length / 2; i++) {
-            figures[i] = getRandomFigure();
-        }
-        for (int i = figures.length / 2; i < figures.length; i++) {
-            figures[i] = getDefaultFigure();
-        }
-        return figures;
-    }
-    */
     public Figure getRandomFigure() {
-        final int AmountOfFigures = 5;
-        int randomFigure = new Random().nextInt(AmountOfFigures - 1) + 1;
+        int randomFigure = new Random().nextInt(AMOUNT_OF_FIGURES);
         switch (randomFigure) {
-            default: return new Figure("");
             case 1: return getRandomCircle();
             case 2: return getRandomIsoscelesTrapezoid();
             case 3: return getRandomRectangle();
             case 4: return getRandomRightTriangle();
-            case 5: return getRandomSquare();
+            default: return getRandomSquare();
         }
     }
 
     public Figure getDefaultFigure() {
-        String color = Color.WHITE.toString();
+        String color = new ColorSupplier().getDefaultColor();
         double radius = 10;
         return new Circle(color, radius);
     }
 
-    public Figure getRandomCircle() {
-        String color = Color.WHITE.toString();
-        double radius = new Random().nextInt(20) + 1;
+    private double getRandomNumber(double maxNumber) {
+        return new Random().nextInt(20) + 1;
+    }
+
+    private Figure getRandomCircle() {
+        String color = new ColorSupplier().getRandomColor();
+        double radius = getRandomNumber(20);
         return new Circle(color, radius);
     }
 
-    public Figure getRandomIsoscelesTrapezoid() {
+    private Figure getRandomIsoscelesTrapezoid() {
         String color = new ColorSupplier().getRandomColor();
-        double baseSideLine = new Random().nextInt(20) + 1;
-        double topSideLine = new Random().nextInt(20) + 1;
-        double height = new Random().nextInt(20) + 1;
+        double baseSideLine = getRandomNumber(20);
+        double topSideLine = getRandomNumber(20);
+        double height = getRandomNumber(20);
         return new IsoscelesTrapezoid(color, baseSideLine, topSideLine, height);
     }
 
-    public Figure getRandomRectangle() {
+    private Figure getRandomRectangle() {
         String color = new ColorSupplier().getRandomColor();
-        double sideOne = new Random().nextInt(20) + 1;
-        double sideTwo = new Random().nextInt(20) + 1;
+        double sideOne = getRandomNumber(20);
+        double sideTwo = getRandomNumber(20);
         return new Rectangle(color, sideOne, sideTwo);
     }
 
-    public Figure getRandomRightTriangle() {
+    private Figure getRandomRightTriangle() {
         String color = new ColorSupplier().getRandomColor();
-        double firstLeg = new Random().nextInt(20) + 1;
-        double secondLeg = new Random().nextInt(20) + 1;
+        double firstLeg = getRandomNumber(20);
+        double secondLeg = getRandomNumber(20);
         return new RightTriangle(color, firstLeg, secondLeg);
     }
 
-    public Figure getRandomSquare() {
+    private Figure getRandomSquare() {
         String color = new ColorSupplier().getRandomColor();
-        double side = new Random().nextInt(20) + 1;
+        double side = getRandomNumber(20);
         return new Square(color, side);
     }
 }
