@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class RightTriangle extends Shape {
-    private int side = 0;
+    private int side;
 
     public RightTriangle(int side, String color) {
         super("Rectangle", color);
