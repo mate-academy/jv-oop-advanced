@@ -6,18 +6,17 @@ public class RightTriangle extends Shape {
     public RightTriangle(int side, String color) {
         super(color);
         this.side = side;
-        float valueOfArea = countArea();
     }
 
     @Override
-    public float countArea() {
-        return (float) (side * side * Math.sqrt(3.0 / 4.0));
+    public String countArea() {
+        return String.format("%.1f",side * side * Math.sqrt(3.0 / 4.0));
+
     }
 
     @Override
     public void draw() {
-        System.out.printf("RightTriangle, area: %.2f sq.units,"
-                        + " side: %d units, color: " + getColor() + "\n",
-                        countArea(), side);
+        System.out.println("RightTriangle, area: " + countArea() + " sq.units,"
+                        + " side: " + side + " units, color: " + getColor());
     }
 }

@@ -10,13 +10,13 @@ public class Square extends Shape {
     }
 
     @Override
-    public float countArea() {
-        return (float) (side * side);
+    public String countArea() {
+        return String.format("%.1f", (float) side * side);
     }
 
     @Override
     public void draw() {
-        System.out.printf("Square, area: %.2f sq.units  side: %d units,"
-                          + " color: " + getColor() + "\n", countArea(), side);
+        System.out.println("Square, area: " + countArea() + " sq.units, side: " + side
+                           + " units," + " color: " + getColor());
     }
 }

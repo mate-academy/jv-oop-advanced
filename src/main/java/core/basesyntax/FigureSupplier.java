@@ -19,32 +19,32 @@ public class FigureSupplier {
         switch (figureNumber) {
             case 1 : {
                 //Circle
-                int randomRadius = random.nextInt(100);
+                int randomRadius = random.nextInt(100) + 1;
                 return new Circle(randomRadius,randomColor);
             }
             case 2 : {
                 //IsoscelesTrapezoid
-                int randomBottomBase = random.nextInt(100);
-                int randomUpperBase = random.nextInt(100);
-                int randomEdge = random.nextInt(100);
+                int randomBottomBase = random.nextInt(100) + 1;
+                int randomUpperBase = random.nextInt(100) + 1;
+                int randomEdge = random.nextInt(100) + 1;
                 return new IsoscelesTrapezoid(randomBottomBase,
                         randomUpperBase, randomEdge, randomColor);
             }
             case 3 : {
                 //Rectangle
-                int randomFirstLeg = random.nextInt(100);
-                int randomSecondLeg = random.nextInt(100);
+                int randomFirstLeg = random.nextInt(100) + 1;
+                int randomSecondLeg = random.nextInt(100) + 1;
                 return new Rectangle(randomFirstLeg, randomSecondLeg, randomColor);
             }
             case 4 : {
                 //RightTriangle
-                int randomSide = random.nextInt(100);
+                int randomSide = random.nextInt(100) + 1;
                 return new RightTriangle(randomSide, randomColor);
             }
             case 5:
             default: {
                 //Square
-                int randomSide = random.nextInt(100);
+                int randomSide = random.nextInt(100) + 1;
                 return new Square(randomSide, randomColor);
             }
         }

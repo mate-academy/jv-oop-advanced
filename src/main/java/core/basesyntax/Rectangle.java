@@ -11,15 +11,15 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    public float countArea() {
-        return (float) (firstLeg * secondLeg);
+    public String countArea() {
+        return String.format("%.1f",(float) (firstLeg * secondLeg));
     }
 
     @Override
     public void draw() {
-        System.out.printf("Rectangle, area: %.2f sq.units firstLeg: %d units,"
-                        + " secondLeg: %d units, color: " + getColor() + "\n",
-                        countArea(), firstLeg, secondLeg);
+        System.out.println("Rectangle, area: " + countArea()
+                          + " sq.units firstLeg: " + firstLeg + " units, secondLeg: "
+                          + secondLeg + " units, color: " + getColor());
     }
 }
 

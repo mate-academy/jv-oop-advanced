@@ -9,13 +9,12 @@ public class Circle extends Shape {
     }
 
     @Override
-    public float countArea() {
-        return (float) (Math.PI * radius * radius);
+    public String countArea() {
+        return String.format("%.1f",(float) (Math.PI * radius * radius));
     }
 
     public void draw() {
-        System.out.printf("Circle, area: %.2f sq.units,"
-                + " radius: %d units, color: "
-                + getColor() + "\n", countArea(), radius);
+        System.out.println("Circle, area: " + countArea() + " sq.units, radius: "
+                           + radius + " units, color: " + getColor());
     }
 }
