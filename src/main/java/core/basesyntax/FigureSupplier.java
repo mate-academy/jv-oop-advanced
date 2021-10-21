@@ -8,7 +8,7 @@ public class FigureSupplier {
 
     public Shape getDefaultFigure() {
         int defaultRadius = 10;
-        String defaultColor = Colors.WHITE.toString();
+        String defaultColor = Color.WHITE.toString();
         Shape defaultFigure = new Circle(defaultRadius,defaultColor);
         return defaultFigure;
     }
