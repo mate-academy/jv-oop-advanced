@@ -10,14 +10,6 @@ public class Rectangle extends Figure {
         this.secondSide = secondSide;
     }
 
-    public int getFirstSide() {
-        return firstSide;
-    }
-
-    public int getSecondSide() {
-        return secondSide;
-    }
-
     @Override
     public double getSquare() {
         return firstSide * secondSide;
@@ -31,6 +23,6 @@ public class Rectangle extends Figure {
                         + "First side: %d, "
                         + "Second side: %d, "
                         + "Color: %s",
-                        getSquare(), getFirstSide(), getSecondSide(), getColor()));
+                        getSquare(), firstSide, secondSide, getColor()));
     }
 }

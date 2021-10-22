@@ -12,18 +12,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.height = height;
     }
 
-    public int getFirstSide() {
-        return firstSide;
-    }
-
-    public int getSecondSide() {
-        return secondSide;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
     @Override
     public double getSquare() {
         return firstSide * height / 2f * height;
@@ -37,6 +25,6 @@ public class IsoscelesTrapezoid extends Figure {
                         + "First side: %d, "
                         + "Second side: %s, "
                         + "Height: %d, Color: %s",
-                getSquare(), getFirstSide(), getSecondSide(), getHeight(), getColor()));
+                getSquare(), firstSide, secondSide, height, getColor()));
     }
 }

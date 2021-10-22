@@ -10,14 +10,6 @@ public class RightTriangle extends Figure {
         this.secondLeg = secondLeg;
     }
 
-    public int getFirstLeg() {
-        return firstLeg;
-    }
-
-    public int getSecondLeg() {
-        return secondLeg;
-    }
-
     @Override
     public double getSquare() {
         return (firstLeg * secondLeg) / 2f;
@@ -31,6 +23,6 @@ public class RightTriangle extends Figure {
                         + "First leg: %d, "
                         + "Second leg: %d, "
                         + "Color: %s",
-                getSquare(), getFirstLeg(), getSecondLeg(), getColor()));
+                getSquare(), firstLeg, secondLeg, getColor()));
     }
 }
