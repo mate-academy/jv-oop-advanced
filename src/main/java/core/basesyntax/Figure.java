@@ -1,18 +1,8 @@
 package core.basesyntax;
 
 public abstract class Figure implements Drawable, AreaCalculator {
-    private String figure;
-    private final int boundRandom = 10;
     private double area;
     private String color;
-
-    public String getFigure() {
-        return figure;
-    }
-
-    public void setFigure(String figure) {
-        this.figure = figure;
-    }
 
     public double getArea() {
         return area;
@@ -30,7 +20,4 @@ public abstract class Figure implements Drawable, AreaCalculator {
         this.color = color;
     }
 
-    public int getBoundRandom() {
-        return boundRandom;
-    }
 }

@@ -8,22 +8,21 @@ public class Rhombus extends Figure {
         this.setColor(color);
         this.angle = angle;
         this.side = side;
-        this.setFigure("rhombus");
     }
 
     @Override
-    public double countArea() {
-        return Math.ceil(this.side * this.side
-                * Math.sin(Math.toRadians(this.angle)) * 10) / 10;
+    public double calculateArea() {
+        return Math.ceil(side * side
+                * Math.sin(Math.toRadians(angle)) * 10) / 10;
     }
 
     @Override
     public void draw() {
-        System.out.println(" Figure: " + this.getFigure()
-                + ", area: " + this.countArea()
-                + " sq.units, side: " + this.side
-                + " units, angle: " + this.angle
-                + " units, color: " + this.getColor());
+        System.out.println(" Figure: rhombus"
+                + ", area: " + calculateArea()
+                + " sq.units, side: " + side
+                + " units, angle: " + angle
+                + " units, color: " + getColor());
     }
 
 }

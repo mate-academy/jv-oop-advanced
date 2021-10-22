@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSuplier {
-    private static final int boundRandom = 10;
+    private static final int MAX_RANDOM_NAUMBER = 10;
     private static final int DEFAULT_RADIUS = 10;
     private static final int RANDOM_RANGE = 6;
     private Random random = new Random();
@@ -24,41 +24,50 @@ public class FigureSuplier {
             case 4:
                 return getRandomIsoscelesTrapezoid();
             case 5:
-                return getRandomRhombus();
             default:
-                return getDafaultFigure();
+                return getRandomRhombus();
         }
     }
 
     public Circle getRandomCircle() {
-        return new Circle(new Random().nextInt(boundRandom) + 1, colorSuplier.getRondomColor());
+        String color = colorSuplier.getRondomColor();
+        int radius = new Random().nextInt(MAX_RANDOM_NAUMBER) + 1;
+        return new Circle(radius, color);
     }
 
     public Square getRandomSquare() {
-        return new Square(new Random().nextInt(boundRandom) + 1, colorSuplier.getRondomColor());
+        String color = colorSuplier.getRondomColor();
+        int side = new Random().nextInt(MAX_RANDOM_NAUMBER) + 1;
+        return new Square(side, color);
     }
 
     public RightTriangle getRandomRightTriangle() {
-        return new RightTriangle(new Random().nextInt(boundRandom) + 1,
-                new Random().nextInt(boundRandom) + 1, colorSuplier.getRondomColor());
+        String color = colorSuplier.getRondomColor();
+        int firstLeg = new Random().nextInt(MAX_RANDOM_NAUMBER) + 1;
+        int secondLeg = new Random().nextInt(MAX_RANDOM_NAUMBER) + 1;
+        return new RightTriangle(firstLeg, secondLeg, color);
     }
 
     public Rhombus getRandomRhombus() {
-        return new Rhombus(new Random().nextInt(89) + 1,
-                new Random().nextInt(boundRandom) + 1, colorSuplier.getRondomColor());
+        String color = colorSuplier.getRondomColor();
+        int angle = new Random().nextInt(89) + 1;
+        int side = new Random().nextInt(MAX_RANDOM_NAUMBER) + 1;
+        return new Rhombus(angle, side, color);
     }
 
     public Rectangle getRandomRectangle() {
-        return new Rectangle(new Random().nextInt(boundRandom) + 1,
-                new Random().nextInt(boundRandom) + 1, colorSuplier.getRondomColor());
-
+        String color = colorSuplier.getRondomColor();
+        int sideA = new Random().nextInt(MAX_RANDOM_NAUMBER) + 1;
+        int sideB = new Random().nextInt(MAX_RANDOM_NAUMBER) + 1;
+        return new Rectangle(sideA, sideB, color);
     }
 
     public IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(new Random().nextInt(boundRandom) + 1,
-                new Random().nextInt(boundRandom) + 1, new Random().nextInt(boundRandom) + 1,
-                colorSuplier.getRondomColor());
-
+        String color = colorSuplier.getRondomColor();
+        int height = new Random().nextInt(MAX_RANDOM_NAUMBER) + 1;
+        int sideA = new Random().nextInt(MAX_RANDOM_NAUMBER) + 1;
+        int sideC = new Random().nextInt(MAX_RANDOM_NAUMBER) + 1;
+        return new IsoscelesTrapezoid(height, sideA, sideC, color);
     }
 
     public Figure getDafaultFigure() {

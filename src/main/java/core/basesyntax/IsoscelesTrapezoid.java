@@ -10,22 +10,21 @@ public class IsoscelesTrapezoid extends Figure {
         this.height = height;
         this.sideA = sideA;
         this.sideC = sideC;
-        this.setFigure("isoscelesTrapezoid");
     }
 
     @Override
-    public double countArea() {
-        return Math.ceil((this.sideC + this.sideA) * this.height / 2 * 10) / 10;
+    public double calculateArea() {
+        return Math.ceil((sideC + sideA) * height / 2 * 10) / 10;
     }
 
     @Override
     public void draw() {
-        System.out.println(" Figure: " + this.getFigure()
-                + ", area: " + this.countArea()
-                + " sq.units, sideA: " + this.sideA
-                + " units, sideC: " + this.sideC
-                + " units, height: " + this.height
-                + " units, color: " + this.getColor());
+        System.out.println(" Figure: isoscelesTrapezoid"
+                + ", area: " + calculateArea()
+                + " sq.units, sideA: " + sideA
+                + " units, sideC: " + sideC
+                + " units, height: " + height
+                + " units, color: " + getColor());
     }
 
 }

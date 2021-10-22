@@ -8,21 +8,20 @@ public class Rectangle extends Figure {
         this.setColor(color);
         this.sideA = sideA;
         this.sideB = sideB;
-        this.setFigure("rectangle");
     }
 
     @Override
-    public double countArea() {
-        return Math.ceil(this.sideA * this.sideB * 10) / 10;
+    public double calculateArea() {
+        return Math.ceil(sideA * sideB * 10) / 10;
     }
 
     @Override
     public void draw() {
-        System.out.println(" Figure: " + this.getFigure()
-                + ", area: " + this.countArea()
-                + " sq.units, sideA: " + this.sideA
-                + " units, sideB: " + this.sideB
-                + " units, color: " + this.getColor());
+        System.out.println(" Figure: rectangle"
+                + ", area: " + calculateArea()
+                + " sq.units, sideA: " + sideA
+                + " units, sideB: " + sideB
+                + " units, color: " + getColor());
     }
 
 }
