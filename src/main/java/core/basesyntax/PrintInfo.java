@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public interface GetInfo {
+public interface PrintInfo {
     String getInfo();
 }
