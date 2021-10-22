@@ -8,3 +8,4 @@ public class ColorSupplier {
         return stringsColor[colorNumber];
         }
         }
+
