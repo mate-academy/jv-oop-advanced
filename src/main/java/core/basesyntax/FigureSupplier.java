@@ -53,6 +53,7 @@ public class FigureSupplier {
                 return getRandomRectangle();
             case 3:
                 return getRandomRightTriangle();
+            case 4:
             default:
                 return getRandomSquare();
         }
