@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-
     private int sideA;
 
     public Square(String color, int sideA) {

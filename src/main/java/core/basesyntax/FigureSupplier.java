@@ -3,21 +3,14 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    static final int maxNumber = 6;
-    static final Random random = new Random();
-    static final int maxSide = 20;
-    static final int defaultRadius = 10;
-    static final ColorSupplier colorSupplier = new ColorSupplier();
+    private static final int maxNumber = 6;
+    private static final Random random = new Random();
+    private static final int maxSide = 20;
+    private static final int defaultRadius = 10;
+    private static final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getDefaultFigure() {
-        String color = colorSupplier.getRandomColor().toLowerCase();
-        return new Circle(color, defaultRadius);
-    }
-
-    private Figure getRandomCircle() {
-        String color = colorSupplier.getRandomColor().toLowerCase();
-        int radius = random.nextInt(maxSide);
-        return new Circle(color, radius);
+        return new Circle(Color.WHITE.name(), defaultRadius);
     }
 
     private Figure getRandomRectangle() {
@@ -47,6 +40,12 @@ public class FigureSupplier {
         return new RightTriangle(color, sideA, sideB);
     }
 
+    private Figure getRandomCircle() {
+        String color = colorSupplier.getRandomColor().toLowerCase();
+        int radius = random.nextInt(maxSide);
+        return new Circle(color, radius);
+    }
+
     public Figure getRandomFigure() {
         int i = random.nextInt(maxNumber);
         switch (i) {
@@ -63,6 +62,5 @@ public class FigureSupplier {
                 return getRandomTriangle();
         }
     }
-
 }
 
