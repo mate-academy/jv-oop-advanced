@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int FIGURE_COUNT = 5;
+    private static final int FIGURE_COUNT = 5;
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
@@ -26,6 +26,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Colors.WHITE.toString().toLowerCase(), 10);
+        return new Circle(Color.WHITE.toString().toLowerCase(), 10);
     }
 }
