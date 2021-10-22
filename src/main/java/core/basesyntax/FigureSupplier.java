@@ -9,34 +9,6 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public RightTriangle getRandomTriangle() {
-        String randomColor = colorSupplier.getRandomColor();
-        int randomFirstLeg = getRandomNumber();
-        int randomSecondLeg = getRandomNumber();
-        return new RightTriangle(randomFirstLeg, randomSecondLeg, randomColor);
-    }
-
-    public Circle getRandomCircle() {
-        String randomColor = colorSupplier.getRandomColor();
-        int randomRadius = getRandomNumber();
-        return new Circle(randomRadius, colorSupplier.getRandomColor());
-    }
-
-    public IsoscelesTrapezoid getRandomTrapezoid() {
-        String randomColor = colorSupplier.getRandomColor();
-        int randomFirstSide = getRandomNumber();
-        int randomSecondSide = getRandomNumber();
-        int randomHeight = getRandomNumber();
-        return new IsoscelesTrapezoid(randomHeight, randomFirstSide,
-                randomSecondSide, colorSupplier.getRandomColor());
-    }
-
-    public Square getRandomSquare() {
-        String randomColor = colorSupplier.getRandomColor();
-        int side = getRandomNumber();
-        return new Square(side,colorSupplier.getRandomColor());
-    }
-
     public Figure getRandomFigure() {
         int randomFigureNumber = random.nextInt(FIGURE_COUNT);
         switch (randomFigureNumber) {
@@ -47,14 +19,41 @@ public class FigureSupplier {
             case 2:
                 return getRandomTrapezoid();
             case 3:
-                return getRandomTriangle();
             default:
         }
-        return null;
+        return getRandomTriangle();
     }
 
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_RADIUS, Color.WHITE.getName());
+    }
+
+    private RightTriangle getRandomTriangle() {
+        String randomColor = colorSupplier.getRandomColor();
+        int randomFirstLeg = getRandomNumber();
+        int randomSecondLeg = getRandomNumber();
+        return new RightTriangle(randomFirstLeg, randomSecondLeg, randomColor);
+    }
+
+    private Circle getRandomCircle() {
+        String randomColor = colorSupplier.getRandomColor();
+        int randomRadius = getRandomNumber();
+        return new Circle(randomRadius, colorSupplier.getRandomColor());
+    }
+
+    private IsoscelesTrapezoid getRandomTrapezoid() {
+        String randomColor = colorSupplier.getRandomColor();
+        int randomFirstSide = getRandomNumber();
+        int randomSecondSide = getRandomNumber();
+        int randomHeight = getRandomNumber();
+        return new IsoscelesTrapezoid(randomHeight, randomFirstSide,
+                randomSecondSide, colorSupplier.getRandomColor());
+    }
+
+    private Square getRandomSquare() {
+        String randomColor = colorSupplier.getRandomColor();
+        int side = getRandomNumber();
+        return new Square(side,colorSupplier.getRandomColor());
     }
 
     private int getRandomNumber() {
