@@ -5,11 +5,11 @@ public class IsoscelesTrapezoid extends Figure {
     private int downSide;
     private int side;
 
-    IsoscelesTrapezoid(int upperSide, int downSide, int sideC, String color) {
+    public IsoscelesTrapezoid(int upperSide, int downSide, int sideC, String color) {
+        super(color);
         this.upperSide = upperSide;
         this.downSide = downSide;
         this.side = sideC;
-        setColor(color);
     }
 
     @Override
@@ -19,7 +19,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public void draw() {
+    public void print() {
         System.out.println("Figure: Isosceles trapezoid, area: " + getArea()
                 + " sq.units, sideA: " + upperSide + " units, sideB: " + downSide
                 + " units, sideC: " + side + " units, color: " + getColor());

@@ -4,10 +4,10 @@ public class Rectangle extends Figure {
     private int sideA;
     private int sideB;
 
-    Rectangle(int sideA, int sideB, String color) {
+    public Rectangle(int sideA, int sideB, String color) {
+        super(color);
         this.sideA = sideA;
         this.sideB = sideB;
-        setColor(color);
     }
 
     @Override
@@ -16,7 +16,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void draw() {
+    public void print() {
         System.out.println("Figure: Rectangle, area: " + getArea()
                 + " sq.units, sideA: " + sideA + " units, sideB: "
                 + sideB + " units, color: " + getColor());

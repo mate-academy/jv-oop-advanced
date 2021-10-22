@@ -4,44 +4,43 @@ import java.util.Random;
 
 public class FigureSupplier {
     static final int FIGURE_COUNT = 5;
-    static final int MAX_SIDE_A = 100;
-    static final int MAX_SIDE_B = 100;
-    static final int MAX_SIDE_C = 100;
-    static final int MAX_RADIUS = 100;
+    static final int MAX_SIDE = 100;
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
 
     public Figure getRandomFigure() {
         int index = random.nextInt(FIGURE_COUNT);
         String color = colorSupplier.getRandomColor();
-        int sideA = random.nextInt(MAX_SIDE_A) + 1;
-        int sideB = random.nextInt(MAX_SIDE_B) + 1;
-        int sideC = random.nextInt(MAX_SIDE_C) + 1;
-        int radius = random.nextInt(MAX_RADIUS) + 1;
-        Figure randomFigure;
+        int sideA;
+        int sideB;
+        int sideC;
+        int radius;
 
         switch (index) {
             case 0 :
-                randomFigure = new Square(sideA, color);
-                break;
+                sideA = random.nextInt(MAX_SIDE) + 1;
+                return new Square(sideA, color);
             case 1 :
-                randomFigure = new Rectangle(sideA, sideB, color);
-                break;
+                sideA = random.nextInt(MAX_SIDE) + 1;
+                sideB = random.nextInt(MAX_SIDE) + 1;
+                return new Rectangle(sideA, sideB, color);
             case 2 :
-                randomFigure = new Circle(radius, color);
-                break;
+                radius = random.nextInt(MAX_SIDE) + 1;
+                return new Circle(radius, color);
             case 3 :
-                randomFigure = new RightTriangle(sideA, sideB, color);
-                break;
+                sideA = random.nextInt(MAX_SIDE) + 1;
+                sideB = random.nextInt(MAX_SIDE) + 1;
+                return new RightTriangle(sideA, sideB, color);
             case 4 :
             default :
-                randomFigure = new IsoscelesTrapezoid(sideA, sideB, sideC, color);
-                break;
+                sideA = random.nextInt(MAX_SIDE) + 1;
+                sideB = random.nextInt(MAX_SIDE) + 1;
+                sideC = random.nextInt(MAX_SIDE) + 1;
+                return new IsoscelesTrapezoid(sideA, sideB, sideC, color);
         }
-        return randomFigure;
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, "WHITE");
+        return new Circle(10, Color.WHITE.name());
     }
 }
