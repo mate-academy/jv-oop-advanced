@@ -11,12 +11,12 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public float area() {
+    public float getArea() {
         return firstLeg * secondLeg;
     }
 
     public String draw() {
-        return "Figure: rectangle, area: " + area()
+        return "Figure: rectangle, area: " + getArea()
                 + " sq.units, firstLeg: " + firstLeg
                 + " sq.units, secondLeg: " + secondLeg
                 + " units, color: " + getColor();

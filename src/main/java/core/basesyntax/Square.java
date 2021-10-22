@@ -9,12 +9,12 @@ public class Square extends Figure {
     }
 
     @Override
-    public float area() {
+    public float getArea() {
         return side * side;
     }
 
     public String draw() {
-        return "Figure: square, area: " + area()
+        return "Figure: square, area: " + getArea()
                 + " sq.units, side: " + side + " units, color: "
                 + getColor();
     }
