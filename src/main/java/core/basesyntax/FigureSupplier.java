@@ -20,8 +20,8 @@ public class FigureSupplier {
                 return getRandomTrapezoid();
             case 3:
             default:
+                return getRandomTriangle();
         }
-        return getRandomTriangle();
     }
 
     public Figure getDefaultFigure() {
