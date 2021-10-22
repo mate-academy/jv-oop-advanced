@@ -1,26 +1,24 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure {
-    private int sideA;
-    private int sideB;
+public class Rectangle extends Figure implements AreaCalculator {
+    private double length;
+    private double height;
 
-    public Rectangle(String color, int sideA, int sideB) {
-        super(color);
-        this.sideA = sideA;
-        this.sideB = sideB;
+    public Rectangle(String color, double length, double height) {
+        this.color = color;
+        this.height = length;
+        this.length = height;
     }
 
     @Override
     public double getArea() {
-        return sideA * sideB;
+        return length * height;
     }
 
     @Override
-    public void drawing() {
-        System.out.println("Figure: " + getClass().getSimpleName()
-                + ", area: " + getArea() + " sq.units"
-                + ", sideA: " + sideA + " units"
-                + ", sideB: " + sideB + " units"
-                + ", color: " + getColor());
+    public String draw() {
+        return "Figure: " + this.getClass().getSimpleName() + ", area: "
+                + getArea() + " sq.units, lenght: " + length
+                + " units, height: " + height + " units, color: " + color;
     }
 }
