@@ -4,15 +4,9 @@ public class Rectangle extends Figure {
     private int sideA;
     private int sideB;
 
-    Rectangle(String color) {
+    Rectangle(String color, int sideA, int sideB) {
         super(color);
-    }
-
-    public void setSideA(int sideA) {
         this.sideA = sideA;
-    }
-
-    public void setSideB(int sideB) {
         this.sideB = sideB;
     }
 
