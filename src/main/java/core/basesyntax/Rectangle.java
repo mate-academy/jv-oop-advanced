@@ -15,9 +15,8 @@ public class Rectangle extends Figure {
         return sideA;
     }
 
-    public Rectangle setSideA(int sideA) {
+    public void setSideA(int sideA) {
         this.sideA = sideA;
-        return this;
     }
 
     public int getSideB() {
