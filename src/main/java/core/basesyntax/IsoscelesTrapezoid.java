@@ -1,32 +1,31 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class IsoscelesTrapezoid extends Figure {
     private double height;
     private double sideA;
     private double sideC;
 
+    public IsoscelesTrapezoid(double height, double sideA, double sideC, String color) {
+        this.setColor(color);
+        this.height = height;
+        this.sideA = sideA;
+        this.sideC = sideC;
+        this.setFigure("isoscelesTrapezoid");
+    }
+
     @Override
-    public void countArea() {
-        this.setArea(Math.ceil((this.sideC + this.sideA) * this.height / 2 * 10) / 10);
+    public double countArea() {
+        return Math.ceil((this.sideC + this.sideA) * this.height / 2 * 10) / 10;
     }
 
     @Override
     public void draw() {
         System.out.println(" Figure: " + this.getFigure()
-                + ", area: " + this.getArea()
+                + ", area: " + this.countArea()
                 + " sq.units, sideA: " + this.sideA
                 + " units, sideC: " + this.sideC
                 + " units, height: " + this.height
                 + " units, color: " + this.getColor());
     }
 
-    @Override
-    public void randomAttributes() {
-        this.sideA = new Random().nextInt(this.getBoundRandom()) + 1;
-        this.sideC = new Random().nextInt(this.getBoundRandom()) + 10;
-        this.height = new Random().nextInt(this.getBoundRandom()) + 1;
-
-    }
 }

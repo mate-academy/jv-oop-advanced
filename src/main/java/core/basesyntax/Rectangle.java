@@ -1,28 +1,28 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Rectangle extends Figure {
     private double sideA;
     private double sideB;
 
+    public Rectangle(double sideA, double sideB, String color) {
+        this.setColor(color);
+        this.sideA = sideA;
+        this.sideB = sideB;
+        this.setFigure("rectangle");
+    }
+
     @Override
-    public void countArea() {
-        this.setArea(Math.ceil(this.sideA * this.sideB * 10) / 10);
+    public double countArea() {
+        return Math.ceil(this.sideA * this.sideB * 10) / 10;
     }
 
     @Override
     public void draw() {
         System.out.println(" Figure: " + this.getFigure()
-                + ", area: " + this.getArea()
+                + ", area: " + this.countArea()
                 + " sq.units, sideA: " + this.sideA
                 + " units, sideB: " + this.sideB
                 + " units, color: " + this.getColor());
     }
 
-    @Override
-    public void randomAttributes() {
-        this.sideA = new Random().nextInt(this.getBoundRandom()) + 1;
-        this.sideB = new Random().nextInt(this.getBoundRandom()) + 1;
-    }
 }

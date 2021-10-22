@@ -1,29 +1,29 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Rhombus extends Figure {
     private double angle;
     private double side;
 
+    public Rhombus(double angle, double side, String color) {
+        this.setColor(color);
+        this.angle = angle;
+        this.side = side;
+        this.setFigure("rhombus");
+    }
+
     @Override
-    public void countArea() {
-        this.setArea(Math.ceil(this.side * this.side
-                * Math.sin(Math.toRadians(this.angle)) * 10) / 10);
+    public double countArea() {
+        return Math.ceil(this.side * this.side
+                * Math.sin(Math.toRadians(this.angle)) * 10) / 10;
     }
 
     @Override
     public void draw() {
         System.out.println(" Figure: " + this.getFigure()
-                + ", area: " + this.getArea()
+                + ", area: " + this.countArea()
                 + " sq.units, side: " + this.side
                 + " units, angle: " + this.angle
                 + " units, color: " + this.getColor());
     }
 
-    @Override
-    public void randomAttributes() {
-        this.angle = new Random().nextInt(89) + 1;
-        this.side = new Random().nextInt(this.getBoundRandom()) + 1;
-    }
 }

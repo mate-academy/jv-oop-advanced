@@ -1,10 +1,10 @@
 package core.basesyntax;
 
 public class Main {
-    private static final int LENGTH = 6;
+    private static final int FIGURE_COUNT = 6;
 
     public static void main(String[] args) {
-        Figure[] figures = new Figure[LENGTH];
+        Figure[] figures = new Figure[FIGURE_COUNT];
         FigureSuplier figureSuplier = new FigureSuplier();
 
         for (int i = 0; i < figures.length / 2; i++) {

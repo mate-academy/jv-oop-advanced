@@ -3,48 +3,65 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSuplier {
+    private static final int boundRandom = 10;
+    private static final int DEFAULT_RADIUS = 10;
+    private static final int RANDOM_RANGE = 6;
     private Random random = new Random();
     private ColorSuplier colorSuplier = new ColorSuplier();
 
     public Figure getRandomFigure() {
-        int indexShapeFigure = random.nextInt(ShapeFigure.values().length);
+        int indexShapeFigure = random.nextInt(RANDOM_RANGE);
         Figure figure;
         switch (indexShapeFigure) {
             case 0:
-                figure = new Square();
-                break;
+                return getRandomSquare();
             case 1:
-                figure = new Rectangle();
-                break;
+                return getRandomRectangle();
             case 2:
-                figure = new RightTriangle();
-                break;
+                return getRandomRightTriangle();
             case 3:
-                figure = new Circle();
-                break;
+                return getRandomCircle();
             case 4:
-                figure = new IsoscelesTrapezoid();
-                break;
+                return getRandomIsoscelesTrapezoid();
             case 5:
-                figure = new Rhombus();
-                break;
+                return getRandomRhombus();
             default:
-                figure = new Circle();
-                break;
+                return getDafaultFigure();
         }
-        figure.randomAttributes();
-        figure.setFigure(ShapeFigure.values()[indexShapeFigure]);
-        figure.setColor(colorSuplier.getRondomColor());
-        figure.countArea();
-        return figure;
+    }
+
+    public Circle getRandomCircle() {
+        return new Circle(new Random().nextInt(boundRandom) + 1, colorSuplier.getRondomColor());
+    }
+
+    public Square getRandomSquare() {
+        return new Square(new Random().nextInt(boundRandom) + 1, colorSuplier.getRondomColor());
+    }
+
+    public RightTriangle getRandomRightTriangle() {
+        return new RightTriangle(new Random().nextInt(boundRandom) + 1,
+                new Random().nextInt(boundRandom) + 1, colorSuplier.getRondomColor());
+    }
+
+    public Rhombus getRandomRhombus() {
+        return new Rhombus(new Random().nextInt(89) + 1,
+                new Random().nextInt(boundRandom) + 1, colorSuplier.getRondomColor());
+    }
+
+    public Rectangle getRandomRectangle() {
+        return new Rectangle(new Random().nextInt(boundRandom) + 1,
+                new Random().nextInt(boundRandom) + 1, colorSuplier.getRondomColor());
+
+    }
+
+    public IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(new Random().nextInt(boundRandom) + 1,
+                new Random().nextInt(boundRandom) + 1, new Random().nextInt(boundRandom) + 1,
+                colorSuplier.getRondomColor());
+
     }
 
     public Figure getDafaultFigure() {
-        Circle circle = new Circle();
-        circle.setFigure(ShapeFigure.circle);
-        circle.setColor(Color.white.toString());
-        circle.setRadius(10);
-        circle.countArea();
-        return circle;
+        return new Circle(this.DEFAULT_RADIUS, Color.WHITE.toString());
     }
 }
