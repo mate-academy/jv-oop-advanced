@@ -9,8 +9,7 @@ public class FigureSupplier {
     private String color = colorSupplier.getRandomColor();
 
     public Figure getDefaultFigure() {
-        Figure circle = new Circle(10);
-        circle.setColor("WHITE");
+        Figure circle = new Circle(10, "WHITE");
         return circle;
     }
 
@@ -19,23 +18,18 @@ public class FigureSupplier {
         switch (random.nextInt(5)) {
             case 0:
                 figure = getRandomCircle();
-                figure.setColor(color);
                 break;
             case 1:
                 figure = getRandomIsoscelesTrapezoid();
-                figure.setColor(color);
                 break;
             case 2:
                 figure = getRandomRectangle();
-                figure.setColor(color);
                 break;
             case 3:
                 figure = getRandomRightTriangle();
-                figure.setColor(color);
                 break;
             case 4:
                 figure = getRandomSquare();
-                figure.setColor(color);
                 break;
             default:
         }
@@ -44,31 +38,31 @@ public class FigureSupplier {
 
     public Figure getRandomCircle() {
         float radius = 20 * random.nextFloat();
-        return new Circle(radius);
+        return new Circle(radius, color);
     }
 
     public Figure getRandomIsoscelesTrapezoid() {
         float innerSide = 20 * random.nextFloat();
         float downSide = 20 * random.nextFloat();
         float heightTrapezoid = 20 * random.nextFloat();
-        return new IsoscelesTrapezoid(innerSide, downSide, heightTrapezoid);
+        return new IsoscelesTrapezoid(innerSide, downSide, heightTrapezoid, color);
     }
 
     public Figure getRandomRectangle() {
         float firstLeg = 20 * random.nextFloat();
         float secondLeg = 20 * random.nextFloat();
-        return new Rectangle(firstLeg, secondLeg);
+        return new Rectangle(firstLeg, secondLeg, color);
     }
 
     public Figure getRandomRightTriangle() {
         float firstLeg = 20 * random.nextFloat();
         float secondLeg = 20 * random.nextFloat();
-        return new RightTriangle(firstLeg, secondLeg);
+        return new RightTriangle(firstLeg, secondLeg, color);
     }
 
     public Figure getRandomSquare() {
         float side = 20 * random.nextFloat();
-        return new Square(side);
+        return new Square(side, color);
     }
 
 }
