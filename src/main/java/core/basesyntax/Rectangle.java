@@ -11,8 +11,8 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    public String countArea() {
-        return String.format("%.1f",(float) (firstLeg * secondLeg));
+    public float countArea() {
+        return (float) (firstLeg * secondLeg);
     }
 
     @Override

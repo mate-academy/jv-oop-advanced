@@ -9,8 +9,8 @@ public class RightTriangle extends Shape {
     }
 
     @Override
-    public String countArea() {
-        return String.format("%.1f",side * side * Math.sqrt(3.0 / 4.0));
+    public float countArea() {
+        return (float) (side * side * Math.sqrt(3.0 / 4.0));
 
     }
 

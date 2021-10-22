@@ -11,7 +11,7 @@ public abstract class Shape implements AreaCounter, Drawable {
         return color;
     }
 
-    public abstract String countArea();
+    public abstract float countArea();
 
     public abstract void draw();
 }

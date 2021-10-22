@@ -10,8 +10,8 @@ public class Square extends Shape {
     }
 
     @Override
-    public String countArea() {
-        return String.format("%.1f", (float) side * side);
+    public float countArea() {
+        return (float) side * side;
     }
 
     @Override
