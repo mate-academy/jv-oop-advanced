@@ -11,7 +11,6 @@ public class FigureSuplier {
 
     public Figure getRandomFigure() {
         int indexShapeFigure = random.nextInt(RANDOM_RANGE);
-        Figure figure;
         switch (indexShapeFigure) {
             case 0:
                 return getRandomSquare();
@@ -29,40 +28,40 @@ public class FigureSuplier {
         }
     }
 
-    public Circle getRandomCircle() {
+    private Circle getRandomCircle() {
         String color = colorSuplier.getRondomColor();
         int radius = new Random().nextInt(MAX_RANDOM_NAUMBER) + 1;
         return new Circle(radius, color);
     }
 
-    public Square getRandomSquare() {
+    private Square getRandomSquare() {
         String color = colorSuplier.getRondomColor();
         int side = new Random().nextInt(MAX_RANDOM_NAUMBER) + 1;
         return new Square(side, color);
     }
 
-    public RightTriangle getRandomRightTriangle() {
+    private RightTriangle getRandomRightTriangle() {
         String color = colorSuplier.getRondomColor();
         int firstLeg = new Random().nextInt(MAX_RANDOM_NAUMBER) + 1;
         int secondLeg = new Random().nextInt(MAX_RANDOM_NAUMBER) + 1;
         return new RightTriangle(firstLeg, secondLeg, color);
     }
 
-    public Rhombus getRandomRhombus() {
+    private Rhombus getRandomRhombus() {
         String color = colorSuplier.getRondomColor();
         int angle = new Random().nextInt(89) + 1;
         int side = new Random().nextInt(MAX_RANDOM_NAUMBER) + 1;
         return new Rhombus(angle, side, color);
     }
 
-    public Rectangle getRandomRectangle() {
+    private Rectangle getRandomRectangle() {
         String color = colorSuplier.getRondomColor();
         int sideA = new Random().nextInt(MAX_RANDOM_NAUMBER) + 1;
         int sideB = new Random().nextInt(MAX_RANDOM_NAUMBER) + 1;
         return new Rectangle(sideA, sideB, color);
     }
 
-    public IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
         String color = colorSuplier.getRondomColor();
         int height = new Random().nextInt(MAX_RANDOM_NAUMBER) + 1;
         int sideA = new Random().nextInt(MAX_RANDOM_NAUMBER) + 1;
@@ -71,6 +70,6 @@ public class FigureSuplier {
     }
 
     public Figure getDafaultFigure() {
-        return new Circle(this.DEFAULT_RADIUS, Color.WHITE.toString());
+        return new Circle(DEFAULT_RADIUS, Color.WHITE.toString());
     }
 }

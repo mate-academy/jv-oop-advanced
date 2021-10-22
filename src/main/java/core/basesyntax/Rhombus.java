@@ -5,7 +5,7 @@ public class Rhombus extends Figure {
     private double side;
 
     public Rhombus(double angle, double side, String color) {
-        this.setColor(color);
+        super(color);
         this.angle = angle;
         this.side = side;
     }

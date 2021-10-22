@@ -4,6 +4,10 @@ public abstract class Figure implements Drawable, AreaCalculator {
     private double area;
     private String color;
 
+    public Figure(String color) {
+        this.color = color;
+    }
+
     public double getArea() {
         return area;
     }
@@ -19,5 +23,4 @@ public abstract class Figure implements Drawable, AreaCalculator {
     public void setColor(String color) {
         this.color = color;
     }
-
 }

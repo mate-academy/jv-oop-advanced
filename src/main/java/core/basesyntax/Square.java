@@ -4,8 +4,8 @@ public class Square extends Figure {
     private double side;
 
     public Square(double side, String color) {
+        super(color);
         this.side = side;
-        this.setColor(color);
     }
 
     @Override
@@ -20,5 +20,4 @@ public class Square extends Figure {
                 + " sq.units, side: " + side
                 + " units, color: " + getColor());
     }
-
 }
