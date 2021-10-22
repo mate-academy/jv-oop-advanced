@@ -3,25 +3,51 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int FIGURE_COUNT = 4;
-    public static final int DEFAULT_RADIUS = 10;
-    public static final int MAX_RANDOM_NUMBER = 100;
-    private Random random = new Random();
+    private static final int FIGURE_COUNT = 4;
+    private static final int DEFAULT_RADIUS = 10;
+    private static final int MAX_RANDOM_NUMBER = 100;
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+
+    public RightTriangle getRandomTriangle() {
+        String randomColor = colorSupplier.getRandomColor();
+        int randomFirstLeg = getRandomNumber();
+        int randomSecondLeg = getRandomNumber();
+        return new RightTriangle(randomFirstLeg, randomSecondLeg, randomColor);
+    }
+
+    public Circle getRandomCircle() {
+        String randomColor = colorSupplier.getRandomColor();
+        int randomRadius = getRandomNumber();
+        return new Circle(randomRadius, colorSupplier.getRandomColor());
+    }
+
+    public IsoscelesTrapezoid getRandomTrapezoid() {
+        String randomColor = colorSupplier.getRandomColor();
+        int randomFirstSide = getRandomNumber();
+        int randomSecondSide = getRandomNumber();
+        int randomHeight = getRandomNumber();
+        return new IsoscelesTrapezoid(randomHeight, randomFirstSide,
+                randomSecondSide, colorSupplier.getRandomColor());
+    }
+
+    public Square getRandomSquare() {
+        String randomColor = colorSupplier.getRandomColor();
+        int side = getRandomNumber();
+        return new Square(side,colorSupplier.getRandomColor());
+    }
 
     public Figure getRandomFigure() {
         int randomFigureNumber = random.nextInt(FIGURE_COUNT);
-
         switch (randomFigureNumber) {
             case 0:
-                return new Circle(getRandomNumber(), ColorSupplier.getRandomColor());
+                return getRandomCircle();
             case 1:
-                return new Square(getRandomNumber(), ColorSupplier.getRandomColor());
+                return getRandomSquare();
             case 2:
-                return new IsoscelesTrapezoid(getRandomNumber(), getRandomNumber(),
-                        getRandomNumber(), ColorSupplier.getRandomColor());
+                return getRandomTrapezoid();
             case 3:
-                return new RightTriangle(getRandomNumber(), getRandomNumber(),
-                        ColorSupplier.getRandomColor());
+                return getRandomTriangle();
             default:
         }
         return null;

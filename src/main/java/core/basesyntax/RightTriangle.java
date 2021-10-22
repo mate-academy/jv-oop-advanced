@@ -35,6 +35,6 @@ public class RightTriangle extends Figure {
     public void printInfo() {
         System.out.printf("Figure: Right Triangle , area: %s sq.units, firstLeg: %s units, "
                         + "secondLeg: %s units, color: %s%n", getArea(),
-                getFirstLeg(), getSecondLeg(), getColor());
+                firstLeg, secondLeg, getColor());
     }
 }
