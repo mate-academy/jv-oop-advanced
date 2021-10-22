@@ -9,4 +9,3 @@ public enum Color {
     EGGCOLOR,
     WHITE;
 }
-
