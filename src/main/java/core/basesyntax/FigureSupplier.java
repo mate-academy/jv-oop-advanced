@@ -3,19 +3,19 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int INDEX_RANDOM = 20;
+    private static final int MAX_RANDOM_NUMBER = 20;
     private static final int DEFAULT_RADIUS = 10;
-
+    private static final int RANDOM_NUMBER_INDEX_FIGURE = 10;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_RADIUS, "WHITE");
+        return new Circle(DEFAULT_RADIUS, Color.WHITE.toString());
     }
 
     public Figure getRandomFigure() {
         Random random = new Random();
-        int randomNumber = random.nextInt(5);
+        int randomNumber = random.nextInt(RANDOM_NUMBER_INDEX_FIGURE);
         switch (randomNumber) {
             case 0:
                 return getRandomCircle();
@@ -33,35 +33,35 @@ public class FigureSupplier {
 
     private Figure getRandomCircle() {
         String color = colorSupplier.getRandomColor();
-        float radius = INDEX_RANDOM * random.nextFloat();
+        float radius = MAX_RANDOM_NUMBER * random.nextFloat();
         return new Circle(radius, color);
     }
 
     private Figure getRandomIsoscelesTrapezoid() {
         String color = colorSupplier.getRandomColor();
-        float innerSide = INDEX_RANDOM * random.nextFloat();
-        float downSide = INDEX_RANDOM * random.nextFloat();
-        float heightTrapezoid = INDEX_RANDOM * random.nextFloat();
+        float innerSide = MAX_RANDOM_NUMBER * random.nextFloat();
+        float downSide = MAX_RANDOM_NUMBER * random.nextFloat();
+        float heightTrapezoid = MAX_RANDOM_NUMBER * random.nextFloat();
         return new IsoscelesTrapezoid(innerSide, downSide, heightTrapezoid, color);
     }
 
     private Figure getRandomRectangle() {
         String color = colorSupplier.getRandomColor();
-        float firstLeg = INDEX_RANDOM * random.nextFloat();
-        float secondLeg = INDEX_RANDOM * random.nextFloat();
+        float firstLeg = MAX_RANDOM_NUMBER * random.nextFloat();
+        float secondLeg = MAX_RANDOM_NUMBER * random.nextFloat();
         return new Rectangle(firstLeg, secondLeg, color);
     }
 
     private Figure getRandomRightTriangle() {
         String color = colorSupplier.getRandomColor();
-        float firstLeg = INDEX_RANDOM * random.nextFloat();
-        float secondLeg = INDEX_RANDOM * random.nextFloat();
+        float firstLeg = MAX_RANDOM_NUMBER * random.nextFloat();
+        float secondLeg = MAX_RANDOM_NUMBER * random.nextFloat();
         return new RightTriangle(firstLeg, secondLeg, color);
     }
 
     private Figure getRandomSquare() {
         String color = colorSupplier.getRandomColor();
-        float side = INDEX_RANDOM * random.nextFloat();
+        float side = MAX_RANDOM_NUMBER * random.nextFloat();
         return new Square(side, color);
     }
 }
