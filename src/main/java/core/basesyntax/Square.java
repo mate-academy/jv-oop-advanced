@@ -6,7 +6,6 @@ public class Square extends Shape {
     public Square(int side, String color) {
         super(color);
         this.side = side;
-        countArea();
     }
 
     @Override
