@@ -1,21 +1,21 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements AreaObtainer, InfoPrinter {
+public class Circle extends Figure {
     private int radius;
 
     public Circle(String color, int radius) {
         this.radius = radius;
-        setColor(color);
+        super.setColor(color);
     }
 
     @Override
-    public double areaCalculater() {
+    public double calculateArea() {
         return Math.round(Math.PI * radius * radius * 100) / 100;
     }
 
     @Override
     public void infoDrawer() {
-        System.out.println("Figure: circle, area: " + areaCalculater() + " sq.units, radius: "
+        System.out.println("Figure: circle, area: " + calculateArea() + " sq.units, radius: "
                 + radius + " units, color " + getColor());
     }
 }

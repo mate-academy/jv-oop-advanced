@@ -1,21 +1,21 @@
 package core.basesyntax;
 
-public class Square extends Figure implements AreaObtainer, InfoPrinter {
+public class Square extends Figure {
     private int side;
 
     public Square(String color, int side) {
         this.side = side;
-        setColor(color);
+        super.setColor(color);
     }
 
     @Override
-    public double areaCalculater() {
+    public double calculateArea() {
         return side * side;
     }
 
     @Override
     public void infoDrawer() {
-        System.out.println("Figure: square, area: " + areaCalculater() + " sq.units, side: " + side
+        System.out.println("Figure: square, area: " + calculateArea() + " sq.units, side: " + side
                 + " units, color " + getColor());
     }
 }
