@@ -13,7 +13,6 @@ public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
     private static final int MAX_RANDOM_NUMBER = 10;
     private static final int DEFAULT_CIRCLE_RADIUS = 10;
-
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
@@ -31,7 +30,7 @@ public class FigureSupplier {
             case 5:
                 return getRandomSquare();
             default:
-                return getDefaultFigure();
+                return getRandomSquare();
         }
     }
 
