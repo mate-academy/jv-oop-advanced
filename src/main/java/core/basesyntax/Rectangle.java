@@ -5,9 +5,9 @@ public class Rectangle extends Figure {
     private int sideB;
 
     public Rectangle(String color, int sideA, int sideB) {
+        super(color);
         this.sideA = sideA;
         this.sideB = sideB;
-        super.setColor(color);
     }
 
     @Override
@@ -16,7 +16,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void infoDrawer() {
+    public void drawInfo() {
         System.out.println("Figure: rectangle, area: " + calculateArea() + " sq.units, sideA: "
                 + sideA + " units, sideB " + sideB + " units, color " + getColor());
     }

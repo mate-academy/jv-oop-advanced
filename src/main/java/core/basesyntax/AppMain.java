@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class AppMain {
-    static final int MAX_VALUE_FIGURES = 6;
+    private static final int MAX_VALUE_FIGURES = 6;
 
     public static void main(String[] args) {
         Figure[] figures = new Figure[MAX_VALUE_FIGURES];
@@ -13,7 +13,7 @@ public class AppMain {
             figures[i] = figureSupplier.getDefaultFigure();
         }
         for (Figure figure : figures) {
-            figure.infoDrawer();
+            figure.drawInfo();
         }
     }
 }

@@ -3,8 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int MAX_VALUE_OF_PARAMETR = 20;
-    public static final int FIGURE_COUNT = 5;
+    private static final int MAX_VALUE_OF_PARAMETR = 20;
+    private static final int FIGURE_COUNT = 5;
 
     private int generateRandomValue() {
         int resultRandomValue = new Random().nextInt(MAX_VALUE_OF_PARAMETR);

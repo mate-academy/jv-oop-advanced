@@ -5,9 +5,9 @@ public class RightTriangle extends Figure {
     private int sideB;
 
     public RightTriangle(String color, int sideA, int sideB) {
+        super(color);
         this.sideA = sideA;
         this.sideB = sideB;
-        super.setColor(color);
     }
 
     @Override
@@ -16,7 +16,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void infoDrawer() {
+    public void drawInfo() {
         System.out.println("Figure: right triangle, area: " + calculateArea()
                 + " sq.units, sideA: " + sideA + " units, sideB " + sideB
                 + " units, color " + getColor());
