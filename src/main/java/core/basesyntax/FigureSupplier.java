@@ -6,7 +6,7 @@ public class FigureSupplier {
     private static int MAX_RANDOM_VALUE = 15;
     private static final int FIGURE_COUNT = 5;
     private static final int DEFOLT_VALUE = 10;
-    private static final String DEFOLT_COLOR = "WHITE";
+    private static final String DEFOLT_COLOR = Color.WHITE.name();
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
 
