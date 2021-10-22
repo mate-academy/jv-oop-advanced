@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Main {
-    static final int SIZE_OF_ARRAY = 8;
+    private static final int SIZE_OF_ARRAY = 8;
 
     public static void main(String[] args) {
         Figure[] figures = new Figure[SIZE_OF_ARRAY];
