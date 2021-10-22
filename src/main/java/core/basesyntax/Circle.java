@@ -9,8 +9,8 @@ public class Circle extends Shape {
     }
 
     @Override
-    public float countArea() {
-        return (float) (Math.PI * radius * radius);
+    public double countArea() {
+        return Math.PI * radius * radius;
     }
 
     public void draw() {

@@ -1,8 +1,8 @@
 package core.basesyntax;
 
 public class Rectangle extends Shape {
-    private final int firstLeg;
-    private final int secondLeg;
+    private int firstLeg;
+    private int secondLeg;
 
     public Rectangle(int firstLeg, int secondLeg, String color) {
         super(color);
@@ -11,8 +11,8 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    public float countArea() {
-        return (float) (firstLeg * secondLeg);
+    public double countArea() {
+        return firstLeg * secondLeg;
     }
 
     @Override

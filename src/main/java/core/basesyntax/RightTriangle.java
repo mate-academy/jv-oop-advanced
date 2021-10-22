@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class RightTriangle extends Shape {
-    private final int side;
+    private int side;
 
     public RightTriangle(int side, String color) {
         super(color);
@@ -9,8 +9,8 @@ public class RightTriangle extends Shape {
     }
 
     @Override
-    public float countArea() {
-        return (float) (side * side * Math.sqrt(3.0 / 4.0));
+    public double countArea() {
+        return (side * side * Math.sqrt(3.0 / 4.0));
 
     }
 

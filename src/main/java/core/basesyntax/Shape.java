@@ -10,8 +10,4 @@ public abstract class Shape implements AreaCounter, Drawable {
     public String getColor() {
         return color;
     }
-
-    public abstract float countArea();
-
-    public abstract void draw();
 }

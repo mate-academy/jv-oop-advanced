@@ -13,11 +13,10 @@ public class IsoscelesTrapezoid extends Shape {
     }
 
     @Override
-    public float countArea() {
+    public double countArea() {
         //Brahmagupta formula
-        float p = upperBase + bottomBase + 2 * edge;
-        return (float) (Math.sqrt((p - upperBase)
-                             * (p - bottomBase) * (p - edge) * (p - edge)));
+        int p = upperBase + bottomBase + 2 * edge;
+        return Math.sqrt((p - upperBase) * (p - bottomBase) * (p - edge) * (p - edge));
 
     }
 

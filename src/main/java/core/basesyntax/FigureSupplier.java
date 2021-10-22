@@ -14,13 +14,12 @@ public class FigureSupplier {
     }
 
     public Shape getRandomFigure() {
-        int figureNumber = random.nextInt(FIGURE_COUNT);
         String randomColor = new ColorSupplier().getRandomColor();
-        switch (figureNumber) {
+        switch (random.nextInt(FIGURE_COUNT)) {
             case 1 : {
                 //Circle
                 int randomRadius = random.nextInt(100) + 1;
-                return new Circle(randomRadius,randomColor);
+                return new Circle(randomRadius, randomColor);
             }
             case 2 : {
                 //IsoscelesTrapezoid

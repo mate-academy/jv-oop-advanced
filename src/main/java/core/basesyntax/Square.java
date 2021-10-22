@@ -9,8 +9,8 @@ public class Square extends Shape {
     }
 
     @Override
-    public float countArea() {
-        return (float) side * side;
+    public double countArea() {
+        return side * side;
     }
 
     @Override
