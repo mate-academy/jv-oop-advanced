@@ -8,9 +8,8 @@ public abstract class Figure implements InformationPrint, AreaCalculator {
         return type;
     }
 
-    public Figure setType(String type) {
+    public void setType(String type) {
         this.type = type;
-        return this;
     }
 
     public String getColor() {

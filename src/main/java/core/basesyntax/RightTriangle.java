@@ -24,9 +24,8 @@ public class RightTriangle extends Figure {
         return secondLeg;
     }
 
-    public RightTriangle setSecondLeg(int secondLeg) {
+    public void setSecondLeg(int secondLeg) {
         this.secondLeg = secondLeg;
-        return this;
     }
 
     @Override

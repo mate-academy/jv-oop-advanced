@@ -24,15 +24,14 @@ public class Rectangle extends Figure {
         return sideB;
     }
 
-    public Rectangle setSideB(int sideB) {
+    public void setSideB(int sideB) {
         this.sideB = sideB;
-        return this;
     }
 
     @Override
     public void getInfo() {
         System.out.printf("Figure: %s, area: %s sq.units, sideA:"
-                       + " %s units, sideB: %s units, color: %s%n",
+                        + " %s units, sideB: %s units, color: %s%n",
                 getType(), getArea(), sideA, sideB, getColor());
     }
 

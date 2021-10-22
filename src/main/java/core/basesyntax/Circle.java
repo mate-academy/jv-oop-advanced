@@ -13,9 +13,8 @@ public class Circle extends Figure {
         return radius;
     }
 
-    public Circle setRadius(int radius) {
+    public void setRadius(int radius) {
         this.radius = radius;
-        return this;
     }
 
     @Override

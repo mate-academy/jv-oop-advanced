@@ -13,9 +13,8 @@ public class Square extends Figure {
         return side;
     }
 
-    public Square setSide(int side) {
+    public void setSide(int side) {
         this.side = side;
-        return this;
     }
 
     @Override
