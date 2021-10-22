@@ -5,30 +5,26 @@ import java.util.Random;
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 4;
     public static final int DEFAULT_RADIUS = 10;
-    public static final int PARAMENTR = 100;
+    public static final int MAX_RANDOM_NUMBER = 100;
     private Random random = new Random();
 
     public Figure getRandomFigure() {
-        int value = random.nextInt(FIGURE_COUNT);
-        Figure figure = null;
-        switch (value) {
+        int randomFigureNumber = random.nextInt(FIGURE_COUNT);
+
+        switch (randomFigureNumber) {
             case 0:
-                figure = new Circle(getRandomNumber(), ColorSupplier.getRandomColor());
-                break;
+                return new Circle(getRandomNumber(), ColorSupplier.getRandomColor());
             case 1:
-                figure = new Square(getRandomNumber(), ColorSupplier.getRandomColor());
-                break;
+                return new Square(getRandomNumber(), ColorSupplier.getRandomColor());
             case 2:
-                figure = new IsoscelesTrapezoid(getRandomNumber(), getRandomNumber(),
+                return new IsoscelesTrapezoid(getRandomNumber(), getRandomNumber(),
                         getRandomNumber(), ColorSupplier.getRandomColor());
-                break;
             case 3:
-                figure = new RightTriangle(getRandomNumber(), getRandomNumber(),
+                return new RightTriangle(getRandomNumber(), getRandomNumber(),
                         ColorSupplier.getRandomColor());
-                break;
             default:
         }
-        return figure;
+        return null;
     }
 
     public Figure getDefaultFigure() {
@@ -36,6 +32,6 @@ public class FigureSupplier {
     }
 
     private int getRandomNumber() {
-        return new Random().nextInt(PARAMENTR);
+        return new Random().nextInt(MAX_RANDOM_NUMBER);
     }
 }
