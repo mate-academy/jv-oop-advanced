@@ -1,17 +1,10 @@
 package core.basesyntax;
 
-import static core.basesyntax.ColorSupplier.getRandomColor;
+public abstract class Figure implements AreaInfo, FigureInfo {
+    private String color;
 
-public abstract class Figure implements GetArea, PrintInfo {
-    private String shape;
-    private String color = getRandomColor();
-
-    public String getShape() {
-        return shape;
-    }
-
-    public void setShape(String shape) {
-        this.shape = shape;
+    public Figure(String color) {
+        this.color = color;
     }
 
     public String getColor() {

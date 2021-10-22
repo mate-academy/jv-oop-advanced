@@ -1,19 +1,11 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Square extends Figure {
     private int side;
 
     public Square(int side, String color) {
-        this.setShape("Square");
-        this.setColor(color);
+        super(color);
         this.side = side;
-    }
-
-    public Square() {
-        this.side = new Random().nextInt(100);
-        this.setShape("Square");
     }
 
     public int getSide() {
@@ -31,7 +23,7 @@ public class Square extends Figure {
 
     @Override
     public void printInfo() {
-        System.out.printf("Figure: %s , area: %s sq.units, side: %s units, "
-                + "color: %s%n", getShape(), getArea(), getSide(), getColor());
+        System.out.printf("Figure: Square , area: %s sq.units, side: %s units, "
+                + "color: %s%n", getArea(), getSide(), getColor());
     }
 }
