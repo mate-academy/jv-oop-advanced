@@ -30,20 +30,20 @@ public class FigureSupplier {
         return new Circle(Color.WHITE, 10);
     }
 
-    public Figure getRandomRectangle() {
+    private Figure getRandomRectangle() {
         double sideA = random.nextInt(MAX_LENGTH);
         double sideB = random.nextInt(MAX_LENGTH);
         Color color = colorSupplier.getRandomColor();
         return new Rectangle(color, sideA, sideB);
     }
 
-    public Figure getRandomCircle() {
+    private Figure getRandomCircle() {
         double radius = random.nextInt(MAX_LENGTH);
         Color color = colorSupplier.getRandomColor();
         return new Circle(color, radius);
     }
 
-    public Figure getRandomIsoscelesTrapezoid() {
+    private Figure getRandomIsoscelesTrapezoid() {
         double sideA = random.nextInt(MAX_LENGTH);
         double sideB = random.nextInt(MAX_LENGTH);
         double height = random.nextInt(MAX_LENGTH);
@@ -51,17 +51,16 @@ public class FigureSupplier {
         return new IsoscelesTrapezoid(color, sideA, sideB, height);
     }
 
-    public Figure getRandomSquare() {
+    private Figure getRandomSquare() {
         double side = random.nextInt(MAX_LENGTH);
         Color color = colorSupplier.getRandomColor();
         return new Square(color, side);
     }
 
-    public Figure getRandomRightTriangle() {
+    private Figure getRandomRightTriangle() {
         double width = random.nextInt(MAX_LENGTH);
         double height = random.nextInt(MAX_LENGTH);
         Color color = colorSupplier.getRandomColor();
         return new RightTriangle(color, width, height);
     }
-
 }
