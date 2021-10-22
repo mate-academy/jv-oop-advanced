@@ -1,11 +1,9 @@
 package core.basesyntax.models;
 
-import core.basesyntax.enums.Color;
-
 public class Circle extends Figure {
     private final int radius;
 
-    public Circle(Color color, int radius) {
+    public Circle(String color, int radius) {
         super(color);
         this.radius = radius;
     }
@@ -22,6 +20,6 @@ public class Circle extends Figure {
     @Override
     public void draw() {
         System.out.println(String.format("Figure: Circle, Area: %s, Radius: %d, Color: %s",
-                getSquare(), getRadius(), getColor()));
+                getSquare(), radius, getColor()));
     }
 }

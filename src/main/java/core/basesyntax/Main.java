@@ -4,7 +4,7 @@ import core.basesyntax.models.Figure;
 import core.basesyntax.suppliers.FigureSupplier;
 
 public class Main {
-    static final int ARRAY_LENGTH = 6;
+    private static final int ARRAY_LENGTH = 6;
 
     public static void main(String[] args) {
         Figure[] figures = new Figure[ARRAY_LENGTH];

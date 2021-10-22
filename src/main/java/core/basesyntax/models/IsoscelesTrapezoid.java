@@ -1,13 +1,11 @@
 package core.basesyntax.models;
 
-import core.basesyntax.enums.Color;
-
 public class IsoscelesTrapezoid extends Figure {
     private int firstSide;
     private int secondSide;
     private int height;
 
-    public IsoscelesTrapezoid(Color color, int firstSide, int secondSide, int height) {
+    public IsoscelesTrapezoid(String color, int firstSide, int secondSide, int height) {
         super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
