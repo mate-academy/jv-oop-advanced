@@ -1,14 +1,8 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private final int length;
-    private final int weight;
-
-    public Rectangle(String color, int length, int weight) {
-        super(color);
-        this.length = length;
-        this.weight = weight;
-    }
+    private int length;
+    private int weight;
 
     public double getLength() {
         return length;
@@ -16,6 +10,14 @@ public class Rectangle extends Figure {
 
     public double getWeight() {
         return weight;
+    }
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public void setWeight(int weight) {
+        this.weight = weight;
     }
 
     @Override

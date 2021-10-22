@@ -1,14 +1,8 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private final int firstLeg;
-    private final int secondLeg;
-
-    public RightTriangle(String color, int firstLeg, int secondLeg) {
-        super(color);
-        this.firstLeg = firstLeg;
-        this.secondLeg = secondLeg;
-    }
+    private int firstLeg;
+    private int secondLeg;
 
     public double getFirstLeg() {
         return firstLeg;
@@ -16,6 +10,14 @@ public class RightTriangle extends Figure {
 
     public double getSecondLeg() {
         return secondLeg;
+    }
+
+    public void setFirstLeg(int firstLeg) {
+        this.firstLeg = firstLeg;
+    }
+
+    public void setSecondLeg(int secondLeg) {
+        this.secondLeg = secondLeg;
     }
 
     @Override
