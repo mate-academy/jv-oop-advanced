@@ -11,12 +11,13 @@ import randomizers.sourcerand.Color;
 
 public class FigureSupplier {
     private static final String DEFAULT_COLOR = Color.WHITE.toString();
+    private static final int MAX_INDEX = 4;
     private static final int DEFAULT_RADIUS = 10;
     private static final int MAX_NUMBER = 15;
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        int index = random.nextInt(4);
+        int index = random.nextInt(MAX_INDEX);
         switch (index) {
             case 0:
                 return getRandomCircle();
