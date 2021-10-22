@@ -3,7 +3,6 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-
     public Figure getRandomFigure() {
         switch (new Random().nextInt(4)) {
             case 0:

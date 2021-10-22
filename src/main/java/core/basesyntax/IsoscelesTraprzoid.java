@@ -5,6 +5,13 @@ public class IsoscelesTraprzoid extends Figure {
     private int baseB;
     private int height;
 
+    public IsoscelesTraprzoid(String color, int baseA, int baseB, int height) {
+        super(color);
+        this.baseA = baseA;
+        this.baseB = baseB;
+        this.height = height;
+    }
+
     @Override
     public double calculateArea() {
         return (baseA + baseB) * height / 2;
@@ -17,13 +24,5 @@ public class IsoscelesTraprzoid extends Figure {
                 + " units, base B: " + baseB
                 + " units, height: " + height
                 + " units, color: " + getColor());
-    }
-
-    public IsoscelesTraprzoid(String color, int baseA, int baseB, int height) {
-        super(color);
-        this.baseA = baseA;
-        this.baseB = baseB;
-        this.height = height;
-
     }
 }

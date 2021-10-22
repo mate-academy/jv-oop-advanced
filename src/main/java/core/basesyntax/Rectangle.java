@@ -4,6 +4,12 @@ public class Rectangle extends Figure {
     private int sideA;
     private int sideB;
 
+    public Rectangle(String color, int sideA, int sideB) {
+        super(color);
+        this.sideA = sideA;
+        this.sideB = sideB;
+    }
+
     @Override
     public double calculateArea() {
         return sideA * sideB;
@@ -15,11 +21,5 @@ public class Rectangle extends Figure {
                 + " sq.units, side A: " + sideA
                 + " units, side B: " + sideB
                 + " units, color: " + getColor());
-    }
-
-    public Rectangle(String color, int sideA, int sideB) {
-        super(color);
-        this.sideA = sideA;
-        this.sideB = sideB;
     }
 }
