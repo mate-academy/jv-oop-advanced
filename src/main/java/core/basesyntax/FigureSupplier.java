@@ -1,35 +1,31 @@
 package core.basesyntax;
 
-public class FigureSupplier {
+import java.util.Random;
 
+public class FigureSupplier {
+    private static final int FIGURE_COUNT = 4;
+    private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        Figure result;
-        int getFigureNumber = (int) (Math.random() * 5);
-        switch (getFigureNumber) {
+        int index = new Random().nextInt(FIGURE_COUNT);
+        switch (index) {
             case 0:
-                result = new Square(colorSupplier.getRandomColor(), randomDouble());
-                break;
+                return new Circle(colorSupplier.getRandomColor(), random.nextInt(10) + 1);
             case 1:
-                result = new Circle(colorSupplier.getRandomColor(), randomDouble());
-                break;
+                return new Square(colorSupplier.getRandomColor(), random.nextInt(10) + 1);
             case 2:
-                result = new Rectangle(colorSupplier.getRandomColor(),
-                        randomDouble(), randomDouble());
-                break;
+                return new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(10) + 1);
             case 3:
-                result = new RightTriangle(colorSupplier.getRandomColor(),
-                        randomDouble(), randomDouble());
-                break;
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        + random.nextInt(10) + 1,
+                        + random.nextInt(10) + 1, random.nextInt(10) + 1);
             default:
-                result = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        randomDouble(), randomDouble(), randomDouble());
+                return getDefaultFigure();
         }
-        return result;
     }
 
-    private double randomDouble() {
-        return Math.random() * 101;
+    public Figure getDefaultFigure() {
+        return new Circle(Color.ORANGE, 10);
     }
 }

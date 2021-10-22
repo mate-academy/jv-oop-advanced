@@ -1,21 +1,23 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements AreaCalculator {
+public class Circle extends Figure {
     private double radius;
 
-    public Circle(String color, double radius) {
-        this.color = color;
+    public Circle(Color color, double radius) {
+        super(color);
         this.radius = radius;
     }
 
     @Override
-    public double getArea() {
-        return Math.PI * radius * radius;
+    public double calculateArea() {
+        return Math.PI * Math.pow(radius, 2);
     }
 
     @Override
-    public String draw() {
-        return "Figure: " + this.getClass().getSimpleName() + ", area: " + getArea()
-                + " sq.units, radius: " + radius + " units, color: " + color;
+    public String printInfo() {
+        return "Figure: circle, "
+                + "area: " + calculateArea() + " sq.units, "
+                + "radius: " + radius + " units, "
+                + "color: " + getColor();
     }
 }

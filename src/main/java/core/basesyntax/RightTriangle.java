@@ -1,24 +1,23 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements AreaCalculator {
-    private double firstLeg;
-    private double secondLeg;
+public class RightTriangle extends Figure {
+    private double leg;
 
-    public RightTriangle(String color, double firstLeg, double secondLeg) {
-        this.color = color;
-        this.firstLeg = firstLeg;
-        this.secondLeg = secondLeg;
+    public RightTriangle(Color color, double leg) {
+        super(color);
+        this.leg = leg;
     }
 
     @Override
-    public double getArea() {
-        return firstLeg * secondLeg / 2;
+    public double calculateArea() {
+        return (Math.pow(3, 0.5) / 4) * Math.pow(leg, 2);
     }
 
     @Override
-    public String draw() {
-        return "Figure: " + this.getClass().getSimpleName() + ", area: "
-                + getArea() + " sq.units, firstLeg: " + firstLeg
-                + " units, secondLeg: " + secondLeg + " units, color: " + color;
+    public String printInfo() {
+        return "Figure: triangle, "
+                + "area: " + calculateArea() + " sq.units, "
+                + "leg: " + leg + " units, "
+                + "color: " + getColor();
     }
 }

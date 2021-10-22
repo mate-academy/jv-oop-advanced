@@ -1,5 +1,5 @@
 package core.basesyntax;
 
 public interface Drawing {
-    String draw();
+    String printInfo();
 }
