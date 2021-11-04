@@ -6,6 +6,8 @@ public class FigureSupplier {
     public static final int FIGURE_COUNT = 6;
     private Random random = new Random();
     private Figure figureObject;
+    private ColorSupplier colorSupplier = new ColorSupplier();
+    private NumberSupplier numberSupplier = new NumberSupplier();
 
 
     public Figure getRandomFigure() {
@@ -13,20 +15,29 @@ public class FigureSupplier {
 
         switch (figureNumber) {
             case 1 :
-                figureObject = new Circle();
+                int radius = numberSupplier.getRandomNumber();
+                figureObject = new Circle(radius, colorSupplier.getRandomColor());
                 break;
             case 2 :
-                figureObject = new IsoscelesTrapezoid();
+                int topSide = numberSupplier.getRandomNumber();
+                int bottomSide = numberSupplier.getRandomNumber();
+                int heightTrapezoid = numberSupplier.getRandomNumber();
+                figureObject = new IsoscelesTrapezoid(topSide, bottomSide, heightTrapezoid, colorSupplier.getRandomColor());
                 break;
             case 3 :
-                figureObject = new Rectangle();
+                int width = numberSupplier.getRandomNumber();
+                int heightRectangle = numberSupplier.getRandomNumber();
+                figureObject = new Rectangle(width, heightRectangle, colorSupplier.getRandomColor());
                 break;
             case 4 :
-                figureObject = new RightTriangle();
+                int firstLeg = numberSupplier.getRandomNumber();
+                int secondLeg = numberSupplier.getRandomNumber();
+                figureObject = new RightTriangle(firstLeg, secondLeg, colorSupplier.getRandomColor());
                 break;
             case 5 :
             default :
-                figureObject = new Square();
+                int side = numberSupplier.getRandomNumber();
+                figureObject = new Square(side, colorSupplier.getRandomColor());
         }
         return figureObject;
     }
