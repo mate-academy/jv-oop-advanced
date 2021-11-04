@@ -4,12 +4,6 @@ public class Rectangle extends Figure {
     private int width;
     private int height;
 
-    public Rectangle() {
-        this.width = 20;
-        this.height = 30;
-        this.color = "blue";
-    }
-
     public Rectangle(int width, int height, String color) {
         this.width = width;
         this.height = height;
