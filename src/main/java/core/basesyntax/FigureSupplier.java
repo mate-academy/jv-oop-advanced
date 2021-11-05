@@ -9,7 +9,6 @@ public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
     private NumberSupplier numberSupplier = new NumberSupplier();
 
-
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
 
@@ -22,17 +21,20 @@ public class FigureSupplier {
                 int topSide = numberSupplier.getRandomNumber();
                 int bottomSide = numberSupplier.getRandomNumber();
                 int heightTrapezoid = numberSupplier.getRandomNumber();
-                figureObject = new IsoscelesTrapezoid(topSide, bottomSide, heightTrapezoid, colorSupplier.getRandomColor());
+                figureObject = new IsoscelesTrapezoid(topSide, bottomSide, heightTrapezoid,
+                                                        colorSupplier.getRandomColor());
                 break;
             case 3 :
                 int width = numberSupplier.getRandomNumber();
                 int heightRectangle = numberSupplier.getRandomNumber();
-                figureObject = new Rectangle(width, heightRectangle, colorSupplier.getRandomColor());
+                figureObject = new Rectangle(width, heightRectangle,
+                                                    colorSupplier.getRandomColor());
                 break;
             case 4 :
                 int firstLeg = numberSupplier.getRandomNumber();
                 int secondLeg = numberSupplier.getRandomNumber();
-                figureObject = new RightTriangle(firstLeg, secondLeg, colorSupplier.getRandomColor());
+                figureObject = new RightTriangle(firstLeg, secondLeg,
+                                                    colorSupplier.getRandomColor());
                 break;
             case 5 :
             default :
