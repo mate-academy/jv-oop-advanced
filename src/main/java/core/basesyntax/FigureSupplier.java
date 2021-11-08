@@ -14,45 +14,32 @@ public class FigureSupplier {
 
         switch (figureNumber) {
             case 0:
-                Square square = new Square(colorSupplier.getRandomColor(),
+                return new Square(colorSupplier.getRandomColor(),
                         random.nextInt(10) + 1);
-                square.drawFigure();
-                return square;
 
             case 1:
-                Circle circle = new Circle(colorSupplier.getRandomColor(),
+                return new Circle(colorSupplier.getRandomColor(),
                         random.nextInt(10) + 1);
-                circle.drawFigure();
-                return circle;
 
             case 2:
-                Rectangle rectangle = new Rectangle(colorSupplier.getRandomColor(),
+                return new Rectangle(colorSupplier.getRandomColor(),
                         random.nextInt(10) + 1, new Random().nextInt(10) + 1);
-                rectangle.drawFigure();
-                return rectangle;
 
             case 3:
-                RightTriangle rightTriangle = new RightTriangle(colorSupplier.getRandomColor(),
+                return new RightTriangle(colorSupplier.getRandomColor(),
                         random.nextInt(10) + 1,
                         random.nextInt(10) + 1);
-                rightTriangle.drawFigure();
-                return rightTriangle;
 
             default:
-                IsoscelesTrapezoid isoscelesTrapezoid =
-                        new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                                random.nextInt(10) + 1,
-                                random.nextInt(10) + 1,
-                                random.nextInt(10) + 1);
-                isoscelesTrapezoid.drawFigure();
-                return isoscelesTrapezoid;
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        random.nextInt(10) + 1,
+                        random.nextInt(10) + 1,
+                        random.nextInt(10) + 1);
 
         }
     }
 
     public Figure getDefaultFigure() {
-        Circle circle = new Circle("WHITE", 10);
-        circle.drawFigure();
-        return circle;
+        return new Circle("WHITE", 10);
     }
 }
