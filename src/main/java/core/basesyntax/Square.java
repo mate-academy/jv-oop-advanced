@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Locale;
 
-public class Square extends Figure{
+public class Square extends Figure {
     private final int squareSide;
 
     public Square(String color, int squareSide) {

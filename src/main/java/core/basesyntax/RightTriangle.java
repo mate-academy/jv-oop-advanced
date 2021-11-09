@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Locale;
 
-public class RightTriangle extends Figure{
+public class RightTriangle extends Figure {
     private final int firstLeg;
     private final int secondLeg;
 
@@ -20,7 +20,11 @@ public class RightTriangle extends Figure{
 
     @Override
     public void draw() {
-        System.out.printf("Figure: %s, area: %.1f sq.units, firstLeg: %d units, secondLeg: %d units, color: %s%n",
+        System.out.printf("Figure: %s,"
+                        + " area: %.1f sq.units,"
+                        + " firstLeg: %d units,"
+                        + " secondLeg: %d units,"
+                        + " color: %s%n",
                 figureType,
                 getArea(),
                 firstLeg,

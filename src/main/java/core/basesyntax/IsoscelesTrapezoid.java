@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Locale;
 
-public class IsoscelesTrapezoid extends Figure{
+public class IsoscelesTrapezoid extends Figure {
     private final int parallelSideA;
     private final int parallelSideB;
     private final int height;
@@ -22,7 +22,12 @@ public class IsoscelesTrapezoid extends Figure{
 
     @Override
     public void draw() {
-        System.out.printf("Figure: %s, area: %.1f sq.units, firstParallelSide: %d units, secondParallelSide: %d units, height: %d units, color: %s%n",
+        System.out.printf("Figure: %s,"
+                        + " area: %.1f sq.units,"
+                        + " firstParallelSide: %d units,"
+                        + " secondParallelSide: %d units,"
+                        + " height: %d units,"
+                        + " color: %s%n",
                 figureType,
                 getArea(),
                 parallelSideA,

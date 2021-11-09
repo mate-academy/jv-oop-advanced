@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Locale;
 
-public class Rectangle extends Figure{
+public class Rectangle extends Figure {
     private final int sideA;
     private final int sideB;
 
@@ -20,7 +20,11 @@ public class Rectangle extends Figure{
 
     @Override
     public void draw() {
-        System.out.printf("Figure: %s, area: %.0f sq.units, firstSide: %d units, secondSide: %d units, color: %s%n",
+        System.out.printf("Figure: %s, "
+                        + "area: %.0f sq.units,"
+                        + " firstSide: %d units,"
+                        + " secondSide: %d units,"
+                        + " color: %s%n",
                 figureType,
                 getArea(),
                 sideA,

@@ -3,15 +3,15 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final int DEFAULT_CIRCLE_RADIUS = 10;
-    private final String DEFAULT_CIRCLE_COLOR = Color.WHITE.toString();
-    private final int MAX_RANDOM_VALUE = 100;
+    private static final int DEFAULT_CIRCLE_RADIUS = 10;
+    private static final String DEFAULT_CIRCLE_COLOR = Color.WHITE.toString();
+    private static final int MAX_RANDOM_VALUE = 100;
     private Random random = new Random();
 
     public Figure getRandomFigure() {
-        FigureType randomFigureType = FigureType.values()[random.nextInt(FigureType.values().length)];
+        FigureType randFigureType = FigureType.values()[random.nextInt(FigureType.values().length)];
         String randomColor = new ColorSupplier().getRandomColor();
-        switch (randomFigureType) {
+        switch (randFigureType) {
             case CIRCLE :
                 int radius = random.nextInt(MAX_RANDOM_VALUE);
                 return new Circle(randomColor, radius);
