@@ -27,11 +27,12 @@ public class FigureSupplier {
                 int secondLeg = random.nextInt(MAX_RANDOM_VALUE);
                 return new RightTriangle(randomColor, firstLeg, secondLeg);
             case ISOSCELES_TRAPEZOID:
-            default:
                 int firstSide = random.nextInt(MAX_RANDOM_VALUE);
                 int secondSide = random.nextInt(MAX_RANDOM_VALUE);
                 int height = random.nextInt(MAX_RANDOM_VALUE);
                 return new IsoscelesTrapezoid(randomColor, firstSide, secondSide, height);
+            default:
+                return getDefaultFigure();
         }
     }
 
