@@ -1,0 +1,30 @@
+package core.basesyntax;
+
+public class Rectangle1 extends Figural {
+        private int sideA;
+        private int sideB;
+
+        public Rectangle1(String color, int sideA, int sideB) {
+            super(color);
+            this.sideA = sideA;
+            this.sideB = sideB;
+        }
+
+        @Override
+        public void draw() {
+            System.out.println("Figure: rectangle, area: "
+                    + getArea()
+                    + " sq. units, sideA: "
+                    + sideA
+                    + " units, sideB :"
+                    + sideB
+                    + " units, color: "
+                    + getColor());
+        }
+
+        @Override
+        public double getArea() {
+            return sideB * sideA;
+        }
+    }
+
