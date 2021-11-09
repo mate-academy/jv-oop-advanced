@@ -6,9 +6,9 @@ public class FigureSupplier {
     private final int DEFAULT_CIRCLE_RADIUS = 10;
     private final String DEFAULT_CIRCLE_COLOR = Color.WHITE.toString();
     private final int MAX_RANDOM_VALUE = 100;
+    private Random random = new Random();
 
     public Figure getRandomFigure() {
-        Random random = new Random();
         FigureType randomFigureType = FigureType.values()[random.nextInt(FigureType.values().length)];
         String randomColor = new ColorSupplier().getRandomColor();
         switch (randomFigureType) {
