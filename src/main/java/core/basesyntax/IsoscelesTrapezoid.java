@@ -1,11 +1,11 @@
 package core.basesyntax;
 
-public class isosceles_trapezoid extends Figural {
-    private int firstBase;
-    private int secondBase;
-    private int height;
+public class IsoscelesTrapezoid extends Figure {
+    private static int firstBase;
+    private static int secondBase;
+    private static int height;
 
-    public isosceles_trapezoid (String color, int firstBase, int secondBase, int height) {
+    public IsoscelesTrapezoid(String color, int firstBase, int secondBase, int height) {
         super(color);
         this.firstBase = firstBase;
         this.secondBase = secondBase;
@@ -14,7 +14,7 @@ public class isosceles_trapezoid extends Figural {
 
     @Override
     public void draw() {
-        System.out.println("Figure: right_triangle, area: "
+        System.out.println("Figure: IsoscelesTrapezoid, area: "
                 + getArea()
                 + " sq. units, firstBase: "
                 + firstBase

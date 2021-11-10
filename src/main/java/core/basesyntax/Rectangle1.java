@@ -1,18 +1,18 @@
 package core.basesyntax;
 
-public class Rectangle1 extends Figural {
-        private int sideA;
-        private int sideB;
+public class Rectangle1 extends Figure {
+    private int sideA;
+    private int sideB;
 
-        public Rectangle1(String color, int sideA, int sideB) {
-            super(color);
-            this.sideA = sideA;
-            this.sideB = sideB;
-        }
+    public Rectangle1(String color, int sideA, int sideB) {
+        super(color);
+        this.sideA = sideA;
+        this.sideB = sideB;
+    }
 
-        @Override
+    @Override
         public void draw() {
-            System.out.println("Figure: rectangle, area: "
+        System.out.println("Figure: rectangle, area: "
                     + getArea()
                     + " sq. units, sideA: "
                     + sideA
@@ -20,11 +20,10 @@ public class Rectangle1 extends Figural {
                     + sideB
                     + " units, color: "
                     + getColor());
-        }
-
-        @Override
-        public double getArea() {
-            return sideB * sideA;
-        }
     }
 
+    @Override
+        public double getArea() {
+        return sideB * sideA;
+    }
+}

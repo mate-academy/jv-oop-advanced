@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public class square extends Figural {
+public class Square extends Figure {
     private int side;
 
-    public square (String color, int side) {
+    public Square(String color, int side) {
         super(color);
         this.side = side;
     }
@@ -16,12 +16,10 @@ public class square extends Figural {
                 + side
                 + " units, color: "
                 + getColor());
-
     }
 
     @Override
     public double getArea() {
         return side * side;
     }
-
 }
