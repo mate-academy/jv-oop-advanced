@@ -20,7 +20,7 @@ public class FigureSupplier {
                 circle.draw();
                 return circle;
             case 2:
-                Rectangle1 rectangle = new Rectangle1(colorSupplier.getRandomColor(),
+                Rectangle rectangle = new Rectangle(colorSupplier.getRandomColor(),
                         random.nextInt(10) + 1, new Random().nextInt(10) + 1);
                 rectangle.draw();
                 return rectangle;
