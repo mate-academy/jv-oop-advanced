@@ -4,31 +4,19 @@ import java.util.Random;
 
 public class FigureSupplier {
     private final Random random = new Random();
-    private int maxFig = 6;
-    private int maxBound = 50;
+    private final int maxFigure;
+    private final int maxBound;
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public int getMaxBound() {
-        return maxBound;
-    }
-
-    public void setMaxBound(int maxBound) {
+    public FigureSupplier(int maxFigure, int maxBound) {
+        this.maxFigure = maxFigure;
         this.maxBound = maxBound;
     }
 
-    public int getMaxFig() {
-        return maxFig;
-    }
-
-    public void setMaxFig(int maxFig) {
-        this.maxFig = maxFig;
-    }
-
-    private final int rndCol = random.nextInt(Colors.values().length);
-    private final String randomColor = Colors.values()[rndCol].toString();
-
     public Figure getRandomFigure() {
-        int rndFig = random.nextInt(maxFig);
-        switch (rndFig) {
+        String randomColor = colorSupplier.getRandomColor();
+        int randomFigure = random.nextInt(maxFigure);
+        switch (randomFigure) {
             case 0:
                 return new Square("Square", randomColor, random.nextInt(maxBound),
                         random.nextInt(maxBound));
@@ -51,7 +39,8 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-         Circle circle = new Circle("Circle", "White", 10);
-         return circle;
+        Circle defaultCircle = new Circle("Circle", "White", 2);
+        return defaultCircle;
+
     }
 }

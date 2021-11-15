@@ -2,7 +2,7 @@ package core.basesyntax;
 
 public class Rhombus extends Figure {
     private final double side;
-    private final double height; // высота опущеная на сторону
+    private final double height;
 
     public Rhombus(String name, String color, double side, double height) {
         super(name, color);
