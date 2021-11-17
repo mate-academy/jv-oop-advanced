@@ -1,13 +1,13 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements DrawAble {
+public class Circle extends Figure {
     private int radius;
     private double area;
 
     public Circle(String color, int radius) {
         this.color = color;
         this.radius = radius;
-        this.area = radius * radius * 3.14;
+        this.area = radius * radius * Math.PI;
     }
 
     @Override
@@ -16,5 +16,10 @@ public class Circle extends Figure implements DrawAble {
                             + ", area: " + area
                             + " sq.units, radius: " + radius
                             + " units, color: " + color);
+    }
+
+    @Override
+    public void getArea() {
+        System.out.println(this.area);
     }
 }

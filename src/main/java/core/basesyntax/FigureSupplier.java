@@ -4,21 +4,21 @@ import java.util.Random;
 
 public class FigureSupplier {
     private final Random random = new Random();
-    private final ColorSupplier color = new ColorSupplier();
-    private final TypeSupplier types = new TypeSupplier();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final TypeSupplier typesSupplier = new TypeSupplier();
 
     public Figure getRandomFigure() {
-        switch (types.getRandomType()) {
+        switch (typesSupplier.getRandomType()) {
             case CIRCLE: {
-                return new Circle(color.getRandomColor(), random.nextInt(10) + 1); }
+                return new Circle(colorSupplier.getRandomColor(), random.nextInt(10) + 1); }
             case SQUARE: {
-                return new Square(color.getRandomColor(), random.nextInt(10) + 1); }
+                return new Square(colorSupplier.getRandomColor(), random.nextInt(10) + 1); }
             case TRIANGLE: {
-                return new Triangle(color.getRandomColor(), random.nextInt(10) + 1,
+                return new Triangle(colorSupplier.getRandomColor(), random.nextInt(10) + 1,
                         random.nextInt(10) + 1); }
-            default: { }
+            default: {
+                return new Circle("WHITE", 10); }
         }
-        return new Figure();
     }
 
     public Figure getDefaultFigure() {
