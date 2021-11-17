@@ -1,14 +1,9 @@
 package core.basesyntax;
 
-public class Triangle extends Figure {
-    private String typeOfFigure;
+public class Triangle extends Figure implements DrawAble {
     private int side;
     private int height;
     private double area;
-
-    {
-        typeOfFigure = "Triangle";
-    }
 
     public Triangle(String color,int side,int heigth) {
         this.color = color;
@@ -22,7 +17,7 @@ public class Triangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + typeOfFigure
+        System.out.println("Figure: " + this.getClass().getSimpleName()
                 + ", area: " + area
                 + " sq.units, side: " + side
                 + " units, height: " + height

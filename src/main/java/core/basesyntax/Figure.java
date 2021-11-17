@@ -1,11 +1,9 @@
 package core.basesyntax;
 
-public class Figure {
+public class Figure implements DrawAble {
     protected String color;
 
-    public Figure() {
-    }
-
-    public void draw(){
+    @Override
+    public void draw() {
     }
 }

@@ -8,16 +8,17 @@ public class FigureSupplier {
     private final TypeSupplier types = new TypeSupplier();
 
     public Figure getRandomFigure() {
-        String type = types.getRandomType();
-        if (type.equals("SQUARE")) {
-            return new Square(color.getRandomColor(), random.nextInt(10) + 1);
+        switch (types.getRandomType()) {
+            case CIRCLE: {
+                return new Circle(color.getRandomColor(), random.nextInt(10) + 1); }
+            case SQUARE: {
+                return new Square(color.getRandomColor(), random.nextInt(10) + 1); }
+            case TRIANGLE: {
+                return new Triangle(color.getRandomColor(), random.nextInt(10) + 1,
+                        random.nextInt(10) + 1); }
+            default: { }
         }
-        if (type.equals("TRIANGLE")) {
-            return new Triangle(color.getRandomColor(), random.nextInt(10) + 1,
-                    random.nextInt(10) + 1);
-        } else {
-            return new Circle(color.getRandomColor(), random.nextInt(10) + 1);
-        }
+        return new Figure();
     }
 
     public Figure getDefaultFigure() {
