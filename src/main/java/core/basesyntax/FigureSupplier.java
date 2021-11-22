@@ -3,18 +3,18 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int FIGURES_COUNTER = 5;
+    public static final int NUMBER_OF_FIGURES = 5;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        switch (random.nextInt(FIGURES_COUNTER)) {
+        switch (random.nextInt(NUMBER_OF_FIGURES)) {
             case 0: return getRandomSquare();
             case 1: return getRandomRectangle();
             case 2: return getRandomCircle();
             case 3: return getRandomRightTriangle();
             case 4: return getIsoscelesTrapezoid();
-            default: return getIsoscelesTrapezoid();
+            default: return getDefaultFigure();
         }
     }
 

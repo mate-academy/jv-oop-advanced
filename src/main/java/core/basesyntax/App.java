@@ -10,7 +10,7 @@ public class App {
             } else {
                 figures[i] = figureSupplier.getRandomFigure();
             }
-            figures[i].figureInfo();
+            figures[i].getFigureInfo();
         }
     }
 }
