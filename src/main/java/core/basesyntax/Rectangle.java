@@ -21,6 +21,16 @@ public class Rectangle extends Figure {
     }
 
     @Override
+    public String getColor() {
+        return super.getColor();
+    }
+
+    @Override
+    public void setColor(String color) {
+        super.setColor(color);
+    }
+
+    @Override
     public double getArea() {
         return getHeight() * getWidth();
     }
@@ -30,15 +40,5 @@ public class Rectangle extends Figure {
         return "Figure: " + this.getClass().getSimpleName().toLowerCase() + ", area: "
                 + getArea() + " sq.units, height: " + getHeight() + " units, width: "
                 + getWidth() + " units, color: " + getColor();
-    }
-
-    @Override
-    public String getColor() {
-        return super.getColor();
-    }
-
-    @Override
-    public void setColor(String color) {
-        super.setColor(color);
     }
 }

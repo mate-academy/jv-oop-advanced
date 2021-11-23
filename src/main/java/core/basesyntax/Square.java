@@ -12,6 +12,16 @@ public class Square extends Figure {
     }
 
     @Override
+    public String getColor() {
+        return super.getColor();
+    }
+
+    @Override
+    public void setColor(String color) {
+        super.setColor(color);
+    }
+
+    @Override
     public double getArea() {
         return getSide() * getSide();
     }
@@ -21,15 +31,5 @@ public class Square extends Figure {
         return "Figure: " + this.getClass().getSimpleName().toLowerCase() + ", area: "
                 + getArea() + " sq.units, side: " + getSide()
                 + " units, color: " + getColor();
-    }
-
-    @Override
-    public String getColor() {
-        return super.getColor();
-    }
-
-    @Override
-    public void setColor(String color) {
-        super.setColor(color);
     }
 }

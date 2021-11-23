@@ -12,6 +12,16 @@ public class Circle extends Figure {
     }
 
     @Override
+    public String getColor() {
+        return super.getColor();
+    }
+
+    @Override
+    public void setColor(String color) {
+        super.setColor(color);
+    }
+
+    @Override
     public double getArea() {
         return Math.ceil(Math.PI * getRadius() * getRadius()*100)/100;
     }
@@ -21,15 +31,5 @@ public class Circle extends Figure {
         return "Figure: " + this.getClass().getSimpleName().toLowerCase() + ", area: "
                 + getArea() + " sq.units, radius: " + getRadius()
                 + " units, color: " + getColor();
-    }
-
-    @Override
-    public String getColor() {
-        return super.getColor();
-    }
-
-    @Override
-    public void setColor(String color) {
-        super.setColor(color);
     }
 }

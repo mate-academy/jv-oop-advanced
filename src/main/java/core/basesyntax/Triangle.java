@@ -21,6 +21,16 @@ public class Triangle extends  Figure {
     }
 
     @Override
+    public String getColor() {
+        return super.getColor();
+    }
+
+    @Override
+    public void setColor(String color) {
+        super.setColor(color);
+    }
+
+    @Override
     public double getArea() {
         return (double) (getHeight() * getBase()) / 2;
     }
@@ -30,15 +40,5 @@ public class Triangle extends  Figure {
         return "Figure: " + this.getClass().getSimpleName().toLowerCase() + ", area: "
                 + getArea() + " sq.units, height: " + getHeight() + " units, base: "
                 + getBase() + " units, color: " + getColor();
-    }
-
-    @Override
-    public String getColor() {
-        return super.getColor();
-    }
-
-    @Override
-    public void setColor(String color) {
-        super.setColor(color);
     }
 }

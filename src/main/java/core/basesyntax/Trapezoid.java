@@ -30,6 +30,16 @@ public class Trapezoid extends  Figure {
     }
 
     @Override
+    public String getColor() {
+        return super.getColor();
+    }
+
+    @Override
+    public void setColor(String color) {
+        super.setColor(color);
+    }
+
+    @Override
     public double getArea() {
         return (double) getHeight() * (getTop() + getBase()) / 2;
     }
@@ -39,15 +49,5 @@ public class Trapezoid extends  Figure {
         return "Figure: " + this.getClass().getSimpleName().toLowerCase() + ", area: "
                 + getArea() + " sq.units, height: " + getHeight() + " units, base: "
                 + getBase() + " units, top: " + getTop() + " units, color: " + getColor();
-    }
-
-    @Override
-    public String getColor() {
-        return super.getColor();
-    }
-
-    @Override
-    public void setColor(String color) {
-        super.setColor(color);
     }
 }
