@@ -23,7 +23,7 @@ public class Circle extends Figure {
 
     @Override
     public double getArea() {
-        return Math.ceil(Math.PI * getRadius() * getRadius()*100)/100;
+        return Math.ceil(Math.PI * getRadius() * getRadius() * 100) / 100;
     }
 
     @Override

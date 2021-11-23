@@ -14,35 +14,35 @@ public class FigureSupplier {
 
     private Figure getSquare() {
         square.setColor(colorSupplier.getRandomColor());
-        square.setSide(random.nextInt(15)==0?5:random.nextInt(15));
+        square.setSide(random.nextInt(15) == 0 ? 5 : random.nextInt(15));
         return square;
     }
 
     private Figure getCircle() {
         circle.setColor(colorSupplier.getRandomColor());
-        circle.setRadius(random.nextInt(7)==0?7:random.nextInt(7));
+        circle.setRadius(random.nextInt(7) == 0 ? 7 : random.nextInt(7));
         return circle;
     }
 
     private Figure getRectangle() {
         rectangle.setColor(colorSupplier.getRandomColor());
-        rectangle.setHeight(random.nextInt(10)==0?5:random.nextInt(10));
-        rectangle.setWidth(random.nextInt(25)==0?10:random.nextInt(25));
+        rectangle.setHeight(random.nextInt(10) == 0 ? 5 : random.nextInt(10));
+        rectangle.setWidth(random.nextInt(25) == 0 ? 10 : random.nextInt(25));
         return rectangle;
     }
 
     private Figure getTriangle() {
         triangle.setColor(colorSupplier.getRandomColor());
-        triangle.setBase(random.nextInt(10)==0?5:random.nextInt(10));
-        triangle.setHeight(random.nextInt(25)==0?5:random.nextInt(25));
+        triangle.setBase(random.nextInt(10) == 0 ? 5 : random.nextInt(10));
+        triangle.setHeight(random.nextInt(25) == 0 ? 5 : random.nextInt(25));
         return triangle;
     }
 
     private Figure getTrapezoid() {
         trapezoid.setColor(colorSupplier.getRandomColor());
-        trapezoid.setTop(random.nextInt(7)==0?3:random.nextInt(7));
-        trapezoid.setBase(random.nextInt(20)==0?5:random.nextInt(20));
-        trapezoid.setHeight(random.nextInt(25)==0?10:random.nextInt(25));
+        trapezoid.setTop(random.nextInt(7) == 0 ? 3 : random.nextInt(7));
+        trapezoid.setBase(random.nextInt(20) == 0 ? 5 : random.nextInt(20));
+        trapezoid.setHeight(random.nextInt(25) == 0 ? 10 : random.nextInt(25));
         return trapezoid;
     }
 
