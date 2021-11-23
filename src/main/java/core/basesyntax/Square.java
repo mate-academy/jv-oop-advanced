@@ -1,10 +1,10 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    private double firstLeg;
-    private double secondLeg;
+    private int firstLeg;
+    private int secondLeg;
 
-    public Square(Color color, double firstLeg, double secondLeg) {
+    public Square(Color color, int firstLeg, int secondLeg) {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
@@ -14,7 +14,7 @@ public class Square extends Figure {
         return firstLeg;
     }
 
-    public void setFirstLeg(double firstLeg) {
+    public void setFirstLeg(int firstLeg) {
         this.firstLeg = firstLeg;
     }
 
@@ -22,7 +22,7 @@ public class Square extends Figure {
         return secondLeg;
     }
 
-    public void setSecondLeg(double secondLeg) {
+    public void setSecondLeg(int secondLeg) {
         this.secondLeg = secondLeg;
     }
 

@@ -1,11 +1,11 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private double firstLeg;
-    private double secondLeg;
-    private double height;
+    private int firstLeg;
+    private int secondLeg;
+    private int height;
 
-    public IsoscelesTrapezoid(Color color, double firstLeg, double secondLeg, double height) {
+    public IsoscelesTrapezoid(Color color, int firstLeg, int secondLeg, int height) {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
@@ -16,7 +16,7 @@ public class IsoscelesTrapezoid extends Figure {
         return firstLeg;
     }
 
-    public void setFirstLeg(double firstLeg) {
+    public void setFirstLeg(int firstLeg) {
         this.firstLeg = firstLeg;
     }
 
@@ -24,7 +24,7 @@ public class IsoscelesTrapezoid extends Figure {
         return secondLeg;
     }
 
-    public void setSecondLeg(double secondLeg) {
+    public void setSecondLeg(int secondLeg) {
         this.secondLeg = secondLeg;
     }
 
@@ -32,18 +32,18 @@ public class IsoscelesTrapezoid extends Figure {
         return height;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(int height) {
         this.height = height;
     }
 
     @Override
     public double getArea() {
-        return ((firstLeg + secondLeg) * height) / 2;
+        return (double)((firstLeg + secondLeg) * height) / 2;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: square, area: " + getArea() + " sq.units, firstLeg: " + firstLeg
+        System.out.println("Figure: isoscelesTrapezoid, area: " + getArea() + " sq.units, firstLeg: " + firstLeg
                 + " units, secondLeg: " + secondLeg + " units, height: "
                 + height + " units, color: " + getColor());
     }
