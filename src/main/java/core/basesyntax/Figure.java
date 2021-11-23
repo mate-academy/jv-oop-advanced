@@ -10,14 +10,4 @@ public abstract class Figure implements AreaCalculating, FigureDrawing {
     public void setColor(String color) {
         this.color = color;
     }
-
-    @Override
-    public double getArea() {
-        return 0;
-    }
-
-    @Override
-    public String drawFigure() {
-        return null;
-    }
 }
