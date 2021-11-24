@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Figures implements Forms {
+public class Figure {
     private double area;
     private String color;
 
@@ -12,8 +12,7 @@ public class Figures implements Forms {
         return color;
     }
 
-    @Override
     public void getDraw() {
-
     }
 }
+

@@ -4,10 +4,15 @@ public class Application {
 
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        Figures[] figure = new Figures[3];
-        for (int i = 0; i < 3; i++) {
-            figure[i] = figureSupplier.getRandomFigure();
-            figure[i].getDraw();
+        Figure[] figure = new Figure[6];
+        for (int i = 0; i < figure.length; i++) {
+            if (i < 3) {
+                figure[i] = figureSupplier.getRandomFigure();
+                figure[i].getDraw();
+            } else if (i > 2) {
+                figure[i] = figureSupplier.getDefaultFigure();
+                figure[i].getDraw();
+            }
         }
     }
 }

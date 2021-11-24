@@ -5,42 +5,41 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int MAX_RANDOM_NUMBER = 10;
     private static final int DEFAULT_RADIUS = 10;
+    private int randomSide = new Random().nextInt(10);
+    private ColorSupplier colors = new ColorSupplier();
 
-    public Figures getRandomFigure() {
-        RandomLine randomLine = new RandomLine();
-        ColorSupplier colors = new ColorSupplier();
-        for (int i = 0; i < 3; i++) {
-            int random = new Random().nextInt(MAX_RANDOM_NUMBER);
-            switch (random) {
-                case 1:
-                    IsoscelesTrapezoid trapezoid = new IsoscelesTrapezoid(
-                            randomLine.getRandomSide(),
-                            randomLine.getRandomSide(),
-                            colors.getRandomColor(),
-                            randomLine.getRandomSide());
-                    return trapezoid;
-                case 2:
-                    Circle circle = new Circle(randomLine.getRandomSide(), colors.getRandomColor());
-                    return circle;
-                case 3:
-                    Square square = new Square(randomLine.getRandomSide(), colors.getRandomColor());
-                    return square;
-                case 4:
-                    Rectangle rectangle = new Rectangle(randomLine.getRandomSide(),
-                            randomLine.getRandomSide(),
-                            colors.getRandomColor());
-                    return rectangle;
-                case 5:
-                    RightTriangle rightTriangle = new RightTriangle(randomLine.getRandomSide(),
-                            randomLine.getRandomSide(),
-                            colors.getRandomColor());
-                    return rightTriangle;
-                default:
-                    Circle circleDefault = new Circle(DEFAULT_RADIUS, colors.getRandomColor());
-                    return circleDefault;
-            }
+    public Figure getRandomFigure() {
+        int random = new Random().nextInt(MAX_RANDOM_NUMBER);
+        switch (random) {
+            case 1:
+                IsoscelesTrapezoid trapezoid = new IsoscelesTrapezoid(
+                        randomSide,
+                        randomSide,
+                        colors.getRandomColor(),
+                        randomSide);
+                return trapezoid;
+            case 2:
+                Circle circle = new Circle(randomSide, colors.getRandomColor());
+                return circle;
+            case 3:
+                Square square = new Square(randomSide, colors.getRandomColor());
+                return square;
+            case 4:
+                Rectangle rectangle = new Rectangle(randomSide,
+                        randomSide,
+                        colors.getRandomColor());
+                return rectangle;
+            default:
+                RightTriangle rightTriangle = new RightTriangle(randomSide,
+                        randomSide,
+                        colors.getRandomColor());
+                return rightTriangle;
         }
-        return null;
+    }
+
+    public Figure getDefaultFigure() {
+        Circle circleDefault = new Circle(DEFAULT_RADIUS, Colors.WHITE.name());
+        return circleDefault;
     }
 }
 
