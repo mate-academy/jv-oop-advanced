@@ -4,13 +4,13 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
-    Random random = new Random();
-    ColorSupplier colorSupplier = new ColorSupplier();
-    Square square = new Square();
-    Circle circle = new Circle();
-    Rectangle rectangle = new Rectangle();
-    Triangle triangle = new Triangle();
-    Trapezoid trapezoid = new Trapezoid();
+    private Random random;
+    private ColorSupplier colorSupplier;
+    private Square square;
+    private Circle circle;
+    private Rectangle rectangle;
+    private Triangle triangle;
+    private Trapezoid trapezoid;
 
     private Figure getSquare() {
         square.setColor(colorSupplier.getRandomColor());

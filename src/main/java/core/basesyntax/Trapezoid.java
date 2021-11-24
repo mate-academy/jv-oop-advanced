@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Trapezoid extends  Figure {
+public class Trapezoid extends Figure {
     private int height;
     private int top;
     private int base;
