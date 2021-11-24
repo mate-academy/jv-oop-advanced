@@ -4,6 +4,11 @@ public class Square extends Figure {
     private double oneLeg;
     private String color;
 
+    public Square(double oneLeg, String color) {
+        this.color = color;
+        this.oneLeg = oneLeg;
+    }
+
     public double getOneLeg() {
         return oneLeg;
     }
@@ -19,11 +24,6 @@ public class Square extends Figure {
 
     public void setColor(String color) {
         this.color = color;
-    }
-
-    public Square(double oneLeg, String color) {
-        this.color = color;
-        this.oneLeg = oneLeg;
     }
 
     @Override

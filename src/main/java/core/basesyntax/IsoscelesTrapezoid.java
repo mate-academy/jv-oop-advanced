@@ -6,6 +6,13 @@ public class IsoscelesTrapezoid extends Figure {
     private double height;
     private String color;
 
+    public IsoscelesTrapezoid(double firstLeg, double secondLeg, String color, double height) {
+        this.color = color;
+        this.secondLeg = secondLeg;
+        this.firstLeg = firstLeg;
+        this.height = height;
+    }
+
     public double getFirstLeg() {
         return firstLeg;
     }
@@ -32,13 +39,6 @@ public class IsoscelesTrapezoid extends Figure {
 
     public void setColor(String color) {
         this.color = color;
-    }
-
-    public IsoscelesTrapezoid(double firstLeg, double secondLeg, String color, double height) {
-        this.color = color;
-        this.secondLeg = secondLeg;
-        this.firstLeg = firstLeg;
-        this.height = height;
     }
 
     @Override
