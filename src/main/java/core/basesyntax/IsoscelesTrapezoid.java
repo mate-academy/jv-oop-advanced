@@ -37,16 +37,16 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double getFigureArea() {
-        return ((sideA + sideB) / 2) * perpendicular;
-    }
-
-    @Override
     public String drawing() {
-        return " Figure: isosceles trapezoid, area: " + getFigureArea() + " sq.units, "
+        return " Figure: isosceles trapezoid, area: " + getArea() + " sq.units, "
                 + "sideA: " + sideA + " units, "
                 + "sideB: " + sideB + " units, "
                 + "perpendicular " + perpendicular + " units, "
                 + "color: " + getColor();
+    }
+
+    @Override
+    public double getArea() {
+        return ((sideA + sideB) / 2) * perpendicular;
     }
 }

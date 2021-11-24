@@ -27,14 +27,14 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double getFigureArea() {
-        return sideA * sideB;
+    public String drawing() {
+        return " Figure: rectangle, area: " + getArea() + " sq.units, "
+                + "sideA: " + sideA + " units, "
+                + "color: " + getColor();
     }
 
     @Override
-    public String drawing() {
-        return " Figure: rectangle, area: " + getFigureArea() + " sq.units, "
-                + "sideA: " + sideA + " units, "
-                + "color: " + getColor();
+    public double getArea() {
+        return sideA * sideB;
     }
 }

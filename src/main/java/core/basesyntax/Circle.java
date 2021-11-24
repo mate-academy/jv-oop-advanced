@@ -17,14 +17,15 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double getFigureArea() {
+    public double getArea() {
         return Math.PI * radius * radius;
     }
 
     @Override
     public String drawing() {
-        return " Figure: circle, area: " + getFigureArea() + " sq.units, "
+        return " Figure: circle, area: " + getArea() + " sq.units, "
                 + "radius: " + radius + " units, "
                 + "color: " + getColor();
     }
 }
+

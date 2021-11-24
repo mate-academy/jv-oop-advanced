@@ -10,7 +10,7 @@ public class Main {
             } else {
                 figure[i] = figureSupplier.getDefaultFigure();
             }
-            //System.out.println(figure[i].drawing());
+
         }
         for (Figure curent: figure) {
             System.out.println(curent.drawing());
