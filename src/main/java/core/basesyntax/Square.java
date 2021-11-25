@@ -33,7 +33,7 @@ public class Square extends Figure {
 
     @Override
     public void getDraw() {
-        System.out.println("Figure " + "rectangle "
+        System.out.println("Figure " + "square "
                 + "area: " + getArea()
                 + " sq.units,  firstLeg: "
                 + oneLeg + " units,"
