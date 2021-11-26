@@ -10,7 +10,6 @@ public abstract class Figure implements Drawable, AreaCalculator {
 
     public void setArea(double area) {
         this.area = area;
-        ;
     }
 
     public String getColor() {

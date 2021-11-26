@@ -9,7 +9,7 @@ public class Application {
             if (i < 3) {
                 figure[i] = figureSupplier.getRandomFigure();
                 figure[i].getDraw();
-            } else if (i > 2) {
+            } else {
                 figure[i] = figureSupplier.getDefaultFigure();
                 figure[i].getDraw();
             }
