@@ -6,7 +6,9 @@ public class Main {
         int numberRandomFigures = 6;
         Figure[] randomFigures = new Figure[numberRandomFigures];
         for (int i = 0; i < randomFigures.length; i++) {
-            randomFigures[i] = (i < randomFigures.length / 2) ? (figureSupplier.getRandomFigure()) : figureSupplier.getDefaultFigure();
+            randomFigures[i] = (i < randomFigures.length / 2)
+                               ? (figureSupplier.getRandomFigure())
+                               : figureSupplier.getDefaultFigure();
             randomFigures[i].draw();
         }
     }
