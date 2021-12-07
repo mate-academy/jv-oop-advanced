@@ -13,11 +13,11 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        int randomsideA = random.nextInt(1, 10);
-        int randomsideB = random.nextInt(1, 10);
-        int randomsideC = random.nextInt(1, 10);
+        int randomsideA = random.nextInt(10);
+        int randomsideB = random.nextInt(10);
+        int randomsideC = random.nextInt(10);
         String randomColor = colorSupplier.getRandomColor();
-        int randomNumber = random.nextInt(1, 6);
+        int randomNumber = random.nextInt(6);
         switch (randomNumber) {
             case (1):
                 return new Square(randomColor, randomsideA);
@@ -34,7 +34,3 @@ public class FigureSupplier {
         return getRandomFigure();
     }
 }
-
-
-
-
