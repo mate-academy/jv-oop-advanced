@@ -9,34 +9,34 @@ public class FigureSupplier {
 
     public Figure getIsoscelesTrapezoid() {
         String color = getColor.getRandomColor();
-        double randomMeaningA = meaning.nextDouble(10.00d);
-        double randomMeaningB = meaning.nextDouble(10.00d);
-        double randomMeaningC = meaning.nextDouble(10.00d);
+        double randomMeaningA = meaning.nextInt(10);
+        double randomMeaningB = meaning.nextInt(10);
+        double randomMeaningC = meaning.nextInt(10);
         return new IsoscelesTrapezoid(randomMeaningB, randomMeaningA, randomMeaningC, color);
     }
 
     public Figure getCircle() {
         String color = getColor.getRandomColor();
-        double randomMeaningR = meaning.nextDouble(10.00d);
+        double randomMeaningR = meaning.nextInt(10);
         return new Circle(randomMeaningR, color);
     }
 
     public Figure getRightTriangle() {
         String color = getColor.getRandomColor();
-        double randomMeaningA = meaning.nextDouble(10.00d);
+        double randomMeaningA = meaning.nextInt(10);
         return new RightTriangle(randomMeaningA, color);
     }
 
     public Figure getRectangle() {
         String color = getColor.getRandomColor();
-        double randomMeaningA = meaning.nextDouble(10.00d);
-        double randomMeaningB = meaning.nextDouble(10.00d);
+        double randomMeaningA = meaning.nextInt(10);
+        double randomMeaningB = meaning.nextInt(10);
         return new Rectangle(randomMeaningA, randomMeaningB, color);
     }
 
     public Figure getSquare() {
         String color = getColor.getRandomColor();
-        double randomMeaningA = meaning.nextDouble(10.00d);
+        double randomMeaningA = meaning.nextInt(10);
         return new Square(randomMeaningA,color);
     }
 
