@@ -8,10 +8,6 @@ public class Circle extends Figure {
         this.setColor(color);
     }
 
-    public Circle() {
-        this.radius = Math.random();
-    }
-
     @Override
     public double getArea() {
         return Math.PI * radius * radius;

@@ -6,11 +6,12 @@ public class IsoscelesTapezoid extends Figure {
     private double leg;
     private double height;
 
-    public IsoscelesTapezoid() {
-        this.base1 = Math.random();
-        this.base2 = Math.random();
-        this.leg = Math.random();
-        this.height = Math.random();
+    public IsoscelesTapezoid(double base1, double base2, double leg, double height, Color color) {
+        this.base1 = base1;
+        this.base2 = base2;
+        this.leg = leg;
+        this.height = height;
+        this.setColor(color);
     }
 
     @Override

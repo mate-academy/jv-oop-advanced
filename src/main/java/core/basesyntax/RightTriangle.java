@@ -4,9 +4,10 @@ public class RightTriangle extends Figure {
     private double height;
     private double base;
 
-    public RightTriangle() {
-        this.height = Math.random();
-        this.base = Math.random();
+    public RightTriangle(double height, double base, Color color) {
+        this.height = height;
+        this.base = base;
+        this.setColor(color);
     }
 
     @Override
