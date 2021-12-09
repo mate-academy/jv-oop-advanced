@@ -10,7 +10,6 @@ public class Application {
         for (int i = figure.length / 2; i < figure.length; i++) {
             figure[i] = figureSupplier.getDefaultFigure();
         }
-
         for (Figure randomFigure: figure) {
             randomFigure.draw();
         }
