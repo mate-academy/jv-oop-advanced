@@ -1,12 +1,21 @@
 package core.basesyntax;
 
-class HelloWorld {
-    public static void main(String[] args) {
+import java.util.Arrays;
 
+class HelloWorld {
+
+    public static void main(String[] args) {
+        FigureSupplier figureSupplier = new FigureSupplier(1,1);
         Figure[] equal = getFig();
-        for (Figure fig : equal) {
-            fig.draw();
+        for (int i = 0; i < equal.length; i++) {
+            if (i < equal.length / 2) {
+                equal[i].draw();
+            } else {
+                System.out.println(Arrays.toString(figureSupplier.getDefaultFigure()));
+                break;
+            }
         }
+
     }
 
     public static Figure[] getFig() {

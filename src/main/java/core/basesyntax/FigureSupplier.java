@@ -34,13 +34,16 @@ public class FigureSupplier {
                         random.nextInt(maxBound),
                         random.nextInt(maxBound), random.nextInt(maxBound));
             default:
-                return getDefaultFigure();
+                return getRandomFigure();
         }
     }
 
-    public Figure getDefaultFigure() {
+    public Figure[] getDefaultFigure() {
+        Rectangle defaultRectangle = new Rectangle("Rectangle", "White",7,21);
+        Square defaultSquare = new Square("Square", "Green",5,14);
         Circle defaultCircle = new Circle("Circle", "White", 2);
-        return defaultCircle;
+        Figure[] figures = {defaultCircle,defaultSquare,defaultRectangle};
+        return figures;
 
     }
 }
