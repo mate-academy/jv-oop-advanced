@@ -2,11 +2,9 @@ package mate;
 
 public class Square extends Figure {
     private final int sideA;
-    private final String color;
 
     public Square(String color, int sideA) {
-        super();
-        this.color = color;
+        super(color);
         this.sideA = sideA;
     }
 
@@ -18,14 +16,10 @@ public class Square extends Figure {
     @Override
     public String draw() {
         return "square, "
-                +
-                "area = " + getArea()
-                +
-                " sq.units, sideA = " + sideA
-                +
-                " units, color = '" + color + '\''
-                +
-                '}';
+                + "area = " + getArea()
+                + " sq.units, sideA = " + sideA
+                + " units, color = '" + getColor() + '\''
+                + '}';
     }
 }
 

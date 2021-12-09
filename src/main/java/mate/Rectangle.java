@@ -1,12 +1,11 @@
 package mate;
 
 public class Rectangle extends Figure {
-    private final String color;
     private final int sideA;
     private final int sideB;
 
     public Rectangle(String color, int sideA, int sideB) {
-        this.color = color;
+        super(color);
         this.sideA = sideA;
         this.sideB = sideB;
     }
@@ -26,7 +25,7 @@ public class Rectangle extends Figure {
                 +
                 " units, sideB = " + sideB
                 +
-                " units, color = '" + color + '\''
+                " units, color = '" + getColor() + '\''
                 +
                 '}';
     }

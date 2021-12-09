@@ -1,12 +1,11 @@
 package mate;
 
 public class RightTriangle extends Figure {
-    private final String color;
     private final int firstLeg;
     private final int secondLeg;
 
     public RightTriangle(String color, int firstLeg, int secondLeg) {
-        this.color = color;
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
@@ -26,7 +25,7 @@ public class RightTriangle extends Figure {
                 +
                 " units, secondLeg = " + secondLeg
                 +
-                ", color = '" + color + '\''
+                ", color = '" + getColor() + '\''
                 +
                 '}';
     }

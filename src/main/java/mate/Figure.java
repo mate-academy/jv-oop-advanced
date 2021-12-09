@@ -3,31 +3,17 @@ package mate;
 public abstract class Figure implements CalculaterArea, Drawable {
 
     private String color;
-    private int radius;
 
-    public Figure(String color, int radius) {
+    public Figure(String color) {
         this.color = color;
-        this.radius = radius;
     }
 
-    public Figure() {
+    public String getColor() {
+        return color;
     }
 
-    @Override
-    public String toString() {
-        return "Figure: Circle"
-                +
-                ", color='" + color + '\''
-                +
-                ", radius=" + radius
-                +
-                '}';
+    public void setColor(String color) {
+        this.color = color;
     }
-
-    @Override
-    public double getArea() {
-        return 0;
-    }
-
 }
 

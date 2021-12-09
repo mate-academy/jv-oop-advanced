@@ -1,13 +1,12 @@
 package mate;
 
 public class IsoscelesTrapezoid extends Figure {
-    private final String color;
     private final int sideA;
     private final int sideB;
     private final int height;
 
     public IsoscelesTrapezoid(String color, int sideA, int sideB, int height) {
-        this.color = color;
+        super(color);
         this.sideA = sideA;
         this.sideB = sideB;
         this.height = height;
@@ -30,7 +29,7 @@ public class IsoscelesTrapezoid extends Figure {
                 +
                 " units, height = " + height
                 +
-                " units, color = '" + color + '\''
+                " units, color = '" + getColor() + '\''
                 +
                 '}';
     }

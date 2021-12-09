@@ -1,11 +1,11 @@
 package mate;
 
 public class Circle extends Figure {
-    private final String color;
+
     private final int radius;
 
     public Circle(String color, int radius) {
-        this.color = color;
+        super(color);
         this.radius = radius;
     }
 
@@ -17,14 +17,10 @@ public class Circle extends Figure {
     @Override
     public String draw() {
         return "circle, "
-                +
-                "area=" + Math.ceil(getArea())
-                +
-                " sq.units, radius = " + radius
-                +
-                " units, color = '" + color + '\''
-                +
-                '}';
+                + "area=" + Math.ceil(getArea())
+                + " sq.units, radius = " + radius
+                + " units, color = '" + getColor() + '\''
+                + '}';
     }
 }
 

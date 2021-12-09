@@ -3,32 +3,62 @@ package mate;
 import java.util.Random;
 
 public class FigureSupplier {
-    private Random random = new Random();
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getDefaultFigure() {
-        String color = "WHITE";
-        int radius = 10;
-        return new Circle(color, radius);
+        String defaultColor = Color.WHITE.toString();
+        int defaultRadius = 10;
+        return new Circle(defaultColor, defaultRadius);
+    }
+
+    private Figure getRandomSquare() {
+        String randomColor = colorSupplier.getRandomColor();
+        int randomsideA = random.nextInt(1, 10);
+        return new Square(randomColor, randomsideA);
+    }
+
+    private Figure getRandomRectangle() {
+        String randomColor = colorSupplier.getRandomColor();
+        int randomsideA = random.nextInt(1, 10);
+        int randomsideB = random.nextInt(1, 10);
+        return new Rectangle(randomColor, randomsideA, randomsideB);
+    }
+
+    private Figure getRandomCircle() {
+        String randomColor = colorSupplier.getRandomColor();
+        int randomRadius = random.nextInt(1, 10);
+        return new Circle(randomColor, randomRadius);
+    }
+
+    private Figure getRandomRightTriangle() {
+        String randomColor = colorSupplier.getRandomColor();
+        int randomfirstLeg = random.nextInt(1, 10);
+        int randomsecondLeg = random.nextInt(1, 10);
+        return new RightTriangle(randomColor, randomfirstLeg, randomsecondLeg);
+    }
+
+    private Figure getRandomIsoscelesTrapezoid() {
+        String randomColor = colorSupplier.getRandomColor();
+        int randomsideA = random.nextInt(1,10);
+        int randomsideB = random.nextInt(1,10);
+        int randomHeight = random.nextInt(1,10);
+        return new IsoscelesTrapezoid(randomColor, randomsideA, randomsideB, randomHeight);
     }
 
     public Figure getRandomFigure() {
-        int randomsideA = random.nextInt(10);
-        int randomsideB = random.nextInt(10);
-        int randomsideC = random.nextInt(10);
-        String randomColor = colorSupplier.getRandomColor();
         int randomNumber = random.nextInt(6);
         switch (randomNumber) {
             case (1):
-                return new Square(randomColor, randomsideA);
+                return getRandomSquare();
             case (2):
-                return new Rectangle(randomColor, randomsideA, randomsideB);
+                return getRandomRectangle();
             case (3):
-                return new Circle(randomColor, randomsideA);
+                return getRandomCircle();
             case (4):
-                return new RightTriangle(randomColor, randomsideA, randomsideB);
+                return getRandomRightTriangle();
             case (5):
-                return new IsoscelesTrapezoid(randomColor, randomsideA, randomsideB, randomsideC);
+                return getRandomIsoscelesTrapezoid();
             default: break;
         }
         return getRandomFigure();
