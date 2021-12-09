@@ -14,35 +14,35 @@ public class FigureSupplier {
 
     private Figure getRandomSquare() {
         String randomColor = colorSupplier.getRandomColor();
-        int randomsideA = random.nextInt(1, 10);
+        int randomsideA = random.nextInt(10);
         return new Square(randomColor, randomsideA);
     }
 
     private Figure getRandomRectangle() {
         String randomColor = colorSupplier.getRandomColor();
-        int randomsideA = random.nextInt(1, 10);
-        int randomsideB = random.nextInt(1, 10);
+        int randomsideA = random.nextInt(10);
+        int randomsideB = random.nextInt(10);
         return new Rectangle(randomColor, randomsideA, randomsideB);
     }
 
     private Figure getRandomCircle() {
         String randomColor = colorSupplier.getRandomColor();
-        int randomRadius = random.nextInt(1, 10);
+        int randomRadius = random.nextInt(10);
         return new Circle(randomColor, randomRadius);
     }
 
     private Figure getRandomRightTriangle() {
         String randomColor = colorSupplier.getRandomColor();
-        int randomfirstLeg = random.nextInt(1, 10);
-        int randomsecondLeg = random.nextInt(1, 10);
+        int randomfirstLeg = random.nextInt(10);
+        int randomsecondLeg = random.nextInt(10);
         return new RightTriangle(randomColor, randomfirstLeg, randomsecondLeg);
     }
 
     private Figure getRandomIsoscelesTrapezoid() {
         String randomColor = colorSupplier.getRandomColor();
-        int randomsideA = random.nextInt(1,10);
-        int randomsideB = random.nextInt(1,10);
-        int randomHeight = random.nextInt(1,10);
+        int randomsideA = random.nextInt(10);
+        int randomsideB = random.nextInt(10);
+        int randomHeight = random.nextInt(10);
         return new IsoscelesTrapezoid(randomColor, randomsideA, randomsideB, randomHeight);
     }
 
