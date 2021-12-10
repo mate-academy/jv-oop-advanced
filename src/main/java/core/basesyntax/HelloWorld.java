@@ -12,7 +12,7 @@ public class HelloWorld {
             figure[i] = figureSupplier.getRandomFigure();
             System.out.println(figure[i]);
         }
-        for (int j = figure.length/2; j < figure.length; j++) {
+        for (int j = figure.length / 2; j < figure.length; j++) {
             figure[j] = figureSupplier.getDefaultFigure();
             System.out.println(figure[j]);
         }
