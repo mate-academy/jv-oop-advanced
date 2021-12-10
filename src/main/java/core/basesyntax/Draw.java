@@ -2,5 +2,5 @@ package core.basesyntax;
 
 public interface Draw {
 
-    public String getDraw();
+    public void draw();
 }

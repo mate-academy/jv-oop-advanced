@@ -4,13 +4,19 @@ public abstract class Figure implements AreaCalculator, Draw {
     private String name;
     private String color;
 
-    public abstract String getName();
+    public String getName() {
+        return name;
+    }
 
-    @Override
-    public abstract double getArea();
+    public String getColor() {
+        return color;
+    }
 
-    @Override
-    public abstract String getDraw();
+    public void setColor(String color) {
+        this.color = color;
+    }
 
-    public abstract String toString();
+    public void setName(String name) {
+        this.name = name;
+    }
 }

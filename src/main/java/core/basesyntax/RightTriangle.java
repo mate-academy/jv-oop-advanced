@@ -1,11 +1,19 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class RightTriangle extends Figure {
-    private final Random random = new Random();
-    private final String color = ColorSupplier.getRandomColor();
-    private final int sideTriangle = random.nextInt(10);
+
+    private int sideTriangle;
+
+    public RightTriangle() {
+    }
+
+    public void setSideTriangle(int sideTriangle) {
+        this.sideTriangle = sideTriangle;
+    }
+
+    public int getSideTriangle() {
+        return sideTriangle;
+    }
 
     @Override
     public String getName() {
@@ -18,16 +26,11 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String getDraw() {
-        return color;
-    }
-
-    @Override
-    public String toString() {
-        return "Figure: " + getName()
+    public void draw() {
+        System.out.println("Figure: " + getName()
                 + ", area: " + getArea() + " sq.units"
-                + ", sideOfSquare: " + sideTriangle + " units"
+                + ", sideOfTriangle: " + getSideTriangle() + " units"
                 +
-                ", color: " + getDraw();
+                ", color: " + super.getColor());
     }
 }

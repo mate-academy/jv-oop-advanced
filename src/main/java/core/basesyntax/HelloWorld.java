@@ -10,11 +10,11 @@ public class HelloWorld {
 
         for (int i = 0; i < figure.length / 2; i++) {
             figure[i] = figureSupplier.getRandomFigure();
-            System.out.println(figure[i]);
+            figure[i].draw();
         }
         for (int j = figure.length / 2; j < figure.length; j++) {
             figure[j] = figureSupplier.getDefaultFigure();
-            System.out.println(figure[j]);
+            figure[j].draw();
         }
 
     }

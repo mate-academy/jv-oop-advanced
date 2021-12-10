@@ -1,12 +1,27 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Rectangle extends Figure {
-    private final Random random = new Random();
-    private final String color = ColorSupplier.getRandomColor();
-    private final int sideARectangle = random.nextInt(10);
-    private final int sideBRectangle = random.nextInt(10);
+    private int sideARectangle;
+    private int sideBRectangle;
+
+    public Rectangle() {
+    }
+
+    public int getSideARectangle() {
+        return sideARectangle;
+    }
+
+    public void setSideARectangle(int sideARectangle) {
+        this.sideARectangle = sideARectangle;
+    }
+
+    public int getSideBRectangle() {
+        return sideBRectangle;
+    }
+
+    public void setSideBRectangle(int sideBRectangle) {
+        this.sideBRectangle = sideBRectangle;
+    }
 
     @Override
     public String getName() {
@@ -19,17 +34,12 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String getDraw() {
-        return color;
-    }
-
-    @Override
-    public String toString() {
-        return "Figure: " + getName()
+    public void draw() {
+        System.out.println("Figure: " + getName()
                 + ", area: " + getArea() + " sq.units"
-                + ", sideAOfSquare: " + sideARectangle + " units"
-                + ", sideBOfSquare: " + sideBRectangle + " units"
+                + ", sideAOfSquare: " + getSideARectangle() + " units"
+                + ", sideBOfSquare: " + getSideBRectangle() + " units"
                 +
-                ", color: " + getDraw();
+                ", color: " + super.getColor());
     }
 }
