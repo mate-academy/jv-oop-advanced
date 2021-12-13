@@ -21,14 +21,13 @@ public class Trapezoid extends Figure {
     @Override
     public void draw() {
 
-        StringBuilder outtext = new StringBuilder("");
-        outtext.append("Figure: Trapezoid , area: ");
-        outtext.append(this.getArea());
-        outtext.append(" sq.units");
-        outtext.append(", basefirst: ").append(this.basefirst);
-        outtext.append(", basesecond: ").append(this.basesecond);
-        outtext.append(", height: ").append(this.height);
-        outtext.append(", color: ").append(super.getBasecolor());
-        System.out.println(outtext.toString());
+        String outtext = "Figure: Trapezoid , area: "
+                + this.getArea() + " sq.units"
+                + ", basefirst: " + this.basefirst
+                + ", basesecond: " + this.basesecond
+                + ", height: " + this.height
+                + ", color: " + super.getBasecolor();
+        System.out.println(outtext);
+
     }
 }

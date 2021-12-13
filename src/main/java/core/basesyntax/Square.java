@@ -20,12 +20,10 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        StringBuilder outtext = new StringBuilder("");
-        outtext.append("Figure: Square , area: ");
-        outtext.append(this.getArea());
-        outtext.append(" sq.units");
-        outtext.append(", side: ").append(this.side);
-        outtext.append(", color: ").append(super.getBasecolor());
-        System.out.println(outtext.toString());
+        String outtext = "Figure: Square , area: "
+        + this.getArea() + " sq.units"
+        + ", side: " + this.side
+        + ", color: " + super.getBasecolor();
+        System.out.println(outtext);
     }
 }

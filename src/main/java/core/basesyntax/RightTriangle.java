@@ -19,13 +19,11 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        StringBuilder outtext = new StringBuilder("");
-        outtext.append("Figure: RightTriangle , area: ");
-        outtext.append(this.getArea());
-        outtext.append(" sq.units");
-        outtext.append(", firstleg: ").append(this.firstleg);
-        outtext.append(", secondleg: ").append(this.secondleg);
-        outtext.append(", color: ").append(super.getBasecolor());
-        System.out.println(outtext.toString());
+        String outtext = "Figure: RightTriangle , area: "
+                + this.getArea() + " sq.units"
+                + ", firstleg: " + this.firstleg
+                + ", secondleg: " + this.secondleg
+                + ", color: " + super.getBasecolor();
+        System.out.println(outtext);
     }
 }

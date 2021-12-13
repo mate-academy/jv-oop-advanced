@@ -11,18 +11,15 @@ public class Circle extends Figure {
     @Override
     public double getArea() {
 
-        final double Pi = 3.1415926536;
-        return (Pi * radius * radius);
+        return (Math.PI * radius * radius);
     }
 
     @Override
     public void draw() {
-        StringBuilder outtext = new StringBuilder("");
-        outtext.append("Figure: Circle , area: ");
-        outtext.append(this.getArea());
-        outtext.append(" sq.units");
-        outtext.append(", radius: ").append(this.radius);
-        outtext.append(", color: ").append(super.getBasecolor());
-        System.out.println(outtext.toString());
+        String outtext = "Figure: Circle , area: "
+        + this.getArea()
+        + " sq.units, radius: " + this.radius
+        + ", color: "+super.getBasecolor();
+        System.out.println(outtext);
     }
 }
