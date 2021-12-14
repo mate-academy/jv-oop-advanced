@@ -1,14 +1,13 @@
 package core.basesyntax;
 
-public class Rectangle implements Figure {
-    private String color;
+public class Rectangle extends Figure {
     private double sideA;
     private double sideB;
 
     public Rectangle(double sideA, double sideB, String color) {
         this.sideA = sideA;
         this.sideB = sideB;
-        this.color = color;
+        setColor(color);
     }
 
     @Override
@@ -17,15 +16,10 @@ public class Rectangle implements Figure {
     }
 
     @Override
-    public String getColor() {
-        return color;
-    }
-
-    @Override
-    public String toString() {
-        return "Figure : Rectangle " + "color: " + getColor()
+    public void draw() {
+        System.out.println("Figure : Rectangle " + "color: " + getColor()
                 + " side A " + String.format("%.2f", sideA)
                 + " side B " + String.format("%.2f", sideB)
-                + " area: " + String.format("%.2f", getArea()) + '}';
+                + " area: " + String.format("%.2f", getArea()) + '}');
     }
 }

@@ -3,45 +3,45 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private Random numFigure = new Random();
-    private Random meaning = new Random();
-    private ColorSupplier getColor = new ColorSupplier();
+    static final int NUMBER = 6;
+    private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getIsoscelesTrapezoid() {
-        String color = getColor.getRandomColor();
-        double randomMeaningA = meaning.nextInt(10);
-        double randomMeaningB = meaning.nextInt(10);
-        double randomMeaningC = meaning.nextInt(10);
-        return new IsoscelesTrapezoid(randomMeaningB, randomMeaningA, randomMeaningC, color);
+        double randomMeaningA = random.nextInt(10);
+        double randomMeaningB = random.nextInt(10);
+        double randomMeaningC = random.nextInt(10);
+        return new IsoscelesTrapezoid(randomMeaningB, randomMeaningA,
+                randomMeaningC, colorSupplier.getRandomColor());
     }
 
     public Figure getCircle() {
-        String color = getColor.getRandomColor();
-        double randomMeaningR = meaning.nextInt(10);
-        return new Circle(randomMeaningR, color);
+        double randomMeaningR = random.nextInt(10);
+        return new Circle(randomMeaningR, colorSupplier.getRandomColor());
     }
 
     public Figure getRightTriangle() {
-        String color = getColor.getRandomColor();
-        double randomMeaningA = meaning.nextInt(10);
-        return new RightTriangle(randomMeaningA, color);
+        double randomMeaningA = random.nextInt(10);
+        return new RightTriangle(randomMeaningA, colorSupplier.getRandomColor());
     }
 
     public Figure getRectangle() {
-        String color = getColor.getRandomColor();
-        double randomMeaningA = meaning.nextInt(10);
-        double randomMeaningB = meaning.nextInt(10);
-        return new Rectangle(randomMeaningA, randomMeaningB, color);
+        double randomMeaningA = random.nextInt(10);
+        double randomMeaningB = random.nextInt(10);
+        return new Rectangle(randomMeaningA, randomMeaningB, colorSupplier.getRandomColor());
     }
 
     public Figure getSquare() {
-        String color = getColor.getRandomColor();
-        double randomMeaningA = meaning.nextInt(10);
-        return new Square(randomMeaningA,color);
+        double randomMeaningA = random.nextInt(10);
+        return new Square(randomMeaningA, colorSupplier.getRandomColor());
+    }
+
+    public Figure getDefaultFigure() {
+        return new Circle(10, "WHITE");
     }
 
     public Figure getRandomFigure() {
-        switch (numFigure.nextInt(6)) {
+        switch (random.nextInt(NUMBER)) {
             case 1:
                 return getIsoscelesTrapezoid();
             case 2:
@@ -53,12 +53,8 @@ public class FigureSupplier {
             case 5:
                 return getSquare();
             default:
-                return getRandomFigure();
+                return getDefaultFigure();
         }
-    }
-
-    public Figure getDefaultFigure() {
-        return new Circle(10, "WHITE");
     }
 }
 

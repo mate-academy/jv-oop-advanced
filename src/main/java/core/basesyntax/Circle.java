@@ -1,12 +1,11 @@
 package core.basesyntax;
 
-public class Circle implements Figure {
-    private String color;
+public class Circle extends Figure {
     private double radius;
 
     public Circle(double radius, String color) {
         this.radius = radius;
-        this.color = color;
+        setColor(color);
     }
 
     @Override
@@ -15,14 +14,10 @@ public class Circle implements Figure {
     }
 
     @Override
-    public String getColor() {
-        return color;
-    }
-
-    @Override
-    public String toString() {
-        return "Figure : Circle " + "color: " + getColor()
+    public void draw() {
+        System.out.println("Figure : Circle " + "color: " + getColor()
                 + " radius " + String.format("%.2f", radius)
-                + " area: " + String.format("%.2f", getArea()) + '}';
+                + " area: " + String.format("%.2f", getArea()) + '}');
     }
 }
+

@@ -1,12 +1,11 @@
 package core.basesyntax;
 
-public class RightTriangle implements Figure {
-    private String color;
+public class RightTriangle extends Figure {
     private double side;
 
     public RightTriangle(double side, String color) {
         this.side = side;
-        this.color = color;
+        setColor(color);
     }
 
     @Override
@@ -15,15 +14,10 @@ public class RightTriangle implements Figure {
     }
 
     @Override
-    public String getColor() {
-        return color;
-    }
-
-    @Override
-    public String toString() {
-        return "Figure : RightTriangle " + "color: " + getColor()
+    public void draw() {
+        System.out.println("Figure : RightTriangle " + "color: " + getColor()
                 + " side " + String.format("%.2f", side)
-                + " area: " + String.format("%.2f", getArea()) + '}';
+                + " area: " + String.format("%.2f", getArea()) + '}');
     }
 }
 
