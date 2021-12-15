@@ -3,45 +3,16 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    static final int NUMBER = 6;
+    private static final int FIGURES_AMOUNT = 6;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
-
-    public Figure getIsoscelesTrapezoid() {
-        double randomMeaningA = random.nextInt(10);
-        double randomMeaningB = random.nextInt(10);
-        double randomMeaningC = random.nextInt(10);
-        return new IsoscelesTrapezoid(randomMeaningB, randomMeaningA,
-                randomMeaningC, colorSupplier.getRandomColor());
-    }
-
-    public Figure getCircle() {
-        double randomMeaningR = random.nextInt(10);
-        return new Circle(randomMeaningR, colorSupplier.getRandomColor());
-    }
-
-    public Figure getRightTriangle() {
-        double randomMeaningA = random.nextInt(10);
-        return new RightTriangle(randomMeaningA, colorSupplier.getRandomColor());
-    }
-
-    public Figure getRectangle() {
-        double randomMeaningA = random.nextInt(10);
-        double randomMeaningB = random.nextInt(10);
-        return new Rectangle(randomMeaningA, randomMeaningB, colorSupplier.getRandomColor());
-    }
-
-    public Figure getSquare() {
-        double randomMeaningA = random.nextInt(10);
-        return new Square(randomMeaningA, colorSupplier.getRandomColor());
-    }
 
     public Figure getDefaultFigure() {
         return new Circle(10, "WHITE");
     }
 
     public Figure getRandomFigure() {
-        switch (random.nextInt(NUMBER)) {
+        switch (random.nextInt(FIGURES_AMOUNT)) {
             case 1:
                 return getIsoscelesTrapezoid();
             case 2:
@@ -55,6 +26,35 @@ public class FigureSupplier {
             default:
                 return getDefaultFigure();
         }
+    }
+
+    private Figure getIsoscelesTrapezoid() {
+        double randomMeaningA = random.nextInt(10);
+        double randomMeaningB = random.nextInt(10);
+        double randomMeaningC = random.nextInt(10);
+        return new IsoscelesTrapezoid(randomMeaningB, randomMeaningA,
+                randomMeaningC, colorSupplier.getRandomColor());
+    }
+
+    private Figure getCircle() {
+        double randomMeaningR = random.nextInt(10);
+        return new Circle(randomMeaningR, colorSupplier.getRandomColor());
+    }
+
+    private Figure getRightTriangle() {
+        double randomMeaningA = random.nextInt(10);
+        return new RightTriangle(randomMeaningA, colorSupplier.getRandomColor());
+    }
+
+    private Figure getRectangle() {
+        double randomMeaningA = random.nextInt(10);
+        double randomMeaningB = random.nextInt(10);
+        return new Rectangle(randomMeaningA, randomMeaningB, colorSupplier.getRandomColor());
+    }
+
+    private Figure getSquare() {
+        double randomMeaningA = random.nextInt(10);
+        return new Square(randomMeaningA, colorSupplier.getRandomColor());
     }
 }
 

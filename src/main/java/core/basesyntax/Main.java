@@ -7,8 +7,8 @@ public class Main {
         for (int i = figures.length / 2; i < figures.length; i++) {
             figures[i] = figureSupplier.getDefaultFigure();
         }
-        for (int e = 0; e < figures.length / 2; e++) {
-            figures[e] = figureSupplier.getRandomFigure();
+        for (int i = 0; i < figures.length / 2; i++) {
+            figures[i] = figureSupplier.getRandomFigure();
         }
         for (Figure figure: figures) {
             figure.draw();
