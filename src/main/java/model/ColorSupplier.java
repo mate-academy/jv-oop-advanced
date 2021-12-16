@@ -1,7 +1,7 @@
 package model;
 
-public abstract class ColorSupplier {
+public class ColorSupplier {
     public String getRandomColor() {
-        return null;
+        return null; //треба щоб повертав кожного разу випадковий колір.
     }
 }

@@ -16,8 +16,6 @@ public class Circle extends Figure {
     public Object draw() {
         System.out.println("Figure: " + this.getClass().getSimpleName() + ", area: " + getArea()
                 + " sq.units, radius: " + radius + " units, color: " + color);
-        return null;
-    }
+        return;
+    }  /// чому ІДжі просить вернути return statement?
 }
-
-

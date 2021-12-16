@@ -9,8 +9,7 @@ public class Main {
             System.out.println((i + 1) + ". Figure: " + figure[i].draw());
         }
         for (int i = 3; i < 5; i++) {
-            figure[i] = figureSupplier.getDefaultFigure();
-            System.out.print((i + 1) + ". Figure: " + figure[i].draw());
+             figure[i].draw();
         }
     }
 }

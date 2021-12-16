@@ -14,7 +14,7 @@ public class FigureSupplier {
                 System.out.println("Circle");
                 break;
             case 1:
-                System.out.println("IsoscelesTrapezoid");
+                System.out.println("IsoscelesTrapezoid"); ///до чого тут вивід в консоль?
                 break;
             case 2:
                 System.out.println("Rectangle");
@@ -28,7 +28,7 @@ public class FigureSupplier {
             default:
                 break;
         }
-        return getRandomFigure();
+        return getRandomFigure();  //цей метод завжди null повертає, а потрібно щоб повертав об'єкти фігур
     }
 
     public Figure getDefaultFigure() {
