@@ -9,4 +9,5 @@ public class ColorSupplier {
         int index = random.nextInt(ColorsEnum.values().length);
         return ColorsEnum.values()[index];
     }
+
 }

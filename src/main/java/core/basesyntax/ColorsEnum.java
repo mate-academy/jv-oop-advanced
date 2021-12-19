@@ -8,4 +8,5 @@ public enum ColorsEnum {
     YELLOW,
     GREEN,
     PURPLE
+
 }

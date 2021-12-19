@@ -1,7 +1,4 @@
-
 package core.basesyntax;
-
-import java.util.Random;
 
 public class Figure implements FigureInterface, DrawFigure {
     private String color;

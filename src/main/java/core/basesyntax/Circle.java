@@ -1,8 +1,8 @@
 package core.basesyntax;
 
 public class Circle extends Figure implements FigureInterface, DrawFigure {
-    private final int radius;
     private static final int EXPONENTIATION = 2;
+    private final int radius;
 
     public Circle(String color, int radius) {
         super(color);
@@ -44,4 +44,5 @@ public class Circle extends Figure implements FigureInterface, DrawFigure {
                 + getColor()
                 + "\n";
     }
+
 }

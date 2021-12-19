@@ -1,12 +1,9 @@
 package core.basesyntax;
 
-import java.awt.*;
-import java.util.Random;
-
 public class Square extends Figure implements FigureInterface, DrawFigure {
     private final int side;
 
-    public Square(String color ,int side) {
+    public Square(String color, int side) {
         super(color);
         this.side = side;
     }
@@ -15,7 +12,6 @@ public class Square extends Figure implements FigureInterface, DrawFigure {
     public double getFigureArea() {
         return side * side;
     }
-
 
     @Override
     public void drawFigure() {
@@ -46,4 +42,5 @@ public class Square extends Figure implements FigureInterface, DrawFigure {
                 + getColor()
                 + "\n";
     }
+
 }

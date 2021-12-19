@@ -50,4 +50,5 @@ public class Rectangle extends Figure implements FigureInterface, DrawFigure {
                 + getColor()
                 + "\n";
     }
+
 }

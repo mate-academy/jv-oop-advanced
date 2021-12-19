@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import javax.swing.*;
-
 public class IsoscelesTrapezoid extends Figure implements FigureInterface, DrawFigure {
     private final int topBase;
     private final int bottomBase;
@@ -60,4 +58,5 @@ public class IsoscelesTrapezoid extends Figure implements FigureInterface, DrawF
                 + getColor()
                 + "\n";
     }
+
 }

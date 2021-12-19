@@ -9,23 +9,29 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int randomValue = random.nextInt(MAX_RANDOM_VALUE);
+        int value = random.nextInt(MAX_RANDOM_VALUE);
 
         for (int i = 0; i < MAX_NUMBER_RANDOM_FIGURE; i++) {
             if (random.nextInt(MAX_NUMBER_RANDOM_FIGURE) == 1) {
-                return new Rectangle(colorSupplier.getRandomColor().toString(), randomValue, randomValue);
-            }
-            else if (random.nextInt(MAX_NUMBER_RANDOM_FIGURE) == 2) {
-                return new RightTriangle(colorSupplier.getRandomColor().toString(), randomValue);
-            }
-            else if (random.nextInt(MAX_NUMBER_RANDOM_FIGURE) == 3) {
-                return new IsoscelesTrapezoid (colorSupplier.getRandomColor().toString(), randomValue, randomValue, randomValue);
-            }
-            else if (random.nextInt(MAX_NUMBER_RANDOM_FIGURE) == 4) {
-                return new Square(colorSupplier.getRandomColor().toString(), randomValue);
-            }
-            else if (random.nextInt(MAX_NUMBER_RANDOM_FIGURE) == 5) {
-                return new Circle(colorSupplier.getRandomColor().toString(), randomValue);
+                return new Rectangle(colorSupplier
+                        .getRandomColor()
+                        .toString(), value, value);
+            } else if (random.nextInt(MAX_NUMBER_RANDOM_FIGURE) == 2) {
+                return new RightTriangle(colorSupplier
+                        .getRandomColor()
+                        .toString(), value);
+            } else if (random.nextInt(MAX_NUMBER_RANDOM_FIGURE) == 3) {
+                return new IsoscelesTrapezoid(colorSupplier
+                        .getRandomColor()
+                        .toString(), value, value, value);
+            } else if (random.nextInt(MAX_NUMBER_RANDOM_FIGURE) == 4) {
+                return new Square(colorSupplier
+                        .getRandomColor()
+                        .toString(), value);
+            } else if (random.nextInt(MAX_NUMBER_RANDOM_FIGURE) == 5) {
+                return new Circle(colorSupplier
+                        .getRandomColor()
+                        .toString(), value);
             }
         }
         return getRandomFigure();
