@@ -11,30 +11,30 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         int value = random.nextInt(MAX_RANDOM_VALUE);
 
-        for (int i = 0; i < MAX_NUMBER_RANDOM_FIGURE; i++) {
-            if (random.nextInt(MAX_NUMBER_RANDOM_FIGURE) == 1) {
+        switch (random.nextInt(MAX_NUMBER_RANDOM_FIGURE)) {
+            case 1: {
                 return new Rectangle(colorSupplier
                         .getRandomColor()
                         .toString(), value, value);
-            } else if (random.nextInt(MAX_NUMBER_RANDOM_FIGURE) == 2) {
+            } case 2: {
                 return new RightTriangle(colorSupplier
                         .getRandomColor()
                         .toString(), value);
-            } else if (random.nextInt(MAX_NUMBER_RANDOM_FIGURE) == 3) {
+            } case 3: {
                 return new IsoscelesTrapezoid(colorSupplier
                         .getRandomColor()
                         .toString(), value, value, value);
-            } else if (random.nextInt(MAX_NUMBER_RANDOM_FIGURE) == 4) {
+            } case 4: {
                 return new Square(colorSupplier
                         .getRandomColor()
                         .toString(), value);
-            } else if (random.nextInt(MAX_NUMBER_RANDOM_FIGURE) == 5) {
+            } case 5: {
                 return new Circle(colorSupplier
                         .getRandomColor()
                         .toString(), value);
-            }
+            } default:
+                return getRandomFigure();
         }
-        return getRandomFigure();
     }
 
     public Figure getDefaultFigure() {

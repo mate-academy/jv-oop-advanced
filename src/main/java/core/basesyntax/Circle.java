@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements FigureInterface, DrawFigure {
+public class Circle extends Figure {
     private static final int EXPONENTIATION = 2;
     private final int radius;
 
@@ -15,7 +15,7 @@ public class Circle extends Figure implements FigureInterface, DrawFigure {
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println("Figure: Circle"
                 + "\n"
                 + "Figure Area: "
@@ -27,22 +27,6 @@ public class Circle extends Figure implements FigureInterface, DrawFigure {
                 + "Color: "
                 + getColor()
                 + "\n");
-    }
-
-    @Override
-    public String toString() {
-        return "Figure: "
-                + "Circle"
-                + "\n"
-                + "Figure Area: "
-                + getFigureArea()
-                + "\n"
-                + "Radius: "
-                + radius
-                + "\n"
-                + "Color: "
-                + getColor()
-                + "\n";
     }
 
 }

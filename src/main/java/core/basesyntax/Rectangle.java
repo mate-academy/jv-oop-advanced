@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements FigureInterface, DrawFigure {
+public class Rectangle extends Figure {
     private final int height;
     private final int width;
 
@@ -16,7 +16,7 @@ public class Rectangle extends Figure implements FigureInterface, DrawFigure {
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println("Figure: Rectangle"
                 + "\n"
                 + "Figure Area:"
@@ -31,24 +31,6 @@ public class Rectangle extends Figure implements FigureInterface, DrawFigure {
                 + "Color: "
                 + getColor()
                 + "\n");
-    }
-
-    @Override
-    public String toString() {
-        return "Figure: Rectangle"
-                + "\n"
-                + "Figure Area:"
-                + getFigureArea()
-                + "\n"
-                + "HeightRectangle: "
-                + height
-                + "\n"
-                + "WidthRectangle: "
-                + width
-                + "\n"
-                + "Color: "
-                + getColor()
-                + "\n";
     }
 
 }

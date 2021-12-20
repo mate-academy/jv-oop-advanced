@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements FigureInterface, DrawFigure {
+public class IsoscelesTrapezoid extends Figure {
     private final int topBase;
     private final int bottomBase;
     private final int trapezoidHeight;
@@ -18,7 +18,7 @@ public class IsoscelesTrapezoid extends Figure implements FigureInterface, DrawF
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println("Figure: IsoscelesTrapezoid "
                 + "\n"
                 + "Figure Area: "
@@ -36,27 +36,6 @@ public class IsoscelesTrapezoid extends Figure implements FigureInterface, DrawF
                 + "Color: "
                 + getColor()
                 + "\n");
-    }
-
-    @Override
-    public String toString() {
-        return "Figure: IsoscelesTrapezoid "
-                + "\n"
-                + "Figure Area: "
-                + getFigureArea()
-                + "\n"
-                + "TopBase: "
-                + topBase
-                + "\n"
-                + "BottomBase: "
-                + bottomBase
-                + "\n"
-                + "TrapezoidHeight: "
-                + trapezoidHeight
-                + "\n"
-                + "Color: "
-                + getColor()
-                + "\n";
     }
 
 }

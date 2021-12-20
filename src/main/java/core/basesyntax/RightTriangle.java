@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements FigureInterface, DrawFigure {
+public class RightTriangle extends Figure {
     private final int sideLength;
 
     public RightTriangle(String color, int sideLength) {
@@ -15,7 +15,7 @@ public class RightTriangle extends Figure implements FigureInterface, DrawFigure
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println("Figure: Right-Triangle "
                 + "\n"
                 + "Figure Area: "
@@ -27,21 +27,6 @@ public class RightTriangle extends Figure implements FigureInterface, DrawFigure
                 + "Color: "
                 + getColor()
                 + "\n");
-    }
-
-    @Override
-    public String toString() {
-        return "Figure: Right-Triangle "
-                + "\n"
-                + "Figure Area: "
-                + getFigureArea()
-                + "\n"
-                + "Side Length: "
-                + sideLength
-                + "\n"
-                + "Color: "
-                + getColor()
-                + "\n";
     }
 
 }
