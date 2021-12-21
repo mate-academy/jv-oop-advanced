@@ -8,32 +8,49 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figure getRandomFigure() {
-        int value = random.nextInt(MAX_RANDOM_VALUE);
+    private Figure getRandomSquare() {
+        return new Square(colorSupplier.getRandomColor().toString(),
+                random.nextInt(MAX_RANDOM_VALUE));
+    }
 
+    private Figure getRandomRectangle() {
+        return new Rectangle(colorSupplier.getRandomColor().toString(),
+                random.nextInt(MAX_RANDOM_VALUE),
+                random.nextInt(MAX_RANDOM_VALUE));
+    }
+
+    private Figure getRandomRightTriangle() {
+        return new RightTriangle(colorSupplier.getRandomColor().toString(),
+                random.nextInt(MAX_RANDOM_VALUE),
+                random.nextInt(MAX_RANDOM_VALUE));
+    }
+
+    private Figure getRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor().toString(),
+                random.nextInt(MAX_RANDOM_VALUE),
+                random.nextInt(MAX_RANDOM_VALUE),
+                random.nextInt(MAX_RANDOM_VALUE));
+    }
+
+    private Figure getRandomCircle() {
+        return new Circle(colorSupplier.getRandomColor().toString(),
+                random.nextInt(MAX_RANDOM_VALUE));
+    }
+
+    public Figure getRandomFigure() {
         switch (random.nextInt(MAX_NUMBER_RANDOM_FIGURE)) {
             case 1: {
-                return new Rectangle(colorSupplier
-                        .getRandomColor()
-                        .toString(), value, value);
+                return getRandomCircle();
             } case 2: {
-                return new RightTriangle(colorSupplier
-                        .getRandomColor()
-                        .toString(), value);
+                return getRandomSquare();
             } case 3: {
-                return new IsoscelesTrapezoid(colorSupplier
-                        .getRandomColor()
-                        .toString(), value, value, value);
+                return getRandomRectangle();
             } case 4: {
-                return new Square(colorSupplier
-                        .getRandomColor()
-                        .toString(), value);
+                return getRandomRightTriangle();
             } case 5: {
-                return new Circle(colorSupplier
-                        .getRandomColor()
-                        .toString(), value);
+                return getRandomIsoscelesTrapezoid();
             } default:
-                return getRandomFigure();
+                return getDefaultFigure();
         }
     }
 

@@ -9,7 +9,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public double getFigureArea() {
+    public double getArea() {
         return side * side;
     }
 
@@ -17,8 +17,8 @@ public class Square extends Figure {
     public void draw() {
         System.out.println("Figure: Square"
                 + "\n"
-                + "Figure Area: "
-                + getFigureArea()
+                + "Area: "
+                + getArea()
                 + "\n"
                 + "Side A, B: "
                 + side

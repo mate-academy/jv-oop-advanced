@@ -10,7 +10,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double getFigureArea() {
+    public double getArea() {
         return Math.PI * Math.pow(radius, EXPONENTIATION);
     }
 
@@ -18,8 +18,8 @@ public class Circle extends Figure {
     public void draw() {
         System.out.println("Figure: Circle"
                 + "\n"
-                + "Figure Area: "
-                + getFigureArea()
+                + "Area: "
+                + getArea()
                 + "\n"
                 + "Radius: "
                 + radius

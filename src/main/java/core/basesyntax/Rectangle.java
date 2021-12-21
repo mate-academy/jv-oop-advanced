@@ -11,7 +11,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double getFigureArea() {
+    public double getArea() {
         return width * height;
     }
 
@@ -19,8 +19,8 @@ public class Rectangle extends Figure {
     public void draw() {
         System.out.println("Figure: Rectangle"
                 + "\n"
-                + "Figure Area:"
-                + getFigureArea()
+                + "Area:"
+                + getArea()
                 + "\n"
                 + "HeightRectangle: "
                 + height
