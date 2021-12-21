@@ -4,7 +4,7 @@ public class RightTriangle extends Figure {
     private final int triangleHeight;
     private final int triangleBase;
 
-    public RightTriangle(String color, int triangleHeight , int triangleBase) {
+    public RightTriangle(String color, int triangleHeight, int triangleBase) {
         super(color);
         this.triangleHeight = triangleHeight;
         this.triangleBase = triangleBase;
@@ -12,7 +12,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public double getArea() {
-        return (double) 1/2 * triangleBase * triangleHeight;
+        return (double) 1 / 2 * triangleBase * triangleHeight;
     }
 
     @Override
