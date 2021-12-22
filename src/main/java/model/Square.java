@@ -3,8 +3,12 @@ package model;
 public class Square extends Figure {
     private int side;
 
-    public Square(int side) {
+    public Square(int side, String color) {
         this.side = side;
+        setColor(color);
+    }
+
+    public Square() {
     }
 
     @Override
@@ -13,9 +17,9 @@ public class Square extends Figure {
     }
 
     @Override
-    public Object draw() {
+    public void draw() {
         System.out.println("Figure: " + this.getClass().getSimpleName() + ", area: " + getArea()
-                + " sq.units, side: " + side + " units, color: " + color);
-        return null;
+                + " sq.units, side: " + side + " units, color: " + getColor());
     }
 }
+

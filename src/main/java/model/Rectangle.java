@@ -1,12 +1,16 @@
 package model;
 
 public class Rectangle extends Figure {
-    private final int side1;
-    private final int side2;
+    private int side1;
+    private int side2;
 
-    public Rectangle(int side1, int side2) {
+    public Rectangle(int side1, int side2, String color) {
         this.side1 = side1;
         this.side2 = side2;
+        setColor(color);
+    }
+
+    public Rectangle() {
     }
 
     @Override
@@ -15,9 +19,8 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public Object draw() {
+    public void draw() {
         System.out.println("Figure:" + this.getClass().getSimpleName() + ",area:" + getArea()
-                + "sq.units, side1:" + side1 + "units, side2: " + side2 + "units, color:" + color);
-        return null;
+                + "sq.units,side1:" + side1 + "units,side2:" + side2 + "units,color:" + getColor());
     }
 }

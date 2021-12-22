@@ -1,5 +1,5 @@
 package model;
 
 public interface Drawable {
-    Object draw();
+    void draw();
 }

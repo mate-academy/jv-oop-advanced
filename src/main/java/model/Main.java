@@ -4,13 +4,20 @@ public class Main {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figure = new Figure[5];
-        for (int i = 0; i < 3; i++) {
-            figure[i] = figureSupplier.getRandomFigure();
-            System.out.println((i + 1) + ". Figure: " + figure[i].draw());
+        for (int i = 0; i < figure.length; i++) {
+            if (i < figure.length / 2) {
+                figure[i] = figureSupplier.getRandomFigure();
+            } else {
+                figure[i] = figureSupplier.getDefaultFigure();
+            }
         }
-        for (int i = 3; i < 5; i++) {
-             figure[i].draw();
+        for (Figure f: figure) {
+            f.draw();
         }
     }
 }
 
+/*створити об*єкт ColorSupplier
+ColorSupplier supplier = new ColorSupplier();
+System.out.println(supplier.getRandomColorOfFigure);
+ */

@@ -1,10 +1,14 @@
 package model;
 
 public class Circle extends Figure {
-    private final int radius;
+    private int radius;
 
-    public Circle(int radius) {
+    public Circle(int radius, String color) {
         this.radius = radius;
+        setColor(color);
+    }
+
+    public Circle() {
     }
 
     @Override
@@ -13,9 +17,8 @@ public class Circle extends Figure {
     }
 
     @Override
-    public Object draw() {
+    public void draw() {
         System.out.println("Figure: " + this.getClass().getSimpleName() + ", area: " + getArea()
-                + " sq.units, radius: " + radius + " units, color: " + color);
-        return;
-    }  /// чому ІДжі просить вернути return statement?
+                + " sq.units, radius: " + radius + " units, color: " + getColor());
+    }
 }
