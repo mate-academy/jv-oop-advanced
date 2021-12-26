@@ -28,11 +28,6 @@ public class FigureSupplier {
                         random.nextInt(MAX_SIZE));
                 break;
             }
-            case CIRCLE: {
-                retVal = new Circle(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_SIZE));
-                break;
-            }
             case TRAPEZOID: {
                 retVal = new Trapezoid(colorSupplier.getRandomColor(),
                         random.nextInt(MAX_SIZE),
@@ -40,12 +35,40 @@ public class FigureSupplier {
                         random.nextInt(MAX_SIZE));
                 break;
             }
-            default: break;
+            default: {
+                retVal = new Circle(colorSupplier.getRandomColor(),
+                        random.nextInt(MAX_SIZE));
+                break;
+            }
         }
         return retVal;
     }
 
     public Figure getDefaultFigure() {
         return new Circle("white", 10);
+    }
+
+    private int getRandomInt(Random random) {
+        if (random != null) {
+            return random.nextInt(MAX_SIZE);
+        } else {
+            return (new Random()).nextInt(MAX_SIZE);
+        }
+    }
+
+    private Circle getRandomCircle() {
+        ColorSupplier colorSupplier = new ColorSupplier();
+        String color = colorSupplier.getRandomColor();
+        Random random = new Random();
+        int radius = getRandomInt(random);
+        return new Circle(color, radius);
+    }
+
+    private Square getSquareCircle() {
+        ColorSupplier colorSupplier = new ColorSupplier();
+        String color = colorSupplier.getRandomColor();
+        Random random = new Random();
+        int side = getRandomInt(random);
+        return new Square(color, side);
     }
 }
