@@ -17,7 +17,9 @@ public class Triangle extends Figure {
 
     @Override
     public String draw() {
-         return "Figure: triangle, area: " + formatDouble(area(),1) + " sq.units, firstLeg: " + formatDouble(firstLeg)
-                 + " units, " + "secondLeg: " + formatDouble(secondLeg) + " units, color: " + getColor();
+        return "Figure: triangle, area: " + formatDouble(area(),1)
+                 + " sq.units, firstLeg: " + formatDouble(firstLeg)
+                 + " units, " + "secondLeg: " + formatDouble(secondLeg)
+                 + " units, color: " + getColor();
     }
 }
