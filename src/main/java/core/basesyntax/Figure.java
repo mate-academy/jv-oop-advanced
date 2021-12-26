@@ -1,20 +1,17 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public abstract class Figure implements AreaCalculator, DrawMethod {
     private String color;
 
     public Figure(String color) {
         this.color = color;
     }
 
-    public abstract double area();
-
-    public abstract String draw();
-
     public final String getColor() {
         return color;
     }
 
+    // formatting methods added here, because these used in all subclasses
     public final String formatDouble(double value, int dec) {
         if (dec >= 0) {
             return String.format("%." + dec + "f", value);
