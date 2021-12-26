@@ -10,19 +10,19 @@ public class FigureSupplier {
         Figures figure = Figures.values()[random.nextInt(Figures.values().length)];
         switch (figure) {
             case SQUARE: {
-                return getRandomSquare();
+                return getRandomSquare(random);
             }
             case RECTANGLE: {
-                return getRandomRectangle();
+                return getRandomRectangle(random);
             }
             case TRIANGLE: {
-                return getRandomTriangle();
+                return getRandomTriangle(random);
             }
             case TRAPEZOID: {
-                return getRandomTrapezoid();
+                return getRandomTrapezoid(random);
             }
             default: {
-                return getRandomCircle();
+                return getRandomCircle(random);
             }
         }
     }
@@ -39,46 +39,41 @@ public class FigureSupplier {
         }
     }
 
-    private Square getRandomSquare() {
+    private Square getRandomSquare(Random random) {
         ColorSupplier colorSupplier = new ColorSupplier();
         String color = colorSupplier.getRandomColor();
-        Random random = new Random();
         int side = getRandomInt(random);
         return new Square(color, side);
     }
 
-    private Rectangle getRandomRectangle() {
+    private Rectangle getRandomRectangle(Random random) {
         ColorSupplier colorSupplier = new ColorSupplier();
         String color = colorSupplier.getRandomColor();
-        Random random = new Random();
         int sideA = getRandomInt(random);
         int sideB = getRandomInt(random);
         return new Rectangle(color, sideA, sideB);
     }
 
-    private Triangle getRandomTriangle() {
+    private Triangle getRandomTriangle(Random random) {
         ColorSupplier colorSupplier = new ColorSupplier();
         String color = colorSupplier.getRandomColor();
-        Random random = new Random();
         int firstLeg = getRandomInt(random);
         int secondLeg = getRandomInt(random);
         return new Triangle(color, firstLeg, secondLeg);
     }
 
-    private Trapezoid getRandomTrapezoid() {
+    private Trapezoid getRandomTrapezoid(Random random) {
         ColorSupplier colorSupplier = new ColorSupplier();
         String color = colorSupplier.getRandomColor();
-        Random random = new Random();
         int baseA = getRandomInt(random);
         int baseB = getRandomInt(random);
         int leg = getRandomInt(random);
         return new Trapezoid(color, baseA, baseB, leg);
     }
 
-    private Circle getRandomCircle() {
+    private Circle getRandomCircle(Random random) {
         ColorSupplier colorSupplier = new ColorSupplier();
         String color = colorSupplier.getRandomColor();
-        Random random = new Random();
         int radius = getRandomInt(random);
         return new Circle(color, radius);
     }
