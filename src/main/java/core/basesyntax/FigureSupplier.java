@@ -6,42 +6,25 @@ public class FigureSupplier {
     static final int MAX_SIZE = 11;
 
     public Figure getRandomFigure() {
-        Figure retVal = null;
-        ColorSupplier colorSupplier = new ColorSupplier();
         Random random = new Random();
         Figures figure = Figures.values()[random.nextInt(Figures.values().length)];
         switch (figure) {
             case SQUARE: {
-                retVal = new Square(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_SIZE));
-                break;
+                return getRandomSquare();
             }
             case RECTANGLE: {
-                retVal = new Rectangle(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_SIZE),
-                        random.nextInt(MAX_SIZE));
-                break;
+                return getRandomRectangle();
             }
             case TRIANGLE: {
-                retVal = new Triangle(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_SIZE),
-                        random.nextInt(MAX_SIZE));
-                break;
+                return getRandomTriangle();
             }
             case TRAPEZOID: {
-                retVal = new Trapezoid(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_SIZE),
-                        random.nextInt(MAX_SIZE),
-                        random.nextInt(MAX_SIZE));
-                break;
+                return getRandomTrapezoid();
             }
             default: {
-                retVal = new Circle(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_SIZE));
-                break;
+                return getRandomCircle();
             }
         }
-        return retVal;
     }
 
     public Figure getDefaultFigure() {
@@ -56,19 +39,47 @@ public class FigureSupplier {
         }
     }
 
+    private Square getRandomSquare() {
+        ColorSupplier colorSupplier = new ColorSupplier();
+        String color = colorSupplier.getRandomColor();
+        Random random = new Random();
+        int side = getRandomInt(random);
+        return new Square(color, side);
+    }
+
+    private Rectangle getRandomRectangle() {
+        ColorSupplier colorSupplier = new ColorSupplier();
+        String color = colorSupplier.getRandomColor();
+        Random random = new Random();
+        int sideA = getRandomInt(random);
+        int sideB = getRandomInt(random);
+        return new Rectangle(color, sideA, sideB);
+    }
+
+    private Triangle getRandomTriangle() {
+        ColorSupplier colorSupplier = new ColorSupplier();
+        String color = colorSupplier.getRandomColor();
+        Random random = new Random();
+        int firstLeg = getRandomInt(random);
+        int secondLeg = getRandomInt(random);
+        return new Triangle(color, firstLeg, secondLeg);
+    }
+
+    private Trapezoid getRandomTrapezoid() {
+        ColorSupplier colorSupplier = new ColorSupplier();
+        String color = colorSupplier.getRandomColor();
+        Random random = new Random();
+        int baseA = getRandomInt(random);
+        int baseB = getRandomInt(random);
+        int leg = getRandomInt(random);
+        return new Trapezoid(color, baseA, baseB, leg);
+    }
+
     private Circle getRandomCircle() {
         ColorSupplier colorSupplier = new ColorSupplier();
         String color = colorSupplier.getRandomColor();
         Random random = new Random();
         int radius = getRandomInt(random);
         return new Circle(color, radius);
-    }
-
-    private Square getSquareCircle() {
-        ColorSupplier colorSupplier = new ColorSupplier();
-        String color = colorSupplier.getRandomColor();
-        Random random = new Random();
-        int side = getRandomInt(random);
-        return new Square(color, side);
     }
 }
