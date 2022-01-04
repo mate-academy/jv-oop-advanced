@@ -7,52 +7,72 @@ public class FigureSupplier {
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figure getDefaultFigure() {
-        String color = Color.WHITE.toString();
-        Circle circle = new Circle(color, 10);
-
-        return circle;
-    }
-
     public Figure getRandomFigure() {
 
         switch (random.nextInt(5)) {
             case 1: {
-                String color = colorSupplier.getRandomColor();
-                int property = random.nextInt();
-
-                return new Circle(color, property);
+                return getRandomCircle();
             }
             case 2: {
-                String color = colorSupplier.getRandomColor();
-                int firstProperty = random.nextInt();
-                int secondProperty = random.nextInt();
-
-                return new IsoscelesTrapezoid(color, firstProperty, secondProperty);
+                return getRandomIsoscelesTrapezoid();
             }
             case 3: {
-                String color = colorSupplier.getRandomColor();
-                int firstProperty = random.nextInt();
-                int secondProperty = random.nextInt();
-
-                return new Rectangle(color, firstProperty, secondProperty);
+                return getRandomRectangle();
             }
             case 4: {
-                String color = colorSupplier.getRandomColor();
-                int firstProperty = random.nextInt();
-                int secondProperty = random.nextInt();
-
-                return new RightTriangle(color, firstProperty, secondProperty);
+                return getRandomRightTriangle();
             }
             case 5: {
-                String color = colorSupplier.getRandomColor();
-                int property = random.nextInt();
-
-                return new Square(color, property);
+                return getRandomSquare();
             }
             default: {
                 return getDefaultFigure();
             }
         }
+    }
+
+    public Figure getRandomCircle() {
+        String color = colorSupplier.getRandomColor();
+        int radius = random.nextInt(10);
+
+        return new Circle(color, radius);
+    }
+
+    public Figure getRandomIsoscelesTrapezoid() {
+        String color = colorSupplier.getRandomColor();
+        int firstParallelSide = random.nextInt(10);
+        int secondParallelSide = random.nextInt(10);
+        int height = random.nextInt(10);
+
+        return new IsoscelesTrapezoid(color, firstParallelSide, secondParallelSide, height);
+    }
+
+    public Figure getRandomRectangle() {
+        String color = colorSupplier.getRandomColor();
+        int firstLeg = random.nextInt(10);
+        int secondLeg = random.nextInt(10);
+
+        return new Rectangle(color, firstLeg, secondLeg);
+    }
+
+    public Figure getRandomRightTriangle() {
+        String color = colorSupplier.getRandomColor();
+        int firstLeg = random.nextInt(10);
+        int secondLeg = random.nextInt(10);
+
+        return new RightTriangle(color, firstLeg, secondLeg);
+    }
+
+    public Figure getRandomSquare() {
+        String color = colorSupplier.getRandomColor();
+        int side = random.nextInt(10);
+
+        return new Square(color, side);
+    }
+
+    public Figure getDefaultFigure() {
+        String color = Color.WHITE.toString();
+
+        return new Circle(color, 10);
     }
 }
