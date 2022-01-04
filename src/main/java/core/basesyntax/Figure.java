@@ -1,28 +1,13 @@
 package core.basesyntax;
 
-public abstract class Figure {
-    private String color = new ColorSupplier().getRandomColor();
-    private int firstProperties;
-    private int secondProperties;
+public abstract class Figure implements Drawable, AreaCalculator {
+    private String color;
 
-    public Figure(int firstProperties) {
-        this.firstProperties = firstProperties;
-    }
-
-    public Figure(int firstProperties, int secondProperties) {
-        this.firstProperties = firstProperties;
-        this.secondProperties = secondProperties;
+    public Figure(String color) {
+        this.color = color;
     }
 
     public String getColor() {
         return color;
-    }
-
-    public int getFirstProperties() {
-        return firstProperties;
-    }
-
-    public int getSecondProperties() {
-        return secondProperties;
     }
 }

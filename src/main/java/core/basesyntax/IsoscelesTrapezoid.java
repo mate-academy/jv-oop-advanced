@@ -1,18 +1,29 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements ObtainArea {
+public class IsoscelesTrapezoid extends Figure {
+    private int firstProperty;
+    private int secondProperties;
 
-    public IsoscelesTrapezoid(int firstProperties, int secondProperties) {
-        super(firstProperties, secondProperties);
+    public IsoscelesTrapezoid(String color) {
+        super(color);
+    }
+
+    public IsoscelesTrapezoid(String color, int firstProperty, int secondProperties) {
+        super(color);
+        this.firstProperty = firstProperty;
+        this.secondProperties = secondProperties;
     }
 
     @Override
-    public void getArea() {
-        int firstProperty = IsoscelesTrapezoid.this.getFirstProperties();
-        int secondProperties = IsoscelesTrapezoid.this.getSecondProperties();
-        int area = (firstProperty + secondProperties) / 2;
-        String color = IsoscelesTrapezoid.this.getColor();
+    public int getArea() {
+        return (firstProperty + secondProperties) / 2;
+    }
 
-        System.out.println("Figure: isosceles trapezoid, area: " + area + " sq. , color: " + color);
+    @Override
+    public void draw() {
+        int area = getArea();
+        String color = getColor();
+
+        System.out.println("Figure: isosceles trapezoid, area: " + area + ", color: " + color);
     }
 }

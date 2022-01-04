@@ -1,16 +1,27 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements ObtainArea {
+public class Circle extends Figure {
+    private int radius;
 
-    public Circle(int firstProperties) {
-        super(firstProperties);
+    public Circle(String color) {
+        super(color);
+    }
+
+    public Circle(String color, int radius) {
+        super(color);
+        this.radius = radius;
     }
 
     @Override
-    public void getArea() {
-        int diameter = 2 * Circle.this.getFirstProperties();
-        String color = Circle.this.getColor();
+    public int getArea() {
+        return 2 * radius;
+    }
 
-        System.out.println("Figure: circle, area: " + diameter + " diameter, color: " + color);
+    @Override
+    public void draw() {
+        int area = getArea();
+        String color = getColor();
+
+        System.out.println("Figure: circle, area: " + area + ", color: " + color);
     }
 }

@@ -5,9 +5,11 @@ import java.util.Random;
 public class FigureSupplier {
 
     private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getDefaultFigure() {
-        Circle circle = new Circle(10);
+        String color = Color.WHITE.toString();
+        Circle circle = new Circle(color, 10);
 
         return circle;
     }
@@ -16,19 +18,37 @@ public class FigureSupplier {
 
         switch (random.nextInt(5)) {
             case 1: {
-                return new Circle(random.nextInt());
+                String color = colorSupplier.getRandomColor();
+                int property = random.nextInt();
+
+                return new Circle(color, property);
             }
             case 2: {
-                return new IsoscelesTrapezoid(random.nextInt(), random.nextInt());
+                String color = colorSupplier.getRandomColor();
+                int firstProperty = random.nextInt();
+                int secondProperty = random.nextInt();
+
+                return new IsoscelesTrapezoid(color, firstProperty, secondProperty);
             }
             case 3: {
-                return new Rectangle(random.nextInt(), random.nextInt());
+                String color = colorSupplier.getRandomColor();
+                int firstProperty = random.nextInt();
+                int secondProperty = random.nextInt();
+
+                return new Rectangle(color, firstProperty, secondProperty);
             }
             case 4: {
-                return new RightTriangle(random.nextInt(), random.nextInt());
+                String color = colorSupplier.getRandomColor();
+                int firstProperty = random.nextInt();
+                int secondProperty = random.nextInt();
+
+                return new RightTriangle(color, firstProperty, secondProperty);
             }
             case 5: {
-                return new Square(random.nextInt());
+                String color = colorSupplier.getRandomColor();
+                int property = random.nextInt();
+
+                return new Square(color, property);
             }
             default: {
                 return getDefaultFigure();

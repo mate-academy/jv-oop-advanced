@@ -1,18 +1,29 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements ObtainArea {
+public class RightTriangle extends Figure {
+    private int firstProperty;
+    private int secondProperties;
 
-    public RightTriangle(int firstProperties, int secondProperties) {
-        super(firstProperties, secondProperties);
+    public RightTriangle(String color) {
+        super(color);
+    }
+
+    public RightTriangle(String color, int firstProperty, int secondProperties) {
+        super(color);
+        this.firstProperty = firstProperty;
+        this.secondProperties = secondProperties;
     }
 
     @Override
-    public void getArea() {
-        int firstProperty = RightTriangle.this.getFirstProperties();
-        int secondProperties = RightTriangle.this.getSecondProperties();
-        int area = (firstProperty * secondProperties) / 2;
-        String color = RightTriangle.this.getColor();
+    public int getArea() {
+        return (firstProperty * secondProperties) / 2;
+    }
 
-        System.out.println("Figure: right triangle, area: " + area + " sq. , color: " + color);
+    @Override
+    public void draw() {
+        int area = getArea();
+        String color = getColor();
+
+        System.out.println("Figure: right triangle, area: " + area + ", color: " + color);
     }
 }
