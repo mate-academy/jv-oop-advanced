@@ -14,7 +14,7 @@ public class Main {
             }
         }
         for (Figure figure: figures) {
-            figure.getDraw();
+            figure.draw();
         }
     }
 }
