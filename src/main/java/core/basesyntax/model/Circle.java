@@ -1,11 +1,7 @@
-package core.basesyntax;
+package core.basesyntax.model;
 
 public class Circle extends Figure {
     private int radius;
-
-    public Circle(String color) {
-        super(color);
-    }
 
     public Circle(String color, int radius) {
         super(color);
@@ -19,9 +15,10 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
+        String name = getClass().getSimpleName();
         double area = getArea();
         String color = getColor();
 
-        System.out.println("Figure: circle, area: " + area + " radius, color: " + color);
+        System.out.println("Figure: " + name + ", area: " + area + " eq. units, color: " + color);
     }
 }

@@ -1,5 +1,12 @@
-package core.basesyntax;
+package core.basesyntax.suppliers;
 
+import core.basesyntax.model.Circle;
+import core.basesyntax.model.Color;
+import core.basesyntax.model.Figure;
+import core.basesyntax.model.IsoscelesTrapezoid;
+import core.basesyntax.model.Rectangle;
+import core.basesyntax.model.RightTriangle;
+import core.basesyntax.model.Square;
 import java.util.Random;
 
 public class FigureSupplier {
@@ -9,20 +16,20 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
 
-        switch (random.nextInt(5)) {
-            case 1: {
+        switch (random.nextInt(4)) {
+            case 0: {
                 return getRandomCircle();
             }
-            case 2: {
+            case 1: {
                 return getRandomIsoscelesTrapezoid();
             }
-            case 3: {
+            case 2: {
                 return getRandomRectangle();
             }
-            case 4: {
+            case 3: {
                 return getRandomRightTriangle();
             }
-            case 5: {
+            case 4: {
                 return getRandomSquare();
             }
             default: {
@@ -40,27 +47,27 @@ public class FigureSupplier {
 
     public Figure getRandomIsoscelesTrapezoid() {
         String color = colorSupplier.getRandomColor();
-        int firstParallelSide = random.nextInt(10);
-        int secondParallelSide = random.nextInt(10);
+        int topBase = random.nextInt(10);
+        int bottomBase = random.nextInt(10);
         int height = random.nextInt(10);
 
-        return new IsoscelesTrapezoid(color, firstParallelSide, secondParallelSide, height);
+        return new IsoscelesTrapezoid(color, topBase, bottomBase, height);
     }
 
     public Figure getRandomRectangle() {
         String color = colorSupplier.getRandomColor();
-        int firstLeg = random.nextInt(10);
-        int secondLeg = random.nextInt(10);
+        int wight = random.nextInt(10);
+        int length = random.nextInt(10);
 
-        return new Rectangle(color, firstLeg, secondLeg);
+        return new Rectangle(color, wight, length);
     }
 
     public Figure getRandomRightTriangle() {
         String color = colorSupplier.getRandomColor();
-        int firstLeg = random.nextInt(10);
-        int secondLeg = random.nextInt(10);
+        int base = random.nextInt(10);
+        int height = random.nextInt(10);
 
-        return new RightTriangle(color, firstLeg, secondLeg);
+        return new RightTriangle(color, base, height);
     }
 
     public Figure getRandomSquare() {

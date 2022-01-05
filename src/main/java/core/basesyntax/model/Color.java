@@ -1,9 +1,11 @@
-package core.basesyntax;
+package core.basesyntax.model;
 
 public enum Color {
     RED,
     YELLOW,
     BLACK,
     WHITE,
-    BLUE
+    BLUE,
+    GREEN,
+    ORANGE
 }
