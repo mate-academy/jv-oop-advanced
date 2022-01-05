@@ -1,9 +1,8 @@
 public abstract class Figure implements AreaCalculator, FigureSketch {
-
     private String color;
-    private String figureType;
+    private FigureType figureType;
 
-    public Figure(String color,String figureType) {
+    public Figure(String color,FigureType figureType) {
         this.color = color;
         this.figureType = figureType;
     }
@@ -12,18 +11,16 @@ public abstract class Figure implements AreaCalculator, FigureSketch {
         return color;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public String getFigureType() {
-
+    public FigureType getFigureType() {
         return figureType;
     }
 
-    public void setFigureType() {
-
-        this.figureType = figureType;
+    public enum FigureType {
+        SQUARE,
+        RECTANGLE,
+        TRIANGLE,
+        CIRCLE,
+        TRAPEZOID,
+        RHOMBUS
     }
-
 }

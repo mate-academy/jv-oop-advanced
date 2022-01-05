@@ -6,7 +6,6 @@ public class Main {
             figuresArray[i] = figureSupplier.getRandomFigure();
             figuresArray[i].drawFigure();
         }
-
         for (int i = figuresArray.length / 2; i < figuresArray.length; i++) {
             figuresArray[i] = figureSupplier.getDefaultFigure();
             figuresArray[i].drawFigure();

@@ -1,30 +1,12 @@
+import java.util.Locale;
+
 public class Rectangle extends Figure {
     private int length;
     private int width;
 
-    public Rectangle(String color, String figureType, int length, int width) {
+    public Rectangle(String color, FigureType figureType, int length, int width) {
         super(color,figureType);
         this.length = length;
-        this.width = width;
-    }
-
-    public int getLength() {
-
-        return length;
-    }
-
-    public void setLength(int length) {
-
-        this.length = length;
-    }
-
-    public int getWidth() {
-
-        return width;
-    }
-
-    public void setWidth(int width) {
-
         this.width = width;
     }
 
@@ -35,11 +17,11 @@ public class Rectangle extends Figure {
 
     @Override
     public void drawFigure() {
-        System.out.println("Figure: " + getFigureType() + "," + " area: "
+        System.out.println("Figure: "
+                + String.valueOf(getFigureType()).toLowerCase(Locale.ROOT) + "," + " area: "
                 + Math.round(getArea() * 100.0) / 100.0 + " sq.units, "
                 + " length: " + length + " units, "
                 + " width: " + width + " units, "
                 + " color: " + getColor());
     }
-
 }

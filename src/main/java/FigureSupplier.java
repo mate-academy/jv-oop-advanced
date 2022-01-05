@@ -1,4 +1,3 @@
-import java.util.Locale;
 import java.util.Random;
 
 public class FigureSupplier {
@@ -11,14 +10,14 @@ public class FigureSupplier {
 
     public Figure getRandomCircle() {
         Figure circle = new Circle(colorSupplier.getRandomColor(),
-                String.valueOf(Figures.CIRCLE).toLowerCase(Locale.ROOT),
+                Figure.FigureType.CIRCLE,
                 random.nextInt(MAX_RANDOM_BOUND_LIMIT));
         return circle;
     }
 
     public Figure getRandomIsoscelesTrapezoid() {
         Figure isoscelesTrapezoid = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                String.valueOf(Figures.TRAPEZOID).toLowerCase(Locale.ROOT),
+                Figure.FigureType.TRAPEZOID,
                 random.nextInt(MAX_RANDOM_BOUND_LIMIT),
                 random.nextInt(MAX_RANDOM_BOUND_LIMIT), random.nextInt(MAX_RANDOM_BOUND_LIMIT));
         return isoscelesTrapezoid;
@@ -26,7 +25,7 @@ public class FigureSupplier {
 
     public Figure getRandomRectangle() {
         Figure rectangle = new Rectangle(colorSupplier.getRandomColor(),
-                String.valueOf(Figures.RECTANGLE).toLowerCase(Locale.ROOT),
+                Figure.FigureType.RECTANGLE,
                 random.nextInt(MAX_RANDOM_BOUND_LIMIT),
                 random.nextInt(MAX_RANDOM_BOUND_LIMIT));
         return rectangle;
@@ -34,7 +33,7 @@ public class FigureSupplier {
 
     public Figure getRandomRhombus() {
         Figure rhombus = new Rhombus(colorSupplier.getRandomColor(),
-                String.valueOf(Figures.RHOMBUS).toLowerCase(Locale.ROOT),
+                Figure.FigureType.RHOMBUS,
                 random.nextInt(MAX_RANDOM_BOUND_LIMIT),
                 random.nextInt(MAX_RANDOM_BOUND_LIMIT));
         return rhombus;
@@ -42,7 +41,7 @@ public class FigureSupplier {
 
     public Figure getRandomRightTriangle() {
         Figure triangle = new RightTriangle(colorSupplier.getRandomColor(),
-                String.valueOf(Figures.TRIANGLE).toLowerCase(Locale.ROOT),
+                Figure.FigureType.TRIANGLE,
                 random.nextInt(MAX_RANDOM_BOUND_LIMIT),
                 random.nextInt(MAX_RANDOM_BOUND_LIMIT));
         return triangle;
@@ -50,9 +49,16 @@ public class FigureSupplier {
 
     public Figure getRandomSquare() {
         Figure square = new Square(colorSupplier.getRandomColor(),
-                String.valueOf(Figures.SQUARE).toLowerCase(Locale.ROOT),
+                Figure.FigureType.SQUARE,
                 random.nextInt(MAX_RANDOM_BOUND_LIMIT));
         return square;
+    }
+
+    public Figure getDefaultFigure() {
+        Figure circle = new Circle(DEFAULT_COLOR,
+                Figure.FigureType.CIRCLE,
+                DEFAULT_CIRCLE_RADIUS);
+        return circle;
     }
 
     public Figure getRandomFigure() {
@@ -68,15 +74,10 @@ public class FigureSupplier {
                 return getRandomRhombus();
             case 5:
                 return getRandomRightTriangle();
-            default:
+            case 6:
                 return getRandomSquare();
+            default:
+                return getDefaultFigure();
         }
-    }
-
-    public Figure getDefaultFigure() {
-        Figure circle = new Circle(DEFAULT_COLOR,
-                String.valueOf(Figures.CIRCLE).toLowerCase(Locale.ROOT),
-                DEFAULT_CIRCLE_RADIUS);
-        return circle;
     }
 }
