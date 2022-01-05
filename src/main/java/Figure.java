@@ -1,4 +1,4 @@
-public abstract class Figure implements AreaCalculator, FigureSketch{
+public abstract class Figure implements AreaCalculator, FigureSketch {
 
     private String color;
     private String figureType;
@@ -7,7 +7,6 @@ public abstract class Figure implements AreaCalculator, FigureSketch{
         this.color = color;
         this.figureType = figureType;
     }
-
 
     public String getColor() {
         return color;
@@ -18,10 +17,12 @@ public abstract class Figure implements AreaCalculator, FigureSketch{
     }
 
     public String getFigureType() {
+
         return figureType;
     }
 
     public void setFigureType() {
+
         this.figureType = figureType;
     }
 

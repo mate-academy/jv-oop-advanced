@@ -7,14 +7,14 @@ public class Circle extends Figure {
     }
 
     public double getRadius() {
+
         return radius;
     }
 
     public double setRadius(double radius) {
         this.radius = radius;
-        return  radius;
+        return radius;
     }
-
 
     @Override
     public double getArea() {
@@ -24,9 +24,8 @@ public class Circle extends Figure {
 
     @Override
     public void drawFigure() {
-        System.out.println("Figure: " + getFigureType() + "," + " area: " + Math.round(getArea()*100.0)/100.0 + " sq.units," +
-               " radius: " + radius + " units," + " color: " + getColor());
+        System.out.println("Figure: " + getFigureType() + "," + " area: "
+                + Math.round(getArea() * 100.0) / 100.0 + " sq.units,"
+                + " radius: " + radius + " units," + " color: " + getColor());
     }
-
-
 }
