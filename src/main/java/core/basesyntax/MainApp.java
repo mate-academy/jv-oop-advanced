@@ -15,7 +15,6 @@ public class MainApp {
     public static final Figure[] figures = new Figure[HALF_SIZE * 2];
 
     public static void main(String[] args) {
-
         for (int i = 0; i < HALF_SIZE; i++) {
             try {
                 figures[i] = figureSupplier.getRandomFigure();
