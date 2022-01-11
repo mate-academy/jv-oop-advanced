@@ -8,21 +8,22 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class MainApp {
-    public static void main(String[] args) {
-        int n = 5;
-        Random random = new Random();
-        ColorSupplier colorSupplier = new ColorSupplier(random);
-        FigureSupplier figureSupplier = new FigureSupplier(random, colorSupplier);
-        Figure[] figures = new Figure[n * 2];
+    public static final Random random = new Random();
+    public static final ColorSupplier colorSupplier = new ColorSupplier(random);
+    public static final FigureSupplier figureSupplier = new FigureSupplier(random, colorSupplier);
+    public static final int HALF_SIZE = 5;
+    public static final Figure[] figures = new Figure[HALF_SIZE * 2];
 
-        for (int i = 0; i < n; i++) {
+    public static void main(String[] args) {
+
+        for (int i = 0; i < HALF_SIZE; i++) {
             try {
                 figures[i] = figureSupplier.getRandomFigure();
             } catch (NoSuchMethodException | InvocationTargetException | InstantiationException
                     | IllegalAccessException e) {
                 e.printStackTrace();
             }
-            figures[i + n] = figureSupplier.getDefaultFigure();
+            figures[i + HALF_SIZE] = figureSupplier.getDefaultFigure();
         }
 
         Arrays.stream(figures).forEach(System.out::println);
