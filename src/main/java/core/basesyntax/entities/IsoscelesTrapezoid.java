@@ -1,8 +1,5 @@
 package core.basesyntax.entities;
 
-import core.basesyntax.service.ColorSupplier;
-import java.util.Random;
-
 public class IsoscelesTrapezoid extends Figure {
     private Double angle;
     private Integer upperBase;
@@ -12,8 +9,13 @@ public class IsoscelesTrapezoid extends Figure {
     public IsoscelesTrapezoid() {
     }
 
-    public IsoscelesTrapezoid(Random random) {
-        this.random = random;
+    public IsoscelesTrapezoid(Color color, Double angle, Integer upperBase, Integer lowerBase,
+                              Integer side) {
+        super(color);
+        this.angle = angle;
+        this.upperBase = upperBase;
+        this.lowerBase = lowerBase;
+        this.side = side;
     }
 
     public Double getAngle() {
@@ -49,33 +51,28 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    double getArea() {
+    public double getArea() {
         return side * Math.sin(angle) * (lowerBase - side * Math.cos(angle));
     }
 
     @Override
-    double getPerimeter() {
+    public double getPerimeter() {
         return COEFFICIENT_TWO * side + upperBase + lowerBase;
     }
 
     @Override
-    public String toString() {
-        return "Figure: IsoscelesTrapezoid, area: " + getArea() + " sq.units"
+    public void draw() {
+        System.out.println("Figure: IsoscelesTrapezoid, area: " + getArea() + " sq.units"
                 + ", perimeter: " + getPerimeter()
                 + ", angle: " + angle
                 + ", upper base: " + upperBase
                 + ", lower base: " + lowerBase
                 + ", side: " + side
-                + ", color: " + color;
+                + ", color: " + getColor());
     }
 
     @Override
-    public Figure setRandomProperties(ColorSupplier colorSupplier) {
-        super.setRandomProperties(colorSupplier);
-        this.angle = DOUBLE_BOUND * random.nextDouble();
-        this.lowerBase = random.nextInt(BOUND);
-        this.upperBase = random.nextInt(BOUND);
-        this.side = random.nextInt(BOUND);
-        return this;
+    public Figure clone() {
+        return new IsoscelesTrapezoid(getColor(), angle, upperBase, lowerBase, side);
     }
 }

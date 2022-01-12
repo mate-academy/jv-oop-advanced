@@ -1,8 +1,5 @@
 package core.basesyntax.entities;
 
-import core.basesyntax.service.ColorSupplier;
-import java.util.Random;
-
 public class Rectangle extends Figure {
     private Integer base;
     private Integer side;
@@ -10,8 +7,10 @@ public class Rectangle extends Figure {
     public Rectangle() {
     }
 
-    public Rectangle(Random random) {
-        this.random = random;
+    public Rectangle(Color color, Integer base, Integer side) {
+        super(color);
+        this.base = base;
+        this.side = side;
     }
 
     public Integer getBase() {
@@ -31,29 +30,26 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    double getArea() {
+    public double getArea() {
         return base * side;
     }
 
     @Override
-    double getPerimeter() {
+    public double getPerimeter() {
         return COEFFICIENT_TWO * (base + side);
     }
 
     @Override
-    public String toString() {
-        return "Figure: Rectangle, area: " + getArea() + " sq.units"
+    public void draw() {
+        System.out.println("Figure: Rectangle, area: " + getArea() + " sq.units"
                 + ", perimeter: " + getPerimeter()
                 + ", base: " + base
                 + ", side: " + side
-                + ", color: " + color;
+                + ", color: " + getColor());
     }
 
     @Override
-    public Figure setRandomProperties(ColorSupplier colorSupplier) {
-        super.setRandomProperties(colorSupplier);
-        this.side = random.nextInt(BOUND);
-        this.base = random.nextInt(BOUND);
-        return this;
+    public Figure clone() {
+        return new Rectangle(getColor(), base, side);
     }
 }

@@ -1,8 +1,5 @@
 package core.basesyntax.entities;
 
-import core.basesyntax.service.ColorSupplier;
-import java.util.Random;
-
 public class RightTriangle extends Figure {
     private Integer firstLeg;
     private Integer secondLeg;
@@ -11,8 +8,11 @@ public class RightTriangle extends Figure {
     public RightTriangle() {
     }
 
-    public RightTriangle(Random random) {
-        this.random = random;
+    public RightTriangle(Color color, Integer firstLeg, Integer secondLeg, Integer hypotenuse) {
+        super(color);
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
+        this.hypotenuse = hypotenuse;
     }
 
     public Integer getFirstLeg() {
@@ -40,31 +40,27 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    double getArea() {
+    public double getArea() {
         return (double) firstLeg * secondLeg / COEFFICIENT_TWO;
     }
 
     @Override
-    double getPerimeter() {
+    public double getPerimeter() {
         return firstLeg + secondLeg + hypotenuse;
     }
 
     @Override
-    public String toString() {
-        return "Figure: RightTriangle, area: " + getArea() + " sq.units"
+    public void draw() {
+        System.out.println("Figure: RightTriangle, area: " + getArea() + " sq.units"
                 + ", perimeter: " + getPerimeter()
                 + ", firstLeg: " + firstLeg
                 + ", secondLeg: " + secondLeg
                 + ", hypotenuse:" + hypotenuse
-                + ", color: " + color;
+                + ", color: " + getColor());
     }
 
     @Override
-    public Figure setRandomProperties(ColorSupplier colorSupplier) {
-        super.setRandomProperties(colorSupplier);
-        this.firstLeg = random.nextInt(BOUND);
-        this.secondLeg = random.nextInt(BOUND);
-        this.hypotenuse = random.nextInt(BOUND);
-        return this;
+    public Figure clone() {
+        return new RightTriangle(getColor(), firstLeg, secondLeg, hypotenuse);
     }
 }

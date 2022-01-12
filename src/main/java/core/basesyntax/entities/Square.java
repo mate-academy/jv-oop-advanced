@@ -1,8 +1,5 @@
 package core.basesyntax.entities;
 
-import core.basesyntax.service.ColorSupplier;
-import java.util.Random;
-
 public class Square extends Figure {
     private static final int NUMBER_OF_SIDES = 4;
     private Integer side;
@@ -10,14 +7,14 @@ public class Square extends Figure {
     public Square() {
     }
 
-    public Square(Random random) {
-        this.random = random;
+    public Square(Color color, Integer side) {
+        super(color);
+        this.side = side;
     }
 
-    public Square(Random random, Integer side, String color) {
-        this.random = random;
+    public Square(Integer side, Color color) {
         this.side = side;
-        this.color = color;
+        this.setColor(color);
     }
 
     public Integer getSide() {
@@ -29,27 +26,25 @@ public class Square extends Figure {
     }
 
     @Override
-    double getArea() {
+    public double getArea() {
         return side * side;
     }
 
     @Override
-    double getPerimeter() {
+    public double getPerimeter() {
         return side * NUMBER_OF_SIDES;
     }
 
     @Override
-    public String toString() {
-        return "Figure: Square, area: " + getArea() + " sq.units"
+    public void draw() {
+        System.out.println("Figure: Square, area: " + getArea() + " sq.units"
                 + ", perimeter: " + getPerimeter()
                 + ", side: " + side
-                + ", color: " + color;
+                + ", color: " + getColor());
     }
 
     @Override
-    public Figure setRandomProperties(ColorSupplier colorSupplier) {
-        super.setRandomProperties(colorSupplier);
-        this.side = random.nextInt(BOUND);
-        return this;
+    public Figure clone() {
+        return new Square(getColor(), side);
     }
 }

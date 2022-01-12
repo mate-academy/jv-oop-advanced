@@ -1,16 +1,14 @@
 package core.basesyntax.entities;
 
-import core.basesyntax.service.ColorSupplier;
-import java.util.Random;
-
 public class Circle extends Figure {
     private Integer radius;
 
     public Circle() {
     }
 
-    public Circle(Random random) {
-        this.random = random;
+    public Circle(Color color, Integer radius) {
+        super(color);
+        this.radius = radius;
     }
 
     public Integer getRadius() {
@@ -22,27 +20,25 @@ public class Circle extends Figure {
     }
 
     @Override
-    double getArea() {
+    public double getArea() {
         return Math.PI * (radius ^ COEFFICIENT_TWO);
     }
 
     @Override
-    double getPerimeter() {
+    public double getPerimeter() {
         return Math.PI * radius * COEFFICIENT_TWO;
     }
 
     @Override
-    public String toString() {
-        return "Figure: Circle, area: " + getArea() + " sq.units"
+    public void draw() {
+        System.out.println("Figure: Circle, area: " + getArea() + " sq.units"
                 + ", perimeter: " + getPerimeter()
                 + ", radius: " + radius
-                + ", color: " + color;
+                + ", color: " + getColor());
     }
 
     @Override
-    public Figure setRandomProperties(ColorSupplier colorSupplier) {
-        super.setRandomProperties(colorSupplier);
-        this.radius = random.nextInt(BOUND);
-        return this;
+    public Figure clone() {
+        return new Circle(getColor(), radius);
     }
 }
