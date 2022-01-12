@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
 
-        Figures[] array = new Figures[6];
+        Figures[] array = new Figures[10];
         int halfArray = array.length / 2;
 
         for (int i = 0; i < array.length; i++) {

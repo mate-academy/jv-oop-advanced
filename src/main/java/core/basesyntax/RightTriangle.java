@@ -15,7 +15,7 @@ public class RightTriangle extends Figures implements Behaviour {
 
     @Override
     public double getArea() {
-        return (secondLeg * firstLeg) / 2;
+        return  ((double) secondLeg * (double) firstLeg) / 2;
     }
 
     @Override

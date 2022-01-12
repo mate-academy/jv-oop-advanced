@@ -37,16 +37,16 @@ public class FigureSupplier {
             case 3 :
                 Rectangle rectangle = new Rectangle();
                 rectangle.setColor(colorSupplier.getRandomColor());
-                int randomSideA = random.nextInt(FIGURE_MAX_VALUE);
-                int randomSideB = random.nextInt(FIGURE_MAX_VALUE);
+                int randomSideA = random.nextInt(FIGURE_MAX_VALUE) + 1;
+                int randomSideB = random.nextInt(FIGURE_MAX_VALUE) + 1;
                 rectangle.setSideA(randomSideA);
                 rectangle.setSideB(randomSideB);
                 return rectangle;
             case 4 :
                 RightTriangle rightTriangle = new RightTriangle();
                 rightTriangle.setColor(colorSupplier.getRandomColor());
-                int randomFirstLeg = random.nextInt(FIGURE_MAX_VALUE);
-                int randomSecondLeg = random.nextInt(FIGURE_MAX_VALUE);
+                int randomFirstLeg = random.nextInt(FIGURE_MAX_VALUE) + 1;
+                int randomSecondLeg = random.nextInt(FIGURE_MAX_VALUE) + 1;
                 rightTriangle.setFirstLeg(randomFirstLeg);
                 rightTriangle.setSecondLeg(randomSecondLeg);
                 return rightTriangle;
