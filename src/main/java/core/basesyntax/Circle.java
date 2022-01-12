@@ -5,7 +5,7 @@ public class Circle extends Figures implements Behaviour {
     private final String name = "circle";
 
     public Circle() {
-        }
+    }
 
     public void setRadius(int radius) {
         this.radius = radius;
