@@ -4,7 +4,8 @@ public class Circle extends Figures implements Behaviour {
     private int radius;
     private final String name = "circle";
 
-    public Circle() { } // needed for default Figure
+    public Circle() {
+        }
 
     public void setRadius(int radius) {
         this.radius = radius;
@@ -15,13 +16,9 @@ public class Circle extends Figures implements Behaviour {
         return 3.14 * radius * radius;
     }
 
-//    @Override
-//    public String setColor() {
-//        return super.setColor();
-//    }
-
     @Override
     public String toString() {
-        return "Figure: " + name + ", area: " + getArea() + " sq.units, radius: " + radius + " units, color: " + getColor();
+        return "Figure: " + name + ", area: " + getArea() + " sq.units, radius: " + radius
+                + " units, color: " + getColor();
     }
 }
