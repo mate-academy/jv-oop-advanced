@@ -4,10 +4,6 @@ public class Square extends Figures implements Behaviour {
     private int side;
     private final String name = "square";
 
-    public int getSide() {
-        return side;
-    }
-
     public void setSide(int side) {
         this.side = side;
     }
@@ -19,6 +15,7 @@ public class Square extends Figures implements Behaviour {
 
     @Override
     public String toString() {
-        return "Figure: " + name + ", area: " + getArea() + " sq.units, side: " + side + " units, color: " + getColor();
+        return "Figure: " + name + ", area: " + getArea() + " sq.units, side: " + side
+                + " units, color: " + getColor();
     }
 }

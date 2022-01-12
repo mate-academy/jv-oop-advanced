@@ -3,21 +3,14 @@ package core.basesyntax;
 public class Rectangle extends Figures implements Behaviour {
     private int sideA;
     private int sideB;
+    private final String name = "rectangle";
 
-    public int getSideA() {
-        return sideA;
+    public void setSideB(int sideB) {
+        this.sideB = sideB;
     }
 
     public void setSideA(int sideA) {
         this.sideA = sideA;
-    }
-
-    public int getSideB() {
-        return sideB;
-    }
-
-    public void setSideB(int sideB) {
-        this.sideB = sideB;
     }
 
     @Override
@@ -25,5 +18,11 @@ public class Rectangle extends Figures implements Behaviour {
         return sideA * sideB;
     }
 
+    @Override
+    public String toString() {
+        return "Figure: " + name + ", area: " + getArea() + " sq.units, side A: " + sideA
+                + " units, side B: " + sideB
+                + " units, color: " + getColor();
+    }
 
 }
