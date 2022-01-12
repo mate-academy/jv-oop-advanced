@@ -43,7 +43,7 @@ public class FigureSupplier {
                 rectangle.setSideA(randomSideA);
                 rectangle.setSideB(randomSideB);
                 return rectangle;
-            case 4 :
+            default :
                 RightTriangle rightTriangle = new RightTriangle();
                 rightTriangle.setColor(colorSupplier.getRandomColor());
                 int randomFirstLeg = random.nextInt(figureMaxValue) + 1;
@@ -51,7 +51,6 @@ public class FigureSupplier {
                 rightTriangle.setFirstLeg(randomFirstLeg);
                 rightTriangle.setSecondLeg(randomSecondLeg);
                 return rightTriangle;
-            default : return null;
         }
     }
 
