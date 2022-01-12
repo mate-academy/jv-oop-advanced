@@ -24,5 +24,4 @@ public class Rectangle extends Figures implements Behaviour {
                 + " units, side B: " + sideB
                 + " units, color: " + getColor();
     }
-
 }

@@ -11,7 +11,6 @@ public class FigureSupplier {
 
     public Figures getRandomFigure() {
         int randomFigureNumber = random.nextInt(figureCount);
-        Figures result;
         switch (randomFigureNumber) {
             case 0 :
                 Square square = new Square();

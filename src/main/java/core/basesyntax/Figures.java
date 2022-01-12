@@ -7,10 +7,6 @@ public abstract class Figures {
         return this.color = color;
     }
 
-    public String setColor() {
-        return color;
-    }
-
     public String getColor() {
         return color;
     }
