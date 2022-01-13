@@ -15,14 +15,9 @@ public class MainApp {
     private static final int HALF_SIZE = 5;
     private static final Figure[] figures = new Figure[HALF_SIZE * 2];
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
         for (int i = 0; i < HALF_SIZE; i++) {
-            try {
-                figures[i] = figureSupplier.getRandomFigure();
-            } catch (NoSuchMethodException | InvocationTargetException | InstantiationException
-                    | IllegalAccessException e) {
-                throw new RuntimeException("There was an error while creating a random figure", e);
-            }
+            figures[i] = figureSupplier.getRandomFigure();
             figures[i + HALF_SIZE] = figureSupplier.getDefaultFigure();
         }
 
