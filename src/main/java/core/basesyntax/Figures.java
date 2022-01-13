@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figures {
+public abstract class Figures implements AreaGetter {
     private String color;
 
     public String setColor(String color) {

@@ -1,6 +1,5 @@
 package core.basesyntax;
 
-public interface Behaviour {
+public interface AreaGetter {
     double getArea();
-
 }

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figures implements Behaviour {
+public class RightTriangle extends Figures {
     private int firstLeg;
     private int secondLeg;
     private final String name = "right triangle";

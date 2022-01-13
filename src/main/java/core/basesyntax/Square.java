@@ -1,12 +1,20 @@
 package core.basesyntax;
 
-public class Square extends Figures implements Behaviour {
+public class Square extends Figures {
     private int side;
     private final String name = "square";
 
     public void setSide(int side) {
         this.side = side;
     }
+
+    //    Square getRandomSquare(Square square, ColorSupplier colorSupplier,
+    //    Random random, int VALUE) {
+    //        square.setColor(colorSupplier.getRandomColor());
+    //        int randomSide = random.nextInt(VALUE) + 1;
+    //        square.setSide(randomSide);
+    //        return square;
+    //    }
 
     @Override
     public double getArea() {
