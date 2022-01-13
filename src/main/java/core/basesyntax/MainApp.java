@@ -15,7 +15,8 @@ public class MainApp {
     private static final int HALF_SIZE = 5;
     private static final Figure[] figures = new Figure[HALF_SIZE * 2];
 
-    public static void main(String[] args) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
+    public static void main(String[] args) throws InvocationTargetException, NoSuchMethodException,
+            InstantiationException, IllegalAccessException {
         for (int i = 0; i < HALF_SIZE; i++) {
             figures[i] = figureSupplier.getRandomFigure();
             figures[i + HALF_SIZE] = figureSupplier.getDefaultFigure();
