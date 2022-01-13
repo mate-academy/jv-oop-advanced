@@ -8,14 +8,6 @@ public class Square extends Figures {
         this.side = side;
     }
 
-    //    Square getRandomSquare(Square square, ColorSupplier colorSupplier,
-    //    Random random, int VALUE) {
-    //        square.setColor(colorSupplier.getRandomColor());
-    //        int randomSide = random.nextInt(VALUE) + 1;
-    //        square.setSide(randomSide);
-    //        return square;
-    //    }
-
     @Override
     public double getArea() {
         return side * side;
