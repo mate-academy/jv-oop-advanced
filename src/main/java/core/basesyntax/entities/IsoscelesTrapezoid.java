@@ -1,6 +1,7 @@
 package core.basesyntax.entities;
 
 public class IsoscelesTrapezoid extends Figure {
+    private static final Integer COEFFICIENT_TWO = 2;
     private Double angle;
     private Integer upperBase;
     private Integer lowerBase;

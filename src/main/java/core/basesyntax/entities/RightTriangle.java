@@ -1,6 +1,7 @@
 package core.basesyntax.entities;
 
 public class RightTriangle extends Figure {
+    private static final Integer COEFFICIENT_TWO = 2;
     private Integer firstLeg;
     private Integer secondLeg;
     private Integer hypotenuse;

@@ -1,6 +1,7 @@
 package core.basesyntax.entities;
 
 public class Circle extends Figure {
+    private static final Integer COEFFICIENT_TWO = 2;
     private Integer radius;
 
     public Circle() {
