@@ -7,7 +7,6 @@ import core.basesyntax.entities.IsoscelesTrapezoid;
 import core.basesyntax.entities.Rectangle;
 import core.basesyntax.entities.RightTriangle;
 import core.basesyntax.entities.Square;
-import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Random;
 
@@ -30,8 +29,7 @@ public class FigureSupplier {
         figures.put(4, new Square());
     }
 
-    public Figure getRandomFigure() throws NoSuchMethodException, InvocationTargetException,
-            InstantiationException, IllegalAccessException {
+    public Figure getRandomFigure() {
         return setRandomProperties(figures.get(random.nextInt(figures.size())));
     }
 
