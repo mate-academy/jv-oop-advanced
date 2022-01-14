@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends Figure implements DrawIt, AreaCalculator {
+public class Square extends Figure {
     private double sideA;
 
     public String getFig() {

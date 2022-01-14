@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Isoscelestrapezoid extends Figure implements DrawIt, AreaCalculator {
+public class Isoscelestrapezoid extends Figure {
     private double upperside;
     private double lowerside;
     private double side;

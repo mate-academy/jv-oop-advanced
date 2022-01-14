@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements DrawIt, AreaCalculator {
+public class Circle extends Figure {
     private double radius;
 
     public String getFig() {
