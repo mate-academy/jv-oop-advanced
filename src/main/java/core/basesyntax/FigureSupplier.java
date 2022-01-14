@@ -20,8 +20,8 @@ public class FigureSupplier {
 
     public Figure getDefaultFigure() {
         Circle circleDefault = new Circle(10);
-        circle.setName("circle");
-        circle.setColor("white");
-        return circle;
+        circleDefault.setName("circle");
+        circleDefault.setColor("white");
+        return circleDefault;
     }
 }
