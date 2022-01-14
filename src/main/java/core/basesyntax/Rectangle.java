@@ -19,6 +19,11 @@ public class Rectangle extends Figures {
     }
 
     @Override
+    public void draw(Figures figure) {
+        System.out.println(figure);
+    }
+
+    @Override
     public String toString() {
         return "Figure: " + name + ", area: " + getArea() + " sq.units, side A: " + sideA
                 + " units, side B: " + sideB
