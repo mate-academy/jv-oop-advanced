@@ -1,4 +1,4 @@
-public class Rectangle extends Figure implements Draw {
+public class Rectangle extends Figure {
     private int height;
     private int wigth;
 

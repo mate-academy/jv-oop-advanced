@@ -1,4 +1,4 @@
-public class IsoscelesTrapezoid extends Figure implements Draw {
+public class IsoscelesTrapezoid extends Figure {
     private int side1;
     private int side2;
     private int height;

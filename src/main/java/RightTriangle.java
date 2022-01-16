@@ -1,4 +1,4 @@
-public class RightTriangle extends Figure implements Draw {
+public class RightTriangle extends Figure {
     private int side;
     private int height;
 

@@ -1,7 +1,4 @@
-import java.util.Random;
-
-public class Circle extends Figure implements Draw {
-    private Random random = new Random();
+public class Circle extends Figure {
     private int radius;
 
     public int getRadius() {
