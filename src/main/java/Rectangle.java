@@ -1,4 +1,4 @@
-public class Rectangle extends Figure {
+public class Rectangle extends Figure implements AreaCalculator {
     private int height;
     private int wigth;
 

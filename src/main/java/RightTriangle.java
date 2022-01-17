@@ -1,4 +1,4 @@
-public class RightTriangle extends Figure {
+public class RightTriangle extends Figure implements AreaCalculator {
     private int side;
     private int height;
 

@@ -22,7 +22,6 @@ public class FigureSupplier {
         Square square = new Square();
         square.setSide(random.nextInt(10));
         square.setColor(colorSupplier.getRandomColor());
-        square.getArea();
         return square;
     }
 
@@ -30,7 +29,6 @@ public class FigureSupplier {
         Circle circle = new Circle();
         circle.setRadius(random.nextInt(9));
         circle.setColor(colorSupplier.getRandomColor());
-        circle.getArea();
         return circle;
     }
 
@@ -39,7 +37,6 @@ public class FigureSupplier {
         rectangle.setHeight(random.nextInt(5));
         rectangle.setWigth(random.nextInt(10));
         rectangle.setColor(colorSupplier.getRandomColor());
-        rectangle.getArea();
         return rectangle;
     }
 
@@ -49,7 +46,6 @@ public class FigureSupplier {
         isoscelesTrapezoid.setSide2(random.nextInt(10));
         isoscelesTrapezoid.setHeight(random.nextInt(10));
         isoscelesTrapezoid.setColor(colorSupplier.getRandomColor());
-        isoscelesTrapezoid.getArea();
         return isoscelesTrapezoid;
     }
 
@@ -58,7 +54,6 @@ public class FigureSupplier {
         rightTriangle.setHeight(random.nextInt(10));
         rightTriangle.setSide(random.nextInt(10));
         rightTriangle.setColor(colorSupplier.getRandomColor());
-        rightTriangle.getArea();
         return rightTriangle;
     }
 

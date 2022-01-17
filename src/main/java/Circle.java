@@ -1,4 +1,4 @@
-public class Circle extends Figure {
+public class Circle extends Figure implements AreaCalculator {
     private int radius;
 
     public int getRadius() {

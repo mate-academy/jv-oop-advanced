@@ -1,4 +1,4 @@
-public class Square extends Figure {
+public class Square extends Figure implements AreaCalculator {
     private double side;
     private double area = getArea();
 

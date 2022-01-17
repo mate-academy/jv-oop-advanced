@@ -1,4 +1,4 @@
-public class IsoscelesTrapezoid extends Figure {
+public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
     private int side1;
     private int side2;
     private int height;
