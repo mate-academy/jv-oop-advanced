@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Rectangle extends Figure {
     private int sideA;
     private int sideB;

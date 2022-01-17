@@ -6,6 +6,33 @@ public class FigureSupplier {
     private ColorSupplier color = new ColorSupplier();
     private Random random = new Random();
 
+    public Figure getRandomFigure() {
+        int figureNumber = random.nextInt(5);
+
+        switch (figureNumber) {
+            case 0:
+                return getRandomCircle();
+            case 1:
+                return getRandomSquare();
+            case 2:
+                return getRandomRectangle();
+            case 3:
+                return getRandomIsoscelesTrapezoid();
+            case 4:
+                return getRandomRightTriangle();
+            default:
+                return getDefaultFigure();
+        }
+    }
+
+    public Figure getDefaultFigure() {
+        Circle circleDefault = new Circle();
+        circleDefault.setRadius(10);
+        circleDefault.setName("circle");
+        circleDefault.setColor("white");
+        return circleDefault;
+    }
+
     private Figure getRandomCircle() {
         Circle circle = new Circle();
         circle.setName("circle");
@@ -48,34 +75,6 @@ public class FigureSupplier {
         trapezoid.setSideB(random.nextInt(100));
         trapezoid.setSideC(random.nextInt(100));
         return trapezoid;
-    }
-
-    public Figure getRandomFigure() {
-        int figureNumber = random.nextInt(5);
-
-        switch (figureNumber) {
-            case 0:
-                return getRandomCircle();
-            case 1:
-                return getRandomSquare();
-            case 2:
-                return getRandomRectangle();
-            case 3:
-                return getRandomIsoscelesTrapezoid();
-            case 4:
-                return getRandomRightTriangle();
-            default:
-                break;
-        }
-        return null;
-    }
-
-    public Figure getDefaultFigure() {
-        Circle circleDefault = new Circle();
-        circleDefault.setRadius(10);
-        circleDefault.setName("circle");
-        circleDefault.setColor("white");
-        return circleDefault;
     }
 }
 
