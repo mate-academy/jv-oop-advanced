@@ -1,7 +1,10 @@
 package core.basesyntax;
 
-import core.basesyntax.figures.*;
-
+import core.basesyntax.figures.Circle;
+import core.basesyntax.figures.IsoscelesTrapezoid;
+import core.basesyntax.figures.Rectangle;
+import core.basesyntax.figures.Square;
+import core.basesyntax.figures.Triangle;
 import java.util.Random;
 
 class FigureSupplier {
@@ -35,11 +38,12 @@ class FigureSupplier {
                 Figure circle = new Circle(random.nextInt(50));
                 circle.setColor(colorSupplier.getRandomColor());
                 return circle;
-            }
-            default:
+            } default: {
                 return null;
+            }
         }
     }
+
     Figure getDefaultFigure() {
         Figure circle = new Circle(10);
         circle.setColor("White");
