@@ -3,9 +3,34 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int FIGURES_QUANTITY = 5;
     private Random random = new Random();
     private ColorSupplier color = new ColorSupplier();
-    static final int FIGURESQUANTITY = 5;
+
+    public Figure getRandomFigure() {
+        Random rand = new Random();
+        switch (rand.nextInt(FIGURES_QUANTITY)) {
+            case 0:
+                return getRandomSquare();
+            case 1:
+                return getRandomRectangle();
+            case 2:
+                return getRandomRightTriangle();
+            case 3:
+                return getRandomCircle();
+            case 4:
+                return getRandomTrapezoid();
+            default:
+                return getDefaultFigure();
+        }
+    }
+
+    public Figure getDefaultFigure() {
+        Circle defaultFigure = new Circle();
+        defaultFigure.setRadius(10);
+        defaultFigure.setColor("WHITE");
+        return defaultFigure;
+    }
 
     private Square getRandomSquare() {
         Square square = new Square();
@@ -44,30 +69,5 @@ public class FigureSupplier {
         isoscelestrapezoid.setSide(random.nextInt(100));
         isoscelestrapezoid.setColor(color.getRandomColor());
         return isoscelestrapezoid;
-    }
-
-    public Figure getRandomFigure() {
-        Random rand = new Random();
-        switch (rand.nextInt(FIGURESQUANTITY)) {
-            case 0:
-                return getRandomSquare();
-            case 1:
-                return getRandomRectangle();
-            case 2:
-                return getRandomRightTriangle();
-            case 3:
-                return getRandomCircle();
-            case 4:
-                return getRandomTrapezoid();
-            default:
-                return getDefaultFigure();
-        }
-    }
-
-    public static Figure getDefaultFigure() {
-        Circle defaultFigure = new Circle();
-        defaultFigure.setRadius(10);
-        defaultFigure.setColor("WHITE");
-        return defaultFigure;
     }
 }

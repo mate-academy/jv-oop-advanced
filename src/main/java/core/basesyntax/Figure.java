@@ -13,5 +13,5 @@ public abstract class Figure implements DrawIt, AreaCalculator {
 
     public String getFigureType() {
         return getClass().getSimpleName();
-    };
+    }
 }

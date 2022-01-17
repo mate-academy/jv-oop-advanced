@@ -27,7 +27,7 @@ public class Rectangle extends Figure {
 
     @Override
     public String toDraw() {
-        return "Figure: " + getFigureType() + ", area: " + getArea() + " sq.units, side a: " + getSide_a()
-                + " units, side b: " + getSide_b() + " units, color: " + getColor();
+        return "Figure: " + getFigureType() + ", area: " + getArea() + " sq.units, side a: "
+                + getSide_a() + " units, side b: " + getSide_b() + " units, color: " + getColor();
     }
 }
