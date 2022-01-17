@@ -4,10 +4,6 @@ public class Righttriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
-    public String getFig() {
-        return "right triangle";
-    }
-
     public double getFirstLeg() {
         return firstLeg;
     }
@@ -31,7 +27,7 @@ public class Righttriangle extends Figure {
 
     @Override
     public String toDraw() {
-        return "Figure: " + getFig() + ", area: " + getArea() + " sq.units, first leg: "
+        return "Figure: " + getFigureType() + ", area: " + getArea() + " sq.units, first leg: "
                 + getFirstLeg() + " units, second leg: " + getSecondLeg()
                 + " units, color: " + getColor();
     }

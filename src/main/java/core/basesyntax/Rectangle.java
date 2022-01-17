@@ -4,10 +4,6 @@ public class Rectangle extends Figure {
     private double sideA;
     private double sideB;
 
-    public String getFig() {
-        return "rectangle";
-    }
-
     public double getSide_a() {
         return sideA;
     }
@@ -31,7 +27,7 @@ public class Rectangle extends Figure {
 
     @Override
     public String toDraw() {
-        return "Figure: " + getFig() + ", area: " + getArea() + " sq.units, side a: " + getSide_a()
+        return "Figure: " + getFigureType() + ", area: " + getArea() + " sq.units, side a: " + getSide_a()
                 + " units, side b: " + getSide_b() + " units, color: " + getColor();
     }
 }

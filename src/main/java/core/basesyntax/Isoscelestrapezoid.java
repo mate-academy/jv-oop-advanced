@@ -5,10 +5,6 @@ public class Isoscelestrapezoid extends Figure {
     private double lowerside;
     private double side;
 
-    public String getFig() {
-        return "isosceles trapezoid";
-    }
-
     public double getUpper_side() {
         return upperside;
     }
@@ -42,7 +38,7 @@ public class Isoscelestrapezoid extends Figure {
 
     @Override
     public String toDraw() {
-        return "Figure: " + getFig() + ", area: " + getArea() + " sq.units, upper side: "
+        return "Figure: " + getFigureType() + ", area: " + getArea() + " sq.units, upper side: "
                 + getUpper_side() + " units, lower side: " + getLower_side()
                 + " units, side: " + getSide() + " units, color: " + getColor();
     }

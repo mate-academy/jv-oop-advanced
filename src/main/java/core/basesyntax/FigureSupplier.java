@@ -3,87 +3,68 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private Random rand = new Random();
-    private ColorSupplier col = new ColorSupplier();
+    private Random random = new Random();
+    private ColorSupplier color = new ColorSupplier();
+    static final int FIGURESQUANTITY = 5;
 
-    public Random getRand() {
-        return rand;
-    }
-
-    public void setRand(Random rand) {
-        this.rand = rand;
-    }
-
-    public ColorSupplier getCol() {
-        return col;
-    }
-
-    public void setCol(ColorSupplier col) {
-        this.col = col;
-    }
-
-    public Square squareIni() {
+    private Square getRandomSquare() {
         Square square = new Square();
-        square.setSide_a(rand.nextInt(100));
-        square.setColor(col.getRandomColor());
+        square.setSide_a(random.nextInt(100));
+        square.setColor(color.getRandomColor());
         return square;
     }
 
-    public Rectangle rectangleIni() {
+    private Rectangle getRandomRectangle() {
         Rectangle rectangle = new Rectangle();
-        rectangle.setSide_a(rand.nextInt(100));
-        rectangle.setSide_b(rand.nextInt(100));
-        rectangle.setColor(col.getRandomColor());
+        rectangle.setSide_a(random.nextInt(100));
+        rectangle.setSide_b(random.nextInt(100));
+        rectangle.setColor(color.getRandomColor());
         return rectangle;
     }
 
-    public Righttriangle righttriangleIni() {
+    private Righttriangle getRandomRightTriangle() {
         Righttriangle righttriangle = new Righttriangle();
-        righttriangle.setFirstLeg(rand.nextInt(100));
-        righttriangle.setSecondLeg(rand.nextInt(100));
-        righttriangle.setColor(col.getRandomColor());
+        righttriangle.setFirstLeg(random.nextInt(100));
+        righttriangle.setSecondLeg(random.nextInt(100));
+        righttriangle.setColor(color.getRandomColor());
         return righttriangle;
     }
 
-    public Circle circleIni() {
+    private Circle getRandomCircle() {
         Circle circle = new Circle();
-        circle.setRadius(rand.nextInt(100));
-        circle.setColor(col.getRandomColor());
+        circle.setRadius(random.nextInt(100));
+        circle.setColor(color.getRandomColor());
         return circle;
     }
 
-    public Isoscelestrapezoid isoscelestrapezoidIni() {
+    private Isoscelestrapezoid getRandomTrapezoid() {
         Isoscelestrapezoid isoscelestrapezoid = new Isoscelestrapezoid();
-        isoscelestrapezoid.setUpper_side(rand.nextInt(100));
-        isoscelestrapezoid.setLower_side(rand.nextInt(100));
-        isoscelestrapezoid.setSide(rand.nextInt(100));
-        isoscelestrapezoid.setColor(col.getRandomColor());
+        isoscelestrapezoid.setUpper_side(random.nextInt(100));
+        isoscelestrapezoid.setLower_side(random.nextInt(100));
+        isoscelestrapezoid.setSide(random.nextInt(100));
+        isoscelestrapezoid.setColor(color.getRandomColor());
         return isoscelestrapezoid;
     }
 
-    public static Figure getRandomFigure() {
+    public Figure getRandomFigure() {
         Random rand = new Random();
-        FigureSupplier figure = new FigureSupplier();
-        int figuresQuantity = 5;
-        switch (rand.nextInt(figuresQuantity) + 1) {
+        switch (rand.nextInt(FIGURESQUANTITY)) {
+            case 0:
+                return getRandomSquare();
             case 1:
-                return figure.squareIni();
+                return getRandomRectangle();
             case 2:
-                return figure.rectangleIni();
+                return getRandomRightTriangle();
             case 3:
-                return figure.righttriangleIni();
+                return getRandomCircle();
             case 4:
-                return figure.circleIni();
-            case 5:
-                return figure.isoscelestrapezoidIni();
+                return getRandomTrapezoid();
             default:
-                break;
+                return getDefaultFigure();
         }
-
-        return null;
     }
 
-    public Figure getDefaultFigure() {
+    public static Figure getDefaultFigure() {
         Circle defaultFigure = new Circle();
         defaultFigure.setRadius(10);
         defaultFigure.setColor("WHITE");

@@ -3,10 +3,6 @@ package core.basesyntax;
 public class Square extends Figure {
     private double sideA;
 
-    public String getFig() {
-        return "square";
-    }
-
     public double getSide_a() {
         return sideA;
     }
@@ -17,7 +13,7 @@ public class Square extends Figure {
 
     @Override
     public String toDraw() {
-        return "Figure: " + getFig() + ", area: " + getArea() + " sq.units, side: " + getSide_a()
+        return "Figure: " + getFigureType() + ", area: " + getArea() + " sq.units, side: " + getSide_a()
                 + " units, color: " + getColor();
     }
 

@@ -11,5 +11,7 @@ public abstract class Figure implements DrawIt, AreaCalculator {
         this.color = color;
     }
 
-    public abstract String getFig();
+    public String getFigureType() {
+        return getClass().getSimpleName();
+    };
 }
