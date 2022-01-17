@@ -2,19 +2,15 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class Circle extends Figure implements GetArea {
-    private ColorSupplier color = new ColorSupplier();
-    private Random random = new Random();
+public class Circle extends Figure {
     private int radius;
 
-    public Circle() {
-        setName("circle");
-        setColor(color.getRandomColor().toString());
-        this.radius = random.nextInt(100);
+    public void setRadius(int radius) {
+        this.radius = radius;
     }
 
-    public Circle(int radius) {
-        this.radius = radius;
+    public int getRadius() {
+        return radius;
     }
 
     @Override

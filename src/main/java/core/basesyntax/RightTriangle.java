@@ -2,17 +2,24 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class RightTriangle extends Figure implements GetArea {
-    private Random random = new Random();
-    private ColorSupplier color = new ColorSupplier();
+public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
-    public RightTriangle() {
-        setName("triangle");
-        setColor(color.getRandomColor().toString());
-        this.firstLeg = random.nextInt(100);
-        this.secondLeg = random.nextInt(100);
+    public void setFirstLeg(int firstLeg) {
+        this.firstLeg = firstLeg;
+    }
+
+    public void setSecondLeg(int secondLeg) {
+        this.secondLeg = secondLeg;
+    }
+
+    public int getFirstLeg() {
+        return firstLeg;
+    }
+
+    public int getSecondLeg() {
+        return secondLeg;
     }
 
     @Override

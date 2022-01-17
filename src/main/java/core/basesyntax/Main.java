@@ -13,5 +13,6 @@ public class Main {
         for (Figure figure: figures) {
             System.out.println(figure.drawFigure());
         }
+
     }
 }

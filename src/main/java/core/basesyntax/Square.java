@@ -2,15 +2,15 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class Square extends Figure implements GetArea {
-    private Random random = new Random();
-    private ColorSupplier color = new ColorSupplier();
+public class Square extends Figure {
     private int side;
 
-    public Square() {
-        setName("square");
-        setColor(color.getRandomColor().toString());
-        this.side = random.nextInt(100);
+    public void setSide(int side) {
+        this.side = side;
+    }
+
+    public int getSide() {
+        return side;
     }
 
     @Override

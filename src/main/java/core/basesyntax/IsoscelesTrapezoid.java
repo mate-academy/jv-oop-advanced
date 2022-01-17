@@ -2,19 +2,33 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class IsoscelesTrapezoid extends Figure implements GetArea {
-    private Random random = new Random();
-    private ColorSupplier color = new ColorSupplier();
+public class IsoscelesTrapezoid extends Figure {
     private int sideA;
     private int sideB;
     private int sideC;
 
-    public IsoscelesTrapezoid() {
-        setName("trapezoid");
-        setColor(color.getRandomColor().toString());
-        this.sideA = random.nextInt(100);
-        this.sideB = random.nextInt(100);
-        this.sideC = random.nextInt(100);
+    public void setSideA(int sideA) {
+        this.sideA = sideA;
+    }
+
+    public void setSideB(int sideB) {
+        this.sideB = sideB;
+    }
+
+    public void setSideC(int sideC) {
+        this.sideC = sideC;
+    }
+
+    public int getSideA() {
+        return sideA;
+    }
+
+    public int getSideB() {
+        return sideB;
+    }
+
+    public int getSideC() {
+        return sideC;
     }
 
     @Override
