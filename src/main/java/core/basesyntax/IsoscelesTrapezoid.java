@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure{
+public class IsoscelesTrapezoid extends Figure {
     private int upperSide;
     private int lowerSide;
     private int height;
@@ -47,6 +47,6 @@ public class IsoscelesTrapezoid extends Figure{
                 + " sq.units, upper side: " + upperSide
                 + " units, lower side: " + lowerSide
                 + " units, height : " + height
-                + " units, color: " + getColor() );
+                + " units, color: " + getColor());
     }
 }
