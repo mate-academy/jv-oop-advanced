@@ -13,7 +13,6 @@ public class Main {
                 figures[i] = figureSupplier.getDefaultFigure();
                 System.out.println(figures[i].printInfo());
             }
-
         }
     }
 }
