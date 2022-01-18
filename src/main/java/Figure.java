@@ -1,4 +1,4 @@
-public abstract class Figure implements Draw {
+public abstract class Figure implements Draw,AreaCalculator {
     private String color;
 
     public String getColor() {

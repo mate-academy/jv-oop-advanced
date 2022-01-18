@@ -1,3 +1,2 @@
-public interface AreaCalculator {
-    public abstract double getArea();
+public interface AreaCalculator { double getArea();
 }

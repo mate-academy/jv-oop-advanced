@@ -18,6 +18,13 @@ public class FigureSupplier {
         // generate a specific figure based on the `figureNumber` value
     }
 
+    public Figure getDefaultFigure() {
+        Circle circle = new Circle();
+        circle.setRadius(10);
+        circle.setColor("white");
+        return circle;
+    }
+
     private Figure getRandomSquare() {
         Square square = new Square();
         square.setSide(random.nextInt(10));
@@ -55,12 +62,5 @@ public class FigureSupplier {
         rightTriangle.setSide(random.nextInt(10));
         rightTriangle.setColor(colorSupplier.getRandomColor());
         return rightTriangle;
-    }
-
-    public Figure getDefaultFigure() {
-        Circle circle = new Circle();
-        circle.setRadius(10);
-        circle.setColor("white");
-        return circle;
     }
 }
