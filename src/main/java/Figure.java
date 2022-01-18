@@ -1,4 +1,4 @@
-public abstract class Figure {
+public abstract class Figure implements FigureInfo, AreaCalculator {
     private String color;
 
     public Figure(String color) {
@@ -8,8 +8,4 @@ public abstract class Figure {
     public String getColor() {
         return color;
     }
-
-    public abstract double calculateArea();
-
-    public abstract String printInfo();
 }
