@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class FigureSupplier {
 
-    public static final int FIGURES_NUMBER = 4;
-    public static final int DEFAULT_VALUE = 10;
-    public static final int MAX_VALUE = 20;
+    private static final int FIGURES_NUMBER = 4;
+    private static final int DEFAULT_VALUE = 10;
+    private static final int MAX_VALUE = 20;
 
     public Figure getRandomFigure() {
         Random random = new Random();
