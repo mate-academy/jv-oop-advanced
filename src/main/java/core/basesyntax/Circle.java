@@ -1,17 +1,18 @@
 package core.basesyntax;
 
 public class Circle extends Figure implements FigureProperties {
-    private int radius;
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private double radius;
+    private String color;
 
-    public Circle(int radius) {
+    public Circle(String color, double radius) {
         this.radius = radius;
+        this.color = color;
     }
 
     @Override
     public String toString() {
         return "Figure: circle. Radius: " + radius +
-                "mm. Area: " + getArea() + " sq.mm. Color: " + colorSupplier.getRandomColor();
+                "mm. Area: " + getArea() + " sq.mm. Color: " + color;
     }
 
     @Override

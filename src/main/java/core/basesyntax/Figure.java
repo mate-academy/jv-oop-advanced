@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public class Figure {
-    private String color;
+    ColorSupplier colorSupplier = new ColorSupplier();
+    private String color = colorSupplier.getRandomColor();
 
 }
