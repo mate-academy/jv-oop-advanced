@@ -1,11 +1,11 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure implements FigureProperties {
-    private int sideA;
-    private int sideB;
+    private double sideA;
+    private double sideB;
     private String color;
 
-    public Rectangle(int sideA, int sideB, String color) {
+    public Rectangle(double sideA, double sideB, String color) {
         this.sideA = sideA;
         this.sideB = sideB;
         this.color = color;
