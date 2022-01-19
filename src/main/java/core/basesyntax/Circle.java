@@ -1,17 +1,21 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements Drawable {
+public class Circle extends Figure {
     private double radius;
 
-    // area = PI * radius^2
-
-    @Override
-    public void drawFigure() {
-
+    public Circle(Color color, double radius) {
+        super(color);
+        this.radius = radius;
     }
 
     @Override
-    public void getArea() {
+    public void drawFigure() {
+        System.out.println("Figure: circle, area: " + getArea() + " sq.units, radius: " + radius
+                + " units, color: " + getColor());
+    }
 
+    @Override
+    public double getArea() {
+        return Math.pow(radius, 2) * Math.PI;
     }
 }
