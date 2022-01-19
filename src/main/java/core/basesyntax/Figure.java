@@ -3,11 +3,11 @@ package core.basesyntax;
 public abstract class Figure implements AreaCalculator {
     private String color;
 
-    protected String getColor() {
+    public String getColor() {
         return color;
     }
 
-    protected void setColor(String color) {
+    public void setColor(String color) {
         this.color = color;
     }
 }

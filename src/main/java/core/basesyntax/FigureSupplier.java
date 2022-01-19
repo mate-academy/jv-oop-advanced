@@ -1,14 +1,17 @@
 package core.basesyntax;
 
-import core.basesyntax.figures.*;
-
+import core.basesyntax.figures.Circle;
+import core.basesyntax.figures.IsoscelesTrapezoid;
+import core.basesyntax.figures.Rectangle;
+import core.basesyntax.figures.Square;
+import core.basesyntax.figures.Triangle;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static ColorSupplier colorSupplier = new ColorSupplier();
     private static Random random = new Random();
+    private static ColorSupplier colorSupplier = new ColorSupplier();
 
-    protected Figure getRandomFigure() {
+    public Figure getRandomFigure() {
         switch (random.nextInt(4)) {
             case 1: {
                 Figure triangle = new Triangle(random.nextInt(50), random.nextInt(50));
@@ -39,7 +42,7 @@ public class FigureSupplier {
         }
     }
 
-    protected Figure getDefaultFigure() {
+    public Figure getDefaultFigure() {
         Figure circle = new Circle(10);
         circle.setColor("WHITE");
         return circle;
