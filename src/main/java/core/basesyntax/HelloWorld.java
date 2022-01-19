@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class HelloWorld {
-    public static final int ARRAYLANGTH = 6;
+    public static final int ARRAY_LENGTH = 6;
 
     public static void main(String[] args) {
         Figure[] figures = new Figure[ARRAYLANGTH];
