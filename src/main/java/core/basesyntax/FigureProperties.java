@@ -4,7 +4,4 @@ public interface FigureProperties {
 
     public double getArea();
 
-
-
-
 }

@@ -13,8 +13,8 @@ public class RightTriangle extends Figure implements FigureProperties {
 
     @Override
     public String toString() {
-        return "Figure: right triangle. FirstLeg: " + firstLeg + " mm." + " SecondLeg: " + secondLeg +
-                "mm. Area: " + getArea() + " sq.mm. Color: " + color;
+        return "Figure: right triangle. FirstLeg: " + firstLeg + " mm." + " SecondLeg: "
+                + secondLeg + "mm. Area: " + getArea() + " sq.mm. Color: " + color;
     }
 
     @Override

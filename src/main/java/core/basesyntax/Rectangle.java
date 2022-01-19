@@ -13,8 +13,8 @@ public class Rectangle extends Figure implements FigureProperties {
 
     @Override
     public String toString() {
-        return "Figure: rectangle. SideA: " + sideA + " mm." + " SideB: " + sideB +
-                "mm. Area: " + getArea() + " sq.mm. Color: " + color;
+        return "Figure: rectangle. SideA: " + sideA + " mm." + " SideB: " + sideB
+                + "mm. Area: " + getArea() + " sq.mm. Color: " + color;
     }
 
     @Override

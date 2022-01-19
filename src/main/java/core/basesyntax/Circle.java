@@ -11,8 +11,8 @@ public class Circle extends Figure implements FigureProperties {
 
     @Override
     public String toString() {
-        return "Figure: circle. Radius: " + radius +
-                "mm. Area: " + getArea() + " sq.mm. Color: " + color;
+        return "Figure: circle. Radius: " + radius
+                + "mm. Area: " + getArea() + " sq.mm. Color: " + color;
     }
 
     @Override

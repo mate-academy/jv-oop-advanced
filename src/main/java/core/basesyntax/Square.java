@@ -11,8 +11,8 @@ public class Square extends Figure implements FigureProperties {
 
     @Override
     public String toString() {
-        return "Figure: square. Side: " + side + " mm. Area: " + getArea() + " sq.mm. Color: " +
-                color;
+        return "Figure: square. Side: " + side + " mm. Area: " + getArea() + " sq.mm. Color: "
+                + color;
     }
 
     @Override

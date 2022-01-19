@@ -15,8 +15,8 @@ public class IsoscelesTrapezoid extends Figure implements FigureProperties {
 
     @Override
     public String toString() {
-        return "Figure: isosceles trapezoid. Base: " + base + " mm. Top: " + top + " mm. Height: " + height +
-                "mm. Area: " + getArea() + " sq.mm. Color: " + color;
+        return "Figure: isosceles trapezoid. Base: " + base + " mm. Top: " + top + " mm. Height: "
+                + height + "mm. Area: " + getArea() + " sq.mm. Color: " + color;
     }
 
     @Override

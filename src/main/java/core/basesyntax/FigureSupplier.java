@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.security.SecureRandom;
 
 public class FigureSupplier {
-    ColorSupplier colorSupplier = new ColorSupplier();
+   private ColorSupplier colorSupplier = new ColorSupplier();
     private SecureRandom secureRandom = new SecureRandom();
     private String color = colorSupplier.getRandomColor();
 
@@ -19,7 +19,8 @@ public class FigureSupplier {
                 return new RightTriangle(color, secureRandom.nextDouble() * 10,
                         secureRandom.nextDouble() * 10);
             case 4:
-                return new Rectangle(secureRandom.nextDouble() * 10, secureRandom.nextDouble() * 10, color);
+                return new Rectangle(secureRandom.nextDouble() * 10,
+                        secureRandom.nextDouble() * 10, color);
             case 5:
                 return new Square(secureRandom.nextDouble() * 10, color);
             default:
@@ -27,6 +28,7 @@ public class FigureSupplier {
         }
 
     }
+
     public Figure getDefaultFigure() {
         return new Circle("white", 10);
     }
