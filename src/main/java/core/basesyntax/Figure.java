@@ -7,7 +7,7 @@ public abstract class Figure implements AreaCalculator {
         return color;
     }
 
-    void setColor(String color) {
+    protected void setColor(String color) {
         this.color = color;
     }
 }
