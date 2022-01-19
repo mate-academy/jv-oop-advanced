@@ -8,7 +8,7 @@ public class Application {
         Figure[] figures = new Figure[6];
         for (int i = 0; i < figures.length; i++) {
             if (i <= 2) {
-               figures[i] = figureSupplier.getRandomFigure();
+                figures[i] = figureSupplier.getRandomFigure();
                 System.out.println(figures[i]);
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();

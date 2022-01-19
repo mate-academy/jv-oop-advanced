@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.security.SecureRandom;
 
 public class FigureSupplier {
-   private ColorSupplier colorSupplier = new ColorSupplier();
+    private ColorSupplier colorSupplier = new ColorSupplier();
     private SecureRandom secureRandom = new SecureRandom();
     private String color = colorSupplier.getRandomColor();
 
