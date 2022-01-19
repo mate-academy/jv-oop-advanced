@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int BOUND = 20;
+
     public Figure getRandomFigure() {
         Figure fig = null;
         String figure = Figures.values()[new Random().nextInt(Figures.values().length)].toString();
