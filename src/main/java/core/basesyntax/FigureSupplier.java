@@ -18,10 +18,8 @@ public class FigureSupplier {
             case 3:
                 return new RightTriangle(colorSupplier.getRandomColor(), getRandomValue(),
                         getRandomValue());
-            case 4:
-                return new Square(colorSupplier.getRandomColor(), getRandomValue());
             default:
-                return null;
+                return new Square(colorSupplier.getRandomColor(), getRandomValue());
         }
     }
 
