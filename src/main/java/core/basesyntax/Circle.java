@@ -15,10 +15,11 @@ public class Circle extends Figure implements AreaCalculation {
 
     @Override
     public String toString() {
-        return "Circle: " +
-                "radius = " + radius +
-                ", color = " + super.color +
-                ", area = " + calculatinonArea();
+        return "Circle: "
+                + "radius = "
+                + radius
+                + ", color = " + getColor()
+                + ", area = " + calculatinonArea();
     }
 }
 

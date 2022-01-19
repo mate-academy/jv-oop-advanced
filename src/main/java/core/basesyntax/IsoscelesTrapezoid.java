@@ -19,11 +19,11 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculation {
 
     @Override
     public String toString() {
-        return "Isosceles Trapezoid: " +
-                "firstLeg = " + firstLeg +
-                ", secondLeg = " + secondLeg +
-                ", height = " + height +
-                ", color = " + super.color +
-                ", area = " + calculatinonArea();
+        return "Isosceles Trapezoid: "
+                + "firstLeg = " + firstLeg
+                + ", secondLeg = " + secondLeg
+                + ", height = " + height
+                + ", color = " + getColor()
+                + ", area = " + calculatinonArea();
     }
 }

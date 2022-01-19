@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends Figure implements AreaCalculation{
+public class Square extends Figure implements AreaCalculation {
     private double firstLeg;
 
     Square(String color,double firstLeg) {
@@ -10,14 +10,14 @@ public class Square extends Figure implements AreaCalculation{
 
     @Override
     public double calculatinonArea() {
-        return firstLeg  * firstLeg;
+        return firstLeg * firstLeg;
     }
 
     @Override
     public String toString() {
-        return "Square: " +
-                "firstLeg = " + firstLeg +
-                ", color = " + super.color +
-                ", area = " + calculatinonArea();
+        return "Square: "
+                + "firstLeg = " + firstLeg
+                + ", color = " + getColor()
+                + ", area = " + calculatinonArea();
     }
 }

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle  extends Figure implements AreaCalculation {
+public class Rectangle extends Figure implements AreaCalculation {
     private double firstLeg;
     private double secondLeg;
 
@@ -17,10 +17,10 @@ public class Rectangle  extends Figure implements AreaCalculation {
 
     @Override
     public String toString() {
-        return "Rectangle: " +
-                "firstLeg = " + firstLeg +
-                ", secondLeg = " + secondLeg +
-                ", color = " + super.color +
-                ", area = " + calculatinonArea();
+        return "Rectangle: "
+                + "firstLeg = " + firstLeg
+                + ", secondLeg = " + secondLeg
+                + ", color = " + getColor()
+                + ", area = " + calculatinonArea();
     }
 }

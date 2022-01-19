@@ -17,10 +17,10 @@ public class RightTriangle extends Figure implements AreaCalculation {
 
     @Override
     public String toString() {
-        return "Right Triangle: " +
-                "firstLeg = " + firstLeg +
-                ", secondLeg = " + secondLeg +
-                ", color = " + this.color +
-                ", area = " + calculatinonArea();
+        return "Right Triangle: "
+                + "firstLeg = " + firstLeg
+                + ", secondLeg = " + secondLeg
+                + ", color = " + getColor()
+                + ", area = " + calculatinonArea();
     }
 }
