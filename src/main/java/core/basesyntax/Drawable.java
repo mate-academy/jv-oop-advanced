@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public interface Draw {
+interface Drawable {
     void getInformation();
 }
