@@ -8,46 +8,39 @@ public class FigureSupplier {
         ColorSupplier colorSupplier = new ColorSupplier();
         switch (AllFigure.values()[indexFigure]) {
             case ISOSCELES_TRAPEZOID:
-                IsoscelesTrapezoid trapezoid = new IsoscelesTrapezoid();
-                trapezoid.setFirstLeg(new Random().nextInt(99)+1);
-                trapezoid.setSecondLeg(new Random().nextInt(99)+1);
-                trapezoid.setHeight(new Random().nextInt(99)+1);
-                trapezoid.setColor(colorSupplier.getRandomColor());
-                trapezoid.getArea();
+                int firstLeg = new Random().nextInt(100)+1;
+                int secondLeg = new Random().nextInt(100)+1;
+                int height = new Random().nextInt(100)+1;
+                String colorI = colorSupplier.getRandomColor();
+                IsoscelesTrapezoid trapezoid = new IsoscelesTrapezoid(colorI,firstLeg,secondLeg,height);
                 return trapezoid;
             case CIRCLE:
-                Circle circle = new Circle();
-                circle.setRadius(new Random().nextInt(99)+1);
-                circle.setColor(colorSupplier.getRandomColor());
-                circle.getArea();
+                int radius = new Random().nextInt(100)+1;
+                String colorC = colorSupplier.getRandomColor();
+                Circle circle = new Circle(colorC,radius);
                 return circle;
             case RIGHT_THIANGLE:
-                RightTriangle rightTriangle = new RightTriangle();
-                rightTriangle.setFirstLeg(new Random().nextInt(99)+1);
-                rightTriangle.setSecondLeg(new Random().nextInt(99)+1);
-                rightTriangle.setColor(colorSupplier.getRandomColor());
-                rightTriangle.getArea();
+                int firstSide = new Random().nextInt(100)+1;
+                int secondSide = new Random().nextInt(100)+1;
+                String colorR = colorSupplier.getRandomColor();
+                RightTriangle rightTriangle = new RightTriangle(colorR,firstSide,secondSide);
                 return rightTriangle;
             case RECTANGLE:
-                Rectangle rectangle = new Rectangle();
-                rectangle.setFirstLeg(new Random().nextInt(99)+1);
-                rectangle.setSecondLeg(new Random().nextInt(99)+1);
-                rectangle.setColor(colorSupplier.getRandomColor());
-                rectangle.getArea();
+                int side1 = new Random().nextInt(100)+1;
+                int side2 = new Random().nextInt(100)+1;
+                String colorRec = colorSupplier.getRandomColor();
+                Rectangle rectangle = new Rectangle(colorRec,side1,side2);
                 return rectangle;
-            case SQUARE :
-                Square square = new Square();
-                square.setFirstLeg(new Random().nextInt(99)+1);
-                square.setColor(colorSupplier.getRandomColor());
-                square.getArea();
+            case SQUARE:
+                int side = new Random().nextInt(100)+1;
+                String colorS = colorSupplier.getRandomColor();
+                Square square = new Square(colorS,side);
                 return square;
         }
         return null;
     }
     public Circle getDefaultFigure(){
-        Circle circle = new Circle();
-        circle.setColor("WHITE");
-        circle.setRadius(10);
+        Circle circle = new Circle("WHITE",10);
         return circle;
     }
 
