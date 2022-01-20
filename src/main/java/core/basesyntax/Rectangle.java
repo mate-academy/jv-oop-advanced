@@ -11,7 +11,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double calculatinonArea() {
+    public double calculateArea() {
         return firstLeg * secondLeg;
     }
 
@@ -21,6 +21,6 @@ public class Rectangle extends Figure {
                 + "firstLeg = " + firstLeg
                 + ", secondLeg = " + secondLeg
                 + ", color = " + getColor()
-                + ", area = " + calculatinonArea();
+                + ", area = " + this.calculateArea();
     }
 }

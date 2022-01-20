@@ -13,7 +13,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double calculatinonArea() {
+    public double calculateArea() {
         return ((firstLeg + secondLeg) / 2) * height;
     }
 
@@ -24,6 +24,6 @@ public class IsoscelesTrapezoid extends Figure {
                 + ", secondLeg = " + secondLeg
                 + ", height = " + height
                 + ", color = " + getColor()
-                + ", area = " + calculatinonArea();
+                + ", area = " + this.calculateArea();
     }
 }

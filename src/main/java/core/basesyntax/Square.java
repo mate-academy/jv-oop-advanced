@@ -9,7 +9,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public double calculatinonArea() {
+    public double calculateArea() {
         return firstLeg * firstLeg;
     }
 
@@ -18,6 +18,6 @@ public class Square extends Figure {
         return "Square: "
                 + "firstLeg = " + firstLeg
                 + ", color = " + getColor()
-                + ", area = " + calculatinonArea();
+                + ", area = " + calculateArea();
     }
 }
