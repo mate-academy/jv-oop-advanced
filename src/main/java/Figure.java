@@ -1,4 +1,4 @@
-public abstract class Figure implements FigureInfo, AreaCalculator {
+public abstract class Figure implements FigurePrinter, AreaCalculator {
     private String color;
 
     public Figure(String color) {

@@ -6,21 +6,21 @@ public class FigureSupplier {
     private Random random = new Random();
 
     public Figure getRandomFigure() {
-        int randomNumber = random.nextInt(AMOUNT_OF_FIGURES - 1);
+        int randomNumber = random.nextInt(AMOUNT_OF_FIGURES);
 
         switch (randomNumber) {
-            case 1:
+            case 0:
                 return new Square(new Random().nextInt(BORDER - 1) + 1,
                         new ColorSupplier().getRandomColor());
-            case 2:
+            case 1:
                 return new Rectangle(new Random().nextInt(BORDER - 1) + 1,
                         new Random().nextInt(BORDER - 1) + 1,
                         new ColorSupplier().getRandomColor());
-            case 3:
+            case 2:
                 return new RightTriangle(new Random().nextInt(BORDER - 1) + 1,
                         new Random().nextInt(BORDER - 1) + 1,
                         new ColorSupplier().getRandomColor());
-            case 4:
+            case 3:
                 return new Circle(new Random().nextInt(BORDER - 1) + 1,
                         new ColorSupplier().getRandomColor());
             default:
