@@ -7,7 +7,7 @@ public class Application {
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figures = new Figure[6];
         for (int i = 0; i < figures.length; i++) {
-            if (i <= 2) {
+            if (i <= figures.length / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
                 System.out.println(figures[i]);
             } else {
