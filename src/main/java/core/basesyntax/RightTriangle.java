@@ -1,26 +1,26 @@
 package core.basesyntax;
 
-public class RightTriangle extends Rectangle {
-    /*
-    Right triangle is a half-area object from rectangle.
-    And the legs of the triangle correspond to sides A and B of the rectangle.
-     */
+public class RightTriangle extends Figure {
+    private int firstLeg;
+    private int secondLeg;
 
     RightTriangle(Color color,int firstLeg, int secondLeg) {
-        super(color, firstLeg, secondLeg);
+        super(color);
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
     }
 
     @Override
     public double getArea() {
-        return 0.5 * super.getArea();
+        return 0.5 * firstLeg * secondLeg;
     }
 
     @Override
     public String toString() {
         return "Figure: rightTriangle, "
                 + "area: " + getArea() + " sq.units, "
-                + "firstLeg: " + getSideA() + " units, "
-                + "secondLeg: " + getSideB() + " units, "
+                + "firstLeg: " + firstLeg + " units, "
+                + "secondLeg: " + secondLeg + " units, "
                 + "color: " + getColor().toString().toLowerCase();
     }
 }

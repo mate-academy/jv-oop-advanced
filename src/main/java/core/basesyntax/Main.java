@@ -8,14 +8,10 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
 
         Figure[] figuresArray = new Figure[new Random().nextInt(9)];
+
         for (int i = 0; i < figuresArray.length; i++) {
-            if (figuresArray.length % 2 == 1) {
-                figuresArray[i] = (i <= figuresArray.length / 2)
-                        ? figureSupplier.getRandomFigure() : figureSupplier.getDefaultFigure();
-            } else {
-                figuresArray[i] = (i < figuresArray.length / 2)
-                        ? figureSupplier.getRandomFigure() : figureSupplier.getDefaultFigure();
-            }
+            figuresArray[i] = (i <= figuresArray.length / 2)
+                    ? figureSupplier.getRandomFigure() : figureSupplier.getDefaultFigure();
         }
 
         for (Figure unit : figuresArray) {
