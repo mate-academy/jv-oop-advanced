@@ -14,23 +14,23 @@ public class FigureSupplier {
         int numberOfFigure = random.nextInt(FIGURE_COUNT);
         switch (numberOfFigure) {
             case 0:
-                figure = new Square(colorSupplier.getRandomColor(), random.nextDouble(BOUND));
+                figure = new Square(colorSupplier.getRandomColor(), random.nextDouble() * BOUND);
                 break;
             case 1:
-                figure = new Rectangle(colorSupplier.getRandomColor(), random.nextDouble(BOUND),
-                        random.nextDouble(BOUND));
+                figure = new Rectangle(colorSupplier.getRandomColor(), random.nextDouble() * BOUND,
+                        random.nextDouble() * BOUND);
                 break;
             case 2:
-                figure = new RightTriangle(colorSupplier.getRandomColor(), random.nextDouble(BOUND),
-                        random.nextDouble(BOUND));
+                figure = new RightTriangle(colorSupplier.getRandomColor(),
+                        random.nextDouble() * BOUND, random.nextDouble() * BOUND);
                 break;
             case 3:
-                figure = new Circle(colorSupplier.getRandomColor(), random.nextDouble(BOUND));
+                figure = new Circle(colorSupplier.getRandomColor(), random.nextDouble() * BOUND);
                 break;
             default:
                 figure = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        random.nextDouble(BOUND), random.nextDouble(BOUND),
-                        random.nextDouble(BOUND));
+                        random.nextDouble() * BOUND, random.nextDouble() * BOUND,
+                        random.nextDouble() * BOUND);
                 break;
         }
         return figure;
