@@ -12,7 +12,7 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         Random random = new Random();
         ColorSupplier supplier = new ColorSupplier();
-        switch (random.nextInt(5)) {
+        switch (random.nextInt(NUMBER_OF_FIGURES)) {
             case 0:
                 return new RightTriangle("right triangle",
                         supplier.getRandomColor(),
