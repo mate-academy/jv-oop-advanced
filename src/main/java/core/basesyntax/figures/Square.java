@@ -1,6 +1,8 @@
-package core.basesyntax;
+package core.basesyntax.figures;
 
-public class Square extends Figure implements Drawable, AreaCalculator {
+import core.basesyntax.Figure;
+
+public class Square extends Figure {
     private double side;
 
     public Square(double side, String color) {
@@ -15,7 +17,7 @@ public class Square extends Figure implements Drawable, AreaCalculator {
 
     @Override
     public void draw() {
-        System.out.println("square, "
+        System.out.println("Figure: square, "
                 + "area: " + getArea() + " sq.units, "
                 + "side: " + side + " units, "
                 + "color: " + getColor().toLowerCase());

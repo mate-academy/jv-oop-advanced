@@ -1,6 +1,8 @@
-package core.basesyntax;
+package core.basesyntax.figures;
 
-public class Rectangle extends Figure implements Drawable, AreaCalculator {
+import core.basesyntax.Figure;
+
+public class Rectangle extends Figure {
     private double length;
     private double width;
 
@@ -17,7 +19,7 @@ public class Rectangle extends Figure implements Drawable, AreaCalculator {
 
     @Override
     public void draw() {
-        System.out.println("Rectangle, "
+        System.out.println("Figure: rectangle, "
                 + "area: " + getArea() + " sq.units, "
                 + "length: " + length + " units, "
                 + "width: " + width + " units, "
