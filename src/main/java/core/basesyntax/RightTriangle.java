@@ -9,12 +9,12 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void area() {
+    public void calculateArea() {
         setArea((this.side * this.side) / 2);
     }
 
     @Override
-    public void info() {
+    public void printInfo() {
         System.out.println("Figure: " + getName() + ", area: " + getArea()
                 + " sq.units, side: " + this.side
                 + " units, " + "color: " + getColor());
