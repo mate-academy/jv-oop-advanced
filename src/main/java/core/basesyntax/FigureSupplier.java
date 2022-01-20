@@ -6,8 +6,8 @@ public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
     public static final int DEFAULT_RADIUS = 10;
     public static final int VALUE = 10;
+    private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
-    ColorSupplier colorSupplier = new ColorSupplier();
     private Figure figure;
 
     public Figure getRandomFigure() {
