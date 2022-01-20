@@ -7,27 +7,28 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         Figure fig = null;
-        String figure = Figures.values()[new Random().nextInt(Figures.values().length)].toString();
+        Random random = new Random();
+        String figure = Figures.values()[random.nextInt(Figures.values().length)].toString();
         switch (figure) {
             case "ISOSCELESTRAPEZOID" : fig =
                                       new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(),
-                                      new Random().nextInt(BOUND),
-                                      new Random().nextInt(BOUND),
-                                      new Random().nextInt(BOUND));
+                                      random.nextInt(BOUND),
+                                      random.nextInt(BOUND),
+                                      random.nextInt(BOUND));
                 break;
             case "RECTANGLE" : fig = new Rectangle(new ColorSupplier().getRandomColor(),
-                                     new Random().nextInt(BOUND),
-                                     new Random().nextInt(BOUND));
+                                     random.nextInt(BOUND),
+                                     random.nextInt(BOUND));
                 break;
             case "RIGHTTRIANGLE" : fig = new RightTriangle(new ColorSupplier().getRandomColor(),
-                                                        new Random().nextInt(BOUND),
-                                                        new Random().nextInt(BOUND));
+                                                        random.nextInt(BOUND),
+                                                        random.nextInt(BOUND));
                 break;
             case "SQUARE" : fig = new Square(new ColorSupplier().getRandomColor(),
-                                                new Random().nextInt(BOUND));
+                                                random.nextInt(BOUND));
                 break;
             case "CIRCLE" : fig = new Circle(new ColorSupplier().getRandomColor(),
-                                                new Random().nextInt(BOUND));
+                                                random.nextInt(BOUND));
                 break;
             default: break;
         }
