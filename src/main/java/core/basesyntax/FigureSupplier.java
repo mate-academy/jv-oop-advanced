@@ -11,27 +11,27 @@ public class FigureSupplier {
 
         switch (figureType) {
             case RECTANGLE:
-                int sideA = new Random().nextInt(100) + 1;
-                int sideB = new Random().nextInt(100) + 1;
+                int sideA = getRandomValue();
+                int sideB = getRandomValue();
                 return new Rectangle(color, sideA, sideB);
 
             case SQUARE:
-                int side = new Random().nextInt(100) + 1;
+                int side = getRandomValue();
                 return new Square(color, side);
 
             case RIGHT_TRIANGLE:
-                int firstLeg = new Random().nextInt(100) + 1;
-                int secondLeg = new Random().nextInt(100) + 1;
+                int firstLeg = getRandomValue();
+                int secondLeg = getRandomValue();
                 return new RightTriangle(color, firstLeg, secondLeg);
 
             case CIRCLE:
-                int radius = new Random().nextInt(100) + 1;
+                int radius = getRandomValue();
                 return new Circle(color, radius);
 
             case ISOSCELES_TRAPEZOID:
-                int lowBase = new Random().nextInt(100) + 1;
-                int topBase = new Random().nextInt(100) + 1;
-                int height = new Random().nextInt(100) + 1;
+                int lowBase = getRandomValue();
+                int topBase = getRandomValue();
+                int height = getRandomValue();
                 return new IsoscelesTrapezoid(color, lowBase, topBase, height);
 
             default:
@@ -46,5 +46,9 @@ public class FigureSupplier {
     private FigureTypes getFigureType() {
         int index = new Random().nextInt(FigureTypes.values().length);
         return FigureTypes.values()[index];
+    }
+
+    private int getRandomValue() {
+        return new Random().nextInt(99) + 1;
     }
 }
