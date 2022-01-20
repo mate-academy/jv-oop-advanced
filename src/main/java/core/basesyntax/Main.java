@@ -2,6 +2,7 @@ package core.basesyntax;
 
 public class Main {
     private static final int ARRAY_SIZE = 6;
+
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figures = new Figure[ARRAY_SIZE];
