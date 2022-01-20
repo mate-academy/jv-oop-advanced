@@ -8,11 +8,14 @@ import core.basesyntax.figures.Triangle;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int MAX_RANDOM_NUMBER = 4;
+    private static final int CIRCLE_RADIUS = 10;
+    private static final String CIRCLE_COLOR = "WHITE";
     private static Random random = new Random();
     private static ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        switch (random.nextInt(4)) {
+        switch (random.nextInt(MAX_RANDOM_NUMBER)) {
             case 1: {
                 Figure triangle = new Triangle(random.nextInt(50), random.nextInt(50));
                 triangle.setColor(colorSupplier.getRandomColor());
@@ -43,8 +46,8 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        Figure circle = new Circle(10);
-        circle.setColor("WHITE");
+        Figure circle = new Circle(CIRCLE_RADIUS);
+        circle.setColor(CIRCLE_COLOR);
         return circle;
     }
 }
