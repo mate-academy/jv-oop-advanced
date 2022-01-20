@@ -3,11 +3,8 @@ package core.basesyntax;
 public class Circle extends Figure {
     private double radius;
 
-    public double getRadius() {
-        return radius;
-    }
-
-    public void setRadius(double radius) {
+    public Circle(double radius, String color) {
+        super(color);
         this.radius = radius;
     }
 }

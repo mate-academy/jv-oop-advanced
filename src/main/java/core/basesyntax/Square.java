@@ -3,11 +3,8 @@ package core.basesyntax;
 public class Square extends Figure implements Drawable, AreaCalculator {
     private double side;
 
-    public double getSide() {
-        return side;
-    }
-
-    public void setSide(double side) {
+    public Square(double side, String color) {
+        super(color);
         this.side = side;
     }
 
@@ -21,6 +18,6 @@ public class Square extends Figure implements Drawable, AreaCalculator {
         System.out.println("square, "
                 + "area: " + getArea() + " sq.units, "
                 + "side: " + side + " units, "
-                + "color: ");
+                + "color: " + getColor());
     }
 }
