@@ -6,27 +6,26 @@ public class FigureSupplier {
     private Random random = new Random();
 
     public Figure getRandomFigure() {
-        int randomNumber = random.nextInt(AMOUNT_OF_FIGURES);
+        int randomFigure = random.nextInt(AMOUNT_OF_FIGURES);
+        int randomNumber1 = random.nextInt(BORDER - 1) + 1;
+        int randomNumber2 = random.nextInt(BORDER - 1) + 1;
+        int randomNumber3 = random.nextInt(BORDER - 1) + 1;
 
-        switch (randomNumber) {
+        switch (randomFigure) {
             case 0:
-                return new Square(new Random().nextInt(BORDER - 1) + 1,
+                return new Square(randomNumber1,
                         new ColorSupplier().getRandomColor());
             case 1:
-                return new Rectangle(new Random().nextInt(BORDER - 1) + 1,
-                        new Random().nextInt(BORDER - 1) + 1,
+                return new Rectangle(randomNumber1, randomNumber2,
                         new ColorSupplier().getRandomColor());
             case 2:
-                return new RightTriangle(new Random().nextInt(BORDER - 1) + 1,
-                        new Random().nextInt(BORDER - 1) + 1,
+                return new RightTriangle(randomNumber1, randomNumber2,
                         new ColorSupplier().getRandomColor());
             case 3:
-                return new Circle(new Random().nextInt(BORDER - 1) + 1,
+                return new Circle(randomNumber1,
                         new ColorSupplier().getRandomColor());
             default:
-                return new IsoscelesTrapezoid(new Random().nextInt(BORDER - 1) + 1,
-                        new Random().nextInt(BORDER - 1) + 1,
-                        new Random().nextInt(BORDER - 1) + 1,
+                return new IsoscelesTrapezoid(randomNumber1, randomNumber2, randomNumber3,
                         new ColorSupplier().getRandomColor());
         }
     }
