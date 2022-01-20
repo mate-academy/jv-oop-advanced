@@ -18,6 +18,6 @@ public class Square extends Figure implements Drawable, AreaCalculator {
         System.out.println("square, "
                 + "area: " + getArea() + " sq.units, "
                 + "side: " + side + " units, "
-                + "color: " + getColor());
+                + "color: " + getColor().toLowerCase());
     }
 }

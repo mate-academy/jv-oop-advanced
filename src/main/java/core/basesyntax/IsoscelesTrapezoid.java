@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure {
+public class IsoscelesTrapezoid extends Figure implements Drawable, AreaCalculator {
     private double firstBase;
     private double secondBase;
     private double height;
@@ -10,5 +10,20 @@ public class IsoscelesTrapezoid extends Figure {
         this.firstBase = firstBase;
         this.secondBase = secondBase;
         this.height = height;
+    }
+
+    @Override
+    public double getArea() {
+        return ((firstBase + secondBase) / 2) * height;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("isosceles trapezoid, "
+                + "area: " + getArea() + " sq.units, "
+                + "firstBase: " + firstBase + " units, "
+                + "secondBase: " + secondBase + " units, "
+                + "height: " + height + " units, "
+                + "color: " + getColor().toLowerCase());
     }
 }
