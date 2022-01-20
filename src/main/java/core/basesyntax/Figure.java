@@ -1,7 +1,22 @@
 package core.basesyntax;
 
-public interface Figure {
-    double getArea();
+public abstract class Figure implements AreaCalculator, Printer {
+    private String name;
+    private String color;
 
-    void print();
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
 }
