@@ -8,7 +8,6 @@ public class Main {
 
         FigureSupplier figureSupplier = new FigureSupplier();
 
-        //creating figures array
         for (int i = 0; i < arrLength; i++) {
             if (i < arrLength / 2) {
                 figuresArr[i] = figureSupplier.getRandomFigure();
@@ -17,7 +16,6 @@ public class Main {
             }
         }
 
-        //drawing the figures from the array
         for (int i = 0; i < arrLength; i++) {
             figuresArr[i].draw();
         }
