@@ -10,8 +10,8 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int COUNT_OF_FIGURES = 4;
-    private static final double DEFAULT_RADIUS = 10;
-    private static final double MAX_SIZE_OF_SIDE = 50;
+    private static final int DEFAULT_RADIUS = 10;
+    private static final int MAX_SIZE_OF_SIDE = 50;
 
     public Figure getRandomFigure() {
         ColorSupplier colorSupplier = new ColorSupplier();
@@ -19,18 +19,23 @@ public class FigureSupplier {
 
         switch (random.nextInt(COUNT_OF_FIGURES)) {
             case 0:
-                return new Square(MAX_SIZE_OF_SIDE, colorSupplier.getRandomColor());
+                return new Square(random.nextInt(MAX_SIZE_OF_SIDE), colorSupplier.getRandomColor());
             case 1:
-                return new RightTriangle(MAX_SIZE_OF_SIDE, MAX_SIZE_OF_SIDE,
+                return new RightTriangle(random.nextInt(MAX_SIZE_OF_SIDE),
+                        random.nextInt(MAX_SIZE_OF_SIDE),
                         colorSupplier.getRandomColor());
             case 2:
-                return new Rectangle(MAX_SIZE_OF_SIDE, MAX_SIZE_OF_SIDE,
+                return new Rectangle(random.nextInt(MAX_SIZE_OF_SIDE),
+                        random.nextInt(MAX_SIZE_OF_SIDE),
                         colorSupplier.getRandomColor());
             case 3:
-                return new IsoscelesTrapezoid(MAX_SIZE_OF_SIDE, MAX_SIZE_OF_SIDE, MAX_SIZE_OF_SIDE,
+                return new IsoscelesTrapezoid(random.nextInt(MAX_SIZE_OF_SIDE),
+                        random.nextInt(MAX_SIZE_OF_SIDE),
+                        random.nextInt(MAX_SIZE_OF_SIDE),
                         colorSupplier.getRandomColor());
             default:
-                return new Circle(MAX_SIZE_OF_SIDE, colorSupplier.getRandomColor());
+                return new Circle(random.nextInt(MAX_SIZE_OF_SIDE),
+                        colorSupplier.getRandomColor());
         }
     }
 
