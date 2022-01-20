@@ -4,10 +4,10 @@ import core.basesyntax.lists.FiguresList;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int FIGURE_COUNT = FiguresList.values().length;
+    private static final int CIRCLE_RADIUS = 10;
+    private static final String CIRCLE_COLOR = "WHITE";
     private Random random = new Random();
-    public static final int FIGURE_COUNT = FiguresList.values().length;
-    public static final int CIRCLE_RADIUS = 10;
-    public static final String CIRCLE_COLOR = "WHITE";
 
     public Figures getRandomFigure() {
         int index = random.nextInt(FIGURE_COUNT);
