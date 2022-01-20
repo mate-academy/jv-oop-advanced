@@ -4,7 +4,6 @@ import java.util.Random;
 
 //square, rectangle, right triangle, circle, isosceles trapezoid
 public class FigureSupplier {
-    public static final Circle CIRCLE = new Circle(10, Colors.WHITE.toString().toLowerCase());
     public static final int FIGURE_COUNT = 4;
     public static final int MAX_LENGTH = 30;
     private Random random = new Random();
@@ -37,6 +36,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return CIRCLE;
+        return new Circle(10, Colors.WHITE.toString().toLowerCase());
     }
 }
