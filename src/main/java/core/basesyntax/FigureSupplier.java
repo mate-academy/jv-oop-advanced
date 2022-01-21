@@ -5,10 +5,11 @@ import java.util.Random;
 public class FigureSupplier {
 
     private static final int FIGURES_NUMBER = 5;
+    private static final int CIRCLE_RADIUS = 10;
     private static final double SIDE_SIZE = 25.0;
 
     public static Figure getDefaultFigure() {
-        return new Circle("WHITE", 10);
+        return new Circle("WHITE", CIRCLE_RADIUS);
     }
 
     public Figure getRandomFigure() {
