@@ -19,7 +19,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String draw() {
-        return "Figure: square, area: " + getArea()
+        return "Figure: isosceles trapezoid, area: " + getArea()
                 + " sq.units, sideA: " + sideA
                 + " units, sideB: " + sideB
                 + " units, trapezoid height: " + trapezoidH
