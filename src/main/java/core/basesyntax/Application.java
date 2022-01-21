@@ -7,7 +7,7 @@ public class Application {
         for (int i = 0; i < figures.length; i++) {
             if (i < figures.length / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
-            } else if (i >= figures.length / 2) {
+            } else {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
         }

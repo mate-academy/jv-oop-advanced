@@ -5,7 +5,7 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int LIMIT = 10;
     private static final int CIRCLE_RADIUS = 10;
-    private static final int BOUND_FOR_SWITCH = 5;
+    private static final int BOUND_FOR_SWITCH = 4;
 
     public Figure getRandomFigure() {
         ColorSupplier colorSupplier = new ColorSupplier();
@@ -27,11 +27,8 @@ public class FigureSupplier {
                 return new Rectangle(colorSupplier.getRandomColor(),
                         random.nextInt(LIMIT), random.nextInt(LIMIT));
 
-            case (4):
-                return new Square(colorSupplier.getRandomColor(), random.nextInt(LIMIT));
-
             default:
-                return null;
+                return new Square(colorSupplier.getRandomColor(), random.nextInt(LIMIT));
         }
     }
 
