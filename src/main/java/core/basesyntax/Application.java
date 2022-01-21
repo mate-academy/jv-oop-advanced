@@ -3,11 +3,16 @@ package core.basesyntax;
 public class Application {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        for (int i = 0; i < 3; i++) {
-            figureSupplier.getRandomFigure().toDraw();
+        Figure[] figures = new Figure[10];
+        for (int i = 0; i < figures.length; i++) {
+            if (i < figures.length / 2) {
+                figures[i] = figureSupplier.getRandomFigure();
+            } else if (i >= figures.length / 2) {
+                figures[i] = figureSupplier.getDefaultFigure();
+            }
         }
-        for (int i = 0; i < 10; i++) {
-            figureSupplier.getDefaultFigure().toDraw();
+        for (Figure current: figures) {
+            current.toDraw();
         }
     }
 }

@@ -4,26 +4,38 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int LIMIT = 10;
+    private static final int CIRCLE_RADIUS = 10;
+    private static final int BOUND_FOR_SWITCH = 5;
 
     public Figure getRandomFigure() {
         ColorSupplier colorSupplier = new ColorSupplier();
         Random random = new Random();
-        Figure[] figures = new Figure[]
-                {new Circle(colorSupplier.getRandomColor(), random.nextInt(LIMIT)),
-                new RightTriangle(colorSupplier.getRandomColor(),
-                        random.nextInt(LIMIT), random.nextInt(LIMIT)),
-                new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        random.nextInt(LIMIT), random.nextInt(LIMIT),random.nextInt(LIMIT)),
-                new Rectangle(colorSupplier.getRandomColor(),
-                        random.nextInt(LIMIT), random.nextInt(LIMIT)),
-                new Square(colorSupplier.getRandomColor(), random.nextInt(LIMIT))};
+        int index = new Random().nextInt(BOUND_FOR_SWITCH);
+        switch (index) {
+            case (0):
+                return new Circle(colorSupplier.getRandomColor(), random.nextInt(LIMIT));
 
-        int index = new Random().nextInt(5);
-        return figures[index];
+            case (1):
+                return new RightTriangle(colorSupplier.getRandomColor(),
+                        random.nextInt(LIMIT), random.nextInt(LIMIT));
+
+            case (2):
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        random.nextInt(LIMIT), random.nextInt(LIMIT),random.nextInt(LIMIT));
+
+            case (3):
+                return new Rectangle(colorSupplier.getRandomColor(),
+                        random.nextInt(LIMIT), random.nextInt(LIMIT));
+
+            case (4):
+                return new Square(colorSupplier.getRandomColor(), random.nextInt(LIMIT));
+
+            default:
+                return null;
+        }
     }
 
     public Figure getDefaultFigure() {
-        Figure whiteCircle = new Circle(Color.WHITE.toString(), 10);
-        return whiteCircle;
+        return new Circle(Color.WHITE.toString(), CIRCLE_RADIUS);
     }
 }

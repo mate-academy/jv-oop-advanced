@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.text.DecimalFormat;
 
-public class Circle extends Figure implements AreaCalculator {
+public class Circle extends Figure {
     private int radius;
 
     public Circle(String color, int radius) {
