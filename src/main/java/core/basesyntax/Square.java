@@ -1,11 +1,11 @@
 package core.basesyntax;
 
-public class Square extends Figure implements AreaCalcualtor{
+public class Square extends Figure implements AreaCalcualtor {
     private int width;
 
-    public Square(String color,int width) {
+    public Square(String color, int width) {
         super(color);
-        this.width=width;
+        this.width = width;
     }
 
     public int getWidth() {

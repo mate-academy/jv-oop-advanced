@@ -26,6 +26,8 @@ public class RightTriangle extends Figure {
     @Override
     public void printInfo() {
         System.out.println("Figure, right triangle, area " + findArea() + "sq.units, "
-                + "base: " + getBase() + "height: " + getHeight() + " " + "units, " + "color: " + this.getColor());
+                + "base: " + getBase() + "height: " + getHeight() + " " + "units, " + "color: "
+                +
+                this.getColor());
     }
 }

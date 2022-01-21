@@ -6,8 +6,7 @@ public class FigureSupplier {
 
     private int getRandomValue() {
         Random random = new Random();
-        int randomValue = random.nextInt(20);
-        return randomValue;
+        return random.nextInt(20);
     }
 
     public Figure getRandomFigure() {
@@ -21,7 +20,8 @@ public class FigureSupplier {
                 return new Circle(randomColor, getRandomValue());
 
             case 1:
-                return new IsoscelesTrapezoid(randomColor, getRandomValue(), getRandomValue(), getRandomValue());
+                return new IsoscelesTrapezoid(randomColor, getRandomValue(), getRandomValue(),
+                        getRandomValue());
 
             case 2:
                 return new Rectangle(randomColor, getRandomValue(), getRandomValue());
@@ -29,14 +29,12 @@ public class FigureSupplier {
             case 3:
                 return new RightTriangle(randomColor, getRandomValue(), getRandomValue());
 
-            case 4:
+            default:
                 return new Square(randomColor, getRandomValue());
 
         }
 
-        return null;
     }
-
 
     public Figure getDefaultFigure() {
         Figure whiteCircle = new Circle("white", 10);
