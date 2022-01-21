@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Trapezoid extends Figure implements Properties {
+public class Trapezoid extends Figure {
     private String name = "Isosceles Trapezoid";
     private String color;
     private double baseA;

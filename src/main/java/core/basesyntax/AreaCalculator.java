@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-public interface Properties {
+public interface AreaCalculator {
     double countArea();
-
-    void getInfo();
 }

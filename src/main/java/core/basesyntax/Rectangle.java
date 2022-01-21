@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Properties {
+public class Rectangle extends Figure {
     private String name = "Rectangle";
     private String color;
     private double sideA;

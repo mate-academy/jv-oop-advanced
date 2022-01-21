@@ -1,10 +1,7 @@
 package core.basesyntax;
 
-public class Figure {
+public abstract class Figure implements FigurePrinter, AreaCalculator {
     private String name;
     private String color;
     private double area;
-
-    public void getInfo() {
-    }
 }

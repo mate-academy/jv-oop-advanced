@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements Properties {
+public class Circle extends Figure {
     private String name = "Circle";
     private String color;
     private int radius;
