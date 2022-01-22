@@ -3,12 +3,13 @@ package core.basesyntax;
 import java.security.SecureRandom;
 
 public class FigureSupplier {
+
     private ColorSupplier colorSupplier = new ColorSupplier();
     private SecureRandom secureRandom = new SecureRandom();
-    private final int numberOfFigures = 5;
+    public static final int NUMBER_OF_FIGURES = 5;
 
     public Figure getRandomFigure() {
-        int randomInt = secureRandom.nextInt(numberOfFigures - 1) + 1;
+        int randomInt = secureRandom.nextInt(NUMBER_OF_FIGURES - 1) + 1;
         switch (randomInt) {
             case 1:
                 return new Circle(colorSupplier.getRandomColor(), secureRandom.nextDouble() * 10);
