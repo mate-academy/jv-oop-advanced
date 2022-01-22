@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements FigureProperties {
+public class Circle extends Figure implements AreaCalculator, Drawable {
     private double radius;
     private String color;
 
@@ -10,13 +10,20 @@ public class Circle extends Figure implements FigureProperties {
     }
 
     @Override
-    public String toString() {
-        return "Figure: circle. Radius: " + radius
-                + "mm. Area: " + getArea() + " sq.mm. Color: " + color;
+    public double getArea() {
+        return Math.PI * radius * radius;
     }
 
     @Override
-    public double getArea() {
-        return Math.PI * radius * radius;
+    public String getColor() {
+        ColorSupplier colorSupplier = new ColorSupplier();
+        color = colorSupplier.getRandomColor();
+        return color;
+    }
+
+    @Override
+    public String draw() {
+        return "Figure: circle. Radius: " + radius
+                + "mm. Area: " + getArea() + " sq.mm. Color: " + color;
     }
 }

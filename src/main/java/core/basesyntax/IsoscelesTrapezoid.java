@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements FigureProperties {
+public class IsoscelesTrapezoid extends Figure implements AreaCalculator, Drawable {
     private double base;
     private double top;
     private double height;
@@ -14,13 +14,20 @@ public class IsoscelesTrapezoid extends Figure implements FigureProperties {
     }
 
     @Override
-    public String toString() {
-        return "Figure: isosceles trapezoid. Base: " + base + " mm. Top: " + top + " mm. Height: "
-                + height + "mm. Area: " + getArea() + " sq.mm. Color: " + color;
+    public double getArea() {
+        return (base + top) * height / 2;
     }
 
     @Override
-    public double getArea() {
-        return (base + top) * height / 2;
+    public String getColor() {
+        ColorSupplier colorSupplier = new ColorSupplier();
+        color = colorSupplier.getRandomColor();
+        return color;
+    }
+
+    @Override
+    public String draw() {
+        return "Figure: isosceles trapezoid. Base: " + base + " mm. Top: " + top + " mm. Height: "
+                + height + "mm. Area: " + getArea() + " sq.mm. Color: " + color;
     }
 }
