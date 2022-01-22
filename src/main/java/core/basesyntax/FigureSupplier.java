@@ -5,7 +5,7 @@ import java.security.SecureRandom;
 public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
     private SecureRandom secureRandom = new SecureRandom();
-    final int numberOfFigures = 5;
+    private final int numberOfFigures = 5;
 
     public Figure getRandomFigure() {
         int randomInt = secureRandom.nextInt(numberOfFigures - 1) + 1;
@@ -17,8 +17,8 @@ public class FigureSupplier {
                         secureRandom.nextDouble() * 10, secureRandom.nextDouble()
                         * 10, colorSupplier.getRandomColor());
             case 3:
-                return new RightTriangle(colorSupplier.getRandomColor(), secureRandom.nextDouble() * 10,
-                        secureRandom.nextDouble() * 10);
+                return new RightTriangle(colorSupplier.getRandomColor(),
+                        secureRandom.nextDouble() * 10, secureRandom.nextDouble() * 10);
             case 4:
                 return new Rectangle(secureRandom.nextDouble() * 10,
                         secureRandom.nextDouble() * 10, colorSupplier.getRandomColor());
