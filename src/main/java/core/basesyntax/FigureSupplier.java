@@ -4,9 +4,9 @@ import java.security.SecureRandom;
 
 public class FigureSupplier {
 
+    private static final int NUMBER_OF_FIGURES = 5;
     private ColorSupplier colorSupplier = new ColorSupplier();
     private SecureRandom secureRandom = new SecureRandom();
-    public static final int NUMBER_OF_FIGURES = 5;
 
     public Figure getRandomFigure() {
         int randomInt = secureRandom.nextInt(NUMBER_OF_FIGURES - 1) + 1;
