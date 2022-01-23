@@ -1,31 +1,23 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure implements AreaCalculator, Drawable {
-    private double sideA;
-    private double sideB;
-    private String color;
+    private double width;
+    private double height;
 
-    public Rectangle(double sideA, double sideB, String color) {
-        this.sideA = sideA;
-        this.sideB = sideB;
+    public Rectangle(double width, double height, String color) {
         this.color = color;
+        this.width = width;
+        this.height = height;
     }
 
     @Override
     public double getArea() {
-        return sideA * sideB;
-    }
-
-    @Override
-    public String getColor() {
-        ColorSupplier colorSupplier = new ColorSupplier();
-        color = colorSupplier.getRandomColor();
-        return color;
+        return width * height;
     }
 
     @Override
     public String draw() {
-        return "Figure: rectangle. SideA: " + sideA + " mm." + " SideB: " + sideB
+        return "Figure: rectangle. Width: " + width + " mm." + " Hetght: " + height
                 + "mm. Area: " + getArea() + " sq.mm. Color: " + color;
     }
 }
