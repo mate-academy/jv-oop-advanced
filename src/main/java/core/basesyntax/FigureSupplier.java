@@ -26,13 +26,11 @@ public class FigureSupplier {
             case 5:
                 return new Square(secureRandom.nextDouble() * 10, colorSupplier.getRandomColor());
             default:
-                return new Circle("white", 10);
+                return getDefaultFigure();
         }
-
     }
 
     public Figure getDefaultFigure() {
         return new Circle("white", 10);
     }
-
 }

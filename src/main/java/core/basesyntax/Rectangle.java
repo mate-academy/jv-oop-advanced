@@ -1,11 +1,12 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure implements AreaCalculator, Drawable {
+
     private double width;
     private double height;
 
     public Rectangle(double width, double height, String color) {
-        this.color = color;
+        super(color);
         this.width = width;
         this.height = height;
     }
@@ -18,6 +19,6 @@ public class Rectangle extends Figure implements AreaCalculator, Drawable {
     @Override
     public String draw() {
         return "Figure: rectangle. Width: " + width + " mm." + " Hetght: " + height
-                + "mm. Area: " + getArea() + " sq.mm. Color: " + color;
+                + "mm. Area: " + getArea() + " sq.mm. Color: " + getColor();
     }
 }
