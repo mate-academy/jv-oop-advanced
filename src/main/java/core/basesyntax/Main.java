@@ -16,7 +16,7 @@ public class Main {
         }
 
         for (int i = 0; i < array.length; i++) {
-            array[i].draw(array[i]);
+            array[i].draw();
         }
     }
 }

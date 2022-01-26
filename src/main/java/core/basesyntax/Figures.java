@@ -10,4 +10,9 @@ public abstract class Figures implements AreaGetter, Draw {
     public String getColor() {
         return color;
     }
+
+    @Override
+    public void draw() {
+        System.out.println(this);
+    }
 }
