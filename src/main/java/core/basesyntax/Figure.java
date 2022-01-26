@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements FigureDraw {
+public abstract class Figure implements FigureDifferentFunctions {
     private String color;
 
     Figure(String color) {

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public interface FigureDraw {
+public interface FigureDifferentFunctions {
     public default String draw() {
         return null;
     }

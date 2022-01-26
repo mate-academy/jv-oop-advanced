@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class FigureSupplier implements FigureDraw {
+public class FigureSupplier {
     private static final int MAX_NUMBER = 20;
 
     public Figure getRandomFigure() {
