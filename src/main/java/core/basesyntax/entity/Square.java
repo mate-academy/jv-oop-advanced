@@ -8,7 +8,7 @@ public class Square extends Rectangle{
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + getArea()
+        System.out.println("Figure: square, area: " + getArea()
                 + " sq.units, side: " + this.width + " units, color: " + this.color);
     }
 }
