@@ -1,12 +1,11 @@
 package core.basesyntax;
 
-public class Rectangle implements Figure {
-    private final String color;
+public class Rectangle extends Figure implements AreaCalculator, Drawable {
     private final int smallSide;
     private final int bigSide;
 
     public Rectangle(String color, int smallSide, int bigSide) {
-        this.color = color;
+        super(color);
         this.smallSide = smallSide;
         this.bigSide = bigSide;
     }
