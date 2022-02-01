@@ -8,7 +8,12 @@ public class Square extends Rectangle{
 
     @Override
     public void draw() {
-        System.out.println("Figure: square, area: " + String.format("%.1f", getArea())
-                + " sq.units, side: " + String.format("%.1f", this.width) + " units, color: " + this.color);
+        System.out.println(new StringBuilder()
+                .append("Figure: square, area: ")
+                .append(String.format("%.1f", getArea()).replace(',', '.'))
+                .append(" sq.units, side: ")
+                .append(String.format("%.1f", this.width).replace(',', '.'))
+                .append(" units, color: ")
+                .append(this.color.toString().toLowerCase()).toString());
     }
 }

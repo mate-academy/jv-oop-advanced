@@ -14,9 +14,15 @@ public class Rectangle extends Figure{
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + String.format("%.2f", getArea())
-                + " sq.units, width: " + width + " units, height: "
-                + height + "units, color: " + this.color);
+        System.out.println(new StringBuilder()
+                .append("Figure: rectangle, area: ")
+                .append(String.format("%.1f", getArea()))
+                .append(" sq.units, width: ")
+                .append(String.format("%.1f", width))
+                .append(" units, height: ")
+                .append(height)
+                .append("units, color: ")
+                .append(this.color).toString());
     }
 
     @Override

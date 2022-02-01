@@ -13,10 +13,14 @@ public class RightTriangle extends Figure{
 
     @Override
     public void draw() {
-        System.out.println("Figure: triangle, area:"
-                + String.format("%.1f", getArea()) + ", firstLeg: " + String.format("%.2f", firstLeg)
-                + " units, secondLeg: " + String.format("%.2f", secondLeg) + " units, "
-                + "color: " + this.color);
+        System.out.println(new StringBuilder()
+                .append("Figure: triangle, area:")
+                .append(String.format("%.1f", getArea()))
+                .append(", firstLeg: ")
+                .append(String.format("%.1f", firstLeg))
+                .append(" units, secondLeg: ")
+                .append(String.format("%.1f", secondLeg))
+                .append(" units, color: ").append(this.color).toString());
     }
 
     @Override

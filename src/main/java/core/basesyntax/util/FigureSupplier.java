@@ -27,27 +27,27 @@ public class FigureSupplier {
 
         switch (shape) {
             case CIRCLE:
-                double radius = random.nextDouble() * random.nextInt();
+                double radius = getRandomLength();
                 figure = new Circle(radius, color);
                 break;
             case SQUARE:
-                double side = random.nextDouble() * random.nextInt();
+                double side = getRandomLength();
                 figure = new Square(side, color);
                 break;
             case RECTANGLE:
-                double width = random.nextDouble() * random.nextInt();
-                double height = random.nextDouble() * random.nextInt();
+                double width = getRandomLength();
+                double height = getRandomLength();
                 figure = new Rectangle(width, height, color);
                 break;
             case RIGHT_TRIANGLE:
-                double firstLeg = random.nextDouble() * random.nextInt();
-                double secondLeg = random.nextDouble() * random.nextInt();
+                double firstLeg = getRandomLength();
+                double secondLeg = getRandomLength();
                 figure = new RightTriangle(firstLeg, secondLeg, color);
                 break;
             case ISOSCELES_TRAPEZOID:
-                double base = random.nextDouble() * random.nextInt();
-                double top = random.nextDouble() * random.nextInt();
-                double leg = random.nextDouble() * random.nextInt();
+                double base = getRandomLength();
+                double top = getRandomLength();
+                double leg = getRandomLength();
                 figure = new IsoscelesTrapezoid(base, top, leg, color);
                 break;
             default:
@@ -55,6 +55,10 @@ public class FigureSupplier {
         }
 
         return figure;
+    }
+
+    private double getRandomLength() {
+        return Math.abs(random.nextDouble() * random.nextInt());
     }
 
 }
