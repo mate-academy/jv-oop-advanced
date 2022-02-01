@@ -7,21 +7,18 @@ public class FigureSupplier {
 
     public static Figure getRandomFigure() {
         int index = random.nextInt(5);
-        Figure [] figures = new Figure[5];
         switch (index) {
-            case 0: figures[0] = getRandomCircle();
-                break;
-            case 1: figures[1] = getRandomSquare();
-                break;
-            case 2: figures[2] = getRandomRectangle();
-                break;
-            case 3: figures[3] = getRandomRightTriangle();
-                break;
-            case 4: figures[4] = getRandomIsoscelesTrapezoid();
-                break;
-            default: getDefaultFigure();
+            case 0: return getRandomCircle();
+            case 1: return getRandomSquare();
+            case 2: return getRandomRectangle();
+            case 3: return getRandomRightTriangle();
+            case 4: return getRandomIsoscelesTrapezoid();
+            default: return getDefaultFigure();
         }
-        return figures[index];
+    }
+
+    public static Figure getDefaultFigure() {
+        return new Circle("white", 10);
     }
 
     private static Figure getRandomCircle() {
@@ -45,10 +42,6 @@ public class FigureSupplier {
     private static Figure getRandomRightTriangle() {
         return new RightTriangle(ColorSuplier.getRandomColor(), random.nextInt(10),
                 random.nextInt(10));
-    }
-
-    public static Figure getDefaultFigure() {
-        return new Circle("white", 10);
     }
 }
 
