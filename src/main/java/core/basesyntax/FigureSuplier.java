@@ -3,26 +3,48 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSuplier {
+    private final static Random random = new Random();
+
     public static Figure getRandomFigure() {
-        Random random = new Random();
-        int side = random.nextInt(10);
-        int radius = random.nextInt(10);
-        int smallSide = random.nextInt(10);
-        int bigSide = random.nextInt(10);
-        int firstLeg = random.nextInt(10);
-        int secondLeg = random.nextInt(10);
-        int height = random.nextInt(10);
-        int topBase = random.nextInt(10);
-        int bottomBase = random.nextInt(10);
-
-        Figure [] figures = {new Circle(ColorSuplier.getRandomColor(), radius),
-                new IsoscelesTrapezoid(ColorSuplier.getRandomColor(), height, topBase, bottomBase),
-                new Rectangle(ColorSuplier.getRandomColor(), smallSide, bigSide),
-                new RightTriangle(ColorSuplier.getRandomColor(), firstLeg, secondLeg),
-                new Square(ColorSuplier.getRandomColor(), side)};
-        int index = random.nextInt(figures.length);
-
+        int index = random.nextInt(5);
+        Figure [] figures = new Figure[5];
+        switch (index) {
+            case 0: figures[0] = getRandomCircle();
+            break;
+            case 1: figures[1] = getRandomSquare();
+            break;
+            case 2: figures[2] = getRandomRectangle();
+            break;
+            case 3: figures[3] = getRandomRightTriangle();
+            break;
+            case 4: figures[4] = getRandomIsoscelesTrapezoid();
+            break;
+            default: getDefaultFigure();
+        }
         return figures[index];
+    }
+
+    private static Figure getRandomCircle() {
+        return new Circle(ColorSuplier.getRandomColor(), random.nextInt(10));
+    }
+
+    private static Figure getRandomSquare() {
+        return new Square(ColorSuplier.getRandomColor(), random.nextInt(10));
+    }
+
+    private static Figure getRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(ColorSuplier.getRandomColor(), random.nextInt(10),
+               random.nextInt(10), random.nextInt(10));
+    }
+
+    private static Figure getRandomRectangle() {
+        return new Rectangle(ColorSuplier.getRandomColor(), random.nextInt(10),
+                random.nextInt(10));
+    }
+
+    private static Figure getRandomRightTriangle() {
+        return new RightTriangle(ColorSuplier.getRandomColor(), random.nextInt(10),
+                random.nextInt(10));
     }
 
     public static Figure getDefaultFigure() {
