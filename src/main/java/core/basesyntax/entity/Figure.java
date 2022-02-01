@@ -1,9 +1,8 @@
 package core.basesyntax.entity;
 
 public abstract class Figure implements Drawable{
-    String color;
+    Color color;
 
     public abstract double getArea();
-
 
 }
