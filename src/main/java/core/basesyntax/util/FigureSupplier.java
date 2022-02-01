@@ -1,10 +1,16 @@
 package core.basesyntax.util;
 
-import core.basesyntax.entity.*;
+import static core.basesyntax.entity.Shape.values;
 
+import core.basesyntax.entity.Circle;
+import core.basesyntax.entity.Color;
+import core.basesyntax.entity.Figure;
+import core.basesyntax.entity.IsoscelesTrapezoid;
+import core.basesyntax.entity.Rectangle;
+import core.basesyntax.entity.RightTriangle;
+import core.basesyntax.entity.Shape;
+import core.basesyntax.entity.Square;
 import java.util.Random;
-
-import static core.basesyntax.entity.Shape.*;
 
 public class FigureSupplier {
     private final ColorSupplier colorSupplier;

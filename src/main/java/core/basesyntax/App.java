@@ -1,8 +1,6 @@
 package core.basesyntax;
 
 import core.basesyntax.entity.Figure;
-import core.basesyntax.entity.Rectangle;
-import core.basesyntax.entity.Square;
 import core.basesyntax.util.FigureSupplier;
 
 public class App {
@@ -13,7 +11,7 @@ public class App {
         Figure[] figures = new Figure[6];
 
         for (int i = 0; i < figures.length; i++) {
-            if (i < figures.length /2) {
+            if (i < figures.length / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();

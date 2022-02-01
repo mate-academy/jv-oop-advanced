@@ -1,6 +1,6 @@
 package core.basesyntax.entity;
 
-public class Rectangle extends Figure{
+public class Rectangle extends Figure {
 
     protected double width;
     protected double height;
@@ -10,7 +10,6 @@ public class Rectangle extends Figure{
         this.height = height;
         this.color = color;
     }
-
 
     @Override
     public void draw() {

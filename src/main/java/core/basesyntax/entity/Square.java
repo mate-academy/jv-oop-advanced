@@ -1,6 +1,6 @@
 package core.basesyntax.entity;
 
-public class Square extends Rectangle{
+public class Square extends Rectangle {
 
     public Square(double side, Color color) {
         super(side, side, color);
