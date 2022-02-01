@@ -1,13 +1,12 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid implements Figure {
-    private final String color;
+public class IsoscelesTrapezoid extends Figure implements AreaCalculator, Drawable {
     private final int height;
     private final int topBase;
     private final int bottomBase;
 
     public IsoscelesTrapezoid(String color, int height, int topBase, int bottomBase) {
-        this.color = color;
+        super(color);
         this.height = height;
         this.topBase = topBase;
         this.bottomBase = bottomBase;
