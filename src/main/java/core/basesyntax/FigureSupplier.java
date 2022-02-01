@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final static Random random = new Random();
+    private static final Random random = new Random();
 
     public static Figure getRandomFigure() {
         int index = random.nextInt(5);
