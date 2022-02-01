@@ -15,11 +15,11 @@ public class RightTriangle extends Figure{
     public void draw() {
         System.out.println(new StringBuilder()
                 .append("Figure: triangle, area:")
-                .append(String.format("%.1f", getArea()))
+                .append(String.format("%.1f", getArea()).replace(',', '.'))
                 .append(", firstLeg: ")
-                .append(String.format("%.1f", firstLeg))
+                .append(String.format("%.1f", firstLeg).replace(',', '.'))
                 .append(" units, secondLeg: ")
-                .append(String.format("%.1f", secondLeg))
+                .append(String.format("%.1f", secondLeg).replace(',', '.'))
                 .append(" units, color: ").append(this.color).toString());
     }
 

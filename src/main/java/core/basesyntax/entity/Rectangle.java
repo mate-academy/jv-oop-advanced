@@ -16,11 +16,11 @@ public class Rectangle extends Figure{
     public void draw() {
         System.out.println(new StringBuilder()
                 .append("Figure: rectangle, area: ")
-                .append(String.format("%.1f", getArea()))
+                .append(String.format("%.1f", getArea()).replace(',', '.'))
                 .append(" sq.units, width: ")
-                .append(String.format("%.1f", width))
+                .append(String.format("%.1f", width).replace(',', '.'))
                 .append(" units, height: ")
-                .append(height)
+                .append(String.format("%.1f", height).replace(',', '.'))
                 .append("units, color: ")
                 .append(this.color).toString());
     }

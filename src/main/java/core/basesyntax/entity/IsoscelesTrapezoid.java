@@ -16,13 +16,13 @@ public class IsoscelesTrapezoid extends Figure{
     public void draw() {
         System.out.println(new StringBuilder()
                 .append("Figure: isosceles trapezoid, area:")
-                .append(String.format("%.1f", getArea()))
+                .append(String.format("%.1f", getArea()).replace(',', '.'))
                 .append(", top: ")
-                .append(String.format("%.1f", top))
+                .append(String.format("%.1f", top).replace(',', '.'))
                 .append(" units, base: ")
-                .append(String.format("%.1f", base))
+                .append(String.format("%.1f", base).replace(',', '.'))
                 .append(" units, ").append("leg: ")
-                .append(String.format("%.1f", leg))
+                .append(String.format("%.1f", leg).replace(',', '.'))
                 .append(" units, ").append("color: ")
                 .append(this.color).toString());
     }
