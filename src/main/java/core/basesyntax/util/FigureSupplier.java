@@ -1,5 +1,6 @@
 package core.basesyntax.util;
 
+import core.basesyntax.entity.Circle;
 import core.basesyntax.entity.Color;
 import core.basesyntax.entity.Figure;
 import core.basesyntax.entity.Square;
@@ -16,7 +17,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Square(10, colorSupplier.getDefaultColor());
+        return new Circle(10, colorSupplier.getDefaultColor());
     }
 
 }
