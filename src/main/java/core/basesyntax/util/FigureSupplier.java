@@ -33,34 +33,54 @@ public class FigureSupplier {
 
         switch (shape) {
             case CIRCLE:
-                double radius = getRandomLength();
-                figure = new Circle(radius, color);
+                figure = getRandomCircle(color);
                 break;
             case SQUARE:
-                double side = getRandomLength();
-                figure = new Square(side, color);
+                figure = getRandomSquare(color);
                 break;
             case RECTANGLE:
-                double width = getRandomLength();
-                double height = getRandomLength();
-                figure = new Rectangle(width, height, color);
+                figure = getRandomRectangle(color);
                 break;
             case RIGHT_TRIANGLE:
-                double firstLeg = getRandomLength();
-                double secondLeg = getRandomLength();
-                figure = new RightTriangle(firstLeg, secondLeg, color);
+                figure = getRandomRightTriangle(color);
                 break;
             case ISOSCELES_TRAPEZOID:
-                double base = getRandomLength();
-                double top = getRandomLength();
-                double leg = getRandomLength();
-                figure = new IsoscelesTrapezoid(base, top, leg, color);
+                figure = getRandomIsoscelesTrapezoid(color);
                 break;
             default:
                 figure = getDefaultFigure();
         }
 
         return figure;
+    }
+
+    private Figure getRandomIsoscelesTrapezoid(Color color) {
+        double base = getRandomLength();
+        double top = getRandomLength();
+        double leg = getRandomLength();
+        return new IsoscelesTrapezoid(base, top, leg, color);
+    }
+
+    private Figure getRandomRightTriangle(Color color) {
+        double firstLeg = getRandomLength();
+        double secondLeg = getRandomLength();
+        return new RightTriangle(firstLeg, secondLeg, color);
+    }
+
+    private Figure getRandomRectangle(Color color) {
+        double width = getRandomLength();
+        double height = getRandomLength();
+        return new Rectangle(width, height, color);
+    }
+
+    private Figure getRandomSquare(Color color) {
+        double side = getRandomLength();
+        return new Square(side, color);
+    }
+
+    private Figure getRandomCircle(Color color) {
+        double radius = getRandomLength();
+        return new Circle(radius, color);
     }
 
     private double getRandomLength() {
