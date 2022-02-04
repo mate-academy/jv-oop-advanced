@@ -15,7 +15,7 @@ public class RightTriangle extends Figure {
     public void draw() {
         System.out.println(new StringBuilder()
                 .append("Figure: triangle, area:")
-                .append(String.format("%.1f", area()))
+                .append(String.format("%.1f", CalculateArea()))
                 .append(", firstLeg: ")
                 .append(String.format("%.1f", firstLeg))
                 .append(" units, secondLeg: ")
@@ -24,7 +24,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double CalculateArea() {
         return firstLeg * secondLeg / 2;
     }
 }

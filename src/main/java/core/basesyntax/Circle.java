@@ -13,7 +13,7 @@ public class Circle extends Figure {
     public void draw() {
         System.out.println(new StringBuilder()
                 .append("Figure: circle, area: ")
-                .append(String.format("%.1f", area()))
+                .append(String.format("%.1f", CalculateArea()))
                 .append(" sq.units, radius: ")
                 .append(String.format("%.1f", radius))
                 .append(" units, color: ")
@@ -21,7 +21,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double CalculateArea() {
         return Math.PI * radius * radius;
     }
 }
