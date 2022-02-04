@@ -10,7 +10,7 @@ public class Square extends Rectangle {
     public void draw() {
         System.out.println(new StringBuilder()
                 .append("Figure: square, area: ")
-                .append(String.format("%.1f", CalculateArea()))
+                .append(String.format("%.1f", getArea()))
                 .append(" sq.units, side: ")
                 .append(String.format("%.1f", this.width))
                 .append(" units, color: ")

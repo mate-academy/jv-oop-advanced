@@ -16,7 +16,7 @@ public class IsoscelesTrapezoid extends Figure {
     public void draw() {
         System.out.println(new StringBuilder()
                 .append("Figure: isosceles trapezoid, area:")
-                .append(String.format("%.1f", CalculateArea()).replace(',', '.'))
+                .append(String.format("%.1f", getArea()).replace(',', '.'))
                 .append(", top: ")
                 .append(String.format("%.1f", top).replace(',', '.'))
                 .append(" units, base: ")
@@ -28,7 +28,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double CalculateArea() {
+    public double getArea() {
         double baseLeg = (base - top) / 2;
         double height = Math.sqrt(leg * leg - baseLeg * baseLeg);
         double middleLine = (base + top) / 2;
