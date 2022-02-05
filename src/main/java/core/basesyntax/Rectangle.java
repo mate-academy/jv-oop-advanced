@@ -1,19 +1,11 @@
 package core.basesyntax;
 
-public class Rectangle extends Figures {
+public class Rectangle extends Figure {
     private int width;
     private int height;
 
-    public int getWidth() {
-        return width;
-    }
-
     public void setWidth(int width) {
         this.width = width;
-    }
-
-    public int getHeight() {
-        return height;
     }
 
     public void setHeight(int height) {
@@ -23,6 +15,11 @@ public class Rectangle extends Figures {
     @Override
     public String draw() {
         return null;
+    }
+
+    @Override
+    public double getArea() {
+        return 0;
     }
 }
 

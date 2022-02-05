@@ -1,19 +1,11 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figures {
+public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
-    public int getFirstLeg() {
-        return firstLeg;
-    }
-
     public void setFirstLeg(int firstLeg) {
         this.firstLeg = firstLeg;
-    }
-
-    public int getSecondLeg() {
-        return secondLeg;
     }
 
     public void setSecondLeg(int secondLeg) {
@@ -23,5 +15,10 @@ public class RightTriangle extends Figures {
     @Override
     public String draw() {
         return null;
+    }
+
+    @Override
+    public double getArea() {
+        return 0;
     }
 }

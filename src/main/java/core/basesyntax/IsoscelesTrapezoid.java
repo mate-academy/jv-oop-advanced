@@ -1,28 +1,16 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figures {
+public class IsoscelesTrapezoid extends Figure {
     private int sideA;
     private int sideB;
     private int high;
-
-    public int getSideA() {
-        return sideA;
-    }
 
     public void setSideA(int sideA) {
         this.sideA = sideA;
     }
 
-    public int getSideB() {
-        return sideB;
-    }
-
     public void setSideB(int sideB) {
         this.sideB = sideB;
-    }
-
-    public int getHigh() {
-        return high;
     }
 
     public void setHigh(int high) {
@@ -32,5 +20,10 @@ public class IsoscelesTrapezoid extends Figures {
     @Override
     public String draw() {
         return null;
+    }
+
+    @Override
+    public double getArea() {
+        return 0;
     }
 }

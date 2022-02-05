@@ -1,11 +1,7 @@
 package core.basesyntax;
 
-public class Square extends Figures {
+public class Square extends Figure {
     private int square;
-
-    public int getSquare() {
-        return square;
-    }
 
     public void setSquare(int square) {
         this.square = square;
@@ -14,5 +10,10 @@ public class Square extends Figures {
     @Override
     public String draw() {
         return null;
+    }
+
+    @Override
+    public double getArea() {
+        return 0;
     }
 }
