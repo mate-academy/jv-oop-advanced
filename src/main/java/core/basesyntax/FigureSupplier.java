@@ -52,11 +52,11 @@ public class FigureSupplier {
     }
 
     public Figure getRandomDefaultFigure() {
-        Square square = new Square();
-        square.setName("square");
-        square.setColor("blue");
-        square.setSquare(200);
-        return square;
+        Circle circle = new Circle();
+        circle.setName("circle");
+        circle.setColor("white");
+        circle.setRadius(10);
+        return circle;
     }
 
     public Figure getRandomFigure() {

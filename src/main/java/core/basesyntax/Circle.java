@@ -8,12 +8,16 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String draw() {
-        return null;
+    public double getArea() {
+        return Math.PI * radius * radius;
     }
 
     @Override
-    public double getArea() {
-        return 0;
+    public void draw() {
+        System.out.println("Figure: " + getName()
+                + ", area: " + getArea()
+                + "sq.units, radius: "
+                + radius + " units, color: "
+                + "color: " + getColor());
     }
 }
