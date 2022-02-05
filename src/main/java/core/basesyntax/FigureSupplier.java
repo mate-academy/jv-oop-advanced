@@ -17,7 +17,7 @@ public class FigureSupplier {
 
     public Figure getRandomIsoscelesTrapezoid() {
         IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
-        isoscelesTrapezoid.setName("Isosceles Trapezoid");
+        isoscelesTrapezoid.setName("isosceles trapezoid");
         isoscelesTrapezoid.setColor(color.getRandomColor().toString().toLowerCase());
         isoscelesTrapezoid.setSideA(200);
         isoscelesTrapezoid.setSideB(200);
