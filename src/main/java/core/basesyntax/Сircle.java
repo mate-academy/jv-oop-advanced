@@ -1,9 +1,10 @@
 package core.basesyntax;
 
-public class Сircle extends Figure implements FigureArea, Draw {
+public class Сircle implements FigureArea, Draw {
     private int radius;
 
     public Сircle(int radius) {
+
         this.radius = radius;
     }
 

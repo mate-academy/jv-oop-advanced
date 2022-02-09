@@ -1,11 +1,12 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements FigureArea, Draw {
+public class RightTriangle implements FigureArea, Draw {
 
     private  int firstLeg;
     private  int secondLeg;
 
     public RightTriangle(int firstLeg, int secondLeg) {
+
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }

@@ -1,14 +1,12 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public class Figure {
     private String color;
 
-    public String getColor() {
-        return color;
+
+    public Figure() {
+
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
 }
 
