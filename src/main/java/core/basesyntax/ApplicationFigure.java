@@ -5,6 +5,11 @@ public class ApplicationFigure {
         FigureSupplier figureSupplier = new FigureSupplier();
         System.out.println(figureSupplier.getRandomFigure());
 
+        FigureSupplier defaultSupplier = new FigureSupplier();
+        System.out.println(figureSupplier.getDefaultFigure());
+
+
+
 
 
 

@@ -2,17 +2,18 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class Square implements FigureArea, Draw {
-    private double area;
+public class Square extends Figure implements FigureArea, Draw {
     private int side;
-    private String color;
 
-
-    public Square(int side, String color) {
+    public Square(String color, int side) {
+        super(color);
         this.side = side;
-        this.color = color;
     }
 
+    @Override
+    public String getColor() {
+        return super.getColor();
+    }
 
 
     @Override
@@ -27,16 +28,6 @@ public class Square implements FigureArea, Draw {
                 " sq.units, " +
                 "side: " + side +
                 " units, " +
-                "color: '" + color + '\'' +
-                '}';
-    }
-
-    public String getColor() {
-        return color.toString();
-    }
-
-    @Override
-    public String toString() {
-        return getDraw();
+                "color: " + getColor();
     }
 }

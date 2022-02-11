@@ -7,15 +7,14 @@ public class FigureSupplier {
     Random random = new Random();
 
 
-    public Square getRandomFigure() {
-        return new Square(getSide(), colorSupplier.getRandomColor()) ;
+
+    public Figure getRandomFigure() {
+        RightTriangle rightTriangle = new RightTriangle();
+        return rightTriangle.getRandomRightTriangle();
     }
 
     public Figure getDefaultFigure(){
-        return null;
-    }
-
-    private int getSide() {
-        return random.nextInt(1000);
+        Figure defaultFigure = new Сircle("white", 10);
+        return defaultFigure;
     }
 }
