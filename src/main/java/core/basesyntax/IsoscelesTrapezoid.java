@@ -11,6 +11,10 @@ public class IsoscelesTrapezoid extends  Figure implements FigureArea, Draw {
         this.bottomBase = bottomBase;
         this.height = height;
     }
+    public IsoscelesTrapezoid() {
+
+    }
+
     @Override
     public double getArea() {
         return ((topBase*bottomBase)/2)*height;

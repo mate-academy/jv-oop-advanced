@@ -4,17 +4,19 @@ import java.util.Random;
 
 public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
+    Square square = new Square();
+    RightTriangle rightTriangle = new RightTriangle();
+    Circle circle = new Circle();
+    IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
+    Rectangle rectangle = new Rectangle();
+    Figure [] figures = new Figure[] {square, rightTriangle, circle, isoscelesTrapezoid, rectangle};
     Random random = new Random();
 
-
-
     public Figure getRandomFigure() {
-        RightTriangle rightTriangle = new RightTriangle();
-        return rightTriangle.getRandomRightTriangle();
+        return  null;
     }
 
     public Figure getDefaultFigure(){
-        Figure defaultFigure = new Сircle("white", 10);
-        return defaultFigure;
+        return new Circle("white", 10);
     }
 }

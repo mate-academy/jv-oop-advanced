@@ -10,6 +10,10 @@ public class Square extends Figure implements FigureArea, Draw {
         this.side = side;
     }
 
+    public Square() {
+
+    }
+
     @Override
     public String getColor() {
         return super.getColor();

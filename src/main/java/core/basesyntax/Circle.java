@@ -1,21 +1,15 @@
 package core.basesyntax;
 
-public class Сircle extends Figure implements FigureArea, Draw {
+public class Circle extends Figure implements Draw, FigureArea {
     private int radius;
 
-    public Сircle(String color, int radius) {
+    public Circle(String color, int radius) {
         super(color);
         this.radius = radius;
     }
 
-    @Override
-    public double getArea() {
-        return Math.PI*Math.pow(radius,2);
-    }
+    public Circle() {
 
-    @Override
-    public String toString() {
-        return getDraw();
     }
 
     @Override
@@ -33,4 +27,8 @@ public class Сircle extends Figure implements FigureArea, Draw {
                 "color: " + getColor();
     }
 
+    @Override
+    public double getArea() {
+        return Math.PI*Math.pow(radius,2);
+    }
 }
