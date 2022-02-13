@@ -4,6 +4,8 @@ import java.util.Random;
 
 public class Square extends Figure implements FigureArea, Draw {
     private int side;
+    Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Square(String color, int side) {
         super(color);
@@ -19,6 +21,10 @@ public class Square extends Figure implements FigureArea, Draw {
         return super.getColor();
     }
 
+    @Override
+    public Figure getRandomFigure() {
+        return  new Square(colorSupplier.getRandomColor(), random.nextInt(10));
+    }
 
     @Override
     public double getArea() {
@@ -33,5 +39,10 @@ public class Square extends Figure implements FigureArea, Draw {
                 "side: " + side +
                 " units, " +
                 "color: " + getColor();
+    }
+
+    @Override
+    public String toString() {
+        return getDraw();
     }
 }

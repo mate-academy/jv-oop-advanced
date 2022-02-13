@@ -16,9 +16,8 @@ public class RightTriangle extends Figure implements FigureArea, Draw {
         this.secondLeg = secondLeg;
     }
 
-    public RightTriangle getRandomRightTriangle() {
-        RightTriangle randomRightTriangle = new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(1000), random.nextInt(1000)) ;
-        return randomRightTriangle;
+    public Figure getRandomFigure() {
+        return new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(10), random.nextInt(10)) ;
     }
 
     @Override

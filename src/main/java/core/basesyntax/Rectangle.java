@@ -1,8 +1,12 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public class Rectangle extends Figure implements Draw, FigureArea {
     private int width;
     private int height;
+    Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Rectangle(String color, int width, int height) {
         super(color);
@@ -16,6 +20,11 @@ public class Rectangle extends Figure implements Draw, FigureArea {
     @Override
     public String getColor() {
         return super.getColor();
+    }
+
+    @Override
+    public Figure getRandomFigure() {
+        return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(10), random.nextInt(10));
     }
 
 
@@ -35,5 +44,10 @@ public class Rectangle extends Figure implements Draw, FigureArea {
     @Override
     public double getArea() {
         return width*height;
+    }
+
+    @Override
+    public String toString() {
+        return getDraw();
     }
 }

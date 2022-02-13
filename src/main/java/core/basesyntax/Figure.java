@@ -6,7 +6,6 @@ public abstract class Figure {
     public Figure() {
     }
 
-
     public Figure(String color) {
         this.color = color;
     }
@@ -14,5 +13,8 @@ public abstract class Figure {
     public String getColor() {
         return color.toLowerCase();
     }
+
+    public abstract Figure getRandomFigure();
+
 }
 
