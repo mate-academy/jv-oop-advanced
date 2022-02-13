@@ -5,8 +5,8 @@ import java.util.Random;
 public class Rectangle extends Figure implements Draw, FigureArea {
     private int width;
     private int height;
-    Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
+    private Random random = new Random();
 
     public Rectangle(String color, int width, int height) {
         super(color);
@@ -24,26 +24,25 @@ public class Rectangle extends Figure implements Draw, FigureArea {
 
     @Override
     public Figure getRandomFigure() {
-        return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(10), random.nextInt(10));
+        return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(10),
+                random.nextInt(10));
     }
-
 
     @Override
     public String getDraw() {
-        return "Rectangle: area: " +
-                getArea() +
-                " sq.units, " +
-                "width: " + width +
-                " units, " +
-                "height: " + height +
-                " units, " +
-                "color: " +
-                getColor();
+        return "Rectangle: area: "
+                + getArea()
+                + " sq.units, "
+                + "width: " + width
+                + " units, "
+                + "height: " + height
+                + " units, "
+                + "color: " + getColor();
     }
 
     @Override
     public double getArea() {
-        return width*height;
+        return width * height;
     }
 
     @Override

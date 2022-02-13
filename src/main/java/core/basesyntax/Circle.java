@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class Circle extends Figure implements Draw, FigureArea {
     private int radius;
-    Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
+    private Random random = new Random();
 
     public Circle(String color, int radius) {
         super(color);
@@ -13,7 +13,6 @@ public class Circle extends Figure implements Draw, FigureArea {
     }
 
     public Circle() {
-
     }
 
     @Override
@@ -28,17 +27,17 @@ public class Circle extends Figure implements Draw, FigureArea {
 
     @Override
     public String getDraw() {
-        return "Сircle: area: " +
-                getArea() +
-                " sq.units, " +
-                "radius: " + radius +
-                " units, " +
-                "color: " + getColor();
+        return "Сircle: area: "
+                + getArea()
+                + " sq.units, "
+                + "radius: " + radius
+                + " units, "
+                + "color: " + getColor();
     }
 
     @Override
     public double getArea() {
-        return Math.PI*Math.pow(radius,2);
+        return Math.PI * Math.pow(radius, 2);
     }
 
     @Override

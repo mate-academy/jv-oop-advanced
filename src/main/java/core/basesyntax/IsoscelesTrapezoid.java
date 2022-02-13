@@ -2,12 +2,12 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class IsoscelesTrapezoid extends  Figure implements FigureArea, Draw {
+public class IsoscelesTrapezoid extends Figure implements FigureArea, Draw {
     private int topBase;
     private int bottomBase;
     private int height;
-    Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
+    private Random random = new Random();
 
     public IsoscelesTrapezoid(String color, int topBase, int bottomBase, int height) {
         super(color);
@@ -15,13 +15,13 @@ public class IsoscelesTrapezoid extends  Figure implements FigureArea, Draw {
         this.bottomBase = bottomBase;
         this.height = height;
     }
-    public IsoscelesTrapezoid() {
 
+    public IsoscelesTrapezoid() {
     }
 
     @Override
     public double getArea() {
-        return ((topBase*bottomBase)/2)*height;
+        return ((topBase * bottomBase) / 2) * height;
     }
 
     @Override
@@ -36,20 +36,22 @@ public class IsoscelesTrapezoid extends  Figure implements FigureArea, Draw {
 
     @Override
     public Figure getRandomFigure() {
-        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(10), random.nextInt(10), random.nextInt(10));
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                random.nextInt(10), random.nextInt(10),
+                random.nextInt(10));
     }
 
     @Override
     public String getDraw() {
-        return "IsoscelesTrapezoid: area: " +
-                getArea() +
-                " sq.units, "  +
-                "topBase: " + topBase +
-                " units, " +
-                "bottomBase: " + bottomBase +
-                " units, " +
-                "height: " + height +
-                " units, " +
-                "color: " + getColor();
+        return "IsoscelesTrapezoid: area: "
+                + getArea()
+                + " sq.units, "
+                + "topBase: " + topBase
+                + " units, "
+                + "bottomBase: " + bottomBase
+                + " units, "
+                + "height: " + height
+                + " units, "
+                + "color: " + getColor();
     }
 }
