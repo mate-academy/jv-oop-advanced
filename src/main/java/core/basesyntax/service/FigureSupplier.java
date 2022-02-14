@@ -9,21 +9,24 @@ import core.basesyntax.model.RightTriangle;
 import core.basesyntax.model.Square;
 
 public class FigureSupplier {
+    private static final int LIMIT_VALUE = 50;
+
     public Figure getRandomFigure() {
         ColorSupplier colorSupplier = new ColorSupplier();
         Figure[] figures = new Figure[5];
-        Figure circle = new Circle(colorSupplier.getRandomColor(), Math.random() * 50);
+        Figure circle = new Circle(colorSupplier.getRandomColor(), Math.random() * LIMIT_VALUE);
         Figure isoscelesTrapezium = new IsoscelesTrapezium(colorSupplier.getRandomColor(),
-                Math.random() * 50,
-                Math.random() * 50,
-                Math.random() * 50);
+                Math.random() * LIMIT_VALUE,
+                Math.random() * LIMIT_VALUE,
+                Math.random() * LIMIT_VALUE);
         Figure rectangle = new Rectangle(colorSupplier.getRandomColor(),
-                Math.random() * 50,
-                Math.random() * 50);
+                Math.random() * LIMIT_VALUE,
+                Math.random() * LIMIT_VALUE);
         final Figure rightTriangle = new RightTriangle(colorSupplier.getRandomColor(),
-                Math.random() * 50,
-                Math.random() * 50);
-        final Figure square = new Square(colorSupplier.getRandomColor(), Math.random() * 50);
+                Math.random() * LIMIT_VALUE,
+                Math.random() * LIMIT_VALUE);
+        final Figure square = new Square(colorSupplier.getRandomColor(),
+                Math.random() * LIMIT_VALUE);
         figures[0] = circle;
         figures[1] = isoscelesTrapezium;
         figures[2] = rectangle;

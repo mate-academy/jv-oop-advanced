@@ -1,10 +1,10 @@
 package core.basesyntax.model;
 
 import core.basesyntax.enums.Color;
-import core.basesyntax.service.FigureArea;
-import core.basesyntax.service.FigureDrawing;
+import core.basesyntax.service.AreaCalculator;
+import core.basesyntax.service.Drawable;
 
-public class IsoscelesTrapezium extends Figure implements FigureArea, FigureDrawing {
+public class IsoscelesTrapezium extends Figure implements AreaCalculator, Drawable {
     private double bottomBase;
     private double lateralSide;
     private double lowBaseGoal;
@@ -18,20 +18,20 @@ public class IsoscelesTrapezium extends Figure implements FigureArea, FigureDraw
     }
 
     @Override
-    public double area() {
+    public double calculateArea() {
         return lateralSide * Math.sin(lowBaseGoal) * (bottomBase - lateralSide
                 * Math.cos(lowBaseGoal));
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         toString();
     }
 
     @Override
     public String toString() {
         return "Figure: isosceles trapezium, area: "
-                + area() + " sq.units, " + "bottom base: "
+                + calculateArea() + " sq.units, " + "bottom base: "
                 + bottomBase + " sq.units, " + "lateral side: "
                 + lateralSide + " sq.units, " + "low base goal: "
                 + lowBaseGoal + " sq.units, "

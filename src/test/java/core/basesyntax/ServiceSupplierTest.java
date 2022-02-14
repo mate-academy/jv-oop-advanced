@@ -7,9 +7,6 @@ import core.basesyntax.service.FigureSupplier;
 import org.junit.Assert;
 import org.junit.Test;
 
-/**
- * Feel free to remove this class and create your own.
- */
 public class ServiceSupplierTest {
     private FigureSupplier figureSupplier = new FigureSupplier();
     private ColorSupplier colorSupplier = new ColorSupplier();

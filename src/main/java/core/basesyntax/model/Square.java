@@ -1,10 +1,10 @@
 package core.basesyntax.model;
 
 import core.basesyntax.enums.Color;
-import core.basesyntax.service.FigureArea;
-import core.basesyntax.service.FigureDrawing;
+import core.basesyntax.service.AreaCalculator;
+import core.basesyntax.service.Drawable;
 
-public class Square extends Figure implements FigureArea, FigureDrawing {
+public class Square extends Figure implements AreaCalculator, Drawable {
     private double side;
 
     public Square(Color color, double side) {
@@ -13,19 +13,19 @@ public class Square extends Figure implements FigureArea, FigureDrawing {
     }
 
     @Override
-    public double area() {
+    public double calculateArea() {
         return side * side;
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         toString();
     }
 
     @Override
     public String toString() {
         return "Figure: square, area: "
-                + area() + " sq.units, " + "side: "
+                + calculateArea() + " sq.units, " + "side: "
                 + side + " sq.units, "
                 + "color: " + super.getColor();
     }
