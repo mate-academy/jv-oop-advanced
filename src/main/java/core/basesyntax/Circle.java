@@ -1,28 +1,16 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Circle extends Figure implements Draw, FigureArea {
     private int radius;
-    private ColorSupplier colorSupplier = new ColorSupplier();
-    private Random random = new Random();
 
     public Circle(String color, int radius) {
         super(color);
         this.radius = radius;
     }
 
-    public Circle() {
-    }
-
     @Override
     public String getColor() {
         return super.getColor();
-    }
-
-    @Override
-    public Figure getRandomFigure() {
-        return new Circle(colorSupplier.getRandomColor(), random.nextInt(10));
     }
 
     @Override

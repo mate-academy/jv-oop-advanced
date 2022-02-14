@@ -13,8 +13,5 @@ public abstract class Figure {
     public String getColor() {
         return color.toLowerCase();
     }
-
-    public abstract Figure getRandomFigure();
-
 }
 

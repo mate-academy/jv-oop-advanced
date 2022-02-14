@@ -1,25 +1,13 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class RightTriangle extends Figure implements FigureArea, Draw {
     private int firstLeg;
     private int secondLeg;
-    private ColorSupplier colorSupplier = new ColorSupplier();
-    private Random random = new Random();
-
-    public RightTriangle() {
-    }
 
     public RightTriangle(String color, int firstLeg, int secondLeg) {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-    }
-
-    public Figure getRandomFigure() {
-        return new RightTriangle(colorSupplier.getRandomColor(),
-                random.nextInt(10), random.nextInt(10));
     }
 
     @Override
