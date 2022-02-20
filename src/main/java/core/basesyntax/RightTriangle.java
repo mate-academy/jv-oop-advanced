@@ -1,8 +1,8 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure implements FigureInterfaces {
-    public int firstLeg;
-    public int secondLeg;
+    private int firstLeg;
+    private int secondLeg;
 
     public RightTriangle(int firstLeg, int secondLeg) {
         this.firstLeg = firstLeg;

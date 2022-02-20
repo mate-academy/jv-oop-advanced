@@ -1,8 +1,8 @@
 package core.basesyntax;
 
 public class Figure {
-private String color;
-private double area;
+    private String color;
+    private double area;
 
     public String getColor() {
         return color;

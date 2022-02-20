@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure implements FigureInterfaces {
-    public int height;
-    public int upperBase;
-    public int lowerBase;
+    private int height;
+    private int upperBase;
+    private int lowerBase;
 
     public IsoscelesTrapezoid(int height, int upperBase, int lowerBase) {
         this.height = height;

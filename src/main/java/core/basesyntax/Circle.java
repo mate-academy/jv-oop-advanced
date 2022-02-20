@@ -9,6 +9,7 @@ public class Circle extends Figure implements FigureInterfaces {
 
     @Override
     public double getAreaFigure() {
+
         return Math.PI * radius * radius;
     }
 

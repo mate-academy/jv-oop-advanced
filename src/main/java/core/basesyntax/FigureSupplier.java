@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class FigureSupplier extends Figure {
 
-    public Figure getRandomFigure(Figures selectFigure){
+    public Figure getRandomFigure(Figures selectFigure) {
         ColorSupplier colorSupplier = new ColorSupplier();
         String randomColor = colorSupplier.getRandomColor();
         Random random = new Random();
@@ -29,22 +29,23 @@ public class FigureSupplier extends Figure {
                 randomRectangle.setArea(randomRectangle.getAreaFigure());
                 return randomRectangle;
             case RIGHT_TRIANGLE:
-                int randomFirstLeg = random.nextInt(100);
-                int randomSecondLeg = random.nextInt(100);
-                RightTriangle randomTriangle = new RightTriangle(randomFirstLeg, randomSecondLeg);
+                int firstLeg = random.nextInt(100);
+                int secondLeg = random.nextInt(100);
+                RightTriangle randomTriangle = new RightTriangle(firstLeg, secondLeg);
                 randomTriangle.setColor(randomColor);
                 randomTriangle.setArea(randomTriangle.getAreaFigure());
                 return randomTriangle;
             case ISOSCELES_TRAPEZOID:
-                int randomHeigt = random.nextInt(100);
-                int randomUpperBase = random.nextInt(100);
-                int randomLowerBase = random.nextInt(100);
-                IsoscelesTrapezoid randomTrapezoid = new IsoscelesTrapezoid(randomHeigt, randomUpperBase, randomLowerBase);
-                randomTrapezoid.setColor(randomColor);
-                randomTrapezoid.setArea(randomTrapezoid.getAreaFigure());
-                return randomTrapezoid;
+                int height = random.nextInt(100);
+                int upperBase = random.nextInt(100);
+                int lowerBase = random.nextInt(100);
+                IsoscelesTrapezoid trapezoid = new IsoscelesTrapezoid(height, upperBase, lowerBase);
+                trapezoid.setColor(randomColor);
+                trapezoid.setArea(trapezoid.getAreaFigure());
+                return trapezoid;
+            default:
+                return getDefaultFigure();
         }
-        return  getDefaultFigure();
     }
 
     public Figure getDefaultFigure() {

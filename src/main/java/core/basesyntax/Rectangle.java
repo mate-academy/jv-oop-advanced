@@ -1,8 +1,8 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure implements FigureInterfaces {
-    public int firstSide;
-    public int secondSide;
+    private int firstSide;
+    private int secondSide;
 
     public Rectangle(int firstSide, int secondSide) {
         this.firstSide = firstSide;
