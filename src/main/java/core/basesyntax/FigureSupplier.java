@@ -3,11 +3,11 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier extends Figure {
+    Random random = new Random();
 
     public Figure getRandomFigure(Figures selectFigure) {
         ColorSupplier colorSupplier = new ColorSupplier();
         String randomColor = colorSupplier.getRandomColor();
-        Random random = new Random();
         switch (selectFigure) {
             case CIRCLE:
                 int randomRadius = random.nextInt(100);
