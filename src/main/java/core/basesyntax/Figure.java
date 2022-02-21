@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Figure {
+public abstract class Figure implements FigureInterfaces {
     private String color;
     private double area;
 
@@ -18,5 +18,15 @@ public class Figure {
 
     public void setArea(double area) {
         this.area = area;
+    }
+
+    @Override
+    public void drawFigure() {
+
+    }
+
+    @Override
+    public double getAreaFigure() {
+        return 0;
     }
 }
