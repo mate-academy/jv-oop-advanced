@@ -10,12 +10,12 @@ public class App {
         Random random = new Random();
         Figures[] figures = Figures.values();
         for (int i = 0; i < 6; i++) {
-            if (i < 3) {
+            if (i < figures.length/2) {
                 Figure getFigure = figure.getRandomFigure(figures[random.nextInt(figures.length)]);
                 resultArray[i] = getFigure;
                 getFigure.drawFigure();
             }
-            if (i >= 3) {
+            else {
                 Figure defaultFigure = figure.getDefaultFigure();
                 resultArray[i] = defaultFigure;
                 defaultFigure.drawFigure();
