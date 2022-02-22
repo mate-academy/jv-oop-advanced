@@ -5,8 +5,10 @@ import java.util.Random;
 public class FigureSupplier extends Figure {
     private Random randomFigure = new Random();
     private ColorSupplier color = new ColorSupplier();
+    Figures[] figures = Figures.values();
 
-    public Figure getRandomFigure(Figures selectFigure) {
+    public Figure getRandomFigure() {
+        Figures selectFigure = figures[randomFigure.nextInt(figures.length)];
         switch (selectFigure) {
             case CIRCLE:
                 return getRandomCircle();
