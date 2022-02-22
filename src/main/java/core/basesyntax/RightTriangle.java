@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements FigureInterfaces {
+public class RightTriangle extends Figure implements AreaCalculator {
     private int firstLeg;
     private int secondLeg;
 
@@ -15,7 +15,7 @@ public class RightTriangle extends Figure implements FigureInterfaces {
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         StringBuilder builder = new StringBuilder();
         builder.append("Figure: right triangle, area: ")
                 .append(getAreaFigure())

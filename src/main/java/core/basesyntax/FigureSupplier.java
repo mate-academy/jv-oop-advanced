@@ -2,10 +2,10 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class FigureSupplier extends Figure {
+public class FigureSupplier {
     private Random randomFigure = new Random();
     private ColorSupplier color = new ColorSupplier();
-    Figures[] figures = Figures.values();
+    private Figures[] figures = Figures.values();
 
     public Figure getRandomFigure() {
         Figures selectFigure = figures[randomFigure.nextInt(figures.length)];

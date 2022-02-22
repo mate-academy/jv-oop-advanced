@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class App {
 
     public static void main(String[] args) {
@@ -12,11 +10,11 @@ public class App {
             if (i < figures.length / 2) {
                 Figure getFigure = figure.getRandomFigure();
                 resultArray[i] = getFigure;
-                getFigure.drawFigure();
+                getFigure.draw();
             } else {
                 Figure defaultFigure = figure.getDefaultFigure();
                 resultArray[i] = defaultFigure;
-                defaultFigure.drawFigure();
+                defaultFigure.draw();
             }
         }
     }

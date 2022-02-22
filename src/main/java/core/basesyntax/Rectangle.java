@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements FigureInterfaces {
+public class Rectangle extends Figure implements AreaCalculator {
     private int firstSide;
     private int secondSide;
 
@@ -15,7 +15,7 @@ public class Rectangle extends Figure implements FigureInterfaces {
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         StringBuilder builder = new StringBuilder();
         builder.append("Figure: rectangle, area: ")
                 .append(getAreaFigure())
