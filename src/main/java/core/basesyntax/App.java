@@ -5,10 +5,10 @@ import java.util.Random;
 public class App {
 
     public static void main(String[] args) {
-        Figure[] resultArray = new Figure[6];
-        FigureSupplier figure = new FigureSupplier();
         Figures[] figures = Figures.values();
-        for (int i = 0; i < 6; i++) {
+        Figure[] resultArray = new Figure[figures.length];
+        FigureSupplier figure = new FigureSupplier();
+        for (int i = 0; i < figures.length; i++) {
             if (i < figures.length / 2) {
                 Figure getFigure = figure.getRandomFigure();
                 resultArray[i] = getFigure;
