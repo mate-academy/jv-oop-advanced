@@ -6,14 +6,14 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
 
         for (int i = 0; i < figures.length; i++) {
-            figures[i] = figureSupplier.getRandomFigure();
             if (i > (figures.length - 1) / 2) {
                 figures[i] = figureSupplier.getDefaultFigure();
+            } else {
+                figures[i] = figureSupplier.getRandomFigure();
             }
         }
-
         for (Figure figure: figures) {
-            System.out.println(figure);
+            figure.draw();
         }
     }
 }
