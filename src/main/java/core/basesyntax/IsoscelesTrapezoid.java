@@ -20,7 +20,7 @@ public class IsoscelesTrapezoid extends Figure implements FigureInterfaces {
     public void drawFigure() {
         StringBuilder builder = new StringBuilder();
         builder.append("Figure: right Isosceles Trapezoid, area: ")
-                .append(getArea())
+                .append(getAreaFigure())
                 .append(" sq.units, height: ")
                 .append(height)
                 .append(" sq.units, upper base: ")

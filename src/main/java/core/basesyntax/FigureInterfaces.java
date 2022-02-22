@@ -4,5 +4,4 @@ public interface FigureInterfaces {
 
     public double getAreaFigure();
 
-    public void drawFigure();
 }

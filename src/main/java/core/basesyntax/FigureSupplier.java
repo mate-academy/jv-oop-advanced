@@ -26,7 +26,6 @@ public class FigureSupplier extends Figure {
     public Figure getDefaultFigure() {
         Circle circle = new Circle(10);
         circle.setColor("WHITE");
-        circle.setArea(circle.getAreaFigure());
         return circle;
     }
 
@@ -35,7 +34,6 @@ public class FigureSupplier extends Figure {
         int randomRadius = randomFigure.nextInt(100);
         Circle randomCircle = new Circle(randomRadius);
         randomCircle.setColor(randomColor);
-        randomCircle.setArea(randomCircle.getAreaFigure());
         return randomCircle;
     }
 
@@ -44,16 +42,15 @@ public class FigureSupplier extends Figure {
         int randomSquareSide = randomFigure.nextInt(100);
         Square randomSquare = new Square(randomSquareSide);
         randomSquare.setColor(randomColor);
-        randomSquare.setArea(randomSquare.getAreaFigure());
         return randomSquare;
     }
-    private  Figure getRandomRectangle() {
+
+    private Figure getRandomRectangle() {
         String randomColor = color.getRandomColor();
         int randomFirstSide = randomFigure.nextInt(100);
         int randomSecondSide = randomFigure.nextInt(100);
         Rectangle randomRectangle = new Rectangle(randomFirstSide, randomSecondSide);
         randomRectangle.setColor(randomColor);
-        randomRectangle.setArea(randomRectangle.getAreaFigure());
         return randomRectangle;
     }
 
@@ -63,7 +60,6 @@ public class FigureSupplier extends Figure {
         int secondLeg = randomFigure.nextInt(100);
         RightTriangle randomTriangle = new RightTriangle(firstLeg, secondLeg);
         randomTriangle.setColor(randomColor);
-        randomTriangle.setArea(randomTriangle.getAreaFigure());
         return randomTriangle;
     }
 
@@ -74,7 +70,7 @@ public class FigureSupplier extends Figure {
         int lowerBase = randomFigure.nextInt(100);
         IsoscelesTrapezoid trapezoid = new IsoscelesTrapezoid(height, upperBase, lowerBase);
         trapezoid.setColor(randomColor);
-        trapezoid.setArea(trapezoid.getAreaFigure());
         return trapezoid;
     }
+
 }

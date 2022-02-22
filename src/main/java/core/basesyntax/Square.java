@@ -16,7 +16,7 @@ public class Square extends Figure implements FigureInterfaces {
     public void drawFigure() {
         StringBuilder builder = new StringBuilder();
         builder.append("Figure: square, area: ")
-                .append(getArea())
+                .append(getAreaFigure())
                 .append(" sq.units, squareSide: ")
                 .append(squareSide)
                 .append(" units, color: ")

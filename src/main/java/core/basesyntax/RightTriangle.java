@@ -18,7 +18,7 @@ public class RightTriangle extends Figure implements FigureInterfaces {
     public void drawFigure() {
         StringBuilder builder = new StringBuilder();
         builder.append("Figure: right triangle, area: ")
-                .append(getArea())
+                .append(getAreaFigure())
                 .append(" sq.units, first leg: ")
                 .append(firstLeg)
                 .append(" sq.units, second leg: ")

@@ -18,13 +18,13 @@ public class Rectangle extends Figure implements FigureInterfaces {
     public void drawFigure() {
         StringBuilder builder = new StringBuilder();
         builder.append("Figure: rectangle, area: ")
-                .append(getArea())
+                .append(getAreaFigure())
                 .append(" sq.units, first side: ")
                 .append(firstSide)
                 .append(" sq.units, second side: ")
                 .append(secondSide)
                 .append(" units, color: ")
                 .append(getColor());
-        System.out.println(builder.toString());
+        System.out.append(builder.toString());
     }
 }

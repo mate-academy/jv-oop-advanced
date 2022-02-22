@@ -17,7 +17,7 @@ public class Circle extends Figure implements FigureInterfaces {
     public void drawFigure() {
         StringBuilder builder = new StringBuilder();
         builder.append("Figure: circle, area: ")
-                .append(getArea())
+                .append(getAreaFigure())
                 .append(" sq.units, radius: ")
                 .append(radius)
                 .append(" units, color: ")
