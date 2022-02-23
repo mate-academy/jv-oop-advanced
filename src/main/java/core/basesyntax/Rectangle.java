@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements AreaCalculator {
+public class Rectangle extends Figure {
     private int firstSide;
     private int secondSide;
 
@@ -10,7 +10,7 @@ public class Rectangle extends Figure implements AreaCalculator {
     }
 
     @Override
-    public double getAreaFigure() {
+    public double getArea() {
         return firstSide * secondSide;
     }
 
@@ -18,7 +18,7 @@ public class Rectangle extends Figure implements AreaCalculator {
     public void draw() {
         StringBuilder builder = new StringBuilder();
         builder.append("Figure: rectangle, area: ")
-                .append(getAreaFigure())
+                .append(getArea())
                 .append(" sq.units, first side: ")
                 .append(firstSide)
                 .append(" sq.units, second side: ")

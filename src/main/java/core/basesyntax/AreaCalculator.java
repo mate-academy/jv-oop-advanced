@@ -2,6 +2,6 @@ package core.basesyntax;
 
 public interface AreaCalculator {
 
-    public double getAreaFigure();
+    public double getArea();
 
 }
