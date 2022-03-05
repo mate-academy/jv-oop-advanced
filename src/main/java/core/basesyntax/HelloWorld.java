@@ -19,9 +19,8 @@ public class HelloWorld {
             figures[i] = figureSupplier.getRandomFigure();
 
         }
-
-        for (int i = 0; i < figures.length; i++) {
-            figures[i].draw();
+        for (Figure figure : figures) {
+            figure.draw();
         }
     }
 }
