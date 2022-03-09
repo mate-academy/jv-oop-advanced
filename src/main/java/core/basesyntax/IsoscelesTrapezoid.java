@@ -1,10 +1,9 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements Area {
-    private String color;
-    private int sideA;
-    private int sideB;
-    private int height;
+public class IsoscelesTrapezoid extends Figure {
+    private final int sideA;
+    private final int sideB;
+    private final int height;
 
     public IsoscelesTrapezoid(String color, int sideA, int sideB, int height) {
         this.color = color;
@@ -15,7 +14,7 @@ public class IsoscelesTrapezoid extends Figure implements Area {
 
     @Override
     public double getArea() {
-        double area = height * (sideA + sideB) / 2;
+        double area = height * (sideA + sideB) / 2.0;
         return Math.round(area * 100.0) / 100.0;
     }
 

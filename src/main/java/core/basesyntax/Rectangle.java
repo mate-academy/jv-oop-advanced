@@ -1,9 +1,8 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Area {
-    private String color;
-    private int sideA;
-    private int sideB;
+public class Rectangle extends Figure {
+    private final int sideA;
+    private final int sideB;
 
     public Rectangle(String color, int sideA, int sideB) {
         this.color = color;
