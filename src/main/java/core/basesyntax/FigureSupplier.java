@@ -9,7 +9,7 @@ public class FigureSupplier {
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        Figure figure = getDefaultFigure();
+        Figure figure;
         switch (random.nextInt(FIGURES_QUANTITY)) {
             case 0 :
                 figure = getRandomCircle();
@@ -27,6 +27,7 @@ public class FigureSupplier {
                 figure = getRandomSquare();
                 break;
             default:
+                figure = getDefaultFigure();
                 break;
         }
         return figure;
