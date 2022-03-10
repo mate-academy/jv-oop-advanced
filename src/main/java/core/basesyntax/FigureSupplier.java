@@ -14,22 +14,22 @@ public class FigureSupplier {
 
         switch (figureNumber) {
             case 0:
-                return new Circle(random.nextInt(1, MAX_PROPERTY_VALUE),
+                return new Circle(random.nextInt(MAX_PROPERTY_VALUE) + 1,
                         colorSupplier.getRandomColor());
             case 1:
-                return new IsoscelesTrapezoid(random.nextInt(1, MAX_PROPERTY_VALUE),
-                        random.nextInt(1,MAX_PROPERTY_VALUE),
-                        random.nextInt(1,MAX_PROPERTY_VALUE), colorSupplier.getRandomColor());
+                return new IsoscelesTrapezoid(random.nextInt(MAX_PROPERTY_VALUE) + 1,
+                        random.nextInt(MAX_PROPERTY_VALUE) + 1,
+                        random.nextInt(MAX_PROPERTY_VALUE) + 1, colorSupplier.getRandomColor());
             case 2:
-                return new Rectangle(random.nextInt(1,MAX_PROPERTY_VALUE),
-                        random.nextInt(1,MAX_PROPERTY_VALUE),
+                return new Rectangle(random.nextInt(MAX_PROPERTY_VALUE) + 1,
+                        random.nextInt(MAX_PROPERTY_VALUE) + 1,
                         colorSupplier.getRandomColor());
             case 3:
-                return new RightTriangle(random.nextInt(1,MAX_PROPERTY_VALUE),
-                        random.nextInt(1,MAX_PROPERTY_VALUE),
+                return new RightTriangle(random.nextInt(MAX_PROPERTY_VALUE) + 1,
+                        random.nextInt(MAX_PROPERTY_VALUE) + 1,
                         colorSupplier.getRandomColor());
             default:
-                return new Square(random.nextInt(1,MAX_PROPERTY_VALUE),
+                return new Square(random.nextInt(MAX_PROPERTY_VALUE) + 1,
                         colorSupplier.getRandomColor());
         }
     }
