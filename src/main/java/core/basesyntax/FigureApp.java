@@ -1,10 +1,12 @@
 package core.basesyntax;
 
-import core.basesyntax.model.*;
+import core.basesyntax.model.Circle;
+import core.basesyntax.model.ColorSupplier;
+import core.basesyntax.model.Figure;
+import core.basesyntax.model.FigureSupplier;
+import core.basesyntax.model.Square;
+import core.basesyntax.model.Triangle;
 
-/**
- * Feel free to remove this class and create your own.
- */
 public class FigureApp {
     public static void main(String[] args) {
         ColorSupplier colorSupplier = new ColorSupplier();

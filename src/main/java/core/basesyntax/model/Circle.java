@@ -16,9 +16,9 @@ public class Circle extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: " + name +
-                ", area: " + area +
-                " sq.units, radius: " + radius +
-                " units, color: " + colorFigure;
+        return "Figure: " + name
+                + ", area: " + area
+                + " sq.units, radius: " + radius
+                + " units, color: " + colorFigure;
     }
 }

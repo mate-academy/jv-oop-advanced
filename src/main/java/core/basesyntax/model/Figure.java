@@ -7,9 +7,9 @@ package core.basesyntax.model;
  * @project jv-oop-advanced
  */
 public abstract class Figure {
-    String name;
-    double area;
-    Color colorFigure;
+    protected String name;
+    protected double area;
+    protected Color colorFigure;
 
     public Figure(String name, double area, Color colorFigure) {
         this.name = name;

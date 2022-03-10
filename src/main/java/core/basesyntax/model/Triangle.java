@@ -18,10 +18,10 @@ public class Triangle extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: " + name +
-                ", area: " + area +
-                " sq.units, firstLeg: " + firstLeg +
-                " units, secondLeg: " + secondLeg +
-                " units, color: " + colorFigure;
+        return "Figure: " + name
+                + ", area: " + area
+                + " sq.units, firstLeg: " + firstLeg
+                + " units, secondLeg: " + secondLeg
+                + " units, color: " + colorFigure;
     }
 }
