@@ -5,12 +5,12 @@ public class IsoscelesTrapezoid extends Figure {
     private double downSide;
     private double height;
 
-    public IsoscelesTrapezoid(double upSide, double downSide, double height, String color) {
-        super("isosceles trapezoid", color);
+    public IsoscelesTrapezoid(String color, double upSide, double downSide, double height) {
+        super(color);
+        setName(getClass().getSimpleName().toLowerCase());
         this.upSide = upSide;
         this.downSide = downSide;
         this.height = height;
-
     }
 
     public double getUpSide() {
@@ -52,6 +52,5 @@ public class IsoscelesTrapezoid extends Figure {
                 + ", color: " + getColor());
     }
 }
-
 
 

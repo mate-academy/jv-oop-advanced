@@ -4,11 +4,11 @@ public class Rectangle extends Figure {
     private double firstSide;
     private double secondSide;
 
-    public Rectangle(double firstSide, double secondSide, String color) {
-        super("rectangle", color);
+    public Rectangle(String color, double firstSide, double secondSide) {
+        super(color);
+        setName(getClass().getSimpleName().toLowerCase());
         this.firstSide = firstSide;
         this.secondSide = secondSide;
-
     }
 
     public double getFirstSide() {
@@ -39,7 +39,5 @@ public class Rectangle extends Figure {
                 + ", firstSide: " + firstSide + " units"
                 + ", secondSide " + secondSide + " units"
                 + ", color " + getColor());
-
     }
 }
-
