@@ -14,14 +14,14 @@ public class FigureApp {
         Figure[] figures = {
                 new Circle("Circle", 25.5, colorSupplier.getRandomColor(), 5),
                 new Square("Square", 169, colorSupplier.getRandomColor(), 13),
-                new Triangle("Tri", 40, colorSupplier.getRandomColor(), 8, 5),
+                new Triangle("Triangle", 40, colorSupplier.getRandomColor(), 8, 5),
                 figureSupplier.getRandomFigure(),
                 figureSupplier.getRandomFigure(),
                 figureSupplier.getDefaultFigure()
         };
 
-        for (Figure el : figures) {
-            System.out.println(el);
+        for (Figure figure : figures) {
+            System.out.println(figure);
         }
     }
 }
