@@ -8,8 +8,15 @@ public class Square extends Figure {
         this.side = side;
     }
 
+    @Override
     public double getArea() {
         return side * side;
+    }
+
+    @Override
+    public String getAreaReport() {
+        return "Figure: " + name
+               + ", area = " + getArea() + "sq.units";
     }
 
     @Override

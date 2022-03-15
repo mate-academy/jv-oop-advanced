@@ -22,6 +22,7 @@ public class FigureApp {
 
         for (Figure figure : figures) {
             System.out.println(figure);
+            System.out.println(figure.getAreaReport());
         }
     }
 }

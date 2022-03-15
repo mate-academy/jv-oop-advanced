@@ -8,8 +8,15 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
+    @Override
     public double getArea() {
         return 3.14 * radius * radius;
+    }
+
+    @Override
+    public String getAreaReport() {
+        return "Figure: " + name
+               + ", area = " + getArea() + "sq.units";
     }
 
     @Override

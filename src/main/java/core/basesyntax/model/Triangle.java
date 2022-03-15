@@ -10,8 +10,15 @@ public class Triangle extends Figure {
         this.secondLeg = secondLeg;
     }
 
+    @Override
     public double getArea() {
         return (firstLeg * secondLeg) / 2;
+    }
+
+    @Override
+    public String getAreaReport() {
+        return "Figure: " + name
+               + ", area = " + getArea() + "sq.units";
     }
 
     @Override
