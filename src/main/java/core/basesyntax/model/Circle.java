@@ -1,7 +1,12 @@
-package core.basesyntax;
+package core.basesyntax.model;
 
 public class Circle extends Figures {
     private double radius;
+
+    public Circle(String color, double radius) {
+        super(color);
+        this.radius = radius;
+    }
 
     public double getRadius() {
         return radius;
@@ -11,15 +16,14 @@ public class Circle extends Figures {
         this.radius = radius;
     }
 
+    @Override
     public double getArea() {
         return Math.PI * radius * radius;
     }
 
     @Override
     public void draw() {
-        System.out.println("Circle: radius: "
-                + radius + " color: " + getColor()
-                + " area: " + getArea());
+        System.out.println("Figure: " + getClass().getSimpleName() + ", area: "
+                + getArea() + " sq.units, color: " + getColor() + ", radius: " + getRadius());
     }
-
 }

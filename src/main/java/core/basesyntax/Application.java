@@ -1,16 +1,18 @@
 package core.basesyntax;
 
+import core.basesyntax.model.Figures;
+
 public class Application {
+    private static FigureSupplier figureSupplier = new FigureSupplier();
+
     public static void main(String[] args) {
-        FigureSupplier figureSupplier = new FigureSupplier();
-        Figures[] figures = new Figures[6];
-
-        for (int i = 0; i < figures.length; i++) {
-            figures[i] = figureSupplier.getRandomFigure();
+        Figures[] figures = new Figures[3];
+        for (int i = 0; i < figures.length - 1; i++) {
+            figures[i] = figureSupplier.getRandomFigures();
         }
-        for (Figures figure : figures) {
-            figure.draw();
+        figures[2] = figureSupplier.getDefaultFigure();
+        for (Figures figures1 : figures) {
+            figures1.draw();
         }
-
     }
 }
