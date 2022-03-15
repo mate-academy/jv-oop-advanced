@@ -12,9 +12,9 @@ public class FigureApp {
         ColorSupplier colorSupplier = new ColorSupplier();
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figures = {
-                new Circle("Circle", 25.5, colorSupplier.getRandomColor(), 5),
-                new Square("Square", 169, colorSupplier.getRandomColor(), 13),
-                new Triangle("Triangle", 40, colorSupplier.getRandomColor(), 8, 5),
+                new Circle("Circle", colorSupplier.getRandomColor(), 3),
+                new Square("Square", colorSupplier.getRandomColor(), 13),
+                new Triangle("Triangle", colorSupplier.getRandomColor(), 8, 5),
                 figureSupplier.getRandomFigure(),
                 figureSupplier.getRandomFigure(),
                 figureSupplier.getDefaultFigure()

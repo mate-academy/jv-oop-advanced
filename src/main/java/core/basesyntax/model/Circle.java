@@ -3,16 +3,20 @@ package core.basesyntax.model;
 public class Circle extends Figure {
     private double radius;
 
-    public Circle(String name, double area, Color color, double radius) {
-        super(name, area, color);
+    public Circle(String name, Color color, double radius) {
+        super(name, color);
         this.radius = radius;
+    }
+
+    public double getArea() {
+        return 3.14 * radius * radius;
     }
 
     @Override
     public String toString() {
         return "Figure: " + name
-                + ", area: " + area
-                + " sq.units, radius: " + radius
-                + " units, color: " + color;
+               + ", area: " + getArea()
+               + " sq.units, radius: " + radius
+               + " units, color: " + color;
     }
 }
