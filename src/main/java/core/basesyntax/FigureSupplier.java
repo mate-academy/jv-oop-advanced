@@ -9,7 +9,7 @@ import core.basesyntax.model.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final int count = 4;
+    private static final int COUNT = 4;
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getDefaultFigure() {
@@ -18,7 +18,7 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        int figuresIndex = new Random().nextInt(count);
+        int figuresIndex = new Random().nextInt(COUNT);
         switch (figuresIndex) {
             case 0:
                 return new Circle(colorSupplier.getRandomColor(),
