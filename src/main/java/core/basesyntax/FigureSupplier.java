@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 import core.basesyntax.model.Circle;
-import core.basesyntax.model.Figures;
+import core.basesyntax.model.Figure;
 import core.basesyntax.model.IsoscelesTrapezoid;
 import core.basesyntax.model.Rectangle;
 import core.basesyntax.model.RightTriangle;
@@ -9,15 +9,16 @@ import core.basesyntax.model.Square;
 import java.util.Random;
 
 public class FigureSupplier {
+    private final int count = 4;
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figures getDefaultFigure() {
-        Figures circle = new Circle("WHITE", 10);
+    public Figure getDefaultFigure() {
+        Figure circle = new Circle(Color.WHITE.name(),10);
         return circle;
     }
 
-    public Figures getRandomFigures() {
-        int figuresIndex = new Random().nextInt(4);
+    public Figure getRandomFigure() {
+        int figuresIndex = new Random().nextInt(count);
         switch (figuresIndex) {
             case 0:
                 return new Circle(colorSupplier.getRandomColor(),
@@ -44,4 +45,5 @@ public class FigureSupplier {
     private double getRandomDouble() {
         return new Random().nextDouble();
     }
+
 }

@@ -3,10 +3,10 @@ package core.basesyntax.model;
 import core.basesyntax.AreaCalculator;
 import core.basesyntax.Drawable;
 
-public abstract class Figures implements AreaCalculator, Drawable {
+public abstract class Figure implements AreaCalculator, Drawable {
     private String color;
 
-    protected Figures(String color) {
+    protected Figure(String color) {
         this.color = color;
     }
 

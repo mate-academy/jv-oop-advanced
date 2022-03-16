@@ -1,6 +1,6 @@
 package core.basesyntax.model;
 
-public class IsoscelesTrapezoid extends Figures {
+public class IsoscelesTrapezoid extends Figure {
     private double top;
     private double bottom;
     private double height;
