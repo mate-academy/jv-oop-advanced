@@ -72,7 +72,10 @@ public class FigureSupplier {
     }
 
     private Figure createIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(getRandomInt(), getRandomInt(), getRandomInt(), getRandomColor());
+        return new IsoscelesTrapezoid(getRandomInt(),
+                getRandomInt(),
+                getRandomInt(),
+                getRandomColor());
     }
 
     private int getRandomInt() {
