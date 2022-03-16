@@ -4,11 +4,12 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_RANDOM_VALUE = 19;
+    private static final int NUMBER_OF_FIGURES = 5;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int index = random.nextInt(5);
+        int index = random.nextInt(NUMBER_OF_FIGURES);
 
         switch (index) {
             case 0:
