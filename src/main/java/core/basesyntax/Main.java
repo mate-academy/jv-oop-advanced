@@ -14,8 +14,8 @@ public class Main {
                 figureSupplier.getDefaultFigure()
         };
 
-        for (Figure figura: figures) {
-            figura.draw();
+        for (Figure figure: figures) {
+            figure.draw();
         }
     }
 }
