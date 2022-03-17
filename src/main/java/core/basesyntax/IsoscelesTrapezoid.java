@@ -1,31 +1,31 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private int sideA;
-    private int sideB;
+    private int firstSide;
+    private int secondSide;
     private int height;
 
-    public IsoscelesTrapezoid(int sideA, int sideB, int height, String color) {
-        this.sideA = sideA;
-        this.sideB = sideB;
+    public IsoscelesTrapezoid(int firstSide, int secondSide, int height, String color) {
+        this.firstSide = firstSide;
+        this.secondSide = secondSide;
         this.height = height;
         this.setColor(color);
     }
 
-    public int getSideA() {
-        return sideA;
+    public int getFirstSide() {
+        return firstSide;
     }
 
-    public void setSideA(int sideA) {
-        this.sideA = sideA;
+    public void setFirstSide(int firstSide) {
+        this.firstSide = firstSide;
     }
 
-    public int getSideB() {
-        return sideB;
+    public int getSecondSide() {
+        return secondSide;
     }
 
-    public void setSideB(int sideB) {
-        this.sideB = sideB;
+    public void setSecondSide(int secondSide) {
+        this.secondSide = secondSide;
     }
 
     public int getHeight() {
@@ -39,14 +39,14 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public void draw() {
         System.out.println(" Figure: isoscelesTrapezoid, area: " + area()
-                + " sq.units, sideA: " + getSideA()
-                + ", sideB: " + getSideB()
+                + " sq.units, firstSide: " + getFirstSide()
+                + ", firstSide: " + getSecondSide()
                 + ", height: " + getHeight()
                 + " units, color: " + getColor());
     }
 
     @Override
     public double area() {
-        return (0.5 * (sideA + sideB)) * height;
+        return (0.5 * (firstSide + secondSide)) * height;
     }
 }

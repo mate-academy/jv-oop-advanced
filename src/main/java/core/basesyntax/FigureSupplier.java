@@ -4,19 +4,11 @@ import java.util.Random;
 
 public class FigureSupplier {
     private ColorSupplier colorSupplier;
-    private FigureEnum figureEnum;
     private Random random;
 
     public FigureSupplier() {
         this.colorSupplier = new ColorSupplier();
         this.random = new Random();
-    }
-
-    public class ColorSupplier {
-        public String getRandomColor() {
-            return ColorEnum.values()[new Random().nextInt(ColorEnum.values().length)].toString();
-        }
-
     }
 
     public Figure getDefaultFigure() {
@@ -25,7 +17,7 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         Figure figure;
-        figureEnum = FigureEnum.values()[random.nextInt(FigureEnum.values().length)];
+        FigureEnum figureEnum = FigureEnum.values()[random.nextInt(FigureEnum.values().length)];
 
         switch (figureEnum) {
             case CIRCLE:
@@ -92,14 +84,6 @@ public class FigureSupplier {
 
     public void setColorSupplier(ColorSupplier colorSupplier) {
         this.colorSupplier = colorSupplier;
-    }
-
-    public FigureEnum getFigureEnum() {
-        return figureEnum;
-    }
-
-    public void setFigureEnum(FigureEnum figureEnum) {
-        this.figureEnum = figureEnum;
     }
 
     public Random getRandom() {
