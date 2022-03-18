@@ -27,27 +27,33 @@ public class FigureSupplier {
     }
 
     private Figure getRandomCircle(Color randomColor) {
-        int randomValue = random.nextInt(MAX_PROPERTY_VALUE);
-        return new Circle(randomColor, randomValue);
+        int randomPropertyValue = random.nextInt(MAX_PROPERTY_VALUE);
+        return new Circle(randomColor, randomPropertyValue);
     }
 
     private Figure getRandomRectangle(Color randomColor) {
-        int randomValue = random.nextInt(MAX_PROPERTY_VALUE);
-        return new Rectangle(randomColor, randomValue, randomValue);
+        int firstRandomPropertyValue = random.nextInt(MAX_PROPERTY_VALUE);
+        int secondRandomPropertyValue = random.nextInt(MAX_PROPERTY_VALUE);
+        return new Rectangle(randomColor, firstRandomPropertyValue, secondRandomPropertyValue);
     }
 
     private Figure getRandomSquare(Color randomColor) {
-        int randomValue = random.nextInt(MAX_PROPERTY_VALUE);
-        return new Square(randomColor, randomValue);
+        int randomPropertyValue = random.nextInt(MAX_PROPERTY_VALUE);
+        return new Square(randomColor, randomPropertyValue);
     }
 
     private Figure getRandomRightTriangle(Color randomColor) {
-        int randomValue = random.nextInt(MAX_PROPERTY_VALUE);
-        return new RightTriangle(randomColor, randomValue, randomValue);
+        int firstRandomPropertyValue = random.nextInt(MAX_PROPERTY_VALUE);
+        int secondRandomPropertyValue = random.nextInt(MAX_PROPERTY_VALUE);
+        return new RightTriangle(randomColor, firstRandomPropertyValue, secondRandomPropertyValue);
     }
 
     private Figure getRandomIsoscelesTrapezoid(Color randomColor) {
-        int randomValue = random.nextInt(MAX_PROPERTY_VALUE);
-        return new IsoscelesTrapezoid(randomColor, randomValue, randomValue, randomValue);
+        int firstRandomPropertyValue = random.nextInt(MAX_PROPERTY_VALUE);
+        int secondRandomPropertyValue = random.nextInt(MAX_PROPERTY_VALUE);
+        int thirdRandomPropertyValue = random.nextInt(MAX_PROPERTY_VALUE);
+        return new IsoscelesTrapezoid(randomColor, firstRandomPropertyValue,
+                                                   secondRandomPropertyValue,
+                                                   thirdRandomPropertyValue);
     }
 }
