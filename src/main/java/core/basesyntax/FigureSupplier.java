@@ -3,31 +3,43 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int LIMIT = 50;
-    public Figure getRandomFigure(){
+    private static final int SIZE_LIMIT = 30;
+    private static final int FIGURE_OPTION = 5;
+
+    public Figure getRandomFigure() {
         Random r = new Random();
         ColorSupplier randomColor = new ColorSupplier();
-        int i = r.nextInt(FigureE.values().length);
-        String f = FigureE.values()[i].toString();
+        int f = r.nextInt(FIGURE_OPTION);
+        int param = r.nextInt(SIZE_LIMIT);
 
-        if (f.equals("CIRCLE")){
-            Figure res = new Circle(r.nextInt(LIMIT));
-            res.color = Color.valueOf(randomColor.getRandomColor());
-            return res;
-        } else if (f.equals("SQUARE")){
-            Figure res2 = new Square(r.nextInt(LIMIT));
-            res2.color = Color.valueOf(randomColor.getRandomColor());
-            return res2;
-        } else if (f.equals("RECTANGLE")){
-            Figure res3 = new Rectangle(r.nextInt(LIMIT), r.nextInt(LIMIT));
-            res3.color = Color.valueOf(randomColor.getRandomColor());
-            return res3;
+        switch (f) {
+            case 1:
+                Figure res = new Circle(param);
+                res.setColor(Color.valueOf(randomColor.getRandomColor()));
+                return res;
+            case 2:
+                Figure res2 = new Square(param);
+                res2.setColor(Color.valueOf(randomColor.getRandomColor()));
+                return res2;
+            case 3:
+                Figure res3 = new Rectangle(param, param);
+                res3.setColor(Color.valueOf(randomColor.getRandomColor()));
+                return res3;
+            case 4:
+                Figure res4 = new RightTriangle(param, param);
+                res4.setColor(Color.valueOf(randomColor.getRandomColor()));
+                return res4;
+            default:
+                Figure res5 = new Trapezoid(param, param, param);
+                res5.setColor(Color.valueOf(randomColor.getRandomColor()));
+                return res5;
         }
-        return null;
+
     }
-    public Figure getDefaultFigure(){
+
+    public Figure getDefaultFigure() {
         Figure defaultCircle = new Circle(10);
-        defaultCircle.color = Color.WHITE;
+        defaultCircle.setColor(Color.WHITE);
         return defaultCircle;
     }
 }

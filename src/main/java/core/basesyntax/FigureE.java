@@ -3,5 +3,7 @@ package core.basesyntax;
 public enum FigureE {
     CIRCLE,
     SQUARE,
-    RECTANGLE
+    RECTANGLE,
+    TRIANGLE,
+    TRAPEZOID
 }
