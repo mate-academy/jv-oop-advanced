@@ -1,6 +1,8 @@
 package core.basesyntax;
 
+
 public class Circle extends Figure implements FigureDetails{
+    String name = String.valueOf(FigureE.CIRCLE);
     private int radius;
 
     public void setRadius(int radius){
@@ -20,7 +22,7 @@ public class Circle extends Figure implements FigureDetails{
     }
     @Override
     public void getDetails() {
-        System.out.print(color + " circle with area " );
+        System.out.print(color + " " + name + " with radius " + radius + " and area of " );
         getArea();
     }
 

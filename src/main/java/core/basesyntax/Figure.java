@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public abstract class Figure implements FigureDetails{
+    public FigureE name;
     public Color color;
 
     @Override
