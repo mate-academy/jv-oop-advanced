@@ -9,6 +9,9 @@ public class Circle extends Figure implements FigureDetails{
     public int getRadius() {
         return this.radius;
     }
+    public Circle(int radius){
+        this.radius = radius;
+    }
 
 
     @Override
@@ -17,7 +20,8 @@ public class Circle extends Figure implements FigureDetails{
     }
     @Override
     public void getDetails() {
-        System.out.println("circle tbd");
+        System.out.print(color + " circle with area " );
+        getArea();
     }
 
 }

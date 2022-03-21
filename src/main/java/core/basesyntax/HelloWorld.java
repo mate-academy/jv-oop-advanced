@@ -5,11 +5,9 @@ package core.basesyntax;
  */
 public class HelloWorld {
     public static void main (String[] args){
-        Figure circle = new Circle();
-        Figure square = new Square();
-        square.color = Color.WHITE;
-        square.getDetails();
-        circle.getDetails();
-
+        Figure[] figures = new Figure[6];
+        FigureSupplier def = new FigureSupplier();
+        figures[0] = def.getDefaultFigure();
+        figures[0].getDetails();
     }
 }

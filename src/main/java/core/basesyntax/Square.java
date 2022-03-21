@@ -12,10 +12,11 @@ public class Square extends Figure implements FigureDetails{
     }
     @Override
     public void getArea() {
-        System.out.println(side * side);
+        System.out.print(side * side + " ");
     }
     @Override
     public void getDetails() {
+        getArea();
         System.out.println(color + " " + side);
     }
 }
