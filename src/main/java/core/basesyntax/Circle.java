@@ -9,7 +9,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public void toDraw() {
+    public void draw() {
         System.out.println("Type = Circle, radius = "
                 + radius + ", area = "
                 + getArea() + ", color = " + super.getColor());

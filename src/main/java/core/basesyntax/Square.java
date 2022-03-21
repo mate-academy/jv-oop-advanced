@@ -9,7 +9,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public void toDraw() {
+    public void draw() {
         System.out.println("Type = Square, side = "
                 + side + ", area = " + getArea()
                 + ", color = " + super.getColor());
