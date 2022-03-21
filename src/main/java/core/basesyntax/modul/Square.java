@@ -5,7 +5,8 @@ import core.basesyntax.Figure;
 public class Square extends Figure {
     private double side;
 
-    public Square(double side) {
+    public Square(double side, String color) {
+        setColor(color);
         this.side = side;
     }
 

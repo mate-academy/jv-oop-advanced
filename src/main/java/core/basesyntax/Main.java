@@ -4,13 +4,11 @@ public class Main {
     private static final int NUMBER_OF_FIGURES = 6;
 
     public static void main(String[] args) {
-        ColorSupplier colorSupplier = new ColorSupplier();
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] randomFigure = new Figure[NUMBER_OF_FIGURES];
         for (int i = 0; i < NUMBER_OF_FIGURES; i++) {
             if (i < NUMBER_OF_FIGURES / 2) {
                 randomFigure[i] = figureSupplier.getRandomFigure();
-                randomFigure[i].setColor(colorSupplier.getRandomColor());
             } else {
                 randomFigure[i] = figureSupplier.getDefaultFigure();
             }

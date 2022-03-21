@@ -5,7 +5,8 @@ import core.basesyntax.Figure;
 public class Circle extends Figure {
     private double radius;
 
-    public Circle(double radius) {
+    public Circle(double radius, String color) {
+        setColor(color);
         this.radius = radius;
     }
 
