@@ -3,7 +3,6 @@ package core.basesyntax;
 import java.util.Random;
 
 class FigureSupplier extends Figure {
-
     public FigureSupplier() {
     }
 
@@ -18,7 +17,7 @@ class FigureSupplier extends Figure {
     }
 
     public Figure getDefaultFigure() {
-        Figure defaultFigure = new Figure();
+        Figure defaultFigure = new FigureSupplier();
         defaultFigure.setNameFigure("circle");
         defaultFigure.setSideA(10);
         defaultFigure.setColorFigure("white");
@@ -27,7 +26,7 @@ class FigureSupplier extends Figure {
     }
 
     public Figure getRandomFigure() {
-        Figure randomFigure = new Figure();
+        Figure randomFigure = new FigureSupplier();
 
         int index = new Random().nextInt(FigureList.values().length);
         randomFigure.setNameFigure(FigureList.values()[index].toString());

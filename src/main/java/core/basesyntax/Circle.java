@@ -1,7 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements FigureArea {
-
+public class Circle extends Figure {
     public Circle(int sideA) {
         super(sideA);
     }

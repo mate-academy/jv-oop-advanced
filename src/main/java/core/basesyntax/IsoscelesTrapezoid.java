@@ -1,7 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements FigureArea {
-
+public class IsoscelesTrapezoid extends Figure {
     public IsoscelesTrapezoid(int sideA, int sideB, int height) {
         super(sideA, sideB, height);
     }

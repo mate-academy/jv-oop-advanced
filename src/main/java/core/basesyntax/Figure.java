@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Figure {
+public abstract class Figure implements AreaCalculator {
     private String nameFigure;
     private int sideA;
     private int sideB;
@@ -117,5 +117,10 @@ public class Figure {
                 + ", lower base: " + sideB + " units"
                 + ", height: " + height + " units"
                 + ", color: " + colorFigure;
+    }
+
+    @Override
+    public double getArea() {
+        return 0;
     }
 }

@@ -1,7 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements FigureArea {
-
+public class Rectangle extends Figure {
     public Rectangle(int sideA, int sideB) {
         super(sideA, sideB);
     }

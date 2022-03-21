@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements FigureArea {
+public class RightTriangle extends Figure {
     public RightTriangle(int sideA) {
         super(sideA);
     }
