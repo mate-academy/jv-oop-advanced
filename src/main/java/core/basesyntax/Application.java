@@ -6,8 +6,11 @@ package core.basesyntax;
 public class Application {
     public static void main(String[] args) {
         FigureSupplier fs = new FigureSupplier();
-        Figure[] figures = {fs.getDefaultFigure(), fs.getDefaultFigure(), fs.getDefaultFigure(),
-                fs.getRandomFigure(), fs.getRandomFigure(), fs.getRandomFigure()};
+        Figure[] figures = new Figure[6];
+        for (int i = 0; i < 3; i++) {
+            figures[i] = fs.getRandomFigure();
+            figures[i + 3] = fs.getDefaultFigure();
+        }
         for (Figure figure : figures) {
             figure.draw();
         }
