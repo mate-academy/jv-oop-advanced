@@ -1,11 +1,13 @@
 package core.basesyntax;
 
 public abstract class Figure implements AreaGetterInterface, AbleToDraw {
-        private String color, name;
 
+    private String color;
+    private String name;
 
     public Figure() {
     }
+
     public Figure(String color) {
         this.color = color;
     }

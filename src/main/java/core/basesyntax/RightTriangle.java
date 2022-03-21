@@ -1,14 +1,16 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private double height, base;
     private static final double FORMULA_HARDCODE = 0.5;
+    private double height;
+    private double base;
 
     RightTriangle(double height, double base, String color) {
         this.height = height;
         this.base = base;
         super.setColor(color);
     }
+
     @Override
     public void toDraw() {
         System.out.println("Type = RightTriangle, height = "
