@@ -6,9 +6,9 @@ public class RightTriangle extends Figure {
     private double base;
 
     RightTriangle(double height, double base, String color) {
+        super(color);
         this.height = height;
         this.base = base;
-        super.setColor(color);
     }
 
     @Override
