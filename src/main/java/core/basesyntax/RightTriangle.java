@@ -1,12 +1,24 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    public RightTriangle(int sideA) {
-        super(sideA);
+    private int leg;
+
+    public RightTriangle(String nameFigure, int leg, String colorFigure) {
+        super(nameFigure, colorFigure);
+        this.leg = leg;
     }
 
     @Override
     public double getArea() {
-        return (getSideA() * getSideA()) * 0.5;
+        return (leg * leg) * 0.5;
+    }
+
+    @Override
+    public String toString() {
+        return "Figure"
+                + ": right triangle"
+                + ", area: " + getArea() + " sq.units"
+                + ", leg: " + leg + " units"
+                + ", color: " + getColorFigure();
     }
 }

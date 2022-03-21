@@ -1,12 +1,27 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    public Rectangle(int sideA, int sideB) {
-        super(sideA, sideB);
+    private int width;
+    private int height;
+
+    public Rectangle(String nameFigure, int width, int height, String colorFigure) {
+        super(nameFigure, colorFigure);
+        this.width = width;
+        this.height = height;
     }
 
     @Override
     public double getArea() {
-        return getSideA() * getSideB();
+        return width * height;
+    }
+
+    @Override
+    public String toString() {
+        return "Figure"
+                + ": rectangle"
+                + ", area: " + getArea() + " sq.units"
+                + ", firstLeg: " + width + " units"
+                + ", secondLeg: " + height + " units"
+                + ", color: " + getColorFigure();
     }
 }

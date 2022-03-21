@@ -1,82 +1,50 @@
 package core.basesyntax;
 
-import java.util.Locale;
 import java.util.Random;
 
 class FigureSupplier extends Figure {
     public FigureSupplier() {
-    }
-
-    public FigureSupplier(String nameFigure, int areaFigure,
-                          int sideA, int sideB, String colorFigure) {
-        super(nameFigure, areaFigure, sideA, sideB, colorFigure);
-    }
-
-    public FigureSupplier(String nameFigure, double areaFigure, int sideA,
-                          int sideB, int height, String colorFigure) {
-        super(nameFigure, areaFigure, sideA, sideB, height, colorFigure);
+        super();
     }
 
     public Figure getDefaultFigure() {
-        Figure defaultFigure = new FigureSupplier();
-        defaultFigure.setNameFigure("circle");
-        defaultFigure.setSideA(10);
-        defaultFigure.setColorFigure("white");
-        defaultFigure.setAreaFigure(314);
-        return defaultFigure;
+        return new Circle("circle",10,"white");
     }
 
     public Figure getRandomFigure() {
-        Figure randomFigure = new FigureSupplier();
+        final Figure randomFigure = new FigureSupplier();
 
         int index = new Random().nextInt(FigureList.values().length);
-        randomFigure.setNameFigure(FigureList.values()[index].toString().toLowerCase());
+        String nameFigure = FigureList.values()[index].toString().toLowerCase();
 
-        if (randomFigure.getNameFigure().equals("circle")
-                || randomFigure.getNameFigure().equals("square")
-                || randomFigure.getNameFigure().equals("right_triangle")) {
+        String colorSupplier = new ColorSupplier().getRandomColor();
 
-            randomFigure.setSideA((int) (Math.random() * 40));
+        Random random = new Random();
+        int randomFirstValue = random.nextInt(10) + 1;
+        int randomSecondValue = random.nextInt(10) + 1;
+        int randomThreeValue = random.nextInt(10) + 1;
 
-            if (randomFigure.getNameFigure().equals("circle")) {
-                randomFigure.setAreaFigure(new Circle((int) randomFigure.getSideA()).getArea());
-            } else if (randomFigure.getNameFigure().equals("square")) {
-                randomFigure.setAreaFigure(new Square((int) randomFigure.getSideA()).getArea());
-            } else {
-                randomFigure.setAreaFigure(new RightTriangle((int)
-                        randomFigure.getSideA()).getArea());
-            }
-
-            randomFigure.setColorFigure(new ColorSupplier().getRandomColor());
-
-            return randomFigure;
+        if (nameFigure.equals("circle")) {
+            return new Circle(nameFigure, randomFirstValue, colorSupplier);
         }
 
-        if (randomFigure.getNameFigure().equals("rectangle")) {
-            randomFigure.setSideA((int) (Math.random() * 40));
-            randomFigure.setSideB((int) (Math.random() * 40));
-            randomFigure.setAreaFigure(new Rectangle((int) randomFigure.getSideA(),
-                    (int) randomFigure.getSideB()).getArea());
-
-            randomFigure.setColorFigure(new ColorSupplier().getRandomColor());
-
-            return randomFigure;
+        if (nameFigure.equals("square")) {
+            return new Square(nameFigure,randomFirstValue, colorSupplier);
         }
 
-        if (randomFigure.getNameFigure().equals("isosceles_trapezoid")) {
-            randomFigure.setSideA((int) (Math.random() * 40));
-            randomFigure.setSideB((int) (Math.random() * 40));
-            randomFigure.setHeight((int) (Math.random() * 40));
-            randomFigure.setAreaFigure(new IsoscelesTrapezoid((int) randomFigure.getSideA(),
-                    (int) randomFigure.getSideB(),
-                    (int) randomFigure.getHeight()).getArea());
+        if (nameFigure.equals("right_triangle")) {
+            return new RightTriangle(nameFigure, randomFirstValue, colorSupplier);
+        }
 
-            randomFigure.setColorFigure(new ColorSupplier().getRandomColor());
+        if (nameFigure.equals("rectangle")) {
+            return new Rectangle(nameFigure, randomFirstValue, randomSecondValue, colorSupplier);
+        }
 
-            return randomFigure;
+        if (nameFigure.equals("isosceles_trapezoid")) {
+            return new IsoscelesTrapezoid(nameFigure, randomFirstValue, randomSecondValue,
+                    randomThreeValue, colorSupplier);
         }
 
         return randomFigure;
-
     }
 }
