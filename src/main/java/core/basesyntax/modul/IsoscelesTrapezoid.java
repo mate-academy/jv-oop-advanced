@@ -20,9 +20,9 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public void toDraw(double area) {
+    public void draw() {
         System.out.println("Figure: rectangle"
-                + ", area: " + area
+                + ", area: " + getArea()
                 + ", first side: " + this.firstSide
                 + ", second side: " + this.secondSide
                 + ", height: " + this.height

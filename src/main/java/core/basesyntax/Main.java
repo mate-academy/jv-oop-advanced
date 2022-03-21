@@ -12,7 +12,7 @@ public class Main {
             } else {
                 randomFigure[i] = figureSupplier.getDefaultFigure();
             }
-            randomFigure[i].toDraw(randomFigure[i].getArea());
+            randomFigure[i].draw();
         }
     }
 }
