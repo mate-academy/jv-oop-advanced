@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 public enum FigureList {
-    square,
-    rectangle,
-    right_triangle,
-    circle,
-    isosceles_trapezoid
+    Square,
+    Rectangle,
+    Right_triangle,
+    Circle,
+    Isosceles_trapezoid
 }

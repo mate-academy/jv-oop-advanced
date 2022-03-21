@@ -1,5 +1,6 @@
 package core.basesyntax;
 
+import java.util.Locale;
 import java.util.Random;
 
 class FigureSupplier extends Figure {
@@ -29,7 +30,7 @@ class FigureSupplier extends Figure {
         Figure randomFigure = new FigureSupplier();
 
         int index = new Random().nextInt(FigureList.values().length);
-        randomFigure.setNameFigure(FigureList.values()[index].toString());
+        randomFigure.setNameFigure(FigureList.values()[index].toString().toLowerCase());
 
         if (randomFigure.getNameFigure().equals("circle")
                 || randomFigure.getNameFigure().equals("square")
