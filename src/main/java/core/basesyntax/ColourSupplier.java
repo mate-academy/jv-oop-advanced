@@ -6,6 +6,6 @@ public class ColourSupplier {
     public String getRandomColor() {
         Color[] colors = Color.values();
         int randomInt = new Random().nextInt(colors.length);
-        return String.valueOf(colors[randomInt]);
+        return colors[randomInt].name();
     }
 }
