@@ -16,16 +16,16 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double getArea() {
-        return (this.firstSide + this.secondSide) / 2 * this.height;
+        return (firstSide + secondSide) / 2 * height;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: rectangle"
                 + ", area: " + getArea()
-                + ", first side: " + this.firstSide
-                + ", second side: " + this.secondSide
-                + ", height: " + this.height
+                + ", first side: " + firstSide
+                + ", second side: " + secondSide
+                + ", height: " + height
                 + ", color: " + getColor());
     }
 }

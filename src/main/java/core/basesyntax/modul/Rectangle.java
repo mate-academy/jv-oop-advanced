@@ -22,7 +22,7 @@ public class Rectangle extends Figure {
         System.out.println("Figure: rectangle"
                 + ", area: " + getArea()
                 + ", first side: " + firstSide
-                + ", second side: " + this.secondSide
+                + ", second side: " + secondSide
                 + ", color: " + getColor());
     }
 }
