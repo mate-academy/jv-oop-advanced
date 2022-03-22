@@ -5,41 +5,30 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int SIZE_LIMIT = 30;
     private static final int FIGURE_OPTION = 5;
+    private static final int DEFAULT_RADIUS = 10;
 
     public Figure getRandomFigure() {
-        Random r = new Random();
+        Random random = new Random();
         ColorSupplier randomColor = new ColorSupplier();
-        int f = r.nextInt(FIGURE_OPTION);
-        int param = r.nextInt(SIZE_LIMIT);
+        int figureOption = random.nextInt(FIGURE_OPTION);
+        int param = random.nextInt(SIZE_LIMIT);
 
-        switch (f) {
+        switch (figureOption) {
             case 1:
-                Figure res = new Circle(param);
-                res.setColor(Color.valueOf(randomColor.getRandomColor()));
-                return res;
+                return new Circle(param, randomColor.getRandomColor());
             case 2:
-                Figure res2 = new Square(param);
-                res2.setColor(Color.valueOf(randomColor.getRandomColor()));
-                return res2;
+                return new Square(param, randomColor.getRandomColor());
             case 3:
-                Figure res3 = new Rectangle(param, param);
-                res3.setColor(Color.valueOf(randomColor.getRandomColor()));
-                return res3;
+                return new Rectangle(param, param, randomColor.getRandomColor());
             case 4:
-                Figure res4 = new RightTriangle(param, param);
-                res4.setColor(Color.valueOf(randomColor.getRandomColor()));
-                return res4;
+                return new RightTriangle(param,param, randomColor.getRandomColor());
             default:
-                Figure res5 = new Trapezoid(param, param, param);
-                res5.setColor(Color.valueOf(randomColor.getRandomColor()));
-                return res5;
+                return new Trapezoid(param, param, param, randomColor.getRandomColor());
         }
 
     }
 
     public Figure getDefaultFigure() {
-        Figure defaultCircle = new Circle(10);
-        defaultCircle.setColor(Color.WHITE);
-        return defaultCircle;
+        return new Circle(DEFAULT_RADIUS, Color.WHITE);
     }
 }

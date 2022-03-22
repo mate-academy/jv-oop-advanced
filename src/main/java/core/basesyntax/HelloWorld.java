@@ -6,15 +6,17 @@ package core.basesyntax;
 public class HelloWorld {
     public static void main(String[] args) {
         Figure[] figures = new Figure[6];
-        FigureSupplier fig = new FigureSupplier();
+        FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < figures.length; i++) {
-            if (i < 3) {
-                figures[i] = fig.getRandomFigure();
+            if (i < figures.length / 2) {
+                figures[i] = figureSupplier.getRandomFigure();
                 figures[i].getDetails();
             } else {
-                figures[i] = fig.getDefaultFigure();
+                figures[i] = figureSupplier.getDefaultFigure();
                 figures[i].getDetails();
             }
         }
+
     }
 }
+

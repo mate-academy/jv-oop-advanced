@@ -1,30 +1,34 @@
 package core.basesyntax;
 
 public class Circle extends Figure implements FigureDetailer {
-    private String name = String.valueOf(FigureE.CIRCLE);
+    private String name = "circle";
     private int radius;
+    private Color color;
 
-    public Circle(int radius) {
+    public Circle(int radius, Color color) {
         this.radius = radius;
-    }
-
-    public void setRadius(int radius) {
-        this.radius = radius;
-    }
-
-    public int getRadius() {
-        return this.radius;
+        this.color = color;
     }
 
     @Override
-    public void getArea() {
-        System.out.println(Math.PI * radius * radius);
+    public int getArea() {
+        return (int) (Math.PI * radius * radius);
     }
 
     @Override
     public void getDetails() {
-        System.out.print(getColor() + " " + name + " with radius " + radius + " and area of ");
-        getArea();
+        System.out.println(getColor() + " " + name + " with radius " + radius + " and area of "
+                + getArea());
+
     }
 
+    @Override
+    public void setColor(Color color) {
+        this.color = color;
+    }
+
+    @Override
+    public Color getColor() {
+        return color;
+    }
 }

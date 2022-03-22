@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public interface FigureDetailer extends AreaCalculator {
+public interface FigureDetailer {
     void getDetails();
 }
