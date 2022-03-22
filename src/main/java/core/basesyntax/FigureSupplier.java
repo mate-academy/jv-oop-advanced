@@ -2,49 +2,38 @@ package core.basesyntax;
 
 import java.util.Random;
 
-class FigureSupplier extends Figure {
-    public FigureSupplier() {
-        super();
-    }
+class FigureSupplier {
+    private Random random = new Random();
 
     public Figure getDefaultFigure() {
-        return new Circle("circle",10,"white");
+        return new Circle(10,Color.WHITE.name());
     }
 
     public Figure getRandomFigure() {
-        final Figure randomFigure = new FigureSupplier();
-
-        int index = new Random().nextInt(FigureList.values().length);
+        int index = random.nextInt(FigureList.values().length);
         String nameFigure = FigureList.values()[index].toString().toLowerCase();
-
-        String colorSupplier = new ColorSupplier().getRandomColor();
-
-        Random random = new Random();
+        String color = new ColorSupplier().getRandomColor();
+        if (nameFigure.equals("circle")) {
+            int randomFirstValue = random.nextInt(10) + 1;
+            return new Circle(randomFirstValue, color);
+        }
+        if (nameFigure.equals("square")) {
+            int randomFirstValue = random.nextInt(10) + 1;
+            return new Square(randomFirstValue, color);
+        }
+        if (nameFigure.equals("right_triangle")) {
+            int randomFirstValue = random.nextInt(10) + 1;
+            return new RightTriangle(randomFirstValue, color);
+        }
+        if (nameFigure.equals("rectangle")) {
+            int randomFirstValue = random.nextInt(10) + 1;
+            int randomSecondValue = random.nextInt(10) + 1;
+            return new Rectangle(randomFirstValue, randomSecondValue, color);
+        }
         int randomFirstValue = random.nextInt(10) + 1;
         int randomSecondValue = random.nextInt(10) + 1;
         int randomThreeValue = random.nextInt(10) + 1;
-
-        if (nameFigure.equals("circle")) {
-            return new Circle(nameFigure, randomFirstValue, colorSupplier);
-        }
-
-        if (nameFigure.equals("square")) {
-            return new Square(nameFigure,randomFirstValue, colorSupplier);
-        }
-
-        if (nameFigure.equals("right_triangle")) {
-            return new RightTriangle(nameFigure, randomFirstValue, colorSupplier);
-        }
-
-        if (nameFigure.equals("rectangle")) {
-            return new Rectangle(nameFigure, randomFirstValue, randomSecondValue, colorSupplier);
-        }
-
-        if (nameFigure.equals("isosceles_trapezoid")) {
-            return new IsoscelesTrapezoid(nameFigure, randomFirstValue, randomSecondValue,
-                    randomThreeValue, colorSupplier);
-        }
-
-        return randomFigure;
+        return new IsoscelesTrapezoid(randomFirstValue, randomSecondValue,
+                    randomThreeValue, color);
     }
 }

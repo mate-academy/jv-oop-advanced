@@ -3,8 +3,8 @@ package core.basesyntax;
 public class RightTriangle extends Figure {
     private int leg;
 
-    public RightTriangle(String nameFigure, int leg, String colorFigure) {
-        super(nameFigure, colorFigure);
+    public RightTriangle(int leg, String color) {
+        super(color);
         this.leg = leg;
     }
 
