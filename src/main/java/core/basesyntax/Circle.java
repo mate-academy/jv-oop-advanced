@@ -1,13 +1,11 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements FigureDetailer {
-    private String name = "circle";
+public class Circle extends Figure {
     private int radius;
-    private Color color;
 
     public Circle(int radius, Color color) {
+        super(color);
         this.radius = radius;
-        this.color = color;
     }
 
     @Override
@@ -17,18 +15,8 @@ public class Circle extends Figure implements FigureDetailer {
 
     @Override
     public void getDetails() {
-        System.out.println(getColor() + " " + name + " with radius " + radius + " and area of "
+        System.out.println(getColor() + " " + " circle with radius " + radius + " and area of "
                 + getArea());
 
-    }
-
-    @Override
-    public void setColor(Color color) {
-        this.color = color;
-    }
-
-    @Override
-    public Color getColor() {
-        return color;
     }
 }

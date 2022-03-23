@@ -1,15 +1,14 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements FigureDetailer {
-    private String name = "right triangle";
+public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
-    private Color color;
 
     public RightTriangle(int firstLeg, int secondLeg, Color color) {
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        this.color = color;
+
     }
 
     @Override
@@ -19,13 +18,8 @@ public class RightTriangle extends Figure implements FigureDetailer {
 
     @Override
     public void getDetails() {
-        System.out.println(getColor() + " " + name + " with height " + firstLeg + ", foundation "
-                + secondLeg + " and area of " + getArea());
+        System.out.println(getColor() + " " + " right triangle with height " + firstLeg
+                + ", foundation " + secondLeg + " and area of " + getArea());
 
-    }
-
-    @Override
-    public Color getColor() {
-        return color;
     }
 }

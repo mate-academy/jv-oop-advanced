@@ -1,17 +1,15 @@
 package core.basesyntax;
 
-public class Trapezoid extends Figure implements FigureDetailer {
-    private String name = "trapezoid";
+public class Trapezoid extends Figure {
     private int top;
     private int bottom;
     private int height;
-    private Color color;
 
     public Trapezoid(int top, int bottom, int sides, Color color) {
+        super(color);
         this.top = top;
         this.bottom = bottom;
         this.height = sides;
-        this.color = color;
     }
 
     @Override
@@ -21,13 +19,8 @@ public class Trapezoid extends Figure implements FigureDetailer {
 
     @Override
     public void getDetails() {
-        System.out.println(getColor() + " " + name + " with height " + height + ", parallel sides "
-                + bottom + " and " + bottom + " and area of " + getArea());
+        System.out.println(getColor() + " " + " trapezoid with height " + height
+                + ", parallel sides " + bottom + " and " + bottom + " and area of " + getArea());
 
-    }
-
-    @Override
-    public Color getColor() {
-        return color;
     }
 }
