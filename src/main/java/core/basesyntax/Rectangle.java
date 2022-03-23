@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Draw, FigureArea {
+public class Rectangle extends Figure {
     private final int width;
     private final int height;
 
@@ -21,13 +21,13 @@ public class Rectangle extends Figure implements Draw, FigureArea {
     }
 
     @Override
-    public String getDraw() {
+    public String draw() {
         return "Rectangle: area: " + getArea() + " sq.units, " + "width: "
                 + width + " units, " + "height: " + height + " units, " + "color: " + getColor();
     }
 
     @Override
     public String toString() {
-        return getDraw();
+        return draw();
     }
 }
