@@ -14,9 +14,11 @@ public class FigureSupplier {
         RightTriangle rightTriangle = new RightTriangle(colorSupplier.getRandomColor(),
                 random.nextInt(RANDOM_MAX), random.nextInt(RANDOM_MAX));
         Circle circle = new Circle(colorSupplier.getRandomColor(), random.nextInt(RANDOM_MAX));
-        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+        IsoscelesTrapezoid isoscelesTrapezoid =
+                new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                 random.nextInt(RANDOM_MAX), random.nextInt(RANDOM_MAX), random.nextInt(RANDOM_MAX));
-        Figure[] figures = new Figure[]{square, rectangle, rightTriangle, circle, isoscelesTrapezoid};
+        Figure[] figures = new Figure[]{square, rectangle, rightTriangle, circle,
+                isoscelesTrapezoid};
         return figures[random.nextInt(figures.length)];
     }
 
