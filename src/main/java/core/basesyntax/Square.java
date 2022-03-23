@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square implements Figure {
+public class Square extends FigureSupplier implements Drawable, AreaCalculator {
     private double side;
     private ColorSupplier supplier = new ColorSupplier();
 

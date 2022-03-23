@@ -8,4 +8,7 @@ public class ColorSupplier {
         return Color.values()[index].toString();
     }
 
+    public String getDefaultColor() {
+        return Color.WHITE.toString();
+    }
 }

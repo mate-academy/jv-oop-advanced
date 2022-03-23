@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle implements Figure {
+public class RightTriangle extends Figure implements Drawable, AreaCalculator {
     private double side;
     private ColorSupplier supplier = new ColorSupplier();
 

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle implements Figure {
+public class Rectangle extends FigureSupplier implements Drawable, AreaCalculator {
     private int width;
     private int height;
     private ColorSupplier supplier = new ColorSupplier();

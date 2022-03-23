@@ -1,7 +1,12 @@
 package core.basesyntax;
 
-public interface Figure {
-    public abstract double getArea();
+public abstract class Figure {
 
-    public abstract String getValue();
+    public Figure(String color) {
+
+    }
+
+    public Figure() {
+
+    }
 }
