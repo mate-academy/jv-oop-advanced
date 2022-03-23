@@ -21,6 +21,5 @@ public class Trapezoid extends Figure {
     public void getDetails() {
         System.out.println(getColor() + " " + " trapezoid with height " + height
                 + ", parallel sides " + bottom + " and " + bottom + " and area of " + getArea());
-
     }
 }

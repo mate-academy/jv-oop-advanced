@@ -14,7 +14,4 @@ public abstract class Figure implements FigureDetailer, AreaCalculator {
     public void setColor(Color color) {
         this.color = color;
     }
-
 }
-
-

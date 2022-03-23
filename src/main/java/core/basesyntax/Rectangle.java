@@ -19,6 +19,5 @@ public class Rectangle extends Figure {
     public void getDetails() {
         System.out.println(getColor() + " " + " rectangle with sides " + side1 + " and "
                 + side2 + " and area of " + getArea());
-
     }
 }

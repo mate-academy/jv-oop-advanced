@@ -20,6 +20,5 @@ public class RightTriangle extends Figure {
     public void getDetails() {
         System.out.println(getColor() + " " + " right triangle with height " + firstLeg
                 + ", foundation " + secondLeg + " and area of " + getArea());
-
     }
 }

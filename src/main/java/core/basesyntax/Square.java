@@ -17,6 +17,5 @@ public class Square extends Figure {
     public void getDetails() {
         System.out.println(getColor() + " " + " square with side " + side + " and area of "
                 + getArea());
-
     }
 }
