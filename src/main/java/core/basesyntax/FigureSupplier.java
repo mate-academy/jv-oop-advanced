@@ -4,13 +4,12 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 4;
-    public static final double MAX_VALUE = 100.0;
     public static final int MAX_VAL = 100;
     private Random random = new Random();
     private int varInt1 = random.nextInt(MAX_VAL);
     private int varInt2 = random.nextInt(MAX_VAL);
     private ColorSupplier supplier = new ColorSupplier();
-    private double var = random.nextDouble(MAX_VALUE);
+    private double var = random.nextDouble();
     private Circle circle = new Circle(var);
     private Square square = new Square(var);
     private Rectangle rectangle = new Rectangle(varInt1, varInt2);
