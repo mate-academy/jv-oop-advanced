@@ -1,11 +1,11 @@
 package core.basesyntax;
 
-public class Rectangle extends FigureSupplier implements Drawable, AreaCalculator {
+public class Rectangle extends Figure implements Drawable, AreaCalculator {
     private int width;
     private int height;
-    private ColorSupplier supplier = new ColorSupplier();
 
-    public Rectangle(int width, int height) {
+    public Rectangle(int width, int height, String color) {
+        super(color);
         this.width = width;
         this.height = height;
     }
@@ -25,6 +25,6 @@ public class Rectangle extends FigureSupplier implements Drawable, AreaCalculato
         return "Figure: rectangle, area: " + getArea()
                 + " sq.units, width: "
                 + getValue() + " units, color: "
-                + supplier.getRandomColor();
+                + getColor();
     }
 }

@@ -1,10 +1,10 @@
 package core.basesyntax;
 
-public class Square extends FigureSupplier implements Drawable, AreaCalculator {
+public class Square extends Figure implements Drawable, AreaCalculator {
     private double side;
-    private ColorSupplier supplier = new ColorSupplier();
 
-    public Square(double side) {
+    public Square(double side, String color) {
+        super(color);
         this.side = side;
     }
 
@@ -23,7 +23,7 @@ public class Square extends FigureSupplier implements Drawable, AreaCalculator {
         return "Figure: square, area: " + getArea()
                 + " sq.units, side: "
                 + getValue() + " units, color: "
-                + supplier.getRandomColor();
+                + getColor();
     }
 
 }

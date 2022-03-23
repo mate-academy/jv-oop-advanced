@@ -2,9 +2,9 @@ package core.basesyntax;
 
 public class RightTriangle extends Figure implements Drawable, AreaCalculator {
     private double side;
-    private ColorSupplier supplier = new ColorSupplier();
 
-    public RightTriangle(double side) {
+    public RightTriangle(double side, String color) {
+        super(color);
         this.side = side;
     }
 
@@ -23,6 +23,6 @@ public class RightTriangle extends Figure implements Drawable, AreaCalculator {
         return "Figure: rightTriangle, area: " + getArea()
                 + " sq.units, side: "
                 + getValue() + " units, color: "
-                + supplier.getRandomColor();
+                + getColor();
     }
 }

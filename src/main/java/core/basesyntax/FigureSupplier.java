@@ -5,8 +5,8 @@ import java.util.Random;
 public class FigureSupplier extends Figure {
     public static final int FIGURE_COUNT = 4;
     public static final int MAX_VAL = 100;
-    private Random random = new Random();
     private ColorSupplier supplier = new ColorSupplier();
+    private Random random = new Random();
 
     public FigureSupplier(String color) {
         super(color);
@@ -22,10 +22,11 @@ public class FigureSupplier extends Figure {
 
         double var = random.nextDouble();
         Circle circle = new Circle(var, supplier.getRandomColor());
-        Square square = new Square(var);
-        Rectangle rectangle = new Rectangle(varInt1, varInt2);
-        RightTriangle rightTriangle = new RightTriangle(var);
-        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(varInt1, varInt2);
+        Square square = new Square(var, supplier.getRandomColor());
+        Rectangle rectangle = new Rectangle(varInt1, varInt2, supplier.getRandomColor());
+        RightTriangle rightTriangle = new RightTriangle(var, supplier.getRandomColor());
+        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(varInt1,
+                varInt2, supplier.getRandomColor());
         Figure[] figure = new Figure[]
                 {circle, square, rectangle, rightTriangle, isoscelesTrapezoid};
         int figureNumber = random.nextInt(FIGURE_COUNT);

@@ -1,8 +1,7 @@
 package core.basesyntax;
 
-public class Circle extends FigureSupplier implements Drawable, AreaCalculator {
+public class Circle extends Figure implements Drawable, AreaCalculator {
     private final double radius;
-    private ColorSupplier supplier = new ColorSupplier();
 
     public Circle(double radius, String color) {
         super(color);
@@ -24,6 +23,6 @@ public class Circle extends FigureSupplier implements Drawable, AreaCalculator {
         return "Figure: circle, area: " + getArea()
                 + " sq.units, radius: "
                 + getValue() + " units, color: "
-                + supplier.getRandomColor();
+                + getColor();
     }
 }
