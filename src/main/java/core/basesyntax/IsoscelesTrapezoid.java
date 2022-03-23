@@ -5,7 +5,6 @@ public class IsoscelesTrapezoid extends Figure implements FigureArea, Draw {
     private final int secondBase;
     private final int height;
 
-
     public IsoscelesTrapezoid(String color, int firstBase, int secondBase, int height) {
         super(color);
         this.firstBase = firstBase;
@@ -15,7 +14,7 @@ public class IsoscelesTrapezoid extends Figure implements FigureArea, Draw {
 
     @Override
     public double getArea() {
-        return (firstBase + secondBase) / 2 * height;
+        return ((firstBase + secondBase) / 2) * height;
     }
 
     @Override
@@ -25,7 +24,9 @@ public class IsoscelesTrapezoid extends Figure implements FigureArea, Draw {
 
     @Override
     public String getDraw() {
-        return "IsoscelesTrapezoid: area: " + getArea() + " sq.units, " + "topBase: " + firstBase + " units, " + "bottomBase: " + secondBase + " units, " + "height: " + height + " units, " + "color: " + getColor();
+        return "IsoscelesTrapezoid: area: " + getArea() + " sq.units, " + "topBase: "
+                + firstBase + " units, " + "bottomBase: " + secondBase + " units, "
+                + "height: " + height + " units, " + "color: " + getColor();
     }
 
     @Override
