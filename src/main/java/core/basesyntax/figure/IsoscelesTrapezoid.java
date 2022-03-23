@@ -1,5 +1,7 @@
 package core.basesyntax.figure;
 
+import java.util.Locale;
+
 public class IsoscelesTrapezoid extends Figure {
     private final double height;
     private final double florLine;
@@ -31,10 +33,11 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void drawFigure() {
-        System.out.println("Figure: " + getClass().getSimpleName() + ", isosceles trapezoid: "
-                + countArea() + " sq. units, color " + getColor()
+        System.out.println("Figure: isosceles trapezoid, area: "
+                + countArea() + " sq.units"
                 + ", height " + getHeight() + " florLine " + getFlorLine()
-                + " ceilingLine " + getCeilingLine());
+                + " ceilingLine " + getCeilingLine()
+                + ", color: " + getColor().toLowerCase(Locale.ROOT));
     }
 
 }

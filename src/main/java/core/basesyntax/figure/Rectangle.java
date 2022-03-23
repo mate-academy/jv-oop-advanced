@@ -1,5 +1,7 @@
 package core.basesyntax.figure;
 
+import java.util.Locale;
+
 public class Rectangle extends Figure {
     private final int sideA;
     private final int sideB;
@@ -25,9 +27,9 @@ public class Rectangle extends Figure {
 
     @Override
     public void drawFigure() {
-        System.out.println("Figure: " + getClass().getSimpleName() + ", rectangle: "
-                + countArea() + " sq. units, color " + getColor()
-                + ", SideA " + getSideA() + " SideB " + getSideB());
-
+        System.out.println("Figure: rectangle, area: "
+                + countArea() + " sq.units"
+                + ", SideA " + getSideA() + " SideB " + getSideB()
+                + ", color: " + getColor().toLowerCase(Locale.ROOT));
     }
 }

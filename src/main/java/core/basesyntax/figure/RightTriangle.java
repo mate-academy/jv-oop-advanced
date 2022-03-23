@@ -1,5 +1,7 @@
 package core.basesyntax.figure;
 
+import java.util.Locale;
+
 public class RightTriangle extends Figure {
     private final int baseSide;
     private final int side;
@@ -25,8 +27,9 @@ public class RightTriangle extends Figure {
 
     @Override
     public void drawFigure() {
-        System.out.println("Figure: " + getClass().getSimpleName() + ", right triangle: "
-                + countArea() + "sq. units, color " + getColor() + ", side "
-                + getSide() + " baseSide " + getBaseSide());
+        System.out.println("Figure: right triangle, area:"
+                + countArea() + "sq.units " + ", side "
+                + getSide() + " baseSide " + getBaseSide()
+                + ", color: " + getColor().toLowerCase(Locale.ROOT));
     }
 }
