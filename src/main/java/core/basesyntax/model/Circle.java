@@ -5,7 +5,7 @@ import core.basesyntax.Figure;
 public class Circle extends Figure {
     private int radius;
 
-    public Circle(Colors color, int radius) {
+    public Circle(Color color, int radius) {
         super(color);
         this.type = FigureType.CIRCLE;
         this.radius = radius;
@@ -19,7 +19,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public void drawA() {
+    public void draw() {
         System.out.println("Figure: " + getNameByType()
                 + ", area: " + getArea() + " sq.units, side: "
                 + radius + ", color: " + getStringColor());

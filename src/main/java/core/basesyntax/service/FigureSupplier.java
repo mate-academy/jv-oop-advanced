@@ -2,7 +2,7 @@ package core.basesyntax.service;
 
 import core.basesyntax.Figure;
 import core.basesyntax.model.Circle;
-import core.basesyntax.model.Colors;
+import core.basesyntax.model.Color;
 import core.basesyntax.model.FigureType;
 import core.basesyntax.model.IsoscelesTrapezoid;
 import core.basesyntax.model.Rectangle;
@@ -12,6 +12,8 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
+    public static final int defaultRadius = 10;
+    public static final Color defaultColor = Color.WHITE;
     private Random random;
     private ColorSupplier colorSupplier;
 
@@ -20,28 +22,49 @@ public class FigureSupplier {
         colorSupplier = new ColorSupplier();
     }
 
+    private Circle getRandomCircle() {
+        return new Circle(colorSupplier.getRandomColor(), random.nextInt(10));
+    }
+
+    private Square getRandomSquare() {
+        return new Square(colorSupplier.getRandomColor(), random.nextInt(10));
+    }
+
+    private Rectangle getRandomRectangle() {
+        return new Rectangle(colorSupplier.getRandomColor(),
+                random.nextInt(10), random.nextInt(10));
+    }
+
+    private RightTriangle getRandomTriangle() {
+        return new RightTriangle(colorSupplier.getRandomColor(),
+                random.nextInt(10), random.nextInt(10));
+    }
+
+    private IsoscelesTrapezoid getRandomTrapezoid() {
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                random.nextInt(10), random.nextInt(10), random.nextInt(10));
+    }
+
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
-        int value = random.nextInt(10);
         FigureType randomFigureType = FigureType.values()[figureNumber];
         switch (randomFigureType) {
             case CIRCLE:
-                return new Circle(colorSupplier.getRandomColor(), value);
+                return getRandomCircle();
             case SQUARE:
-                return new Square(colorSupplier.getRandomColor(), value);
+                return getRandomSquare();
             case RECTANGLE:
-                return new Rectangle(colorSupplier.getRandomColor(), value, value);
+                return getRandomRectangle();
             case RIGHT_TRIANGLE:
-                return new RightTriangle(colorSupplier.getRandomColor(), value, value);
+                return getRandomTriangle();
             case ISOSCELES_TRAPEZOID:
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), value, value, value);
+                return getRandomTrapezoid();
             default:
-                return null;
+                return getDefaultFigure();
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Colors.WHITE, 10);
+        return new Circle(defaultColor, defaultRadius);
     }
-
 }

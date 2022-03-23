@@ -5,7 +5,7 @@ import core.basesyntax.Figure;
 public class Square extends Figure {
     private int sideA;
 
-    public Square(Colors color, int sideA) {
+    public Square(Color color, int sideA) {
         super(color);
         this.type = FigureType.SQUARE;
         this.sideA = sideA;
@@ -17,7 +17,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public void drawA() {
+    public void draw() {
         System.out.println("Figure: " + getNameByType()
                 + ", area: " + getArea() + " sq.units, side: "
                 + sideA + ", color: " + getStringColor());
