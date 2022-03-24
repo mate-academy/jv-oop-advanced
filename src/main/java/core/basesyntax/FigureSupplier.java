@@ -3,9 +3,9 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int FIGURE_COUNT = 5;
-    public static final int DEFAULT_RADIUS = 10;
-    public static final int RANDOM_MAX_NUMBER = 100;
+    private static final int FIGURE_COUNT = 5;
+    private static final int DEFAULT_RADIUS = 10;
+    private static final int RANDOM_MAX_NUMBER = 100;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
