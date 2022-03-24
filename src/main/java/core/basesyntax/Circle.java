@@ -19,7 +19,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public void paint() {
+    public void draw() {
         System.out.println(this);
     }
 }

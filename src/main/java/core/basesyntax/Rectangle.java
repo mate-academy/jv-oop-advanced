@@ -23,7 +23,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void paint() {
+    public void draw() {
         System.out.println(this);
     }
 }

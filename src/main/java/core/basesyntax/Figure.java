@@ -13,7 +13,4 @@ public abstract class Figure implements AreaDrawing {
     public String getColor() {
         return color;
     }
-
-    @Override
-    public abstract void paint();
 }

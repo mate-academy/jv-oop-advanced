@@ -6,5 +6,6 @@ public enum Color {
     BLUE,
     ORANGE,
     RED,
-    PINK
+    PINK,
+    WHITE
 }

@@ -20,7 +20,7 @@ public class FigureSupplier {
             case 2:
                 return new RightTriangle(colorSupplier.getRandomColor(), randomInt, randomInt);
             case 3:
-                return new Circle("white", UNITS);
+                return new Circle(Color.WHITE.name(), UNITS);
             default:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                         randomInt, randomInt, randomInt);
@@ -28,6 +28,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", UNITS);
+        return new Circle(Color.WHITE.name(), UNITS);
     }
 }

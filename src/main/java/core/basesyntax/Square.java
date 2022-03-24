@@ -19,7 +19,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public void paint() {
+    public void draw() {
         System.out.println(this);
     }
 }
