@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Trapezoid extends Figure implements AreaCalculator, Draw {
+public class Trapezoid extends Figure {
     private double upSide;
     private double downSide;
     private double height;

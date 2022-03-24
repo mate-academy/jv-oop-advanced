@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements AreaCalculator, Draw {
+public class Circle extends Figure {
     private double radius;
 
     public Circle(FigureType figureType, double radius, Color color) {
