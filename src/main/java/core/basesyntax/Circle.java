@@ -15,14 +15,9 @@ public class Circle extends Figure {
 
     @Override
     public String getValue() {
-        return String.valueOf(radius);
-    }
-
-    @Override
-    public String toString() {
         return "Figure: circle, area: " + getArea()
                 + " sq.units, radius: "
-                + getValue() + " units, color: "
+                + String.valueOf(radius) + " units, color: "
                 + getColor();
     }
 }

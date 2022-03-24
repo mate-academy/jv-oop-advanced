@@ -15,14 +15,9 @@ public class RightTriangle extends Figure {
 
     @Override
     public String getValue() {
-        return String.valueOf(side);
-    }
-
-    @Override
-    public String toString() {
         return "Figure: rightTriangle, area: " + getArea()
                 + " sq.units, side: "
-                + getValue() + " units, color: "
+                + String.valueOf(side) + " units, color: "
                 + getColor();
     }
 }

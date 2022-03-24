@@ -17,14 +17,9 @@ public class IsoscelesTrapezoid extends Figure implements Drawable, AreaCalculat
 
     @Override
     public String getValue() {
-        return firstLeg + " units, secondLeg: " + secondLeg;
-    }
-
-    @Override
-    public String toString() {
         return "Figure: IsoscelesTrapezoid, area: " + getArea()
                 + " sq.units, firstLeg: "
-                + getValue() + " units, color: "
+                + firstLeg + " units, secondLeg: " + secondLeg + " units, color: "
                 + getColor();
     }
 }
