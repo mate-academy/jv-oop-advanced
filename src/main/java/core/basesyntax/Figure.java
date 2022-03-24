@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Figure implements AreaDrawing {
+public abstract class Figure implements AreaDrawing {
     private String color;
 
     public Figure() {
@@ -15,7 +15,5 @@ public class Figure implements AreaDrawing {
     }
 
     @Override
-    public void paint() {
-        System.out.println("Please close the window!");
-    }
+    public abstract void paint();
 }
