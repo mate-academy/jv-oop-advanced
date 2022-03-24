@@ -22,29 +22,6 @@ public class FigureSupplier {
         colorSupplier = new ColorSupplier();
     }
 
-    private Circle getRandomCircle() {
-        return new Circle(colorSupplier.getRandomColor(), random.nextInt(10));
-    }
-
-    private Square getRandomSquare() {
-        return new Square(colorSupplier.getRandomColor(), random.nextInt(10));
-    }
-
-    private Rectangle getRandomRectangle() {
-        return new Rectangle(colorSupplier.getRandomColor(),
-                random.nextInt(10), random.nextInt(10));
-    }
-
-    private RightTriangle getRandomTriangle() {
-        return new RightTriangle(colorSupplier.getRandomColor(),
-                random.nextInt(10), random.nextInt(10));
-    }
-
-    private IsoscelesTrapezoid getRandomTrapezoid() {
-        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                random.nextInt(10), random.nextInt(10), random.nextInt(10));
-    }
-
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
         FigureType randomFigureType = FigureType.values()[figureNumber];
@@ -66,5 +43,28 @@ public class FigureSupplier {
 
     public Figure getDefaultFigure() {
         return new Circle(defaultColor, defaultRadius);
+    }
+
+    private Circle getRandomCircle() {
+        return new Circle(colorSupplier.getRandomColor(), random.nextInt(10));
+    }
+
+    private Square getRandomSquare() {
+        return new Square(colorSupplier.getRandomColor(), random.nextInt(10));
+    }
+
+    private Rectangle getRandomRectangle() {
+        return new Rectangle(colorSupplier.getRandomColor(),
+                random.nextInt(10), random.nextInt(10));
+    }
+
+    private RightTriangle getRandomTriangle() {
+        return new RightTriangle(colorSupplier.getRandomColor(),
+                random.nextInt(10), random.nextInt(10));
+    }
+
+    private IsoscelesTrapezoid getRandomTrapezoid() {
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                random.nextInt(10), random.nextInt(10), random.nextInt(10));
     }
 }
