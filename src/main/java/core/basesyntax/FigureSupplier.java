@@ -52,7 +52,7 @@ public class FigureSupplier {
                 random.nextInt(RANDOM_MAX), random.nextInt(RANDOM_MAX), random.nextInt(RANDOM_MAX));
     }
 
-    public Figure getDefaultFigure() {
+    Figure getDefaultFigure() {
         return new Circle(COLOR, RADIUS);
     }
 }

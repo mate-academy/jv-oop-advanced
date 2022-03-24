@@ -21,13 +21,8 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String draw() {
-        return "Rectangle: area: " + getArea() + " sq.units, " + "width: "
-                + width + " units, " + "height: " + height + " units, " + "color: " + getColor();
-    }
-
-    @Override
-    public String toString() {
-        return draw();
+    public void draw() {
+        System.out.println("Rectangle: area: " + getArea() + " sq.units, " + "width: "
+                + width + " units, " + "height: " + height + " units, " + "color: " + getColor());
     }
 }
