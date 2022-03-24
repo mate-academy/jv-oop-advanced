@@ -1,6 +1,6 @@
 package model;
 
-public class Rectangle extends Figure {
+public class Rectangle extends Figure implements Area, Draw {
     private double width;
     private double length;
 
@@ -11,15 +11,15 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return length * width;
     }
 
     @Override
-    public void draw() {
+    public void drawing() {
         System.out.println("Rectangle length: " + length
                 + ", wight: " + width
-                + ", area: " + area()
+                + ", area: " + getArea()
                 + ", color: " + getColor());
     }
 }

@@ -1,6 +1,6 @@
 package model;
 
-public class Circle extends Figure {
+public class Circle extends Figure implements Area, Draw {
     private double radius;
 
     public Circle(String color, double radius) {
@@ -13,14 +13,14 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return Math.PI * radius * radius;
     }
 
     @Override
-    public void draw() {
-        System.out.println("radius: " + radius
-                + ", area: " + area()
+    public void drawing() {
+        System.out.println("Circle radius: " + radius
+                + ", area: " + getArea()
                 + ", color: " + getColor());
     }
 }

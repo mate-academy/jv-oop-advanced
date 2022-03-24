@@ -15,14 +15,14 @@ public class Main {
     public static void firstHalf() {
         FigureSupplier figure = new FigureSupplier();
         for (int i = 0; i < 5; i++) {
-            figure.getRandomFigure().draw();
+            figure.getRandomFigure().drawing();
         }
     }
 
     public static void secondHalf() {
         FigureSupplier figure = new FigureSupplier();
         for (int i = 0; i < 6; i++) {
-            figure.getDefaultFigure().draw();
+            figure.getDefaultFigure().drawing();
         }
     }
 }

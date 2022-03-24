@@ -1,6 +1,6 @@
 package model;
 
-public class Square extends Figure {
+public class Square extends Figure implements Draw, Area {
     private double side;
 
     public Square(String color, double side) {
@@ -9,14 +9,14 @@ public class Square extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return side * side;
     }
 
     @Override
-    public void draw() {
+    public void drawing() {
         System.out.println("Square side: " + side
-                + ", area: " + area()
+                + ", area: " + getArea()
                 + ", color: " + getColor());
     }
 }
