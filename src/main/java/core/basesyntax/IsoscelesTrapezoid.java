@@ -30,5 +30,3 @@ public class IsoscelesTrapezoid extends Figure {
         System.out.println(this);
     }
 }
-
-//Формула площади равнобедренной трапеции через основания и высоту
