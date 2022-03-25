@@ -19,7 +19,7 @@ public class IsoscelesTrapezoid extends Figure implements Area {
     }
 
     @Override
-    public String toString() {
+    public String print() {
         return "Figure: Isosceles_trapezoid, area: " + getArea() + " sq.units, "
                 + "upperBase: " + upperBase + " units, lowerBase: " + lowerBase
                 + " units, height: " + height + " units, color: " + color;
