@@ -1,6 +1,6 @@
 package model;
 
-public abstract class Figure implements Area, Draw {
+public abstract class Figure implements AreaCalculator, Drawing {
     private String color;
 
     public Figure(String color) {
@@ -9,13 +9,5 @@ public abstract class Figure implements Area, Draw {
 
     public String getColor() {
         return color;
-    }
-
-    public double getArea() {
-        return 0;
-    }
-
-    public void drawing() {
-        System.out.println("This is figure!");
     }
 }

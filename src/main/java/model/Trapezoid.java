@@ -1,6 +1,6 @@
 package model;
 
-public class Trapezoid extends Figure implements Area, Draw {
+public class Trapezoid extends Figure {
     private double firstLeg;
     private double secondLeg;
     private double height;
@@ -18,7 +18,7 @@ public class Trapezoid extends Figure implements Area, Draw {
     }
 
     @Override
-    public void drawing() {
+    public void draw() {
         System.out.println("Trapezoid area: " + getArea() + ", color: " + getColor());
     }
 }

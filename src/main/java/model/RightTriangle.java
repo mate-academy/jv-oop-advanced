@@ -1,6 +1,6 @@
 package model;
 
-public class RightTriangle extends Figure implements Area, Draw {
+public class RightTriangle extends Figure {
     private double side;
 
     public RightTriangle(String color, double side) {
@@ -14,7 +14,7 @@ public class RightTriangle extends Figure implements Area, Draw {
     }
 
     @Override
-    public void drawing() {
+    public void draw() {
         System.out.println("Right triangle side: " + side
                 + ", area: " + getArea()
                 + ", color: " + getColor());

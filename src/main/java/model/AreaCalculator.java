@@ -1,5 +1,5 @@
 package model;
 
-public interface Area {
+public interface AreaCalculator {
     double getArea();
 }

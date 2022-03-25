@@ -12,17 +12,17 @@ public class Main {
         secondHalf();
     }
 
-    public static void firstHalf() {
+    private static void firstHalf() {
         FigureSupplier figure = new FigureSupplier();
         for (int i = 0; i < 5; i++) {
-            figure.getRandomFigure().drawing();
+            figure.getRandomFigure().draw();
         }
     }
 
-    public static void secondHalf() {
+    private static void secondHalf() {
         FigureSupplier figure = new FigureSupplier();
         for (int i = 0; i < 6; i++) {
-            figure.getDefaultFigure().drawing();
+            figure.getDefaultFigure().draw();
         }
     }
 }
