@@ -9,7 +9,7 @@ public class FigureSupplier {
     private static final int FIGURES_COUNT = 5;
 
     public Figure getDefaultFigure() {
-        Figure figure = new Circle(Color.white.toString(), DEFAULT);
+        Figure figure = new Circle(Color.WHITE.toString().toLowerCase(), DEFAULT);
         return figure;
     }
 
@@ -33,12 +33,11 @@ public class FigureSupplier {
                         random.nextInt(UPPER_BOUND - LOWER_BOUND) + LOWER_BOUND,
                         random.nextInt(UPPER_BOUND - LOWER_BOUND) + LOWER_BOUND);
             case 4:
+            default:
                 return new IsoscelesTrapezoid(colorSupplie.getRandomColor(),
                         random.nextInt(UPPER_BOUND - LOWER_BOUND) + LOWER_BOUND,
                         random.nextInt(UPPER_BOUND - LOWER_BOUND) + LOWER_BOUND,
-                        random.nextInt(UPPER_BOUND - LOWER_BOUND) + LOWER_BOUND);
-            default:
-                return null;
+                            random.nextInt(UPPER_BOUND - LOWER_BOUND) + LOWER_BOUND);
         }
     }
 }
