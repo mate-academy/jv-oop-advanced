@@ -1,12 +1,12 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements Area {
+public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
     private int upperBase;
     private int lowerBase;
     private int height;
 
     public IsoscelesTrapezoid(int upperBase, int lowerBase, int height, String color) {
-        super.color = color;
+        super(color);
         this.upperBase = upperBase;
         this.lowerBase = lowerBase;
         this.height = height;
@@ -22,7 +22,7 @@ public class IsoscelesTrapezoid extends Figure implements Area {
     public String print() {
         return "Figure: Isosceles_trapezoid, area: " + getArea() + " sq.units, "
                 + "upperBase: " + upperBase + " units, lowerBase: " + lowerBase
-                + " units, height: " + height + " units, color: " + color;
+                + " units, height: " + height + " units, color: " + getColor();
     }
 
     public int getUpperBase() {

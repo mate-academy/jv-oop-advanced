@@ -1,11 +1,11 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Area {
+public class Rectangle extends Figure implements AreaCalculator {
     private int length;
     private int width;
 
     public Rectangle(int length, int width, String color) {
-        super.color = color;
+        super(color);
         this.length = length;
         this.width = width;
     }
@@ -19,7 +19,7 @@ public class Rectangle extends Figure implements Area {
     public String print() {
         return "Figure: Rectangle, area: " + getArea() + " sq.units, "
                 + "length: " + length + " units, width: " + width
-                + " units, color: " + color;
+                + " units, color: " + getColor();
     }
 
     public int getLength() {

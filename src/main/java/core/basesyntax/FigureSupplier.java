@@ -11,7 +11,6 @@ public class FigureSupplier extends ColorSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-
         int index = new Random().nextInt(FIGURE_COUNT);
         switch (index) {
             case 1:
@@ -31,7 +30,7 @@ public class FigureSupplier extends ColorSupplier {
         return new Circle(DEFAULT_RADIUS, Color.WHITE.name());
     }
 
-    public IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
         int randomUpperBase = random.nextInt(MAX_NUMBER);
         int randomLowerBase = random.nextInt(MAX_NUMBER);
         int randomHeight = random.nextInt(MAX_NUMBER);
@@ -39,24 +38,24 @@ public class FigureSupplier extends ColorSupplier {
                 colorSupplier.getRandomColor());
     }
 
-    public Circle getRandomCircle() {
+    private Circle getRandomCircle() {
         int randomRadius = random.nextInt(MAX_NUMBER);
         return new Circle(randomRadius,colorSupplier.getRandomColor());
     }
 
-    public RightTriangle getRandomRightTriangle() {
+    private RightTriangle getRandomRightTriangle() {
         int randomFirstLeg = random.nextInt(MAX_NUMBER);
         int randomSecondLeg = random.nextInt(MAX_NUMBER);
         return new RightTriangle(randomFirstLeg, randomSecondLeg, colorSupplier.getRandomColor());
     }
 
-    public Rectangle getRandomRectangle() {
+    private Rectangle getRandomRectangle() {
         int randomLength = random.nextInt(MAX_NUMBER);
         int randomWidth = random.nextInt(MAX_NUMBER);
         return new Rectangle(randomLength, randomWidth, colorSupplier.getRandomColor());
     }
 
-    public Square getRandomSquare() {
+    private Square getRandomSquare() {
         int randomSide = random.nextInt(MAX_NUMBER);
         return new Square(randomSide, colorSupplier.getRandomColor());
     }
