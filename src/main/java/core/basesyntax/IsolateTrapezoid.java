@@ -1,8 +1,7 @@
 package core.basesyntax;
 
-public class IsolateTrapezoid extends Figure implements Description, GetArea {
+public class IsolateTrapezoid extends Figure {
     private int longerSide;
-    private String name = "isolate Trapezoid";
 
     public IsolateTrapezoid(String color, int longerSide) {
         super(color);
@@ -11,7 +10,7 @@ public class IsolateTrapezoid extends Figure implements Description, GetArea {
 
     @Override
     public void getDescription() {
-        System.out.println("Name: " + name + " longer side: " + longerSide + " units "
+        System.out.println("Name: isolate trapezoid" + " longer side: " + longerSide + " units "
                 + " area: " + getArea() + "sq. units " + " color: " + getColor());
     }
 

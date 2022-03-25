@@ -1,9 +1,8 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Description, GetArea {
+public class Rectangle extends Figure {
     private int high;
     private int length;
-    private String name = "rectangle";
 
     public Rectangle(String color, int high, int length) {
         super(color);
@@ -21,7 +20,7 @@ public class Rectangle extends Figure implements Description, GetArea {
 
     @Override
     public void getDescription() {
-        System.out.println("Name: " + name + " high: " + getHigh() + " units "
+        System.out.println("Name: rectangle" + " high: " + getHigh() + " units "
                 + " length: " + getLength() + " units " + " area: " + getArea()
                 + " sq. units " + " color: " + getColor());
     }

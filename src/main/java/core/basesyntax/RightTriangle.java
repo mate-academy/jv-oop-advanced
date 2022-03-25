@@ -1,9 +1,8 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements Description, GetArea {
+public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
-    private String name = "Right triangle";
 
     public RightTriangle(String color, int firstLeg, int secondLeg) {
         super(color);
@@ -21,7 +20,7 @@ public class RightTriangle extends Figure implements Description, GetArea {
 
     @Override
     public void getDescription() {
-        System.out.println("Name: " + name + " first leg: " + getFirstLeg()
+        System.out.println("Name: right triangle" + " first leg: " + getFirstLeg()
                 + " units " + " second leg: " + getSecondLeg() + " units "
                 + " area: " + getArea() + " sq. units " + " color: " + getColor());
     }
