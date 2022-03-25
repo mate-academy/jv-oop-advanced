@@ -3,8 +3,8 @@ package core.basesyntax;
 public class Square extends Figure {
     private int side;
 
-    public Square(int side, String colors) {
-        super(colors);
+    public Square(int side, String color) {
+        super(color);
         this.side = side;
     }
 
@@ -14,12 +14,12 @@ public class Square extends Figure {
     }
 
     @Override
-    public void drawingField() {
+    public void draw() {
         System.out.println("Figure: isosceles square, "
                 + getArea()
                 + " sq. units, side: "
                 + side
                 + " units, color: "
-                + getColors());
+                + getColor());
     }
 }
