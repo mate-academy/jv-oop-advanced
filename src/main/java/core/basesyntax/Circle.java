@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private static final double PI = Math.PI;
     private double radius;
 
     public Circle(String color, double radius) {
@@ -11,7 +10,7 @@ public class Circle extends Figure {
 
     @Override
     public double area() {
-        return Math.pow(PI * radius, 2);
+        return Math.pow(Math.PI * radius, 2);
     }
 
     @Override
