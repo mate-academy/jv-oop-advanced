@@ -5,7 +5,7 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int UPPER_BOUND = 1000;
     private static final int R_DEFAULT = 10;
-    private Random random = new Random();
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
         String[] figure = new String[]{"square", "rectangle", "circle",

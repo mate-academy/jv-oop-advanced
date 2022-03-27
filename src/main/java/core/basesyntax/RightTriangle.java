@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements AreaDrawable {
+public class RightTriangle extends Figure implements AreaCalculator, Draw {
     private int firstLeg;
     private int secondLeg;
 
