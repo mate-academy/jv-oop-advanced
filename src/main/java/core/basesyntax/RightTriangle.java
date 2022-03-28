@@ -13,7 +13,8 @@ public class RightTriangle extends Figure {
     @Override
     public void area() {
         double areaRightTriangle = firstLeg * secondLeg / 2;
-        System.out.println("The area of the right triangle is " +
-                areaRightTriangle + " and colo " + getColor());
+        System.out.println("Figure: right triangle, area: " + areaRightTriangle +
+                " sq.units, firstLeg: " + firstLeg + " units, secondLeg: " +
+                secondLeg + " units, color: " + getColor());
     }
 }

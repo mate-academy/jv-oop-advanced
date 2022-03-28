@@ -11,7 +11,7 @@ public class Square extends Figure {
     @Override
     public void area() {
         double areaSquare = Math.pow(side, 2);
-        System.out.println("The area of the square is " + areaSquare +
-                " and colo " + getColor());
+        System.out.println("Figure: Square, area: " + areaSquare +
+                " sq.units, side: " + side + " units, color: " + getColor());
     }
 }
