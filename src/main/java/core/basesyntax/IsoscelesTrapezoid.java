@@ -1,27 +1,27 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements AreaCalculator, Draw {
-    private int base1;
-    private int base2;
+public class IsoscelesTrapezoid extends Figure {
+    private int upperBase;
+    private int lowerBase;
     private int trapezoidSide;
 
-    public IsoscelesTrapezoid(String color, int base1, int base2, int trapezoidSide) {
+    public IsoscelesTrapezoid(String color, int upperBase, int lowerBase, int trapezoidSide) {
         super(color);
-        this.base1 = base1;
-        this.base2 = base2;
+        this.upperBase = upperBase;
+        this.lowerBase = lowerBase;
         this.trapezoidSide = trapezoidSide;
     }
 
     @Override
     public double getArea() {
-        return (base1 + base2) / 4 * Math.sqrt(4 * Math.pow(trapezoidSide, 2)
-                - Math.pow(base1 - base2, 2));
+        return (upperBase + lowerBase) / 4 * Math.sqrt(4 * Math.pow(trapezoidSide, 2)
+                - Math.pow(upperBase - lowerBase, 2));
     }
 
     @Override
-    public void drawTheFigure() {
-        System.out.println("Figure: isosceles trapezoid, base1 = " + base1
-                + ", base2 = " + base2 + ", area = " + getArea()
-                + ", color: " + getRandomColor());
+    public void draw() {
+        System.out.println("Figure: isosceles trapezoid, upperBase = " + upperBase
+                + ", lowerBase = " + lowerBase + ", trapezoidSide " + trapezoidSide
+                + ", area = " + getArea() + ", color: " + getRandomColor());
     }
 }

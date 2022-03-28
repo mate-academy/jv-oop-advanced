@@ -1,21 +1,21 @@
 package core.basesyntax;
 
-public class Square extends Figure implements AreaCalculator, Draw {
-    private int side;
+public class Square extends Figure {
+    private int squareSide;
 
     public Square(String color, int side) {
         super(color);
-        this.side = side;
+        this.squareSide = side;
     }
 
     @Override
     public double getArea() {
-        return Math.pow(side, 2);
+        return Math.pow(squareSide, 2);
     }
 
     @Override
-    public void drawTheFigure() {
-        System.out.println("Figure: square, side = " + side
+    public void draw() {
+        System.out.println("Figure: square, squareSide = " + squareSide
                 + ", area = " + getArea() + ", color: " + getRandomColor());
 
     }

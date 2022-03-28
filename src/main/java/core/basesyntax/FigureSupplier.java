@@ -3,24 +3,24 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int UPPER_BOUND = 1000;
-    private static final int R_DEFAULT = 10;
+    private static final int UPPER_BOUND = 100;
+    private static final int RADIUS_DEFAULT = 10;
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
         String[] figure = new String[]{"square", "rectangle", "circle",
                 "right triangle", "isosceles trapezoid"};
-        int n = (int) Math.floor(Math.random() * figure.length);
+        int indexOfFigureArray = (int) Math.floor(Math.random() * figure.length);
         ColorSupplier colorSupplier = new ColorSupplier();
         String figureColor = colorSupplier.getRandomColor();
-        switch (figure[n]) {
+        switch (figure[indexOfFigureArray]) {
             case ("square"):
-                int side = random.nextInt(UPPER_BOUND);
-                return new Square(figureColor, side);
+                int squareSide = random.nextInt(UPPER_BOUND);
+                return new Square(figureColor, squareSide);
             case ("rectangle"):
-                int side1 = random.nextInt(UPPER_BOUND);
-                int side2 = random.nextInt(UPPER_BOUND);
-                return new Rectangle(figureColor, side1, side2);
+                int rectangleFirstSide = random.nextInt(UPPER_BOUND);
+                int rectangleSecondSide = random.nextInt(UPPER_BOUND);
+                return new Rectangle(figureColor, rectangleFirstSide, rectangleSecondSide);
             case ("circle"):
                 int radius = random.nextInt(UPPER_BOUND);
                 return new Circle(figureColor, radius);
@@ -29,15 +29,15 @@ public class FigureSupplier {
                 int secondleg = random.nextInt(UPPER_BOUND);
                 return new RightTriangle(figureColor, firstleg, secondleg);
             default:
-                int base1 = random.nextInt(UPPER_BOUND);
-                int base2 = random.nextInt(UPPER_BOUND);
+                int upperBase = random.nextInt(UPPER_BOUND);
+                int lowerBase = random.nextInt(UPPER_BOUND);
                 int trapezoidSide = random.nextInt(UPPER_BOUND);
-                return new IsoscelesTrapezoid(figureColor, base1, base2, trapezoidSide);
+                return new IsoscelesTrapezoid(figureColor, upperBase, lowerBase, trapezoidSide);
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", R_DEFAULT);
+        return new Circle("white", RADIUS_DEFAULT);
     }
 }
 

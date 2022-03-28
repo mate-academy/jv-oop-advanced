@@ -11,9 +11,7 @@ public class Main {
             figureArray[i] = figureSupplier.getDefaultFigure();
         }
         for (Figure figure : figureArray) {
-            figure.drawTheFigure();
+            figure.draw();
         }
-
     }
-
 }
