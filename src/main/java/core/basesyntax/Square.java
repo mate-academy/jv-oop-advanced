@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public class Square extends Figure implements BehaviorFigure {
-    private double side;
+public class Square extends Figure {
+    private final int side;
 
-    public Square(String color, double side) {
+    public Square(String color, int side) {
         super(color);
         this.side = side;
     }
@@ -14,8 +14,8 @@ public class Square extends Figure implements BehaviorFigure {
     }
 
     @Override
-    public String toString() {
-        return "Figure: "
+    public void draw() {
+        System.out.println("Figure: "
                 + "square, "
                 + "area: "
                 + getArea()
@@ -24,6 +24,6 @@ public class Square extends Figure implements BehaviorFigure {
                 + side
                 + " units, "
                 + "color: "
-                + getColor();
+                + getColor());
     }
 }

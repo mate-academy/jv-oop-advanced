@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements BehaviorFigure {
-    private double radius;
+public class Circle extends Figure {
+    private final int radius;
 
-    public Circle(String color, double radius) {
+    public Circle(String color, int radius) {
         super(color);
         this.radius = radius;
     }
@@ -14,8 +14,8 @@ public class Circle extends Figure implements BehaviorFigure {
     }
 
     @Override
-    public String toString() {
-        return "Figure: "
+    public void draw() {
+        System.out.println("Figure: "
                 + "circle, "
                 + "area: "
                 + getArea()
@@ -24,6 +24,6 @@ public class Circle extends Figure implements BehaviorFigure {
                 + radius
                 + " units, "
                 + "color: "
-                + getColor();
+                + getColor());
     }
 }

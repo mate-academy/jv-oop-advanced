@@ -1,10 +1,10 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements BehaviorFigure {
-    private double firstLeg;
-    private double secondLeg;
+public class RightTriangle extends Figure {
+    private final int firstLeg;
+    private final int secondLeg;
 
-    public RightTriangle(String color, double firstLeg, double secondLeg) {
+    public RightTriangle(String color, int firstLeg, int secondLeg) {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
@@ -16,8 +16,8 @@ public class RightTriangle extends Figure implements BehaviorFigure {
     }
 
     @Override
-    public String toString() {
-        return "Figure: "
+    public void draw() {
+        System.out.println("Figure: "
                 + "right triangle, "
                 + "area: "
                 + getArea()
@@ -29,6 +29,6 @@ public class RightTriangle extends Figure implements BehaviorFigure {
                 + secondLeg
                 + " units, "
                 + "color: "
-                + getColor();
+                + getColor());
     }
 }

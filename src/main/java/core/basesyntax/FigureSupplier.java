@@ -4,38 +4,53 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int MAX_BOUND = 100;
+    public static final int COUNT_OF_FIGURES = 5;
+    public static final int DEFAULT_RADIUS = 10;
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        switch (new Random().nextInt(5)) {
+        int indexOfFigure = random.nextInt(COUNT_OF_FIGURES);
+        ColorSupplier colorSupplier = new ColorSupplier();
+        String randomColor = colorSupplier.getRandomColor();
+        switch (indexOfFigure) {
             case 0 :
-                return new Square(new ColorSupplier().getRandomColor(),
-                        new Random().nextInt(MAX_BOUND));
+                int side = random.nextInt(MAX_BOUND);
+                return new Square(randomColor,
+                        side);
 
             case 1 :
-                return new Rectangle(new ColorSupplier().getRandomColor(),
-                        new Random().nextInt(MAX_BOUND),
-                        new Random().nextInt(MAX_BOUND));
+                int firstSide = random.nextInt(MAX_BOUND);
+                int secondSide = random.nextInt(MAX_BOUND);
+                return new Rectangle(randomColor,
+                        firstSide,
+                        secondSide);
 
             case 2 :
-                return new RightTriangle(new ColorSupplier().getRandomColor(),
-                        new Random().nextInt(MAX_BOUND),
-                        new Random().nextInt(MAX_BOUND));
+                int firstLeg = random.nextInt(MAX_BOUND);
+                int secondLeg = random.nextInt(MAX_BOUND);
+                return new RightTriangle(randomColor,
+                        firstLeg,
+                        secondLeg);
 
             case 3 :
-                return new Circle(new ColorSupplier().getRandomColor(),
-                        new Random().nextInt(MAX_BOUND));
+                int radius = random.nextInt(MAX_BOUND);
+                return new Circle(randomColor,
+                        radius);
 
             case 4 :
-                return new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(),
-                        new Random().nextInt(MAX_BOUND),
-                        new Random().nextInt(MAX_BOUND),
-                        new Random().nextInt(MAX_BOUND));
+                int topSide = random.nextInt(MAX_BOUND);
+                int downSide = random.nextInt(MAX_BOUND);
+                int height = random.nextInt(MAX_BOUND);
+                return new IsoscelesTrapezoid(randomColor,
+                        topSide,
+                        downSide,
+                        height);
             default:
-                return new Figure(new ColorSupplier().getRandomColor());
+                return new Circle(randomColor, DEFAULT_RADIUS);
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Colors.WHITE.toString(), 10);
+        return new Circle(Color.WHITE.name(), DEFAULT_RADIUS);
     }
 }

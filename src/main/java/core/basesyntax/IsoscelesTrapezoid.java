@@ -1,11 +1,11 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements BehaviorFigure {
-    private double topSide;
-    private double downSide;
-    private double height;
+public class IsoscelesTrapezoid extends Figure {
+    private final int topSide;
+    private final int downSide;
+    private final int height;
 
-    public IsoscelesTrapezoid(String color, double height, double downSide, double topSide) {
+    public IsoscelesTrapezoid(String color, int height, int downSide, int topSide) {
         super(color);
         this.height = height;
         this.downSide = downSide;
@@ -18,8 +18,8 @@ public class IsoscelesTrapezoid extends Figure implements BehaviorFigure {
     }
 
     @Override
-    public String toString() {
-        return "Figure: "
+    public void draw() {
+        System.out.println("Figure: "
                 + "isosceles trapezoid, "
                 + "area: "
                 + getArea()
@@ -34,6 +34,6 @@ public class IsoscelesTrapezoid extends Figure implements BehaviorFigure {
                 + height
                 + " units, "
                 + "color: "
-                + getColor();
+                + getColor());
     }
 }
