@@ -12,13 +12,13 @@ public class Rectangle extends Figure implements Area, Draw {
     }
 
     @Override
-    public double getArea() {
-        return 1/2 * (firstLeg * secondLeg);
+    public double area() {
+        return Math.rint((firstLeg * secondLeg) * 0.5);
     }
 
     @Override
-    public void getDraw() {
-        System.out.println("Figure: rectangle, area: " + getArea()
+    public void draw() {
+        System.out.println("Figure: rectangle, area: " + area()
                 + " sq.units, firs leg: " + firstLeg +" units, " + secondLeg + " units, color "
                 + color);
     }

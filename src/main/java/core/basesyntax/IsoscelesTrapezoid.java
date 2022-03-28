@@ -14,13 +14,13 @@ public class IsoscelesTrapezoid extends Figure implements Area, Draw{
     }
 
     @Override
-    public double getArea() {
-        return (hight/2) * (side1 + side2);
+    public double area() {
+        return Math.rint((hight/2) * (side1 + side2));
     }
 
     @Override
-    public void getDraw() {
-        System.out.println("Figure: isosceles Trapezoid, area: " + getArea()
+    public void draw() {
+        System.out.println("Figure: isosceles Trapezoid, area: " + area()
                 + "sq.units, firs side: " + side1 + "second side: " + side2 + " units, " + hight + " units, color "
                 + color);
     }

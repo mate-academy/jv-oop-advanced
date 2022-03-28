@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import org.w3c.dom.ls.LSOutput;
-
 public class Circle extends Figure implements Area, Draw {
     private String color;
     private int radius;
@@ -12,13 +10,13 @@ public class Circle extends Figure implements Area, Draw {
     }
 
     @Override
-    public double getArea() {
-        return (Math.PI* radius * radius);
+    public double area() {
+        return Math.rint((Math.PI* radius * radius));
     }
 
     @Override
-    public void getDraw() {
-        System.out.println("Figure: circle, area: " + getArea()
+    public void draw() {
+        System.out.println("Figure: circle, area: " + area()
                 + " sq.units, radius: " + radius + " units, color "
                 + color);
     }

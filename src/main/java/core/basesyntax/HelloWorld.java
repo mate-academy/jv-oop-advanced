@@ -6,9 +6,9 @@ public class HelloWorld {
        FigureSupplier red = new FigureSupplier();
         for (int i = 0; i < 6; i+=2) {
             figure[i] = red.getRandomFigure();
+            figure[i].draw();
             figure[i +1] = red.getDefaultFigure();
-            figure[i].getDraw();
-            figure[i + 1].getDraw();
+            figure[i + 1].draw();
         }
     }
 }

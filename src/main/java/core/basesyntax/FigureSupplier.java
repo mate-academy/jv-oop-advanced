@@ -23,7 +23,7 @@ public class FigureSupplier {
             case 4:
                 return new IsoscelesTrapezoid(randomColor.getRandomColor(), randFigure.nextInt(1, NUMBER ), randFigure.nextInt(1, NUMBER), randFigure.nextInt(1, NUMBER));
         }
-        return null;
+        return getDefaultFigure();
     }
 
     public Figure getDefaultFigure() {
