@@ -11,7 +11,8 @@ public class Circle extends Figure {
     @Override
     public void area() {
         double areaCircle = Math.PI * Math.pow(radius, 2);
-        System.out.println("Figure: circle, area: " + areaCircle +
-                " sq.units, radius: " + radius + " units, color: " + getColor());
+        System.out.println("Figure: circle, area: " + areaCircle
+                + " sq.units, radius: " + radius + " units, color: "
+                + getColor());
     }
 }

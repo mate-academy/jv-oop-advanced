@@ -13,8 +13,8 @@ public class Rectangle extends Figure {
     @Override
     public void area() {
         double areaRectangle = lengthRectangle * widthRectangle;
-        System.out.println("Figure: rectangle, area: " + areaRectangle +
-                " sq.units, length: " + lengthRectangle + " units, width: " +
-                widthRectangle + " units, color: " + getColor());
+        System.out.println("Figure: rectangle, area: " + areaRectangle
+                + " sq.units, length: " + lengthRectangle + " units, width: "
+                + widthRectangle + " units, color: " + getColor());
     }
 }
