@@ -1,6 +1,6 @@
 package core.basesyntax.model;
 
-public class RightTriangle extends Figure implements FigureArea {
+public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
