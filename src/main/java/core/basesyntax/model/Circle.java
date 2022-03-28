@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.model;
 
 public class Circle extends Figure implements FigureArea {
     private int radius;

@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.model;
 
 public class Square extends Figure implements FigureArea {
     public int side;

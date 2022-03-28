@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.model;
 
 public class Rectangle extends Figure implements FigureArea {
     private int lengthRectangle;

@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.model;
 
 public class IsoscelesTrapezoid extends Figure implements FigureArea {
     private int base1;
