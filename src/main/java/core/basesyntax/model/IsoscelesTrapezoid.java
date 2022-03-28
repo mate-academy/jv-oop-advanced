@@ -5,10 +5,11 @@ public class IsoscelesTrapezoid extends Figure implements FigureArea {
     private int base2;
     private int height;
 
-    public IsoscelesTrapezoid(int base1, int base2, int height) {
+    public IsoscelesTrapezoid(int base1, int base2, int height, String color) {
         this.base1 = base1;
         this.base2 = base2;
         this.height = height;
+        setColor(color);
     }
 
     @Override
