@@ -1,9 +1,7 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public class Figure {
     private String color;
-
-    public abstract void area();
 
     public String getColor() {
         return color;
