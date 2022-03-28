@@ -1,13 +1,14 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Colors;
+import core.basesyntax.AreaCalculator;
+import core.basesyntax.Color;
+import core.basesyntax.Drawable;
 import core.basesyntax.Figure;
-import core.basesyntax.FigureArea;
 
-public class Square extends Figure implements FigureArea {
+public class Square extends Figure implements AreaCalculator, Drawable {
     private int side;
 
-    public Square(Colors color, int side) {
+    public Square(Color color, int side) {
         super(color);
         this.side = side;
     }
@@ -26,7 +27,7 @@ public class Square extends Figure implements FigureArea {
     }
 
     @Override
-    public void messageInfo() {
+    public void draw() {
         System.out.println("Figure: square, area: " + Math.rint(getArea())
                 + " sq.units, side: " + side + " units, color: " + getColor());
     }
