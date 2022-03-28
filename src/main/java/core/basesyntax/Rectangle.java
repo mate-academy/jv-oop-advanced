@@ -16,8 +16,8 @@ public class Rectangle extends Figure implements AreaCalculator {
     }
 
     @Override
-    public String toString() {
-        return "Figure: rectangle, area: " + getArea()
+    public String draw() {
+        return "Figure: rectangle, area: " + Double.toString(getArea())
                 + " sq.units, width: " + width
                 + " units, length: " + length
                 + " units, color: " + getColor().toLowerCase();

@@ -16,8 +16,8 @@ public class RigthTriangle extends Figure implements AreaCalculator {
     }
 
     @Override
-    public String toString() {
-        return "Figure: right triangle, area: " + getArea()
+    public String draw() {
+        return "Figure: right triangle, area: " + Double.toString(getArea())
                 + " sq.units, firstLeg: " + firstLeg
                 + " units, secondLeg: " + secondLeg
                 + " units, color: " + getColor().toLowerCase();
