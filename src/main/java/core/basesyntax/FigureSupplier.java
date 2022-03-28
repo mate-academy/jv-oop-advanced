@@ -13,31 +13,40 @@ public class FigureSupplier {
     public static final int MAX_UNIT_LIMIT = 99;
     public static final int MIN_UNIT_LIMIT = 1;
     private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
-    private Figure circle = new Circle(getRandomValue(), getRandomColor());
-    private Figure defaultCircle = new Circle(10, String.valueOf(Colors.WHITE));
-    private Figure isoscelesTrapezoid = new IsoscelesTrapezoid(getRandomValue(), getRandomValue(),
-            getRandomValue(), getRandomColor());
-    private Figure rectangle = new Rectangle(getRandomValue(), getRandomValue(), getRandomColor());
-    private Figure rightTriangle = new RightTriangle(getRandomValue(), getRandomValue(),
-            getRandomColor());
-    private Figure square = new Square(getRandomValue(), getRandomColor());
-
-    private Figure[] figures = {circle, isoscelesTrapezoid, rectangle, rightTriangle, square};
+    private Figure defaultCircle = new Circle(10, String.valueOf(Color.WHITE));
 
     public Figure getRandomFigure() {
-        return figures[random.nextInt(FIGURE_COUNT)];
+        int counter = random.nextInt(FIGURE_COUNT);
+        switch (counter) {
+            case 0:
+                return new Circle(getRandomValue(), getRandomColor());
+            case 1:
+                return new IsoscelesTrapezoid(getRandomValue(), getRandomValue(),
+                        getRandomValue(), getRandomColor());
+            case 2:
+                return new Rectangle(getRandomValue(), getRandomValue(), getRandomColor());
+            case 3:
+                return new RightTriangle(getRandomValue(), getRandomValue(),
+                        getRandomColor());
+
+            case 4:
+                return new Square(getRandomValue(), getRandomColor());
+            default:
+                throw new IllegalStateException("Unexpected value: " + counter);
+        }
     }
 
     public Figure getDefaultFigure() {
         return defaultCircle;
     }
 
-    public int getRandomValue() {
+    private int getRandomValue() {
         return random.nextInt(MAX_UNIT_LIMIT) + MIN_UNIT_LIMIT;
     }
 
-    public String getRandomColor() {
-        return new ColorSupplier().getRandomColor();
+    private String getRandomColor() {
+        return colorSupplier.getRandomColor();
     }
 }

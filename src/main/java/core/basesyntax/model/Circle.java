@@ -2,9 +2,9 @@ package core.basesyntax.model;
 
 import java.text.DecimalFormat;
 
-public class Circle extends Figure implements AreaCalculator {
+public class Circle extends Figure {
+    private static final DecimalFormat DECIMAL_FORMAT = new DecimalFormat("0.0");
     private int radius;
-    private DecimalFormat decimalFormat = new DecimalFormat("0.0");
 
     public Circle(int radius, String color) {
         super(color);
@@ -13,13 +13,13 @@ public class Circle extends Figure implements AreaCalculator {
 
     @Override
     public double getArea() {
-        return Double.parseDouble(decimalFormat.format(Math.PI * radius * radius));
+        return Double.parseDouble(DECIMAL_FORMAT.format(Math.PI * radius * radius));
     }
 
     @Override
-    public String toString() {
-        return new StringBuilder().append("Figure: circle, area: ").append(getArea())
+    public void draw() {
+        System.out.println(new StringBuilder("Figure: circle, area: ").append(getArea())
                 .append(" sq.units, radius: ").append(radius)
-                .append(" units, color: ").append(getColor()).toString();
+                .append(" units, color: ").append(getColor().toLowerCase()));
     }
 }

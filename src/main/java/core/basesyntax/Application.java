@@ -12,10 +12,10 @@ public class Application {
         for (int i = 0; i < figures.length; i++) {
             if (i < 3) {
                 figures[i] = figureSupplier.getRandomFigure();
-                System.out.println(figures[i]);
+                figures[i].draw();
             } else {
                 figures[i] = defaultFigure;
-                System.out.println(figures[i]);
+                figures[i].draw();
             }
         }
     }

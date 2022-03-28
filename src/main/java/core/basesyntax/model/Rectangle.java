@@ -1,6 +1,6 @@
 package core.basesyntax.model;
 
-public class Rectangle extends Figure implements AreaCalculator {
+public class Rectangle extends Figure {
     private int length;
     private int width;
 
@@ -16,10 +16,10 @@ public class Rectangle extends Figure implements AreaCalculator {
     }
 
     @Override
-    public String toString() {
-        return new StringBuilder().append("Figure: rectangle, area: ").append(getArea())
+    public void draw() {
+        System.out.println(new StringBuilder("Figure: rectangle, area: ").append(getArea())
                 .append(" sq.units, length: ").append(length)
                 .append(" units, width: ").append(width)
-                .append(" units, color: ").append(getColor()).toString();
+                .append(" units, color: ").append(getColor().toLowerCase()));
     }
 }
