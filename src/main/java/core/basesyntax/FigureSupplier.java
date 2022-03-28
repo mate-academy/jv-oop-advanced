@@ -15,8 +15,8 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         ColorSupplier colorSupplier = new ColorSupplier();
         Random random = new Random();
-        int figurNumber = random.nextInt(ALL_FIGURES);
-        switch (figurNumber) {
+        int figureNumber = random.nextInt(ALL_FIGURES);
+        switch (figureNumber) {
             case 0:
                 return new Circle(colorSupplier.getRandomColor(),
                         random.nextInt(MAX_FIGURE_PARAMETER));
