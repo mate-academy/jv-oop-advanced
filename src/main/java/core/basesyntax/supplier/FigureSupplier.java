@@ -5,8 +5,13 @@ import core.basesyntax.model.*;
 import java.util.Random;
 
 public class FigureSupplier {
-    private Random random = new Random();
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private Random random;
+    private ColorSupplier colorSupplier;
+
+    public FigureSupplier() {
+        this.random = new Random();
+        this.colorSupplier = new ColorSupplier();
+    }
 
     public Figure getRandomFigure() {
         // According to the number generated generateRandomFigure
