@@ -19,7 +19,7 @@ public class Rectangle extends Figure implements Area, Draw {
     @Override
     public void draw() {
         System.out.println("Figure: rectangle, area: " + area()
-                + " sq.units, firs leg: " + firstLeg +" units, " + secondLeg + " units, color "
+                + " sq.units, firs leg: " + firstLeg + " units, " + secondLeg + " units, color "
                 + color);
     }
 }

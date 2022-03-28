@@ -11,7 +11,7 @@ public class Circle extends Figure implements Area, Draw {
 
     @Override
     public double area() {
-        return Math.rint((Math.PI* radius * radius));
+        return Math.rint((Math.PI * radius * radius));
     }
 
     @Override
