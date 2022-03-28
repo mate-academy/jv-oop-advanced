@@ -7,28 +7,35 @@ public class FigureSupplier {
     private ColorSupplier randomColor = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        FigureSupplier red = new FigureSupplier();
+        FigureSupplier figureSupplier = new FigureSupplier();
         ColorSupplier randomColor = new ColorSupplier();
         Random randFigure = new Random();
 
-        switch (randFigure.nextInt(4)) {
+        switch (randFigure.nextInt(5)) {
             case 0:
-                return new Square(randomColor.getRandomColor(), randFigure.nextInt(1, NUMBER));
+                Square square = new Square(randFigure.nextInt(1, NUMBER));
+                square.setColor(randomColor.getRandomColor());
+                return square;
             case 1:
-                return new Circle(randomColor.getRandomColor(), randFigure.nextInt(1, NUMBER));
+                Circle circle = new Circle(randFigure.nextInt(1, NUMBER));
+                circle.setColor(randomColor.getRandomColor());
+                return circle;
             case 2:
-                return new Rectangle(randomColor.getRandomColor(),
-                        randFigure.nextInt(1, NUMBER),
+                Rectangle rectangle = new Rectangle(randFigure.nextInt(1, NUMBER),
                         randFigure.nextInt(1, NUMBER));
+                rectangle.setColor(randomColor.getRandomColor());
+                return rectangle;
             case 3:
-                return new RightTriangle(randomColor.getRandomColor(),
-                        randFigure.nextInt(1, NUMBER),
+                RightTriangle rightTriangle = new RightTriangle(randFigure.nextInt(1, NUMBER),
                         randFigure.nextInt(1, NUMBER));
+                rightTriangle.setColor(randomColor.getRandomColor());
+                return rightTriangle;
             case 4:
-                return new IsoscelesTrapezoid(randomColor.getRandomColor(),
-                        randFigure.nextInt(1, NUMBER),
-                        randFigure.nextInt(1, NUMBER),
-                        randFigure.nextInt(1, NUMBER));
+                IsoscelesTrapezoid isoscelesTrapezoid
+                        = new IsoscelesTrapezoid(randFigure.nextInt(1, NUMBER),
+                        randFigure.nextInt(1, NUMBER), randFigure.nextInt(1, NUMBER));
+                isoscelesTrapezoid.setColor(randomColor.getRandomColor());
+                return isoscelesTrapezoid;
             default:
                 break;
         }
@@ -36,6 +43,8 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("White", 10);
+        Circle circle = new Circle(10);
+        circle.setColor("WHITE");
+        return circle;
     }
 }

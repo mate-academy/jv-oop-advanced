@@ -1,25 +1,23 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Area, Draw {
-    private String color;
-    private int firstLeg;
-    private int secondLeg;
+public class Rectangle extends Figure {
+    private int firstSide;
+    private int secondSide;
 
-    public Rectangle(String color, int firstLeg, int secondLeg) {
-        this.color = color;
-        this.firstLeg = firstLeg;
-        this.secondLeg = secondLeg;
+    public Rectangle(int firstSide, int secondSide) {
+        this.firstSide = firstSide;
+        this.secondSide = secondSide;
     }
 
     @Override
-    public double area() {
-        return Math.rint((firstLeg * secondLeg) * 0.5);
+    public double getArea() {
+        return Math.rint((firstSide * secondSide));
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + area()
-                + " sq.units, firs leg: " + firstLeg + " units, " + secondLeg + " units, color "
-                + color);
+        System.out.println("Figure: Rectangle, area: " + getArea()
+                + " sq.units, firs side: " + firstSide + " units, second side: "
+                + secondSide + " units, color " + getColor());
     }
 }
