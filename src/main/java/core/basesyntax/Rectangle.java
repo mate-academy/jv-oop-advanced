@@ -4,14 +4,14 @@ public class Rectangle extends Figure {
     private double width;
     private double height;
 
-    Rectangle(String color, double width, double height) {
+    public Rectangle(String color, double width, double height) {
         super(color);
         this.width = width;
         this.height = height;
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         StringBuilder builder = new StringBuilder();
         builder.append("I'm a rectangle with ")
                 .append(getColor())

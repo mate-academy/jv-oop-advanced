@@ -4,15 +4,17 @@ public class Main {
     private static final int COUNT = 6;
 
     public static void main(String[] args) {
-        FigureSupplier fs = new FigureSupplier();
+        FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figures = new Figure[COUNT];
 
         for (int i = 0; i < figures.length; i++) {
-            figures[i] = fs.getRandomFigure();
+            figures[i] = figureSupplier.getRandomFigure();
         }
 
         for (Figure figure : figures) {
-            figure.drawFigure();
+            figure.draw();
         }
+        System.out.println("\nPrint default figure: ");
+        figureSupplier.getDefaultFigure().draw();
     }
 }

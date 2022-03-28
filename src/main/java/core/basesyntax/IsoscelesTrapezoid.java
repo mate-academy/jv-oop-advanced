@@ -5,7 +5,7 @@ public class IsoscelesTrapezoid extends Figure {
     private double secondBase;
     private double leg;
 
-    IsoscelesTrapezoid(String color, double firstBase, double secondBase, double leg) {
+    public IsoscelesTrapezoid(String color, double firstBase, double secondBase, double leg) {
         super(color);
         this.firstBase = firstBase;
         this.secondBase = secondBase;
@@ -13,7 +13,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         StringBuilder builder = new StringBuilder();
         builder.append("I'm a isosceles trapezoid with ")
                 .append(getColor())

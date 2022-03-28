@@ -9,7 +9,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         StringBuilder builder = new StringBuilder();
         builder.append("I'm a right triangle with ")
                 .append(getColor())

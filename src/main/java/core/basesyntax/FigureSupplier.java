@@ -8,7 +8,7 @@ public class FigureSupplier {
     private static final String DEFAULT_COLOR = Color.WHITE.toString().toLowerCase();
     private static final double DEFAULT_VALUE = 10.0;
     private final Random random = new Random();
-    private final ColorSupplier cs = new ColorSupplier();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_VALUE);
@@ -21,30 +21,30 @@ public class FigureSupplier {
         switch (figureCase) {
             case CIRCLE:
                 return new Circle(
-                        cs.getRandomColor(),
+                        colorSupplier.getRandomColor(),
                         getRandomNumberInRange(MIN, MAX));
 
             case ISOSCElES_TRAPEZOID:
                 return new IsoscelesTrapezoid(
-                        cs.getRandomColor(),
+                        colorSupplier.getRandomColor(),
                         getRandomNumberInRange(MIN, MAX),
                         getRandomNumberInRange(MIN, MAX),
                         getRandomNumberInRange(MIN, MAX));
 
             case RECTANGLE:
                 return new Rectangle(
-                        cs.getRandomColor(),
+                        colorSupplier.getRandomColor(),
                         getRandomNumberInRange(MIN, MAX),
                         getRandomNumberInRange(MIN, MAX));
 
             case RIGHT_TRIANGLE:
                 return new RightTriangle(
-                        cs.getRandomColor(),
+                        colorSupplier.getRandomColor(),
                         getRandomNumberInRange(MIN, MAX));
 
             case SQUARE:
                 return new Square(
-                        cs.getRandomColor(),
+                        colorSupplier.getRandomColor(),
                         getRandomNumberInRange(MIN, MAX));
 
             default:

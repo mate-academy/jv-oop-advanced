@@ -9,7 +9,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         StringBuilder builder = new StringBuilder();
         builder.append("I'm a square with ")
                 .append(getColor())
