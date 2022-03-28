@@ -15,26 +15,26 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         Random random = new Random();
-        ColorSupplier colorSupplie = new ColorSupplier();
+        ColorSupplier colorSupplier = new ColorSupplier();
         int figureIndex = random.nextInt(FIGURES_COUNT);
         switch (figureIndex) {
             case 0:
-                return new Circle(colorSupplie.getRandomColor(),
+                return new Circle(colorSupplier.getRandomColor(),
                         random.nextInt(UPPER_BOUND - LOWER_BOUND) + LOWER_BOUND);
             case 1:
-                return new Square(colorSupplie.getRandomColor(),
+                return new Square(colorSupplier.getRandomColor(),
                         random.nextInt(UPPER_BOUND - LOWER_BOUND) + LOWER_BOUND);
             case 2:
-                return new RightTriangle(colorSupplie.getRandomColor(),
+                return new RightTriangle(colorSupplier.getRandomColor(),
                         random.nextInt(UPPER_BOUND - LOWER_BOUND) + LOWER_BOUND,
                         random.nextInt(UPPER_BOUND - LOWER_BOUND) + LOWER_BOUND);
             case 3:
-                return new Rectangle(colorSupplie.getRandomColor(),
+                return new Rectangle(colorSupplier.getRandomColor(),
                         random.nextInt(UPPER_BOUND - LOWER_BOUND) + LOWER_BOUND,
                         random.nextInt(UPPER_BOUND - LOWER_BOUND) + LOWER_BOUND);
             case 4:
             default:
-                return new IsoscelesTrapezoid(colorSupplie.getRandomColor(),
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                         random.nextInt(UPPER_BOUND - LOWER_BOUND) + LOWER_BOUND,
                         random.nextInt(UPPER_BOUND - LOWER_BOUND) + LOWER_BOUND,
                             random.nextInt(UPPER_BOUND - LOWER_BOUND) + LOWER_BOUND);
