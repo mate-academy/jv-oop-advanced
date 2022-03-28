@@ -1,12 +1,20 @@
 package core.basesyntax;
 
-import java.util.Locale;
 import java.util.Random;
 
 public class ColorSupplier {
+    private int index = new Random().nextInt(Color.values().length);
+
+    public int getIndex() {
+        return index;
+    }
+
+    public void setIndex(int index) {
+        this.index = index;
+    }
+
     public String getRandomColor() {
-        int index = new Random().nextInt(Color.values().length);
-        String currentColor = Color.values()[index].toString();
-        return currentColor.toLowerCase(Locale.ROOT);
+        String randomColor = Color.values()[getIndex()].toString();
+        return randomColor.toLowerCase();
     }
 }

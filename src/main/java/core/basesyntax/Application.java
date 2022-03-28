@@ -2,16 +2,15 @@ package core.basesyntax;
 
 public class Application extends FigureSupplier {
     public static void main(String[] args) {
-        Figure[] area = new Figure[6];
+        final int areaSize = 6;
+        Figure[] figures = new Figure[areaSize];
         for (int i = 0; i < 3; i++) {
-            area[i] = new FigureSupplier().getRandomFigure();
-        }
-        for (int i = 3; i < area.length; i++) {
-            area[i] = new FigureSupplier().getDefaultFigure();
+            figures[i] = new FigureSupplier().getRandomFigure();
+            figures[i + 3] = new FigureSupplier().getDefaultFigure();
         }
 
-        for (Figure figure: area) {
-            System.out.println(figure);
+        for (Figure figure: figures) {
+            System.out.println(figure.figureDescription());
         }
     }
 }

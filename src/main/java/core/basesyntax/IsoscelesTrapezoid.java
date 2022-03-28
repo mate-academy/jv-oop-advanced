@@ -36,15 +36,15 @@ public class IsoscelesTrapezoid extends Figure {
         this.height = height;
     }
 
-    public double areaCount(int topSide, int bottomSide, int height) {
+    @Override
+    public double getArea() {
         return ((topSide + bottomSide) * 0.5) * height;
     }
 
     @Override
-    public String toString() {
-        return "Figure: isosceles trapezoid, area: " + areaCount(topSide, bottomSide, height)
-                + " sq.units, top side: " + topSide + " bottom side: " + bottomSide
-                + " height: " + height + " units, color: " + getColor();
+    public String figureDescription() {
+        return "Figure: isosceles trapezoid, area: " + getArea()
+                + " sq.units, top side: " + getTopSide() + " bottom side: " + getBottomSide()
+                + " height: " + getHeight() + " units, color: " + getColor();
     }
-
 }

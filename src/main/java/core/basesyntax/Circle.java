@@ -16,14 +16,14 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
-    public double areaCount(int radius) {
+    @Override
+    public double getArea() {
         return Math.PI * (radius * radius);
     }
 
     @Override
-    public String toString() {
-        return "Figure: circle, area: " + areaCount(getRadius()) + " sq.units, radius: " + radius
+    public String figureDescription() {
+        return "Figure: circle, area: " + getArea() + " sq.units, radius: " + getRadius()
                 + " units, color: " + getColor();
     }
-
 }

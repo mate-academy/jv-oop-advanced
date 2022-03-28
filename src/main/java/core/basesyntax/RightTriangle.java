@@ -26,15 +26,15 @@ public class RightTriangle extends Figure {
         this.secondLeg = secondLeg;
     }
 
-    public double areaCount(int firstLeg, int secondLeg) {
+    @Override
+    public double getArea() {
         return firstLeg * secondLeg * 0.5;
     }
 
     @Override
-    public String toString() {
-        return "Figure: right trieangle, area: " + areaCount(getFirstLeg(), getSecondLeg())
-                + " sq.units, first leg: " + firstLeg + " second leg: "
-                + secondLeg + " units, color: " + getColor();
+    public String figureDescription() {
+        return "Figure: right triangle, area: " + getArea()
+                + " sq.units, first leg: " + getFirstLeg() + " second leg: "
+                + getSecondLeg() + " units, color: " + getColor();
     }
-
 }
