@@ -3,13 +3,12 @@ package core.basesyntax;
 public class App {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        Figure randomFigure = figureSupplier.getRandomFigure();
-        int num = 8;
-        for (int i = 0; i < num; i++) {
-            if (i < num / 2) {
-                System.out.println(figureSupplier.getRandomFigure());
+        Figure[] figures = new Figure[8];
+        for (int i = 0; i < figures.length; i++) {
+            if (i < figures.length / 2) {
+                figureSupplier.getRandomFigure().draw();
             } else {
-                System.out.println(figureSupplier.getDefaultFigure());
+                figureSupplier.getDefaultFigure().draw();
             }
         }
     }

@@ -31,7 +31,7 @@ public class FigureSupplier {
         }
     }
 
-    public AreaCalculator getDefaultFigure() {
+    public Figure getDefaultFigure() {
         return new Circle(Color.WHITE.name(), DEFAULT_RADIUS);
     }
 }

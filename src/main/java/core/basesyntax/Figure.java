@@ -11,8 +11,4 @@ public abstract class Figure implements AreaCalculator, Drawable {
         return color;
     }
 
-    @Override
-    public String toString() {
-        return draw();
-    }
 }
