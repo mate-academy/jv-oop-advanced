@@ -30,7 +30,6 @@ public class FigureSupplier {
             case 3:
                 return new RightTriangle(getRandomValue(), getRandomValue(),
                         getRandomColor());
-
             case 4:
                 return new Square(getRandomValue(), getRandomColor());
             default:
