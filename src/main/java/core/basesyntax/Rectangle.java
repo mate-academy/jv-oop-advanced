@@ -1,42 +1,42 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private double sideLength1;
-    private double sideLength2;
+    private double width;
+    private double height;
 
     public Rectangle(String color, double sideLength1, double sideLength2) {
         super(color);
-        this.sideLength1 = sideLength1;
-        this.sideLength2 = sideLength2;
+        this.width = sideLength1;
+        this.height = sideLength2;
     }
 
-    public double getSideLength1() {
-        return sideLength1;
+    public double getWidth() {
+        return width;
     }
 
-    public void setSideLength1(double sideLength1) {
-        this.sideLength1 = sideLength1;
+    public void setWidth(double sideLength1) {
+        this.width = sideLength1;
     }
 
-    public double getSideLength2() {
-        return sideLength2;
+    public double getHeight() {
+        return height;
     }
 
-    public void setSideLength2(double sideLength2) {
-        this.sideLength2 = sideLength2;
+    public void setHeight(double sideLength2) {
+        this.height = sideLength2;
     }
 
     @Override
     public double getArea() {
-        return sideLength1 * sideLength2;
+        return width * height;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: rectangle, area: "
-                + getArea() + " sq.units, sideLength1: "
-                + getSideLength1() + " units, sideLength2: "
-                + getSideLength2() + " units, color: "
+                + getArea() + " sq.units, width: "
+                + getWidth() + " units, height: "
+                + getHeight() + " units, color: "
                 + getColor());
     }
 }
