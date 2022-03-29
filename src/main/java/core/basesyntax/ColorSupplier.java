@@ -9,4 +9,8 @@ public class ColorSupplier {
         int numberOfColor = random.nextInt(Colors.values().length);
         return Colors.values()[numberOfColor].toString();
     }
+
+    public Colors getDefaultColor() {
+        return Colors.White;
+    }
 }

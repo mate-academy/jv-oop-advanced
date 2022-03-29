@@ -6,11 +6,12 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final int maxFigure;
     private final int maxBound;
-    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final ColorSupplier colorSupplier;
 
-    public FigureSupplier(int maxFigure, int maxBound) {
+    public FigureSupplier(int maxFigure, int maxBound, ColorSupplier colorSupplier) {
         this.maxFigure = maxFigure;
         this.maxBound = maxBound;
+        this.colorSupplier = colorSupplier;
     }
 
     public Figure getRandomFigure() {
@@ -38,12 +39,7 @@ public class FigureSupplier {
         }
     }
 
-    public Figure[] getDefaultFigure() {
-        Rectangle defaultRectangle = new Rectangle("Rectangle", "White",7,21);
-        Square defaultSquare = new Square("Square", "Green",5,14);
-        Circle defaultCircle = new Circle("Circle", "White", 2);
-        Figure[] figures = {defaultCircle,defaultSquare,defaultRectangle};
-        return figures;
-
+    public Figure getDefaultFigure() {
+        return new Circle("Circle", colorSupplier.getDefaultColor().getColor(),10.0);
     }
 }
