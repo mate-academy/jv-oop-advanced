@@ -1,14 +1,14 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements AreaCalculator, Drawable {
+public class RightTriangle extends Figure {
     private double width;
     private double height;
-    private String color;
 
     public RightTriangle(double width, double height, String color) {
+        super(color);
         this.width = width;
         this.height = height;
-        this.color = color;
+        super.color = color;
     }
 
     public String getName() {
@@ -32,18 +32,13 @@ public class RightTriangle extends Figure implements AreaCalculator, Drawable {
     }
 
     @Override
-    public String color() {
-        return color;
-    }
-
-    @Override
-    public double area() {
+    public double getArea() {
         return (width * height) / 2;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getName() + " area: " + area() + " sq.units, height: "
-                + getHeight() + " units, wigth: " + getWidth() + " units, color: " + color());
+        System.out.println("Figure: " + getName() + " area: " + getArea() + " sq.units, height: "
+                + height + " units, width: " + width + " units, color: " + color);
     }
 }

@@ -1,12 +1,12 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements AreaCalculator, Drawable {
+public class Circle extends Figure {
     private double radius;
-    private String color;
 
     public Circle(double radius, String color) {
+        super(color);
         this.radius = radius;
-        this.color = color;
+        super.color = color;
     }
 
     public String getName() {
@@ -22,19 +22,14 @@ public class Circle extends Figure implements AreaCalculator, Drawable {
     }
 
     @Override
-    public String color() {
-        return color;
-    }
-
-    @Override
-    public double area() {
+    public double getArea() {
         return radius * radius * Math.PI;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: " + getName()
-                + " area: " + area() + " sq.units, side: "
-                + getRadius() + " units, color: " + color());
+                + " area: " + getArea() + " sq.units, side: "
+                + radius + " units, color: " + color);
     }
 }

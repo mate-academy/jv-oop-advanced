@@ -6,26 +6,26 @@ public class FigureSupplier {
 
     private static final int UPPER_BOUND = Figures.values().length;
 
-    private static final int BOUND_FOR_SIDE = 10;
-    private int randomSide = new Random().nextInt(BOUND_FOR_SIDE);
-
-    private ColorSupplier cs = new ColorSupplier();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
+        final int BoundSide = 10;
+        int randomSide = new Random().nextInt(BoundSide);
+
         String figure = Figures.values()[new Random()
                 .nextInt(UPPER_BOUND)].toString().toLowerCase();
         switch (figure) {
             case ("square"):
-                return new Square(randomSide, cs.getRandomColor());
+                return new Square(randomSide, colorSupplier.getRandomColor());
             case ("right_triangle"):
-                return new RightTriangle(randomSide, randomSide, cs.getRandomColor());
+                return new RightTriangle(randomSide, randomSide, colorSupplier.getRandomColor());
             case ("rectangle"):
-                return new Rectangle(randomSide, randomSide, cs.getRandomColor());
+                return new Rectangle(randomSide, randomSide, colorSupplier.getRandomColor());
             case ("isosceles_trapezoid"):
-                return new IsoscelesTrapezoid(randomSide, randomSide, randomSide, cs
-                        .getRandomColor());
+                return new IsoscelesTrapezoid(randomSide, randomSide, randomSide,
+                        colorSupplier.getRandomColor());
             case ("circle"):
-                return new Circle(randomSide, cs.getRandomColor());
+                return new Circle(randomSide, colorSupplier.getRandomColor());
             default: getDefaultFigure();
         }
         return getDefaultFigure();
