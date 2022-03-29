@@ -3,40 +3,26 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private int index = new Random().nextInt(5);
-    private String color = new ColorSupplier().getRandomColor();
-
-    public int getIndex() {
-        return index;
-    }
-
-    public void setIndex(int index) {
-        this.index = index;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
+    private final Random random = new Random();
+    private final String color = new ColorSupplier().getRandomColor();
 
     public Figure getRandomFigure() {
-        int param1 = new Random().nextInt(100);
-        int param2 = new Random().nextInt(100);
-        int param3 = new Random().nextInt(50);
+        int index = random.nextInt(5);
+        int firstRandomNumber = new Random().nextInt(100);
+        int secondRandomNumber = new Random().nextInt(100);
+        int thirdRandomNumber = new Random().nextInt(50);
         switch (index) {
             case 1:
-                return new Square(getColor(), param1);
+                return new Square(color, firstRandomNumber);
             case 2:
-                return new Circle(getColor(), param1);
+                return new Circle(color, firstRandomNumber);
             case 3:
-                return new Rectangle(getColor(), param1, param2);
+                return new Rectangle(color, firstRandomNumber, secondRandomNumber);
             case 4:
-                return new RightTriangle(getColor(), param1, param2);
+                return new RightTriangle(color, firstRandomNumber, secondRandomNumber);
             default:
-                return new IsoscelesTrapezoid(getColor(), param1, param2, param3);
+                return new IsoscelesTrapezoid(color, firstRandomNumber, secondRandomNumber,
+                        thirdRandomNumber);
         }
     }
 
