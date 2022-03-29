@@ -18,11 +18,11 @@ public class IsoscelesTrapezoid extends Figure {
         return "ssosceles_trapezoid";
     }
 
-    public double getBasis1() {
+    public double getFirstBasis() {
         return firstBasis;
     }
 
-    public void setBasis1(double basis1) {
+    public void setFirstBasis(double firstBasis) {
         this.firstBasis = firstBasis;
     }
 

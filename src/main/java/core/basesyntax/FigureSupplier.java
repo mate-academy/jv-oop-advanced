@@ -5,12 +5,12 @@ import java.util.Random;
 public class FigureSupplier {
 
     private static final int UPPER_BOUND = Figures.values().length;
+    private static final int BOUND_SIDE = 10;
 
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        final int BoundSide = 10;
-        int randomSide = new Random().nextInt(BoundSide);
+        int randomSide = new Random().nextInt(BOUND_SIDE);
 
         String figure = Figures.values()[new Random()
                 .nextInt(UPPER_BOUND)].toString().toLowerCase();
