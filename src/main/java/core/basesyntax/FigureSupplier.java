@@ -4,10 +4,11 @@ import java.util.Random;
 
 public class FigureSupplier {
     private final Random random = new Random();
-    private final String color = new ColorSupplier().getRandomColor();
+    private final ColorSupplier colorSuplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int index = random.nextInt(5);
+        String color = colorSuplier.getRandomColor();
         int firstRandomNumber = new Random().nextInt(100);
         int secondRandomNumber = new Random().nextInt(100);
         int thirdRandomNumber = new Random().nextInt(50);

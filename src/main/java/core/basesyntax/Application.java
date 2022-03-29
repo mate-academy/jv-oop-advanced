@@ -9,7 +9,6 @@ public class Application extends FigureSupplier {
             figures[i] = new FigureSupplier().getRandomFigure();
             figures[i + figures.length / 2] = new FigureSupplier().getDefaultFigure();
         }
-
         for (Figure figure: figures) {
             System.out.println(figure.draw());
         }
