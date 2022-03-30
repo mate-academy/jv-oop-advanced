@@ -9,14 +9,4 @@ public abstract class Figure implements AreaFigure, Drawable {
         this.color = color;
         this.name = name;
     }
-
-    @Override
-    public void area() {
-
-    }
-
-    @Override
-    public void draw() {
-        System.out.print("Figure: " + name + " area: " + area);
-    }
 }

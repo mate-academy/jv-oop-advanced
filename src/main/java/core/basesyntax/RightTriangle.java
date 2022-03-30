@@ -12,8 +12,8 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        super.draw();
-        System.out.println(" sideOne: " + sideOne + " sideTwo: " + sideTwo + " color: " + color);
+        System.out.println("Figure: " + name + " area: " + area + " sideOne: "
+                + sideOne + " sideTwo: " + sideTwo + " color: " + color);
     }
 
     @Override

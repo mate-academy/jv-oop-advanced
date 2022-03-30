@@ -10,8 +10,8 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        super.draw();
-        System.out.println(" side: " + side + " color: " + color);
+        System.out.println("Figure: " + name + " area: " + area
+                + " side: " + side + " color: " + color);
     }
 
     @Override
