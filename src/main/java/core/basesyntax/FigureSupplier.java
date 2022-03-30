@@ -3,7 +3,6 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-
     private static final int UPPER_BOUND = Figures.values().length;
     private static final int BOUND_SIDE = 10;
 

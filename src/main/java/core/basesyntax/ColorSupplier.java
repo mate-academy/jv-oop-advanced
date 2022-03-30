@@ -3,7 +3,6 @@ package core.basesyntax;
 import java.util.Random;
 
 public class ColorSupplier {
-
     private static final int UPPER_BOUND = Color.values().length;
 
     public String getRandomColor() {

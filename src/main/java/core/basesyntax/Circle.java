@@ -6,7 +6,6 @@ public class Circle extends Figure {
     public Circle(double radius, String color) {
         super(color);
         this.radius = radius;
-        super.color = color;
     }
 
     public String getName() {
@@ -30,6 +29,6 @@ public class Circle extends Figure {
     public void draw() {
         System.out.println("Figure: " + getName()
                 + " area: " + getArea() + " sq.units, side: "
-                + radius + " units, color: " + color);
+                + radius + " units, color: " + getColor());
     }
 }

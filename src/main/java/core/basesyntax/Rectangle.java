@@ -8,7 +8,6 @@ public class Rectangle extends Figure {
         super(color);
         this.width = width;
         this.height = height;
-        super.color = color;
     }
 
     public String getName() {
@@ -39,6 +38,6 @@ public class Rectangle extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: " + getName() + " area: " + getArea() + " sq.units, height: "
-                + height + " units, width: " + width + " units, color: " + color);
+                + height + " units, width: " + width + " units, color: " + getColor());
     }
 }
