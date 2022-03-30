@@ -1,7 +1,5 @@
 package core.basesyntax.model;
 
-import core.basesyntax.supplier.ColorSupplier;
-
 public class Circle extends Figure {
     private int radius;
 
