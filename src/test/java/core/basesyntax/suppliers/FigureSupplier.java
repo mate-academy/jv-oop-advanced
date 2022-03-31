@@ -1,45 +1,33 @@
 package core.basesyntax.suppliers;
 
-import core.basesyntax.enam.FigureList;
 import core.basesyntax.figure.Figure;
 import core.basesyntax.figure.figures.*;
 import java.util.Random;
 
 public class FigureSupplier {
     private final Random random = new Random();
+    private static final String DEFAULT_COLOR = "WHITE";
+    private static final int DEFAULT_RADIUS = 10;
 
     public Figure getRandomFigure() {
-        switch (FigureList.values()[random.nextInt(FigureList.values().length)].toString()) {
-            case "SQUARE":
+        switch (random.nextInt(5)) {
+            case 0:
                 return new Square();
-            case "RECTANGLE":
+            case 1:
                 return new Rectangle();
-            case "RIGHT_TRIANGLE":
+            case 2:
                 return new RightTriangle();
-            case "CIRCLE":
+            case 3:
                 return new Circle();
-            case "ISOSCELES_TRAPEZOID":
+            case 4:
                 return new IsoscelesTrapezoid();
             default:
-                return null;
+                return getDefaultFigure();
         }
     }
-
-    public Figure getDefaultFigure(String name) {
-        switch (name) {
-            case "SQUARE":
-                return new Square();
-            case "RECTANGLE":
-                return new Rectangle();
-            case "RIGHT_TRIANGLE":
-                return new RightTriangle();
-            case "CIRCLE":
-                return new Circle();
-            case "ISOSCELES_TRAPEZOID":
-                return new IsoscelesTrapezoid();
-            default:
-                return null;
+    public Figure getDefaultFigure() {
+        Circle defaultCircle = new Circle();
+        defaultCircle.setCircle(DEFAULT_COLOR, DEFAULT_RADIUS);
+        return defaultCircle;
         }
     }
-}
-

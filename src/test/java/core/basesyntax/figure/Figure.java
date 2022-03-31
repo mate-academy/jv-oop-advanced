@@ -1,7 +1,9 @@
 package core.basesyntax.figure;
 
-public abstract class Figure {
+import core.basesyntax.figure.interfaces.AreaCalculator;
+import core.basesyntax.figure.interfaces.FigureDrawer;
 
+public abstract class Figure implements AreaCalculator, FigureDrawer {
     public String color;
     public String name;
 
@@ -9,5 +11,4 @@ public abstract class Figure {
 
     public abstract void setRandomParameter();
 
-    public abstract void setDefaultParameter();
 }
