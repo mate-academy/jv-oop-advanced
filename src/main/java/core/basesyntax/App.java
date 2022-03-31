@@ -14,7 +14,6 @@ public class App {
             }
         }
         for (Figure figure: figures) {
-            figure.area = figure.calculateArea();
             figure.draw();
         }
     }
