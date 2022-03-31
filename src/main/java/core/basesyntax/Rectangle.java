@@ -15,7 +15,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void area() {
-        area = side * side;
+    public double calculateArea() {
+        return side * side;
     }
 }
