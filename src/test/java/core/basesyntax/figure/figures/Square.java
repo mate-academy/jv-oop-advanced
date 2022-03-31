@@ -9,6 +9,17 @@ public class Square extends Figure {
     private static final String NAME_DEFAULT = "SQUARE";
     private int leg;
 
+    public Square(String name, String color, int leg) {
+        super(name, color);
+        this.leg = leg;
+    }
+/*
+    public void randomSquare() {
+        setName(NAME_DEFAULT);
+        setColor(new ColorSupplier().getRandomColor());
+        this.leg = random.nextInt();
+    }
+*/
     @Override
     public double getArea() {
         return leg * leg;
@@ -16,13 +27,6 @@ public class Square extends Figure {
 
     @Override
     public void getDraw() {
-        System.out.println("Figure: SQUARE, Color: " + color + ", Leg: " + leg + ", Area: " + getArea() + ".");
-    }
-
-    @Override
-    public void setRandomParameter() {
-        this.leg = random.nextInt();
-        color = new ColorSupplier().getRandomColor();
-        name = NAME_DEFAULT;
+        System.out.println("Figure: SQUARE, Color: " + getColor() + ", Leg: " + leg + ", Area: " + getArea() + ".");
     }
 }

@@ -9,11 +9,23 @@ public class Circle extends Figure {
     private static final String NAME_DEFAULT = "CIRCLE";
     private int radius;
 
-    public void setCircle(String color, int radius) {
-        super.color = color;
+    public Circle(String name, String color, int radius) {
+        super(name, color);
         this.radius = radius;
-     }
+    }
+/*
+    public void () {
+        setName(NAME_DEFAULT);
+        setColor(new ColorSupplier().getRandomColor());
+        this.radius = random.nextInt();
+    }
 
+    public void defaultCircle(String color, int radius) {
+        setName(NAME_DEFAULT);
+        setColor(color);
+        this.radius = radius;
+    }
+*/
     @Override
     public double getArea() {
         return radius * radius * Math.PI;
@@ -21,13 +33,6 @@ public class Circle extends Figure {
 
     @Override
     public void getDraw() {
-        System.out.println("Figure: CIRCLE, Color: " + color + ", Radius: " + radius + ", Area: " + getArea() + ".");
-    }
-
-    @Override
-    public void setRandomParameter() {
-        this.radius = random.nextInt();
-        color = new ColorSupplier().getRandomColor();
-        name = NAME_DEFAULT;
+        System.out.println("Figure: " + NAME_DEFAULT + ", Color: " + getColor() + ", Radius: " + radius + ", Area: " + getArea() + ".");
     }
 }

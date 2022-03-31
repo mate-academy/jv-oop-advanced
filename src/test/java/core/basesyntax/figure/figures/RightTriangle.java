@@ -9,6 +9,17 @@ public class RightTriangle extends Figure {
     private static final String NAME_DEFAULT = "RIGHT_TRIANGLE";
     private int side;
 
+    public RightTriangle(String name, String color, int side) {
+        super(name, color);
+        this.side = side;
+    }
+/*
+    public void randomRightTriangle() {
+        setName(NAME_DEFAULT);
+        setColor(new ColorSupplier().getRandomColor());
+        this.side = random.nextInt();
+    }
+*/
     @Override
     public double getArea() {
         return side * side * Math.sqrt(3) / 4;
@@ -16,13 +27,6 @@ public class RightTriangle extends Figure {
 
     @Override
     public void getDraw() {
-        System.out.println("Figure: Right Triangle, Color: " + color + ", Side: " + side + ", Area: " + getArea() + ".");
-    }
-
-    @Override
-    public void setRandomParameter() {
-        this.side = random.nextInt();
-        color = new ColorSupplier().getRandomColor();
-        name = NAME_DEFAULT;
+        System.out.println("Figure: " + NAME_DEFAULT + ", Color: " + getColor() + ", Side: " + side + ", Area: " + getArea() + ".");
     }
 }
