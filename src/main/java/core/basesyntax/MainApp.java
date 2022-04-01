@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class MainApp {
-    public static final int NUMBER_OF_FIGURES = 6;
+    private static final int NUMBER_OF_FIGURES = 6;
 
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
@@ -16,5 +16,4 @@ public class MainApp {
             figure.draw();
         }
     }
-
 }
