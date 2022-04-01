@@ -6,7 +6,6 @@ import java.util.Random;
 
 public class Circle extends Figure {
     private final Random random = new Random();
-    private static final String NAME_DEFAULT = "CIRCLE";
     private int radius;
 
     public Circle(String name, String color, int radius) {
@@ -21,6 +20,6 @@ public class Circle extends Figure {
 
     @Override
     public void getDraw() {
-        System.out.println("Figure: " + NAME_DEFAULT + ", Color: " + getColor() + ", Radius: " + radius + ", Area: " + getArea() + ".");
+        System.out.println("Figure: Circle, Color: " + getColor() + ", Radius: " + radius + ", Area: " + getArea() + ".");
     }
 }

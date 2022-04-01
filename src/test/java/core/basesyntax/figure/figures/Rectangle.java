@@ -6,7 +6,6 @@ import java.util.Random;
 
 public class Rectangle extends Figure {
     private final Random random = new Random();
-    private static final String NAME_DEFAULT = "RECTANGLE";
     private int firstLeg;
     private int secondLeg;
 
@@ -23,6 +22,6 @@ public class Rectangle extends Figure {
 
     @Override
     public void getDraw() {
-        System.out.println("Figure: " + NAME_DEFAULT + ", Color: " + getColor() + ", First Leg: " + firstLeg + ", Second Leg: " + secondLeg + "Area: " + getArea() + ".");
+        System.out.println("Figure: Rectangle, Color: " + getColor() + ", First Leg: " + firstLeg + ", Second Leg: " + secondLeg + " Area: " + getArea() + ".");
     }
 }

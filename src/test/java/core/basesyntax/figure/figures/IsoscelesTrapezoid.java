@@ -6,7 +6,6 @@ import java.util.Random;
 
 public class IsoscelesTrapezoid extends Figure {
     private final Random random = new Random();
-    private static final String NAME_DEFAULT = "ISOSCELES_TRAPEZOID";
     private int firstBase;
     private int secondBase;
     private double height;
@@ -25,6 +24,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void getDraw() {
-        System.out.println("Figure: " + NAME_DEFAULT + ", Color: " + getColor() + ", First Base: " + firstBase + ", Second Base: " + secondBase + ", Heihgt: " + height + ", Area: " + getArea() + ".");
+        System.out.println("Figure: Isosceles Trapezoid, Color: " + getColor() + ", First Base: " + firstBase + ", Second Base: " + secondBase + ", Heihgt: " + height + ", Area: " + getArea() + ".");
     }
+
 }
