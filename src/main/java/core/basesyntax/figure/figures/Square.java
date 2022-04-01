@@ -1,12 +1,11 @@
 package core.basesyntax.figure.figures;
 
 import core.basesyntax.figure.Figure;
-import core.basesyntax.suppliers.ColorSupplier;
 import java.util.Random;
 
 public class Square extends Figure {
     private final Random random = new Random();
-    private int leg;
+    private final int leg;
 
     public Square(String name, String color, int leg) {
         super(color);

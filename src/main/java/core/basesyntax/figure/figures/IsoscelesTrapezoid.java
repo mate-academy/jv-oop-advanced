@@ -1,14 +1,13 @@
 package core.basesyntax.figure.figures;
 
 import core.basesyntax.figure.Figure;
-
 import java.util.Random;
 
 public class IsoscelesTrapezoid extends Figure {
     private final Random random = new Random();
-    private int firstBase;
-    private int secondBase;
-    private double height;
+    private final int firstBase;
+    private final int secondBase;
+    private final double height;
 
     public IsoscelesTrapezoid(String name, String color, int firstBase, int secondBase, double height) {
         super(color);

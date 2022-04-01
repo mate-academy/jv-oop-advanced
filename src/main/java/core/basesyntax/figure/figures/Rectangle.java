@@ -1,13 +1,12 @@
 package core.basesyntax.figure.figures;
 
 import core.basesyntax.figure.Figure;
-
 import java.util.Random;
 
 public class Rectangle extends Figure {
     private final Random random = new Random();
-    private int firstLeg;
-    private int secondLeg;
+    private final int firstLeg;
+    private final int secondLeg;
 
     public Rectangle(String name, String color, int firstLeg, int secondLeg) {
         super(color);
