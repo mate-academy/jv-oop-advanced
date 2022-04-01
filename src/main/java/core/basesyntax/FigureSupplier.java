@@ -11,18 +11,19 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure(FigureType figureType) {
+        int randomInt = random.nextInt(50);
+        Color color = new ColorSupplier().getRandomColor();
         switch (figureType) {
             case SQUARE:
-                return new Square(random.nextInt(50));
+                return new Square(color, randomInt);
             case RECTANGLE:
-                return new Rectangle(random.nextInt(50), random.nextInt(50));
+                return new Rectangle(color, randomInt, randomInt);
             case CIRCLE:
-                return new Circle(random.nextInt(50));
+                return new Circle(color, randomInt);
             case RIGHT_TRIANGLE:
-                return new RightTriangle(random.nextInt(50), random.nextInt(50));
+                return new RightTriangle(color, randomInt, randomInt);
             case ISOSCELES_TRAPEZOID:
-                return new IsoscelesTrapezoid(random.nextInt(50), random.nextInt(50),
-                        random.nextInt(50));
+                return new IsoscelesTrapezoid(color, randomInt, randomInt, randomInt);
             default:
                 return null;
         }
