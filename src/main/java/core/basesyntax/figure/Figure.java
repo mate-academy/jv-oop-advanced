@@ -18,5 +18,4 @@ public abstract class Figure implements AreaCalculator, FigureDrawer {
         this.color = color;
     }
 
-    public abstract void draw();
 }

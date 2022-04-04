@@ -12,50 +12,11 @@ public class FigureSupplier {
     private static final int DEFAULT_RADIUS = 10;
     private static final int DEFAULT_SIZE = 100;
     private static final String DEFAULT_COLOR = "WHITE";
-    private final String colorSupplier = new ColorSupplier().getRandomColor();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
-    private Square getRandomSquare() {
-        Square square = new Square(
-                "Square",
-                colorSupplier,
-                random.nextInt(DEFAULT_SIZE));
-        return square;
-    }
-
-    private Rectangle getRandomRectangle() {
-        Rectangle rectangle = new Rectangle(
-                "Rectangle",
-                colorSupplier,
-                random.nextInt(DEFAULT_SIZE),
-                random.nextInt(DEFAULT_SIZE));
-        return rectangle;
-    }
-
-    private RightTriangle getRightTriangle() {
-        RightTriangle rightTriangle = new RightTriangle(
-                "Right Triangle",
-                colorSupplier,
-                random.nextInt(DEFAULT_SIZE));
-        return rightTriangle;
-    }
-
-    private IsoscelesTrapezoid getIsoscelesTrapezoid() {
-        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(
-                "Isosceles Trapezoid",
-                colorSupplier,
-                random.nextInt(DEFAULT_SIZE),
-                random.nextInt(DEFAULT_SIZE),
-                random.nextDouble(DEFAULT_SIZE));
-        return isoscelesTrapezoid;
-    }
-
-    private Circle getCircle() {
-        Circle circle = new Circle(
-                "Circle",
-                colorSupplier,
-                random.nextInt(DEFAULT_SIZE));
-        return circle;
+    public Figure getDefaultFigure() {
+        return new Circle("CIRCLE", DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
     public Figure getRandomFigure() {
@@ -75,7 +36,41 @@ public class FigureSupplier {
         }
     }
 
-    public Figure getDefaultFigure() {
-        return new Circle("CIRCLE", DEFAULT_COLOR, DEFAULT_RADIUS);
+    private Square getRandomSquare() {
+        return new Square(
+            "Square",
+            colorSupplier.getRandomColor(),
+            random.nextInt(DEFAULT_SIZE));
+    }
+
+    private Rectangle getRandomRectangle() {
+        return new Rectangle(
+            "Rectangle",
+            colorSupplier.getRandomColor(),
+            random.nextInt(DEFAULT_SIZE),
+            random.nextInt(DEFAULT_SIZE));
+    }
+
+    private RightTriangle getRightTriangle() {
+        return new RightTriangle(
+            "Right Triangle",
+            colorSupplier.getRandomColor(),
+            random.nextInt(DEFAULT_SIZE));
+    }
+
+    private IsoscelesTrapezoid getIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(
+            "Isosceles Trapezoid",
+            colorSupplier.getRandomColor(),
+            random.nextInt(DEFAULT_SIZE),
+            random.nextInt(DEFAULT_SIZE),
+            random.nextDouble());
+    }
+
+    private Circle getCircle() {
+        return new Circle(
+            "Circle",
+            colorSupplier.getRandomColor(),
+            random.nextInt(DEFAULT_SIZE));
     }
 }
