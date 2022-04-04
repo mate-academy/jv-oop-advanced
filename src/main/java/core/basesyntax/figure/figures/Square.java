@@ -1,10 +1,8 @@
 package core.basesyntax.figure.figures;
 
 import core.basesyntax.figure.Figure;
-import java.util.Random;
 
 public class Square extends Figure {
-    private final Random random = new Random();
     private final int leg;
 
     public Square(String name, String color, int leg) {
@@ -19,6 +17,8 @@ public class Square extends Figure {
 
     @Override
     public void getDraw() {
-        System.out.println("Figure: Square, Color: " + getColor() + ", Leg: " + leg + ", Area: " + getArea() + ".");
+        System.out.println("Figure: Square, Color: " + getColor()
+                + ", Leg: " + leg
+                + ", Area: " + getArea() + ".");
     }
 }

@@ -1,10 +1,8 @@
 package core.basesyntax.figure.figures;
 
 import core.basesyntax.figure.Figure;
-import java.util.Random;
 
 public class RightTriangle extends Figure {
-    private final Random random = new Random();
     private final int side;
 
     public RightTriangle(String name, String color, int side) {
@@ -19,6 +17,8 @@ public class RightTriangle extends Figure {
 
     @Override
     public void getDraw() {
-        System.out.println("Figure: Right Triangle, Color: " + getColor() + ", Side: " + side + ", Area: " + getArea() + ".");
+        System.out.println("Figure: Right Triangle, Color: " + getColor()
+                + ", Side: " + side
+                + ", Area: " + getArea() + ".");
     }
 }

@@ -1,27 +1,50 @@
 package core.basesyntax.suppliers;
 
 import core.basesyntax.figure.Figure;
-import core.basesyntax.figure.figures.*;
-
+import core.basesyntax.figure.figures.Circle;
+import core.basesyntax.figure.figures.IsoscelesTrapezoid;
+import core.basesyntax.figure.figures.Rectangle;
+import core.basesyntax.figure.figures.RightTriangle;
+import core.basesyntax.figure.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final Random random = new Random();
-    private static final String DEFAULT_COLOR = "WHITE";
     private static final int DEFAULT_RADIUS = 10;
+    private static final String DEFAULT_COLOR = "WHITE";
     private final String colorSupplier = new ColorSupplier().getRandomColor();
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        return switch (random.nextInt(5)) {
-            case 0 -> new Square("SQUARE", colorSupplier, random.nextInt(100));
-            case 1 -> new Rectangle("RECTANGLE", colorSupplier, random.nextInt(100), random.nextInt(100));
-            case 2 -> new RightTriangle("RIGHT TRIANGLE", colorSupplier, random.nextInt(100));
-            case 3 -> new Circle("CIRCLE", colorSupplier, random.nextInt(100));
-            case 4 -> new IsoscelesTrapezoid("ISOSCELES TRAPEZOID", colorSupplier, random.nextInt(100), random.nextInt(100), random.nextDouble(100.00));
-            default -> getDefaultFigure();
-        };
-    }
-    public Figure getDefaultFigure() {
-        return new Circle("CIRCLE", DEFAULT_COLOR, DEFAULT_RADIUS);
+        switch (random.nextInt(5)) {
+            case 0:
+                return new Square("Square",
+                        colorSupplier,
+                        random.nextInt(100));
+            case 1:
+                return new Rectangle("Rectangle",
+                        colorSupplier,
+                        random.nextInt(100),
+                        random.nextInt(100));
+            case 2:
+                return new RightTriangle("RightTriangle",
+                        colorSupplier,
+                        random.nextInt(100));
+            case 3:
+                return new IsoscelesTrapezoid("Isosceles Trapezoid",
+                        colorSupplier,
+                        random.nextInt(100),
+                        random.nextInt(100),
+                        random.nextDouble(100.00));
+            case 4:
+                return new Circle("Circle",
+                        colorSupplier,
+                        random.nextInt(100));
+            default:
+                return getDefaultFigure();
         }
     }
+
+    public Figure getDefaultFigure() {
+        return new Circle("CIRCLE", DEFAULT_COLOR, DEFAULT_RADIUS);
+    }
+}
