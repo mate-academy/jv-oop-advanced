@@ -4,9 +4,10 @@ import java.util.Locale;
 import java.util.Random;
 
 public class ColorSupplier {
-    public String getRandomColor() {
+    private Random random = new Random();
 
-        return String.valueOf(Color.values()[new Random().nextInt(Color.values().length)])
+    public String getRandomColor() {
+        return String.valueOf(Color.values()[random.nextInt(Color.values().length)])
                 .toLowerCase(Locale.ROOT);
     }
 }

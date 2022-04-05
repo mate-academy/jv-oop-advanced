@@ -6,12 +6,4 @@ public abstract class Figure implements AreaCalculator, FigureDescription {
     public Figure(String color) {
         this.color = color;
     }
-
-    @Override
-    public String toString() {
-        return "Figure{"
-                + "color='" + color + '\''
-                + '}';
-    }
-
 }

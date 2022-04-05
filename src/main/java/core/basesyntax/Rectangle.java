@@ -11,13 +11,13 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return length * width;
     }
 
     @Override
-    public String getRandomParameters() {
-        return "Figure: rectangle, area: " + area()
+    public String draw() {
+        return "Figure: rectangle, area: " + getArea()
                 + "sq.units, length: " + length
                 + " units, width: " + width
                 + " units, color: " + color;

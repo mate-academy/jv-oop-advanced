@@ -13,13 +13,13 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return (firstSide + secondSide) / 2 * height;
     }
 
     @Override
-    public String getRandomParameters() {
-        return "Figure: isosceles trapezoid, area: " + area()
+    public String draw() {
+        return "Figure: isosceles trapezoid, area: " + getArea()
                 + " sq.units, first side: " + firstSide
                 + " units, second side: " + secondSide
                 + " units, height: " + height

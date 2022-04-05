@@ -8,10 +8,9 @@ public class Main {
         Figure[] figures = new Figure[ARRAY_LENGTH];
 
         for (int i = 0; i < figures.length; i++) {
-            figures[i] = (i < 4) ? figureSupplier.getRandomFigure()
+            figures[i] = (i < figures.length / 2) ? figureSupplier.getRandomFigure()
                     : figureSupplier.getDefaultFigure();
-            System.out.println(figures[i].getRandomParameters());
-
+            System.out.println(figures[i].draw());
         }
     }
 }

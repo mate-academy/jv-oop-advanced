@@ -9,13 +9,13 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return radius * radius * Math.PI;
     }
 
     @Override
-    public String getRandomParameters() {
-        return "Figure: circle, area: " + area()
+    public String draw() {
+        return "Figure: circle, area: " + getArea()
                 + " sq.units, radius: " + radius
                 + " units, color: " + color;
     }

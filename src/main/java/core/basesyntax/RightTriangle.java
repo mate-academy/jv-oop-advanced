@@ -11,13 +11,13 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return 0.5 * length * height;
     }
 
     @Override
-    public String getRandomParameters() {
-        return "Figure: right triangle, area: " + area()
+    public String draw() {
+        return "Figure: right triangle, area: " + getArea()
                 + " sq.units, length: " + length
                 + " units, height: " + height
                 + " units, color: " + color;

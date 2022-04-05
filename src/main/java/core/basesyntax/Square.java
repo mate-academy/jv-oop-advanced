@@ -9,13 +9,13 @@ public class Square extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return side * side;
     }
 
     @Override
-    public String getRandomParameters() {
-        return "Figure: square, area: " + area()
+    public String draw() {
+        return "Figure: square, area: " + getArea()
                 + " sq.units, side: " + side
                 + " units, color: " + color;
     }
