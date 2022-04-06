@@ -1,9 +1,5 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.enums.Color;
-
-import java.util.Locale;
-
 public class Circle extends Figure {
     public Circle(String color, int radius) {
         this.color = color;

@@ -1,13 +1,9 @@
 package core.basesyntax.supplier;
 
-import core.basesyntax.enums.Color;
 import core.basesyntax.figures.*;
-
 import java.util.Random;
 
 public class FigureSupplier {
-
-
     public static Figure getRandomFigure() {
         Random random = new Random();
         switch (random.nextInt(4) + 1) {

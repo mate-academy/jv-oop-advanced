@@ -1,9 +1,5 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Main;
-import core.basesyntax.enums.Color;
-import java.util.Locale;
-
 public class Rectangle extends Figure {
     public Rectangle(String color, int firstLeg, int secondLeg) {
         this.color = color;

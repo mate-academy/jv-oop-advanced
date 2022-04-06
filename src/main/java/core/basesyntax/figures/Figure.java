@@ -1,11 +1,11 @@
 package core.basesyntax.figures;
 
 public abstract class Figure implements FigureData {
-    String color;
-    double area;
-    int side;
-    int firstLeg;
-    int secondLeg;
-    double radius;
+    protected String color;
+    protected double area;
+    protected int side;
+    protected int firstLeg;
+    protected int secondLeg;
+    protected double radius;
 
 }

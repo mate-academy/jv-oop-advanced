@@ -1,8 +1,5 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.enums.Color;
-import java.util.Locale;
-
 public class IsoscelesTrapezoid extends Figure {
     public IsoscelesTrapezoid(String color, int firstLeg, int secondLeg) {
         this.color = color;

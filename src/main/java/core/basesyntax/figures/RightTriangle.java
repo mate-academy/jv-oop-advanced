@@ -1,8 +1,5 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.enums.Color;
-import java.util.Locale;
-
 public class RightTriangle extends Figure {
     public RightTriangle(String color, int firstLeg, int secondLeg) {
         this.color = color;

@@ -1,8 +1,5 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.enums.Color;
-import java.util.Locale;
-
 public class Square extends Figure {
     public Square(String color, int side) {
         this.color = color;
