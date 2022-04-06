@@ -2,7 +2,7 @@ package core.basesyntax.figures;
 
 public class Circle extends Figure {
     public Circle(String color, int radius) {
-        this.color = color;
+        this.color = color.toLowerCase();
         this.radius = radius;
         area();
     }
@@ -14,6 +14,6 @@ public class Circle extends Figure {
 
     @Override
     public String draw() {
-        return "Figure: circle," + "area:" + area + "sq.units," + "radius:" + radius + "units," + "color:" + color;
+        return "Figure: circle, " + "area: " + area + " sq.units, " + "radius: " + radius + " units, " + "color: " + color;
     }
 }
