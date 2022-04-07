@@ -8,11 +8,11 @@ public class IsoscelesTrapezoid extends Figure {
         super(color);
         this.secondLeg = secondLeg;
         this.firstLeg = firstLeg;
-        area();
+        getArea();
     }
 
     @Override
-    public void area() {
+    public void getArea() {
         area = Math.sqrt(firstLeg * secondLeg) * (firstLeg + secondLeg) / 2;
     }
 

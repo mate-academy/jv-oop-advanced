@@ -6,15 +6,13 @@ import core.basesyntax.supplier.FigureSupplier;
 public class Main {
     public static void main(String[] args) {
         Figure[] figure = new Figure[6];
-        figure[0] = FigureSupplier.getRandomFigure();
-        figure[1] = FigureSupplier.getRandomFigure();
-        figure[2] = FigureSupplier.getRandomFigure();
-        figure[3] = FigureSupplier.getDefaultFigure();
-        figure[4] = FigureSupplier.getDefaultFigure();
-        figure[5] = FigureSupplier.getDefaultFigure();
-
-        for (Figure f : figure) {
-            f.draw();
+        for (int i = 0; i < figure.length; i++) {
+            if (i <= figure.length / 2 - 1) {
+                figure[i] = new FigureSupplier().getRandomFigure();
+            } else {
+                figure[i] = new FigureSupplier().getDefaultFigure();
+            }
+            figure[i].draw();
         }
     }
 }

@@ -4,8 +4,8 @@ import core.basesyntax.enums.Color;
 import java.util.Random;
 
 public class ColorSupplier {
-    public static String getRandomColor() {
-        Random random = new Random();
+    Random random = new Random();
+    public String getRandomColor() {
         return Color.values()[random.nextInt(Color.values().length)].toString();
     }
 }

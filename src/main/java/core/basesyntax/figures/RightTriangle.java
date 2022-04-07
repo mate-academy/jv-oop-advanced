@@ -8,11 +8,11 @@ public class RightTriangle extends Figure {
         super(color);
         this.secondLeg = secondLeg;
         this.firstLeg = firstLeg;
-        area();
+        getArea();
     }
 
     @Override
-    public void area() {
+    public void getArea() {
         area = 0.5 * firstLeg * secondLeg;
     }
 

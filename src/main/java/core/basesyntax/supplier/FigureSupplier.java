@@ -9,28 +9,33 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static Figure getRandomFigure() {
-        Random random = new Random();
-        switch (random.nextInt(4) + 1) {
+    private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
+    private final int RADIUS = 10;
+    private final int NUMBER = 8;
+    private final int ENUMBER = 8;
+
+    public Figure getRandomFigure() {
+        switch (random.nextInt(ENUMBER) + 1) {
             case 1:
-                return new Circle(ColorSupplier.getRandomColor(), random.nextInt(8) + 1);
+                return new Circle(colorSupplier.getRandomColor(), random.nextInt(NUMBER) + 1);
             case 2:
-                return new Square(ColorSupplier.getRandomColor(), random.nextInt(8) + 1);
+                return new Square(colorSupplier.getRandomColor(), random.nextInt(NUMBER) + 1);
             case 3:
-                return new Rectangle(ColorSupplier.getRandomColor(), random.nextInt(8) + 1,
-                        random.nextInt(8) + 1);
+                return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(NUMBER) + 1,
+                        random.nextInt(NUMBER) + 1);
             case 4:
-                return new RightTriangle(ColorSupplier.getRandomColor(), random.nextInt(8) + 1,
-                        random.nextInt(8) + 1);
+                return new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(NUMBER) + 1,
+                        random.nextInt(NUMBER) + 1);
             case 5:
-                return new IsoscelesTrapezoid(ColorSupplier.getRandomColor(), random.nextInt(8) + 1,
-                        random.nextInt(8) + 1);
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(NUMBER) + 1,
+                        random.nextInt(NUMBER) + 1);
             default:
                 return getDefaultFigure();
         }
     }
 
-    public static Figure getDefaultFigure() {
-        return new Circle(ColorSupplier.getRandomColor(), 10);
+    public Figure getDefaultFigure() {
+        return new Circle(colorSupplier.getRandomColor(), RADIUS);
     }
 }

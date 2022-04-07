@@ -6,12 +6,12 @@ public class Circle extends Figure {
     public Circle(String color, int radius) {
         super(color);
         this.radius = radius;
-        area();
+        getArea();
     }
 
     @Override
-    public void area() {
-        area = 3.14 * Math.pow(radius, 2);
+    public void getArea() {
+        area = Math.PI * Math.pow(radius, 2);
     }
 
     @Override
