@@ -8,17 +8,16 @@ public class Rectangle extends Figure {
         super(color);
         this.secondLeg = secondLeg;
         this.firstLeg = firstLeg;
-        getArea();
     }
 
     @Override
-    public void getArea() {
-        area = secondLeg * firstLeg;
+    public double getArea() {
+        return secondLeg * firstLeg;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, " + "area: " + area
+        System.out.println("Figure: rectangle, " + "area: " + getArea()
                 + " sq.units, " + "firstLeg: " + firstLeg + " units, "
                 + "secondLeg: " + secondLeg + " units, " + " color: " + color);
     }
