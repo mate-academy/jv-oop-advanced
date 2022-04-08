@@ -12,11 +12,11 @@ public class FigureSupplier {
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
     private final static int DEF_RADIUS = 10;
-    private final int RANDOM_NUMBER_COLOR = 8;
-    private final int FIGUER_RANDOM_NUMBER_COLOR = 4;
+    private final int RANDOM_COLOR = 8;
+    private final int FIGURE_RANDOM = 4;
 
     public Figure getRandomFigure() {
-        switch (random.nextInt(FIGUER_RANDOM_NUMBER_COLOR) + 1) {
+        switch (random.nextInt(FIGURE_RANDOM) + 1) {
             case 1:
                 return getRendomeCircle();
             case 2:
@@ -37,25 +37,27 @@ public class FigureSupplier {
     }
 
     private Circle getRendomeCircle() {
-        return new Circle(colorSupplier.getRandomColor(), random.nextInt(RANDOM_NUMBER_COLOR) + 1);
+        return new Circle(colorSupplier.getRandomColor(), random.nextInt(RANDOM_COLOR) + 1);
     }
 
     private Square getRendomeSquare() {
-        return new Square(colorSupplier.getRandomColor(), random.nextInt(RANDOM_NUMBER_COLOR) + 1);
+        return new Square(colorSupplier.getRandomColor(), random.nextInt(RANDOM_COLOR) + 1);
     }
 
     private RightTriangle getRendomeRigthTriangle() {
-        return new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(RANDOM_NUMBER_COLOR) + 1,
-                random.nextInt(RANDOM_NUMBER_COLOR) + 1);
+        return new RightTriangle(colorSupplier.getRandomColor(),
+                random.nextInt(RANDOM_COLOR) + 1,
+                random.nextInt(RANDOM_COLOR) + 1);
     }
 
     private IsoscelesTrapezoid getRendomeIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                random.nextInt(RANDOM_NUMBER_COLOR) + 1, random.nextInt(RANDOM_NUMBER_COLOR) + 1);
+                random.nextInt(RANDOM_COLOR) + 1, random.nextInt(RANDOM_COLOR) + 1);
     }
 
     private Rectangle getRendomeRectangle() {
-        return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(RANDOM_NUMBER_COLOR) + 1,
-                random.nextInt(RANDOM_NUMBER_COLOR) + 1);
+        return new Rectangle(colorSupplier.getRandomColor(),
+                random.nextInt(RANDOM_COLOR) + 1,
+                random.nextInt(RANDOM_COLOR) + 1);
     }
 }
