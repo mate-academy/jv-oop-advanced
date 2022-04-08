@@ -11,9 +11,9 @@ import java.util.Random;
 public class FigureSupplier {
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
-    private final static int DEF_RADIUS = 10;
-    private final int RANDOM_COLOR = 8;
-    private final int FIGURE_RANDOM = 4;
+    private static final int DEF_RADIUS = 10;
+    private static final int FIGURE_RANDOM = 4;
+    private static final int RANDOM_COLOR = 8;
 
     public Figure getRandomFigure() {
         switch (random.nextInt(FIGURE_RANDOM) + 1) {
