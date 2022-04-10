@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements FigureBehaviour{
+public class RightTriangle extends Figure implements FigureBehaviour {
     private double rightLeg;
     private double leftLeg;
 
@@ -38,19 +38,19 @@ public class RightTriangle extends Figure implements FigureBehaviour{
         System.out.println("Figure: rectangle, area: "
                 + this.calculateArea()
                 + " sq.units, right leg: "
-                + this.rightLeg
+                + this.getRightLeg()
                 + " units, left leg: "
-                + this.leftLeg
+                + this.getLeftLeg()
                 + " units, color: "
-                + this.color
+                + this.getColor()
                 + "\n");
     }
 
     @Override
     public RightTriangle setRandomParameters() {
         RightTriangle rightTriangle = new RightTriangle();
-        rightTriangle.rightLeg = Main.random.nextInt(MAX_PARAMETER_LENGTH);
-        rightTriangle.leftLeg = Main.random.nextInt(MAX_PARAMETER_LENGTH);
+        rightTriangle.rightLeg = Main.getRandom().nextInt(maxParameterLength);
+        rightTriangle.leftLeg = Main.getRandom().nextInt(maxParameterLength);
         return rightTriangle;
     }
 }

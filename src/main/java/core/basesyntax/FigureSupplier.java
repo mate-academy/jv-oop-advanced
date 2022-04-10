@@ -1,16 +1,20 @@
 package core.basesyntax;
 
 public class FigureSupplier {
-    static Figure[] figures = {
-            new Square (),
-            new Rectangle (),
-            new RightTriangle (),
-            new Circle (),
-            new IsoscelesTrapezoid ()
+    private static Figure[] figures = {
+            new Square(),
+            new Rectangle(),
+            new RightTriangle(),
+            new Circle(),
+            new IsoscelesTrapezoid()
     };
 
+    public static Figure[] getFigures() {
+        return figures;
+    }
+
     public static Figure getRandomFigure() {
-        int index = Main.random.nextInt(figures.length);
+        int index = Main.getRandom().nextInt(figures.length);
         return figures[index].setRandomParameters();
     }
 

@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class ColorSupplier {
-    String[] colors = {
+    private String[] colors = {
             "RED",
             "ORANGE",
             "YELLOW",
@@ -11,8 +11,12 @@ public class ColorSupplier {
             "VIOLET"
     };
 
+    public String[] getColors() {
+        return colors;
+    }
+
     public String getRandomColor() {
-        int index = Main.random.nextInt(colors.length);
+        int index = Main.getRandom().nextInt(colors.length);
         return colors[index];
     }
 }

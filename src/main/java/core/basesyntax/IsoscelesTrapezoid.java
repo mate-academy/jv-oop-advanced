@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure implements FigureBehaviour {
-    double side1;
-    double side2;
-    double height;
+    private double side1;
+    private double side2;
+    private double height;
 
     public String getColor() {
         return super.getColor();
@@ -47,22 +47,22 @@ public class IsoscelesTrapezoid extends Figure implements FigureBehaviour {
         System.out.println("Figure: rectangle, area: "
                 + this.calculateArea()
                 + " sq.units, side_1: "
-                + this.side1
+                + this.getSide1()
                 + " units, side_2: "
-                + this.side2
+                + this.getSide2()
                 + " units, height: "
-                + this.height
+                + this.getHeight()
                 + " units, color: "
-                + this.color
+                + this.getColor()
                 + "\n");
     }
 
     @Override
     public IsoscelesTrapezoid setRandomParameters() {
         IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
-        isoscelesTrapezoid.side1 = Main.random.nextInt(MAX_PARAMETER_LENGTH);
-        isoscelesTrapezoid.side2 = Main.random.nextInt(MAX_PARAMETER_LENGTH);
-        isoscelesTrapezoid.height = Main.random.nextInt(MAX_PARAMETER_LENGTH);
+        isoscelesTrapezoid.side1 = Main.getRandom().nextInt(maxParameterLength);
+        isoscelesTrapezoid.side2 = Main.getRandom().nextInt(maxParameterLength);
+        isoscelesTrapezoid.height = Main.getRandom().nextInt(maxParameterLength);
         return isoscelesTrapezoid;
     }
 }

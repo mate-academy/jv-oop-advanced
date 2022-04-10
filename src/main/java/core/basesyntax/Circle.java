@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Circle extends Figure implements FigureBehaviour {
-    double radius;
+    private double radius;
 
     public String getColor() {
         return super.getColor();
@@ -22,7 +22,7 @@ public class Circle extends Figure implements FigureBehaviour {
     @Override
     public Circle setRandomParameters() {
         Circle circle = new Circle();
-        circle.radius = Main.random.nextInt(MAX_PARAMETER_LENGTH);
+        circle.radius = Main.getRandom().nextInt(maxParameterLength);
         return circle;
     }
 
@@ -36,9 +36,9 @@ public class Circle extends Figure implements FigureBehaviour {
         System.out.println("Figure: circle, area: "
                 + this.calculateArea()
                 + " sq.units, radius: "
-                + this.radius
+                + this.getRadius()
                 + " units, color: "
-                + this.color
+                + this.getColor()
                 + "\n");
 
     }

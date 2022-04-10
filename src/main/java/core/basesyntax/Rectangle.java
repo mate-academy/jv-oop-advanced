@@ -1,8 +1,8 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure implements FigureBehaviour {
-    double side1;
-    double side2;
+    private double side1;
+    private double side2;
 
     public String getColor() {
         return super.getColor();
@@ -38,19 +38,19 @@ public class Rectangle extends Figure implements FigureBehaviour {
         System.out.println("Figure: rectangle, area: "
                 + this.calculateArea()
                 + " sq.units, side_1: "
-                + this.side1
+                + this.getSide1()
                 + " units, side_2: "
-                + this.side2
+                + this.getSide2()
                 + " units, color: "
-                + this.color
+                + this.getColor()
                 + "\n");
     }
 
     @Override
     public Rectangle setRandomParameters() {
         Rectangle rectangle = new Rectangle();
-        rectangle.side1 = Main.random.nextInt(MAX_PARAMETER_LENGTH);
-        rectangle.side2 = Main.random.nextInt(MAX_PARAMETER_LENGTH);
+        rectangle.side1 = Main.getRandom().nextInt(maxParameterLength);
+        rectangle.side2 = Main.getRandom().nextInt(maxParameterLength);
         return rectangle;
     }
 }
