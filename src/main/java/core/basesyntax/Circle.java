@@ -1,25 +1,19 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements FigureBehaviour {
+public class Circle extends Figure {
     private double radius;
 
-    public void setColor(String color) {
-        super.setColor(color);
+    public Circle(Color color, double radius) {
+        this.color = color;
+        this.radius = radius;
+    }
+
+    public Color getColor() {
+        return color;
     }
 
     public double getRadius() {
         return radius;
-    }
-
-    public void setRadius(double radius) {
-        this.radius = radius;
-    }
-
-    @Override
-    public Circle setRandomParameters() {
-        Circle circle = new Circle();
-        circle.radius = Main.getRandom().nextInt(maxParameterLength);
-        return circle;
     }
 
     @Override

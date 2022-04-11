@@ -1,16 +1,13 @@
 package core.basesyntax;
 
-public abstract class Figure implements FigureBehaviour {
-    static final int maxParameterLength = 20;
-    private String color;
+public abstract class Figure implements CalculateAreaBehaviour, DrawBehaviour {
+    public Color color;
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(Color color) {
         this.color = color;
     }
-
-    abstract Figure setRandomParameters();
 }

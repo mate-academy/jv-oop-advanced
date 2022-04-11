@@ -13,13 +13,14 @@ public class Main {
     }
 
     public static void main(String[] args) {
+        FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figureArray = new Figure[6];
 
-        for (int i = 0; i <= FigureSupplier.getFigures().length; i++) {
+        for (int i = 0; i <= 5; i++) {
             if (i < 3) {
-                figureArray[i] = FigureSupplier.getRandomFigure();
+                figureArray[i] = figureSupplier.getRandomFigure();
             } else {
-                figureArray[i] = FigureSupplier.getDefaultFigure();
+                figureArray[i] = figureSupplier.getDefaultFigure();
             }
         }
 

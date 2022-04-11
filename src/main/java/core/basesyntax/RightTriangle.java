@@ -1,27 +1,25 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements FigureBehaviour {
+public class RightTriangle extends Figure {
     private double rightLeg;
     private double leftLeg;
 
-    public void setColor(String color) {
-        super.setColor(color);
+    public RightTriangle(Color color, double rightLeg, double leftLeg) {
+        this.color = color;
+        this.rightLeg = rightLeg;
+        this.leftLeg = leftLeg;
+    }
+
+    public Color getColor(Color color) {
+        return this.color;
     }
 
     public double getRightLeg() {
         return rightLeg;
     }
 
-    public void setRightLeg(double rightLeg) {
-        this.rightLeg = rightLeg;
-    }
-
     public double getLeftLeg() {
         return leftLeg;
-    }
-
-    public void setLeftLeg(double leftLeg) {
-        this.leftLeg = leftLeg;
     }
 
     @Override
@@ -40,13 +38,5 @@ public class RightTriangle extends Figure implements FigureBehaviour {
                 + " units, color: "
                 + this.getColor()
                 + "\n");
-    }
-
-    @Override
-    public RightTriangle setRandomParameters() {
-        RightTriangle rightTriangle = new RightTriangle();
-        rightTriangle.rightLeg = Main.getRandom().nextInt(maxParameterLength);
-        rightTriangle.leftLeg = Main.getRandom().nextInt(maxParameterLength);
-        return rightTriangle;
     }
 }

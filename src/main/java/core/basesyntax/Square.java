@@ -1,10 +1,15 @@
 package core.basesyntax;
 
-public class Square extends Figure implements FigureBehaviour {
+public class Square extends Figure {
     private double side;
 
-    public void setColor(String color) {
-        super.setColor(color);
+    public Square(Color color, double side) {
+        this.color = color;
+        this.side = side;
+    }
+
+    public Color getColor(String color) {
+        return this.color;
     }
 
     public double getSide() {
@@ -30,12 +35,4 @@ public class Square extends Figure implements FigureBehaviour {
                             + this.getColor()
                             + "\n");
     }
-
-    @Override
-    public Square setRandomParameters() {
-        Square square = new Square();
-        square.side = Main.getRandom().nextInt(maxParameterLength);
-        return square;
-    }
-
 }

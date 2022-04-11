@@ -1,32 +1,26 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements FigureBehaviour {
-    private double side1;
-    private double side2;
+public class Rectangle extends Figure {
+    private double firstSide;
+    private double secondSide;
 
-    public void setColor(String color) {
-        super.setColor(color);
+    public Rectangle(Color color, double firstSide, double secondSide) {
+        this.color = color;
+        this.firstSide = firstSide;
+        this.secondSide = secondSide;
     }
 
-    public double getSide1() {
-        return side1;
+    public double getFirstSide() {
+        return firstSide;
     }
 
-    public void setSide1(double side1) {
-        this.side1 = side1;
-    }
-
-    public double getSide2() {
-        return side2;
-    }
-
-    public void setSide2(double side2) {
-        this.side2 = side2;
+    public double getSecondSide() {
+        return secondSide;
     }
 
     @Override
     public double calculateArea() {
-        return (this.side1 * this.side2);
+        return (this.firstSide * this.secondSide);
     }
 
     @Override
@@ -34,19 +28,11 @@ public class Rectangle extends Figure implements FigureBehaviour {
         System.out.println("Figure: rectangle, area: "
                 + this.calculateArea()
                 + " sq.units, side_1: "
-                + this.getSide1()
+                + this.getFirstSide()
                 + " units, side_2: "
-                + this.getSide2()
+                + this.getSecondSide()
                 + " units, color: "
                 + this.getColor()
                 + "\n");
-    }
-
-    @Override
-    public Rectangle setRandomParameters() {
-        Rectangle rectangle = new Rectangle();
-        rectangle.side1 = Main.getRandom().nextInt(maxParameterLength);
-        rectangle.side2 = Main.getRandom().nextInt(maxParameterLength);
-        return rectangle;
     }
 }

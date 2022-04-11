@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-public interface FigureBehaviour {
+public interface CalculateAreaBehaviour {
     double calculateArea();
-
-    void draw();
 }
