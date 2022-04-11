@@ -1,14 +1,14 @@
 package core.basesyntax.model;
 
-public class RightTriangle extends Figure{
-        private double base;
-        private double height;
+public class RightTriangle extends Figure {
+    private double base;
+    private double height;
 
-        public RightTriangle (String color, double base, double height) {
-            super(color);
-            this.base = base;
-            this.height = height;
-        }
+    public RightTriangle(String color, double base, double height) {
+        super(color);
+        this.base = base;
+        this.height = height;
+    }
 
     public double getBase() {
         return base;
@@ -33,7 +33,7 @@ public class RightTriangle extends Figure{
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getClass().getSimpleName() + ", square: "
+        System.out.println("Figure: " + getClass().getSimpleName() + ", area: "
                 + getArea() + " sq.units, color: " + getColor()
                 + ", base: " + base
                 + ", height: " + height);
