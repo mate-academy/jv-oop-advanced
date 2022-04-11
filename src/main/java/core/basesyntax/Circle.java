@@ -4,12 +4,8 @@ public class Circle extends Figure {
     private double radius;
 
     public Circle(Color color, double radius) {
-        this.color = color;
+        super(color);
         this.radius = radius;
-    }
-
-    public Color getColor() {
-        return color;
     }
 
     public double getRadius() {

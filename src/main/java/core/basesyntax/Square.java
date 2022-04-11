@@ -4,12 +4,8 @@ public class Square extends Figure {
     private double side;
 
     public Square(Color color, double side) {
-        this.color = color;
+        super(color);
         this.side = side;
-    }
-
-    public Color getColor(String color) {
-        return this.color;
     }
 
     public double getSide() {

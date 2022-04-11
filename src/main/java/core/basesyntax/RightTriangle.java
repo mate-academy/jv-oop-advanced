@@ -5,13 +5,9 @@ public class RightTriangle extends Figure {
     private double leftLeg;
 
     public RightTriangle(Color color, double rightLeg, double leftLeg) {
-        this.color = color;
+        super(color);
         this.rightLeg = rightLeg;
         this.leftLeg = leftLeg;
-    }
-
-    public Color getColor(Color color) {
-        return this.color;
     }
 
     public double getRightLeg() {
