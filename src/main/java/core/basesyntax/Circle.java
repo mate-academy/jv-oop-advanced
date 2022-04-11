@@ -3,10 +3,6 @@ package core.basesyntax;
 public class Circle extends Figure implements FigureBehaviour {
     private double radius;
 
-    public String getColor() {
-        return super.getColor();
-    }
-
     public void setColor(String color) {
         super.setColor(color);
     }

@@ -5,10 +5,6 @@ public class IsoscelesTrapezoid extends Figure implements FigureBehaviour {
     private double side2;
     private double height;
 
-    public String getColor() {
-        return super.getColor();
-    }
-
     public void setColor(String color) {
         super.setColor(color);
     }

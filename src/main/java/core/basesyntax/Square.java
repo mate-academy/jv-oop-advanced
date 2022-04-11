@@ -3,10 +3,6 @@ package core.basesyntax;
 public class Square extends Figure implements FigureBehaviour {
     private double side;
 
-    public String getColor() {
-        return super.getColor();
-    }
-
     public void setColor(String color) {
         super.setColor(color);
     }

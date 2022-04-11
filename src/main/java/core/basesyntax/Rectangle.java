@@ -4,10 +4,6 @@ public class Rectangle extends Figure implements FigureBehaviour {
     private double side1;
     private double side2;
 
-    public String getColor() {
-        return super.getColor();
-    }
-
     public void setColor(String color) {
         super.setColor(color);
     }

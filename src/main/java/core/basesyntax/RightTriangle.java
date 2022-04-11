@@ -4,10 +4,6 @@ public class RightTriangle extends Figure implements FigureBehaviour {
     private double rightLeg;
     private double leftLeg;
 
-    public String getColor() {
-        return super.getColor();
-    }
-
     public void setColor(String color) {
         super.setColor(color);
     }
