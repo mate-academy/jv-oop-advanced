@@ -23,8 +23,9 @@ public class Rectangle extends Figure implements FigureAction {
     @Override
     public void draw() {
         System.out.println("Figure: rectangle"
-                + " area: "  + getArea() + "sq.units,"
+                + " area: " + getArea() + "sq.units,"
                 +  " width: " + width + " units,"
                 + " height: " + height + " unit,"
-                + " color: " + getColor());    }
+                + " color: " + getColor());
+    }
 }
