@@ -1,9 +1,7 @@
 package core.basesyntax;
 
-import core.basesyntax.Figure.Circle;
-import core.basesyntax.Figure.Figure;
-import core.basesyntax.Figure.Square;
-import core.basesyntax.Supplier.FigureSupplier;
+import core.basesyntax.figure.Figure;
+import core.basesyntax.supplier.FigureSupplier;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,9 +1,8 @@
-package core.basesyntax.Supplier;
+package core.basesyntax.supplier;
 
-import core.basesyntax.Figure.Circle;
-import core.basesyntax.Figure.Figure;
-import core.basesyntax.Figure.Square;
-
+import core.basesyntax.figure.Circle;
+import core.basesyntax.figure.Figure;
+import core.basesyntax.figure.Square;
 import java.util.Random;
 
 public class FigureSupplier {

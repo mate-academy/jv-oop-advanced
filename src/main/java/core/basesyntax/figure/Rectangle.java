@@ -1,8 +1,8 @@
-package core.basesyntax.Figure;
+package core.basesyntax.figure;
 
-import core.basesyntax.FigureAction;
+import core.basesyntax.figureAction;
 
-public class Rectangle extends Figure implements FigureAction {
+public class Rectangle extends Figure implements figureAction {
     private double width;
     private double height;
 

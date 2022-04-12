@@ -1,10 +1,8 @@
-package core.basesyntax.Figure;
+package core.basesyntax.figure;
 
-import core.basesyntax.FigureAction;
+import core.basesyntax.figureAction;
 
-import java.util.Arrays;
-
-public abstract class Figure implements FigureAction {
+public abstract class Figure implements figureAction {
     private String color;
 
     public Figure() {

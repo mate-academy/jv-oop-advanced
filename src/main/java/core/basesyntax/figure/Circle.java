@@ -1,8 +1,8 @@
-package core.basesyntax.Figure;
+package core.basesyntax.figure;
 
-import core.basesyntax.FigureAction;
+import core.basesyntax.figureAction;
 
-public class Circle extends Figure implements FigureAction {
+public class Circle extends Figure implements figureAction {
     private int radius;
 
     public Circle() {

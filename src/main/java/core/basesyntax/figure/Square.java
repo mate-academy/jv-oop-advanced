@@ -1,8 +1,8 @@
-package core.basesyntax.Figure;
+package core.basesyntax.figure;
 
-import core.basesyntax.FigureAction;
+import core.basesyntax.figureAction;
 
-public class Square extends Figure implements FigureAction {
+public class Square extends Figure implements figureAction {
     private int side;
 
     public Square() {
@@ -26,4 +26,3 @@ public class Square extends Figure implements FigureAction {
                 + "color: " + getColor());
     }
 }
-
