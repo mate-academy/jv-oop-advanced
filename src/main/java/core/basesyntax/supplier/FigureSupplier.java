@@ -40,15 +40,15 @@ public class FigureSupplier {
         }
     }
 
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_CIRCLE_RADIUS, Color.WHITE.name());
+    }
+
     private int getRandomInt() {
         return random.nextInt(MAX_RANDOM_NUMBER);
     }
 
     private double getRandomDouble() {
         return random.nextDouble();
-    }
-
-    public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_CIRCLE_RADIUS, Color.WHITE.name());
     }
 }
