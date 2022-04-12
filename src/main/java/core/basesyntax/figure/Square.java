@@ -22,7 +22,7 @@ public class Square extends Figure implements FigureAction {
     public void draw() {
         System.out.println("Figure: square"
                 + " area: " + getArea() + " sq.units,"
-                +  " side: " + side + " units,"
+                + " side: " + side + " units,"
                 + " color: " + getColor());
     }
 }
