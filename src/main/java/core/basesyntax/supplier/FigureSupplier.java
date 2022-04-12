@@ -10,13 +10,16 @@ import core.basesyntax.model.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private static final int FIGURE_AMOUNT = 5;
+    private static final int CONSTANT_RADIUS = 10;
+    private static final int MAX_RANDOM = 50;
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
 
-    public Figure getRandomFigure() {
-        int figureIndex = new Random().nextInt(5);
-        switch (figureIndex) {
+    public final Figure getRandomFigure() {
+        switch (random.nextInt(FIGURE_AMOUNT)) {
             case 0:
-                return new Circle(10, colorSupplier.getRandomColor());
+                return new Circle(getRandomInt(), colorSupplier.getRandomColor());
             case 1:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                 getRandomDouble(),
@@ -38,14 +41,14 @@ public class FigureSupplier {
     }
 
     private int getRandomInt() {
-        return new Random().nextInt(100);
+        return random.nextInt(MAX_RANDOM);
     }
 
     private double getRandomDouble() {
-        return new Random().nextDouble();
+        return random.nextDouble();
     }
 
     private Figure getDefaultFigure() {
-        return new Circle(10, Color.WHITE.name());
+        return new Circle(CONSTANT_RADIUS, Color.WHITE.name());
     }
 }
