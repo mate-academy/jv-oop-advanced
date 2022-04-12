@@ -3,49 +3,45 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-
+    public static final int FIGURES_AMOUNT = 4;
+    public static final int UPPER_LENGTH = 10;
+    public static final int DEFAULT_RADIUS_UPPER_LENGTH = 10;
     private Random random = new Random();
 
     public Figure getRandomFigure() {
-        int index = Main.getRandom().nextInt(4);
+        int index = random.nextInt(FIGURES_AMOUNT);
         switch (index) {
             case 0: {
-                Figure square = new Square(ColorSupplier.getRandomColor(),
-                                                random.nextInt(10));
-                return square;
+                return new Square(ColorSupplier.getRandomColor(),
+                                                random.nextInt(UPPER_LENGTH));
             }
             case 1: {
-                Figure rectangle = new Rectangle(ColorSupplier.getRandomColor(),
-                                                random.nextInt(10),
-                                                random.nextInt(10));
-                return rectangle;
+                return new Rectangle(ColorSupplier.getRandomColor(),
+                                                random.nextInt(UPPER_LENGTH),
+                                                random.nextInt(UPPER_LENGTH));
             }
             case 2: {
-                Figure rightTriangle = new RightTriangle(ColorSupplier.getRandomColor(),
-                                                random.nextInt(10),
-                                                random.nextInt(10));
-                return rightTriangle;
+                return new RightTriangle(ColorSupplier.getRandomColor(),
+                                                random.nextInt(UPPER_LENGTH),
+                                                random.nextInt(UPPER_LENGTH));
             }
             case 3: {
-                Figure circle = new Circle(ColorSupplier.getRandomColor(),
-                                                random.nextInt(10));
-                return circle;
+                return new Circle(ColorSupplier.getRandomColor(),
+                                                random.nextInt(UPPER_LENGTH));
             }
             case 4: {
-                Figure isoscelesTrapezoid = new IsoscelesTrapezoid(ColorSupplier.getRandomColor(),
-                                                random.nextInt(10),
-                                                random.nextInt(10),
-                                                random.nextInt(10));
-                return isoscelesTrapezoid;
+                return new IsoscelesTrapezoid(ColorSupplier.getRandomColor(),
+                                                random.nextInt(UPPER_LENGTH),
+                                                random.nextInt(UPPER_LENGTH),
+                                                random.nextInt(UPPER_LENGTH));
             }
             default: {
-                Figure circle = new Circle(Color.WHITE, 10);
-                return circle;
+                return getDefaultFigure();
             }
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE, 10);
+        return new Circle(Color.WHITE, DEFAULT_RADIUS_UPPER_LENGTH);
     }
 }
