@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public class Figure {
+public abstract class Figure implements Drawable {
     private String color;
 
-    public void setColor(String color) {
+    void setColor(String color) {
         this.color = color;
     }
 

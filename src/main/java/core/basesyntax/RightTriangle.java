@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements CanObtainArea, CanDraw {
+public class RightTriangle extends Figure implements AreaCalculator {
     private int legA;
     private int legB;
 
@@ -32,8 +32,8 @@ public class RightTriangle extends Figure implements CanObtainArea, CanDraw {
     }
 
     @Override
-    public String toString() {
-        return "Figure: right triangle, area: " + getArea() + " sq.units, leg A: "
-                + getLegA() + " units, leg B: " + getLegB() + " units, color: " + getColor();
+    public void draw() {
+        System.out.println("Figure: right triangle, area: " + getArea() + " sq.units, leg A: "
+                + getLegA() + " units, leg B: " + getLegB() + " units, color: " + getColor());
     }
 }

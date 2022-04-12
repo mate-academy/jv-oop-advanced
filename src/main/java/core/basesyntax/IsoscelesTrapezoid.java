@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements CanObtainArea, CanDraw {
+public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
     private int parallelSideA;
     private int parallelSideB;
     private int height;
@@ -42,10 +42,10 @@ public class IsoscelesTrapezoid extends Figure implements CanObtainArea, CanDraw
     }
 
     @Override
-    public String toString() {
-        return "Figure: isosceles trapezoid, area: " + getArea() + " sq.units, "
+    public void draw() {
+        System.out.println("Figure: isosceles trapezoid, area: " + getArea() + " sq.units, "
                 + "parallel side A: " + getParallelSideA() + " units, "
                 + "parallel side B: " + getParallelSideB() + " units, "
-                + "height: " + getHeight() + " units, color: " + getColor();
+                + "height: " + getHeight() + " units, color: " + getColor());
     }
 }

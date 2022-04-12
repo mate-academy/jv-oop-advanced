@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends Figure implements CanObtainArea, CanDraw {
+public class Square extends Figure implements AreaCalculator {
     private int side;
 
     public Square(int side, String color) {
@@ -17,9 +17,9 @@ public class Square extends Figure implements CanObtainArea, CanDraw {
     }
 
     @Override
-    public String toString() {
-        return "Figure: square, area: " + getArea() + " sq.units, side: "
-                + getSide() + " units, color: " + getColor();
+    public void draw() {
+        System.out.println("Figure: square, area: " + getArea() + " sq.units, side: "
+                + getSide() + " units, color: " + getColor());
     }
 
     @Override
