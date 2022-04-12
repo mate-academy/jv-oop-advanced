@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public interface figureAction {
+public interface FigureAction {
     double getArea();
 
     void draw();

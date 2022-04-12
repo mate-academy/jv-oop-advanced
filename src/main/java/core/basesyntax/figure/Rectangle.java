@@ -1,8 +1,8 @@
 package core.basesyntax.figure;
 
-import core.basesyntax.figureAction;
+import core.basesyntax.FigureAction;
 
-public class Rectangle extends Figure implements figureAction {
+public class Rectangle extends Figure implements FigureAction {
     private double width;
     private double height;
 
@@ -22,9 +22,9 @@ public class Rectangle extends Figure implements figureAction {
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle "
-                + "area: "  + getArea() + "sq.units, "
-                +  "width: " + width + " units, "
-                + "height: " + height + " unit, "
-                + "color: " + getColor());    }
+        System.out.println("Figure: rectangle"
+                + " area: "  + getArea() + "sq.units,"
+                +  " width: " + width + " units,"
+                + " height: " + height + " unit,"
+                + " color: " + getColor());    }
 }

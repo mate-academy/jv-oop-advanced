@@ -1,8 +1,8 @@
 package core.basesyntax.figure;
 
-import core.basesyntax.figureAction;
+import core.basesyntax.FigureAction;
 
-public class Square extends Figure implements figureAction {
+public class Square extends Figure implements FigureAction {
     private int side;
 
     public Square() {
@@ -20,9 +20,9 @@ public class Square extends Figure implements figureAction {
 
     @Override
     public void draw() {
-        System.out.println("Figure: square "
-                + "area: "  + getArea() + "sq.units, "
-                +  "side: " + side + " units, "
-                + "color: " + getColor());
+        System.out.println("Figure: square"
+                + " area: "  + getArea() + "sq.units,"
+                +  " side: " + side + " units,"
+                + " color: " + getColor());
     }
 }

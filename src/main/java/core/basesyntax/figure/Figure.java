@@ -1,8 +1,8 @@
 package core.basesyntax.figure;
 
-import core.basesyntax.figureAction;
+import core.basesyntax.FigureAction;
 
-public abstract class Figure implements figureAction {
+public abstract class Figure implements FigureAction {
     private String color;
 
     public Figure() {

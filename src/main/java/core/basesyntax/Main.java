@@ -1,4 +1,5 @@
 package core.basesyntax;
+
 import core.basesyntax.figure.Figure;
 import core.basesyntax.supplier.FigureSupplier;
 
@@ -15,6 +16,6 @@ public class Main {
             }
         }
 
-        for (Figure entity : figure) { entity.draw(); }
+        for (Figure entity : figure) {entity.draw();}
     }
 }
