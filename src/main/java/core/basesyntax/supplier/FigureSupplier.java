@@ -11,8 +11,8 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int FIGURE_AMOUNT = 5;
-    private static final int CONSTANT_RADIUS = 10;
-    private static final int MAX_RANDOM = 50;
+    private static final int DEFAULT_CIRCLE_RADIUS = 10;
+    private static final int MAX_RANDOM_NUMBER = 50;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
@@ -41,14 +41,14 @@ public class FigureSupplier {
     }
 
     private int getRandomInt() {
-        return random.nextInt(MAX_RANDOM);
+        return random.nextInt(MAX_RANDOM_NUMBER);
     }
 
     private double getRandomDouble() {
         return random.nextDouble();
     }
 
-    private Figure getDefaultFigure() {
-        return new Circle(CONSTANT_RADIUS, Color.WHITE.name());
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_CIRCLE_RADIUS, Color.WHITE.name());
     }
 }
