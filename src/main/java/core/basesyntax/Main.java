@@ -1,13 +1,7 @@
 package core.basesyntax;
 
-import java.util.Random;
-
-/**
- * Feel free to remove this class and create your own.
- */
 public class Main {
-    public static final int FIGURES_ARRAY_LENGTH = 6;
-    private static Random random = new Random();
+    private static final int FIGURES_ARRAY_LENGTH = 6;
 
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
