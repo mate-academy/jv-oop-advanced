@@ -16,6 +16,6 @@ public class Main {
             }
         }
 
-        for (Figure entity : figure) {entity.draw();}
+        for (Figure entity : figure) { entity.draw(); }
     }
 }
