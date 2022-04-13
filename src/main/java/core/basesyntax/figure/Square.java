@@ -1,12 +1,9 @@
 package core.basesyntax.figure;
 
-import core.basesyntax.FigureAction;
+import core.basesyntax.interfaces.Drawable;
 
-public class Square extends Figure implements FigureAction {
+public class Square extends Figure implements Drawable {
     private int side;
-
-    public Square() {
-    }
 
     public Square(String color, int side) {
         super(color);

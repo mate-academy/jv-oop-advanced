@@ -1,13 +1,10 @@
 package core.basesyntax.figure;
 
-import core.basesyntax.FigureAction;
+import core.basesyntax.interfaces.Drawable;
 
-public class Rectangle extends Figure implements FigureAction {
+public class Rectangle extends Figure implements Drawable {
     private double width;
     private double height;
-
-    public Rectangle() {
-    }
 
     public Rectangle(String color, int width, int height) {
         super(color);

@@ -5,19 +5,20 @@ import core.basesyntax.supplier.FigureSupplier;
 
 public class Main {
     public static void main(String[] args) {
+        final int BOUND = 5;
         FigureSupplier figureSupplier = new FigureSupplier();
-        Figure[] figure = new Figure[5];
+        Figure[] figures = new Figure[BOUND];
 
-        for (int i = 0; i < figure.length; i++) {
-            if (i < 3) {
-                figure[i] = figureSupplier.getRandomFigure();
+        for (int i = 0; i < figures.length; i++) {
+            if (i < figures.length / 2) {
+                figures[i] = figureSupplier.getRandomFigure();
             } else {
-                figure[i] = figureSupplier.getDefaultFigure();
+                figures[i] = figureSupplier.getDefaultFigure();
             }
         }
 
-        for (Figure entity : figure) {
-            entity.draw();
+        for (Figure figure : figures) {
+            figure.draw();
         }
     }
 }

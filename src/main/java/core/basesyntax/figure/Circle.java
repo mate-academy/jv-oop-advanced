@@ -1,12 +1,9 @@
 package core.basesyntax.figure;
 
-import core.basesyntax.FigureAction;
+import core.basesyntax.interfaces.Drawable;
 
-public class Circle extends Figure implements FigureAction {
+public class Circle extends Figure implements Drawable {
     private int radius;
-
-    public Circle() {
-    }
 
     public Circle(String color, int radius) {
         super(color);
