@@ -13,7 +13,6 @@ public class FigureSupplier {
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
-
     public Figure getRandomFigure() {
         int index = random.nextInt(BOUND);
         switch (index) {
@@ -31,8 +30,9 @@ public class FigureSupplier {
                 width = random.nextInt(MAX_VALUE);
                 height = random.nextInt(MAX_VALUE);
                 return new Rectangle(color, width, height);
+            default:
+                return new Square(colorSupplier.getRandomColor(),random.nextInt(MAX_VALUE));
         }
-        return new Square(colorSupplier.getRandomColor(),random.nextInt(MAX_VALUE));
     }
 
     public Figure getDefaultFigure() {

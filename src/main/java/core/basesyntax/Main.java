@@ -4,10 +4,10 @@ import core.basesyntax.figure.Figure;
 import core.basesyntax.supplier.FigureSupplier;
 
 public class Main {
+    private static final int FIGURECOUNT = 5;
     public static void main(String[] args) {
-        final int BOUND = 5;
         FigureSupplier figureSupplier = new FigureSupplier();
-        Figure[] figures = new Figure[BOUND];
+        Figure[] figures = new Figure[FIGURECOUNT];
 
         for (int i = 0; i < figures.length; i++) {
             if (i < figures.length / 2) {
