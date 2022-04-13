@@ -5,6 +5,7 @@ import core.basesyntax.supplier.FigureSupplier;
 
 public class Main {
     private static final int FIGURECOUNT = 5;
+
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figures = new Figure[FIGURECOUNT];
