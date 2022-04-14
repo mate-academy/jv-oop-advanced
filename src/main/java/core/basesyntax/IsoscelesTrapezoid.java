@@ -36,14 +36,14 @@ public class IsoscelesTrapezoid extends Figure {
         this.smallBase = smallBase;
     }
 
-    public void printSquareInfo() {
-        System.out.println("Figure: isosceles trapezoid\narea: " + getSquare() + " sq.units\n"
+    public void draw() {
+        System.out.println("Figure: isosceles trapezoid\narea: " + getArea() + " sq.units\n"
                 + "large base: " + largeBase + " units\nsmall base: " + smallBase
                 + " units\nheight: " + height + " units\ncolor: " + getColor());
     }
 
     @Override
-    public double getSquare() {
+    public double getArea() {
         return 0.5 * (largeBase + smallBase) * height;
     }
 }

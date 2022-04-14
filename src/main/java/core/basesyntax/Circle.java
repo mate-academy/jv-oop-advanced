@@ -9,7 +9,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double getSquare() {
+    public double getArea() {
         return Math.PI * radius * radius;
     }
 
@@ -22,8 +22,8 @@ public class Circle extends Figure {
     }
 
     @Override
-    public void printSquareInfo() {
-        System.out.println("Figure: circle\narea: " + getSquare() + " sq.units\nradius: "
+    public void draw() {
+        System.out.println("Figure: circle\narea: " + getArea() + " sq.units\nradius: "
                 + radius + " units\ncolor: " + getColor());
     }
 }

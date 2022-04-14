@@ -27,14 +27,14 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void printSquareInfo() {
-        System.out.println("Figure: rectangle\narea: " + getSquare() + " sq.units\none side: "
+    public void draw() {
+        System.out.println("Figure: rectangle\narea: " + getArea() + " sq.units\none side: "
                 + firstSide + " units\nanother side " + secondSide + " units\ncolor: "
                 + getColor());
     }
 
     @Override
-    public double getSquare() {
+    public double getArea() {
         return firstSide * secondSide;
     }
 }
