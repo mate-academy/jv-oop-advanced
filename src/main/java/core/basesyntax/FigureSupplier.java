@@ -2,56 +2,30 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class FigureSupplier extends Figure {
-
-    private String[] figures = {"Circle", "Isosceles trapezoid",
-            "Rectangle", "Right triangle", "Square"};
-
-    public String[] getFigures() {
-        return figures;
-    }
-
-    public void setFigures(String[] figures) {
-        this.figures = figures;
-    }
+public class FigureSupplier {
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final int figuresAmount = 5;
 
     public Figure getRandomFigure() {
-        Random random = new Random();
-        ColorSupplier colorSupplier = new ColorSupplier();
-
-        switch (figures[random.nextInt(figures.length)]) {
-            case "Circle":
-                Circle circle = new Circle(random.nextInt(50));
-                circle.setColor(colorSupplier.getRandomColor());
-                return circle;
-            case "Isosceles trapezoid":
-                IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(random.nextInt(50),
+        switch (random.nextInt(figuresAmount)) {
+            case 0:
+                return new Circle(colorSupplier.getRandomColor(), random.nextInt(50));
+            case 1:
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(50),
                         random.nextInt(50),random.nextInt(50));
-                isoscelesTrapezoid.setColor(colorSupplier.getRandomColor());
-                return isoscelesTrapezoid;
-            case "Rectangle":
-                Rectangle rectangle = new Rectangle(random.nextInt(50),random.nextInt(50));
-                rectangle.setColor(colorSupplier.getRandomColor());
-                return rectangle;
-            case "Right triangle":
-                RightTriangle rightTriangle = new RightTriangle(random.nextInt(50),
+            case 2:
+                return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(50),
                         random.nextInt(50));
-                rightTriangle.setColor(colorSupplier.getRandomColor());
-                return rightTriangle;
+            case 3:
+                return new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(50),
+                        random.nextInt(50));
             default:
-                Square square = new Square(random.nextInt(50));
-                square.setColor(colorSupplier.getRandomColor());
-                return square;
+                return new Square(colorSupplier.getRandomColor(), random.nextInt(50));
         }
     }
 
     public Figure getDefaultFigure() {
-        Circle circle = new Circle(10);
-        circle.setColor(Color.WHITE.toString());
-        return circle;
-    }
-
-    @Override
-    public void printSquareInfo() {
+        return new Circle(Color.WHITE.toString(), 10);
     }
 }

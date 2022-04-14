@@ -1,15 +1,10 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public abstract class Figure implements Area, Draw {
     private String color;
-    private double square;
 
-    public void setSquare(double square) {
-        this.square = square;
-    }
-
-    public double getSquare() {
-        return square;
+    public Figure(String color) {
+        this.color = color;
     }
 
     public String getColor() {
@@ -20,5 +15,4 @@ public abstract class Figure {
         this.color = color;
     }
 
-    public abstract void printSquareInfo();
 }
