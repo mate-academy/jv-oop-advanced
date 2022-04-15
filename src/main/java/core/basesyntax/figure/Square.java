@@ -1,7 +1,6 @@
 package core.basesyntax.figure;
 
 public class Square extends Figure {
-    private static final String TYPE_FIGURE = "SQUARE";
     private double side;
 
     public Square(String color, double side) {

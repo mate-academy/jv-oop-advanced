@@ -11,14 +11,16 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int MAX_RANDOM_VALUE = 30;
     private static final int DEFAULT_CIRCLE_RADIUS = 10;
+    private static final int MAX_RANDOUM_BOUND = 5;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int randomIndex = random.nextInt(FigureType.values().length);
+        int randomIndex = random.nextInt(MAX_RANDOUM_BOUND);
         String color = colorSupplier.getRandomColor();;
         double sideA;
         double sideB;
+
         switch (randomIndex) {
             case 0:
                 double radius = random.nextInt(MAX_RANDOM_VALUE);
