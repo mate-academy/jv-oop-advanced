@@ -1,9 +1,8 @@
 package core.basesyntax.figure;
 
-import core.basesyntax.interfaces.AreaCalculator;
+import core.basesyntax.supplier.FigureType;
 
-public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
-    private static final String TYPE_FIGURE = "ISOSCELES_TRAPEZOID";
+public class IsoscelesTrapezoid extends Figure {
     private static final double NUMBER = 2.0;
     private double sideA;
     private double sideB;
@@ -41,15 +40,16 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         double area = (getSideA() + getSideB()) / NUMBER * getTrapezoidHeight();
         return area;
     }
 
     @Override
     public void print() {
-        System.out.println("Figure: " + TYPE_FIGURE + ", area: " + String.format("%.2f", area())
-                + " sq.units, trapezoid height: " + getTrapezoidHeight() + " ,sideA: "
-                + getSideA() + " units, sideB: " + getSideB() + " units, color: " + getColor());
+        System.out.println("Figure: " + FigureType.ISOSCELES_TRAPEZOID + ", area: "
+                + String.format("%.2f", getArea()) + " sq.units, trapezoid height: "
+                + getTrapezoidHeight() + " ,sideA: " + getSideA() + " units, sideB: "
+                + getSideB() + " units, color: " + getColor());
     }
 }

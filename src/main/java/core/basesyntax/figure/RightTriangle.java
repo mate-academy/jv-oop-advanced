@@ -1,9 +1,8 @@
 package core.basesyntax.figure;
 
-import core.basesyntax.interfaces.AreaCalculator;
+import core.basesyntax.supplier.FigureType;
 
-public class RightTriangle extends Figure implements AreaCalculator {
-    private static final String TYPE_FIGURE = "RIGHT_TRIANGLE";
+public class RightTriangle extends Figure {
     private static final double NUMBER = 2.0;
     private double sideA;
     private double sideB;
@@ -31,15 +30,15 @@ public class RightTriangle extends Figure implements AreaCalculator {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         double area = getSideA() * getSideB() / NUMBER;
         return area;
     }
 
     @Override
     public void print() {
-        System.out.println("Figure: " + TYPE_FIGURE + ", area: " + String.format("%.2f", area())
-                + " sq.units, sideA: " + getSideA() + " units, sideB: "
-                + getSideB() + " units, color: " + getColor());
+        System.out.println("Figure: " + FigureType.RIGHT_TRIANGLE + ", area: "
+                + String.format("%.2f", getArea()) + " sq.units, sideA: "
+                + getSideA() + " units, sideB: " + getSideB() + " units, color: " + getColor());
     }
 }
