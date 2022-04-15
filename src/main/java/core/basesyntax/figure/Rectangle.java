@@ -1,7 +1,5 @@
 package core.basesyntax.figure;
 
-import core.basesyntax.supplier.FigureType;
-
 public class Rectangle extends Figure {
     private double sideA;
     private double sideB;
@@ -35,9 +33,9 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void print() {
-        System.out.println("Figure: " + FigureType.RECTANGLE + ", area: "
-                + String.format("%.2f", getArea()) + " sq.units, sideA: " + getSideA()
-                + " units, sideB: " + getSideB() + " units, color: " + getColor());
+    public void draw() {
+        System.out.println("Figure: RECTANGLE, area: " + String.format("%.2f", getArea())
+                + " sq.units, sideA: " + getSideA() + " units, sideB: " + getSideB()
+                + " units, color: " + getColor());
     }
 }

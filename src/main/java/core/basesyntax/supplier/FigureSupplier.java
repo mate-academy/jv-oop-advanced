@@ -19,7 +19,6 @@ public class FigureSupplier {
         String color = colorSupplier.getRandomColor();;
         double sideA;
         double sideB;
-
         switch (randomIndex) {
             case 0:
                 double radius = random.nextInt(MAX_RANDOM_VALUE);

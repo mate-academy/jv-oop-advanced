@@ -4,10 +4,10 @@ import core.basesyntax.figure.Figure;
 import core.basesyntax.supplier.FigureSupplier;
 
 public class Main {
-    private static final int ARRAY_SIZE = 6;
+    private static final int FIGURES_SIZE = 6;
 
     public static void main(String[] args) {
-        Figure [] figures = new Figure[ARRAY_SIZE];
+        Figure [] figures = new Figure[FIGURES_SIZE];
         FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < figures.length; i++) {
             if (i < figures.length / 2) {
@@ -17,7 +17,7 @@ public class Main {
             }
         }
         for (int i = 0; i < figures.length; i++) {
-            figures[i].print();
+            figures[i].draw();
         }
     }
 }

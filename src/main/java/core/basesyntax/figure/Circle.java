@@ -1,7 +1,5 @@
 package core.basesyntax.figure;
 
-import core.basesyntax.supplier.FigureType;
-
 public class Circle extends Figure {
     private double radius;
 
@@ -25,9 +23,8 @@ public class Circle extends Figure {
     }
 
     @Override
-    public void print() {
-        System.out.println("Figure: " + FigureType.CIRCLE + ", area: "
-                + String.format("%.2f", getArea()) + " sq.units, radius: "
-                + getRadius() + " units, color: " + getColor());
+    public void draw() {
+        System.out.println("Figure: CIRCLE, area: " + String.format("%.2f", getArea())
+                + " sq.units, radius: " + getRadius() + " units, color: " + getColor());
     }
 }

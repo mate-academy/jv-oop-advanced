@@ -1,8 +1,9 @@
 package core.basesyntax.figure;
 
 import core.basesyntax.interfaces.AreaCalculator;
+import core.basesyntax.interfaces.Drawable;
 
-public abstract class Figure implements AreaCalculator {
+public abstract class Figure implements AreaCalculator, Drawable {
     private String color;
 
     protected Figure(String color) {
@@ -12,6 +13,4 @@ public abstract class Figure implements AreaCalculator {
     protected String getColor() {
         return color;
     }
-
-    public abstract void print();
 }
