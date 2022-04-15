@@ -1,9 +1,8 @@
 package core.basesyntax.figure;
 
-import core.basesyntax.interfaces.AreaCalculator;
+import core.basesyntax.supplier.FigureType;
 
-public class Circle extends Figure implements AreaCalculator {
-    private static final String TYPE_FIGURE = "CIRCLE";
+public class Circle extends Figure {
     private double radius;
 
     public Circle(String color, double radius) {
@@ -20,14 +19,15 @@ public class Circle extends Figure implements AreaCalculator {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         double area = (getRadius() * getRadius()) * Math.PI;
         return area;
     }
 
     @Override
     public void print() {
-        System.out.println("Figure: " + TYPE_FIGURE + ", area: " + String.format("%.2f", area())
-                + " sq.units, radius: " + getRadius() + " units, color: " + getColor());
+        System.out.println("Figure: " + FigureType.CIRCLE + ", area: "
+                + String.format("%.2f", getArea()) + " sq.units, radius: "
+                + getRadius() + " units, color: " + getColor());
     }
 }

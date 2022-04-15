@@ -1,8 +1,8 @@
 package core.basesyntax.figure;
 
-import core.basesyntax.interfaces.AreaCalculator;
+import core.basesyntax.supplier.FigureType;
 
-public class Square extends Figure implements AreaCalculator {
+public class Square extends Figure {
     private static final String TYPE_FIGURE = "SQUARE";
     private double side;
 
@@ -20,14 +20,15 @@ public class Square extends Figure implements AreaCalculator {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         double area = getSide() * getSide();
         return area;
     }
 
     @Override
     public void print() {
-        System.out.println("Figure: " + TYPE_FIGURE + ", area: " + String.format("%.2f", area())
-                + " sq.units, side: " + getSide() + " units, color: " + getColor());
+        System.out.println("Figure: " + FigureType.SQUARE + ", area: "
+                + String.format("%.2f", getArea()) + " sq.units, side: "
+                + getSide() + " units, color: " + getColor());
     }
 }

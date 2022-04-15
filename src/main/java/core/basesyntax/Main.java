@@ -4,14 +4,13 @@ import core.basesyntax.figure.Figure;
 import core.basesyntax.supplier.FigureSupplier;
 
 public class Main {
-    private static final int VALUE = 2;
+    private static final int ARRAY_SIZE = 6;
 
     public static void main(String[] args) {
-        Figure [] figures = new Figure[6];
+        Figure [] figures = new Figure[ARRAY_SIZE];
         FigureSupplier figureSupplier = new FigureSupplier();
-
         for (int i = 0; i < figures.length; i++) {
-            if (i < figures.length / VALUE) {
+            if (i < figures.length / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
