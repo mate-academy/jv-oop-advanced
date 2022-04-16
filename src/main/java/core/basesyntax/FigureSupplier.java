@@ -16,8 +16,7 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         String color = colorSupplier.getRandomColor();
         /*I'm sorry, I have a question.
-        Maybe I should declare only one variable "int parameter = getRandomValues();" and use it.
-        Or just use getRandomValues() when creating a new object?*/
+        Maybe I should use getRandomValues() when creating a new object?*/
         switch (random.nextInt(FIGURE_NUMBER)) {
             case 0:
                 int radius = getRandomValue();
