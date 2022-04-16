@@ -1,9 +1,10 @@
 package core.basesyntax;
 
-public class Square extends Figure implements Area {
+public class Square extends Figure {
     private int side;
 
-    public Square(int side) {
+    public Square(String color, int side) {
+        super.setColor(color);
         this.side = side;
     }
 
@@ -13,7 +14,7 @@ public class Square extends Figure implements Area {
     }
 
     @Override
-    public String toDraw() {
+    public String draw() {
         return "Figure: square, area: "
                 + Math.ceil(getArea() * Math.pow(10, 1)) / Math.pow(10, 1)
                 + " sq.units, side: "

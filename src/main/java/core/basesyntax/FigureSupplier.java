@@ -3,40 +3,45 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private Random random = new Random();
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private static final int FIGURE_NUMBER = 5;
+    private static final int MAX_RANDOM_VALUE = 10;
+    private static final int DEFAULT_CIRCLE_RADIUS = 10;
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+
+    private int getRandomValue() {
+        return random.nextInt(MAX_RANDOM_VALUE) + 1;
+    }
 
     public Figure getRandomFigure() {
-        Figure randomFigure;
-        switch (random.nextInt(5)) {
+        String color = colorSupplier.getRandomColor();
+        /*I'm sorry, I have a question.
+        Maybe I should declare only one variable "int parameter = getRandomValues();" and use it.
+        Or just use getRandomValues() when creating a new object?*/
+        switch (random.nextInt(FIGURE_NUMBER)) {
             case 0:
-                randomFigure = new Circle(random.nextInt(10) + 1);
-                randomFigure.setColor(colorSupplier.getRandomColor());
-                break;
+                int radius = getRandomValue();
+                return new Circle(color, radius);
             case 1:
-                randomFigure = new IsoscelesTrapezoid(random.nextInt(10) + 1,
-                        random.nextInt(10) + 1, random.nextInt(10) + 1);
-                randomFigure.setColor(colorSupplier.getRandomColor());
-                break;
+                int upperBase = getRandomValue();
+                int lowerBase = getRandomValue();
+                int heightTrapezoid = getRandomValue();
+                return new IsoscelesTrapezoid(color, upperBase, lowerBase, heightTrapezoid);
             case 2:
-                randomFigure = new Rectangle(random.nextInt(10) + 1, random.nextInt(10) + 1);
-                randomFigure.setColor(colorSupplier.getRandomColor());
-                break;
+                int width = getRandomValue();
+                int height = getRandomValue();
+                return new Rectangle(color, width, height);
             case 3:
-                randomFigure = new RightTriangle(random.nextInt(10) + 1, random.nextInt(10) + 1);
-                randomFigure.setColor(colorSupplier.getRandomColor());
-                break;
+                int firstLeg = getRandomValue();
+                int secondLeg = getRandomValue();
+                return new RightTriangle(color, firstLeg, secondLeg);
             default:
-                randomFigure = new Square(random.nextInt(10) + 1);
-                randomFigure.setColor(colorSupplier.getRandomColor());
-                break;
+                int side = getRandomValue();
+                return new Square(color, side);
         }
-        return randomFigure;
     }
 
     public Figure getDefaultFigure() {
-        Figure defaultFigure = new Circle(10);
-        defaultFigure.setColor(Color.WHITE.toString());
-        return defaultFigure;
+        return new Circle(Color.WHITE.toString(), DEFAULT_CIRCLE_RADIUS);
     }
 }

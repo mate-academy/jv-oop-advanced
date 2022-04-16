@@ -1,16 +1,17 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Area {
+public class Rectangle extends Figure {
     private int width;
     private int height;
 
-    public Rectangle(int width, int height) {
+    public Rectangle(String color, int width, int height) {
+        super.setColor(color);
         this.width = width;
         this.height = height;
     }
 
     @Override
-    public String toDraw() {
+    public String draw() {
         return "Figure: rectangle, area: "
                 + Math.ceil(getArea() * Math.pow(10, 1)) / Math.pow(10, 1)
                 + " sq.units, width: "
