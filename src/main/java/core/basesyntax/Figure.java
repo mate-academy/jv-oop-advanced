@@ -13,7 +13,7 @@ public abstract class Figure implements Drawable, AreaCalculator {
         return color;
     }
 
-    public String getType() {
+    public String getTypeName() {
         return type.name().toLowerCase();
     }
 }

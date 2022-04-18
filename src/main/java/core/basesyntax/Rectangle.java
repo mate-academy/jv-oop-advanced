@@ -19,13 +19,14 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return length * width;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getType() + ", area: " + String.format("%.2f", area())
+        System.out.println("Figure: " + getTypeName() + ", area: "
+                + String.format("%.2f", getArea())
                 + " sq.units, length: " + getLength() + " units, width: " + getWidth()
                 + " units, color: " + getColor());
     }
