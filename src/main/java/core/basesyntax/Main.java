@@ -4,10 +4,14 @@ public class Main {
 
     public static void main(String[] args) {
         FigureSupplier x = new FigureSupplier();
-
-        //Figure x = new Square(10);
-        System.out.println(x.getRandomFigure().toString());
-        //Figure y = new Square(110);
-        //System.out.println(y.toString());
+        Figure[] arrFigures = new Figure[6];
+        for (int i=0; i<3; i++) {
+            arrFigures[i] = x.getRandomFigure();
+            arrFigures[i+3] = x.getDefaultFigure();
+        }
+        for (int i=0; i<6; i++) {
+            System.out.println("Figure: " + arrFigures[i].getFigureInfo());
+            //System.out.println("Figure: " + x.getDefaultFigure().getFigureInfo());
+        }
     }
 }
