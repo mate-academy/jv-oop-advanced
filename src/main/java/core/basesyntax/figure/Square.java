@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.figure;
 
 public class Square extends Figure{
     private  int side;
@@ -8,6 +8,13 @@ public class Square extends Figure{
         this.side = side;
     }
 
+    public int getSide() {
+        return side;
+    }
+
+    public void setSide(int side) {
+        this.side = side;
+    }
 
     @Override
     public double getArea() {
@@ -16,11 +23,12 @@ public class Square extends Figure{
 
     @Override
     public void draw() {
-        System.out.println("\n" + "----------------------------"
+        System.out.println("----------------------------"
                 + "\n" + "Figure: square"
                 + "\n" + "Area: " + getArea() + " sq.units"
                 + "\n" + "Side: " + side + " units"
-                + "\n" + "----------------------------");
+                + "\n" + "Color: " + getColor()
+                + "\n" + "----------------------------" + "\n");
 
     }
 }
