@@ -2,6 +2,7 @@ package core.basesyntax;
 
 import core.basesyntax.figure.*;
 
+import java.util.Locale;
 import java.util.Random;
 
 public class FigureSupplier {
@@ -32,6 +33,6 @@ public class FigureSupplier {
         return number;
     }
     public Figure getDefaultFigure() {
-        return new Circle("white", 10);
+        return new Circle(Color.WHITE.name().toLowerCase(Locale.ROOT), 10);
     }
 }
