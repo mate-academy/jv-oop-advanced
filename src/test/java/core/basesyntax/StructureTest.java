@@ -21,14 +21,14 @@ public class StructureTest {
   private static List<Class> allClasses = new ArrayList<>();
   List<String> figureClassNames = List
           .of("Circle", "Square", "IsoscelesTrapezoid", "Rectangle", "RightTriangle");
-  List<Class> figureClasses = new ArrayList<>();
 
   @BeforeClass
   public static void init() {
     try {
       allClasses = getClasses("core.basesyntax");
       if (allClasses.size() == 0) {
-        Assert.fail("You should not rename base core.basesyntax package");
+        Assert.fail("You should not rename base core.basesyntax package "
+            + "and project name should not contain spaces");
       }
     } catch (Exception e) {
       throw new RuntimeException("Could not load classes ", e);
@@ -40,14 +40,14 @@ public class StructureTest {
     for (String className : figureClassNames) {
       checkFigureClassExistence(className);
     }
-    figureClasses = allClasses.stream()
+    List<Class> figureClasses = allClasses.stream()
             .filter(c -> figureClassNames.contains(c.getSimpleName()))
             .collect(Collectors.toList());
     for (Class clazz:figureClasses) {
       checkFigureSuperclassExistence(clazz);
       checkClassInterfaces(clazz);
     }
-    checkSuperclass();
+    checkSuperclass(figureClasses);
   }
 
   private Class checkFigureClassExistence(String name) {
@@ -76,7 +76,7 @@ public class StructureTest {
     }
   }
 
-  private void checkSuperclass() {
+  private void checkSuperclass(List<Class> figureClasses) {
     List<Class> figuresSuperclasses = new ArrayList<>();
     for (Class clazz : figureClasses) {
       Class superclass = clazz.getSuperclass();
