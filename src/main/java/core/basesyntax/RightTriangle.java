@@ -1,19 +1,23 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements AreaCalculator, Drawable{
-    double base;
-    double altitude;
+public class RightTriangle extends Figure implements AreaCalculator {
+    private double altitude;
+
+    public RightTriangle(String color, double parameter, double altitude) {
+        super(color, parameter);
+        this.altitude = altitude;
+    }
 
     @Override
     public double getArea() {
-        return base * altitude / 2;
+        return getParameter() * altitude / 2;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: right triangle " + getArea()
-                + "sq.units, base: " + base
-                + "units, altitude: " + altitude
-                + "units, color: " + getColor());
+                + " sq.units, base: " + getParameter()
+                + " units, altitude: " + altitude
+                + " units, color: " + getColor());
     }
 }

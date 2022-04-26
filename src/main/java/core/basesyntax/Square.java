@@ -1,17 +1,19 @@
 package core.basesyntax;
 
-public class Square extends Figure implements AreaCalculator, Drawable {
-    double side;
+public class Square extends Figure implements AreaCalculator {
+    public Square(String color, double parameter) {
+        super(color, parameter);
+    }
 
     @Override
     public double getArea() {
-        return side * side;
+        return getParameter() * getParameter();
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: square " + getArea()
-                + "sq.units, side: " + side
-                + "units, color: " + getColor());
+                + " sq.units, side: " + getParameter()
+                + " units, color: " + getColor());
     }
 }
