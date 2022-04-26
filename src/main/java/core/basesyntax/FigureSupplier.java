@@ -4,26 +4,54 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_RANDOM_NUMBER = 20;
-    private static final int FIGURES_NUMBER = 3;
+    private static final int FIGURES_NUMBER = 5;
     private static final int DEFAULT_RADIUS_CIRCLE = 10;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
+    private String color = colorSupplier.getRandomColor();
+
+    private Circle getRandomCircle() {
+        int radius = random.nextInt(MAX_RANDOM_NUMBER);
+        return new Circle(color, radius);
+    }
+
+    private Rectangle getRandomRectangle() {
+        int shortSide = random.nextInt(MAX_RANDOM_NUMBER);
+        int longSide = random.nextInt(MAX_RANDOM_NUMBER);
+        return new Rectangle(color, shortSide, longSide);
+    }
+
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+        int topSide = random.nextInt(MAX_RANDOM_NUMBER);
+        int longSide = random.nextInt(MAX_RANDOM_NUMBER);
+        int height = random.nextInt(MAX_RANDOM_NUMBER);
+        return new IsoscelesTrapezoid(color, topSide, longSide, height);
+    }
+
+    private RightTriangle getRandomRightTriangle() {
+        int firstLeg = random.nextInt(MAX_RANDOM_NUMBER);
+        int secondLeg = random.nextInt(MAX_RANDOM_NUMBER);
+        return new RightTriangle(color, firstLeg, secondLeg);
+    }
+
+    private Square getRandomSquare() {
+        int side = random.nextInt(MAX_RANDOM_NUMBER);
+        return new Square(color, side);
+    }
 
     public Figure getRandomFigure() {
         int index = random.nextInt(FIGURES_NUMBER);
-        String color = colorSupplier.getRandomColor();
         switch (index) {
             case 0:
-                int shortSide = random.nextInt(MAX_RANDOM_NUMBER);
-                int longSide = random.nextInt(MAX_RANDOM_NUMBER);
-                return new Rectangle(color, shortSide, longSide);
+                return getRandomRectangle();
             case 1:
-                int side = random.nextInt(MAX_RANDOM_NUMBER);
-                return new Square(color, side);
+                return getRandomCircle();
             case 2:
-                int firstLeg = random.nextInt(MAX_RANDOM_NUMBER);
-                int secondLeg = random.nextInt(MAX_RANDOM_NUMBER);
-                return new RightTriangle(color, firstLeg, secondLeg);
+                return getRandomSquare();
+            case 3:
+                return getRandomIsoscelesTrapezoid();
+            case 4:
+                return getRandomRightTriangle();
             default:
                 return new Square(colorSupplier.getRandomColor(),random.nextInt(MAX_RANDOM_NUMBER));
         }
