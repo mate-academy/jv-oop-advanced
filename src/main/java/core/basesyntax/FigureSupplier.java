@@ -3,13 +3,13 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int MAX_BOUND = 20;
+    private static final int FIGURES_NUMBER = 5;
     private final Random random = new Random();
-    private final int maxBound = 20;
-    private final int figureClasses = 5;
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int randomFigureNumber = random.nextInt(figureClasses);
+        int randomFigureNumber = random.nextInt(FIGURES_NUMBER);
         switch (randomFigureNumber) {
             case 1:
                 return getRandomIsoscelesTrapezoid();
@@ -56,6 +56,6 @@ public class FigureSupplier {
     }
 
     private double getRandomNumber() {
-        return random.nextInt(maxBound) + (double) random.nextInt(maxBound) / 10;
+        return random.nextInt(MAX_BOUND) + (double) random.nextInt(MAX_BOUND) / 10;
     }
 }
