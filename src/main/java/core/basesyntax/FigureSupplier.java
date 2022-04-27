@@ -5,7 +5,6 @@ import java.util.Random;
 public class FigureSupplier {
     private final Random random = new Random();
     private final int maxBound = 20;
-    private final int origin = 7;
     private final int figureClasses = 5;
     private ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -57,6 +56,6 @@ public class FigureSupplier {
     }
 
     private double getRandomNumber() {
-        return random.nextInt(origin, maxBound) + (double) random.nextInt(origin, maxBound) / 10;
+        return random.nextInt(maxBound) + (double) random.nextInt(maxBound) / 10;
     }
 }
