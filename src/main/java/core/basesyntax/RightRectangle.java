@@ -32,7 +32,7 @@ public class RightRectangle extends Figure {
     }
 
     @Override
-    public void toDraw() {
+    public void draw() {
         System.out.println("Figure: Right Rectangle, area: " + this.getArea()
                 + ", firstLeg: " + firstLeg + ", secondLeg: "
                 + secondLeg + ", color: " + this.getColor());
