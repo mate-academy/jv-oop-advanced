@@ -1,10 +1,11 @@
 package core.basesyntax;
 
-public class RightRectangle extends Figure implements GetArea, ToDraw {
+public class RightRectangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
-    public RightRectangle(int firstLeg, int secondLeg) {
+    public RightRectangle(String color, int firstLeg, int secondLeg) {
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }

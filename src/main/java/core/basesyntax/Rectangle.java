@@ -1,10 +1,11 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements GetArea, ToDraw {
+public class Rectangle extends Figure {
     private int base;
     private int height;
 
-    public Rectangle(int base, int height) {
+    public Rectangle(String color, int base, int height) {
+        super(color);
         this.base = base;
         this.height = height;
     }

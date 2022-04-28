@@ -3,26 +3,34 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int MAX_INT = 2147483647;
+    private static final int MAX_NUMBER = Integer.MAX_VALUE;
+    private static final int DEFAULT_RADIUS = 10;
+    private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
-    private Figure[] figures = { new Circle(random.nextInt(MAX_INT)),
-            new IsoscelesTrapezoid(random.nextInt(MAX_INT),
-                    random.nextInt(MAX_INT),
-                    random.nextInt(MAX_INT)),
-            new Rectangle(random.nextInt(MAX_INT),
-                    random.nextInt(MAX_INT)),
-            new RightRectangle(random.nextInt(MAX_INT),
-                    random.nextInt(MAX_INT)),
-            new Square(random.nextInt(MAX_INT)) };
 
     public Figure getRandomFigure() {
-        int randomFiguresIndex = random.nextInt(figures.length);
-        return figures[randomFiguresIndex];
+        switch (random.nextInt(4)) {
+            case 0:
+                return new Circle(colorSupplier.getRandomColor(), random.nextInt(MAX_NUMBER));
+            case 1:
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        random.nextInt(MAX_NUMBER), random.nextInt(MAX_NUMBER),
+                        random.nextInt(MAX_NUMBER));
+            case 2:
+                return new Rectangle(colorSupplier.getRandomColor(),
+                        random.nextInt(MAX_NUMBER), random.nextInt(MAX_NUMBER));
+            case 3:
+                return new RightRectangle(colorSupplier.getRandomColor(),
+                        random.nextInt(MAX_NUMBER), random.nextInt(MAX_NUMBER));
+            case 4:
+                return new Square(colorSupplier.getRandomColor(), random.nextInt(MAX_NUMBER));
+            default:
+                return null;
+        }
     }
 
     public Figure getDefaultFigure() {
-        Figure defaultFigure = new Circle(10);
-        defaultFigure.setColor(Color.WHITE.toString());
+        Figure defaultFigure = new Circle(Color.WHITE.toString(), DEFAULT_RADIUS);
         return defaultFigure;
     }
 }
