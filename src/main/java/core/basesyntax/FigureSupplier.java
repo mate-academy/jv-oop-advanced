@@ -20,7 +20,7 @@ public class FigureSupplier {
                 return new Rectangle(colorSupplier.getRandomColor(),
                         random.nextInt(MAX_NUMBER), random.nextInt(MAX_NUMBER));
             case 3:
-                return new RightRectangle(colorSupplier.getRandomColor(),
+                return new RightTriangle(colorSupplier.getRandomColor(),
                         random.nextInt(MAX_NUMBER), random.nextInt(MAX_NUMBER));
             case 4:
                 return new Square(colorSupplier.getRandomColor(), random.nextInt(MAX_NUMBER));
