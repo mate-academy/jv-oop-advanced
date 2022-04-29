@@ -5,11 +5,12 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int MAX_NUMBER = Integer.MAX_VALUE;
     private static final int DEFAULT_RADIUS = 10;
+    private static final int NUMBER_OF_FIGURES_TYPES = 4;
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
 
     public Figure getRandomFigure() {
-        switch (random.nextInt(4)) {
+        switch (random.nextInt(NUMBER_OF_FIGURES_TYPES)) {
             case 0:
                 return new Circle(colorSupplier.getRandomColor(), random.nextInt(MAX_NUMBER));
             case 1:
@@ -30,7 +31,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        Figure defaultFigure = new Circle(Color.WHITE.toString(), DEFAULT_RADIUS);
-        return defaultFigure;
+        return new Circle(Color.WHITE.toString(), DEFAULT_RADIUS);
     }
 }
