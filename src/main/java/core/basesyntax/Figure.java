@@ -1,12 +1,7 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public abstract class Figure implements FigureArea {
     private String color;
-
-    public Figure() {
-        ColorSupplier cc = new ColorSupplier();
-        this.color = cc.getRandomColor();
-    }
 
     public String getColor() {
         return color;

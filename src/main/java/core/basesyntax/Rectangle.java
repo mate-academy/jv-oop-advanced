@@ -1,18 +1,17 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements FigureArea {
+public class Rectangle extends Figure {
     private int height;
     private int width;
 
-    public Rectangle(int height, int width) {
+    public Rectangle(int height, int width, String color) {
         this.height = height;
         this.width = width;
+        super.setColor(color);
     }
 
     @Override
-    public double getFigureArea() {
-        return height * width;
-    }
+    public double getFigureArea() { return height * width; }
 
     @Override
     public String getFigureInfo() {

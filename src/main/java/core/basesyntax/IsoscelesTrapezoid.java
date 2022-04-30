@@ -1,14 +1,15 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements FigureArea {
+public class IsoscelesTrapezoid extends Figure {
     private int top;
     private int bottom;
     private int height;
 
-    public IsoscelesTrapezoid(int height, int top, int bottom) {
+    public IsoscelesTrapezoid(int height, int top, int bottom, String color) {
         this.height = height;
         this.top = top;
         this.bottom = bottom;
+        super.setColor(color);
     }
 
     @Override
