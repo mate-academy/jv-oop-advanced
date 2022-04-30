@@ -11,7 +11,9 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double getFigureArea() { return height * width; }
+    public double getFigureArea() { 
+        return height * width; 
+    }
 
     @Override
     public String getFigureInfo() {
