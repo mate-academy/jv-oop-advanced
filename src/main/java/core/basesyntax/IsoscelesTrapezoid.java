@@ -20,6 +20,6 @@ public class IsoscelesTrapezoid extends Figure {
     public String getFigureInfo() {
         return "isosceles trapezoid, area: " + getFigureArea()
             + " sq.units, height: " + height + " units, top: " + top + " units, bottom: "
-            + bottom + " units, color: " + super.getColor();
+            + bottom + " units, color: " + getColor().toLowerCase();
     }
 }

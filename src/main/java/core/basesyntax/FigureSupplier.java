@@ -3,39 +3,42 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int FIGURE_TYPES = 5;
-    public static final int MAX_RANDOM_SIDE_LENGTH = 5;
+    private static final int FIGURE_TYPES = 5;
+    private static final int MAX_SIDE = 5;
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
         int randomFigure = random.nextInt(FIGURE_TYPES);
-        int a = new Random().nextInt(MAX_RANDOM_SIDE_LENGTH) + 1;
-        int b = new Random().nextInt(MAX_RANDOM_SIDE_LENGTH) + 1;
-        int c = new Random().nextInt(MAX_RANDOM_SIDE_LENGTH) + 1;
         ColorSupplier randomColor = new ColorSupplier();
         String color = randomColor.getRandomColor();
         switch (randomFigure) {
             case (0):
-                Figure sq = new Square(a, color);
-                return sq;
+                Figure square = new Square((new Random().nextInt(MAX_SIDE)
+                        + 1), color);
+                return square;
             case (1):
-                Figure re = new Rectangle(a, b, color);
-                return re;
+                Figure rectangle = new Rectangle((new Random().nextInt(MAX_SIDE)
+                        + 1), (new Random().nextInt(MAX_SIDE) + 1), color);
+                return rectangle;
             case (2):
-                Figure rt = new RightTriangle(a, b, color);
-                return rt;
+                Figure rightTriangle = new RightTriangle((new Random().nextInt(MAX_SIDE)
+                        + 1), (new Random().nextInt(MAX_SIDE) + 1), color);
+                return rightTriangle;
             case (3):
-                Figure cr = new Circle(a, color);
-                return cr;
+                Figure circle = new Circle((new Random().nextInt(MAX_SIDE)
+                        + 1), color);
+                return circle;
             default:
-                Figure it = new IsoscelesTrapezoid(a, b, c, color);
-                return it;
+                Figure isoscelesTrapezoid = new IsoscelesTrapezoid((new Random().nextInt(MAX_SIDE)
+                        + 1), (new Random().nextInt(MAX_SIDE) + 1),
+                        (new Random().nextInt(MAX_SIDE) + 1), color);
+                return isoscelesTrapezoid;
         }
 
     }
     
     public Figure getDefaultFigure() {
-        Figure defaultFigure = new Square(10, "WHITE");
+        Figure defaultFigure = new Square(10, "white");
         return defaultFigure;
     }
 }

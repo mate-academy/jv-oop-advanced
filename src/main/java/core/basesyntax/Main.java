@@ -12,7 +12,6 @@ public class Main {
         }
         for (int i = 0; i < figures.length; i++) {
             System.out.println("Figure: " + figures[i].getFigureInfo());
-            //System.out.println("Figure: " + x.getDefaultFigure().getFigureInfo());
         }
     }
 }

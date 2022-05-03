@@ -19,6 +19,6 @@ public class Rectangle extends Figure {
     public String getFigureInfo() {
         return "rectangle, area: " + getFigureArea()
             + " sq.units, height: " + height + " units, width: "
-            + width + " units, color: " + super.getColor();
+            + width + " units, color: " + getColor().toLowerCase();
     }
 }
