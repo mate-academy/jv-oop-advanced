@@ -9,7 +9,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public void toDraw() {
+    public void draw() {
         StringBuilder str = new StringBuilder("Figure: ");
         str.append("square").append(", ")
                 .append("area: ").append(side * side).append(" sq.units, ")

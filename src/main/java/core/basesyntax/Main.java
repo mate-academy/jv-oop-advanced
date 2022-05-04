@@ -15,7 +15,7 @@ public class Main {
         }
 
         for (Figure fig : figure) {
-            fig.toDraw();
+            fig.draw();
         }
     }
 }

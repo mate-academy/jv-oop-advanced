@@ -9,7 +9,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public void toDraw() {
+    public void draw() {
         StringBuilder str = new StringBuilder("Figure: ");
         str.append("circle").append(", ")
                 .append("area: ").append(Math.PI * radius * radius).append(" sq.units, ")

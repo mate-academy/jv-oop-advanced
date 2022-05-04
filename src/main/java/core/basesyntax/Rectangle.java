@@ -11,7 +11,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void toDraw() {
+    public void draw() {
         StringBuilder str = new StringBuilder("Figure: ");
         str.append("rectangle").append(", ")
                 .append("area: ").append(height * weight).append(" sq.units, ")

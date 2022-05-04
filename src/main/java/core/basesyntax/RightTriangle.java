@@ -11,7 +11,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void toDraw() {
+    public void draw() {
         StringBuilder str = new StringBuilder("Figure: ");
         str.append("right triangle").append(", ")
                 .append("area: ").append(firstLeg * secondLeg / 2).append(" sq.units, ")

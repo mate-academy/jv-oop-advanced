@@ -13,7 +13,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public void toDraw() {
+    public void draw() {
         StringBuilder str = new StringBuilder("Figure: ");
         str.append("isosceles trapezoid").append(", ")
                 .append("area: ").append(((topSide + bottomSide) / 2) * height)
