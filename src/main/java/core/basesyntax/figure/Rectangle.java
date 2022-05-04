@@ -1,8 +1,8 @@
 package core.basesyntax.figure;
 
-public class Rectangle extends Figure{
-    private  int sideA;
-    private  int sideB;
+public class Rectangle extends Figure {
+    private int sideA;
+    private int sideB;
 
     public Rectangle(String color, int sideA, int sideB) {
         super(color);
@@ -28,7 +28,7 @@ public class Rectangle extends Figure{
 
     @Override
     public double getArea() {
-        return sideA*sideB;
+        return sideA * sideB;
     }
 
     @Override

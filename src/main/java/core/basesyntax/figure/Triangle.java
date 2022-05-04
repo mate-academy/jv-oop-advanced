@@ -1,8 +1,8 @@
 package core.basesyntax.figure;
 
-public class Triangle extends Figure{
-    private  int firsLeg;
-    private  int secondLeg;
+public class Triangle extends Figure {
+    private int firsLeg;
+    private int secondLeg;
 
     public Triangle(String color, int firsLeg, int secondLeg) {
         super(color);
@@ -28,7 +28,7 @@ public class Triangle extends Figure{
 
     @Override
     public double getArea() {
-        return (firsLeg*secondLeg)/2;
+        return (firsLeg * secondLeg) / 2;
     }
 
     @Override
