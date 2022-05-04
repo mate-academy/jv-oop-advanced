@@ -7,7 +7,7 @@ public class RightTriangle extends Figure {
     public RightTriangle(int firstLeg, int secondLeg, String color) {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        super.setColor(color);
+        setColor(color);
     }
 
     @Override
