@@ -10,4 +10,6 @@ public abstract class Figure implements Drawing {
     public String getColor() {
         return color;
     }
+
+    public abstract double area();
 }
