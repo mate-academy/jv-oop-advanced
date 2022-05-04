@@ -8,7 +8,7 @@ public class FigureSupplier {
     private static final String DEFAULT_COLOR = "white";
     private static final int DEFAULT_SIDE = 10;
     private final Random random = new Random();
-    ColorSupplier randomColor = new ColorSupplier();
+    private ColorSupplier randomColor = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int randomFigure = random.nextInt(FIGURE_TYPES);
@@ -18,7 +18,7 @@ public class FigureSupplier {
             case (1):
                 return getRandomRectangle();
             case (2):
-                return  getRandomRightTriangle();
+                return getRandomRightTriangle();
             case (3):
                 return getRandomCircle();
             default:
