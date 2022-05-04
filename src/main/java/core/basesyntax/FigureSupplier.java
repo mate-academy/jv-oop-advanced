@@ -9,20 +9,20 @@ public class FigureSupplier {
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
-    private Circle getRandomCircle() {
+    public Circle getRandomCircle() {
         String color = colorSupplier.getRandomColor();
         int radius = random.nextInt(MAX_RANDOM_NUMBER);
         return new Circle(color, radius);
     }
 
-    private Rectangle getRandomRectangle() {
+    public Rectangle getRandomRectangle() {
         String color = colorSupplier.getRandomColor();
         int shortSide = random.nextInt(MAX_RANDOM_NUMBER);
         int longSide = random.nextInt(MAX_RANDOM_NUMBER);
         return new Rectangle(color, shortSide, longSide);
     }
 
-    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+    public IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
         String color = colorSupplier.getRandomColor();
         int topSide = random.nextInt(MAX_RANDOM_NUMBER);
         int longSide = random.nextInt(MAX_RANDOM_NUMBER);
@@ -30,14 +30,14 @@ public class FigureSupplier {
         return new IsoscelesTrapezoid(color, topSide, longSide, height);
     }
 
-    private RightTriangle getRandomRightTriangle() {
+    public RightTriangle getRandomRightTriangle() {
         String color = colorSupplier.getRandomColor();
         int firstLeg = random.nextInt(MAX_RANDOM_NUMBER);
         int secondLeg = random.nextInt(MAX_RANDOM_NUMBER);
         return new RightTriangle(color, firstLeg, secondLeg);
     }
 
-    private Square getRandomSquare() {
+    public Square getRandomSquare() {
         String color = colorSupplier.getRandomColor();
         int side = random.nextInt(MAX_RANDOM_NUMBER);
         return new Square(color, side);
