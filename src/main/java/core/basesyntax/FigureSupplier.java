@@ -28,6 +28,10 @@ public class FigureSupplier {
         }
     }
 
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
+    }
+
     private Figure getRandomCircle() {
         return new Circle(colorSupplier.getRandomColor(),
                 getRandomDimension());
@@ -51,10 +55,6 @@ public class FigureSupplier {
     private Figure getRandomSquare() {
         return new Square(colorSupplier.getRandomColor(),
                 getRandomDimension());
-    }
-
-    public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
     private int getRandomDimension() {
