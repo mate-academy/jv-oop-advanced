@@ -3,12 +3,12 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final Random random = new Random();
+    private final Random random = new Random();
     private static final int MAX_VALUE = 20;
     private static final int NUMBER_OF_FIGURES = 5;
     private static final String DEFAULT_COLOR = "WHITE";
     private static final int DEFAULT_RADIUS = 10;
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int numFigure = random.nextInt(NUMBER_OF_FIGURES);
@@ -32,22 +32,27 @@ public class FigureSupplier {
         return new Circle(colorSupplier.getRandomColor(),
                 getRandomDimension());
     }
+
     private Figure getRandomRectangle() {
         return new Rectangle(colorSupplier.getRandomColor(),
                 getRandomDimension(), getRandomDimension());
     }
+
     private Figure getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                 getRandomDimension(), getRandomDimension(), getRandomDimension());
     }
+
     private Figure getRandomRightTriangle() {
         return new RightTriangle(colorSupplier.getRandomColor(),
                 getRandomDimension(), getRandomDimension());
     }
+
     private Figure getRandomSquare() {
         return new Square(colorSupplier.getRandomColor(),
                 getRandomDimension());
     }
+
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }

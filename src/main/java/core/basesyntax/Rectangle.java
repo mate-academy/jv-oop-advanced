@@ -12,9 +12,9 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + area() + " sq.units, " +
-                "height: " + height + " units, weight: " + weight + " units, " +
-                "color: " + getColor());
+        System.out.println("Figure: rectangle, area: " + area() + " sq.units, "
+                + "height: " + height + " units, weight: " + weight + " units, "
+                + "color: " + getColor());
     }
 
     @Override
