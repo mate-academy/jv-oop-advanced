@@ -11,13 +11,13 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double getFigureArea() { 
+    public double getArea() {
         return height * width; 
     }
 
     @Override
-    public String getFigureInfo() {
-        return "rectangle, area: " + getFigureArea()
+    public String draw() {
+        return "rectangle, area: " + getArea()
             + " sq.units, height: " + height + " units, width: "
             + width + " units, color: " + getColor().toLowerCase();
     }

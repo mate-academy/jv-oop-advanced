@@ -13,12 +13,12 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double getFigureArea() {
+    public double getArea() {
         return height * (top + bottom) / 2;
     }
 
-    public String getFigureInfo() {
-        return "isosceles trapezoid, area: " + getFigureArea()
+    public String draw() {
+        return "isosceles trapezoid, area: " + getArea()
             + " sq.units, height: " + height + " units, top: " + top + " units, bottom: "
             + bottom + " units, color: " + getColor().toLowerCase();
     }

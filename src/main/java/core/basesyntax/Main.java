@@ -11,7 +11,7 @@ public class Main {
             figures[i + figures.length / 2] = figureSupplier.getDefaultFigure();
         }
         for (int i = 0; i < figures.length; i++) {
-            System.out.println("Figure: " + figures[i].getFigureInfo());
+            System.out.println("Figure: " + figures[i].draw());
         }
     }
 }
