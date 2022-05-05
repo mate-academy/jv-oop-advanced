@@ -1,18 +1,18 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    private double a;
+    private double lateral;
 
-    public Square(Colors color, double a) {
+    public Square(Colors color, double lateral) {
         super(color);
-        this.a = a;
+        this.lateral = lateral;
     }
 
     public double getArea() {
-        return a * a;
+        return lateral * lateral;
     }
 
     public double getA() {
-        return a;
+        return lateral;
     }
 }

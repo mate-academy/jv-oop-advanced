@@ -1,27 +1,29 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private double a, b, c;
-    public IsoscelesTrapezoid(double a, double b, double c, Colors color) {//a,b - trapezoid base; c - lateral trapezoid;
+    private double firstbase;
+    private double secondbase;
+    private double lateral;
+    public IsoscelesTrapezoid(double firstbase, double secondbase, double lateral, Colors color) {//a,b - trapezoid base; c - lateral trapezoid;
         super(color);
-        this.a = a;
-        this.b = b;
-        this.c = c;
+        this.firstbase = firstbase;
+        this.secondbase = secondbase;
+        this.lateral = lateral;
     }
 
     public double getArea() {
-        return (a + b) * Math.sqrt(Math.pow(c, 2) - Math.pow(a - b, 2) / 4) / 2;
+        return (firstbase + secondbase) * Math.sqrt(Math.pow(lateral, 2) - Math.pow(firstbase - secondbase, 2) / 4) / 2;
     }
 
     public double getA() {
-        return a;
+        return firstbase;
     }
 
     public double getB() {
-        return b;
+        return secondbase;
     }
 
     public double getC() {
-        return c;
+        return lateral;
     }
 }

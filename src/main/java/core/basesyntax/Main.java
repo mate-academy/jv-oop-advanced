@@ -1,8 +1,5 @@
 package core.basesyntax;
 
-import javax.swing.plaf.IconUIResource;
-import java.util.Random;
-
 public class Main {
     public static void main(String[] args) {
         Figure[] arrfigure = new Figure[6];

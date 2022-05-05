@@ -1,23 +1,24 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private double a, b;
+    private double first;
+    private double second;
 
-    public Rectangle(Colors color, double a, double b) {
+    public Rectangle(Colors color, double first, double second) {
         super(color);
-        this.a = a;
-        this.b = b;
+        this.first = first;
+        this.second = second;
     }
 
     public double getArea() {
-        return a * b;
+        return first * second;
     }
 
     public double getA() {
-        return a;
+        return first;
     }
 
     public double getB() {
-        return b;
+        return second;
     }
 }
