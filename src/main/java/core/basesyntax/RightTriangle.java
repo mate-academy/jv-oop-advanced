@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure {
+public class RightTriangle extends Figures {
     private double firstLeg;
     private double secondLeg;
-    
+
     public RightTriangle(double firstLeg, double secondLeg, double c, Colors color) {
         super(color);
         this.firstLeg = firstLeg;

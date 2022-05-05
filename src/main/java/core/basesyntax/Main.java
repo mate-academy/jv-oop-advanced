@@ -2,62 +2,62 @@ package core.basesyntax;
 
 public class Main {
     public static void main(String[] args) {
-        Figure[] arrfigure = new Figure[6];
+        Figures[] arrfigure = new Figures[6];
         for (int i = 0; i < 3; i++) {
             arrfigure[i] = FigureSupplier.getRandomFigure();
         }
         for (int i = 3; i < 6; i++) {
             arrfigure[i] = FigureSupplier.getDefaultFigure();
         }
-        for (Figure figure: arrfigure) {
+        for (Figures figures : arrfigure) {
             StringBuilder line = new StringBuilder();
-            if (figure.getClass() == Square.class) {
+            if (figures.getClass() == Square.class) {
                 line.append("Figure: square, area: ")
-                        .append(String.format("%(.1f", figure.getArea()))
+                        .append(String.format("%(.1f", figures.getArea()))
                         .append(" sq.units, side: ")
-                        .append(((Square) figure).getA())
+                        .append(((Square) figures).getA())
                         .append(" units, color: ")
-                        .append(figure.getColor());
+                        .append(figures.getColor());
             }
-            if (figure.getClass() == Rectangle.class) {
+            if (figures.getClass() == Rectangle.class) {
                 line.append("Figure: rectangle, area: ")
-                        .append(String.format("%(.1f", figure.getArea()))
+                        .append(String.format("%(.1f", figures.getArea()))
                         .append(" sq.units, side a: ")
-                        .append(((Rectangle) figure).getA())
+                        .append(((Rectangle) figures).getA())
                         .append(" units, side b: ")
-                        .append(((Rectangle) figure).getB())
+                        .append(((Rectangle) figures).getB())
                         .append(" units, color: ")
-                        .append(figure.getColor());
+                        .append(figures.getColor());
             }
-            if (figure.getClass() == RightTriangle.class) {
+            if (figures.getClass() == RightTriangle.class) {
                 line.append("Figure: triangle, area: ")
-                        .append(String.format("%(.1f", figure.getArea()))
+                        .append(String.format("%(.1f", figures.getArea()))
                         .append(" sq.units, firstLeg: ")
-                        .append(((RightTriangle) figure).getFirstLeg())
+                        .append(((RightTriangle) figures).getFirstLeg())
                         .append(" units, secondLeg: ")
-                        .append(((RightTriangle) figure).getSecondLeg())
+                        .append(((RightTriangle) figures).getSecondLeg())
                         .append(" units, color: ")
-                        .append(figure.getColor());
+                        .append(figures.getColor());
             }
-            if (figure.getClass() == Circle.class) {
+            if (figures.getClass() == Circle.class) {
                 line.append("Figure: circle, area: ")
-                        .append(String.format("%(.1f", figure.getArea()))
+                        .append(String.format("%(.1f", figures.getArea()))
                         .append(" sq.units, radius: ")
-                        .append(((Circle) figure).getRadius())
+                        .append(((Circle) figures).getRadius())
                         .append(" units, color: ")
-                        .append(figure.getColor());
+                        .append(figures.getColor());
             }
-            if (figure.getClass() == IsoscelesTrapezoid.class) {
+            if (figures.getClass() == IsoscelesTrapezoid.class) {
                 line.append("Figure: trapesoid, area: ")
-                        .append(String.format("%(.1f", figure.getArea()))
+                        .append(String.format("%(.1f", figures.getArea()))
                         .append(" sq.units, a: ")
-                        .append(((IsoscelesTrapezoid) figure).getA())
+                        .append(((IsoscelesTrapezoid) figures).getA())
                         .append(" units, b: ")
-                        .append(((IsoscelesTrapezoid) figure).getB())
+                        .append(((IsoscelesTrapezoid) figures).getB())
                         .append(" units, c: ")
-                        .append(((IsoscelesTrapezoid) figure).getC())
+                        .append(((IsoscelesTrapezoid) figures).getC())
                         .append(" units, color: ")
-                        .append(figure.getColor());
+                        .append(figures.getColor());
             }
             System.out.println(line.toString());
         }

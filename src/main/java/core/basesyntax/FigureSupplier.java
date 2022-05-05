@@ -3,8 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static Figure getRandomFigure() {
-        Figure figure;
+    public static Figures getRandomFigure() {
+        Figures figures;
         switch (new Random().nextInt(5)) {
             case 0:
                 return new Square(ColorSupplier.getRandomColor(),
@@ -36,7 +36,7 @@ public class FigureSupplier {
         return null;
     }
 
-    public static Figure getDefaultFigure() {
+    public static Figures getDefaultFigure() {
         return new Circle(10, Colors.white);
     }
 }
