@@ -1,11 +1,10 @@
 package core.basesyntax;
 
-public class Circle implements Figures {
-    private Colors color;
+public class Circle extends Figures {
     private double radius;
 
     public Circle(double radius, Colors color) {
-        this.color = color;
+        super(color);
         this.radius = radius;
     }
 
@@ -16,10 +15,5 @@ public class Circle implements Figures {
 
     public double getRadius() {
         return radius;
-    }
-
-    @Override
-    public Colors getColor() {
-        return color;
     }
 }

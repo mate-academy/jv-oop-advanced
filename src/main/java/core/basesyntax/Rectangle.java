@@ -1,19 +1,13 @@
 package core.basesyntax;
 
-public class Rectangle implements Figures {
+public class Rectangle extends Figures {
     private double first;
     private double second;
-    private Colors color;
 
     public Rectangle(Colors color, double first, double second) {
-        this.color = color;
+        super(color);
         this.first = first;
         this.second = second;
-    }
-
-    @Override
-    public Colors getColor() {
-        return color;
     }
 
     @Override

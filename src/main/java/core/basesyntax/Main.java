@@ -2,14 +2,14 @@ package core.basesyntax;
 
 public class Main {
     public static void main(String[] args) {
-        Figures[] arrfigure = new Figures[6];
+        Figure[] arrfigure = new Figure[6];
         for (int i = 0; i < 3; i++) {
             arrfigure[i] = FigureSupplier.getRandomFigure();
         }
         for (int i = 3; i < 6; i++) {
             arrfigure[i] = FigureSupplier.getDefaultFigure();
         }
-        for (Figures figures : arrfigure) {
+        for (Figure figures : arrfigure) {
             StringBuilder line = new StringBuilder();
             if (figures.getClass() == Square.class) {
                 line.append("Figure: square, area: ")

@@ -1,7 +1,17 @@
 package core.basesyntax;
 
-interface Figures {
-    public double getArea();
+abstract class Figures implements Figure{
+    private Colors color;
 
-    public Colors getColor();
+    public Figures(Colors color) {
+        this.color = color;
+    }
+
+    @Override
+    public abstract double getArea();
+
+    @Override
+    public Colors getColor() {
+        return color;
+    }
 }

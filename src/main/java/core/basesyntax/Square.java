@@ -1,17 +1,11 @@
 package core.basesyntax;
 
-public class Square implements Figures {
+public class Square extends Figures {
     private double lateral;
-    private Colors color;
 
     public Square(Colors color, double lateral) {
-        this.color = color;
+        super(color);
         this.lateral = lateral;
-    }
-
-    @Override
-    public Colors getColor() {
-        return color;
     }
 
     @Override
