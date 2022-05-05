@@ -1,7 +1,11 @@
 package core.basesyntax;
 
 public abstract class Figure {
-    public Colors color;
+    private Colors color;
+
+    public Figure(Colors color) {
+        this.color = color;
+    }
 
     public abstract double getArea();
 

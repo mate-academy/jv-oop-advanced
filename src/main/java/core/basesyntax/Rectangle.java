@@ -4,9 +4,9 @@ public class Rectangle extends Figure {
     private double a, b;
 
     public Rectangle(Colors color, double a, double b) {
+        super(color);
         this.a = a;
         this.b = b;
-        this.color = color;
     }
 
     public double getArea() {
@@ -19,9 +19,5 @@ public class Rectangle extends Figure {
 
     public double getB() {
         return b;
-    }
-
-    public Colors getColor() {
-        return color;
     }
 }

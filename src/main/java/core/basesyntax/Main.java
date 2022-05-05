@@ -6,15 +6,15 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         Figure[] arrfigure = new Figure[6];
-        for(int i = 0; i < 3; i++) {
+        for (int i = 0; i < 3; i++) {
             arrfigure[i] = FigureSupplier.getRandomFigure();
         }
-        for(int i = 3; i < 6; i++) {
+        for (int i = 3; i < 6; i++) {
             arrfigure[i] = FigureSupplier.getDefaultFigure();
         }
-        for(Figure figure: arrfigure) {
+        for (Figure figure: arrfigure) {
             StringBuilder line = new StringBuilder();
-            if(figure.getClass() == Square.class) {
+            if (figure.getClass() == Square.class) {
                 line.append("Figure: square, area: ")
                         .append(String.format("%(.1f", figure.getArea()))
                         .append(" sq.units, side: ")
@@ -22,7 +22,7 @@ public class Main {
                         .append(" units, color: ")
                         .append(figure.getColor());
             }
-            if(figure.getClass() == Rectangle.class) {
+            if (figure.getClass() == Rectangle.class) {
                 line.append("Figure: rectangle, area: ")
                         .append(String.format("%(.1f", figure.getArea()))
                         .append(" sq.units, side a: ")
@@ -32,7 +32,7 @@ public class Main {
                         .append(" units, color: ")
                         .append(figure.getColor());
             }
-            if(figure.getClass() == RightTriangle.class) {
+            if (figure.getClass() == RightTriangle.class) {
                 line.append("Figure: triangle, area: ")
                         .append(String.format("%(.1f", figure.getArea()))
                         .append(" sq.units, firstLeg: ")
@@ -42,7 +42,7 @@ public class Main {
                         .append(" units, color: ")
                         .append(figure.getColor());
             }
-            if(figure.getClass() == Circle.class) {
+            if (figure.getClass() == Circle.class) {
                 line.append("Figure: circle, area: ")
                         .append(String.format("%(.1f", figure.getArea()))
                         .append(" sq.units, radius: ")
@@ -50,7 +50,7 @@ public class Main {
                         .append(" units, color: ")
                         .append(figure.getColor());
             }
-            if(figure.getClass() == IsoscelesTrapezoid.class) {
+            if (figure.getClass() == IsoscelesTrapezoid.class) {
                 line.append("Figure: trapesoid, area: ")
                         .append(String.format("%(.1f", figure.getArea()))
                         .append(" sq.units, a: ")

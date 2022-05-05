@@ -3,10 +3,10 @@ package core.basesyntax;
 public class IsoscelesTrapezoid extends Figure {
     private double a, b, c;
     public IsoscelesTrapezoid(double a, double b, double c, Colors color) {//a,b - trapezoid base; c - lateral trapezoid;
+        super(color);
         this.a = a;
         this.b = b;
         this.c = c;
-        this.color = color;
     }
 
     public double getArea() {
@@ -23,9 +23,5 @@ public class IsoscelesTrapezoid extends Figure {
 
     public double getC() {
         return c;
-    }
-
-    public Colors getColor() {
-        return color;
     }
 }

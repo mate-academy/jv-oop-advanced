@@ -3,9 +3,9 @@ package core.basesyntax;
 public class RightTriangle extends Figure {
     private double firstLeg, secondLeg;
     public RightTriangle(double firstLeg, double secondLeg, double c, Colors color) {
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        this.color = color;
     }
 
     public double getArea() {
@@ -18,9 +18,5 @@ public class RightTriangle extends Figure {
 
     public double getSecondLeg() {
         return secondLeg;
-    }
-
-    public Colors getColor() {
-        return color;
     }
 }
