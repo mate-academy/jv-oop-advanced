@@ -1,15 +1,7 @@
 package core.basesyntax;
 
-public abstract class Figures {
-    private Colors color;
+interface Figures {
+    public double getArea();
 
-    public Figures(Colors color) {
-        this.color = color;
-    }
-
-    public abstract double getArea();
-
-    public Colors getColor() {
-        return color;
-    }
+    public Colors getColor();
 }
