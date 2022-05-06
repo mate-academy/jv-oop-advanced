@@ -16,7 +16,6 @@ public class FigureSupplier {
             case 2:
                 int deg = new Random().nextInt(90) + 1;
                 return new RightTriangle(deg, 90 - deg,
-                        new Random().nextInt(100),
                         ColorSupplier.getRandomColor());
             case 3:
                 return new Circle(new Random().nextInt(50),
