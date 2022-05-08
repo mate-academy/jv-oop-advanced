@@ -4,13 +4,14 @@ public class Rectangle extends Figure {
     private int side1;
     private int side2;
 
-    public Rectangle(int side1, int side2) {
+    public Rectangle(int side1, int side2, String color) {
         this.side1 = side1;
         this.side2 = side2;
+        super.setColor(color);
     }
 
     @Override
-    public String getInfo() {
+    public void draw() {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("Figure: rectangle, area: ");
         stringBuilder.append(getArea());
@@ -20,7 +21,7 @@ public class Rectangle extends Figure {
         stringBuilder.append(side2);
         stringBuilder.append(" units, color: ");
         stringBuilder.append(getColor());
-        return stringBuilder.toString();
+        System.out.println(stringBuilder.toString());
     }
 
     @Override

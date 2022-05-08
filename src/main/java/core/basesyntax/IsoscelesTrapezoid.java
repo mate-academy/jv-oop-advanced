@@ -5,14 +5,15 @@ public class IsoscelesTrapezoid extends Figure {
     private int bottomBase;
     private int height;
 
-    public IsoscelesTrapezoid(int topBase, int bottomBase, int height) {
+    public IsoscelesTrapezoid(int topBase, int bottomBase, int height, String color) {
         this.topBase = topBase;
         this.bottomBase = bottomBase;
         this.height = height;
+        super.setColor(color);
     }
 
     @Override
-    public String getInfo() {
+    public void draw() {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("Figure: isosceles trapezoid, area: ");
         stringBuilder.append(getArea());
@@ -24,7 +25,7 @@ public class IsoscelesTrapezoid extends Figure {
         stringBuilder.append(height);
         stringBuilder.append(" units, color: ");
         stringBuilder.append(getColor());
-        return stringBuilder.toString();
+        System.out.println(stringBuilder.toString());
     }
 
     @Override

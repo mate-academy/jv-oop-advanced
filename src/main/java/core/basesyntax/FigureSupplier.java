@@ -3,42 +3,40 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    public static final int CIRCLE_DEFAULT_RADIUS = 10;
+    public static final int MAX_FIGURE_COUNT = 5;
+    public static final int MAX_LENGTH = 100;
+    private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        Random random = new Random();
-        ColorSupplier colorSupplier = new ColorSupplier();
-        int figureNumber = random.nextInt(4);
-        if (figureNumber == 0) {
-            Circle circle = new Circle(random.nextInt(100));
-            circle.setColor(colorSupplier.getRandomColor());
+        int randomFigureIndex = random.nextInt(MAX_FIGURE_COUNT);
+        if (randomFigureIndex == 0) {
+            Circle circle = new Circle(random.nextInt(MAX_LENGTH), colorSupplier.getRandomColor());
             return circle;
-        } else if (figureNumber == 1) {
-            Square square = new Square(random.nextInt(100));
-            square.setColor(colorSupplier.getRandomColor());
+        } else if (randomFigureIndex == 1) {
+            Square square = new Square(random.nextInt(MAX_LENGTH), colorSupplier.getRandomColor());
             return square;
-        } else if (figureNumber == 2) {
-            RightTriangle rightTriangle = new RightTriangle(random.nextInt(100),
-                                                            random.nextInt(100));
-            rightTriangle.setColor(colorSupplier.getRandomColor());
+        } else if (randomFigureIndex == 2) {
+            RightTriangle rightTriangle = new RightTriangle(random.nextInt(MAX_LENGTH),
+                                                            random.nextInt(MAX_LENGTH),
+                                                            colorSupplier.getRandomColor());
             return rightTriangle;
-        } else if (figureNumber == 3) {
-            Rectangle rectangle = new Rectangle(random.nextInt(100),
-                    random.nextInt(100));
-            rectangle.setColor(colorSupplier.getRandomColor());
+        } else if (randomFigureIndex == 3) {
+            Rectangle rectangle = new Rectangle(random.nextInt(MAX_LENGTH),
+                    random.nextInt(MAX_LENGTH),
+                    colorSupplier.getRandomColor());
             return rectangle;
-        } else if (figureNumber == 4) {
-            IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(random.nextInt(100),
-                    random.nextInt(100),
-                    random.nextInt(100));
-            isoscelesTrapezoid.setColor(colorSupplier.getRandomColor());
-            return isoscelesTrapezoid;
         }
-        return getDefaultFigure();
+        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(random.nextInt(MAX_LENGTH),
+                    random.nextInt(MAX_LENGTH),
+                    random.nextInt(MAX_LENGTH),
+                    colorSupplier.getRandomColor());
+        return isoscelesTrapezoid;
     }
 
     public Figure getDefaultFigure() {
-        Circle figure = new Circle(10);
-        figure.setColor(Color.WHITE.toString());
-        return figure;
+        Circle circle = new Circle(CIRCLE_DEFAULT_RADIUS, Color.WHITE.toString());
+        return circle;
     }
 }
