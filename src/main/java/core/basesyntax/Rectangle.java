@@ -31,7 +31,7 @@ public class Rectangle extends Figure {
         return firstSide * secondSide;
     }
 
-    public void toDraw() {
+    public void draw() {
         System.out.println("Figure: rectangle, area: " + getArea()
                 + " sq.units, first side: " + getFirstSide()
                 + " units, second side: " + getSecondSide()

@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private final Round round = new Round();
     private int topSide;
     private int bottomSide;
     private int trapezoidHeight;
@@ -39,10 +38,10 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double getArea() {
-        return round.toRound(((double) (topSide + bottomSide) / 2) * trapezoidHeight);
+        return ((double) (topSide + bottomSide) / 2) * trapezoidHeight;
     }
 
-    public void toDraw() {
+    public void draw() {
         System.out.println("Figure: isosceles trapezoid, area: " + getArea()
                 + " sq.units, top side: " + getTopSide() + " units, bottom side: "
                 + getBottomSide() + ", trapezoid height: "

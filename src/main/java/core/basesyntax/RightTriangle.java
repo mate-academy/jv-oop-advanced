@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private final Round round = new Round();
     private int firstLeg;
     private int secondLeg;
 
@@ -29,10 +28,10 @@ public class RightTriangle extends Figure {
 
     @Override
     public double getArea() {
-        return round.toRound((double) (firstLeg * secondLeg) / 2);
+        return ((double) (firstLeg * secondLeg) / 2);
     }
 
-    public void toDraw() {
+    public void draw() {
         System.out.println("Figure: right triangle, area: " + getArea()
                 + " sq.units, first leg: " + getFirstLeg()
                 + " units, second leg: " + getSecondLeg()
