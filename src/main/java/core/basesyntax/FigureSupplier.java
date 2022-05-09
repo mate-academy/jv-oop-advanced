@@ -4,39 +4,33 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int CIRCLE_DEFAULT_RADIUS = 10;
-    public static final int MAX_FIGURE_COUNT = 5;
-    public static final int MAX_LENGTH = 100;
+    public static final int FIGURES_NUMBER = 5;
+    public static final int MAX_RANDOM_NUMBER = 100;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int randomFigureIndex = random.nextInt(MAX_FIGURE_COUNT);
+        int randomFigureIndex = random.nextInt(FIGURES_NUMBER);
         if (randomFigureIndex == 0) {
-            Circle circle = new Circle(random.nextInt(MAX_LENGTH), colorSupplier.getRandomColor());
-            return circle;
+            return new Circle(random.nextInt(MAX_RANDOM_NUMBER), colorSupplier.getRandomColor());
         } else if (randomFigureIndex == 1) {
-            Square square = new Square(random.nextInt(MAX_LENGTH), colorSupplier.getRandomColor());
-            return square;
+            return new Square(random.nextInt(MAX_RANDOM_NUMBER), colorSupplier.getRandomColor());
         } else if (randomFigureIndex == 2) {
-            RightTriangle rightTriangle = new RightTriangle(random.nextInt(MAX_LENGTH),
-                                                            random.nextInt(MAX_LENGTH),
-                                                            colorSupplier.getRandomColor());
-            return rightTriangle;
+            return new RightTriangle(random.nextInt(MAX_RANDOM_NUMBER),
+                    random.nextInt(MAX_RANDOM_NUMBER),
+                    colorSupplier.getRandomColor());
         } else if (randomFigureIndex == 3) {
-            Rectangle rectangle = new Rectangle(random.nextInt(MAX_LENGTH),
-                    random.nextInt(MAX_LENGTH),
+            return new Rectangle(random.nextInt(MAX_RANDOM_NUMBER),
+                    random.nextInt(MAX_RANDOM_NUMBER),
                     colorSupplier.getRandomColor());
-            return rectangle;
         }
-        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(random.nextInt(MAX_LENGTH),
-                    random.nextInt(MAX_LENGTH),
-                    random.nextInt(MAX_LENGTH),
-                    colorSupplier.getRandomColor());
-        return isoscelesTrapezoid;
+        return new IsoscelesTrapezoid(random.nextInt(MAX_RANDOM_NUMBER),
+                random.nextInt(MAX_RANDOM_NUMBER),
+                random.nextInt(MAX_RANDOM_NUMBER),
+                colorSupplier.getRandomColor());
     }
 
     public Figure getDefaultFigure() {
-        Circle circle = new Circle(CIRCLE_DEFAULT_RADIUS, Color.WHITE.toString());
-        return circle;
+        return new Circle(CIRCLE_DEFAULT_RADIUS, Color.WHITE.toString());
     }
 }
