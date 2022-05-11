@@ -30,7 +30,7 @@ public class FigureSupplier {
             case 3 :
                 color = colorSupplier.getColorSupplier();
                 sideA = random.nextInt(100);
-                return new IsoscelesTriangle(color,sideA);
+                return new RightTriangle(color,sideA);
             default :
                 color = colorSupplier.getColorSupplier();
                 sideA = random.nextInt(100);
