@@ -16,7 +16,7 @@ import org.junit.Test;
 
 public class StructureTest {
   private static final List<String> figureClassNames = List
-      .of("Circle", "Square", "IsoscelesTrapezoid", "Rectangle", "RightTriangle");
+          .of("Circle", "Square", "IsoscelesTrapezoid", "Rectangle", "RightTriangle");
   private static List<Class> allClasses = new ArrayList<>();
 
   @BeforeClass
@@ -25,7 +25,7 @@ public class StructureTest {
       allClasses = getClasses("core.basesyntax");
       if (allClasses.size() == 0) {
         Assert.fail("You should not rename base core.basesyntax package "
-            + "and project name should not contain spaces");
+                + "and project name should not contain spaces");
       }
     } catch (Exception e) {
       throw new RuntimeException("Could not load classes ", e);
