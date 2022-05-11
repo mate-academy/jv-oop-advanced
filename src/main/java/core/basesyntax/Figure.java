@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements Drawing {
+public abstract class Figure implements Drawable, Calculable {
     private final String color;
 
     public Figure(String color) {
@@ -10,6 +10,4 @@ public abstract class Figure implements Drawing {
     public String getColor() {
         return color;
     }
-
-    public abstract double area(); //to make new commit
 }
