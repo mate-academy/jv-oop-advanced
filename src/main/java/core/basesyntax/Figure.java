@@ -11,5 +11,5 @@ public abstract class Figure implements Drawing {
         return color;
     }
 
-    public abstract double area();
+    public abstract double area(); //to make new commit
 }
