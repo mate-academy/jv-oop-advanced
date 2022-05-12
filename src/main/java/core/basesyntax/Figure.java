@@ -5,11 +5,8 @@ public abstract class Figure {
     private String name;
 
     abstract double area();
-    abstract void draw();
 
-    public Figure(String color) {
-        this.color = color;
-    }
+    abstract void draw();
 
     public String getColor() {
         return color;
@@ -25,5 +22,9 @@ public abstract class Figure {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Figure(String color) {
+        this.color = color;
     }
 }
