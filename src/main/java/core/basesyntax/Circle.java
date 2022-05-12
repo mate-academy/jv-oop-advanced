@@ -10,14 +10,14 @@ public class Circle extends Figure {
     }
 
     @Override
-    double area() {
-        return Math.PI * radius * radius;
+    public void draw() {
+        System.out.println("Figure: " + this.getName() + ", area: "
+                + String.format("%.2f",this.getArea()) + " sq.units, radius: "
+                + String.format("%.2f",radius) + " units, color: " + getColor());
     }
 
     @Override
-    void draw() {
-        System.out.println("Figure: " + this.getName() + ", area: "
-                + String.format("%.2f",this.area()) + " sq.units, radius: "
-                + String.format("%.2f",radius) + " units, color: " + getColor());
+    public double getArea() {
+        return Math.PI * radius * radius;
     }
 }

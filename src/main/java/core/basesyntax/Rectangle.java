@@ -12,14 +12,14 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    double area() {
+    public double getArea() {
         return sideB * sideA;
     }
 
     @Override
-    void draw() {
+    public void draw() {
         System.out.println("Figure: " + getName() + ", area: "
-                + String.format("%.2f",this.area()) + " sq.units, side A: "
+                + String.format("%.2f",this.getArea()) + " sq.units, side A: "
                 + String.format("%.2f", sideA) + " units, side B: "
                 + String.format("%.2f", sideB) + " units, color: " + getColor());
     }
