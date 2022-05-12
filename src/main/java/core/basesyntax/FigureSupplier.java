@@ -3,8 +3,19 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private ColorSupplier colorSupplier = new ColorSupplier();
+    
+    public Figure getDefaultFigure() {
+        return new Circle(10, "White");
+    }
 
+    public ColorSupplier getColorSupplier() {
+        return colorSupplier;
+    }
+
+    public void setColorSupplier(ColorSupplier colorSupplier) {
+        this.colorSupplier = colorSupplier;
+    }
 
     public Figure getRandomFigure() {
         int index = new Random().nextInt(Figures.values().length);
@@ -26,9 +37,5 @@ public class FigureSupplier {
                 return new IsoscelesTrapezoid(sideA, sideB, sideC, color);
 
         }
-    }
-
-    public Figure getDefaultFigure() {
-        return new Circle(10, "White");
     }
 }
