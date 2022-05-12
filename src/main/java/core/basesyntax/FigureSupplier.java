@@ -9,9 +9,9 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         int index = new Random().nextInt(Figures.values().length);
         String color = colorSupplier.getRandomColor();
-        double sideA = new Random().nextDouble(100.0);
-        double sideB = new Random().nextDouble(100.0);
-        double sideC = new Random().nextDouble(100.0);
+        double sideA = new Random().nextInt(100);
+        double sideB = new Random().nextInt(100);
+        double sideC = new Random().nextInt(100);
         switch (Figures.values()[index]) {
             case SQUARE:
                 return new Square(sideA, color);
