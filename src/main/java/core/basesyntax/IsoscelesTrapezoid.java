@@ -6,6 +6,15 @@ public class IsoscelesTrapezoid extends Figure {
     private final double leg;
     private final double height;
 
+    public IsoscelesTrapezoid(double sideA, double sideB, double leg, String color) {
+        super(color);
+        this.sideA = sideA;
+        this.sideB = sideB;
+        this.leg = leg;
+        this.setName("Isosceles Trapezoid");
+        this.height = this.heightCalculate(sideA, sideB, leg);
+    }
+
     //This method calculates the height of Isosceles Trapezoid.
     private double heightCalculate(double a, double b, double c) {
 
@@ -14,15 +23,6 @@ public class IsoscelesTrapezoid extends Figure {
         } else {
             return 0.5 * Math.sqrt((4 * c * 4 * c) - (b - a) * (b - a));
         }
-    }
-
-    public IsoscelesTrapezoid(double sideA, double sideB, double leg, String color) {
-        super(color);
-        this.sideA = sideA;
-        this.sideB = sideB;
-        this.leg = leg;
-        this.setName("Isosceles Trapezoid");
-        this.height = this.heightCalculate(sideA, sideB, leg);
     }
 
     @Override
