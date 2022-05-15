@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-import core.basesyntax.Suppliers.AreaSupplier;
+import core.basesyntax.suppliers.AreaSupplier;
 
 public class Figure {
     private String figureName;

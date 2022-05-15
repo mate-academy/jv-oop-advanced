@@ -1,7 +1,7 @@
-package core.basesyntax.Figures;
+package core.basesyntax.figures;
 
 import core.basesyntax.Figure;
-import core.basesyntax.Suppliers.AreaSupplier;
+import core.basesyntax.suppliers.AreaSupplier;
 
 public class RightTriangle extends Figure {
     @Override

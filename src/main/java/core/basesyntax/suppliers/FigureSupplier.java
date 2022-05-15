@@ -1,6 +1,6 @@
-package core.basesyntax.Suppliers;
+package core.basesyntax.suppliers;
 
-import core.basesyntax.EnumClass.NameOfFigure;
+import core.basesyntax.enums.NameOfFigure;
 import java.util.Random;
 
 public class FigureSupplier {

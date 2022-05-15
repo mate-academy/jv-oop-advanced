@@ -1,6 +1,6 @@
-package core.basesyntax.Suppliers;
+package core.basesyntax.suppliers;
 
-import core.basesyntax.EnumClass.ColorOfFigure;
+import core.basesyntax.enums.ColorOfFigure;
 import java.util.Random;
 
 public class ColorSupplier {

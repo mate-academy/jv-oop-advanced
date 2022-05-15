@@ -1,4 +1,4 @@
-package core.basesyntax.EnumClass;
+package core.basesyntax.enums;
 
 public enum NameOfFigure {
     CIRCLE,

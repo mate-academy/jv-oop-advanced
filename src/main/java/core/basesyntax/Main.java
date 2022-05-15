@@ -1,9 +1,13 @@
 package core.basesyntax;
 
-import core.basesyntax.Figures.*;
-import core.basesyntax.Suppliers.AreaSupplier;
-import core.basesyntax.Suppliers.ColorSupplier;
-import core.basesyntax.Suppliers.FigureSupplier;
+import core.basesyntax.figures.Circle;
+import core.basesyntax.figures.IsoscelesTrapezoid;
+import core.basesyntax.figures.Rectangle;
+import core.basesyntax.figures.RightTriangle;
+import core.basesyntax.figures.Square;
+import core.basesyntax.suppliers.AreaSupplier;
+import core.basesyntax.suppliers.ColorSupplier;
+import core.basesyntax.suppliers.FigureSupplier;
 
 public class Main {
     public static void main(String[] args) {
