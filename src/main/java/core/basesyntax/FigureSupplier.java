@@ -7,6 +7,7 @@ public class FigureSupplier {
     public static final int FIGURE_MAX_SIZE = 10;
     private Random random = new Random();
     private ColorSupplier supplier = new ColorSupplier();
+
     public Figure getRandomFigure() {
         Color color = supplier.getRandomColor();
         switch (random.nextInt(FIGURE_COUNT)) {
