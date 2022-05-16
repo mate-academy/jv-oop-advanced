@@ -1,16 +1,16 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public class Main {
     public static void main(String[] args) {
-        FigureSupplier figureSupplier = new FigureSupplier();
-        Figure[] figures = new Figure[6];
-        for (int i = 0; i < figures.length; i++) {
+        FigureSupplier figureSupplier = new FigureSupplier(new ColorSupplier(new Random()));
+        for (int i = 0; i < 6; i++) {
             if (i < 4) {
-                figures[i] = figureSupplier.getRandomFigure();
+                figureSupplier.getRandomFigure().draw();
             } else {
-                figures[i] = figureSupplier.getDefaultFigure();
+                figureSupplier.getDefaultFigure().draw();
             }
-            figures[i].draw();
         }
     }
 }
