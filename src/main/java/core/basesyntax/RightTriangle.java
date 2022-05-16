@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private static final String name = "triangle";
+    private static final String NAME = "triangle";
     private final int firstLeg;
     private final int secondLeg;
 
@@ -20,7 +20,7 @@ public class RightTriangle extends Figure {
     public void draw() {
         System.out.printf("Figure: %s, area: %.1f sq.units, firstLeg: %d units, "
                         + "secondLeg: %d units, color: %s\n",
-                name, areaCalculator(), firstLeg, secondLeg, getColor().toString());
+                NAME, areaCalculator(), firstLeg, secondLeg, getColor().toString());
 
     }
 }
