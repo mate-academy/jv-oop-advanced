@@ -5,8 +5,13 @@ import java.util.Random;
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
     public static final int FIGURE_MAX_SIZE = 10;
-    private Random random = new Random();
-    private ColorSupplier supplier = new ColorSupplier();
+    private final Random random;
+    private final ColorSupplier supplier;
+
+    public FigureSupplier(Random random, ColorSupplier supplier) {
+        this.random = random;
+        this.supplier = supplier;
+    }
 
     public Figure getRandomFigure() {
         Color color = supplier.getRandomColor();
