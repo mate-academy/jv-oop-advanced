@@ -3,36 +3,33 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    //private final Random random = new Random();
-    //private final ColorSupplier supplier = new ColorSupplier();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        Random random = new Random();
-        ColorSupplier supplier = new ColorSupplier();
-        //The other half of figures should have the same, default parameters.
-        switch (random.nextInt(5)) {
+        int figureIndex = new Random().nextInt(4);
+        switch (figureIndex) {
             case 0:
-                return new Circle(random.nextInt(10), supplier.getRandomColor());
+                return new Circle(getRandomInt(), colorSupplier.getRandomColor());
             case 1:
-                return new IsoscelesTrapezoid(random.nextInt(10), random.nextInt(10),
-                        random.nextInt(10), supplier.getRandomColor());
+                return new IsoscelesTrapezoid(getRandomDouble(), getRandomDouble(),
+                        getRandomDouble(), colorSupplier.getRandomColor());
             case 2:
-                return new Rectangle(random.nextInt(10), random.nextInt(10),
-                        supplier.getRandomColor());
+                return new Rectangle(getRandomInt(),
+                                    getRandomInt(), colorSupplier.getRandomColor());
             case 3:
-                return new RightTriangle(random.nextInt(10), random.nextInt(10),
-                        supplier.getRandomColor());
+                return new RightTriangle(getRandomInt(),
+                                        getRandomInt(), colorSupplier.getRandomColor());
             case 4:
-                return new Square(random.nextInt(10), supplier.getRandomColor());
             default:
-                break;
+                return new Square(getRandomInt(), colorSupplier.getRandomColor());
         }
-        return null;
     }
 
-    public Figure getDefaultFigure() {
-        return new Circle(10, Colors.WHITE);
+    private int getRandomInt() {
+        return new Random().nextInt(100);
     }
 
+    private double getRandomDouble() {
+        return new Random().nextDouble();
+    }
 }
-

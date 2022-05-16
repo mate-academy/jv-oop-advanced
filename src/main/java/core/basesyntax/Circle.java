@@ -3,9 +3,17 @@ package core.basesyntax;
 public class Circle extends Figure {
     private int radius;
 
-    public Circle(int radius, Colors color) {
+    public Circle(int radius, String color) { // it was Color -> String
+        super(color);
         this.radius = radius;
-        setColor(color);
+    }
+
+    public int getRadius() {
+        return radius;
+    }
+
+    public void setRadius(int radius) {
+        this.radius = radius;
     }
 
     @Override
@@ -14,9 +22,9 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String drawFigure() {
-        return "Figure: circle, area: " + String.format("%.1f", getArea())
-                + " sq.units, radius: " + radius
-                + " units, color: " + getColor();
+    public void draw() {
+        System.out.println("Figure: " + getClass().getSimpleName() + ", area: " + getArea()
+                + " sq. units, color: " + getColor()
+                + ", radius: " + getRadius());
     }
 }
