@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private static final String name = "rectangle";
+    private static final String NAME = "rectangle";
     private final int height;
     private final int length;
 
@@ -20,7 +20,7 @@ public class Rectangle extends Figure {
     public void draw() {
         System.out.printf("Figure: %s, area: %.1f sq.units, height: %d units, "
                         + "length: %d units, color: %s\n",
-                name, areaCalculator(), height, length, getColor().toString());
+                NAME, areaCalculator(), height, length, getColor().toString());
 
     }
 }
