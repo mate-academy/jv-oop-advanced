@@ -1,16 +1,18 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 /**
  * Feel free to remove this class and create your own.
  */
 public class Main {
     public static void main(String[] str) {
-        FigureSupplier figureSupplier = new FigureSupplier();
+        FigureSupplier figureSupplier = new FigureSupplier(new ColorSupplier(new Random()));
         Figure[] figures = new Figure[6];
-        for (int i = 0; i < 3; i++){
+        for (int i = 0; i < 3; i++) {
             figures[i] = figureSupplier.getRandomFigure();
         }
-        for (int i = 3; i < 6; i++){
+        for (int i = 3; i < 6; i++) {
             figures[i] = figureSupplier.getDefaultFigure();
         }
         for (Figure figure : figures) {

@@ -9,6 +9,7 @@ public class Rectangle extends Figure {
         this.length = length;
         this.height = height;
     }
+
     @Override
     public double getArea() {
         return length * height;
@@ -16,7 +17,23 @@ public class Rectangle extends Figure {
 
     @Override
     public void drawFigure() {
-        System.out.println("Rectangle: length = " + length + ", height = " + height
-                + ", area = " + getArea() + ", color - " + getColor());
+        System.out.println("Figure: rectangle, length: " + length + ", height: " + height
+                + ", area: " + getArea() + ", color: " + getColor());
+    }
+
+    public int getLength() {
+        return length;
+    }
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
     }
 }

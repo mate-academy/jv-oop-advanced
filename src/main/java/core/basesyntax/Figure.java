@@ -1,17 +1,15 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public abstract class Figure implements Flattable {
     private String color;
 
     public Figure(String color) {
         this.color = color;
     }
 
-    public abstract double getArea();
-
     public abstract void drawFigure();
 
-    public String getColor(){
+    public String getColor() {
         return color;
     }
 }
