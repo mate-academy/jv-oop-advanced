@@ -7,9 +7,15 @@ public class FigureSupplier {
     private static final int MAX_SIZE = 10;
     private static final int DEFAULT_SIZE = 10;
 
+    private final Random random;
+    private final ColorSupplier colorSupplier;
+
+    public FigureSupplier(Random random, ColorSupplier colorSupplier) {
+        this.random = random;
+        this.colorSupplier = colorSupplier;
+    }
+
     public Figure getRandomFigure() {
-        ColorSupplier colorSupplier = new ColorSupplier(new Random());
-        Random random = new Random();
         switch (random.nextInt(NUMBER_OF_FIGURE)) {
             case 0:
                 return new Square(colorSupplier.getRandomColor(), getRandomSize());
