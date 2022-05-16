@@ -5,37 +5,38 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int COUNT_FIGURE = 5;
     private static final int MAX_PARAMETER = 100;
-    private Random random = new Random();
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random;
+    private final ColorSupplier colorSupplier;
+
+    public FigureSupplier(Random random, ColorSupplier colorSupplier) {
+        this.random = random;
+        this.colorSupplier = colorSupplier;
+    }
 
     public Figure getRandomFigure() {
         Figure figure = null;
         int index = new Random().nextInt(COUNT_FIGURE);
-        if (index == 1) {
-            figure = new Circle(colorSupplier.getRandomColor(),
-                    new Random().nextInt(MAX_PARAMETER));
+        switch (index) {
+            case 1:
+                return new Circle(colorSupplier.getRandomColor(),
+                        new Random().nextInt(MAX_PARAMETER));
+            case 2:
+                return new RightTriangle(colorSupplier.getRandomColor(),
+                        new Random().nextInt(MAX_PARAMETER),
+                        new Random().nextInt(MAX_PARAMETER));
+            case 3:
+                return new Rectangle(colorSupplier.getRandomColor(),
+                        new Random().nextInt(MAX_PARAMETER),
+                        new Random().nextInt(MAX_PARAMETER));
+            case 4:
+                return new Square(colorSupplier.getRandomColor(),
+                        new Random().nextInt(MAX_PARAMETER));
+            default:
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        new Random().nextInt(MAX_PARAMETER),
+                        new Random().nextInt(MAX_PARAMETER),
+                        new Random().nextInt(MAX_PARAMETER));
         }
-        if (index == 2) {
-            figure = new RightTriangle(colorSupplier.getRandomColor(),
-                    new Random().nextInt(MAX_PARAMETER),
-                    new Random().nextInt(MAX_PARAMETER));
-        }
-        if (index == 3) {
-            figure = new Rectangle(colorSupplier.getRandomColor(),
-                    new Random().nextInt(MAX_PARAMETER),
-                    new Random().nextInt(MAX_PARAMETER));
-        }
-        if (index == 4) {
-            figure = new Square(colorSupplier.getRandomColor(),
-                    new Random().nextInt(MAX_PARAMETER));
-        }
-        if (index == 5) {
-            figure = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                    new Random().nextInt(MAX_PARAMETER),
-                    new Random().nextInt(MAX_PARAMETER),
-                    new Random().nextInt(MAX_PARAMETER));
-        }
-        return figure;
     }
 
     public Figure defaultFigure() {
