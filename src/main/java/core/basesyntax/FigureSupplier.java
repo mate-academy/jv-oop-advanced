@@ -28,7 +28,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Colors.white, 10);
+        return new Circle(Colors.WHITE, 10);
     }
 
     //size from 1 to maxSize including
