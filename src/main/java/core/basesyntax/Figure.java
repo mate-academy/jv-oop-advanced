@@ -1,8 +1,6 @@
 package core.basesyntax;
 
 public abstract class Figure implements Drawable, AreaCalculator {
-    public static final int MAX_RANDOM_SIDE_VALUE = 100;
-
     private final Color color;
     private String name;
 
@@ -18,7 +16,7 @@ public abstract class Figure implements Drawable, AreaCalculator {
         this.name = name;
     }
 
-    public String getColor() {
+    public String getColorString() {
         return color.toString().toLowerCase();
     }
 }

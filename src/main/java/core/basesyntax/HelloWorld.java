@@ -1,9 +1,13 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public class HelloWorld {
     public static void main(String[] args) {
+        Random random = new Random();
+        ColorSupplier colorSupplier = new ColorSupplier(random);
+        FigureSupplier figureSupplier = new FigureSupplier(random, colorSupplier);
         Figure[] figures = new Figure[6];
-        FigureSupplier figureSupplier = new FigureSupplier();
 
         for (int i = 0; i < figures.length; i++) {
             if (i < figures.length / 2) {
