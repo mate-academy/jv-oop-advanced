@@ -5,10 +5,9 @@ public class Rectangle extends Figure {
     private final double sideB;
 
     public Rectangle(double sideA, double sideB, String color) {
-        super(color);
+        super(color, "Rectangle");
         this.sideA = sideA;
         this.sideB = sideB;
-        this.setName("Rectangle");
     }
 
     @Override
@@ -23,4 +22,5 @@ public class Rectangle extends Figure {
                 + String.format("%.2f", sideA) + " units, side B: "
                 + String.format("%.2f", sideB) + " units, color: " + getColor());
     }
+
 }

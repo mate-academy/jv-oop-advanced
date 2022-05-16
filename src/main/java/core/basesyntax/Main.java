@@ -17,4 +17,5 @@ public class Main {
             figure.draw();
         }
     }
+
 }

@@ -5,10 +5,9 @@ public class RightTriangle extends Figure {
     private final double secondLeg;
 
     public RightTriangle(double firstLeg, double secondLeg, String color) {
-        super(color);
+        super(color, "Right_Triangle");
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        this.setName("Right Triangle");
     }
 
     @Override
@@ -23,4 +22,5 @@ public class RightTriangle extends Figure {
                 + firstLeg + " units, second leg: " + secondLeg
                 + " units, color: " + getColor());
     }
+
 }

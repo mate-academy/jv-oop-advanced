@@ -4,9 +4,8 @@ public class Circle extends Figure {
     private final double radius;
 
     public Circle(double radius, String color) {
-        super(color);
+        super(color, "Circle");
         this.radius = radius;
-        this.setName("Circle");
     }
 
     @Override
@@ -20,4 +19,5 @@ public class Circle extends Figure {
     public double getArea() {
         return Math.PI * radius * radius;
     }
+
 }

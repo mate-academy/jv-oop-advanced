@@ -4,9 +4,8 @@ public class Square extends Figure {
     private final double sideA;
 
     public Square(double sideA, String color) {
-        super(color);
+        super(color, "Square");
         this.sideA = sideA;
-        this.setName("Square");
     }
 
     @Override
@@ -20,4 +19,5 @@ public class Square extends Figure {
                 + String.format("%.2f",this.getArea()) + " sq.units, side: "
                 + String.format("%.2f",sideA) + " units, color: " + getColor());
     }
+
 }

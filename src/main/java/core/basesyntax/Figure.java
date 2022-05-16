@@ -4,7 +4,7 @@ public abstract class Figure implements AreaCalculator, FigureDrawing {
     private String color;
     private String name;
 
-    public Figure(String color) {
+    public Figure(String color, String name) {
         this.color = color;
     }
 
@@ -23,4 +23,5 @@ public abstract class Figure implements AreaCalculator, FigureDrawing {
     public void setName(String name) {
         this.name = name;
     }
+
 }

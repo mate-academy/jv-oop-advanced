@@ -6,4 +6,5 @@ public enum Figures {
     RIGHT_TRIANGLE,
     CIRCLE,
     ISOSCELES_TRAPEZOID
+
 }
