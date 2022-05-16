@@ -3,23 +3,32 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    public static final int FIGURE_COUNT = 5;
+    public static final int FIGURE_MAX_SIZE = 10;
+    private Random random = new Random();
+    private ColorSupplier supplier = new ColorSupplier();
     public Figure getRandomFigure() {
-        Random random = new Random();
-        ColorSupplier supplier = new ColorSupplier();
-        switch (new Random().nextInt(5)) {
+        Color color = supplier.getRandomColor();
+        switch (random.nextInt(FIGURE_COUNT)) {
             case 0:
-                return new Circle(random.nextInt(10), supplier.getRandomColor());
+                int radius = random.nextInt(FIGURE_MAX_SIZE);
+                return new Circle(radius, color);
             case 1:
-                return new RightTriangle(random.nextInt(10), random.nextInt(10),
-                                        supplier.getRandomColor());
+                int firstLeg = random.nextInt(FIGURE_MAX_SIZE);
+                int secondLeg = random.nextInt(FIGURE_MAX_SIZE);
+                return new RightTriangle(firstLeg, secondLeg, color);
             case 2:
-                return new Square(random.nextInt(10), supplier.getRandomColor());
+                int side = random.nextInt(FIGURE_MAX_SIZE);
+                return new Square(side, color);
             case 3:
-                return new Rectangle(random.nextInt(10), random.nextInt(10),
-                                    supplier.getRandomColor());
+                int firstSide = random.nextInt(FIGURE_MAX_SIZE);
+                int secondSide = random.nextInt(FIGURE_MAX_SIZE);
+                return new Rectangle(firstSide, secondSide, color);
             case 4:
-                return new IsoscelesTrapezoid(random.nextInt(10), random.nextInt(10),
-                                        random.nextInt(10), supplier.getRandomColor());
+                int hide = random.nextInt(FIGURE_MAX_SIZE);
+                int lowerBase = random.nextInt(FIGURE_MAX_SIZE);
+                int upperBase = random.nextInt(FIGURE_MAX_SIZE);
+                return new IsoscelesTrapezoid(hide, lowerBase, upperBase, color);
             default:
                 break;
         }
@@ -27,6 +36,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, Colors.WHITE);
+        return new Circle(10, Color.WHITE);
     }
 }
