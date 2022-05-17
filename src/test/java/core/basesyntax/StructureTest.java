@@ -151,5 +151,4 @@ public class StructureTest {
     }
     return classes;
   }
-
 }
