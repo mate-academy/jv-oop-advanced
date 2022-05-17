@@ -6,10 +6,10 @@ public class IsoscelesTrapezoid extends Figure {
     private double upperBase;
 
     public IsoscelesTrapezoid(int hide, int lowerBase, int upperBase, Color color) {
+        super(color);
         this.hide = hide;
         this.lowerBase = lowerBase;
         this.upperBase = upperBase;
-        setColor(color);
     }
 
     @Override
@@ -24,6 +24,5 @@ public class IsoscelesTrapezoid extends Figure {
                 + " units, upper base: " + upperBase
                 + " units, hide: " + hide
                 + " units, color: " + getColor();
-        //  Figure: square, area: 25.0 sq.units, side: 5 units, color: blue
     }
 }

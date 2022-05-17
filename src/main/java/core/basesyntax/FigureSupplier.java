@@ -38,7 +38,7 @@ public class FigureSupplier {
             default:
                 break;
         }
-        return null;
+        return new Figure(color);
     }
 
     public Figure getDefaultFigure() {
