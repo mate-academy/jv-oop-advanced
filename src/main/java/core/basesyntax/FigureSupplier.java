@@ -5,12 +5,12 @@ import core.basesyntax.figure.Figure;
 import core.basesyntax.figure.IsoscelesTrapezoid;
 import core.basesyntax.figure.Rectangle;
 import core.basesyntax.figure.Square;
-import core.basesyntax.figure.Triangle;
+import core.basesyntax.figure.RightTriangle;
 import java.util.Locale;
 import java.util.Random;
 
 public class FigureSupplier {
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int figure = new Random().nextInt(4);
@@ -21,7 +21,7 @@ public class FigureSupplier {
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                         getRandomDouble(), getRandomDouble(), getRandomInt());
             case 2:
-                return new Triangle(colorSupplier.getRandomColor(),
+                return new RightTriangle(colorSupplier.getRandomColor(),
                         getRandomInt(), getRandomInt());
             case 3:
                 return new Rectangle(colorSupplier.getRandomColor(),
