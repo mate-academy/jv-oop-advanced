@@ -36,9 +36,8 @@ public class FigureSupplier {
                 int upperBase = random.nextInt(FIGURE_MAX_SIZE);
                 return new IsoscelesTrapezoid(hide, lowerBase, upperBase, color);
             default:
-                break;
+                return new Figure(color);
         }
-        return new Figure(color);
     }
 
     public Figure getDefaultFigure() {
