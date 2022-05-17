@@ -38,7 +38,6 @@ public class FigureSupplier {
         return new Circle(Colors.WHITE, DEFAULT_SIZE);
     }
 
-    //size from 1 to maxSize including
     public int getRandomSize() {
         Random random = new Random();
         return random.nextInt(MAX_SIZE) + 1;

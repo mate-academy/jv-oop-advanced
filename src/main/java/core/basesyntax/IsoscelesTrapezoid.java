@@ -9,7 +9,6 @@ public class IsoscelesTrapezoid extends Figure {
     public IsoscelesTrapezoid(Colors color, int height, int bottom, int top) {
         super(color);
         this.height = height;
-        //if random bottom is smaller than top
         if (bottom >= top) {
             this.bottom = bottom;
             this.top = top;
@@ -20,7 +19,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double areaCalculator() {
+    public double calculateArea() {
         return height * (bottom + top) / 2.0;
     }
 
@@ -28,7 +27,7 @@ public class IsoscelesTrapezoid extends Figure {
     public void draw() {
         System.out.printf("Figure: %s, area: %.1f sq.units, height: %d units, "
                         + "top: %d units, bottom: %d units,  color: %s\n",
-                NAME, areaCalculator(), height, top, bottom, getColor().toString());
+                NAME, calculateArea(), height, top, bottom, getColor().toString());
 
     }
 }

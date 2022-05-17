@@ -12,7 +12,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double areaCalculator() {
+    public double calculateArea() {
         return height * length;
     }
 
@@ -20,7 +20,7 @@ public class Rectangle extends Figure {
     public void draw() {
         System.out.printf("Figure: %s, area: %.1f sq.units, height: %d units, "
                         + "length: %d units, color: %s\n",
-                NAME, areaCalculator(), height, length, getColor().toString());
+                NAME, calculateArea(), height, length, getColor().toString());
 
     }
 }

@@ -12,7 +12,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double areaCalculator() {
+    public double calculateArea() {
         return firstLeg * secondLeg / 2.0;
     }
 
@@ -20,7 +20,7 @@ public class RightTriangle extends Figure {
     public void draw() {
         System.out.printf("Figure: %s, area: %.1f sq.units, firstLeg: %d units, "
                         + "secondLeg: %d units, color: %s\n",
-                NAME, areaCalculator(), firstLeg, secondLeg, getColor().toString());
+                NAME, calculateArea(), firstLeg, secondLeg, getColor().toString());
 
     }
 }

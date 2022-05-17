@@ -10,14 +10,14 @@ public class Square extends Figure {
     }
 
     @Override
-    public double areaCalculator() {
+    public double calculateArea() {
         return side * side;
     }
 
     @Override
     public void draw() {
         System.out.printf("Figure: %s, area: %.1f sq.units, side: %d units, color: %s\n",
-                NAME, areaCalculator(), side, getColor().toString());
+                NAME, calculateArea(), side, getColor().toString());
 
     }
 }
