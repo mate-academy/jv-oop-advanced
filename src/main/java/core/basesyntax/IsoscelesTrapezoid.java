@@ -9,13 +9,8 @@ public class IsoscelesTrapezoid extends Figure {
     public IsoscelesTrapezoid(Colors color, int height, int bottom, int top) {
         super(color);
         this.height = height;
-        if (bottom >= top) {
-            this.bottom = bottom;
-            this.top = top;
-        } else {
-            this.bottom = top;
-            this.top = bottom;
-        }
+        this.bottom = bottom;
+        this.top = top;
     }
 
     @Override
