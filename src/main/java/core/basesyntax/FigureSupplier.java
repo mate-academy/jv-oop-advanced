@@ -9,23 +9,28 @@ public class FigureSupplier extends ColorSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     private Square getRandomSquare() {
-        return new Square(colorSupplier.getIndexOfColor(), random.nextInt(MAX_VALUE));
+        return new Square(colorSupplier.getIndexOfColor(),
+                random.nextInt(MAX_VALUE));
     }
 
     private Circle getRandomCircle() {
-        return new Circle(colorSupplier.getIndexOfColor(), random.nextInt(MAX_VALUE));
+        return new Circle(colorSupplier.getIndexOfColor(),
+                random.nextInt(MAX_VALUE));
     }
 
     private Rectangle getRandomRectangle() {
-        return new Rectangle(colorSupplier.getIndexOfColor(), random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
+        return new Rectangle(colorSupplier.getIndexOfColor(),
+                random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
     }
 
     private RightTriangle getRandomRightTriangle() {
-        return new RightTriangle(colorSupplier.getIndexOfColor(), random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
+        return new RightTriangle(colorSupplier.getIndexOfColor(),
+                random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
     }
 
     private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(colorSupplier.getIndexOfColor(), random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
+        return new IsoscelesTrapezoid(colorSupplier.getIndexOfColor(),
+                random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
     }
 
     public Figure getRandomFigure() {
