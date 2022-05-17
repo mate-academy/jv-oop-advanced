@@ -3,12 +3,11 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final Random random = new Random();
     private static final int MAX_FIGURES = 4;
     private static final int MAX_VALUE = 100;
     private static final int DEFAULT_RADIUS = 10;
     private final ColorSupplier colorSupplier = new ColorSupplier();
-
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
         int figureIndex = random.nextInt(MAX_FIGURES);
