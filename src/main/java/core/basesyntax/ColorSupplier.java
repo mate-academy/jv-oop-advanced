@@ -4,7 +4,13 @@ import java.util.Random;
 
 public class ColorSupplier {
     public String getRandomColor() {
-        int colorIndex = new Random().nextInt(Color.values().length - 1); // -1 bound exception
-        return Color.values()[colorIndex].name(); // return random index Color
+        Random random = new Random();
+        int colorIndex = random.nextInt(Color.values().length - 1);
+        return Color.values()[colorIndex].name();
     }
 }
+
+
+//    lets make Random as class level variable, not to create new instance of Random class every time
+//        we call getRandomColor() method.
+//        And lets remove unnecessary comments
