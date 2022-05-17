@@ -9,7 +9,11 @@ public class Main {
         Figure[] figures = new Figure[new Random().nextInt(10)];
 
         for (int i = 0; i < figures.length; i++) {
-            figures[i] = figureSupplier.getRandomFigure();
+            if (i < figures.length / 2) {
+                figures[i] = figureSupplier.getRandomFigure();
+            } else {
+                figures[i] = figureSupplier.getDefaultFigure();
+            }
         }
 
         for (int i = 0; i < figures.length; i++) {
