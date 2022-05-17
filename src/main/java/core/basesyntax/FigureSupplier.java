@@ -3,6 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int BOUND_BALL_NUMBER = 10;
+    private static final int BOUND_SHAPES = 5;
     private final ColorSupplier colorSupplier;
 
     public FigureSupplier(ColorSupplier colorSupplier) {
@@ -10,48 +12,42 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        Figure figure;
-        Random random = new Random();
-        int randomShape = random.nextInt(Shape.values().length);
+        Figure figure = null;
         String color = String.valueOf(colorSupplier.getRandomColor());
-        // all types of figures have at least one parameter, radius or square's side (dimension1)
-        int dimension1 = new Random().nextInt(10) + 1;
+        int dimension1 = new Random().nextInt(BOUND_BALL_NUMBER) + 1;
         int dimension2;
-        switch (Shape.values()[randomShape]) {
-            case CIRCLE:
+        switch (new Random().nextInt(BOUND_SHAPES) + 1) {
+            case 1:
                 figure = new Circle(color, dimension1);
                 break;
-            case SQUARE:
+            case 2:
                 figure = new Square(color, dimension1);
                 break;
-            case RIGHT_TRIANGLE:
-                dimension2 = new Random().nextInt(10) + 1; // second leg
+            case 3:
+                dimension2 = new Random().nextInt(BOUND_BALL_NUMBER) + 1;
                 figure = new RightTriangle(color, dimension1, dimension2);
                 break;
-            case RECTANGLE:
-                dimension2 = new Random().nextInt(10) + 1; // second side
+            case 4:
+                dimension2 = new Random().nextInt(BOUND_BALL_NUMBER) + 1;
                 figure = new Rectangle(color, dimension1, dimension2);
                 break;
-            case ISOSCELES_TRAPEZOID:
+            case 5:
                 do {
-                    dimension2 = new Random().nextInt(10) + 1;
-                } while (dimension1 == dimension2); // we want to obtain trapezoid, not square!
-                int heightTrapezoid = new Random().nextInt(10) + 1;
-                // dimension1 - should be a bottom side and dimension2 should be a top side
-                // it's more adequate to suppose that top side of trapezoid will be lesser than
-                // its bottom, so, we will reverse determinate sides if following condition is true:
+                    dimension2 = new Random().nextInt(BOUND_BALL_NUMBER) + 1;
+                } while (dimension1 == dimension2);
+                int heightTrapezoid = new Random().nextInt(BOUND_BALL_NUMBER) + 1;
                 if (dimension1 < dimension2) {
                     figure = new IsoscelesTrapezoid(color, dimension2, dimension1, heightTrapezoid);
                 }
                 figure = new IsoscelesTrapezoid(color, dimension1, dimension2, heightTrapezoid);
                 break;
             default:
-                figure = getDefaultFigure();
+                break;
         }
         return figure;
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(String.valueOf(Color.WHITE), 10);
+        return new Circle(String.valueOf(Color.WHITE), BOUND_BALL_NUMBER);
     }
 }

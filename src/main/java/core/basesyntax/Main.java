@@ -2,9 +2,6 @@ package core.basesyntax;
 
 import java.util.Random;
 
-/**
- * Feel free to remove this class and create your own.
- */
 public class Main {
     public static void main(String[] str) {
         FigureSupplier figureSupplier = new FigureSupplier(new ColorSupplier(new Random()));
@@ -16,7 +13,7 @@ public class Main {
             figures[i] = figureSupplier.getDefaultFigure();
         }
         for (Figure figure : figures) {
-            figure.drawFigure();
+            figure.draw();
         }
     }
 }
