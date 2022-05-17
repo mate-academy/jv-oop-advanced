@@ -12,7 +12,7 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        Figure figure = null;
+        Figure figure;
         String color = String.valueOf(colorSupplier.getRandomColor());
         int dimension1 = new Random().nextInt(BOUND_BALL_NUMBER) + 1;
         int dimension2;
@@ -31,17 +31,16 @@ public class FigureSupplier {
                 dimension2 = new Random().nextInt(BOUND_BALL_NUMBER) + 1;
                 figure = new Rectangle(color, dimension1, dimension2);
                 break;
-            case 5:
+            default:
                 do {
                     dimension2 = new Random().nextInt(BOUND_BALL_NUMBER) + 1;
                 } while (dimension1 == dimension2);
                 int heightTrapezoid = new Random().nextInt(BOUND_BALL_NUMBER) + 1;
-                if (dimension1 < dimension2) {
+                if (dimension1 > dimension2) {
                     figure = new IsoscelesTrapezoid(color, dimension2, dimension1, heightTrapezoid);
+                } else {
+                    figure = new IsoscelesTrapezoid(color, dimension1, dimension2, heightTrapezoid);
                 }
-                figure = new IsoscelesTrapezoid(color, dimension1, dimension2, heightTrapezoid);
-                break;
-            default:
                 break;
         }
         return figure;
