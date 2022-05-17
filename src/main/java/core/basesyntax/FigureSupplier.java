@@ -17,19 +17,15 @@ public class FigureSupplier extends ColorSupplier {
     }
 
     private Rectangle getRandomRectangle() {
-        return new Rectangle(colorSupplier.getIndexOfColor(),
-                random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
+        return new Rectangle(colorSupplier.getIndexOfColor(), random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
     }
 
     private RightTriangle getRandomRightTriangle() {
-        return new RightTriangle(colorSupplier.getIndexOfColor(),
-                random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
+        return new RightTriangle(colorSupplier.getIndexOfColor(), random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
     }
 
     private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(colorSupplier.getIndexOfColor(),
-                random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE),
-                random.nextInt(MAX_VALUE));
+        return new IsoscelesTrapezoid(colorSupplier.getIndexOfColor(), random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
     }
 
     public Figure getRandomFigure() {
@@ -38,13 +34,10 @@ public class FigureSupplier extends ColorSupplier {
         switch (figureNumber) {
             case 1:
                 return getRandomSquare();
-
             case 2:
                 return getRandomCircle();
-
             case 3:
                 return getRandomRectangle();
-
             case 4:
                 return getRandomRightTriangle();
             default:
