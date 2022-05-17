@@ -6,8 +6,8 @@ public class Main {
     public static final int NUMBER_OF_FIGURES = 20;
 
     public static void main(String[] args) {
-        FigureSupplier figureSupplier = new FigureSupplier(new Random(),
-                new ColorSupplier(new Random()));
+        Random random = new Random();
+        FigureSupplier figureSupplier = new FigureSupplier(random, new ColorSupplier(random));
         Figure[] figures = new Figure[NUMBER_OF_FIGURES];
 
         for (int i = 0; i < NUMBER_OF_FIGURES; i++) {

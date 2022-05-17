@@ -39,7 +39,6 @@ public class FigureSupplier {
     }
 
     public int getRandomSize() {
-        Random random = new Random();
         return random.nextInt(MAX_SIZE) + 1;
     }
 }
