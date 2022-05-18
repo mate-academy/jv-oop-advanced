@@ -15,10 +15,10 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String showInfo() {
-        return "Figure: Isosceles Trapezoid, area: " + (sideA * sideB) / (2 * height)
+    public void showInfo() {
+        System.out.println("Figure: Isosceles Trapezoid, area: " + (sideA * sideB) / (2 * height)
                 + " sq. units, side A: " + sideA
                 + " units, side B: " + sideB
-                + " units, height: " + height + " units, color: " + color;
+                + " units, height: " + height + " units, color: " + color);
     }
 }

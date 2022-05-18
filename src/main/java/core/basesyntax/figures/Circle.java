@@ -3,7 +3,6 @@ package core.basesyntax.figures;
 import core.basesyntax.Figure;
 
 public class Circle extends Figure {
-
     private final double radius;
 
     public Circle(String color, double radius) {
@@ -12,9 +11,8 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String showInfo() {
-        return "Figure: Circle, area: " + Math.PI * radius * radius
-                + ", radius: " + radius + " units, color: " + color;
+    public void showInfo() {
+        System.out.println("Figure: Circle, area: " + Math.PI * radius * radius
+                + ", radius: " + radius + " units, color: " + color);
     }
-
 }
