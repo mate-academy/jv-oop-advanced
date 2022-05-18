@@ -1,10 +1,10 @@
 package core.basesyntax;
 
-public abstract class RightTriangle extends Figure{
+public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
-    public RightTriangle(String color, int firstLeg, int secondLeg) {
+    public RightTriangle(int firstLeg, int secondLeg, String color) {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
