@@ -31,12 +31,11 @@ public class FigureSupplier {
                 int secondSide = random.nextInt(FIGURE_MAX_SIZE);
                 return new Rectangle(firstSide, secondSide, color);
             case 4:
+            default:
                 int hide = random.nextInt(FIGURE_MAX_SIZE);
                 int lowerBase = random.nextInt(FIGURE_MAX_SIZE);
                 int upperBase = random.nextInt(FIGURE_MAX_SIZE);
                 return new IsoscelesTrapezoid(hide, lowerBase, upperBase, color);
-            default:
-                return new Figure(color);
         }
     }
 
