@@ -1,25 +1,23 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure {
+public abstract class Rectangle extends Figure {
     private int firstSide;
     private int secondSide;
 
-    public Rectangle(String name, int firstSide, int secondSide, String color) {
-        super(name, color);
+    public Rectangle(String color, int firstSide, int secondSide) {
+        super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
-        setName("Rectangle");
     }
 
     @Override
-    public int area() {
+    public void printInfo() {
+        System.out.println( "Figure: rectangle, area: " + getArea() + "sq.units, first side: "
+                + firstSide + "units, second side: " + secondSide + " color: " + getColor());
+    }
+
+    @Override
+    public double getArea() {
         return firstSide * secondSide;
-    }
-
-    @Override
-    public String giveAllTheInformation() {
-        return "Figure: " + getName() + "area: " + area() + "sq.units, " + "firstSide: "
-                + firstSide + " units" + " secondSide: " + secondSide + " units"
-                + " units" + " color: " + getColor();
     }
 }

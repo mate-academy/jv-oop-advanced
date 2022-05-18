@@ -1,11 +1,9 @@
 package core.basesyntax;
 
-public class Figure {
-    private String name;
+public abstract class Figure implements getArea, PrintInfo {
     private String color;
 
-    public Figure(String name, String color) {
-        this.name = name;
+    public Figure(String color) {
         this.color = color;
     }
 
@@ -17,19 +15,4 @@ public class Figure {
         this.color = color;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int area() {
-        return 0;
-    }
-
-    public String giveAllTheInformation() {
-        return "Figure: " + getName() + "area: " + area() + "color: " + getColor();
-    }
 }

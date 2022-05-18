@@ -3,21 +3,38 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int MAX_VALUE = 50;
-    private final Random random;
+    private final int MAX_RANDOM_NUMBER = 100;
+    private final int MAX_FIGURE_NUMBER = 5;
+    private Random random;
+    private ColorSupplier colorSupplier;
 
-    public FigureSupplier(Random random) {
-        this.random = random;
+    public int getRandomNumber() {
+        return random.nextInt(MAX_RANDOM_NUMBER);
     }
 
-    public int randomFigureSupplier(int random) {
-        random = this.random.nextInt(MAX_VALUE);
-        return random;
+    public Figure getRandomFigure() {
     }
 
-    public int randomFigureSupplier(int random, int anotherRandom) {
-        random = this.random.nextInt(MAX_VALUE);
-        anotherRandom = this.random.nextInt(MAX_VALUE);
-        return random + anotherRandom;
+    public String getRandomCircle() {
+        return getRandomNumber() + colorSupplier.getRandomColor();
     }
+
+    public String getRandomIsoscelesTrapezoid() {
+        return getRandomNumber() + getRandomNumber() + getRandomNumber() + colorSupplier.getRandomColor();
+    }
+
+    public String getRandomRectangle() {
+        return getRandomNumber() + getRandomNumber() + colorSupplier.getRandomColor();
+    }
+
+    public String getRandomRightTriangle() {
+        return getRandomNumber() + getRandomNumber() + colorSupplier.getRandomColor();
+    }
+
+    public String getRandomSquare() {
+        return getRandomNumber() + colorSupplier.getRandomColor();
+    }
+
+
+
 }
