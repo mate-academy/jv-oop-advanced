@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public abstract class Figure implements AreaCalculator, InformationPrinter {
-    private String color;
+    protected String color;
 
     public Figure(String randomColor) {
         this.color = randomColor;
