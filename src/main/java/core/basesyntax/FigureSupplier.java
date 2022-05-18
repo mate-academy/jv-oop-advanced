@@ -21,10 +21,8 @@ public class FigureSupplier extends ColorSupplier {
                 return getRandomRectangle();
             case 4:
                 return getRandomRightTriangle();
-            case 5:
-                return getRandomIsoscelesTrapezoid();
             default:
-                return getDefaultFigure();
+                return getRandomIsoscelesTrapezoid();
         }
     }
 
