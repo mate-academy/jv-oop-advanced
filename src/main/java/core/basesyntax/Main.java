@@ -1,10 +1,13 @@
 package core.basesyntax;
 
-public class Main {
-    private static final FigureSupplier figureSupplier = new FigureSupplier();
+import java.util.Random;
 
+public class Main {
     public static void main(String[] args) {
         Figure[] figures = new Figure[6];
+        Random random = new Random();
+        ColorSupplier colorSupplier = new ColorSupplier(random);
+        FigureSupplier figureSupplier = new FigureSupplier(colorSupplier, random);
         for (int i = 0; i < figures.length / 2; i++) {
             figures[i] = figureSupplier.getRandomFigure();
         }

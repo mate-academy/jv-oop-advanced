@@ -1,27 +1,30 @@
 package core.basesyntax;
 
-import java.awt.*;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int MAX_NUMBER_FIGURE = 4;
+    private static final int MAX_NUMBER_FIGURE = 5;
     private static final int MAX_SIZE = 10;
-    private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final Random random = new Random();
+    private final ColorSupplier colorSupplier;
+    private final Random random;
+
+    public FigureSupplier(ColorSupplier colorSupplier, Random random) {
+        this.colorSupplier = colorSupplier;
+        this.random = random;
+    }
 
     private int getRandomSize() {
-        int size = random.nextInt(MAX_SIZE);
-        return size;
+        return random.nextInt(MAX_SIZE);
     }
 
     public Figure getRandomFigure() {
         int figure = random.nextInt(MAX_NUMBER_FIGURE);
-        return (figure == 0) ? new Circle(colorSupplier.getRandomColor(), getRandomSize())
-                : (figure == 1) ? new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+        return (figure == 1) ? new Circle(colorSupplier.getRandomColor(), getRandomSize())
+                : (figure == 2) ? new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                 getRandomSize(), getRandomSize(), getRandomSize())
-                : (figure == 2) ? new RightTriangle(colorSupplier.getRandomColor(),
+                : (figure == 3) ? new RightTriangle(colorSupplier.getRandomColor(),
                 getRandomSize(), getRandomSize())
-                : (figure == 3) ? new Square(colorSupplier.getRandomColor(), getRandomSize())
+                : (figure == 4) ? new Square(colorSupplier.getRandomColor(), getRandomSize())
                 : new Rectangle(colorSupplier.getRandomColor(), getRandomSize(), getRandomSize());
     }
 

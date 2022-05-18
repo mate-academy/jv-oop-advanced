@@ -24,15 +24,15 @@ public class IsoscelesTrapezoid extends Figure {
         return heightTrapezoid;
     }
 
-    public void setSideA(double sideA) {
+    public void setSideA(int sideA) {
         this.sideA = sideA;
     }
 
-    public void setSideB(double sideB) {
+    public void setSideB(int sideB) {
         this.sideB = sideB;
     }
 
-    public void setHeightTrapezoid(double heightTrapezoid) {
+    public void setHeightTrapezoid(int heightTrapezoid) {
         this.heightTrapezoid = heightTrapezoid;
     }
 
