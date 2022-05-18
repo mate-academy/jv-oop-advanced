@@ -7,8 +7,13 @@ public class FigureSupplier {
     private static final int MAX_FIGURE_NUMBER = 5;
     private static final int MAX_DEFAULT_VALUE = 10;
     private static final String DEFAULT_COLOR = "white";
-    private Random random = new Random();
-    private ColorSupplier colorSupplier = new ColorSupplier(random);
+    private final Random random;
+    private final ColorSupplier colorSupplier;
+
+    public FigureSupplier(Random random, ColorSupplier colorSupplier) {
+        this.random = random;
+        this.colorSupplier = colorSupplier;
+    }
 
     public int getRandomNumber() {
         return random.nextInt(MAX_RANDOM_NUMBER);
