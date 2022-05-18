@@ -7,31 +7,27 @@ public class FigureSupplier {
     private static final int MAX_FIGURE_NUMBER = 5;
     private static final int MAX_DEFAULT_VALUE = 10;
     private static final String DEFAULT_COLOR = "white";
-    private Random random;
-    private ColorSupplier colorSupplier;
+    private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier(random);
 
     public int getRandomNumber() {
         return random.nextInt(MAX_RANDOM_NUMBER);
     }
 
     public Figure getRandomFigure() {
-        switch (MAX_FIGURE_NUMBER) {
+        int getRandomFigure = random.nextInt(MAX_FIGURE_NUMBER);
+        switch (getRandomFigure) {
             case 1:
-                getRandomCircle();
-                break;
+                return getRandomCircle();
             case 2:
-                getRandomRectangle();
-                break;
+                return getRandomRectangle();
             case 3:
-                getRandomSquare();
-                break;
+                return getRandomSquare();
             case 4:
-                getRandomIsoscelesTrapezoid();
-                break;
+                return getRandomIsoscelesTrapezoid();
             default:
                 return getRandomRightTriangle();
         }
-        return getRandomRightTriangle();
     }
 
     public Circle getRandomCircle() {
@@ -57,6 +53,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Square(DEFAULT_COLOR, MAX_DEFAULT_VALUE);
+        return new Circle(DEFAULT_COLOR, MAX_DEFAULT_VALUE);
     }
 }
