@@ -7,7 +7,7 @@ public class Circle extends Figure {
         super(color);
         this.radius = radius;
         this.setInfo("Figure: circle, area: " + this.getArea() + " sq. units, radius: "
-                + (int) this.radius + " units, color: " + this.getColor());
+                + (int) this.radius + " units, color: " + this.getColor().toString().toLowerCase());
     }
 
     @Override

@@ -4,34 +4,32 @@ import java.util.Random;
 
 public class FigureSupplier {
     private final Random random;
-    private final ColorSupplier cs;
-    private final Figures[] figures;
+    private final ColorSupplier colorSupplier;
 
-    public FigureSupplier(Random random, ColorSupplier cs, Figures[] figures) {
+    public FigureSupplier(Random random, ColorSupplier colorSupplier) {
         this.random = random;
-        this.cs = cs;
-        this.figures = figures;
+        this.colorSupplier = colorSupplier;
     }
 
     public Figure getRandomFigure() {
-        Colors color = cs.getRandomColor();
+        Colors color = colorSupplier.getRandomColor();
         double r1 = random.nextInt() + 1;
         double r2 = random.nextInt() + 1;
         double r3 = random.nextInt() + 1;
-        Figures figure = figures[random.nextInt(figures.length)];
-        if (figure == Figures.square) {
+        Figures figure = Figures.values()[random.nextInt(Figures.values().length)];
+        if (figure == Figures.SQUARE) {
             return new Square(color, r1);
-        } else if (figure == Figures.rectangle) {
+        } else if (figure == Figures.RECTANGLE) {
             return new Rectangle(color, r1, r2);
-        } else if (figure == Figures.righttriangle) {
+        } else if (figure == Figures.RIGHTTRIANGLE) {
             return new RightTriangle(color, r1, r2);
-        } else if (figure == Figures.isoscelestrapezoid) {
+        } else if (figure == Figures.ISOSCELESTRAPEZOID) {
             return new IsoscelesTrapezoid(color, r1, r2, r3);
         }
         return new Circle(color, r1);
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Colors.white, 10);
+        return new Circle(Colors.WHITE, 10);
     }
 }

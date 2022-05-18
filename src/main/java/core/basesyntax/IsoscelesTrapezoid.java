@@ -12,7 +12,7 @@ public class IsoscelesTrapezoid extends Figure {
         this.side = side;
         this.setInfo("Figure: isosceles trapezoid, area: " + this.getArea() + " sq. units, base1: "
                 + (int) this.base1 + " units, base2: " + (int) this.base2 + " units, side: "
-                + (int) this.side + " units, color: " + this.getColor());
+                + (int) this.side + " units, color: " + this.getColor().toString().toLowerCase());
     }
 
     @Override

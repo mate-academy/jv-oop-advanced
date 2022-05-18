@@ -5,11 +5,12 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         Random random = new Random();
-        ColorSupplier cs = new ColorSupplier(random, Colors.values());
-        FigureSupplier fs = new FigureSupplier(random, cs, Figures.values());
+        ColorSupplier colorSupplier = new ColorSupplier(random);
+        FigureSupplier figureSupplier = new FigureSupplier(random, colorSupplier);
 
-        Figure[] figuresArray = {fs.getRandomFigure(), fs.getRandomFigure(), fs.getRandomFigure(),
-        fs.getDefaultFigure(), fs.getDefaultFigure(), fs.getDefaultFigure()};
+        Figure[] figuresArray = {figureSupplier.getRandomFigure(), figureSupplier.getRandomFigure(),
+                figureSupplier.getRandomFigure(), figureSupplier.getDefaultFigure(),
+                figureSupplier.getDefaultFigure(), figureSupplier.getDefaultFigure()};
 
         for (Figure figure : figuresArray) {
             System.out.println(figure.getInfo());

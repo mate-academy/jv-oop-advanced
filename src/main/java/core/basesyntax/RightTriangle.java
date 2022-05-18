@@ -10,7 +10,7 @@ public class RightTriangle extends Figure {
         this.leg2 = leg2;
         this.setInfo("Figure: right triangle, area: " + this.getArea() + " sq. units, leg1: "
                 + (int) this.leg1 + " units, leg2: " + (int) this.leg2
-                + " units, color: " + this.getColor());
+                + " units, color: " + this.getColor().toString().toLowerCase());
     }
 
     @Override

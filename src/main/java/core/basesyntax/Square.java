@@ -7,7 +7,7 @@ public class Square extends Figure {
         super(color);
         this.side = side;
         this.setInfo("Figure: square, area: " + this.getArea() + " sq. units, side: "
-                + (int) this.side + " units, color: " + this.getColor());
+                + (int) this.side + " units, color: " + this.getColor().toString().toLowerCase());
     }
 
     @Override

@@ -10,7 +10,7 @@ public class Rectangle extends Figure {
         this.side2 = side2;
         this.setInfo("Figure: rectangle, area: " + this.getArea() + " sq. units, side1: "
                 + (int) this.side1 + " units, side2: " + (int) this.side2
-                + " units, color: " + this.getColor());
+                + " units, color: " + this.getColor().toString().toLowerCase());
     }
 
     @Override
