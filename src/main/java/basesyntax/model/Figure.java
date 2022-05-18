@@ -3,7 +3,6 @@ package basesyntax.model;
 import basesyntax.servis.AreaCalculator;
 import basesyntax.servis.Drawable;
 
-
 public abstract class Figure implements AreaCalculator, Drawable {
     private String color;
 

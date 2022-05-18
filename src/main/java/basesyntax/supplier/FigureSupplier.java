@@ -1,8 +1,12 @@
 package basesyntax.supplier;
 
-import basesyntax.model.*;
-
-
+import basesyntax.model.Circle;
+import basesyntax.model.Color;
+import basesyntax.model.Figure;
+import basesyntax.model.IsoscelesTrapezoid;
+import basesyntax.model.RectangleF;
+import basesyntax.model.RightTriangle;
+import basesyntax.model.Square;
 import java.util.Random;
 
 public class FigureSupplier {
@@ -15,22 +19,24 @@ public class FigureSupplier {
     public final Figure getRandomFigure() {
         switch (random.nextInt(FIGURE_AMOUNT)) {
             case 0:
-                return new Circle(getRandomInt(), colorSupplier.getRandomColor());
+                return new Circle(getRandomInt(),
+                           colorSupplier.getRandomColor());
             case 1:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                getRandomDouble(),
-                getRandomDouble(),
-                getRandomDouble());
+                           getRandomDouble(),
+                           getRandomDouble(),
+                           getRandomDouble());
             case 2:
-                return new Rectangle(colorSupplier.getRandomColor(),
-                getRandomDouble(),
-                getRandomDouble());
+                return new RectangleF(colorSupplier.getRandomColor(),
+                           getRandomDouble(),
+                           getRandomDouble());
             case 3:
                 return new RightTriangle(colorSupplier.getRandomColor(),
-                getRandomDouble(),
-                getRandomDouble());
+                           getRandomDouble(),
+                           getRandomDouble());
             case 4:
-                return new Square(colorSupplier.getRandomColor(), getRandomDouble());
+                return new Square(colorSupplier.getRandomColor(),
+                           getRandomDouble());
             default:
                 return getDefaultFigure();
         }

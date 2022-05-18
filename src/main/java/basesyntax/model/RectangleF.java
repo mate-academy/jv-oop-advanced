@@ -1,10 +1,10 @@
 package basesyntax.model;
 
-public class Rectangle extends Figure {
+public class RectangleF extends Figure {
     private double width;
     private double length;
 
-    public Rectangle(String color, double width, double length) {
+    public RectangleF(String color, double width, double length) {
         super(color);
         this.width = width;
         this.length = length;

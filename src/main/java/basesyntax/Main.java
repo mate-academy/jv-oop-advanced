@@ -2,8 +2,6 @@ package basesyntax;
 
 import basesyntax.model.Figure;
 import basesyntax.supplier.FigureSupplier;
-
-
 import java.util.Random;
 
 public class Main {
