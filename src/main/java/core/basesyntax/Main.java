@@ -9,8 +9,8 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier(random, colorSupplier);
         final Figure defaultFigure = figureSupplier.getDefaultFigure();
         Figure[] figures = new Figure[6];
-        for (int i = 0; i < 6; i++) {
-            if (i < 3) {
+        for (int i = 0; i < figures.length; i++) {
+            if (i < figures.length / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
                 continue;
             }

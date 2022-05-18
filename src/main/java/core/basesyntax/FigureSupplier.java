@@ -7,7 +7,7 @@ public class FigureSupplier {
     public static final int MAX_SIDE_LENGTH = 10;
     public static final int MIN_SIDE_LENGTH = 1;
     public static final int DEFAULT_LENGTH = 10;
-    public static final String DEFAULT_FIGURE_COLOR = "White";
+    public static final String DEFAULT_FIGURE_COLOR = Color.WHITE.name();
     private final Random random;
     private final ColorSupplier colorSupplier;
 
@@ -18,8 +18,8 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int index = random.nextInt(FIGURE_COUNT);
-        double side1 = MIN_SIDE_LENGTH + (Math.random() * MAX_SIDE_LENGTH);
-        double side2 = MIN_SIDE_LENGTH + (Math.random() * MAX_SIDE_LENGTH);
+        double side1 = random.nextInt((MAX_SIDE_LENGTH - MIN_SIDE_LENGTH) + 1) + MIN_SIDE_LENGTH;
+        double side2 = random.nextInt((MAX_SIDE_LENGTH - MIN_SIDE_LENGTH) + 1) + MIN_SIDE_LENGTH;
         switch (index) {
             case 1:
                 return new Square(colorSupplier.getRandomColor(), side1);
