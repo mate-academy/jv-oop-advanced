@@ -11,7 +11,7 @@ public class Main {
             if (i < 3) {
                 figuresArray[i] = figureSupplier.getRandomFigure();
                 figuresArray[i].draw();
-            }else {
+            } else {
                 figuresArray[i] = figureSupplier.getDefaultFigure();
                 figuresArray[i].draw();
             }

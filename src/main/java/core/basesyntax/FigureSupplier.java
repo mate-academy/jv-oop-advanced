@@ -6,7 +6,7 @@ public class FigureSupplier {
     private static final int DEFAULT_RADIUS = 10;// радиус для круга
     private static final int FIGURES_BOUND = 5;// количество фигур
     private static final int MAX_BOUND = 20;// максимальное число для фигуры
-    private final Random  random;
+    private final Random random;
     private final ColorSupplier colorSupplier;
 
     public FigureSupplier(ColorSupplier colorSupplier, Random random) {
