@@ -17,8 +17,6 @@ public class Rectangle extends Figure implements AreaCalculator, Drawable {
 
     @Override
     public void draw() {
-        System.out.println("color = " +
-                getColor() + " height = " +
-                height + " width = " + width);
+        System.out.println("color = " + getColor() + " height = " + height + " width = " + width);
     }
 }

@@ -17,6 +17,7 @@ public class RightTriangle extends Figure implements AreaCalculator, Drawable {
 
     @Override
     public void draw() {
-        System.out.println("color = " + getColor() + " firstLeg = " + firstLeg + " secondLeg = " + secondLeg);
+        System.out.println("color = " + getColor()
+                + " firstLeg = " + firstLeg + " secondLeg = " + secondLeg);
     }
 }
