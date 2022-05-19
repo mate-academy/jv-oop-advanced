@@ -13,19 +13,24 @@ public class FigureSupplier {
         this.random = random;
     }
 
-    private int getRandomSize() {
+    public int getRandomSize() {
         return random.nextInt(MAX_SIZE);
     }
 
     public Figure getRandomFigure() {
         int figure = random.nextInt(FIGURE_COUNT);
-        return (figure == 1) ? new Circle(colorSupplier.getRandomColor(), getRandomSize())
-                : (figure == 2) ? new IsoscelesTrapezoid((colorSupplier.getRandomColor()),
-                getRandomSize(), getRandomSize(), getRandomSize())
-                : (figure == 3) ? new Rectangle(colorSupplier.getRandomColor(),
-                getRandomSize(), getRandomSize())
-                : (figure == 4) ? new Square(colorSupplier.getRandomColor(), getRandomSize())
-                : new Rectangle(colorSupplier.getRandomColor(), getRandomSize(), getRandomSize());
+        switch (figure) {
+            case 0 : return new Circle(colorSupplier.getRandomColor(), getRandomSize());
+            case 1 : return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomSize(),
+                    getRandomSize(), getRandomSize());
+            case 2 : return new Rectangle(colorSupplier.getRandomColor(), getRandomSize(),
+                    getRandomSize());
+            case 3 : return new RightTriangle(colorSupplier.getRandomColor(), getRandomSize(),
+                    getRandomSize());
+            case 4 :
+            default:
+                return new Square(colorSupplier.getRandomColor(), getRandomSize());
+        }
     }
 
     public Figure getDefaultFigure() {
