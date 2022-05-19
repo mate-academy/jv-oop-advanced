@@ -1,7 +1,7 @@
-package basesyntax;
+package core.basesyntax;
 
-import basesyntax.model.Figure;
-import basesyntax.supplier.FigureSupplier;
+import core.basesyntax.model.Figure;
+import core.basesyntax.supplier.FigureSupplier;
 import java.util.Random;
 
 public class Main {

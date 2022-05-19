@@ -1,12 +1,13 @@
-package basesyntax.supplier;
+package core.basesyntax.supplier;
 
-import basesyntax.model.Circle;
-import basesyntax.model.Color;
-import basesyntax.model.Figure;
-import basesyntax.model.IsoscelesTrapezoid;
-import basesyntax.model.RectangleF;
-import basesyntax.model.RightTriangle;
-import basesyntax.model.Square;
+import core.basesyntax.model.Circle;
+import core.basesyntax.model.Color;
+import core.basesyntax.model.Figure;
+import core.basesyntax.model.IsoscelesTrapezoid;
+import core.basesyntax.model.RectangleF;
+import core.basesyntax.model.RightTriangle;
+import core.basesyntax.model.Square;
+
 import java.util.Random;
 
 public class FigureSupplier {

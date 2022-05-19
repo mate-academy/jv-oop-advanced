@@ -1,4 +1,4 @@
-package basesyntax.servis;
+package core.basesyntax.servis;
 
 public interface Drawable {
     void draw();
