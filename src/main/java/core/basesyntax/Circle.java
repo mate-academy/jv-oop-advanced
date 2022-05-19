@@ -3,8 +3,8 @@ package core.basesyntax;
 public class Circle extends Figure implements AreaCalculator, Drawable {
     private final double radius;
 
-    public Circle(String color, double radius) {
-        super(color);
+    public Circle(Color color, double radius) {
+        super(color, FigureType.CIRCLE);
         this.radius = radius;
     }
 
@@ -15,7 +15,7 @@ public class Circle extends Figure implements AreaCalculator, Drawable {
 
     @Override
     public void draw() {
-        System.out.println("Figure: Circle, area: " + Math.PI * radius * radius
+        System.out.println("Figure: " + getFigureType().value + ", area: " + calculateArea()
                 + ", radius: " + radius + " units, color: " + getColor());
     }
 }

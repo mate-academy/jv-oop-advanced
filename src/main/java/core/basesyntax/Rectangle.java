@@ -4,8 +4,8 @@ public class Rectangle extends Figure implements AreaCalculator, Drawable {
     private final double height;
     private final double width;
 
-    public Rectangle(String color, double height, double width) {
-        super(color);
+    public Rectangle(Color color, double height, double width) {
+        super(color, FigureType.RECTANGLE);
         this.height = height;
         this.width = width;
     }
@@ -17,6 +17,7 @@ public class Rectangle extends Figure implements AreaCalculator, Drawable {
 
     @Override
     public void draw() {
-        System.out.println("color = " + getColor() + " height = " + height + " width = " + width);
+        System.out.printf("Figure: %s, area: %f, color = %s, width = %f, height = %f\n",
+                getFigureType().value, calculateArea(), getColor(), width, height);
     }
 }

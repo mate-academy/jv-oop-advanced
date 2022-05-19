@@ -3,8 +3,8 @@ package core.basesyntax;
 public class Square extends Figure implements AreaCalculator, Drawable {
     private final double side;
 
-    public Square(String color, double side) {
-        super(color);
+    public Square(Color color, double side) {
+        super(color, FigureType.SQUARE);
         this.side = side;
     }
 
@@ -15,6 +15,7 @@ public class Square extends Figure implements AreaCalculator, Drawable {
 
     @Override
     public void draw() {
-        System.out.println("color = " + getColor() + " side = " + side);
+        System.out.printf("Figure: %s, area: %f, color = %s, Side = %f\n",
+                getFigureType().value, calculateArea(), getColor(), side);
     }
 }
