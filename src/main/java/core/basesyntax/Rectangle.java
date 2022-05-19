@@ -11,7 +11,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void drawInfo() {
-        System.out.println("Rectangle. First side: " + firstSide + ". Second side: " + secondSide
-                + ". Area: " + getArea() + ".");
+        System.out.println("Rectangle. First side: " + firstSide + ". Second side: "
+                + secondSide + ". Area: " + getArea() + ". Color: " + getColor());
     }
 }

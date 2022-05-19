@@ -10,6 +10,6 @@ public class Circle extends Figure {
 
     @Override
     public void drawInfo() {
-        System.out.println("Circle. Radius: " + radius + ". Area: " + getArea() + ".");
+        System.out.println("Circle. Radius: " + radius + ". Area: " + getArea() + ". Color: " + getColor());
     }
 }
