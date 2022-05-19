@@ -15,30 +15,31 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         ColorSupplier colorSupplier = new ColorSupplier(random);
         String randomColor = colorSupplier.getRandomColor();
-        switch (Shape.values()[random.nextInt(Shape.values().length)].toString()) {
+        String whatFigure = Shape.values()[random.nextInt(Shape.values().length)].toString();
+        switch (whatFigure) {
             case "CIRCLE":
-                Circle circle = new Circle(random.nextInt(RANDOM_INTEGER));
+                int randC = random.nextInt(RANDOM_INTEGER);
+                Circle circle = new Circle(randC);
                 circle.setColor(randomColor);
                 return circle;
             case "ISOSCELES_TRAPEZOID":
-                IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(
-                        random.nextInt(RANDOM_INTEGER),
-                        random.nextInt(RANDOM_INTEGER),
-                        random.nextInt(RANDOM_INTEGER));
+                int randT = random.nextInt(RANDOM_INTEGER);
+                IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(randT, randT, randT);
                 isoscelesTrapezoid.setColor(randomColor);
                 return isoscelesTrapezoid;
             case "RECTANGLE":
-                Rectangle rectangle = new Rectangle(random.nextInt(RANDOM_INTEGER),
-                        random.nextInt(RANDOM_INTEGER));
+                int randR = random.nextInt(RANDOM_INTEGER);
+                Rectangle rectangle = new Rectangle(randR, randR);
                 rectangle.setColor(randomColor);
                 return rectangle;
             case "RIGHT_TRIANGLE":
-                RightTriangle rightTriangle = new RightTriangle(random.nextInt(RANDOM_INTEGER),
-                        random.nextInt(RANDOM_INTEGER));
+                int randTr = random.nextInt(RANDOM_INTEGER);
+                RightTriangle rightTriangle = new RightTriangle(randTr, randTr);
                 rightTriangle.setColor(randomColor);
                 return rightTriangle;
             case "SQUARE":
-                Square square = new Square(random.nextInt(RANDOM_INTEGER));
+                int randS = random.nextInt(RANDOM_INTEGER);
+                Square square = new Square(randS);
                 square.setColor(randomColor);
                 return square;
             default:
