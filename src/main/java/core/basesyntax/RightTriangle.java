@@ -18,6 +18,6 @@ public class RightTriangle extends Figure implements AreaCalculator, Drawable {
     @Override
     public void draw() {
         System.out.printf("Figure: %s, area: %f, color = %s, firstLeg = %f, secondLeg = %f\n",
-                getFigureType().value, calculateArea(), getColor(), firstLeg, secondLeg);
+                getFigureType().getValue(), calculateArea(), getColor(), firstLeg, secondLeg);
     }
 }

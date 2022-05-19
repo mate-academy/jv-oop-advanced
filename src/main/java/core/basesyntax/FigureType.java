@@ -7,9 +7,13 @@ public enum FigureType {
     CIRCLE("Circle"),
     TRAPEZOID("IsoscelesTrapezoid");
 
-    final String value;
+    private final String value;
 
     FigureType(String value) {
         this.value = value;
+    }
+
+    public String getValue() {
+        return value;
     }
 }

@@ -15,7 +15,7 @@ public class Circle extends Figure implements AreaCalculator, Drawable {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getFigureType().value + ", area: " + calculateArea()
+        System.out.println("Figure: " + getFigureType().getValue() + ", area: " + calculateArea()
                 + ", radius: " + radius + " units, color: " + getColor());
     }
 }
