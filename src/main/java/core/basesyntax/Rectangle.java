@@ -4,6 +4,12 @@ public class Rectangle extends Figure {
     private int firstSide;
     private int secondSide;
 
+    public Rectangle(int firstSide, int secondSide) {
+        this.firstSide = firstSide;
+        this.secondSide = secondSide;
+
+    }
+
     @Override
     public double getArea() {
         return firstSide * secondSide;
@@ -28,11 +34,6 @@ public class Rectangle extends Figure {
     }
 
     public void setSecondSide(int secondSide) {
-        this.secondSide = secondSide;
-    }
-
-    public Rectangle(int firstSide, int secondSide) {
-        this.firstSide = firstSide;
         this.secondSide = secondSide;
     }
 }

@@ -21,13 +21,15 @@ public class FigureSupplier {
                 circle.setColor(randomColor);
                 return circle;
             case "ISOSCELES_TRAPEZOID":
-                IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(random.nextInt(RANDOM_INTEGER),
+                IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(
+                        random.nextInt(RANDOM_INTEGER),
                         random.nextInt(RANDOM_INTEGER),
                         random.nextInt(RANDOM_INTEGER));
                 isoscelesTrapezoid.setColor(randomColor);
                 return isoscelesTrapezoid;
             case "RECTANGLE":
-                Rectangle rectangle = new Rectangle(random.nextInt(RANDOM_INTEGER), random.nextInt(RANDOM_INTEGER));
+                Rectangle rectangle = new Rectangle(random.nextInt(RANDOM_INTEGER),
+                        random.nextInt(RANDOM_INTEGER));
                 rectangle.setColor(randomColor);
                 return rectangle;
             case "RIGHT_TRIANGLE":
@@ -39,9 +41,11 @@ public class FigureSupplier {
                 Square square = new Square(random.nextInt(RANDOM_INTEGER));
                 square.setColor(randomColor);
                 return square;
+            default:
+                return null;
         }
-        return null;
     }
+
     public Figure getDefaultFigure() {
         Circle circle = new Circle(DEFAULT_CIRCLE_RADIUS);
         circle.setColor(DEFAULT_CIRCLE_COLOR);
