@@ -41,15 +41,15 @@ public class FigureSupplier {
 
     private Rectangle getRandomRectangle() {
         return new Rectangle(colorSupplier.getRandomColor(),
-                random.nextInt(MAX_BOUND),
-                random.nextInt(MAX_BOUND));
+                random.nextInt(10),
+                random.nextInt(10));
     }
 
     private IsoscelesTrapezoid getRandomTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                random.nextInt(MAX_BOUND),
-                random.nextInt(MAX_BOUND),
-                random.nextInt(MAX_BOUND));
+                random.nextInt(5),
+                random.nextInt(5),
+                random.nextInt(5));
     }
 
     private RightTriangle getRandomTriangle() {

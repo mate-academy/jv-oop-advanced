@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Circle extends Figure implements AreaCalculator, Drawable {
-    final private double radius;
+    private final double radius;
 
     public Circle(String color, double radius) {
         super(color);
