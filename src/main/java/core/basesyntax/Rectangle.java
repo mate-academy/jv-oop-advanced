@@ -14,4 +14,25 @@ public class Rectangle extends Figure {
         System.out.println("Rectangle. First side: " + firstSide + ". Second side: "
                 + secondSide + ". Area: " + getArea() + ". Color: " + getColor());
     }
+
+    public int getFirstSide() {
+        return firstSide;
+    }
+
+    public void setFirstSide(int firstSide) {
+        this.firstSide = firstSide;
+    }
+
+    public int getSecondSide() {
+        return secondSide;
+    }
+
+    public void setSecondSide(int secondSide) {
+        this.secondSide = secondSide;
+    }
+
+    public Rectangle(int firstSide, int secondSide) {
+        this.firstSide = firstSide;
+        this.secondSide = secondSide;
+    }
 }

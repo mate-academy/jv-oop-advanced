@@ -12,4 +12,16 @@ public class Circle extends Figure {
     public void drawInfo() {
         System.out.println("Circle. Radius: " + radius + ". Area: " + getArea() + ". Color: " + getColor());
     }
+
+    public int getRadius() {
+        return radius;
+    }
+
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+
+    public Circle(int radius) {
+        this.radius = radius;
+    }
 }

@@ -12,4 +12,16 @@ public class Square extends Figure {
     public void drawInfo() {
         System.out.println("Square. Side: " + side + ". Area: " + getArea() + ". Color: " + getColor());
     }
+
+    public Square(int side) {
+        this.side = side;
+    }
+
+    public int getSide() {
+        return side;
+    }
+
+    public void setSide(int side) {
+        this.side = side;
+    }
 }
