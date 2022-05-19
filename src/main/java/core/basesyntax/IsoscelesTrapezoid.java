@@ -20,8 +20,8 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator, Drawab
     @Override
     public void draw() {
 
-        System.out.printf("Figure: %s, area: %f, color = %s, firstSide = %f, secondSide = %f, " +
-                        "height = %f\n",
+        System.out.printf("Figure: %s, area: %f, color = %s, firstSide = %f, secondSide = %f, "
+                        + "height = %f\n",
                 getFigureType().getValue(), calculateArea(),
                 getColor(), firstSide, secondSide, height);
     }
