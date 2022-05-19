@@ -5,6 +5,7 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int MAX_NUMBER_FIGURE = 5;
     private static final int MAX_SIZE = 10;
+    private static final String DEFAULT_FIGURE_COLOR = "WHITE";
     private final ColorSupplier colorSupplier;
     private final Random random;
 
@@ -19,16 +20,24 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int figure = random.nextInt(MAX_NUMBER_FIGURE);
-        return (figure == 1) ? new Circle(colorSupplier.getRandomColor(), getRandomSize())
-                : (figure == 2) ? new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                getRandomSize(), getRandomSize(), getRandomSize())
-                : (figure == 3) ? new RightTriangle(colorSupplier.getRandomColor(),
-                getRandomSize(), getRandomSize())
-                : (figure == 4) ? new Square(colorSupplier.getRandomColor(), getRandomSize())
-                : new Rectangle(colorSupplier.getRandomColor(), getRandomSize(), getRandomSize());
+        switch (figure) {
+            case 0:
+                return new Circle(colorSupplier.getRandomColor(), getRandomSize());
+            case 1:
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        getRandomSize(), getRandomSize(), getRandomSize());
+            case 2:
+                return new RightTriangle(colorSupplier.getRandomColor(), getRandomSize(),
+                        getRandomSize());
+            case 3:
+                return new Square(colorSupplier.getRandomColor(), getRandomSize());
+            default:
+                return new Rectangle(colorSupplier.getRandomColor(), getRandomSize(),
+                        getRandomSize());
+        }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("WHITE", 10);
+        return new Circle(DEFAULT_FIGURE_COLOR, 10);
     }
 }
