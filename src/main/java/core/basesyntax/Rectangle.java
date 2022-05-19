@@ -1,8 +1,8 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure implements AreaCalculator, Drawable {
-    final private double height;
-    final private double width;
+    private final double height;
+    private final double width;
 
     public Rectangle(String color, double height, double width) {
         super(color);
