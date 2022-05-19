@@ -8,11 +8,17 @@ public class Main {
         ColorSupplier colorSupplier = new ColorSupplier(random);
         FigureSupplier figureSupplier = new FigureSupplier(random, colorSupplier);
 
-        Figure[] figuresArray = {figureSupplier.getRandomFigure(), figureSupplier.getRandomFigure(),
-                figureSupplier.getRandomFigure(), figureSupplier.getDefaultFigure(),
-                figureSupplier.getDefaultFigure(), figureSupplier.getDefaultFigure()};
+        FigureClass[] figures = new FigureClass[6];
 
-        for (Figure figure : figuresArray) {
+        for (int i = 0; i < 3; i++) {
+            figures[i] = figureSupplier.getRandomFigure();
+        }
+
+        for (int i = 3; i < 6; i++) {
+            figures[i] = figureSupplier.getDefaultFigure();
+        }
+
+        for (FigureClass figure : figures) {
             System.out.println(figure.getInfo());
         }
     }
