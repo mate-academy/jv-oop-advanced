@@ -37,13 +37,11 @@ public class FigureSupplier {
                 RightTriangle rightTriangle = new RightTriangle(randTr, randTr);
                 rightTriangle.setColor(randomColor);
                 return rightTriangle;
-            case "SQUARE":
+            default:
                 int randS = random.nextInt(RANDOM_INTEGER);
                 Square square = new Square(randS);
                 square.setColor(randomColor);
                 return square;
-            default:
-                return null;
         }
     }
 
