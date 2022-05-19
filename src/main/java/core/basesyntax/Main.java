@@ -12,7 +12,7 @@ public class Main {
         Figure fourthFigure = figureSupplier.getDefaultFigure();
         Figure fifthFigure = figureSupplier.getDefaultFigure();
         Figure sixthFigure = figureSupplier.getDefaultFigure();
-        Figure[] figures = {fifthFigure, secondFigure, thirdFigure,
+        Figure[] figures = {firstFigure, secondFigure, thirdFigure,
                 fourthFigure, fifthFigure, sixthFigure};
         for (Figure figure : figures) {
             figure.drawInfo();

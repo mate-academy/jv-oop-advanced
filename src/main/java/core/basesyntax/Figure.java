@@ -1,9 +1,7 @@
 package core.basesyntax;
 
-public abstract class Figure implements InfoChecker {
+public abstract class Figure implements InfoChecker, AreaCounter {
     private String color;
-
-    public abstract double getArea();
 
     public String getColor() {
         return color;
