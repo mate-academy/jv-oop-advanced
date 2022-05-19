@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int MAX_FIGURE = 5;
+    private static final int MAX_FIGURE = 4;
     private final Random random;
     private final ColorSupplier colorSupplier;
 
@@ -14,18 +14,19 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         Color color = colorSupplier.getRandomColor();
-        int randomNumber = random.nextInt(Figure.MAX_VALUE_SIDE);
+        int randomNumber = random.nextInt(MAX_FIGURE);
         switch (randomNumber) {
             case 0:
-                return new Square(color, getLeg());
-            case 1:
-                return new Rectangle(color, getLeg(), getLeg());
-            case 2:
-                return new RightTriangle(color, getLeg(), getLeg());
-            case 3:
-                return new IsoscelesTrapezoid(color, getLeg(), getLeg(), getLeg());
-            default:
                 return new Circle(color, getLeg());
+            case 1:
+                return new Square(color, getLeg());
+            case 2:
+                return new Rectangle(color, getLeg(), getLeg());
+            case 3:
+                return new RightTriangle(color, getLeg(), getLeg());
+            default:
+                return new IsoscelesTrapezoid(color, getLeg(), getLeg(), getLeg());
+
         }
     }
 
