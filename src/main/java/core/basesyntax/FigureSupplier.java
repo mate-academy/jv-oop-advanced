@@ -13,6 +13,10 @@ public class FigureSupplier {
         this.colorSupplier = colorSupplier;
     }
 
+    private double getRandomParameter() {
+        return random.nextInt(MAX_VALUE_PARAMETERS) + 1;
+    }
+
     public Figure getRandomFigure() {
         switch (random.nextInt(MAX_VALUE_FIGURE)) {
             case 0:
@@ -26,10 +30,6 @@ public class FigureSupplier {
             default:
                 return getRightTriangle();
         }
-    }
-
-    public double getRandomParameter() {
-        return random.nextInt(MAX_VALUE_PARAMETERS) + 1;
     }
 
     public Circle getCircle() {
