@@ -14,6 +14,7 @@ public class FigureSupplier {
         this.colorSupplier = colorSupplier;
         this.random = random;
     }
+
     public int getRandomSize() {
         return random.nextInt(MAX_SIZE);
     }
