@@ -3,8 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int RADIUS = 10;
-    public static final String COLOR = "WHITE";
+    public static final int DEFAULT_RADIUS = 10;
+    public static final String DEFAULT_COLOR = Color.WHITE.name();
     public static final int MAX_SIDE = 9;
     public static final int FIGURE_COUNT = 5;
     private final Random random;
@@ -18,32 +18,22 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         int index = random.nextInt(FIGURE_COUNT);
         int randomNum = random.nextInt(MAX_SIDE);
-        Figure figure = new Figure();
         switch (index) {
             case 0:
-                figure = new Circle(colorSupplier.getRandomColor(), randomNum);
-                break;
+                return new Circle(colorSupplier.getRandomColor(), randomNum);
             case 1:
-                figure = new Square(colorSupplier.getRandomColor(), randomNum);
-                break;
+                return new Square(colorSupplier.getRandomColor(), randomNum);
             case 2:
-                figure = new Rectangle(colorSupplier.getRandomColor(), randomNum, randomNum);
-                break;
+                return new Rectangle(colorSupplier.getRandomColor(), randomNum, randomNum);
             case 3:
-                figure = new RightTriangle(colorSupplier.getRandomColor(), randomNum, randomNum);
-                break;
-            case 4:
-                figure = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        randomNum, randomNum, randomNum);
-                break;
+                return new RightTriangle(colorSupplier.getRandomColor(), randomNum, randomNum);
             default:
-                break;
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        randomNum, randomNum, randomNum);
         }
-        return figure;
     }
 
     public Figure getDefaultFigure() {
-        Figure figure = new Circle(COLOR, RADIUS);
-        return figure;
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
