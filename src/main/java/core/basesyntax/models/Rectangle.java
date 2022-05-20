@@ -5,9 +5,9 @@ public class Rectangle extends Figure {
     private final int secondSide;
 
     public Rectangle(int firstSide, int secondSide, String color) {
-        this.firstSide = firstSide > 0 ? firstSide : 1;
-        this.secondSide = secondSide > 0 ? secondSide : 1;
-        this.setColor(color);
+        super(color);
+        this.firstSide = firstSide;
+        this.secondSide = secondSide;
     }
 
     @Override

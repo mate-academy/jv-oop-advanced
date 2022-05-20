@@ -4,8 +4,8 @@ public class Square extends Figure {
     private final int side;
 
     public Square(int side, String color) {
-        this.side = side > 0 ? side : 1;
-        this.setColor(color);
+        super(color);
+        this.side = side;
     }
 
     @Override

@@ -5,9 +5,9 @@ public class RightTriangle extends Figure {
     private final int secondLeg;
 
     public RightTriangle(int firstLeg, int secondLeg, String color) {
-        this.firstLeg = firstLeg > 0 ? firstLeg : 1;
-        this.secondLeg = secondLeg > 0 ? secondLeg : 1;
-        this.setColor(color);
+        super(color);
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
     }
 
     @Override

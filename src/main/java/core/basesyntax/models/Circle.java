@@ -4,8 +4,8 @@ public class Circle extends Figure {
     private final int radius;
 
     public Circle(int radius, String color) {
-        this.radius = radius > 0 ? radius : 1;
-        this.setColor(color);
+        super(color);
+        this.radius = radius;
     }
 
     @Override
