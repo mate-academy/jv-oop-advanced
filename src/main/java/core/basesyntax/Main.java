@@ -6,16 +6,15 @@ public class Main {
     public static void main(String[] args) {
         Random random = new Random();
         FigureSupplier figureSupplier = new FigureSupplier(random);
-        Figure firstFigure = figureSupplier.getRandomFigure();
-        Figure secondFigure = figureSupplier.getRandomFigure();
-        Figure thirdFigure = figureSupplier.getRandomFigure();
-        Figure fourthFigure = figureSupplier.getDefaultFigure();
-        Figure fifthFigure = figureSupplier.getDefaultFigure();
-        Figure sixthFigure = figureSupplier.getDefaultFigure();
-        Figure[] figures = {firstFigure, secondFigure, thirdFigure,
-                fourthFigure, fifthFigure, sixthFigure};
-        for (Figure figure : figures) {
-            figure.drawInfo();
+        Figure[] figures = new Figure[6];
+        for (int i = 0; i < figures.length; i++) {
+            if (i >= figures.length / 2) {
+                figures[i] = figureSupplier.getDefaultFigure();
+                figures[i].drawInfo();
+            } else {
+                figures[i] = figureSupplier.getRandomFigure();
+                figures[i].drawInfo();
+            }
         }
     }
 }

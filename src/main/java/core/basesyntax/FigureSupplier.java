@@ -14,40 +14,33 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         ColorSupplier colorSupplier = new ColorSupplier(random);
-        String randomColor = colorSupplier.getRandomColor();
-        String whatFigure = Shape.values()[random.nextInt(Shape.values().length)].toString();
-        switch (whatFigure) {
+        String randColor = colorSupplier.getRandomColor();
+        String figureChoice = Shape.values()[random.nextInt(Shape.values().length)].toString();
+        switch (figureChoice) {
             case "CIRCLE":
-                int randC = random.nextInt(RANDOM_INTEGER);
-                Circle circle = new Circle(randC);
-                circle.setColor(randomColor);
-                return circle;
+                return new Circle(random.nextInt(RANDOM_INTEGER), randColor);
             case "ISOSCELES_TRAPEZOID":
-                int randT = random.nextInt(RANDOM_INTEGER);
-                IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(randT, randT, randT);
-                isoscelesTrapezoid.setColor(randomColor);
-                return isoscelesTrapezoid;
+                return new IsoscelesTrapezoid(
+                        random.nextInt(RANDOM_INTEGER),
+                        random.nextInt(RANDOM_INTEGER),
+                        random.nextInt(RANDOM_INTEGER),
+                        randColor);
             case "RECTANGLE":
-                int randR = random.nextInt(RANDOM_INTEGER);
-                Rectangle rectangle = new Rectangle(randR, randR);
-                rectangle.setColor(randomColor);
-                return rectangle;
+                return new Rectangle(
+                        random.nextInt(RANDOM_INTEGER),
+                        random.nextInt(RANDOM_INTEGER),
+                        randColor);
             case "RIGHT_TRIANGLE":
-                int randTr = random.nextInt(RANDOM_INTEGER);
-                RightTriangle rightTriangle = new RightTriangle(randTr, randTr);
-                rightTriangle.setColor(randomColor);
-                return rightTriangle;
+                return new RightTriangle(
+                        random.nextInt(RANDOM_INTEGER),
+                        random.nextInt(RANDOM_INTEGER),
+                        randColor);
             default:
-                int randS = random.nextInt(RANDOM_INTEGER);
-                Square square = new Square(randS);
-                square.setColor(randomColor);
-                return square;
+                return new Square(random.nextInt(RANDOM_INTEGER), randColor);
         }
     }
 
     public Figure getDefaultFigure() {
-        Circle circle = new Circle(DEFAULT_CIRCLE_RADIUS);
-        circle.setColor(DEFAULT_CIRCLE_COLOR);
-        return circle;
+        return new Circle(DEFAULT_CIRCLE_RADIUS, DEFAULT_CIRCLE_COLOR);
     }
 }
