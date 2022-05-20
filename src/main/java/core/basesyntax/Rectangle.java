@@ -4,7 +4,7 @@ public class Rectangle extends Figure implements AreaCalculator {
     private int firstSide;
     private int secondSide;
 
-    public Rectangle(int firstSide, int secondSide, FigureColors color) {
+    public Rectangle(int firstSide, int secondSide, Color color) {
         this.firstSide = firstSide;
         this.secondSide = secondSide;
         this.color = color;

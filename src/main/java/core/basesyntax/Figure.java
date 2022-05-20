@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public abstract class Figure {
-    protected FigureColors color;
+    protected Color color;
 
     public abstract void draw();
 }

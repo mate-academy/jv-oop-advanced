@@ -9,8 +9,8 @@ public class ColorSupplier {
         this.random = random;
     }
 
-    public FigureColors getRandomColor() {
-        FigureColors[] figureColors = FigureColors.values();
+    public Color getRandomColor() {
+        Color[] figureColors = Color.values();
         return figureColors[random.nextInt(figureColors.length - 1)];
     }
 }
