@@ -20,10 +20,8 @@ public class FigureSupplier {
                 return getRightTriangle();
             case 3:
                 return getCircle();
-            case 4:
-                return getIsoscelesTrapezoid();
             default:
-                return null;
+                return getIsoscelesTrapezoid();
         }
     }
 
