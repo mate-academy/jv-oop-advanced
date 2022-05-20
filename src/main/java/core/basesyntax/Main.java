@@ -11,7 +11,8 @@ public class Main {
         ColorSupplier colorSupplier = new ColorSupplier(random);
         FigureSupplier figureSupplier = new FigureSupplier(random, colorSupplier);
 
-        Figure[] arrayOfFigures = new Figure[6];
+        Figure[] figures = new Figure[6];
+
         for (int i = 0; i < arrayOfFigures.length; i++) {
             arrayOfFigures[i] = i < arrayOfFigures.length / 2
                     ? figureSupplier.getRandomFigure()
