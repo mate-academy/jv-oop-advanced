@@ -17,21 +17,22 @@ public class FigureSupplier {
         int randomNumber = random.nextInt(MAX_FIGURE);
         switch (randomNumber) {
             case 0:
-                return new Circle(color, getLeg());
+                return new Circle(color,"circle", getLeg());
             case 1:
-                return new Square(color, getLeg());
+                return new Square(color,"square", getLeg());
             case 2:
-                return new Rectangle(color, getLeg(), getLeg());
+                return new Rectangle(color,"rectangle", getLeg(), getLeg());
             case 3:
-                return new RightTriangle(color, getLeg(), getLeg());
+                return new RightTriangle(color, "right triangle", getLeg(), getLeg());
             default:
-                return new IsoscelesTrapezoid(color, getLeg(), getLeg(), getLeg());
+                return new IsoscelesTrapezoid(color,"isosceles trapezoid",
+                        getLeg(), getLeg(), getLeg());
 
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE, 10);
+        return new Circle(Color.WHITE, "circle", 10);
     }
     
     public double getLeg() {

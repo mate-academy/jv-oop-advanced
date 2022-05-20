@@ -4,11 +4,10 @@ public class Rectangle extends Figure {
     private final double firstLeg;
     private final double secondLeg;
 
-    public Rectangle(Color color, double firstLeg, double secondLeg) {
-        super(color);
+    public Rectangle(Color color, String name, double firstLeg, double secondLeg) {
+        super(color, name);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        setName("rectangle");
     }
 
     @Override
