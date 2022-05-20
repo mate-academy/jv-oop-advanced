@@ -12,31 +12,26 @@ public class FigureSupplier {
         this.random = random;
     }
 
+    private int getRand() {
+        return random.nextInt(RANDOM_INTEGER);
+    }
+
     public Figure getRandomFigure() {
         ColorSupplier colorSupplier = new ColorSupplier(random);
         String randColor = colorSupplier.getRandomColor();
         String figureChoice = Shape.values()[random.nextInt(Shape.values().length)].toString();
         switch (figureChoice) {
             case "CIRCLE":
-                return new Circle(random.nextInt(RANDOM_INTEGER), randColor);
+                return new Circle(getRand(), randColor);
             case "ISOSCELES_TRAPEZOID":
-                return new IsoscelesTrapezoid(
-                        random.nextInt(RANDOM_INTEGER),
-                        random.nextInt(RANDOM_INTEGER),
-                        random.nextInt(RANDOM_INTEGER),
+                return new IsoscelesTrapezoid(getRand(), getRand(), getRand(),
                         randColor);
             case "RECTANGLE":
-                return new Rectangle(
-                        random.nextInt(RANDOM_INTEGER),
-                        random.nextInt(RANDOM_INTEGER),
-                        randColor);
+                return new Rectangle(getRand(), getRand(), randColor);
             case "RIGHT_TRIANGLE":
-                return new RightTriangle(
-                        random.nextInt(RANDOM_INTEGER),
-                        random.nextInt(RANDOM_INTEGER),
-                        randColor);
+                return new RightTriangle(getRand(), getRand(), randColor);
             default:
-                return new Square(random.nextInt(RANDOM_INTEGER), randColor);
+                return new Square(getRand(), randColor);
         }
     }
 
