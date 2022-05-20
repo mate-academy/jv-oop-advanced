@@ -7,7 +7,6 @@ public class RightTriangle extends Figure {
     public RightTriangle(int firstLeg, int secondLeg) {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-
     }
 
     @Override

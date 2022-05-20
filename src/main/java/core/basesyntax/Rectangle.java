@@ -7,7 +7,6 @@ public class Rectangle extends Figure {
     public Rectangle(int firstSide, int secondSide) {
         this.firstSide = firstSide;
         this.secondSide = secondSide;
-
     }
 
     @Override
