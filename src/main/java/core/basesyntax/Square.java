@@ -1,10 +1,14 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    private final double size;
+    private double size;
 
     public Square(String colour, double size) {
         super(colour);
+        setSize(size);
+    }
+
+    public void setSize(double size) {
         this.size = roundValues(size);
     }
 

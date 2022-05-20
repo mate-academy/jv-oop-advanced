@@ -2,14 +2,26 @@ package core.basesyntax;
 
 public class RightTriangle extends Figure {
     private static final double AREA_COEFFICIENT = 0.5;
-    private final double firstLeg;
-    private final double secondLeg;
-    private final double hypotenuse;
+    private double firstLeg;
+    private double secondLeg;
+    private double hypotenuse;
 
     public RightTriangle(String colour, double firstLeg, double secondLeg) {
         super(colour);
+        setFirstLeg(firstLeg);
+        setSecondLeg(secondLeg);
+        setHypotenuse();
+    }
+
+    public void setFirstLeg(double firstLeg) {
         this.firstLeg = roundValues(firstLeg);
+    }
+
+    public void setSecondLeg(double secondLeg) {
         this.secondLeg = roundValues(secondLeg);
+    }
+
+    public void setHypotenuse() {
         this.hypotenuse = countHypotenuse();
     }
 

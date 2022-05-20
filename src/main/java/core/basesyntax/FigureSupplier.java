@@ -15,31 +15,27 @@ public class FigureSupplier {
         this.colorSupplier = colorSupplier;
     }
 
-    private int getClassId() {
-        return random.nextInt(NUMBER_OF_CLASSES);
-    }
-
-    private double getDoubleValue() {
+    private double getRandomDoubleValue() {
         return random.nextDouble() * MAX_SIZE;
     }
 
     public Figure getRandomFigure() {
-        int id = getClassId();
+        int id = random.nextInt(NUMBER_OF_CLASSES);
         switch (id) {
             case 0:
-                return new Square(colorSupplier.getRandomColor(), getDoubleValue());
+                return new Square(colorSupplier.getRandomColor(), getRandomDoubleValue());
             case 1:
-                return new Rectangle(colorSupplier.getRandomColor(), getDoubleValue(),
-                        getDoubleValue());
+                return new Rectangle(colorSupplier.getRandomColor(), getRandomDoubleValue(),
+                        getRandomDoubleValue());
             case 2:
-                return new Circle(colorSupplier.getRandomColor(), getDoubleValue());
+                return new Circle(colorSupplier.getRandomColor(), getRandomDoubleValue());
             case 3:
-                return new RightTriangle(colorSupplier.getRandomColor(), getDoubleValue(),
-                        getDoubleValue());
+                return new RightTriangle(colorSupplier.getRandomColor(), getRandomDoubleValue(),
+                        getRandomDoubleValue());
             default: break;
         }
-        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getDoubleValue(),
-                getDoubleValue(), getDoubleValue());
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomDoubleValue(),
+                getRandomDoubleValue(), getRandomDoubleValue());
     }
 
     public Figure getDefaultFigure() {

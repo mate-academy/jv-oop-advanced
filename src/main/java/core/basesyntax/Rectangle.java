@@ -1,12 +1,20 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private final double smallSide;
-    private final double bigSide;
+    private double smallSide;
+    private double bigSide;
 
     public Rectangle(String colour, double smallSide, double bigSide) {
         super(colour);
+        setSmallSide(smallSide);
+        setBigSide(bigSide);
+    }
+
+    public void setSmallSide(double smallSide) {
         this.smallSide = roundValues(smallSide);
+    }
+
+    public void setBigSide(double bigSide) {
         this.bigSide = roundValues(bigSide);
     }
 

@@ -2,17 +2,33 @@ package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
     private static final double AREA_COEFFICIENT = 0.5;
-    private final double smallBase;
-    private final double bigBase;
-    private final double height;
-    private final double leg;
+    private double smallBase;
+    private double bigBase;
+    private double height;
+    private double leg;
 
     public IsoscelesTrapezoid(String colour, double smallBase, double bigBase, double height) {
         super(colour);
+        setHeight(height);
+        setSmallBase(smallBase);
+        setBigBase(bigBase);
+        setLeg();
+    }
+
+    public void setSmallBase(double smallBase) {
         this.smallBase = roundValues(smallBase);
+    }
+
+    public void setBigBase(double bigBase) {
         this.bigBase = roundValues(bigBase);
+    }
+
+    public void setHeight(double height) {
         this.height = roundValues(height);
-        this.leg = countLeg();
+    }
+
+    public void setLeg() {
+        this.leg = roundValues(countLeg());
     }
 
     private double countLeg() {
