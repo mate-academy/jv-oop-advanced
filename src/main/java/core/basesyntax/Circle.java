@@ -5,12 +5,12 @@ public class Circle extends Figure {
 
     public Circle(String colour, double radius) {
         super(colour);
-        this.radius = super.roundValues(radius);
+        this.radius = roundValues(radius);
     }
 
     @Override
     public double calculateArea() {
-        return super.roundValues(Math.PI * radius * radius);
+        return roundValues(Math.PI * radius * radius);
     }
 
     @Override

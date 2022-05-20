@@ -5,12 +5,12 @@ public class Square extends Figure {
 
     public Square(String colour, double size) {
         super(colour);
-        this.size = super.roundValues(size);
+        this.size = roundValues(size);
     }
 
     @Override
     public double calculateArea() {
-        return super.roundValues(size * size);
+        return roundValues(size * size);
     }
 
     @Override
@@ -22,11 +22,3 @@ public class Square extends Figure {
         System.out.println(output);
     }
 }
-
-//    public void draw() {
-//        StringBuilder output = new StringBuilder();
-//        output.append(this.getClass().getSimpleName()).append("Has a size :").append(this.size)
-//                .append(" units \nAnd it's area is :").append(calculateArea())
-//                .append(" square units \n");
-//        System.out.println(output.toString());
-//    }

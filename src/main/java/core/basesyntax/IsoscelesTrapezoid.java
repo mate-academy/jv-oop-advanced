@@ -9,19 +9,19 @@ public class IsoscelesTrapezoid extends Figure {
 
     public IsoscelesTrapezoid(String colour, double smallBase, double bigBase, double height) {
         super(colour);
-        this.smallBase = super.roundValues(smallBase);
-        this.bigBase = super.roundValues(bigBase);
-        this.height = super.roundValues(height);
+        this.smallBase = roundValues(smallBase);
+        this.bigBase = roundValues(bigBase);
+        this.height = roundValues(height);
         this.leg = countLeg();
     }
 
     private double countLeg() {
-        return super.roundValues(Math.hypot((bigBase - smallBase) * AREA_COEFFICIENT, height));
+        return roundValues(Math.hypot((bigBase - smallBase) * AREA_COEFFICIENT, height));
     }
 
     @Override
     public double calculateArea() {
-        return super.roundValues(smallBase * bigBase * AREA_COEFFICIENT * height);
+        return roundValues(smallBase * bigBase * AREA_COEFFICIENT * height);
     }
 
     @Override

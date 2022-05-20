@@ -8,18 +8,18 @@ public class RightTriangle extends Figure {
 
     public RightTriangle(String colour, double firstLeg, double secondLeg) {
         super(colour);
-        this.firstLeg = super.roundValues(firstLeg);
-        this.secondLeg = super.roundValues(secondLeg);
+        this.firstLeg = roundValues(firstLeg);
+        this.secondLeg = roundValues(secondLeg);
         this.hypotenuse = countHypotenuse();
     }
 
     private double countHypotenuse() {
-        return super.roundValues(Math.hypot(this.firstLeg, this.secondLeg));
+        return roundValues(Math.hypot(this.firstLeg, this.secondLeg));
     }
 
     @Override
     public double calculateArea() {
-        return super.roundValues((firstLeg * secondLeg) * AREA_COEFFICIENT);
+        return roundValues((firstLeg * secondLeg) * AREA_COEFFICIENT);
     }
 
     @Override

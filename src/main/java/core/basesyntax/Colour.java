@@ -9,13 +9,13 @@ enum Colour {
     WHITE("white"),
     BLACK("black");
 
-    private final String getReadable;
+    private final String readable;
 
     Colour(String colour) {
-        this.getReadable = colour;
+        this.readable = colour;
     }
 
     public String getReadable() {
-        return getReadable;
+        return readable;
     }
 }

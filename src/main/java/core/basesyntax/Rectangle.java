@@ -6,13 +6,13 @@ public class Rectangle extends Figure {
 
     public Rectangle(String colour, double smallSide, double bigSide) {
         super(colour);
-        this.smallSide = super.roundValues(smallSide);
-        this.bigSide = super.roundValues(bigSide);
+        this.smallSide = roundValues(smallSide);
+        this.bigSide = roundValues(bigSide);
     }
 
     @Override
     public double calculateArea() {
-        return super.roundValues(smallSide * bigSide);
+        return roundValues(smallSide * bigSide);
     }
 
     @Override
