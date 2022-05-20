@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_VALUE_UNITS = 100;
-    private static final String defaultColor = "WHITE";
-    private static final int defaultRadius = 10;
+    private static final String DEFAULT_COLOR = "WHITE";
+    private static final int DEFAULT_RADIUS = 10;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier(random);
     private final String [] array = {"square","rightTriangle","rectangle",
@@ -38,6 +38,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(defaultColor,defaultRadius);
+        return new Circle(DEFAULT_COLOR,DEFAULT_RADIUS);
     }
 }
