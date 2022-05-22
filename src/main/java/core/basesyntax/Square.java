@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends Figure implements Area, Draw{
+public class Square extends Figure implements Area, Draw {
     private int side;
 
     public int getSide() {
@@ -18,14 +18,14 @@ public class Square extends Figure implements Area, Draw{
 
     @Override
     public double getArea() {
-        return Math.pow(side,getNumberTwo);
+        return Math.pow(side, getNumberTwo);
     }
 
     @Override
     public void draw() {
         System.out.println(
                 "Figure: rightTriangle, area: " + getArea()
-                + " sq.units, " + "side: " + side
-                + " units, color: " + super.getColor());
+                        + " sq.units, " + "side: " + side
+                        + " units, color: " + super.getColor());
     }
 }
