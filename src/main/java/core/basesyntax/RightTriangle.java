@@ -1,19 +1,18 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements Area, Draw {
+public class RightTriangle extends Figure {
     private int side;
 
+    public RightTriangle(String color, int side) {
+        super(color);
+        this.side = side;
+    }
 
     public int getSide() {
         return side;
     }
 
     public void setSide(int side) {
-        this.side = side;
-    }
-
-    public RightTriangle(String color, int side) {
-        super(color);
         this.side = side;
     }
 
@@ -29,7 +28,5 @@ public class RightTriangle extends Figure implements Area, Draw {
                 "Figure: rightTriangle, area: " + getArea()
                         + " sq.units, " + "side: " + side
                         + " units, color: " + super.getColor());
-
-
     }
 }

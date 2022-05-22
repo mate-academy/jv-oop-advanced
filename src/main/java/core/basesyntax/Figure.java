@@ -1,10 +1,15 @@
 package core.basesyntax;
 
-public abstract class Figure implements Draw {
-    private String color;
+public abstract class Figure implements Draw, Area {
+
     public static final int getNumberTwo = 2;
     public static final int numberThree = 3;
     public static final int numberFour = 4;
+    private String color;
+
+    public Figure(String color) {
+        this.color = color;
+    }
 
     public String getColor() {
         return color;
@@ -13,10 +18,4 @@ public abstract class Figure implements Draw {
     public void setColor(String color) {
         this.color = color;
     }
-
-    public Figure(String color) {
-        this.color = color;
-    }
-
-
 }
