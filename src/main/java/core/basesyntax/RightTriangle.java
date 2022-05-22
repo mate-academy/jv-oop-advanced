@@ -12,8 +12,9 @@ public class RightTriangle extends Figure implements Area, Draw{
         this.side = side;
     }
 
-    public RightTriangle(String color) {
+    public RightTriangle(String color, int side) {
         super(color);
+        this.side = side;
     }
 
     @Override
