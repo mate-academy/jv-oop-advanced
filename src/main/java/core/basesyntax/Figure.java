@@ -2,18 +2,21 @@ package core.basesyntax;
 
 public abstract class Figure {
     private String color;
-    private String type;
+    public static final int getNumberTwo = 2;
+    public static final int numberThree = 3;
+    public static final int numberFour = 4;
+    public String getColor() {
+        return color;
+    }
 
-    public Figure(String color, String type) {
+    public void setColor(String color) {
         this.color = color;
-        this.type = type;
     }
 
-    @Override
-    public String toString() {
-        return "Figure{" +
-                "color='" + color + '\'' +
-                '}';
+    public Figure(String color) {
+        this.color = color;
     }
+
+
 
 }
