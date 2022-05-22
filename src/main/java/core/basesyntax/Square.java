@@ -23,7 +23,8 @@ public class Square extends Figure implements Area, Draw{
 
     @Override
     public void draw() {
-        System.out.println("Figure: rightTriangle, area: " + getArea()
+        System.out.println(
+                "Figure: rightTriangle, area: " + getArea()
                 + " sq.units, " + "side: " + side
                 + " units, color: " + super.getColor());
     }
