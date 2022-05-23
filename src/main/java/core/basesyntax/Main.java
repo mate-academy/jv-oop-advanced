@@ -21,7 +21,5 @@ public class Main {
         for (Figure f: figures) {
             f.draw();
         }
-
     }
-
 }
