@@ -27,6 +27,5 @@ public class Circle extends Figure {
                     + "area is :" + getArea() + "; "
                     + "radius is :" + getRadius()
                     + "color is: " + getColor());
-
     }
 }

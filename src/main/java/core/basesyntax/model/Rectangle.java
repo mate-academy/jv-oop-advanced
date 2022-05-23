@@ -38,6 +38,5 @@ public class Rectangle extends Figure {
                 + "height is :" + getHeight() + "; "
                 + "width is :" + getWidth() + ";"
                 + "color is: " + getColor());
-
     }
 }
