@@ -9,10 +9,10 @@ import core.basesyntax.model.Square;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int DEFAULT_S = 10;
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-
         int figuresIndex = new Random().nextInt(4);
         switch (figuresIndex) {
             case 0:
@@ -44,5 +44,9 @@ public class FigureSupplier {
 
     private double getRandomdouble() {
         return new Random().nextDouble();
+    }
+
+    public Figure getDefaultFigure() {
+        return new Circle("White", DEFAULT_S);
     }
 }

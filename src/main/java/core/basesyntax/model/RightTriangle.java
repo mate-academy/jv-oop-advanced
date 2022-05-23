@@ -8,7 +8,6 @@ public class RightTriangle extends Figure {
         super(color);
         this.height = height;
         this.length = length;
-
     }
 
     public int getLength() {
@@ -39,6 +38,5 @@ public class RightTriangle extends Figure {
                 + "length is :" + getLength() + "; "
                 + "height is : " + getHeight() + "; "
                 + "color is: " + getColor());
-
     }
 }

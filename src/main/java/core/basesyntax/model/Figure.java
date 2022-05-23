@@ -1,9 +1,9 @@
 package core.basesyntax.model;
 
 import core.basesyntax.service.AreaCalculator;
-import core.basesyntax.service.Draw;
+import core.basesyntax.service.Draweble;
 
-public abstract class Figure implements AreaCalculator, Draw {
+public abstract class Figure implements AreaCalculator, Draweble {
     private String color;
 
     protected Figure(String color) {
