@@ -3,6 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    public static final int numberTen = 10;
     public static final int maxSideSize = 100;
     private ColorSupplier randomColor = new ColorSupplier();
     private Random randomNumber = new Random();
@@ -18,7 +19,7 @@ public class FigureSupplier {
                 return new Rectangle(randomColor.getRandomColor(),
                         randomNumber.nextInt(maxSideSize),
                         randomNumber.nextInt(maxSideSize));
-            case RIGHTTRIANGLE:
+            case RIGHT_TRIANGLE:
                 return new RightTriangle(randomColor.getRandomColor(),
                         randomNumber.nextInt(maxSideSize));
             default:
@@ -30,6 +31,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", 10);
+        return new Circle(Color.WHITE.name().toLowerCase(), numberTen);
     }
 }

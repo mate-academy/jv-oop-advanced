@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements Draw, Area {
+public abstract class Figure implements Drawable, AreaCalculator {
 
     public static final int getNumberTwo = 2;
     public static final int numberThree = 3;
