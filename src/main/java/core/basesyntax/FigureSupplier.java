@@ -3,8 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int DEFAULT_RADIUS = 10;// radius for circle
-    private static final int MAX_BOUND = 20;// maximum number for a figure
+    private static final int DEFAULT_RADIUS = 10;
+    private static final int MAX_BOUND = 20;
     private static final int MIN_BOUND = 1;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
