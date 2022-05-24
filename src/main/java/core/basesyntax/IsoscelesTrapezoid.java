@@ -18,8 +18,14 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public void name() {
-        System.out.println("Color is " + getColor() + " Area = " + getArea() + " height = "
+    public void drawFigure() {
+        System.out.println("Figure: " + name() + ", Color is "
+                + getColor() + " Area = " + getArea() + " height = "
                 + height + " topSide = " + topSide + " base = " + base);
+    }
+
+    @Override
+    public String name() {
+        return String.valueOf(Figures.ISOSCELEZTRAPEZOID);
     }
 }

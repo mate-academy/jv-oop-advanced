@@ -11,7 +11,7 @@ public class Main {
             figures[i] = figureSupplier.getDefaultFigure();
         }
         for (Figure figure : figures) {
-            figure.name();
+            figure.drawFigure();
         }
     }
 }

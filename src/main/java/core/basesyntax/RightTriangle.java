@@ -16,8 +16,13 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void name() {
-        System.out.println("Color is " + getColor() + " Area = "
+    public void drawFigure() {
+        System.out.println("Figure: " + name() + ", Color is " + getColor() + " Area = "
                 + getArea() + " firstLeg = " + firstLeg + " secondLeg = " + secondLeg);
+    }
+
+    @Override
+    public String name() {
+        return String.valueOf(Figures.RIGHTTRIANGLE);
     }
 }

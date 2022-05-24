@@ -16,8 +16,14 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void name() {
-        System.out.println("Color is " + getColor() + " Area = " + getArea()
+    public void drawFigure() {
+        System.out.println("Figure: " + name() + ", Color is "
+                + getColor() + " Area = " + getArea()
                 + " firstSide = " + firstSide + " secondSide = " + secondSide);
+    }
+
+    @Override
+    public String name() {
+        return String.valueOf(Figures.RECTANGLE);
     }
 }

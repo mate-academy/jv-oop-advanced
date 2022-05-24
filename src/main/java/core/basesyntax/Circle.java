@@ -14,8 +14,13 @@ public class Circle extends Figure {
     }
 
     @Override
-    public void name() {
-        System.out.println("Color is " + getColor() + " Area = "
+    public void drawFigure() {
+        System.out.println("Figure: " + name() + ", Color is " + getColor() + " Area = "
                 + getArea() + " radius = " + radius);
+    }
+
+    @Override
+    public String name() {
+        return String.valueOf(Figures.CIRCLE);
     }
 }
