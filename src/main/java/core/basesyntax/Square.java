@@ -20,4 +20,3 @@ public class Square extends Figure {
                 + " units, color: " + color);
     }
 }
-
