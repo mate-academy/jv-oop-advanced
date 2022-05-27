@@ -1,12 +1,11 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.AreaFigure;
 import core.basesyntax.Figure;
 
-public class Squares extends Figure implements AreaFigure {
+public class Square extends Figure {
     private int side;
 
-    public Squares(String color, int side) {
+    public Square(String color, int side) {
         super(color);
         this.side = side;
     }

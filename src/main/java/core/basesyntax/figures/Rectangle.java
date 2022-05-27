@@ -1,13 +1,12 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.AreaFigure;
 import core.basesyntax.Figure;
 
-public class RightTriangles extends Figure implements AreaFigure {
+public class Rectangle extends Figure {
     private int sideA;
     private int sideB;
 
-    public RightTriangles(String color, int sideA, int sideB) {
+    public Rectangle(String color, int sideA, int sideB) {
         super(color);
         this.sideA = sideA;
         this.sideB = sideB;
@@ -15,7 +14,7 @@ public class RightTriangles extends Figure implements AreaFigure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: rightTriangle"
+        System.out.println("Figure: rectangle"
                 + ", area: " + getArea() + " sq.units,"
                 + " sideA: " + getSideA() + " units,"
                 + " sideB: " + getSideB() + " units,"
@@ -24,7 +23,7 @@ public class RightTriangles extends Figure implements AreaFigure {
 
     @Override
     public double getArea() {
-        return (sideA * sideB) / 2;
+        return sideA * sideB;
     }
 
     public int getSideA() {

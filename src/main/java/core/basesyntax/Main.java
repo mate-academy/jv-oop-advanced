@@ -3,12 +3,13 @@ package core.basesyntax;
 import java.util.Random;
 
 public class Main {
+    private static final int FINAL_INDEX = 6;
+    private static Random random = new Random();
+    private static ColorSupplier colorSupplier = new ColorSupplier();
 
     public static void main(String[] args) {
-        Random random = new Random();
-        ColorSupplier colorSupplier = new ColorSupplier();
         FigureSupplier figureSupplier = new FigureSupplier(random, colorSupplier);
-        Figure[] figures = new Figure[6];
+        Figure[] figures = new Figure[FINAL_INDEX];
         for (int i = 0; i < figures.length; i++) {
             if (i < figures.length / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
@@ -19,6 +20,5 @@ public class Main {
         for (Figure figure : figures) {
             figure.draw();
         }
-
     }
 }

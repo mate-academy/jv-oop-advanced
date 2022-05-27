@@ -1,12 +1,11 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.AreaFigure;
 import core.basesyntax.Figure;
 
-public class Circles extends Figure implements AreaFigure {
+public class Circle extends Figure {
     private double radius;
 
-    public Circles(String color, double radius) {
+    public Circle(String color, double radius) {
         super(color);
         this.radius = radius;
     }

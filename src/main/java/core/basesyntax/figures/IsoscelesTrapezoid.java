@@ -1,14 +1,13 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.AreaFigure;
 import core.basesyntax.Figure;
 
-public class IsoscelesTrapezoidies extends Figure implements AreaFigure {
+public class IsoscelesTrapezoid extends Figure {
     private int downLength;
     private int upLength;
     private int heightLength;
 
-    public IsoscelesTrapezoidies(String color, int downLength, int upLength, int heightLength) {
+    public IsoscelesTrapezoid(String color, int downLength, int upLength, int heightLength) {
         super(color);
         this.downLength = downLength;
         this.upLength = upLength;
