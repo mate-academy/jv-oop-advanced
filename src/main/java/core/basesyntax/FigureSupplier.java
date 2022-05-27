@@ -19,29 +19,22 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        Figure figure;
-        int index = random.nextInt(AllFigures.values().length);
-        switch (AllFigures.values()[index]) {
+        int index = random.nextInt(FigureType.values().length);
+        switch (FigureType.values()[index]) {
             case CIRCLE:
-                figure = new Circle(colorSupplier.getRandomColor(), random.nextInt());
-                break;
-            case ISOSCELESTRAPEZOID:
-                figure = new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(),
+                return new Circle(colorSupplier.getRandomColor(), random.nextInt());
+            case ISOSCELES_TRAPEZOID:
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(),
                         random.nextInt(), random.nextInt());
-                break;
             case RECTANGLE:
-                figure = new Rectangle(colorSupplier.getRandomColor(),
+                return new Rectangle(colorSupplier.getRandomColor(),
                         random.nextInt(), random.nextInt());
-                break;
-            case RIGHTTRIANGLE:
-                figure = new RightTriangle(colorSupplier.getRandomColor(),
+            case RIGHT_TRIANGLE:
+                return new RightTriangle(colorSupplier.getRandomColor(),
                         random.nextInt(), random.nextInt());
-                break;
             default:
-                figure = new Square(colorSupplier.getRandomColor(), random.nextInt());
-                break;
+                return new Square(colorSupplier.getRandomColor(), random.nextInt());
         }
-        return figure;
     }
 
     public Figure getDefaultFigure() {
