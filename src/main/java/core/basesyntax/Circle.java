@@ -19,4 +19,3 @@ public class Circle extends Figure {
                 + " units, color: " + color);
     }
 }
-
