@@ -1,9 +1,12 @@
 
 package core.basesyntax;
 
+import java.util.Random;
+
 public class Circle extends Figure {
 
     private double radius;
+    private Random random = new Random();
 
     public Circle(String color, double radius) {
         super(color);
@@ -19,13 +22,13 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double getAreaCalculator() {
+    public double getArea() {
         return Math.PI * radius * radius;
     }
 
     @Override
-    public String getDrawable() {
-        return "Figure : circle, area " + getAreaCalculator() + " sq.units, radius: "
-                + radius + " units, color: " + getColor();
+    public void draw() {
+        System.out.println("Figure : circle, area " + getArea() + " sq.units, radius: "
+                + radius + " units, color: " + getColor());
     }
 }

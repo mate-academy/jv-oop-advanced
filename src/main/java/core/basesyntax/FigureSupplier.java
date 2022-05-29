@@ -4,40 +4,59 @@ import java.util.Random;
 
 public class FigureSupplier {
 
-    protected Random random = new Random();
-    protected double radius = random.nextDouble();
     private ColorSupplier colorSupplier = new ColorSupplier();
+    private Random random = new Random();
+    private int numbersOfFigures;
+    private Figure randomCircle = new Circle(colorSupplier.getRandomColor(), random.nextInt(100));
+    private Figure randomTrapezoid = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+            random.nextInt(100),
+            random.nextInt(100),
+            random.nextInt(100));
+    private Figure randomRectangle = new Rectangle(colorSupplier.getRandomColor(),
+            random.nextInt(100), random.nextInt(100));
+    private Figure randomTriangle = new RightTriangle(colorSupplier.getRandomColor(),
+            random.nextInt(100));
+    private Figure randomSquare = new Square(colorSupplier.getRandomColor(),
+            random.nextInt(100));
+
+    public FigureSupplier(int numbersOfFigures) {
+        this.numbersOfFigures = numbersOfFigures;
+    }
 
     public Figure getRandomFigure() {
-        int randomIndex = random.nextInt(FigureType.values().length);
-        String color;
-        double sideA;
-        double sideB;
-        switch (randomIndex) {
-            case 0 :
-                color = colorSupplier.getColorSupplier();
-                radius = random.nextInt(100);
-                return new Circle(color, radius);
+
+        switch (random.nextInt(6)) {
+            case 0:
+                return getRandomCircle();
             case 1 :
-                color = colorSupplier.getColorSupplier();
-                sideA = random.nextInt(100);
-                sideB = random.nextInt(100);
-                return new Rectangle(color, sideA, sideB);
+                return getRandomTrapezoid();
             case 2 :
-                color = colorSupplier.getColorSupplier();
-                sideA = random.nextInt(100);
-                return new Square(color, sideA);
+                return getRandomRectangle();
             case 3 :
-                color = colorSupplier.getColorSupplier();
-                sideA = random.nextInt(100);
-                return new RightTriangle(color,sideA);
-            default :
-                color = colorSupplier.getColorSupplier();
-                sideA = random.nextInt(100);
-                sideB = random.nextInt(100);
-                double trapezoidHeight = random.nextInt(100);
-                return new IsoscelesTrapezoid(color,sideA,sideB,trapezoidHeight);
+                return getRandomTriangle();
+            default:
+                return getRandomSquare();
         }
+    }
+
+    public Figure getRandomCircle() {
+        return randomCircle;
+    }
+
+    public Figure getRandomTrapezoid() {
+        return randomTrapezoid;
+    }
+
+    public Figure getRandomRectangle() {
+        return randomRectangle;
+    }
+
+    public Figure getRandomTriangle() {
+        return randomTriangle;
+    }
+
+    public Figure getRandomSquare() {
+        return randomSquare;
     }
 
     public Figure getDefaultFigure() {
@@ -46,10 +65,3 @@ public class FigureSupplier {
         return new Circle(color, radiusDefault);
     }
 }
-
-
-
-
-
-
-

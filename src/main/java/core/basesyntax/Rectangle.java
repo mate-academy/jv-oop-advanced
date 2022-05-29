@@ -1,28 +1,23 @@
 package core.basesyntax;
 
-//прямокутник
 public class Rectangle extends Figure {
+    private double sideA;
+    private double sideB;
+
     public Rectangle(String color, double sideA, double sideB) {
         super(color);
-
+        this.sideA = sideA;
+        this.sideB = sideB;
     }
 
     @Override
-    public double getAreaCalculator() {
-        return getSideA() * getSideB();
+    public double getArea() {
+        return sideA * sideB;
     }
 
     @Override
-    public String getDrawable() {
-        return "Figure : rectangle, area: " + getAreaCalculator() + "sq.units, firstLeg: "
-                + getSideA() + " units secondLeg:" + getSideB() + " units, color: " + getColor();
+    public void draw() {
+        System.out.println("Figure : rectangle, area: " + getArea() + "sq.units, firstLeg: "
+                + sideA + " units secondLeg:" + sideB + " units, color: " + getColor());
     }
 }
-
-
-
-
-
-
-
-
