@@ -1,8 +1,6 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private static final int NUMBER_THREE = 3;
-    private static final int NUMBER_FOUR = 4;
     private int side;
 
     public RightTriangle(String color, int side) {
@@ -21,7 +19,7 @@ public class RightTriangle extends Figure {
     @Override
     public double getArea() {
 
-        return Math.sqrt(NUMBER_THREE) / NUMBER_FOUR * side * side;
+        return Math.sqrt(3) / 4 * side * side;
     }
 
     @Override
