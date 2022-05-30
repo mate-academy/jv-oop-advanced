@@ -3,8 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int DEFAULT_RADIUS = 10;
-    public static final int MAX_RANDOM_NUMBER = 100;
+    private static final int DEFAULT_RADIUS = 10;
+    private static final int MAX_RANDOM_NUMBER = 100;
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
 

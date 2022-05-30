@@ -1,8 +1,8 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    public static final int NUMBER_THREE = 3;
-    public static final int NUMBER_FOUR = 4;
+    private static final int NUMBER_THREE = 3;
+    private static final int NUMBER_FOUR = 4;
     private int side;
 
     public RightTriangle(String color, int side) {
