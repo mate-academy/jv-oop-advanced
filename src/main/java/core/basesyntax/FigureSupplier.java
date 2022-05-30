@@ -8,27 +8,47 @@ public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
 
+    private Circle getRandomCircle() {
+        return new Circle(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_RANDOM_NUMBER));
+    }
+
+    private Square getRandomSquare() {
+        return new Square(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_RANDOM_NUMBER));
+    }
+
+    private Rectangle getRandomRectangle() {
+        return new Rectangle(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_RANDOM_NUMBER),
+                random.nextInt(MAX_RANDOM_NUMBER));
+    }
+
+    private RightTriangle getRandomRaghtTriangle() {
+        return new RightTriangle(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_RANDOM_NUMBER));
+    }
+
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_RANDOM_NUMBER),
+                random.nextInt(MAX_RANDOM_NUMBER),
+                random.nextInt(MAX_RANDOM_NUMBER));
+    }
+
     public Figure getRandomFigure() {
         int index = new Random().nextInt(FigureType.values().length);
         switch (FigureType.values()[index]) {
             case CIRCLE:
-                return new Circle(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_RANDOM_NUMBER));
+                return getRandomCircle();
             case SQUARE:
-                return new Square(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_RANDOM_NUMBER));
+                return getRandomSquare();
             case RECTANGLE:
-                return new Rectangle(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_RANDOM_NUMBER),
-                        random.nextInt(MAX_RANDOM_NUMBER));
+                return getRandomRectangle();
             case RIGHT_TRIANGLE:
-                return new RightTriangle(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_RANDOM_NUMBER));
+                return getRandomRaghtTriangle();
             default:
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_RANDOM_NUMBER),
-                        random.nextInt(MAX_RANDOM_NUMBER),
-                        random.nextInt(MAX_RANDOM_NUMBER));
+                return getRandomIsoscelesTrapezoid();
         }
     }
 
