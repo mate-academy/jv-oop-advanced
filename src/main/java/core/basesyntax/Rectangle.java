@@ -5,7 +5,7 @@ public class Rectangle extends Figure {
     private double secondLeg;
 
     public Rectangle(double firstLeg, double secondLeg, String color) {
-        name = "rectangle";
+        name = getClass().getSimpleName();
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
         this.color = color;

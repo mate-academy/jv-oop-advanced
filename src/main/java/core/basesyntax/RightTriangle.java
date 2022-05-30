@@ -5,7 +5,7 @@ public class RightTriangle extends Figure {
     private double secondLeg;
 
     public RightTriangle(double firstLeg, double secondLeg, String color) {
-        name = "right triangle";
+        name = getClass().getSimpleName();
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
         this.color = color;
