@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class ColorSupplier {
-    public static final String DEFAULT_COLOR = new ColorSupplier().getDefaultColor();
+    private static final Color DEFAULT_COLOR = Color.WHITE;
     private final Random random = new Random();
 
     public String getRandomColor() {
@@ -11,6 +11,6 @@ public class ColorSupplier {
     }
 
     public String getDefaultColor() {
-        return Color.WHITE.toString();
+        return DEFAULT_COLOR.toString();
     }
 }
