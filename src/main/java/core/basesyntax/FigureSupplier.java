@@ -28,7 +28,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_RADIUS, colorSupplier.getDefaultColor());
+        return new Circle(DEFAULT_RADIUS, ColorSupplier.DEFAULT_COLOR.toString());
     }
 
     private Figure getRandomCircle() {
