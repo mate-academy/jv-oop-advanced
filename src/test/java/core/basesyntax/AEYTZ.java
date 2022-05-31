@@ -6,9 +6,8 @@ import org.junit.Test;
 /**
  * Feel free to remove this class and create your own.
  */
-public class HelloWorldTest {
-    private FigureSupplier figureSupplier = new FigureSupplier();
-    private Main main = new Main();
+public class AEYTZ {
+    private final FigureSupplier figureSupplier = new FigureSupplier();
 
 
     @Test
