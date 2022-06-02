@@ -10,6 +10,5 @@ public class Circle extends Figure implements Area {
     @Override
     public double areaCalculatro() {
         return Math.PI * radius * radius;
-        System.out.println();
     }
 }
