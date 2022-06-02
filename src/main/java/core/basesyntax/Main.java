@@ -8,7 +8,6 @@ public class Main {
     public static void main(String[] args) {
 
         Figure[] figures = new Figure[SIZE_OF_ARRAY];
-
         for (int i = 0; i < figures.length; i++) {
             if (i < SIZE_OF_ARRAY / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
@@ -16,10 +15,8 @@ public class Main {
                 figures[i] = defaultFigure;
             }
         }
-
         for (Figure figure : figures) {
             figure.draw();
         }
     }
-
 }
