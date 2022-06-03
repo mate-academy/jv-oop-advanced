@@ -24,7 +24,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void toDraw() {
+    public void draw() {
         System.out.println("rectangle, area: " + getArea()
                 + " sq.units, width: " + width
                 + " units, height: " + height
