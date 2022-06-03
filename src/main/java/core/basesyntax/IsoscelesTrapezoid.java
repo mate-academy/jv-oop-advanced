@@ -1,19 +1,43 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements GetArea, ToDrawFigure {
+public class IsoscelesTrapezoid extends Figure {
+    private int height;
+    private int firstLeg;
+    private int secondLeg;
 
     public IsoscelesTrapezoid(int firstLeg, int secondLeg, int height, Color color) {
-        this.setFirstLeg(firstLeg);
-        this.setSecondLeg(secondLeg);
-        this.setHeight(height);
-        this.setColor(color);
+        super(color);
+        this.setFirstLeg();
+        this.setSecondLeg();
+        this.setHeight();
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight() {
+        this.height = height;
+    }
+
+    public int getFirstLeg() {
+        return firstLeg;
+    }
+
+    public void setFirstLeg() {
+        this.firstLeg = firstLeg;
+    }
+
+    public int getSecondLeg() {
+        return secondLeg;
+    }
+
+    public void setSecondLeg() {
+        this.secondLeg = secondLeg;
     }
 
     @Override
     public double getArea() {
-        int firstLeg;
-        int secondLeg;
-        int height;
         return (getFirstLeg() + getSecondLeg()) / 2 * getHeight();
     }
 

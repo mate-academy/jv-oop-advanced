@@ -1,12 +1,29 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements GetArea, ToDrawFigure {
+public class RightTriangle extends Figure {
     private int base;
+    private int height;
 
     public RightTriangle(int base, int height, Color color) {
+        super(color);
+        this.setBase();
+        this.setHeight();
+    }
+
+    public int getBase() {
+        return base;
+    }
+
+    public void setBase() {
         this.base = base;
-        this.setHeight(height);
-        this.setColor(color);
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight() {
+        this.height = height;
     }
 
     @Override
