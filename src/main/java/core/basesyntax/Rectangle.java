@@ -1,26 +1,26 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private double a;
-    private double b;
+    private double length;
+    private double width;
 
-    public Rectangle(double a, double b) {
-        this.a = a;
-        this.b = b;
+    public Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
     }
 
     @Override
     public double getArea() {
 
-        return a * b;
+        return length * width;
     }
 
     @Override
     public void draw() {
         System.out.printf("Figure Rectangle, area: %.1f"
-                            + " sq. units, side a: %.1f"
-                            + " units, side b: %.1f"
+                            + " sq. units, length: %.1f"
+                            + " units, width: %.1f"
                             + " units, color: %s",
-                            getArea(), a, b, color);
+                            getArea(), length, width, color);
     }
 }
