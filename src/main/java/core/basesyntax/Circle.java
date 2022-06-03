@@ -17,9 +17,11 @@ public class Circle extends Figure {
         return Math.PI * radius * radius;
     }
 
-    public void toDraw() {
+    @Override
+    public void draw() {
         System.out.println("circle, area: " + getArea()
                 + " sq.units, radius: " + radius
                 + " units, color: " + getColor());
     }
 }
+
