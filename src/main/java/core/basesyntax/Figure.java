@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Figure implements AreaCalculator, FigureDrawer {
+public abstract class Figure implements AreaCalculator, Drawer {
 
     private String color;
 
@@ -22,7 +22,7 @@ public class Figure implements AreaCalculator, FigureDrawer {
     }
 
     @Override
-    public void toDraw() {
+    public void draw() {
 
     }
 }
