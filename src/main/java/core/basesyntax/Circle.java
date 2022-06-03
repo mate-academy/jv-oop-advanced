@@ -9,7 +9,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
 
         return Math.PI * radius * radius;
     }
@@ -18,6 +18,6 @@ public class Circle extends Figure {
     public void draw() {
         System.out.printf("Figure Circle, area: %.1f sq. units,"
                 + " radius: %.1f units,"
-                + " color: %s", area(), radius, color);
+                + " color: %s", getArea(), radius, color);
     }
 }

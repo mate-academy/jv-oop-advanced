@@ -8,7 +8,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
 
         return side*side;
     }
@@ -18,6 +18,6 @@ public class Square extends Figure {
         System.out.printf("Figure square, area: %.1f"
                             + " sq. units, side: %.1f"
                             + " units, color: %s",
-                            area(), side, color);
+                            getArea(), side, color);
     }
 }

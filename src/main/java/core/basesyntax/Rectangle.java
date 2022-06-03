@@ -10,7 +10,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
 
         return a * b;
     }
@@ -21,6 +21,6 @@ public class Rectangle extends Figure {
                             + " sq. units, side a: %.1f"
                             + " units, side b: %.1f"
                             + " units, color: %s",
-                            area(), a, b, color);
+                            getArea(), a, b, color);
     }
 }
