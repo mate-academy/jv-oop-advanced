@@ -3,19 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final ColorSupplier colorSupplier = new ColorSupplier();
-
-    private int getRandomInt() {
-        return new Random().nextInt(5);
-    }
-
-    private double getRandomDouble() {
-        return new Random().nextDouble();
-    }
-
     public Figure getRandomFigure() {
-        int figureIndex = new Random().nextInt(4);
-
+        new Random();
+        int figureIndex = new Random().nextInt();
+        final ColorSupplier colorSupplier = new ColorSupplier();
         switch (figureIndex) {
             case 0:
                 return new Circle(colorSupplier.getRandomColor(), getRandomInt());
@@ -32,5 +23,17 @@ public class FigureSupplier {
                 return new Rectangle(colorSupplier.getRandomColor(),
                         getRandomDouble(), getRandomDouble());
         }
+    }
+
+    private int getRandomInt() {
+        return new Random().nextInt(5);
+    }
+
+    private double getRandomDouble() {
+        return new Random().nextDouble();
+    }
+
+    public void getDefaultFigure() {
+        int figures = new Random().nextInt(1);
     }
 }
