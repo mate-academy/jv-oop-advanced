@@ -12,7 +12,6 @@ public class FigureSupplier {
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
-
         switch (random.nextInt(numbersOfFigures)) {
             case 0:
                 return getRandomCircle();
@@ -25,6 +24,10 @@ public class FigureSupplier {
             default:
                 return getRandomSquare();
         }
+    }
+
+    public Figure getDefaultFigure() {
+        return new Circle(COLOR_DEFAULT, DEFAULT_RADIUS);
     }
 
     private Figure getRandomCircle() {
@@ -47,9 +50,5 @@ public class FigureSupplier {
 
     private Figure getRandomSquare() {
         return new Square(colorSupplier.getRandomColor(), random.nextInt(MAX_BOUND));
-    }
-
-    public Figure getDefaultFigure() {
-        return new Circle(COLOR_DEFAULT, DEFAULT_RADIUS);
     }
 }
