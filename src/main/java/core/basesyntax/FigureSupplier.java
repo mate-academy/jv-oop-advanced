@@ -31,22 +31,28 @@ public class FigureSupplier {
         }
     }
 
-
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
+
     private Figure getRandomCircle() {
         return new Circle(colorSupplier.getRandomColor(), random.nextInt());
     }
+
     private Figure getRandomRectangle() {
         return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(), random.nextInt());
     }
+
     private Figure getRandomRightTriangle() {
-        return new RightTriangle(colorSupplier.getRandomColor(), random.nextDouble(), random.nextDouble());
+        return new RightTriangle(colorSupplier.getRandomColor(),
+                random.nextDouble(), random.nextDouble());
     }
+
     private Figure getRandomIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(), random.nextInt(), random.nextInt());
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                random.nextInt(), random.nextInt(), random.nextInt());
     }
+
     private Figure getRandomSquare() {
         return new Square(colorSupplier.getRandomColor(), random.nextInt());
     }
