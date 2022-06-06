@@ -6,9 +6,10 @@ public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
     private static final int MAX_RANDOM_NUMBER = 20;
     private static final double DEFAULT_RADIUS = 10.0;
+    private Color randomColor = new ColorSupplier().getRandomColor();
+    private Random random = new Random();
 
     public Figure getRandomFigure() {
-        Random random = new Random();
         int figureNumber = random.nextInt(FIGURE_COUNT);
         switch (figureNumber) {
             case 1:
@@ -29,41 +30,31 @@ public class FigureSupplier {
     }
 
     public Figure getRandomCircle() {
-        Color randomColor = new ColorSupplier().getRandomColor();
-        Random randomDouble = new Random();
-        double radius = randomDouble.nextDouble() * MAX_RANDOM_NUMBER;
+        double radius = random.nextDouble() * MAX_RANDOM_NUMBER;
         return new Circle(radius, randomColor);
     }
 
     public Figure getRandomSquare() {
-        Color randomColor = new ColorSupplier().getRandomColor();
-        Random randomDouble = new Random();
-        double side = randomDouble.nextDouble() * MAX_RANDOM_NUMBER;
+        double side = random.nextDouble() * MAX_RANDOM_NUMBER;
         return new Square(side, randomColor);
     }
 
     public Figure getRandomRectangle() {
-        Color randomColor = new ColorSupplier().getRandomColor();
-        Random randomDouble = new Random();
-        double length = randomDouble.nextDouble() * MAX_RANDOM_NUMBER;
-        double width = randomDouble.nextDouble() * MAX_RANDOM_NUMBER;
+        double length = random.nextDouble() * MAX_RANDOM_NUMBER;
+        double width = random.nextDouble() * MAX_RANDOM_NUMBER;
         return new Rectangle(length, width, randomColor);
     }
 
     public Figure getRandomRightTriangle() {
-        Color randomColor = new ColorSupplier().getRandomColor();
-        Random randomDouble = new Random();
-        double firstLeg = randomDouble.nextDouble() * MAX_RANDOM_NUMBER;
-        double secondLeg = randomDouble.nextDouble() * MAX_RANDOM_NUMBER;
+        double firstLeg = random.nextDouble() * MAX_RANDOM_NUMBER;
+        double secondLeg = random.nextDouble() * MAX_RANDOM_NUMBER;
         return new RightTriangle(firstLeg, secondLeg, randomColor);
     }
 
     public Figure getRandomIsoscelesTrapezoid() {
-        Color randomColor = new ColorSupplier().getRandomColor();
-        Random randomDouble = new Random();
-        double topSide = randomDouble.nextDouble() * MAX_RANDOM_NUMBER;
-        double downSide = randomDouble.nextDouble() * MAX_RANDOM_NUMBER;
-        double height = randomDouble.nextDouble() * MAX_RANDOM_NUMBER;
+        double topSide = random.nextDouble() * MAX_RANDOM_NUMBER;
+        double downSide = random.nextDouble() * MAX_RANDOM_NUMBER;
+        double height = random.nextDouble() * MAX_RANDOM_NUMBER;
         return new IsoscelesTrapezoid(topSide, downSide, height, randomColor);
     }
 }
