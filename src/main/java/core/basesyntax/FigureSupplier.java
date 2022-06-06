@@ -3,47 +3,38 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int FIGURE_COUNT = 5;
-    private static final int MEASURE_RANGE = 20;
-    private Random random = new Random();
-    private Figure figure;
-
     public Figure getRandomFigure() {
-        int figureNumber = random.nextInt(FIGURE_COUNT);
+        final int FigureCount = 5;
+        final int MaxRandomNumber = 20;
+        Random random = new Random();
+        int figureNumber = random.nextInt(FigureCount);
+        Color randomColor = new ColorSupplier().getRandomColor();
+
         switch (figureNumber) {
             case 1:
-                double radius = random.nextDouble() * MEASURE_RANGE;
-                figure = new Circle(radius);
-                break;
+                double radius = random.nextDouble() * MaxRandomNumber;
+                return new Circle(radius, randomColor);
             case 2:
-                double side = random.nextDouble() * MEASURE_RANGE;
-                figure = new Square(side);
-                break;
+                double side = random.nextDouble() * MaxRandomNumber;
+                return new Square(side, randomColor);
             case 3:
-                double length = random.nextDouble() * MEASURE_RANGE;
-                double width = random.nextDouble() * MEASURE_RANGE;
-                figure = new Rectangle(length, width);
-                break;
+                double length = random.nextDouble() * MaxRandomNumber;
+                double width = random.nextDouble() * MaxRandomNumber;
+                return new Rectangle(length, width, randomColor);
             case 4:
-                double firstLeg = random.nextDouble() * MEASURE_RANGE;
-                double secondLeg = random.nextDouble() * MEASURE_RANGE;
-                figure = new RightTriangle(firstLeg, secondLeg);
-                break;
+                double firstLeg = random.nextDouble() * MaxRandomNumber;
+                double secondLeg = random.nextDouble() * MaxRandomNumber;
+                return new RightTriangle(firstLeg, secondLeg, randomColor);
             default:
-                double topSide = random.nextDouble() * MEASURE_RANGE;
-                double downSide = random.nextDouble() * MEASURE_RANGE;
-                double height = random.nextDouble() * MEASURE_RANGE;
-                figure = new IsoscelesTrapezoid(topSide, downSide, height);
-                break;
+                double topSide = random.nextDouble() * MaxRandomNumber;
+                double downSide = random.nextDouble() * MaxRandomNumber;
+                double height = random.nextDouble() * MaxRandomNumber;
+                return new IsoscelesTrapezoid(topSide, downSide, height, randomColor);
         }
-        return figure;
     }
 
     public Figure getDefaultFigure() {
-        double radius = 10.0;
-
-        figure = new Circle(radius);
-        figure.color = Color.WHITE;
-        return figure;
+        final double DefaultRadius = 10.0;
+        return new Circle(DefaultRadius, Color.WHITE);
     }
 }
