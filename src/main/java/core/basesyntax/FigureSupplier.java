@@ -6,7 +6,6 @@ public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
     private static final int MAX_RANDOM_NUMBER = 20;
     private static final double DEFAULT_RADIUS = 10.0;
-    private Color randomColor = new ColorSupplier().getRandomColor();
     private Random random = new Random();
 
     public Figure getRandomFigure() {
@@ -31,23 +30,27 @@ public class FigureSupplier {
 
     public Figure getRandomCircle() {
         double radius = random.nextDouble() * MAX_RANDOM_NUMBER;
+        Color randomColor = new ColorSupplier().getRandomColor();
         return new Circle(radius, randomColor);
     }
 
     public Figure getRandomSquare() {
         double side = random.nextDouble() * MAX_RANDOM_NUMBER;
+        Color randomColor = new ColorSupplier().getRandomColor();
         return new Square(side, randomColor);
     }
 
     public Figure getRandomRectangle() {
         double length = random.nextDouble() * MAX_RANDOM_NUMBER;
         double width = random.nextDouble() * MAX_RANDOM_NUMBER;
+        Color randomColor = new ColorSupplier().getRandomColor();
         return new Rectangle(length, width, randomColor);
     }
 
     public Figure getRandomRightTriangle() {
         double firstLeg = random.nextDouble() * MAX_RANDOM_NUMBER;
         double secondLeg = random.nextDouble() * MAX_RANDOM_NUMBER;
+        Color randomColor = new ColorSupplier().getRandomColor();
         return new RightTriangle(firstLeg, secondLeg, randomColor);
     }
 
@@ -55,6 +58,7 @@ public class FigureSupplier {
         double topSide = random.nextDouble() * MAX_RANDOM_NUMBER;
         double downSide = random.nextDouble() * MAX_RANDOM_NUMBER;
         double height = random.nextDouble() * MAX_RANDOM_NUMBER;
+        Color randomColor = new ColorSupplier().getRandomColor();
         return new IsoscelesTrapezoid(topSide, downSide, height, randomColor);
     }
 }
