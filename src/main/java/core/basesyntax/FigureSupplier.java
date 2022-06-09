@@ -3,57 +3,66 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int MAX_NUMBER = 100;
-    private static Type type;
+    private Random random = new Random();
+    private final int maxNumber = 100;
+    private final String constantColor = "WHITE";
+    private final int constantRadius = 10;
 
-    public FigureSupplier(Type type) {
-        this.type = type;
-    }
+    private Figure figure;
 
-    public static Figure getRandomFigure() {
-        Random random = new Random();
-        Random random3 = new Random();
-        Random random2 = new Random();
-        int value1 = random.nextInt(MAX_NUMBER) + 1;
-        int value2 = random.nextInt(MAX_NUMBER) + 1;
-        int value3 = random.nextInt(MAX_NUMBER) + 1;
-        int index = random.nextInt(Type.values().length);
-        type = Type.values()[index];
-        ColorSupplier colorSupplier = new ColorSupplier();
-        Figure figure = new Figure();
+    public Figure getRandomFigure() {
+
+        int index = random.nextInt(FigureType.values().length);
+        FigureType type = FigureType.values()[index];
 
         switch (type) {
             case CIRCLE:
-                figure = new Circle(value1);
-                figure.setColor(String.valueOf(colorSupplier.getRandomColor()));
+                getRandomCircle();
                 break;
 
             case SQUARE:
-                figure = new Square(value1);
-                figure.setColor(String.valueOf(colorSupplier.getRandomColor()));
+                getRandomSquare();
                 break;
 
             case RECTANGLE:
-                figure = new Rectangle(value1, value2);
-                figure.setColor(String.valueOf(colorSupplier.getRandomColor()));
+                getRandomRectangle();
                 break;
 
             case RIGHT_TRIANGLE:
-                figure = new RightTriangle(value1);
-                figure.setColor(String.valueOf(colorSupplier.getRandomColor()));
+                getRandomRightTriangle();
                 break;
 
             default :
-                figure = new IsoscelesTrapezoid(value1, value2, value3);
-                figure.setColor(String.valueOf(colorSupplier.getRandomColor()));
+                getIsoscelesTrapezoid();
                 break;
         }
         return figure;
     }
 
-    public static Figure getDefaultFigure() {
-        Figure figure = new Circle(10);
-        figure.setColor("WHITE");
-        return figure;
+    public Figure getDefaultFigure() {
+        Figure defaultFigure = new Circle(constantRadius);
+        defaultFigure.setColor(constantColor);
+        return defaultFigure;
+    }
+
+    private void getRandomCircle() {
+        figure = new Circle(random.nextInt(maxNumber) + 1);
+    }
+
+    private void getRandomSquare() {
+        figure = new Square(random.nextInt(maxNumber) + 1);
+    }
+
+    private void getRandomRectangle() {
+        figure = new Rectangle(random.nextInt(maxNumber) + 1, random.nextInt(maxNumber) + 1);
+    }
+
+    private void getRandomRightTriangle() {
+        figure = new RightTriangle(random.nextInt(maxNumber) + 1);
+    }
+
+    private void getIsoscelesTrapezoid() {
+        figure = new IsoscelesTrapezoid(random.nextInt(maxNumber) + 1,
+                random.nextInt(maxNumber) + 1, random.nextInt(maxNumber) + 1);
     }
 }

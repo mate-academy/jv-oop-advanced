@@ -5,14 +5,15 @@ public class Main {
 
     public static void main(String[] args) {
         Figure[] figures = new Figure[quantity];
+        FigureSupplier newFigure = new FigureSupplier();
         for (int i = 0; i < figures.length / 2; i++) {
-            figures[i] = FigureSupplier.getRandomFigure();
+            figures[i] = newFigure.getRandomFigure();
         }
         for (int i = figures.length / 2; i < figures.length; i++) {
-            figures[i] = FigureSupplier.getDefaultFigure();
+            figures[i] = newFigure.getDefaultFigure();
         }
         for (Figure figure : figures) {
-            figure.getDraw();
+            figure.draw();
         }
     }
 }

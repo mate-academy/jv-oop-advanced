@@ -3,6 +3,7 @@ package core.basesyntax;
 public class Rectangle extends Figure {
     private int aside;
     private int bside;
+    private String color = String.valueOf(ColorSupplier.getRandomColor());
 
     public Rectangle(int aside, int bside) {
         this.aside = aside;
@@ -10,15 +11,15 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double getSquare() {
+    public double getArea() {
         return aside * bside;
     }
 
     @Override
-    public void getDraw() {
-        System.out.println("Figure: rectangle, area: " + getSquare()
+    public void draw() {
+        System.out.println("Figure: rectangle, area: " + getArea()
                 + " sq.units , side a: " + aside + " units, side b: "
-                + bside + " units, color: " + getColor());
+                + bside + " units, color: " + color);
 
     }
 }
