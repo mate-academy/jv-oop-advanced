@@ -1,0 +1,30 @@
+package core.basesyntax;
+
+public class IsoscelesTrapezoid extends Figure {
+    private int sideA;
+    private int sideB;
+    private int weight;
+
+    public IsoscelesTrapezoid() {
+    }
+
+    public IsoscelesTrapezoid(int sideA, int sideB, int weight) {
+        this.sideA = sideA;
+        this.sideB = sideB;
+        this.weight = weight;
+    }
+
+    @Override
+    public int getArea() {
+        return ((sideA + sideB) * weight) / 2;
+    }
+
+    @Override
+    public void drowFigure() {
+        System.out.println("Figure: isosceles trapezoid, area: " + getArea() + " sq.units, sideA: "
+                + sideA + " units, sideB: " + sideB + " units, weight: "
+                + weight + " units, color: " + getColor());
+    }
+}
+
+
