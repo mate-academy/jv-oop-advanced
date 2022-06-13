@@ -22,9 +22,9 @@ public class Square extends Figure {
     }
 
     @Override
-    public String toDraw() {
-        return " Figure: RightTriangle, area: " + getArea()
+    public void draw() {
+        System.out.println(" Figure: RightTriangle, area: " + getArea()
                 + " sq.units, side: " + getSide()
-                + " units, color: " + getColor();
+                + " units, color: " + getColor());
     }
 }

@@ -5,14 +5,17 @@ public class Main {
 
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        String[] randomFigures = new String[FIGURES_NUMBER];
+        Figure[] randomFigures = new Figure[FIGURES_NUMBER];
         for (int i = 0; i < randomFigures.length; i++) {
-            if (i % 2 == 0) {
-                randomFigures[i] = String.valueOf(figureSupplier.getRandomFigure());
+            if (i < randomFigures.length / 2) {
+                randomFigures[i] = figureSupplier.getRandomFigure();
             } else {
-                randomFigures[i] = String.valueOf(figureSupplier.getDefaultFigure());
+                randomFigures[i] = figureSupplier.getDefaultFigure();
             }
-            System.out.println(randomFigures[i]);
+        }
+
+        for (Figure randomFigure : randomFigures) {
+            randomFigure.draw();
         }
     }
 }

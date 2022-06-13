@@ -32,10 +32,10 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String toDraw() {
-        return " Figure: RightTriangle, area: " + getArea()
+    public void draw() {
+        System.out.println(" Figure: RightTriangle, area: " + getArea()
                 + " sq.units, firstLeg: " + getFirstLeg()
                 + " units, secondLeg: " + getSecondLeg()
-                + " units, color: " + getColor();
+                + " units, color: " + getColor());
     }
 }
