@@ -8,14 +8,15 @@ public class IsoscelesTrapezoid extends Figure {
     public IsoscelesTrapezoid() {
     }
 
-    public IsoscelesTrapezoid(int sideA, int sideB, int weight) {
+    public IsoscelesTrapezoid(String color, int sideA, int sideB, int weight) {
+        super(color);
         this.sideA = sideA;
         this.sideB = sideB;
         this.weight = weight;
     }
 
     @Override
-    public int getArea() {
+    public double getArea() {
         return ((sideA + sideB) * weight) / 2;
     }
 

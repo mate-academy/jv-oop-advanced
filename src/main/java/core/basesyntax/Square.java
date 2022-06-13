@@ -6,12 +6,13 @@ public class Square extends Figure {
     public Square() {
     }
 
-    public Square(int side) {
+    public Square(String color, int side) {
+        super(color);
         this.side = side;
     }
 
     @Override
-    public int getArea() {
+    public double getArea() {
         return side * side;
     }
 

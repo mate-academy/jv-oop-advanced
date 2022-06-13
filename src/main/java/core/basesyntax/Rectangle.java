@@ -7,13 +7,14 @@ public class Rectangle extends Figure {
     public Rectangle() {
     }
 
-    public Rectangle(int width, int height) {
+    public Rectangle(String color, int width, int height) {
+        super(color);
         this.width = width;
         this.height = height;
     }
 
     @Override
-    public int getArea() {
+    public double getArea() {
         return width * height;
     }
 

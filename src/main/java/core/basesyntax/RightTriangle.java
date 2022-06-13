@@ -7,13 +7,13 @@ public class RightTriangle extends Figure {
     public RightTriangle() {
     }
 
-    public RightTriangle(int firstLeg, int secondLeg) {
+    public RightTriangle(String color, int firstLeg, int secondLeg) {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
 
     @Override
-    public int getArea() {
+    public double getArea() {
         return (firstLeg * secondLeg) / 2;
     }
 

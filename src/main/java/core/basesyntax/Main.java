@@ -5,10 +5,10 @@ public class Main {
         final int maxSizeArray = 6;
         Figure[] figures = new Figure[maxSizeArray];
         FigureSupplier figureSupplier = new FigureSupplier();
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < figures.length / 2; i++) {
             figures[i] = figureSupplier.getRandomFigure();
         }
-        for (int i = 3; i < 6; i++) {
+        for (int i = figures.length / 2; i < figures.length; i++) {
             figures[i] = figureSupplier.getDefaultFigure();
         }
         for (Figure takeFigure : figures) {
