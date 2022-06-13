@@ -12,9 +12,9 @@ public class FigureSupplier {
     private static final int MAX_SQUARE_SIDE = 20;
     private static final int MAX_RIGHT_TRIANGLE_FIRST_LEG = 20;
     private static final int MAX_RIGHT_TRIANGLE_SECOND_LEG = 20;
-    Figure randomFigure;
+    private Figure randomFigure;
     private ColorSupplier colorSupplier = new ColorSupplier();
-    String color = colorSupplier.getRandomColor();
+    private String color = colorSupplier.getRandomColor();
     private Random random = new Random();
 
     public Figure getRandomFigure() {
@@ -27,7 +27,7 @@ public class FigureSupplier {
                 getRandomIsoscelesTrapezoid();
                 break;
             case RECTANGLE:
-               getRandomRectangle();
+                getRandomRectangle();
                 break;
             case RIGHTTRIANGLE:
                 getRandomRightTriangle();
