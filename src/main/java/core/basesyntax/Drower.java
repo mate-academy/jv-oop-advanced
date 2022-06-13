@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public interface FigureDrower {
+public interface Drower {
     void drowFigure();
 }
