@@ -11,10 +11,7 @@ public class Main {
             } else {
                 randomfigure[i] = figureSupplier.getRandomFigure();
             }
-        }
-        for (Figure figure:randomfigure
-        ) {
-            figure.draw();
+            randomfigure[i].draw();
         }
     }
 }
