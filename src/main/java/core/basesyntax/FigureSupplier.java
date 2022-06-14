@@ -13,28 +13,22 @@ public class FigureSupplier {
     private static final int MAX_RIGHT_TRIANGLE_FIRST_LEG = 20;
     private static final int MAX_RIGHT_TRIANGLE_SECOND_LEG = 20;
     private ColorSupplier colorSupplier = new ColorSupplier();
-    private Figure randomFigure;
     private Random random = new Random();
 
     public Figure getRandomFigure() {
         int index = random.nextInt(FigureType.values().length);
         switch (FigureType.values()[index]) {
             case CIRCLE:
-                getRandomCircle();
-                break;
+                return getRandomCircle();
             case ISOSCELESTRAPEZOID:
-                getRandomIsoscelesTrapezoid();
-                break;
+                return getRandomIsoscelesTrapezoid();
             case RECTANGLE:
-                getRandomRectangle();
-                break;
+                return getRandomRectangle();
             case RIGHTTRIANGLE:
-                getRandomRightTriangle();
-                break;
+                return getRandomRightTriangle();
             default:
-                getRandomSquare();
+                return getRandomSquare();
         }
-        return randomFigure;
     }
 
     public Figure getDefaultFigure() {
@@ -44,7 +38,7 @@ public class FigureSupplier {
     private Figure getRandomCircle() {
         String color = colorSupplier.getRandomColor();
         int radius = random.nextInt(MAX_SQUARE_SIDE);
-        randomFigure = new Circle(color, radius);
+        Figure randomFigure = new Circle(color, radius);
         return randomFigure;
     }
 
@@ -53,7 +47,7 @@ public class FigureSupplier {
         int sideA = random.nextInt(MAX_ISOSCELES_TRAPEZOID_SIDE_A);
         int sideB = random.nextInt(MAX_ISOSCELES_TRAPEZOID_SIDE_B);
         int weight = random.nextInt(MAX_ISOSCELES_TRAPEZOID_WEIGHT);
-        randomFigure = new IsoscelesTrapezoid(color, sideA, sideB, weight);
+        Figure randomFigure = new IsoscelesTrapezoid(color, sideA, sideB, weight);
         return randomFigure;
     }
 
@@ -61,7 +55,7 @@ public class FigureSupplier {
         String color = colorSupplier.getRandomColor();
         int width = random.nextInt(MAX_RECTANGLE_WIDTH);
         int height = random.nextInt(MAX_RECTANGLE_HEIGHT);
-        randomFigure = new Rectangle(color, width, height);
+        Figure randomFigure = new Rectangle(color, width, height);
         return randomFigure;
     }
 
@@ -69,14 +63,14 @@ public class FigureSupplier {
         String color = colorSupplier.getRandomColor();
         int firstLeg = random.nextInt(MAX_RIGHT_TRIANGLE_FIRST_LEG);
         int secondLeg = random.nextInt(MAX_RIGHT_TRIANGLE_SECOND_LEG);
-        randomFigure = new RightTriangle(color, firstLeg, secondLeg);
+        Figure randomFigure = new RightTriangle(color, firstLeg, secondLeg);
         return randomFigure;
     }
 
     private Figure getRandomSquare() {
         String color = colorSupplier.getRandomColor();
         int side = random.nextInt(MAX_SQUARE_SIDE);
-        randomFigure = new Square(color, side);
+        Figure randomFigure = new Square(color, side);
         return randomFigure;
     }
 }
