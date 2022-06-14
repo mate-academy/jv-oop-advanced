@@ -1,6 +1,4 @@
-package core.basesyntax;
-
-import core.basesyntax.figure.FigureSupplier;
+package core.basesyntax.figure;
 
 public class Main {
     public static void main(String[] args) {
