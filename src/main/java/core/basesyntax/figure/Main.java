@@ -13,7 +13,8 @@ public class Main {
             }
         }
         for (Figure figure:randomfigure
-             ) {figure.draw();
+        ) {
+            figure.draw();
         }
     }
 }
