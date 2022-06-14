@@ -6,24 +6,16 @@ public class RightTriangle extends Figure {
 
     public RightTriangle(int base, int height, Color color) {
         super(color);
-        this.setBase();
-        this.setHeight();
+        this.base = base;
+        this.height = height;
     }
 
     public int getBase() {
         return base;
     }
 
-    public void setBase() {
-        this.base = base;
-    }
-
     public int getHeight() {
         return height;
-    }
-
-    public void setHeight() {
-        this.height = height;
     }
 
     @Override
@@ -34,7 +26,7 @@ public class RightTriangle extends Figure {
     @Override
     public void draw() {
         System.out.println(" Figure: RightTriangle, area: " + getArea()
-                + " sq.units, base: " + base
+                + " sq.units, base: " + getBase()
                 + " units, height: " + getHeight()
                 + " units, color: " + getColor());
     }

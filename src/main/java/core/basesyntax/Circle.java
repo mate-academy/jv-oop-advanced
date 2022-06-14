@@ -5,15 +5,11 @@ public class Circle extends Figure {
 
     public Circle(int radius, Color color) {
         super(color);
-        this.setRadius();
+        this.radius = radius;
     }
 
     public int getRadius() {
         return radius;
-    }
-
-    public void setRadius() {
-        this.radius = radius;
     }
 
     @Override

@@ -7,33 +7,21 @@ public class IsoscelesTrapezoid extends Figure {
 
     public IsoscelesTrapezoid(int firstLeg, int secondLeg, int height, Color color) {
         super(color);
-        this.setFirstLeg();
-        this.setSecondLeg();
-        this.setHeight();
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
+        this.height = height;
     }
 
     public int getHeight() {
         return height;
     }
 
-    public void setHeight() {
-        this.height = height;
-    }
-
     public int getFirstLeg() {
         return firstLeg;
     }
 
-    public void setFirstLeg() {
-        this.firstLeg = firstLeg;
-    }
-
     public int getSecondLeg() {
         return secondLeg;
-    }
-
-    public void setSecondLeg() {
-        this.secondLeg = secondLeg;
     }
 
     @Override

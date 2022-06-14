@@ -5,15 +5,11 @@ public class Square extends Figure {
 
     public Square(int side, Color color) {
         super(color);
-        this.setSide();
+        this.side = side;
     }
 
     public int getSide() {
         return side;
-    }
-
-    public void setSide() {
-        this.side = side;
     }
 
     @Override

@@ -13,7 +13,6 @@ public class Main {
                 randomFigures[i] = figureSupplier.getDefaultFigure();
             }
         }
-
         for (Figure randomFigure : randomFigures) {
             randomFigure.draw();
         }
