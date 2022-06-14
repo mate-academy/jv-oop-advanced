@@ -4,12 +4,16 @@ public class Main {
     public static void main(String[] args) {
         int count = 10;
         FigureSupplier figureSupplier = new FigureSupplier();
+        Figure[] randomfigure = new Figure[count];
         for (int i = 0; i < count; i++) {
             if (i >= count / 2) {
-                figureSupplier.getDefaultFigure().draw();
+                randomfigure[i] = figureSupplier.getDefaultFigure();
             } else {
-                figureSupplier.getRandomFigure().draw();
+                randomfigure[i] = figureSupplier.getRandomFigure();
             }
+        }
+        for (Figure figure:randomfigure
+             ) {figure.draw();
         }
     }
 }
