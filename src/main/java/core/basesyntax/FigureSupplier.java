@@ -12,9 +12,8 @@ public class FigureSupplier {
     private static final int MAX_SQUARE_SIDE = 20;
     private static final int MAX_RIGHT_TRIANGLE_FIRST_LEG = 20;
     private static final int MAX_RIGHT_TRIANGLE_SECOND_LEG = 20;
-    private Figure randomFigure;
     private ColorSupplier colorSupplier = new ColorSupplier();
-    private String color = colorSupplier.getRandomColor();
+    private Figure randomFigure;
     private Random random = new Random();
 
     public Figure getRandomFigure() {
@@ -43,39 +42,40 @@ public class FigureSupplier {
     }
 
     private Figure getRandomCircle() {
+        String color = colorSupplier.getRandomColor();
         int radius = random.nextInt(MAX_SQUARE_SIDE);
         randomFigure = new Circle(color, radius);
         return randomFigure;
     }
 
     private Figure getRandomIsoscelesTrapezoid() {
+        String color = colorSupplier.getRandomColor();
         int sideA = random.nextInt(MAX_ISOSCELES_TRAPEZOID_SIDE_A);
         int sideB = random.nextInt(MAX_ISOSCELES_TRAPEZOID_SIDE_B);
         int weight = random.nextInt(MAX_ISOSCELES_TRAPEZOID_WEIGHT);
-        String color = colorSupplier.getRandomColor();
         randomFigure = new IsoscelesTrapezoid(color, sideA, sideB, weight);
         return randomFigure;
     }
 
     private Figure getRandomRectangle() {
+        String color = colorSupplier.getRandomColor();
         int width = random.nextInt(MAX_RECTANGLE_WIDTH);
         int height = random.nextInt(MAX_RECTANGLE_HEIGHT);
-        String color = colorSupplier.getRandomColor();
         randomFigure = new Rectangle(color, width, height);
         return randomFigure;
     }
 
     private Figure getRandomRightTriangle() {
+        String color = colorSupplier.getRandomColor();
         int firstLeg = random.nextInt(MAX_RIGHT_TRIANGLE_FIRST_LEG);
         int secondLeg = random.nextInt(MAX_RIGHT_TRIANGLE_SECOND_LEG);
-        String color = colorSupplier.getRandomColor();
         randomFigure = new RightTriangle(color, firstLeg, secondLeg);
         return randomFigure;
     }
 
     private Figure getRandomSquare() {
-        int side = random.nextInt(MAX_SQUARE_SIDE);
         String color = colorSupplier.getRandomColor();
+        int side = random.nextInt(MAX_SQUARE_SIDE);
         randomFigure = new Square(color, side);
         return randomFigure;
     }
