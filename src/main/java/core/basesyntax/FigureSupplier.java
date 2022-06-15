@@ -7,12 +7,12 @@ public class FigureSupplier {
     public static final int MAX_BOUND = 100;
     public static final String COLOR_DEFAULT = "WHITE";
     public static final double DEFAULT_RADIUS = 10;
-    private static final int NUMBER_FIGURES = 5;
+    private static final int NUMBER_OF_FIGURES = 5;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        switch (random.nextInt(NUMBER_FIGURES)) {
+        switch (random.nextInt(NUMBER_OF_FIGURES)) {
             case 0:
                 return getRandomCircle();
             case 1 :
