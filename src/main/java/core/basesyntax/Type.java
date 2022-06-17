@@ -4,5 +4,6 @@ public enum Type {
     CIRCLE,
     RECTANGLE,
     TRIANGLE,
-    SQUARE
+    SQUARE,
+    TRAPEZOID
 }

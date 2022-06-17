@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements Draw, ObtainArea {
+public class RightTriangle extends Figure {
     private String color;
     private int side;
 

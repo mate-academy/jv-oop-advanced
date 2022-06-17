@@ -14,6 +14,7 @@ public class FigureSupplier {
         String color = randomColor.getRandomColor();
         int value1 = random.nextInt(maxNumber);
         int value2 = random.nextInt(maxNumber);
+        int value3 = random.nextInt(maxNumber);
         int index = random.nextInt(Type.values().length);
 
         switch (Type.values()[index]) {
@@ -21,6 +22,8 @@ public class FigureSupplier {
                 return getRandomCircle(color,value1);
             case RECTANGLE:
                 return getRandomRectangle(color, value1, value2);
+            case TRAPEZOID:
+                return getRandomTrapezoid(color, value1, value2, value3);
             case SQUARE:
                 return getRandomSquare(color, value1);
             default:
@@ -46,6 +49,11 @@ public class FigureSupplier {
     private Figure getRandomRectangle(String color, int value1, int value2) {
         Figure rectangle = new Rectangle(color,value1,value2);
         return rectangle;
+    }
+
+    private Figure getRandomTrapezoid(String color, int value1, int value2, int value3) {
+        Figure trapezoid = new IsoscelesTrapezoid(color,value1, value2, value3);
+        return trapezoid;
     }
 
     public Figure getDefaultFigure() {
