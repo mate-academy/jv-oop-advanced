@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public interface Figure {
     abstract void getInfoAboutFigure();
 }

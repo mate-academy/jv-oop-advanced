@@ -13,25 +13,26 @@ public class FigureSupplier {
 
         switch (shapeNumber) {
             case 0:
-                figure = new Circle(figurePartSize, cs.getRandomColor());
+                figure = new Circle(cs.getRandomColor(), figurePartSize);
                 break;
             case 1:
                 figure = new RightTriangle(
-                        figurePartSize, figurePartSize,
-                        cs.getRandomColor()
+                        cs.getRandomColor(),
+                        figurePartSize, figurePartSize
+
                 );
                 break;
             case 2:
                 figure = new IsoscelesTrapezoid(
-                        figurePartSize, figurePartSize,
-                        figurePartSize, cs.getRandomColor()
+                        cs.getRandomColor(),
+                        figurePartSize, figurePartSize, figurePartSize
                 );
                 break;
             case 3:
-                figure = new Square(figurePartSize, cs.getRandomColor());
+                figure = new Square(cs.getRandomColor(),figurePartSize);
                 break;
             case 4:
-                figure = new Rectangle(figurePartSize, figurePartSize, cs.getRandomColor());
+                figure = new Rectangle(cs.getRandomColor(),figurePartSize, figurePartSize);
                 break;
             default:
                 break;
@@ -40,7 +41,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, "white");
+        return new Circle("white", 10);
     }
 
 }

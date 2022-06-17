@@ -1,18 +1,14 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure {
+public class Rectangle extends Shape {
     private ColorSupplier cs = new ColorSupplier();
     private double width;
     private double height;
-    private String color;
 
-    public Rectangle() {
-    }
-
-    public Rectangle(double width, double height, String color) {
+    public Rectangle(String color, double width, double height) {
+        super(color);
         this.width = width;
         this.height = height;
-        this.color = cs.getRandomColor();
     }
 
     public double getWidth() {
@@ -35,6 +31,6 @@ public class Rectangle extends Figure {
     public void getInfoAboutFigure() {
         System.out.println("Figure: rectangle, area: " + (width * height)
                 + ", width: " + width + ", height: " + height
-                + ", color: " + color);
+                + ", color: " + getColor());
     }
 }

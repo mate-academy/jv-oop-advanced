@@ -1,18 +1,14 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure {
+public class RightTriangle extends Shape {
     private ColorSupplier cs = new ColorSupplier();
-    private String color;
     private double baseLeg;
     private double heightLeg;
 
-    public RightTriangle() {
-    }
-
-    public RightTriangle(double firstLeg, double secondLeg, String color) {
-        this.baseLeg = firstLeg;
-        this.heightLeg = secondLeg;
-        this.color = cs.getRandomColor();
+    public RightTriangle(String color, double baseLeg, double heightLeg) {
+        super(color);
+        this.baseLeg = baseLeg;
+        this.heightLeg = heightLeg;
     }
 
     public double getFirstLeg() {
@@ -35,6 +31,6 @@ public class RightTriangle extends Figure {
     public void getInfoAboutFigure() {
         System.out.println("Figure: Right Triangle , area: " + ((baseLeg * heightLeg) / 2)
                 + ", baseLeg: " + baseLeg + ", heightLeg: " + heightLeg
-                + ", color: " + color);
+                + ", color: " + getColor());
     }
 }
