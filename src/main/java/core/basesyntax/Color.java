@@ -4,7 +4,7 @@ public enum Color {
     WHITE,
     BLACK,
     GREY,
-    REDgit,
+    RED,
     BLUE,
     GREEN,
     BROWN,

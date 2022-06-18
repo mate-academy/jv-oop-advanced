@@ -20,12 +20,12 @@ public class Rectangle extends Figure {
 
     @Override
     public double getArea() {
-        return Math.floor(width * height);
+        return width * height;
     }
 
     @Override
     public void draw() {
-        System.out.println("rectangle, area: " + getArea()
+        System.out.println("Rectangle, area: " + getArea()
                 + " sq.units, width: " + width
                 + " units, height: " + height
                 + " units, color: " + getColor());
