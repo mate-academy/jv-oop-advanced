@@ -11,5 +11,9 @@ public abstract class Figure {
         return color;
     }
 
+    public void setColor(Colors color) {
+        this.color = color;
+    }
+
     public abstract double getArea();
 }
