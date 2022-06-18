@@ -4,7 +4,7 @@ public class RightTriangle extends Figure implements Drawable {
 
     private double side;
 
-    public RightTriangle(Colors color, double side) {
+    public RightTriangle(String color, double side) {
         super(color);
         this.side = side;
     }

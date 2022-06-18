@@ -4,7 +4,7 @@ public class Rectangle extends Figure implements Drawable {
     private double firstSide;
     private double secondSide;
 
-    public Rectangle(Colors color, double firstSide, double secondSide) {
+    public Rectangle(String color, double firstSide, double secondSide) {
         super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
