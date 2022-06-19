@@ -15,6 +15,7 @@ public class Circle extends Figure implements Drawable {
 
     @Override
     public void draw() {
-        System.out.println("Color: " + super.getColor() + "\nRadius: " + radius);
+             System.out.println("circle, area: " + getArea() + " sq.units, radiur: "
+                                + radius + " units, color: " + super.getColor());
     }
 }

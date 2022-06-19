@@ -9,5 +9,8 @@ public class Main {
             figures[i] = (i < middleOfFigureArray) ? new FigureSupplier().getRandomFigure()
                                                   : new FigureSupplier().getDefaultFigure();
         }
+        for (Figure figure : figures) {
+            figure
+        }
     }
 }
