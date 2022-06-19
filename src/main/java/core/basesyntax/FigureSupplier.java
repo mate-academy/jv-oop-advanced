@@ -9,19 +9,26 @@ public class FigureSupplier {
         Figures fig = Figures.values()[new Random().nextInt(index)];
         switch (fig) {
             case SQUARE:
-                return new Square(new ColorSupplier().getRandomColor(), new Random().nextDouble());
+                return new Square(new ColorSupplier().getRandomColor(),
+                        (double)Math.round(new Random().nextDouble() * 10000) / 100);
             case RECTANGLE:
-                return new Rectangle(new ColorSupplier().getRandomColor(), new Random().nextDouble(), new Random().nextDouble());
+                return new Rectangle(new ColorSupplier().getRandomColor(),
+                        (double)Math.round(new Random().nextDouble() * 10000) / 100,
+                        (double)Math.round(new Random().nextDouble() * 10000) / 100);
             case RIGHT_TRIANGLE:
-                return new RightTriangle(new ColorSupplier().getRandomColor(), new Random().nextDouble());
+                return new RightTriangle(new ColorSupplier().getRandomColor(),
+                        (double)Math.round(new Random().nextDouble() * 10000) / 100);
             case ISOSCELES_TRAPEZOID:
-                return new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(), new Random().nextDouble(),
-                                              new Random().nextDouble(), new Random().nextDouble());
+                return new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(),
+                        (double)Math.round(new Random().nextDouble() * 10000) / 100,
+                        (double) Math.round(new Random().nextDouble() * 10000) / 100,
+                        (double) Math.round(new Random().nextDouble() * 10000) / 100);
             case CIRCLE:
-                return new Circle(new ColorSupplier().getRandomColor(), new Random().nextDouble());
+                return new Circle(new ColorSupplier().getRandomColor(),
+                        (double) Math.round(new Random().nextDouble() * 10000) / 100);
             default:
                 System.out.println("Something goes wrong: FigureSupplier().getRandomFigure()");
-                return new Circle(Colors.values()[0].toString(), 10.0 );
+                return new Circle(Colors.values()[0].toString(), 10.00);
         }
     }
 
@@ -29,3 +36,4 @@ public class FigureSupplier {
         return new Circle(Colors.values()[0].toString(), 10.0);
     }
 }
+

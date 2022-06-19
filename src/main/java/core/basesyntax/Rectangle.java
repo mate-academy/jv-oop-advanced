@@ -17,7 +17,7 @@ public class Rectangle extends Figure implements Drawable {
 
     @Override
     public void draw() {
-        System.out.println("rectangle, area: " + getArea() + " sq.units, first side: "
+        System.out.println("Figure: rectangle, area: " + getArea() + " sq.units, first side: "
                 + firstSide + " units, second side: " + secondSide + " units, color: "
                 + super.getColor());
     }
