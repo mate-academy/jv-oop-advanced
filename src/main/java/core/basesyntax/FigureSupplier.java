@@ -5,8 +5,8 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int DEFAULT_RADIUS = 10;
     private static final String DEFAULT_COLOR = String.valueOf(Color.WHITE);
-    private static final int MAX_VALUE_SIDE = 50;
-    private static final int MAX_FIGURE = 5;
+    private static final int MAX_SIDE_VALUE = 50;
+    private static final int FIGURES_AMOUNT = 5;
     private final Random random;
     private final ColorSupplier colorSupplier;
 
@@ -16,8 +16,8 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        int count = random.nextInt(MAX_FIGURE);
-        switch (count) {
+        int randomIndex = random.nextInt(FIGURES_AMOUNT);
+        switch (randomIndex) {
             case 1:
                 return getRandomCircle();
             case 2:
@@ -37,30 +37,30 @@ public class FigureSupplier {
 
     private Figure getRandomCircle() {
         return new Circle(colorSupplier.getRandomColor(),
-                          Math.abs(random.nextInt()));
+                          random.nextInt());
     }
 
     private Figure getRandomRectangle() {
         return new Rectangle(colorSupplier.getRandomColor(),
-                             Math.abs(random.nextInt()),
-                             Math.abs(random.nextInt()));
+                             random.nextInt(),
+                             random.nextInt());
     }
 
     private Figure getRandomRightTriangle() {
         return new RightTriangle(colorSupplier.getRandomColor(),
-                                 Math.abs(random.nextInt()),
-                                 Math.abs(random.nextInt()));
+                                 random.nextInt(),
+                                 random.nextInt());
     }
 
     private Figure getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                                      Math.abs(random.nextInt()),
-                                      Math.abs(random.nextInt()),
-                                      Math.abs(random.nextInt()));
+                                      random.nextInt(),
+                                      random.nextInt(),
+                                      random.nextInt());
     }
 
     private Figure getRandomSquare() {
         return new Square(colorSupplier.getRandomColor(),
-                          Math.abs(random.nextInt()));
+                          random.nextInt());
     }
 }
