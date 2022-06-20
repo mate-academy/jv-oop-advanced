@@ -4,36 +4,52 @@ import java.util.Random;
 
 public class FigureSupplier {
 
+    private static final int MULTIPLIER = 1000;
+    private static final int DECIMAL_PLACES = 2;
+    private static final int DEFAULT_COLOR = 0;
+    private static final double DEFAULT_RADIUS = 10.0;
+
     public Figure getRandomFigure() {
+        String color = new ColorSupplier().getRandomColor();
+        String defaultColor = Colors.values()[DEFAULT_COLOR].toString();
         int index = Figures.values().length;
         Figures fig = Figures.values()[new Random().nextInt(index)];
         switch (fig) {
             case SQUARE:
-                return new Square(new ColorSupplier().getRandomColor(),
-                        (double)Math.round(new Random().nextDouble() * 10000) / 100);
+                double squareSide = (double)Math.round(new Random().nextDouble() * MULTIPLIER)
+                        / Math.pow(10, DECIMAL_PLACES);
+                return new Square(color, squareSide);
             case RECTANGLE:
-                return new Rectangle(new ColorSupplier().getRandomColor(),
-                        (double)Math.round(new Random().nextDouble() * 10000) / 100,
-                        (double)Math.round(new Random().nextDouble() * 10000) / 100);
+                double firstSide = (double)Math.round(new Random().nextDouble() * MULTIPLIER)
+                        / Math.pow(10, DECIMAL_PLACES);
+                double secondSide = (double)Math.round(new Random().nextDouble() * MULTIPLIER)
+                        / Math.pow(10, DECIMAL_PLACES);
+                return new Rectangle(color, firstSide, secondSide);
             case RIGHT_TRIANGLE:
-                return new RightTriangle(new ColorSupplier().getRandomColor(),
-                        (double)Math.round(new Random().nextDouble() * 10000) / 100);
+                double side = (double)Math.round(new Random().nextDouble() * MULTIPLIER)
+                        / Math.pow(10, DECIMAL_PLACES);
+                return new RightTriangle(color, side);
             case ISOSCELES_TRAPEZOID:
-                return new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(),
-                        (double)Math.round(new Random().nextDouble() * 10000) / 100,
-                        (double) Math.round(new Random().nextDouble() * 10000) / 100,
-                        (double) Math.round(new Random().nextDouble() * 10000) / 100);
+                double topSide = (double)Math.round(new Random().nextDouble() * MULTIPLIER)
+                        / Math.pow(10, DECIMAL_PLACES);
+                double bottomSide = (double)Math.round(new Random().nextDouble() * MULTIPLIER)
+                        / Math.pow(10, DECIMAL_PLACES);
+                double thirdSide = (double)Math.round(new Random().nextDouble() * MULTIPLIER)
+                        / Math.pow(10, DECIMAL_PLACES);
+                return new IsoscelesTrapezoid(color, topSide, bottomSide, thirdSide);
             case CIRCLE:
-                return new Circle(new ColorSupplier().getRandomColor(),
-                        (double) Math.round(new Random().nextDouble() * 10000) / 100);
+                double radius = (double)Math.round(new Random().nextDouble() * MULTIPLIER)
+                        / Math.pow(10, DECIMAL_PLACES);
+                return new Circle(color, radius);
             default:
                 System.out.println("Something goes wrong: FigureSupplier().getRandomFigure()");
-                return new Circle(Colors.values()[0].toString(), 10.00);
+                return new Circle(defaultColor, DEFAULT_RADIUS);
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Colors.values()[0].toString(), 10.0);
+        String defaultColor = Colors.values()[DEFAULT_COLOR].toString();
+        return new Circle(defaultColor, DEFAULT_RADIUS);
     }
 }
 
