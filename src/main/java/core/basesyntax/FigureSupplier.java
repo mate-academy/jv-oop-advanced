@@ -3,61 +3,62 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private String defaultColor = "WHITE";
-    private int defaultRadius = 10;
-    private int maxNumber = 100;
+    private static final String DEF_COLOR = "WHITE";
+    private static final int DEF_RADIUS = 10;
+    private static final int MAX_NUMBER = 100;
     private Random random = new Random();
+    private ColorSupplier randomColor = new ColorSupplier();
 
     public Figure getRandomFigure() {
-
-        ColorSupplier randomColor = new ColorSupplier();
         String color = randomColor.getRandomColor();
-        int value1 = random.nextInt(maxNumber);
-        int value2 = random.nextInt(maxNumber);
-        int value3 = random.nextInt(maxNumber);
+        int value1 = random.nextInt(MAX_NUMBER);
+        int value2 = random.nextInt(MAX_NUMBER);
+        int value3 = random.nextInt(MAX_NUMBER);
         int index = random.nextInt(Type.values().length);
 
         switch (Type.values()[index]) {
             case CIRCLE:
-                return getRandomCircle(color,value1);
+                return getRandomCircle(color);
             case RECTANGLE:
-                return getRandomRectangle(color, value1, value2);
+                return getRandomRectangle(color);
             case TRAPEZOID:
-                return getRandomTrapezoid(color, value1, value2, value3);
+                return getRandomTrapezoid(color);
             case SQUARE:
-                return getRandomSquare(color, value1);
+                return getRandomSquare(color);
             default:
-                return getRandomTriangle(color, value1);
+                return getRandomTriangle(color);
         }
     }
 
-    private Figure getRandomSquare(String color, int value1) {
-        Figure square = new Square(color,value1);
-        return square;
-    }
-
-    private Figure getRandomCircle(String color, int value1) {
-        Figure circle = new Circle(color,value1);
-        return circle;
-    }
-
-    private Figure getRandomTriangle(String color, int value1) {
-        Figure triangle = new RightTriangle(color,value1);
-        return triangle;
-    }
-
-    private Figure getRandomRectangle(String color, int value1, int value2) {
-        Figure rectangle = new Rectangle(color,value1,value2);
-        return rectangle;
-    }
-
-    private Figure getRandomTrapezoid(String color, int value1, int value2, int value3) {
-        Figure trapezoid = new IsoscelesTrapezoid(color,value1, value2, value3);
-        return trapezoid;
-    }
-
     public Figure getDefaultFigure() {
-        Figure figure = new Circle(defaultColor, defaultRadius);
-        return figure;
+        return new Circle(DEF_COLOR, DEF_RADIUS);
+    }
+
+    private Figure getRandomSquare(String color) {
+        int side = random.nextInt(MAX_NUMBER);
+        return new Square(color, side);
+    }
+
+    private Figure getRandomCircle(String color) {
+        int radius = random.nextInt(MAX_NUMBER);
+        return new Circle(color,radius);
+    }
+
+    private Figure getRandomTriangle(String color) {
+        int side = random.nextInt(MAX_NUMBER);
+        return new RightTriangle(color, side);
+    }
+
+    private Figure getRandomRectangle(String color) {
+        int sideA = random.nextInt(MAX_NUMBER);
+        int sideB = random.nextInt(MAX_NUMBER);
+        return new Rectangle(color,sideA,sideB);
+    }
+
+    private Figure getRandomTrapezoid(String color) {
+        int top = random.nextInt(MAX_NUMBER);
+        int bottom = random.nextInt(MAX_NUMBER);
+        int height = random.nextInt(MAX_NUMBER);
+        return new IsoscelesTrapezoid(color,top, bottom, height);
     }
 }

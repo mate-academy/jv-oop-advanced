@@ -14,7 +14,7 @@ public class Main {
         }
 
         for (Figure value : figures) {
-            value.toDraw();
+            value.draw();
         }
     }
 }
