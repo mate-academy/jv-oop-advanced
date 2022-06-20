@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import javax.management.remote.SubjectDelegationPermission;
-
 public class Circle extends Figures {
     private double radius;
 

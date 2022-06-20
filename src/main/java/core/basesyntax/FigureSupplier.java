@@ -7,6 +7,7 @@ public class FigureSupplier {
     private static final double DEFAULT_RADIUS = 10;
     private static final ColorSupplier colorSupplier = new ColorSupplier();
     private static Random random = new Random();
+
     public Figures getRandomFigure() {
         FigureType[] figureType = FigureType.values();
         switch (figureType[random.nextInt(figureType.length)]) {
@@ -31,6 +32,7 @@ public class FigureSupplier {
     private Figures createCircle(double radius) {
         return new Circle(radius, colorSupplier.getRandomColor());
     }
+
     private Figures createIsoscelesTrapezoid(double firstLeg, double secondLeg, double height) {
         return new IsoscelesTrapezoid(firstLeg,
                 secondLeg, height,
