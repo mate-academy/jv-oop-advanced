@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Square extends Figure {
     private int side;
 
@@ -27,12 +25,5 @@ public class Square extends Figure {
     public void draw() {
         System.out.println("Figure: square, area: " + getArea()
                 + " sq.units, side: " + getSide() + " units, color: " + getColor());
-    }
-
-    @Override
-    public Figure getRandomFigure() {
-        ColorSupplier supplier = new ColorSupplier();
-        Random random = new Random();
-        return new Square(supplier.getRandomColor(), random.nextInt(100));
     }
 }

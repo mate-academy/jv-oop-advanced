@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class IsoscelesTrapezoid extends Figure {
     private int topSide;
     private int downSide;
@@ -46,15 +44,5 @@ public class IsoscelesTrapezoid extends Figure {
                 + " units, down side: " + getDownSide()
                 + " isosceles side:  " + getIsoscelesSide()
                 + " units, color: " + getColor());
-    }
-
-    @Override
-    public Figure getRandomFigure() {
-        ColorSupplier supplier = new ColorSupplier();
-        Random random = new Random();
-        Figure figure;
-        figure = new IsoscelesTrapezoid(supplier.getRandomColor(),
-                random.nextInt(100), random.nextInt(100), random.nextInt(100));
-        return figure;
     }
 }

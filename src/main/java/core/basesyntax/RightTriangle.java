@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class RightTriangle extends Figure {
     private int side;
 
@@ -23,12 +21,5 @@ public class RightTriangle extends Figure {
     public void draw() {
         System.out.println("Figure: right triangle, area: " + getArea()
                 + " sq.units, side: " + getSide() + " units, color: " + getColor());
-    }
-
-    @Override
-    public Figure getRandomFigure() {
-        ColorSupplier supplier = new ColorSupplier();
-        Random random = new Random();
-        return new RightTriangle(supplier.getRandomColor(), random.nextInt(100));
     }
 }
