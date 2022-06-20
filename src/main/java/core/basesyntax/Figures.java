@@ -13,6 +13,6 @@ public abstract class Figures implements AreaCalculator, DrawFigure {
 
     @Override
     public void draw() {
-        System.out.println(this);
+        System.out.println("Figure: " + this);
     }
 }
