@@ -1,17 +1,13 @@
 package core.basesyntax;
 
+import javax.management.remote.SubjectDelegationPermission;
+
 public class Circle extends Figures {
-    private final double radius;
+    private double radius;
 
     public Circle(double radius, String color) {
-        this.setColor(color);
+        super(color);
         this.radius = radius;
-    }
-
-    @Override
-    public String toString() {
-        return "circle, area: " + area() + " sq.units, radius: "
-                + radius + " units, color: " + getColor();
     }
 
     @Override
@@ -19,4 +15,9 @@ public class Circle extends Figures {
         return Math.PI * radius * radius;
     }
 
+    @Override
+    public void draw() {
+        System.out.println("Figure: circle, area: " + area() + " sq.units, radius: "
+                + radius + " units, color: " + getColor());
+    }
 }
