@@ -7,7 +7,7 @@ public class Main {
                 new Rectangle().getRandomFigure(), new Circle().getDefaultFigure(),
                 new Circle().getDefaultFigure(), new Circle().getDefaultFigure()};
         for (Figure figure: figures) {
-            figure.print();
+            figure.draw();
         }
     }
 }

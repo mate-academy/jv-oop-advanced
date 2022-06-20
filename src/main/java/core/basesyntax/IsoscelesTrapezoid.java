@@ -40,7 +40,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public void print() {
+    public void draw() {
         System.out.println("Figure: isosceles trapezoid, area: " + getArea()
                 + " sq.units, top side: " + getTopSide()
                 + " units, down side: " + getDownSide()
