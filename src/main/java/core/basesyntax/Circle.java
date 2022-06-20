@@ -10,6 +10,10 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
+    public Circle() {
+
+    }
+
     public int getRadius() {
         return radius;
     }

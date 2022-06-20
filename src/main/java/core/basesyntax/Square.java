@@ -5,13 +5,13 @@ import java.util.Random;
 public class Square extends Figure {
     private int side;
 
-    public Square() {
-        super();
-    }
-
     public Square(String color, int side) {
         super(color);
         this.side = side;
+    }
+
+    public Square() {
+        super();
     }
 
     public int getSide() {

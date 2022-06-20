@@ -15,6 +15,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     public IsoscelesTrapezoid() {
+        super();
 
     }
 

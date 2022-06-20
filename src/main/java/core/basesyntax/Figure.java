@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Figure implements FigureSupplier, Printable {
+public abstract class Figure implements FigureSupplier, AreaCalculator {
     private String color;
 
     public Figure(String color) {
@@ -11,10 +11,6 @@ public class Figure implements FigureSupplier, Printable {
 
     }
 
-    public double getArea() {
-        return 0;
-    }
-
     public String getColor() {
         return color;
     }
@@ -23,13 +19,8 @@ public class Figure implements FigureSupplier, Printable {
         this.color = color;
     }
 
-    @Override
-    public Figure getRandomFigure() {
-        return null;
-    }
-
-    @Override
     public void print() {
 
     }
+
 }
