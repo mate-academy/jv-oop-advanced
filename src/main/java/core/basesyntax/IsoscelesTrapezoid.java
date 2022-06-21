@@ -12,11 +12,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.isoscelesSide = isoscelesSide;
     }
 
-    public IsoscelesTrapezoid() {
-        super();
-
-    }
-
     public int getTopSide() {
         return topSide;
     }

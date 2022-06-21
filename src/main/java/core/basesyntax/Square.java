@@ -8,10 +8,6 @@ public class Square extends Figure {
         this.side = side;
     }
 
-    public Square() {
-        super();
-    }
-
     public int getSide() {
         return side;
     }
