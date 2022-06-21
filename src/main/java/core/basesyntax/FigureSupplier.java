@@ -22,9 +22,8 @@ public class FigureSupplier {
             case SQUARE:
                 return getRandomSquare(color);
             case TRIANGLE:
-                return getRandomTriangle(color);
             default:
-                return null;
+                return getRandomTriangle(color);
         }
     }
 
