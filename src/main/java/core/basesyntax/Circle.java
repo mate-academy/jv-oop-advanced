@@ -1,15 +1,16 @@
 package core.basesyntax;
 
-public class Circle {
-    private String color;
+public class Circle extends Figure {
     private double radius;
-    private final double area = Math.PI * radius * radius;
-    public Circle() {
+
+    public Circle(String color) {
+        super(color);
     }
 
     public Circle(String color, double radius) {
-        this.color = color;
+        super(color);
         this.radius = radius;
+        area = Math.PI * radius * radius;
     }
 
     public void draw() {
