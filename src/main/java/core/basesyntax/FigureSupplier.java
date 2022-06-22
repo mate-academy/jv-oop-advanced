@@ -5,8 +5,8 @@ import java.util.Random;
 public class FigureSupplier {
     private static final Color DEFAULT_COLOR = Color.WHITE;
     private static final double DEFAULT_RADIUS = 10;
-    private static final ColorSupplier colorSupplier = new ColorSupplier();
-    private static Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
 
     public Figures getRandomFigure() {
         FigureType[] figureType = FigureType.values();
