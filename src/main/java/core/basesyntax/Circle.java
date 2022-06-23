@@ -1,7 +1,10 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements Drawing {
+public class Circle extends Figure {
     private double radius;
+
+    public Circle(){
+    }
 
     public Circle(String color) {
         super(color);

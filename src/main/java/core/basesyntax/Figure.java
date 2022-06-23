@@ -1,8 +1,11 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public abstract class Figure implements Drawing{
     protected String color;
     protected double area;
+
+    protected Figure(){
+    }
 
     protected Figure(String color) {
         this.color = color;

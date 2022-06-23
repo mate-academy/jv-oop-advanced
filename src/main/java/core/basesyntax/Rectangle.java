@@ -1,8 +1,12 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Drawing {
+public class Rectangle extends Figure {
     private double height;
     private double width;
+
+    public Rectangle() {
+    }
+
     public Rectangle(String color) {
         super(color);
     }
