@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
+    private static final double K = 0.5;
     private double firstLeg;
     private double secondLeg;
-    private static final double K = 0.5;
 
     public RightTriangle() {
     }
@@ -20,9 +20,9 @@ public class RightTriangle extends Figure {
     }
 
     public void draw() {
-        System.out.println("Figure: triangle, area: " + area + " sq.units," +
-                " firstLeg: " + firstLeg + " units," +
-                " secondLeg: " + secondLeg + " units," +
-                " color: " + color);
+        System.out.println("Figure: triangle, area: " + area + " sq.units,"
+                + " firstLeg: " + firstLeg + " units,"
+                + " secondLeg: " + secondLeg + " units,"
+                + " color: " + color);
     }
 }

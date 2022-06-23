@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class FigureSupplier {
     static final double DEFAULT_RADIUS = 10;
-    private static final Color DEFAULT_COLOR = Color.WHITE;
     static final double MAX_LENGTH_OF_SIDE = 100.0;
     static final int COUNT_OF_FIGURES = 5;
+    private static final Color DEFAULT_COLOR = Color.WHITE;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -14,7 +14,7 @@ public class FigureSupplier {
         String randomColor = colorSupplier.getRandomColor();
         double randomSide = random.nextDouble() * MAX_LENGTH_OF_SIDE;
         double secondRandomSide = random.nextDouble() * MAX_LENGTH_OF_SIDE;
-        int randomIndex = random.nextInt(COUNT_OF_FIGURES - 1);
+        int randomIndex = random.nextInt(COUNT_OF_FIGURES);
         Figure randomFigure;
         switch (randomIndex) {
             case 0:
@@ -31,7 +31,8 @@ public class FigureSupplier {
                 break;
             case 4:
                 double randomHeight = random.nextDouble() * MAX_LENGTH_OF_SIDE;
-                randomFigure = new IsoscelesTrapezoid(randomColor, randomSide, secondRandomSide, randomHeight);
+                randomFigure = new IsoscelesTrapezoid(randomColor, randomSide,
+                        secondRandomSide, randomHeight);
                 break;
             default:
                 randomFigure = getDefaultFigure();
@@ -40,10 +41,10 @@ public class FigureSupplier {
         return randomFigure;
     }
 
-    public Figure getDefaultFigure(){
+    public Figure getDefaultFigure() {
         String defaultColor = DEFAULT_COLOR.toString().toLowerCase();
-        final Circle DEFAULT_FIGURE;
-        DEFAULT_FIGURE = new Circle(defaultColor, DEFAULT_RADIUS);
-        return DEFAULT_FIGURE;
+        final Circle defaultFigure;
+        defaultFigure = new Circle(defaultColor, DEFAULT_RADIUS);
+        return defaultFigure;
     }
 }
