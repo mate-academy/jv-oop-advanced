@@ -1,20 +1,25 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
+    private final double height;
+    private final double width;
 
-    public Rectangle(String color, double side, double secondSide) {
-        super(color, side, secondSide);
+    public Rectangle(String color, double height, double secondSide) {
+        super(color, height);
+        this.height = height;
+        width = secondSide;
+
     }
 
     public void draw() {
         System.out.println("Figure: rectangle, area: " + getArea() + " sq.units,"
-                + " height: " + sideOrRadius + " units,"
-                + " width: " + secondSide + " units,"
+                + " height: " + height + " units,"
+                + " width: " + width + " units,"
                 + " color: " + color);
     }
 
     @Override
     public double getArea() {
-        return sideOrRadius * secondSide;
+        return height * width;
     }
 }
