@@ -6,7 +6,7 @@ public class FigureSupplier {
     private static final double DEFAULT_RADIUS = 10;
     private static final double MAX_LENGTH_OF_SIDE = 100.0;
     private static final int COUNT_OF_FIGURES = 5;
-    private static final Color DEFAULT_COLOR = Color.WHITE;
+    private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -33,7 +33,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        String defaultColor = DEFAULT_COLOR.name().toLowerCase();
-        return new Circle(defaultColor, DEFAULT_RADIUS);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
