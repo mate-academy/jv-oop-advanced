@@ -6,7 +6,7 @@ public class RightTriangle extends Figure implements Area {
     private int hypotenuse;
 
     @Override
-    public double areaCalculatro() {
-        return 0;
+    public double areaCalculator() {
+        return firstLeg * secondLeg * 0.5;
     }
 }

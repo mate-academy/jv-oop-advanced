@@ -8,7 +8,7 @@ public class Circle extends Figure implements Area {
     }
 
     @Override
-    public double areaCalculatro() {
+    public double areaCalculator() {
         return Math.PI * radius * radius;
     }
 }

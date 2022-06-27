@@ -6,7 +6,7 @@ public class IsoscelesTrapezoid extends Figure implements Area {
     private int foundationB;
 
     @Override
-    public double areaCalculatro() {
+    public double areaCalculator() {
         return 0;
     }
 }

@@ -8,7 +8,7 @@ public class Square extends Figure implements Area {
     }
 
     @Override
-    public double areaCalculatro() {
+    public double areaCalculator() {
         return side * side;
     }
 }

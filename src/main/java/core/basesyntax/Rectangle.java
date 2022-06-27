@@ -10,7 +10,7 @@ public class Rectangle extends Figure implements Area {
     }
 
     @Override
-    public double areaCalculatro() {
-        return 0;
+    public double areaCalculator() {
+        return width * height * 0.5;
     }
 }

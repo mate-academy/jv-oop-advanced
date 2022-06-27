@@ -8,4 +8,8 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         int randomOption = random.nextInt();
     }
+
+    public Figure getDefaultFigure() {
+
+    }
 }
