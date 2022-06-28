@@ -1,6 +1,6 @@
 package core.basesyntax.figures;
 
-public abstract class Figure implements FigureArea, FigureInfo{
+public abstract class Figure implements FigureArea, FigureInfo {
     private String color;
 
     protected Figure(String color) {

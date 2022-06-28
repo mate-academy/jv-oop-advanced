@@ -1,7 +1,6 @@
 package core.basesyntax.figures;
 
-// area = ((firstBase + secondBase) / 2) * height
-public class IsoscelesTrapezoid extends Figure{
+public class IsoscelesTrapezoid extends Figure {
     private int firstBase;
     private int secondBase;
     private int height;

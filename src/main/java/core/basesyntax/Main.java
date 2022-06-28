@@ -1,6 +1,7 @@
 package core.basesyntax;
 
-import core.basesyntax.figures.*;
+import core.basesyntax.figures.Figure;
+import core.basesyntax.figures.FigureSupplier;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,7 +11,7 @@ public class Main {
             if (i < (figures.length / 2)) {
                 figures[i] = figureSupplier.getRandomFigure();
                 figures[i].draw();
-            } else if (i >= (figures.length / 2)) {
+            } else {
                 figures[i] = figureSupplier.getDefaultFigure();
                 figures[i].draw();
             }
