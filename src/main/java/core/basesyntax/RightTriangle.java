@@ -10,6 +10,7 @@ public class RightTriangle extends Figure {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
+
     public double getFirstLeg() {
         return firstLeg;
     }
