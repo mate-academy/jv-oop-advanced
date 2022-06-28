@@ -1,9 +1,6 @@
 package core.basesyntax;
 
-import java.lang.reflect.Type;
 import java.util.Random;
-
-import static core.basesyntax.Color.WHITE;
 
 public class FigureSupplier {
     private final Random random = new Random();
@@ -20,9 +17,13 @@ public class FigureSupplier {
                         getRandomInt(),
                         getRandomInt());
             case 2:
-                return new RightTriangle(colorSupplier.getRandomColor(), getRandomInt(), getRandomInt());
+                return new RightTriangle(colorSupplier.getRandomColor(),
+                        getRandomInt(),
+                        getRandomInt());
             case 3:
-                return new Rectangle(colorSupplier.getRandomColor(), getRandomInt(), getRandomInt());
+                return new Rectangle(colorSupplier.getRandomColor(),
+                        getRandomInt(),
+                        getRandomInt());
             case 4:
             default:
                 return new Square(colorSupplier.getRandomColor(), getRandomInt());
@@ -34,6 +35,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(WHITE.name(), 10);
+        return new Circle(Color.WHITE.name(), 10);
     }
 }

@@ -17,8 +17,8 @@ public abstract class Figure implements Area, Draw {
 
     @Override
     public String toString() {
-        return "Figure{" +
-                "color='" + color + '\'' +
-                '}';
+        return "Figure{"
+                + "color='" + color
+                + '\'' + '}';
     }
 }
