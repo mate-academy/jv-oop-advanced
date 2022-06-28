@@ -51,4 +51,3 @@ public class IsoscelesTrapezoid extends Figure {
 
     }
 }
-

@@ -3,6 +3,8 @@ package core.basesyntax;
 import java.lang.reflect.Type;
 import java.util.Random;
 
+import static core.basesyntax.Color.WHITE;
+
 public class FigureSupplier {
     private final Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
@@ -32,6 +34,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-
+        return new Circle(WHITE.name(), 10);
     }
 }
