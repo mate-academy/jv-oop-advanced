@@ -4,37 +4,64 @@ import core.basesyntax.ColorSupplier;
 import java.util.Random;
 
 public class FigureSupplier {
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    int getRandomProperties() {
-        return new Random().nextInt(20);
+    private int getRandomProperties() {
+        int randomFigure = 20;
+        return new Random().nextInt(randomFigure);
     }
 
-    public Figure getRandomFigure() {
-        int figure = new Random().nextInt(5);
-        if (figure == 0) {
-            return new Square(colorSupplier.getRandomColor(),
-                    getRandomProperties());
-        } else if (figure == 1) {
-            return new Rectangle(colorSupplier.getRandomColor(),
-                    getRandomProperties(),
-                    getRandomProperties());
-        } else if (figure == 2) {
-            return new RightTriangle(colorSupplier.getRandomColor(),
-                    getRandomProperties(),
-                    getRandomProperties());
-        } else if (figure == 3) {
-            return new Circle(colorSupplier.getRandomColor(),
-                    getRandomProperties());
+    // this method should always return white circle with radius 10.
+    public Calculator getDefaultFigure() {
+        String colorDefaultFigure = "WHITE";
+        int radiusDefaultFigure = 10;
+        return new Circle(colorDefaultFigure, radiusDefaultFigure);
+    }
+
+    public Calculator getRandomFigure() {
+        int numberOfFigures = 5;
+        int figure = new Random().nextInt(numberOfFigures);
+        switch (figure) {
+            case 0:
+                return getRandomSquare();
+            case 1:
+                return getRandomRectangle();
+            case 2:
+                return getRandomRightTriangle();
+            case 3:
+                return getRandomCircle();
+            case 4:
+            default:
+                return getRandomIsoscelesTrapezoid();
         }
-        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                getRandomProperties(),
+    }
+
+    private Square getRandomSquare() {
+        return new Square(colorSupplier.getRandomColor(),
+                getRandomProperties());
+    }
+
+    private Rectangle getRandomRectangle() {
+        return new Rectangle(colorSupplier.getRandomColor(),
                 getRandomProperties(),
                 getRandomProperties());
     }
 
-    // this method should always return white circle with radius 10.
-    public Figure getDefaultFigure() {
-        return new Circle("WHITE",10);
+    private RightTriangle getRandomRightTriangle() {
+        return new RightTriangle(colorSupplier.getRandomColor(),
+                getRandomProperties(),
+                getRandomProperties());
+    }
+
+    private Circle getRandomCircle() {
+        return new Circle(colorSupplier.getRandomColor(),
+                getRandomProperties());
+    }
+
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                getRandomProperties(),
+                getRandomProperties(),
+                getRandomProperties());
     }
 }

@@ -1,9 +1,9 @@
 package core.basesyntax.figures;
 
-public abstract class Figure implements FigureArea, FigureInfo {
+public abstract class Calculator implements AreaCalculator, InfoDrawer {
     private String color;
 
-    protected Figure(String color) {
+    protected Calculator(String color) {
         this.color = color;
     }
 
