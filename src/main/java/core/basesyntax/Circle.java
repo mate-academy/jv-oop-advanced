@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends State {
+public class Circle extends Figure {
     private int radius;
 
     public void setRadius(int radius) {

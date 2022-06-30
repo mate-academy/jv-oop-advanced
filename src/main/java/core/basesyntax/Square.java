@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends State {
+public class Square extends Figure {
     private int side;
 
     public void setSide(int side) {

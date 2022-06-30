@@ -3,57 +3,27 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-
+    static final int NUMBER = 15;
     private final Random random = new Random();
-
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        Figure figure = new Circle();
+
         int number = random.nextInt(4);
         switch (number) {
             case 0:
-                Square square = new Square();
-                square.setColor(colorSupplier.getRandomColor());
-                square.setSide(random.nextInt(10));
-                figure = square;
-                break;
+                return getRandomSquare();
             case 1:
-                Circle circle = new Circle();
-                circle.setColor(colorSupplier.getRandomColor());
-                circle.setRadius(random.nextInt(5));
-                figure = circle;
-                break;
+                return getRandomCircle();
             case 2:
-                Rectangle rectangle = new Rectangle();
-                rectangle.setColor(colorSupplier.getRandomColor());
-                rectangle.setHigth(random.nextInt(10));
-                rectangle.setWidth(random.nextInt(15));
-                figure = rectangle;
-                break;
+                return getRandomRectangle();
             case 3:
-                RightTriangle rightTriangle = new RightTriangle();
-                rightTriangle.setCatet1(random.nextInt(10));
-                rightTriangle.setCatet2(random.nextInt(10));
-                rightTriangle.setColor(colorSupplier.getRandomColor());
-                figure = rightTriangle;
-                break;
+                return getRandomRightTriangle();
             case 4:
-                IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
-                isoscelesTrapezoid.setGround1(random.nextInt(10));
-                isoscelesTrapezoid.setGround2(random.nextInt(15));
-                isoscelesTrapezoid.setHigth(random.nextInt(5));
-                isoscelesTrapezoid.setColor(colorSupplier.getRandomColor());
-                figure = isoscelesTrapezoid;
-                break;
+                return getRandomIsoscelesTrapezoid();
             default:
-                System.out.println("There is no figure");
+                return getDefaultFigure();
         }
-        /*Ball ball = new Ball();
-        ball.setColor(colorSupplier.getRandomColor());
-        ball.setNumber(number);
-        return ball;*/
-        return figure;
     }
 
     public Figure getDefaultFigure() {
@@ -61,5 +31,44 @@ public class FigureSupplier {
         circle.setRadius(10);
         circle.setColor(String.valueOf(Color.WHITE));
         return circle;
+    }
+
+    private Circle getRandomCircle() {
+        Circle circle = new Circle();
+        circle.setColor(colorSupplier.getRandomColor());
+        circle.setRadius(random.nextInt(NUMBER));
+        return circle;
+    }
+
+    private Square getRandomSquare() {
+        Square square = new Square();
+        square.setColor(colorSupplier.getRandomColor());
+        square.setSide(random.nextInt(NUMBER));
+        return square;
+    }
+
+    private RightTriangle getRandomRightTriangle() {
+        RightTriangle rightTriangle = new RightTriangle();
+        rightTriangle.setFirstCatet(random.nextInt(NUMBER));
+        rightTriangle.setSecondCatet(random.nextInt(NUMBER));
+        rightTriangle.setColor(colorSupplier.getRandomColor());
+        return rightTriangle;
+    }
+
+    private Rectangle getRandomRectangle() {
+        Rectangle rectangle = new Rectangle();
+        rectangle.setColor(colorSupplier.getRandomColor());
+        rectangle.setHigth(random.nextInt(NUMBER));
+        rectangle.setWidth(random.nextInt(NUMBER));
+        return rectangle;
+    }
+
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
+        isoscelesTrapezoid.setFirstGround(random.nextInt(NUMBER));
+        isoscelesTrapezoid.setSecondGround(random.nextInt(NUMBER));
+        isoscelesTrapezoid.setHigth(random.nextInt(NUMBER));
+        isoscelesTrapezoid.setColor(colorSupplier.getRandomColor());
+        return isoscelesTrapezoid;
     }
 }

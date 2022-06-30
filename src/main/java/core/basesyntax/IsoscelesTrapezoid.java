@@ -1,16 +1,16 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends State {
-    private int ground1;
-    private int ground2;
+public class IsoscelesTrapezoid extends Figure {
+    private int firstGround;
+    private int secondGround;
     private int higth;
 
-    public void setGround1(int ground1) {
-        this.ground1 = ground1;
+    public void setFirstGround(int firstGround) {
+        this.firstGround = firstGround;
     }
 
-    public void setGround2(int ground2) {
-        this.ground2 = ground2;
+    public void setSecondGround(int secondGround) {
+        this.secondGround = secondGround;
     }
 
     public void setHigth(int higth) {
@@ -19,7 +19,7 @@ public class IsoscelesTrapezoid extends State {
 
     @Override
     public double getArea() {
-        return ((ground1 + ground2) * higth) / 2;
+        return ((firstGround + secondGround) * higth) / 2;
     }
 
     @Override
@@ -28,11 +28,11 @@ public class IsoscelesTrapezoid extends State {
                 + ", area: "
                 + getArea()
                 + " sq.units"
-                + ", ground1: "
-                + ground1
+                + ", firstGround: "
+                + firstGround
                 + " units"
-                + ", ground2: "
-                + ground2
+                + ", secondGround: "
+                + secondGround
                 + ", higth: "
                 + higth
                 + ", color: "
