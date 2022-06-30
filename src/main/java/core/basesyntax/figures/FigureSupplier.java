@@ -4,23 +4,23 @@ import core.basesyntax.ColorSupplier;
 import java.util.Random;
 
 public class FigureSupplier {
+    static final int NUMBER_OF_FIGURES = 20;
+    static final int FIGURES = 5;
+    static final String DEFAULT_COLOR = "WHITE";
+    static final int DEFAULT_RADIUS = 10;
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     private int getRandomNumber() {
-        int randomFigure = 20;
-        return new Random().nextInt(randomFigure);
+        return new Random().nextInt(NUMBER_OF_FIGURES);
     }
 
     // this method should always return white circle with radius 10.
     public Figure getDefaultFigure() {
-        String colorDefaultFigure = "WHITE";
-        int radiusDefaultFigure = 10;
-        return new Circle(colorDefaultFigure, radiusDefaultFigure);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
     public Figure getRandomFigure() {
-        int numberOfFigures = 5;
-        int figure = new Random().nextInt(numberOfFigures);
+        int figure = new Random().nextInt(FIGURES);
         switch (figure) {
             case 0:
                 return getRandomSquare();
