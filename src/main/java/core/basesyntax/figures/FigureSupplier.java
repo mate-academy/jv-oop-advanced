@@ -6,19 +6,19 @@ import java.util.Random;
 public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    private int getRandomProperties() {
+    private int getRandomNumber() {
         int randomFigure = 20;
         return new Random().nextInt(randomFigure);
     }
 
     // this method should always return white circle with radius 10.
-    public Calculator getDefaultFigure() {
+    public Figure getDefaultFigure() {
         String colorDefaultFigure = "WHITE";
         int radiusDefaultFigure = 10;
         return new Circle(colorDefaultFigure, radiusDefaultFigure);
     }
 
-    public Calculator getRandomFigure() {
+    public Figure getRandomFigure() {
         int numberOfFigures = 5;
         int figure = new Random().nextInt(numberOfFigures);
         switch (figure) {
@@ -38,30 +38,30 @@ public class FigureSupplier {
 
     private Square getRandomSquare() {
         return new Square(colorSupplier.getRandomColor(),
-                getRandomProperties());
+                getRandomNumber());
     }
 
     private Rectangle getRandomRectangle() {
         return new Rectangle(colorSupplier.getRandomColor(),
-                getRandomProperties(),
-                getRandomProperties());
+                getRandomNumber(),
+                getRandomNumber());
     }
 
     private RightTriangle getRandomRightTriangle() {
         return new RightTriangle(colorSupplier.getRandomColor(),
-                getRandomProperties(),
-                getRandomProperties());
+                getRandomNumber(),
+                getRandomNumber());
     }
 
     private Circle getRandomCircle() {
         return new Circle(colorSupplier.getRandomColor(),
-                getRandomProperties());
+                getRandomNumber());
     }
 
     private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                getRandomProperties(),
-                getRandomProperties(),
-                getRandomProperties());
+                getRandomNumber(),
+                getRandomNumber(),
+                getRandomNumber());
     }
 }
