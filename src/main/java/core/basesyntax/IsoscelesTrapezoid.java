@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-
     private double sideSmall;
     private double sideBig;
     private double height;
@@ -20,14 +19,14 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String getFigureInfo() {
-        return "Figure:"
+    public void draw() {
+        System.out.println("Figure:"
                 + getType()
                 + ", area: " + getArea() + " sq.units,"
                 + "Small side / Big side : "
                 + sideSmall + " / "
                 + sideBig + " units, height "
                 + height + "units,"
-                + " color: " + getColor();
+                + " color: " + getColor());
     }
 }

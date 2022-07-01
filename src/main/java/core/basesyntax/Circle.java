@@ -19,11 +19,11 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String getFigureInfo() {
-        return "Figure:"
+    public void draw() {
+        System.out.println("Figure:"
                 + getType()
                 + ", area: " + getArea() + " sq.units,"
                 + " radius: " + radius + " units,"
-                + " color: " + getColor();
+                + " color: " + getColor());
     }
 }
