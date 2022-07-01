@@ -20,12 +20,14 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String getSizes() {
-        return " Small side / Big side : "
-                + sideSmall
-                + " / "
-                + sideBig
-                + " units, height "
-                + height + "units,";
+    public String getFigureInfo() {
+        return "Figure:"
+                + getType()
+                + ", area: " + getArea() + " sq.units,"
+                + "Small side / Big side : "
+                + sideSmall + " / "
+                + sideBig + " units, height "
+                + height + "units,"
+                + " color: " + getColor();
     }
 }

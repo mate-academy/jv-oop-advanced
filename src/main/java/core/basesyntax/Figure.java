@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Figure implements FigureInterface {
+public abstract class Figure implements FigureInterface, FigureInfoInterface {
     private Color color;
     private FigureType type;
 
@@ -30,7 +30,7 @@ public class Figure implements FigureInterface {
     }
 
     @Override //What we have to write, if each figure have method getArea as overrided?
-    public String getSizes() {
+    public String getFigureInfo() {
         return "";
     }
 }

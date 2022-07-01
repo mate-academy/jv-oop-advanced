@@ -19,8 +19,11 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String getSizes() {
-        return " radius: " + radius + " units,";
+    public String getFigureInfo() {
+        return "Figure:"
+                + getType()
+                + ", area: " + getArea() + " sq.units,"
+                + " radius: " + radius + " units,"
+                + " color: " + getColor();
     }
-
 }
