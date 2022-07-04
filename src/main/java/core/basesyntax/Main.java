@@ -10,12 +10,13 @@ public class Main {
 
     public static void main(String[] args) {
         Figure[] figures = new Figure[new Random().nextInt(10)];
+
         for (int i = 0, j = figures.length / 2; i < figures.length && j < figures.length / 2; i++, j++) {
             figures[i] = figureSupplier.getRandomFigure();
             figures[j] = figureSupplier.getDefaultFigure();
         }
-        for (Figure figure : figures) {
-            figure.draw();
+        for (int i = 0; i < ; i++) {
+            
         }
     }
 }

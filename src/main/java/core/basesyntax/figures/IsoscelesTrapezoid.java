@@ -41,22 +41,7 @@ public class IsoscelesTrapezoid extends Figure {
         return ((sideA + sideB) / 2) * height;
     }
 
-    @Override
-    public void draw() {
-        System.out.println("Figure:"
-                + getClass().getSimpleName()
-                + " , area: "
-                + getArea()
-                + " sq.units, sideA: "
-                + sideA
-                + " units,  sideB:  "
-                + sideB
-                + "  units,"
-                + " height: "
-                + getHeight()
-                + ", color: "
-                + getColor());
-    }
+
 
     @Override
     public String toString() {
@@ -69,4 +54,21 @@ public class IsoscelesTrapezoid extends Figure {
                 + height
                 + '}';
     }
-}
+
+    @Override
+    public void draw() {
+            System.out.println("Figure:"
+                    + getClass().getSimpleName()
+                    + " , area: "
+                    + getArea()
+                    + " sq.units, sideA: "
+                    + sideA
+                    + " units,  sideB:  "
+                    + sideB
+                    + "  units,"
+                    + " height: "
+                    + getHeight()
+                    + ", color: "
+                    + getColor());
+        }
+    }
