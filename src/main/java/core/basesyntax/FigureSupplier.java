@@ -3,6 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int DEFAULT_FIGURE = 4;
     private static final String DEFAULT_COLOR = Color.WHITE.name();
     private static final int DEFAULT_NUMBER = 10;
     private static final int LIMIT_NUMBER = 100;
@@ -10,7 +11,7 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int randomFigure = random.nextInt(4);
+        int randomFigure = random.nextInt(DEFAULT_FIGURE);
         switch (randomFigure) {
             case 0:
                 return new Circle(colorSupplier.getRandomColor(), getRandomInt());
