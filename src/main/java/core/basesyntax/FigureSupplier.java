@@ -6,7 +6,7 @@ public class FigureSupplier {
     private static final int FIGURES_NUMBER = 4;
     private static final int MAX_RANDOM_NUMBER = 15;
     private static final int DEFAULT_CIRCLE_RADIUS = 10;
-    private static final String  DEFAULT_CIRCLE_COLOR = Color.WHITE.name();
+    private static final String DEFAULT_CIRCLE_COLOR = Color.WHITE.name();
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
