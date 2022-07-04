@@ -4,28 +4,36 @@ public class RightTriangle extends Figure {
     private double sideA;
     private double sideB;
 
-    RightTriangle() {
-        setName("Right triangle");
-        setColor(new ColorSupplier().getRandomColor());
-        this.sideA = getRandom().nextInt(getMaxNumber());
-        this.sideB = getRandom().nextInt(getMaxNumber());
-    }
-
     RightTriangle(double sideA, double sideB, Color color) {
-        setName("Right triangle");
-        setColor(color);
+        super(color);
         this.sideA = sideA;
         this.sideB = sideB;
     }
 
+    public void setSideA(double sideA) {
+        this.sideA = sideA;
+    }
+
+    public void setSideB(double sideB) {
+        this.sideB = sideB;
+    }
+
+    public double getSideA() {
+        return sideA;
+    }
+
+    public double getSideB() {
+        return sideB;
+    }
+
     @Override
-    public double area() {
+    public double getArea() {
         return sideA * sideB / 2;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getName() + ", area: " + area()
+        System.out.println("Figure: Right triangle, area: " + getArea()
                 + " sq.units, side a: " + sideA + "units, side b: "
                 + sideB + " units, color: " + getColor());
     }
