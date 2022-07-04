@@ -3,9 +3,17 @@ package core.basesyntax.figures;
 public class Square extends Figure {
     private double side;
 
+    public Square(String color, double side) {
+        super(color);
+        this.side = side;
+    }
+
     public double getSide() {
-        side = Math.random() * 100;
         return side;
+    }
+
+    public void setSide(double side) {
+        this.side = side;
     }
 
     @Override
@@ -16,17 +24,12 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        String draw = new String();
-        draw = "Figure: square, area: "
+        System.out.println("Figure:"
+                + getClass().getSimpleName()
+                + ", area: "
                 + getArea() + " sq.units, side: "
                 + side + " units, color: "
-                + getRandomColor();
-        System.out.println(draw);
-    }
-
-    @Override
-    public String getColor() {
-        return super.getColor();
+                + getColor());
     }
 
     @Override

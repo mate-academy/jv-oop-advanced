@@ -4,19 +4,26 @@ public class Rectangle extends Figure {
     private double sideA;
     private double sideB;
 
+    public Rectangle(String color, double sideA, double sideB) {
+        super(color);
+        this.sideA = sideA;
+        this.sideB = sideB;
+    }
+
     public double getSideA() {
-        sideA = Math.random() * 100;
         return sideA;
     }
 
+    public void setSideA(double sideA) {
+        this.sideA = sideA;
+    }
+
     public double getSideB() {
-        sideB = Math.random() * 99;
         return sideB;
     }
 
-    @Override
-    public String getColor() {
-        return super.getColor();
+    public void setSideB(double sideB) {
+        this.sideB = sideB;
     }
 
     @Override
@@ -26,16 +33,16 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        String draw = new String();
-        draw = "Figure: rectangle, area: "
+        System.out.println("Figure:"
+                + getClass().getSimpleName()
+                + ", area: "
                 + getArea()
                 + " sq.units, sideA: "
                 + sideA
                 + " units,  sideB:  "
                 + sideB
                 + "  units, color: "
-                + getRandomColor();
-        System.out.println(draw);
+                + getColor());
     }
 
     @Override

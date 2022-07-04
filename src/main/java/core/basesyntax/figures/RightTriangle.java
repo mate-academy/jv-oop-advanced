@@ -1,52 +1,59 @@
 package core.basesyntax.figures;
 
 public class RightTriangle extends Figure {
-    private double firstLeg;
-    private double secondLeg;
+    private double baseSide;
+    private double height;
 
-    public double getFirstLeg() {
-        firstLeg = Math.random() * 100;
-        return firstLeg;
+    public RightTriangle(String color, double baseSide, double height) {
+        super(color);
+        this.baseSide = baseSide;
+        this.height = height;
     }
 
-    public double getSecondLeg() {
-        secondLeg = Math.random() * 100;
-        return secondLeg;
+    public double getBaseSide() {
+        return baseSide;
     }
 
-    @Override
-    public String getColor() {
-        return super.getColor();
+    public void setBaseSide(double baseSide) {
+        this.baseSide = baseSide;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
     }
 
     @Override
     public double getArea() {
-        return 0.5 * firstLeg * secondLeg;
+        return 0.5 * baseSide * height;
     }
 
     @Override
     public void draw() {
-        String draw = new String();
-        draw = "Figure: right triangle, area: "
+        System.out.println("Figure:"
+                + getClass().getSimpleName()
+                + ", area: "
                 + getArea()
-                + " sq.units, firstLeg: "
-                + firstLeg
+                + " sq.units, baseSide: "
+                + baseSide
                 + " units,"
-                + " secondLeg: "
-                + secondLeg
+                + " height"
+                + height
                 + " units, "
                 + " color: "
-                + getRandomColor();
-        System.out.println(draw);
+                + getColor());
     }
 
     @Override
     public String toString() {
         return "RightTriangle{"
-                + "firstLeg="
-                + firstLeg
-                + ", secondLeg="
-                + secondLeg
+                + "baseSide="
+                + baseSide
+                + ", height="
+                + height
                 + '}';
     }
 }

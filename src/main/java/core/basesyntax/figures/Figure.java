@@ -1,28 +1,20 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.ColorSupplier;
+import core.basesyntax.service.supplier.AreaCalculator;
+import core.basesyntax.service.supplier.Drawable;
 
-public abstract class Figure implements ColorSupplier {
+public abstract class Figure implements Drawable, AreaCalculator {
     private String color;
 
+    public Figure(String color) {
+        this.color = color;
+    }
+
     public String getColor() {
-        return getRandomColor();
+        return color;
     }
 
     public void setColor(String color) {
         this.color = color;
-    }
-
-    public double getArea() {return  getArea();}
-
-    public void draw() {}
-
-    @Override
-    public String toString() {
-        return "Figure{"
-                + "color='"
-                + color
-                + '\''
-                + '}';
     }
 }
