@@ -14,28 +14,48 @@ public class FigureSupplier {
         int randomFigure = random.nextInt(DEFAULT_FIGURE);
         switch (randomFigure) {
             case 0:
-                return new Circle(colorSupplier.getRandomColor(), getRandomInt());
+                return getRandomCircle();
             case 1:
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        getRandomInt(),
-                        getRandomInt(),
-                        getRandomInt());
+                return getRandomIsoscelesTrapezoid();
             case 2:
-                return new RightTriangle(colorSupplier.getRandomColor(),
-                        getRandomInt(),
-                        getRandomInt());
+                return getRandomRightTriangle();
             case 3:
-                return new Rectangle(colorSupplier.getRandomColor(),
-                        getRandomInt(),
-                        getRandomInt());
+                return getRandomRectangle();
             case 4:
             default:
-                return new Square(colorSupplier.getRandomColor(), getRandomInt());
+                return getRandomSquare();
         }
     }
 
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_NUMBER);
+    }
+
+    private Circle getRandomCircle() {
+        return new Circle(colorSupplier.getRandomColor(), getRandomInt());
+    }
+
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                getRandomInt(),
+                getRandomInt(),
+                getRandomInt());
+    }
+
+    private RightTriangle getRandomRightTriangle() {
+        return new RightTriangle(colorSupplier.getRandomColor(),
+                getRandomInt(),
+                getRandomInt());
+    }
+
+    private Rectangle getRandomRectangle() {
+        return new Rectangle(colorSupplier.getRandomColor(),
+                getRandomInt(),
+                getRandomInt());
+    }
+
+    private Square getRandomSquare() {
+        return new Square(colorSupplier.getRandomColor(), getRandomInt());
     }
 
     private int getRandomInt() {
