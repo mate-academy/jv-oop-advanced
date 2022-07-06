@@ -1,8 +1,10 @@
 package core.basesyntax;
 
 public class Main {
+    private static final int FIGURES_QUANTITY = 8;
+
     public static void main(String[] args) {
-        final int FIGURES_QUANTITY = 8;
+
         Figure[] figure = new Figure[FIGURES_QUANTITY];
 
         for (int i = 0; i < FIGURES_QUANTITY; i++) {
