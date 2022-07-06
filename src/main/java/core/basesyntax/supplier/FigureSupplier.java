@@ -13,8 +13,8 @@ public class FigureSupplier {
     private static final int FIGURE_NUMBERS = 5;
     private static final int DEFAULT_RADIUS = 10;
     private static final String DEFAULT_COLOR = Color.WHITE.name();
-    private ColorSupplier colorSupplier;
-    private Random random;
+    private ColorSupplier colorSupplier = new ColorSupplier();
+    private Random random = new Random();
 
     public Figure getRandomFigure() {
         switch (random.nextInt(FIGURE_NUMBERS)) {
