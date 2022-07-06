@@ -15,10 +15,8 @@ public class Rectangle extends Figure {
         return shortSide * longSide;
     }
 
-    @Override
     public void drawInfo() {
-        super.drawInfo();
-        System.out.print("rectangle" + ", area: ");
+        System.out.print("Figure: rectangle, area: ");
         System.out.printf("%.1f", getArea());
         System.out.println(" sq.units, shortSide: " + shortSide
                 + " units, longSide: " + longSide + " units, color: " + getColor());

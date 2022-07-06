@@ -15,10 +15,8 @@ public class RightTriangle extends Figure {
         return 0.5 * firstLeg * secondLeg;
     }
 
-    @Override
     public void drawInfo() {
-        super.drawInfo();
-        System.out.print("right triangle" + ", area: ");
+        System.out.print("Figure: right triangle, area: ");
         System.out.printf("%.1f", getArea());
         System.out.println(" sq.units, firstLeg: " + firstLeg
                 + " units, secondLeg: " + secondLeg + " units, color: " + getColor());

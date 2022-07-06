@@ -13,10 +13,8 @@ public class Square extends Figure {
         return side * side;
     }
 
-    @Override
     public void drawInfo() {
-        super.drawInfo();
-        System.out.print("square" + ", area: ");
+        System.out.print("Figure: square, area: ");
         System.out.printf("%.1f", getArea());
         System.out.println(" sq.units, side: " + side + " units, color: " + getColor());
     }

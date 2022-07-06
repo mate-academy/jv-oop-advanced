@@ -13,10 +13,8 @@ public class Circle extends Figure {
         return Math.PI * radius * radius;
     }
 
-    @Override
     public void drawInfo() {
-        super.drawInfo();
-        System.out.print("circle" + ", area: ");
+        System.out.print("Figure: circle, area: ");
         System.out.printf("%.1f", getArea());
         System.out.println(" sq.units, radius: " + radius + " units, color: " + getColor());
     }
