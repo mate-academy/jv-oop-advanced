@@ -1,6 +1,8 @@
 package core.basesyntax;
 
-public class Circle extends Figure{
+import static core.basesyntax.ColorSupplier.getRandomColor;
+
+public class Circle extends Figure {
     private int radius;
 
     public int getRadius() {
@@ -18,6 +20,8 @@ public class Circle extends Figure{
 
     @Override
     public String toDraw() {
-        return null;
+        return "Figure: circle, area:" + GetArea()
+                + " sq.units , radius: " + getRadius() +
+                "units, color:" + getRandomColor();
     }
 }

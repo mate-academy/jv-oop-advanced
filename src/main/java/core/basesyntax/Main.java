@@ -4,7 +4,7 @@ public class Main {
     private static final int ARR_SIZE = 6;
 
     public static void main(String[] args) {
-        //Figure[] figure = ;
+        Figure[] figures = new Figure[ARR_SIZE];
 
 
     }

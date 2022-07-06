@@ -1,6 +1,8 @@
 package core.basesyntax;
 
-public class Square extends Figure{
+import static core.basesyntax.ColorSupplier.getRandomColor;
+
+public class Square extends Figure {
     private int side;
 
     public int getSide() {
@@ -18,6 +20,8 @@ public class Square extends Figure{
 
     @Override
     public String toDraw() {
-        return null;
+        return "Figure: square, area:" + GetArea()
+                + " sq.units , side: " + getSide() +
+                "units, color:" + getRandomColor();
     }
 }
