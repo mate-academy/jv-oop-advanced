@@ -6,12 +6,12 @@ public class FigureSupplier {
     private static final int MAX_NUMBER = 100;
     private static final int DEFAULT_CIRCLE_RADIUS = 10;
     private static final Color DEFAULT_CIRCLE_COLOR = Color.WHITE;
-    private static final int NUMBER = 5;
+    private static final int FIGURES_NUMBER = 5;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        switch (random.nextInt(NUMBER)) {
+        switch (random.nextInt(FIGURES_NUMBER)) {
             case 0:
                 return new Square(random.nextInt(MAX_NUMBER), colorSupplier.getRandomColor());
             case 1:
