@@ -4,8 +4,8 @@ public class Application {
     private static final int LIMIT = 10;
 
     public static void main(String[] args) {
-        FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figures = new Figure[LIMIT];
+        FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < LIMIT; i++) {
             if (i < LIMIT / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
@@ -18,3 +18,4 @@ public class Application {
         }
     }
 }
+

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements FigureInfo {
+public class IsoscelesTrapezoid extends Figure {
     private int leg;
     private int base;
     private int top;

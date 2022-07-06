@@ -25,7 +25,7 @@ public class Figure implements FigureInfo {
         return 0;
     }
 
-    @Override
     public void draw() {
+
     }
 }
