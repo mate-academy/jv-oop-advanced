@@ -51,6 +51,9 @@ public class FigureSupplier {
                 isoscelesTrapezoid.setColor(colorSupplier.getRandomColor());
                 figure = isoscelesTrapezoid;
                 break;
+            default:
+                System.out.println("Not a valid argument");
+                break;
         }
         return figure;
     }
