@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Main {
     private static final int FIGURES_NUMBER = 6;
 

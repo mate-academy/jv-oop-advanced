@@ -3,8 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final Random random = new Random();
     private static final int SHAPES = 5;
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
         switch (SHAPES) {
@@ -18,8 +18,9 @@ public class FigureSupplier {
                 return getRandomIsoscelesTrapezoid();
             case 5:
                 return getRandomRectangle();
+            default:
+                return null;
         }
-        return null;
     }
 
     public Figure getRandomRightTriangle() {
