@@ -2,7 +2,6 @@ package core.basesyntax;
 
 public class Square extends Figure {
     private int side;
-    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public int getSide() {
         return side;
@@ -10,6 +9,14 @@ public class Square extends Figure {
 
     public void setSide(int side) {
         this.side = side;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getColor() {
+        return color;
     }
 
     @Override
@@ -21,6 +28,6 @@ public class Square extends Figure {
     public String toDraw() {
         return "Figure: square, area: " + getArea()
                 + " sq.units, side: " + getSide()
-                + " units, color: " + colorSupplier.getRandomColor();
+                + " units, color: " + getColor();
     }
 }

@@ -3,7 +3,6 @@ package core.basesyntax;
 public class Rectangle extends Figure {
     private int height;
     private int width;
-    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public int getHeight() {
         return height;
@@ -21,6 +20,14 @@ public class Rectangle extends Figure {
         this.width = width;
     }
 
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
     @Override
     public double getArea() {
         return height * width;
@@ -31,6 +38,6 @@ public class Rectangle extends Figure {
         return "Figure: rectangle, area: " + getArea()
                 + " units, width: " + getWidth()
                 + " units, height: " + getHeight()
-                + " units, color: " + colorSupplier.getRandomColor();
+                + " units, color: " + getColor();
     }
 }

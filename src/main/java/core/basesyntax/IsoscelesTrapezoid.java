@@ -4,7 +4,6 @@ public class IsoscelesTrapezoid extends Figure {
     private int lowerBase;
     private int upperBase;
     private int height;
-    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public int getLowerBase() {
         return lowerBase;
@@ -30,6 +29,14 @@ public class IsoscelesTrapezoid extends Figure {
         this.height = height;
     }
 
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
     @Override
     public double getArea() {
         return ((lowerBase + upperBase) / 2) * height;
@@ -41,7 +48,7 @@ public class IsoscelesTrapezoid extends Figure {
                 + " sq.units , lowerBase: " + getLowerBase()
                 + " units, upperBase: " + getUpperBase()
                 + " units, height: " + getHeight()
-                + " units, color: " + colorSupplier.getRandomColor();
+                + " units, color: " + getColor();
     }
 }
 

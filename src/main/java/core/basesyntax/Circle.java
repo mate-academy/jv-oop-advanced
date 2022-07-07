@@ -3,14 +3,20 @@ package core.basesyntax;
 public class Circle extends Figure {
     private int radius;
 
-    private ColorSupplier colorSupplier = new ColorSupplier();
-
     public int getRadius() {
         return radius;
     }
 
     public void setRadius(int radius) {
         this.radius = radius;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getColor() {
+        return color;
     }
 
     @Override
@@ -22,6 +28,6 @@ public class Circle extends Figure {
     public String toDraw() {
         return "Figure: circle, area: " + getArea()
                 + " sq.units, radius: " + getRadius()
-                + " units, color: " + colorSupplier.getRandomColor();
+                + " units, color: " + getColor();
     }
 }
