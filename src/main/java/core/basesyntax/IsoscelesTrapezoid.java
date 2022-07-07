@@ -6,13 +6,13 @@ public class IsoscelesTrapezoid extends Figure {
     private int top;
 
     @Override
-    public double area() {
+    public double getArea() {
         return (base + top) * Math.sqrt(Math.pow(leg, 2) - (Math.pow(base - top, 2) / 4));
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getName() + " area: " + area() + " sq.units, leg: "
+        System.out.println("Figure: " + getClass().getSimpleName() + " area: " + getArea() + " sq.units, leg: "
                 + leg + " units, base: " + base + " units, top: " + top + " units, color: "
                 + getColor());
     }
