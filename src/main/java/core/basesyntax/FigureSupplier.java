@@ -7,36 +7,36 @@ public class FigureSupplier {
     private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
     private static final int FIGURES_NUMBER = 5;
     private static final int MAX_RANDOM_NUMBER = 100;
-    private static Random random = new Random();
-    private static ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figure getRandomCircle() {
+    private final Figure getRandomCircle() {
         return new Circle(
                 colorSupplier.getRandomColor(),
                 random.nextInt(MAX_RANDOM_NUMBER));
     }
 
-    public Figure getRandomSquare() {
+    private final Figure getRandomSquare() {
         return new Square(
                 colorSupplier.getRandomColor(),
                 random.nextInt(MAX_RANDOM_NUMBER));
     }
 
-    public Figure getRandomRectangle() {
+    private final Figure getRandomRectangle() {
         return new Rectangle(
                 colorSupplier.getRandomColor(),
                 random.nextInt(MAX_RANDOM_NUMBER),
                 random.nextInt(MAX_RANDOM_NUMBER));
     }
 
-    public Figure getRandomRightTriangle() {
+    private final Figure getRandomRightTriangle() {
         return new RightTriangle(
                 colorSupplier.getRandomColor(),
                 random.nextInt(MAX_RANDOM_NUMBER),
                 random.nextInt(MAX_RANDOM_NUMBER));
     }
 
-    public Figure getRandomTrapezoid() {
+    private final Figure getRandomTrapezoid() {
         return new IsoscelesTrapezoid(
                 colorSupplier.getRandomColor(),
                 random.nextInt(MAX_RANDOM_NUMBER),
@@ -44,7 +44,7 @@ public class FigureSupplier {
                 random.nextInt(MAX_RANDOM_NUMBER));
     }
 
-    public Figure getRandomFigure() {
+    public final Figure getRandomFigure() {
         switch (random.nextInt(FIGURES_NUMBER)) {
             case 0:
                 return getRandomCircle();
@@ -60,7 +60,7 @@ public class FigureSupplier {
         }
     }
 
-    public Figure getDefaultFigure() {
+    public final Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
