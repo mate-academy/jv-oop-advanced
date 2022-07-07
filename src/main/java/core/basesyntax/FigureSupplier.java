@@ -3,70 +3,72 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int LIMIT = 100;
-    private static final int RADIUS = 10;
-    private static final String WHITE_COLOR = "WHITE";
+    private static final int MAX_RANDOM_NUMBER = 100;
+    private static final int DEFAULT_RADIUS = 10;
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
+    Random random = new Random();
+    ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figure getRandomFigure(Random random, ColorSupplier colorSupplier) {
+    public Figure getRandomFigure() {
         FigureType figureType = FigureType.values()[random
                 .nextInt(FigureType.values().length)];
         switch (figureType) {
             case CIRCLE:
-                return getRandomCircle(random, colorSupplier);
+                return getRandomCircle();
             case SQUARE:
-                return getRandomSquare(random, colorSupplier);
+                return getRandomSquare();
             case RECTANGLE:
-                return getRandomRectangle(random, colorSupplier);
+                return getRandomRectangle();
             case RIGHT_TRIANGLE:
-                return getRandomRightTriangle(random, colorSupplier);
+                return getRandomRightTriangle();
             case ISOSCELES_TRAPEZOID:
             default:
-                return getRandomIsoscelesTrapezoid(random, colorSupplier);
+                return getRandomIsoscelesTrapezoid();
         }
     }
 
-    public Figure getDefaultFigure() {
+    Figure getDefaultFigure() {
         Circle circle = new Circle();
-        circle.setRadius(RADIUS);
-        circle.setColor(WHITE_COLOR);
+        circle.setRadius(DEFAULT_RADIUS);
+        circle.setColor(DEFAULT_COLOR);
         return circle;
     }
 
-    public Figure getRandomCircle(Random random, ColorSupplier colorSupplier) {
+    Figure getRandomCircle() {
         Circle circle = new Circle();
-        circle.setRadius(random.nextInt(LIMIT));
+        circle.setRadius(random.nextInt(MAX_RANDOM_NUMBER));
         circle.setColor(colorSupplier.getRandomColor());
         return circle;
     }
 
-    public Figure getRandomSquare(Random random, ColorSupplier colorSupplier) {
+    Figure getRandomSquare() {
         Square square = new Square();
-        square.setSide(random.nextInt(LIMIT));
+        square.setSide(random.nextInt(MAX_RANDOM_NUMBER));
         square.setColor(colorSupplier.getRandomColor());
         return square;
     }
 
-    public Figure getRandomRectangle(Random random, ColorSupplier colorSupplier) {
+    Figure getRandomRectangle() {
         Rectangle rectangle = new Rectangle();
-        rectangle.setSideOne(random.nextInt(LIMIT));
-        rectangle.setSideTwo(random.nextInt(LIMIT));
+        rectangle.setSideOne(random.nextInt(MAX_RANDOM_NUMBER));
+        rectangle.setSideTwo(random.nextInt(MAX_RANDOM_NUMBER));
         rectangle.setColor(colorSupplier.getRandomColor());
         return rectangle;
     }
 
-    public Figure getRandomRightTriangle(Random random, ColorSupplier colorSupplier) {
+    Figure getRandomRightTriangle() {
         RightTriangle rightTriangle = new RightTriangle();
-        rightTriangle.setFirstLeg(random.nextInt(LIMIT));
-        rightTriangle.setSecondLeg(random.nextInt(LIMIT));
+        rightTriangle.setFirstLeg(random.nextInt(MAX_RANDOM_NUMBER));
+        rightTriangle.setSecondLeg(random.nextInt(MAX_RANDOM_NUMBER));
         rightTriangle.setColor(colorSupplier.getRandomColor());
         return rightTriangle;
     }
 
-    public Figure getRandomIsoscelesTrapezoid(Random random, ColorSupplier colorSupplier) {
+    Figure getRandomIsoscelesTrapezoid() {
         IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
-        isoscelesTrapezoid.setLeg(random.nextInt(LIMIT));
-        isoscelesTrapezoid.setBase(random.nextInt(LIMIT));
-        isoscelesTrapezoid.setTop(random.nextInt(LIMIT));
+        isoscelesTrapezoid.setLeg(random.nextInt(MAX_RANDOM_NUMBER));
+        isoscelesTrapezoid.setBase(random.nextInt(MAX_RANDOM_NUMBER));
+        isoscelesTrapezoid.setTop(random.nextInt(MAX_RANDOM_NUMBER));
         isoscelesTrapezoid.setColor(colorSupplier.getRandomColor());
         return isoscelesTrapezoid;
     }
