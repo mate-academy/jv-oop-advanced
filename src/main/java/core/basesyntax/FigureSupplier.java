@@ -6,8 +6,8 @@ public class FigureSupplier {
     private static final int MAX_RANDOM_NUMBER = 100;
     private static final int DEFAULT_RADIUS = 10;
     private static final String DEFAULT_COLOR = Color.WHITE.name();
-    Random random = new Random();
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         FigureType figureType = FigureType.values()[random
