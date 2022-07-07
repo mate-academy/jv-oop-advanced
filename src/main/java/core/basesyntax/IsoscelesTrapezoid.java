@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import static core.basesyntax.ColorSupplier.getRandomColor;
 
-public class IsoscelesTrapezoid extends Figure implements AreaCalculator, Drawable {
+public class IsoscelesTrapezoid extends Figure {
     private int lowerBase;
     private int upperBase;
     private int height;
@@ -32,19 +32,17 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator, Drawab
     }
 
     @Override
-    public int GetArea() {
+    public int getArea() {
         return ((lowerBase + upperBase) / 2) * height;
     }
 
     @Override
     public String toDraw() {
-        return "Figure: isoscelesTrapezoid, area:" + GetArea()
-                + " sq.units , lowerBase: " + getLowerBase() +
-                "units , upperBase: " + getUpperBase() +
-                "units , height: " + getHeight() +
-                "units, color:" + getRandomColor();
+        return "Figure: isoscelesTrapezoid, area: " + getArea()
+                + " sq.units , lowerBase: " + getLowerBase()
+                + " units, upperBase: " + getUpperBase()
+                + " units, height: " + getHeight()
+                + " units, color: " + getRandomColor();
     }
-
-
 }
 

@@ -23,15 +23,15 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public int GetArea() {
+    public int getArea() {
         return height * width;
     }
 
     @Override
     public String toDraw() {
-        return "Figure: rectangle, area:" + GetArea()+
-                "units , width: " + getWidth() +
-                "units , height: " + getHeight() +
-                "units, color:" + getRandomColor();
+        return "Figure: rectangle, area: " + getArea()
+                + " units, width: " + getWidth()
+                + " units, height: " + getHeight()
+                + " units, color: " + getRandomColor();
     }
 }

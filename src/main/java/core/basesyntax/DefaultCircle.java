@@ -1,16 +1,11 @@
 package core.basesyntax;
 
-import static core.basesyntax.ColorSupplier.getRandomColor;
-
-public class Circle extends Figure {
-    private int radius;
+public class DefaultCircle extends Figure {
+    private final int radius = 10;
+    private final String color = "WHITE";
 
     public int getRadius() {
         return radius;
-    }
-
-    public void setRadius(int radius) {
-        this.radius = radius;
     }
 
     @Override
@@ -22,6 +17,6 @@ public class Circle extends Figure {
     public String toDraw() {
         return "Figure: circle, area: " + getArea()
                 + " sq.units, radius: " + getRadius()
-                + " units, color: " + getRandomColor();
+                + " units, color: " + color;
     }
 }

@@ -23,16 +23,15 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public int GetArea() {
+    public int getArea() {
         return (firstLeg / 2) * secondLeg;
     }
 
     @Override
     public String toDraw() {
-        return "Figure: rigthTriangle, area:" + GetArea()
-                + " sq.units , firstLeg: " + getFirstLeg() +
-                "units , secondLeg: " + getSecondLeg() +
-                "units, color:" + getRandomColor();
-
+        return "Figure: rigthTriangle, area: " + getArea()
+                + " sq.units, firstLeg: " + getFirstLeg()
+                + " units, secondLeg: " + getSecondLeg()
+                + " units, color: " + getRandomColor();
     }
 }
