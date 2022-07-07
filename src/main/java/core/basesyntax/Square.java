@@ -1,9 +1,8 @@
 package core.basesyntax;
 
-import static core.basesyntax.ColorSupplier.getRandomColor;
-
 public class Square extends Figure {
     private int side;
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public int getSide() {
         return side;
@@ -14,7 +13,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public int getArea() {
+    public double getArea() {
         return side * side;
     }
 
@@ -22,6 +21,6 @@ public class Square extends Figure {
     public String toDraw() {
         return "Figure: square, area: " + getArea()
                 + " sq.units, side: " + getSide()
-                + " units, color: " + getRandomColor();
+                + " units, color: " + colorSupplier.getRandomColor();
     }
 }

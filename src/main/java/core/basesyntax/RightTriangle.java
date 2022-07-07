@@ -1,10 +1,9 @@
 package core.basesyntax;
 
-import static core.basesyntax.ColorSupplier.getRandomColor;
-
 public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public int getFirstLeg() {
         return firstLeg;
@@ -23,7 +22,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public int getArea() {
+    public double getArea() {
         return (firstLeg / 2) * secondLeg;
     }
 
@@ -32,6 +31,6 @@ public class RightTriangle extends Figure {
         return "Figure: rigthTriangle, area: " + getArea()
                 + " sq.units, firstLeg: " + getFirstLeg()
                 + " units, secondLeg: " + getSecondLeg()
-                + " units, color: " + getRandomColor();
+                + " units, color: " + colorSupplier.getRandomColor();
     }
 }

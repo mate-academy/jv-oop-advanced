@@ -1,11 +1,10 @@
 package core.basesyntax;
 
-import static core.basesyntax.ColorSupplier.getRandomColor;
-
 public class IsoscelesTrapezoid extends Figure {
     private int lowerBase;
     private int upperBase;
     private int height;
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public int getLowerBase() {
         return lowerBase;
@@ -32,7 +31,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public int getArea() {
+    public double getArea() {
         return ((lowerBase + upperBase) / 2) * height;
     }
 
@@ -42,7 +41,7 @@ public class IsoscelesTrapezoid extends Figure {
                 + " sq.units , lowerBase: " + getLowerBase()
                 + " units, upperBase: " + getUpperBase()
                 + " units, height: " + getHeight()
-                + " units, color: " + getRandomColor();
+                + " units, color: " + colorSupplier.getRandomColor();
     }
 }
 

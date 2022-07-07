@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-import static core.basesyntax.ColorSupplier.getRandomColor;
-
 public class Circle extends Figure {
     private int radius;
+
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public int getRadius() {
         return radius;
@@ -14,7 +14,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public int getArea() {
+    public double getArea() {
         return (int) (Math.PI * radius * radius);
     }
 
@@ -22,6 +22,6 @@ public class Circle extends Figure {
     public String toDraw() {
         return "Figure: circle, area: " + getArea()
                 + " sq.units, radius: " + getRadius()
-                + " units, color: " + getRandomColor();
+                + " units, color: " + colorSupplier.getRandomColor();
     }
 }

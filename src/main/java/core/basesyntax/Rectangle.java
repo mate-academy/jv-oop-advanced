@@ -1,10 +1,9 @@
 package core.basesyntax;
 
-import static core.basesyntax.ColorSupplier.getRandomColor;
-
 public class Rectangle extends Figure {
     private int height;
     private int width;
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public int getHeight() {
         return height;
@@ -23,7 +22,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public int getArea() {
+    public double getArea() {
         return height * width;
     }
 
@@ -32,6 +31,6 @@ public class Rectangle extends Figure {
         return "Figure: rectangle, area: " + getArea()
                 + " units, width: " + getWidth()
                 + " units, height: " + getHeight()
-                + " units, color: " + getRandomColor();
+                + " units, color: " + colorSupplier.getRandomColor();
     }
 }

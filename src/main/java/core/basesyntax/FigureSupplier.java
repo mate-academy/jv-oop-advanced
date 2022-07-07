@@ -4,39 +4,56 @@ import java.util.Random;
 
 public class FigureSupplier {
     private final Random random = new Random();
-    private final Circle circle = new Circle();
-    private final Rectangle rectangle = new Rectangle();
-    private final Square square = new Square();
-    private final IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
-    private final RightTriangle rightTriangle = new RightTriangle();
+    private static final int SHAPES = 5;
 
     public Figure getRandomFigure() {
-        int index = random.nextInt(4);
-        if (index == 0) {
-            circle.setRadius(random.nextInt(10));
-            return circle;
-        }
-        if (index == 1) {
-            rectangle.setWidth(random.nextInt(10));
-            rectangle.setHeight(random.nextInt(10));
-            return rectangle;
-        }
-        if (index == 2) {
-            square.setSide(random.nextInt(10));
-            return square;
-        }
-        if (index == 3) {
-            isoscelesTrapezoid.setHeight(random.nextInt(10));
-            isoscelesTrapezoid.setLowerBase(random.nextInt(20));
-            isoscelesTrapezoid.setUpperBase(random.nextInt(10));
-            return isoscelesTrapezoid;
-        }
-        if (index == 4) {
-            rightTriangle.setFirstLeg(random.nextInt(10));
-            rightTriangle.setSecondLeg(random.nextInt(10));
-            return rightTriangle;
+        switch (SHAPES) {
+            case 1:
+                return getRandomRightTriangle();
+            case 2:
+                return getRandomCircle();
+            case 3:
+                return gerRandomSquare();
+            case 4:
+                return getRandomIsoscelesTrapezoid();
+            case 5:
+                return getRandomRectangle();
         }
         return null;
+    }
+
+    public Figure getRandomRightTriangle() {
+        RightTriangle rightTriangle = new RightTriangle();
+        rightTriangle.setFirstLeg(random.nextInt(10));
+        rightTriangle.setSecondLeg(random.nextInt(10));
+        return rightTriangle;
+    }
+
+    public Figure getRandomCircle() {
+        Circle circle = new Circle();
+        circle.setRadius(random.nextInt(10));
+        return circle;
+    }
+
+    public Figure gerRandomSquare() {
+        Square square = new Square();
+        square.setSide(random.nextInt(10));
+        return square;
+    }
+
+    public Figure getRandomIsoscelesTrapezoid() {
+        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
+        isoscelesTrapezoid.setHeight(random.nextInt(10));
+        isoscelesTrapezoid.setLowerBase(random.nextInt(20));
+        isoscelesTrapezoid.setUpperBase(random.nextInt(10));
+        return isoscelesTrapezoid;
+    }
+
+    public Figure getRandomRectangle() {
+        Rectangle rectangle = new Rectangle();
+        rectangle.setWidth(random.nextInt(10));
+        rectangle.setHeight(random.nextInt(10));
+        return rectangle;
     }
 
     public Figure getDefaultFigure() {
