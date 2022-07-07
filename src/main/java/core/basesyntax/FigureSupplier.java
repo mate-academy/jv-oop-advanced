@@ -27,28 +27,28 @@ public class FigureSupplier {
         }
     }
 
-    Figure getDefaultFigure() {
+    public Figure getDefaultFigure() {
         Circle circle = new Circle();
         circle.setRadius(DEFAULT_RADIUS);
         circle.setColor(DEFAULT_COLOR);
         return circle;
     }
 
-    Figure getRandomCircle() {
+    private Figure getRandomCircle() {
         Circle circle = new Circle();
         circle.setRadius(random.nextInt(MAX_RANDOM_NUMBER));
         circle.setColor(colorSupplier.getRandomColor());
         return circle;
     }
 
-    Figure getRandomSquare() {
+    private Figure getRandomSquare() {
         Square square = new Square();
         square.setSide(random.nextInt(MAX_RANDOM_NUMBER));
         square.setColor(colorSupplier.getRandomColor());
         return square;
     }
 
-    Figure getRandomRectangle() {
+    private Figure getRandomRectangle() {
         Rectangle rectangle = new Rectangle();
         rectangle.setSideOne(random.nextInt(MAX_RANDOM_NUMBER));
         rectangle.setSideTwo(random.nextInt(MAX_RANDOM_NUMBER));
@@ -56,7 +56,7 @@ public class FigureSupplier {
         return rectangle;
     }
 
-    Figure getRandomRightTriangle() {
+    private Figure getRandomRightTriangle() {
         RightTriangle rightTriangle = new RightTriangle();
         rightTriangle.setFirstLeg(random.nextInt(MAX_RANDOM_NUMBER));
         rightTriangle.setSecondLeg(random.nextInt(MAX_RANDOM_NUMBER));
@@ -64,7 +64,7 @@ public class FigureSupplier {
         return rightTriangle;
     }
 
-    Figure getRandomIsoscelesTrapezoid() {
+    private Figure getRandomIsoscelesTrapezoid() {
         IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
         isoscelesTrapezoid.setLeg(random.nextInt(MAX_RANDOM_NUMBER));
         isoscelesTrapezoid.setBase(random.nextInt(MAX_RANDOM_NUMBER));
