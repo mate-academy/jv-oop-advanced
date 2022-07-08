@@ -30,7 +30,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public double getArea() {
-        return (firstLeg/2.0) * secondLeg;
+        return (firstLeg / 2.0) * secondLeg;
     }
 
     @Override
