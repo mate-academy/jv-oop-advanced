@@ -65,10 +65,10 @@ public class FigureSupplier {
         return rectangle;
     }
 
-    protected Figure getDefaultFigure() {
+    public Figure getDefaultFigure() {
         Circle circle = new Circle();
         circle.setRadius(DEFAULT_CIRCLE_RADIUS);
-        circle.setColor(String.valueOf(Color.WHITE));
+        circle.setColor(Color.WHITE.name());
         return circle;
     }
 }
