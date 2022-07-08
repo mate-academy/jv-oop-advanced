@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int SHAPES = 5;
+    private static final int SHAPES = 6;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -20,7 +20,7 @@ public class FigureSupplier {
             case 5:
                 return getRandomRectangle();
             default:
-                return null;
+                return getRandomFigure();
         }
     }
 
@@ -28,21 +28,24 @@ public class FigureSupplier {
         RightTriangle rightTriangle = new RightTriangle();
         rightTriangle.setFirstLeg(random.nextInt(10));
         rightTriangle.setSecondLeg(random.nextInt(10));
-        rightTriangle.setColor(String.valueOf(Color.valueOf(colorSupplier.getRandomColor().toString())));
+        rightTriangle.setColor(String.valueOf(Color.valueOf(
+                colorSupplier.getRandomColor().toString())));
         return rightTriangle;
     }
 
     public Figure getRandomCircle() {
         Circle circle = new Circle();
         circle.setRadius(random.nextInt(10));
-        circle.setColor(String.valueOf(Color.valueOf(colorSupplier.getRandomColor().toString())));
+        circle.setColor(String.valueOf(Color.valueOf(
+                colorSupplier.getRandomColor().toString())));
         return circle;
     }
 
     public Figure gerRandomSquare() {
         Square square = new Square();
         square.setSide(random.nextInt(10));
-        square.setColor(String.valueOf(Color.valueOf(colorSupplier.getRandomColor().toString())));
+        square.setColor(String.valueOf(Color.valueOf(
+                colorSupplier.getRandomColor().toString())));
         return square;
     }
 
@@ -51,7 +54,8 @@ public class FigureSupplier {
         isoscelesTrapezoid.setHeight(random.nextInt(10));
         isoscelesTrapezoid.setLowerBase(random.nextInt(20));
         isoscelesTrapezoid.setUpperBase(random.nextInt(10));
-        isoscelesTrapezoid.setColor(String.valueOf(Color.valueOf(colorSupplier.getRandomColor().toString())));
+        isoscelesTrapezoid.setColor(String.valueOf(Color.valueOf(
+                colorSupplier.getRandomColor().toString())));
         return isoscelesTrapezoid;
     }
 
@@ -59,7 +63,8 @@ public class FigureSupplier {
         Rectangle rectangle = new Rectangle();
         rectangle.setWidth(random.nextInt(10));
         rectangle.setHeight(random.nextInt(10));
-        rectangle.setColor(String.valueOf(Color.valueOf(colorSupplier.getRandomColor().toString())));
+        rectangle.setColor(String.valueOf(Color.valueOf(
+                colorSupplier.getRandomColor().toString())));
         return rectangle;
     }
 

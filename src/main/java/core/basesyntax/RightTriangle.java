@@ -30,12 +30,12 @@ public class RightTriangle extends Figure {
 
     @Override
     public double getArea() {
-        return (firstLeg / 2) * secondLeg;
+        return (firstLeg/2.0) * secondLeg;
     }
 
     @Override
     public String toDraw() {
-        return "Figure: rigthTriangle, area: " + getArea()
+        return "Figure: rightTriangle, area: " + getArea()
                 + " sq.units, firstLeg: " + getFirstLeg()
                 + " units, secondLeg: " + getSecondLeg()
                 + " units, color: " + getColor();
