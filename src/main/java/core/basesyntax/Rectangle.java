@@ -20,21 +20,13 @@ public class Rectangle extends Figure {
         this.width = width;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
     @Override
     public double getArea() {
         return height * width;
     }
 
     @Override
-    public String toDraw() {
+    public String draw() {
         return "Figure: rectangle, area: " + getArea()
                 + " units, width: " + getWidth()
                 + " units, height: " + getHeight()

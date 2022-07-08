@@ -29,21 +29,13 @@ public class IsoscelesTrapezoid extends Figure {
         this.height = height;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
     @Override
     public double getArea() {
         return ((lowerBase + upperBase) / 2) * height;
     }
 
     @Override
-    public String toDraw() {
+    public String draw() {
         return "Figure: isoscelesTrapezoid, area: " + getArea()
                 + " sq.units , lowerBase: " + getLowerBase()
                 + " units, upperBase: " + getUpperBase()

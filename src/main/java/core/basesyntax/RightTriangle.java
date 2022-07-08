@@ -20,21 +20,13 @@ public class RightTriangle extends Figure {
         this.secondLeg = secondLeg;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
     @Override
     public double getArea() {
         return (firstLeg / 2.0) * secondLeg;
     }
 
     @Override
-    public String toDraw() {
+    public String draw() {
         return "Figure: rightTriangle, area: " + getArea()
                 + " sq.units, firstLeg: " + getFirstLeg()
                 + " units, secondLeg: " + getSecondLeg()

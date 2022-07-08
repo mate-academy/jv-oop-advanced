@@ -11,21 +11,13 @@ public class Square extends Figure {
         this.side = side;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
     @Override
     public double getArea() {
         return side * side;
     }
 
     @Override
-    public String toDraw() {
+    public String draw() {
         return "Figure: square, area: " + getArea()
                 + " sq.units, side: " + getSide()
                 + " units, color: " + getColor();

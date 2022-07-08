@@ -11,21 +11,13 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
     @Override
     public double getArea() {
         return (int) (Math.PI * radius * radius);
     }
 
     @Override
-    public String toDraw() {
+    public String draw() {
         return "Figure: circle, area: " + getArea()
                 + " sq.units, radius: " + getRadius()
                 + " units, color: " + getColor();
