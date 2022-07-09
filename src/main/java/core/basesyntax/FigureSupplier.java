@@ -13,18 +13,28 @@ public class FigureSupplier {
             return new Square(colorSupplier.getRandomColor(), getRandomDouble());
         }
         if (figureNumber == 1) {
-            return new Rectangle(colorSupplier.getRandomColor(), getRandomDouble(), getRandomDouble());
+            return new Rectangle(colorSupplier.getRandomColor(), getRandomDouble(),
+                    getRandomDouble());
         }
         if (figureNumber == 2) {
-            return new RightTriangle(colorSupplier.getRandomColor(), getRandomDouble(), getRandomDouble());
+            return new RightTriangle(colorSupplier.getRandomColor(), getRandomDouble(),
+                    getRandomDouble());
         }
         if (figureNumber == 3) {
-            return new Circle(colorSupplier.getRandomColor(), getRandomDouble());
+            return new Circle(colorSupplier.getRandomColor(),
+                    getRandomDouble());
         } else {
-            return  new IsoscelesTrapezoid(colorSupplier.getRandomColor() ,getRandomDouble(), getRandomDouble(), getRandomDouble());
+            return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomDouble(),
+                    getRandomDouble(), getRandomDouble());
         }
     }
+
     public double getRandomDouble() {
         return random.nextDouble();
+    }
+
+    public Figure getDefaultFigure() {
+        Color white = Color.WHITE;
+        return new Circle(white.name(), 10);
     }
 }

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements Calculation {
+public class IsoscelesTrapezoid extends Figure {
     private double upperBase;
     private double lowerBase;
     private double height;
@@ -43,6 +43,7 @@ public class IsoscelesTrapezoid extends Figure implements Calculation {
 
     @Override
     public void printInfo() {
-        System.out.println(getColor() + " isosceles trapezoid with bases: " + getLowerBase() + " and " + getUpperBase() + " and area: " + getArea());
+        System.out.println(getColor() + " isosceles trapezoid with bases: " + getLowerBase()
+                + " and " + getUpperBase() + " and area: " + getArea());
     }
 }

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Calculation {
+public class Rectangle extends Figure {
     private double width;
     private double length;
 
@@ -33,6 +33,7 @@ public class Rectangle extends Figure implements Calculation {
 
     @Override
     public void printInfo() {
-        System.out.println(getColor() + " rectangle with length: " + getLength() + ", width: " + getWidth() + " and area: " + getArea());
+        System.out.println(getColor() + " rectangle with length: " + getLength() + ", width: "
+                + getWidth() + " and area: " + getArea());
     }
 }
