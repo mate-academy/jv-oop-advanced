@@ -7,7 +7,11 @@ public class Main {
         Figure[] figures = new Figure[FIGURES_NUMBER];
         FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < figures.length; i++) {
-            figures[i] = i < FIGURES_NUMBER / 2 ? figureSupplier.getRandomFigure() : figureSupplier.getDefaultFigure();
+            if (i < FIGURES_NUMBER / 2) {
+                figures[i] = figureSupplier.getRandomFigure();
+            } else {
+                figures[i] = figureSupplier.getDefaultFigure();
+            }
         }
         for (Figure figure : figures) {
             figure.draw();

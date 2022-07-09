@@ -4,10 +4,10 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final Random random = new Random();
-    private final int RANDOM_FIGURE_CHOOSE = 5;
-    private final int MAX_RANDOM_NUMBER = 20;
-    private final int CIRCLE_DEFAULT_RADIUS = 10;
-    private final String CIRCLE_DEFAULT_COLOR = Color.WHITE.name();
+    private static final int RANDOM_FIGURE_CHOOSE = 5;
+    private static final int MAX_RANDOM_NUMBER = 20;
+    private static final int CIRCLE_DEFAULT_RADIUS = 10;
+    private static final String CIRCLE_DEFAULT_COLOR = Color.WHITE.name();
 
     // maybe it should be optimized somehow
     public Figure getRandomFigure() {
