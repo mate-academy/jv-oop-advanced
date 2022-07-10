@@ -1,6 +1,4 @@
-package figures;
-
-import enumsupl.Color;
+package core.basesyntax;
 
 public class RightTriangle extends FigureBase {
     private double firstLeg;

@@ -1,6 +1,4 @@
-package figures;
-
-import enumsupl.Color;
+package core.basesyntax;
 
 public class IsoscelesTrapezoid extends FigureBase {
     private double topBase;

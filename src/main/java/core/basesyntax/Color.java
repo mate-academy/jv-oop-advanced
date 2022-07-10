@@ -1,4 +1,4 @@
-package enumsupl;
+package core.basesyntax;
 
 public enum Color {
     PINK,

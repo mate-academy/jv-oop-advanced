@@ -1,10 +1,5 @@
-import core.basesyntax.Circle;
-import enumsupl.Color;
-import figures.FigureBase;
-import figures.IsoscelesTrapezoid;
-import figures.Rectangle;
-import figures.RightTriangle;
-import figures.Square;
+package core.basesyntax;
+
 import java.util.Random;
 
 public class FigureSupplier {

@@ -1,4 +1,4 @@
-package interfaces;
+package core.basesyntax;
 
 public interface AreaObtainer {
     double getArea();

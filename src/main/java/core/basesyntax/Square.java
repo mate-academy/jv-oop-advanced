@@ -1,6 +1,4 @@
-package figures;
-
-import enumsupl.Color;
+package core.basesyntax;
 
 public class Square extends FigureBase {
     private double length;

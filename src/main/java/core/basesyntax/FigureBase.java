@@ -1,8 +1,4 @@
-package figures;
-
-import enumsupl.Color;
-import interfaces.AreaObtainer;
-import interfaces.Drawable;
+package core.basesyntax;
 
 public abstract class FigureBase implements AreaObtainer, Drawable {
     private Color color;

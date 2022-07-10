@@ -1,4 +1,4 @@
-import figures.FigureBase;
+package core.basesyntax;
 
 public class Main {
     private static final int CAPACITY_OF_ARRAY = 6;

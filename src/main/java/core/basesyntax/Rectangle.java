@@ -1,6 +1,4 @@
-package figures;
-
-import enumsupl.Color;
+package core.basesyntax;
 
 public class Rectangle extends FigureBase {
     private double length;
