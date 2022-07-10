@@ -26,6 +26,13 @@ public class FigureSupplier {
         }
     }
 
+    public Figure getDefaultFigure() {
+        Circle circle = new Circle();
+        circle.setRadius(DEFAULT_CIRCLE_RADIUS);
+        circle.setColor(Color.WHITE.name());
+        return circle;
+    }
+
     private Figure getRandomRightTriangle() {
         RightTriangle rightTriangle = new RightTriangle();
         rightTriangle.setFirstLeg(random.nextInt(MAX_SMALL_SIDE_SIZE));
@@ -63,12 +70,5 @@ public class FigureSupplier {
         rectangle.setHeight(random.nextInt(MAX_SMALL_SIDE_SIZE));
         rectangle.setColor(Color.valueOf(colorSupplier.getRandomColor().name()));
         return rectangle;
-    }
-
-    public Figure getDefaultFigure() {
-        Circle circle = new Circle();
-        circle.setRadius(DEFAULT_CIRCLE_RADIUS);
-        circle.setColor(Color.WHITE.name());
-        return circle;
     }
 }
