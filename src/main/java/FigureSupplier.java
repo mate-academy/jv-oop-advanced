@@ -1,6 +1,10 @@
-import enumSup.Color;
-import figures.*;
-
+import core.basesyntax.Circle;
+import enumsupl.Color;
+import figures.FigureBase;
+import figures.IsoscelesTrapezoid;
+import figures.Rectangle;
+import figures.RightTriangle;
+import figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
@@ -8,7 +12,7 @@ public class FigureSupplier {
     private static final int MAX_RANDOM_VALUE = 111;
     private static final int DEFAULT_CIRCLE_RADIUS = 10;
     private Random random = new Random();
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public FigureBase getRandomFigure() {
         int index = random.nextInt(QUANTITY_DIFFERENT_FIGURES);
@@ -40,7 +44,8 @@ public class FigureSupplier {
     }
 
     private FigureBase getRandomRightTriangle() {
-        return new RightTriangle(colorSupplier.getRandomColor(), getRandomValue(), getRandomValue());
+        return new RightTriangle(colorSupplier.getRandomColor(),
+                getRandomValue(), getRandomValue());
     }
 
     private FigureBase getRandomRectangle() {
@@ -48,7 +53,8 @@ public class FigureSupplier {
     }
 
     private FigureBase getRandomIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomValue(), getRandomValue(), getRandomValue());
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomValue(),
+                getRandomValue(), getRandomValue());
     }
 
     private FigureBase getRandomCircle() {

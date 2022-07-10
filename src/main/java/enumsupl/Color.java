@@ -1,4 +1,4 @@
-package enumSup;
+package enumsupl;
 
 public enum Color {
     PINK,

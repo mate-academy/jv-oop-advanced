@@ -1,8 +1,7 @@
-package figures;
+package core.basesyntax;
 
-import enumSup.Color;
-import interfaces.AreaObtainer;
-import interfaces.Drawable;
+import enumsupl.Color;
+import figures.FigureBase;
 
 public class Circle extends FigureBase {
     private double radius;

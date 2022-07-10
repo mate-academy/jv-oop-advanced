@@ -1,5 +1,4 @@
-import enumSup.Color;
-
+import enumsupl.Color;
 import java.util.Random;
 
 public class ColorSupplier {

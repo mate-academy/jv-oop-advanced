@@ -1,8 +1,6 @@
 package figures;
 
-import enumSup.Color;
-import interfaces.AreaObtainer;
-import interfaces.Drawable;
+import enumsupl.Color;
 
 public class Square extends FigureBase {
     private double length;

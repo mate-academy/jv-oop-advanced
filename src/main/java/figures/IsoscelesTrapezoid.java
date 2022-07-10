@@ -1,10 +1,8 @@
 package figures;
 
-import enumSup.Color;
-import interfaces.AreaObtainer;
-import interfaces.Drawable;
+import enumsupl.Color;
 
-public class IsoscelesTrapezoid extends FigureBase{
+public class IsoscelesTrapezoid extends FigureBase {
     private double topBase;
     private double bottomBase;
     private double height;
