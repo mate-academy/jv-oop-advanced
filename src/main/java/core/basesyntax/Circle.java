@@ -4,7 +4,7 @@ public class Circle extends Figure {
     private int radius;
 
     public Circle(String color, int radius) {
-        super("circle", color);
+        super(color);
         this.radius = radius;
     }
 
@@ -18,12 +18,12 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getName() + " square: " + getSquare() + " radius: "
-                + getRadius() + " color: " + getColor());
+        System.out.println("Figure: " + getClass().getSimpleName().toLowerCase() + " square: "
+                + getArea() + " radius: " + getRadius() + " color: " + getColor());
     }
 
     @Override
-    double getSquare() {
+    public double getArea() {
         return Math.PI * getRadius() * getRadius();
     }
 }
