@@ -8,7 +8,7 @@ public class FigureSupplier {
     private static final int MAX_RANDOM_NUMBER = 20;
     private static final int CIRCLE_DEFAULT_RADIUS = 10;
     private static final String CIRCLE_DEFAULT_COLOR = Color.WHITE.name();
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int randomFigureSelection = random.nextInt(RANDOM_FIGURE_CHOOSE);
