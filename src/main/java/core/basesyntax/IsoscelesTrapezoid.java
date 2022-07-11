@@ -44,6 +44,6 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public void printInfo() {
         System.out.println(getColor() + " isosceles trapezoid with bases: " + getLowerBase()
-                + " and " + getUpperBase() + " and area: " + getArea());
+                + " and " + getUpperBase() + " and area: " + getArea() + " П***ь расєйській федерації!");
     }
 }

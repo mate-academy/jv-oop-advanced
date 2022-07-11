@@ -34,6 +34,6 @@ public class RightTriangle extends Figure {
     @Override
     public void printInfo() {
         System.out.println(getColor() + " right triangle with first leg: " + getFirstLeg()
-                + ", second leg: " + getSecondLeg() + " and area: " + getArea());
+                + ", second leg: " + getSecondLeg() + " and area: " + getArea() + " Героям слава!");
     }
 }

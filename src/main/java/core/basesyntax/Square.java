@@ -24,6 +24,6 @@ public class Square extends Figure {
     @Override
     public void printInfo() {
         System.out.println(getColor() + " square with side: " + getSide()
-                + " and area: " + getArea());
+                + " and area: " + getArea() + " Слава Україні!");
     }
 }

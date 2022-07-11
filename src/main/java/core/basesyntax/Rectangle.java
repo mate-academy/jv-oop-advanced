@@ -34,6 +34,6 @@ public class Rectangle extends Figure {
     @Override
     public void printInfo() {
         System.out.println(getColor() + " rectangle with length: " + getLength() + ", width: "
-                + getWidth() + " and area: " + getArea());
+                + getWidth() + " and area: " + getArea() + " ПТН ПНХ");
     }
 }
