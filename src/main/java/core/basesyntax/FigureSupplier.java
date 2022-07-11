@@ -25,14 +25,14 @@ public class FigureSupplier {
         }
     }
 
+    public Figure getDefaultFigure() {
+        return new Circle(WHITE_COLOR, CIRCLE_RADIUS);
+    }
+
     private double getRandomDouble() {
         return random.nextDouble();
     }
 
-    public Figure getDefaultFigure() {
-        return new Circle(WHITE_COLOR, CIRCLE_RADIUS);
-    }
-    
     private Square getRandomSquare() {
         return new Square(colorSupplier.getRandomColor(), getRandomDouble());
     }
