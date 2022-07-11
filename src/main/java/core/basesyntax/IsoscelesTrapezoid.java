@@ -1,7 +1,9 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    int firstSide, secondSide, height;
+    private int firstSide;
+    private int secondSide;
+    private int height;
 
     public IsoscelesTrapezoid(String color, int firstSide, int secondSide, int height) {
         super("isosceles trapezoid", color);
@@ -35,9 +37,10 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public void Draw() {
-        System.out.println("Figure: " + getName() + " square: " + getSquare() + " first side: " + getFirstSide() +
-                " second side: " + getSecondSide() + " height: " + getHeight() + " color: " + getColor());
+    public void draw() {
+        System.out.println("Figure: " + getName() + " square: " + getSquare() + " first side: "
+                + getFirstSide() + " second side: " + getSecondSide() + " height: " + getHeight()
+                + " color: " + getColor());
     }
 
     @Override
