@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private final int downside;
-    private final int upside;
-    private final int hight;
+    private final double downside;
+    private final double upside;
+    private final double hight;
 
     public IsoscelesTrapezoid(String color, int downside, int upside, int hight) {
         super(color);
@@ -13,13 +13,12 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public int getArea() {
-        return
-                (downside + upside) / 2 * hight;
+    public double getArea() {
+        return (downside + upside) / 2 * hight;
     }
 
     @Override
-    public void toDraw() {
+    public void draw() {
         System.out.println("Figure: isosceles trapezoid; area: " + getArea() + " square units;"
                 + " downside: " + downside + " units; "
                 + " upside: " + upside + " units;"
