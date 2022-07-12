@@ -9,8 +9,4 @@ public class ColorSupplier {
         int index = random.nextInt(Color.values().length);
         return Color.values()[index].name();
     }
-
-    public String getDefaultColor() {
-        return Color.WHITE.name();
-    }
 }
