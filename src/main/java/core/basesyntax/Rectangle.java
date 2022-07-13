@@ -2,7 +2,7 @@ package core.basesyntax;
 
 public class Rectangle extends Figure {
     private int firstSide;
-    public int secondSide;
+    private int secondSide;
 
     public void setFirstSide(int firstSide) {
         this.firstSide = firstSide;
