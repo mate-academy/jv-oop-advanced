@@ -3,10 +3,6 @@ package core.basesyntax;
 public abstract class Figure implements DrawFigure, AreaFigure {
     private String color;
 
-    public Figure() {
-
-    }
-
     public void setColor(String color) {
         this.color = color;
     }
