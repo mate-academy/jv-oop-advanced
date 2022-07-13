@@ -5,10 +5,6 @@ public class IsoscelesTrapezoid extends Figure {
     private int upperSide;
     private int height;
 
-    public IsoscelesTrapezoid() {
-
-    }
-
     public void setLowerSide(int lowerSide) {
         this.lowerSide = lowerSide;
     }
