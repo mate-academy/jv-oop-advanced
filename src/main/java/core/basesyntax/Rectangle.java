@@ -4,6 +4,12 @@ public class Rectangle extends Figure {
     private int firstSide;
     private int secondSide;
 
+    public Rectangle(int firstSide, int secondSide, String color) {
+        this.setFirstSide(firstSide);
+        this.setSecondSide(secondSide);
+        this.setColor(color);
+    }
+
     public void setFirstSide(int firstSide) {
         this.firstSide = firstSide;
     }
