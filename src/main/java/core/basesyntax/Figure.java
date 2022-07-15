@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public abstract class Figures implements Area, Print {
+public abstract class Figure implements AreaCalculator, InfoPrinter {
     private final String color;
 
-    public Figures(String color) {
+    public Figure(String color) {
         this.color = color;
     }
 
