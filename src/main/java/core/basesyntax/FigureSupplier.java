@@ -25,8 +25,10 @@ public class FigureSupplier {
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                         getRandomIsoscelesTrapezoid(),getRandomIsoscelesTrapezoid(),
                         getRandomIsoscelesTrapezoid());
-            default:
+            case 4:
                 return new Circle(colorSupplier.getRandomColor(), getRandomCircle());
+            default:
+                return getDefaultFigure();
         }
     }
 
@@ -48,5 +50,9 @@ public class FigureSupplier {
 
     private int getRandomCircle() {
         return new Random().nextInt(MAX_NAMBER);
+    }
+
+    public static Figure getDefaultFigure() {
+        return new Circle(DEFAULT_CIRCLE_COLOR.toString(), DEFAULT_CIRCLE_RADIUS);
     }
 }

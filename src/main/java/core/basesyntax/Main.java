@@ -17,8 +17,4 @@ public class Main extends FigureSupplier {
             figure[i].draw();
         }
     }
-
-    public static Figure getDefaultFigure() {
-        return defaultFigure;
-    }
 }
