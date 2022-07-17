@@ -38,7 +38,8 @@ public class FigureSupplier {
                 double randomFirstSideTr = random.nextInt(50);
                 double randomSecondSideTr = random.nextInt(50);
                 double randomHeight = random.nextInt(50);
-                figure = new IsoscelesTrapezoid(randomColor, randomFirstSideTr, randomSecondSideTr, randomHeight);
+                figure = new IsoscelesTrapezoid(randomColor, randomFirstSideTr,
+                        randomSecondSideTr, randomHeight);
                 break;
         }
         return figure;
