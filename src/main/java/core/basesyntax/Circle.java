@@ -14,8 +14,8 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "Figure: " + getClass().getSimpleName().toLowerCase() + ", area: " + getArea()
-                + ", radius: " + radius + ", color: " + getColor() + ".";
+    public void draw() {
+        System.out.println("Figure: " + getClass().getSimpleName().toLowerCase()
+                + ", area: " + getArea() + ", radius: " + radius + ", color: " + getColor() + ".");
     }
 }

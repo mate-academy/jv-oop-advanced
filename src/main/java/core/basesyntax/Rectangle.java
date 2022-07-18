@@ -16,8 +16,9 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "Figure: " + getClass().getSimpleName().toLowerCase() + ", area: " + getArea()
-                + ", width: " + width + ",height: " + height + ", color: " + getColor() + ".";
+    public void draw() {
+        System.out.println("Figure: " + getClass().getSimpleName().toLowerCase()
+                + ", area: " + getArea() + ", width: " + width + ",height: " + height
+                + ", color: " + getColor() + ".");
     }
 }
