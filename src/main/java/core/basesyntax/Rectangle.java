@@ -4,10 +4,10 @@ public class Rectangle extends Figure {
     private int widthRectangle;
     private int heightRectangle;
 
-    public Rectangle(int widthRectangle, int heightRectangle, String color) {
+    public Rectangle(String color, int widthRectangle, int heightRectangle) {
+        super(color);
         this.widthRectangle = widthRectangle;
         this.heightRectangle = heightRectangle;
-        setColor(color);
     }
 
     @Override
