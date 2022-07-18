@@ -66,7 +66,7 @@ public class FigureSupplier {
                 break;
             default:
                 figure = figureSupplier.getIsoscelesTrapezoid();
-            break;
+                break;
         }
         return figure;
     }
