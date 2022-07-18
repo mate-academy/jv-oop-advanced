@@ -3,14 +3,13 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int MAX_RANDOM_VALUE = 256;
-    public static final int DEFAULT_RADIUS = 10;
-    public static final String DEFAULT_COLOR = "WHITE";
+    private static final int MAX_RANDOM_VALUE = 256;
+    private static final int DEFAULT_RADIUS = 10;
+    private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
-    private int index;
 
-    public int getRandomInt() {
+    private int getRandomInt() {
         return random.nextInt(MAX_RANDOM_VALUE);
     }
 
@@ -19,7 +18,8 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        switch (FigureEnum.values()[random.nextInt(FigureEnum.values().length)]) {
+        int index = random.nextInt(FigureType.values().length);
+        switch (FigureType.values()[index]) {
             case CIRCLE: {
                 return new Circle(getRandomInt(), colorSupplier.getRandomColor());
             }
@@ -33,11 +33,11 @@ public class FigureSupplier {
             case RIGHT_TRIANGLE: {
                 return new RightTriangle(getRandomInt(), colorSupplier.getRandomColor());
             }
-            case ISOSCELES_TRAPEZOID: {
+            case ISOSCELES_TRAPEZOID:
+            default: {
                 return new IsoscelesTrapezoid(getRandomInt(),
                         getRandomInt(), colorSupplier.getRandomColor());
             }
-            default: return getDefaultFigure();
         }
     }
 }

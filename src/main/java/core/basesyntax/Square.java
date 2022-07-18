@@ -4,19 +4,18 @@ public class Square extends Figure {
     private double side;
 
     public Square(double side, String color) {
+        super(color);
         this.side = side;
-        this.color = color;
     }
 
     @Override
     public void draw() {
-        info.append("Figure: Square, area: ")
-                .append(getArea())
-                .append(" sq.units, side: ")
-                .append(side)
-                .append(" units, color: ")
-                .append(color);
-        System.out.println(info.toString());
+        System.out.println("Figure: Square, area: "
+                + getArea()
+                + " sq.units, side: "
+                + side
+                + " units, color: "
+                + getColor());
     }
 
     @Override

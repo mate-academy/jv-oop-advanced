@@ -4,19 +4,18 @@ public class RightTriangle extends Figure {
     private double side;
 
     public RightTriangle(double side, String color) {
+        super(color);
         this.side = side;
-        this.color = color;
     }
 
     @Override
     public void draw() {
-        info.append("Figure: Right triangle, area: ")
-                .append(getArea())
-                .append(" sq.units, side: ")
-                .append(side)
-                .append(" units, color: ")
-                .append(color);
-        System.out.println(info.toString());
+        System.out.println("Figure: Right triangle, area: "
+                + getArea()
+                + " sq.units, side: "
+                + side
+                + " units, color: "
+                + getColor());
     }
 
     @Override
