@@ -1,19 +1,17 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-
     private int base;
     private int height;
 
-    public Rectangle(int base, int height, String figureColor) {
-        super(figureColor);
+    public Rectangle(int base, int height, String color) {
+        super(color);
         this.base = base;
         this.height = height;
     }
 
     public double getArea() {
-        double area = base * height;
-        return area;
+        return base * height;
     }
 
     public void drawInfo() {
