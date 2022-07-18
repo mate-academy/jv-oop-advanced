@@ -3,56 +3,43 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int DEFAULT_CIRCLE_RADIUS = 10;
-    public static final Color DEFAULT_CIRCLE_COLOR = Color.WHITE;
-    public static final int MAX_NAMBER = 25;
-    public static final int COUNT_OF_FIGURES = 4;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int countFigure = random.nextInt(COUNT_OF_FIGURES);
+        int figuresNumber = 5;
+        int countFigure = random.nextInt(figuresNumber);
         switch (countFigure) {
             case 0:
-                return new Square(colorSupplier.getRandomColor(), getRandomSquare());
+                return new Square(colorSupplier.getRandomColor(), getRandomInt());
             case 1:
-                return new Rectangle(colorSupplier.getRandomColor(), getRandomRectangle(),
-                        getRandomRectangle());
+                return new Rectangle(colorSupplier.getRandomColor(), getRandomInt(),
+                        getRandomDouble());
             case 2:
-                return new RightTriangle(colorSupplier.getRandomColor(), getRandomRightTriangle(),
-                        getRandomRightTriangle());
+                return new RightTriangle(colorSupplier.getRandomColor(), getRandomDouble(),
+                        getRandomDouble());
             case 3:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        getRandomIsoscelesTrapezoid(),getRandomIsoscelesTrapezoid(),
-                        getRandomIsoscelesTrapezoid());
+                        getRandomInt(),getRandomDouble(),getRandomDouble());
             case 4:
-                return new Circle(colorSupplier.getRandomColor(), getRandomCircle());
+                return new Circle(colorSupplier.getRandomColor(), getRandomInt());
             default:
                 return getDefaultFigure();
         }
     }
 
-    private int getRandomSquare() {
-        return new Random().nextInt(MAX_NAMBER);
+    private int getRandomInt() {
+        int maxRandomNamber = 25;
+        return new Random().nextInt(maxRandomNamber);
     }
 
-    private double getRandomRectangle() {
-        return new Random().nextInt(MAX_NAMBER);
-    }
-
-    private double getRandomRightTriangle() {
-        return new Random().nextInt(MAX_NAMBER);
-    }
-
-    private double getRandomIsoscelesTrapezoid() {
-        return new Random().nextInt(MAX_NAMBER);
-    }
-
-    private int getRandomCircle() {
-        return new Random().nextInt(MAX_NAMBER);
+    private double getRandomDouble() {
+        return new Random().nextInt();
     }
 
     public static Figure getDefaultFigure() {
-        return new Circle(DEFAULT_CIRCLE_COLOR.toString(), DEFAULT_CIRCLE_RADIUS);
+        final Color defaultColor = Color.WHITE;
+        int defaultRadius = 10;
+        return new Circle(defaultColor.toString(), defaultRadius);
     }
 }
