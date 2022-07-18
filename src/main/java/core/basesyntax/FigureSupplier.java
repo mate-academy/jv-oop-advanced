@@ -11,8 +11,8 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         Figure figure;
-        int figureNumber = random.nextInt(FIGURES_COUNT);
-        switch (figureNumber) {
+        int randomIndex = random.nextInt(FIGURES_COUNT);
+        switch (randomIndex) {
             case 1:
                 randomColor = new ColorSupplier().getRandomColor();
                 double randomRadius = random.nextInt(50);
