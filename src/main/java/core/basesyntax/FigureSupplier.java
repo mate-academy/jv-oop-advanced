@@ -19,11 +19,11 @@ public class FigureSupplier {
             case 2:
                 return getRandomRightTriangle();
             case 3:
-                return getRectangle();
+                return getRandomRectangle();
             case 4:
-                return getIsoscelesTrapezoid();
+                return getRandomIsoscelesTrapezoid();
             default:
-                return getIsoscelesTrapezoid();
+                return getRandomIsoscelesTrapezoid();
         }
     }
 
@@ -50,14 +50,14 @@ public class FigureSupplier {
         return new RightTriangle(randomColor, randomFirstLeg, randomSecondLeg);
     }
 
-    private Rectangle getRectangle() {
+    private Rectangle getRandomRectangle() {
         String randomColor = new ColorSupplier().getRandomColor();
         double randomFirstSide = random.nextInt(MAX_RANDOM_NUMBER);
         double randomSecondSide = random.nextInt(MAX_RANDOM_NUMBER);
         return new Rectangle(randomColor, randomFirstSide, randomSecondSide);
     }
 
-    private IsoscelesTrapezoid getIsoscelesTrapezoid() {
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
         String randomColor = new ColorSupplier().getRandomColor();
         double randomFirstSideTr = random.nextInt(MAX_RANDOM_NUMBER);
         double randomSecondSideTr = random.nextInt(MAX_RANDOM_NUMBER);
