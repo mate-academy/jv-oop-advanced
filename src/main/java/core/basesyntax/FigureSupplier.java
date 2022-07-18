@@ -8,41 +8,65 @@ public class FigureSupplier {
     private static final int RADIUS_DEFAULT = 10;
     private Random random = new Random();
     private String randomColor;
+    private Figure figure;
+
+    private Circle getRandomCircle() {
+        randomColor = new ColorSupplier().getRandomColor();
+        double randomRadius = random.nextInt(50);
+        return new Circle(randomColor, randomRadius);
+    }
+
+    private Square getRandomSquare() {
+        randomColor = new ColorSupplier().getRandomColor();
+        double randomSide = random.nextInt(50);
+        return new Square(randomColor, randomSide);
+    }
+
+    private RightTriangle getRandomRightTriangle() {
+        randomColor = new ColorSupplier().getRandomColor();
+        double randomFirstLeg = random.nextInt(50);
+        double randomSecondLeg = random.nextInt(50);
+        return new RightTriangle(randomColor, randomFirstLeg, randomSecondLeg);
+    }
+
+    private Rectangle getRectangle() {
+        randomColor = new ColorSupplier().getRandomColor();
+        double randomFirstSide = random.nextInt(50);
+        double randomSecondSide = random.nextInt(50);
+        return new Rectangle(randomColor, randomFirstSide, randomSecondSide);
+    }
+
+    private IsoscelesTrapezoid getIsoscelesTrapezoid() {
+        randomColor = new ColorSupplier().getRandomColor();
+        double randomFirstSideTr = random.nextInt(50);
+        double randomSecondSideTr = random.nextInt(50);
+        double randomHeight = random.nextInt(50);
+        return new IsoscelesTrapezoid(randomColor, randomFirstSideTr,
+                randomSecondSideTr, randomHeight);
+    }
 
     public Figure getRandomFigure() {
-        Figure figure;
+        FigureSupplier figureSupplier = new FigureSupplier();
         int randomIndex = random.nextInt(FIGURES_COUNT);
         switch (randomIndex) {
+            case 0:
+                figure = figureSupplier.getRandomCircle();
+                break;
             case 1:
-                randomColor = new ColorSupplier().getRandomColor();
-                double randomRadius = random.nextInt(50);
-                figure = new Circle(randomColor, randomRadius);
+                figure = figureSupplier.getRandomSquare();
                 break;
             case 2:
-                randomColor = new ColorSupplier().getRandomColor();
-                double randomSide = random.nextInt(50);
-                figure = new Square(randomColor, randomSide);
+                figure = figureSupplier.getRandomRightTriangle();
                 break;
             case 3:
-                randomColor = new ColorSupplier().getRandomColor();
-                double randomFirstLeg = random.nextInt(50);
-                double randomSecondLeg = random.nextInt(50);
-                figure = new RightTriangle(randomColor, randomFirstLeg, randomSecondLeg);
+                figure = figureSupplier.getRectangle();
                 break;
             case 4:
-                randomColor = new ColorSupplier().getRandomColor();
-                double randomFirstSide = random.nextInt(50);
-                double randomSecondSide = random.nextInt(50);
-                figure = new Rectangle(randomColor, randomFirstSide, randomSecondSide);
+                figure = figureSupplier.getIsoscelesTrapezoid();
                 break;
             default:
-                randomColor = new ColorSupplier().getRandomColor();
-                double randomFirstSideTr = random.nextInt(50);
-                double randomSecondSideTr = random.nextInt(50);
-                double randomHeight = random.nextInt(50);
-                figure = new IsoscelesTrapezoid(randomColor, randomFirstSideTr,
-                        randomSecondSideTr, randomHeight);
-                break;
+                figure = figureSupplier.getIsoscelesTrapezoid();
+            break;
         }
         return figure;
     }
