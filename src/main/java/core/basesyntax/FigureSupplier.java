@@ -8,6 +8,7 @@ public class FigureSupplier {
     private static final String DEFAULT_COLOR = Color.WHITE.name();
     private static final int DEFAULT_RADIUS = 10;
     private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int randomIndex = random.nextInt(FIGURES_COUNT);
@@ -32,33 +33,33 @@ public class FigureSupplier {
     }
 
     private Circle getRandomCircle() {
-        String randomColor = new ColorSupplier().getRandomColor();
+        String randomColor = colorSupplier.getRandomColor();
         double randomRadius = random.nextInt(MAX_RANDOM_NUMBER);
         return new Circle(randomColor, randomRadius);
     }
 
     private Square getRandomSquare() {
-        String randomColor = new ColorSupplier().getRandomColor();
+        String randomColor = colorSupplier.getRandomColor();
         double randomSide = random.nextInt(MAX_RANDOM_NUMBER);
         return new Square(randomColor, randomSide);
     }
 
     private RightTriangle getRandomRightTriangle() {
-        String randomColor = new ColorSupplier().getRandomColor();
+        String randomColor = colorSupplier.getRandomColor();
         double randomFirstLeg = random.nextInt(MAX_RANDOM_NUMBER);
         double randomSecondLeg = random.nextInt(MAX_RANDOM_NUMBER);
         return new RightTriangle(randomColor, randomFirstLeg, randomSecondLeg);
     }
 
     private Rectangle getRandomRectangle() {
-        String randomColor = new ColorSupplier().getRandomColor();
+        String randomColor = colorSupplier.getRandomColor();
         double randomFirstSide = random.nextInt(MAX_RANDOM_NUMBER);
         double randomSecondSide = random.nextInt(MAX_RANDOM_NUMBER);
         return new Rectangle(randomColor, randomFirstSide, randomSecondSide);
     }
 
     private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
-        String randomColor = new ColorSupplier().getRandomColor();
+        String randomColor = colorSupplier.getRandomColor();
         double randomFirstSideTr = random.nextInt(MAX_RANDOM_NUMBER);
         double randomSecondSideTr = random.nextInt(MAX_RANDOM_NUMBER);
         double randomHeight = random.nextInt(MAX_RANDOM_NUMBER);
