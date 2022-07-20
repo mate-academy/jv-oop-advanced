@@ -12,7 +12,7 @@ public class Rectangle extends Figure {
 
     @Override
     public String name() {
-        return null;
+        return String.valueOf(Figures.RECTANGLE);
     }
 
     @Override
