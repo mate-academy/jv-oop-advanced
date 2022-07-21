@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure{
+public class IsoscelesTrapezoid extends Figure {
     private double hight;
     private double lowerBase;
     private double upperBase;
@@ -19,7 +19,8 @@ public class IsoscelesTrapezoid extends Figure{
 
     @Override
     public String draw() {
-        return ("Figure: " + getName() + ", areа: " + areaCalculation() + " sq. units, hight: " + hight
-                + " units, lowerBase: " + lowerBase + " units, upperBase: " + upperBase + " units, color: " + getColor());
+        return ("Figure: " + getName() + ", areа: " + areaCalculation()
+                + " sq. units, hight: " + hight + " units, lowerBase: "
+                + lowerBase + " units, upperBase: " + upperBase + " units, color: " + getColor());
     }
 }

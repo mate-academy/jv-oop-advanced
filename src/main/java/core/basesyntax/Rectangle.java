@@ -5,7 +5,7 @@ public class Rectangle extends Figure {
     private double height;
 
     public Rectangle(Color color, double width, double height) {
-        super ("Rectangle", color);
+        super("Rectangle", color);
         this.width = width;
         this.height = height;
     }
@@ -17,7 +17,7 @@ public class Rectangle extends Figure {
 
     @Override
     public String draw() {
-        return ("Figure: " + getName() + ", areа: " + areaCalculation() + " sq. units, width: " + width + " units, height: " + height +
-                ", color: " + getColor());
+        return ("Figure: " + getName() + ", areа: " + areaCalculation() + " sq. units, width: "
+                + width + " units, height: " + height + ", color: " + getColor());
     }
 }
