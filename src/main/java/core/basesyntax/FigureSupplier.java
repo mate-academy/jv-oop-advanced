@@ -9,10 +9,6 @@ public class FigureSupplier {
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
-    private int getRandomInt() {
-        return random.nextInt(MAX_RANDOM_VALUE);
-    }
-
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
     }
@@ -21,23 +17,49 @@ public class FigureSupplier {
         int index = random.nextInt(FigureType.values().length);
         switch (FigureType.values()[index]) {
             case CIRCLE: {
-                return new Circle(getRandomInt(), colorSupplier.getRandomColor());
+                return getRandomCircle();
             }
             case SQUARE: {
-                return new Square(getRandomInt(), colorSupplier.getRandomColor());
+                return getRandomSquare();
             }
             case RECTANGLE: {
-                return new Rectangle(getRandomInt(), getRandomInt(),
-                        colorSupplier.getRandomColor());
+                return getRandomRectamgle();
             }
             case RIGHT_TRIANGLE: {
-                return new RightTriangle(getRandomInt(), colorSupplier.getRandomColor());
+                return getRandomRightTriangle();
             }
             case ISOSCELES_TRAPEZOID:
             default: {
-                return new IsoscelesTrapezoid(getRandomInt(),
-                        getRandomInt(), colorSupplier.getRandomColor());
+                return getRandomIsoscelesTrapezoid();
             }
         }
+    }
+
+    private int getRandomInt() {
+        return random.nextInt(MAX_RANDOM_VALUE);
+    }
+
+    private Circle getRandomCircle() {
+        return new Circle(random.nextInt(MAX_RANDOM_VALUE), colorSupplier.getRandomColor());
+    }
+
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(random.nextInt(MAX_RANDOM_VALUE),
+                random.nextInt(MAX_RANDOM_VALUE),
+                colorSupplier.getRandomColor());
+    }
+
+    private Rectangle getRandomRectamgle() {
+        return new Rectangle(random.nextInt(MAX_RANDOM_VALUE),
+                random.nextInt(MAX_RANDOM_VALUE),
+                colorSupplier.getRandomColor());
+    }
+
+    private RightTriangle getRandomRightTriangle() {
+        return new RightTriangle(random.nextInt(MAX_RANDOM_VALUE), colorSupplier.getRandomColor());
+    }
+
+    private Square getRandomSquare() {
+        return new Square(random.nextInt(MAX_RANDOM_VALUE), colorSupplier.getRandomColor());
     }
 }
