@@ -8,6 +8,7 @@ public abstract class Figure implements Drawable, AreaCalculate {
         this.color = color;
         this.side = side;
     }
+
     public Figure() {
     }
 
