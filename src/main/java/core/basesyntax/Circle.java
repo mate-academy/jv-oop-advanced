@@ -9,13 +9,13 @@ public class Circle extends Figure {
     }
 
     @Override
-    protected double areaCalculation() {
+    public double getArea() {
         return Math.PI * radius * radius;
     }
 
     @Override
-    public String draw() {
-        return ("Figure: " + getName() + ", areа: " + areaCalculation()
+    public void draw() {
+        System.out.println("Figure: Circle, areа: " + getArea()
                 + " sq. units, radius: " + radius + " units, color: " + getColor());
     }
 }
