@@ -1,13 +1,21 @@
 package core.basesyntax;
 
-public class Figure implements Draw, AreaCalculate {
+public abstract class Figure implements Drawable, AreaCalculate {
+    private double side;
+    private String color;
 
-    @Override
-    public double getArea() {
-        return 0;
+    public Figure(String color, double side) {
+        this.color = color;
+        this.side = side;
+    }
+    public Figure() {
     }
 
-    @Override
-    public void draw() {
+    public double getSide() {
+        return side;
+    }
+
+    public String getColor() {
+        return color;
     }
 }
