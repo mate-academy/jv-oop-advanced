@@ -5,7 +5,7 @@ public class Square extends Figure {
     private double leg;
 
     public Square(Color color, double leg) {
-        super("Square", color);
+        super(color);
         this.leg = leg;
     }
 
@@ -16,9 +16,7 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        System.out.println(("Figure: Square, areа: " + getArea()
-                + " sq. units, side: " + leg + " units, color: " + getColor()));
+        System.out.println("Figure: Square, areа: " + getArea()
+                + " sq. units, side: " + leg + " units, color: " + getColor());
     }
-
 }
-
