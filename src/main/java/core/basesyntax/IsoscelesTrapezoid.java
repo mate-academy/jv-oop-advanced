@@ -1,12 +1,9 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class IsoscelesTrapezoid extends Figure {
     private double topBase;
     private double bottomBase;
     private double height;
-    private Random random = new Random();
 
     public IsoscelesTrapezoid(double topBase, double bottomBase, String color) {
         super(color);

@@ -1,12 +1,7 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class RightTriangle extends Figure {
-    private static final int RANGE_COLOR_INDEX = Color.values().length;
-    private static final int MAX_RANDOM_VALUE = 256;
     private double side;
-    private Random random = new Random();
 
     public RightTriangle(double side, String color) {
         super(color);
