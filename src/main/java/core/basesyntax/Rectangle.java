@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure{
+public class Rectangle extends Figure {
     private final int firstSide;
     private final int secondSide;
 
@@ -17,10 +17,10 @@ public class Rectangle extends Figure{
 
     @Override
     public String toString() {
-        return "Figure: rectangle, " +
-                "area: " + getArea() +" sq.units, "+
-                "firstSide: " + firstSide + " units, " +
-                "secondSide: " + secondSide + " units, " +
-                "color: " + super.getColor().toLowerCase();
+        return "Figure: rectangle, "
+                + "area: " + getArea() + " sq.units, "
+                + "firstSide: " + firstSide + " units, "
+                + "secondSide: " + secondSide + " units, "
+                + "color: " + super.getColor().toLowerCase();
     }
 }
