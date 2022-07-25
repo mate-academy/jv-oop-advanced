@@ -18,11 +18,11 @@ public class Circle extends Figure {
     public void print() {
         StringBuilder builder = new StringBuilder();
         builder.append("Figure: circle, area: ")
-                .append (getArea())
-                .append (" sq.units, side: ")
-                .append (radius)
-                .append (" units, color: ")
-                .append (getColor());
+                .append(getArea())
+                .append(" sq.units, side: ")
+                .append(radius)
+                .append(" units, color: ")
+                .append(getColor());
         System.out.println(builder.toString());
     }
 }
