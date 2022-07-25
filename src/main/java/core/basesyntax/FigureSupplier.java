@@ -3,13 +3,16 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int FIGURES_NUMBER = 5;
-    private static final int UNITS_NUMBER = 6;
+    private static final int NUMBER_OF_FIGURES = 5;
+    private static final int AMOUNT_OF_NUMBERS = 6;
+    private static final String DEFAULT_COLOR = "RED";
+    private static final int DEFAULT_RADIUS = 10;
+
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int randomFigureIndex = random.nextInt(FIGURES_NUMBER);
+        int randomFigureIndex = random.nextInt(NUMBER_OF_FIGURES);
         switch (randomFigureIndex) {
             case 1:
                 return getRandomCircle();
@@ -24,43 +27,43 @@ public class FigureSupplier {
         }
     }
 
-    public Square getRandomSquare() {
+    public double getRandomNumber() {
+        return random.nextInt(AMOUNT_OF_NUMBERS) + 1;
+    }
+
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
+    }
+
+    private Square getRandomSquare() {
         String color = colorSupplier.getRandomColor();
         double firstRandomNumber = getRandomNumber();
         return new Square(color, firstRandomNumber);
     }
 
-    public Circle getRandomCircle() {
+    private Circle getRandomCircle() {
         String color = colorSupplier.getRandomColor();
         double firstRandomNumber = getRandomNumber();
         return new Circle(color, firstRandomNumber);
     }
 
-    public Rectangle getRandomRectangle() {
+    private Rectangle getRandomRectangle() {
         String color = colorSupplier.getRandomColor();
         double firstRandomNumber = getRandomNumber();
         double secondRandomNumber = getRandomNumber();
         return new Rectangle(color, firstRandomNumber, secondRandomNumber);
     }
 
-    public RightTriangle getRandomRightTriangle() {
+    private RightTriangle getRandomRightTriangle() {
         String color = colorSupplier.getRandomColor();
         double firstRandomNumber = getRandomNumber();
         double secondRandomNumber = getRandomNumber();
         return new RightTriangle(color, firstRandomNumber, secondRandomNumber);
     }
 
-    public IsoscelesTrapezoid getIsoscelesTrapezoid() {
+    private IsoscelesTrapezoid getIsoscelesTrapezoid() {
         String color = colorSupplier.getRandomColor();
         return new IsoscelesTrapezoid(color, getRandomNumber(),
                 getRandomNumber(), getRandomNumber());
-    }
-
-    public double getRandomNumber() {
-        return random.nextInt(UNITS_NUMBER) + 1;
-    }
-
-    public Figure getDefaultFigure() {
-        return new Circle("RED", 4);
     }
 }
