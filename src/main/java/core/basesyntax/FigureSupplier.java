@@ -3,11 +3,12 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    public static final int FIGURE_COUNT = 5;
     private ColorSupplier cs = new ColorSupplier();
+    private Random random = new Random();
 
     public Figure getRandomFigure() {
-        Random random = new Random();
-        int shapeNumber = random.nextInt(5);
+        int shapeNumber = random.nextInt(FIGURE_COUNT);
         double firstFigureSide = random.nextInt(20);
         double secondFigureSide = random.nextInt(20);
         double thirdFigureSide = random.nextInt(20);
@@ -21,7 +22,6 @@ public class FigureSupplier {
                 figure = new RightTriangle(
                         cs.getRandomColor(),
                         firstFigureSide, secondFigureSide
-
                 );
                 break;
             case 2:
@@ -31,10 +31,10 @@ public class FigureSupplier {
                 );
                 break;
             case 3:
-                figure = new Square(cs.getRandomColor(),firstFigureSide);
+                figure = new Square(cs.getRandomColor(), firstFigureSide);
                 break;
             case 4:
-                figure = new Rectangle(cs.getRandomColor(),firstFigureSide, secondFigureSide);
+                figure = new Rectangle(cs.getRandomColor(), firstFigureSide, secondFigureSide);
                 break;
             default:
                 break;
