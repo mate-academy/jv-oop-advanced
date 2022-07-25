@@ -16,12 +16,13 @@ public class Circle extends Figure {
 
     @Override
     public void print() {
-        System.out.println("Figure: circle, area: "
-                + getArea()
-                + " sq.units, side: "
-                + radius
-                + " units, color: "
-                + getColor()
-        );
+        StringBuilder builder = new StringBuilder();
+        builder.append("Figure: circle, area: ")
+                .append (getArea())
+                .append (" sq.units, side: ")
+                .append (radius)
+                .append (" units, color: ")
+                .append (getColor());
+        System.out.println(builder.toString());
     }
 }

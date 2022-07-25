@@ -16,12 +16,13 @@ public class Square extends Figure {
 
     @Override
     public void print() {
-        System.out.println("Figure: square, area: "
-                + getArea()
-                + " sq.units, side: "
-                + side
-                + " units, color: "
-                + getColor()
-        );
+        StringBuilder builder = new StringBuilder();
+        builder.append("Figure: square, area: ")
+                .append(getArea())
+                .append(" sq.units, side: ")
+                .append(side)
+                .append(" units, color: ")
+                .append(getColor());
+        System.out.println(builder.toString());
     }
 }

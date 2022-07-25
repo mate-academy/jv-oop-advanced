@@ -21,16 +21,17 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void print() {
-        System.out.println("Figure: isosceles trapezoid, area: "
-                + getArea()
-                + " sq.units, height: "
-                + height
-                + ", first side: "
-                + firstSide
-                + " units, last side: "
-                + secondSide
-                + " units, color: "
-                + getColor()
-        );
+        StringBuilder builder = new StringBuilder();
+        builder.append("Figure: isosceles trapezoid, area: ")
+                .append(getArea())
+                .append(" sq.units, height: ")
+                .append(height)
+                .append(", first side: ")
+                .append(firstSide)
+                .append(" units, last side: ")
+                .append(secondSide)
+                .append(" units, color: ")
+                .append(getColor());
+        System.out.println(builder.toString());
     }
 }

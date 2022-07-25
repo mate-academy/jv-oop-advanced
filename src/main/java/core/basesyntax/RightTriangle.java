@@ -19,14 +19,15 @@ public class RightTriangle extends Figure {
 
     @Override
     public void print() {
-        System.out.println("Figure: rectangle, area: "
-                + getArea()
-                + " sq.units, first side "
-                + firstSide
-                + " units, last side: "
-                + secondSide
-                + " units, color: "
-                + getColor()
-        );
+        StringBuilder builder = new StringBuilder();
+        builder.append("Figure: rectangle, area: ")
+                .append(getArea())
+                .append(" sq.units, first side ")
+                .append(firstSide)
+                .append(" units, last side: ")
+                .append(secondSide)
+                .append(" units, color: ")
+                .append(getColor());
+        System.out.println(builder.toString());
     }
 }
