@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Shape implements Drawable {
+public abstract class Shape implements Drawable {
     private String color;
 
     public Shape(String color) {
@@ -17,6 +17,5 @@ public class Shape implements Drawable {
 
     @Override
     public void draw() {
-        System.out.println("Info about figure shape's.");
     }
 }
