@@ -15,16 +15,20 @@ public class FigureSupplier {
         }
         if (random.nextInt(NUMBER_OF_FIGURES) == 1) {
             return new IsoscelesTrapezoid(random.nextInt(RANDOM_RANGE),
-                   random.nextInt(RANDOM_RANGE), random.nextInt(RANDOM_RANGE));
+                   random.nextInt(RANDOM_RANGE), random.nextInt(RANDOM_RANGE),
+                    colorSupplier.getRandomColor().toString());
         }
         if (random.nextInt(NUMBER_OF_FIGURES) == 2) {
-            return new Rectangle(random.nextInt(RANDOM_RANGE), random.nextInt(RANDOM_RANGE));
+            return new Rectangle(random.nextInt(RANDOM_RANGE), random.nextInt(RANDOM_RANGE),
+                    colorSupplier.getRandomColor().toString());
         }
         if (random.nextInt(NUMBER_OF_FIGURES) == 3) {
-            return new RightTriangle(random.nextInt(RANDOM_RANGE),random.nextInt(RANDOM_RANGE));
+            return new RightTriangle(random.nextInt(RANDOM_RANGE),random.nextInt(RANDOM_RANGE),
+                    colorSupplier.getRandomColor().toString());
         }
         if (random.nextInt(NUMBER_OF_FIGURES) == 4) {
-            return new Square(random.nextInt(RANDOM_RANGE));
+            return new Square(random.nextInt(RANDOM_RANGE),
+                    colorSupplier.getRandomColor().toString());
         }
         return getRandomFigure();
     }

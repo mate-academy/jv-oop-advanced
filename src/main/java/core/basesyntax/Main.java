@@ -4,11 +4,15 @@ public class Main {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
         String[] result = new String[6];
-        System.out.println(result[0] = figureSupplier.getRandomFigure().toString());
-        System.out.println(result[1] = figureSupplier.getRandomFigure().toString());
-        System.out.println(result[2] = figureSupplier.getRandomFigure().toString());
-        System.out.println(result[3] = String.valueOf(figureSupplier.getDefaultFigure()));
-        System.out.println(result[4] = String.valueOf(figureSupplier.getDefaultFigure()));
-        System.out.println(result[5] = String.valueOf(figureSupplier.getDefaultFigure()));
+        for (int i = 0; i < result.length; i++) {
+            if (i < ((result.length / 2))) {
+                result[i] = figureSupplier.getRandomFigure().toString();
+                System.out.println(result[i]);
+            }
+            if (i >= ((result.length / 2))) {
+                result[i] = String.valueOf(figureSupplier.getDefaultFigure());
+                System.out.println(result[i]);
+            }
+        }
     }
 }
