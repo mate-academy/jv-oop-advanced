@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Shape implements Figure {
+public class Shape implements Drawable {
     private String color;
 
     public Shape(String color) {
@@ -16,7 +16,7 @@ public class Shape implements Figure {
     }
 
     @Override
-    public void getInfoAboutFigure() {
+    public void draw() {
         System.out.println("Info about figure shape's.");
     }
 }

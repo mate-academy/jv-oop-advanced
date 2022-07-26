@@ -27,9 +27,13 @@ public class RightTriangle extends Shape {
         this.heightLeg = heightLeg;
     }
 
+    public double getArea(double baseLeg, double heightLeg) {
+        return (baseLeg * heightLeg) / 2;
+    }
+
     @Override
-    public void getInfoAboutFigure() {
-        System.out.println("Figure: Right Triangle , area: " + ((baseLeg * heightLeg) / 2)
+    public void draw() {
+        System.out.println("Figure: Right Triangle , area: " + getArea(baseLeg,heightLeg)
                 + ", baseLeg: " + baseLeg + ", heightLeg: " + heightLeg
                 + ", color: " + getColor());
     }

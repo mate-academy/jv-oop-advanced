@@ -16,9 +16,13 @@ public class Square extends Shape {
         this.side = side;
     }
 
+    public double getArea(double side) {
+        return side * side;
+    }
+
     @Override
-    public void getInfoAboutFigure() {
-        System.out.println("Figure: square, area: " + (side * side)
+    public void draw() {
+        System.out.println("Figure: square, area: " + getArea(side)
                 + ", side: " + side
                 + " color: " + getColor());
     }

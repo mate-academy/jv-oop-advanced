@@ -4,37 +4,36 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
-    private ColorSupplier cs = new ColorSupplier();
-    private Random random = new Random();
+    public static final int MAX_VALUE = 20;
+    private static final ColorSupplier colorSupplier = new ColorSupplier();
+    private static final Random random = new Random();
 
-    public Figure getRandomFigure() {
+    public Drawable getRandomFigure() {
         int shapeNumber = random.nextInt(FIGURE_COUNT);
-        double firstFigureSide = random.nextInt(20);
-        double secondFigureSide = random.nextInt(20);
-        double thirdFigureSide = random.nextInt(20);
-        Figure figure = null;
+        Drawable figure = null;
 
         switch (shapeNumber) {
             case 0:
-                figure = new Circle(cs.getRandomColor(), firstFigureSide);
+                figure = new Circle(colorSupplier.getRandomColor(), random.nextInt(MAX_VALUE));
                 break;
             case 1:
                 figure = new RightTriangle(
-                        cs.getRandomColor(),
-                        firstFigureSide, secondFigureSide
+                        colorSupplier.getRandomColor(),
+                        random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE)
                 );
                 break;
             case 2:
                 figure = new IsoscelesTrapezoid(
-                        cs.getRandomColor(),
-                        firstFigureSide, secondFigureSide, thirdFigureSide
+                        colorSupplier.getRandomColor(), random.nextInt(MAX_VALUE),
+                        random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE)
                 );
                 break;
             case 3:
-                figure = new Square(cs.getRandomColor(), firstFigureSide);
+                figure = new Square(colorSupplier.getRandomColor(), random.nextInt(MAX_VALUE));
                 break;
             case 4:
-                figure = new Rectangle(cs.getRandomColor(), firstFigureSide, secondFigureSide);
+                figure = new Rectangle(colorSupplier.getRandomColor(),
+                        random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
                 break;
             default:
                 break;
@@ -42,7 +41,7 @@ public class FigureSupplier {
         return figure;
     }
 
-    public Figure getDefaultFigure() {
+    public Drawable getDefaultFigure() {
         return new Circle("white", 10);
     }
 

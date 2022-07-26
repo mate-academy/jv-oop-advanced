@@ -27,9 +27,13 @@ public class Rectangle extends Shape {
         this.height = height;
     }
 
+    public double getArea(double width, double height) {
+        return width * height;
+    }
+
     @Override
-    public void getInfoAboutFigure() {
-        System.out.println("Figure: rectangle, area: " + (width * height)
+    public void draw() {
+        System.out.println("Figure: rectangle, area: " + getArea(width, height)
                 + ", width: " + width + ", height: " + height
                 + ", color: " + getColor());
     }
