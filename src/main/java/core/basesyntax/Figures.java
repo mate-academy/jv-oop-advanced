@@ -1,16 +1,15 @@
 package core.basesyntax;
 
 abstract class Figures implements Figure {
-    private Colors color;
+    private Color color;
 
-    public Figures(Colors color) {
+    public Figures(Color color) {
         this.color = color;
     }
 
-    public abstract double getArea();
+    public abstract String draw();
 
-    @Override
-    public Colors getColor() {
+    public Color getColor() {
         return color;
     }
 }

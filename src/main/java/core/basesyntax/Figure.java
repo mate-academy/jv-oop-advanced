@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-interface Figure {
-    public Colors getColor();
+public interface Figure {
+    double getArea();
 }

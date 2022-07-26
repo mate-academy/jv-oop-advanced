@@ -3,42 +3,42 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int RADIUS_CIRCLE = 6;
-    public static final int COUNT_FIGURES = 5;
+    private static final int RADIUS_CIRCLE = 6;
+    private static final int COUNT_FIGURES = 5;
 
-    public Figure getRandomFigure() {
-        Figure figures;
+    public Figures getRandomFigure() {
+        ColorSupplier colorSupplier = new ColorSupplier();
+        Random random = new Random();
+        Figures figures;
         switch (new Random().nextInt(COUNT_FIGURES)) {
             case 0:
-                return new Square(ColorSupplier.getRandomColor(),
-                        new Random().nextInt(100) + 1);
+                return new Square(colorSupplier.getRandomColor(),
+                        random.nextInt(100) + 1);
             case 1:
-                return new Rectangle(ColorSupplier.getRandomColor(),
-                        new Random().nextInt(100) + 1,
-                        new Random().nextInt(100) + 1);
+                return new Rectangle(colorSupplier.getRandomColor(),
+                        random.nextInt(100) + 1,
+                        random.nextInt(100) + 1);
             case 2:
-                int deg = new Random().nextInt(90) + 1;
+                int deg = random.nextInt(90) + 1;
                 return new RightTriangle(deg, 90 - deg,
-                        ColorSupplier.getRandomColor());
+                        colorSupplier.getRandomColor());
             case 3:
-                return new Circle(new Random().nextInt(50),
-                        ColorSupplier.getRandomColor());
+                return new Circle(random.nextInt(50),
+                        colorSupplier.getRandomColor());
             case 4:
-                int a = new Random().nextInt(100) + 1;
-                int b = new Random().nextInt(100) + 1;
-                int c = new Random().nextInt(100);
+            default:
+                int a = random.nextInt(100) + 1;
+                int b = random.nextInt(100) + 1;
+                int c = random.nextInt(100);
                 while (c + c <= a + b) {
-                    c = new Random().nextInt(100);
+                    c = random.nextInt(100);
                 }
                 return new IsoscelesTrapezoid(a, b, c,
-                        ColorSupplier.getRandomColor());
-            default:
-                break;
+                        colorSupplier.getRandomColor());
         }
-        return null;
     }
 
-    public Figure getDefaultFigure() {
-        return new Circle(RADIUS_CIRCLE, Colors.white);
+    public Figures getDefaultFigure() {
+        return new Circle(RADIUS_CIRCLE, Color.WHITE);
     }
 }

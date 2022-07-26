@@ -4,7 +4,7 @@ public class Rectangle extends Figures {
     private double first;
     private double second;
 
-    public Rectangle(Colors color, double first, double second) {
+    public Rectangle(Color color, double first, double second) {
         super(color);
         this.first = first;
         this.second = second;
@@ -13,6 +13,14 @@ public class Rectangle extends Figures {
     @Override
     public double getArea() {
         return first * second;
+    }
+
+    @Override
+    public String draw() {
+        return "Figure: rectangle, area: " + String.format("%(.1f", getArea())
+                + " sq.units, side a: " + first
+                + " units, side b: " + second
+                + " units, color: " + getColor();
     }
 
     public double getA() {
