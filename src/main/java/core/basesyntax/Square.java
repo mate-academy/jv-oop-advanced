@@ -20,8 +20,4 @@ public class Square extends Figures {
                 + " sq.units, side: " + lateral
                 + " units, color: " + getColor();
     }
-
-    public double getA() {
-        return lateral;
-    }
 }

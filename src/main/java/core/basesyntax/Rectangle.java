@@ -22,12 +22,4 @@ public class Rectangle extends Figures {
                 + " units, side b: " + second
                 + " units, color: " + getColor();
     }
-
-    public double getA() {
-        return first;
-    }
-
-    public double getB() {
-        return second;
-    }
 }

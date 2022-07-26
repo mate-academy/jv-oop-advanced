@@ -22,12 +22,4 @@ public class RightTriangle extends Figures {
                 + " units, secondLeg: " + secondLeg
                 + " units, color: " + getColor();
     }
-
-    public double getFirstLeg() {
-        return firstLeg;
-    }
-
-    public double getSecondLeg() {
-        return secondLeg;
-    }
 }

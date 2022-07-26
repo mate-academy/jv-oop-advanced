@@ -26,16 +26,4 @@ public class IsoscelesTrapezoid extends Figures {
                 + " units, c: " + lateral
                 + " units, color: " + getColor();
     }
-
-    public double getA() {
-        return firstbase;
-    }
-
-    public double getB() {
-        return secondbase;
-    }
-
-    public double getC() {
-        return lateral;
-    }
 }

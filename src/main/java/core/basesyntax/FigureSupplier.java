@@ -9,8 +9,7 @@ public class FigureSupplier {
     public Figures getRandomFigure() {
         ColorSupplier colorSupplier = new ColorSupplier();
         Random random = new Random();
-        Figures figures;
-        switch (new Random().nextInt(COUNT_FIGURES)) {
+        switch (random.nextInt(COUNT_FIGURES)) {
             case 0:
                 return new Square(colorSupplier.getRandomColor(),
                         random.nextInt(100) + 1);
