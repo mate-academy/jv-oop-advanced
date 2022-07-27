@@ -7,17 +7,18 @@ public class Rectangle extends Figure {
     public Rectangle(int firstLeg, int secondLeg, String color) {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        super.setColor(color);
+        setColor(color);
     }
 
     @Override
-    public String toString() {
-        return "Figure: rectangle, area: " + this.getArea() + " sq.units, firstLeg: " + firstLeg
-                + " units, secondLeg: " + secondLeg + " units, color: " + super.getColor();
-    }
-
-    @Override
-    public Double getArea() {
+    public Double getAreaCalculator() {
         return (double)firstLeg * secondLeg;
+    }
+
+    @Override
+    public void getDraw() {
+        System.out.println("Figure: rectangle, area: " + this.getAreaCalculator()
+                + " sq.units, firstLeg: " + firstLeg + " units, secondLeg: "
+                + secondLeg + " units, color: " + super.getColor());
     }
 }

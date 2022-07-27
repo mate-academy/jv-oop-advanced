@@ -9,19 +9,19 @@ public class IsoscelesTrapezoid extends Figure {
         this.high = leg;
         this.upbase = upbase;
         this.downbase = downbase;
-        super.setColor(color);
+        setColor(color);
     }
 
     @Override
-    public String toString() {
-        return "Figure: isosceles trapezoid, area: " + this.getArea() + " sq.units, high: "
-                + high + " units, upbase: " + upbase + " units, downbase: " + downbase
-                + " units, color: " + super.getColor();
-    }
-
-    @Override
-    public Double getArea() {
+    public Double getAreaCalculator() {
         return (double)((upbase + downbase) / 2 * high);
     }
 
+    @Override
+    public void getDraw() {
+        System.out.println("Figure: isosceles trapezoid, area: " + this.getAreaCalculator()
+                + " sq.units, high: " + high + " units, upbase: "
+                + upbase + " units, downbase: " + downbase + " units, color: "
+                + super.getColor());
+    }
 }
