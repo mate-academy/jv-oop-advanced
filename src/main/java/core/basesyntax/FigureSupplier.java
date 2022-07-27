@@ -23,7 +23,6 @@ public class FigureSupplier {
 
     private int getRandomNumber() {
         int maxRandomSideSize = 20;
-        // maxRandomSideSize + 1 to avoid zero value
         return new Random().nextInt(maxRandomSideSize) + 1;
     }
 }
