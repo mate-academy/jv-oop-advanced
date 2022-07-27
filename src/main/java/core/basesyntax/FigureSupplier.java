@@ -12,17 +12,17 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         int numberOfFigures = new Random().nextInt(FIGURES_COUNT);
         switch (numberOfFigures) {
-            case (1) :
+            case 1 :
                 return new Circle(colorSupplier.getRandomColor(), random.nextInt(BOUND));
-            case (2) :
+            case 2 :
                 return new Square(colorSupplier.getRandomColor(), random.nextInt(BOUND));
-            case (3) :
+            case 3 :
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(BOUND),
                     random.nextInt(BOUND), random.nextInt(BOUND));
-            case(4) :
+            case 4 :
                 return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(BOUND),
                     random.nextInt(BOUND));
-            case (5) :
+            case 5 :
                 return new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(BOUND),
                     random.nextInt(BOUND));
             default:
