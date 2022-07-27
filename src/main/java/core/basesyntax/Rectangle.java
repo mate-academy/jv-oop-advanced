@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figures {
+public class Rectangle extends Figure {
     private double first;
     private double second;
 

@@ -6,7 +6,7 @@ public class FigureSupplier {
     private static final int RADIUS_CIRCLE = 6;
     private static final int COUNT_FIGURES = 5;
 
-    public Figures getRandomFigure() {
+    public Figure getRandomFigure() {
         ColorSupplier colorSupplier = new ColorSupplier();
         Random random = new Random();
         switch (random.nextInt(COUNT_FIGURES)) {
@@ -37,7 +37,7 @@ public class FigureSupplier {
         }
     }
 
-    public Figures getDefaultFigure() {
+    public Figure getDefaultFigure() {
         return new Circle(RADIUS_CIRCLE, Color.WHITE);
     }
 }
