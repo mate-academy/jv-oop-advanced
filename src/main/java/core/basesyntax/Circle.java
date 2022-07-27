@@ -1,12 +1,7 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    static final double PI = 3.14;
     private int radius;
-
-    public Circle() {
-
-    }
 
     public void setRadius(int radius) {
         this.radius = radius;
@@ -14,7 +9,7 @@ public class Circle extends Figure {
 
     @Override
     public double getArea() {
-        return PI * radius * radius;
+        return Math.PI * radius * radius;
     }
 
     @Override

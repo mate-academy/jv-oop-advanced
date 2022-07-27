@@ -5,10 +5,6 @@ public class IsoscelesTrapezoid extends Figure {
     private int secondBase;
     private int high;
 
-    public IsoscelesTrapezoid() {
-
-    }
-
     public void setFirstBase(int firstBase) {
         this.firstBase = firstBase;
     }

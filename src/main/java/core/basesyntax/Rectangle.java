@@ -4,10 +4,6 @@ public class Rectangle extends Figure {
     private int firstSide;
     private int secondSide;
 
-    public Rectangle() {
-
-    }
-
     public void setFirstSide(int firstSide) {
         this.firstSide = firstSide;
     }

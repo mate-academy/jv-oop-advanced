@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public enum GeometricFigures {
+public enum GeometricFigure {
     SQUARE,
     RECTANGLE,
     RIGHTTRIANGLE,
