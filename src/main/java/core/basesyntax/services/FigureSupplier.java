@@ -37,13 +37,12 @@ public class FigureSupplier {
                         random.nextInt(MAX_LENGTH - 1) + 1,
                         colorSupplier.getRandomColor());
             case TRAPEZOID:
+            default:
                 return new IsoscelesTrapezoid(
                         random.nextInt(MAX_LENGTH - 1) + 1,
                         random.nextInt(MAX_LENGTH - 1) + 1,
                         random.nextInt(MAX_LENGTH - 1) + 1,
                         colorSupplier.getRandomColor());
-            default:
-                return null;
         }
     }
 
