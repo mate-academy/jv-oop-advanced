@@ -10,7 +10,8 @@ public class Circle extends Figure implements Area {
 
     @Override
     public String toString() {
-        return "Figure: circle, area: " + this.getArea() + " sq.units, radius: " + radius + " units, color: " + super.getColor();
+        return "Figure: circle, area: " + this.getArea() + " sq.units, radius: " + radius
+                + " units, color: " + super.getColor();
     }
 
     @Override

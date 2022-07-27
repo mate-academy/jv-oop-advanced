@@ -12,7 +12,9 @@ public class RightTriangle extends Figure implements Area {
 
     @Override
     public String toString() {
-        return "Figure: right triangle, area: " + this.getArea() + " sq.units, firstLeg: " + firstLeg + " units, secondLeg: " + secondLeg + " units, color: " + super.getColor();
+        return "Figure: right triangle, area: " + this.getArea() + " sq.units, firstLeg: "
+                + firstLeg + " units, secondLeg: " + secondLeg + " units, color: "
+                + super.getColor();
     }
 
     @Override

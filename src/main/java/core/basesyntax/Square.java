@@ -15,6 +15,7 @@ public class Square extends Figure implements Area {
 
     @Override
     public String toString() {
-        return "Figure: square, area: " + this.getArea() + " sq.units, firstLag: " + firstLag + " units, color: " + super.getColor();
+        return "Figure: square, area: " + this.getArea() + " sq.units, firstLag: " + firstLag
+                + " units, color: " + super.getColor();
     }
 }
