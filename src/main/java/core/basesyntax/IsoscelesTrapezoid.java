@@ -44,7 +44,6 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
         return this.color;
     }
 
-
     @Override
     public int countArea() {
         return ((downSide + upSide) / 2) * height;
