@@ -9,7 +9,7 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
         this.downSide = a;
         this.upSide = b;
         this.height = c;
-        this.color = color;
+        setColor(color);
     }
 
     public void setHeight(int height) {
@@ -24,10 +24,6 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
         this.downSide = downSide;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
     public int getHeight() {
         return this.height;
     }
@@ -40,10 +36,6 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
         return this.downSide;
     }
 
-    public String getColor() {
-        return this.color;
-    }
-
     @Override
     public int countArea() {
         return ((downSide + upSide) / 2) * height;
@@ -51,7 +43,7 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
 
     @Override
     public String draw() {
-        return "Figure: Isosceles Trapezoid\n\tcolor - " + this.color + ";"
+        return "Figure: Isosceles Trapezoid\n\tcolor - " + getColor() + ";"
                 + "\n\t area - " + this.countArea() + " sq. units;"
                 + "\n\t height - " + this.height + " units;"
                 + "\n\t down side - " + this.downSide + " units;"

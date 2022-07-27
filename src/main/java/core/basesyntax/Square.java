@@ -5,23 +5,15 @@ public class Square extends Figure {
 
     public Square(int a, String color) {
         this.side = a;
-        this.color = color;
+        setColor(color);
     }
 
     public void setSide(int a) {
         this.side = a;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
     public int getSide() {
         return this.side;
-    }
-
-    public String getColor() {
-        return this.color;
     }
 
     @Override
@@ -31,7 +23,7 @@ public class Square extends Figure {
 
     @Override
     public String draw() {
-        return "Figure: Square\n\tcolor - " + this.color + ";"
+        return "Figure: Square\n\tcolor - " + getColor() + ";"
                 + "\n\t area - " + this.countArea() + " sq. units;"
                 + "\n\t side - " + this.side + " units.";
     }

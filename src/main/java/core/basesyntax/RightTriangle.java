@@ -7,7 +7,7 @@ public class RightTriangle extends Figure {
     public RightTriangle(int height, int side, String color) {
         this.firstLeg = height;
         this.secondLeg = side;
-        this.color = color;
+        setColor(color);
     }
 
     public void setSide(int side) {
@@ -18,20 +18,12 @@ public class RightTriangle extends Figure {
         this.firstLeg = height;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
     public int getSide() {
         return this.secondLeg;
     }
 
     public int getHeight() {
         return this.firstLeg;
-    }
-
-    public String getColor() {
-        return this.color;
     }
 
     @Override
@@ -41,7 +33,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public String draw() {
-        return "Figure: Square\n\tcolor - " + this.color + ";"
+        return "Figure: Square\n\tcolor - " + getColor() + ";"
                 + "\n\t area - " + this.countArea() + " sq. units;"
                 + "\n\t firstLeg - " + this.firstLeg + " units;"
                 + "\n\t side - " + this.secondLeg + " units.";
