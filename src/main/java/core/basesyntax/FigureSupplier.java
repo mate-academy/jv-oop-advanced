@@ -30,13 +30,11 @@ public class FigureSupplier {
                 break;
             case 3:
                 figure = new RightTriangle(colorSupplier.getRandomColor(),
+                        random.nextInt(LIMIT_VALUE),
                         random.nextInt(LIMIT_VALUE));
                 break;
-            case 4:
-                figure = new Square(colorSupplier.getRandomColor(), random.nextInt(LIMIT_VALUE));
-                break;
             default:
-                break;
+                figure = new Square(colorSupplier.getRandomColor(), random.nextInt(LIMIT_VALUE));
         }
         return figure;
     }
