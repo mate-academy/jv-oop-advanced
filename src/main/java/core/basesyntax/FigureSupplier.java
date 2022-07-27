@@ -5,24 +5,30 @@ import java.util.Random;
 public class FigureSupplier {
     public Figure getDefaultFigure() {
         int defaultSideSizeValue = 10;
-        Circle circle = new Circle(defaultSideSizeValue);
+        Circle circle = new Circle(defaultSideSizeValue, getRandomColor());
         circle.setColor(Color.WHITE.toString());
         return circle;
     }
 
     public Figure getRandomFigure() {
         switch (new Random().nextInt(Shape.values().length)) {
-            case 1 : return new Square(getRandomNumber());
-            case 2 : return new RightTriangle(getRandomNumber(), getRandomNumber());
-            case 3 : return new Rectangle(getRandomNumber(), getRandomNumber());
+            case 1 : return new Square(getRandomNumber(), getRandomColor());
+            case 2 : return new RightTriangle(getRandomNumber(), getRandomNumber(),
+                    getRandomColor());
+            case 3 : return new Rectangle(getRandomNumber(), getRandomNumber(), getRandomColor());
             case 4 : return new IsoscelesTrapezoid(getRandomNumber(),
-                    getRandomNumber(), getRandomNumber());
-            default: return new Circle(getRandomNumber());
+                    getRandomNumber(), getRandomNumber(), getRandomColor());
+            default: return new Circle(getRandomNumber(), getRandomColor());
         }
     }
 
     private int getRandomNumber() {
         int maxRandomSideSize = 20;
         return new Random().nextInt(maxRandomSideSize) + 1;
+    }
+
+    private String getRandomColor() {
+        ColorSupplier randomColor = new ColorSupplier();
+        return randomColor.getRandomColor();
     }
 }
