@@ -11,18 +11,23 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int numberOfFigures = new Random().nextInt(FIGURES_COUNT);
-        return numberOfFigures == 1
-                ? new Circle(colorSupplier.getRandomColor(), random.nextInt(BOUND))
-                : numberOfFigures == 2
-                ? new Square(colorSupplier.getRandomColor(), random.nextInt(BOUND))
-                : numberOfFigures == 3
-                ? new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(BOUND),
-                random.nextInt(BOUND), random.nextInt(BOUND))
-                : numberOfFigures == 4
-                ? new Rectangle(colorSupplier.getRandomColor(), random.nextInt(BOUND),
-                random.nextInt(BOUND))
-                : new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(BOUND),
-                random.nextInt(BOUND));
+        switch (numberOfFigures) {
+            case (1) :
+                return new Circle(colorSupplier.getRandomColor(), random.nextInt(BOUND));
+            case (2) :
+                return new Square(colorSupplier.getRandomColor(), random.nextInt(BOUND));
+            case (3) :
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(BOUND),
+                    random.nextInt(BOUND), random.nextInt(BOUND));
+            case(4) :
+                return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(BOUND),
+                    random.nextInt(BOUND));
+            case (5) :
+                return new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(BOUND),
+                    random.nextInt(BOUND));
+            default:
+                return getDefaultFigure();
+        }
     }
 
     public Figure getDefaultFigure() {
