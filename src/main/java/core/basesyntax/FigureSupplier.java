@@ -6,7 +6,7 @@ public class FigureSupplier {
     public Figure getDefaultFigure() {
         int defaultSideSizeValue = 10;
         Circle circle = new Circle(defaultSideSizeValue);
-        circle.setColor(Colors.WHITE.toString());
+        circle.setColor(Color.WHITE.toString());
         return circle;
     }
 
