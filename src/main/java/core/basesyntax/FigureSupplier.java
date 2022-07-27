@@ -10,8 +10,7 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int bondsOfRandom = NUMBER_OF_FIGURES - 1;
-        int figureNumber = random.nextInt(bondsOfRandom);
+        int figureNumber = random.nextInt(NUMBER_OF_FIGURES);
 
         switch (figureNumber) {
             case 0:
