@@ -1,7 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Shape {
-    private ColorSupplier cs = new ColorSupplier();
+public class IsoscelesTrapezoid extends Figure {
     private double firstBase;
     private double secondBase;
     private double height;
@@ -37,14 +36,15 @@ public class IsoscelesTrapezoid extends Shape {
         this.height = height;
     }
 
-    public double getArea(double firstBase, double secondBase, double height) {
+    @Override
+    public double getArea() {
         return (firstBase + secondBase) / 2 * height;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: Isosceles Trapezoid , area: "
-                + getArea(firstBase, secondBase, height)
+                + getArea()
                 + ", firstBase: " + firstBase + ", secondBase: "
                 + secondBase + ", height: " + height
                 + ", color: " + getColor());

@@ -1,7 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Shape {
-    private ColorSupplier cs = new ColorSupplier();
+public class RightTriangle extends Figure {
     private double baseLeg;
     private double heightLeg;
 
@@ -27,13 +26,14 @@ public class RightTriangle extends Shape {
         this.heightLeg = heightLeg;
     }
 
-    public double getArea(double baseLeg, double heightLeg) {
+    @Override
+    public double getArea() {
         return (baseLeg * heightLeg) / 2;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: Right Triangle , area: " + getArea(baseLeg,heightLeg)
+        System.out.println("Figure: Right Triangle , area: " + getArea()
                 + ", baseLeg: " + baseLeg + ", heightLeg: " + heightLeg
                 + ", color: " + getColor());
     }
