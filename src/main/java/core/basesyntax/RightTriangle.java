@@ -1,11 +1,11 @@
 package core.basesyntax;
 
-public class Triangle implements Figure{
+public class RightTriangle extends Color {
     private int side;
     private int height;
     private String color;
 
-    public Triangle(int side, int height, String color) {
+    public RightTriangle(int side, int height, String color) {
         this.side = side;
         this.height = height;
         this.color = color;
@@ -13,7 +13,7 @@ public class Triangle implements Figure{
 
     @Override
     public double getArea() {
-        return side * height;
+        return (side * height) / 2;
     }
 
     @Override
@@ -23,7 +23,7 @@ public class Triangle implements Figure{
 
     @Override
     public String getDraw() {
-        return "This is Triangle. I have Area: " + getArea() + "; side: " + side + "; height: " + height
-                + "; and have color: " + getColor();
+        return "This is Right Triangle. I have Area: " + getArea() + "; side: " + side + "; height: "
+                + height + "; and have color: " + getColor();
     }
 }

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle implements Figure {
+public class Circle extends Color {
     private int radius;
     private String color;
 
@@ -21,6 +21,7 @@ public class Circle implements Figure {
 
     @Override
     public String getDraw() {
-        return "This is Circle. I have Area: " + getArea() + "; radius: " + radius + "; and have color: " + getColor();
+        return "This is Circle. I have Area: " + getArea() + "; radius: "
+                + radius + "; and have color: " + getColor();
     }
 }
