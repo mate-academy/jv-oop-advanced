@@ -7,8 +7,7 @@ public class IsoscelesTrapezoid extends Figure {
     public IsoscelesTrapezoid(int height, int sumParallelSides,String color) {
         this.height = height;
         this.sumParallelSides = sumParallelSides;
-        super.setColor(color);
-        setArea(calculateArea());
+        setColor(color);
     }
 
     public double calculateArea() {
@@ -18,7 +17,7 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public void getPrintInfo() {
         System.out.println("Figure: IsoscelesTrapezoid, area: "
-                + getArea() + " sq. units,  height: "
+                + calculateArea() + " sq. units,  height: "
                 + height + " units, sum of the two sides:"
                 + sumParallelSides + ", color: " + getColor());
     }

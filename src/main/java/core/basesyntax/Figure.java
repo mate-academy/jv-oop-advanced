@@ -1,16 +1,7 @@
 package core.basesyntax;
 
-public abstract class Figure implements Drowing {
+public abstract class Figure implements Drowing,AreaCalculator {
     private String color;
-    private double area;
-
-    public double getArea() {
-        return area;
-    }
-
-    public void setArea(double area) {
-        this.area = area;
-    }
 
     public String getColor() {
         return color;

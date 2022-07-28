@@ -6,9 +6,10 @@ public class FigureSupplier {
     private static final int DEFAULT_RADIUS = 10;
     private static final int NUMBER_FIGURES = 5;
     private static final int MAX_NUMBER_PARAMETERS = 10;
+    private Random random = new Random();
 
     public Figure getRandomFigure() {
-        Random random = new Random();
+        //
         int index = random.nextInt(NUMBER_FIGURES);
         switch (index) {
             case 0 :
@@ -30,7 +31,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        //Figure figure = new Circle(DEFAULT_RADIUS,Color.WHITE.name().toLowerCase());
-        return new Circle(DEFAULT_RADIUS, Color.WHITE.name().toLowerCase());
+        Figure figure = new Circle(DEFAULT_RADIUS, Color.WHITE.name());
+        return figure;
     }
 }

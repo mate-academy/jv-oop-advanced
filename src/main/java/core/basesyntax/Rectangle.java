@@ -7,8 +7,7 @@ public class Rectangle extends Figure {
     public Rectangle(int height, int widthSide,String color) {
         this.lengthSide = height;
         this.widthSide = widthSide;
-        super.setColor(color);
-        setArea(calculateArea());
+        setColor(color);
     }
 
     public double calculateArea() {
@@ -18,7 +17,7 @@ public class Rectangle extends Figure {
     @Override
     public void getPrintInfo() {
         System.out.println("Figure: Rectangle, area: "
-                + getArea() + " sq. units,  lengthSide: "
+                + calculateArea() + " sq. units,  lengthSide: "
                 + lengthSide + ", widthSide:" + widthSide
                 + ", color: " + getColor());
     }
