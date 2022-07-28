@@ -19,16 +19,16 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public float areaOfFigure() {
+    public float getArea() {
         return sideA * sideB;
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         StringBuilder sb = new StringBuilder();
         System.out.println(
                 sb.append("Figure: rectangle, area: ")
-                        .append(areaOfFigure())
+                        .append(getArea())
                         .append(" sq.units, height: ")
                         .append(sideA)
                         .append("units, weight: ")

@@ -8,9 +8,9 @@ public class FigureSupplier {
     private static final int CIRCLE_RADIUS = 10;
 
     public Figure getRandomFigure() {
-        int indexOfFigure = new Random().nextInt(FIGURE_COUNT);
+        int index = new Random().nextInt(FIGURE_COUNT);
         ColorSupplier colorSupplier = new ColorSupplier();
-        switch (indexOfFigure) {
+        switch (index) {
             case 0:
                 return new Square(colorSupplier.getRandomColor(), getRandomValue());
             case 1:
@@ -26,11 +26,11 @@ public class FigureSupplier {
         }
     }
 
-    protected int getRandomValue() {
+    private int getRandomValue() {
         return new Random().nextInt(MAX_RAND_VALUE);
     }
 
-    protected Figure getDefaultFigure() {
+    public Figure getDefaultFigure() {
         return new Circle(Color.WHITE.toString(), CIRCLE_RADIUS);
     }
 }

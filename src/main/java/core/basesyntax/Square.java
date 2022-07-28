@@ -13,16 +13,16 @@ public class Square extends Figure {
     }
 
     @Override
-    public float areaOfFigure() {
+    public float getArea() {
         return side * side;
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         StringBuilder sb = new StringBuilder();
         System.out.println(
                 sb.append("Figure: square, area: ")
-                        .append(areaOfFigure())
+                        .append(getArea())
                         .append(" sq.units, side: ")
                         .append(side)
                         .append(" units, color: ")

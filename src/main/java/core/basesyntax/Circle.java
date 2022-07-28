@@ -13,16 +13,16 @@ public class Circle extends Figure {
     }
 
     @Override
-    public float areaOfFigure() {
+    public float getArea() {
         return (float) (Math.PI * radius * radius);
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         StringBuilder sb = new StringBuilder();
         System.out.println(
                 sb.append("Figure: circle, area: ")
-                        .append(areaOfFigure())
+                        .append(getArea())
                         .append(" sq.units, radius: ")
                         .append(radius)
                         .append(" units, color: ")

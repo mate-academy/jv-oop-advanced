@@ -13,16 +13,16 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public float areaOfFigure() {
+    public float getArea() {
         return (float) (Math.sqrt(3) * side * side) / 4;
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         StringBuilder sb = new StringBuilder();
         System.out.println(
                 sb.append("Figure: RightTriangle, area: ")
-                        .append(areaOfFigure())
+                        .append(getArea())
                         .append(" sq.units, side: ")
                         .append(side)
                         .append(" units, color: ")
