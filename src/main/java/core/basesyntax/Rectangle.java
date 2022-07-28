@@ -12,7 +12,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println(START_MASSAGE + this +  ", area: " + this.getArea() + " sq.units.");
+        System.out.println(START_MASSAGE + this + ", area: " + this.getArea() + " sq.units.");
     }
 
     @Override

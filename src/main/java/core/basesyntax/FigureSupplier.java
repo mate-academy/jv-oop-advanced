@@ -3,8 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final static String DEFAULT_COLOR = ColorSupplier.Color.WHITE.toString();
-    private final static int DEFAULT_RADIUS = 10;
+    private static final String DEFAULT_COLOR = ColorSupplier.Color.WHITE.toString();
+    private static final int DEFAULT_RADIUS = 10;
 
     public Figure getRandomFigure() {
         Random random = new Random();
