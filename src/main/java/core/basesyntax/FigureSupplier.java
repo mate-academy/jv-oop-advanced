@@ -1,6 +1,5 @@
 package core.basesyntax;
 
-import java.util.Locale;
 import java.util.Random;
 
 public class FigureSupplier {
@@ -8,7 +7,7 @@ public class FigureSupplier {
     private static final int NUMBER_FIGURES = 5;
     private static final int MAX_NUMBER_PARAMETERS = 10;
 
-    public Figure getRandomFigure(){
+    public Figure getRandomFigure() {
         Random random = new Random();
         int index = random.nextInt(NUMBER_FIGURES);
         switch (index) {
