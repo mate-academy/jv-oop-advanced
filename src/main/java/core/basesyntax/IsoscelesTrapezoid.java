@@ -1,8 +1,8 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    int height;
-    int sumParallelSides;
+    private int height;
+    private int sumParallelSides;
 
     public IsoscelesTrapezoid(int height, int sumParallelSides,String color) {
         this.height = height;
@@ -14,8 +14,12 @@ public class IsoscelesTrapezoid extends Figure {
     public double calculateArea() {
         return sumParallelSides * height / 2;
     }
+
     @Override
     public void getPrintInfo() {
-        System.out.println("Figure: isoscelesTrapezoid, area: " + getArea() + " sq. units,  height: "+ height + " units, sum of the two sides:" + sumParallelSides + ", color: " + getColor());
+        System.out.println("Figure: IsoscelesTrapezoid, area: "
+                + getArea() + " sq. units,  height: "
+                + height + " units, sum of the two sides:"
+                + sumParallelSides + ", color: " + getColor());
     }
 }

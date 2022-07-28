@@ -8,7 +8,7 @@ public class Main {
             if (i / 2 == 0) {
                 figures[i] = figureSupplier.getRandomFigure();
             } else {
-                figures[i] = figureSupplier.getRandomFigure();
+                figures[i] = figureSupplier.getDefaultFigure();
             }
         }
         for (Figure figure : figures) {
