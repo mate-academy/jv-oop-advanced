@@ -1,4 +1,6 @@
-package core.basesyntax;
+package core.basesyntax.service;
+
+import core.basesyntax.figure.*;
 
 import java.util.Random;
 

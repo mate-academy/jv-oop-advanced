@@ -1,5 +1,8 @@
 package core.basesyntax;
 
+import core.basesyntax.figure.Figure;
+import core.basesyntax.service.FigureSupplier;
+
 public class Main {
     public static void main(String[] args) {
         Figure[] figures = new Figure[6];
