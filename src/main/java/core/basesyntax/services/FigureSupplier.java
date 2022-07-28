@@ -15,7 +15,7 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         ColorSupplier colorSupplier = new ColorSupplier();
         Random random = new Random();
-        int index = random.nextInt(core.basesyntax.enums.Figure.values().length - 1) + 1;
+        int index = random.nextInt(core.basesyntax.enums.Figure.values().length);
         core.basesyntax.enums.Figure selectFigure = core.basesyntax.enums.Figure.values()[index];
         switch (selectFigure) {
             case CIRCLE:

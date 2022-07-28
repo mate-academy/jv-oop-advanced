@@ -4,8 +4,8 @@ public class Square extends Figure {
     private int side;
 
     public Square(int side, String color) {
+        super(color);
         this.side = side;
-        this.color = color;
     }
 
     public double getSide() {
@@ -17,7 +17,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return getSide() * getSide();
     }
 
@@ -29,7 +29,7 @@ public class Square extends Figure {
                 .append(" units, color - ")
                 .append(getColor())
                 .append(", area - ")
-                .append(area())
+                .append(getArea())
                 .append(" sq.units");
         return info.toString();
     }

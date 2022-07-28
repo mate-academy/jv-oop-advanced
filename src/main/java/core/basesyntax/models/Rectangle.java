@@ -5,9 +5,9 @@ public class Rectangle extends Figure {
     private int sideB;
 
     public Rectangle(int sideA, int sideB, String color) {
+        super(color);
         this.sideA = sideA;
         this.sideB = sideB;
-        this.color = color;
     }
 
     public int getSideA() {
@@ -27,7 +27,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return getSideA() * getSideB();
     }
 
@@ -41,7 +41,7 @@ public class Rectangle extends Figure {
                 .append(" units, color - ")
                 .append(getColor())
                 .append(", area - ")
-                .append(area())
+                .append(getArea())
                 .append(" sq.units");
         return info.toString();
     }
