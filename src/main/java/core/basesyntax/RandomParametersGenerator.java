@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public interface GetRandomParameters {
+public interface RandomParametersGenerator {
     Figure getRandomParameters();
 }

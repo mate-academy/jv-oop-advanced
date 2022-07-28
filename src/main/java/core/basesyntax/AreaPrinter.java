@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public interface PrintArea {
+public interface AreaPrinter {
     void printArea();
 }

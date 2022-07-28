@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements PrintArea, GetRandomParameters, GetArea {
+public abstract class Figure implements AreaPrinter, RandomParametersGenerator, AreaCalculator {
     public static final int NUMBER_OF_FIGURES = 5;
     public static final int MAX_VALUE_OF_PARAM = 25;
     private Color color;
