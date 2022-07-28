@@ -1,11 +1,10 @@
 package auxiliary;
 
-public abstract class Figure implements Draw, GetArea {
-    protected String color;
+public abstract class Figure implements Drawable, GetArea {
+    private String color;
 
-    public void setRandomColor() {
-        ColorSupplier colorSupplier = new ColorSupplier();
-        this.color = colorSupplier.getRandomColor();
+    public Figure(String color) {
+        this.color = color;
     }
 
     public void setColor(String color) {
@@ -15,5 +14,4 @@ public abstract class Figure implements Draw, GetArea {
     public String getColor() {
         return color;
     }
-
 }

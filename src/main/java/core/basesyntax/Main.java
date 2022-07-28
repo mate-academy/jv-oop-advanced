@@ -16,24 +16,21 @@ public class Main {
 
     public static void print(Figure[] figures) {
         for (Figure figure : figures) {
-            System.out.println(figure.toString());
+            System.out.println(figure.getInfo());
         }
     }
 
     public static void main(String[] args) {
-        FigureSupplier figureS = new FigureSupplier();
+        FigureSupplier figureSupplier = new FigureSupplier();
         int number = randNumberOfArray();
-        if (number == 3) {
-            Figure[] figure = {figureS.getRandomFigure(),
-                    figureS.getRandomFigure(),
-                    figureS.getDefFigure()};
-            print(figure);
-        } else {
-            Figure[] figure = {figureS.getRandomFigure(), figureS.getRandomFigure(),
-                    figureS.getRandomFigure(), figureS.getDefFigure(),
-                    figureS.getDefFigure(), figureS.getDefFigure()};
-            print(figure);
+        Figure[] figure = new Figure[number];
+        for (int i = 0; i < number; i++) {
+            if (i < number / 2) {
+                figure[i] = figureSupplier.getRandomFigure();
+            } else {
+                figure[i] = figureSupplier.getDefFigure();
+            }
         }
+        print(figure);
     }
-
 }

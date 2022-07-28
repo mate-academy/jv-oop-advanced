@@ -9,27 +9,33 @@ import java.util.Random;
 
 public class FigureSupplier {
     private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int number = random.nextInt(TypeOfFigure.values().length);
-        if (number == 1) {
-            return new Square(getRandNumber());
-        } else if (number == 2) {
-            return new Circle(getRandNumber());
-        } else if (number == 3) {
-            return new Rectangle(getRandNumber(), getRandNumber());
-        } else if (number == 4) {
-            return new RightTriangle(getRandNumber(), getRandNumber());
-        } else {
-            return new IsoscelesTrapezoid(getRandNumber(), getRandNumber());
+        switch (random.nextInt(TypeOfFigure.values().length)) {
+            case 1: {
+                return new Square(getRandNumber(), colorSupplier.getRandomColor());
+            }
+            case 2: {
+                return new Circle(getRandNumber(), colorSupplier.getRandomColor());
+            }
+            case 3: {
+                return new Rectangle(getRandNumber(), getRandNumber(),
+                        colorSupplier.getRandomColor());
+            }
+            case 4: {
+                return new RightTriangle(getRandNumber(), getRandNumber(),
+                        colorSupplier.getRandomColor());
+            }
+            default: {
+                return new IsoscelesTrapezoid(getRandNumber(), getRandNumber(),
+                        colorSupplier.getRandomColor());
+            }
         }
     }
 
     public Figure getDefFigure() {
-        int defaultSize = 10;
-        Circle circle = new Circle(defaultSize);
-        circle.setColor(Color.WHITE.toString());
-        return circle;
+        return new Circle(10, Color.WHITE.toString());
     }
 
     public int getRandNumber() {

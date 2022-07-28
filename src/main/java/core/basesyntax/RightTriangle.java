@@ -6,8 +6,8 @@ public class RightTriangle extends Figure {
     private final int firstLeg;
     private final int secondLeg;
 
-    public RightTriangle(int firstLeg, int secondLeg) {
-        super.setRandomColor();
+    public RightTriangle(int firstLeg, int secondLeg, String color) {
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
@@ -17,8 +17,7 @@ public class RightTriangle extends Figure {
         return Math.round((firstLeg * secondLeg / 2) * 100.0) / 100.0;
     }
 
-    @Override
-    public String toString() {
+    public String getInfo() {
         return "Figure: RightTriangle, "
                 + "area: " + getArea() + " sq.units, "
                 + "firstLeg: " + firstLeg + " units, "

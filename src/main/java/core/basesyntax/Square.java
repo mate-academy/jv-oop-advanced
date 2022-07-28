@@ -5,8 +5,8 @@ import auxiliary.Figure;
 public class Square extends Figure {
     private final int side;
 
-    public Square(int side) {
-        super.setRandomColor();
+    public Square(int side, String color) {
+        super(color);
         this.side = side;
     }
 
@@ -15,7 +15,7 @@ public class Square extends Figure {
         return Math.round((Math.pow(side, 2)) * 100.0) / 100.0;
     }
 
-    public String toString() {
+    public String getInfo() {
         return "Figure: Square, "
                 + "area: " + getArea() + " sq.units, "
                 + "side: " + side + " units, "
