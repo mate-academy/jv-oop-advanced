@@ -10,5 +10,4 @@ public abstract class Figure implements PhysicalProperty {
     public String getColor() {
         return color;
     }
-
 }
