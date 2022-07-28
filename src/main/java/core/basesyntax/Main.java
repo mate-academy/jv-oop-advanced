@@ -4,7 +4,6 @@ public class Main {
     private static final int SIZE = 6;
 
     public static void main(String[] args) {
-
         FigureSupplier supplier = new FigureSupplier();
         Figure[] figures = new Figure[SIZE];
 
@@ -17,11 +16,7 @@ public class Main {
         }
 
         for (Figure figure : figures) {
-            System.out.println(showInfo(figure));
+            figure.draw();
         }
-    }
-
-    private static String showInfo(Figure figure) {
-        return "Figure: " + figure + ", area: " + figure.getArea() + " sq.units.";
     }
 }

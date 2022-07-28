@@ -3,43 +3,35 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final String defaultColor = ColorSupplier.Color.WHITE.toString();
-    private final int defaultRadius = 10;
+    private final static String DEFAULT_COLOR = ColorSupplier.Color.WHITE.toString();
+    private final static int DEFAULT_RADIUS = 10;
 
     public Figure getRandomFigure() {
-        Figure figure;
         Random random = new Random();
         Shape shape = Shape.values()[random.nextInt(Shape.values().length)];
         String color = new ColorSupplier().getRandomColor();
         int firstSize = random.nextInt(Figure.MAX_SIDE);
         switch (shape) {
             case CIRCLE:
-                figure = new Circle(color, firstSize);
-                break;
+                return new Circle(color, firstSize);
             case SQUARE:
-                figure = new Square(color, firstSize);
-                break;
+                return new Square(color, firstSize);
             case RECTANGLE:
-                figure = new Rectangle(color, firstSize, random.nextInt(Figure.MAX_SIDE));
-                break;
+                return new Rectangle(color, firstSize, random.nextInt(Figure.MAX_SIDE));
             case TRIANGLE:
-                figure = new RightTriangle(color, firstSize);
-                break;
+                return new RightTriangle(color, firstSize);
             case TRAPEZOID:
-                figure = new IsoscelesTrapezoid(color,
+            default:
+                return new IsoscelesTrapezoid(color,
                         firstSize,
                         random.nextInt(Figure.MAX_SIDE),
                         random.nextInt(Figure.MAX_SIDE)
                 );
-                break;
-            default:
-                figure = null;
         }
-        return figure;
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(defaultColor, defaultRadius);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
     private enum Shape { CIRCLE, SQUARE, RECTANGLE, TRIANGLE, TRAPEZOID }

@@ -14,7 +14,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Isoscales trapezoid is drawn. ");
+        System.out.println(START_MASSAGE + this +  ", area: " + this.getArea() + " sq.units.");
     }
 
     @Override
