@@ -1,10 +1,18 @@
 package core.basesyntax;
 
+import core.basesyntax.figure.Circle;
+import core.basesyntax.figure.IsoscelesTrapezoid;
+import core.basesyntax.figure.Rectangle;
+import core.basesyntax.figure.RightTriangle;
+import core.basesyntax.figure.Square;
 import java.util.Random;
 
 public class FigureSupplier extends ColorSupplier {
+
     private static final int MAX_SIDE = 10;
     private static final int INDEX = 4;
+    private static final int DEFAULT_CIRCLE_RADIUS = 10;
+    private static final FigureColor DEFAULT_CIRCLE_COLOR = FigureColor.WHITE;
     private Random random = new Random();
 
     public Figure getRandomFigure() {
@@ -12,33 +20,27 @@ public class FigureSupplier extends ColorSupplier {
         int index = random.nextInt(INDEX);
         switch (index) {
             case 1:
-                Square square = new Square(random.nextInt(MAX_SIDE),
+                return new Square(random.nextInt(MAX_SIDE),
                         colorSupplier.getRandomColor());
-                return square;
             case 2:
-                Rectangle rectangle = new Rectangle(random.nextInt(MAX_SIDE),
+                return new Rectangle(random.nextInt(MAX_SIDE),
                         random.nextInt(MAX_SIDE),
                         colorSupplier.getRandomColor());
-                return rectangle;
             case 3:
-                Circle circle = new Circle(random.nextInt(MAX_SIDE),
+                return new Circle(random.nextInt(MAX_SIDE),
                         colorSupplier.getRandomColor());
-                return circle;
             case 4:
-                IsoscelesTrapezoid trapezoid = new IsoscelesTrapezoid(random.nextInt(MAX_SIDE),
+                return new IsoscelesTrapezoid(random.nextInt(MAX_SIDE),
                         random.nextInt(MAX_SIDE), random.nextInt(MAX_SIDE),
                         colorSupplier.getRandomColor());
-                return trapezoid;
             default:
-                RightTriangle rightTriangle = new RightTriangle(random.nextInt(MAX_SIDE),
+                return new RightTriangle(random.nextInt(MAX_SIDE),
                         random.nextInt(MAX_SIDE),
                         colorSupplier.getRandomColor());
-                return rightTriangle;
         }
     }
 
     public Figure getDefaultFigure() {
-        Circle circleDefault = new Circle(10, "WHITE");
-        return circleDefault;
+        return new Circle(DEFAULT_CIRCLE_RADIUS, DEFAULT_CIRCLE_COLOR);
     }
 }

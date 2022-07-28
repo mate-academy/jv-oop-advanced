@@ -1,21 +1,19 @@
-package core.basesyntax;
+package core.basesyntax.figure;
+
+import core.basesyntax.Color;
+import core.basesyntax.FigureColor;
 
 public class IsoscelesTrapezoid extends Color {
-    private String color;
+
     private int upperSide;
     private int downSide;
     private int elevation;
 
-    public IsoscelesTrapezoid(int upperSide, int downSide, int elevation, String color) {
+    public IsoscelesTrapezoid(int upperSide, int downSide, int elevation, FigureColor color) {
         this.color = color;
         this.upperSide = upperSide;
         this.downSide = downSide;
         this.elevation = elevation;
-    }
-
-    @Override
-    public String getColor() {
-        return color;
     }
 
     @Override

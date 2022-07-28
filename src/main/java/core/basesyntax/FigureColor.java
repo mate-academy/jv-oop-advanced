@@ -8,5 +8,6 @@ public enum FigureColor {
     GREEN,
     GRAY,
     YELLOW,
+    WHITE,
     PINK;
 }

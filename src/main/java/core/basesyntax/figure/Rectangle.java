@@ -1,11 +1,13 @@
-package core.basesyntax;
+package core.basesyntax.figure;
+
+import core.basesyntax.Color;
+import core.basesyntax.FigureColor;
 
 public class Rectangle extends Color {
     private int width;
     private int height;
-    private String color;
 
-    public Rectangle(int width, int height, String color) {
+    public Rectangle(int width, int height, FigureColor color) {
         this.width = width;
         this.height = height;
         this.color = color;
@@ -14,11 +16,6 @@ public class Rectangle extends Color {
     @Override
     public double getArea() {
         return width * height;
-    }
-
-    @Override
-    public String getColor() {
-        return color;
     }
 
     @Override
