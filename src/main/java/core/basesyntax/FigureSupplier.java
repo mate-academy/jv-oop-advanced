@@ -12,8 +12,8 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         String color = new ColorSupplier().getRandomColor();
         int index = Figures.values().length;
-        Figures fig = Figures.values()[new Random().nextInt(index)];
-        switch (fig) {
+        Figures figureType = Figures.values()[new Random().nextInt(index)];
+        switch (figureType) {
             case SQUARE:
                 double squareSide = (double)Math.round(new Random().nextDouble() * MULTIPLIER)
                         / Math.pow(10, DECIMAL_PLACES);
@@ -47,8 +47,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        String defaultColor = Color.values()[DEFAULT_COLOR].toString();
-        return new Circle(defaultColor, DEFAULT_RADIUS);
+        return new Circle(Color.WHITE.toString(), DEFAULT_RADIUS);
     }
 }
 
