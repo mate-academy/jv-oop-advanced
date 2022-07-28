@@ -5,9 +5,7 @@ import java.util.Random;
 public class FigureSupplier {
     public Figure getDefaultFigure() {
         int defaultSideSizeValue = 10;
-        Circle circle = new Circle(defaultSideSizeValue, getRandomColor());
-        circle.setColor(Color.WHITE.toString());
-        return circle;
+        return new Circle(defaultSideSizeValue, Color.WHITE.toString());
     }
 
     public Figure getRandomFigure() {
