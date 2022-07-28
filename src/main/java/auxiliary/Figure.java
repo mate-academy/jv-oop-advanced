@@ -1,6 +1,6 @@
 package auxiliary;
 
-public abstract class Figure implements Drawable, GetArea {
+public abstract class Figure implements Drawable, AreaCalculation {
     private String color;
 
     public Figure(String color) {

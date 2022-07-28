@@ -8,6 +8,7 @@ import core.basesyntax.Square;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int VALUE = 10;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -38,7 +39,7 @@ public class FigureSupplier {
         return new Circle(10, Color.WHITE.toString());
     }
 
-    public int getRandNumber() {
-        return random.nextInt(9) + 1;
+    private int getRandNumber() {
+        return random.nextInt(VALUE);
     }
 }

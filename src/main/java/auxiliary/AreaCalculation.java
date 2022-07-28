@@ -1,5 +1,5 @@
 package auxiliary;
 
-public interface GetArea {
+public interface AreaCalculation {
     double getArea();
 }
