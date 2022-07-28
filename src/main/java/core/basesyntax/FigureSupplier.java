@@ -10,30 +10,28 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         ColorSupplier colorSupplier = new ColorSupplier();
         Random random = new Random();
-
-        int figureNumber = random.nextInt(1, NUMBER_OF_FIGURES);
+        int figureNumber = random.nextInt(NUMBER_OF_FIGURES + 1);
         switch (figureNumber) {
             case 1:
-                return new Square(colorSupplier.getRandomColor(), random.nextInt(1, LIMIT));
+                return new Square(colorSupplier.getRandomColor(), random.nextInt(LIMIT + 1));
             case 2:
-                int bottom = random.nextInt(1, LIMIT);
-                int height = random.nextInt(1, LIMIT);
-                int top = random.nextInt(1, height);
+                int bottom = random.nextInt(LIMIT + 1);
+                int height = random.nextInt(LIMIT + 1);
+                int top = random.nextInt(height + 1);
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), top, bottom, height);
             case 3:
-                int firstSide = random.nextInt(1, LIMIT);
+                int firstSide = random.nextInt(LIMIT + 1);
                 int secondSide;
                 do {
-                    secondSide = random.nextInt(1, LIMIT);
+                    secondSide = random.nextInt(LIMIT + 1);
                 } while (secondSide == firstSide);
                 return new Rectangle(colorSupplier.getRandomColor(), firstSide, secondSide);
             case 4:
                 return new RightTriangle(colorSupplier.getRandomColor(),
-                        random.nextInt(1, LIMIT),
-                        random.nextInt(1, LIMIT));
+                        random.nextInt(LIMIT + 1),
+                        random.nextInt(LIMIT + 1));
             default:
-                return new Circle(colorSupplier.getRandomColor(), random.nextInt(1, LIMIT));
-
+                return new Circle(colorSupplier.getRandomColor(), random.nextInt(LIMIT + 1));
         }
     }
 
