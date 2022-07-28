@@ -11,7 +11,6 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         String color = new ColorSupplier().getRandomColor();
-        String defaultColor = Colors.values()[DEFAULT_COLOR].toString();
         int index = Figures.values().length;
         Figures fig = Figures.values()[new Random().nextInt(index)];
         switch (fig) {
@@ -43,12 +42,12 @@ public class FigureSupplier {
                 return new Circle(color, radius);
             default:
                 System.out.println("Something goes wrong: FigureSupplier().getRandomFigure()");
-                return new Circle(defaultColor, DEFAULT_RADIUS);
+                return new Circle(Color.WHITE.toString(), DEFAULT_RADIUS);
         }
     }
 
     public Figure getDefaultFigure() {
-        String defaultColor = Colors.values()[DEFAULT_COLOR].toString();
+        String defaultColor = Color.values()[DEFAULT_COLOR].toString();
         return new Circle(defaultColor, DEFAULT_RADIUS);
     }
 }
