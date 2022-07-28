@@ -5,9 +5,9 @@ import java.util.Random;
 public class FigureSupplier extends ColorSupplier {
     private static final int MAX_SIDE = 10;
     private static final int INDEX = 4;
+    private Random random = new Random();
 
     public Figure getRandomFigure() {
-        Random random = new Random();
         ColorSupplier colorSupplier = new ColorSupplier();
         int index = random.nextInt(INDEX);
         switch (index) {
