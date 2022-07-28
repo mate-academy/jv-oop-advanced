@@ -10,7 +10,7 @@ import java.util.Random;
 public class FigureSupplier extends ColorSupplier {
 
     private static final int MAX_SIDE = 10;
-    private static final int INDEX = 4;
+    private static final int INDEX = 5;
     private static final int DEFAULT_CIRCLE_RADIUS = 10;
     private static final FigureColor DEFAULT_CIRCLE_COLOR = FigureColor.WHITE;
     private Random random = new Random();

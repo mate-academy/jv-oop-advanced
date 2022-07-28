@@ -9,8 +9,8 @@ public class Main {
         figureArray[0] = figureSupplier.getDefaultFigure().getDraw();
         figureArray[1] = figureSupplier.getRandomFigure().getDraw();
         figureArray[2] = figureSupplier.getRandomFigure().getDraw();
-        for (int i = 0; i < figureArray.length; i++) {
-            System.out.println(figureArray[i]);
+        for (String figure : figureArray) {
+            System.out.println(figure);
         }
     }
 }
