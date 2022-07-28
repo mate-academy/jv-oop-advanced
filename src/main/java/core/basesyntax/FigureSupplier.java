@@ -11,8 +11,8 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         String color = new ColorSupplier().getRandomColor();
-        int index = Figures.values().length;
-        Figures figureType = Figures.values()[new Random().nextInt(index)];
+        int index = FigureName.values().length;
+        FigureName figureType = FigureName.values()[new Random().nextInt(index)];
         switch (figureType) {
             case SQUARE:
                 double squareSide = (double)Math.round(new Random().nextDouble() * MULTIPLIER)
