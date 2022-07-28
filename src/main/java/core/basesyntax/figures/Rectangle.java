@@ -1,8 +1,8 @@
 package core.basesyntax.figures;
 
 public class Rectangle extends Figure {
-    private int width;
-    private int height;
+    private final int width;
+    private final int height;
 
     public Rectangle(String color, int width, int height) {
         super(color);
@@ -18,5 +18,12 @@ public class Rectangle extends Figure {
     @Override
     public double getArea() {
         return height * width;
+    }
+
+    @Override
+    public String toString() {
+        return "rectangle, "
+                + "its color: " + color
+                + ", with sides: " + width + " units, " + height + " units";
     }
 }

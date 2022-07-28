@@ -1,7 +1,7 @@
 package core.basesyntax.figures;
 
 public class RightTriangle extends Figure {
-    private int side;
+    private final int side;
 
     public RightTriangle(String color, int side) {
         super(color);
@@ -16,5 +16,12 @@ public class RightTriangle extends Figure {
     @Override
     public double getArea() {
         return 0.25 * Math.sqrt(3) * side * side;
+    }
+
+    @Override
+    public String toString() {
+        return "triangle, "
+                + "its color: " + color
+                + ", with side: " + side + " units";
     }
 }

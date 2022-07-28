@@ -1,7 +1,7 @@
 package core.basesyntax.figures;
 
 public class Circle extends Figure {
-    private int radius;
+    private final int radius;
 
     public Circle( String color, int radius) {
         super(color);
@@ -21,7 +21,7 @@ public class Circle extends Figure {
     @Override
     public String toString() {
         return "circle, "
-                + "its color: '" + color
+                + "its color: " + color
                 + ", with radius: " + radius + " units";
     }
 }
