@@ -3,7 +3,6 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-
     private static final int MULTIPLIER = 1000;
     private static final int DECIMAL_PLACES = 2;
     private static final int DEFAULT_COLOR = 0;
@@ -42,7 +41,7 @@ public class FigureSupplier {
                 return new Circle(color, radius);
             default:
                 System.out.println("Something goes wrong: FigureSupplier().getRandomFigure()");
-                return new Circle(Color.WHITE.toString(), DEFAULT_RADIUS);
+                return getDefaultFigure();
         }
     }
 
