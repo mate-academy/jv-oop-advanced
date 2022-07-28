@@ -21,4 +21,14 @@ public class IsoscelesTrapezoid extends Figure {
     public double getArea() {
         return 0.5 * height * (firstSide + secondSide);
     }
+
+    @Override
+    public String toString() {
+        return "trapezoid, " +
+                "firstSide=" + firstSide +
+                ", secondSide=" + secondSide +
+                ", height=" + height +
+                ", color='" + color + '\'' +
+                '}';
+    }
 }

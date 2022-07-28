@@ -7,13 +7,12 @@ import java.util.Random;
 public class FigureSupplier {
     private final String defaultColor = ColorSupplier.Color.WHITE.toString();
     private final int defaultRadius = 10;
-    private ColorSupplier colorSupplier;
 
     public Figure getRandomFigure() {
         Figure figure;
         Random random = new Random();
         Shape shape = Shape.values()[random.nextInt(Shape.values().length)];
-        String color = colorSupplier.getRandomColor();
+        String color = new ColorSupplier().getRandomColor();
         int firstSize = random.nextInt(Figure.MAX_SIDE);
         switch (shape) {
             case CIRCLE:

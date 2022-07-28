@@ -17,4 +17,11 @@ public class Circle extends Figure {
     public double getArea() {
         return Math.PI * radius * radius;
     }
+
+    @Override
+    public String toString() {
+        return "circle, "
+                + "its color: '" + color
+                + ", with radius: " + radius + " units";
+    }
 }
