@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements Calculable, Printable {
+public class RightTriangle extends Figure implements Calculable, Drawable {
     private int firstLeg;
     private int secondLeg;
     private double area;
@@ -18,7 +18,7 @@ public class RightTriangle extends Figure implements Calculable, Printable {
     }
 
     @Override
-    public void print() {
+    public void draw() {
         System.out.println("Figure: right triangle, area: " + this.area
                 + " sq.units, firstLeg: " + this.firstLeg + " units, secondLeg: "
                 + this.secondLeg + " units, color: " + getColor());

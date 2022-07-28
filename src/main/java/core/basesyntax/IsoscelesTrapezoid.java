@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements Calculable, Printable {
+public class IsoscelesTrapezoid extends Figure implements Calculable, Drawable {
     private int longerBase;
     private int shorterBase;
     private int height;
@@ -20,7 +20,7 @@ public class IsoscelesTrapezoid extends Figure implements Calculable, Printable 
     }
 
     @Override
-    public void print() {
+    public void draw() {
         System.out.println("Figure: isosceles trapezoid, area: " + this.area
                 + " sq.units, longerBase: " + this.longerBase
                 + " units, shorterBase: " + this.shorterBase + " units, height: "
