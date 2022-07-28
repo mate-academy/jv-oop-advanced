@@ -1,26 +1,26 @@
-package core.basesyntax.figures;
+package core.basesyntax;
 
-public class Square extends Figure {
+public class RightTriangle extends Figure {
     private final int side;
 
-    public Square(String color, int side) {
+    public RightTriangle(String color, int side) {
         super(color);
         this.side = side;
     }
 
     @Override
     public void draw() {
-        System.out.println("Square is drawn.");
+        System.out.println("Right Triangle is drawn.");
     }
 
     @Override
     public double getArea() {
-        return side * side;
+        return 0.25 * Math.sqrt(3) * side * side;
     }
 
     @Override
     public String toString() {
-        return "square, "
+        return "triangle, "
                 + "its color: " + color
                 + ", with side: " + side + " units";
     }

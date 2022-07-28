@@ -1,10 +1,10 @@
 package core.basesyntax;
 
-import core.basesyntax.figures.Figure;
-
 public class Main {
     private static final int SIZE = 6;
+
     public static void main(String[] args) {
+
         FigureSupplier supplier = new FigureSupplier();
         Figure[] figures = new Figure[SIZE];
 

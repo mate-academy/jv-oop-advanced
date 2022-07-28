@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import core.basesyntax.figures.*;
-
 import java.util.Random;
 
 public class FigureSupplier {
@@ -28,10 +26,10 @@ public class FigureSupplier {
                 figure = new RightTriangle(color, firstSize);
                 break;
             case TRAPEZOID:
-                figure = new IsoscelesTrapezoid(color
-                        , firstSize
-                        , random.nextInt(Figure.MAX_SIDE)
-                        , random.nextInt(Figure.MAX_SIDE)
+                figure = new IsoscelesTrapezoid(color,
+                        firstSize,
+                        random.nextInt(Figure.MAX_SIDE),
+                        random.nextInt(Figure.MAX_SIDE)
                 );
                 break;
             default:

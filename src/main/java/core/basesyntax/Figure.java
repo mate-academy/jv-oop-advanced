@@ -1,6 +1,4 @@
-package core.basesyntax.figures;
-
-import core.basesyntax.Drawable;
+package core.basesyntax;
 
 public abstract class Figure implements Drawable {
     public static final int MAX_SIDE = 100;
