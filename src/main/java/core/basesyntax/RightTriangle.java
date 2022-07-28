@@ -23,7 +23,7 @@ public class RightTriangle extends Color {
 
     @Override
     public String getDraw() {
-        return "This is Right Triangle. I have Area: " + getArea() + "; side: " + side + "; height: "
-                + height + "; and have color: " + getColor();
+        return "This is Right Triangle. I have Area: " + getArea() + "; side: " + side
+                + "; height: " + height + "; and have color: " + getColor();
     }
 }

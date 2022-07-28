@@ -25,10 +25,10 @@ public class FigureSupplier extends ColorSupplier {
                         colorSupplier.getRandomColor());
                 return circle;
             case 4:
-                IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(random.nextInt(MAX_SIDE),
+                IsoscelesTrapezoid trapezoid = new IsoscelesTrapezoid(random.nextInt(MAX_SIDE),
                         random.nextInt(MAX_SIDE), random.nextInt(MAX_SIDE),
                         colorSupplier.getRandomColor());
-                return isoscelesTrapezoid;
+                return trapezoid;
             default:
                 RightTriangle rightTriangle = new RightTriangle(random.nextInt(MAX_SIDE),
                         random.nextInt(MAX_SIDE),
