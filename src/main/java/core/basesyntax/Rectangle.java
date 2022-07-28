@@ -7,4 +7,14 @@ public class Rectangle extends Figure {
     public Rectangle(String color) {
         super(color);
     }
+
+    @Override
+    public void draw() {
+
+    }
+
+    @Override
+    public double calculateArea() {
+        return 0;
+    }
 }

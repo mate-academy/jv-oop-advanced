@@ -8,4 +8,9 @@ public class IsoscelesTrapezoid extends Figure {
     public IsoscelesTrapezoid(String color) {
         super(color);
     }
+
+    @Override
+    public void draw() {
+
+    }
 }

@@ -6,4 +6,14 @@ public class Circle extends Figure {
     public Circle(String color) {
         super(color);
     }
+
+    @Override
+    public void draw() {
+
+    }
+
+    @Override
+    public double calculateArea() {
+        return 0;
+    }
 }
