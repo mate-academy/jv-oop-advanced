@@ -7,7 +7,6 @@ public class FigureSupplier {
     private static final double MAX_PARAMETER = 10.0;
 
     public Figure getRandomFigure() {
-        Figure figure;
         switch (new Random().nextInt(AMOUNT_OF_FIGURE)) {
             case 0:
                 return new Square(Colors.values()[new Random().nextInt(Colors.values().length)],
