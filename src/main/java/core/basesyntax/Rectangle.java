@@ -1,9 +1,8 @@
 package core.basesyntax;
 
 import java.text.DecimalFormat;
-//Rectangle has index 2
 
-public class Rectangle extends Figure {
+public class Rectangle extends FigureObject {
     private double sideA;
     private double sideB;
 

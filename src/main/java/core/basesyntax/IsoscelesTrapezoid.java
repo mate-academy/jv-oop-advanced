@@ -1,9 +1,8 @@
 package core.basesyntax;
 
 import java.text.DecimalFormat;
-//IsoscelesTrapezoid has index 5
 
-public class IsoscelesTrapezoid extends Figure {
+public class IsoscelesTrapezoid extends FigureObject {
     private double shortSide;
     private double longSide;
     private double height;

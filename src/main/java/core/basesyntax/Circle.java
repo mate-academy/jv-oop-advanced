@@ -1,9 +1,8 @@
 package core.basesyntax;
 
 import java.text.DecimalFormat;
-//Circle has index 4
 
-public class Circle extends Figure {
+public class Circle extends FigureObject {
     private double radius;
 
     public Circle(String color, double radius) {
@@ -13,7 +12,7 @@ public class Circle extends Figure {
 
     @Override
     public double getFigureArea() {
-        return 2 * Math.PI * radius;
+        return Math.PI * radius * radius;
     }
 
     @Override

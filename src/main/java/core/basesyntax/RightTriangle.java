@@ -1,9 +1,8 @@
 package core.basesyntax;
 
 import java.text.DecimalFormat;
-//RightTriangle has index 3
 
-public class RightTriangle extends Figure {
+public class RightTriangle extends FigureObject {
     private double firstLeg;
     private double secondLeg;
 

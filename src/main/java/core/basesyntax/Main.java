@@ -1,18 +1,21 @@
 package core.basesyntax;
 
 public class Main {
+    private static final int FULL_ARRAY = 6;
+    private static final int HALF_OF_ARRAY = 3;
+
     public static void main(String[] args) {
-        Figure[] figureArray = new Figure[6];
+        FigureObject[] figureObjectArray = new FigureObject[6];
         FigureSupplier supplier = new FigureSupplier();
-        for (int i = 0; i < 6; i++) {
-            if (i >= 3) {
-                figureArray[i] = supplier.getDefaultFigure();
+        for (int i = 0; i < FULL_ARRAY; i++) {
+            if (i >= HALF_OF_ARRAY) {
+                figureObjectArray[i] = supplier.getDefaultFigure();
                 continue;
             }
-            figureArray[i] = supplier.getRandomFigure();
+            figureObjectArray[i] = supplier.getRandomFigure();
         }
-        for (Figure figure : figureArray) {
-            figure.drawFigure();
+        for (FigureObject figureObject : figureObjectArray) {
+            figureObject.drawFigure();
         }
     }
 }

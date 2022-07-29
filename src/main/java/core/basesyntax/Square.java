@@ -1,9 +1,8 @@
 package core.basesyntax;
 
 import java.text.DecimalFormat;
-//Square has index 1
 
-public class Square extends Figure {
+public class Square extends FigureObject {
     private double sideA;
 
     public Square(String color, double sideA) {
