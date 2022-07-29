@@ -42,11 +42,9 @@ public class FigureSupplier {
                         random.nextInt(MAXIMUM_LENGTH),
                         random.nextInt(MAXIMUM_LENGTH));
                 break;
-            case SQUARE:
+            default:
                 figure = new Square(randomColor,
                         random.nextInt(MAXIMUM_LENGTH));
-                break;
-            default:
                 break;
         }
         return figure;
