@@ -9,7 +9,6 @@ public class FigureSupplier {
     private Random random = new Random();
 
     public Figure getRandomFigure() {
-        //
         int index = random.nextInt(NUMBER_FIGURES);
         switch (index) {
             case 0 :
