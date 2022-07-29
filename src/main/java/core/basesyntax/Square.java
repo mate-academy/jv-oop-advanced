@@ -4,8 +4,8 @@ public class Square extends Figure {
     private int lengthSide;
 
     public Square(int lengthSide,String color) {
+        super(color);
         this.lengthSide = lengthSide;
-        setColor(color);
     }
 
     public double calculateArea() {

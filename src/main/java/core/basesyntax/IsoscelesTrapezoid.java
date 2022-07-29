@@ -5,9 +5,9 @@ public class IsoscelesTrapezoid extends Figure {
     private int sumParallelSides;
 
     public IsoscelesTrapezoid(int height, int sumParallelSides,String color) {
+        super(color);
         this.height = height;
         this.sumParallelSides = sumParallelSides;
-        setColor(color);
     }
 
     public double calculateArea() {

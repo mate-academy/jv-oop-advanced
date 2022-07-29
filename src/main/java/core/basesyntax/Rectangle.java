@@ -5,9 +5,9 @@ public class Rectangle extends Figure {
     private int widthSide;
 
     public Rectangle(int height, int widthSide,String color) {
+        super(color);
         this.lengthSide = height;
         this.widthSide = widthSide;
-        setColor(color);
     }
 
     public double calculateArea() {
