@@ -1,34 +1,34 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private int lrSide;
-    private int tpSide;
+    private int leftRightSide;
+    private int topBottomSide;
 
-    public Rectangle(String color, int lrSide, int tpSide) {
+    public Rectangle(String color, int leftRightSide, int topBottomSide) {
         super(color);
-        this.lrSide = lrSide;
-        this.tpSide = tpSide;
+        this.leftRightSide = leftRightSide;
+        this.topBottomSide = topBottomSide;
     }
 
-    public int getLrSide() {
-        return lrSide;
+    public int leftRightSide() {
+        return leftRightSide;
     }
 
-    public void setLrSide(int lrSide) {
-        this.lrSide = lrSide;
+    public void leftRightSide(int lrSide) {
+        this.leftRightSide = lrSide;
     }
 
-    public int getTpSide() {
-        return tpSide;
+    public int topBottomSide() {
+        return topBottomSide;
     }
 
-    public void setTpSide(int tpSide) {
-        this.tpSide = tpSide;
+    public void topBottomSide(int tpSide) {
+        this.topBottomSide = tpSide;
     }
 
     @Override
     public double getArea() {
-        return lrSide * tpSide;
+        return leftRightSide * topBottomSide;
     }
 
     @Override
