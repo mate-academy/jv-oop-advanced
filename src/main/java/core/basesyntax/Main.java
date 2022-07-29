@@ -9,7 +9,6 @@ public class Main {
             } else {
                 figureSupplier.getDefaultFigure().draw();
             }
-
         }
     }
 }
