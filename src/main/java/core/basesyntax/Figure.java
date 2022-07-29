@@ -1,9 +1,12 @@
 package core.basesyntax;
 
 public abstract class Figure {
-    private String color;
-    private int firstLeg;
-    private int intsecondLeg;
-    private int thirdLeg;
+    private Color color;
 
+    public Figure() {
+    }
+
+    public Figure(Color color) {
+        this.color = color;
+    }
 }
