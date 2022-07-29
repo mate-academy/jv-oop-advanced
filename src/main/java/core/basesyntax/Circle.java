@@ -7,9 +7,6 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
-    public Circle() {
-    }
-
     public int getRadius() {
         return radius;
     }
@@ -23,7 +20,7 @@ public class Circle extends Figure {
         return Math.PI * radius;
     }
 
-    public void getInfo() {
+    public void draw() {
         System.out.println("Figure: cicle, area: " + String.format("%.1f", getArea())
                 + " sq.units, radius: "
                 + radius + "  units, color: " + super.getColor());

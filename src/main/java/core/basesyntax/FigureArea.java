@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public interface FigureBehaviour {
+public interface FigureArea {
     double getArea();
 
 }

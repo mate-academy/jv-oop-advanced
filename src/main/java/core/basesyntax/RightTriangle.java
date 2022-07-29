@@ -17,7 +17,7 @@ public class RightTriangle extends Figure {
         return (double) akatet * bkatet / 2;
     }
 
-    public void getInfo() {
+    public void draw() {
         System.out.println("Figure: right triangle, area: " + String.format("%.1f", getArea())
                 + " sq.units, katetA: "
                 + akatet + "  units, katetB " + bkatet + "  units, color: " + super.getColor());

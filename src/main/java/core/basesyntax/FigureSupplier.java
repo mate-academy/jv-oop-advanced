@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class FigureSupplier {
 
-    static final int MAX_COUN_FIGURE = 4;
+    static final int MAX_COUN_FIGURE = 5;
     static final int MAX_POS_NUMBER = 100;
 
     public Figure getRandomFigure() {
@@ -26,18 +26,16 @@ public class FigureSupplier {
                 figure = new RightTriangle(random.nextInt(MAX_POS_NUMBER),
                         random.nextInt(MAX_POS_NUMBER));
                 break;
-            case 4:
+            default:
                 figure = new Square(random.nextInt(MAX_POS_NUMBER));
                 break;
-            default:
-                break;
+
         }
         return figure;
     }
 
     public Figure getDefaultFigure() {
-        Circle circle = new Circle();
-        circle.setRadius(10);
+        Circle circle = new Circle(10);
         circle.setColor("WHITE");
         return circle;
     }

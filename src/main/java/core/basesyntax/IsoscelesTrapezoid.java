@@ -14,36 +14,12 @@ public class IsoscelesTrapezoid extends Figure {
         this.basislarge = basislarge;
     }
 
-    public int getWeigth() {
-        return weigth;
-    }
-
-    public void setWeigth(int weigth) {
-        this.weigth = weigth;
-    }
-
-    public int getBasisless() {
-        return basisless;
-    }
-
-    public void setBasisless(int basisless) {
-        this.basisless = basisless;
-    }
-
-    public int getBasislarge() {
-        return basislarge;
-    }
-
-    public void setBasislarge(int basislarge) {
-        this.basislarge = basislarge;
-    }
-
     @Override
     public double getArea() {
         return (double) (basislarge + basisless) * weigth / 2;
     }
 
-    public void getInfo() {
+    public void draw() {
         System.out.println("Figure: isosceles trapezoid, area: " + String.format("%.1f", getArea())
                 + " sq.units, weigth: "
                 + weigth + "  units, basisless " + basisless + "  units, basislarge "
