@@ -1,12 +1,11 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Color;
 import core.basesyntax.Figure;
 
 public class Square extends Figure {
-    private int side;
+    private final int side;
 
-    public Square(Color color, int side) {
+    public Square(String color, int side) {
         super(color);
         this.side = side;
     }
@@ -17,8 +16,8 @@ public class Square extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "Figure: square, area: " + getArea() + " sq.units, side: "
-                + side + " units, color: " + getColor();
+    public void draw() {
+        System.out.println("Figure: square, area: " + getArea() + " sq.units, side: "
+                + side + " units, color: " + getColor());
     }
 }

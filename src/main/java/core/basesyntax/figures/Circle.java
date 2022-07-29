@@ -1,13 +1,12 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Color;
 import core.basesyntax.Figure;
 
 public class Circle extends Figure {
     public static final int DEFAULT_RADIUS = 10;
-    private int radius;
+    private final int radius;
 
-    public Circle(Color color, int radius) {
+    public Circle(String color, int radius) {
         super(color);
         this.radius = radius;
     }
@@ -18,8 +17,8 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "Figure: circle, area: " + getArea() + " sq.units, radius: "
-                + radius + " units, color: " + getColor();
+    public void draw() {
+        System.out.println("Figure: circle, area: " + getArea() + " sq.units, radius: "
+                + radius + " units, color: " + getColor());
     }
 }

@@ -1,13 +1,12 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Color;
 import core.basesyntax.Figure;
 
 public class Rectangle extends Figure {
-    private int width;
-    private int height;
+    private final int width;
+    private final int height;
 
-    public Rectangle(Color color, int width, int height) {
+    public Rectangle(String color, int width, int height) {
         super(color);
         this.width = width;
         this.height = height;
@@ -19,8 +18,8 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "Figure: rectangle, area: " + getArea() + " sq.units, width: "
-                + width + " units, height: " + height + " units, color: " + getColor();
+    public void draw() {
+        System.out.println("Figure: rectangle, area: " + getArea() + " sq.units, width: "
+                + width + " units, height: " + height + " units, color: " + getColor());
     }
 }

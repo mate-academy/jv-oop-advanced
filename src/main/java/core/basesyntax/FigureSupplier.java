@@ -5,6 +5,7 @@ import core.basesyntax.figures.IsoscelesTrapezoid;
 import core.basesyntax.figures.Rectangle;
 import core.basesyntax.figures.RightTriangle;
 import core.basesyntax.figures.Square;
+import java.util.Locale;
 import java.util.Random;
 
 public class FigureSupplier {
@@ -37,6 +38,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE, Circle.DEFAULT_RADIUS);
+        return new Circle(Color.WHITE.name().toLowerCase(Locale.ROOT), Circle.DEFAULT_RADIUS);
     }
 }
