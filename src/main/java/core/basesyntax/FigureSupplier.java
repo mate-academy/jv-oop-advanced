@@ -32,7 +32,7 @@ public class FigureSupplier {
                     new Random().nextDouble() * MAX_PARAMETER);
             default:
         }
-        return null;
+        return getDefaultFigure();
     }
 
     public Figure getDefaultFigure() {
