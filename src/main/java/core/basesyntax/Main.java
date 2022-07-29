@@ -7,8 +7,8 @@ public class Main {
     public static void main(String[] args) {
         Figure[] figures = new Figure[FIGURE_COUNT];
         FigureSupplier figureSupplier = new FigureSupplier();
-        for (int i = 0; i < FIGURE_COUNT; i++) {
-            if (i / NUMBER_TO_HALVE_THE_ARRAY == 0) {
+        for (int i = 0; i < figures.length; i++) {
+            if (i < figures.length / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
