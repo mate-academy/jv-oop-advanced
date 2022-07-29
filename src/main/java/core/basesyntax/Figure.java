@@ -1,14 +1,14 @@
 package core.basesyntax;
 
 public abstract class Figure implements Drawable, Area {
-    private Colors color;
+    private Color color;
 
-    public Figure(Colors color) {
+    public Figure(Color color) {
         this.color = color;
 
     }
 
-    public Colors getColor() {
+    public Color getColor() {
         return color;
     }
 }

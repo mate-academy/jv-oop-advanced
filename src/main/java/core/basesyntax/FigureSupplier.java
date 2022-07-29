@@ -10,23 +10,23 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         switch (new Random().nextInt(AMOUNT_OF_FIGURE)) {
             case 0:
-                return new Square(Colors.values()[new Random().nextInt(Colors.values().length)],
+                return new Square(Color.values()[new Random().nextInt(Color.values().length)],
                     new Random().nextDouble() * MAX_PARAMETER);
             case 1:
-                return new Rectangle(Colors.values()[new Random().nextInt(Colors.values().length)],
+                return new Rectangle(Color.values()[new Random().nextInt(Color.values().length)],
                     new Random().nextDouble() * MAX_PARAMETER,
                     new Random().nextDouble() * MAX_PARAMETER);
             case 2:
-                return new RightTriangle(Colors.values()[
-                    new Random().nextInt(Colors.values().length)],
+                return new RightTriangle(Color.values()[
+                    new Random().nextInt(Color.values().length)],
                     new Random().nextDouble() * MAX_PARAMETER,
                     new Random().nextDouble() * MAX_PARAMETER);
             case 3:
-                return new Circle(Colors.values()[new Random().nextInt(Colors.values().length)],
+                return new Circle(Color.values()[new Random().nextInt(Color.values().length)],
                     new Random().nextDouble() * MAX_PARAMETER);
             case 4:
-                return new IsoscelesTrapezoid(Colors.values()[
-                    new Random().nextInt(Colors.values().length)],
+                return new IsoscelesTrapezoid(Color.values()[
+                    new Random().nextInt(Color.values().length)],
                     new Random().nextDouble() * MAX_PARAMETER,
                     new Random().nextDouble() * MAX_PARAMETER,
                     new Random().nextDouble() * MAX_PARAMETER);
@@ -36,6 +36,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Colors.WHITE, DEFAULT_RADIUS);
+        return new Circle(Color.WHITE, DEFAULT_RADIUS);
     }
 }
