@@ -8,11 +8,11 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < 3; i++) {
             Figure figure = figureSupplier.getRandomFigure();
-            figure.drow();
+            figure.draw();
         }
         for (int i = 0; i < 3; i++) {
             Figure figure = figureSupplier.getDefaultFigure();
-            figure.drow();
+            figure.draw();
         }
     }
 }

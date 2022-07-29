@@ -4,6 +4,6 @@ public enum ArithmeticFigure {
     SQUARE,
     CIRCLE,
     RECTANGLE,
-    ISOSCELESTRAPEZOID,
-    RIGHTTRIANGLE
+    ISOSCELES_TRAPEZOID,
+    RIGHT_TRIANGLE
 }

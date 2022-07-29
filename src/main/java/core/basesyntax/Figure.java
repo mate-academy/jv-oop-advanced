@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements AeaCalculator, Painter {
+public abstract class Figure implements AreaCalculator, Painter {
     private String color;
 
     public Figure(String color) {
