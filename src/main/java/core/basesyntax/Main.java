@@ -7,11 +7,15 @@ public class Main {
         Figure[] figures = new Figure[6];
 
         for (int i = 0; i < 6; i++) {
-            figures[i] = defaultFigure.getRandomFigure();
+            if (i < 3) {
+                figures[i] = defaultFigure.getRandomFigure();
+            } else {
+                figures[i] = defaultFigure.getDefaultFigure();
+            }
         }
 
-        for (Figure figuresOut : figures) {
-            System.out.println(figuresOut.draw());
+        for (Figure figure : figures) {
+            System.out.println(figure.draw());
         }
     }
 }

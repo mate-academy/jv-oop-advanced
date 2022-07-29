@@ -5,6 +5,7 @@ public class Rectangle extends Figure {
     private int tpSide;
 
     public Rectangle(String color, int lrSide, int tpSide) {
+        super(color);
         this.lrSide = lrSide;
         this.tpSide = tpSide;
     }

@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class FigureSupplier {
     public Figure getRandomFigure() {
-        Random randomTypeOfFigure = new Random();
-        switch (randomTypeOfFigure.nextInt(5)) {
+        Random random = new Random();
+        switch (random.nextInt(5)) {
             case (0):
                 return new Circle(new ColorSupplier().getRandomColor(), new Random().nextInt(20));
             case (1):
@@ -24,11 +24,11 @@ public class FigureSupplier {
             case (4):
                 return new Square(new ColorSupplier().getRandomColor(), new Random().nextInt(20));
             default:
-                return null;
+                return new Square(new ColorSupplier().getRandomColor(), new Random().nextInt(20));
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("WHITE", 10);
+        return new Circle(Color.WHITE.name(), 10);
     }
 }
