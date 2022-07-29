@@ -1,5 +1,5 @@
 package core.basesyntax;
 
 public interface Drowing {
-    void getPrintInfo();
+    void getInfo();
 }

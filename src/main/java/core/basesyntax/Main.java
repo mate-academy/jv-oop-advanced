@@ -2,7 +2,6 @@ package core.basesyntax;
 
 public class Main {
     private static final int FIGURE_COUNT = 5;
-    private static final int NUMBER_TO_HALVE_THE_ARRAY = 2;
 
     public static void main(String[] args) {
         Figure[] figures = new Figure[FIGURE_COUNT];
@@ -15,7 +14,7 @@ public class Main {
             }
         }
         for (Figure figure : figures) {
-            figure.getPrintInfo();
+            figure.getInfo();
         }
     }
 }
