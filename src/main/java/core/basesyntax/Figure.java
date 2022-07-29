@@ -1,10 +1,7 @@
 package core.basesyntax;
 
 public abstract class Figure implements AreaCalculator, Drawer {
-    private String color = Color.WHITE.toString().toLowerCase();
-
-    public Figure() {
-    }
+    private String color;
 
     public Figure(String color) {
         this.color = color;
