@@ -1,6 +1,6 @@
 package core.basesyntax;
-//прямоугольник (2 стороны)
-public class Rectangle extends Figure {
+
+public class Rectangle extends Figure implements Draw, Area{
     private double firstLeg;
     private double secondLeg;
 
@@ -8,5 +8,16 @@ public class Rectangle extends Figure {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
+    }
+
+    @Override
+    public double getArea() {
+        return firstLeg * secondLeg;
+    }
+
+    @Override
+    public String draw() {
+        return "Figure: Rectangle, " + "square=" + getArea() +", firstLeg=" + firstLeg
+                + ", secondLeg=" + secondLeg + ", color=" + getColor() + '.';
     }
 }

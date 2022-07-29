@@ -10,13 +10,14 @@ public class FigureSupplier {
     private static final Figure circle = new Circle(circleColor,circleRadius);
     int random = new Random().nextInt(FIGURE_COUNT);
 
-    public Figure getRandomFigure() {
+  //  public Figure getRandomFigure() {
 
-        return ;
+    //    return ;
 
-    }
+
     public Figure getDefaultFigure() {
         return circle;
     }
 }
+
 

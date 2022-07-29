@@ -1,6 +1,6 @@
 package core.basesyntax;
-// треугольник 2 стороні 1/2*1сторона*2сторона
-public class RightTriangle extends Figure {
+
+public class RightTriangle extends Figure implements Draw, Area {
     private double firstLeg;
     private double secondLeg;
 
@@ -8,5 +8,16 @@ public class RightTriangle extends Figure {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
+    }
+
+    @Override
+    public double getArea() {
+        return 0.5 * firstLeg * secondLeg;
+    }
+
+    @Override
+    public String draw() {
+        return "Figure: RightTriangle, " + "square=" + getArea() +", firstLeg=" + firstLeg
+                + ", secondLeg=" + secondLeg + ", color=" + getColor() + '.';
     }
 }

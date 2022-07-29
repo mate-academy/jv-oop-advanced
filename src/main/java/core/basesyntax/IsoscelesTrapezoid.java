@@ -1,6 +1,6 @@
 package core.basesyntax;
 //       \_/ (1 сторона + 2 сторона )/ 2 * высоту
-public class IsoscelesTrapezoid extends Figure {
+public class IsoscelesTrapezoid extends Figure implements Draw, Area  {
     private double firstLeg;
     private double secondLeg;
     private double height;
@@ -11,4 +11,16 @@ public class IsoscelesTrapezoid extends Figure {
         this.secondLeg = secondLeg;
         this.height = height;
     }
+
+    @Override
+    public double getArea() {
+        return (firstLeg + secondLeg) / 2 * height;
+    }
+
+    @Override
+    public String draw() {
+        return "Figure: IsoscelesTrapezoid, " + "square=" + getArea() +", firstLeg=" + firstLeg
+                + ", secondLeg=" + secondLeg + ", height=" + height + ", color=" + getColor() + '.';
+    }
 }
+
