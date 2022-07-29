@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements Drowing,AreaCalculator {
+public abstract class Figure implements Drowing, AreaCalculator {
     private String color;
 
     public String getColor() {
