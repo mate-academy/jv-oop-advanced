@@ -7,6 +7,7 @@ public class Main {
                 figureSupplier.getRandomFigure(),
                 figureSupplier.getRandomFigure(),
                 figureSupplier.getRandomFigure(),
+                figureSupplier.getRandomFigure(),
                 figureSupplier.getDefaultFigure(),
                 figureSupplier.getDefaultFigure(),
                 figureSupplier.getDefaultFigure()
