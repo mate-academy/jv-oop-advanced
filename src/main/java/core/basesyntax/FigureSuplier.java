@@ -3,9 +3,9 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSuplier {
-    private final ColorSuplier color = new ColorSuplier();
     private static final int MAX_VALUE = 5;
     private static final int SIZE_LIMIT = 20;
+    private final ColorSuplier color = new ColorSuplier();
 
     public Figure getRandomFigure() {
         switch (new Random().nextInt(MAX_VALUE)) {
