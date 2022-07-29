@@ -25,9 +25,8 @@ public class FigureSupplier {
             case 4: return new Square(randomNumber.nextInt(UPPER_BOUND_OF_RANDOM),
                     randomColor.getRandomColor());
             default:
-                System.out.println("getRandomFigure error");
+                return getRandomFigure();
         }
-        return null;
     }
 
     public Figure getDefaultFigure() {

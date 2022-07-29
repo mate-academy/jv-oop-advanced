@@ -8,11 +8,12 @@ public class HelloWorld {
 
     public static void main(String[] args) {
         Figure[] figures = new Figure[NUMBER_OF_FIGURE];
-        for (int i = 0; i < NUMBER_OF_FIGURE; i++) {
-            if (i <= (NUMBER_OF_FIGURE / 2) - 1) {
-                figures[i] = new FigureSupplier().getRandomFigure();
+        FigureSupplier figureSupplier = new FigureSupplier();
+        for (int i = 0; i < figures.length; i++) {
+            if (i <= (figures.length / 2) - 1) {
+                figures[i] = figureSupplier.getRandomFigure();
             } else {
-                figures[i] = new FigureSupplier().getDefaultFigure();
+                figures[i] = figureSupplier.getDefaultFigure();
             }
         }
         for (Figure figure : figures) {
