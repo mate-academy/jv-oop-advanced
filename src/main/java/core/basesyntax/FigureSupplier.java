@@ -2,8 +2,6 @@ package core.basesyntax;
 
 import java.util.Random;
 
-import static core.basesyntax.Figure.*;
-
 public class FigureSupplier {
     private static final int MAX_RANDOM_RANGE = 100;
     private static final int CIRCLE_DEFAULT_RADIUS = 10;
@@ -11,8 +9,8 @@ public class FigureSupplier {
     public FigureObject getRandomFigure() {
         ColorSupplier supplier = new ColorSupplier();
         Random random = new Random();
-        Figure randomFigure = values()[new Random()
-                .nextInt(values().length)];
+        Figure randomFigure = Figure.values()[new Random()
+                .nextInt(Figure.values().length)];
 
         switch (randomFigure) {
             case SQUARE:
