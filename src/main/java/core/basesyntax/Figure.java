@@ -18,3 +18,4 @@ public abstract class Figure implements Drawing {
     }
 }
 
+
