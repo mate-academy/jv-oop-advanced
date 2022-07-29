@@ -3,14 +3,6 @@ package core.basesyntax.model;
 public class Square extends Figure {
     private int leg;
 
-    public int getLeg() {
-        return leg;
-    }
-
-    public void setLeg(int leg) {
-        this.leg = leg;
-    }
-
     public Square() {
     }
 
@@ -20,6 +12,14 @@ public class Square extends Figure {
 
     public Square(Color color, int leg) {
         this(color);
+        this.leg = leg;
+    }
+
+    public int getLeg() {
+        return leg;
+    }
+
+    public void setLeg(int leg) {
         this.leg = leg;
     }
 

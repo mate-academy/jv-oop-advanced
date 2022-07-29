@@ -4,6 +4,19 @@ public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
+    public RightTriangle() {
+    }
+
+    public RightTriangle(Color color) {
+        super(color);
+    }
+
+    public RightTriangle(Color color, int firstLeg, int secondLeg) {
+        this(color);
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
+    }
+
     public int getFirstLeg() {
         return firstLeg;
     }
@@ -17,19 +30,6 @@ public class RightTriangle extends Figure {
     }
 
     public void setSecondLeg(int secondLeg) {
-        this.secondLeg = secondLeg;
-    }
-
-    public RightTriangle() {
-    }
-
-    public RightTriangle(Color color) {
-        super(color);
-    }
-
-    public RightTriangle(Color color, int firstLeg, int secondLeg) {
-        this(color);
-        this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
 

@@ -4,6 +4,19 @@ public class Rectangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
+    public Rectangle() {
+    }
+
+    public Rectangle(Color color) {
+        super(color);
+    }
+
+    public Rectangle(Color color, int firstLeg, int secondLeg) {
+        this(color);
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
+    }
+
     public int getFirstLeg() {
         return firstLeg;
     }
@@ -17,19 +30,6 @@ public class Rectangle extends Figure {
     }
 
     public void setSecondLeg(int secondLeg) {
-        this.secondLeg = secondLeg;
-    }
-
-    public Rectangle() {
-    }
-
-    public Rectangle(Color color) {
-        super(color);
-    }
-
-    public Rectangle(Color color, int firstLeg, int secondLeg) {
-        this(color);
-        this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
 
