@@ -1,20 +1,13 @@
 package core.basesyntax;
 
-public abstract class Figure implements Drawing {
-    private String colorfigure;
-    private double calcutateArea;
-
-    public double getcalcutateArea() {
-        return calcutateArea;
-    }
+public abstract class Figure implements Drawing, AreaCalculator {
+    private String color;
 
     public String getColor() {
-        return colorfigure;
+        return color;
     }
 
     public void setColor(String color) {
-        this.colorfigure = color;
+        this.color = color;
     }
 }
-
-

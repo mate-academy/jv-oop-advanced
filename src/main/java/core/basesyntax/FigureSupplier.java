@@ -55,7 +55,5 @@ public class FigureSupplier {
         circle.setColor(Color.WHITE.name().toLowerCase());
         circle.setRadius(RADIUS_DEFAULT);
         return circle;
-
     }
 }
-
