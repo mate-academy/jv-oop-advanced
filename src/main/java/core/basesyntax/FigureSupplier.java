@@ -3,32 +3,37 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int RANDOM = 5;
+    private static final int RANDOM_NUMBER = 20;
+    private static final int RANDOM_RADIUS = 10;
+
     public Figure getRandomFigure() {
         Random random = new Random();
-        switch (random.nextInt(5)) {
-            case (0):
-                return new Circle(new ColorSupplier().getRandomColor(), new Random().nextInt(20));
-            case (1):
-                return new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(),
-                      new Random().nextInt(20),
-                      new Random().nextInt(20),
-                      new Random().nextInt(20));
-            case (2):
-                return new Rectangle(new ColorSupplier().getRandomColor(),
-                      new Random().nextInt(20),
-                      new Random().nextInt(20));
-            case (3):
-                return new RightTriangle(new ColorSupplier().getRandomColor(),
-                      new Random().nextInt(20),
-                      new Random().nextInt(20));
-            case (4):
-                return new Square(new ColorSupplier().getRandomColor(), new Random().nextInt(20));
+        ColorSupplier colorSupplier = new ColorSupplier();
+        switch (random.nextInt(RANDOM)) {
+            case 0:
+                return new Circle(colorSupplier.getRandomColor(), random.nextInt(RANDOM_NUMBER));
+            case 1:
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        random.nextInt(RANDOM_NUMBER),
+                        random.nextInt(RANDOM_NUMBER),
+                        random.nextInt(RANDOM_NUMBER));
+            case 2:
+                return new Rectangle(colorSupplier.getRandomColor(),
+                        random.nextInt(RANDOM_NUMBER),
+                        random.nextInt(RANDOM_NUMBER));
+            case 3:
+                return new RightTriangle(colorSupplier.getRandomColor(),
+                        random.nextInt(RANDOM_NUMBER),
+                        random.nextInt(RANDOM_NUMBER));
+            case 4:
+                return new Square(colorSupplier.getRandomColor(), random.nextInt(RANDOM_NUMBER));
             default:
-                return new Square(new ColorSupplier().getRandomColor(), new Random().nextInt(20));
+                return new Square(colorSupplier.getRandomColor(), random.nextInt(RANDOM_NUMBER));
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.name(), 10);
+        return new Circle(Color.WHITE.name(), RANDOM_RADIUS);
     }
 }
