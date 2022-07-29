@@ -1,12 +1,12 @@
 package core.basesyntax.figure;
 
 import core.basesyntax.Color;
-import core.basesyntax.FigureColor;
+import core.basesyntax.Figure;
 
-public class Square extends Color {
+public class Square extends Figure {
     private int side;
 
-    public Square(int side, FigureColor color) {
+    public Square(int side, Color color) {
         this.side = side;
         this.color = color;
     }

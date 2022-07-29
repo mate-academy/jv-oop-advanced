@@ -1,13 +1,13 @@
 package core.basesyntax.figure;
 
 import core.basesyntax.Color;
-import core.basesyntax.FigureColor;
+import core.basesyntax.Figure;
 
-public class RightTriangle extends Color {
+public class RightTriangle extends Figure {
     private int side;
     private int height;
 
-    public RightTriangle(int side, int height, FigureColor color) {
+    public RightTriangle(int side, int height, Color color) {
         this.side = side;
         this.height = height;
         this.color = color;

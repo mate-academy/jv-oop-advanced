@@ -1,9 +1,13 @@
 package core.basesyntax;
 
-public abstract class Color implements Figure {
-    protected FigureColor color;
-
-    public FigureColor getColor() {
-        return color;
-    }
+public enum Color {
+    BLACK,
+    BROWN,
+    RED,
+    BLUE,
+    GREEN,
+    GRAY,
+    YELLOW,
+    WHITE,
+    PINK;
 }

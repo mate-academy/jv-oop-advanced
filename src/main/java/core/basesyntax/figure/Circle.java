@@ -1,12 +1,12 @@
 package core.basesyntax.figure;
 
 import core.basesyntax.Color;
-import core.basesyntax.FigureColor;
+import core.basesyntax.Figure;
 
-public class Circle extends Color {
+public class Circle extends Figure {
     private int radius;
 
-    public Circle(int radius, FigureColor color) {
+    public Circle(int radius, Color color) {
         this.radius = radius;
         this.color = color;
     }

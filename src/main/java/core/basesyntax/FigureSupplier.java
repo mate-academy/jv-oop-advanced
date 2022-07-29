@@ -7,17 +7,16 @@ import core.basesyntax.figure.RightTriangle;
 import core.basesyntax.figure.Square;
 import java.util.Random;
 
-public class FigureSupplier extends ColorSupplier {
-
+public class FigureSupplier {
     private static final int MAX_SIDE = 10;
-    private static final int INDEX = 5;
+    private static final int NUMBER_OF_FIGURES = 5;
     private static final int DEFAULT_CIRCLE_RADIUS = 10;
-    private static final FigureColor DEFAULT_CIRCLE_COLOR = FigureColor.WHITE;
+    private static final Color DEFAULT_CIRCLE_COLOR = Color.WHITE;
     private Random random = new Random();
 
     public Figure getRandomFigure() {
         ColorSupplier colorSupplier = new ColorSupplier();
-        int index = random.nextInt(INDEX);
+        int index = random.nextInt(NUMBER_OF_FIGURES);
         switch (index) {
             case 1:
                 return new Square(random.nextInt(MAX_SIDE),
