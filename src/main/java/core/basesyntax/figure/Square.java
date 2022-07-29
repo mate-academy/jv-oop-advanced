@@ -18,5 +18,4 @@ public class Square extends Figure {
     public double calculateArea() {
         return side * side;
     }
-
 }
