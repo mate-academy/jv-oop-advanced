@@ -17,7 +17,7 @@ public class Rectangle extends Figure implements Draw, Area{
 
     @Override
     public String draw() {
-        return "Figure: Rectangle, " + "square=" + getArea() +", firstLeg=" + firstLeg
-                + ", secondLeg=" + secondLeg + ", color=" + getColor() + '.';
+        return "Figure: Rectangle, " + "square=" + getArea() +"sq.units, firstLeg=" + firstLeg
+                + "units, secondLeg=" + secondLeg + "units, color=" + getColor() + '.';
     }
 }

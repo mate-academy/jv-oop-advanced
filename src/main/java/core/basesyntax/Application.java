@@ -2,11 +2,8 @@ package core.basesyntax;
 
 public class Application {
     public static void main(String [] main) {
+        FigureSupplier figurSuplier = new FigureSupplier();
+        for(int i = 0; i < 6; i++) {
+            System.out.println(figurSuplier.getRandomFigure().draw());
+        }}}
 
-        FigureSupplier figurS = new FigureSupplier();
-        Figure w = new Circle();
-        w = figurS.getDefaultFigure();
-        System.out.println(w.draw());
-
-    }
-}
