@@ -4,7 +4,6 @@ public abstract class Figure implements Drawing {
     private String colorfigure;
     private double calcutateArea;
 
-
     public double getcalcutateArea() {
         return calcutateArea;
     }
