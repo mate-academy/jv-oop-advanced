@@ -18,10 +18,10 @@ public class Rectangle extends Figure {
     @Override
     public String draw() {
         return "Figure: rectangle, "
-                + "area: "      + getArea() + " sq.units, "
-                + "width: "     + wigth     + " sq.units, "
-                + "height: "    + height    + " sq.units, "
-                + "color: "     + getColor();
+                + "area: " + getArea() + " sq.units, "
+                + "width: " + wigth + " units, "
+                + "height: " + height + " units, "
+                + "color: " + getColor();
     }
 
 }
