@@ -8,23 +8,18 @@ public class Circle extends Figure {
         setColor(color);
     }
 
-    public Circle() {
-        setColor("WHITE");
-        this.radius = 10;
-    }
-
     @Override
     public double getArea() {
         return Math.PI * radius * radius;
     }
 
     @Override
-    public String draw() {
+    public void draw() {
         StringBuilder builder = new StringBuilder();
-        return builder.append("Figure: Circle, ").append("area: ")
-                .append(Double.valueOf(getArea()).toString())
+        System.out.println(builder.append("Figure: Circle, ").append("area: ")
+                .append(getArea())
                 .append(" sq.units, radius: ")
-                .append(Integer.valueOf(radius).toString())
-                .append(" units, color: ").append(getColor()).toString();
+                .append(radius)
+                .append(" units, color: ").append(getColor()));
     }
 }

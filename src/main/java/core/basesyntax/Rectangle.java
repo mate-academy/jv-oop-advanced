@@ -16,12 +16,12 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String draw() {
+    public void draw() {
         StringBuilder builder = new StringBuilder();
-        return builder.append("Figure: Rectangle, ").append("area: ")
-                .append(Double.valueOf(getArea()).toString()).append(" sq.units, first side: ")
-                .append(Integer.valueOf(firstSide).toString()).append(" units, second side: ")
-                .append(Integer.valueOf(secondSide).toString())
-                .append(" units, color: ").append(getColor()).toString();
+        System.out.println(builder.append("Figure: Rectangle, ").append("area: ")
+                .append(getArea()).append(" sq.units, first side: ")
+                .append(firstSide).append(" units, second side: ")
+                .append(secondSide)
+                .append(" units, color: ").append(getColor()));
     }
 }

@@ -16,12 +16,12 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String draw() {
+    public void draw() {
         StringBuilder builder = new StringBuilder();
-        return builder.append("Figure: Right triangle, ").append("area: ")
-                .append(Double.valueOf(getArea()).toString()).append(" sq.units, first leg: ")
-                .append(Integer.valueOf(firstLeg).toString()).append(" units, second leg: ")
-                .append(Integer.valueOf(secondLeg).toString()).append(" units, color: ")
-                .append(getColor()).toString();
+        System.out.println(builder.append("Figure: Right triangle, ").append("area: ")
+                .append(getArea()).append(" sq.units, first leg: ")
+                .append(firstLeg).append(" units, second leg: ")
+                .append(secondLeg).append(" units, color: ")
+                .append(getColor()));
     }
 }
