@@ -3,16 +3,22 @@ package core.basesyntax.figures;
 import core.basesyntax.temp.Figure;
 
 public class Square extends Figure {
+    private double side;
+    private double figureArea;
 
-    @Override
-    public void calculatingSquare() {
-        setSide(getFields()[5]);
-        setFigureArea(Math.pow(getSide(), 2));
+    public void setSide(double side) {
+        this.side = side;
     }
 
     @Override
-    public String toString() {
-        return "Square, area: " + getFigureArea() + ", side: " + getSide()
-                + ", color: " + getColor();
+    public void getArea() {
+        figureArea = (Math.pow(side, 2));
+    }
+
+    @Override
+    public void draw() {
+        getArea();
+        System.out.println("Square, area: " + figureArea + ", side: " + side
+                + ", color: " + getColor());
     }
 }

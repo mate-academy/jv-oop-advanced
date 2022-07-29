@@ -4,16 +4,27 @@ import core.basesyntax.temp.Figure;
 
 public class Rectangle extends Figure {
 
-    @Override
-    public void calculatingSquare() {
-        setFirstSide(getFields()[7]);
-        setSecondSide(getFields()[8]);
-        setFigureArea(getFirstSide() * getSecondSide());
+    private double firstSide;
+    private double secondSide;
+    private double figureArea;
+
+    public void setFirstSide(double firstSide) {
+        this.firstSide = firstSide;
+    }
+
+    public void setSecondSide(double secondSide) {
+        this.secondSide = secondSide;
     }
 
     @Override
-    public String toString() {
-        return "Rectangle, area: " + getFigureArea() + ", first side: " + getFirstSide()
-                + ", second side: " + getSecondSide() + ", color: " + getColor();
+    public void getArea() {
+        figureArea = firstSide * secondSide;
+    }
+
+    @Override
+    public void draw() {
+        getArea();
+        System.out.println("Rectangle, area: " + figureArea + ", first side: " + firstSide
+                + ", second side: " + secondSide + ", color: " + getColor());
     }
 }

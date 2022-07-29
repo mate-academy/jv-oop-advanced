@@ -3,17 +3,27 @@ package core.basesyntax.figures;
 import core.basesyntax.temp.Figure;
 
 public class RightTriangle extends Figure {
+    private double firstLeg;
+    private double secondLeg;
+    private double figureArea;
 
-    @Override
-    public void calculatingSquare() {
-        setFirstLeg(getFields()[0]);
-        setSecondLeg(getFields()[1]);
-        setFigureArea(0.5 * getFirstLeg() * getSecondLeg());
+    public void setFirstLeg(double firstLeg) {
+        this.firstLeg = firstLeg;
+    }
+
+    public void setSecondLeg(double secondLeg) {
+        this.secondLeg = secondLeg;
     }
 
     @Override
-    public String toString() {
-        return "Right triangle, area: " + getFigureArea() + ", first leg: " + getFirstLeg()
-                + ", second leg: " + getSecondLeg() + ", color: " + getColor();
+    public void getArea() {
+        figureArea = (0.5 * firstLeg * secondLeg);
+    }
+
+    @Override
+    public void draw() {
+        getArea();
+        System.out.println("Right triangle, area: " + figureArea + ", first leg: " + firstLeg
+                + ", second leg: " + secondLeg + ", color: " + getColor());
     }
 }
