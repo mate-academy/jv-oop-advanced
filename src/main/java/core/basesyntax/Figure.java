@@ -17,3 +17,4 @@ public abstract class Figure implements Drawing {
         this.colorfigure = color;
     }
 }
+

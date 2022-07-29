@@ -23,3 +23,4 @@ public class Circle extends Figure {
                 + radius + " units, color: " + getColor());
     }
 }
+

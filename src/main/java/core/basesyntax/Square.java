@@ -19,3 +19,4 @@ public class Square extends Figure {
         return side * side;
     }
 }
+
