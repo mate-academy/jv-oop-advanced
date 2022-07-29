@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public enum FiguresList {
+public enum Shape {
     CIRCLE,
     ISOSCELES_TRAPEZOID,
     RECTANGLE,
