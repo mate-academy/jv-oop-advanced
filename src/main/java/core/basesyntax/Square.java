@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
 public class Square extends FigureObject {
     private double sideA;
 
-    public Square(String color, double sideA) {
+    public Square(Color color, double sideA) {
         super(color);
         this.sideA = sideA;
     }

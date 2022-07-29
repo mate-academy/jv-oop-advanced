@@ -5,7 +5,7 @@ import java.text.DecimalFormat;
 public class Circle extends FigureObject {
     private double radius;
 
-    public Circle(String color, double radius) {
+    public Circle(Color color, double radius) {
         super(color);
         this.radius = radius;
     }

@@ -6,7 +6,7 @@ public class Rectangle extends FigureObject {
     private double sideA;
     private double sideB;
 
-    public Rectangle(String color, double sideA, double sideB) {
+    public Rectangle(Color color, double sideA, double sideB) {
         super(color);
         this.sideA = sideA;
         this.sideB = sideB;

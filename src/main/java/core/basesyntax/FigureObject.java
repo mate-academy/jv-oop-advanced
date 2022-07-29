@@ -1,13 +1,13 @@
 package core.basesyntax;
 
-public abstract class FigureObject implements calculational, Drawable {
-    private String color;
+public abstract class FigureObject implements Calculational, Drawable {
+    private Color color;
 
-    public FigureObject(String color) {
+    public FigureObject(Color color) {
         this.color = color;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 }
