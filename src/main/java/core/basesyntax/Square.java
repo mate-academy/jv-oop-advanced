@@ -3,16 +3,17 @@ package core.basesyntax;
 public class Square extends Figure {
     private double edge;
 
-    public Square(double edge, Color color) {
-        super(color);
+    public Square(double edge, String color) {
+        super(Color.valueOf(color));
         this.edge = edge;
     }
 
     @Override
     public String draw() {
-        return "Square{" +
-                "edge=" + edge +
-                '}';
+        return "Figure: square, "
+                + "area: " + getArea() + " sq.units, "
+                + "edge: " + edge + " units, "
+                + "color: " + getColor();
     }
 
     @Override

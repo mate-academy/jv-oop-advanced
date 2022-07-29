@@ -4,8 +4,8 @@ public class Rectangle extends Figure {
     private double wigth;
     private double height;
 
-    public Rectangle(double wigth, double height, Color color) {
-        super(color);
+    public Rectangle(double wigth, double height, String color) {
+        super(Color.valueOf(color));
         this.wigth = wigth;
         this.height = height;
     }
@@ -17,10 +17,11 @@ public class Rectangle extends Figure {
 
     @Override
     public String draw() {
-        return "Square{" +
-                "edge=" + wigth +
-                "height=" + height +
-                '}';
+        return "Figure: rectangle, "
+                + "area: " + getArea() + " sq.units, "
+                + "width: " + wigth + " units, "
+                + "height: " + height + " units, "
+                + "color: " + getColor();
     }
 
 }

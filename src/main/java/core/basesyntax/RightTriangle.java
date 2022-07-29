@@ -4,18 +4,19 @@ public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
-    public RightTriangle(Color color, double firstLeg, double secondLeg) {
-        super(color);
+    public RightTriangle(String color, double firstLeg, double secondLeg) {
+        super(Color.valueOf(color));
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
 
     @Override
     public String draw() {
-        return "RightTriangle{" +
-                "firstLeg=" + firstLeg +
-                ", secondLeg=" + secondLeg +
-                '}';
+        return "Figure: rightTriangle, "
+                + "area: " + getArea() + " sq.units, "
+                + "firstLeg: " + firstLeg + " units, "
+                + "secondLeg: " + secondLeg + " units, "
+                + "color: " + getColor();
     }
 
     @Override

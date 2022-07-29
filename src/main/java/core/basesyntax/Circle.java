@@ -3,16 +3,17 @@ package core.basesyntax;
 public class Circle extends Figure {
     private double radius;
 
-    Circle(Color color, double radius) {
-        super(color);
+    Circle(String color, double radius) {
+        super(Color.valueOf(color));
         this.radius = radius;
     }
 
     @Override
     public String draw() {
-        return "Circle{" +
-                "radius=" + radius +
-                '}';
+        return "Figure: circle, "
+                + "area: " + getArea() + " sq.units, "
+                + "radius: " + radius + " units, "
+                + "color: " + getColor();
     }
 
     @Override
