@@ -4,13 +4,14 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
+    public static final int DEFAULT_NUMBER = 10;
     public static final int MAX_VALUE = 20;
     private static final ColorSupplier colorSupplier = new ColorSupplier();
     private static final Random random = new Random();
 
-    public Drawable getRandomFigure() {
+    public Figure getRandomFigure() {
         int shapeNumber = random.nextInt(FIGURE_COUNT);
-        Drawable figure = null;
+        Figure figure = null;
 
         switch (shapeNumber) {
             case 0:
@@ -32,17 +33,16 @@ public class FigureSupplier {
                 figure = new Square(colorSupplier.getRandomColor(), random.nextInt(MAX_VALUE));
                 break;
             case 4:
+            default:
                 figure = new Rectangle(colorSupplier.getRandomColor(),
                         random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
-                break;
-            default:
                 break;
         }
         return figure;
     }
 
-    public Drawable getDefaultFigure() {
-        return new Circle("white", 10);
+    public Figure getDefaultFigure() {
+        return new Circle(Color.WHITE.toString(), DEFAULT_NUMBER);
     }
 
 }

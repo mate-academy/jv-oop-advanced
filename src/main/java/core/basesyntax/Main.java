@@ -3,15 +3,15 @@ package core.basesyntax;
 import java.util.Arrays;
 
 public class Main {
-    private static FigureSupplier figureSupplier = new FigureSupplier();
+    private static final FigureSupplier figureSupplier = new FigureSupplier();
 
     public static void main(String[] args) {
-        Drawable[] figures = new Drawable[6];
+        Figure[] figures = new Figure[6];
         System.out.println(Arrays.toString(fillArrayWithShapes(figures)));
         draw(figures);
     }
 
-    public static Drawable[] fillArrayWithShapes(Drawable[] figures) {
+    private static Figure[] fillArrayWithShapes(Figure[] figures) {
         for (int i = 0; i < figures.length; i++) {
             if (i < figures.length / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
@@ -22,7 +22,7 @@ public class Main {
         return figures;
     }
 
-    public static void draw(Drawable[] figures) {
+    private static void draw(Drawable[] figures) {
         for (int i = 0; i < figures.length; i++) {
             figures[i].draw();
         }
