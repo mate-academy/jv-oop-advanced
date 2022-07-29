@@ -8,9 +8,9 @@ public class HelloWorld {
         FigureSupplier figureSupplier = new FigureSupplier(new ColorSupplier());
         for (int i = 0; i < figures.length; i++) {
             if (i < figures.length / 2) {
-                figureSupplier.getRandomFigure().toDraw();
+                figureSupplier.getRandomFigure().draw();
             } else {
-                figureSupplier.getDefaultFigure().toDraw();
+                figureSupplier.getDefaultFigure().draw();
             }
         }
     }
