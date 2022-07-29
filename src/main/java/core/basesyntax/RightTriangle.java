@@ -36,4 +36,17 @@ public class RightTriangle extends Figure {
     public void setSecondLeg(int secondLeg) {
         this.secondLeg = secondLeg;
     }
+
+    @Override
+    public double getArea() {
+        return firstLeg * secondLeg / 2;
+    }
+
+    @Override
+    public String draw() {
+        return "Figure: Right Triangle, color: " + getColor() + ", "
+                + "area: " + getArea() + " sq.units, "
+                + "first leg: " + firstLeg + ", "
+                + "second leg: " + secondLeg;
+    }
 }

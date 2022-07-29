@@ -46,4 +46,18 @@ public class IsoscelesTrapezoid extends Figure {
     public void setHeight(int height) {
         this.height = height;
     }
+
+    @Override
+    public double getArea() {
+        return (lowerSide + topSide) / 2 * height;
+    }
+
+    @Override
+    public String draw() {
+        return "Figure: Isosceles Trapezoid, color: " + getColor() + ", "
+                + "area: " + getArea() + " sq.units, "
+                + "lower side: " + lowerSide + ", "
+                + "top side: " + topSide + ", "
+                + "height: " + height;
+    }
 }

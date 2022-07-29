@@ -26,4 +26,16 @@ public class Circle extends Figure {
     public void setRadius(int radius) {
         this.radius = radius;
     }
+
+    @Override
+    public double getArea() {
+        return Math.PI * radius * 2;
+    }
+
+    @Override
+    public String draw() {
+        return "Figure: Circle, color: " + getColor() + ", "
+                + "area: " + getArea() + " sq.units, "+
+                "radius: " + radius;
+    }
 }

@@ -36,4 +36,17 @@ public class Rectangle extends Figure {
     public void setSecondSide(int secondSide) {
         this.secondSide = secondSide;
     }
+
+    @Override
+    public double getArea() {
+        return firstSide * secondSide;
+    }
+
+    @Override
+    public String draw() {
+        return "Figure: Rectangle, color: " + getColor() + ", "
+                + "area: " + getArea() + " sq.units, "
+                + "first side: " + firstSide + ", "
+                + "second side: " + secondSide;
+    }
 }
