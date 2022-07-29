@@ -4,9 +4,10 @@ import java.util.Random;
 
 public class FigureSuplier {
     private final ColorSuplier color = new ColorSuplier();
+    private static final int MAX_VALUE = 5;
 
     public Figure getRandomFigure() {
-        switch (new Random().nextInt(5)) {
+        switch (new Random().nextInt(MAX_VALUE)) {
             case 0:
                 return new Circle(color.getRandomColor(),
                         new Random().nextInt(20));
