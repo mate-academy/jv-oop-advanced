@@ -8,16 +8,16 @@ public class FigureSupplier {
     private static final Color finalCircleColor = Color.WHITE;
     private static final double circleRadius = 10.00;
     private static final Figure finalCircle = new Circle(finalCircleColor, circleRadius);
+    private static final int NO_RANDOM_ZERO = 1;
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
         ColorSupplier colorSupplier = new ColorSupplier();
-        int randomFigure = random.nextInt(FIGURE_COUNT) + 1;
-        double randomFirstLeg = random.nextInt(FIGURE_LENGTH_MAX) + 1;
-        double randomSecondLeg = random.nextInt(FIGURE_LENGTH_MAX) + 1;
-        double randomHeight = random.nextInt(FIGURE_LENGTH_MAX) + 1;
-
-        switch (randomFigure) {
+        int randomFigureNumber = random.nextInt(FIGURE_COUNT) + NO_RANDOM_ZERO;
+        double randomFirstLeg = random.nextInt(FIGURE_LENGTH_MAX) + NO_RANDOM_ZERO;
+        double randomSecondLeg = random.nextInt(FIGURE_LENGTH_MAX) + NO_RANDOM_ZERO;
+        double randomHeight = random.nextInt(FIGURE_LENGTH_MAX) + NO_RANDOM_ZERO;
+        switch (randomFigureNumber) {
             case 1:
                 return new Circle(colorSupplier.getRandomColor(),
                         randomFirstLeg);
