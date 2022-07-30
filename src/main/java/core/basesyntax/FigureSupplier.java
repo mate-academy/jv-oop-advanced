@@ -3,26 +3,33 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int FIGURE_COUNT = 5;
+    private static final int DEFAULT_RADIUS = 10;
+    private static final String DEFAULT_COLOR = Color.WHITE.toString();
+    private static final int MAX_SIDE_SIDE = 20;
+    private final Random random = new Random();
+
     public Figure getDefaultFigure() {
-        int defaultSideSizeValue = 10;
-        return new Circle(defaultSideSizeValue, Color.WHITE.toString());
+        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
     }
 
     public Figure getRandomFigure() {
-        switch (new Random().nextInt(Shape.values().length)) {
-            case 1 : return new Square(getRandomNumber(), getRandomColor());
-            case 2 : return new RightTriangle(getRandomNumber(), getRandomNumber(),
+        int randomShapeIndex = random.nextInt(FIGURE_COUNT);
+        switch (Shape.values()[randomShapeIndex].toString()) {
+            case "SQUARE" : return new Square(getRandomSideSize(), getRandomColor());
+            case "TRIANGLE" : return new RightTriangle(getRandomSideSize(), getRandomSideSize(),
                     getRandomColor());
-            case 3 : return new Rectangle(getRandomNumber(), getRandomNumber(), getRandomColor());
-            case 4 : return new IsoscelesTrapezoid(getRandomNumber(),
-                    getRandomNumber(), getRandomNumber(), getRandomColor());
-            default: return new Circle(getRandomNumber(), getRandomColor());
+            case "RECTANGLE" : return new Rectangle(getRandomSideSize(), getRandomSideSize(),
+                    getRandomColor());
+            case "TRAPEZOID" : return new IsoscelesTrapezoid(getRandomSideSize(),
+                    getRandomSideSize(), getRandomSideSize(), getRandomColor());
+            case "CIRCLE" : return new Circle(getRandomSideSize(), getRandomColor());
+            default: return getDefaultFigure();
         }
     }
 
-    private int getRandomNumber() {
-        int maxRandomSideSize = 20;
-        return new Random().nextInt(maxRandomSideSize) + 1;
+    private int getRandomSideSize() {
+        return new Random().nextInt(MAX_SIDE_SIDE) + 1;
     }
 
     private String getRandomColor() {
