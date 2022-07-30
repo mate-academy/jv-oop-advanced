@@ -8,9 +8,8 @@ public class Square extends Figure {
         this.leg = leg;
     }
 
-    @Override
     public double getArea() {
-        return Math.pow(leg,2);
+        return Math.pow(leg, 2);
     }
 
     @Override
