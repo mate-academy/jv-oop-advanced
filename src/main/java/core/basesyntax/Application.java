@@ -13,7 +13,6 @@ public class Application {
                 figureArray[i] = figurSuplier.getDefaultFigure();
                 System.out.println(figureArray[i].draw());
             }
-
         }
     }
 }
