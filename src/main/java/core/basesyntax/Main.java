@@ -5,12 +5,12 @@ public class Main {
         Figure[] figures = new Figure[6];
         FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < figures.length; i++) {
-            if (i > figures.length / 2) {
+            if (i >= figures.length / 2) {
                 figures[i] = figureSupplier.getDefaultFigure();
             } else {
                 figures[i] = figureSupplier.getRandomFigure();
             }
-            figures[i].getDraw();
+            figures[i].draw();
         }
     }
 }

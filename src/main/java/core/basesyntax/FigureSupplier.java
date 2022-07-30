@@ -3,14 +3,18 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    static final int NUMBER = 10;
-    static final String WHITE = "WHITE";
+    private static final int DEFAULT_RADIUS = 10;
+    private static final String DEFAULT_COLOR = "WHITE";
+    private static final int NUMBER_OF_FUGURES = 5;
+    private static final int MAX_SIZE_OF_FIRST_PARAMETR = 60;
+    private static final int MAX_SIZE_OF_SECOND_PARAMETR = 70;
+    private static final int MAX_SIZE_OF_THIRS_PARAMETR = 80;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int figure = random.nextInt(5);
-        switch (figure) {
+        int randomFigureNumber = random.nextInt(NUMBER_OF_FUGURES);
+        switch (randomFigureNumber) {
             case (1):
                 return getRandomCircle();
             case (2):
@@ -24,41 +28,42 @@ public class FigureSupplier {
         }
     }
 
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
+    }
+
     private Figure getRandomCircle() {
-        int radius = random.nextInt(60) + 1;
+        int radius = random.nextInt(MAX_SIZE_OF_FIRST_PARAMETR) + 1;
         String color = colorSupplier.getRandomColor();
         return new Circle(radius, color);
     }
 
     private Figure getRandomIsoscelesTrapezoid() {
-        int leg = random.nextInt(60) + 1;
-        int upbase = random.nextInt(70) + 1;
-        int downbase = random.nextInt(80) + 1;
+        int leg = random.nextInt(MAX_SIZE_OF_FIRST_PARAMETR) + 1;
+        int upbase = random.nextInt(MAX_SIZE_OF_SECOND_PARAMETR) + 1;
+        int downbase = random.nextInt(MAX_SIZE_OF_THIRS_PARAMETR) + 1;
         String color = colorSupplier.getRandomColor();
         return new IsoscelesTrapezoid(leg, upbase, downbase, color);
     }
 
     private Figure getRandomRectangle() {
-        int firstLeg = random.nextInt(60) + 1;
-        int secondLeg = random.nextInt(70) + 1;
+        int firstLeg = random.nextInt(MAX_SIZE_OF_FIRST_PARAMETR) + 1;
+        int secondLeg = random.nextInt(MAX_SIZE_OF_SECOND_PARAMETR) + 1;
         String color = colorSupplier.getRandomColor();
         return new Rectangle(firstLeg, secondLeg, color);
     }
 
     private Figure getRandomRightTriangle() {
-        int firstLeg = random.nextInt(60) + 1;
-        int secondLeg = random.nextInt(70) + 1;
+        int firstLeg = random.nextInt(MAX_SIZE_OF_FIRST_PARAMETR) + 1;
+        int secondLeg = random.nextInt(MAX_SIZE_OF_SECOND_PARAMETR) + 1;
         String color = colorSupplier.getRandomColor();
         return new RightTriangle(firstLeg, secondLeg, color);
     }
 
     private Figure getRandomSquare() {
-        int leg = random.nextInt(60) + 1;
+        int leg = random.nextInt(MAX_SIZE_OF_FIRST_PARAMETR) + 1;
         String color = colorSupplier.getRandomColor();
         return new Square(leg, color);
     }
 
-    public Figure getDefaultFigure() {
-        return new Circle(NUMBER, WHITE);
-    }
 }

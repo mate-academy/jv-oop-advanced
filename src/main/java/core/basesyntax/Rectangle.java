@@ -11,14 +11,14 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public Double getAreaCalculator() {
+    public Double getArea() {
         return (double)firstLeg * secondLeg;
     }
 
     @Override
-    public void getDraw() {
-        System.out.println("Figure: rectangle, area: " + this.getAreaCalculator()
+    public void draw() {
+        System.out.println("Figure: rectangle, area: " + getArea()
                 + " sq.units, firstLeg: " + firstLeg + " units, secondLeg: "
-                + secondLeg + " units, color: " + super.getColor());
+                + secondLeg + " units, color: " + getColor());
     }
 }
