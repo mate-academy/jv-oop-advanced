@@ -1,8 +1,8 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Draw, Area{
-    private double firstLeg;
-    private double secondLeg;
+public class Rectangle extends Figure {
+    private final double firstLeg;
+    private final double secondLeg;
 
     public Rectangle(Color color, double firstLeg, double secondLeg) {
         super(color);
@@ -17,7 +17,7 @@ public class Rectangle extends Figure implements Draw, Area{
 
     @Override
     public String draw() {
-        return "Figure: Rectangle, " + "square=" + getArea() +"sq.units, firstLeg=" + firstLeg
+        return "Figure: Rectangle, " + "square=" + getArea() + "sq.units, firstLeg=" + firstLeg
                 + "units, secondLeg=" + secondLeg + "units, color=" + getColor() + '.';
     }
 }

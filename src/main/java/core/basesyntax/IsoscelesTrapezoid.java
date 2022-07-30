@@ -1,9 +1,9 @@
 package core.basesyntax;
-//       \_/ (1 сторона + 2 сторона )/ 2 * высоту
-public class IsoscelesTrapezoid extends Figure implements Draw, Area  {
-    private double firstLeg;
-    private double secondLeg;
-    private double height;
+
+public class IsoscelesTrapezoid extends Figure {
+    private final double firstLeg;
+    private final double secondLeg;
+    private final double height;
 
     public IsoscelesTrapezoid(Color color, double firstLeg, double secondLeg, double height) {
         super(color);
@@ -19,8 +19,12 @@ public class IsoscelesTrapezoid extends Figure implements Draw, Area  {
 
     @Override
     public String draw() {
-        return "Figure: IsoscelesTrapezoid, " + "square=" + getArea() +"sq.units, firstLeg=" + firstLeg
-                + "units, secondLeg=" + secondLeg + "units, height=" + height + "units, color=" + getColor() + '.';
+        return "Figure: IsoscelesTrapezoid, "
+                + "square=" + getArea() + "sq.units, firstLeg="
+                + firstLeg + "units, secondLeg="
+                + secondLeg + "units, height="
+                + height + "units, color="
+                + getColor() + '.';
     }
 }
 
