@@ -28,15 +28,15 @@ public class Rectangle extends Figure {
 
     @Override
     public double area() {
-        return firstSide*secondSide;
+        return firstSide * secondSide;
     }
 
     @Override
     public String information() {
-        return "figure: Rectangle"+" firstSide: "+firstSide
-                +" units"
-                +" secondSide: "+secondSide
-                +" units"
-                + " area: "+area()+" sq.units" +" color: "+color;
+        return "figure: Rectangle" + " firstSide: " + firstSide
+                + " units"
+                + " secondSide: " + secondSide
+                + " units"
+                + " area: " + area() + " sq.units" + " color: " + color;
     }
 }
