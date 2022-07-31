@@ -25,6 +25,10 @@ public class FigureSupplier {
                 return  new Circle(color, side);
         }
     }
+    public Figure getDefaultFigure(){
+       return new Circle("WHITE",10);
+    }
+
 
 
 

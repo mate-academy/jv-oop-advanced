@@ -6,7 +6,16 @@ package core.basesyntax;
 public class Main {
     public static void main(String[] args) {
         FigureSupplier figureSupplier=new FigureSupplier();
-        System.out.println(figureSupplier.getRandomFigure().information());
+       Figure [] array=new Figure[6];
+        for (int i = 0; i < 6; i++) {
+            if(i<3) {
+                array[i] = figureSupplier.getRandomFigure();
+            }
+            else {
+                array[i] = figureSupplier.getDefaultFigure();
+            }
+            System.out.println(array[i].information());
+        }
 
     }
 
