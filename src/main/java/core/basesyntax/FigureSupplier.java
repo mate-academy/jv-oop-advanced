@@ -35,14 +35,13 @@ public class FigureSupplier {
         return figure;
     }
 
-    public Figure getDefaultFigure() {
+    public void getDefaultFigure() {
         Circle circle = new Circle();
         circle.setFigureName("circle");
         circle.setRadius(10);
         circle.setColor(String.valueOf(Colors.WHITE));
         System.out.println("Figure: " + circle.getFigureName() + ", " + "area: " + circle.getArea()
                 + " sq.units, radius: " + circle.getRadius() + ", color: " + circle.getColor());
-        return circle;
     }
 
 }
