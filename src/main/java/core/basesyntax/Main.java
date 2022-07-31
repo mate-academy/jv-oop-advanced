@@ -1,6 +1,5 @@
 package core.basesyntax;
 
-import core.basesyntax.figure.Circle;
 import core.basesyntax.figure.Figure;
 import core.basesyntax.figure.IsoscelesTrapezoid;
 import core.basesyntax.figure.Rectangle;
@@ -13,11 +12,6 @@ public class Main {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
         ColorSupplier colorSupplier = new ColorSupplier();
-
-        Figure circle = new Circle(
-                "Circle", colorSupplier.getRandomColor(),
-                figureSupplier.getRandomFigureProperties()
-        );
 
         Figure trapezoid = new IsoscelesTrapezoid(
                 "Isosceles Trapezoid", colorSupplier.getRandomColor(),
@@ -41,7 +35,8 @@ public class Main {
                 figureSupplier.getRandomFigureProperties()
         );
 
-        Figure[] figure = {circle, trapezoid, rectangle, square, rightTriangle};
+        Figure[] figure = {trapezoid, rectangle, square, rightTriangle,
+                figureSupplier.getDefaultFigure(), figureSupplier.getDefaultFigure()};
         for (Figure figures : figure) {
             System.out.println(figures.draw());
         }
