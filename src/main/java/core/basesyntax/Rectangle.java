@@ -33,6 +33,10 @@ public class Rectangle extends Figure {
 
     @Override
     public String information() {
-        return null;
+        return "figure: Rectangle"+" firstSide: "+firstSide
+                +" units"
+                +" secondSide: "+secondSide
+                +" units"
+                + " area: "+area()+" sq.units" +" color: "+color;
     }
 }

@@ -33,6 +33,11 @@ public class RightTriangle extends Figure{
 
     @Override
     public String information() {
-        return null;
+        return "figure: RightTriangle"+" firstLeg: "+firstLeg
+                +" units"
+                +" secondLeg: "+secondLeg
+                +" units"
+                + " area: "+area()+" sq.units" +" color: "+color;
+
     }
 }

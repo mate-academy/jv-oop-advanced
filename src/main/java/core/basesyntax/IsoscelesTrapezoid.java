@@ -43,6 +43,12 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String information() {
-        return null;
+        return "figure: IsoscelesTrapezoid"+" upperBase: "+upperBase
+                +" units"
+                +" bottomBase: "+bottomBase
+                +" units"
+                +" height: "+height
+                +" units"
+                + " area: "+area()+" sq.units" +" color: "+color;
     }
 }

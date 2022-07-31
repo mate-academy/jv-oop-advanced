@@ -5,6 +5,8 @@ package core.basesyntax;
  */
 public class Main {
     public static void main(String[] args) {
+        FigureSupplier figureSupplier=new FigureSupplier();
+        System.out.println(figureSupplier.getRandomFigure().information());
 
     }
 

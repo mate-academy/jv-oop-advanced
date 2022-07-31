@@ -23,6 +23,6 @@ public class Circle extends Figure{
 
     @Override
     public String information() {
-        return null;
+        return "figure: circle"+" radius: "+radius+" units area: "+area()+" sq.units" +" color: "+color;
     }
 }
