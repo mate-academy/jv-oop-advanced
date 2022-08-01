@@ -23,7 +23,7 @@ public class FigureSupplier {
                         colorRandom.getRandomColor());
             case "RIGHT_TRIANGLE":
                 return new RightTriangle(random.nextDouble(), random.nextDouble(),
-                        colorRandom.getRandomColor());
+                        random.nextDouble(), colorRandom.getRandomColor());
             default:
                 return getDefaultFigure();
         }

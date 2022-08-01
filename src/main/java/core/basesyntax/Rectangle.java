@@ -15,8 +15,13 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("rectangle, " + "area: " + getArea() + " sq.units,"
+        System.out.println("rectangle, " + "area: " + areaCalculate(super.getArea()) + " sq.units,"
                 + " length: " + length + " units," + " weight: "
                 + weight + " units," + " color: " + getColor());
+    }
+
+    @Override
+    public double areaCalculate(double area) {
+        return length * weight;
     }
 }
