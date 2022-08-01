@@ -3,36 +3,34 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final int index = random.nextInt(FigureNames.values().length);
-    private final double randomValue = random.nextDouble();
 
     public Figure getRandomFigure() {
+        final int index = random.nextInt(FigureNames.values().length);
         switch (FigureNames.values()[index]) {
             case CIRCLE:
                 return new Circle(
-                        randomValue, colorSupplier.getRandomColor());
+                        random.nextDouble(), colorSupplier.getRandomColor());
             case ISOSCELES_TRAPEZOID:
                 return new IsoscelesTrapezoid(
-                        randomValue,
-                        randomValue,
-                        randomValue, colorSupplier.getRandomColor());
+                        random.nextDouble(),
+                        random.nextDouble(),
+                        random.nextDouble(), colorSupplier.getRandomColor());
             case SQUARE:
                 return new Square(
-                        randomValue, colorSupplier.getRandomColor());
+                        random.nextDouble(), colorSupplier.getRandomColor());
             case RECTANGLE:
                 return new Rectangle(
-                        randomValue, randomValue, colorSupplier.getRandomColor());
+                        random.nextDouble(), random.nextDouble(), colorSupplier.getRandomColor());
             case RIGHT_TRIANGLE:
                 return new RightTriangle(
-                        randomValue, colorSupplier.getRandomColor());
+                        random.nextDouble(), colorSupplier.getRandomColor());
             default: return getDefaultFigure();
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(randomValue, Color.WHITE);
+        return new Circle(random.nextDouble(), Color.WHITE);
     }
 }

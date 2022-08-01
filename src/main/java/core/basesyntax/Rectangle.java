@@ -16,7 +16,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String getFigureInfo() {
+    public String draw() {
         return "Figure: rectangle Area: " + getArea() + " sq.units"
                 + " Length: " + length
                 + " Width: " + width

@@ -11,7 +11,7 @@ public class Application {
         }
         Arrays.fill(figures, 3, 6, figureSupplier.getDefaultFigure());
         for (Figure figure: figures) {
-            System.out.println(figure.getFigureInfo());
+            System.out.println(figure.draw());
         }
     }
 }

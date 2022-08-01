@@ -19,7 +19,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String getFigureInfo() {
+    public String draw() {
         return "Figure: isosceles trapezoid Area: "
                 + getArea() + " sq.units"
                 + " Upper base: " + upperBase + " units"
