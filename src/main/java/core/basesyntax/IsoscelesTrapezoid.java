@@ -22,7 +22,7 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public double getArea() {
         double perimeter = (edgeShort + edgeLong + 2 * edgeSide) / 2;
-        return Math.sqrt((perimeter - edgeShort) * (perimeter - edgeLong) *
-                (perimeter - edgeSide) * (perimeter - edgeSide));
+        return Math.sqrt((perimeter - edgeShort) * (perimeter - edgeLong)
+                * (perimeter - edgeSide) * (perimeter - edgeSide));
     }
 }
