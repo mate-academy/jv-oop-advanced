@@ -5,27 +5,28 @@ import core.basesyntax.Figure;
 
 public class IsoscelesTrapezoid extends Figure {
     private int height;
+    private int upSide;
+    private int lowSide;
 
-    public double getHeight() {
-        return height;
-    }
-
-    public void setHeight(int height) {
+    public IsoscelesTrapezoid(String color, int height, int upSide, int lowSide) {
+        super(color);
         this.height = height;
+        this.upSide = upSide;
+        this.lowSide = lowSide;
     }
 
     @Override
     public double getArea() {
-        return (double)((getFirstSide() + getSecondSide()) / 2) * height;
+        return (double)((upSide + lowSide) / 2) * height;
     }
 
     @Override
-    public void toDraw() {
+    public void draw() {
         System.out.println("Figure: " + EnumFigure.ISOSCELES_TRAPEZOID.toString().toLowerCase()
                 + ", area: " + getArea() + "units,"
                 + " height: " + height + "units,"
-                + " side1: " + getFirstSide() + "units,"
-                + " side2: " + getFirstSide() + "units,"
+                + " side1: " + upSide + "units,"
+                + " side2: " + lowSide + "units,"
                 + " color: " + getColor().toLowerCase());
     }
 }

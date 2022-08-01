@@ -7,19 +7,9 @@ public class RightTriangle extends Figure {
     private int firstLeg;
     private int rightLeg;
 
-    public double getFirstLeg() {
-        return firstLeg;
-    }
-
-    public void setFirstLeg(int firstLeg) {
+    public RightTriangle(String color, int firstLeg, int rightLeg) {
+        super(color);
         this.firstLeg = firstLeg;
-    }
-
-    public double getRightLeg() {
-        return rightLeg;
-    }
-
-    public void setRightLeg(int rightLeg) {
         this.rightLeg = rightLeg;
     }
 
@@ -29,7 +19,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void toDraw() {
+    public void draw() {
         System.out.println("Figure: " + EnumFigure.RIGHT_TRIANGLE.toString().toLowerCase()
                 + ", area: " + getArea() + " units,"
                 + " side1: " + firstLeg + " units,"

@@ -4,17 +4,23 @@ import core.basesyntax.EnumFigure;
 import core.basesyntax.Figure;
 
 public class Square extends Figure {
+    private int side;
 
-    @Override
-    public double getArea() {
-        return (double)Math.pow(getFirstSide(),2);
+    public Square(String color, int side) {
+        super(color);
+        this.side = side;
     }
 
     @Override
-    public void toDraw() {
+    public double getArea() {
+        return (double)Math.pow(side,2);
+    }
+
+    @Override
+    public void draw() {
         System.out.println("Figure: " + EnumFigure.SQUARE.toString().toLowerCase()
                 + ", area: " + getArea() + " units,"
-                + " side1: " + getFirstSide() + " units,"
+                + " side1: " + side + " units,"
                 + " color: " + getColor().toLowerCase());
     }
 }

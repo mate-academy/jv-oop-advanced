@@ -6,6 +6,4 @@ public enum EnumFigure {
     RECTANGLE,
     RIGHT_TRIANGLE,
     SQUARE,
-    DEFAULT
-
 }

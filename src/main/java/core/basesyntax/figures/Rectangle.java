@@ -4,18 +4,26 @@ import core.basesyntax.EnumFigure;
 import core.basesyntax.Figure;
 
 public class Rectangle extends Figure {
+    private int firstSide;
+    private int secondSide;
 
-    @Override
-    public double getArea() {
-        return (double)getFirstSide() * getSecondSide();
+    public Rectangle(String color, int firstSide, int secondSide) {
+        super(color);
+        this.firstSide = firstSide;
+        this.secondSide = secondSide;
     }
 
     @Override
-    public void toDraw() {
+    public double getArea() {
+        return (double)firstSide * secondSide;
+    }
+
+    @Override
+    public void draw() {
         System.out.println("Figure: " + EnumFigure.RECTANGLE.toString().toLowerCase()
                 + ", area: " + getArea() + " units,"
-                + " side1: " + getFirstSide() + " units,"
-                + " side2: " + getFirstSide() + " units,"
+                + " side1: " + firstSide + " units,"
+                + " side2: " + secondSide + " units,"
                 + " color: " + getColor().toLowerCase());
     }
 }

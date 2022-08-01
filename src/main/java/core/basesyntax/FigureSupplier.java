@@ -13,39 +13,30 @@ public class FigureSupplier {
     private static final String DEFAULT_COLOR = String.valueOf(Color.WHITE);
     private Random random = new Random();
 
+
     public Figure getRandomFigure() {
         ColorSupplier color = new ColorSupplier();
-        int index = new Random().nextInt(EnumFigure.values().length);
+        int index = random.nextInt(EnumFigure.values().length);
         switch (EnumFigure.values()[index]) {
             case CIRCLE:
-                Circle circle = new Circle();
-                circle.setRadius(new Random().nextInt());
-                circle.setColor(color.getRandomColor().toString());
-                return circle;
+                return new Circle(color.getRandomColor().toString(),
+                        random.nextInt(VALUE));
             case ISOSCELES_TRAPEZOID:
-                IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
-                isoscelesTrapezoid.setHeight(random.nextInt(VALUE));
-                isoscelesTrapezoid.setFirstSide(random.nextInt(VALUE));
-                isoscelesTrapezoid.setSecondSide(random.nextInt(VALUE));
-                isoscelesTrapezoid.setColor(color.getRandomColor().toString());
-                return isoscelesTrapezoid;
+                return new IsoscelesTrapezoid(color.getRandomColor().toString(),
+                        random.nextInt(VALUE),
+                        random.nextInt(VALUE),
+                        random.nextInt(VALUE));
             case RECTANGLE:
-                Rectangle rectangle = new Rectangle();
-                rectangle.setFirstSide(random.nextInt(VALUE));
-                rectangle.setSecondSide(random.nextInt(VALUE));
-                rectangle.setColor(color.getRandomColor().toString());
-                return rectangle;
+                return new Rectangle(color.getRandomColor().toString(),
+                        random.nextInt(VALUE),
+                        random.nextInt(VALUE));
             case RIGHT_TRIANGLE:
-                RightTriangle rightTriangle = new RightTriangle();
-                rightTriangle.setFirstLeg(random.nextInt(VALUE));
-                rightTriangle.setRightLeg(random.nextInt(VALUE));
-                rightTriangle.setColor(color.getRandomColor().toString());
-                return rightTriangle;
+                return new RightTriangle(color.getRandomColor().toString(),
+                        random.nextInt(VALUE),
+                        random.nextInt(VALUE));
             case SQUARE:
-                Square square = new Square();
-                square.setFirstSide(random.nextInt(VALUE));
-                square.setColor(color.getRandomColor().toString());
-                return square;
+                return new Square(color.getRandomColor().toString(),
+                        random.nextInt(VALUE));
             default:
                 return getDefaultFigure();
         }
@@ -53,9 +44,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        Circle circle = new Circle();
-        circle.setRadius(DEFAULT_VALUE);
-        circle.setColor(DEFAULT_COLOR);
-        return circle;
+        return new Circle(DEFAULT_COLOR,DEFAULT_VALUE);
     }
 }
