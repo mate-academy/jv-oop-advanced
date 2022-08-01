@@ -6,6 +6,7 @@ import core.basesyntax.supplier.FigureSupplier;
 
 public class Main {
     private static final int MAX_ARRAY_LENGTH = 6;
+
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier(new ColorSupplier());
         Figure[] figures = new Figure[MAX_ARRAY_LENGTH];
