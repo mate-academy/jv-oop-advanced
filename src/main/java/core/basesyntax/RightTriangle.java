@@ -1,34 +1,34 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private double oneSide;
-    private double twoSide;
+    private double firstSide;
+    private double secondSide;
 
-    public double getOneSide() {
-        return oneSide;
+    public double getFirstSide() {
+        return firstSide;
     }
 
-    public double getTwoSide() {
-        return twoSide;
+    public double getSecondSide() {
+        return secondSide;
     }
 
     public void setOneSide(double oneSide) {
-        this.oneSide = oneSide;
+        this.firstSide = oneSide;
     }
 
     public void setTwoSide(double twoSide) {
-        this.twoSide = twoSide;
+        this.secondSide = twoSide;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: RightTriangle, area: " + getArea() + " units, "
-                + "first side: " + oneSide + " units," + " second side: " + twoSide
+                + "first side: " + firstSide + " units," + " second side: " + secondSide
                 + " color: " + getColor());
     }
 
     @Override
     public double getArea() {
-        return (oneSide * twoSide) / 2;
+        return (firstSide * secondSide) / 2;
     }
 }

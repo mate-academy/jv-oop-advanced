@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Main {
-
     public static void main(String[] args) {
         int number = 6;
         Figure[] figure = new Figure[number];
