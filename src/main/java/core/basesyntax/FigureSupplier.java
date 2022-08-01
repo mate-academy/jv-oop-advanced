@@ -3,32 +3,34 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    static final int FIGURES_COUNT = 5;
-    static final int DEFAULT_RADIUS = 10;
-    static final int MAX_RANDOM_VALUE = 25;
+    private static final int FIGURES_COUNT = 5;
+    private static final int DEFAULT_RADIUS = 10;
+    private static final int MAX_RANDOM_VALUE = 25;
 
     public Figure getRandomFigure() {
         Random randomFigure = new Random();
+        ColorSupplier colorSupplier = new ColorSupplier();
+        Random randomValue = new Random();
         switch (randomFigure.nextInt(FIGURES_COUNT)) {
             case (0):
-                return new Circle(new ColorSupplier().getRandomColor(),
-                        new Random().nextInt(MAX_RANDOM_VALUE));
+                return new Circle(colorSupplier.getRandomColor(),
+                        randomValue.nextInt(MAX_RANDOM_VALUE) + 1);
             case (1):
-                return new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(),
-                        new Random().nextInt(MAX_RANDOM_VALUE),
-                        new Random().nextInt(MAX_RANDOM_VALUE),
-                        new Random().nextInt(MAX_RANDOM_VALUE));
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        randomValue.nextInt(MAX_RANDOM_VALUE) + 1,
+                        randomValue.nextInt(MAX_RANDOM_VALUE) + 1,
+                        randomValue.nextInt(MAX_RANDOM_VALUE) + 1);
             case (2):
-                return new Rectangle(new ColorSupplier().getRandomColor(),
-                        new Random().nextInt(MAX_RANDOM_VALUE),
-                        new Random().nextInt(MAX_RANDOM_VALUE));
+                return new Rectangle(colorSupplier.getRandomColor(),
+                        randomValue.nextInt(MAX_RANDOM_VALUE) + 1 ,
+                        randomValue.nextInt(MAX_RANDOM_VALUE) + 1);
             case (3):
-                return new RightTriangle(new ColorSupplier().getRandomColor(),
-                        new Random().nextInt(MAX_RANDOM_VALUE),
-                        new Random().nextInt(MAX_RANDOM_VALUE));
+                return new RightTriangle(colorSupplier.getRandomColor(),
+                        randomValue.nextInt(MAX_RANDOM_VALUE) + 1,
+                        randomValue.nextInt(MAX_RANDOM_VALUE) + 1);
             case (4):
-                return new Square(new ColorSupplier().getRandomColor(),
-                        new Random().nextInt(MAX_RANDOM_VALUE));
+                return new Square(colorSupplier.getRandomColor(),
+                        randomValue.nextInt(MAX_RANDOM_VALUE) + 1);
             default:
                 return getRandomFigure();
         }
