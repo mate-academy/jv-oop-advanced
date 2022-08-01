@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-
     private double length;
     private double width;
 
@@ -21,6 +20,5 @@ public class Rectangle extends Figure {
         System.out.println("Figure: rectangle , area: " + getArea()
                 + " sq.units, length: " + length + " units, width "
                 + width + " units, color: " + getColor());
-
     }
 }

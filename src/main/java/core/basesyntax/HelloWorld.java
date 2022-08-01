@@ -1,13 +1,12 @@
 package core.basesyntax;
 
 public class HelloWorld {
-    private static final int MAX_VALUE = 6;
-    private static final int MIN_VALUE = 3;
+    private static final int NUMBER_OF_FIGURES = 6;
 
     public static void main(String[] args) {
-        Figure [] figures = new Figure[MAX_VALUE];
+        Figure [] figures = new Figure[NUMBER_OF_FIGURES];
         for (int i = 0; i < figures.length; i++) {
-            if (i <= MIN_VALUE) {
+            if (i <= NUMBER_OF_FIGURES / 2) {
                 figures[i] = new FigureSupplier().getRandomFigure();
                 figures[i].draw();
             } else {
