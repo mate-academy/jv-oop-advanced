@@ -4,8 +4,8 @@ public class Rectangle extends Figure {
     private double wigth;
     private double height;
 
-    public Rectangle(double wigth, double height, String color) {
-        super(Color.valueOf(color));
+    public Rectangle(double wigth, double height, Color color) {
+        super(Color.valueOf(color.toString()));
         this.wigth = wigth;
         this.height = height;
     }

@@ -3,36 +3,41 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSuplier {
-    private static final int MAX_VALUE = 5;
-    private static final int SIZE_LIMIT = 20;
+    private static final int MAX_NUMBER = 5;
+    private Random random = new Random();
     private final ColorSuplier color = new ColorSuplier();
 
     public Figure getRandomFigure() {
-        switch (new Random().nextInt(MAX_VALUE)) {
+        int randomNumberOfFigure = new Random().nextInt(5);
+        switch (randomNumberOfFigure) {
             case 0:
                 return new Circle(color.getRandomColor(),
-                        new Random().nextInt(SIZE_LIMIT));
+                        getRandomNumber());
             case 1:
-                return new Square(new Random().nextInt(SIZE_LIMIT),
+                return new Square(getRandomNumber(),
                         color.getRandomColor());
             case 2:
-                return new Rectangle(new Random().nextInt(SIZE_LIMIT),
-                        new Random().nextInt(SIZE_LIMIT),
+                return new Rectangle(getRandomNumber(),
+                        getRandomNumber(),
                         color.getRandomColor());
             case 3:
                 return new RightTriangle(color.getRandomColor(),
-                        new Random().nextInt(SIZE_LIMIT),
-                        new Random().nextInt(SIZE_LIMIT));
+                        getRandomNumber(),
+                        getRandomNumber());
             default:
                 return new IsoscelesTrapezoid(color.getRandomColor(),
-                        new Random().nextInt(SIZE_LIMIT),
-                        new Random().nextInt(SIZE_LIMIT),
-                        new Random().nextInt(SIZE_LIMIT));
+                        getRandomNumber(),
+                        getRandomNumber(),
+                        getRandomNumber());
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.toString(), 10);
+        return new Circle(Color.WHITE, 10);
+    }
+
+    public int getRandomNumber() {
+        return random.nextInt(MAX_NUMBER);
     }
 }
 
