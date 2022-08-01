@@ -17,8 +17,9 @@ public class FigureSupplier {
                 return new Square(colorSupplier.getRandomColor().toString().toLowerCase(),
                         numberSupplier.getRandomNumber());
             case 3:
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor().toString().toLowerCase(),
-                        numberSupplier.getRandomNumber(), numberSupplier.getRandomNumber(),
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor().toString()
+                        .toLowerCase(), numberSupplier.getRandomNumber(),
+                        numberSupplier.getRandomNumber(),
                         numberSupplier.getRandomNumber());
             case 4:
                 return new Rectangle(colorSupplier.getRandomColor().toString().toLowerCase(),
