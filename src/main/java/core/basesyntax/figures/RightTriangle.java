@@ -22,8 +22,8 @@ public class RightTriangle extends Figure {
     public void draw() {
         System.out.println("Figure: " + EnumFigure.RIGHT_TRIANGLE.toString().toLowerCase()
                 + ", area: " + getArea() + " units,"
-                + " side1: " + firstLeg + " units,"
-                + " side2: " + rightLeg + " units,"
+                + " firstLeg: " + firstLeg + " units,"
+                + " rightLeg: " + rightLeg + " units,"
                 + " color: " + getColor().toLowerCase());
     }
 }

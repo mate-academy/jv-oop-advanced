@@ -22,8 +22,8 @@ public class Rectangle extends Figure {
     public void draw() {
         System.out.println("Figure: " + EnumFigure.RECTANGLE.toString().toLowerCase()
                 + ", area: " + getArea() + " units,"
-                + " side1: " + firstSide + " units,"
-                + " side2: " + secondSide + " units,"
+                + " firstSide: " + firstSide + " units,"
+                + " secondSide: " + secondSide + " units,"
                 + " color: " + getColor().toLowerCase());
     }
 }

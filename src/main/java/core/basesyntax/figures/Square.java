@@ -20,7 +20,7 @@ public class Square extends Figure {
     public void draw() {
         System.out.println("Figure: " + EnumFigure.SQUARE.toString().toLowerCase()
                 + ", area: " + getArea() + " units,"
-                + " side1: " + side + " units,"
+                + " side: " + side + " units,"
                 + " color: " + getColor().toLowerCase());
     }
 }

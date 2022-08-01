@@ -25,8 +25,8 @@ public class IsoscelesTrapezoid extends Figure {
         System.out.println("Figure: " + EnumFigure.ISOSCELES_TRAPEZOID.toString().toLowerCase()
                 + ", area: " + getArea() + "units,"
                 + " height: " + height + "units,"
-                + " side1: " + upSide + "units,"
-                + " side2: " + lowSide + "units,"
+                + " upSide: " + upSide + "units,"
+                + " lowSide: " + lowSide + "units,"
                 + " color: " + getColor().toLowerCase());
     }
 }

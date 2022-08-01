@@ -14,27 +14,27 @@ public class FigureSupplier {
     private Random random = new Random();
 
     public Figure getRandomFigure() {
-        ColorSupplier color = new ColorSupplier();
+        ColorSupplier colorSupplier = new ColorSupplier();
         int index = random.nextInt(EnumFigure.values().length);
         switch (EnumFigure.values()[index]) {
             case CIRCLE:
-                return new Circle(color.getRandomColor().toString(),
+                return new Circle(colorSupplier.getRandomColor().toString(),
                         random.nextInt(VALUE));
             case ISOSCELES_TRAPEZOID:
-                return new IsoscelesTrapezoid(color.getRandomColor().toString(),
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor().toString(),
                         random.nextInt(VALUE),
                         random.nextInt(VALUE),
                         random.nextInt(VALUE));
             case RECTANGLE:
-                return new Rectangle(color.getRandomColor().toString(),
+                return new Rectangle(colorSupplier.getRandomColor().toString(),
                         random.nextInt(VALUE),
                         random.nextInt(VALUE));
             case RIGHT_TRIANGLE:
-                return new RightTriangle(color.getRandomColor().toString(),
+                return new RightTriangle(colorSupplier.getRandomColor().toString(),
                         random.nextInt(VALUE),
                         random.nextInt(VALUE));
             case SQUARE:
-                return new Square(color.getRandomColor().toString(),
+                return new Square(colorSupplier.getRandomColor().toString(),
                         random.nextInt(VALUE));
             default:
                 return getDefaultFigure();
