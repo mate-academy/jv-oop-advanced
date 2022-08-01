@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public interface CalculateArea {
+public interface AreaCalculator {
     /**
      * this method must return the area of figure
      * @return double;
