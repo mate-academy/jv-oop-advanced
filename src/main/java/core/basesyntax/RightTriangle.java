@@ -1,24 +1,24 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private double edgeHeight;
-    private double edgeLength;
+    private double firstSide;
+    private double secondSide;
 
     public RightTriangle(Color color, double firstSide, double secondSide) {
         super(color);
-        this.edgeHeight = firstSide;
-        this.edgeLength = secondSide;
+        this.firstSide = firstSide;
+        this.secondSide = secondSide;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: right triangle, area: " + getArea()
-                + " sq.units, edgeHeight: " + edgeHeight + " units, edgeLength: "
-                + edgeLength + " units, color: " + getColor());
+                + " sq.units, firstSide: " + firstSide + " units, secondSide: "
+                + secondSide + " units, color: " + getColor());
     }
 
     @Override
     public double getArea() {
-        return edgeHeight * edgeLength / 2;
+        return firstSide * secondSide / 2;
     }
 }
