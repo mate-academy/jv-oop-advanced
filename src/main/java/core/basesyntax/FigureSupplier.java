@@ -7,28 +7,25 @@ public class FigureSupplier {
     public static final int NUMBER_FIGURES = 5;
 
     public Object getRandomFigure() {
-        Random random = new Random();
-        int index = random.nextInt(NUMBER_FIGURES);
+        int index = new Random().nextInt(NUMBER_FIGURES);
+        int randomParameter1 = new Random().nextInt(MAX_RANDOM_VALUE);
+        int randomParameter2 = new Random().nextInt(MAX_RANDOM_VALUE);
+        int randomParameter3 = new Random().nextInt(MAX_RANDOM_VALUE);
+        String colorRandom = new ColorSupplier().getRandomColor();
         switch (index) {
             case 0:
-                return new Square(random.nextInt(MAX_RANDOM_VALUE),
-                        new ColorSupplier().getRandomColor());
+                return new Square(randomParameter1, colorRandom);
             case 1:
-                return new Rectangle(random.nextInt(MAX_RANDOM_VALUE),
-                        random.nextInt(MAX_RANDOM_VALUE), new ColorSupplier().getRandomColor());
+                return new Rectangle(randomParameter1, randomParameter2, colorRandom);
             case 2:
-                return new Circle(random.nextInt(MAX_RANDOM_VALUE),
-                        new ColorSupplier().getRandomColor());
+                return new Circle(randomParameter1, colorRandom);
             case 3:
-                return new RightTriangle(random.nextInt(MAX_RANDOM_VALUE),
-                        random.nextInt(MAX_RANDOM_VALUE), new ColorSupplier().getRandomColor());
+                return new RightTriangle(randomParameter1, randomParameter2, colorRandom);
             case 4:
-                return new IsoscelesTrapezoid(random.nextInt(MAX_RANDOM_VALUE),
-                        random.nextInt(MAX_RANDOM_VALUE), random.nextInt(MAX_RANDOM_VALUE),
-                        new ColorSupplier().getRandomColor());
+                return new IsoscelesTrapezoid(randomParameter1, randomParameter2,
+                        randomParameter3, colorRandom);
             default:
-                return new Circle(random.nextInt(MAX_RANDOM_VALUE),
-                        new ColorSupplier().getRandomColor());
+                return new Circle(randomParameter1, colorRandom);
         }
     }
 
