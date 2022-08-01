@@ -4,24 +4,35 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int MAX_RANDOM_VALUE = 100;
+    public static final int NUMBER_FIGURES = 5;
 
-    public String getRandomFigure() {
-        ColorSupplier colorSupplier = new ColorSupplier();
+    public Object getRandomFigure() {
         Random random = new Random();
-        Figure square = new Square(random.nextInt(MAX_RANDOM_VALUE),
-                colorSupplier.getRandomColor());
-        Rectangle rectangle = new Rectangle(random.nextInt(MAX_RANDOM_VALUE),
-                random.nextInt(MAX_RANDOM_VALUE), colorSupplier.getRandomColor());
-        Circle circle = new Circle(random.nextInt(MAX_RANDOM_VALUE),
-                colorSupplier.getRandomColor());
-        Figure[] figures = {square, rectangle, circle};
-        int index = random.nextInt(figures.length);
-        Figure selectedFigure = figures[index];
-        return selectedFigure.draw();
+        int index = random.nextInt(NUMBER_FIGURES);
+        switch (index) {
+            case 0:
+                return new Square(random.nextInt(MAX_RANDOM_VALUE),
+                        new ColorSupplier().getRandomColor());
+            case 1:
+                return new Rectangle(random.nextInt(MAX_RANDOM_VALUE),
+                        random.nextInt(MAX_RANDOM_VALUE), new ColorSupplier().getRandomColor());
+            case 2:
+                return new Circle(random.nextInt(MAX_RANDOM_VALUE),
+                        new ColorSupplier().getRandomColor());
+            case 3:
+                return new RightTriangle(random.nextInt(MAX_RANDOM_VALUE),
+                        random.nextInt(MAX_RANDOM_VALUE), new ColorSupplier().getRandomColor());
+            case 4:
+                return new IsoscelesTrapezoid(random.nextInt(MAX_RANDOM_VALUE),
+                        random.nextInt(MAX_RANDOM_VALUE), random.nextInt(MAX_RANDOM_VALUE),
+                        new ColorSupplier().getRandomColor());
+            default:
+                return new Circle(random.nextInt(MAX_RANDOM_VALUE),
+                        new ColorSupplier().getRandomColor());
+        }
     }
 
     public Figure getDefaultFigure() {
-        Figure circle = new Circle(10,"WHITE");
-        return circle;
+        return new Circle(10, "WHITE");
     }
 }

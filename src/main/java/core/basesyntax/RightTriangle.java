@@ -4,7 +4,7 @@ public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
-    public RightTriangle(String color, double firstLeg, double secondLeg) {
+    public RightTriangle(double firstLeg, double secondLeg, String color) {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
@@ -12,13 +12,13 @@ public class RightTriangle extends Figure {
 
     @Override
     public double getArea() {
-        return 1 / 2 * firstLeg * secondLeg;
+        return (firstLeg * secondLeg) / 2;
     }
 
     @Override
-    public String draw() {
-        return "right triangle, area: " + getArea()
+    public void draw() {
+        System.out.println("right triangle, area: " + getArea()
                 + " sq.units, firstLeg: " + firstLeg + ", secondLeg: "
-                + secondLeg + ", color: " + getColor();
+                + secondLeg + ", color: " + getColor());
     }
 }
