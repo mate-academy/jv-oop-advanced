@@ -6,14 +6,13 @@ public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
     private static final int MAX_VALUE = 25;
     private static final int DEFAULT_RADIUS = 10;
-    private static final String DEFAULT_COLOR = "white";
+    private static final Color DEFAULT_COLOR = Color.WHITE;
     private final Random random = new Random();
     private final ColorSupplier color = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
         int value = random.nextInt(MAX_VALUE);
-
         switch (figureNumber) {
             case 1:
                 return new Square(color.getRandomColor(), value);
