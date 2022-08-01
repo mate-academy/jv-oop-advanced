@@ -12,12 +12,12 @@ public class RightTriangle extends Figure {
         return secondSide;
     }
 
-    public void setOneSide(double oneSide) {
-        this.firstSide = oneSide;
+    public void setFirstSide(double firstSide) {
+        this.firstSide = firstSide;
     }
 
-    public void setTwoSide(double twoSide) {
-        this.secondSide = twoSide;
+    public void setSecondSide(double secondSide) {
+        this.secondSide = secondSide;
     }
 
     @Override

@@ -7,7 +7,7 @@ public class Square extends Figure {
         return side;
     }
 
-    public void setOneSide(double side) {
+    public void setSide(double side) {
         this.side = side;
     }
 

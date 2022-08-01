@@ -22,7 +22,7 @@ public class FigureSupplier {
             case SQUARE: {
                 Square square = new Square();
                 square.setColor(colorSupplier.getRandomColor());
-                square.setOneSide(random.nextInt(MAX_NUMBER));
+                square.setSide(random.nextInt(MAX_NUMBER));
                 return square;
             }
             case ISOSCELES_TRAPEZOID: {
@@ -36,8 +36,8 @@ public class FigureSupplier {
             case RIGHT_TRIANGLE: {
                 RightTriangle rightTriangle = new RightTriangle();
                 rightTriangle.setColor(colorSupplier.getRandomColor());
-                rightTriangle.setOneSide(random.nextInt(MAX_NUMBER));
-                rightTriangle.setTwoSide(random.nextInt(MAX_NUMBER));
+                rightTriangle.setFirstSide(random.nextInt(MAX_NUMBER));
+                rightTriangle.setSecondSide(random.nextInt(MAX_NUMBER));
                 return rightTriangle;
             }
             case CIRCLE:
