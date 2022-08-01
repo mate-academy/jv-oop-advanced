@@ -15,7 +15,7 @@ public class Main {
             figureObjectArray[i] = supplier.getRandomFigure();
         }
         for (FigureObject figureObject : figureObjectArray) {
-            figureObject.drawFigure();
+            figureObject.draw();
         }
     }
 }

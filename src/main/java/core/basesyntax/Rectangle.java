@@ -3,28 +3,28 @@ package core.basesyntax;
 import java.text.DecimalFormat;
 
 public class Rectangle extends FigureObject {
-    private double sideA;
-    private double sideB;
+    private double length;
+    private double height;
 
     public Rectangle(Color color, double sideA, double sideB) {
         super(color);
-        this.sideA = sideA;
-        this.sideB = sideB;
+        this.length = sideA;
+        this.height = sideB;
     }
 
     @Override
-    public double getFigureArea() {
-        return sideA * sideB;
+    public double getArea() {
+        return length * height;
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println("Figure: Rectangle, area: "
-                + new DecimalFormat("#0.00").format(getFigureArea())
+                + new DecimalFormat("#0.00").format(getArea())
                 + " sq.units, sideA: "
-                + sideA
+                + length
                 + " units, sideB: "
-                + sideB
+                + height
                 + " units, color: "
                 + getColor());
     }

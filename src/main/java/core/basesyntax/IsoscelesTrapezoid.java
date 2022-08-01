@@ -15,14 +15,14 @@ public class IsoscelesTrapezoid extends FigureObject {
     }
 
     @Override
-    public double getFigureArea() {
+    public double getArea() {
         return ((longSide + shortSide) / 2) * height;
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println("Figure: Isosceles Trapezoid, area: "
-                + new DecimalFormat("#0.00").format(getFigureArea())
+                + new DecimalFormat("#0.00").format(getArea())
                 + " sq.units, shortSide: "
                 + shortSide
                 + " units, longSide: "

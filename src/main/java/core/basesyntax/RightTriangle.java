@@ -13,14 +13,14 @@ public class RightTriangle extends FigureObject {
     }
 
     @Override
-    public double getFigureArea() {
+    public double getArea() {
         return 0.5 * firstLeg * secondLeg;
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println("Figure: Right Triangle, area: "
-                + new DecimalFormat("#0.00").format((getFigureArea()))
+                + new DecimalFormat("#0.00").format((getArea()))
                 + " sq.units, firstLeg: "
                 + firstLeg
                 + " units, secondLeg: "
