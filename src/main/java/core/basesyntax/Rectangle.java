@@ -3,8 +3,8 @@ package core.basesyntax;
 import java.text.DecimalFormat;
 
 public class Rectangle extends FigureObject {
-    private double sideA;
-    private double sideB;
+    private double length;
+    private double height;
 
     public Rectangle(Color color, double sideA, double sideB) {
         super(color);
