@@ -19,8 +19,8 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String getDraw() {
-        return "This is Right Triangle. I have Area: " + getArea() + "; side: " + side
-                + "; height: " + height + "; and have color: " + getColor();
+    public void getDraw() {
+        System.out.println("This is Right Triangle. I have Area: " + getArea() + "; side: " + side
+                + "; height: " + height + "; and have color: " + getColor());
     }
 }

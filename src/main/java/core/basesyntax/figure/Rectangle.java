@@ -19,8 +19,8 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String getDraw() {
-        return "This is Rectangle. I have Area: " + getArea() + "; width: " + width + "; height: "
-                + height + "; and have color: " + getColor();
+    public void getDraw() {
+        System.out.println("This is Rectangle. I have Area: " + getArea() + "; width: "
+                + width + "; height: " + height + "; and have color: " + getColor());
     }
 }

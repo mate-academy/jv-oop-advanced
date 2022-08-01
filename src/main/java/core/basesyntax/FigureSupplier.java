@@ -13,9 +13,9 @@ public class FigureSupplier {
     private static final int DEFAULT_CIRCLE_RADIUS = 10;
     private static final Color DEFAULT_CIRCLE_COLOR = Color.WHITE;
     private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        ColorSupplier colorSupplier = new ColorSupplier();
         int index = random.nextInt(NUMBER_OF_FIGURES);
         switch (index) {
             case 1:

@@ -21,9 +21,9 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String getDraw() {
-        return "This is Isosceles Trapezoid. I have Area: " + getArea() + "; upperSide: "
-                + upperSide + "; downSide: "
-                + downSide + "; elevation: " + elevation + "; and have color: " + getColor();
+    public void getDraw() {
+        System.out.println("This is Isosceles Trapezoid. I have Area: " + getArea()
+                + "; upperSide: " + upperSide + "; downSide: "
+                + downSide + "; elevation: " + elevation + "; and have color: " + getColor());
     }
 }
