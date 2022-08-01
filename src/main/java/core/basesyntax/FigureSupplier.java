@@ -1,5 +1,6 @@
 package core.basesyntax;
 
+import java.util.Locale;
 import java.util.Random;
 
 public class FigureSupplier {
@@ -31,6 +32,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.White.name(), CIRCLE_RADIUS);
+        return new Circle(Color.WHITE.name().toLowerCase(), CIRCLE_RADIUS);
     }
 }
