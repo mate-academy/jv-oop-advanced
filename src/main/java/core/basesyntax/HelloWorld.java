@@ -1,10 +1,13 @@
 package core.basesyntax;
 
 public class HelloWorld {
+    private static final int MAXVALUE = 6;
+    private static final int MINVALUE = 3;
+
     public static void main(String[] args) {
-        Figure [] figures = new Figure[6];
+        Figure [] figures = new Figure[MAXVALUE];
         for (int i = 0; i < figures.length; i++) {
-            if (i <= 3) {
+            if (i <= MINVALUE) {
                 figures[i] = new FigureSupplier().getRandomFigure();
                 figures[i].draw();
             } else {
@@ -12,7 +15,6 @@ public class HelloWorld {
                 figures[i].draw();
             }
         }
-
     }
 }
 
