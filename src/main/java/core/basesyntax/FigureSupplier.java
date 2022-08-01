@@ -8,28 +8,29 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         ColorSupplier colorSupplier = new ColorSupplier();
-        int figureSelector = new Random().nextInt(FigureSelector.values().length);
+        Random random = new Random();
+        int figureSelector = random.nextInt(FigureSelector.values().length);
         switch (figureSelector) {
             case 1:
-                Circle circle = new Circle(new Random().nextInt(MAX_SIZE),
+                Circle circle = new Circle(random.nextInt(MAX_SIZE),
                         colorSupplier.getRandomColor());
                 return circle;
             case 2:
-                Square square = new Square(new Random().nextInt(MAX_SIZE),
+                Square square = new Square(random.nextInt(MAX_SIZE),
                         colorSupplier.getRandomColor());
                 return square;
             case 3:
-                Rectangle rectangle = new Rectangle(new Random().nextInt(MAX_SIZE),
-                        new Random().nextInt(MAX_SIZE), colorSupplier.getRandomColor());
+                Rectangle rectangle = new Rectangle(random.nextInt(MAX_SIZE),
+                        random.nextInt(MAX_SIZE), colorSupplier.getRandomColor());
                 return rectangle;
             case 4:
-                RightTriangle rightTriangle = new RightTriangle(new Random().nextInt(MAX_SIZE),
-                        new Random().nextInt(MAX_SIZE), colorSupplier.getRandomColor());
+                RightTriangle rightTriangle = new RightTriangle(random.nextInt(MAX_SIZE),
+                        random.nextInt(MAX_SIZE), colorSupplier.getRandomColor());
                 return rightTriangle;
             case 5:
-                IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(new Random()
+                IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(random
                         .nextInt(MAX_SIZE),
-                        new Random().nextInt(MAX_SIZE), new Random().nextInt(MAX_SIZE),
+                        random.nextInt(MAX_SIZE), random.nextInt(MAX_SIZE),
                         colorSupplier.getRandomColor());
                 return isoscelesTrapezoid;
             default:
