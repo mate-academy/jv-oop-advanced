@@ -4,10 +4,10 @@ public class RightTriangle extends Figure {
     private double edgeHeight;
     private double edgeLength;
 
-    public RightTriangle(Color color, double edgeHeight, double edgeLength) {
+    public RightTriangle(Color color, double firstSide, double secondSide) {
         super(color);
-        this.edgeHeight = edgeHeight;
-        this.edgeLength = edgeLength;
+        this.edgeHeight = firstSide;
+        this.edgeLength = secondSide;
     }
 
     @Override
