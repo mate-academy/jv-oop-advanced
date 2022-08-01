@@ -5,7 +5,7 @@ public class Rectangle extends Figure {
     private int height;
 
     public Rectangle(String color, int width, int height) {
-        this.color = color;
+        super(color);
         this.width = width;
         this.height = height;
     }
@@ -38,6 +38,6 @@ public class Rectangle extends Figure {
                 + "width: %d units, "
                 + "height: %d units, "
                 + "color: %s"
-                + System.lineSeparator(), getArea(), width, height, color);
+                + System.lineSeparator(), getArea(), width, height, getColor());
     }
 }

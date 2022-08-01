@@ -4,7 +4,7 @@ public class Square extends Figure {
     private int side;
 
     public Square(String color, int side) {
-        this.color = color;
+        super(color);
         this.side = side;
     }
 
@@ -27,6 +27,6 @@ public class Square extends Figure {
                 + "area: %.2f sq.units, "
                 + "side: %d units, "
                 + "color: %s"
-                + System.lineSeparator(), getArea(), side, color);
+                + System.lineSeparator(), getArea(), side, getColor());
     }
 }
