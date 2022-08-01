@@ -8,28 +8,29 @@ public class FigureSupplier {
     private static final double DEFAULT_RADIUS = 10.0;
 
     public Figure getRandomFigure() {
-        int randomIndex = new Random().nextInt(AMOUNT_OF_FIGURES);
-        Color randomColor = Color.values()[new Random().nextInt(Color.values().length)];
+        Random random = new Random();
+        int randomIndex = random.nextInt(AMOUNT_OF_FIGURES);
+        Color randomColor = Color.values()[random.nextInt(Color.values().length)];
+        double randomSize = random.nextDouble() * MAX_PARAMETER;
         switch (randomIndex) {
             case 0:
-                return new Square(randomColor,
-                        new Random().nextDouble() * MAX_PARAMETER);
+                return new Square(randomColor,random.nextDouble() * MAX_PARAMETER);
             case 1:
                 return new Rectangle(randomColor,
-                        new Random().nextDouble() * MAX_PARAMETER,
-                        new Random().nextDouble() * MAX_PARAMETER);
+                        random.nextDouble() * MAX_PARAMETER,
+                        random.nextDouble() * MAX_PARAMETER);
             case 2:
                 return new RightTriangle(randomColor,
-                        new Random().nextDouble() * MAX_PARAMETER,
-                        new Random().nextDouble() * MAX_PARAMETER);
+                        random.nextDouble() * MAX_PARAMETER,
+                        random.nextDouble() * MAX_PARAMETER);
             case 3:
                 return new Circle(randomColor,
-                        new Random().nextDouble() * MAX_PARAMETER);
+                        random.nextDouble() * MAX_PARAMETER);
             case 4:
                 return new IsoscelesTrapezoid(randomColor,
-                        new Random().nextDouble() * MAX_PARAMETER,
-                        new Random().nextDouble() * MAX_PARAMETER,
-                        new Random().nextDouble() * MAX_PARAMETER);
+                        random.nextDouble() * MAX_PARAMETER,
+                        random.nextDouble() * MAX_PARAMETER,
+                        random.nextDouble() * MAX_PARAMETER);
             default:
         }
         return getDefaultFigure();
