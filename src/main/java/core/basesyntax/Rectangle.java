@@ -6,10 +6,10 @@ public class Rectangle extends FigureObject {
     private double length;
     private double height;
 
-    public Rectangle(Color color, double sideA, double sideB) {
+    public Rectangle(Color color, double length, double height) {
         super(color);
-        this.length = sideA;
-        this.height = sideB;
+        this.length = length;
+        this.height = height;
     }
 
     @Override

@@ -9,7 +9,7 @@ public class FigureSupplier {
     public FigureObject getRandomFigure() {
         ColorSupplier supplier = new ColorSupplier();
         Random random = new Random();
-        Figure randomFigure = Figure.values()[new Random()
+        Figure randomFigure = Figure.values()[random
                 .nextInt(Figure.values().length)];
 
         switch (randomFigure) {
