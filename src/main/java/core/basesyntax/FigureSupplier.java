@@ -8,7 +8,8 @@ public class FigureSupplier {
     private static final double DEFAULT_RADIUS = 10.0;
 
     public Figure getRandomFigure() {
-        switch (new Random().nextInt(AMOUNT_OF_FIGURES)) {
+        int randomIndex = new Random().nextInt(AMOUNT_OF_FIGURES);
+        switch (randomIndex) {
             case 0:
                 return new Square(Color.values()[new Random().nextInt(Color.values().length)],
                     new Random().nextDouble() * MAX_PARAMETER);
