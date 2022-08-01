@@ -3,16 +3,15 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final int figureCount = 5;
-    private final double defaultRadius = 10;
-    private final String circleDefaultColor = "White";
+    private static final int FIGURES_NUMBER = 5;
+    private static final double DEFAULT_RADIUS = 10;
+    private static final Color CIRCLE_DEFAULT_COLOR = Color.WHITE;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int figureNumber = random.nextInt(figureCount);
-        String randomColor = colorSupplier.getRandomColor();
-
+        int figureNumber = random.nextInt(FIGURES_NUMBER);
+        Color randomColor = colorSupplier.getRandomColor();
         switch (figureNumber) {
             case 0:
                 return getRandomCircle(randomColor);
@@ -28,32 +27,32 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(circleDefaultColor, defaultRadius);
+        return new Circle(CIRCLE_DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
-    private Figure getRandomCircle(String randomColor) {
+    private Figure getRandomCircle(Color randomColor) {
         double radius = random.nextDouble();
         return new Circle(randomColor, radius);
     }
 
-    private Figure getRandomRightTriangle(String randomColor) {
+    private Figure getRandomRightTriangle(Color randomColor) {
         double firstLeg = random.nextDouble();
         double secondLeg = random.nextDouble();
         return new RightTriangle(randomColor, firstLeg, secondLeg);
     }
 
-    private Figure getRandomSquare(String randomColor) {
+    private Figure getRandomSquare(Color randomColor) {
         double side = random.nextDouble();
         return new Square(randomColor, side);
     }
 
-    private Figure getRandomRectangle(String randomColor) {
+    private Figure getRandomRectangle(Color randomColor) {
         double length = random.nextDouble();
         double width = random.nextDouble();
         return new Rectangle(randomColor, length, width);
     }
 
-    private Figure getRandomIsoscelesTrapezoid(String randomColor) {
+    private Figure getRandomIsoscelesTrapezoid(Color randomColor) {
         double leg = random.nextDouble();
         double firstBase = random.nextDouble();
         double secondBase = random.nextDouble();
