@@ -22,7 +22,7 @@ public class FigureSupplier {
                         randomValue.nextInt(MAX_RANDOM_VALUE) + 1);
             case (2):
                 return new Rectangle(colorSupplier.getRandomColor(),
-                        randomValue.nextInt(MAX_RANDOM_VALUE) + 1 ,
+                        randomValue.nextInt(MAX_RANDOM_VALUE) + 1,
                         randomValue.nextInt(MAX_RANDOM_VALUE) + 1);
             case (3):
                 return new RightTriangle(colorSupplier.getRandomColor(),
