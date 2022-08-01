@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int DEFAULT_RADIUS = 10;
-    private static final String DEFAULT_COLOR = "WHITE";
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
     private static final int NUMBER_OF_FUGURES = 5;
     private static final int MAX_SIZE_OF_FIRST_PARAMETR = 60;
     private static final int MAX_SIZE_OF_SECOND_PARAMETR = 70;
@@ -15,13 +15,13 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         int randomFigureNumber = random.nextInt(NUMBER_OF_FUGURES);
         switch (randomFigureNumber) {
-            case (1):
+            case 1:
                 return getRandomCircle();
-            case (2):
+            case 2:
                 return getRandomIsoscelesTrapezoid();
-            case (3):
+            case 3:
                 return getRandomRectangle();
-            case (4):
+            case 4:
                 return getRandomRightTriangle();
             default:
                 return getRandomSquare();

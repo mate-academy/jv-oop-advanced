@@ -4,12 +4,12 @@ public class Square extends Figure {
     private final int lag;
 
     public Square(int firstLag, String color) {
+        super(color);
         this.lag = firstLag;
-        setColor(color);
     }
 
     @Override
-    public Double getArea() {
+    public double getArea() {
         return (double)lag * lag;
     }
 

@@ -5,13 +5,13 @@ public class Rectangle extends Figure {
     private final int secondLeg;
 
     public Rectangle(int firstLeg, int secondLeg, String color) {
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        setColor(color);
     }
 
     @Override
-    public Double getArea() {
+    public double getArea() {
         return (double)firstLeg * secondLeg;
     }
 

@@ -6,14 +6,14 @@ public class IsoscelesTrapezoid extends Figure {
     private final int downbase;
 
     public IsoscelesTrapezoid(int leg, int upbase, int downbase, String color) {
+        super(color);
         this.high = leg;
         this.upbase = upbase;
         this.downbase = downbase;
-        setColor(color);
     }
 
     @Override
-    public Double getArea() {
+    public double getArea() {
         return (double)((upbase + downbase) / 2 * high);
     }
 

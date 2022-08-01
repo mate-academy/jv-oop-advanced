@@ -4,12 +4,12 @@ public class Circle extends Figure {
     private final int radius;
 
     public Circle(int radius, String color) {
+        super(color);
         this.radius = radius;
-        setColor(color);
     }
 
     @Override
-    public Double getArea() {
+    public double getArea() {
         return Math.PI * radius * radius;
     }
 

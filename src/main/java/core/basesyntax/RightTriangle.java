@@ -5,13 +5,13 @@ public class RightTriangle extends Figure {
     private final int secondLeg;
 
     public RightTriangle(int firstLeg, int secondLeg, String color) {
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        setColor(color);
     }
 
     @Override
-    public Double getArea() {
+    public double getArea() {
         return (double)firstLeg * secondLeg / 2;
     }
 
