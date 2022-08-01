@@ -3,7 +3,6 @@ package core.basesyntax;
 public class RightTriangle extends Figure {
 
     private final double side;
-    private final Color color;
 
     public RightTriangle(double side, Color color) {
         this.side = side;

@@ -2,7 +2,6 @@ package core.basesyntax;
 
 public class Circle extends Figure {
     private final double radius;
-    private final Color color;
 
     public Circle(double radius, Color color) {
         this.radius = radius;
