@@ -3,31 +3,38 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-
-    static final int MAX_COUN_FIGURE = 5;
-    static final int MAX_POS_NUMBER = 100;
+    private static final int MAXIMUM_AMOUNT_FIGURES = 5;
+    private static final int MAXIMUM_POSSIBLE_NUMBER = 100;
 
     public Figure getRandomFigure() {
         Figure figure = null;
         Random random = new Random();
-        switch (new Random().nextInt(MAX_COUN_FIGURE)) {
+        ColorSupplier colorSupplier = new ColorSupplier();
+        switch (random.nextInt(MAXIMUM_AMOUNT_FIGURES)) {
             case 0:
-                figure = new Circle(random.nextInt(MAX_POS_NUMBER));
+                figure = new Circle(random.nextInt(MAXIMUM_POSSIBLE_NUMBER));
+                figure.setColor(colorSupplier.getRandomColor());
                 break;
             case 1:
-                figure = new IsoscelesTrapezoid(random.nextInt(MAX_POS_NUMBER),
-                        random.nextInt(MAX_POS_NUMBER), random.nextInt(MAX_POS_NUMBER));
+                figure = new IsoscelesTrapezoid(random.nextInt(MAXIMUM_POSSIBLE_NUMBER),
+                        random.nextInt(MAXIMUM_POSSIBLE_NUMBER),
+                        random.nextInt(MAXIMUM_POSSIBLE_NUMBER));
+                figure.setColor(colorSupplier
+                        .getRandomColor());
                 break;
             case 2:
-                figure = new Rectangle(random.nextInt(MAX_POS_NUMBER),
-                        random.nextInt(MAX_POS_NUMBER));
+                figure = new Rectangle(random.nextInt(MAXIMUM_POSSIBLE_NUMBER),
+                        random.nextInt(MAXIMUM_POSSIBLE_NUMBER));
+                figure.setColor(colorSupplier.getRandomColor());
                 break;
             case 3:
-                figure = new RightTriangle(random.nextInt(MAX_POS_NUMBER),
-                        random.nextInt(MAX_POS_NUMBER));
+                figure = new RightTriangle(random.nextInt(MAXIMUM_POSSIBLE_NUMBER),
+                        random.nextInt(MAXIMUM_POSSIBLE_NUMBER));
+                figure.setColor(colorSupplier.getRandomColor());
                 break;
             default:
-                figure = new Square(random.nextInt(MAX_POS_NUMBER));
+                figure = new Square(random.nextInt(MAXIMUM_POSSIBLE_NUMBER));
+                figure.setColor(colorSupplier.getRandomColor());
                 break;
 
         }
