@@ -10,7 +10,7 @@ public class FigureSupplier {
             case "CIRCLE":
                 return new Circle(random.nextDouble(), random.nextDouble(),
                         colorRandom.getRandomColor());
-            case "SQUAR":
+            case "SQUARE":
                 return new Square(random.nextDouble(), random.nextDouble(),
                         colorRandom.getRandomColor());
             case "ISOSCELES_TRAPEZOID":

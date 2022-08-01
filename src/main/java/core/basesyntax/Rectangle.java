@@ -2,26 +2,26 @@ package core.basesyntax;
 
 public class Rectangle extends Figure {
     private double length;
-    private double weight;
+    private double width;
 
     public Rectangle() {
     }
 
-    public Rectangle(double length, double weight, double area, String color) {
+    public Rectangle(double length, double width, double area, String color) {
         super(color, area);
         this.length = length;
-        this.weight = weight;
+        this.width = width;
     }
 
     @Override
     public void draw() {
-        System.out.println("rectangle, " + "area: " + areaCalculate(super.getArea()) + " sq.units,"
-                + " length: " + length + " units," + " weight: "
-                + weight + " units," + " color: " + getColor());
+        System.out.println("rectangle, " + "area: " + calculateArea() + " sq.units,"
+                + " length: " + length + " units," + " width: "
+                + width + " units," + " color: " + getColor());
     }
 
     @Override
-    public double areaCalculate(double area) {
-        return length * weight;
+    public double calculateArea() {
+        return length * width;
     }
 }
