@@ -25,7 +25,7 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        int randomFigureNumber = new Random().nextInt(MAX_RANDOM_VALUE) + 1;
+        int randomFigureNumber = new Random().nextInt(MAX_RANDOM_VALUE);
         FigureTypeSelector[] values = FigureTypeSelector.values();
         FigureTypeSelector value = values[randomFigureNumber];
         if (value.equals(FigureTypeSelector.CIRCLE)) {
