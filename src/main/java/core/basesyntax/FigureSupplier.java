@@ -3,16 +3,16 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int MAX_VALUE_SIDE = 100;
-    private static final int WHICH_FIGURE = 5;
+    private static final int MAX_PROPERTY_VALUE = 100;
+    private static final int NUMBER_OF_FIGURES = 5;
 
     public Figure getRandomFigure() {
-        ColorSupplier colorSupplier = new ColorSupplier();
-        String color = colorSupplier.getRandomColor();
-        double side = 1 + (Math.random() * MAX_VALUE_SIDE);
-        double side2 = 1 + (Math.random() * MAX_VALUE_SIDE);
-        double side3 = 1 + (Math.random() * MAX_VALUE_SIDE);
-        int whichFigure = new Random().nextInt(WHICH_FIGURE);
+        String color = new ColorSupplier().getRandomColor();
+        Random random = new Random();
+        double side = random.nextInt(MAX_PROPERTY_VALUE);
+        double side2 = random.nextInt(MAX_PROPERTY_VALUE);
+        double side3 = random.nextInt(MAX_PROPERTY_VALUE);
+        int whichFigure = random.nextInt(NUMBER_OF_FIGURES);
         switch (whichFigure) {
             case 1:
                 return new IsoscelesTrapezoid(color,side,side2,side3);

@@ -27,16 +27,16 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return firstSide * secondSide;
     }
 
     @Override
-    public String information() {
-        return "figure: Rectangle" + " firstSide: " + firstSide
+    public void draw() {
+        System.out.println("figure: Rectangle" + " firstSide: " + firstSide
                 + " units"
                 + " secondSide: " + secondSide
                 + " units"
-                + " area: " + area() + " sq.units" + " color: " + color;
+                + " area: " + getArea() + " sq.units" + " color: " + color);
     }
 }
