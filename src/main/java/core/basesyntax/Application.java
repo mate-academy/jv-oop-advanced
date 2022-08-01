@@ -6,7 +6,7 @@ public class Application {
         Figure [] figureArray = new Figure[6];
         for (int i = 0; i < figureArray.length; i++) {
             if (i < 3) {
-                figureArray [i] = figureSupplier.getRandomFigure();
+                figureArray[i] = figureSupplier.getRandomFigure();
                 System.out.println(figureArray[i].draw());
             }
             if (i >= 3) {
