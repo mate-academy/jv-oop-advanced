@@ -15,15 +15,15 @@ public class FigureSupplier {
 
         switch (randomFigure) {
             case 0:
-                return new Circle(random.nextInt(), randomColor);
+                return new Circle(random.nextInt(RANDOM_NUMBER), randomColor);
             case 1:
-                return new Rectangle(random.nextInt(), random.nextInt(), randomColor);
+                return new Rectangle(random.nextInt(RANDOM_NUMBER), random.nextInt(RANDOM_NUMBER), randomColor);
             case 2:
-                return new Square(random.nextInt(), randomColor);
+                return new Square(random.nextInt(RANDOM_NUMBER), randomColor);
             case 3:
-                return new IsoscelesTrapezoid(random.nextInt(),
-                        random.nextInt(),
-                        random.nextInt(),
+                return new IsoscelesTrapezoid(random.nextInt(RANDOM_NUMBER),
+                        random.nextInt(RANDOM_NUMBER),
+                        random.nextInt(RANDOM_NUMBER),
                         randomColor);
             case 4:
                 return new RightTriangle(random.nextInt(), random.nextInt(), randomColor);
