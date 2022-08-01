@@ -3,13 +3,15 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final Random RAND = new Random();
-    private static final ColorSupplier colorSupplier = new ColorSupplier();
+    private static final int RANDOM_NUMBER = 10;
+    private static final int RANDOM_FIGURE = 5;
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int randomNumber = RAND.nextInt(10);
+        int randomNumber = random.nextInt(RANDOM_NUMBER);
         String randomColor = colorSupplier.getRandomColor();
-        int randomFigure = RAND.nextInt(4);
+        int randomFigure = random.nextInt(RANDOM_FIGURE);
 
         switch (randomFigure) {
             case 0:
@@ -26,7 +28,7 @@ public class FigureSupplier {
             case 4:
                 return new RightTriangle(randomNumber, randomNumber, randomColor);
             default:
-                return null;
+                return getDefaultFigure();
         }
     }
 
