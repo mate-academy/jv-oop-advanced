@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.text.DecimalFormat;
 
 public class Square extends FigureObject {
-    private double sideA;
+    private double side;
 
     public Square(Color color, double sideA) {
         super(color);
