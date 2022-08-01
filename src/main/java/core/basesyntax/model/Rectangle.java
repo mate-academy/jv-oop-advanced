@@ -1,8 +1,8 @@
 package core.basesyntax.model;
 
 public class Rectangle extends Figure {
-    private int firstLeg;
-    private int secondLeg;
+    private int width;
+    private int height;
 
     public Rectangle() {
     }
@@ -11,39 +11,39 @@ public class Rectangle extends Figure {
         super(color);
     }
 
-    public Rectangle(Color color, int firstLeg, int secondLeg) {
+    public Rectangle(Color color, int width, int height) {
         this(color);
-        this.firstLeg = firstLeg;
-        this.secondLeg = secondLeg;
+        this.width = width;
+        this.height = height;
     }
 
-    public int getFirstLeg() {
-        return firstLeg;
+    public int getWidth() {
+        return width;
     }
 
-    public void setFirstLeg(int firstLeg) {
-        this.firstLeg = firstLeg;
+    public void setWidth(int width) {
+        this.width = width;
     }
 
-    public int getSecondLeg() {
-        return secondLeg;
+    public int getHeight() {
+        return height;
     }
 
-    public void setSecondLeg(int secondLeg) {
-        this.secondLeg = secondLeg;
+    public void setHeight(int height) {
+        this.height = height;
     }
 
     @Override
     public double calculateArea() {
-        return firstLeg * secondLeg;
+        return width * height;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: rectangle, area: "
-                + calculateArea() + " sq.units, firstLeg = "
-                + getFirstLeg() + " units, secondLeg = "
-                + getSecondLeg() + " units, color: "
+                + calculateArea() + " sq.units, width = "
+                + getWidth() + " units, height = "
+                + getHeight() + " units, color: "
                 + getColor().toString().toLowerCase());
     }
 }

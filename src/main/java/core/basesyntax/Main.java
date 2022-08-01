@@ -11,14 +11,12 @@ public class Main {
     public static void main(String[] args) {
         Figure[] figures = new Figure[NUMBER_FIGURES];
         FigureSupplier figureSupplier = new FigureSupplier();
-        for (int i = 0; i < figures.length; i++) {
-            if (i % 2 == 0) {
-                figures[i] = figureSupplier.getRandomFigure();
-            } else {
-                figures[i] = figureSupplier.getDefaultFigure();
-            }
+        for (int i = 0; i < figures.length / 2; i++) {
+            figures[i] = figureSupplier.getRandomFigure();
         }
-
+        for (int i = figures.length / 2; i < figures.length; i++) {
+            figures[i] = figureSupplier.getDefaultFigure();
+        }
         for (Drawable figure : figures) {
             figure.draw();
         }
