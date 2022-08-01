@@ -38,7 +38,7 @@ public class Main {
         Figure[] figure = {trapezoid, rectangle, square, rightTriangle,
                 figureSupplier.getDefaultFigure(), figureSupplier.getDefaultFigure()};
         for (Figure figures : figure) {
-            System.out.println(figures.draw());
+            figures.draw();
         }
     }
 }
