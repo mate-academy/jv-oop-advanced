@@ -8,8 +8,7 @@ public class FigureSuplier {
     private final ColorSuplier color = new ColorSuplier();
 
     public Figure getRandomFigure() {
-        int randomNumberOfFigure = new Random().nextInt(5);
-        switch (randomNumberOfFigure) {
+        switch (getRandomNumber()) {
             case 0:
                 return new Circle(color.getRandomColor(),
                         getRandomNumber());
