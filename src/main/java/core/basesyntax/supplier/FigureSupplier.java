@@ -1,6 +1,6 @@
 package core.basesyntax.supplier;
 
-import core.basesyntax.enums.FigureTypeSelector;
+import core.basesyntax.enums.FigureType;
 import core.basesyntax.figure.Circle;
 import core.basesyntax.figure.Figure;
 import core.basesyntax.figure.IsoscelesTrapezoid;
@@ -13,6 +13,7 @@ public class FigureSupplier {
     private static final int FIGURE_MAX_COUNT = 10;
     private static final int FIGURE_MIN_COUNT = 1;
     private static final int MAX_RANDOM_VALUE = 5;
+    private final Random random = new Random();
     private final ColorSupplier colorSupplier;
     private final Circle circle = new Circle("white", FIGURE_MAX_COUNT);
 
@@ -25,32 +26,28 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        int randomFigureNumber = new Random().nextInt(MAX_RANDOM_VALUE);
-        FigureTypeSelector[] values = FigureTypeSelector.values();
-        FigureTypeSelector value = values[randomFigureNumber];
-        if (value.equals(FigureTypeSelector.CIRCLE)) {
-            return new Circle(colorSupplier.getRandomColor(), getRandomFigureProperties());
+        FigureType figureType = FigureType.values()[random.nextInt(MAX_RANDOM_VALUE)];
+        switch (figureType) {
+            case CIRCLE:
+                return new Circle(colorSupplier.getRandomColor(), getRandomFigureProperties());
+            case ISOSCELES_TRAPEZOID:
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        getRandomFigureProperties(),
+                        getRandomFigureProperties(),
+                        getRandomFigureProperties());
+            case RECTANGLE:
+                return new Rectangle(colorSupplier.getRandomColor(),
+                        getRandomFigureProperties(),
+                        getRandomFigureProperties());
+            case RIGHT_TRIANGLE:
+                return new RightTriangle(colorSupplier.getRandomColor(),
+                        getRandomFigureProperties(),
+                        getRandomFigureProperties());
+            case SQUARE:
+                return new Square(colorSupplier.getRandomColor(), getRandomFigureProperties());
+            default:
+                return getDefaultFigure();
         }
-        if (value.equals(FigureTypeSelector.ISOSCELES_TRAPEZOID)) {
-            return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                    getRandomFigureProperties(),
-                    getRandomFigureProperties(),
-                    getRandomFigureProperties());
-        }
-        if (value.equals(FigureTypeSelector.RECTANGLE)) {
-            return new Rectangle(colorSupplier.getRandomColor(),
-                    getRandomFigureProperties(),
-                    getRandomFigureProperties());
-        }
-        if (value.equals(FigureTypeSelector.RIGHT_TRIANGLE)) {
-            return new RightTriangle(colorSupplier.getRandomColor(),
-                    getRandomFigureProperties(),
-                    getRandomFigureProperties());
-        }
-        if (value.equals(FigureTypeSelector.SQUARE)) {
-            return new Square(colorSupplier.getRandomColor(), getRandomFigureProperties());
-        }
-        return getDefaultFigure();
     }
 
     public Figure getDefaultFigure() {

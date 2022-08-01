@@ -37,6 +37,6 @@ public class Rectangle extends Figure {
 
     @Override
     public double getArea() {
-        return firstSide != secondSide ? firstSide * secondSide : 0.0;
+        return firstSide * secondSide;
     }
 }

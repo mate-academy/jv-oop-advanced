@@ -1,6 +1,6 @@
 package core.basesyntax.enums;
 
-public enum FigureTypeSelector {
+public enum FigureType {
     CIRCLE,
     SQUARE,
     ISOSCELES_TRAPEZOID,
