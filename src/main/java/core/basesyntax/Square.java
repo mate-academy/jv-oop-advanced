@@ -5,7 +5,7 @@ public class Square extends Figure {
 
     public Square(double side, Color color) {
         this.side = side;
-        this.color = color;
+        setColor(color);
     }
 
     @Override
@@ -17,6 +17,6 @@ public class Square extends Figure {
     public String getFigureInfo() {
         return "Figure: square Area: " + getArea() + " sq.units"
                 + " Side: " + side
-                + " Color: " + color + "\n";
+                + " Color: " + getColor() + "\n";
     }
 }

@@ -10,7 +10,7 @@ public class IsoscelesTrapezoid extends Figure {
         this.height = height;
         this.upperBase = upperBase;
         this.lowerBase = lowerBase;
-        this.color = color;
+        setColor(color);
     }
 
     @Override
@@ -25,7 +25,7 @@ public class IsoscelesTrapezoid extends Figure {
                 + " Upper base: " + upperBase + " units"
                 + " Lower base: " + lowerBase + " units"
                 + " Height: " + height + " units"
-                + " Color: " + color + "\n";
+                + " Color: " + getColor() + "\n";
     }
 
 }

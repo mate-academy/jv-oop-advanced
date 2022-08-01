@@ -5,7 +5,7 @@ public class Circle extends Figure {
 
     public Circle(double radius, Color color) {
         this.radius = radius;
-        this.color = color;
+        setColor(color);
     }
 
     @Override
@@ -17,7 +17,7 @@ public class Circle extends Figure {
     public String getFigureInfo() {
         return "Figure: circle Area: " + getArea() + " sq.units"
                 + " Radius: " + radius + " units"
-                + " Color: " + color + "\n";
+                + " Color: " + getColor() + "\n";
     }
 
 }

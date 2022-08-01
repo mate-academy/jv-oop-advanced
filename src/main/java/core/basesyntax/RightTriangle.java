@@ -5,7 +5,7 @@ public class RightTriangle extends Figure {
 
     public RightTriangle(double side, Color color) {
         this.side = side;
-        this.color = color;
+        setColor(color);
     }
 
     /**
@@ -20,6 +20,6 @@ public class RightTriangle extends Figure {
     public String getFigureInfo() {
         return "Figure: right triangle Area: " + getArea() + " sq.units "
                 + "Side: " + side + " units"
-                + " Color: " + color + "\n";
+                + " Color: " + getColor() + "\n";
     }
 }

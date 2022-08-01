@@ -7,7 +7,7 @@ public class Rectangle extends Figure {
     public Rectangle(double length, double width, Color color) {
         this.length = length;
         this.width = width;
-        this.color = color;
+        setColor(color);
     }
 
     @Override
@@ -20,7 +20,7 @@ public class Rectangle extends Figure {
         return "Figure: rectangle Area: " + getArea() + " sq.units"
                 + " Length: " + length
                 + " Width: " + width
-                + " Color " + color + "\n";
+                + " Color " + getColor() + "\n";
 
     }
 }

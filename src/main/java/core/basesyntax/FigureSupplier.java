@@ -4,10 +4,10 @@ import java.util.Random;
 
 public class FigureSupplier {
 
-    Random random = new Random();
-    ColorSupplier colorSupplier = new ColorSupplier();
-    int index = random.nextInt(FigureNames.values().length);
-    double randomValue = random.nextDouble(100.0);
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final int index = random.nextInt(FigureNames.values().length);
+    private final double randomValue = random.nextDouble();
 
     public Figure getRandomFigure() {
         switch (FigureNames.values()[index]) {
