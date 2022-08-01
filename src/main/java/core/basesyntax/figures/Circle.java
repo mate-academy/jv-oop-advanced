@@ -3,7 +3,6 @@ package core.basesyntax.figures;
 import core.basesyntax.Figure;
 
 public class Circle extends Figure {
-    public static final int DEFAULT_RADIUS = 10;
     private final int radius;
 
     public Circle(String color, int radius) {
