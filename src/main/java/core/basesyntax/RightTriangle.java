@@ -4,25 +4,25 @@ public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
-    public RightTriangle(int height, int side, String color) {
+    public RightTriangle(int height, int secondLeg, String color) {
         this.firstLeg = height;
-        this.secondLeg = side;
+        this.secondLeg = secondLeg;
         setColor(color);
     }
 
-    public void setSide(int side) {
-        this.secondLeg = side;
+    public void setSide(int secondLeg) {
+        this.secondLeg = secondLeg;
     }
 
-    public void setHeight(int height) {
-        this.firstLeg = height;
+    public void setHeight(int firstLeg) {
+        this.firstLeg = firstLeg;
     }
 
-    public int getSide() {
+    public int getsecondLeg() {
         return this.secondLeg;
     }
 
-    public int getHeight() {
+    public int getfirstLeg() {
         return this.firstLeg;
     }
 

@@ -4,18 +4,18 @@ public class Rectangle extends Figure {
     private int length;
     private int width;
 
-    public Rectangle(int a, int b, String color) {
-        this.length = a;
-        this.width = b;
+    public Rectangle(int length, int width, String color) {
+        this.length = length;
+        this.width = width;
         setColor(color);
     }
 
-    public void setlength(int a) {
-        this.length = a;
+    public void setlength(int length) {
+        this.length = length;
     }
 
-    public void setWidth(int b) {
-        this.width = b;
+    public void setWidth(int width) {
+        this.width = width;
     }
 
     public int getLength() {
