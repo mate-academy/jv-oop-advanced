@@ -9,9 +9,9 @@ public class Application {
         for (int i = 0; i < figures.length / 2; i++) {
             figures[i] = figureSupplier.getRandomFigure();
         }
-        Arrays.fill(figures,3,6, figureSupplier.getDefaultFigure());
-        for (Figure f: figures) {
-            System.out.println(f.getFigureInfo());
+        Arrays.fill(figures, 3, 6, figureSupplier.getDefaultFigure());
+        for (Figure figure: figures) {
+            System.out.println(figure.getFigureInfo());
         }
     }
 }
