@@ -2,11 +2,11 @@ package core.basesyntax;
 
 public class Rectangle extends Figure {
     private int length;
-    private int weigth;
+    private int width;
 
-    public Rectangle(int length, int weigth) {
+    public Rectangle(int length, int width) {
         this.length = length;
-        this.weigth = weigth;
+        this.width = width;
     }
 
     public Rectangle() {
@@ -14,13 +14,13 @@ public class Rectangle extends Figure {
 
     @Override
     public double getArea() {
-        return length * weigth;
+        return length * width;
     }
 
     public void draw() {
         System.out.println("Figure: rectangle, area: " + String.format("%.1f", getArea())
                 + " sq.units, length: "
-                + length + "  units, weigth " + weigth + "  units, color: " + super.getColor());
+                + length + "  units, width " + width + "  units, color: " + super.getColor());
     }
 
 }

@@ -21,8 +21,8 @@ public class IsoscelesTrapezoid extends Figure {
 
     public void draw() {
         System.out.println("Figure: isosceles trapezoid, area: " + String.format("%.1f", getArea())
-                + " sq.units, weigth: "
-                + height + "  units, basisless " + lowerBasis + "  units, basislarge "
+                + " sq.units, height: "
+                + height + "  units, lowerBasis " + lowerBasis + "  units, upperBasis "
                 + upperBasis + "  units, color: " + super.getColor());
     }
 
