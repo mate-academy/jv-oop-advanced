@@ -13,7 +13,6 @@ public class FigureSupplier {
     private static final String DEFAULT_COLOR = String.valueOf(Color.WHITE);
     private Random random = new Random();
 
-
     public Figure getRandomFigure() {
         ColorSupplier color = new ColorSupplier();
         int index = random.nextInt(EnumFigure.values().length);
