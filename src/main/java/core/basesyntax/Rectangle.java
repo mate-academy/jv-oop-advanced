@@ -1,24 +1,24 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private double edgeHeight;
-    private double edgeLength;
+    private double height;
+    private double length;
 
-    public Rectangle(Color color, double edgeHeight, double edgeLength) {
+    public Rectangle(Color color, double height, double length) {
         super(color);
-        this.edgeHeight = edgeHeight;
-        this.edgeLength = edgeLength;
+        this.height = height;
+        this.length = length;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: rectangle, area: " + getArea()
-                + " sq.units, edgeHeight: " + edgeHeight + " units, edgeLength: "
-                + edgeLength + " units, color: " + getColor());
+                + " sq.units, edgeHeight: " + height + " units, edgeLength: "
+                + length + " units, color: " + getColor());
     }
 
     @Override
     public double getArea() {
-        return edgeHeight * edgeLength;
+        return height * length;
     }
 }
