@@ -26,12 +26,12 @@ public class FigureSupplier {
         }
     }
 
-    private double getRandomValue() {
-        return random.nextInt(MAX_RANDOM_VALUE);
-    }
-
     public FigureBase getDefaultFigure() {
         return new Circle(Color.WHITE, DEFAULT_CIRCLE_RADIUS);
+    }
+
+    private double getRandomValue() {
+        return random.nextInt(MAX_RANDOM_VALUE);
     }
 
     private FigureBase getRandomSquare() {

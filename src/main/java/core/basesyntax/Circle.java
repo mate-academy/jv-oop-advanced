@@ -18,15 +18,4 @@ public class Circle extends FigureBase {
         System.out.println("Figure: circle, area: " + getArea() + " sq.units, radius: " + radius
                 + " units, color: " + getColor());
     }
-
-    @Override
-    public void setColor(Color color) {
-        super.setColor(color);
-    }
-
-    @Override
-    public Color getColor() {
-        return super.getColor();
-    }
-
 }
