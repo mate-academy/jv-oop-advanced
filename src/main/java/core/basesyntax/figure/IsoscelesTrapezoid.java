@@ -5,9 +5,9 @@ public class IsoscelesTrapezoid extends Figure {
     private double downSide;
     private double height;
 
-    public IsoscelesTrapezoid(String figureType, String color, double upSide,
-                              double downSide,double height) {
-        super(figureType, color);
+    public IsoscelesTrapezoid(String color, double upSide,
+                              double downSide, double height) {
+        super(color);
         this.upSide = upSide;
         this.downSide = downSide;
         this.height = height;
@@ -39,7 +39,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getFigureType()
+        System.out.println("Figure: IsoscelesTrapezoid "
                 + ", area: " + getArea() + " sq.units,"
                 + " upSide: " + upSide
                 + " units, downSide: " + downSide
@@ -49,9 +49,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double getArea() {
-        final double factor = 0.5;
-        double sumOfSide = upSide + downSide;
-        return upSide != downSide ? (factor * sumOfSide) * height : 0.0;
+        return ((upSide + downSide) / 2) * height;
     }
 
 }
