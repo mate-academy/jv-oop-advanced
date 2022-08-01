@@ -19,8 +19,7 @@ public class FigureSupplier {
             case 3:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor().toString()
                         .toLowerCase(), numberSupplier.getRandomNumber(),
-                        numberSupplier.getRandomNumber(),
-                        numberSupplier.getRandomNumber());
+                        numberSupplier.getRandomNumber(), numberSupplier.getRandomNumber());
             case 4:
                 return new Rectangle(colorSupplier.getRandomColor().toString().toLowerCase(),
                         numberSupplier.getRandomNumber(), numberSupplier.getRandomNumber());

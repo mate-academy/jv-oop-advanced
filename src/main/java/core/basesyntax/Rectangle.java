@@ -18,6 +18,7 @@ public class Rectangle extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: circle, area: " + getArea()
-                + " sq.units, radius: " + width + " units, " + height + " units, color: " + color);
+                + " sq.units, radius: " + width + " units, "
+                + height + " units, color: " + getColor());
     }
 }
