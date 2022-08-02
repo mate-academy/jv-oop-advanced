@@ -5,7 +5,6 @@ import core.basesyntax.temp.Figure;
 public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
-    private double figureArea;
 
     public void setFirstLeg(double firstLeg) {
         this.firstLeg = firstLeg;
@@ -16,14 +15,14 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void getArea() {
-        figureArea = (0.5 * firstLeg * secondLeg);
+    public double getArea() {
+        return 0.5 * firstLeg * secondLeg;
     }
 
     @Override
     public void draw() {
         getArea();
-        System.out.println("Right triangle, area: " + figureArea + ", first leg: " + firstLeg
+        System.out.println("Right triangle, area: " + getArea() + ", first leg: " + firstLeg
                 + ", second leg: " + secondLeg + ", color: " + getColor());
     }
 }
