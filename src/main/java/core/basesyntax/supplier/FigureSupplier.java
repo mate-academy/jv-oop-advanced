@@ -22,7 +22,7 @@ public class FigureSupplier {
     }
 
     public int getRandomFigureProperties() {
-        return new Random().nextInt(FIGURE_MAX_COUNT) + FIGURE_MIN_COUNT;
+        return random.nextInt(FIGURE_MAX_COUNT) + FIGURE_MIN_COUNT;
     }
 
     public Figure getRandomFigure() {
