@@ -41,13 +41,20 @@ public class FigureSupplier {
         return figure;
     }
 
-    public Figure getRandomCircle() {
+    public Figure getDefaultFigure() {
+        Circle circle = new Circle();
+        circle.setRadius(DEFAULT_RADIUS);
+        circle.setColor(DEFAULT_COLOR);
+        circle.getArea();
+        return circle;
+    }
+
+    private Figure getRandomCircle() {
         Circle circle = new Circle();
         circle.setRadius(random.nextDouble());
         circle.setColor(colorSupplier.getRandomColor());
         circle.getArea();
-        Figure figure = circle;
-        return figure;
+        return circle;
     }
 
     private Figure getRandomIsoscelesTrapezoid() {
@@ -57,8 +64,7 @@ public class FigureSupplier {
         isoscelesTrapezoid.setHeight(random.nextDouble());
         isoscelesTrapezoid.setColor(colorSupplier.getRandomColor());
         isoscelesTrapezoid.getArea();
-        Figure figure = isoscelesTrapezoid;
-        return figure;
+        return isoscelesTrapezoid;
     }
 
     private Figure getRandomRectangle() {
@@ -67,8 +73,7 @@ public class FigureSupplier {
         rectangle.setSecondSide(random.nextDouble());
         rectangle.setColor(colorSupplier.getRandomColor());
         rectangle.getArea();
-        Figure figure = rectangle;
-        return figure;
+        return rectangle;
     }
 
     private Figure getRandomRightTriangle() {
@@ -77,8 +82,7 @@ public class FigureSupplier {
         rightTriangle.setSecondLeg(random.nextDouble());
         rightTriangle.setColor(colorSupplier.getRandomColor());
         rightTriangle.getArea();
-        Figure figure = rightTriangle;
-        return figure;
+        return rightTriangle;
     }
 
     private Figure getRandomSquare() {
@@ -86,17 +90,6 @@ public class FigureSupplier {
         square.setSide(random.nextDouble());
         square.setColor(colorSupplier.getRandomColor());
         square.getArea();
-        Figure figure = square;
-        return figure;
-    }
-
-    public Figure getDefaultFigure() {
-        Circle circle = new Circle();
-        circle.setRadius(DEFAULT_RADIUS);
-        circle.setColor(DEFAULT_COLOR);
-        circle.getArea();
-        Figure figure = new Circle();
-        figure = circle;
-        return figure;
+        return square;
     }
 }
