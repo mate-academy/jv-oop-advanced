@@ -25,15 +25,15 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     public int getHeight() {
-        return this.height;
+        return height;
     }
 
     public int getUpSide() {
-        return this.upSide;
+        return upSide;
     }
 
     public int getDownSide() {
-        return this.downSide;
+        return downSide;
     }
 
     @Override
@@ -44,9 +44,9 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public String draw() {
         return "Figure: Isosceles Trapezoid\n\tcolor - " + getColor() + ";"
-                + "\n\t area - " + this.countArea() + " sq. units;"
-                + "\n\t height - " + this.height + " units;"
-                + "\n\t down side - " + this.downSide + " units;"
-                + "\n\t up side - " + this.upSide + " units.";
+                + "\n\t area - " + countArea() + " sq. units;"
+                + "\n\t height - " + height + " units;"
+                + "\n\t down side - " + downSide + " units;"
+                + "\n\t up side - " + upSide + " units.";
     }
 }

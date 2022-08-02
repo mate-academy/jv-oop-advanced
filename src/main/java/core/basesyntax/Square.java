@@ -13,7 +13,7 @@ public class Square extends Figure {
     }
 
     public int getSide() {
-        return this.side;
+        return side;
     }
 
     @Override
@@ -24,7 +24,7 @@ public class Square extends Figure {
     @Override
     public String draw() {
         return "Figure: Square\n\tcolor - " + getColor() + ";"
-                + "\n\t area - " + this.countArea() + " sq. units;"
-                + "\n\t side - " + this.side + " units.";
+                + "\n\t area - " + countArea() + " sq. units;"
+                + "\n\t side - " + side + " units.";
     }
 }

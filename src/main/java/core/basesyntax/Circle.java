@@ -13,7 +13,7 @@ public class Circle extends Figure {
     }
 
     public int getRadius() {
-        return this.radius;
+        return radius;
     }
 
     @Override
@@ -24,7 +24,7 @@ public class Circle extends Figure {
     @Override
     public String draw() {
         return "Figure: Circle\n\tcolor - " + getColor() + ";"
-                + "\n\t area - " + this.countArea() + " sq. units;"
-                + "\n\t radius - " + this.radius + " units.";
+                + "\n\t area - " + countArea() + " sq. units;"
+                + "\n\t radius - " + radius + " units.";
     }
 }

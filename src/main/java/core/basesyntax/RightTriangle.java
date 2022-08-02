@@ -10,20 +10,20 @@ public class RightTriangle extends Figure {
         setColor(color);
     }
 
-    public void setSide(int secondLeg) {
+    public void setSecondLeg(int secondLeg) {
         this.secondLeg = secondLeg;
     }
 
-    public void setHeight(int firstLeg) {
+    public void setFirstLeg(int firstLeg) {
         this.firstLeg = firstLeg;
     }
 
-    public int getsecondLeg() {
-        return this.secondLeg;
+    public int getSecondLeg() {
+        return secondLeg;
     }
 
-    public int getfirstLeg() {
-        return this.firstLeg;
+    public int getFirstLeg() {
+        return firstLeg;
     }
 
     @Override
@@ -34,8 +34,8 @@ public class RightTriangle extends Figure {
     @Override
     public String draw() {
         return "Figure: Square\n\tcolor - " + getColor() + ";"
-                + "\n\t area - " + this.countArea() + " sq. units;"
-                + "\n\t firstLeg - " + this.firstLeg + " units;"
-                + "\n\t side - " + this.secondLeg + " units.";
+                + "\n\t area - " + countArea() + " sq. units;"
+                + "\n\t firstLeg - " + firstLeg + " units;"
+                + "\n\t side - " + secondLeg + " units.";
     }
 }

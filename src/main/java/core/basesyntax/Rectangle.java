@@ -19,11 +19,11 @@ public class Rectangle extends Figure {
     }
 
     public int getLength() {
-        return this.length;
+        return length;
     }
 
     public int getWidth() {
-        return this.width;
+        return width;
     }
 
     @Override
@@ -34,8 +34,8 @@ public class Rectangle extends Figure {
     @Override
     public String draw() {
         return "Figure: Rectangle\n\tcolor - " + getColor() + ";"
-                + "\n\t area - " + this.countArea() + " sq. units;"
-                + "\n\t length - " + this.length + " units;"
-                + "\n\t width - " + this.width + " units.";
+                + "\n\t area - " + countArea() + " sq. units;"
+                + "\n\t length - " + length + " units;"
+                + "\n\t width - " + width + " units.";
     }
 }
