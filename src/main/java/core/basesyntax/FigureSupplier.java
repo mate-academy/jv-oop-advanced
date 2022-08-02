@@ -6,30 +6,26 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         Random random = new Random();
         ColorSupplier colorRandom = new ColorSupplier();
-        switch (FigureType.values()[new Random().nextInt(FigureType.values().length)].name()) {
+        switch (FigureType.values()[random.nextInt(FigureType.values().length)].name()) {
             case "CIRCLE":
-                return new Circle(random.nextDouble(), random.nextDouble(),
-                        colorRandom.getRandomColor());
+                return new Circle(random.nextDouble(), colorRandom.getRandomColor());
             case "SQUARE":
-                return new Square(random.nextDouble(), random.nextDouble(),
-                        colorRandom.getRandomColor());
+                return new Square(random.nextDouble(), colorRandom.getRandomColor());
             case "ISOSCELES_TRAPEZOID":
                 return new IsoscelesTrapezoid(random.nextDouble(),
-                        random.nextDouble(), random.nextDouble(),
-                        random.nextDouble(), colorRandom.getRandomColor());
+                        random.nextDouble(), random.nextDouble(), colorRandom.getRandomColor());
             case "RECTANGLE":
                 return new Rectangle(random.nextDouble(), random.nextDouble(),
-                        random.nextDouble(),
                         colorRandom.getRandomColor());
             case "RIGHT_TRIANGLE":
                 return new RightTriangle(random.nextDouble(), random.nextDouble(),
-                        random.nextDouble(), colorRandom.getRandomColor());
+                        colorRandom.getRandomColor());
             default:
                 return getDefaultFigure();
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10.0, 10.0 * 3.14, Color.WHITE.name());
+        return new Circle(10.0, Color.WHITE.name());
     }
 }

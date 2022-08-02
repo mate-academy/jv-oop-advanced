@@ -6,7 +6,7 @@ public class Square extends Figure {
     public Square() {
     }
 
-    public Square(double side, double area, String color) {
+    public Square(double side, String color) {
         super(color);
         this.side = side;
     }
