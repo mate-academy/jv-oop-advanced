@@ -5,13 +5,15 @@ import java.util.Random;
 public class FigureSupplier {
     public static final int MAX_RANDOM_VALUE = 100;
     public static final int NUMBER_FIGURES = 5;
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Object getRandomFigure() {
+    public Figure getRandomFigure() {
         int index = new Random().nextInt(NUMBER_FIGURES);
-        int randomParameter1 = new Random().nextInt(MAX_RANDOM_VALUE);
-        int randomParameter2 = new Random().nextInt(MAX_RANDOM_VALUE);
-        int randomParameter3 = new Random().nextInt(MAX_RANDOM_VALUE);
-        String colorRandom = new ColorSupplier().getRandomColor();
+        int randomParameter1 = random.nextInt(MAX_RANDOM_VALUE);
+        int randomParameter2 = random.nextInt(MAX_RANDOM_VALUE);
+        int randomParameter3 = random.nextInt(MAX_RANDOM_VALUE);
+        String colorRandom = colorSupplier.getRandomColor();
         switch (index) {
             case 0:
                 return new Square(randomParameter1, colorRandom);

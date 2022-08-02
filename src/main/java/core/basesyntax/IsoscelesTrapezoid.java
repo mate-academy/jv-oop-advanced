@@ -12,16 +12,28 @@ public class IsoscelesTrapezoid extends Figure {
         this.height = height;
     }
 
-    public int getSideA() {
+    public int getTopSide() {
         return topSide;
     }
 
-    public int getSideB() {
+    public void setTopSide(int topSide) {
+        this.topSide = topSide;
+    }
+
+    public int getBottomSide() {
         return bottomSide;
+    }
+
+    public void setBottomSide(int bottomSide) {
+        this.bottomSide = bottomSide;
     }
 
     public int getHeight() {
         return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
     }
 
     @Override
