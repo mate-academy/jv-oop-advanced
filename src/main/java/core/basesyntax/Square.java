@@ -1,9 +1,11 @@
 package core.basesyntax;
 
 public class Square extends Figures {
-
-    public Square(String name, String color, double sideA) {
-        super(name, color, sideA);
+    private double side;
+    
+    public Square(String name, String color, double side) {
+        super(name, color);
+        this.side = side;
     }
 
     @Override
