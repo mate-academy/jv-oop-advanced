@@ -1,12 +1,13 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figures {
+    private double firstLeg;
+    private double secondLeg;
 
-    private double sideB;
-
-    public RightTriangle(String name, String color, double sideA, double sideB) {
-        super(name, color, sideA);
-        this.sideB = sideB;
+    public RightTriangle(String name, String color, double firstLeg, double secondLeg) {
+        super(name, color);
+        this.firstLeg= firstLeg;
+        this.secondLeg = secondLeg;
     }
 
     @Override
