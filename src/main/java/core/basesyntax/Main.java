@@ -11,9 +11,8 @@ public class Main {
             figureArray[i] = i < (figureArray.length / 2) ? figureSupplier.getRandomFigure() 
                                              : figureSupplier.getDefaultFigure();
         }
-        for (Figures mass : figureArray) {
-            mass.getDraw();
+        for (Figure figure: figuresArray) {
+            figure.getDraw();
         }
-
     }
 }
