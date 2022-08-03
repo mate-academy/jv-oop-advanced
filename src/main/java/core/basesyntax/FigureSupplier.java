@@ -12,7 +12,6 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int index = random.nextInt(FIGURES_NUMBER);
-
         switch (index) {
             case 0:
                 int randomRadius = random.nextInt(FIGURES_NUMBER);
