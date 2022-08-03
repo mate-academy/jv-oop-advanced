@@ -7,12 +7,9 @@ public class Main {
         Figures defaultFigure = figureSupplier.getDefaultFigure();
 
         Figures[] figureArray = new Figures[6];
-        for (int i = 0; i < figureArray.length / 2; i++) {
-            Figures randomFigure = figureSupplier.getRandomFigure();
-            figureArray[i] = randomFigure;
-        }
-        for (int k = figureArray.length / 2; k < figureArray.length; k++) {
-            figureArray[k] = defaultFigure;
+        for (int i = 0; i < figureArray.length; i++) {
+            figureArray[i] = i < (figureArray.length / 2) ? figureSupplier.getRandomFigure() 
+                                             : figureSupplier.getDefaultFigure();
         }
         for (Figures mass : figureArray) {
             mass.getDraw();
