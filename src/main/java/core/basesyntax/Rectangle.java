@@ -3,6 +3,7 @@ package core.basesyntax;
 public class Rectangle extends Figure {
     private int firstLeg;
     private int secondLeg;
+    private double area;
 
     public Rectangle(String color, int firstLeg, int secondLeg) {
         super(color);
@@ -10,14 +11,15 @@ public class Rectangle extends Figure {
         this.secondLeg = secondLeg;
     }
 
+    @Override
     public double getArea() {
-        return firstLeg * secondLeg;
+        return area = firstLeg * secondLeg;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: rectangle, area: " + getArea()
                 + " sq.units, first leg: " + firstLeg + " units ,second leg: " + secondLeg
-                + " units, color: " + super.getColor());
+                + " units, color: " + getColor());
     }
 }

@@ -8,6 +8,7 @@ public class Square extends Figure {
         this.leg = leg;
     }
 
+    @Override
     public double getArea() {
         return Math.pow(leg, 2);
     }
@@ -15,6 +16,6 @@ public class Square extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: rectangle, area: " + getArea() + "sq.units ,leg: "
-                  + leg + " units, color: " + super.getColor());
+                  + leg + " units, color: " + getColor());
     }
 }
