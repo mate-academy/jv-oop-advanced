@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figures {
+public class Rectangle extends Figure {
     private final int width;
     private final int height;
 
@@ -12,17 +12,11 @@ public class Rectangle extends Figures {
 
     @Override
     public void draw() {
-        System.out.println("Rectangle is drawn.");
+        System.out.println("Rectangle is drawn. Area = " + height * width + " Color is " + color);
     }
 
     @Override
     public double getArea() {
         return height * width;
-    }
-
-    @Override
-    public String toString() {
-        return "rectangle, " + "its color: " + color
-                + ", with sides: " + width + " units, " + height + " units";
     }
 }

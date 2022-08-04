@@ -6,12 +6,12 @@ public class FigureSupplier {
     private final String defaultColor = ColorSupplier.Color.WHITE.toString();
     private final int defaultRadius = 10;
 
-    public Figures getRandomFigure() {
-        Figures figure;
+    public Figure getRandomFigure() {
+        Figure figure;
         Random random = new Random();
         Shape shape = Shape.values()[random.nextInt(Shape.values().length)];
         String color = new ColorSupplier().getRandomColor();
-        int firstSize = random.nextInt(Figures.MAX_SIDE);
+        int firstSize = random.nextInt(Figure.MAX_SIDE);
         switch (shape) {
             case CIRCLE:
                 figure = new Circle(color, firstSize);
@@ -20,14 +20,14 @@ public class FigureSupplier {
                 figure = new Square(color, firstSize);
                 break;
             case RECTANGLE:
-                figure = new Rectangle(color, firstSize, random.nextInt(Figures.MAX_SIDE));
+                figure = new Rectangle(color, firstSize, random.nextInt(Figure.MAX_SIDE));
                 break;
             case TRIANGLE:
                 figure = new RightTriangle(color, firstSize);
                 break;
             case TRAPEZOID:
-                figure = new IsoscelesTrapezoid(color, firstSize, random.nextInt(Figures.MAX_SIDE),
-                        random.nextInt(Figures.MAX_SIDE));
+                figure = new IsoscelesTrapezoid(color, firstSize, random.nextInt(Figure.MAX_SIDE),
+                        random.nextInt(Figure.MAX_SIDE));
                 break;
             default:
                 figure = null;
@@ -35,7 +35,7 @@ public class FigureSupplier {
         return figure;
     }
 
-    public Figures getDefaultFigure() {
+    public Figure getDefaultFigure() {
         return new Circle(defaultColor, defaultRadius);
     }
 

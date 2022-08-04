@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figures {
+public class IsoscelesTrapezoid extends Figure {
     private final int firstSide;
     private final int secondSide;
     private final int height;
@@ -14,7 +14,10 @@ public class IsoscelesTrapezoid extends Figures {
 
     @Override
     public void draw() {
-        System.out.println("Isoscales trapezoid is drawn. ");
+        System.out.println("Isoscales trapezoid is drawn. Height = "
+                + height + " first side = " + firstSide
+                        + "second side = " + secondSide + " Color is "
+                + color);
     }
 
     @Override

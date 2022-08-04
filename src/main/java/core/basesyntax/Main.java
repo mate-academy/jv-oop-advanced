@@ -1,26 +1,20 @@
 package core.basesyntax;
 
-public class Main {
+public abstract class Main implements Drawable {
     private static final int SIZE = 6;
 
     public static void main(String[] args) {
+
         FigureSupplier supplier = new FigureSupplier();
-        Figures[] figures = new Figures[SIZE];
-
-        for (int i = 0; i < SIZE / 2; i++) {
-            figures[i] = supplier.getRandomFigure();
+        Figure[] figures = new Figure[SIZE];
+        for (int i = 0; i < SIZE; i++) {
+            if ((i >= 0) && (i < SIZE / 2)) {
+                figures[i] = supplier.getRandomFigure();
+            }
+            if ((i >= SIZE / 2) && (i < SIZE)) {
+                figures[i] = supplier.getDefaultFigure();
+            }
+            figures[i].draw();
         }
-
-        for (int i = SIZE / 2; i < SIZE; i++) {
-            figures[i] = supplier.getDefaultFigure();
-        }
-
-        for (Figures figure : figures) {
-            System.out.println(printInfo(figure));
-        }
-    }
-
-    private static String printInfo(Figures figure) {
-        return "Figure: " + figure + ", area: " + figure.getArea() + " square units.";
     }
 }
