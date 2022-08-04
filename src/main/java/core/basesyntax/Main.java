@@ -4,18 +4,14 @@ public class Main {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
 
-        Figures defaultFigure = figureSupplier.getDefaultFigure();
-
-        Figures[] figureArray = new Figures[6];
-        for (int i = 0; i < figureArray.length / 2; i++) {
-            Figures randomFigure = figureSupplier.getRandomFigure();
-            figureArray[i] = randomFigure;
+        Figure[] figuresArray = new Figure[6];
+        for (int i = 0; i < figuresArray.length; i++) {
+            figuresArray[i] = i < (figuresArray.length / 2)
+                    ? figureSupplier.getRandomFigure() :
+                    figureSupplier.getDefaultFigure();
         }
-        for (int k = figureArray.length / 2; k < figureArray.length; k++) {
-            figureArray[k] = defaultFigure;
-        }
-        for (Figures mass : figureArray) {
-            mass.getDraw();
+        for (Figure figure : figuresArray) {
+            figure.draw();
         }
 
     }
