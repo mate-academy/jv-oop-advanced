@@ -1,12 +1,12 @@
 package core.basesyntax;
 
 import java.util.Random;
-
 public class FigureSupplier {
     private static final int MAX_NUMBER_FIGURE = 5;
     private static final int DEFAULT_RADIUS = 10;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final Circle defaultCircle = new Circle(Color.WHITE.name(), DEFAULT_RADIUS);
 
     public Figure getRandomFigure() {
         int figureIndex = random.nextInt(MAX_NUMBER_FIGURE);
@@ -54,12 +54,11 @@ public class FigureSupplier {
                 getRandomDouble());
     }
 
-    public double getRandomDouble() {
+    private double getRandomDouble() {
         return random.nextDouble();
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.name(), DEFAULT_RADIUS);
+        return defaultCircle;
     }
-
 }
