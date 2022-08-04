@@ -5,12 +5,13 @@ import java.util.Random;
 public class FigureSupplier {
     private final String defaultColor = ColorSupplier.Color.WHITE.toString();
     private final int defaultRadius = 10;
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
         Figure figure;
-        Random random = new Random();
         Shape shape = Shape.values()[random.nextInt(Shape.values().length)];
-        String color = new ColorSupplier().getRandomColor();
+        String color = colorSupplier.getRandomColor();
         int firstSize = random.nextInt(Figure.MAX_SIDE);
         switch (shape) {
             case CIRCLE:
@@ -30,7 +31,7 @@ public class FigureSupplier {
                         random.nextInt(Figure.MAX_SIDE));
                 break;
             default:
-                figure = null;
+                figure = getDefaultFigure();
         }
         return figure;
     }

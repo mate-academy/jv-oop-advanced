@@ -1,17 +1,15 @@
 package core.basesyntax;
 
 public abstract class Main implements Drawable {
-    private static final int SIZE = 6;
+    private static final int NUMBER_OF_FIGURES_TO_GENERATE = 6;
 
     public static void main(String[] args) {
-
         FigureSupplier supplier = new FigureSupplier();
-        Figure[] figures = new Figure[SIZE];
-        for (int i = 0; i < SIZE; i++) {
-            if ((i >= 0) && (i < SIZE / 2)) {
+        Figure[] figures = new Figure[NUMBER_OF_FIGURES_TO_GENERATE];
+        for (int i = 0; i < NUMBER_OF_FIGURES_TO_GENERATE; i++) {
+            if (i >= 0 && i < NUMBER_OF_FIGURES_TO_GENERATE / 2) {
                 figures[i] = supplier.getRandomFigure();
-            }
-            if ((i >= SIZE / 2) && (i < SIZE)) {
+            } else {
                 figures[i] = supplier.getDefaultFigure();
             }
             figures[i].draw();
