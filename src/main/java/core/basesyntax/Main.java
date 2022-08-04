@@ -13,6 +13,5 @@ public class Main {
         for (Figure figure : figuresArray) {
             figure.draw();
         }
-
     }
 }
