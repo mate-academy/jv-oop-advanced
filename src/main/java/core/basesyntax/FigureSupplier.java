@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 import java.util.Random;
+
 public class FigureSupplier {
     private static final int MAX_NUMBER_FIGURE = 5;
     private static final int DEFAULT_RADIUS = 10;
