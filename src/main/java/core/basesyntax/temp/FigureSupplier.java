@@ -8,9 +8,9 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    static final String DEFAULT_COLOR = "WHITE";
-    static final double DEFAULT_RADIUS = 10.0;
-    static final int FIGURE_AMOUNT = 4;
+    public static final String DEFAULT_COLOR = Color.WHITE.name();
+    public static final double DEFAULT_RADIUS = 10.0;
+    public static final int FIGURE_AMOUNT = 4;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -21,31 +21,22 @@ public class FigureSupplier {
 
         switch (figureNumber) {
             case (0):
-                figure = getRandomCircle();
-                break;
+                return getRandomCircle();
             case (1):
-                figure = getRandomIsoscelesTrapezoid();
-                break;
+                return getRandomIsoscelesTrapezoid();
             case (2):
-                figure = getRandomRectangle();
-                break;
+                return getRandomRectangle();
             case (3):
-                figure = getRandomRightTriangle();
-                break;
-            case (4):
-                figure = getRandomSquare();
-                break;
+                return getRandomRightTriangle();
             default:
-                System.out.println("Wrong random number");
+                return getRandomSquare();
         }
-        return figure;
     }
 
     public Figure getDefaultFigure() {
         Circle circle = new Circle();
         circle.setRadius(DEFAULT_RADIUS);
         circle.setColor(DEFAULT_COLOR);
-        circle.getArea();
         return circle;
     }
 
@@ -53,7 +44,6 @@ public class FigureSupplier {
         Circle circle = new Circle();
         circle.setRadius(random.nextDouble());
         circle.setColor(colorSupplier.getRandomColor());
-        circle.getArea();
         return circle;
     }
 
@@ -63,7 +53,6 @@ public class FigureSupplier {
         isoscelesTrapezoid.setBasisB(random.nextDouble());
         isoscelesTrapezoid.setHeight(random.nextDouble());
         isoscelesTrapezoid.setColor(colorSupplier.getRandomColor());
-        isoscelesTrapezoid.getArea();
         return isoscelesTrapezoid;
     }
 
@@ -72,7 +61,6 @@ public class FigureSupplier {
         rectangle.setFirstSide(random.nextDouble());
         rectangle.setSecondSide(random.nextDouble());
         rectangle.setColor(colorSupplier.getRandomColor());
-        rectangle.getArea();
         return rectangle;
     }
 
@@ -81,7 +69,6 @@ public class FigureSupplier {
         rightTriangle.setFirstLeg(random.nextDouble());
         rightTriangle.setSecondLeg(random.nextDouble());
         rightTriangle.setColor(colorSupplier.getRandomColor());
-        rightTriangle.getArea();
         return rightTriangle;
     }
 
@@ -89,7 +76,6 @@ public class FigureSupplier {
         Square square = new Square();
         square.setSide(random.nextDouble());
         square.setColor(colorSupplier.getRandomColor());
-        square.getArea();
         return square;
     }
 }

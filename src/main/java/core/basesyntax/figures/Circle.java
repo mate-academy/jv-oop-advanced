@@ -10,13 +10,17 @@ public class Circle extends Figure {
     }
 
     @Override
+    public void setColor(String color) {
+        super.setColor(color);
+    }
+
+    @Override
     public double getArea() {
         return Math.PI * Math.pow(radius * 0.5, 2);
     }
 
     @Override
     public void draw() {
-        getArea();
         System.out.println("Circle, area: " + getArea() + " , radius: " + radius
                 + ", color: " + getColor());
     }
