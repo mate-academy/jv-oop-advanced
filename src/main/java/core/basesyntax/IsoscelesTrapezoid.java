@@ -3,7 +3,6 @@ package core.basesyntax;
 import java.util.Random;
 
 public class IsoscelesTrapezoid extends Figure {
-
     private double longBase;
     private double shortBase;
     private double high;
@@ -36,19 +35,24 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double getArea() {
-        return ((longBase + shortBase) * high) / 2;
+        return (longBase + shortBase) / 2 * high;
     }
 
     @Override
-    public String info() {
-        setFigureName("isosceles trapezoid");
-        setLongBase(random.nextDouble() + 1);
-        setShortBase(random.nextDouble() + 1);
-        setHigh(random.nextDouble() + 1);
-        setColor(colorSupplier.getRandomColor());
+    public String getInfo() {
         return "Figure: " + getFigureName() + ", "
                 + "area: " + getArea() + " sq.units, longBase: " + getLongBase()
                 + ", shortBase: " + getShortBase() + ", high: " + getHigh()
                 + ", color: " + getColor();
+    }
+
+    public IsoscelesTrapezoid setRandomIsoscelesTrapezoid() {
+        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
+        isoscelesTrapezoid.setFigureName("isosceles trapezoid");
+        isoscelesTrapezoid.setLongBase(random.nextDouble() + 1);
+        isoscelesTrapezoid.setShortBase(random.nextDouble() + 1);
+        isoscelesTrapezoid.setHigh(random.nextDouble() + 1);
+        isoscelesTrapezoid.setColor(colorSupplier.getRandomColor());
+        return isoscelesTrapezoid;
     }
 }

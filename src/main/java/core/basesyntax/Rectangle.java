@@ -3,7 +3,6 @@ package core.basesyntax;
 import java.util.Random;
 
 public class Rectangle extends Figure {
-
     private double length;
     private double width;
     private final Random random = new Random();
@@ -31,14 +30,18 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String info() {
-        setFigureName("rectangle");
-        setLength(random.nextDouble() + 1);
-        setWidth(random.nextDouble() + 1);
-        setColor(colorSupplier.getRandomColor());
+    public String getInfo() {
         return "Figure: " + getFigureName() + ", "
                 + "area: " + getArea() + " sq.units, length: " + getLength()
                 + ", width: " + getWidth() + ", color: " + getColor();
+    }
 
+    public Rectangle setRandomRectangle() {
+        Rectangle rectangle = new Rectangle();
+        rectangle.setFigureName("rectangle");
+        rectangle.setLength(random.nextDouble() + 1);
+        rectangle.setWidth(random.nextDouble() + 1);
+        rectangle.setColor(colorSupplier.getRandomColor());
+        return rectangle;
     }
 }

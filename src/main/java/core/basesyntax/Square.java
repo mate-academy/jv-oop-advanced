@@ -3,7 +3,6 @@ package core.basesyntax;
 import java.util.Random;
 
 public class Square extends Figure {
-
     private int side;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
@@ -22,11 +21,16 @@ public class Square extends Figure {
     }
 
     @Override
-    public String info() {
-        setFigureName("square");
-        setSide(random.nextInt() + 1);
-        setColor(colorSupplier.getRandomColor());
+    public String getInfo() {
         return "Figure: " + getFigureName() + ", " + "area: " + getArea()
                 + " sq.units, side: " + getSide() + ", color: " + getColor();
+    }
+
+    public Square setRandomSquare() {
+        Square square = new Square();
+        square.setFigureName("square");
+        square.setSide(random.nextInt() + 1);
+        square.setColor(colorSupplier.getRandomColor());
+        return square;
     }
 }

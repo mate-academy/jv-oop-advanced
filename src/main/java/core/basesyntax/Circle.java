@@ -3,7 +3,6 @@ package core.basesyntax;
 import java.util.Random;
 
 public class Circle extends Figure {
-
     private double radius;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
@@ -23,12 +22,17 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String info() {
-        setFigureName("circle");
-        setRadius(random.nextDouble() + 1);
-        setColor(colorSupplier.getRandomColor());
+    public String getInfo() {
         return "Figure: " + getFigureName() + ", "
                 + "area: " + getArea() + " sq.units, radius: "
                 + getRadius() + ", color: " + getColor();
+    }
+
+    public Circle setRandomCircle() {
+        Circle circle = new Circle();
+        circle.setFigureName("circle");
+        circle.setRadius(random.nextDouble() + 1);
+        circle.setColor(colorSupplier.getRandomColor());
+        return circle;
     }
 }

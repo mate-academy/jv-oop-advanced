@@ -3,7 +3,6 @@ package core.basesyntax;
 import java.util.Random;
 
 public class RightTriangle extends Figure {
-
     private double base;
     private double leg;
     private final Random random = new Random();
@@ -31,13 +30,18 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String info() {
-        setFigureName("rectangle");
-        setBase(random.nextDouble() + 1);
-        setLeg(random.nextDouble() + 1);
-        setColor(colorSupplier.getRandomColor());
+    public String getInfo() {
         return "Figure: " + getFigureName() + ", "
                 + "area: " + getArea() + " sq.units, base: " + getBase()
                 + ", leg: " + getLeg() + ", color: " + getColor();
+    }
+
+    public RightTriangle setRandomRightTriangle() {
+        RightTriangle rightTriangle = new RightTriangle();
+        rightTriangle.setFigureName("rectangle");
+        rightTriangle.setBase(random.nextDouble() + 1);
+        rightTriangle.setLeg(random.nextDouble() + 1);
+        rightTriangle.setColor(colorSupplier.getRandomColor());
+        return rightTriangle;
     }
 }
