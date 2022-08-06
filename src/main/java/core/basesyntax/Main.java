@@ -1,5 +1,7 @@
 package core.basesyntax;
 
+import suppliers.FigureSupplier;
+
 public class Main {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
