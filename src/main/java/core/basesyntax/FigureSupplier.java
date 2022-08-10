@@ -10,8 +10,7 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         Figure randomFigure;
-        switch(getRandomNumberOfFigure())
-        {
+        switch(getRandomNumberOfFigure()){
             case 0:
                 randomFigure = new Circle(RANDOM_COLOR.getRandomColor(), getRandomParameter());
                 break;
