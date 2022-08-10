@@ -5,12 +5,13 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int NUMBER_OF_FIGURES = 4;
     private static final int MAX_NUMBER = 20;
-    private final Random randomNumber = new Random();
     private static final ColorSupplier RANDOM_COLOR = new ColorSupplier();
+    private static final Random RANDOM_NUMBER = new Random();
 
     public Figure getRandomFigure() {
         Figure randomFigure;
-        switch(getRandomNumberOfFigure()){
+        switch(getRandomNumberOfFigure())
+        {
             case 0:
                 randomFigure = new Circle(RANDOM_COLOR.getRandomColor(), getRandomParameter());
                 break;
@@ -37,10 +38,10 @@ public class FigureSupplier {
     }
 
     public int getRandomParameter() {
-        return randomNumber.nextInt(MAX_NUMBER);
+        return RANDOM_NUMBER.nextInt(MAX_NUMBER);
     }
 
     public int getRandomNumberOfFigure() {
-        return randomNumber.nextInt(NUMBER_OF_FIGURES);
+        return RANDOM_NUMBER.nextInt(NUMBER_OF_FIGURES);
     }
 }
