@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public enum Colors {
+public enum Color {
     BLUE("blue"),
     WHITE("white"),
     RED("red"),
@@ -14,14 +14,10 @@ public enum Colors {
 
     private final String title;
 
-    Colors(String title) {
+    Color(String title) {
         this.title = title;
     }
 
-    @Override
-    public String toString() {
-        return title;
-    }
 
     public String getTitle() {
         return title;

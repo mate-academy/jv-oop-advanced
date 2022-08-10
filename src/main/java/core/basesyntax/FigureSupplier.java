@@ -5,8 +5,11 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int NUMBER_OF_FIGURES = 4;
     private static final int MAX_NUMBER = 20;
+    private static final int RADIUS_OF_DEFAULT_FIGURE = 10;
+    private static final String COLOR_OF_DEFAULT_FIGURE = Color.WHITE.getTitle();
     private static final ColorSupplier RANDOM_COLOR = new ColorSupplier();
     private static final Random RANDOM_NUMBER = new Random();
+
 
     public Figure getRandomFigure() {
         Figure randomFigure;
@@ -34,14 +37,14 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Colors.WHITE.getTitle(), 10);
+        return new Circle(COLOR_OF_DEFAULT_FIGURE, RADIUS_OF_DEFAULT_FIGURE);
     }
 
-    public int getRandomParameter() {
+    private int getRandomParameter() {
         return RANDOM_NUMBER.nextInt(MAX_NUMBER);
     }
 
-    public int getRandomNumberOfFigure() {
+    private int getRandomNumberOfFigure() {
         return RANDOM_NUMBER.nextInt(NUMBER_OF_FIGURES);
     }
 }
