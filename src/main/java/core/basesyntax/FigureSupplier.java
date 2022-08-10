@@ -10,7 +10,6 @@ public class FigureSupplier {
     private static final ColorSupplier RANDOM_COLOR = new ColorSupplier();
     private static final Random RANDOM_NUMBER = new Random();
 
-
     public Figure getRandomFigure() {
         Figure randomFigure;
 
