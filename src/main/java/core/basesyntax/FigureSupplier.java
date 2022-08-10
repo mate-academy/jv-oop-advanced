@@ -7,10 +7,10 @@ public class FigureSupplier {
     private static final int MAX_NUMBER = 20;
     private final Random randomNumber = new Random();
     private static final ColorSupplier RANDOM_COLOR = new ColorSupplier();
-    private static Figure RANDOM_FIGURE;
 
     public Figure getRandomFigure() {
-        switch(getRandomNumberOfFigure()){
+        Figure RANDOM_FIGURE;
+        switch(getRandomNumberOfFigure()) {
             case 0:
                 RANDOM_FIGURE = new Circle(RANDOM_COLOR.getRandomColor(), getRandomParameter());
                 break;
@@ -29,7 +29,7 @@ public class FigureSupplier {
             default:
                 RANDOM_FIGURE = new Square(RANDOM_COLOR.getRandomColor(), getRandomParameter());
         }
-    return RANDOM_FIGURE;
+        return RANDOM_FIGURE;
     }
 
     public Figure getDefaultFigure() {
