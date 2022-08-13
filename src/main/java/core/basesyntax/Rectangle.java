@@ -1,10 +1,9 @@
 package core.basesyntax;
 
-public class Rectangle implements Figure {
+public class Rectangle extends Figure {
 
     private int sideA;
     private int sideB;
-    private String color;
 
     public Rectangle(int sideA, int sideB, String color) {
         this.sideA = sideA;
@@ -26,14 +25,6 @@ public class Rectangle implements Figure {
 
     public void setSideB(int sideB) {
         this.sideB = sideB;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
     }
 
     @Override

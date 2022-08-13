@@ -1,8 +1,7 @@
 package core.basesyntax;
 
-public class Square implements Figure {
+public class Square extends Figure {
     private int sideA;
-    private String color;
 
     public Square(int sideA, String color) {
         this.sideA = sideA;
@@ -15,14 +14,6 @@ public class Square implements Figure {
 
     public void setSideA(int sideA) {
         this.sideA = sideA;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
     }
 
     @Override

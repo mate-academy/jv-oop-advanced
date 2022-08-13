@@ -1,10 +1,9 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid implements Figure {
+public class IsoscelesTrapezoid extends Figure {
     private int sideA;
     private int sideB;
     private int height;
-    private String color;
 
     public IsoscelesTrapezoid(int sideA, int sideB, int height, String color) {
         this.sideA = sideA;
@@ -35,14 +34,6 @@ public class IsoscelesTrapezoid implements Figure {
 
     public void setHeight(int height) {
         this.height = height;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
     }
 
     @Override
