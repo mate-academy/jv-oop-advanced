@@ -1,12 +1,12 @@
 package core.basesyntax;
 
-public class IsosTrapezoid implements Figure {
+public class IsoscelesTrapezoid implements Figure {
     private int sideA;
     private int sideB;
     private int height;
     private String color;
 
-    public IsosTrapezoid(int sideA, int sideB, int height, String color) {
+    public IsoscelesTrapezoid(int sideA, int sideB, int height, String color) {
         this.sideA = sideA;
         this.sideB = sideB;
         this.height = height;

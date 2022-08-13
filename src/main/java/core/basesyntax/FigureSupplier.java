@@ -28,7 +28,7 @@ public class FigureSupplier {
                     new ColorSupplier().getRandomColor());
         }
         if (nameOfFigure.equals("isoscelesTrapezoid")) {
-            return new IsosTrapezoid(
+            return new IsoscelesTrapezoid(
                     (random.nextInt(maxValuesOfUnits - minValuesOfUnits) + 1),
                     (random.nextInt(maxValuesOfUnits - minValuesOfUnits) + 1),
                     (random.nextInt(maxValuesOfUnits - minValuesOfUnits) + 1),
