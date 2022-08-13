@@ -9,7 +9,11 @@ public class FigureSupplier {
     private static final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        Figure[] figures = {new Rectangle(), new RightTriangle(), new Circle(), new Square(), new IsoscelesTrapezoid()};
+        Figure[] figures = {new Rectangle(),
+                            new RightTriangle(),
+                            new Circle(),
+                            new Square(),
+                            new IsoscelesTrapezoid()};
 
         Figure figure = figures[random.nextInt(figures.length)];
         if (figure instanceof Rectangle) {

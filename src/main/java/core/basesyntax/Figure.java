@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements IobtainArea{
+public abstract class Figure implements IobtainArea {
     private String color;
 
     public String getColor() {

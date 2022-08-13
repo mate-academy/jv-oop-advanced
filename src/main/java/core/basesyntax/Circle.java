@@ -24,10 +24,10 @@ public class Circle extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: " +
-                "circle, " +
-                "area: " + String.format("%.2f", calculateArea()) + " sq.units, " +
-                "radius: " + radius + " units, " +
-                "color: " + getColor().toLowerCase();
+        return "Figure: "
+                + "circle, "
+                + "area: " + String.format("%.2f", calculateArea()) + " sq.units, "
+                + "radius: " + radius + " units, "
+                + "color: " + getColor().toLowerCase();
     }
 }

@@ -27,11 +27,11 @@ public class RightTriangle extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: " +
-                "rightTriangle, " +
-                "area: " + calculateArea() + " sq.units, " +
-                "firstLeg: " + firstLeg + " units, " +
-                "secondLeg: " + secondLeg + " units, " +
-                "color: " + getColor().toLowerCase();
+        return "Figure: "
+                + "rightTriangle, "
+                + "area: " + calculateArea() + " sq.units, "
+                + "firstLeg: " + firstLeg + " units, "
+                + "secondLeg: " + secondLeg + " units, "
+                + "color: " + getColor().toLowerCase();
     }
 }

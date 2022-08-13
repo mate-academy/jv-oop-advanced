@@ -36,12 +36,12 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: " +
-                "isoscelesTrapezoid, " +
-                "area: " + calculateArea() + " sq.units, " +
-                "firstLeg: " + firstLeg + " units, " +
-                "secondLeg: " + secondLeg + " units, " +
-                "thirdLeg: " + thirdLeg + " units, " +
-                "color: " + getColor().toLowerCase();
+        return "Figure: "
+                + "isoscelesTrapezoid, "
+                + "area: " + calculateArea() + " sq.units, "
+                + "firstLeg: " + firstLeg + " units, "
+                + "secondLeg: " + secondLeg + " units, "
+                + "thirdLeg: " + thirdLeg + " units, "
+                + "color: " + getColor().toLowerCase();
     }
 }
