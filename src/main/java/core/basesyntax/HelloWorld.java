@@ -5,6 +5,7 @@ package core.basesyntax;
  */
 public class HelloWorld {
     private static final int FIGURE_COUNT = 6;
+
     public static void main(String[] args) {
         Figure[] figures = new Figure[FIGURE_COUNT];
 

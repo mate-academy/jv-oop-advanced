@@ -6,7 +6,11 @@ public class FigureSupplier {
     private static final Random random = new Random();
     private static final int MAX_INT = 25;
     private static final ColorSupplier colorSupplier = new ColorSupplier();
-    private static final String[] FIGURES = {"Rectangle", "RightTriangle", "Circle", "Square", "IsoscelesTrapezoid"};
+    private static final String[] FIGURES = {"Rectangle",
+            "RightTriangle",
+            "Circle",
+            "Square",
+            "IsoscelesTrapezoid"};
 
     public Figure getRandomFigure() {
         Figure figure = null;
@@ -32,6 +36,7 @@ public class FigureSupplier {
                 figure = getIsoscelesTrapezoid();
                 break;
             }
+            default: break;
         }
         return figure;
     }

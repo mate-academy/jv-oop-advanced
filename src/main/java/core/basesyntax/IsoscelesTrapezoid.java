@@ -1,16 +1,16 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
+    private final int firstLeg;
+    private final int secondLeg;
+    private final int thirdLeg;
+
     public IsoscelesTrapezoid(String color, int firstLeg, int secondLeg, int thirdLeg) {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
         this.thirdLeg = thirdLeg;
     }
-
-    private final int firstLeg;
-    private final int secondLeg;
-    private final int thirdLeg;
 
     @Override
     public double calculateArea() {
