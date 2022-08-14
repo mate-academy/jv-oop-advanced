@@ -1,15 +1,12 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    private int firstLeg;
-
-    public int getFirstLeg() {
-        return firstLeg;
-    }
-
-    public void setFirstLeg(int firstLeg) {
+    public Square(String color, int firstLeg) {
+        super(color);
         this.firstLeg = firstLeg;
     }
+
+    private final int firstLeg;
 
     @Override
     public double calculateArea() {
@@ -17,7 +14,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public String toString() {
+    public String draw() {
         return "Figure: "
                 + "square, "
                 + "area: " + calculateArea() + " sq.units, "

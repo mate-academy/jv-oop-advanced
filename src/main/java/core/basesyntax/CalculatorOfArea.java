@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public interface IobtainArea {
+public interface CalculatorOfArea extends Drawable {
     double calculateArea();
 }

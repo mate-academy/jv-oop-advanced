@@ -1,33 +1,16 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private int firstLeg;
-    private int secondLeg;
-    private int thirdLeg;
-
-    public int getFirstLeg() {
-        return firstLeg;
-    }
-
-    public void setFirstLeg(int firstLeg) {
+    public IsoscelesTrapezoid(String color, int firstLeg, int secondLeg, int thirdLeg) {
+        super(color);
         this.firstLeg = firstLeg;
-    }
-
-    public int getSecondLeg() {
-        return secondLeg;
-    }
-
-    public void setSecondLeg(int secondLeg) {
         this.secondLeg = secondLeg;
-    }
-
-    public int getThirdLeg() {
-        return thirdLeg;
-    }
-
-    public void setThirdLeg(int thirdLeg) {
         this.thirdLeg = thirdLeg;
     }
+
+    private final int firstLeg;
+    private final int secondLeg;
+    private final int thirdLeg;
 
     @Override
     public double calculateArea() {
@@ -35,7 +18,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String toString() {
+    public String draw() {
         return "Figure: "
                 + "isoscelesTrapezoid, "
                 + "area: " + calculateArea() + " sq.units, "

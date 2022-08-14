@@ -1,24 +1,14 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private int firstLeg;
-    private int secondLeg;
-
-    public int getFirstLeg() {
-        return firstLeg;
-    }
-
-    public void setFirstLeg(int firstLeg) {
+    public Rectangle(String color, int firstLeg, int secondLeg) {
+        super(color);
         this.firstLeg = firstLeg;
-    }
-
-    public int getSecondLeg() {
-        return secondLeg;
-    }
-
-    public void setSecondLeg(int secondLeg) {
         this.secondLeg = secondLeg;
     }
+
+    private final int firstLeg;
+    private final int secondLeg;
 
     @Override
     public double calculateArea() {
@@ -26,7 +16,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String toString() {
+    public String draw() {
         return "Figure: "
                 + "rectangle, "
                 + "area: " + calculateArea() + " sq.units, "
