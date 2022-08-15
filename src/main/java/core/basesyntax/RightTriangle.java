@@ -4,8 +4,8 @@ public class RightTriangle extends Figure {
     private int side;
 
     public RightTriangle(int side, String color) {
+        super(color);
         this.side = side;
-        this.color = color;
     }
 
     public int getSide() {
@@ -17,16 +17,16 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void toDraw() {
-        System.out.println(toString());
+    public void draw() {
+        System.out.println("Figure: rightTriangle, area: "
+                + getArea()
+                + " sq.units, side: "
+                + side
+                + " units, color: " + color);
     }
 
     @Override
-    public String toString() {
-        return "Figure: rightTriangle, area: "
-                + Math.sqrt(3) * side * side / 4
-                + " sq.units, side: "
-                + side
-                + " units, color: " + color;
+    public double getArea() {
+        return Math.sqrt(3) * side * side / 4;
     }
 }
