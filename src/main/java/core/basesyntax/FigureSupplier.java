@@ -8,7 +8,7 @@ public class FigureSupplier {
     private static final ColorSupplier colorSupplier = new ColorSupplier();
     private static final String DEF_COLOR = "white";
     private static final int DEF_RADIUS = 10;
-    public static final int NUMBER_OF_FIGURES = 5;
+    private static final int NUMBER_OF_FIGURES = 5;
 
     public Figure getRandomFigure() {
         switch (random.nextInt(NUMBER_OF_FIGURES) + 1) {
