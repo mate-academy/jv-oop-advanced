@@ -6,43 +6,33 @@ public class FigureSupplier {
     private static final Random random = new Random();
     private static final int MAX_INT = 25;
     private static final ColorSupplier colorSupplier = new ColorSupplier();
-    private static final String[] FIGURES = {"Rectangle",
-            "RightTriangle",
-            "Circle",
-            "Square",
-            "IsoscelesTrapezoid"};
+    private static final String DEF_COLOR = "white";
+    private static final int DEF_RADIUS = 10;
 
     public Figure getRandomFigure() {
-        Figure figure = null;
-
-        switch (FIGURES[random.nextInt(FIGURES.length)]) {
-            case "Rectangle": {
-                figure = getRectangle();
-                break;
+        switch (random.nextInt(5)+1) {
+            case 1: {
+                return getRectangle();
             }
-            case "RightTriangle": {
-                figure = getRightTriangle();
-                break;
+            case 2: {
+                return getRightTriangle();
             }
-            case "Circle": {
-                figure = getCircle();
-                break;
+            case 3: {
+                return getCircle();
             }
-            case "Square": {
-                figure = getSquare();
-                break;
+            case 4: {
+                return getSquare();
             }
-            case "IsoscelesTrapezoid": {
-                figure = getIsoscelesTrapezoid();
-                break;
+            case 5: {
+                return getIsoscelesTrapezoid();
             }
-            default: break;
+            default:
+                return getCircle();
         }
-        return figure;
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", 10);
+        return new Circle(DEF_COLOR, DEF_RADIUS);
     }
 
     private Circle getCircle() {
