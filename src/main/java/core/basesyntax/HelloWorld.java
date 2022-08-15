@@ -10,17 +10,8 @@ public class HelloWorld {
 
         for (int i = 0; i < figures.length; i++) {
 
-            if (i < figures.length / 2) {
-                figures[i] = figureSupplier.getRandomFigure();
-            }
-
-            if (i >= figures.length / 2) {
-                figures[i] = figureSupplier.getDefaultFigure();
-            }
-        }
-
-        for (int i = figures.length / 2; i < figures.length; i++) {
-
+            figures[i] = (i < figures.length / 2) ? figureSupplier.getRandomFigure()
+                    : figureSupplier.getDefaultFigure();
         }
 
         for (int i = 0; i < figures.length; i++) {
