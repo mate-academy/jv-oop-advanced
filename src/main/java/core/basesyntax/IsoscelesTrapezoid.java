@@ -1,31 +1,31 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private int sideA;
-    private int sideB;
+    private int firstBase;
+    private int secondBase;
     private int height;
 
-    public IsoscelesTrapezoid(int sideA, int sideB, int height, String color) {
-        this.sideA = sideA;
-        this.sideB = sideB;
+    public IsoscelesTrapezoid(int firstBase, int secondBase, int height, String color) {
+        super(color);
+        this.firstBase = firstBase;
+        this.secondBase = secondBase;
         this.height = height;
-        this.color = color;
     }
 
-    public int getSideA() {
-        return sideA;
+    public int getFirstBase() {
+        return firstBase;
     }
 
-    public void setSideA(int sideA) {
-        this.sideA = sideA;
+    public void setFirstBase(int firstBase) {
+        this.firstBase = firstBase;
     }
 
-    public int getSideB() {
-        return sideB;
+    public int getSecondBase() {
+        return secondBase;
     }
 
-    public void setSideB(int sideB) {
-        this.sideB = sideB;
+    public void setSecondBase(int secondBase) {
+        this.secondBase = secondBase;
     }
 
     public int getHeight() {
@@ -37,21 +37,21 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public void toDraw() {
-        System.out.println(toString());
-    }
-
-    @Override
-    public String toString() {
-        return "Figure: isoscelesTrapezoid, area: "
-                + (sideA * sideB) * 0.5 * height
+    public void draw() {
+        System.out.println("Figure: isoscelesTrapezoid, area: "
+                + getArea()
                 + " sq.units, sideA: "
-                + sideA
+                + firstBase
                 + " units, sideB: "
-                + sideB
+                + secondBase
                 + " units, height: "
                 + height
                 + " units, color: "
-                + color;
+                + color);
+    }
+
+    @Override
+    public double getArea() {
+        return (firstBase * secondBase) * 0.5 * height;
     }
 }
