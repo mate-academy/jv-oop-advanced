@@ -10,7 +10,7 @@ public class FigureSupplier {
     private static final int DEF_RADIUS = 10;
 
     public Figure getRandomFigure() {
-        switch (random.nextInt(5)+1) {
+        switch (random.nextInt(5) + 1) {
             case 1: {
                 return getRectangle();
             }
