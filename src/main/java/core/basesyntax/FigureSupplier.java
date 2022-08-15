@@ -60,7 +60,4 @@ public class FigureSupplier {
     private Figure getRandomCircle() {
         return new Circle(colorSupplier.getRandomColor(), getRandomParameter());
     }
-
-
-
 }
