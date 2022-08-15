@@ -14,7 +14,7 @@ public class FigureSupplier {
 
         switch (getRandomNumberOfFigure()) {
             case 0:
-                 return getRandomRectangle();
+                return getRandomRectangle();
             case 1:
                 return getRandomIsoscelesTrapezoid();
             case 2:
@@ -42,17 +42,21 @@ public class FigureSupplier {
         return new Rectangle(colorSupplier.getRandomColor(),
                 getRandomParameter(), getRandomParameter());
     }
+
     private Figure getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                 getRandomParameter(), getRandomParameter(), getRandomParameter());
     }
+
     private Figure getRandomRightTriangle() {
         return new RightTriangle(colorSupplier.getRandomColor(),
                 getRandomParameter(), getRandomParameter());
     }
+
     private Figure getRandomSquare() {
         return new Square(colorSupplier.getRandomColor(), getRandomParameter());
     }
+
     private Figure getRandomCircle() {
         return new Circle(colorSupplier.getRandomColor(), getRandomParameter());
     }
