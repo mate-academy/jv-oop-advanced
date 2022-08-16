@@ -16,21 +16,15 @@ public class FigureSupplier {
         int firstSize = random.nextInt(MAX_RANDOM_NUBMER);
         switch (shape) {
             case CIRCLE:
-                figure = new Circle(color, firstSize);
-                break;
+                return new Circle(color, firstSize);
             case SQUARE:
-                figure = new Square(color, firstSize);
-                break;
+                return new Square(color, firstSize);
             case RECTANGLE:
-                figure = new Rectangle(color, firstSize, random.nextInt(MAX_RANDOM_NUBMER));
-                break;
+                return new Rectangle(color, firstSize, random.nextInt(MAX_RANDOM_NUBMER));
             case TRIANGLE:
-                figure = new RightTriangle(color, firstSize);
-                break;
+                return new RightTriangle(color, firstSize);
             case TRAPEZOID:
-                figure = new IsoscelesTrapezoid(color, firstSize, random.nextInt(MAX_RANDOM_NUBMER),
-                        random.nextInt(MAX_RANDOM_NUBMER));
-                break;
+                return new IsoscelesTrapezoid(color, firstSize, random.nextInt(MAX_RANDOM_NUBMER),random.nextInt(MAX_RANDOM_NUBMER));
             default:
                 figure = getDefaultFigure();
         }
