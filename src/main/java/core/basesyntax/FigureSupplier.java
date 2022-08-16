@@ -23,10 +23,11 @@ public class FigureSupplier {
                 return new Rectangle(color, firstSize, random.nextInt(MAX_RANDOM_NUBMER));
             case TRIANGLE:
                 return new RightTriangle(color, firstSize);
-            case TRAPEZOID:
-                return new IsoscelesTrapezoid(color, firstSize, random.nextInt(MAX_RANDOM_NUBMER), random.nextInt(MAX_RANDOM_NUBMER));
             default:
-                figure = getDefaultFigure();
+            case TRAPEZOID:
+                figure = new IsoscelesTrapezoid(color, firstSize, random.nextInt(MAX_RANDOM_NUBMER),
+                        random.nextInt(MAX_RANDOM_NUBMER));
+                break;
         }
         return figure;
     }
