@@ -10,9 +10,9 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Circle is drawn. Radius = "
-                + radius + " Area = "
-                + Math.PI * radius * radius + " Color is "
+        System.out.println("Figure: Circle, radius = "
+                + radius + ", area = "
+                + getArea() + " Color: "
                 + color);
     }
 

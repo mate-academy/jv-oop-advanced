@@ -10,7 +10,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Right Triangle is drawn. Side = " + side + " Color is " + color);
+        System.out.println("Figure: Right Triangle, Side = " + side + ", Color: " + color);
     }
 
     @Override

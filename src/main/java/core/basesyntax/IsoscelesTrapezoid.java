@@ -14,9 +14,9 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Isoscales trapezoid is drawn. Height = "
+        System.out.println("Figure: Isosceles Trapezoid, height = "
                 + height + " first side = " + firstSide
-                + "second side = " + secondSide + " Color is "
+                + ", second side = " + secondSide + ", Color: "
                 + color);
     }
 

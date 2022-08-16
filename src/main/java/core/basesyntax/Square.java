@@ -10,7 +10,7 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Square is drawn. Color is " + color + " Side = " + side);
+        System.out.println("Figure: Square, Side = " + side + "Color: " + color);
     }
 
     @Override
