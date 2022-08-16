@@ -2,9 +2,7 @@ package core.basesyntax;
 
 import core.basesyntax.figures.Drawable;
 import core.basesyntax.figures.Figure;
-import core.basesyntax.supplier.ColorSupplier;
 import core.basesyntax.supplier.FigureSupplier;
-
 import java.util.Arrays;
 
 public class Main {
@@ -13,8 +11,8 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
 
         for (int i = 0; i < figures.length; i++) {
-            figures[i] = (i <= figures.length/2 - 1) ?
-                    figureSupplier.getRandomFigure() : figureSupplier.getDefaultFigure();
+            figures[i] = (i <= figures.length / 2 - 1)
+                    ? figureSupplier.getRandomFigure() : figureSupplier.getDefaultFigure();
         }
 
         Arrays.asList(figures).forEach(Drawable::draw);

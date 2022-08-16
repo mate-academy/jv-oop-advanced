@@ -1,25 +1,28 @@
 package core.basesyntax.supplier;
 
-import core.basesyntax.figures.Figure;
-import core.basesyntax.figures.impl.*;
-
-import java.util.Random;
-
 import static core.basesyntax.enums.Color.WHITE;
 
+import core.basesyntax.figures.Figure;
+import core.basesyntax.figures.impl.Circle;
+import core.basesyntax.figures.impl.IsoscelesTrapezoid;
+import core.basesyntax.figures.impl.Rectangle;
+import core.basesyntax.figures.impl.RightTriangle;
+import core.basesyntax.figures.impl.Square;
+import java.util.Random;
+
 public class FigureSupplier {
-    private final int RANDOM_INDEX_BOUND = 5;
-    private final int RANDOM_FIGURE_PROPERTY_BOUND = 50;
-    private final int DEFAULT_CIRCLE_RADIUS = 10;
+    private static final int INDEX_BOUND = 5;
+    private static final int PROPERTY_BOUND = 50;
+    private static final int CIRCLE_RADIUS = 10;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figure getDefaultFigure(){
-        return new Circle(WHITE.getValue(), DEFAULT_CIRCLE_RADIUS);
+    public Figure getDefaultFigure() {
+        return new Circle(WHITE.getValue(), CIRCLE_RADIUS);
     }
 
-    public Figure getRandomFigure(){
-        int randomIndex = random.nextInt(RANDOM_INDEX_BOUND);
+    public Figure getRandomFigure() {
+        int randomIndex = random.nextInt(INDEX_BOUND);
         switch (randomIndex) {
             case 0:
                 return generateCircle();
@@ -31,8 +34,9 @@ public class FigureSupplier {
                 return generateTriangle();
             case 4:
                 return generateSquare();
+            default:
+                return null;
         }
-        return null;
     }
 
     private Circle generateCircle() {
@@ -70,6 +74,6 @@ public class FigureSupplier {
     }
 
     private int getRandomSize() {
-        return random.nextInt(RANDOM_FIGURE_PROPERTY_BOUND);
+        return random.nextInt(PROPERTY_BOUND);
     }
 }

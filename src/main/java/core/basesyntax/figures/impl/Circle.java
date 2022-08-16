@@ -4,7 +4,7 @@ import core.basesyntax.figures.Figure;
 
 public class Circle extends Figure {
     public static final String NAME = "circle";
-    private final double P = 3.14;
+    private static final double PI = 3.14;
     private double radius;
 
     public Circle() {
@@ -23,7 +23,7 @@ public class Circle extends Figure {
 
     @Override
     public double getArea() {
-        return P * Math.pow(radius, 2);
+        return PI * Math.pow(radius, 2);
     }
 
     public double getRadius() {
@@ -32,9 +32,5 @@ public class Circle extends Figure {
 
     public void setRadius(double radius) {
         this.radius = radius;
-    }
-
-    public double getP() {
-        return P;
     }
 }
