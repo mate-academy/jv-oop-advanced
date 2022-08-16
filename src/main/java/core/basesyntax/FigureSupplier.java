@@ -7,12 +7,12 @@ public class FigureSupplier {
     private static final int DEFAULT_RADIUS = 10;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
-    private static final int MAX_RANDOM_NUMBER = 100;
 
     public Figure getRandomFigure() {
         Figure figure;
         FigureType shape = FigureType.values()[random.nextInt(FigureType.values().length)];
         String color = colorSupplier.getRandomColor();
+        int MAX_RANDOM_NUMBER = 100;
         int firstSize = random.nextInt(MAX_RANDOM_NUMBER);
         switch (shape) {
             case CIRCLE:
