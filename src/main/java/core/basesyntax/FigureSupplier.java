@@ -7,26 +7,26 @@ public class FigureSupplier {
     private static final int DEFAULT_RADIUS = 10;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
-    private static final int MAXRANDOM_NUMBER = 100;
+    private static final int MAX_RANDOM_NUMBER = 100;
 
     public Figure getRandomFigure() {
         Figure figure;
         FigureType shape = FigureType.values()[random.nextInt(FigureType.values().length)];
         String color = colorSupplier.getRandomColor();
-        int firstSize = random.nextInt(MAXRANDOM_NUMBER);
+        int firstSize = random.nextInt(MAX_RANDOM_NUMBER);
         switch (shape) {
             case CIRCLE:
                 return new Circle(color, firstSize);
             case SQUARE:
                 return new Square(color, firstSize);
             case RECTANGLE:
-                return new Rectangle(color, firstSize, random.nextInt(MAXRANDOM_NUMBER));
+                return new Rectangle(color, firstSize, random.nextInt(MAX_RANDOM_NUMBER));
             case TRIANGLE:
                 return new RightTriangle(color, firstSize);
             default:
             case TRAPEZOID:
-                figure = new IsoscelesTrapezoid(color, firstSize, random.nextInt(MAXRANDOM_NUMBER),
-                        random.nextInt(MAXRANDOM_NUMBER));
+                figure = new IsoscelesTrapezoid(color, firstSize, random.nextInt(MAX_RANDOM_NUMBER),
+                        random.nextInt(MAX_RANDOM_NUMBER));
                 break;
         }
         return figure;
