@@ -3,15 +3,15 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final String DEFAULT_COLOR  = Color.WHITE.name();
-    private final int DEFAULT_RADIUS = 10;
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
+    private static final int DEFAULT_RADIUS = 10;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
     private static final int MAX_RANDOM_NUBMER = 100;
 
     public Figure getRandomFigure() {
         Figure figure;
-        Shape shape = Shape.values()[random.nextInt(Shape.values().length)];
+        FigureType shape = FigureType.values()[random.nextInt(FigureType.values().length)];
         String color = colorSupplier.getRandomColor();
         int firstSize = random.nextInt(MAX_RANDOM_NUBMER);
         switch (shape) {
@@ -24,7 +24,7 @@ public class FigureSupplier {
             case TRIANGLE:
                 return new RightTriangle(color, firstSize);
             case TRAPEZOID:
-                return new IsoscelesTrapezoid(color, firstSize, random.nextInt(MAX_RANDOM_NUBMER),random.nextInt(MAX_RANDOM_NUBMER));
+                return new IsoscelesTrapezoid(color, firstSize, random.nextInt(MAX_RANDOM_NUBMER), random.nextInt(MAX_RANDOM_NUBMER));
             default:
                 figure = getDefaultFigure();
         }
@@ -34,6 +34,4 @@ public class FigureSupplier {
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
-
-    private enum Shape { CIRCLE, SQUARE, RECTANGLE, TRIANGLE, TRAPEZOID }
 }
