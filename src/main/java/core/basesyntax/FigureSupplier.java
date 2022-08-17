@@ -10,11 +10,10 @@ public class FigureSupplier {
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        Figure figure;
-        FigureType shape = FigureType.values()[random.nextInt(FigureType.values().length)];
+        FigureType type = FigureType.values()[random.nextInt(FigureType.values().length)];
         String color = colorSupplier.getRandomColor();
         int firstSize = random.nextInt(MAX_RANDOM_NUMBER);
-        switch (shape) {
+        switch (type) {
             case CIRCLE:
                 return new Circle(color, firstSize);
             case SQUARE:
@@ -25,11 +24,9 @@ public class FigureSupplier {
                 return new RightTriangle(color, firstSize);
             default:
             case TRAPEZOID:
-                figure = new IsoscelesTrapezoid(color, firstSize, random.nextInt(MAX_RANDOM_NUMBER),
+                return new IsoscelesTrapezoid(color, firstSize, random.nextInt(MAX_RANDOM_NUMBER),
                         random.nextInt(MAX_RANDOM_NUMBER));
-                break;
         }
-        return figure;
     }
 
     public Figure getDefaultFigure() {
