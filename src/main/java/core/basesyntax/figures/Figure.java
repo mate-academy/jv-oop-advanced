@@ -1,14 +1,9 @@
 package core.basesyntax.figures;
 
-public abstract class Figure implements Drawable {
+public abstract class Figure implements Drawable,Area {
     protected String color;
-
-    public Figure() {
-    }
 
     public Figure(String color) {
         this.color = color;
     }
-
-    public abstract double getArea();
 }

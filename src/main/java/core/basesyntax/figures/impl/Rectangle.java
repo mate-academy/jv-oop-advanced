@@ -3,12 +3,8 @@ package core.basesyntax.figures.impl;
 import core.basesyntax.figures.Figure;
 
 public class Rectangle extends Figure {
-    public static final String NAME = "rectangle";
     private double height;
     private double width;
-
-    public Rectangle() {
-    }
 
     public Rectangle(String color, double height, double width) {
         super(color);
@@ -18,7 +14,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + NAME + ", area: " + getArea() + " sq.units, height: "
+        System.out.println("Figure: rectangle, area: " + getArea() + " sq.units, height: "
                 + height + " units, width: " + width + " units, color: " + color);
     }
 

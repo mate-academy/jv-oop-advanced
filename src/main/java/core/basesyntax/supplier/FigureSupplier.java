@@ -11,18 +11,19 @@ import core.basesyntax.figures.impl.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int INDEX_BOUND = 5;
+    private static final int FIGURES_NUMBER = 5;
     private static final int PROPERTY_BOUND = 50;
     private static final int CIRCLE_RADIUS = 10;
+    private static final String DEFAULT_COLOR = WHITE.getValue();
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getDefaultFigure() {
-        return new Circle(WHITE.getValue(), CIRCLE_RADIUS);
+        return new Circle(DEFAULT_COLOR, CIRCLE_RADIUS);
     }
 
     public Figure getRandomFigure() {
-        int randomIndex = random.nextInt(INDEX_BOUND);
+        int randomIndex = random.nextInt(FIGURES_NUMBER);
         switch (randomIndex) {
             case 0:
                 return generateCircle();
@@ -33,9 +34,8 @@ public class FigureSupplier {
             case 3:
                 return generateTriangle();
             case 4:
-                return generateSquare();
             default:
-                return null;
+                return generateSquare();
         }
     }
 

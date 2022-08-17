@@ -3,12 +3,8 @@ package core.basesyntax.figures.impl;
 import core.basesyntax.figures.Figure;
 
 public class RightTriangle extends Figure {
-    public static final String NAME = "right triangle";
     private double firstLeg;
     private double secondLeg;
-
-    public RightTriangle() {
-    }
 
     public RightTriangle(String color, double firstLeg, double secondLeg) {
         super(color);
@@ -18,7 +14,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + NAME + ", area: " + getArea() + " sq.units, 1st leg: "
+        System.out.println("Figure: right triangle, area: " + getArea() + " sq.units, 1st leg: "
                 + firstLeg + " units, 2nd leg: " + secondLeg + " units, color: " + color);
     }
 
