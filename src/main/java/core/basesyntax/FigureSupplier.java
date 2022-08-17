@@ -52,8 +52,8 @@ public class FigureSupplier {
     }
 
     private Figure getRandomRightTriangle(Color randomColor) {
-       double side = random.nextDouble();
-       return new RightTriangle(randomColor, side);
+        double side = random.nextDouble();
+        return new RightTriangle(randomColor, side);
     }
 
     private Figure getRandomSquare(Color randomColor) {
