@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private final int side;
+    private final double side;
 
-    public RightTriangle(String color, int side) {
+    public RightTriangle(Color color, double side) {
         super(color);
         this.side = side;
     }
