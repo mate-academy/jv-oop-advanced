@@ -1,7 +1,11 @@
 package core.basesyntax.suppliers;
 
-import core.basesyntax.model.*;
-
+import core.basesyntax.model.Circle;
+import core.basesyntax.model.Figure;
+import core.basesyntax.model.IsoscelesTrapezoid;
+import core.basesyntax.model.Rectangle;
+import core.basesyntax.model.RightTriangle;
+import core.basesyntax.model.Square;
 import java.util.Random;
 
 public class FigureSupplier {
@@ -18,9 +22,13 @@ public class FigureSupplier {
                         getRandomDouble(),
                         getRandomDouble());
             case 2:
-                return new Rectangle(colorSupplier.getRandomColor(), getRandomDouble(), getRandomDouble());
+                return new Rectangle(colorSupplier.getRandomColor(),
+                        getRandomDouble(),
+                        getRandomDouble());
             case 3:
-                return new RightTriangle(colorSupplier.getRandomColor(), getRandomInt(), getRandomInt());
+                return new RightTriangle(colorSupplier.getRandomColor(),
+                        getRandomInt(),
+                        getRandomInt());
             case 4:
                 return new Square(colorSupplier.getRandomColor(), getRandomInt());
             default:
