@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int NUMBER_OF_FIGURES = 4;
+    private static final int NUMBER_OF_FIGURES = 5;
     private static final int MAX_FIGURE_PARAMETER_NUMBER = 20;
     private static final int RADIUS_OF_DEFAULT_FIGURE = 10;
     private static final String COLOR_OF_DEFAULT_FIGURE = Color.WHITE.getTitle();
@@ -11,7 +11,6 @@ public class FigureSupplier {
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
-
         switch (getRandomNumberOfFigure()) {
             case 0:
                 return getRandomRectangle();

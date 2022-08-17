@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-
     private int width;
     private int height;
 
@@ -12,7 +11,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void printState() {
+    public void draw() {
         System.out.println("Figure: rectangle, area: " + getArea()
                 + " sq.units, width: " + getWidth() + ", height: "
                 + getHeight() + ", color: " + getColor());

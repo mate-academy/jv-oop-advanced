@@ -12,7 +12,7 @@ public class Main {
             }
         }
         for (Figure figure : figures) {
-            figure.printState();
+            figure.draw();
         }
     }
 }
