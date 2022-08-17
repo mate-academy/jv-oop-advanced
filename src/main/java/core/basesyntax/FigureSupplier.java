@@ -5,9 +5,9 @@ import java.util.Random;
 public class FigureSupplier {
     private static final String DEFAULT_COLOR = Color.WHITE.name();
     private static final int DEFAULT_RADIUS = 10;
+    private static final int MAX_RANDOM_NUMBER = 100;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
-    private static final int MAX_RANDOM_NUMBER = 100;
 
     public Figure getRandomFigure() {
         Figure figure;
