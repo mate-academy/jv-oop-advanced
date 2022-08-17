@@ -8,25 +8,22 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final String DEFAULT_COLOR = Color.WHITE.name();
-    public static final double DEFAULT_RADIUS = 10.0;
-    public static final int FIGURE_AMOUNT = 4;
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
+    private static final double DEFAULT_RADIUS = 10.0;
+    private static final int FIGURE_AMOUNT = 5;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        Figure figure = new Circle();
-
         int figureNumber = random.nextInt(FIGURE_AMOUNT);
-
         switch (figureNumber) {
-            case (0):
+            case 0:
                 return getRandomCircle();
-            case (1):
+            case 1:
                 return getRandomIsoscelesTrapezoid();
-            case (2):
+            case 2:
                 return getRandomRectangle();
-            case (3):
+            case 3:
                 return getRandomRightTriangle();
             default:
                 return getRandomSquare();
