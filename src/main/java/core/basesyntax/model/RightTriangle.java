@@ -39,4 +39,3 @@ public class RightTriangle extends Figure {
                 + ", height: " + height);
     }
 }
-
