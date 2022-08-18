@@ -10,8 +10,4 @@ public class ColorSupplier {
         int randomIndex = random.nextInt(Color.values().length);
         return Color.values()[randomIndex].getValue();
     }
-
-    public Random getRandom() {
-        return random;
-    }
 }
