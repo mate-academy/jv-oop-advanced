@@ -9,12 +9,20 @@ public class Square extends Figure {
     }
 
     @Override
-    public double area() {
-        return side * side;
+    public void draw() {
+        System.out.println(
+                new StringBuilder("Figure: square, ")
+                        .append("area: ")
+                        .append(String.format("%.1f", getArea()))
+                        .append(" sq.units, side: ")
+                        .append(side)
+                        .append(" units, color: ")
+                        .append(getColor().toLowerCase())
+        );
     }
 
     @Override
-    public StringBuilder getSizes() {
-        return super.getSizes().append("side: ").append(side).append(" units");
+    public double getArea() {
+        return side * side;
     }
 }

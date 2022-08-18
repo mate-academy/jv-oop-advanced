@@ -19,17 +19,22 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double area() {
-        return longSide * shortSide;
+    public void draw() {
+        System.out.println(
+                new StringBuilder("Figure: rectangle, ")
+                        .append("area: ")
+                        .append(String.format("%.1f", getArea()))
+                        .append(" sq.units, shortSide: ")
+                        .append(shortSide)
+                        .append(" units, longSide: ")
+                        .append(longSide)
+                        .append(" units, color: ")
+                        .append(getColor().toLowerCase())
+        );
     }
 
     @Override
-    public StringBuilder getSizes() {
-        return super.getSizes()
-                .append("shortSide: ")
-                .append(shortSide)
-                .append(" units, longSide: ")
-                .append(longSide)
-                .append(" units");
+    public double getArea() {
+        return longSide * shortSide;
     }
 }

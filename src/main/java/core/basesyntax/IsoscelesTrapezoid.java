@@ -9,16 +9,27 @@ public class IsoscelesTrapezoid extends Rectangle {
     }
 
     @Override
-    public double area() {
-        double shortSide = this.getShortSide();
-        double longSide = this.getLongSide();
-
-        return (shortSide + longSide) / 2 * Math.sqrt(Math.pow(verticalSide, 2)
-                - (Math.pow((longSide - shortSide), 2) / 4));
+    public void draw() {
+        System.out.println(
+                new StringBuilder("Figure: isosceles trapezoid, ")
+                        .append("area: ")
+                        .append(String.format("%.1f", getArea()))
+                        .append(" sq.units, shortSide: ")
+                        .append(getShortSide())
+                        .append(" units, longSide: ")
+                        .append(getLongSide())
+                        .append(" units, verticalSide: ")
+                        .append(verticalSide)
+                        .append(" units, color: ")
+                        .append(getColor().toLowerCase())
+        );
     }
 
     @Override
-    public StringBuilder getSizes() {
-        return super.getSizes().append(", verticalSide: ").append(verticalSide).append(" units");
+    public double getArea() {
+        double shortSide = this.getShortSide();
+        double longSide = this.getLongSide();
+        return (shortSide + longSide) / 2 * Math.sqrt(Math.pow(verticalSide, 2)
+                - (Math.pow((longSide - shortSide), 2) / 4));
     }
 }

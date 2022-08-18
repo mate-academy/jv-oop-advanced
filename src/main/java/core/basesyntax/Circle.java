@@ -9,12 +9,20 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double area() {
-        return Math.PI * Math.pow(radius, 2);
+    public void draw() {
+        System.out.println(
+                new StringBuilder("Figure: circle, ")
+                        .append("area: ")
+                        .append(String.format("%.1f", getArea()))
+                        .append(" sq.units, radius: ")
+                        .append(radius)
+                        .append(" units, color: ")
+                        .append(getColor().toLowerCase())
+        );
     }
 
     @Override
-    public StringBuilder getSizes() {
-        return super.getSizes().append("radius: ").append(radius).append(" units");
+    public double getArea() {
+        return Math.PI * Math.pow(radius, 2);
     }
 }

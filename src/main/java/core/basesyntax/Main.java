@@ -10,12 +10,10 @@ public class Main {
         };
         FigureSupplier figureSupplier = new FigureSupplier();
         int figuresLength = figures.length;
-
         for (int i = 0; i < figuresLength; i++) {
             if (i < figuresLength / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
             }
-
             figures[i].draw();
         }
     }

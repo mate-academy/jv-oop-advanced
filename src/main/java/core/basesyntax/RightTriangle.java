@@ -11,17 +11,22 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double area() {
-        return (firstLeg * secondLeg) / 2;
+    public void draw() {
+        System.out.println(
+                new StringBuilder("Figure: right triangle, ")
+                        .append("area: ")
+                        .append(String.format("%.1f", getArea()))
+                        .append(" sq.units, firstLeg: ")
+                        .append(firstLeg)
+                        .append(" units, secondLeg: ")
+                        .append(secondLeg)
+                        .append(" units, color: ")
+                        .append(getColor().toLowerCase())
+        );
     }
 
     @Override
-    public StringBuilder getSizes() {
-        return super.getSizes()
-                .append("firstLeg: ")
-                .append(firstLeg)
-                .append(" units, secondLeg: ")
-                .append(secondLeg)
-                .append(" units");
+    public double getArea() {
+        return (firstLeg * secondLeg) / 2;
     }
 }
