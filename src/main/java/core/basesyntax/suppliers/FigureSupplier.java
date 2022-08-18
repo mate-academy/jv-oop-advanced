@@ -10,11 +10,8 @@ import java.util.Random;
 
 public class FigureSupplier {
 private static ColorSupplier COLOR_SUPPLIER = new ColorSupplier();
-
 private static final Random RANDOM = new Random();
-
 private static final int INDEX = 5;
-
 private static final int SIDE_MAX = 100;
 
     public Figure getRandomFigure() {
