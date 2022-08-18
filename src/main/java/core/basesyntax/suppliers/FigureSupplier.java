@@ -14,8 +14,6 @@ private static final Random RANDOM = new Random();
 private static final int INDEX = 5;
 private static final int SIDE_MAX = 100;
 
-
-
     public Figure getRandomFigure() {
         int figureIndex = RANDOM.nextInt(INDEX);
         switch (figureIndex) {
@@ -40,7 +38,7 @@ private static final int SIDE_MAX = 100;
                 return new Circle(COLOR_SUPPLIER.getRandomColor(), getRandomInt());
         }
     }
-
+    
     private int getRandomInt() {
         return RANDOM.nextInt(SIDE_MAX);
     }
