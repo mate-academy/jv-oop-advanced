@@ -9,38 +9,43 @@ import core.basesyntax.model.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private ColorSupplier colorSupplier = new ColorSupplier();
+private static ColorSupplier COLOR_SUPPLIER = new ColorSupplier();
+private static final Random RANDOM = new Random();
+private static final int INDEX = 5;
+private static final int SIDE_MAX = 100;
+
+
 
     public Figure getRandomFigure() {
-        int figureIndex = new Random().nextInt(4);
+        int figureIndex = RANDOM.nextInt(INDEX);
         switch (figureIndex) {
             case 0:
-                return new Circle(colorSupplier.getRandomColor(), getRandomInt());
+                return new Circle(COLOR_SUPPLIER.getRandomColor(), getRandomInt());
             case 1:
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                return new IsoscelesTrapezoid(COLOR_SUPPLIER.getRandomColor(),
                         getRandomDouble(),
                         getRandomDouble(),
                         getRandomDouble());
             case 2:
-                return new Rectangle(colorSupplier.getRandomColor(),
+                return new Rectangle(COLOR_SUPPLIER.getRandomColor(),
                         getRandomDouble(),
                         getRandomDouble());
             case 3:
-                return new RightTriangle(colorSupplier.getRandomColor(),
+                return new RightTriangle(COLOR_SUPPLIER.getRandomColor(),
                         getRandomInt(),
                         getRandomInt());
             case 4:
-                return new Square(colorSupplier.getRandomColor(), getRandomInt());
+                return new Square(COLOR_SUPPLIER.getRandomColor(), getRandomInt());
             default:
-                return new Circle(colorSupplier.getRandomColor(), getRandomInt());
+                return new Circle(COLOR_SUPPLIER.getRandomColor(), getRandomInt());
         }
     }
 
     private int getRandomInt() {
-        return new Random().nextInt(100);
+        return RANDOM.nextInt(SIDE_MAX);
     }
 
     private double getRandomDouble() {
-        return new Random().nextDouble();
+        return RANDOM.nextDouble();
     }
 }
