@@ -13,8 +13,7 @@ public class FigureSupplier {
     private static final Random RANDOM = new Random();
     private static final int INDEX = 5;
     private static final int SIDE_MAX = 100;
-
-
+    
     public Figure getRandomFigure() {
         int figureIndex = RANDOM.nextInt(INDEX);
         switch (figureIndex) {
