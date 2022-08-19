@@ -4,7 +4,7 @@ import core.basesyntax.model.Color;
 import java.util.Random;
 
 public class ColorSupplier {
-    private static final Random RANDOM = new Random();
+    private final Random RANDOM = new Random();
 
     public String getRandomColor() {
         int colorIndex = RANDOM.nextInt(Color.values().length);
