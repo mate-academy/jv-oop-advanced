@@ -12,7 +12,7 @@ public class FigureSupplier {
     private static final int FIGURES_NUMBER = 5;
     private static final int MAX_RANDOM_NUMBER = 100;
     private final Random random = new Random();
-    privat finale ColorSupplier colorSupplier = new ColorSupplier();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
     
     public Figure getRandomFigure() {
         int figureIndex = random.nextInt(FIGURES_NUMBER);
