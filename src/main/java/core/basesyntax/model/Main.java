@@ -1,4 +1,4 @@
-package core.basesyntax.model;
+package core.basesyntax;
 
 import core.basesyntax.suppliers.FigureSupplier;
 import java.util.Random;
