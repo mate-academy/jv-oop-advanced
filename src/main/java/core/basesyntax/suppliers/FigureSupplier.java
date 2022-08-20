@@ -63,4 +63,7 @@ public class FigureSupplier {
         return new Square(colorSupplier.getRandomColor(),
                 getRandomInt());
     }
+    
+    public Figure getDefaultFigure() {
+        return new Circle(Color.WHITE.name(), 10);
 }
