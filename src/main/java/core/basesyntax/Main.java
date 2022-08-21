@@ -1,15 +1,16 @@
 package core.basesyntax;
 
-import suppliers.FigureSupplier;
+import core.basesyntax.suppliers.FigureSupplier;
 
 public class Main {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        for (int i = 0; i < 6; i++) {
-            if (i >= 6 / 2) {
-                System.out.println(figureSupplier.getDefaultFigure().getInfo());
+        int numberOfFigures = 6;
+        for (int i = 0; i < numberOfFigures; i++) {
+            if (i >= numberOfFigures / 2) {
+                figureSupplier.getDefaultFigure().printInfo();
             } else {
-                System.out.println(figureSupplier.getRandomFigure().getInfo());
+                figureSupplier.getRandomFigure().printInfo();
             }
         }
     }

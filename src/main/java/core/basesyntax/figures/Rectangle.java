@@ -1,13 +1,8 @@
 package core.basesyntax.figures;
 
-import java.util.Random;
-import suppliers.ColorSupplier;
-
 public class Rectangle extends Figure {
     private double length;
     private double width;
-    private final Random random = new Random();
-    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public double getLength() {
         return length;
@@ -31,18 +26,9 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String getInfo() {
-        return "Figure: " + getFigureName() + ", "
+    public void printInfo() {
+        System.out.println("Figure: " + getFigureName() + ", "
                 + "area: " + getArea() + " sq.units, length: " + getLength()
-                + ", width: " + getWidth() + ", color: " + getColor();
-    }
-
-    public Rectangle setRandomRectangle() {
-        Rectangle rectangle = new Rectangle();
-        rectangle.setFigureName("rectangle");
-        rectangle.setLength(random.nextDouble() + 1);
-        rectangle.setWidth(random.nextDouble() + 1);
-        rectangle.setColor(colorSupplier.getRandomColor());
-        return rectangle;
+                + ", width: " + getWidth() + ", color: " + getColor());
     }
 }

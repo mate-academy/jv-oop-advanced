@@ -1,12 +1,7 @@
 package core.basesyntax.figures;
 
-import java.util.Random;
-import suppliers.ColorSupplier;
-
 public class Circle extends Figure {
     private double radius;
-    private final Random random = new Random();
-    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public double getRadius() {
         return radius;
@@ -18,22 +13,13 @@ public class Circle extends Figure {
 
     @Override
     public double getArea() {
-        int exponent = 2;
-        return Math.PI * Math.pow(radius, exponent);
+        return Math.PI * Math.pow(radius, 2);
     }
 
     @Override
-    public String getInfo() {
-        return "Figure: " + getFigureName() + ", "
+    public void printInfo() {
+        System.out.println("Figure: " + getFigureName() + ", "
                 + "area: " + getArea() + " sq.units, radius: "
-                + getRadius() + ", color: " + getColor();
-    }
-
-    public Circle setRandomCircle() {
-        Circle circle = new Circle();
-        circle.setFigureName("circle");
-        circle.setRadius(random.nextDouble() + 1);
-        circle.setColor(colorSupplier.getRandomColor());
-        return circle;
+                + getRadius() + ", color: " + getColor());
     }
 }

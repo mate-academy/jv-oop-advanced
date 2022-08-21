@@ -1,14 +1,9 @@
 package core.basesyntax.figures;
 
-import java.util.Random;
-import suppliers.ColorSupplier;
-
 public class IsoscelesTrapezoid extends Figure {
     private double longBase;
     private double shortBase;
     private double high;
-    private final Random random = new Random();
-    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public double getLongBase() {
         return longBase;
@@ -40,20 +35,10 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String getInfo() {
-        return "Figure: " + getFigureName() + ", "
+    public void printInfo() {
+        System.out.println("Figure: " + getFigureName() + ", "
                 + "area: " + getArea() + " sq.units, longBase: " + getLongBase()
                 + ", shortBase: " + getShortBase() + ", high: " + getHigh()
-                + ", color: " + getColor();
-    }
-
-    public IsoscelesTrapezoid setRandomIsoscelesTrapezoid() {
-        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
-        isoscelesTrapezoid.setFigureName("isosceles trapezoid");
-        isoscelesTrapezoid.setLongBase(random.nextDouble() + 1);
-        isoscelesTrapezoid.setShortBase(random.nextDouble() + 1);
-        isoscelesTrapezoid.setHigh(random.nextDouble() + 1);
-        isoscelesTrapezoid.setColor(colorSupplier.getRandomColor());
-        return isoscelesTrapezoid;
+                + ", color: " + getColor());
     }
 }

@@ -1,18 +1,13 @@
 package core.basesyntax.figures;
 
-import java.util.Random;
-import suppliers.ColorSupplier;
-
 public class Square extends Figure {
-    private int side;
-    private final Random random = new Random();
-    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private double side;
 
-    public int getSide() {
+    public double getSide() {
         return side;
     }
 
-    public void setSide(int side) {
+    public void setSide(double side) {
         this.side = side;
     }
 
@@ -22,16 +17,8 @@ public class Square extends Figure {
     }
 
     @Override
-    public String getInfo() {
-        return "Figure: " + getFigureName() + ", " + "area: " + getArea()
-                + " sq.units, side: " + getSide() + ", color: " + getColor();
-    }
-
-    public Square setRandomSquare() {
-        Square square = new Square();
-        square.setFigureName("square");
-        square.setSide(random.nextInt() + 1);
-        square.setColor(colorSupplier.getRandomColor());
-        return square;
+    public void printInfo() {
+        System.out.println("Figure: " + getFigureName() + ", " + "area: " + getArea()
+                + " sq.units, side: " + getSide() + ", color: " + getColor());
     }
 }

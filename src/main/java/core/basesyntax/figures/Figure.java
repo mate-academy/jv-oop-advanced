@@ -1,9 +1,9 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.AreaCalculator;
-import core.basesyntax.Info;
+import core.basesyntax.InfoPrinter;
 
-public abstract class Figure implements AreaCalculator, Info {
+public abstract class Figure implements AreaCalculator, InfoPrinter {
     private String figureName;
     private String color;
 
