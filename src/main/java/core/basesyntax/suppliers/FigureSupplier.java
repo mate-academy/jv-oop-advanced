@@ -1,6 +1,7 @@
 package core.basesyntax.suppliers;
 
 import core.basesyntax.model.Circle;
+import core.basesyntax.model.Color;
 import core.basesyntax.model.Figure;
 import core.basesyntax.model.IsoscelesTrapezoid;
 import core.basesyntax.model.Rectangle;
