@@ -5,23 +5,23 @@ import java.util.Random;
 public class FigureSupplier {
     private static final Color DEFAULT_COLOR = Color.WHITE;
     private static final int DEFAULT_RADIUS = 10;
+    private static final int RANDOM_FIGURE = 5;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        FigureType type = FigureType.values()[random.nextInt(FigureType.values().length)];
+        int numberOfFigure = random.nextInt(RANDOM_FIGURE);
         Color color = colorSupplier.getRandomColor();
-        switch (type) {
-            case CIRCLE:
+        switch (numberOfFigure) {
+            case 1:
                 return getRandomCircle(color);
-            case SQUARE:
+            case 2:
                 return getRandomSquare(color);
-            case RECTANGLE:
+            case 3:
                 return getRandomRectangle(color);
-            case TRIANGLE:
+            case 4:
                 return getRandomRightTriangle(color);
             default:
-            case TRAPEZOID:
                 return getRandomIsoscelesTrapezoid(color);
         }
     }
