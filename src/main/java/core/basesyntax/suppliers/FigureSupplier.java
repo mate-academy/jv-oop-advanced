@@ -1,6 +1,7 @@
 package core.basesyntax.suppliers;
 
 import core.basesyntax.model.Circle;
+import core.basesyntax.model.Color;
 import core.basesyntax.model.Figure;
 import core.basesyntax.model.IsoscelesTrapezoid;
 import core.basesyntax.model.Rectangle;
@@ -12,7 +13,7 @@ public class FigureSupplier {
     private static final int FIGURES_NUMBER = 5;
     private static final int MAX_RANDOM_NUMBER = 100;
     private static final int DEFAULT_RADIUS = 10;
-    private static final String DEFAULT_COLOR = "WHITE";    
+    private static final Color DEFAULT_COLOR = Color.WHITE;    
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
     
