@@ -10,7 +10,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.height = height;
         this.bottomBase = bottomBase;
         this.topBase = topBase;
-
     }
 
     public double getHeight() {
@@ -50,6 +49,5 @@ public class IsoscelesTrapezoid extends Figure {
                 + ", bottomBase: " + bottomBase + " units"
                 + ", topBase: " + topBase + " units"
                 + ", color: " + getColor());
-
     }
 }
