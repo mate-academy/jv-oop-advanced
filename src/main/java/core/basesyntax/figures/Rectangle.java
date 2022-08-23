@@ -1,8 +1,8 @@
 package core.basesyntax.figures;
 
 public class Rectangle extends Figure {
-    private double width; // ширина
-    private double heigth; // высота
+    private double width;
+    private double heigth;
 
     public Rectangle(String color, int width, int heigth) {
         super(color);
@@ -27,13 +27,13 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double getFigureArea() {
+    public double getArea() {
         return width * heigth;
     }
 
     @Override
-    public void figureDraw() {
-        System.out.println("figure is: Rectangle, " + "area is: " + getFigureArea() + " sq.units, "
+    public void draw() {
+        System.out.println("figure is: Rectangle, " + "area is: " + getArea() + " sq.units, "
                 + "width is: " + width + "units, " + "heigth is: " + heigth + "units, "
                 + "color is: " + getColor());
     }

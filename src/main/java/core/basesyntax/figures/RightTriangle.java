@@ -27,18 +27,17 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-        public double getFigureArea() {
-        return (base * height) / 2; // скобки для читаемости
+        public double getArea() {
+        return (base * height) / 2;
     }
 
     @Override
-    public void figureDraw() {
+    public void draw() {
         System.out.println("figure is: Right Triangle, "
-                + "area is: " + getFigureArea() + " sq.units, "
+                + "area is: " + getArea() + " sq.units, "
                 + "base is: " + base + " units, " + "heigth is: " + height + "units, "
                 + "color is: " + getColor());
     }
-
 }
 
 

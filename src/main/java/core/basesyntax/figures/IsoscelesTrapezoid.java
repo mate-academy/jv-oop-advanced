@@ -37,17 +37,16 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double getFigureArea() {
+    public double getArea() {
         return heigth * ((topBase * bottomBase) * 0.5);
     }
 
     @Override
-    public void figureDraw() {
+    public void draw() {
         System.out.println("Figure is: Isosless Trapezoid, " + "area is: "
-                + getFigureArea() + " sq.units, "
+                + getArea() + " sq.units, "
                 + "height is: " + heigth + " units, " + "top base is: " + topBase + " units, "
                 + "bottom base is: " + bottomBase + " units, " + "color is: " + getColor());
 
     }
-
 }
