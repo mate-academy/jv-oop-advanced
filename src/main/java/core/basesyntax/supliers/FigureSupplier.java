@@ -12,13 +12,13 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int MAX_RANDOM_NUMBER = 100;
     private static final int FIGURE_INDEX = 4;
-    private static final int CONSTANT_RADIUS = 10;
+    private static final int DEFAULT_RADIUS = 10;
+    private static final String COLOR = Color.WHITE.name();
     private final Random random = new Random();
-
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.toString(), CONSTANT_RADIUS);
+        return new Circle(COLOR, DEFAULT_RADIUS);
     }
 
     public Figure getRandomFigure() {
@@ -32,7 +32,6 @@ public class FigureSupplier {
                 return getIsoscelesTrapezoid();
             case 3:
                 return getRectangle();
-            case 4:
             default:
                 return getRightTriangle();
         }
