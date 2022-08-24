@@ -4,15 +4,15 @@ import core.basesyntax.AreaCalculator;
 import core.basesyntax.InfoPrinter;
 
 public abstract class Figure implements AreaCalculator, InfoPrinter {
-    private String figureName;
+    private String name;
     private String color;
 
-    public String getFigureName() {
-        return figureName;
+    public String getName() {
+        return name;
     }
 
-    public void setFigureName(String figureName) {
-        this.figureName = figureName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getColor() {
