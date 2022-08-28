@@ -6,7 +6,6 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-
     public Figure getRandomFigure() {
 
         int index = this.random.nextInt(FigureTypes.values().length);
