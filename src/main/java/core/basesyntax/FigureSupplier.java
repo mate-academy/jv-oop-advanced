@@ -13,31 +13,31 @@ public class FigureSupplier {
 
         switch (figureType) {
             case CIRCLE:
-                return new Circle(
+                return this.createCircle(
                         color,
                         this.random.nextDouble()
                 );
             case ISOSCELES_TRAPEZOID:
-                return new IsoscelesTrapezoid(
+                return this.createIsoscelesTrapezoid(
                         color,
                         this.random.nextDouble(),
                         this.random.nextDouble(),
                         this.random.nextDouble()
                 );
             case RECTANGLE:
-                return new Rectangle(
+                return this.createRectangle(
                         color,
                         this.random.nextDouble(),
                         this.random.nextDouble()
                 );
             case RIGHT_TRIANGLE:
-                return new RightTriangle(
+                return this.createRightTriangle(
                         color,
                         this.random.nextDouble(),
                         this.random.nextDouble()
                 );
             case SQUARE:
-                return new Square(
+                return this.createSquare(
                         color,
                         this.random.nextDouble()
                 );
@@ -47,6 +47,33 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("WHITE", 10);
+        return this.createCircle("WHITE", 10);
+    }
+
+    private Circle createCircle(final String color, final double radius) {
+        return new Circle(color, radius);
+    }
+
+    private IsoscelesTrapezoid createIsoscelesTrapezoid(final String color,
+                                                        final double upperBasis,
+                                                        final double lowerBasis,
+                                                        final double side) {
+        return new IsoscelesTrapezoid(color, upperBasis, lowerBasis, side);
+    }
+
+    private Rectangle createRectangle(final String color,
+                                      final double firstSide,
+                                      final double secondSide) {
+        return new Rectangle(color, firstSide, secondSide);
+    }
+
+    private RightTriangle createRightTriangle(final String color,
+                                              final double firstLeg,
+                                              final double secondLeg) {
+        return new RightTriangle(color, firstLeg, secondLeg);
+    }
+
+    private Square createSquare(final String color, final double side) {
+        return new Square(color, side);
     }
 }
