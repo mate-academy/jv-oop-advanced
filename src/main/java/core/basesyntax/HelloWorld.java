@@ -3,17 +3,17 @@ package core.basesyntax;
 public class HelloWorld {
     public static void main(final String[] args) {
         Figure[] figures = new Figure[6];
-        FigureSupplier fs = new FigureSupplier();
+        FigureSupplier figureSupplier = new FigureSupplier();
 
         for (int i = 0; i < figures.length; i++) {
-            if (i <= 2) {
-                figures[i] = fs.getRandomFigure();
+            if (i <= figures.length / 2) {
+                figures[i] = figureSupplier.getRandomFigure();
             } else {
-                figures[i] = fs.getDefaultFigure();
+                figures[i] = figureSupplier.getDefaultFigure();
             }
         }
-        for (final Figure f : figures) {
-            f.draw();
+        for (final Figure figure : figures) {
+            figure.draw();
         }
     }
 }
