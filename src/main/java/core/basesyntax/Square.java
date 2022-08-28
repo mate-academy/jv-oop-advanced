@@ -10,19 +10,19 @@ public class Square extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return side * side;
     }
 
     @Override
-    public String drow() {
+    public String draw() {
         return "Drowing a " + getFigureType();
     }
 
     @Override
     public String toString() {
         return "Figure: " + getFigureType() + ", area: "
-                + area() + " sq.units, side: " + side + " units, color: "
+                + getArea() + " sq.units, side: " + side + " units, color: "
                 + getColor();
     }
 }

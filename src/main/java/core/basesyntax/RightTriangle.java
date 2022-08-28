@@ -12,18 +12,18 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return 0.5 * firstLeg * secondLeg;
     }
 
     @Override
-    public String drow() {
+    public String draw() {
         return "Drowing a " + getFigureType();
     }
 
     @Override
     public String toString() {
-        return "Figure: " + getFigureType() + ", area: " + area() + " sq.units"
+        return "Figure: " + getFigureType() + ", area: " + getArea() + " sq.units"
                 + ", firstLeg: " + firstLeg + ", secondLeg: " + secondLeg
                 + " units, color: " + getColor();
     }

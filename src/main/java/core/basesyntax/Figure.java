@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public abstract class Figure
-        implements FigureArea, FigureDrow {
+        implements AreaCalculator, FigureDraw {
     private String color;
     private String figureType;
 
@@ -32,9 +32,4 @@ public abstract class Figure
     public String toString() {
         return "Figure: " + this.getClass().getName() + ", color:" + color;
     }
-
-    public abstract String drow();
-
-    @Override
-    public abstract double area();
 }

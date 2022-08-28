@@ -14,18 +14,18 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return 0.5 * (topBase + bottomBase) * height;
     }
 
     @Override
-    public String drow() {
+    public String draw() {
         return "Drowing a " + getFigureType();
     }
 
     @Override
     public String toString() {
-        return "Figure: " + getFigureType() + ", area: " + area() + " sq.units"
+        return "Figure: " + getFigureType() + ", area: " + getArea() + " sq.units"
                 + ", topBase: " + topBase + ", bottomBase: " + bottomBase + ", height: " + height
                 + " units, color: " + getColor();
     }

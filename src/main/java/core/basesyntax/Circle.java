@@ -10,18 +10,18 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return radius * radius * Math.PI;
     }
 
     @Override
-    public String drow() {
+    public String draw() {
         return "Drowing a " + getFigureType();
     }
 
     @Override
     public String toString() {
-        return "Figure: " + getFigureType() + ", area: " + area()
+        return "Figure: " + getFigureType() + ", area: " + getArea()
                 + " sq.units, radius: " + radius + " units, color: " + getColor();
     }
 }

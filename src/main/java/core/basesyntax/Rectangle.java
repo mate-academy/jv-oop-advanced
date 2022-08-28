@@ -12,18 +12,18 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return 1.0 * lengh * width;
     }
 
     @Override
-    public String drow() {
+    public String draw() {
         return "Drowing a " + getFigureType();
     }
 
     @Override
     public String toString() {
-        return "Figure: " + getFigureType() + ", area: " + area() + " sq.units"
+        return "Figure: " + getFigureType() + ", area: " + this.getArea() + " sq.units"
                 + ", lengh: " + lengh + ", width: " + width + " units, color: "
                 + getColor();
     }
