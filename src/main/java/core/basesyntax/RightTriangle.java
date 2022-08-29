@@ -6,7 +6,6 @@ public class RightTriangle extends Figure {
 
     public RightTriangle(String color, int firstLeg, int secondLeg) {
         super(color);
-        setFigureType(FigureTypeName.rightTriangle.toString());
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
@@ -16,15 +15,21 @@ public class RightTriangle extends Figure {
         return 0.5 * firstLeg * secondLeg;
     }
 
+    private String getFigureName() {
+        String figureFullName = this.getClass().getName();
+        int lastIdx = figureFullName.lastIndexOf('.');
+        return figureFullName.substring(lastIdx + 1);
+    }
+
     @Override
     public String draw() {
-        return "Drowing a " + getFigureType();
+        return "Drowing a " + getFigureName();
     }
 
     @Override
     public String toString() {
-        return "Figure: " + getFigureType() + ", area: " + getArea() + " sq.units"
-                + ", firstLeg: " + firstLeg + ", secondLeg: " + secondLeg
-                + " units, color: " + getColor();
+        return "Figure: " + getFigureName() + ", area: " + getArea()
+                + " sq.units, firstLeg: " + firstLeg + ", secondLeg: "
+                + secondLeg + " units, color: " + getColor();
     }
 }

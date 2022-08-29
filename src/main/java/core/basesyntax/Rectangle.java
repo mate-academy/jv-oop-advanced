@@ -6,7 +6,6 @@ public class Rectangle extends Figure {
 
     public Rectangle(String color, int lengh, int width) {
         super(color);
-        setFigureType(FigureTypeName.rectangle.toString());
         this.lengh = lengh;
         this.width = width;
     }
@@ -16,15 +15,21 @@ public class Rectangle extends Figure {
         return 1.0 * lengh * width;
     }
 
+    private String getFigureName() {
+        String figureFullName = this.getClass().getName();
+        int lastIdx = figureFullName.lastIndexOf('.');
+        return figureFullName.substring(lastIdx + 1);
+    }
+
     @Override
     public String draw() {
-        return "Drowing a " + getFigureType();
+        return "Drowing a " + getFigureName();
     }
 
     @Override
     public String toString() {
-        return "Figure: " + getFigureType() + ", area: " + this.getArea() + " sq.units"
-                + ", lengh: " + lengh + ", width: " + width + " units, color: "
-                + getColor();
+        return "Figure: " + getFigureName() + ", area: " + this.getArea()
+                + " sq.units, lengh: " + lengh + ", width: " + width
+                + " units, color: " + getColor();
     }
 }

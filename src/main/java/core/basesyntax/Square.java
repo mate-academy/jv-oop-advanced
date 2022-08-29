@@ -5,7 +5,6 @@ public class Square extends Figure {
 
     public Square(String color, int side) {
         super(color);
-        setFigureType(FigureTypeName.square.toString());
         this.side = side;
     }
 
@@ -14,15 +13,20 @@ public class Square extends Figure {
         return side * side;
     }
 
+    private String getFigureName() {
+        String figureFullName = this.getClass().getName();
+        int lastIdx = figureFullName.lastIndexOf('.');
+        return figureFullName.substring(lastIdx + 1);
+    }
+
     @Override
     public String draw() {
-        return "Drowing a " + getFigureType();
+        return "Drowing a " + getFigureName();
     }
 
     @Override
     public String toString() {
-        return "Figure: " + getFigureType() + ", area: "
-                + getArea() + " sq.units, side: " + side + " units, color: "
-                + getColor();
+        return "Figure: " + getFigureName() + ", area: " + getArea()
+                + " sq.units, side: " + side + " units, color: " + getColor();
     }
 }

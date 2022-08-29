@@ -5,7 +5,6 @@ public class Circle extends Figure {
 
     public Circle(String color, int radius) {
         super(color);
-        setFigureType(FigureTypeName.circle.toString());
         this.radius = radius;
     }
 
@@ -14,14 +13,22 @@ public class Circle extends Figure {
         return radius * radius * Math.PI;
     }
 
+    private String getFigureName() {
+        String figureFullName = this.getClass().getName();
+        int lastIdx = figureFullName.lastIndexOf('.');
+        return figureFullName.substring(lastIdx + 1);
+    }
+
     @Override
     public String draw() {
-        return "Drowing a " + getFigureType();
+        return "Drowing a " + getFigureName();
     }
 
     @Override
     public String toString() {
-        return "Figure: " + getFigureType() + ", area: " + getArea()
-                + " sq.units, radius: " + radius + " units, color: " + getColor();
+        return "Figure: " + getFigureName() + ", area: " + getArea()
+                + " sq.units, radius: " + radius + " units, color: "
+                + getColor();
     }
+
 }

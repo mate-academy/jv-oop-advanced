@@ -3,7 +3,6 @@ package core.basesyntax;
 public abstract class Figure
         implements AreaCalculator, FigureDraw {
     private String color;
-    private String figureType;
 
     public Figure() {
     }
@@ -16,16 +15,8 @@ public abstract class Figure
         this.color = color;
     }
 
-    public void setFigureType(String figureType) {
-        this.figureType = figureType;
-    }
-
     public String getColor() {
         return color;
-    }
-
-    public String getFigureType() {
-        return figureType;
     }
 
     @Override
