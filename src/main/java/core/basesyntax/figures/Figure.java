@@ -1,25 +1,22 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.AreaCalculator;
+import core.basesyntax.Color;
 import core.basesyntax.InfoPrinter;
 
 public abstract class Figure implements AreaCalculator, InfoPrinter {
-    private String name;
-    private String color;
+    private final String name = getClass().getSimpleName();
+    private Color color;
 
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(Color color) {
         this.color = color;
     }
 }
