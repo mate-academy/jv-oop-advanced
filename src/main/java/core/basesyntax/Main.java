@@ -9,18 +9,17 @@ import core.basesyntax.figuresupplier.SupplierFigure;
 public class Main {
     public static void main(String[] args) {
 
-        AreaCalculator random1 = new RandomFigure();
-        AreaCalculator random2 = new RandomFigure();
-        AreaCalculator random3 = new RandomFigure();
-        AreaCalculator circle = new Circle("Circle", "Red", 21);
-        AreaCalculator rectangle = new Rectangle("Rectangle", "Blue", 21, 20);
-        AreaCalculator square = new Square("Square", "Yellow", 21);
+        InformationFigures random1 = new RandomFigure();
+        InformationFigures random2 = new RandomFigure();
+        InformationFigures random3 = new RandomFigure();
+        InformationFigures circle = new Circle("Circle", "Red", 21);
+        InformationFigures rectangle = new Rectangle("Rectangle", "Blue", 21, 20);
+        InformationFigures square = new Square("Square", "Yellow", 21);
         SupplierFigure supplierFigure = new SupplierFigure();
 
-        AreaCalculator[] figure = new AreaCalculator[]{random1, random2, random3,
-                circle, rectangle, square};
+        InformationFigures[] figure = new InformationFigures[]{random1, random2, random3, circle, rectangle, square};
         supplierFigure.getDefaultFigure();
-        for (AreaCalculator figures : figure) {
+        for (InformationFigures figures : figure) {
             figures.infoFigure();
         }
     }

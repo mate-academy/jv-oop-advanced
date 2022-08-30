@@ -2,6 +2,7 @@ package core.basesyntax.figures;
 
 import core.basesyntax.AreaCalculator;
 import core.basesyntax.Figure;
+import core.basesyntax.InformationFigures;
 import core.basesyntax.colorsupplier.ColorSupplier;
 import core.basesyntax.figuresupplier.DifferentFigure;
 import core.basesyntax.figuresupplier.SupplierFigure;
@@ -9,7 +10,6 @@ import java.util.Random;
 
 public class RandomFigure extends Figure {
 
-    private AreaCalculator figureOptions;
     private double firstline;
     private double secondline;
     private double thirdline;
@@ -17,46 +17,39 @@ public class RandomFigure extends Figure {
     public RandomFigure() {
     }
 
-    public AreaCalculator getFigureOptions() {
-        return figureOptions;
-    }
-
-    public void setFigureOptions(AreaCalculator figureOptions) {
-        this.figureOptions = figureOptions;
-    }
-
     @Override
     public double areaFigura() {
+        Figure figure;
         firstline = new Random().nextInt(50);
         secondline = new Random().nextInt(50);
         thirdline = new Random().nextInt(50);
 
         switch (SupplierFigure.getRandomFigura()) {
             case CIRCLE:
-                figureOptions = new Circle(DifferentFigure.CIRCLE.name(),
+               figure = new Circle(DifferentFigure.CIRCLE.name(),
                         ColorSupplier.getRandomColor(), firstline);
-                figureOptions.infoFigure();
-                return figureOptions.areaFigura();
+                figure.infoFigure();
+                return figure.areaFigura();
             case SQUARE:
-                figureOptions = new Square(DifferentFigure.SQUARE.name(),
+                figure = new Square(DifferentFigure.SQUARE.name(),
                         ColorSupplier.getRandomColor(), firstline);
-                figureOptions.infoFigure();
-                return figureOptions.areaFigura();
+                figure.infoFigure();
+                return figure.areaFigura();
             case RECTANGLE:
-                figureOptions = new Rectangle(DifferentFigure.RECTANGLE.name(),
+                figure = new Rectangle(DifferentFigure.RECTANGLE.name(),
                         ColorSupplier.getRandomColor(), firstline, secondline);
-                figureOptions.infoFigure();
-                return figureOptions.areaFigura();
+                figure.infoFigure();
+                return figure.areaFigura();
             case RIGHTTRIANGLE:
-                figureOptions = new RightTriangle(DifferentFigure.RIGHTTRIANGLE.name(),
+                figure = new RightTriangle(DifferentFigure.RIGHTTRIANGLE.name(),
                         ColorSupplier.getRandomColor(), firstline, secondline);
-                figureOptions.infoFigure();
-                return figureOptions.areaFigura();
+                figure.infoFigure();
+                return figure.areaFigura();
             case ISOSCELESTRAPEZOID:
-                figureOptions = new IsoscelesTrapezoid(DifferentFigure.ISOSCELESTRAPEZOID.name(),
+                figure = new IsoscelesTrapezoid(DifferentFigure.ISOSCELESTRAPEZOID.name(),
                         ColorSupplier.getRandomColor(), firstline, secondline, thirdline);
-                figureOptions.infoFigure();
-                return figureOptions.areaFigura();
+                figure.infoFigure();
+                return figure.areaFigura();
             default:
                 SupplierFigure.getRandomFigura();
         }
