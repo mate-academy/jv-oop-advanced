@@ -7,10 +7,7 @@ public class Square extends Figure implements AreaCalculator {
 
      private double firstline;
 
-     public Square() {
-
-     }
-
+     public Square() {}
 
     public Square(String name, String color, double firstline) {
         super(name, color);

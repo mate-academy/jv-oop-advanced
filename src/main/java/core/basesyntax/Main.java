@@ -5,9 +5,10 @@ import core.basesyntax.figures.RandomFigure;
 import core.basesyntax.figures.Rectangle;
 import core.basesyntax.figuresupplier.SupplierFigure;
 import core.basesyntax.figures.Square;
+
 public class Main {
     public static void main(String[] args) {
-        
+
          AreaCalculator random1 = new RandomFigure();
          AreaCalculator random2 = new RandomFigure();
          AreaCalculator random3 = new RandomFigure();

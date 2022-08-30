@@ -7,9 +7,7 @@ public class Circle extends Figure implements AreaCalculator {
 
      private double radius;
 
-     public Circle() {
-
-     }
+     public Circle() {}
 
      public Circle(double radius) {
          this.radius = radius;
@@ -30,5 +28,4 @@ public class Circle extends Figure implements AreaCalculator {
          System.out.println("name= " + name + ", color= " + color + ", area= "
                  + areaFigura() + " unit sq., radius=" + radius);
     }
-
 }
