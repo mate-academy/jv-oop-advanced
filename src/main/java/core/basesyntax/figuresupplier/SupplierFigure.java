@@ -2,7 +2,6 @@ package core.basesyntax.figuresupplier;
 import core.basesyntax.Figure;
 import core.basesyntax.figures.Circle;
 import java.util.Random;
-
 public class SupplierFigure {
     public static final String NAME = "CIRCLE";
     public static final String COLOR = "WHITE";
