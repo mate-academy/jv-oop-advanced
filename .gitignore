@@ -1,3 +1,7 @@
 .idea/*
 *.iml
 target/*
+README.md
+.idea
+.github
+pom.xml
