@@ -1,4 +1,4 @@
-package core.basesyntax.figureSupplier;
+package core.basesyntax.figuresupplier;
 
 public enum DifferentFigure {
     CIRCLE,

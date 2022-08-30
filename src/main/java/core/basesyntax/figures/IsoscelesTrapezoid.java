@@ -1,4 +1,4 @@
-package core.basesyntax.figures_all;
+package core.basesyntax.figures;
 
 import core.basesyntax.Figure;
 import core.basesyntax.AreaCalculator;
@@ -31,7 +31,8 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
 
     @Override
     public void infoFigure() {
-        System.out.println("name= " + name + ", color= " + color + ", area= " + areaFigura() +
-                " unit sq., Length A=" + firstline + " unit sq., Length B= " + secondline + " unit sq." + " " + thirdline + " unit sq.");
+        System.out.println("name= " + name + ", color= " + color + ", area= " + areaFigura()
+                + " unit sq., Length A=" + firstline + " unit sq., Length B= " + secondline + " unit sq."
+                + " " + thirdline + " unit sq.");
     }
 }

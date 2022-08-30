@@ -1,10 +1,10 @@
 package core.basesyntax;
 
-import core.basesyntax.figures_all.Circle;
-import core.basesyntax.figures_all.RandomFigure;
-import core.basesyntax.figures_all.Rectangle;
-import core.basesyntax.figures_all.Square;
-import core.basesyntax.figureSupplier.SupplierFigure;
+import core.basesyntax.figures.Circle;
+import core.basesyntax.figures.RandomFigure;
+import core.basesyntax.figures.Rectangle;
+import core.basesyntax.figuresupplier.SupplierFigure;
+import core.basesyntax.figures.Square;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,7 +16,8 @@ public class Main {
          AreaCalculator square = new Square("Square","Yellow",21);
          SupplierFigure supplierFigure = new SupplierFigure();
 
-         AreaCalculator[] figure = new AreaCalculator[] {random1, random2, random3, circle, rectangle, square};
+         AreaCalculator[] figure = new AreaCalculator[] {random1, random2, random3,
+                 circle, rectangle, square};
          supplierFigure.getDefaultFigure();
          for (AreaCalculator figures : figure){
              figures.infoFigure();

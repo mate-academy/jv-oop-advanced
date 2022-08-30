@@ -1,6 +1,8 @@
-package core.basesyntax.figures_all;
-import core.basesyntax.Figure;
+package core.basesyntax.figures;
+
 import core.basesyntax.AreaCalculator;
+import core.basesyntax.Figure;
+
 public class Circle extends Figure implements AreaCalculator {
 
      private double radius;

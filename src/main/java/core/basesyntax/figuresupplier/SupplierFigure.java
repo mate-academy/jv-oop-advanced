@@ -1,8 +1,7 @@
-package core.basesyntax.figureSupplier;
+package core.basesyntax.figuresupplier;
 
 import core.basesyntax.Figure;
-import core.basesyntax.figures_all.Circle;
-
+import core.basesyntax.figures.Circle;
 import java.util.Random;
 
 public class SupplierFigure  {
@@ -15,7 +14,8 @@ public class SupplierFigure  {
     }
 
     public  Figure getDefaultFigure() {
-        System.out.println("Figure= " + NAME + ", Color= " + COLOR + ", radius= " + RADIUS);
+        System.out.println("Figure= " + NAME + ", Color= "
+                + COLOR + ", radius= " + RADIUS);
         return new Circle(NAME, COLOR, RADIUS);
     }
 
