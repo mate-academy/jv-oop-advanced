@@ -17,7 +17,8 @@ public class Main {
         InformationFigures square = new Square("Square", "Yellow", 21);
         SupplierFigure supplierFigure = new SupplierFigure();
 
-        InformationFigures[] figure = new InformationFigures[]{random1, random2, random3, circle, rectangle, square};
+        InformationFigures[] figure = new InformationFigures[]{random1, random2,
+                random3, circle, rectangle, square};
         supplierFigure.getDefaultFigure();
         for (InformationFigures figures : figure) {
             figures.infoFigure();
