@@ -6,8 +6,8 @@ import java.util.Random;
 /**
  * Feel free to remove this class and create your own.
  */
-public class HelloWorld {
 
+public class HelloWorld {
     private static final int NUMBER_OF_FIGURES = 8;
     private static final FigureSupplier figureSupplier = new FigureSupplier();
 
