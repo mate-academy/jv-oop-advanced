@@ -1,11 +1,10 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.AreaCalculator;
 import core.basesyntax.Figure;
-import core.basesyntax.InformationFigures;
 import core.basesyntax.colorsupplier.ColorSupplier;
 import core.basesyntax.figuresupplier.DifferentFigure;
 import core.basesyntax.figuresupplier.SupplierFigure;
+
 import java.util.Random;
 
 public class RandomFigure extends Figure {
@@ -26,7 +25,7 @@ public class RandomFigure extends Figure {
 
         switch (SupplierFigure.getRandomFigura()) {
             case CIRCLE:
-               figure = new Circle(DifferentFigure.CIRCLE.name(),
+                figure = new Circle(DifferentFigure.CIRCLE.name(),
                         ColorSupplier.getRandomColor(), firstline);
                 figure.infoFigure();
                 return figure.areaFigura();
