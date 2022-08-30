@@ -11,9 +11,6 @@ public class Square extends Figure implements AreaCalculator {
 
      }
 
-    public Square(double firstline) {
-        this.firstline = firstline;
-    }
 
     public Square(String name, String color, double firstline) {
         super(name, color);
@@ -22,7 +19,7 @@ public class Square extends Figure implements AreaCalculator {
 
     @Override
     public double areaFigura() {
-        return firstline * firstline;
+         return firstline * firstline;
     }
 
     @Override

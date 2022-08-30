@@ -21,7 +21,7 @@ public class Circle extends Figure implements AreaCalculator {
     }
 
     @Override
-    public  double areaFigura() {
+    public double areaFigura() {
          return Math.PI * radius;
      }
 

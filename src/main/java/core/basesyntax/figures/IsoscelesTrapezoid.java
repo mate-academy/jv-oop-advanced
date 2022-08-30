@@ -11,13 +11,15 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
 
     public IsoscelesTrapezoid() {}
 
-    public IsoscelesTrapezoid(double firstline, double secondline, double thirdline) {
+    public IsoscelesTrapezoid(double firstline,
+                              double secondline, double thirdline) {
         this.firstline = firstline;
         this.secondline = secondline;
         this.thirdline = thirdline;
     }
 
-    public IsoscelesTrapezoid(String name, String color, double firstline, double secondline, double thirdline) {
+    public IsoscelesTrapezoid(String name, String color,
+                              double firstline, double secondline, double thirdline) {
         super(name, color);
         this.firstline = firstline;
         this.secondline = secondline;
@@ -31,8 +33,10 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
 
     @Override
     public void infoFigure() {
-        System.out.println("name= " + name + ", color= " + color + ", area= " + areaFigura()
-                + " unit sq., Length A=" + firstline + " unit sq., Length B= " + secondline + " unit sq."
+        System.out.println("name= " + name + ", color= " + color
+                + ", area= " + areaFigura()
+                + " unit sq., Length A=" + firstline
+                + " unit sq., Length B= " + secondline + " unit sq."
                 + " " + thirdline + " unit sq.");
     }
 }

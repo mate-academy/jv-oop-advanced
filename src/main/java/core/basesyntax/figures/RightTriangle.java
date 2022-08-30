@@ -21,7 +21,6 @@ public class RightTriangle extends Figure implements AreaCalculator {
         this.secondLeg = secondLeg;
     }
 
-
     @Override
     public double areaFigura() {
         return (firstLeg * secondLeg) * 0.5;
@@ -29,7 +28,9 @@ public class RightTriangle extends Figure implements AreaCalculator {
 
     @Override
     public void infoFigure() {
-        System.out.println("name= " + name + ", color= " + color + ", area= " + areaFigura()
-                + " unit sq., Length A=" + firstLeg + " unit sq., Length B= " + secondLeg + " unit sq.");
+        System.out.println("name= " + name + ", color= " + color
+                + ", area= " + areaFigura()
+                + " unit sq., Length A=" + firstLeg
+                + " unit sq., Length B= " + secondLeg + " unit sq.");
     }
 }
