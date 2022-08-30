@@ -4,15 +4,14 @@ import core.basesyntax.figure.Circle;
 import core.basesyntax.figure.Figure;
 import core.basesyntax.figure.IsoscelesTrapezoid;
 import core.basesyntax.figure.Rectangle;
-import core.basesyntax.figure.Square;
 import core.basesyntax.figure.RightTriangle;
-
+import core.basesyntax.figure.Square;
 import java.util.Random;
 
 public class FigureSupplier {
+    public static final int FIGURE_COUNT = 4;
+    public static final int Random_Number = 100;
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    public final int FIGURE_COUNT = 4;
-    public final int RANDOM_NUMBER = 100;
 
     public Figure getRandomFigure() {
         int figureIndex = new Random().nextInt(FIGURE_COUNT);
@@ -41,7 +40,7 @@ public class FigureSupplier {
     }
 
     private int getRandomInt() {
-        return new Random().nextInt(RANDOM_NUMBER);
+        return new Random().nextInt(Random_Number);
     }
 
     private double getRandomDouble() {
