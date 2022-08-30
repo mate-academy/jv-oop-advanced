@@ -2,10 +2,10 @@ package core.basesyntax;
 
 public abstract class Figure {
 
-   protected String name;
-   protected String color;
+    protected String name;
+    protected String color;
 
-    public Figure(){
+    public Figure() {
 
     }
 

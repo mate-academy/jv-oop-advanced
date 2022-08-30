@@ -4,17 +4,24 @@ import core.basesyntax.AreaCalculator;
 import core.basesyntax.colorsupplier.ColorSupplier;
 import core.basesyntax.figuresupplier.DifferentFigure;
 import core.basesyntax.figuresupplier.SupplierFigure;
-
 import java.util.Random;
 
 public class RandomFigure implements AreaCalculator {
 
-    AreaCalculator figureOptions;
+    private AreaCalculator figureOptions;
     private double firstline;
     private double secondline;
     private double thirdline;
 
     public RandomFigure() {
+    }
+
+    public AreaCalculator getFigureOptions() {
+        return figureOptions;
+    }
+
+    public void setFigureOptions(AreaCalculator figureOptions) {
+        this.figureOptions = figureOptions;
     }
 
     @Override
