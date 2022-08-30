@@ -2,9 +2,10 @@ package core.basesyntax.colorsupplier;
 
 import core.basesyntax.Figure;
 import core.basesyntax.figures.Circle;
+
 import java.util.Random;
 
-public class ColorSupplier  {
+public class ColorSupplier {
 
     public ColorSupplier() {
     }

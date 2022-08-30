@@ -1,7 +1,7 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Figure;
 import core.basesyntax.AreaCalculator;
+import core.basesyntax.Figure;
 
 public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
 
@@ -9,7 +9,8 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
     private double secondline;
     private double thirdline;
 
-    public IsoscelesTrapezoid() {}
+    public IsoscelesTrapezoid() {
+    }
 
     public IsoscelesTrapezoid(double firstline,
                               double secondline, double thirdline) {

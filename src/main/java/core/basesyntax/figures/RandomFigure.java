@@ -1,20 +1,21 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.colorsupplier.ColorSupplier;
 import core.basesyntax.AreaCalculator;
+import core.basesyntax.colorsupplier.ColorSupplier;
 import core.basesyntax.figuresupplier.DifferentFigure;
 import core.basesyntax.figuresupplier.SupplierFigure;
+
 import java.util.Random;
 
 public class RandomFigure implements AreaCalculator {
 
+    AreaCalculator figureOptions;
     private double firstline;
     private double secondline;
     private double thirdline;
 
-    AreaCalculator figureOptions;
-
-    public RandomFigure(){}
+    public RandomFigure() {
+    }
 
     @Override
     public double areaFigura() {
@@ -34,9 +35,9 @@ public class RandomFigure implements AreaCalculator {
                 figureOptions.infoFigure();
                 return figureOptions.areaFigura();
             case RECTANGLE:
-               figureOptions = new Rectangle(DifferentFigure.RECTANGLE.name(),
-                       ColorSupplier.getRandomColor(), firstline, secondline);
-               figureOptions.infoFigure();
+                figureOptions = new Rectangle(DifferentFigure.RECTANGLE.name(),
+                        ColorSupplier.getRandomColor(), firstline, secondline);
+                figureOptions.infoFigure();
                 return figureOptions.areaFigura();
             case RIGHTTRIANGLE:
                 figureOptions = new RightTriangle(DifferentFigure.RIGHTTRIANGLE.name(),
@@ -44,18 +45,19 @@ public class RandomFigure implements AreaCalculator {
                 figureOptions.infoFigure();
                 return figureOptions.areaFigura();
             case ISOSCELESTRAPEZOID:
-               figureOptions = new IsoscelesTrapezoid(DifferentFigure.ISOSCELESTRAPEZOID.name(),
-                       ColorSupplier.getRandomColor(), firstline, secondline, thirdline);
-               figureOptions.infoFigure();
+                figureOptions = new IsoscelesTrapezoid(DifferentFigure.ISOSCELESTRAPEZOID.name(),
+                        ColorSupplier.getRandomColor(), firstline, secondline, thirdline);
+                figureOptions.infoFigure();
                 return figureOptions.areaFigura();
-            default:SupplierFigure.getRandomFigura();
+            default:
+                SupplierFigure.getRandomFigura();
         }
         return 0.0;
     }
 
     @Override
     public void infoFigure() {
-      areaFigura();
+        areaFigura();
     }
 
 }

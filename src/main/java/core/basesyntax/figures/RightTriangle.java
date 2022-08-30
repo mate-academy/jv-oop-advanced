@@ -1,14 +1,15 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Figure;
 import core.basesyntax.AreaCalculator;
+import core.basesyntax.Figure;
 
 public class RightTriangle extends Figure implements AreaCalculator {
 
-   private double firstLeg;
-   private double secondLeg;
+    private double firstLeg;
+    private double secondLeg;
 
-   public RightTriangle(){}
+    public RightTriangle() {
+    }
 
     public RightTriangle(double firstLeg, double secondLeg) {
         this.firstLeg = firstLeg;

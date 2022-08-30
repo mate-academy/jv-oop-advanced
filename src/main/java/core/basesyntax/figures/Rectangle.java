@@ -1,7 +1,7 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Figure;
 import core.basesyntax.AreaCalculator;
+import core.basesyntax.Figure;
 
 public class Rectangle extends Figure implements AreaCalculator {
 
