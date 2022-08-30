@@ -1,9 +1,9 @@
-package core.basesyntax.figureAll;
+package core.basesyntax.figures_all;
 
 import core.basesyntax.Figure;
-import core.basesyntax.FigureOptions;
+import core.basesyntax.AreaCalculator;
 
-public class RightTriangle extends Figure implements FigureOptions {
+public class RightTriangle extends Figure implements AreaCalculator {
 
    private double firstLeg;
    private double secondLeg;
@@ -29,6 +29,7 @@ public class RightTriangle extends Figure implements FigureOptions {
 
     @Override
     public void infoFigure() {
-        System.out.println("name= " + name + ", color= " + color + ", area= " + areaFigura() + " unit sq., Length A=" + firstLeg + " unit sq., Length B= " + secondLeg + " unit sq.");
+        System.out.println("name= " + name + ", color= " + color + ", area= " + areaFigura() +
+                " unit sq., Length A=" + firstLeg + " unit sq., Length B= " + secondLeg + " unit sq.");
     }
 }

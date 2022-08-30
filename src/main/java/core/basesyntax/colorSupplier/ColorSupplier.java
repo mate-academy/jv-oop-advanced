@@ -1,7 +1,7 @@
 package core.basesyntax.colorSupplier;
 
 import core.basesyntax.Figure;
-import core.basesyntax.figureAll.Circle;
+import core.basesyntax.figures_all.Circle;
 
 import java.util.Random;
 

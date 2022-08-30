@@ -1,13 +1,13 @@
-package core.basesyntax.figureAll;
-
+package core.basesyntax.figures_all;
 import core.basesyntax.Figure;
-import core.basesyntax.FigureOptions;
-
-public class Circle extends Figure implements FigureOptions {
+import core.basesyntax.AreaCalculator;
+public class Circle extends Figure implements AreaCalculator {
 
      private double radius;
 
-     public Circle(){}
+     public Circle() {
+
+     }
 
      public Circle(double radius) {
          this.radius = radius;
@@ -20,12 +20,13 @@ public class Circle extends Figure implements FigureOptions {
 
     @Override
     public  double areaFigura() {
-        return Math.PI * radius;
-    }
+         return Math.PI * radius;
+     }
 
     @Override
     public void infoFigure() {
-        System.out.println("name= " + name + ", color= " + color + ", area= " + areaFigura() + " unit sq., radius=" + radius );
+         System.out.println("name= " + name + ", color= " + color + ", area= "
+                 + areaFigura() + " unit sq., radius=" + radius);
     }
 
 }

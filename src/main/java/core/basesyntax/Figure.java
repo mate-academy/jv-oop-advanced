@@ -1,8 +1,5 @@
 package core.basesyntax;
 
-import core.basesyntax.figureAll.Circle;
-import core.basesyntax.figureAll.RandomFigure;
-
 public abstract class Figure {
 
    protected String name;
