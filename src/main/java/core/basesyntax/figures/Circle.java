@@ -3,7 +3,7 @@ package core.basesyntax.figures;
 import core.basesyntax.AreaCalculator;
 import core.basesyntax.Figure;
 
-public class Circle extends Figure implements AreaCalculator {
+public class Circle extends Figure {
 
     private double radius;
 

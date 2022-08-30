@@ -3,7 +3,7 @@ package core.basesyntax.figures;
 import core.basesyntax.AreaCalculator;
 import core.basesyntax.Figure;
 
-public class Square extends Figure implements AreaCalculator {
+public class Square extends Figure {
 
     private double firstline;
 

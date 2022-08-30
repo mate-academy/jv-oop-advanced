@@ -1,12 +1,13 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.AreaCalculator;
+import core.basesyntax.Figure;
 import core.basesyntax.colorsupplier.ColorSupplier;
 import core.basesyntax.figuresupplier.DifferentFigure;
 import core.basesyntax.figuresupplier.SupplierFigure;
 import java.util.Random;
 
-public class RandomFigure implements AreaCalculator {
+public class RandomFigure extends Figure {
 
     private AreaCalculator figureOptions;
     private double firstline;
