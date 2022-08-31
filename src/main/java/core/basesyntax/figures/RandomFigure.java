@@ -5,11 +5,12 @@ import core.basesyntax.colorsupplier.ColorSupplier;
 import core.basesyntax.figuresupplier.DifferentFigure;
 import core.basesyntax.figuresupplier.SupplierFigure;
 import java.util.Random;
+
 public class RandomFigure extends Figure {
     private double firstline;
     private double secondline;
     private double thirdline;
-    SupplierFigure supplierFigure;
+    private SupplierFigure supplierFigure;
 
     public RandomFigure() {
     }
@@ -59,4 +60,35 @@ public class RandomFigure extends Figure {
         getArea();
     }
 
+    public double getFirstline() {
+        return firstline;
+    }
+
+    public void setFirstline(double firstline) {
+        this.firstline = firstline;
+    }
+
+    public double getSecondline() {
+        return secondline;
+    }
+
+    public void setSecondline(double secondline) {
+        this.secondline = secondline;
+    }
+
+    public double getThirdline() {
+        return thirdline;
+    }
+
+    public void setThirdline(double thirdline) {
+        this.thirdline = thirdline;
+    }
+
+    public SupplierFigure getSupplierFigure() {
+        return supplierFigure;
+    }
+
+    public void setSupplierFigure(SupplierFigure supplierFigure) {
+        this.supplierFigure = supplierFigure;
+    }
 }

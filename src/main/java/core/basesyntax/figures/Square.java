@@ -2,8 +2,6 @@ package core.basesyntax.figures;
 
 import core.basesyntax.Figure;
 
-import java.awt.*;
-
 public class Square extends Figure {
 
     private double firstline;
