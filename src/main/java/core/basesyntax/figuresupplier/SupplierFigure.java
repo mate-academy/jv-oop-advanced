@@ -1,4 +1,5 @@
 package core.basesyntax.figuresupplier;
+
 import core.basesyntax.Figure;
 import core.basesyntax.figures.Circle;
 import java.util.Random;
