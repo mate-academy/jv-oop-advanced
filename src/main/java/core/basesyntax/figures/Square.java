@@ -2,6 +2,8 @@ package core.basesyntax.figures;
 
 import core.basesyntax.Figure;
 
+import java.awt.*;
+
 public class Square extends Figure {
 
     private double firstline;
@@ -15,13 +17,13 @@ public class Square extends Figure {
     }
 
     @Override
-    public double areaFigura() {
+    public double getArea() {
         return firstline * firstline;
     }
 
     @Override
-    public void infoFigure() {
-        System.out.println("name= " + name + ", color= " + color + ", area= " + areaFigura()
+    public void drow() {
+        System.out.println("name= " + name + ", color= " + color + ", area= " + getArea()
                 + " unit sq., Length A=" + firstline + " unit sq.");
     }
 }

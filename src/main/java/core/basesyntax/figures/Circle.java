@@ -19,13 +19,13 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double areaFigura() {
+    public double getArea() {
         return Math.PI * radius;
     }
 
     @Override
-    public void infoFigure() {
+    public void drow() {
         System.out.println("name= " + name + ", color= " + color + ", area= "
-                + areaFigura() + " unit sq., radius=" + radius);
+                + getArea() + " unit sq., radius=" + radius);
     }
 }

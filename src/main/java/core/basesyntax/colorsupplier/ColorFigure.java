@@ -1,6 +1,6 @@
 package core.basesyntax.colorsupplier;
 
-public enum ColorFigure {
+public enum ColorFigure  {
     RED,
     YELLOW,
     BLUE,

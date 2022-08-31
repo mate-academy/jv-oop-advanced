@@ -27,14 +27,14 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double areaFigura() {
+    public double getArea() {
         return (firstline + secondline) * thirdline / 2;
     }
 
     @Override
-    public void infoFigure() {
+    public void drow() {
         System.out.println("name= " + name + ", color= " + color
-                + ", area= " + areaFigura()
+                + ", area= " + getArea()
                 + " unit sq., Length A=" + firstline
                 + " unit sq., Length B= " + secondline + " unit sq."
                 + " " + thirdline + " unit sq.");

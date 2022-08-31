@@ -22,14 +22,14 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double areaFigura() {
+    public double getArea() {
         return (firstLeg * secondLeg) * 0.5;
     }
 
     @Override
-    public void infoFigure() {
+    public void drow() {
         System.out.println("name= " + name + ", color= " + color
-                + ", area= " + areaFigura()
+                + ", area= " + getArea()
                 + " unit sq., Length A=" + firstLeg
                 + " unit sq., Length B= " + secondLeg + " unit sq.");
     }

@@ -8,13 +8,14 @@ public class SupplierFigure {
     public static final String NAME = "CIRCLE";
     public static final String COLOR = "WHITE";
     public static final double RADIUS = 10;
+    public static Random random = new Random();
 
     public SupplierFigure() {
 
     }
 
-    public static DifferentFigure getRandomFigura() {
-        int index = new Random().nextInt(DifferentFigure.values().length);
+    public  DifferentFigure getRandomFigura() {
+        int index = random.nextInt(DifferentFigure.values().length);
         return DifferentFigure.values()[index];
     }
 
@@ -23,4 +24,5 @@ public class SupplierFigure {
                 + COLOR + ", radius= " + RADIUS);
         return new Circle(NAME, COLOR, RADIUS);
     }
+
 }
