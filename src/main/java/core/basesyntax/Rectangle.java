@@ -1,8 +1,9 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure{
+public class Rectangle extends Figure {
     private int firstSide;
     private int secondSide;
+
     public Rectangle(String color, int firstLength, int secondLength) {
         super(color);
         this.firstSide = firstSide;
@@ -27,13 +28,17 @@ public class Rectangle extends Figure{
 
     @Override
     public double getArea() {
-        return firstSide * secondSide ;
+        return firstSide * secondSide;
     }
 
     @Override
     public void drawable() {
-        System.out.println("This figure is Rectangle with area" + getArea() + " square units" + " and properties: " +
-                getFirstSide() + ", " +
-                getSecondSide());
+        System.out.println("This figure is Rectangle with area"
+                + getArea()
+                + " square units"
+                + " and properties: "
+                + getFirstSide()
+                + ", "
+                + getSecondSide());
     }
 }

@@ -1,13 +1,12 @@
 package core.basesyntax;
 
-import javax.swing.*;
-
 public class Circle extends Figure {
-    private  int radius;
-   public Circle (String color, int radius) {
-       super(color);
-       this.radius = radius;
-   }
+    private int radius;
+
+    public Circle(String color, int radius) {
+        super(color);
+        this.radius = radius;
+    }
 
     public int getRadius() {
         return radius;
@@ -24,6 +23,10 @@ public class Circle extends Figure {
 
     @Override
     public void drawable() {
-        System.out.println("This figure is Circle with area: " + getArea() + " square units, " + "with radius " + getRadius() + " and color " + "?");
+        System.out.println("This figure is Circle with area: "
+                + getArea() + " square units, "
+                + "with radius " + getRadius()
+                + " and color "
+                + "?");
     }
 }
