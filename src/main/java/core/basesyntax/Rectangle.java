@@ -27,7 +27,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double areaCalculator() {
+    public double getArea() {
         return side * downSide;
     }
 
@@ -36,10 +36,10 @@ public class Rectangle extends Figure {
         System.out.println("Figure: "
                         + this.getClass().getName()
                         + ", area: "
-                        + areaCalculator()
-                        + "sq.units, side: "
+                        + getArea()
+                        + " sq.units, side: "
                         + getSide()
-                        + "units, " + "down side: "
+                        + " units, " + "down side: "
                         + getDownSide()
                         + " units, color: "
                         + getColor()

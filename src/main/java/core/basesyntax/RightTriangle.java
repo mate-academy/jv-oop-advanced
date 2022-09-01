@@ -27,7 +27,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double areaCalculator() {
+    public double getArea() {
         return (fitstLeg * secondLeg) * 0.5;
     }
 
@@ -36,7 +36,7 @@ public class RightTriangle extends Figure {
         System.out.println("Figure: "
                 + this.getClass().getName()
                 + ", area: "
-                + areaCalculator()
+                + getArea()
                 + " sq.units, firstLeg: "
                 + getFitstLeg()
                 + " units, secondLeg: "

@@ -17,7 +17,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public double areaCalculator() {
+    public double getArea() {
         return Math.pow(side, 2);
     }
 
@@ -26,7 +26,7 @@ public class Square extends Figure {
         System.out.println("Figure: "
                 + this.getClass().getName()
                 + ", area: "
-                + areaCalculator()
+                + getArea()
                 + " sq.units, side: "
                 + getSide()
                 + " units, colot: "

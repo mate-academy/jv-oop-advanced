@@ -21,7 +21,7 @@ public class Circle extends Figure {
         System.out.println("Figure: "
                         + this.getClass().getName()
                         + ", area: "
-                        + areaCalculator()
+                        + getArea()
                         + " sq.units, radius: "
                         + getRadius()
                         + " units, color: "
@@ -30,7 +30,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double areaCalculator() {
+    public double getArea() {
         return Math.PI * Math.pow(radius, 2);
     }
 }

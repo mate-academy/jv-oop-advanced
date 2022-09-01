@@ -3,10 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-
     public static final int FIGURE_NUMBER = 5;
     public static final double CIRCLE_RADIUS = 10.0D;
     public static final String CIRCLE_COLOR = Color.WHITE.name();
+    public static final int MAX_SIZE = 10;
     private final Random random = new Random();
     private final ColorSupplier color = new ColorSupplier();
 
@@ -47,7 +47,7 @@ public class FigureSupplier {
     }
 
     private double side() {
-        return random.nextDouble();
+        return random.nextInt(MAX_SIZE);
     }
 
     public Figure getDefaultFigure() {
