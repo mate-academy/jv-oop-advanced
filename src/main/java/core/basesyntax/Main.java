@@ -5,9 +5,9 @@ import core.basesyntax.figures.RandomFigure;
 import core.basesyntax.figures.Rectangle;
 import core.basesyntax.figures.Square;
 import core.basesyntax.figuresupplier.FigureSupplier;
+
 public class Main {
     public static void main(String[] args) {
-
         Drowable random1 = new RandomFigure();
         Drowable random2 = new RandomFigure();
         Drowable random3 = new RandomFigure();

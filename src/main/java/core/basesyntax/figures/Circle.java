@@ -1,8 +1,8 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.Figure;
-public class Circle extends Figure {
 
+public class Circle extends Figure {
     private double radius;
 
     public Circle() {
