@@ -8,9 +8,9 @@ public class Main {
         int numberOfFigures = 6;
         for (int i = 0; i < numberOfFigures; i++) {
             if (i >= numberOfFigures / 2) {
-                figureSupplier.getDefaultFigure().printInfo();
+                figureSupplier.getDefaultFigure().draw();
             } else {
-                figureSupplier.getRandomFigure().printInfo();
+                figureSupplier.getRandomFigure().draw();
             }
         }
     }

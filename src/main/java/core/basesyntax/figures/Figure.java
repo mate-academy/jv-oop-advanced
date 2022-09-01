@@ -2,15 +2,10 @@ package core.basesyntax.figures;
 
 import core.basesyntax.AreaCalculator;
 import core.basesyntax.Color;
-import core.basesyntax.InfoPrinter;
+import core.basesyntax.Drawable;
 
-public abstract class Figure implements AreaCalculator, InfoPrinter {
-    private final String name = getClass().getSimpleName();
+public abstract class Figure implements AreaCalculator, Drawable {
     private Color color;
-
-    public String getName() {
-        return name;
-    }
 
     public Color getColor() {
         return color;
