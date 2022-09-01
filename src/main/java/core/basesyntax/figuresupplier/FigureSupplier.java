@@ -3,14 +3,13 @@ package core.basesyntax.figuresupplier;
 import core.basesyntax.Figure;
 import core.basesyntax.figures.Circle;
 import java.util.Random;
-
-public class SupplierFigure {
+public class FigureSupplier {
     public static final String NAME = "CIRCLE";
     public static final String COLOR = "WHITE";
     public static final double RADIUS = 10;
     private static Random random = new Random();
 
-    public SupplierFigure() {
+    public FigureSupplier() {
 
     }
 
@@ -19,7 +18,7 @@ public class SupplierFigure {
     }
 
     public static void setRandom(Random random) {
-        SupplierFigure.random = random;
+        FigureSupplier.random = random;
     }
 
     public DifferentFigure getRandomFigura() {

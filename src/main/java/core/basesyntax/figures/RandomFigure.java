@@ -3,21 +3,23 @@ package core.basesyntax.figures;
 import core.basesyntax.Figure;
 import core.basesyntax.colorsupplier.ColorSupplier;
 import core.basesyntax.figuresupplier.DifferentFigure;
-import core.basesyntax.figuresupplier.SupplierFigure;
+import core.basesyntax.figuresupplier.FigureSupplier;
 import java.util.Random;
 
 public class RandomFigure extends Figure {
     private double firstline;
     private double secondline;
     private double thirdline;
-    private SupplierFigure supplierFigure;
+    private FigureSupplier supplierFigure;
+    private ColorSupplier colorSupplier;
 
     public RandomFigure() {
     }
 
     @Override
     public double getArea() {
-        supplierFigure = new SupplierFigure();
+        supplierFigure = new FigureSupplier();
+        colorSupplier = new ColorSupplier();
         Figure figure;
         firstline = new Random().nextInt(50);
         secondline = new Random().nextInt(50);
@@ -26,27 +28,27 @@ public class RandomFigure extends Figure {
         switch (supplierFigure.getRandomFigura()) {
             case CIRCLE:
                 figure = new Circle(DifferentFigure.CIRCLE.name(),
-                        ColorSupplier.getRandomColor(), firstline);
+                        colorSupplier.getRandomColor(), firstline);
                 figure.drow();
                 return figure.getArea();
             case SQUARE:
                 figure = new Square(DifferentFigure.SQUARE.name(),
-                        ColorSupplier.getRandomColor(), firstline);
+                        colorSupplier.getRandomColor(), firstline);
                 figure.drow();
                 return figure.getArea();
             case RECTANGLE:
                 figure = new Rectangle(DifferentFigure.RECTANGLE.name(),
-                        ColorSupplier.getRandomColor(), firstline, secondline);
+                        colorSupplier.getRandomColor(), firstline, secondline);
                 figure.drow();
                 return figure.getArea();
             case RIGHTTRIANGLE:
                 figure = new RightTriangle(DifferentFigure.RIGHTTRIANGLE.name(),
-                        ColorSupplier.getRandomColor(), firstline, secondline);
+                        colorSupplier.getRandomColor(), firstline, secondline);
                 figure.drow();
                 return figure.getArea();
             case ISOSCELESTRAPEZOID:
                 figure = new IsoscelesTrapezoid(DifferentFigure.ISOSCELESTRAPEZOID.name(),
-                        ColorSupplier.getRandomColor(), firstline, secondline, thirdline);
+                        colorSupplier.getRandomColor(), firstline, secondline, thirdline);
                 figure.drow();
                 return figure.getArea();
             default:
@@ -84,11 +86,19 @@ public class RandomFigure extends Figure {
         this.thirdline = thirdline;
     }
 
-    public SupplierFigure getSupplierFigure() {
+    public FigureSupplier getSupplierFigure() {
         return supplierFigure;
     }
 
-    public void setSupplierFigure(SupplierFigure supplierFigure) {
+    public void setSupplierFigure(FigureSupplier supplierFigure) {
         this.supplierFigure = supplierFigure;
+    }
+
+    public ColorSupplier getColorSupplier() {
+        return colorSupplier;
+    }
+
+    public void setColorSupplier(ColorSupplier colorSupplier) {
+        this.colorSupplier = colorSupplier;
     }
 }
