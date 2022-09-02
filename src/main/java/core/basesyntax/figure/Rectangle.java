@@ -2,12 +2,12 @@ package core.basesyntax.figure;
 
 public class Rectangle extends Figure {
     private double width;
-    private double height;
+    private double length;
 
-    public Rectangle(String color, double width, double height) {
+    public Rectangle(String color, double width, double length) {
         super(color);
         this.width = width;
-        this.height = height;
+        this.length = length;
     }
 
     public double getWidth() {
@@ -18,21 +18,24 @@ public class Rectangle extends Figure {
         this.width = width;
     }
 
-    public double getHeight() {
-        return height;
+    public double getLength() {
+        return length;
     }
 
-    public void setHeight(double height) {
-        this.height = height;
+    public void setLength(double length) {
+        this.length = length;
     }
 
     @Override
     public double getArea() {
-        return 0;
+        return width * length;
     }
 
     @Override
     public void draw() {
-
+        System.out.println("Figure: Rectangle, area: "
+                + getArea() + " sq. units, color: " + getColor()
+                + ", width: " + width
+                + ", length: " + length);
     }
 }
