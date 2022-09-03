@@ -1,7 +1,7 @@
 package core.basesyntax;
 
-public class Square extends Figure implements AreaCalculator {
-    private int side;
+public class Square extends Figure {
+    int side;
     public Square(int side) {
         this.side = side;
     }

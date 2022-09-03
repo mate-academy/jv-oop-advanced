@@ -1,8 +1,8 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements AreaCalculator{
-    private int width;
-    private int height;
+public class Rectangle extends Figure {
+    int width;
+    int height;
     public Rectangle(int width, int height) {
         this.width = width;
         this.height = height;

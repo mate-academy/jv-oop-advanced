@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
-    private int upperBase;
-    private int bottomBase;
-    private int height;
+public class IsoscelesTrapezoid extends Figure {
+    double upperBase;
+    double bottomBase;
+    double height;
     public IsoscelesTrapezoid(int upperBase, int bottomBase, int height) {
         this.upperBase = upperBase;
         this.bottomBase = bottomBase;
