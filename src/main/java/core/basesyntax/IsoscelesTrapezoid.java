@@ -5,6 +5,12 @@ public class IsoscelesTrapezoid extends Figure {
     private double bottomBase;
     private double height;
 
+    public IsoscelesTrapezoid(int upperBase, int bottomBase, int height) {
+        this.upperBase = upperBase;
+        this.bottomBase = bottomBase;
+        this.height = height;
+    }
+
     public double getUpperBase() {
         return upperBase;
     }
@@ -26,12 +32,6 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     public void setHeight(double height) {
-        this.height = height;
-    }
-
-    public IsoscelesTrapezoid(int upperBase, int bottomBase, int height) {
-        this.upperBase = upperBase;
-        this.bottomBase = bottomBase;
         this.height = height;
     }
 

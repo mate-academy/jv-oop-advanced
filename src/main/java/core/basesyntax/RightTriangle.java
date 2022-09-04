@@ -4,6 +4,11 @@ public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
+    public RightTriangle(int firstLeg, int secondLeg) {
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
+    }
+
     public double getFirstLeg() {
         return firstLeg;
     }
@@ -17,11 +22,6 @@ public class RightTriangle extends Figure {
     }
 
     public void setSecondLeg(double secondLeg) {
-        this.secondLeg = secondLeg;
-    }
-
-    public RightTriangle(int firstLeg, int secondLeg) {
-        this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
 

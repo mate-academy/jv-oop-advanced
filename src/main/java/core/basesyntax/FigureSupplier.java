@@ -6,6 +6,8 @@ public class FigureSupplier {
     private static final int MAX_SIZE = 25;
     private static final int DEFAULT_RADIUS = 10;
     private static final int TOTAL_NUMBER_OF_FIGURES = 5;
+
+    private Figure[] randomFigure = new Figure[TOTAL_NUMBER_OF_FIGURES];
     private Random random = new Random();
 
     public int getRandom() {
@@ -16,16 +18,18 @@ public class FigureSupplier {
         this.random = random;
     }
 
-    Figure[] randomFigures = new Figure[TOTAL_NUMBER_OF_FIGURES];
+    public void setRandomFigure(Figure[] randomFigure) {
+        this.randomFigure = randomFigure;
+    }
 
     public Figure getRandomFigure() {
-        randomFigures[0] = new IsoscelesTrapezoid(getRandom(), getRandom(), getRandom());
-        randomFigures[1] = new RightTriangle(getRandom(), getRandom());
-        randomFigures[2] = new Rectangle(getRandom(), getRandom());
-        randomFigures[3] = new Circle(getRandom());
-        randomFigures[4] = new Square(getRandom());
-        int index = new Random().nextInt(randomFigures.length);
-        return randomFigures[index];
+        randomFigure[0] = new IsoscelesTrapezoid(getRandom(), getRandom(), getRandom());
+        randomFigure[1] = new RightTriangle(getRandom(), getRandom());
+        randomFigure[2] = new Rectangle(getRandom(), getRandom());
+        randomFigure[3] = new Circle(getRandom());
+        randomFigure[4] = new Square(getRandom());
+        int index = new Random().nextInt(randomFigure.length);
+        return randomFigure[index];
     }
 
     public Figure getDefaultFigure() {

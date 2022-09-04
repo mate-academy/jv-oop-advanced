@@ -4,6 +4,11 @@ public class Rectangle extends Figure {
     private int width;
     private int height;
 
+    public Rectangle(int width, int height) {
+        this.width = width;
+        this.height = height;
+    }
+
     public int getWidth() {
         return width;
     }
@@ -17,11 +22,6 @@ public class Rectangle extends Figure {
     }
 
     public void setHeight(int height) {
-        this.height = height;
-    }
-
-    public Rectangle(int width, int height) {
-        this.width = width;
         this.height = height;
     }
 
