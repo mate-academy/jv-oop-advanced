@@ -1,38 +1,38 @@
 package core.basesyntax.figure;
 
 public class IsoscelesTrapezoid extends Figure {
-    private double bottomBase;
-    private double topBase;
-    private double height;
+    private int bottomBase;
+    private int topBase;
+    private int height;
 
-    public IsoscelesTrapezoid(String color, double bottomBase, double topBase, double height) {
+    public IsoscelesTrapezoid(String color, int bottomBase, int topBase, int height) {
         super(color);
         this.bottomBase = bottomBase;
         this.topBase = topBase;
         this.height = height;
     }
 
-    public double getBottomBase() {
+    public int getBottomBase() {
         return bottomBase;
     }
 
-    public void setBottomBase(double bottomBase) {
+    public void setBottomBase(int bottomBase) {
         this.bottomBase = bottomBase;
     }
 
-    public double getTopBase() {
+    public int getTopBase() {
         return topBase;
     }
 
-    public void setTopBase(double topBase) {
+    public void setTopBase(int topBase) {
         this.topBase = topBase;
     }
 
-    public double getHeight() {
+    public int getHeight() {
         return height;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(int height) {
         this.height = height;
     }
 

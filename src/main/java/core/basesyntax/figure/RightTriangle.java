@@ -1,8 +1,8 @@
 package core.basesyntax.figure;
 
 public class RightTriangle extends Figure {
-    private int base;
-    private int height;
+    private final int base;
+    private final int height;
 
     public RightTriangle(String color, int base, int height) {
         super(color);
@@ -10,25 +10,9 @@ public class RightTriangle extends Figure {
         this.height = height;
     }
 
-    public int getBase() {
-        return base;
-    }
-
-    public void setBase(int base) {
-        this.base = base;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
-    }
-
     @Override
     public double getArea() {
-        return (double) base * height / 2;
+        return base * height * 0.5;
     }
 
     @Override
