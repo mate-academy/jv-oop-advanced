@@ -6,6 +6,7 @@ public abstract class Figure {
     private String color;
 
     public abstract double getArea();
+
     public void setRandomParameters() {
         this.color = ColorSupplier.getRandomColor();
     }
