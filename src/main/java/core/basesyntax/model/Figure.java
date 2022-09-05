@@ -2,10 +2,8 @@ package core.basesyntax.model;
 
 import core.basesyntax.ColorSupplier;
 
-public abstract class Figure {
+public abstract class Figure implements FiguresBehaviour {
     private String color;
-
-    public abstract double getArea();
 
     public void setRandomParameters() {
         this.color = ColorSupplier.getRandomColor();
