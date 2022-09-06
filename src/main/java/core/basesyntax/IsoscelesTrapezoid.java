@@ -9,7 +9,7 @@ public class IsoscelesTrapezoid extends Figure {
         return (leg * height);
     }
 
-    public IsoscelesTrapezoid(int height, int leg, String color) {
+    public IsoscelesTrapezoid(String color, int height, int leg) {
         super(color);
         this.height = height;
         this.leg = leg;

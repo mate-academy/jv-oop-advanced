@@ -9,7 +9,7 @@ public class RightTriangle extends Figure {
         return (double) (firstLeg * secondLeg) / 2;
     }
 
-    public RightTriangle(int firstLeg, int secondLeg, String color) {
+    public RightTriangle(String color, int firstLeg, int secondLeg) {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;

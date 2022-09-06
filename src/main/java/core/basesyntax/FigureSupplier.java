@@ -11,24 +11,24 @@ public class FigureSupplier {
         Shape randomShape = Shape.values()[randomizer.nextInt(Shape.values().length)];
         switch (randomShape) {
             case CIRCLE:
-                return new Circle(randomizer.nextInt(MAX_VALUE), colorSupplier.getRandomColor());
+                return new Circle(colorSupplier.getRandomColor(), randomizer.nextInt(MAX_VALUE));
             case SQUARE:
-                return new Square(randomizer.nextInt(MAX_VALUE), colorSupplier.getRandomColor());
+                return new Square(colorSupplier.getRandomColor(), randomizer.nextInt(MAX_VALUE));
             case RECTANGLE:
-                return new Rectangle(randomizer.nextInt(MAX_VALUE), randomizer.nextInt(MAX_VALUE),
-                        colorSupplier.getRandomColor());
+                return new Rectangle(colorSupplier.getRandomColor(),randomizer.nextInt(MAX_VALUE),
+                        randomizer.nextInt(MAX_VALUE));
             case RIGHT_TRIANGLE:
-                return new RightTriangle(randomizer.nextInt(MAX_VALUE),
-                        randomizer.nextInt(MAX_VALUE), colorSupplier.getRandomColor());
+                return new RightTriangle(colorSupplier.getRandomColor(),
+                        randomizer.nextInt(MAX_VALUE), randomizer.nextInt(MAX_VALUE));
             case ISOSCELES_TRAPEZOID:
-                return new IsoscelesTrapezoid(randomizer.nextInt(MAX_VALUE),
-                        randomizer.nextInt(MAX_VALUE), colorSupplier.getRandomColor());
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        randomizer.nextInt(MAX_VALUE), randomizer.nextInt(MAX_VALUE));
             default:
                 return getDefaultFigure();
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, Color.WHITE.name().toLowerCase());
+        return new Circle(Color.WHITE.name().toLowerCase(), 10);
     }
 }

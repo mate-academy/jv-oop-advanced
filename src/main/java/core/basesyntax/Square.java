@@ -8,7 +8,7 @@ public class Square extends Figure {
         return side * side;
     }
 
-    public Square(int side, String color) {
+    public Square(String color, int side) {
         super(color);
         this.side = side;
     }

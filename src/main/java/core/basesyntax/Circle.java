@@ -8,15 +8,15 @@ public class Circle extends Figure {
         return Math.PI * Math.pow(radius, 2);
     }
 
-    public Circle(int radius, String color) {
+    public Circle(String color, int radius) {
         super(color);
         this.radius = radius;
     }
 
     @Override
     public String draw() {
-        return "Circle{" +
-                "radius=" + radius
+        return "Circle{"
+                + "radius=" + radius
                 + ", color='" + color
                 + '\'' + '}';
     }
