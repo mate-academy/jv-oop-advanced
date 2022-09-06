@@ -6,18 +6,10 @@ public class FigureSupplier {
     private static final int MAX_SIZE = 25;
     private static final int DEFAULT_RADIUS = 10;
     private static final int RANDOM_FIGURE_NUMBER = 4;
-    private static final String DEFAULT_COLOR =  Colors.WHITE.toString();
+    private static final String DEFAULT_COLOR = Colors.WHITE.toString();
 
     private Random random = new Random();
-
-    public int getRandom() {
-        return random.nextInt(MAX_SIZE);
-    }
-
-    public void setRandom(Random random) {
-        this.random = random;
-    }
-    Figure figure = new Figure() {
+    private Figure figure = new Figure() {
         @Override
         public void draw() {
 
@@ -28,6 +20,14 @@ public class FigureSupplier {
             return 0;
         }
     };
+
+    public int getRandom() {
+        return random.nextInt(MAX_SIZE);
+    }
+
+    public void setRandom(Random random) {
+        this.random = random;
+    }
 
     Figure getRandomCircle() {
         return new Circle(getRandom());
@@ -45,9 +45,18 @@ public class FigureSupplier {
         return new IsoscelesTrapezoid(getRandom(), getRandom(), getRandom());
     }
 
-    Figure getRandomRightTriangle() {
+    private Figure getRandomRightTriangle() {
         return new RightTriangle(getRandom(), getRandom());
     }
+
+    public Figure getFigure() {
+        return figure;
+    }
+
+    public void setFigure(Figure figure) {
+        this.figure = figure;
+    }
+
     public Figure getRandomFigure() {
         int index = new Random().nextInt(RANDOM_FIGURE_NUMBER);
         switch (index) {
@@ -60,7 +69,9 @@ public class FigureSupplier {
             case 3:
                 return getRandomIsoscelesTrapezoid();
             case 4:
-               return getRandomRightTriangle();
+                return getRandomRightTriangle();
+            default:
+                break;
         }
         return figure;
     }
