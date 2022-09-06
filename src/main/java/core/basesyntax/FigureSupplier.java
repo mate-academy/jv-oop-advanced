@@ -5,9 +5,9 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int MAX_SIZE = 25;
     private static final int DEFAULT_RADIUS = 10;
-    private static final int TOTAL_NUMBER_OF_FIGURES = 5;
+    private static final int RANDOM_FIGURE_NUMBER = 4;
+    private static final String DEFAULT_COLOR =  Colors.WHITE.toString();
 
-    private Figure[] randomFigure = new Figure[TOTAL_NUMBER_OF_FIGURES];
     private Random random = new Random();
 
     public int getRandom() {
@@ -17,30 +17,60 @@ public class FigureSupplier {
     public void setRandom(Random random) {
         this.random = random;
     }
+    Figure figure = new Figure() {
+        @Override
+        public void draw() {
 
-    public void setRandomFigure(Figure[] randomFigure) {
-        this.randomFigure = randomFigure;
+        }
+
+        @Override
+        public double getArea() {
+            return 0;
+        }
+    };
+
+    Figure getRandomCircle() {
+        return new Circle(getRandom());
     }
 
+    Figure getRandomSquare() {
+        return new Square(getRandom());
+    }
+
+    Figure getRandomRectangle() {
+        return new Rectangle(getRandom(), getRandom());
+    }
+
+    Figure getRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(getRandom(), getRandom(), getRandom());
+    }
+
+    Figure getRandomRightTriangle() {
+        return new RightTriangle(getRandom(), getRandom());
+    }
     public Figure getRandomFigure() {
-        randomFigure[0] = new IsoscelesTrapezoid(getRandom(), getRandom(), getRandom());
-        randomFigure[1] = new RightTriangle(getRandom(), getRandom());
-        randomFigure[2] = new Rectangle(getRandom(), getRandom());
-        randomFigure[3] = new Circle(getRandom());
-        randomFigure[4] = new Square(getRandom());
-        int index = new Random().nextInt(randomFigure.length);
-        return randomFigure[index];
+        int index = new Random().nextInt(RANDOM_FIGURE_NUMBER);
+        switch (index) {
+            case 0:
+                return getRandomCircle();
+            case 1:
+                return getRandomSquare();
+            case 2:
+                return getRandomRectangle();
+            case 3:
+                return getRandomIsoscelesTrapezoid();
+            case 4:
+               return getRandomRightTriangle();
+        }
+        return figure;
     }
 
     public Figure getDefaultFigure() {
         Figure circle = new Circle(DEFAULT_RADIUS);
-        circle.setColor(new ColorSupplier().getDefaultColor());
-        return circle;
-    }
-
-    public void drawDefaultFigure() {
-        System.out.println("Figure: circle, area: " + new Circle(DEFAULT_RADIUS).getArea()
+        circle.setColor(DEFAULT_COLOR);
+        System.out.println("Figure: circle, area: " + circle.getArea()
                 + " sq.units, radius: " + DEFAULT_RADIUS + " units, color: "
-                + new ColorSupplier().getDefaultColor().toLowerCase());
+                + DEFAULT_COLOR.toLowerCase());
+        return circle;
     }
 }
