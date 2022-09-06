@@ -13,7 +13,6 @@ public class Square extends Figure {
         return side * side;
     }
 
-
     @Override
     public String draw() {
         return "Square{"

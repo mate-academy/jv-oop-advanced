@@ -15,7 +15,6 @@ public class Rectangle extends Figure {
         return firstSide * secondSide;
     }
 
-
     @Override
     public String draw() {
         return "Rectangle{"
