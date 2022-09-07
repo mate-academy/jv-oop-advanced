@@ -1,11 +1,7 @@
 package core.basesyntax;
 
-import java.util.Random;
-
-public abstract class Figure implements AreaCalculator, Drawable {
-    private static final int MAX_SIZE = 25;
+public class Figure implements AreaCalculator, Drawable {
     private String color;
-    private Random random = new Random();
 
     public String getColor() {
         return color;
@@ -15,11 +11,13 @@ public abstract class Figure implements AreaCalculator, Drawable {
         this.color = color;
     }
 
-    public int getRandom() {
-        return random.nextInt(MAX_SIZE);
+    @Override
+    public double getArea() {
+        return 0;
     }
 
-    public void setRandom(Random random) {
-        this.random = random;
+    @Override
+    public void draw() {
+
     }
 }
