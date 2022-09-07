@@ -4,9 +4,10 @@ import java.util.Random;
 
 public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        int figureIndex = new Random().nextInt(4);
+        int figureIndex = random.nextInt(4);
         switch (figureIndex) {
             case 0:
                 return new Circle(colorSupplier.getRandomColor(),getRandomInt());

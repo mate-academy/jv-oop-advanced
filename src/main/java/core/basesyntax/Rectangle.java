@@ -4,7 +4,7 @@ public class Rectangle extends Figure {
     private int firstSide;
     private int secondSide;
 
-    public Rectangle(String color, int firstLength, int secondLength) {
+    public Rectangle(String color, int firstSide, int secondSide) {
         super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
@@ -32,7 +32,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void drawable() {
+    public void draw() {
         System.out.println("This figure is Rectangle with area"
                 + getArea()
                 + " square units"

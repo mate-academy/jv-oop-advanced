@@ -22,7 +22,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public void drawable() {
+    public void draw() {
         System.out.println("This figure is Circle with area: "
                 + getArea() + " square units, "
                 + "with radius " + getRadius()
