@@ -19,7 +19,7 @@ public class RightTriangle extends Figure {
     }
 
     public void setSideA(double sideA) {
-        this.secondLeg = sideA;
+        this.firstLeg = sideA;
     }
 
     public void setSideB(double sideB) {
@@ -27,7 +27,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void toDraw() {
+    public void draw() {
         System.out.println("Figure: Right triangle, area: " + getArea() + " sq.units, sideA: "
                 + getSideA() + "sideB: " + getSideB() + " sq.units, Color: " + getColor());
     }

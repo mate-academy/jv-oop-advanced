@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements Printable,Calculatable {
+public abstract class Figure implements Drawable, Calculatable {
     private String color;
 
     public Figure(String color) {
@@ -15,9 +15,4 @@ public abstract class Figure implements Printable,Calculatable {
         return color;
     }
 
-    @Override
-    public abstract void toDraw();
-
-    @Override
-    public abstract double getArea();
 }

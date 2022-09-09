@@ -20,6 +20,10 @@ public class IsoscelesTrapezoid extends Figure {
         return sideBottom;
     }
 
+    public void setSide(double side) {
+        this.side = side;
+    }
+
     public double getSide() {
         return side;
     }
@@ -33,8 +37,8 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public void toDraw() {
-        System.out.println("Figure: Isolescent Tarapezoid, area: "
+    public void draw() {
+        System.out.println("Figure: Isosceles Tarapezoid, area: "
                 + getArea() + " sq.units, sideTop: "
                 + getSideTop() + " sideBottom: " + getSideBottom()
                 + " sq.units, side right and Left : "

@@ -7,7 +7,7 @@ public class FigureSupplier {
     private final ColorSupplier randomColor = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int index = new Random().nextInt(Figures.values().length);
+        int index = random.nextInt(Figures.values().length);
         String figureType = String.valueOf(Figures.values()[index]);
 
         if (figureType.equals(Figures.SQUARE.toString())) {
@@ -34,6 +34,7 @@ public class FigureSupplier {
                     random.nextDouble() + random.nextInt(10));
         } else {
             return null;
+
         }
     }
 

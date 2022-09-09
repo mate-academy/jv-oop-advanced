@@ -6,11 +6,11 @@ public class Main {
         Figure[] figuresArray = new Figure[6];
         for (int i = 0; i < 3; i++) {
             figuresArray[i] = figureSupplier.getRandomFigure();
-            figuresArray[i].toDraw();
+            figuresArray[i].draw();
         }
         for (int i = 3; i < 6; i++) {
             figuresArray[i] = figureSupplier.getDefaultFigure();
-            figuresArray[i].toDraw();
+            figuresArray[i].draw();
         }
 
     }
