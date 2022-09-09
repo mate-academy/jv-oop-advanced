@@ -1,11 +1,11 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private static final int MAX_RADIUS = 25;
     private int radius;
 
-    public Circle(int radius) {
+    public Circle(int radius, String color) {
         this.radius = radius;
+        setColor(color);
     }
 
     public int getRadius() {
@@ -24,6 +24,6 @@ public class Circle extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: circle, area: " + getArea() + " sq.units, radius: " + radius
-                + " units, color: " + new ColorSupplier().getRandomColor().toLowerCase());
+                + " units, color: " + getColor());
     }
 }
