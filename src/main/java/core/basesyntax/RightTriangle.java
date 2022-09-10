@@ -5,7 +5,7 @@ public class RightTriangle extends Figure {
     private double secondLeg;
 
     public RightTriangle(double firstLeg, double secondLeg, String color) {
-        this.setColor(color);
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
@@ -28,9 +28,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public double getArea() {
-        double area;
-        area = (this.firstLeg * this.secondLeg) / 2;
-        return area;
+        return (this.firstLeg * this.secondLeg) / 2;
     }
 
     @Override

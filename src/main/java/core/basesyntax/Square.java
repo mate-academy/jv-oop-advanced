@@ -4,15 +4,13 @@ public class Square extends Figure {
     private double side;
 
     public Square(double side, String color) {
-        this.setColor(color);
+        super(color);
         this.side = side;
     }
 
     @Override
     public double getArea() {
-        double area;
-        area = this.side * this.side;
-        return area;
+        return this.side * this.side;
     }
 
     @Override
