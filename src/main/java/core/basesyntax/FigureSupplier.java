@@ -4,8 +4,27 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
+    private static final double defaultRadius = 10.0;
+    private static final String defaultColor = "WHITE";
     private static final Random random = new Random();
     private static final ColorSupplier colorSupplier = new ColorSupplier();
+
+    public Figure getRandomFigure() {
+        int figureNumber = random.nextInt(FIGURE_COUNT + 1);
+        switch (figureNumber) {
+            case 1: return getRandomCircle();
+            case 2: return getRandomRectangle();
+            case 3: return getRandomSquare();
+            case 4: return getRandomIsoscelesTrapezoid();
+            default: return getRandomRightTriangle();
+        }
+    }
+
+    public Figure getDefaultFigure() {
+
+        Figure defaultFigure = new Circle(defaultRadius, defaultColor);
+        return defaultFigure;
+    }
 
     private Circle getRandomCircle() {
         double radius = random.nextDouble() * 100;
@@ -44,21 +63,5 @@ public class FigureSupplier {
         String color = colorSupplier.getRandomColor();
         Square square = new Square(side, color);
         return square;
-    }
-
-    public Figure getRandomFigure() {
-        int figureNumber = random.nextInt(FIGURE_COUNT + 1);
-        switch (figureNumber) {
-            case 1: return getRandomCircle();
-            case 2: return getRandomRectangle();
-            case 3: return getRandomSquare();
-            case 4: return getRandomIsoscelesTrapezoid();
-            default: return getRandomRightTriangle();
-        }
-    }
-
-    public Figure getDefaultFigure() {
-        Figure defaultFigure = new Circle(10.0, "WHITE");
-        return defaultFigure;
     }
 }
