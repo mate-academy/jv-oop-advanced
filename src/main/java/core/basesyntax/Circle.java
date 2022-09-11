@@ -5,9 +5,7 @@ public class Circle extends Figure {
 
     public Circle(String color, double radius) {
         super(color);
-        if (radius > 0) {
-            this.radius = radius;
-        }
+        this.radius = radius;
     }
 
     @Override
@@ -18,6 +16,6 @@ public class Circle extends Figure {
     @Override
     public void draw() {
         System.out.format("Figure: circle, color: %s, area = %.2f, radius = %.2f\n",
-                getColor().toLowerCase(), getArea(), radius);
+                getColor().toLowerCase(),getArea(), radius);
     }
 }

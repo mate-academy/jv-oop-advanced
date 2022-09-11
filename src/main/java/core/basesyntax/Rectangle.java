@@ -6,10 +6,8 @@ public class Rectangle extends Figure {
 
     public Rectangle(String color, double length, double width) {
         super(color);
-        if (length > 0 && width > 0) {
-            this.length = length;
-            this.width = width;
-        }
+        this.length = length;
+        this.width = width;
     }
 
     @Override
@@ -19,8 +17,8 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.format("Figure: rectangle, color: %s, area = %.2f, (length = %.2f,"
-                + " width = %.2f)\n",
-                super.getColor().toLowerCase(), getArea(), length, width);
+        System.out.format("Figure: rectangle, color: %s, area = %.2f, (length = %.2f, "
+                + "width = %.2f)\n",
+                super.getColor(), getArea(), length, width);
     }
 }

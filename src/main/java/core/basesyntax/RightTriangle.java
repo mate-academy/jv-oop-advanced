@@ -6,10 +6,8 @@ public class RightTriangle extends Figure {
 
     public RightTriangle(String color, double firstLeg, double secondLeg) {
         super(color);
-        if (firstLeg > 0 && secondLeg > 0) {
-            this.firstLeg = firstLeg;
-            this.secondLeg = secondLeg;
-        }
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
     }
 
     @Override
@@ -19,8 +17,8 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.format("Figure: right triangle, color: %s, area = %.2f,"
-                + " (firstLeg = %.2f, secondLeg = %.2f)\n",
-                getColor().toLowerCase(), getArea(), firstLeg, secondLeg);
+        System.out.format("Figure: right triangle, color: %s, area = %.2f, "
+                + "(firstLeg = %.2f, secondLeg = %.2f)\n",
+                getColor(), getArea(), firstLeg, secondLeg);
     }
 }
