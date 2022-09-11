@@ -4,6 +4,7 @@ public class Rectangle extends Figure {
     private float side = getSomething();
 
     private float secondSide = new FigureSupplier().getRandomFigure();
+
     @Override
     public float getArea() {
         return side * secondSide;

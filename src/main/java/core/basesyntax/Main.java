@@ -14,10 +14,9 @@ public class Main {
 
         Figure defCircle = new FigureSupplier().getDefaultFigure();
 
-
         Figure[] figures = {square, rectangle, rightTriangle, defCircle, defCircle, defCircle};
 
-        for (int i = 0; i < figures.length; i ++){
+        for (int i = 0; i < figures.length; i++) {
             figures[i].printInfo();
         }
     }

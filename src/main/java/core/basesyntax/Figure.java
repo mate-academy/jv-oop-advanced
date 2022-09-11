@@ -6,7 +6,6 @@ public abstract class Figure implements GetAreaAndInfo {
 
     private float something = new FigureSupplier().getRandomFigure();
 
-
     public void setName(String name) {
         this.name = name;
     }
@@ -14,7 +13,6 @@ public abstract class Figure implements GetAreaAndInfo {
     public String getName() {
         return name;
     }
-
 
     public String getColor() {
         return color;
