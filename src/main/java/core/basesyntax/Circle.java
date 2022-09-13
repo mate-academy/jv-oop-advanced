@@ -1,0 +1,32 @@
+package core.basesyntax;
+
+public class Circle extends Figure {
+    private int radius;
+
+    public Circle(int radius) {
+        this.radius = radius;
+    }
+
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+
+    @Override
+    public double getArea() {
+
+        return Math.PI * radius * radius;
+    }
+
+    @Override
+    public String draw() {
+        ColorSupplier supplier = new ColorSupplier();
+        return "Figure: circle, area: " + getArea() + " sq.units, radius: "
+                + radius + " units, color: " + supplier.getRandomColor();
+    }
+
+    @Override
+    public String toString() {
+        return "Figure: circle, area: " + getArea() + " sq.units, radius: "
+                + radius + " units, color: " + String.valueOf(Color.WHITE);
+    }
+}
