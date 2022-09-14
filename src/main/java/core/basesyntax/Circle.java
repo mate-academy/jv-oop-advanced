@@ -20,14 +20,8 @@ public class Circle extends Figure {
 
     @Override
     public String draw() {
-        ColorSupplier supplier = new ColorSupplier();
         return "Figure: circle, area: " + getArea() + " sq.units, radius: "
-                + radius + " units, color: " + supplier.getRandomColor();
+                + radius + " units, color: " + getColor();
     }
 
-    @Override
-    public String toString() {
-        return "Figure: circle, area: " + getArea() + " sq.units, radius: "
-                + radius + " units, color: " + String.valueOf(Color.WHITE);
-    }
 }

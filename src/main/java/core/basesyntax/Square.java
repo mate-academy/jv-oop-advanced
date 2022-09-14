@@ -20,8 +20,7 @@ public class Square extends Figure {
 
     @Override
     public String draw() {
-        ColorSupplier supplier = new ColorSupplier();
         return "Figure: square, area: " + getArea() + " sq.units, side: " + side + " units, color: "
-                + supplier.getRandomColor();
+                + getColor();
     }
 }

@@ -12,7 +12,7 @@ public class Main {
                 System.out.println(figures[i].draw());
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
-                System.out.println(figures[i]);
+                System.out.println(figures[i].draw());
             }
         }
     }

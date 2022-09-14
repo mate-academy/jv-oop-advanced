@@ -25,9 +25,7 @@ public class Rectangle extends Figure {
 
     @Override
     public String draw() {
-        ColorSupplier supplier = new ColorSupplier();
         return "Figure: rectangle, area: " + getArea() + " sq.units, leftSide: "
-                + leftSide + " units, rightSide: " + rightSide + " units, color: "
-                + supplier.getRandomColor();
+                + leftSide + " units, rightSide: " + rightSide + " units, color: " + getColor();
     }
 }

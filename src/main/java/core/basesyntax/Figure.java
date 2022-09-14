@@ -7,6 +7,10 @@ public class Figure implements AreaCalculator, DrawingFigure {
         this.color = color;
     }
 
+    public String getColor() {
+        return color;
+    }
+
     @Override
     public double getArea() {
         return 0;

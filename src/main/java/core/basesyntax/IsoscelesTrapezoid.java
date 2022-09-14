@@ -31,9 +31,8 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String draw() {
-        ColorSupplier supplier = new ColorSupplier();
         return "Figure: isoscelesTrapezoid, area: " + getArea() + " sq.units, sideA: "
                 + sideA + " units, sideB: " + sideB + " units, height: "
-                + height + " units, color: " + supplier.getRandomColor();
+                + height + " units, color: " + getColor();
     }
 }

@@ -25,9 +25,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public String draw() {
-        ColorSupplier supplier = new ColorSupplier();
         return "Figure: rightTriangle, area: " + getArea() + " sq.units, leftLeg: "
-                + leftLeg + " units, rightLeg: " + rightLeg + " units, color: "
-                + supplier.getRandomColor();
+                + leftLeg + " units, rightLeg: " + rightLeg + " units, color: " + getColor();
     }
 }
