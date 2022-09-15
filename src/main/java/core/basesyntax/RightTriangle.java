@@ -1,10 +1,10 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements Area {
+public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
-    public RightTriangle (double firstLeg, double secondLeg) {
+    public RightTriangle(double firstLeg, double secondLeg) {
         super(new ColorSupplier().getRandomColor());
         if (firstLeg > 0 && secondLeg > 0) {
             this.firstLeg = firstLeg;

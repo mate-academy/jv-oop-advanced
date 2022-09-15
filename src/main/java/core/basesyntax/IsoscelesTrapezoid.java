@@ -1,13 +1,13 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements Area {
+public class IsoscelesTrapezoid extends Figure {
     private double sideBig;
     private double sideShort;
     private double height;
 
     public IsoscelesTrapezoid(double sideBig, double sideShort, double height) {
         super(new ColorSupplier().getRandomColor());
-        if(sideShort > 0 && sideBig > 0 && height > 0 && sideBig > sideShort) {
+        if (sideShort > 0 && sideBig > 0 && height > 0 && sideBig > sideShort) {
             this.sideBig = sideBig;
             this.sideShort = sideShort;
             this.height = height;
