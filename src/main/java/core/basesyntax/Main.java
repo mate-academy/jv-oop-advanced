@@ -5,7 +5,6 @@ public class Main {
 
         Figure[] figures = new Figure[3];
         FigureSupplier figureSupplier = new FigureSupplier();
-
         for (int i = 0; i < figures.length; i++) {
             if (i < (figures.length / 2) + 1) {
                 figures[i] = figureSupplier.getRandomFigure();
