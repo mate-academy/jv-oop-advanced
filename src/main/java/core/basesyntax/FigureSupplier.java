@@ -8,7 +8,7 @@ public class FigureSupplier {
     private static final String DEFAULT_COLOR = String.valueOf(Color.WHITE);
     private static final int COUNT_OF_RANDOM = 100;
     private Random random = new Random();
-    private ColorSupplier supplier = new ColorSupplier();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int randomFigure = random.nextInt(FIGURE_COUNT);
@@ -22,42 +22,35 @@ public class FigureSupplier {
             case 3:
                 return getRandomRightTriangle();
             case 4:
-                return getRandomIsoscelesTrapezoid();
             default:
-                System.out.println("this figure does not exist");
+                return getRandomIsoscelesTrapezoid();
         }
-        return null;
     }
 
     private Figure getRandomIsoscelesTrapezoid() {
-        Figure isoscelesTrapezoid = new IsoscelesTrapezoid(
-                String.valueOf(supplier.getRandomColor()), random.nextInt(COUNT_OF_RANDOM),
+        return new IsoscelesTrapezoid(
+                String.valueOf(colorSupplier.getRandomColor()), random.nextInt(COUNT_OF_RANDOM),
                 random.nextInt(COUNT_OF_RANDOM), random.nextInt(COUNT_OF_RANDOM));
-        return isoscelesTrapezoid;
     }
 
     private Figure getRandomCircle() {
-        Figure circle = new Circle(String.valueOf(supplier.getRandomColor()),
+        return new Circle(String.valueOf(colorSupplier.getRandomColor()),
                 random.nextInt(100));
-        return circle;
     }
 
     private Figure getRandomRightTriangle() {
-        Figure rightTriangle = new RightTriangle(String.valueOf(supplier.getRandomColor()),
+        return new RightTriangle(String.valueOf(colorSupplier.getRandomColor()),
                 random.nextInt(COUNT_OF_RANDOM), random.nextInt(COUNT_OF_RANDOM));
-        return rightTriangle;
     }
 
     private Figure getRandomRectangle() {
-        Figure rectangle = new Rectangle(String.valueOf(supplier.getRandomColor()),
+        return new Rectangle(String.valueOf(colorSupplier.getRandomColor()),
                 random.nextInt(COUNT_OF_RANDOM), random.nextInt(COUNT_OF_RANDOM));
-        return rectangle;
     }
 
     private Figure getRandomSquare() {
-        Figure square = new Square(String.valueOf(supplier.getRandomColor()),
+        return new Square(String.valueOf(colorSupplier.getRandomColor()),
                 random.nextInt(COUNT_OF_RANDOM));
-        return square;
     }
 
     public Figure getDefaultFigure() {
