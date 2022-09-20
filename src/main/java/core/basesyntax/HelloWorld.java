@@ -12,7 +12,6 @@ public class HelloWorld {
 
         }
         for (Figure figure: figures) {
-
             figure.draw();
             figureSupplier.getDefaultFigure().draw();
         }

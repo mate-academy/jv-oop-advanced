@@ -4,8 +4,9 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int circleDefaultRadius = 10;
-    public static final String circleDefaultColor = Colors.WHITE.name();
+    public static final String circleDefaultColor = Color.WHITE.name();
     public static final int randomNumber = 4;
+    public static final int constNumber = 50;
     private ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
@@ -48,7 +49,7 @@ public class FigureSupplier {
     }
 
     private int getRandomInt() {
-        return new Random().nextInt(50);
+        return new Random().nextInt(constNumber);
     }
 
     public Figure getDefaultFigure() {
