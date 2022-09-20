@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends Figure implements Behaviour {
+public class Square extends Figure {
     private final double side = Math.random() * (10.00);
     
     @Override

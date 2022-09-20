@@ -3,7 +3,7 @@ package core.basesyntax;
 public class Main {
     public static void main(String[] args) {
         
-        int[] mas = new int[4];
+        int[] mas = new int[5];
         FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < mas.length; i++) {
             if (i <= mas.length / 2) {

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements Behaviour {
+public class RightTriangle extends Figure {
     private final double side1 = Math.random() * (10.00);
     private final double hight = Math.random() * (10.00);
     

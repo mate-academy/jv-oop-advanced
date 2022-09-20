@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements Behaviour {
+public class IsoscelesTrapezoid extends Figure {
     private final double side1 = Math.random() * (10.00);
     private final double side2 = Math.random() * (10.00);
     private final double height = Math.random() * (10.00);

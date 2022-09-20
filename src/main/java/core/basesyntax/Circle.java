@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements Behaviour {
+public class Circle extends Figure {
     private final double side = Math.random() * (10.00);
     
     @Override

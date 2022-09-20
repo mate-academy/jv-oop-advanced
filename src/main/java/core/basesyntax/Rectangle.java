@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Behaviour {
+public class Rectangle extends Figure {
     private final double side1 = Math.random() * (10.00);
     private final double side2 = Math.random() * (10.00);
     
