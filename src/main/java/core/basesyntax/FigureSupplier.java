@@ -1,15 +1,13 @@
 package core.basesyntax;
 
-import java.awt.*;
 import java.util.Random;
 
 public class FigureSupplier {
+    public static final int circleDefaultRadius = 10;
+    public static final String circleDefaultColor = Colors.WHITE.name();
+    public static final int randomNumber = 4;
     private ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
-    private static final int circleDefaultRadius = 10;
-    private static final String circleDefaultColor = Colors.WHITE.name();
-    private static final int randomNumber = 4;
-
 
     public Figure getRandomFigure() {
         int figureIndex = random.nextInt(randomNumber);
@@ -19,38 +17,42 @@ public class FigureSupplier {
             case 1:
                 return getRandomIsoscelesTrapezoid();
             case 2:
-               return getRandomRectangle();
+                return getRandomRectangle();
             case 3:
-               return getRandomRightTriangle();
+                return getRandomRightTriangle();
             case 4:
             default:
                 return getRandomSquare();
         }
     }
+
     private Circle getRandomCircle() {
         return new Circle(colorSupplier.getRandomColor(), getRandomInt());
     }
+
     private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomInt(), getRandomInt(), getRandomInt());
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomInt(),
+                getRandomInt(), getRandomInt());
     }
+
     private Rectangle getRandomRectangle() {
         return new Rectangle(colorSupplier.getRandomColor(), getRandomInt(),getRandomInt());
     }
+
     private RightTriangle getRandomRightTriangle() {
         return new RightTriangle(colorSupplier.getRandomColor(), getRandomInt(),getRandomInt());
     }
+
     private Square getRandomSquare() {
         return new Square(colorSupplier.getRandomColor(), getRandomInt());
     }
-
 
     private int getRandomInt() {
         return new Random().nextInt(50);
     }
 
     public Figure getDefaultFigure() {
-      return new Circle(circleDefaultColor, circleDefaultRadius);
+        return new Circle(circleDefaultColor, circleDefaultRadius);
     }
-
 }
 
