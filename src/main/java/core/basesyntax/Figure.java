@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public abstract class Figure implements Drawable {
-    private String color;
+    private final String color;
 
     public Figure(String color) {
         this.color = color;
@@ -11,9 +11,5 @@ public abstract class Figure implements Drawable {
 
     public String getColor() {
         return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
     }
 }
