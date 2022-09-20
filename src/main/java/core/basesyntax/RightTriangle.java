@@ -13,7 +13,7 @@ public class RightTriangle extends Figure {
     @Override
     public void draw() {
         System.out.printf(
-                "Figure: right triangle; Base: %f, Height: %f; Area: %f; Color: %s\n",
+                "Figure: right triangle; Base: %.2f, Height: %.2f; Area: %.2f; Color: %s\n",
                 base, height, getArea(), getColor()
         );
     }
