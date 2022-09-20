@@ -17,7 +17,10 @@ public class FigureSupplier {
         var figureIndex = random.nextInt(Figures.values().length);
         switch (Figures.values()[figureIndex]) {
             case SQUARE:
-                return new Square(colorSupplier.getRandomColor(), random.nextDouble() * MAX_PARAMETER);
+                return new Square(
+                        colorSupplier.getRandomColor(),
+                        random.nextDouble() * MAX_PARAMETER
+                );
             case RECTANGLE:
                 return new Rectangle(
                         colorSupplier.getRandomColor(),
@@ -30,15 +33,21 @@ public class FigureSupplier {
                         random.nextDouble() * MAX_PARAMETER
                 );
             case CIRCLE:
-                return new Circle(colorSupplier.getRandomColor(), random.nextDouble() * MAX_PARAMETER);
+                return new Circle(
+                        colorSupplier.getRandomColor(),
+                        random.nextDouble() * MAX_PARAMETER
+                );
             case ISOSCELES_TRAPEZOID:
                 return new IsoscelesTrapezoid(
                         colorSupplier.getRandomColor(),
-                        random.nextDouble() * MAX_PARAMETER, random.nextDouble() * MAX_PARAMETER,
+                        random.nextDouble() * MAX_PARAMETER,
+                        random.nextDouble() * MAX_PARAMETER,
                         random.nextDouble() * MAX_PARAMETER
                 );
             default:
-                throw new IllegalStateException("Unexpected value: " + Figures.values()[figureIndex]);
+                throw new IllegalStateException(
+                        "Unexpected value: " + Figures.values()[figureIndex]
+                );
         }
     }
 
