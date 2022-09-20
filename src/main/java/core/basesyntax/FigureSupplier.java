@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final double MAX_PARAMETER = 30d;
+    private static final double DEFAULT_CIRCLE_RADIUS = 10;
 
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
@@ -39,5 +40,9 @@ public class FigureSupplier {
             default:
                 throw new IllegalStateException("Unexpected value: " + Figures.values()[figureIndex]);
         }
+    }
+
+    public Figure getDefaultFigure() {
+        return new Circle("white", DEFAULT_CIRCLE_RADIUS);
     }
 }
