@@ -9,9 +9,13 @@ public class HelloWorld {
         Figure[] figures = new Figure[new Random().nextInt(6)];
         for (int i = 0; i < figures.length; i++) {
             figures[i] = figureSupplier.getRandomFigure();
+
         }
         for (Figure figure: figures) {
+
             figure.draw();
+            figureSupplier.getDefaultFigure().draw();
         }
+
     }
 }
