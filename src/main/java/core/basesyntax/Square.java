@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Square extends Figure implements Behaviour {
-    private final double  side = Math.random() * (10.00);
+    private final double side = Math.random() * (10.00);
     
     @Override
     public double getArea() {
