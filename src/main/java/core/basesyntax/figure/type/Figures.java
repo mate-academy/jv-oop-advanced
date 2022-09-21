@@ -3,7 +3,7 @@ package core.basesyntax.figure.type;
 import core.basesyntax.behaviour.Calculator;
 import core.basesyntax.behaviour.PrintInfo;
 
-public abstract class Figures implements Calculator, PrintInfo {
+public abstract class Figure implements Calculator, PrintInfo {
     private String color;
 
     protected Figures(String color) {
