@@ -1,5 +1,5 @@
 package core.basesyntax.behaviour;
 
-public interface PrintInfo {
-    void print();
+public interface Drawable {
+    void draw();
 }
