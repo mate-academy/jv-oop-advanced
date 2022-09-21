@@ -19,10 +19,4 @@ public abstract class Figure implements Calculator, PrintInfo {
         this.color = color;
     }
 
-    @Override
-    public double getMeasure() {
-        return 0;
-    }
-
-    public abstract void print();
 }
