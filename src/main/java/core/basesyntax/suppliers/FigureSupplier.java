@@ -39,11 +39,10 @@ public class FigureSupplier {
     }
 
     private int getRandomInt() {
-
-        return new Random().nextInt(100);
+        return random.nextInt(100);
     }
 
     private double getRandomDouble() {
-        return new Random().nextDouble();
+        return random.nextDouble();
     }
 }
