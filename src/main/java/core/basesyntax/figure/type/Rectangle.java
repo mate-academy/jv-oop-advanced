@@ -1,39 +1,38 @@
 package core.basesyntax.figure.type;
 
-public class Rectangle extends Figures {
-
-    private int side1;
-    private int side2;
+public class Rectangle extends Figure {
+    private int firstSide;
+    private int secondSide;
 
     public Rectangle(String color, int side1, int side2) {
         super(color);
-        this.side1 = side1;
-        this.side2 = side2;
+        this.firstSide = side1;
+        this.secondSide = side2;
     }
 
     public int getSide1() {
-        return side1;
+        return firstSide;
     }
 
     public void setSide1(int side1) {
-        this.side1 = side1;
+        this.firstSide = side1;
     }
 
     public int getSide2() {
-        return side2;
+        return secondSide;
     }
 
     public void setSide2(int side2) {
-        this.side2 = side2;
+        this.secondSide = side2;
     }
 
     @Override
-    public double getMeasure() {
-        return side1 * side2;
+    public double getArea() {
+        return firstSide * secondSide;
     }
 
     @Override
-    public void print() {
-        System.out.println("Figure Rectangle, measure: " + getMeasure() + ", Color: " + getColor());
+    public void draw() {
+        System.out.println("Figure Rectangle, measure: " + getArea() + ", Color: " + getColor());
     }
 }

@@ -1,12 +1,12 @@
 package core.basesyntax.figure.type;
 
-import core.basesyntax.behaviour.Calculator;
-import core.basesyntax.behaviour.PrintInfo;
+import core.basesyntax.behaviour.AreaCalculator;
+import core.basesyntax.behaviour.Drawable;
 
-public abstract class Figure implements Calculator, PrintInfo {
+public abstract class Figure implements AreaCalculator, Drawable {
     private String color;
 
-    protected Figures(String color) {
+    protected Figure(String color) {
 
         this.color = color;
     }

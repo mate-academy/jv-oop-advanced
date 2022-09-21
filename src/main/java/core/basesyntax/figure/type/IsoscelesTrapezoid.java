@@ -1,50 +1,50 @@
 package core.basesyntax.figure.type;
 
-public class IsoscelesTrapezoid extends Figures {
-    private double lengthSize1;
-    private double lengthSize2;
-    private double lengthSize3;
+public class IsoscelesTrapezoid extends Figure {
+    private double size;
+    private double firstBase;
+    private double secondBase;
 
     public IsoscelesTrapezoid(String color, double lengthSize1, double lengthSize2,
                                double lengthSize3) {
         super(color);
-        this.lengthSize1 = lengthSize1;
-        this.lengthSize2 = lengthSize2;
-        this.lengthSize3 = lengthSize3;
+        this.size = lengthSize1;
+        this.firstBase = lengthSize2;
+        this.secondBase = lengthSize3;
     }
 
     public double getLengthSize1() {
-        return lengthSize1;
+        return size;
     }
 
     public void setLengthSize1(double lengthSize1) {
-        this.lengthSize1 = lengthSize1;
+        this.size = lengthSize1;
     }
 
     public double getLengthSize2() {
-        return lengthSize2;
+        return firstBase;
     }
 
     public void setLengthSize2(double lengthSize2) {
-        this.lengthSize2 = lengthSize2;
+        this.firstBase = lengthSize2;
     }
 
     public double getLengthSize3() {
-        return lengthSize3;
+        return secondBase;
     }
 
     public void setLengthSize3(double lengthSize3) {
-        this.lengthSize3 = lengthSize3;
+        this.secondBase = lengthSize3;
     }
 
     @Override
-    public double getMeasure() {
-        return ((lengthSize1 + lengthSize2) / 2) * lengthSize3;
+    public double getArea() {
+        return ((size + firstBase) / 2) * secondBase;
     }
 
     @Override
-    public void print() {
-        System.out.println("Figure IsoscelesTrapezoid, measure: " + getMeasure()
+    public void draw() {
+        System.out.println("Figure IsoscelesTrapezoid, measure: " + getArea()
                 + ", Color: " + getColor());
     }
 }

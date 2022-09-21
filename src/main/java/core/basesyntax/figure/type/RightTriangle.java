@@ -1,6 +1,6 @@
 package core.basesyntax.figure.type;
 
-public class RightTriangle extends Figures {
+public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
@@ -27,13 +27,13 @@ public class RightTriangle extends Figures {
     }
 
     @Override
-    public double getMeasure() {
+    public double getArea() {
         return firstLeg * secondLeg / 2;
     }
 
     @Override
-    public void print() {
-        System.out.println("Figure RightTriangle, measure: " + getMeasure()
+    public void draw() {
+        System.out.println("Figure RightTriangle, measure: " + getArea()
                 + ", Color: " + getColor());
     }
 }

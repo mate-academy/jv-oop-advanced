@@ -1,7 +1,7 @@
 package core.basesyntax.suppliers;
 
 import core.basesyntax.figure.type.Circle;
-import core.basesyntax.figure.type.Figures;
+import core.basesyntax.figure.type.Figure;
 import core.basesyntax.figure.type.IsoscelesTrapezoid;
 import core.basesyntax.figure.type.Rectangle;
 import core.basesyntax.figure.type.RightTriangle;
@@ -12,11 +12,11 @@ public class FigureSupplier {
     private ColoreSupplier coloreSupplier = new ColoreSupplier();
     private Random random = new Random();
     
-    public Figures getRandomFigure() {
+    public Figure getRandomFigure() {
         int figureIndex = random.nextInt(4);
         switch (figureIndex) {
             case 0 :
-                return getRandomCircle();
+                return new Circle(coloreSupplier.getRandomColor(), getRandomInt());
             case 1 :
                 return new IsoscelesTrapezoid(coloreSupplier.getRandomColor(),
                         getRandomDouble(),
