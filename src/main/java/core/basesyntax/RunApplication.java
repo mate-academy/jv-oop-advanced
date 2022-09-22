@@ -1,12 +1,19 @@
 package core.basesyntax;
 
 public class RunApplication {
+    private static int numOfFigures = 10;
+    private static int halfOfArray = numOfFigures / 2;
     private static FigureSupplier figureSuppluer = new FigureSupplier();
 
     public static void main(String[] args) {
-        Figure[] figures = new Figure[6];
+
+        Figure[] figures = new Figure[numOfFigures];
         for (int i = 0; i < figures.length; i++) {
-            figures[i] = figureSuppluer.getRandomFigure();
+            if (i < halfOfArray) {
+                figures[i] = figureSuppluer.getRandomFigure();
+            } else {
+                figures[i] = figureSuppluer.getDefaultFigure();
+            }
         }
 
         for (Figure figure: figures) {
@@ -14,4 +21,3 @@ public class RunApplication {
         }
     }
 }
-
