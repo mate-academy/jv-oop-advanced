@@ -1,13 +1,12 @@
 package core.basesyntax.model;
 
 public class Circle extends Figure {
-     private int radius;
+    private int radius;
 
-     public Circle (String color, int radius) {
-         super(color);
-         this.radius = radius;
-     }
-
+    public Circle(String color, int radius) {
+        super(color);
+        this.radius = radius;
+    }
     public int getRadius() {
         return radius;
     }

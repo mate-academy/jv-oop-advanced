@@ -5,7 +5,9 @@ import core.basesyntax.model.*;
 import java.util.Random;
 
 public class FigureSupplier {
+
     private ColorSupplier colorSupplier = new ColorSupplier();
+
     public Figure getRandomFigure() {
         int figureIndex = new Random().nextInt(4);
         switch (figureIndex) {
@@ -31,6 +33,6 @@ public class FigureSupplier {
     }
 
     private int getRandomInt() {
-        return  new Random().nextInt(100);
+        return new Random().nextInt(100);
     }
 }
