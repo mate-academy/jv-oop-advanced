@@ -1,7 +1,20 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    private final double side = Math.random() * (10.00);
+    private double side;
+    
+    public Square(String color, double side) {
+        super(color);
+        this.side = side;
+    }
+    
+    public double getSide() {
+        return side;
+    }
+    
+    public void setSide(double side) {
+        this.side = side;
+    }
     
     @Override
     public double getArea() {
@@ -11,6 +24,6 @@ public class Square extends Figure {
     @Override
     public String draw() {
         return " Figure: Square,  area: " + getArea() + " sq.units, side: "
-                + side + " units, color: " + color();
+                + side + " units, color: " + getColor();
     }
 }

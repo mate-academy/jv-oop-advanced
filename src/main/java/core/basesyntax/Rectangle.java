@@ -1,8 +1,22 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private final double side1 = Math.random() * (10.00);
-    private final double side2 = Math.random() * (10.00);
+    private double side1;
+    private double side2;
+    
+    public Rectangle(String color, double side1, double side2) {
+        super(color);
+        this.side1 = side1;
+        this.side2 = side2;
+    }
+    
+    public double getSide1() {
+        return side1;
+    }
+    
+    public double getSide2() {
+        return side2;
+    }
     
     @Override
     public double getArea() {
@@ -12,6 +26,6 @@ public class Rectangle extends Figure {
     @Override
     public String draw() {
         return " Figure: Rectangle,  area: " + getArea() + " sq.units, side: "
-                + side1 + " " + side2 + " units, color: " + color();
+                + getSide1() + " " + getSide2() + " units, color: " + getColor();
     }
 }

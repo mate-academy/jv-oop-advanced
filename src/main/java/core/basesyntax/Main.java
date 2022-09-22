@@ -1,17 +1,24 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public class Main {
+    private static FigureSupplier figureSupplier = new FigureSupplier();
+    
     public static void main(String[] args) {
         
-        int[] mas = new int[5];
-        FigureSupplier figureSupplier = new FigureSupplier();
-        for (int i = 0; i < mas.length; i++) {
-            if (i <= mas.length / 2) {
-                System.out.println(figureSupplier.getRandomFigure((int) (Math.random() * (4))));
+        Figure[] figures = new Figure[new Random().nextInt(10 + 1)];
+        
+        for (int i = 0; i < figures.length; i++) {
+            if (i < figures.length / 2) {
+                figures[i] = figureSupplier.getRandomFigure();
             } else {
-                System.out.println(figureSupplier.getRandomFigure(0));
+                figures[i] = figureSupplier.getDefaultFigure();
             }
-            
+        }
+        
+        for (int i = 0; i < figures.length; i++) {
+            System.out.println(figures[i].draw());
         }
     }
 }

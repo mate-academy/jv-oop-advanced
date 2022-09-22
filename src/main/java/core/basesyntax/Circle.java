@@ -1,18 +1,29 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private final double side = Math.random() * (10.00);
+    private double radius;
+    
+    public Circle(String color, double radius) {
+        super(color);
+        this.radius = radius;
+    }
+    
+    public double getRadius() {
+        return radius;
+    }
+    
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
     
     @Override
     public String draw() {
         return " Figure: circe,  area: " + getArea() + " sq.units, side: "
-                + side + " units, color: " + color();
+                + getRadius() + " units, color: " + getColor();
     }
     
     @Override
     public double getArea() {
-        double pi = 3.14;
-        return pi * side * side;
+        return Math.PI * radius * radius;
     }
-    
 }
