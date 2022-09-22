@@ -21,7 +21,7 @@ public class Circle extends Figure {
         return Math.PI * (radius * radius);
     }
 
-    public void toDraw() {
+    public void draw() {
         System.out.println("Figure: " + getClass().getSimpleName() + ", area: "
                 + getArea() + " sq.unit, radius: "
                 + getRadius() + " units, color: " + getColor());

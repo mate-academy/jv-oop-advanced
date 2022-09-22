@@ -32,7 +32,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void toDraw() {
+    public void draw() {
         System.out.println("Figure: " + getClass().getSimpleName() + ", area: "
                 + getArea() + " sq.unit, firstSide: "
                 + getFirstSide() + " units, secondSide: "

@@ -10,7 +10,7 @@ public class RunApplication {
         }
 
         for (Figure figure: figures) {
-            figure.toDraw();
+            figure.draw();
         }
     }
 }

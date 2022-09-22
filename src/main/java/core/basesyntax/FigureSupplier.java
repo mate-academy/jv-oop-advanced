@@ -4,32 +4,31 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 4;
-    private static final Random random = new Random();
-    private static final ColorSupplier ColorSupplier = new ColorSupplier();
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     private double getRandomDouble() {
-        return new Random().nextDouble() * 10;
+        return random.nextDouble() * 10;
     }
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
         switch (figureNumber) {
             case 0:
-                return new Circle(ColorSupplier.getRandomColor(),getRandomDouble());
+                return new Circle(colorSupplier.getRandomColor(),getRandomDouble());
             case 1:
-                return new IsoscelesTrapezoid(ColorSupplier.getRandomColor(),getRandomDouble(),
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),getRandomDouble(),
                         getRandomDouble(),getRandomDouble());
             case 2:
-                return new Rectangle(ColorSupplier.getRandomColor(),
+                return new Rectangle(colorSupplier.getRandomColor(),
                         getRandomDouble(),getRandomDouble());
             case 3:
-                return new RightTriangle(ColorSupplier.getRandomColor(),
+                return new RightTriangle(colorSupplier.getRandomColor(),
                         getRandomDouble(),getRandomDouble());
             case 4:
-                return new Square(ColorSupplier.getRandomColor(),getRandomDouble());
+                return new Square(colorSupplier.getRandomColor(),getRandomDouble());
             default:
-                new Square(ColorSupplier.getRandomColor(),getRandomDouble());
+                return new Square(colorSupplier.getRandomColor(),getRandomDouble());
         }
-        return null;
     }
 }
