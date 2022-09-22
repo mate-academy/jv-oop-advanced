@@ -1,31 +1,31 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private double side1;
-    private double side2;
+    private double bottomBase;
+    private double topBase;
     private double height;
     
-    public IsoscelesTrapezoid(String color, double side1, double side2, double height) {
+    public IsoscelesTrapezoid(String color, double bottomBase, double topBase, double height) {
         super(color);
-        this.side1 = side1;
-        this.side2 = side2;
+        this.bottomBase = bottomBase;
+        this.topBase = topBase;
         this.height = height;
     }
     
-    public double getSide1() {
-        return side1;
+    public double getBottomBase() {
+        return bottomBase;
     }
     
-    public void setSide1(double side1) {
-        this.side1 = side1;
+    public void setBottomBase(double bottomBase) {
+        this.bottomBase = bottomBase;
     }
     
-    public double getSide2() {
-        return side2;
+    public double getTopBase() {
+        return topBase;
     }
     
-    public void setSide2(double side2) {
-        this.side2 = side2;
+    public void setTopBase(double topBase) {
+        this.topBase = topBase;
     }
     
     public double getHeight() {
@@ -38,13 +38,15 @@ public class IsoscelesTrapezoid extends Figure {
     
     @Override
     public double getArea() {
-        return ((side1 + side2) / 2 * height);
+        return ((bottomBase + topBase) / 2 * height);
     }
     
     @Override
-    public String draw() {
-        return " Figure: isosceles trapezoid,  area: " + getArea() + " sq.units, side1: "
-                + getSide1() + " side2 " + getSide2() + " height " + getHeight()
-                + " units, color: " + getColor();
+    public void draw() {
+        System.out.println(" Figure: isosceles trapezoid,  area: "
+                + getArea() + " sq.units, bottom base: "
+                + getBottomBase() + " top base " + getTopBase()
+                + " height " + getHeight()
+                + " units, color: " + getColor());
     }
 }
