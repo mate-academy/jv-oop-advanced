@@ -8,7 +8,6 @@ public class FigureSupplier {
     public static final int DEFAULT_RADIUS = 10;
     private final Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
-    private Figure figure;
 
     public Figure getRandomFigure() {
         int index = random.nextInt(GeometricFigure.values().length);
@@ -16,22 +15,16 @@ public class FigureSupplier {
         FigureSupplier figureSupplier = new FigureSupplier();
         switch (randomFigure) {
             case ISOSCELES_TRAPEZOID:
-                figure = figureSupplier.getIsoscelesTrapezoid();
-                break;
+                return getIsoscelesTrapezoid();
             case CIRCLE:
-                figure = figureSupplier.getCircle();
-                break;
+                return getCircle();
             case SQUARE:
-                figure = figureSupplier.getSquare();
-                break;
+                return getSquare();
             case RECTANGLE:
-                figure = figureSupplier.getRectangle();
-                break;
+                return getRectangle();
             default:
-                figure = figureSupplier.getRightTriangle();
-                break;
+                return getRightTriangle();
         }
-        return figure;
     }
 
     private IsoscelesTrapezoid getIsoscelesTrapezoid() {
@@ -69,7 +62,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        figure = new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
-        return figure;
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
