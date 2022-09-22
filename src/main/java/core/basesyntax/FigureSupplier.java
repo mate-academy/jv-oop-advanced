@@ -7,7 +7,7 @@ public class FigureSupplier {
     public static final String DEFAULT_COLOR = Color.WHITE.name();
     public static final int DEFAULT_RADIUS = 10;
     private final Random random = new Random();
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int index = random.nextInt(GeometricFigure.values().length);
