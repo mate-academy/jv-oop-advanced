@@ -4,14 +4,13 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
-    public static final Color DEFAULT_COLOR = Color.WHITE;
-    public static final int DEFAULT_COUNT = 10;
-    private int figureNumber;
+    
     private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
     
     public Figure getRandomFigure() {
-        figureNumber = random.nextInt(FIGURE_COUNT);
-        ColorSupplier colorSupplier = new ColorSupplier();
+        int figureNumber = random.nextInt(FIGURE_COUNT);
+        
         switch (figureNumber) {
             case 1:
                 return new Circle(colorSupplier.getRandomColor(),
@@ -19,16 +18,16 @@ public class FigureSupplier {
             case 2:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                         random.nextInt(FIGURE_COUNT),
-                        random.nextInt(10),
-                        random.nextInt(10));
+                        random.nextInt(FIGURE_COUNT),
+                        random.nextInt(FIGURE_COUNT));
             case 3:
                 return new Rectangle(colorSupplier.getRandomColor(),
                         random.nextInt(FIGURE_COUNT),
-                        random.nextInt(10));
+                        random.nextInt(FIGURE_COUNT));
             case 4:
                 return new RightTriangle(colorSupplier.getRandomColor(),
                         random.nextInt(FIGURE_COUNT),
-                        random.nextInt(10));
+                        random.nextInt(FIGURE_COUNT));
             default:
                 return new Square(colorSupplier.getRandomColor(),
                         random.nextInt(FIGURE_COUNT));
@@ -36,7 +35,13 @@ public class FigureSupplier {
     }
     
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR.name(), DEFAULT_COUNT);
+        return getRandomCircle();
+    }
+    
+    private Figure getRandomCircle() {
+        Color defaultcolor = Color.WHITE;
+        int defaultcount = 10;
+        return new Circle(defaultcolor.name(), defaultcount);
     }
 }
 
