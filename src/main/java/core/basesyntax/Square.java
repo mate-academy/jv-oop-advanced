@@ -21,7 +21,7 @@ public class Square extends Figure {
     public String draw() {
         return "Figure: square,"
                 + " area: " + getArea()
-                + " sq. units, side: " + getSide()
+                + " sq. units, side: " + side
                 + " units, color: " + getColor();
     }
 }

@@ -12,7 +12,6 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         int index = random.nextInt(GeometricFigure.values().length);
         GeometricFigure randomFigure = GeometricFigure.values()[index];
-        FigureSupplier figureSupplier = new FigureSupplier();
         switch (randomFigure) {
             case ISOSCELES_TRAPEZOID:
                 return getIsoscelesTrapezoid();

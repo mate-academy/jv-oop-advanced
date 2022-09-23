@@ -27,8 +27,8 @@ public class RightTriangle extends Figure {
     public String draw() {
         return "Figure: right triangle,"
                 + " area: " + getArea()
-                + " sq. units, height: " + getHeight()
-                + " units, basis: " + getBasis()
+                + " sq. units, height: " + height
+                + " units, basis: " + basis
                 + " units, color: " + getColor();
     }
 }

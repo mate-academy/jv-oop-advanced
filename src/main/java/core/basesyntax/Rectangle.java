@@ -27,8 +27,8 @@ public class Rectangle extends Figure {
     public String draw() {
         return "Figure: rectangle,"
                 + " area: " + getArea()
-                + " sq. units, firstSide: " + getFirstSide()
-                + " units, secondSide: " + getSecondSide()
+                + " sq. units, firstSide: " + firstSide
+                + " units, secondSide: " + secondSide
                 + " units, color: " + getColor();
     }
 }
