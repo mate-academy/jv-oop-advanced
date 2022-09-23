@@ -1,5 +1,4 @@
 package core.basesyntax.suppliers;
-
 import core.basesyntax.model.Color;
 import java.util.Random;
 

@@ -10,7 +10,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
-
+    public static final int RANDOM_RANGE = 100;
     private Random random = new Random();
 
     public Figure getRandomFigure() {
@@ -57,7 +57,7 @@ public class FigureSupplier {
     }
 
     private int getRandomInt() {
-        return random.nextInt(100);
+        return random.nextInt(RANDOM_RANGE);
     }
 
     public Figure getDefaultFigure() {
