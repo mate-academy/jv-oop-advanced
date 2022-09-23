@@ -10,7 +10,7 @@ public class RandomFigure extends Figure {
     private double firstline;
     private double secondline;
     private double thirdline;
-    private FigureSupplier supplierFigure;
+    public FigureSupplier supplierFigure;
     private ColorSupplier colorSupplier;
 
     public RandomFigure() {
@@ -25,40 +25,40 @@ public class RandomFigure extends Figure {
         secondline = new Random().nextInt(50);
         thirdline = new Random().nextInt(50);
 
-        switch (supplierFigure.getRandomFigura()) {
-            case CIRCLE:
+        switch (supplierFigure.getRandomFigure()) {
+            case 1:
                 figure = new Circle(DifferentFigure.CIRCLE.name(),
                         colorSupplier.getRandomColor(), firstline);
-                figure.drow();
+                figure.draw();
                 return figure.getArea();
-            case SQUARE:
+            case 2:
                 figure = new Square(DifferentFigure.SQUARE.name(),
                         colorSupplier.getRandomColor(), firstline);
-                figure.drow();
+                figure.draw();
                 return figure.getArea();
-            case RECTANGLE:
+            case 3:
                 figure = new Rectangle(DifferentFigure.RECTANGLE.name(),
                         colorSupplier.getRandomColor(), firstline, secondline);
-                figure.drow();
+                figure.draw();
                 return figure.getArea();
-            case RIGHTTRIANGLE:
+            case 4:
                 figure = new RightTriangle(DifferentFigure.RIGHTTRIANGLE.name(),
                         colorSupplier.getRandomColor(), firstline, secondline);
-                figure.drow();
+                figure.draw();
                 return figure.getArea();
-            case ISOSCELESTRAPEZOID:
+            case 5:
                 figure = new IsoscelesTrapezoid(DifferentFigure.ISOSCELESTRAPEZOID.name(),
                         colorSupplier.getRandomColor(), firstline, secondline, thirdline);
-                figure.drow();
+                figure.draw();
                 return figure.getArea();
             default:
-                supplierFigure.getRandomFigura();
+                supplierFigure.getRandomFigure();
         }
         return 0.0;
     }
 
     @Override
-    public void drow() {
+    public void draw() {
         getArea();
     }
 
@@ -101,4 +101,6 @@ public class RandomFigure extends Figure {
     public void setColorSupplier(ColorSupplier colorSupplier) {
         this.colorSupplier = colorSupplier;
     }
+
+
 }

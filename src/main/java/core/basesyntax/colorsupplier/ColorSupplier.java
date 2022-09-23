@@ -12,12 +12,4 @@ public class ColorSupplier {
         int index = random.nextInt(ColorFigure.values().length);
         return String.valueOf(ColorFigure.values()[index]);
     }
-
-    public Random getRandom() {
-        return random;
-    }
-
-    public void setRandom(Random random) {
-        ColorSupplier.random = random;
-    }
 }

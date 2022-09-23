@@ -8,18 +8,19 @@ import core.basesyntax.figuresupplier.FigureSupplier;
 
 public class Main {
     public static void main(String[] args) {
-        Drowable random1 = new RandomFigure();
-        Drowable random2 = new RandomFigure();
-        Drowable random3 = new RandomFigure();
-        Drowable circle = new Circle("Circle", "Red", 21);
-        Drowable rectangle = new Rectangle("Rectangle", "Blue", 21, 20);
-        Drowable square = new Square("Square", "Yellow", 21);
+        Drawable random1 = new RandomFigure();
+        Drawable random2 = new RandomFigure();
+        Drawable random3 = new RandomFigure();
+
+        Drawable circle = new Circle("Circle", "Red", 21);
+        Drawable rectangle = new Rectangle("Rectangle", "Blue", 21, 20);
+        Drawable square = new Square("Square", "Yellow", 21);
         FigureSupplier supplierFigure = new FigureSupplier();
-        Drowable[] figure = new Drowable[]{supplierFigure.getDefaultFigure(), random1, random2,
+        Drawable[] figure = new Drawable[]{supplierFigure.getDefaultFigure(), random1, random2,
                 random3, circle, rectangle, square};
 
-        for (Drowable figures : figure) {
-            figures.drow();
+        for (Drawable figures : figure) {
+            figures.draw();
         }
     }
 }
