@@ -9,11 +9,15 @@ public class Main {
     public static void main(String[]args) {
         Figure[] figures = new Figure[new Random().nextInt(6)];
         for (int i = 0; i < figures.length; i++) {
-            figureSupplier.getDefaultFigure().draw();
-            figures[i] = figureSupplier.getRandomFigure();
+            if (i < figures.length / 2) {
+                figures[i] = figureSupplier.getRandomFigure();
+            } else {
+                figures[i] = figureSupplier.getDefaultFigure();
+            }
         }
         for (Figure figure: figures) {
             figure.draw();
         }
     }
 }
+

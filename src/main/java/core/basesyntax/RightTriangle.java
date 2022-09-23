@@ -37,8 +37,8 @@ public class RightTriangle extends Figure {
                 + getArea()
                 + " square units"
                 + " and properties: "
-                + getBase()
+                + base
                 + ", "
-                + getHeight());
+                + height);
     }
 }

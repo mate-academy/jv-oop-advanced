@@ -37,8 +37,8 @@ public class Rectangle extends Figure {
                 + getArea()
                 + " square units"
                 + " and properties: "
-                + getFirstSide()
+                + firstSide
                 + ", "
-                + getSecondSide());
+                + secondSide);
     }
 }

@@ -26,7 +26,7 @@ public class Square extends Figure {
         System.out.println("This figure is Square with area "
                 + getArea() + " square units"
                 + " and properties: "
-                + getSide()
+                + side
         );
     }
 }

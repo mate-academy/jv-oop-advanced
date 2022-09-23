@@ -49,7 +49,7 @@ public class FigureSupplier {
     }
 
     private int getRandomInt() {
-        return new Random().nextInt(CONST_NUMBER);
+        return random.nextInt(CONST_NUMBER);
     }
 
     public Figure getDefaultFigure() {
