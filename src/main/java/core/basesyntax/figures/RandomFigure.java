@@ -4,13 +4,14 @@ import core.basesyntax.Figure;
 import core.basesyntax.colorsupplier.ColorSupplier;
 import core.basesyntax.figuresupplier.DifferentFigure;
 import core.basesyntax.figuresupplier.FigureSupplier;
+
 import java.util.Random;
 
 public class RandomFigure extends Figure {
+    private FigureSupplier supplierFigure;
     private double firstline;
     private double secondline;
     private double thirdline;
-    public FigureSupplier supplierFigure;
     private ColorSupplier colorSupplier;
 
     public RandomFigure() {
@@ -101,6 +102,4 @@ public class RandomFigure extends Figure {
     public void setColorSupplier(ColorSupplier colorSupplier) {
         this.colorSupplier = colorSupplier;
     }
-
-
 }
