@@ -30,6 +30,4 @@ public class Rectangle extends Figure {
                 + " unit sq., Length A=" + linelength
                 + " unit sq., Windth B= " + lineWindth + " unit sq.");
     }
-
-
 }
