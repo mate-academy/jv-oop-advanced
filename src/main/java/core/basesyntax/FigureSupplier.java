@@ -13,8 +13,7 @@ public class FigureSupplier {
         
         switch (figureNumber) {
             case 1:
-                return new Circle(colorSupplier.getRandomColor(),
-                        random.nextInt(FIGURE_COUNT));
+                return getRandomCircle();
             case 2:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                         random.nextInt(FIGURE_COUNT),
