@@ -52,7 +52,7 @@ public class RandomFigure extends Figure {
                 figure.draw();
                 return figure.getArea();
             default:
-                supplierFigure.getRandomFigure();
+                supplierFigure.getDefaultFigure();
         }
         return 0.0;
     }
