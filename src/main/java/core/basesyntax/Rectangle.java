@@ -4,8 +4,8 @@ public class Rectangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
-    public Rectangle(String Color, int firstLeg, int secondLeg) {
-        super(Color);
+    public Rectangle(String color, int firstLeg, int secondLeg) {
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
@@ -33,11 +33,11 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " +
-                "rectangle, " +
-                "area: " + calculateArea() + " sq.units, " +
-                "firstLeg: " + firstLeg + " units, " +
-                "secondLeg: " + secondLeg + " units, " +
-                "color: " + getColor().toLowerCase());
+        System.out.println("Figure: "
+                + "rectangle, "
+                + "area: " + calculateArea() + " sq.units, "
+                + "firstLeg: " + firstLeg + " units, "
+                + "secondLeg: " + secondLeg + " units, "
+                + "color: " + getColor().toLowerCase());
     }
 }

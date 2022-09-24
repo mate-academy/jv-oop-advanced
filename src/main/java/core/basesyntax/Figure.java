@@ -1,10 +1,15 @@
 package core.basesyntax;
 
-import Interfaces.AreaCalculator;
-import Interfaces.Drawable;
+import interfaces.AreaCalculator;
+import interfaces.Drawable;
 
 public abstract class Figure implements AreaCalculator, Drawable {
     private String color;
+
+    public Figure(String color) {
+        super();
+        this.color = color;
+    }
 
     public void setColor(String color) {
         this.color = color;
@@ -15,9 +20,4 @@ public abstract class Figure implements AreaCalculator, Drawable {
     }
 
     public abstract double calculateArea();
-
-    public Figure(String Color) {
-        super();
-        this.color = Color;
-    }
 }

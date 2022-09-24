@@ -2,6 +2,12 @@ package core.basesyntax;
 
 public class Square extends Figure {
     private int firstLeg;
+
+    public Square(String color, int firstLeg) {
+        super(color);
+        this.firstLeg = firstLeg;
+    }
+
     public int getFirstLeg() {
         return firstLeg;
     }
@@ -17,15 +23,10 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " +
-                "square, " +
-                "area: " + calculateArea() + " sq.units, " +
-                "firstLeg: " + firstLeg + " units, " +
-                "color: " + getColor().toLowerCase());
-    }
-
-    public Square(String Color, int firstLeg) {
-        super(Color);
-        this.firstLeg = firstLeg;
+        System.out.println("Figure: "
+                + "square, "
+                + "area: " + calculateArea() + " sq.units, "
+                + "firstLeg: " + firstLeg + " units, "
+                + "color: " + getColor().toLowerCase());
     }
 }
