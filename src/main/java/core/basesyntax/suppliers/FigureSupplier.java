@@ -1,6 +1,7 @@
 package core.basesyntax.suppliers;
 
 import core.basesyntax.model.Circle;
+import core.basesyntax.model.Color;
 import core.basesyntax.model.Figure;
 import core.basesyntax.model.IsoscelesTrapezoid;
 import core.basesyntax.model.Rectangle;
@@ -10,6 +11,8 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int RANDOM_RA = 100;
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
+    private static final int DEFAULT_RADIUS = 10;
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
 
@@ -62,6 +65,6 @@ public class FigureSupplier {
 
     public Figure getDefaultFigure() {
         Circle whiteCircle = new Circle("White", 10);
-        return whiteCircle;
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
