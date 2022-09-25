@@ -5,13 +5,13 @@ import java.util.Random;
 public class FigureSupplier {
     public static final int CIRCLE_DEFAULT_RADIUS = 10;
     public static final String CIRCLE_DEFAULT_COLOR = Color.WHITE.name();
-    public static final int RANDOM_NUMBER = 4;
+    public static final int FIGURE_TYPE_NUMBER = 5;
     public static final int CONST_NUMBER = 50;
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        int figureIndex = random.nextInt(RANDOM_NUMBER);
+        int figureIndex = random.nextInt(FIGURE_TYPE_NUMBER);
         switch (figureIndex) {
             case 0:
                 return getRandomCircle();
