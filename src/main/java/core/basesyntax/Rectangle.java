@@ -14,8 +14,13 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double getInfoFigure() {
-        double area = firLeg * secLeg;
+    public double getArea() {
+        return firLeg * secLeg;
+    }
+
+    @Override
+    public double draw() {
+        double area = getArea();
         String str1 = "Figure: restangle, area: ";
         String str2 = "width: ";
         String str3 = "height: ";

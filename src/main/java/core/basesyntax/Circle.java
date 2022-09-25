@@ -12,8 +12,13 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double getInfoFigure() {
-        double area = Math.PI * radius * radius;
+    public double getArea() {
+        return Math.PI * radius * radius;
+    }
+
+    @Override
+    public double draw() {
+        double area = getArea();
         String str1 = "Figure: circle, area: ";
         String str2 = "side: ";
         String str3 = super.getColor();

@@ -16,8 +16,13 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double getInfoFigure() {
-        double area = 0.5 * (firLeg + secLeg) * height;
+    public double getArea() {
+        return 0.5 * (firLeg + secLeg) * height;
+    }
+
+    @Override
+    public double draw() {
+        double area = getArea();
         String str1 = "Figure: trapezoid, area: ";
         String str2 = "firstBase: ";
         String str3 = "secondBase: ";

@@ -12,8 +12,13 @@ public class Square extends Figure {
     }
 
     @Override
-    public double getInfoFigure() {
-        double area = side * side;
+    public double getArea() {
+        return side * side;
+    }
+
+    @Override
+    public double draw() {
+        double area = getArea();
         String str1 = "Figure: square, area: ";
         String str2 = "side: ";
         String str3 = super.getColor();

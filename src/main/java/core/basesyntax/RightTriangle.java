@@ -14,8 +14,13 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double getInfoFigure() {
-        double area = 0.5 * firLeg * secLeg;
+    public double getArea() {
+        return 0.5 * firLeg * secLeg;
+    }
+
+    @Override
+    public double draw() {
+        double area = getArea();
         String str1 = "Figure: triangle, area: ";
         String str2 = "firstLeg: ";
         String str3 = "secondLeg: ";

@@ -6,8 +6,8 @@ public class Application {
         Figure figure2 = new FigureSupplier().getRandomFigure();
         Figure figure3 = new FigureSupplier().getDefaultFigure();
         Figure[] figures = new Figure[] {figure1, figure2, figure3};
-        for (Figure figure:figures) {
-            figure.getInfoFigure();
+        for (Figure figure : figures) {
+            figure.draw();
         }
 
     }
