@@ -5,15 +5,8 @@ import core.basesyntax.Figure;
 public class Circle extends Figure {
     private double radius;
 
-    public Circle() {
-    }
-
-    public Circle(double radius) {
-        this.radius = radius;
-    }
-
-    public Circle(String name, String color, double radius) {
-        super(name, color);
+    public Circle (String color, double radius){
+        this.color = color;
         this.radius = radius;
     }
 
@@ -24,7 +17,7 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("name= " + name + ", color= " + color + ", area= "
+        System.out.println("Figure: Circle" + ", color= " + color + ", area= "
                 + getArea() + " unit sq., radius=" + radius);
     }
 }

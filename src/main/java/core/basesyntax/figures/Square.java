@@ -8,8 +8,8 @@ public class Square extends Figure {
     public Square() {
     }
 
-    public Square(String name, String color, double firstline) {
-        super(name, color);
+    public Square( String color, double firstline) {
+        super(color);
         this.firstline = firstline;
     }
 
@@ -20,7 +20,7 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("name= " + name + ", color= " + color + ", area= " + getArea()
+        System.out.println("Figure: Square" + ", color= " + color + ", area= " + getArea()
                 + " unit sq., Length A=" + firstline + " unit sq.");
     }
 }

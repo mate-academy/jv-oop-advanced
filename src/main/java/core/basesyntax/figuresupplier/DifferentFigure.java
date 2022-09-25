@@ -1,5 +1,7 @@
 package core.basesyntax.figuresupplier;
 
+import core.basesyntax.figures.Circle;
+
 public enum DifferentFigure {
     CIRCLE,
     ISOSCELESTRAPEZOID,
