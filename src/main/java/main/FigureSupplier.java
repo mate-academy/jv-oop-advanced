@@ -12,38 +12,37 @@ public class FigureSupplier {
     private static final Random random = new Random();
     private static final int DEFAULT_CIRCLE_RADIUS = 10;
     private static final int MAX_INT = 25;
-    private static final String CIRCLE_COLOR = Colors.WHITE.toString().toLowerCase();
+    private static final String CIRCLE_COLOR = Colors.WHITE.name().toLowerCase();
     private static final ColorSupplier colorSupplier = new ColorSupplier();
     private static final int FIGURES_NUMBER = 5;
 
     public Figure getDefaultFigure() {
-        Circle circle = new Circle(10,CIRCLE_COLOR);
-        return circle;
+        return new Circle(10,CIRCLE_COLOR);
     }
 
-    public Circle getRandomCircle() {
+    private Circle getRandomCircle() {
         return new Circle(random.nextInt(30),
                 colorSupplier.getRandomColor());
     }
 
-    public Square getRandomSquare() {
+    private Square getRandomSquare() {
         return new Square(colorSupplier.getRandomColor(),
                 random.nextInt(30));
     }
 
-    public RightTriangle getRandomRightTriangle() {
+    private RightTriangle getRandomRightTriangle() {
         return new RightTriangle(colorSupplier.getRandomColor(),
                 random.nextInt(20),
                 random.nextInt(20));
     }
 
-    public Rectangle getRandomRectangle() {
+    private Rectangle getRandomRectangle() {
         return new Rectangle(colorSupplier.getRandomColor(),
                 random.nextInt(25),
                 random.nextInt(25));
     }
 
-    public IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                 random.nextInt(20),
                 random.nextInt(20),
