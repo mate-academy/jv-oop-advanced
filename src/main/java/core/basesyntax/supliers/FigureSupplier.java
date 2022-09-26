@@ -10,13 +10,14 @@ import core.basesyntax.shapes.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int RANDOM_RADIUS = 10;
+    private static final int RADIUS_OF_DEFAULT_FIGURE = 10;
     private static final int RANDOM_INT_BOUND = 7;
     private static final int TOTAL_SHAPES = 5;
+    private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Shape getRandomFigure() {
-        Random random = new Random();
-        String randomColor = new ColorSupplier().getRandomColor();
+        String randomColor = colorSupplier.getRandomColor();
         int randomInt = random.nextInt(TOTAL_SHAPES);
         int randomInt1 = random.nextInt(RANDOM_INT_BOUND) + 1;
         int randomInt2 = random.nextInt(RANDOM_INT_BOUND) + 1;
@@ -40,6 +41,6 @@ public class FigureSupplier {
     }
 
     public Shape getDefaultFigure() {
-        return new Circle(Color.WHITE.name(), RANDOM_RADIUS);
+        return new Circle(Color.WHITE.name(), RADIUS_OF_DEFAULT_FIGURE);
     }
 }
