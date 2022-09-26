@@ -6,7 +6,8 @@ public abstract class Figure implements FiguresBehaviour {
     private String color;
 
     public void setRandomParameters() {
-        this.color = ColorSupplier.getRandomColor();
+        ColorSupplier colorSupplier = new ColorSupplier();
+        this.color = colorSupplier.getRandomColor();
     }
 
     public String getColor() {

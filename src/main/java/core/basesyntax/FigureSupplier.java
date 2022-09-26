@@ -10,20 +10,23 @@ import core.basesyntax.model.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static Figure getRandomFigure() {
-        Figure[] figure = new Figure[5];
+    private static final int FIGURE_COUNT = 5;
+    private static final Random random = new Random();
+
+    public Figure getRandomFigure() {
+        Figure[] figure = new Figure[FIGURE_COUNT];
         figure[0] = new Circle();
         figure[1] = new IsoscelesTrapezoid();
         figure[2] = new Rectangle();
         figure[3] = new RightTriangle();
         figure[4] = new Square();
 
-        Figure randomFigure = figure[new Random().nextInt(4)];
+        Figure randomFigure = figure[random.nextInt(FIGURE_COUNT)];
         randomFigure.setRandomParameters();
         return randomFigure;
     }
 
-    public static Figure getDefaultFigure() {
+    public Figure getDefaultFigure() {
         return new Circle(10, Color.WHITE.toString());
     }
 }
