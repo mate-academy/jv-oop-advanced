@@ -6,6 +6,7 @@ public class FigureSupplier {
     private static final int NUMBER_OF_FIGURES = 5;
     private ColorSupplier randomColor = new ColorSupplier();
     private Random randomIndex = new Random();
+
     public Figure getRandomFigure() {
 
         switch (randomIndex.nextInt(NUMBER_OF_FIGURES)) {

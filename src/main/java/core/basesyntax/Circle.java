@@ -7,6 +7,7 @@ public class Circle extends Figure {
         super(color);
         this.radius = radius;
     }
+
     @Override
     public String draw() {
         return "Figure: circle, "
