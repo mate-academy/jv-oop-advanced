@@ -10,15 +10,15 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final Random random = new Random();
     public static final String COLOR = "WHITE";
     public static final int RADIUS = 10;
+    private static final Random random = new Random();
     private double firstLine = new Random().nextInt(50);
     private double secondLine = new Random().nextInt(50);
     private double thirdLine = new Random().nextInt(50);
 
     public final Figure getDefaultFigure() {
-        return new Circle(COLOR,RADIUS);
+        return new Circle(COLOR, RADIUS);
     }
 
     public Figure getRandomFigure() {
