@@ -1,7 +1,6 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.Figure;
-import java.util.Random;
 
 public class Square extends Figure {
     public static final int BOUND = 100;
@@ -10,7 +9,7 @@ public class Square extends Figure {
     @Override
     public void setRandomProperties() {
         super.setRandomProperties();
-        this.side = new Random().nextInt(BOUND);
+        this.side = random.nextInt(BOUND);
     }
 
     @Override

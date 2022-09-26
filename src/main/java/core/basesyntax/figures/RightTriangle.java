@@ -1,7 +1,6 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.Figure;
-import java.util.Random;
 
 public class RightTriangle extends Figure {
     public static final int BOUND = 100;
@@ -11,8 +10,8 @@ public class RightTriangle extends Figure {
     @Override
     public void setRandomProperties() {
         super.setRandomProperties();
-        this.firstLeg = new Random().nextInt(BOUND);
-        this.secondLeg = new Random().nextInt(BOUND);
+        this.firstLeg = random.nextInt(BOUND);
+        this.secondLeg = random.nextInt(BOUND);
     }
 
     @Override

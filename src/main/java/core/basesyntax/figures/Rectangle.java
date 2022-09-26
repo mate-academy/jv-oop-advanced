@@ -1,7 +1,6 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.Figure;
-import java.util.Random;
 
 public class Rectangle extends Figure {
     public static final int BOUND = 100;
@@ -11,8 +10,8 @@ public class Rectangle extends Figure {
     @Override
     public void setRandomProperties() {
         super.setRandomProperties();
-        this.width = new Random().nextInt(BOUND);
-        this.height = new Random().nextInt(BOUND);
+        this.width = random.nextInt(BOUND);
+        this.height = random.nextInt(BOUND);
     }
 
     @Override

@@ -1,8 +1,10 @@
 package core.basesyntax;
 
 import core.basesyntax.interfaces.FigureInterface;
+import java.util.Random;
 
 public abstract class Figure implements FigureInterface {
+    protected Random random = new Random();
     private String color;
 
     public void setRandomProperties() {

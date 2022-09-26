@@ -1,7 +1,6 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.Figure;
-import java.util.Random;
 
 public class IsoscelesTrapezoid extends Figure {
     public static final int BOUND = 100;
@@ -12,9 +11,9 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public void setRandomProperties() {
         super.setRandomProperties();
-        this.firstSide = new Random().nextInt(BOUND);
-        this.secondSide = new Random().nextInt(BOUND);
-        this.height = new Random().nextInt(BOUND);
+        this.firstSide = random.nextInt(BOUND);
+        this.secondSide = random.nextInt(BOUND);
+        this.height = random.nextInt(BOUND);
     }
 
     @Override

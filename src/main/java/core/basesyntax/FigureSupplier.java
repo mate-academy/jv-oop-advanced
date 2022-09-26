@@ -11,11 +11,12 @@ import java.util.Random;
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
     public static final int DEFAULT_RADIUS = 10;
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
         Figure[] figures = new Figure[] {new Circle(), new Square(), new Rectangle(),
                 new RightTriangle(), new IsoscelesTrapezoid()};
-        Figure randomFigure = figures[new Random().nextInt(FIGURE_COUNT)];
+        Figure randomFigure = figures[random.nextInt(FIGURE_COUNT)];
         randomFigure.setRandomProperties();
         return randomFigure;
     }
