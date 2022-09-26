@@ -10,23 +10,26 @@ import core.basesyntax.model.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int FIGURE_COUNT = 5;
+    private static final int CIRCLE_RADIUS = 10;
+    private static final int MAX_FIGURE_FIELD_LENGTH = 127;
     private static final Random random = new Random();
 
-    public Figure getRandomFigure() {
-        Figure[] figure = new Figure[FIGURE_COUNT];
-        figure[0] = new Circle();
-        figure[1] = new IsoscelesTrapezoid();
-        figure[2] = new Rectangle();
-        figure[3] = new RightTriangle();
-        figure[4] = new Square();
-
-        Figure randomFigure = figure[random.nextInt(FIGURE_COUNT)];
-        randomFigure.setRandomParameters();
-        return randomFigure;
+    public Figure getRandomFigure(int figureNum, String figureColor) {
+        switch (figureNum) {
+            case 0: return new Circle(random.nextInt(MAX_FIGURE_FIELD_LENGTH), figureColor);
+            case 1: return new IsoscelesTrapezoid(random.nextInt(MAX_FIGURE_FIELD_LENGTH),
+                    random.nextInt(MAX_FIGURE_FIELD_LENGTH),
+                    random.nextInt(MAX_FIGURE_FIELD_LENGTH), figureColor);
+            case 2: return new Rectangle(random.nextInt(MAX_FIGURE_FIELD_LENGTH),
+                    random.nextInt(MAX_FIGURE_FIELD_LENGTH), figureColor);
+            case 3: return new RightTriangle(random.nextInt(MAX_FIGURE_FIELD_LENGTH),
+                    random.nextInt(MAX_FIGURE_FIELD_LENGTH), figureColor);
+            case 4: return new Square(random.nextInt(MAX_FIGURE_FIELD_LENGTH), figureColor);
+            default: return null;
+        }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, Color.WHITE.toString());
+        return new Circle(CIRCLE_RADIUS, Color.WHITE.name());
     }
 }

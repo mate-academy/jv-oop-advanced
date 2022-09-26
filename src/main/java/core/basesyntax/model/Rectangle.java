@@ -1,21 +1,18 @@
 package core.basesyntax.model;
 
-import java.util.Random;
-
 public class Rectangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
-    @Override
-    public double getArea() {
-        return firstLeg * secondLeg;
+    public Rectangle(int firstLeg, int secondLeg, String color) {
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
+        super.setColor(color);
     }
 
     @Override
-    public void setRandomParameters() {
-        super.setRandomParameters();
-        this.firstLeg = new Random().nextInt(100);
-        this.secondLeg = new Random().nextInt(100);
+    public double getArea() {
+        return firstLeg * secondLeg;
     }
 
     @Override

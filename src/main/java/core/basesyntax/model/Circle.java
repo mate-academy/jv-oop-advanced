@@ -1,7 +1,5 @@
 package core.basesyntax.model;
 
-import java.util.Random;
-
 public class Circle extends Figure {
     private int radius;
 
@@ -16,12 +14,6 @@ public class Circle extends Figure {
     @Override
     public double getArea() {
         return Math.PI * radius * radius;
-    }
-
-    @Override
-    public void setRandomParameters() {
-        super.setRandomParameters();
-        this.radius = new Random().nextInt(100);
     }
 
     @Override
