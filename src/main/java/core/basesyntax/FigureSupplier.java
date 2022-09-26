@@ -14,17 +14,18 @@ public class FigureSupplier {
     private static final int MAX_FIGURE_FIELD_LENGTH = 127;
     private static final Random random = new Random();
 
+    private int getRandomValue() {
+        return random.nextInt(MAX_FIGURE_FIELD_LENGTH);
+    }
+
     public Figure getRandomFigure(int figureNum, String figureColor) {
         switch (figureNum) {
-            case 0: return new Circle(random.nextInt(MAX_FIGURE_FIELD_LENGTH), figureColor);
-            case 1: return new IsoscelesTrapezoid(random.nextInt(MAX_FIGURE_FIELD_LENGTH),
-                    random.nextInt(MAX_FIGURE_FIELD_LENGTH),
-                    random.nextInt(MAX_FIGURE_FIELD_LENGTH), figureColor);
-            case 2: return new Rectangle(random.nextInt(MAX_FIGURE_FIELD_LENGTH),
-                    random.nextInt(MAX_FIGURE_FIELD_LENGTH), figureColor);
-            case 3: return new RightTriangle(random.nextInt(MAX_FIGURE_FIELD_LENGTH),
-                    random.nextInt(MAX_FIGURE_FIELD_LENGTH), figureColor);
-            case 4: return new Square(random.nextInt(MAX_FIGURE_FIELD_LENGTH), figureColor);
+            case 0: return new Circle(getRandomValue(), figureColor);
+            case 1: return new IsoscelesTrapezoid(getRandomValue(), getRandomValue(),
+                    getRandomValue(), figureColor);
+            case 2: return new Rectangle(getRandomValue(), getRandomValue(), figureColor);
+            case 3: return new RightTriangle(getRandomValue(), getRandomValue(), figureColor);
+            case 4: return new Square(getRandomValue(), figureColor);
             default: return null;
         }
     }
