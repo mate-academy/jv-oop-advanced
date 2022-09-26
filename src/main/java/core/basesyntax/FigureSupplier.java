@@ -15,35 +15,27 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         var figureIndex = random.nextInt(Figures.values().length);
+        String color = colorSupplier.getRandomColor();
         switch (Figures.values()[figureIndex]) {
             case SQUARE:
-                return new Square(
-                        colorSupplier.getRandomColor(),
-                        random.nextDouble() * MAX_PARAMETER
-                );
+                double side = random.nextDouble() * MAX_PARAMETER;
+                return new Square(color, side);
             case RECTANGLE:
-                return new Rectangle(
-                        colorSupplier.getRandomColor(),
-                        random.nextDouble() * MAX_PARAMETER, random.nextDouble() * MAX_PARAMETER
-                );
+                double width = random.nextDouble() * MAX_PARAMETER;
+                double height = random.nextDouble() * MAX_PARAMETER;
+                return new Rectangle(color, width, height);
             case RIGHT_TRIANGLE:
-                return new RightTriangle(
-                        colorSupplier.getRandomColor(),
-                        random.nextDouble() * MAX_PARAMETER,
-                        random.nextDouble() * MAX_PARAMETER
-                );
+                double base = random.nextDouble() * MAX_PARAMETER;
+                height = random.nextDouble() * MAX_PARAMETER;
+                return new RightTriangle(color, base, height);
             case CIRCLE:
-                return new Circle(
-                        colorSupplier.getRandomColor(),
-                        random.nextDouble() * MAX_PARAMETER
-                );
+                double radius = random.nextDouble() * MAX_PARAMETER;
+                return new Circle(color, radius);
             case ISOSCELES_TRAPEZOID:
-                return new IsoscelesTrapezoid(
-                        colorSupplier.getRandomColor(),
-                        random.nextDouble() * MAX_PARAMETER,
-                        random.nextDouble() * MAX_PARAMETER,
-                        random.nextDouble() * MAX_PARAMETER
-                );
+                double top = random.nextDouble() * MAX_PARAMETER;
+                double bottom = random.nextDouble() * MAX_PARAMETER;
+                height = random.nextDouble() * MAX_PARAMETER;
+                return new IsoscelesTrapezoid(color, top, bottom, height);
             default:
                 throw new IllegalStateException(
                         "Unexpected value: " + Figures.values()[figureIndex]
