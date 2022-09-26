@@ -1,6 +1,5 @@
 package core.basesyntax;
 
-
 import core.basesyntax.figures.Circle;
 import core.basesyntax.figures.Rectangle;
 import core.basesyntax.figures.Square;

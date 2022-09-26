@@ -8,7 +8,7 @@ public class Square extends Figure {
     public Square() {
     }
 
-    public Square( String color, double firstline) {
+    public Square(String color, double firstline) {
         super(color);
         this.firstline = firstline;
     }
