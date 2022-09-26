@@ -3,39 +3,39 @@ package core.basesyntax.figures;
 import core.basesyntax.Figure;
 
 public class IsoscelesTrapezoid extends Figure {
-    private double firstline;
-    private double secondline;
-    private double thirdline;
+    private double firstLine;
+    private double secondLine;
+    private double thirdLine;
 
     public IsoscelesTrapezoid() {
     }
 
-    public IsoscelesTrapezoid(double firstline,
-                              double secondline, double thirdline) {
-        this.firstline = firstline;
-        this.secondline = secondline;
-        this.thirdline = thirdline;
+    public IsoscelesTrapezoid(double firstLine,
+                              double secondLine, double thirdLine) {
+        this.firstLine = firstLine;
+        this.secondLine = secondLine;
+        this.thirdLine = thirdLine;
     }
 
     public IsoscelesTrapezoid(String color,
-                              double firstline, double secondline, double thirdline) {
+                              double firstLine, double secondLine, double thirdLine) {
         super(color);
-        this.firstline = firstline;
-        this.secondline = secondline;
-        this.thirdline = thirdline;
+        this.firstLine = firstLine;
+        this.secondLine = secondLine;
+        this.thirdLine = thirdLine;
     }
 
     @Override
     public double getArea() {
-        return (firstline + secondline) * thirdline / 2;
+        return (firstLine + secondLine) * thirdLine / 2;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: IsoscelesTrapezoid" + ", color= " + color
                 + ", area= " + getArea()
-                + " unit sq., Length A=" + firstline
-                + " unit sq., Length B= " + secondline + " unit sq."
-                + " " + thirdline + " unit sq.");
+                + " unit sq., Length A=" + firstLine
+                + " unit sq., Length B= " + secondLine + " unit sq."
+                + " " + thirdLine + " unit sq.");
     }
 }

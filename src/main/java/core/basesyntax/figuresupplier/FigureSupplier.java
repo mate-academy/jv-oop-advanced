@@ -11,35 +11,36 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final Random random = new Random();
-    private final Figure figureDefault = new Circle("WHITE", 10);
+    public static final String COLOR = "WHITE";
+    public static final int RADIUS = 10;
+    double firstLine = new Random().nextInt(50);
+    double secondLine = new Random().nextInt(50);
+    double thirdLine = new Random().nextInt(50);
 
-    public Figure getDefaultFigure() {
-        return figureDefault;
+    public final Figure getDefaultFigure() {
+        return new Circle(COLOR,RADIUS);
     }
 
     public Figure getRandomFigure() {
         int rundomFigura = random.nextInt(6);
-        double firstline = new Random().nextInt(50);
-        double secondline = new Random().nextInt(50);
-        double thirdline = new Random().nextInt(50);
         ColorSupplier colorSupplier = new ColorSupplier();
 
         switch (rundomFigura) {
             case 1:
                 return new Circle(colorSupplier.getRandomColor(),
-                        firstline);
+                        firstLine);
             case 2:
                 return new Square(colorSupplier.getRandomColor(),
-                        firstline);
+                        firstLine);
             case 3:
                 return new Rectangle(colorSupplier.getRandomColor(),
-                        firstline, secondline);
+                        firstLine, secondLine);
             case 4:
                 return new RightTriangle(colorSupplier.getRandomColor(),
-                        firstline, secondline);
+                        firstLine, secondLine);
             case 5:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        firstline, secondline, thirdline);
+                        firstLine, secondLine, thirdLine);
             default:
                 return getDefaultFigure();
         }

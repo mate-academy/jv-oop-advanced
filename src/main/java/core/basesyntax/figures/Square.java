@@ -3,24 +3,24 @@ package core.basesyntax.figures;
 import core.basesyntax.Figure;
 
 public class Square extends Figure {
-    private double firstline;
+    private double firstLine;
 
     public Square() {
     }
 
-    public Square(String color, double firstline) {
+    public Square(String color, double firstLine) {
         super(color);
-        this.firstline = firstline;
+        this.firstLine = firstLine;
     }
 
     @Override
     public double getArea() {
-        return firstline * firstline;
+        return firstLine * firstLine;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: Square" + ", color= " + color + ", area= " + getArea()
-                + " unit sq., Length A=" + firstline + " unit sq.");
+                + " unit sq., Length A=" + firstLine + " unit sq.");
     }
 }

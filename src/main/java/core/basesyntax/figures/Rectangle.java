@@ -3,30 +3,30 @@ package core.basesyntax.figures;
 import core.basesyntax.Figure;
 
 public class Rectangle extends Figure {
-    private double linelength;
+    private double lineLength;
     private double lineWindth;
 
-    public Rectangle(double linelength, double lineWindth) {
-        this.linelength = linelength;
+    public Rectangle(double lineLength, double lineWindth) {
+        this.lineLength = lineLength;
         this.lineWindth = lineWindth;
     }
 
-    public Rectangle(String color, double linelength, double lineWindth) {
+    public Rectangle(String color, double lineLength, double lineWindth) {
         super(color);
-        this.linelength = linelength;
+        this.lineLength = lineLength;
         this.lineWindth = lineWindth;
     }
 
     @Override
     public double getArea() {
-        return linelength * lineWindth;
+        return lineLength * lineWindth;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: Rectangle" + ", color= " + color
                 + ", area= " + getArea()
-                + " unit sq., Length A=" + linelength
+                + " unit sq., Length A=" + lineLength
                 + " unit sq., Windth B= " + lineWindth + " unit sq.");
     }
 }
