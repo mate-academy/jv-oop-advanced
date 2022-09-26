@@ -1,15 +1,18 @@
 package core.basesyntax;
 
 public class Application {
+    public static final int FIGURE_RANDOM = 5;
+
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        Figure figure1 = figureSupplier.getRandomFigure();
-        Figure figure2 = figureSupplier.getRandomFigure();
-        Figure figure3 = figureSupplier.getDefaultFigure();
-        Figure[] figures = new Figure[] {figure1, figure2, figure3};
-        for (Figure figure : figures) {
-            figure.draw();
+        Figure[] figures = new Figure[FIGURE_RANDOM + 1];
+        for (int i = 0; i < FIGURE_RANDOM + 1; i++) {
+            if (i == FIGURE_RANDOM) {
+                figures[i] = figureSupplier.getDefaultFigure();
+            } else {
+                figures[i] = figureSupplier.getRandomFigure();
+            }
+            figures[i].draw();
         }
-
     }
 }
