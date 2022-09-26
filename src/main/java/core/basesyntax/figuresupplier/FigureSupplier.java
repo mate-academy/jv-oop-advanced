@@ -17,6 +17,7 @@ public class FigureSupplier {
     private double secondLine = new Random().nextInt(50);
     private double thirdLine = new Random().nextInt(50);
     private ColorSupplier colorSupplier;
+
     public final Figure getDefaultFigure() {
         return new Circle(COLOR, RADIUS);
     }
