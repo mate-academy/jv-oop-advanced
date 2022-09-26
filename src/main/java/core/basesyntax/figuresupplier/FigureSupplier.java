@@ -16,14 +16,14 @@ public class FigureSupplier {
     private double firstLine = new Random().nextInt(50);
     private double secondLine = new Random().nextInt(50);
     private double thirdLine = new Random().nextInt(50);
-
+    private ColorSupplier colorSupplier;
     public final Figure getDefaultFigure() {
         return new Circle(COLOR, RADIUS);
     }
 
     public Figure getRandomFigure() {
         int rundomFigura = random.nextInt(6);
-        ColorSupplier colorSupplier = new ColorSupplier();
+        colorSupplier = new ColorSupplier();
 
         switch (rundomFigura) {
             case 1:
