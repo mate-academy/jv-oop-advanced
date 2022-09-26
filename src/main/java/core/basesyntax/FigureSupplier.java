@@ -4,15 +4,14 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_RANDOM = 5;
-    private static final int RADIUS_RANDOM = 10;
+    private static final int DEFAULT_RADIUS = 10;
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int inde = random.nextInt(FigureEnum.values().length);
         FigureEnum figureEnum = FigureEnum.values()[inde];
-        Color color = colorSupplier.getRandomColor();
-        int sidr = random.nextInt(MAX_RANDOM) + 1;
         switch (figureEnum) {
             case CIRCLE:
                 return getRandomCircle();
@@ -60,6 +59,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.name(), RADIUS_RANDOM);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
