@@ -1,9 +1,6 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    private static final String STR_PL = " sq.units, ";
-    private static final String STR_UN = " unit, ";
-    private static final String STR_CL = " color: ";
     private int side;
 
     public Square(String color, int side) {
@@ -17,12 +14,8 @@ public class Square extends Figure {
     }
 
     @Override
-    public double draw() {
-        double area = getArea();
-        String str1 = "Figure: square, area: ";
-        String str2 = "side: ";
-        String str3 = super.getColor();
-        System.out.println(str1 + area + STR_PL + str2 + side + STR_UN + STR_CL + str3);
-        return area;
+    public void draw() {
+        System.out.println("Figure: square, area: " + getArea() + " sq.units, side: "
+                + side + " unit, color: " + getColor());
     }
 }
