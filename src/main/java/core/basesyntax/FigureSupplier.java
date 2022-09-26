@@ -59,4 +59,3 @@ public class FigureSupplier {
                 random.nextInt(FIGURE_COUNT));
     }
 }
-
