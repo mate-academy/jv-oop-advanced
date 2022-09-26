@@ -12,7 +12,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public String name() {
-        return String.valueOf(Figures.RIGHTTRIANGLE);
+        return (Figures.RIGHTTRIANGLE).name();
     }
 
     @Override

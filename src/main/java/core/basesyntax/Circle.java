@@ -10,7 +10,7 @@ public class Circle extends Figure {
 
     @Override
     public String name() {
-        return String.valueOf(Figures.CIRCLE);
+        return (Figures.CIRCLE).name();
     }
 
     @Override
