@@ -1,13 +1,14 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public class Main {
-    static final int NUMBER_OF_FIGURES = 5;
-
+    private static FigureSupplier figureSupplier = new FigureSupplier();
     public static void main(String[] args) {
-        FigureSupplier figureSupplier = new FigureSupplier();
-        Figure[] figures = new Figure[NUMBER_OF_FIGURES];
+        Random random = new Random();
+        Figure[] figures = new Figure[random.nextInt(5)];
 
-        for (int i = 0; i < NUMBER_OF_FIGURES; i++) {
+        for (int i = 0; i < figures.length; i++) {
             figures[i] = figureSupplier.getRandomFigure();
             System.out.println(figures[i].draw());
         }
