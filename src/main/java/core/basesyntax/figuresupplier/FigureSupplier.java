@@ -13,9 +13,9 @@ public class FigureSupplier {
     private static final Random random = new Random();
     public static final String COLOR = "WHITE";
     public static final int RADIUS = 10;
-    double firstLine = new Random().nextInt(50);
-    double secondLine = new Random().nextInt(50);
-    double thirdLine = new Random().nextInt(50);
+    private double firstLine = new Random().nextInt(50);
+    private double secondLine = new Random().nextInt(50);
+    private double thirdLine = new Random().nextInt(50);
 
     public final Figure getDefaultFigure() {
         return new Circle(COLOR,RADIUS);
