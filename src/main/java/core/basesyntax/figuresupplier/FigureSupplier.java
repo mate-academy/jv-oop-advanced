@@ -6,62 +6,34 @@ import core.basesyntax.figures.*;
 
 import java.util.Random;
 
-public class FigureSupplier{
-    public static final String NAME = "CIRCLE";
-    public static final String COLOR = "WHITE";
-    public static final double RADIUS = 10;
+public class FigureSupplier {
     private static final Random random = new Random();
-
-    public FigureSupplier() {
-
-    }
+    private final Figure FIGURE_DEFAULT = new Circle("WHITE", 10);
 
     public Figure getDefaultFigure() {
-        System.out.println("Figure= " + NAME + ", Color= "
-                + COLOR + ", radius= " + RADIUS);
-        return new Circle(COLOR, RADIUS);
+        return FIGURE_DEFAULT;
     }
 
     public Figure getRandomFigure() {
-        int rundomFigura = random.nextInt(5);
+        int rundomFigura = random.nextInt(6);
         double firstline = new Random().nextInt(50);
         double secondline = new Random().nextInt(50);
         double thirdline = new Random().nextInt(50);
         ColorSupplier colorSupplier = new ColorSupplier();
-        FigureSupplier figure = new FigureSupplier();
-
 
         switch (rundomFigura) {
-            case 0:
-                return getDefaultFigure();
             case 1:
-                new Circle(colorSupplier.getRandomColor(), firstline).draw();
-                new Circle(colorSupplier.getRandomColor(), firstline).getArea();
-
-                return null;
+                return new Circle(colorSupplier.getRandomColor(), firstline);
             case 2:
-                Figure square = new Square(colorSupplier.getRandomColor(), firstline);
-                square.getArea();
-                square.draw();
-                return square;
+                return new Square(colorSupplier.getRandomColor(), firstline);
             case 3:
-                Figure rectangle = new Rectangle(colorSupplier.getRandomColor(), firstline, secondline);
-                rectangle.getArea();
-                rectangle.draw();
-                return rectangle;
+                return new Rectangle(colorSupplier.getRandomColor(), firstline, secondline);
             case 4:
-                Figure rightTriangle = new RightTriangle(colorSupplier.getRandomColor(), firstline, secondline);
-                rightTriangle.getArea();
-                rightTriangle.draw();
-                return rightTriangle;
+                return new RightTriangle(colorSupplier.getRandomColor(), firstline, secondline);
             case 5:
-                Figure isoscelesTrapezoid = new IsoscelesTrapezoid(colorSupplier.getRandomColor(), firstline, secondline, thirdline);
-                 isoscelesTrapezoid.getArea();
-                 isoscelesTrapezoid.draw();
-                return isoscelesTrapezoid;
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), firstline, secondline, thirdline);
             default:
-                getDefaultFigure();
+                return getDefaultFigure();
         }
-        return getDefaultFigure();
     }
 }

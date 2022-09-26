@@ -1,21 +1,25 @@
 package core.basesyntax;
 
 
+import core.basesyntax.figures.Circle;
+import core.basesyntax.figures.Rectangle;
+import core.basesyntax.figures.Square;
 import core.basesyntax.figuresupplier.FigureSupplier;
 
 public class Main {
     public static void main(String[] args) {
+        FigureSupplier figureSupplier1 = new FigureSupplier();
+        Drawable circle = new Circle("red", 21);
+        Drawable rectangle = new Rectangle("Yellow", 21, 20);
+        Drawable square = new Square("Black", 17);
 
-//        Figure random0 = new FigureSupplier();
-//        Figure random1 = new FigureSupplier();
-//        Figure random2 = new FigureSupplier();
-//        Figure random3 = new FigureSupplier();
-//        Figure random4 = new FigureSupplier();
-//
-//        Figure [] array = {random0,random1,random2,random3,random4};
-//        for (Figure fk  : array) {
-//            fk.draw();
-//        }
+        Drawable[] qwert = new Drawable[]{figureSupplier1.getRandomFigure(),
+                figureSupplier1.getRandomFigure(), figureSupplier1.getRandomFigure(),
+                circle, rectangle, square};
+
+        for (Drawable qw : qwert) {
+            qw.draw();
+        }
 
     }
 }
