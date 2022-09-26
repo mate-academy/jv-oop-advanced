@@ -4,12 +4,13 @@ import core.basesyntax.Figure;
 import java.util.Random;
 
 public class Square extends Figure {
+    public static final int BOUND = 100;
     private int side;
 
     @Override
     public void setRandomProperties() {
         super.setRandomProperties();
-        this.side = new Random().nextInt(100);
+        this.side = new Random().nextInt(BOUND);
     }
 
     @Override

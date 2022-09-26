@@ -4,14 +4,15 @@ import core.basesyntax.Figure;
 import java.util.Random;
 
 public class RightTriangle extends Figure {
+    public static final int BOUND = 100;
     private int firstLeg;
     private int secondLeg;
 
     @Override
     public void setRandomProperties() {
         super.setRandomProperties();
-        this.firstLeg = new Random().nextInt(100);
-        this.secondLeg = new Random().nextInt(100);
+        this.firstLeg = new Random().nextInt(BOUND);
+        this.secondLeg = new Random().nextInt(BOUND);
     }
 
     @Override

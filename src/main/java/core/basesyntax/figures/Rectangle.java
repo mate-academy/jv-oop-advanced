@@ -4,14 +4,15 @@ import core.basesyntax.Figure;
 import java.util.Random;
 
 public class Rectangle extends Figure {
+    public static final int BOUND = 100;
     private int width;
     private int height;
 
     @Override
     public void setRandomProperties() {
         super.setRandomProperties();
-        this.width = new Random().nextInt(100);
-        this.height = new Random().nextInt(100);
+        this.width = new Random().nextInt(BOUND);
+        this.height = new Random().nextInt(BOUND);
     }
 
     @Override

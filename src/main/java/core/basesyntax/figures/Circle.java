@@ -4,6 +4,7 @@ import core.basesyntax.Figure;
 import java.util.Random;
 
 public class Circle extends Figure {
+    public static final int BOUND = 100;
     private int radius;
 
     public Circle() {
@@ -17,7 +18,7 @@ public class Circle extends Figure {
     @Override
     public void setRandomProperties() {
         super.setRandomProperties();
-        this.radius = new Random().nextInt(100);
+        this.radius = new Random().nextInt(BOUND);
     }
 
     @Override
