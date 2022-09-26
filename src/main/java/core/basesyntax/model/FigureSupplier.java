@@ -3,6 +3,8 @@ package core.basesyntax.model;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int DEFAULT_RADIUS = 10;
+    private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -46,8 +48,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, "white");
+        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
     }
 }
-
-
