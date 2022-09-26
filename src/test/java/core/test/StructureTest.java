@@ -25,7 +25,8 @@ public class StructureTest {
       allClasses = getClasses("core.basesyntax");
       if (allClasses.size() == 0) {
         Assert.fail("You should not rename base core.basesyntax package "
-            + "and project name should not contain spaces");
+            + "and path to project and project name should not contain spaces "
+            + "or words in cyrillic");
       }
     } catch (Exception e) {
       throw new RuntimeException("Could not load classes ", e);
