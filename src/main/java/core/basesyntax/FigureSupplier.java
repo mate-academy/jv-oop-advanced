@@ -3,10 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final Random random = new Random();
     public static final int FIGURE_COUNT = 3;
     public static final int ALLOWABLE_RANGE_OF_UNITS = 50;
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT) + 1;
@@ -27,7 +27,7 @@ public class FigureSupplier {
                         random.nextInt(ALLOWABLE_RANGE_OF_UNITS),
                         random.nextInt(ALLOWABLE_RANGE_OF_UNITS));
             default:
-                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                     random.nextInt(ALLOWABLE_RANGE_OF_UNITS),
                     random.nextInt(ALLOWABLE_RANGE_OF_UNITS),
                     random.nextInt(ALLOWABLE_RANGE_OF_UNITS));
