@@ -4,15 +4,14 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int NUMBER_OF_FIGURES = 5;
+    private static final double CIRCLE_RADIUS = 10.0;
     private ColorSupplier randomColor = new ColorSupplier();
     private Random randomIndex = new Random();
 
     public Figure getRandomFigure() {
-
         switch (randomIndex.nextInt(NUMBER_OF_FIGURES)) {
             case 0:
                 return getRandomCircle();
-
             case 1:
                 return getRightTriangle();
             case 2:
@@ -55,5 +54,9 @@ public class FigureSupplier {
                 getRandomDouble(),
                 getRandomDouble(),
                 getRandomDouble());
+    }
+
+    public Figure getDefaultFigure() {
+        return new Circle(Color.WHITE, CIRCLE_RADIUS);
     }
 }
