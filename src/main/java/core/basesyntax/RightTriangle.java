@@ -11,12 +11,12 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    String getName() {
+    public String getName() {
         return Figures.RIGHTTRIANGLE.name().toLowerCase();
     }
 
     @Override
-    double area() {
+    public double area() {
         return base * height * 0.5;
     }
 

@@ -7,12 +7,13 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
-    public int figureSize() {
+    private int figureSize() {
         return random.nextInt(MAX_FIGURE_SIZE);
     }
 
-    public Figure whichFigure() {
-        switch (Figures.values()[random.nextInt(Figures.values().length)]) {
+    public Figure getRandomFigure() {
+        Figures randomFigure = Figures.values()[random.nextInt(Figures.values().length)];
+        switch (randomFigure) {
             case CIRCLE:
                 return new Circle(colorSupplier.getRandomColor(), figureSize());
             case SQUARE:
@@ -22,10 +23,11 @@ public class FigureSupplier {
             case RIGHTTRIANGLE:
                 return new RightTriangle(colorSupplier.getRandomColor(),
                         figureSize(), figureSize());
-            default: ISOSCELESTRAPEZOID:
+            case ISOSCELESTRAPEZOID:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), figureSize(),
                         figureSize(), figureSize());
-
+            default:
+                return getDefaultFigure();
         }
     }
 
