@@ -12,7 +12,6 @@ public class IsoscelesTrapezoid extends Figure {
             this.sideShort = sideShort;
             this.height = height;
         }
-
     }
 
     @Override
