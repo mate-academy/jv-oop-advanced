@@ -22,13 +22,16 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double findArea() {
-        area = (firstSide + secondSide) / height;
-        return area;
+    public void findArea() {
+        if (area == 0.0) {
+            area = (firstSide + secondSide) / height;
+        } else {
+            System.out.println("The Area has already been calculated");
+        }
     }
 
     @Override
-    public String toString() {
+    public String draw() {
         return "Figure: IsoscelesTrapezoid, "
                 + "firstSide: " + firstSide
                 + " units, secondSide: " + secondSide

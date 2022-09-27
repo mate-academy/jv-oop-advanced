@@ -1,9 +1,8 @@
 package core.basesyntax;
 
-public class Figure implements Area {
-    private String color;
-
-    private double area;
+public abstract class Figure implements Area, Drawable {
+    String color;
+    double area;
 
     public Figure(String color) {
         this.color = color;
@@ -14,7 +13,6 @@ public class Figure implements Area {
     }
 
     @Override
-    public double findArea() {
-        return area;
-    }
+    public abstract void findArea();
+
 }

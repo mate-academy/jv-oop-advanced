@@ -11,20 +11,17 @@ public class Rectangle extends Figure {
         this.secondSide = secondSide;
     }
 
-    public Rectangle(String color, double firstSide, double secondSide, double area) {
-        super(color);
-        this.firstSide = firstSide;
-        this.secondSide = secondSide;
+    @Override
+    public void findArea() {
+        if (area == 0.0) {
+            area = firstSide * secondSide;
+        } else {
+            System.out.println("The area has been already calculated");
+        }
     }
 
     @Override
-    public double findArea() {
-        area = firstSide * secondSide;
-        return area;
-    }
-
-    @Override
-    public String toString() {
+    public String draw() {
         return "Figure: Rectangle, "
                 + "firstSide: " + firstSide
                 + " units, secondSide: " + secondSide

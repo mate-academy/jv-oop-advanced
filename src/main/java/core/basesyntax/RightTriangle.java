@@ -12,13 +12,16 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double findArea() {
-        area = firstLeg * secondLeg * 0.5;
-        return area;
+    public void findArea() {
+        if (area == 0.0) {
+            area = firstLeg * secondLeg * 0.5;
+        } else {
+            System.out.println("The area has been already calculated");
+        }
     }
 
     @Override
-    public String toString() {
+    public String draw() {
         return "Figure: RightTriangle, "
                 + "firstLeg: " + firstLeg
                 + " units, secondLeg: " + secondLeg
