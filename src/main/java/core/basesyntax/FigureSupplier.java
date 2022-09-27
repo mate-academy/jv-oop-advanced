@@ -38,9 +38,8 @@ public class FigureSupplier {
                 height  = getRandomParameter();
                 return new IsoscelesTrapezoid(color, top, bottom, height);
             default:
-                throw new IllegalStateException(
-                        "Unexpected value: " + Figures.values()[figureIndex]
-                );
+                //Without default case 'missing return statement' compile error
+                return getRandomFigure();
         }
     }
 
