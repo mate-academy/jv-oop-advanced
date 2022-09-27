@@ -3,15 +3,13 @@ package core.basesyntax.figures;
 import core.basesyntax.Figure;
 
 public class Rectangle extends Figure {
-    public static final int BOUND = 100;
     private int width;
     private int height;
 
-    @Override
-    public void setRandomProperties() {
-        super.setRandomProperties();
-        this.width = random.nextInt(BOUND);
-        this.height = random.nextInt(BOUND);
+    public Rectangle(String color, int width, int height) {
+        super(color);
+        this.width = width;
+        this.height = height;
     }
 
     @Override
@@ -20,7 +18,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String toString() {
+    public String toDraw() {
         return "Figure: rectangle, area: " + getArea()
                 + " sq.units, width: " + width
                 + " units, height: " + height

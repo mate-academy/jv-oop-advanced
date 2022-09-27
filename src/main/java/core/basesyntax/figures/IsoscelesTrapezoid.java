@@ -3,17 +3,15 @@ package core.basesyntax.figures;
 import core.basesyntax.Figure;
 
 public class IsoscelesTrapezoid extends Figure {
-    public static final int BOUND = 100;
     private int firstSide;
     private int secondSide;
     private int height;
 
-    @Override
-    public void setRandomProperties() {
-        super.setRandomProperties();
-        this.firstSide = random.nextInt(BOUND);
-        this.secondSide = random.nextInt(BOUND);
-        this.height = random.nextInt(BOUND);
+    public IsoscelesTrapezoid(String color, int firstSide, int secondSide, int height) {
+        super(color);
+        this.firstSide = firstSide;
+        this.secondSide = secondSide;
+        this.height = height;
     }
 
     @Override
@@ -22,7 +20,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String toString() {
+    public String toDraw() {
         return "Figure: isosceles trapezoid, area: " + getArea()
                 + " sq.units, first side: " + firstSide
                 + " units, second side: " + secondSide
