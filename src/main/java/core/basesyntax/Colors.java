@@ -1,0 +1,10 @@
+package core.basesyntax;
+
+public enum Colors {
+    WHITE,
+    BLACK,
+    YELLOW,
+    BLUE,
+    PURPLE,
+    SILVER
+}
