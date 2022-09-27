@@ -19,23 +19,23 @@ public class FigureSupplier {
         String color = colorSupplier.getRandomColor();
         switch (Figures.values()[figureIndex]) {
             case SQUARE:
-                double side  = getRandomParameter();
+                double side = getRandomParameter();
                 return new Square(color, side);
             case RECTANGLE:
-                double width  = getRandomParameter();
-                double height  = getRandomParameter();
+                double width = getRandomParameter();
+                double height = getRandomParameter();
                 return new Rectangle(color, width, height);
             case RIGHT_TRIANGLE:
-                double base  = getRandomParameter();
-                height  = getRandomParameter();
+                double base = getRandomParameter();
+                height = getRandomParameter();
                 return new RightTriangle(color, base, height);
             case CIRCLE:
-                double radius  = getRandomParameter();
+                double radius = getRandomParameter();
                 return new Circle(color, radius);
             case ISOSCELES_TRAPEZOID:
-                double top  = getRandomParameter();
-                double bottom  = getRandomParameter();
-                height  = getRandomParameter();
+                double top = getRandomParameter();
+                double bottom = getRandomParameter();
+                height = getRandomParameter();
                 return new IsoscelesTrapezoid(color, top, bottom, height);
             default:
                 //Without default case 'missing return statement' compile error
@@ -46,6 +46,7 @@ public class FigureSupplier {
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_CIRCLE_RADIUS);
     }
+
     private double getRandomParameter() {
         return random.nextDouble() * MAX_PARAMETER;
     }
