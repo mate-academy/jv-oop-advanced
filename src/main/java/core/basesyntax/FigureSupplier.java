@@ -14,7 +14,7 @@ public class FigureSupplier {
         SQUARE, RECTANGLE, RIGHT_TRIANGLE, CIRCLE, ISOSCELES_TRAPEZOID
     }
 
-    public FigureBase getRandomFigure() {
+    public Figure getRandomFigure() {
         var figureIndex = random.nextInt(Figures.values().length);
         String color = colorSupplier.getRandomColor();
         switch (Figures.values()[figureIndex]) {
@@ -44,7 +44,7 @@ public class FigureSupplier {
         }
     }
 
-    public FigureBase getDefaultFigure() {
+    public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_CIRCLE_RADIUS);
     }
 }
