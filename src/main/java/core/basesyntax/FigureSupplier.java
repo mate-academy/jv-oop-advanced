@@ -19,23 +19,23 @@ public class FigureSupplier {
         String color = colorSupplier.getRandomColor();
         switch (Figures.values()[figureIndex]) {
             case SQUARE:
-                double side = random.nextDouble() * MAX_PARAMETER;
+                double side  = getRandomParameter();
                 return new Square(color, side);
             case RECTANGLE:
-                double width = random.nextDouble() * MAX_PARAMETER;
-                double height = random.nextDouble() * MAX_PARAMETER;
+                double width  = getRandomParameter();
+                double height  = getRandomParameter();
                 return new Rectangle(color, width, height);
             case RIGHT_TRIANGLE:
-                double base = random.nextDouble() * MAX_PARAMETER;
-                height = random.nextDouble() * MAX_PARAMETER;
+                double base  = getRandomParameter();
+                height  = getRandomParameter();
                 return new RightTriangle(color, base, height);
             case CIRCLE:
-                double radius = random.nextDouble() * MAX_PARAMETER;
+                double radius  = getRandomParameter();
                 return new Circle(color, radius);
             case ISOSCELES_TRAPEZOID:
-                double top = random.nextDouble() * MAX_PARAMETER;
-                double bottom = random.nextDouble() * MAX_PARAMETER;
-                height = random.nextDouble() * MAX_PARAMETER;
+                double top  = getRandomParameter();
+                double bottom  = getRandomParameter();
+                height  = getRandomParameter();
                 return new IsoscelesTrapezoid(color, top, bottom, height);
             default:
                 throw new IllegalStateException(
@@ -46,5 +46,8 @@ public class FigureSupplier {
 
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_CIRCLE_RADIUS);
+    }
+    private double getRandomParameter() {
+        return random.nextDouble() * MAX_PARAMETER;
     }
 }
