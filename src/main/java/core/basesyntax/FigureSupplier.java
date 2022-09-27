@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_FIGURE_SIZE = 10;
-    private ColorSupplier colorSupplier = new ColorSupplier();
-    private Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
 
     public int figureSize() {
         return random.nextInt(MAX_FIGURE_SIZE);
