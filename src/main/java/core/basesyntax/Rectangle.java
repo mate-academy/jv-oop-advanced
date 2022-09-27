@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure{
+public class Rectangle extends Figure {
 
     private int sideOne;
     private int sideTwo;
@@ -17,7 +17,7 @@ public class Rectangle extends Figure{
     }
 
     @Override
-    String getName() {
+    public String getName() {
         return Figures.RECTANGLE.name().toLowerCase();
     }
 

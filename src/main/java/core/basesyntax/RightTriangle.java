@@ -1,8 +1,9 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure{
+public class RightTriangle extends Figure {
     private int base;
     private int height;
+
     public RightTriangle(String color, int base, int height) {
         super(color);
         this.base = base;
@@ -20,7 +21,7 @@ public class RightTriangle extends Figure{
     }
 
     @Override
-    void infoAboutFigure() {
+    public void infoAboutFigure() {
         System.out.println("Figure: " + getName() + ", area " + area() + " sq.units, base: "
                 + base + ", height: " + height + ", color: " + getColor());
     }

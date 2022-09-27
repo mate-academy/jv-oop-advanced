@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public abstract class Figure implements CommonInformation {
     private String color;
 
     public Figure(String color) {
@@ -11,9 +11,7 @@ public abstract class Figure {
 
     abstract double area();
 
-     String getColor() {
+    String getColor() {
         return color;
-     }
-
-     abstract void infoAboutFigure();
+    }
 }
