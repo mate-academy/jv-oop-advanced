@@ -5,9 +5,6 @@ import core.basesyntax.Figure;
 public class Square extends Figure {
     private double firstLine;
 
-    public Square() {
-    }
-
     public Square(String color, double firstLine) {
         super(color);
         this.firstLine = firstLine;

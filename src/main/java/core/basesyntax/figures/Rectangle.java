@@ -6,11 +6,6 @@ public class Rectangle extends Figure {
     private double lineLength;
     private double lineWindth;
 
-    public Rectangle(double lineLength, double lineWindth) {
-        this.lineLength = lineLength;
-        this.lineWindth = lineWindth;
-    }
-
     public Rectangle(String color, double lineLength, double lineWindth) {
         super(color);
         this.lineLength = lineLength;

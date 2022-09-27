@@ -7,16 +7,6 @@ public class IsoscelesTrapezoid extends Figure {
     private double secondLine;
     private double thirdLine;
 
-    public IsoscelesTrapezoid() {
-    }
-
-    public IsoscelesTrapezoid(double firstLine,
-                              double secondLine, double thirdLine) {
-        this.firstLine = firstLine;
-        this.secondLine = secondLine;
-        this.thirdLine = thirdLine;
-    }
-
     public IsoscelesTrapezoid(String color,
                               double firstLine, double secondLine, double thirdLine) {
         super(color);
