@@ -36,7 +36,4 @@ public class FigureSupplier {
             default: return getDefaultFigure();
         }
     }
-
-
-
 }
