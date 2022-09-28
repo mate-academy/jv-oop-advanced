@@ -1,25 +1,33 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private float firstSide = getSomething();
+    private int side;
+    private int secondSide;
 
-    private float secondSide = new FigureSupplier().getRandomFigure();
-
-    @Override
-    public float getArea() {
-        return firstSide * secondSide;
+    public Rectangle(String color, int side, int secondSide) {
+        setColor(color);
+        this.side = side;
+        this.secondSide = secondSide;
     }
 
     @Override
-    public StringBuilder printInfo() {
-        setName("rectangle");
-        StringBuilder sb = new StringBuilder("Figure: ");
-        sb.append(getName()).append(", ")
-                .append("area: ").append(getArea())
-                .append(" rc.units, firsts side: ").append(firstSide)
-                .append(" units, second side: ").append(secondSide)
-                .append(" units, color: ").append(getColor());
-        System.out.println(sb);
-        return sb;
+    public String name() {
+        return "Rectangle";
+    }
+
+    @Override
+    public float getArea() {
+        return side * secondSide;
+    }
+
+    @Override
+    public String printInfo() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Figure: ").append(name()).append(", area: ")
+                .append(getArea()).append(" units, side: ")
+                .append(side).append(" units, second side: ")
+                .append(secondSide).append(", color: ")
+                .append(getColor());
+        return sb.toString();
     }
 }

@@ -1,30 +1,32 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private float radius = getSomething();
 
-    public float getRadius() {
-        return radius;
-    }
+    private float radius;
 
-    public void setRadius(float radius) {
+    public Circle(String color, int radius) {
+        setColor(color);
         this.radius = radius;
     }
 
     @Override
-    public float getArea() {
-        return (float) Math.PI * radius * radius;
+    public String name() {
+        return "Circle";
     }
 
     @Override
-    public StringBuilder printInfo() {
-        setName("circle");
-        StringBuilder sb = new StringBuilder("Figure: ");
-        sb.append(getName()).append(", ")
-                .append("area: ").append(getArea())
-                .append(" cr.units, radius: ").append(radius)
-                .append(" units, color: ").append(getColor());
-        System.out.println(sb);
-        return sb;
+    public float getArea() {
+        return (float) (Math.PI * Math.pow(radius, 2));
     }
+
+    @Override
+    public String printInfo() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Figure: ").append(name()).append(", area: ")
+                .append(getArea()).append(" units, radius: ")
+                .append(radius).append(" units, color: ")
+                .append(getColor());
+        return sb.toString();
+    }
+
 }

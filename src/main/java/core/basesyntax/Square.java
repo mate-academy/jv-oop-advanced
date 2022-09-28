@@ -1,7 +1,17 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    private float side = getSomething();
+    private int side;
+
+    public Square(String color, int side) {
+        setColor(color);
+        this.side = side;
+    }
+
+    @Override
+    public String name() {
+        return "Square";
+    }
 
     @Override
     public float getArea() {
@@ -9,14 +19,12 @@ public class Square extends Figure {
     }
 
     @Override
-    public StringBuilder printInfo() {
-        setName("square");
-        StringBuilder sb = new StringBuilder("Figure: ");
-        sb.append(getName()).append(", ")
-                .append("area: ").append(getArea())
-                .append(" sq.units, side: ").append(side)
-                .append(" units, color: ").append(getColor());
-        System.out.println(sb);
-        return sb;
+    public String printInfo() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("Figure: ").append(name()).append(", area: ")
+                .append(getArea()).append(" units, side: ")
+                .append(side).append(" units, color: ")
+                .append(getColor());
+        return sb.toString();
     }
 }
