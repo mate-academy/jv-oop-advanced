@@ -1,9 +1,6 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.interfaces.Area;
-import core.basesyntax.interfaces.Drawing;
-
-public class RightTriangle extends Figure implements Area, Drawing {
+public class RightTriangle extends Figure {
     private int side;
     private int height;
 

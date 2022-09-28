@@ -1,9 +1,6 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.interfaces.Area;
-import core.basesyntax.interfaces.Drawing;
-
-public class Circle extends Figure implements Area, Drawing {
+public class Circle extends Figure {
     private int radius;
 
     public Circle(String color, int radius) {

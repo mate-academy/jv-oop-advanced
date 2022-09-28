@@ -1,9 +1,6 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.interfaces.Area;
-import core.basesyntax.interfaces.Drawing;
-
-public class IsoscelesTrapezoid extends Figure implements Area, Drawing {
+public class IsoscelesTrapezoid extends Figure {
     private int sideA;
     private int sideB;
     private int sideC;
