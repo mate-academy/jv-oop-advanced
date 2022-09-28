@@ -1,0 +1,28 @@
+package core.basesyntax.figures;
+
+import core.basesyntax.abstraction.Figure;
+
+public class Rectangle extends Figure {
+    private final static String NAME = "Rectangle";
+
+    int sizeOfTopSide;
+    int sizeOfLateralSide;
+
+    public Rectangle(String color, int sizeOfTopSide, int sizeOfLateralSide) {
+        super(color);
+        this.sizeOfTopSide = sizeOfTopSide;
+        this.sizeOfLateralSide = sizeOfLateralSide;
+    }
+
+    @Override
+    public String toString() {
+        return "Figure: " + NAME + ", area: " + getArea() + " sq.units,"
+                + " top side: " + sizeOfTopSide + ", lateral side: " + sizeOfLateralSide
+                + " units, color: " + getColor();
+    }
+
+    @Override
+    public double getArea() {
+        return sizeOfLateralSide * sizeOfTopSide;
+    }
+}
