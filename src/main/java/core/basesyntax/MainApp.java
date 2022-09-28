@@ -5,7 +5,7 @@ public class MainApp {
 
     public static void main(String[] args) {
         Figure[] arrayFigure = new Figure[NUMBER_FIGURE];
-        FigureSupplier figureSupplier = new FigureSupplier() ;
+        FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < arrayFigure.length; i++) {
             if (i < NUMBER_FIGURE / 2) {
                 arrayFigure[i] = figureSupplier.getRandomFigure();

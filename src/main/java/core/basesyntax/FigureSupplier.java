@@ -9,8 +9,8 @@ public class FigureSupplier {
     private static Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figure getDefaultFigure(){
-          return new Circle("WHITE" , RADIUS_WHITE_CIRCLE);
+    public Figure getDefaultFigure() {
+        return new Circle("WHITE", RADIUS_WHITE_CIRCLE);
     }
 
     private int getRandomInt() {
@@ -26,9 +26,11 @@ public class FigureSupplier {
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                         getRandomInt(), getRandomInt(), getRandomInt());
             case 2:
-                return new Rectangle(colorSupplier.getRandomColor(), getRandomInt(), getRandomInt());
+                return new Rectangle(colorSupplier.getRandomColor(), getRandomInt(),
+                        getRandomInt());
             case 3:
-                return new RightTriangle(colorSupplier.getRandomColor(), getRandomInt(), getRandomInt());
+                return new RightTriangle(colorSupplier.getRandomColor(), getRandomInt(),
+                        getRandomInt());
             case 4:
                 return new Square(colorSupplier.getRandomColor(), getRandomInt());
             default: return getDefaultFigure();
