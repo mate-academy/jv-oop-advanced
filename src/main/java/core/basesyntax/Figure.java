@@ -2,9 +2,9 @@ package core.basesyntax;
 
 import core.basesyntax.enums.Color;
 import core.basesyntax.interfaces.FigureArea;
-import core.basesyntax.interfaces.FigureDraw;
+import core.basesyntax.interfaces.FigureDrawer;
 
-public abstract class Figure implements FigureArea, FigureDraw {
+public abstract class Figure implements FigureArea, FigureDrawer {
     private Color color;
 
     public Figure(Color color) {

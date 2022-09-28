@@ -29,32 +29,33 @@ public class FigureSupplier {
 
     //Generate figures with random sides from LOWER_BOUND to UPPER_BOUND units
     private Circle getRandomCircle() {
-        return new Circle(colorSupplier.getRandomColor(),
-                random.nextInt(UPPER_BOUND) + LOWER_BOUND);
+        int radius = random.nextInt(UPPER_BOUND) + LOWER_BOUND;
+        return new Circle(colorSupplier.getRandomColor(), radius);
     }
 
     private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+        int firstSide = random.nextInt(UPPER_BOUND) + LOWER_BOUND;
+        int secondSide = random.nextInt(UPPER_BOUND) + LOWER_BOUND;
+        int height = random.nextInt(UPPER_BOUND) + LOWER_BOUND;
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                random.nextInt(UPPER_BOUND) + LOWER_BOUND,
-                random.nextInt(UPPER_BOUND) + LOWER_BOUND,
-                random.nextInt(UPPER_BOUND) + LOWER_BOUND);
+                firstSide, secondSide, height);
     }
 
     private Rectangle getRandomRectangle() {
-        return new Rectangle(colorSupplier.getRandomColor(),
-                random.nextInt(UPPER_BOUND) + LOWER_BOUND,
-                random.nextInt(UPPER_BOUND) + LOWER_BOUND);
+        int width = random.nextInt(UPPER_BOUND) + LOWER_BOUND;
+        int height = random.nextInt(UPPER_BOUND) + LOWER_BOUND;
+        return new Rectangle(colorSupplier.getRandomColor(), width, height);
     }
 
     private RightTriangle getRandomRightTriangle() {
-        return new RightTriangle(colorSupplier.getRandomColor(),
-                random.nextInt(UPPER_BOUND) + LOWER_BOUND,
-                random.nextInt(UPPER_BOUND) + LOWER_BOUND);
+        int firstLeg = random.nextInt(UPPER_BOUND) + LOWER_BOUND;
+        int secondLeg = random.nextInt(UPPER_BOUND) + LOWER_BOUND;
+        return new RightTriangle(colorSupplier.getRandomColor(), firstLeg, secondLeg);
     }
 
     private Square getRandomSquare() {
-        return new Square(colorSupplier.getRandomColor(),
-                random.nextInt(UPPER_BOUND) + LOWER_BOUND);
+        int side = random.nextInt(UPPER_BOUND) + LOWER_BOUND;
+        return new Square(colorSupplier.getRandomColor(), side);
     }
 
     public Figure getDefaultFigure() {
