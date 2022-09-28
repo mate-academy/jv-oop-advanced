@@ -1,4 +1,4 @@
-package core.test;
+package core.basesyntax.test;
 
 import java.io.File;
 import java.io.IOException;
