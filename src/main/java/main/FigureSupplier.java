@@ -9,12 +9,12 @@ import core.basesyntax.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final Random random = new Random();
     private static final int DEFAULT_CIRCLE_RADIUS = 10;
     private static final int MAX_VALUE = 25;
     private static final String DEFAULT_CIRCLE_COLOR = Color.WHITE.name().toLowerCase();
-    private final ColorSupplier colorSupplier = new ColorSupplier();
     private static final int FIGURES_NUMBER = 5;
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_CIRCLE_RADIUS,DEFAULT_CIRCLE_COLOR);
