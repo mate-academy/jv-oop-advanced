@@ -11,11 +11,12 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void findArea() {
+    public double findArea() {
         if (getArea() == 0.0) {
-            setArea(firstSide * secondSide);
+            return firstSide * secondSide;
         } else {
             System.out.println("The area has been already calculated");
+            return getArea();
         }
     }
 
@@ -24,7 +25,7 @@ public class Rectangle extends Figure {
         return "Figure: Rectangle, "
                 + "firstSide: " + firstSide
                 + " units, secondSide: " + secondSide
-                + " units, area: " + getArea()
+                + " units, area: " + findArea()
                 + " sq.units, " + "color: " + getColor();
     }
 }

@@ -12,20 +12,13 @@ public class IsoscelesTrapezoid extends Figure {
         this.secondSide = secondSide;
     }
 
-    public IsoscelesTrapezoid(String color, double firstSide, double secondSide,
-                              double height, double area) {
-        super(color);
-        this.height = height;
-        this.firstSide = firstSide;
-        this.secondSide = secondSide;
-    }
-
     @Override
-    public void findArea() {
+    public double findArea() {
         if (getArea() == 0.0) {
-            setArea((firstSide + secondSide) / height);
+            return (firstSide + secondSide) / height;
         } else {
             System.out.println("The Area has already been calculated");
+            return getArea();
         }
     }
 
@@ -34,7 +27,7 @@ public class IsoscelesTrapezoid extends Figure {
         return "Figure: IsoscelesTrapezoid, "
                 + "firstSide: " + firstSide
                 + " units, secondSide: " + secondSide
-                + " units, area: " + getArea()
+                + " units, area: " + findArea()
                 + " sq.units, " + "height: " + height
                 + " units, color: " + getColor();
     }

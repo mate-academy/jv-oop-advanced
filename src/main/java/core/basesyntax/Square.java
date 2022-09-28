@@ -9,11 +9,12 @@ public class Square extends Figure {
     }
 
     @Override
-    public void findArea() {
+    public double findArea() {
         if (getArea() == 0.0) {
-            setArea(side * side);
+            return side * side;
         } else {
             System.out.println("The area has been already calculated");
+            return getArea();
         }
     }
 
@@ -21,7 +22,7 @@ public class Square extends Figure {
     public String draw() {
         return "Figure: Square, "
                 + "side: " + side
-                + " units, area: " + getArea()
+                + " units, area: " + findArea()
                 + " sq.units, " + "color: " + getColor();
     }
 }

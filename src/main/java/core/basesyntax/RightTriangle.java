@@ -11,11 +11,12 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void findArea() {
+    public double findArea() {
         if (getArea() == 0.0) {
-            setArea(firstLeg * secondLeg * 0.5);
+            return firstLeg * secondLeg * 0.5;
         } else {
             System.out.println("The area has been already calculated");
+            return getArea();
         }
     }
 
@@ -24,7 +25,7 @@ public class RightTriangle extends Figure {
         return "Figure: RightTriangle, "
                 + "firstLeg: " + firstLeg
                 + " units, secondLeg: " + secondLeg
-                + " units, area: " + getArea()
+                + " units, area: " + findArea()
                 + " sq.units, " + "color: " + getColor();
     }
 }

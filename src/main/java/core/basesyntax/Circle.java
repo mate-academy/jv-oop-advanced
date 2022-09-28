@@ -9,11 +9,12 @@ public class Circle extends Figure {
     }
 
     @Override
-    public void findArea() {
-        if (getArea() == 0.0) {
-            setArea(radius * radius * Math.PI);
+    public double findArea() {
+        if (getArea() == 0.0 && radius > 0) {
+            return radius * radius * Math.PI;
         } else {
             System.out.println("The area has been already calculated");
+            return getArea();
         }
     }
 
@@ -21,7 +22,7 @@ public class Circle extends Figure {
     public String draw() {
         return "Figure: Circle, "
                 + "radius: " + radius
-                + " units, area: " + getArea()
+                + " units, area: " + findArea()
                 + " sq.units: "
                 + "color: " + getColor();
     }
