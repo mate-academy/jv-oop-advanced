@@ -11,6 +11,8 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int NUMBER_OF_FIGURES_BOUND = 4;
     private static final int MAX_VALUE_BOUND = 100;
+    private static final String DEFAULT_COLOR = "white";
+    private static final double DEFAULT_RADIUS = 10.0;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
@@ -44,6 +46,6 @@ public class FigureSupplier {
     }
 
     public AbstractFigure getDefaultFigure() {
-        return new Circle("white", 10);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
