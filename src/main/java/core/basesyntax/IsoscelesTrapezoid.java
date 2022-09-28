@@ -1,44 +1,44 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private int firstLeg;
-    private int secondLeg;
-    private int thirdLeg;
+    private int bottomSide;
+    private int topSide;
+    private int lateralSide;
 
-    public IsoscelesTrapezoid(String color, int firstLeg, int secondLeg, int thirdLeg) {
+    public IsoscelesTrapezoid(String color, int bottomSide, int topSide, int lateralSide) {
         super(color);
-        this.firstLeg = firstLeg;
-        this.secondLeg = secondLeg;
-        this.thirdLeg = thirdLeg;
+        this.bottomSide = bottomSide;
+        this.topSide = topSide;
+        this.lateralSide = lateralSide;
     }
 
     public int getFirstLeg() {
-        return firstLeg;
+        return bottomSide;
     }
 
     public void setFirstLeg(int firstLeg) {
-        this.firstLeg = firstLeg;
+        this.bottomSide = bottomSide;
     }
 
     public int getSecondLeg() {
-        return secondLeg;
+        return topSide;
     }
 
     public void setSecondLeg(int secondLeg) {
-        this.secondLeg = secondLeg;
+        this.topSide = topSide;
     }
 
     public int getThirdLeg() {
-        return thirdLeg;
+        return lateralSide;
     }
 
     public void setThirdLeg(int thirdLeg) {
-        this.thirdLeg = thirdLeg;
+        this.lateralSide = lateralSide;
     }
 
     @Override
     public double calculateArea() {
-        return (firstLeg + secondLeg) * thirdLeg / 2.0;
+        return (bottomSide + topSide) * lateralSide / 2.0;
     }
 
     @Override
@@ -46,9 +46,9 @@ public class IsoscelesTrapezoid extends Figure {
         System.out.println("Figure: "
                 + "isoscelesTrapezoid, "
                 + "area: " + calculateArea() + " sq.units, "
-                + "firstLeg: " + firstLeg + " units, "
-                + "secondLeg: " + secondLeg + " units, "
-                + "thirdLeg: " + thirdLeg + " units, "
+                + "bottomSide: " + bottomSide + " units, "
+                + "secondLeg: " + topSide + " units, "
+                + "lateralSide: " + lateralSide + " units, "
                 + "color: " + getColor().toLowerCase());
     }
 }

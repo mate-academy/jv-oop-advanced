@@ -35,9 +35,4 @@ public class Circle extends Figure {
     public void setColor(String color) {
         super.setColor(color);
     }
-
-    @Override
-    public String getColor() {
-        return super.getColor();
-    }
 }

@@ -1,6 +1,6 @@
 package main;
 
-public enum Colors {
+public enum Color {
     GREEN,
     RED,
     BLUE,
