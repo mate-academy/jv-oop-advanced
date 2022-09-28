@@ -2,7 +2,6 @@ package core.basesyntax;
 
 public class Square extends Figure {
     private double side;
-    private double area;
 
     public Square(String color, double side) {
         super(color);
@@ -11,8 +10,8 @@ public class Square extends Figure {
 
     @Override
     public void findArea() {
-        if (this.area == 0.0) {
-            area = side * side;
+        if (getArea() == 0.0) {
+            setArea(side * side);
         } else {
             System.out.println("The area has been already calculated");
         }
@@ -22,7 +21,7 @@ public class Square extends Figure {
     public String draw() {
         return "Figure: Square, "
                 + "side: " + side
-                + " units, area: " + area
+                + " units, area: " + getArea()
                 + " sq.units, " + "color: " + getColor();
     }
 }

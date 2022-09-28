@@ -4,7 +4,6 @@ public class IsoscelesTrapezoid extends Figure {
     private double firstSide;
     private double secondSide;
     private double height;
-    private double area;
 
     public IsoscelesTrapezoid(String color, double firstSide, double secondSide, double height) {
         super(color);
@@ -23,8 +22,8 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void findArea() {
-        if (area == 0.0) {
-            area = (firstSide + secondSide) / height;
+        if (getArea() == 0.0) {
+            setArea((firstSide + secondSide) / height);
         } else {
             System.out.println("The Area has already been calculated");
         }
@@ -35,7 +34,7 @@ public class IsoscelesTrapezoid extends Figure {
         return "Figure: IsoscelesTrapezoid, "
                 + "firstSide: " + firstSide
                 + " units, secondSide: " + secondSide
-                + " units, area: " + area
+                + " units, area: " + getArea()
                 + " sq.units, " + "height: " + height
                 + " units, color: " + getColor();
     }

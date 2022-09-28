@@ -3,7 +3,6 @@ package core.basesyntax;
 public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
-    private double area;
 
     public RightTriangle(String color, double firstLeg, double secondLeg) {
         super(color);
@@ -13,8 +12,8 @@ public class RightTriangle extends Figure {
 
     @Override
     public void findArea() {
-        if (area == 0.0) {
-            area = firstLeg * secondLeg * 0.5;
+        if (getArea() == 0.0) {
+            setArea(firstLeg * secondLeg * 0.5);
         } else {
             System.out.println("The area has been already calculated");
         }
@@ -25,7 +24,7 @@ public class RightTriangle extends Figure {
         return "Figure: RightTriangle, "
                 + "firstLeg: " + firstLeg
                 + " units, secondLeg: " + secondLeg
-                + " units, area: " + area
+                + " units, area: " + getArea()
                 + " sq.units, " + "color: " + getColor();
     }
 }

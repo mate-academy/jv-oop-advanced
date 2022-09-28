@@ -3,7 +3,6 @@ package core.basesyntax;
 public class Rectangle extends Figure {
     private double firstSide;
     private double secondSide;
-    private double area;
 
     public Rectangle(String color, double firstSide, double secondSide) {
         super(color);
@@ -13,8 +12,8 @@ public class Rectangle extends Figure {
 
     @Override
     public void findArea() {
-        if (area == 0.0) {
-            area = firstSide * secondSide;
+        if (getArea() == 0.0) {
+            setArea(firstSide * secondSide);
         } else {
             System.out.println("The area has been already calculated");
         }
@@ -25,7 +24,7 @@ public class Rectangle extends Figure {
         return "Figure: Rectangle, "
                 + "firstSide: " + firstSide
                 + " units, secondSide: " + secondSide
-                + " units, area: " + area
+                + " units, area: " + getArea()
                 + " sq.units, " + "color: " + getColor();
     }
 }

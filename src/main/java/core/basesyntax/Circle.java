@@ -2,7 +2,6 @@ package core.basesyntax;
 
 public class Circle extends Figure {
     private double radius;
-    private double area;
 
     public Circle(String color, double radius) {
         super(color);
@@ -11,8 +10,8 @@ public class Circle extends Figure {
 
     @Override
     public void findArea() {
-        if (area == 0.0) {
-            area = radius * radius * Math.PI;
+        if (getArea() == 0.0) {
+            setArea(radius * radius * Math.PI);
         } else {
             System.out.println("The area has been already calculated");
         }
@@ -22,7 +21,7 @@ public class Circle extends Figure {
     public String draw() {
         return "Figure: Circle, "
                 + "radius: " + radius
-                + " units, area: " + area
+                + " units, area: " + getArea()
                 + " sq.units: "
                 + "color: " + getColor();
     }

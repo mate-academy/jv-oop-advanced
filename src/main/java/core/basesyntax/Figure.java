@@ -15,10 +15,6 @@ public abstract class Figure implements Area, Drawable {
     @Override
     public abstract void findArea();
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
     public double getArea() {
         return area;
     }
