@@ -10,8 +10,8 @@ public class Main {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = FROM; i < TO; i++) {
-            AbstractFigure abstractFigure = i < FIRST_HALF ?
-                    figureSupplier.getRandomFigure() : figureSupplier.getDefaultFigure();
+            AbstractFigure abstractFigure = i < FIRST_HALF
+                    ? figureSupplier.getRandomFigure() : figureSupplier.getDefaultFigure();
             abstractFigure.draw();
         }
     }
