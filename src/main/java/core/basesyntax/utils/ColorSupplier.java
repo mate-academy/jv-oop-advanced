@@ -3,10 +3,16 @@ package core.basesyntax.utils;
 import java.util.Random;
 
 public class ColorSupplier {
-    public String getRandomColor(Random random) {
+    private final Random random;
+
+    public ColorSupplier(Random random) {
+        this.random = random;
+    }
+
+    public String getRandomColor() {
         // random integer in length of number of BallColor
         // values
-        int randomInt = random.nextInt(BallColors.values().length);
-        return BallColors.values()[randomInt].name();
+        int randomInt = random.nextInt(Colors.values().length);
+        return Colors.values()[randomInt].label;
     }
 }

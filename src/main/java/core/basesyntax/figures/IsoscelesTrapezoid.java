@@ -3,7 +3,7 @@ package core.basesyntax.figures;
 import core.basesyntax.abstraction.Figure;
 
 public class IsoscelesTrapezoid extends Figure {
-    private static final String NAME = "Isosceles trapezoid";
+    private static final String NAME = "ssosceles trapezoid";
 
     private final int bottomSide;
     private final int topSide;
@@ -24,7 +24,7 @@ public class IsoscelesTrapezoid extends Figure {
         double aPlusBDivideByFour = (bottomSide + topSide) / 4.0;
         double powCSide = lateralSide * lateralSide;
         double powAMinusB = (bottomSide - topSide) * (bottomSide - topSide);
-        return aPlusBDivideByFour * (Math.sqrt(4 * powCSide - powAMinusB));
+        return (aPlusBDivideByFour) * (Math.sqrt(4 * powCSide - powAMinusB));
     }
 
     @Override
