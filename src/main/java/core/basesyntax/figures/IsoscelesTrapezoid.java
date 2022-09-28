@@ -3,7 +3,7 @@ package core.basesyntax.figures;
 import core.basesyntax.abstraction.Figure;
 
 public class IsoscelesTrapezoid extends Figure {
-    private static final String NAME = "ssosceles trapezoid";
+    private static final String NAME = "isosceles trapezoid";
 
     private final int bottomSide;
     private final int topSide;

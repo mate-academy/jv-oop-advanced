@@ -3,7 +3,7 @@ package core.basesyntax.figures;
 import core.basesyntax.abstraction.Figure;
 
 public class Rectangle extends Figure {
-    private final static String NAME = "Rectangle";
+    private final static String NAME = "rectangle";
 
     int sizeOfTopSide;
     int sizeOfLateralSide;
