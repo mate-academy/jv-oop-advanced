@@ -1,5 +1,5 @@
 package core.basesyntax.abstraction;
 
-public interface Area {
+public interface AreaCalculator {
     public double getArea();
 }

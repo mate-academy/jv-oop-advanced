@@ -31,11 +31,9 @@ public enum Figures {
                         random.nextInt(MAX_VALUE));
             case CIRCLE:
                 return new Circle(color, random.nextInt(MAX_VALUE));
-            case ISOSCELES_TRAPEZOID:
+            default:
                 return new IsoscelesTrapezoid(color, random.nextInt(MAX_VALUE),
                         random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
-            default:
-                return null;
         }
     }
 }
