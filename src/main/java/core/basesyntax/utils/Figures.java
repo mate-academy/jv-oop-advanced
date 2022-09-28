@@ -1,8 +1,11 @@
 package core.basesyntax.utils;
 
 import core.basesyntax.abstraction.Figure;
-import core.basesyntax.figures.*;
-
+import core.basesyntax.figures.Circle;
+import core.basesyntax.figures.IsoscelesTrapezoid;
+import core.basesyntax.figures.Rectangle;
+import core.basesyntax.figures.RightTriangle;
+import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public enum Figures {
@@ -21,15 +24,18 @@ public enum Figures {
             case SQUARE:
                 return new Square(color, random.nextInt(MAX_VALUE));
             case RECTANGLE:
-                return new Rectangle(color, random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
+                return new Rectangle(color, random.nextInt(MAX_VALUE),
+                        random.nextInt(MAX_VALUE));
             case RIGHT_TRIANGLE:
-                return new RightTriangle(color, random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
+                return new RightTriangle(color, random.nextInt(MAX_VALUE),
+                        random.nextInt(MAX_VALUE));
             case CIRCLE:
                 return new Circle(color, random.nextInt(MAX_VALUE));
             case ISOSCELES_TRAPEZOID:
-                return new IsoscelesTrapezoid(color, random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE),
-                        random.nextInt(MAX_VALUE));
+                return new IsoscelesTrapezoid(color, random.nextInt(MAX_VALUE),
+                        random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
+            default:
+                return null;
         }
-        return null;
     }
 }

@@ -9,9 +9,13 @@ public enum Colors {
     GREEN,
     ORANGE;
 
-    public final String label;
+    private final String label;
 
     Colors() {
         this.label = this.name().toLowerCase();
+    }
+
+    public String getLabel() {
+        return label;
     }
 }

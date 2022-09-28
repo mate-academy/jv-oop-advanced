@@ -3,10 +3,9 @@ package core.basesyntax.figures;
 import core.basesyntax.abstraction.Figure;
 
 public class Rectangle extends Figure {
-    private final static String NAME = "rectangle";
 
-    int sizeOfTopSide;
-    int sizeOfLateralSide;
+    protected final int sizeOfTopSide;
+    private final int sizeOfLateralSide;
 
     public Rectangle(String color, int sizeOfTopSide, int sizeOfLateralSide) {
         super(color);
@@ -16,7 +15,7 @@ public class Rectangle extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: " + NAME + ", area: " + getArea() + " sq.units,"
+        return "Figure: rectangle, area: " + getArea() + " sq.units,"
                 + " top side: " + sizeOfTopSide + ", lateral side: " + sizeOfLateralSide
                 + " units, color: " + getColor();
     }

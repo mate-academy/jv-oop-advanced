@@ -3,9 +3,9 @@ package core.basesyntax.figures;
 import core.basesyntax.abstraction.Figure;
 
 public class RightTriangle extends Figure {
-    private final static String NAME = "right triangle";
     private final int firstLeg;
     private final int secondLeg;
+
     public RightTriangle(String color, int firstLeg, int secondLeg) {
         super(color);
         this.firstLeg = firstLeg;
@@ -19,7 +19,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: " + NAME + ", area: " + getArea() + " sq.units,"
+        return "Figure: right triangle, area: " + getArea() + " sq.units,"
                 + " firstLeg: " + firstLeg + "units, secondLeg: " + secondLeg
                 + " units, color: " + getColor();
     }

@@ -13,6 +13,6 @@ public class ColorSupplier {
         // random integer in length of number of BallColor
         // values
         int randomInt = random.nextInt(Colors.values().length);
-        return Colors.values()[randomInt].label;
+        return Colors.values()[randomInt].getLabel();
     }
 }

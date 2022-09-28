@@ -16,15 +16,13 @@ public class IsoscelesTrapezoid extends Figure {
         this.lateralSide = lateralSide;
     }
 
-    /**
-     *  S = ((a + b) / 4) *	(√(4c2 - (a - b)^2))
-     */
+    /* S = ((a + b) / 4) * (√(4c2 - (a - b)^2)) */
     @Override
     public double getArea() {
-        double aPlusBDivideByFour = (bottomSide + topSide) / 4.0;
+        double aplusBdividebyfour = (bottomSide + topSide) / 4.0;
         double powCSide = lateralSide * lateralSide;
         double powAMinusB = (bottomSide - topSide) * (bottomSide - topSide);
-        return (aPlusBDivideByFour) * (Math.sqrt(4 * powCSide - powAMinusB));
+        return (aplusBdividebyfour) * (Math.sqrt(4 * powCSide - powAMinusB));
     }
 
     @Override

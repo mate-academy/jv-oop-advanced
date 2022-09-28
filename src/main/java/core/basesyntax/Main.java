@@ -1,10 +1,7 @@
 package core.basesyntax;
 
 import core.basesyntax.abstraction.Figure;
-import core.basesyntax.figures.Rectangle;
 import core.basesyntax.utils.FigureSupplier;
-import core.basesyntax.utils.Figures;
-
 import java.util.Random;
 
 public class Main {
