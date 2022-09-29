@@ -28,38 +28,37 @@ public class FigureSupplier {
         }
     }
 
-    public Circle getRandomCircle() {
-        String color = colorSupplier.getRandomColor();
+    private Circle getRandomCircle() {
         double radius = random.nextDouble() * MAX_VALUE;
-        return new Circle(color, radius);
+        return new Circle(getRandomColor(), radius);
     }
 
-    public IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
-        String color = colorSupplier.getRandomColor();
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
         double topBase = random.nextDouble() * MAX_VALUE;
         double bottomBase = random.nextDouble() * MAX_VALUE;
         double height = random.nextDouble() * MAX_VALUE;
-        return new IsoscelesTrapezoid(color, topBase, height, bottomBase);
+        return new IsoscelesTrapezoid(getRandomColor(), topBase, height, bottomBase);
     }
 
-    public Rectangle getRandomRectangle() {
-        String color = colorSupplier.getRandomColor();
+    private Rectangle getRandomRectangle() {
         double height = random.nextDouble() * MAX_VALUE;
         double width = random.nextDouble() * MAX_VALUE;
-        return new Rectangle(color, height, width);
+        return new Rectangle(getRandomColor(), height, width);
     }
 
-    public RightTriangle getRandomRightTriangle() {
-        String color = colorSupplier.getRandomColor();
+    private RightTriangle getRandomRightTriangle() {
         double firstLeg = random.nextDouble() * MAX_VALUE;
         double secondLeg = random.nextDouble() * MAX_VALUE;
-        return new RightTriangle(color, firstLeg, secondLeg);
+        return new RightTriangle(getRandomColor(), firstLeg, secondLeg);
     }
 
-    public Square getRandomSquare() {
-        String color = colorSupplier.getRandomColor();
+    private Square getRandomSquare() {
         double side = random.nextDouble() * MAX_VALUE;
-        return new Square(color, side);
+        return new Square(getRandomColor(), side);
+    }
+
+    private String getRandomColor() {
+        return colorSupplier.getRandomColor();
     }
 
     public Figure getDefaultFigure() {
