@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class FigureSupplier {
+public final class FigureSupplier {
     public static final Color DEFAULT_FIGURE_COLOR = Color.WHITE;
     public static final double DEFAULT_SIDE_DIMENSION = 10.0;
     private final String[] figuresClassList = {"Circle", "Square", "Rectangle",
