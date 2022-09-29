@@ -24,6 +24,7 @@ public abstract class Figure implements Printer, AreaCalculator {
     public void setColor(String randomColour) {
     }
 
+    @Override
     public void drawFigure() {
     }
 
