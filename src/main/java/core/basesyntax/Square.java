@@ -18,7 +18,7 @@ public class Square extends Figure {
     public void drawFigure() {
         System.out.println("Figure: " + getName()
                 + ", area: " + new DecimalFormat(ROUNDING_PATTERN).format(calculateArea())
-                + " sq.units, " + " side: " + side + " units,"
+                + " sq.units, " + "side: " + side + " units,"
                 + " color: " + getColor());
     }
 }
