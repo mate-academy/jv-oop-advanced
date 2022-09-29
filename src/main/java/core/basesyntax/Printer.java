@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public interface FigurePrinter {
+public interface Printer {
     public abstract void drawFigure();
 }
 
