@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements FigurePrinter, AreaCalculator {
+public abstract class Figure implements Drawable, AreaCalculator {
 
     private String color;
 
@@ -12,5 +12,3 @@ public abstract class Figure implements FigurePrinter, AreaCalculator {
         return color;
     }
 }
-
-//https://github.com/mate-academy/jv-oop-advanced/pull/669/files
