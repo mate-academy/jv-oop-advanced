@@ -24,29 +24,30 @@ public class FigureSupplier {
     public AbstractFigure getRandomFigure() {
         String randomColor = colorSupplier.getRandomColor();
         int randomFigureNumber = getRandomNumber(NUMBER_OF_FIGURES_BOUND);
-        if (randomFigureNumber == 0) {
-            double randomRadius = getRandomNumber(MAX_VALUE_BOUND);
-            return new Circle(randomColor, randomRadius);
-        } else if (randomFigureNumber == 1) {
-            double randomFirstBaseSide = getRandomNumber(MAX_VALUE_BOUND);
-            double randomSecondBaseSide = getRandomNumber(MAX_VALUE_BOUND);
-            double randomHeight = getRandomNumber(MAX_VALUE_BOUND);
-            double randomSide = getRandomNumber(MAX_VALUE_BOUND);
-            return new IsoscelesTrapezoid(randomColor, randomFirstBaseSide, randomSecondBaseSide,
-                    randomHeight, randomSide);
-        } else if (randomFigureNumber == 2) {
-            double randomWidth = getRandomNumber(MAX_VALUE_BOUND);
-            double randomHeight = getRandomNumber(MAX_VALUE_BOUND);
-            return new Rectangle(randomColor, randomWidth, randomHeight);
-        } else if (randomFigureNumber == 3) {
-            double randomFirstLeg = getRandomNumber(MAX_VALUE_BOUND);
-            double randomSecondLeg = getRandomNumber(MAX_VALUE_BOUND);
-            double randomHypotenuse = getRandomNumber(MAX_VALUE_BOUND);
-            return new RightTriangle(randomColor, randomFirstLeg, randomSecondLeg,
-                    randomHypotenuse);
-        } else {
-            double randomSide = getRandomNumber(MAX_VALUE_BOUND);
-            return new Square(randomColor, randomSide);
+        switch (randomFigureNumber) {
+            case 0:
+                double randomRadius = getRandomNumber(MAX_VALUE_BOUND);
+                return new Circle(randomColor, randomRadius);
+            case 1:
+                double randomFirstBaseSide = getRandomNumber(MAX_VALUE_BOUND);
+                double randomSecondBaseSide = getRandomNumber(MAX_VALUE_BOUND);
+                double randomHeight = getRandomNumber(MAX_VALUE_BOUND);
+                double randomSide = getRandomNumber(MAX_VALUE_BOUND);
+                return new IsoscelesTrapezoid(randomColor, randomFirstBaseSide,
+                        randomSecondBaseSide, randomHeight, randomSide);
+            case 2:
+                double randomRectangleWidth = getRandomNumber(MAX_VALUE_BOUND);
+                double randomRectangleHeight = getRandomNumber(MAX_VALUE_BOUND);
+                return new Rectangle(randomColor, randomRectangleWidth, randomRectangleHeight);
+            case 3:
+                double randomFirstLeg = getRandomNumber(MAX_VALUE_BOUND);
+                double randomSecondLeg = getRandomNumber(MAX_VALUE_BOUND);
+                double randomHypotenuse = getRandomNumber(MAX_VALUE_BOUND);
+                return new RightTriangle(randomColor, randomFirstLeg, randomSecondLeg,
+                        randomHypotenuse);
+            default:
+                double randomSquareSide = getRandomNumber(MAX_VALUE_BOUND);
+                return new Square(randomColor, randomSquareSide);
         }
     }
 
