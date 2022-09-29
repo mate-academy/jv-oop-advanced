@@ -3,8 +3,6 @@ package core.basesyntax.figures;
 import core.basesyntax.abstraction.Figure;
 
 public class IsoscelesTrapezoid extends Figure {
-    private static final String NAME = "isosceles trapezoid";
-
     private final int bottomSide;
     private final int topSide;
     private final int lateralSide;
@@ -15,8 +13,7 @@ public class IsoscelesTrapezoid extends Figure {
         this.topSide = topSide;
         this.lateralSide = lateralSide;
     }
-
-    /* S = ((a + b) / 4) * (√(4c2 - (a - b)^2)) */
+    
     @Override
     public double getArea() {
         double aplusBdividebyfour = (bottomSide + topSide) / 4.0;
@@ -26,8 +23,14 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
+    public void draw() {
+        System.out.println(this);
+    }
+
+    @Override
     public String toString() {
-        return "Figure: " + NAME + ", area: " + getArea() + " sq.units,"
+        String figureName = "isosceles trapezoid";
+        return "Figure: " + figureName + ", area: " + getArea() + " sq.units,"
                 + " top side: " + topSide + " units, bottomSide: " + bottomSide
                 + " units , lateral side: " + lateralSide
                 + " units, color: " + getColor();

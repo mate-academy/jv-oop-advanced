@@ -3,8 +3,7 @@ package core.basesyntax.figures;
 import core.basesyntax.abstraction.Figure;
 
 public class Rectangle extends Figure {
-
-    protected final int sizeOfTopSide;
+    private final int sizeOfTopSide;
     private final int sizeOfLateralSide;
 
     public Rectangle(String color, int sizeOfTopSide, int sizeOfLateralSide) {
@@ -14,14 +13,20 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "Figure: rectangle, area: " + getArea() + " sq.units,"
-                + " top side: " + sizeOfTopSide + ", lateral side: " + sizeOfLateralSide
-                + " units, color: " + getColor();
+    public double getArea() {
+        return sizeOfLateralSide * sizeOfTopSide;
     }
 
     @Override
-    public double getArea() {
-        return sizeOfLateralSide * sizeOfTopSide;
+    public void draw() {
+        System.out.println(this);
+    }
+
+    @Override
+    public String toString() {
+        String figureName = "rectangle";
+        return "Figure: " + figureName + " area: " + getArea() + " sq.units,"
+                + " top side: " + sizeOfTopSide + ", lateral side: " + sizeOfLateralSide
+                + " units, color: " + getColor();
     }
 }

@@ -3,8 +3,6 @@ package core.basesyntax.figures;
 import core.basesyntax.abstraction.Figure;
 
 public class Circle extends Figure {
-    private static final String NAME = "circle";
-
     private final int radius;
 
     public Circle(String color, int radius) {
@@ -18,8 +16,14 @@ public class Circle extends Figure {
     }
 
     @Override
+    public void draw() {
+        System.out.println(this);
+    }
+
+    @Override
     public String toString() {
-        return "Figure: " + NAME + ", area: " + getArea() + " sq.units,"
+        String figureName = "circle";
+        return "Figure: " + figureName + ", area: " + getArea() + " sq.units,"
                 + " radius: " + radius + " units, color: " + getColor();
     }
 }

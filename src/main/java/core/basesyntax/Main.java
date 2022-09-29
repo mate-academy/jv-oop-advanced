@@ -13,15 +13,13 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier(random);
         Figure[] figures = new Figure[SIZE_OF_ARRAY];
 
-        for (int i = 0; i < NUMBER_OF_GENERATED_FIGURES; i++) {
-            figures[i] = figureSupplier.getRandomFigure();
-        }
-        for (int i = NUMBER_OF_GENERATED_FIGURES; i < figures.length; i++) {
-            figures[i] = figureSupplier.getDefaultFigure();
-        }
-
-        for (Figure figure : figures) {
-            figure.draw();
+        for (int i = 0; i < SIZE_OF_ARRAY; i++) {
+            if (i < NUMBER_OF_GENERATED_FIGURES) {
+                figures[i] = figureSupplier.getRandomFigure();
+            } else {
+                figures[i] = figureSupplier.getDefaultFigure();
+            }
+            figures[i].draw();
         }
     }
 }
