@@ -15,7 +15,7 @@ public class FigureSupplier {
         switch (getFigure()) {
             case "CIRCLE":
                 return new Circle(colorSupplier.getRandomColor(), randomNumber.nextInt(MAX_NUMBER));
-            case "RIGHTTRIANGLE":
+            case "RIGHT_TRIANGLE":
                 return new RightTriangle(colorSupplier.getRandomColor(),
                         randomNumber.nextInt(MAX_NUMBER), randomNumber.nextInt(MAX_NUMBER));
             case "RECTANGLE":
