@@ -17,6 +17,5 @@ public class Main {
         for (Figure fg : figures) {
             System.out.println(fg.printInfo());
         }
-
     }
 }
