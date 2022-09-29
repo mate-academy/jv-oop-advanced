@@ -1,45 +1,56 @@
 package core.basesyntax.suppliers;
 
-import core.basesyntax.figures.*;
-
+import core.basesyntax.figures.Circle;
+import core.basesyntax.figures.Figure;
+import core.basesyntax.figures.IsoscelesTrapezoid;
+import core.basesyntax.figures.Rectangle;
+import core.basesyntax.figures.RightTriangle;
+import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
     public static final int NUMBER_OF_TYPES = 5;
     public static final double MIN_SIZE = 1.0d;
     public static final double MAX_SIZE = 24.0d;
+    public static final double DEFAULT_RADIUS = 10.0d;
 
-    private Random random = new Random();
-    private ColorSupplier colorSupplier = new ColorSupplier();
-    Figure figure;
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
+        Figure figure;
         switch (random.nextInt(NUMBER_OF_TYPES)) {
-            case 0: figure = getRandomIsoscelesTrapezoid();
+            case 0:
+                figure = getRandomIsoscelesTrapezoid();
                 break;
-            case 1: figure = getRandomRectangle();
+            case 1:
+                figure = getRandomRectangle();
                 break;
-            case 2: figure = getRandomRightTriangle();
+            case 2:
+                figure = getRandomRightTriangle();
                 break;
-            case 3: figure = getRandomSquare();
+            case 3:
+                figure = getRandomSquare();
                 break;
-            case 4: figure = getRandomCircle();
+            case 4:
+                figure = getRandomCircle();
+                break;
             default:
+                figure = getDefaultFigure();
         }
-        return null;
+        return figure;
     }
 
-    // this method should always return white circle with radius 10
-     public Figure getDefaultFigure() {
-         return null;
-     }
+    public Figure getDefaultFigure() {
+        return new Circle(colorSupplier.getDefaultColor(), DEFAULT_RADIUS);
+    }
 
-     private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                 random.nextDouble(MIN_SIZE, MAX_SIZE),
                 random.nextDouble(MIN_SIZE, MAX_SIZE),
                 random.nextDouble(MIN_SIZE, MAX_SIZE));
-     }
+    }
 
     private Rectangle getRandomRectangle() {
         return new Rectangle(colorSupplier.getRandomColor(),
