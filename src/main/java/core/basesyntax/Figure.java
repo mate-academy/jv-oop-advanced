@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements FirugeInformation, areaOfFigure {
+public abstract class Figure implements FirugeInformation, AreaOfFigure {
 
     private String color;
 

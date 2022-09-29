@@ -6,6 +6,7 @@ public class FigureSupplier {
     private static final int MAX_FIGURE_NUMBER = 6;
     private static final int DEFAULT_CIRCLE_RADIUS = 10;
     private final Random random = new Random();
+
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(MAX_FIGURE_NUMBER);
         switch (figureNumber) {
@@ -16,7 +17,8 @@ public class FigureSupplier {
             case 3:
                 return new Square(getRandomColor(), getRandomNumber());
             case 4:
-                return new IsoscelesTrapezoid(getRandomColor(), getRandomNumber(), getRandomNumber(), getRandomNumber());
+                return new IsoscelesTrapezoid(getRandomColor(),
+                        getRandomNumber(), getRandomNumber(), getRandomNumber());
             case 5:
                 return new RightTriangle(getRandomColor(), getRandomNumber(), getRandomNumber());
             default:
@@ -33,6 +35,7 @@ public class FigureSupplier {
     public int getRandomNumber() {
         return new Random().nextInt(12) + 1;
     }
+
     public Figure getDefaultFigure() {
         return new Circle(Color.values()[0].name(),DEFAULT_CIRCLE_RADIUS);
     }
