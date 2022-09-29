@@ -24,6 +24,6 @@ public class RightTriangle extends Figure {
 
     @Override
     public String name() {
-        return Figures.RIGHTTRIANGLE.name();
+        return Figures.RIGHT_TRIANGLE.name();
     }
 }

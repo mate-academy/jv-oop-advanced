@@ -21,6 +21,6 @@ public class Square extends Figure {
 
     @Override
     public String name() {
-        return Figures.ISOSCELESTRAPEZOID.name();
+        return Figures.SQUARE.name();
     }
 }
