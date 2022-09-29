@@ -27,6 +27,10 @@ public class FigureSupplier {
                 return getDefaultFigure();
         }
     }
+    
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
+    }
 
     private Circle getRandomCircle() {
         double radius = random.nextDouble() * MAX_VALUE;
@@ -59,9 +63,5 @@ public class FigureSupplier {
 
     private String getRandomColor() {
         return colorSupplier.getRandomColor();
-    }
-
-    public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
