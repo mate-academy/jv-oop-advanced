@@ -1,0 +1,33 @@
+package core.basesyntax;
+
+public enum FigureShape {
+    ISOSCELES_TRAPEZOID,
+    NONAGON,
+    ELLIPSE,
+    RECTANGULAR,
+    RECTANGULAR_PRISM,
+    OCTAGON,
+    CONE,
+    TRIANGLE,
+    SCALENE_TRIANGLE,
+    ARROW,
+    CUBE,
+    CYLINDER,
+    STAR,
+    HEPTAGON,
+    HEXAGON,
+    CRESCENT,
+    PYRAMID,
+    RIGHT_TRIANGLE,
+    PARALLELOGRAM,
+    RHOMBUS,
+    SQUARE,
+    PENTAGON,
+    TRAPEZOID,
+    CIRCLE,
+    OVAL,
+    DECAGON,
+    HEART,
+    CROSS,
+    RECTANGLE
+}
