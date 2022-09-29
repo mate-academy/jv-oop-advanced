@@ -4,7 +4,7 @@ import core.basesyntax.suppliers.ColorSupplier;
 import java.util.Random;
 
 public class Circle extends Figure {
-    private final String name = "circle";
+    private static final String name = "circle";
     private int radius;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
@@ -13,8 +13,8 @@ public class Circle extends Figure {
     }
 
     public Circle(int radius, String color) {
+        super(color);
         this.radius = radius;
-        this.setColor(color);
     }
 
     @Override
@@ -24,23 +24,9 @@ public class Circle extends Figure {
 
     @Override
     public String draw() {
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("Figure: ")
-                .append(name)
-                .append(", area: ")
-                .append(getArea())
-                .append(" sq.units, radius = ")
-                .append(radius)
-                .append(" units, color: ")
-                .append(getColor());
-        return stringBuilder.toString();
-    }
-
-    @Override
-    public Figure getRandomProperties() {
-        int randomRadius = random.nextInt(100);
-        String randomColor = colorSupplier.getRandomColor();
-        Figure circle = new Circle(randomRadius, randomColor);
-        return circle;
+        return "Figure: " + name
+                + ", area: " + getArea()
+                + " sq.units, radius = " + radius
+                + " units, color: " + getColor();
     }
 }

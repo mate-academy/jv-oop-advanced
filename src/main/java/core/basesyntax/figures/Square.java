@@ -13,7 +13,7 @@ public class Square extends Figure {
     }
 
     public Square(int side, String color) {
-        this.setColor(color);
+        super(color);
         this.side = side;
     }
 
@@ -24,23 +24,9 @@ public class Square extends Figure {
 
     @Override
     public String draw() {
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("Figure: ")
-                .append(name)
-                .append(", area: ")
-                .append(getArea())
-                .append(" sq.units, side = ")
-                .append(side)
-                .append(" units, color: ")
-                .append(getColor());
-        return stringBuilder.toString();
-    }
-
-    @Override
-    public Figure getRandomProperties() {
-        int randomSide = random.nextInt(100);
-        String randomColor = colorSupplier.getRandomColor();
-        Figure square = new Square(randomSide, randomColor);
-        return square;
+        return "Figure: " + name
+                + ", area: " + getArea()
+                + " sq.units, side = " + side
+                + " units, color: " + getColor();
     }
 }

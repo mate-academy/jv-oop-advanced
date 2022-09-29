@@ -9,26 +9,55 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int BOUND_OF_SIZES = 100;
+    private static final FigureSupplier figureSupplier = new FigureSupplier();
     private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int randomNumber = random.nextInt(5);
         switch (randomNumber) {
             case 0:
-                return new Square().getRandomProperties();
+                return figureSupplier.getRandomProperties(new Square());
             case 1:
-                return new Rectangle().getRandomProperties();
+                return figureSupplier.getRandomProperties(new Rectangle());
             case 2:
-                return new RightTriangle().getRandomProperties();
+                return figureSupplier.getRandomProperties(new RightTriangle());
             case 3:
-                return new Circle().getRandomProperties();
+                return figureSupplier.getRandomProperties(new Circle());
             default:
-                return new IsoscelesTrapezoid().getRandomProperties();
+                return figureSupplier.getRandomProperties(new IsoscelesTrapezoid());
         }
     }
 
     public Figure getDefaultFigure() {
         Figure figure = new Circle(10, "white");
         return figure;
+    }
+
+    public Figure getRandomProperties(Figure figure) {
+        String randomColor = colorSupplier.getRandomColor();
+        String className = figure.getClass().getSimpleName();
+        switch (className) {
+            case "Circle":
+                int randomRadius = random.nextInt(BOUND_OF_SIZES);
+                return new Circle(randomRadius, randomColor);
+            case "Rectangle":
+                int randomLength = random.nextInt(BOUND_OF_SIZES);
+                int randomWidth = random.nextInt(BOUND_OF_SIZES);
+                return new Rectangle(randomLength, randomWidth, randomColor);
+            case "IsoscelesTrapezoid":
+                int rndTop = random.nextInt(BOUND_OF_SIZES);
+                int rndDown = random.nextInt(BOUND_OF_SIZES);
+                int rndHeight = random.nextInt(BOUND_OF_SIZES);
+                return new IsoscelesTrapezoid(rndTop, rndDown, rndHeight, randomColor);
+            case "RightTriangle":
+                int randomFirstLeg = random.nextInt(BOUND_OF_SIZES);
+                int randomSecondLeg = random.nextInt(BOUND_OF_SIZES);
+                return new RightTriangle(randomFirstLeg, randomSecondLeg, randomColor);
+            default:
+                int randomSide = random.nextInt(BOUND_OF_SIZES);
+                return new Square(randomSide, randomColor);
+        }
     }
 }
