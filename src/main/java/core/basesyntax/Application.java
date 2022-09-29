@@ -16,9 +16,9 @@ public class Application {
         figures[4] = figureSupplier.getDefaultFigure();
         figures[5] = figureSupplier.getDefaultFigure();
         System.out.println(figures);
-//        FigureSupplier figureSupplier = new FigureSupplier(new ColorSupplier(new Random()));
-//        System.out.println(figureSupplier.getDefaultFigure());
-
+        //        FigureSupplier figureSupplier =
+        //        new FigureSupplier(new ColorSupplier(new Random()));
+        //        System.out.println(figureSupplier.getDefaultFigure());
 
     }
 }

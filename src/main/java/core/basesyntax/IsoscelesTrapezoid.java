@@ -1,11 +1,13 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements FiguresArea, Drawable {
+public class IsoscelesTrapezoid extends Figure {
     private int upperBaseOfTrapezoid;
     private int lowerBaseOfTrapezoid;
     private int heightOfTrapezoid;
 
-    public IsoscelesTrapezoid(int upperBaseOfTrapezoid, int lowerBaseOfTrapezoid, int heightOfTrapezoid) {
+    public IsoscelesTrapezoid(int upperBaseOfTrapezoid,
+                              int lowerBaseOfTrapezoid,
+                              int heightOfTrapezoid) {
         this.upperBaseOfTrapezoid = upperBaseOfTrapezoid;
         this.lowerBaseOfTrapezoid = lowerBaseOfTrapezoid;
         this.heightOfTrapezoid = heightOfTrapezoid;
@@ -18,8 +20,13 @@ public class IsoscelesTrapezoid extends Figure implements FiguresArea, Drawable 
 
     @Override
     public void draw() {
-        System.out.println("Figure: IsoscelesTrapezoid, area: " + getArea() + " sq.units, upperBaseOfTrapezoid: " + upperBaseOfTrapezoid
-                + " units, lowerBaseOfTrapezoid: " + lowerBaseOfTrapezoid
-                + " units, heightOfTrapezoid: " + heightOfTrapezoid + " units, color: " + getColor());
+        System.out.println("Figure: IsoscelesTrapezoid, area: "
+                + getArea() + " sq.units, upperBaseOfTrapezoid: "
+                + upperBaseOfTrapezoid
+                + " units, lowerBaseOfTrapezoid: "
+                + lowerBaseOfTrapezoid
+                + " units, heightOfTrapezoid: "
+                + heightOfTrapezoid + " units, color: "
+                + getColor());
     }
 }

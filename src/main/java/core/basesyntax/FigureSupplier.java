@@ -5,10 +5,18 @@ import java.util.Random;
 public class FigureSupplier {
     public static final int FIGURES_COUNT = 5;
     private final ColorSupplier colorSupplier;
-    Random random;
+    private Random random;
 
     public FigureSupplier(ColorSupplier colorSupplier) {
         this.colorSupplier = colorSupplier;
+    }
+
+    public Random getRandom() {
+        return random;
+    }
+
+    public void setRandom(Random random) {
+        this.random = random;
     }
 
     public Figure getRandomFigure() {
@@ -32,15 +40,17 @@ public class FigureSupplier {
         //this method should always return white circle with radius 10.
         Figure circle = new Circle(10);
         circle.setColor("white");
-       return circle;
+        return circle;
 
     }
 
     @Override
     public String toString() {
-        return "FigureSupplier{" +
-                "colorSupplier=" + colorSupplier +
-                ", random=" + random +
-                '}';
+        return "FigureSupplier{"
+                + "colorSupplier="
+                + colorSupplier
+                + ", random="
+                + random
+                + '}';
     }
 }

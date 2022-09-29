@@ -5,8 +5,17 @@ import java.util.Random;
 public class ColorSupplier {
 
     private static final int COLOR_COUNT = 5;
-    Random random;
+    private Random random;
+
     public ColorSupplier(Random random) {
+        this.random = random;
+    }
+
+    public Random getRandom() {
+        return random;
+    }
+
+    public void setRandom(Random random) {
         this.random = random;
     }
 
@@ -17,8 +26,9 @@ public class ColorSupplier {
 
     @Override
     public String toString() {
-        return "ColorSupplier{" +
-                "random=" + random +
-                '}';
+        return "ColorSupplier{"
+                + "random="
+                + random
+                + '}';
     }
 }
