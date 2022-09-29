@@ -1,11 +1,11 @@
 package core.basesyntax.utils;
 
-import core.basesyntax.abstraction.Figure;
-import core.basesyntax.figures.Circle;
-import core.basesyntax.figures.IsoscelesTrapezoid;
-import core.basesyntax.figures.Rectangle;
-import core.basesyntax.figures.RightTriangle;
-import core.basesyntax.figures.Square;
+import core.basesyntax.figure.Figure;
+import core.basesyntax.figure.Circle;
+import core.basesyntax.figure.IsoscelesTrapezoid;
+import core.basesyntax.figure.Rectangle;
+import core.basesyntax.figure.RightTriangle;
+import core.basesyntax.figure.Square;
 import java.util.Random;
 
 public class FigureSupplier {
@@ -34,22 +34,22 @@ public class FigureSupplier {
 
         switch (figure) {
             case SQUARE:
-                return new Square(color, getRandomNum());
+                return new Square(color, getRandomNumber());
             case RECTANGLE:
-                return new Rectangle(color, getRandomNum(),
-                        getRandomNum());
+                return new Rectangle(color, getRandomNumber(),
+                        getRandomNumber());
             case RIGHT_TRIANGLE:
-                return new RightTriangle(color, getRandomNum(),
-                        getRandomNum());
+                return new RightTriangle(color, getRandomNumber(),
+                        getRandomNumber());
             case CIRCLE:
-                return new Circle(color, getRandomNum());
+                return new Circle(color, getRandomNumber());
             default:
-                return new IsoscelesTrapezoid(color, getRandomNum(),
-                        getRandomNum(), getRandomNum());
+                return new IsoscelesTrapezoid(color, getRandomNumber(),
+                        getRandomNumber(), getRandomNumber());
         }
     }
 
-    private int getRandomNum() {
+    private int getRandomNumber() {
         return random.nextInt(MAX_VALUE);
     }
 }

@@ -1,6 +1,4 @@
-package core.basesyntax.figures;
-
-import core.basesyntax.abstraction.Figure;
+package core.basesyntax.figure;
 
 public class Circle extends Figure {
     private final int radius;
@@ -17,13 +15,9 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println(this);
-    }
-
-    @Override
-    public String toString() {
         String figureName = "circle";
-        return "Figure: " + figureName + ", area: " + getArea() + " sq.units,"
+        String message = "Figure: " + figureName + ", area: " + getArea() + " sq.units,"
                 + " radius: " + radius + " units, color: " + getColor();
+        System.out.println(message);
     }
 }

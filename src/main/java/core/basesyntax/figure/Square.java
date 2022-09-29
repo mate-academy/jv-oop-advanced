@@ -1,6 +1,4 @@
-package core.basesyntax.figures;
-
-import core.basesyntax.abstraction.Figure;
+package core.basesyntax.figure;
 
 public class Square extends Figure {
     private final int sizeOfSide;
@@ -17,13 +15,9 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        System.out.println(this);
-    }
-
-    @Override
-    public String toString() {
         String figureName = "square";
-        return "Figure: " + figureName + ", area: " + getArea() + " sq.units,"
+        String message = "Figure: " + figureName + ", area: " + getArea() + " sq.units,"
                 + " side: " + sizeOfSide + ", color: " + getColor();
+        System.out.println(message);
     }
 }

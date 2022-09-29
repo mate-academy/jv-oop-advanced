@@ -1,6 +1,4 @@
-package core.basesyntax.figures;
-
-import core.basesyntax.abstraction.Figure;
+package core.basesyntax.figure;
 
 public class RightTriangle extends Figure {
     private final int firstLeg;
@@ -19,14 +17,10 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println(this);
-    }
-
-    @Override
-    public String toString() {
         String figureName = "right triangle";
-        return "Figure: " + figureName + ", area: " + getArea() + " sq.units,"
+        String message = "Figure: " + figureName + ", area: " + getArea() + " sq.units,"
                 + " firstLeg: " + firstLeg + "units, secondLeg: " + secondLeg
                 + " units, color: " + getColor();
+        System.out.println(message);
     }
 }

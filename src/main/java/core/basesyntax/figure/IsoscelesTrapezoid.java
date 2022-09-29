@@ -1,6 +1,4 @@
-package core.basesyntax.figures;
-
-import core.basesyntax.abstraction.Figure;
+package core.basesyntax.figure;
 
 public class IsoscelesTrapezoid extends Figure {
     private final int bottomSide;
@@ -24,15 +22,11 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println(this);
-    }
-
-    @Override
-    public String toString() {
         String figureName = "isosceles trapezoid";
-        return "Figure: " + figureName + ", area: " + getArea() + " sq.units,"
+        String message = "Figure: " + figureName + ", area: " + getArea() + " sq.units,"
                 + " top side: " + topSide + " units, bottomSide: " + bottomSide
                 + " units , lateral side: " + lateralSide
                 + " units, color: " + getColor();
+        System.out.println(message);
     }
 }

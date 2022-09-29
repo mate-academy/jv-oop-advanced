@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-import core.basesyntax.abstraction.Figure;
+import core.basesyntax.figure.Figure;
 import core.basesyntax.utils.FigureSupplier;
 import java.util.Random;
 
