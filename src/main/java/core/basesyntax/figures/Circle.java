@@ -26,10 +26,10 @@ public class Circle extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: circle, area: "
-                + getArea()
+                + getFormatted(getArea())
                 + " sq.units, radius: "
-                + getRadius()
+                + getFormatted(getRadius())
                 + " color: "
-                + getColor().name());
+                + getColor().name().toLowerCase());
     }
 }

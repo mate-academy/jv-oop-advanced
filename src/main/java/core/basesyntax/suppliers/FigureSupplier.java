@@ -11,7 +11,7 @@ import java.util.Random;
 public class FigureSupplier {
     public static final int NUMBER_OF_TYPES = 5;
     public static final double MIN_SIZE = 1.0d;
-    public static final double MAX_SIZE = 24.0d;
+    public static final double MAX_SIZE = 12.0d;
     public static final double DEFAULT_RADIUS = 10.0d;
 
     private final Random random = new Random();
