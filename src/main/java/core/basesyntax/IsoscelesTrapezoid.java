@@ -5,8 +5,8 @@ public class IsoscelesTrapezoid extends Figure {
     private double sideShort;
     private double height;
 
-    public IsoscelesTrapezoid(double sideBig, double sideShort, double height) {
-        super(new ColorSupplier().getRandomColor());
+    public IsoscelesTrapezoid(String color, double sideBig, double sideShort, double height) {
+        super(color);
         if (sideShort > 0 && sideBig > 0 && height > 0 && sideBig > sideShort) {
             this.sideBig = sideBig;
             this.sideShort = sideShort;

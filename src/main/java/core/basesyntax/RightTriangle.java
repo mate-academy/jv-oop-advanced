@@ -4,8 +4,8 @@ public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
-    public RightTriangle(double firstLeg, double secondLeg) {
-        super(new ColorSupplier().getRandomColor());
+    public RightTriangle(String color, double firstLeg, double secondLeg) {
+        super(color);
         if (firstLeg > 0 && secondLeg > 0) {
             this.firstLeg = firstLeg;
             this.secondLeg = secondLeg;
