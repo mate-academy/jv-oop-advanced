@@ -1,5 +1,7 @@
 package core.basesyntax;
 
+import java.text.DecimalFormat;
+
 public class Rectangle extends Figure {
     private int shortSide;
     private int longSide;
@@ -12,28 +14,12 @@ public class Rectangle extends Figure {
 
     @Override
     public double getArea() {
-        return shortSide * longSide;
-    }
-
-    public int getShortSide() {
-        return shortSide;
-    }
-
-    public void setShortSide(int shortSide) {
-        this.shortSide = shortSide;
-    }
-
-    public int getLongSide() {
-        return longSide;
-    }
-
-    public void setLongSide(int longSide) {
-        this.longSide = longSide;
+        return Double.parseDouble(new DecimalFormat("##.##").format((long) shortSide * longSide));
     }
 
     @Override
     public void draw() {
-        System.out.println("Rectangle has a long side: " + longSide + ", short side: "
-                + shortSide + " and has an area: " + getArea());
+        System.out.println("Figure: rectangle, area: " +getArea() + " sq.units, short side: "
+                + shortSide + " units, long side: " + longSide + " units, color: " + getColor());
     }
 }

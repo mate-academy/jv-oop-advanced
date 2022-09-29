@@ -1,5 +1,7 @@
 package core.basesyntax;
 
+import java.text.DecimalFormat;
+
 public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
@@ -12,28 +14,13 @@ public class RightTriangle extends Figure {
 
     @Override
     public double getArea() {
-        return (double)(firstLeg * secondLeg) / 2;
+        return Double.parseDouble(new DecimalFormat("##.##").format(((long) firstLeg * secondLeg) / 2));
     }
 
     @Override
     public void draw() {
-        System.out.println("Right triangle has a first leg: " + firstLeg
-                + ", second leg: " + secondLeg + " and has an area: " + getArea());
+        System.out.println("Figure: right triangle, area: " +getArea() + " sq.units, first leg: "
+                + firstLeg + " units, second leg: " + secondLeg + " units, color: " + getColor());
     }
 
-    public int getFirstLeg() {
-        return firstLeg;
-    }
-
-    public void setFirstLeg(int firstLeg) {
-        this.firstLeg = firstLeg;
-    }
-
-    public double getSecondLeg() {
-        return secondLeg;
-    }
-
-    public void setSecondLeg(int secondLeg) {
-        this.secondLeg = secondLeg;
-    }
 }

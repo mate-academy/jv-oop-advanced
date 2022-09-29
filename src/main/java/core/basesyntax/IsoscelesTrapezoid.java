@@ -1,5 +1,7 @@
 package core.basesyntax;
 
+import java.text.DecimalFormat;
+
 public class IsoscelesTrapezoid extends Figure {
     private int shortSide;
     private int longSide;
@@ -12,38 +14,15 @@ public class IsoscelesTrapezoid extends Figure {
         this.height = height;
     }
 
-    public int getShortSide() {
-        return shortSide;
-    }
-
-    public void setShortSide(int shortSide) {
-        this.shortSide = shortSide;
-    }
-
-    public int getLongSide() {
-        return longSide;
-    }
-
-    public void setLongSide(int longSide) {
-        this.longSide = longSide;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
-    }
-
     @Override
     public void draw() {
-        System.out.println("Isosceles Trapezoid has a short side: " + shortSide + ", long side: "
-                + longSide + ", height: " + height + " and has an area: " + getArea());
+        System.out.println("Figure: Isosceles Trapezoid, area: " +getArea() + " sq.units, short side: "
+                + shortSide + " units, long side: " + longSide + " units, height: "
+                + height + " units, color: " + getColor());
     }
 
     @Override
     public double getArea() {
-        return (double) (longSide + shortSide) / 2 * height;
+        return Double.parseDouble(new DecimalFormat("##.##").format((long) (longSide + shortSide) / 2 * height));
     }
 }

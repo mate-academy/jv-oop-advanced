@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements Behaviour {
+public abstract class Figure implements FirugeInformation, areaOfFigure {
 
     private String color;
 
@@ -20,12 +20,4 @@ public abstract class Figure implements Behaviour {
         this.color = color;
     }
 
-    @Override
-    public void draw() {
-        System.out.println("color: " + color);
-    }
-
-    public double getArea() {
-        return 0;
-    }
 }

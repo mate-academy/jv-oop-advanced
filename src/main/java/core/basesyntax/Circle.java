@@ -1,5 +1,7 @@
 package core.basesyntax;
 
+import java.text.DecimalFormat;
+
 public class Circle extends Figure {
     private int radius;
 
@@ -8,21 +10,14 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
-    public int getRadius() {
-        return radius;
-    }
-
-    public void setRadius(int radius) {
-        this.radius = radius;
-    }
-
     @Override
     public double getArea() {
-        return Math.PI * radius * radius;
+        return  Double.parseDouble(new DecimalFormat("##.##").format(Math.PI * radius * radius));
     }
 
     @Override
     public void draw() {
-        System.out.println("Circle has a radius: " + radius + " and has an area: " + getArea());
+
+        System.out.println("Figure: circle, area: " +getArea() + " sq. units, color: " + getColor());
     }
 }

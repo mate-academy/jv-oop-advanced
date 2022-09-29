@@ -1,5 +1,7 @@
 package core.basesyntax;
 
+import java.text.DecimalFormat;
+
 public class Square extends Figure {
     private int side;
 
@@ -8,21 +10,14 @@ public class Square extends Figure {
         this.side = side;
     }
 
-    public int getSide() {
-        return side;
-    }
-
-    public void setSide(int side) {
-        this.side = side;
-    }
-
     @Override
     public double getArea() {
-        return side * side;
+        return Double.parseDouble(new DecimalFormat("##.##").format((long) side * side));
     }
 
     @Override
     public void draw() {
-        System.out.println("Square has a side: " + side + " and has an area: " + getArea());
+        System.out.println("Figure: square, area: " +getArea() + " sq.units, side: "
+                + side + " units, color: " + getColor());
     }
 }

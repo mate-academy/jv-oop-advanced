@@ -1,8 +1,5 @@
 package core.basesyntax;
 
-/**
- * Feel free to remove this class and create your own.
- */
 public class Application {
     private static final int START = 0;
     private static final int FIGURES_LENGTH = 6;
