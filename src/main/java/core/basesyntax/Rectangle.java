@@ -12,12 +12,7 @@ public class Rectangle extends Figure {
 
     @Override
     public double findArea() {
-        if (getArea() == 0.0) {
-            return firstSide * secondSide;
-        } else {
-            System.out.println("The area has been already calculated");
-            return getArea();
-        }
+        return firstSide * secondSide;
     }
 
     @Override

@@ -10,12 +10,7 @@ public class Circle extends Figure {
 
     @Override
     public double findArea() {
-        if (getArea() == 0.0) {
-            return radius * radius * Math.PI;
-        } else {
-            System.out.println("The area has been already calculated");
-            return getArea();
-        }
+        return radius * radius * Math.PI;
     }
 
     @Override

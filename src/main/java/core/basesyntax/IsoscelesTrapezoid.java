@@ -14,12 +14,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double findArea() {
-        if (getArea() == 0.0) {
-            return (firstSide + secondSide) / height;
-        } else {
-            System.out.println("The Area has already been calculated");
-            return getArea();
-        }
+        return (firstSide + secondSide) / height;
     }
 
     @Override

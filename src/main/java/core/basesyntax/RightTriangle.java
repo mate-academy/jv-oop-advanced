@@ -12,12 +12,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public double findArea() {
-        if (getArea() == 0.0) {
-            return firstLeg * secondLeg * 0.5;
-        } else {
-            System.out.println("The area has been already calculated");
-            return getArea();
-        }
+        return firstLeg * secondLeg * 0.5;
     }
 
     @Override

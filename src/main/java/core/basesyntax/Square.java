@@ -10,12 +10,7 @@ public class Square extends Figure {
 
     @Override
     public double findArea() {
-        if (getArea() == 0.0) {
-            return side * side;
-        } else {
-            System.out.println("The area has been already calculated");
-            return getArea();
-        }
+        return side * side;
     }
 
     @Override
