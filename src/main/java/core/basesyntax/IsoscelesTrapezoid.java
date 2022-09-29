@@ -1,21 +1,16 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private static int firstSide;
-    private static int secondSide;
-    private static int height;
+    private final int firstSide;
+    private final int secondSide;
+    private final int height;
 
-    public IsoscelesTrapezoid(String color, int firstSide, int secondSide, int height) {
+    public IsoscelesTrapezoid(Colors color, int firstSide, int secondSide, int height) {
         setColor(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
         this.height = height;
 
-    }
-
-    @Override
-    public String name() {
-        return "Isosceles Trapezoid";
     }
 
     @Override
@@ -25,12 +20,11 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String printInfo() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Figure: ").append(name()).append(", area: ")
-                .append(getArea()).append(" units, first side: ")
-                .append(firstSide).append(" units, second side: ")
-                .append(secondSide).append(", height: ").append(height)
-                .append(", color: ").append(getColor());
-        return sb.toString();
+        return "Figure: " + IsoscelesTrapezoid.class.getSimpleName()
+                + ", area: " + getArea() + " units, first side: "
+                + firstSide + " units, second side: "
+                + secondSide + " units, height: "
+                + height + " units, color: "
+                + getColor().name().toLowerCase();
     }
 }

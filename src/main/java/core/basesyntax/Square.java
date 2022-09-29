@@ -1,16 +1,11 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    private int side;
+    private final int side;
 
-    public Square(String color, int side) {
+    public Square(Colors color, int side) {
         setColor(color);
         this.side = side;
-    }
-
-    @Override
-    public String name() {
-        return "Square";
     }
 
     @Override
@@ -20,11 +15,9 @@ public class Square extends Figure {
 
     @Override
     public String printInfo() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Figure: ").append(name()).append(", area: ")
-                .append(getArea()).append(" units, side: ")
-                .append(side).append(" units, color: ")
-                .append(getColor());
-        return sb.toString();
+        return "Figure: " + Square.class.getSimpleName()
+                + ", area: " + getArea()
+                + " units, side: " + side
+                + " units, color: " + getColor().name().toLowerCase();
     }
 }

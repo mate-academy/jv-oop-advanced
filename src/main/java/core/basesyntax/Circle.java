@@ -2,16 +2,11 @@ package core.basesyntax;
 
 public class Circle extends Figure {
 
-    private float radius;
+    private final float radius;
 
-    public Circle(String color, int radius) {
+    public Circle(Colors color, int radius) {
         setColor(color);
         this.radius = radius;
-    }
-
-    @Override
-    public String name() {
-        return "Circle";
     }
 
     @Override
@@ -21,12 +16,9 @@ public class Circle extends Figure {
 
     @Override
     public String printInfo() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Figure: ").append(name()).append(", area: ")
-                .append(getArea()).append(" units, radius: ")
-                .append(radius).append(" units, color: ")
-                .append(getColor());
-        return sb.toString();
+        return "Figure: " + IsoscelesTrapezoid.class.getSimpleName()
+                + ", area: " + getArea() + " units, radius: "
+                + radius + " units, color: "
+                + getColor().name().toLowerCase();
     }
-
 }

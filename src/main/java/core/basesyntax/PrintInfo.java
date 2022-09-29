@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public interface InfoImplementer {
+public interface PrintInfo {
     String printInfo();
 }
