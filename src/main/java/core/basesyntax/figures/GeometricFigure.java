@@ -1,12 +1,12 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.interfaces.Area;
-import core.basesyntax.interfaces.Drawing;
+import core.basesyntax.interfaces.AreaCalculator;
+import core.basesyntax.interfaces.Drawable;
 
-public class Figure implements Area, Drawing {
+public abstract class GeometricFigure implements AreaCalculator, Drawable {
     private String color;
 
-    public Figure(String color) {
+    public GeometricFigure(String color) {
         this.color = color;
     }
 
@@ -21,6 +21,6 @@ public class Figure implements Area, Drawing {
 
     @Override
     public void draw() {
-        System.out.println("Figure");
+        System.out.println("GeometricFigure");
     }
 }

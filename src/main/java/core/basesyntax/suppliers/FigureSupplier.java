@@ -1,9 +1,9 @@
 package core.basesyntax.suppliers;
 
 import core.basesyntax.enums.Color;
-import core.basesyntax.enums.Figures;
+import core.basesyntax.enums.Figure;
 import core.basesyntax.figures.Circle;
-import core.basesyntax.figures.Figure;
+import core.basesyntax.figures.GeometricFigure;
 import core.basesyntax.figures.IsoscelesTrapezoid;
 import core.basesyntax.figures.Rectangle;
 import core.basesyntax.figures.RightTriangle;
@@ -15,7 +15,7 @@ public class FigureSupplier {
     private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
     private static final int DEFAULT_VALUE = 10;
     private Random random;
-    private Figures figures;
+    private Figure figures;
     private ColorSupplier colorSupplier;
 
     public FigureSupplier(Random random, ColorSupplier supplier) {
@@ -23,31 +23,34 @@ public class FigureSupplier {
         this.colorSupplier = supplier;
     }
 
-    public Figure getRandomFigure() {
-        int index = new Random().nextInt(Figures.values().length);
-        figures = Figures.values()[index];
+    public GeometricFigure getRandomFigure() {
+        int index = new Random().nextInt(Figure.values().length);
+        figures = Figure.values()[index];
         String randomColor = colorSupplier.getRandomColor();
         switch (figures) {
             case CIRCLE:
-                return new Circle(colorSupplier.getRandomColor(), random.nextInt(MAX_RANDOM_VALUE));
+                return new Circle(getColor(), getValue());
             case ISOSCELES_TRAPEZOID:
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                    random.nextInt(MAX_RANDOM_VALUE), random.nextInt(MAX_RANDOM_VALUE),
-                        random.nextInt(MAX_RANDOM_VALUE));
+                return new IsoscelesTrapezoid(getColor(), getValue(), getValue(), getValue());
             case RECTANGLE:
-                return new Rectangle(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_RANDOM_VALUE),
-                    random.nextInt(MAX_RANDOM_VALUE));
+                return new Rectangle(getColor(), getValue(), getValue());
             case RIGHT_TRIANGLE:
-                return new RightTriangle(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_RANDOM_VALUE), random.nextInt(MAX_RANDOM_VALUE));
+                return new RightTriangle(getColor(), getValue(), getValue());
             case SQUARE:
-                return new Square(colorSupplier.getRandomColor(), random.nextInt(MAX_RANDOM_VALUE));
-            default: return null;
+                return new Square(getColor(), getValue());
+            default: return getDefaultFigure();
         }
     }
 
-    public Figure getDefaultFigure() {
+    private String getColor() {
+        return colorSupplier.getRandomColor();
+    }
+
+    private int getValue() {
+        return random.nextInt(MAX_RANDOM_VALUE);
+    }
+
+    public GeometricFigure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_VALUE);
     }
 }

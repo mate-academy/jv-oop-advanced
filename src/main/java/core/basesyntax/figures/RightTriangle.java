@@ -1,6 +1,6 @@
 package core.basesyntax.figures;
 
-public class RightTriangle extends Figure {
+public class RightTriangle extends GeometricFigure {
     private int side;
     private int height;
 
@@ -12,12 +12,12 @@ public class RightTriangle extends Figure {
 
     @Override
     public double getArea() {
-        return (0.5 * side * height) * 10.0;
+        return 0.5 * side * height;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: right triangle, area: "
+        System.out.println("GeometricFigure: right triangle, area: "
                 + getArea() + " sq.units, sides: " + side + " units, "
                 + "height: " + height + " units, color: " + getColor());
     }
