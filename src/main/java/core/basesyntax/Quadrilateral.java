@@ -8,7 +8,7 @@ abstract class Quadrilateral extends Figure {
 
     @Override
     public void draw() {
-        System.out.printf("area: %.1f sq.units, sides are: %d-%d-%d-%d units, color: %s%n",
+        System.out.printf(", area: %.1f sq.units, sides are: %d-%d-%d-%d units, color: %s%n",
                 area, side1,side2, side3, side4, color);
     }
 }

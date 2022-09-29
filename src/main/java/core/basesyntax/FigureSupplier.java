@@ -4,27 +4,39 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
-
-    protected Random random = new Random();
+    private static final int SIDE_LIMIT = 30;
+    private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
+        Figure figure;
         switch (random.nextInt(FIGURE_COUNT)) {
             case 0:
-                return new Circle();
+                figure = new Circle(random.nextInt(SIDE_LIMIT), colorSupplier.getRandomColor());
+                break;
             case 1:
-                return new Rectangle();
+                figure = new Rectangle(random.nextInt(SIDE_LIMIT), random.nextInt(SIDE_LIMIT),
+                            colorSupplier.getRandomColor());
+                break;
             case 2:
-                return new Square();
+                figure = new Square(random.nextInt(SIDE_LIMIT), colorSupplier.getRandomColor());
+                break;
             case 3:
-                return new IsoscelesTrapezoid();
+                figure = new IsoscelesTrapezoid(random.nextInt(SIDE_LIMIT),
+                        random.nextInt(SIDE_LIMIT), random.nextInt(SIDE_LIMIT),
+                        colorSupplier.getRandomColor());
+                break;
             case 4:
-                return new RightTriangle();
+                figure = new RightTriangle(random.nextInt(SIDE_LIMIT), random.nextInt(SIDE_LIMIT),
+                            colorSupplier.getRandomColor());
+                break;
             default:
+                figure = getDefaultFigure();
         }
-        return null;
+        return figure;
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, "white");
+        return new Circle(10, ColorList.WHITE.name().toLowerCase());
     }
 }
