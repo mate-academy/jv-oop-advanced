@@ -10,6 +10,10 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
+    }
+
     public Figure getRandomFigure() {
         int index = random.nextInt(FIGURE_NUMBER);
         switch (index) {
@@ -48,10 +52,6 @@ public class FigureSupplier {
 
     private Square getRandomSquare() {
         return new Square(colorSupplier.getRandomColor(), getRandomInt());
-    }
-
-    private Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
     private int getRandomInt() {
