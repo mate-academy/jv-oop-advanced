@@ -3,13 +3,17 @@ package core.basesyntax;
 import java.util.Random;
 
 public final class FigureSupplier {
-    public static final Color DEFAULT_FIGURE_COLOR = Color.WHITE;
-    public static final double DEFAULT_SIDE_DIMENSION = 10.0;
-    private final String[] figuresClassList = {"Circle", "Square", "Rectangle",
-            "RightTriangle", "IsoscelesTrapezoid"};
-    private final int numberOfFigures = figuresClassList.length;
-    private final Random randGen = new Random();
-    private final ColorSupplier supplier = new ColorSupplier();
+    private static final Color DEFAULT_FIGURE_COLOR = Color.WHITE;
+    private static final double DEFAULT_SIDE_DIMENSION = 10.0;
+    private static final double MINIMUM_DIMENSION = 0.1;
+    private static final double MAXIMUM_DIMENSION = 1000.0;
+    private final Random randGenerator;
+    private final ColorSupplier supplier;
+
+    public FigureSupplier(Random randGenerator, ColorSupplier supplier) {
+        this.randGenerator = randGenerator;
+        this.supplier = supplier;
+    }
 
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_FIGURE_COLOR, DEFAULT_SIDE_DIMENSION);
@@ -48,14 +52,17 @@ public final class FigureSupplier {
     }
 
     private String getRandomClass() {
-        return figuresClassList[randGen.nextInt(numberOfFigures)];
+        String[] figuresClassList = {"Circle", "Square", "Rectangle",
+                "RightTriangle", "IsoscelesTrapezoid"};
+        int numberOfFigures = figuresClassList.length;
+        return figuresClassList[randGenerator.nextInt(numberOfFigures)];
     }
 
     private double getRandomSideDimension() {
-        return FigureDimensionsValidator.MINIMUM_DIMENSION
-                + (FigureDimensionsValidator.MAXIMUM_DIMENSION
-                - FigureDimensionsValidator.MINIMUM_DIMENSION)
-                * randGen.nextDouble();
+        return MINIMUM_DIMENSION
+                + (MAXIMUM_DIMENSION
+                - MINIMUM_DIMENSION)
+                * randGenerator.nextDouble();
 
     }
 }

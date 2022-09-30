@@ -6,9 +6,6 @@ public class Rectangle extends Figure {
 
     public Rectangle(Color color, double base, double leg) {
         super(color);
-        if (!FigureDimensionsValidator.isValidDimensions(base, leg)) {
-            throw new FigureDimensionError(this.getClass().getSimpleName());
-        }
         this.base = base;
         this.leg = leg;
     }
@@ -20,7 +17,7 @@ public class Rectangle extends Figure {
 
     @Override
     public String draw() {
-        return super.draw() + " { base: " + base + " units, leg: "
+        return this.getClass().getSimpleName() + "{ base: " + base + " units, leg: "
                 + leg + " units, area: " + getArea()
                 + " square units, color: "
                 + getColor() + " }";

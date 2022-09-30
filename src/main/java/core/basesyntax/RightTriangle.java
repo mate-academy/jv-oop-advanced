@@ -6,9 +6,6 @@ public class RightTriangle extends Figure {
 
     public RightTriangle(Color color, double firstCathetus, double secondCathetus) {
         super(color);
-        if (!FigureDimensionsValidator.isValidDimensions(firstCathetus, secondCathetus)) {
-            throw new FigureDimensionError(this.getClass().getSimpleName());
-        }
         this.firstCathetus = firstCathetus;
         this.secondCathetus = secondCathetus;
 
@@ -21,7 +18,8 @@ public class RightTriangle extends Figure {
 
     @Override
     public String draw() {
-        return super.draw() + " { firstCathetus: " + firstCathetus + " units, secondCathetus: "
+        return this.getClass().getSimpleName() + "{ firstCathetus: "
+                + firstCathetus + " units, secondCathetus: "
                 + secondCathetus + " units, area: " + getArea() + " square units, color: "
                 + getColor() + " }";
     }

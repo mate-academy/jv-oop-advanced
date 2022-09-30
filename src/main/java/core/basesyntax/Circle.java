@@ -5,9 +5,6 @@ public class Circle extends Figure {
 
     public Circle(Color color, double radius) {
         super(color);
-        if (!FigureDimensionsValidator.isValidDimensions(radius)) {
-            throw new FigureDimensionError(this.getClass().getSimpleName());
-        }
         this.radius = radius;
     }
 
@@ -18,7 +15,7 @@ public class Circle extends Figure {
 
     @Override
     public String draw() {
-        return super.draw() + " { radius: " + radius + " units, area: "
+        return this.getClass().getSimpleName() + "{ radius: " + radius + " units, area: "
                 + getArea() + " square units, color: " + getColor() + " }";
     }
 }

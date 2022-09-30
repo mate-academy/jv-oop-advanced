@@ -5,9 +5,6 @@ public class Square extends Figure {
 
     public Square(Color color, double side) {
         super(color);
-        if (!FigureDimensionsValidator.isValidDimensions(side)) {
-            throw new FigureDimensionError(this.getClass().getSimpleName());
-        }
         this.side = side;
     }
 
@@ -18,7 +15,7 @@ public class Square extends Figure {
 
     @Override
     public String draw() {
-        return super.draw() + " { side: " + side + " units , area: "
+        return this.getClass().getSimpleName() + "{ side: " + side + " units , area: "
                 + getArea() + " square units, color: " + getColor() + " }";
     }
 }

@@ -7,9 +7,6 @@ public class IsoscelesTrapezoid extends Figure {
 
     public IsoscelesTrapezoid(Color color, double longBase, double shortBase, double leg) {
         super(color);
-        if (!FigureDimensionsValidator.isValidDimensions(longBase, shortBase, leg)) {
-            throw new FigureDimensionError(this.getClass().getSimpleName());
-        }
         this.longBase = longBase;
         this.shortBase = shortBase;
         this.leg = leg;
@@ -24,7 +21,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String draw() {
-        return super.draw() + " { longBase: " + longBase + " units, shortBase: "
+        return this.getClass().getSimpleName() + "{ longBase: " + longBase + " units, shortBase: "
                 + shortBase + " units, leg: " + leg + " units, area: " + getArea()
                 + " square units, color: " + getColor() + " }";
     }
