@@ -1,22 +1,41 @@
 package core.basesyntax.models;
 
 public class RightTriangle extends Figure {
-    private static final String FIGURE_NAME = "rightTriangle";
-    private static final double DEFAULT_HEIGHT = 10;
-    private static final double DEFAULT_BASE = 5;
     private double base;
     private double height;
 
-    public RightTriangle() {
-        base = DEFAULT_BASE;
-        height = DEFAULT_HEIGHT;
+    public RightTriangle(String color, double base, double height) {
+        super(color);
+        this.base = base;
+        this.height = height;
+    }
+
+    public double getBase() {
+        return base;
+    }
+
+    protected void setBase(double base) {
+        this.base = base;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    protected void setHeight(double height) {
+        this.height = height;
+    }
+
+    protected void setColor(String color) {
+        this.color = color;
     }
 
     @Override
     public void draw() {
-        System.out.printf("Figure: %s, area:%.2f, base:%.2f, height:%.2f, color:%s%n",
-                FIGURE_NAME,
-                get_area(),
+        System.out.printf("Figure: %s, area: %.2f sq.units, base: %.2f units, "
+                        + "height: %.2f units, color: %s%n",
+                getClass().getSimpleName(),
+                getArea(),
                 base,
                 height,
                 color.toLowerCase()
@@ -24,15 +43,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double get_area() {
+    public double getArea() {
         return (base * height) / 2;
-    }
-
-    @Override
-    public RightTriangle setRandomProperties() {
-        super.setRandomProperties();
-        base = random.nextDouble() * PROPERTY_MULTIPLIER;
-        height = random.nextDouble() * PROPERTY_MULTIPLIER;
-        return this;
     }
 }

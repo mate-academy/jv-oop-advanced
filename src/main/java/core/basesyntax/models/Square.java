@@ -1,33 +1,37 @@
 package core.basesyntax.models;
 
 public class Square extends Figure {
-    private static final String FIGURE_NAME = "square";
-    private static final double DEFAULT_SIDE = 5;
     private double side;
 
-    public Square() {
-        side = DEFAULT_SIDE;
+    public Square(String color, double side) {
+        super(color);
+        this.side = side;
+    }
+
+    public double getSide() {
+        return side;
+    }
+
+    protected void setSide(double side) {
+        this.side = side;
+    }
+
+    protected void setColor(String color) {
+        this.color = color;
     }
 
     @Override
     public void draw() {
-        System.out.printf("Figure: %s, area:%.2f, side:%.2f, color:%s%n",
-                FIGURE_NAME,
-                get_area(),
+        System.out.printf("Figure: %s, area: %.2f sq.units, side: %.2f units, color: %s%n",
+                getClass().getSimpleName(),
+                getArea(),
                 side,
                 color.toLowerCase()
         );
     }
 
     @Override
-    public double get_area() {
+    public double getArea() {
         return side * side;
-    }
-
-    @Override
-    public Square setRandomProperties() {
-        super.setRandomProperties();
-        side = random.nextDouble() * PROPERTY_MULTIPLIER;
-        return this;
     }
 }

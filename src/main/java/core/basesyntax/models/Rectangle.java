@@ -1,22 +1,41 @@
 package core.basesyntax.models;
 
 public class Rectangle extends Figure {
-    private static final String FIGURE_NAME = "rectangle";
-    private static final double DEFAULT_BOTTOM = 15;
-    private static final double DEFAULT_HEIGHT = 5;
     private double bottom;
     private double height;
 
-    public Rectangle() {
-        bottom = DEFAULT_BOTTOM;
-        height = DEFAULT_HEIGHT;
+    public Rectangle(String color, double bottom, double height) {
+        super(color);
+        this.bottom = bottom;
+        this.height = height;
+    }
+
+    public double getBottom() {
+        return bottom;
+    }
+
+    protected void setBottom(double bottom) {
+        this.bottom = bottom;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    protected void setHeight(double height) {
+        this.height = height;
+    }
+
+    protected void setColor(String color) {
+        this.color = color;
     }
 
     @Override
     public void draw() {
-        System.out.printf("Figure: %s, area:%.2f, bottom:%.2f, height:%.2f, color:%s%n",
-                FIGURE_NAME,
-                get_area(),
+        System.out.printf("Figure: %s, area: %.2f sq.units, bottom: %.2f units, "
+                        + "height: %.2f units, color: %s%n",
+                getClass().getSimpleName(),
+                getArea(),
                 bottom,
                 height,
                 color.toLowerCase()
@@ -24,15 +43,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double get_area() {
+    public double getArea() {
         return bottom * height;
-    }
-
-    @Override
-    public Rectangle setRandomProperties() {
-        super.setRandomProperties();
-        bottom = random.nextDouble() * PROPERTY_MULTIPLIER;
-        height = random.nextDouble() * PROPERTY_MULTIPLIER;
-        return this;
     }
 }
