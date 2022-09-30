@@ -23,7 +23,7 @@ public class Square extends Figure implements AreaCalculator {
     @Override
     public String toString() {
         return "Figure: " + Figures.SQUARE.name().toLowerCase() + ", area:" + getArea()
-                +  " sq.units, side: " + side + " units, color: " + getColour();
+                + " sq.units, side: " + side + " units, color: " + getColour();
     }
 
 }

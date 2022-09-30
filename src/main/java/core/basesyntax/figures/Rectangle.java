@@ -25,6 +25,7 @@ public class Rectangle extends Figure implements AreaCalculator {
     @Override
     public String toString() {
         return "Figure: " + Figures.RECTANGLE.name().toLowerCase() + ", area:" + getArea()
-                + " sq.units, sideA: " + sideA + " , sideB: " + sideB + " units, color: " + getColour();
+                + " sq.units, sideA: " + sideA + " , sideB: " + sideB
+                + " units, color: " + getColour();
     }
 }
