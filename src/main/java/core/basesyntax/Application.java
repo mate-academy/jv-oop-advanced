@@ -9,9 +9,11 @@ public class Application {
 
         for (int i = 0; i < figure.length; i++) {
             if (i < figure.length / 2) {
-                System.out.println(figureSupplier.getRandomFigure().drawFigure());
+                figure[i] = figureSupplier.getRandomFigure();
+                System.out.println(figure[i].drawFigure());
             } else {
-                System.out.println(figureSupplier.getDefaultFigure().drawFigure());
+                figure[i] = figureSupplier.getDefaultFigure();
+                System.out.println(figure[i].drawFigure());
             }
         }
     }

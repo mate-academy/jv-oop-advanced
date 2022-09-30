@@ -3,8 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final Color DEF_COLOR = Color.WHITE;
-    private static final double DEF_RADIUS = 10;
+    private static final Color DEFAULT_COLOR = Color.WHITE;
+    private static final double DEFAULT_RADIUS = 10;
     private static final int MULTIPLIER = 100;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
@@ -37,12 +37,10 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(DEF_RADIUS, DEF_COLOR.name().toLowerCase());
+        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR.name().toLowerCase());
     }
 
     public double getRandomDouble(double bound) {
         return bound * random.nextDouble();
     }
-
-
 }

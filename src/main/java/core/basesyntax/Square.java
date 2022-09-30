@@ -1,11 +1,10 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    private static final FigureShape shape = FigureShape.SQUARE;
     private final double side;
 
     public Square(double side, String color) {
-        super(color, shape.name());
+        super(color);
         this.side = side;
     }
 
@@ -13,7 +12,8 @@ public class Square extends Figure {
     public String drawFigure() {
         return String.format("Figure: %s, area: %.2f sq.units, "
                         + "side: %.2f units, color: %s",
-                shape.name().toLowerCase(), getArea(), side, getColor());
+                Square.class.getSimpleName().toLowerCase(),
+                getArea(), side, getColor());
     }
 
     @Override
