@@ -1,18 +1,10 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.suppliers.ColorSupplier;
-import java.util.Random;
-
 public class IsoscelesTrapezoid extends Figure {
     private static final String name = "isosceles trapezoid";
     private int topSide;
     private int downSide;
     private int height;
-    private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final Random random = new Random();
-
-    public IsoscelesTrapezoid() {
-    }
 
     public IsoscelesTrapezoid(int topSide, int downSide, int height, String color) {
         super(color);

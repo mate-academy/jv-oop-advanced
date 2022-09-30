@@ -1,16 +1,9 @@
 package core.basesyntax.figures;
 
-import java.util.Random;
-
 public class RightTriangle extends Figure {
     private static final String name = "right triangle";
     private int firstLeg;
     private int secondLeg;
-
-    private final Random random = new Random();
-
-    public RightTriangle() {
-    }
 
     public RightTriangle(int firstLeg, int secondLeg, String color) {
         super(color);
