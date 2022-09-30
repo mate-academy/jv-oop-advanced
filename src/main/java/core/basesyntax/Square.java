@@ -9,6 +9,6 @@ public class Square extends Rectangle {
     @Override
     public void drawFigure() {
         System.out.println("Figure: square, area: " + getArea() + " sq.units, side: "
-                + getHeigh() + " units, color: " + getColor().name());
+                + getHeigh() + " units, color: " + getColor().name().toLowerCase());
     }
 }
