@@ -6,7 +6,7 @@ public class FigureSupplier {
     private static final int FIGURE_LENGTH = Figures.values().length;
     private static final Random random = new Random();
     private final ColorSupplier supplier = new ColorSupplier();
-    private static final int randomSide = random.nextInt(100);
+    private final int randomSide = random.nextInt(100);
 
     public Figure getRandomFigure() {
         int index = random.nextInt(FIGURE_LENGTH);
