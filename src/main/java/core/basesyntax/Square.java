@@ -13,11 +13,10 @@ public class Square extends Figure {
         return side * side;
     }
 
-    @Override
-    public String toString() {
+    public String draw() {
         return "Figure: square,"
                 + " area: " + getArea() + " sq.units,"
                 + " side: " + side + " units,"
-                + " color: " + getColor().toLowerCase();
+                + " color: " + getColor();
     }
 }

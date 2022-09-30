@@ -4,9 +4,11 @@ import java.text.DecimalFormat;
 
 public class Circle extends Figure {
     private final int radius;
+    private final DecimalFormat format;
 
     public Circle(String color, int radius) {
         super(color);
+        this.format = new DecimalFormat("#0.0");
         this.radius = radius;
     }
 
@@ -15,11 +17,10 @@ public class Circle extends Figure {
         return Math.PI * radius * radius;
     }
 
-    @Override
-    public String toString() {
+    public String draw() {
         return "Figure: circle,"
-                + " area: " + new DecimalFormat("#0.0").format(getArea()) + " sq.units,"
+                + " area: " + format.format(getArea()) + " sq.units,"
                 + " radius: " + radius + " units,"
-                + " color: " + getColor().toLowerCase();
+                + " color: " + getColor();
     }
 }

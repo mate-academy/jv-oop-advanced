@@ -15,8 +15,7 @@ public class Rectangle extends Figure {
         return base * height;
     }
 
-    @Override
-    public String toString() {
+    public String draw() {
         return "Figure: rectangle,"
                 + " area: " + getArea() + " sq.units,"
                 + " base: " + base + " units,"
