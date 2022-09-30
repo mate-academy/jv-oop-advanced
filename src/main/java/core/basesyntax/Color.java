@@ -6,5 +6,4 @@ public enum Color {
     DEEP_PURPLE,
     IVORY,
     CREAM
-
 }

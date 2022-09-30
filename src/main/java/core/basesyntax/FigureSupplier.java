@@ -3,54 +3,46 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int FIGURES_COUNT = 5;
+    private static final int FIGURES_COUNT = 5;
+    private static final int CIRCLE_RADIUS = 10;
+    private static final String CIRCLE_COLOR = "white";
     private final ColorSupplier colorSupplier;
     private Random random;
 
-    public FigureSupplier(ColorSupplier colorSupplier) {
+    public FigureSupplier(ColorSupplier colorSupplier, Random random) {
         this.colorSupplier = colorSupplier;
-    }
-
-    public Random getRandom() {
-        return random;
-    }
-
-    public void setRandom(Random random) {
         this.random = random;
     }
 
+    private int getRandomValues() {
+        int random = new Random().nextInt(FIGURES_COUNT);
+        return random;
+    }
+
     public Figure getRandomFigure() {
-        // generate figure with random properties here
-        int value = new Random().nextInt(5);
-        switch (value) {
+
+        switch (random.nextInt(FIGURES_COUNT)) {
             case 1:
-                return new RightTriangle(5, 6);
+                return new RightTriangle(getRandomValues(),
+                        getRandomValues(),
+                        colorSupplier.getRandomColor());
             case 2:
-                return new Circle(33);
+                return new Circle(getRandomValues(),
+                        colorSupplier.getRandomColor());
             case 3:
-                return new IsoscelesTrapezoid(33, 2, 12);
+                return new IsoscelesTrapezoid(getRandomValues(),
+                        getRandomValues(),getRandomValues(), colorSupplier.getRandomColor());
             case 4:
-                return new Rectangle(33, 32);
+                return new Rectangle(getRandomValues(),getRandomValues(),
+                        colorSupplier.getRandomColor());
             default:
-                return new Square(7);
+                return new Square(getRandomValues(), colorSupplier.getRandomColor());
         }
     }
 
     public Figure getDefaultFigure() {
-        //this method should always return white circle with radius 10.
-        Figure circle = new Circle(10);
-        circle.setColor("white");
+        Figure circle = new Circle(CIRCLE_RADIUS, CIRCLE_COLOR);
+        circle.setColor(CIRCLE_COLOR);
         return circle;
-
-    }
-
-    @Override
-    public String toString() {
-        return "FigureSupplier{"
-                + "colorSupplier="
-                + colorSupplier
-                + ", random="
-                + random
-                + '}';
     }
 }
