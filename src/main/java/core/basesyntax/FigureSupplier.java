@@ -13,23 +13,23 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         switch (figureArr[random.nextInt(figureArr.length)]) {
             case CIRCLE:
-                return new Circle(MULTIPLIER * random.nextDouble(),
+                return new Circle(getRandomDouble(MULTIPLIER),
                         colorSupplier.getRandomColor());
             case RECTANGLE:
-                return new Rectangle(random.nextDouble(),
-                        MULTIPLIER * random.nextDouble(),
+                return new Rectangle(getRandomDouble(MULTIPLIER),
+                        getRandomDouble(MULTIPLIER),
                         colorSupplier.getRandomColor());
             case SQUARE:
-                return new Square(MULTIPLIER * random.nextDouble(),
+                return new Square(getRandomDouble(MULTIPLIER),
                         colorSupplier.getRandomColor());
             case ISOSCELES_TRAPEZOID:
-                return new IsoscelesTrapezoid(MULTIPLIER * random.nextDouble(),
-                        MULTIPLIER * random.nextDouble(),
-                        MULTIPLIER * random.nextDouble(),
+                return new IsoscelesTrapezoid(getRandomDouble(MULTIPLIER),
+                        getRandomDouble(MULTIPLIER),
+                        getRandomDouble(MULTIPLIER),
                         colorSupplier.getRandomColor());
             case RIGHT_TRIANGLE:
-                return new RightTriangle(MULTIPLIER * random.nextDouble(),
-                        MULTIPLIER * random.nextDouble(),
+                return new RightTriangle(getRandomDouble(MULTIPLIER),
+                        getRandomDouble(MULTIPLIER),
                         colorSupplier.getRandomColor());
             default:
                 return getDefaultFigure();
@@ -39,4 +39,10 @@ public class FigureSupplier {
     public Figure getDefaultFigure() {
         return new Circle(DEF_RADIUS, DEF_COLOR.name().toLowerCase());
     }
+
+    public double getRandomDouble(double bound) {
+        return bound * random.nextDouble();
+    }
+
+
 }
