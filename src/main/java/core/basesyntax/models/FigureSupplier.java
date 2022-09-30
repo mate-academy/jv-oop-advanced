@@ -16,8 +16,7 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int randFigureIndex = random.nextInt(Figures.values().length);
-        Figure figure = createFigure(Figures.values()[randFigureIndex]);
-        return figure;
+        return createFigure(Figures.values()[randFigureIndex]);
     }
 
     private Figure createFigure(Figures newFigure) {
