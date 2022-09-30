@@ -1,22 +1,32 @@
 package core.basesyntax;
 
-public class Figure implements AreaComputable {
-    private static final FigureShape FIGURE_SHAPE = FigureShape.CIRCLE;
-    private static final double RADIUS = 10;
-    private static final Color color = Color.WHITE;
+public abstract class Figure implements AreaComputable {
+    private String color;
+    private String figureShape;
 
-    public Figure() {
-
+    public Figure(String color, String figureShape) {
+        this.color = color;
+        this.figureShape = figureShape;
     }
 
-    @Override
-    public String toString() {
-        return String.format("Figure: %s, area: %f sq.units, color: %s",
-                FIGURE_SHAPE.name().toLowerCase(), getArea(), color);
+    public String getColor() {
+        return color;
     }
 
-    @Override
-    public double getArea() {
-        return Math.PI * Math.pow(RADIUS,2);
+    public String getFigureShape() {
+        return figureShape;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public void setFigureShape(String figureShape) {
+        this.figureShape = figureShape;
+    }
+
+    public String drawFigure() {
+        return String.format("Figure: %s, color: %s",
+                figureShape.toLowerCase(), getColor());
     }
 }

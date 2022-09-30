@@ -3,17 +3,16 @@ package core.basesyntax;
 public class Circle extends Figure {
     private static final FigureShape shape = FigureShape.CIRCLE;
     private final double radius;
-    private final String color;
 
     public Circle(double radius, String color) {
+        super(color, shape.name());
         this.radius = radius;
-        this.color = color;
     }
 
     @Override
-    public String toString() {
+    public String drawFigure() {
         return String.format("Figure: %s, area: %f sq.units, radius: %f units, color: %s",
-                shape.name().toLowerCase(), getArea(), radius, color);
+                shape.name().toLowerCase(), getArea(), radius, getColor());
     }
 
     @Override
