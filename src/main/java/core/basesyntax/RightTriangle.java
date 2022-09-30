@@ -2,13 +2,12 @@ package core.basesyntax;
 
 import java.text.DecimalFormat;
 
-public class RightTriangle implements Figure {
-    private final String color;
+public class RightTriangle extends Figure {
     private final int opposite;
     private final int adjacent;
 
     public RightTriangle(String color, int opposite, int adjacent) {
-        this.color = color;
+        super(color);
         this.opposite = opposite;
         this.adjacent = adjacent;
     }
@@ -20,11 +19,6 @@ public class RightTriangle implements Figure {
     @Override
     public double getArea() {
         return (double)(opposite * adjacent) / 2;
-    }
-
-    @Override
-    public String getColor() {
-        return color;
     }
 
     @Override

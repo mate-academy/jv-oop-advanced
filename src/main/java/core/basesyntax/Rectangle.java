@@ -1,12 +1,11 @@
 package core.basesyntax;
 
-public class Rectangle implements Figure {
-    private final String color;
+public class Rectangle extends Figure {
     private final int base;
     private final int height;
 
     public Rectangle(String color, int base, int height) {
-        this.color = color;
+        super(color);
         this.base = base;
         this.height = height;
     }
@@ -14,11 +13,6 @@ public class Rectangle implements Figure {
     @Override
     public double getArea() {
         return base * height;
-    }
-
-    @Override
-    public String getColor() {
-        return color;
     }
 
     @Override

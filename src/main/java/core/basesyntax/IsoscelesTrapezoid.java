@@ -2,15 +2,14 @@ package core.basesyntax;
 
 import java.text.DecimalFormat;
 
-public class IsoscelesTrapezoid implements Figure {
+public class IsoscelesTrapezoid extends Figure {
     private final int side;
     private final int topSide;
     private final int downSide;
     private final double height;
-    private final String color;
 
     public IsoscelesTrapezoid(String color, int side, int topSide, int downSide) {
-        this.color = color;
+        super(color);
         this.side = side;
         this.topSide = topSide;
         this. downSide = downSide;
@@ -23,10 +22,6 @@ public class IsoscelesTrapezoid implements Figure {
 
     public double getArea() {
         return (double) (topSide + downSide) / 2 * height;
-    }
-
-    public String getColor() {
-        return color;
     }
 
     @Override

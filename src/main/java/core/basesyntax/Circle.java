@@ -2,23 +2,17 @@ package core.basesyntax;
 
 import java.text.DecimalFormat;
 
-public class Circle implements Figure {
+public class Circle extends Figure {
     private final int radius;
-    private final String color;
 
     public Circle(String color, int radius) {
-        this.color = color;
+        super(color);
         this.radius = radius;
     }
 
     @Override
     public double getArea() {
         return Math.PI * radius * radius;
-    }
-
-    @Override
-    public String getColor() {
-        return color;
     }
 
     @Override

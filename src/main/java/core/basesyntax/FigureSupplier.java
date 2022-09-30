@@ -43,6 +43,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Colors.WHITE.name().toLowerCase(),10);
+        return new Circle("white",10);
     }
 }
