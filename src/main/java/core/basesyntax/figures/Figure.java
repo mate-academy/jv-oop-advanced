@@ -16,4 +16,8 @@ public abstract class Figure implements AreaCalculator, Printable {
     public void setColor(Color color) {
         this.color = color;
     }
+
+    String getFormatted(double d) {
+        return String.format("%.2f", d);
+    }
 }
