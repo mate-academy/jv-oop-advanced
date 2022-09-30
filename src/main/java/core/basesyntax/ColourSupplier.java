@@ -5,6 +5,7 @@ import java.util.Random;
 public class ColourSupplier {
     private static final int COLOUR_COUNT = 5;
     private Random random = new Random();
+
     public String getRandomColour() {
         switch (random.nextInt(COLOUR_COUNT)) {
             case 1:
