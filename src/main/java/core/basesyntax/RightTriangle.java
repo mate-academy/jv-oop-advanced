@@ -13,8 +13,8 @@ public class RightTriangle extends Figure {
 
     @Override
     public String drawFigure() {
-        return String.format("Figure: %s, area: %f sq.units, "
-                        + "firstLeg: %f units, secondLeg: %f units, color: %s",
+        return String.format("Figure: %s, area: %.2f sq.units, "
+                        + "firstLeg: %.2f units, secondLeg: %.2f units, color: %s",
                 shape.name().toLowerCase(), getArea(), firstLeg, secondLeg, getColor());
     }
 

@@ -13,8 +13,8 @@ public class Rectangle extends Figure {
 
     @Override
     public String drawFigure() {
-        return String.format("Figure: %s, area: %f sq.units, "
-                        + "length: %f units, width: %f units, color: %s",
+        return String.format("Figure: %s, area: %.2f sq.units, "
+                        + "length: %.2f units, width: %.2f units, color: %s",
                 shape.name().toLowerCase(), getArea(), length, width, getColor());
     }
 
