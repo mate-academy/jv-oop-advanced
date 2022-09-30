@@ -1,9 +1,10 @@
 package core.basesyntax.models;
 
 public class IsoscelesTrapezoid extends Figure {
-    public static final double DEFAULT_TOP = 5;
-    public static final double DEFAULT_BOTTOM = 16;
-    public static final double DEFAULT_HEIGHT = 5;
+    private static final String FIGURE_NAME = "isoscelesTrapezoid";
+    private static final double DEFAULT_TOP = 5;
+    private static final double DEFAULT_BOTTOM = 16;
+    private static final double DEFAULT_HEIGHT = 5;
     private double topSide;
     private double bottomSide;
     private double height;
@@ -16,13 +17,14 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.printf("IsoscelesTrapezoid{color:%s, area:%.2f, topSide:%.2f, "
-                        + "bottomSide:%.2f, height:%.2f}%n",
-                color,
+        System.out.printf("Figure: %s, area:%.2f, topSide:%.2f, "
+                        + "bottomSide:%.2f, height:%.2f, color:%s%n",
+                FIGURE_NAME,
                 get_area(),
                 topSide,
                 bottomSide,
-                height
+                height,
+                color.toLowerCase()
         );
     }
 

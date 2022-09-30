@@ -1,8 +1,9 @@
 package core.basesyntax.models;
 
 public class RightTriangle extends Figure {
-    public static final double DEFAULT_HEIGHT = 10;
-    public static final double DEFAULT_BASE = 5;
+    private static final String FIGURE_NAME = "rightTriangle";
+    private static final double DEFAULT_HEIGHT = 10;
+    private static final double DEFAULT_BASE = 5;
     private double base;
     private double height;
 
@@ -13,11 +14,12 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.printf("Square{color:%s, area:%.2f, base:%.2f, height:%.2f}%n",
-                color,
+        System.out.printf("Figure: %s, area:%.2f, base:%.2f, height:%.2f, color:%s%n",
+                FIGURE_NAME,
                 get_area(),
                 base,
-                height
+                height,
+                color.toLowerCase()
         );
     }
 

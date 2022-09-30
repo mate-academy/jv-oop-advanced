@@ -3,7 +3,8 @@ package core.basesyntax.models;
 import core.basesyntax.models.painter.Color;
 
 public class Circle extends Figure {
-    public static final double DEFAULT_RADIUS = 10;
+    private static final String FIGURE_NAME = "circle";
+    private static final double DEFAULT_RADIUS = 10;
     private double radius;
 
     public Circle() {
@@ -20,7 +21,12 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        System.out.printf("Circle{color:%s, area:%.2f, radius:%.2f}%n", color, get_area(), radius);
+        System.out.printf("Figure: %s, area:%.2f, radius:%.2f, color:%s%n",
+                FIGURE_NAME,
+                get_area(),
+                radius,
+                color.toLowerCase()
+        );
     }
 
     @Override

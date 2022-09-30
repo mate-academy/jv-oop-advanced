@@ -1,7 +1,8 @@
 package core.basesyntax.models;
 
 public class Square extends Figure {
-    public static final double DEFAULT_SIDE = 5;
+    private static final String FIGURE_NAME = "square";
+    private static final double DEFAULT_SIDE = 5;
     private double side;
 
     public Square() {
@@ -10,7 +11,12 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        System.out.printf("Square{color:%s, area:%.2f, side:%.2f}%n", color, get_area(), side);
+        System.out.printf("Figure: %s, area:%.2f, side:%.2f, color:%s%n",
+                FIGURE_NAME,
+                get_area(),
+                side,
+                color.toLowerCase()
+        );
     }
 
     @Override

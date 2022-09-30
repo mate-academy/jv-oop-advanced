@@ -10,8 +10,8 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figures = new Figure[FIGURES_AMOUNT];
         for (int i = 0; i < FIGURES_AMOUNT; i++) {
-            figures[i] = i < figures.length / 2 ? figureSupplier.getDefaultFigure()
-                    : figureSupplier.getRandomFigure();
+            figures[i] = i < figures.length / 2 ? figureSupplier.getRandomFigure()
+                    : figureSupplier.getDefaultFigure();
         }
 
         for (Figure figure : figures) {
