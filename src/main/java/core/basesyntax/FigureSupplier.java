@@ -10,33 +10,6 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Circle getRandomCircle() {
-        return new Circle(colorSupplier.getRandomColor(), getRandomInt());
-    }
-
-    public IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomInt(),
-                getRandomInt(), getRandomInt());
-    }
-
-    public Rectangle getRandomRectangle() {
-        return new Rectangle(colorSupplier.getRandomColor(), getRandomInt(),
-                getRandomInt());
-    }
-
-    public RightTriangle getRandomRightTriangle() {
-        return new RightTriangle(colorSupplier.getRandomColor(), getRandomInt(),
-                getRandomInt());
-    }
-
-    public Square getRandomSquare() {
-        return new Square(colorSupplier.getRandomColor(), getRandomInt());
-    }
-
-    public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
-    }
-
     public Figure getRandomFigure() {
         int index = random.nextInt(FIGURE_NUMBER);
         switch (index) {
@@ -52,6 +25,33 @@ public class FigureSupplier {
                 return getRandomSquare();
             default: return getDefaultFigure();
         }
+    }
+
+    private Circle getRandomCircle() {
+        return new Circle(colorSupplier.getRandomColor(), getRandomInt());
+    }
+
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomInt(),
+                getRandomInt(), getRandomInt());
+    }
+
+    private Rectangle getRandomRectangle() {
+        return new Rectangle(colorSupplier.getRandomColor(), getRandomInt(),
+                getRandomInt());
+    }
+
+    private RightTriangle getRandomRightTriangle() {
+        return new RightTriangle(colorSupplier.getRandomColor(), getRandomInt(),
+                getRandomInt());
+    }
+
+    private Square getRandomSquare() {
+        return new Square(colorSupplier.getRandomColor(), getRandomInt());
+    }
+
+    private Figure getDefaultFigure() {
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
     private int getRandomInt() {
