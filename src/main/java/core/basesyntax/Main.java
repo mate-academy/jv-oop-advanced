@@ -9,11 +9,10 @@ public class Main {
         for (int i = 0; i < arrayOfFigures.length; i++) {
             if (i < (arrayOfFigures.length / 2)) {
                 arrayOfFigures[i] = figureSupplier.getRandomFigure();
-                System.out.println(arrayOfFigures[i].draw());
             } else {
                 arrayOfFigures[i] = figureSupplier.getDefaultFigure();
-                System.out.println(arrayOfFigures[i].draw());
             }
+            System.out.println(arrayOfFigures[i].draw());
         }
     }
 }
