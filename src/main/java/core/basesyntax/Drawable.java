@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public interface FirugeInformation {
+public interface Drawable {
     void draw();
 }
