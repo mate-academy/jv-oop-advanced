@@ -1,9 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.AreaCalculator;
 import java.text.DecimalFormat;
 
-public class Circle extends Figure implements AreaCalculator {
+public class Circle extends Figure {
     private static final double numberPi = Math.PI;
     private double radius = 0;
 
