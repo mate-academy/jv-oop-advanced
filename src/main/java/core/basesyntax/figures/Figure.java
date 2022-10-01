@@ -1,7 +1,6 @@
 package core.basesyntax.figures;
 
 public abstract class Figure implements Drawingtool, AreaCalculator {
-    private static final int CONST_RADIUS = 10;
     private String colour;
 
     public Figure(String colour) {
