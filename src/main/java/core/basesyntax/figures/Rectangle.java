@@ -16,11 +16,6 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void draw() {
-        System.out.println(this);
-    }
-
-    @Override
     public String toString() {
         return "Figure: " + Figures.RECTANGLE.name().toLowerCase() + ", area:" + getArea()
                 + " sq.units, sideA: " + sideA + " , sideB: " + sideB

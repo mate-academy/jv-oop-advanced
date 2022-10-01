@@ -17,11 +17,6 @@ public class Circle extends Figure {
     }
 
     @Override
-    public void draw() {
-        System.out.println(this);
-    }
-
-    @Override
     public String toString() {
         return "Figure: " + Figures.CIRCLE.name().toLowerCase() + ", area:"
                 + new DecimalFormat("#0.00").format(getArea())

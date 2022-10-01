@@ -18,11 +18,6 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public void draw() {
-        System.out.println(this);
-    }
-
-    @Override
     public String toString() {
         return "Figure: " + Figures.ISOSCELES_TRAPEZOID.name().toLowerCase() + ", area:" + getArea()
                 + " sq.units, first base: " + baseA + " , second base: "

@@ -16,11 +16,6 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void draw() {
-        System.out.println(this);
-    }
-
-    @Override
     public String toString() {
         return "Figure: " + Figures.RIGHT_TRIANGLE.name().toLowerCase() + ", area:" + getArea()
                 + " sq.units, first leg: " + firstLeg + " , second leg: "
