@@ -12,7 +12,7 @@ public abstract class Figure implements Drawingtool, AreaCalculator {
 
     @Override
     public void draw() {
-        System.out.println(this.toString());
+        System.out.println(this);
     }
 
     @Override
