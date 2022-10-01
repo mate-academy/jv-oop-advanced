@@ -18,7 +18,7 @@ public class FigureSupplier {
     private double thirdLine;
     private ColorSupplier colorSupplier;
 
-    public final Figure getDefaultFigure() {
+    public Figure getDefaultFigure() {
         return new Circle(COLOR, RADIUS);
     }
 

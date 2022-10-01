@@ -19,6 +19,5 @@ public class Main {
         for (Drawable qw : qwert) {
             qw.draw();
         }
-
     }
 }
