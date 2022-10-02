@@ -1,9 +1,11 @@
 package core.basesyntax;
 
 public class Main {
+    private static final int QUANTITY = 8;
+
     public static void main(String[] args) {
-        FigureSupplier figureSupplier = new FigureSupplier();
-        Figure [] figures = new Figure[8];
+        final FigureSupplier figureSupplier = new FigureSupplier();
+        final Figure [] figures = new Figure[QUANTITY];
 
         for (int i = 0; i < figures.length; i++) {
             if (i < figures.length / 2) {
