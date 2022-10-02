@@ -21,6 +21,6 @@ public class IsoscelesTrapezoid extends Rectangle {
                 + areaCalculation() + " sq.units," + " sideA: "
                 + getSideA() + " units," + " sideB: "
                 + getSideB() + " units," + " sideC: "
-                + sideC + " units,"+ " color: " + getColor());
+                + sideC + " units," + " color: " + getColor());
     }
 }
