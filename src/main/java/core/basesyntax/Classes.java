@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 public enum Classes {
-    Circle,
-    IsoscelesTrapezoid,
-    RightTriangle,
-    Rectangle,
-    Square
+    CIRCLE,
+    ISOSCELES_TRAPEZOID,
+    RIGHT_TRIANGLE,
+    RECTANGLE,
+    SQUARE
 }

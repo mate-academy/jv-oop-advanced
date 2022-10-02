@@ -1,17 +1,28 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private int side;
-    private int highGround;
-    private int lowGround;
+    private final int side;
+    private final int highGround;
+    private final int lowGround;
+    private String type;
 
-    public IsoscelesTrapezoid(int side, int highGround, int lowGround) {
+    public IsoscelesTrapezoid(String color, int side, int highGround, int lowGround) {
+        super(color);
         this.side = side;
         this.highGround = highGround;
         this.lowGround = lowGround;
         this.setType("isosceles trapezoid");
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    @Override
     public double getArea() {
         int perimeter = side + side + highGround + lowGround;
         return Math.sqrt((perimeter / 2 - lowGround) * (perimeter / 2 - highGround)
