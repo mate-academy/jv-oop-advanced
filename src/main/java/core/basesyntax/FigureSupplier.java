@@ -6,6 +6,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int LENGTH_LIMIT = 250;
+
     public Figure getRandomFigure() {
         Figure newFigure = null;
         Color color = ColorSuplier.getRandomColor();
