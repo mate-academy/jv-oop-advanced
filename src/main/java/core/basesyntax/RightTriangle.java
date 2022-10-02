@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements FigureArea{
+public class RightTriangle extends Figure {
     private final double firstLeg;
     private final double secondLeg;
 
@@ -19,7 +19,6 @@ public class RightTriangle extends Figure implements FigureArea{
     public double getArea() {
         return firstLeg * secondLeg * 0.5;
     }
-
 
     @Override
     public void drawFigure() {

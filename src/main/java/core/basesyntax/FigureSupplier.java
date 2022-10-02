@@ -3,32 +3,37 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int MAX_VALUE_PARAMETR = 100;
     private final Random random = new Random();
-    private static final int MAX_VALUE_PARAMETER = 100;
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figures getRandomFigure(){
+    public Figures getRandomFigure() {
         int index = random.nextInt(Figures.values().length);
         return Figures.values()[index];
     }
 
-    public Figure getRandomResult(){
-        switch (getRandomFigure()){
+    public Figure getRandomResult() {
+        switch (getRandomFigure()) {
             case CIRCLE:
-                return new Circle(colorSupplier.getRandomColor(), random.nextInt(MAX_VALUE_PARAMETER));
+                return new Circle(colorSupplier.getRandomColor(),
+                        random.nextInt(MAX_VALUE_PARAMETR));
             case SQUARE:
-                return new Square(colorSupplier.getRandomColor(), random.nextInt(MAX_VALUE_PARAMETER));
+                return new Square(colorSupplier.getRandomColor(),
+                        random.nextInt(MAX_VALUE_PARAMETR));
             case RECTANGLE:
-                return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(MAX_VALUE_PARAMETER), random.nextInt(MAX_VALUE_PARAMETER));
+                return new Rectangle(colorSupplier.getRandomColor(),
+                        random.nextInt(MAX_VALUE_PARAMETR), random.nextInt(MAX_VALUE_PARAMETR));
             case RIGHTTRIANGLE:
-                return new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(MAX_VALUE_PARAMETER), random.nextInt(MAX_VALUE_PARAMETER));
-            case ISOSCELESTRAPEZOID:
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(MAX_VALUE_PARAMETER), random.nextInt(MAX_VALUE_PARAMETER), random.nextInt(MAX_VALUE_PARAMETER));
+                return new RightTriangle(colorSupplier.getRandomColor(),
+                        random.nextInt(MAX_VALUE_PARAMETR), random.nextInt(MAX_VALUE_PARAMETR));
+            default:
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        random.nextInt(MAX_VALUE_PARAMETR), random.nextInt(MAX_VALUE_PARAMETR),
+                        random.nextInt(MAX_VALUE_PARAMETR));
         }
-        return getRandomResult();
     }
 
-    public Circle getDefaultFigure(){
+    public Circle getDefaultFigure() {
         return new Circle("white",10);
     }
 }

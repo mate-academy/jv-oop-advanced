@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements FigureArea {
+public class IsoscelesTrapezoid extends Figure {
     private final double side1;
     private final double side2;
     private final double height;
@@ -11,6 +11,7 @@ public class IsoscelesTrapezoid extends Figure implements FigureArea {
         this.side2 = side2;
         this.height = height;
     }
+
     @Override
     public String name() {
         return String.valueOf(Figures.ISOSCELESTRAPEZOID);
