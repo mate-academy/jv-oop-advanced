@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int MAX_VALUE = 100;
+    public static final int MIN_VALUE = 1;
     public static final int DEFAULT_FIGURE_RADIUS = 10;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
@@ -30,25 +31,26 @@ public class FigureSupplier {
     }
 
     public Figure getRandomCircle() {
-        return new Circle(colorSupplier.getRandomColor(), random.nextInt(MAX_VALUE));
+        return new Circle(colorSupplier.getRandomColor(), random.nextInt(MAX_VALUE) + MIN_VALUE);
     }
 
     public Figure getRandomSquare() {
-        return new Square(colorSupplier.getRandomColor(), random.nextInt(MAX_VALUE));
+        return new Square(colorSupplier.getRandomColor(), random.nextInt(MAX_VALUE) + MIN_VALUE);
     }
 
     public Figure getRandomRectangle() {
-        return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(MAX_VALUE),
-                random.nextInt(MAX_VALUE));
+        return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(MAX_VALUE) + MIN_VALUE,
+                random.nextInt(MAX_VALUE) + MIN_VALUE);
     }
 
     public Figure getRandomTriangle() {
-        return new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(MAX_VALUE),
-                random.nextInt(MAX_VALUE));
+        return new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(MAX_VALUE)
+                + MIN_VALUE, random.nextInt(MAX_VALUE) + MIN_VALUE);
     }
 
     public Figure getRandomTrapezoid() {
-        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(MAX_VALUE),
-                random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(MAX_VALUE)
+                + MIN_VALUE, random.nextInt(MAX_VALUE) + MIN_VALUE, random.nextInt(MAX_VALUE)
+                + MIN_VALUE);
     }
 }
