@@ -2,7 +2,7 @@ package core.basesyntax;
 
 public class Square extends Figure implements Area, Draw {
     private int side;
-    private static final String name = "Square";
+    private final String name = "Square";
 
     public Square(int side, Color color) {
         super(color);
@@ -14,10 +14,10 @@ public class Square extends Figure implements Area, Draw {
         return side * side;
     }
 
-
     @Override
-    public void Draw() {
-        System.out.println("Figure: " + name + ", area: " + getArea() + " sq.units, side: " + side + ", color: " + getColor());
+    public void infoDrawer() {
+        System.out.println("Figure: " + name + ", area: "
+                + getArea() + " sq.units, side: " + side + ", color: " + getColor());
     }
 
 }

@@ -10,11 +10,11 @@ public abstract class Figure {
     public String getColor() {
         return color;
     }
+
     public void setColor() {
         this.color = color;
     }
 
-    public void Draw() {
-
+    public void infoDrawer() {
     }
 }
