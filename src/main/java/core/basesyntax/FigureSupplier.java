@@ -5,13 +5,11 @@ import java.util.Random;
 public class FigureSupplier {
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
+    private static final int FIGURE_COUNT = Figures.values().length;
 
-    //Питання: Метод getRandomFigure() повинен повертати фігуру з рандомними властивостім. Тобто
-    // потрібно вибрати радномниу фігуру, а для її створення свіч-куйсом пройтись і створити
-    // фігуру залежно від нази в енамі i зарандомити її параметри?
     public Figure getRandomFigure() {
-        int index = random.nextInt(Figures.values().length);
-        Figure figure = new Square(0,null);
+        int index = random.nextInt(FIGURE_COUNT);
+        Figure figure;
         switch (index) {
             case 0:
                 figure = new Square(random.nextInt(100),colorSupplier.getRandomColor());

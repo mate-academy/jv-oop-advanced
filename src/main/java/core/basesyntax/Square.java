@@ -24,9 +24,9 @@ public class Square extends Figure implements FigureInterface {
     @Override
     public void draw() {
         System.out.println(
-                "Figure: square, " +
-                "area: " + area() + " sq.units, " +
-                "side: " + getSide() + " units, " +
-                "color: " + getColor());
+                "Figure: square, "
+                + "area: " + area() + " sq.units, "
+                + "side: " + getSide() + " units, "
+                + "color: " + getColor());
     }
 }

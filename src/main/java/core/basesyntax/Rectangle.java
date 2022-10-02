@@ -30,10 +30,10 @@ public class Rectangle extends Figure implements FigureInterface {
     @Override
     public void draw() {
         System.out.println(
-                "Figure: rectangle, " +
-                "area: " + area() + " sq.units, " +
-                "side A: " + getSideA() + " units, " +
-                "side B: " + getSideB() + " units, " +
-                "color: " + getColor());
+                "Figure: rectangle, "
+                + "area: " + area() + " sq.units, "
+                + "side A: " + getSideA() + " units, "
+                + "side B: " + getSideB() + " units, "
+                + "color: " + getColor());
     }
 }
