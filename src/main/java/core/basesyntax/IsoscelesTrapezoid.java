@@ -10,13 +10,17 @@ public class IsoscelesTrapezoid extends Rectangle {
 
     @Override
     public double areaCalculation() {
-        return (double) (getSideA() + getSideB()) / 4 *
-                Math.sqrt(4 * sideC * sideC - (getSideA() - getSideB()) * (getSideA() - getSideB()));
+        return (double) (getSideA() + getSideB()) / 4
+                * Math.sqrt(4 * sideC * sideC - (getSideA() - getSideB())
+                * (getSideA() - getSideB()));
     }
+
     @Override
     public void draw() {
-        System.out.println("Figure: " + getName() + ", area: " + areaCalculation()
-                + " sq.units," + " sideA: " + getSideA() + " units," + " sideB: "
-                + getSideB() + " units," + " sideC: " + sideC + " units,"+ " color: " + getColor());
+        System.out.println("Figure: " + getName() + ", area: "
+                + areaCalculation() + " sq.units," + " sideA: "
+                + getSideA() + " units," + " sideB: "
+                + getSideB() + " units," + " sideC: "
+                + sideC + " units,"+ " color: " + getColor());
     }
 }

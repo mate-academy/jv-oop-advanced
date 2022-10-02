@@ -14,6 +14,7 @@ public class RightTriangle extends Figure {
     public double areaCalculation() {
         return (double) firstLeg * secondLeg / 2;
     }
+
     @Override
     public void draw() {
         System.out.println("Figure: " + getName() + ", area: " + areaCalculation()

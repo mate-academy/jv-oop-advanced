@@ -12,6 +12,7 @@ public abstract class Figure implements Area {
     public String getName() {
         return name;
     }
+
     public String getColor() {
         return color;
     }

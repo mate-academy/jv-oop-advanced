@@ -11,10 +11,12 @@ public class Rectangle extends Square {
     public int getSideB() {
         return sideB;
     }
+
     @Override
     public double areaCalculation() {
         return getSideA() * sideB;
     }
+
     @Override
     public void draw() {
         System.out.println("Figure: " + getName() + ", area: " + areaCalculation()
