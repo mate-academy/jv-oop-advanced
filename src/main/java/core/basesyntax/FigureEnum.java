@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public enum Figures {
+public enum FigureEnum {
     SQUARE,
     RECTANGLE,
     ISOSCELES_TRAPEZOID,
-    TRIANGLE,
+    RIGHT_TRIANGLE,
     CIRCLE
 }
