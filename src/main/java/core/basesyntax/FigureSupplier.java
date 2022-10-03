@@ -11,7 +11,6 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         FigureEnum figureEnum = FigureEnum.values()[random.nextInt(FigureEnum.values().length)];
-
         switch (figureEnum) {
             case SQUARE:
                 figure = createRandomSquare();
