@@ -7,6 +7,8 @@ public class FigureSupplier {
     private final int randomInd = new Random().nextInt(Shape.values().length);
     private final String randomShape = Shape.values()[randomInd].toString();
     private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final String defaultColor = "White";
+    private final double defaultRadius = 10.0;
 
     public Figure getRandomFigure() {
         switch (randomShape) {
@@ -35,6 +37,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle();
+        return new Circle(defaultColor, defaultRadius);
     }
 }
