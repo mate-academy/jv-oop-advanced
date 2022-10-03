@@ -34,12 +34,14 @@ public class FigureSupplier {
         }
         return figure;
     }
+
     public Figure createRandomSquare() {
         int sideA = random.nextInt(MAX_INDEX) + 1;
         return new Square(FigureEnum.SQUARE.name(),
                 supplier.getRandomColor(),
                 sideA);
     }
+
     public Figure createRandomRectangle() {
         int sideA = random.nextInt(MAX_INDEX) + 1;
         int sideB = random.nextInt(MAX_INDEX) + 1;
@@ -48,6 +50,7 @@ public class FigureSupplier {
                 sideA,
                 sideB);
     }
+
     public Figure createRandomIsoscelesTrapezoid() {
         int sideA = random.nextInt(MAX_INDEX) + 1;
         int sideB = random.nextInt(MAX_INDEX) + 1;
@@ -76,12 +79,14 @@ public class FigureSupplier {
         }
         return figure;
     }
+
     public Figure createRandomCircle() {
         int radius = random.nextInt(MAX_INDEX) + 1;
         return new Circle(FigureEnum.CIRCLE.name(),
                 supplier.getRandomColor(),
                 radius);
     }
+
     public Figure createRandomRightTriangle() {
         int firstLeg = random.nextInt(MAX_INDEX) + 1;
         int secondLeg = random.nextInt(MAX_INDEX) + 1;
@@ -90,6 +95,7 @@ public class FigureSupplier {
                 firstLeg,
                 secondLeg);
     }
+
     public Figure getDefaultFigure() {
         return new Circle(FigureEnum.CIRCLE.name(), Color.WHITE.name(), RADIUS);
     }
