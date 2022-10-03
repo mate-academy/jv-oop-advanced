@@ -32,7 +32,7 @@ public class FigureSupplier {
                 return new Square(colorSupplier.getRandomColor(),
                         new Random().nextInt(MAX_RANG));
             default:
-                return null;
+                return getDefaultFigure();
         }
     }
 
