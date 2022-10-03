@@ -10,7 +10,6 @@ public class FigureSupplier {
     private final ColorSupplier color;
     private final Random random;
     private final DimesionSupplier dimesion = new DimesionSupplier();
-    private Figure figure = null;
 
     public FigureSupplier(ColorSupplier color, Random random) {
         this.color = color;
@@ -20,29 +19,23 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         switch (Figures.values()[new Random().nextInt(Figures.values().length)]) {
             case RECTANGLE:
-                figure = new Rectangle("Rectangle", color.getRandomColour(),
+                return new Rectangle("Rectangle", color.getRandomColour(),
                         dimesion.getRandomDimesion(), dimesion.getRandomDimesion());
-                break;
             case ISOSCELES_TRAPEZOID:
-                figure = new IsoscelesTrapezoid("IsoscelesTrapezoid", color.getRandomColour(),
+                return new IsoscelesTrapezoid("IsoscelesTrapezoid", color.getRandomColour(),
                         dimesion.getRandomDimesion(),dimesion.getRandomDimesion(),
                         dimesion.getRandomDimesion());
-                break;
             case RIGHT_TRIANGLE:
-                figure = new RightTriangle("RightTriangle",
+                return new RightTriangle("RightTriangle",
                         color.getRandomColour(), dimesion.getRandomDimesion(),
                         dimesion.getRandomDimesion());
-                break;
             case CIRCLE:
-                figure = new Circle("Circle", color.getRandomColour(),
+                return new Circle("Circle", color.getRandomColour(),
                         dimesion.getRandomDimesion());
-                break;
             default:
-                figure = new Square("Square", color.getRandomColour(),
-                        dimesion.getRandomDimesion());
-                break;
         }
-        return figure;
+        return new Square("Square", color.getRandomColour(),
+                dimesion.getRandomDimesion());
     }
 
     public Figure getDefaultFigure() {
