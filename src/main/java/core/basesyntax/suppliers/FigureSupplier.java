@@ -35,9 +35,11 @@ public class FigureSupplier {
                 return new Square(randomColor, randomDouble1);
             case RECTANGLE:
                 return new Rectangle(randomColor, randomDouble1, randomDouble2);
-            default:
+            case ISOSCELES_TRAPEZOID:
                 double height = getRandomDoubleValue();
                 return new IsoscelesTrapezoid(randomColor, randomDouble1, randomDouble2, height);
+            default:
+                return getDefaultFigure();
         }
     }
 
