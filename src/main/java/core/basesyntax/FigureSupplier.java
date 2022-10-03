@@ -30,12 +30,9 @@ public class FigureSupplier {
                 figure = new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(),
                         random.nextInt());
                 break;
-            case ISOSCELES_TRAPEZOID:
+            default:
                 figure = new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(),
                         random.nextInt(), random.nextInt());
-                break;
-            default:
-                figure = getDefaultFigure();
         }
         return figure;
     }
