@@ -20,17 +20,4 @@ public class Rectangle extends Figure {
     public double getArea() {
         return sideA * sideB;
     }
-
-    /*public void setColor(String color) {
-        this.color = color;
-    }
-
-    public void setSideA(int sideA) {
-        this.sideA = sideA;
-    }
-
-    public void setSideB(int sideB) {
-        this.sideB = sideB;
-    }*/
 }
-
