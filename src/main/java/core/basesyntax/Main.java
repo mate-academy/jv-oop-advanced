@@ -11,12 +11,12 @@ public class Main {
             Figure figure = figureSupplier.getRandomFigure();
             figures.add(figure);
         }
-        for (int i = 3; i < 6; i++) {
+        for (int i = 0; i < 3; i++) {
             Figure figure = figureSupplier.getDefaultFigure();
             figures.add(figure);
         }
-        for (Figure figuresList : figures) {
-            figuresList.draw();
+        for (Figure figure : figures) {
+            figure.draw();
         }
     }
 }
