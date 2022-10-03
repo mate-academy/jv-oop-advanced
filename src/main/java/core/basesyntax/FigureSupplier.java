@@ -3,9 +3,6 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final Random random = new Random();
-    private final ColorSupplier supplier = new ColorSupplier();
-    private Figure figure;
     private static final String SQUARE = "square";
     private static final String RECTANGLE = "rectangle";
     private static final String ISOSCELES_TRAPEZOID = "isoscelesTrapezoid";
@@ -14,6 +11,9 @@ public class FigureSupplier {
     private static final String WHITE = "WHITE";
     private static final int MAX_INDEX = 10;
     private static final int RADIUS = 10;
+    private final Random random = new Random();
+    private final ColorSupplier supplier = new ColorSupplier();
+    private Figure figure;
 
     public Figure getRandomFigure() {
         Figures figures = Figures.values()[random.nextInt(Figures.values().length)];
