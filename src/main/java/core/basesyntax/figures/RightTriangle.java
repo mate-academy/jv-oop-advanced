@@ -1,12 +1,13 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.Color;
 import core.basesyntax.Figure;
 
 public class RightTriangle extends Figure {
     private final double leg1;
     private final double leg2;
 
-    public RightTriangle(String color, double leg1, double leg2) {
+    public RightTriangle(Color color, double leg1, double leg2) {
         super(color);
         this.leg1 = leg1;
         this.leg2 = leg2;
@@ -27,7 +28,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    protected double getArea() {
+    public double getArea() {
         return leg1 * leg2 / 2;
     }
 }

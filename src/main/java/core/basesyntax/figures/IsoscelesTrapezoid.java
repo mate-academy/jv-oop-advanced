@@ -1,5 +1,6 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.Color;
 import core.basesyntax.Figure;
 
 public class IsoscelesTrapezoid extends Figure {
@@ -7,7 +8,7 @@ public class IsoscelesTrapezoid extends Figure {
     private final double sideA;
     private final double height;
 
-    public IsoscelesTrapezoid(String color, double sideA, double sideB, double height) {
+    public IsoscelesTrapezoid(Color color, double sideA, double sideB, double height) {
         super(color);
         this.sideA = sideA;
         this.sideB = sideB;
@@ -25,7 +26,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    protected double getArea() {
+    public double getArea() {
         return height / 2 * (sideA + sideB);
     }
 }

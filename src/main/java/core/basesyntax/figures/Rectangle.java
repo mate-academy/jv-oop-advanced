@@ -1,12 +1,13 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.Color;
 import core.basesyntax.Figure;
 
 public class Rectangle extends Figure {
     private final double sideA;
     private final double sideB;
 
-    public Rectangle(String color, double sideA, double sideB) {
+    public Rectangle(Color color, double sideA, double sideB) {
         super(color);
         this.sideA = sideA;
         this.sideB = sideB;
@@ -22,7 +23,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    protected double getArea() {
+    public double getArea() {
         return sideA * sideB;
     }
 }

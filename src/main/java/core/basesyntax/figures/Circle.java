@@ -1,15 +1,12 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.Color;
 import core.basesyntax.Figure;
 
 public class Circle extends Figure {
     private final double radius;
 
-    public Circle(double radius) {
-        this.radius = radius;
-    }
-
-    public Circle(String color, double radius) {
+    public Circle(Color color, double radius) {
         super(color);
         this.radius = radius;
     }
@@ -23,7 +20,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    protected double getArea() {
+    public double getArea() {
         return Math.PI * Math.pow(radius, 2);
     }
 }

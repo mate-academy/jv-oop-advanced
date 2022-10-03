@@ -1,15 +1,9 @@
 package core.basesyntax;
 
-import core.basesyntax.suppliers.ColorSupplier;
+public abstract class Figure implements Drawable, AreaCalculator {
+    protected Color color;
 
-public abstract class Figure implements FigureInterface {
-    protected String color;
-
-    public Figure() {
-        color = ColorSupplier.DEFAULT_COLOR;
-    }
-
-    public Figure(String color) {
+    public Figure(Color color) {
         this.color = color;
     }
 
@@ -20,8 +14,4 @@ public abstract class Figure implements FigureInterface {
     protected static String formatValue(double val) {
         return String.format("%,.1f", val);
     }
-
-    public abstract void draw();
-
-    protected abstract double getArea();
 }

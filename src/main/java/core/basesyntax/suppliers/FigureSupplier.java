@@ -1,6 +1,8 @@
 package core.basesyntax.suppliers;
 
+import core.basesyntax.Color;
 import core.basesyntax.Figure;
+import core.basesyntax.ImplementedFigure;
 import core.basesyntax.figures.Circle;
 import core.basesyntax.figures.IsoscelesTrapezoid;
 import core.basesyntax.figures.Rectangle;
@@ -10,25 +12,28 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_RANDOM_MULTIPLIER = 50;
-    private static final int FIGURES_COUNT = 5;
     private static final int DEFAULT_CIRCLE_RADIUS = 10;
+    private static final Color DEFAULT_COLOR = Color.WHITE;
     private final Random random = new Random();
     private final Random figureRandom = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        String randomColor = colorSupplier.getRandomColor();
+        Color randomColor = colorSupplier.getRandomColor();
         double randomDouble1 = getRandomDoubleValue();
         double randomDouble2 = getRandomDoubleValue();
 
-        switch (figureRandom.nextInt(FIGURES_COUNT - 1)) {
-            case 0:
+        ImplementedFigure[] figures = ImplementedFigure.values();
+        ImplementedFigure randomFigure = figures[figureRandom.nextInt(figures.length)];
+
+        switch (randomFigure) {
+            case CIRCLE:
                 return new Circle(randomColor, randomDouble1);
-            case 1:
+            case RIGHT_TRIANGLE:
                 return new RightTriangle(randomColor, randomDouble1, randomDouble2);
-            case 2:
+            case SQUARE:
                 return new Square(randomColor, randomDouble1);
-            case 3:
+            case RECTANGLE:
                 return new Rectangle(randomColor, randomDouble1, randomDouble2);
             default:
                 double height = getRandomDoubleValue();
@@ -36,12 +41,12 @@ public class FigureSupplier {
         }
     }
 
-    private double getRandomDoubleValue() {
-        return random.nextDouble() * (random.nextInt(MAX_RANDOM_MULTIPLIER) + 1);
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_COLOR, DEFAULT_CIRCLE_RADIUS);
     }
 
-    public static Figure getDefaultFigure() {
-        return new Circle(DEFAULT_CIRCLE_RADIUS);
+    private double getRandomDoubleValue() {
+        return random.nextDouble() * (random.nextInt(MAX_RANDOM_MULTIPLIER) + 1);
     }
 }
 
