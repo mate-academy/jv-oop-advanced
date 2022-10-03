@@ -25,4 +25,7 @@ public class Figure {
         this.area = area;
         return area;
     }
+    public double calcArea() {
+        return 0;
+    }
 }
