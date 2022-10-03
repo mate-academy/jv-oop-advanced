@@ -4,20 +4,12 @@ public class Circle extends Figure {
     private int radius;
 
     public Circle(int radius, String color) {
+        super(color);
         this.radius = radius;
-        this.color = color;
-    }
-
-    public int getRadius() {
-        return radius;
-    }
-
-    public String getColor() {
-        return color;
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return Math.PI * radius * radius;
     }
 
@@ -25,8 +17,9 @@ public class Circle extends Figure {
     public void draw() {
         System.out.println(
                 "Figure: circle, "
-                + "area: " + area() + " sq.units, "
-                + "radius: " + getRadius() + " units, "
-                + "color: " + getColor());
+                + "area: " + getArea() + " sq.units, "
+                + "radius: " + radius + " units, "
+                + "color: " + color
+        );
     }
 }

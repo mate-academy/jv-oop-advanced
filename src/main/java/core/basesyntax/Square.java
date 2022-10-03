@@ -1,23 +1,15 @@
 package core.basesyntax;
 
-public class Square extends Figure implements FigureInterface {
+public class Square extends Figure implements Drawable {
     private int side;
 
     public Square(int side, String color) {
+        super(color);
         this.side = side;
-        this.color = color;
-    }
-
-    public int getSide() {
-        return side;
-    }
-
-    public String getColor() {
-        return color;
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return side * side;
     }
 
@@ -25,8 +17,9 @@ public class Square extends Figure implements FigureInterface {
     public void draw() {
         System.out.println(
                 "Figure: square, "
-                + "area: " + area() + " sq.units, "
-                + "side: " + getSide() + " units, "
-                + "color: " + getColor());
+                + "area: " + getArea() + " sq.units, "
+                + "side: " + side + " units, "
+                + "color: " + color
+        );
     }
 }
