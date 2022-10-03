@@ -14,7 +14,7 @@ public class Application {
             }
         }
         for (int i = 0; i < figures.length; i++) {
-            figures[i].messageForReturn();
+            figures[i].draw();
         }
     }
 }
