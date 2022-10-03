@@ -32,6 +32,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Colors.WHITE.name(), DEFAULT_SIZE);
+        return new Circle(Color.WHITE.name(), DEFAULT_SIZE);
     }
 }
