@@ -9,14 +9,11 @@ public class Rectangle extends Figure {
         super(color);
         this.length = length;
         this.width = width;
-        getArea();
-        draw();
     }
 
     @Override
     public double getArea() {
-        rectangleArea = length * width;
-        return rectangleArea;
+        return length * width;
     }
 
     @Override
@@ -24,6 +21,6 @@ public class Rectangle extends Figure {
         System.out.println("Figure: rectangle; color: " + color
                 + "; length: " + length
                 + "; width: " + width
-                + "; area: " + rectangleArea);
+                + "; area: " + getArea());
     }
 }

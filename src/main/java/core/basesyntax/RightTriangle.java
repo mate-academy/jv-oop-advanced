@@ -9,14 +9,11 @@ public class RightTriangle extends Figure {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        getArea();
-        draw();
     }
 
     @Override
     public double getArea() {
-        rightTriangleArea = (firstLeg * secondLeg) / 2;
-        return rightTriangleArea;
+        return (firstLeg * secondLeg) / 2;
     }
 
     @Override
@@ -24,6 +21,6 @@ public class RightTriangle extends Figure {
         System.out.println("Figure: rectangle; color: " + color
                 + "; first leg: " + firstLeg
                 + "; second leg: " + secondLeg
-                + "; area: " + rightTriangleArea);
+                + "; area: " + getArea());
     }
 }

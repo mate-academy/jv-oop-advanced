@@ -7,21 +7,17 @@ public class Square extends Figure {
     public Square(String color, int side) {
         super(color);
         this.side = side;
-        getArea();
-        draw();
     }
 
     @Override
     public double getArea() {
-        squareArea = side * side;
-        return squareArea;
-
+        return side * side;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: square; color: " + color
                 + "; side: " + side
-                + "; area: " + squareArea);
+                + "; area: " + getArea());
     }
 }
