@@ -6,6 +6,7 @@ public class FigureSupplier {
     private static final int MAX_VALUE_PARAMETR = 100;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final Circle circle = new Circle("white",10);
 
     public Figures getRandomFigure() {
         int index = random.nextInt(Figures.values().length);
@@ -34,6 +35,6 @@ public class FigureSupplier {
     }
 
     public Circle getDefaultFigure() {
-        return new Circle("white",10);
+        return circle;
     }
 }

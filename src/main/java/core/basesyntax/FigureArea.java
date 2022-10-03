@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public interface FigureArea extends FigureDraw {
+public interface FigureArea {
     double getArea();
 }

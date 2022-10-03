@@ -19,7 +19,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println("Figure: " + name() + ", area: " + getArea()
                 + " sq.units, radius: " + radius
                 + " units, color: " + getColor());
