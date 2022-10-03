@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public interface Pen {
-    String template = "Figure: %s, area: %.1f sq.units, %s, color: %s";
+    String TEMPLATE = "Figure: %s, area: %.1f sq.units, %s, color: %s";
 
     String draw();
 }

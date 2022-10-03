@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int SHAPE_COUNT = Shape.values().length;
+    private static final int SHAPE_COUNT = FigureName.values().length;
     private static final int MAX_LENGTH = 20;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
@@ -12,7 +12,7 @@ public class FigureSupplier {
         int firstValue = random.nextInt(MAX_LENGTH);
         int secondValue = random.nextInt(MAX_LENGTH);
         String color = colorSupplier.getRandomColor();
-        switch (Shape.values()[random.nextInt(SHAPE_COUNT)]) {
+        switch (FigureName.values()[random.nextInt(SHAPE_COUNT)]) {
             case SQUARE:
                 return new Square(firstValue, color);
             case RECTANGLE:

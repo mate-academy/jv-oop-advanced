@@ -17,8 +17,9 @@ public class RightTriangle extends Figure {
 
     @Override
     public String draw() {
-        return String.format(Pen.template, Shape.RIGHT_TRIANGLE.name().toLowerCase(), getArea(),
+        return String.format(Pen.TEMPLATE, FigureName.RIGHT_TRIANGLE.name().toLowerCase(),
+                getArea(),
                 String.format("firstLeg: %d units, secondLeg: %d units", firstLeg, secondLeg),
-                this.getColor());
+                getColor());
     }
 }

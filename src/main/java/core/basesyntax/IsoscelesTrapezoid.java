@@ -19,11 +19,10 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String draw() {
-        return String.format(Pen.template,
-                Shape.ISOSCELES_TRAPEZOID.name().toLowerCase(),
+        return String.format(Pen.TEMPLATE,
+                FigureName.ISOSCELES_TRAPEZOID.name().toLowerCase(),
                 getArea(),
                 String.format("smallerBase: %d units, biggerBase: %d units, height: %d units",
-                        smallerBase, biggerBase, height),
-                this.getColor());
+                        smallerBase, biggerBase, height), getColor());
     }
 }

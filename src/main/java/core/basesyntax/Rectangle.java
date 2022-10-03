@@ -17,8 +17,8 @@ public class Rectangle extends Figure {
 
     @Override
     public String draw() {
-        return String.format(Pen.template, Shape.RECTANGLE.name().toLowerCase(), getArea(),
+        return String.format(Pen.TEMPLATE, FigureName.RECTANGLE.name().toLowerCase(), getArea(),
                 String.format("firstSide: %d units, secondSide: %d units", firstSide, secondSide),
-                this.getColor());
+                getColor());
     }
 }

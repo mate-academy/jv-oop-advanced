@@ -15,8 +15,7 @@ public class Circle extends Figure {
 
     @Override
     public String draw() {
-        return String.format(Pen.template, Shape.CIRCLE.name().toLowerCase(), getArea(),
-                String.format("radius: %d units", radius),
-                this.getColor());
+        return String.format(Pen.TEMPLATE, FigureName.CIRCLE.name().toLowerCase(), getArea(),
+                String.format("radius: %d units", radius), getColor());
     }
 }

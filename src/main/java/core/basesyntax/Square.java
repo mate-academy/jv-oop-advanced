@@ -15,8 +15,7 @@ public class Square extends Figure {
 
     @Override
     public String draw() {
-        return String.format(Pen.template, Shape.SQUARE.name().toLowerCase(), getArea(),
-                String.format("side: %d units", side),
-                this.getColor());
+        return String.format(Pen.TEMPLATE, FigureName.SQUARE.name().toLowerCase(), getArea(),
+                String.format("side: %d units", side), getColor());
     }
 }
