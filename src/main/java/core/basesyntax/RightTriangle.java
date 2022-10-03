@@ -10,7 +10,7 @@ public class RightTriangle extends Figure {
     }
 
     public RightTriangle(Color color, int leg1, int leg2) {
-        super.setColor(color);
+        super(color);
         this.leg1 = leg1;
         this.leg2 = leg2;
     }

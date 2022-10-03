@@ -10,7 +10,7 @@ public class Rectangle extends Figure {
     }
 
     public Rectangle(Color color, int side1, int side2) {
-        super.setColor(color);
+        super(color);
         this.side1 = side1;
         this.side2 = side2;
     }

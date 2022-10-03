@@ -9,7 +9,7 @@ public class Circle extends Figure {
     }
 
     public Circle(Color color, int radius) {
-        super.setColor(color);
+        super(color);
         this.radius = radius;
     }
 

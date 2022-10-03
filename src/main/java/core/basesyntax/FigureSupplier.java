@@ -13,10 +13,10 @@ public class FigureSupplier {
             case SQUARE: return new Square().buildFigure();
             case RECTANGLE: return new Rectangle().buildFigure();
             case RIGRHTTRIANGLE: return new RightTriangle().buildFigure();
-            case ISOSCELESTRAPEZOID: return new IsoscelesTrapezoid().buildFigure();
-            default: return null;
+            case ISOSCELESTRAPEZOID:
+            default:
+                return new IsoscelesTrapezoid().buildFigure();
         }
-
     }
 
     public Figure getDefaultFigure() {

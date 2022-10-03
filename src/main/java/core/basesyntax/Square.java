@@ -9,7 +9,7 @@ public class Square extends Figure {
     }
 
     public Square(Color color, int side) {
-        super.setColor(color);
+        super(color);
         this.side = side;
     }
 
