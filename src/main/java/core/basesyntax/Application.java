@@ -6,9 +6,10 @@ public class Application {
     private static final int LENGTH = 10;
 
     public static void main(String[] args) {
+        Integer a = Integer.getInteger("3");
         Figure[] figures = new Figure[LENGTH];
         Random random = new Random();
-        ColorSupplier colorSupplier = new ColorSupplier(random);
+        ColorSupplier colorSupplier = new ColorSupplier();
         FigureSupplier figureSupplier = new FigureSupplier(random, colorSupplier);
         for (int i = 0; i < LENGTH; i = i + 2) {
             figures[i] = figureSupplier.getRandomFigure();
