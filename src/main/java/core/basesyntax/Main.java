@@ -2,10 +2,10 @@ package core.basesyntax;
 
 public class Main {
     public static void main(String[] args) {
-        final int ARAYLENGTH = 60;
-        Figure[] arr  = new Figure[ARAYLENGTH];
-        int halfArr = ARAYLENGTH - (ARAYLENGTH / 2);
-        for (int i = 0; i < ARAYLENGTH / 2; i++) {
+        final int araylen = 60;
+        Figure[] arr = new Figure[araylen];
+        int halfArr = araylen - (araylen / 2);
+        for (int i = 0; i < araylen / 2; i++) {
             switch (FigureSupplier.getRandomFigureName()) {
                 case ("CIRCLE"):
                     arr[i] = FigureSupplier.getRandomFigure(new Circle());
@@ -27,7 +27,7 @@ public class Main {
             }
             System.out.println(arr[i]);
         }
-        for (int i = halfArr; i < ARAYLENGTH; i++) {
+        for (int i = halfArr; i < araylen; i++) {
             arr[i] = FigureSupplier.getDefaultFigure();
             System.out.println(arr[i]);
         }
