@@ -1,8 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.FiguresClass;
+import core.basesyntax.Figure;
 
-public class IsoscelesTrapezoid extends FiguresClass {
+public class IsoscelesTrapezoid extends Figure {
     private int firstSide;
     private int secondSide;
     private int height;
@@ -39,14 +39,14 @@ public class IsoscelesTrapezoid extends FiguresClass {
     }
 
     @Override
-    public double areaCalculator() {
+    public double calculateArea() {
         return (firstSide + secondSide) / 2 * height;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: IsoscelesTrapezoid, area:"
-                + this.areaCalculator()
+                + this.calculateArea()
                 + " sq.units, height: " + this.getHeight()
                 + " firstSide: " + this.firstSide + " units, secondSide: "
                 + this.secondSide + " units, color: " + this.getColor());

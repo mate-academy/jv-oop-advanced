@@ -1,8 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.FiguresClass;
+import core.basesyntax.Figure;
 
-public class RightTriangle extends FiguresClass {
+public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
@@ -29,7 +29,7 @@ public class RightTriangle extends FiguresClass {
     }
 
     @Override
-    public double areaCalculator() {
+    public double calculateArea() {
 
         return Math.sqrt(3 / 4 * this.getFirstLeg());
     }
@@ -37,7 +37,7 @@ public class RightTriangle extends FiguresClass {
     @Override
     public void draw() {
         System.out.println("Figure: rightTriangle, area:"
-                + this.areaCalculator()
+                + this.calculateArea()
                 + " sq.units, firstLeg: "
                 + this.getFirstLeg() + " secondLeg: "
                 + this.getSecondLeg() + " units, color: "

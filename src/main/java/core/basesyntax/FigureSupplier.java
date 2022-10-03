@@ -16,21 +16,20 @@ public class FigureSupplier {
     private static final Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
-    public FiguresClass getRandomFigure() {
+    public Figure getRandomFigure() {
         int randomNumFigure = random.nextInt(NUM_OF_FIGURE);
-        if (randomNumFigure == 1) {
-            return randomCircle();
+        switch (randomNumFigure) {
+            case 0:
+                return randomIsoscelesTrapezoid();
+            case 1:
+                return randomTriangle();
+            case 2:
+                return randomCircle();
+            case 3:
+                return randomSquare();
+            default:
+                return randomRectangle();
         }
-        if (randomNumFigure == 2) {
-            return randomSquare();
-        }
-        if (randomNumFigure == 3) {
-            return randomTriangle();
-        }
-        if (randomNumFigure == 4) {
-            return randomRectangle();
-        }
-        return randomIsoscelesTrapezoid();
     }
 
     public int side() {
@@ -57,7 +56,7 @@ public class FigureSupplier {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), side(), side(), side());
     }
 
-    public FiguresClass getDefaultFigure() {
+    public Figure getDefaultFigure() {
         return new Circle(RADIUS_OF_DEFAULT_FIGURE, COLOR_OF_DEFAULT_FIGURE.name());
     }
 }

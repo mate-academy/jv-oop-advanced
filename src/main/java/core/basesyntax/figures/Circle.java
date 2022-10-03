@@ -1,8 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.FiguresClass;
+import core.basesyntax.Figure;
 
-public class Circle extends FiguresClass {
+public class Circle extends Figure {
     private int radius;
 
     public Circle(int radius,String color) {
@@ -20,7 +20,7 @@ public class Circle extends FiguresClass {
     }
 
     @Override
-    public double areaCalculator() {
+    public double calculateArea() {
         return Math.PI * Math.pow(this.radius, 2);
     }
 
@@ -28,7 +28,7 @@ public class Circle extends FiguresClass {
     public void draw() {
         System.out.println(
                 "Figure: Circle, area:"
-                        + this.areaCalculator()
+                        + this.calculateArea()
                         + " sq.units, radius: " + this.radius
                         + " units, color: " + this.getColor());
     }

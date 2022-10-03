@@ -1,8 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.FiguresClass;
+import core.basesyntax.Figure;
 
-public class Rectangle extends FiguresClass {
+public class Rectangle extends Figure {
     private int width;
     private int height;
 
@@ -29,14 +29,14 @@ public class Rectangle extends FiguresClass {
     }
 
     @Override
-    public double areaCalculator() {
+    public double calculateArea() {
         return this.height * this.width;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: Rectangle, area:"
-                + this.areaCalculator()
+                + this.calculateArea()
                 + " sq.units, height: " + this.getHeight()
                 + " width: " + this.getWidth() + " units, color: " + this.getColor());
     }

@@ -1,8 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.FiguresClass;
+import core.basesyntax.Figure;
 
-public class Square extends FiguresClass {
+public class Square extends Figure {
     private int side;
 
     public Square(int side,String color) {
@@ -19,14 +19,14 @@ public class Square extends FiguresClass {
     }
 
     @Override
-    public double areaCalculator() {
+    public double calculateArea() {
         return side * side;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: square, area:"
-                + areaCalculator()
+                + calculateArea()
                 + " sq.units, side: " + this.side
                 + " units, color: " + this.getColor());
     }
