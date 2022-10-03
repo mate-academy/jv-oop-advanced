@@ -19,7 +19,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: " + EnumOfFigures.ISOSCELES_TRAPEZOID.name().toLowerCase()
+        return "Figure: " + FigureType.ISOSCELES_TRAPEZOID.name().toLowerCase()
                 + ", area:" + getArea()
                 + " sq.units, first base: " + baseA + " , second base: "
                 + baseB + " , hight: " + hight + " units, color: " + getColour();

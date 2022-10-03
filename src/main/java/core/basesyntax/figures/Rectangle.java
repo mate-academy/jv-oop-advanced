@@ -17,7 +17,7 @@ public class Rectangle extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: " + EnumOfFigures.RECTANGLE.name().toLowerCase() + ", area:" + getArea()
+        return "Figure: " + FigureType.RECTANGLE.name().toLowerCase() + ", area:" + getArea()
                 + " sq.units, sideA: " + sideA + " , sideB: " + sideB
                 + " units, color: " + getColour();
     }

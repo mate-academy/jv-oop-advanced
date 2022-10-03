@@ -24,7 +24,7 @@ public class Circle extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: " + EnumOfFigures.CIRCLE.name().toLowerCase() + ", area:"
+        return "Figure: " + FigureType.CIRCLE.name().toLowerCase() + ", area:"
                 + new DecimalFormat("#0.00").format(getArea())
                 + " sq.units, radius: " + radius + " units, color: " + getColour();
     }

@@ -17,7 +17,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: " + EnumOfFigures.RIGHT_TRIANGLE.name().toLowerCase()
+        return "Figure: " + FigureType.RIGHT_TRIANGLE.name().toLowerCase()
                 + ", area:" + getArea()
                 + " sq.units, first leg: " + firstLeg + " , second leg: "
                 + secondLeg + " units, color: " + getColour();
