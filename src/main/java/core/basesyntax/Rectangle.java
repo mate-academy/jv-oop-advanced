@@ -21,7 +21,6 @@ public class Rectangle extends Figure {
 
     @Override
     public String toString() {
-        String a = "abc";
         return "Figure: Rectangle, " +
                 "area: " + calcArea() +
                 " sq.units, width: " +

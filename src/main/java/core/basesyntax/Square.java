@@ -22,7 +22,7 @@ public class Square extends Figure {
         return "Figure: Square, " +
                 "area: " + calcArea() +
                 " sq.units, side: " +
-                side  +
+                side +
                 " units, color: " + super.getColor();
     }
 }

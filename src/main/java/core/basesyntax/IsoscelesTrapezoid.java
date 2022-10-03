@@ -25,7 +25,7 @@ public class IsoscelesTrapezoid extends Figure {
         return "Figure: IsoscelesTrapezoid, " +
                 "area: " + calcArea() +
                 " sq.units, height: " +
-                height  +
+                height +
                 " units, " +
                 middleline +
                 " units, color: " + super.getColor();

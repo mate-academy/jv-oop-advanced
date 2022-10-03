@@ -16,16 +16,15 @@ public class RightTriangle extends Figure {
     }
 
     public double calcArea() {
-        return super.setArea((this.sideTwo * this.sideOne)/2);
+        return super.setArea((this.sideTwo * this.sideOne) / 2);
     }
 
     @Override
     public String toString() {
-        String a = "abc";
         return "Figure: RightTriangle, " +
                 "area: " + calcArea() +
                 " sq.units, sideOne: " +
-                sideOne  +
+                sideOne +
                 " units, sideTwo " +
                 sideTwo +
                 " units, color: " +
