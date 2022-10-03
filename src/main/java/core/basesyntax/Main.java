@@ -19,7 +19,7 @@ public class Main {
             array[i] = supplier.getDefaultFigure();
         }
         for (Figure figure : array) {
-            figure.drawFigure();
+            figure.draw();
         }
     }
 }

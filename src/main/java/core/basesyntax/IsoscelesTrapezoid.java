@@ -20,7 +20,7 @@ public class IsoscelesTrapezoid extends Figure {
         return (topBase + bottomBase) / 2 * height;
     }
 
-    public void drawFigure() {
+    public void draw() {
         System.out.println("Figure: " + getName()
                       + ", area: " + new DecimalFormat(ROUNDING_PATTERN).format(calculateArea())
                       + " sq.units, " + " tob base: " + topBase + " units,"

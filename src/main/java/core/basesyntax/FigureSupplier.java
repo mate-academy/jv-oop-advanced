@@ -3,6 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final String STANDART_FIGURE = "Circle";
+    private static final String STANDART_COLOR = "White";
     private static final int AMOUNT_OF_FIGURES = 4;
     private static final int STANDART_RADIUS = 10;
     private final ColorSupplier color;
@@ -16,22 +18,22 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        switch (new Random().nextInt(AMOUNT_OF_FIGURES)) {
-            case 0:
+        switch (Figures.values()[new Random().nextInt(Figures.values().length)]) {
+            case RECTANGLE:
                 figure = new Rectangle("Rectangle", color.getRandomColour(),
                         dimesion.getRandomDimesion(), dimesion.getRandomDimesion());
                 break;
-            case 1:
+            case ISOSCELES_TRAPEZOID:
                 figure = new IsoscelesTrapezoid("IsoscelesTrapezoid", color.getRandomColour(),
                         dimesion.getRandomDimesion(),dimesion.getRandomDimesion(),
                         dimesion.getRandomDimesion());
                 break;
-            case 2:
+            case RIGHT_TRIANGLE:
                 figure = new RightTriangle("RightTriangle",
                         color.getRandomColour(), dimesion.getRandomDimesion(),
                         dimesion.getRandomDimesion());
                 break;
-            case 3:
+            case CIRCLE:
                 figure = new Circle("Circle", color.getRandomColour(),
                         dimesion.getRandomDimesion());
                 break;
@@ -44,6 +46,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("Circle", "White", STANDART_RADIUS);
+        return new Circle(STANDART_FIGURE, STANDART_COLOR, STANDART_RADIUS);
     }
 }

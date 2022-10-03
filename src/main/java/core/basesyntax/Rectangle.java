@@ -17,7 +17,7 @@ public class Rectangle extends Figure {
         return bigSide * smallSide;
     }
 
-    public void drawFigure() {
+    public void draw() {
         System.out.println("Figure: " + getName()
                 + ", area: " + new DecimalFormat(ROUNDING_PATTERN).format(calculateArea())
                 + " sq.units," + " big side: " + bigSide + " units,"

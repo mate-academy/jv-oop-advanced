@@ -17,7 +17,7 @@ public class RightTriangle extends Figure {
         return 0.5 * firstLeg * secondleg;
     }
 
-    public void drawFigure() {
+    public void draw() {
         System.out.println("Figure: " + getName()
                 + ", area: " + new DecimalFormat(ROUNDING_PATTERN).format(calculateArea())
                 + " sq.units, " + " first leg: " + firstLeg + " units,"
