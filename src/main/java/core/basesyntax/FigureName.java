@@ -5,5 +5,5 @@ public enum FigureName {
     ISOSCELESTRAPEZOID,
     RECTANGLE,
     RIGHTTRIANGLE,
-    SQUARE;
+    SQUARE
 }

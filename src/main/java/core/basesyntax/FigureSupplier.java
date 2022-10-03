@@ -13,32 +13,29 @@ public class FigureSupplier {
         Figure figure = null;
         switch (figureName) {
             case CIRCLE:
-                figure = new Circle(random.nextInt(MAX_SIDE_BOUND), randomColor);
+                figure = new Circle(randomColor, random.nextInt(MAX_SIDE_BOUND));
                 break;
             case ISOSCELESTRAPEZOID:
-                figure = new IsoscelesTrapezoid(random.nextInt(MAX_SIDE_BOUND),
+                figure = new IsoscelesTrapezoid(randomColor, random.nextInt(MAX_SIDE_BOUND),
                         random.nextInt(MAX_SIDE_BOUND) + random.nextInt(MAX_SIDE_BOUND),
-                        random.nextInt(MAX_SIDE_BOUND), randomColor);
+                        random.nextInt(MAX_SIDE_BOUND));
                 break;
             case RECTANGLE:
-                figure = new Rectangle(random.nextInt(MAX_SIDE_BOUND),
-                        random.nextInt(MAX_SIDE_BOUND), randomColor);
+                figure = new Rectangle(randomColor, random.nextInt(MAX_SIDE_BOUND),
+                        random.nextInt(MAX_SIDE_BOUND));
                 break;
             case RIGHTTRIANGLE:
-                figure = new RightTriangle(random.nextInt(MAX_SIDE_BOUND),
-                        random.nextInt(MAX_SIDE_BOUND), randomColor);
-                break;
-            case SQUARE:
-                figure = new Square(random.nextInt(MAX_SIDE_BOUND), randomColor);
+                figure = new RightTriangle(randomColor, random.nextInt(MAX_SIDE_BOUND),
+                        random.nextInt(MAX_SIDE_BOUND));
                 break;
             default:
-                figure = getDefaultFigure();
+                figure = new Square(randomColor, random.nextInt(MAX_SIDE_BOUND));
                 break;
         }
         return figure;
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_CIRCLE_RADIUS, Color.WHITE);
+        return new Circle(Color.WHITE, DEFAULT_CIRCLE_RADIUS);
     }
 }

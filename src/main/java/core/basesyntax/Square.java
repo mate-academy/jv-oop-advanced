@@ -1,8 +1,8 @@
 package core.basesyntax;
 
 public class Square extends Rectangle {
-    public Square(double side, Color color) {
-        super(side, side, color);
+    public Square(Color color, double side) {
+        super(color, side, side);
     }
 
     @Override
