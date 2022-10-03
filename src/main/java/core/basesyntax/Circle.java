@@ -15,6 +15,7 @@ public class Circle extends Figure {
         return Math.PI * Math.pow(radius, 2);
     }
 
+    @Override
     public void draw() {
         System.out.println("Figure: " + getName()
                 + ", area: " + new DecimalFormat(ROUNDING_PATTERN).format(calculateArea())
