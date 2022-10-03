@@ -14,15 +14,15 @@ public class FigureSupplier {
         int figureNumber = random.nextInt(FIGURE_NUMBER);
         switch (figureNumber) {
             case 0:
-            return createCircle();
+                return createCircle();
             case 1:
-            return createIsoscelesTrapezoid();
+                return createIsoscelesTrapezoid();
             case 2:
-            return createRectangle();
+                return createRectangle();
             case 3:
-            return createRightTriangle();
+                return createRightTriangle();
             default:
-            return createSquare();
+                return createSquare();
         }
     }
 
