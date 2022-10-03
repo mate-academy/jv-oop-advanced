@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-import java.util.Random;
+//import java.util.Random;
 
 public class IsoscelesTrapezoid extends Figure {
     private int height;
@@ -32,13 +32,13 @@ public class IsoscelesTrapezoid extends Figure {
                 + upperBase + " units, color: " + getColor().name();
         System.out.println(figureInfo);
     }
-
+    /*
     @Override
     public Figure buildFigure() {
-        super.setColor(ColorSuplier.getRandomColor());
+        super.setColor(ColorSupplier.getRandomColor());
         int height = new Random().nextInt(LENGTH_LIMIT);
         int lowerBase = new Random().nextInt(LENGTH_LIMIT);
         int upperBase = new Random().nextInt(LENGTH_LIMIT);
         return new IsoscelesTrapezoid(super.getColor(), height, lowerBase, upperBase);
-    }
+    }*/
 }

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-import java.util.Random;
+//import java.util.Random;
 
 public class Circle extends Figure {
     private int radius;
@@ -15,7 +15,7 @@ public class Circle extends Figure {
 
     @Override
     public float getArea() {
-        return (float)Math.PI * radius * radius;
+        return (float) Math.PI * radius * radius;
     }
 
     @Override
@@ -25,12 +25,12 @@ public class Circle extends Figure {
         System.out.println(info);
     }
 
-    @Override
+    /*@Override
     public Figure buildFigure() {
-        super.setColor(ColorSuplier.getRandomColor());
+        super.setColor(ColorSupplier.getRandomColor());
         this.radius = new Random().nextInt(LENGTH_LIMIT);
         return new Circle(super.getColor(), this.radius);
-    }
+    }*/
 }
 
 

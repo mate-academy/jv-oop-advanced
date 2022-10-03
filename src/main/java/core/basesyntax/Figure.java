@@ -19,5 +19,6 @@ public abstract class Figure implements Area, Draw {
         this.color = color;
     }
 
-    public abstract Figure buildFigure();
+    //public abstract Figure buildFigure();
+
 }

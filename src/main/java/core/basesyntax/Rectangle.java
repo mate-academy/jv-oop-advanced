@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-import java.util.Random;
+//import java.util.Random;
 
 public class Rectangle extends Figure {
     private int side1;
@@ -27,11 +27,11 @@ public class Rectangle extends Figure {
         System.out.println(info);
     }
 
-    @Override
+    /*@Override
     public Figure buildFigure() {
-        super.setColor(ColorSuplier.getRandomColor());
+        super.setColor(ColorSupplier.getRandomColor());
         int side1 = new Random().nextInt(LENGTH_LIMIT);
         int side2 = new Random().nextInt(LENGTH_LIMIT);
         return new Rectangle(super.getColor(), side1, side2);
-    }
+    } */
 }
