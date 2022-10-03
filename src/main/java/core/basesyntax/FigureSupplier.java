@@ -4,11 +4,11 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_RANG = 100;
+    private static final String DEFAULT_COLOR = "White";
+    private static final double DEFAULT_RADIUS = 10.0;
     private final int randomInd = new Random().nextInt(Shape.values().length);
     private final String randomShape = Shape.values()[randomInd].toString();
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final static String DEFAULT_COLOR = "White";
-    private final static double DEFAULT_RADIUS = 10.0;
 
     public Figure getRandomFigure() {
         switch (randomShape) {
