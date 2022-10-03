@@ -14,23 +14,23 @@ public class FigureSupplier {
         switch (figureArr[random.nextInt(figureArr.length)]) {
             case CIRCLE:
                 return new Circle(getRandomDouble(MULTIPLIER),
-                        colorSupplier.getRandomColor());
+                        colorSupplier.getRandom());
             case RECTANGLE:
                 return new Rectangle(getRandomDouble(MULTIPLIER),
                         getRandomDouble(MULTIPLIER),
-                        colorSupplier.getRandomColor());
+                        colorSupplier.getRandom());
             case SQUARE:
                 return new Square(getRandomDouble(MULTIPLIER),
-                        colorSupplier.getRandomColor());
+                        colorSupplier.getRandom());
             case ISOSCELES_TRAPEZOID:
                 return new IsoscelesTrapezoid(getRandomDouble(MULTIPLIER),
                         getRandomDouble(MULTIPLIER),
                         getRandomDouble(MULTIPLIER),
-                        colorSupplier.getRandomColor());
+                        colorSupplier.getRandom());
             case RIGHT_TRIANGLE:
                 return new RightTriangle(getRandomDouble(MULTIPLIER),
                         getRandomDouble(MULTIPLIER),
-                        colorSupplier.getRandomColor());
+                        colorSupplier.getRandom());
             default:
                 return getDefaultFigure();
         }
