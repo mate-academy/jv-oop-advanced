@@ -10,7 +10,7 @@ public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.name(), DEFAULT_FIGURE_RADIUS);
+        return new Circle(Color.WHITE.name().toLowerCase(), DEFAULT_FIGURE_RADIUS);
     }
 
     public Figure getRandomFigure() {
