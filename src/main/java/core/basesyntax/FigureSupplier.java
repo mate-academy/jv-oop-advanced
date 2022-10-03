@@ -9,11 +9,11 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        return createRandomFigure(Classes.values()[random.nextInt(Classes.values().length)]);
+        return createRandomFigure(TypeOfFigure.values()[random.nextInt(TypeOfFigure.values().length)]);
     }
 
-    public Figure createRandomFigure(Classes types) {
-        Figure figure = null;
+    public Figure createRandomFigure(TypeOfFigure types) {
+        Figure figure;
         switch (types) {
             case CIRCLE :
                 figure = new Circle(colorSupplier.getRandomColor(), random.nextInt());

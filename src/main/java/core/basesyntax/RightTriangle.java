@@ -12,10 +12,6 @@ public class RightTriangle extends Figure {
         this.setType("right triangle");
     }
 
-    public String getType() {
-        return type;
-    }
-
     public void setType(String type) {
         this.type = type;
     }
@@ -27,7 +23,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public void printInfo() {
-        System.out.println("Figure: " + getType() + ", area: " + getArea() + " units, firstLeg: "
+        System.out.println("Figure: " + type + ", area: " + getArea() + " units, firstLeg: "
                 + firstLeg + " units, secondLeg: " + secondLeg + " units, color: " + getColor());
     }
 }

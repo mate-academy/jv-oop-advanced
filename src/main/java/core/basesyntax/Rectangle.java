@@ -12,10 +12,6 @@ public class Rectangle extends Figure {
         this.setType("rectangle");
     }
 
-    public String getType() {
-        return type;
-    }
-
     public void setType(String type) {
         this.type = type;
     }
@@ -27,7 +23,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void printInfo() {
-        System.out.println("Figure: " + getType() + ", area: " + getArea() + " units, height: "
+        System.out.println("Figure: " + type + ", area: " + getArea() + " units, height: "
                 + height + " units, width: " + width + " units, color: " + getColor());
     }
 }

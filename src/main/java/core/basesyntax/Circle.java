@@ -10,10 +10,6 @@ public class Circle extends Figure {
         this.setType("circle");
     }
 
-    public String getType() {
-        return type;
-    }
-
     public void setType(String type) {
         this.type = type;
     }
@@ -25,7 +21,7 @@ public class Circle extends Figure {
 
     @Override
     public void printInfo() {
-        System.out.println("Figure: " + getType() + ", area: " + getArea()
+        System.out.println("Figure: " + type + ", area: " + getArea()
                 + " units, radius: " + radius + " units, color: " + getColor());
     }
 }

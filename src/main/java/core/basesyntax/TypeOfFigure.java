@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public enum Classes {
+public enum TypeOfFigure {
     CIRCLE,
     ISOSCELES_TRAPEZOID,
     RIGHT_TRIANGLE,

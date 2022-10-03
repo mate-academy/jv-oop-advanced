@@ -10,10 +10,6 @@ public class Square extends Figure {
         this.setType("square");
     }
 
-    public String getType() {
-        return type;
-    }
-
     public void setType(String type) {
         this.type = type;
     }
@@ -25,7 +21,7 @@ public class Square extends Figure {
 
     @Override
     public void printInfo() {
-        System.out.println("Figure: " + getType() + ", area: " + getArea() + " units, side: " + side
+        System.out.println("Figure: " + type + ", area: " + getArea() + " units, side: " + side
                 + " units, color: " + getColor());
     }
 }

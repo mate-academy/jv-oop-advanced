@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-interface FigureOperations {
-    public double getArea();
+public interface FigureOperations {
+    double getArea();
 }
