@@ -11,7 +11,7 @@ public class Rectangle extends Figure {
     }
 
     public double getSideA() {
-        return  sideA;
+        return sideA;
     }
 
     public void getSideA(double sideA) {
@@ -32,6 +32,8 @@ public class Rectangle extends Figure {
     }
 
     public String draw() {
-        return "Figure: " + FigureName.RECTANGLE.name() + " area: " + area() + " sides: " + this.sideA + this.sideB + " color: " + getColor().name();
+        return "Figure: " + FigureName.RECTANGLE.name() + " area: " + area()
+                + " side A: " + this.sideA + " side B: " + this.sideB
+                + " color: " + getColor().name();
     }
 }

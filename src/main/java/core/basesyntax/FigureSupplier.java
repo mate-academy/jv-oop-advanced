@@ -16,13 +16,17 @@ public class FigureSupplier {
                 figure = new Circle(random.nextInt(MAX_SIDE_BOUND), randomColor);
                 break;
             case ISOSCELESTRAPEZOID:
-                figure = new IsoscelesTrapezoid(random.nextInt(MAX_SIDE_BOUND), random.nextInt(MAX_SIDE_BOUND) + random.nextInt(MAX_SIDE_BOUND), random.nextInt(MAX_SIDE_BOUND), randomColor);
+                figure = new IsoscelesTrapezoid(random.nextInt(MAX_SIDE_BOUND),
+                        random.nextInt(MAX_SIDE_BOUND) + random.nextInt(MAX_SIDE_BOUND),
+                        random.nextInt(MAX_SIDE_BOUND), randomColor);
                 break;
             case RECTANGLE:
-                figure = new Rectangle(random.nextInt(MAX_SIDE_BOUND), random.nextInt(MAX_SIDE_BOUND), randomColor);
+                figure = new Rectangle(random.nextInt(MAX_SIDE_BOUND),
+                        random.nextInt(MAX_SIDE_BOUND), randomColor);
                 break;
             case RIGHTTRIANGLE:
-                figure = new RightTriangle(random.nextInt(MAX_SIDE_BOUND), random.nextInt(MAX_SIDE_BOUND), randomColor);
+                figure = new RightTriangle(random.nextInt(MAX_SIDE_BOUND),
+                        random.nextInt(MAX_SIDE_BOUND), randomColor);
                 break;
             case SQUARE:
                 figure = new Square(random.nextInt(MAX_SIDE_BOUND), randomColor);

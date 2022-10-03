@@ -42,8 +42,8 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     public String draw() {
-        return "Figure: " + FigureName.ISOSCELESTRAPEZOID.name() + " area: " + area() + " upper width: "
-                + this.upperWidth + " lower width: " + this.lowerWidth + " height: "
-                + this.height + " color: " + getColor().name();
+        return "Figure: " + FigureName.ISOSCELESTRAPEZOID.name() + " area: " + area()
+                + " upper width: " + this.upperWidth + " lower width: " + this.lowerWidth
+                + " height: " + this.height + " color: " + getColor().name();
     }
 }

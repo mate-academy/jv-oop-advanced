@@ -32,6 +32,7 @@ public class RightTriangle extends Figure {
     }
 
     public String draw() {
-        return "Figure: " + FigureName.RIGHTTRIANGLE.name() + " area: " + area() + " legs: " + this.firstLeg + this.secondLeg + " color: " + getColor().name();
+        return "Figure: " + FigureName.RIGHTTRIANGLE.name() + " area: " + area()
+                + " legs: " + this.firstLeg + this.secondLeg + " color: " + getColor().name();
     }
 }

@@ -11,6 +11,7 @@ public class Square extends Rectangle {
     }
 
     public String draw() {
-        return "Figure: " + FigureName.SQUARE.name() + " area: " + area() + " side: " + getSideA() + " color: " + getColor().name();
+        return "Figure: " + FigureName.SQUARE.name() + " area: " + area()
+                + " side: " + getSideA() + " color: " + getColor().name();
     }
 }

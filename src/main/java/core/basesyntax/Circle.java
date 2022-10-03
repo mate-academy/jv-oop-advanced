@@ -22,6 +22,7 @@ public class Circle extends Figure {
     }
 
     public String draw() {
-        return "Figure: " + FigureName.CIRCLE.name() + " area: " + area() + " radius: " + this.radius + " color: " + getColor().name();
+        return "Figure: " + FigureName.CIRCLE.name() + " area: " + area()
+                + " radius: " + this.radius + " color: " + getColor().name();
     }
 }
