@@ -3,9 +3,14 @@ package core.basesyntax;
 public class Circle extends Figure {
     private final double radius;
 
-    public Circle(String color, double eadius) {
+    public Circle() {
+        super("White");
+        this.radius = 10.0;
+    }
+
+    public Circle(String color, double radius) {
         super(color);
-        this.radius = eadius;
+        this.radius = radius;
     }
 
     @Override
