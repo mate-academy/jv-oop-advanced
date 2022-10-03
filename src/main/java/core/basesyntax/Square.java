@@ -1,7 +1,12 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public class Square extends Figure {
     private int side;
+
+    public Square() {
+    }
 
     public Square(Color color, int side) {
         super.setColor(color);
@@ -10,8 +15,7 @@ public class Square extends Figure {
 
     @Override
     public float getArea() {
-        float area = side * side;
-        return area;
+        return side * side;
     }
 
     @Override
@@ -19,5 +23,12 @@ public class Square extends Figure {
         String figureInfo = "Figure: square, area :" + getArea() + "sq. units, side: " + side
                 + " units, color: " + getColor().name();
         System.out.println(figureInfo);
+    }
+
+    @Override
+    public Figure buildFigure() {
+        super.setColor(ColorSuplier.getRandomColor());
+        int side = new Random().nextInt(LENGTH_LIMIT);
+        return new Square(super.getColor(), side);
     }
 }

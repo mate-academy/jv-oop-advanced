@@ -2,8 +2,9 @@ package core.basesyntax;
 
 public class Main {
     public static void main(String[] args) {
+        int arrayLimit = 6;
         Figure defaultFigure = new FigureSupplier().getDefaultFigure();
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < arrayLimit; i++) {
             switch (i) {
                 case 0:
                 case 1:
@@ -17,7 +18,6 @@ public class Main {
                     defaultFigure.drawFigure(defaultFigure);
                     break;
                 default:
-                    System.out.println("Array element is out of elements range");
                     break;
             }
         }

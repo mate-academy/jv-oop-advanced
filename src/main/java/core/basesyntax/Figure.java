@@ -1,16 +1,16 @@
 package core.basesyntax;
 
 public abstract class Figure implements Area, Draw {
-
+    public static final int LENGTH_LIMIT = 250;
     private Color color;
 
     public Color getColor() {
-        this.color = color;
-        return color;
+        return this.color;
     }
 
     public void setColor(Color color) {
         this.color = color;
     }
 
+    public abstract Figure buildFigure();
 }

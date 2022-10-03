@@ -1,9 +1,14 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public class IsoscelesTrapezoid extends Figure {
     private int height;
     private int lowerBase;
     private int upperBase;
+
+    public IsoscelesTrapezoid() {
+    }
 
     public IsoscelesTrapezoid(Color color, int height, int lowerBase, int upperBase) {
         super.setColor(color);
@@ -26,5 +31,14 @@ public class IsoscelesTrapezoid extends Figure {
                 + " lower base : " + lowerBase + " units, upper base: "
                 + upperBase + " units, color: " + getColor().name();
         System.out.println(figureInfo);
+    }
+
+    @Override
+    public Figure buildFigure() {
+        super.setColor(ColorSuplier.getRandomColor());
+        int height = new Random().nextInt(LENGTH_LIMIT);
+        int lowerBase = new Random().nextInt(LENGTH_LIMIT);
+        int upperBase = new Random().nextInt(LENGTH_LIMIT);
+        return new IsoscelesTrapezoid(super.getColor(), height, lowerBase, upperBase);
     }
 }
