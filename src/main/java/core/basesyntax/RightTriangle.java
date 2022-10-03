@@ -5,10 +5,9 @@ public class RightTriangle extends Figure {
     private final double secondLeg;
 
     public RightTriangle(String name, double firstLeg, double secondLeg, String color) {
-        setName(name);
+        super(name, color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        setColor(color);
     }
 
     @Override

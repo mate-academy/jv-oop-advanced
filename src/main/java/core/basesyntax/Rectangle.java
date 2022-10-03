@@ -5,10 +5,9 @@ public class Rectangle extends Figure {
     private final double sideTwo;
 
     public Rectangle(String name, double sideOne, double sideTwo, String color) {
-        setName(name);
+        super(name, color);
         this.sideOne = sideOne;
         this.sideTwo = sideTwo;
-        setColor(color);
     }
 
     @Override
