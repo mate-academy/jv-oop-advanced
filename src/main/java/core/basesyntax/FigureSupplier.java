@@ -53,5 +53,4 @@ public class FigureSupplier {
         int upperBase = new Random().nextInt(LENGTH_LIMIT);
         return new IsoscelesTrapezoid(ColorSupplier.getRandomColor(), height, lowerBase, upperBase);
     }
-
 }
