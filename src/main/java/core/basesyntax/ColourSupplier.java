@@ -7,7 +7,7 @@ public class ColourSupplier {
     private Random random = new Random();
 
     public String getRandomColour() {
-        switch (random.nextInt(COLOUR_COUNT)) {
+        /*switch (random.nextInt(COLOUR_COUNT)) {
             case 1:
                 return Colours.RED.name().toLowerCase();
             case 2:
@@ -18,6 +18,7 @@ public class ColourSupplier {
                 return Colours.BLUE.name().toLowerCase();
             default:
                 return Colours.WHITE.name().toLowerCase();
-        }
+        }*/
+        return Colour.values()[random.nextInt(COLOUR_COUNT)].name();
     }
 }

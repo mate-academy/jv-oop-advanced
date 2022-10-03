@@ -1,16 +1,15 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Colours;
+import core.basesyntax.Colour;
 import java.text.DecimalFormat;
 
 public class Circle extends Figure {
     private static final double numberPi = Math.PI;
     private static final int CONST_RADIUS = 10;
-    private double radius = 0;
+    private double radius;
 
     public Circle() {
-        super(Colours.WHITE.name());
-        this.radius = CONST_RADIUS;
+        this(Colour.WHITE.name(), CONST_RADIUS);
     }
 
     public Circle(String colour, double radius) {
@@ -25,7 +24,7 @@ public class Circle extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: " + Figures.CIRCLE.name().toLowerCase() + ", area:"
+        return "Figure: " + EnumOfFigures.CIRCLE.name().toLowerCase() + ", area:"
                 + new DecimalFormat("#0.00").format(getArea())
                 + " sq.units, radius: " + radius + " units, color: " + getColour();
     }
