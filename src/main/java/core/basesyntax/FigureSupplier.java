@@ -6,10 +6,10 @@ public class FigureSupplier {
     private static final int FIGURE_LENGTH = 5;
     private static final Random random = new Random();
     private final ColorSupplier supplier = new ColorSupplier();
-    private final int randomSide = random.nextInt(100);
 
     public Figure getRandomFigure() {
         int index = random.nextInt(FIGURE_LENGTH);
+        int randomSide = random.nextInt(100);
         switch (index) {
             case 0 :
                 return new Circle(randomSide, supplier.getRandomColor());
