@@ -4,63 +4,60 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int FIGURE_AMOUNT = 5;
+    private static final int CIRCLE_RADIUS = 10;
+    private static final String CIRCLE_NAME = "Circle";
+    private static final String CIRCLE_COLOR = "White";
 
     public Figure getRandomFigure() {
         ColorSupplier supplier = new ColorSupplier();
         Random random = new Random();
         int currentRandomFigureIndex = random.nextInt(FIGURE_AMOUNT);
-        Figure randomFigure;
         switch (currentRandomFigureIndex) {
             case 0:
-                randomFigure = new Circle(
+                return new Circle(
                     "Circle",
                     random.nextInt(100),
                     supplier.getRandomColor()
             );
-                break;
             case 1:
-                randomFigure = new IsoscelesTrapezoid(
+                return new IsoscelesTrapezoid(
                         "IsoscelesTrapezoid",
                         random.nextInt(100),
                         random.nextInt(100),
                         random.nextInt(100),
                         supplier.getRandomColor()
                 );
-                break;
             case 2:
-                randomFigure = new Rectangle(
+                return new Rectangle(
                         "Rectangle",
                         random.nextInt(100),
                         random.nextInt(100),
                         supplier.getRandomColor()
                 );
-                break;
             case 3:
-                randomFigure = new RightTriangle(
+                return new RightTriangle(
                         "RightTriangle",
                         random.nextInt(100),
                         random.nextInt(100),
                         supplier.getRandomColor()
                 );
-                break;
             case 4:
-                randomFigure = new Square(
+                return new Square(
                         "Square",
                         random.nextInt(100),
                         supplier.getRandomColor()
                 );
-                break;
             default:
-                randomFigure = null;
+                return null;
         }
-        return randomFigure;
     }
 
     public Circle getDefaultFigure() {
+
         return new Circle(
-                "Circle",
-                10,
-                "White"
+                CIRCLE_NAME,
+                CIRCLE_RADIUS,
+                CIRCLE_COLOR
         );
     }
 }
