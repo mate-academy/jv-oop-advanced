@@ -11,7 +11,7 @@ public class Main {
                 supplier.getDefaultFigure(),
                 supplier.getDefaultFigure()};
         for (Figure figure: figures) {
-            System.out.println(figure.drawState());
+            System.out.println(figure.draw());
         }
 
     }

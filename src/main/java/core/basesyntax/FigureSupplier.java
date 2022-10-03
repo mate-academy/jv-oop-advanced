@@ -8,35 +8,40 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         ColorSupplier supplier = new ColorSupplier();
         Random random = new Random();
-        Circle circle = new Circle();
-        circle.setName("Circle");
-        circle.setRadius(random.nextInt(100));
-        circle.setColor(supplier.getRandomColor());
 
-        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
-        isoscelesTrapezoid.setName("IsoscelesTrapezoid");
-        isoscelesTrapezoid.setColor(supplier.getRandomColor());
-        isoscelesTrapezoid.setHeight(random.nextInt(100));
-        isoscelesTrapezoid.setSideOne(random.nextInt(100));
-        isoscelesTrapezoid.setSideTwo(random.nextInt(100));
-        isoscelesTrapezoid.setColor(supplier.getRandomColor());
+        Circle circle = new Circle(
+                "Circle",
+                random.nextInt(100),
+                supplier.getRandomColor()
+        );
 
-        Rectangle rectangle = new Rectangle();
-        rectangle.setName("Rectangle");
-        rectangle.setSideOne(random.nextInt(100));
-        rectangle.setSideTwo(random.nextInt(100));
-        rectangle.setColor(supplier.getRandomColor());
+        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(
+                "IsoscelesTrapezoid",
+                random.nextInt(100),
+                random.nextInt(100),
+                random.nextInt(100),
+                supplier.getRandomColor()
+        );
 
-        RightTriangle rightTriangle = new RightTriangle();
-        rightTriangle.setName("RightTriangle");
-        rightTriangle.setFirstLeg(random.nextInt(100));
-        rightTriangle.setSecondLeg(random.nextInt(100));
-        rightTriangle.setColor(supplier.getRandomColor());
+        Rectangle rectangle = new Rectangle(
+                "Rectangle",
+                random.nextInt(100),
+                random.nextInt(100),
+                supplier.getRandomColor()
+        );
 
-        Square square = new Square();
-        square.setName("Square");
-        square.setSide(random.nextInt(100));
-        square.setColor(supplier.getRandomColor());
+        RightTriangle rightTriangle = new RightTriangle(
+                "RightTriangle",
+                random.nextInt(100),
+                random.nextInt(100),
+                supplier.getRandomColor()
+        );
+
+        Square square = new Square(
+                "Square",
+                random.nextInt(100),
+                supplier.getRandomColor()
+        );
 
         int currentRandomFigureIndex = random.nextInt(FIGURE_AMOUNT);
         Figure[] randomFigure = {circle, isoscelesTrapezoid, rectangle, rightTriangle, square};
@@ -44,10 +49,10 @@ public class FigureSupplier {
     }
 
     public Circle getDefaultFigure() {
-        Circle whiteCircle = new Circle();
-        whiteCircle.setName("Circle");
-        whiteCircle.setColor("White");
-        whiteCircle.setRadius(10);
-        return whiteCircle;
+        return new Circle(
+                "Circle",
+                10,
+                "White"
+        );
     }
 }

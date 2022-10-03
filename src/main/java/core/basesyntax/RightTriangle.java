@@ -1,27 +1,25 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private double firstLeg;
-    private double secondLeg;
+    private final double firstLeg;
+    private final double secondLeg;
 
-    public void setFirstLeg(double firstLeg) {
+    public RightTriangle(String name, double firstLeg, double secondLeg, String color) {
+        setName(name);
         this.firstLeg = firstLeg;
-    }
-
-    public void setSecondLeg(double secondLeg) {
         this.secondLeg = secondLeg;
+        setColor(color);
     }
 
     @Override
-    public double area() {
+    public double calculateArea() {
         return (firstLeg * secondLeg) / 2;
     }
 
     @Override
-    public Figure drawState() {
-        System.out.println("Name = " + getName() + " Area = " + area()
+    public String draw() {
+        return "Name = " + getName() + " Area = " + calculateArea()
                 + " First side = " + firstLeg + " Second side = "
-                + secondLeg + " Color = " + getColor());
-        return null;
+                + secondLeg + " Color = " + getColor();
     }
 }
