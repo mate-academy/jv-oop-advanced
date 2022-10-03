@@ -19,10 +19,11 @@ public class Square extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: Square, " +
-                "area: " + calcArea() +
-                " sq.units, side: " +
-                side +
-                " units, color: " + super.getColor();
+        return "Figure: Square, "
+                + "area: "
+                + calcArea()
+                + " sq.units, side: "
+                + side
+                + " units, color: " + super.getColor();
     }
 }

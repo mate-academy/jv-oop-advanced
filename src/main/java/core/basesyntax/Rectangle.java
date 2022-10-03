@@ -21,13 +21,13 @@ public class Rectangle extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: Rectangle, " +
-                "area: " + calcArea() +
-                " sq.units, width: " +
-                width  +
-                " units, length " +
-                length +
-                " units, color: " +
-                super.getColor();
+        return "Figure: Rectangle, "
+                + "area: " + calcArea()
+                + " sq.units, width: "
+                + width
+                + " units, length "
+                + length
+                + " units, color: "
+                + super.getColor();
     }
 }

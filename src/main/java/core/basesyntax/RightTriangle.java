@@ -21,13 +21,13 @@ public class RightTriangle extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: RightTriangle, " +
-                "area: " + calcArea() +
-                " sq.units, sideOne: " +
-                sideOne +
-                " units, sideTwo " +
-                sideTwo +
-                " units, color: " +
-                super.getColor();
+        return "Figure: RightTriangle, "
+                + "area: " + calcArea()
+                + " sq.units, sideOne: "
+                + sideOne
+                + " units, sideTwo "
+                + sideTwo
+                + " units, color: "
+                + super.getColor();
     }
 }
