@@ -11,14 +11,14 @@ public class IsoscelesTrapezoid extends Figure {
 
     public IsoscelesTrapezoid(String color, int side, int topSide, int downSide) {
         super(color);
-        this.format = new DecimalFormat("#0.0");
+        this.format = new DecimalFormat(Figure.FORMAT_FOR_FUNCTIONAL_NUMBERS);
         this.side = side;
         this.topSide = topSide;
         this. downSide = downSide;
         this.height = getHeight();
     }
 
-    public double getHeight() {
+    private double getHeight() {
         return Math.sqrt((side * side) - (double)(downSide - topSide) * (downSide - topSide) / 4);
     }
 
@@ -33,6 +33,6 @@ public class IsoscelesTrapezoid extends Figure {
                 + " topSide: " + topSide + " units,"
                 + " downSide: " + downSide + " units,"
                 + " height: " + format.format(getHeight()) + " units,"
-                + " color: " + getColor();
+                + " color: " + getColor().toLowerCase();
     }
 }

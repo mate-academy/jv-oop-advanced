@@ -13,7 +13,7 @@ public class Main {
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
-            System.out.println(figures[i].draw());
+            System.out.println(figures[i].draw().toLowerCase());
         }
     }
 }

@@ -9,12 +9,12 @@ public class RightTriangle extends Figure {
 
     public RightTriangle(String color, int opposite, int adjacent) {
         super(color);
-        this.format = new DecimalFormat("#0.0");
+        this.format = new DecimalFormat(Figure.FORMAT_FOR_FUNCTIONAL_NUMBERS);
         this.opposite = opposite;
         this.adjacent = adjacent;
     }
 
-    public double getHypotenuse() {
+    private double getHypotenuse() {
         return Math.sqrt((opposite * opposite) + (adjacent * adjacent));
     }
 
@@ -29,6 +29,6 @@ public class RightTriangle extends Figure {
                 + " opposite: " + opposite + " units,"
                 + " adjacent: " + adjacent + " units,"
                 + " hypotenuse: " + format.format(getHypotenuse()) + " units,"
-                + " color: " + getColor();
+                + " color: " + getColor().toLowerCase();
     }
 }

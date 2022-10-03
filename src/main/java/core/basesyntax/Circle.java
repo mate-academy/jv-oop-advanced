@@ -8,7 +8,7 @@ public class Circle extends Figure {
 
     public Circle(String color, int radius) {
         super(color);
-        this.format = new DecimalFormat("#0.0");
+        this.format = new DecimalFormat(Figure.FORMAT_FOR_FUNCTIONAL_NUMBERS);
         this.radius = radius;
     }
 
@@ -21,6 +21,6 @@ public class Circle extends Figure {
         return "Figure: circle,"
                 + " area: " + format.format(getArea()) + " sq.units,"
                 + " radius: " + radius + " units,"
-                + " color: " + getColor();
+                + " color: " + getColor().toLowerCase();
     }
 }
