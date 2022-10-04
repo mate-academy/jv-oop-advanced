@@ -42,18 +42,22 @@ public class FigureSupplier {
     }
 
     public Rectangle getRectangle() {
-        return new Rectangle(supplier.getRandomColor(), random.nextInt(MAX_SIZE), random.nextInt(MAX_SIZE));
+        return new Rectangle(supplier.getRandomColor(),
+                random.nextInt(MAX_SIZE),
+                random.nextInt(MAX_SIZE));
     }
 
     public IsoscelesTrapezoid getIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(supplier.getRandomColor()
-                , random.nextInt(MAX_SIZE)
-                , random.nextInt(MAX_SIZE)
-                , random.nextInt(MAX_SIZE));
+        return new IsoscelesTrapezoid(supplier.getRandomColor(),
+                random.nextInt(MAX_SIZE),
+                random.nextInt(MAX_SIZE),
+                random.nextInt(MAX_SIZE));
     }
 
     public RightTriangle getRightTriangle() {
-        return new RightTriangle(supplier.getRandomColor(), random.nextInt(MAX_SIZE), random.nextInt(MAX_SIZE));
+        return new RightTriangle(supplier.getRandomColor(),
+                random.nextInt(MAX_SIZE),
+                random.nextInt(MAX_SIZE));
     }
 
     public Figure getDefaultFigure() {
