@@ -6,12 +6,12 @@ public class Square extends Rectangle {
     }
 
     @Override
-    public double area() {
+    public double calculateArea() {
         return getSideA() * getSideA();
     }
 
     public String draw() {
-        return "Figure: " + FigureName.SQUARE.name() + " area: " + area()
+        return "Figure: " + FigureName.SQUARE.name() + " area: " + calculateArea()
                 + " side: " + getSideA() + " color: " + getColor().name();
     }
 }

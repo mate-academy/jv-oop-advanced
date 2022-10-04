@@ -13,7 +13,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double area() {
+    public double calculateArea() {
         return 0.5 * (upperWidth + lowerWidth) * height;
     }
 
@@ -42,7 +42,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     public String draw() {
-        return "Figure: " + FigureName.ISOSCELESTRAPEZOID.name() + " area: " + area()
+        return "Figure: " + FigureName.ISOSCELESTRAPEZOID.name() + " area: " + calculateArea()
                 + " upper width: " + this.upperWidth + " lower width: " + this.lowerWidth
                 + " height: " + this.height + " color: " + getColor().name();
     }

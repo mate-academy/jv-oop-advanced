@@ -27,12 +27,12 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double calculateArea() {
         return this.sideA * this.sideB;
     }
 
     public String draw() {
-        return "Figure: " + FigureName.RECTANGLE.name() + " area: " + area()
+        return "Figure: " + FigureName.RECTANGLE.name() + " area: " + calculateArea()
                 + " side A: " + this.sideA + " side B: " + this.sideB
                 + " color: " + getColor().name();
     }

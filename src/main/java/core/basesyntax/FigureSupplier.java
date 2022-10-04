@@ -10,7 +10,7 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         FigureName figureName = FigureName.values()[random.nextInt(FigureName.values().length)];
         Color randomColor = Color.valueOf(ColorSupplier.getRandomColor());
-        Figure figure = null;
+        Figure figure = getDefaultFigure();
         switch (figureName) {
             case CIRCLE:
                 figure = new Circle(randomColor, random.nextInt(MAX_SIDE_BOUND));

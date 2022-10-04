@@ -11,7 +11,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double calculateArea() {
         return 0.5 * (firstLeg * secondLeg);
     }
 
@@ -32,7 +32,7 @@ public class RightTriangle extends Figure {
     }
 
     public String draw() {
-        return "Figure: " + FigureName.RIGHTTRIANGLE.name() + " area: " + area()
+        return "Figure: " + FigureName.RIGHTTRIANGLE.name() + " area: " + calculateArea()
                 + " legs: " + this.firstLeg + this.secondLeg + " color: " + getColor().name();
     }
 }

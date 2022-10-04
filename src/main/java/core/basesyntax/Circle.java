@@ -17,12 +17,12 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double calculateArea() {
         return Math.PI * (this.radius * this.radius);
     }
 
     public String draw() {
-        return "Figure: " + FigureName.CIRCLE.name() + " area: " + area()
+        return "Figure: " + FigureName.CIRCLE.name() + " area: " + calculateArea()
                 + " radius: " + this.radius + " color: " + getColor().name();
     }
 }
