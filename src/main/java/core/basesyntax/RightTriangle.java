@@ -1,34 +1,34 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private double sideone;
-    private double sidetwo;
+    private double sideOne;
+    private double sideTwo;
 
-    public RightTriangle(String color, double sideone, double sidetwo) {
+    public RightTriangle(String color, double sideOne, double sideTwo) {
         super.setColor(color);
-        this.sideone = sideone;
-        this.sidetwo = sidetwo;
+        this.sideOne = sideOne;
+        this.sideTwo = sideTwo;
     }
 
-    public double getSideone() {
-        return sideone;
+    public double getSideOne() {
+        return sideOne;
     }
 
-    public void setSideone(double sideone) {
-        this.sideone = sideone;
+    public void setSideOne(double sideOne) {
+        this.sideOne = sideOne;
     }
 
-    public double getSidetwo() {
-        return sidetwo;
+    public double getSideTwo() {
+        return sideTwo;
     }
 
-    public void setSidetwo(double sidetwo) {
-        this.sidetwo = sidetwo;
+    public void setSideTwo(double sideTwo) {
+        this.sideTwo = sideTwo;
     }
 
     @Override
     public double calculateArea() {
-        return (sideone * sidetwo) / 2;
+        return (sideOne * sideTwo) / 2;
     }
 
     @Override
@@ -37,9 +37,9 @@ public class RightTriangle extends Figure {
                 + "area: "
                 + calculateArea()
                 + " sq.units, side: "
-                + sideone
+                + sideOne
                 + " units, side: "
-                + sidetwo
+                + sideTwo
                 + " units, color: " + getColor());
     }
 }

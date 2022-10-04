@@ -3,11 +3,11 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    final double DEFAULRADIUS = 10;
+    private static final double DEF_RADIUS = 10;
     private ColorSupplier figureColor = new ColorSupplier();
 
     private double getRandomDouble() {
-        return new Random().nextInt();
+        return new Random().nextInt(5);
     }
 
     public Figure getRandomFigure() {
@@ -29,6 +29,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.name(), DEFAULRADIUS);
+        return new Circle(Color.WHITE.name(), DEF_RADIUS);
     }
 }
