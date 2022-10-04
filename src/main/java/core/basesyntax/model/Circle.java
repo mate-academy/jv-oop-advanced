@@ -1,7 +1,5 @@
 package core.basesyntax.model;
 
-import core.basesyntax.model.Figure;
-
 public class Circle extends Figure {
     private int radius;
 
@@ -26,6 +24,6 @@ public class Circle extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: " + getClass().getSimpleName() + ", area: "
-            + getArea() + " sq. units, color: " + getColor() + ", radius: " + getRadius());
+                + getArea() + " sq. units, color: " + getColor() + ", radius: " + getRadius());
     }
 }

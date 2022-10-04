@@ -1,8 +1,6 @@
 import core.basesyntax.model.Figure;
-import suppliers.ColorSupplier;
-import suppliers.FigureSupplier;
-
 import java.util.Random;
+import suppliers.FigureSupplier;
 
 public class FigureApp {
     private static FigureSupplier figureSupplier = new FigureSupplier();
