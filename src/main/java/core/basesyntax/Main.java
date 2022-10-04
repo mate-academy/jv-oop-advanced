@@ -8,6 +8,8 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < figures.length; i++) {
             if (i >= figures.length / 2) {
+
+
                 figures[i] = figureSupplier.getDefaultFigure();
                 System.out.println(figures[i].draw());
             } else {
