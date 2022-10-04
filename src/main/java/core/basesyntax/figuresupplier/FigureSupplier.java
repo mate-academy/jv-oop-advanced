@@ -3,10 +3,10 @@ package core.basesyntax.figuresupplier;
 import core.basesyntax.Figure;
 import core.basesyntax.colorsupplier.ColorSupplier;
 import core.basesyntax.figures.Circle;
-import core.basesyntax.figures.Square;
 import core.basesyntax.figures.Rectangle;
 import core.basesyntax.figures.RightTriangle;
 import core.basesyntax.figures.IsoscelesTrapezoid;
+import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
