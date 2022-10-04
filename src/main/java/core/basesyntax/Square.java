@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends Figure implements Area {
+public class Square extends Figure {
     private final int side;
 
     public Square(String color, int side) {
@@ -14,7 +14,7 @@ public class Square extends Figure implements Area {
     }
 
     @Override
-    public String toString() {
+    public String draw() {
         return "Figure: square, area: " + getArea() + " sq.units, side: " + side + " units, color: "
                 + color;
     }
