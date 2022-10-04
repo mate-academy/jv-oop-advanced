@@ -13,30 +13,30 @@ public class FigureSupplier {
     public static final int FIGURE_NUMBER = 6;
     private static final String DEFAULT_COLOR = "WHITE";
     private static final int DEFAULT_RADIUS = 10;
-    private ColorSupplier colorSupplier;
+    private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
 
-    public Figure getRandomCircle() {
+    private Figure getRandomCircle() {
         return new Circle(colorSupplier.getRandomColor(),
                 random.nextInt(50));
     }
 
-    public Figure getRandomSquare() {
+    private Figure getRandomSquare() {
         return new Square(colorSupplier.getRandomColor(),
                 random.nextInt(50));
     }
 
-    public Figure getRandomRectangle() {
+    private Figure getRandomRectangle() {
         return new Rectangle(colorSupplier.getRandomColor(),
                 random.nextInt(50), random.nextInt(50));
     }
 
-    public Figure getRandomRightTriangle() {
+    private Figure getRandomRightTriangle() {
         return new RightTriangle(colorSupplier.getRandomColor(),
                 random.nextInt(50), random.nextInt(50));
     }
 
-    public Figure getRandomIsoscelesTrapezoid() {
+    private Figure getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                 random.nextInt(50), random.nextInt(50), random.nextInt(50));
     }
@@ -47,7 +47,6 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int randomFigura = random.nextInt(FIGURE_NUMBER);
-        colorSupplier = new ColorSupplier();
         switch (randomFigura) {
             case 1:
                 return getRandomCircle();
