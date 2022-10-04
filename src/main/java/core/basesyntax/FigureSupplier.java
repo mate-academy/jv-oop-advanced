@@ -7,6 +7,7 @@ public class FigureSupplier {
     private static final int SIDE_MAX_VALUE = 100;
     private static final int DEFAULT_CIRCLE_RADIUS = 10;
     private static final String DEFAULT_CIRCLE_COLOR = "WHITE";
+    private static final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
@@ -47,6 +48,6 @@ public class FigureSupplier {
     }
 
     public int getRandomSide() {
-        return new Random().nextInt(SIDE_MAX_VALUE);
+        return random.nextInt(SIDE_MAX_VALUE);
     }
 }
