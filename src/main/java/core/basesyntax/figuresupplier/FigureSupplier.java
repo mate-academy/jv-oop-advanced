@@ -3,48 +3,62 @@ package core.basesyntax.figuresupplier;
 import core.basesyntax.Figure;
 import core.basesyntax.colorsupplier.ColorSupplier;
 import core.basesyntax.figures.Circle;
-import core.basesyntax.figures.IsoscelesTrapezoid;
+import core.basesyntax.figures.Square;
 import core.basesyntax.figures.Rectangle;
 import core.basesyntax.figures.RightTriangle;
-import core.basesyntax.figures.Square;
+import core.basesyntax.figures.IsoscelesTrapezoid;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final String COLOR = "WHITE";
-    public static final int RADIUS = 10;
-    private static final Random random = new Random();
-    private double firstLine;
-    private double secondLine;
-    private double thirdLine;
+    public static final int FIGURE_NUMBER = 6;
+    private static final String DEFAULT_COLOR = "WHITE";
+    private static final int DEFAULT_RADIUS = 10;
     private ColorSupplier colorSupplier;
+    private Random random = new Random();
+
+    public Figure getRandomCircle() {
+        return new Circle(colorSupplier.getRandomColor(),
+                random.nextInt(50));
+    }
+
+    public Figure getRandomSquare() {
+        return new Square(colorSupplier.getRandomColor(),
+                random.nextInt(50));
+    }
+
+    public Figure getRandomRectangle() {
+        return new Rectangle(colorSupplier.getRandomColor(),
+                random.nextInt(50), random.nextInt(50));
+    }
+
+    public Figure getRandomRightTriangle() {
+        return new RightTriangle(colorSupplier.getRandomColor(),
+                random.nextInt(50), random.nextInt(50));
+    }
+
+    public Figure getRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                random.nextInt(50), random.nextInt(50), random.nextInt(50));
+    }
 
     public Figure getDefaultFigure() {
-        return new Circle(COLOR, RADIUS);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
     public Figure getRandomFigure() {
-        firstLine = new Random().nextInt(50);
-        secondLine = new Random().nextInt(50);
-        thirdLine = new Random().nextInt(50);
-        int rundomFigura = random.nextInt(6);
+        int randomFigura = random.nextInt(FIGURE_NUMBER);
         colorSupplier = new ColorSupplier();
-
-        switch (rundomFigura) {
+        switch (randomFigura) {
             case 1:
-                return new Circle(colorSupplier.getRandomColor(),
-                        firstLine);
+                return getRandomCircle();
             case 2:
-                return new Square(colorSupplier.getRandomColor(),
-                        firstLine);
+                return getRandomSquare();
             case 3:
-                return new Rectangle(colorSupplier.getRandomColor(),
-                        firstLine, secondLine);
+                return getRandomRectangle();
             case 4:
-                return new RightTriangle(colorSupplier.getRandomColor(),
-                        firstLine, secondLine);
+                return getRandomRightTriangle();
             case 5:
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        firstLine, secondLine, thirdLine);
+                return getRandomIsoscelesTrapezoid();
             default:
                 return getDefaultFigure();
         }
