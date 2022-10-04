@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MaxLength = 100;
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
     public String getFigure() {
@@ -14,23 +14,23 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         switch (getFigure()) {
-            case "Circle" :
-                return new Circle(random.nextInt(MaxLength), colorSupplier.getRandomColor());
-            case "Square" :
-                return new Square(random.nextInt(MaxLength), colorSupplier.getRandomColor());
-            case "RightTriangle" :
-                return new RightTriangle(random.nextInt(MaxLength), random.nextInt(MaxLength),
-                        colorSupplier.getRandomColor());
-            case "IsoscelesTrapezoid" :
-                return new IsoscelesTrapezoid(random.nextInt(MaxLength), random.nextInt(MaxLength),
-                        random.nextInt(MaxLength), colorSupplier.getRandomColor());
+            case "CIRCLE" :
+                return new Circle(colorSupplier.getRandomColor(), random.nextInt(MaxLength));
+            case "SQUARE" :
+                return new Square(colorSupplier.getRandomColor(), random.nextInt(MaxLength));
+            case "RIGHT_TRIANGLE" :
+                return new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(MaxLength),
+                        random.nextInt(MaxLength));
+            case "ISOSCELES_TRAPEZOID" :
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(MaxLength),
+                        random.nextInt(MaxLength), random.nextInt(MaxLength));
             default :
-                return new Rectangle(random.nextInt(MaxLength), random.nextInt(MaxLength),
-                        colorSupplier.getRandomColor());
+                return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(MaxLength),
+                        random.nextInt(MaxLength));
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, "White");
+        return new Circle("WHITE", 10);
     }
 }

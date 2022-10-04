@@ -1,12 +1,12 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private String color = super.getColor();
     private final int radius;
 
-    public Circle(int radius, String color) {
-        this.radius = radius;
-        this.color = color;
+     Circle(String color, int radius) {
+         super(color);
+         this.radius = radius;
+
     }
 
     @Override
@@ -16,7 +16,7 @@ public class Circle extends Figure {
 
     @Override
     public String getInfo() {
-        return "Figure : Circle, Color : " + super.getColor()
+        return "Figure : Circle, Color : " + getColor()
                 + ", Radius : " + radius
                 + ", Area : " + getArea();
     }

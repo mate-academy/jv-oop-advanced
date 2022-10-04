@@ -4,13 +4,12 @@ public class IsoscelesTrapezoid extends Figure {
     private final int side1;
     private final int side2;
     private final int height;
-    private String color = super.getColor();
 
-    public IsoscelesTrapezoid(int side1, int side2, int height, String color) {
+    public IsoscelesTrapezoid(String color, int side1, int side2, int height) {
+        super(color);
         this.side1 = side1;
         this.side2 = side2;
         this.height = height;
-        this.color = color;
     }
 
     @Override
@@ -20,7 +19,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String getInfo() {
-        return "Figure : IsoscelesTrapezoid, Color : " + color
+        return "Figure : Isosceles Trapezoid, Color : " + getColor()
                 + ", Side1 : " + side1
                 + ", Side2 : " + side2
                 + ", Height : " + height

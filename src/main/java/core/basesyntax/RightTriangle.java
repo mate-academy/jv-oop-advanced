@@ -3,12 +3,11 @@ package core.basesyntax;
 public class RightTriangle extends Figure {
     private final int leg1;
     private final int leg2;
-    private String color = super.getColor();
 
-    public RightTriangle(int leg1, int leg2, String color) {
+    public RightTriangle(String color, int leg1, int leg2) {
+        super(color);
         this.leg1 = leg1;
         this.leg2 = leg2;
-        this.color = color;
     }
 
     @Override
@@ -18,7 +17,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public String getInfo() {
-        return "Figure : Right Triangle, Color : " + color
+        return "Figure : Right Triangle, Color : " + getColor()
                 + ", Leg1 : " + leg1
                 + ", Leg2 : " + leg2
                 + ", Area : " + getArea();
