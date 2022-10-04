@@ -3,30 +3,25 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final String[] FIGURES = {"Square", "RightTriangle", "Rectangle",
-            "IsoscelesTrapezoid","Circle"};
-    private static final String DEFAULT_COLOR = "White";
+    private static final Color DEFAULT_COLOR = Color
+            .valueOf("WHITE");
     private static final int DEFATUL_LENGTH = 10;
-    private ColorSupplier colorSupplier;
     private Random random = new Random();
-
-    FigureSupplier(Random random, ColorSupplier colorSupplier) {
-        this.colorSupplier = colorSupplier;
-    }
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        String figure = FIGURES[random.nextInt(FIGURES.length)];
+        FigureEnum figure = FigureEnum.values()[random.nextInt(FigureEnum.values().length)];
         switch (figure) {
-            case "Square": return new Square(random.nextDouble(), colorSupplier.getRandomColor());
-            case "RightTriangle":
+            case SQUARE: return new Square(random.nextDouble(), colorSupplier.getRandomColor());
+            case RIGHT_TRIANGLE:
                 return new RightTriangle(random.nextDouble(), random.nextDouble(),
                                          colorSupplier.getRandomColor());
-            case "IsoscelesTrapezoid":
+            case ISOSCELES_TRAPEZOID:
                 return new IsoscelesTrapezoid(random.nextDouble(), random.nextDouble(),
                                               random.nextDouble(), colorSupplier.getRandomColor());
-            case "Rectangle": return new Rectangle(random.nextDouble(), random.nextDouble(),
+            case RECTANGLE: return new Rectangle(random.nextDouble(), random.nextDouble(),
                                                    colorSupplier.getRandomColor());
-            case "Circle": return new Circle(random.nextDouble(), colorSupplier.getRandomColor());
+            case CIRCLE: return new Circle(random.nextDouble(), colorSupplier.getRandomColor());
             default: return getDefaultFigure();
         }
     }
