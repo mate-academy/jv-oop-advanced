@@ -1,3 +1,3 @@
-public interface Area {
+public interface Drawable {
     void drawFigure();
 }
