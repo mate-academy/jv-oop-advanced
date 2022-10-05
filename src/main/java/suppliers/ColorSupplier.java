@@ -9,4 +9,8 @@ public class ColorSupplier {
         return Color.values()[colorIndex].name();
     }
 
+    public String getDefaultColor() {
+        return Color.values()[5].name();
+    }
+
 }

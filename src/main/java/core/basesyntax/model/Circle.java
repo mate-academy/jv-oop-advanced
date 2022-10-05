@@ -3,6 +3,11 @@ package core.basesyntax.model;
 public class Circle extends Figure {
     private int radius;
 
+    public Circle(String color) {
+        super(color);
+        this.radius = 10;
+    }
+
     public Circle(String color, int radius) {
         super(color);
         this.radius = radius;

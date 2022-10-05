@@ -15,15 +15,17 @@ public class FigureSupplier {
         int figureIndex = new Random().nextInt(5);
         switch (figureIndex) {
             case 0:
-                return new Circle(colorSupplier.getRandomColor(), getRandomInt());
+                return new Circle(colorSupplier.getDefaultColor());
             case 1:
+                return new Circle(colorSupplier.getRandomColor(), getRandomInt());
+            case 2:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                         getRandomDouble(),
                         getRandomDouble());
-            case 2:
+            case 3:
                 return new Rectangle(colorSupplier.getRandomColor(), getRandomDouble(),
                         getRandomDouble());
-            case 3:
+            case 4:
                 return new RightTriangle(colorSupplier.getRandomColor(), getRandomInt(),
                         getRandomInt());
             default:
