@@ -12,11 +12,11 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         String randomColor = figureColor.getRandomColor();
-        int randomIndex = new Random().nextInt(4);
+        int randomIndex = new Random().nextInt(5);
         switch (randomIndex) {
-            case 0:
-                return new Circle(randomColor, getRandomDouble());
             case 1:
+                return new Circle(randomColor, getRandomDouble());
+            case 2:
                 return new Square(randomColor, getRandomDouble());
             case 3:
                 return new Rectangle(randomColor, getRandomDouble(), getRandomDouble());
