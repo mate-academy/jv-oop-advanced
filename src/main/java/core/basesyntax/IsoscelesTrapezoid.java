@@ -19,7 +19,9 @@ public class IsoscelesTrapezoid extends Figure implements Area, Drawable {
 
     @Override
     public void draw() {
-        System.out.println("Figure: IsoscelesTrapezoid, area: " + getArea() + " sq.units, baseOfaTrapezoid: "
-                + baseOfaTrapezoid + " units, sides: " + sides + " units, height: " + height + " units color: " + color);
+        System.out.println("Figure: IsoscelesTrapezoid, area: "
+                + getArea() + " sq.units, baseOfaTrapezoid: "
+                + baseOfaTrapezoid + " units, sides: " + sides
+                + " units, height: " + height + " units color: " + getColor());
     }
 }

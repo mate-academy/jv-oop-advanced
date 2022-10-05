@@ -15,6 +15,8 @@ public class Square extends Figure implements Area, Drawable {
 
     @Override
     public void draw() {
-        System.out.println("Figure: Square, area: " + getArea() + " sq.units, sideSquare: " + sideSquare + " units, color: " + color);
+        System.out.println("Figure: Square, area: " + getArea()
+                + " sq.units, sideSquare: " + sideSquare
+                + " units, color: " + getColor());
     }
 }

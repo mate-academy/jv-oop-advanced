@@ -17,7 +17,9 @@ public class Rectangle extends Figure implements Area, Drawable {
 
     @Override
     public void draw() {
-        System.out.println("Figure: Rectangle, area: " + getArea() + " sq.units, lengthRectangle: "
-                + lengthRectangle + " units, heightRectangle: " + heightRectangle + " units, color: " + color);
+        System.out.println("Figure: Rectangle, area: " + getArea()
+                + " sq.units, lengthRectangle: "
+                + lengthRectangle + " units, heightRectangle: "
+                + heightRectangle + " units, color: " + getColor());
     }
 }

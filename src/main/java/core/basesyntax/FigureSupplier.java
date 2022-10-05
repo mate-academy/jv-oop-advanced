@@ -8,7 +8,7 @@ public class FigureSupplier {
     private final Random randomNum = new Random();
 
     public Figure getRandomFigure() {
-        int randomFigureNumber = randomNum.nextInt(4);
+        int randomFigureNumber = randomNum.nextInt(5);
         switch (randomFigureNumber) {
             case 0:
                 return getRandomIsoscelesTrapezoid();
@@ -26,26 +26,35 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", 10);
+        return new Circle("WHITE", 10);
     }
 
     private Figure getRandomIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), randomNum.nextInt(MAX_NUM), randomNum.nextInt(MAX_NUM), randomNum.nextInt(MAX_NUM));
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                randomNum.nextInt(MAX_NUM),
+                randomNum.nextInt(MAX_NUM),
+                randomNum.nextInt(MAX_NUM));
     }
 
     public Figure getRandomRectangle() {
-        return new Rectangle(colorSupplier.getRandomColor(), randomNum.nextInt(MAX_NUM),randomNum.nextInt(MAX_NUM));
+        return new Rectangle(colorSupplier.getRandomColor(),
+                randomNum.nextInt(MAX_NUM),
+                randomNum.nextInt(MAX_NUM));
     }
 
     public Figure getRandomRightTriangle() {
-        return new RightTriangle(colorSupplier.getRandomColor(), randomNum.nextInt(MAX_NUM),randomNum.nextInt(MAX_NUM));
+        return new RightTriangle(colorSupplier.getRandomColor(),
+                randomNum.nextInt(MAX_NUM),
+                randomNum.nextInt(MAX_NUM));
     }
 
     public Figure getRandomSquare() {
-        return new Square(colorSupplier.getRandomColor(),randomNum.nextInt(MAX_NUM));
+        return new Square(colorSupplier.getRandomColor(),
+                randomNum.nextInt(MAX_NUM));
     }
 
     public Figure getRandomCircle() {
-        return new Circle(colorSupplier.getRandomColor(), randomNum.nextInt(MAX_NUM));
+        return new Circle(colorSupplier.getRandomColor(),
+                randomNum.nextInt(MAX_NUM));
     }
 }
