@@ -1,6 +1,6 @@
 package core.basesyntax.figures;
 
-public class Figure {
+public class Figure implements AreaSupplier {
     private String color;
 
     public String getColor() {
@@ -9,6 +9,11 @@ public class Figure {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    @Override
+    public double getArea() {
+        return 0;
     }
 
     public void draw() {

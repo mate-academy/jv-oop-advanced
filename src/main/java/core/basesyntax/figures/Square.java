@@ -1,6 +1,6 @@
 package core.basesyntax.figures;
 
-public class Square extends Figure implements AreaSupplier {
+public class Square extends Figure {
     private double side;
 
     public Square(double side, String color) {
@@ -28,5 +28,5 @@ public class Square extends Figure implements AreaSupplier {
     @Override
     public double getArea() {
         return side * side;
-    };
+    }
 }

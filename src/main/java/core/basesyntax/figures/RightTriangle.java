@@ -1,6 +1,6 @@
 package core.basesyntax.figures;
 
-public class RightTriangle extends Figure implements AreaSupplier {
+public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
@@ -38,7 +38,7 @@ public class RightTriangle extends Figure implements AreaSupplier {
 
     @Override
     public double getArea() {
-      return firstLeg * secondLeg;
-    };
+        return firstLeg * secondLeg;
+    }
 
 }

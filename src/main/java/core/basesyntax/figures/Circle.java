@@ -1,6 +1,6 @@
 package core.basesyntax.figures;
 
-public class Circle extends Figure implements AreaSupplier {
+public class Circle extends Figure {
     private double radius;
 
     public Circle(double radius, String color) {
@@ -28,5 +28,5 @@ public class Circle extends Figure implements AreaSupplier {
     @Override
     public double getArea() {
         return 3.14 * (radius * radius);
-    };
+    }
 }

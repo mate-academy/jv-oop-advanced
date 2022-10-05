@@ -1,6 +1,6 @@
 package core.basesyntax.figures;
 
-public class IsoscelesTrapezoid extends Figure implements AreaSupplier {
+public class IsoscelesTrapezoid extends Figure {
     private double leg;
     private double firstBase;
     private double secondBase;
@@ -50,5 +50,5 @@ public class IsoscelesTrapezoid extends Figure implements AreaSupplier {
     @Override
     public double getArea() {
         return (firstBase + secondBase) / 2 * leg;
-    };
+    }
 }
