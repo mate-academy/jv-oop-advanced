@@ -1,3 +1,3 @@
-public interface Draw {
+public interface SquareCalculator {
     double getArea();
 }
