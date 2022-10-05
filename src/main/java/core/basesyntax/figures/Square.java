@@ -1,10 +1,10 @@
 package core.basesyntax.figures;
 
-public class Square extends Figure {
+public class Square extends Figure implements AreaSupplier {
     private double side;
 
     public Square(double side, String color) {
-        this.color = color;
+        this.setColor(color);
         this.side = side;
     }
 
@@ -16,10 +16,17 @@ public class Square extends Figure {
         this.side = side;
     }
 
+    @Override
     public void draw() {
         System.out.print("\nType: square"
                 + "\nSide: " + side
-                + "\nColor: " + color
+                + "\nColor: " + getColor()
+                + "\n Area: " + getArea()
                 + "\n-----------");
     }
+
+    @Override
+    public double getArea() {
+        return side * side;
+    };
 }

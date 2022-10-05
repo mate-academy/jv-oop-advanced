@@ -1,11 +1,11 @@
 package core.basesyntax.figures;
 
-public class Rectangle extends Figure {
+public class Rectangle extends Figure implements AreaSupplier {
     private double firstSide;
     private double secondSide;
 
     public Rectangle(double firstSide, double secondSide, String color) {
-        this.color = color;
+        this.setColor(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
     }
@@ -26,11 +26,18 @@ public class Rectangle extends Figure {
         this.secondSide = secondSide;
     }
 
+    @Override
     public void draw() {
         System.out.print("\nType: rectangle"
                 + "\nFirst side: " + firstSide
                 + "\nSecond side: " + secondSide
-                + "\nColor: " + color
+                + "\n Area: " + getArea()
+                + "\nColor: " + getColor()
                 + "\n-----------");
     }
+
+    @Override
+    public double getArea() {
+        return firstSide * secondSide;
+    };
 }

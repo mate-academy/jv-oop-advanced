@@ -1,12 +1,12 @@
 package core.basesyntax.figures;
 
-public class IsoscelesTrapezoid extends Figure {
+public class IsoscelesTrapezoid extends Figure implements AreaSupplier {
     private double leg;
     private double firstBase;
     private double secondBase;
 
     public IsoscelesTrapezoid(double leg, double firstBase, double secondBase, String color) {
-        this.color = color;
+        this.setColor(color);
         this.leg = leg;
         this.firstBase = firstBase;
         this.secondBase = secondBase;
@@ -36,12 +36,19 @@ public class IsoscelesTrapezoid extends Figure {
         this.secondBase = secondBase;
     }
 
+    @Override
     public void draw() {
         System.out.print("\nType: isosceles trapezoid"
                 + "\nLeg: " + leg
                 + "\nFirst base: " + firstBase
                 + "\nSecond base: " + secondBase
-                + "\nColor: " + color
+                + "\n Area: " + getArea()
+                + "\nColor: " + getColor()
                 + "\n-----------");
     }
+
+    @Override
+    public double getArea() {
+        return (firstBase + secondBase) / 2 * leg;
+    };
 }

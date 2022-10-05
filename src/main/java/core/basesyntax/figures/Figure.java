@@ -1,7 +1,7 @@
 package core.basesyntax.figures;
 
-public class Figure implements Drawable {
-    protected String color;
+public class Figure {
+    private String color;
 
     public String getColor() {
         return color;
@@ -11,6 +11,6 @@ public class Figure implements Drawable {
         this.color = color;
     }
 
+    public void draw() {
+    }
 }
-
-
