@@ -4,6 +4,8 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_NUM = 7;
+    private static final String DEFAULT_COLOR = "WHITE";
+    private static final int DEFAULT_FIGURE = 10;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random randomNum = new Random();
 
@@ -26,7 +28,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("WHITE", 10);
+        return new Circle(DEFAULT_COLOR, DEFAULT_FIGURE);
     }
 
     private Figure getRandomIsoscelesTrapezoid() {
