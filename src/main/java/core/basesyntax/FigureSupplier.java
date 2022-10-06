@@ -10,7 +10,7 @@ public class FigureSupplier {
         int index = new Random().nextInt(FIGURE_COUNT);
         switch (index) {
             case 0:
-                return new Circle(colorSupplier.getRandomColor(), getRandomInt());
+                return getDefaultFigure();
 
             case 1:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomDouble(),
@@ -27,6 +27,9 @@ public class FigureSupplier {
             default:
                 return new Rectangle(colorSupplier.getRandomColor(), getRandomDouble(),getRandomDouble());
         }
+    }
+    public Figure getDefaultFigure(){
+        return new Circle(Color.WHITE.name(), 10);
     }
 
     private int getRandomInt() {
