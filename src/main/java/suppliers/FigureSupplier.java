@@ -11,8 +11,10 @@ import java.util.Random;
 public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
 
+    private final Random random = new Random();
+    
     public Figure getRandomFigure() {
-        int figureIndex = new Random().nextInt(5);
+        int figureIndex = random.nextInt(5);
         switch (figureIndex) {
             case 0:
                 return new Circle(colorSupplier.getDefaultColor());
@@ -34,10 +36,10 @@ public class FigureSupplier {
     }
 
     private int getRandomInt() {
-        return new Random().nextInt(100);
+        return random.nextInt(100);
     }
 
     private double getRandomDouble() {
-        return new Random().nextDouble();
+        return random.nextDouble();
     }
 }
