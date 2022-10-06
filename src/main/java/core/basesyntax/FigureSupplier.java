@@ -12,7 +12,7 @@ public class FigureSupplier {
 
         switch (value) {
             case 1:
-                return new Circle (colorSupplier.getRandomColor(), random.nextInt(rndInt));
+                return new Circle(colorSupplier.getRandomColor(), random.nextInt(rndInt));
             case 2:
                 return new Square(colorSupplier.getRandomColor(), random.nextInt(rndInt));
             case 3:
