@@ -11,32 +11,33 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
 
-        Figure[] allFigure = {getRectangle(), getRightTriangle(), getSquare(),
-                getIsoscelesTrapezoid(), getDefaultFigure()};
-        Figure figure = null;
-        for (int i = 0; i < allFigure.length; i++) {
-            int rnd = (int) Math.floor(Math.random() * allFigure.length);
-            return figure = allFigure[rnd];
+        int i = random.nextInt(5);
+        switch (i) {
+            case 1: return getDefaultFigure();
+            case 2: return getRandomRectangle();
+            case 3: return getRandomRightTriangle();
+            case 4: return getRandomIsoscelesTrapezoid();
+            default: return getRandomSquare();
         }
-        return figure;
+
     }
 
-    private Figure getSquare() {
+    private Figure getRandomSquare() {
         return new Square(colorSupplier.getRandomColor(),
                 random.nextInt(MAX_VALUE));
     }
 
-    private Figure getRectangle() {
+    private Figure getRandomRectangle() {
         return new Rectangle(colorSupplier.getRandomColor(),
                 random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
     }
 
-    private Figure getRightTriangle() {
+    private Figure getRandomRightTriangle() {
         return new RightTriangle(colorSupplier.getRandomColor(),
                 random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
     }
 
-    private Figure getIsoscelesTrapezoid() {
+    private Figure getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                 random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
     }
