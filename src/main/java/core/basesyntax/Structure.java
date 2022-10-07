@@ -4,13 +4,13 @@ public class Structure {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
 
-        Figure[] figures = new Figure[5];
-        figures[0] = figureSupplier.getDefaultFigure();
-        figures[1] = figureSupplier.getRandomFigure(2);
-        figures[2] = figureSupplier.getRandomFigure(3);
-        figures[3] = figureSupplier.getRandomFigure(4);
-        figures[4] = figureSupplier.getRandomFigure(5);
-
+        Figure[] figures = new Figure[4];
+        for (int i = 0; i < figures.length; i++) {
+            figures[i] = figureSupplier.getRandomFigure();
+            if (figures.length == figures.length / 2) {
+                figures[i] = figureSupplier.getDefaultFigure();
+            }
+        }
         for (Figure figure : figures) {
             figure.draw();
         }
