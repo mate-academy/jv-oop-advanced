@@ -12,6 +12,6 @@ public abstract class Figure implements FigureArea {
     }
 
     public String getInfo() {
-        return "";
+        return color;
     }
 }

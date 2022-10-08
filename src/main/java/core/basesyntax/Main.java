@@ -12,8 +12,8 @@ public class Main {
                     : figureSupplier.getDefaultFigure();
         }
 
-        for (Figure unknown : figures) {
-            System.out.println(unknown.getInfo());
+        for (Figure figure : figures) {
+            System.out.println(figure.getInfo());
         }
     }
 }

@@ -7,22 +7,23 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
-    public String getFigure() {
+    public Figures getFigure() {
         int index = random.nextInt(Figures.values().length);
-        return Figures.values()[index].name();
+        return Figures.values()[index];
     }
 
     public Figure getRandomFigure() {
         switch (getFigure()) {
-            case "CIRCLE" :
+            case CIRCLE :
                 return new Circle(colorSupplier.getRandomColor(), random.nextInt(MaxLength));
-            case "SQUARE" :
+            case SQUARE :
                 return new Square(colorSupplier.getRandomColor(), random.nextInt(MaxLength));
-            case "RIGHT_TRIANGLE" :
+            case RIGHT_TRIANGLE :
                 return new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(MaxLength),
                         random.nextInt(MaxLength));
-            case "ISOSCELES_TRAPEZOID" :
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(MaxLength),
+            case ISOSCELES_TRAPEZOID :
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        random.nextInt(MaxLength),
                         random.nextInt(MaxLength), random.nextInt(MaxLength));
             default :
                 return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(MaxLength),
