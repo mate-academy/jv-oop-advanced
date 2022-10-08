@@ -12,27 +12,52 @@ public class FigureSupplier {
         Figure figure;
         switch (index) {
             case 0:
-                return new Square(colorSupplier.getRandomColor(), random.nextDouble());
+                figure = getRandomCircle();
+                break;
             case 1:
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        random.nextDouble(),
-                        random.nextDouble(),
-                        random.nextDouble());
+                figure = getRandomIsoscelesTrapezoid();
+                break;
             case 2:
-                return new RightTriangle(colorSupplier.getRandomColor(),
-                        random.nextDouble(),
-                        random.nextDouble());
+                figure = getRandomRectangle();
+                break;
             case 3:
-                return new Circle(colorSupplier.getRandomColor(), random.nextDouble());
+                figure = getRandomRightTriangle();
+                break;
             case 4:
             default:
-                return new Rectangle(colorSupplier.getRandomColor(),
-                        random.nextDouble(),
-                        random.nextDouble());
+                figure = getRandomSquare();
         }
+        return figure;
     }
 
     public Figure getDefaultFigure() {
         return new Circle("white", 10);
+    }
+
+    private Figure getRandomCircle() {
+        return new Circle(colorSupplier.getRandomColor(), random.nextDouble());
+    }
+
+    private Figure getRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                random.nextDouble(),
+                random.nextDouble(),
+                random.nextDouble());
+    }
+
+    private Figure getRandomRectangle() {
+        return new Rectangle(colorSupplier.getRandomColor(),
+                random.nextDouble(),
+                random.nextDouble());
+    }
+
+    private Figure getRandomRightTriangle() {
+        return new RightTriangle(colorSupplier.getRandomColor(),
+                random.nextDouble(),
+                random.nextDouble());
+    }
+
+    private Figure getRandomSquare() {
+        return new Square(colorSupplier.getRandomColor(), random.nextDouble());
     }
 }
