@@ -3,44 +3,63 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int figureCount = 4;
-    public static final int limit = 100;
-    public static final int defoultRadius = 10;
-    public static final String defoultColor = "white";
+    private static final int FIGURECOUNT = 4;
+    private static final int LIMIT = 100;
+    private static final int DEFAULTRADIUS = 10;
+    private static final String DEFAULTCOLOR = "white";
+    private ColorSuppier colorSupplier = new ColorSuppier();
 
-    public int getRandomInt() {
-        return new Random().nextInt(limit);
+    private int getRandomInt() {
+        return new Random().nextInt(LIMIT);
     }
 
-    public double getRandomDouble() {
+    private double getRandomDouble() {
         return new Random().nextDouble();
     }
 
-    public Figure getDefoultFigure() {
-        return new Circle(defoultColor,defoultRadius);
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULTCOLOR,DEFAULTRADIUS);
+    }
+
+    public Figure getRandomCircle() {
+        return new Circle(colorSupplier.getRandomColor(),getRandomInt());
+    }
+
+    public Figure getRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                getRandomDouble(),
+                getRandomDouble(),
+                getRandomDouble());
+    }
+
+    public Figure getRandomSquare() {
+        return new Square(colorSupplier.getRandomColor(),getRandomInt());
+    }
+
+    public Figure getRandomRectangle() {
+        return new Rectangle(colorSupplier.getRandomColor(),getRandomDouble(),
+                getRandomDouble());
+    }
+
+    public Figure getRandomRightTriangle() {
+        return new RightTriangle(colorSupplier.getRandomColor(),getRandomInt(),
+                getRandomInt());
     }
 
     public Figure getRandomFigure() {
-        ColorSuppier colorSuppier = new ColorSuppier();
-        int figureIndex = new Random().nextInt(figureCount);
+        int figureIndex = new Random().nextInt(FIGURECOUNT);
         switch (figureIndex) {
             case 0:
-                return new Circle(colorSuppier.getRandomColor(),getRandomInt());
+                return getRandomCircle();
             case 1:
-                return new IsoscelesTrapezoid(colorSuppier.getRandomColor(),
-                        getRandomDouble(),
-                        getRandomDouble(),
-                        getRandomDouble());
+                return getRandomIsoscelesTrapezoid();
             case 2:
-                return new Square(colorSuppier.getRandomColor(),getRandomInt());
+                return getRandomSquare();
             case 3:
-                return new Rectangle(colorSuppier.getRandomColor(),getRandomDouble(),
-                        getRandomDouble());
+                return getRandomRectangle();
             case 4:
             default:
-                return new RightTriangle(colorSuppier.getRandomColor(),getRandomInt(),
-                        getRandomInt());
+                return getRandomRightTriangle();
         }
     }
-
 }
