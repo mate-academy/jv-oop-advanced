@@ -1,7 +1,11 @@
 package core.basesyntax.figures;
 
-public class Figure implements AreaSupplier {
+public abstract class Figure implements AreaSupplier {
     private String color;
+
+    public Figure(String color) {
+        this.color = color;
+    }
 
     public String getColor() {
         return color;
@@ -11,11 +15,5 @@ public class Figure implements AreaSupplier {
         this.color = color;
     }
 
-    @Override
-    public double getArea() {
-        return 0;
-    }
-
-    public void draw() {
-    }
+    public abstract void draw();
 }

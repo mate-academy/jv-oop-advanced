@@ -26,7 +26,7 @@ public class FigureSupplier {
             case ("SQUARE"):
                 return new Square(getRandomSize(), colorSupplier.getRandomColor());
             default:
-                return new Figure();
+                return new FigureSupplier().getDefaultFigure();
         }
     }
 
