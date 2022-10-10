@@ -5,7 +5,6 @@ public class Rectangle extends Figure {
     private int width;
 
     public Rectangle(int length, int width) {
-        setFigureName("rectangle");
         this.length = length;
         this.width = width;
     }
@@ -27,16 +26,16 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double getFigureArea() {
+    public double getArea() {
         return length * width;
     }
 
     @Override
-    public void getInfo() {
-        System.out.println("Figure: " + getFigureName()
-                + ", area: " + getFigureArea()
+    public void drawInfo() {
+        System.out.println("Figure: " + getClass().getSimpleName()
+                + ", area: " + getArea()
                 + " sq. units, length: " + getLength()
                 + " unit(s), width: " + getWidth()
-                + " unit(s), color: " + getFigureColor());
+                + " unit(s), color: " + getColor());
     }
 }
