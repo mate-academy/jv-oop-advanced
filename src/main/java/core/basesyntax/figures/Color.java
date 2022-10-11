@@ -1,6 +1,6 @@
 package core.basesyntax.figures;
 
-public enum Colors {
+public enum Color {
     RED,
     ORANGE,
     YELLOW,
