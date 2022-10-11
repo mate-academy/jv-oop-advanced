@@ -10,7 +10,7 @@ public class Rectangle extends Figure {
         this.height = height;
     }
 
-   public double getWidth() {
+    public double getWidth() {
         return width;
     }
 
