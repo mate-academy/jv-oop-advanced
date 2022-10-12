@@ -23,9 +23,6 @@ public class Circle extends Figure implements AreaCalculation {
 
     @Override
     public String printInfo() {
-       return super.printInfo()
-               + " radius: "
-               + radius
-               + " units";
+        return super.printInfo() + " radius: " + radius + " units";
     }
 }
