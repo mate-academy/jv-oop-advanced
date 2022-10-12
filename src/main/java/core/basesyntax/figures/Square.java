@@ -19,7 +19,7 @@ public class Square extends Figure implements AreaCalculation {
 
     @Override
     public String printInfo() {
-        return super.printInfo()
+        return super.printInfo() 
                 + " sides: "
                 + side
                 + " units";
