@@ -5,8 +5,8 @@ import core.basesyntax.Figure;
 
 public class Rectangle extends Figure implements AreaCalculation {
 
-    private int width;
-    private int height;
+    private final int width;
+    private final int height;
 
     public Rectangle(String color, String name, int width, int height) {
         super(color, name);

@@ -5,8 +5,8 @@ import core.basesyntax.Figure;
 
 public class RightTriangle extends Figure implements AreaCalculation {
 
-    private int firstLeg;
-    private int secondLeg;
+    private final int firstLeg;
+    private final int secondLeg;
 
     public RightTriangle(String color, String name, int firstLeg, int secondLeg) {
         super(color, name);

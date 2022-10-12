@@ -5,7 +5,7 @@ import core.basesyntax.Figure;
 
 public class Square extends Figure implements AreaCalculation {
 
-    private int side;
+    private final int side;
 
     public Square(String color, String name, int side) {
         super(color, name);

@@ -5,9 +5,9 @@ import core.basesyntax.Figure;
 
 public class IsoscelesTrapezoid extends Figure implements AreaCalculation {
 
-    private int base1;
-    private int base2;
-    private int height;
+    private final int base1;
+    private final int base2;
+    private final int height;
 
     public IsoscelesTrapezoid(String color, String name, int base1, int base2, int height) {
         super(color, name);

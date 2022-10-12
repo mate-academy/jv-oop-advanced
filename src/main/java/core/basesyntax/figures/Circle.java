@@ -5,7 +5,7 @@ import core.basesyntax.Figure;
 
 public class Circle extends Figure implements AreaCalculation {
 
-    private int radius;
+    private final int radius;
 
     public Circle(String color, String name, int radius) {
         super(color, name);
