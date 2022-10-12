@@ -1,9 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.AreaCalculation;
 import core.basesyntax.Figure;
 
-public class Circle extends Figure implements AreaCalculation {
+public class Circle extends Figure {
 
     private final int radius;
 

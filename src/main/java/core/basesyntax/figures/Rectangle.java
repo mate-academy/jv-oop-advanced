@@ -1,9 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.AreaCalculation;
 import core.basesyntax.Figure;
 
-public class Rectangle extends Figure implements AreaCalculation {
+public class Rectangle extends Figure {
 
     private final int width;
     private final int height;
