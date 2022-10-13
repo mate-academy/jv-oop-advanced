@@ -6,7 +6,7 @@ public class ColorSuppier {
     private Random random = new Random();
 
     public String getRandomColor() {
-        int colorIndex = random.nextInt(Colors.values().length - 1);
+        int colorIndex = random.nextInt(Colors.values().length);
         return Colors.values()[colorIndex].name();
     }
 }
