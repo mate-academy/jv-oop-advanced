@@ -1,27 +1,32 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private final double bottomSide;
-    private final double upperSide;
-    private final double height;
-
-    IsoscelesTrapezoid(String color, double bottomSide, double upperSide, double height) {
-        super(color);
-        this.bottomSide = bottomSide;
-        this.upperSide = upperSide;
-        this.height = height;
-    }
+    private double bottomSide;
+    private double upperSide;
+    private double height;
 
     public double getBottomSide() {
         return bottomSide;
+    }
+
+    public void setBottomSide(double bottomSide) {
+        this.bottomSide = bottomSide;
     }
 
     public double getUpperSide() {
         return upperSide;
     }
 
+    public void setUpperSide(double upperSide) {
+        this.upperSide = upperSide;
+    }
+
     public double getHeight() {
         return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
     }
 
     @Override
@@ -36,5 +41,10 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public double getArea() {
         return height * (bottomSide + upperSide) / 2;
+    }
+
+    @Override
+    public void draw() {
+
     }
 }
