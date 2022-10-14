@@ -21,20 +21,16 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "Figure: rectangle, area: " + getArea()
-                + " sq.units, side A: " + getSideA()
-                + " units, side B: " + getSideB()
-                + " units, color: " + getColor();
-    }
-
-    @Override
     public double getArea() {
         return sideA * sideB;
     }
 
     @Override
     public void draw() {
-
+        String message = "Figure: rectangle, area: " + getArea()
+                + " sq.units, side A: " + getSideA()
+                + " units, side B: " + getSideB()
+                + " units, color: " + getColor();
+        System.out.println(message);
     }
 }

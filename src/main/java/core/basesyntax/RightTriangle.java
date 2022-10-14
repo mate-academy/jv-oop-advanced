@@ -21,20 +21,16 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "Figure: right triangle, area: " + getArea()
-                + " sq.units, firstLeg: " + getFirstLeg()
-                + " units, secondLeg: " + getSecondLeg()
-                + " units, color: " + getColor();
-    }
-
-    @Override
     public double getArea() {
         return firstLeg * secondLeg / 2;
     }
 
     @Override
     public void draw() {
-
+        String message = "Figure: right triangle, area: " + getArea()
+                + " sq.units, firstLeg: " + getFirstLeg()
+                + " units, secondLeg: " + getSecondLeg()
+                + " units, color: " + getColor();
+        System.out.println(message);
     }
 }
