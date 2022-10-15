@@ -35,6 +35,6 @@ public class RightTriangle extends Figure {
     public void draw() {
         System.out.println("Figure: " + getClass().getSimpleName() + ", triangle: "
                 + getArea() + "sq. units, color: " + getColor() + ", base: " + getBase()
-            + ", height: " + getHeight());
+                + ", height: " + getHeight());
     }
 }
