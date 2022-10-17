@@ -4,9 +4,10 @@ import java.util.Random;
 
 public class Main {
     private static FigureSupplier figureSupplier = new FigureSupplier();
+    private static int randomFigure = new Random().nextInt(10);
 
     public static void main(String[] args) {
-        Figure[] figures = new Figure[new Random().nextInt(10)];
+        Figure[] figures = new Figure[randomFigure];
         for (int i = 0; i < figures.length; i++) {
             figures[i] = figureSupplier.getRandomFigure();
         }
@@ -15,5 +16,6 @@ public class Main {
             figure.draw();
         }
 
+        figureSupplier.getDefaultFigure().draw();
     }
 }
