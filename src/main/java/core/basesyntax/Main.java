@@ -1,8 +1,5 @@
 package core.basesyntax;
 
-import java.util.Arrays;
-import java.util.Random;
-
 public class Main {
     private static FigureSupplier figureSupplier = new FigureSupplier();
 
@@ -19,7 +16,5 @@ public class Main {
         for (Figure figure: figures) {
             figure.draw();
         }
-
-
     }
 }
