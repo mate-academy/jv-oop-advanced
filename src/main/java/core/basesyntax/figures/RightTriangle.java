@@ -30,6 +30,7 @@ public class RightTriangle extends Figure {
     public double calculateArea() {
         return base * height / 2;
     }
+
     @Override
     public void draw() {
         System.out.println("RightTriangle{"

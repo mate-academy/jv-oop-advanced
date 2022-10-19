@@ -20,6 +20,7 @@ public class Square extends Figure {
     public double calculateArea() {
         return side * side;
     }
+
     @Override
     public void draw() {
         System.out.println("Square{"

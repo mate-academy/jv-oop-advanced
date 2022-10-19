@@ -11,8 +11,8 @@ import java.util.Random;
 public class FigureSupplier {
 
     private Random random = new Random();
-    private final double CIRCLE_RADIUS  = 10;
-    private final String CIRCLE_WHITE = String.valueOf(Color.WHITE);
+    private static final double CIRCLE_RADIUS = 10;
+    private static final String CIRCLE_WHITE = String.valueOf(Color.WHITE);
 
     public Figure getRandomFigure() {
         int indexOfFigure = random.nextInt(4);
