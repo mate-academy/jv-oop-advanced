@@ -13,8 +13,9 @@ public class Program {
             figures[i++] = figureSupplier.getRandomFigure();
             figures[i++] = figureSupplier.getDefaultFigure();
         }
-        for (Figure figure : figures) {
+        for (Figure figure: figures) {
             System.out.println(figure.toString());
         }
     }
 }
+
