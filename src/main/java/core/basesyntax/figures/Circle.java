@@ -24,10 +24,10 @@ public class Circle extends Figure {
     @Override
     public String toString() {
         return "Circle{" +
-                "radius=" + getRadius() +
-                ", color='" + getColor() +
-                ", area='" + calculate() +
-                '}';
+                "radius=" + getRadius()
+                + ", color='" + getColor()
+                + ", area='" + calculate()
+                + '}';
     }
 
     @Override

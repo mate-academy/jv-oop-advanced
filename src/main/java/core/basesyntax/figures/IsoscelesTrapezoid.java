@@ -1,8 +1,5 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.behavior.CalculateArea;
-import core.basesyntax.behavior.Drawable;
-
 public class IsoscelesTrapezoid extends Figure {
     private double height;
     private double bottomBase;
@@ -47,12 +44,12 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public String toString() {
         return "IsoscelesTrapezoid{" +
-                "height=" + getHeight() +
-                ", bottomBase=" + getBottomBase() +
-                ", topBase=" + getTopBase() +
-                ", color='" + getColor() +
-                ", area='" + calculate() +
-                '}';
+                "height=" + getHeight()
+                + ", bottomBase=" + getBottomBase()
+                + ", topBase=" + getTopBase()
+                + ", color='" + getColor()
+                + ", area='" + calculate()
+                + '}';
     }
 
     @Override

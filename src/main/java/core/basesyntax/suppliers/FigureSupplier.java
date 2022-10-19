@@ -24,7 +24,6 @@ public class FigureSupplier {
             default:
                 return new Square(new ColorSupplier().getRandomColor(), getRandomInt());
         }
-
     }
 
     public int getRandomInt() {

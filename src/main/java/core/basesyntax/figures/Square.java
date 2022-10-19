@@ -1,8 +1,5 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.behavior.CalculateArea;
-import core.basesyntax.behavior.Drawable;
-
 public class Square extends Figure {
     private int side;
 
@@ -26,11 +23,11 @@ public class Square extends Figure {
 
     @Override
     public String toString() {
-        return "Square{" +
-                "side=" + getSide() +
-                ", color='" + getColor() +
-                ", area='" + calculate() +
-                '}';
+        return "Square{"
+                + "side=" + getSide()
+                + ", color='" + getColor()
+                + ", area='" + calculate()
+                + '}';
     }
 
     @Override
