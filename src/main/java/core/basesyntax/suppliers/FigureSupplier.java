@@ -3,6 +3,7 @@ package core.basesyntax.suppliers;
 import core.basesyntax.figures.*;
 
 import java.util.Random;
+
 public class FigureSupplier {
 
     public Figure getRandomFigure() {

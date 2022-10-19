@@ -35,7 +35,7 @@ public class RightTriangle extends Figure {
     public String toString() {
         return "RightTriangle{"
                 + "base=" + getBase()
-                +  ", height=" + getHeight()
+                + ", height=" + getHeight()
                 + ", color='" + getColor()
                 + ", area='" + calculate()
                 + '}';
