@@ -1,7 +1,7 @@
 package core.basesyntax;
 
-public class Circle extends Figure {
-    public Circle(String color) {
-        super(color);
+public class Circle extends _1SideFigure {
+    public Circle(String color, int a) {
+        super(color, a);
     }
 }

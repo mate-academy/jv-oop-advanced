@@ -1,7 +1,9 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    public Square(String color) {
+    private final int a;
+    public Square(String color, int a) {
         super(color);
+        this.a = a;
     }
 }
