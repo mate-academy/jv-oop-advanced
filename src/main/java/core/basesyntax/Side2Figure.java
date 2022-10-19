@@ -9,6 +9,7 @@ public abstract class Side2Figure extends Figure {
         sideA = a;
         sideB = b;
     }
+
     @Override
     public abstract double getSquare();
 }

@@ -7,6 +7,7 @@ public abstract class Side1Figure extends Figure {
         super(color);
         sideA = a;
     }
+
     @Override
     public abstract double getSquare();
 }

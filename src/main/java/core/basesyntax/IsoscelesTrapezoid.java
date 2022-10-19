@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Side2Figure implements Squarable {
+public class IsoscelesTrapezoid extends Side2Figure {
     private final int height;
 
     public IsoscelesTrapezoid(String color, int a, int b, int height) {

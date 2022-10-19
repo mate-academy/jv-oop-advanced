@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends Side1Figure implements Squarable {
+public class Square extends Side1Figure {
     public Square(String color, int a) {
         super(color, a);
     }

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-abstract class Figure implements Squarable{
+abstract class Figure implements Squarable {
     protected final String color;
 
     public Figure(String color) {
