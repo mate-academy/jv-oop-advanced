@@ -27,7 +27,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double calculate() {
+    public double calculateArea() {
         return base * height / 2;
     }
 
@@ -37,7 +37,7 @@ public class RightTriangle extends Figure {
                 + "base=" + getBase()
                 + ", height=" + getHeight()
                 + ", color='" + getColor()
-                + ", area='" + calculate()
+                + ", area='" + calculateArea()
                 + '}';
     }
 

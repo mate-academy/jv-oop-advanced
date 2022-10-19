@@ -17,7 +17,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double calculate() {
+    public double calculateArea() {
         return Math.PI * radius * radius;
     }
 
@@ -26,7 +26,7 @@ public class Circle extends Figure {
         return "Circle{"
                 + "radius=" + getRadius()
                 + ", color='" + getColor()
-                + ", area='" + calculate()
+                + ", area='" + calculateArea()
                 + '}';
     }
 

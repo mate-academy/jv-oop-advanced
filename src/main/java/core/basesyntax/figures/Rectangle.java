@@ -27,7 +27,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double calculate() {
+    public double calculateArea() {
         return width * height;
     }
 
@@ -37,7 +37,7 @@ public class Rectangle extends Figure {
                 + "width=" + getWidth()
                 + ", height=" + getHeight()
                 + ", color='" + getColor()
-                + ", area='" + calculate()
+                + ", area='" + calculateArea()
                 + '}';
     }
 

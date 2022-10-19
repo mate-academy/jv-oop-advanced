@@ -17,7 +17,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public double calculate() {
+    public double calculateArea() {
         return side * side;
     }
 
@@ -26,7 +26,7 @@ public class Square extends Figure {
         return "Square{"
                 + "side=" + getSide()
                 + ", color='" + getColor()
-                + ", area='" + calculate()
+                + ", area='" + calculateArea()
                 + '}';
     }
 
