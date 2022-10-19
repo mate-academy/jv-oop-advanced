@@ -1,20 +1,24 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends _2SideFigure implements Squarable {
-    private final int d;
+public class IsoscelesTrapezoid extends Side2Figure implements Squarable {
+    private final int height;
 
-    public IsoscelesTrapezoid(String color, int a, int b, int d) {
+    public IsoscelesTrapezoid(String color, int a, int b, int height) {
         super(color, a, b);
-        this.d = d;
+        this.height = height;
     }
 
     @Override
     public double getSquare() {
-        return (a + b) * d / 2.;
+        return (sideA + sideB) * height / 2.;
     }
 
     @Override
     public String toString() {
-        return "trapezoid, area: " + getSquare() + " sq.units, downbase: " + a + " units, upbase: " + b + " units, height: " + d + ", color: " + color.toLowerCase();
+        return "trapezoid, area: " + getSquare()
+                + " sq.units, downbase: " + sideA
+                + " units, upbase: " + sideB
+                + " units, height: " + height
+                + ", color: " + color.toLowerCase();
     }
 }

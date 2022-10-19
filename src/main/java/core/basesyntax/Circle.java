@@ -1,17 +1,19 @@
 package core.basesyntax;
 
-public class Circle extends _1SideFigure implements Squarable {
+public class Circle extends Side1Figure implements Squarable {
     public Circle(String color, int a) {
         super(color, a);
     }
 
     @Override
     public double getSquare() {
-        return (int) Math.PI * Math.pow(a, 2);
+        return (int) Math.PI * Math.pow(sideA, 2);
     }
 
     @Override
     public String toString() {
-        return "circle, area: " + getSquare() + " sq.units, radius: " + a + " units, color: " + color.toLowerCase();
+        return "circle, area: " + getSquare()
+                + " sq.units, radius: " + sideA
+                + " units, color: " + color.toLowerCase();
     }
 }
