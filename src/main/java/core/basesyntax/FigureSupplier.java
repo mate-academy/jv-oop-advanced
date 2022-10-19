@@ -15,8 +15,7 @@ public class FigureSupplier {
             case 2 -> new Circle(colorSupplier.getRandomColor(), random.nextInt(LENGTH));
             case 3 -> new Rectangle(colorSupplier.getRandomColor(), random.nextInt(LENGTH), random.nextInt(LENGTH));
             case 4 -> new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(LENGTH), random.nextInt(LENGTH));
-            case 5 ->
-                    new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(100), random.nextInt(LENGTH), random.nextInt(LENGTH));
+            case 5 -> new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(100), random.nextInt(LENGTH), random.nextInt(LENGTH));
             default -> null;
         };
     }
