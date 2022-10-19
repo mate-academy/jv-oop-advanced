@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Side2Figure extends Figure {
+public abstract class Side2Figure extends Figure {
     protected final int sideA;
     protected final int sideB;
 
@@ -9,4 +9,6 @@ public class Side2Figure extends Figure {
         sideA = a;
         sideB = b;
     }
+    @Override
+    public abstract double getSquare();
 }
