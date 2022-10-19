@@ -3,7 +3,6 @@ package core.basesyntax.suppliers;
 import core.basesyntax.figures.*;
 
 import java.util.Random;
-
 public class FigureSupplier {
 
     public Figure getRandomFigure() {
@@ -17,9 +16,11 @@ public class FigureSupplier {
                         getRandomDouble(),
                         getRandomDouble());
             case 2:
-                return new Rectangle(new ColorSupplier().getRandomColor(), getRandomInt(), getRandomInt());
+                return new Rectangle(new ColorSupplier().getRandomColor(),
+                        getRandomInt(), getRandomInt());
             case 3:
-                return new RightTriangle(new ColorSupplier().getRandomColor(), getRandomDouble(), getRandomDouble());
+                return new RightTriangle(new ColorSupplier().getRandomColor(),
+                        getRandomDouble(), getRandomDouble());
             case 4:
             default:
                 return new Square(new ColorSupplier().getRandomColor(), getRandomInt());

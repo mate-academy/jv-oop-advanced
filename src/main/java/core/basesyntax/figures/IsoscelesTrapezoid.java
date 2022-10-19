@@ -43,8 +43,8 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String toString() {
-        return "IsoscelesTrapezoid{" +
-                "height=" + getHeight()
+        return "IsoscelesTrapezoid{"
+                + "height=" + getHeight()
                 + ", bottomBase=" + getBottomBase()
                 + ", topBase=" + getTopBase()
                 + ", color='" + getColor()

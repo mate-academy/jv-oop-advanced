@@ -33,12 +33,12 @@ public class RightTriangle extends Figure {
 
     @Override
     public String toString() {
-        return "RightTriangle{" +
-                "base=" + getBase() +
-                ", height=" + getHeight() +
-                ", color='" + getColor() +
-                ", area='" + calculate() +
-                '}';
+        return "RightTriangle{"
+                + "base=" + getBase()
+                +  ", height=" + getHeight()
+                + ", color='" + getColor()
+                + ", area='" + calculate()
+                + '}';
     }
 
     @Override

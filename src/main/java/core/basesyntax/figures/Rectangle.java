@@ -33,8 +33,8 @@ public class Rectangle extends Figure {
 
     @Override
     public String toString() {
-        return "Rectangle{" +
-                "width=" + getWidth()
+        return "Rectangle{"
+                + "width=" + getWidth()
                 + ", height=" + getHeight()
                 + ", color='" + getColor()
                 + ", area='" + calculate()
