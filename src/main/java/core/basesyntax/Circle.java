@@ -9,4 +9,9 @@ public class Circle extends _1SideFigure implements Squarable{
     public double getSquare() {
         return (int)Math.PI * Math.pow(a, 2);
     }
+
+    @Override
+    public String toString() {
+        return "circle, area: " + getSquare() + " sq.units, radius: " + a + " units, color: " + color.toLowerCase();
+    }
 }

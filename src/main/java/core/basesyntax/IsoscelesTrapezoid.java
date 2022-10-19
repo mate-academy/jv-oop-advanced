@@ -11,4 +11,9 @@ public class IsoscelesTrapezoid extends _2SideFigure implements Squarable{
     public double getSquare() {
         return (a + b) * d / 2.;
     }
+
+    @Override
+    public String toString() {
+        return "trapezoid, area: " + getSquare() + " sq.units, downbase: " + a + " units, upbase: " + b + " units, height: " + d + ", color: " + color.toLowerCase();
+    }
 }
