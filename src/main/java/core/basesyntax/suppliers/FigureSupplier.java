@@ -10,8 +10,12 @@ import java.util.Random;
 
 public class FigureSupplier {
 
+    private Random random = new Random();
+    private final double CIRCLE_RADIUS  = 10;
+    private final String CIRCLE_WHITE = String.valueOf(Color.WHITE);
+
     public Figure getRandomFigure() {
-        int indexOfFigure = new Random().nextInt(4);
+        int indexOfFigure = random.nextInt(4);
         switch (indexOfFigure) {
             case 0:
                 return new Circle(new ColorSupplier().getRandomColor(), getRandomDouble());
@@ -32,16 +36,15 @@ public class FigureSupplier {
         }
     }
 
-    public int getRandomInt() {
-        return new Random().nextInt(100);
+    private int getRandomInt() {
+        return random.nextInt(100);
     }
 
-    public double getRandomDouble() {
-        return new Random().nextDouble();
+    private double getRandomDouble() {
+        return random.nextDouble();
     }
 
     public Figure getDefaultFigure() {
-        String white = String.valueOf(Color.WHITE);
-        return new Circle(white, 10.0);
+        return new Circle(CIRCLE_WHITE, CIRCLE_RADIUS);
     }
 }

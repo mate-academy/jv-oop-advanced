@@ -32,17 +32,12 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "Rectangle{"
-                + "width=" + getWidth()
-                + ", height=" + getHeight()
+    public void draw() {
+        System.out.println("Rectangle{"
+                + "width=" + width
+                + ", height=" + height
                 + ", color='" + getColor()
                 + ", area='" + calculateArea()
-                + '}';
-    }
-
-    @Override
-    public void draw() {
-        System.out.println(toString());
+                + '}');
     }
 }

@@ -42,18 +42,13 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "IsoscelesTrapezoid{"
-                + "height=" + getHeight()
-                + ", bottomBase=" + getBottomBase()
-                + ", topBase=" + getTopBase()
+    public void draw() {
+        System.out.println("IsoscelesTrapezoid{"
+                + "height=" + height
+                + ", bottomBase=" + bottomBase
+                + ", topBase=" + topBase
                 + ", color='" + getColor()
                 + ", area='" + calculateArea()
-                + '}';
-    }
-
-    @Override
-    public void draw() {
-        System.out.println(toString());
+                + '}');
     }
 }

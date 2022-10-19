@@ -30,19 +30,13 @@ public class RightTriangle extends Figure {
     public double calculateArea() {
         return base * height / 2;
     }
-
     @Override
-    public String toString() {
-        return "RightTriangle{"
-                + "base=" + getBase()
+    public void draw() {
+        System.out.println("RightTriangle{"
+                + "base=" + base
                 + ", height=" + getHeight()
                 + ", color='" + getColor()
                 + ", area='" + calculateArea()
-                + '}';
-    }
-
-    @Override
-    public void draw() {
-        System.out.println(toString());
+                + '}');
     }
 }

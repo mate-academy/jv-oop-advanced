@@ -20,18 +20,12 @@ public class Square extends Figure {
     public double calculateArea() {
         return side * side;
     }
-
-    @Override
-    public String toString() {
-        return "Square{"
-                + "side=" + getSide()
-                + ", color='" + getColor()
-                + ", area='" + calculateArea()
-                + '}';
-    }
-
     @Override
     public void draw() {
-        System.out.println(toString());
+        System.out.println("Square{"
+                + "side=" + side
+                + ", color='" + getColor()
+                + ", area='" + calculateArea()
+                + '}');
     }
 }
