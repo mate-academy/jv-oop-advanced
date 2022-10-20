@@ -7,9 +7,4 @@ public abstract class Figure implements Squarable, Drawable {
         this.color = color;
     }
 
-    public abstract double getSquare();
-
-    public void drawFigure() {
-        System.out.println(this.toString());
-    }
 }
