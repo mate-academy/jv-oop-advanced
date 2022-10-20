@@ -14,7 +14,7 @@ public class Program {
             figures[i++] = figureSupplier.getDefaultFigure();
         }
         for (Figure figure: figures) {
-            figure.DrawFigure();
+            figure.drawFigure();
         }
     }
 }
