@@ -17,22 +17,42 @@ public class FigureSupplier {
         int indexOfFigure = random.nextInt(4);
         switch (indexOfFigure) {
             case 0:
-                return new Circle(new ColorSupplier().getRandomColor(), getRandomDouble());
+                return getCircle();
             case 1:
-                return new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(),
-                        getRandomDouble(),
-                        getRandomDouble(),
-                        getRandomDouble());
+                return getIsoscelesTrapezoid();
             case 2:
-                return new Rectangle(new ColorSupplier().getRandomColor(),
-                        getRandomInt(), getRandomInt());
+                return getRectangle();
             case 3:
-                return new RightTriangle(new ColorSupplier().getRandomColor(),
-                        getRandomDouble(), getRandomDouble());
+                return getRightTriangle();
             case 4:
             default:
-                return new Square(new ColorSupplier().getRandomColor(), getRandomInt());
+                return getSquare();
         }
+    }
+
+    private Square getSquare() {
+        return new Square(new ColorSupplier().getRandomColor(), getRandomInt());
+    }
+
+    private RightTriangle getRightTriangle() {
+        return new RightTriangle(new ColorSupplier().getRandomColor(),
+                getRandomDouble(), getRandomDouble());
+    }
+
+    private Circle getCircle() {
+        return new Circle(new ColorSupplier().getRandomColor(), getRandomDouble());
+    }
+
+    private Rectangle getRectangle() {
+        return new Rectangle(new ColorSupplier().getRandomColor(),
+                getRandomInt(), getRandomInt());
+    }
+
+    private IsoscelesTrapezoid getIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(),
+                getRandomDouble(),
+                getRandomDouble(),
+                getRandomDouble());
     }
 
     private int getRandomInt() {
