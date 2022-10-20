@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-enum Color {
+public enum Color {
     TRANSPARENT,
     ALICE,
     ANTIQUE,
