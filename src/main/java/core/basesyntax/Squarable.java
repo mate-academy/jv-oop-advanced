@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-interface Squarable {
+public interface Squarable {
     double getSquare();
 }

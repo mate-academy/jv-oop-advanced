@@ -1,8 +1,12 @@
 package core.basesyntax;
 
-public class RightTriangle extends Side2Figure {
+public class RightTriangle extends Figure {
+    private final int sideA;
+    private final int sideB;
     public RightTriangle(String color, int a, int b) {
-        super(color, a, b);
+        super(color);
+        sideA = a;
+        sideB = b;
     }
 
     @Override

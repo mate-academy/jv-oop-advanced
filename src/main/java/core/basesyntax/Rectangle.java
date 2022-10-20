@@ -1,8 +1,13 @@
 package core.basesyntax;
 
-public class Rectangle extends Side2Figure {
+public class Rectangle extends Figure {
+    private final int sideA;
+    private final int sideB;
+
     public Rectangle(String color, int a, int b) {
-        super(color, a, b);
+        super(color);
+        sideA = a;
+        sideB = b;
     }
 
     @Override
