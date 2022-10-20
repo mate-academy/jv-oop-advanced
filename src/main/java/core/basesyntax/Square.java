@@ -5,17 +5,16 @@ public class Square extends Figure {
 
     public Square(String color, int size) {
         super(color);
-        side = a;
+        side = size;
     }
 
     @Override
-    public double getSquare() {
+    public double getArea() {
         return Math.pow(side, 2);
     }
 
-    @Override
     public String toString() {
-        return "square, area: " + getSquare()
+        return "square, area: " + getArea()
                 + " sq.units, side: " + side
                 + " units, color: " + color.toLowerCase();
     }

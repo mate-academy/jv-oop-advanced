@@ -11,13 +11,12 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double getSquare() {
+    public double getArea() {
         return sideA * sideB / 2.;
     }
 
-    @Override
     public String toString() {
-        return "triangle, area: " + getSquare()
+        return "triangle, area: " + getArea()
                 + " sq.units, firstLeg: " + sideA
                 + " units, secondLeg: " + sideB
                 + " units, color: " + color.toLowerCase();

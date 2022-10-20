@@ -5,17 +5,16 @@ public class Circle extends Figure {
 
     public Circle(String color, int radius) {
         super(color);
-        radius = a;
+        this.radius = radius;
     }
 
     @Override
-    public double getSquare() {
+    public double getArea() {
         return (int) Math.PI * Math.pow(radius, 2);
     }
 
-    @Override
     public String toString() {
-        return "circle, area: " + getSquare()
+        return "circle, area: " + getArea()
                 + " sq.units, radius: " + radius
                 + " units, color: " + color.toLowerCase();
     }

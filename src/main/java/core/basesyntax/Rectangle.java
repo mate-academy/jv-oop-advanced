@@ -11,13 +11,12 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double getSquare() {
+    public double getArea() {
         return sideA * sideB;
     }
 
-    @Override
     public String toString() {
-        return "rectangle, area: " + getSquare()
+        return "rectangle, area: " + getArea()
                 + " sq.units, firstLeg: " + sideA
                 + " units, secondLeg: " + sideB
                 + " units, color: " + color.toLowerCase();

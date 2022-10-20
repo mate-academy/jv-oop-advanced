@@ -13,13 +13,12 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double getSquare() {
+    public double getArea() {
         return (sideA + sideB) * height / 2.;
     }
 
-    @Override
     public String toString() {
-        return "trapezoid, area: " + getSquare()
+        return "trapezoid, area: " + getArea()
                 + " sq.units, downbase: " + sideA
                 + " units, upbase: " + sideB
                 + " units, height: " + height
