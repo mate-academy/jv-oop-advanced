@@ -7,10 +7,14 @@ public class IsoscelesTrapezoid extends Figure {
     private final int secondBase;
     private final int height;
 
-    public IsoscelesTrapezoid(String color, String name, int base1, int base2, int height) {
+    public IsoscelesTrapezoid(String color,
+                              String name,
+                              int firstBase,
+                              int secondBase,
+                              int height) {
         super(color, name);
-        this.firstBase = base1;
-        this.secondBase = base2;
+        this.firstBase = firstBase;
+        this.secondBase = secondBase;
         this.height = height;
     }
 
