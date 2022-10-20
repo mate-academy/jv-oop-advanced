@@ -12,8 +12,9 @@ public class Main {
         for (int i = 0; i < figures.length; i++) {
             if (i >= 2) {
                 figures[i] = figureSupplier.getDefaultFigure();
+            } else {
+                figures[i] = figureSupplier.getRandomFigure();
             }
-            figures[i] = figureSupplier.getRandomFigure();
         }
 
         Arrays.stream(figures).forEach(figure -> System.out.println(figure.printInfo()));

@@ -1,7 +1,6 @@
 package core.basesyntax;
 
-public class Figure implements AreaCalculation {
-
+public abstract class Figure implements AreaCalculator {
     private String color;
     private String name;
 

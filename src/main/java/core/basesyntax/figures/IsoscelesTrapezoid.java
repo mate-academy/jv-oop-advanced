@@ -3,15 +3,14 @@ package core.basesyntax.figures;
 import core.basesyntax.Figure;
 
 public class IsoscelesTrapezoid extends Figure {
-
-    private final int base1;
-    private final int base2;
+    private final int firstBase;
+    private final int secondBase;
     private final int height;
 
-    public IsoscelesTrapezoid(String color, String name, int base1, int base2, int height) {
+    public IsoscelesTrapezoid(String color, String name, int firstBase, int secondBase, int height) {
         super(color, name);
-        this.base1 = base1;
-        this.base2 = base2;
+        this.firstBase = firstBase;
+        this.secondBase = secondBase;
         this.height = height;
     }
 
@@ -19,10 +18,10 @@ public class IsoscelesTrapezoid extends Figure {
     public String printInfo() {
         return super.printInfo()
                 + " base1: "
-                + base1
+                + firstBase
                 + " units"
                 + " base2: "
-                + base2
+                + secondBase
                 + " units"
                 + " height: "
                 + height
@@ -31,6 +30,6 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double getArea() {
-        return 0.5 * (base1 + base2) * height;
+        return 0.5 * (firstBase + secondBase) * height;
     }
 }
