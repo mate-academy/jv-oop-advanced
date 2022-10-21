@@ -16,8 +16,8 @@ public class Square extends Figure {
     }
 
     @Override
-    public String printInfo() {
-        return super.printInfo()
+    public String getInfo() {
+        return super.getInfo()
                 + " sides: "
                 + side
                 + " units";

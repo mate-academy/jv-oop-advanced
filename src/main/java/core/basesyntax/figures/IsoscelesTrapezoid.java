@@ -19,8 +19,8 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String printInfo() {
-        return super.printInfo()
+    public String getInfo() {
+        return super.getInfo()
                 + " base1: "
                 + firstBase
                 + " units"

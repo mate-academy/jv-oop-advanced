@@ -10,17 +10,13 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
-    public Circle(int radius) {
-        this.radius = radius;
-    }
-
     @Override
     public double getArea() {
         return Math.PI * radius * radius;
     }
 
     @Override
-    public String printInfo() {
-        return super.printInfo() + " radius: " + radius + " units";
+    public String getInfo() {
+        return super.getInfo() + " radius: " + radius + " units";
     }
 }

@@ -13,8 +13,8 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String printInfo() {
-        return super.printInfo()
+    public String getInfo() {
+        return super.getInfo()
                 + " firstLeg: "
                 + firstLeg
                 + " units"

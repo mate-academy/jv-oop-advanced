@@ -12,7 +12,7 @@ public abstract class Figure implements AreaCalculator {
         this.name = name;
     }
 
-    public String printInfo() {
+    public String getInfo() {
         return "Figure: "
                 + name
                 + " area: "

@@ -18,8 +18,8 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String printInfo() {
-        return super.printInfo()
+    public String getInfo() {
+        return super.getInfo()
                 + " width: "
                 + width
                 + " units"
