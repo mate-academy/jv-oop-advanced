@@ -5,33 +5,33 @@ import core.basesyntax.figures.IsoscelesTrapezoid;
 import core.basesyntax.figures.Rectangle;
 import core.basesyntax.figures.RightTriangle;
 import core.basesyntax.figures.Square;
-
 import java.util.Arrays;
 import java.util.Random;
 
 public class FigureSupplier {
     private final ColorSupplier supplier = new ColorSupplier();
     private final Random random = new Random();
-    private static final int BOUND_NUMBER = 25;
-    private static final String DEFAULT_COLOR = Color.WHITE.name();
-    private static final int DEFAULT_RADIUS = 10;
-    private static final int FIGURE_NUMBER = 5;
+    private final static int boundNumber = 25;
+    private final String DEFAULT_COLOR = Color.WHITE.name();
+    private final static int DEFAULT_RADIUS = 10;
+    private final static int FIGURE_NUMBER = 5;
 
     public Figure getRandomFigure() {
         int number = random.nextInt(FIGURE_NUMBER);
         switch (number) {
             case 0:
-                return getRandomSquare(supplier, BOUND_NUMBER);
+                return getRandomSquare(supplier, boundNumber);
             case 1:
-                return getRandomCircle(supplier, BOUND_NUMBER);
+                return getRandomCircle(supplier, boundNumber);
             case 2:
-                return getRandomRectangle(supplier, BOUND_NUMBER);
+                return getRandomRectangle(supplier, boundNumber);
             case 3:
-                return getRandomIsoscelesTrapezoid(supplier, BOUND_NUMBER);
+                return getRandomIsoscelesTrapezoid(supplier, boundNumber);
             case 4:
-                return getRandomRightTriangle(supplier, BOUND_NUMBER);
+                return getRandomRightTriangle(supplier, boundNumber);
+            default:
+                throw new RuntimeException("something gone wrong");
         }
-        throw new RuntimeException("something gone wrong");
     }
 
     public Figure getDefaultFigure() {
@@ -44,10 +44,10 @@ public class FigureSupplier {
 
     public Figure getRandomCircle(ColorSupplier supplier, int BOUND_NUMBER) {
        return new Circle(
-                supplier.getRandomColor(),
-                "Circle",
-                random.nextInt(BOUND_NUMBER)
-        );
+               supplier.getRandomColor(),
+               "Circle",
+               random.nextInt(BOUND_NUMBER)
+       );
     }
 
     public Figure getRandomSquare(ColorSupplier supplier, int BOUND_NUMBER) {
