@@ -3,7 +3,6 @@ package core.basesyntax.figures;
 import core.basesyntax.Figure;
 
 public class Rectangle extends Figure {
-
     private final int width;
     private final int height;
 

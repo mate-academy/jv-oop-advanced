@@ -13,40 +13,42 @@ public class FigureSupplier {
 
         ColorSupplier supplier = new ColorSupplier();
         Random random = new Random();
+        int boundNumber = 15;
 
         Figure[] figures = {
                 new Circle(
                         supplier.getRandomColor(),
                         "Circle",
-                        random.nextInt(15)
+                        random.nextInt(boundNumber)
                 ),
                 new Square(
                         supplier.getRandomColor(),
                         "Square",
-                        random.nextInt(15)
+                        random.nextInt(boundNumber)
                 ),
                 new Rectangle(
                         supplier.getRandomColor(),
-                        "Rectangle", random.nextInt(25),
-                        random.nextInt(25)
+                        "Rectangle", random.nextInt(boundNumber),
+                        random.nextInt(boundNumber)
                 ),
                 new RightTriangle(
                         supplier.getRandomColor(),
-                        "Triangle", random.nextInt(40),
-                        random.nextInt(40)
+                        "Triangle", random.nextInt(boundNumber),
+                        random.nextInt(boundNumber)
                 ),
                 new IsoscelesTrapezoid(
                         supplier.getRandomColor(),
                         "Trapezoid",
-                        random.nextInt(30),
-                        random.nextInt(30),
-                        random.nextInt(30)
+                        random.nextInt(boundNumber),
+                        random.nextInt(boundNumber),
+                        random.nextInt(boundNumber)
                 )
         };
         return figures[new Random().nextInt(figures.length)];
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10);
+        int radius = 10;
+        return new Circle(radius);
     }
 }
