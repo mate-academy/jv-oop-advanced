@@ -5,7 +5,6 @@ import core.basesyntax.figures.IsoscelesTrapezoid;
 import core.basesyntax.figures.Rectangle;
 import core.basesyntax.figures.RightTriangle;
 import core.basesyntax.figures.Square;
-
 import java.util.Arrays;
 import java.util.Random;
 
@@ -13,12 +12,12 @@ public class FigureSupplier {
     private final ColorSupplier supplier = new ColorSupplier();
     private final Random random = new Random();
     private final int boundNumber = 25;
-    private final String DEFAULT_COLOR = Color.WHITE.name();
-    private final int DEFAULT_RADIUS = 10;
-    private final int FIGURE_NUMBER = 5;
+    private final String defaultColor = Color.WHITE.name();
+    private final int defaultRadius = 10;
+    private final int figureNumber = 5;
 
     public Figure getRandomFigure() {
-        int number = random.nextInt(FIGURE_NUMBER);
+        int number = random.nextInt(figureNumber);
         switch (number) {
             case 0:
                 return getRandomSquare(supplier, boundNumber);
@@ -36,7 +35,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR, "Circle", DEFAULT_RADIUS);
+        return new Circle(defaultColor, "Circle", defaultRadius);
     }
 
     public void printInfo(Figure[] figures) {
