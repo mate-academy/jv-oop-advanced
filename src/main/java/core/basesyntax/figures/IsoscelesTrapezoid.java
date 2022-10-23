@@ -1,10 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.AreaCalculator;
 import core.basesyntax.Figure;
-import core.basesyntax.FigureDraw;
 
-public class IsoscelesTrapezoid extends Figure implements FigureDraw, AreaCalculator {
+public class IsoscelesTrapezoid extends Figure {
     private final int firstBase;
     private final int secondBase;
     private final int height;

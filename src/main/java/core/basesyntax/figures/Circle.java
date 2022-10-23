@@ -1,10 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.AreaCalculator;
 import core.basesyntax.Figure;
-import core.basesyntax.FigureDraw;
 
-public class Circle extends Figure implements FigureDraw, AreaCalculator {
+public class Circle extends Figure {
     private final int radius;
 
     public Circle(String color, int radius) {

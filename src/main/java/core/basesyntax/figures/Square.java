@@ -1,10 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.AreaCalculator;
 import core.basesyntax.Figure;
-import core.basesyntax.FigureDraw;
 
-public class Square extends Figure implements FigureDraw, AreaCalculator {
+public class Square extends Figure {
     private final int side;
 
     public Square(String color, int side) {
