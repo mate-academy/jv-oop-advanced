@@ -5,9 +5,10 @@ import core.basesyntax.Figure;
 public class Rectangle extends Figure {
     private final int width;
     private final int height;
+    private final String name = "rectangle";
 
-    public Rectangle(String color, String name, int width, int height) {
-        super(color, name);
+    public Rectangle(String color, int width, int height) {
+        super(color);
         this.width = width;
         this.height = height;
     }
@@ -18,13 +19,16 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String getInfo() {
-        return super.getInfo()
-                + " width: "
+    public String toString() {
+        return "Figure: "
+                + name
+                + ", area: "
+                + getArea()
+                + " sq.units, width: "
                 + width
-                + " units"
-                + " weight: "
+                + " units, height: "
                 + height
-                + " units";
+                + " units, color: "
+                + getColor();
     }
 }

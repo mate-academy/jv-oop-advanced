@@ -4,9 +4,10 @@ import core.basesyntax.Figure;
 
 public class Square extends Figure {
     private final int side;
+    private final String name = "square";
 
-    public Square(String color, String name, int side) {
-        super(color, name);
+    public Square(String color, int side) {
+        super(color);
         this.side = side;
     }
 
@@ -16,10 +17,14 @@ public class Square extends Figure {
     }
 
     @Override
-    public String getInfo() {
-        return super.getInfo()
-                + " sides: "
+    public String toString() {
+        return "Figure: "
+                + name
+                + ", area: "
+                + getArea()
+                + " sq.units, side: "
                 + side
-                + " units";
+                + " units, color: "
+                + getColor();
     }
 }

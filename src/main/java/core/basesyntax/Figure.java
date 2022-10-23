@@ -2,24 +2,20 @@ package core.basesyntax;
 
 public abstract class Figure implements AreaCalculator {
     private String color;
-    private String name;
 
     public Figure() {
     }
 
-    public Figure(String color, String name) {
+    public Figure(String color) {
         this.color = color;
-        this.name = name;
     }
 
-    public String getInfo() {
-        return "Figure: "
-                + name
-                + " area: "
-                + getArea()
-                + " sq.units"
-                + " color: "
-                + color;
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     @Override

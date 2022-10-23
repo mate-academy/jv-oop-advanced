@@ -4,9 +4,10 @@ import core.basesyntax.Figure;
 
 public class Circle extends Figure {
     private final int radius;
+    private final String name = "circle";
 
-    public Circle(String color, String name, int radius) {
-        super(color, name);
+    public Circle(String color, int radius) {
+        super(color);
         this.radius = radius;
     }
 
@@ -16,7 +17,14 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String getInfo() {
-        return super.getInfo() + " radius: " + radius + " units";
+    public String toString() {
+        return "Figure: "
+                + name
+                + ", area: "
+                + getArea()
+                + " sq.units, radius: "
+                + radius
+                + " units, color: "
+                + getColor();
     }
 }
