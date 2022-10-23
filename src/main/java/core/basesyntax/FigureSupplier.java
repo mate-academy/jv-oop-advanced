@@ -8,12 +8,12 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int boundNumber = 25;
+    private static final String defaultColor = Color.WHITE.name();
+    private static final int defaultRadius = 10;
+    private static final int figureNumber = 5;
     private final ColorSupplier supplier = new ColorSupplier();
     private final Random random = new Random();
-    public static final int boundNumber = 25;
-    public static final String defaultColor = Color.WHITE.name();
-    public static final int defaultRadius = 10;
-    public static final int figureNumber = 5;
 
     public Figure getRandomFigure() {
         int number = random.nextInt(figureNumber);
