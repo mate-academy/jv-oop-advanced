@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements AreaCalculator {
+public abstract class Figure implements FigureDraw {
     private String color;
 
     public Figure() {
@@ -19,7 +19,7 @@ public abstract class Figure implements AreaCalculator {
     }
 
     @Override
-    public double getArea() {
-        return 0;
+    public void draw() {
+        System.out.println(this.toString());
     }
 }

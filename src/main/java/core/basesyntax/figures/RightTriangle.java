@@ -1,11 +1,12 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.AreaCalculator;
 import core.basesyntax.Figure;
+import core.basesyntax.FigureDraw;
 
-public class RightTriangle extends Figure {
+public class RightTriangle extends Figure implements FigureDraw, AreaCalculator {
     private final int firstLeg;
     private final int secondLeg;
-    private final String name = "Triangle";
 
     public RightTriangle(String color, int firstLeg, int secondLeg) {
         super(color);
@@ -16,7 +17,7 @@ public class RightTriangle extends Figure {
     @Override
     public String toString() {
         return "Figure: "
-                + name
+                + RightTriangle.class.getSimpleName()
                 + ", area: "
                 + getArea()
                 + " sq.units, firstLeg: "
@@ -30,5 +31,10 @@ public class RightTriangle extends Figure {
     @Override
     public double getArea() {
         return (firstLeg * secondLeg) / 2;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println(this.toString());
     }
 }

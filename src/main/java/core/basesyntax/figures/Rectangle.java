@@ -1,11 +1,12 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.AreaCalculator;
 import core.basesyntax.Figure;
+import core.basesyntax.FigureDraw;
 
-public class Rectangle extends Figure {
+public class Rectangle extends Figure implements FigureDraw, AreaCalculator {
     private final int width;
     private final int height;
-    private final String name = "rectangle";
 
     public Rectangle(String color, int width, int height) {
         super(color);
@@ -21,7 +22,7 @@ public class Rectangle extends Figure {
     @Override
     public String toString() {
         return "Figure: "
-                + name
+                + Rectangle.class.getSimpleName()
                 + ", area: "
                 + getArea()
                 + " sq.units, width: "
@@ -30,5 +31,10 @@ public class Rectangle extends Figure {
                 + height
                 + " units, color: "
                 + getColor();
+    }
+
+    @Override
+    public void draw() {
+        System.out.println(this.toString());
     }
 }

@@ -1,10 +1,11 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.AreaCalculator;
 import core.basesyntax.Figure;
+import core.basesyntax.FigureDraw;
 
-public class Square extends Figure {
+public class Square extends Figure implements FigureDraw, AreaCalculator {
     private final int side;
-    private final String name = "square";
 
     public Square(String color, int side) {
         super(color);
@@ -17,9 +18,14 @@ public class Square extends Figure {
     }
 
     @Override
+    public void draw() {
+        System.out.println(this.toString());
+    }
+
+    @Override
     public String toString() {
         return "Figure: "
-                + name
+                + Square.class.getSimpleName()
                 + ", area: "
                 + getArea()
                 + " sq.units, side: "

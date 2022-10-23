@@ -1,10 +1,11 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.AreaCalculator;
 import core.basesyntax.Figure;
+import core.basesyntax.FigureDraw;
 
-public class Circle extends Figure {
+public class Circle extends Figure implements FigureDraw, AreaCalculator {
     private final int radius;
-    private final String name = "circle";
 
     public Circle(String color, int radius) {
         super(color);
@@ -19,12 +20,17 @@ public class Circle extends Figure {
     @Override
     public String toString() {
         return "Figure: "
-                + name
+                + Circle.class.getSimpleName()
                 + ", area: "
                 + getArea()
                 + " sq.units, radius: "
                 + radius
                 + " units, color: "
                 + getColor();
+    }
+
+    @Override
+    public void draw() {
+        System.out.println(this.toString());
     }
 }

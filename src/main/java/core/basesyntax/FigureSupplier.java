@@ -8,15 +8,15 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int boundNumber = 25;
-    private static final String defaultColor = Color.WHITE.name();
-    private static final int defaultRadius = 10;
-    private static final int figureNumber = 5;
+    private static final int BOUND_NUMBER = 25;
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
+    private static final int DEFAULT_RADIUS = 10;
+    private static final int FIGURE_NUMBER = 5;
     private final ColorSupplier supplier = new ColorSupplier();
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        int number = random.nextInt(figureNumber);
+        int number = random.nextInt(FIGURE_NUMBER);
         switch (number) {
             case 0:
                 return getRandomSquare();
@@ -33,45 +33,45 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(defaultColor, defaultRadius);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
     private Figure getRandomCircle() {
         return new Circle(
                 supplier.getRandomColor(),
-                random.nextInt(boundNumber)
+                random.nextInt(BOUND_NUMBER)
         );
     }
 
     private Figure getRandomSquare() {
         return new Square(
                 supplier.getRandomColor(),
-                random.nextInt(boundNumber)
+                random.nextInt(BOUND_NUMBER)
         );
     }
 
     private Figure getRandomRectangle() {
         return new Rectangle(
                 supplier.getRandomColor(),
-                random.nextInt(boundNumber),
-                random.nextInt(boundNumber)
+                random.nextInt(BOUND_NUMBER),
+                random.nextInt(BOUND_NUMBER)
         );
     }
 
     private Figure getRandomRightTriangle() {
         return new RightTriangle(
                 supplier.getRandomColor(),
-                random.nextInt(boundNumber),
-                random.nextInt(boundNumber)
+                random.nextInt(BOUND_NUMBER),
+                random.nextInt(BOUND_NUMBER)
         );
     }
 
     private Figure getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(
                 supplier.getRandomColor(),
-                random.nextInt(boundNumber),
-                random.nextInt(boundNumber),
-                random.nextInt(boundNumber)
+                random.nextInt(BOUND_NUMBER),
+                random.nextInt(BOUND_NUMBER),
+                random.nextInt(BOUND_NUMBER)
         );
     }
 }
