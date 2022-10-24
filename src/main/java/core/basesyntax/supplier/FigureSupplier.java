@@ -14,7 +14,7 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int figureIndex = new Random().nextInt(COLOR_NUMBER);
+        int figureIndex = random.nextInt(COLOR_NUMBER);
         switch (figureIndex) {
             case 0:
                 return createCircle(colorSupplier.getRandomColor(), getRandom());
