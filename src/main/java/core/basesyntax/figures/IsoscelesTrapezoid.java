@@ -4,28 +4,28 @@ import core.basesyntax.Color;
 
 public class IsoscelesTrapezoid extends Figure {
     private final String name = "isosceles_trapezoid";
-    private double SideOne;
-    private double SideTwo;
+    private double sideOne;
+    private double sideTwo;
     private double heigh;
 
-    public IsoscelesTrapezoid(Color color, double SideOne, double SideTwo, double heigh) {
+    public IsoscelesTrapezoid(Color color, double sideOne, double sideTwo, double heigh) {
         super.setColor(color);
-        this.SideOne = SideOne;
-        this.SideTwo = SideTwo;
+        this.sideOne = sideOne;
+        this.sideTwo = sideTwo;
         this.heigh = heigh;
     }
 
     @Override
     public double getArea() {
-        return ((SideOne + SideTwo) / 2) * heigh;
+        return ((sideOne + sideTwo) / 2) * heigh;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: " + name
                 + ", area: " + getArea()
-                + " sq.units, parallelSideOne: " + SideOne
-                + " units, parallelSideTwo: " + SideTwo
+                + " sq.units, parallelSideOne: " + sideOne
+                + " units, parallelSideTwo: " + sideTwo
                 + " units, heigh: " + heigh
                 + " units, color: " + getColor().name().toLowerCase());
     }
