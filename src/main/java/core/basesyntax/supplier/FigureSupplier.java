@@ -9,8 +9,8 @@ import core.basesyntax.model.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    static final int COLOR_NUMBER = 5;
-    static final int RANDOM_NUMBER = 100;
+    private static final int COLOR_NUMBER = 5;
+    private static final int RANDOM_NUMBER = 100;
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
