@@ -1,20 +1,24 @@
 package core.basesyntax;
 
-import core.basesyntax.figures.*;
-
+import core.basesyntax.figures.Figure;
+import core.basesyntax.figures.Circle;
+import core.basesyntax.figures.IsoscelesTrapezoid;
+import core.basesyntax.figures.Rectangle;
+import core.basesyntax.figures.RightTriangle;
+import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
     private Random random = new Random();
     private double randomValue = Math.abs(random.nextInt());
     private ColorSupplier colorSupplier = new ColorSupplier();
-    private Figure circle = new Circle(colorSupplier.getRandomColor(), randomValue);
-    private Figure isosceles_trapezoid = new IsoscelesTrapezoid(colorSupplier.getRandomColor(), randomValue,
-            randomValue, randomValue);
-    private Figure rectangle = new Rectangle(colorSupplier.getRandomColor(), randomValue, randomValue);
-    private Figure right_triangle = new RightTriangle(colorSupplier.getRandomColor(), randomValue, randomValue);
-    private Figure square = new Square(colorSupplier.getRandomColor(), randomValue);
-    private Figure [] figures = {circle, isosceles_trapezoid, rectangle, right_triangle, square, circle};
+    private Color randomColor = colorSupplier.getRandomColor();
+    private Figure circle = new Circle(randomColor, randomValue);
+    private Figure isoscelesTrapezoid = new IsoscelesTrapezoid(randomColor, randomValue, randomValue, randomValue);
+    private Figure rectangle = new Rectangle(randomColor, randomValue, randomValue);
+    private Figure rightTriangle = new RightTriangle(randomColor, randomValue, randomValue);
+    private Figure square = new Square(randomColor, randomValue);
+    private Figure [] figures = {circle, isoscelesTrapezoid, rectangle, rightTriangle, square, circle};
 
     public Figure getRandomFigure() {
         int index = random.nextInt(figures.length);
@@ -23,13 +27,13 @@ public class FigureSupplier {
             return circle;
         }
         if (figures[index] instanceof IsoscelesTrapezoid) {
-            return isosceles_trapezoid;
+            return isoscelesTrapezoid;
         }
         if (figures[index] instanceof Rectangle) {
             return rectangle;
         }
         if (figures[index] instanceof RightTriangle) {
-            return right_triangle;
+            return rightTriangle;
         }
         if (figures[index] instanceof Square) {
             return square;

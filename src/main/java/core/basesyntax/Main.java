@@ -1,8 +1,6 @@
 package core.basesyntax;
 
-import core.basesyntax.figures.*;
-
-import java.util.Arrays;
+import core.basesyntax.figures.Figure;
 
 public class Main {
 

@@ -5,7 +5,15 @@ import core.basesyntax.Color;
 import core.basesyntax.Drawable;
 
 public class Figure implements Drawable, AreaDeterminator {
-    public Color color;
+    private Color color;
+
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
+    }
 
     @Override
     public double getArea() {

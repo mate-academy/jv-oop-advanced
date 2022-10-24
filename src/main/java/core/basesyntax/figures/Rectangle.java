@@ -8,7 +8,7 @@ public class Rectangle extends Figure {
     private double heigh;
 
     public Rectangle(Color color, double width, double heigh) {
-        super.color = color;
+        super.setColor(color);
         this.width = width;
         this.heigh = heigh;
     }
@@ -20,9 +20,10 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + name + ", area: " + getArea() +
-                " sq.units, width: " + width +
-                " units, heigh: " + heigh +
-                " units, color: " + color.name().toLowerCase());
+        System.out.println("Figure: " + name
+                + ", area: " + getArea()
+                + " sq.units, width: " + width
+                + " units, heigh: " + heigh
+                + " units, color: " + getColor().name().toLowerCase());
     }
 }
