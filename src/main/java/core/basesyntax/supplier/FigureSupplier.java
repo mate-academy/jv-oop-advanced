@@ -9,60 +9,59 @@ import core.basesyntax.model.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    static final int COLOR_NUMBER = 5;
-    static final int RANDOM_NUMBER = 100;
+    private static final int COLOR_NUMBER = 5;
+    private static final int RANDOM_NUMBER = 100;
     private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        int figureIndex = new Random().nextInt(COLOR_NUMBER);
+        int figureIndex = random.nextInt(COLOR_NUMBER);
         switch (figureIndex) {
             case 0:
-                return createCircle(colorSupplier.getRandomColor(), getRandom());
+                return createRandomCircle();
             case 1:
-                return createIsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        getRandomDouble(), getRandomDouble(), getRandomDouble());
+                return createRandomIsoscelesTrapezoid();
             case 2:
-                return createRectangle(colorSupplier.getRandomColor(),
-                        getRandomDouble(), getRandomDouble());
+                return createRandomSquare();
             case 3:
-                return createSquare(colorSupplier.getRandomColor(), getRandom());
+                return createRandomRectangle();
             case 4:
             default:
-                return createRightTriangle(colorSupplier.getRandomColor(),
-                        getRandomDouble(), getRandomDouble());
+                return createRandomRightTriangle();
         }
     }
 
     private int getRandom() {
-        return new Random().nextInt(RANDOM_NUMBER);
+        return random.nextInt(RANDOM_NUMBER);
     }
 
     private double getRandomDouble() {
-        return new Random().nextDouble();
+        return random.nextDouble();
     }
 
     public Figure getDefaultFigure() {
         return new Circle("WHITE", 10);
     }
 
-    private Figure createCircle(String color, int radius) {
-        return new Circle(color, radius);
+    private Figure createRandomCircle() {
+        return new Circle(colorSupplier.getRandomColor(), getRandom());
     }
 
-    private Figure createIsoscelesTrapezoid(String color,
-                                            double height, double topSide, double bottomSide) {
-        return new IsoscelesTrapezoid(color, height, topSide, bottomSide);
+    private Figure createRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                getRandomDouble(), getRandomDouble(), getRandomDouble());
     }
 
-    private Figure createRectangle(String color, double width, double length) {
-        return new Rectangle(color, width, length);
+    private Figure createRandomRectangle() {
+        return new Rectangle(colorSupplier.getRandomColor(), getRandomDouble(), getRandomDouble());
     }
 
-    private Figure createSquare(String color, int sideLength) {
-        return new Square(color, sideLength);
+    private Figure createRandomSquare() {
+        return new Square(colorSupplier.getRandomColor(), getRandom());
     }
 
-    private Figure createRightTriangle(String color, double firstLeg, double secondLeg) {
-        return new RightTriangle(color, firstLeg, secondLeg);
+    private Figure createRandomRightTriangle() {
+        return new RightTriangle(colorSupplier.getRandomColor(),
+                getRandomDouble(), getRandomDouble());
     }
 }
