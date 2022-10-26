@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-public interface Shapeable {
-
+public interface AreaCalculator {
     double obtainTheArea();
-
 }
