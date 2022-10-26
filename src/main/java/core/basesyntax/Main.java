@@ -14,7 +14,7 @@ public class Main {
         }
 
         for (int i = 0; i < randomFigures.length; i++) {
-            randomFigures[i].toDrawFigure();
+            randomFigures[i].draw();
         }
     }
 }

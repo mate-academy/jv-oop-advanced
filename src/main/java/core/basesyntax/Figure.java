@@ -1,22 +1,10 @@
 package core.basesyntax;
 
-public abstract class Figure implements Forming {
-    private String name;
+public abstract class Figure implements Drawable, Shapeable {
     private String color;
 
-    public Figure(String name, String color) {
-        this.name = name;
+    public Figure(String color) {
         this.color = color;
-    }
-
-    public abstract double obtainTheArea();
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getColor() {
