@@ -2,6 +2,7 @@ package core.basesyntax;
 
 import core.basesyntax.service.suppliers.FigureSupplier;
 import java.util.Random;
+
 public class HelloWorld {
     private static FigureSupplier figureSupplier = new FigureSupplier();
 

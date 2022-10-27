@@ -4,7 +4,6 @@ public class Rectangle extends Figure {
     private int sideA;
     private int sideB;
 
-
     public Rectangle(String color, int sideA, int sideB) {
         super(color);
         this.sideA = sideA;
@@ -33,6 +32,7 @@ public class Rectangle extends Figure {
                 + getVolume() + " sq.units, color: " + getColor() + ", sideA: " + getSideA()
         + ", sideB: " + getSideB());
         return null;
+
     }
 
     @Override
