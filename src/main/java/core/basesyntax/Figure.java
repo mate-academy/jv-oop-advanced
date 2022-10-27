@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 import core.basesyntax.service.Drawable;
-import core.basesyntax.service.VolumeCalculate;
+import core.basesyntax.service.AreaCalculator;
 
-public abstract class Figure implements VolumeCalculate, Drawable {
+public abstract class Figure implements AreaCalculator, Drawable {
     private String color;
 
     public Figure(String color) {

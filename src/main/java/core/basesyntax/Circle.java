@@ -20,14 +20,14 @@ public class Circle extends Figure {
     @Override
     public void draw() {
 
-        System.out.println("Figure: " + getClass().getSimpleName() + ", volume: "
-                + getVolume() + " sq.units, color: " + getColor() + ", radius: " + radius);
+        System.out.println("Figure: " + getClass().getSimpleName() + ", area: "
+                + getArea() + " sq.units, color: " + getColor() + ", radius: " + radius);
 
 
     }
 
     @Override
-    public double getVolume() {
+    public double getArea() {
         return (radius * radius) * 3.14;
     }
 }

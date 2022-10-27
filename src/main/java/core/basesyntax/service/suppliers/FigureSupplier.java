@@ -14,7 +14,7 @@ public class FigureSupplier {
         int figureIndex = new Random().nextInt(4);
         switch (figureIndex) {
             case 0:
-                return  getRandomCircle();
+                return  new Circle(colorSupplier.getRandomColor(), getRandomInt());
             case 1:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                         getRandomInt(),

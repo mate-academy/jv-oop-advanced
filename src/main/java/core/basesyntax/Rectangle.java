@@ -29,14 +29,14 @@ public class Rectangle extends Figure {
     @Override
     public void draw() {
 
-        System.out.println("Figure: " + getClass().getSimpleName() + ", volume: "
-                + getVolume() + " sq.units, color: " + getColor() + ", sideA: " + getSideA()
+        System.out.println("Figure: " + getClass().getSimpleName() + ", area: "
+                + getArea() + " sq.units, color: " + getColor() + ", sideA: " + getSideA()
                 + ", sideB: " + getSideB());
 
     }
 
     @Override
-    public double getVolume() {
+    public double getArea() {
         return sideA * sideB;
     }
 }
