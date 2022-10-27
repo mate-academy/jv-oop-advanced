@@ -10,6 +10,7 @@ public class Circle extends Figure {
     }
 
 
+
     public int getRadius() {
         return radius;
     }

@@ -4,6 +4,7 @@ public class Rectangle extends Figure {
     private int sideA;
     private int sideB;
 
+
     public Rectangle(String color, int sideA, int sideB) {
         super(color);
         this.sideA = sideA;
@@ -13,6 +14,7 @@ public class Rectangle extends Figure {
     public int getSideA() {
         return sideA;
     }
+
     public int getSideB() {
         return sideB;
     }
@@ -24,7 +26,6 @@ public class Rectangle extends Figure {
     public void setSideB(int sideB) {
         this.sideB = sideB;
     }
-
 
     @Override
     public Figure draw() {
