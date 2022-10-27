@@ -14,7 +14,7 @@ public class FigureSupplier {
         int figureIndex = new Random().nextInt(4);
         switch (figureIndex) {
             case 0:
-                return new Circle(colorSupplier.getRandomColor(), getRandomInt());
+                return  getRandomCircle();
             case 1:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                         getRandomInt(),
@@ -34,15 +34,15 @@ public class FigureSupplier {
     }
 
     private int getRandomInt() {
-        return new Random().nextInt(50);
+        final int numberRandom = 50;
+        return new Random().nextInt(numberRandom);
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", 10);
+        final String colorWhite= "white";
+        final int radiusNumber = 10;
+        return new Circle(colorWhite,radiusNumber);
     }
 
-    @Override
-    public String toString() {
-        return "FigureSupplier{}";
-    }
+
 }

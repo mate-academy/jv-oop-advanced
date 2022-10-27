@@ -27,11 +27,11 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public Figure draw() {
+    public void draw() {
         System.out.println("Figure: " + getClass().getSimpleName() + ", volume: "
                 + getVolume() + " sq.units, color: " + getColor() + ", height: " + getHeight()
                 + ", bottom: " + getBottom());
-        return null;
+
     }
 
     @Override

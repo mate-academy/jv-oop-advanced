@@ -18,11 +18,11 @@ public class Circle extends Figure {
     }
 
     @Override
-    public Figure draw() {
+    public void draw() {
 
         System.out.println("Figure: " + getClass().getSimpleName() + ", volume: "
-                + getVolume() + " sq.units, color: " + getColor() + ", radius: " + getRadius());
-        return null;
+                + getVolume() + " sq.units, color: " + getColor() + ", radius: " + radius);
+
 
     }
 
