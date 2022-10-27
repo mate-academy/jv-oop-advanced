@@ -4,7 +4,6 @@ public class RightTriangle extends Figure {
     private static final int DIVIDER = 2;
     private int firstLeg;
     private int secondLeg;
-    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public RightTriangle(String color, int firstLeg, int secondLeg) {
         super(color);
@@ -19,14 +18,9 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getName() + ", area: " + getArea()
+        System.out.println("Figure: " + "right triangle" + ", area: " + getArea()
                 + " sq.units, firstLeg: " + firstLeg + " secondLeg: " + secondLeg
-                + " units, color: " + colorSupplier.getRandomColor().toLowerCase());
-    }
-
-    @Override
-    public String getName() {
-        return "right triangle";
+                + " units, color: " + getColor().toLowerCase());
     }
 }
 

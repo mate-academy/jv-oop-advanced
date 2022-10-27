@@ -5,7 +5,6 @@ public class IsoscelesTrapezoid extends Figure {
     private int firstBase;
     private int secondBase;
     private int height;
-    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public IsoscelesTrapezoid(String color, int firstBase, int secondBase, int height) {
         super(color);
@@ -15,19 +14,14 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String getName() {
-        return "isosceles trapezoid";
-    }
-
-    @Override
     public double getArea() {
         return (firstBase + secondBase) / DIVIDER * height;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getName() + ", area: " + getArea()
+        System.out.println("Figure: " + "isosceles trapezoid" + ", area: " + getArea()
                 + " sq.units, firstBase: " + firstBase + " sq.units, secondBase: "
-                + secondBase + " units, color: " + colorSupplier.getRandomColor().toLowerCase());
+                + secondBase + " units, color: " + getColor().toLowerCase());
     }
 }
