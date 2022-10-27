@@ -23,7 +23,7 @@ public class RightTriangle extends Figure {
     }
 
     public void setBottom(int bottom) {
-        bottom = bottom;
+        this.bottom = bottom;
     }
 
     @Override
