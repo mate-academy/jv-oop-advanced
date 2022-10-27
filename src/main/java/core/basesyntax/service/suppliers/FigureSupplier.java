@@ -6,7 +6,6 @@ import core.basesyntax.IsoscelesTrapezoid;
 import core.basesyntax.Rectangle;
 import core.basesyntax.RightTriangle;
 import core.basesyntax.Square;
-
 import java.util.Random;
 
 public class FigureSupplier {
