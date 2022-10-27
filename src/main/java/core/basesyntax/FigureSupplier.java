@@ -16,7 +16,8 @@ public class FigureSupplier {
             case (0):
                 return new Circle(colorSupplier.getRandomColor(), boundFigureSide);
             case (1):
-                return new Rectangle(colorSupplier.getRandomColor(), boundFigureSide, boundFigureSide);
+                return new Rectangle(colorSupplier.getRandomColor(), boundFigureSide,
+                        boundFigureSide);
             case (2):
                 return new Square(colorSupplier.getRandomColor(), boundFigureSide);
             case (3):
