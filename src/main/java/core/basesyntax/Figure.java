@@ -3,7 +3,6 @@ package core.basesyntax;
 import core.basesyntax.service.AreaCalculator;
 import core.basesyntax.service.Drawable;
 
-
 public abstract class Figure implements AreaCalculator, Drawable {
     private String color;
 

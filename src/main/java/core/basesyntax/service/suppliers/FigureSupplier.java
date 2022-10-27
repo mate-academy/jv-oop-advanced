@@ -37,6 +37,7 @@ public class FigureSupplier {
         final int numberRandom = 50;
         return new Random().nextInt(numberRandom);
     }
+
     public Figure getDefaultFigure() {
         final String colorWhite = "white";
         final int radiusNumber = 10;
