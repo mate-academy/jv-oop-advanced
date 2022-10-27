@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public interface DescriptionOfFigure {
+public interface Drawable {
     String descriptionOfSide();
 }
