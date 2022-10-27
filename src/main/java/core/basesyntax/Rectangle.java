@@ -31,10 +31,8 @@ public class Rectangle extends Figure {
 
         System.out.println("Figure: " + getClass().getSimpleName() + ", volume: "
                 + getVolume() + " sq.units, color: " + getColor() + ", sideA: " + getSideA()
-        + ", sideB: " + getSideB());
-
+                + ", sideB: " + getSideB());
         return null;
-
     }
 
     @Override
