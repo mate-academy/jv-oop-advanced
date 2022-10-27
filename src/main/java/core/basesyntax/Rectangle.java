@@ -9,6 +9,7 @@ public class Rectangle extends Figure {
         this.sideA = sideA;
         this.sideB = sideB;
     }
+
     public int getSideA() {
         return sideA;
     }
@@ -24,6 +25,7 @@ public class Rectangle extends Figure {
         this.sideB = sideB;
     }
 
+
     @Override
     public Figure draw() {
         System.out.println("Figure: " + getClass().getSimpleName() + ", volume: "
@@ -31,6 +33,7 @@ public class Rectangle extends Figure {
         + ", sideB: " + getSideB());
         return null;
     }
+
     @Override
     public double getVolume() {
         return sideA * sideB;

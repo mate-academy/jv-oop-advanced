@@ -2,14 +2,14 @@ package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
     private int height;
-    private int Up;
-    private int Down;
+    private int upperSide;
+    private int lowSide;
 
-    public IsoscelesTrapezoid(String color, int height, int up, int down) {
+    public IsoscelesTrapezoid(String color, int height, int upperSide, int lowSide) {
         super(color);
         this.height = height;
-        this.Up = up;
-        this.Down = down;
+        this.upperSide = upperSide;
+        this.lowSide = lowSide;
     }
     public double getHeight() {
         return height;
@@ -19,31 +19,32 @@ public class IsoscelesTrapezoid extends Figure {
         this.height = height;
     }
 
-    public int getUp() {
-        return Up;
+    public int getUpperSide() {
+        return upperSide;
     }
 
-    public void setUp(int up) {
-        this.Up = up;
+    public void setUpperSide(int upperSide) {
+        this.upperSide = upperSide;
     }
 
-    public int getDown() {
-        return Down;
+    public int getLowSide() {
+        return lowSide;
     }
 
-    public void setDown(int down) {
-        this.Down = down;
+    public void setLowSide(int lowSide) {
+        this.lowSide = lowSide;
     }
 
     @Override
     public Figure draw() {
         System.out.println("Figure: " + getClass().getSimpleName() + ", volume: "
                 + getVolume() + " sq.units, color: " + getColor() + ", height: " + getHeight()
-                + ", Up: " + getUp() + ", Down: " + getDown());
+                + ", upperSide: " + getUpperSide() + ", lowSide: " + getLowSide());
         return null;
     }
+
     @Override
     public double getVolume() {
-        return ((Up * Down) * 0.5) * height;
+        return ((upperSide * lowSide) * 0.5) * height;
     }
 }

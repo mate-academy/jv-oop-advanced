@@ -9,6 +9,7 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
+
     public int getRadius() {
         return radius;
     }
@@ -19,6 +20,7 @@ public class Circle extends Figure {
 
     @Override
     public Figure draw() {
+
         System.out.println("Figure: " + getClass().getSimpleName() + ", volume: "
         + getVolume() + " sq.units, color: " + getColor() + ", radius: " + getRadius());
 

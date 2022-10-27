@@ -1,7 +1,6 @@
 package core.basesyntax.service.suppliers;
 
 import core.basesyntax.*;
-
 import java.util.Random;
 
 public class FigureSupplier {
@@ -17,14 +16,18 @@ public class FigureSupplier {
                         getRandomInt(),
                         getRandomInt());
             case 2:
-                return new Rectangle(colorSupplier.getRandomColor(), getRandomInt(), getRandomInt());
+                return new Rectangle(colorSupplier.getRandomColor(), getRandomInt(),
+                        getRandomInt());
             case 3:
-                return new RightTriangle(colorSupplier.getRandomColor(), getRandomInt(), getRandomInt());
+                return new RightTriangle(colorSupplier.getRandomColor(), getRandomInt(),
+                        getRandomInt());
             case 4:
             default:
-                return new Square(colorSupplier.getRandomColor(), getRandomInt());
+                return new Square(colorSupplier.getRandomColor(),
+                        getRandomInt());
         }
     }
+
     private int getRandomInt() {
         return new Random().nextInt(50);
     }

@@ -33,6 +33,7 @@ public class RightTriangle extends Figure {
                 + ", bottom: " + getBottom());
         return null;
     }
+
     @Override
     public double getVolume() {
         return (double) (height * bottom) / 2;
