@@ -10,6 +10,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     private final Random random = new Random();
+
     public Figure getRandomFigure() {
         ColorSupplier colorSupplier = new ColorSupplier();
         int figureIndex = random.nextInt(4);
@@ -35,14 +36,14 @@ public class FigureSupplier {
     }
 
     private int getRandomInt() {
-        final int NUMBER = 50;
-        return new Random().nextInt(NUMBER);
+        final int Number = 50;
+        return new Random().nextInt(Number);
     }
 
     public Figure getDefaultFigure() {
-        final String PUBLIC_COLOR = "white";
-        final int PUBLIC_RADIUS = 10;
-        return new Circle(PUBLIC_COLOR, PUBLIC_RADIUS);
+        final String Color = "white";
+        final int Radius = 10;
+        return new Circle(Color, Radius);
     }
 
 }
