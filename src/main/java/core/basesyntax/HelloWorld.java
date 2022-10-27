@@ -15,8 +15,3 @@ public class HelloWorld {
         figureSupplier.getDefaultFigure().draw();
     }
 }
-
-
-
-
-

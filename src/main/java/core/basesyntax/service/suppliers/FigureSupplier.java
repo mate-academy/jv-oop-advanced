@@ -9,9 +9,10 @@ import core.basesyntax.Square;
 import java.util.Random;
 
 public class FigureSupplier {
+    private final Random random = new Random();
     public Figure getRandomFigure() {
         ColorSupplier colorSupplier = new ColorSupplier();
-        int figureIndex = new Random().nextInt(4);
+        int figureIndex = random.nextInt(4);
         switch (figureIndex) {
             case 0:
                 return new Circle(colorSupplier.getRandomColor(), getRandomInt());
@@ -33,15 +34,15 @@ public class FigureSupplier {
         }
     }
 
-    private static int getRandomInt() {
-        final int numberRandom = 50;
-        return new Random().nextInt(numberRandom);
+    private int getRandomInt() {
+        final int NUMBER = 50;
+        return new Random().nextInt(NUMBER);
     }
 
     public Figure getDefaultFigure() {
-        final String colorWhite = "white";
-        final int radiusNumber = 10;
-        return new Circle(colorWhite,radiusNumber);
+        final String PUBLIC_COLOR = "white";
+        final int PUBLIC_RADIUS = 10;
+        return new Circle(PUBLIC_COLOR, PUBLIC_RADIUS);
     }
 
 }
