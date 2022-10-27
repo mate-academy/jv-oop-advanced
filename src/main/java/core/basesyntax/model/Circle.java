@@ -10,9 +10,13 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
-    public double getRadius() {return radius;}
+    public double getRadius() {
+        return radius;
+    }
 
-    public void set(int radius) {this.radius = radius;}
+    public void set(int radius) {
+        this.radius = radius;
+    }
 
     @Override
     public double getArea() {
@@ -20,9 +24,10 @@ public class Circle extends Figure {
     }
 
     @Override
-    public void draw(){
-         System.out.println("Figure " + getClass().getSimpleName() + ", square: "
-                 + getArea() + " sq. units, color: " + getColor() + ", radius: " + getRadius());
+    public void draw() {
+        System.out.println("Figure " + getClass().getSimpleName() + ", square: "
+                + getArea() + " sq. units, color: " + getColor() + ", radius: "
+                + getRadius());
     }
 
 }

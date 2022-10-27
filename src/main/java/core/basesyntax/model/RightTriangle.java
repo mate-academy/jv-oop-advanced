@@ -1,7 +1,5 @@
 package core.basesyntax.model;
 
-import core.basesyntax.model.Figure;
-
 public class RightTriangle extends Figure {
     private int base;
     private int height;
@@ -11,21 +9,32 @@ public class RightTriangle extends Figure {
         this.base = base;
         this.height = height;
     }
-    public double getHeight() {return height;}
 
-    public void setHeight(int height) {this.height =  height;}
-    public int getBase() {return base;}
+    public double getHeight() {
+        return height;
+    }
 
-    public void setBase(int base) {this.base = base;}
+    public void setHeight(int height) {
+        this.height = height;
+    }
 
-    @Override
-    public double getArea() {
-        return (base *  height) / 2;
+    public int getBase() {
+        return base;
+    }
+
+    public void setBase(int base) {
+        this.base = base;
     }
 
     @Override
-    public void draw(){
+    public double getArea() {
+        return (base * height) / 2;
+    }
+
+    @Override
+    public void draw() {
         System.out.println("Figure " + getClass().getSimpleName() + ", square: "
-                + getArea() + " sq. units, color: " + getColor() + ", base: " + getBase() + ", height: " + getHeight());
+                + getArea() + " sq. units, color: " + getColor() + ", base: "
+                + getBase() + ", height: " + getHeight());
     }
 }

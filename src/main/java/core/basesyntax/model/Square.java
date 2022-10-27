@@ -1,7 +1,5 @@
 package core.basesyntax.model;
 
-import core.basesyntax.model.Figure;
-
 public class Square extends Figure {
     private double side;
 
@@ -9,9 +7,14 @@ public class Square extends Figure {
         super(color);
         this.side = side;
     }
-    public double getSide() {return side;}
 
-    public void setSide(double side) {this.side = side;}
+    public double getSide() {
+        return side;
+    }
+
+    public void setSide(double side) {
+        this.side = side;
+    }
 
     @Override
     public double getArea() {
@@ -19,7 +22,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public void draw(){
+    public void draw() {
         System.out.println("Figure " + getClass().getSimpleName() + ", square: "
                 + getArea() + " sq. units, color: " + getColor() + ", side: " + getSide());
     }

@@ -1,9 +1,7 @@
 package core.basesyntax.model;
 
-import suppliers.FigureSupplier;
-
-import javax.swing.*;
 import java.util.Random;
+import suppliers.FigureSupplier;
 
 public class Hello {
     private static FigureSupplier figureSupplier = new FigureSupplier();
@@ -15,7 +13,7 @@ public class Hello {
             figures[i] = figureSupplier.getRandomFigure();
         }
 
-        for (Figure figure: figures) {
+        for (Figure figure : figures) {
             figure.draw();
         }
     }
