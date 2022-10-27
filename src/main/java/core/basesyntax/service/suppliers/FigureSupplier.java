@@ -43,4 +43,5 @@ public class FigureSupplier {
         final int radiusNumber = 10;
         return new Circle(colorWhite,radiusNumber);
     }
+
 }
