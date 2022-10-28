@@ -9,7 +9,7 @@ import core.basesyntax.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private ColorSupplier colorSupplier = new ColorSupplier();
     private static final int DEFAULT_NUMBER = 50;
     private static final String DEFAULT_COLOR = "white";
     private static final int DEFAULT_RADIUS = 10;
