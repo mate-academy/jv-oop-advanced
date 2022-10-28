@@ -14,7 +14,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String descriptionOfSide() {
+    public String draw() {
         StringBuilder sb = new StringBuilder("Figure: Right Triangle, area: ");
         sb.append(getArea())
                 .append(" sq.units, side: ")

@@ -16,7 +16,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String descriptionOfSide() {
+    public String draw() {
         StringBuilder sb = new StringBuilder("Figure: Rectangle, area: ");
         sb.append(getArea())
                 .append(" sq.units, height: ")

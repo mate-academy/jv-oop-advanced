@@ -14,7 +14,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String descriptionOfSide() {
+    public String draw() {
         StringBuilder sb = new StringBuilder("Figure: Circle, area: ");
         sb.append(getArea())
                 .append(" sq.units, radius: ")

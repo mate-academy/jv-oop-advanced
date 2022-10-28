@@ -1,14 +1,9 @@
 package core.basesyntax;
 
-public class Figure implements AreaOfFigure, DescriptionOfFigure {
+public abstract class Figure implements AreaCalculator, Drawable {
     protected String color;
 
-    public String descriptionOfSide() {
-        return null;
-    }
+    public abstract String draw();
 
-    @Override
-    public double getArea() {
-        return 0;
-    }
+    public abstract double getArea();
 }

@@ -23,7 +23,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(EnumColors.WHITE.name(), SIDE_DEFAULT);
+        return new Circle(Colors.WHITE.name(), SIDE_DEFAULT);
     }
 
     public int getRandomInt(int countLimit) {
@@ -35,7 +35,7 @@ public class FigureSupplier {
     }
 
     public String getRandomColor() {
-        int randomColor = random.nextInt(EnumColors.values().length);
-        return EnumColors.values()[randomColor].name();
+        int index = random.nextInt(Colors.values().length);
+        return Colors.values()[index].name();
     }
 }

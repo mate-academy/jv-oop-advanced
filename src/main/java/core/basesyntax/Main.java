@@ -17,7 +17,7 @@ public class Main {
         }
 
         for (Figure figure : array) {
-            System.out.println(figure.descriptionOfSide());
+            System.out.println(figure.draw());
         }
     }
 }

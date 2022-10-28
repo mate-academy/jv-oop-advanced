@@ -18,7 +18,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String descriptionOfSide() {
+    public String draw() {
         StringBuilder sb = new StringBuilder("Figure: Isosceles Trapezoid, area: ");
         sb.append(getArea())
                 .append(" sq.units, side: ")
