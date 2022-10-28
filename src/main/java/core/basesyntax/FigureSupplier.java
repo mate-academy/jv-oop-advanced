@@ -3,35 +3,36 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int SIDE_LIMIT = 7;
+    private static final int SIDE_LIMIT = 1;
     private static final int SIDE_DEFAULT = 10;
+    private static final int FIGURE_TOTAL = 4;
+    private static final String COLOR_DEFAULT = Colors.WHITE.name();
     private Random random = new Random();
 
     public Figure getRandomFigure() {
-        Square square = new Square(getRandomColor(), getRandomInt(SIDE_LIMIT));
-        Rectangle rectangle =
-                new Rectangle(getRandomColor(), getRandomInt(SIDE_LIMIT), getRandomInt(SIDE_LIMIT));
-        Circle circle = new Circle(getRandomColor(), getRandomInt(SIDE_LIMIT));
-        RightTriangle rightTriangle = new RightTriangle(getRandomColor(), getRandomInt(SIDE_LIMIT));
-        IsoscelesTrapezoid trapezoid = new IsoscelesTrapezoid(getRandomColor(),
-                getRandomInt(SIDE_LIMIT), getRandomInt(SIDE_LIMIT), getRandomInt(SIDE_LIMIT));
-
-        Figure[] array = {square, rectangle, circle, rightTriangle, trapezoid};
-        int indexFigure = random.nextInt(array.length);
-
-        return array[indexFigure];
+        int indexFigure = random.nextInt(FIGURE_TOTAL);
+        switch (indexFigure) {
+            case (0):
+                return new Square(getRandomColor(), getRandomInt(SIDE_LIMIT));
+            case (1):
+                return new Rectangle(getRandomColor(),
+                        getRandomInt(SIDE_LIMIT), getRandomInt(SIDE_LIMIT));
+            case (2):
+                return new Circle(getRandomColor(), getRandomInt(SIDE_LIMIT));
+            case (3):
+                return new RightTriangle(getRandomColor(), getRandomInt(SIDE_LIMIT));
+            default:
+                return new IsoscelesTrapezoid(getRandomColor(), getRandomInt(SIDE_LIMIT),
+                        getRandomInt(SIDE_LIMIT), getRandomInt(SIDE_LIMIT));
+        }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Colors.WHITE.name(), SIDE_DEFAULT);
+        return new Circle(COLOR_DEFAULT, SIDE_DEFAULT);
     }
 
-    public int getRandomInt(int countLimit) {
-        int index = random.nextInt(countLimit);
-        if (index == 0) {
-            index = getRandomInt(countLimit);
-        }
-        return index;
+    public int getRandomInt(int maxBound) {
+        return random.nextInt(maxBound) + 1;
     }
 
     public String getRandomColor() {
