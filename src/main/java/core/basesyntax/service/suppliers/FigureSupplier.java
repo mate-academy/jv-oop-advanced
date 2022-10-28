@@ -10,10 +10,10 @@ import java.util.Random;
 
 public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
-    private final Random random = new Random();
-    private static final int DEFAULT_NUMBER = 50;
     private static final String DEFAULT_COLOR = "white";
+    private static final int DEFAULT_NUMBER = 50;
     private static final int DEFAULT_RADIUS = 10;
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
         int figureIndex = random.nextInt(4);
