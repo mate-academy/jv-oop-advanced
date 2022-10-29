@@ -13,17 +13,15 @@ public class FigureSupplier {
         int indexFigure = random.nextInt(FIGURE_TOTAL);
         switch (indexFigure) {
             case (0):
-                return new Square(getRandomColor(), getRandomInt(SIDE_LIMIT));
+                return getRandomSquare();
             case (1):
-                return new Rectangle(getRandomColor(),
-                        getRandomInt(SIDE_LIMIT), getRandomInt(SIDE_LIMIT));
+                return getRandomRectangle();
             case (2):
-                return new Circle(getRandomColor(), getRandomInt(SIDE_LIMIT));
+                return getRandomCircle();
             case (3):
-                return new RightTriangle(getRandomColor(), getRandomInt(SIDE_LIMIT));
+                return getRandomRightTriangle();
             default:
-                return new IsoscelesTrapezoid(getRandomColor(), getRandomInt(SIDE_LIMIT),
-                        getRandomInt(SIDE_LIMIT), getRandomInt(SIDE_LIMIT));
+                return getRandomRightIsoscelesTrapezoid();
         }
     }
 
@@ -38,5 +36,26 @@ public class FigureSupplier {
     public String getRandomColor() {
         int index = random.nextInt(Colors.values().length);
         return Colors.values()[index].name();
+    }
+
+    private Square getRandomSquare() {
+        return new Square(getRandomColor(), getRandomInt(SIDE_LIMIT));
+    }
+
+    private Rectangle getRandomRectangle() {
+        return new Rectangle(getRandomColor(), getRandomInt(SIDE_LIMIT), getRandomInt(SIDE_LIMIT));
+    }
+
+    private Circle getRandomCircle() {
+        return new Circle(getRandomColor(), getRandomInt(SIDE_LIMIT));
+    }
+
+    private RightTriangle getRandomRightTriangle() {
+        return new RightTriangle(getRandomColor(), getRandomInt(SIDE_LIMIT));
+    }
+
+    private IsoscelesTrapezoid getRandomRightIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(getRandomColor(), getRandomInt(SIDE_LIMIT),
+                getRandomInt(SIDE_LIMIT), getRandomInt(SIDE_LIMIT));
     }
 }
