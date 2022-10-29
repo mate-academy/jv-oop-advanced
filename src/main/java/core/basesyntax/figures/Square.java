@@ -3,7 +3,6 @@ package core.basesyntax.figures;
 import core.basesyntax.Color;
 
 public class Square extends Figure {
-    private final String name = "square";
     private double side;
 
     public Square(Color color, double side) {

@@ -3,7 +3,6 @@ package core.basesyntax.figures;
 import core.basesyntax.Color;
 
 public class IsoscelesTrapezoid extends Figure {
-    private final String name = "isosceles_trapezoid";
     private double sideOne;
     private double sideTwo;
     private double heigh;

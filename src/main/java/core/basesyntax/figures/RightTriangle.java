@@ -3,7 +3,6 @@ package core.basesyntax.figures;
 import core.basesyntax.Color;
 
 public class RightTriangle extends Figure {
-    private final String name = "right_triangle";
     private double firstLeg;
     private double secondLeg;
 
