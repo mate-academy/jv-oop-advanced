@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Main {
-    private static final int FIGURES_QUANTITY = 6;  //just comment to commit
+    private static final int FIGURES_QUANTITY = 6;
     private static final int RANDOM_FIGURES_QUANTITY = 3;
 
     public static void main(String[] args) {
