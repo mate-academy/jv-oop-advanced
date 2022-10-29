@@ -4,8 +4,9 @@ import core.basesyntax.AreaDeterminator;
 import core.basesyntax.Color;
 import core.basesyntax.Drawable;
 
-public class Figure implements Drawable, AreaDeterminator {
+public abstract class Figure implements Drawable, AreaDeterminator {
     private Color color;
+    private String name;
 
     public Color getColor() {
         return color;
@@ -15,13 +16,11 @@ public class Figure implements Drawable, AreaDeterminator {
         this.color = color;
     }
 
-    @Override
-    public double getArea() {
-        return 0;
+    public String getSimpleName() {
+        return name;
     }
 
-    @Override
-    public void draw() {
-
+    public void setName(String name) {
+        this.name = name;
     }
 }
