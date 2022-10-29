@@ -22,6 +22,6 @@ public class RightTriangle extends Figure {
         return "Figure: right triangle, area: " + String.format("%.2f",getArea())
                 + " sq.units, firstLeg=" + firstLeg
                 + ", secondLeg=" + secondLeg
-                + ", color=" + getColor() ;
+                + ", color=" + getColor();
     }
 }
