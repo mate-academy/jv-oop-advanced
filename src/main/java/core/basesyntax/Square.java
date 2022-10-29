@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    int side;
+    private int side;
 
     @Override
     public double getArea() {
@@ -14,9 +14,8 @@ public class Square extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: square, area: " + String.format("%.2f",getArea()) +
-                " sq.units, side=" + side +
-                ", color=" + color +
-                '}';
+        return "Figure: square, area: " + String.format("%.2f",getArea())
+                + " sq.units, side=" + side
+                + ", color=" + getColor();
     }
 }

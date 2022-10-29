@@ -1,11 +1,11 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    int firstLeg;
-    int secondLeg;
+    private int firstLeg;
+    private int secondLeg;
 
     @Override
-    public double getArea()  {
+    public double getArea() {
         return firstLeg * secondLeg / 2;
     }
 
@@ -19,9 +19,9 @@ public class Rectangle extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: Rectangle, area: " + String.format("%.2f",getArea()) +
-                " sq.units, firstLeg=" + firstLeg +
-                ", secondLeg=" + secondLeg +
-                ", color=" + color;
+        return "Figure: Rectangle, area: " + String.format("%.2f",getArea())
+                + " sq.units, firstLeg=" + firstLeg
+                + ", secondLeg=" + secondLeg
+                + ", color=" + getColor();
     }
 }

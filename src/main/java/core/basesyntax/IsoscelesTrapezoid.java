@@ -1,13 +1,13 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    int top;
-    int bottom;
-    int side;
+    private int top;
+    private int bottom;
+    private int side;
 
     @Override
     public double getArea() {
-        return ((top + bottom) / 2) * Math.sqrt(side * side - (bottom - top ) * (bottom - top) / 4);
+        return ((top + bottom) / 2) * Math.sqrt(side * side - (bottom - top) * (bottom - top) / 4);
     }
 
     public void setTop(int top) {
@@ -24,10 +24,10 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: isosceles trapezoid, area: "+ String.format("%.2f",getArea()) +
-                " sq.units, top=" + top +
-                ", bottom=" + bottom +
-                ", side=" + side +
-                ", color=" + color;
+        return "Figure: isosceles trapezoid, area: " + String.format("%.2f",getArea())
+                + " sq.units, top=" + top
+                + ", bottom=" + bottom
+                + ", side=" + side
+                + ", color=" + getColor();
     }
 }
