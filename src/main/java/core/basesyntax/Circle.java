@@ -13,10 +13,10 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "Figure: circle, area: " + String.format("%.2f",getArea())
+    public void drawArea() {
+        System.out.println("Figure: circle, area: " + String.format("%.2f",getArea())
                 + " sq.units, radius=" + radius
-                + ", color=" + getColor();
+                + ", color=" + getColor());
     }
 }
 

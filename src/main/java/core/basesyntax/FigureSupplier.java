@@ -6,11 +6,11 @@ public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
     private static final int RANDOM_BOUND = 30;
     private static final int DEFAULT_CIRCLE_RADIUS = 10;
+    private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        Random random = new Random();
         int numberOfFigures = random.nextInt(FIGURE_COUNT - 1); //because from 0 to 4
-        ColorSupplier colorSupplier = new ColorSupplier();
         Color randomColor = ColorSupplier.getRandomColor();
         switch (numberOfFigures) {
             case 0:

@@ -18,10 +18,10 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "Figure: Rectangle, area: " + String.format("%.2f",getArea())
+    public void drawArea() {
+        System.out.println("Figure: Rectangle, area: " + String.format("%.2f",getArea())
                 + " sq.units, firstLeg=" + firstLeg
                 + ", secondLeg=" + secondLeg
-                + ", color=" + getColor();
+                + ", color=" + getColor());
     }
 }

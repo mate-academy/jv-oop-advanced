@@ -10,10 +10,10 @@ public class Main {
         for (int i = 0; i < FIGURES_QUANTITY; i++) {
             if (i < RANDOM_FIGURES_QUANTITY) {
                 figures[i] = randomFigure.getRandomFigure();
-                System.out.println(figures[i].toString());
+                figures[i].drawArea();
             } else {
                 figures[i] = randomFigure.getDefaultFigure();
-                System.out.println(figures[i].toString());
+                figures[i].drawArea();
             }
         }
     }
