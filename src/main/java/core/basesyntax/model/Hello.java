@@ -10,7 +10,11 @@ public class Hello {
         Figure[] figures = new Figure[new Random().nextInt(10)];
 
         for (int i = 0; i < figures.length; i++) {
-            figures[i] = figureSupplier.getRandomFigure();
+            if (i <=  figures.length / 2) {
+                figures[i] = figureSupplier.getDefaultFigure();
+            } else {
+                figures[i] = figureSupplier.getRandomFigure();
+            }
         }
 
         for (Figure figure : figures) {
