@@ -24,7 +24,8 @@ public class IsoscelesTrapezoid extends Figure {
         str.append("Figure: ").append(this.FIGURE_NAME)
                 .append(", area: ").append(this.getArea()).append(" sq.units, baseSide a: ")
                 .append(this.baseSideA).append(" units,  baseSide b: ")
-                .append(this.baseSideB).append(" units, height: ").append(this.height).append(" units, color: ").append(super.getColor()).toString();
+                .append(this.baseSideB).append(" units, height: ")
+                .append(this.height).append(" units, color: ").append(super.getColor()).toString();
         System.out.println(str);
     }
 }
