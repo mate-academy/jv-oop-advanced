@@ -1,13 +1,12 @@
 package core.basesyntax.entity;
 
 import core.basesyntax.Figure;
-import java.util.Random;
 
 public class Square extends Figure {
     private int side;
 
-    public Square() {
-        side = new Random().nextInt(MAX_VALUE);
+    public Square(int side) {
+        this.side = side;
     }
 
     @Override
@@ -18,6 +17,6 @@ public class Square extends Figure {
     @Override
     public String drawFigure() {
         return "Figure: square, area: " + getArea() + " sq.units, side: "
-                + side + " units, color: " + super.color;
+                + side + " units, color: " + super.getColor();
     }
 }

@@ -11,34 +11,37 @@ import core.basesyntax.entity.Square;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int DEFAULT_VALUE = 10;
+    private static final int MAX_VALUE = 100;
+    private Random random = new Random();
 
-    public Figure getRandomFigure() {
-        Figure figure = null;
-        int randomFigureNumber = new Random().nextInt(Figures.values().length);
+    public Figure getRandom() {
+        int randomFigureNumber = random.nextInt(Figures.values().length);
 
         switch (Figures.values()[randomFigureNumber]) {
             case SQUARE:
-                figure = new Square();
-                break;
+                return new Square(getDefaultValue());
             case RECTANGLE:
-                figure = new Rectangle();
-                break;
+                return new Rectangle(getDefaultValue(), getDefaultValue());
             case CIRCLE:
-                figure = new Circle();
-                break;
+                return new Circle(getDefaultValue());
             case RIGHTTRIANGLE:
-                figure = new RightTriangle();
-                break;
+                return new RightTriangle(getDefaultValue(), getDefaultValue());
             case ISOSCELESTRAPEZOID:
-                figure = new IsoscelesTrapezoid();
-                break;
+                return new IsoscelesTrapezoid(getDefaultValue(),
+                        getDefaultValue(), getDefaultValue());
             default:
-                figure = getDefaultFigure();
+                return getDefaultFigure();
         }
-        return figure;
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, Colors.WHITE);
+        Circle defaultCircle = new Circle(DEFAULT_VALUE);
+        defaultCircle.setColor(Colors.WHITE.name());
+        return defaultCircle;
+    }
+
+    private int getDefaultValue() {
+        return random.nextInt(MAX_VALUE);
     }
 }

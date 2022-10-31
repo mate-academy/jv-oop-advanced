@@ -11,7 +11,7 @@ public class Main {
     public static void main(String[] args) {
         for (int i = 0; i < figures.length; i++) {
             if (i < figures.length / 2) {
-                figures[i] = new FigureSupplier().getRandomFigure();
+                figures[i] = new FigureSupplier().getRandom();
             } else {
                 figures[i] = new FigureSupplier().getDefaultFigure();
             }

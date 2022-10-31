@@ -1,19 +1,12 @@
 package core.basesyntax.entity;
 
-import core.basesyntax.Colors;
 import core.basesyntax.Figure;
-import java.util.Random;
 
 public class Circle extends Figure {
     private int radius;
 
-    public Circle() {
-        this.radius = new Random().nextInt(MAX_VALUE);
-    }
-
-    public Circle(int radius, Colors color) {
+    public Circle(int radius) {
         this.radius = radius;
-        super.color = color.toString();
     }
 
     @Override
@@ -24,7 +17,7 @@ public class Circle extends Figure {
     @Override
     public String drawFigure() {
         return "Figure: circle, area: " + getArea() + " sq.units, radius: "
-                + radius + " units, color: " + color;
+                + radius + " units, color: " + super.getColor();
     }
 }
 

@@ -1,15 +1,14 @@
 package core.basesyntax.entity;
 
 import core.basesyntax.Figure;
-import java.util.Random;
 
 public class Rectangle extends Figure {
     private int sideA;
     private int sideB;
 
-    public Rectangle() {
-        this.sideA = new Random().nextInt(MAX_VALUE);
-        this.sideB = new Random().nextInt(MAX_VALUE);
+    public Rectangle(int sideA, int sideB) {
+        this.sideA = sideA;
+        this.sideB = sideB;
     }
 
     @Override
@@ -20,7 +19,7 @@ public class Rectangle extends Figure {
     @Override
     public String drawFigure() {
         return "Figure: square, area: " + getArea() + " sq.units, side A: "
-                + sideA + " units, side B: " + sideB + " units, color: " + super.color;
+                + sideA + " units, side B: " + sideB + " units, color: " + super.getColor();
     }
 }
 
