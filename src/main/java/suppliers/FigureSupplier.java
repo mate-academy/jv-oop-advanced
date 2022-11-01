@@ -1,12 +1,17 @@
 package suppliers;
 
-import core.basesyntax.model.*;
-
+import core.basesyntax.model.Circle;
+import core.basesyntax.model.Color;
+import core.basesyntax.model.Figure;
+import core.basesyntax.model.IsoscelesTrapezoid;
+import core.basesyntax.model.Rectangle;
+import core.basesyntax.model.RightTriangle;
+import core.basesyntax.model.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private  static final String DEFAULT_COLOR = Color.WHITE.name();
-    private  static final byte DEFAULT_RADIUS = 10;
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
+    private static final byte DEFAULT_RADIUS = 10;
     private static final byte FIGURE_MAX_NUMBER = 4;
     private ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -50,6 +55,7 @@ public class FigureSupplier {
         return new RightTriangle(colorSupplier.getRandomColor(), getRandomInt(),
                 getRandomInt());
     }
+
     private Square getRandomSquare() {
         return new Square(colorSupplier.getRandomColor(), getRandomDouble());
     }
