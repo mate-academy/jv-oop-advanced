@@ -10,8 +10,8 @@ public class Main {
         for (int i = figureLists.length / 2; i < figureLists.length; i++) {
             figureLists[i] = new FigureSupplier().getDefaultFigure();
         }
-        for (Figure temp : figureLists) {
-            temp.draw();
+        for (Figure figure : figures) {
+            figure.draw();
         }
     }
 }
