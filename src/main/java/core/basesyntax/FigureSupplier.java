@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final String CIRCLE_COLOR = "white";
+    private static final String DEFAULT_CIRCLE_COLOR = Color.WHITE.name();
     private static final int CIRCLE_RADIUS = 10;
     private static final int MAX_VALUE = 10;
 
