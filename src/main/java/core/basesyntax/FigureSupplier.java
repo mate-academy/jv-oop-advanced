@@ -12,15 +12,20 @@ public class FigureSupplier {
     private Circle createCircle(String color) {
         return new Circle(color, random.nextInt(MAX_VALUE));
     }
+
     private IsoscelesTrapezoid createIsoscelesTrapezoid(String color) {
-        return new IsoscelesTrapezoid(color, random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
+        return new IsoscelesTrapezoid(color, random.nextInt(MAX_VALUE),
+                random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
     }
+
     private Rectangle createRectangle(String color) {
         return new Rectangle(color, random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
     }
+
     private RightTriangle createRightTriangle(String color) {
         return new RightTriangle(color, random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
     }
+
     private Square createSquare(String color) {
         return new Square(color, random.nextInt(MAX_VALUE));
     }
@@ -42,6 +47,7 @@ public class FigureSupplier {
                 return createSquare(color);
         }
     }
+
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_CIRCLE_COLOR, DEFAULT_CIRCLE_RADIUS);
     }
