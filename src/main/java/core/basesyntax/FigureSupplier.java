@@ -18,7 +18,7 @@ public class FigureSupplier {
 
         switch (figureType) {
             case CIRCLE:
-                return new Circle(color, param[0]);
+                return new Circle(color, random.nextInt(MAX_VALUE));
             case ISOSCELES_TRAPEZOID:
                 return new IsoscelesTrapezoid(color, param[0], param[1], param[2]);
             case RECTANGLE:
