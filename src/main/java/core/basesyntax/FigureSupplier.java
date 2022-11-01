@@ -12,9 +12,6 @@ public class FigureSupplier {
         FigureTypes figureType = FigureTypes.values()[index];
         String color = new ColorSupplier().getRandomColor();
 
-        for (int i = 0; i < param.length; i++) {
-            param[i] = new Random().nextInt(MAX_VALUE);
-        }
 
         switch (figureType) {
             case CIRCLE:
