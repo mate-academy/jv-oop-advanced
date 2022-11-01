@@ -7,10 +7,9 @@ public class Main {
         for (int i = 0; i < figureLists.length / 2; i++) {
             figureLists[i] = new FigureSupplier().getRandomFigure();
         }
-        figureLists[3] = new FigureSupplier().getDefaultFigure();
-        figureLists[4] = new Rectangle("GREEN", 2, 5);
-        figureLists[5] = new Square("BLACK", 3);
-
+        for (int i = figureLists.length / 2; i < figureLists.length; i++) {
+            figureLists[i] = new FigureSupplier().getDefaultFigure();
+        }
         for (Figure temp : figureLists) {
             temp.draw();
         }

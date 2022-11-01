@@ -3,31 +3,31 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final String DEFAULT_CIRCLE_COLOR = Color.WHITE.name();
+    private static final String DEFAULT_CIRCLE_COLOR = Colors.WHITE.name();
     private static final int DEFAULT_CIRCLE_RADIUS = 10;
     private static final int MAX_VALUE = 10;
+    Random random = new Random();
+    ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int index = new Random().nextInt(FigureTypes.values().length);
-        FigureTypes figureType = FigureTypes.values()[index];
-        String color = new ColorSupplier().getRandomColor();
-
+        FigureTypes figureType = FigureTypes.values()[random.nextInt(FigureTypes.values().length)];
+        String color = colorSupplier.getRandomColor();
 
         switch (figureType) {
             case CIRCLE:
                 return new Circle(color, random.nextInt(MAX_VALUE));
             case ISOSCELES_TRAPEZOID:
-                return new IsoscelesTrapezoid(color, param[0], param[1], param[2]);
+                return new IsoscelesTrapezoid(color, random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
             case RECTANGLE:
-                return new Rectangle(color, param[0], param[1]);
+                return new Rectangle(color, random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
             case RIGHT_TRIANGLE:
-                return new RightTriangle(color, param[0], param[1]);
+                return new RightTriangle(color, random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
             default:
-                return new Square(color, param[0]);
+                return new Square(color, random.nextInt(MAX_VALUE));
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(CIRCLE_COLOR, CIRCLE_RADIUS);
+        return new Circle(DEFAULT_CIRCLE_COLOR, DEFAULT_CIRCLE_RADIUS);
     }
 }

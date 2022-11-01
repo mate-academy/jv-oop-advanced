@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    public static final String FIGURE_NAME = "Right Triangle";
     private int firstLeg;
     private int secondLeg;
 
@@ -13,18 +12,18 @@ public class RightTriangle extends Figure {
 
     @Override
     public double getArea() {
-        return this.firstLeg * this.secondLeg / 2;
+        return firstLeg * secondLeg / 2;
     }
 
     @Override
     public void draw() {
-        StringBuilder str = new StringBuilder();
-        str.append("Figure: ").append(this.FIGURE_NAME)
-                .append(", area: ").append(this.getArea()).append(" sq.units, firstLeg: ")
-                .append(this.firstLeg).append(" units,  secondLeg: ")
-                .append(this.secondLeg).append(" units, color: ")
-                .append(super.getColor()).toString();
-        System.out.println(str);
+        StringBuilder sb = new StringBuilder();
+        sb.append("Figure: ").append(getClass().getSimpleName())
+                .append(", area: ").append(getArea()).append(" sq.units, firstLeg: ")
+                .append(firstLeg).append(" units,  secondLeg: ")
+                .append(secondLeg).append(" units, color: ")
+                .append(getColor()).toString();
+        System.out.println(sb);
     }
 
 }

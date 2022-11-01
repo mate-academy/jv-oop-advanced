@@ -10,15 +10,15 @@ public class Circle extends Figure {
 
     @Override
     public double getArea() {
-        return Math.PI * Math.pow(this.radius, 2);
+        return Math.PI * Math.pow(radius, 2);
     }
 
     @Override
     public void draw() {
         StringBuilder sb = new StringBuilder();
-        str.append("Figure: ").append(getClass().getSimpleName())
+        sb.append("Figure: ").append(getClass().getSimpleName())
                 .append(", area: ").append(getArea()).append(" sq.units, radius: ")
                 .append(radius).append(" units, color: ").append(getColor()).toString();
-        System.out.println(str);
+        System.out.println(sb);
     }
 }

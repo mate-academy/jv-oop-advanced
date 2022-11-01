@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    public static final String FIGURE_NAME = "Rectangle";
     private int sideA;
     private int sideB;
 
@@ -13,16 +12,16 @@ public class Rectangle extends Figure {
 
     @Override
     public double getArea() {
-        return this.sideA * this.sideB;
+        return sideA * sideB;
     }
 
     @Override
     public void draw() {
-        StringBuilder str = new StringBuilder();
-        str.append("Figure: ").append(this.FIGURE_NAME)
-                .append(", area: ").append(this.getArea()).append(" sq.units, side a: ")
-                .append(this.sideA).append(" units,  side b: ")
-                .append(this.sideB).append(" units, color: ").append(super.getColor()).toString();
-        System.out.println(str);
+        StringBuilder sb = new StringBuilder();
+        sb.append("Figure: ").append(getClass().getSimpleName())
+                .append(", area: ").append(getArea()).append(" sq.units, side a: ")
+                .append(sideA).append(" units,  side b: ")
+                .append(sideB).append(" units, color: ").append(getColor()).toString();
+        System.out.println(sb);
     }
 }
