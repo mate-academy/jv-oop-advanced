@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final String DEFAULT_CIRCLE_COLOR = Color.WHITE.name();
-    private static final int CIRCLE_RADIUS = 10;
+    private static final int DEFAULT_CIRCLE_RADIUS = 10;
     private static final int MAX_VALUE = 10;
 
     public Figure getRandomFigure() {
