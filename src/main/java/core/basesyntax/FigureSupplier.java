@@ -6,7 +6,6 @@ public class FigureSupplier {
     private static final String CIRCLE_COLOR = "white";
     private static final int CIRCLE_RADIUS = 10;
     private static final int MAX_VALUE = 10;
-    private int[] param = new int[3];
 
     public Figure getRandomFigure() {
         int index = new Random().nextInt(FigureTypes.values().length);
