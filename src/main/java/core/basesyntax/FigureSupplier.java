@@ -53,6 +53,3 @@ public class FigureSupplier {
     }
 }
 
-enum FigureTypes {
-    CIRCLE, ISOSCELES_TRAPEZOID, RECTANGLE, RIGHT_TRIANGLE, SQUARE
-}
