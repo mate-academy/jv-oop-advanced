@@ -1,8 +1,8 @@
 package core.basesyntax.service;
 
-import core.basesyntax.Colors;
+import core.basesyntax.Color;
 import core.basesyntax.Figure;
-import core.basesyntax.Figures;
+import core.basesyntax.FigureType;
 import core.basesyntax.entity.Circle;
 import core.basesyntax.entity.IsoscelesTrapezoid;
 import core.basesyntax.entity.Rectangle;
@@ -17,8 +17,8 @@ public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandom() {
-        int randomFigureNumber = random.nextInt(Figures.values().length);
-        switch (Figures.values()[randomFigureNumber]) {
+        int randomFigureNumber = random.nextInt(FigureType.values().length);
+        switch (FigureType.values()[randomFigureNumber]) {
             case SQUARE:
                 return getRandomSquare();
             case RECTANGLE:
@@ -57,7 +57,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Colors.WHITE.name(), DEFAULT_VALUE);
+        return new Circle(Color.WHITE.name(), DEFAULT_VALUE);
     }
 
     private int getRandomValue() {
