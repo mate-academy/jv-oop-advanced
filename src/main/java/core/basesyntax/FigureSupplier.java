@@ -6,7 +6,7 @@ public class FigureSupplier {
     private static final int NUMBER_FIGURES = 5;
     private static final int LENGTH_MAX = 100;
     private static final int CIRCLE_DEFAULT_RADIUS = 10;
-    private static final Double CIRCLE_DEFAULT_AREA = 314.0;
+    private static final double CIRCLE_DEFAULT_AREA = 314.0;
 
     private final Random random = new Random();
     private final ColorSupplier color = new ColorSupplier();

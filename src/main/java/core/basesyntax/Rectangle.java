@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private Double area;
+    private double area;
     private int side1;
     private int side2;
 

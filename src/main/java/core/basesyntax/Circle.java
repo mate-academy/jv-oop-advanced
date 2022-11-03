@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private Double area;
+    private double area;
     private int radius;
-    private static final Double PI_CONST = 3.14;
+    //private static final double PI_CONST = 3.14;
 
     public Circle() {
         super();
@@ -33,7 +33,7 @@ public class Circle extends Figure {
 
     @Override
     public void area() {
-        setArea(PI_CONST * 2 * radius);
+        setArea(Math.PI * 2 * radius);
     }
 
     @Override
