@@ -30,6 +30,22 @@ public class FigureSupplier {
         }
     }
 
+    public Figure getDefaultFigure() {
+        int indexFigure = random.nextInt(FIGURE_NUMBER);
+        switch (indexFigure) {
+            case 0:
+                return getDefaultCircle();
+            case 1:
+                return getDefaultRectangle();
+            case 2:
+                return getDefaultRightTriangle();
+            case 3:
+                return getDefaultSquare();
+            default:
+                return getDefaultIsoscelesTrapezoid();
+        }
+    }
+
     private int getRandomInt() {
         return random.nextInt(RANDOM_NUMBER);
     }
@@ -38,8 +54,12 @@ public class FigureSupplier {
         return random.nextDouble();
     }
 
-    public Figure getRandomCircle() {
+    private Figure getRandomCircle() {
         return new Circle(colorSupplier.getRandomColor(), getRandomInt());
+    }
+
+    private Figure getDefaultCircle() {
+        return new Circle("BLUE", 5);
     }
 
     private Figure getRandomRectangle() {
@@ -47,17 +67,33 @@ public class FigureSupplier {
                 getRandomDouble(), getRandomDouble());
     }
 
+    private Figure getDefaultRectangle() {
+        return new Rectangle("WHITE",5, 5);
+    }
+
     private Figure getRandomRightTriangle() {
         return new RightTriangle(colorSupplier.getRandomColor(),
                 getRandomInt(), getRandomInt());
+    }
+
+    private Figure getDefaultRightTriangle() {
+        return new RightTriangle("BLACK", 5, 5);
     }
 
     private Figure getRandomSquare() {
         return new Square(colorSupplier.getRandomColor(), getRandomInt());
     }
 
+    private Figure getDefaultSquare() {
+        return new Square("YELLOW",6);
+    }
+
     private Figure getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomDouble(),
                 getRandomDouble(), getRandomDouble());
+    }
+
+    private Figure getDefaultIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid("Black", 5.0, 5.0, 5.0);
     }
 }
