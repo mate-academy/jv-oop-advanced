@@ -14,11 +14,11 @@ public class Circle extends Figure implements AreaCalculator, FigureInformation 
     @Override
     public String draw() {
         return ("Figure: circle, area: " + getArea() + " sg.units, radius: " + radius
-                + " units, color: " + color);
+                + " units, color: " + getColor());
     }
 
     @Override
     public String drawDefault() {
-        return ("Figure: circle, color: " + color + " radius: " + radius + " units");
+        return ("Figure: circle, color: " + getColor() + " radius: " + radius + " units");
     }
 }

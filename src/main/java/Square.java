@@ -13,6 +13,6 @@ public class Square extends Figure implements AreaCalculator, FigureInformation 
 
     public String draw() {
         return ("Figure: square, area: " + getArea() + " sg.units, side: " + side
-                + " units, color: " + color);
+                + " units, color: " + getColor());
     }
 }

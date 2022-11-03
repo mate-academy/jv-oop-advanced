@@ -15,6 +15,6 @@ public class RightTriangle extends Figure implements AreaCalculator, FigureInfor
 
     public String draw() {
         return ("Figure: right triangle, area: " + getArea() + " sg.units, first leg: "
-                + firstLeg + " units, second leg: " + secondLeg + " units, color: " + color);
+                + firstLeg + " units, second leg: " + secondLeg + " units, color: " + getColor());
     }
 }

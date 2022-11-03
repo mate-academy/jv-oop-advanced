@@ -1,5 +1,5 @@
 public class Figure implements FigureInformation {
-    String color;
+    private String color;
 
     public Figure(String color) {
         this.color = color;

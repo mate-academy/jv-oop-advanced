@@ -15,7 +15,7 @@ public class Rectangle extends Figure implements AreaCalculator, FigureInformati
 
     @Override
     public String draw() {
-        return ("Figure: rectangle, area: " + getArea() + " sg.units, first side: "
-                + firstSide + " units, second side: " + secondSide + " units, color: " + color);
+        return ("Figure: rectangle, area: " + getArea() + " sg.units, first side: " + firstSide
+                + " units, second side: " + secondSide + " units, color: " + getColor());
     }
 }
