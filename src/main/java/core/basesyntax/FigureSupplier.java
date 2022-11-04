@@ -6,35 +6,64 @@ public class FigureSupplier {
     public static final int MAX_SIZE = 100;
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
-    private Figure figure;
+
+    public Figure createSquare() {
+        int side = random.nextInt(MAX_SIZE) + 1;
+        String color = colorSupplier.getRandomColor();
+        Figure square = new Square(color,side);
+        return square;
+    }
+
+    public Figure createRectangle() {
+        int firstSide = random.nextInt(MAX_SIZE) + 1;
+        int secondSide = random.nextInt(MAX_SIZE) + 1;
+        String color = colorSupplier.getRandomColor();
+        Figure rectangle = new Rectangle(color,firstSide,secondSide);
+        return rectangle;
+    }
+
+    public Figure createRightTriangle() {
+        int firstLeg = random.nextInt(MAX_SIZE) + 1;
+        int secondLeg = random.nextInt(MAX_SIZE) + 1;
+        String color = colorSupplier.getRandomColor();
+        Figure rightTriangle = new RightTriangle(color,firstLeg,secondLeg);;
+        return rightTriangle;
+    }
+
+    public Figure createCircle() {
+        int radius = random.nextInt(MAX_SIZE) + 1;
+        String color = colorSupplier.getRandomColor();
+        Figure circle = new Circle(color,radius);
+        return circle;
+    }
+
+    public Figure createIsoscelesTrapezoid() {
+        int firstBase = random.nextInt(MAX_SIZE) + 1;
+        int secondBase = random.nextInt(MAX_SIZE) + 1;
+        int height = random.nextInt(MAX_SIZE) + 1;
+        String color = colorSupplier.getRandomColor();
+        Figure isoscelesTrapezoid = new IsoscelesTrapezoid(color,firstBase,secondBase,height);;
+        return isoscelesTrapezoid;
+    }
 
     public Figure getRandomFigure() {
-        int index = random.nextInt(MathFigure.values().length);
-        String color = colorSupplier.getRandomColor();
-        switch (MathFigure.values()[index]) {
+        Figure figure = getDefaultFigure();
+        int index = random.nextInt(FigureType.values().length);
+        switch (FigureType.values()[index]) {
             case SQUARE:
-                int side = random.nextInt(MAX_SIZE) + 1;
-                figure = new Square(color,side);
+                figure = createSquare();
                 break;
             case RECTANGLE:
-                int firstSide = random.nextInt(MAX_SIZE) + 1;
-                int secondSide = random.nextInt(MAX_SIZE) + 1;
-                figure = new Rectangle(color,firstSide,secondSide);
+                figure = createRectangle();
                 break;
             case RIGHT_TRIANGLE:
-                int firstLeg = random.nextInt(MAX_SIZE) + 1;
-                int secondLeg = random.nextInt(MAX_SIZE) + 1;
-                figure = new RightTriangle(color,firstLeg,secondLeg);
+                figure = createRightTriangle();
                 break;
             case CIRCLE:
-                int radius = random.nextInt(MAX_SIZE) + 1;
-                figure = new Circle(color,radius);
+                figure = createCircle();
                 break;
             case ISOSCELES_TRAPEZOID:
-                int firstBase = random.nextInt(MAX_SIZE) + 1;
-                int secondBase = random.nextInt(MAX_SIZE) + 1;
-                int height = random.nextInt(MAX_SIZE) + 1;
-                figure = new IsoscelesTrapezoid(color,firstBase,secondBase,height);
+                figure = createIsoscelesTrapezoid();
                 break;
             default:
                 break;
@@ -44,7 +73,7 @@ public class FigureSupplier {
 
     public Figure getDefaultFigure() {
         String color = Color.WHITE.name();
-        figure = new Circle(color,10);
+        Figure figure = new Circle(color,10);
         return figure;
     }
 }
