@@ -5,49 +5,53 @@ import java.util.Random;
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
     public static final int FIGURE_PROPERTY = 10;
-    public static final int FIGURE_DEFAULT = 10;
+    public static final int FIGURE_DEFAULT_PARAMETER = 10;
     public static final String COLOR_DEFAULT = "WHITE";
     private Random random = new Random();
-    private Figure figure;
+    //private Figure figure;
+
     private ColorSupplier colorSupplier = new ColorSupplier();
 
+    private String getColorRendom() {
+        return colorSupplier.getRandomColor();
+    }
+
+    private int getParameterRendom() {
+        return random.nextInt(FIGURE_PROPERTY);
+    }
+
     public Figure getRandomFigure() {
-        int figureNumber = random.nextInt(FIGURE_COUNT + 1);
+        Figure figure;
+        int figureNumber = random.nextInt(FIGURE_COUNT);
 
         switch (figureNumber) {
 
             case 1: {
-                int radius = random.nextInt(FIGURE_PROPERTY);
-                String color = colorSupplier.getRandomColor();
+                int radius = getParameterRendom();
+                String color = getColorRendom();
                 figure = new Circle(radius, color);
                 break;
             }
             case 2: {
-                int firstSide = random.nextInt(FIGURE_PROPERTY);
-                int secondSide = random.nextInt(FIGURE_PROPERTY);
-                int height = random.nextInt(FIGURE_PROPERTY);
-                String color = colorSupplier.getRandomColor();
+                int firstSide = getParameterRendom();
+                int secondSide = getParameterRendom();
+                int height = getParameterRendom();
+                String color = getColorRendom();
                 figure = new IsoscelesTrapezoid(color, firstSide, secondSide, height);
                 break;
             }
             case 3: {
-                int firstSide = random.nextInt(FIGURE_PROPERTY);
-                int secondSide = random.nextInt(FIGURE_PROPERTY);
-                String color = colorSupplier.getRandomColor();
+                int firstSide = getParameterRendom();
+                int secondSide = getParameterRendom();
+                String color = getColorRendom();
                 figure = new Rectangle(color, firstSide, secondSide);
                 break;
             }
             case 4: {
-                int firstLeg = random.nextInt(FIGURE_PROPERTY);
-                int secondLeg = random.nextInt(FIGURE_PROPERTY);
-                String color = colorSupplier.getRandomColor();
+                int firstLeg = getParameterRendom();
+                int secondLeg = getParameterRendom();
+                String color = getColorRendom();
                 figure = new RightTriangle(color, firstLeg, secondLeg);
-                break;
-            }
-            case 5: {
-                int side = random.nextInt(FIGURE_PROPERTY);
-                String color = colorSupplier.getRandomColor();
-                figure = new Square(color, side);
                 break;
             }
             default: {
@@ -61,9 +65,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        int radius = FIGURE_DEFAULT;
-        String color = COLOR_DEFAULT;
-        figure = new Circle(radius, color);
-        return figure;
+        return new Circle(FIGURE_DEFAULT_PARAMETER, COLOR_DEFAULT);
     }
 }
