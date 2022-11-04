@@ -18,9 +18,4 @@ public class Circle extends Figure {
         return ("Figure: circle, area: " + getArea() + " sg.units, radius: " + radius
                 + " units, color: " + getColor());
     }
-
-    @Override
-    public String drawDefault() {
-        return ("Figure: circle, color: " + super.getColor() + " radius: " + radius + " units");
-    }
 }
