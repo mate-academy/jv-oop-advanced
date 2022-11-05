@@ -25,7 +25,7 @@ public class IsoscelesTrapezoid extends Rectangle {
     }
 
     @Override
-    public String drawFigure() {
+    public String toString() {
         return "Figure: " + figureType + ", area: " + getArea() + " sq.units, top side: "
                 + getOneSide() + " units, bottom side: "
                 + getSecondSide() + " units, higher: " + getHigher()

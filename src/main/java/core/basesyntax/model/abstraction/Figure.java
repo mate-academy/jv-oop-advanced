@@ -24,8 +24,4 @@ public abstract class Figure implements DescribeFigures {
         return 0;
     }
 
-    @Override
-    public String drawFigure() {
-        return null;
-    }
 }

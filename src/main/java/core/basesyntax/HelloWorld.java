@@ -1,28 +1,27 @@
 package core.basesyntax;
 
-import core.basesyntax.model.Circle;
-import core.basesyntax.model.IsoscelesTrapezoid;
-import core.basesyntax.model.Rectangle;
-import core.basesyntax.model.RightTriangle;
-import core.basesyntax.model.Square;
-import core.basesyntax.model.abstraction.Color;
 import core.basesyntax.model.abstraction.Figure;
+import core.basesyntax.supplier.FigureSupplier;
 
 /**
  * Feel free to remove this class and create your own.
  */
 public class HelloWorld {
     public static void main(String[] args) {
+        FigureSupplier figureSupplier = new FigureSupplier();
 
-        Circle circle = new Circle(Color.PURPLE,3);
-        Square square = new Square(Color.ORANGE,5);
-        Rectangle rectangle = new Rectangle(Color.RED,2,1);
-        IsoscelesTrapezoid trapezoid = new IsoscelesTrapezoid(Color.BLACK,1,2,3);
-        RightTriangle rightTriangle = new RightTriangle(Color.GREEN,2,3);
+        Figure[] figures = new Figure[6];
 
-        Figure[] figures = {circle, square, rectangle, trapezoid, rightTriangle};
+        for (int i = 0; i < figures.length; i++) {
+            if (i < figures.length / 2) {
+                figures[i] = figureSupplier.getRandomFigure();
+            } else {
+                figures[i] = figureSupplier.getDefaultFigure();
+            }
+        }
+
         for (Figure figure : figures) {
-            System.out.println(figure.drawFigure());
+            System.out.println(figure);
         }
     }
 }

@@ -24,7 +24,7 @@ public class Rectangle extends Square {
     }
 
     @Override
-    public String drawFigure() {
+    public String toString() {
         return "Figure: " + figureType + ", area: " + getArea() + " sq.units, one side: "
                 + getOneSide() + " units, second side: " + getSecondSide() + " color: "
                 + getColor().toString().toLowerCase();

@@ -28,7 +28,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String drawFigure() {
+    public String toString() {
         return "Figure: " + figureType + ", area: " + getArea() + " sq.units, radius: "
                 + getRadius() + " units, color: " + getColor().toString().toLowerCase();
     }
