@@ -42,7 +42,7 @@ public class FigureSupplier {
         int secondBase = random.nextInt(MAX_SIZE) + 1;
         int height = random.nextInt(MAX_SIZE) + 1;
         String color = colorSupplier.getRandomColor();
-        Figure isoscelesTrapezoid = new IsoscelesTrapezoid(color, firstBase, secondBase, height);;
+        Figure isoscelesTrapezoid = new IsoscelesTrapezoid(color, firstBase, secondBase, height);
         return isoscelesTrapezoid;
     }
 
