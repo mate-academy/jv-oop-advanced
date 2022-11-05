@@ -23,4 +23,3 @@ public class Square extends Figure {
                 + getColor().toLowerCase();
     }
 }
-
