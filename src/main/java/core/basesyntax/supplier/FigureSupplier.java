@@ -7,7 +7,6 @@ import core.basesyntax.model.RightTriangle;
 import core.basesyntax.model.Square;
 import core.basesyntax.model.abstraction.Color;
 import core.basesyntax.model.abstraction.Figure;
-
 import java.util.Random;
 
 public class FigureSupplier {
@@ -16,7 +15,6 @@ public class FigureSupplier {
     private static final int NUMBER_RANGE = 50;
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
-
 
     public Figure getRandomFigure() {
         switch (random.nextInt(FIGURУS_NUMBER)) {
@@ -61,6 +59,6 @@ public class FigureSupplier {
     }
 
     private int getRandomInt() {
-        return random.nextInt(NUMBER_RANGE)+1;
+        return random.nextInt(NUMBER_RANGE) + 1;
     }
 }
