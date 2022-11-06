@@ -1,27 +1,20 @@
 package core.basesyntax.model.abstraction;
 
-public abstract class Figure implements DescribeFigures {
-    protected String figureType = getClass().getSimpleName().toLowerCase();
+public abstract class Figure implements AreaCalculator, DrawFigure {
     private Color color;
 
-    protected Figure() {
+    public Figure() {
     }
 
-    protected Figure(Color color) {
+    public Figure(Color color) {
         this.color = color;
     }
 
-    protected Color getColor() {
+    public Color getColor() {
         return color;
     }
 
-    protected void setColor(Color color) {
+    public void setColor(Color color) {
         this.color = color;
     }
-
-    @Override
-    public double getArea() {
-        return 0;
-    }
-
 }

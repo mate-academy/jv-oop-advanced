@@ -4,7 +4,6 @@ import core.basesyntax.model.abstraction.Color;
 
 public class IsoscelesTrapezoid extends Rectangle {
     private int higher;
-    private String figureType = "isosceles trapezoid";
 
     public IsoscelesTrapezoid(Color color, int oneSide, int secondSide, int higher) {
         super(color, oneSide, secondSide);
@@ -25,8 +24,8 @@ public class IsoscelesTrapezoid extends Rectangle {
     }
 
     @Override
-    public String toString() {
-        return "Figure: " + figureType + ", area: " + getArea() + " sq.units, top side: "
+    public String drawFigure() {
+        return "Figure: " + "isosceles trapezoid" + ", area: " + getArea() + " sq.units, top side: "
                 + getOneSide() + " units, bottom side: "
                 + getSecondSide() + " units, higher: " + getHigher()
                 + " units, color: " + getColor().toString().toLowerCase();

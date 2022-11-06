@@ -1,5 +1,5 @@
 package core.basesyntax.model.abstraction;
 
-public interface DescribeFigures {
+public interface AreaCalculator {
     double getArea();
 }

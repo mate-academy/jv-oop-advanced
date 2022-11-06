@@ -21,7 +21,7 @@ public class HelloWorld {
         }
 
         for (Figure figure : figures) {
-            System.out.println(figure);
+            System.out.println(figure.drawFigure());
         }
     }
 }

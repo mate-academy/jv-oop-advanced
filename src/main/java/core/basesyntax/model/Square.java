@@ -9,7 +9,6 @@ public class Square extends Figure {
     public Square(Color color, int oneSide) {
         super(color);
         this.oneSide = oneSide;
-        getClass().getSimpleName();
     }
 
     public int getOneSide() {
@@ -26,8 +25,8 @@ public class Square extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "Figure: " + figureType + ", area: " + getArea() + " sq.units, side: "
+    public String drawFigure() {
+        return "Figure: " + "square" + ", area: " + getArea() + " sq.units, side: "
                 + getOneSide() + " units, color: " + getColor().toString().toLowerCase();
     }
 }
