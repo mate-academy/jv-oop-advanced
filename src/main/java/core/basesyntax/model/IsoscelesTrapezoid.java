@@ -1,13 +1,34 @@
 package core.basesyntax.model;
 
 import core.basesyntax.model.abstraction.Color;
+import core.basesyntax.model.abstraction.Figure;
 
-public class IsoscelesTrapezoid extends Rectangle {
+public class IsoscelesTrapezoid extends Figure {
     private int higher;
+    private int oneSide;
+    private int secondSide;
 
-    public IsoscelesTrapezoid(Color color, int oneSide, int secondSide, int higher) {
-        super(color, oneSide, secondSide);
+    public IsoscelesTrapezoid(Color color, int higher, int oneSide, int secondSide) {
+        super(color);
         this.higher = higher;
+        this.oneSide = oneSide;
+        this.secondSide = secondSide;
+    }
+
+    public int getOneSide() {
+        return oneSide;
+    }
+
+    public void setOneSide(int oneSide) {
+        this.oneSide = oneSide;
+    }
+
+    public int getSecondSide() {
+        return secondSide;
+    }
+
+    public void setSecondSide(int secondSide) {
+        this.secondSide = secondSide;
     }
 
     public int getHigher() {

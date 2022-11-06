@@ -1,5 +1,5 @@
 package core.basesyntax.model.abstraction;
 
-public interface DrawFigure {
+public interface Draw {
     String drawFigure();
 }

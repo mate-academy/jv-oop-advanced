@@ -13,6 +13,7 @@ public class FigureSupplier {
     private static final int FIGURУS_NUMBER = 5;
     private static final int DEFAULT_CIRCLE_RADIUS = 5;
     private static final int NUMBER_RANGE = 50;
+    private static final Color DEFAULT_CIRCLE_COLOR = Color.WHITE;
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
 
@@ -55,7 +56,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE, DEFAULT_CIRCLE_RADIUS);
+        return new Circle(DEFAULT_CIRCLE_COLOR, DEFAULT_CIRCLE_RADIUS);
     }
 
     private int getRandomInt() {
