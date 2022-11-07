@@ -8,5 +8,5 @@ import lombok.RequiredArgsConstructor;
 @Getter
 @RequiredArgsConstructor
 public abstract class Figure implements Drawable, AreaCalculator {
-    private final Color color;
+    protected final Color color;
 }

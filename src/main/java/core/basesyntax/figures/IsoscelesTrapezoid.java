@@ -6,9 +6,7 @@ import lombok.Getter;
 @Getter
 public class IsoscelesTrapezoid extends Figure {
     private final int topSide;
-
     private final int downside;
-
     private final int height;
 
     public IsoscelesTrapezoid(Color color, int topSide, int downside, int height) {
@@ -16,7 +14,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.topSide = topSide;
         this.downside = downside;
         this.height = height;
-
     }
 
     @Override
@@ -24,13 +21,13 @@ public class IsoscelesTrapezoid extends Figure {
         String info = "isosceles trapezoid: area = "
                 + calculateArea()
                 + " sq.units, topSide = "
-                + getTopSide()
+                + topSide
                 + " units, downside = "
-                + getDownside()
+                + downside
                 + " units, height = "
-                + getHeight()
+                + height
                 + " units, color = "
-                + getColor().name().toLowerCase()
+                + color.name().toLowerCase()
                 + '.';
         System.out.println(info);
     }

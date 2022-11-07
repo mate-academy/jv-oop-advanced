@@ -6,7 +6,6 @@ import lombok.Getter;
 @Getter
 public class RightTriangle extends Figure {
     private final int firstLeg;
-
     private final int secondLeg;
 
     public RightTriangle(Color color, int firstLeg, int secondLeg) {
@@ -20,11 +19,11 @@ public class RightTriangle extends Figure {
         String info = "right triangle: area = "
                 + calculateArea()
                 + " sq.units, firstLeg = "
-                + getFirstLeg()
+                + firstLeg
                 + " units, secondLeg = "
-                + getSecondLeg()
+                + secondLeg
                 + " units, color = "
-                + getColor().name().toLowerCase()
+                + color.name().toLowerCase()
                 + '.';
 
         System.out.println(info);

@@ -6,5 +6,4 @@ public enum FigureType {
     RECTANGLE,
     RIGHT_TRIANGLE,
     SQUARE
-
 }

@@ -6,7 +6,6 @@ import lombok.Getter;
 @Getter
 public class Rectangle extends Figure {
     private final int width;
-
     private final int length;
 
     public Rectangle(Color color, int width, int length) {
@@ -20,11 +19,11 @@ public class Rectangle extends Figure {
         String info = "rectangle: area = "
                 + calculateArea()
                 + " sq.units, width = "
-                + getWidth()
+                + width
                 + " units, length = "
-                + getLength()
+                + length
                 + " units, color = "
-                + getColor().name().toLowerCase()
+                + color.name().toLowerCase()
                 + '.';
         System.out.println(info);
     }

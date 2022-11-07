@@ -17,9 +17,9 @@ public class Square extends Figure {
         String info = "Square: area = "
                 + calculateArea()
                 + " sq.units, side = "
-                + getSide()
+                + side
                 + " units, color = "
-                + getColor().name().toLowerCase()
+                + color.name().toLowerCase()
                 + '.';
         System.out.println(info);
     }
