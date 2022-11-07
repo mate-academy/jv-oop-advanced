@@ -28,8 +28,10 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String drawFigure() {
-        return "Figure: " + "circule" + ", area: " + getArea() + " sq.units, radius: "
-                + getRadius() + " units, color: " + getColor().toString().toLowerCase();
+    public void draw() {
+        System.out.println("Figure: " + "circule" + ", area: "
+                + getArea() + " sq.units, radius: "
+                + getRadius() + " units, color: "
+                + getColor().name().toLowerCase());
     }
 }

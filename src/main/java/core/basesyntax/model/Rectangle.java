@@ -35,9 +35,11 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String drawFigure() {
-        return "Figure: " + "rectangle" + ", area: " + getArea() + " sq.units, one side: "
-                + getOneSide() + " units, second side: " + getSecondSide() + " color: "
-                + getColor().toString().toLowerCase();
+    public void draw() {
+        System.out.println("Figure: " + "rectangle" + ", area: "
+                + getArea() + " sq.units, one side: "
+                + getOneSide() + " units, second side: "
+                + getSecondSide() + " color: "
+                + getColor().name().toLowerCase());
     }
 }

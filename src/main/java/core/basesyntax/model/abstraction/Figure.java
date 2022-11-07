@@ -1,6 +1,6 @@
 package core.basesyntax.model.abstraction;
 
-public abstract class Figure implements AreaCalculator, Draw {
+public abstract class Figure implements AreaCalculator, Drawable {
     private Color color;
 
     public Figure() {
