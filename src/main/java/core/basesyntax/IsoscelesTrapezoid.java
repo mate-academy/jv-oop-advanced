@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private static final String name = "trapezoid";
     private final int sideA;
     private final int sideB;
     private final int height;
@@ -14,9 +13,9 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public void getInfo() {
-        System.out.println("Figure: " + name
-                + ", area: " + df.format(getArea()) + " sq.units"
+    public void draw() {
+        System.out.println("Figure: trapezoid"
+                + ", area: " + getArea() + " sq.units"
                 + ", side A: " + this.sideA
                 + ", side B: " + this.sideB
                 + ", height: " + this.height
@@ -25,6 +24,6 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double getArea() {
-        return ((this.sideA + this.sideB) / 2) * this.height;
+        return ((this.sideA + this.sideB) / 2.0) * this.height;
     }
 }

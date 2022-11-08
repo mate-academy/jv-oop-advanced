@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    private static final String name = "square";
     private final int side;
 
     public Square(String color, int side) {
@@ -10,9 +9,9 @@ public class Square extends Figure {
     }
 
     @Override
-    public void getInfo() {
-        System.out.println("Figure: " + name
-                + ", area: " + df.format(getArea()) + " sq.units"
+    public void draw() {
+        System.out.println("Figure: square"
+                + ", area: " + getArea() + " sq.units"
                 + ", side: " + this.side
                 + ", color: " + getColor().toLowerCase());
     }
