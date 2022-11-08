@@ -13,29 +13,44 @@ public class FigureSupplier {
         return DEFAULT_FIGURE;
     }
 
-    private int getShapeArgument() {
-        return random.nextInt(MAX_SHAPE_VALUE + 1) + MIN_SHAPE_VALUE;
-    }
-
     public Figure getRandomFigure() {
         String color = colorSupplier.getRandomColor();
         String figureName = Figures.values()[random.nextInt(Figures.values().length)].name();
         switch (figureName) {
             case "CIRCLE":
-                return new Circle(color,
-                        getShapeArgument());
+                return getCircle(color);
             case "ISOSCELES_TRAPEZOID":
-                return new IsoscelesTrapezoid(color,
-                        getShapeArgument(), getShapeArgument(), getShapeArgument());
+                return getIsoscelesTrapezoid(color);
             case "RECTANGLE":
-                return new Rectangle(color,
-                        getShapeArgument(), getShapeArgument());
+                return getRectangle(color);
             case "RIGHT_TRIANGLE":
-                return new RightTriangle(color,
-                        getShapeArgument(), getShapeArgument());
+                return getRightTriangle(color);
             default:
-                return new Square(color,
-                        getShapeArgument());
+                return getSquare(color);
         }
+    }
+
+    private int getShapeArgument() {
+        return random.nextInt(MAX_SHAPE_VALUE + 1) + MIN_SHAPE_VALUE;
+    }
+
+    private Figure getCircle(String color) {
+        return new Circle(color, getShapeArgument());
+    }
+
+    private Figure getIsoscelesTrapezoid(String color) {
+        return new IsoscelesTrapezoid(color, getShapeArgument(), getShapeArgument(), getShapeArgument());
+    }
+
+    private Figure getRectangle(String color) {
+        return new Rectangle(color, getShapeArgument(), getShapeArgument());
+    }
+
+    private Figure getRightTriangle(String color) {
+        return new RightTriangle(color, getShapeArgument(), getShapeArgument());
+    }
+
+    private Figure getSquare(String color) {
+        return new Square(color, getShapeArgument());
     }
 }
