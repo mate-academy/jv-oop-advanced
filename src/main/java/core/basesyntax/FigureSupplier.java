@@ -13,28 +13,29 @@ public class FigureSupplier {
         return DEFAULT_FIGURE;
     }
 
+    private int getShapeArgument() {
+        return random.nextInt(MAX_SHAPE_VALUE + 1) + MIN_SHAPE_VALUE;
+    }
+
     public Figure getRandomFigure() {
-        int firstArgument = random.nextInt(MAX_SHAPE_VALUE + 1) + MIN_SHAPE_VALUE;
-        int secondArgument = random.nextInt(MAX_SHAPE_VALUE + 1) + MIN_SHAPE_VALUE;
-        int thirdArgument = random.nextInt(MAX_SHAPE_VALUE + 1) + MIN_SHAPE_VALUE;
         String color = colorSupplier.getRandomColor();
         String figureName = Figures.values()[random.nextInt(Figures.values().length)].name();
         switch (figureName) {
             case "CIRCLE":
                 return new Circle(color,
-                        firstArgument);
+                        getShapeArgument());
             case "ISOSCELES_TRAPEZOID":
                 return new IsoscelesTrapezoid(color,
-                        firstArgument, secondArgument, thirdArgument);
+                        getShapeArgument(), getShapeArgument(), getShapeArgument());
             case "RECTANGLE":
                 return new Rectangle(color,
-                        firstArgument, secondArgument);
+                        getShapeArgument(), getShapeArgument());
             case "RIGHT_TRIANGLE":
                 return new RightTriangle(color,
-                        firstArgument, secondArgument);
+                        getShapeArgument(), getShapeArgument());
             default:
                 return new Square(color,
-                        firstArgument);
+                        getShapeArgument());
         }
     }
 }
