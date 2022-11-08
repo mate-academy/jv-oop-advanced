@@ -39,18 +39,26 @@ public class FigureSupplier {
     }
 
     private Figure getIsoscelesTrapezoid(String color) {
-        return new IsoscelesTrapezoid(color, getShapeArgument(), getShapeArgument(), getShapeArgument());
+        return new IsoscelesTrapezoid(color,
+                getShapeArgument(),
+                getShapeArgument(),
+                getShapeArgument());
     }
 
     private Figure getRectangle(String color) {
-        return new Rectangle(color, getShapeArgument(), getShapeArgument());
+        return new Rectangle(color,
+                getShapeArgument(),
+                getShapeArgument());
     }
 
     private Figure getRightTriangle(String color) {
-        return new RightTriangle(color, getShapeArgument(), getShapeArgument());
+        return new RightTriangle(color,
+                getShapeArgument(),
+                getShapeArgument());
     }
 
     private Figure getSquare(String color) {
-        return new Square(color, getShapeArgument());
+        return new Square(color,
+                getShapeArgument());
     }
 }
