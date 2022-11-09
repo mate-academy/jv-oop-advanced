@@ -12,7 +12,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int DEFAULT_RADIUS = 10;
-    private static final Color DEFAULT_COLOR = Color.WHITE;
+    private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
@@ -28,9 +28,8 @@ public class FigureSupplier {
             case RIGHT_TRIANGLE:
                 return getRandomRightTriangle();
             case SQUARE:
-                return getRandomSquare();
             default:
-                return null;
+                return getRandomSquare();
         }
     }
 
@@ -40,13 +39,13 @@ public class FigureSupplier {
 
     private Circle getRandomCircle() {
         return new Circle(
-                Color.valueOf(colorSupplier.getRandomColor()),
+                colorSupplier.getRandomColor(),
                 random.nextInt());
     }
 
     private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(
-                Color.valueOf(colorSupplier.getRandomColor()),
+                colorSupplier.getRandomColor(),
                 random.nextInt(),
                 random.nextInt(),
                 random.nextInt());
@@ -54,21 +53,21 @@ public class FigureSupplier {
 
     private Rectangle getRandomRectangle() {
         return new Rectangle(
-                Color.valueOf(colorSupplier.getRandomColor()),
+                colorSupplier.getRandomColor(),
                 random.nextInt(),
                 random.nextInt());
     }
 
     private RightTriangle getRandomRightTriangle() {
         return new RightTriangle(
-                Color.valueOf(colorSupplier.getRandomColor()),
+                colorSupplier.getRandomColor(),
                 random.nextInt(),
                 random.nextInt());
     }
 
     private Square getRandomSquare() {
         return new Square(
-                Color.valueOf(colorSupplier.getRandomColor()),
+                colorSupplier.getRandomColor(),
                 random.nextInt());
     }
 }

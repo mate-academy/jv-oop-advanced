@@ -1,6 +1,5 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.constants.Color;
 import lombok.Getter;
 
 @Getter
@@ -8,7 +7,7 @@ public class Rectangle extends Figure {
     private final int width;
     private final int length;
 
-    public Rectangle(Color color, int width, int length) {
+    public Rectangle(String color, int width, int length) {
         super(color);
         this.width = width;
         this.length = length;
@@ -16,16 +15,15 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        String info = "rectangle: area = "
+        System.out.println("rectangle: area = "
                 + calculateArea()
                 + " sq.units, width = "
                 + width
                 + " units, length = "
                 + length
                 + " units, color = "
-                + color.name().toLowerCase()
-                + '.';
-        System.out.println(info);
+                + color.toLowerCase()
+                + '.');
     }
 
     @Override

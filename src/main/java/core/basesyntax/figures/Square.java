@@ -1,27 +1,25 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.constants.Color;
 import lombok.Getter;
 
 @Getter
 public class Square extends Figure {
     private final int side;
 
-    public Square(Color color, int side) {
+    public Square(String color, int side) {
         super(color);
         this.side = side;
     }
 
     @Override
     public void draw() {
-        String info = "Square: area = "
+        System.out.println("Square: area = "
                 + calculateArea()
                 + " sq.units, side = "
                 + side
                 + " units, color = "
-                + color.name().toLowerCase()
-                + '.';
-        System.out.println(info);
+                + color.toLowerCase()
+                + '.');
     }
 
     @Override

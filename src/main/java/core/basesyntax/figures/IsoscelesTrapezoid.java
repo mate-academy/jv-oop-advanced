@@ -1,6 +1,5 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.constants.Color;
 import lombok.Getter;
 
 @Getter
@@ -9,7 +8,7 @@ public class IsoscelesTrapezoid extends Figure {
     private final int downside;
     private final int height;
 
-    public IsoscelesTrapezoid(Color color, int topSide, int downside, int height) {
+    public IsoscelesTrapezoid(String color, int topSide, int downside, int height) {
         super(color);
         this.topSide = topSide;
         this.downside = downside;
@@ -18,7 +17,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        String info = "isosceles trapezoid: area = "
+        System.out.println("isosceles trapezoid: area = "
                 + calculateArea()
                 + " sq.units, topSide = "
                 + topSide
@@ -27,9 +26,8 @@ public class IsoscelesTrapezoid extends Figure {
                 + " units, height = "
                 + height
                 + " units, color = "
-                + color.name().toLowerCase()
-                + '.';
-        System.out.println(info);
+                + color.toLowerCase()
+                + '.');
     }
 
     @Override

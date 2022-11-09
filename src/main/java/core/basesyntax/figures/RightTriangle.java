@@ -1,6 +1,5 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.constants.Color;
 import lombok.Getter;
 
 @Getter
@@ -8,7 +7,7 @@ public class RightTriangle extends Figure {
     private final int firstLeg;
     private final int secondLeg;
 
-    public RightTriangle(Color color, int firstLeg, int secondLeg) {
+    public RightTriangle(String color, int firstLeg, int secondLeg) {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
@@ -16,17 +15,15 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        String info = "right triangle: area = "
+        System.out.println("right triangle: area = "
                 + calculateArea()
                 + " sq.units, firstLeg = "
                 + firstLeg
                 + " units, secondLeg = "
                 + secondLeg
                 + " units, color = "
-                + color.name().toLowerCase()
-                + '.';
-
-        System.out.println(info);
+                + color.toLowerCase()
+                + '.');
     }
 
     @Override
