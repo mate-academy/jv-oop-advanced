@@ -7,7 +7,7 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figure getRandomFigure ( int value ) {
+    public Figure getRandomFigure (int value) {
 
         switch (value) {
             case 1: return getDefaultFigure();
@@ -17,21 +17,25 @@ public class FigureSupplier {
             default: return getRandomSquare();
         }
     }
+
     private Figure getRandomSquare() {
 
         return new Square(colorSupplier.getRandomColor(),
                 random.nextInt(MAX_VALUE));
     }
+
     private Figure getRandomRectangle() {
 
         return new Rectangle(colorSupplier.getRandomColor(),
                 random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
     }
+
     private Figure getRandomRightTriangle() {
 
         return new RightTriangle(colorSupplier.getRandomColor(),
                 random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
     }
+
     private Figure getIsoscelesTrapezoid() {
 
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
