@@ -6,6 +6,7 @@ public class Figure implements Getable,Drawable {
     protected Figure(String color) {
         this.color = color;
     }
+
     public String getColor() {
         return color;
     }

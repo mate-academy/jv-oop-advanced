@@ -7,7 +7,7 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figure getRandomFigure (int value) {
+    public Figure getRandomFigure(int value) {
 
         switch (value) {
             case 1: return getDefaultFigure();
@@ -41,6 +41,7 @@ public class FigureSupplier {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                 random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
     }
+    
     public Figure getDefaultFigure() {
         return new Circle("WHITE", 10);
     }
