@@ -16,7 +16,7 @@ public class Rectangle extends Figure {
         this.side2 = side2;
     }
 
-    public Double getArea() {
+    public double getArea() {
         return area;
     }
 

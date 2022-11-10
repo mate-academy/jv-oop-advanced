@@ -16,7 +16,7 @@ public class RightTriangle extends Figure {
         this.secondLeg = secondLeg;
     }
 
-    public Double getArea() {
+    public double getArea() {
         return area;
     }
 

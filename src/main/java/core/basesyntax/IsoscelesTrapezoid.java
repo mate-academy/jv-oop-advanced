@@ -10,17 +10,17 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     public IsoscelesTrapezoid(String color, Double area, int firstLeg, int secondLeg) {
-        super();
+        super(color);
         this.area = area;
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
 
-    public Double getArea() {
+    public double getArea() {
         return area;
     }
 
-    public void setArea(Double area) {
+    public void setArea(double area) {
         this.area = area;
     }
 
@@ -42,7 +42,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void area() {
-        setArea((double)(firstLeg * secondLeg) / 2);
+        setArea((firstLeg * secondLeg) / 2);
     }
 
     @Override

@@ -3,21 +3,20 @@ package core.basesyntax;
 public class Circle extends Figure {
     private double area;
     private int radius;
-    //private static final double PI_CONST = 3.14;
 
     public Circle() {
         super();
     }
 
-    public Circle(String color, Double area, int radius) {
+    public Circle(String color, double area, int radius) {
         super(color);
         this.area = area;
         this.radius = radius;
     }
 
-    public Double getArea() {
-        return area;
-    }
+    /*public double getArea() {
+    //    return area;
+    }*/
 
     public void setArea(Double area) {
         this.area = area;
@@ -33,7 +32,7 @@ public class Circle extends Figure {
 
     @Override
     public void area() {
-        setArea(Math.PI * 2 * radius);
+        setArea(Math.PI * (radius * radius));
     }
 
     @Override

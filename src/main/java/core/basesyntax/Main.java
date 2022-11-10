@@ -10,7 +10,7 @@ public class Main {
             result.draw();
         }
         for (int i = 0; i < 3; i++) {
-            Figure result = figure.getDefaultFigure();
+            Figure result = figure.getDefaultCircle();
             result.draw();
         }
     }

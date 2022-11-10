@@ -14,7 +14,7 @@ public class Square extends Figure {
         this.side = side;
     }
 
-    public Double getArea() {
+    public double getArea() {
         return area;
     }
 
