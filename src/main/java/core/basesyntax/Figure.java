@@ -1,18 +1,18 @@
 package core.basesyntax;
 
-public class Figure implements getAble,drawAble {
+public class Figure implements getable,drawable {
     private String color;
 
     protected Figure(String color) {
         this.color = color;
     }
-
-   public String getColor() {
+    public String getColor() {
        return color;
         }
-        public void setColor (String color) {
-       this.color = color;
-        }
+        public void setColor ( String color ) {
+
+        this.color = color;
+    }
 
     @Override
     public void draw() {
