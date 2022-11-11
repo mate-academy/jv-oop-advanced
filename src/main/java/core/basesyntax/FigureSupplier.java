@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 import java.util.Random;
+
 public class FigureSupplier {
 
     private static final String DEFAULT_COLOR = "WHITE";
@@ -29,7 +30,8 @@ public class FigureSupplier {
 
             case 5:
                 return new IsoscelesTrapezoid(randomColor.getRandomColor(),
-                        random.nextInt(randomNum), random.nextInt(randomNum), random.nextInt(randomNum));
+                        random.nextInt(randomNum),
+                        random.nextInt(randomNum), random.nextInt(randomNum));
 
             default:
                 return new Square(DEFAULT_COLOR, MAX_NUMBER);
