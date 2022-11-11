@@ -6,7 +6,7 @@ public class FigureSupplier {
 
     private static final String DEFAULT_COLOR = "WHITE";
     private static final int DEFAULT_RADIUS = 10;
-    private static final int MAX_NUMBER = 6;
+    private static final int MAX_NUMBER = 8;
     private Random random = new Random();
     private ColorSupplier randomColor = new ColorSupplier();
 
@@ -34,7 +34,7 @@ public class FigureSupplier {
                         random.nextInt(randomNum), random.nextInt(randomNum));
 
             default:
-                return new Square(DEFAULT_COLOR, MAX_NUMBER);
+                return new Square(DEFAULT_COLOR, DEFAULT_RADIUS);
         }
     }
 
