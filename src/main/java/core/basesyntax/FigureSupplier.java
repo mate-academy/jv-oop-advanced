@@ -5,6 +5,8 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int MAX_VALUE_OF_UNITS_NUMBER = 100;
     private static final int NUMBER_OF_FIGURES = 5;
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
+    private static final int DEFAULT_RADIUS = 10;
     private ColorSupplier supplier = new ColorSupplier();
     private Random random = new Random();
 
@@ -20,36 +22,36 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.name(),10);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
-    public Circle getRandomCircle() {
+    private Circle getRandomCircle() {
         String randomColor = supplier.getRandomColor();
         int randomRadius = random.nextInt(MAX_VALUE_OF_UNITS_NUMBER);
         return new Circle(randomColor, randomRadius);
     }
 
-    public Square getRandomSquare() {
+    private Square getRandomSquare() {
         String randomColor = supplier.getRandomColor();
         int randomSide = random.nextInt(MAX_VALUE_OF_UNITS_NUMBER);
         return new Square(randomColor, randomSide);
     }
 
-    public RightTriangle getRandomTriangle() {
+    private RightTriangle getRandomTriangle() {
         String randomColor = supplier.getRandomColor();
         int randomFirstLeg = random.nextInt(MAX_VALUE_OF_UNITS_NUMBER);
         int randomSecondLeg = random.nextInt(MAX_VALUE_OF_UNITS_NUMBER);
         return new RightTriangle(randomColor, randomFirstLeg, randomSecondLeg);
     }
 
-    public Rectangle getRandomRectangle() {
+    private Rectangle getRandomRectangle() {
         String randomColor = supplier.getRandomColor();
         int randomLength = random.nextInt(MAX_VALUE_OF_UNITS_NUMBER);
         int randomWidth = random.nextInt(MAX_VALUE_OF_UNITS_NUMBER);
         return new Rectangle(randomColor, randomLength, randomWidth);
     }
 
-    public IsoscelesTrapezoid getRandomTrapezoid() {
+    private IsoscelesTrapezoid getRandomTrapezoid() {
         String randomColor = supplier.getRandomColor();
         int randomFirstUnits = random.nextInt(MAX_VALUE_OF_UNITS_NUMBER);
         int randomSecondUnits = random.nextInt(MAX_VALUE_OF_UNITS_NUMBER);
@@ -58,7 +60,7 @@ public class FigureSupplier {
         for a standardized view, the trapezoid should have
         the first (top) parallel side smaller than the second (bottom)
         */
-        if (randomFirstUnits < randomFirstUnits) {
+        if (randomFirstUnits < randomSecondUnits) {
             return new IsoscelesTrapezoid(randomColor,
                     randomFirstUnits, randomSecondUnits, randomHeight);
         } else if (randomFirstUnits > randomSecondUnits) {
