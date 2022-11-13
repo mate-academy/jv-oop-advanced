@@ -3,7 +3,6 @@ package core.basesyntax;
 import java.util.Random;
 
 
-
 public class FigureSupplier {
     private static final int MAX_VALUE = 7;
     private static final int FIGURE_NUMBER = 5;
