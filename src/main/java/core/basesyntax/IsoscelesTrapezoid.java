@@ -6,7 +6,6 @@ public class IsoscelesTrapezoid extends Figure {
     private final int height;
 
     protected IsoscelesTrapezoid(String color, int firstleg, int secondleg, int height) {
-
         super(color);
         this.firstleg = firstleg;
         this.secondleg = secondleg;
@@ -20,7 +19,6 @@ public class IsoscelesTrapezoid extends Figure {
                 + " units, secondleg:" + secondleg
                 + " units, height" + height
                 + " untis, color:" + getColor());
-
     }
 
     @Override
