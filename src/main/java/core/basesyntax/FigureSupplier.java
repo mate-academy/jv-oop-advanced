@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-import static java.lang.Math.random;
+
 
 public class FigureSupplier {
     private static final int MAX_VALUE = 7;
@@ -11,7 +11,7 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-       int number = random.nextInt(FIGURE_NUMBER);
+        int number = random.nextInt(FIGURE_NUMBER);
 
         switch (number) {
             case 1: return getDefaultFigure();
