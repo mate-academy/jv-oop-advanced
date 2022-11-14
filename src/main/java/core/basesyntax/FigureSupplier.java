@@ -8,7 +8,6 @@ public class FigureSupplier {
     private static final int MAX_NUMBER = 10;
     private Random random = new Random();
     private ColorSupplier randomColor = new ColorSupplier();
-    private int randomNum = random.nextInt(MAX_NUMBER);
 
     public Figure getRandomFigure() {
         int randomNumber = random.nextInt(MAX_NUMBER);
@@ -33,21 +32,21 @@ public class FigureSupplier {
     }
 
     private Figure getRandomSquare() {
-        return new Square(randomColor.getRandomColor(), random.nextInt(randomNum));
+        return new Square(randomColor.getRandomColor(), random.nextInt(MAX_NUMBER));
     }
 
     private Figure getRandomTriangle() {
         return new RightTriangle(randomColor.getRandomColor(),
-                random.nextInt(randomNum), random.nextInt(randomNum));
+                random.nextInt(MAX_NUMBER), random.nextInt(MAX_NUMBER));
     }
 
     private Figure getRandomCircle() {
-        return new Circle(randomColor.getRandomColor(), random.nextInt(randomNum));
+        return new Circle(randomColor.getRandomColor(), random.nextInt(MAX_NUMBER));
     }
 
     private Figure getRandomTrapezoid() {
         return new IsoscelesTrapezoid(randomColor.getRandomColor(),
-                random.nextInt(randomNum),
-                random.nextInt(randomNum), random.nextInt(randomNum));
+                random.nextInt(MAX_NUMBER),
+                random.nextInt(MAX_NUMBER), random.nextInt(MAX_NUMBER));
     }
 }
