@@ -6,7 +6,7 @@ public class FigureSupplier {
 
     private static final String DEFAULT_COLOR = "WHITE";
     private static final int DEFAULT_RADIUS = 10;
-    private static final int MAX_NUMBER = 3;
+    private static final int MAX_NUMBER = 10;
     private Random random = new Random();
     private ColorSupplier randomColor = new ColorSupplier();
     private int randomNum = random.nextInt(MAX_NUMBER);
@@ -31,8 +31,9 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
+        int randomNumber = random.nextInt(3);
 
-        switch (randomNum) {
+        switch (randomNumber) {
             case 1:
                 return getRandomCircle();
 
