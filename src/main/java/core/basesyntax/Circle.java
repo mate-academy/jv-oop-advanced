@@ -1,7 +1,8 @@
 package core.basesyntax;
 
-public class Circle extends ColorFigure implements  Figure {//s = PI*r*r;
-    private double radius = 10;
+public class Circle extends ColorFigure implements Figure {//s = PI*r*r;
+    private double radius;
+
     public Circle(double radius, String color) {
         this.radius = radius;
         this.color = color;
@@ -14,6 +15,7 @@ public class Circle extends ColorFigure implements  Figure {//s = PI*r*r;
 
     @Override
     public void draw() {
-        System.out.println("Figure: Circle, area: " + getArea() + "sq.units, " + "radius: " + radius + "color: " + color);
+        System.out.println("Figure: Circle, area: " + getArea() + " sq.units, "
+                            + " radius: " + radius + " color: " + color);
     }
 }

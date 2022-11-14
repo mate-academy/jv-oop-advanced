@@ -1,25 +1,28 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends ColorFigure implements Figure { //s = (a+b)/2 * h
-    private double a;
-    private double b;
-    private double h;
+    private double firstLeg;
+    private double secondLeg;
+    private double height;
 
-    public IsoscelesTrapezoid(double a, double b, double h, String color) {
-        this.a = a;
-        this.b = b;
-        this.h = h;
+    public IsoscelesTrapezoid(double firstLeg, double secondLeg, double height, String color) {
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
+        this.height = height;
         this.color = color;
     }
+
     @Override
     public double getArea() {
-        return (a + b)/2 * h;
+        return (firstLeg + secondLeg) / 2 * height;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure:isosceles trapezoid, area " + getArea() + "sq.units, " + "firstLeg: " + a + "units" +
-                "secondLeg: " + b + "units ," + "height: " + h + "units ," + "color: " + color);
+        System.out.println("Figure: isosceles trapezoid, area " + getArea() + " sq.units, "
+                            + " firstLeg: " + firstLeg + " units "
+                            + " secondLeg: " + secondLeg + " units ,"
+                            + " height: " + height + " units ," + " color: " + color);
     }
 
 }

@@ -1,23 +1,25 @@
 package core.basesyntax;
 
 public class Rectangle extends ColorFigure implements Figure {//s =a*b;
-    private double a;
-    private double b;
+    private double firstLeg;
+    private double secondLeg;
 
-    public Rectangle(double a, double b, String color) {
-        this.a = a;
-        this.b = b;
+    public Rectangle(double firstLeg, double secondLeg, String color) {
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
         this.color = color;
     }
+
     @Override
     public double getArea() {
-        return a * b;
+        return firstLeg * secondLeg;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: Rectangle, area: " + getArea() + " sq.units, " + " firstLeg: " + a + " units " +
-                " secondLeg: " + b + " units ," + " color: " + color);
+        System.out.println("Figure: Rectangle, area: " + getArea() + " sq.units, "
+                + " firstLeg: " + firstLeg + " units "
+                + " secondLeg: " + secondLeg + " units ," + " color: " + color);
     }
 }
 //Figure: square, area: 25.0 sq.units, side: 5 units, color: blue

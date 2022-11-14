@@ -1,21 +1,21 @@
 package core.basesyntax;
 
-public class Square extends ColorFigure implements Figure {//s = a*a
-    private double a;
+public class Square extends ColorFigure implements Figure {
+    private double side;
 
-    public Square(double a, String color) {
-        this.a = a;
+    public Square(double side, String color) {
+        this.side = side;
         this.color = color;
-     }
+    }
 
     @Override
     public double getArea() {
-        return a * a;
+        return side * side;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: square, area: " + getArea() + " sq.units, side: " + a + " units, color:" + color);
+        System.out.println("Figure: square, area: " + getArea() + " sq.units, side: " + side
+                            + " units, color:" + color);
     }
 }
-//Figure: square, area: 25.0 sq.units, side: 5 units, color: blue
