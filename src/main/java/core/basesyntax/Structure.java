@@ -16,7 +16,7 @@ public class Structure {
         }
 
         for (Figure figure : figures) {
-            figure.toDraw();
+            figure.draw();
         }
     }
 }
