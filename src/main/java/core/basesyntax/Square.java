@@ -1,10 +1,18 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    private final int size;
+    private int size;
 
     public Square(String color, int size) {
         super(color);
+        this.size = size;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public void setSize() {
         this.size = size;
     }
 
