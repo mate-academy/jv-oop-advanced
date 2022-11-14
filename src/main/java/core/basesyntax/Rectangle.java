@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private double area;
     private int side1;
     private int side2;
 
@@ -11,17 +10,8 @@ public class Rectangle extends Figure {
 
     public Rectangle(String color, Double area, int side1, int side2) {
         super(color);
-        this.area = area;
         this.side1 = side1;
         this.side2 = side2;
-    }
-
-    public double getArea() {
-        return area;
-    }
-
-    public void setArea(Double area) {
-        this.area = area;
     }
 
     public int getSide1() {
@@ -41,14 +31,14 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void area() {
-        setArea((double)(side1 * side2));
+    public int getArea() {
+        return (side1 * side2);
     }
 
     @Override
     public void draw() {
         StringBuilder builder = new StringBuilder("Figure: rectangle, area: ");
-        builder.append(area);
+        builder.append(getArea());
         builder.append(" sq.units, side1: ");
         builder.append(side1);
         builder.append(" units, side2: ");

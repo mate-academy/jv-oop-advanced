@@ -10,6 +10,9 @@ public abstract class Figure implements Drawable, FigureArea {
         this.color = color;
     }
 
+    public static void getRandom() {
+    }
+
     public String getColor() {
         return color;
     }

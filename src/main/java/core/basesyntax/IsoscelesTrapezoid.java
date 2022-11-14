@@ -16,10 +16,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.secondLeg = secondLeg;
     }
 
-    public double getArea() {
-        return area;
-    }
-
     public void setArea(double area) {
         this.area = area;
     }
@@ -41,14 +37,14 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public void area() {
-        setArea((firstLeg * secondLeg) / 2);
+    public int getArea() {
+        return (firstLeg * secondLeg) / 2;
     }
 
     @Override
     public void draw() {
         StringBuilder builder = new StringBuilder("Figure: isosceles trapezoid, area: ");
-        builder.append(area);
+        builder.append(getArea());
         builder.append(" sq.units, firstLeg: ");
         builder.append(firstLeg);
         builder.append(" units, secondLeg: ");
