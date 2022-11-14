@@ -6,6 +6,7 @@ package core.basesyntax;
 public class HelloWorld {
 
     public static void main(String[] args) {
+
         FigureSupplier figureSupplier = new FigureSupplier();
 
         Figure[] figures = new Figure[6];
@@ -16,14 +17,8 @@ public class HelloWorld {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
         }
-
-            for (Figure figure : figures) {
+        for (Figure figure : figures) {
                 figure.draw();
-
-
-            }
-
         }
-
-
     }
+}
