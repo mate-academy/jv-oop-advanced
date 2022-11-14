@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Figure implements Getable,Drawable {
+public abstract class Figure implements Getable,Drawable {
     private String color;
 
     protected Figure(String color) {
@@ -11,13 +11,4 @@ public class Figure implements Getable,Drawable {
         return color;
     }
 
-    @Override
-    public void draw() {
-
-    }
-
-    @Override
-    public double getArea() {
-        return 0;
-    }
 }
