@@ -18,7 +18,7 @@ public class HelloWorld {
             }
         }
         for (Figure figure : figures) {
-                figure.draw();
+            figure.draw();
         }
     }
 }
