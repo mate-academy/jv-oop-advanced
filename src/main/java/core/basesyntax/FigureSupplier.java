@@ -7,6 +7,9 @@ public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
     public Figure getRandomFigure() {
+        if(random.nextDouble() == 0) {
+            return null;
+        }
         figure[0] = new Square(random.nextDouble(), colorSupplier.getRandomColor());
         figure[1] = new RightTriangle(random.nextDouble(), random.nextDouble(), colorSupplier.getRandomColor());
         figure[2] = new Rectangle(random.nextDouble(), random.nextDouble(), colorSupplier.getRandomColor());

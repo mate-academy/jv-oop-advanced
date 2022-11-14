@@ -1,7 +1,7 @@
 package core.basesyntax;
 
-public class Circle extends ColorFigure implements FigureInfo, Figure {//s = PI*r*r;
-    private double radius;
+public class Circle extends ColorFigure implements  Figure {//s = PI*r*r;
+    private double radius = 10;
     public Circle(double radius, String color) {
         this.radius = radius;
         this.color = color;

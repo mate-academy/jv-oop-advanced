@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends ColorFigure implements FigureInfo, Figure { //s = (a*b)/2
+public class RightTriangle extends ColorFigure implements  Figure { //s = (a*b)/2
     private double a;
     private double b;
 
