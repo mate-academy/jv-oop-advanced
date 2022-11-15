@@ -11,20 +11,20 @@ public class FigureSupplier {
         if (random.nextDouble() == 0) {
             return null;
         }
-        figure[0] = new Square(random.nextDouble(),
-                               colorSupplier.getRandomColor());
-        figure[1] = new RightTriangle(random.nextDouble(),
-                                      random.nextDouble(),
-                                      colorSupplier.getRandomColor());
-        figure[2] = new Rectangle(random.nextDouble(),
+        figure[0] = new Square(colorSupplier.getRandomColor()
+                                ,random.nextDouble());
+        figure[1] = new RightTriangle(colorSupplier.getRandomColor(),
+                                    random.nextDouble(),
+                                    random.nextDouble());
+        figure[2] = new Rectangle(colorSupplier.getRandomColor(),
                                   random.nextDouble(),
-                                  colorSupplier.getRandomColor());
-        figure[3] = new IsoscelesTrapezoid(3.0, 5.0, 6.0, colorSupplier.getRandomColor());
-        return figure[random.nextInt(figure.length)];
+                                  random.nextDouble());
+        figure[3] = new IsoscelesTrapezoid(colorSupplier.getRandomColor(), 3.0, 5.0, 6.0 );
+        return figure[random.nextInt(figure.length -1 )];
     }
 
     public Figure getDefaultFigure() {
-        figure[4] = new Circle(10.0, Color.WHITE.name().toUpperCase());
+        figure[4] = new Circle( Color.WHITE.name().toLowerCase(), 10.0);
         return figure[4];
     }
 }
