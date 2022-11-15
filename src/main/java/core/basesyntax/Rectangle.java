@@ -26,4 +26,3 @@ public class Rectangle extends ColorFigure implements Figure {
                 + " secondLeg: " + secondLeg + " units ," + " color: " + getColor());
     }
 }
-//Figure: square, area: 25.0 sq.units, side: 5 units, color: blue

@@ -26,4 +26,3 @@ public class RightTriangle extends ColorFigure implements Figure {
                 + " secondLeg: " + secondLeg + " units , " + "color: " + getColor());
     }
 }
-//Figure: triangle, area: 12.5 sq.units, firstLeg: 7 units, secondLeg: 5 units, color: yellow
