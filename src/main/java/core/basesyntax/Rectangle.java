@@ -21,8 +21,8 @@ public class Rectangle extends Figure {
     @Override
     public Figure create() {
         Rectangle rectangle = new Rectangle();
-        rectangle.firstSide = getRandom().nextInt(getMAX_SIZE());
-        rectangle.secondSide = getRandom().nextInt(getMAX_SIZE());
+        rectangle.firstSide = getRandom().nextInt(getMaxSize());
+        rectangle.secondSide = getRandom().nextInt(getMaxSize());
         rectangle.setColor(getColorSupplier().getRandomColor());
         return rectangle;
     }

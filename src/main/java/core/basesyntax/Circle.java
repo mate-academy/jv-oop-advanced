@@ -11,7 +11,7 @@ public class Circle extends Figure {
     @Override
     public Figure create() {
         Circle circle = new Circle();
-        circle.radius = getRandom().nextInt(getMAX_SIZE());
+        circle.radius = getRandom().nextInt(getMaxSize());
         circle.setColor(getColorSupplier().getRandomColor());
         return circle;
     }

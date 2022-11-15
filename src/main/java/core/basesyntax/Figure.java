@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class Figure implements InfoPrinter, AreaCalculator, FigureCreator {
-    private final int MAX_SIZE = 15;
+    private final int maxSize = 15;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
     private String color;
@@ -16,8 +16,8 @@ public class Figure implements InfoPrinter, AreaCalculator, FigureCreator {
         return random;
     }
 
-    public int getMAX_SIZE() {
-        return MAX_SIZE;
+    public int getMaxSize() {
+        return maxSize;
     }
 
     public void setColor(String color) {

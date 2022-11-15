@@ -21,8 +21,8 @@ public class RightTriangle extends Figure {
     @Override
     public Figure create() {
         RightTriangle rightTriangle = new RightTriangle();
-        rightTriangle.firstLeg = getRandom().nextInt(getMAX_SIZE());
-        rightTriangle.secondLeg = getRandom().nextInt(getMAX_SIZE());
+        rightTriangle.firstLeg = getRandom().nextInt(getMaxSize());
+        rightTriangle.secondLeg = getRandom().nextInt(getMaxSize());
         rightTriangle.setColor(getColorSupplier().getRandomColor());
         return rightTriangle;
     }

@@ -19,7 +19,7 @@ public class Square extends Figure {
     @Override
     public Figure create() {
         Square square = new Square();
-        square.side = getRandom().nextInt(getMAX_SIZE());
+        square.side = getRandom().nextInt(getMaxSize());
         square.setColor(getColorSupplier().getRandomColor());
         return square;
     }
