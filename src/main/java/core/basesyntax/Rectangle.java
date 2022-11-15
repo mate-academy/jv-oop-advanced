@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends ColorFigure implements Figure {
+public class Rectangle extends ColorFigure {
     private double firstLeg;
     private double secondLeg;
 

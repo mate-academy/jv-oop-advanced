@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends ColorFigure implements Figure { //s = (a+b)/2 * h
+public class IsoscelesTrapezoid extends ColorFigure { //s = (a+b)/2 * h
     private double firstLeg;
     private double secondLeg;
     private double height;

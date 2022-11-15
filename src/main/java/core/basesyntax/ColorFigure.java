@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class ColorFigure {
+public class ColorFigure implements Figure{
     private String color;
 
     public ColorFigure(String color) {
@@ -13,5 +13,15 @@ public class ColorFigure {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    @Override
+    public double getArea() {
+        return 0;
+    }
+
+    @Override
+    public void draw() {
+
     }
 }
