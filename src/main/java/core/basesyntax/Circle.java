@@ -7,7 +7,6 @@ public class Circle extends ColorFigure implements Figure {//s = PI*r*r;
         super(color);
     }
 
-
     public Circle(String color, double radius) {
         super(color);
         this.radius = radius;

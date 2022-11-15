@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends ColorFigure implements Figure {//s =a*b;
+public class Rectangle extends ColorFigure implements Figure {
     private double firstLeg;
     private double secondLeg;
 
@@ -8,7 +8,7 @@ public class Rectangle extends ColorFigure implements Figure {//s =a*b;
         super(color);
     }
 
-   public Rectangle(String color, double firstLeg, double secondLeg ) {
+    public Rectangle(String color, double firstLeg, double secondLeg) {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
