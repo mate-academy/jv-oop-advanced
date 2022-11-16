@@ -3,6 +3,10 @@ package core.basesyntax;
 public class Square extends Figure {
     private double side;
 
+    public void setSide(double side) {
+        this.side = side;
+    }
+
     @Override
     public String draw() {
         return "Figure: square, area: "
@@ -14,13 +18,5 @@ public class Square extends Figure {
     @Override
     public double getArea() {
         return side * side;
-    }
-
-    @Override
-    public Figure create() {
-        Square square = new Square();
-        square.side = getRandom().nextInt(getMaxSize());
-        square.setColor(getColorSupplier().getRandomColor());
-        return square;
     }
 }

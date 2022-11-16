@@ -5,19 +5,21 @@ public class IsoscelesTrapezoid extends Figure {
     private double secondSide;
     private double height;
 
-    @Override
-    public double getArea() {
-        return (firstSide + secondSide) / 2 * height;
+    public void setFirstSide(double firstSide) {
+        this.firstSide = firstSide;
+    }
+
+    public void setSecondSide(double secondSide) {
+        this.secondSide = secondSide;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
     }
 
     @Override
-    public Figure create() {
-        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
-        isoscelesTrapezoid.firstSide = getRandom().nextInt(getMaxSize());
-        isoscelesTrapezoid.secondSide = getRandom().nextInt(getMaxSize());
-        isoscelesTrapezoid.height = getRandom().nextInt(getMaxSize());
-        isoscelesTrapezoid.setColor(getColorSupplier().getRandomColor());
-        return isoscelesTrapezoid;
+    public double getArea() {
+        return (firstSide + secondSide) / 2 * height;
     }
 
     @Override

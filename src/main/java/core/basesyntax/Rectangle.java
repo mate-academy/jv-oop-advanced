@@ -4,6 +4,14 @@ public class Rectangle extends Figure {
     private double firstSide;
     private double secondSide;
 
+    public void setFirstSide(double firstSide) {
+        this.firstSide = firstSide;
+    }
+
+    public void setSecondSide(double secondSide) {
+        this.secondSide = secondSide;
+    }
+
     @Override
     public String draw() {
         return "Figure: rectangle, area: "
@@ -16,14 +24,5 @@ public class Rectangle extends Figure {
     @Override
     public double getArea() {
         return firstSide * secondSide;
-    }
-
-    @Override
-    public Figure create() {
-        Rectangle rectangle = new Rectangle();
-        rectangle.firstSide = getRandom().nextInt(getMaxSize());
-        rectangle.secondSide = getRandom().nextInt(getMaxSize());
-        rectangle.setColor(getColorSupplier().getRandomColor());
-        return rectangle;
     }
 }

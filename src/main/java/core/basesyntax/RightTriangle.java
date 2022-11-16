@@ -4,6 +4,14 @@ public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
+    public void setFirstLeg(double firstLeg) {
+        this.firstLeg = firstLeg;
+    }
+
+    public void setSecondLeg(double secondLeg) {
+        this.secondLeg = secondLeg;
+    }
+
     @Override
     public String draw() {
         return "Figure: triangle, area: "
@@ -16,14 +24,5 @@ public class RightTriangle extends Figure {
     @Override
     public double getArea() {
         return firstLeg * secondLeg / 2;
-    }
-
-    @Override
-    public Figure create() {
-        RightTriangle rightTriangle = new RightTriangle();
-        rightTriangle.firstLeg = getRandom().nextInt(getMaxSize());
-        rightTriangle.secondLeg = getRandom().nextInt(getMaxSize());
-        rightTriangle.setColor(getColorSupplier().getRandomColor());
-        return rightTriangle;
     }
 }
