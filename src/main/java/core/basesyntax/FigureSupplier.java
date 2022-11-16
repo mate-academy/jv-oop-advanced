@@ -7,22 +7,37 @@ public class FigureSupplier {
     private static final int LENGTH_MAX = 100;
     private static final int CIRCLE_DEFAULT_RADIUS = 10;
     private static final String DEFAULT_COLOR = Color.WHITE.name();
-
     private final Random random = new Random();
     private final ColorSupplier color = new ColorSupplier();
-
-    private Circle getRandomCircle() {
-        Circle circle = new Circle();
-        circle.setColor(color.getRandomColor());
-        circle.setRadius(random.nextInt(LENGTH_MAX));
-        return circle;
-    }
 
     public Circle getDefaultCircle() {
         Circle circle = new Circle();
         circle.setColor(DEFAULT_COLOR);
         circle.setRadius(CIRCLE_DEFAULT_RADIUS);
         circle.getArea();
+        return circle;
+    }
+
+    public Figure getRandomFigure() {
+        int choice = random.nextInt(NUMBER_FIGURES);
+        switch (choice) {
+            case 1:
+                return getRandomCircle();
+            case 2:
+                return getRandomSquare();
+            case 3:
+                return getRandomRectangle();
+            case 4:
+                return getRandomIsoscelTrapezoid();
+            default:
+                return getRandomRightTriangle();
+        }
+    }
+
+    private Circle getRandomCircle() {
+        Circle circle = new Circle();
+        circle.setColor(color.getRandomColor());
+        circle.setRadius(random.nextInt(LENGTH_MAX));
         return circle;
     }
 
@@ -55,21 +70,5 @@ public class FigureSupplier {
         rightTriangle.setFirstLeg(random.nextInt(LENGTH_MAX));
         rightTriangle.setSecondLeg(random.nextInt(LENGTH_MAX));
         return rightTriangle;
-    }
-
-    public Figure getRandomFigure() {
-        int choice = random.nextInt(NUMBER_FIGURES);
-        switch (choice) {
-            case 1:
-                return getRandomCircle();
-            case 2:
-                return getRandomSquare();
-            case 3:
-                return getRandomRectangle();
-            case 4:
-                return getRandomIsoscelTrapezoid();
-            default:
-                return getRandomRightTriangle();
-        }
     }
 }

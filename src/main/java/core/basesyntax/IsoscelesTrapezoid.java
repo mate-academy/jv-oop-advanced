@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private double area;
+
     private int firstLeg;
     private int secondLeg;
 
@@ -11,13 +11,8 @@ public class IsoscelesTrapezoid extends Figure {
 
     public IsoscelesTrapezoid(String color, Double area, int firstLeg, int secondLeg) {
         super(color);
-        this.area = area;
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-    }
-
-    public void setArea(double area) {
-        this.area = area;
     }
 
     public int getFirstLeg() {
