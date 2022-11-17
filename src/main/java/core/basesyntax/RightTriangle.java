@@ -16,6 +16,6 @@ public class RightTriangle extends Figures implements DrawFigure, GetArea {
 
     @Override
     public void drawFigure() {
-        System.out.println();
+        System.out.println("Figure: RightTriangle, area:" + this.getArea() + " sq.units, firstLeg: " + this.firstLeg + " units, secondLeg: " + secondLeg + " units, color: " + this.getColor());
     }
 }

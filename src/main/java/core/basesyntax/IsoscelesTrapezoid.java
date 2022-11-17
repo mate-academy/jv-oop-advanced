@@ -12,7 +12,7 @@ public class IsoscelesTrapezoid extends Figures implements DrawFigure, GetArea {
 
     @Override
     public void drawFigure() {
-        System.out.println();
+        System.out.println("Figure: IsoscelesTrapezoid, area:" + this.getArea() + " sq.units, sideA: " + this.sideA + "units, sideB: " + this.sideB + " units, color: " + this.getColor());
     }
 
     @Override

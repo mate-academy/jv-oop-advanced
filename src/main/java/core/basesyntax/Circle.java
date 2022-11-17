@@ -5,7 +5,7 @@ public class Circle extends Figures implements DrawFigure, GetArea {
 
     @Override
     public void drawFigure() {
-        System.out.println();
+        System.out.println("Figure: circle, area:" + this.getArea() + " sq.units, radius: " + this.radius + " units, color: " + this.getColor());
     }
 
     @Override

@@ -16,6 +16,6 @@ public class Rectangle extends Figures implements DrawFigure, GetArea {
 
     @Override
     public void drawFigure() {
-        System.out.println();
+        System.out.println("Figure: rectangle, area:" + this.getArea() + " sq.units, sideA: " + this.sideA + "units, sideB: " + this.sideB + " units, color: " + this.getColor());
     }
 }

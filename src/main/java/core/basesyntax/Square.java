@@ -16,7 +16,7 @@ public class Square extends Figures implements DrawFigure, GetArea  {
 
     @Override
     public void drawFigure() {
-        System.out.println();
+        System.out.println("Figure: square, area:" + this.getArea() + " sq.units, side: " + this.side + " units, color: " + this.getColor());
     }
 
     @Override

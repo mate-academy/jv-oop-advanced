@@ -50,6 +50,6 @@ public class FigureSupplier {
                 figureInstance = new FigureSupplier().defaultFigure();
                 break;
         }
-
+    return figureInstance;
     }
 }
