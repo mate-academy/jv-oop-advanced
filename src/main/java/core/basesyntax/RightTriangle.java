@@ -3,6 +3,7 @@ package core.basesyntax;
 public class RightTriangle extends Figure {
     private int base;
     private int height;
+
     public RightTriangle(Color color, int base, int height) {
         super("right triangle", color);
         this.base = base;

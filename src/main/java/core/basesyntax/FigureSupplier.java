@@ -52,7 +52,8 @@ public class FigureSupplier {
                 randomTopBase = random.nextInt(MAX_TOP_BASE);
                 randomBottomBase = random.nextInt(MAX_BOTTOM_BASE);
                 randomHeight = random.nextInt(MAX_HEIGHT);
-                randomFigure = new IsoscelesTrapezoid(randomColor, randomTopBase, randomBottomBase, randomHeight);
+                randomFigure = new IsoscelesTrapezoid(randomColor, randomTopBase,
+                        randomBottomBase, randomHeight);
                 break;
             default:
                 System.out.println("FigureSupplier error: there isn't such figure.");
