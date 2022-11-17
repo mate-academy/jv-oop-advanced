@@ -13,6 +13,11 @@ public class Main {
         circle.draw();
         Figure isoscelesTrapesoid = new IsoscelesTrapezoid(Color.BLUE, 8, 13, 7);
         isoscelesTrapesoid.draw();
-        */
+
+        FigureSupplier figureSupplier = new FigureSupplier();
+        Figure rnd = figureSupplier.getRandomFigure();
+        rnd.draw();
+        Figure def = figureSupplier.getDefaultFigure();
+        def.draw(); */
     }
 }
