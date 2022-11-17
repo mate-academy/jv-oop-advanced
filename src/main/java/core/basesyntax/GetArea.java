@@ -1,2 +1,5 @@
-package core.basesyntax;public interface GetArea {
+package core.basesyntax;
+
+public interface GetArea {
+    double getArea();
 }
