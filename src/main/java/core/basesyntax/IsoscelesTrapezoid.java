@@ -19,7 +19,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        StringBuilder info = new StringBuilder("Figure: isoscelesTrapezoid, area: ");
+        StringBuilder info = new StringBuilder("Figure: isosceles trapezoid, area: ");
         info.append(getArea());
         info.append(" sq.units, height: ");
         info.append(height);
