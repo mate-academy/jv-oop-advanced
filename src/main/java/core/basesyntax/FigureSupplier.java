@@ -16,54 +16,56 @@ public class FigureSupplier {
 
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
-    private int randomSide;
-    private int randomBase;
-    private int randomWidth;
-    private int randomHeight;
-    private int randomRadius;
-    private int randomTopBase;
-    private int randomBottomBase;
+
+    private Figure getRandomSquare() {
+        int randomSide = random.nextInt(MAX_SIDE) + 1;
+        return new Square(colorSupplier.getRandomColor(), randomSide);
+    }
+
+    private Figure getRandomRectangle() {
+        int randomWidth = random.nextInt(MAX_WIDTH) + 1;
+        int randomHeight = random.nextInt(MAX_HEIGHT) + 1;
+        return new Rectangle(colorSupplier.getRandomColor(), randomWidth, randomHeight);
+    }
+
+    private Figure getRandomRightTriangle() {
+        int randomBase = random.nextInt(MAX_BASE) + 1;
+        int randomHeight = random.nextInt(MAX_HEIGHT) + 1;
+        return new RightTriangle(colorSupplier.getRandomColor(), randomBase, randomHeight);
+    }
+
+    private Figure getRandomCircle() {
+        int randomRadius = random.nextInt(MAX_RADIUS) + 1;
+        return new Circle(colorSupplier.getRandomColor(), randomRadius);
+    }
+
+    private Figure getRandomIsoscelesTrapezoid() {
+        int randomTopBase = random.nextInt(MAX_TOP_BASE);
+        int randomBottomBase = random.nextInt(MAX_BOTTOM_BASE);
+        int randomHeight = random.nextInt(MAX_HEIGHT);
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), randomTopBase,
+                randomBottomBase, randomHeight);
+    }
 
     public Figure getRandomFigure() {
-        Figure randomFigure = null;
-        Color randomColor = Color.valueOf(colorSupplier.getRandomColor());
         int figureIndex = random.nextInt(NUMBER_OF_FIGURES);
 
         switch (figureIndex) {
             case 0:
-                randomSide = random.nextInt(MAX_SIDE) + 1;
-                randomFigure = new Square(randomColor, randomSide);
-                break;
+                return getRandomSquare();
             case 1:
-                randomWidth = random.nextInt(MAX_WIDTH) + 1;
-                randomHeight = random.nextInt(MAX_HEIGHT) + 1;
-                randomFigure = new Rectangle(randomColor, randomWidth, randomHeight);
-                break;
+                return getRandomRectangle();
             case 2:
-                randomBase = random.nextInt(MAX_BASE) + 1;
-                randomHeight = random.nextInt(MAX_HEIGHT) + 1;
-                randomFigure = new RightTriangle(randomColor, randomBase, randomHeight);
-                break;
+                return getRandomRightTriangle();
             case 3:
-                randomRadius = random.nextInt(MAX_RADIUS) + 1;
-                randomFigure = new Circle(randomColor, randomRadius);
-                break;
+                return getRandomCircle();
             case 4:
-                randomTopBase = random.nextInt(MAX_TOP_BASE);
-                randomBottomBase = random.nextInt(MAX_BOTTOM_BASE);
-                randomHeight = random.nextInt(MAX_HEIGHT);
-                randomFigure = new IsoscelesTrapezoid(randomColor, randomTopBase,
-                        randomBottomBase, randomHeight);
-                break;
             default:
-                System.out.println("FigureSupplier error: there isn't such figure.");
+                return getRandomIsoscelesTrapezoid();
         }
-        return randomFigure;
     }
 
     public Figure getDefaultFigure() {
-        Figure defaultFigure = new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
-
-        return defaultFigure;
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
