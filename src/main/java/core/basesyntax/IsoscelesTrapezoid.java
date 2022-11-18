@@ -16,26 +16,21 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
         return shortBase;
     }
 
-
     public void setShortBase(int shortBase) {
         this.shortBase = shortBase;
     }
-
 
     public int getLongBase() {
         return longBase;
     }
 
-
     public void setLongBase(int longBase) {
         this.longBase = longBase;
     }
 
-
     public int getHeight() {
         return height;
     }
-
 
     public void setHeight(int height) {
         this.height = height;
@@ -48,7 +43,9 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
 
     @Override
     public void getFigureInformation() {
-        System.out.println("Figure: isosceles trapezoid, area: " + getArea() + " sq.units, short base: " + 
-        shortBase + " units, long base: " + longBase + " units, height: " + height + " units, Color: " + getColor().name());
+        System.out.println("Figure: isosceles trapezoid, area: " + getArea()
+            + " sq.units, short base: " + shortBase + " units, long base: "
+            + longBase + " units, height: " + height + " units, Color: "
+            + getColor().name());
     }
 }
