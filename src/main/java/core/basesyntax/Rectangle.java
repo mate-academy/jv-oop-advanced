@@ -1,24 +1,22 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private double firstSide;
-    private double secondSide;
+    private final double firstSide;
+    private final double secondSide;
 
-    public void setFirstSide(double firstSide) {
+    public Rectangle(double firstSide, double secondSide, String color) {
         this.firstSide = firstSide;
-    }
-
-    public void setSecondSide(double secondSide) {
         this.secondSide = secondSide;
+        this.setColor(color);
     }
 
     @Override
     public String draw() {
         return "Figure: rectangle, area: "
-                + this.getArea() + " sq.units, first side: "
-                + this.firstSide + " units, second side: "
-                + this.secondSide + " units, color: "
-                + this.getColor();
+                + getArea() + " sq.units, first side: "
+                + firstSide + " units, second side: "
+                + secondSide + " units, color: "
+                + getColor();
     }
 
     @Override
