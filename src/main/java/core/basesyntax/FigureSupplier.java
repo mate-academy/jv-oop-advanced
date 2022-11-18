@@ -27,7 +27,7 @@ public class FigureSupplier {
                 figureInstance = circle;
                 break;
             case (1):
-                Trapezoid trapezoid = new Trapezoid(randomSide, randomSide, randomSide);
+                IsoscelesTrapezoid trapezoid = new IsoscelesTrapezoid(randomSide, randomSide, randomSide);
                 trapezoid.setColor(color.getRandomColor());
                 figureInstance = trapezoid;
                 break;
