@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements FigurePrinter {
+public abstract class Figure implements FigurePrinter, AreaCalculator{
     private Color color;
     
     public Figure(Color color) {
@@ -14,7 +14,4 @@ public abstract class Figure implements FigurePrinter {
     public void setColor(Color color) {
         this.color = color;
     }
-   
-    @Override
-    public abstract void getFigureInformation();
 }
