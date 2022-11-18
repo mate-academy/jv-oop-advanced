@@ -1,7 +1,8 @@
 package core.basesyntax;
 
-public class Rectangle extends Figures implements DrawFigure, GetArea {
-    private int sideA, sideB;
+public class Rectangle extends Figures {
+    private int sideA;
+    private int sideB;
 
     public Rectangle(int sideA, int sideB) {
         this.sideA = sideA;
@@ -16,6 +17,7 @@ public class Rectangle extends Figures implements DrawFigure, GetArea {
 
     @Override
     public void drawFigure() {
-        System.out.println("Figure: rectangle, area:" + this.getArea() + " sq.units, sideA: " + this.sideA + "units, sideB: " + this.sideB + " units, color: " + this.getColor());
+        System.out.println("Figure: rectangle, area:" + this.getArea() + " sq.units, sideA: "
+                + sideA + "units, sideB: " + sideB + " units, color: " + this.getColor());
     }
 }

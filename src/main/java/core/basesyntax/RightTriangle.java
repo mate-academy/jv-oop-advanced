@@ -1,7 +1,8 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figures implements DrawFigure, GetArea {
-    private int firstLeg, secondLeg;
+public class RightTriangle extends Figures {
+    private int firstLeg;
+    private int secondLeg;
 
     public RightTriangle(int firstLeg, int secondLeg) {
         this.firstLeg = firstLeg;
@@ -16,6 +17,7 @@ public class RightTriangle extends Figures implements DrawFigure, GetArea {
 
     @Override
     public void drawFigure() {
-        System.out.println("Figure: RightTriangle, area:" + this.getArea() + " sq.units, firstLeg: " + this.firstLeg + " units, secondLeg: " + secondLeg + " units, color: " + this.getColor());
+        System.out.println("Figure: RightTriangle, area:" + this.getArea() + " sq.units, firstLeg: "
+                + firstLeg + " units,secondLeg: " + secondLeg + " units,color: " + this.getColor());
     }
 }

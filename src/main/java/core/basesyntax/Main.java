@@ -2,14 +2,14 @@ package core.basesyntax;
 
 public class Main {
     public static void main(String[] args) {
-        final int ARRAY_SIZE = 6;
+        final int arraySize = 6;
 
-        Figures[] figuresArray = new Figures[ARRAY_SIZE];
+        Figures[] figuresArray = new Figures[arraySize];
         FigureSupplier figure = new FigureSupplier();
 
-        for  (int i = 0; i < ARRAY_SIZE; i++) {
-            if (i < ARRAY_SIZE / 2) {
-                figuresArray[i] = figure.GetRandomFigure();
+        for (int i = 0; i < arraySize; i++) {
+            if (i < arraySize / 2) {
+                figuresArray[i] = figure.getRandomFigure();
             } else {
                 figuresArray[i] = figure.defaultFigure();
             }
