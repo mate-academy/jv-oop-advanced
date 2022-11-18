@@ -44,8 +44,8 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
     @Override
     public void getFigureInformation() {
         System.out.println("Figure: isosceles trapezoid, area: " + getArea()
-            + " sq.units, short base: " + shortBase + " units, long base: "
-            + longBase + " units, height: " + height + " units, Color: "
-            + getColor().name());
+                + " sq.units, short base: " + shortBase + " units, long base: "
+                + longBase + " units, height: " + height + " units, Color: "
+                + getColor().name());
     }
 }

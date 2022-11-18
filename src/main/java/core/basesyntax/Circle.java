@@ -24,6 +24,6 @@ public class Circle extends Figure implements AreaCalculator {
     @Override
     public void getFigureInformation() {
         System.out.println("Figure: circle, area: " + getArea() + " sq.units, radius: "
-            + radius + " units, Color: " + getColor().name());
+                + radius + " units, Color: " + getColor().name());
     } 
 }

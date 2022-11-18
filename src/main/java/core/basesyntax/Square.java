@@ -24,6 +24,6 @@ public class Square extends Figure implements AreaCalculator {
     @Override
     public void getFigureInformation() {
         System.out.println("Figure: square, area: " + getArea() + " sq.units, side: "
-            + side + " units, Color: " + getColor().name());       
+                + side + " units, Color: " + getColor().name());       
     }
 }
