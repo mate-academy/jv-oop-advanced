@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         final int arraySize = 6;
 
-        Figures[] figuresArray = new Figures[arraySize];
+        Figure[] figuresArray = new Figure[arraySize];
         FigureSupplier figure = new FigureSupplier();
 
         for (int i = 0; i < arraySize; i++) {
@@ -13,7 +13,7 @@ public class Main {
             } else {
                 figuresArray[i] = figure.defaultFigure();
             }
-            figuresArray[i].drawFigure();
+            figuresArray[i].draw();
         }
     }
 }

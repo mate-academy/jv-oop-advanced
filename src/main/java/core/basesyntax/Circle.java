@@ -1,10 +1,10 @@
 package core.basesyntax;
 
-public class Circle extends Figures {
+public class Circle extends Figure {
     private int radius;
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println("Figure: circle, area:" + this.getArea()
                 + " sq.units, radius: " + radius + " units, color: " + this.getColor());
     }
