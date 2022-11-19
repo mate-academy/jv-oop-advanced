@@ -20,14 +20,15 @@ public class RightTriangle extends Figure {
         this.secondLeg = secondLeg;
     }
 
-    public RightTriangle(String name, int firstLeg, int secondLeg, Color color) {
-        super(name, color);
-        this.firstLeg = firstLeg;
-        this.secondLeg = secondLeg;
-    }
-
     @Override
     public double getArea() {
         return firstLeg * secondLeg / 2.0;
+    }
+
+    public String drawFigure(RightTriangle rightTriangle) {
+        return "Figure: " + rightTriangle.getName() + ", area: " + rightTriangle.getArea()
+                + " sq.units, first leg: " + rightTriangle.getFirstLeg()
+                + " units, second leg: " + rightTriangle.getSecondLeg()
+                + " units, color: " + rightTriangle.getColor();
     }
 }

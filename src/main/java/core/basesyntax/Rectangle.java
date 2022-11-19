@@ -20,14 +20,15 @@ public class Rectangle extends Figure {
         this.secondSide = secondSide;
     }
 
-    public Rectangle(String name, int firstSide, int secondSide, Color color) {
-        super(name, color);
-        this.firstSide = firstSide;
-        this.secondSide = secondSide;
-    }
-
     @Override
     public double getArea() {
         return firstSide * secondSide;
+    }
+
+    public String drawFigure(Rectangle rectangle) {
+        return "Figure: " + rectangle.getName() + ", area: " + rectangle.getArea()
+                + " sq.units, first side: " + rectangle.getFirstSide()
+                + " units, second side: " + rectangle.getSecondSide() + " units, color: "
+                + rectangle.getColor();
     }
 }
