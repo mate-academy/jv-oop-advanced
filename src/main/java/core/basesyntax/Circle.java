@@ -22,7 +22,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public void getFigureInformation() {
+    public void print() {
         System.out.println("Figure: circle, area: " + getArea() + " sq.units, radius: "
                 + radius + " units, Color: " + getColor().name());
     } 

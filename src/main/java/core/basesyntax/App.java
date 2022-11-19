@@ -13,7 +13,7 @@ public class App {
             figures[i] = figureSupplier.getDefaultfFigure();
         }
         for (int i = 0; i < figures.length; i++) {
-            figures[i].getFigureInformation();
+            figures[i].print();
         }
     }
 }
