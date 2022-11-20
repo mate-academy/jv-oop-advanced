@@ -16,8 +16,8 @@ public class Square extends Figure {
         return side * side;
     }
 
-    public String drawFigure(Square square) {
-        return "Figure: " + square.getName() + ", area: " + square.getArea() + " sq.units, radius: "
-                + square.getSide() + " units, color: " + square.getColor();
+    public void drawFigure() {
+        System.out.println("Figure: " + getName() + ", area: " + getArea() + " sq.units, radius: "
+                + getSide() + " units, color: " + getColor());
     }
 }

@@ -16,10 +16,10 @@ public class Circle extends Figure {
         return Math.PI * radius * radius;
     }
 
-    public String drawFigure(Circle circle) {
-        return "Figure: " + circle.getName() + ", area: " + circle.getArea()
-                + " sq.units, radius: " + circle.getRadius() + " units, color: "
-                + circle.getColor();
+    public void drawFigure() {
+        System.out.println("Figure: " + getName() + ", area: " + getArea()
+                + " sq.units, radius: " + getRadius() + " units, color: "
+                + getColor());
     }
 
 }

@@ -25,10 +25,10 @@ public class RightTriangle extends Figure {
         return firstLeg * secondLeg / 2.0;
     }
 
-    public String drawFigure(RightTriangle rightTriangle) {
-        return "Figure: " + rightTriangle.getName() + ", area: " + rightTriangle.getArea()
-                + " sq.units, first leg: " + rightTriangle.getFirstLeg()
-                + " units, second leg: " + rightTriangle.getSecondLeg()
-                + " units, color: " + rightTriangle.getColor();
+    public void drawFigure() {
+        System.out.println("Figure: " + getName() + ", area: " + getArea()
+                + " sq.units, first leg: " + getFirstLeg()
+                + " units, second leg: " + getSecondLeg()
+                + " units, color: " + getColor());
     }
 }

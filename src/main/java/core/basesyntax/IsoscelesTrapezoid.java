@@ -34,11 +34,11 @@ public class IsoscelesTrapezoid extends Figure {
         return (firstBase + secondBase) / 2.0 * height;
     }
 
-    public String drawFigure(IsoscelesTrapezoid isoscelesTrapezoid) {
-        return "Figure: " + isoscelesTrapezoid.getName() + ", area: " + isoscelesTrapezoid.getArea()
-                + " sq.units, first base: " + isoscelesTrapezoid.getFirstBase()
-                + " units, second base: " + isoscelesTrapezoid.getSecondBase()
-                + " units, height: " + isoscelesTrapezoid.getHeight()
-                + " units, color: " + isoscelesTrapezoid.getColor();
+    public void drawFigure() {
+        System.out.println("Figure: " + getName() + ", area: " + getArea()
+                + " sq.units, first base: " + getFirstBase()
+                + " units, second base: " + getSecondBase()
+                + " units, height: " + getHeight()
+                + " units, color: " + getColor());
     }
 }

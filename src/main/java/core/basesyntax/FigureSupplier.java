@@ -8,6 +8,8 @@ public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
 
+    // створюються фігури з рандомними значеннями параметрів
+
     public Figure getRandomFigure() {
         Circle circle = new Circle();
         circle.setName("circle");
@@ -38,15 +40,18 @@ public class FigureSupplier {
         isoscelesTrapezoid.setSecondBase(random.nextInt(SIZE_COUNT));
         isoscelesTrapezoid.setHeight(random.nextInt(SIZE_COUNT));
 
+        // створюється масив фігур та здійснюється рандомний вибір з масиву
+
         Figure[] figures = new Figure[]{circle, square, rectangle, rightTriangle,
                 isoscelesTrapezoid};
         return figures[new Random().nextInt(FIGURE_COUNT)];
     }
 
+    // створюється фігура з дефолтними параметрами
     public Figure getDefaultFigure() {
         Circle circleDefault = new Circle();
         circleDefault.setName("circle");
-        circleDefault.setColor(colorSupplier.getRandomColor());
+        circleDefault.setColor(Color.WHITE);
         circleDefault.setRadius(10);
         return circleDefault;
     }

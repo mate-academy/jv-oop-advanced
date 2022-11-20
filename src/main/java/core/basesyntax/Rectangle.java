@@ -25,10 +25,10 @@ public class Rectangle extends Figure {
         return firstSide * secondSide;
     }
 
-    public String drawFigure(Rectangle rectangle) {
-        return "Figure: " + rectangle.getName() + ", area: " + rectangle.getArea()
-                + " sq.units, first side: " + rectangle.getFirstSide()
-                + " units, second side: " + rectangle.getSecondSide() + " units, color: "
-                + rectangle.getColor();
+    public void drawFigure() {
+        System.out.println("Figure: " + getName() + ", area: " + getArea()
+                + " sq.units, first side: " + getFirstSide()
+                + " units, second side: " + getSecondSide() + " units, color: "
+                + getColor());
     }
 }
