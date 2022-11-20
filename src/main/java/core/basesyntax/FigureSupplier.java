@@ -14,7 +14,6 @@ public class FigureSupplier {
         Circle circle = new Circle();
         circle.setColor(DEFAULT_COLOR);
         circle.setRadius(CIRCLE_DEFAULT_RADIUS);
-        circle.getArea();
         return circle;
     }
 

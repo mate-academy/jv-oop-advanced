@@ -8,22 +8,14 @@ public class RightTriangle extends Figure {
         super();
     }
 
-    public RightTriangle(String color, Double area, int firstLeg, int secondLeg) {
+    public RightTriangle(String color, int firstLeg, int secondLeg) {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
 
-    public int getFirstLeg() {
-        return firstLeg;
-    }
-
     public void setFirstLeg(int firstLeg) {
         this.firstLeg = firstLeg;
-    }
-
-    public int getSecondLeg() {
-        return secondLeg;
     }
 
     public void setSecondLeg(int secondLeg) {
@@ -44,7 +36,7 @@ public class RightTriangle extends Figure {
         builder.append(" units, secondLeg: ");
         builder.append(secondLeg);
         builder.append(" units, color: ");
-        builder.append(super.getColor().toLowerCase());
+        builder.append(getColor().toLowerCase());
         System.out.println(builder);
     }
 }

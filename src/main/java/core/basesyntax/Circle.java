@@ -12,10 +12,6 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
-    public int getRadius() {
-        return radius;
-    }
-
     public void setRadius(int radius) {
         this.radius = radius;
     }
@@ -33,7 +29,7 @@ public class Circle extends Figure {
         builder.append(" sq.units, radius: ");
         builder.append(radius);
         builder.append(" units, color: ");
-        builder.append(super.getColor().toLowerCase());
+        builder.append(getColor().toLowerCase());
         System.out.println(builder);
     }
 }

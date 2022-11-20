@@ -8,22 +8,14 @@ public class Rectangle extends Figure {
         super();
     }
 
-    public Rectangle(String color, Double area, int side1, int side2) {
+    public Rectangle(String color, int side1, int side2) {
         super(color);
         this.side1 = side1;
         this.side2 = side2;
     }
 
-    public int getSide1() {
-        return side1;
-    }
-
     public void setSide1(int side1) {
         this.side1 = side1;
-    }
-
-    public int getSide2() {
-        return side2;
     }
 
     public void setSide2(int side2) {
@@ -44,7 +36,7 @@ public class Rectangle extends Figure {
         builder.append(" units, side2: ");
         builder.append(side2);
         builder.append(" units, color: ");
-        builder.append(super.getColor().toLowerCase());
+        builder.append(getColor().toLowerCase());
         System.out.println(builder);
     }
 }
