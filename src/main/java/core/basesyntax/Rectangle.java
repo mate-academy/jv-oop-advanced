@@ -25,6 +25,7 @@ public class Rectangle extends Figure {
         return firstSide * secondSide;
     }
 
+    @Override
     public void drawFigure() {
         System.out.println("Figure: " + getName() + ", area: " + getArea()
                 + " sq.units, first side: " + getFirstSide()
