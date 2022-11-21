@@ -4,7 +4,7 @@ public abstract class Figure implements Calculator, Print {
 
     private String color;
 
-    public Figure (String color) {
+    public Figure(String color) {
         this.color = color;
     }
 

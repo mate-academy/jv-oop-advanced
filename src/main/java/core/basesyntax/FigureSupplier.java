@@ -6,23 +6,26 @@ public class FigureSupplier {
 
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    private static final double MAX_RADIUS = 1.8;
-    private static final int MAX_VALUES = 6;
+    private final double MAX_RADIUS = 1.8;
+    private final int MAX_VALUES = 6;
 
     private Figure getRandomCircle() {
         return new Circle(colorSupplier.getRandomColor(), random.nextInt(MAX_VALUES));
     }
 
     private Figure getRandomIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(MAX_VALUES), random.nextInt(MAX_VALUES));
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_VALUES), random.nextInt(MAX_VALUES));
     }
 
     private Figure getRandomRectangle() {
-        return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(MAX_VALUES), random.nextInt(MAX_VALUES));
+        return new Rectangle(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_VALUES), random.nextInt(MAX_VALUES));
     }
 
     private Figure getRandomRightTriangle() {
-        return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(MAX_VALUES), random.nextInt(MAX_VALUES));
+        return new Rectangle(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_VALUES), random.nextInt(MAX_VALUES));
     }
 
     private Figure getRandomSquare() {
@@ -43,8 +46,10 @@ public class FigureSupplier {
             case 5:
                 return getRandomSquare();
             default:
+
                 return getDefaultFigure();
         }
+
     }
 
     public Figure getDefaultFigure() {
