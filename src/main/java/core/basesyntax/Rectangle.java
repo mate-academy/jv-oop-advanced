@@ -4,6 +4,11 @@ public class Rectangle extends Figure implements Drawable {
     private double length;
     private double width;
 
+    public Rectangle(double length, double width) {
+        this.length = length;
+        this.width = width;
+    }
+
     @Override
     public void draw() {
         System.out.println("Figure: rectangle, area: "
@@ -31,11 +36,6 @@ public class Rectangle extends Figure implements Drawable {
     }
 
     public void setWidth(double width) {
-        this.width = width;
-    }
-
-    public Rectangle(double length, double width) {
-        this.length = length;
         this.width = width;
     }
 }

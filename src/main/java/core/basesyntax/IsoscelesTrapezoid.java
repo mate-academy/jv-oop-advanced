@@ -5,6 +5,12 @@ public class IsoscelesTrapezoid extends Figure implements Drawable {
     private double firstSide;
     private double secondSide;
 
+    public IsoscelesTrapezoid(double height, double firstSide, double secondSide) {
+        this.height = height;
+        this.firstSide = firstSide;
+        this.secondSide = secondSide;
+    }
+
     @Override
     public void draw() {
         System.out.println("Figure: isosceles Trapezoid, area: "
@@ -13,7 +19,7 @@ public class IsoscelesTrapezoid extends Figure implements Drawable {
                 + getFirstSide() + " units, secondSide: "
                 + getSecondSide() + " units, color: "
                 + getColor().toLowerCase());
-        }
+    }
 
     @Override
     public double getArea() {
@@ -41,12 +47,6 @@ public class IsoscelesTrapezoid extends Figure implements Drawable {
     }
 
     public void setSecondSide(double secondSide) {
-        this.secondSide = secondSide;
-    }
-
-    public IsoscelesTrapezoid(double height, double firstSide, double secondSide) {
-        this.height = height;
-        this.firstSide = firstSide;
         this.secondSide = secondSide;
     }
 }

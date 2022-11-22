@@ -4,6 +4,11 @@ public class RightTriangle extends Figure implements Drawable {
     private double firstLeg;
     private double secondLeg;
 
+    public RightTriangle(double firstLeg, double secondLeg) {
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
+    }
+
     @Override
     public void draw() {
         System.out.println("Figure: right triangle, area: "
@@ -31,11 +36,6 @@ public class RightTriangle extends Figure implements Drawable {
     }
 
     public void setSecondLeg(double secondLeg) {
-        this.secondLeg = secondLeg;
-    }
-
-    public RightTriangle(double firstLeg, double hypotenuse, double secondLeg) {
-        this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
 }

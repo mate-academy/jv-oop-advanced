@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Square extends Figure implements Drawable {
-    double side;
+    private double side;
 
     public Square(double side) {
         this.side = side;
