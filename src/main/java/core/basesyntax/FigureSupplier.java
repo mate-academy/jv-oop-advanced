@@ -15,7 +15,6 @@ public class FigureSupplier {
 
     private Figure createRightTriangle() {
         Figure rightTriangle = new RightTriangle(random.nextInt(MAX_SIZE) + 1,
-                random.nextInt(MAX_SIZE) + 1,
                 random.nextInt(MAX_SIZE) + 1);
         rightTriangle.setColor(supplier.getRandomColor());
         return rightTriangle;
