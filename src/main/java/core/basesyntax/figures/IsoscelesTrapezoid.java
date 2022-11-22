@@ -6,7 +6,7 @@ import core.basesyntax.Figure;
 import static core.basesyntax.ColorSupplier.getRandomColor;
 import static core.basesyntax.RandomInt.getRandomInt;
 
-public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
+public class IsoscelesTrapezoid extends Figure {
 
     private int height;
     private int firstSide;
@@ -18,7 +18,7 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
 
     @Override
     public void getInfo() {
-        System.out.println("Figure: " + figureName
+        System.out.println("Figure: " + getFigureName()
                 + ", area: " + getArea()
                 + " sq.units, height: " + getHeight()
                 + " units, first side " + getFirstSide()

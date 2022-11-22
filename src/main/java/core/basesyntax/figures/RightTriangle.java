@@ -6,7 +6,7 @@ import core.basesyntax.Figure;
 import static core.basesyntax.ColorSupplier.getRandomColor;
 import static core.basesyntax.RandomInt.getRandomInt;
 
-public class RightTriangle extends Figure implements AreaCalculator {
+public class RightTriangle extends Figure {
     private int firstSide;
     private int secondSide;
     public String figureName = "right triangle";
@@ -33,7 +33,7 @@ public class RightTriangle extends Figure implements AreaCalculator {
 
     @Override
     public void getInfo() {
-        System.out.println("Figure: " + figureName
+        System.out.println("Figure: " + getFigureName()
                 + ", area: " + getArea()
                 + " sq.units, first side " + getFirstSide()
                 + " units, second side " + getSecondSide()

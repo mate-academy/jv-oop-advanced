@@ -6,7 +6,7 @@ import core.basesyntax.Figure;
 import static core.basesyntax.ColorSupplier.getRandomColor;
 import static core.basesyntax.RandomInt.getRandomInt;
 
-public class Square extends Figure implements AreaCalculator {
+public class Square extends Figure {
 
     private int side;
     public String figureName = "square";
@@ -24,7 +24,7 @@ public class Square extends Figure implements AreaCalculator {
 
     @Override
     public void getInfo() {
-        System.out.println("Figure: " + figureName
+        System.out.println("Figure: " + getFigureName()
                 + ", area: " + getArea()
                 + " sq.units, side: " + getSide()
                 + " units, color: " + getColor());

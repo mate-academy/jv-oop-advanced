@@ -1,10 +1,13 @@
 package core.basesyntax;
 
-import core.basesyntax.figures.*;
-
 import static core.basesyntax.ColorSupplier.getRandomColor;
 import static core.basesyntax.RandomInt.getRandomInt;
 
+import core.basesyntax.figures.Circle;
+import core.basesyntax.figures.IsoscelesTrapezoid;
+import core.basesyntax.figures.Rectangle;
+import core.basesyntax.figures.RightTriangle;
+import core.basesyntax.figures.Square;
 
 public class FigureSupplier {
     public Figure getRandomFigure() {

@@ -2,13 +2,10 @@ package core.basesyntax;
 
 public abstract class Figure implements AreaCalculator {
     private String color;
-    public String figureName;
+    private String figureName;
 
     public void setRandomProperties() {
 
-    }
-
-    public Figure() {
     }
 
     public String getColor() {
@@ -23,4 +20,12 @@ public abstract class Figure implements AreaCalculator {
 
     @Override
     public abstract double getArea();
+
+    public String getFigureName() {
+        return figureName;
+    }
+
+    public void setFigureName(String figureName) {
+        this.figureName = figureName;
+    }
 }
