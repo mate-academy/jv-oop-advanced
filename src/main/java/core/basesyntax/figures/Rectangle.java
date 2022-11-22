@@ -1,4 +1,5 @@
 package core.basesyntax.figures;
+
 import static core.basesyntax.RandomInt.getRandomInt;
 
 import core.basesyntax.Figure;
@@ -23,8 +24,6 @@ public class Rectangle extends Figure {
     public void setSecondSide(int secondSide) {
         this.secondSide = secondSide;
     }
-
-
 
     @Override
     public void getInfo() {
