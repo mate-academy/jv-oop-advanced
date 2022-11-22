@@ -13,18 +13,24 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         int randomIndex = getRandomInt(5);
         switch (randomIndex) {
-            case 0:
+            case 0: {
                 return getRandomCircle();
-            case 1:
+            }
+            case 1: {
                 return getRandomIsoscelesTrapezoid();
-            case 2:
+            }
+            case 2: {
                 return getRandomRectangle();
-            case 3:
+            }
+            case 3: {
                 return getRandomRightTriangle();
-            default:
+            }
+            default:{
                 return getRandomSquare();
+            }
         }
     }
+
     public Figure getDefaultFigure() {
         Circle defaultFigure = new Circle();
         defaultFigure.setColor(Colors.values()[0].toString());
@@ -37,7 +43,7 @@ public class FigureSupplier {
         circle.setRandomProperties();
         circle.setColor(getRandomColor());
         return circle;
-    };
+    }
 
     private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
         IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
