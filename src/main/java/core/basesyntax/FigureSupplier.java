@@ -42,7 +42,7 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        int figureNumber = random.nextInt(Figures.values().length);
+        int figureNumber = random.nextInt(FigureType.values().length);
         switch (figureNumber) {
             case 0:
                 return createCircle();
