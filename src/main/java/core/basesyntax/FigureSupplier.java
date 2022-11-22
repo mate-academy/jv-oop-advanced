@@ -13,26 +13,32 @@ public class FigureSupplier {
     }
 
     public Figure getRandomRightTriangle() {
-        return new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(FIGURE_PROPERTY),
+        return new RightTriangle(colorSupplier.getRandomColor(),
+                random.nextInt(FIGURE_PROPERTY),
                 random.nextInt(FIGURE_PROPERTY));
     }
 
     public Figure getRandomCircle() {
-        return new Circle(colorSupplier.getRandomColor(), random.nextInt(FIGURE_PROPERTY));
+        return new Circle(colorSupplier.getRandomColor(),
+                random.nextInt(FIGURE_PROPERTY));
     }
 
     public Figure getRandomIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(FIGURE_PROPERTY),
-                random.nextInt(FIGURE_PROPERTY), random.nextInt(FIGURE_PROPERTY));
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                random.nextInt(FIGURE_PROPERTY),
+                random.nextInt(FIGURE_PROPERTY),
+                random.nextInt(FIGURE_PROPERTY));
     }
 
     public Figure getRandomRectangle() {
-        return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(FIGURE_PROPERTY),
+        return new Rectangle(colorSupplier.getRandomColor(),
+                random.nextInt(FIGURE_PROPERTY),
                 random.nextInt(FIGURE_PROPERTY));
     }
 
     public Figure getRandomSquare() {
-        return new Square(colorSupplier.getRandomColor(), random.nextInt(FIGURE_PROPERTY));
+        return new Square(colorSupplier.getRandomColor(),
+                random.nextInt(FIGURE_PROPERTY));
     }
 
     public Figure getRandomFigure() {
