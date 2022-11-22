@@ -1,8 +1,7 @@
 package core.basesyntax.figures;
+import static core.basesyntax.RandomInt.getRandomInt;
 
 import core.basesyntax.Figure;
-
-import static core.basesyntax.RandomInt.getRandomInt;
 
 public class Rectangle extends Figure {
     private int firstSide;

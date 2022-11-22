@@ -1,8 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Figure;
-
 import static core.basesyntax.RandomInt.getRandomInt;
+
+import core.basesyntax.Figure;
 
 public class RightTriangle extends Figure {
     private int firstSide;
@@ -24,7 +24,6 @@ public class RightTriangle extends Figure {
     public void setSecondSide(int secondSide) {
         this.secondSide = secondSide;
     }
-
 
     @Override
     public void getInfo() {

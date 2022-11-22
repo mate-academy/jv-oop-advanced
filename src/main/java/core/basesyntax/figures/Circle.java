@@ -1,8 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Figure;
-
 import static core.basesyntax.RandomInt.getRandomInt;
+
+import core.basesyntax.Figure;
 
 public class Circle extends Figure {
     private int radius;
