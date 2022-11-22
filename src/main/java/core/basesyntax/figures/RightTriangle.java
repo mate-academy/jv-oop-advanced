@@ -1,18 +1,13 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.AreaCalculator;
 import core.basesyntax.Figure;
 
-import static core.basesyntax.ColorSupplier.getRandomColor;
 import static core.basesyntax.RandomInt.getRandomInt;
 
 public class RightTriangle extends Figure {
     private int firstSide;
     private int secondSide;
-    public String figureName = "right triangle";
-
-    public RightTriangle() {
-    }
+    private String figureName = "right triangle";
 
     public int getFirstSide() {
         return firstSide;

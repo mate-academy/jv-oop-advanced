@@ -1,17 +1,12 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.AreaCalculator;
 import core.basesyntax.Figure;
 
-import static core.basesyntax.ColorSupplier.getRandomColor;
 import static core.basesyntax.RandomInt.getRandomInt;
 
 public class Circle extends Figure {
     private int radius;
-    public String figureName = "circle";
-
-    public Circle() {
-    }
+    private String figureName = "circle";
 
     @Override
     public void getInfo() {

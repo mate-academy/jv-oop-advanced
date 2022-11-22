@@ -1,15 +1,13 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.AreaCalculator;
 import core.basesyntax.Figure;
 
-import static core.basesyntax.ColorSupplier.getRandomColor;
 import static core.basesyntax.RandomInt.getRandomInt;
 
 public class Square extends Figure {
 
     private int side;
-    public String figureName = "square";
+    private String figureName = "square";
 
     public int getSide() {
         return side;
@@ -17,9 +15,6 @@ public class Square extends Figure {
 
     public void setSide(int side) {
         this.side = side;
-    }
-
-    public Square() {
     }
 
     @Override

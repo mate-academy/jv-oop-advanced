@@ -1,9 +1,7 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.AreaCalculator;
 import core.basesyntax.Figure;
 
-import static core.basesyntax.ColorSupplier.getRandomColor;
 import static core.basesyntax.RandomInt.getRandomInt;
 
 public class IsoscelesTrapezoid extends Figure {
@@ -11,10 +9,7 @@ public class IsoscelesTrapezoid extends Figure {
     private int height;
     private int firstSide;
     private int secondSide;
-    public String figureName = "isosceles trapezoid";
-
-    public IsoscelesTrapezoid() {
-    }
+    private String figureName = "isosceles trapezoid";
 
     @Override
     public void getInfo() {
