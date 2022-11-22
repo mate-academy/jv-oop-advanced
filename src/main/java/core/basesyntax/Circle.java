@@ -1,11 +1,10 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private Color color;
     private int radius;
 
     public Circle(Color color, int radius) {
-        this.color = color;
+        super(color);
         this.radius = radius;
     }
 
