@@ -25,7 +25,7 @@ public class FigureSupplier {
             case 3: {
                 return getRandomRightTriangle();
             }
-            default:{
+            default: {
                 return getRandomSquare();
             }
         }
@@ -50,26 +50,26 @@ public class FigureSupplier {
         isoscelesTrapezoid.setRandomProperties();
         isoscelesTrapezoid.setColor(getRandomColor());
         return isoscelesTrapezoid;
-    };
+    }
 
     private Rectangle getRandomRectangle() {
         Rectangle rectangle = new Rectangle();
         rectangle.setRandomProperties();
         rectangle.setColor(getRandomColor());
         return rectangle;
-    };
+    }
 
     private RightTriangle getRandomRightTriangle() {
         RightTriangle rightTriangle = new RightTriangle();
         rightTriangle.setRandomProperties();
         rightTriangle.setColor(getRandomColor());
         return rightTriangle;
-    };
+    }
 
     private Square getRandomSquare() {
         Square square = new Square();
         square.setRandomProperties();
         square.setColor(getRandomColor());
         return square;
-    };
+    }
 }
