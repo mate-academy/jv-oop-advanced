@@ -7,7 +7,6 @@ import core.basesyntax.Figure;
 public class RightTriangle extends Figure {
     private int firstSide;
     private int secondSide;
-    private String figureName = "right triangle";
 
     public int getFirstSide() {
         return firstSide;
@@ -27,6 +26,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public void getInfo() {
+        setFigureName("right triangle");
         System.out.println("Figure: " + getFigureName()
                 + ", area: " + getArea()
                 + " sq.units, first side " + getFirstSide()

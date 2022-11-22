@@ -6,10 +6,10 @@ import core.basesyntax.Figure;
 
 public class Circle extends Figure {
     private int radius;
-    private String figureName = "circle";
 
     @Override
     public void getInfo() {
+        setFigureName("circle");
         System.out.println("Figure: " + getFigureName()
                 + ", area: " + getArea()
                 + " sq.units, radius: " + getRadius()

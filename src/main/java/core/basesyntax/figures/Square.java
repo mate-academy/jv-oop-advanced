@@ -7,7 +7,6 @@ import core.basesyntax.Figure;
 public class Square extends Figure {
 
     private int side;
-    private String figureName = "square";
 
     public int getSide() {
         return side;
@@ -19,6 +18,7 @@ public class Square extends Figure {
 
     @Override
     public void getInfo() {
+        setFigureName("square");
         System.out.println("Figure: " + getFigureName()
                 + ", area: " + getArea()
                 + " sq.units, side: " + getSide()

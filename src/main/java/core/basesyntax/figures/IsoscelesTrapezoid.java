@@ -9,10 +9,10 @@ public class IsoscelesTrapezoid extends Figure {
     private int height;
     private int firstSide;
     private int secondSide;
-    private String figureName = "isosceles trapezoid";
 
     @Override
     public void getInfo() {
+        setFigureName("isosceles trapezoid");
         System.out.println("Figure: " + getFigureName()
                 + ", area: " + getArea()
                 + " sq.units, height: " + getHeight()

@@ -1,12 +1,8 @@
 package core.basesyntax;
 
-public abstract class Figure implements AreaCalculator {
+public abstract class Figure implements AreaCalculator, Drawable, RandomProperties {
     private String color;
     private String figureName;
-
-    public void setRandomProperties() {
-
-    }
 
     public String getColor() {
         return color;
@@ -15,11 +11,6 @@ public abstract class Figure implements AreaCalculator {
     public void setColor(String color) {
         this.color = color;
     }
-
-    public abstract void getInfo();
-
-    @Override
-    public abstract double getArea();
 
     public String getFigureName() {
         return figureName;

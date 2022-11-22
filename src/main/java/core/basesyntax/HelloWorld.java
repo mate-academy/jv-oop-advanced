@@ -3,15 +3,14 @@ package core.basesyntax;
 public class HelloWorld {
     public static void main(String[] args) {
         Figure[] figureArray = new Figure[6];
-        FigureSupplier supp = new FigureSupplier();
+        FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < figureArray.length; i++) {
             if (i < 3) {
-                figureArray[i] = supp.getRandomFigure();
-                figureArray[i].getInfo();
+                figureArray[i] = figureSupplier.getRandomFigure();
             } else {
-                figureArray[i] = supp.getDefaultFigure();
-                figureArray[i].getInfo();
+                figureArray[i] = figureSupplier.getDefaultFigure();
             }
+            figureArray[i].getInfo();
         }
     }
 }

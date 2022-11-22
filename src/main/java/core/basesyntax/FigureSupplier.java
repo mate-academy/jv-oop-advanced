@@ -9,40 +9,34 @@ import core.basesyntax.figures.RightTriangle;
 import core.basesyntax.figures.Square;
 
 public class FigureSupplier {
-
-    public static final int FIGURE_COUNT = 5;
-    public static final int DEFAULT_RADIUS = 10;
+    private static final int FIGURE_COUNT = 5;
+    private static final int DEFAULT_RADIUS = 10;
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int randomIndex = getRandomInt(FIGURE_COUNT);
         switch (randomIndex) {
-            case 0: {
+            case 0:
                 return getRandomCircle();
-            }
-            case 1: {
+            case 1:
                 return getRandomIsoscelesTrapezoid();
-            }
-            case 2: {
+            case 2:
                 return getRandomRectangle();
-            }
-            case 3: {
+            case 3:
                 return getRandomRightTriangle();
-            }
-            default: {
+            default:
                 return getRandomSquare();
-            }
         }
     }
 
     public Figure getDefaultFigure() {
         Circle defaultFigure = new Circle();
-        defaultFigure.setColor(Colors.white.name());
+        defaultFigure.setColor(Color.WHITE.name());
         defaultFigure.setRadius(DEFAULT_RADIUS);
         return defaultFigure;
     }
 
     private Circle getRandomCircle() {
-        ColorSupplier colorSupplier = new ColorSupplier();
         Circle circle = new Circle();
         circle.setRandomProperties();
         circle.setColor(colorSupplier.getRandomColor());
@@ -50,7 +44,6 @@ public class FigureSupplier {
     }
 
     private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
-        ColorSupplier colorSupplier = new ColorSupplier();
         IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
         isoscelesTrapezoid.setRandomProperties();
         isoscelesTrapezoid.setColor(colorSupplier.getRandomColor());
@@ -58,7 +51,6 @@ public class FigureSupplier {
     }
 
     private Rectangle getRandomRectangle() {
-        ColorSupplier colorSupplier = new ColorSupplier();
         Rectangle rectangle = new Rectangle();
         rectangle.setRandomProperties();
         rectangle.setColor(colorSupplier.getRandomColor());
@@ -66,7 +58,6 @@ public class FigureSupplier {
     }
 
     private RightTriangle getRandomRightTriangle() {
-        ColorSupplier colorSupplier = new ColorSupplier();
         RightTriangle rightTriangle = new RightTriangle();
         rightTriangle.setRandomProperties();
         rightTriangle.setColor(colorSupplier.getRandomColor());
@@ -74,7 +65,6 @@ public class FigureSupplier {
     }
 
     private Square getRandomSquare() {
-        ColorSupplier colorSupplier = new ColorSupplier();
         Square square = new Square();
         square.setRandomProperties();
         square.setColor(colorSupplier.getRandomColor());
