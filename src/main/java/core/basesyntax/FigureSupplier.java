@@ -13,8 +13,6 @@ public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
     public static final int DEFAULT_RADIUS = 10;
 
-    ColorSupplier colorSupplier = new ColorSupplier();
-
     public Figure getRandomFigure() {
         int randomIndex = getRandomInt(FIGURE_COUNT);
         switch (randomIndex) {
@@ -44,6 +42,7 @@ public class FigureSupplier {
     }
 
     private Circle getRandomCircle() {
+        ColorSupplier colorSupplier = new ColorSupplier();
         Circle circle = new Circle();
         circle.setRandomProperties();
         circle.setColor(colorSupplier.getRandomColor());
@@ -51,6 +50,7 @@ public class FigureSupplier {
     }
 
     private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+        ColorSupplier colorSupplier = new ColorSupplier();
         IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
         isoscelesTrapezoid.setRandomProperties();
         isoscelesTrapezoid.setColor(colorSupplier.getRandomColor());
@@ -58,6 +58,7 @@ public class FigureSupplier {
     }
 
     private Rectangle getRandomRectangle() {
+        ColorSupplier colorSupplier = new ColorSupplier();
         Rectangle rectangle = new Rectangle();
         rectangle.setRandomProperties();
         rectangle.setColor(colorSupplier.getRandomColor());
@@ -65,6 +66,7 @@ public class FigureSupplier {
     }
 
     private RightTriangle getRandomRightTriangle() {
+        ColorSupplier colorSupplier = new ColorSupplier();
         RightTriangle rightTriangle = new RightTriangle();
         rightTriangle.setRandomProperties();
         rightTriangle.setColor(colorSupplier.getRandomColor());
@@ -72,6 +74,7 @@ public class FigureSupplier {
     }
 
     private Square getRandomSquare() {
+        ColorSupplier colorSupplier = new ColorSupplier();
         Square square = new Square();
         square.setRandomProperties();
         square.setColor(colorSupplier.getRandomColor());
