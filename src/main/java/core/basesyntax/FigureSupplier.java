@@ -1,6 +1,5 @@
 package core.basesyntax;
 
-import static core.basesyntax.ColorSupplier.getRandomColor;
 import static core.basesyntax.RandomInt.getRandomInt;
 
 import core.basesyntax.figures.Circle;
@@ -10,8 +9,14 @@ import core.basesyntax.figures.RightTriangle;
 import core.basesyntax.figures.Square;
 
 public class FigureSupplier {
+
+    public static final int FIGURE_COUNT = 5;
+    public static final int DEFAULT_RADIUS = 10;
+
+    ColorSupplier colorSupplier = new ColorSupplier();
+
     public Figure getRandomFigure() {
-        int randomIndex = getRandomInt(5);
+        int randomIndex = getRandomInt(FIGURE_COUNT);
         switch (randomIndex) {
             case 0: {
                 return getRandomCircle();
@@ -33,43 +38,43 @@ public class FigureSupplier {
 
     public Figure getDefaultFigure() {
         Circle defaultFigure = new Circle();
-        defaultFigure.setColor(Colors.values()[0].toString());
-        defaultFigure.setRadius(10);
+        defaultFigure.setColor(Colors.white.name());
+        defaultFigure.setRadius(DEFAULT_RADIUS);
         return defaultFigure;
     }
 
     private Circle getRandomCircle() {
         Circle circle = new Circle();
         circle.setRandomProperties();
-        circle.setColor(getRandomColor());
+        circle.setColor(colorSupplier.getRandomColor());
         return circle;
     }
 
     private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
         IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
         isoscelesTrapezoid.setRandomProperties();
-        isoscelesTrapezoid.setColor(getRandomColor());
+        isoscelesTrapezoid.setColor(colorSupplier.getRandomColor());
         return isoscelesTrapezoid;
     }
 
     private Rectangle getRandomRectangle() {
         Rectangle rectangle = new Rectangle();
         rectangle.setRandomProperties();
-        rectangle.setColor(getRandomColor());
+        rectangle.setColor(colorSupplier.getRandomColor());
         return rectangle;
     }
 
     private RightTriangle getRandomRightTriangle() {
         RightTriangle rightTriangle = new RightTriangle();
         rightTriangle.setRandomProperties();
-        rightTriangle.setColor(getRandomColor());
+        rightTriangle.setColor(colorSupplier.getRandomColor());
         return rightTriangle;
     }
 
     private Square getRandomSquare() {
         Square square = new Square();
         square.setRandomProperties();
-        square.setColor(getRandomColor());
+        square.setColor(colorSupplier.getRandomColor());
         return square;
     }
 }
