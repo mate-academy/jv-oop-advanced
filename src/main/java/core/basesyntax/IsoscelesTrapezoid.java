@@ -6,11 +6,11 @@ public class IsoscelesTrapezoid extends Figure {
     private int height;
 
     public IsoscelesTrapezoid(int sideA, int sideB, int height, String color) {
+        super(color);
         if (sideA <= 0 || sideB <= 0 || height <= 0) {
             System.out.println("Sides or height must be bigger than 0");
             return;
         }
-
         if (sideA >= sideB) {
             this.baseA = sideA;
             this.baseB = sideB;
@@ -18,9 +18,7 @@ public class IsoscelesTrapezoid extends Figure {
             this.baseA = sideB;
             this.baseB = sideA;
         }
-
         this.height = height;
-        super.color = color;
     }
 
     @Override
@@ -29,7 +27,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String toString() {
+    public String draw() {
         return "Figure: isosceles trapezoid, base a = " + baseA + " units;"
                 + " base b = " + baseB + " units;"
                 + " height = " + height + " units;"
