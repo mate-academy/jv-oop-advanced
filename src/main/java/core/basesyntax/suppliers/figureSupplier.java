@@ -1,16 +1,16 @@
-package core.basesyntax.Suppliers;
+package core.basesyntax.suppliers;
 
 import core.basesyntax.models.Figure;
-import core.basesyntax.models.IsoscelesTrapezoid;
 import core.basesyntax.models.Circle;
+import core.basesyntax.models.IsoscelesTrapezoid;
 import core.basesyntax.models.Rectangle;
 import core.basesyntax.models.RightTriangle;
 import core.basesyntax.models.Square;
 
 import java.util.Random;
 
-public class FigureSupplier {
-    private final ColorSupplier colorSupplier = new ColorSupplier();
+public class figureSupplier {
+    private final core.basesyntax.suppliers.colorSupplier colorSupplier = new colorSupplier();
 
     public Figure getRandomFigure() {
         int figureIndex = new Random().nextInt(4);

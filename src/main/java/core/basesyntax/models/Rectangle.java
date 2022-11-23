@@ -27,14 +27,14 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double Area() {
+    public double area() {
         return width * length;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: " + getClass().getSimpleName() + ", square: "
-                + Area() + " sq.units, color: " + getColor()
+                + area() + " sq.units, color: " + getColor()
                 + " ,width: " + width
                 + " ,length: " + length);
     }

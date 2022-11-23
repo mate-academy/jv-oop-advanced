@@ -27,14 +27,14 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double Area() {
+    public double area() {
         return base * height / 2;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: " + getClass().getSimpleName() + ", square: "
-                + Area() + " sq.units, color: " + getColor()
+                + area() + " sq.units, color: " + getColor()
                 + " ,base: " + base
                 + " ,height: " + height);
     }
