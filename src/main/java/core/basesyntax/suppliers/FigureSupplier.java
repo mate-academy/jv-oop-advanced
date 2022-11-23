@@ -4,8 +4,8 @@ import core.basesyntax.models.Circle;
 import core.basesyntax.models.IsoscelesTrapezoid;
 import core.basesyntax.models.Rectangle;
 import core.basesyntax.models.RightTriangle;
-import core.basesyntax.models.Square;
 import core.basesyntax.models.Figure;
+import core.basesyntax.models.Square;
 import java.util.Random;
 
 public class FigureSupplier {
