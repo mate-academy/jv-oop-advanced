@@ -1,11 +1,12 @@
 package core.basesyntax.figures;
 
-import static core.basesyntax.RandomInt.getRandomInt;
-
 import core.basesyntax.Figure;
+
+import java.util.Random;
 
 public class Circle extends Figure {
     private int radius;
+    private Random random = new Random();
 
     @Override
     public void draw() {
@@ -29,8 +30,7 @@ public class Circle extends Figure {
         return Math.PI * radius * radius;
     }
 
-    @Override
     public void setRandomProperties() {
-        setRadius(getRandomInt(20));
+        setRadius(random.nextInt(20));
     }
 }

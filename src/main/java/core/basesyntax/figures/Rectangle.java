@@ -1,12 +1,13 @@
 package core.basesyntax.figures;
 
-import static core.basesyntax.RandomInt.getRandomInt;
-
 import core.basesyntax.Figure;
+
+import java.util.Random;
 
 public class Rectangle extends Figure {
     private int firstSide;
     private int secondSide;
+    private Random random = new Random();
 
     public int getFirstSide() {
         return firstSide;
@@ -39,9 +40,8 @@ public class Rectangle extends Figure {
         return firstSide * secondSide;
     }
 
-    @Override
     public void setRandomProperties() {
-        setFirstSide(getRandomInt(20));
-        setSecondSide(getRandomInt(20));
+        setFirstSide(random.nextInt(20));
+        setSecondSide(random.nextInt(20));
     }
 }

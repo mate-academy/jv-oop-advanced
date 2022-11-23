@@ -1,12 +1,12 @@
 package core.basesyntax.figures;
 
-import static core.basesyntax.RandomInt.getRandomInt;
-
 import core.basesyntax.Figure;
 
-public class Square extends Figure {
+import java.util.Random;
 
+public class Square extends Figure {
     private int side;
+    private Random random = new Random();
 
     public int getSide() {
         return side;
@@ -30,8 +30,7 @@ public class Square extends Figure {
         return side * side;
     }
 
-    @Override
     public void setRandomProperties() {
-        setSide(getRandomInt(20));
+        setSide(random.nextInt(20));
     }
 }

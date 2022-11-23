@@ -1,20 +1,21 @@
 package core.basesyntax;
 
-import static core.basesyntax.RandomInt.getRandomInt;
-
 import core.basesyntax.figures.Circle;
 import core.basesyntax.figures.IsoscelesTrapezoid;
 import core.basesyntax.figures.Rectangle;
 import core.basesyntax.figures.RightTriangle;
 import core.basesyntax.figures.Square;
 
+import java.util.Random;
+
 public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
     private static final int DEFAULT_RADIUS = 10;
     private ColorSupplier colorSupplier = new ColorSupplier();
+    private Random random = new Random();
 
     public Figure getRandomFigure() {
-        int randomIndex = getRandomInt(FIGURE_COUNT);
+        int randomIndex = random.nextInt(FIGURE_COUNT);
         switch (randomIndex) {
             case 0:
                 return getRandomCircle();

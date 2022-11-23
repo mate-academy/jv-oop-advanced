@@ -1,14 +1,14 @@
 package core.basesyntax.figures;
 
-import static core.basesyntax.RandomInt.getRandomInt;
-
 import core.basesyntax.Figure;
 
-public class IsoscelesTrapezoid extends Figure {
+import java.util.Random;
 
+public class IsoscelesTrapezoid extends Figure {
     private int height;
     private int firstSide;
     private int secondSide;
+    private Random random = new Random();
 
     @Override
     public void draw() {
@@ -50,10 +50,9 @@ public class IsoscelesTrapezoid extends Figure {
         return ((firstSide + secondSide) / 2) * height;
     }
 
-    @Override
     public void setRandomProperties() {
-        setHeight(getRandomInt(20));
-        setFirstSide(getRandomInt(20));
-        setSecondSide(getRandomInt(20));
+        setHeight(random.nextInt(20));
+        setFirstSide(random.nextInt(20));
+        setSecondSide(random.nextInt(20));
     }
 }
