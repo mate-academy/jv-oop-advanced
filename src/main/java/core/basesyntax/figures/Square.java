@@ -2,11 +2,8 @@ package core.basesyntax.figures;
 
 import core.basesyntax.Figure;
 
-import java.util.Random;
-
 public class Square extends Figure {
     private int side;
-    private Random random = new Random();
 
     public int getSide() {
         return side;
@@ -28,9 +25,5 @@ public class Square extends Figure {
     @Override
     public double getArea() {
         return side * side;
-    }
-
-    public void setRandomProperties() {
-        setSide(random.nextInt(20));
     }
 }
