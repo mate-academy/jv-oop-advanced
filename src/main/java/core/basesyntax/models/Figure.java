@@ -1,9 +1,9 @@
 package core.basesyntax.models;
 
-import core.basesyntax.service.areaCalculator;
-import core.basesyntax.service.drawable;
+import core.basesyntax.service.AreaCalculator;
+import core.basesyntax.service.Drawable;
 
-public abstract class Figure implements drawable, areaCalculator {
+public abstract class Figure implements Drawable, AreaCalculator {
     private String color;
 
     protected Figure(String color) {

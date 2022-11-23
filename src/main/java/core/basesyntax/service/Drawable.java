@@ -1,5 +1,5 @@
 package core.basesyntax.service;
 
-public interface drawable {
+public interface Drawable {
     void draw();
 }
