@@ -4,6 +4,7 @@ import core.basesyntax.Figure;
 
 public class Circle extends Figure {
     private int radius;
+
     @Override
     public void draw() {
         setFigureName("circle");
