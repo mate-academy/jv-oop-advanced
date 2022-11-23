@@ -7,8 +7,9 @@ import core.basesyntax.Figure;
 public class Circle extends Figure {
     private int radius;
 
+
     @Override
-    public void getInfo() {
+    public void draw() {
         setFigureName("circle");
         System.out.println("Figure: " + getFigureName()
                 + ", area: " + getArea()

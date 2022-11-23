@@ -10,7 +10,7 @@ public class HelloWorld {
             } else {
                 figureArray[i] = figureSupplier.getDefaultFigure();
             }
-            figureArray[i].getInfo();
+            figureArray[i].draw();
         }
     }
 }

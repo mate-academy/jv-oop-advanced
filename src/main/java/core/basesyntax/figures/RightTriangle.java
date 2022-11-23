@@ -25,7 +25,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void getInfo() {
+    public void draw() {
         setFigureName("right triangle");
         System.out.println("Figure: " + getFigureName()
                 + ", area: " + getArea()
