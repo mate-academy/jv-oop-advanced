@@ -1,7 +1,5 @@
 package core.basesyntax.figures;
 
-import java.util.Random;
-
 import core.basesyntax.Figure;
 
 public class Circle extends Figure {
