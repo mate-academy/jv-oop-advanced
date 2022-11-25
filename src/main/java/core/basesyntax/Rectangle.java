@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-
     private int weight;
     private int height;
 
