@@ -38,7 +38,8 @@ public class FigureSupplier {
 
     private Figure getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                random.nextInt(NUMBER_OF_FIGURE_TYPES), random.nextInt(NUMBER_OF_FIGURE_TYPES), random.nextInt(NUMBER_OF_FIGURE_TYPES));
+                random.nextInt(NUMBER_OF_FIGURE_TYPES), random.nextInt(NUMBER_OF_FIGURE_TYPES),
+                random.nextInt(NUMBER_OF_FIGURE_TYPES));
     }
 
     private Figure getRandomRectangle() {
