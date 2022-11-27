@@ -27,23 +27,25 @@ public class FigureSupplier {
     }
 
     private Figure createSquare() {
-        return new Square(colorSupplier.getRandomColor(), random.nextInt(10));
+        return new Square(colorSupplier.getRandomColor(), random.nextInt(10) + 1);
     }
 
     private Figure createRectangle() {
-        return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(10), random.nextInt(10));
+        return new Rectangle(colorSupplier.getRandomColor(),
+                random.nextInt(10) + 1, random.nextInt(10) + 1);
     }
 
     private Figure createRightTriangle() {
-        return new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(10), random.nextInt(10));
+        return new RightTriangle(colorSupplier.getRandomColor(),
+                random.nextInt(10) + 1, random.nextInt(10) + 1);
     }
 
     private Figure createCircle() {
-        return new Circle(colorSupplier.getRandomColor(), random.nextInt(10));
+        return new Circle(colorSupplier.getRandomColor(), random.nextInt(10) + 1);
     }
 
     private Figure createIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                random.nextInt(10), random.nextInt(10), random.nextInt(10));
+                random.nextInt(10) + 1, random.nextInt(10) + 1, random.nextInt(10) + 1);
     }
 }
