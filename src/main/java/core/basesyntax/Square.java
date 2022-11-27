@@ -3,7 +3,6 @@ package core.basesyntax;
 public class Square extends Figure {
     private double side;
 
-
     @Override
     public double area() {
         return side * side;
@@ -14,7 +13,7 @@ public class Square extends Figure {
         System.out.println("Square, "
                 + "area: " + area() + " sq.units, "
                 + "side: " + this.side + " units, "
-                + "color: " + this.color);
+                + "color: " + getColor());
     }
 
     public double getSide() {

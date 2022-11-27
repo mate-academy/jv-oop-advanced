@@ -17,7 +17,7 @@ public class RightTriangle extends Figure {
                 + "hypotenuse: " + this.hypotenuse + " units, "
                 + "base: " + this.base + " units, "
                 + "altitude: " + this.altitude + " units, "
-                + "color: " + this.color);
+                + "color: " + getColor());
     }
 
     public double getBase() {

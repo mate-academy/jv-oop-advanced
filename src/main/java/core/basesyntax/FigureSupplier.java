@@ -33,7 +33,7 @@ public class FigureSupplier {
     private Square generateSquare(String color) {
         Square square = new Square();
         square.setSide(random.nextInt(100));
-        square.color = color;
+        square.setColor(color);
         return square;
     }
 
@@ -41,7 +41,7 @@ public class FigureSupplier {
         RightTriangle rightTriangle = new RightTriangle();
         rightTriangle.setBase(random.nextInt(100));
         rightTriangle.setAltitude(random.nextInt(100));
-        rightTriangle.color = color;
+        rightTriangle.setColor(color);
         return rightTriangle;
     }
 
@@ -49,7 +49,7 @@ public class FigureSupplier {
         Rectangle rectangle = new Rectangle();
         rectangle.setLength(random.nextInt(100));
         rectangle.setWidth(random.nextInt(100));
-        rectangle.color = color;
+        rectangle.setColor(color);
         return rectangle;
     }
 
@@ -58,14 +58,14 @@ public class FigureSupplier {
         isoscelesTrapezoid.setHeight(random.nextInt(100));
         isoscelesTrapezoid.setBottomSide(random.nextInt(100));
         isoscelesTrapezoid.setTopSide(random.nextInt(100));
-        isoscelesTrapezoid.color = color;
+        isoscelesTrapezoid.setColor(color);
         return isoscelesTrapezoid;
     }
 
     private Circle generateCircle(String color) {
         Circle circle = new Circle();
         circle.setRadius(random.nextInt(100));
-        circle.color = color;
+        circle.setColor(color);
         return circle;
     }
 
@@ -73,7 +73,7 @@ public class FigureSupplier {
         Color whiteColor = Color.values()[0];
         Circle circle = new Circle();
         circle.setRadius(10);
-        circle.color = String.valueOf(whiteColor);
+        circle.setColor(String.valueOf(whiteColor));
         return circle;
     }
 }
