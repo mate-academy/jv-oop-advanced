@@ -15,8 +15,7 @@ public class FigureSupplier {
 
         switch (figure) {
             case CIRCLE:
-                shape = new Circle(colSup.getRandomColor(), random.nextInt(100));
-                break;
+                return getRandomCircle();
             case SQUARE:
                 shape = new Square(colSup.getRandomColor(), random.nextInt(100));
                 break;
