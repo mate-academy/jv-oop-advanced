@@ -4,9 +4,10 @@ public class Circle extends Figure {
     private float radius;
 
     public Circle(String color, float radius) {
+        super(color);
         this.radius = radius;
-        this.color = color;
     }
+
 
     public String getColor() {
         return color;
