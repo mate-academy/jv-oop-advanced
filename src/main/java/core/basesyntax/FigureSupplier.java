@@ -3,8 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    Random random = new Random();
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FigureType.values().length);
@@ -17,10 +17,9 @@ public class FigureSupplier {
                 return createRightTriangle();
             case 3:
                 return createCircle();
-            case 4:
+            default:
                 return createIsoscelesTrapezoid();
         }
-        return null;
     }
 
     public Figure getDefaultFigure() {
@@ -28,22 +27,23 @@ public class FigureSupplier {
     }
 
     private Figure createSquare() {
-        return new Square(colorSupplier.getRandomColor(), random.nextInt(1000));
+        return new Square(colorSupplier.getRandomColor(), random.nextInt(10));
     }
 
     private Figure createRectangle() {
-        return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(1000), random.nextInt(1000));
+        return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(10), random.nextInt(10));
     }
 
     private Figure createRightTriangle() {
-        return new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(1000), random.nextInt(1000));
+        return new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(10), random.nextInt(10));
     }
 
     private Figure createCircle() {
-        return new Circle(colorSupplier.getRandomColor(), random.nextInt(1000));
+        return new Circle(colorSupplier.getRandomColor(), random.nextInt(10));
     }
 
     private Figure createIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(1000), random.nextInt(1000), random.nextInt(1000));
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                random.nextInt(10), random.nextInt(10), random.nextInt(10));
     }
 }

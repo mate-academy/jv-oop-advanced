@@ -38,11 +38,14 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double area(Figure figure) {
-        return (getSideA() + getSideB()) / 2 * Math.sqrt(getSideC() * getSideC() - (getSideA() - getSideB()) * (getSideA() - getSideB()) / 4);
+        double firstPart = (getSideA() + getSideB()) / 2;
+        double secondPart = ((getSideA() - getSideB()) * (getSideA() - getSideB()) / 4);
+        return firstPart * Math.sqrt(getSideC() * getSideC() - secondPart);
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: trapezoid, area: " + area(this) + " sq.units, sideA: " + getSideA() + " units, sideB: " + getSideB() + " units, sideC: " + getSideC() + " units, color: " + getColor());
+        System.out.println("Figure: trapezoid, area: " + area(this) + " sq.units, sideA: " + getSideA() +
+                " units, sideB: " + getSideB() + " units, sideC: " + getSideC() + " units, color: " + getColor());
     }
 }
