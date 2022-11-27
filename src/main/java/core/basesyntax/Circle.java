@@ -1,7 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Shape {
-    private String color;
+public class Circle extends Figure {
     private float radius;
 
     public Circle(String color, float radius) {
