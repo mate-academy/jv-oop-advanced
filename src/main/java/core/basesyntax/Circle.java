@@ -19,7 +19,8 @@ public class Circle extends Figure {
 
     @Override
     public float area() {
-        return (float) (3.14 * getRadius() * getRadius());
+        return (float) (3.14 * radius * radius);
+
     }
 
     @Override
