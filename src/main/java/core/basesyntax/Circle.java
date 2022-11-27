@@ -27,7 +27,7 @@ public class Circle extends Figure {
         System.out.println("Drawing "
                 + getColor()
                 + " circle with radius equals to "
-                + getRadius()
+                + radius 
                 + " area equals "
                 + area());
     }
