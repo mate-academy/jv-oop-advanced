@@ -5,6 +5,12 @@ public class IsoscelesTrapezoid extends Figure {
     private double bottomSide;
     private double height;
 
+    public IsoscelesTrapezoid(double topSide, double bottomSide, double height) {
+        this.topSide = topSide;
+        this.bottomSide = bottomSide;
+        this.height = height;
+    }
+
     @Override
     public double area() {
         return ((topSide + bottomSide) / 2) * height;

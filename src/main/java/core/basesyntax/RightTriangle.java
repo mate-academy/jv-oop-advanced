@@ -5,6 +5,12 @@ public class RightTriangle extends Figure {
     private double base;
     private double altitude;
 
+    public RightTriangle(double hypotenuse, double base, double altitude) {
+        this.hypotenuse = hypotenuse;
+        this.base = base;
+        this.altitude = altitude;
+    }
+
     @Override
     public double area() {
         return 0.5 * base * altitude;

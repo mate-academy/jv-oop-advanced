@@ -10,70 +10,61 @@ public class FigureSupplier {
         int figureNumber = random.nextInt(FIGURE_COUNT);
         ColorSupplier colorSupplier = new ColorSupplier();
         String color = colorSupplier.getRandomColor();
-
+        int[] randomArray = {
+                random.nextInt(100),
+                random.nextInt(100),
+                random.nextInt(100)};
         switch (figureNumber) {
             case 1:
-                Circle circle = generateCircle(color);
-                return circle;
+                return generateCircle(randomArray, color);
             case 2:
-                IsoscelesTrapezoid isoscelesTrapezoid = generateIsoscelesTrapezoid(color);
-                return isoscelesTrapezoid;
+                return generateIsoscelesTrapezoid(randomArray, color);
             case 3:
-                Rectangle rectangle = generateRectangle(color);
-                return rectangle;
+                return generateRectangle(randomArray, color);
             case 4:
-                RightTriangle rightTriangle = generateRightTriangle(color);
-                return rightTriangle;
+                return generateRightTriangle(randomArray, color);
             default:
-                Square square = generateSquare(color);
-                return square;
+                return generateSquare(randomArray, color);
+
         }
     }
 
-    private Square generateSquare(String color) {
-        Square square = new Square();
-        square.setSide(random.nextInt(100));
+    private Square generateSquare(int[] randomArray, String color) {
+        Square square = new Square(randomArray[0]);
         square.setColor(color);
         return square;
     }
 
-    private RightTriangle generateRightTriangle(String color) {
-        RightTriangle rightTriangle = new RightTriangle();
-        rightTriangle.setBase(random.nextInt(100));
-        rightTriangle.setAltitude(random.nextInt(100));
+    private RightTriangle generateRightTriangle(int[] randomArray, String color) {
+        RightTriangle rightTriangle =
+                new RightTriangle(randomArray[0], randomArray[1], randomArray[2]);
         rightTriangle.setColor(color);
         return rightTriangle;
     }
 
-    private Rectangle generateRectangle(String color) {
-        Rectangle rectangle = new Rectangle();
-        rectangle.setLength(random.nextInt(100));
-        rectangle.setWidth(random.nextInt(100));
+    private Rectangle generateRectangle(int[] randomArray, String color) {
+        Rectangle rectangle = new Rectangle(randomArray[0], randomArray[1]);
         rectangle.setColor(color);
         return rectangle;
     }
 
-    private IsoscelesTrapezoid generateIsoscelesTrapezoid(String color) {
-        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
-        isoscelesTrapezoid.setHeight(random.nextInt(100));
-        isoscelesTrapezoid.setBottomSide(random.nextInt(100));
-        isoscelesTrapezoid.setTopSide(random.nextInt(100));
+    private IsoscelesTrapezoid generateIsoscelesTrapezoid(int[] randomArray, String color) {
+        IsoscelesTrapezoid isoscelesTrapezoid =
+                new IsoscelesTrapezoid(randomArray[0], randomArray[1], randomArray[2]);
         isoscelesTrapezoid.setColor(color);
         return isoscelesTrapezoid;
     }
 
-    private Circle generateCircle(String color) {
-        Circle circle = new Circle();
-        circle.setRadius(random.nextInt(100));
+    private Circle generateCircle(int[] randomArray, String color) {
+        Circle circle = new Circle(randomArray[0]);
         circle.setColor(color);
         return circle;
     }
 
     public Figure getDefaultFigure() {
-        Color whiteColor = Color.values()[0];
-        Circle circle = new Circle();
-        circle.setRadius(10);
-        circle.setColor(String.valueOf(whiteColor));
+        Circle circle = new Circle(10);
+        Color color = Color.values()[0];
+        circle.setColor(color.name());
         return circle;
     }
 }
