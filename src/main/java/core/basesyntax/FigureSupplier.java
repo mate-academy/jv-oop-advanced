@@ -43,7 +43,7 @@ public class FigureSupplier {
         return random.nextInt(AMOUNT);
     }
 
-    private int getFigureParameters() {
-        return random.nextInt(FIGURE_PARAMETERS) + FIGURE_PARAMETERS;
+    private int getRandomParameter() {
+        return random.nextInt(MAX_VALUE) + MIN_VALUE;
     }
 }
