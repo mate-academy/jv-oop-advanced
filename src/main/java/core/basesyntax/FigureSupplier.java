@@ -36,9 +36,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        Circle circle = new Circle(DEFAULT_FIGURE_PARAMETERS);
-        circle.drawDefaultCircle();
-        return circle;
+        return new Circle(DEFAULR_COLOR, DEFAULT_RADIUS);
     }
 
     private int getQuantityIndex() {
