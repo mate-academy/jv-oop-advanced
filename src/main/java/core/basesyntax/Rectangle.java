@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private ColorSupplier colorSupplier = new ColorSupplier();
     private int sideA = 0;
     private int sideB = 0;
 
