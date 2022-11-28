@@ -11,10 +11,9 @@ public class FigureSupplier {
     private Random random = new Random();
 
     public Figure getRandomFigure() {
-        if (getQuantityIndex() == 0) {
-            Square square = new Square(getFigureParameters());
-            square.drawFigure();
-            return square;
+        int randomNumber = getQuantityIndex();
+        if (randomNumber == 0) {
+            return getRandomSquare();
         } else if (getQuantityIndex() == 1) {
             RightTriangle rightTriangle = new RightTriangle(getFigureParameters(),
                     getFigureParameters());
