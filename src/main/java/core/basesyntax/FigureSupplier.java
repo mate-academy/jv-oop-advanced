@@ -6,9 +6,9 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Color DEFAULT_COLOR = Color.WHITE;
-    private final int DEFAULT_RADIUS = 10;
-    private final int MAX_VALUE = 10;
-    private final int MIN_VALUE = 1;
+    private static final int DEFAULT_RADIUS = 10;
+    private static final int MAX_VALUE = 10;
+    private static final int MIN_VALUE = 1;
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FigureType.values().length);
@@ -50,6 +50,8 @@ public class FigureSupplier {
 
     private Figure createIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                random.nextInt(MAX_VALUE) + MIN_VALUE, random.nextInt(MAX_VALUE) + MIN_VALUE, random.nextInt(MAX_VALUE) + MIN_VALUE);
+                random.nextInt(MAX_VALUE) + MIN_VALUE,
+                random.nextInt(MAX_VALUE) + MIN_VALUE,
+                random.nextInt(MAX_VALUE) + MIN_VALUE);
     }
 }
