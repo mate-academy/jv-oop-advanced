@@ -10,32 +10,36 @@ public class FigureSupplier {
 
     private Random random = new Random();
 
-    public Figure getRandomFigure(Figure figure) {
+    public Figure getRandomFigure() {
         if (getQuantityIndex() == 0) {
             Square square = new Square(getFigureParameters());
             square.drawFigure();
+            return square;
         } else if (getQuantityIndex() == 1) {
             RightTriangle rightTriangle = new RightTriangle(getFigureParameters(),
                     getFigureParameters());
             rightTriangle.drawFigure();
+            return rightTriangle;
         } else if (getQuantityIndex() == 2) {
             IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(getFigureParameters(),
                     getFigureParameters(), getFigureParameters());
             isoscelesTrapezoid.drawFigure();
+            return isoscelesTrapezoid;
         } else if (getQuantityIndex() == 3) {
             Circle circle = new Circle(getFigureParameters());
             circle.drawFigure();
+            return circle;
         } else {
             Rectangle rectangle = new Rectangle(getFigureParameters(), getFigureParameters());
             rectangle.drawFigure();
+            return rectangle;
         }
-        return figure;
     }
 
-    public Figure getDefaultFigure(Figure figure) {
+    public Figure getDefaultFigure() {
         Circle circle = new Circle(DEFAULT_FIGURE_PARAMETERS);
         circle.drawDefaultCircle();
-        return figure;
+        return circle;
     }
 
     private int getQuantityIndex() {
