@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private int firstSide;
-    private int secondSide;
-    private String name = "rectangle";
+    private static final String FIGURE_NAME = "rectangle";
+    private final int firstSide;
+    private final int secondSide;
 
     public Rectangle (String color, int firstSide, int secondSide) {
         super(color);
@@ -13,11 +13,11 @@ public class Rectangle extends Figure {
 
     @Override
     public double getArea() {
-        return this.firstSide * this.secondSide;
+        return firstSide * secondSide;
     }
 
     @Override
     public String draw() {
-        return "Figure: " + this.name + ", area: " + this.getArea() + " sq.units, first side: " + this.firstSide + " units, second side: " + this.secondSide + " units, color: " + this.color;
+        return "Figure: " + FIGURE_NAME + ", area: " + getArea() + " sq.units, first side: " + firstSide + " units, second side: " + secondSide + " units, color: " + color;
     }
 }

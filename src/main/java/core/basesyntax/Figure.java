@@ -1,11 +1,12 @@
 package core.basesyntax;
 
 public abstract class Figure {
-    public String color;
+    protected String color;
 
-    public Figure(String color) {
+    protected Figure(String color) {
         this.color = color;
     }
 
-    public abstract double getArea();
+    protected abstract double getArea();
+    protected abstract String draw();
 }
