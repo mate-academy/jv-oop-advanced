@@ -14,7 +14,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    protected double getArea() {
+    public double getArea() {
         double semiPerimeter = (firstBase + secondBase + 2 * leg) / 2;
         return Math.sqrt((semiPerimeter - firstBase)
                 * (semiPerimeter - secondBase)
