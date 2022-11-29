@@ -5,7 +5,19 @@ package core.basesyntax;
  */
 public class HelloWorld {
     public static void main(String[] args) {
-        Figure[] figures = new Figure[6];
+        final int numberOfFigures = 6;
+        FigureSupplier figureSupplier = new FigureSupplier();
+        Figure[] figures = new Figure[numberOfFigures];
+
+        for (int i = 0; i < numberOfFigures; i++) {
+            if (i < numberOfFigures / 2) {
+                figures[i] = figureSupplier.getRandomFigure();
+                System.out.println(figures[i].draw());
+            } else {
+                figures[i] = figureSupplier.getDefaultFigure();
+                System.out.println(figures[i].draw());
+            }
+        }
     }
 
 }

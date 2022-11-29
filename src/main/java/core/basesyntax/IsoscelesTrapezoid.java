@@ -16,11 +16,19 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     protected double getArea() {
         double semiPerimeter = (firstBase + secondBase + 2 * leg) / 2;
-        return Math.sqrt((semiPerimeter - firstBase) * (semiPerimeter - secondBase) * (semiPerimeter - leg) * (semiPerimeter - leg));
+        return Math.sqrt((semiPerimeter - firstBase)
+                * (semiPerimeter - secondBase)
+                * (semiPerimeter - leg)
+                * (semiPerimeter - leg));
     }
 
     @Override
     protected String draw() {
-        return "Figure: " + FIGURE_NAME + ", area: " + getArea() + " sq.units, first base: " +  firstBase + " units, second base: " + secondBase + " units, legs: " + leg + " units, color: " + color;
+        return "Figure: " + FIGURE_NAME
+                + ", area: " + getArea()
+                + " sq.units, first base: " + firstBase
+                + " units, second base: " + secondBase
+                + " units, legs: " + leg
+                + " units, color: " + color;
     }
 }

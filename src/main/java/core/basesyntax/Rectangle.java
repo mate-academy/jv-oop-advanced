@@ -5,7 +5,7 @@ public class Rectangle extends Figure {
     private final int firstSide;
     private final int secondSide;
 
-    public Rectangle (String color, int firstSide, int secondSide) {
+    public Rectangle(String color, int firstSide, int secondSide) {
         super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
@@ -18,6 +18,10 @@ public class Rectangle extends Figure {
 
     @Override
     public String draw() {
-        return "Figure: " + FIGURE_NAME + ", area: " + getArea() + " sq.units, first side: " + firstSide + " units, second side: " + secondSide + " units, color: " + color;
+        return "Figure: " + FIGURE_NAME
+                + ", area: " + getArea()
+                + " sq.units, first side: " + firstSide
+                + " units, second side: " + secondSide
+                + " units, color: " + color;
     }
 }

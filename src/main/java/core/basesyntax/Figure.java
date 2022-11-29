@@ -8,5 +8,6 @@ public abstract class Figure {
     }
 
     protected abstract double getArea();
+
     protected abstract String draw();
 }

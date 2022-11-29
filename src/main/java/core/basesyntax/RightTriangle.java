@@ -18,6 +18,10 @@ public class RightTriangle extends Figure {
 
     @Override
     protected String draw() {
-        return "Figure: " + FIGURE_NAME + ", area: " + getArea() + " sq.units, first leg: " +  firstLeg + " units, second leg: " + secondLeg + " units, color: " + color;
+        return "Figure: " + FIGURE_NAME
+                + ", area: " + getArea()
+                + " sq.units, first leg: " + firstLeg
+                + " units, second leg: " + secondLeg
+                + " units, color: " + color;
     }
 }
