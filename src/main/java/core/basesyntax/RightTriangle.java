@@ -11,7 +11,7 @@ public class RightTriangle extends Figure implements AreaCalculator, Drawing {
     }
 
     public double getA() {
-        return Math.sqrt(Math.pow(sideA,2)+Math.pow(sideB,2));
+        return Math.sqrt(Math.pow(sideA,2) + Math.pow(sideB,2));
     }
 
     public void setA(double a) {
