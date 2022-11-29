@@ -31,34 +31,34 @@ public class FigureSupplier {
 
     private Figure getRandomSquare() {
         String color = colorSupplier.getRandomColor();
-        int side = random.nextInt(FIGURE_ELEMENT_MAX_SIZE);
+        int side = random.nextInt(FIGURE_ELEMENT_MAX_SIZE) + 1;
         return new Square(color, side);
     }
 
     private Figure getRandomRectangle() {
         String color = colorSupplier.getRandomColor();
-        int firstSide = random.nextInt(FIGURE_ELEMENT_MAX_SIZE);
-        int secondSide = random.nextInt(FIGURE_ELEMENT_MAX_SIZE);
+        int firstSide = random.nextInt(FIGURE_ELEMENT_MAX_SIZE) + 1;
+        int secondSide = random.nextInt(FIGURE_ELEMENT_MAX_SIZE) + 1;
         return new Rectangle(color, firstSide, secondSide);
     }
 
     private Figure getRandomRightTriangle() {
         String color = colorSupplier.getRandomColor();
-        int firstLeg = random.nextInt(FIGURE_ELEMENT_MAX_SIZE);
-        int secondLeg = random.nextInt(FIGURE_ELEMENT_MAX_SIZE);
+        int firstLeg = random.nextInt(FIGURE_ELEMENT_MAX_SIZE) + 1;
+        int secondLeg = random.nextInt(FIGURE_ELEMENT_MAX_SIZE) + 1;
         return new RightTriangle(color,firstLeg, secondLeg);
     }
 
     private Figure getRandomCircle() {
         String color = colorSupplier.getRandomColor();
-        int radius = random.nextInt(FIGURE_ELEMENT_MAX_SIZE);
+        int radius = random.nextInt(FIGURE_ELEMENT_MAX_SIZE) + 1;
         return new Circle(color, radius);
     }
 
     private Figure getRandomIsoscelesTrapezoid() {
         String color = colorSupplier.getRandomColor();
-        int firstBase = random.nextInt(FIGURE_ELEMENT_MAX_SIZE);
-        int secondBase = random.nextInt(FIGURE_ELEMENT_MAX_SIZE);
+        int firstBase = random.nextInt(FIGURE_ELEMENT_MAX_SIZE) + 1;
+        int secondBase = random.nextInt(FIGURE_ELEMENT_MAX_SIZE) + 1;
         int limit = Math.abs(firstBase - secondBase) / 2;
         int leg = random.nextInt(FIGURE_ELEMENT_MAX_SIZE - limit) + limit;
         return new IsoscelesTrapezoid(color, firstBase, secondBase, leg);
