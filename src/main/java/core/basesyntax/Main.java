@@ -7,16 +7,16 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
 
         for (int i = 0; i < figures.length; i++) {
-            if(i < figures.length / 2) {
+            if (i < figures.length / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
-            }else {
+            } else {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
         }
 
         for (Figure figure : figures) {
-                System.out.println(figure.getArea());
-                figure.draw();
-            }
+            System.out.println(figure.getArea());
+            figure.draw();
         }
     }
+}
