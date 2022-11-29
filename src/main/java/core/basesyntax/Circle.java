@@ -32,6 +32,11 @@ public class Circle extends Figure implements AreaCalculator, Drawing {
 
     @Override
     public String toString() {
-        return "Circle: square, area: " + getArea() + " sq.units, side: " + radius + " units, color: " + color;
+        return "Circle: square, area: "
+                + getArea()
+                + " sq.units, side: "
+                + radius
+                + " units, color: "
+                + color;
     }
 }

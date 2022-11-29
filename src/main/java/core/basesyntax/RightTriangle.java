@@ -38,10 +38,9 @@ public class RightTriangle extends Figure implements AreaCalculator, Drawing {
 
     @Override
     public String toString() {
-        return "RightTriangle{" +
-                "a=" + sideA +
-                ", b=" + sideB +
-                ", color='" + color + '\'' +
-                '}';
+        return "RightTriangle: square, area: "
+                + getArea()
+                + " sq.units, color: "
+                + color;
     }
 }

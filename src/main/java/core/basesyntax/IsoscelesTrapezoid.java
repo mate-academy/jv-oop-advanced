@@ -48,11 +48,9 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator, Drawin
 
     @Override
     public String toString() {
-        return "IsoscelesTrapezoid{" +
-                "a=" + sideA +
-                ", b=" + sideB +
-                ", h=" + sideH +
-                ", color='" + color + '\'' +
-                '}';
+        return "IsoscelesTrapezoid: square, area: "
+                + getArea()
+                + " sq.units, color: "
+                + color;
     }
 }

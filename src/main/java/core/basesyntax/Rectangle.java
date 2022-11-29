@@ -38,9 +38,9 @@ public class Rectangle extends Figure implements AreaCalculator, Drawing {
 
     @Override
     public String toString() {
-        return "Rectangle{" +
-                "b=" + sideB +
-                ", color='" + color + '\'' +
-                '}';
+        return "Rectangle: square, area: "
+                + getArea()
+                + " sq.units, color: "
+                + color;
     }
 }
