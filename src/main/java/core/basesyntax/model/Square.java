@@ -1,4 +1,4 @@
-package core.basesyntax.Model;
+package core.basesyntax.model;
 
 public class Square extends Figures {
 

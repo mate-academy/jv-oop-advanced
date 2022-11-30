@@ -1,7 +1,7 @@
-package core.basesyntax.Model;
+package core.basesyntax.model;
 
-import core.basesyntax.Behaviour.Calculator;
-import core.basesyntax.Behaviour.PrintInfo;
+import core.basesyntax.behaviour.Calculator;
+import core.basesyntax.behaviour.PrintInfo;
 
 public abstract class Figures implements Calculator, PrintInfo {
     private String color;

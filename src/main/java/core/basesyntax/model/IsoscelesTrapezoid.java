@@ -1,4 +1,4 @@
-package core.basesyntax.Model;
+package core.basesyntax.model;
 
 public class IsoscelesTrapezoid extends Figures {
     private double lengthSize1;
