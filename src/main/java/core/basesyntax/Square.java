@@ -17,7 +17,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public double getArea(Figure figure) {
+    public double getArea() {
         return getSide() * getSide();
     }
 
