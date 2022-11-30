@@ -37,7 +37,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double getArea(Figure figure) {
+    public double getArea() {
         double firstPart = (getSideA() + getSideB()) / 2;
         double secondPart = ((getSideA() - getSideB()) * (getSideA() - getSideB()) / 4);
         return firstPart * Math.sqrt(getSideC() * getSideC() - secondPart);
