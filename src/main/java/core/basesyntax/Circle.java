@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private static final String FIGURE_NAME = "circle";
     private final int radius;
 
     public Circle(String color, int radius) {
@@ -16,8 +15,7 @@ public class Circle extends Figure {
 
     @Override
     public String draw() {
-        return "Figure: " + FIGURE_NAME
-                + ", area: " + getArea()
+        return "Figure: circle, area: " + getArea()
                 + " sq.units, radius: " + radius
                 + " units, color: " + color;
     }
