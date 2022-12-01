@@ -31,36 +31,40 @@ public class FigureSupplier {
 
     private Figure getRandomSquare() {
         String color = colorSupplier.getRandomColor();
-        int side = random.nextInt(FIGURE_ELEMENT_MAX_SIZE) + 1;
+        int side = getRandomLength();
         return new Square(color, side);
     }
 
     private Figure getRandomRectangle() {
         String color = colorSupplier.getRandomColor();
-        int firstSide = random.nextInt(FIGURE_ELEMENT_MAX_SIZE) + 1;
-        int secondSide = random.nextInt(FIGURE_ELEMENT_MAX_SIZE) + 1;
+        int firstSide = getRandomLength();
+        int secondSide = getRandomLength();
         return new Rectangle(color, firstSide, secondSide);
     }
 
     private Figure getRandomRightTriangle() {
         String color = colorSupplier.getRandomColor();
-        int firstLeg = random.nextInt(FIGURE_ELEMENT_MAX_SIZE) + 1;
-        int secondLeg = random.nextInt(FIGURE_ELEMENT_MAX_SIZE) + 1;
+        int firstLeg = getRandomLength();
+        int secondLeg = getRandomLength();
         return new RightTriangle(color,firstLeg, secondLeg);
     }
 
     private Figure getRandomCircle() {
         String color = colorSupplier.getRandomColor();
-        int radius = random.nextInt(FIGURE_ELEMENT_MAX_SIZE) + 1;
+        int radius = getRandomLength();
         return new Circle(color, radius);
     }
 
     private Figure getRandomIsoscelesTrapezoid() {
         String color = colorSupplier.getRandomColor();
-        int firstBase = random.nextInt(FIGURE_ELEMENT_MAX_SIZE) + 1;
-        int secondBase = random.nextInt(FIGURE_ELEMENT_MAX_SIZE) + 1;
+        int firstBase = getRandomLength();
+        int secondBase = getRandomLength();
         int limit = Math.abs(firstBase - secondBase) / 2;
         int leg = random.nextInt(FIGURE_ELEMENT_MAX_SIZE - limit) + limit;
         return new IsoscelesTrapezoid(color, firstBase, secondBase, leg);
+    }
+
+    private int getRandomLength() {
+        return random.nextInt(FIGURE_ELEMENT_MAX_SIZE) + 1;
     }
 }
