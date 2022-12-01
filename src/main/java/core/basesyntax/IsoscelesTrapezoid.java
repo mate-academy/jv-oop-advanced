@@ -1,31 +1,26 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private static final String TEMPLATE = "Figure: isosceles trapezoid, area: %.1f sq.units,"
-            + " base: %d units, top: %d units, leg: %d units, color: %s";
     private int base;
     private int top;
-    private int leg;
+    private int height;
 
-    public IsoscelesTrapezoid(String color, int base, int top, int leg) {
+    public IsoscelesTrapezoid(String color, int base, int top, int height) {
         super(color);
         this.base = base;
         this.top = top;
-        this.leg = leg;
+        this.height = height;
     }
 
     @Override
     public double getArea() {
-        double s = getSemiPerimeter();
-        return Math.sqrt((s - base) * (s - top) * (s - leg) * (s - leg));
-    }
-
-    private double getSemiPerimeter() {
-        return (base + top + leg + leg) / 2.0;
+        return (base + top) * height / 2.0;
     }
 
     @Override
     public void draw() {
-        System.out.println(String.format(TEMPLATE, getArea(), base, top, leg, getColor()));
+        System.out.println(String.format("Figure: isosceles trapezoid, area: %.1f sq.units,"
+                + " base: %d units, top: %d units, height: %d units, color: %s",
+                getArea(), base, top, height, getColor()));
     }
 }

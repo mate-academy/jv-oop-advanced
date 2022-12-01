@@ -1,8 +1,6 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private static final String TEMPLATE = "Figure: rectangle, area: %.1f sq.units, length: %d "
-            + "units, width: %d units, color: %s";
     private int length;
     private int width;
 
@@ -19,6 +17,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println(String.format(TEMPLATE, getArea(), length, width, getColor()));
+        System.out.println(String.format("Figure: rectangle, area: %.1f sq.units, length: %d "
+                + "units, width: %d units, color: %s", getArea(), length, width, getColor()));
     }
 }

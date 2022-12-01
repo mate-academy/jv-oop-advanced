@@ -1,8 +1,6 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private static final String TEMPLATE = "Figure: triangle, area: %.1f sq.units, firstLeg: %d "
-            + "units, secondLeg: %d units, color: %s";
     private int firstLeg;
     private int secondLeg;
 
@@ -19,6 +17,8 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println(String.format(TEMPLATE, getArea(), firstLeg, secondLeg, getColor()));
+        System.out.println(String.format("Figure: triangle, area: %.1f sq.units,"
+                + " firstLeg: %d units, secondLeg: %d units, color: %s",
+                getArea(), firstLeg, secondLeg, getColor()));
     }
 }
