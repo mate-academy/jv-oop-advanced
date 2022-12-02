@@ -7,9 +7,9 @@ public class FigureSupplier {
     private static final Color DEFAULT_COLOR = Color.WHITE;
     private static final int DEFAULT_RADIUS = 10;
     private Random random = new Random();
-    int size1 = random.nextInt(10 + 1);
-    int size2 = random.nextInt(10 + 1);
-    int size3 = random.nextInt(10 + 1);
+    private int size1 = random.nextInt(10 + 1);
+    private int size2 = random.nextInt(10 + 1);
+    private int size3 = random.nextInt(10 + 1);
     private ColorSupplier color = new ColorSupplier();
 
     public Figure getRandomFigure() {
