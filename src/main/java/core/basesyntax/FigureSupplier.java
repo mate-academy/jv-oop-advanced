@@ -7,24 +7,24 @@ public class FigureSupplier {
     private static final Color DEFAULT_COLOR = Color.WHITE;
     private static final int DEFAULT_RADIUS = 10;
     private Random random = new Random();
-    int a = random.nextInt(10 + 1);
-    int b = random.nextInt(10 + 1);
-    int h = random.nextInt(10 + 1);
-    ColorSupplier color = new ColorSupplier();
+    int size1 = random.nextInt(10 + 1);
+    int size2 = random.nextInt(10 + 1);
+    int size3 = random.nextInt(10 + 1);
+    private ColorSupplier color = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int index = new Random().nextInt(FIGURE_COUNT);
-        switch (index){
+        switch (index) {
             case 0:
-                return new Circle(a, color.getRandomColor());
+                return new Circle(size1, color.getRandomColor());
             case 1:
-                return new Square(a, color.getRandomColor());
+                return new Square(size1, color.getRandomColor());
             case 2:
-                return new Rectangle(a, b, color.getRandomColor());
+                return new Rectangle(size1, size2, color.getRandomColor());
             case 3:
-                return new RightTriangle(a, b, color.getRandomColor());
+                return new RightTriangle(size1, size2, color.getRandomColor());
             default:
-                return new IsoscelesTrapezoid(a, b, h, color.getRandomColor());
+                return new IsoscelesTrapezoid(size1, size2, size3, color.getRandomColor());
         }
     }
 
