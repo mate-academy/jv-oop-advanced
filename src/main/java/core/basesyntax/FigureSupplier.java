@@ -11,7 +11,6 @@ public class FigureSupplier {
     int b = random.nextInt(10 + 1);
     int h = random.nextInt(10 + 1);
     ColorSupplier color = new ColorSupplier();
-    //String randomColor = color.getRandomColor();
 
     public Figure getRandomFigure() {
         int index = new Random().nextInt(FIGURE_COUNT);
