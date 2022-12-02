@@ -4,11 +4,13 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int RANGE_VALUES = 10;
+    private static final int DEFAULT_RADIUS = 10;
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
     private final Random random = new Random();
     private final ColorSupplier supplierColor = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int figureNumber = random.nextInt(FigureTypes.values().length);
+        int figureNumber = random.nextInt(FigureType.values().length);
         switch (figureNumber) {
             case 0:
                 return createCircle();
@@ -18,16 +20,38 @@ public class FigureSupplier {
                 return createRectangle();
             case 3:
                 return createRightTriangle();
-            default: break;
+            default:
+                return createSquare();
         }
-        return createSquare();
+    }
+
+    public Figure rectangle() {
+        Rectangle rectangle = new Rectangle();
+        rectangle.setHeight(random.nextInt(RANGE_VALUES));
+        rectangle.setWidth(random.nextInt(RANGE_VALUES));
+        rectangle.setColor(supplierColor.getRandomColor().name());
+        return rectangle;
+    }
+
+    public Figure trapezoid() {
+        IsoscelesTrapezoid trapezoid = new IsoscelesTrapezoid();
+        trapezoid.setHeight(random.nextInt(RANGE_VALUES));
+        trapezoid.setMiddleLine(random.nextInt(RANGE_VALUES));
+        trapezoid.setColor(supplierColor.getRandomColor().name());
+        return trapezoid;
+    }
+
+    public Figure square() {
+        Square square = new Square();
+        square.setSide(random.nextInt(RANGE_VALUES));
+        square.setColor(supplierColor.getRandomColor().name());
+        return square;
     }
 
     public Figure getDefaultFigure() {
         Circle circle = new Circle();
-        circle.setRadius(10);
-        circle.setColor(Color.WHITE.name());
-        circle.getInfoFigure();
+        circle.setRadius(DEFAULT_RADIUS);
+        circle.setColor(DEFAULT_COLOR);
         return circle;
     }
 
@@ -35,7 +59,6 @@ public class FigureSupplier {
         Circle circle = new Circle();
         circle.setRadius(random.nextInt(RANGE_VALUES));
         circle.setColor(supplierColor.getRandomColor().name());
-        circle.getInfoFigure();
         return circle;
     }
 
@@ -44,7 +67,6 @@ public class FigureSupplier {
         isoscelesTrapezoid.setMiddleLine(random.nextInt(RANGE_VALUES));
         isoscelesTrapezoid.setHeight(random.nextInt(RANGE_VALUES));
         isoscelesTrapezoid.setColor(supplierColor.getRandomColor().name());
-        isoscelesTrapezoid.getInfoFigure();
         return isoscelesTrapezoid;
     }
 
@@ -53,7 +75,6 @@ public class FigureSupplier {
         rectangle.setWidth(random.nextInt(RANGE_VALUES));
         rectangle.setHeight(random.nextInt(RANGE_VALUES));
         rectangle.setColor(supplierColor.getRandomColor().name());
-        rectangle.getInfoFigure();
         return rectangle;
     }
 
@@ -62,7 +83,6 @@ public class FigureSupplier {
         rightTriangle.setFirstLeg(random.nextInt(RANGE_VALUES));
         rightTriangle.setSecondLeg(random.nextInt(RANGE_VALUES));
         rightTriangle.setColor(supplierColor.getRandomColor().name());
-        rightTriangle.getInfoFigure();
         return rightTriangle;
     }
 
@@ -70,7 +90,7 @@ public class FigureSupplier {
         Square square = new Square();
         square.setSide(random.nextInt(RANGE_VALUES));
         square.setColor(supplierColor.getRandomColor().name());
-        square.getInfoFigure();
         return square;
     }
+
 }

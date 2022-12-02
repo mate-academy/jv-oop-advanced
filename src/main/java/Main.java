@@ -3,11 +3,18 @@ import core.basesyntax.FigureSupplier;
 
 public class Main {
     public static void main(String[] args) {
-        Figure[] figures = new Figure[5];
         FigureSupplier supplier = new FigureSupplier();
+        Figure[] figures = new Figure[] {
+                supplier.rectangle(),
+                supplier.trapezoid(),
+                supplier.square(),
+                supplier.getRandomFigure(),
+                supplier.getRandomFigure(),
+                supplier.getRandomFigure(),
+                supplier.getDefaultFigure()
+        };
         for (int i = 0; i < figures.length; i++) {
-            supplier.getRandomFigure();
+            figures[i].draw();
         }
-        Figure defaultFigure = supplier.getDefaultFigure();
     }
 }
