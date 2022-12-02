@@ -1,5 +1,7 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public abstract class Figure {
     public String name;
     public String color;
@@ -17,6 +19,12 @@ public abstract class Figure {
     }
 
     public String getColor() {
-        return color;
+        String randomColor = new ColorSupplier().getRandomColor();
+        return randomColor;
+    }
+
+    public void getDrawing() {
+        System.out.println("Figure: " + getName() + " , "
+                + "color: " + getColor() + ".");
     }
 }

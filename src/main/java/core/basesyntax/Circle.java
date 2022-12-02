@@ -1,7 +1,14 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public class Circle extends Figure implements IAreaCalculator {
     private double radius;
+
+    public Circle(String name, String color) {
+        super(name, color);
+        this.radius = getRandomSide();
+    }
 
     public Circle(String name, String color, double radius) {
         super(name, color);
@@ -19,5 +26,11 @@ public class Circle extends Figure implements IAreaCalculator {
                 + "area: " + getArea() + " sq.units, "
                 + "radius: " + radius + " units, "
                 + "color: " + getColor() + ".");
+    }
+
+    @Override
+    public int getRandomSide() {
+        int side = new Random().nextInt(100);
+        return side;
     }
 }

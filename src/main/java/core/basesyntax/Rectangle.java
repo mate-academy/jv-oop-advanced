@@ -1,13 +1,15 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public class Rectangle extends Figure implements IAreaCalculator {
     private double shortSide;
     private double longSide;
 
-    public Rectangle(String name, String color, double shortSide, double longSide) {
+    public Rectangle(String name, String color) {
         super(name, color);
-        this.shortSide = shortSide;
-        this.longSide = longSide;
+        this.shortSide = getRandomSide();
+        this.longSide = getRandomSide();
     }
 
     @Override
@@ -22,5 +24,10 @@ public class Rectangle extends Figure implements IAreaCalculator {
                 + "shortSide: " + shortSide + " units, "
                 + "longSide: " + longSide + " units, "
                 + "color: " + getColor() + ".");
+    }
+    @Override
+    public int getRandomSide() {
+        int side = new Random().nextInt(100);
+        return side;
     }
 }

@@ -1,13 +1,15 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public class RightTriangle extends Figure implements IAreaCalculator {
     private double firstLeg;
     private double secondLeg;
 
-    public RightTriangle(String name, String color, double firstLeg, double secondLeg) {
+    public RightTriangle(String name, String color) {
         super(name, color);
-        this.firstLeg = firstLeg;
-        this.secondLeg = secondLeg;
+        this.firstLeg = getRandomSide();
+        this.secondLeg = getRandomSide();
     }
 
     @Override
@@ -22,5 +24,11 @@ public class RightTriangle extends Figure implements IAreaCalculator {
                 + "firstLeg: " + firstLeg + " units, "
                 + "secondLeg: " + secondLeg + " units, "
                 + "color: " + getColor() + ".");
+    }
+
+    @Override
+    public int getRandomSide() {
+        int side = new Random().nextInt(100);
+        return side;
     }
 }

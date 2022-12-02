@@ -1,15 +1,17 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public class IsoscelesTrapezoid extends Figure implements IAreaCalculator {
     private double highBase;
     private double lowBase;
     private double height;
 
-    public IsoscelesTrapezoid(String name, String color, double highBase, double lowBase, double height) {
+    public IsoscelesTrapezoid(String name, String color) {
         super(name, color);
-        this.highBase = highBase;
-        this.lowBase = lowBase;
-        this.height = height;
+        this.highBase = getRandomSide();
+        this.lowBase = getRandomSide();
+        this.height = getRandomSide();
     }
 
     @Override
@@ -25,5 +27,11 @@ public class IsoscelesTrapezoid extends Figure implements IAreaCalculator {
                             + "lowBase: " + lowBase + " units, "
                             + "height: " + height + " units, "
                             + "color: " + getColor() + ".");
+    }
+
+    @Override
+    public int getRandomSide() {
+        int side = new Random().nextInt(100);
+        return side;
     }
 }
