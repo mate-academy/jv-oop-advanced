@@ -21,6 +21,7 @@ public class Circle extends Figure {
 
     }
 
+    @Override
     public void drawShape() {
         System.out.println("Drawing "
                 + getColor()

@@ -3,10 +3,11 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final Random random = new Random();
+    private static final int RANDOM_BOUND = 100;
+    private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
+    private static final int DEFAULT_RADIUS = 10;
 
-    private Figure shape;
-
+    private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
@@ -31,36 +32,34 @@ public class FigureSupplier {
 
     public Figure getRandomCircle() {
         return new Circle(colorSupplier.getRandomColor(),
-            random.nextInt(100));
+            random.nextInt(RANDOM_BOUND));
     }
 
     public Figure getRandomSquare() {
         return new Square(colorSupplier.getRandomColor(),
-            random.nextInt(100));
+            random.nextInt(RANDOM_BOUND));
     }
 
     public Figure getRandomRectangle() {
         return new Rectangle(colorSupplier.getRandomColor(),
-            random.nextInt(100),
-            random.nextInt(100));
+            random.nextInt(RANDOM_BOUND),
+            random.nextInt(RANDOM_BOUND));
     }
 
     public Figure getRandomRightTriangle() {
         return new RightTriangle(colorSupplier.getRandomColor(),
-            random.nextInt(100),
-            random.nextInt(100));
+            random.nextInt(RANDOM_BOUND),
+            random.nextInt(RANDOM_BOUND));
     }
 
     public Figure getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-            random.nextInt(100),
-            random.nextInt(100),
-            random.nextInt(100));
+            random.nextInt(RANDOM_BOUND),
+            random.nextInt(RANDOM_BOUND),
+            random.nextInt(RANDOM_BOUND));
     }
 
     public Figure getDefaultFigure() {
-        final String defaultColor = Color.WHITE.toString().toLowerCase();
-        final int defaultRadius = 10;
-        return new Circle(defaultColor, defaultRadius);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
