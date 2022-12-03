@@ -6,6 +6,7 @@ public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
     private static final Color DEFAULT_COLOR = Color.WHITE;
     private static final int DEFAULT_RADIUS = 10;
+    private static final int DEFAULT_BOUND = 100;
     private Random random = new Random();
     private ColorSupplier color = new ColorSupplier();
 
@@ -13,18 +14,18 @@ public class FigureSupplier {
         int index = new Random().nextInt(FIGURE_COUNT);
         switch (index) {
             case 0:
-                return new Circle(random.nextInt(1, 100), color.getRandomColor());
+                return new Circle(random.nextInt(DEFAULT_BOUND) + 1, color.getRandomColor());
             case 1:
-                return new Square(random.nextInt(1, 100), color.getRandomColor());
+                return new Square(random.nextInt(DEFAULT_BOUND) + 1, color.getRandomColor());
             case 2:
-                return new Rectangle(random.nextInt(1, 100),
-                        random.nextInt(1, 100), color.getRandomColor());
+                return new Rectangle(random.nextInt(DEFAULT_BOUND) + 1,
+                        random.nextInt(DEFAULT_BOUND) + 1, color.getRandomColor());
             case 3:
-                return new RightTriangle(random.nextInt(1, 100),
-                        random.nextInt(1, 100), color.getRandomColor());
+                return new RightTriangle(random.nextInt(DEFAULT_BOUND) + 1,
+                        random.nextInt(DEFAULT_BOUND) + 1, color.getRandomColor());
             default:
-                return new IsoscelesTrapezoid(random.nextInt(1, 100), random.nextInt(1, 100),
-                        random.nextInt(1, 100), color.getRandomColor());
+                return new IsoscelesTrapezoid(random.nextInt(DEFAULT_BOUND) + 1, random.nextInt(DEFAULT_BOUND) + 1,
+                        random.nextInt(DEFAULT_BOUND) + 1, color.getRandomColor());
         }
     }
 
