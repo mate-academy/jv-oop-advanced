@@ -13,15 +13,18 @@ public class FigureSupplier {
         int index = new Random().nextInt(FIGURE_COUNT);
         switch (index) {
             case 0:
-                return new Circle(random.nextInt(10 + 1), color.getRandomColor());
+                return new Circle(random.nextInt(1, 100), color.getRandomColor());
             case 1:
-                return new Square(random.nextInt(10 + 1), color.getRandomColor());
+                return new Square(random.nextInt(1, 100), color.getRandomColor());
             case 2:
-                return new Rectangle(random.nextInt(10 + 1), random.nextInt(10 + 1), color.getRandomColor());
+                return new Rectangle(random.nextInt(1, 100),
+                        random.nextInt(1, 100), color.getRandomColor());
             case 3:
-                return new RightTriangle(random.nextInt(10 + 1), random.nextInt(10 + 1), color.getRandomColor());
+                return new RightTriangle(random.nextInt(1, 100),
+                        random.nextInt(1, 100), color.getRandomColor());
             default:
-                return new IsoscelesTrapezoid(random.nextInt(10 + 1), random.nextInt(10 + 1), random.nextInt(10 + 1), color.getRandomColor());
+                return new IsoscelesTrapezoid(random.nextInt(1, 100), random.nextInt(1, 100),
+                        random.nextInt(1, 100), color.getRandomColor());
         }
     }
 
