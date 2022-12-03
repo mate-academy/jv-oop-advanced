@@ -8,7 +8,6 @@ public class RightTriangle extends Figure {
         super(color);
         this.sideA = sideA;
         this.sideB = sideB;
-        this.color = color;
     }
 
     public double getA() {
@@ -42,6 +41,6 @@ public class RightTriangle extends Figure {
         return "RightTriangle: square, area: "
                 + getArea()
                 + " sq.units, color: "
-                + color;
+                + this.getColor();
     }
 }

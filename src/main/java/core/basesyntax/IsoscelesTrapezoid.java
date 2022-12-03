@@ -10,7 +10,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.sideA = sideA;
         this.sideB = sideB;
         this.sideH = sideH;
-        this.color = color;
     }
 
     public double getA() {
@@ -52,6 +51,6 @@ public class IsoscelesTrapezoid extends Figure {
         return "IsoscelesTrapezoid: square, area: "
                 + getArea()
                 + " sq.units, color: "
-                + color;
+                + this.getColor();
     }
 }

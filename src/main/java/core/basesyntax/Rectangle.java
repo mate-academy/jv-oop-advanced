@@ -41,6 +41,6 @@ public class Rectangle extends Figure {
         return "Rectangle: square, area: "
                 + getArea()
                 + " sq.units, color: "
-                + color;
+                + this.getColor();
     }
 }

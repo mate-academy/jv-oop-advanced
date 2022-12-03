@@ -33,6 +33,6 @@ public class Circle extends Figure {
                 + " sq.units, side: "
                 + radius
                 + " units, color: "
-                + color;
+                + this.getColor();
     }
 }
