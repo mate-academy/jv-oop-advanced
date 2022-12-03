@@ -24,8 +24,10 @@ public class FigureSupplier {
                 return new RightTriangle(random.nextInt(DEFAULT_BOUND) + 1,
                         random.nextInt(DEFAULT_BOUND) + 1, color.getRandomColor());
             default:
-                return new IsoscelesTrapezoid(random.nextInt(DEFAULT_BOUND) + 1, random.nextInt(DEFAULT_BOUND) + 1,
-                        random.nextInt(DEFAULT_BOUND) + 1, color.getRandomColor());
+                return new IsoscelesTrapezoid(random.nextInt(DEFAULT_BOUND) + 1,
+                        random.nextInt(DEFAULT_BOUND) + 1,
+                        random.nextInt(DEFAULT_BOUND) + 1,
+                        color.getRandomColor());
         }
     }
 
