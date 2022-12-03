@@ -1,10 +1,17 @@
 package core.basesyntax;
 
-public enum FigureType {
-    CIRCLE,
-    ISOSCELES_TRAPEZOID,
-    RECTANGLE,
-    RIGHT_TRIANGLE,
-    SQUARE
+abstract class Figure implements AreaCalculator, Drawable {
+    private String color;
 
+    public Figure(String color) {
+        this.color = color;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
 }

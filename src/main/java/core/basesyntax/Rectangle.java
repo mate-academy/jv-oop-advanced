@@ -1,22 +1,21 @@
 package core.basesyntax;
 
-public class Rectangle extends Shape {
-    private String color;
+public class Rectangle extends Figure {
     private float height;
     private float width;
 
+    public Rectangle(String color) {
+        super(color);
+    }
+
     public Rectangle(String color, float height, float width) {
-        this.color = color;
+        super(color);
         this.height = height;
         this.width = width;
     }
 
-    public String getColor() {
-        return color;
-    }
-
     @Override
-    public float area() {
+    public float getArea() {
         return getHeight() * getWidth();
     }
 
@@ -37,6 +36,6 @@ public class Rectangle extends Shape {
                 + " and width equals to "
                 + getWidth()
                 + " area equals "
-                + area());
+                + getArea());
     }
 }

@@ -1,20 +1,20 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Shape {
-    private String color;
+public class IsoscelesTrapezoid extends Figure {
+
     private float top;
     private float bottom;
     private float height;
 
+    public IsoscelesTrapezoid(String color) {
+        super(color);
+    }
+
     public IsoscelesTrapezoid(String color, float top, float bottom, float height) {
+        super(color);
         this.top = top;
         this.bottom = bottom;
         this.height = height;
-        this.color = color;
-    }
-
-    public String getColor() {
-        return color;
     }
 
     public float getTop() {
@@ -30,7 +30,7 @@ public class IsoscelesTrapezoid extends Shape {
     }
 
     @Override
-    public float area() {
+    public float getArea() {
         return (getBottom() + getTop()) / 2 * getHeight();
     }
 
@@ -38,13 +38,13 @@ public class IsoscelesTrapezoid extends Shape {
     public void drawShape() {
         System.out.println("Drawing "
                 + getColor()
-                + " circle with top equals to "
+                + " isosceles trapezoid with top equals to "
                 + getTop()
                 + " bottom equals to "
                 + getBottom()
                 + " and height equals to "
                 + getHeight()
                 + " area equals "
-                + area());
+                + getArea());
     }
 }

@@ -1,5 +1,7 @@
 package core.basesyntax;
 
 public interface Drawable {
-    void drawShape();
+    default void drawShape() {
+
+    }
 }

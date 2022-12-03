@@ -1,18 +1,17 @@
 package core.basesyntax;
 
-public class RightTriangle extends Shape {
-    private String color;
+public class RightTriangle extends Figure {
     private float firstLeg;
     private float secondLeg;
 
-    public RightTriangle(String color, float firstLeg, float secondLeg) {
-        this.color = color;
-        this.firstLeg = firstLeg;
-        this.secondLeg = secondLeg;
+    public RightTriangle(String color) {
+        super(color);
     }
 
-    public String getColor() {
-        return color;
+    public RightTriangle(String color, float firstLeg, float secondLeg) {
+        super(color);
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
     }
 
     public float getFirstLeg() {
@@ -24,7 +23,7 @@ public class RightTriangle extends Shape {
     }
 
     @Override
-    public float area() {
+    public float getArea() {
         return getFirstLeg() * getSecondLeg() / 2;
     }
 
@@ -37,6 +36,6 @@ public class RightTriangle extends Shape {
                 + "and second leg equals to "
                 + getSecondLeg()
                 + " area equals "
-                + area());
+                + getArea());
     }
 }

@@ -1,11 +1,14 @@
 package core.basesyntax;
 
-public class Square extends Shape {
-    private String color;
+public class Square extends Figure {
     private float side;
 
+    public Square(String color) {
+        super(color);
+    }
+
     public Square(String color, float side) {
-        this.color = color;
+        super(color);
         this.side = side;
     }
 
@@ -13,12 +16,8 @@ public class Square extends Shape {
         return side;
     }
 
-    public String getColor() {
-        return color;
-    }
-
     @Override
-    public float area() {
+    public float getArea() {
         return getSide() * getSide();
     }
 
@@ -29,6 +28,6 @@ public class Square extends Shape {
                 + " square with side equals "
                 + getSide()
                 + " area equals "
-                + area());
+                + getArea());
     }
 }
