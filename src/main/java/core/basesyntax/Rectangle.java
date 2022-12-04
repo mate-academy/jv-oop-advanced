@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class Rectangle extends Figure implements IAreaCalculator, IRandomSide {
+public class Rectangle extends Figure {
     private double shortSide;
     private double longSide;
 
@@ -25,6 +25,7 @@ public class Rectangle extends Figure implements IAreaCalculator, IRandomSide {
                 + "longSide: " + longSide + " units, "
                 + "color: " + getColor() + ".");
     }
+
     @Override
     public int getRandomSide() {
         int side = new Random().nextInt(100);

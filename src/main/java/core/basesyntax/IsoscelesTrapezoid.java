@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class IsoscelesTrapezoid extends Figure implements IAreaCalculator, IRandomSide {
+public class IsoscelesTrapezoid extends Figure {
     private double highBase;
     private double lowBase;
     private double height;

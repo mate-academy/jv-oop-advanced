@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class Circle extends Figure implements IAreaCalculator, IRandomSide {
+public class Circle extends Figure {
     private double radius;
 
     public Circle(String name, String color) {
@@ -27,7 +27,6 @@ public class Circle extends Figure implements IAreaCalculator, IRandomSide {
                 + "radius: " + radius + " units, "
                 + "color: " + getColor() + ".");
     }
-
 
     @Override
     public int getRandomSide() {

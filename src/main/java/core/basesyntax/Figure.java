@@ -1,14 +1,12 @@
 package core.basesyntax;
 
-import java.util.Random;
-
-public abstract class Figure implements IAreaCalculator{
-    public String name;
-    public String color;
+public abstract class Figure implements IAreaCalculator, IRandomSide {
+    private String name;
+    private String color;
 
     public Figure(String name, String color) {
         this.name = name;
-        this.color = color;
+        this.color = getColor();
     }
 
     public Figure() {
