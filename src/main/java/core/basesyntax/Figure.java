@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public abstract class Figure {
+public abstract class Figure implements IAreaCalculator{
     public String name;
     public String color;
 
@@ -26,5 +26,12 @@ public abstract class Figure {
     public void getDrawing() {
         System.out.println("Figure: " + getName() + " , "
                 + "color: " + getColor() + ".");
+    }
+
+    public void getDefaultDrawing() {
+        System.out.println("Figure: " + getName() + " , "
+                + "area: " + String.format("%.2f", getArea()) + " sq.units, "
+                + "radius: 10 units, "
+                + "color: white.");
     }
 }

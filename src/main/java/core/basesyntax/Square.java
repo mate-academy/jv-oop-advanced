@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class Square extends Figure implements IAreaCalculator {
+public class Square extends Figure implements IAreaCalculator, IRandomSide {
     private double side;
 
     public Square(String name, String color) {
@@ -18,7 +18,7 @@ public class Square extends Figure implements IAreaCalculator {
     @Override
     public void getDrawing() {
         System.out.println("Figure: " + getName() + " , "
-                + "area: " + getArea() + " sq.units, "
+                + "area: " + String.format("%.2f", getArea()) + " sq.units, "
                 + "side: " + side + " units, "
                 + "color: " + getColor() + ".");
     }

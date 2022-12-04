@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class RightTriangle extends Figure implements IAreaCalculator {
+public class RightTriangle extends Figure implements IAreaCalculator, IRandomSide {
     private double firstLeg;
     private double secondLeg;
 
@@ -20,7 +20,7 @@ public class RightTriangle extends Figure implements IAreaCalculator {
     @Override
     public void getDrawing() {
         System.out.println("Figure: " + getName() + " , "
-                + "area: " + getArea() + " sq.units, "
+                + "area: " + String.format("%.2f", getArea()) + " sq.units, "
                 + "firstLeg: " + firstLeg + " units, "
                 + "secondLeg: " + secondLeg + " units, "
                 + "color: " + getColor() + ".");

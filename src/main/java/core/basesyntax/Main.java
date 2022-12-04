@@ -15,9 +15,10 @@ public class Main {
             if (count <= Math.ceil(arrayOfFigures.length) / 2) {
                 arrayOfFigures[i] = randomFigure.getRandomFigure();
                 arrayOfFigures[i].getDrawing();
+                count++;
             } else {
                 arrayOfFigures[i] = randomFigure.getDefaultFigure();
-                arrayOfFigures[i].getDrawing();
+                arrayOfFigures[i].getDefaultDrawing();
             }
         }
     }

@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class IsoscelesTrapezoid extends Figure implements IAreaCalculator {
+public class IsoscelesTrapezoid extends Figure implements IAreaCalculator, IRandomSide {
     private double highBase;
     private double lowBase;
     private double height;
@@ -22,7 +22,7 @@ public class IsoscelesTrapezoid extends Figure implements IAreaCalculator {
     @Override
     public void getDrawing() {
         System.out.println("Figure: " + getName() + " , "
-                            + "area: " + getArea() + " sq.units, "
+                            + "area: " + String.format("%.2f", getArea()) + " sq.units, "
                             + "highBase: " + highBase + " units, "
                             + "lowBase: " + lowBase + " units, "
                             + "height: " + height + " units, "

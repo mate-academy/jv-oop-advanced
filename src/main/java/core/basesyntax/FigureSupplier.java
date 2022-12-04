@@ -3,19 +3,21 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    String randomColor = new ColorSupplier().getRandomColor();
-    Figure circle = new Circle("circle", randomColor);
-    Figure rectangle = new Rectangle("rectangle", randomColor);
-    Figure rightTriangle = new RightTriangle("right triangle", randomColor);
-    Figure square = new Square("square", randomColor);
-    Figure isoscelesTrapezoid = new IsoscelesTrapezoid("isosceles trapezoid", randomColor);
+    ColorSupplier randomColor = new ColorSupplier();
 
     public Figure getDefaultFigure() {
-       Figure circle = new Circle("circle", "white", 10.00);
-       return circle;
+       Figure defaultCircle = new Circle("circle", "white", 10.00);
+       return defaultCircle;
     }
 
     public Figure getRandomFigure() {
+
+        Figure circle = new Circle("circle", randomColor.getRandomColor());
+        Figure rectangle = new Rectangle("rectangle", randomColor.getRandomColor());
+        Figure rightTriangle = new RightTriangle("right triangle", randomColor.getRandomColor());
+        Figure square = new Square("square", randomColor.getRandomColor());
+        Figure isoscelesTrapezoid = new IsoscelesTrapezoid("isosceles trapezoid", randomColor.getRandomColor());
+
         int value = new Random().nextInt(5);
         if (value == 1) {
             return circle;
