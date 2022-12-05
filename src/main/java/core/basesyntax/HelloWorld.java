@@ -15,7 +15,7 @@ public class HelloWorld {
             }
         }
         for (Figure value: figuresArray) {
-            System.out.println(value);
+            value.draw();
         }
     }
 }

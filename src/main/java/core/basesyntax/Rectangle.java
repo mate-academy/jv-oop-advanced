@@ -11,13 +11,14 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return firstLeg * secondLeg;
     }
 
     @Override
-    public String toString() {
-        return "Figure: rectangle, area: " + area() + " sq.units, firstLeg: " + firstLeg + " units,"
-                + " secondLeg: " + secondLeg + " units, color: " + getColor();
+    public void draw() {
+        System.out.print("Figure: rectangle, area: " + getArea() + " sq.units, firstLeg: "
+                        + firstLeg + " units," + " secondLeg: " + secondLeg + " units, color: "
+                        + getColor());
     }
 }
