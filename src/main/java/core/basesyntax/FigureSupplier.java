@@ -6,12 +6,13 @@ public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
     private static final int MAX_UNIT = 10;
     private static final int DEFAULT_RADIUS = 10;
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int figure = random.nextInt(FIGURE_COUNT);
-        switch (figure) {
+        int index = random.nextInt(FIGURE_COUNT);
+        switch (index) {
             case 0:
                 return getRandomCircle();
             case 1:
@@ -21,10 +22,13 @@ public class FigureSupplier {
             case 3:
                 return getRandomRightTriangle();
             case 4:
-                return getRandomSquare();
             default:
-                return getDefaultFigure();
+                return getRandomSquare();
         }
+    }
+
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
     private Figure getRandomCircle() {
@@ -59,10 +63,5 @@ public class FigureSupplier {
         String color = colorSupplier.getRandomColor();
         int side = random.nextInt(MAX_UNIT) + 1;
         return new Square(color,side);
-    }
-
-    public Figure getDefaultFigure() {
-        String color = Color.WHITE.name();
-        return new Circle(color, DEFAULT_RADIUS);
     }
 }
