@@ -1,11 +1,11 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private double length;
-    private double width;
-    private double height;
+    private int length;
+    private int width;
+    private int height;
 
-    public IsoscelesTrapezoid(Color color, double length, double width, double height) {
+    public IsoscelesTrapezoid(Color color, int length, int width, int height) {
         super(color);
         this.length = length;
         this.width = width;
@@ -16,7 +16,7 @@ public class IsoscelesTrapezoid extends Figure {
         return length;
     }
 
-    public void setLength(double length) {
+    public void setLength(int length) {
         this.length = length;
     }
 
@@ -24,7 +24,7 @@ public class IsoscelesTrapezoid extends Figure {
         return width;
     }
 
-    public void setWidth(double width) {
+    public void setWidth(int width) {
         this.width = width;
     }
 
@@ -32,7 +32,7 @@ public class IsoscelesTrapezoid extends Figure {
         return height;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(int height) {
         this.height = height;
     }
 
