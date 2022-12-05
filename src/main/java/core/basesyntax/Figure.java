@@ -1,8 +1,11 @@
 package core.basesyntax;
 
-public class Figure implements Draw, AreaCalculator {
-
+public class Figure implements AreaCalculator, Drawable {
     private Color color;
+
+    public Figure(Color color) {
+        this.color = color;
+    }
 
     public Color getColor() {
         return color;
@@ -14,12 +17,10 @@ public class Figure implements Draw, AreaCalculator {
 
     @Override
     public void draw() {
-        System.out.println("Figure color: " + color);
-        ;
     }
 
     @Override
-    public int calculateArea() {
+    public double getArea() {
         return 0;
     }
 }

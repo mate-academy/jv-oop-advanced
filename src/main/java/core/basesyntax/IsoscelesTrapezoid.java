@@ -1,39 +1,38 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
+    private double length;
+    private double width;
+    private double height;
 
-    private int length;
-    private int width;
-    private int height;
-
-    public IsoscelesTrapezoid(String color, int length, int width, int height) {
+    public IsoscelesTrapezoid(Color color, double length, double width, double height) {
+        super(color);
         this.length = length;
         this.width = width;
         this.height = height;
-        this.setColor(Color.valueOf(color));
     }
 
-    public int getLength() {
+    public double getLength() {
         return length;
     }
 
-    public void setLength(int length) {
+    public void setLength(double length) {
         this.length = length;
     }
 
-    public int getWidth() {
+    public double getWidth() {
         return width;
     }
 
-    public void setWidth(int width) {
+    public void setWidth(double width) {
         this.width = width;
     }
 
-    public int getHeight() {
+    public double getHeight() {
         return height;
     }
 
-    public void setHeight(int height) {
+    public void setHeight(double height) {
         this.height = height;
     }
 
@@ -50,7 +49,7 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: isoscelesTrapezoid"
-                + ", area=" + calculateArea()
+                + ", area=" + getArea()
                 + " sq.units"
                 + "length=" + length
                 + " units"
@@ -62,7 +61,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public int calculateArea() {
+    public double getArea() {
         return (length + width) / 2 * height;
     }
 }
