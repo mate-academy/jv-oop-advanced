@@ -33,7 +33,6 @@ public class FigureSupplier {
             default:
                 int side = random.nextInt(MAXIMAL_LENGTH) + 1;
                 return new Square(color, side);
-
         }
     }
 
