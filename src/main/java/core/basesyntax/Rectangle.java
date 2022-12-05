@@ -11,7 +11,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return length * width;
     }
 
@@ -19,6 +19,6 @@ public class Rectangle extends Figure {
     public void draw() {
         System.out.printf("Figure: rectangle, area: %.1f sq.units,"
                 + " length: %d units, width: %d units, color: %s%n",
-                area(), length, width, getColor().toLowerCase());
+                getArea(), length, width, getColor().toLowerCase());
     }
 }
