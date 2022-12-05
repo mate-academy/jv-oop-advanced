@@ -1,14 +1,15 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private double hypotenuse;
-    private double base;
-    private double altitude;
+    private int hypotenuse;
+    private int altitude;
+    private int base;
 
-    public RightTriangle(double hypotenuse, double base, double altitude) {
-        this.hypotenuse = hypotenuse;
-        this.base = base;
+    public RightTriangle(String color, int base, int altitude) {
+        super(color);
         this.altitude = altitude;
+        this.base = base;
+        this.hypotenuse = (int)Math.sqrt(base * base + altitude * altitude);
     }
 
     @Override
@@ -23,26 +24,6 @@ public class RightTriangle extends Figure {
                 + "hypotenuse: " + this.hypotenuse + " units, "
                 + "base: " + this.base + " units, "
                 + "altitude: " + this.altitude + " units, "
-                + "color: " + getColor());
-    }
-
-    public double getBase() {
-        return base;
-    }
-
-    public void setBase(double base) {
-        this.base = base;
-    }
-
-    public double getAltitude() {
-        return altitude;
-    }
-
-    public void setAltitude(double altitude) {
-        this.altitude = altitude;
-    }
-
-    private void calculateHypotenuse() {
-        this.hypotenuse = Math.sqrt(base * base + altitude * altitude);
+                + "color: " + getColor().toLowerCase());
     }
 }

@@ -1,10 +1,11 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private double length;
-    private double width;
+    private int length;
+    private int width;
 
-    public Rectangle(double length, double width) {
+    public Rectangle(String color, int length, int width) {
+        super(color);
         this.length = length;
         this.width = width;
     }
@@ -20,22 +21,6 @@ public class Rectangle extends Figure {
                 + "area: " + area() + " sq.units, "
                 + "length: " + this.length + " units, "
                 + "width: " + this.width + " units, "
-                + "color: " + getColor());
-    }
-
-    public double getLength() {
-        return length;
-    }
-
-    public void setLength(double length) {
-        this.length = length;
-    }
-
-    public double getWidth() {
-        return width;
-    }
-
-    public void setWidth(double width) {
-        this.width = width;
+                + "color: " + getColor().toLowerCase());
     }
 }
