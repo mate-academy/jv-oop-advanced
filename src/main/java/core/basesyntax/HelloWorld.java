@@ -7,10 +7,10 @@ public class HelloWorld {
         for (int i = 0; i < figures.length; i++) {
             if (i % 2 == 0) {
                 figures[i] = figureSupplier.getRandomFigure();
-                figures[i].drawFigure();
+                figures[i].draw();
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
-                figures[i].drawFigure();
+                figures[i].draw();
             }
         }
     }

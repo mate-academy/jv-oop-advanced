@@ -17,7 +17,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println("Figure: square, area: " + getArea() + " sq.units, radius: "
                 + getSide() + " units, color: " + getColor());
     }
