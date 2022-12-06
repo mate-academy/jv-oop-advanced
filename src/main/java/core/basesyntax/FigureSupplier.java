@@ -6,8 +6,8 @@ public class FigureSupplier {
     public static final int SIZE_COUNT = 15;
     public static final int DEFAULT_NUMBER = 10;
     public static final Color DEFAULT_COLOR = Color.WHITE;
-    private ColorSupplier colorSupplier = new ColorSupplier();
-    private Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
         switch (random.nextInt(5)) {
