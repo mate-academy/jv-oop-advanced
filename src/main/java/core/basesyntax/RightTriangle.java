@@ -9,19 +9,17 @@ public class RightTriangle extends Figure {
         super(color);
         this.altitude = altitude;
         this.base = base;
-        this.hypotenuse = (int)Math.sqrt(base * base + altitude * altitude);
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return 0.5 * base * altitude;
     }
 
     @Override
     public void draw() {
         System.out.println("Right triangle, "
-                + "area: " + area() + " sq.units, "
-                + "hypotenuse: " + this.hypotenuse + " units, "
+                + "getArea: " + getArea() + " sq.units, "
                 + "base: " + this.base + " units, "
                 + "altitude: " + this.altitude + " units, "
                 + "color: " + getColor().toLowerCase());
