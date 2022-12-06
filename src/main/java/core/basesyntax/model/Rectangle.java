@@ -1,40 +1,39 @@
 package core.basesyntax.model;
 
-public class Rectangle extends Figures {
+public class Rectangle extends Figure {
+    private int sideOne;
+    private int sideTwo;
 
-    private int side1;
-    private int side2;
-
-    public Rectangle(String color, int side1, int side2) {
+    public Rectangle(String color, int sideOne, int sideTwo) {
         super(color);
-        this.side1 = side1;
-        this.side2 = side2;
+        this.sideOne = sideOne;
+        this.sideTwo = sideTwo;
     }
 
     public int getSide1() {
-        return side1;
+        return sideOne;
     }
 
     public void setSide1(int side1) {
-        this.side1 = side1;
+        this.sideOne = side1;
     }
 
     public int getSide2() {
-        return side2;
+        return sideTwo;
     }
 
     public void setSide2(int side2) {
-        this.side2 = side2;
+        this.sideTwo = side2;
     }
 
     @Override
-    public double getMeasure() {
-        return side1 * side2;
+    public double getArea() {
+        return sideOne * sideTwo;
     }
 
     @Override
-    public void displayInfo() {
-        System.out.println("Figure Rectangle, measure: " + getMeasure() + ", Color: " + getColor());
+    public void draw() {
+        System.out.println("Figure Rectangle, measure: " + getArea() + ", Color: " + getColor());
 
     }
 }

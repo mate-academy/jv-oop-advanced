@@ -1,53 +1,52 @@
 package core.basesyntax.model;
 
-public class IsoscelesTrapezoid extends Figures {
-    private double lengthSize1;
-    private double lengthSize2;
-    private double lengthSize3;
+public class IsoscelesTrapezoid extends Figure {
+    private double firstSize;
+    private double secondSize;
+    private double thirdSize;
 
     public IsoscelesTrapezoid(String color,
-                              double lengthSize1,
-                              double lengthSize2,
-                              double lengthSize3) {
+                              double lengthSizeOne,
+                              double lengthSizeTwo,
+                              double lengthSizeThree) {
         super(color);
-        this.lengthSize1 = lengthSize1;
-        this.lengthSize2 = lengthSize2;
-        this.lengthSize3 = lengthSize3;
+        this.firstSize = lengthSizeOne;
+        this.secondSize = lengthSizeTwo;
+        this.thirdSize = lengthSizeThree;
     }
 
-    public double getLengthSize1() {
-        return lengthSize1;
+    public double getFirstSize() {
+        return firstSize;
     }
 
-    public void setLengthSize1(double lengthSize1) {
-        this.lengthSize1 = lengthSize1;
+    public void setFirstSize(double firstSize) {
+        this.firstSize = firstSize;
     }
 
-    public double getLengthSize2() {
-        return lengthSize2;
+    public double getSecondSize() {
+        return secondSize;
     }
 
-    public void setLengthSize2(double lengthSize2) {
-        this.lengthSize2 = lengthSize2;
+    public void setSecondSize(double secondSize) {
     }
 
-    public double getLengthSize3() {
-        return lengthSize3;
+    public double getThirdSize() {
+        return thirdSize;
     }
 
-    public void setLengthSize3(double lengthSize3) {
-        this.lengthSize3 = lengthSize3;
-    }
-
-    @Override
-    public double getMeasure() {
-        return ((lengthSize1 + lengthSize2) / 2) * lengthSize3;
+    public void setThirdSize(double thirdSize) {
     }
 
     @Override
-    public void displayInfo() {
-        System.out.println("Figure IsoscelesTrapezoid, measure: " + getMeasure()
-                + ", Color: " + getColor());
+    public double getArea() {
+        return ((firstSize + secondSize) / 2) * thirdSize;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Figure IsoscelesTrapezoid, total measure: " + getArea()
+                + ", Color: " + getColor() + ", first side is: " + getFirstSize()
+                + ", second side is: " + getSecondSize() + ", third side is: " + getThirdSize());
     }
 }
 

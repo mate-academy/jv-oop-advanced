@@ -1,6 +1,6 @@
 package core.basesyntax.model;
 
-public class Square extends Figures {
+public class Square extends Figure {
 
     private int length;
 
@@ -18,12 +18,12 @@ public class Square extends Figures {
     }
 
     @Override
-    public double getMeasure() {
+    public double getArea() {
         return length * length;
     }
 
     @Override
-    public void displayInfo() {
-        System.out.println("Figure Square, measure: " + getMeasure() + ", Color: " + getColor());
+    public void draw() {
+        System.out.println("Figure Square, measure: " + getArea() + ", Color: " + getColor());
     }
 }

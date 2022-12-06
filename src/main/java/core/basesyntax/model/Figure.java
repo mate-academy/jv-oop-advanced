@@ -1,13 +1,12 @@
 package core.basesyntax.model;
 
-import core.basesyntax.behaviour.Calculator;
-import core.basesyntax.behaviour.PrintInfo;
+import core.basesyntax.behaviour.AreaCalculator;
+import core.basesyntax.behaviour.Drawable;
 
-public abstract class Figures implements Calculator, PrintInfo {
+public abstract class Figure implements AreaCalculator, Drawable {
     private String color;
 
-    protected Figures(String color) {
-
+    protected Figure(String color) {
         this.color = color;
     }
 
@@ -20,8 +19,10 @@ public abstract class Figures implements Calculator, PrintInfo {
     }
 
     @Override
-    public double getMeasure() {
+    public double getArea() {
         return 0;
     }
+
+    public abstract void draw();
 }
 

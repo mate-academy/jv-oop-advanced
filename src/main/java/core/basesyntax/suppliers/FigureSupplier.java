@@ -1,7 +1,7 @@
 package core.basesyntax.suppliers;
 
 import core.basesyntax.model.Circle;
-import core.basesyntax.model.Figures;
+import core.basesyntax.model.Figure;
 import core.basesyntax.model.IsoscelesTrapezoid;
 import core.basesyntax.model.Rectangle;
 import core.basesyntax.model.RightTriangle;
@@ -9,10 +9,12 @@ import core.basesyntax.model.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    protected ColorSupplier colorSupplier = new ColorSupplier();
+    private Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final int rangeOfRandom = 50;
 
-    public Figures getRandomFigure() {
-        int figureIndex = new Random().nextInt(4);
+    public Figure getRandomFigure() {
+        int figureIndex = random.nextInt(4);
         switch (figureIndex) {
             case 0:
                 return new Circle(colorSupplier.getRandomColor(),
@@ -35,7 +37,7 @@ public class FigureSupplier {
     }
 
     private int getRandomInt() {
-        return new Random().nextInt(50);
+        return new Random().nextInt(rangeOfRandom);
     }
 
     private double getRandomDouble() {

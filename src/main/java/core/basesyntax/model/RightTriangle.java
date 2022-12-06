@@ -1,6 +1,6 @@
 package core.basesyntax.model;
 
-public class RightTriangle extends Figures {
+public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
@@ -27,13 +27,13 @@ public class RightTriangle extends Figures {
     }
 
     @Override
-    public double getMeasure() {
+    public double getArea() {
         return firstLeg * secondLeg;
     }
 
     @Override
-    public void displayInfo() {
-        System.out.println("Figure RightTriangle, measure: " + getMeasure()
+    public void draw() {
+        System.out.println("Figure RightTriangle, measure: " + getArea()
                                                              + ", Color: " + getColor());
     }
 }
