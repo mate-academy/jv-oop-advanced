@@ -5,10 +5,33 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int SIZE_COUNT = 15;
     private static final int DEFAULT_NUMBER = 10;
-    private static final int MAX_NUMBER_CASE = 5;
+    private static final int FIGURE_COUNT = 5;
     private static final Color DEFAULT_COLOR = Color.WHITE;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
+
+    public Figure getDefaultFigure() {
+        Circle defaultCircle = new Circle();
+        defaultCircle.setColor(DEFAULT_COLOR);
+        defaultCircle.setRadius(DEFAULT_NUMBER);
+        return defaultCircle;
+    }
+
+    public Figure getRandomFigure() {
+        switch (random.nextInt(FIGURE_COUNT)) {
+            case 0:
+                return getRandomCircle();
+            case 1:
+                return getRandomSquare();
+            case 2:
+                return getRandomRectangle();
+            case 3:
+                return getRandomRightTriangle();
+            case 4:
+            default:
+                return getRandomIsoscelesTrapezoid();
+        }
+    }
 
     private Figure getRandomCircle() {
         Circle circle = new Circle();
@@ -47,28 +70,5 @@ public class FigureSupplier {
         isoscelesTrapezoid.setSecondBase(random.nextInt(SIZE_COUNT));
         isoscelesTrapezoid.setHeight(random.nextInt(SIZE_COUNT));
         return isoscelesTrapezoid;
-    }
-
-    public Figure getRandomFigure() {
-        switch (random.nextInt(MAX_NUMBER_CASE)) {
-            case 0:
-                return getRandomCircle();
-            case 1:
-                return getRandomSquare();
-            case 2:
-                return getRandomRectangle();
-            case 3:
-                return getRandomRightTriangle();
-            case 4:
-            default:
-                return getRandomIsoscelesTrapezoid();
-        }
-    }
-
-    public Figure getDefaultFigure() {
-        Circle defaultCircle = new Circle();
-        defaultCircle.setColor(DEFAULT_COLOR);
-        defaultCircle.setRadius(DEFAULT_NUMBER);
-        return defaultCircle;
     }
 }
