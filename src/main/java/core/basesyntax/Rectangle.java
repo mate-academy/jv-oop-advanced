@@ -27,7 +27,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void drawFigure() {
-        System.out.println("Figure: " + getName() + ", area: " + getArea()
+        System.out.println("Figure: rectangle, area: " + getArea()
                 + " sq.units, first side: " + getFirstSide()
                 + " units, second side: " + getSecondSide() + " units, color: "
                 + getColor());
