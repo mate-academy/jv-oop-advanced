@@ -2,33 +2,33 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class FigureSupplier extends ColorSupplier {
+public class FigureSupplier {
+    private static final int NUMBER_OF_FIGURES = 5;
 
+    ColorSupplier colorSupplier = new ColorSupplier();
     public Figure getDefaultFigure() {
-        Figure defaultCircle = new Circle("circle", "white", 10.00);
-        return defaultCircle;
+        return new Circle("circle", "white", 10.00);
     }
 
     public Figure getRandomFigure() {
-
-        Figure circle = new Circle("circle", getRandomColor());
-        Figure rectangle = new Rectangle("rectangle", getRandomColor());
-        Figure rightTriangle = new RightTriangle("right triangle", getRandomColor());
-        Figure square = new Square("square", getRandomColor());
-        Figure isoscelesTrapezoid = new IsoscelesTrapezoid("isosceles trapezoid",
-                getRandomColor());
-
-        int value = new Random().nextInt(5);
-        if (value == 1) {
-            return circle;
-        } else if (value == 2) {
-            return rectangle;
-        } else if (value == 3) {
-            return rightTriangle;
-        } else if (value == 4) {
-            return square;
-        } else {
-            return isoscelesTrapezoid;
+        int figureIndex = new Random().nextInt(NUMBER_OF_FIGURES);
+        switch (figureIndex) {
+            case 1:
+              return new Circle("circle", colorSupplier.getRandomColor());
+              break;
+            case 2:
+              return new Rectangle("rectangle", colorSupplier.getRandomColor());
+              break;
+            case 3:
+              return new RightTriangle("right triangle", colorSupplier.getRandomColor());
+              break;
+            case 4:
+              return new Square("square", colorSupplier.getRandomColor());
+              break;
+            case 5:
+              return new IsoscelesTrapezoid("isosceles trapezoid",
+                      colorSupplier.getRandomColor());
+              break;
         }
     }
 }

@@ -9,9 +9,6 @@ public abstract class Figure implements IAreaCalculator, IRandomSide {
         this.color = getColor();
     }
 
-    public Figure() {
-    }
-
     public String getName() {
         return name;
     }
