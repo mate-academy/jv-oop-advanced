@@ -11,7 +11,7 @@ public class Main {
             ColorSupplier colorSupplier = new ColorSupplier();
             if (i < figures.length / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
-                figures[i].color = colorSupplier.getRandomColor();
+                figures[i].setColor(colorSupplier.getRandomColor());
             } else {
                 figures[i] = figureSupplier.getDefoultFigure();
             }

@@ -1,8 +1,8 @@
 package core.basesyntax.figures;
 
 public class RightTriangle extends Figure {
-    int firstLeg = 10;
-    int secondLeg = 20;
+    private int firstLeg = 10;
+    private int secondLeg = 20;
 
     @Override
     public int area() {
@@ -13,7 +13,7 @@ public class RightTriangle extends Figure {
     public void print() {
         System.out.println("Figure: rightTriangle" + ", area: " + this.area() + " firstLeg: "
                 + this.firstLeg + " secondLeg: "
-                + this.secondLeg + " units, color: " + this.color);
+                + this.secondLeg + " units, color: " + this.getColor());
     }
 
 }
