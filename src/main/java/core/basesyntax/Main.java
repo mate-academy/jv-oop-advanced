@@ -4,16 +4,16 @@ public class Main {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
 
-        Figure[] array = new Figure[6];
-        for (int i = 0; i < array.length; i++) {
-            if (i < array.length / 2) {
-                array[i] = figureSupplier.getRandomFigure();
+        Figure[] figures = new Figure[6];
+        for (int i = 0; i < figures.length; i++) {
+            if (i < figures.length / 2) {
+                figures[i] = figureSupplier.getRandomFigure();
             } else {
-                array[i] = figureSupplier.getDefaultFigure();
+                figures[i] = figureSupplier.getDefaultFigure();
             }
         }
 
-        for (Figure figure: array) {
+        for (Figure figure: figures) {
             figure.draw();
         }
     }
