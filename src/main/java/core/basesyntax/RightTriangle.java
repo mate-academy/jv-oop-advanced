@@ -6,10 +6,10 @@ public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
-    public RightTriangle(String name, String color) {
-        super(name, color);
-        this.firstLeg = getRandomSide();
-        this.secondLeg = getRandomSide();
+    public RightTriangle(String color, double firstLeg, double secondLeg) {
+        super(color);
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
     }
 
     @Override
@@ -19,16 +19,10 @@ public class RightTriangle extends Figure {
 
     @Override
     public void getDrawing() {
-        System.out.println("Figure: " + getName() + " , "
+        System.out.println("Figure: right triangle, "
                 + "area: " + String.format("%.2f", getArea()) + " sq.units, "
                 + "firstLeg: " + firstLeg + " units, "
                 + "secondLeg: " + secondLeg + " units, "
                 + "color: " + getColor() + ".");
-    }
-
-    @Override
-    public int getRandomSide() {
-        int side = new Random().nextInt(100);
-        return side;
     }
 }

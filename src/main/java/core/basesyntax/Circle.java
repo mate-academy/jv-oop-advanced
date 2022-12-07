@@ -5,13 +5,8 @@ import java.util.Random;
 public class Circle extends Figure {
     private double radius;
 
-    public Circle(String name, String color) {
-        super(name, color);
-        this.radius = getRandomSide();
-    }
-
-    public Circle(String name, String color, double radius) {
-        super(name, color);
+    public Circle(String color, double radius) {
+        super(color);
         this.radius = radius;
     }
 
@@ -22,15 +17,9 @@ public class Circle extends Figure {
 
     @Override
     public void getDrawing() {
-        System.out.println("Figure: " + getName() + " , "
+        System.out.println("Figure: circle, "
                 + "area: " + String.format("%.2f", getArea()) + " sq.units, "
                 + "radius: " + radius + " units, "
                 + "color: " + getColor() + ".");
-    }
-
-    @Override
-    public int getRandomSide() {
-        int side = new Random().nextInt(100);
-        return side;
     }
 }

@@ -7,11 +7,11 @@ public class IsoscelesTrapezoid extends Figure {
     private double lowBase;
     private double height;
 
-    public IsoscelesTrapezoid(String name, String color) {
-        super(name, color);
-        this.highBase = getRandomSide();
-        this.lowBase = getRandomSide();
-        this.height = getRandomSide();
+    public IsoscelesTrapezoid(String color, double highBase, double lowBase, double height) {
+        super(color);
+        this.highBase = highBase;
+        this.lowBase = lowBase;
+        this.height = height;
     }
 
     @Override
@@ -21,17 +21,11 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void getDrawing() {
-        System.out.println("Figure: " + getName() + " , "
+        System.out.println("Figure: isosceles trapezoid, "
                             + "area: " + String.format("%.2f", getArea()) + " sq.units, "
                             + "highBase: " + highBase + " units, "
                             + "lowBase: " + lowBase + " units, "
                             + "height: " + height + " units, "
                             + "color: " + getColor() + ".");
-    }
-
-    @Override
-    public int getRandomSide() {
-        int side = new Random().nextInt(100);
-        return side;
     }
 }
