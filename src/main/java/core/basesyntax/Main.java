@@ -4,10 +4,11 @@ import core.basesyntax.model.Figure;
 import core.basesyntax.suppliers.FigureSupplier;
 
 public class Main {
-    private static FigureSupplier figureSupplier = new FigureSupplier();
+    private static final FigureSupplier figureSupplier = new FigureSupplier();
+    private static final int FIGURE_COUNT = 6;
 
     public static void main(String[] args) {
-        Figure[] figures = new Figure[6];
+        Figure[] figures = new Figure[FIGURE_COUNT];
         for (int i = 0; i < 3; i++) {
             figures[i] = figureSupplier.getRandomFigure();
         }

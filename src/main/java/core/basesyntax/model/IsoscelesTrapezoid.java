@@ -1,11 +1,11 @@
 package core.basesyntax.model;
 
 public class IsoscelesTrapezoid extends Figure {
-    private double height;
-    private double bottomBase;
-    private double topBase;
+    private int height;
+    private int bottomBase;
+    private int topBase;
 
-    public IsoscelesTrapezoid(String color, double bottomBase, double topBase, double height) {
+    public IsoscelesTrapezoid(String color, int bottomBase, int topBase, int height) {
         super(color);
         this.height = height;
         this.bottomBase = bottomBase;
@@ -16,7 +16,7 @@ public class IsoscelesTrapezoid extends Figure {
         return height;
     }
 
-    public void setHeight(double height) {
+    public void setHeight(int height) {
         this.height = height;
     }
 
@@ -24,7 +24,7 @@ public class IsoscelesTrapezoid extends Figure {
         return bottomBase;
     }
 
-    public void setBottomBase(double bottomBase) {
+    public void setBottomBase(int bottomBase) {
         this.bottomBase = bottomBase;
     }
 
@@ -32,7 +32,7 @@ public class IsoscelesTrapezoid extends Figure {
         return topBase;
     }
 
-    public void setTopBase(double topBase) {
+    public void setTopBase(int topBase) {
         this.topBase = topBase;
     }
 

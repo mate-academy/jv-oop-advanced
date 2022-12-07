@@ -10,19 +10,24 @@ import core.basesyntax.model.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private static final int FIGURE_GEN_COUNT = 4;
+    private static final int DEFAULT_COLOR_ID = 5;
+    private static final int DEFAULT_CIRCLE_RADIUS = 10;
+    private static final int RANDOM_FIGURE_PARAMETERS_UPPER_LIMIT = 100;
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int figureIndex = new Random().nextInt(4);
+        int figureIndex = new Random().nextInt(FIGURE_GEN_COUNT);
+
         switch (figureIndex) {
             case 0:
                 return new Circle(colorSupplier.getRandomColor(),
                         getRandomInt());
             case 1:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        getRandomDouble(),
-                        getRandomDouble(),
-                        getRandomDouble());
+                        getRandomInt(),
+                        getRandomInt(),
+                        getRandomInt());
             case 2:
                 return new Rectangle(colorSupplier.getRandomColor(),
                         getRandomInt(),
@@ -39,14 +44,11 @@ public class FigureSupplier {
     }
 
     public Figure getWhiteCircle() {
-        return new Circle(Color.values()[5].name(), 10);
+        return new Circle(Color.values()[DEFAULT_COLOR_ID].name(), DEFAULT_CIRCLE_RADIUS);
     }
 
     private int getRandomInt() {
-        return new Random().nextInt(100);
+        return new Random().nextInt(RANDOM_FIGURE_PARAMETERS_UPPER_LIMIT);
     }
 
-    private double getRandomDouble() {
-        return new Random().nextDouble();
-    }
 }
