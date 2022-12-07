@@ -4,6 +4,7 @@ public enum FigureName {
     RECTANGLE,
     CIRCLE,
     SQUARE,
-    RIGHTTRIANGLE,
-    ISOSCELESTRAPEZOID
+    RIGHT_TRIANGLE,
+
+    ISOSCELES_TRAPECOID
 }

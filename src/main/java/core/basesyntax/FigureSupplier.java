@@ -17,8 +17,9 @@ public class FigureSupplier {
                 return getSquare();
             case RECTANGLE:
                 return getRectangle();
-            case RIGHTTRIANGLE:
+            case RIGHT_TRIANGLE:
                 return getRightTriangle();
+            case ISOSCELES_TRAPECOID:
             default:
                 return getIsoscelesTrapezoid();
         }
