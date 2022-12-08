@@ -8,16 +8,16 @@ public class Main {
     private static final int FIGURE_COUNT = 6;
 
     public static void main(String[] args) {
-        Figure[] figure = new Figure[FIGURE_COUNT];
-        for (int i = 0; i < figure.length / 2; i++) {
-            figure[i] = figureSupplier.getRandomFigure();
+        Figure[] figures = new Figure[FIGURE_COUNT];
+        for (int i = 0; i < figures.length / 2; i++) {
+            figures[i] = figureSupplier.getRandomFigure();
         }
-        for (int i = figure.length / 2; i < figure.length; i++) {
-            figure[i] = figureSupplier.getDefaultFigure();
+        for (int i = figures.length / 2; i < figures.length; i++) {
+            figures[i] = figureSupplier.getDefaultFigure();
         }
 
-        for (Figure figures : figure) {
-            figures.draw();
+        for (Figure figure : figures) {
+            figure.draw();
         }
     }
 }
