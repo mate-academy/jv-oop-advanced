@@ -9,6 +9,7 @@ public class FigureSupplier {
     private int getRandomFigureValue() {
         return random.nextInt(50) + 1;
     }
+
     private Square getRandomSquare() {
         int side = getRandomFigureValue();
         String color = colorSupplier.getRandomColor();

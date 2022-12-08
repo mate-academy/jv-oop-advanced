@@ -19,9 +19,11 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String draw() {
-        return "IsoscelesTrapezoid, "  + "Area: " + getArea() +
-                " topSide: " + this.topSide +
-                " lateralSide: " + this.lateralSide +
-                " height: " + this.height + " color: " + super.color;
+        return "IsoscelesTrapezoid, "
+                + "Area: " + getArea()
+                + " topSide: " + this.topSide
+                + " lateralSide: " + this.lateralSide
+                + " height: " + this.height
+                + " color: " + super.color;
     }
 }

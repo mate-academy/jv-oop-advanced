@@ -8,14 +8,16 @@ public class Square extends Figure {
         this.side = side;
     }
 
-
     @Override
     public double getArea() {
-        return side*side;
+        return side * side;
     }
 
     @Override
     public String draw() {
-        return "Square, "  + "Area: " + getArea() + " side: " + this.side + " color: " + super.color;
+        return "Square, "
+                + "Area: " + getArea()
+                + " side: " + this.side
+                + " color: " + super.color;
     }
 }
