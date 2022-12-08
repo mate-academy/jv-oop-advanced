@@ -15,6 +15,7 @@ public class RightTriangle extends Figure{
 
     @Override
     public String draw() {
-        return "RightTriangle, "  + "Area: " + getArea() + " side: " + this.side + " color: " + super.color;
+        return "RightTriangle, "  + "Area: " + getArea() +
+                " side: " + this.side + " color: " + super.color;
     }
 }

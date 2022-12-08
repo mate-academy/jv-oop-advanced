@@ -12,11 +12,14 @@ public class Rectangle extends Figure{
 
     @Override
     public double getArea() {
+
         return heighth * width;
     }
 
     @Override
     public String draw() {
-        return "Rectangle, "  + "Area: " + getArea() + " heigth: " + this.heighth + " width: " + this.width + " color: " + super.color;
+        return "Rectangle, "  + "Area: " + getArea() +
+                " heigth: " + this.heighth + " width: "
+                + this.width + " color: " + super.color;
     }
 }
