@@ -17,6 +17,5 @@ public class FigureSupplier {
 
     public Figure getDefaultFigure(){
         defaultFigure.setColor(DEFAULT_COLOR);
-        defaultFigure.setRadius(DEFAULT_RADIUS);
     }
 }
