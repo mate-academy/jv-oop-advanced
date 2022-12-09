@@ -3,8 +3,7 @@ package core.basesyntax.geometry.figures;
 import core.basesyntax.geometry.Figure;
 
 public class Circle extends Figure {
-    private static final double NUMBER_P = 3.14;
-    private static final String NAME = "circle";
+    private static final double NUMBER_P = Math.PI;
     private double radius;
 
     public Circle(String color, double radius) {
@@ -19,7 +18,7 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + NAME + ", area: " + calculateArea()
+        System.out.println("Figure: " + Circle.class.getSimpleName() + ", area: " + calculateArea()
                 + " sq.units, radius: " + radius + " units, color: " + getColor() + "\n");
     }
 }

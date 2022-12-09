@@ -1,14 +1,14 @@
 package core.basesyntax.utils;
 
-import core.basesyntax.geometry.Colors;
+import core.basesyntax.geometry.Color;
 import java.util.Random;
 
 public class ColorSupplier {
     private Random random = new Random();
 
     public String getRandomColor() {
-        Colors[] colors = Colors.values();
-        Colors randomColor = colors[random.nextInt(colors.length)];
+        Color[] colors = Color.values();
+        Color randomColor = colors[random.nextInt(colors.length)];
         return randomColor.name();
     }
 }

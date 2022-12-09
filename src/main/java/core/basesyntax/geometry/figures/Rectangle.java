@@ -3,7 +3,6 @@ package core.basesyntax.geometry.figures;
 import core.basesyntax.geometry.Figure;
 
 public class Rectangle extends Figure {
-    private static final String NAME = "rectangle";
     private int side;
     private int height;
 
@@ -20,8 +19,8 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + NAME + ", area: " + calculateArea()
-                + " sq.units, side: " + side + " units, height: " + height
-                + " units, color: " + getColor() + "\n");
+        System.out.println("Figure: " + Rectangle.class.getSimpleName()
+                + ", area: " + calculateArea() + " sq.units, side: " + side
+                + " units, height: " + height + " units, color: " + getColor() + "\n");
     }
 }

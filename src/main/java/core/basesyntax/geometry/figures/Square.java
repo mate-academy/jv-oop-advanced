@@ -3,8 +3,6 @@ package core.basesyntax.geometry.figures;
 import core.basesyntax.geometry.Figure;
 
 public class Square extends Figure {
-
-    private static final String NAME = "square";
     private int side;
 
     public Square(String color, int side) {
@@ -19,7 +17,7 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + NAME + ", area: " + calculateArea()
+        System.out.println("Figure: " + Square.class.getSimpleName() + ", area: " + calculateArea()
                 + " sq.units, side: " + side + " units, color: " + getColor() + "\n");
     }
 }

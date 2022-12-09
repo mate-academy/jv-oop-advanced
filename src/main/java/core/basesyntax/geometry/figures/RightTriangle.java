@@ -3,8 +3,6 @@ package core.basesyntax.geometry.figures;
 import core.basesyntax.geometry.Figure;
 
 public class RightTriangle extends Figure {
-
-    private static final String NAME = "right triangle";
     private int firstLeg;
     private int secondLeg;
 
@@ -21,8 +19,8 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + NAME + ", area: " + calculateArea()
-                + " sq.units, first leg: " + firstLeg + " units, second leg: " + secondLeg
-                + " units, color: " + getColor() + "\n");
+        System.out.println("Figure: " + RightTriangle.class.getSimpleName() + ", area: "
+                + calculateArea() + " sq.units, first leg: " + firstLeg + " units, second leg: "
+                + secondLeg + " units, color: " + getColor() + "\n");
     }
 }

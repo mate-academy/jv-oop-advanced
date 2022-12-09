@@ -1,6 +1,6 @@
 package core.basesyntax.geometry;
 
-public enum Colors {
+public enum Color {
     RED,
     BLUE,
     ORANGE,

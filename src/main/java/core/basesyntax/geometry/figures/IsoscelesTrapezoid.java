@@ -3,7 +3,6 @@ package core.basesyntax.geometry.figures;
 import core.basesyntax.geometry.Figure;
 
 public class IsoscelesTrapezoid extends Figure {
-    private static final String NAME = "isosceles trapezoid";
     private int firstSide;
     private int secondSide;
     private int height;
@@ -23,8 +22,9 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + NAME + ", area: " + calculateArea()
-                + " sq.units, first side: " + firstSide + " units, second side: " + secondSide
-                + " units, height: " + height + " units, color: " + getColor() + "\n");
+        System.out.println("Figure: " + IsoscelesTrapezoid.class.getSimpleName() + ", area: "
+                + calculateArea() + " sq.units, first side: " + firstSide
+                + " units, second side: " + secondSide + " units, height: " + height
+                + " units, color: " + getColor() + "\n");
     }
 }
