@@ -36,7 +36,7 @@ public class RightTriangle extends Figure {
         System.out.println("Figure: RightTriangle color: " + getColor()
                 + " area: " + getArea() + " sq.units "
                 + " firstLeg: "
-                + getFirstLeg() + " secondLeg: "
-                + getSecondLeg());
+                + firstLeg + " secondLeg: "
+                + secondLeg);
     }
 }

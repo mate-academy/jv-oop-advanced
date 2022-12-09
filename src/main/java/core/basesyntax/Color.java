@@ -9,4 +9,3 @@ public enum Color {
     GREEN,
     GREY
 }
-
