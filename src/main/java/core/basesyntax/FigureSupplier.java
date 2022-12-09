@@ -3,11 +3,30 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+
+    public Figure getRandomFigure() {
+        switch (Figures.values()[random.nextInt(Figures.values().length)]) {
+            case SQUARE:
+                return getRandomSquare();
+            case RECTANGLE:
+                return getRandomRectangle();
+            case RIGHTTRIANGLE:
+                return getRandomRightTriangle();
+            case ISOSCELESTRAPEZOID:
+                return getRandomIsoscelesTrapezoid();
+            default:
+                return getDefaultFigure();
+
+        }
+    }
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final int randomMax = 50;
+    private final String colorCirkle = Colors.WHITE.toString();
+    private final int radiusCirkle = 10;
 
     private int getRandomFigureValue() {
-        return random.nextInt(50) + 1;
+        return random.nextInt(randomMax) + 1;
     }
 
     private Square getRandomSquare() {
@@ -38,22 +57,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Colors.WHITE.toString(), 10);
+        return new Circle(colorCirkle, radiusCirkle);
     }
 
-    public Figure getRandomFigure() {
-        switch (Figures.values()[random.nextInt(Figures.values().length)]) {
-            case SQUARE:
-                return getRandomSquare();
-            case RECTANGLE:
-                return getRandomRectangle();
-            case RIGHTTRIANGLE:
-                return getRandomRightTriangle();
-            case ISOSCELESTRAPEZOID:
-                return getRandomIsoscelesTrapezoid();
-            default:
-                return getDefaultFigure();
-
-        }
-    }
 }

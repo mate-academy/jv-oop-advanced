@@ -14,10 +14,11 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String draw() {
-        return "Circle, "
+    public void draw() {
+            System.out.println
+                    ("Circle, "
             + "Area: " + getArea()
             + " radius: " + this.radius
-            + " color: " + super.color;
+            + " color: " + super.color);
     }
 }

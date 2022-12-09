@@ -14,10 +14,11 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String draw() {
-        return "RightTriangle, "
+    public void draw() {
+        System.out.println
+                ("RightTriangle, "
                 + "Area: " + getArea()
                 + " side: " + this.side
-                + " color: " + super.color;
+                + " color: " + super.color);
     }
 }
