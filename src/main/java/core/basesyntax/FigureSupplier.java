@@ -4,6 +4,12 @@ import java.util.Random;
 
 public class FigureSupplier {
 
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final int randomMax = 50;
+    private final String colorCirkle = Colors.WHITE.toString();
+    private final int radiusCirkle = 10;
+
     public Figure getRandomFigure() {
         switch (Figures.values()[random.nextInt(Figures.values().length)]) {
             case SQUARE:
@@ -19,11 +25,6 @@ public class FigureSupplier {
 
         }
     }
-    private final Random random = new Random();
-    private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final int randomMax = 50;
-    private final String colorCirkle = Colors.WHITE.toString();
-    private final int radiusCirkle = 10;
 
     private int getRandomFigureValue() {
         return random.nextInt(randomMax) + 1;
