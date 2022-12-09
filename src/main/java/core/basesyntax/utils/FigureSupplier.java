@@ -34,24 +34,24 @@ public class FigureSupplier {
         return new Circle(DEFAULT_CIRCLE_COLOR, DEFAULT_CIRCLE_RADIUS);
     }
 
-    public Figure getRandomCircle() {
+    private Figure getRandomCircle() {
         return new Circle(colorSupplier.getRandomColor(), side);
     }
 
-    public Figure getRandomIsoscelesTrapezoid() {
+    private Figure getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier
                 .getRandomColor(), side, side + 2, side);
     }
 
-    public Figure getRandomRectangle() {
+    private Figure getRandomRectangle() {
         return new Rectangle(colorSupplier.getRandomColor(), side, side);
     }
 
-    public Figure getRandomRightTriangle() {
+    private Figure getRandomRightTriangle() {
         return new RightTriangle(colorSupplier.getRandomColor(), side, side);
     }
 
-    public Figure getRandomSquare() {
+    private Figure getRandomSquare() {
         return new Square(colorSupplier.getRandomColor(), side);
     }
 }
