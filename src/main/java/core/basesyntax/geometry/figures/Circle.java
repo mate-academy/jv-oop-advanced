@@ -3,7 +3,6 @@ package core.basesyntax.geometry.figures;
 import core.basesyntax.geometry.Figure;
 
 public class Circle extends Figure {
-    private static final double NUMBER_P = Math.PI;
     private double radius;
 
     public Circle(String color, double radius) {
@@ -13,7 +12,7 @@ public class Circle extends Figure {
 
     @Override
     public double calculateArea() {
-        return radius * radius * NUMBER_P;
+        return radius * radius * Math.PI;
     }
 
     @Override

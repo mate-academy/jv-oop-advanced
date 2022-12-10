@@ -14,19 +14,21 @@ public class FigureSupplier {
     private static final String DEFAULT_CIRCLE_COLOR = Color.WHITE.name();
     private static final int MAX_NUMBER_FOR_SIDES = 10;
     private static final int MIN_NUMBER_FOR_SIDES = 1;
-    private static final int FIGURES_NUMBER = 5;
-    private Random random = new Random();
+    private static final int FIGURES_NUMBER = 4;
     private ColorSupplier colorSupplier = new ColorSupplier();
-    private int side = random.nextInt(MAX_NUMBER_FOR_SIDES + MIN_NUMBER_FOR_SIDES);
 
     public Figure getRandomFigure() {
-        int figure = random.nextInt(FIGURES_NUMBER);
-        switch (figure) {
-            case 0: return getRandomCircle();
-            case 1: return getRandomIsoscelesTrapezoid();
-            case 2: return getRandomRectangle();
-            case 3: return getRandomRightTriangle();
-            default: return getRandomSquare();
+        switch (randomNumber(FIGURES_NUMBER)) {
+            case 1:
+                return getRandomCircle();
+            case 2:
+                return getRandomIsoscelesTrapezoid();
+            case 3:
+                return getRandomRectangle();
+            case 4:
+                return getRandomRightTriangle();
+            default:
+                return getRandomSquare();
         }
     }
 
@@ -35,23 +37,31 @@ public class FigureSupplier {
     }
 
     private Figure getRandomCircle() {
-        return new Circle(colorSupplier.getRandomColor(), side);
+        return new Circle(colorSupplier.getRandomColor(), randomNumber(MAX_NUMBER_FOR_SIDES));
     }
 
     private Figure getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier
-                .getRandomColor(), side, side + 2, side);
+                .getRandomColor(), randomNumber(MAX_NUMBER_FOR_SIDES),
+                randomNumber(MAX_NUMBER_FOR_SIDES) + 2, randomNumber(MAX_NUMBER_FOR_SIDES));
     }
 
     private Figure getRandomRectangle() {
-        return new Rectangle(colorSupplier.getRandomColor(), side, side);
+        return new Rectangle(colorSupplier.getRandomColor(), randomNumber(MAX_NUMBER_FOR_SIDES),
+                randomNumber(MAX_NUMBER_FOR_SIDES));
     }
 
     private Figure getRandomRightTriangle() {
-        return new RightTriangle(colorSupplier.getRandomColor(), side, side);
+        return new RightTriangle(colorSupplier.getRandomColor(), randomNumber(MAX_NUMBER_FOR_SIDES),
+                randomNumber(MAX_NUMBER_FOR_SIDES));
     }
 
     private Figure getRandomSquare() {
-        return new Square(colorSupplier.getRandomColor(), side);
+        return new Square(colorSupplier.getRandomColor(), randomNumber(MAX_NUMBER_FOR_SIDES));
+    }
+
+    private int randomNumber(int number) {
+        Random random = new Random();
+        return random.nextInt(number + MIN_NUMBER_FOR_SIDES);
     }
 }
