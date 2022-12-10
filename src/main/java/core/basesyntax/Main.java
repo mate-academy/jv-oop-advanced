@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.util.Arrays;
-
 public class Main {
     private static final int FIGURE_ARRAY_SIZE = 6;
     private static final FigureSupplier figureSupplier = new FigureSupplier();

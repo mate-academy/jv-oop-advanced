@@ -1,10 +1,10 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private double sideA;
-    private double sideB;
+    private int sideA;
+    private int sideB;
 
-    public Rectangle(String color, double sideA, double sideB) {
+    public Rectangle(String color, int sideA, int sideB) {
         this.sideA = sideA;
         this.sideB = sideB;
     }
