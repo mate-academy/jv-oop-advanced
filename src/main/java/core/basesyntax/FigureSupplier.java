@@ -3,8 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private Random random = new Random();
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         Figure figure = generateFigure();
@@ -17,6 +17,7 @@ public class FigureSupplier {
         figure.setColor(Color.white);
         return figure;
     }
+
     private Figure generateFigure() {
         int figure1 = random.nextInt(5);
         switch (figure1) {
@@ -30,7 +31,8 @@ public class FigureSupplier {
                 return new Circle(random.nextInt(500));
             case 4:
             default:
-                return new IsoscelesTrapezoid(random.nextInt(500), random.nextInt(500), random.nextInt(500));
+                return new IsoscelesTrapezoid(random.nextInt(500), random.nextInt(500),
+                        random.nextInt(500));
         }
     }
 }
