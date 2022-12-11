@@ -19,5 +19,4 @@ public class Main {
             figuresArray[i].draw();
         }
     }
-
 }
