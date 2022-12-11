@@ -1,6 +1,9 @@
 package core.basesyntax;
 
-public abstract class Figure {
+import java.util.Random;
+
+public abstract class Figure implements FigureInformation, FigureArea {
+    protected Random random = new Random();
     private String color;
 
     public void setColor(String color) {
@@ -11,9 +14,9 @@ public abstract class Figure {
         return color;
     }
 
-    abstract public double figureArea();
-    abstract public void figureInformation();
-    abstract public Figure getRandomFigure();
+    @Override
+    public abstract double getArea();
 
-
+    @Override
+    public abstract void draw();
 }
