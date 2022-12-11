@@ -1,10 +1,13 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements DrawArea {
-    private int radius;
-    public Circle (int radius) {
+public class Circle extends Figure {
+
+    private final int radius;
+
+    public Circle(int radius) {
         this.radius = radius;
     }
+
     @Override
     public double getArea() {
         return Math.PI * radius * radius;
@@ -12,6 +15,7 @@ public class Circle extends Figure implements DrawArea {
 
     @Override
     public void drawArea() {
-        System.out.println("Figure: circle" + ", area: " + getArea() + " sq. units, radius: " + radius + " units, color: " + getColor());
+        System.out.println("Figure: circle" + ", area: " + getArea() + " sq. units, radius: "
+                + radius + " units, color: " + getColor());
     }
 }
