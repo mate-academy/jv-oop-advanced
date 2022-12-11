@@ -18,20 +18,18 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        switch ((FigureList.values()[random.nextInt(FigureList.values().length)]).getValue()) {
-            case "circle":
+        switch (FigureList.values()[random.nextInt(FigureList.values().length)]) {
+            case CIRCLE:
                 return getRandomCircle();
-            case "isosceles trapezoid":
+            case ISOSCELES_TRAPEZOID:
                 return getRandomIsoscelesTrapezoid();
-            case "rectangle":
+            case RECTANGLE:
                 return getRandomRectangle();
-            case "right triangle":
+            case RIGHT_TRIANGLE:
                 return getRandomRightTriangle();
-            case "square":
-                return getRandomSquare();
+            case SQUARE:
             default:
-                System.out.println("not match");
-                return getDefaultFigure();
+                return getRandomSquare();
         }
     }
 
