@@ -20,7 +20,7 @@ public class Circle extends Figure {
     public void draw() {
         System.out.println(("Figure: circle,"
                 + " area: " + getArea() + " sq.units, "
-                + "radius: " + getRadius() + " units, "
+                + "radius: " + radius + " units, "
                 + "color: " + getColor()));
     }
 }
