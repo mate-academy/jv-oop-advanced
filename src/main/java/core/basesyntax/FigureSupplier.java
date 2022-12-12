@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 import java.util.Random;
-//import java.util.random.RandomGenerator;
 
 public class FigureSupplier {
     private static final int MAX_FIGURE_SIDE_SIZE = 11;
