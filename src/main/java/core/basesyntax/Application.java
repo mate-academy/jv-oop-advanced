@@ -14,7 +14,7 @@ public class Application {
             }
         }
         for (Figure figure : figures) {
-            System.out.println(figure.draw());
+            figure.draw();
         }
     }
 }

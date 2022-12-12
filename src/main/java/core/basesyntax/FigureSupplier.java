@@ -31,21 +31,28 @@ public class FigureSupplier {
         }
     }
 
-    public Square getRandomSquare() {
+    public Figure getDefaultFigure() {
+        Circle circle = new Circle();
+        circle.setColor(DEFAULT_COLOR);
+        circle.setRadius(MAX_RADIUS);
+        return circle;
+    }
+
+    private Square getRandomSquare() {
         Square square = new Square();
         square.setColor(colorSupplier.getRandomColor());
         square.setSide(random.nextInt(MAX_SIDE) + 1);
         return square;
     }
 
-    public Circle getRandomCircle() {
+    private Circle getRandomCircle() {
         Circle circle = new Circle();
         circle.setColor(colorSupplier.getRandomColor());
         circle.setRadius(random.nextInt(MAX_RADIUS) + 1);
         return circle;
     }
 
-    public Rectangle getRandomRectangle() {
+    private Rectangle getRandomRectangle() {
         Rectangle rectangle = new Rectangle();
         rectangle.setColor(colorSupplier.getRandomColor());
         rectangle.setWidth(random.nextInt(MAX_SIDE) + 1);
@@ -53,7 +60,7 @@ public class FigureSupplier {
         return rectangle;
     }
 
-    public RightTriangle getRandomRightTriangle() {
+    private RightTriangle getRandomRightTriangle() {
         RightTriangle rightTriangle = new RightTriangle();
         rightTriangle.setColor(colorSupplier.getRandomColor());
         rightTriangle.setFirstLeg(random.nextInt(MAX_SIDE) + 1);
@@ -61,7 +68,7 @@ public class FigureSupplier {
         return rightTriangle;
     }
 
-    public IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
         IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
         isoscelesTrapezoid.setColor(colorSupplier.getRandomColor());
         isoscelesTrapezoid.setFirstBase(random.nextInt(MAX_SIDE) + 1);
@@ -69,12 +76,5 @@ public class FigureSupplier {
         isoscelesTrapezoid.setHeight(random.nextInt(MAX_SIDE) + 1);
         isoscelesTrapezoid.setColor(colorSupplier.getRandomColor());
         return isoscelesTrapezoid;
-    }
-
-    public Figure getDefaultFigure() {
-        Circle circle = new Circle();
-        circle.setColor(DEFAULT_COLOR);
-        circle.setRadius(MAX_RADIUS);
-        return circle;
     }
 }
