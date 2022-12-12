@@ -5,6 +5,7 @@ public class Rectangle extends Figure {
     private int sideB;
 
     public Rectangle(String color, int sideA, int sideB) {
+        super(color);
         this.sideA = sideA;
         this.sideB = sideB;
     }
@@ -15,8 +16,11 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String drawTheFigure() {
-        return "Figure : rectangle, area: " + calculateArea() + " sq.units, sideA: " + sideA
-                + " units, sideB: " + sideB + " units, color: " + color.toLowerCase();
+    public void drawTheFigure() {
+        System.out.printf("Figure: rectangle, area: %.1f sq.units,"
+                        + " sideA: %d units, sideB: %d units, color: %s%n",
+                calculateArea(), sideA, sideB, getColor().toLowerCase());
+        /*return "Figure: rectangle, area: " + calculateArea() + " sq.units, sideA: " + sideA
+                + " units, sideB: " + sideB + " units, color: " + color.toLowerCase();*/
     }
 }

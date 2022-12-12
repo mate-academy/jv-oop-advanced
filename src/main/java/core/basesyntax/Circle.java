@@ -4,8 +4,8 @@ public class Circle extends Figure {
     private int radius;
 
     public Circle(String color, int radius) {
+        super(color);
         this.radius = radius;
-        this.color = color;
     }
 
     @Override
@@ -14,9 +14,10 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String drawTheFigure() {
-        return "Figure : circle, area: "
-                + calculateArea() + " sq.units, radius: "
-                + radius + " units, color: " + color.toLowerCase();
+    public void drawTheFigure() {
+        System.out.printf("Figure: circle, area: %.1f sq.units,"
+                        + " radius: %d units, color: %s%n",
+                calculateArea(), radius, getColor().toLowerCase());
+
     }
 }

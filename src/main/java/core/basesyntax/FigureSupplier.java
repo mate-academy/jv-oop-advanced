@@ -9,32 +9,30 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public int getValue() {
-        return random.nextInt(MAX_VALUE);
-    }
-
     public Figure getRandomFigure() {
-        int index = random.nextInt(FigureList.values().length);
-        for (int i = 0; i < FigureList.values().length; i++) {
-            switch (FigureList.values()[index]) {
-                case CIRCLE:
-                    return new Circle(colorSupplier.getRandomColor(), getValue());
-                case SQUARE:
-                    return new Square(colorSupplier.getRandomColor(), getValue());
-                case TRIANGLE:
-                    return new RightTriangle(colorSupplier.getRandomColor(),
-                            getValue(), getValue());
-                case RECTANGLE:
-                    return new Rectangle(colorSupplier.getRandomColor(), getValue(), getValue());
-                default:
-                    break;
-            }
+        int index = random.nextInt(FigureType.values().length);
+        switch (FigureType.values()[index]) {
+            case CIRCLE:
+                return new Circle(colorSupplier.getRandomColor(), getSideOfFigure());
+            case SQUARE:
+                return new Square(colorSupplier.getRandomColor(), getSideOfFigure());
+            case TRIANGLE:
+                return new RightTriangle(colorSupplier.getRandomColor(),
+                        getSideOfFigure(), getSideOfFigure());
+            case RECTANGLE:
+                return new Rectangle(colorSupplier.getRandomColor(), getSideOfFigure(), getSideOfFigure());
+            default:
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        getSideOfFigure(), getSideOfFigure(), getSideOfFigure());
         }
-        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                getValue(), getValue(), getValue());
+
     }
 
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_CIRCLE_COLOR.name(), DEFAULT_CIRCLE_RADIUS);
+    }
+
+    private int getSideOfFigure() {
+        return random.nextInt(MAX_VALUE);
     }
 }
