@@ -6,19 +6,19 @@ public class FigureSupplier {
     private static final int MAX_FIGURE_PROPERTY_VALUE = 30;
     private static final int MIN_FIG_VALUE = 1;
     private static final double DEFAULT_RADIUS = 10;
-    private static final String DEFAULT_COLOR = Color.WHITE.getValue();
+    private static final Color DEFAULT_COLOR = Color.WHITE;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
-    private Circle defaultFigure = new Circle();
 
     public Figure getDefaultFigure() {
+        Circle defaultFigure = new Circle();
         defaultFigure.setColor(DEFAULT_COLOR);
         defaultFigure.setRadius(DEFAULT_RADIUS);
         return defaultFigure;
     }
 
     public Figure getRandomFigure() {
-        switch (FigureList.values()[random.nextInt(FigureList.values().length)]) {
+        switch (FigureEnum.values()[random.nextInt(FigureEnum.values().length)]) {
             case CIRCLE:
                 return getRandomCircle();
             case ISOSCELES_TRAPEZOID:

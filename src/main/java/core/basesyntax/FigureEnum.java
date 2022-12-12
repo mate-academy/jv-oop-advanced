@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public enum FigureList {
+public enum FigureEnum {
     CIRCLE("circle"),
     ISOSCELES_TRAPEZOID("isosceles trapezoid"),
     RECTANGLE("rectangle"),
@@ -9,7 +9,7 @@ public enum FigureList {
 
     private final String value;
 
-    FigureList(String value) {
+    FigureEnum(String value) {
         this.value = value;
     }
 
