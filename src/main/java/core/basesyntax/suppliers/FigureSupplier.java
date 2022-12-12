@@ -10,19 +10,12 @@ import core.basesyntax.model.Square;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int MAX_INTEGER_RANDOM_VALUE = 100;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    private int getRandomInt() {
-        return random.nextInt(100);
-    }
-
-    private double getRandomDouble() {
-        return random.nextDouble();
-    }
-
     public Figure getDefaultFigure() {
-        return new Circle(Color.values()[4].name(), 10);
+        return new Circle(Color.WHITE.name(), 10);
     }
 
     public Figure getRandomFigure() {
@@ -42,5 +35,13 @@ public class FigureSupplier {
             default:
                 return new Square(colorSupplier.getRandomColor(), getRandomInt());
         }
+    }
+
+    private int getRandomInt() {
+        return random.nextInt(MAX_INTEGER_RANDOM_VALUE);
+    }
+
+    private double getRandomDouble() {
+        return random.nextDouble();
     }
 }
