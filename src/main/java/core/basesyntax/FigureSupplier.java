@@ -16,15 +16,15 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        int index = random.nextInt(FIGURE_COUNT) + 1;
+        int index = random.nextInt(1, FIGURE_COUNT);
         switch (index) {
-            case 1:
+            case 0:
                 return getRandomSquare();
-            case 2:
+            case 1:
                 return getRandomCircle();
-            case 3:
+            case 2:
                 return getRandomRectangle();
-            case 4:
+            case 3:
                 return getRandomRightTriangle();
             default:
                 return getRandomIsoscelesTrapezoid();

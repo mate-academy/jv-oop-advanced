@@ -28,9 +28,9 @@ public class Rectangle extends Figure {
     @Override
     public String draw() {
         return "Figure: rectangle,"
-                + " area: " + this.getArea() + " sq.units, "
-                + "height: " + this.getHeight() + " units, "
-                + "width: " + this.getWidth() + " units, "
-                + "color: " + this.getColor();
+                + " area: " + getArea() + " sq.units, "
+                + "height: " + getHeight() + " units, "
+                + "width: " + getWidth() + " units, "
+                + "color: " + getColor();
     }
 }

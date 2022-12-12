@@ -28,9 +28,9 @@ public class RightTriangle extends Figure {
     @Override
     public String draw() {
         return "Figure: right triangle, "
-                + "area: " + this.getArea() + " sq.units, "
-                + "first leg: " + this.getFirstLeg() + " units, "
-                + "second leg: " + this.getSecondLeg() + " units, "
-                + "color: " + this.getColor();
+                + "area: " + getArea() + " sq.units, "
+                + "first leg: " + getFirstLeg() + " units, "
+                + "second leg: " + getSecondLeg() + " units, "
+                + "color: " + getColor();
     }
 }

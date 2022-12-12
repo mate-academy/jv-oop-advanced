@@ -1,8 +1,5 @@
 package core.basesyntax;
 
-/**
- * Feel free to remove this class and create your own.
- */
 public class Application {
     private static final int FIGURE_COUNT = 6;
 
@@ -16,8 +13,8 @@ public class Application {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
         }
-        for (int i = 0; i < FIGURE_COUNT; i++) {
-            System.out.println(figures[i].draw());
+        for (Figure figure : figures) {
+            System.out.println(figure.draw());
         }
     }
 }
