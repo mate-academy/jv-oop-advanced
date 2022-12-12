@@ -18,6 +18,5 @@ public class Circle extends Figure {
         System.out.printf("Figure: circle, area: %.1f sq.units,"
                         + " radius: %d units, color: %s%n",
                 calculateArea(), radius, getColor().toLowerCase());
-
     }
 }
