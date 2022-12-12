@@ -5,12 +5,12 @@ public class Main {
     private static final FigureSupplier figureSupplier = new FigureSupplier();
 
     public static void main(String[] args) {
-        Figure[] Figures = new Figure[FIGURE_ARRAY_SIZE];
-        for (int i = 0; i < Figures.length; i++) {
-            Figures[i] = i < Figures.length / 2
+        Figure[] figures = new Figure[FIGURE_ARRAY_SIZE];
+        for (int i = 0; i < figures.length; i++) {
+            figures[i] = i < figures.length / 2
                     ? figureSupplier.getRandomFigure()
                     : figureSupplier.getDefaultFigure();
-            Figures[i].drawTheFigure();
+            figures[i].drawTheFigure();
         }
     }
 }

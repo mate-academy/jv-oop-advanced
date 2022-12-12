@@ -20,7 +20,8 @@ public class FigureSupplier {
                 return new RightTriangle(colorSupplier.getRandomColor(),
                         getSideOfFigure(), getSideOfFigure());
             case RECTANGLE:
-                return new Rectangle(colorSupplier.getRandomColor(), getSideOfFigure(), getSideOfFigure());
+                return new Rectangle(colorSupplier.getRandomColor(),
+                         getSideOfFigure(), getSideOfFigure());
             default:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                         getSideOfFigure(), getSideOfFigure(), getSideOfFigure());
