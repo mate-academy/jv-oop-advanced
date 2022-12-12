@@ -24,8 +24,12 @@ public class FigureSupplier {
             case 4:
                 return getRandomSquare();
             default:
-                return getRandomSquare();
+                return null;
         }
+    }
+
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
     private Figure getRandomCircle() {
@@ -56,9 +60,5 @@ public class FigureSupplier {
 
     private int getMyRandomParameter() {
         return random.nextInt(MAX_PROPERTY_LENGTH);
-    }
-
-    public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
