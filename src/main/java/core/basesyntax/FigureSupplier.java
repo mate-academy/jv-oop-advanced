@@ -14,25 +14,45 @@ public class FigureSupplier {
         random = new Random();
     }
 
-    public Figure getRandomFigure() {
+    private Figure getSquare() {
         Figure square = new Square(random.nextInt(RANDOM_NUMBER_BOUND),
-                        colorSupplier.getRandomColor());
+                colorSupplier.getRandomColor());
+        return square;
+    }
+
+    private Figure getRightTriangle() {
         Figure rightTriangle = new RightTriangle(random.nextInt(RANDOM_NUMBER_BOUND),
-                        random.nextInt(RANDOM_NUMBER_BOUND), colorSupplier.getRandomColor());
+                random.nextInt(RANDOM_NUMBER_BOUND), colorSupplier.getRandomColor());
+        return rightTriangle;
+    }
+
+    private Figure getRectangle() {
         Figure rectangle = new Rectangle(random.nextInt(RANDOM_NUMBER_BOUND),
-                        random.nextInt(RANDOM_NUMBER_BOUND), colorSupplier.getRandomColor());
+                random.nextInt(RANDOM_NUMBER_BOUND), colorSupplier.getRandomColor());
+        return rectangle;
+    }
+
+    private Figure getCircle() {
         Figure circle = new Circle(random.nextInt(RANDOM_NUMBER_BOUND),
-                        colorSupplier.getRandomColor());
+                colorSupplier.getRandomColor());
+        return circle;
+    }
+
+    private Figure getIsoscelesTrapezoid() {
         Figure isoscelesTrapezoid = new IsoscelesTrapezoid(random.nextInt(RANDOM_NUMBER_BOUND),
-                        random.nextInt(RANDOM_NUMBER_BOUND), random.nextInt(RANDOM_NUMBER_BOUND),
-                        colorSupplier.getRandomColor());
+                random.nextInt(RANDOM_NUMBER_BOUND), random.nextInt(RANDOM_NUMBER_BOUND),
+                colorSupplier.getRandomColor());
+        return isoscelesTrapezoid;
+    }
+
+    public Figure getRandomFigure() {
         int randomIndex = random.nextInt(RANDOM_INDEX);
         switch (randomIndex) {
-            case 1: return square;
-            case 2: return rightTriangle;
-            case 3: return rectangle;
-            case 4: return circle;
-            default: return isoscelesTrapezoid;
+            case 1: return getSquare();
+            case 2: return getRightTriangle();
+            case 3: return getRectangle();
+            case 4: return getCircle();
+            default: return getIsoscelesTrapezoid();
         }
     }
 

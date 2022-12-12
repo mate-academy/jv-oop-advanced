@@ -5,7 +5,7 @@ public class Square extends Figure {
 
     public Square(double side, String color) {
         this.side = side;
-        setColor(color);
+        super.setColor(color);
     }
 
     @Override

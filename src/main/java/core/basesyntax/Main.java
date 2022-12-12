@@ -6,15 +6,15 @@ public class Main {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure [] figures = new Figure[AMOUNT_OF_FIGURES];
-        StringBuilder builder = new StringBuilder();
+        StringBuilder result = new StringBuilder();
         for (int i = 0; i < AMOUNT_OF_FIGURES; i++) {
             if (i < AMOUNT_OF_FIGURES / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
-            builder.append(figures[i]).append("\n");
+            result.append(figures[i]).append(System.lineSeparator());
         }
-        System.out.println(builder);
+        System.out.println(result);
     }
 }
