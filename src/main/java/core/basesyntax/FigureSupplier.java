@@ -6,7 +6,7 @@ public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
     private static final int MAX_SIDE = 25;
     private static final int MAX_RADIUS = 10;
-    private static final String DEFAULT_COLOR = Color.WHITE.getValue();
+    private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
     private final Random random;
     private final ColorSupplier colorSupplier;
 

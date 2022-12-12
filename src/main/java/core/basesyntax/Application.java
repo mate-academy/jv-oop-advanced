@@ -4,18 +4,19 @@ package core.basesyntax;
  * Feel free to remove this class and create your own.
  */
 public class Application {
-    private static final FigureSupplier figureSupplier = new FigureSupplier();
+    private static final int FIGURE_COUNT = 6;
 
     public static void main(String[] args) {
-        Figure[] figures = new Figure[6];
-        for (int i = 0; i < 6; i++) {
-            if (i < 3) {
+        FigureSupplier figureSupplier = new FigureSupplier();
+        Figure[] figures = new Figure[FIGURE_COUNT];
+        for (int i = 0; i < FIGURE_COUNT; i++) {
+            if (i < FIGURE_COUNT / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
         }
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < FIGURE_COUNT; i++) {
             System.out.println(figures[i].draw());
         }
     }
