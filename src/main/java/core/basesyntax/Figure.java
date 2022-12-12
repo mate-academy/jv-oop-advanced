@@ -1,13 +1,13 @@
 package core.basesyntax;
 
 public abstract class Figure implements Draw, AreaCounter {
-    private String color;
+    private Color color;
 
     public Figure(String color) {
-        this.color = color;
+        this.color = Color.valueOf(color);
     }
 
     public String getColor() {
-        return color;
+        return color.name();
     }
 }
