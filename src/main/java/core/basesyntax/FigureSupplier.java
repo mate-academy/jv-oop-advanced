@@ -3,8 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int DEFAULT_RADIUS = 10;
-    public static final int FIGURE_COUNT = 5;
+    private static final int DEFAULT_RADIUS = 10;
+    private static final int FIGURE_COUNT = 5;
     private static final int MAX_RANDOM_NUMBER = 50;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
@@ -24,34 +24,33 @@ public class FigureSupplier {
         return new Circle(Color.WHITE, DEFAULT_RADIUS);
     }
 
-    public Square getRandomSquare() {
+    private Square getRandomSquare() {
         int randomSide = random.nextInt(MAX_RANDOM_NUMBER);
         return new Square(colorSupplier.getRandomColor(), randomSide);
     }
 
-    public RightTriangle getRandomRightTriangle() {
+    private RightTriangle getRandomRightTriangle() {
         int randomFirstLeg = random.nextInt(MAX_RANDOM_NUMBER);
         int randomSecondLeg = random.nextInt(MAX_RANDOM_NUMBER);
         return new RightTriangle(colorSupplier.getRandomColor(), randomFirstLeg, randomSecondLeg);
     }
 
-    public Rectangle getRandomRectangle() {
+    private Rectangle getRandomRectangle() {
         int randomWidth = random.nextInt(MAX_RANDOM_NUMBER);
         int randomHeight = random.nextInt(MAX_RANDOM_NUMBER);
         return new Rectangle(colorSupplier.getRandomColor(), randomWidth, randomHeight);
     }
 
-    public Circle getRandomCircle() {
+    private Circle getRandomCircle() {
         int randomRadius = random.nextInt(MAX_RANDOM_NUMBER);
         return new Circle(colorSupplier.getRandomColor(), randomRadius);
     }
 
-    public IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
         int randomA = random.nextInt(MAX_RANDOM_NUMBER);
         int randomB = random.nextInt(MAX_RANDOM_NUMBER);
         int randomHeight = random.nextInt(MAX_RANDOM_NUMBER);
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                 randomA, randomB, randomHeight);
     }
-
 }
