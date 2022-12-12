@@ -20,7 +20,5 @@ public class Rectangle extends Figure {
         System.out.printf("Figure: rectangle, area: %.1f sq.units,"
                         + " sideA: %d units, sideB: %d units, color: %s%n",
                 calculateArea(), sideA, sideB, getColor().toLowerCase());
-        /*return "Figure: rectangle, area: " + calculateArea() + " sq.units, sideA: " + sideA
-                + " units, sideB: " + sideB + " units, color: " + color.toLowerCase();*/
     }
 }
