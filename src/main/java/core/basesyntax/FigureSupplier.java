@@ -11,13 +11,13 @@ public class FigureSupplier {
 
     public Figure getRandomFigure(int number) {
         int figureNumber = random.nextInt(FIGURE_COUNT);
-            switch (figureNumber) {
-                case 1: return getRandomCircle();
-                case 2: return getRandomRectangle();
-                case 3: return getRandomSquare();
-                case 4: return getRandomIsoscelesTrapezoid();
-                default: return getRandomRightTriangle();
-            }
+        switch (figureNumber) {
+            case 1: return getRandomCircle();
+            case 2: return getRandomRectangle();
+            case 3: return getRandomSquare();
+            case 4: return getRandomIsoscelesTrapezoid();
+            default: return getRandomRightTriangle();
+        }
     }
 
     public RightTriangle getRandomRightTriangle() {
