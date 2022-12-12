@@ -21,10 +21,8 @@ public class FigureSupplier {
                 return getRandomRectangle();
             case 3:
                 return getRandomRightTriangle();
-            case 4:
-                return getRandomSquare();
             default:
-                return null;
+                return getRandomSquare();
         }
     }
 
