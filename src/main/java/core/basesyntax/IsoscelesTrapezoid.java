@@ -38,11 +38,11 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double getArea() {
-        return ((lowerBase + upperBase) / 2) * height;
+        return (lowerBase + upperBase) / 2 * height;
     }
 
     @Override
-    public String showInfo() {
+    public String getInfo() {
         return "Figure: RightTriangle area: " + getArea() + " sq.units "
                 + "lowerBase: " + lowerBase + " upperBase: " + upperBase
                 + " height: " + height + " color: " + getColor();

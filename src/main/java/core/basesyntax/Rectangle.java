@@ -32,7 +32,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String showInfo() {
+    public String getInfo() {
         return "Figure: square area: " + getArea() + " sq.units "
                 + "length: " + length + " width: " + width + " color: " + getColor();
     }
