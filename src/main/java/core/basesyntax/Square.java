@@ -17,7 +17,6 @@ public class Square extends Figure {
 
     @Override
     public Double getArea() {
-        Double result = Math.pow(side, 2);
-        return result;
+        return Math.pow(side, 2);
     }
 }

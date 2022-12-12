@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 public enum FigureName {
-    rectangle,
-    square,
-    circle,
-    triangle,
-    trapezoid
+    RECTANGLE,
+    SQUARE,
+    CIRCLE,
+    TRIANGLE,
+    TRAPEZOID
 }
