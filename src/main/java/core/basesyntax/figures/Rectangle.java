@@ -1,16 +1,23 @@
 package core.basesyntax.figures;
 
 public class Rectangle extends Figure {
-    private int longLeg = 10;
-    private int shortLeg = 20;
+    private final int longLeg;
+    private final int shortLeg;
+
+    public Rectangle(int longLeg, int shortLeg, String color) {
+        super(color);
+
+        this.longLeg = longLeg;
+        this.shortLeg = shortLeg;
+    }
 
     @Override
-    public int area() {
+    public int getArea() {
         return longLeg + shortLeg;
     }
 
-    public void print() {
-        System.out.println("Figure: rectangle, area: " + this.area() + " longLeg: "
+    public void draw() {
+        System.out.println("Figure: rectangle, area: " + this.getArea() + " longLeg: "
                 + this.longLeg + " units, secondLeg: " + this.shortLeg + " units, color: "
                 + this.getColor());
     }
