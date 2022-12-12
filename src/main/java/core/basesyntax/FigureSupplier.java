@@ -38,7 +38,7 @@ public class FigureSupplier {
         String color = colorSupplier.getRandomColor();
         int firstLeg = random.nextInt(MAX_VALUE_OF_RANDOM_NUMBER) + 1;
         int secondLeg = random.nextInt(MAX_VALUE_OF_RANDOM_NUMBER) + 1;
-        return new RigthTriangle(color, firstLeg, secondLeg);
+        return new RightTriangle(color, firstLeg, secondLeg);
     }
 
     private Figure getRandomRectangle() {
