@@ -1,4 +1,4 @@
-package core.test;
+package core.basesyntax;
 
 public interface AreaCalculator {
     double calculateArea();
