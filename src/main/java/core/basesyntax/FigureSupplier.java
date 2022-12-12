@@ -27,7 +27,7 @@ public class FigureSupplier extends ColorSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.getValue(), DEFAULT_RADIUS);
+        return new Circle(Color.WHITE, DEFAULT_RADIUS);
     }
 
     private Circle getRandomCircle() {
@@ -60,4 +60,3 @@ public class FigureSupplier extends ColorSupplier {
         return new Rectangle(colorSupplier.getRandomColor(), randomWidth, randomHeight);
     }
 }
-
