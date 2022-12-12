@@ -14,26 +14,27 @@ public class FigureSupplier {
         colorSupplier = new ColorSupplier();
     }
 
-    private int getSide() {
-        return random.nextInt(MAX_SIDE);
-    }
-
-    private String getColor() {
-        return colorSupplier.getRandomColor();
-    }
-
     public Figure getRandomFigure() {
         int index = random.nextInt(NUMBER_OF_FIGURE_TYPES);
         switch (index) {
-            case 0: return new Circle(getColor(), getSide());
-            case 1: return new Square(getColor(), getSide());
-            case 2: return new Rectangle(getColor(), getSide(), getSide());
-            case 3: return new RightTriangle(getColor(),getSide(), getSide());
-            default: return new IsoscelesTrapezoid(getColor(), getSide(), getSide(), getSide());
+            case 0: return new Circle(getRandomColor(), getSide());
+            case 1: return new Square(getRandomColor(), getSide());
+            case 2: return new Rectangle(getRandomColor(), getSide(), getSide());
+            case 3: return new RightTriangle(getRandomColor(),getSide(), getSide());
+            default: return new IsoscelesTrapezoid(getRandomColor(),
+                    getSide(), getSide(), getSide());
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.getValue(), DEFAULT_SIDE);
+        return new Circle(Color.WHITE, DEFAULT_SIDE);
+    }
+
+    private int getSide() {
+        return random.nextInt(MAX_SIDE);
+    }
+
+    private Color getRandomColor() {
+        return colorSupplier.getRandomColor();
     }
 }
