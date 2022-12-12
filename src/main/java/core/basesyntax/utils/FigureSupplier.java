@@ -16,6 +16,7 @@ public class FigureSupplier {
     private static final int MIN_NUMBER_FOR_SIDES = 1;
     private static final int FIGURES_NUMBER = 4;
     private ColorSupplier colorSupplier = new ColorSupplier();
+    private Random random = new Random();
 
     public Figure getRandomFigure() {
         switch (randomNumber(FIGURES_NUMBER)) {
@@ -61,7 +62,6 @@ public class FigureSupplier {
     }
 
     private int randomNumber(int number) {
-        Random random = new Random();
         return random.nextInt(number + MIN_NUMBER_FOR_SIDES);
     }
 }
