@@ -12,22 +12,19 @@ public class FigureSupplier {
     private Random random = new Random();
 
     public Figure getRandomFigure() {
-        int randomInt = random.nextInt(FIGURE_COUNT);
-        Figure figure;
-        if ((randomInt == 1)) {
-            figure = getRectangle();
-        } else {
-            if (randomInt == 2) {
-                figure = getCircle();
-            } else {
-                if (randomInt == 3) {
-                    figure = getRightTriangle();
-                } else {
-                    figure = randomInt == 4 ? getIsoscelesTrapezoid() : getSquare();
-                }
-            }
+        switch (random.nextInt(FIGURE_COUNT)) {
+            case 0:
+                return getCircle();
+            case 1:
+                return getSquare();
+            case 2:
+                return getRectangle();
+            case 3:
+                return getRightTriangle();
+            case 4:
+            default:
+                return getIsoscelesTrapezoid();
         }
-        return figure;
     }
 
     public Figure getDefaultFigure() {
