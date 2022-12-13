@@ -12,8 +12,8 @@ public class Main {
         for (int i = figures.length / 2; i < figures.length; i++) {
             figures[i] = figureSupplier.getDefaultFigure();
         }
-        for (int i = 0; i < figures.length; i++) {
-            figures[i].draw();
+        for (Figure figure : figures) {
+            figure.draw();
         }
     }
 }
