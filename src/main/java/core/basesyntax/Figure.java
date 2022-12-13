@@ -2,17 +2,12 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public abstract class Figure implements AreaCalculation {
+public abstract class Figure implements AreaCalculator, FigurePainter {
     private String color;
-    private double area;
-    //private Random random;
+    private Random random = new Random();
     private StringBuilder stringBuilder = new StringBuilder();
 
     public Figure() {
-
-    }
-
-    public Figure(Random random) {
 
     }
 
@@ -32,13 +27,19 @@ public abstract class Figure implements AreaCalculation {
         this.color = color;
     }
 
-    public void printInformation() {
+    public void draw() {
     }
-
-    //public Figure getRandomFigure;
 
     @Override
     public double getArea() {
         return 0;
+    }
+
+    public Random getRandom() {
+        return random;
+    }
+
+    public void setRandom(Random random) {
+        this.random = random;
     }
 }

@@ -3,44 +3,37 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private int number;
+
     private final Random random = new Random();
 
-    public int getNumber() {
-        return number;
-    }
-
-    public void setNumber(int number) {
-        this.number = number;
-    }
-
     public Figure getRandomFigure() {
+        int number;
         number = random.nextInt(5);
         switch (number) {
             case 1: {
-                return new Circle(random);
+                return new Circle();
             }
             case 2: {
-                return new Rectangle(random);
+                return new Rectangle();
             }
             case 3: {
-                return new Square(random);
+                return new Square();
             }
             case 4: {
-                return new RightTriangle(random);
+                return new RightTriangle();
             }
             case 5: {
-                return new IsoscelesTrapezoid(random);
+                return new IsoscelesTrapezoid();
             }
             default:
-                return getDefaultFigure();
+                return new Circle();
         }
     }
 
     public Figure getDefaultFigure() {
         Circle circle = new Circle();
         circle.setRadius(10);
-        circle.setColor("White");
+        circle.setColor(Color.WHITE.name());
         return circle;
     }
 }

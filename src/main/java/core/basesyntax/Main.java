@@ -27,7 +27,7 @@ public class Main {
         }
 
         for (Figure f : figures) {
-            f.printInformation();
+            f.draw();
         }
     }
 
