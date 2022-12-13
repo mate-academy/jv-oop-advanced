@@ -33,12 +33,12 @@ public class FigureSupplier {
         }
     }
 
-    private Circle getRandomCircle() {
-        return new Circle(colorSupplier.getRandomColor(), random.nextInt(MAX_RANDOM_VALUE));
+    public Circle getDefaultCircle() {
+        return new Circle(Color.WHITE, DEFAULT_RADIUS);
     }
 
-    public Circle getDefaultCircle() {
-        return new Circle(Color.WHITE,DEFAULT_RADIUS);
+    private Circle getRandomCircle() {
+        return new Circle(colorSupplier.getRandomColor(), random.nextInt(MAX_RANDOM_VALUE));
     }
 
     private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
