@@ -3,7 +3,7 @@ package core.basesyntax;
 /**
  * Feel free to remove this class and create your own.
  */
-public abstract class Figure implements DrawArea {
+public abstract class Figure implements Drawable, GetArea {
     private Color color;
 
     public Color getColor() {
@@ -13,8 +13,4 @@ public abstract class Figure implements DrawArea {
     public void setColor(Color color) {
         this.color = color;
     }
-
-    public abstract double getArea();
-
-    public abstract void drawArea();
 }

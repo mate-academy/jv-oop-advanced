@@ -12,7 +12,7 @@ public class MainApp {
             i++;
         }
         for (Figure figure : figures) {
-            figure.drawArea();
+            figure.draw();
         }
     }
 }
