@@ -15,4 +15,4 @@ public class MainApp {
             figure.draw();
         }
     }
-}
+}1
