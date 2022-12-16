@@ -7,4 +7,3 @@ public enum Figures {
     CIRCLE,
     ISOSCELESTRAPEZOID
 }
-

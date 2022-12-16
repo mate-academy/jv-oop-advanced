@@ -21,5 +21,4 @@ public class Rectangle extends Figure {
                         + " length: %d units, width: %d units, color: %s%n",
                 getArea(), length, width, getColor().toLowerCase());
     }
-
 }

@@ -19,5 +19,4 @@ public class Square extends Figure {
                         + " side: %d units, color: %s%n",
                 getArea(), side, getColor().toLowerCase());
     }
-
 }

@@ -21,5 +21,4 @@ public class RightTriangle extends Figure {
                         + " firstLeg: %d units, secondLeg: %d units, color: %s%n",
                 getArea(), firstLeg, secondLeg, getColor().toLowerCase());
     }
-
 }
