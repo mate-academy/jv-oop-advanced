@@ -4,7 +4,7 @@ import core.basesyntax.model.Figure;
 import core.basesyntax.suppliers.FigureSupplier;
 import java.util.Random;
 
-public class FigureTestDrive {
+public class FiguresTestDrive {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
 
