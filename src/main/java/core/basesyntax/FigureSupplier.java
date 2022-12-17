@@ -3,39 +3,36 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int QUANTITY_OF_FIGURES = 5;
+    private static final int MAX_SIDE_VALUE = 500;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        Figure figure = generateFigure();
-        figure.setColor(colorSupplier.getRandomColor());
-        return figure;
+        return generateFigure(colorSupplier.getRandomColor());
     }
 
     public Figure getDefaultFigure() {
-        final int defaultRadius = 10;
-        Figure figure = new Circle(defaultRadius);
-        figure.setColor(Color.WHITE);
-        return figure;
+        return new Circle(Color.WHITE,10);
     }
 
-    private Figure generateFigure() {
-        final int quantityOfFigures = 5;
-        int figure1 = random.nextInt(quantityOfFigures);
-        final int maxSize = 500;
+    private Figure generateFigure(Color color) {
+        int figure1 = random.nextInt(QUANTITY_OF_FIGURES);
         switch (figure1) {
             case 0:
-                return new Square(random.nextInt(maxSize));
+                return new Square(color, random.nextInt(MAX_SIDE_VALUE));
             case 1:
-                return new Rectangle(random.nextInt(maxSize), random.nextInt(maxSize));
+                return new Rectangle(color, random.nextInt(MAX_SIDE_VALUE),
+                        random.nextInt(MAX_SIDE_VALUE));
             case 2:
-                return new RightTriangle(random.nextInt(maxSize), random.nextInt(maxSize));
+                return new RightTriangle(color, random.nextInt(MAX_SIDE_VALUE),
+                        random.nextInt(MAX_SIDE_VALUE));
             case 3:
-                return new Circle(random.nextInt(maxSize));
+                return new Circle(color, random.nextInt(MAX_SIDE_VALUE));
             case 4:
             default:
-                return new IsoscelesTrapezoid(random.nextInt(maxSize), random.nextInt(maxSize),
-                        random.nextInt(maxSize));
+                return new IsoscelesTrapezoid(color, random.nextInt(MAX_SIDE_VALUE),
+                        random.nextInt(MAX_SIDE_VALUE), random.nextInt(MAX_SIDE_VALUE));
         }
     }
 }
