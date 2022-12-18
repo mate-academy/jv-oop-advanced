@@ -4,15 +4,17 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final String DEFAULT_COLOR = "White";
-    private static final int RANDOM_NUMBER = new Random().nextInt(5);
-    private static Random RANDOM = new Random();
+    private static final double DEFAULT_VALUE = 10.0;
+    private static final int MAX_RANDOM_BOUND = 5;
+    private static Random random = new Random();
     private static final int MAX_RANDOM_NUMBER = 100;
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
+        int randomNumber = new Random().nextInt(MAX_RANDOM_BOUND);
         Figure figure;
 
-        switch (RANDOM_NUMBER) {
+        switch (randomNumber) {
             case 0 : {
                 figure = createSquare();
                 break;
@@ -41,35 +43,35 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR, 10.0);
+        return new Circle(DEFAULT_COLOR, DEFAULT_VALUE);
     }
 
     private Square createSquare() {
         return new Square(colorSupplier.getRandomColor(),
-                RANDOM.nextInt(MAX_RANDOM_NUMBER));
+                random.nextInt(MAX_RANDOM_NUMBER));
     }
 
     private Rectangle createRectangle() {
         return new Rectangle(colorSupplier.getRandomColor(),
-                RANDOM.nextInt(MAX_RANDOM_NUMBER),
-                RANDOM.nextInt(MAX_RANDOM_NUMBER));
+                random.nextInt(MAX_RANDOM_NUMBER),
+                random.nextInt(MAX_RANDOM_NUMBER));
     }
 
     private RightTriangle createRightTriangle() {
         return new RightTriangle(colorSupplier.getRandomColor(),
-                RANDOM.nextInt(MAX_RANDOM_NUMBER),
-                RANDOM.nextInt(MAX_RANDOM_NUMBER));
+                random.nextInt(MAX_RANDOM_NUMBER),
+                random.nextInt(MAX_RANDOM_NUMBER));
     }
 
     private Circle createCircle() {
         return new Circle(colorSupplier.getRandomColor(),
-                RANDOM.nextInt(MAX_RANDOM_NUMBER));
+                random.nextInt(MAX_RANDOM_NUMBER));
     }
 
     private IsoscelesTrapezoid createIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                RANDOM.nextInt(MAX_RANDOM_NUMBER),
-                RANDOM.nextInt(MAX_RANDOM_NUMBER),
-                RANDOM.nextInt(MAX_RANDOM_NUMBER));
+                random.nextInt(MAX_RANDOM_NUMBER),
+                random.nextInt(MAX_RANDOM_NUMBER),
+                random.nextInt(MAX_RANDOM_NUMBER));
     }
 }
