@@ -26,7 +26,6 @@ public class RightTriangle extends Figure {
         return secondLeg;
     }
 
-
     @Override
     public void draw() {
         System.out.println("Right triangle has been drawn");

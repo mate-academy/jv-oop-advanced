@@ -28,6 +28,8 @@ public class Circle extends Figure {
 
     @Override
     public String toString() {
-        return "Figure : circle" + " Area : " + getArea() + " Radius : " + getRadius() + " Color : " + getColor();
+        return "Figure : circle" + " Area : " + getArea()
+                + " Radius : " + getRadius()
+                + " Color : " + getColor();
     }
 }
