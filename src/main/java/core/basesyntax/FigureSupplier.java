@@ -25,8 +25,10 @@ public class FigureSupplier {
             figure = new Circle(colorSupplier.getRandomColor(), (double)randomNumber + 10);
         }
         if (randomNumber == 4) {
-            figure = new IsoscelesTrapezoid(colorSupplier.getRandomColor(), (double)randomNumber + 10,
-                    (double)randomNumber + 11, (double)randomNumber + 12);
+            figure = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                    (double)randomNumber + 10,
+                    (double)randomNumber + 11,
+                    (double)randomNumber + 12);
         }
         return figure;
     }
