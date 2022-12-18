@@ -6,8 +6,8 @@ public class FigureSupplier {
     private static final String DEFAULT_COLOR = "White";
     private static final ColorSupplier COLOR_SUPPLIER = new ColorSupplier();
     private static final Random RANDOM = new Random();
-    int randomNumber = RANDOM.nextInt(5);
-    double figuresSidesNumber = RANDOM.nextInt(100);
+    private int randomNumber = RANDOM.nextInt(5);
+    private double figuresSidesNumber = RANDOM.nextInt(100);
 
     private Square createSquare() {
         return new Square(COLOR_SUPPLIER.getRandomColor(),
