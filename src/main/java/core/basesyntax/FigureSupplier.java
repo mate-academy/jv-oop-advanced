@@ -9,29 +9,29 @@ public class FigureSupplier {
     int randomNumber = RANDOM.nextInt(5);
     double figuresSidesNumber = RANDOM.nextInt(100);
 
-    private Square createSquare(){
+    private Square createSquare() {
         return new Square(COLOR_SUPPLIER.getRandomColor(),
                 figuresSidesNumber);
     }
 
-    private Rectangle createRectangle(){
+    private Rectangle createRectangle() {
         return new Rectangle(COLOR_SUPPLIER.getRandomColor(),
                 figuresSidesNumber,
                 figuresSidesNumber);
     }
 
-    private RightTriangle createRightTriangle(){
+    private RightTriangle createRightTriangle() {
         return new RightTriangle(COLOR_SUPPLIER.getRandomColor(),
                 figuresSidesNumber,
                 figuresSidesNumber);
     }
 
-    private Circle createCircle(){
+    private Circle createCircle() {
         return new Circle(COLOR_SUPPLIER.getRandomColor(),
                 figuresSidesNumber);
     }
 
-    private IsoscelesTrapezoid createIsoscelesTrapezoid(){
+    private IsoscelesTrapezoid createIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(COLOR_SUPPLIER.getRandomColor(),
                 figuresSidesNumber,
                 figuresSidesNumber,
@@ -40,7 +40,6 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         Figure figure;
-
 
         switch (randomNumber) {
             case 0 : {
