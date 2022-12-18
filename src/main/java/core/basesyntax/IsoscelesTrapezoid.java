@@ -48,7 +48,10 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String toString() {
-        return "Figure : Isosceles trapezoid" + " Area : " + getArea() + " Upper side : " + getUpperSide()
-                + " Bottom side : " + getBottomSide() + " Height : " + getHeight() + " Color : " + getColor();
+        return "Figure : Isosceles trapezoid" + " Area : " + getArea()
+                + " Upper side : " + getUpperSide()
+                + " Bottom side : " + getBottomSide()
+                + " Height : " + getHeight()
+                + " Color : " + getColor();
     }
 }
