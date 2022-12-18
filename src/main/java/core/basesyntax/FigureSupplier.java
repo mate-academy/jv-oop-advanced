@@ -4,44 +4,15 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final String DEFAULT_COLOR = "White";
-    private static final ColorSupplier COLOR_SUPPLIER = new ColorSupplier();
-    private static final Random RANDOM = new Random();
-    private int randomNumber = RANDOM.nextInt(5);
-    private double figuresSidesNumber = RANDOM.nextInt(100);
-
-    private Square createSquare() {
-        return new Square(COLOR_SUPPLIER.getRandomColor(),
-                figuresSidesNumber);
-    }
-
-    private Rectangle createRectangle() {
-        return new Rectangle(COLOR_SUPPLIER.getRandomColor(),
-                figuresSidesNumber,
-                figuresSidesNumber);
-    }
-
-    private RightTriangle createRightTriangle() {
-        return new RightTriangle(COLOR_SUPPLIER.getRandomColor(),
-                figuresSidesNumber,
-                figuresSidesNumber);
-    }
-
-    private Circle createCircle() {
-        return new Circle(COLOR_SUPPLIER.getRandomColor(),
-                figuresSidesNumber);
-    }
-
-    private IsoscelesTrapezoid createIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(COLOR_SUPPLIER.getRandomColor(),
-                figuresSidesNumber,
-                figuresSidesNumber,
-                figuresSidesNumber);
-    }
+    private static final int RANDOM_NUMBER = new Random().nextInt(5);
+    private static Random RANDOM = new Random();
+    private static final int MAX_RANDOM_NUMBER = 100;
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         Figure figure;
 
-        switch (randomNumber) {
+        switch (RANDOM_NUMBER) {
             case 0 : {
                 figure = createSquare();
                 break;
@@ -63,8 +34,7 @@ public class FigureSupplier {
                 break;
             }
             default: {
-                figure = new Square(COLOR_SUPPLIER.getRandomColor(),
-                        figuresSidesNumber);
+                figure = createSquare();
             }
         }
         return figure;
@@ -72,5 +42,34 @@ public class FigureSupplier {
 
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, 10.0);
+    }
+
+    private Square createSquare() {
+        return new Square(colorSupplier.getRandomColor(),
+                RANDOM.nextInt(MAX_RANDOM_NUMBER));
+    }
+
+    private Rectangle createRectangle() {
+        return new Rectangle(colorSupplier.getRandomColor(),
+                RANDOM.nextInt(MAX_RANDOM_NUMBER),
+                RANDOM.nextInt(MAX_RANDOM_NUMBER));
+    }
+
+    private RightTriangle createRightTriangle() {
+        return new RightTriangle(colorSupplier.getRandomColor(),
+                RANDOM.nextInt(MAX_RANDOM_NUMBER),
+                RANDOM.nextInt(MAX_RANDOM_NUMBER));
+    }
+
+    private Circle createCircle() {
+        return new Circle(colorSupplier.getRandomColor(),
+                RANDOM.nextInt(MAX_RANDOM_NUMBER));
+    }
+
+    private IsoscelesTrapezoid createIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                RANDOM.nextInt(MAX_RANDOM_NUMBER),
+                RANDOM.nextInt(MAX_RANDOM_NUMBER),
+                RANDOM.nextInt(MAX_RANDOM_NUMBER));
     }
 }
