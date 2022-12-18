@@ -17,22 +17,37 @@ public class FigureSupplier {
     }
 
     private Figure generateFigure(Color color) {
-        int figure1 = random.nextInt(QUANTITY_OF_FIGURES);
-        switch (figure1) {
+        int numberOfFigure = random.nextInt(QUANTITY_OF_FIGURES);
+        switch (numberOfFigure) {
             case 0:
-                return new Square(color, random.nextInt(MAX_SIDE_VALUE));
+                return createSquare(color);
             case 1:
-                return new Rectangle(color, random.nextInt(MAX_SIDE_VALUE),
-                        random.nextInt(MAX_SIDE_VALUE));
+                return createRectangle(color);
             case 2:
-                return new RightTriangle(color, random.nextInt(MAX_SIDE_VALUE),
-                        random.nextInt(MAX_SIDE_VALUE));
+                return createRightTriangle(color);
             case 3:
-                return new Circle(color, random.nextInt(MAX_SIDE_VALUE));
+                return createCircle(color);
             case 4:
             default:
-                return new IsoscelesTrapezoid(color, random.nextInt(MAX_SIDE_VALUE),
-                        random.nextInt(MAX_SIDE_VALUE), random.nextInt(MAX_SIDE_VALUE));
+                return createIsoscelesTrapezoid(color);
         }
+    }
+    private Figure createSquare(Color color) {
+        return new Square(color, random.nextInt(MAX_SIDE_VALUE));
+    }
+    private Figure createRectangle(Color color) {
+        return new Rectangle(color, random.nextInt(MAX_SIDE_VALUE),
+                random.nextInt(MAX_SIDE_VALUE));
+    }
+    private Figure createRightTriangle(Color color) {
+        return new RightTriangle(color, random.nextInt(MAX_SIDE_VALUE),
+                random.nextInt(MAX_SIDE_VALUE));
+    }
+    private Figure createCircle(Color color) {
+        return new Circle(color, random.nextInt(MAX_SIDE_VALUE));
+    }
+    private Figure createIsoscelesTrapezoid(Color color) {
+        return new IsoscelesTrapezoid(color, random.nextInt(MAX_SIDE_VALUE),
+                random.nextInt(MAX_SIDE_VALUE), random.nextInt(MAX_SIDE_VALUE));
     }
 }
