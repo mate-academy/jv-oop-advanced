@@ -1,14 +1,13 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid implements Figure {
-    private final Color color;
+public class IsoscelesTrapezoid extends Figure {
     private double high;
     private double median;
 
     public IsoscelesTrapezoid(Color color, double high, double median) {
+        super(color);
         this.high = high;
         this.median = median;
-        this.color = color;
     }
 
     @Override
@@ -19,6 +18,7 @@ public class IsoscelesTrapezoid implements Figure {
     @Override
     public void drawFigure() {
         System.out.println("Figure: isosceles trapezoid, area: " + this.getArea()
-                + " sq. units, high: " + high + " units, median: " + median + " color: " + color);
+                + " sq. units, high: " + high + " units, median: "
+                + median + " color: " + getColor());
     }
 }

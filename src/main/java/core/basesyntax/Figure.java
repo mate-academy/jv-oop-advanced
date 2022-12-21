@@ -1,7 +1,13 @@
 package core.basesyntax;
 
-interface Figure {
-    double getArea();
+abstract class Figure implements FigureArea, FigureDrawable {
+    private Color color;
 
-    void drawFigure();
+    public Figure(Color color) {
+        this.color = color;
+    }
+
+    public Color getColor() {
+        return color;
+    }
 }
