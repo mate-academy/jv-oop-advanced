@@ -20,14 +20,18 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double square() {
-        return ((lowerBase + upperBase) / 2) * Math.sqrt(Math.pow(side, 2) - (Math.pow(lowerBase - upperBase, 2) / 4));
+        double t = (lowerBase + upperBase) / 2;
+        return (t * Math.sqrt(Math.pow(side, 2) - (Math.pow(lowerBase - upperBase, 2) / 4)));
     }
 
     @Override
     public void draw() {
+        StringBuilder builder = new StringBuilder();
         String square = String.format("%.1f", square());
-        System.out.println("Figure: isoscelesTrapezoid, area: " + square + " sq.units, lowerBase: " + lowerBase
-                + " units, " + "upperBase: " + upperBase + ", side: " + side + ", units, color: " + super.getColor());
-
+        builder.append("Figure: isoscelesTrapezoid, area: ").append(square).append(" sq.units, ");
+        builder.append("lowerBase: ").append(lowerBase).append(" units, ");
+        builder.append("upperBase: ").append(upperBase).append(" units, ");
+        builder.append("side: ").append(side).append(" units, color: ").append(super.getColor());
+        System.out.println(builder);
     }
 }

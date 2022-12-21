@@ -19,7 +19,12 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
+        StringBuilder builder = new StringBuilder();
         String square = String.format("%.1f", square());
-        System.out.println("Figure: rectangle, area: " + square + " sq.units, width: " + width + ", height: " + height + ", color: " + super.getColor());
+        builder.append("Figure: rectangle, area: ").append(square).append(" sq.units, ");
+        builder.append("width: ").append(width).append(" units, ");
+        builder.append("height: ").append(height).append(" units, ");
+        builder.append("color: ").append(super.getColor());
+        System.out.println(builder);
     }
 }

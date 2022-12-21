@@ -19,8 +19,12 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
+        StringBuilder builder = new StringBuilder();
         String square = String.format("%.1f", square());
-        System.out.println("Figure: rightTriangle, area: " + square + " sq.units, firstLeg: " + firstLeg + ", units, "
-                + "secondLeg: " + secondLeg + ", units, color: " + super.getColor());
+        builder.append("Figure: rightTriangle, area: ").append(square).append(" sq.units, ");
+        builder.append("firstLeg: ").append(firstLeg).append(" units, ");
+        builder.append("secondLeg: ").append(secondLeg).append(" units, ");
+        builder.append("color: ").append(super.getColor());
+        System.out.println(builder);
     }
 }

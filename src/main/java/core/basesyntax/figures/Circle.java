@@ -17,8 +17,11 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
+        StringBuilder builder = new StringBuilder();
         String square = String.format("%.1f", square());
-        System.out.println("Figure: circle, area: " + square + " sq.units, radius: " + radius + ", color: "
-                + super.getColor());
+        builder.append("Figure: square, area: ").append(square).append(" sq.units, ");
+        builder.append("radius: ").append(radius);
+        builder.append(" units, color: ").append(super.getColor());
+        System.out.println(builder);
     }
 }
