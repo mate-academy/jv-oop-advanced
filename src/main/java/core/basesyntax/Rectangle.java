@@ -12,7 +12,7 @@ public class Rectangle extends Figure{
     }
 
     @Override
-    public void draw() {
-
+    public String draw() {
+        return "";
     }
 }

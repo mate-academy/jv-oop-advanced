@@ -2,6 +2,7 @@ package core.basesyntax;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("blankMainHere");
+        Figure first = new FigureSupplier().getDefaultFigure();
+        System.out.println(first.draw());
     }
 }
