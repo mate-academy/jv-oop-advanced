@@ -1,18 +1,26 @@
 package core.basesyntax;
 
-public class Square extends Figure{
+public class Square extends Figure {
+    private int side;
 
-    public Square(String color) {
+    public Square(String color, int side) {
         super(color);
+        this.side = side;
     }
 
     @Override
     public double getArea() {
-        return 0;
+        return side * side;
     }
 
     @Override
     public String draw() {
-        return "";
+        return "Figure: square, Square: " + getArea()
+                + " sq.units, Side: " + side
+                + " units, Color: " + getColor();
+    }
+
+    public int getSide() {
+        return side;
     }
 }
