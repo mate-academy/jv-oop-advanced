@@ -1,24 +1,24 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private double aSide;
-    private double bSide;
+    private double sideA;
+    private double sideB;
 
-    public Rectangle(Color color, double aSide, double bSide) {
+    public Rectangle(Color color, double sideA, double sideB) {
         super(color);
-        this.aSide = aSide;
-        this.bSide = bSide;
+        this.sideA = sideA;
+        this.sideB = sideB;
     }
 
     @Override
     public double getArea() {
-        return (aSide * bSide);
+        return (sideA * sideB);
     }
 
     @Override
     public void drawFigure() {
         System.out.println("Figure: rectangle, area: " + this.getArea()
-        + " sq. units, A side: " + aSide + " units, B side: "
-        + bSide + " color: " + getColor());
+            + " sq. units, A side: " + sideA + " units, B side: "
+            + sideB + " color: " + getColor());
     }
 }
