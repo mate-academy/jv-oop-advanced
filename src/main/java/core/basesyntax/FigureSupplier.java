@@ -9,7 +9,7 @@ public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        String randomColor = colorSupplier.getRandomColor();
+        Color randomColor = colorSupplier.getRandomColor();
         Circle circle = new Circle(randomColor, getRandomValue());
         IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(randomColor,
                 getRandomValue(), getRandomValue(), getRandomValue());
@@ -24,7 +24,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.name(), 10);
+        return new Circle(Color.WHITE, 10);
     }
 
     private int getRandomValue() {

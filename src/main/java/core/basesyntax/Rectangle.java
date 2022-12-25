@@ -4,7 +4,7 @@ public class Rectangle extends Figure {
     private double sideShort;
     private double sideLong;
 
-    public Rectangle(String color, double sideShort, double sideLong) {
+    public Rectangle(Color color, double sideShort, double sideLong) {
         super(color);
         this.sideShort = sideShort;
         this.sideLong = sideLong;
@@ -30,8 +30,8 @@ public class Rectangle extends Figure {
     public void drawFigure() {
         System.out.println("Figure: rectangle," + "  area: "
                 + gerArea() + " units," + " sideShort: "
-                + getSideShort() + " units," + " sideLong: "
-                + getSideLong() + " color: " + getColor());
+                + sideShort + " units," + " sideLong: "
+                + sideLong + " color: " + getColor());
     }
 
     @Override
