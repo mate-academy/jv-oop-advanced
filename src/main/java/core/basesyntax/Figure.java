@@ -11,8 +11,4 @@ public abstract class Figure implements AreaCalculator, FigureDrawer {
     public String getColor() {
         return color;
     }
-
-    public Figure(String color) {
-        this.color = color;
-    }
 }
