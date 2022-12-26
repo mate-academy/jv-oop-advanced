@@ -22,17 +22,19 @@ public class FigureSupplier {
                 return new Square(color, random.nextInt(FIGURE_MAX_PARAMETER));
             }
             case 2: {
-                return new Rectangle(color, random.nextInt(FIGURE_MAX_PARAMETER), random.nextInt(FIGURE_MAX_PARAMETER));
+                return new Rectangle(color, random.nextInt(FIGURE_MAX_PARAMETER),
+                        random.nextInt(FIGURE_MAX_PARAMETER));
             }
             case 3: {
-                return new RightTriangle(color, random.nextInt(FIGURE_MAX_PARAMETER), random.nextInt(FIGURE_MAX_PARAMETER));
+                return new RightTriangle(color, random.nextInt(FIGURE_MAX_PARAMETER),
+                        random.nextInt(FIGURE_MAX_PARAMETER));
             }
             case 4: {
                 return new Circle(color, random.nextInt(FIGURE_MAX_PARAMETER));
             }
             default: {
-                return new IsoscelesTrapezoid(color, random.nextInt(FIGURE_MAX_PARAMETER), random.nextInt(FIGURE_MAX_PARAMETER),
-                        random.nextInt(FIGURE_MAX_PARAMETER));
+                return new IsoscelesTrapezoid(color, random.nextInt(FIGURE_MAX_PARAMETER),
+                        random.nextInt(FIGURE_MAX_PARAMETER), random.nextInt(FIGURE_MAX_PARAMETER));
             }
         }
     }
