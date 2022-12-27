@@ -2,49 +2,78 @@ package core.basesyntax.suppliers;
 
 import core.basesyntax.enums.Color;
 import core.basesyntax.enums.Shape;
-import core.basesyntax.figures.Circle;
-import core.basesyntax.figures.Figure;
-import core.basesyntax.figures.IsoscelesTrapezoid;
-import core.basesyntax.figures.Rectangle;
-import core.basesyntax.figures.RightTriangle;
-import core.basesyntax.figures.Square;
+import core.basesyntax.figures.impl.Circle;
+import core.basesyntax.figures.impl.Figure;
+import core.basesyntax.figures.impl.IsoscelesTrapezoid;
+import core.basesyntax.figures.impl.Rectangle;
+import core.basesyntax.figures.impl.RightTriangle;
+import core.basesyntax.figures.impl.Square;
 import java.util.Random;
 
 public class FigureSupplier {
     private static final int BOUND = 10;
+    private static final int DEFAULT_LENGTH = 10;
+    private static final Color DEFAULT_COLOR = Color.WHITE;
     private static final int START = 1;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE, 10);
+        return new Circle(DEFAULT_COLOR, DEFAULT_LENGTH);
     }
 
     public Figure getRandomFigure() {
-        int index = new Random().nextInt(Shape.values().length);
+        int index = random.nextInt(Shape.values().length);
         Shape figure = Shape.values()[index];
-        Color color = colorSupplier.getRandomColor();
-
         switch (figure) {
-            case Square:
-                double side = random.nextInt(BOUND) + START;
-                return new Square(color, side);
-            case Rectangle:
-                double height = random.nextInt(BOUND) + START;
-                double width = random.nextInt(BOUND) + START;
-                return new Rectangle(color, width, height);
-            case RightTriangle:
-                double firstLeg = random.nextInt(BOUND) + START;
-                double secondLeg = random.nextInt(BOUND) + START;
-                return new RightTriangle(color, firstLeg, secondLeg);
-            case IsoscelesTrapezoid:
-                double lowerBase = random.nextInt(BOUND) + START;
-                double upperBase = random.nextInt(BOUND) + START;
-                side = random.nextInt(BOUND) + START;
-                return new IsoscelesTrapezoid(color, lowerBase, upperBase, side);
+            case SQUARE:
+                return getRandomSquare();
+            case RECTANGLE:
+                return getRandomRectangle();
+            case RIGHT_RECTANGLE:
+                return getRandomRightRectangle();
+            case ISOSCELES_TRAPEZOID:
+                return getRandomIsoscelesTrapezoid();
             default:
-                double radius = random.nextInt(BOUND) + START;
-                return new Circle(color, radius);
+                return getRandomCircle();
         }
+    }
+
+    private Figure getRandomSquare() {
+        Color color = colorSupplier.getRandomColor();
+        double side = getLengthSide();
+        return new Square(color, side);
+    }
+
+    private Figure getRandomRectangle() {
+        Color color = colorSupplier.getRandomColor();
+        double height = getLengthSide();
+        double width = getLengthSide();
+        return new Rectangle(color, width, height);
+    }
+
+    private Figure getRandomRightRectangle() {
+        Color color = colorSupplier.getRandomColor();
+        double firstLeg = getLengthSide();
+        double secondLeg = getLengthSide();
+        return new RightTriangle(color, firstLeg, secondLeg);
+    }
+
+    private Figure getRandomIsoscelesTrapezoid() {
+        Color color = colorSupplier.getRandomColor();
+        double lowerBase = getLengthSide();
+        double upperBase = getLengthSide();
+        double side = getLengthSide();
+        return new IsoscelesTrapezoid(color, lowerBase, upperBase, side);
+    }
+
+    private Figure getRandomCircle() {
+        Color color = colorSupplier.getRandomColor();
+        double radius = getLengthSide();
+        return new Circle(color, radius);
+    }
+
+    private double getLengthSide() {
+        return random.nextInt(BOUND) + START;
     }
 }

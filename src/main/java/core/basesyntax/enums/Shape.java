@@ -1,9 +1,9 @@
 package core.basesyntax.enums;
 
 public enum Shape {
-    Square,
-    Rectangle,
-    RightTriangle,
-    Circle,
-    IsoscelesTrapezoid
+    SQUARE,
+    RECTANGLE,
+    RIGHT_RECTANGLE,
+    CIRCLE,
+    ISOSCELES_TRAPEZOID
 }

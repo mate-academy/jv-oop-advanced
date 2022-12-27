@@ -1,8 +1,10 @@
-package core.basesyntax.figures;
+package core.basesyntax.figures.impl;
 
 import core.basesyntax.enums.Color;
+import core.basesyntax.figures.AreaCalculator;
+import core.basesyntax.figures.Drawable;
 
-public abstract class Figure {
+public abstract class Figure implements Drawable, AreaCalculator {
     private final Color color;
 
     public Figure(Color color) {
@@ -13,7 +15,9 @@ public abstract class Figure {
         return color;
     }
 
+    @Override
     public abstract double square();
 
+    @Override
     public abstract void draw();
 }

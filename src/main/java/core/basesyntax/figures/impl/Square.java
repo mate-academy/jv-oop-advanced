@@ -1,4 +1,4 @@
-package core.basesyntax.figures;
+package core.basesyntax.figures.impl;
 
 import core.basesyntax.enums.Color;
 

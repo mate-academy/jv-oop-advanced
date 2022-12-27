@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-import core.basesyntax.figures.Figure;
+import core.basesyntax.figures.impl.Figure;
 import core.basesyntax.suppliers.FigureSupplier;
 
 public class Main {
