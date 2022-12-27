@@ -24,7 +24,7 @@ public class Rectangle extends Figure {
         builder.append("Figure: rectangle, area: ").append(square).append(" sq.units, ");
         builder.append("width: ").append(width).append(" units, ");
         builder.append("height: ").append(height).append(" units, ");
-        builder.append("color: ").append(super.getColor());
+        builder.append("color: ").append(getColor());
         System.out.println(builder);
     }
 }

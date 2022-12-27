@@ -31,7 +31,7 @@ public class IsoscelesTrapezoid extends Figure {
         builder.append("Figure: isoscelesTrapezoid, area: ").append(square).append(" sq.units, ");
         builder.append("lowerBase: ").append(lowerBase).append(" units, ");
         builder.append("upperBase: ").append(upperBase).append(" units, ");
-        builder.append("side: ").append(side).append(" units, color: ").append(super.getColor());
+        builder.append("side: ").append(side).append(" units, color: ").append(getColor());
         System.out.println(builder);
     }
 }

@@ -24,7 +24,7 @@ public class RightTriangle extends Figure {
         builder.append("Figure: rightTriangle, area: ").append(square).append(" sq.units, ");
         builder.append("firstLeg: ").append(firstLeg).append(" units, ");
         builder.append("secondLeg: ").append(secondLeg).append(" units, ");
-        builder.append("color: ").append(super.getColor());
+        builder.append("color: ").append(getColor());
         System.out.println(builder);
     }
 }

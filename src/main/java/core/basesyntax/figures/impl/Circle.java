@@ -21,7 +21,7 @@ public class Circle extends Figure {
         String square = String.format("%.1f", square());
         builder.append("Figure: square, area: ").append(square).append(" sq.units, ");
         builder.append("radius: ").append(radius);
-        builder.append(" units, color: ").append(super.getColor());
+        builder.append(" units, color: ").append(getColor());
         System.out.println(builder);
     }
 }

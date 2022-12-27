@@ -14,7 +14,7 @@ public class FigureSupplier {
     private static final int BOUND = 10;
     private static final int DEFAULT_LENGTH = 10;
     private static final Color DEFAULT_COLOR = Color.WHITE;
-    private static final int START = 1;
+    private static final int MIN_LENGTH = 1;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -74,6 +74,6 @@ public class FigureSupplier {
     }
 
     private double getLengthSide() {
-        return random.nextInt(BOUND) + START;
+        return random.nextInt(BOUND) + MIN_LENGTH;
     }
 }

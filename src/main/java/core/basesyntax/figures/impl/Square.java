@@ -20,7 +20,7 @@ public class Square extends Figure {
         StringBuilder builder = new StringBuilder();
         String square = String.format("%.1f", square());
         builder.append("Figure: square, area: ").append(square).append(" sq.units, ");
-        builder.append("side: ").append(side).append(" units, color: ").append(super.getColor());
+        builder.append("side: ").append(side).append(" units, color: ").append(getColor());
         System.out.println(builder);
     }
 }
