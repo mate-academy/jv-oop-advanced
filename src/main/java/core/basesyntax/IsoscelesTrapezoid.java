@@ -14,7 +14,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double countArea() {
         double height = Math.sqrt(Math.pow(nonParallelSide, 2) - Math.pow(((double)
                 firstParallelSide - secondParallelSide) / 2, 2));
         return ((firstParallelSide + secondParallelSide) * height) / 2;
@@ -25,7 +25,7 @@ public class IsoscelesTrapezoid extends Figure {
         System.out.println("Figure: Isosceles Trapezoid, non parallel side = " + nonParallelSide
                 + " units, first parallel side = " + firstParallelSide
                 + " units, second parallel side = "
-                + secondParallelSide + " units, area = " + getArea() + " sq.units, color = "
+                + secondParallelSide + " units, area = " + countArea() + " sq.units, color = "
                 + getColor().name());
     }
 }

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements Drawable, CountArea {
+public abstract class Figure implements Drawable, AreaCounter {
     private final Color color;
 
     public Figure(Color color) {
@@ -11,7 +11,7 @@ public abstract class Figure implements Drawable, CountArea {
         return color;
     }
 
-    public abstract double getArea();
+    public abstract double countArea();
 
     public abstract void draw();
 }
