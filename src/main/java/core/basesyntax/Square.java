@@ -18,6 +18,6 @@ public class Square extends Figure {
     public void drawFigure() {
         System.out.println("Figure: " + getClass().getSimpleName().toLowerCase() + ", area: "
                 + calculateArea() + " sq.units, side: "
-                + this.side + " units, color: " + this.getColor());
+                + side + " units, color: " + getColor());
     }
 }

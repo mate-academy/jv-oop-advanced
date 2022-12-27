@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import static java.lang.Math.PI;
-
 public class Circle extends Figure {
     private int radius;
 
@@ -12,7 +10,7 @@ public class Circle extends Figure {
 
     @Override
     public double calculateArea() {
-        return PI * radius * radius;
+        return Math.PI * radius * radius;
     }
 
     @Override
