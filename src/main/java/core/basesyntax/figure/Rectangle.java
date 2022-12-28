@@ -3,7 +3,7 @@ package core.basesyntax.figure;
 import core.basesyntax.color.Color;
 import core.basesyntax.constants.Messages;
 
-public class Rectangle extends Figure{
+public class Rectangle extends Figure {
     private static final String FIGURE_NAME = "rectangle";
     private double height;
     private double width;
