@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public class Square extends Figure implements AreaCalculator, Drawable {
-    int side;
+public class Square extends Figure {
+    private final int side;
 
-    public Square(Colors color, int side) {
+    public Square(Color color, int side) {
         super(color);
         this.side = side;
     }

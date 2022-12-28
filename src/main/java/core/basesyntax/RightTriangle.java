@@ -1,10 +1,10 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure implements AreaCalculator, Drawable {
-    int firstLeg;
-    int secondLeg;
+    private final int firstLeg;
+    private final int secondLeg;
 
-    public RightTriangle(Colors color ,int secondLeg, int firstLeg) {
+    public RightTriangle(Color color, int secondLeg, int firstLeg) {
         super(color);
         this.secondLeg = secondLeg;
         this.firstLeg = firstLeg;
