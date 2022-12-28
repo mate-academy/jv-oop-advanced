@@ -2,6 +2,7 @@ package core.basesyntax.figure;
 
 public class Circle extends Figure{
     private double radius;
+    private static final String FIGURE_NAME = "circle";
 
     public Circle(double radius){
         this.radius = radius;
@@ -13,7 +14,7 @@ public class Circle extends Figure{
     }
     @Override
     public void draw() {
-        String str = "Figure: circle, area: " + getArea() + " sq.units, radius: " + radius;
+        String str = "Figure: " + FIGURE_NAME + ", area: " + getArea() + " sq.units, radius: " + radius;
 
         System.out.println(str);
     }

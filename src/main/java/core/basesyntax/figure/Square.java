@@ -2,6 +2,7 @@ package core.basesyntax.figure;
 
 public class Square extends Figure{
     private double side;
+    private static final String FIGURE_NAME = "square";
 
     public Square(double side){
         this.side = side;
@@ -13,7 +14,7 @@ public class Square extends Figure{
     }
     @Override
     public void draw() {
-        String str = "Figure: square, area: " + getArea() + " sq.units, side: " + side;
+        String str = "Figure: " + FIGURE_NAME + ", area: " + getArea() + " sq.units, side: " + side;
 
         System.out.println(str);
     }
