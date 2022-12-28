@@ -6,9 +6,9 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < figures.length; i++) {
             if (i <= 4) {
-                figureSupplier.getRandomFigure().printInfo();
+                figureSupplier.getRandomFigure().draw();
             } else {
-                figureSupplier.getDefaultFigure().printInfo();
+                figureSupplier.getDefaultFigure().draw();
             }
         }
     }
