@@ -6,8 +6,10 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < figures.length; i++) {
             if (i <= 4) {
-                figureSupplier.getRandomFigure().PrintInfo();
-            } else {figureSupplier.getDefaultFigure().PrintInfo(); }
+                figureSupplier.getRandomFigure().printInfo();
+            } else {
+                figureSupplier.getDefaultFigure().printInfo();
+            }
         }
     }
 }

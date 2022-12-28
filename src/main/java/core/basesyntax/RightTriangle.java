@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements AreaCalculator, Drawable {
+public class RightTriangle extends Figure {
     private final int firstLeg;
     private final int secondLeg;
 
@@ -16,8 +16,11 @@ public class RightTriangle extends Figure implements AreaCalculator, Drawable {
     }
 
     @Override
-    public void PrintInfo() {
-        System.out.println(" Figure: right triangle, area:  " + getArea() + " sq.units, firstLeg: " + firstLeg + " ,units, secondLeg: " + secondLeg + " units, color: " + getColor());
+    public void printInfo() {
+        System.out.println(" Figure: right triangle, area:  "
+                + getArea() + " sq.units, firstLeg: "
+                + firstLeg + " ,units, secondLeg: "
+                + secondLeg + " units, color: " + getColor());
     }
 }
 
