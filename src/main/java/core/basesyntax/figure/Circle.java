@@ -5,13 +5,13 @@ import core.basesyntax.constants.Messages;
 
 public class Circle extends Figure{
     private double radius;
-    private static final String FIGURE_NAME = "circle";
+    private final static String FIGURE_NAME = "circle";
 
-    public Circle(double radius){
+    public Circle(double radius) {
         this.radius = radius;
     }
 
-    public Circle(String color, double radius){
+    public Circle(String color, double radius) {
         if (radius <= 0) {
             throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
         }
@@ -24,7 +24,7 @@ public class Circle extends Figure{
         this.radius = radius;
     }
 
-    public Circle(Color color, double radius){
+    public Circle(Color color, double radius) {
         if (radius <= 0) {
             throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
         }
@@ -36,6 +36,7 @@ public class Circle extends Figure{
         this.color = color.name().toLowerCase();
         this.radius = radius;
     }
+
     @Override
     public void draw() {
         String str = "Figure: " + FIGURE_NAME + ", area: " + getArea() + " sq.units, radius: " + radius + ", color: " + color;
