@@ -4,23 +4,23 @@ import core.basesyntax.color.Color;
 import core.basesyntax.constants.Messages;
 
 public class IsoscelesTrapezoid extends Figure{
-    private double leg;
+    private double height;
     private double topBase;
     private double bottomBase;
     private static final String FIGURE_NAME = "isosceles trapezoid";
 
-    public IsoscelesTrapezoid(double topBase, double bottomBase, double leg){
-        if (topBase <= 0 || bottomBase <= 0 || leg <= 0) {
+    public IsoscelesTrapezoid(double topBase, double bottomBase, double height){
+        if (topBase <= 0 || bottomBase <= 0 || height <= 0) {
             throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
         }
 
         this.topBase = topBase;
         this.bottomBase = bottomBase;
-        this.leg = leg;
+        this.height = height;
     }
 
-    public IsoscelesTrapezoid(String color, double topBase, double bottomBase, double leg){
-        if (topBase <= 0 || bottomBase <= 0 || leg <= 0) {
+    public IsoscelesTrapezoid(String color, double topBase, double bottomBase, double height){
+        if (topBase <= 0 || bottomBase <= 0 || height <= 0) {
             throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
         }
 
@@ -31,11 +31,11 @@ public class IsoscelesTrapezoid extends Figure{
         this.color = color;
         this.topBase = topBase;
         this.bottomBase = bottomBase;
-        this.leg = leg;
+        this.height = height;
     }
 
-    public IsoscelesTrapezoid(Color color, double topBase, double bottomBase, double leg){
-        if (topBase <= 0 || bottomBase <= 0 || leg <= 0) {
+    public IsoscelesTrapezoid(Color color, double topBase, double bottomBase, double height){
+        if (topBase <= 0 || bottomBase <= 0 || height <= 0) {
             throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
         }
 
@@ -46,20 +46,19 @@ public class IsoscelesTrapezoid extends Figure{
         this.color = color.name().toLowerCase();
         this.topBase = topBase;
         this.bottomBase = bottomBase;
-        this.leg = leg;
+        this.height = height;
     }
 
     @Override
     public void draw() {
         String str = "Figure: " + FIGURE_NAME + ", area: " + getArea() + " sq.units, top base: " + topBase + ", bottom base: "
-                + bottomBase + ", leg: " + leg + ", color: " + color;
+                + bottomBase + ", leg: " + height + ", color: " + color;
 
         System.out.println(str);
     }
 
     @Override
     public double getArea() {
-        double height = Math.sqrt(Math.pow(leg, 2) - Math.pow(Math.abs(topBase - bottomBase) / 2, 2));
         return (topBase + bottomBase) * height / 2;
     }
 
@@ -79,12 +78,12 @@ public class IsoscelesTrapezoid extends Figure{
         this.bottomBase = bottomBase;
     }
 
-    public void setLeg(double leg) {
-        if (leg <= 0) {
+    public void setHeight(double height) {
+        if (height <= 0) {
             throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
         }
 
-        this.leg = leg;
+        this.height = height;
     }
 
     public double getTopBase() {
@@ -95,7 +94,7 @@ public class IsoscelesTrapezoid extends Figure{
         return bottomBase;
     }
 
-    public double getLeg() {
-        return leg;
+    public double getHeight() {
+        return height;
     }
 }
