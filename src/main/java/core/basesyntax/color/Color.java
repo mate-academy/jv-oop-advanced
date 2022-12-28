@@ -1,4 +1,17 @@
 package core.basesyntax.color;
 
-public class Color {
+public enum Color {
+    BLANK,
+    WHITE,
+    YELLOW,
+    RED,
+    GREEN,
+    BLUE,
+    GRAY,
+    BROWN,
+    BLACK,
+    NAVY,
+    PINK,
+    MAGENTA,
+    CYAN
 }
