@@ -11,14 +11,14 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double square() {
+    public double getSquare() {
         return 2 * Math.PI * radius;
     }
 
     @Override
     public void draw() {
         StringBuilder builder = new StringBuilder();
-        String square = String.format("%.1f", square());
+        String square = String.format("%.1f", getSquare());
         builder.append("Figure: square, area: ").append(square).append(" sq.units, ");
         builder.append("radius: ").append(radius);
         builder.append(" units, color: ").append(getColor());

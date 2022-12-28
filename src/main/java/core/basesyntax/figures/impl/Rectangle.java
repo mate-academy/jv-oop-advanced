@@ -13,14 +13,14 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double square() {
+    public double getSquare() {
         return width * height;
     }
 
     @Override
     public void draw() {
         StringBuilder builder = new StringBuilder();
-        String square = String.format("%.1f", square());
+        String square = String.format("%.1f", getSquare());
         builder.append("Figure: rectangle, area: ").append(square).append(" sq.units, ");
         builder.append("width: ").append(width).append(" units, ");
         builder.append("height: ").append(height).append(" units, ");

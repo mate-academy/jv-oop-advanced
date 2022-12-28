@@ -13,14 +13,14 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double square() {
+    public double getSquare() {
         return 0.5 * firstLeg * secondLeg;
     }
 
     @Override
     public void draw() {
         StringBuilder builder = new StringBuilder();
-        String square = String.format("%.1f", square());
+        String square = String.format("%.1f", getSquare());
         builder.append("Figure: rightTriangle, area: ").append(square).append(" sq.units, ");
         builder.append("firstLeg: ").append(firstLeg).append(" units, ");
         builder.append("secondLeg: ").append(secondLeg).append(" units, ");

@@ -11,14 +11,14 @@ public class Square extends Figure {
     }
 
     @Override
-    public double square() {
+    public double getSquare() {
         return side * side;
     }
 
     @Override
     public void draw() {
         StringBuilder builder = new StringBuilder();
-        String square = String.format("%.1f", square());
+        String square = String.format("%.1f", getSquare());
         builder.append("Figure: square, area: ").append(square).append(" sq.units, ");
         builder.append("side: ").append(side).append(" units, color: ").append(getColor());
         System.out.println(builder);
