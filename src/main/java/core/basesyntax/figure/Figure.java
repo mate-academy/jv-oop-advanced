@@ -3,7 +3,7 @@ package core.basesyntax.figure;
 import core.basesyntax.color.Color;
 
 public abstract class Figure implements DrawableFigure, GeometricFigure {
-    private String color = "blank";
+    protected String color = "blank";
 
     public String getColor() {
         return color;
