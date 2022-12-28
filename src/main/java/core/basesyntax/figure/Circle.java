@@ -1,5 +1,8 @@
 package core.basesyntax.figure;
 
+import core.basesyntax.color.Color;
+import core.basesyntax.constants.Messages;
+
 public class Circle extends Figure{
     private double radius;
     private static final String FIGURE_NAME = "circle";
@@ -9,12 +12,33 @@ public class Circle extends Figure{
     }
 
     public Circle(String color, double radius){
+        if (radius <= 0) {
+            throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
+        }
+
+        if (color == null || color.isBlank()) {
+            throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_COLOR);
+        }
+
         this.color = color;
+        this.radius = radius;
+    }
+
+    public Circle(Color color, double radius){
+        if (radius <= 0) {
+            throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
+        }
+
+        if (color == null) {
+            throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_COLOR);
+        }
+
+        this.color = color.name().toLowerCase();
         this.radius = radius;
     }
     @Override
     public void draw() {
-        String str = "Figure: " + FIGURE_NAME + ", area: " + getArea() + " sq.units, radius: " + radius;
+        String str = "Figure: " + FIGURE_NAME + ", area: " + getArea() + " sq.units, radius: " + radius + ", color: " + color;
 
         System.out.println(str);
     }
@@ -29,6 +53,10 @@ public class Circle extends Figure{
     }
 
     public void setRadius(double radius) {
+        if (radius <= 0) {
+            throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
+        }
+
         this.radius = radius;
     }
 }
