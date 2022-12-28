@@ -3,9 +3,9 @@ package core.basesyntax.figure;
 import core.basesyntax.color.Color;
 import core.basesyntax.constants.Messages;
 
-public class Circle extends Figure{
+public class Circle extends Figure {
+    private static final String FIGURE_NAME = "circle";
     private double radius;
-    private final static String FIGURE_NAME = "circle";
 
     public Circle(double radius) {
         this.radius = radius;
@@ -39,7 +39,8 @@ public class Circle extends Figure{
 
     @Override
     public void draw() {
-        String str = "Figure: " + FIGURE_NAME + ", area: " + getArea() + " sq.units, radius: " + radius + ", color: " + color;
+        String str = "Figure: " + FIGURE_NAME + ", area: " + getArea() + " sq.units, radius: "
+                + radius + ", color: " + color;
 
         System.out.println(str);
     }

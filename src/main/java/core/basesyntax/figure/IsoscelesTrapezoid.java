@@ -4,12 +4,12 @@ import core.basesyntax.color.Color;
 import core.basesyntax.constants.Messages;
 
 public class IsoscelesTrapezoid extends Figure{
+    private static final String FIGURE_NAME = "isosceles trapezoid";
     private double height;
     private double topBase;
     private double bottomBase;
-    private static final String FIGURE_NAME = "isosceles trapezoid";
 
-    public IsoscelesTrapezoid(double topBase, double bottomBase, double height){
+    public IsoscelesTrapezoid(double topBase, double bottomBase, double height) {
         if (topBase <= 0 || bottomBase <= 0 || height <= 0) {
             throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
         }
@@ -19,7 +19,7 @@ public class IsoscelesTrapezoid extends Figure{
         this.height = height;
     }
 
-    public IsoscelesTrapezoid(String color, double topBase, double bottomBase, double height){
+    public IsoscelesTrapezoid(String color, double topBase, double bottomBase, double height) {
         if (topBase <= 0 || bottomBase <= 0 || height <= 0) {
             throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
         }
@@ -34,7 +34,7 @@ public class IsoscelesTrapezoid extends Figure{
         this.height = height;
     }
 
-    public IsoscelesTrapezoid(Color color, double topBase, double bottomBase, double height){
+    public IsoscelesTrapezoid(Color color, double topBase, double bottomBase, double height) {
         if (topBase <= 0 || bottomBase <= 0 || height <= 0) {
             throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
         }
@@ -51,8 +51,8 @@ public class IsoscelesTrapezoid extends Figure{
 
     @Override
     public void draw() {
-        String str = "Figure: " + FIGURE_NAME + ", area: " + getArea() + " sq.units, top base: " + topBase + ", bottom base: "
-                + bottomBase + ", leg: " + height + ", color: " + color;
+        String str = "Figure: " + FIGURE_NAME + ", area: " + getArea() + " sq.units, top base: "
+                + topBase + ", bottom base: " + bottomBase + ", leg: " + height + ", color: " + color;
 
         System.out.println(str);
     }
