@@ -3,12 +3,12 @@ package core.basesyntax.figure;
 import core.basesyntax.color.Color;
 import core.basesyntax.constants.Messages;
 
-public class RightTriangle extends Figure{
+public class RightTriangle extends Figure {
+    private static final String FIGURE_NAME = "right triangle";
     private double firstLeg;
     private double secondLeg;
-    private static final String FIGURE_NAME = "right triangle";
 
-    public RightTriangle(double firstLeg, double secondLeg){
+    public RightTriangle(double firstLeg, double secondLeg) {
         if (firstLeg <= 0 || secondLeg <= 0) {
             throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
         }
@@ -17,7 +17,7 @@ public class RightTriangle extends Figure{
         this.secondLeg = secondLeg;
     }
 
-    public RightTriangle(String color, double firstLeg, double secondLeg){
+    public RightTriangle(String color, double firstLeg, double secondLeg) {
         if (firstLeg <= 0 || secondLeg <= 0) {
             throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
         }
@@ -31,7 +31,7 @@ public class RightTriangle extends Figure{
         this.secondLeg = secondLeg;
     }
 
-    public RightTriangle(Color color, double firstLeg, double secondLeg){
+    public RightTriangle(Color color, double firstLeg, double secondLeg) {
         if (firstLeg <= 0 || secondLeg <= 0) {
             throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
         }

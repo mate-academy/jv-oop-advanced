@@ -4,11 +4,11 @@ import core.basesyntax.color.Color;
 import core.basesyntax.constants.Messages;
 
 public class Rectangle extends Figure{
+    private static final String FIGURE_NAME = "rectangle";
     private double height;
     private double width;
-    private static final String FIGURE_NAME = "rectangle";
 
-    public Rectangle(double height, double width){
+    public Rectangle(double height, double width) {
         if (height <= 0 || width <= 0) {
             throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
         }
@@ -17,7 +17,7 @@ public class Rectangle extends Figure{
         this.width = width;
     }
 
-    public Rectangle(String color, double height, double width){
+    public Rectangle(String color, double height, double width) {
         if (height <= 0 || width <= 0) {
             throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
         }
@@ -31,7 +31,7 @@ public class Rectangle extends Figure{
         this.width = width;
     }
 
-    public Rectangle(Color color, double height, double width){
+    public Rectangle(Color color, double height, double width) {
         if (height <= 0 || width <= 0) {
             throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
         }

@@ -3,15 +3,15 @@ package core.basesyntax.figure;
 import core.basesyntax.color.Color;
 import core.basesyntax.constants.Messages;
 
-public class Square extends Figure{
-    private double side;
+public class Square extends Figure {
     private static final String FIGURE_NAME = "square";
+    private double side;
 
-    public Square(double side){
+    public Square(double side) {
         this.side = side;
     }
 
-    public Square(String color, double side){
+    public Square(String color, double side) {
         if (side <= 0) {
             throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
         }
@@ -24,7 +24,7 @@ public class Square extends Figure{
         this.side = side;
     }
 
-    public Square(Color color, double side){
+    public Square(Color color, double side) {
         if (side <= 0) {
             throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
         }
