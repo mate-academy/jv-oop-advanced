@@ -1,7 +1,6 @@
 package core.basesyntax.figure;
 
 import core.basesyntax.color.Color;
-import core.basesyntax.constants.Messages;
 
 public class Circle extends Figure {
     private static final String FIGURE_NAME = "circle";
@@ -12,27 +11,11 @@ public class Circle extends Figure {
     }
 
     public Circle(String color, double radius) {
-        if (radius <= 0) {
-            throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
-        }
-
-        if (color == null || color.isBlank()) {
-            throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_COLOR);
-        }
-
         this.color = color;
         this.radius = radius;
     }
 
     public Circle(Color color, double radius) {
-        if (radius <= 0) {
-            throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
-        }
-
-        if (color == null) {
-            throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_COLOR);
-        }
-
         this.color = color.name().toLowerCase();
         this.radius = radius;
     }
@@ -42,10 +25,6 @@ public class Circle extends Figure {
     }
 
     public void setRadius(double radius) {
-        if (radius <= 0) {
-            throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
-        }
-
         this.radius = radius;
     }
 
