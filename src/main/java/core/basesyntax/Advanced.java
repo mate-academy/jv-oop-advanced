@@ -7,7 +7,7 @@ public class Advanced {
 
         for (int i = 0; i < figures.length; i++) {
             if (i < figures.length / 2) {
-                figures[i] = figureSupplier.getRandomFigure(i);
+                figures[i] = figureSupplier.getRandomFigure();
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
