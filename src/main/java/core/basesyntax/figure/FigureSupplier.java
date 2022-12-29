@@ -5,9 +5,9 @@ import core.basesyntax.color.ColorSupplier;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int RANDOM_MAX_VALUE = 100;
     private final Random random = new Random(System.currentTimeMillis());
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    private static final int RANDOM_MAX_VALUE = 100;
 
     public Figure getDefaultFigure() {
         return new Circle(Color.WHITE.name().toLowerCase(), 10);
