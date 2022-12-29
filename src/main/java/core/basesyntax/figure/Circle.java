@@ -37,6 +37,18 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(double radius) {
+        if (radius <= 0) {
+            throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
+        }
+
+        this.radius = radius;
+    }
+
     @Override
     public void draw() {
         String str = "Figure: " + FIGURE_NAME + ", area: " + getArea() + " sq.units, radius: "
@@ -48,17 +60,5 @@ public class Circle extends Figure {
     @Override
     public double getArea() {
         return Math.PI * Math.pow(radius, 2);
-    }
-
-    public double getRadius() {
-        return radius;
-    }
-
-    public void setRadius(double radius) {
-        if (radius <= 0) {
-            throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
-        }
-
-        this.radius = radius;
     }
 }

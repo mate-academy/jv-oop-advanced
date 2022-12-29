@@ -5,7 +5,8 @@ import core.basesyntax.color.ColorSupplier;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final Random RANDOM = new Random(System.currentTimeMillis());
+    private final Random random = new Random(System.currentTimeMillis());
+    private final ColorSupplier colorSupplier = new ColorSupplier();
     private static final int RANDOM_MAX_VALUE = 100;
 
     public Figure getDefaultFigure() {
@@ -13,43 +14,31 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        ColorSupplier colorSupplier = new ColorSupplier();
         String color = colorSupplier.getRandomColor();
-
-        Shape shape = Shape.values()[RANDOM.nextInt(Shape.values().length)];
-
-        Figure figure;
+        Shape shape = Shape.values()[random.nextInt(Shape.values().length)];
 
         switch (shape) {
             case CIRCLE: {
-                figure = new Circle(color, RANDOM.nextInt(RANDOM_MAX_VALUE));
-                break;
+                return new Circle(color, random.nextInt(RANDOM_MAX_VALUE));
             }
             case SQUARE: {
-                figure = new Square(color, RANDOM.nextInt(RANDOM_MAX_VALUE));
-                break;
+                return new Square(color, random.nextInt(RANDOM_MAX_VALUE));
             }
             case RECTANGLE: {
-                figure = new Rectangle(color,RANDOM.nextInt(RANDOM_MAX_VALUE),
-                        RANDOM.nextInt(RANDOM_MAX_VALUE));
-                break;
+                return new Rectangle(color, random.nextInt(RANDOM_MAX_VALUE),
+                        random.nextInt(RANDOM_MAX_VALUE));
             }
             case RIGHT_TRIANGLE: {
-                figure = new RightTriangle(color, RANDOM.nextInt(RANDOM_MAX_VALUE),
-                        RANDOM.nextInt(RANDOM_MAX_VALUE));
-                break;
+                return new RightTriangle(color, random.nextInt(RANDOM_MAX_VALUE),
+                        random.nextInt(RANDOM_MAX_VALUE));
             }
             case ISOSCELES_TRAPEZOID: {
-                figure = new IsoscelesTrapezoid(RANDOM.nextInt(RANDOM_MAX_VALUE),
-                        RANDOM.nextInt(RANDOM_MAX_VALUE), RANDOM.nextInt(RANDOM_MAX_VALUE));
-                break;
+                return new IsoscelesTrapezoid(random.nextInt(RANDOM_MAX_VALUE),
+                        random.nextInt(RANDOM_MAX_VALUE), random.nextInt(RANDOM_MAX_VALUE));
             }
             default: {
-                figure = getDefaultFigure();
-                break;
+                return getDefaultFigure();
             }
         }
-
-        return figure;
     }
 }

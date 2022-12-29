@@ -45,19 +45,6 @@ public class RightTriangle extends Figure {
         this.secondLeg = secondLeg;
     }
 
-    @Override
-    public void draw() {
-        String str = "Figure: " + FIGURE_NAME + ", area: " + getArea() + " sq.units, first leg: "
-                + firstLeg + ", second leg: " + secondLeg + ", color: " + color;
-
-        System.out.println(str);
-    }
-
-    @Override
-    public double getArea() {
-        return firstLeg * secondLeg / 2;
-    }
-
     public void setFirstLeg(double firstLeg) {
         if (firstLeg <= 0) {
             throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
@@ -89,5 +76,18 @@ public class RightTriangle extends Figure {
 
     public double getSecondLeg() {
         return secondLeg;
+    }
+
+    @Override
+    public void draw() {
+        String str = "Figure: " + FIGURE_NAME + ", area: " + getArea() + " sq.units, first leg: "
+                + firstLeg + ", second leg: " + secondLeg + ", color: " + color;
+
+        System.out.println(str);
+    }
+
+    @Override
+    public double getArea() {
+        return firstLeg * secondLeg / 2;
     }
 }

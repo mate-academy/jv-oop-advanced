@@ -37,6 +37,18 @@ public class Square extends Figure {
         this.side = side;
     }
 
+    public void setSide(double side) {
+        if (side <= 0) {
+            throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
+        }
+
+        this.side = side;
+    }
+
+    public double getSide() {
+        return side;
+    }
+
     @Override
     public void draw() {
         String str = "Figure: " + FIGURE_NAME + ", area: " + getArea() + " sq.units, side: "
@@ -48,17 +60,5 @@ public class Square extends Figure {
     @Override
     public double getArea() {
         return Math.pow(side, 2);
-    }
-
-    public void setSide(double side) {
-        if (side <= 0) {
-            throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
-        }
-
-        this.side = side;
-    }
-
-    public double getSide() {
-        return side;
     }
 }

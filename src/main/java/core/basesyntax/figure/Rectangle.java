@@ -45,19 +45,6 @@ public class Rectangle extends Figure {
         this.width = width;
     }
 
-    @Override
-    public void draw() {
-        String str = "Figure: " + FIGURE_NAME + ", area: " + getArea() + " sq.units, height: "
-                + height + ", width: " + width + ", color: " + color;
-
-        System.out.println(str);
-    }
-
-    @Override
-    public double getArea() {
-        return height * width;
-    }
-
     public void setHeight(double height) {
         if (height <= 0) {
             throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
@@ -89,5 +76,18 @@ public class Rectangle extends Figure {
 
     public double getWidth() {
         return width;
+    }
+
+    @Override
+    public void draw() {
+        String str = "Figure: " + FIGURE_NAME + ", area: " + getArea() + " sq.units, height: "
+                + height + ", width: " + width + ", color: " + color;
+
+        System.out.println(str);
+    }
+
+    @Override
+    public double getArea() {
+        return height * width;
     }
 }

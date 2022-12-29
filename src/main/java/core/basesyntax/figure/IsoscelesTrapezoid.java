@@ -49,20 +49,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.height = height;
     }
 
-    @Override
-    public void draw() {
-        String str = "Figure: " + FIGURE_NAME + ", area: " + getArea()
-                + " sq.units, top base: " + topBase + ", bottom base: "
-                + bottomBase + ", leg: " + height + ", color: " + color;
-
-        System.out.println(str);
-    }
-
-    @Override
-    public double getArea() {
-        return (topBase + bottomBase) * height / 2;
-    }
-
     public void setTopBase(double topBase) {
         if (topBase <= 0) {
             throw new IllegalArgumentException(Messages.ILLEGAL_FIGURE_PARAMS);
@@ -97,5 +83,19 @@ public class IsoscelesTrapezoid extends Figure {
 
     public double getHeight() {
         return height;
+    }
+
+    @Override
+    public void draw() {
+        String str = "Figure: " + FIGURE_NAME + ", area: " + getArea()
+                + " sq.units, top base: " + topBase + ", bottom base: "
+                + bottomBase + ", leg: " + height + ", color: " + color;
+
+        System.out.println(str);
+    }
+
+    @Override
+    public double getArea() {
+        return (topBase + bottomBase) * height / 2;
     }
 }
