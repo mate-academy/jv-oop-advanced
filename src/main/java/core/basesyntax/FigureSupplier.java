@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_VALUE = 7;
-    private static final int FIGURES_AMOUNT = 5;
+    // private static final int FIGURES_AMOUNT = 5;
     private static final String DEFAULT_CIRCLE_COLOR = "WHITE";
     private static final int DEFAULT_CIRCLE_RADIUS = 10;
     private final Random random = new Random();
@@ -15,8 +15,8 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure(int value) {
-        int figureNumber = random.nextInt(FIGURES_AMOUNT);
-        switch (figureNumber) {
+
+        switch (value) {
             case 0:
                 return new Circle(colorSupplier.getRandomColor(), random.nextInt(MAX_VALUE) + 1);
             case 1:
