@@ -3,7 +3,6 @@ package core.basesyntax.figure;
 import core.basesyntax.color.Color;
 
 public class Rectangle extends Figure {
-    private static final String FIGURE_NAME = "rectangle";
     private double height;
     private double width;
 
@@ -47,7 +46,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        String str = "Figure: " + FIGURE_NAME + ", area: " + getArea() + " sq.units, height: "
+        String str = "Figure: rectangle, area: " + getArea() + " sq.units, height: "
                 + height + ", width: " + width + ", color: " + color;
 
         System.out.println(str);

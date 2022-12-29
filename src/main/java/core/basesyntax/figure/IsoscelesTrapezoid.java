@@ -3,7 +3,6 @@ package core.basesyntax.figure;
 import core.basesyntax.color.Color;
 
 public class IsoscelesTrapezoid extends Figure {
-    private static final String FIGURE_NAME = "isosceles trapezoid";
     private double height;
     private double topBase;
     private double bottomBase;
@@ -54,7 +53,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        String str = "Figure: " + FIGURE_NAME + ", area: " + getArea()
+        String str = "Figure: isosceles trapezoid, area: " + getArea()
                 + " sq.units, top base: " + topBase + ", bottom base: "
                 + bottomBase + ", leg: " + height + ", color: " + color;
 
