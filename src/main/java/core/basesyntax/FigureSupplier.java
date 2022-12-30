@@ -3,8 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    Random random = new Random();
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random(System.currentTimeMillis());
+    private final ColorSupplier colorSupplier = new ColorSupplier();
     private static final int RANDOM_MAX_VALUE = 100;
     private static final int DEFAULT_RADIUS = 10;
 
@@ -12,7 +12,7 @@ public class FigureSupplier {
         Color defaultColor = Color.WHITE;
         return new Circle(defaultColor, DEFAULT_RADIUS);
     }
-    
+
     public Figure getRandomFigure() {
         Model model = Model.values()[random.nextInt(Model.values().length)];
         switch (model) {
