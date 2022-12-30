@@ -5,8 +5,8 @@ import java.util.Random;
 public class FigureSupplier {
     private final Random random = new Random(System.currentTimeMillis());
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    private static final int RANDOM_MAX_VALUE = 100;
-    private static final int DEFAULT_RADIUS = 10;
+    private final int RANDOM_MAX_VALUE = 100;
+    private final int DEFAULT_RADIUS = 10;
 
     public final Figure getDefaultFigure() {
         Color defaultColor = Color.WHITE;
@@ -36,7 +36,6 @@ public class FigureSupplier {
                         random.nextInt(RANDOM_MAX_VALUE));
             default:
                 return getDefaultFigure();
-
         }
     }
 }
