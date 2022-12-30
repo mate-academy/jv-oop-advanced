@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public final class FigureSupplier {
+public class FigureSupplier {
     Random random = new Random();
     ColorSupplier colorSupplier = new ColorSupplier();
     private static final int RANDOM_MAX_VALUE = 100;
@@ -12,6 +12,7 @@ public final class FigureSupplier {
         Color defaultColor = Color.WHITE;
         return new Circle(defaultColor, DEFAULT_RADIUS);
     }
+    
     public Figure getRandomFigure() {
         Model model = Model.values()[random.nextInt(Model.values().length)];
         switch (model) {
