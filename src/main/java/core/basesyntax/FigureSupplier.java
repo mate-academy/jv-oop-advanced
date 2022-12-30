@@ -5,12 +5,12 @@ import java.util.Random;
 public class FigureSupplier {
     private final Random random = new Random(System.currentTimeMillis());
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final int RANDOM_MAX_VALUE = 100;
-    private final int DEFAULT_RADIUS = 10;
+    private final int RandomMaxValue = 100;
+    private final int DefaultRadius = 10;
 
     public final Figure getDefaultFigure() {
         Color defaultColor = Color.WHITE;
-        return new Circle(defaultColor, DEFAULT_RADIUS);
+        return new Circle(defaultColor, DefaultRadius);
     }
 
     public Figure getRandomFigure() {
@@ -18,22 +18,22 @@ public class FigureSupplier {
         switch (model) {
             case RECTANGLE:
                 return new Circle(colorSupplier.getRandomColor(),
-                        random.nextInt(RANDOM_MAX_VALUE));
+                        random.nextInt(RandomMaxValue));
             case RIGHT_TRIANGLE:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        random.nextInt(RANDOM_MAX_VALUE),
-                        random.nextInt(RANDOM_MAX_VALUE));
+                        random.nextInt(RandomMaxValue),
+                        random.nextInt(RandomMaxValue));
             case SQUARE:
                 return new Rectangle(colorSupplier.getRandomColor(),
-                        random.nextInt(RANDOM_MAX_VALUE),
-                        random.nextInt(RANDOM_MAX_VALUE));
+                        random.nextInt(RandomMaxValue),
+                        random.nextInt(RandomMaxValue));
             case CIRCLE:
                 return new RightTriangle(colorSupplier.getRandomColor(),
-                        random.nextInt(RANDOM_MAX_VALUE),
-                        random.nextInt(RANDOM_MAX_VALUE));
+                        random.nextInt(RandomMaxValue),
+                        random.nextInt(RandomMaxValue));
             case ISOSCELES_TRAPEZOID:
                 return new Square(colorSupplier.getRandomColor(),
-                        random.nextInt(RANDOM_MAX_VALUE));
+                        random.nextInt(RandomMaxValue));
             default:
                 return getDefaultFigure();
         }
