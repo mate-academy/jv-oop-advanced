@@ -27,7 +27,6 @@ public class FigureSupplier {
                 return new Rectangle(colorSupplier.getRandomColor(),
                         random.nextInt(PARAM_BOUND),
                         random.nextInt(PARAM_BOUND));
-
         }
     }
 
