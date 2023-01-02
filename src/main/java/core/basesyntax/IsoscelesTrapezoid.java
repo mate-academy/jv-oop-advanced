@@ -24,4 +24,9 @@ public class IsoscelesTrapezoid extends Figure {
                 + ", parallelSideTwo: " + parallelSideTwo + " units"
                 + ", height: " + height + ", " + "color: " + getColor();
     }
+
+    @Override
+    public String draw() {
+        return toString();
+    }
 }

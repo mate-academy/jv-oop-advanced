@@ -3,33 +3,35 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int DEFAULT_RADIUS = 10;
+    private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
     private static final int RANDOM_FIGURE_COUNTER_BOUND = 5;
     private static final int FIGURE_PARAMETERS_BOUND = 25;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figure getRandomCircle() {
+    private Figure getRandomCircle() {
         return new Circle(colorSupplier.getRandomColor(), random.nextInt(FIGURE_PARAMETERS_BOUND));
     }
 
-    public Figure getRandomSquare() {
+    private Figure getRandomSquare() {
         return new Square(colorSupplier.getRandomColor(), random.nextInt(FIGURE_PARAMETERS_BOUND));
     }
 
-    public Figure getRandomRightTriangle() {
+    private Figure getRandomRightTriangle() {
         return new RightTriangle(colorSupplier.getRandomColor(),
                 random.nextInt(FIGURE_PARAMETERS_BOUND),
                 random.nextInt(FIGURE_PARAMETERS_BOUND));
     }
 
-    public Figure getRandomIsoscelesTrapezoid() {
+    private Figure getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                 random.nextInt(FIGURE_PARAMETERS_BOUND),
                 random.nextInt(FIGURE_PARAMETERS_BOUND),
                 random.nextInt(FIGURE_PARAMETERS_BOUND));
     }
 
-    public Figure getRandomRectangle() {
+    private Figure getRandomRectangle() {
         return new Rectangle(colorSupplier.getRandomColor(),
                 random.nextInt(FIGURE_PARAMETERS_BOUND),
                 random.nextInt(FIGURE_PARAMETERS_BOUND));
@@ -51,6 +53,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle();
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }

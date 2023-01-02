@@ -21,4 +21,9 @@ public class RightTriangle extends Figure {
                 + "firstLeg: " + firstLeg + " units, "
                 + "secondLeg: " + secondLeg + " units, " + "color: " + getColor();
     }
+
+    @Override
+    public String draw() {
+        return toString();
+    }
 }

@@ -21,4 +21,9 @@ public class Rectangle extends Figure {
                 + "length: " + length + " units, "
                 + "width: " + width + " units, " + "color: " + getColor();
     }
+
+    @Override
+    public String draw() {
+        return toString();
+    }
 }
