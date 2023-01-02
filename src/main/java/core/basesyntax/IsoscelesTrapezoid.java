@@ -2,18 +2,14 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class Trapezoid extends Figure implements Drawable {
-    private double upSide = new Random().nextInt(100);
-    private double downSide = new Random().nextInt(100);
-    private double height = new Random().nextInt(100);
-    private Color color = Color.values()[new Random().nextInt(10)];
+public class IsoscelesTrapezoid extends Figure {
+    private final double upSide = new Random().nextInt(100);
+    private final double downSide = new Random().nextInt(100);
+    private final double height = new Random().nextInt(100);
+    private final Color color = Color.values()[new Random().nextInt(10)];
 
     public Color getColor() {
         return color;
-    }
-
-    public void setColor(Color color) {
-        this.color = color;
     }
 
     @Override
@@ -32,23 +28,11 @@ public class Trapezoid extends Figure implements Drawable {
         return upSide;
     }
 
-    public void setUpSide(double upSide) {
-        this.upSide = upSide;
-    }
-
     public double getDownSide() {
         return downSide;
     }
 
-    public void setDownSide(double downSide) {
-        this.downSide = downSide;
-    }
-
     public double getHeight() {
         return height;
-    }
-
-    public void setHeight(double height) {
-        this.height = height;
     }
 }

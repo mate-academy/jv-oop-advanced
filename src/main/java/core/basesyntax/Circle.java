@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class Circle extends Figure implements Drawable {
+public class Circle extends Figure {
     private double radius = new Random().nextInt(100);
     private Color color = Color.values()[new Random().nextInt(10)];
 

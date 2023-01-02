@@ -2,24 +2,16 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class Square extends Figure implements Drawable {
-    private double side = (double) new Random().nextInt(100);
-    private Color color = Color.values()[new Random().nextInt(10)];
+public class Square extends Figure {
+    private final double side = new Random().nextInt(100);
+    private final Color color = Color.values()[new Random().nextInt(10)];
 
     public double getSide() {
         return side;
     }
 
-    public void setSide(double side) {
-        this.side = side;
-    }
-
     public Color getColor() {
         return color;
-    }
-
-    public void setColor(Color color) {
-        this.color = color;
     }
 
     @Override

@@ -2,10 +2,10 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class Rectangle extends Figure implements Drawable {
-    private double firstSide = new Random().nextInt(100);
-    private double secondSide = new Random().nextInt(100);
-    private Color color = Color.values()[new Random().nextInt(10)];
+public class Rectangle extends Figure {
+    private final double firstSide = new Random().nextInt(100);
+    private final double secondSide = new Random().nextInt(100);
+    private final Color color = Color.values()[new Random().nextInt(10)];
 
     @Override
     public double area() {
@@ -23,23 +23,11 @@ public class Rectangle extends Figure implements Drawable {
         return firstSide;
     }
 
-    public void setFirstSide(double firstSide) {
-        this.firstSide = firstSide;
-    }
-
     public double getSecondSide() {
         return secondSide;
     }
 
-    public void setSecondSide(double secondSide) {
-        this.secondSide = secondSide;
-    }
-
     public Color getColor() {
         return color;
-    }
-
-    public void setColor(Color color) {
-        this.color = color;
     }
 }

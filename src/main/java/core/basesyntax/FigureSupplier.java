@@ -8,8 +8,8 @@ public class FigureSupplier {
         figuresArr[0] = new Circle();
         figuresArr[1] = new Rectangle();
         figuresArr[2] = new Square();
-        figuresArr[3] = new Trapezoid();
-        figuresArr[4] = new Triangle();
+        figuresArr[3] = new IsoscelesTrapezoid();
+        figuresArr[4] = new RightTriangle();
         return figuresArr[new Random().nextInt(4)];
     }
 
