@@ -14,8 +14,9 @@ public class Triangle extends Figure implements Drawable {
 
     @Override
     public void draw() {
-        System.out.println("Figure: triangle, area: " + this.area() +
-                " sq.units, firstLeg: " + getFirstLeg() + " units, secondLeg: " + getSecondLeg() + "color: " + getColor());
+        System.out.println("Figure: triangle, area: " + this.area()
+                + " sq.units, firstLeg: " + getFirstLeg() + " units, secondLeg: "
+                + getSecondLeg() + "color: " + getColor());
     }
 
     public double getFirstLeg() {

@@ -24,7 +24,8 @@ public class Trapezoid extends Figure implements Drawable {
     @Override
     public void draw() {
         System.out.println("Figure: trapezoid, area: " + this.area() + " sq.units, up side: "
-                + getUpSide() + " units, down side: " + getDownSide() + " units, height: " + getHeight() + " units, color: " + getColor());
+                + getUpSide() + " units, down side: " + getDownSide() + " units, height: "
+                + getHeight() + " units, color: " + getColor());
     }
 
     public double getUpSide() {

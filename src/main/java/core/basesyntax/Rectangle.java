@@ -14,8 +14,9 @@ public class Rectangle extends Figure implements Drawable {
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + this.area() + " sq.units, first side: "
-                + getFirstSide() + " units, second side: " + getSecondSide() + " color: " + getColor());
+        System.out.println("Figure: rectangle, area: " + this.area()
+                + " sq.units, first side: " + getFirstSide() + " units, second side: "
+                + getSecondSide() + " color: " + getColor());
     }
 
     public double getFirstSide() {
