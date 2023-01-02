@@ -5,7 +5,7 @@ import java.util.Random;
 public class Triangle extends Figure implements Drawable {
     private double firstLeg = new Random().nextInt(100);
     private double secondLeg = new Random().nextInt(100);
-    Color color = Color.values()[new Random().nextInt(10)];
+    private Color color = Color.values()[new Random().nextInt(10)];
 
     @Override
     public double area() {
@@ -14,7 +14,8 @@ public class Triangle extends Figure implements Drawable {
 
     @Override
     public void draw() {
-        System.out.println("Figure: triangle, area: " + this.area() + " sq.units, firstLeg: " + getFirstLeg() + " units, secondLeg: " + getSecondLeg() + "color: " + getColor());
+        System.out.println("Figure: triangle, area: " + this.area() +
+                " sq.units, firstLeg: " + getFirstLeg() + " units, secondLeg: " + getSecondLeg() + "color: " + getColor());
     }
 
     public double getFirstLeg() {

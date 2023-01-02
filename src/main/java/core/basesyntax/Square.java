@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class Square extends Figure implements Drawable {
     private double side = (double) new Random().nextInt(100);
-    Color color = Color.values()[new Random().nextInt(10)];
+    private Color color = Color.values()[new Random().nextInt(10)];
 
     public double getSide() {
         return side;
@@ -29,6 +29,7 @@ public class Square extends Figure implements Drawable {
 
     @Override
     public void draw() {
-        System.out.println("Figure: square, area: " + this.area() + " sq.units, side: " + getSide() + " units, color: " + getColor());
+        System.out.println("Figure: square, area: " + this.area() +
+                " sq.units, side: " + getSide() + " units, color: " + getColor());
     }
 }

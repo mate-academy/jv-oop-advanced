@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Figure extends FigureSupplier implements Drawable {
-    Color color;
+    private Color color;
 
     public double area() {
         return 0;

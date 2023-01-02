@@ -5,6 +5,7 @@ import java.util.Random;
 public class Rectangle extends Figure implements Drawable {
     private double firstSide = new Random().nextInt(100);
     private double secondSide = new Random().nextInt(100);
+    private Color color = Color.values()[new Random().nextInt(10)];
 
     @Override
     public double area() {
@@ -13,7 +14,8 @@ public class Rectangle extends Figure implements Drawable {
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + this.area() + " sq.units, first side: " + getFirstSide() + " units, second side: " + getSecondSide() + " color: " + getColor());
+        System.out.println("Figure: rectangle, area: " + this.area() + " sq.units, first side: "
+                + getFirstSide() + " units, second side: " + getSecondSide() + " color: " + getColor());
     }
 
     public double getFirstSide() {
@@ -39,6 +41,4 @@ public class Rectangle extends Figure implements Drawable {
     public void setColor(Color color) {
         this.color = color;
     }
-
-    Color color = Color.values()[new Random().nextInt(10)];
 }

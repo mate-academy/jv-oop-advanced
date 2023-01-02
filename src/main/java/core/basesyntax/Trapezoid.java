@@ -6,7 +6,7 @@ public class Trapezoid extends Figure implements Drawable {
     private double upSide = new Random().nextInt(100);
     private double downSide = new Random().nextInt(100);
     private double height = new Random().nextInt(100);
-    Color color = Color.values()[new Random().nextInt(10)];
+    private Color color = Color.values()[new Random().nextInt(10)];
 
     public Color getColor() {
         return color;
@@ -23,7 +23,8 @@ public class Trapezoid extends Figure implements Drawable {
 
     @Override
     public void draw() {
-        System.out.println("Figure: trapezoid, area: " + this.area() + " sq.units, up side: " + getUpSide() + " units, down side: " + getDownSide() + " units, height: " + getHeight() + " units, color: " + getColor());
+        System.out.println("Figure: trapezoid, area: " + this.area() + " sq.units, up side: "
+                + getUpSide() + " units, down side: " + getDownSide() + " units, height: " + getHeight() + " units, color: " + getColor());
     }
 
     public double getUpSide() {
