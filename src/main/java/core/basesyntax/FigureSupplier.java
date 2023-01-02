@@ -4,32 +4,32 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int DEFAULT_RADIUS_CIRCLE = 10;
-    private static final int MAX_RANDOM = 100;
+    private static final int MAX_LENGTH = 100;
     private static final int NUMBER_FIGURE = 5;
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
 
-    public Figure getRandomIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(MAX_RANDOM),
-                random.nextInt(MAX_RANDOM), random.nextInt(MAX_RANDOM));
+    private Figure getRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(MAX_LENGTH),
+                random.nextInt(MAX_LENGTH), random.nextInt(MAX_LENGTH));
     }
 
-    public Figure getRandomRightTriangle() {
-        return new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(MAX_RANDOM),
-                                                                 random.nextInt(MAX_RANDOM));
+    private Figure getRandomRightTriangle() {
+        return new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(MAX_LENGTH),
+                                                                 random.nextInt(MAX_LENGTH));
     }
 
-    public Figure getRandomSquare() {
-        return new Square(colorSupplier.getRandomColor(), random.nextInt(MAX_RANDOM));
+    private Figure getRandomSquare() {
+        return new Square(colorSupplier.getRandomColor(), random.nextInt(MAX_LENGTH));
     }
 
-    public Figure getRandomRectangle() {
-        return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(MAX_RANDOM),
-                                                             random.nextInt(MAX_RANDOM));
+    private Figure getRandomRectangle() {
+        return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(MAX_LENGTH),
+                                                             random.nextInt(MAX_LENGTH));
     }
 
-    public Figure getRandomCircle() {
-        return new Circle(colorSupplier.getRandomColor(), random.nextInt(MAX_RANDOM));
+    private Figure getRandomCircle() {
+        return new Circle(colorSupplier.getRandomColor(), random.nextInt(MAX_LENGTH));
     }
 
     public Figure getRandomFigure() {
@@ -48,6 +48,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Colors.WHITE.name(), DEFAULT_RADIUS_CIRCLE);
+        return new Circle(Color.WHITE.name(), DEFAULT_RADIUS_CIRCLE);
     }
 }
