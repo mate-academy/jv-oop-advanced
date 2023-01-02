@@ -14,13 +14,8 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "Figure: Circle, " + "area: " + getArea() + " sq.units, "
-                + "radius: " + radius + " units, " + "color: " + getColor();
-    }
-
-    @Override
-    public String draw() {
-        return toString();
+    public void draw() {
+        System.out.println("Figure: Circle, " + "area: " + getArea() + " sq.units, "
+                + "radius: " + radius + " units, " + "color: " + getColor());
     }
 }

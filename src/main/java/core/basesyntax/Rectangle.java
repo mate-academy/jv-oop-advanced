@@ -16,14 +16,9 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "Figure: Rectangle, " + "area: " + getArea() + " sq.units, "
+    public void draw() {
+        System.out.println("Figure: Rectangle, " + "area: " + getArea() + " sq.units, "
                 + "length: " + length + " units, "
-                + "width: " + width + " units, " + "color: " + getColor();
-    }
-
-    @Override
-    public String draw() {
-        return toString();
+                + "width: " + width + " units, " + "color: " + getColor());
     }
 }
