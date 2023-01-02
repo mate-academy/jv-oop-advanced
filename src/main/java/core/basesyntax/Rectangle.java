@@ -17,7 +17,7 @@ public class Rectangle extends Figure {
 
     @Override
     public String toString() {
-        return super.toString() + "Rectangle, " + "area: " + getArea() + " sq.units, "
+        return "Figure: Rectangle, " + "area: " + getArea() + " sq.units, "
                 + "length: " + length + " units, "
                 + "width: " + width + " units, " + "color: " + getColor();
     }

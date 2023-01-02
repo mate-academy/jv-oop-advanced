@@ -3,34 +3,54 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int BOUND = 5;
-    private static final int PARAM_BOUND = 25;
+    private static final int RANDOM_FIGURE_COUNTER_BOUND = 5;
+    private static final int FIGURE_PARAMETERS_BOUND = 25;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
+    public Figure getRandomCircle() {
+        return new Circle(colorSupplier.getRandomColor(), random.nextInt(FIGURE_PARAMETERS_BOUND));
+    }
+
+    public Figure getRandomSquare() {
+        return new Square(colorSupplier.getRandomColor(), random.nextInt(FIGURE_PARAMETERS_BOUND));
+    }
+
+    public Figure getRandomRightTriangle() {
+        return new RightTriangle(colorSupplier.getRandomColor(),
+                random.nextInt(FIGURE_PARAMETERS_BOUND),
+                random.nextInt(FIGURE_PARAMETERS_BOUND));
+    }
+
+    public Figure getRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                random.nextInt(FIGURE_PARAMETERS_BOUND),
+                random.nextInt(FIGURE_PARAMETERS_BOUND),
+                random.nextInt(FIGURE_PARAMETERS_BOUND));
+    }
+
+    public Figure getRandomRectangle() {
+        return new Rectangle(colorSupplier.getRandomColor(),
+                random.nextInt(FIGURE_PARAMETERS_BOUND),
+                random.nextInt(FIGURE_PARAMETERS_BOUND));
+    }
+
     public Figure getRandomFigure() {
-        switch (random.nextInt(BOUND)) {
+        switch (random.nextInt(RANDOM_FIGURE_COUNTER_BOUND)) {
             case 0:
-                return new Circle(colorSupplier.getRandomColor(), random.nextInt(PARAM_BOUND));
+                return getRandomCircle();
             case 1:
-                return new Square(colorSupplier.getRandomColor(), random.nextInt(PARAM_BOUND));
+                return getRandomSquare();
             case 2:
-                return new RightTriangle(colorSupplier.getRandomColor(),
-                        random.nextInt(PARAM_BOUND),
-                        random.nextInt(PARAM_BOUND));
+                return getRandomRightTriangle();
             case 3:
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        random.nextInt(PARAM_BOUND),
-                        random.nextInt(PARAM_BOUND),
-                        random.nextInt(PARAM_BOUND));
+                return getRandomIsoscelesTrapezoid();
             default:
-                return new Rectangle(colorSupplier.getRandomColor(),
-                        random.nextInt(PARAM_BOUND),
-                        random.nextInt(PARAM_BOUND));
+                return getRandomRectangle();
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", 10);
+        return new Circle();
     }
 }

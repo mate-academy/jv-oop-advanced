@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public abstract class Figure implements AreaCalculator {
-
     private String color;
 
     public Figure(String color) {
@@ -14,10 +13,5 @@ public abstract class Figure implements AreaCalculator {
 
     public void setColor(String color) {
         this.color = color;
-    }
-
-    @Override
-    public String toString() {
-        return "Figure: ";
     }
 }
