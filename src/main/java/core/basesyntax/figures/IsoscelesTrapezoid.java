@@ -6,16 +6,12 @@ import core.basesyntax.templates.Figure;
 public class IsoscelesTrapezoid extends Figure implements Drawable {
     private int sideA;
     private int sideB;
-    private int angleA;
-    private int angleB;
     private int height;
 
-    public IsoscelesTrapezoid(String color, int sideA, int sideB, int angleA, int angleB, int height) {
+    public IsoscelesTrapezoid(String color, int sideA, int sideB, int height) {
         super(color);
         this.sideA = sideA;
         this.sideB = sideB;
-        this.angleA = angleA;
-        this.angleB = angleB;
         this.height = height;
     }
 
@@ -33,22 +29,6 @@ public class IsoscelesTrapezoid extends Figure implements Drawable {
 
     public void setSideB(int sideB) {
         this.sideB = sideB;
-    }
-
-    public int getAngleA() {
-        return angleA;
-    }
-
-    public void setAngleA(int angleA) {
-        this.angleA = angleA;
-    }
-
-    public int getAngleB() {
-        return angleB;
-    }
-
-    public void setAngleB(int angleB) {
-        this.angleB = angleB;
     }
 
     public int getHeight() {
@@ -69,8 +49,6 @@ public class IsoscelesTrapezoid extends Figure implements Drawable {
         System.out.println("Figure: isosceles trapezoid, area:" + getArea()
                 + " sq. units, sideA: " + getSideA()
                 + " units, sideB: " + getSideB()
-                + " units, angleA: " + getAngleA()
-                + " units, angleB: " + getAngleB()
                 + " units, height: " + getHeight()
                 + " units, color: " + getColor());
     }
