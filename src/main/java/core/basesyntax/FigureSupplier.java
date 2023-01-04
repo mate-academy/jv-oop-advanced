@@ -9,21 +9,21 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int index = new Random().nextInt(5);
-        int A = new Random().nextInt(10);
+        int Side = new Random().nextInt(10);
 
         if (index == 0) {
-            return new Circle(A, color.getRandomColor());
+            return new Circle(Side, color.getRandomColor());
         }
         if (index == 1) {
-            return new IsoscelesTrapezoid(A, A, A, color.getRandomColor());
+            return new IsoscelesTrapezoid(Side, Side, Side, color.getRandomColor());
         }
         if (index == 2) {
-            return new Rectangle(A, A, color.getRandomColor());
+            return new Rectangle(Side, Side, color.getRandomColor());
         }
         if (index == 3) {
-            return new RightTriangle(A, A, color.getRandomColor());
+            return new RightTriangle(Side, Side, color.getRandomColor());
         } else {
-            return new Square(A, color.getRandomColor());
+            return new Square(Side, color.getRandomColor());
         }
     }
 
