@@ -16,10 +16,10 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String draw() {
-        return "Figure: rectangle, area: " + getArea()
+    public void draw() {
+        System.out.println("Figure: rectangle, area: " + getArea()
                 + " sq.units, first side: " + firstSide
                 + " units, second side: " + secondSide
-                + " units, color: " + getColor();
+                + " units, color: " + getColor());
     }
 }
