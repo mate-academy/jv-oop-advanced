@@ -1,4 +1,4 @@
-package core.basesyntax.Figures;
+package core.basesyntax.templates;
 
 public interface Drawable {
     void draw();

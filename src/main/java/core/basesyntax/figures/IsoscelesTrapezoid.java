@@ -1,4 +1,7 @@
-package core.basesyntax.Figures;
+package core.basesyntax.figures;
+
+import core.basesyntax.templates.Drawable;
+import core.basesyntax.templates.Figure;
 
 public class IsoscelesTrapezoid extends Figure implements Drawable {
     private int sideA;

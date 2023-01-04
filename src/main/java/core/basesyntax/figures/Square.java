@@ -1,6 +1,9 @@
-package core.basesyntax.Figures;
+package core.basesyntax.figures;
 
-public class Square extends Figure implements Drawable{
+import core.basesyntax.templates.Drawable;
+import core.basesyntax.templates.Figure;
+
+public class Square extends Figure implements Drawable {
     private int side;
 
     public Square(String color, int side) {
