@@ -3,8 +3,8 @@ package core.basesyntax;
 public class RightTriangle extends Figure {
     private double base;
 
-    public RightTriangle(double side, Colors color) {
-        super("Right Triangle", color);
+    public RightTriangle(double side, Color color) {
+        super(color);
         this.base = side;
     }
 
@@ -23,6 +23,8 @@ public class RightTriangle extends Figure {
 
     @Override
     public String toString() {
-        return getFigureInfo() + String.format(", base: %.1f units", base);
+        return String.format("Figure: right triangle, area: %.1f sq.units, "
+                             + "base: %.1f units, color: %s",
+                             getArea(), base, getColor().name().toLowerCase());
     }
 }

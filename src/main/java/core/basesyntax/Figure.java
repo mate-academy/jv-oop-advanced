@@ -1,37 +1,17 @@
 package core.basesyntax;
 
 public abstract class Figure implements IFigure {
-    private Colors color;
-    private String name;
+    private Color color;
 
-    Figure(String name, Colors color) {
-        this.name = name;
+    public Figure(Color color) {
         this.color = color;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setColor(Colors color) {
+    public void setColor(Color color) {
         this.color = color;
     }
 
-    public Colors getColor() {
+    public Color getColor() {
         return color;
-    }
-
-    public String getFigureInfo() {
-        return String.format("Figure: %s, color = %s, area: %.1f sq.units",
-                name.toLowerCase(), color.toString().toLowerCase(), getArea());
-    }
-
-    @Override
-    public String toString() {
-        return getFigureInfo();
     }
 }

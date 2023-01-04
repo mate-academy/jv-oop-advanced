@@ -9,7 +9,7 @@ public class FigureSupplier {
     private final Random randomInteger = new Random();
 
     public Figure getDefaultFigure() {
-        return new Circle(10, Colors.WHITE);
+        return new Circle(10, Color.WHITE);
     }
 
     public Figure getRandomFigure() {
@@ -35,7 +35,7 @@ public class FigureSupplier {
     }
 
     private Figure getRandomIsoscelesTrapezoid() {
-        Colors randomColor = colorSupplier.getRandomColor();
+        Color randomColor = colorSupplier.getRandomColor();
         int base1 = randomInteger.nextInt(MAX_PARAMETER_SIZE) + 1;
         int base2 = randomInteger.nextInt(MAX_PARAMETER_SIZE) + 1;
         int height = randomInteger.nextInt(MAX_PARAMETER_SIZE) + 1;
@@ -43,26 +43,26 @@ public class FigureSupplier {
     }
 
     private Figure getRandomRightTriangle() {
-        Colors randomColor = colorSupplier.getRandomColor();
+        Color randomColor = colorSupplier.getRandomColor();
         int base = randomInteger.nextInt(MAX_PARAMETER_SIZE) + 1;
         return new RightTriangle(base, randomColor);
     }
 
     private Figure getRandomRectangle() {
-        Colors randomColor = colorSupplier.getRandomColor();
+        Color randomColor = colorSupplier.getRandomColor();
         int width = randomInteger.nextInt(MAX_PARAMETER_SIZE) + 1;
         int height = randomInteger.nextInt(MAX_PARAMETER_SIZE) + 1;
         return new Rectangle(width, height, randomColor);
     }
 
     private Figure getRandomSquare() {
-        Colors randomColor = colorSupplier.getRandomColor();
+        Color randomColor = colorSupplier.getRandomColor();
         int side = randomInteger.nextInt(MAX_PARAMETER_SIZE) + 1;
         return new Square(side, randomColor);
     }
 
     private Figure getRandomCircle() {
-        Colors randomColor = colorSupplier.getRandomColor();
+        Color randomColor = colorSupplier.getRandomColor();
         int radius = randomInteger.nextInt(MAX_PARAMETER_SIZE) + 1;
         return new Circle(radius, randomColor);
     }

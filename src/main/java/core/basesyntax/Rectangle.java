@@ -4,8 +4,8 @@ public class Rectangle extends Figure {
     private double width;
     private double height;
 
-    Rectangle(double width, double height, Colors color) {
-        super("Rectangle", color);
+    public Rectangle(double width, double height, Color color) {
+        super(color);
         this.width = width;
         this.height = height;
     }
@@ -33,7 +33,8 @@ public class Rectangle extends Figure {
 
     @Override
     public String toString() {
-        return getFigureInfo()
-                + String.format(", width: %.1f units, height: %.1f units", width, height);
+        return String.format("Figure: rectangle, area: %.1f sq.units, "
+                             + "width: %.1f units, height: %.1f units, color: %s",
+                              getArea(), width, height, getColor().name().toLowerCase());
     }
 }
