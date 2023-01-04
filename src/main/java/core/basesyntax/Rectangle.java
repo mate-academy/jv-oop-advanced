@@ -13,9 +13,10 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void printInfoAboutFigures() {
-        super.printInfoAboutFigures();
+    public void print() {
+        super.print();
         System.out.println("fist side: " + firstSide + " units, "
-                + "second side " + secondSide + " units");
+                + "second side " + secondSide + " units, " + "area: "
+                + getArea() + " square units");
     }
 }

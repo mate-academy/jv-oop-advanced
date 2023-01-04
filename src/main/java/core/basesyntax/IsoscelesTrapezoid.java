@@ -17,9 +17,10 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public void printInfoAboutFigures() {
-        super.printInfoAboutFigures();
+    public void print() {
+        super.print();
         System.out.println("side: " + side + ", " + "first base: " + firstBase + ", "
-                + "second base: " + secondBase + ", " + "hight: " + hight);
+                + "second base: " + secondBase + ", " + "hight: " + hight + "units, "
+                + "area: " + getArea() + " square units");
     }
 }

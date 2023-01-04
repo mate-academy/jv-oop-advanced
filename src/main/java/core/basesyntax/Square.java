@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    private double side;
+    private int side;
 
-    public Square(String name, String color, double side) {
+    public Square(String name, String color, int side) {
         super(name, color);
         this.side = side;
         super.setArea(side * side);
@@ -11,8 +11,9 @@ public class Square extends Figure {
     }
 
     @Override
-    public void printInfoAboutFigures() {
-        super.printInfoAboutFigures();
-        System.out.println("side: " + side + " units");
+    public void print() {
+        super.print();
+        System.out.println("side: " + side + " units, "
+                + "area: " + getArea() + " square units");
     }
 }

@@ -8,8 +8,8 @@ public class CreationOfFigure extends FigureSupplier {
         CreationOfFigure fourthDefaultFigure = new CreationOfFigure();
         CreationOfFigure[] figures = new CreationOfFigure[]{firstFigure, secondFigure, thirdFigure};
         for (CreationOfFigure i : figures) {
-            i.getRandomFigure().printInfoAboutFigures();
+            i.getRandomFigure().print();
         }
-        fourthDefaultFigure.getDefaultFigure().printInfoAboutFigures();
+        fourthDefaultFigure.getDefaultFigure().print();
     }
 }

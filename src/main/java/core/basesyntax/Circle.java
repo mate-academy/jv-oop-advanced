@@ -10,8 +10,9 @@ public class Circle extends Figure {
     }
 
     @Override
-    public void printInfoAboutFigures() {
-        super.printInfoAboutFigures();
-        System.out.println("radius " + radius);
+    public void print() {
+        super.print();
+        System.out.println("radius: " + radius + " units, "
+                + "area: " + getArea() + " square units");
     }
 }

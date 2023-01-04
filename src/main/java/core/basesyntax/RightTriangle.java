@@ -12,9 +12,10 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void printInfoAboutFigures() {
-        super.printInfoAboutFigures();
+    public void print() {
+        super.print();
         System.out.println("fist leg: " + firstLeg + " units, "
-                + "second leg " + secondLeg + " units");
+                + "second leg " + secondLeg + " units " + "area: " + getArea()
+                + " square units");
     }
 }

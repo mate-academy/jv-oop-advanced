@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Figure implements PrintableInfo, SetableArea {
+public abstract class Figure implements Printable, AreaCalculator {
     private String name;
     private String color;
 
@@ -11,12 +11,16 @@ public class Figure implements PrintableInfo, SetableArea {
         this.color = color;
     }
 
-    public void printInfoAboutFigures() {
-        System.out.print("Figure: " + name + ", " + "color: " + color
-                + ", " + "area: " + area + " square units, ");
+    public void print() {
+        System.out.print("Figure: " + name + ", " + "color: " + color + ", ");
     }
 
     public void setArea(double area) {
         this.area = area;
+    }
+
+    @Override
+    public double getArea() {
+        return area;
     }
 }
