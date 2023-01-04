@@ -5,7 +5,8 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator, Figure
     private double b;
     private double c;
 
-    public IsoscelesTrapezoid(double a, double b, double c) {
+    public IsoscelesTrapezoid(double a, double b, double c, String color) {
+        super(color);
         this.a = a;
         this.b = b;
         this.c = c;

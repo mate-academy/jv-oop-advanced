@@ -3,7 +3,8 @@ package core.basesyntax;
 public class Rectangle extends Figure implements AreaCalculator, Figuredraw{
     private double a;
     private double b;
-    public Rectangle(double a, double b) {
+    public Rectangle(double a, double b,String color) {
+        super(color);
         this.a = a;
         this.b = b;
     }

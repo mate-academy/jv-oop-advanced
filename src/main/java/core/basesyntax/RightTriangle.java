@@ -4,7 +4,8 @@ public class RightTriangle extends Figure implements AreaCalculator, Figuredraw 
     private double a;
     private double b;
 
-    public RightTriangle(double a, double b) {
+    public RightTriangle(double a, double b,String color) {
+        super(color);
         this.a = a;
         this.b = b;
     }
