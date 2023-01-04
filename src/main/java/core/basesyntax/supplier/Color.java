@@ -1,4 +1,4 @@
-package core.basesyntax.suppliers;
+package core.basesyntax.supplier;
 
 public enum Color {
     BLACK,

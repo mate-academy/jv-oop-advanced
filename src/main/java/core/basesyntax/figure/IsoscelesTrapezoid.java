@@ -1,15 +1,17 @@
-package core.basesyntax.figures;
+package core.basesyntax.figure;
 
-import core.basesyntax.templates.Figure;
+import core.basesyntax.template.Figure;
 
-public class RightTriangle extends Figure {
+public class IsoscelesTrapezoid extends Figure {
     private int sideA;
     private int sideB;
+    private int height;
 
-    public RightTriangle(String color, int sideA, int sideB) {
+    public IsoscelesTrapezoid(String color, int sideA, int sideB, int height) {
         super(color);
         this.sideA = sideA;
         this.sideB = sideB;
+        this.height = height;
     }
 
     public int getSideA() {
@@ -28,16 +30,25 @@ public class RightTriangle extends Figure {
         this.sideB = sideB;
     }
 
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
     @Override
     public double getArea() {
-        return sideA * sideB / 2.0;
+        return (sideA + sideB) * height / 2.0;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: right triangle, area:" + getArea()
+        System.out.println("Figure: isosceles trapezoid, area:" + getArea()
                 + " sq. units, sideA: " + getSideA()
                 + " units, sideB: " + getSideB()
+                + " units, height: " + getHeight()
                 + " units, color: " + getColor());
     }
 }
