@@ -1,6 +1,6 @@
 package core.basesyntax.Figures;
 
-public class Circle extends Figure implements Drawable{
+public class Circle extends Figure implements Drawable {
     private int radius;
 
     public Circle(String color, int radius) {
@@ -23,6 +23,8 @@ public class Circle extends Figure implements Drawable{
 
     @Override
     public void draw() {
-
+        System.out.println("Figure: circle, area:" + getArea()
+                + " sq. units, radius: " + getRadius()
+                + " units, color: " + getColor());
     }
 }

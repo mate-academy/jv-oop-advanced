@@ -63,7 +63,12 @@ public class IsoscelesTrapezoid extends Figure implements Drawable {
 
     @Override
     public void draw() {
-
+        System.out.println("Figure: isosceles trapezoid, area:" + getArea()
+                + " sq. units, sideA: " + getSideA()
+                + " units, sideB: " + getSideB()
+                + " units, angleA: " + getAngleA()
+                + " units, angleB: " + getAngleB()
+                + " units, height: " + getHeight()
+                + " units, color: " + getColor());
     }
-
 }

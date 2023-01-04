@@ -1,6 +1,6 @@
 package core.basesyntax.Figures;
 
-public class Rectangle extends Figure implements Drawable{
+public class Rectangle extends Figure implements Drawable {
     private int sideA;
     private int sideB;
 
@@ -33,6 +33,9 @@ public class Rectangle extends Figure implements Drawable{
 
     @Override
     public void draw() {
-
+        System.out.println("Figure: rectangle, area:" + getArea()
+                + " sq. units, sideA: " + getSideA()
+                + " units, sideB: " + getSideB()
+                + " units, color: " + getColor());
     }
 }
