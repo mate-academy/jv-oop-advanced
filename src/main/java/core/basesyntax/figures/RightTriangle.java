@@ -1,9 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.templates.Drawable;
 import core.basesyntax.templates.Figure;
 
-public class RightTriangle extends Figure implements Drawable {
+public class RightTriangle extends Figure {
     private int sideA;
     private int sideB;
 

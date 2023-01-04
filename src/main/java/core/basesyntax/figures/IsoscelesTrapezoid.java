@@ -1,9 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.templates.Drawable;
 import core.basesyntax.templates.Figure;
 
-public class IsoscelesTrapezoid extends Figure implements Drawable {
+public class IsoscelesTrapezoid extends Figure {
     private int sideA;
     private int sideB;
     private int height;

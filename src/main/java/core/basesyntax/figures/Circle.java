@@ -1,9 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.templates.Drawable;
 import core.basesyntax.templates.Figure;
 
-public class Circle extends Figure implements Drawable {
+public class Circle extends Figure {
     private int radius;
 
     public Circle(String color, int radius) {
