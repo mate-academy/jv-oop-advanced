@@ -1,24 +1,26 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
-    private double a;
-    private double b;
-    private double c;
+    private double side1;
+    private double side2;
+    private double side3;
 
-    public IsoscelesTrapezoid(double a, double b, double c, String color) {
+    public IsoscelesTrapezoid(double side1, double side2, double side3, String color) {
         super(color);
-        this.a = a;
-        this.b = b;
-        this.c = c;
+        this.side1 = side1;
+        this.side2 = side2;
+        this.side3 = side3;
     }
 
     @Override
     public double getArea() {
-        return ((a + b) / 2) * c;
+        return ((side1 + side2) / 2) * side3;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure:IsoscelesTrapezoid " + "Color:" + getColor() + " " + "Area: " + getArea());
+        System.out.println("Figure:IsoscelesTrapezoid " +
+                "Color:" + getColor() +
+                " " + "Area: " + getArea());
     }
 }

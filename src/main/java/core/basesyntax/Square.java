@@ -15,6 +15,8 @@ public class Square extends Figure implements AreaCalculator {
 
     @Override
     public void draw() {
-        System.out.println("Figure:Square " + "Color:" + getColor() + " " + "Area: " + getArea());
+        System.out.println("Figure:Square " +
+                "Color:" + getColor() +
+                " " + "Area: " + getArea());
     }
 }
