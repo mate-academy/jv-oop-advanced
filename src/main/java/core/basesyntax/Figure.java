@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public class Figure {
     private String color;
 
     public Figure(String color) {
@@ -13,5 +13,9 @@ public abstract class Figure {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    void draw() {
+        System.out.println("Empty");
     }
 }
