@@ -24,21 +24,27 @@ public class FigureSupplier {
                 return getSquare();
         }
     }
-    private Circle getCircle(){
-     return new Circle(random.nextInt(SIDE), color.getRandomColor());
+
+    private Circle getCircle() {
+        return new Circle(random.nextInt(SIDE), color.getRandomColor());
     }
-    private IsoscelesTrapezoid getIsoscelesTrapezoid(){
-        return new IsoscelesTrapezoid(random.nextInt(SIDE),random.nextInt(SIDE),random.nextInt(SIDE), color.getRandomColor());
+
+    private IsoscelesTrapezoid getIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(random.nextInt(SIDE), random.nextInt(SIDE), random.nextInt(SIDE), color.getRandomColor());
     }
-    private Rectangle getRectangle (){
-        return new Rectangle(random.nextInt(SIDE),random.nextInt(SIDE), color.getRandomColor());
+
+    private Rectangle getRectangle() {
+        return new Rectangle(random.nextInt(SIDE), random.nextInt(SIDE), color.getRandomColor());
     }
-    private RightTriangle getRightTriangle(){
-        return new RightTriangle(random.nextInt(SIDE),random.nextInt(SIDE), color.getRandomColor());
+
+    private RightTriangle getRightTriangle() {
+        return new RightTriangle(random.nextInt(SIDE), random.nextInt(SIDE), color.getRandomColor());
     }
-    private Square getSquare(){
+
+    private Square getSquare() {
         return new Square(random.nextInt(SIDE), color.getRandomColor());
     }
+
     public Figure getDefaultFigure() {
         return new Circle(SIDE, DEFAULT_COLOR);
     }
