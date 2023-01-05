@@ -27,4 +27,10 @@ public class Square extends Figure {
         return side * side;
     }
 
+    @Override
+    public void draw() {
+        System.out.println(String.format("Figure: square, area:  %.1f sq.units,"
+                            + " side: %.1f units, color: %s",
+                            getArea(), side, getColor().name().toLowerCase()));
+    }
 }

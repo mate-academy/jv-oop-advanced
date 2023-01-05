@@ -12,7 +12,7 @@ public class FigureProgram {
                     ? figureSupplier.getRandomFigure() : figureSupplier.getDefaultFigure();
         }
         for (Figure figure: figures) {
-            System.out.println(figure);
+            figure.draw();
         }
     }
 }

@@ -22,9 +22,9 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String toString() {
-        return String.format("Figure: right triangle, area: %.1f sq.units, "
-                             + "base: %.1f units, color: %s",
-                             getArea(), base, getColor().name().toLowerCase());
+    public void draw() {
+        System.out.println(String.format("Figure: right triangle, area: %.1f sq.units, "
+                                        + "base: %.1f units, color: %s",
+                                        getArea(), base, getColor().name().toLowerCase()));
     }
 }

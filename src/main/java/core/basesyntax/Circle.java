@@ -22,8 +22,9 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String toString() {
-        return String.format("Figure: circle, area: %.1f sq.units, radius: %.1f units, color: %s",
-                getArea(), radius, getColor().name().toLowerCase());
+    public void draw() {
+        System.out.println(String.format("Figure: circle, area: %.1f sq.units,"
+                                + " radius: %.1f units, color: %s",
+                                getArea(), radius, getColor().name().toLowerCase()));
     }
 }

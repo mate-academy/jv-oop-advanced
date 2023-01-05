@@ -32,9 +32,9 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String toString() {
-        return String.format("Figure: rectangle, area: %.1f sq.units, "
-                             + "width: %.1f units, height: %.1f units, color: %s",
-                              getArea(), width, height, getColor().name().toLowerCase());
+    public void draw() {
+        System.out.println(String.format("Figure: rectangle, area: %.1f sq.units, "
+                                + "width: %.1f units, height: %.1f units, color: %s",
+                                getArea(), width, height, getColor().name().toLowerCase()));
     }
 }
