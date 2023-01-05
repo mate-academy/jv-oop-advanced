@@ -1,18 +1,18 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private double SideOne;
-    private double SideTwo;
+    private double sideone;
+    private double sidetwo;
 
-    public Rectangle(double SideOne, double SideTwo, String color) {
+    public Rectangle(double sideone, double sidetwo, String color) {
         super(color);
-        this.SideOne = SideOne;
-        this.SideTwo = SideTwo;
+        this.sideone = sideone;
+        this.sidetwo = sidetwo;
     }
 
     @Override
     public double getArea() {
-        return SideOne * SideTwo;
+        return sideone * sidetwo;
     }
 
     @Override
@@ -22,19 +22,19 @@ public class Rectangle extends Figure {
     }
 
     public void setSideOne(double sideOne) {
-        SideOne = sideOne;
+        sideone = sideOne;
     }
 
     public void setSideTwo(double sideTwo) {
-        SideTwo = sideTwo;
+        sidetwo = sideTwo;
     }
 
     public double getSideOne() {
-        return SideOne;
+        return sideone;
     }
 
     public double getSideTwo() {
-        return SideTwo;
+        return sidetwo;
     }
 
     @Override

@@ -1,18 +1,18 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private double SideOne;
-    private double SideTwo;
+    private double sideone;
+    private double sidetwo;
 
-    public RightTriangle(double SideOne, double SideTwo, String color) {
+    public RightTriangle(double sideone, double sidetwo, String color) {
         super(color);
-        this.SideOne = SideOne;
-        this.SideTwo = SideTwo;
+        this.sideone = sideone;
+        this.sidetwo = sidetwo;
     }
 
     @Override
     public double getArea() {
-        return (SideOne * SideTwo) / 2;
+        return (sideone * sidetwo) / 2;
     }
 
     @Override
@@ -23,19 +23,19 @@ public class RightTriangle extends Figure {
     }
 
     public void setSideOne(double sideOne) {
-        SideOne = sideOne;
+        sideone = sideOne;
     }
 
     public void setSideTwo(double sideTwo) {
-        SideTwo = sideTwo;
+        sidetwo = sideTwo;
     }
 
     public double getSideTwo() {
-        return SideTwo;
+        return sidetwo;
     }
 
     public double getSideOne() {
-        return SideOne;
+        return sideone;
     }
 
     @Override
