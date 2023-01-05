@@ -15,24 +15,7 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure:Circle " + "Color:" + getColor() + " " + "Area: " + getArea());
-    }
-
-    public void setRadius(double radius) {
-        this.radius = radius;
-    }
-
-    public double getRadius() {
-        return radius;
-    }
-
-    @Override
-    public void setColor(String color) {
-        super.setColor(color);
-    }
-
-    @Override
-    public String getColor() {
-        return super.getColor();
+        System.out.println("Figure:Circle " + "Color:"
+                + getColor() + " " + "Area: " + getArea() + " Side: " + radius);
     }
 }

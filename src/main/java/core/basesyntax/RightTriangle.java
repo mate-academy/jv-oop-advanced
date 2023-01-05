@@ -19,32 +19,7 @@ public class RightTriangle extends Figure {
     public void draw() {
         System.out.println("Figure:RightTriangle "
                 + "Color:" + getColor()
-                + " " + "Area: " + getArea());
-    }
-
-    public void setSideOne(double sideOne) {
-        sideone = sideOne;
-    }
-
-    public void setSideTwo(double sideTwo) {
-        sidetwo = sideTwo;
-    }
-
-    public double getSideTwo() {
-        return sidetwo;
-    }
-
-    public double getSideOne() {
-        return sideone;
-    }
-
-    @Override
-    public void setColor(String color) {
-        super.setColor(color);
-    }
-
-    @Override
-    public String getColor() {
-        return super.getColor();
+                + " " + "Area: " + getArea()+ " SideOne: "
+                + sideone + " SideTwo: " + sidetwo);
     }
 }
