@@ -1,20 +1,20 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private double side1;
-    private double side2;
-    private double side3;
+    private double SideOne;
+    private double SideTwo;
+    private double SideThree;
 
-    public IsoscelesTrapezoid(double side1, double side2, double side3, String color) {
+    public IsoscelesTrapezoid(double SideOne, double SideTwo, double SideThree, String color) {
         super(color);
-        this.side1 = side1;
-        this.side2 = side2;
-        this.side3 = side3;
+        this.SideOne = SideOne;
+        this.SideTwo = SideTwo;
+        this.SideThree = SideThree;
     }
 
     @Override
     public double getArea() {
-        return ((side1 + side2) / 2) * side3;
+        return ((SideOne + SideTwo) / 2) * SideThree;
     }
 
     @Override
