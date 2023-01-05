@@ -23,4 +23,38 @@ public class IsoscelesTrapezoid extends Figure {
                 + "Color:" + getColor()
                 + " " + "Area: " + getArea());
     }
+
+    public void setSideOne(double sideOne) {
+        SideOne = sideOne;
+    }
+
+    public void setSideTwo(double sideTwo) {
+        SideTwo = sideTwo;
+    }
+
+    public void setSideThree(double sideThree) {
+        SideThree = sideThree;
+    }
+
+    public double getSideOne() {
+        return SideOne;
+    }
+
+    public double getSideTwo() {
+        return SideTwo;
+    }
+
+    public double getSideThree() {
+        return SideThree;
+    }
+
+    @Override
+    public void setColor(String color) {
+        super.setColor(color);
+    }
+
+    @Override
+    public String getColor() {
+        return super.getColor();
+    }
 }

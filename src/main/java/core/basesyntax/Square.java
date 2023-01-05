@@ -19,4 +19,22 @@ public class Square extends Figure {
                 + "Color:" + getColor()
                 + " " + "Area: " + getArea());
     }
+
+    public void setSide(double side) {
+        this.side = side;
+    }
+
+    public double getSide() {
+        return side;
+    }
+
+    @Override
+    public void setColor(String color) {
+        super.setColor(color);
+    }
+
+    @Override
+    public String getColor() {
+        return super.getColor();
+    }
 }
