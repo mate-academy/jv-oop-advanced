@@ -3,10 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    static final int INDEX = 5;
+    static final int SIDE = 10;
     private static final String DEFAULT_COLOR = String.valueOf(Color.WHITE);
     private final ColorSupplier color = new ColorSupplier();
-    private static final int INDEX = 5;
-    private static final int SIDE = 10;
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
@@ -30,7 +30,8 @@ public class FigureSupplier {
     }
 
     private IsoscelesTrapezoid getIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(random.nextInt(SIDE), random.nextInt(SIDE), random.nextInt(SIDE), color.getRandomColor());
+        return new IsoscelesTrapezoid(random.nextInt(SIDE),
+                random.nextInt(SIDE), random.nextInt(SIDE), color.getRandomColor());
     }
 
     private Rectangle getRectangle() {
@@ -38,7 +39,8 @@ public class FigureSupplier {
     }
 
     private RightTriangle getRightTriangle() {
-        return new RightTriangle(random.nextInt(SIDE), random.nextInt(SIDE), color.getRandomColor());
+        return new RightTriangle(random.nextInt(SIDE),
+                random.nextInt(SIDE), color.getRandomColor());
     }
 
     private Square getSquare() {
