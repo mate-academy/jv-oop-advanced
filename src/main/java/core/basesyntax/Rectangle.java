@@ -27,19 +27,14 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void draw() {
-        System.out.println(this);
-    }
-
-    @Override
     public double getArea() {
         return this.firstSide * this.secondSide;
     }
 
     @Override
-    public String toString() {
-        return "Figure: " + this.getShape() + ", area: " + this.getArea()
+    public void draw() {
+        System.out.println("Figure: " + this.getShape() + ", area: " + this.getArea()
                 + " sq.units, left/right side: " + firstSide + " sq.units, bottom/top side: "
-                + secondSide + " sq.units, color: " + this.getColor();
+                + secondSide + " sq.units, color: " + this.getColor());
     }
 }

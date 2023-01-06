@@ -38,19 +38,14 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println(this);
+        System.out.println("Figure: " + getShape() + ", area: " + getArea()
+                + " sq.units, leg base: " + firstLeg + " sq.units, leg height: "
+                + secondLeg + " sq.units, hypotenuse: " + hypotenuse
+                + " sq.units, color: " + getColor());
     }
 
     @Override
     public double getArea() {
         return this.firstLeg * this.secondLeg * 0.5;
-    }
-
-    @Override
-    public String toString() {
-        return "Figure: " + this.getShape() + ", area: " + this.getArea()
-                + " sq.units, leg base: " + firstLeg + " sq.units, leg height: "
-                + secondLeg + " sq.units, hypotenuse: " + hypotenuse
-                + " sq.units, color: " + this.getColor();
     }
 }
