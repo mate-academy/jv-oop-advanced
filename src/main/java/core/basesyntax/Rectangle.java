@@ -18,7 +18,10 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + name.toLowerCase() + ", color: " + color.toLowerCase() + ", area: " + String.format("%.2f", getArea()) + ", length: " + length + " units," + " width: " + width + " units");
+        System.out.println("Figure: " + name.toLowerCase()
+                + ", color: " + color.toLowerCase() + ", area: "
+                + String.format("%.2f", getArea()) + ", length: "
+                + length + " units," + " width: " + width + " units");
 
     }
 }

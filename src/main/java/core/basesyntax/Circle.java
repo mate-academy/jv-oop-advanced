@@ -19,10 +19,11 @@ public class Circle extends Figure {
         return Math.PI * (radius * radius);
     }
 
-
     @Override
     public void draw() {
-        System.out.println("Figure: " + name.toLowerCase() + ", color: " + color.toLowerCase() + ", area: " + String.format("%.2f", getArea()) + " sq.units," + " radius: " + radius + " units");
-
+        System.out.println("Figure: " + name.toLowerCase()
+                + ", color: " + color.toLowerCase()
+                + ", area: " + String.format("%.2f", getArea())
+                + " sq.units," + " radius: " + radius + " units");
     }
 }

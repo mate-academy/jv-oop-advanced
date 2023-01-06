@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public abstract class Figure implements FigureArea, DrawFigure {
-    String name;
-    String color;
+   protected String name;
+   protected String color;
 
 }
