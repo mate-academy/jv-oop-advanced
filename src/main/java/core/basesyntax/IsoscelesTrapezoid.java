@@ -9,8 +9,8 @@ public class IsoscelesTrapezoid extends Figure {
         this.basisOne = basisOne;
         this.basisTwo = basisTwo;
         this.width = width;
-        this.color = color;
-        this.name = Figures.ISOSCELESTRAPEZOID.name();
+        this.setColor(color);
+        this.setName(Figures.ISOSCELESTRAPEZOID.name());
     }
 
     @Override
@@ -21,7 +21,7 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: isosceles trapezoid, color: "
-                + color.toLowerCase() + ", area: "
+                + getColor().toLowerCase() + ", area: "
                 + String.format("%.2f", getArea()) + " sq.units,"
                 + " basisOne: " + basisOne + " units,"
                 + " basisTwo: " + basisTwo + " units,"

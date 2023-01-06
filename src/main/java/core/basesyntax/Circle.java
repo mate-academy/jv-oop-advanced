@@ -9,8 +9,8 @@ public class Circle extends Figure {
 
     public Circle(int radius, String color) {
         this.radius = radius;
-        this.color = color;
-        this.name = Figures.CIRCLE.name();
+        this.setColor(color);
+        this.setName(Figures.CIRCLE.name());
 
     }
 
@@ -21,8 +21,8 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + name.toLowerCase()
-                + ", color: " + color.toLowerCase()
+        System.out.println("Figure: " + getName().toLowerCase()
+                + ", color: " + getColor().toLowerCase()
                 + ", area: " + String.format("%.2f", getArea())
                 + " sq.units," + " radius: " + radius + " units");
     }

@@ -7,8 +7,8 @@ public class Rectangle extends Figure {
     public Rectangle(int length, int width, String color) {
         this.length = length;
         this.width = width;
-        this.color = color;
-        this.name = Figures.RECTANGLE.name();
+        this.setColor(color);
+        this.setName(Figures.RECTANGLE.name());
     }
 
     @Override
@@ -18,8 +18,8 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + name.toLowerCase()
-                + ", color: " + color.toLowerCase() + ", area: "
+        System.out.println("Figure: " + getName().toLowerCase()
+                + ", color: " + getColor().toLowerCase() + ", area: "
                 + String.format("%.2f", getArea()) + ", length: "
                 + length + " units," + " width: " + width + " units");
 
