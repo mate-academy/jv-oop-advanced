@@ -11,29 +11,29 @@ public class FigureSupplier {
     private Random random = new Random();
     private String color;
 
-    public Figure getCircle() {
+    private Figure getCircle() {
         int radius = random.nextInt(BOUND_NUMBER);
         return new Circle(color, radius);
     }
 
-    public Figure getSquare() {
+    private Figure getSquare() {
         int side = random.nextInt(BOUND_NUMBER);
         return new Square(color, side);
     }
 
-    public Figure getRightTriangle() {
+    private Figure getRightTriangle() {
         int firstLeg = random.nextInt(BOUND_NUMBER);
         int secondLeg = random.nextInt(BOUND_NUMBER);
         return new RightTriangle(color, firstLeg, secondLeg);
     }
 
-    public Figure getRectangle() {
+    private Figure getRectangle() {
         int sideA = random.nextInt(BOUND_NUMBER);
         int sideB = random.nextInt(BOUND_NUMBER);
         return new Rectangle(color, sideA, sideB);
     }
 
-    public Figure getIsoscelesTrapezoid() {
+    private Figure getIsoscelesTrapezoid() {
         int upperSide = random.nextInt(BOUND_NUMBER);
         int downSide = random.nextInt(BOUND_NUMBER);
         int height = random.nextInt(BOUND_NUMBER);
