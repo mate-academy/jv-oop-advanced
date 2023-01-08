@@ -1,6 +1,6 @@
 package core.basesyntax.figure.name;
 
-public enum NameFigure {
+public enum FigureName {
     SQUARE,
     TRIANGLE,
     RECTANGLE,

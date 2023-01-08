@@ -6,7 +6,7 @@ public class FigureNameSupplier {
     private Random random = new Random();
 
     public String getRandomName() {
-        int index = random.nextInt(NameFigure.values().length);
-        return NameFigure.values()[index].name();
+        int index = random.nextInt(FigureName.values().length);
+        return FigureName.values()[index].name();
     }
 }
