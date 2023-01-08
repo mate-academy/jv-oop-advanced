@@ -13,8 +13,9 @@ public class Main {
         Figure[] figures = new Figure[ARR_LENGTH];
 
         for (int i = 0; i < ARR_LENGTH; i++) {
+            String nameFigure = figureNameSupplier.getRandomName();
+
             if (i < ARR_LENGTH / 2) {
-                String nameFigure = figureNameSupplier.getRandomName();
                 Figure figure = figureSupplier.getRandomFigure(nameFigure);
                 figures[i] = figure;
             } else {
