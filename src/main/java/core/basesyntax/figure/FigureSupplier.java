@@ -1,6 +1,7 @@
 package core.basesyntax.figure;
 
 import core.basesyntax.figure.color.ColorSupplier;
+import core.basesyntax.figure.name.FigureNameSupplier;
 import java.util.Random;
 
 public class FigureSupplier {
@@ -8,6 +9,7 @@ public class FigureSupplier {
     private static final int DEFAULT_RADIUS = 10;
     private static final String DEFAULT_COLOR = "white";
     private ColorSupplier colorSupplier = new ColorSupplier();
+    private FigureNameSupplier figureNameSupplier = new FigureNameSupplier();
     private Random random = new Random();
     private String color;
 
@@ -40,9 +42,9 @@ public class FigureSupplier {
         return new IsoscelesTrapezoid(color, upperSide, downSide, height);
     }
 
-    public Figure getRandomFigure(String nameFigure) {
+    public Figure getRandomFigure() {
         color = colorSupplier.getRandomColor();
-        switch (nameFigure) {
+        switch (figureNameSupplier.getRandomName()) {
             case "SQUARE":
                 return getSquare();
             case "TRIANGLE":
