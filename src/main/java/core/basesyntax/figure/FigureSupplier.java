@@ -1,20 +1,15 @@
 package core.basesyntax.figure;
 
 import core.basesyntax.figure.color.ColorSupplier;
-import core.basesyntax.figure.name.RandomName;
 import java.util.Random;
 
 public class FigureSupplier {
-    //Constant
     private static final int BOUND_NUMBER = 10;
-    private static final int RADIUS_CIRCLE = 10;
-    //Object
+    private static final int DEFAULT_RADIUS = 10;
+    private static final String DEFAULT_COLOR = "white";
     private ColorSupplier colorSupplier = new ColorSupplier();
-    private RandomName randomName = new RandomName();
     private Random random = new Random();
-    //Random variables
-    private String color = colorSupplier.getRandomColor();
-    private String nameFigure = randomName.getRandomName();
+    private String color;
 
     public Figure getCircle() {
         int radius = random.nextInt(BOUND_NUMBER);
@@ -46,6 +41,7 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure(String nameFigure) {
+        color = colorSupplier.getRandomColor();
         switch (nameFigure) {
             case "SQUARE":
                 return getSquare();
@@ -62,7 +58,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        String color = "white";
-        return new Circle(color, RADIUS_CIRCLE);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }

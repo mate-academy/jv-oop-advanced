@@ -2,7 +2,7 @@ package core.basesyntax.figure.name;
 
 import java.util.Random;
 
-public class RandomName {
+public class FigureNameSupplier {
     private Random random = new Random();
 
     public String getRandomName() {
