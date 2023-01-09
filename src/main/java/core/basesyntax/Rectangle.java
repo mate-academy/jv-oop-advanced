@@ -21,5 +21,4 @@ public class Rectangle extends Figure {
                 + " sq. units, side A: " + sideA + " units, side B: "
                 + sideB + " color: " + getColor());
     }
-
 }

@@ -21,5 +21,4 @@ public class RightTriangle extends Figure {
                 + " sq. units, first leg: " + firstLeg
                 + " units, second leg: " + secondLeg + " color: " + getColor());
     }
-
 }
