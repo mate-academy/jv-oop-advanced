@@ -5,11 +5,11 @@ import java.util.Random;
 public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier color = new ColorSupplier();
-    private static final int FIGURE_COUNT = 5;
     private final int valueCount = 100;
 
     public Figure getRandomFigure() {
-        switch (random.nextInt(FIGURE_COUNT)) {
+       final int figureCount = 5;
+        switch (random.nextInt(figureCount)) {
             case 0:
                 return getRandomCircle();
             case 1:
