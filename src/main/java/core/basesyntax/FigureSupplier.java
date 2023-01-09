@@ -52,7 +52,7 @@ public class FigureSupplier {
         return new Square(random.nextInt(valueCount), color.getRandomColor());
     }
 
-    private Figure getDefaultFigure() {
+    public Figure getDefaultFigure() {
         final int defaultValue = 10;
         final String white = Color.WHITE.name();
         return new Circle(defaultValue, white);
