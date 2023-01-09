@@ -10,7 +10,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.basisTwo = basisTwo;
         this.width = width;
         this.setColor(color);
-        this.setName(Figures.ISOSCELESTRAPEZOID.name());
     }
 
     @Override

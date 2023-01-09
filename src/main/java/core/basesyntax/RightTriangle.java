@@ -8,8 +8,6 @@ public class RightTriangle extends Figure {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
         this.setColor(color);
-        this.setName(Figures.RIGHTTRIANGLE.name());
-
     }
 
     @Override

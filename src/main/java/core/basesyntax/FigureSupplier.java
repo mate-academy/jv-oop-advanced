@@ -5,37 +5,56 @@ import java.util.Random;
 public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier color = new ColorSupplier();
+    private static final int FIGURE_COUNT = 5;
+    private final int valueCount = 100;
 
     public Figure getRandomFigure() {
-        int figureCount = 5;
-        int rnd = random.nextInt(figureCount);
-        int valueCount = 100;
-        switch (rnd) {
+        switch (random.nextInt(FIGURE_COUNT)) {
             case 0:
-                return new Circle(random.nextInt(valueCount), color.getRandomColor());
+                return getRandomCircle();
             case 1:
-                return new IsoscelesTrapezoid(random.nextInt(valueCount),
-                        random.nextInt(valueCount),
-                        random.nextInt(valueCount),
-                        color.getRandomColor());
+                return getRandomIsoscelesTrapezoid();
             case 2:
-                return new Rectangle(random.nextInt(valueCount),
-                        random.nextInt(valueCount),
-                        color.getRandomColor());
+                return getRandomRectangle();
             case 3:
-                return new RightTriangle(random.nextInt(valueCount),
-                        random.nextInt(valueCount),
-                        color.getRandomColor());
+                return getRandomRightTriangle();
             case 4:
-                return new Square(random.nextInt(valueCount), color.getRandomColor());
+                return getRandomSquare();
             default:
-                getDefaultFigure();
+                return getDefaultFigure();
         }
-        return getDefaultFigure();
     }
 
-    public Figure getDefaultFigure() {
+    private Figure getRandomCircle() {
+        return new Circle(random.nextInt(valueCount), color.getRandomColor());
+    }
+
+    private Figure getRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(random.nextInt(valueCount),
+                random.nextInt(valueCount),
+                random.nextInt(valueCount),
+                color.getRandomColor());
+    }
+
+    private Figure getRandomRectangle() {
+        return new Rectangle(random.nextInt(valueCount),
+                random.nextInt(valueCount),
+                color.getRandomColor());
+    }
+
+    private Figure getRandomRightTriangle() {
+        return new RightTriangle(random.nextInt(valueCount),
+                random.nextInt(valueCount),
+                color.getRandomColor());
+    }
+
+    private Figure getRandomSquare() {
+        return new Square(random.nextInt(valueCount), color.getRandomColor());
+    }
+
+    private Figure getDefaultFigure() {
         final int defaultValue = 10;
-        return new Circle(defaultValue, Color.WHITE.name());
+        final String white = Color.WHITE.name();
+        return new Circle(defaultValue, white);
     }
 }
