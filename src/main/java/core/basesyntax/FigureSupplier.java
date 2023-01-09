@@ -6,9 +6,10 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier color = new ColorSupplier();
     private final int valueCount = 100;
+    private final int figureCount = 5;
 
     public Figure getRandomFigure() {
-       final int figureCount = 5;
+
         switch (random.nextInt(figureCount)) {
             case 0:
                 return getRandomCircle();
