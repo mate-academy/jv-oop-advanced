@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private int firstLeg;
-    private int secondLeg;
-    private int hypotenuse;
+    private final int firstLeg;
+    private final int secondLeg;
+    private final int hypotenuse;
 
     public RightTriangle(Color color, int firstLeg, int secondLeg, int hypotenuse) {
         super(Shape.RIGHT_TRIANGLE, color);
@@ -12,36 +12,12 @@ public class RightTriangle extends Figure {
         this.hypotenuse = hypotenuse;
     }
 
-    public int getFirstLeg() {
-        return firstLeg;
-    }
-
-    public void setFirstLeg(int firstLeg) {
-        this.firstLeg = firstLeg;
-    }
-
-    public int getSecondLeg() {
-        return secondLeg;
-    }
-
-    public void setSecondLeg(int secondLeg) {
-        this.secondLeg = secondLeg;
-    }
-
-    public int getHypotenuse() {
-        return hypotenuse;
-    }
-
-    public void setHypotenuse(int hypotenuse) {
-        this.hypotenuse = hypotenuse;
-    }
-
     @Override
     public void draw() {
         System.out.println("Figure: " + getShape() + ", area: " + getArea()
                 + " sq.units, leg base: " + firstLeg + " sq.units, leg height: "
                 + secondLeg + " sq.units, hypotenuse: " + hypotenuse
-                + " sq.units, color: " + getColor());
+                + " sq.units, color: " + getColor().name().toLowerCase());
     }
 
     @Override
