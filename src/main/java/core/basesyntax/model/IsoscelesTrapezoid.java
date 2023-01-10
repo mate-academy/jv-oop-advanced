@@ -58,5 +58,4 @@ public class IsoscelesTrapezoid extends Figure {
     public void setHeight(int height) {
         this.height = height;
     }
-
 }

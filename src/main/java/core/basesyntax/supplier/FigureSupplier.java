@@ -1,12 +1,12 @@
 package core.basesyntax.supplier;
 
 import core.basesyntax.model.Circle;
+import core.basesyntax.model.Color;
 import core.basesyntax.model.Figure;
 import core.basesyntax.model.IsoscelesTrapezoid;
 import core.basesyntax.model.Rectangle;
 import core.basesyntax.model.RightTriangle;
 import core.basesyntax.model.Square;
-import core.basesyntax.service.Color;
 import java.util.Random;
 
 public class FigureSupplier {
@@ -32,8 +32,9 @@ public class FigureSupplier {
             case 5: {
                 return new IsoscelesTrapezoid();
             }
-            default:
-                return new Circle();
+            default: {
+                return new IsoscelesTrapezoid();
+            }
         }
     }
 
