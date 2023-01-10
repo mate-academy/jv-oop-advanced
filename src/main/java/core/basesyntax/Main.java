@@ -1,5 +1,7 @@
 package core.basesyntax;
 
+import core.basesyntax.model.Figure;
+import core.basesyntax.supplier.FigureSupplier;
 import java.util.Random;
 
 public class Main {

@@ -1,5 +1,7 @@
-package core.basesyntax;
+package core.basesyntax.model;
 
+import core.basesyntax.service.AreaCalculator;
+import core.basesyntax.service.FigurePainter;
 import java.util.Random;
 
 public abstract class Figure implements AreaCalculator, FigurePainter {
