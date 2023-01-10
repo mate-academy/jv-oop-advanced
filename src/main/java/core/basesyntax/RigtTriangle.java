@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RigtTriangle extends Figure implements Area {
+public class RigtTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
     public int getFirstLeg() {return firstLeg; }

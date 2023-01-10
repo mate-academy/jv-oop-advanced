@@ -1,7 +1,7 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements Area {
-    private double radius;
+public class Circle extends Figure {
+    private double radius = 3.0;
     public double getRadius() {return radius; }
     public void setRadius (double radius) {this.radius = radius; }
     @Override
