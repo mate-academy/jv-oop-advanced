@@ -9,43 +9,56 @@ import core.basesyntax.template.Figure;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final Random random;
-    public static final ColorSupplier colorSupplier;
-    public static final int FIGURE_COUNT;
-    public static final int MAX_BALL_NUMBER;
-
-    static {
-        random = new Random();
-        colorSupplier = new ColorSupplier();
-        FIGURE_COUNT = 5;
-        MAX_BALL_NUMBER = 10;
-    }
+    private static final int FIGURE_COUNT = 5;
+    private static final int MAX_LENGTH = 10;
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         switch (random.nextInt(FIGURE_COUNT)) {
             case 1:
-                return new Square(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_BALL_NUMBER) + 1);
+                return getRandomSquare();
             case 2:
-                return new Rectangle(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_BALL_NUMBER) + 1,
-                        random.nextInt(MAX_BALL_NUMBER) + 1);
+                return getRandomRectangle();
             case 3:
-                return new RightTriangle(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_BALL_NUMBER) + 1,
-                        random.nextInt(MAX_BALL_NUMBER) + 1);
+                return getRandomRightTriangle();
             case 4:
-                return new Circle(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_BALL_NUMBER) + 1);
+                return getRandomCircle();
             default:
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_BALL_NUMBER) + 1,
-                        random.nextInt(MAX_BALL_NUMBER) + 1,
-                        random.nextInt(MAX_BALL_NUMBER) + 1);
+                return getRandomIsoscelesTrapezoid();
         }
     }
 
-    public static Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.name(), MAX_BALL_NUMBER);
+    private Square getRandomSquare() {
+        return new Square(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_LENGTH) + 1);
+    }
+
+    private Rectangle getRandomRectangle() {
+        return new Rectangle(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_LENGTH) + 1,
+                random.nextInt(MAX_LENGTH) + 1);
+    }
+
+    private RightTriangle getRandomRightTriangle() {
+        return new RightTriangle(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_LENGTH) + 1,
+                random.nextInt(MAX_LENGTH) + 1);
+    }
+
+    private Circle getRandomCircle() {
+        return new Circle(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_LENGTH) + 1);
+    }
+
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_LENGTH) + 1,
+                random.nextInt(MAX_LENGTH) + 1,
+                random.nextInt(MAX_LENGTH) + 1);
+    }
+
+    public Figure getDefaultFigure() {
+        return new Circle(Color.WHITE.name(), MAX_LENGTH);
     }
 }
