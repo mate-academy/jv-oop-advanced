@@ -8,12 +8,15 @@ public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
 
-    private Figure getRandomCircle() {
-        return new Circle(random.nextInt(bound), colorSupplier.getRandomColor());
-    }
+    private final int defaultRadius = 10;
+    private final String defaultColor = "WHITE";
 
     public Figure getDefaultFigure() {
-        return new Circle(10, "WHITE");
+        return new Circle(defaultRadius, defaultColor);
+    }
+
+    private Figure getRandomCircle() {
+        return new Circle(random.nextInt(bound), colorSupplier.getRandomColor());
     }
 
     private Figure getRandomSquare() {
