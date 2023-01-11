@@ -13,6 +13,7 @@ public class Square extends Figure implements Drawing {
     }
     @Override
     public String toString() {
-        return "Figure: Square, " + "Color: " + this.getColor() + ", Side Size: " + sideSize + ", Area: " + this.getArea();
+        return "Figure: Square, " + "Color: " + this.getColor() + ", Side Size: " + sideSize
+                + ", Area: " + this.getArea();
     }
 }
