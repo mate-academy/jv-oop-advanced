@@ -1,21 +1,11 @@
 package core.basesyntax.model;
 
-import core.basesyntax.supplier.ColorSupplier;
-
 public class IsoscelesTrapezoid extends Figure {
 
     private int sideA;
     private int sideB;
     private int height;
 
-    public IsoscelesTrapezoid() {
-        this.sideA = getRandom().nextInt(100);
-        this.sideB = getRandom().nextInt(100);
-        this.height = getRandom().nextInt(100);
-        setColor(new ColorSupplier().getRandomColor());
-    }
-
-    @Override
     public double getArea() {
         if (sideA > sideB) {
             return (sideA * height) - (sideA - sideB) * height;
@@ -24,9 +14,9 @@ public class IsoscelesTrapezoid extends Figure {
         }
     }
 
-    @Override
     public void draw() {
-        System.out.println(getStringBuilder().append(System.lineSeparator()).append(
+        StringBuilder stringBuilder = new StringBuilder();
+        System.out.println(stringBuilder.append(System.lineSeparator()).append(
                 "This is a ISOSCELES TRAPEZOID ")
                 .append(System.lineSeparator()).append("Color is ").append(getColor())
                 .append(System.lineSeparator()).append("Side A = ").append(sideA)

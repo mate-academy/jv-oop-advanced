@@ -11,26 +11,45 @@ import java.util.Random;
 
 public class FigureSupplier {
 
-    private final Random random = new Random();
-
     public Figure getRandomFigure() {
         int number;
+        Random random = new Random();
+        ColorSupplier colorSupplier = new ColorSupplier();
         number = random.nextInt(5);
         switch (number) {
             case 1: {
-                return new Circle();
+                Circle circle = new Circle();
+                circle.setRadius(random.nextInt(100));
+                circle.setColor(colorSupplier.getRandomColor());
+                return circle;
             }
             case 2: {
-                return new Rectangle();
+                Rectangle rectangle = new Rectangle();
+                rectangle.setSideA(random.nextInt(100));
+                rectangle.setSideB(random.nextInt(100));
+                rectangle.setColor(colorSupplier.getRandomColor());
+                return rectangle;
             }
             case 3: {
-                return new Square();
+                Square square = new Square();
+                square.setSide(random.nextInt(100));
+                square.setColor(colorSupplier.getRandomColor());
+                return square;
             }
             case 4: {
-                return new RightTriangle();
+                RightTriangle rightTriangle = new RightTriangle();
+                rightTriangle.setFirstLeg(random.nextInt(100));
+                rightTriangle.setSecondLeg(random.nextInt(100));
+                rightTriangle.setColor(colorSupplier.getRandomColor());
+                return rightTriangle;
             }
             case 5: {
-                return new IsoscelesTrapezoid();
+                IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
+                isoscelesTrapezoid.setSideA(random.nextInt(100));
+                isoscelesTrapezoid.setSideB(random.nextInt(100));
+                isoscelesTrapezoid.setHeight(random.nextInt(100));
+                isoscelesTrapezoid.setColor(colorSupplier.getRandomColor());
+                return isoscelesTrapezoid;
             }
             default: {
                 return new IsoscelesTrapezoid();

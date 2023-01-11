@@ -6,10 +6,10 @@ import java.util.Random;
 
 public class Main {
     public static final int ARRAY_SIZE = 6;
-    private static Random random = new Random();
-    private static FigureSupplier figureSupplier = new FigureSupplier();
 
     public static void main(String[] args) {
+        Random random = new Random();
+        FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figures = new Figure[ARRAY_SIZE];
 
         for (int i = 0; i < 3; i++) {
