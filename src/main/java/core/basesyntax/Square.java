@@ -8,10 +8,6 @@ public class Square extends Figure implements Drawing {
         this.sideSize = sideSize;
     }
     @Override
-    public void draw() {
-        System.out.println(this);
-    }
-    @Override
     public double getArea() {
         return sideSize * sideSize;
     }

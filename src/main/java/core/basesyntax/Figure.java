@@ -10,6 +10,4 @@ public abstract class Figure {
         return color;
     }
     public abstract double getArea();
-
-
 }

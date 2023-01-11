@@ -1,5 +1,7 @@
 package core.basesyntax;
 
 public interface Drawing {
-    void draw();
+    default void draw() {
+        System.out.println(this);
+    }
 }
