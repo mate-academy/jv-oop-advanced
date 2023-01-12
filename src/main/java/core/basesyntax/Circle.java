@@ -1,8 +1,12 @@
 package core.basesyntax;
 
-/**
- * Feel free to remove this class and create your own.
- */
-public class Circle extends Figure {
+import java.awt.*;
 
+public class Circle extends Figure {
+    private double radius;
+
+    public Circle(Color color, double radius) {
+        super(color);
+        this.radius = radius;
+    }
 }
