@@ -3,6 +3,6 @@ package core.basesyntax;
 /**
  * Feel free to remove this class and create your own.
  */
-public class Circle {
+public class Circle extends Figure {
 
 }

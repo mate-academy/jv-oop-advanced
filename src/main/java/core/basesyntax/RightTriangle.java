@@ -1,4 +1,4 @@
 package core.basesyntax;
 
-public class RightTriangle {
+public class RightTriangle extends Figure{
 }

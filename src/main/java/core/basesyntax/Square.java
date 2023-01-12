@@ -1,4 +1,4 @@
 package core.basesyntax;
 
-public class Square {
+public class Square extends Figure{
 }
