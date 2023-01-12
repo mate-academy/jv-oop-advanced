@@ -1,7 +1,6 @@
 package core.basesyntax.model;
 
 public class IsoscelesTrapezoid extends Figure {
-
     private int sideA;
     private int sideB;
     private int height;
@@ -9,9 +8,8 @@ public class IsoscelesTrapezoid extends Figure {
     public double getArea() {
         if (sideA > sideB) {
             return (sideA * height) - (sideA - sideB) * height;
-        } else {
-            return (sideB * height) - (sideB - sideA) * height;
         }
+            return (sideB * height) - (sideB - sideA) * height;
     }
 
     public void draw() {

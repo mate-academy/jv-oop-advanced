@@ -10,13 +10,14 @@ import core.basesyntax.model.Square;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int FIGURE_COUNT = 5;
     private static final int DEFAULT_RADIUS = 10;
     private static final String DEFAULT_COLOR = Color.WHITE.name();
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int number = random.nextInt(5);
+        int number = random.nextInt(FIGURE_COUNT);
         switch (number) {
             case 0: {
                 return getRandomCircle();
@@ -34,7 +35,7 @@ public class FigureSupplier {
                 return getRandomIsoscelesTrapezoid();
             }
             default: {
-                return new IsoscelesTrapezoid();
+                return getRandomIsoscelesTrapezoid();
             }
         }
     }

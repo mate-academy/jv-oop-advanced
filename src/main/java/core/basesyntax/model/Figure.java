@@ -1,13 +1,12 @@
 package core.basesyntax.model;
 
 import core.basesyntax.service.AreaCalculator;
-import core.basesyntax.service.FigurePainter;
+import core.basesyntax.service.Painter;
 
-public abstract class Figure implements AreaCalculator, FigurePainter {
+public abstract class Figure implements AreaCalculator, Painter {
     private String color;
 
     public Figure() {
-
     }
 
     public String getColor() {
