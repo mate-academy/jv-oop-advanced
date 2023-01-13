@@ -151,23 +151,23 @@ class FigureSupplier implements Figures_Beh {
         Figure fg = null;
         switch (figure_shape[random.nextInt(figure_shape.length - 1)].toString()) {
         case "Square": {
-            fg = new Square(random.nextDouble((double)100), cs);
+            fg = new Square(random.nextDouble()*100, cs);
             break;
         }
         case "Rectangle": {
-            fg = new Rectangle(random.nextDouble(100.0), random.nextDouble(100.0), cs);
+            fg = new Rectangle(random.nextDouble()*100, random.nextDouble()*100, cs);
             break;
         }
         case "RightTriangle": {
-            fg = new RightTriangle(random.nextDouble(100.0), random.nextDouble(100.0), cs);
+            fg = new RightTriangle(random.nextDouble()*100, random.nextDouble()*100, cs);
             break;
         }
         case "Circle": {
-            fg = new Circle(random.nextDouble(100.0), cs);
+            fg = new Circle(random.nextDouble()*100, cs);
             break;
         }
         case "IsoscelesTrapezoid": {
-            fg = new IsoscelesTrapezoid(random.nextDouble(100.0), random.nextDouble(100.0), random.nextDouble(100.0), cs);
+            fg = new IsoscelesTrapezoid(random.nextDouble()*100, random.nextDouble()*100, random.nextDouble()*100, cs);
             break;
         }
 
