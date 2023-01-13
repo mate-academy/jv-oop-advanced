@@ -1,6 +1,7 @@
-package core.basesyntax;
+package core.basesyntax.figures;
 
-import java.awt.*;
+import core.basesyntax.Color;
+import core.basesyntax.Figure;
 
 public class IsoscelesTrapezoid extends Figure {
     private double topBase;
@@ -40,13 +41,13 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double getArea() {
-        return Math.sqrt(Math.pow(bottomBase + topBase, 2)
+        return Math.round(Math.sqrt(Math.pow(bottomBase + topBase, 2)
                 * (bottomBase - topBase + 2 * leg)
-                * (topBase - bottomBase + 2 * leg)) / 4;
+                * (topBase - bottomBase + 2 * leg)) / 4);
     }
 
     @Override
-    public String draw() {
+    public String toString() {
         return "Figure: isosceles trapezoid, " + getArea() + " sq.units, "
                 + "top base: " + topBase + " units, "
                 + "bottom base: " + bottomBase + " units, "

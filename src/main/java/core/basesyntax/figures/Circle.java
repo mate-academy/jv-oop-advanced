@@ -1,6 +1,7 @@
-package core.basesyntax;
+package core.basesyntax.figures;
 
-import java.awt.*;
+import core.basesyntax.Color;
+import core.basesyntax.Figure;
 
 public class Circle extends Figure {
     private double radius;
@@ -20,11 +21,11 @@ public class Circle extends Figure {
 
     @Override
     public double getArea() {
-        return Math.PI * radius * radius;
+        return Math.round(Math.PI * radius * radius);
     }
 
     @Override
-    public String draw() {
+    public String toString() {
         return "Figure: circle, " + getArea() + " sq.units, "
                 + "radius: " + radius + " units, "
                 + "color: " + getColor();

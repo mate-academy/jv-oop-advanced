@@ -1,6 +1,7 @@
-package core.basesyntax;
+package core.basesyntax.figures;
 
-import java.awt.*;
+import core.basesyntax.Color;
+import core.basesyntax.Figure;
 
 public class Square extends Figure {
     private double side;
@@ -24,8 +25,8 @@ public class Square extends Figure {
     }
 
     @Override
-    public String draw() {
-        return "Figure: isosceles trapezoid, " + getArea() + " sq.units, "
+    public String toString() {
+        return "Figure: square, " + getArea() + " sq.units, "
                 + "side: " + side + " units, "
                 + "color: " + getColor();
     }

@@ -1,6 +1,7 @@
-package core.basesyntax;
+package core.basesyntax.figures;
 
-import java.awt.*;
+import core.basesyntax.Color;
+import core.basesyntax.Figure;
 
 public class Rectangle extends Figure {
     private double width;
@@ -34,7 +35,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String draw() {
+    public String toString() {
         return "Figure: rectangle, " + getArea() + " sq.units, "
                 + "width: " + width + " units, "
                 + "length: " + length + " units, "

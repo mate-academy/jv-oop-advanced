@@ -1,6 +1,7 @@
-package core.basesyntax;
+package core.basesyntax.figures;
 
-import java.awt.*;
+import core.basesyntax.Color;
+import core.basesyntax.Figure;
 
 public class RightTriangle extends Figure {
     private double firstLeg;
@@ -34,7 +35,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String draw() {
+    public String toString() {
         return "Figure: right triangle, " + getArea() + " sq.units, "
                 + "first leg: " + firstLeg + " units, "
                 + "second leg " + secondLeg + " units, "

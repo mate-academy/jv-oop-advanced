@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.awt.*;
-
 public abstract class Figure implements Drawable {
     private Color color;
 
@@ -11,11 +9,15 @@ public abstract class Figure implements Drawable {
 
     public abstract double getArea();
 
-    public Color getColor() {
-        return color;
+    public String getColor() {
+        return color.name();
     }
 
     public void setColor(Color color) {
         this.color = color;
+    }
+
+    public void draw() {
+        System.out.println(this);
     }
 }
