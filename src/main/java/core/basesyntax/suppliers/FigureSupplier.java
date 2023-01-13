@@ -14,6 +14,7 @@ public class FigureSupplier {
     public static final int NUMBER_OF_FIGURES = 5;
     public static final Figure DEFAULT_FIGURE = new Circle(Color.WHITE, 10);
     private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
         int number = getRandomInt(NUMBER_OF_FIGURES);
@@ -65,6 +66,6 @@ public class FigureSupplier {
     }
 
     private int getRandomInt(int maxNumber) {
-        return new Random().nextInt(1, maxNumber + 1);
+        return random.nextInt(maxNumber) + 1;
     }
 }
