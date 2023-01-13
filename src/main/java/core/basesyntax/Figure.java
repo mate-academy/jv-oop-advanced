@@ -16,8 +16,4 @@ public abstract class Figure implements Drawable {
     public void setColor(Color color) {
         this.color = color;
     }
-
-    public void draw() {
-        System.out.println(this);
-    }
 }
