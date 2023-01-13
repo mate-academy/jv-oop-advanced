@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.awt.*;
 
-public class Circle extends Figure {
+public class Circle extends Figure implements Drawable {
     private double radius;
 
     public Circle(Color color, double radius) {
@@ -16,5 +16,15 @@ public class Circle extends Figure {
 
     public void setRadius(double radius) {
         this.radius = radius;
+    }
+
+    @Override
+    public String draw() {
+        return null;
+    }
+
+    @Override
+    public double getArea() {
+        return 0;
     }
 }

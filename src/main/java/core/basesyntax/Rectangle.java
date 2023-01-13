@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.awt.*;
 
-public class Rectangle extends Figure {
+public class Rectangle extends Figure implements Drawable {
     private double width;
     private double length;
 
@@ -26,5 +26,15 @@ public class Rectangle extends Figure {
 
     public void setLength(double length) {
         this.length = length;
+    }
+
+    @Override
+    public double getArea() {
+        return 0;
+    }
+
+    @Override
+    public String draw() {
+        return null;
     }
 }

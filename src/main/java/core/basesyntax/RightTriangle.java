@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.awt.*;
 
-public class RightTriangle extends Figure {
+public class RightTriangle extends Figure implements Drawable{
     private double firstLeg;
     private double secondLeg;
 
@@ -26,5 +26,15 @@ public class RightTriangle extends Figure {
 
     public void setSecondLeg(double secondLeg) {
         this.secondLeg = secondLeg;
+    }
+
+    @Override
+    public double getArea() {
+        return 0;
+    }
+
+    @Override
+    public String draw() {
+        return null;
     }
 }

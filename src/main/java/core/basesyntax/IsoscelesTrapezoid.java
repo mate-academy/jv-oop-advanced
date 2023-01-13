@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.awt.*;
 
-public class IsoscelesTrapezoid extends Figure {
+public class IsoscelesTrapezoid extends Figure implements Drawable{
     private double topBase;
     private double bottomBase;
     private double leg;
@@ -36,5 +36,15 @@ public class IsoscelesTrapezoid extends Figure {
 
     public void setLeg(double leg) {
         this.leg = leg;
+    }
+
+    @Override
+    public double getArea() {
+        return 0;
+    }
+
+    @Override
+    public String draw() {
+        return null;
     }
 }
