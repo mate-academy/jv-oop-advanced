@@ -151,7 +151,7 @@ class FigureSupplier implements Figures_Beh {
         Figure fg = null;
         switch (figure_shape[random.nextInt(figure_shape.length - 1)].toString()) {
         case "Square": {
-            fg = new Square(random.nextDouble(100.0), cs);
+            fg = new Square(random.nextDouble((double)100), cs);
             break;
         }
         case "Rectangle": {
