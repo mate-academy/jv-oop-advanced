@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.awt.*;
 
-public class IsoscelesTrapezoid extends Figure implements Drawable{
+public class IsoscelesTrapezoid extends Figure implements Drawable {
     private double topBase;
     private double bottomBase;
     private double leg;
@@ -40,7 +40,9 @@ public class IsoscelesTrapezoid extends Figure implements Drawable{
 
     @Override
     public double getArea() {
-        return 0;
+        return Math.sqrt(Math.pow(bottomBase + topBase, 2)
+                * (bottomBase - topBase + 2 * leg)
+                * (topBase - bottomBase + 2 * leg)) / 4;
     }
 
     @Override

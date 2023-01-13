@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.awt.*;
 
-public class RightTriangle extends Figure implements Drawable{
+public class RightTriangle extends Figure implements Drawable {
     private double firstLeg;
     private double secondLeg;
 
@@ -30,7 +30,7 @@ public class RightTriangle extends Figure implements Drawable{
 
     @Override
     public double getArea() {
-        return 0;
+        return (firstLeg * secondLeg) / 2;
     }
 
     @Override

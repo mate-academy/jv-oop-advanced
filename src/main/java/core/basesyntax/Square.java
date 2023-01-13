@@ -20,7 +20,7 @@ public class Square extends Figure implements Drawable {
 
     @Override
     public double getArea() {
-        return 0;
+        return side * side;
     }
 
     @Override

@@ -30,7 +30,7 @@ public class Rectangle extends Figure implements Drawable {
 
     @Override
     public double getArea() {
-        return 0;
+        return this.width * this.length;
     }
 
     @Override

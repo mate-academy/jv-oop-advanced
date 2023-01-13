@@ -25,6 +25,6 @@ public class Circle extends Figure implements Drawable {
 
     @Override
     public double getArea() {
-        return 0;
+        return Math.PI * radius * radius;
     }
 }
