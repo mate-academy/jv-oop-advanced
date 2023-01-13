@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.awt.*;
 
-public abstract class Figure {
+public abstract class Figure implements Drawable {
     private Color color;
 
     public Figure(Color color) {
@@ -10,8 +10,6 @@ public abstract class Figure {
     }
 
     public abstract double getArea();
-
-    public abstract String draw();
 
     public Color getColor() {
         return color;

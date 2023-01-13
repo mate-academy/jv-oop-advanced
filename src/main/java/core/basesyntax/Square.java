@@ -25,6 +25,8 @@ public class Square extends Figure {
 
     @Override
     public String draw() {
-        return null;
+        return "Figure: isosceles trapezoid, " + getArea() + " sq.units, "
+                + "side: " + side + " units, "
+                + "color: " + getColor();
     }
 }

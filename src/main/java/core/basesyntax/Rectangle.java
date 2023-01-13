@@ -35,6 +35,9 @@ public class Rectangle extends Figure {
 
     @Override
     public String draw() {
-        return null;
+        return "Figure: rectangle, " + getArea() + " sq.units, "
+                + "width: " + width + " units, "
+                + "length: " + length + " units, "
+                + "color: " + getColor();
     }
 }
