@@ -9,7 +9,7 @@ public class IsoscelesTrapezoid extends Figure {
         if (sideA > sideB) {
             return (sideA * height) - (sideA - sideB) * height;
         }
-            return (sideB * height) - (sideB - sideA) * height;
+        return (sideB * height) - (sideB - sideA) * height;
     }
 
     public void draw() {
