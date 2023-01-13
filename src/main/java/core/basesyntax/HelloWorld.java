@@ -222,7 +222,7 @@ class ColorSupplier {
     }
 }
 
-static public class HelloWorld {
+public class HelloWorld {
   public static void main(String[] args) {
 
         Figure[] figures_arr = new Figure[6];
