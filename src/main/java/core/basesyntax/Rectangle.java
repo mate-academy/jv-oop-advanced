@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.awt.*;
 
-public class Rectangle extends Figure implements Drawable {
+public class Rectangle extends Figure {
     private double width;
     private double length;
 

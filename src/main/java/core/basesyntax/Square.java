@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.awt.*;
 
-public class Square extends Figure implements Drawable {
+public class Square extends Figure {
     private double side;
 
     public Square(Color color, double side) {
