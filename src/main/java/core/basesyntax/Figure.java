@@ -1,22 +1,24 @@
 package core.basesyntax;
 
-public class Figure implements PrintableInfo, SetableArea {
-    private String name;
-    private String color;
-
+public class Figure implements Drawable, AreaCalculator {
+    private Color color;
     private double area;
 
-    public Figure(String name, String color) {
-        this.name = name;
+    public Figure(Color color) {
         this.color = color;
     }
 
-    public void printInfoAboutFigures() {
-        System.out.print("Figure: " + name + ", " + "color: " + color
+    public void draw() {
+        System.out.print(", " + "color: " + color
                 + ", " + "area: " + area + " square units, ");
     }
 
     public void setArea(double area) {
         this.area = area;
+    }
+
+    @Override
+    public double getArea() {
+        return this.area;
     }
 }
