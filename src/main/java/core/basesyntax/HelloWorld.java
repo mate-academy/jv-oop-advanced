@@ -134,7 +134,7 @@ public class HelloWorld {
     }
 
     class FigureSupplier implements FiguresBeh {
-        enum FiguresShape {
+        static enum FiguresShape {
             Square,
             Rectangle,
             RightTriangle,
@@ -186,7 +186,7 @@ public class HelloWorld {
     }
 
     class ColorSupplier {
-        enum Colors {
+        static enum Colors {
             White,
             Aquamarine,
             Azure,
