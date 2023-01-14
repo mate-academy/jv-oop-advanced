@@ -1,4 +1,42 @@
 import java.util.Random;
+enum FiguresShape {
+    Square,
+    Rectangle,
+    RightTriangle,
+    Circle,
+    IsoscelesTrapezoid;
+}
+enum Colors {
+    White,
+    Aquamarine,
+    Azure,
+    BurlyWood,
+    CadetBlue,
+    Gainsboro,
+    Gold,
+    Gray,
+    Khaki,
+    LawnGreen,
+    LightGreen,
+    LightSkyBlue,
+    Linen,
+    MediumOrchid,
+    MediumPurple,
+    MistyRose,
+    Olive,
+    OliveDrab,
+    Orange,
+    OrangeRed,
+    Orchid,
+    PaleTurquoise,
+    Peru,
+    Pink,
+    Plum,
+    RoyalBlue,
+    SandyBrown,
+    SeaGreen,
+    SteelBlue;
+}
 
 public class HelloWorld {
     interface FiguresBeh {
@@ -134,13 +172,6 @@ public class HelloWorld {
     }
 
     class FigureSupplier implements FiguresBeh {
-        static enum FiguresShape {
-            Square,
-            Rectangle,
-            RightTriangle,
-            Circle,
-            IsoscelesTrapezoid;
-        }
 
         private ColorSupplier cs;
 
@@ -186,37 +217,6 @@ public class HelloWorld {
     }
 
     class ColorSupplier {
-        static enum Colors {
-            White,
-            Aquamarine,
-            Azure,
-            BurlyWood,
-            CadetBlue,
-            Gainsboro,
-            Gold,
-            Gray,
-            Khaki,
-            LawnGreen,
-            LightGreen,
-            LightSkyBlue,
-            Linen,
-            MediumOrchid,
-            MediumPurple,
-            MistyRose,
-            Olive,
-            OliveDrab,
-            Orange,
-            OrangeRed,
-            Orchid,
-            PaleTurquoise,
-            Peru,
-            Pink,
-            Plum,
-            RoyalBlue,
-            SandyBrown,
-            SeaGreen,
-            SteelBlue;
-        }
 
         public String getRandomColor() {
             Random random = new Random();
