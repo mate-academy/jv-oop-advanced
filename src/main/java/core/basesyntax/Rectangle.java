@@ -12,12 +12,12 @@ public class Rectangle extends Figure {
 
     @Override
     public String toString() {
-        return "Rectangle {" +
-                "sideA: " + sideA + " units" +
-                ", sideB: " + sideB + " units" +
-                ", color: " + color +
-                ", area: " + getArea() + " sq.units" +
-                '}';
+        return "Rectangle {"
+                + "sideA: " + sideA + " units"
+                + ", sideB: " + sideB + " units"
+                + ", color: " + getColor()
+                + ", area: " + getArea() + " sq.units"
+                + '}';
     }
 
     @Override

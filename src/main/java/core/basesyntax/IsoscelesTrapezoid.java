@@ -14,13 +14,13 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String toString() {
-        return "IsoscelesTrapezoid {" +
-                "height: " + height + " units" +
-                ", basis1: " + basis1 + " units" +
-                ", basis2: " + basis2 + " units" +
-                ", color: " + color +
-                ", area: " + getArea() + " sq.units" +
-                '}';
+        return "IsoscelesTrapezoid {"
+                + "height: " + height + " units"
+                + ", basis1: " + basis1 + " units"
+                + ", basis2: " + basis2 + " units"
+                + ", color: " + getColor()
+                + ", area: " + getArea() + " sq.units"
+                + '}';
     }
 
     @Override

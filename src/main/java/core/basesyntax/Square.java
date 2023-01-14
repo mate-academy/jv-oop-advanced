@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Square extends Figure {
     private int side;
 
@@ -9,13 +7,14 @@ public class Square extends Figure {
         super(color);
         this.side = getRandom().nextInt(Max_Value);
     }
+
     @Override
     public String toString() {
-        return "Square {" +
-                "side: " + side + " units" +
-                ", color: " + color +
-                ", area: " + getArea() + " sq.units" +
-                '}';
+        return "Square {"
+                + "side: " + side + " units"
+                + ", color: " + getColor()
+                + ", area: " + getArea() + " sq.units"
+                + '}';
     }
 
     @Override

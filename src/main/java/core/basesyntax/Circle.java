@@ -12,7 +12,7 @@ public class Circle extends Figure {
     public String toString() {
         return "Circle {" +
                 "radius: " + radius + " units" +
-                ", color: " + color +
+                ", color: " + getColor() +
                 ", area: " + getArea() + " sq.units" +
                 '}';
     }
