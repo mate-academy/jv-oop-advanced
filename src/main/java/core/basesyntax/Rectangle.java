@@ -6,17 +6,17 @@ public class Rectangle extends Figure {
 
     public Rectangle(Color color, int sideA, int sideB) {
         super(color);
-        this.sideA = random.nextInt(Max_Value);
-        this.sideB = random.nextInt(Max_Value);
+        this.sideA = getRandom().nextInt(Max_Value);
+        this.sideB = getRandom().nextInt(Max_Value);
     }
 
     @Override
     public String toString() {
-        return "Rectangle{" +
-                "sideA=" + sideA +
-                ", sideB=" + sideB +
-                ", color=" + color +
-                ", area=" + getArea() +
+        return "Rectangle {" +
+                "sideA: " + sideA + " units" +
+                ", sideB: " + sideB + " units" +
+                ", color: " + color +
+                ", area: " + getArea() + " sq.units" +
                 '}';
     }
 

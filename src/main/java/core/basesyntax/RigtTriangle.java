@@ -6,17 +6,17 @@ public class RigtTriangle extends Figure {
 
     public RigtTriangle(Color color, int firstLeg, int secondLeg) {
         super(color);
-        this.firstLeg = random.nextInt(Max_Value);
-        this.secondLeg = random.nextInt(Max_Value);
+        this.firstLeg = getRandom().nextInt(Max_Value);
+        this.secondLeg = getRandom().nextInt(Max_Value);
     }
 
     @Override
     public String toString() {
-        return "RigtTriangle{" +
-                "firstLeg=" + firstLeg +
-                ", secondLeg=" + secondLeg +
-                ", color=" + color +
-                ", area=" + getArea() +
+        return "RigtTriangle {" +
+                "firstLeg: " + firstLeg + " units" +
+                ", secondLeg: " + secondLeg + " units" +
+                ", color: " + color +
+                ", area: " + getArea() + " sq.units" +
                 '}';
     }
 

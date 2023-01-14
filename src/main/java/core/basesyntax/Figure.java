@@ -7,7 +7,9 @@ public abstract class Figure implements Area {
     public Figure (Color color) {
         this.color = color;
     }
-    public static final int Figure_Count = 6;
-    public static final int Max_Value = 20;
-    Random random = new Random();
+    public static final int Max_Value = 25;
+    private static final Random random = new Random();
+    public Random getRandom() {
+        return random;
+    }
 }

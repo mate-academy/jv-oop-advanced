@@ -5,15 +5,15 @@ public class Circle extends Figure {
 
     public Circle(Color color, int radius) {
         super(color);
-        this.radius = random.nextInt(Max_Value);
+        this.radius = getRandom().nextInt(Max_Value);
     }
 
     @Override
     public String toString() {
-        return "Circle{" +
-                "radius=" + radius +
-                ", color=" + color +
-                ", area=" + getArea() +
+        return "Circle {" +
+                "radius: " + radius + " units" +
+                ", color: " + color +
+                ", area: " + getArea() + " sq.units" +
                 '}';
     }
 
