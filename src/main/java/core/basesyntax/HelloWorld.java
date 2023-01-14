@@ -1,3 +1,5 @@
+package core.basesyntax;
+
 import java.util.Random;
 
 public class HelloWorld {
@@ -100,8 +102,9 @@ public class HelloWorld {
         @Override
         public void draw() {
             System.out.println(this.getClass().getSimpleName() + ": square, area: " +
-                String.format("%.2f", square) + " sq.units, side1: " + String.format("%.2f", side1
-                + ", side2: " + String.format("%.2f", side2) + " units, color: " + color);
+                String.format("%.2f", square) + " sq.units, side1: " + 
+                String.format("%.2f", side1 + ", side2: " + 
+                String.format("%.2f", side2) + " units, color: " + color);
         }
     }
 
