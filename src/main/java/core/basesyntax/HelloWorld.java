@@ -103,7 +103,7 @@ public class HelloWorld {
         public void draw() {
             System.out.println(this.getClass().getSimpleName() + ": square, area: " +
                 String.format("%.2f", square) + " sq.units, side1: " + 
-                String.format("%.2f", side1 + ", side2: " + 
+                String.format("%.2f", side1) + ", side2: " + 
                 String.format("%.2f", side2) + " units, color: " + color);
         }
     }
