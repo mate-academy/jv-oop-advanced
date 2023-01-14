@@ -35,6 +35,7 @@ public class HelloWorld {
         SeaGreen,
         SteelBlue;
     }
+  
     static enum FiguresShape {
         Square,
         Rectangle,
@@ -44,13 +45,11 @@ public class HelloWorld {
     }
 
     interface FiguresBeh {
-
         final String default_color = "White";
 
         // all are the abstract methods.
         Figure getRandomFigure();
         Figure getDefaultFigure();
-
     }
 
     abstract class Figure {
@@ -82,9 +81,9 @@ public class HelloWorld {
 
         @Override
         public void draw() {
-            System.out.println(this.getClass().getSimpleName() + ": square, area: " +
-                String.format("%.2f", square) + " sq.units, side: " +
-                String.format("%.2f", side) + " units, color: " + color);
+            System.out.println(this.getClass().getSimpleName() + ": square, area: "
+            + String.format("%.2f", square) + " sq.units, side: "
+            + String.format("%.2f", side) + " units, color: " + color);
         }
     }
 
@@ -101,10 +100,10 @@ public class HelloWorld {
 
         @Override
         public void draw() {
-            System.out.println(this.getClass().getSimpleName() + ": square, area: " +
-                String.format("%.2f", square) + " sq.units, side1: " + 
-                String.format("%.2f", side1) + ", side2: " + 
-                String.format("%.2f", side2) + " units, color: " + color);
+            System.out.println(this.getClass().getSimpleName() + ": square, area: "
+            + String.format("%.2f", square) + " sq.units, side1: "
+            + String.format("%.2f", side1) + ", side2: "
+            + String.format("%.2f", side2) + " units, color: " + color);
         }
     }
 
@@ -130,9 +129,9 @@ public class HelloWorld {
 
         @Override
         public void draw() {
-            System.out.println(this.getClass().getSimpleName() + ": square, area: " +
-                String.format("%.2f", square) + " sq.units, radius: " + String.format("%.2f", radius) +
-                " units, color: " + color);
+            System.out.println(this.getClass().getSimpleName() + ": square, area: "
+            + String.format("%.2f", square) + " sq.units, radius: " + String.format("%.2f", radius)
+            + " units, color: " + color);
         }
     }
 
@@ -149,10 +148,10 @@ public class HelloWorld {
 
         @Override
         public void draw() {
-            System.out.println(this.getClass().getSimpleName() + ": square, area: " +
-                String.format("%.2f", square) + " sq.units, firstLeg: " +
-                String.format("%.2f", firstLeg) + ", secondLeg: " +
-                String.format("%.2f", secondLeg) + " units, color: " + color);
+            System.out.println(this.getClass().getSimpleName() + ": square, area: "
+            + String.format("%.2f", square) + " sq.units, firstLeg: "
+            + String.format("%.2f", firstLeg) + ", secondLeg: "
+            + String.format("%.2f", secondLeg) + " units, color: " + color);
         }
     }
 
@@ -171,10 +170,10 @@ public class HelloWorld {
 
         @Override
         public void draw() {
-            System.out.println(this.getClass().getSimpleName() + ": square, area: " +
-                String.format("%.2f", square) + " sq.units, firstLeg: " + String.format("%.2f", firstLeg) +
-                ", secondLeg: " + String.format("%.2f", secondLeg) + ", height: " +
-                String.format("%.2f", height) + " units, color: " + color);
+            System.out.println(this.getClass().getSimpleName() + ": square, area: "
+            + String.format("%.2f", square) + " sq.units, firstLeg: " + String.format("%.2f", firstLeg)
+            + ", secondLeg: " + String.format("%.2f", secondLeg) + ", height: "
+            + String.format("%.2f", height) + " units, color: " + color);
         }
     }
 
