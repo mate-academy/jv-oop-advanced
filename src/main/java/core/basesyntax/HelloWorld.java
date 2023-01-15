@@ -53,23 +53,39 @@ public class HelloWorld {
         Figure getDefaultFigure();
     }
 
-    abstract class Figure {
+    abstract class Figure implements FiguresBeh {
         protected double square;
         protected String color;
         private ColorSupplier cs;
+        private FigureSupplier fs;
 
         public Figure(ColorSupplier cs) {
             this.cs = cs;
             this.color = this.cs.getRandomColor();
+            this.fs = new FigureSupplier();
         }
 
         public Figure(String color) {
             this.cs = new ColorSupplier();
             this.color = color;
+            this.fs = null;
+        }
+        
+        @Override
+        public Figure getRandomFigure() {
+            
+            return fs != null ? fs.getRandomFigure() : null;
+        }
+        
+        @Override
+        public Figure getDefaultFigure() {
+        
+            return fs != null ? fs.getDefaultFigure() : null;
+        
         }
         
         public abstract void draw();
-
+  
     }
 
     class Square extends Figure {
@@ -119,8 +135,8 @@ public class HelloWorld {
             squareCalc();
         }
 
-        public Circle(double radius, String color) {
-            super(color);
+        public Circle(double radius) {
+            super(default_color);
             this.radius = radius;
             squareCalc();
         }
@@ -181,7 +197,7 @@ public class HelloWorld {
         }
     }
 
-    class FigureSupplier implements FiguresBeh {
+    class FigureSupplier {
 
         private ColorSupplier cs;
 
@@ -225,7 +241,7 @@ public class HelloWorld {
         }
 
         public Figure getDefaultFigure() {
-            return new Circle(10.0, default_color);
+            return new Circle(10.0);
         }
 
     }
@@ -243,10 +259,10 @@ public class HelloWorld {
 
         HelloWorld.Figure[] figuresarr = new HelloWorld.Figure[6];
         HelloWorld app = new HelloWorld();
-        HelloWorld.FigureSupplier fs = app.new FigureSupplier();
+
         for (int i = 0; i < figuresarr.length; i++) {
-            figuresarr[i] = i < figuresarr.length / 2 ? fs.getRandomFigure()
-                : fs.getDefaultFigure();
+            figuresarr[i] = i < figuresarr.length / 2 ? app.new FigureSupplier().getRandomFigure()
+                : app.new FigureSupplier().getDefaultFigure();
             figuresarr[i].draw();
         }
 
