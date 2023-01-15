@@ -7,14 +7,14 @@ public class IsoscelesTrapezoid extends Figure {
 
     public IsoscelesTrapezoid(Color color, int height, int basis1, int basis2) {
         super(color);
-        this.height = getRandom().nextInt(Max_Value);
-        this.basis1 = getRandom().nextInt(Max_Value);
-        this.basis2 = getRandom().nextInt(Max_Value);
+        this.height = height;
+        this.basis1 = basis1;
+        this.basis2 = basis2;
     }
 
     @Override
     public String toString() {
-        return "IsoscelesTrapezoid {"
+        return "Figure: IsoscelesTrapezoid {"
                 + "height: " + height + " units"
                 + ", basis1: " + basis1 + " units"
                 + ", basis2: " + basis2 + " units"

@@ -5,12 +5,12 @@ public class Square extends Figure {
 
     public Square(Color color, int side) {
         super(color);
-        this.side = getRandom().nextInt(Max_Value);
+        this.side = side;
     }
 
     @Override
     public String toString() {
-        return "Square {"
+        return "Figure: Square {"
                 + "side: " + side + " units"
                 + ", color: " + getColor()
                 + ", area: " + getArea() + " sq.units"

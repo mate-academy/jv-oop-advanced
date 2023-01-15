@@ -6,13 +6,13 @@ public class RightTriangle extends Figure {
 
     public RightTriangle(Color color, int firstLeg, int secondLeg) {
         super(color);
-        this.firstLeg = getRandom().nextInt(Max_Value);
-        this.secondLeg = getRandom().nextInt(Max_Value);
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
     }
 
     @Override
     public String toString() {
-        return "RigtTriangle {"
+        return "Figure: RigtTriangle {"
                 + "firstLeg: " + firstLeg + " units"
                 + ", secondLeg: " + secondLeg + " units"
                 + ", color: " + getColor()

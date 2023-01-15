@@ -3,14 +3,18 @@ package core.basesyntax;
 public class Circle extends Figure {
     private int radius;
 
+    public int getRadius() {
+        return radius;
+    }
+
     public Circle(Color color, int radius) {
         super(color);
-        this.radius = getRandom().nextInt(Max_Value);
+        this.radius = radius;
     }
 
     @Override
     public String toString() {
-        return "Circle {" +
+        return "Figure: Circle {" +
                 "radius: " + radius + " units" +
                 ", color: " + getColor() +
                 ", area: " + getArea() + " sq.units" +
