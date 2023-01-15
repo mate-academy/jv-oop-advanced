@@ -50,13 +50,12 @@ public class HelloWorld {
         // all are the abstract methods.
         Figure getRandomFigure();
         Figure getDefaultFigure();
-        
     }
 
     abstract class Figure {
         protected double square;
-        private ColorSupplier cs;
         protected String color;
+        private ColorSupplier cs;
 
         public Figure(ColorSupplier cs) {
             this.cs = cs;
@@ -84,8 +83,8 @@ public class HelloWorld {
         @Override
         public void draw() {
             System.out.println(this.getClass().getSimpleName() + ": square, area: "
-                + String.format("%.2f", square) + " sq.units, side: "
-                + String.format("%.2f", side) + " units, color: " + color);
+                    + String.format("%.2f", square) + " sq.units, side: "
+                    + String.format("%.2f", side) + " units, color: " + color);
         }
     }
 
@@ -103,15 +102,15 @@ public class HelloWorld {
         @Override
         public void draw() {
             System.out.println(this.getClass().getSimpleName() + ": square, area: "
-                 + String.format("%.2f", square) + " sq.units, side1: "
-                 + String.format("%.2f", side1) + ", side2: "
-                 + String.format("%.2f", side2) + " units, color: " + color);
+                    + String.format("%.2f", square) + " sq.units, side1: "
+                    + String.format("%.2f", side1) + ", side2: "
+                    + String.format("%.2f", side2) + " units, color: " + color);
         }
     }
 
     class Circle extends Figure {
         private double radius;
-        final private double PI = 3.14159265359;
+        final private double pi = 3.14159265359;
 
         public Circle(double radius, ColorSupplier cs) {
             super(cs);
@@ -126,7 +125,7 @@ public class HelloWorld {
         }
 
         private void squareCalc() {
-            this.square = PI * radius * radius;
+            this.square = pi * radius * radius;
         }
 
         @Override
