@@ -213,7 +213,7 @@ public class HelloWorld {
                     fg = new IsoscelesTrapezoid(random.nextDouble() * 100, random.nextDouble() * 100, random.nextDouble() * 100, cs);
                     break;
             }
-            default {
+            default: {
             }
             }
             return fg;
