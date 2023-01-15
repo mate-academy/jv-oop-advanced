@@ -212,7 +212,8 @@ public class HelloWorld {
                     break;
                 }
                 case "IsoscelesTrapezoid": {
-                    fg = new IsoscelesTrapezoid(random.nextDouble() * 100, random.nextDouble() * 100,
+                    fg = new IsoscelesTrapezoid(random.nextDouble() * 100, random.nextDouble()
+                        * 100,
                         random.nextDouble() * 100, cs);
                     break;
                 }
