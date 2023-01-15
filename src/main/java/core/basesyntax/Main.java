@@ -4,18 +4,17 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        int Figures_Count = 6;
+        final int FIGURE_COUNT = 6;
         FigureSupplier supplier = new FigureSupplier();
 
-        Figure[] figures = new Figure[Figures_Count];
+        Figure[] figures = new Figure[FIGURE_COUNT];
         for (int i = 0; i < figures.length; i++) {
-            if (i <= (figures.length / 2)) {
+            if (i < (figures.length / 2)) {
                 figures[i] = supplier.getRandomFigure();
-            }
-            else {
+            } else {
                 figures[i] = supplier.getDefaultFigure();
             }
+            figures[i].Draw();
         }
-        System.out.println(Arrays.toString(figures));
     }
 }

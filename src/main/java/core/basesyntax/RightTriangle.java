@@ -11,17 +11,14 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "Figure: RigtTriangle {"
-                + "firstLeg: " + firstLeg + " units"
-                + ", secondLeg: " + secondLeg + " units"
-                + ", color: " + getColor()
-                + ", area: " + getArea() + " sq.units"
-                + '}';
+    public double getArea() {
+        return (firstLeg * secondLeg) / 2;
     }
 
     @Override
-    public double getArea() {
-        return (firstLeg * secondLeg) / 2;
+    public void Draw() {
+        System.out.println("Figure: RigtTriangle {" + "firstLeg: " + firstLeg + " units"
+                + ", secondLeg: " + secondLeg + " units" + ", color: " + getColor()
+                + ", area: " + getArea() + " sq.units" + '}');
     }
 }
