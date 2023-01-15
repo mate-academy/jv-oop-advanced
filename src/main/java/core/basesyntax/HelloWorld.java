@@ -49,6 +49,7 @@ public class HelloWorld {
 
         // all are the abstract methods.
         Figure getRandomFigure();
+        
         Figure getDefaultFigure();
     }
 
@@ -110,7 +111,7 @@ public class HelloWorld {
 
     class Circle extends Figure {
         private double radius;
-        final private double pi = 3.14159265359;
+        private final double pi = 3.14159265359;
 
         public Circle(double radius, ColorSupplier cs) {
             super(cs);
@@ -193,28 +194,28 @@ public class HelloWorld {
             FiguresShape[] figureshape = FiguresShape.values();
             Figure fg = null;
             switch (figureshape[random.nextInt(figureshape.length - 1)].toString()) {
-            case "Square": {
-                fg = new Square(random.nextDouble() * 100, cs);
-                break;
-            }
-            case "Rectangle": {
+                case "Square":  {
+                    fg = new Square(random.nextDouble() * 100, cs);
+                    break;
+                }
+                case "Rectangle": {
                     fg = new Rectangle(random.nextDouble() * 100, random.nextDouble() * 100, cs);
                     break;
-            }
-            case "RightTriangle": {
+                }
+                case "RightTriangle": {
                     fg = new RightTriangle(random.nextDouble() * 100, random.nextDouble() * 100, cs);
                     break;
-            }
-            case "Circle": {
+                }
+                case "Circle": {
                     fg = new Circle(random.nextDouble() * 100, cs);
                     break;
-            }
-            case "IsoscelesTrapezoid": {
+                }
+                case "IsoscelesTrapezoid": {
                     fg = new IsoscelesTrapezoid(random.nextDouble() * 100, random.nextDouble() * 100, random.nextDouble() * 100, cs);
                     break;
-            }
-            default: {
-            }
+                }
+                default: {
+                }
             }
             return fg;
 
