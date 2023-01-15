@@ -68,7 +68,7 @@ public class HelloWorld {
             this.color = color;
         }
         
-        abstract public void draw();
+        public abstract void draw();
 
     }
 
@@ -194,7 +194,7 @@ public class HelloWorld {
             FiguresShape[] figureshape = FiguresShape.values();
             Figure fg = null;
             switch (figureshape[random.nextInt(figureshape.length - 1)].toString()) {
-                case "Square":  {
+                case "Square": {
                     fg = new Square(random.nextDouble() * 100, cs);
                     break;
                 }
@@ -203,7 +203,8 @@ public class HelloWorld {
                     break;
                 }
                 case "RightTriangle": {
-                    fg = new RightTriangle(random.nextDouble() * 100, random.nextDouble() * 100, cs);
+                    fg = new RightTriangle(random.nextDouble() * 100, random.nextDouble() * 100,
+                        cs);
                     break;
                 }
                 case "Circle": {
@@ -211,7 +212,8 @@ public class HelloWorld {
                     break;
                 }
                 case "IsoscelesTrapezoid": {
-                    fg = new IsoscelesTrapezoid(random.nextDouble() * 100, random.nextDouble() * 100, random.nextDouble() * 100, cs);
+                    fg = new IsoscelesTrapezoid(random.nextDouble() * 100, random.nextDouble() * 100,
+                        random.nextDouble() * 100, cs);
                     break;
                 }
                 default: {
