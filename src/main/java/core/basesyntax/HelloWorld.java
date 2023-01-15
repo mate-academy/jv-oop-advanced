@@ -131,8 +131,8 @@ public class HelloWorld {
         @Override
         public void draw() {
             System.out.println(this.getClass().getSimpleName() + ": square, area: "
-                + String.format("%.2f", square) + " sq.units, radius: " + String.format("%.2f", radius)
-                + " units, color: " + color);
+                    + String.format("%.2f", square) + " sq.units, radius: "
+                    + String.format("%.2f", radius) + " units, color: " + color);
         }
     }
 
@@ -150,9 +150,9 @@ public class HelloWorld {
         @Override
         public void draw() {
             System.out.println(this.getClass().getSimpleName() + ": square, area: "
-                + String.format("%.2f", square) + " sq.units, firstLeg: "
-                + String.format("%.2f", firstLeg) + ", secondLeg: "
-                + String.format("%.2f", secondLeg) + " units, color: " + color);
+                    + String.format("%.2f", square) + " sq.units, firstLeg: "
+                    + String.format("%.2f", firstLeg) + ", secondLeg: "
+                    + String.format("%.2f", secondLeg) + " units, color: " + color);
         }
     }
 
@@ -161,7 +161,8 @@ public class HelloWorld {
         private double secondLeg;
         private double height;
 
-        public IsoscelesTrapezoid(double firstLeg, double secondLeg, double height, ColorSupplier cs) {
+        public IsoscelesTrapezoid(double firstLeg, double secondLeg, 
+                                  double height, ColorSupplier cs) {
             super(cs);
             this.firstLeg = firstLeg;
             this.secondLeg = secondLeg;
@@ -172,9 +173,10 @@ public class HelloWorld {
         @Override
         public void draw() {
             System.out.println(this.getClass().getSimpleName() + ": square, area: "
-                + String.format("%.2f", square) + " sq.units, firstLeg: " + String.format("%.2f", firstLeg)
-                + ", secondLeg: " + String.format("%.2f", secondLeg) + ", height: "
-                + String.format("%.2f", height) + " units, color: " + color);
+                    + String.format("%.2f", square) + " sq.units, firstLeg: "
+                    + String.format("%.2f", firstLeg)
+                    + ", secondLeg: " + String.format("%.2f", secondLeg) + ", height: "
+                    + String.format("%.2f", height) + " units, color: " + color);
         }
     }
 
@@ -196,22 +198,23 @@ public class HelloWorld {
                 break;
             }
             case "Rectangle": {
-                fg = new Rectangle(random.nextDouble() * 100, random.nextDouble() * 100, cs);
-                break;
+                    fg = new Rectangle(random.nextDouble() * 100, random.nextDouble() * 100, cs);
+                    break;
             }
             case "RightTriangle": {
-                fg = new RightTriangle(random.nextDouble() * 100, random.nextDouble() * 100, cs);
-                break;
+                    fg = new RightTriangle(random.nextDouble() * 100, random.nextDouble() * 100, cs);
+                    break;
             }
             case "Circle": {
-                fg = new Circle(random.nextDouble() * 100, cs);
-                break;
+                    fg = new Circle(random.nextDouble() * 100, cs);
+                    break;
             }
             case "IsoscelesTrapezoid": {
-                fg = new IsoscelesTrapezoid(random.nextDouble() * 100, random.nextDouble() * 100, random.nextDouble() * 100, cs);
-                break;
+                    fg = new IsoscelesTrapezoid(random.nextDouble() * 100, random.nextDouble() * 100, random.nextDouble() * 100, cs);
+                    break;
             }
-
+            default {
+            }
             }
             return fg;
 
@@ -238,7 +241,8 @@ public class HelloWorld {
         HelloWorld app = new HelloWorld();
         HelloWorld.FigureSupplier fs = app.new FigureSupplier();
         for (int i = 0; i < figuresarr.length; i++) {
-            figuresarr[i] = i < figuresarr.length / 2 ? fs.getRandomFigure() : fs.getDefaultFigure();
+            figuresarr[i] = i < figuresarr.length / 2 ? fs.getRandomFigure()
+                : fs.getDefaultFigure();
             figuresarr[i].draw();
         }
 
