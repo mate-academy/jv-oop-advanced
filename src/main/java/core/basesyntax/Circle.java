@@ -3,6 +3,7 @@ package core.basesyntax;
 public class Circle extends Figure {
     public static final double PI = Math.PI;
     private int radius;
+
     public Circle() {
         super();
     }
@@ -24,7 +25,7 @@ public class Circle extends Figure {
     public void draw() {
         double area;
         area = radius * radius * PI;
-        System.out.println("Figure:  "+ getName() + ",  area:  "+ area +" sq.units" + "  radius = " +
-                radius+"units" + " color:  "+ getColor());
+        System.out.println("Figure:  " + getName() + ",  area:  " + area + " sq.units"
+                + "  radius = " + radius + "units" + " color:  " + getColor());
     }
 }

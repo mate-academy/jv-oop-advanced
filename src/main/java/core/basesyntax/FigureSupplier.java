@@ -22,8 +22,8 @@ public class FigureSupplier {
     }
 
     public Figure getRandomRightTriangle() {
-        return new RightTriangle(colorSupplier.getRandomColor(), "RightTriangle", random.nextInt(bound),
-                random.nextInt(bound));
+        return new RightTriangle(colorSupplier.getRandomColor(), "RightTriangle",
+                random.nextInt(bound), random.nextInt(bound));
     }
 
     public Figure getRandomIsoscelesTrapezoid() {

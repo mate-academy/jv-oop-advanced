@@ -14,7 +14,7 @@ public class Rectangle extends Figure {
     public void draw() {
         int area;
         area = side * length;
-        System.out.println("Figure: " + getName() + ",  area: " + area +"sq.units" + "  side: " + side + "units" +
-                "  length: " + length + "units" + "  color: " + getColor());
+        System.out.println("Figure: " + getName() + ",  area: " + area + "sq.units" + "  side: "
+                + side + "units" + "  length: " + length + "units" + "  color: " + getColor());
     }
 }
