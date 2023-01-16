@@ -13,7 +13,8 @@ public class RightTriangle extends Figure {
     public void draw() {
         int area;
         area = firstLeg * secondLeg / 2;
-        System.out.println("Figure: " + getName() + ",  area: " + area + "sq.units" + "  firstLeg: "
-                + firstLeg + "units" +  "  secondLeg: " + secondLeg + "units" + "  color: " + getColor());
+        System.out.println("Figure: " + getName() + ",  area: " + area + "sq.units"
+                + "  firstLeg: " + firstLeg + "units" + "  secondLeg: " + secondLeg
+                + "units" + "  color: " + getColor());
     }
 }
