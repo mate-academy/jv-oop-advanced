@@ -1,5 +1,6 @@
 package core.basesyntax;
 
+
 import java.util.Random;
 
 public class HelloWorld {
@@ -48,44 +49,24 @@ public class HelloWorld {
         final String default_color = "White";
 
         // all are the abstract methods.
-        Figure getRandomFigure();
-        
-        Figure getDefaultFigure();
+        void draw();
     }
 
     abstract class Figure implements FiguresBeh {
         protected double square;
         protected String color;
         private ColorSupplier cs;
-        private FigureSupplier fs;
 
         public Figure(ColorSupplier cs) {
             this.cs = cs;
             this.color = this.cs.getRandomColor();
-            this.fs = new FigureSupplier();
         }
 
         public Figure(String color) {
             this.cs = new ColorSupplier();
             this.color = color;
-            this.fs = null;
         }
         
-        @Override
-        public Figure getRandomFigure() {
-            
-            return fs != null ? fs.getRandomFigure() : null;
-        }
-        
-        @Override
-        public Figure getDefaultFigure() {
-        
-            return fs != null ? fs.getDefaultFigure() : null;
-        
-        }
-        
-        public abstract void draw();
-  
     }
 
     class Square extends Figure {
@@ -97,7 +78,6 @@ public class HelloWorld {
             this.square = side * side;
         }
 
-        @Override
         public void draw() {
             System.out.println(this.getClass().getSimpleName() + ": square, area: "
                     + String.format("%.2f", square) + " sq.units, side: "
@@ -116,8 +96,7 @@ public class HelloWorld {
             this.square = side1 * side2;
         }
 
-        @Override
-        public void draw() {
+         public void draw() {
             System.out.println(this.getClass().getSimpleName() + ": square, area: "
                     + String.format("%.2f", square) + " sq.units, side1: "
                     + String.format("%.2f", side1) + ", side2: "
@@ -145,7 +124,6 @@ public class HelloWorld {
             this.square = pi * radius * radius;
         }
 
-        @Override
         public void draw() {
             System.out.println(this.getClass().getSimpleName() + ": square, area: "
                     + String.format("%.2f", square) + " sq.units, radius: "
@@ -164,7 +142,6 @@ public class HelloWorld {
             this.square = (firstLeg * secondLeg) / 2;
         }
 
-        @Override
         public void draw() {
             System.out.println(this.getClass().getSimpleName() + ": square, area: "
                     + String.format("%.2f", square) + " sq.units, firstLeg: "
@@ -187,7 +164,6 @@ public class HelloWorld {
             this.square = ((firstLeg + secondLeg) / 2) * height;
         }
 
-        @Override
         public void draw() {
             System.out.println(this.getClass().getSimpleName() + ": square, area: "
                     + String.format("%.2f", square) + " sq.units, firstLeg: "
