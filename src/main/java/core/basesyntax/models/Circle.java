@@ -1,5 +1,7 @@
 package core.basesyntax.models;
 
+import core.basesyntax.abstractAndEnum.Figure;
+
 public class Circle extends Figure {
     private int radius;
 
@@ -17,13 +19,13 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return Math.PI * radius * radius;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: " + getClass().getSimpleName() + ", area: "
-                + area() + " sq.units, color: " + getColor() + " ,radius: " + getRadius());
+                + getArea() + " sq.units, color: " + getColor() + " ,radius: " + getRadius());
     }
 }

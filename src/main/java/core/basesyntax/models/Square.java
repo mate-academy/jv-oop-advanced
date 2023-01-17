@@ -1,5 +1,7 @@
 package core.basesyntax.models;
 
+import core.basesyntax.abstractAndEnum.Figure;
+
 public class Square extends Figure {
     private final double side;
 
@@ -9,13 +11,13 @@ public class Square extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return side * side;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: " + getClass().getSimpleName() + ", area: "
-                + area() + " sq.units, color: " + getColor() + " ,side: " + side);
+                + getArea() + " sq.units, color: " + getColor() + " ,side: " + side);
     }
 }

@@ -1,5 +1,7 @@
 package core.basesyntax.models;
 
+import core.basesyntax.abstractAndEnum.Figure;
+
 public class Rectangle extends Figure {
     private double width;
     private double length;
@@ -27,14 +29,14 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return width * length;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: " + getClass().getSimpleName() + ", square: "
-                + area() + " sq.units, color: " + getColor()
+                + getArea() + " sq.units, color: " + getColor()
                 + " ,width: " + width
                 + " ,length: " + length);
     }

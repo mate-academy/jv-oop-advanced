@@ -1,7 +1,7 @@
-package core.basesyntax.models;
+package core.basesyntax.abstractAndEnum;
 
-import core.basesyntax.service.AreaCalculator;
-import core.basesyntax.service.Drawable;
+import core.basesyntax.interfaceServices.AreaCalculator;
+import core.basesyntax.interfaceServices.Drawable;
 
 public abstract class Figure implements Drawable, AreaCalculator {
     private String color;

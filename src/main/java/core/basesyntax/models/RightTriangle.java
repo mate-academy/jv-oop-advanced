@@ -1,5 +1,7 @@
 package core.basesyntax.models;
 
+import core.basesyntax.abstractAndEnum.Figure;
+
 public class RightTriangle extends Figure {
     private double height;
     private double base;
@@ -27,14 +29,14 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return base * height / 2;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: " + getClass().getSimpleName() + ", square: "
-                + area() + " sq.units, color: " + getColor()
+                + getArea() + " sq.units, color: " + getColor()
                 + " ,base: " + base
                 + " ,height: " + height);
     }

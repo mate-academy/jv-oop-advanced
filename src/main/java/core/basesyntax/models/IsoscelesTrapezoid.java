@@ -1,5 +1,7 @@
 package core.basesyntax.models;
 
+import core.basesyntax.abstractAndEnum.Figure;
+
 public class IsoscelesTrapezoid extends Figure {
     private double height;
     private double bottomBase;
@@ -37,14 +39,14 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return height * ((bottomBase + topBase) * 0.5);
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: " + getClass().getSimpleName() + ", square: "
-                + area() + " sq.units, color: " + getColor()
+                + getArea() + " sq.units, color: " + getColor()
                 + ", height: " + height
                 + ", bottomBase: " + bottomBase
                 + ", topBase: " + topBase);
