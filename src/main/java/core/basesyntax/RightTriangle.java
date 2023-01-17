@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements Drawing {
+public class RightTriangle extends Figure implements GettingArea {
     private double heightSize;
     private double baseSize;
 
