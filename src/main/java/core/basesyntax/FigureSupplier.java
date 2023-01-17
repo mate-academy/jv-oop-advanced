@@ -5,7 +5,7 @@ import java.util.Random;
 public class FigureSupplier extends ColorSupplier {
     private static final int MAX_VALUE_FOR_FIGURES = 26;
     private static final int MAX_VALUE_FOR_CIRCLE_RADIUS = 10;
-    private static final Random random = new Random();
+    private Random random = new Random();
 
     public Figure getRandomFigure() {
         Figure[] figures = new Figure[]{new Circle(getRandomColor(),
