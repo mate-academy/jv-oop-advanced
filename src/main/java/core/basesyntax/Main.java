@@ -2,16 +2,16 @@ package core.basesyntax;
 
 public class Main {
     public static void main(String[] args) {
-        Figure[] figuresAll = new Figure[6];
+        int QUANTITYFIGURES = 6;
+        Figure[] figuresAll = new Figure[QUANTITYFIGURES];
         FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < figuresAll.length; i++) {
             if (i < figuresAll.length / 2) {
                 figuresAll[i] = figureSupplier.getRandomFigure();
-                figuresAll[i].draw();
             } else {
                 figuresAll[i] = figureSupplier.getDefaultFigure();
-                figuresAll[i].draw();
             }
+            figuresAll[i].draw();
         }
     }
 }

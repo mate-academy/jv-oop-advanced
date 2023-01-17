@@ -3,32 +3,32 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int bound = 100;
-    public static final int FIGURE_COUNT = 5;
+    private static final int BOUND = 100;
+    private static final int FIGURE_COUNT = 5;
     private final Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomCircle() {
-        return new Circle(colorSupplier.getRandomColor(), "Circle", random.nextInt(bound));
+        return new Circle(colorSupplier.getRandomColor(), "Circle", random.nextInt(BOUND));
     }
 
     public Figure getRandomRectangle() {
-        return new Rectangle(colorSupplier.getRandomColor(), "Rectangle", random.nextInt(bound),
-                random.nextInt(bound));
+        return new Rectangle(colorSupplier.getRandomColor(), "Rectangle", random.nextInt(BOUND),
+                random.nextInt(BOUND));
     }
 
     public Figure getRandomSquare() {
-        return new Square(colorSupplier.getRandomColor(), "Square", random.nextInt(bound));
+        return new Square(colorSupplier.getRandomColor(), "Square", random.nextInt(BOUND));
     }
 
     public Figure getRandomRightTriangle() {
         return new RightTriangle(colorSupplier.getRandomColor(), "RightTriangle",
-                random.nextInt(bound), random.nextInt(bound));
+                random.nextInt(BOUND), random.nextInt(BOUND));
     }
 
     public Figure getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), "IsoscelesTrapezoid",
-                random.nextInt(bound), random.nextInt(bound), random.nextInt(bound));
+                random.nextInt(BOUND), random.nextInt(BOUND), random.nextInt(BOUND));
     }
 
     public Figure getRandomFigure() {
