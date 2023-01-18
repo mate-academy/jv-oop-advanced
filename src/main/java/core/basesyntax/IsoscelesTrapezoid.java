@@ -5,7 +5,8 @@ public class IsoscelesTrapezoid extends Figure implements GettingArea {
     private double firstBaseSize;
     private double secondBaseSize;
 
-    public IsoscelesTrapezoid(String color, double firstBaseSize, double secondBaseSize, double heightSize) {
+    public IsoscelesTrapezoid(String color, double firstBaseSize, double secondBaseSize,
+                              double heightSize) {
         super(color);
         this.firstBaseSize = firstBaseSize;
         this.secondBaseSize = secondBaseSize;
@@ -14,8 +15,9 @@ public class IsoscelesTrapezoid extends Figure implements GettingArea {
 
     @Override
     public double getArea() {
-        return  (firstBaseSize + secondBaseSize) / 2 * heightSize;
+        return (firstBaseSize + secondBaseSize) / 2 * heightSize;
     }
+
     @Override
     public String toString() {
         return "Figure: Isosceles Trapezoid, " + "Color: " + this.getColor() + ", First Base Size: "

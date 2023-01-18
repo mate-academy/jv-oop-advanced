@@ -12,8 +12,9 @@ public class Rectangle extends Figure implements GettingArea {
 
     @Override
     public double getArea() {
-        return  widthSize * lengthSize;
+        return widthSize * lengthSize;
     }
+
     @Override
     public String toString() {
         return "Figure: Rectangle, " + "Color: " + this.getColor() + ", Width Size: " + widthSize

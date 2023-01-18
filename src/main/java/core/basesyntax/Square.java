@@ -7,10 +7,12 @@ public class Square extends Figure implements GettingArea {
         super(color);
         this.sideSize = sideSize;
     }
+
     @Override
     public double getArea() {
         return sideSize * sideSize;
     }
+
     @Override
     public String toString() {
         return "Figure: Square, " + "Color: " + this.getColor() + ", Side Size: " + sideSize

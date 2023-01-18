@@ -12,8 +12,9 @@ public class RightTriangle extends Figure implements GettingArea {
 
     @Override
     public double getArea() {
-        return  baseSize * heightSize / 2;
+        return baseSize * heightSize / 2;
     }
+
     @Override
     public String toString() {
         return "Figure: Right Triangle, " + "Color: " + this.getColor() + ", Base Size: " + baseSize
