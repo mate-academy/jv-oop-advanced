@@ -29,8 +29,8 @@ public class FigureSupplier {
         return null;
     }
     
-     public Figure getDefaultFigure() {
-        return new Circle(RADIUS, COLOR);
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
     }
 
     private Figure getRandomCircle() {
