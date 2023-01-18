@@ -10,7 +10,7 @@ public class FigureSupplier {
 
     public Figure getRandomCircle() {
         return new Circle(colorSupplier.getRandomColor(), "Circle", random.nextInt(BOUND));
-    }
+    } //
 
     public Figure getRandomRectangle() {
         return new Rectangle(colorSupplier.getRandomColor(), "Rectangle", random.nextInt(BOUND),

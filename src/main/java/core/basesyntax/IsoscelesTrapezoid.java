@@ -18,4 +18,4 @@ public class IsoscelesTrapezoid extends Figure {
         System.out.println("Figure: " + getName() + ",  area: " + area + "sq.units" + "  aSide: "
                 + topBase + "units" + "  color: " + getColor());
     }
-}
+} //
