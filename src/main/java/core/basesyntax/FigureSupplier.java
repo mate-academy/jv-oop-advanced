@@ -52,7 +52,7 @@ public class FigureSupplier {
         return new Square(random.nextInt(RANDOM_MAX), colorSupplier.getRandomColor());
     }
 
-    Figure getDefaultFigure() {
+    public Figure getDefaultFigure() {
         return new Circle(RADIUS, COLOR);
     }
 }
