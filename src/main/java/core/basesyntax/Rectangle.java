@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements GettingArea {
+public class Rectangle extends Figure {
     private double widthSize;
     private double lengthSize;
 
