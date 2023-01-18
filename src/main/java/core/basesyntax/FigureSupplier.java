@@ -55,8 +55,4 @@ public class FigureSupplier {
     private Figure getRandomSquare() {
         return new Square(random.nextInt(RANDOM_MAX), colorSupplier.getRandomColor());
     }
-
-    public Figure getDefaultFigure() {
-        return new Circle(RADIUS, COLOR);
-    }
 }
