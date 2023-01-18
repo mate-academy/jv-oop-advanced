@@ -28,6 +28,10 @@ public class FigureSupplier {
         }
         return null;
     }
+    
+     public Figure getDefaultFigure() {
+        return new Circle(RADIUS, COLOR);
+    }
 
     private Figure getRandomCircle() {
         return new Circle(random.nextInt(RANDOM_MAX), colorSupplier.getRandomColor());
