@@ -1,10 +1,10 @@
 package core.basesyntax.suppliers;
 
-import core.basesyntax.abstractAndEnum.Color;
+import core.basesyntax.abstractandenum.Color;
 import java.util.Random;
 
 public class ColorSupplier {
-    private int colorIndex = new Random().nextInt(Color.values().length);
+    private final int colorIndex = new Random().nextInt(Color.values().length);
 
     public String getRandomColor() {
         return Color.values()[colorIndex].name();

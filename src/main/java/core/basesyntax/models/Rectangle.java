@@ -1,6 +1,6 @@
 package core.basesyntax.models;
 
-import core.basesyntax.abstractAndEnum.Figure;
+import core.basesyntax.abstractandenum.Figure;
 
 public class Rectangle extends Figure {
     private double width;

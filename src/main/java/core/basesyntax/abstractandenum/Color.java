@@ -1,4 +1,4 @@
-package core.basesyntax.abstractAndEnum;
+package core.basesyntax.abstractandenum;
 
 public enum Color {
     RED,

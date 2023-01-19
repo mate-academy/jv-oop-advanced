@@ -1,21 +1,19 @@
 package core.basesyntax.suppliers;
 
-import core.basesyntax.abstractAndEnum.Color;
-import core.basesyntax.abstractAndEnum.Figure;
+import core.basesyntax.abstractandenum.Color;
+import core.basesyntax.abstractandenum.Figure;
 import core.basesyntax.models.Circle;
-
 import core.basesyntax.models.IsoscelesTrapezoid;
 import core.basesyntax.models.Rectangle;
 import core.basesyntax.models.RightTriangle;
 import core.basesyntax.models.Square;
-
 import java.util.Random;
 
 public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    final int getRandomInt = new Random().nextInt(100);
-    final double getRandomDouble = new Random().nextDouble();
-    final int figureIndex = new Random().nextInt(4);
+    private final int getRandomInt = new Random().nextInt(100);
+    private final double getRandomDouble = new Random().nextDouble();
+    private final int figureIndex = new Random().nextInt(4);
 
     private Figure getRandomCircle() {
         return new Circle(colorSupplier.getRandomColor(),
@@ -41,23 +39,28 @@ public class FigureSupplier {
                 getRandomDouble);
     }
 
+    private Figure getDefaultFigure() {
+        return new Circle(Color.WHITE.toString(), 10);
+    }
+
     private Figure getRandomFigure() {
         switch (figureIndex) {
             case 0:
                 getRandomCircle();
+                break;
             case 1:
                 getRandomIsoscelesTrapezoid();
+                break;
             case 2:
                 getRandomRectangle();
+                break;
             case 3:
                 getRandomRightTriangle();
+                break;
             default:
                 return new Square(colorSupplier.getRandomColor(),
                         getRandomDouble);
         }
-    }
-
-    private Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.toString(), 10);
+        return getDefaultFigure();
     }
 }
