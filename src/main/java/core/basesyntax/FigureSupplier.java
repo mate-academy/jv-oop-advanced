@@ -27,15 +27,18 @@ public class FigureSupplier {
     }
 
     private Figure getRandomRectangle() {
-        return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(bound), random.nextInt(bound));
+        return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(bound),
+                random.nextInt(bound));
     }
 
     private Figure getRandomRightTriangle() {
-        return new RightTriangle(random.nextInt(bound), random.nextInt(bound),colorSupplier.getRandomColor());
+        return new RightTriangle(random.nextInt(bound), random.nextInt(bound),
+                colorSupplier.getRandomColor());
     }
 
     private Figure getRandomIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(random.nextInt(bound),random.nextInt(bound),random.nextInt(bound), colorSupplier.getRandomColor());
+        return new IsoscelesTrapezoid(random.nextInt(bound),random.nextInt(bound),
+                random.nextInt(bound), colorSupplier.getRandomColor());
     }
 
     public Figure getRandomFigure() {
