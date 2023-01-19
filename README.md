@@ -18,7 +18,7 @@ In the `main()` method we need to create an array of figures (the size of array 
 
 For this purpose create two more classes:
 - `ColorSupplier` with `public String getRandomColor()` method - for generating random color, 
-- and `FigureSupplier` with `public Figure getRandomFigure()` method - for generating figure with random properties.
+- and `FigureSupplier` with `public   getRandomFigure()` method - for generating figure with random properties.
 
 **The other half** of figures should have the same, default parameters. 
 
