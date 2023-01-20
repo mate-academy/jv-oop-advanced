@@ -10,11 +10,11 @@ public class Rectangle extends Figure{
         this.height = height;
     }
     @Override
-    public double getAriaCalculation() {
+    public double getArea() {
         return (firstLeg *  height) / 2;
     }
     @Override
-    public void drawFigure() {
-        System.out.println("Figure: Rectangle, area: " + getAriaCalculation() + " sq.units, side: " + firstLeg + " height " + height + " units, color: " + color);
+    public void draw() {
+        System.out.println("Figure: Rectangle, area: " + getArea() + " sq.units, side: " + firstLeg + " height " + height + " units, color: " + getColor());
     }
 }

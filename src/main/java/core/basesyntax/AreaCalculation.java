@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public interface AriaCalculation {
-    public double getAriaCalculation ();
+public interface AreaCalculation {
+    public double getArea();
 }
 

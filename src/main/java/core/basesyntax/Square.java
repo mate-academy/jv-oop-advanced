@@ -7,11 +7,11 @@ public class Square extends Figure{
         this.side = side;
     }
     @Override
-    public double getAriaCalculation() {
+    public double getArea() {
         return side * side ;
     }
     @Override
-    public void drawFigure() {
-        System.out.println("Figure: Square, area: " + getAriaCalculation() + " sq.units, side: " + side + " units, color: " + color);
+    public void draw() {
+        System.out.println("Figure: Square, area: " + getArea() + " sq.units, side: " + side + " units, color: " + getColor());
     }
 }
