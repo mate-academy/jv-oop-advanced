@@ -5,29 +5,31 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int BOUND = 100;
     private static final int FIGURE_COUNT = 5;
+    private static final String DEFAULT_COLOR = "WHITE";
+    private static final int DEFAULT_RADIUS = 10;
     private final Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figure getRandomCircle() {
-        return new Circle(colorSupplier.getRandomColor(), "Circle", random.nextInt(BOUND));
+    private Figure getRandomCircle() {
+        return new Circle(colorSupplier.getRandomColor(), random.nextInt(BOUND));
     } //
 
-    public Figure getRandomRectangle() {
-        return new Rectangle(colorSupplier.getRandomColor(), "Rectangle", random.nextInt(BOUND),
+    private Figure getRandomRectangle() {
+        return new Rectangle(colorSupplier.getRandomColor(),random.nextInt(BOUND),
                 random.nextInt(BOUND));
     }
 
-    public Figure getRandomSquare() {
-        return new Square(colorSupplier.getRandomColor(), "Square", random.nextInt(BOUND));
+    private Figure getRandomSquare() {
+        return new Square(colorSupplier.getRandomColor(),random.nextInt(BOUND));
     }
 
-    public Figure getRandomRightTriangle() {
-        return new RightTriangle(colorSupplier.getRandomColor(), "RightTriangle",
+    private Figure getRandomRightTriangle() {
+        return new RightTriangle(colorSupplier.getRandomColor(),
                 random.nextInt(BOUND), random.nextInt(BOUND));
     }
 
-    public Figure getRandomIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), "IsoscelesTrapezoid",
+    private Figure getRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                 random.nextInt(BOUND), random.nextInt(BOUND), random.nextInt(BOUND));
     }
 
@@ -44,6 +46,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("WHITE", "Circle", 10);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
