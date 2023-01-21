@@ -3,9 +3,9 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final static int BOUND = 100;
-    private final String white = "WHITE";
-    private final static int radius = 10;
+    private static final int BOUND = 100;
+    private static final String WHITE = "WHITE";
+    private static final int RADIUS = 10;
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
 
@@ -26,19 +26,23 @@ public class FigureSupplier {
                 Figure square = new Square(colorSupplier.getRandomColor(), getRandomNum());
                 return square;
             case ("RIGHT_TRIANGLE"):
-                Figure rightTriangle = new RightTriangle(colorSupplier.getRandomColor(), getRandomNum(), getRandomNum());
+                Figure rightTriangle = new RightTriangle(colorSupplier.getRandomColor(),
+                                                        getRandomNum(), getRandomNum());
                 return rightTriangle;
             case ("ISOSCELES_TRAPEZOID"):
-                Figure isoscelesTrapezoid = new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomNum(), getRandomNum(), getRandomNum());
+                Figure isoscelesTrapezoid = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                                                  getRandomNum(), getRandomNum(), getRandomNum());
                 return isoscelesTrapezoid;
             case ("RECTANGLE"):
-                Figure rectangle = new Rectangle(colorSupplier.getRandomColor(), getRandomNum(), getRandomNum());
+                Figure rectangle = new Rectangle(colorSupplier.getRandomColor(),
+                                                getRandomNum(), getRandomNum());
                 return rectangle;
+            default:
+                throw new RuntimeException("Figure is not exist");
         }
-        return null;
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(white, radius);
+        return new Circle(WHITE, RADIUS);
     }
 }
