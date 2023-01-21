@@ -17,6 +17,7 @@ public class FigureSupplier {
     public Figure getDefaultFigure() {
         return new Circle(defaultColor, defaultRadius);
     }
+
     public Figure getRandomFigure() {
         int figureIndex = random.nextInt(figureCount);
         switch (figureIndex) {
