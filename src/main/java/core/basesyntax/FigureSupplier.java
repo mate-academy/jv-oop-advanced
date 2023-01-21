@@ -3,22 +3,22 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final int BOUND = 100;
+    private final static int BOUND = 100;
     private final String white = "WHITE";
-    private final int radius = 10;
+    private final static int radius = 10;
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
 
-    public int getRandomNum() {
+    private int getRandomNum() {
         return random.nextInt(BOUND);
     }
 
-    public String getRandomFigure() {
+    private String getRandomFigure() {
         return FigureList.values()[random.nextInt(FigureList.values().length)].name();
     }
 
-    public Figure generateFigure(Enum Figure) {
-        switch (Figure.name()) {
+    public Figure generateFigure() {
+        switch (getRandomFigure()) {
             case ("CIRCLE"):
                 Figure circle = new Circle(colorSupplier.getRandomColor(), getRandomNum());
                 return circle;
