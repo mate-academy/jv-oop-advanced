@@ -1,18 +1,28 @@
 package core.basesyntax;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        FigureSupplier[] figures = new FigureSupplier[3];
         FigureSupplier firstFigure = new FigureSupplier();
-        FigureSupplier secondFigure = new FigureSupplier();
-        FigureSupplier thirdFigure = new FigureSupplier();
-        final FigureSupplier fourthDefaultFigure = new FigureSupplier();
-        figures[0] = firstFigure;
-        figures[1] = secondFigure;
-        figures[2] = thirdFigure;
-        for (FigureSupplier i : figures) {
-            i.getRandomFigure().draw();
+
+        Scanner in = new Scanner(System.in);
+        System.out.println("choose number from 1 to 6: ");
+        int number = in.nextInt();
+        switch (number) {
+            case 1:
+                firstFigure.getRandomRectangle().draw();
+            case 2:
+                firstFigure.getRandomRightTriangle().draw();
+            case 3:
+                firstFigure.getRandomCircle().draw();
+            case 4:
+                firstFigure.getRandomSquare().draw();
+            case 5:
+                firstFigure.getRandomIsoscelesTrapezoid().draw();
+            case 6:
+                firstFigure.getDefaultFigure().draw();
+
         }
-        fourthDefaultFigure.getDefaultFigure().draw();
     }
 }
