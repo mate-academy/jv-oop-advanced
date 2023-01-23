@@ -5,13 +5,13 @@ public class Circle extends Figure {
 
     public Circle(int radius, String color) {
         this.radius = radius;
-        this.color = color;
+        setColor(color);
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: circle, area: " + area() + " units, radius: " + radius
-                + " units, color: " + color);
+                + " units, color: " + getColor());
     }
 
     @Override
