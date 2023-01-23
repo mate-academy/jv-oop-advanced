@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-
     private int width;
     private int length;
 
@@ -32,5 +31,4 @@ public class Rectangle extends Figure {
                 + "width: " + getWidth() + "  units," + " length: "
                 + getLength() + " units, " + " color: " + getColor());
     }
-
 }
