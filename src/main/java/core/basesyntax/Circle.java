@@ -13,6 +13,7 @@ public class Circle extends Figure {
         return radius * radius * Math.PI;
     }
 
+    @Override
     public void draw() {
         System.out.println("Figure:  " + getClass().getName() + ",  area:  "
                 + getArea() + " sq.units" + "  radius = " + radius + "units"

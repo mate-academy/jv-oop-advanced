@@ -12,7 +12,7 @@ public class FigureSupplier {
 
     private Figure getRandomCircle() {
         return new Circle(colorSupplier.getRandomColor(), random.nextInt(BOUND));
-    } //
+    }
 
     private Figure getRandomRectangle() {
         return new Rectangle(colorSupplier.getRandomColor(),random.nextInt(BOUND),
