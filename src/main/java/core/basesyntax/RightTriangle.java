@@ -17,7 +17,13 @@ public class RightTriangle extends Figure implements Area {
     @Override
     public void draw() {
         StringBuilder builder = new StringBuilder("Figure: ");
-        builder.append("rightTriangle, area: ").append(getArea()).append(" sq.units, ").append("firstLeg: ").append(firstLeg).append(" secondLeg: ").append(secondLeg).append(" color: ").append(getColor());
+        builder.append("rightTriangle, area: ")
+                .append(getArea()).append(" sq.units, ")
+                .append("firstLeg: ").append(firstLeg)
+                .append(" secondLeg: ")
+                .append(secondLeg)
+                .append(" color: ")
+                .append(getColor());
         System.out.println(builder.toString());
     }
 }

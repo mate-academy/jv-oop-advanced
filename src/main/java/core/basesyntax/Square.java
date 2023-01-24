@@ -15,7 +15,13 @@ public class Square extends Figure implements Area {
     @Override
     public void draw() {
         StringBuilder builder = new StringBuilder("Figure: ");
-        builder.append("square, area: ").append(getArea()).append(" sq.units, ").append("side: ").append(side).append(" units, ").append("color: ").append(getColor());
+        builder.append("square, area: ")
+                .append(getArea()).append(" sq.units, ")
+                .append("side: ")
+                .append(side)
+                .append(" units, ")
+                .append("color: ")
+                .append(getColor());
         System.out.println(builder.toString());
     }
 }

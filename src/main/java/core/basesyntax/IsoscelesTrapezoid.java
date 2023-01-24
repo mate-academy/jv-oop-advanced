@@ -20,7 +20,13 @@ public class IsoscelesTrapezoid extends Figure implements Area {
     @Override
     public void draw() {
         StringBuilder builder = new StringBuilder("Figure: ");
-        builder.append("IsoscelesTrapezoid, area: ").append(getArea()).append(" sq.units, ").append("baseA: ").append(baseA).append(" baseB: ").append(baseB).append(" height: ").append(height).append(" color: ").append(getColor());
+        builder.append("IsoscelesTrapezoid, area: ")
+                .append(getArea()).append(" sq.units, ")
+                .append("baseA: ")
+                .append(baseA).append(" baseB: ")
+                .append(baseB).append(" height: ")
+                .append(height).append(" color: ")
+                .append(getColor());
         System.out.println(builder.toString());
     }
 }

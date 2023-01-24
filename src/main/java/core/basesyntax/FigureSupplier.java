@@ -16,14 +16,16 @@ public class FigureSupplier extends Figure {
             return square;
         }
         if (randomIndexFigure == 1) { //index 1 = Rectangle
-            Figure rectangle = new Rectangle(randomNumber.nextInt(maxBound), randomNumber.nextInt(maxBound));//width 0-100, height 0-100
+            Figure rectangle = new Rectangle(randomNumber.nextInt(maxBound),
+                    randomNumber.nextInt(maxBound));//width 0-100, height 0-100
             ColorSupplier colorSupplier = new ColorSupplier();
             rectangle.setColor(colorSupplier.getRandomColor());
             rectangle.setFigure(Figures.values()[randomIndexFigure].toString());
             return rectangle;
         }
         if (randomIndexFigure == 2) { //index 2 = RightTriangle
-            Figure rightTriangle = new RightTriangle(randomNumber.nextInt(maxBound), randomNumber.nextInt(maxBound));//firstleg 0-100, secondleg 0-100)
+            Figure rightTriangle = new RightTriangle(randomNumber.nextInt(maxBound),
+                    randomNumber.nextInt(maxBound));//firstleg 0-100, secondleg 0-100)
             ColorSupplier colorSupplier = new ColorSupplier();
             rightTriangle.setColor(colorSupplier.getRandomColor());
             rightTriangle.setFigure(Figures.values()[randomIndexFigure].toString());
@@ -37,7 +39,9 @@ public class FigureSupplier extends Figure {
             return circle;
         }
         if (randomIndexFigure == 4) { //index 4 = IsoscelesTrapezoid
-            Figure isoscelesTrapezoid = new IsoscelesTrapezoid(randomNumber.nextInt(maxBound), randomNumber.nextInt(maxBound), randomNumber.nextInt(100));//baseA, baseB, height 0-100
+            Figure isoscelesTrapezoid = new IsoscelesTrapezoid(randomNumber.nextInt(maxBound),
+                    randomNumber.nextInt(maxBound),
+                    randomNumber.nextInt(maxBound));//baseA, baseB, height 0-100
             ColorSupplier colorSupplier = new ColorSupplier();
             isoscelesTrapezoid.setColor(colorSupplier.getRandomColor());
             isoscelesTrapezoid.setFigure(Figures.values()[randomIndexFigure].toString());
