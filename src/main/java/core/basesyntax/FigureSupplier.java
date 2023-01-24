@@ -40,7 +40,7 @@ public class FigureSupplier {
 
     public Figure getDefaultFigure() {
         int radius = 10;
-        String color = Colors.WHITE.name().toLowerCase();
+        String color = Color.WHITE.name().toLowerCase();
         return new Circle(radius, color);
     }
 }
