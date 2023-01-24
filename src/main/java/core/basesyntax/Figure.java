@@ -11,5 +11,8 @@ public abstract class Figure implements AreaCalculation, DrawFigure {
         return color;
     }
 
-    public abstract void draw();
+    @Override
+    public void draw() {
+
+    }
 }

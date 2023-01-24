@@ -9,34 +9,18 @@ public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
 
-    private int getRandomNum() {
-        return random.nextInt(BOUND);
-    }
-
-    private String getRandomFigure() {
-        return FigureList.values()[random.nextInt(FigureList.values().length)].name();
-    }
-
     public Figure generateFigure() {
-        switch (getRandomFigure()) {
+        switch (FigureType.values()[random.nextInt(FigureType.values().length)].name()) {
             case ("CIRCLE"):
-                Figure circle = new Circle(colorSupplier.getRandomColor(), getRandomNum());
-                return circle;
+                return getRandomCircle();
             case ("SQUARE"):
-                Figure square = new Square(colorSupplier.getRandomColor(), getRandomNum());
-                return square;
+                return getRandomSquare();
             case ("RIGHT_TRIANGLE"):
-                Figure rightTriangle = new RightTriangle(colorSupplier.getRandomColor(),
-                                                        getRandomNum(), getRandomNum());
-                return rightTriangle;
+                return getRandomRightTriangle();
             case ("ISOSCELES_TRAPEZOID"):
-                Figure isoscelesTrapezoid = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                                                  getRandomNum(), getRandomNum(), getRandomNum());
-                return isoscelesTrapezoid;
+                return getRandomIsoscelesTrapezoid();
             case ("RECTANGLE"):
-                Figure rectangle = new Rectangle(colorSupplier.getRandomColor(),
-                                                getRandomNum(), getRandomNum());
-                return rectangle;
+                return getRandomRectangle();
             default:
                 throw new RuntimeException("Figure is not exist");
         }
@@ -44,5 +28,37 @@ public class FigureSupplier {
 
     public Figure getDefaultFigure() {
         return new Circle(WHITE, RADIUS);
+    }
+
+    private int getRandomNumber() {
+        return random.nextInt(BOUND);
+    }
+
+    private Figure getRandomCircle() {
+        Figure circle = new Circle(colorSupplier.getRandomColor(), getRandomNumber());
+        return circle;
+    }
+
+    private Figure getRandomSquare() {
+        Figure square = new Square(colorSupplier.getRandomColor(), getRandomNumber());
+        return square;
+    }
+
+    private Figure getRandomRightTriangle() {
+        Figure rightTriangle = new RightTriangle(colorSupplier.getRandomColor(),
+                getRandomNumber(), getRandomNumber());
+        return rightTriangle;
+    }
+
+    private Figure getRandomIsoscelesTrapezoid() {
+        Figure isoscelesTrapezoid = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                getRandomNumber(), getRandomNumber(), getRandomNumber());
+        return isoscelesTrapezoid;
+    }
+
+    private Figure getRandomRectangle() {
+        Figure rectangle = new Rectangle(colorSupplier.getRandomColor(),
+                getRandomNumber(), getRandomNumber());
+        return rectangle;
     }
 }
