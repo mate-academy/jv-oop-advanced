@@ -19,7 +19,13 @@ public class Circle extends Figure implements Area {
     @Override
     public void draw() {
         StringBuilder builder = new StringBuilder("Figure: ");
-        builder.append("circle, area: ").append(getArea()).append(" sq.units, ").append("radius: ").append(radius).append(" units, ").append("color: ").append(getColor());
+        builder.append("circle, area: ")
+                .append(getArea()).append(" sq.units, ")
+                .append("radius: ")
+                .append(radius)
+                .append(" units, ")
+                .append("color: ")
+                .append(getColor());
         System.out.println(builder.toString());
     }
 }
