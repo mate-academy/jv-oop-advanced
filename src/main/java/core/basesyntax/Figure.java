@@ -20,5 +20,7 @@ public abstract class Figure {
         return figure;
     }
 
+    public abstract double getArea();
+
     public abstract void draw();
 }
