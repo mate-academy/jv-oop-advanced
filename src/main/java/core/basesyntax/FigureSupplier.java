@@ -5,10 +5,10 @@ import java.util.Random;
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
     public static final int UNITS_COUNT = 11;
-    private final Random random = new Random();
-    private final ColorSupplier colorSupplier = new ColorSupplier();
     private static final int DEFAULT_RADIUS = 10;
     private static final Color DEFAULT_COLOR = Color.WHITE;
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         switch (getRandomInt(FIGURE_COUNT)) {
