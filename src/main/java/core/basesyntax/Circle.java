@@ -19,7 +19,7 @@ public class Circle extends Figure implements Area {
     @Override
     public void draw() {
         StringBuilder builder = new StringBuilder("Figure: ");
-        builder.append("circle, area: ")
+        builder.append("Circle, area: ")
                 .append(getArea()).append(" sq.units, ")
                 .append("radius: ")
                 .append(radius)

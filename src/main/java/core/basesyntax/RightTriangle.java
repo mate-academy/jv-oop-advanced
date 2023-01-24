@@ -17,7 +17,7 @@ public class RightTriangle extends Figure implements Area {
     @Override
     public void draw() {
         StringBuilder builder = new StringBuilder("Figure: ");
-        builder.append("rightTriangle, area: ")
+        builder.append("RightTriangle, area: ")
                 .append(getArea()).append(" sq.units, ")
                 .append("firstLeg: ").append(firstLeg)
                 .append(" secondLeg: ")

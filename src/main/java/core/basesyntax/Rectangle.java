@@ -17,7 +17,7 @@ public class Rectangle extends Figure implements Area {
     @Override
     public void draw() {
         StringBuilder builder = new StringBuilder("Figure: ");
-        builder.append("rectangle, area: ")
+        builder.append("Rectangle, area: ")
                 .append(getArea()).append(" sq.units, ")
                 .append("width: ").append(width).append(" height: ")
                 .append(height).append(" color: ").append(getColor());
