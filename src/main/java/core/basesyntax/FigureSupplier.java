@@ -7,6 +7,8 @@ public class FigureSupplier {
     public static final int UNITS_COUNT = 11;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final int radius = 10;
+    private final String color = Color.WHITE.name().toLowerCase();
 
     public Figure getRandomFigure() {
         String color = colorSupplier.getRandomColor();
@@ -39,8 +41,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        int radius = 10;
-        String color = Color.WHITE.name().toLowerCase();
         return new Circle(radius, color);
     }
 }
