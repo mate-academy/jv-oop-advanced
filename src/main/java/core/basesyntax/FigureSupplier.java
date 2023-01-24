@@ -12,32 +12,36 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         String color = colorSupplier.getRandomColor();
-        switch (random.nextInt(FIGURE_COUNT)) {
+        switch (getRandomInt(FIGURE_COUNT)) {
             case 0: {
-                int side = random.nextInt(UNITS_COUNT);
+                int side = getRandomInt(UNITS_COUNT);
                 return new Square(side, color);
             }
             case 1: {
-                int radius = random.nextInt(UNITS_COUNT);
+                int radius = getRandomInt(UNITS_COUNT);
                 return new Circle(radius, color);
             }
             case 2: {
-                int height = random.nextInt(UNITS_COUNT);
-                int width = random.nextInt(UNITS_COUNT);
+                int height = getRandomInt(UNITS_COUNT);
+                int width = getRandomInt(UNITS_COUNT);
                 return new Rectangle(height, width, color);
             }
             case 3: {
-                int firstLeg = random.nextInt(UNITS_COUNT);
-                int secondLeg = random.nextInt(UNITS_COUNT);
+                int firstLeg = getRandomInt(UNITS_COUNT);
+                int secondLeg = getRandomInt(UNITS_COUNT);
                 return new RightTriangle(firstLeg, secondLeg, color);
             }
             default: {
-                int upperBase = random.nextInt(UNITS_COUNT);
-                int lowerBase = random.nextInt(UNITS_COUNT);
-                int height = random.nextInt(UNITS_COUNT);
+                int upperBase = getRandomInt(UNITS_COUNT);
+                int lowerBase = getRandomInt(UNITS_COUNT);
+                int height = getRandomInt(UNITS_COUNT);
                 return new IsoscelesTrapezoid(upperBase, lowerBase, height, color);
             }
         }
+    }
+
+    public int getRandomInt(int bound) {
+        return random.nextInt(bound);
     }
 
     public Figure getDefaultFigure() {
