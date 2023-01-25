@@ -1,4 +1,4 @@
-package core.basesyntax.abstractandenum;
+package core.basesyntax.model;
 
 import core.basesyntax.interfaceservices.AreaCalculator;
 import core.basesyntax.interfaceservices.Drawable;
