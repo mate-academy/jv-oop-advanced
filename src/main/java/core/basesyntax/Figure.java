@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements AreaCalculation, DrawFigure {
+public abstract class Figure implements AreaCalculation, Drawable {
     private String color;
 
     public Figure(String color) {
@@ -13,6 +13,5 @@ public abstract class Figure implements AreaCalculation, DrawFigure {
 
     @Override
     public void draw() {
-
     }
 }

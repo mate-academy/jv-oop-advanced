@@ -4,22 +4,23 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int BOUND = 100;
-    private static final String WHITE = "WHITE";
-    private static final int RADIUS = 10;
+    private static final String DEFAULT_COLOR = "WHITE";
+    private static final int DEFAULT_RADIUS = 10;
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
+    private FigureType figureType;
 
     public Figure generateFigure() {
-        switch (FigureType.values()[random.nextInt(FigureType.values().length)].name()) {
-            case ("CIRCLE"):
+        switch (figureType) {
+            case CIRCLE:
                 return getRandomCircle();
-            case ("SQUARE"):
+            case SQUARE:
                 return getRandomSquare();
-            case ("RIGHT_TRIANGLE"):
+            case RIGHT_TRIANGLE:
                 return getRandomRightTriangle();
-            case ("ISOSCELES_TRAPEZOID"):
+            case ISOSCELES_TRAPEZOID:
                 return getRandomIsoscelesTrapezoid();
-            case ("RECTANGLE"):
+            case RECTANGLE:
                 return getRandomRectangle();
             default:
                 throw new RuntimeException("Figure is not exist");
@@ -27,7 +28,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(WHITE, RADIUS);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
     private int getRandomNumber() {
