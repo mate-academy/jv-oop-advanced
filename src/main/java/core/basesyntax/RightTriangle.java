@@ -5,7 +5,7 @@ public class RightTriangle extends Figure {
     private final double side;
     private final double height;
 
-    public RightTriangle(String color, double side, double height) {
+    public RightTriangle(Color color, double side, double height) {
         super(color);
         this.side = side;
         this.height = height;
@@ -19,7 +19,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + "IsoscelesTrapezoid, "
+        System.out.println("Figure: " + "RightTriangle, "
                 + "area: " + getArea() + " sq.units, "
                 + "side: " + side + "units, "
                 + "height: " + height + "units, "
