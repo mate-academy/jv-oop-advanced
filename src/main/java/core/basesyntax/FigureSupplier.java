@@ -8,10 +8,9 @@ public class FigureSupplier {
     private static final int DEFAULT_RADIUS = 10;
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
-    private FigureType figureType;
 
     public Figure generateFigure() {
-        switch (figureType) {
+        switch (FigureType.values()[random.nextInt(FigureType.values().length)]) {
             case CIRCLE:
                 return getRandomCircle();
             case SQUARE:
