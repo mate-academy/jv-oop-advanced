@@ -1,15 +1,22 @@
 package core.basesyntax;
 
+import core.basesyntax.abstractandenum.Figure;
 import core.basesyntax.suppliers.FigureSupplier;
 
 public class PrintArray {
+    private static final FigureSupplier figureSupplier = new FigureSupplier();
+
     public static void main(String[] args) {
-        FigureSupplier[] arrayFigures = new FigureSupplier[6];
-        for (int i = 0; i < arrayFigures.length; i++) {
-            arrayFigures[i] = new FigureSupplier();
+        Figure[] figures = new Figure[6];
+        for (int i = 0; i < figures.length; i++) {
+            if (i < figures.length / 2) {
+                figures[i] = figureSupplier.getRandomFigure();
+            } else {
+                figures[i] = figureSupplier.getDefaultFigure();
+            }
         }
-        for (FigureSupplier arrayFigure : arrayFigures) {
-            arrayFigure.getRandomFigure().draw();
+        for (Figure figure : figures) {
+            figure.draw();
         }
     }
 }

@@ -10,15 +10,13 @@ import core.basesyntax.models.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final int figures = 4;
-    private final int hundred = 100;
+    private final int maxNumber = 100;
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final int getRandomInt = new Random().nextInt(hundred);
-    private final double getRandomDouble = new Random().nextDouble();
-    private final int figureIndex = new Random().nextInt(figures);
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        switch (figureIndex) {
+        final int figuresNumber = 4;
+        switch (random.nextInt(figuresNumber)) {
             case 0:
                 return getRandomCircle();
             case 1:
@@ -34,36 +32,37 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        final int Ten = 10;
-        return new Circle(Color.WHITE.toString(), Ten);
+        final int DefaultRadius = 10;
+        final String defaultColor = Color.WHITE.toString();
+        return new Circle(defaultColor, DefaultRadius);
     }
 
     private Figure getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                getRandomDouble,
-                getRandomDouble,
-                getRandomDouble);
+                random.nextDouble(),
+                random.nextDouble(),
+                random.nextDouble());
     }
 
     private Figure getRandomRectangle() {
         return new Rectangle(colorSupplier.getRandomColor(),
-                getRandomDouble,
-                getRandomDouble);
+                random.nextDouble(),
+                random.nextDouble());
     }
 
     private Figure getRandomRightTriangle() {
         return new RightTriangle(colorSupplier.getRandomColor(),
-                getRandomDouble,
-                getRandomDouble);
+                random.nextDouble(),
+                random.nextDouble());
     }
 
     private Figure getRandomSquare() {
         return new Square(colorSupplier.getRandomColor(),
-                getRandomInt);
+                random.nextInt(maxNumber));
     }
 
     private Figure getRandomCircle() {
         return new Circle(colorSupplier.getRandomColor(),
-                getRandomInt);
+                random.nextInt(maxNumber));
     }
 }
