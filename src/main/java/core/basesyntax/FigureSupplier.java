@@ -4,11 +4,14 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int NUMBER_MAX = 100;
+    private static final int DEFAULT_RADIUS = 10;
+    private static final Color DEFAULT_COLOR = Color.WHITE;
+
     private Random random = new Random();
     private ColorSupplier randomColor = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        Figures [] figures = Figures.values();
+        FigureType[] figures = FigureType.values();
         int index = random.nextInt(figures.length);
         switch (figures[index]) {
             case CIRCLE:
@@ -20,10 +23,9 @@ public class FigureSupplier {
             case RIGHT_TRIANGLE:
                 return getRandomRightTriangle();
             case ISOSCELES_TRAPEZOID:
-                return getRandomIsoscelesTrapezoid();
             default:
+                return getRandomIsoscelesTrapezoid();
         }
-        return null;
     }
 
     private Circle getRandomCircle() {
@@ -61,6 +63,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE,10);
+        return new Circle(DEFAULT_COLOR,DEFAULT_RADIUS);
     }
 }
