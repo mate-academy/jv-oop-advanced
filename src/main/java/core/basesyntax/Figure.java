@@ -1,28 +1,20 @@
 package core.basesyntax;
 
 public abstract class Figure implements Drawable {
-    private Colors color;
-    private Figures typeOfFigure;
+    private Color color;
 
-    public Figure(Colors color, Figures typeOfFigure) {
+    public Figure(Color color) {
         this.color = color;
-        this.typeOfFigure = typeOfFigure;
     }
 
-    public Colors getColor() {
+    public Color getColor() {
         return color;
     }
 
-    public Figures getTypeOfFigure() {
-        return typeOfFigure;
-    }
-
-    public double getSquare() {
+    public double areaCalculator() {
         return 0;
     }
 
     @Override
-    public void draw() {
-
-    }
+    public abstract void draw();
 }

@@ -5,20 +5,20 @@ public class RightTriangle extends Figure {
     private double bisector;
     private double side;
 
-    public RightTriangle(Colors color, Figures typeOfFigure, double side, double bisector) {
-        super(color, typeOfFigure);
+    public RightTriangle(Color color, double side, double bisector) {
+        super(color);
         this.side = side;
         this.bisector = bisector;
     }
 
     @Override
-    public double getSquare() {
+    public double areaCalculator() {
         return side * bisector * CONSTANT;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getTypeOfFigure() + ", area: " + getSquare()
+        System.out.println("Figure: right triangle, area: " + areaCalculator()
                 + " sq.units, side: " + side + " units, bisector: " + bisector + " units, color: "
                 + getColor());
     }
