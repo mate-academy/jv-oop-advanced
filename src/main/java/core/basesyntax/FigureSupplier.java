@@ -22,7 +22,7 @@ public class FigureSupplier {
             case RECTANGLE:
                 return getRandomRectangle();
             default:
-                throw new RuntimeException("Figure is not exist");
+                throw new RuntimeException("Figure does not exist");
         }
     }
 
@@ -35,30 +35,25 @@ public class FigureSupplier {
     }
 
     private Figure getRandomCircle() {
-        Figure circle = new Circle(colorSupplier.getRandomColor(), getRandomNumber());
-        return circle;
+        return new Circle(colorSupplier.getRandomColor(), getRandomNumber());
     }
 
     private Figure getRandomSquare() {
-        Figure square = new Square(colorSupplier.getRandomColor(), getRandomNumber());
-        return square;
+        return new Square(colorSupplier.getRandomColor(), getRandomNumber());
     }
 
     private Figure getRandomRightTriangle() {
-        Figure rightTriangle = new RightTriangle(colorSupplier.getRandomColor(),
+        return new RightTriangle(colorSupplier.getRandomColor(),
                 getRandomNumber(), getRandomNumber());
-        return rightTriangle;
     }
 
     private Figure getRandomIsoscelesTrapezoid() {
-        Figure isoscelesTrapezoid = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                 getRandomNumber(), getRandomNumber(), getRandomNumber());
-        return isoscelesTrapezoid;
     }
 
     private Figure getRandomRectangle() {
-        Figure rectangle = new Rectangle(colorSupplier.getRandomColor(),
+        return new Rectangle(colorSupplier.getRandomColor(),
                 getRandomNumber(), getRandomNumber());
-        return rectangle;
     }
 }
