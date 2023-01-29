@@ -9,8 +9,7 @@ public class Main {
         for (int i = 0; i < ARRAY_COUNT; i++) {
             if (i < ARRAY_COUNT / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
-            }
-            else {
+            } else {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
             figures[i].draw();
