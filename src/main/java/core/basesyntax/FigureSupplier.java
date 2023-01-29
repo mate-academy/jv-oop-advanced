@@ -5,13 +5,14 @@ import java.util.Random;
 public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    private static final int RANDOM_MAX_VALUE = 100;
-    private static final int DEFAULT_RADIUS = 10;
+    private final Color DEFAULT_COLOR = Color.WHITE;
+    private final static int RANDOM_MAX_VALUE = 100;
+    private final static int DEFAULT_RADIUS = 10;
 
     public final Figure getDefaultFigure() {
-        Color DEFAULT_COLOR = Color.WHITE;
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
+
     private Circle getRandomCircle() {
         return new Circle(colorSupplier.getRandomColor(),
                 random.nextInt(RANDOM_MAX_VALUE));
