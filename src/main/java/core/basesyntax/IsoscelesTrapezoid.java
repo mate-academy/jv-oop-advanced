@@ -13,14 +13,19 @@ public class IsoscelesTrapezoid extends Figure {
         this.firstBase = firstBase;
         this.secondBase = secondBase;
         this.hight = hight;
-        super.setArea((firstBase + secondBase) / 2.0);
     }
 
     @Override
     public void draw() {
-        System.out.print("Name: isosceles trapezoid");
-        super.draw();
-        System.out.println("side: " + side + ", " + "first base: " + firstBase + ", "
-                + "second base: " + secondBase + ", " + "hight: " + hight);
+        System.out.println("Name: isosceles trapezoid" + ", color: "
+                + getColor() + ", side: " + side + ", "
+                + "first base: " + firstBase + ", "
+                + "second base: " + secondBase + ", " + "hight: "
+                + hight + ", area:" + getArea() + " square units");
+    }
+
+    @Override
+    public double getArea() {
+        return (firstBase + secondBase) / 2.0;
     }
 }

@@ -8,15 +8,18 @@ public class Rectangle extends Figure {
         super(color);
         this.firstSide = firstLeg;
         this.secondSide = secondLeg;
-        super.setArea(firstLeg * secondLeg);
-
     }
 
     @Override
     public void draw() {
-        System.out.print("Name: rectangle");
-        super.draw();
-        System.out.println("fist side: " + firstSide + " units, "
-                + "second side " + secondSide + " units");
+        System.out.println("Name: rectangle" + ", color: " + getColor()
+                + ", fist side: " + firstSide + " units, "
+                + "second side " + secondSide + " units"
+                + ", area: " + getArea() + " square units");
+    }
+
+    @Override
+    public double getArea() {
+        return firstSide * secondSide;
     }
 }
