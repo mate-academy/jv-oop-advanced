@@ -35,7 +35,7 @@ public class FigureSupplier {
     }
 
     public FigureForm getRandomFigure(int randomFigure) {
-        randomFigure = random.nextInt(4);
+        randomFigure = random.nextInt(5);
         switch (randomFigure) {
             case 0:
                 return FigureSupplier.getRandomCircle();

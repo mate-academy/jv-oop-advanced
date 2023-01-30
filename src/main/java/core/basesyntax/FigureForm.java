@@ -7,10 +7,6 @@ class FigureForm implements AreaOfFigure, Draw {
         return color;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
     @Override
     public double getArea() {
         return 0;

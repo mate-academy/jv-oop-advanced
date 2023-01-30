@@ -4,15 +4,13 @@ public class Circle extends FigureForm {
     private double radius;
     private String color;
 
-    public Circle(double radius, Color randomColor) {
+    public Circle(double radius) {
         this.radius = radius;
-        randomColor = Color.valueOf(ColorSupplier.getRandomColor());
     }
 
     public Circle(double radius, String color) {
         this.radius = radius;
         this.color = color;
-        color = Color.WHITE.name();
     }
 
     @Override
