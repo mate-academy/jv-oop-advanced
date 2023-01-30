@@ -16,7 +16,7 @@ public class Main {
                 FigureSupplier.circle.draw();
             }
             if (array[i].equals(FigureSupplier.isoscelesTrapezoid)) {
-                assert FigureSupplier.circle != null;
+                assert FigureSupplier.isoscelesTrapezoid != null;
                 FigureSupplier.isoscelesTrapezoid.draw();
             }
             if (array[i].equals(FigureSupplier.rectangle)) {
