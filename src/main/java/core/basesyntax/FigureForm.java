@@ -1,11 +1,7 @@
 package core.basesyntax;
 
-public class FigureForm {
+class FigureForm implements AreaOfFigure, Draw {
     private String color = ColorSupplier.getRandomColor();
-
-    public enum Figure {
-        Circle, IsoscelesTrapezoid, Rectangle, RightTriangle, Square
-    }
 
     public String getColor() {
         return color;
@@ -13,5 +9,15 @@ public class FigureForm {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    @Override
+    public double getArea() {
+        return 0;
+    }
+
+    @Override
+    public void draw() {
+        Draw.super.draw();
     }
 }

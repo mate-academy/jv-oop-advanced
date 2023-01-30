@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends FigureForm implements AreaOfFigure, Draw {
+public class IsoscelesTrapezoid extends FigureForm {
     private double sideA;
     private double sideB;
     private double sideC;

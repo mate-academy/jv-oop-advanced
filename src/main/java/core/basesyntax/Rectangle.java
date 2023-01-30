@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends FigureForm implements AreaOfFigure, Draw {
+public class Rectangle extends FigureForm {
     private double firstSide;
     private double secondSide;
 

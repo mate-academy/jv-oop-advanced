@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends FigureForm implements AreaOfFigure, Draw {
+public class Circle extends FigureForm {
     private double radius;
     private String color;
 
