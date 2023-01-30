@@ -11,7 +11,7 @@ public class Main {
         FigureForm[] array = new FigureForm[5];
         for (int i = 0; i < array.length / 2; i++) {
             array[i] = figureSupplier.getRandomFigure(random.nextInt(5));
-            if (array[i].equals(FigureSupplier.circle)) {
+            if (array[i].equals(FigureSupplier.circle) && array[i]!=null) {
                 assert FigureSupplier.circle != null;
                 FigureSupplier.circle.draw();
             }
@@ -23,11 +23,11 @@ public class Main {
                 assert FigureSupplier.circle != null;
                 FigureSupplier.rectangle.draw();
             }
-            if (array[i] == FigureSupplier.rightTriangle) {
+            if (array[i].equals(FigureSupplier.rightTriangle)) {
                 assert FigureSupplier.circle != null;
                 FigureSupplier.rightTriangle.draw();
             }
-            if (array[i] == FigureSupplier.square) {
+            if (array[i].equals(FigureSupplier.square)) {
                 assert FigureSupplier.circle != null;
                 FigureSupplier.square.draw();
             }
