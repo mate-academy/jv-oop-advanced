@@ -12,18 +12,23 @@ public class Main {
         for (int i = 0; i < array.length / 2; i++) {
             array[i] = figureSupplier.getRandomFigure(random.nextInt(5));
             if (array[i].equals(FigureSupplier.circle)) {
+                assert FigureSupplier.circle != null;
                 FigureSupplier.circle.draw();
             }
             if (array[i].equals(FigureSupplier.isoscelesTrapezoid)) {
+                assert FigureSupplier.circle != null;
                 FigureSupplier.isoscelesTrapezoid.draw();
             }
             if (array[i].equals(FigureSupplier.rectangle)) {
+                assert FigureSupplier.circle != null;
                 FigureSupplier.rectangle.draw();
             }
             if (array[i] == FigureSupplier.rightTriangle) {
+                assert FigureSupplier.circle != null;
                 FigureSupplier.rightTriangle.draw();
             }
             if (array[i] == FigureSupplier.square) {
+                assert FigureSupplier.circle != null;
                 FigureSupplier.square.draw();
             }
         }
