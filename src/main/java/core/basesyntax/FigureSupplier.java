@@ -35,17 +35,17 @@ public class FigureSupplier {
     }
 
     public FigureForm getRandomFigure(int randomFigure) {
-        randomFigure = random.nextInt(5);
+        randomFigure = random.nextInt(4);
         switch (randomFigure) {
-            case 1:
+            case 0:
                 return FigureSupplier.getRandomCircle();
-            case 2:
+            case 1:
                 return getRandomTrapezoid();
-            case 3:
+            case 2:
                 return getRandomRectangle();
-            case 4:
+            case 3:
                 return getRandomRightRectangle();
-            case 5:
+            case 4:
                 return getRandomSquare();
             default:
                 return null;
