@@ -11,7 +11,7 @@ public class Main {
         FigureForm[] array = new FigureForm[5];
         for (int i = 0; i < array.length / 2; i++) {
             array[i] = figureSupplier.getRandomFigure(random.nextInt(5));
-            if (array[i].equals(FigureSupplier.circle) && array[i]!=null) {
+            if (array[i].equals(FigureSupplier.circle)) {
                 assert FigureSupplier.circle != null;
                 FigureSupplier.circle.draw();
             }
