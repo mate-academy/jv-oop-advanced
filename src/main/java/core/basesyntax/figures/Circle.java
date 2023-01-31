@@ -1,4 +1,4 @@
-package core.basesyntax.models;
+package core.basesyntax.figures;
 
 import core.basesyntax.model.Figure;
 
