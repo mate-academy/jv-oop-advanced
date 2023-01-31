@@ -1,7 +1,7 @@
 package core.basesyntax;
 
-class FigureForm implements AreaOfFigure, Draw {
-    private String color = ColorSupplier.getRandomColor();
+class FigureForm implements AreaOfFigure, Drawable {
+    private String color = new ColorSupplier().getRandomColor();
 
     public String getColor() {
         return color;
@@ -14,6 +14,6 @@ class FigureForm implements AreaOfFigure, Draw {
 
     @Override
     public void draw() {
-        Draw.super.draw();
+        System.out.println(color);
     }
 }

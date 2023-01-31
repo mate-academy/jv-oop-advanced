@@ -3,34 +3,37 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static Random random = new Random();
-    protected static Circle circle = new Circle(random.nextInt(), ColorSupplier.getRandomColor());
-    protected static IsoscelesTrapezoid isoscelesTrapezoid
+    static final int RADIUS_DEFAULT = 10;
+    static final String COLOR_DEFAULT = "WHITE";
+    protected Random random = new Random();
+    protected Circle circle = new Circle(random.nextInt(),
+            new ColorSupplier().getRandomColor());
+    protected IsoscelesTrapezoid isoscelesTrapezoid
             = new IsoscelesTrapezoid(random.nextInt(),
             random.nextInt(), random.nextInt());
-    protected static Rectangle rectangle = new Rectangle(random.nextInt(),
+    protected Rectangle rectangle = new Rectangle(random.nextInt(),
             random.nextInt());
-    protected static RightTriangle rightTriangle = new RightTriangle(random.nextInt(),
+    protected RightTriangle rightTriangle = new RightTriangle(random.nextInt(),
             random.nextInt());
-    protected static Square square = new Square(random.nextInt());
+    protected Square square = new Square(random.nextInt());
 
-    private static Circle getRandomCircle() {
+    Circle getRandomCircle() {
         return circle;
     }
 
-    private static IsoscelesTrapezoid getRandomTrapezoid() {
+    IsoscelesTrapezoid getRandomTrapezoid() {
         return isoscelesTrapezoid;
     }
 
-    private static Rectangle getRandomRectangle() {
+    Rectangle getRandomRectangle() {
         return rectangle;
     }
 
-    private static RightTriangle getRandomRightRectangle() {
+    RightTriangle getRandomRightRectangle() {
         return rightTriangle;
     }
 
-    private static Square getRandomSquare() {
+    Square getRandomSquare() {
         return square;
     }
 
@@ -38,7 +41,7 @@ public class FigureSupplier {
         randomFigure = random.nextInt(5);
         switch (randomFigure) {
             case 0:
-                return FigureSupplier.getRandomCircle();
+                return getRandomCircle();
             case 1:
                 return getRandomTrapezoid();
             case 2:
@@ -48,11 +51,11 @@ public class FigureSupplier {
             case 4:
                 return getRandomSquare();
             default:
-                return null;
+                return getDefaultFigure();
         }
     }
 
     public FigureForm getDefaultFigure() {
-        return new Circle(10,"WHITE");
+        return new Circle(RADIUS_DEFAULT, COLOR_DEFAULT);
     }
 }
