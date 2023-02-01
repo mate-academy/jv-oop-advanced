@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends FigureForm {
+public class Rectangle extends Figure {
     private double firstSide;
     private double secondSide;
 
@@ -16,7 +16,7 @@ public class Rectangle extends FigureForm {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + Figure.Rectangle + ", area: "
+        System.out.println("Figure: " + FigureTypes.Rectangle + ", area: "
                 + getArea() + " sq.units, " + "side1: " + firstSide + " units, "
                 + "side2: " + secondSide + " units, " + "color: " + getColor());
     }

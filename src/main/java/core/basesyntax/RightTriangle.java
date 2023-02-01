@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends FigureForm {
+public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
@@ -16,7 +16,7 @@ public class RightTriangle extends FigureForm {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + Figure.RightTriangle + ", area: " + getArea()
+        System.out.println("Figure: " + FigureTypes.RightTriangle + ", area: " + getArea()
                 + " sq.units, " + "side1: " + firstLeg + " units, " + "side2: "
                 + secondLeg + " units, " + "color: " + getColor());
     }

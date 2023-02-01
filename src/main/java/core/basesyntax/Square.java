@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends FigureForm {
+public class Square extends Figure {
     private double side;
 
     public Square(double side) {
@@ -14,7 +14,7 @@ public class Square extends FigureForm {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + Figure.Square + ", area: " + getArea()
+        System.out.println("Figure: " + FigureTypes.Square + ", area: " + getArea()
                 + " sq.units, " + "side: " + side + " units, "
                 + "color: " + getColor());
     }

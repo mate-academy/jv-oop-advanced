@@ -1,5 +1,9 @@
 package core.basesyntax;
 
-public enum Figure {
-    Circle, IsoscelesTrapezoid, Rectangle, RightTriangle, Square
+public abstract class Figure implements AreaCalculator, Drawable {
+    private String color;
+
+    public String getColor() {
+        return color;
+    }
 }

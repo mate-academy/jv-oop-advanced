@@ -5,7 +5,7 @@ import java.util.Random;
 public class Main {
 
     public static void main(String[] args) {
-        FigureForm[] array = new FigureForm[5];
+        Figure[] array = new Figure[5];
         for (int i = 0; i < array.length / 2; i++) {
             array[i] = new FigureSupplier().getRandomFigure(new Random().nextInt(5));
             array[i].draw();

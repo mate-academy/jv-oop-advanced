@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends FigureForm {
+public class Circle extends Figure {
     private double radius;
     private String color;
 
@@ -20,7 +20,7 @@ public class Circle extends FigureForm {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + Figure.Circle + ", area: " + getArea() + " sq.units, "
+        System.out.println("Figure: " + FigureTypes.Circle + ", area: " + getArea() + " sq.units, "
                 + "side: " + radius + " units, " + "color: " + color);
     }
 }

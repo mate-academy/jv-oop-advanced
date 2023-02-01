@@ -3,42 +3,11 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    static final int RADIUS_DEFAULT = 10;
-    static final String COLOR_DEFAULT = "WHITE";
+    private static final int RADIUS_DEFAULT = 10;
+    private static final String COLOR_DEFAULT = "WHITE";
     protected Random random = new Random();
-    protected Circle circle = new Circle(random.nextInt(),
-            new ColorSupplier().getRandomColor());
-    protected IsoscelesTrapezoid isoscelesTrapezoid
-            = new IsoscelesTrapezoid(random.nextInt(),
-            random.nextInt(), random.nextInt());
-    protected Rectangle rectangle = new Rectangle(random.nextInt(),
-            random.nextInt());
-    protected RightTriangle rightTriangle = new RightTriangle(random.nextInt(),
-            random.nextInt());
-    protected Square square = new Square(random.nextInt());
 
-    Circle getRandomCircle() {
-        return circle;
-    }
-
-    IsoscelesTrapezoid getRandomTrapezoid() {
-        return isoscelesTrapezoid;
-    }
-
-    Rectangle getRandomRectangle() {
-        return rectangle;
-    }
-
-    RightTriangle getRandomRightRectangle() {
-        return rightTriangle;
-    }
-
-    Square getRandomSquare() {
-        return square;
-    }
-
-    public FigureForm getRandomFigure(int randomFigure) {
-        randomFigure = random.nextInt(5);
+    protected Figure getRandomFigure(int randomFigure) {
         switch (randomFigure) {
             case 0:
                 return getRandomCircle();
@@ -55,7 +24,31 @@ public class FigureSupplier {
         }
     }
 
-    public FigureForm getDefaultFigure() {
+    public Figure getDefaultFigure() {
         return new Circle(RADIUS_DEFAULT, COLOR_DEFAULT);
+    }
+
+    private Circle getRandomCircle() {
+        return new Circle(random.nextInt(),
+                new ColorSupplier().getRandomColor());
+    }
+
+    private IsoscelesTrapezoid getRandomTrapezoid() {
+        return new IsoscelesTrapezoid(random.nextInt(),
+                random.nextInt(), random.nextInt());
+    }
+
+    private Rectangle getRandomRectangle() {
+        return new Rectangle(random.nextInt(),
+                random.nextInt());
+    }
+
+    private RightTriangle getRandomRightRectangle() {
+        return new RightTriangle(random.nextInt(),
+                random.nextInt());
+    }
+
+    private Square getRandomSquare() {
+        return new Square(random.nextInt());
     }
 }
