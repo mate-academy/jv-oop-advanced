@@ -10,7 +10,28 @@ public class FigureSupplier {
     public static final int RANDOM_NUMBER = 20;
     public static final Random random = new Random();
 
-    public Circle getRandomCircle() {
+    public Figure getRandomFigure() {
+        int index = random.nextInt(FIGURE_BOUND);
+        switch (index) {
+            case 0:
+                return getRandomCircle();
+            case 1:
+                return getRandomRectangle();
+            case 2:
+                return getRandomSquare();
+            case 3:
+                return getRandomRightIsoscelesTrapezoid();
+            case 4:
+            default:
+                return getRandomRightTriangle();
+        }
+    }
+
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
+    }
+
+    private Circle getRandomCircle() {
         int radius = random.nextInt(RANDOM_NUMBER);
         return new Circle(colorSupplier.getRandomColor(), radius);
     }
@@ -40,27 +61,5 @@ public class FigureSupplier {
         int firstLeg = random.nextInt(RANDOM_NUMBER);
         int secondLeg = random.nextInt(RANDOM_NUMBER);
         return new Rectangle(colorSupplier.getRandomColor(), firstLeg, secondLeg);
-    }
-
-    public Figure getRandomFigure() {
-        int index = random.nextInt(FIGURE_BOUND);
-        switch (index) {
-            case 0:
-                return getRandomCircle();
-            case 1:
-                return getRandomRectangle();
-            case 2:
-                return getRandomSquare();
-            case 3:
-                return getRandomRightIsoscelesTrapezoid();
-            case 4:
-            default:
-                return getRandomRightTriangle();
-        }
-    }
-
-    public Figure getDefaultFigure() {
-
-        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
