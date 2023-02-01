@@ -9,6 +9,30 @@ public class FigureSupplier {
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
+    public Figure getDefaultFigure() {
+        return new Circle(Color.WHITE, MAX_VALUE_FOR_CIRCLE_RADIUS);
+    }
+
+    public Figure getRandomFigure() {
+        Scanner in = new Scanner(System.in);
+        System.out.println("choose number from 1 to 6: ");
+        int number = in.nextInt();
+        switch (number) {
+            case 1:
+                return getRandomRectangle();
+            case 2:
+                return getRandomRightTriangle();
+            case 3:
+                return getRandomCircle();
+            case 4:
+                return getRandomSquare();
+            case 5:
+                return getRandomIsoscelesTrapezoid();
+            default:
+                return getDefaultFigure();
+        }
+    }
+
     private Figure getRandomSquare() {
         return new Square(colorSupplier.getRandomColor(),
                 random.nextInt(MAX_VALUE_FOR_FIGURES));
@@ -40,38 +64,5 @@ public class FigureSupplier {
         return new Circle(colorSupplier.getRandomColor(),
                 random.nextInt(MAX_VALUE_FOR_FIGURES));
 
-    }
-
-    public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE, MAX_VALUE_FOR_CIRCLE_RADIUS);
-    }
-
-    public void getRandomFigure() {
-        FigureSupplier firstFigure = new FigureSupplier();
-        Scanner in = new Scanner(System.in);
-        System.out.println("choose number from 1 to 6: ");
-        int number = in.nextInt();
-        switch (number) {
-            case 1:
-                firstFigure.getRandomRectangle().draw();
-                break;
-            case 2:
-                firstFigure.getRandomRightTriangle().draw();
-                break;
-            case 3:
-                firstFigure.getRandomCircle().draw();
-                break;
-            case 4:
-                firstFigure.getRandomSquare().draw();
-                break;
-            case 5:
-                firstFigure.getRandomIsoscelesTrapezoid().draw();
-                break;
-            case 6:
-                firstFigure.getDefaultFigure().draw();
-                break;
-            default:
-                System.out.println("this number doesn't exist");
-        }
     }
 }
