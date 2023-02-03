@@ -1,14 +1,10 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private int radius;
+    private final int radius;
 
     public Circle(int radius) {
         this.radius = radius;
-    }
-
-    public int getRadius() {
-        return radius;
     }
 
     @Override
@@ -20,12 +16,13 @@ public class Circle extends Figure {
     public void draw() {
         StringBuilder builder = new StringBuilder("Figure: ");
         builder.append("Circle, area: ")
-                .append(getArea()).append(" sq.units, ")
+                .append(getArea())
+                .append(" sq.units, ")
                 .append("radius: ")
                 .append(radius)
                 .append(" units, ")
                 .append("color: ")
                 .append(getColor());
-        System.out.println(builder.toString());
+        System.out.println(builder);
     }
 }

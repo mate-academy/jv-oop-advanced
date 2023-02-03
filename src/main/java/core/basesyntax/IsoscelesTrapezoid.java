@@ -26,6 +26,6 @@ public class IsoscelesTrapezoid extends Figure {
                 .append(baseB).append(" height: ")
                 .append(height).append(" color: ")
                 .append(getColor());
-        System.out.println(builder.toString());
+        System.out.println(builder);
     }
 }

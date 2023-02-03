@@ -21,6 +21,6 @@ public class Rectangle extends Figure {
                 .append(getArea()).append(" sq.units, ")
                 .append("width: ").append(width).append(" height: ")
                 .append(height).append(" color: ").append(getColor());
-        System.out.println(builder.toString());
+        System.out.println(builder);
     }
 }

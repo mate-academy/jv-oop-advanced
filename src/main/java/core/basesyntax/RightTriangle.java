@@ -24,6 +24,6 @@ public class RightTriangle extends Figure {
                 .append(secondLeg)
                 .append(" color: ")
                 .append(getColor());
-        System.out.println(builder.toString());
+        System.out.println(builder);
     }
 }
