@@ -3,8 +3,8 @@ package core.basesyntax.figures;
 import core.basesyntax.base.Figure;
 
 public class Rectangle extends Figure {
-    private double firstSide;
-    private double secondSide;
+    private final double firstSide;
+    private final double secondSide;
 
     public Rectangle(String color, double firstSide, double secondSide) {
         super(color);
@@ -19,7 +19,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + area() +
-                " sq. units, first side: " + firstSide + " units," + " second side: " + secondSide + " units, color: " + color);
+        System.out.println("Figure: rectangle, area: " + area()
+                + " sq. units, first side: " + firstSide + " units," + " second side: " + secondSide + " units, color: " + color);
     }
 }
