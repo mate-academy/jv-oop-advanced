@@ -1,24 +1,19 @@
 package core.basesyntax.suppliers;
 
 import core.basesyntax.base.Figure;
-import core.basesyntax.figures.*;
-
+import core.basesyntax.figures.Circle;
+import core.basesyntax.figures.IsoscelesTrapezoid;
+import core.basesyntax.figures.Rectangle;
+import core.basesyntax.figures.RightTriangle;
+import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int MAX_PROPERTY_VALUE = 50;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
     private final FigureType[] figureTypes = FigureType.values();
     private final int figureCount = figureTypes.length;
-    private static final int MAX_PROPERTY_VALUE = 50;
-
-    private enum FigureType {
-        CIRCLE,
-        ISOSCELES_TRAPEZOID,
-        RECTANGLE,
-        RIGHT_TRIANGLE,
-        SQUARE;
-    }
 
     private double getRandomProperty() {
         return (int) (Math.random() * MAX_PROPERTY_VALUE);

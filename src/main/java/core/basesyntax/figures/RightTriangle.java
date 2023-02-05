@@ -16,13 +16,16 @@ public class RightTriangle extends Figure {
     public double area() {
         double hypotenuse = Math.sqrt(Math.pow(firstLeg, 2) + Math.pow(secondLeg, 2));
         double halfPerimeter = (hypotenuse + firstLeg + secondLeg) / 2;
-        return Math.sqrt(halfPerimeter * (halfPerimeter - firstLeg) *
-                (halfPerimeter - secondLeg) * (halfPerimeter - hypotenuse));
+        return Math.sqrt(halfPerimeter
+            * (halfPerimeter - firstLeg)
+            * (halfPerimeter - secondLeg)
+            * (halfPerimeter - hypotenuse));
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: right triangle, area: " + area()
-                + " sq. units, first leg: " + firstLeg + " units," + " second leg: " + secondLeg + " units, color: " + color);
+                + " sq. units, first leg: " + firstLeg + " units,"
+                + " second leg: " + secondLeg + " units, color: " + color);
     }
 }

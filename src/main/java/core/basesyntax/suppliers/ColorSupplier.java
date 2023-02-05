@@ -11,14 +11,4 @@ public class ColorSupplier {
         int index = random.nextInt(colorCount);
         return values[index].name().toLowerCase();
     }
-
-    enum Color {
-        RED,
-        WHITE,
-        BLACK,
-        BLUE,
-        ORANGE,
-        GREEN,
-        YELLOW;
-    }
 }
