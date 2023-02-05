@@ -1,18 +1,36 @@
 package core.basesyntax;
 
-public class Rectangle extends Shape implements Drawable, Figure {
-    // rectangle area formula is length x width
-    // area = l * w;
+public class Rectangle extends Figure implements Drawable, AreaCalculator {
     private int length;
     private int width;
 
-    @Override
-    public void draw() {
-        System.out.println();
+    public int getLength() {
+        return length;
+    }
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
     }
 
     @Override
-    public double getArea() {
+    public void draw() {
+        System.out.println("Figure: " + getName()
+                + ", area: " + calculateArea() + " sq.units, "
+                + "length: " + getLength() + " units, "
+                + "width: " + getWidth() + " units, "
+                + "color: " + getColor());
+    }
+
+    @Override
+    public double calculateArea() {
         return length * width;
     }
 }

@@ -1,18 +1,37 @@
 package core.basesyntax;
 
-public class RightTriangle extends Shape implements Drawable, Figure {
-    // right triangle formula area is 1/2 * h * b;
+public class RightTriangle extends Figure implements Drawable, AreaCalculator {
     private static final double HALF = 0.5;
     private int height;
     private int base;
 
-    @Override
-    public void draw() {
-        System.out.println();
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public int getBase() {
+        return base;
+    }
+
+    public void setBase(int base) {
+        this.base = base;
     }
 
     @Override
-    public double getArea() {
+    public void draw() {
+        System.out.println("Figure: " + getName()
+                + ", area: " + calculateArea() + " sq.units, "
+                + "height: " + getHeight() + " units, "
+                + "base: " + getBase() + " units, "
+                + "color: " + getColor());
+    }
+
+    @Override
+    public double calculateArea() {
         return HALF * height * base;
     }
 }

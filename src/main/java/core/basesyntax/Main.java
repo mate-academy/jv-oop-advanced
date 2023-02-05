@@ -1,7 +1,14 @@
 package core.basesyntax;
 
 public class Main {
+    private static final int FIGURE_COUNT = 6;
+
     public static void main(String[] args) {
-        // create array with 3-6 random figures and print
+        Figure[] figures = new Figure[FIGURE_COUNT];
+        FigureSupply figureSupply = new FigureSupply();
+        for (int i = 0; i < FIGURE_COUNT; i++) {
+            figures[i] = figureSupply.generateRandomFigure();
+            figures[i].draw();
+        }
     }
 }
