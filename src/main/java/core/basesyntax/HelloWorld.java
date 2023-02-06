@@ -53,6 +53,7 @@ public class HelloWorld {
         protected double square;
         protected String color;
         private ColorSupplier cs;
+
         public Figure(ColorSupplier cs) {
             this.cs = cs;
             this.color = this.cs.getRandomColor();
@@ -67,6 +68,7 @@ public class HelloWorld {
 
     class Square extends Figure {
         private double side;
+
         public Square(double side, ColorSupplier cs) {
             super(cs);
             this.side = side;
@@ -83,6 +85,7 @@ public class HelloWorld {
     class Rectangle extends Figure {
         private double side1;
         private double side2;
+
         public Rectangle(double side1, double side2, ColorSupplier cs) {
             super(cs);
             this.side1 = side1;
@@ -128,6 +131,7 @@ public class HelloWorld {
     class RightTriangle extends Figure {
         private double firstLeg;
         private double secondLeg;
+        
         public RightTriangle(double firstLeg, double secondLeg, ColorSupplier cs) {
             super(cs);
             this.firstLeg = firstLeg;
@@ -168,6 +172,7 @@ public class HelloWorld {
 
     class FigureSupplier {
         private ColorSupplier cs;
+
         public FigureSupplier() {
             this.cs = new ColorSupplier();
         }
@@ -222,9 +227,9 @@ public class HelloWorld {
     }
 
     public static void main(String[] args) {
-
         HelloWorld.Figure[] figuresarr = new HelloWorld.Figure[6];
         HelloWorld app = new HelloWorld();
+
         for (int i = 0; i < figuresarr.length; i++) {
             figuresarr[i] = i < figuresarr.length / 2 ? app.new FigureSupplier().getRandomFigure()
                 : app.new FigureSupplier().getDefaultFigure();
