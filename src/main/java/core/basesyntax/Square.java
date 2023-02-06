@@ -1,4 +1,20 @@
 package core.basesyntax;
 
-public class Square {
+public class Square extends Figure{
+
+    private int side;
+
+    public Square(Color color, int side) {
+        super(color);
+        this.side = side;
+    }
+
+    @Override
+    public double area() {
+        return side * side;
+    }
+
+    @Override
+    public void draw() {
+    }
 }
