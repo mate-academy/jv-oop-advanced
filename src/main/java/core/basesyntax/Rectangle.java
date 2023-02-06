@@ -1,11 +1,8 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Rectangle extends Figure {
-    private final double firstSide = new Random().nextInt(100);
-    private final double secondSide = new Random().nextInt(100);
-    private final Color color = Color.values()[new Random().nextInt(10)];
+    private final double firstSide = SIDE;
+    private final double secondSide = SIDE;
 
     @Override
     public double area() {

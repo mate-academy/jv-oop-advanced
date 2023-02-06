@@ -1,10 +1,7 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Square extends Figure {
-    private final double side = new Random().nextInt(100);
-    private final Color color = Color.values()[new Random().nextInt(10)];
+    private final double side = SIDE;
 
     public double getSide() {
         return side;

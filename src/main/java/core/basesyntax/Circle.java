@@ -1,10 +1,15 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Circle extends Figure {
-    private double radius = new Random().nextInt(100);
-    private Color color = Color.values()[new Random().nextInt(10)];
+    private double radius = SIDE;
+
+    public Circle(double radius, Color color) {
+        this.radius = radius;
+        super.color = color;
+    }
+
+    public Circle() {
+    }
 
     @Override
     public double area() {
@@ -19,14 +24,6 @@ public class Circle extends Figure {
 
     public double getRadius() {
         return radius;
-    }
-
-    public void setRadius(double radius) {
-        this.radius = radius;
-    }
-
-    public void setColor(Color color) {
-        this.color = color;
     }
 
     public Color getColor() {

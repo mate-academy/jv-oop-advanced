@@ -1,11 +1,8 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class RightTriangle extends Figure {
-    private final double firstLeg = new Random().nextInt(100);
-    private final double secondLeg = new Random().nextInt(100);
-    private final Color color = Color.values()[new Random().nextInt(10)];
+    private final double firstLeg = SIDE;
+    private final double secondLeg = SIDE;
 
     @Override
     public double area() {

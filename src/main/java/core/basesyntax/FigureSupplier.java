@@ -3,20 +3,16 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static Figure getRandomFigure() {
-        Figure[] figuresArr = new Figure[5];
-        figuresArr[0] = new Circle();
-        figuresArr[1] = new Rectangle();
-        figuresArr[2] = new Square();
-        figuresArr[3] = new IsoscelesTrapezoid();
-        figuresArr[4] = new RightTriangle();
-        return figuresArr[new Random().nextInt(4)];
+    public static final int FIGURE_COUNT = 4;
+    private static final int RANDOM_FIGURE = new Random().nextInt(FIGURE_COUNT);
+
+    public Figure getRandomFigure() {
+        Figure[] figuresArr = {new Circle(), new Rectangle(),
+                new Square(), new IsoscelesTrapezoid(), new RightTriangle()};
+        return figuresArr[RANDOM_FIGURE];
     }
 
-    public static Figure getDefaultFigure() {
-        Circle circle = new Circle();
-        circle.setRadius(10);
-        circle.setColor(Color.WHITE);
-        return circle;
+    public Figure getDefaultFigure() {
+        return new Circle(10, Color.WHITE);
     }
 }
