@@ -13,7 +13,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         double hypotenuse = Math.sqrt(Math.pow(firstLeg, 2) + Math.pow(secondLeg, 2));
         double halfPerimeter = (hypotenuse + firstLeg + secondLeg) / 2;
         return Math.sqrt(halfPerimeter
@@ -24,7 +24,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: right triangle, area: " + area()
+        System.out.println("Figure: right triangle, area: " + getArea()
                 + " sq. units, first leg: " + firstLeg + " units,"
                 + " second leg: " + secondLeg + " units, color: " + color);
     }

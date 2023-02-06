@@ -10,11 +10,13 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_PROPERTY_VALUE = 50;
+    private static final String DEFAULT_CIRCLE_COLOR = "white";
+    private static final int DEFAULT_CIRCLE_RADIUS = 10;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
     private final FigureType[] figureTypes = FigureType.values();
     private final int figureCount = figureTypes.length;
-
+    
     private double getRandomProperty() {
         return (int) (Math.random() * MAX_PROPERTY_VALUE);
     }
@@ -26,30 +28,50 @@ public class FigureSupplier {
 
         switch (type) {
             case CIRCLE:
-                double radius = getRandomProperty();
-                return new Circle(color, radius);
+                return getRandomCircle(color);
             case RECTANGLE:
-                double firstSide = getRandomProperty();
-                double secondSide = getRandomProperty();
-                return new Rectangle(color, firstSide, secondSide);
+                return getRandomRectangle(color);
             case SQUARE:
-                double side = getRandomProperty();
-                return new Square(color, side);
+                return getRandomSquare(color);
             case RIGHT_TRIANGLE:
-                double firstLeg = getRandomProperty();
-                double secondLeg = getRandomProperty();
-                return new RightTriangle(color, firstLeg, secondLeg);
+                return getRandomRightTriangle(color);
             case ISOSCELES_TRAPEZOID:
-                double topBase = getRandomProperty();
-                double bottomBase = getRandomProperty();
-                double height = getRandomProperty();
-                return new IsoscelesTrapezoid(color, topBase, bottomBase, height);
+                return getRandomIsoscelesTrapezoid(color);
             default:
                 return getDefaultFigure();
         }
     }
 
+    private Figure getRandomCircle(String color) {
+        double radius = getRandomProperty();
+        return new Circle(color, radius);
+    }
+
+    private Figure getRandomRectangle(String color) {
+        double firstSide = getRandomProperty();
+        double secondSide = getRandomProperty();
+        return new Rectangle(color, firstSide, secondSide);
+    }
+
+    private Figure getRandomSquare(String color) {
+        double side = getRandomProperty();
+        return new Square(color, side);
+    }
+
+    private Figure getRandomRightTriangle(String color) {
+        double firstLeg = getRandomProperty();
+        double secondLeg = getRandomProperty();
+        return new RightTriangle(color, firstLeg, secondLeg);
+    }
+
+    private Figure getRandomIsoscelesTrapezoid(String color) {
+        double topBase = getRandomProperty();
+        double bottomBase = getRandomProperty();
+        double height = getRandomProperty();
+        return new IsoscelesTrapezoid(color, topBase, bottomBase, height);
+    }
+
     public Figure getDefaultFigure() {
-        return new Circle("white", 10);
+        return new Circle(DEFAULT_CIRCLE_COLOR, DEFAULT_CIRCLE_RADIUS);
     }
 }
