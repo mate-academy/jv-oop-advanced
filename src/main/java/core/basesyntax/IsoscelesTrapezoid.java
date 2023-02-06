@@ -4,9 +4,9 @@ public class IsoscelesTrapezoid extends Figure {
     private final int firstSide;
     private final int secondSide;
     private final int height;
-    private final NameOfFigure name = NameOfFigure.Trapezoid;
+    private final NameOfFigure name = NameOfFigure.TRAPEZOID;
 
-    public IsoscelesTrapezoid(Colors color, int firstSide, int secondSide, int height) {
+    public IsoscelesTrapezoid(Color color, int firstSide, int secondSide, int height) {
         this.setColor(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;

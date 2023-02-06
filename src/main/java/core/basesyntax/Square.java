@@ -2,9 +2,9 @@ package core.basesyntax;
 
 public class Square extends Figure {
     private final int side;
-    private final NameOfFigure name = NameOfFigure.Square;
+    private final NameOfFigure name = NameOfFigure.SQUARE;
 
-    public Square(Colors color, int side) {
+    public Square(Color color, int side) {
         this.setColor(color);
         this.side = side;
     }

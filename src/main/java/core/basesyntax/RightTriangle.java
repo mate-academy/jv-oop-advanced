@@ -3,9 +3,9 @@ package core.basesyntax;
 public class RightTriangle extends Figure {
     private final int firstLeg;
     private final int secondLeg;
-    private final NameOfFigure name = NameOfFigure.Triangle;
+    private final NameOfFigure name = NameOfFigure.TRIANGLE;
 
-    public RightTriangle(Colors color, int firstLeg, int secondLeg) {
+    public RightTriangle(Color color, int firstLeg, int secondLeg) {
         this.setColor(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;

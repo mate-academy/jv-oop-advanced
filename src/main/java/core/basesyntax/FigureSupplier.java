@@ -1,10 +1,11 @@
 package core.basesyntax;
 
+import java.security.SecureRandom;
 import java.util.Random;
 
 public class FigureSupplier extends ColorSupplier {
     public static final int FIGURE_COUNT = 5;
-    private final Random random = new Random();
+    SecureRandom random = new SecureRandom();
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT) + 1;
@@ -26,6 +27,6 @@ public class FigureSupplier extends ColorSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Colors.White, 10);
+        return new Circle(Color.WHITE, 10);
     }
 }

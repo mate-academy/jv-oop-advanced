@@ -3,9 +3,9 @@ package core.basesyntax;
 public class Rectangle extends Figure {
     private final int firstSide;
     private final int secondSide;
-    private final NameOfFigure name = NameOfFigure.Rectangle;
+    private final NameOfFigure name = NameOfFigure.RECTANGLE;
 
-    public Rectangle(Colors color, int firstSide, int secondSide) {
+    public Rectangle(Color color, int firstSide, int secondSide) {
         this.setColor(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;

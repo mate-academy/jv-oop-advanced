@@ -1,13 +1,13 @@
 package core.basesyntax;
 
-public abstract class Figure implements Area, Draw {
-    private Colors color;
+public abstract class Figure implements getArea, Draw {
+    private Color color;
 
-    public Colors getColor() {
+    public Color getColor() {
         return color;
     }
 
-    public void setColor(Colors color) {
+    public void setColor(Color color) {
         this.color = color;
     }
 }

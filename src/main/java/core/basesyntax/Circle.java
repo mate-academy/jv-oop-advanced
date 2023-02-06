@@ -2,9 +2,9 @@ package core.basesyntax;
 
 public class Circle extends Figure {
     private final int radius;
-    private final NameOfFigure name = NameOfFigure.Circle;
+    private final NameOfFigure name = NameOfFigure.CIRCLE;
 
-    public Circle(Colors color, int radius) {
+    public Circle(Color color, int radius) {
         this.setColor(color);
         this.radius = radius;
     }
