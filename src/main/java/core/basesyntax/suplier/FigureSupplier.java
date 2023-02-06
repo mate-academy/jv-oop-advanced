@@ -15,27 +15,27 @@ public class FigureSupplier extends Supplier {
         AbstractFigure figure = null;
         switch (Figures.values()[Supplier.RANDOM.nextInt(Figures.values().length)]) {
             case CIRCLE:
-                int radius = Supplier.RANDOM.nextInt(Supplier.MIN_VALUE, Supplier.MAX_VALUE);
+                int radius = Supplier.RANDOM.nextInt(Supplier.MAX_VALUE) + Supplier.MIN_VALUE;
                 figure = new Circle(colorSupplier.getRandomColor(), radius);
                 break;
             case SQUARE:
-                int side = Supplier.RANDOM.nextInt(Supplier.MIN_VALUE, Supplier.MAX_VALUE);
+                int side = Supplier.RANDOM.nextInt(Supplier.MAX_VALUE) + Supplier.MIN_VALUE;
                 figure = new Square(colorSupplier.getRandomColor(), side);
                 break;
             case RECTANGLE:
-                int width = Supplier.RANDOM.nextInt(1, 21);
-                int length = Supplier.RANDOM.nextInt(1, 21);
+                int width = Supplier.RANDOM.nextInt(Supplier.MAX_VALUE) + Supplier.MIN_VALUE;
+                int length = Supplier.RANDOM.nextInt(Supplier.MAX_VALUE) + Supplier.MIN_VALUE;
                 figure = new Rectangle(colorSupplier.getRandomColor(), width, length);
                 break;
             case RIGHT_TRIANGLE:
-                int firstLeg = Supplier.RANDOM.nextInt(1, 21);
-                int secondLeg = Supplier.RANDOM.nextInt(1, 21);
+                int firstLeg = Supplier.RANDOM.nextInt(Supplier.MAX_VALUE) + Supplier.MIN_VALUE;
+                int secondLeg = Supplier.RANDOM.nextInt(Supplier.MAX_VALUE) + Supplier.MIN_VALUE;
                 figure = new RightTriangle(colorSupplier.getRandomColor(), firstLeg, secondLeg);
                 break;
             case ISOSCELES_TRAPEZOID:
-                int a = Supplier.RANDOM.nextInt(1, 21);
-                int b = Supplier.RANDOM.nextInt(1, 21);
-                int h = Supplier.RANDOM.nextInt(1, 21);
+                int a = Supplier.RANDOM.nextInt(Supplier.MAX_VALUE) + Supplier.MIN_VALUE;
+                int b = Supplier.RANDOM.nextInt(Supplier.MAX_VALUE) + Supplier.MIN_VALUE;
+                int h = Supplier.RANDOM.nextInt(Supplier.MAX_VALUE) + Supplier.MIN_VALUE;
                 figure = new IsoscelesTrapezoid(colorSupplier.getRandomColor(), a, b, h);
                 break;
             default:
