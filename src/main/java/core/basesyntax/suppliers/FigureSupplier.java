@@ -16,10 +16,6 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final FigureType[] figureTypes = FigureType.values();
     private final int figureCount = figureTypes.length;
-    
-    private double getRandomProperty() {
-        return (int) (Math.random() * MAX_PROPERTY_VALUE);
-    }
 
     public Figure getRandomFigure() {
         int index = random.nextInt(figureCount);
@@ -42,6 +38,14 @@ public class FigureSupplier {
         }
     }
 
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_CIRCLE_COLOR, DEFAULT_CIRCLE_RADIUS);
+    }
+
+    private double getRandomProperty() {
+        return (int) (Math.random() * MAX_PROPERTY_VALUE);
+    }
+    
     private Figure getRandomCircle(String color) {
         double radius = getRandomProperty();
         return new Circle(color, radius);
@@ -69,9 +73,5 @@ public class FigureSupplier {
         double bottomBase = getRandomProperty();
         double height = getRandomProperty();
         return new IsoscelesTrapezoid(color, topBase, bottomBase, height);
-    }
-
-    public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_CIRCLE_COLOR, DEFAULT_CIRCLE_RADIUS);
     }
 }
