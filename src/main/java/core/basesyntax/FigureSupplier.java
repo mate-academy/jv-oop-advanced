@@ -15,9 +15,9 @@ public class FigureSupplier {
                     secureRandom.nextInt(RANDOMIZER_BOUND), colorSupplier.getColor());
             case CIRCLE: return new Circle(secureRandom.nextInt(RANDOMIZER_BOUND),
                     colorSupplier.getColor());
-            case RIGHTTRIANGLE: return new RightTriangle(secureRandom.nextInt(RANDOMIZER_BOUND),
+            case RIGHT_TRIANGLE: return new RightTriangle(secureRandom.nextInt(RANDOMIZER_BOUND),
                     secureRandom.nextInt(RANDOMIZER_BOUND), colorSupplier.getColor());
-            case ISOSCELESTRAPEZOID:
+            case ISOSCELES_TRAPEZOID:
                 return new IsoscelesTrapezoid(secureRandom.nextInt(RANDOMIZER_BOUND),
                     secureRandom.nextInt(RANDOMIZER_BOUND), secureRandom.nextInt(RANDOMIZER_BOUND),
                     colorSupplier.getColor());
