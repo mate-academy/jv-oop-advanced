@@ -4,22 +4,28 @@ public class Rectangle extends Figure{
 
     private int sideA;
     private int sideB;
-    private int sideC;
 
-    public Rectangle(Color color, int sideA, int sideB, int sideC) {
+    public Rectangle(Color color, int sideA, int sideB) {
         super(color);
         this.sideA = sideA;
         this.sideB = sideB;
-        this.sideC = sideC;
+    }
+    {
+        setFigureType("rectangle");
     }
 
     @Override
     public double area() {
-        return 0;
+        return sideA * sideB;
     }
 
     @Override
     public void draw() {
-        super.draw();
+        System.out.println("Figure: "
+                + getFigureType() + ", area: "
+                + area() + " sq.units, sideA: "
+                + sideA + " units, sideB: "
+                + sideB + " units, color: "
+                + getColor().toString().toLowerCase());
     }
 }

@@ -1,10 +1,23 @@
 package core.basesyntax;
 
-public class Figure implements AreaCalculator, Paint{
+public abstract class Figure implements AreaCalculator, Paint{
 
     private Color color;
+    private String figureType;
 
     public Figure(Color color) {
+        this.color = color;
+    }
+
+    public void setFigureType(String figureType) {
+        this.figureType = figureType;
+    }
+
+    public String getFigureType() {
+        return figureType;
+    }
+
+    public void setColor(Color color) {
         this.color = color;
     }
 
