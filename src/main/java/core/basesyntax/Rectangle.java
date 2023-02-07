@@ -2,8 +2,8 @@ package core.basesyntax;
 
 public class Rectangle extends Figure {
     private static final String name = "square";
-    private int side1;
-    private int side2;
+    private final int side1;
+    private final int side2;
 
     public Rectangle(int side1, int side2) {
         this.side1 = side1;

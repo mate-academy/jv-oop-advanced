@@ -2,8 +2,8 @@ package core.basesyntax;
 
 public class RightTriangle extends Figure {
     private static final String name = "right triangle";
-    private double leg1;
-    private double leg2;
+    private final double leg1;
+    private final double leg2;
 
     public RightTriangle(double leg1, double leg2) {
         this.leg1 = leg1;
