@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure{
+public class Rectangle extends Figure {
 
     private int sideA;
     private int sideB;
@@ -10,6 +10,7 @@ public class Rectangle extends Figure{
         this.sideA = sideA;
         this.sideB = sideB;
     }
+
     {
         setFigureType("rectangle");
     }

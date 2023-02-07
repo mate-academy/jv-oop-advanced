@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class FigureSupplier {
 
-    private Random random = new Random();
     private static final int RANDOM = 30;
     private static final int FIGURE_COUNT = 5;
+    private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getDefaultFigure() {
@@ -32,14 +32,14 @@ public class FigureSupplier {
         }
     }
 
-
     private Figure getSquare() {
         Figure figure = new Square(colorSupplier.getRandomColor(), random.nextInt(RANDOM));
         return figure;
     }
 
     private Figure getRectangle() {
-        Figure figure = new Rectangle(colorSupplier.getRandomColor(), random.nextInt(RANDOM), random.nextInt(RANDOM));
+        Figure figure = new Rectangle(colorSupplier.getRandomColor(),
+                random.nextInt(RANDOM), random.nextInt(RANDOM));
         return figure;
     }
 
@@ -55,8 +55,8 @@ public class FigureSupplier {
     }
 
     private Figure getIsoscelesTrapezoid() {
-        Figure figure = new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(RANDOM),
-                random.nextInt(RANDOM), random.nextInt(RANDOM));
+        Figure figure = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                random.nextInt(RANDOM), random.nextInt(RANDOM), random.nextInt(RANDOM));
         return figure;
     }
 }
