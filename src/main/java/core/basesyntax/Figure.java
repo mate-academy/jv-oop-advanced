@@ -19,6 +19,5 @@ public class Figure implements AreaCalculator, Paint{
 
     @Override
     public void draw() {
-
     }
 }
