@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements FigureMethods {
+public abstract class Figure implements FigureDraw, FigureArea {
     private Colors color;
 
     public void setColor(Colors color) {
@@ -11,6 +11,7 @@ public abstract class Figure implements FigureMethods {
         return color;
     }
 
+    @Override
     public abstract double getArea();
 
     @Override

@@ -1,21 +1,26 @@
 package core.basesyntax;
 
-import java.util.Random;
+import java.security.SecureRandom;
 
 public class FigureSupplier {
+    private static final int RANDOMIZERBOUND = 100;
+    private final SecureRandom randomizer = new SecureRandom();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+
     public Figure getRandomFigure() {
-        Random random = new Random();
-        ColorSupplier supplier = new ColorSupplier();
-        switch (Figures.values()[random.nextInt(Figures.values().length)]) {
-            case SQUARE: return new Square(random.nextInt(100), supplier.getColor());
-            case RECTANGLE: return new Rectangle(random.nextInt(100), random.nextInt(100),
-                    supplier.getColor());
-            case CIRCLE: return new Circle(random.nextInt(100),
-                    supplier.getColor());
-            case RIGHTTRIANGLE: return new RightTriangle(random.nextInt(100),
-                    random.nextInt(100), supplier.getColor());
-            case ISOSCELESTRAPEZOID: return new IsoscelesTrapezoid(random.nextInt(100),
-                random.nextInt(100), random.nextInt(100), supplier.getColor());
+        switch (Figures.values()[randomizer.nextInt(Figures.values().length)]) {
+            case SQUARE: return new Square(randomizer.nextInt(RANDOMIZERBOUND),
+                    colorSupplier.getColor());
+            case RECTANGLE: return new Rectangle(randomizer.nextInt(RANDOMIZERBOUND),
+                    randomizer.nextInt(RANDOMIZERBOUND), colorSupplier.getColor());
+            case CIRCLE: return new Circle(randomizer.nextInt(RANDOMIZERBOUND),
+                    colorSupplier.getColor());
+            case RIGHTTRIANGLE: return new RightTriangle(randomizer.nextInt(RANDOMIZERBOUND),
+                    randomizer.nextInt(RANDOMIZERBOUND), colorSupplier.getColor());
+            case ISOSCELESTRAPEZOID:
+                return new IsoscelesTrapezoid(randomizer.nextInt(RANDOMIZERBOUND),
+                    randomizer.nextInt(RANDOMIZERBOUND), randomizer.nextInt(RANDOMIZERBOUND),
+                    colorSupplier.getColor());
             default: return null;
         }
     }
