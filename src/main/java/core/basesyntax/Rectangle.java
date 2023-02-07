@@ -1,8 +1,14 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private final double firstSide = SIDE;
-    private final double secondSide = SIDE;
+    private final double firstSide;
+    private final double secondSide;
+
+    public Rectangle(double firstSide, double secondSide, Color color) {
+        this.firstSide = firstSide;
+        this.secondSide = secondSide;
+        super.color = color;
+    }
 
     @Override
     public double area() {
@@ -22,9 +28,5 @@ public class Rectangle extends Figure {
 
     public double getSecondSide() {
         return secondSide;
-    }
-
-    public Color getColor() {
-        return color;
     }
 }

@@ -1,8 +1,14 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private final double firstLeg = SIDE;
-    private final double secondLeg = SIDE;
+    private final double firstLeg;
+    private final double secondLeg;
+
+    public RightTriangle(double firstLeg, double secondLeg, Color color) {
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
+        super.color = color;
+    }
 
     @Override
     public double area() {
@@ -22,9 +28,5 @@ public class RightTriangle extends Figure {
 
     public double getSecondLeg() {
         return secondLeg;
-    }
-
-    public Color getColor() {
-        return color;
     }
 }

@@ -1,19 +1,16 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private double radius = SIDE;
+    private final double radius;
 
     public Circle(double radius, Color color) {
         this.radius = radius;
         super.color = color;
     }
 
-    public Circle() {
-    }
-
     @Override
     public double area() {
-        return 3.14 * (radius * radius);
+        return Math.PI * (radius * radius);
     }
 
     @Override
@@ -24,10 +21,6 @@ public class Circle extends Figure {
 
     public double getRadius() {
         return radius;
-    }
-
-    public Color getColor() {
-        return color;
     }
 }
 

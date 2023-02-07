@@ -3,13 +3,13 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int FIGURE_COUNT = 4;
-    private static final int RANDOM_FIGURE = new Random().nextInt(FIGURE_COUNT);
-
     public Figure getRandomFigure() {
-        Figure[] figuresArr = {new Circle(), new Rectangle(),
-                new Square(), new IsoscelesTrapezoid(), new RightTriangle()};
-        return figuresArr[RANDOM_FIGURE];
+        double side = new Random().nextInt(100);
+        Color color = new ColorSupplier().getRandomColor();
+        Figure[] figuresArr = {new Circle(side, color), new Rectangle(side, side, color),
+                new Square(side, color), new IsoscelesTrapezoid(side, side, side, color),
+                new RightTriangle(side, side, color)};
+        return figuresArr[new Random().nextInt(figuresArr.length)];
     }
 
     public Figure getDefaultFigure() {

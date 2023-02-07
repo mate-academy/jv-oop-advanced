@@ -1,12 +1,15 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private final double upSide = SIDE;
-    private final double downSide = SIDE;
-    private final double height = SIDE;
+    private final double upSide;
+    private final double downSide;
+    private final double height;
 
-    public Color getColor() {
-        return color;
+    public IsoscelesTrapezoid(double upSide, double downSide, double height, Color color) {
+        this.upSide = upSide;
+        this.downSide = downSide;
+        this.height = height;
+        super.color = color;
     }
 
     @Override

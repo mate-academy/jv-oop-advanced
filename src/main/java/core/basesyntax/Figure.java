@@ -1,18 +1,15 @@
 package core.basesyntax;
 
-import java.util.Random;
-
-public class Figure implements Drawable, AreaCalculator {
-    static final int SITE_MAX_LENGTH = 100;
-    protected static final double SIDE = new Random().nextInt(SITE_MAX_LENGTH);
+public abstract class Figure implements Drawable, AreaCalculator {
     protected Color color = new ColorSupplier().getRandomColor();
 
-    @Override
-    public double area() {
-        return 0;
+    public Color getColor() {
+        return color;
     }
 
     @Override
-    public void draw() {
-    }
+    public abstract double area();
+
+    @Override
+    public abstract void draw();
 }
