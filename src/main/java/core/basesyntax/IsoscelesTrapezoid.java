@@ -1,10 +1,9 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-
-    private int base1;
-    private int base2;
-    private int side;
+    private final int base1;
+    private final int base2;
+    private final int side;
 
     public IsoscelesTrapezoid(String color, int base1, int base2, int side) {
         super(color);
@@ -26,17 +25,5 @@ public class IsoscelesTrapezoid extends Figure {
                 + " units, Base2: " + base2
                 + " units, Side: " + side
                 + " units, Color: " + getColor();
-    }
-
-    public int getBase1() {
-        return base1;
-    }
-
-    public int getBase2() {
-        return base2;
-    }
-
-    public int getSide() {
-        return side;
     }
 }

@@ -1,9 +1,8 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-
-    private int firstSide;
-    private int secondSide;
+    private final int firstSide;
+    private final int secondSide;
 
     public Rectangle(String color, int firstSide, int secondSide) {
         super(color);

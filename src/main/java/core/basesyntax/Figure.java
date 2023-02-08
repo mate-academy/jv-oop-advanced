@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public abstract class Figure implements Draw, GetArea {
-    private String color;
+    private final String color;
 
     public Figure(String color) {
         this.color = color;

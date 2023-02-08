@@ -1,9 +1,8 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-
-    private int firstLeg;
-    private int secondLeg;
+    private final int firstLeg;
+    private final int secondLeg;
 
     public RightTriangle(String color, int firstLeg, int secondLeg) {
         super(color);
@@ -22,13 +21,5 @@ public class RightTriangle extends Figure {
                 + " sq.units, Height: " + firstLeg
                 + " sq.units, Base: " + secondLeg
                 + " units, Color: " + getColor();
-    }
-
-    public int getFirstLeg() {
-        return firstLeg;
-    }
-
-    public int getSecondLeg() {
-        return secondLeg;
     }
 }
