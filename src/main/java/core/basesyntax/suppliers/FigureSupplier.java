@@ -6,6 +6,7 @@ import core.basesyntax.figures.IsoscelesTrapezoid;
 import core.basesyntax.figures.Rectangle;
 import core.basesyntax.figures.RightTriangle;
 import core.basesyntax.figures.Square;
+
 import java.util.Random;
 
 public class FigureSupplier {
@@ -20,19 +21,18 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         int index = random.nextInt(figureCount);
         FigureType type = figureTypes[index];
-        String color = colorSupplier.getRandomColor();
 
         switch (type) {
             case CIRCLE:
-                return getRandomCircle(color);
+                return getRandomCircle();
             case RECTANGLE:
-                return getRandomRectangle(color);
+                return getRandomRectangle();
             case SQUARE:
-                return getRandomSquare(color);
+                return getRandomSquare();
             case RIGHT_TRIANGLE:
-                return getRandomRightTriangle(color);
+                return getRandomRightTriangle();
             case ISOSCELES_TRAPEZOID:
-                return getRandomIsoscelesTrapezoid(color);
+                return getRandomIsoscelesTrapezoid();
             default:
                 return getDefaultFigure();
         }
@@ -45,30 +45,35 @@ public class FigureSupplier {
     private double getRandomProperty() {
         return (int) (Math.random() * MAX_PROPERTY_VALUE);
     }
-    
-    private Figure getRandomCircle(String color) {
+
+    private Figure getRandomCircle() {
+        String color = colorSupplier.getRandomColor();
         double radius = getRandomProperty();
         return new Circle(color, radius);
     }
 
-    private Figure getRandomRectangle(String color) {
+    private Figure getRandomRectangle() {
+        String color = colorSupplier.getRandomColor();
         double firstSide = getRandomProperty();
         double secondSide = getRandomProperty();
         return new Rectangle(color, firstSide, secondSide);
     }
 
-    private Figure getRandomSquare(String color) {
+    private Figure getRandomSquare() {
+        String color = colorSupplier.getRandomColor();
         double side = getRandomProperty();
         return new Square(color, side);
     }
 
-    private Figure getRandomRightTriangle(String color) {
+    private Figure getRandomRightTriangle() {
+        String color = colorSupplier.getRandomColor();
         double firstLeg = getRandomProperty();
         double secondLeg = getRandomProperty();
         return new RightTriangle(color, firstLeg, secondLeg);
     }
 
-    private Figure getRandomIsoscelesTrapezoid(String color) {
+    private Figure getRandomIsoscelesTrapezoid() {
+        String color = colorSupplier.getRandomColor();
         double topBase = getRandomProperty();
         double bottomBase = getRandomProperty();
         double height = getRandomProperty();
