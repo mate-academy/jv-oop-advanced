@@ -5,7 +5,7 @@ public class Square extends Figure {
     private final NameOfFigure name = NameOfFigure.SQUARE;
 
     public Square(Color color, int side) {
-        this.setColor(color);
+        super(color);
         this.side = side;
     }
 
@@ -18,14 +18,14 @@ public class Square extends Figure {
     }
 
     @Override
-    public int areaCalculator() {
+    public double calculateArea() {
         return side * side;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: " + getName().name()
-                + " area: " + areaCalculator() + " sq.units, side: "
+                + " area: " + calculateArea() + " sq.units, side: "
                 + getSide() + " units, color: " + getColor());
     }
 }

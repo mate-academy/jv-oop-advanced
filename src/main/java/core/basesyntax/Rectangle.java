@@ -6,7 +6,7 @@ public class Rectangle extends Figure {
     private final NameOfFigure name = NameOfFigure.RECTANGLE;
 
     public Rectangle(Color color, int firstSide, int secondSide) {
-        this.setColor(color);
+        super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
     }
@@ -24,13 +24,13 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public int areaCalculator() {
+    public double calculateArea() {
         return firstSide * secondSide;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getName().name() + " area: " + areaCalculator()
+        System.out.println("Figure: " + getName().name() + " area: " + calculateArea()
                 + " sq.units, firstSide: " + getFirstSide() + " secondSide "
                 + getSecondSide() + " units, color: " + getColor());
     }

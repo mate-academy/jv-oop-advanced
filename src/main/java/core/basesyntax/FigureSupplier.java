@@ -2,26 +2,39 @@ package core.basesyntax;
 
 import java.security.SecureRandom;
 
-public class FigureSupplier extends ColorSupplier {
-    private static final int FIGURE_COUNT = 5;
+public class FigureSupplier {
+    private static final int BOUND_OF_RANDOM = 100;
+    private final ColorSupplier randomColor = new ColorSupplier();
     private final SecureRandom random = new SecureRandom();
 
+    public int getRandomNumber() {
+        return random.nextInt(BOUND_OF_RANDOM);
+    }
+
+    public NameOfFigure getRandomNameOfFigure() {
+        return NameOfFigure.values()[random.nextInt(NameOfFigure.values().length)];
+    }
+
     public Figure getRandomFigure() {
-        int figureNumber = random.nextInt(FIGURE_COUNT) + 1;
-        int randomSide = random.nextInt(100);
-        int randomSide1 = random.nextInt(100);
-        int randomSide2 = random.nextInt(100);
-        int randomRadius = random.nextInt(100);
-        if (figureNumber == 1) {
-            return new Square(getRandomColor(), randomSide);
-        } else if (figureNumber == 2) {
-            return new Circle(getRandomColor(), randomRadius);
-        } else if (figureNumber == 3) {
-            return new IsoscelesTrapezoid(getRandomColor(), randomSide, randomSide1, randomSide2);
-        } else if (figureNumber == 4) {
-            return new Rectangle(getRandomColor(), randomSide, randomSide1);
-        } else {
-            return new RightTriangle(getRandomColor(), randomSide, randomSide2);
+        int randomSide = getRandomNumber();
+        int randomSide1 = getRandomNumber();
+        int randomSide2 = getRandomNumber();
+        int randomRadius = getRandomNumber();
+
+        switch (getRandomNameOfFigure()) {
+            case CIRCLE:
+                return new Circle(randomColor.getRandomColor(), randomRadius);
+            case SQUARE:
+                return new Square(randomColor.getRandomColor(), randomSide);
+            case TRIANGLE:
+                return new RightTriangle(randomColor.getRandomColor(), randomSide, randomSide2);
+            case RECTANGLE:
+                return new Rectangle(randomColor.getRandomColor(), randomSide, randomSide1);
+            case TRAPEZOID:
+                return new IsoscelesTrapezoid(randomColor.getRandomColor(),
+                        randomSide, randomSide1, randomSide2);
+            default:
+                return getDefaultFigure();
         }
     }
 

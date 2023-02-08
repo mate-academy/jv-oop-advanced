@@ -6,7 +6,7 @@ public class RightTriangle extends Figure {
     private final NameOfFigure name = NameOfFigure.TRIANGLE;
 
     public RightTriangle(Color color, int firstLeg, int secondLeg) {
-        this.setColor(color);
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
@@ -24,14 +24,14 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public int areaCalculator() {
+    public double calculateArea() {
         return (firstLeg * secondLeg) / 2;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: " + getName().name()
-                + " area: " + areaCalculator() + " sq.units, firstLeg: "
+                + " area: " + calculateArea() + " sq.units, firstLeg: "
                 + getFirstLeg() + " secondLeg " + getSecondLeg() + " units, color: " + getColor());
     }
 }

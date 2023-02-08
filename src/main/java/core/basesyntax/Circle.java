@@ -5,7 +5,7 @@ public class Circle extends Figure {
     private final NameOfFigure name = NameOfFigure.CIRCLE;
 
     public Circle(Color color, int radius) {
-        this.setColor(color);
+        super(color);
         this.radius = radius;
     }
 
@@ -18,14 +18,14 @@ public class Circle extends Figure {
     }
 
     @Override
-    public int areaCalculator() {
+    public double calculateArea() {
         return (int) Math.PI * radius * radius;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: " + getName().name()
-                + " area: " + areaCalculator() + " sq.units, radius: "
+                + " area: " + calculateArea() + " sq.units, radius: "
                 + getRadius() + " units, color: " + getColor());
     }
 }
