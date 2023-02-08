@@ -1,11 +1,10 @@
 package core.basesyntax;
 
 import java.security.SecureRandom;
-import java.util.Random;
 
 public class FigureSupplier extends ColorSupplier {
-    public static final int FIGURE_COUNT = 5;
-    SecureRandom random = new SecureRandom();
+    private static final int FIGURE_COUNT = 5;
+    private final SecureRandom random = new SecureRandom();
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT) + 1;
