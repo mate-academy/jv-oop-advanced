@@ -1,6 +1,6 @@
 package core.basesyntax.figure;
 
-public class Circle extends AbstractFigure {
+public class Circle extends Figure {
     private int radius;
 
     public Circle(String color, int radius) {
