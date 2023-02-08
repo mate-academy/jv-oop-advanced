@@ -8,10 +8,10 @@ public class Circle extends Figure {
         super(color);
         this.radius = radius;
     }
+
     @Override
     public double getArea() {
-        double area = 3.14 * radius * radius;
-        return area;
+        return 3.14 * radius * radius;
     }
 
     @Override

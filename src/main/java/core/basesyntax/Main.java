@@ -1,6 +1,5 @@
 package core.basesyntax;
 
-
 import java.util.Random;
 
 public class Main {
@@ -21,7 +20,5 @@ public class Main {
         figureSupplier.getDefaultFigure().draw();
         figureSupplier.getDefaultFigure().draw();
         figureSupplier.getDefaultFigure().draw();
-
-
     }
 }

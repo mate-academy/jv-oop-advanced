@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure{
+public class Rectangle extends Figure {
 
     private final double width;
     private final double length;
@@ -13,8 +13,7 @@ public class Rectangle extends Figure{
 
     @Override
     public double getArea() {
-        double area = width * length;
-        return area;
+        return width * length;
     }
 
     @Override
@@ -24,6 +23,5 @@ public class Rectangle extends Figure{
                 + "width: " + width + "units, "
                 + "length: " + length + "units, "
                 + "color: " + getColor());
-
     }
 }
