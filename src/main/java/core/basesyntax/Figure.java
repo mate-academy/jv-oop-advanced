@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements Printable {
+public abstract class Figure implements Printable,Countable {
     private String figureType;
     private Color color;
 
@@ -23,7 +23,5 @@ public abstract class Figure implements Printable {
     public void setColor(Color color) {
         this.color = color;
     }
-
-    abstract double countArea();
 
 }

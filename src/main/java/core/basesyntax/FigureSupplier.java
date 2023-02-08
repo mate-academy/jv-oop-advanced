@@ -10,20 +10,18 @@ public class FigureSupplier {
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        int randomFigureNumber = random.nextInt(NUMBER_OF_FIGURES) + 1;
+        int randomFigureNumber = random.nextInt(NUMBER_OF_FIGURES);
         switch (randomFigureNumber) {
-            case 1:
+            case 0:
                 return getRandomCircle();
-            case 2:
+            case 1:
                 return getRandomIsoscelesTrapezoid();
-            case 3:
+            case 2:
                 return getRandomRectangle();
-            case 4:
+            case 3:
                 return getRandomRightTriangle();
-            case 5:
-                return getRandomSquare();
             default:
-                return null;
+                return getRandomSquare();
         }
     }
 

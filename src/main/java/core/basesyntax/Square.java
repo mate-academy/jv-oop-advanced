@@ -1,11 +1,8 @@
 package core.basesyntax;
 
 public class Square extends Figure {
+    private static final String NAME = "square";
     private int side;
-
-    {
-        setFigureType("square");
-    }
 
     public Square(Color color, int side) {
         super(color);
@@ -13,16 +10,15 @@ public class Square extends Figure {
     }
 
     @Override
-    double countArea() {
+    public double countArea() {
         return Math.pow(side, 2);
     }
 
     @Override
     public void printInfo() {
-        System.out.println("Figure: "
-                + getFigureType() + ", area: "
-                + countArea() + " sq.units, side: "
-                + side + " units, color: "
-                + getColor().toString().toLowerCase());
+        System.out.println("Figure: " + NAME
+                + ", area: " + countArea()
+                + " sq.units, side: " + side
+                + " units, color: " + getColor().toString().toLowerCase());
     }
 }
