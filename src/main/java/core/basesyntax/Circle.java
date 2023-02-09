@@ -1,8 +1,8 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
+    private static final double PI = 3.14159265359;
     private double radius;
-    private static final double PI = 3.14;
 
     public Circle(double radius, ColorSupplier colorSuppliers) {
         super(colorSuppliers);
