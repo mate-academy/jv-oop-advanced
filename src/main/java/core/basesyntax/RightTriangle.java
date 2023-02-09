@@ -5,7 +5,7 @@ public class RightTriangle extends AbstractFigure {
     private double secondLeg;
 
     public RightTriangle(String color, double firstLeg, double secondLeg) {
-        super("Right triangle", color);
+        super(Figure.RIGHT_TRIANGLE.name(), color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
@@ -14,11 +14,11 @@ public class RightTriangle extends AbstractFigure {
     public String draw() {
         return String.format("Figure: %s, area: %.1f sq.units, first leg: %.0f units,"
                         + " second leg: %.0f units, color: %s",
-                getType(),area(),firstLeg,secondLeg,getColor());
+                getType(), getArea(), firstLeg, secondLeg, getColor());
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return (firstLeg * secondLeg) / 2;
     }
 }

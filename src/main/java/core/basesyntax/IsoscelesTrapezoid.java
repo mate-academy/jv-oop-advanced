@@ -1,14 +1,14 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends AbstractFigure {
-    private double baseA;
-    private double baseB;
+    private double firstBase;
+    private double secondBase;
     private double height;
 
-    public IsoscelesTrapezoid(String color, double baseA, double baseB, double height) {
-        super("Isosceles trapezoid", color);
-        this.baseA = baseA;
-        this.baseB = baseB;
+    public IsoscelesTrapezoid(String color, double firstBase, double secondBase, double height) {
+        super(Figure.ISOSCELES_TRAPEZOID.name(), color);
+        this.firstBase = firstBase;
+        this.secondBase = secondBase;
         this.height = height;
     }
 
@@ -16,11 +16,11 @@ public class IsoscelesTrapezoid extends AbstractFigure {
     public String draw() {
         return String.format("Figure: %s, area: %.1f sq.units, base A: %.0f units, "
                         + "base B: %.0f units, height: %.0f units, color: %s",
-                getType(),area(),baseA,baseB,height,getColor());
+                getType(), getArea(), firstBase, secondBase, height, getColor());
     }
 
     @Override
-    public double area() {
-        return (baseA + baseB) / 2 * height;
+    public double getArea() {
+        return (firstBase + secondBase) / 2 * height;
     }
 }
