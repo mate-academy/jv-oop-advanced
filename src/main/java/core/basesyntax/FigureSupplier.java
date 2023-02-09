@@ -15,26 +15,26 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         FiguresShape[] figureshape = FiguresShape.values();
         Figure fg = null;
-        switch (figureshape[random.nextInt(figureshape.length)].toString()) {
-            case "Square": {
+        switch (figureshape[random.nextInt(figureshape.length)].name()) {
+            case "SQUARE": {
                 fg = new Square(random.nextDouble() * MULTIPLAYER, colorSupplier);
                 break;
             }
-            case "Rectangle": {
+            case "RECTANGLE": {
                 fg = new Rectangle(random.nextDouble() * MULTIPLAYER, random.nextDouble()
                     * MULTIPLAYER, colorSupplier);
                 break;
             }
-            case "RightTriangle": {
+            case "RIGHTTRIANGLE": {
                 fg = new RightTriangle(random.nextDouble() * MULTIPLAYER, random.nextDouble()
                     * MULTIPLAYER, colorSupplier);
                 break;
             }
-            case "Circle": {
+            case "CIRCLE": {
                 fg = new Circle(random.nextDouble() * MULTIPLAYER, colorSupplier);
                 break;
             }
-            case "IsoscelesTrapezoid": {
+            case "ISOSCELESTRAPEZOID": {
                 fg = new IsoscelesTrapezoid(random.nextDouble() * MULTIPLAYER, random.nextDouble()
                     * MULTIPLAYER, random.nextDouble() * MULTIPLAYER, colorSupplier);
                 break;
