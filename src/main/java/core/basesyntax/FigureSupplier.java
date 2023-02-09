@@ -1,13 +1,14 @@
 package core.basesyntax;
-import java.util.Random;
-public class FigureSupplier {
 
-    private final Random random = new Random();
-    private final ColorSupplier supplier = new ColorSupplier();
+import java.util.Random;
+
+public class FigureSupplier {
     public static final int DEFAULT_RADIUS = 10;
     public static final String DEFAULT_COLOR = "WHITE";
     public static final int FIGURE_BOUND = 5;
     public static final int RANDOM_NUMBER = 10;
+    private final Random random = new Random();
+    private final ColorSupplier supplier = new ColorSupplier();
 
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
