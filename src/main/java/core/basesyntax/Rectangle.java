@@ -5,7 +5,7 @@ public class Rectangle extends Figure {
     private double secondSide;
 
     public Rectangle(double firstSide, double secondSide, String color) {
-        super("rectangle", color);
+        super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
     }
@@ -16,8 +16,8 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    void draw() {
-        System.out.println("Figure: " + name + ", area: " + getArea() + " sq.units, firstSide: "
+    public void draw() {
+        System.out.println("Figure: rectangle, area: " + getArea() + " sq.units, firstSide: "
                 + firstSide + " units, secondSide: " + secondSide + " units, color: " + color);
     }
 }
