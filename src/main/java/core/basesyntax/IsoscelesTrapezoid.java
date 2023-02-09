@@ -3,12 +3,12 @@ package core.basesyntax;
 public class IsoscelesTrapezoid extends Figure {
     private double topSide;
     private double botomSide;
-    private double visota;
+    private double height;
 
     public IsoscelesTrapezoid(double topSide, double botomSide, double visota, Color color) {
         this.topSide = topSide;
         this.botomSide = botomSide;
-        this.visota = visota;
+        this.height = visota;
         this.setColor(color);
     }
 
@@ -21,21 +21,21 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     public void setVisota(double visota) {
-        this.visota = visota;
+        this.height = visota;
     }
 
     @Override
-    public double obtainArea() {
-        return (topSide + botomSide) * visota / 2;
+    public double calculateArea() {
+        return (topSide + botomSide) * height / 2;
     }
 
     @Override
-    public void toDraw() {
+    public void draw() {
         System.out.println("Figure: IsoscelesTrapezoid, area: "
-                + String.format("%.2f", obtainArea())
+                + String.format("%.2f", calculateArea())
                 + " sq.units, top Side: " + topSide
                 + " units, botom Side: " + botomSide
-                + " units, visota: " + visota
+                + " units, visota: " + height
                 + " units, color: " + getColor().name());
     }
 }

@@ -9,10 +9,10 @@ public class HelloWorld {
         for (int i = 0; i < MAX_FIGURE_COUNT; i++) {
             if (i < MAX_FIGURE_COUNT / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
-                figures[i].toDraw();
+                figures[i].draw();
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
-                figures[i].toDraw();
+                figures[i].draw();
             }
         }
     }
