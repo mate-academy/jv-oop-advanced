@@ -1,52 +1,76 @@
 package core.basesyntax.service;
 
-import core.basesyntax.entity.*;
-
+import core.basesyntax.entity.Circle;
+import core.basesyntax.entity.Figure;
+import core.basesyntax.entity.IsoscelesTrapezoid;
+import core.basesyntax.entity.Rectangle;
+import core.basesyntax.entity.RightTriangle;
+import core.basesyntax.entity.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final static int NUMBER_OF_FIGURES = 5;
+    private static final int NUMBER_OF_FIGURES = 5;
 
-    Random random = new Random();
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        return switch (random.nextInt(NUMBER_OF_FIGURES)) {
-            case 0 -> getRandomCircle();
-            case 1 -> getRandomIsoscelesTrapezoid();
-            case 2 -> getRandomRectangle();
-            case 3 -> getRandomRightTriangle();
-            case 4 -> getRandomSquare();
-            default -> throw new IllegalStateException("Unexpected value: " + random.nextInt(5));
-        };
+        switch (random.nextInt(NUMBER_OF_FIGURES)) {
+            case 0:
+                return getRandomCircle();
+            case 1:
+                return getRandomIsoscelesTrapezoid();
+            case 2:
+                return getRandomRectangle();
+            case 3:
+                return getRandomRightTriangle();
+            default:
+                return getRandomSquare();
+        }
+    }
+
+    public Figure getDefaultFigure() {
+        switch (random.nextInt(NUMBER_OF_FIGURES)) {
+            case 0:
+                return getDefaultCircle();
+            case 1:
+                return getDefaultIsoscelesTrapezoid();
+            case 2:
+                return getDefaultRectangle();
+            case 3:
+                return getDefaultRightTriangle();
+            default:
+                return getDefaultSquare();
+        }
     }
 
     private Circle getRandomCircle() {
         return new Circle(colorSupplier.getRandomColor(),
                 random.nextInt(Circle.MAX_RADIUS));
     }
+
     private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                random.nextDouble(IsoscelesTrapezoid.MAX_HIGH),
-                random.nextDouble(IsoscelesTrapezoid.MAX_UPPER_BASE),
-                random.nextDouble(IsoscelesTrapezoid.MAX_LOWER_BASE));
+                random.nextInt(IsoscelesTrapezoid.MAX_HIGH),
+                random.nextInt(IsoscelesTrapezoid.MAX_UPPER_BASE),
+                random.nextInt(IsoscelesTrapezoid.MAX_LOWER_BASE));
     }
 
     private Rectangle getRandomRectangle() {
         return new Rectangle(colorSupplier.getRandomColor(),
-                random.nextDouble(Rectangle.MAX_FIRST_SIDE),
-                random.nextDouble(Rectangle.MAX_SECOND_SIDE));
+                random.nextInt(Rectangle.MAX_FIRST_SIDE),
+                random.nextInt(Rectangle.MAX_SECOND_SIDE));
     }
 
     private RightTriangle getRandomRightTriangle() {
         return new RightTriangle(colorSupplier.getRandomColor(),
-                random.nextDouble(RightTriangle.MAX_LEFT_LEG),
-                random.nextDouble(RightTriangle.MAX_RIGHT_LEG));
+                random.nextInt(RightTriangle.MAX_LEFT_LEG),
+                random.nextInt(RightTriangle.MAX_RIGHT_LEG));
     }
 
     private Square getRandomSquare() {
         return new Square(colorSupplier.getRandomColor(),
-                random.nextDouble(Square.MAX_SIDE));
+                random.nextInt(Square.MAX_SIDE));
     }
 
     private Circle getDefaultCircle() {
@@ -74,16 +98,5 @@ public class FigureSupplier {
 
     private Square getDefaultSquare() {
         return new Square(Figure.DEFAULT_COLOR, Square.DEFAULT_SIDE);
-    }
-
-    public Figure getDefaultFigure() {
-        return switch (random.nextInt(NUMBER_OF_FIGURES)) {
-            case 0 -> getDefaultCircle();
-            case 1 -> getDefaultIsoscelesTrapezoid();
-            case 2 -> getDefaultRectangle();
-            case 3 -> getDefaultRightTriangle();
-            case 4 -> getDefaultSquare();
-            default -> throw new IllegalStateException("Unexpected value: " + random.nextInt(5));
-        };
     }
 }

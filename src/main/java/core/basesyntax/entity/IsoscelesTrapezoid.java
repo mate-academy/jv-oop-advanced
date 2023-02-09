@@ -1,13 +1,13 @@
 package core.basesyntax.entity;
 
-public class IsoscelesTrapezoid extends Figure implements Printer {
-    public static double MAX_HIGH = 20;
-    public static double MAX_UPPER_BASE = 20;
-    public static double MAX_LOWER_BASE = 20;
+public class IsoscelesTrapezoid extends Figure {
+    public static final int MAX_HIGH = 20;
+    public static final int MAX_UPPER_BASE = 20;
+    public static final int MAX_LOWER_BASE = 20;
 
-    public static double DEFAULT_LOWER_BASE = 10;
-    public static double DEFAULT_UPPER_BASE = 20;
-    public static double DEFAULT_HIGH = 5;
+    public static final double DEFAULT_LOWER_BASE = 10;
+    public static final double DEFAULT_UPPER_BASE = 20;
+    public static final double DEFAULT_HIGH = 5;
 
     private double high;
     private double upperBase;
@@ -24,7 +24,7 @@ public class IsoscelesTrapezoid extends Figure implements Printer {
         return high;
     }
 
-    public void setHigh(double high) {
+    public void setHigh(int high) {
         this.high = high;
     }
 
@@ -32,7 +32,7 @@ public class IsoscelesTrapezoid extends Figure implements Printer {
         return upperBase;
     }
 
-    public void setUpperBase(double upperBase) {
+    public void setUpperBase(int upperBase) {
         this.upperBase = upperBase;
     }
 
@@ -40,7 +40,7 @@ public class IsoscelesTrapezoid extends Figure implements Printer {
         return lowerBase;
     }
 
-    public void setLowerBase(double lowerBase) {
+    public void setLowerBase(int lowerBase) {
         this.lowerBase = lowerBase;
     }
 
@@ -48,7 +48,7 @@ public class IsoscelesTrapezoid extends Figure implements Printer {
     public void printInfo() {
         System.out.println(new StringBuilder("Figure:")
                 .append(" IsoscelesTrapezoid, area: ")
-                .append((upperBase + lowerBase) * high / 2)
+                .append((upperBase + lowerBase) * high / 2.0)
                 .append(" sq.units,")
                 .append(" upperBase: ")
                 .append(upperBase)
