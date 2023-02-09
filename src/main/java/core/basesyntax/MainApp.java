@@ -12,8 +12,8 @@ public class MainApp {
                     figureSupplier.getDefaultFigure();
         }
 
-        for (int i = 0; i < FIGURES_QUANTITY; i++) {
-            figures[i].draw();
+        for (Figure figure: figures) {
+            figure.draw();
         }
     }
 }
