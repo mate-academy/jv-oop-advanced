@@ -16,13 +16,13 @@ public class Circle extends Figure {
         squareCalc();
     }
 
-    private void calcSquare() {
-        this.square = PI * radius * radius;
-    }
-
     public void draw() {
         System.out.println(this.getClass().getSimpleName() + ": square, area: "
                 + String.format("%.2f", square) + " sq.units, radius: "
                 + String.format("%.2f", radius) + " units, color: " + color);
+    }
+    
+    private void calcSquare() {
+        this.square = PI * radius * radius;
     }
 }
