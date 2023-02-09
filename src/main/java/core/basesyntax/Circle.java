@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-class Circle extends Figure {
+public class Circle extends Figure {
     private double radius;
     private final static double PI = 3.14159265359;
 
