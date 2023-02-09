@@ -1,8 +1,9 @@
 package core.basesyntax.entity;
 
-import java.awt.*;
 
-public class Rectangle extends Figure {
+public class Rectangle extends Figure implements FigureBehaviour {
+    public static final double MAX_FIRST_SIDE = 50;
+    public static final double MAX_SECOND_SIDE = 50;
     private double firstSide;
     private double secondSide;
 

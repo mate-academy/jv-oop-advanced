@@ -1,8 +1,8 @@
 package core.basesyntax.entity;
 
-import java.awt.*;
-
-public class RightTriangle extends Figure {
+public class RightTriangle extends Figure implements FigureBehaviour {
+    public static final double MAX_LEFT_LEG = 100;
+    public static final double MAX_RIGHT_LEG = 100;
     private double leftLeg;
     private double rightLeg;
 

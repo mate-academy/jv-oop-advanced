@@ -1,25 +1,27 @@
 package core.basesyntax.entity;
 
-import java.awt.*;
+public class IsoscelesTrapezoid extends Figure implements FigureBehaviour{
+    public static double MAX_HIGH = 20;
+    public static double MAX_UPPER_BASE = 20;
+    public static double MAX_LOWER_BASE = 20;
 
-public class IsoscelesTrapezoid extends Figure{
-    private double side;
+    private double high;
     private double upperBase;
     private double lowerBase;
 
-    public IsoscelesTrapezoid(Color color, double side, double upperBase, double lowerBase) {
+    public IsoscelesTrapezoid(Color color, double high, double upperBase, double lowerBase) {
         super(color);
-        this.side = side;
+        this.high = high;
         this.upperBase = upperBase;
         this.lowerBase = lowerBase;
     }
 
-    public double getSide() {
-        return side;
+    public double getHigh() {
+        return high;
     }
 
-    public void setSide(double side) {
-        this.side = side;
+    public void setHigh(double high) {
+        this.high = high;
     }
 
     public double getUpperBase() {

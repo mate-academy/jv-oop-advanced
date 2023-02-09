@@ -1,20 +1,19 @@
 package core.basesyntax.entity;
 
-import java.awt.*;
+public class Circle extends Figure implements FigureBehaviour {
+    public final static int MAX_RADIUS = 25;
+    private int radius;
 
-public class Circle extends Figure {
-    private double radius;
-
-    public Circle(Color color, double radius) {
+    public Circle(Color color, int radius) {
         super(color);
         this.radius = radius;
     }
 
-    public double getRadius() {
+    public int getRadius() {
         return radius;
     }
 
-    public void setRadius(double radius) {
+    public void setRadius(int radius) {
         this.radius = radius;
     }
 

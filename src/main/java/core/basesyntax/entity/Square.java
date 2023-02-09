@@ -1,8 +1,7 @@
 package core.basesyntax.entity;
 
-import java.awt.*;
-
-public class Square extends Figure {
+public class Square extends Figure implements FigureBehaviour {
+    public static final double MAX_SIDE = 25;
     private double side;
 
     public Square(Color color, double side) {

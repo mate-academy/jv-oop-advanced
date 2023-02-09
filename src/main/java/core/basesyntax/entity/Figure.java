@@ -1,6 +1,7 @@
 package core.basesyntax.entity;
 
 public abstract class Figure {
+    private static final Color DEFAULT_COLOR = Color.WHITE;
     private Color color;
 
     public Figure(Color color) {
@@ -15,5 +16,5 @@ public abstract class Figure {
         this.color = color;
     }
 
-    public abstract void printSquare();
+
 }
