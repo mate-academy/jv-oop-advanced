@@ -5,13 +5,13 @@ public class Circle extends Figure {
     private int radius;
 
     public Circle(Color color, int radius) {
-        super(color);
+        this.color = color;
         this.radius = radius;
     }
 
     @Override
     public double calculateArea() {
-        return (int)(Math.PI * radius * radius);
+        return (Math.PI * radius * radius);
     }
 
     @Override
