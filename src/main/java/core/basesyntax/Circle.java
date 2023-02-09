@@ -11,9 +11,9 @@ public class Circle extends Figure {
     }
 
     public Circle(double radius) {
-        super(default_color);
+        super(defaultColor);
         this.radius = radius;
-        squareCalc();
+        calcSquare();
     }
 
     public void draw() {
