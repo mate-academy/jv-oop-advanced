@@ -17,7 +17,7 @@ public class RightTriangle extends Figure {
                 + String.format("%.2f", firstLeg) + ", secondLeg: "
                 + String.format("%.2f", secondLeg) + " units, color: " + color);
     }
-	
+
     private void calcSquare() {
         this.square = (firstLeg * secondLeg) / 2;
     }
