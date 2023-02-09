@@ -4,10 +4,11 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int CIRCLE_RADIUS = 10;
-    public static final int FIGURE_BOUND = 5;
-    public static final int MAX_BOUND_NUMBER = 100;
+    private static final int FIGURE_BOUND = 5;
+    private static final int MAX_BOUND_NUMBER = 100;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
+
     public Figure getRandomFigure() {
         switch (random.nextInt(FIGURE_BOUND)) {
             case 1:
