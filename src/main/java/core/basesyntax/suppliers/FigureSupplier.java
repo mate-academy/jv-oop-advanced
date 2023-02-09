@@ -6,11 +6,12 @@ import core.basesyntax.figures.IsoscelesTrapezoid;
 import core.basesyntax.figures.Rectangle;
 import core.basesyntax.figures.RightTriangle;
 import core.basesyntax.figures.Square;
+
 import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_PROPERTY_VALUE = 50;
-    private static final String DEFAULT_CIRCLE_COLOR = "white";
+    private static final String DEFAULT_CIRCLE_COLOR = Color.WHITE.name().toLowerCase();
     private static final int DEFAULT_CIRCLE_RADIUS = 10;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
