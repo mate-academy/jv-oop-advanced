@@ -5,12 +5,13 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int MAX_RANDOM_LENGTH = 100;
     private static final int DEFAULT_RADIUS = 10;
+    private static final int AMOUNT_OF_FIGURES = 5;
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
         String color = new ColorSupplier().getRandomColor();
-        final int amountOfFigures = 5;
-        switch (random.nextInt(amountOfFigures)) {
+
+        switch (random.nextInt(AMOUNT_OF_FIGURES)) {
             case 0:
                 return new Circle(getRandomLength(), color);
             case 1:
