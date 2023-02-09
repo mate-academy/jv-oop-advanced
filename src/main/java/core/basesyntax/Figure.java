@@ -1,16 +1,7 @@
 package core.basesyntax;
 
-public class Figure implements Information, Area {
+public abstract class Figure implements Drawable, AreaCalculator {
     private Color color;
-
-    @Override
-    public double area() {
-        return 0;
-    }
-
-    @Override
-    public void printInformation() {
-    }
 
     public Color getColor() {
         return color;
@@ -19,5 +10,4 @@ public class Figure implements Information, Area {
     public void setColor(Color color) {
         this.color = color;
     }
-
 }
