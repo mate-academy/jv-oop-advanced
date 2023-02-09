@@ -6,13 +6,13 @@ public class FigureSupplier {
     private static final double DEFAULT_VALUE = 10.0;
     private static final int MULTIPLAYER = 100;
     private ColorSupplier colorSupplier;
+    private Random random = new Random();
 
     public FigureSupplier() {
         this.colorSupplier = new ColorSupplier();
     }
 
     public Figure getRandomFigure() {
-        Random random = new Random();
         FiguresShape[] figureshape = FiguresShape.values();
         Figure fg = null;
         switch (figureshape[random.nextInt(figureshape.length)].toString()) {
