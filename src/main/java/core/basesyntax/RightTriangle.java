@@ -4,8 +4,8 @@ class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
     
-    public RightTriangle(double firstLeg, double secondLeg, ColorSupplier ColorSupplier) {
-        super(ColorSupplier);
+    public RightTriangle(double firstLeg, double secondLeg, ColorSupplier colorSupplier) {
+        super(colorSupplier);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
         calcSquare();
@@ -18,8 +18,7 @@ class RightTriangle extends Figure {
                 + String.format("%.2f", secondLeg) + " units, color: " + color);
     }
 	
-	private void calcSquare() {
+    private void calcSquare() {
         this.square = (firstLeg * secondLeg) / 2;
     }
-
 }
