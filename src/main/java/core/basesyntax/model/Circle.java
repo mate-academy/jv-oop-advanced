@@ -5,9 +5,9 @@ import java.math.MathContext;
 import java.math.RoundingMode;
 
 public class Circle extends Figure {
-    private double radius;
+    private int radius;
 
-    public Circle(String color, double radius) {
+    public Circle(String color, int radius) {
         super(color);
         this.radius = radius;
     }
@@ -15,7 +15,7 @@ public class Circle extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: circle, area: " + getArea()
-                + " sq.units, radius: " + (int)radius + " units,"
+                + " sq.units, radius: " + radius + " units,"
                 + " color: " + getColor());
     }
 
