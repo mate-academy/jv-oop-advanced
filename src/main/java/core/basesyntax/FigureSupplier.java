@@ -8,6 +8,7 @@ public class FigureSupplier {
     private static final int NUMBER_OF_FIGURES = 5;
     private static final int MAX_VALUE = 20;
     private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int randomFigureNumber = random.nextInt(NUMBER_OF_FIGURES);
@@ -31,31 +32,31 @@ public class FigureSupplier {
 
     private Circle getRandomCircle() {
         int randomRadius = random.nextInt(MAX_VALUE) + 1;
-        return new Circle(ColorSupplier.getRandomColor(), randomRadius);
+        return new Circle(colorSupplier.getRandomColor(), randomRadius);
     }
 
     private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
         int topParallelSide = random.nextInt(MAX_VALUE) + 1;
         int lowerParallelSide = random.nextInt(MAX_VALUE) + 2;
         int nonParallelSide = random.nextInt(MAX_VALUE) + 1;
-        return new IsoscelesTrapezoid(ColorSupplier.getRandomColor(), topParallelSide,
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), topParallelSide,
                 lowerParallelSide, nonParallelSide);
     }
 
     private Rectangle getRandomRectangle() {
         int firstSide = random.nextInt(MAX_VALUE) + 1;
         int secondSide = random.nextInt(MAX_VALUE) + 1;
-        return new Rectangle(ColorSupplier.getRandomColor(), firstSide, secondSide);
+        return new Rectangle(colorSupplier.getRandomColor(), firstSide, secondSide);
     }
 
     private RightTriangle getRandomRightTriangle() {
         int firstLeg = random.nextInt(MAX_VALUE) + 1;
         int secondLeg = random.nextInt(MAX_VALUE) + 1;
-        return new RightTriangle(ColorSupplier.getRandomColor(), firstLeg, secondLeg);
+        return new RightTriangle(colorSupplier.getRandomColor(), firstLeg, secondLeg);
     }
 
     private Square getRandomSquare() {
         int side = random.nextInt(MAX_VALUE) + 1;
-        return new Square(ColorSupplier.getRandomColor(), side);
+        return new Square(colorSupplier.getRandomColor(), side);
     }
 }

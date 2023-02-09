@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private static final String NAME = "isosceles trapezoid";
     private int topParallelSide;
     private int lowerParallelSide;
     private int nonParallelSide;
@@ -23,7 +22,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void printInfo() {
-        System.out.println("Figure: " + NAME
+        System.out.println("Figure: isosceles trapezoid"
                 + ", area: " + countArea()
                 + " sq.units, topParallelSide: " + topParallelSide
                 + " units, lowerParallelSide: " + lowerParallelSide
