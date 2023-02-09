@@ -1,7 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure {
-
+public class Circle extends Figures {
     private final int radius;
 
     public Circle(Color color, int radius) {
@@ -20,6 +19,5 @@ public class Circle extends Figure {
                 + "area: " + getArea() + " sq.units, "
                 + "radius: " + radius + "units, "
                 + "color: " + getColor());
-
     }
 }

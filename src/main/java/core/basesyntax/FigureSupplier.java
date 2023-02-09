@@ -3,21 +3,19 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-
     private static final int MAX_RANDOM_VALUE = 10;
     private final Random random;
-    private ColorSupplier colorSupplier;
+    private final ColorSupplier colorSupplier;
 
     public FigureSupplier(Random random, ColorSupplier colorSupplier) {
         this.random = random;
         this.colorSupplier = colorSupplier;
     }
 
-    public Figure getRandomFigure() {
+    public Figures getRandomFigure() {
+        int randomInt = random.nextInt(Figure.values().length);
 
-        int randomInt = random.nextInt(Figures.values().length);
-
-        switch (Figures.values()[randomInt]) {
+        switch (Figure.values()[randomInt]) {
             case CIRCLE:
                 return getCircle();
             case RECTANGLE:
@@ -61,6 +59,6 @@ public class FigureSupplier {
     }
 
     public Circle getDefaultFigure() {
-        return new Circle(Color.WHITE, 10);
+        return new Circle(Color.WHITE, MAX_RANDOM_VALUE);
     }
 }

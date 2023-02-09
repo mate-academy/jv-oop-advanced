@@ -1,7 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure {
-
+public class RightTriangle extends Figures {
     private final double side;
     private final double height;
 
@@ -23,6 +22,5 @@ public class RightTriangle extends Figure {
                 + "side: " + side + "units, "
                 + "height: " + height + "units, "
                 + "color: " + getColor());
-
     }
 }

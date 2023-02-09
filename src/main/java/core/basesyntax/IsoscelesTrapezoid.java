@@ -1,7 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure {
-
+public class IsoscelesTrapezoid extends Figures {
     private final double width;
     private final double length;
     private final double height;
@@ -11,7 +10,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.width = width;
         this.length = length;
         this.height = height;
-
     }
 
     @Override
@@ -27,6 +25,5 @@ public class IsoscelesTrapezoid extends Figure {
                 + "length: " + length + "units, "
                 + "height: " + height + "units, "
                 + "color: " + getColor());
-
     }
 }
