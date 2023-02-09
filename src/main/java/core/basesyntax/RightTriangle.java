@@ -8,17 +8,16 @@ public class RightTriangle extends Figure {
         super(colorSupplier);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        calcSquare();
     }
 
     public void draw() {
         System.out.println(this.getClass().getSimpleName() + ": square, area: "
-                + String.format("%.2f", square) + " sq.units, firstLeg: "
+                + String.format("%.2f", calculateArea()) + " sq.units, firstLeg: "
                 + String.format("%.2f", firstLeg) + ", secondLeg: "
                 + String.format("%.2f", secondLeg) + " units, color: " + color);
     }
 
-    private void calcSquare() {
-        this.square = (firstLeg * secondLeg) / 2;
+    private double calculateArea() {
+        return (firstLeg * secondLeg) / 2;
     }
 }
