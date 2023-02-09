@@ -6,15 +6,14 @@ public class Main {
     private static final int MAX_VALUE_FIGURES = 6;
 
     public static void main(String[] args) {
-
-        final Random random = new Random();
+        Random random = new Random();
         ColorSupplier colorSupplier = new ColorSupplier(random);
         FigureSupplier figureSupplier = new FigureSupplier(random, colorSupplier);
 
-        Figures[] figures = new Figures[MAX_VALUE_FIGURES];
+        Figure[] figures = new Figure[MAX_VALUE_FIGURES];
 
-        for (int i = 0; i < (figures.length); i++) {
-            if (i < figures.length / 2) {
+        for (int i = 0; i < MAX_VALUE_FIGURES; i++) {
+            if (i < MAX_VALUE_FIGURES / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
                 figures[i].draw();
             } else {

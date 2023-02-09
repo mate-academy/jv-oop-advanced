@@ -12,21 +12,25 @@ public class FigureSupplier {
         this.colorSupplier = colorSupplier;
     }
 
-    public Figures getRandomFigure() {
-        int randomInt = random.nextInt(Figure.values().length);
+    public Figure getRandomFigure() {
+        int randomInt = random.nextInt(FigureName.values().length);
 
-        switch (Figure.values()[randomInt]) {
+        switch (FigureName.values()[randomInt]) {
             case CIRCLE:
                 return getCircle();
             case RECTANGLE:
                 return getRectangle();
             case SQUARE:
                 return getSquare();
-            case RIGHTTRIANGLE:
+            case RIGHT_TRIANGLE:
                 return getRightTriangle();
             default :
                 return getIsoscelesTrapezoid();
         }
+    }
+
+    public Circle getDefaultFigure() {
+        return new Circle(Color.WHITE, MAX_RANDOM_VALUE);
     }
 
     private Circle getCircle() {
@@ -56,9 +60,5 @@ public class FigureSupplier {
                 random.nextInt(MAX_RANDOM_VALUE),
                 random.nextInt(MAX_RANDOM_VALUE),
                 random.nextInt(MAX_RANDOM_VALUE));
-    }
-
-    public Circle getDefaultFigure() {
-        return new Circle(Color.WHITE, MAX_RANDOM_VALUE);
     }
 }
