@@ -6,16 +6,15 @@ public class Square extends Figure {
     public Square(double side, ColorSupplier cs) {
         super(cs);
         this.side = side;
-        calcSquare();
     }
 
     public void draw() {
         System.out.println(this.getClass().getSimpleName() + ": square, area: "
-                + String.format("%.2f", square) + " sq.units, side: "
+                + String.format("%.2f", calculateArea()) + " sq.units, side: "
                 + String.format("%.2f", side) + " units, color: " + color);
     }
 
-    private void calcSquare() {
-        this.square = this.side * this.side;
+    private double calculateArea() {
+        return this.side * this.side;
     }
 }
