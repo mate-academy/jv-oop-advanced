@@ -2,7 +2,7 @@ package core.basesyntax;
 
 public class Circle extends Figure {
     private double radius;
-    private final static double PI = 3.14159265359;
+    private static final double PI = 3.14159265359;
 
     public Circle(double radius, ColorSupplier colorSuppliers) {
         super(colorSuppliers);
