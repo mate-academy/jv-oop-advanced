@@ -1,7 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements FiguresBehavior {
-    protected double square;
+public abstract class Figure implements Drawable {
     protected String color;
     private ColorSupplier colorSuppliers;
 
