@@ -5,7 +5,7 @@ public class Circle extends Figure {
     private int radius;
 
     public Circle(Color color, int radius) {
-        this.color = color;
+        setColor(color);
         this.radius = radius;
     }
 
