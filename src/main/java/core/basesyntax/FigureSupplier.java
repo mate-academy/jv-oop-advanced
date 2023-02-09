@@ -4,12 +4,13 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int RANDOM_LENGHT = 20;
-    private ColorSupplier randomColor = new ColorSupplier();
-    private Random random = new Random();
+    private final ColorSupplier randomColor = new ColorSupplier();
+    private final Random random = new Random();
 
     public int getRandomNumber() {
         return random.nextInt(RANDOM_LENGHT);
     }
+
     public TypeOfFigure getRandomTypeOfFigure() {
         return TypeOfFigure.values()[random.nextInt(TypeOfFigure.values().length)];
     }
@@ -34,7 +35,8 @@ public class FigureSupplier {
             case RECTANGLE:
                 return new Rectangle(randomColor.getRandomColor(), randomSide1, randomSide2);
             case TRAPEZOID:
-                return new IsoscelesTrapezoid(randomColor.getRandomColor(), randomSide1, randomSide2, randomHeight);
+                return new IsoscelesTrapezoid(randomColor.getRandomColor(),
+                        randomSide1, randomSide2, randomHeight);
             default:
                 return getDefaultFigure();
         }
