@@ -10,7 +10,7 @@ public class FigureSupplier {
     private ColorSupplier colorSupplier;
 
     static {
-        DEFAULT_COLOR = Color.WHITE.toString();
+        DEFAULT_COLOR = Color.WHITE.name();
         DEFAULT_VALUE = 10;
         NUMBER_OF_FIGURES = 5;
     }
@@ -35,9 +35,7 @@ public class FigureSupplier {
             break;
             case 3: figure = getRandomRectangle();
             break;
-            case 4: figure = getRandomSquare();
-            break;
-            default:
+            default: figure = getRandomSquare();
         }
         return figure;
     }
