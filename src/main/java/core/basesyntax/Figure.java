@@ -3,7 +3,7 @@ package core.basesyntax;
 public abstract class Figure implements FiguresBehavior {
     protected double square;
     protected String color;
-    private ColrSupplier colorSuppliers;
+    private ColorSupplier colorSuppliers;
 
     public Figure(ColorSupplier colorSuppliers) {
         this.colorSuppliers = colorSuppliers;
