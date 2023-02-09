@@ -11,4 +11,3 @@ public abstract class Figure implements Drawable, CalculateArea {
         return color;
     }
 }
-

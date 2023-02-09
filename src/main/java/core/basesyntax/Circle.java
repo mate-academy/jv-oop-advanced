@@ -8,14 +8,14 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
-    public double area() {
+    public double calculateArea() {
         return Math.PI * Math.pow(radius,2);
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: circle, area: "
-                + String.format("%.2f", area())
+                + String.format("%.2f", calculateArea())
                 + " sq.units, radius: "
                 + radius
                 + " units, color: "

@@ -16,7 +16,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double area() {
+    public double calculateArea() {
         return ((bottomParallelSide + topParallelSide) / 2)
                 * (Math.pow((bottomParallelSide - topParallelSide) / 2,2)
                 - Math.pow(lateralSide,2));
@@ -25,7 +25,7 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: isosceles trapezoid, area: "
-                + String.format("%.2f", area())
+                + String.format("%.2f", calculateArea())
                 + " sq.units, lateral side: "
                 + lateralSide
                 + " units, top parallel side:"

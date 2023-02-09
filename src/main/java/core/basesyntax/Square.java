@@ -9,14 +9,14 @@ public class Square extends Figure {
     }
 
     @Override
-    public double area() {
+    public double calculateArea() {
         return Math.pow(this.side,2);
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: square, area: "
-                + String.format("%.2f", area())
+                + String.format("%.2f", calculateArea())
                 + " sq.units, side: "
                 + side
                 + " units, color: "
