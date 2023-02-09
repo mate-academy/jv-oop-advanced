@@ -2,6 +2,7 @@ package core.basesyntax.entity;
 
 public class Circle extends Figure implements Printer {
     public final static int MAX_RADIUS = 25;
+    public final static int DEFAULT_RADIUS = 25;
     private int radius;
 
     public Circle(Color color, int radius) {

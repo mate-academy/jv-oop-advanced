@@ -5,6 +5,10 @@ public class IsoscelesTrapezoid extends Figure implements Printer {
     public static double MAX_UPPER_BASE = 20;
     public static double MAX_LOWER_BASE = 20;
 
+    public static double DEFAULT_LOWER_BASE = 10;
+    public static double DEFAULT_UPPER_BASE = 20;
+    public static double DEFAULT_HIGH = 5;
+
     private double high;
     private double upperBase;
     private double lowerBase;

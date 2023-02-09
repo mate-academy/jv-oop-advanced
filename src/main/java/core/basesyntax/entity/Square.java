@@ -2,6 +2,8 @@ package core.basesyntax.entity;
 
 public class Square extends Figure implements Printer {
     public static final double MAX_SIDE = 25;
+
+    public static final double DEFAULT_SIDE = 12.5;
     private double side;
 
     public Square(Color color, double side) {
