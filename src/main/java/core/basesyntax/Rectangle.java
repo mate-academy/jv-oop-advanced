@@ -19,6 +19,6 @@ public class Rectangle extends Figure {
     }
     
     private void calcSquare() {
-        this.square  = this.side1 * this.side2;
+        this.square = this.side1 * this.side2;
     }
 }
