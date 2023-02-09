@@ -12,6 +12,6 @@ public abstract class RandomSupplier {
     }
 
     public int getRandomValue() {
-        return random.nextInt(RandomSupplier.MAX_VALUE) + RandomSupplier.MIN_VALUE;
+        return random.nextInt(MAX_VALUE) + MIN_VALUE;
     }
 }
