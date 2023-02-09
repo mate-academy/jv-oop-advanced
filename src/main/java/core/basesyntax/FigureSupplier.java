@@ -4,10 +4,13 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_RANDOM_LENGTH = 100;
+    private static final int DEFAULT_RADIUS = 10;
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
         String color = new ColorSupplier().getRandomColor();
-        switch (getNumberOfRandomFigure()) {
+        final int amountOfFigures = 5;
+        switch (random.nextInt(amountOfFigures)) {
             case 0:
                 return new Circle(getRandomLength(), color);
             case 1:
@@ -25,18 +28,10 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        final int defaultRadius = 10;
-        return new Circle(defaultRadius, Color.WHITE.name());
+        return new Circle(DEFAULT_RADIUS, Color.WHITE.name());
     }
 
     private int getRandomLength() {
-        Random random = new Random();
         return random.nextInt(MAX_RANDOM_LENGTH);
-    }
-
-    private int getNumberOfRandomFigure() {
-        Random random = new Random();
-        final int amountOfFigures = 5;
-        return random.nextInt(amountOfFigures);
     }
 }

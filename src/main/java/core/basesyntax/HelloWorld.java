@@ -7,14 +7,10 @@ public class HelloWorld {
         Figure[] figures = new Figure[SIZE_OF_ARRAY];
         Figure defaultFigure = new FigureSupplier().getDefaultFigure();
         for (int i = 0; i < figures.length; i++) {
-            switch (i) {
-                case 0:
-                case 1:
-                case 2:
-                    figures[i] = new FigureSupplier().getRandomFigure();
-                    break;
-                default:
-                    figures[i] = defaultFigure;
+            if (i < SIZE_OF_ARRAY / 2) {
+                figures[i] = new FigureSupplier().getRandomFigure();
+            } else {
+                figures[i] = defaultFigure;
             }
             figures[i].draw();
         }

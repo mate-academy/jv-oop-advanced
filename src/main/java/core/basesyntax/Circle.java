@@ -23,4 +23,3 @@ public class Circle extends Figure {
         return radius;
     }
 }
-
