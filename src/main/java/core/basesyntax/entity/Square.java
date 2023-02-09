@@ -1,6 +1,6 @@
 package core.basesyntax.entity;
 
-public class Square extends Figure implements FigureBehaviour {
+public class Square extends Figure implements Printer {
     public static final double MAX_SIDE = 25;
     private double side;
 
@@ -18,7 +18,13 @@ public class Square extends Figure implements FigureBehaviour {
     }
 
     @Override
-    public void printSquare() {
-
+    public void printInfo() {
+        System.out.println(new StringBuilder().append(" IsoscelesTrapezoid, area: ")
+                .append(side * side / 2)
+                .append(" sq.units,")
+                .append(" side: ")
+                .append(side)
+                .append(" units, color: ")
+                .append(getColor()));
     }
 }

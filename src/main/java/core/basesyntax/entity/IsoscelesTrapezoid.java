@@ -1,6 +1,6 @@
 package core.basesyntax.entity;
 
-public class IsoscelesTrapezoid extends Figure implements FigureBehaviour{
+public class IsoscelesTrapezoid extends Figure implements Printer {
     public static double MAX_HIGH = 20;
     public static double MAX_UPPER_BASE = 20;
     public static double MAX_LOWER_BASE = 20;
@@ -41,7 +41,17 @@ public class IsoscelesTrapezoid extends Figure implements FigureBehaviour{
     }
 
     @Override
-    public void printSquare() {
-
+    public void printInfo() {
+        System.out.println(new StringBuilder("Figure:")
+                .append(" IsoscelesTrapezoid, area: ")
+                .append((upperBase + lowerBase) * high / 2)
+                .append(" sq.units,")
+                .append(" upperBase: ")
+                .append(upperBase)
+                .append(" units")
+                .append(" lowerBase: ")
+                .append(lowerBase)
+                .append(" units, color: ")
+                .append(getColor()));
     }
 }

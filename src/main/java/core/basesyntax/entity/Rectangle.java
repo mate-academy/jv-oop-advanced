@@ -1,7 +1,7 @@
 package core.basesyntax.entity;
 
 
-public class Rectangle extends Figure implements FigureBehaviour {
+public class Rectangle extends Figure implements Printer {
     public static final double MAX_FIRST_SIDE = 50;
     public static final double MAX_SECOND_SIDE = 50;
     private double firstSide;
@@ -30,7 +30,16 @@ public class Rectangle extends Figure implements FigureBehaviour {
     }
 
     @Override
-    public void printSquare() {
-
+    public void printInfo() {
+        System.out.println(new StringBuilder().append(" IsoscelesTrapezoid, area: ")
+                .append(firstSide * secondSide)
+                .append(" sq.units,")
+                .append(" firstSide: ")
+                .append(firstSide)
+                .append(" units")
+                .append(" secondSide: ")
+                .append(secondSide)
+                .append(" units, color: ")
+                .append(getColor()));
     }
 }
