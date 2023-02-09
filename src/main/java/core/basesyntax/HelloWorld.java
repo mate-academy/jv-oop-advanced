@@ -5,10 +5,11 @@ public class HelloWorld {
 
     public static void main(String[] args) {
         Figure[] figures = new Figure[SIZE_OF_ARRAY];
-        Figure defaultFigure = new FigureSupplier().getDefaultFigure();
+        FigureSupplier figureSupplier = new FigureSupplier();
+        Figure defaultFigure = figureSupplier.getDefaultFigure();
         for (int i = 0; i < figures.length; i++) {
             if (i < SIZE_OF_ARRAY / 2) {
-                figures[i] = new FigureSupplier().getRandomFigure();
+                figures[i] = figureSupplier.getRandomFigure();
             } else {
                 figures[i] = defaultFigure;
             }

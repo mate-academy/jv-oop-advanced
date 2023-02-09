@@ -7,10 +7,9 @@ public class FigureSupplier {
     private static final int DEFAULT_RADIUS = 10;
     private static final int AMOUNT_OF_FIGURES = 5;
     private final Random random = new Random();
+    private final String color = new ColorSupplier().getRandomColor();
 
     public Figure getRandomFigure() {
-        String color = new ColorSupplier().getRandomColor();
-
         switch (random.nextInt(AMOUNT_OF_FIGURES)) {
             case 0:
                 return new Circle(getRandomLength(), color);
@@ -21,11 +20,9 @@ public class FigureSupplier {
             case 3:
                 return new IsoscelesTrapezoid(getRandomLength(),
                         getRandomLength(), getRandomLength(), color);
-            case 4:
-                return new RightTriangle(getRandomLength(), getRandomLength(), color);
             default:
+                return new RightTriangle(getRandomLength(), getRandomLength(), color);
         }
-        return null;
     }
 
     public Figure getDefaultFigure() {

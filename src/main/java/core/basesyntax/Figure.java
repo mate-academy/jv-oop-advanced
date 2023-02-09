@@ -8,7 +8,7 @@ public abstract class Figure implements Drawable, AreaCalculator {
     }
 
     @Override
-    public abstract double area();
+    public abstract double calculateArea();
 
     @Override
     public abstract void draw();
