@@ -6,8 +6,8 @@ public class RightTriangle extends Figure {
 
     public RightTriangle(String color, int hypotenuse, int leg) {
         super(color);
-        this.leg = leg;
         this.hypotenuse = hypotenuse;
+        this.leg = leg;
     }
 
     @Override
