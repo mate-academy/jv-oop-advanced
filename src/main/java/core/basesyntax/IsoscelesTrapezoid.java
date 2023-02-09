@@ -1,15 +1,6 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    public static final int MAX_TOP_BASE;
-    public static final int MAX_BOTTOM_BASE;
-    public static final int MAX_HIGHT;
-
-    static {
-        MAX_TOP_BASE = 100;
-        MAX_BOTTOM_BASE = 100;
-        MAX_HIGHT = 100;
-    }
 
     private int topBase;
     private int bottomBase;
@@ -23,8 +14,8 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public int calculateArea() {
-        return (topBase * bottomBase) / 2 * hight;
+    public double calculateArea() {
+        return (double) (topBase * bottomBase) / 2 * hight;
     }
 
     @Override

@@ -1,13 +1,6 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    public static final int MAX_LEFT_LEG;
-    public static final int MAX_RIGHT_LEG;
-
-    static {
-        MAX_LEFT_LEG = 100;
-        MAX_RIGHT_LEG = 100;
-    }
 
     private int leftLeg;
     private int rightLeg;
@@ -19,8 +12,8 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public int calculateArea() {
-        return (leftLeg * rightLeg) / 2;
+    public double calculateArea() {
+        return (double) (leftLeg * rightLeg) / 2;
     }
 
     @Override

@@ -1,13 +1,6 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    public static final int MAX_SIDE_A;
-    public static final int MAX_SIDE_B;
-
-    static {
-        MAX_SIDE_A = 100;
-        MAX_SIDE_B = 100;
-    }
 
     private int sideA;
     private int sideB;
@@ -19,7 +12,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public int calculateArea() {
+    public double calculateArea() {
         return sideA * sideB;
     }
 

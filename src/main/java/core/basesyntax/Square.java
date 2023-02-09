@@ -1,11 +1,6 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    public static final int MAX_SIDE;
-
-    static {
-        MAX_SIDE = 100;
-    }
 
     private int side;
 
@@ -15,7 +10,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public int calculateArea() {
+    public double calculateArea() {
         return side * side;
     }
 

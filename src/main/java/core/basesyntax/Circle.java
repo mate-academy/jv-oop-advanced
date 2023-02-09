@@ -1,11 +1,6 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    public static final int MAX_RADIUS;
-
-    static {
-        MAX_RADIUS = 100;
-    }
 
     private int radius;
 
@@ -15,7 +10,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public int calculateArea() {
+    public double calculateArea() {
         return (int)(Math.PI * radius * radius);
     }
 
