@@ -14,7 +14,7 @@ public class Square extends Figure {
                 + String.format("%.2f", square) + " sq.units, side: "
                 + String.format("%.2f", side) + " units, color: " + color);
     }
-	
+
     private void calcSquare() {
         this.square = this.side * this.side;
     }
