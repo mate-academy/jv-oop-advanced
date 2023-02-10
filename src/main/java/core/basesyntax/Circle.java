@@ -8,10 +8,6 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
-    public Circle(double radius) {
-        this.radius = radius;
-    }
-
     @Override
     public void draw() {
         System.out.printf("Figure: circle, area: %.1f sq.units, radius: %.1f units, color: %s",
