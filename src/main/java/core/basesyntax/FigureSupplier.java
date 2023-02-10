@@ -29,7 +29,7 @@ public class FigureSupplier {
             case 5:
                 return new Circle(colorSupplier.getRandomColor(), random.nextInt(RANDOM));
             default:
-                getDefaultFigure();
+                return getDefaultFigure();
         }
     }
 }
