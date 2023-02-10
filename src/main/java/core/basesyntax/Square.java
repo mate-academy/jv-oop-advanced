@@ -14,7 +14,7 @@ public class Square extends Figure {
                 + String.format("%.2f", side) + " units, color: " + color);
     }
 
-    private double calculateArea() {
+    public double calculateArea() {
         return this.side * this.side;
     }
 }
