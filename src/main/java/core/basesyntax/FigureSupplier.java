@@ -28,7 +28,7 @@ public class FigureSupplier {
             }
             case "ISOSCELESTRAPEZOID": {
                 return new IsoscelesTrapezoid(random.nextDouble() * NUMBER_RANGE, random.nextDouble()
-                    * MULTIPLAYER, random.nextDouble() * NUMBER_RANGE,
+                    * NUMBER_RANGE, random.nextDouble() * NUMBER_RANGE,
                     colorSupplier.getRandomColor());
             }
             default: {
