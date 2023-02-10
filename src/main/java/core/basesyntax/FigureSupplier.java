@@ -24,10 +24,8 @@ public class FigureSupplier {
                 return getRandomCircle();
             case 3:
                 return getRandomRightTriangle();
-            case 4:
-                return getRandomIsoscelesTrapezoid();
             default:
-                return null;
+                return getRandomIsoscelesTrapezoid();
         }
     }
 
