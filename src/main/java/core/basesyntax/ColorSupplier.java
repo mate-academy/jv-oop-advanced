@@ -5,7 +5,7 @@ import java.security.SecureRandom;
 public class ColorSupplier {
     private final SecureRandom secureRandom = new SecureRandom();
 
-    public Colors getColor() {
-        return Colors.values()[secureRandom.nextInt(Colors.values().length)];
+    public Color getColor() {
+        return Color.values()[secureRandom.nextInt(Color.values().length)];
     }
 }
