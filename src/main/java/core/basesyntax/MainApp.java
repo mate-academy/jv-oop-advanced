@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 import core.basesyntax.model.Figure;
-import core.basesyntax.model.FigureSupplier;
+import core.basesyntax.supplier.FigureSupplier;
 
 public class MainApp {
     private static final int FULL_CAPACITY = 6;
@@ -10,10 +10,11 @@ public class MainApp {
 
     public static void main(String[] args) {
         Figure[] figures = new Figure[FULL_CAPACITY];
-        for (int i = 0; i < HALF_CAPACITY; i++) {
-            figures[i] = supplier.getRandomFigure();
-        }
-        for (int i = HALF_CAPACITY; i < figures.length; i++) {
+        for (int i = 0; i < FULL_CAPACITY; i++) {
+            if (i < HALF_CAPACITY) {
+                figures[i] = supplier.getRandomFigure();
+                continue;
+            }
             figures[i] = supplier.getDefaultFigure();
         }
         for (Figure figure : figures) {
