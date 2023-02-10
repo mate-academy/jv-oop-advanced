@@ -20,7 +20,7 @@ public class Circle extends Figure {
                 + String.format("%.2f", radius) + " units, color: " + color);
     }
     
-    private double calculateArea() {
+    public double calculateArea() {
         return PI * radius * radius;
     }
 }
