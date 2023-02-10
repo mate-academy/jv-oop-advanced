@@ -4,11 +4,6 @@ public class IsoscelesTrapezoid extends Figure {
     public static final double MAX_HIGH = 20;
     public static final double MAX_UPPER_BASE = 20;
     public static final double MAX_LOWER_BASE = 20;
-
-    public static final double DEFAULT_LOWER_BASE = 10;
-    public static final double DEFAULT_UPPER_BASE = 20;
-    public static final double DEFAULT_HIGH = 5;
-
     private double high;
     private double upperBase;
     private double lowerBase;

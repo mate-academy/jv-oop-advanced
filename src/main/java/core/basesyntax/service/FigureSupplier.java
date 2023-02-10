@@ -6,6 +6,7 @@ import core.basesyntax.entity.IsoscelesTrapezoid;
 import core.basesyntax.entity.Rectangle;
 import core.basesyntax.entity.RightTriangle;
 import core.basesyntax.entity.Square;
+
 import java.util.Random;
 
 public class FigureSupplier {
@@ -30,18 +31,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        switch (random.nextInt(NUMBER_OF_FIGURES)) {
-            case 0:
-                return getDefaultCircle();
-            case 1:
-                return getDefaultIsoscelesTrapezoid();
-            case 2:
-                return getDefaultRectangle();
-            case 3:
-                return getDefaultRightTriangle();
-            default:
-                return getDefaultSquare();
-        }
+        return getDefaultCircle();
     }
 
     private Circle getRandomCircle() {
@@ -75,28 +65,5 @@ public class FigureSupplier {
 
     private Circle getDefaultCircle() {
         return new Circle(Figure.DEFAULT_COLOR, Circle.DEFAULT_RADIUS);
-    }
-
-    private IsoscelesTrapezoid getDefaultIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(Figure.DEFAULT_COLOR,
-                IsoscelesTrapezoid.DEFAULT_HIGH,
-                IsoscelesTrapezoid.DEFAULT_UPPER_BASE,
-                IsoscelesTrapezoid.DEFAULT_LOWER_BASE);
-    }
-
-    private Rectangle getDefaultRectangle() {
-        return new Rectangle(Figure.DEFAULT_COLOR,
-                Rectangle.DEFAULT_FIRST_SIDE,
-                Rectangle.DEFAULT_SECOND_SIDE);
-    }
-
-    private RightTriangle getDefaultRightTriangle() {
-        return new RightTriangle(Figure.DEFAULT_COLOR,
-                RightTriangle.DEFAULT_LEFT_LEG,
-                RightTriangle.DEFAULT_RIGHT_LEG);
-    }
-
-    private Square getDefaultSquare() {
-        return new Square(Figure.DEFAULT_COLOR, Square.DEFAULT_SIDE);
     }
 }

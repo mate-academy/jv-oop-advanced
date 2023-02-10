@@ -3,9 +3,6 @@ package core.basesyntax.entity;
 public class RightTriangle extends Figure {
     public static final double MAX_LEFT_LEG = 100;
     public static final double MAX_RIGHT_LEG = 100;
-
-    public static final double DEFAULT_LEFT_LEG = 50;
-    public static final double DEFAULT_RIGHT_LEG = 50;
     private double leftLeg;
     private double rightLeg;
 

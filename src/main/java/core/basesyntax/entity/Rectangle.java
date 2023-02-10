@@ -3,8 +3,6 @@ package core.basesyntax.entity;
 public class Rectangle extends Figure {
     public static final double MAX_FIRST_SIDE = 50;
     public static final double MAX_SECOND_SIDE = 50;
-    public static final double DEFAULT_FIRST_SIDE = 25;
-    public static final double DEFAULT_SECOND_SIDE = 25;
     private double firstSide;
     private double secondSide;
 
