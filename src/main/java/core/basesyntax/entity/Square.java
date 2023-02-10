@@ -19,19 +19,10 @@ public class Square extends Figure {
 
     @Override
     public void printInfo() {
-        System.out.println(new StringBuilder("Figure:")
-                .append(" Square,")
-                .append(System.lineSeparator())
-                .append("        area: ")
-                .append(getArea())
-                .append(" sq.units,")
-                .append(System.lineSeparator())
-                .append("        side: ")
-                .append(side)
-                .append(" units,")
-                .append(System.lineSeparator())
-                .append("        color: ")
-                .append(getColor()));
+        System.out.println("Figure:" + " Square," + System.lineSeparator()
+                + "        area: " + getArea() + " sq.units," + System.lineSeparator()
+                + "        side: " +side + " units," + System.lineSeparator() +
+                "        color: " + getColor());
     }
 
     @Override

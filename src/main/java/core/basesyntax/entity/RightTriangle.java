@@ -30,23 +30,11 @@ public class RightTriangle extends Figure {
 
     @Override
     public void printInfo() {
-        System.out.println(new StringBuilder("Figure:")
-                .append(" RightTriangle,")
-                .append(System.lineSeparator())
-                .append("        area: ")
-                .append(getArea())
-                .append(" sq.units,")
-                .append(System.lineSeparator())
-                .append("        firstSide: ")
-                .append(leftLeg)
-                .append(" units,")
-                .append(System.lineSeparator())
-                .append("        secondSide: ")
-                .append(rightLeg)
-                .append(" units,")
-                .append(System.lineSeparator())
-                .append("        color: ")
-                .append(getColor()));
+        System.out.println("Figure:" + " RightTriangle," + System.lineSeparator()
+                + "        area: " + getArea() + " sq.units," + System.lineSeparator()
+                + "        firstSide: " + leftLeg + " units," + System.lineSeparator()
+                + "        secondSide: " + rightLeg + " units," + System.lineSeparator() +
+                "        color: " + getColor());
     }
 
     @Override

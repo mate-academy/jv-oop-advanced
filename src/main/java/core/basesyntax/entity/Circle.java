@@ -20,19 +20,10 @@ public class Circle extends Figure {
 
     @Override
     public void printInfo() {
-        System.out.println(new StringBuilder("Figure:")
-                .append(" Circle,")
-                .append(System.lineSeparator())
-                .append("        area: ")
-                .append(getArea())
-                .append(" sq.units,")
-                .append(System.lineSeparator())
-                .append("        radius: ")
-                .append(radius)
-                .append(" units,")
-                .append(System.lineSeparator())
-                .append("        color: ")
-                .append(getColor()));
+        System.out.println("Figure:" + " Circle," + System.lineSeparator()
+                + "        area: " + getArea() + " sq.units," + System.lineSeparator()
+                + "        radius: " + radius + " units," + System.lineSeparator()
+                + "        color: " + getColor());
     }
 
     @Override
