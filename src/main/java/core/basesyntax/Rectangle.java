@@ -10,13 +10,15 @@ public class Rectangle extends Figure {
         this.side2 = side2;
     }
 
+    @Override
     public void draw() {
         System.out.println(this.getClass().getSimpleName() + ": square, area: "
                 + String.format("%.2f", calculateArea()) + " sq.units, side1: "
                 + String.format("%.2f", side1) + ", side2: "
                 + String.format("%.2f", side2) + " units, color: " + color);
     }
-    
+
+    @Override
     public double calculateArea() {
         return this.side1 * this.side2;
     }
