@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private static final double PI = 3.14159265359;
     private double radius;
 
     public Circle(double radius, ColorSupplier colorSuppliers) {
@@ -21,6 +20,6 @@ public class Circle extends Figure {
     }
     
     public double calculateArea() {
-        return PI * radius * radius;
+        return Math.PI * radius * radius;
     }
 }
