@@ -1,26 +1,26 @@
 package core.basesyntax.entity;
 
 public class IsoscelesTrapezoid extends Figure {
-    public static final double MAX_HIGH = 20;
+    public static final double MAX_HEIGHT = 20;
     public static final double MAX_UPPER_BASE = 20;
     public static final double MAX_LOWER_BASE = 20;
-    private double high;
+    private double height;
     private double upperBase;
     private double lowerBase;
 
-    public IsoscelesTrapezoid(Color color, double high, double upperBase, double lowerBase) {
+    public IsoscelesTrapezoid(Color color, double height, double upperBase, double lowerBase) {
         super(color);
-        this.high = high;
+        this.height = height;
         this.upperBase = upperBase;
         this.lowerBase = lowerBase;
     }
 
-    public double getHigh() {
-        return high;
+    public double getHeight() {
+        return height;
     }
 
-    public void setHigh(double high) {
-        this.high = high;
+    public void setHeight(double height) {
+        this.height = height;
     }
 
     public double getUpperBase() {
@@ -50,6 +50,6 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double getArea() {
-        return (upperBase + lowerBase) * high / 2.0;
+        return (upperBase + lowerBase) * height / 2.0;
     }
 }

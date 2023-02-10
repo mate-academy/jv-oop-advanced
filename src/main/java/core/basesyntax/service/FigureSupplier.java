@@ -40,7 +40,7 @@ public class FigureSupplier {
 
     private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                random.nextDouble() * IsoscelesTrapezoid.MAX_HIGH,
+                random.nextDouble() * IsoscelesTrapezoid.MAX_HEIGHT,
                 random.nextDouble() * IsoscelesTrapezoid.MAX_UPPER_BASE,
                 random.nextDouble() * IsoscelesTrapezoid.MAX_LOWER_BASE);
     }
