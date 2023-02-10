@@ -11,24 +11,25 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         FiguresShape[] figureshape = FiguresShape.values();
-        switch (figureshape[random.nextInt(figureshape.length)].name()) {
-            case "SQUARE": {
+        var figure = figureshape[random.nextInt(figureshape.length)].name();
+        switch (figure) {
+            case FiguresShape.SQUARE: {
                 return new Square(random.nextDouble() * NUMBER_RANGE, colorSupplier
                     .getRandomColor());
             }
-            case "RECTANGLE": {
+            case FiguresShape.RECTANGLE: {
                 return new Rectangle(random.nextDouble() * NUMBER_RANGE, random.nextDouble()
                     * NUMBER_RANGE, colorSupplier.getRandomColor());
             }
-            case "RIGHTTRIANGLE": {
+            case FiguresShape.RIGHTTRIANGLE: {
                 return new RightTriangle(random.nextDouble() * NUMBER_RANGE, random.nextDouble()
                     * NUMBER_RANGE, colorSupplier.getRandomColor());
             }
-            case "CIRCLE": {
+            case FiguresShape.CIRCLE: {
                 return new Circle(random.nextDouble() * NUMBER_RANGE, colorSupplier
                     .getRandomColor());
             }
-            case "ISOSCELESTRAPEZOID": {
+            case FiguresShape.ISOSCELESTRAPEZOID: {
                 return new IsoscelesTrapezoid(random.nextDouble() * NUMBER_RANGE,
                     random.nextDouble() * NUMBER_RANGE, random.nextDouble() * NUMBER_RANGE,
                     colorSupplier.getRandomColor());
