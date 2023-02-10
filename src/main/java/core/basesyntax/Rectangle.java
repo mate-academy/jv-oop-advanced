@@ -11,7 +11,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double calculatorArea() {
+    public double calculateArea() {
         return sideA * sideB;
     }
 
@@ -19,7 +19,7 @@ public class Rectangle extends Figure {
     public void draw() {
         System.out.println("Figure: Rectangle "
                 + ", area: "
-                + calculatorArea() + " sq.units, sideA: "
+                + calculateArea() + " sq.units, sideA: "
                 + sideA + " units, sideB: "
                 + sideB + " units, color: "
                 + getColor().toString().toLowerCase());

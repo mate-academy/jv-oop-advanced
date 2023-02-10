@@ -4,7 +4,6 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int RANDOM = 30;
-    private static final int FIGURE_COUNT = 5;
     private static final int DEFAULT = 10;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
@@ -14,7 +13,7 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        int randomize = random.nextInt(FIGURE_COUNT) + 1;
+        int randomize = random.nextInt(Color.values().length) + 1;
         switch (randomize) {
             case 1:
                 return new Square(colorSupplier.getRandomColor(), random.nextInt(RANDOM));
@@ -30,7 +29,7 @@ public class FigureSupplier {
             case 5:
                 return new Circle(colorSupplier.getRandomColor(), random.nextInt(RANDOM));
             default:
-                return null;
+                getDefaultFigure();
         }
     }
 }
