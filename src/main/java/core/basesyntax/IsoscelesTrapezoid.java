@@ -21,7 +21,7 @@ public class IsoscelesTrapezoid extends Figure {
                 + String.format("%.2f", height) + " units, color: " + color);
     }
 
-    private double calculateArea() {
+    public double calculateArea() {
         return ((firstLeg + secondLeg) / 2) * height;
     }
 }
