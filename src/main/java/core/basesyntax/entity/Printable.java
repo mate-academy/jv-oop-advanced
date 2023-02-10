@@ -1,5 +1,5 @@
 package core.basesyntax.entity;
 
-public interface Printer {
+public interface Printable {
     void printInfo();
 }

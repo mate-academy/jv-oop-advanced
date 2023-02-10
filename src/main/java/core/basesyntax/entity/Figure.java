@@ -1,6 +1,6 @@
 package core.basesyntax.entity;
 
-public abstract class Figure implements Printer {
+public abstract class Figure implements Printable {
     public static final Color DEFAULT_COLOR = Color.WHITE;
     private Color color;
 
