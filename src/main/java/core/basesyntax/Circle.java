@@ -8,20 +8,16 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
-    {
-        setFigureType("circle");
-    }
-
     @Override
-    public double area() {
+    public double calculatorArea() {
         return Math.pow(radius, 2) * Math.PI;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: "
-                + getFigureType() + ", area: "
-                + area() + " sq.units, radius: "
+        System.out.println("Figure: Circle"
+                + ", area: "
+                + calculatorArea() + " sq.units, radius: "
                 + radius + " units, color: "
                 + getColor().toString().toLowerCase());
     }

@@ -10,20 +10,16 @@ public class Rectangle extends Figure {
         this.sideB = sideB;
     }
 
-    {
-        setFigureType("rectangle");
-    }
-
     @Override
-    public double area() {
+    public double calculatorArea() {
         return sideA * sideB;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: "
-                + getFigureType() + ", area: "
-                + area() + " sq.units, sideA: "
+        System.out.println("Figure: Rectangle "
+                + ", area: "
+                + calculatorArea() + " sq.units, sideA: "
                 + sideA + " units, sideB: "
                 + sideB + " units, color: "
                 + getColor().toString().toLowerCase());

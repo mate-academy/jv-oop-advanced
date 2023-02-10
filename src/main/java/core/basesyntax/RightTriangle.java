@@ -10,20 +10,16 @@ public class RightTriangle extends Figure {
         this.secondLeg = secondLeg;
     }
 
-    {
-        setFigureType("rightTriangle");
-    }
-
     @Override
-    public double area() {
+    public double calculatorArea() {
         return firstLeg * secondLeg * 0.5;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: "
-                + getFigureType() + ", area: "
-                + area() + " sq.units, firstLeg: "
+        System.out.println("Figure: Right Triangle"
+                + ", area: "
+                + calculatorArea() + " sq.units, firstLeg: "
                 + firstLeg + " units, secondLeg: "
                 + secondLeg + " units, color: "
                 + getColor().toString().toLowerCase());
