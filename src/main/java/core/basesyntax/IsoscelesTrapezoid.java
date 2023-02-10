@@ -11,7 +11,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     IsoscelesTrapezoid(String color, double height, double upLine, double downLine) {
         super(color);
-        this.setName("IsoscelesTrapezoid");
+        this.setName(Name.ISOSCELESTRAPEZOID.name());
         this.height = height;
         this.downLine = downLine;
         this.upLine = upLine;
@@ -19,7 +19,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         String text = "Figure: " + getName() + ", area: " + getArea()
                 + " sq.units, base lines: " + getUpLine()
                 + " units and " + getDownLine() + " units, height: "

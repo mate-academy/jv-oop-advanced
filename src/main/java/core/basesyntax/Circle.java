@@ -9,13 +9,13 @@ public class Circle extends Figure {
 
     Circle(String color, double radius) {
         super(color);
-        this.setName("Circle");
+        this.setName(Name.CIRCLE.name());
         this.radius = radius;
         this.setArea(calculateArea());
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         String text = "Figure: " + getName() + ", area: " + getArea()
                 + " sq.units, radius: " + getRadius()
                 + " units, color: " + getColor();

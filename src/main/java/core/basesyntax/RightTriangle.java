@@ -11,7 +11,7 @@ public class RightTriangle extends Figure {
 
     RightTriangle(String color, double firstLeg, double secondLeg) {
         super(color);
-        this.setName("RightTriangle");
+        this.setName(Name.RIGHTTRIANGLE.name());
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
         this.hypotenuse = Math.sqrt(Math.pow(firstLeg,2) + Math.pow(secondLeg, 2));
@@ -19,7 +19,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         String text = "Figure: " + getName() + ", area: " + getArea()
                 + " sq.units, firstLeg: " + getFirstLeg()
                 + " units, secondLeg: " + getSecondLeg()

@@ -9,13 +9,13 @@ public class Square extends Figure {
 
     Square(String color, double leg) {
         super(color);
-        this.setName("Square");
+        this.setName(Name.SQUARE.name());
         this.leg = leg;
         this.setArea(calculateArea());
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         String text = "Figure: " + getName() + ", area: "
                 + getArea() + " sq.units, leg: " + getLeg()
                 + " units, color: " + getColor();

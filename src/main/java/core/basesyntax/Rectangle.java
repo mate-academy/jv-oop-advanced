@@ -10,14 +10,14 @@ public class Rectangle extends Figure {
 
     Rectangle(String color, double firstLeg, double secondLeg) {
         super(color);
-        this.setName("Rectangle");
+        this.setName(Name.RECTANGLE.name());
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
         this.setArea(calculateArea());
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         String text = "Figure: " + getName() + ", area: " + getArea()
                 + " sq.units, firstLeg: " + getFirstLeg()
                 + " units, secondLeg: " + getSecondLeg()
