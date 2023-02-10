@@ -1,5 +1,6 @@
 package core.basesyntax.suplier;
 
+import core.basesyntax.Color;
 import core.basesyntax.FigureName;
 import core.basesyntax.figure.Circle;
 import core.basesyntax.figure.Figure;
@@ -44,6 +45,6 @@ public class FigureSupplier extends RandomSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(colorSupplier.getRandomColor(), 10);
+        return new Circle(Color.WHITE.name(), 10);
     }
 }
