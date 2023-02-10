@@ -8,11 +8,6 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
-    public Circle(double radius) {
-        super();
-        this.radius = radius;
-    }
-
     public void draw() {
         System.out.println(this.getClass().getSimpleName() + ": square, area: "
                 + String.format("%.2f", calculateArea()) + " sq.units, radius: "
