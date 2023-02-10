@@ -31,15 +31,21 @@ public class Rectangle extends Figure {
     @Override
     public void printInfo() {
         System.out.println(new StringBuilder("Figure:")
-                .append(" Rectangle,\n        area: ")
+                .append(" Rectangle,")
+                .append(System.lineSeparator())
+                .append("        area: ")
                 .append(getArea())
                 .append(" sq.units,")
-                .append("\n        firstSide: ")
+                .append(System.lineSeparator())
+                .append("        firstSide: ")
                 .append(firstSide)
                 .append(" units")
-                .append("\n        secondSide: ")
+                .append(System.lineSeparator())
+                .append("        secondSide: ")
                 .append(secondSide)
-                .append(" units,\n        color: ")
+                .append(" units,")
+                .append(System.lineSeparator())
+                .append("        color: ")
                 .append(getColor()));
     }
 

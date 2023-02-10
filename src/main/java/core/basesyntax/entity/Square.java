@@ -20,12 +20,17 @@ public class Square extends Figure {
     @Override
     public void printInfo() {
         System.out.println(new StringBuilder("Figure:")
-                .append(" Square,\n        area: ")
+                .append(" Square,")
+                .append(System.lineSeparator())
+                .append("        area: ")
                 .append(getArea())
                 .append(" sq.units,")
-                .append("\n        side: ")
+                .append(System.lineSeparator())
+                .append("        side: ")
                 .append(side)
-                .append(" units,\n        color: ")
+                .append(" units,")
+                .append(System.lineSeparator())
+                .append("        color: ")
                 .append(getColor()));
     }
 

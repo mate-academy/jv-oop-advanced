@@ -21,12 +21,17 @@ public class Circle extends Figure {
     @Override
     public void printInfo() {
         System.out.println(new StringBuilder("Figure:")
-                .append(" Circle, \n        area: ")
+                .append(" Circle,")
+                .append(System.lineSeparator())
+                .append("        area: ")
                 .append(getArea())
                 .append(" sq.units,")
-                .append("\n        radius: ")
+                .append(System.lineSeparator())
+                .append("        radius: ")
                 .append(radius)
-                .append(" units, \n        color: ")
+                .append(" units,")
+                .append(System.lineSeparator())
+                .append("        color: ")
                 .append(getColor()));
     }
 

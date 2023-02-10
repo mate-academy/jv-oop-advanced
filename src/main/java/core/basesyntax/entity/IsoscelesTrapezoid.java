@@ -42,15 +42,21 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public void printInfo() {
         System.out.println(new StringBuilder("Figure:")
-                .append(" IsoscelesTrapezoid,\n        area: ")
+                .append(" IsoscelesTrapezoid,")
+                .append(System.lineSeparator())
+                .append("        area: ")
                 .append(getArea())
                 .append(" sq.units,")
-                .append("\n        upperBase: ")
+                .append(System.lineSeparator())
+                .append("        upperBase: ")
                 .append(upperBase)
                 .append(" units,")
-                .append("\n        lowerBase: ")
+                .append(System.lineSeparator())
+                .append("        lowerBase: ")
                 .append(lowerBase)
-                .append(" units,\n        color: ")
+                .append(" units,")
+                .append(System.lineSeparator())
+                .append("        color: ")
                 .append(getColor()));
     }
 
