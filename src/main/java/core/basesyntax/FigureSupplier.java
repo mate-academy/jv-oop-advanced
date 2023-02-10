@@ -6,6 +6,7 @@ public class FigureSupplier {
     private static final int RANDOMIZER_BOUND = 100;
     private final SecureRandom secureRandom = new SecureRandom();
     private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final int DEFAULT_RADIUS = 10;
 
     public Figure getRandomFigure() {
         switch (FigureName.values()[secureRandom.nextInt(FigureName.values().length)]) {
@@ -30,6 +31,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, Color.WHITE);
+        return new Circle(DEFAULT_RADIUS, Color.WHITE);
     }
 }
