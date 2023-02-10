@@ -35,9 +35,9 @@ public class FigureSupplier {
                     colorSupplier.getRandomColor());
             }
             default: {
+                return getDefaultFigure();
             }
         }
-        return getDefaultFigure();
     }
 
     public Figure getDefaultFigure() {
