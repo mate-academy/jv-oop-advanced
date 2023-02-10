@@ -1,5 +1,5 @@
 package core.basesyntax.interfaces;
 
-public interface Drawable {
+public interface InfoPrinter {
     String drawFigure();
 }

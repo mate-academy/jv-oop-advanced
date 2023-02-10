@@ -3,7 +3,7 @@ package core.basesyntax;
 import core.basesyntax.figures.Figure;
 import core.basesyntax.randomizers.FigureSupplier;
 
-public class Main {
+public class Application {
     public static void main(String[] args) {
         FigureSupplier figure = new FigureSupplier();
         Figure[] figures = new Figure[6];
