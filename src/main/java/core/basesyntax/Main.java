@@ -6,13 +6,14 @@ public class Main {
         ColorSupplier colorSupplier = new ColorSupplier();
         FigureSupplier figureSupplier = new FigureSupplier(colorSupplier);
 
-        for (int i = 0; i < figures.length / 2; i++) {
-            figures[i] = figureSupplier.getRandomFigure();
-            figures[i].draw();
-        }
-        for (int i = 3; i < figures.length; i++) {
-            figures[i] = figureSupplier.getDefaultFigure();
-            figures[i].draw();
+        for (int i = 0; i < figures.length; i++) {
+            if (i < figures.length / 2) {
+                figures[i] = figureSupplier.getRandomFigure();
+                figures[i].draw();
+            } else {
+                figures[i] = figureSupplier.getDefaultFigure();
+                figures[i].draw();
+            }
         }
     }
 }
