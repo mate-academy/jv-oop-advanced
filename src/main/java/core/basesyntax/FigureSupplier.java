@@ -5,12 +5,8 @@ import java.util.Random;
 public class FigureSupplier {
     private static final double DEFAULT_VALUE = 10.0;
     private static final int MULTIPLAYER = 100;
-    private ColorSupplier colorSupplier;
+    private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
-
-    public FigureSupplier() {
-        this.colorSupplier = new ColorSupplier();
-    }
 
     public Figure getRandomFigure() {
         FiguresShape[] figureshape = FiguresShape.values();
