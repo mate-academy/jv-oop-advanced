@@ -4,7 +4,6 @@ public class Square extends Figure {
     private double sideSize;
 
     public Square(double sideSize) {
-        super();
         this.sideSize = sideSize;
     }
 

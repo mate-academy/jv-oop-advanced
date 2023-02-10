@@ -3,13 +3,12 @@ package core.basesyntax;
 public class Circle extends Figure {
     private double radius;
 
-    public Circle() {
-        super(Color.WHITE.name());
-        this.radius = 10;
+    public Circle(String color, double radius) {
+        super(color);
+        this.radius = radius;
     }
 
     public Circle(double radius) {
-        super();
         this.radius = radius;
     }
 

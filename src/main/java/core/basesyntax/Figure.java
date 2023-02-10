@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public abstract class Figure implements Drawable {
-    protected static final int MAX_SIZE_VARIABLE = 10;
+public abstract class Figure implements Drawable, AreaCalculator {
+
     protected String color;
-    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure() {
         this.color = colorSupplier.getRandomColor();
@@ -12,6 +12,4 @@ public abstract class Figure implements Drawable {
     public Figure(String color) {
         this.color = color;
     }
-
-    abstract double area();
 }

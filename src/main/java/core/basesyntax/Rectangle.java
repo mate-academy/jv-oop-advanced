@@ -5,7 +5,6 @@ public class Rectangle extends Figure {
     private double sideB;
 
     public Rectangle(double sideA, double sideB) {
-        super();
         this.sideA = sideA;
         this.sideB = sideB;
     }

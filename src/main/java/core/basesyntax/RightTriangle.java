@@ -5,7 +5,6 @@ public class RightTriangle extends Figure {
     private double secondLeg;
 
     public RightTriangle(double sideA, double sideB) {
-        super();
         this.firstLeg = sideA;
         this.secondLeg = sideB;
     }

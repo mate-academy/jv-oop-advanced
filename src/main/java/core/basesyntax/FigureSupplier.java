@@ -3,38 +3,35 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    protected static final int MAX_SIZE_VARIABLE = 10;
     private static final int FIGURES_COUNT = 5;
-    private final Random random = new Random();
+
+    private Random random = new Random();
 
     public Figure getRandomFigure() {
         int figureIndex = random.nextInt(FIGURES_COUNT);
 
         switch (figureIndex) {
             case 0:
-                double randomRadius = random.nextInt(Figure.MAX_SIZE_VARIABLE);
-                return new Circle(randomRadius);
+                return new Circle(random.nextInt(MAX_SIZE_VARIABLE));
             case 1:
-                double randomSize = random.nextInt(Figure.MAX_SIZE_VARIABLE);
-                return new Square(randomSize);
+                return new Square(random.nextInt(MAX_SIZE_VARIABLE));
             case 2:
-                double sideA = random.nextInt(Figure.MAX_SIZE_VARIABLE);
-                double sideB = random.nextInt(Figure.MAX_SIZE_VARIABLE);
-                return new Rectangle(sideA, sideB);
+                return new Rectangle(random.nextInt(MAX_SIZE_VARIABLE),
+                        random.nextInt(MAX_SIZE_VARIABLE));
             case 3:
-                double firstLeg = random.nextInt(Figure.MAX_SIZE_VARIABLE);
-                double secondLeg = random.nextInt(Figure.MAX_SIZE_VARIABLE);
-                return new RightTriangle(firstLeg, secondLeg);
+                return new RightTriangle(random.nextInt(MAX_SIZE_VARIABLE),
+                        random.nextInt(MAX_SIZE_VARIABLE));
             case 4:
-                double rightSide = random.nextInt(Figure.MAX_SIZE_VARIABLE);
-                double leftSide = random.nextInt(Figure.MAX_SIZE_VARIABLE);
-                double height = random.nextInt(Figure.MAX_SIZE_VARIABLE);
-                return new IsoscelesTrapezoid(rightSide, leftSide, height);
+                return new IsoscelesTrapezoid(random.nextInt(MAX_SIZE_VARIABLE),
+                        random.nextInt(MAX_SIZE_VARIABLE),
+                        random.nextInt(MAX_SIZE_VARIABLE));
             default:
                 return null;
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle();
+        return new Circle(Color.WHITE.name(), 10);
     }
 }
