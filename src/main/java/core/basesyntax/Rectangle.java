@@ -17,7 +17,7 @@ public class Rectangle extends Figure {
                 + String.format("%.2f", side2) + " units, color: " + color);
     }
     
-    private double calculateArea() {
+    public double calculateArea() {
         return this.side1 * this.side2;
     }
 }
