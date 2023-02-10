@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.security.SecureRandom;
-
 public abstract class Figure implements Drawable, AreaCalculator {
     private Color color;
 
