@@ -23,11 +23,16 @@ public class Square extends Figure {
     public void printInfo() {
         System.out.println(new StringBuilder("Figure:")
                 .append(" Square, area: ")
-                .append(side * side / 2)
+                .append(getArea())
                 .append(" sq.units,")
                 .append(" side: ")
                 .append(side)
                 .append(" units, color: ")
                 .append(getColor()));
+    }
+
+    @Override
+    public double getArea() {
+        return side * side;
     }
 }

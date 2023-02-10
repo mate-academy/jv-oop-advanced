@@ -1,6 +1,6 @@
 package core.basesyntax.entity;
 
-public abstract class Figure implements Printable {
+public abstract class Figure implements Printable, AreaCalculator{
     public static final Color DEFAULT_COLOR = Color.WHITE;
     private Color color;
 

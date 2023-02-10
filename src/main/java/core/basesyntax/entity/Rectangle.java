@@ -34,7 +34,7 @@ public class Rectangle extends Figure {
     public void printInfo() {
         System.out.println(new StringBuilder("Figure:")
                 .append(" Rectangle, area: ")
-                .append(firstSide * secondSide)
+                .append(getArea())
                 .append(" sq.units,")
                 .append(" firstSide: ")
                 .append(firstSide)
@@ -43,5 +43,10 @@ public class Rectangle extends Figure {
                 .append(secondSide)
                 .append(" units, color: ")
                 .append(getColor()));
+    }
+
+    @Override
+    public double getArea() {
+        return firstSide * secondSide;
     }
 }

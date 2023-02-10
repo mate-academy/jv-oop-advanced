@@ -35,7 +35,7 @@ public class RightTriangle extends Figure {
     public void printInfo() {
         System.out.println(new StringBuilder("Figure:")
                 .append(" RightTriangle, area: ")
-                .append(leftLeg * rightLeg / 2)
+                .append(getArea())
                 .append(" sq.units,")
                 .append(" firstSide: ")
                 .append(leftLeg)
@@ -44,5 +44,10 @@ public class RightTriangle extends Figure {
                 .append(rightLeg)
                 .append(" units, color: ")
                 .append(getColor()));
+    }
+
+    @Override
+    public double getArea() {
+        return leftLeg * rightLeg / 2.0;
     }
 }

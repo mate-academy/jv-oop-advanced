@@ -48,7 +48,7 @@ public class IsoscelesTrapezoid extends Figure {
     public void printInfo() {
         System.out.println(new StringBuilder("Figure:")
                 .append(" IsoscelesTrapezoid, area: ")
-                .append((upperBase + lowerBase) * high / 2.0)
+                .append(getArea())
                 .append(" sq.units,")
                 .append(" upperBase: ")
                 .append(upperBase)
@@ -57,5 +57,10 @@ public class IsoscelesTrapezoid extends Figure {
                 .append(lowerBase)
                 .append(" units, color: ")
                 .append(getColor()));
+    }
+
+    @Override
+    public double getArea() {
+        return (upperBase + lowerBase) * high / 2.0;
     }
 }

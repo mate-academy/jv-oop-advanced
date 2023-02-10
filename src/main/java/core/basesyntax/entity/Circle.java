@@ -22,11 +22,16 @@ public class Circle extends Figure {
     public void printInfo() {
         System.out.println(new StringBuilder("Figure:")
                 .append(" Circle, area: ")
-                .append(Math.PI * radius * radius)
+                .append(getArea())
                 .append(" sq.units,")
                 .append(" radius: ")
                 .append(radius)
                 .append(" units, color: ")
                 .append(getColor()));
+    }
+
+    @Override
+    public double getArea() {
+        return Math.PI * radius * radius;
     }
 }
