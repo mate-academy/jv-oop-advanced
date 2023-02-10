@@ -31,7 +31,7 @@ public class FigureSupplier {
     }
 
     public AbstractFigure getDefaultFigure() {
-        return new Circle(Color.WHITE.name().toLowerCase(), 10);
+        return new Circle(Color.WHITE, 10);
     }
 
     private double getRandomDouble() {

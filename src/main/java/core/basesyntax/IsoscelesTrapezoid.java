@@ -5,8 +5,8 @@ public class IsoscelesTrapezoid extends AbstractFigure {
     private double secondBase;
     private double height;
 
-    public IsoscelesTrapezoid(String color, double firstBase, double secondBase, double height) {
-        super(Figure.ISOSCELES_TRAPEZOID.name(), color);
+    public IsoscelesTrapezoid(Color color, double firstBase, double secondBase, double height) {
+        super(color);
         this.firstBase = firstBase;
         this.secondBase = secondBase;
         this.height = height;
@@ -16,7 +16,8 @@ public class IsoscelesTrapezoid extends AbstractFigure {
     public String draw() {
         return String.format("Figure: %s, area: %.1f sq.units, base A: %.0f units, "
                         + "base B: %.0f units, height: %.0f units, color: %s",
-                getType(), getArea(), firstBase, secondBase, height, getColor());
+                this.getClass().getSimpleName(), getArea(), firstBase,
+                secondBase, height, getColor().name().toLowerCase());
     }
 
     @Override

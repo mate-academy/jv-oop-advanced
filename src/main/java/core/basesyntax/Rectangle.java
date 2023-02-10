@@ -4,8 +4,8 @@ public class Rectangle extends AbstractFigure {
     private double length;
     private double width;
 
-    public Rectangle(String color, double length, double width) {
-        super(Figure.RECTANGLE.name(), color);
+    public Rectangle(Color color, double length, double width) {
+        super(color);
         this.length = length;
         this.width = width;
     }
@@ -14,11 +14,12 @@ public class Rectangle extends AbstractFigure {
     public String draw() {
         return String.format("Figure: %s, area: %.1f sq.units, Side A: %.0f units,"
                         + " Side B: %.0f units, color: %s",
-                getType(), getArea(), length, width, getColor());
+                this.getClass().getSimpleName(), getArea(), length, width,
+                getColor().name().toLowerCase());
     }
 
     @Override
     public double getArea() {
-        return width * width;
+        return width * length;
     }
 }
