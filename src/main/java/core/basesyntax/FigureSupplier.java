@@ -13,23 +13,23 @@ public class FigureSupplier {
         FiguresShape[] figureshape = FiguresShape.values();
         var figure = figureshape[random.nextInt(figureshape.length)];
         switch (figure) {
-            case FiguresShape.SQUARE: {
+            case SQUARE: {
                 return new Square(random.nextDouble() * NUMBER_RANGE, colorSupplier
                     .getRandomColor());
             }
-            case FiguresShape.RECTANGLE: {
+            case RECTANGLE: {
                 return new Rectangle(random.nextDouble() * NUMBER_RANGE, random.nextDouble()
                     * NUMBER_RANGE, colorSupplier.getRandomColor());
             }
-            case FiguresShape.RIGHTTRIANGLE: {
+            case RIGHTTRIANGLE: {
                 return new RightTriangle(random.nextDouble() * NUMBER_RANGE, random.nextDouble()
                     * NUMBER_RANGE, colorSupplier.getRandomColor());
             }
-            case FiguresShape.CIRCLE: {
+            case CIRCLE: {
                 return new Circle(random.nextDouble() * NUMBER_RANGE, colorSupplier
                     .getRandomColor());
             }
-            case FiguresShape.ISOSCELESTRAPEZOID: {
+            case ISOSCELESTRAPEZOID: {
                 return new IsoscelesTrapezoid(random.nextDouble() * NUMBER_RANGE,
                     random.nextDouble() * NUMBER_RANGE, random.nextDouble() * NUMBER_RANGE,
                     colorSupplier.getRandomColor());
