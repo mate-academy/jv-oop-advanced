@@ -19,13 +19,14 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return Math.round(firstLeg * secondLeg / 2);
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + "right triangle" + ", area: " + getArea() + ", firstLeg: "
-                + getLeg1() + ", secondLeg: " + getLeg2() + ", color: " + getColor());
+        System.out.println("Figure: " + "right triangle" + ", area: " + calculateArea()
+                + ", firstLeg: " + getLeg1() + ", secondLeg: " + getLeg2() + ", color: "
+                + getColor());
     }
 }

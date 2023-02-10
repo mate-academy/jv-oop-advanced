@@ -3,6 +3,7 @@ package core.basesyntax;
 import java.security.SecureRandom;
 
 public class FigureSupplier {
+    private static final int DEFAULT_RADIUS = 10;
     private static final int RANDOMIZER_BOUND = 100;
     private final SecureRandom secureRandom = new SecureRandom();
     private final ColorSupplier colorSupplier = new ColorSupplier();
@@ -30,6 +31,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, Color.WHITE);
+        return new Circle(DEFAULT_RADIUS, Color.WHITE);
     }
 }
