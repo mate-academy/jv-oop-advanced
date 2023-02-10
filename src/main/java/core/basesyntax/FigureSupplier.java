@@ -13,23 +13,42 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         switch (random.nextInt(FIGURE_BOUND)) {
             case 1:
-                return new Circle(colorSupplier.getRandomColor(), getRandomNumber());
+                return getRandomCircle();
             case 2:
-                return new Rectangle(colorSupplier.getRandomColor(),
-                        getRandomNumber(), getRandomNumber());
+                return getRandomRectangle();
             case 3:
-                return new RightTriangle(colorSupplier.getRandomColor(),
-                        getRandomNumber(), getRandomNumber());
+                return getRandomRightTriangle();
             case 4:
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        getRandomNumber(), getRandomNumber(), getRandomNumber());
+                return getRandomIsoscelesTrapezoid();
             default:
-                return new Square(colorSupplier.getRandomColor(), getRandomNumber());
+                return getRandomSquare();
         }
     }
 
     private int getRandomNumber() {
         return random.nextInt(MAX_BOUND_NUMBER);
+    }
+
+    private Circle getRandomCircle() {
+        return new Circle(colorSupplier.getRandomColor(), getRandomNumber());
+    }
+
+    private Rectangle getRandomRectangle() {
+        return new Rectangle(colorSupplier.getRandomColor(), getRandomNumber(), getRandomNumber());
+    }
+
+    private RightTriangle getRandomRightTriangle() {
+        return new RightTriangle(colorSupplier.getRandomColor(), getRandomNumber(),
+                getRandomNumber());
+    }
+
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomNumber(),
+                getRandomNumber(), getRandomNumber());
+    }
+
+    private Square getRandomSquare() {
+        return new Square(colorSupplier.getRandomColor(), getRandomNumber());
     }
 
     public Figure getDefaultFigure() {
