@@ -17,7 +17,7 @@ public class RightTriangle extends Figure {
                 + String.format("%.2f", secondLeg) + " units, color: " + color);
     }
 
-    private double calculateArea() {
+    public double calculateArea() {
         return (firstLeg * secondLeg) / 2;
     }
 }
