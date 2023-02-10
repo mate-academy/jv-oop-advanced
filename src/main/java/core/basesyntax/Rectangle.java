@@ -5,7 +5,7 @@ public class Rectangle extends Figure {
     private final double smallSide;
 
     public Rectangle(Color color, double bigSide, double smallSide) {
-        setColor(color);
+        this.color = color;
         this.bigSide = bigSide;
         this.smallSide = smallSide;
     }
