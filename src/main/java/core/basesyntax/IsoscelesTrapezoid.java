@@ -5,7 +5,7 @@ public class IsoscelesTrapezoid extends Figure {
     private int secondSide;
     private int height;
 
-    public IsoscelesTrapezoid(int firstSide, int secondSide, int height, String color) {
+    public IsoscelesTrapezoid(int firstSide, int secondSide, int height, Color color) {
         this.firstSide = firstSide;
         this.secondSide = secondSide;
         this.height = height;
@@ -18,12 +18,12 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String toString() {
+    public String draw() {
         return "IsoscelesTrapezoid{"
                 + "area=" + getArea()
                 + ", firstSide=" + firstSide
                 + ", secondSide=" + secondSide
                 + ", height=" + height
-                + ", color=" + getColor() + '}';
+                + ", color=" + getColor().name() + '}';
     }
 }

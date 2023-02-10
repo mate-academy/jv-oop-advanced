@@ -7,20 +7,12 @@ public class Main {
         Figure[] figures = new Figure[6];
         for (int i = 0; i < figures.length; i++) {
             if (i >= figures.length / 2) {
-                setDefaultObjectToArrayAndPrintIt(figures, i);
+                figures[i] = figureSupplier.getDefaultFigure();
+                System.out.println(figures[i].draw());
             } else {
-                setRandomObjectToArrayAndPrintIt(figures, i);
+                figures[i] = figureSupplier.getRandomFigure();
+                System.out.println(figures[i].draw());
             }
         }
-    }
-
-    public static void setDefaultObjectToArrayAndPrintIt(Figure[] figures, int i) {
-        figures[i] = figureSupplier.getDefaultFigure();
-        System.out.println(figures[i]);
-    }
-
-    public static void setRandomObjectToArrayAndPrintIt(Figure[] figures, int i) {
-        figures[i] = figureSupplier.getRandomFigure();
-        System.out.println(figures[i]);
     }
 }

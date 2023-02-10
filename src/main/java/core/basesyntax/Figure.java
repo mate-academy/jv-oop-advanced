@@ -1,17 +1,14 @@
 package core.basesyntax;
 
-public abstract class Figure implements Item {
+public abstract class Figure implements AreaCalculator, Draw {
     public static final int MAX_VALUE = 50;
-    private String color;
+    private Color color;
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(Color color) {
         this.color = color;
     }
-
-    @Override
-    public abstract String toString();
 }
