@@ -13,6 +13,4 @@ public abstract class Figure implements AreaCalculator, Drawable {
         this.colorSuppliers = new ColorSupplier();
         this.color = color;
     }
-    
-    private double calculateArea();
 }
