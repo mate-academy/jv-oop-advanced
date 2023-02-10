@@ -4,7 +4,7 @@ public class Square extends Figure {
     private final double side;
 
     public Square(Color color, double side) {
-        setColor(color);
+        this.color = color;
         this.side = side;
     }
 
