@@ -1,9 +1,9 @@
 package core.basesyntax.entity;
 
 public class IsoscelesTrapezoid extends Figure {
-    public static final int MAX_HIGH = 20;
-    public static final int MAX_UPPER_BASE = 20;
-    public static final int MAX_LOWER_BASE = 20;
+    public static final double MAX_HIGH = 20;
+    public static final double MAX_UPPER_BASE = 20;
+    public static final double MAX_LOWER_BASE = 20;
 
     public static final double DEFAULT_LOWER_BASE = 10;
     public static final double DEFAULT_UPPER_BASE = 20;
@@ -24,7 +24,7 @@ public class IsoscelesTrapezoid extends Figure {
         return high;
     }
 
-    public void setHigh(int high) {
+    public void setHigh(double high) {
         this.high = high;
     }
 
@@ -32,7 +32,7 @@ public class IsoscelesTrapezoid extends Figure {
         return upperBase;
     }
 
-    public void setUpperBase(int upperBase) {
+    public void setUpperBase(double upperBase) {
         this.upperBase = upperBase;
     }
 
@@ -40,22 +40,22 @@ public class IsoscelesTrapezoid extends Figure {
         return lowerBase;
     }
 
-    public void setLowerBase(int lowerBase) {
+    public void setLowerBase(double lowerBase) {
         this.lowerBase = lowerBase;
     }
 
     @Override
     public void printInfo() {
         System.out.println(new StringBuilder("Figure:")
-                .append(" IsoscelesTrapezoid, area: ")
+                .append(" IsoscelesTrapezoid,\n        area: ")
                 .append(getArea())
                 .append(" sq.units,")
-                .append(" upperBase: ")
+                .append("\n        upperBase: ")
                 .append(upperBase)
-                .append(" units")
-                .append(" lowerBase: ")
+                .append(" units,")
+                .append("\n        lowerBase: ")
                 .append(lowerBase)
-                .append(" units, color: ")
+                .append(" units,\n        color: ")
                 .append(getColor()));
     }
 

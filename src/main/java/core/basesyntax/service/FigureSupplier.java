@@ -46,31 +46,31 @@ public class FigureSupplier {
 
     private Circle getRandomCircle() {
         return new Circle(colorSupplier.getRandomColor(),
-                random.nextInt(Circle.MAX_RADIUS));
+                random.nextDouble() * Circle.MAX_RADIUS);
     }
 
     private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                random.nextInt(IsoscelesTrapezoid.MAX_HIGH),
-                random.nextInt(IsoscelesTrapezoid.MAX_UPPER_BASE),
-                random.nextInt(IsoscelesTrapezoid.MAX_LOWER_BASE));
+                random.nextDouble() * IsoscelesTrapezoid.MAX_HIGH,
+                random.nextDouble() * IsoscelesTrapezoid.MAX_UPPER_BASE,
+                random.nextDouble() * IsoscelesTrapezoid.MAX_LOWER_BASE);
     }
 
     private Rectangle getRandomRectangle() {
         return new Rectangle(colorSupplier.getRandomColor(),
-                random.nextInt(Rectangle.MAX_FIRST_SIDE),
-                random.nextInt(Rectangle.MAX_SECOND_SIDE));
+                random.nextDouble() * Rectangle.MAX_FIRST_SIDE,
+                random.nextDouble() * Rectangle.MAX_SECOND_SIDE);
     }
 
     private RightTriangle getRandomRightTriangle() {
         return new RightTriangle(colorSupplier.getRandomColor(),
-                random.nextInt(RightTriangle.MAX_LEFT_LEG),
-                random.nextInt(RightTriangle.MAX_RIGHT_LEG));
+                random.nextDouble() * RightTriangle.MAX_LEFT_LEG,
+                random.nextDouble() * RightTriangle.MAX_RIGHT_LEG);
     }
 
     private Square getRandomSquare() {
         return new Square(colorSupplier.getRandomColor(),
-                random.nextInt(Square.MAX_SIDE));
+                random.nextDouble() * Square.MAX_SIDE);
     }
 
     private Circle getDefaultCircle() {

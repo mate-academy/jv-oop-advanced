@@ -1,7 +1,7 @@
 package core.basesyntax.entity;
 
 public class Square extends Figure {
-    public static final int MAX_SIDE = 25;
+    public static final double MAX_SIDE = 25;
 
     public static final double DEFAULT_SIDE = 12.5;
     private double side;
@@ -22,12 +22,12 @@ public class Square extends Figure {
     @Override
     public void printInfo() {
         System.out.println(new StringBuilder("Figure:")
-                .append(" Square, area: ")
+                .append(" Square,\n        area: ")
                 .append(getArea())
                 .append(" sq.units,")
-                .append(" side: ")
+                .append("\n        side: ")
                 .append(side)
-                .append(" units, color: ")
+                .append(" units,\n        color: ")
                 .append(getColor()));
     }
 

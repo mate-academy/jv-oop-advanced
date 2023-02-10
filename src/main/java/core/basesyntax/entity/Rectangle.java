@@ -1,10 +1,10 @@
 package core.basesyntax.entity;
 
 public class Rectangle extends Figure {
-    public static final int MAX_FIRST_SIDE = 50;
-    public static final int MAX_SECOND_SIDE = 50;
-    public static final int DEFAULT_FIRST_SIDE = 25;
-    public static final int DEFAULT_SECOND_SIDE = 25;
+    public static final double MAX_FIRST_SIDE = 50;
+    public static final double MAX_SECOND_SIDE = 50;
+    public static final double DEFAULT_FIRST_SIDE = 25;
+    public static final double DEFAULT_SECOND_SIDE = 25;
     private double firstSide;
     private double secondSide;
 
@@ -33,15 +33,15 @@ public class Rectangle extends Figure {
     @Override
     public void printInfo() {
         System.out.println(new StringBuilder("Figure:")
-                .append(" Rectangle, area: ")
+                .append(" Rectangle,\n        area: ")
                 .append(getArea())
                 .append(" sq.units,")
-                .append(" firstSide: ")
+                .append("\n        firstSide: ")
                 .append(firstSide)
                 .append(" units")
-                .append(" secondSide: ")
+                .append("\n        secondSide: ")
                 .append(secondSide)
-                .append(" units, color: ")
+                .append(" units,\n        color: ")
                 .append(getColor()));
     }
 

@@ -1,8 +1,8 @@
 package core.basesyntax.entity;
 
 public class RightTriangle extends Figure {
-    public static final int MAX_LEFT_LEG = 100;
-    public static final int MAX_RIGHT_LEG = 100;
+    public static final double MAX_LEFT_LEG = 100;
+    public static final double MAX_RIGHT_LEG = 100;
 
     public static final double DEFAULT_LEFT_LEG = 50;
     public static final double DEFAULT_RIGHT_LEG = 50;
@@ -34,15 +34,15 @@ public class RightTriangle extends Figure {
     @Override
     public void printInfo() {
         System.out.println(new StringBuilder("Figure:")
-                .append(" RightTriangle, area: ")
+                .append(" RightTriangle,\n        area: ")
                 .append(getArea())
                 .append(" sq.units,")
-                .append(" firstSide: ")
+                .append("\n        firstSide: ")
                 .append(leftLeg)
-                .append(" units")
-                .append(" secondSide: ")
+                .append(" units,")
+                .append("\n        secondSide: ")
                 .append(rightLeg)
-                .append(" units, color: ")
+                .append(" units,\n        color: ")
                 .append(getColor()));
     }
 
