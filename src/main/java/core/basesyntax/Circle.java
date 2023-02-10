@@ -16,6 +16,6 @@ public class Circle extends Figure {
 
     @Override
     public double getArea() {
-        return 0;
+        return PI * Math.pow(radius,2);
     }
 }
