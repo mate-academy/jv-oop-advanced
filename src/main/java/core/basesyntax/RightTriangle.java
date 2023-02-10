@@ -10,6 +10,7 @@ public class RightTriangle extends Figure {
         this.secondLeg = secondLeg;
     }
 
+    @Override
     public void draw() {
         System.out.println(this.getClass().getSimpleName() + ": square, area: "
                 + String.format("%.2f", calculateArea()) + " sq.units, firstLeg: "
@@ -17,6 +18,7 @@ public class RightTriangle extends Figure {
                 + String.format("%.2f", secondLeg) + " units, color: " + color);
     }
 
+    @Override
     public double calculateArea() {
         return (firstLeg * secondLeg) / 2;
     }
