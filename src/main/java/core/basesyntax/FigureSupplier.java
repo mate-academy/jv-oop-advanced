@@ -13,7 +13,8 @@ public class FigureSupplier {
         FiguresShape[] figureshape = FiguresShape.values();
         switch (figureshape[random.nextInt(figureshape.length)].name()) {
             case "SQUARE": {
-                return new Square(random.nextDouble() * NUMBER_RANGE, colorSupplier.getRandomColor());
+                return new Square(random.nextDouble() * NUMBER_RANGE, colorSupplier
+                    .getRandomColor());
             }
             case "RECTANGLE": {
                 return new Rectangle(random.nextDouble() * NUMBER_RANGE, random.nextDouble()
@@ -24,11 +25,12 @@ public class FigureSupplier {
                     * NUMBER_RANGE, colorSupplier.getRandomColor());
             }
             case "CIRCLE": {
-                return new Circle(random.nextDouble() * NUMBER_RANGE, colorSupplier.getRandomColor());
+                return new Circle(random.nextDouble() * NUMBER_RANGE, colorSupplier
+                    .getRandomColor());
             }
             case "ISOSCELESTRAPEZOID": {
-                return new IsoscelesTrapezoid(random.nextDouble() * NUMBER_RANGE, random.nextDouble()
-                    * NUMBER_RANGE, random.nextDouble() * NUMBER_RANGE,
+                return new IsoscelesTrapezoid(random.nextDouble() * NUMBER_RANGE,
+                    random.nextDouble() * NUMBER_RANGE, random.nextDouble() * NUMBER_RANGE,
                     colorSupplier.getRandomColor());
             }
             default: {
