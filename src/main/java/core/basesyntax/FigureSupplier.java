@@ -20,7 +20,7 @@ public class FigureSupplier {
                     * MULTIPLAYER, colorSupplier.getRandomColor());
             }
             case "RIGHTTRIANGLE": {
-                retun new RightTriangle(random.nextDouble() * MULTIPLAYER, random.nextDouble()
+                return new RightTriangle(random.nextDouble() * MULTIPLAYER, random.nextDouble()
                     * MULTIPLAYER, colorSupplier.getRandomColor());
             }
             case "CIRCLE": {
