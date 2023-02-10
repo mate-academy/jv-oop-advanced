@@ -5,10 +5,10 @@ public class IsoscelesTrapezoid extends Figure {
     private double botomSide;
     private double height;
 
-    public IsoscelesTrapezoid(double topSide, double botomSide, double visota, Color color) {
+    public IsoscelesTrapezoid(double topSide, double botomSide, double height, Color color) {
         this.topSide = topSide;
         this.botomSide = botomSide;
-        this.height = visota;
+        this.height = height;
         this.setColor(color);
     }
 
@@ -20,8 +20,8 @@ public class IsoscelesTrapezoid extends Figure {
         this.botomSide = botomSide;
     }
 
-    public void setVisota(double visota) {
-        this.height = visota;
+    public void setVisota(double height) {
+        this.height = height;
     }
 
     @Override
