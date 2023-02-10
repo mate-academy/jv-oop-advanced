@@ -13,22 +13,22 @@ public class FigureSupplier {
         FiguresShape[] figureshape = FiguresShape.values();
         switch (figureshape[random.nextInt(figureshape.length)].name()) {
             case "SQUARE": {
-                return new Square(random.nextDouble() * MULTIPLAYER, colorSupplier.getRandomColor());
+                return new Square(random.nextDouble() * NUMBER_RANGE, colorSupplier.getRandomColor());
             }
             case "RECTANGLE": {
-                return new Rectangle(random.nextDouble() * MULTIPLAYER, random.nextDouble()
-                    * MULTIPLAYER, colorSupplier.getRandomColor());
+                return new Rectangle(random.nextDouble() * NUMBER_RANGE, random.nextDouble()
+                    * NUMBER_RANGE, colorSupplier.getRandomColor());
             }
             case "RIGHTTRIANGLE": {
-                return new RightTriangle(random.nextDouble() * MULTIPLAYER, random.nextDouble()
-                    * MULTIPLAYER, colorSupplier.getRandomColor());
+                return new RightTriangle(random.nextDouble() * NUMBER_RANGE, random.nextDouble()
+                    * NUMBER_RANGE, colorSupplier.getRandomColor());
             }
             case "CIRCLE": {
-                return new Circle(random.nextDouble() * MULTIPLAYER, colorSupplier.getRandomColor());
+                return new Circle(random.nextDouble() * NUMBER_RANGE, colorSupplier.getRandomColor());
             }
             case "ISOSCELESTRAPEZOID": {
-                return new IsoscelesTrapezoid(random.nextDouble() * MULTIPLAYER, random.nextDouble()
-                    * MULTIPLAYER, random.nextDouble() * MULTIPLAYER,
+                return new IsoscelesTrapezoid(random.nextDouble() * NUMBER_RANGE, random.nextDouble()
+                    * MULTIPLAYER, random.nextDouble() * NUMBER_RANGE,
                     colorSupplier.getRandomColor());
             }
             default: {
