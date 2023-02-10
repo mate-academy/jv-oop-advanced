@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-
     private int sideA;
     private int sideB;
 
@@ -18,8 +17,11 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("\nRectangle with area of " + calculateArea() + " sq. units");
+        System.out.println(System.lineSeparator()
+                + "Rectangle with area of " + calculateArea() + " sq. units");
         super.draw();
-        System.out.println("sideA:" + sideA + "\nsideB:" + sideB + "\n");
+        System.out.println(System.lineSeparator() + "sideA:" + sideA
+                + System.lineSeparator() + "sideB:" + sideB
+                + System.lineSeparator());
     }
 }

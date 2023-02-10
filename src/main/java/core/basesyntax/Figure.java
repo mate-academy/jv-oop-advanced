@@ -4,7 +4,7 @@ public abstract class Figure implements AreaCalculator {
     private Color color;
 
     public void draw() {
-        System.out.println("color: " + color.toString());
+        System.out.print("color: " + color.toString());
     }
 
     public Color getColor() {
