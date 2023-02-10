@@ -11,7 +11,7 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         FiguresShape[] figureshape = FiguresShape.values();
-        var figure = figureshape[random.nextInt(figureshape.length)].name();
+        var figure = figureshape[random.nextInt(figureshape.length)];
         switch (figure) {
             case FiguresShape.SQUARE: {
                 return new Square(random.nextDouble() * NUMBER_RANGE, colorSupplier
