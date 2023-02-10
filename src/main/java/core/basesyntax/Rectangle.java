@@ -17,7 +17,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    void drawFigure() {
+    public void drawFigure() {
         String text = "Figure: " + getName() + ", area: " + getArea()
                 + " sq.units, firstLeg: " + getFirstLeg()
                 + " units, secondLeg: " + getSecondLeg()
