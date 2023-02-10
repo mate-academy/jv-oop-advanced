@@ -1,12 +1,11 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Figure;
-
 public class Rectangle extends Figure {
     private final int length;
     private final int width;
 
-    public Rectangle(int length, int width) {
+    public Rectangle(String color, int length, int width) {
+        super(color);
         this.length = length;
         this.width = width;
     }
@@ -20,7 +19,15 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public int calculateArea() {
+    public double calculateArea() {
         return length * width;
+    }
+
+    @Override
+    public String drawFigure() {
+        return "Figure: rectangle, area: " + calculateArea()
+                + " sq.units, length: " + getLength()
+                + " units, width: " + getWidth()
+                + "units, color: " + getColor();
     }
 }
