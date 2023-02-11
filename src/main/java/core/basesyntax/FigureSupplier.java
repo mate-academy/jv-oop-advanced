@@ -21,21 +21,43 @@ public class FigureSupplier {
         return new Circle(Color.WHITE, CIRCLE_RADIUS);
     }
 
+    private Circle getRandomCircle() {
+        return new Circle(randomColor.getRandomColor(), random.nextInt(RANDOM_LENGHT));
+    }
+
+    private Square getRandomSquare() {
+        return new Square(randomColor.getRandomColor(), random.nextInt(RANDOM_LENGHT));
+    }
+
+    private RightTriangle getRandomRightTriangle() {
+        return new RightTriangle(randomColor.getRandomColor(),
+                random.nextInt(RANDOM_LENGHT), random.nextInt(RANDOM_LENGHT));
+    }
+
+    private Rectangle getRandomRectangle() {
+        return new Rectangle(randomColor.getRandomColor(),
+                random.nextInt(RANDOM_LENGHT), random.nextInt(RANDOM_LENGHT));
+    }
+
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(randomColor.getRandomColor(),
+                random.nextInt(RANDOM_LENGHT), random.nextInt(RANDOM_LENGHT),
+                random.nextInt(RANDOM_LENGHT));
+    }
+
+
     public Figure getRandomFigure() {
         switch (getRandomTypeOfFigure()) {
             case CIRCLE:
-                return new Circle(randomColor.getRandomColor(), getRandomNumber());
+                return getRandomCircle();
             case SQUARE:
-                return new Square(randomColor.getRandomColor(), getRandomNumber());
+                return getRandomSquare();
             case TRIANGLE:
-                return new RightTriangle(randomColor.getRandomColor(),
-                        getRandomNumber(), getRandomNumber());
+                return getRandomRightTriangle();
             case RECTANGLE:
-                return new Rectangle(randomColor.getRandomColor(),
-                        getRandomNumber(), getRandomNumber());
+                return getRandomRectangle();
             case TRAPEZOID:
-                return new IsoscelesTrapezoid(randomColor.getRandomColor(),
-                        getRandomNumber(), getRandomNumber(), getRandomNumber());
+                return getRandomIsoscelesTrapezoid();
             default:
                 return getDefaultFigure();
         }
