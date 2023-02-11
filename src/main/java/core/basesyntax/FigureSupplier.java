@@ -9,10 +9,6 @@ public class FigureSupplier {
     private RandomDoubleGenerator randomDouble = new RandomDoubleGenerator();
     private Random random = new Random();
 
-    public String getRandomFigureName() {
-        return FigureName.values()[random.nextInt(FigureName.values().length)].toString();
-    }
-
     private Circle getRandomCircle() {
         return new Circle(color.getRandomColor(), randomDouble.getRandomDouble());
     }
@@ -41,20 +37,23 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        String figureName = getRandomFigureName();
-        switch (figureName) {
-            case "CIRCLE" :
-                return getRandomCircle();
-            case "SQUARE" :
-                return getRandomSquare();
-            case "RECTANGLE" :
-                return getRandomRectangle();
-            case "RIGHT_TRIANGLE" :
-                return getRandomRightTriangle();
-            case "ISOSCELES_TRAPEZOID" :
-                return getRandomIsoscelesTrapezoid();
-            default:
-                return getDefaultFigure();
+        FigureName[] figureNames = FigureName.values();
+        for (FigureName figureName : figureNames) {
+            switch (figureName) {
+                case CIRCLE :
+                    return getRandomCircle();
+                case SQUARE :
+                    return getRandomSquare();
+                case RECTANGLE :
+                    return getRandomRectangle();
+                case RIGHT_TRIANGLE :
+                    return getRandomRightTriangle();
+                case ISOSCELES_TRAPEZOID :
+                    return getRandomIsoscelesTrapezoid();
+                default:
+                    return getDefaultFigure();
+            }
         }
+        return getDefaultFigure();
     }
 }
