@@ -15,7 +15,8 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        FigureName figureName = FigureName.values()[secureRandom.nextInt(FigureName.values().length)];
+        int randomFigureIndex = secureRandom.nextInt(FigureName.values().length);
+        FigureName figureName = FigureName.values()[randomFigureIndex];
         switch (figureName) {
             case SQUARE:
                 return getRandomSquare();
@@ -78,7 +79,8 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(DEFAULT_UPPER_BASE, DEFAULT_LOWER_BASE, DEFAULT_SIDE, Color.WHITE);
+        return new IsoscelesTrapezoid(DEFAULT_UPPER_BASE, DEFAULT_LOWER_BASE,
+                DEFAULT_SIDE, Color.WHITE);
     }
 
     public Figure getDefaultRightTriangle() {
