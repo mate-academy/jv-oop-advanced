@@ -1,4 +1,4 @@
 package core.basesyntax.figures;
 
-public class Rectangle {
+public class Rectangle extends Figure {
 }

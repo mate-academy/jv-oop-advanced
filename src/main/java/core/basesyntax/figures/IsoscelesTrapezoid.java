@@ -1,4 +1,4 @@
 package core.basesyntax.figures;
 
-public class IsoscelesTrapezoid {
+public class IsoscelesTrapezoid extends Figure {
 }
