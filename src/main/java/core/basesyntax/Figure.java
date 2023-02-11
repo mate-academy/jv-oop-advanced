@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements AreaCalculator, Draw {
+public abstract class Figure implements CalculateArea, Drawable {
     public static final int MAX_VALUE = 50;
     private Color color;
 

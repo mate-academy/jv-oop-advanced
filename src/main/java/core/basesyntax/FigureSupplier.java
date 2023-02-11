@@ -9,9 +9,9 @@ public class FigureSupplier {
     private Random random;
     private ColorSupplier colorSupplier;
 
-    public FigureSupplier() {
-        random = new Random();
-        colorSupplier = new ColorSupplier();
+    public FigureSupplier(Random random, ColorSupplier colorSupplier) {
+        this.random = random;
+        this.colorSupplier = colorSupplier;
     }
 
     public Figure getDefaultFigure() {
@@ -19,19 +19,13 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        Figure figure = null;
         switch (random.nextInt(NUMBER_OF_FIGURES)) {
-            case 0: figure = getRandomIsoscelesTrapezoid();
-            break;
-            case 1: figure = getRandomCircle();
-            break;
-            case 2: figure = getRandomRightTriangle();
-            break;
-            case 3: figure = getRandomRectangle();
-            break;
-            default: figure = getRandomSquare();
+            case 0: return getRandomIsoscelesTrapezoid();
+            case 1: return getRandomCircle();
+            case 2: return getRandomRightTriangle();
+            case 3: return getRandomRectangle();
+            default: return getRandomSquare();
         }
-        return figure;
     }
 
     private Figure getRandomIsoscelesTrapezoid() {
