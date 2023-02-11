@@ -1,11 +1,12 @@
 package core.basesyntax.figuretypes;
 
+import core.basesyntax.Color;
 import core.basesyntax.Figure;
 
 public class Square extends Figure {
     private double side;
 
-    public Square(String color, double side) {
+    public Square(Color color, double side) {
         super(color);
         this.side = side;
     }
@@ -13,7 +14,7 @@ public class Square extends Figure {
     @Override
     public double getArea() {
         double area = Math.pow(side, 2);
-        return Math.round(area * 100) / 100;
+        return Math.round(area * DECIMAL_FORMAT) / DECIMAL_FORMAT;
     }
 
     @Override

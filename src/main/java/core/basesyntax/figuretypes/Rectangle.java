@@ -1,12 +1,13 @@
 package core.basesyntax.figuretypes;
 
+import core.basesyntax.Color;
 import core.basesyntax.Figure;
 
 public class Rectangle extends Figure {
     private double length;
     private double width;
 
-    public Rectangle(String color, double length, double width) {
+    public Rectangle(Color color, double length, double width) {
         super(color);
         this.length = length;
         this.width = width;
@@ -15,7 +16,7 @@ public class Rectangle extends Figure {
     @Override
     public double getArea() {
         double area = length * width;
-        return Math.round(area * 100) / 100;
+        return Math.round(area * DECIMAL_FORMAT) / DECIMAL_FORMAT;
     }
 
     @Override
