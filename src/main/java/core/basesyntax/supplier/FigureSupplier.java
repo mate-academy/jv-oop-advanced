@@ -1,12 +1,17 @@
 package core.basesyntax.supplier;
 
 import core.basesyntax.color.Color;
-import core.basesyntax.figures.*;
-
+import core.basesyntax.figures.Circle;
+import core.basesyntax.figures.Figure;
+import core.basesyntax.figures.FigureName;
+import core.basesyntax.figures.IsoscelesTrapezoid;
+import core.basesyntax.figures.Rectangle;
+import core.basesyntax.figures.RightTriangle;
+import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int NUMBER_OF_FIGURE = 5;
+    private static final int NUMBER_OF_FIGURE = 5;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
     private RandomSupplier randomSupplier = new RandomSupplier();
@@ -16,19 +21,28 @@ public class FigureSupplier {
         int figureNumber = random.nextInt(NUMBER_OF_FIGURE);
         switch (FigureName.values()[figureNumber]) {
             case CIRCLE:
-                figure = new Circle(colorSupplier.getRandomColor(), randomSupplier.getRandomValue());
+                figure = new Circle(colorSupplier.getRandomColor(),
+                        randomSupplier.getRandomValue());
                 break;
             case ISOSCELES_TRAPEZOID:
-                figure = new IsoscelesTrapezoid(colorSupplier.getRandomColor(), randomSupplier.getRandomValue(), randomSupplier.getRandomValue(), randomSupplier.getRandomValue());
+                figure = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        randomSupplier.getRandomValue(),
+                        randomSupplier.getRandomValue(),
+                        randomSupplier.getRandomValue());
                 break;
             case RECTANGLE:
-                figure = new Rectangle(colorSupplier.getRandomColor(), randomSupplier.getRandomValue(), randomSupplier.getRandomValue());
+                figure = new Rectangle(colorSupplier.getRandomColor(),
+                        randomSupplier.getRandomValue(),
+                        randomSupplier.getRandomValue());
                 break;
             case RIGHT_TRIANGLE:
-                figure = new RightTriangle(colorSupplier.getRandomColor(), randomSupplier.getRandomValue(), randomSupplier.getRandomValue());
+                figure = new RightTriangle(colorSupplier.getRandomColor(),
+                        randomSupplier.getRandomValue(),
+                        randomSupplier.getRandomValue());
                 break;
             default:
-                figure = new Square(colorSupplier.getRandomColor(), randomSupplier.getRandomValue());
+                figure = new Square(colorSupplier.getRandomColor(),
+                        randomSupplier.getRandomValue());
                 break;
         }
         return figure;
