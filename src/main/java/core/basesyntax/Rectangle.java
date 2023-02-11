@@ -4,7 +4,6 @@ public class Rectangle extends Figure {
     private final int firstSide;
     private final int secondSide;
     private final TypeOfFigure type = TypeOfFigure.RECTANGLE;
-    private final ColorSupplier randomColor = new ColorSupplier();
 
     public Rectangle(Color color, int firstSide, int secondSide) {
         super(color);
