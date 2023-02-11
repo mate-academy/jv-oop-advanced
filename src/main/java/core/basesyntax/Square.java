@@ -10,11 +10,14 @@ public class Square extends Figure {
 
     @Override
     public void print() {
-
+        System.out.println("Figure: " + Figures.Square.name()
+                + ", area: " + getArea()
+                + ", sq.units, side: " + side
+                + ", units, color: " + getColor());
     }
 
     @Override
     public double getArea() {
-        return 0;
+        return Math.pow(side,2);
     }
 }

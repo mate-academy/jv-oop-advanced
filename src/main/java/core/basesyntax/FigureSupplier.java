@@ -13,22 +13,24 @@ public class FigureSupplier {
         int randomFigure = random.nextInt(Figures.values().length);
         switch (Figures.values()[randomFigure]) {
             case Isosceles_Trapezoid:
-                return null;
+                return getIsoscelesTrapezoid();
             case Rectangle:
                 return getRectangle();
             case Square:
                 return getSquare();
             case RightTriangle:
-                return null;
+                return getRightTriangle();
             case Circle:
                 return getCircle();
             default:
                 return getDefaultFigure();
         }
     }
+
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR,DEFAULT_RADIUS);
     }
+
     public Figure getRectangle() {
         double firstSide = random.nextInt(MAX_VALUE);
         double secondSide = random.nextInt(MAX_VALUE);
@@ -41,5 +43,18 @@ public class FigureSupplier {
 
     private Figure getCircle() {
         return new Circle(colorSupplier.getRandomColor(),random.nextInt(MAX_VALUE));
+    }
+
+    private Figure getIsoscelesTrapezoid() {
+        double lowSide = random.nextInt(MAX_VALUE);
+        double topSide = random.nextInt(MAX_VALUE);
+        double lateralSide = random.nextInt(MAX_VALUE);
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),lowSide,topSide,lateralSide);
+    }
+
+    private Figure getRightTriangle() {
+        double base = random.nextInt(MAX_VALUE);
+        double height = random.nextInt(MAX_VALUE);
+        return new RightTriangle(colorSupplier.getRandomColor(),base,height);
     }
 }
