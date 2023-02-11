@@ -2,16 +2,17 @@ package core.basesyntax;
 
 public class Square extends Figure {
     private double leg;
+    private double area;
 
-    Square(String color) {
+    Square(Color color) {
         super(color);
     }
 
-    Square(String color, double leg) {
+    Square(Color color, double leg) {
         super(color);
-        this.setName(Name.SQUARE.name());
+        this.setName(FigureName.SQUARE);
         this.leg = leg;
-        this.setArea(calculateArea());
+        this.area = calculateArea();
     }
 
     @Override
@@ -28,6 +29,10 @@ public class Square extends Figure {
 
     public void setLeg(double leg) {
         this.leg = leg;
+    }
+
+    public double getArea() {
+        return area;
     }
 
     @Override

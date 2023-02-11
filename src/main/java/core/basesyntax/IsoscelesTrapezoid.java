@@ -4,18 +4,19 @@ public class IsoscelesTrapezoid extends Figure {
     private double height;
     private double upLine;
     private double downLine;
+    private double area;
 
-    IsoscelesTrapezoid(String color) {
+    IsoscelesTrapezoid(Color color) {
         super(color);
     }
 
-    IsoscelesTrapezoid(String color, double height, double upLine, double downLine) {
+    IsoscelesTrapezoid(Color color, double height, double upLine, double downLine) {
         super(color);
-        this.setName(Name.ISOSCELESTRAPEZOID.name());
+        this.setName(FigureName.ISOSCELESTRAPEZOID);
         this.height = height;
         this.downLine = downLine;
         this.upLine = upLine;
-        this.setArea(calculateArea());
+        this.area = calculateArea();
     }
 
     @Override
@@ -45,6 +46,10 @@ public class IsoscelesTrapezoid extends Figure {
 
     public double getHeight() {
         return height;
+    }
+
+    public double getArea() {
+        return area;
     }
 
     public void setHeight(double height) {

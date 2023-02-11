@@ -2,16 +2,17 @@ package core.basesyntax;
 
 public class Circle extends Figure {
     private double radius;
+    private double area;
 
-    Circle(String color) {
+    Circle(Color color) {
         super(color);
     }
 
-    Circle(String color, double radius) {
+    Circle(Color color, double radius) {
         super(color);
-        this.setName(Name.CIRCLE.name());
+        this.setName(FigureName.CIRCLE);
         this.radius = radius;
-        this.setArea(calculateArea());
+        this.area = calculateArea();
     }
 
     @Override
@@ -28,6 +29,10 @@ public class Circle extends Figure {
 
     public void setRadius(double radius) {
         this.radius = radius;
+    }
+
+    public double getArea() {
+        return area;
     }
 
     @Override

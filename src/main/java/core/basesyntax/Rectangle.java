@@ -3,17 +3,18 @@ package core.basesyntax;
 public class Rectangle extends Figure {
     private double firstLeg;
     private double secondLeg;
+    private double area;
 
-    Rectangle(String color) {
+    Rectangle(Color color) {
         super(color);
     }
 
-    Rectangle(String color, double firstLeg, double secondLeg) {
+    Rectangle(Color color, double firstLeg, double secondLeg) {
         super(color);
-        this.setName(Name.RECTANGLE.name());
+        this.setName(FigureName.RECTANGLE);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        this.setArea(calculateArea());
+        this.area = calculateArea();
     }
 
     @Override
@@ -39,6 +40,10 @@ public class Rectangle extends Figure {
 
     public void setSecondLeg(double secondLeg) {
         this.secondLeg = secondLeg;
+    }
+
+    public double getArea() {
+        return area;
     }
 
     @Override
