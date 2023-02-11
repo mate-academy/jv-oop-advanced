@@ -6,7 +6,6 @@ public class FigureSupplier {
     private static final int DEFAULT_PROPERTY_SIZE = 10;
     private static final Color DEFAULT_COLOR = Color.WHITE;
     private static final int NUMBER_OF_FIGURES = 5;
-
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
