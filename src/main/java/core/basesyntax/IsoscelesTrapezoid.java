@@ -9,7 +9,7 @@ public class IsoscelesTrapezoid extends Figure {
         this.baseUp = baseUp;
         this.baseDown = baseDown;
         this.height = height;
-        setColor(color);
+        this.color = color;
     }
 
     @Override
@@ -28,7 +28,7 @@ public class IsoscelesTrapezoid extends Figure {
                 .append(baseDown)
                 .append(" sq.units, height: ")
                 .append(height)
-                .append(" color: ").append(getColor());
+                .append(" color: ").append(color);
         System.out.println(stringBuilder);
     }
 }

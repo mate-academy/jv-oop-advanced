@@ -5,7 +5,7 @@ public class Square extends Figure {
 
     public Square(int size, String color) {
         this.size = size;
-        setColor(color);
+        this.color = color;
     }
 
     @Override
@@ -20,7 +20,7 @@ public class Square extends Figure {
                 .append(getArea())
                 .append(" sq.units, size: ")
                 .append(size)
-                .append(" color: ").append(getColor());
+                .append(" color: ").append(color);
         System.out.println(stringBuilder);
     }
 }

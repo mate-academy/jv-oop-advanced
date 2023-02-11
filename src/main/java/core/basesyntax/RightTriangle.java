@@ -7,7 +7,7 @@ public class RightTriangle extends Figure {
     public RightTriangle(int firstLeg, int secondLeg, String color) {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        setColor(color);
+        this.color = color;
     }
 
     @Override
@@ -24,7 +24,7 @@ public class RightTriangle extends Figure {
                 .append(firstLeg)
                 .append(" sq.units, secondLeg: ")
                 .append(secondLeg)
-                .append(" color: ").append(getColor());
+                .append(" color: ").append(color);
         System.out.println(stringBuilder);
     }
 }

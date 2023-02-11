@@ -5,7 +5,7 @@ public class Circle extends Figure {
 
     public Circle(int radius, String color) {
         this.radius = radius;
-        setColor(color);
+        this.color = color;
     }
 
     @Override
@@ -20,7 +20,7 @@ public class Circle extends Figure {
                 .append(getArea())
                 .append(" sq.units, radius: ")
                 .append(radius)
-                .append(" color: ").append(getColor());
+                .append(" color: ").append(color);
         System.out.println(stringBuilder);
     }
 }

@@ -7,7 +7,7 @@ public class Rectangle extends Figure {
     public Rectangle(double width, double height, String color) {
         this.width = width;
         this.height = height;
-        setColor(color);
+        this.color = color;
     }
 
     @Override
@@ -25,7 +25,7 @@ public class Rectangle extends Figure {
                 .append(" height: ")
                 .append(height)
                 .append(" color: ")
-                .append(getColor());
+                .append(color);
         System.out.println(stringBuilder);
     }
 }
