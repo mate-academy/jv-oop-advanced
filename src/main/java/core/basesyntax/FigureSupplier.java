@@ -4,6 +4,8 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int RANDOM_LENGHT = 20;
+    private static final int CIRCLE_RADIUS = 10;
+    private final int numberOfTypes = TypeOfFigure.values().length;
     private final ColorSupplier randomColor = new ColorSupplier();
     private final Random random = new Random();
 
@@ -12,31 +14,28 @@ public class FigureSupplier {
     }
 
     public TypeOfFigure getRandomTypeOfFigure() {
-        return TypeOfFigure.values()[random.nextInt(TypeOfFigure.values().length)];
+        return TypeOfFigure.values()[random.nextInt(numberOfTypes)];
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE, 10);
+        return new Circle(Color.WHITE, CIRCLE_RADIUS);
     }
 
     public Figure getRandomFigure() {
-        int randomHeight = getRandomNumber();
-        int randomSide1 = getRandomNumber();
-        int randomSide2 = getRandomNumber();
-        int randomRadius = getRandomNumber();
-
         switch (getRandomTypeOfFigure()) {
             case CIRCLE:
-                return new Circle(randomColor.getRandomColor(), randomRadius);
+                return new Circle(randomColor.getRandomColor(), getRandomNumber());
             case SQUARE:
-                return new Square(randomColor.getRandomColor(),randomSide1);
+                return new Square(randomColor.getRandomColor(), getRandomNumber());
             case TRIANGLE:
-                return new RightTriangle(randomColor.getRandomColor(), randomSide1, randomSide2);
+                return new RightTriangle(randomColor.getRandomColor(),
+                        getRandomNumber(), getRandomNumber());
             case RECTANGLE:
-                return new Rectangle(randomColor.getRandomColor(), randomSide1, randomSide2);
+                return new Rectangle(randomColor.getRandomColor(),
+                        getRandomNumber(), getRandomNumber());
             case TRAPEZOID:
                 return new IsoscelesTrapezoid(randomColor.getRandomColor(),
-                        randomSide1, randomSide2, randomHeight);
+                        getRandomNumber(), getRandomNumber(), getRandomNumber());
             default:
                 return getDefaultFigure();
         }
