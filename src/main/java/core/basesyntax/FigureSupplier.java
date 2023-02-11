@@ -18,16 +18,14 @@ public class FigureSupplier {
                 return new Rectangle(colorSupplier.getRandomColor(), randomVal(), randomVal());
             case RIGHT_TRIANGLE:
                 return new RightTriangle(colorSupplier.getRandomColor(), randomVal());
-            case ISOSCELES_TRAPEZOID:
+            default:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                         randomVal(), randomVal(), randomVal());
-            default:
-                return null;
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE,10);
+        return new Circle(Circle.DEFAULT_COLOR,Circle.DEFAULT_VALUE);
     }
 
     private double randomVal() {
