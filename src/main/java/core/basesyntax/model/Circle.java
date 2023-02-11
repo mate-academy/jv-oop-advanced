@@ -14,13 +14,13 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: circle, area: " + getArea()
+        System.out.println("Figure: circle, area: " + calculateArea()
                 + " sq.units, radius: " + radius + " units,"
                 + " color: " + getColor());
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         MathContext context = new MathContext(5, RoundingMode.HALF_UP);
         return new BigDecimal(Math.pow(radius, 2) * Math.PI, context).doubleValue();
     }

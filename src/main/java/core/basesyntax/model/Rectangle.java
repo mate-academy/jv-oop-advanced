@@ -12,14 +12,14 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + getArea()
+        System.out.println("Figure: rectangle, area: " + calculateArea()
                 + " sq.units, width: " + width + " units,"
                 + " height: " + height + " units,"
                 + " color: " + getColor());
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return width * height;
     }
 }
