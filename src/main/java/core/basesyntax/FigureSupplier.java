@@ -45,7 +45,6 @@ public class FigureSupplier {
                 random.nextInt(RANDOM_LENGHT));
     }
 
-
     public Figure getRandomFigure() {
         switch (getRandomTypeOfFigure()) {
             case CIRCLE:
