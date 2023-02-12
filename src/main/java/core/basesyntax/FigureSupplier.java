@@ -12,25 +12,44 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         switch (random.nextInt(FIGURE_BOUND)) {
             case 1:
-                return new Circle(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_BOUND_NUMBER));
+                return getRandomCircle();
             case 2:
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_BOUND_NUMBER),
-                        random.nextInt(MAX_BOUND_NUMBER),
-                        random.nextInt(MAX_BOUND_NUMBER));
+                return getRandomIsoscelesTrapezoid();
             case 3:
-                return new Rectangle(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_BOUND_NUMBER),
-                        random.nextInt(MAX_BOUND_NUMBER));
+                return getRandomRectangle();
             case 4:
-                return new RightTriangle(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_BOUND_NUMBER),
-                        random.nextInt(MAX_BOUND_NUMBER));
+                return getRandomRightTriangle();
             default:
-                return new Square(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_BOUND_NUMBER));
+                return getRandomSquare();
         }
+    }
+    private Circle getRandomCircle() {
+        return new Circle(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_BOUND_NUMBER));
+    }
+
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_BOUND_NUMBER),
+                random.nextInt(MAX_BOUND_NUMBER),
+                random.nextInt(MAX_BOUND_NUMBER));
+    }
+
+    private Rectangle getRandomRectangle() {
+        return new Rectangle(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_BOUND_NUMBER),
+                random.nextInt(MAX_BOUND_NUMBER));
+    }
+
+    private RightTriangle getRandomRightTriangle() {
+        return new RightTriangle(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_BOUND_NUMBER),
+                random.nextInt(MAX_BOUND_NUMBER));
+    }
+
+    private Square getRandomSquare() {
+        return new Square(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_BOUND_NUMBER));
     }
 
     public Figure getDefaultFigure() {
