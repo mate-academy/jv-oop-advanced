@@ -3,7 +3,7 @@ package core.basesyntax;
 public class Main {
     public static final int ARRAY_LENGTH = 6;
 
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         Figure[] figures = new Figure[ARRAY_LENGTH];
         FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < ARRAY_LENGTH; i++) {

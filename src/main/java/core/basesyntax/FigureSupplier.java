@@ -10,7 +10,7 @@ public class FigureSupplier {
 
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figure getRandomFigure(){
+    public Figure getRandomFigure() {
         int figureIndex = random.nextInt(Color.values().length);
         switch (figureIndex) {
             case 0:
@@ -26,9 +26,10 @@ public class FigureSupplier {
         }
     }
 
-    public Figure getDefaultFigure(){
+    public Figure getDefaultFigure() {
         return new Circle(DEFAULT_VALUE, DEFAULT_COLOR);
     }
+
     public Circle getRandomCircle() {
         return new Circle(random.nextInt(BOUND), colorSupplier.randomColor());
     }
@@ -44,12 +45,14 @@ public class FigureSupplier {
                 colorSupplier.randomColor());
     }
 
-    public Right_triangle getRandomRightTriangle() {
-        return new Right_triangle(random.nextInt(BOUND), random.nextInt(BOUND), colorSupplier.randomColor());
+    public RightTriangle getRandomRightTriangle() {
+        return new RightTriangle(random.nextInt(BOUND),
+                random.nextInt(BOUND),
+                colorSupplier.randomColor());
     }
 
-    public Isosceles_trapezoid getRandomIsoscelesTrapezoid() {
-        return new Isosceles_trapezoid(random.nextInt(BOUND),
+    public IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(random.nextInt(BOUND),
                 random.nextInt(BOUND),
                 random.nextInt(BOUND),
                 colorSupplier.randomColor());
