@@ -19,6 +19,6 @@ public class Circle extends Figure implements AreaCalculator{
     @Override
     public String toString() {
         return super.toString() +  ", area: " + getArea() +
-                "sq.units, radius " + radius + " units";
+                " sq.units, radius " + radius + " units";
     }
 }

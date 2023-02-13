@@ -13,9 +13,9 @@ public class Main {
         figureArray[0] = new Rectangle(colorSupplier.getRandomColor(), random.nextInt(BOUND), random.nextInt(BOUND));
         figureArray[1] = new Circle(colorSupplier.getRandomColor(), random.nextInt(BOUND));
         figureArray[2] = new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(BOUND), random.nextInt(BOUND), random.nextInt(BOUND));
-        figureArray[3] = figureSupplier.getRandomFigure();
-        figureArray[4] = figureSupplier.getRandomFigure();
-        figureArray[5] = figureSupplier.getRandomFigure();
+        figureArray[3] = figureSupplier.getDefaultFigure();
+        figureArray[4] = figureSupplier.getDefaultFigure();
+        figureArray[5] = figureSupplier.getDefaultFigure();
         for (Figure figure:figureArray) {
             System.out.println(figure);
         }

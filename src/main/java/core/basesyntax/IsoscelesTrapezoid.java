@@ -27,7 +27,7 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator{
     @Override
     public String toString() {
         return super.toString() +  ", area: " + getArea() +
-                "sq.units, left side: " + leftSide +
+                " sq.units, left side: " + leftSide +
                 " units, right side: " + rightSide + " units";
     }
 }

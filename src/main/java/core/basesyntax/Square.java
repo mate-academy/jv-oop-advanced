@@ -22,6 +22,6 @@ public class Square extends Figure implements AreaCalculator{
     @Override
     public String toString() {
         return super.toString() + ", area: " + getArea() +
-                "sq.units, side: " + side + " units";
+                " sq.units, side: " + side + " units";
     }
 }
