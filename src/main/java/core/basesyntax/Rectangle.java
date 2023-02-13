@@ -17,21 +17,15 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + Double.toString(getArea())
-                + ", perimeter: " + Double.toString(getPerimeter())
-                + ", height: " + Double.toString(height)
-                + ", width: " + Double.toString(width)
+        System.out.println("Figure: rectangle, area: " + calculateArea()
+                + ", height: " + height
+                + ", width: " + width
                 + ", color: " + color);
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return height * width;
-    }
-
-    @Override
-    public double getPerimeter() {
-        return 2 * (height + width);
     }
 
     public double getHeight() {
@@ -41,11 +35,8 @@ public class Rectangle extends Figure {
     public void setHeight(double height) {
         if (height > 0 && height < MAX_HEIGHT) {
             this.height = height;
-        } else if (height < 0) {
-            throw new RuntimeException("Height may be more than 0!");
         } else {
-            throw new RuntimeException("Height may be less than "
-                    + Double.toString(MAX_HEIGHT) + "!");
+            throw new RuntimeException("Height may be more than 0!");
         }
     }
 
@@ -56,11 +47,8 @@ public class Rectangle extends Figure {
     public void setWidth(double width) {
         if (width > 0 && width < MAX_WIDTH) {
             this.width = width;
-        } else if (width <= 0) {
-            throw new RuntimeException("Width may be more than 0!");
         } else {
-            throw new RuntimeException("Width may be less than "
-                    + Double.toString(MAX_WIDTH) + "!");
+            throw new RuntimeException("Width may be more than 0!");
         }
     }
 }

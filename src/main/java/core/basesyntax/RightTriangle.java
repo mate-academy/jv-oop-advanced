@@ -19,22 +19,16 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: right triangle, area: " + Double.toString(getArea())
-                + ", perimeter: " + Double.toString(getPerimeter())
-                + ", left leg: " + Double.toString(leftLeg)
-                + ", right leg: " + Double.toString(rightLeg)
-                + ", base: " + Double.toString(base)
+        System.out.println("Figure: right triangle, area: " + calculateArea()
+                + ", left leg: " + leftLeg
+                + ", right leg: " + rightLeg
+                + ", base: " + base
                 + ", color: " + color);
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return leftLeg * base / 2;
-    }
-
-    @Override
-    public double getPerimeter() {
-        return leftLeg + rightLeg + base;
     }
 
     public double getLeftLeg() {
@@ -44,11 +38,8 @@ public class RightTriangle extends Figure {
     public void setLeftLeg(double leftLeg) {
         if (leftLeg > 0 && leftLeg < MAX_LEG) {
             this.leftLeg = leftLeg;
-        } else if (leftLeg <= 0) {
-            throw new RuntimeException("Left leg may be more than 0!");
         } else {
-            throw new RuntimeException("Left leg may be less than"
-                    + Double.toString(MAX_LEG) + "!");
+            throw new RuntimeException("Left leg may be more than 0!");
         }
     }
 
@@ -59,11 +50,8 @@ public class RightTriangle extends Figure {
     public void setRightLeg(double rightLeg) {
         if (rightLeg > 0 && rightLeg < MAX_LEG) {
             this.rightLeg = rightLeg;
-        } else if (rightLeg <= 0) {
-            throw new RuntimeException("Right leg may be more than 0!");
         } else {
-            throw new RuntimeException("Right leg may be less than"
-                    + Double.toString(MAX_LEG) + "!");
+            throw new RuntimeException("Right leg may be more than 0!");
         }
     }
 
@@ -74,11 +62,8 @@ public class RightTriangle extends Figure {
     public void setBase(double base) {
         if (base > 0 && base < MAX_BASE) {
             this.base = base;
-        } else if (base < 0) {
-            throw new RuntimeException("Base may be more than 0!");
         } else {
-            throw new RuntimeException("Base may be less than"
-                    + Double.toString(MAX_LEG) + "!");
+            throw new RuntimeException("Base may be more than 0!");
         }
     }
 }

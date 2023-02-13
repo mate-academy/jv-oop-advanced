@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements Drawable {
+public abstract class Figure implements Drawable, AreaCalculator {
     public static final String DEFAULT_COLOR = "white";
     public static final double DEFAULT_FIELD_VALUE = 10;
     protected String color;
@@ -12,12 +12,6 @@ public abstract class Figure implements Drawable {
     public Figure(String color) {
         this.color = color;
     }
-
-    public abstract void draw();
-
-    public abstract double getArea();
-
-    public abstract double getPerimeter();
 
     public String getColor() {
         return color;

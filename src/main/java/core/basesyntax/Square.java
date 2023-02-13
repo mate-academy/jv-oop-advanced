@@ -14,20 +14,14 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: square, area: " + Double.toString(getArea())
-                + ", perimeter: " + Double.toString(getPerimeter())
-                + ", side: " + Double.toString(side)
+        System.out.println("Figure: square, area: " + calculateArea()
+                + ", side: " + side
                 + ", color: " + color);
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return side * side;
-    }
-
-    @Override
-    public double getPerimeter() {
-        return side * 4;
     }
 
     public double getSide() {
@@ -37,11 +31,8 @@ public class Square extends Figure {
     public void setSide(double side) {
         if (side > 0 && side < MAX_SIDE) {
             this.side = side;
-        } else if (side <= 0) {
-            throw new RuntimeException("Side may be more than 0!");
         } else {
-            throw new RuntimeException("Side may be more than "
-                    + Double.toString(MAX_SIDE) + "!");
+            throw new RuntimeException("Side may be more than 0!");
         }
     }
 }

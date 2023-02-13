@@ -14,20 +14,14 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: circle, area: " + Double.toString(getArea())
-                + ", perimeter: " + Double.toString(getPerimeter())
-                + ", radius: " + Double.toString(radius)
+        System.out.println("Figure: circle, area: " + calculateArea()
+                + ", radius: " + radius
                 + ", color: " + color);
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return radius * Math.PI;
-    }
-
-    @Override
-    public double getPerimeter() {
-        return 2 * radius * Math.PI;
     }
 
     public double getRadius() {
@@ -35,13 +29,10 @@ public class Circle extends Figure {
     }
 
     public void setRadius(double radius) {
-        if (radius > 0 && radius < MAX_RADIUS) {
+        if (radius > 0) {
             this.radius = radius;
-        } else if (radius < 0) {
-            throw new RuntimeException("Radius may be more than 0!");
         } else {
-            throw new RuntimeException("Radius may be less than "
-                    + Double.toString(MAX_RADIUS) + "!");
+            throw new RuntimeException("Radius may be more than 0!");
         }
     }
 
