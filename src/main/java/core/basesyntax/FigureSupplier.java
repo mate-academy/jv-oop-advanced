@@ -8,9 +8,9 @@ public class FigureSupplier {
 
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random randomParameter = new Random();
-    private int randomIndex = randomParameter.nextInt(FigureName.values().length);
 
     public Figure getRandomFigure() {
+        int randomIndex = randomParameter.nextInt(FigureName.values().length);
         switch (FigureName.values()[randomIndex]) {
             case SQUARE:
                 return getRandomSquare();
