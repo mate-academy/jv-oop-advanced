@@ -4,8 +4,8 @@ public class Circle extends Figure {
     private int radius;
 
     public Circle(int radius, Color color) {
+        super(color);
         this.radius = radius;
-        super.setColor(color);
     }
 
     @Override
