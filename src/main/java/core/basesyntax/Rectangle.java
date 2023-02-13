@@ -13,7 +13,7 @@ public class Rectangle extends Figure {
     }
 
     public Rectangle() {
-        super(FigureTypeName.RECTANGLE.name());
+        super(FigureType.RECTANGLE.name());
     }
 
     @Override

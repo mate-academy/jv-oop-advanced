@@ -15,7 +15,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     public IsoscelesTrapezoid() {
-        super(FigureTypeName.ISOSCELES_TRAPEZOID.name());
+        super(FigureType.ISOSCELES_TRAPEZOID.name());
     }
 
     @Override

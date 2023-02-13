@@ -11,7 +11,7 @@ public class Square extends Figure {
     }
 
     public Square() {
-        super(FigureTypeName.SQUARE.name());
+        super(FigureType.SQUARE.name());
     }
 
     @Override

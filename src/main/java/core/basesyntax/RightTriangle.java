@@ -13,7 +13,7 @@ public class RightTriangle extends Figure {
     }
 
     public RightTriangle() {
-        super(FigureTypeName.RIGHT_TRIANGLE.name());
+        super(FigureType.RIGHT_TRIANGLE.name());
     }
 
     @Override

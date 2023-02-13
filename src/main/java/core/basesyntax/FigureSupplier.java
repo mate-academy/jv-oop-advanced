@@ -10,25 +10,28 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int randomFigureNumber = random.nextInt(FIGURES_NUMBER);
-        String randomFiguresName = FigureType.values()[randomFigureNumber].name();
+        String randomFigureName = FigureType.values()[randomFigureNumber].name();
         String randomColor = colorSupplier.getRandomColor();
-        if (randomFiguresName.equals(FigureTypeName.SQUARE.name())) {
-            return new Square(random.nextInt(MAXIMUM_UNITS),
-                    randomColor);
-        } else if (randomFiguresName.equals(FigureTypeName.RECTANGLE.name())) {
-            return new Rectangle(random.nextInt(MAXIMUM_UNITS),
-                    random.nextInt(MAXIMUM_UNITS),
-                    randomColor);
-        } else if (randomFiguresName.equals(FigureTypeName.RIGHT_TRIANGLE.name())) {
-            return new RightTriangle(random.nextInt(MAXIMUM_UNITS),
-                    random.nextInt(MAXIMUM_UNITS),
-                    randomColor);
-        } else if (randomFiguresName.equals(FigureTypeName.CIRCLE.name())) {
-            return new Circle(random.nextInt(MAXIMUM_UNITS), randomColor);
-        } else {
-            return new IsoscelesTrapezoid(random.nextInt(MAXIMUM_UNITS),
-                    random.nextInt(MAXIMUM_UNITS),
-                    random.nextInt(MAXIMUM_UNITS), randomColor);
+        switch (FigureType.valueOf(randomFigureName)) {
+            case SQUARE:
+                return new Square(random.nextInt(MAXIMUM_UNITS),
+                        randomColor);
+            case RECTANGLE:
+                return new Rectangle(random.nextInt(MAXIMUM_UNITS),
+                        random.nextInt(MAXIMUM_UNITS),
+                        randomColor);
+            case RIGHT_TRIANGLE:
+                return new RightTriangle(random.nextInt(MAXIMUM_UNITS),
+                        random.nextInt(MAXIMUM_UNITS),
+                        randomColor);
+            case CIRCLE:
+                return new Circle(random.nextInt(MAXIMUM_UNITS), randomColor);
+            case ISOSCELES_TRAPEZOID:
+                return new IsoscelesTrapezoid(random.nextInt(MAXIMUM_UNITS),
+                        random.nextInt(MAXIMUM_UNITS),
+                        random.nextInt(MAXIMUM_UNITS), randomColor);
+            default:
+                return getDefaultFigure();
         }
     }
 
