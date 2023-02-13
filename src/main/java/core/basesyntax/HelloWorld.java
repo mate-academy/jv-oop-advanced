@@ -2,6 +2,7 @@ package core.basesyntax;
 
 public class HelloWorld {
     private static final int FIGURES_COUNT = 6;
+    
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figures = new Figure[FIGURES_COUNT];
