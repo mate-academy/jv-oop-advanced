@@ -4,13 +4,14 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int NUMBER_BOUNDS = 100;
-    private static final Colors defaultColor = Colors.WHITE;
-    private static final int defaultRadius = 10;
+    private static final Color DEFAULT_COLOR = Color.WHITE;
+    private static final int DEFAULT_RADIUS = 10;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figures nameOfFigure() {
-        return Figures.values()[random.nextInt(Figures.values().length)];
+    public FigureType nameOfFigure() {
+        int figureIndex = random.nextInt(FigureType.values().length);
+        return FigureType.values()[figureIndex];
     }
 
     public Figure getRandomFigure() {
@@ -40,6 +41,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(defaultColor, defaultRadius);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
