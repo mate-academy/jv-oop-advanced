@@ -11,14 +11,13 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int NUMBER_OF_FIGURE = 5;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
     private RandomSupplier randomSupplier = new RandomSupplier();
 
     public Figure getRandomFigure() {
         Figure figure;
-        int figureNumber = random.nextInt(NUMBER_OF_FIGURE);
+        int figureNumber = random.nextInt(FigureName.values().length);
         switch (FigureName.values()[figureNumber]) {
             case CIRCLE:
                 figure = new Circle(colorSupplier.getRandomColor(),
