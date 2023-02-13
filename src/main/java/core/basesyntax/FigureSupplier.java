@@ -24,4 +24,7 @@ public class FigureSupplier {
         }
         return new Figure();
     }
+    public Figure getDefaultFigure(){
+        return new Circle(Color.WHITE.toString(), 10);
+    }
 }

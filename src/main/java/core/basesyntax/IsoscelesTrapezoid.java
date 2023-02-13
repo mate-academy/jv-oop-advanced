@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure{
+public class IsoscelesTrapezoid extends Figure implements AreaCalculator{
     private int leftSide;
     private int rightSide;
     private int height;
@@ -17,5 +17,17 @@ public class IsoscelesTrapezoid extends Figure{
 
     public IsoscelesTrapezoid(String color) {
         super(color);
+    }
+
+    @Override
+    public float getArea() {
+        return (float)((leftSide + rightSide) * 0.5 * height);
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() +  ", area: " + getArea() +
+                "sq.units, left side: " + leftSide +
+                " units, right side: " + rightSide + " units";
     }
 }
