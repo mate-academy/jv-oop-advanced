@@ -6,7 +6,7 @@ public class RightTriangle extends Figure {
     private final TypeOfFigure type = TypeOfFigure.TRIANGLE;
 
     public RightTriangle(Color color, int firstSide, int secondSide) {
-        super(color);
+        super(color, TypeOfFigure.CIRCLE);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
     }
@@ -25,7 +25,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public double calculateArea() {
-        return (firstSide * secondSide) / 2;
+        return (firstSide * secondSide) / 2.0;
     }
 
     @Override

@@ -5,8 +5,7 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int RANDOM_LENGHT = 20;
     private static final int CIRCLE_RADIUS = 10;
-    private final int numberOfTypes = TypeOfFigure.values().length;
-    private final ColorSupplier randomColor = new ColorSupplier();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
     public int getRandomNumber() {
@@ -14,7 +13,8 @@ public class FigureSupplier {
     }
 
     public TypeOfFigure getRandomTypeOfFigure() {
-        return TypeOfFigure.values()[random.nextInt(numberOfTypes)];
+        int randomNum = random.nextInt(TypeOfFigure.values().length);
+        return TypeOfFigure.values()[randomNum];
     }
 
     public Figure getDefaultFigure() {
@@ -22,25 +22,25 @@ public class FigureSupplier {
     }
 
     private Circle getRandomCircle() {
-        return new Circle(randomColor.getRandomColor(), random.nextInt(RANDOM_LENGHT));
+        return new Circle(colorSupplier.getRandomColor(), random.nextInt(RANDOM_LENGHT));
     }
 
     private Square getRandomSquare() {
-        return new Square(randomColor.getRandomColor(), random.nextInt(RANDOM_LENGHT));
+        return new Square(colorSupplier.getRandomColor(), random.nextInt(RANDOM_LENGHT));
     }
 
     private RightTriangle getRandomRightTriangle() {
-        return new RightTriangle(randomColor.getRandomColor(),
+        return new RightTriangle(colorSupplier.getRandomColor(),
                 random.nextInt(RANDOM_LENGHT), random.nextInt(RANDOM_LENGHT));
     }
 
     private Rectangle getRandomRectangle() {
-        return new Rectangle(randomColor.getRandomColor(),
+        return new Rectangle(colorSupplier.getRandomColor(),
                 random.nextInt(RANDOM_LENGHT), random.nextInt(RANDOM_LENGHT));
     }
 
     private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(randomColor.getRandomColor(),
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                 random.nextInt(RANDOM_LENGHT), random.nextInt(RANDOM_LENGHT),
                 random.nextInt(RANDOM_LENGHT));
     }

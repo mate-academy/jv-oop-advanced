@@ -7,7 +7,7 @@ public class IsoscelesTrapezoid extends Figure {
     private final TypeOfFigure type = TypeOfFigure.TRAPEZOID;
 
     public IsoscelesTrapezoid(Color color, int firstSide, int secondSide, int height) {
-        super(color);
+        super(color, TypeOfFigure.CIRCLE);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
         this.height = height;
@@ -31,7 +31,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double calculateArea() {
-        return ((firstSide + secondSide) / 2) * height;
+        return ((firstSide + secondSide) / 2.0) * height;
     }
 
     @Override

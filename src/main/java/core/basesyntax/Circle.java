@@ -2,15 +2,14 @@ package core.basesyntax;
 
 public class Circle extends Figure {
     private final double radius;
-    private final TypeOfFigure type = TypeOfFigure.CIRCLE;
 
     public Circle(Color color, double radius) {
-        super(color);
+        super(color, TypeOfFigure.CIRCLE);
         this.radius = radius;
     }
 
     public TypeOfFigure getType() {
-        return type;
+        return TypeOfFigure.CIRCLE;
     }
 
     public double getRadius() {
@@ -25,8 +24,8 @@ public class Circle extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: " + getType().name()
-                    + ", area: " + calculateArea()
-                    + " sq.units, radius: " + getRadius()
-                    + " units, color: " + getColor());
+                + ", area: " + calculateArea()
+                + " sq.units, radius: " + radius
+                + " units, color: " + getColor());
     }
 }

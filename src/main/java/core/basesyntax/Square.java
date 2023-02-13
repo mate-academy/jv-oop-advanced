@@ -5,7 +5,7 @@ public class Square extends Figure {
     private final TypeOfFigure type = TypeOfFigure.SQUARE;
 
     public Square(Color color, int side) {
-        super(color);
+        super(color, TypeOfFigure.CIRCLE);
         this.side = side;
     }
 

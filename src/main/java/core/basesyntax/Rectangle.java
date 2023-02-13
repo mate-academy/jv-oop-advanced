@@ -6,7 +6,7 @@ public class Rectangle extends Figure {
     private final TypeOfFigure type = TypeOfFigure.RECTANGLE;
 
     public Rectangle(Color color, int firstSide, int secondSide) {
-        super(color);
+        super(color, TypeOfFigure.CIRCLE);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
     }
