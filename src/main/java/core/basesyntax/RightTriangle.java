@@ -3,7 +3,7 @@ package core.basesyntax;
 public class RightTriangle extends Figure {
     private double leftLeg;
     private double rightLeg;
-    private  double base;
+    private double base;
 
     public RightTriangle() {
     }

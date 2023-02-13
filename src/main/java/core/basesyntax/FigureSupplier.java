@@ -20,14 +20,15 @@ public class FigureSupplier {
                 return new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(40) + 10,
                         random.nextInt(40) + 10, random.nextInt(40) + 10);
             case 4:
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(40) + 10,
-                        random.nextInt(40) + 10, random.nextInt(40) + 10);
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        random.nextInt(40) + 10, random.nextInt(40) + 10,
+                        random.nextInt(40) + 10);
             default:
                 throw new RuntimeException("Figure type mismatch!");
         }
     }
 
-    public  Figure getDefaultFigure() {
+    public Figure getDefaultFigure() {
         return new Circle("white", 10);
     }
 }

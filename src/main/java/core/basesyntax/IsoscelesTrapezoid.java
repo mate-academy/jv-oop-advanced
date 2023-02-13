@@ -3,10 +3,8 @@ package core.basesyntax;
 public class IsoscelesTrapezoid extends Figure {
 
     private double upperBase;
-
-    private  double lowerBase;
-
-    private  double height;
+    private double lowerBase;
+    private double height;
 
     public IsoscelesTrapezoid() {
     }
