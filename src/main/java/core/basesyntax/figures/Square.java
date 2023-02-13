@@ -10,11 +10,11 @@ public class Square extends Figure {
 
     @Override
     public double calculateArea() {
-        return side * 2;
+        return side * side;
     }
 
     @Override
-    public String drawFigure() {
+    public String getInfo() {
         return "Figure: square, area: " + calculateArea()
                 + " sq.units, side: " + side
                 + " units, color: " + getColor();

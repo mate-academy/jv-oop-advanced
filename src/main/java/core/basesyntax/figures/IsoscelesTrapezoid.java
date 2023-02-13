@@ -15,11 +15,11 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public double calculateArea() {
         int sumOfBase = firstBase + secondBase;
-        return (sumOfBase / 2.0) * 2;
+        return (sumOfBase / 2.0) * height;
     }
 
     @Override
-    public String drawFigure() {
+    public String getInfo() {
         return "Figure: isosceles trapezoid, area: " + calculateArea()
                 + " sq.units, first base: " + firstBase
                 + " units, second base: " + secondBase

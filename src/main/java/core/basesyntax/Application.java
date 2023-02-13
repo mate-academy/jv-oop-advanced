@@ -13,7 +13,7 @@ public class Application {
             } else {
                 figures[i] = supplier.getDefaultFigure();
             }
-            System.out.println(figures[i].drawFigure());
+            System.out.println(figures[i].getInfo());
         }
     }
 }
