@@ -8,7 +8,6 @@ public class FigureSupplier {
     private final ColorSupplier randomColor = new ColorSupplier();
     private final SecureRandom random = new SecureRandom();
 
-
     public TypeFigure getRandomTypeFigure() {
         int randomFigure = random.nextInt(TypeFigure.values().length);
         return TypeFigure.values()[randomFigure];
