@@ -29,16 +29,20 @@ public class FigureSupplier {
                 return new Square(color, random.nextInt(MAX_SIDE));
 
             case CIRCLE:
-                return new Circle(color, MAX_RADIUS);
+                return new Circle(color, random.nextInt(MAX_RADIUS));
 
             case ISOSCELES_TRAPEZOID:
-                return new IsoscelesTrapezoid(color, MAX_UPPER_BASE, MAX_LOWER_BASE, MAX_HEIGHT);
+                return new IsoscelesTrapezoid(color, random.nextInt(MAX_UPPER_BASE),
+                        random.nextInt(MAX_LOWER_BASE),
+                        random.nextInt(MAX_HEIGHT));
 
             case RECTANGLE:
-                return new Rectangle(color, MAX_FIRST_SIDE, MAX_SECOND_SIDE);
+                return new Rectangle(color, random.nextInt(MAX_FIRST_SIDE),
+                        random.nextInt(MAX_SECOND_SIDE));
 
             case RIGHT_TRIANGLE:
-                return new RightTriangle(color, MAX_FIRST_LEG, MAX_SECOND_LEG);
+                return new RightTriangle(color, random.nextInt(MAX_FIRST_LEG),
+                        random.nextInt(MAX_SECOND_LEG));
 
             default:
                 return getDefaultFigure();
