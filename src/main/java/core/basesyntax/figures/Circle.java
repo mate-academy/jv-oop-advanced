@@ -8,19 +8,15 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
-    public int getRadius() {
-        return radius;
-    }
-
     @Override
     public double calculateArea() {
-        return (int) Math.PI * radius * radius;
+        return Math.PI * radius * radius;
     }
 
     @Override
     public String drawFigure() {
         return "Figure: circle, area: " + calculateArea()
-                + " sq.units, radius: " + getRadius()
+                + " sq.units, radius: " + radius
                 + " units, color: " + getColor();
     }
 }

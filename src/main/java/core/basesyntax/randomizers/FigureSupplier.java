@@ -12,13 +12,12 @@ public class FigureSupplier {
     private static final String DEFAULT_COLOR = "white";
     private static final int DEFAULT_RADIUS = 10;
     private static final int BOUND = 50;
+    private static final int FIGURES_COUNT = 5;
     private final SecureRandom random = new SecureRandom();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int i = random.nextInt(5);
-
-        switch (i) {
+        switch (random.nextInt(FIGURES_COUNT)) {
             case 0:
                 return new Circle(colorSupplier.getRandomColor(),
                         random.nextInt(BOUND));

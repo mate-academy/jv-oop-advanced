@@ -12,30 +12,18 @@ public class IsoscelesTrapezoid extends Figure {
         this.secondBase = secondBase;
     }
 
-    public int getFirstBase() {
-        return firstBase;
-    }
-
-    public int getSecondBase() {
-        return secondBase;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
     @Override
     public double calculateArea() {
         int sumOfBase = firstBase + secondBase;
-        return (sumOfBase / 2) * 2;
+        return (sumOfBase / 2.0) * 2;
     }
 
     @Override
     public String drawFigure() {
         return "Figure: isosceles trapezoid, area: " + calculateArea()
-                + " sq.units, first base: " + getFirstBase()
-                + " units, second base: " + getSecondBase()
-                + " units, height: " + getHeight()
+                + " sq.units, first base: " + firstBase
+                + " units, second base: " + secondBase
+                + " units, height: " + height
                 + " units, color: " + getColor();
     }
 }

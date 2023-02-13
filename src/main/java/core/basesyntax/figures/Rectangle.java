@@ -10,14 +10,6 @@ public class Rectangle extends Figure {
         this.width = width;
     }
 
-    public int getLength() {
-        return length;
-    }
-
-    public int getWidth() {
-        return width;
-    }
-
     @Override
     public double calculateArea() {
         return length * width;
@@ -26,8 +18,8 @@ public class Rectangle extends Figure {
     @Override
     public String drawFigure() {
         return "Figure: rectangle, area: " + calculateArea()
-                + " sq.units, length: " + getLength()
-                + " units, width: " + getWidth()
+                + " sq.units, length: " + length
+                + " units, width: " + width
                 + "units, color: " + getColor();
     }
 }

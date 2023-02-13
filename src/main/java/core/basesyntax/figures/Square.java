@@ -8,10 +8,6 @@ public class Square extends Figure {
         this.side = side;
     }
 
-    public int getSide() {
-        return side;
-    }
-
     @Override
     public double calculateArea() {
         return side * 2;
@@ -20,7 +16,7 @@ public class Square extends Figure {
     @Override
     public String drawFigure() {
         return "Figure: square, area: " + calculateArea()
-                + " sq.units, side: " + getSide()
+                + " sq.units, side: " + side
                 + " units, color: " + getColor();
     }
 }
