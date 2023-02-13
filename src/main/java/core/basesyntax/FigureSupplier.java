@@ -11,6 +11,7 @@ public class FigureSupplier {
     private static final double MAX_VALUE = 50;
     private static final double MIN_VALUE = 1;
     private static final int DECIMAL_FORMAT = 100;
+    private static final double DEFAULT_CIRCLE_RADIUS = 10;
 
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
@@ -33,7 +34,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE, 10);
+        return new Circle(Color.WHITE, DEFAULT_CIRCLE_RADIUS);
     }
 
     private Square randomSquare() {

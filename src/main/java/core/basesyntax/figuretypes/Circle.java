@@ -12,7 +12,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         double area = Math.PI * Math.pow(radius, 2);
         return Math.round(area * DECIMAL_FORMAT) / DECIMAL_FORMAT;
     }
@@ -20,7 +20,7 @@ public class Circle extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: circle, "
-                + "area: " + getArea() + " units, "
+                + "area: " + calculateArea() + " units, "
                 + "radius: " + radius + " units, "
                 + "color: " + color);
     }

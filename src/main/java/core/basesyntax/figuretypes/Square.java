@@ -12,7 +12,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         double area = Math.pow(side, 2);
         return Math.round(area * DECIMAL_FORMAT) / DECIMAL_FORMAT;
     }
@@ -20,7 +20,7 @@ public class Square extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: right triangle, "
-                + "area: " + getArea() + " units, "
+                + "area: " + calculateArea() + " units, "
                 + "side: " + side + " units, "
                 + "color: " + color);
     }

@@ -14,7 +14,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         double area = 0.5 * firstLeg * secondLeg;
         return Math.round(area * DECIMAL_FORMAT) / DECIMAL_FORMAT;
     }
@@ -22,7 +22,7 @@ public class RightTriangle extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: right triangle, "
-                + "area: " + getArea() + " units, "
+                + "area: " + calculateArea() + " units, "
                 + "firstLeg: " + firstLeg + " units, "
                 + "secondLeg: " + secondLeg + " units, "
                 + "color: " + color);
