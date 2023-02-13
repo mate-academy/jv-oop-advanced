@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import core.basesyntax.figures.Figure;
-
 public class Main {
     public static final int AMOUNT_OF_FIGURES = 6;
 

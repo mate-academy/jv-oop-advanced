@@ -1,7 +1,4 @@
-package core.basesyntax.figures;
-
-import core.basesyntax.Color;
-import core.basesyntax.figures.Figure;
+package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
     private int firstSide;
@@ -22,7 +19,8 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Name: " + this.name + ", Color: " + this.color.name() + ", First side: " + this.firstSide + ", Second Side: " + secondSide
+        System.out.println("Name: " + this.name + ", Color: " + this.color.name()
+                + ", First side: " + this.firstSide + ", Second Side: " + secondSide
                 + ", Height: " + this.height + ", Area: " + this.getArea() + ".");
     }
 }

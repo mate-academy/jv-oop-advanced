@@ -1,13 +1,9 @@
-package core.basesyntax.figures;
-
-import core.basesyntax.Color;
-import core.basesyntax.*;
+package core.basesyntax;
 
 public abstract class Figure implements Drawable, Areable {
-    String name;
-    Color color;
     public static final int FIGURES_NUMBER = 5;
-
+    protected String name;
+    protected Color color;
 
     Figure(String name, Color color) {
         this.name = name;
@@ -15,5 +11,6 @@ public abstract class Figure implements Drawable, Areable {
     }
 
     public abstract double getArea();
+
     public abstract void draw();
 }

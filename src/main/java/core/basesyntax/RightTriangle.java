@@ -1,6 +1,4 @@
-package core.basesyntax.figures;
-
-import core.basesyntax.Color;
+package core.basesyntax;
 
 public class RightTriangle extends Figure {
     private int firstSide;
@@ -19,7 +17,8 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Name: " + this.name + ", Color: " + this.color.name() + ", firstSide: " + this.firstSide + ", secondSide: " + this.secondSide
+        System.out.println("Name: " + this.name + ", Color: " + this.color.name() + ", firstSide: "
+                + this.firstSide + ", secondSide: " + this.secondSide
                 + ", Area: " + this.getArea() + ".");
     }
 }

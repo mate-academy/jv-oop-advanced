@@ -1,7 +1,4 @@
-package core.basesyntax.figures;
-
-import core.basesyntax.Color;
-import core.basesyntax.figures.Figure;
+package core.basesyntax;
 
 public class Rectangle extends Figure {
     private double firstSide;
@@ -20,7 +17,8 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Name: " + this.name + ", Color: " + this.color.name() + ", First side: " + this.firstSide + ", Second Side: " + secondSide
+        System.out.println("Name: " + this.name + ", Color: " + this.color.name()
+                + ", First side: " + this.firstSide + ", Second Side: " + secondSide
                 + ", Area: " + this.getArea() + ".");
     }
 }
