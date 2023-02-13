@@ -1,6 +1,8 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
+    public static final double MAX_HEIGHT = 100;
+    public static final double MAX_WIDTH = 100;
     private double height;
     private double width;
 
@@ -19,8 +21,7 @@ public class Rectangle extends Figure {
                 + ", perimeter: " + Double.toString(getPerimeter())
                 + ", height: " + Double.toString(height)
                 + ", width: " + Double.toString(width)
-                + ", color: " + color
-        );
+                + ", color: " + color);
     }
 
     @Override
@@ -38,7 +39,14 @@ public class Rectangle extends Figure {
     }
 
     public void setHeight(double height) {
-        this.height = height;
+        if (height > 0 && height < MAX_HEIGHT) {
+            this.height = height;
+        } else if (height < 0) {
+            throw new RuntimeException("Height may be more than 0!");
+        } else {
+            throw new RuntimeException("Height may be less than "
+                    + Double.toString(MAX_HEIGHT) + "!");
+        }
     }
 
     public double getWidth() {
@@ -46,6 +54,13 @@ public class Rectangle extends Figure {
     }
 
     public void setWidth(double width) {
-        this.width = width;
+        if (width > 0 && width < MAX_WIDTH) {
+            this.width = width;
+        } else if (width <= 0) {
+            throw new RuntimeException("Width may be more than 0!");
+        } else {
+            throw new RuntimeException("Width may be less than "
+                    + Double.toString(MAX_WIDTH) + "!");
+        }
     }
 }

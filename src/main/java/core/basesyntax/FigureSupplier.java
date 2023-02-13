@@ -10,25 +10,31 @@ public class FigureSupplier {
         int figureType = random.nextInt(5);
         switch (figureType) {
             case 0:
-                return new Circle(colorSupplier.getRandomColor(), random.nextInt(40) + 10);
+                return new Circle(colorSupplier.getRandomColor(),
+                        random.nextDouble() * Circle.MAX_RADIUS);
             case 1:
-                return new Square(colorSupplier.getRandomColor(), random.nextInt(40) + 10);
+                return new Square(colorSupplier.getRandomColor(),
+                        random.nextDouble() * Square.MAX_SIDE);
             case 2:
                 return new Rectangle(colorSupplier.getRandomColor(),
-                        random.nextInt(40) + 10, random.nextInt(40) + 10);
+                        random.nextDouble() * Rectangle.MAX_WIDTH,
+                        random.nextDouble() * Rectangle.MAX_WIDTH);
             case 3:
-                return new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(40) + 10,
-                        random.nextInt(40) + 10, random.nextInt(40) + 10);
+                return new RightTriangle(colorSupplier.getRandomColor(),
+                        random.nextDouble() * RightTriangle.MAX_LEG,
+                        random.nextDouble() * RightTriangle.MAX_LEG,
+                        random.nextDouble() * RightTriangle.MAX_BASE);
             case 4:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        random.nextInt(40) + 10, random.nextInt(40) + 10,
-                        random.nextInt(40) + 10);
+                        random.nextDouble() * IsoscelesTrapezoid.MAX_BASE,
+                        random.nextDouble() * IsoscelesTrapezoid.MAX_BASE,
+                        random.nextDouble() * IsoscelesTrapezoid.MAX_HEIGHT);
             default:
                 throw new RuntimeException("Figure type mismatch!");
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", 10);
+        return new Circle(Figure.DEFAULT_COLOR, Figure.DEFAULT_FIELD_VALUE);
     }
 }

@@ -1,6 +1,8 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public abstract class Figure implements Drawable {
+    public static final String DEFAULT_COLOR = "white";
+    public static final double DEFAULT_FIELD_VALUE = 10;
     protected String color;
 
     public Figure() {

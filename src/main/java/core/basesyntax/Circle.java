@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
+    public static final double MAX_RADIUS = 100;
     private double radius;
 
     public Circle() {
@@ -16,8 +17,7 @@ public class Circle extends Figure {
         System.out.println("Figure: circle, area: " + Double.toString(getArea())
                 + ", perimeter: " + Double.toString(getPerimeter())
                 + ", radius: " + Double.toString(radius)
-                + ", color: " + color
-        );
+                + ", color: " + color);
     }
 
     @Override
@@ -35,10 +35,13 @@ public class Circle extends Figure {
     }
 
     public void setRadius(double radius) {
-        if (radius > 0) {
+        if (radius > 0 && radius < MAX_RADIUS) {
             this.radius = radius;
-        } else {
+        } else if (radius < 0) {
             throw new RuntimeException("Radius may be more than 0!");
+        } else {
+            throw new RuntimeException("Radius may be less than "
+                    + Double.toString(MAX_RADIUS) + "!");
         }
     }
 

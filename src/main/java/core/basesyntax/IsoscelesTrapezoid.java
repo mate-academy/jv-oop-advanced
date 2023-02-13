@@ -1,7 +1,8 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-
+    public static final double MAX_BASE = 500;
+    public static final double MAX_HEIGHT = 200;
     private double upperBase;
     private double lowerBase;
     private double height;
@@ -23,8 +24,7 @@ public class IsoscelesTrapezoid extends Figure {
                 + ", upper base: " + Double.toString(upperBase)
                 + ", lower base: " + Double.toString(lowerBase)
                 + ", height: " + Double.toString(height)
-                + ", color: " + color
-        );
+                + ", color: " + color);
     }
 
     @Override
@@ -43,10 +43,13 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     public void setUpperBase(double upperBase) {
-        if (upperBase > 0) {
+        if (upperBase > 0 && upperBase < MAX_BASE) {
             this.upperBase = upperBase;
-        } else {
+        } else if (upperBase <= 0) {
             throw new RuntimeException("Upper base may be more than 0!");
+        } else {
+            throw new RuntimeException("Upper base may be less than "
+                    + Double.toString(MAX_BASE) + "!");
         }
     }
 
@@ -57,8 +60,11 @@ public class IsoscelesTrapezoid extends Figure {
     public void setLowerBase(double lowerBase) {
         if (lowerBase > 0) {
             this.lowerBase = lowerBase;
-        } else {
+        } else if (lowerBase <= 0) {
             throw new RuntimeException("Lower base may be more than 0!");
+        } else {
+            throw new RuntimeException("Lower base may be less than "
+                    + Double.toString(MAX_BASE) + "!");
         }
     }
 
@@ -69,8 +75,11 @@ public class IsoscelesTrapezoid extends Figure {
     public void setHeight(double height) {
         if (height > 0) {
             this.height = height;
-        } else {
+        } else if (height <= 0) {
             throw new RuntimeException("Height may be more than 0!");
+        } else {
+            throw new RuntimeException("Height may be less than "
+                    + Double.toString(MAX_HEIGHT) + "!");
         }
     }
 }

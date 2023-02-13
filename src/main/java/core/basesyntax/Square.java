@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public class Square extends Figure {
+    public static final double MAX_SIDE = 100;
     private double side;
 
     public Square() {
@@ -16,8 +17,7 @@ public class Square extends Figure {
         System.out.println("Figure: square, area: " + Double.toString(getArea())
                 + ", perimeter: " + Double.toString(getPerimeter())
                 + ", side: " + Double.toString(side)
-                + ", color: " + color
-        );
+                + ", color: " + color);
     }
 
     @Override
@@ -35,10 +35,13 @@ public class Square extends Figure {
     }
 
     public void setSide(double side) {
-        if (side > 0) {
+        if (side > 0 && side < MAX_SIDE) {
             this.side = side;
-        } else {
+        } else if (side <= 0) {
             throw new RuntimeException("Side may be more than 0!");
+        } else {
+            throw new RuntimeException("Side may be more than "
+                    + Double.toString(MAX_SIDE) + "!");
         }
     }
 }
