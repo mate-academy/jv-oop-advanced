@@ -25,18 +25,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        switch (random.nextInt(NUMBER_OF_FIGURES)) {
-            default:
-                return getCircle(FigureType.DEFAULT);
-            case 0:
-                return getRectangle(FigureType.DEFAULT);
-            case 1:
-                return getRightTriangle(FigureType.DEFAULT);
-            case 2:
-                return getSquare(FigureType.DEFAULT);
-            case 3:
-                return getIsoscelesTrapezoid(FigureType.DEFAULT);
-        }
+        return getCircle(FigureType.DEFAULT);
     }
 
     private int getRandomProperySize() {
