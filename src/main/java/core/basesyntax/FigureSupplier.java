@@ -6,7 +6,7 @@ public class FigureSupplier {
     private static final String DEFAULT_COLOR = Color.WHITE.name();
     private static final double DEFAULT_RADIUS = 10;
     private ColorSupplier color = new ColorSupplier();
-    private RandomDoubleGenerator randomDouble = new RandomDoubleGenerator();
+    private RandomDoubleGenerator randomDoubleGenerator = new RandomDoubleGenerator();
     private Random random = new Random();
 
     public Circle getDefaultFigure() {
@@ -32,25 +32,26 @@ public class FigureSupplier {
     }
 
     private Circle getRandomCircle() {
-        return new Circle(color.getRandomColor(), randomDouble.getRandomDouble());
+        return new Circle(color.getRandomColor(), randomDoubleGenerator.getRandomDouble());
     }
 
     private Square getRandomSquare() {
-        return new Square(color.getRandomColor(), randomDouble.getRandomDouble());
+        return new Square(color.getRandomColor(), randomDoubleGenerator.getRandomDouble());
     }
 
     private Rectangle getRandomRectangle() {
-        return new Rectangle(color.getRandomColor(), randomDouble.getRandomDouble(),
-                randomDouble.getRandomDouble());
+        return new Rectangle(color.getRandomColor(), randomDoubleGenerator.getRandomDouble(),
+                randomDoubleGenerator.getRandomDouble());
     }
 
     private RightTriangle getRandomRightTriangle() {
-        return new RightTriangle(color.getRandomColor(), randomDouble.getRandomDouble(),
-                randomDouble.getRandomDouble());
+        return new RightTriangle(color.getRandomColor(), randomDoubleGenerator.getRandomDouble(),
+                randomDoubleGenerator.getRandomDouble());
     }
 
     private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(color.getRandomColor(), randomDouble.getRandomDouble(),
-                randomDouble.getRandomDouble(), randomDouble.getRandomDouble());
+        return new IsoscelesTrapezoid(color.getRandomColor(),
+                randomDoubleGenerator.getRandomDouble(), randomDoubleGenerator.getRandomDouble(),
+                randomDoubleGenerator.getRandomDouble());
     }
 }

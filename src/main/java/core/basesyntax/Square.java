@@ -8,19 +8,15 @@ public class Square extends Figure {
         this.side = side;
     }
 
-    public double getSide() {
-        return side;
-    }
-
     @Override
     public double getArea() {
-        return Math.pow(getSide(), 2);
+        return Math.pow(side, 2);
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: square, area: " + getArea()
-                + ", side: " + getSide()
+                + ", side: " + side
                 + ", color: " + getColor());
 
     }

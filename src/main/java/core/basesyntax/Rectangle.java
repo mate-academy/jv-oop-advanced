@@ -10,24 +10,16 @@ public class Rectangle extends Figure {
         this.width = width;
     }
 
-    public double getLength() {
-        return length;
-    }
-
-    public double getWidth() {
-        return width;
-    }
-
     @Override
     public double getArea() {
-        return getLength() * getWidth();
+        return length * width;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: rectangle, area: " + getArea()
-                + ", length: " + getLength()
-                + ", width: " + getWidth()
+                + ", length: " + length
+                + ", width: " + width
                 + ", color: " + getColor());
     }
 }

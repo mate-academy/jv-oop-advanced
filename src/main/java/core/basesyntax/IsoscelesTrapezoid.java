@@ -12,29 +12,17 @@ public class IsoscelesTrapezoid extends Figure {
         this.height = height;
     }
 
-    public double getShortBase() {
-        return shortBase;
-    }
-
-    public double getLongBase() {
-        return longBase;
-    }
-
-    public double getHeight() {
-        return height;
-    }
-
     @Override
     public double getArea() {
-        return ((getShortBase() + getLongBase()) / 2) * getHeight();
+        return ((shortBase + longBase) / 2) * height;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: isosceles trapezoid, area: " + getArea()
-                + ", short base: " + getShortBase()
-                + ", long base: " + getLongBase()
-                + ", height: " + getHeight()
+                + ", short base: " + shortBase
+                + ", long base: " + longBase
+                + ", height: " + height
                 + ", color: " + getColor());
     }
 }
