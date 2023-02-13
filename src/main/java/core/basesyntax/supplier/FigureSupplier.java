@@ -28,11 +28,13 @@ public class FigureSupplier {
                 return getRandomRectangle();
             case 3:
                 return getRandomRightTriangle();
-            case 4:
-                return getRandomSquare();
             default:
-                return getDefaultFigure();
+                return getRandomSquare();
         }
+    }
+
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
     private int getRandomSize() {
@@ -60,7 +62,4 @@ public class FigureSupplier {
         return new Square(colorSupplier.getRandomColor(), getRandomSize());
     }
 
-    public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
-    }
 }
