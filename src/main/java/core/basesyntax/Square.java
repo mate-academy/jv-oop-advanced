@@ -1,9 +1,11 @@
 package core.basesyntax;
 
-public class Square extends Figure implements AreaCalculator{
+public class Square extends Figure implements AreaCalculator {
     private int side;
 
-    public Square() {}
+    public Square() {
+
+    }
 
     public Square(String color, int side) {
         this.side = side;
@@ -21,7 +23,7 @@ public class Square extends Figure implements AreaCalculator{
 
     @Override
     public String toString() {
-        return super.toString() + ", area: " + getArea() +
-                " sq.units, side: " + side + " units";
+        return super.toString() + ", area: " + getArea()
+                + " sq.units, side: " + side + " units";
     }
 }
