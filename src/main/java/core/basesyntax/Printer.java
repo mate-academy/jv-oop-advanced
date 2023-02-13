@@ -1,5 +1,5 @@
 package core.basesyntax;
 
 public interface Printer {
-    void printFigure();
+    void printer();
 }
