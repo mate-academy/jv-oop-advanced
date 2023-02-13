@@ -1,15 +1,18 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private final int firstSide;
-    private final int secondSide;
-    private final int height;
+    public static final double MAX_HEIGHT = 10;
+    public static final double MAX_UPPER_SIDE = 10;
+    public static final double MAX_LOWER_SIDE = 10;
+    private final double height;
+    private final double upperSide;
+    private final double lowerSide;
     private final TypeFigure name = TypeFigure.TRAPEZOID;
 
-    public IsoscelesTrapezoid(Color color, int firstSide, int secondSide, int height) {
+    public IsoscelesTrapezoid(Color color, double upperSide, double lowerSide, double height) {
         super(color);
-        this.firstSide = firstSide;
-        this.secondSide = secondSide;
+        this.upperSide = upperSide;
+        this.lowerSide = lowerSide;
         this.height = height;
     }
 
@@ -17,21 +20,21 @@ public class IsoscelesTrapezoid extends Figure {
         return name;
     }
 
-    public int getFirstSide() {
-        return firstSide;
+    public double getFirstSide() {
+        return upperSide;
     }
 
-    public int getSecondSide() {
-        return secondSide;
+    public double getSecondSide() {
+        return lowerSide;
     }
 
-    public int getHeight() {
+    public double getHeight() {
         return height;
     }
 
     @Override
     public double calculateArea() {
-        return ((firstSide + secondSide) / 2) * height;
+        return ((upperSide + lowerSide) / 2) * height;
     }
 
     @Override

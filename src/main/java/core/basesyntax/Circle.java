@@ -1,15 +1,17 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private final int radius;
+    public static final double MAX_RADIUS = 10;
+
+    private final double radius;
     private final TypeFigure name = TypeFigure.CIRCLE;
 
-    public Circle(Color color, int radius) {
+    public Circle(Color color, double radius) {
         super(color);
         this.radius = radius;
     }
 
-    public int getRadius() {
+    public double getRadius() {
         return radius;
     }
 
@@ -19,7 +21,7 @@ public class Circle extends Figure {
 
     @Override
     public double calculateArea() {
-        return (int) Math.PI * radius * radius;
+        return Math.PI * radius * radius;
     }
 
     public void draw() {

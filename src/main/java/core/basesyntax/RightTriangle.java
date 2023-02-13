@@ -1,11 +1,13 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private final int firstLeg;
-    private final int secondLeg;
+    public static final double MAX_FIRST_LEG = 10;
+    public static final double MAX_SECOND_LEG = 10;
+    private final double firstLeg;
+    private final double secondLeg;
     private final TypeFigure name = TypeFigure.TRIANGLE;
 
-    public RightTriangle(Color color, int firstLeg, int secondLeg) {
+    public RightTriangle(Color color, double firstLeg, double secondLeg) {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
@@ -15,11 +17,11 @@ public class RightTriangle extends Figure {
         return name;
     }
 
-    public int getSecondLeg() {
+    public double getSecondLeg() {
         return secondLeg;
     }
 
-    public int getFirstLeg() {
+    public double getFirstLeg() {
         return firstLeg;
     }
 

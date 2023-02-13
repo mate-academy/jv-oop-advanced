@@ -1,10 +1,11 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    private final int side;
+    public static final double MAX_SIDE = 10;
+    private final double side;
     private final TypeFigure name = TypeFigure.SQUARE;
 
-    public Square(Color color, int side) {
+    public Square(Color color, double side) {
         super(color);
         this.side = side;
     }
@@ -13,7 +14,7 @@ public class Square extends Figure {
         return name;
     }
 
-    public int getSide() {
+    public double getSide() {
         return side;
     }
 
