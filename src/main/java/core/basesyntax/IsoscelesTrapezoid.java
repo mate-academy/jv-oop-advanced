@@ -4,10 +4,10 @@ public class IsoscelesTrapezoid extends Figure {
     private final int firstSide;
     private final int secondSide;
     private final int height;
-    private final TypeOfFigure type = TypeOfFigure.TRAPEZOID;
 
-    public IsoscelesTrapezoid(Color color, int firstSide, int secondSide, int height) {
-        super(color, TypeOfFigure.CIRCLE);
+    public IsoscelesTrapezoid(Color color, TypeOfFigure typeOfFigure,
+                              int firstSide, int secondSide, int height) {
+        super(color, typeOfFigure);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
         this.height = height;
@@ -26,7 +26,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     public TypeOfFigure getType() {
-        return type;
+        return getTypeOfFigure();
     }
 
     @Override
@@ -36,7 +36,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getType().name()
+        System.out.println("Figure: " + getType()
                 + ", area: " + calculateArea()
                 + " sq.units, first side: " + getFirstSide()
                 + " units, second side: " + getSecondSide()

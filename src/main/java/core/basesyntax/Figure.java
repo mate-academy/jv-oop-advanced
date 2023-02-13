@@ -5,7 +5,16 @@ public abstract class Figure implements AreaCalculator, Drawable {
     private TypeOfFigure typeOfFigure;
 
     public Figure(Color color, TypeOfFigure typeOfFigure) {
-        this.setColor(color);
+        this.color = color;
+        this.typeOfFigure = typeOfFigure;
+    }
+
+    public TypeOfFigure getTypeOfFigure() {
+        return typeOfFigure;
+    }
+
+    public void setTypeOfFigure(TypeOfFigure typeOfFigure) {
+        this.typeOfFigure = typeOfFigure;
     }
 
     public Color getColor() {

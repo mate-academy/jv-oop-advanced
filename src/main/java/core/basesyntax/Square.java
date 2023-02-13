@@ -2,10 +2,9 @@ package core.basesyntax;
 
 public class Square extends Figure {
     private final int side;
-    private final TypeOfFigure type = TypeOfFigure.SQUARE;
 
-    public Square(Color color, int side) {
-        super(color, TypeOfFigure.CIRCLE);
+    public Square(Color color, TypeOfFigure typeOfFigure, int side) {
+        super(color, typeOfFigure);
         this.side = side;
     }
 
@@ -14,7 +13,7 @@ public class Square extends Figure {
     }
 
     public TypeOfFigure getType() {
-        return type;
+        return getTypeOfFigure();
     }
 
     @Override
@@ -24,7 +23,7 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Firgure: " + getType().name()
+        System.out.println("Firgure: " + getType()
                 + ", area: " + calculateArea()
                 + " sq.units, side: " + getSide()
                 + " units, color: " + getColor());
