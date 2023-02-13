@@ -29,7 +29,7 @@ public class FigureSupplier {
             case RECTANGLE:
                 Rectangle rectangle = new Rectangle();
                 rectangle.setColor(randomColor.getRandomColor());
-                rectangle.setFirstSide(random.nextInt(MAX_VALUE));
+                rectangle.setSide(random.nextInt(MAX_VALUE));
                 rectangle.setSecondSide(random.nextInt(MAX_VALUE));
                 return rectangle;
             case RIGHTTRIANGLE:

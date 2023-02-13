@@ -1,28 +1,17 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements AreaCalculator {
-    private double firstSide;
+public class Rectangle extends Square {
     private double secondSide;
 
     public Rectangle() {
         super();
         setName(FigureType.RECTANGLE);
-        this.firstSide = 1;
         this.secondSide = 1;
     }
 
     public Rectangle(FigureType name, String color, double firstSide, double secondSide) {
-        super(name, color);
-        setFirstSide(firstSide);
+        super(name, color, firstSide);
         setSecondSide(secondSide);
-    }
-
-    public double getFirstSide() {
-        return firstSide;
-    }
-
-    public void setFirstSide(double firstSide) {
-        this.firstSide = (firstSide >= 0) ? firstSide : 0;
     }
 
     public double getSecondSide() {
@@ -35,13 +24,13 @@ public class Rectangle extends Figure implements AreaCalculator {
 
     @Override
     public double getArea() {
-        return firstSide * secondSide;
+        return getSide() * secondSide;
     }
 
     @Override
     public String toDraw() {
         StringBuilder builder = new StringBuilder();
-        return builder.append(super.toDraw()).append(", first side: ").append(firstSide)
+        return builder.append(super.toDraw()).append(", first side: ").append(getSide())
                 .append(", second side: ").append(secondSide).append(", area: ")
                 .append(getArea()).toString();
     }

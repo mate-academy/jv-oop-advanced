@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public abstract class Figure implements AreaCalculator {
     private FigureType name;
     private String color;
 
@@ -34,4 +34,5 @@ public abstract class Figure {
         return builder.append("Figure: ").append(this.name)
                 .append(", color: ").append(this.color).toString();
     }
+
 }
