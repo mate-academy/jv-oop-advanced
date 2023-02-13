@@ -11,16 +11,20 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double calculateArea() {
+    public double getArea() {
         return firstLeg * secondLeg / 2;
     }
 
     @Override
     public void draw() {
-        String stringBuilder = "Figure: " + "triangle, area: "
-                + calculateArea() + " sq.units, firstLeg: "
-                + firstLeg + " sq.units, secondLeg: "
-                + secondLeg + " color: " + color;
+        StringBuilder stringBuilder = new StringBuilder("Figure: ");
+        stringBuilder.append("triangle, area: ")
+                .append(getArea())
+                .append(" sq.units, firstLeg: ")
+                .append(firstLeg)
+                .append(" sq.units, secondLeg: ")
+                .append(secondLeg)
+                .append(" color: ").append(color);
         System.out.println(stringBuilder);
     }
 }
