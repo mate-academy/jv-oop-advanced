@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int DEFAULT_RADIUS = 10;
+    private static final Color DEFAULT_COLOR = Color.WHITE;
     private static final int DEFAULT_BOUND = 45;
 
     private Random random = new Random();
@@ -24,38 +25,38 @@ public class FigureSupplier {
         }
     }
 
-    private Figure getRandomIsoscelesTrapezoid() {
+    public Figure getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(getRandomDouble(), getRandomDouble(), getRandomDouble(),
                 colorSupplier.getRandomColor());
     }
 
-    private Figure getRandomCircle() {
+    public Figure getRandomCircle() {
         return new Circle(getRandomDouble(), colorSupplier.getRandomColor());
     }
 
-    private Figure getRandomRectangle() {
+    public Figure getRandomRectangle() {
         return new Rectangle(getRandomDouble(), getRandomDouble(),
                 colorSupplier.getRandomColor());
     }
 
-    private Figure getRandomRightTriangle() {
+    public Figure getRandomRightTriangle() {
         return new RightTriangle(getRandomDouble(), getRandomDouble(),
                 colorSupplier.getRandomColor());
     }
 
-    private Figure getRandomSquare() {
+    public Figure getRandomSquare() {
         return new Square(getRandomDouble(), colorSupplier.getRandomColor());
     }
 
-    public TypeOfFigure getRandomTypeOfFigures() {
-        return TypeOfFigure.values()[random.nextInt(TypeOfFigure.values().length)];
+    public FigureType getRandomTypeOfFigures() {
+        return FigureType.values()[random.nextInt(FigureType.values().length)];
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_RADIUS, Color.WHITE);
+        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
     }
 
-    public double getRandomDouble() {
+    private double getRandomDouble() {
         return random.nextInt(DEFAULT_BOUND);
     }
 }
