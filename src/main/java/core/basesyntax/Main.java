@@ -7,7 +7,7 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figures = new Figure[COUNT];
         for (int i = 0;i < figures.length;i++) {
-            if (i < 3) {
+            if (i < COUNT / 2) {
                 figures[i] = figureSupplier.getFigureType();
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
