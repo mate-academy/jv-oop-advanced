@@ -2,19 +2,10 @@ package core.basesyntax;
 
 public class Circle extends Figure {
     private final int radius;
-    private final FigureType figureType = FigureType.CIRCLE;
 
     public Circle(String color, int radius) {
-        super(color);
+        super(color, FigureType.CIRCLE);
         this.radius = radius;
-    }
-
-    public int getRadius() {
-        return radius;
-    }
-
-    public FigureType getFigureType() {
-        return figureType;
     }
 
     @Override
@@ -26,7 +17,7 @@ public class Circle extends Figure {
     public void draw() {
         System.out.println("Figure: " + getFigureType()
                 + ", area: " + getArea()
-                + " sq.units, radius: " + getRadius()
+                + " sq.units, radius: " + radius
                 + " units, color: " + getColor());
     }
 }

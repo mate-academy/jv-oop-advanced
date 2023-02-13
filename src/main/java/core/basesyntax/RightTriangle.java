@@ -3,24 +3,11 @@ package core.basesyntax;
 public class RightTriangle extends Figure {
     private final int side;
     private final int height;
-    private final FigureType figureType = FigureType.RIGHTTRIANGLE;
 
     public RightTriangle(String color, int side, int height) {
-        super(color);
+        super(color, FigureType.RIGHT_TRIANGLE);
         this.side = side;
         this.height = height;
-    }
-
-    public int getSide() {
-        return side;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public FigureType getFigureType() {
-        return figureType;
     }
 
     @Override
@@ -32,8 +19,8 @@ public class RightTriangle extends Figure {
     public void draw() {
         System.out.println("Figure: " + getFigureType()
                 + ", area: " + getArea()
-                + " sq.units, side: " + getSide()
-                + " units, height: " + getHeight()
+                + " sq.units, side: " + side
+                + " units, height: " + height
                 + " units, color: " + getColor());
     }
 }

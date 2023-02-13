@@ -3,24 +3,11 @@ package core.basesyntax;
 public class Rectangle extends Figure {
     private final int firstSide;
     private final int secondSide;
-    private final FigureType figureType = FigureType.RECTANGLE;
 
     public Rectangle(String color, int firstSide, int secondSide) {
-        super(color);
+        super(color, FigureType.RECTANGLE);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
-    }
-
-    public int getFirstSide() {
-        return firstSide;
-    }
-
-    public int getSecondSide() {
-        return secondSide;
-    }
-
-    public FigureType getFigureType() {
-        return figureType;
     }
 
     @Override
@@ -32,8 +19,8 @@ public class Rectangle extends Figure {
     public void draw() {
         System.out.println("Figure: " + getFigureType()
                 + ", area: " + getArea()
-                + " sq.units, firstSide: " + getFirstSide()
-                + " units, secondSide: " + getSecondSide()
+                + " sq.units, firstSide: " + firstSide
+                + " units, secondSide: " + secondSide
                 + " units, color: " + getColor());
     }
 }

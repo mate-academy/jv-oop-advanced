@@ -3,7 +3,7 @@ package core.basesyntax;
 public enum FigureType {
     SQUARE,
     RECTANGLE,
-    RIGHTTRIANGLE,
+    RIGHT_TRIANGLE,
     CIRCLE,
-    ISOSCELESTRAPESOID
+    ISOSCELES_TRAPESOID
 }
