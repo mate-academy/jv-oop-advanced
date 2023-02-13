@@ -11,82 +11,56 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         switch (random.nextInt(NUMBER_OF_FIGURES)) {
-            default:
-                return getCircle(FigureType.RANDOM);
             case 0:
-                return getRectangle(FigureType.RANDOM);
+                return getRandomRectangle();
             case 1:
-                return getRightTriangle(FigureType.RANDOM);
+                return getRandomRightTriangle();
             case 2:
-                return getSquare(FigureType.RANDOM);
+                return getRandomSquare();
             case 3:
-                return getIsoscelesTrapezoid(FigureType.RANDOM);
+                return getRandomIsoscelesTrapezoid();
+            case 4:
+                return getRandomCircle();
+            default:
+                throw new NullPointerException();
         }
     }
 
     public Figure getDefaultFigure() {
-        return getCircle(FigureType.DEFAULT);
+        return new Circle(DEFAULT_COLOR,
+                DEFAULT_PROPERTY_SIZE);
     }
 
     private int getRandomProperySize() {
         return random.nextInt(DEFAULT_PROPERTY_SIZE);
     }
 
-    private Figure getCircle(FigureType figureType) {
-        if (figureType == FigureType.DEFAULT) {
-            return new Circle(colorSupplier.getRandomColor(),
-                    getRandomProperySize());
-        } else {
-            return new Circle(DEFAULT_COLOR,
-                    DEFAULT_PROPERTY_SIZE);
-        }
+    private Figure getRandomCircle() {
+        return new Circle(colorSupplier.getRandomColor(),
+                getRandomProperySize());
     }
 
-    private Figure getSquare(FigureType figureType) {
-        if (figureType == FigureType.DEFAULT) {
-            return new Square(colorSupplier.getRandomColor(),
-                    getRandomProperySize());
-        } else {
-            return new Square(DEFAULT_COLOR,
-                    DEFAULT_PROPERTY_SIZE);
-        }
+    private Figure getRandomSquare() {
+        return new Square(colorSupplier.getRandomColor(),
+                getRandomProperySize());
     }
 
-    private Figure getRectangle(FigureType figureType) {
-        if (figureType == FigureType.DEFAULT) {
-            return new Rectangle(colorSupplier.getRandomColor(),
-                    getRandomProperySize(),
-                    getRandomProperySize());
-        } else {
-            return new Rectangle(DEFAULT_COLOR,
-                    DEFAULT_PROPERTY_SIZE,
-                    DEFAULT_PROPERTY_SIZE);
-        }
+    private Figure getRandomRectangle() {
+        return new Rectangle(colorSupplier.getRandomColor(),
+                getRandomProperySize(),
+                getRandomProperySize());
     }
 
-    private Figure getRightTriangle(FigureType figureType) {
-        if (figureType == FigureType.DEFAULT) {
-            return new RightTriangle(colorSupplier.getRandomColor(),
-                    getRandomProperySize(),
-                    getRandomProperySize());
-        } else {
-            return new RightTriangle(DEFAULT_COLOR,
-                    DEFAULT_PROPERTY_SIZE,
-                    DEFAULT_PROPERTY_SIZE);
-        }
+    private Figure getRandomRightTriangle() {
+        return new RightTriangle(colorSupplier.getRandomColor(),
+                getRandomProperySize(),
+                getRandomProperySize());
     }
 
-    private Figure getIsoscelesTrapezoid(FigureType figureType) {
-        if (figureType == FigureType.DEFAULT) {
-            return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                    getRandomProperySize(),
-                    getRandomProperySize(),
-                    getRandomProperySize());
-        } else {
-            return new IsoscelesTrapezoid(DEFAULT_COLOR,
-                    DEFAULT_PROPERTY_SIZE,
-                    DEFAULT_PROPERTY_SIZE,
-                    DEFAULT_PROPERTY_SIZE);
-        }
+    private Figure getRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                getRandomProperySize(),
+                getRandomProperySize(),
+                getRandomProperySize());
     }
 }

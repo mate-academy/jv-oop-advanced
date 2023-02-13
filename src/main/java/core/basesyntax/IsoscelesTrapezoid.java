@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure {
+public class IsoscelesTrapezoid extends Figure implements Drawer {
     private int topBase;
     private int bottomBase;
     private int hight;
@@ -20,11 +20,15 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public void draw() {
         System.out.println(System.lineSeparator()
-                + "IsoscelesTrapezoid with area of " + calculateArea() + " sq. units");
-        super.draw();
-        System.out.println(System.lineSeparator() + "topBase:" + topBase
-                + System.lineSeparator() + " bottomBase:" + bottomBase
-                + System.lineSeparator() + "hight:" + hight
+                + "Circle with area of " + calculateArea() + " sq. units"
+                + System.lineSeparator()
+                + " color: " + super.getColor()
+                + System.lineSeparator()
+                + "topBase:" + topBase
+                + System.lineSeparator()
+                + "bottomBase:" + bottomBase
+                + System.lineSeparator()
+                + "hight:" + hight
                 + System.lineSeparator());
     }
 }

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure {
+public class RightTriangle extends Figure implements Drawer {
     private int leftLeg;
     private int rightLeg;
 
@@ -18,10 +18,13 @@ public class RightTriangle extends Figure {
     @Override
     public void draw() {
         System.out.println(System.lineSeparator()
-                + "RightTriangle with area of " + calculateArea() + " sq. units");
-        super.draw();
-        System.out.println(System.lineSeparator() + "left leg:" + leftLeg
-                + System.lineSeparator() + "right leg:" + rightLeg
+                + "Circle with area of " + calculateArea() + " sq. units"
+                + System.lineSeparator()
+                + " color: " + super.getColor()
+                + System.lineSeparator()
+                + "left leg:" + leftLeg
+                + System.lineSeparator()
+                + "right leg:" + rightLeg
                 + System.lineSeparator());
     }
 }
