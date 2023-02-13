@@ -1,10 +1,9 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private int side;
-    private int upSide;
-    private int downSide;
-    private final int halfPerimeter = (2 * side + upSide + downSide) / 2;
+    private final int side;
+    private final int upSide;
+    private final int downSide;
 
     public IsoscelesTrapezoid(String color, int side, int upSide, int downSide) {
         super(color);
@@ -14,18 +13,19 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double getArea() {
-        return Math.sqrt(Math.pow(halfPerimeter - side, 2)
-                * (halfPerimeter - downSide) * (halfPerimeter - upSide));
-    }
-
-    @Override
-    public String draw() {
-        return "Figure: isosceles trapezoid, area: "
-                + getArea()
+    public void draw() {
+        System.out.println("Figure: isosceles trapezoid, area: "
+                + calculateArea()
                 + " sq.units, sides: " + side
                 + " units, upSide: " + upSide
                 + " units, downSide: " + downSide
-                + " units, color: " + getColor();
+                + " units, color: " + getColor());
+    }
+
+    @Override
+    public double calculateArea() {
+        int halfPerimeter = (2 * side + upSide + downSide) / 2;
+        return Math.sqrt(Math.pow(halfPerimeter - side, 2)
+                * (halfPerimeter - downSide) * (halfPerimeter - upSide));
     }
 }

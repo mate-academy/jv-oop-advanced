@@ -8,32 +8,32 @@ public class FigureSupplier {
     public static final int MAX_BOUND = 30;
     public static final int RADIUS = 10;
 
+    private int getBound() {
+        return RANDOM.nextInt(MAX_BOUND) + 1;
+    }
+
     public Figure getRandomFigure() {
         int figure = RANDOM.nextInt(FIGURE_COUNT) + 1;
         switch (figure) {
             case 1: {
                 return new Circle(new ColorSupplier().getRandomColor(),
-                        RANDOM.nextInt(MAX_BOUND) + 1);
+                        getBound());
             }
             case 2: {
                 return new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(),
-                        RANDOM.nextInt(MAX_BOUND) + 1,
-                        RANDOM.nextInt(MAX_BOUND) + 1,
-                        RANDOM.nextInt(MAX_BOUND) + 1);
+                        getBound(), getBound(), getBound());
             }
             case 3: {
                 return new Rectangle(new ColorSupplier().getRandomColor(),
-                        RANDOM.nextInt(MAX_BOUND) + 1,
-                        RANDOM.nextInt(MAX_BOUND) + 1);
+                        getBound(), getBound());
             }
             case 4: {
                 return new RightTriangle(new ColorSupplier().getRandomColor(),
-                        RANDOM.nextInt(MAX_BOUND) + 1,
-                        RANDOM.nextInt(MAX_BOUND) + 1);
+                        getBound(), getBound());
             }
             default: {
                 return new Square(new ColorSupplier().getRandomColor(),
-                        RANDOM.nextInt(MAX_BOUND) + 1);
+                        getBound());
             }
         }
     }
