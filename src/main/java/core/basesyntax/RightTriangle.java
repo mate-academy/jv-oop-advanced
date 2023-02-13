@@ -11,7 +11,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public int calculateArea() {
+    public double calculateArea() {
         return (int) (firstLeg * secondLeg * 0.5);
     }
 

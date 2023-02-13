@@ -9,8 +9,8 @@ public class Circle extends Figure {
     }
 
     @Override
-    public int calculateArea() {
-        return (int) (Math.pow(radius, 2) * Math.PI);
+    public double calculateArea() {
+        return (Math.pow(radius, 2) * Math.PI);
     }
 
     @Override

@@ -3,8 +3,9 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int RANDOM = 30;
+    private static final int MAX_BOUND = 30;
     private static final int DEFAULT = 10;
+    private static final int NUMBER_OF_FIGURES = 5;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -13,21 +14,20 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        int randomize = random.nextInt(Color.values().length) + 1;
+        int randomize = random.nextInt(NUMBER_OF_FIGURES);
         switch (randomize) {
             case 1:
-                return new Square(colorSupplier.getRandomColor(), random.nextInt(RANDOM));
+                return new Square(colorSupplier.getRandomColor(), random.nextInt(MAX_BOUND));
             case 2:
                 return new Rectangle(colorSupplier.getRandomColor(),
-                        random.nextInt(RANDOM), random.nextInt(RANDOM));
+                        random.nextInt(MAX_BOUND), random.nextInt(MAX_BOUND));
             case 3:
-                return new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(RANDOM),
-                        random.nextInt(RANDOM));
+                return new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(MAX_BOUND),
+                        random.nextInt(MAX_BOUND));
             case 4:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        random.nextInt(RANDOM), random.nextInt(RANDOM), random.nextInt(RANDOM));
-            case 5:
-                return new Circle(colorSupplier.getRandomColor(), random.nextInt(RANDOM));
+                        random.nextInt(MAX_BOUND), random.nextInt(MAX_BOUND),
+                        random.nextInt(MAX_BOUND));
             default:
                 return getDefaultFigure();
         }
