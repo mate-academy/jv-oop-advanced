@@ -1,17 +1,16 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private static final String NAME = "circle";
     private int radius;
 
     public Circle() {
-        setName(NAME);
+        super(FigureTypeName.CIRCLE.name());
     }
 
     public Circle(int radius, String color) {
+        this();
         this.radius = radius;
         setColor(color);
-        setName(NAME);
         calculateArea();
     }
 

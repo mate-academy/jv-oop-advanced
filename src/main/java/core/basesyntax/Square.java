@@ -1,18 +1,17 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    private static final String NAME = "square";
     private int side;
 
     public Square(int side, String color) {
+        this();
         this.side = side;
         setColor(color);
-        setName(NAME);
         calculateArea();
     }
 
     public Square() {
-        setName(NAME);
+        super(FigureTypeName.SQUARE.name());
     }
 
     @Override

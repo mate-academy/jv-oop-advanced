@@ -5,36 +5,35 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int MAXIMUM_UNITS = 10;
     private static final int FIGURES_NUMBER = 5;
-    private static final Figure DEFAULT_FIGURE = new Circle(10, Colors.WHITE.name().toLowerCase());
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final Figure[] figures = new Figure[]{ new Circle(), new IsoscelesTrapezoid(),
-            new Rectangle(), new Square(), new RightTriangle()};
 
     public Figure getRandomFigure() {
         int randomFigureNumber = random.nextInt(FIGURES_NUMBER);
-        String randomFiguresName = figures[randomFigureNumber].getName();
+        String randomFiguresName = FigureType.values()[randomFigureNumber].name();
         String randomColor = colorSupplier.getRandomColor();
-        int firstRandomParameter = random.nextInt(MAXIMUM_UNITS);
-        int secondRandomParameter = random.nextInt(MAXIMUM_UNITS);
-        int thirdRandomParameter = random.nextInt(MAXIMUM_UNITS);
-        switch (randomFiguresName) {
-            case "square":
-                return new Square(firstRandomParameter, randomColor);
-            case "rectangle":
-                return new Rectangle(firstRandomParameter, secondRandomParameter, randomColor);
-            case "right triangle":
-                return new RightTriangle(firstRandomParameter, secondRandomParameter, randomColor);
-            case "circle":
-                return new Circle(firstRandomParameter, randomColor);
-            default:
-                return new IsoscelesTrapezoid(firstRandomParameter, secondRandomParameter,
-                        thirdRandomParameter, randomColor);
+        if (randomFiguresName.equals(FigureTypeName.SQUARE.name())) {
+            return new Square(random.nextInt(MAXIMUM_UNITS),
+                    randomColor);
+        } else if (randomFiguresName.equals(FigureTypeName.RECTANGLE.name())) {
+            return new Rectangle(random.nextInt(MAXIMUM_UNITS),
+                    random.nextInt(MAXIMUM_UNITS),
+                    randomColor);
+        } else if (randomFiguresName.equals(FigureTypeName.RIGHT_TRIANGLE.name())) {
+            return new RightTriangle(random.nextInt(MAXIMUM_UNITS),
+                    random.nextInt(MAXIMUM_UNITS),
+                    randomColor);
+        } else if (randomFiguresName.equals(FigureTypeName.CIRCLE.name())) {
+            return new Circle(random.nextInt(MAXIMUM_UNITS), randomColor);
+        } else {
+            return new IsoscelesTrapezoid(random.nextInt(MAXIMUM_UNITS),
+                    random.nextInt(MAXIMUM_UNITS),
+                    random.nextInt(MAXIMUM_UNITS), randomColor);
         }
     }
 
     public Figure getDefaultFigure() {
-        return DEFAULT_FIGURE;
+        return new Circle(10, Colors.WHITE.name());
     }
 }
 

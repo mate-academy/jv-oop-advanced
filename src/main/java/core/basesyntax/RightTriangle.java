@@ -1,20 +1,19 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private static final String NAME = "right triangle";
     private int firstLeg;
     private int secondLeg;
 
     public RightTriangle(int firstLeg, int secondLeg, String color) {
+        this();
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
         setColor(color);
-        setName(NAME);
         calculateArea();
     }
 
     public RightTriangle() {
-        setName(NAME);
+        super(FigureTypeName.RIGHT_TRIANGLE.name());
     }
 
     @Override

@@ -1,20 +1,19 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private static final String NAME = "rectangle";
     private int length;
     private int width;
 
     public Rectangle(int length, int width, String color) {
+        this();
         this.length = length;
         this.width = width;
         setColor(color);
-        setName(NAME);
         calculateArea();
     }
 
     public Rectangle() {
-        setName(NAME);
+        super(FigureTypeName.RECTANGLE.name());
     }
 
     @Override

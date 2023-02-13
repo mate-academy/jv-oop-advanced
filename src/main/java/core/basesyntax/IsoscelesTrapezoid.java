@@ -1,22 +1,21 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private static final String NAME = "isosceles trapezoid";
     private int base;
     private int top;
     private int height;
 
     public IsoscelesTrapezoid(int base, int top, int height, String color) {
+        this();
         this.base = base;
         this.top = top;
         this.height = height;
         setColor(color);
-        setName(NAME);
         calculateArea();
     }
 
     public IsoscelesTrapezoid() {
-        setName(NAME);
+        super(FigureTypeName.ISOSCELES_TRAPEZOID.name());
     }
 
     @Override
