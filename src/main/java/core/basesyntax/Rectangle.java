@@ -5,25 +5,22 @@ public class Rectangle extends Figure {
     private double height;
 
     public Rectangle(double width, double height, Color color) {
+        super.setColor(color);
         this.height = height;
         this.width = width;
-        super.setColor(color);
-    }
-
-    public Rectangle() {
     }
 
     @Override
     public double getArea() {
-        return (double) (width * height);
+        return width * height;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: rectangle, "
                 + "area: " + getArea() + " sq.units, "
-                + "width: " + width + "units "
-                + "height: " + height + " units "
+                + "width: " + width + " units, "
+                + "height: " + height + " units, "
                 + "color: " + getColor());
     }
 }
