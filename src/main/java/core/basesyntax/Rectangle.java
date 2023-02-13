@@ -11,7 +11,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculatorArea() {
         return firstSide * secondSide;
     }
 
@@ -19,6 +19,6 @@ public class Rectangle extends Figure {
     public void draw() {
         System.out.println("Name: " + this.name + ", Color: " + this.color.name()
                 + ", First side: " + this.firstSide + ", Second Side: " + secondSide
-                + ", Area: " + this.getArea() + ".");
+                + ", Area: " + this.calculatorArea() + ".");
     }
 }

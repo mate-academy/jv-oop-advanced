@@ -1,7 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements Drawable, Areable {
-    public static final int FIGURES_NUMBER = 5;
+public abstract class Figure implements Drawable, AreaCalculator {
     protected String name;
     protected Color color;
 
@@ -10,7 +9,7 @@ public abstract class Figure implements Drawable, Areable {
         this.color = color;
     }
 
-    public abstract double getArea();
+    public abstract double calculatorArea();
 
     public abstract void draw();
 }

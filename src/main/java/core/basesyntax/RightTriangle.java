@@ -11,7 +11,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculatorArea() {
         return 0.5 * firstSide * secondSide;
     }
 
@@ -19,6 +19,6 @@ public class RightTriangle extends Figure {
     public void draw() {
         System.out.println("Name: " + this.name + ", Color: " + this.color.name() + ", firstSide: "
                 + this.firstSide + ", secondSide: " + this.secondSide
-                + ", Area: " + this.getArea() + ".");
+                + ", Area: " + this.calculatorArea() + ".");
     }
 }
