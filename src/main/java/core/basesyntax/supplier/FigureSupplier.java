@@ -11,35 +11,50 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int LIMIT_RANDOM = 15;
     private static final int NUMBERS_OF_FIGURES = 5;
-    private final Random random;
-    private final ColorSupplier colorSupplier;
-
-    public FigureSupplier() {
-        random = new Random();
-        colorSupplier = new ColorSupplier();
-    }
+    private static final int DEFAULT_RADIUS = 10;
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(NUMBERS_OF_FIGURES);
         int firstSide = random.nextInt(LIMIT_RANDOM);
         int secondSide = random.nextInt(LIMIT_RANDOM);
 
-        if (figureNumber == 0) {
-            return new Square(colorSupplier.getRandomColor(), firstSide);
-        } else if (figureNumber == 1) {
-            return new Rectangle(colorSupplier.getRandomColor(), firstSide, secondSide);
-        } else if (figureNumber == 2) {
-            return new RightTriangle(colorSupplier.getRandomColor(), firstSide, secondSide);
-        } else if (figureNumber == 3) {
-            int thirdSide = random.nextInt(LIMIT_RANDOM);
-            String color = colorSupplier.getRandomColor();
-            return new IsoscelesTrapezoid(color, firstSide, secondSide, thirdSide);
-        } else {
-            return getDefultFigure();
+        switch (figureNumber) {
+            case 0:
+                return getRandomSquare(colorSupplier.getRandomColor(), firstSide);
+            case 1:
+                return getRandomRectangle(colorSupplier.getRandomColor(), firstSide, secondSide);
+            case 2:
+                return getRandomRightTriangle(colorSupplier.getRandomColor(), firstSide,
+                        secondSide);
+            case 3:
+                int thirdSide = random.nextInt(LIMIT_RANDOM);
+                String color = colorSupplier.getRandomColor();
+                return getRandomIsoscelesTrapezoid(color, firstSide, secondSide, thirdSide);
+            default:
+                return getDefultFigure();
         }
     }
 
     public Figure getDefultFigure() {
-        return new Circle("WHITE", 10);
+        return new Circle("WHITE", DEFAULT_RADIUS);
+    }
+
+    private Square getRandomSquare(String color, int side) {
+        return new Square(color, side);
+    }
+
+    private Rectangle getRandomRectangle(String color, int firstSide, int secondSide) {
+        return new Rectangle(color, firstSide, secondSide);
+    }
+
+    private RightTriangle getRandomRightTriangle(String color, int firstSide, int secondSide) {
+        return new RightTriangle(color, firstSide, secondSide);
+    }
+
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid(String color, int firstSide,
+                                                           int secondSide, int thirdSide) {
+        return new IsoscelesTrapezoid(color, firstSide, secondSide, thirdSide);
     }
 }
