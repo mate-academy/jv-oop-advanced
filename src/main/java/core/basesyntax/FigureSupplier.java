@@ -12,20 +12,14 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int indexFigure = random.nextInt(MAX_FIGURE);
-        switch (indexFigure) {
-            case 0:
-                return getRandomCircle();
-            case 1:
-                return getRandomTrapezoid();
-            case 2:
-                return getRandomRectangle();
-            case 3:
-                return getRandomRightTriangle();
-            case 4:
-                return getRandomSquare();
-            default:
-                return getDefaultFigure();
-        }
+        return switch (indexFigure) {
+            case 0 -> getRandomCircle();
+            case 1 -> getRandomTrapezoid();
+            case 2 -> getRandomRectangle();
+            case 3 -> getRandomRightTriangle();
+            case 4 -> getRandomSquare();
+            default -> getDefaultFigure();
+        };
     }
 
     public Circle getRandomCircle() {

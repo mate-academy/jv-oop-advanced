@@ -13,22 +13,17 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return ((baseUp + baseDown) / 2) * height;
     }
 
     @Override
     public void draw() {
-        StringBuilder stringBuilder = new StringBuilder("Figure: ");
-        stringBuilder.append("trapezoid, area: ")
-                .append(getArea())
-                .append(" sq.units, baseUp: ")
-                .append(baseUp)
-                .append(" sq.units, baseDown: ")
-                .append(baseDown)
-                .append(" sq.units, height: ")
-                .append(height)
-                .append(" color: ").append(color);
+        String stringBuilder = "Figure: " + "trapezoid, area: "
+                + calculateArea() + " sq.units, baseUp: "
+                + baseUp + " sq.units, baseDown: "
+                + baseDown + " sq.units, height: "
+                + height + " color: " + color;
         System.out.println(stringBuilder);
     }
 }

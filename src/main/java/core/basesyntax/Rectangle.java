@@ -11,21 +11,16 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return width * height;
     }
 
     @Override
     public void draw() {
-        StringBuilder stringBuilder = new StringBuilder("Figure: ");
-        stringBuilder.append("rectangle, area: ")
-                .append(getArea())
-                .append(" sq.units, width: ")
-                .append(width)
-                .append(" height: ")
-                .append(height)
-                .append(" color: ")
-                .append(color);
+        String stringBuilder = "Figure: " + "rectangle, area: "
+                + calculateArea() + " sq.units, width: " + width
+                + " height: " + height
+                + " color: " + color;
         System.out.println(stringBuilder);
     }
 }
