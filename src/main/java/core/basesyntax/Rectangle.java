@@ -15,10 +15,10 @@ public class Rectangle extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: rectangle, area: " + Double.toString(getArea())
-            + ", perimeter: " + Double.toString(getPerimeter())
-            + ", height: " + Double.toString(height)
-            + ", width: " + Double.toString(width)
-            + ", color: " + color
+                + ", perimeter: " + Double.toString(getPerimeter())
+                + ", height: " + Double.toString(height)
+                + ", width: " + Double.toString(width)
+                + ", color: " + color
         );
     }
 

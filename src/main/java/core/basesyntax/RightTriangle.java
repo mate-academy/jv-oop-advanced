@@ -18,11 +18,11 @@ public class RightTriangle extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: right triangle, area: " + Double.toString(getArea())
-            + ", perimeter: " + Double.toString(getPerimeter())
-            + ", left leg: " + Double.toString(leftLeg)
-            + ", right leg: " + Double.toString(rightLeg)
-            + ", base: " + Double.toString(base)
-            + ", color: " + color
+                + ", perimeter: " + Double.toString(getPerimeter())
+                + ", left leg: " + Double.toString(leftLeg)
+                + ", right leg: " + Double.toString(rightLeg)
+                + ", base: " + Double.toString(base)
+                + ", color: " + color
         );
     }
 
