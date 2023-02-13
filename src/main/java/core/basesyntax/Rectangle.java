@@ -22,6 +22,6 @@ public class Rectangle extends Figure {
                 + calculateArea() + " sq.units, width: "
                 + width + " units, length: "
                 + length + " units, color: "
-                + getColor().toString().toLowerCase());
+                + getColor().name());
     }
 }

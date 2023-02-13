@@ -19,6 +19,6 @@ public class Circle extends Figure {
                 + ", area: "
                 + calculateArea() + " sq.units, radius: "
                 + radius + " units, color: "
-                + getColor().toString().toLowerCase());
+                + getColor().name());
     }
 }

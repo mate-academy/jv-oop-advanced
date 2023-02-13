@@ -5,7 +5,8 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int MAX_BOUND = 30;
     private static final int DEFAULT = 10;
-    private static final int NUMBER_OF_FIGURES = 5;
+
+    private static final int AMOUNT_OF_FIGURES = 6;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -14,7 +15,7 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        int randomize = random.nextInt(NUMBER_OF_FIGURES);
+        int randomize = random.nextInt(AMOUNT_OF_FIGURES);
         switch (randomize) {
             case 1:
                 return new Square(colorSupplier.getRandomColor(), random.nextInt(MAX_BOUND));
