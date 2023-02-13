@@ -7,6 +7,7 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int RANGE_OF_RANDOM = 100;
     private static final int CIRCLE_RADIUS = 10;
+    private static final String COLOR_WHITE = Color.WHITE.name();
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -22,16 +23,14 @@ public class FigureSupplier {
             case RECTANGLE:
                 return new Rectangle(colorSupplier.getRandomColor(), getRandomNumber(),
                         getRandomNumber());
-            case TRAPEZOID:
+            default:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomNumber(),
                         getRandomNumber(), getRandomNumber());
-            default:
-                return getDefaultFigure();
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.name(), CIRCLE_RADIUS);
+        return new Circle(COLOR_WHITE, CIRCLE_RADIUS);
     }
 
     private NameOfFigure getRandomNameOfFigure() {
