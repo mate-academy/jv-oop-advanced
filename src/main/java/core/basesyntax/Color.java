@@ -3,7 +3,6 @@ package core.basesyntax;
 public enum Color {
     AQUA,
     AQUAMARINE,
-    AZURE,
     BEIGE,
     BISQUE,
     BLACK,
