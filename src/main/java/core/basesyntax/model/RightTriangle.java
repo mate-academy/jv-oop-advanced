@@ -1,7 +1,6 @@
-package core.basesyntax.figuretypes;
+package core.basesyntax.model;
 
 import core.basesyntax.Color;
-import core.basesyntax.Figure;
 
 public class RightTriangle extends Figure {
     private double firstLeg;
@@ -25,6 +24,6 @@ public class RightTriangle extends Figure {
                 + "area: " + calculateArea() + " units, "
                 + "firstLeg: " + firstLeg + " units, "
                 + "secondLeg: " + secondLeg + " units, "
-                + "color: " + color);
+                + "color: " + getColor());
     }
 }

@@ -1,5 +1,7 @@
 package core.basesyntax;
 
+import core.basesyntax.model.Figure;
+
 public class Main {
     private static final int FIGURE_COUNT = 6;
 
@@ -7,11 +9,12 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figures = new Figure[FIGURE_COUNT];
 
-        for (int i = 0; i < figures.length / 2; i++) {
-            figures[i] = figureSupplier.getRandomFigure();
-        }
-        for (int i = figures.length / 2; i < figures.length; i++) {
-            figures[i] = figureSupplier.getDefaultFigure();
+        for (int i = 0; i < FIGURE_COUNT; i++) {
+            if (i < FIGURE_COUNT / 2) {
+                figures[i] = figureSupplier.getRandomFigure();
+            } else {
+                figures[i] = figureSupplier.getDefaultFigure();
+            }
         }
         for (Figure figure : figures) {
             figure.draw();

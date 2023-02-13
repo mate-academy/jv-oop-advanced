@@ -1,7 +1,6 @@
-package core.basesyntax.figuretypes;
+package core.basesyntax.model;
 
 import core.basesyntax.Color;
-import core.basesyntax.Figure;
 
 public class Square extends Figure {
     private double side;
@@ -22,6 +21,6 @@ public class Square extends Figure {
         System.out.println("Figure: right triangle, "
                 + "area: " + calculateArea() + " units, "
                 + "side: " + side + " units, "
-                + "color: " + color);
+                + "color: " + getColor());
     }
 }

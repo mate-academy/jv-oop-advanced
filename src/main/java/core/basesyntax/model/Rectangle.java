@@ -1,7 +1,6 @@
-package core.basesyntax.figuretypes;
+package core.basesyntax.model;
 
 import core.basesyntax.Color;
-import core.basesyntax.Figure;
 
 public class Rectangle extends Figure {
     private double length;
@@ -25,6 +24,6 @@ public class Rectangle extends Figure {
                 + "area: " + calculateArea() + " units, "
                 + "length: " + length + " units, "
                 + "width: " + width + " units, "
-                + "color: " + color);
+                + "color: " + getColor());
     }
 }

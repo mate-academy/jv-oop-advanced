@@ -1,10 +1,11 @@
 package core.basesyntax;
 
-import core.basesyntax.figuretypes.Circle;
-import core.basesyntax.figuretypes.IsoscelesTrapezoid;
-import core.basesyntax.figuretypes.Rectangle;
-import core.basesyntax.figuretypes.RightTriangle;
-import core.basesyntax.figuretypes.Square;
+import core.basesyntax.model.Circle;
+import core.basesyntax.model.Figure;
+import core.basesyntax.model.IsoscelesTrapezoid;
+import core.basesyntax.model.Rectangle;
+import core.basesyntax.model.RightTriangle;
+import core.basesyntax.model.Square;
 import java.util.Random;
 
 public class FigureSupplier {
@@ -18,7 +19,6 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int randomFigureNumber = random.nextInt(FigureShape.values().length);
-
         switch (FigureShape.values()[randomFigureNumber]) {
             case SQUARE:
                 return randomSquare();
@@ -66,24 +66,13 @@ public class FigureSupplier {
     }
 
     private IsoscelesTrapezoid randomIsoscelesTrapezoid() {
-        double longerBase;
-        double shorterBase;
         double height = Math.round((MAX_VALUE * random.nextDouble() + MIN_VALUE)
                 * DECIMAL_FORMAT) / DECIMAL_FORMAT;
         double baseSide1 = Math.round((MAX_VALUE * random.nextDouble() + MIN_VALUE)
                 * DECIMAL_FORMAT) / DECIMAL_FORMAT;
         double baseSide2 = Math.round((MAX_VALUE * random.nextDouble() + MIN_VALUE)
                 * DECIMAL_FORMAT) / DECIMAL_FORMAT;
-
-        if (baseSide1 > baseSide2) {
-            longerBase = baseSide1;
-            shorterBase = baseSide2;
-        } else {
-            longerBase = baseSide2;
-            shorterBase = baseSide1;
-        }
-
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                longerBase, shorterBase, height);
+                baseSide1, baseSide2, height);
     }
 }

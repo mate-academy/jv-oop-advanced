@@ -1,7 +1,6 @@
-package core.basesyntax.figuretypes;
+package core.basesyntax.model;
 
 import core.basesyntax.Color;
-import core.basesyntax.Figure;
 
 public class Circle extends Figure {
     private double radius;
@@ -22,6 +21,6 @@ public class Circle extends Figure {
         System.out.println("Figure: circle, "
                 + "area: " + calculateArea() + " units, "
                 + "radius: " + radius + " units, "
-                + "color: " + color);
+                + "color: " + getColor());
     }
 }
