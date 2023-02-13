@@ -6,7 +6,6 @@ import java.util.Random;
 
 public class ApplicationMain {
     public static void main(String[] args) {
-        Random random = new Random();
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figures = new Figure[8];
         for (int i = 0; i < figures.length; i++) {
