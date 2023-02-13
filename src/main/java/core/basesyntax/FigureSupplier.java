@@ -5,6 +5,7 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int FIGURE_COUNTER = 5;
     private static final int VALUE_COUNTER = 100;
+    private static final int DEFAULT_VALUE = 10;
 
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
@@ -29,6 +30,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("WHITE", 10);
+        return new Circle(Color.WHITE.name(), DEFAULT_VALUE);
     }
 }
