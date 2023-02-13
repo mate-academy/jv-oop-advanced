@@ -1,13 +1,13 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private final int side1;
-    private final int side2;
+    private final int adjacentSide;
+    private final int oppositeSide;
 
-    public RightTriangle(String color, int side1, int side2) {
+    public RightTriangle(String color, int adjacentSide, int oppositeSide) {
         super(color);
-        this.side1 = side1;
-        this.side2 = side2;
+        this.adjacentSide = adjacentSide;
+        this.oppositeSide = oppositeSide;
     }
 
     @Override
@@ -15,12 +15,12 @@ public class RightTriangle extends Figure {
         System.out.println("Figure: right triangle, area: "
                 + calculateArea()
                 + " sq.points, side1: "
-                + side1 + " units, side2: " + side2
+                + adjacentSide + " units, side2: " + oppositeSide
                 + " units, color: " + getColor());
     }
 
     @Override
     public double calculateArea() {
-        return side1 * side2 / 2;
+        return adjacentSide * oppositeSide / 2;
     }
 }

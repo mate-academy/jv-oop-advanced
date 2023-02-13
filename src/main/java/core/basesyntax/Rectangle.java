@@ -1,13 +1,13 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private final int side1;
-    private final int side2;
+    private final int height;
+    private final int wight;
 
-    public Rectangle(String color, int side1, int side2) {
+    public Rectangle(String color, int height, int wight) {
         super(color);
-        this.side1 = side1;
-        this.side2 = side2;
+        this.height = height;
+        this.wight = wight;
     }
 
     @Override
@@ -15,12 +15,12 @@ public class Rectangle extends Figure {
         System.out.println("Figure: rectangle, area: "
                 + calculateArea()
                 + " sq.points, side1: "
-                + side1 + " units, side2: " + side2
+                + height + " units, side2: " + wight
                 + " units, color: " + getColor());
     }
 
     @Override
     public double calculateArea() {
-        return side1 * side2;
+        return height * wight;
     }
 }

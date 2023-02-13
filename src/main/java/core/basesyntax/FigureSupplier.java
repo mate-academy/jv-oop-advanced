@@ -8,6 +8,10 @@ public class FigureSupplier {
     public static final int MAX_BOUND = 30;
     public static final int RADIUS = 10;
 
+    private String getColor() {
+        return new ColorSupplier().getRandomColor();
+    }
+
     private int getBound() {
         return RANDOM.nextInt(MAX_BOUND) + 1;
     }
@@ -16,24 +20,19 @@ public class FigureSupplier {
         int figure = RANDOM.nextInt(FIGURE_COUNT) + 1;
         switch (figure) {
             case 1: {
-                return new Circle(new ColorSupplier().getRandomColor(),
-                        getBound());
+                return new Circle(getColor(), getBound());
             }
             case 2: {
-                return new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(),
-                        getBound(), getBound(), getBound());
+                return new IsoscelesTrapezoid(getColor(), getBound(), getBound(), getBound());
             }
             case 3: {
-                return new Rectangle(new ColorSupplier().getRandomColor(),
-                        getBound(), getBound());
+                return new Rectangle(getColor(), getBound(), getBound());
             }
             case 4: {
-                return new RightTriangle(new ColorSupplier().getRandomColor(),
-                        getBound(), getBound());
+                return new RightTriangle(getColor(), getBound(), getBound());
             }
             default: {
-                return new Square(new ColorSupplier().getRandomColor(),
-                        getBound());
+                return new Square(getColor(), getBound());
             }
         }
     }
