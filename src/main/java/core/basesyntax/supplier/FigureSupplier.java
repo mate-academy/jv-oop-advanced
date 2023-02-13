@@ -22,39 +22,22 @@ public class FigureSupplier {
 
         switch (figureNumber) {
             case 0:
-                return getRandomSquare(colorSupplier.getRandomColor(), firstSide);
+                return new Square(colorSupplier.getRandomColor(), firstSide);
             case 1:
-                return getRandomRectangle(colorSupplier.getRandomColor(), firstSide, secondSide);
+                return new Rectangle(colorSupplier.getRandomColor(), firstSide, secondSide);
             case 2:
-                return getRandomRightTriangle(colorSupplier.getRandomColor(), firstSide,
+                return new RightTriangle(colorSupplier.getRandomColor(), firstSide,
                         secondSide);
             case 3:
                 int thirdSide = random.nextInt(LIMIT_RANDOM);
                 String color = colorSupplier.getRandomColor();
-                return getRandomIsoscelesTrapezoid(color, firstSide, secondSide, thirdSide);
+                return new IsoscelesTrapezoid(color, firstSide, secondSide, thirdSide);
             default:
-                return getDefultFigure();
+                return new Circle(Color.WHITE.name(), DEFAULT_RADIUS);
         }
     }
 
     public Figure getDefultFigure() {
-        return new Circle("WHITE", DEFAULT_RADIUS);
-    }
-
-    private Square getRandomSquare(String color, int side) {
-        return new Square(color, side);
-    }
-
-    private Rectangle getRandomRectangle(String color, int firstSide, int secondSide) {
-        return new Rectangle(color, firstSide, secondSide);
-    }
-
-    private RightTriangle getRandomRightTriangle(String color, int firstSide, int secondSide) {
-        return new RightTriangle(color, firstSide, secondSide);
-    }
-
-    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid(String color, int firstSide,
-                                                           int secondSide, int thirdSide) {
-        return new IsoscelesTrapezoid(color, firstSide, secondSide, thirdSide);
+        return new Circle(Color.WHITE.name(), DEFAULT_RADIUS);
     }
 }
