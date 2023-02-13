@@ -6,8 +6,8 @@ public class Main {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figure = new Figure[NUMBER_OF_FIGURES];
-        for (int i = 0; i < NUMBER_OF_FIGURES; i++) {
-            if (i < NUMBER_OF_FIGURES / 2) {
+        for (int i = 0; i < figure.length; i++) {
+            if (i < figure.length / 2) {
                 figure[i] = figureSupplier.getRandomFigure();
                 figure[i].draw();
             } else {
