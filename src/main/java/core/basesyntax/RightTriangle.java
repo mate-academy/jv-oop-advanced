@@ -16,7 +16,7 @@ public class RightTriangle extends Figure {
                 + ", area:" + getArea()
                 + ", sq.units, base:" + base
                 + ", units, height: " + height
-                + ", units, color: " + getColor());
+                + ", units, color: " + getColor().name());
     }
 
     @Override

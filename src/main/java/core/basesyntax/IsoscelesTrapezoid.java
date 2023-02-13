@@ -19,7 +19,7 @@ public class IsoscelesTrapezoid extends Figure {
                 + ", sq.units, low side:" + lowSide
                 + ", units, top side: " + lowSide
                 + ", units, lateral side: " + lateralSide
-                + ", units, color: " + getColor());
+                + ", units, color: " + getColor().name());
     }
 
     @Override

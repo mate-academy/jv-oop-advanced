@@ -16,7 +16,7 @@ public class Rectangle extends Figure {
                 + ", area:" + getArea()
                 + ", sq.units, first side:" + firstSide
                 + ", units, second side: " + secondSide
-                + ", units, color: " + getColor());
+                + ", units, color: " + getColor().name());
     }
 
     @Override

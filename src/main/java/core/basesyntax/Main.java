@@ -13,7 +13,7 @@ public class Main {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
         }
-        for (Figure figure: figures) {
+        for (Figure figure : figures) {
             figure.print();
         }
     }
