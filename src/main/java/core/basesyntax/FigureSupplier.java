@@ -6,9 +6,9 @@ public class FigureSupplier {
     private static final int BOUND = 100;
     private static final double DEFAULT_VALUE = 10.0;
     private static final String DEFAULT_COLOR = Color.WHITE.name();
-    private Random random = new Random();
+    private final Random random = new Random();
 
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure(){
         int figureIndex = random.nextInt(Color.values().length);
@@ -45,7 +45,7 @@ public class FigureSupplier {
     }
 
     public Right_triangle getRandomRightTriangle() {
-        return new Right_triangle(random.nextInt(BOUND), random.nextInt(BOUND), (colorSupplier.randomColor());
+        return new Right_triangle(random.nextInt(BOUND), random.nextInt(BOUND), colorSupplier.randomColor());
     }
 
     public Isosceles_trapezoid getRandomIsoscelesTrapezoid() {
