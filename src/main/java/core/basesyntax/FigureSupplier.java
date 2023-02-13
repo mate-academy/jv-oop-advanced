@@ -23,6 +23,11 @@ public class FigureSupplier {
                 return getRandomSquare();
         }
     }
+
+    public Figure getDefaultFigure() {
+        return new Circle(Color.WHITE, CIRCLE_RADIUS);
+    }
+
     private Circle getRandomCircle() {
         return new Circle(colorSupplier.getRandomColor(),
                 random.nextInt(MAX_BOUND_NUMBER));
@@ -50,9 +55,5 @@ public class FigureSupplier {
     private Square getRandomSquare() {
         return new Square(colorSupplier.getRandomColor(),
                 random.nextInt(MAX_BOUND_NUMBER));
-    }
-
-    public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE, CIRCLE_RADIUS);
     }
 }
