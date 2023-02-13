@@ -9,10 +9,10 @@ public class Main {
         for (int i = 0; i < NUMBER_OF_FIGURES; i++) {
             if (i < NUMBER_OF_FIGURES / 2) {
                 figure[i] = figureSupplier.getRandomFigure();
-                figure[i].drawTheInformation();
+                figure[i].draw();
             } else {
                 figure[i] = figureSupplier.getDefaultFigure();
-                figure[i].drawTheInformation();
+                figure[i].draw();
             }
         }
     }

@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int DEFAULT_RADIUS = 10;
+    private static final int DEFAULT_BOUND = 45;
 
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
@@ -55,6 +56,6 @@ public class FigureSupplier {
     }
 
     public double getRandomDouble() {
-        return random.nextInt(45);
+        return random.nextInt(DEFAULT_BOUND);
     }
 }
