@@ -49,7 +49,8 @@ public class FigureSupplier {
         double lowSide = random.nextInt(MAX_VALUE);
         double topSide = random.nextInt(MAX_VALUE);
         double lateralSide = random.nextInt(MAX_VALUE);
-        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), lowSide, topSide, lateralSide);
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                lowSide, topSide, lateralSide);
     }
 
     private Figure getRightTriangle() {

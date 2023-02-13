@@ -24,7 +24,8 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double getArea() {
-        double height = Math.sqrt(Math.pow(lateralSide, 2) - Math.pow(lowSide - lateralSide, 2) / 4);
+        double height = Math.sqrt(Math.pow(lateralSide, 2)
+                - Math.pow(lowSide - lateralSide, 2) / 4);
         return ((lowSide + topSide) / 2) / height;
     }
 }
