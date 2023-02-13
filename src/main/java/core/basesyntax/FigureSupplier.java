@@ -12,15 +12,15 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         int randomFigure = random.nextInt(FigureName.values().length);
         switch (FigureName.values()[randomFigure]) {
-            case Isosceles_Trapezoid:
+            case ISOSCELES_TRAPEZOID:
                 return getIsoscelesTrapezoid();
-            case Rectangle:
+            case RECTANGLE:
                 return getRectangle();
-            case Square:
+            case SQUARE:
                 return getSquare();
-            case Right_Triangle:
+            case RIGHT_TRIANGLE:
                 return getRightTriangle();
-            case Circle:
+            case CIRCLE:
                 return getCircle();
             default:
                 return getDefaultFigure();

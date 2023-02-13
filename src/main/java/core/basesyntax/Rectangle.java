@@ -12,7 +12,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void print() {
-        System.out.println("Figure: " + FigureName.Rectangle.name()
+        System.out.println("Figure: " + FigureName.RECTANGLE.name()
                 + ", area:" + getArea()
                 + ", sq.units, first side:" + firstSide
                 + ", units, second side: " + secondSide

@@ -14,7 +14,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void print() {
-        System.out.println("Figure: " + FigureName.Isosceles_Trapezoid.name()
+        System.out.println("Figure: " + FigureName.ISOSCELES_TRAPEZOID.name()
                 + ", area:" + getArea()
                 + ", sq.units, low side:" + lowSide
                 + ", units, top side: " + lowSide
@@ -24,7 +24,8 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double getArea() {
-        double heigh = Math.sqrt(Math.pow(lateralSide, 2) - Math.pow(lowSide - lateralSide, 2) / 4);
-        return ((lowSide + topSide) / 2) / heigh;
+        double height = Math.sqrt(Math.pow(lateralSide, 2)
+                - Math.pow(lowSide - lateralSide, 2) / 4);
+        return ((lowSide + topSide) / 2) / height;
     }
 }
