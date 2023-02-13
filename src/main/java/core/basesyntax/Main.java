@@ -7,7 +7,7 @@ public class Main {
         Figure[] figures = new Figure[ARRAY_LENGTH];
         FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < ARRAY_LENGTH; i++) {
-            if (i <= ARRAY_LENGTH / 2) {
+            if (i < ARRAY_LENGTH / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
