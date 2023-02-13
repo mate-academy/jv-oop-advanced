@@ -8,20 +8,20 @@ public class RightTriangle extends Figure {
     private final double leg;
 
     public RightTriangle(String color, double height, double hypotenuse, double leg) {
-        super(color, NameOfFigure.TRIANGLE.toString());
+        super(color, NameOfFigure.TRIANGLE.name());
         this.height = height;
         this.hypotenuse = hypotenuse;
         this.leg = leg;
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return leg * height;
     }
 
     @Override
-    public void drawFigure() {
-        System.out.println("Фігура: " + getName() + ", площа: " + getArea()
+    public void draw() {
+        System.out.println("Фігура: " + getName() + ", площа: " + calculateArea()
                 + " квадратних одиниць, " + "основа: " + leg
                 + ", гіпотенуза: " + hypotenuse + ", висота: " + height + " колір: " + getColor());
     }

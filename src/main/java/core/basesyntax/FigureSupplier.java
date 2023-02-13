@@ -7,7 +7,6 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int RANGE_OF_RANDOM = 100;
     private static final int CIRCLE_RADIUS = 10;
-    private final Figure defaultCircle = new Circle(Color.WHITE.toString(), CIRCLE_RADIUS);
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -32,11 +31,12 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return defaultCircle;
+        return new Circle(Color.WHITE.name(), CIRCLE_RADIUS);
     }
 
     private NameOfFigure getRandomNameOfFigure() {
-        return NameOfFigure.values()[random.nextInt(NameOfFigure.values().length)];
+        int randomNumber = random.nextInt(NameOfFigure.values().length);
+        return NameOfFigure.values()[randomNumber];
     }
 
     private double getRandomNumber() {
