@@ -15,8 +15,8 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        int getRandomFigureNumber = random.nextInt(NUMBER_OF_FIGURES);
-        switch (getRandomFigureNumber) {
+        int randomFigureNumber = random.nextInt(NUMBER_OF_FIGURES);
+        switch (randomFigureNumber) {
             case 0:
                 return getRandomSquare();
             case 1:
