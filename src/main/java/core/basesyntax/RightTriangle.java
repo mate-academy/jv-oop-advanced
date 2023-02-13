@@ -10,11 +10,11 @@ public class RightTriangle extends Figure {
         this.secondLeg = secondLeg;
     }
 
-    public double getLeg1() {
+    public double getFirstLeg() {
         return firstLeg;
     }
 
-    public double getLeg2() {
+    public double getSecondLeg() {
         return secondLeg;
     }
 
@@ -26,7 +26,7 @@ public class RightTriangle extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: " + "right triangle" + ", area: " + calculateArea()
-                + ", firstLeg: " + getLeg1() + ", secondLeg: " + getLeg2() + ", color: "
+                + ", firstLeg: " + firstLeg + ", secondLeg: " + secondLeg + ", color: "
                 + getColor());
     }
 }

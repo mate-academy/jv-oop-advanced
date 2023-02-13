@@ -10,7 +10,7 @@ public class Main {
         for (int i = 0; i < RANDOM_FIGURES_QUANTITY; i++) {
             figures[i] = figureSupplier.getRandomFigure();
         }
-        figures[5] = figureSupplier.getDefaultFigure();
+        figures[5] = figureSupplier.getDefaultCircle();
         figures[6] = figureSupplier.getDefaultSquare();
         figures[7] = figureSupplier.getDefaultIsoscelesTrapezoid();
         figures[8] = figureSupplier.getDefaultRightTriangle();

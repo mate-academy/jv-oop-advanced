@@ -28,37 +28,37 @@ public class FigureSupplier {
                 return getRandomRightTriangle();
             case ISOSCELES_TRAPEZOID:
                 return getRandomIsoscelesTrapezoid();
-            default: return getDefaultFigure();
+            default: return getDefaultCircle();
         }
     }
 
-    private Figure getRandomSquare() {
+    public Figure getRandomSquare() {
         int randomSide = secureRandom.nextInt(RANDOMIZER_BOUND);
         Color randomColor = colorSupplier.getColor();
         return new Square(randomSide, randomColor);
     }
 
-    private Figure getRandomRectangle() {
+    public Figure getRandomRectangle() {
         int randomLength = secureRandom.nextInt(RANDOMIZER_BOUND);
         int randomWidth = secureRandom.nextInt(RANDOMIZER_BOUND);
         Color randomColor = colorSupplier.getColor();
         return new Rectangle(randomLength, randomWidth, randomColor);
     }
 
-    private Figure getRandomCircle() {
+    public Figure getRandomCircle() {
         int randomRadius = secureRandom.nextInt(RANDOMIZER_BOUND);
         Color randomColor = colorSupplier.getColor();
         return new Circle(randomRadius, randomColor);
     }
 
-    private Figure getRandomRightTriangle() {
+    public Figure getRandomRightTriangle() {
         int randomFirstLeg = secureRandom.nextInt(RANDOMIZER_BOUND);
         int randomSecondLeg = secureRandom.nextInt(RANDOMIZER_BOUND);
         Color randomColor = colorSupplier.getColor();
         return new RightTriangle(randomFirstLeg, randomSecondLeg, randomColor);
     }
 
-    private Figure getRandomIsoscelesTrapezoid() {
+    public Figure getRandomIsoscelesTrapezoid() {
         int randomUpperBase = secureRandom.nextInt(RANDOMIZER_BOUND);
         int randomLowerBase = secureRandom.nextInt(RANDOMIZER_BOUND);
         int randomSide = secureRandom.nextInt(RANDOMIZER_BOUND);
@@ -66,7 +66,7 @@ public class FigureSupplier {
         return new IsoscelesTrapezoid(randomUpperBase, randomLowerBase, randomSide, randomColor);
     }
 
-    public Figure getDefaultFigure() {
+    public Figure getDefaultCircle() {
         return new Circle(DEFAULT_RADIUS, Color.WHITE);
     }
 
@@ -86,5 +86,4 @@ public class FigureSupplier {
     public Figure getDefaultRightTriangle() {
         return new RightTriangle(DEFAULT_LEG, DEFAULT_LEG, Color.WHITE);
     }
-
 }
