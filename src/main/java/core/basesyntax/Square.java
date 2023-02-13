@@ -10,7 +10,7 @@ public class Square extends Figure {
 
     @Override
     public void print() {
-        System.out.println("Figure: " + Figures.Square.name()
+        System.out.println("Figure: " + FigureName.Square.name()
                 + ", area: " + getArea()
                 + ", sq.units, side: " + side
                 + ", units, color: " + getColor());
@@ -18,6 +18,6 @@ public class Square extends Figure {
 
     @Override
     public double getArea() {
-        return Math.pow(side,2);
+        return Math.pow(side, 2);
     }
 }

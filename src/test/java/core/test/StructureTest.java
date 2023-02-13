@@ -16,7 +16,7 @@ import org.junit.Test;
 
 public class StructureTest {
   private static final List<String> figureClassNames = List
-      .of("Circle", "Square", "IsoscelesTrapezoid", "Rectangle", "RightTriangle");
+      .of("Circle", "Square", "IsoscelesTrapezoid", "Rectangle", "Right_Triangle");
   private static List<Class> allClasses = new ArrayList<>();
 
   @BeforeClass
@@ -106,7 +106,7 @@ public class StructureTest {
   private void checkSuperClassInterfaces(Class clazz) {
     Class[] interfaces = clazz.getInterfaces();
     if (interfaces.length == 0) {
-      Assert.fail("Figures parent class " + clazz.getSuperclass().getSimpleName()
+      Assert.fail("FigureName parent class " + clazz.getSuperclass().getSimpleName()
               +" should implement interfaces that describe common"
               + " behavior for all classes of figures");
     }

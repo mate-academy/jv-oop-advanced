@@ -12,7 +12,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public void print() {
-        System.out.println("Figure: " + Figures.RightTriangle.name()
+        System.out.println("Figure: " + FigureName.Right_Triangle.name()
                 + ", area:" + getArea()
                 + ", sq.units, base:" + base
                 + ", units, height: " + height
