@@ -1,35 +1,31 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-
     private double firstLeg;
     private double secondLeg;
     private double side;
-    private Color color;
-    private double semiPerimeter = (firstLeg + secondLeg + side * 2) / 2;
 
     public IsoscelesTrapezoid(double firstLeg, double secondLeg, double side, Color color) {
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
         this.side = side;
-        this.color = color;
     }
 
     @Override
     public double getArea() {
-        area = Math.sqrt(Math.pow((semiPerimeter - firstLeg) * (semiPerimeter - secondLeg)
-                * (semiPerimeter - side), 2));
-        return area;
+        return Math.sqrt(Math.pow(((firstLeg + secondLeg + side * 2) / 2 - firstLeg)
+                * ((firstLeg + secondLeg + side * 2) / 2 - secondLeg)
+                * ((firstLeg + secondLeg + side * 2) / 2 - side), 2));
     }
 
     @Override
-    public String drawFigure() {
+    public void draw() {
         System.out.println("Figure: isosceles trapezoid, "
-                + "area: " + Math.floor(area) + " sq.units, "
+                + "area: " + Math.floor(getArea()) + " sq.units, "
                 + "firstLeg: " + firstLeg + " units"
                 + ", secondLeg: " + secondLeg + " units"
                 + ", side: " + side + " units"
                 + ", color: " + color.toString().toLowerCase());
-        return null;
     }
 }
