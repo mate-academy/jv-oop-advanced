@@ -1,37 +1,26 @@
 package core.basesyntax;
 
-public class Rectangle extends Square {
+public class Rectangle extends Figure {
+    private double firstSide;
     private double secondSide;
 
-    public Rectangle() {
-        super();
-        setName(FigureType.RECTANGLE);
-        this.secondSide = 1;
-    }
-
-    public Rectangle(FigureType name, String color, double firstSide, double secondSide) {
-        super(name, color, firstSide);
-        setSecondSide(secondSide);
-    }
-
-    public double getSecondSide() {
-        return secondSide;
-    }
-
-    public void setSecondSide(double secondSide) {
-        this.secondSide = (secondSide >= 0) ? secondSide : 0;
+    public Rectangle(String color, double firstSide, double secondSide) {
+        super(FigureType.RECTANGLE, color);
+        this.firstSide = firstSide;
+        this.secondSide = secondSide;
     }
 
     @Override
     public double getArea() {
-        return getSide() * secondSide;
+        return firstSide * secondSide;
     }
 
     @Override
-    public String toDraw() {
+    public void draw() {
         StringBuilder builder = new StringBuilder();
-        return builder.append(super.toDraw()).append(", first side: ").append(getSide())
+        System.out.println(builder.append("Figure: ").append(getName())
+                .append(", color: ").append(getColor()).append(", first side: ").append(firstSide)
                 .append(", second side: ").append(secondSide).append(", area: ")
-                .append(getArea()).toString();
+                .append(getArea()).toString());
     }
 }

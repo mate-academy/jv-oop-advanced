@@ -3,23 +3,9 @@ package core.basesyntax;
 public class Circle extends Figure {
     private double radius;
 
-    public Circle() {
-        super();
-        setName(FigureType.CIRCLE);
-        this.radius = 1;
-    }
-
-    public Circle(FigureType name, String color, double radius) {
-        super(name, color);
+    public Circle(String color, double radius) {
+        super(FigureType.CIRCLE, color);
         this.radius = radius;
-    }
-
-    public double getRadius() {
-        return radius;
-    }
-
-    public void setRadius(float radius) {
-        this.radius = (radius >= 0) ? radius : 0;
     }
 
     @Override
@@ -28,9 +14,10 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String toDraw() {
+    public void draw() {
         StringBuilder builder = new StringBuilder();
-        return builder.append(super.toDraw()).append(", radius: ").append(radius)
-                .append(", area: ").append(getArea()).toString();
+        System.out.println(builder.append("Figure: ").append(getName())
+                .append(", color: ").append(getColor()).append(", radius: ").append(radius)
+                .append(", area: ").append(getArea()).toString());
     }
 }

@@ -5,44 +5,12 @@ public class IsoscelesTrapezoid extends Figure {
     private double topBase;
     private double bottomBase;
 
-    public IsoscelesTrapezoid() {
-        super();
-        setName(FigureType.ISOSCELESTRAPEZOID);
-        this.side = 1;
-        this.topBase = 1;
-        this.bottomBase = 1;
-    }
-
-    public IsoscelesTrapezoid(FigureType name, String color, double side,
+    public IsoscelesTrapezoid(String color, double side,
                                double topBase, double bottomBase) {
-        super(name, color);
-        setSide(side);
-        setTopBase(topBase);
-        setBottomBase(bottomBase);
-    }
-
-    public double getSide() {
-        return side;
-    }
-
-    public void setSide(double side) {
-        this.side = (side >= 0) ? side : 0;
-    }
-
-    public double getTopBase() {
-        return topBase;
-    }
-
-    public void setTopBase(double topBase) {
-        this.topBase = (topBase >= 0) ? topBase : 0;
-    }
-
-    public double getBottomBase() {
-        return bottomBase;
-    }
-
-    public void setBottomBase(double bottomBase) {
-        this.bottomBase = (bottomBase >= 0) ? bottomBase : 0;
+        super(FigureType.ISOSCELESTRAPEZOID, color);
+        this.side = side;
+        this.topBase = topBase;
+        this.bottomBase = bottomBase;
     }
 
     @Override
@@ -52,10 +20,11 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String toDraw() {
+    public void draw() {
         StringBuilder builder = new StringBuilder();
-        return builder.append(super.toDraw()).append(", side: ").append(side)
+        System.out.println(builder.append("Figure: ").append(getName())
+                .append(", color: ").append(getColor()).append(", side: ").append(side)
                 .append(", top base: ").append(topBase).append(", bottom base: ")
-                .append(bottomBase).append(", area: ").append(getArea()).toString();
+                .append(bottomBase).append(", area: ").append(getArea()).toString());
     }
 }
