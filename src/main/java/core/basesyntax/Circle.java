@@ -1,9 +1,10 @@
 package core.basesyntax;
 
-public abstract class Circle implements CountArea {
-    privat int radius;
+public class Circle extends Figure {
+    private double radius;
 
-    public Circle (int radius) {
+    public Circle (Color color, double radius) {
+        super(color);
         this.radius = radius;
     }
 
@@ -13,7 +14,7 @@ public abstract class Circle implements CountArea {
     }
 
     @Override
-    public void getDraw() {
+    public void draw() {
         System.out.println("Figure: circle, "
                 + "area: " + Math.floor(getArea()) + " sq.units, "
                 + "radius: " + radius + " units, "

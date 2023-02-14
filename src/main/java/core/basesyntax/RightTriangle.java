@@ -1,10 +1,11 @@
 package core.basesyntax;
 
-public class RightTriangle implements CountArea {
+public class RightTriangle extends Figure implements AreaCalculator, Drawable {
     private int side;
     private int height;
 
-    public RightTriangle (int side, int height) {
+    public RightTriangle (Color color, int side, int height) {
+        super(color);
         this.side = side;
         this.height = height;
     }
@@ -15,7 +16,7 @@ public class RightTriangle implements CountArea {
     }
 
     @Override
-    public void getDraw() {
+    public void draw() {
         System.out.println("Figure: right triangle, "
                 + "area: " + Math.floor(getArea()) + " sq.units, "
                 + "side: " + side + " units, "

@@ -9,11 +9,11 @@ public class Main {
         Figure[] figure = new Figure[size];
         for (int i = 0; i < figure.length / 2; i++) {
             figure[i] = supplier.getRandomFigure();
-            figure[i] = getDraw();
+            figure[i].draw();
         }
         for (int i = figure.length / 2; i < figure.length; i++) {
-            figure[i] = supplier.getRandomFigure();
-            figure[i] = getDraw();
+            figure[i] = supplier.getDefaultFigure();
+            figure[i].draw();
         }
     }
 }

@@ -1,8 +1,6 @@
 package core.basesyntax;
 
-public interface CountArea {
-    String color;
+public interface AreaCalculator {
 
     double getArea();
-    }
 }

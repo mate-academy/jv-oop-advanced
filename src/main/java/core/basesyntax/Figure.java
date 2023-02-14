@@ -1,6 +1,15 @@
 package core.basesyntax;
 
-public class Figure {
+public abstract class Figure implements Drawable {
 
-    public Figure
+    public Color color;
+
+    public Figure (Color color) {
+        this.color = color;
+    }
+
+    public abstract double getArea();
+
+    @Override
+    public abstract void draw();
 }

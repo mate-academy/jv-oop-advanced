@@ -1,9 +1,10 @@
 package core.basesyntax;
 
-public class Square implements CountArea {
+public class Square extends Figure implements AreaCalculator, Drawable {
     private int side;
 
-    public Square (int side) {
+    public Square (Color color, int side) {
+        super(color);
         this.side = side;
     }
 
@@ -13,7 +14,7 @@ public class Square implements CountArea {
     }
 
     @Override
-    public void getDraw() {
+    public void draw() {
         System.out.println("Figure: square, "
         + "area: " + Math.floor(getArea()) + " sq.units, "
         + "side: " + side + " units, "

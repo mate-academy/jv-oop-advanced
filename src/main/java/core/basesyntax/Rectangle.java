@@ -1,10 +1,11 @@
 package core.basesyntax;
 
-public class Rectangle implements CountArea {
+public class Rectangle extends Figure implements AreaCalculator, Drawable {
     private int length;
     private int width;
 
-    public Rectangle (int length, int width) {
+    public Rectangle (Color color, int length, int width) {
+        super(color);
         this.length = length;
         this.width = width;
     }
@@ -15,7 +16,7 @@ public class Rectangle implements CountArea {
     }
 
     @Override
-    public void getDraw() {
+    public void draw() {
         System.out.println("Figure: rectangle, "
                 + "area: " + Math.floor(getArea()) + " sq.units, "
                 + "length: " + length + " units, "
