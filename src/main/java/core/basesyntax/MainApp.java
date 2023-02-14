@@ -11,7 +11,6 @@ public class MainApp {
             figures[i] = i < FIGURES_QUANTITY / 2 ? figureSupplier.getRandomFigure() :
                     figureSupplier.getDefaultFigure();
         }
-
         for (Figure figure: figures) {
             figure.draw();
         }
