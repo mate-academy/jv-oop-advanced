@@ -22,6 +22,6 @@ public class RightTriangle extends Figure {
                 + "area: " + Math.floor(getArea()) + " sq.units, "
                 + "firstLeg: " + firstLeg + " units"
                 + ", secondLeg: " + secondLeg + " units"
-                + ", color: " + color.toString().toLowerCase());
+                + ", color: " + getColor().name().toLowerCase());
     }
 }

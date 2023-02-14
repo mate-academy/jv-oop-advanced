@@ -6,7 +6,6 @@ public class Square extends Figure {
     public Square(double side, Color color) {
         super(color);
         this.side = side;
-
     }
 
     @Override
@@ -19,6 +18,6 @@ public class Square extends Figure {
         System.out.println("Figure: square, "
                 + "area: " + Math.floor(getArea()) + " sq.units, "
                 + "side: " + side + " units"
-                + ", color: " + color.toString().toLowerCase());
+                + ", color: " + getColor().name().toLowerCase());
     }
 }

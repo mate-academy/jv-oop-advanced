@@ -12,16 +12,15 @@ public class Rectangle extends Figure {
 
     @Override
     public double getArea() {
-        area = width * length;
-        return area;
+        return width * length;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: rectangle, "
-                + "area: " + Math.floor(area) + " sq.units, "
+                + "area: " + Math.floor(getArea()) + " sq.units, "
                 + "width: " + width + " units"
                 + ", length: " + length + " units"
-                + ", color: " + color.toString().toLowerCase());
+                + ", color: " + getColor().name().toLowerCase());
     }
 }
