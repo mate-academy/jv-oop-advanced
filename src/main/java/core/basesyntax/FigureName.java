@@ -4,6 +4,6 @@ public enum FigureName {
     CIRCLE,
     SQUARE,
     RECTANGLE,
-    RIGHTTRIANGLE,
-    ISOSCELESTRAPESOID;
+    RIGHT_TRIANGLE,
+    ISOSCELES_TRAPESOID;
 }

@@ -11,21 +11,21 @@ public class FigureSupplier {
         Figure figure;
         int index = random.nextInt(FigureName.values().length);
         switch (FigureName.values()[index]) {
-            case CIRCLE :
+            case CIRCLE:
                 figure = new Circle(colorSupplier.getRandomColor(), random.nextInt(BOUND));
                 break;
-            case SQUARE :
+            case SQUARE:
                 figure = new Square(colorSupplier.getRandomColor(), random.nextInt(BOUND));
                 break;
-            case RECTANGLE :
+            case RECTANGLE:
                 figure = new Rectangle(colorSupplier.getRandomColor(),
                         random.nextInt(BOUND), random.nextInt(BOUND));
                 break;
-            case RIGHTTRIANGLE:
+            case RIGHT_TRIANGLE:
                 figure = new RightTriangle(colorSupplier.getRandomColor(),
                         random.nextInt(BOUND), random.nextInt(BOUND));
                 break;
-            default :
+            default:
                 figure = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                         random.nextInt(BOUND), random.nextInt(BOUND), random.nextInt(BOUND));
                 break;
