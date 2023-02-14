@@ -22,11 +22,11 @@ public class FigureSupplier {
             case 4:
                 return getRandomCircle();
             default:
-                return getDefaultFigure();
+                return getDefaultCircle();
         }
     }
 
-    public Figure getDefaultFigure() {
+    public Figure getDefaultCircle() {
         return new Circle(DEFAULT_COLOR,
                 DEFAULT_PROPERTY_SIZE);
     }

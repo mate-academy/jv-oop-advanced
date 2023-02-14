@@ -10,7 +10,7 @@ public class Main {
             if (i < generatedFigures.length / 2) {
                 generatedFigures[i] = figureSupplier.getRandomFigure();
             } else {
-                generatedFigures[i] = figureSupplier.getDefaultFigure();
+                generatedFigures[i] = figureSupplier.getDefaultCircle();
             }
             generatedFigures[i].draw();
         }
