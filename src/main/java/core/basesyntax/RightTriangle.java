@@ -1,10 +1,10 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements AreaCalculator, Drawable {
+public class RightTriangle extends Figure {
     private int side;
     private int height;
 
-    public RightTriangle (Color color, int side, int height) {
+    public RightTriangle(Color color, int side, int height) {
         super(color);
         this.side = side;
         this.height = height;
@@ -18,9 +18,9 @@ public class RightTriangle extends Figure implements AreaCalculator, Drawable {
     @Override
     public void draw() {
         System.out.println("Figure: right triangle, "
-                + "area: " + Math.floor(getArea()) + " sq.units, "
+                + "area: " + getArea() + " sq.units, "
                 + "side: " + side + " units, "
                 + "height: " + height + " units, "
-                + "color: " + color.toString().toLowerCase());
+                + "color: " + getColor().name());
     }
 }

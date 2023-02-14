@@ -3,28 +3,31 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    public static final int BOUND = 20;
     private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        Color color = ColorSupplier.getRandomColor();
         Figure figure;
-        FigureSupplier supplier = new FigureSupplier();
         int index = random.nextInt(FigureName.values().length);
         switch (FigureName.values()[index]) {
             case CIRCLE :
-                figure = new Circle(color, random.nextInt());
+                figure = new Circle(colorSupplier.getRandomColor(), random.nextInt(BOUND));
                 break;
             case SQUARE :
-                figure = new Square();
+                figure = new Square(colorSupplier.getRandomColor(), random.nextInt(BOUND));
                 break;
             case RECTANGLE :
-                figure = new Rectangle();
+                figure = new Rectangle(colorSupplier.getRandomColor(),
+                        random.nextInt(BOUND), random.nextInt(BOUND));
                 break;
             case RIGHTTRIANGLE:
-                figure = new RightTriangle();
+                figure = new RightTriangle(colorSupplier.getRandomColor(),
+                        random.nextInt(BOUND), random.nextInt(BOUND));
                 break;
-            case ISOSCELESTRAPESOID :
-                figure = new IsoscelesTrapezoid();
+            default :
+                figure = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        random.nextInt(BOUND), random.nextInt(BOUND), random.nextInt(BOUND));
                 break;
         }
         return figure;

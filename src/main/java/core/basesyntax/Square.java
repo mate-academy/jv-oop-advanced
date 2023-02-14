@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public class Square extends Figure implements AreaCalculator, Drawable {
+public class Square extends Figure {
     private int side;
 
-    public Square (Color color, int side) {
+    public Square(Color color, int side) {
         super(color);
         this.side = side;
     }
@@ -16,8 +16,8 @@ public class Square extends Figure implements AreaCalculator, Drawable {
     @Override
     public void draw() {
         System.out.println("Figure: square, "
-        + "area: " + Math.floor(getArea()) + " sq.units, "
-        + "side: " + side + " units, "
-        + "color: " + color.toString().toLowerCase());
+                + "area: " + getArea() + " sq.units, "
+                + "side: " + side + " units, "
+                + "color: " + getColor().name());
     }
 }
