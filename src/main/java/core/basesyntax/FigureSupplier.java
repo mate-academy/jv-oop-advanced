@@ -22,7 +22,7 @@ public class FigureSupplier {
             case 4:
                 return getRandomCircle();
             default:
-                throw new NullPointerException();
+                return getDefaultFigure();
         }
     }
 
