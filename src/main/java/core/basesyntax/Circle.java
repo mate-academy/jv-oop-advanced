@@ -1,12 +1,12 @@
 package core.basesyntax;
 
-import core.basesyntax.enums.NameOfFigure;
+import core.basesyntax.enums.FigureType;
 
 public class Circle extends Figure {
     private final double radius;
 
     public Circle(String color, double radius) {
-        super(color, NameOfFigure.CIRCLE.name());
+        super(color, FigureType.CIRCLE.name());
         this.radius = radius;
     }
 

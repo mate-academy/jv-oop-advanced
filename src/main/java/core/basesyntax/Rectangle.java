@@ -1,13 +1,13 @@
 package core.basesyntax;
 
-import core.basesyntax.enums.NameOfFigure;
+import core.basesyntax.enums.FigureType;
 
 public class Rectangle extends Figure {
     private final double firstLeg;
     private final double secondLeg;
 
     public Rectangle(String color, double firstLeg, double secondLeg) {
-        super(color, NameOfFigure.RECTANGLE.name());
+        super(color, FigureType.RECTANGLE.name());
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }

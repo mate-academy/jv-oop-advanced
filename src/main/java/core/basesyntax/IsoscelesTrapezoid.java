@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-import core.basesyntax.enums.NameOfFigure;
+import core.basesyntax.enums.FigureType;
 
 public class IsoscelesTrapezoid extends Figure {
     private final double firstLeg;
@@ -8,7 +8,7 @@ public class IsoscelesTrapezoid extends Figure {
     private final double height;
 
     public IsoscelesTrapezoid(String color, double firstLeg, double secondLeg, double height) {
-        super(color, NameOfFigure.TRAPEZOID.name());
+        super(color, FigureType.TRAPEZOID.name());
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
         this.height = height;

@@ -1,12 +1,12 @@
 package core.basesyntax;
 
-import core.basesyntax.enums.NameOfFigure;
+import core.basesyntax.enums.FigureType;
 
 public class Square extends Figure {
     private final double leg;
 
     public Square(String color, double leg) {
-        super(color, NameOfFigure.SQUARE.name());
+        super(color, FigureType.SQUARE.name());
         this.leg = leg;
     }
 

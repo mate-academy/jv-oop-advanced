@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-import core.basesyntax.enums.NameOfFigure;
+import core.basesyntax.enums.FigureType;
 
 public class RightTriangle extends Figure {
     private final double height;
@@ -8,7 +8,7 @@ public class RightTriangle extends Figure {
     private final double leg;
 
     public RightTriangle(String color, double height, double hypotenuse, double leg) {
-        super(color, NameOfFigure.TRIANGLE.name());
+        super(color, FigureType.TRIANGLE.name());
         this.height = height;
         this.hypotenuse = hypotenuse;
         this.leg = leg;

@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 import core.basesyntax.enums.Color;
-import core.basesyntax.enums.NameOfFigure;
+import core.basesyntax.enums.FigureType;
 import java.util.Random;
 
 public class FigureSupplier {
@@ -33,9 +33,9 @@ public class FigureSupplier {
         return new Circle(COLOR_WHITE, CIRCLE_RADIUS);
     }
 
-    private NameOfFigure getRandomNameOfFigure() {
-        int randomNumber = random.nextInt(NameOfFigure.values().length);
-        return NameOfFigure.values()[randomNumber];
+    private FigureType getRandomNameOfFigure() {
+        int randomNumber = random.nextInt(FigureType.values().length);
+        return FigureType.values()[randomNumber];
     }
 
     private double getRandomNumber() {

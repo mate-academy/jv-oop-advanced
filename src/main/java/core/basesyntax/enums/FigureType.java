@@ -1,6 +1,6 @@
 package core.basesyntax.enums;
 
-public enum NameOfFigure {
+public enum FigureType {
     CIRCLE,
     SQUARE,
     TRAPEZOID,
