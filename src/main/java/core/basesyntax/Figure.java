@@ -1,10 +1,9 @@
 package core.basesyntax;
 
-public class Figure implements AreaCalculator {
+public abstract class Figure implements AreaCalculator, Drawable {
     protected String color;
 
     public Figure(){
-
     }
 
     public Figure(String color) {
@@ -15,10 +14,5 @@ public class Figure implements AreaCalculator {
     public String toString() {
         return "Figure: " + getClass().getSimpleName()
                 + ", color: " + color;
-    }
-
-    @Override
-    public float getArea() {
-        return 0;
     }
 }

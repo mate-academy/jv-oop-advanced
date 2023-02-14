@@ -23,7 +23,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String toString() {
+    public String draw() {
         return super.toString()
                 + ", area: " + getArea()
                 + " sq.units, first side: " + firstSide

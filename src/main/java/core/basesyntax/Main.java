@@ -19,7 +19,7 @@ public class Main {
         figureArray[4] = figureSupplier.getDefaultFigure();
         figureArray[5] = figureSupplier.getDefaultFigure();
         for (Figure figure:figureArray) {
-            System.out.println(figure);
+            System.out.println(figure.draw());
         }
     }
 }

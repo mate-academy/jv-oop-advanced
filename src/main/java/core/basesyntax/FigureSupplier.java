@@ -4,6 +4,8 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int FIGURE_BOUND = 4;
+    private static final int EXAMPLE_BOUND = 100;
+    private static final int CIRCLE_RADIUS = 10;
     private final Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -12,22 +14,24 @@ public class FigureSupplier {
         String color = colorSupplier.getRandomColor();
         switch (figureNumber) {
             case 0:
-                return new Square(color, random.nextInt(100));
+                return new Square(color, random.nextInt(EXAMPLE_BOUND));
             case 1:
-                return new Rectangle(color, random.nextInt(100), random.nextInt(100));
+                return new Rectangle(color, random.nextInt(EXAMPLE_BOUND),
+                        random.nextInt(EXAMPLE_BOUND));
             case 2:
-                return new RightTriangle(color, random.nextInt(100), random.nextInt(100));
+                return new RightTriangle(color, random.nextInt(EXAMPLE_BOUND),
+                        random.nextInt(EXAMPLE_BOUND));
             case 3:
-                return new Circle(color, random.nextInt(100));
+                return new Circle(color, random.nextInt(EXAMPLE_BOUND));
             case 4:
-                return new IsoscelesTrapezoid(color, random.nextInt(100),
-                        random.nextInt(100), random.nextInt(100));
+                return new IsoscelesTrapezoid(color, random.nextInt(EXAMPLE_BOUND),
+                        random.nextInt(EXAMPLE_BOUND), random.nextInt(EXAMPLE_BOUND));
             default: break;
         }
-        return new Figure();
+        return new Square();
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.toString(), 10);
+        return new Circle(Color.WHITE.toString(), CIRCLE_RADIUS);
     }
 }
