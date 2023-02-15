@@ -23,10 +23,12 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String draw() {
-        return super.toString()
-                + ", area: " + getArea()
+    public void draw() {
+        String output = ", area: " + getArea()
                 + " sq.units, first side: " + firstSide
                 + " units, second side: " + secondSide + " units";
+        super.draw();
+        System.out.println(output);
+
     }
 }

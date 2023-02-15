@@ -17,8 +17,10 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String draw() {
-        return super.toString() + ", area: " + getArea()
+    public void draw() {
+        super.draw();
+        String output = ", area: " + getArea()
                 + " sq.units, radius " + radius + " units";
+        System.out.println(output);
     }
 }

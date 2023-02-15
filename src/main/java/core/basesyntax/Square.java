@@ -22,8 +22,10 @@ public class Square extends Figure {
     }
 
     @Override
-    public String draw() {
-        return super.toString() + ", area: " + getArea()
+    public void draw() {
+        String output = ", area: " + getArea()
                 + " sq.units, side: " + side + " units";
+        super.draw();
+        System.out.println(output);
     }
 }

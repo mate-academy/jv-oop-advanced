@@ -12,7 +12,6 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_BOUND);
-        String color = colorSupplier.getRandomColor();
         switch (figureNumber) {
             case 0:
                 return getRandomSquare();

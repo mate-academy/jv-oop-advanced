@@ -10,16 +10,13 @@ public class Main {
 
     public static void main(String[] args) {
         Figure[] figureArray = new Figure[6];
-        figureArray[0] = new Rectangle(colorSupplier.getRandomColor(), random.nextInt(BOUND),
-                random.nextInt(BOUND));
-        figureArray[1] = new Circle(colorSupplier.getRandomColor(), random.nextInt(BOUND));
-        figureArray[2] = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                random.nextInt(BOUND), random.nextInt(BOUND), random.nextInt(BOUND));
-        figureArray[3] = figureSupplier.getDefaultFigure();
-        figureArray[4] = figureSupplier.getDefaultFigure();
-        figureArray[5] = figureSupplier.getDefaultFigure();
-        for (Figure figure:figureArray) {
-            System.out.println(figure.draw());
+        for (int i = 0; i < figureArray.length; i++) {
+            if (i < 3) {
+                figureArray[i] = figureSupplier.getRandomFigure();
+            } else {
+                figureArray[i] = figureSupplier.getDefaultFigure();
+            }
+            figureArray[i].draw();
         }
     }
 }

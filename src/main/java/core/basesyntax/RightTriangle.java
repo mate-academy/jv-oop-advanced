@@ -20,10 +20,12 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String draw() {
-        return super.toString() + ", area: " + getArea()
+    public void draw() {
+        String output = ", area: " + getArea()
                 + " sq.units, first leg: " + firstLeg
                 + " units, second leg: " + secondLeg + " units";
+        super.draw();
+        System.out.println(output);
     }
 }
 

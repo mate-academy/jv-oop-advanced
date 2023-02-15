@@ -1,5 +1,7 @@
 package core.basesyntax;
 
 public interface Drawable {
-    String draw();
+    default void draw() {
+        System.out.println("dsadas");
+    }
 }

@@ -11,8 +11,9 @@ public abstract class Figure implements AreaCalculator, Drawable {
     }
 
     @Override
-    public String draw() {
-        return "Figure: " + getClass().getSimpleName()
+    public void draw() {
+        String output = "Figure: " + getClass().getSimpleName()
                 + ", color: " + color;
+        System.out.print(output);
     }
 }
