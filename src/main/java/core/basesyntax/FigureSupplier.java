@@ -10,7 +10,7 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Circle getCircle() {
+    private Circle getCircle() {
         double radius = random.nextInt(MAX_NUMBER);
         Color color = colorSupplier.getRandomColor();
         return new Circle(color, radius);
