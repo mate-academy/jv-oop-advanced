@@ -17,13 +17,13 @@ public class FigureSupplier {
 
     }
 
-    public Square getSquare() {
+    private Square getSquare() {
         double side = random.nextInt(MAX_NUMBER);
         Color color = colorSupplier.getRandomColor();
         return new Square(color, side);
     }
 
-    public IsoscelesTrapezoid getIsoscelesTrapezoid() {
+    private IsoscelesTrapezoid getIsoscelesTrapezoid() {
         double topSide = random.nextInt(MAX_NUMBER);
         double bottomSide = random.nextInt(MAX_NUMBER);
         double middleSide = random.nextInt(MAX_NUMBER);
@@ -31,14 +31,14 @@ public class FigureSupplier {
         return new IsoscelesTrapezoid(color, topSide, bottomSide, middleSide);
     }
 
-    public Rectangle getRectangle() {
+    private Rectangle getRectangle() {
         double width = random.nextInt(MAX_NUMBER);
         double height = random.nextInt(MAX_NUMBER);
         Color color = colorSupplier.getRandomColor();
         return new Rectangle(color, width, height);
     }
 
-    public RightTriangle getRightTriangle() {
+    private RightTriangle getRightTriangle() {
         double firstLeg = random.nextInt(MAX_NUMBER);
         double secondLeg = random.nextInt(MAX_NUMBER);
         Color color = colorSupplier.getRandomColor();
