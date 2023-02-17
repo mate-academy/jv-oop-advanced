@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 import java.util.Random;
-
 import static core.basesyntax.Color.WHITE;
 
 public class FigureSupplier {
@@ -41,7 +40,7 @@ public class FigureSupplier {
         return newFigure;
     }
 
-    public static Figure getDefaultFigure() {
+    public Figure getDefaultFigure() {
         return new Circle(WHITE, 10);
     }
 }
