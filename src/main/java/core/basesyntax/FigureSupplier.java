@@ -22,7 +22,7 @@ public class FigureSupplier {
             case RECTANGLE:
                 return getRandomRectangle();
             default:
-                throw new RuntimeException("Figure does not exist");
+                return getDefaultFigure();
         }
     }
 
