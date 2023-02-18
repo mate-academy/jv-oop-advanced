@@ -14,6 +14,5 @@ public class Main {
             figures[i] = figureSupplier.getDefaultFigure();
             figures[i].draw();
         }
-
     }
 }
