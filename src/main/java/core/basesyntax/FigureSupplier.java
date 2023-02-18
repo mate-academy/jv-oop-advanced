@@ -3,43 +3,66 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public Figure getRandomFigure() {
-        Figure newFigure = null;
-        Color color = ColorSupplier.getRandomColor();
-        int figureIndex = new Random().nextInt(FigureTypes.values().length);
-        FigureTypes newFigureType = FigureTypes.values()[figureIndex];
+    private static final int DEFAULT_RADIUS = 10;
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final Color color = colorSupplier.getRandomColor();
+    private final Random random = new Random();
+
+    public Object getRandomFigure() {
+        Figure newFigure;
+        int figureIndex = random.nextInt(FigureType.values().length);
+        FigureType newFigureType = FigureType.values()[figureIndex];
         switch (newFigureType) {
             case CIRCLE:
-                int radius = new Random().nextInt(20);
-                newFigure = new Circle(color, radius);
+                newFigure = createRandomCircle();
                 break;
             case SQUARE:
-                int side = new Random().nextInt(20);
-                newFigure = new Square(color, side);
+                newFigure = createRandomSquare();
                 break;
             case RECTANGLE:
-                int side1 = new Random().nextInt(20);
-                int side2 = new Random().nextInt(20);
-                newFigure = new Rectangle(color, side1, side2);
+                newFigure = createRandomRectangle();
                 break;
             case RIGRHT_TRIANGLE:
-                int leg1 = new Random().nextInt(20);
-                int leg2 = new Random().nextInt(20);
-                newFigure = new RightTriangle(color, leg1, leg2);
+                newFigure = createRandomRightTriangle();
                 break;
             case ISOSCELES_TRAPEZOID:
-                int height = new Random().nextInt(20);
-                int topSide = new Random().nextInt(20);
-                int downside = new Random().nextInt(20);
-                newFigure = new IsoscelesTrapezoid(color, height, topSide, downside);
+                newFigure = createRandomIsoscelesTrapezoid();
                 break;
             default:
-                System.out.println("Error: figure type not exists");
+                return getDefaultFigure();
         }
         return newFigure;
     }
 
+    private Circle createRandomCircle() {
+        int radius = new Random().nextInt(20);
+        return new Circle(color, radius);
+    }
+
+    private Square createRandomSquare() {
+        int side = new Random().nextInt(20);
+        return new Square(color, side);
+    }
+
+    private Rectangle createRandomRectangle() {
+        int side1 = new Random().nextInt(20);
+        int side2 = new Random().nextInt(20);
+        return new Rectangle(color, side1, side2);
+    }
+
+    private RightTriangle createRandomRightTriangle() {
+        int leg1 = new Random().nextInt(20);
+        int leg2 = new Random().nextInt(20);
+        return new RightTriangle(color, leg1, leg2);
+    }
+
+    private IsoscelesTrapezoid createRandomIsoscelesTrapezoid() {
+        int height = new Random().nextInt(20);
+        int topSide = new Random().nextInt(20);
+        int downside = new Random().nextInt(20);
+        return new IsoscelesTrapezoid(color, height, topSide, downside);
+    }
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE, 10);
+        return new Circle(Color.WHITE, DEFAULT_RADIUS);
     }
 }

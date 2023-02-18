@@ -7,10 +7,10 @@ public class Main {
         Figure defaultFigure = new FigureSupplier().getDefaultFigure();
         for (int i = 0; i < AMOUNT_FIGURE; i++) {
             if (i < AMOUNT_FIGURE / 2) {
-                Figure randomFigure = new FigureSupplier().getRandomFigure();
-                randomFigure.drawFigure(randomFigure);
+                Figure randomFigure = (Figure) new FigureSupplier().getRandomFigure();
+                randomFigure.draw();
             } else {
-                defaultFigure.drawFigure(defaultFigure);
+                defaultFigure.draw();
             }
         }
     }
