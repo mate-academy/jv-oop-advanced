@@ -62,6 +62,7 @@ public class FigureSupplier {
         int downside = new Random().nextInt(20);
         return new IsoscelesTrapezoid(color, height, topSide, downside);
     }
+
     public Figure getDefaultFigure() {
         return new Circle(Color.WHITE, DEFAULT_RADIUS);
     }
