@@ -3,15 +3,15 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final String DEFAULT_COLOR = Colors.WHITE.name();
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
     private static final int DEFAULT_RADIUS = 10;
     private static final int LIMIT = 100;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int figureIndex = random.nextInt(Figures.values().length);
-        Figures figures = Figures.values()[figureIndex];
+        int figureIndex = random.nextInt(FigureType.values().length);
+        FigureType figures = FigureType.values()[figureIndex];
         switch (figures) {
             case SQUARE:
                 return getRandomSquare();
@@ -32,27 +32,27 @@ public class FigureSupplier {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
-    public Figure getRandomSquare() {
+    private Figure getRandomSquare() {
         return new Square(colorSupplier.getRandomColor(),
                 random.nextInt(LIMIT));
     }
 
-    public Figure getRandomRectangle() {
+    private Figure getRandomRectangle() {
         return new Rectangle(colorSupplier.getRandomColor(),
                 random.nextInt(LIMIT),random.nextInt(LIMIT));
     }
 
-    public Figure getRandomRightTriangle() {
+    private Figure getRandomRightTriangle() {
         return new RightTriangle(colorSupplier.getRandomColor(),
                 random.nextInt(LIMIT), random.nextInt(LIMIT));
     }
 
-    public Figure getRandomCircle() {
+    private Figure getRandomCircle() {
         return new Circle(colorSupplier.getRandomColor(),
                 random.nextInt(LIMIT));
     }
 
-    public Figure getRandomIsoscelesTrapezoid() {
+    private Figure getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                 random.nextInt(LIMIT), random.nextInt(LIMIT), random.nextInt(LIMIT));
     }
