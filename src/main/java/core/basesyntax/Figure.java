@@ -1,8 +1,18 @@
 package core.basesyntax;
 
-public interface Figure {
+public abstract class Figure implements Displayable, Parameter {
+    private String color;
 
-    double getArea();
+    public Figure(String color) {
+        this.color = color;
+    }
 
-    void draw();
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
 }
+
