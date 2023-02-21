@@ -1,5 +1,7 @@
 package core.basesyntax;
 
+import core.basesyntax.figure.FigureSupplier;
+
 public class Main {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
@@ -8,10 +10,10 @@ public class Main {
         for (int i = 0; i < figures.length; i++) {
             if (i < figures.length / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
-                figures[i].draw();
+                System.out.println("Random figure: " + figures[i]);
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
-                figures[i].draw();
+                System.out.println("Default figure: " + figures[i]);
             }
         }
     }
