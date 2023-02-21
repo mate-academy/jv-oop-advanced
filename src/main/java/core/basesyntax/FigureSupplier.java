@@ -17,20 +17,40 @@ public class FigureSupplier {
         int typeIndex = random.nextInt(FIGURE_TYPES);
         switch (typeIndex) {
             case 0:
-                return new Circle(random.nextInt(), colorSupplier.getRandomColor());
+                return getRandomCircle();
             case 1:
-                return new Square(random.nextInt(), colorSupplier.getRandomColor());
+                return getRandomSquare();
             case 2:
-                return new IsoscelesTrapezoid(random.nextInt(),
-                        random.nextInt(), random.nextInt(), colorSupplier.getRandomColor());
+                return getRandomIsoscelesTrapezoid();
             case 3:
-                return new Rectangle(random.nextInt(),
-                        random.nextInt(), colorSupplier.getRandomColor());
+                return getRandomRectangle();
             case 4:
-                return new RightTriangle(random.nextInt(),
-                        random.nextInt(), colorSupplier.getRandomColor());
+                return getRandomRightTriangle();
             default:
                 return getDefaultFigure();
         }
+    }
+
+    private Circle getRandomCircle() {
+        return new Circle(random.nextInt(), colorSupplier.getRandomColor());
+    }
+
+    private Square getRandomSquare() {
+        return new Square(random.nextInt(), colorSupplier.getRandomColor());
+    }
+
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(random.nextInt(),
+                random.nextInt(), random.nextInt(), colorSupplier.getRandomColor());
+    }
+
+    private Rectangle getRandomRectangle() {
+        return new Rectangle(random.nextInt(),
+                random.nextInt(), colorSupplier.getRandomColor());
+    }
+
+    private RightTriangle getRandomRightTriangle() {
+        return new RightTriangle(random.nextInt(),
+                random.nextInt(), colorSupplier.getRandomColor());
     }
 }

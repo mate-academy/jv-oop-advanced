@@ -1,8 +1,5 @@
 package core.basesyntax;
 
-/**
- * Feel free to remove this class and create your own.
- */
 public class Main {
     private static final int ARRAY_SIZE = 6;
     private static final FigureSupplier FIGURE_SUPPLIER = new FigureSupplier();
@@ -15,9 +12,7 @@ public class Main {
             } else {
                 figures[i] = FIGURE_SUPPLIER.getRandomFigure();
             }
-        }
-        for (Figure figure : figures) {
-            figure.draw();
+            figures[i].draw();
         }
     }
 }
