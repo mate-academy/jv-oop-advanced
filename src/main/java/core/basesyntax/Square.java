@@ -9,20 +9,15 @@ public class Square extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "Square{" + "side=" + side + " color:" + getColor() + '}';
-    }
-
-    @Override
     public void draw() {
         System.out.println("Figure: isoscelesTrapezoid"
-                + ", area=" + calculateArea() + " sq.units"
+                + ", area=" + getArea() + " sq.units"
                 + "side" + side + " units"
                 + ", color=" + getColor());
     }
 
     @Override
-    public double calculateArea() {
+    public double getArea() {
         return Math.pow(side, 2);
     }
 }

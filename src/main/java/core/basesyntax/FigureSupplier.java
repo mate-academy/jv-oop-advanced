@@ -6,6 +6,8 @@ public class FigureSupplier {
 
     private static final int FIGURE_COUNT = 5;
     private static final Random random = new Random(100);
+    private static final Color DEFAULT_COLOR = Color.WHITE;
+    private static final int DEFAULT_RADIUS = 10;
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
@@ -26,7 +28,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE, 10);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
     private Square getRandomSquare() {
