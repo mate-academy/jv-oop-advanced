@@ -15,4 +15,3 @@ public abstract class Figure implements Displayable, AreaCalculator {
         this.color = color;
     }
 }
-
