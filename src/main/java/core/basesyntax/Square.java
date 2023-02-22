@@ -1,6 +1,5 @@
 package core.basesyntax;
 
-
 public class Square extends Figure {
     private final double side;
 
@@ -9,21 +8,17 @@ public class Square extends Figure {
         this.side = side;
     }
 
-
     @Override
     public String toString() {
-        return "Square{" +
-                "side=" + side + " color:"
-                + getColor() +
-                '}';
+        return "Square{" + "side=" + side + " color:" + getColor() + '}';
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: isoscelesTrapezoid" + ", area="
-                + calculateArea() + " sq.units" + "side"
-                + side + " units" + ", color="
-                + getColor());
+        System.out.println("Figure: isoscelesTrapezoid"
+                + ", area=" + calculateArea() + " sq.units"
+                + "side" + side + " units"
+                + ", color=" + getColor());
     }
 
     @Override

@@ -1,6 +1,5 @@
 package core.basesyntax;
 
-
 public class IsoscelesTrapezoid extends Figure {
     private final double side1;
     private final double side2;
@@ -13,10 +12,14 @@ public class IsoscelesTrapezoid extends Figure {
         this.height = height;
     }
 
-
     @Override
     public String toString() {
-        return "IsoscelesTrapezoid{" + "side 1" + side1 + ", side 2" + side2 + ", height=" + height + ", color=" + getColor() + '}';
+        return "IsoscelesTrapezoid{"
+                + "side 1" + side1
+                + ", side 2" + side2
+                + ", height=" + height
+                + ", color=" + getColor()
+                + '}';
     }
 
     @Override

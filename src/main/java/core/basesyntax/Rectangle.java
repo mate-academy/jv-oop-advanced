@@ -1,6 +1,5 @@
 package core.basesyntax;
 
-
 public class Rectangle extends Figure {
     private final double firstLeg;
     private final double secondLeg;
@@ -13,20 +12,19 @@ public class Rectangle extends Figure {
 
     @Override
     public String toString() {
-        return "Rectangle{" +
-                "firstLeg=" + firstLeg +
-                ", secondLeg=" + secondLeg +
-                " color=" + getColor() +
-                '}';
+        return "Rectangle{"
+                + "firstLeg=" + firstLeg
+                + ", secondLeg=" + secondLeg
+                + " color=" + getColor() + '}';
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: Rectangle" + ", area="
-                + calculateArea() + " sq.units" + "firstLeg ="
-                + firstLeg + " units" + " secondLeg = " + secondLeg + ", color="
-                + getColor());
-
+        System.out.println("Figure: Rectangle"
+                + ", area=" + calculateArea()
+                + " sq.units" + "firstLeg =" + firstLeg + " units"
+                + " secondLeg = " + secondLeg
+                + ", color=" + getColor());
     }
 
     @Override

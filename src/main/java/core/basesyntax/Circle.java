@@ -8,10 +8,13 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
-
     @Override
     public void draw() {
-        System.out.println("Figure: circle" + ", area =  " + calculateArea() + " sq.units" + ", radius = " + radius + " units" + ", color = " + getColor());
+        System.out.println("Figure: circle"
+                + ", area =  " + calculateArea()
+                + " sq.units" + ", radius = "
+                + radius + " units"
+                + ", color = " + getColor());
     }
 
     @Override
@@ -21,10 +24,7 @@ public class Circle extends Figure {
 
     @Override
     public String toString() {
-        return "Circle{" +
-                "radius=" + radius +
-                " color=" + getColor() +
-                '}';
+        return "Circle{" + "radius=" + radius + " color=" + getColor() + '}';
     }
 }
 
