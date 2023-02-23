@@ -1,10 +1,9 @@
 package core.basesyntax;
 
 public class FigureManager {
-    private static FigureSupplier figureSupplier = new FigureSupplier();
+    private static final FigureSupplier figureSupplier = new FigureSupplier();
 
     public static void main(String[] args) {
-        Figure randomFigure = figureSupplier.getRandomFigure();
 
         Figure[] figures = new Figure[6];
 
