@@ -3,7 +3,6 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-
     private static final int FIGURE_COUNT = 5;
     private static final Random random = new Random(100);
     private static final Color DEFAULT_COLOR = Color.WHITE;
