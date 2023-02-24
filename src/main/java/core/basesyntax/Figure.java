@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public abstract class Figure implements FigureBehaviour {
-    protected String color;
+public abstract class Figure implements Drawable {
+    protected Color color;
 }
