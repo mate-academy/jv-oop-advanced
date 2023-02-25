@@ -1,4 +1,4 @@
-package core.basesyntax.entities;
+package core.basesyntax;
 
 public class IsoscelesTrapezoid implements Figure {
     private final double upperBase;
@@ -37,6 +37,10 @@ public class IsoscelesTrapezoid implements Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: isosceles trapezoid, area: " + getArea() + " sq.units, upperBase: " + upperBase + " units, lowerBase: " + lowerBase + " units, height: " + height + " units, color: " + color);
+        System.out.println("Figure: isosceles trapezoid, area: " + getArea()
+                + " sq.units, upperBase: " + upperBase
+                + " units, lowerBase: " + lowerBase
+                + " units, height: " + height
+                + " units, color: " + color);
     }
 }

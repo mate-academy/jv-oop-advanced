@@ -1,6 +1,4 @@
-package core.basesyntax.utils;
-
-import core.basesyntax.entities.*;
+package core.basesyntax;
 
 import java.util.Random;
 
@@ -13,13 +11,16 @@ public class FigureSupplier {
             case 0:
                 return new Square(random.nextDouble() * 10 + 1, ColorSupplier.getRandomColor());
             case 1:
-                return new Rectangle(random.nextDouble() * 10 + 1, random.nextDouble() * 10 + 1, ColorSupplier.getRandomColor());
+                return new Rectangle(random.nextDouble() * 10 + 1,
+                        random.nextDouble() * 10 + 1, ColorSupplier.getRandomColor());
             case 2:
-                return new RightTriangle(random.nextDouble() * 10 + 1, random.nextDouble() * 10 + 1, ColorSupplier.getRandomColor());
+                return new RightTriangle(random.nextDouble() * 10 + 1,
+                        random.nextDouble() * 10 + 1, ColorSupplier.getRandomColor());
             case 3:
                 return new Circle(random.nextDouble() * 10 + 1, ColorSupplier.getRandomColor());
             case 4:
-                return new IsoscelesTrapezoid(random.nextDouble() * 10 + 1, random.nextDouble() * 10 + 1, random.nextDouble() * 10 + 1, ColorSupplier.getRandomColor());
+                return new IsoscelesTrapezoid(random.nextDouble() * 10 + 1,
+                        random.nextDouble() * 10 + 1, random.nextDouble() * 10 + 1, ColorSupplier.getRandomColor());
             default:
                 return null;
         }

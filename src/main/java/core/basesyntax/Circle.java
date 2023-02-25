@@ -1,4 +1,4 @@
-package core.basesyntax.entities;
+package core.basesyntax;
 
 public class Circle implements Figure {
     private final double radius;
@@ -19,13 +19,15 @@ public class Circle implements Figure {
     }
 
     @Override
-    public String getColor(){
+    public String getColor() {
         return color;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: circle, area: " + getArea() + " sq.units, radius: " + radius + " units, color: " + color);
+        System.out.println("Figure: circle, area: " + getArea()
+                + " sq.units, radius: " + radius
+                + " units, color: " + color);
     }
 
 }

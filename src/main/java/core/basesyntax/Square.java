@@ -1,4 +1,4 @@
-package core.basesyntax.entities;
+package core.basesyntax;
 
 public class Square implements Figure {
     private final double side;
@@ -25,6 +25,8 @@ public class Square implements Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: square, area: " + getArea() + " sq.units, side: " + side + " units, color: " + color);
+        System.out.println("Figure: square, area: "
+                + getArea() + " sq.units, side: " + side
+                + " units, color: " + color);
     }
 }
