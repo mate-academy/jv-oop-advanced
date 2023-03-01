@@ -66,6 +66,7 @@ public class FigureSupplier {
                 random.nextInt(MAX_VALUE),
                 random.nextInt(MAX_VALUE));
     }
+
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_FIGURE, DEFAULT_COLOR, DEFAULT_SIZE);
     }
