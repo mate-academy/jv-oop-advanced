@@ -8,17 +8,16 @@ public class RightTriangle extends Figure {
         super(color);
         this.secondLeg = secondLeg;
         this.firstLeg = firstLeg;
-
     }
 
     @Override
-    public double calculatorArea() {
+    public double calculateArea() {
         return (firstLeg * secondLeg) / 2.0;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: Right Triangle, area: " + calculatorArea() + " units, firstLeg "
+        System.out.println("Figure: Right Triangle, area: " + calculateArea() + " units, firstLeg "
                 + firstLeg + " units, secondLeg " + secondLeg + " units, color: " + getColor());
     }
 }

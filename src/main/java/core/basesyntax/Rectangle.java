@@ -11,14 +11,13 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double calculatorArea() {
-
+    public double calculateArea() {
         return firstSide * secondSide;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: Rectangle, area: " + calculatorArea() + " units, firstSide "
+        System.out.println("Figure: Rectangle, area: " + calculateArea() + " units, firstSide "
                 + firstSide + " units, secondSide " + secondSide + " units, color: " + getColor());
     }
 }

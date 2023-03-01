@@ -13,16 +13,12 @@ public class FigureSupplier {
         switch (figureName) {
             case SQUARE:
                 return getRandomSquare();
-
             case RECTANGLE:
                 return getRandomRectangle();
-
             case RIGHT_TRIANGLE:
                 return getRandomRightTriangle();
-
             case CIRCLE:
                 return getRandomCircle();
-
             default:
                 return getRandomIsoscelesTrapezoid();
         }
