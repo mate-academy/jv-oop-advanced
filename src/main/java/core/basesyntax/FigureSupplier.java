@@ -5,9 +5,32 @@ import java.util.Random;
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
     public static final int MAX_VALUE = 50;
+    public static final int DEFAULT_RADIUS = 10;
+    public static final Color COLOR = Color.WHITE;
 
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
+
+    public Figure getRandomFigure() {
+        int index = random.nextInt(FIGURE_COUNT);
+
+        switch (index) {
+            case 0:
+                return getRandomCircle();
+            case 1:
+                return getRandomSquare();
+            case 2:
+                return getRandomRightTriangle();
+            case 3:
+                return getRandomIsoscelesTrapezoid();
+            default:
+                return getRandomRectangle();
+        }
+    }
+
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_RADIUS, COLOR);
+    }
 
     private Circle getRandomCircle() {
         int radius = random.nextInt(MAX_VALUE);
@@ -41,26 +64,5 @@ public class FigureSupplier {
         int sideB = random.nextInt(MAX_VALUE);
         Color color = colorSupplier.getRandomColor();
         return new Rectangle(sideA, sideB, color);
-    }
-
-    public Figure getRandomFigure() {
-        int index = random.nextInt(FIGURE_COUNT);
-
-        switch (index) {
-            case 0:
-                return getRandomCircle();
-            case 1:
-                return getRandomSquare();
-            case 2:
-                return getRandomRightTriangle();
-            case 3:
-                return getRandomIsoscelesTrapezoid();
-            default:
-                return getRandomRectangle();
-        }
-    }
-
-    public Figure getDefaultFigure() {
-        return new Circle(10, Color.WHITE);
     }
 }
