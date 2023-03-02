@@ -4,11 +4,11 @@ import java.util.Random;
 
 public class FigureSupplier {
 
-    final int COUNT = 50;
     private Random random = new Random();
     private Random randomChoice = new Random();
     private ColorSupplier randomColor = new ColorSupplier();
-    private Figure[] figures = {new IsoscelesTrapezoid(getRandomNumber(), getRandomNumber(), getRandomNumber(), randomColor.getRandomColor()),
+    private Figure[] figures = {new IsoscelesTrapezoid(getRandomNumber(),
+            getRandomNumber(), getRandomNumber(), randomColor.getRandomColor()),
             new Circle(getRandomNumber(), randomColor.getRandomColor()),
             new RightTriangle(getRandomNumber(), getRandomNumber(), randomColor.getRandomColor()),
             new Rectangle(getRandomNumber(), getRandomNumber(), randomColor.getRandomColor()),
@@ -19,7 +19,8 @@ public class FigureSupplier {
     }
 
     public int getRandomNumber() {
-        return random.nextInt(COUNT);
+        final int MAX_VALUE = 50;
+        return random.nextInt(MAX_VALUE);
     }
 
     public Figure getRandomFigure() {
