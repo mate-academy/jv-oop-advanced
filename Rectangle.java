@@ -12,7 +12,7 @@ public class Rectangle extends Figure {
 
     public String figureInfo() {
         return "Figure : Rectangle, Area :" + getArea() + " Width: "
-                + width + " Height: " + height + " Color: " + color;
+                + width + " Height: " + height + " Color: " + color.name();
     }
 
     @Override

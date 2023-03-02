@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-
     private double firstCatet;
     private double secondCatet;
 
@@ -14,7 +13,7 @@ public class RightTriangle extends Figure {
     public String figureInfo() {
         return "Figure : Right Triangle, Area :" + getArea()
                 + " Catet1: " + firstCatet + " Catet2: " + secondCatet
-                + " Color: " + color;
+                + " Color: " + color.name();
     }
 
     @Override

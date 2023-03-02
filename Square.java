@@ -9,7 +9,7 @@ public class Square extends Figure {
     }
 
     public String figureInfo() {
-        return "Figure : Square, Area :" + getArea() + " Side: " + side + " Color: " + color;
+        return "Figure : Square, Area :" + getArea() + " Side: " + side + " Color: " + color.name();
     }
 
     @Override

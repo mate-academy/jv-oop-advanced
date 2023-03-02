@@ -15,7 +15,7 @@ public class IsoscelesTrapezoid extends Figure {
     public String figureInfo() {
         return "Figure : Isosceles Trapezoid, Area :" + getArea()
                 + " Basis1: " + basis1 + " Basis2: " + basis2 + " Height: "
-                + height + " Color: " + color;
+                + height + " Color: " + color.name();
     }
 
     @Override

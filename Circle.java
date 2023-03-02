@@ -9,7 +9,8 @@ public class Circle extends Figure {
     }
 
     public String figureInfo() {
-        return "Figure : Circle, Area :" + getArea() + " Radius: " + radius + " Color: " + color;
+        return "Figure : Circle, Area :" + getArea() + " Radius: " + radius
+                + " Color: " + color.name();
     }
 
     @Override
