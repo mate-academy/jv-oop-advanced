@@ -1,8 +1,5 @@
 package core.basesyntax;
 
-public interface Figure {
-
-    double getArea();
-
-    String figureInfo();
+abstract class Figure implements Draw, AreaCalculator {
+    protected Color color;
 }

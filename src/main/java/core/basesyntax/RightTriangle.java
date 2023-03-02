@@ -1,23 +1,23 @@
 package core.basesyntax;
 
-public class RightTriangle implements Figure {
+public class RightTriangle extends Figure {
+    private double firstCatet;
+    private double secondCatet;
 
-    private double catet1;
-    private double catet2;
-    private Color color;
-
-    public String figureInfo() {
-        return "Figure : Right Triangle, Area :" + getArea() + " Catet1: " + catet1 + " Catet2: " + catet2 + " Color: " + color;
+    public RightTriangle(int firstCatet, int secondCatet, Color color) {
+        this.firstCatet = firstCatet;
+        this.secondCatet = secondCatet;
+        this.color = color;
     }
 
-    public RightTriangle(int catet1, int catet2, Color color) {
-        this.catet1 = catet1;
-        this.catet2 = catet2;
-        this.color = color;
+    public String figureInfo() {
+        return "Figure : Right Triangle, Area :" + getArea()
+                + " Catet1: " + firstCatet + " Catet2: " + secondCatet
+                + " Color: " + color.name();
     }
 
     @Override
     public double getArea() {
-        return (catet1 * catet2) / 2;
+        return (firstCatet * secondCatet) / 2;
     }
 }
