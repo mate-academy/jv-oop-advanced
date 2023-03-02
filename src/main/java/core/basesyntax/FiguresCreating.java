@@ -8,7 +8,9 @@ public class FiguresCreating {
         FigureSupplier figureSupplier = new FigureSupplier();
 
         for (int i = 0; i < figures.length; i++) {
-            figures[i] = i <= figures.length/2 -1 ? figureSupplier.getRandomFigure() : figureSupplier.getDefaultFigure();
+            figures[i] = i <= figures.length / 2 - 1 ?
+                    figureSupplier.getRandomFigure() :
+                    figureSupplier.getDefaultFigure();
         }
 
         for (Figure figure: figures) {
