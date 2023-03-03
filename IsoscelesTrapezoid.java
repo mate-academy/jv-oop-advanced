@@ -12,7 +12,7 @@ public class IsoscelesTrapezoid extends Figure {
         this.color = color;
     }
 
-    public String figureInfo() {
+    public String draw() {
         return "Figure : Isosceles Trapezoid, Area :" + getArea()
                 + " Basis1: " + basis1 + " Basis2: " + basis2 + " Height: "
                 + height + " Color: " + color.name();

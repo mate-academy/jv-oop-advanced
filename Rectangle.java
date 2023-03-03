@@ -10,7 +10,7 @@ public class Rectangle extends Figure {
         this.color = color;
     }
 
-    public String figureInfo() {
+    public String draw() {
         return "Figure : Rectangle, Area :" + getArea() + " Width: "
                 + width + " Height: " + height + " Color: " + color.name();
     }

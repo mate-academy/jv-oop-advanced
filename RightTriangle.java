@@ -10,7 +10,7 @@ public class RightTriangle extends Figure {
         this.color = color;
     }
 
-    public String figureInfo() {
+    public String draw() {
         return "Figure : Right Triangle, Area :" + getArea()
                 + " Catet1: " + firstCatet + " Catet2: " + secondCatet
                 + " Color: " + color.name();

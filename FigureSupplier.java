@@ -4,29 +4,55 @@ import java.util.Random;
 
 public class FigureSupplier {
     private Random random = new Random();
-    private Random randomChoice = new Random();
     private ColorSupplier randomColor = new ColorSupplier();
-    private Figure[] figures = {new IsoscelesTrapezoid(getRandomNumber(),
-            getRandomNumber(), getRandomNumber(), randomColor.getRandomColor()),
-            new Circle(getRandomNumber(), randomColor.getRandomColor()),
-            new RightTriangle(getRandomNumber(), getRandomNumber(), randomColor.getRandomColor()),
-            new Rectangle(getRandomNumber(), getRandomNumber(), randomColor.getRandomColor()),
-            new Square(getRandomNumber(), randomColor.getRandomColor())};
+    private final int figureCount = 50;
 
-    public int getRandomChoice() {
-        return randomChoice.nextInt(figures.length);
+    private Figure getRandomCircle() {
+        return new Circle(random.nextInt(figureCount), randomColor.getRandomColor());
     }
 
-    public int getRandomNumber() {
-        final int maxValue = 50;
-        return random.nextInt(maxValue);
+    private Figure getRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(random.nextInt(figureCount),
+                random.nextInt(figureCount), random.nextInt(figureCount),
+                randomColor.getRandomColor());
+    }
+
+    private Figure getRandomRightTriangle() {
+        return new RightTriangle(random.nextInt(figureCount),
+                   random.nextInt(figureCount), randomColor.getRandomColor());
+    }
+
+    private Figure getRandomRectangle() {
+        return new Rectangle(random.nextInt(figureCount), random.nextInt(figureCount),
+                   randomColor.getRandomColor());
+    }
+
+    private Figure getRandomSquare() {
+        return new Square(random.nextInt(figureCount), randomColor.getRandomColor());
     }
 
     public Figure getRandomFigure() {
-        return figures[getRandomChoice()];
+        final int figureCount = 5;
+        int figureNumber = random.nextInt(figureCount);
+
+        switch (figureNumber) {
+            case 0:
+                return getRandomCircle();
+            case 1:
+                return getRandomIsoscelesTrapezoid();
+            case 2:
+                return getRandomRightTriangle();
+            case 3:
+                return getRandomRectangle();
+            case 4:
+                return getRandomSquare();
+            default:
+                return getDefaultFigure();
+        }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, Color.WHITE);
+        final int radius = 10;
+        return new Circle(radius, Color.WHITE);
     }
 }
