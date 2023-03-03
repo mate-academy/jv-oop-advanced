@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 public enum FigureType {
-    Square,
-    Rectangle,
-    RightTriangle,
-    Circle,
-    IsoscelesTrapezoid
+    SQUARE,
+    RECTANGLE,
+    RIGHT_TRIANGLE,
+    CIRCLE,
+    ISOSCELES_TRAPEZOID
 }
