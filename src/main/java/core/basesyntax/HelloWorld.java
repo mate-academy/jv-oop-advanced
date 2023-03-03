@@ -7,14 +7,14 @@ public class HelloWorld {
     private static final int count = 10;
 
     public static void main(String[] args) {
-        GetFigure figure = new GetFigure();
-        GetFigureSupplier randomFigure = new GetFigureSupplier();
-        GetFigure[] figures = new GetFigure[count];
+        Figure figure = new Figure();
+        FigureSupplier randomFigure = new FigureSupplier();
+        Figure[] figures = new Figure[count];
         for (int i = 0; i < figures.length; i++) {
             figures[i] = (i < figures.length / 2) ? randomFigure.getRandomFigure()
                     : randomFigure.getDefaultFigure();
         }
-        for (GetFigure f : figures) {
+        for (Figure f : figures) {
             f.drawFigure();
         }
     }

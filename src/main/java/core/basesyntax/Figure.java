@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class GetFigure implements GetFigureArea {
+public class Figure implements AreaCalculator {
     private String color;
 
     public String getColor() {
@@ -17,6 +17,6 @@ public class GetFigure implements GetFigureArea {
     }
 
     public void drawFigure() {
-        System.out.println("GetFigure color: " + color);
+        System.out.println("Figure color: " + color);
     }
 }

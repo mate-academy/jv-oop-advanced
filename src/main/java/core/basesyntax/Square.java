@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends GetFigure {
+public class Square extends Figure {
     private static final String NAME = "SQUARE";
     private final int side;
 
@@ -15,7 +15,7 @@ public class Square extends GetFigure {
 
     @Override
     public void drawFigure() {
-        System.out.println("GetFigure: " + getClass().getSimpleName() + ", area: "
+        System.out.println("Figure: " + getClass().getSimpleName() + ", area: "
                 + getArea() + " sq.units, side: "
                 + side + " units, color: " + getColor());
     }

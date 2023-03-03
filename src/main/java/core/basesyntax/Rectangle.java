@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends GetFigure {
+public class Rectangle extends Figure {
     private static final String NAME = "RECTANGLE";
     private final int firstSide;
     private final int secondSide;
@@ -17,7 +17,7 @@ public class Rectangle extends GetFigure {
 
     @Override
     public void drawFigure() {
-        System.out.println("GetFigure: " + getClass().getSimpleName() + ", area: "
+        System.out.println("Figure: " + getClass().getSimpleName() + ", area: "
                 + getArea() + " sq.units, first side: "
                 + firstSide + " units, second side: " + secondSide
                 + " units, color: " + getColor());

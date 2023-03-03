@@ -2,17 +2,17 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class GetFigureSupplier extends GetFigure {
+public class FigureSupplier {
     private static final int RANGE = 100;
     private static final String DEFAULT_COLOR = "WHITE";
     private static int index;
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
     private String figureType;
-    private GetFigure figure;
+    private Figure figure;
     private String figureColor;
 
-    public GetFigure getRandomFigure() {
+    public Figure getRandomFigure() {
         index = random.nextInt(FigureType.values().length);
         figureType = FigureType.values()[index].name();
         figureColor = colorSupplier.getRandomColor();
@@ -39,11 +39,11 @@ public class GetFigureSupplier extends GetFigure {
                 figure.setColor(figureColor);
                 return figure;
             default:
-                return null;
+                return new FigureSupplier().getDefaultFigure();
         }
     }
 
-    public GetFigure getDefaultFigure() {
+    public Figure getDefaultFigure() {
         figure = new Circle(10);
         figure.setColor(DEFAULT_COLOR);
         return figure;
