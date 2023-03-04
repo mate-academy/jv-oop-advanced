@@ -1,4 +1,4 @@
-package core.basesyntax;
+package basesyntax;
 
 public interface Drawable {
     String draw();

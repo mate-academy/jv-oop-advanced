@@ -1,4 +1,4 @@
-package core.basesyntax;
+package basesyntax;
 
 public class Main {
     public static void main(String[] args) {

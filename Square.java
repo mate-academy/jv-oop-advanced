@@ -1,4 +1,4 @@
-package core.basesyntax;
+package basesyntax;
 
 public class Square extends Figure {
     private int side;

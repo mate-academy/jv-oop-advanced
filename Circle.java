@@ -1,4 +1,4 @@
-package core.basesyntax;
+package basesyntax;
 
 public class Circle extends Figure {
     private double radius;
