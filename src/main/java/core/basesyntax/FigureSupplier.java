@@ -3,13 +3,18 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private ColorSupplier colorSupplier = new ColorSupplier();
+
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+
     public static final int MAX_VALUE_OF_PARAMETER = 25;
+
     public static final int DEFAULT_RADIUS = 10;
+
     public static final String DEFAULT_COLOR = "White";
 
+    private final  Random random = new Random();
+
     public Figure getRamdomFigure() {
-        Random random = new Random();
         int index = random.nextInt(5);
         switch (index) {
             case (0):
