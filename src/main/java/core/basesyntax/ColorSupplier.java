@@ -1,12 +1,20 @@
 package core.basesyntax;
 
+import java.awt.*;
 import java.util.Random;
 
 public class ColorSupplier {
+    public enum Color {
+        Red,
+        Black,
+        White,
+        Green,
+        Yellow,
+        Blue
+    }
     public String getRandomColor() {
         Random random = new Random();
-        String[] colors = {"Red", "Black", "White", "Green", "Yellow", "Blue"};
-        int index = random.nextInt(5);
-                return colors[index];
+        int index = random.nextInt(Color.values().length);
+                return Color.values()[index].toString();
     }
 }

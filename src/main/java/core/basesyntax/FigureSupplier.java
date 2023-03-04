@@ -6,6 +6,8 @@ public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
     public static final int MAX_VALUE_OF_PARAMETER = 25;
     public static final int DEFAULT_RADIUS = 10;
+    public static final String DEFAULT_COLOR = "White";
+
     public Figure getRamdomFigure() {
         Random random = new Random();
         int index = random.nextInt(5);
@@ -17,33 +19,32 @@ public class FigureSupplier {
                 return circle;
             case (1):
                 int randomSide = random.nextInt(MAX_VALUE_OF_PARAMETER);
-                String randomColor1 = colorSupplier.getRandomColor();
-                Square square = new Square(randomColor1, randomSide);
+                String randomColorSquare = colorSupplier.getRandomColor();
+                Square square = new Square(randomColorSquare, randomSide);
                 return square;
             case (2):
                 int randomWight = random.nextInt(MAX_VALUE_OF_PARAMETER);
                 int randomHeight = random.nextInt(MAX_VALUE_OF_PARAMETER);
-                String randomColor2 = colorSupplier.getRandomColor();
-                Rectangle rectangle = new Rectangle(randomColor2, randomWight, randomHeight);
+                String randomColorRectangle = colorSupplier.getRandomColor();
+                Rectangle rectangle = new Rectangle(randomColorRectangle, randomWight, randomHeight);
                 return rectangle;
             case (3):
                 int randomBase = random.nextInt(MAX_VALUE_OF_PARAMETER);
-                int randomHeight1 = random.nextInt(MAX_VALUE_OF_PARAMETER);
-                String randomColor3 = colorSupplier.getRandomColor();
-                RightTriangle rightTriangle = new RightTriangle(randomColor3, randomBase, randomHeight1);
+                int randomHeightTriangle = random.nextInt(MAX_VALUE_OF_PARAMETER);
+                String randomColorTriangle = colorSupplier.getRandomColor();
+                RightTriangle rightTriangle = new RightTriangle(randomColorTriangle, randomBase, randomHeightTriangle);
                 return rightTriangle;
             case (4):
-                int randomBase1 = random.nextInt(MAX_VALUE_OF_PARAMETER);
-                int randomBase2 = random.nextInt(MAX_VALUE_OF_PARAMETER);
-                int randomHeight2 = random.nextInt(MAX_VALUE_OF_PARAMETER);
-                String randomColor4 = colorSupplier.getRandomColor();
-                IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(randomColor4, randomBase1, randomBase2, randomHeight2);
+                int randomBaseTrapezoid = random.nextInt(MAX_VALUE_OF_PARAMETER);
+                int randomBaseIsoscelesTrapezoid = random.nextInt(MAX_VALUE_OF_PARAMETER);
+                int randomHeightTrapezoid = random.nextInt(MAX_VALUE_OF_PARAMETER);
+                String randomColorTrapezoid = colorSupplier.getRandomColor();
+                IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(randomColorTrapezoid, randomBaseTrapezoid, randomBaseIsoscelesTrapezoid, randomHeightTrapezoid);
                 return isoscelesTrapezoid;
         }
         return null;
     }
     public Figure getDefaultFigure() {
-        Circle circle = new Circle("White", DEFAULT_RADIUS);
-        return circle;
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
