@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int NUMBER_OF_FIGURES = 5;
-    public static final double MAX_VALUE = 10.0;
-    public static final double DEFAULT_RADIUS = 5.0;
+    public static final int MAX_VALUE = 10;
+    public static final int DEFAULT_RADIUS = 5;
     public static final Color DEFAULT_COLOR = Color.WHITE;
 
     private final Random random = new Random();
@@ -17,22 +17,22 @@ public class FigureSupplier {
         switch (figureType) {
             case 0:
                 return new Square(colorSupplier.getRandomColor(),
-                        random.nextDouble(MAX_VALUE));
+                        random.nextInt(MAX_VALUE));
             case 1:
-                return new Rectangle(random.nextDouble(MAX_VALUE),
-                        random.nextDouble(MAX_VALUE),
+                return new Rectangle(random.nextInt(MAX_VALUE),
+                        random.nextInt(MAX_VALUE),
                         colorSupplier.getRandomColor());
             case 2:
-                return new RightTriangle(random.nextDouble(MAX_VALUE),
-                        random.nextDouble(MAX_VALUE),
+                return new RightTriangle(random.nextInt(MAX_VALUE),
+                        random.nextInt(MAX_VALUE),
                         colorSupplier.getRandomColor());
             case 3:
-                return new Circle(random.nextDouble(MAX_VALUE),
+                return new Circle(random.nextInt(MAX_VALUE),
                         colorSupplier.getRandomColor());
             case 4:
-                return new IsoscelesTrapezoid(random.nextDouble(MAX_VALUE),
-                        random.nextDouble(MAX_VALUE),
-                        random.nextDouble(),
+                return new IsoscelesTrapezoid(random.nextInt(MAX_VALUE),
+                        random.nextInt(MAX_VALUE),
+                        random.nextInt(),
                         colorSupplier.getRandomColor());
             default:
                 return null;
