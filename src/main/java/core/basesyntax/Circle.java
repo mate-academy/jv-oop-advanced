@@ -1,10 +1,10 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private static final String NAME = "CIRCLE";
     private int radius;
 
-    public Circle(int radius) {
+    public Circle(int radius, String color) {
+        setColor(color);
         this.radius = radius;
     }
 

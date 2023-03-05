@@ -18,34 +18,26 @@ public class FigureSupplier {
         figureColor = colorSupplier.getRandomColor();
         switch (figureType) {
             case "SQUARE":
-                figure = new Square(random.nextInt(RANGE));
-                figure.setColor(figureColor);
-                return figure;
+                return new Square(getRandomSide(RANGE), figureColor);
             case "RECTANGLE":
-                figure = new Rectangle(random.nextInt(RANGE), random.nextInt(RANGE));
-                figure.setColor(figureColor);
-                return figure;
+                return new Rectangle(getRandomSide(RANGE), getRandomSide(RANGE), figureColor);
             case "RIGHT_TRIANGLE":
-                figure = new RightTriangle(random.nextInt(RANGE), random.nextInt(RANGE));
-                figure.setColor(figureColor);
-                return figure;
+                return new RightTriangle(getRandomSide(RANGE), getRandomSide(RANGE), figureColor);
             case "CIRCLE":
-                figure = new Circle(random.nextInt(RANGE));
-                figure.setColor(figureColor);
-                return figure;
+                return new Circle(getRandomSide(RANGE), figureColor);
             case "ISOSCELES_TRAPEZOID":
-                figure = new IsoscelesTrapezoid(random.nextInt(RANGE),
-                        random.nextInt(RANGE), random.nextInt(RANGE));
-                figure.setColor(figureColor);
-                return figure;
+                return new IsoscelesTrapezoid(getRandomSide(RANGE),
+                        getRandomSide(RANGE), getRandomSide(RANGE), figureColor);
             default:
                 return new FigureSupplier().getDefaultFigure();
         }
     }
 
     public Figure getDefaultFigure() {
-        figure = new Circle(10);
-        figure.setColor(DEFAULT_COLOR);
-        return figure;
+        return new Circle(10, DEFAULT_COLOR);
+    }
+
+    public int getRandomSide(int range) {
+        return random.nextInt(range);
     }
 }

@@ -1,11 +1,11 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private static final String NAME = "RIGHT TRIANGLE";
     private final int firstLeg;
     private final int secondLeg;
 
-    public RightTriangle(int firstLeg, int secondLeg) {
+    public RightTriangle(int firstLeg, int secondLeg, String color) {
+        setColor(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
