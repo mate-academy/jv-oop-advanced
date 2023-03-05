@@ -4,19 +4,18 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int RANGE = 100;
+    private static final byte DEFAULT_RADIUS = 10;
     private static final String DEFAULT_COLOR = "WHITE";
-    private static int index;
-    private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
-    private String figureType;
-    private Figure figure;
-    private String figureColor;
 
     public Figure getRandomFigure() {
+        int index;
+        ColorSupplier colorSupplier = new ColorSupplier();
+        Figure figure;
+        String figureColor;
         index = random.nextInt(FigureType.values().length);
-        figureType = FigureType.values()[index].name();
         figureColor = colorSupplier.getRandomColor();
-        switch (figureType) {
+        switch (FigureType.values()[index].name()) {
             case "SQUARE":
                 return new Square(getRandomSide(RANGE), figureColor);
             case "RECTANGLE":
@@ -34,7 +33,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, DEFAULT_COLOR);
+        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
     }
 
     public int getRandomSide(int range) {
