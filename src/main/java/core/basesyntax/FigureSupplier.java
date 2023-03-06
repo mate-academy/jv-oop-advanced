@@ -17,7 +17,7 @@ public class FigureSupplier {
         return numericFofLegs;
     }
 
-    public int randomForMassive(){
+    public int randomForMassive() {
         int result;
         Random random = new Random();
         result = random.nextInt(5);
@@ -36,20 +36,15 @@ public class FigureSupplier {
         int firstLeg = randomNumberForLegs();
         int secondLeg = randomNumberForLegs();
         int fourthLeg = randomNumberForLegs();
-        if ((firstLeg+firstLeg+secondLeg)>fourthLeg+secondLeg){
-            legs[0] = firstLeg;
-            legs[1] = secondLeg;
-            legs[2] = firstLeg;
-            legs[3] = fourthLeg;
-        } else {
-            while (fourthLeg>firstLeg+firstLeg+secondLeg || fourthLeg==secondLeg){
+        if ((firstLeg + firstLeg + secondLeg) < (fourthLeg + secondLeg)) {
+            while (fourthLeg > (firstLeg + firstLeg + secondLeg) || fourthLeg != secondLeg) {
                 fourthLeg = randomNumberForLegs() + secondLeg;
             }
-            legs[0] = firstLeg;
-            legs[1] = secondLeg;
-            legs[2] = firstLeg;
-            legs[3] = fourthLeg;
         }
+        legs[0] = firstLeg;
+        legs[1] = secondLeg;
+        legs[2] = firstLeg;
+        legs[3] = fourthLeg;
         return legs;
     }
 
