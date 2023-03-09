@@ -36,15 +36,15 @@ public class IsoscelesTrapezoid extends Figure {
         this.heightH = heightH;
     }
 
-   @Override
-   public double area() {
-       return (sideA+sideB)/2*heightH;
-   }
+    @Override
+    public double area() {
+        return (sideA + sideB) / 2 * heightH;
+    }
 
-   @Override
-   public void print() {
-       System.out.println("Figure IsoscelesTrapezoid area: " + area() + "SideA: " + sideA
-               + "SideB: " + sideB + "HeghtH: " + heightH + "Color: " + getColor() );
+    @Override
+    public void print() {
+        System.out.println("Figure IsoscelesTrapezoid area: " + area() + "SideA: " + sideA
+                + "SideB: " + sideB + "HeghtH: " + heightH + "Color: " + getColor());
 
-   }
+    }
 }

@@ -26,15 +26,15 @@ public class RightTriangle extends Figure {
         this.legB = legB;
     }
 
-   @Override
-   public double area() {
-       return (legA * legB) / 2;
-   }
+    @Override
+    public double area() {
+        return (legA * legB) / 2;
+    }
 
-   @Override
-   public void print() {
-       System.out.println("Figure RightTriangle, area: " + area() + "LegA: " + legA
-               + "LegB: " + legB + "Color: " + getColor());
+    @Override
+    public void print() {
+        System.out.println("Figure RightTriangle, area: " + area() + "LegA: " + legA
+                + "LegB: " + legB + "Color: " + getColor());
 
-   }
+    }
 }
