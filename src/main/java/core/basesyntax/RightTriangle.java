@@ -11,17 +11,14 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double calcArea() {
+    public double calculateArea() {
         return Math.sqrt(firstLeg) + Math.sqrt(secondLeg);
     }
 
     @Override
     public void draw() {
-        double area = calcArea();
-        String colorString = color.toString();
-
         System.out.printf("Figure: circle, area: %,.2f sq.units, firstLeg: %d units, "
                 + "secondLeg: %d units, color: %s%n",
-                        area, firstLeg, secondLeg, colorString);
+                    calculateArea(), firstLeg, secondLeg, color.name());
     }
 }

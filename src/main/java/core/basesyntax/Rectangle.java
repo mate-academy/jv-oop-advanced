@@ -11,17 +11,14 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double calcArea() {
+    public double calculateArea() {
         return sideA * sideB;
     }
 
     @Override
     public void draw() {
-        double area = calcArea();
-        String colorString = color.toString();
-
         System.out.printf("Figure: rectangle, area: %,.2f sq.units, side a: %d units, "
                 + "side b: %d units, color: %s%n",
-                        area, sideA, sideB, colorString);
+                        calculateArea(), sideA, sideB, color.name());
     }
 }
