@@ -4,9 +4,11 @@ public class IsoscelesTrapezoid extends Figure {
     private final int middleLine;
     private final int height;
 
-    public IsoscelesTrapezoid(int height, int middleLine) {
+    public IsoscelesTrapezoid(int height, int middleLine, Color color) {
+        super(color);
         this.middleLine = middleLine;
         this.height = height;
+
     }
 
     @Override

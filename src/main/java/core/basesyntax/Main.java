@@ -4,9 +4,9 @@ public class Main {
     public static void main(String[] args) {
         Figure[] figures = new Figure[6];
         FigureSupplier figureSupplier = new FigureSupplier();
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < figures.length; i++) {
             figures[i] = figureSupplier.getRandomFigure();
-            if (i > 2) {
+            if (i >= figures.length / 2) {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
         }
