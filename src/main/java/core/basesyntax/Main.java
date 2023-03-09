@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.lang.reflect.Array;
-
 public class Main {
     private static final int MAX_SIZE = 6;
 
