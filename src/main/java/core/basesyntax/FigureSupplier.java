@@ -6,14 +6,12 @@ public class FigureSupplier {
     private static final int MAX_VALUE = 50;
     private static final int DEFAULT_RADIUS = 10;
     private static final String DEFAULT_COLOR = Color.WHITE.name();
-
     private Random random = new Random();
-
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         Figure figure;
-        switch (randomFigures()) {
+        switch (getRandomFiguresType()) {
             case CIRCLE:
                 figure = new Circle(colorSupplier.getRandomColor(), random.nextInt(MAX_VALUE));
                 break;
@@ -37,14 +35,12 @@ public class FigureSupplier {
         return figure;
     }
 
-    private Figures randomFigures() {
+    private Figures getRandomFiguresType() {
         int index = random.nextInt(Figures.values().length);
         return Figures.values()[index];
     }
 
     public Figure getDefaultFigure() {
-        Figure whiteCircle;
-        return whiteCircle = new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
-
 }
