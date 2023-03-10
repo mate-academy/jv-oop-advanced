@@ -35,9 +35,9 @@ public class FigureSupplier {
         return figure;
     }
 
-    private Figures getRandomFiguresType() {
-        int index = random.nextInt(Figures.values().length);
-        return Figures.values()[index];
+    private FigureType getRandomFiguresType() {
+        int index = random.nextInt(FigureType.values().length);
+        return FigureType.values()[index];
     }
 
     public Figure getDefaultFigure() {
