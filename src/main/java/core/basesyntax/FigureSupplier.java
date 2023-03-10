@@ -3,7 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    String randomColorForCircle = new ColorSupplier().getRandomColor();
+    Random random = new Random();
+    ColorSupplier randomColorForCircle = new ColorSupplier();
 
     public int randomNumberForLegs() {
         int numericFofLegs;
@@ -19,17 +20,16 @@ public class FigureSupplier {
 
     public int randomForMassive() {
         int result;
-        Random random = new Random();
         result = random.nextInt(5);
         return result;
     }
 
-    public Figure getDefaultFigure() {
-        int radius = 10;
-        Circle circle = new Circle(radius);
-        circle.color = "white";
-        return circle;
-    }
+//    public Figure getDefaultFigure() {
+//        int radius = 10;
+//        Circle circle = new Circle(radius);
+//        circle.color = "white";
+//        return circle;
+//    }
 
     private int[] isoscelesTrapezoid() {
         int[] legs = new int[4];
@@ -93,33 +93,33 @@ public class FigureSupplier {
         return legs;
     }
 
-    public Figure getRandomFigure(int randomInt) {
-        Figure randomFigure;
-        switch (randomInt){
-            case 1 : {
-                randomFigure =  new Circle(randomNumberForLegs(),randomColorForCircle);
-                break;
-            }
-            case 2 : {
-                randomFigure = new IsoscelesTrapezoid(isoscelesTrapezoid());
-                break;
-            }
-            case 3 : {
-                randomFigure = new Rectangle(rectangle());
-                break;
-            }
-            case 4 : {
-                randomFigure = new RightTriangle(rightTriangle());
-                break;
-            }
-            case 5 : {
-                randomFigure = new Square(square());
-                break;
-            }
-            default:
-                randomFigure = getDefaultFigure();
-                break;
-        }
-        return randomFigure;
-    }
+//    public Figure getRandomFigure(int randomInt) {
+//        Figure randomFigure;
+//        switch (randomInt){
+////            case 1 : {
+////                randomFigure =  new Circle(randomNumberForLegs(),//randomColorForCircle);
+////                break;
+////            }
+//            case 2 : {
+//                randomFigure = new IsoscelesTrapezoid(isoscelesTrapezoid());
+//                break;
+//            }
+//            case 3 : {
+//                randomFigure = new Rectangle(rectangle());
+//                break;
+//            }
+//            case 4 : {
+//                randomFigure = new RightTriangle(rightTriangle());
+//                break;
+//            }
+//            case 5 : {
+//                randomFigure = new Square(square());
+//                break;
+//            }
+//            default:
+//                randomFigure = getDefaultFigure();
+//                break;
+//        }
+//        return randomFigure;
+//    }
 }
