@@ -12,6 +12,7 @@ public class Square extends Figure {
         thirdLeg = legs[0];
         fourthLeg = legs[0];
         setColor(new ColorSupplier().getRandomColor());
+        setName("square");
     }
 
     @Override
@@ -22,11 +23,6 @@ public class Square extends Figure {
     @Override
     public String getColor() {
         return super.getColor();
-    }
-
-    @Override
-    public void setName(String name) {
-        super.setName("square");
     }
 
     @Override
