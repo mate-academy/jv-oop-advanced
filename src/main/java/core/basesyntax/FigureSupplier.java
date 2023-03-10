@@ -9,36 +9,30 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     private Figure getRandomCircle() {
-        Figure circle = new Circle(colorSupplier.getRandomColor(),
+        return new Circle(colorSupplier.getRandomColor(),
                 random.nextInt(SIZE));
-        return circle;
     }
 
     private Figure getRandomSquare() {
-        Figure square = new Square(colorSupplier.getRandomColor(),
+        return new Square(colorSupplier.getRandomColor(),
                 random.nextInt(SIZE));
-        return square;
     }
 
     private Figure getRandomRectangle() {
-        Figure rectangle = new Rectangle(colorSupplier.getRandomColor(),
+        return new Rectangle(colorSupplier.getRandomColor(),
                 random.nextInt(SIZE),
                 random.nextInt(SIZE));
-        return rectangle;
     }
 
     private Figure getRandomRightTriangle() {
-        Figure rightTriangle = new RightTriangle(colorSupplier.getRandomColor(),
+        return new RightTriangle(colorSupplier.getRandomColor(),
                 random.nextInt(SIZE),
                 random.nextInt(SIZE));
-
-        return rightTriangle;
     }
 
     private Figure getRandomIsoscelesTrapezoid() {
-        Figure isoscelesTrapezoid = new IsoscelesTrapezoid(random.nextInt(SIZE),
+        return new IsoscelesTrapezoid(random.nextInt(SIZE),
                 random.nextInt(SIZE),colorSupplier.getRandomColor());
-        return isoscelesTrapezoid;
     }
 
     public Figure getRandomFigure() {
@@ -60,7 +54,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        Figure figure = new Circle(Color.WHITE, SIZE);
-        return figure;
+        return new Circle(Color.WHITE, SIZE);
     }
 }

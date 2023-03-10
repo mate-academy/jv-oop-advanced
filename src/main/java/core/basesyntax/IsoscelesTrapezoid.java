@@ -8,7 +8,6 @@ public class IsoscelesTrapezoid extends Figure {
         super(color);
         this.middleLine = middleLine;
         this.height = height;
-
     }
 
     @Override
