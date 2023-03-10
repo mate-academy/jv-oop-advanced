@@ -6,7 +6,8 @@ public class IsoscelesTrapezoid implements Figure {
     private final double bottomLength;
     private final double height;
 
-    public IsoscelesTrapezoid(FigureColor color, double topLength, double bottomLength, double height) {
+    public IsoscelesTrapezoid(FigureColor color, double topLength,
+                              double bottomLength, double height) {
         this.color = color;
         this.topLength = topLength;
         this.bottomLength = bottomLength;

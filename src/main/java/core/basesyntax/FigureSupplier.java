@@ -3,47 +3,47 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final int FIGURE_COUNT = 5;
-    private final int MAX_NUMBER = 10;
+    private final int FigureCount = 5;
+    private final int MaxNumber = 10;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Circle getRandomCircle() {
-        int radius = random.nextInt(MAX_NUMBER);
+        int radius = random.nextInt(MaxNumber);
         FigureColor color = colorSupplier.getRandomColor();
         return new Circle(color, radius);
     }
 
     public Square getRandomSquare() {
-        int sideLength = random.nextInt(MAX_NUMBER);
+        int sideLength = random.nextInt(MaxNumber);
         FigureColor color = colorSupplier.getRandomColor();
         return new Square(color, sideLength);
     }
 
     public Rectangle getRandomRectangle() {
-        int width = random.nextInt(MAX_NUMBER);
-        int height = random.nextInt(MAX_NUMBER);
+        int width = random.nextInt(MaxNumber);
+        int height = random.nextInt(MaxNumber);
         FigureColor color = colorSupplier.getRandomColor();
         return new Rectangle(color, width, height);
     }
 
     public RightTriangle getRandomRightTriangle() {
-        int firstLeg = random.nextInt(MAX_NUMBER);
-        int secondLeg = random.nextInt(MAX_NUMBER);
+        int firstLeg = random.nextInt(MaxNumber);
+        int secondLeg = random.nextInt(MaxNumber);
         FigureColor color = colorSupplier.getRandomColor();
         return new RightTriangle(color, firstLeg, secondLeg);
     }
 
     public IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
-        int topLength = random.nextInt(MAX_NUMBER);
-        int bottomLength = random.nextInt(MAX_NUMBER);
-        int height = random.nextInt(MAX_NUMBER);
+        int topLength = random.nextInt(MaxNumber);
+        int bottomLength = random.nextInt(MaxNumber);
+        int height = random.nextInt(MaxNumber);
         FigureColor color = colorSupplier.getRandomColor();
         return new IsoscelesTrapezoid(color, topLength, bottomLength, height);
     }
 
     public Figure getRandomFigure() {
-        int index = random.nextInt(FIGURE_COUNT);
+        int index = random.nextInt(FigureCount);
 
         switch (index) {
             case 0:
@@ -60,6 +60,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(FigureColor.WHITE, MAX_NUMBER);
+        return new Circle(FigureColor.WHITE, MaxNumber);
     }
 }
