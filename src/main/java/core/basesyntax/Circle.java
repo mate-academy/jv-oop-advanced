@@ -17,13 +17,13 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return Math.PI * radius * radius;
     }
 
     @Override
     public void print() {
-        System.out.println("Figure Circle area: " + area() + "Radius: " + radius
+        System.out.println("Figure Circle area: " + getArea() + "Radius: " + radius
                 + "Color: " + getColor());
 
     }
