@@ -1,11 +1,11 @@
 package core.basesyntax;
 
-public class Square implements Figure {
-    private final FigureColor color;
+public class Square extends Figure {
+
     private final double sideLength;
 
-    public Square(FigureColor color, double sideLength) {
-        this.color = color;
+    public Square(Color color, double sideLength) {
+        super(color);
         this.sideLength = sideLength;
     }
 
@@ -19,7 +19,7 @@ public class Square implements Figure {
         System.out.println("Square: side Length = "
                 + sideLength
                 + ", color = "
-                + color
+                + getColor()
                 + ", area = "
                 + getArea() + " sq.units.");
     }

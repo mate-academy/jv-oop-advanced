@@ -1,14 +1,13 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid implements Figure {
-    private final FigureColor color;
+public class IsoscelesTrapezoid extends Figure {
+
     private final double topLength;
     private final double bottomLength;
     private final double height;
 
-    public IsoscelesTrapezoid(FigureColor color, double topLength,
-                              double bottomLength, double height) {
-        this.color = color;
+    public IsoscelesTrapezoid(Color color, double topLength, double bottomLength, double height) {
+        super(color);
         this.topLength = topLength;
         this.bottomLength = bottomLength;
         this.height = height;
@@ -28,7 +27,7 @@ public class IsoscelesTrapezoid implements Figure {
                 + ", height = "
                 + height
                 + ", color = "
-                + color
+                + getColor()
                 + ", area = "
                 + getArea() + " sq.units.");
     }
