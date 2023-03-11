@@ -11,17 +11,16 @@ public class Circle extends Figure {
 
     public Circle(int radius) {
         this.radius = radius;
+        this.setColor(new ColorSupplier().getRandomColor());
+        setName("circle");
+        setArea(getArea());
+    }
+    public Circle() {
+        radius = 10;
         setArea(getArea());
         setColor("white");
         setName("circle");
     }
-
-    public Circle(int radius, String color) {
-        this.radius = radius;
-        this.setColor(color);
-        setName("circle");
-    }
-
     @Override
     public double getArea() {
         return Math.PI * Math.pow(radius, 2);

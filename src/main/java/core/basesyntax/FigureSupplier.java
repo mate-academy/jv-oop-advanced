@@ -4,7 +4,6 @@ import java.util.Random;
 
 public class FigureSupplier {
     Random random = new Random();
-    ColorSupplier randomColorForCircle = new ColorSupplier();
 
     public int randomNumberForLegs() {
         int numericFofLegs;
@@ -24,20 +23,19 @@ public class FigureSupplier {
         return result;
     }
 
-//    public Figure getDefaultFigure() {
-//        int radius = 10;
-//        Circle circle = new Circle(radius);
-//        circle.color = "white";
-//        return circle;
-//    }
+    private void getDefaultFigure() {
+        Circle circle = new Circle(10);
+        circle.setColor("white");
+        circle.draw();
+    }
 
     private int[] isoscelesTrapezoid() {
         int[] legs = new int[4];
         int firstLeg = randomNumberForLegs();
         int secondLeg = randomNumberForLegs();
         int fourthLeg = randomNumberForLegs();
-        if ((firstLeg + firstLeg + secondLeg) < (fourthLeg + secondLeg)) {
-            while (fourthLeg > (firstLeg + firstLeg + secondLeg) || fourthLeg != secondLeg) {
+        if ((firstLeg + firstLeg + secondLeg) < (fourthLeg + secondLeg) || secondLeg == fourthLeg || (secondLeg + fourthLeg) / 2 > firstLeg || (secondLeg + fourthLeg) > firstLeg ) {
+            while (fourthLeg != secondLeg && fourthLeg > (firstLeg + firstLeg + secondLeg) && firstLeg > (secondLeg + fourthLeg) / 2 && firstLeg > secondLeg + fourthLeg) {
                 fourthLeg = randomNumberForLegs() + secondLeg;
             }
         }
@@ -93,17 +91,19 @@ public class FigureSupplier {
         return legs;
     }
 
-//    public Figure getRandomFigure(int randomInt) {
-//        Figure randomFigure;
-//        switch (randomInt){
-////            case 1 : {
-////                randomFigure =  new Circle(randomNumberForLegs(),//randomColorForCircle);
-////                break;
-////            }
-//            case 2 : {
-//                randomFigure = new IsoscelesTrapezoid(isoscelesTrapezoid());
-//                break;
-//            }
+    public Figure getRandomFigure(int randomInt) {
+        Figure randomFigure;
+        switch (randomInt){
+            case 1 : {
+                randomFigure =  new Circle(randomNumberForLegs());
+                randomFigure.draw();
+                break;
+            }
+            case 2 : {
+                randomFigure = new IsoscelesTrapezoid(isoscelesTrapezoid());
+                randomFigure.draw();
+                break;
+            }
 //            case 3 : {
 //                randomFigure = new Rectangle(rectangle());
 //                break;
@@ -112,14 +112,16 @@ public class FigureSupplier {
 //                randomFigure = new RightTriangle(rightTriangle());
 //                break;
 //            }
-//            case 5 : {
-//                randomFigure = new Square(square());
-//                break;
-//            }
-//            default:
-//                randomFigure = getDefaultFigure();
-//                break;
-//        }
-//        return randomFigure;
-//    }
+            case 5 : {
+                randomFigure = new Square(square());
+                randomFigure.draw();
+                break;
+            }
+            default:
+                randomFigure = new Circle();
+                randomFigure.draw();
+                break;
+        }
+        return randomFigure;
+    }
 }

@@ -1,9 +1,12 @@
 package core.basesyntax;
 
 import java.util.Arrays;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
+        FigureSupplier figureSupplier = new FigureSupplier();
+        int random = new Random().nextInt(5);
 //        int randomNumberForMassive1 = new FigureSupplier().randomForMassive();
 //        int randomNumberForMassive2 = new FigureSupplier().randomForMassive();
 //        int randomNumberForMassive3 = new FigureSupplier().randomForMassive();
@@ -16,9 +19,12 @@ public class Main {
 //        Figure[] figures = {figure1,figure2,figure3,defaultFigure1,defaultFigure2,defaultFigure3};
 //
 //        System.out.println(Arrays.toString(figures));
-        Circle circle = new Circle(5,"white");
-        circle.draw();
-        Square square = new Square(new int[] {3});
-        square.draw();
+//
+//        Circle circle = new Circle(10,"white");
+//        circle.draw();
+//        Square square = new Square(new int[] {3});
+//        square.draw();
+
+        figureSupplier.getRandomFigure(random);
     }
 }
