@@ -8,10 +8,7 @@ public class Main {
         for (int i = 0; i < 6; i++) {
             if (i < 3) {
                 figures[i] = new FigureSupplier().getRandomFigure();
-            }
-            else {
-                figures[i] = new FigureSupplier().getDefaultFigure();
-            }
+            } else figures[i] = new FigureSupplier().getDefaultFigure();
         }
 
         for (int i = 0; i < 6; i++) {
