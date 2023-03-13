@@ -1,5 +1,7 @@
 package basesyntax;
 
-abstract class Figure implements Drawable, AreaCalculator {
+abstract class Figure implements AreaCalculator {
     protected Color color;
+
+    abstract void draw();
 }

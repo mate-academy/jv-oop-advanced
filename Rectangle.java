@@ -10,9 +10,9 @@ public class Rectangle extends Figure {
         this.color = color;
     }
 
-    public String draw() {
-        return "Figure : Rectangle, Area :" + getArea() + " Width: "
-                + width + " Height: " + height + " Color: " + color.name();
+    public void draw() {
+        System.out.println("Figure : Rectangle, Area :" + getArea() + " Width: "
+                + width + " Height: " + height + " Color: " + color.name());
     }
 
     @Override
