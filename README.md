@@ -17,12 +17,12 @@ In the `main()` method we need to create an array of figures (the size of array 
 **The first half** of figures in this array should be generated with random parameters. 
 
 For this purpose create two more classes:
-- `ColorSupplier` with `public String getRandomColor()` method - for generating random color, 
-- and `FigureSupplier` with `public Figure getRandomFigure()` method - for generating figure with random properties.
+- `core.basesyntax.figures.ColorSupplier` with `public String getRandomColor()` method - for generating random color, 
+- and `core.basesyntax.figures.FigureSupplier` with `public Figure getRandomFigure()` method - for generating figure with random properties.
 
 **The other half** of figures should have the same, default parameters. 
 
-For this purpose create a new method in the `FigureSupplier` class:
+For this purpose create a new method in the `core.basesyntax.figures.FigureSupplier` class:
 - `public Figure getDefaultFigure()` - this method should always return white circle with radius 10.
 
 After generating the array, we need to display the entire list of objects that we have, for example:
