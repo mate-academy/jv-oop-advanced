@@ -4,13 +4,13 @@ import java.util.Random;
 
 public class FigureSupplier {
 
+    public static final int MAX_VALUE_OF_PARAMETER = 25;
+
+    public static final int DEFAULT_RADIUS = 10;
+
+    public static final String DEFAULT_COLOR = "White";
+
     private final ColorSupplier colorSupplier = new ColorSupplier();
-
-    public final static int MAX_VALUE_OF_PARAMETER = 25;
-
-    public final static int DEFAULT_RADIUS = 10;
-
-    public final static String DEFAULT_COLOR = "White";
 
     private final Random random = new Random();
 
