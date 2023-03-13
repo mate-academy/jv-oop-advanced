@@ -8,8 +8,8 @@ There are some figures of the following types: square, rectangle, right triangle
 You need to create corresponding classes for them(`Square`, `Rectangle`, `RightTriangle`, `Circle`, `IsoscelesTrapezoid`)
 
 All figures have 
-- **state** - all figures have `color`, but each figure type can also have one or several unique properties (`radius` for circle, `firstLeg` and `secondLeg` for right triangle, and so on).
-- **behaviour** - we can obtain the area of any figure and are able to draw it. To 'draw' means to print out all information about a figure using `System.out.println()` (you shouldn't override toString() method for this). 
+- **state** - all figures have `color`, but each figures type can also have one or several unique properties (`radius` for circle, `firstLeg` and `secondLeg` for right triangle, and so on).
+- **behaviour** - we can obtain the area of any figures and are able to draw it. To 'draw' means to print out all information about a figures using `System.out.println()` (you shouldn't override toString() method for this). 
    
 Think where you should declare these fields and methods: top level class / interface / bottom level classes.  
 
@@ -18,7 +18,7 @@ In the `main()` method we need to create an array of figures (the size of array 
 
 For this purpose create two more classes:
 - `ColorSupplier` with `public String getRandomColor()` method - for generating random color, 
-- and `FigureSupplier` with `public Figure getRandomFigure()` method - for generating figure with random properties.
+- and `FigureSupplier` with `public Figure getRandomFigure()` method - for generating figures with random properties.
 
 **The other half** of figures should have the same, default parameters. 
 
