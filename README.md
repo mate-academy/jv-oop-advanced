@@ -4,11 +4,11 @@ __Solve the task using OOP principles__
 
 Task:
 
-There are some figures of the following types: square, rectangle, right triangle, circle, isosceles trapezoid.
+There are some figures of the following types: square, rectangle, right rightTriangle, circle, isosceles trapezoid.
 You need to create corresponding classes for them(`Square`, `Rectangle`, `RightTriangle`, `Circle`, `IsoscelesTrapezoid`)
 
 All figures have 
-- **state** - all figures have `color`, but each figure type can also have one or several unique properties (`radius` for circle, `firstLeg` and `secondLeg` for right triangle, and so on).
+- **state** - all figures have `color`, but each figure type can also have one or several unique properties (`radius` for circle, `firstLeg` and `secondLeg` for right rightTriangle, and so on).
 - **behaviour** - we can obtain the area of any figure and are able to draw it. To 'draw' means to print out all information about a figure using `System.out.println()` (you shouldn't override toString() method for this). 
    
 Think where you should declare these fields and methods: top level class / interface / bottom level classes.  
@@ -29,7 +29,7 @@ After generating the array, we need to display the entire list of objects that w
 
 ```
  Figure: square, area: 25.0 sq.units, side: 5 units, color: blue
- Figure: triangle, area: 12.5 sq.units, firstLeg: 7 units, secondLeg: 5 units, color: yellow
+ Figure: rightTriangle, area: 12.5 sq.units, firstLeg: 7 units, secondLeg: 5 units, color: yellow
 ```
 
 #### [Try to avoid these common mistakes, while solving task](https://mate-academy.github.io/jv-program-common-mistakes/java-core/abstract-class-interface/oop-advanced)
