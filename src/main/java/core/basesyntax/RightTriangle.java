@@ -4,6 +4,8 @@ public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
     private int thirdLeg;
+    private double area;
+    private String name;
 
     public RightTriangle(int[] legs) {
         firstLeg = legs[0];
@@ -12,6 +14,18 @@ public class RightTriangle extends Figure {
         setArea(getArea());
         setColor(new ColorSupplier().getRandomColor());
         setName("rightTriangle");
+    }
+
+    public void setArea(double area) {
+        this.area = area;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
