@@ -1,7 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements Behaviour, CalcArea {
-    // Why can't I write 2 behavior in 1 interface(draw,getArea)?
+public abstract class Figure implements Drawable, AreaCalculator {
     protected String color;
     
     protected Figure(String color) {

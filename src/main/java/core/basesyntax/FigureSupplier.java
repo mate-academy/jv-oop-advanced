@@ -3,14 +3,15 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static int PROPERTIES = 25;
+    private static final int MAX_SIDE = 25;
     private static Random random = new Random();
-    private static final int FIGURECOUNT = 5;
+    private static final int FIGURE_COUNT = 5;
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
-    public static Figure getRandomFigure() {
-        int figure = random.nextInt(FIGURECOUNT);
-        String color = new ColorSupplier().getRandomColor();
-        switch (figure) {
+    public Figure getRandomFigure() {
+        int figureNumber = random.nextInt(FIGURE_COUNT);
+        String color = colorSupplier.getRandomColor();
+        switch (figureNumber) {
             case 0:
                 return getRandomSquare(color);
             case 1:
@@ -26,30 +27,30 @@ public class FigureSupplier {
         }
     }
 
-    public static Figure getDefaultFigure() {
+    public Figure getDefaultFigure() {
         return new Circle("white", 10);
     }
 
-    private static Square getRandomSquare(String color) {
-        return new Square(color, random.nextInt(PROPERTIES));
+    private Square getRandomSquare(String color) {
+        return new Square(color, random.nextInt(MAX_SIDE));
     }
 
-    private static Circle getRandomCircle(String color) {
-        return new Circle(color, random.nextInt(PROPERTIES));
+    private Circle getRandomCircle(String color) {
+        return new Circle(color, random.nextInt(MAX_SIDE));
     }
 
-    private static IsoscelesTrapezoid getRandomIsoscelesTrapezoid(String color) {
-        return new IsoscelesTrapezoid(color, random.nextInt(PROPERTIES),
-                random.nextInt(PROPERTIES), random.nextInt(PROPERTIES));
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid(String color) {
+        return new IsoscelesTrapezoid(color, random.nextInt(MAX_SIDE),
+                random.nextInt(MAX_SIDE), random.nextInt(MAX_SIDE));
     }
 
-    private static Rectangle getRandomRectangle(String color) {
-        return new Rectangle(color, random.nextInt(PROPERTIES),
-                random.nextInt(PROPERTIES));
+    private Rectangle getRandomRectangle(String color) {
+        return new Rectangle(color, random.nextInt(MAX_SIDE),
+                random.nextInt(MAX_SIDE));
     }
 
-    private static RightTriangle getRandomRightTriangle(String color) {
-        return new RightTriangle(color, random.nextInt(PROPERTIES),
-                random.nextInt(PROPERTIES));
+    private RightTriangle getRandomRightTriangle(String color) {
+        return new RightTriangle(color, random.nextInt(MAX_SIDE),
+                random.nextInt(MAX_SIDE));
     }
 }
