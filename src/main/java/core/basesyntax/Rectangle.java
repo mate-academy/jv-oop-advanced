@@ -4,8 +4,8 @@ public class Rectangle extends Figure {
     private double firstSide;
     private double secondSide;
 
-    public Rectangle(Color colour, double firstSide, double secondSide) {
-        super(colour);
+    public Rectangle(Color color, double firstSide, double secondSide) {
+        super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
     }
