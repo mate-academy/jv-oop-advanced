@@ -12,12 +12,10 @@ public class Main {
         Figure[] figures = new Figure[FIGURES_AMOUNT];
         for (int i = 0; i < figures.length; i++) {
             if (i < figures.length / 2) {
-                Figure randomFigure = figureSupplier.getRandomFigure();
-                figures[i] = randomFigure;
-                figures[i].draw();
+                figures[i] = figureSupplier.getRandomFigure();
+            } else {
+                figures[i] = figureSupplier.getDefaultFigure();
             }
-            Figure defaultFigure = figureSupplier.getDefaultFigure();
-            figures[i] = defaultFigure;
             figures[i].draw();
         }
     }
