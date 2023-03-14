@@ -6,7 +6,7 @@ public class Main {
         Figure[] figures = new Figure[6];
 
         for (int i = 0; i < figures.length; i++) {
-            figures[i] =  figureSupplier.getRandomFigure();
+            figures[i] = figureSupplier.getRandomFigure();
 
             figures[i].draw();
         }
