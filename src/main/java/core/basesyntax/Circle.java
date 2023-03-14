@@ -18,12 +18,14 @@ public class Circle extends Figure {
     
     @Override
     public double areaCalculator() {
-        return Math.PI*Math.pow(getRadius(), 2);
+        return Math.PI * Math.pow(getRadius(), 2);
     }
     
     @Override
     public void draw() {
         DecimalFormat decimalFormat = new DecimalFormat("0.00");
-        System.out.println("Figure: Circle, area: " + decimalFormat.format(getArea()) + " sq. units, radius: " + getRadius() + " units, color: " + getColour());
+        System.out.println("Figure: Circle, area: " + decimalFormat.format(getArea())
+                + " sq. units, radius: " + getRadius()
+                + " units, color: " + getColour());
     }
 }

@@ -7,7 +7,7 @@ public class IsoscelesTrapezoid extends Figure {
     private int topSide;
     private int leg;
     
-    public IsoscelesTrapezoid (String colour, int bottomSide, int topSide, int leg) {
+    public IsoscelesTrapezoid(String colour, int bottomSide, int topSide, int leg) {
         this.bottomSide = bottomSide;
         this.topSide = topSide;
         this.leg = leg;
@@ -19,9 +19,11 @@ public class IsoscelesTrapezoid extends Figure {
     public int getBottomSide() {
         return bottomSide;
     }
+    
     public int getTopSide() {
         return topSide;
     }
+    
     public int getLeg() {
         return leg;
     }
@@ -38,7 +40,10 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public void draw() {
         DecimalFormat decimalFormat = new DecimalFormat("0.00");
-        System.out.println("Figure: Isosceles trapezoid, area: " + decimalFormat.format(getArea()) + " sq. units, bottom side: " + getBottomSide()
-            + " units, top side: " + getTopSide() + " units, leg side: " + getLeg() + " units, color: " + getColour());
+        System.out.println("Figure: Isosceles Trapezoid, area: " + decimalFormat.format(getArea())
+                + " sq. units, bottom side: " + getBottomSide()
+                + " units, top side: " + getTopSide()
+                + " units, leg side: " + getLeg()
+                + " units, color: " + getColour());
     }
 }

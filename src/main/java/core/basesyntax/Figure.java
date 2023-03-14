@@ -7,6 +7,7 @@ public abstract class Figure implements AreaCalculator, Drawer {
     public String getColour() {
         return colour;
     }
+ 
     public double getArea() {
         return area;
     }
@@ -14,6 +15,7 @@ public abstract class Figure implements AreaCalculator, Drawer {
     public void setColour(String colour) {
         this.colour = colour;
     }
+    
     public void setArea(double area) {
         this.area = area;
     }
