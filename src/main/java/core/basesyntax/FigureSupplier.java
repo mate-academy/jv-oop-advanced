@@ -14,34 +14,31 @@ public class FigureSupplier {
         this.random = random;
     }
 
-    private int getRandomValues() {
-        int random = new Random().nextInt(FIGURES_COUNT);
-        return random;
+    private int getRandomValue() {
+        return new Random().nextInt(FIGURES_COUNT);
     }
 
     public Figure getRandomFigure() {
         switch (random.nextInt(FIGURES_COUNT)) {
             case 1:
-                return new RightTriangle(getRandomValues(),
-                        getRandomValues(),
+                return new RightTriangle(getRandomValue(),
+                        getRandomValue(),
                         colorSupplier.getRandomColor());
             case 2:
-                return new Circle(getRandomValues(),
+                return new Circle(getRandomValue(),
                         colorSupplier.getRandomColor());
             case 3:
-                return new IsoscelesTrapezoid(getRandomValues(),
-                        getRandomValues(),getRandomValues(), colorSupplier.getRandomColor());
+                return new IsoscelesTrapezoid(getRandomValue(),
+                        getRandomValue(), getRandomValue(), colorSupplier.getRandomColor());
             case 4:
-                return new Rectangle(getRandomValues(),getRandomValues(),
+                return new Rectangle(getRandomValue(), getRandomValue(),
                         colorSupplier.getRandomColor());
             default:
-                return new Square(getRandomValues(), colorSupplier.getRandomColor());
+                return new Square(getRandomValue(), colorSupplier.getRandomColor());
         }
     }
 
     public Figure getDefaultFigure() {
-        Figure circle = new Circle(CIRCLE_RADIUS, CIRCLE_COLOR);
-        circle.setColor(CIRCLE_COLOR);
-        return circle;
+        return new Circle(CIRCLE_RADIUS, CIRCLE_COLOR);
     }
 }

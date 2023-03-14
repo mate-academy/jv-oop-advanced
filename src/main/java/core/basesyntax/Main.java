@@ -15,11 +15,10 @@ public class Main {
                 Figure randomFigure = figureSupplier.getRandomFigure();
                 figures[i] = randomFigure;
                 figures[i].draw();
-            } else {
-                Figure defaultFigure = figureSupplier.getDefaultFigure();
-                figures[i] = defaultFigure;
-                figures[i].draw();
             }
+            Figure defaultFigure = figureSupplier.getDefaultFigure();
+            figures[i] = defaultFigure;
+            figures[i].draw();
         }
     }
 }
