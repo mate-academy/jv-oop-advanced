@@ -28,6 +28,6 @@ public class Rectangle extends Figure {
 
     @Override
     public void getArea() {
-        System.out.println("Rectangle colour "+ getColor() + " first side " + firstSide + " second side " + secondSide);
+        System.out.println("Rectangle colour " + getColor() + " first side " + firstSide + " second side " + secondSide);
     }
 }

@@ -8,7 +8,7 @@ public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        switch (figureTypes[random.nextInt(figureTypes.length)]){
+        switch (figureTypes[random.nextInt(figureTypes.length)]) {
             case "Circle":
                 return new Circle(colorSupplier.getRandomColor(), random.nextDouble());
             case "Rectangle":
@@ -22,7 +22,7 @@ public class FigureSupplier {
         }
     }
 
-    public Figure getDefaultFigure(){
+    public Figure getDefaultFigure() {
         double defaultRadius = 10;
         return new Circle(COLOR.WHITE, defaultRadius);
     }
