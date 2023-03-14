@@ -3,29 +3,35 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int COEFFICIENT = 10;
+    private static final int NUMBER_OF_FIGURE = 5;
+
     public Figure getRandomFigure() {
         String color = new ColorSupplier().getRandomColor();
 
-        switch (new Random().nextInt(5)) {
+        switch (new Random().nextInt(NUMBER_OF_FIGURE)) {
             case 0:
-                return new Circle(new Random().nextDouble() * 10, color);
+                return new Circle(new Random().nextDouble() * COEFFICIENT, color);
             case 1:
-                return new Square(new Random().nextDouble() * 10, color);
+                return new Square(new Random().nextDouble() * COEFFICIENT, color);
             case 2:
-                return new Rectangle(new Random().nextDouble() * 10,
-                        new Random().nextDouble() * 10, color);
+                return new Rectangle(new Random().nextDouble() * COEFFICIENT,
+                        new Random().nextDouble() * COEFFICIENT, color);
             case 3:
-                return new RightTriangle(new Random().nextDouble() * 10,
-                        new Random().nextDouble() * 10, color);
+                return new RightTriangle(new Random().nextDouble() * COEFFICIENT,
+                        new Random().nextDouble() * COEFFICIENT, color);
             case 4:
-                return new IsoscelesTrapezoid(new Random().nextDouble() * 10,
-                        new Random().nextDouble() * 10, new Random().nextDouble() * 10, color);
+                return new IsoscelesTrapezoid(new Random().nextDouble() * COEFFICIENT,
+                        new Random().nextDouble() * COEFFICIENT,
+                        new Random().nextDouble() * COEFFICIENT, color);
             default:
-                return null;
+                return getDefaultFigure();
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, Color.WHITE.toString());
+        int defaultRadiusCircle = 10;
+        String defaultColor = Color.WHITE.toString();
+        return new Circle(defaultRadiusCircle, defaultColor);
     }
 }
