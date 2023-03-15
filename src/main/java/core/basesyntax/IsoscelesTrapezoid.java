@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.text.DecimalFormat;
-
 public class IsoscelesTrapezoid extends Figure {
     private int bottomSide;
     private int topSide;
@@ -16,18 +14,6 @@ public class IsoscelesTrapezoid extends Figure {
         setArea(calculateArea());
     }
     
-    public int getBottomSide() {
-        return bottomSide;
-    }
-    
-    public int getTopSide() {
-        return topSide;
-    }
-    
-    public int getLeg() {
-        return leg;
-    }
-    
     @Override
     public double calculateArea() {
         double legSquare = Math.pow(leg,2);
@@ -39,11 +25,13 @@ public class IsoscelesTrapezoid extends Figure {
     
     @Override
     public void draw() {
-        DecimalFormat decimalFormat = new DecimalFormat("0.00");
-        System.out.println("Figure: Isosceles Trapezoid, area: " + decimalFormat.format(getArea())
-                + " sq. units, bottom side: " + getBottomSide()
-                + " units, top side: " + getTopSide()
-                + " units, leg side: " + getLeg()
-                + " units, color: " + getColour());
+        System.out.println(String.format("Figure: Isosceles Trapezoid, "
+                        + "area: %.2f sq.units, "
+                        + "bottom side: %d units, "
+                        + "top side: %d units, "
+                        + "leg side: %d units, "
+                        + "colour: %s",
+                calculateArea(), bottomSide, topSide, leg, getColour()));
+
     }
 }

@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.text.DecimalFormat;
-
 public class Rectangle extends Figure {
     private int width;
     private int height;
@@ -21,10 +19,10 @@ public class Rectangle extends Figure {
     
     @Override
     public void draw() {
-        DecimalFormat decimalFormat = new DecimalFormat("0.00");
-        System.out.println("Figure: Rectangle, area: " + decimalFormat.format(getArea())
-                + " sq. units, height: " + height
-                + " units, height: " + width
-                + " units, color: " + getColour());
+        System.out.println(String.format("FFigure: Rectangle, area: %.2f sq.units, "
+                        + "height: %d units, "
+                        + "width: %d units, "
+                        + "colour: %s",
+                calculateArea(), height, width, getColour()));
     }
 }

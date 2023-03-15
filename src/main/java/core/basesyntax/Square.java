@@ -1,14 +1,11 @@
 package core.basesyntax;
 
-import java.text.DecimalFormat;
-
 public class Square extends Figure {
     private int side;
     
     public Square(String colour, int side) {
         super(colour);
         this.side = side;
-        
         setArea(calculateArea());
     }
     
@@ -19,10 +16,9 @@ public class Square extends Figure {
     
     @Override
     public void draw() {
-        DecimalFormat decimalFormat = new DecimalFormat("0.00");
-        
-        System.out.println("Figure: Square, area: " + decimalFormat.format(getArea())
-                + " sq. units, side: " + side
-                + " units, color: " + getColour());
+        System.out.println(String.format("Figure: Square, area: %.2f sq.units, "
+                        + "side: %d units, "
+                        + "colour: %s",
+                calculateArea(), side, getColour()));
     }
 }

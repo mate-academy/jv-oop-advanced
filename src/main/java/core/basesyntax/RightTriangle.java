@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.text.DecimalFormat;
-
 public class RightTriangle extends Figure {
     private int adjacent;
     private int opposite;
@@ -12,11 +10,7 @@ public class RightTriangle extends Figure {
         this.adjacent = adjacent;
         this.opposite = opposite;
         
-        setHypotenuse(Math.sqrt((adjacent * adjacent) + (opposite * opposite)));
-    }
-    
-    public void setHypotenuse(double hypotenuse) {
-        this.hypotenuse = hypotenuse;
+        hypotenuse = (Math.sqrt((adjacent * adjacent) + (opposite * opposite)));
     }
     
     @Override
@@ -26,11 +20,11 @@ public class RightTriangle extends Figure {
     
     @Override
     public void draw() {
-        DecimalFormat decimalFormat = new DecimalFormat("0.00");
-        System.out.println("Figure: Right Triangle, area: " + decimalFormat.format(getArea())
-                + " sq. units, adjacent: " + adjacent
-                + " units, opposite: " + opposite
-                + " units, hypotenuse: " + hypotenuse
-                + " units, color: " + getColour());
+        System.out.println(String.format("Figure: Right Triangle, area: %.2f sq.units, "
+                        + "sq. units, adjacent: %d units, "
+                        + "opposite: %d units, "
+                        + "hypotenuse: %d units, "
+                        + "colour: %s",
+                calculateArea(), adjacent, opposite, hypotenuse, getColour()));
     }
 }
