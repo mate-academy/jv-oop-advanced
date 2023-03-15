@@ -3,13 +3,13 @@ package core.basesyntax;
 public class IsoscelesTrapezoid extends Figure {
     private double sideA;
     private double sideB;
-    private double heightH;
+    private double height;
 
     public IsoscelesTrapezoid(String color, double sideA, double sideB, double heightH) {
         super(color);
         this.sideA = sideA;
         this.sideB = sideB;
-        this.heightH = heightH;
+        this.height = heightH;
     }
 
     public double getSideA() {
@@ -28,23 +28,23 @@ public class IsoscelesTrapezoid extends Figure {
         this.sideB = sideB;
     }
 
-    public double getHeightH() {
-        return heightH;
+    public double getHeight() {
+        return height;
     }
 
-    public void setHeightH(double heightH) {
-        this.heightH = heightH;
+    public void setHeight(double height) {
+        this.height = height;
     }
 
     @Override
     public double getArea() {
-        return (sideA + sideB) / 2 * heightH;
+        return (sideA + sideB) / 2 * height;
     }
 
     @Override
     public void print() {
         System.out.println("Figure IsoscelesTrapezoid area: " + getArea() + "SideA: " + sideA
-                + "SideB: " + sideB + "HeghtH: " + heightH + "Color: " + getColor());
+                + "SideB: " + sideB + "HeghtH: " + height + "Color: " + getColor());
 
     }
 }
