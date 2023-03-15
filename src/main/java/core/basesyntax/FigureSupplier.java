@@ -14,42 +14,41 @@ public class FigureSupplier {
         int randomNumber = random.nextInt(FIGURES_NUMBER);
         switch (randomNumber) {
             case 0:
-                return createCircle(colorSupplier.getRandomColor(), random.nextInt(MAX_OF_BOUND));
+                return createCircle();
             case 1:
-                return createIsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_OF_BOUND), random.nextInt(MAX_OF_BOUND),
-                        random.nextInt(MAX_OF_BOUND));
+                return createIsoscelesTrapezoid();
             case 2:
-                return createRectangle(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_OF_BOUND), random.nextInt(MAX_OF_BOUND));
+                return createRectangle();
             case 3:
-                return createRightTriangle(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_OF_BOUND), random.nextInt(MAX_OF_BOUND));
+                return createRightTriangle();
             default:
-                return createSquare(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_OF_BOUND));
+                return createSquare();
         }
     }
 
-    private Figure createSquare(String color, int side) {
-        return new Square(color, side);
+    private Figure createSquare() {
+        return new Square(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_OF_BOUND));
     }
 
-    private Figure createRightTriangle(String color, int firstLeg, int secondLeg) {
-        return new RightTriangle(color, firstLeg, secondLeg);
+    private Figure createRightTriangle() {
+        return new RightTriangle(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_OF_BOUND), random.nextInt(MAX_OF_BOUND));
     }
 
-    private Figure createRectangle(String color, int firstSide, int secondSide) {
-        return new Rectangle(color, firstSide, secondSide);
+    private Figure createRectangle() {
+        return new Rectangle(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_OF_BOUND), random.nextInt(MAX_OF_BOUND));
     }
 
-    private Figure createIsoscelesTrapezoid(String color, int firstBase,
-                                            int secondBase, int height) {
-        return new IsoscelesTrapezoid(color, firstBase, secondBase, height);
+    private Figure createIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_OF_BOUND), random.nextInt(MAX_OF_BOUND),
+                random.nextInt(MAX_OF_BOUND));
     }
 
-    private Figure createCircle(String color, int radius) {
-        return new Circle(color, radius);
+    private Figure createCircle() {
+        return new Circle(colorSupplier.getRandomColor(), random.nextInt(MAX_OF_BOUND));
     }
 
     public Figure getDefaultFigure() {
