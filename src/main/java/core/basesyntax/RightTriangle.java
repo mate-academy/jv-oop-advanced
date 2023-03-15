@@ -13,7 +13,7 @@ public class RightTriangle extends Figure {
     public void draw() {
         System.out.println("Figure : Right Triangle, Area :" + getArea()
                 + " Catet1: " + firstCatet + " Catet2: " + secondCatet
-                + " Color: " + color.name()) ;
+                + " Color: " + color.name());
     }
 
     @Override
