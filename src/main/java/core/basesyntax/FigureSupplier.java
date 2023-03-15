@@ -7,6 +7,7 @@ public class FigureSupplier {
     private String[] figureTypes = {"Circle", "IsoscelesTrapezoid", "Rectangle",
             "RightTriangle", "Square"};
     private ColorSupplier colorSupplier = new ColorSupplier();
+    private static final double DEFAULT_RADIUS = 10;
 
     public Figure getRandomFigure() {
         switch (figureTypes[random.nextInt(figureTypes.length)]) {
@@ -27,7 +28,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        double defaultRadius = 10;
-        return new Circle(Color.WHITE, defaultRadius);
+        return new Circle(Color.WHITE, DEFAULT_RADIUS);
     }
 }
