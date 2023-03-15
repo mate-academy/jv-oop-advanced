@@ -14,7 +14,7 @@ public class Main {
         }
 
         for (int i = 0; i < finalFigures.length; i++) {
-            finalFigures[i].drawFigure();
+            finalFigures[i].draw();
         }
     }
 }

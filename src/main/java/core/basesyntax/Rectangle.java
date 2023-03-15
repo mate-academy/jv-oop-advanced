@@ -31,7 +31,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println("Rectangle colour " + getColor() + " first side " + firstSide
                 + " second side " + secondSide + " and area " + calculateArea());
     }

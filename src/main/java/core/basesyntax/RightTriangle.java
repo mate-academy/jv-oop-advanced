@@ -31,7 +31,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println("Right triangle colour " + getColor() + " first leg "
                 + firstLeg + " second leg " + secondLeg + " and area " + calculateArea());
     }
