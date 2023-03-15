@@ -17,27 +17,22 @@ public class FigureSupplier {
         switch (FigureList.values()[random.nextInt(FIGURE_COUNT)]) {
             case CIRCLE:
                 int radius = getRandomInt();
-                
                 return new Circle(colour, radius);
             case ISOSCELESTRAPEZOID:
                 int bottomSide = getRandomInt();
                 int topSide = getRandomInt();
                 int leg = getRandomInt();
-                
                 return new IsoscelesTrapezoid(colour, bottomSide, topSide, leg);
             case RECTANGLE:
                 int width = getRandomInt();
                 int height = getRandomInt();
-                
                 return new Rectangle(colour, width, height);
             case SQUARE:
                 int side = getRandomInt();
-                
                 return new Square(colour, side);
             default:
                 int adjacent = getRandomInt();
                 int opposite = getRandomInt();
-                
                 return new RightTriangle(colour, adjacent, opposite);
         }
     }

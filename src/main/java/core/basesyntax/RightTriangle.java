@@ -8,23 +8,11 @@ public class RightTriangle extends Figure {
     private double hypotenuse;
     
     public RightTriangle(String colour, int adjacent, int opposite) {
+        super(colour);
         this.adjacent = adjacent;
         this.opposite = opposite;
         
         setHypotenuse(Math.sqrt((adjacent * adjacent) + (opposite * opposite)));
-        setColour(colour);
-    }
-    
-    public int getAdjacent() {
-        return adjacent;
-    }
-    
-    public int getOpposite() {
-        return opposite;
-    }
-    
-    public double getHypotenuse() {
-        return hypotenuse;
     }
     
     public void setHypotenuse(double hypotenuse) {
@@ -32,7 +20,7 @@ public class RightTriangle extends Figure {
     }
     
     @Override
-    public double areaCalculator() {
+    public double calculateArea() {
         return adjacent * opposite / 2;
     }
     
@@ -40,9 +28,9 @@ public class RightTriangle extends Figure {
     public void draw() {
         DecimalFormat decimalFormat = new DecimalFormat("0.00");
         System.out.println("Figure: Right Triangle, area: " + decimalFormat.format(getArea())
-                + " sq. units, adjacent: " + getAdjacent()
-                + " units, opposite: " + getOpposite()
-                + " units, hypotenuse: " + getHypotenuse()
+                + " sq. units, adjacent: " + adjacent
+                + " units, opposite: " + opposite
+                + " units, hypotenuse: " + hypotenuse
                 + " units, color: " + getColour());
     }
 }

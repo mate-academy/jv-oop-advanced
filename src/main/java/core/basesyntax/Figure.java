@@ -4,6 +4,10 @@ public abstract class Figure implements AreaCalculator, Drawer {
     private String colour;
     private double area;
     
+    Figure (String colour) {
+        this.colour = colour;
+    }
+    
     public String getColour() {
         return colour;
     }

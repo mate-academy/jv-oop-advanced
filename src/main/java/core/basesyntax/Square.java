@@ -6,18 +6,14 @@ public class Square extends Figure {
     private int side;
     
     public Square(String colour, int side) {
+        super(colour);
         this.side = side;
         
-        setArea(areaCalculator());
-        setColour(colour);
-    }
-    
-    public int getSide() {
-        return side;
+        setArea(calculateArea());
     }
     
     @Override
-    public double areaCalculator() {
+    public double calculateArea() {
         return side * side;
     }
     
@@ -26,7 +22,7 @@ public class Square extends Figure {
         DecimalFormat decimalFormat = new DecimalFormat("0.00");
         
         System.out.println("Figure: Square, area: " + decimalFormat.format(getArea())
-                + " sq. units, side: " + getSide()
+                + " sq. units, side: " + side
                 + " units, color: " + getColour());
     }
 }
