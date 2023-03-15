@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_SIDE = 25;
-    private static Random random = new Random();
     private static final int FIGURE_COUNT = 5;
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
