@@ -1,5 +1,7 @@
-package core.basesyntax;
+package basesyntax;
 
-abstract class Figure implements Draw, AreaCalculator {
+abstract class Figure implements AreaCalculator {
     protected Color color;
+
+    abstract void draw();
 }

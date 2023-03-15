@@ -1,4 +1,4 @@
-package core.basesyntax;
+package basesyntax;
 
 public class Rectangle extends Figure {
     private int width;
@@ -10,9 +10,9 @@ public class Rectangle extends Figure {
         this.color = color;
     }
 
-    public String figureInfo() {
-        return "Figure : Rectangle, Area :" + getArea() + " Width: "
-                + width + " Height: " + height + " Color: " + color.name();
+    public void draw() {
+        System.out.println("Figure : Rectangle, Area :" + getArea() + " Width: "
+                + width + " Height: " + height + " Color: " + color.name());
     }
 
     @Override

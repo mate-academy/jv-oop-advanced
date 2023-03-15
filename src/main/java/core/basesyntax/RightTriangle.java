@@ -1,4 +1,4 @@
-package core.basesyntax;
+package basesyntax;
 
 public class RightTriangle extends Figure {
     private double firstCatet;
@@ -10,10 +10,10 @@ public class RightTriangle extends Figure {
         this.color = color;
     }
 
-    public String figureInfo() {
-        return "Figure : Right Triangle, Area :" + getArea()
+    public void draw() {
+        System.out.println("Figure : Right Triangle, Area :" + getArea()
                 + " Catet1: " + firstCatet + " Catet2: " + secondCatet
-                + " Color: " + color.name();
+                + " Color: " + color.name()) ;
     }
 
     @Override
