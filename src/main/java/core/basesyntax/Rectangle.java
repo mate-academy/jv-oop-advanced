@@ -26,9 +26,13 @@ public class Rectangle extends Figure {
         this.secondSide = secondSide;
     }
 
+    public double calculateArea() {
+        return firstSide * secondSide;
+    }
+
     @Override
-    public void getArea() {
+    public void drawFigure() {
         System.out.println("Rectangle colour " + getColor() + " first side " + firstSide
-                + " second side " + secondSide);
+                + " second side " + secondSide + " and area " + calculateArea());
     }
 }

@@ -16,8 +16,12 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
+    public double calculateArea(){
+        return Math.PI + Math.pow(radius, 2);
+    }
+
     @Override
-    public void getArea() {
-        System.out.println("Circle with radius " + radius + " and colour " + getColor());
+    public void drawFigure() {
+        System.out.println("Circle with radius " + radius + " and colour " + getColor() + " area " + calculateArea());
     }
 }

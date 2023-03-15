@@ -16,8 +16,12 @@ public class Square extends Figure {
         this.side = side;
     }
 
+    public double calculateArea() {
+        return Math.pow(side, 2);
+    }
+
     @Override
-    public void getArea() {
-        System.out.println("Square colour " + getColor() + " side " + side);
+    public void drawFigure() {
+        System.out.println("Square colour " + getColor() + " side " + side + " and area " + calculateArea());
     }
 }

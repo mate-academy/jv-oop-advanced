@@ -28,10 +28,14 @@ public class IsoscelesTrapezoid extends Figure {
         this.bottomSide = bottomSide;
     }
 
+    public double calculateArea() {
+        return (topSide + bottomSide) / 2 * height;
+    }
+
     @Override
-    public void getArea() {
+    public void drawFigure() {
         System.out.println("Isosceles Trapezoid with colour " + getColor()
                 + " top side length = " + topSide + " bottom side length "
-                + bottomSide + " height " + height);
+                + bottomSide + " height " + height + " area " + calculateArea());
     }
 }

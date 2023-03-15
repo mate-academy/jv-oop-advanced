@@ -26,9 +26,13 @@ public class RightTriangle extends Figure {
         this.secondLeg = secondLeg;
     }
 
+    public double calculateArea() {
+        return firstLeg * secondLeg / 2;
+    }
+
     @Override
-    public void getArea() {
+    public void drawFigure() {
         System.out.println("Right triangle colour " + getColor() + " first leg "
-                + firstLeg + " second leg " + secondLeg);
+                + firstLeg + " second leg " + secondLeg + " and area " + calculateArea());
     }
 }
