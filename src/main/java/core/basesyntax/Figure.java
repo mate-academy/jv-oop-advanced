@@ -1,8 +1,7 @@
 package core.basesyntax;
 
-public abstract class Figure implements FigureDraw, FigureGetArea {
+public abstract class Figure implements Drawable, AreaCalculator {
     private final Color color;
-
     public Figure(Color color) {
         this.color = color;
     }
@@ -12,10 +11,5 @@ public abstract class Figure implements FigureDraw, FigureGetArea {
     }
 
     @Override
-    public double getArea() {
-        return FigureGetArea.super.getArea();
-    }
-
-    public void draw() {
-    }
+    public abstract double getArea();
 }
