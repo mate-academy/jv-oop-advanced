@@ -28,6 +28,7 @@ public class IsoscelesTrapezoid extends Figure {
         this.bottomSide = bottomSide;
     }
 
+    @Override
     public double calculateArea() {
         return (topSide + bottomSide) / 2 * height;
     }

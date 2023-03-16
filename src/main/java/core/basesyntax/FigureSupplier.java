@@ -12,22 +12,42 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         switch (figureTypes[random.nextInt(figureTypes.length)]) {
             case "Circle":
-                return new Circle(colorSupplier.getRandomColor(), random.nextDouble());
+                return getRandomCircle();
             case "Rectangle":
-                return new Rectangle(colorSupplier.getRandomColor(),
-                        random.nextDouble(), random.nextDouble());
+                return getRandomRectangle();
             case "RightTriangle":
-                return new RightTriangle(colorSupplier.getRandomColor(),
-                        random.nextDouble(), random.nextDouble());
+                return getRandomRightTriangle();
             case "Square":
-                return new Square(colorSupplier.getRandomColor(), random.nextDouble());
+                return getRandomSquare();
             default:
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextDouble(),
-                        random.nextDouble(), random.nextDouble());
+                return getRandomIsoscelesTrapezoid();
         }
     }
 
     public Figure getDefaultFigure() {
         return new Circle(Color.WHITE, DEFAULT_RADIUS);
+    }
+
+    private Circle getRandomCircle(){
+        return new Circle(colorSupplier.getRandomColor(), random.nextDouble());
+    }
+
+    private Square getRandomSquare(){
+        return new Square(colorSupplier.getRandomColor(), random.nextDouble());
+    }
+
+    private Rectangle getRandomRectangle(){
+        return new Rectangle(colorSupplier.getRandomColor(),
+                random.nextDouble(), random.nextDouble());
+    }
+
+    private RightTriangle getRandomRightTriangle(){
+        return new RightTriangle(colorSupplier.getRandomColor(),
+                random.nextDouble(), random.nextDouble());
+    }
+
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid(){
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextDouble(),
+                random.nextDouble(), random.nextDouble());
     }
 }
