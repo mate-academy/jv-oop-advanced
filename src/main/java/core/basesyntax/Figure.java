@@ -1,12 +1,14 @@
 package core.basesyntax;
 
-public abstract class Figure implements DrawInform {
-    protected String color;
+public abstract class Figure implements GetArea, Drawable {
+    private final String color;
 
-    public Figure(Colors color) {
-        this.color = String.valueOf(color);
+    public Figure(Color color) {
+        this.color = color.name();
     }
 
-    public abstract double getArea();
+    public String getColor() {
+        return color;
+    }
 }
 
