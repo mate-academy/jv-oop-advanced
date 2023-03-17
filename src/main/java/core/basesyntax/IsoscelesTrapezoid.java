@@ -10,7 +10,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.topLength = topLength;
         this.bottomLength = bottomLength;
         this.height = height;
-
     }
 
     public double getArea() {

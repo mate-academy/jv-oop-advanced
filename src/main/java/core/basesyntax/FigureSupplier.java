@@ -2,12 +2,13 @@ package core.basesyntax;
 
 import java.util.Random;
 
-class FigureSupplier {
+public class FigureSupplier {
+    private static final int FIGURE_COUNT = 5;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int figureType = random.nextInt(5);
+        int figureType = random.nextInt(FIGURE_COUNT);
         switch (figureType) {
             case 0:
                 return getRandomSquare();
