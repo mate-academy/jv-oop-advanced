@@ -32,13 +32,11 @@ public class FigureSupplier {
             case 3:
                 figure = new Square("Square", color, random.nextInt(MAX_RANDOM_VALUE) + 1);
                 break;
-            case 4:
+            default:
                 figure = new RightTriangle("Right Triangle", color,
                         random.nextInt(MAX_RANDOM_VALUE) + 1,
                         random.nextInt(MAX_RANDOM_VALUE) + 1);
                 break;
-            default:
-                figure = getDefaultFigure();
         }
         return figure;
     }
