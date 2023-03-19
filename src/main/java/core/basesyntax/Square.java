@@ -1,9 +1,10 @@
 package core.basesyntax;
 
 public class Square extends Figure {
+    private int side;
     @Override
     public double getArea() {
-        return 0;
+        return side * side;
     }
 
     @Override

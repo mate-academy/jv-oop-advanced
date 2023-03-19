@@ -1,9 +1,12 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
+    private double height;
+    private double lengthOfBaseOfRectangle;
+
     @Override
     public double getArea() {
-        return 0;
+        return (height * lengthOfBaseOfRectangle) / 2;
     }
 
     @Override
