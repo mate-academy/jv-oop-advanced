@@ -1,4 +1,4 @@
-package basesyntax;
+package core.basesyntax;
 
 abstract class Figure implements AreaCalculator {
     protected Color color;
