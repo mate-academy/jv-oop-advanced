@@ -56,3 +56,4 @@ public class FigureSupplier {
         return new Circle(radius, Color.WHITE);
     }
 }
+

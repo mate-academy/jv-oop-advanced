@@ -21,3 +21,4 @@ public class RightTriangle extends Figure {
         return (firstCatet * secondCatet) / 2;
     }
 }
+
