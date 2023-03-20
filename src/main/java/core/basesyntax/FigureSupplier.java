@@ -4,20 +4,20 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final double DEFAULT_RADIUS = 10;
+    private Color DEFAULT_COLOR = Color.WHITE;
     private Random random = new Random();
-    private String[] figureTypes = {"Circle", "IsoscelesTrapezoid", "Rectangle",
-            "RightTriangle", "Square"};
+    private int figuresCount = 5;
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        switch (figureTypes[random.nextInt(figureTypes.length)]) {
-            case "Circle":
+        switch (random.nextInt(figuresCount)) {
+            case 1:
                 return getRandomCircle();
-            case "Rectangle":
+            case 2:
                 return getRandomRectangle();
-            case "RightTriangle":
+            case 3:
                 return getRandomRightTriangle();
-            case "Square":
+            case 4:
                 return getRandomSquare();
             default:
                 return getRandomIsoscelesTrapezoid();
@@ -25,7 +25,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE, DEFAULT_RADIUS);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
     private Circle getRandomCircle() {
