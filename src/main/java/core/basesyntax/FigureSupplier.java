@@ -37,14 +37,17 @@ public class FigureSupplier {
     }
 
     private Rectangle getRandomRectangle() {
-        return new Rectangle(colorSupplier.getRandomColor(), random.nextDouble(), random.nextDouble());
+        return new Rectangle(colorSupplier.getRandomColor(),
+                random.nextDouble(), random.nextDouble());
     }
 
     private RightTriangle getRandomRightTriangle() {
-        return new RightTriangle(colorSupplier.getRandomColor(), random.nextDouble(), random.nextDouble());
+        return new RightTriangle(colorSupplier.getRandomColor(),
+                random.nextDouble(), random.nextDouble());
     }
 
     private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextDouble(), random.nextDouble(), random.nextDouble());
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                random.nextDouble(), random.nextDouble(), random.nextDouble());
     }
 }
