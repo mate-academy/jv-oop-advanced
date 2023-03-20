@@ -23,4 +23,3 @@ public class IsoscelesTrapezoid extends Figure {
         return ((basis1 + basis2) / 2) * height;
     }
 }
-

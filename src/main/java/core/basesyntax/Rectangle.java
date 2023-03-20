@@ -20,4 +20,3 @@ public class Rectangle extends Figure {
         return width * height;
     }
 }
-

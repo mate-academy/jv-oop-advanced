@@ -5,4 +5,3 @@ abstract class Figure implements AreaCalculator {
 
     abstract void draw();
 }
-
