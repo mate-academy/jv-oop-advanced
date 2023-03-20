@@ -19,12 +19,12 @@ public class FigureSupplier {
 
     private Figure getRandomRightTriangle() {
         return new RightTriangle(random.nextInt(figureCount),
-                   random.nextInt(figureCount), randomColor.getRandomColor());
+                random.nextInt(figureCount), randomColor.getRandomColor());
     }
 
     private Figure getRandomRectangle() {
         return new Rectangle(random.nextInt(figureCount), random.nextInt(figureCount),
-                   randomColor.getRandomColor());
+                randomColor.getRandomColor());
     }
 
     private Figure getRandomSquare() {
