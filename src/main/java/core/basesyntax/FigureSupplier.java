@@ -5,36 +5,36 @@ import java.util.Random;
 public class FigureSupplier {
     private Random random = new Random();
     private ColorSupplier randomColor = new ColorSupplier();
-    private final int figureCount = 50;
+    private final int MAXIMUM_SIDE = 50;
+    private final int RADIUS = 10;
+    private final int FIGURE_COUNT = 5;
 
     private Figure getRandomCircle() {
-        return new Circle(random.nextInt(figureCount), randomColor.getRandomColor());
+        return new Circle(random.nextInt(MAXIMUM_SIDE), randomColor.getRandomColor());
     }
 
     private Figure getRandomIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(random.nextInt(figureCount),
-                random.nextInt(figureCount), random.nextInt(figureCount),
+        return new IsoscelesTrapezoid(random.nextInt(MAXIMUM_SIDE),
+                random.nextInt(MAXIMUM_SIDE), random.nextInt(MAXIMUM_SIDE),
                 randomColor.getRandomColor());
     }
 
     private Figure getRandomRightTriangle() {
-        return new RightTriangle(random.nextInt(figureCount),
-                random.nextInt(figureCount), randomColor.getRandomColor());
+        return new RightTriangle(random.nextInt(MAXIMUM_SIDE),
+                random.nextInt(MAXIMUM_SIDE), randomColor.getRandomColor());
     }
 
     private Figure getRandomRectangle() {
-        return new Rectangle(random.nextInt(figureCount), random.nextInt(figureCount),
+        return new Rectangle(random.nextInt(MAXIMUM_SIDE), random.nextInt(MAXIMUM_SIDE),
                 randomColor.getRandomColor());
     }
 
     private Figure getRandomSquare() {
-        return new Square(random.nextInt(figureCount), randomColor.getRandomColor());
+        return new Square(random.nextInt(MAXIMUM_SIDE), randomColor.getRandomColor());
     }
 
     public Figure getRandomFigure() {
-        final int figureCount = 5;
-        int figureNumber = random.nextInt(figureCount);
-
+        int figureNumber = random.nextInt(FIGURE_COUNT);
         switch (figureNumber) {
             case 0:
                 return getRandomCircle();
@@ -52,7 +52,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        final int radius = 10;
-        return new Circle(radius, Color.WHITE);
+        return new Circle(RADIUS, Color.WHITE);
     }
 }
