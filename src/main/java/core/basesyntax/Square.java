@@ -7,6 +7,7 @@ public class Square extends Figure {
         this.side = side;
         this.color = color;
     }
+
     @Override
     public void draw() {
         System.out.println("Figure : Square, Area :" + getArea() + " Side: "
