@@ -9,7 +9,7 @@ public class RightTriangle extends Figure {
         this.secondCatet = secondCatet;
         this.color = color;
     }
-
+    @Override
     public void draw() {
         System.out.println("Figure : Right Triangle, Area :" + getArea()
                 + " Catet1: " + firstCatet + " Catet2: " + secondCatet

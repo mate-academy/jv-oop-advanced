@@ -8,6 +8,7 @@ public class Circle extends Figure {
         this.color = color;
     }
 
+    @Override
     public void draw() {
         System.out.println("Figure : Circle, Area :" + getArea() + " Radius: " + radius
                 + " Color: " + color.name());
