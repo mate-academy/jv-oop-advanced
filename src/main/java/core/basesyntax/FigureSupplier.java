@@ -5,9 +5,9 @@ import java.util.Random;
 public class FigureSupplier {
     private Random random = new Random();
     private ColorSupplier randomColor = new ColorSupplier();
-    private final int MAXIMUM_SIDE = 50;
-    private final int RADIUS = 10;
-    private final int FIGURE_COUNT = 5;
+    private static final int MAXIMUM_SIDE = 50;
+    private static final int RADIUS = 10;
+    private static final int FIGURE_COUNT = 5;
 
     private Figure getRandomCircle() {
         return new Circle(random.nextInt(MAXIMUM_SIDE), randomColor.getRandomColor());
