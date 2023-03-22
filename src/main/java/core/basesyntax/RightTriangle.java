@@ -3,20 +3,25 @@ package core.basesyntax;
 import java.util.Random;
 
 class RightTriangle extends AbstractFigure {
-    private final Random random = new Random();
+    private double width;
+    private double height;
 
-    public RightTriangle(String color) {
+    public RightTriangle(Colors color) {
         super(color);
+        Random random = new Random();
+        width = random.nextDouble() * 10;
+        height = random.nextDouble() * 10;
+    }
+
+    @Override
+    public double calculateArea() {
+        return (width * height) / 2;
     }
 
     @Override
     public String draw() {
-        double width = random.nextDouble() * 10;
-        double height = random.nextDouble() * 10;
-        double area = (width * height) / 2;
-        return String.format("Figure: right triangle, area: %s sq.units, "
-               + "width: %s units, height: %s units",
-               String.format("%.2f", area), String.format("%.2f", width),
-               String.format("%.2f", height));
+        return String.format("Figure: right triangle, area: %.2f sq.units, "
+        + "width: %.2f units, height: %.2f units",
+       calculateArea(), width, height);
     }
 }

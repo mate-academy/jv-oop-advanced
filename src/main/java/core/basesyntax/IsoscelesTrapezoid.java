@@ -3,19 +3,25 @@ package core.basesyntax;
 import java.util.Random;
 
 class IsoscelesTrapezoid extends AbstractFigure {
-    private final Random random = new Random();
+    private double middleLine;
+    private double height;
 
-    public IsoscelesTrapezoid(String color) {
+    public IsoscelesTrapezoid(Colors color) {
         super(color);
+        Random random = new Random();
+        middleLine = random.nextDouble() * 10;
+        height = random.nextDouble() * 10;
+    }
+
+    @Override
+    public double calculateArea() {
+        return middleLine * height;
     }
 
     @Override
     public String draw() {
-        double middleLine = random.nextDouble() * 10;
-        double height = random.nextDouble() * 10;
-        double area = middleLine * height;
-        return String.format("Figure: isosceles trapezoid, area: %s sq.units, "
-                + "middleLine: %s units, height: %s units", String.format("%.2f", area),
-                String.format("%.2f", middleLine), String.format("%.2f", height));
+        return String.format("Figure: isosceles trapezoid, area: %.2f sq.units, "
+        + "middleLine: %.2f units, height: %.2f units",
+        calculateArea(), middleLine, height);
     }
 }

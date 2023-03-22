@@ -2,18 +2,23 @@ package core.basesyntax;
 
 import java.util.Random;
 
-class Circle extends AbstractFigure {
-    private final Random random = new Random();
+public class Circle extends AbstractFigure {
+    private double radius;
 
-    public Circle(String color) {
+    public Circle(Colors color) {
         super(color);
+        Random random = new Random();
+        radius = 10 * random.nextDouble();
+    }
+
+    @Override
+    public double calculateArea() {
+        return Math.PI * radius * radius;
     }
 
     @Override
     public String draw() {
-        double radius = 10 * random.nextDouble();
-        double area = Math.PI * radius;
-        return String.format("Figure: circle, area: %s sq.units, radius: %s units",
-               String.format("%.2f", area), String.format("%.2f", radius));
+        return String.format("Figure: circle, area: %.2f sq.units, "
+        + "radius: %.2f units", calculateArea(), radius);
     }
 }
