@@ -1,16 +1,15 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
+    private static final String name = "rectangle";
     private int firstLeg;
     private int secondLeg;
     private double area;
-    private String name;
 
-    public Rectangle(int[] legs) {
-        firstLeg = legs[0];
-        secondLeg = legs[1];
-        setColor(new ColorSupplier().getRandomColor());
-        setName("rectangle");
+    public Rectangle(int firstLeg, int secondLeg, String color) {
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
+        setColor(color);
         setArea(getArea());
     }
 
@@ -20,10 +19,6 @@ public class Rectangle extends Figure {
 
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     @Override

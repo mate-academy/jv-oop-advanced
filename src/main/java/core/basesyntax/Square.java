@@ -1,14 +1,13 @@
 package core.basesyntax;
 
 public class Square extends Figure {
+    private static final String name = "square";
     private final int firstLeg;
     private double area;
-    private String name;
 
-    public Square(int[] legs) {
-        firstLeg = legs[0];
-        setColor(new ColorSupplier().getRandomColor());
-        setName("square");
+    public Square(int firstLeg, String color) {
+        this.firstLeg = firstLeg;
+        setColor(color);
         setArea(getArea());
     }
 
@@ -18,10 +17,6 @@ public class Square extends Figure {
 
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     @Override

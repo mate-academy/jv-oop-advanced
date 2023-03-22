@@ -1,23 +1,18 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
+    private static final String name = "circle";
     private final int radius;
     private double area;
-    private String name;
 
-    public Circle(int radius) {
+    public Circle(int radius,String color) {
         this.radius = radius;
-        setColor(new ColorSupplier().getRandomColor());
-        setName("circle");
+        this.setColor(color);
         setArea(getArea());
     }
 
     public void setArea(double area) {
         this.area = area;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getName() {

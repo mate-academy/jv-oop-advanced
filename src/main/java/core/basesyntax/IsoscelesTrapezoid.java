@@ -1,28 +1,22 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
+    private static final String name = "isoscelesTrapezoid";
     private int firstLeg;
     private int secondLeg;
-    private int thirdLeg;
     private int fourthLeg;
     private double area;
-    private String name;
 
-    public IsoscelesTrapezoid(int[] legs) {
-        firstLeg = legs[0];
-        secondLeg = legs[1];
-        fourthLeg = legs[2];
-        setColor(new ColorSupplier().getRandomColor());
-        setName("isoscelesTrapezoid");
+    public IsoscelesTrapezoid(int firstLeg, int secondLeg, int fourthLeg, String color) {
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
+        this.fourthLeg = fourthLeg;
+        setColor(color);
         setArea(getArea());
     }
 
     public void setArea(double area) {
         this.area = area;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     public String getName() {
