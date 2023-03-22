@@ -5,8 +5,10 @@ import java.util.Random;
 public class FigureSupplier extends ColorSupplier {
     public static final int MAX_NUMBER_FIGURES = 6;
     public static final int MAX_NUMBER_SIDE = 20;
-    private static final Random random = new Random();
-    private static final ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+    public static final String DEFAULT_COLOR = "WHITE";
+    public static final int DEFAULT_SIZE = 10;
 
     public Figure getRandomFigure(String randomColor) {
 
@@ -27,6 +29,6 @@ public class FigureSupplier extends ColorSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("WHITE", 10);
+        return new Circle(DEFAULT_COLOR, DEFAULT_SIZE);
     }
 }
