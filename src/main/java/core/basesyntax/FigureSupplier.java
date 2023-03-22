@@ -27,6 +27,6 @@ public class FigureSupplier extends ColorSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", 10);
+        return new Circle("WHITE", 10);
     }
 }
