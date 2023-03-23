@@ -5,6 +5,7 @@ import java.util.Random;
 public class FigureSupplier {
     public static final int figureCount = 4;
     private final Random random = new Random();
+
     public Figure getRandomFigure() {
         double maxSide = 10;
         int figureNumber = random.nextInt(figureCount);
