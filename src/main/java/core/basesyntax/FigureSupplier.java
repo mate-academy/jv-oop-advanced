@@ -10,76 +10,60 @@ public class FigureSupplier {
     private Random random = new Random();
     private int randomInt;
 
+    public Figure getDefaultFigure() {
+        return new Circle(RADIUS_DEFAULT, WHITE);
+    }
+
+    public Figure getRandomFigure() {
+        randomInt = random.nextInt(5) + 1;
+        switch (randomInt) {
+            case 1: {
+                return getRandomCircle();
+            }
+            case 2: {
+                return getRandomIsoscelesTrapezoid();
+            }
+            case 3: {
+                return getRandomRectangle();
+            }
+            case 4: {
+                return getRandomRightTriangle();
+            }
+            case 5: {
+                return getRandomSquare();
+            }
+            default:
+                return getDefaultFigure();
+        }
+    }
+
     private int randomNumberForLegs() {
-        int numericFofLegs;
-        numericFofLegs = random.nextInt(MAX_RANDOM) + ONE;
-        return numericFofLegs;
+        return random.nextInt(MAX_RANDOM) + ONE;
     }
 
     private String color() {
         return new ColorSupplier().getRandomColor();
     }
 
-    public Figure getDefaultFigure() {
-        return new Circle(RADIUS_DEFAULT,WHITE);
+    private Figure getRandomCircle() {
+        return new Circle(randomNumberForLegs(), color());
     }
 
-    private Figure circle() {
-        int radius = randomNumberForLegs();
-        return new Circle(radius, color());
+    private Figure getRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(randomNumberForLegs(),
+                randomNumberForLegs(),randomNumberForLegs(),color());
     }
 
-    private Figure isoscelesTrapezoid() {
-        int firstLeg = randomNumberForLegs();
-        int secondLeg = randomNumberForLegs();
-        int fourthLeg = randomNumberForLegs() + secondLeg;
-        return new IsoscelesTrapezoid(firstLeg,secondLeg,fourthLeg,color());
+    private Figure getRandomRectangle() {
+        return new Rectangle(randomNumberForLegs(),
+                randomNumberForLegs(), color());
     }
 
-    private Figure rectangle() {
-        int firstLeg = randomNumberForLegs();
-        int secondLeg = randomNumberForLegs();
-        return new Rectangle(firstLeg, secondLeg, color());
+    private Figure getRandomRightTriangle() {
+        return new Square(randomNumberForLegs(),color());
     }
 
-    private Figure rightTriangle() {
-        int firstLeg = randomNumberForLegs();
-        return new Square(firstLeg,color());
-    }
-
-    private Figure square() {
-        int firstLeg = randomNumberForLegs();
-        return new Square(firstLeg,color());
-    }
-
-    public Figure getRandomFigure() {
-        Figure randomFigure;
-        randomInt = random.nextInt(5) + 1;
-        switch (randomInt) {
-            case 1: {
-                randomFigure = circle();
-                break;
-            }
-            case 2: {
-                randomFigure = isoscelesTrapezoid();
-                break;
-            }
-            case 3: {
-                randomFigure = rectangle();
-                break;
-            }
-            case 4: {
-                randomFigure = rightTriangle();
-                break;
-            }
-            case 5: {
-                randomFigure = square();
-                break;
-            }
-            default:
-                randomFigure = getDefaultFigure();
-                break;
-        }
-        return randomFigure;
+    private Figure getRandomSquare() {
+        return new Square(randomNumberForLegs(),color());
     }
 }
