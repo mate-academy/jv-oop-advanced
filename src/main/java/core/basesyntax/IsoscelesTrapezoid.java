@@ -12,6 +12,7 @@ public class IsoscelesTrapezoid extends Figure implements Area, Draw {
         this.side = side;
         this.color = ColorSupplier.getRandomColor();
     }
+
     @Override
     public double getArea() {
         double length = (bottom - top) / 2;
@@ -22,6 +23,7 @@ public class IsoscelesTrapezoid extends Figure implements Area, Draw {
     @Override
     public void draw() {
         System.out.println("Figure: " + type + ", area: " + getArea()
-                + ", top: " + top + ", bottom: " + bottom + ", side: " + side + ", color: " + color);
+                + ", top: " + top + ", bottom: " + bottom
+                + ", side: " + side + ", color: " + color);
     }
 }
