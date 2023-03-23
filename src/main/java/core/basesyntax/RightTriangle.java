@@ -1,10 +1,10 @@
 package core.basesyntax;
 
-public class Triangle extends Figure implements Area, Draw {
+public class RightTriangle extends Figure {
     private final double firstLeg;
     private final double secondLeg;
 
-    public Triangle(double firstLeg, double secondLeg) {
+    public RightTriangle(double firstLeg, double secondLeg) {
         this.type = getClass().getSimpleName();
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;

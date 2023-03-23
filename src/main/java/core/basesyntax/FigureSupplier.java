@@ -18,7 +18,7 @@ public class FigureSupplier {
             case 1 :
                 return new Circle(firstSide);
             case 2 :
-                return new Triangle(firstSide, secondSide);
+                return new RightTriangle(firstSide, secondSide);
             case 3 :
                 return new IsoscelesTrapezoid(firstSide, secondSide, thirdSide);
             default :

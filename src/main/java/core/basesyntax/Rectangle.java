@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Area, Draw {
+public class Rectangle extends Figure {
     private final double height;
     private final double width;
 
