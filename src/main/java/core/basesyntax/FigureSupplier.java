@@ -3,15 +3,15 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int figureCount = 5;
+    public static final int FIGURE_COUNT = 5;
     private final Random random = new Random();
+    static final double MAX_SIDE = 10;
+    double firstSide = random.nextDouble() * MAX_SIDE;
+    double secondSide = random.nextDouble() * MAX_SIDE;
+    double thirdSide = random.nextDouble() * MAX_SIDE;
 
     public Figure getRandomFigure() {
-        double maxSide = 10;
-        int figureNumber = random.nextInt(figureCount);
-        double firstSide = random.nextDouble() * maxSide;
-        double secondSide = random.nextDouble() * maxSide;
-        double thirdSide = random.nextDouble() * maxSide;
+        int figureNumber = random.nextInt(FIGURE_COUNT);
         switch (figureNumber) {
             case 0 :
                 return new Square(firstSide);
