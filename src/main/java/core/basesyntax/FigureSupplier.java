@@ -4,12 +4,12 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
-    private final double MAX_SIDE = 10;
-    private final Color DEFAULT_COLOR = Color.WHITE;
+    private final double maxSide = 10;
+    private final Color defaultColor = Color.WHITE;
     private final Random random = new Random();
-    private final double firstSide = random.nextDouble() * MAX_SIDE;
-    private final double secondSide = random.nextDouble() * MAX_SIDE;
-    private final double thirdSide = random.nextDouble() * MAX_SIDE;
+    private final double firstSide = random.nextDouble() * maxSide;
+    private final double secondSide = random.nextDouble() * maxSide;
+    private final double thirdSide = random.nextDouble() * maxSide;
 
     private Square prepareSquare() {
         return new Square(firstSide, ColorSupplier.getRandomColor());
@@ -24,7 +24,8 @@ public class FigureSupplier {
     }
 
     private IsoscelesTrapezoid prepareIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(firstSide, secondSide, thirdSide, ColorSupplier.getRandomColor());
+        return new IsoscelesTrapezoid(firstSide, secondSide, thirdSide,
+                ColorSupplier.getRandomColor());
     }
 
     private Rectangle prepareRectangle() {
@@ -48,7 +49,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        int DEFAULT_RADIUS = 10;
-        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
+        int defaultRadius = 10;
+        return new Circle(defaultRadius, defaultColor);
     }
 }
