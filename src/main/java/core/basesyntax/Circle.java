@@ -8,11 +8,6 @@ public class Circle extends Figure {
     public Circle(int radius,String color) {
         this.radius = radius;
         this.setColor(color);
-        setArea(getArea());
-    }
-
-    public void setArea(double area) {
-        this.area = area;
     }
 
     public String getName() {

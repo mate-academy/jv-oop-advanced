@@ -51,19 +51,19 @@ public class FigureSupplier {
 
     private Figure getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(randomNumberForLegs(),
-                randomNumberForLegs(),randomNumberForLegs(),color());
+                randomNumberForLegs(),randomNumberForLegs());
     }
 
     private Figure getRandomRectangle() {
         return new Rectangle(randomNumberForLegs(),
-                randomNumberForLegs(), color());
+                randomNumberForLegs());
     }
 
     private Figure getRandomRightTriangle() {
-        return new Square(randomNumberForLegs(),color());
+        return new Square(randomNumberForLegs());
     }
 
     private Figure getRandomSquare() {
-        return new Square(randomNumberForLegs(),color());
+        return new Square(randomNumberForLegs());
     }
 }

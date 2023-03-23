@@ -5,10 +5,8 @@ public class Square extends Figure {
     private final int firstLeg;
     private double area;
 
-    public Square(int firstLeg, String color) {
+    public Square(int firstLeg) {
         this.firstLeg = firstLeg;
-        setColor(color);
-        setArea(getArea());
     }
 
     public void setArea(double area) {
@@ -26,7 +24,7 @@ public class Square extends Figure {
 
     @Override
     public String getColor() {
-        return super.getColor();
+        return new ColorSupplier().getRandomColor();
     }
 
     @Override
