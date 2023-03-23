@@ -4,11 +4,11 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
-    private final Random random = new Random();
     static final double MAX_SIDE = 10;
-    double firstSide = random.nextDouble() * MAX_SIDE;
-    double secondSide = random.nextDouble() * MAX_SIDE;
-    double thirdSide = random.nextDouble() * MAX_SIDE;
+    private final Random random = new Random();
+    private final double firstSide = random.nextDouble() * MAX_SIDE;
+    private final double secondSide = random.nextDouble() * MAX_SIDE;
+    private final double thirdSide = random.nextDouble() * MAX_SIDE;
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);

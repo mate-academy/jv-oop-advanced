@@ -2,8 +2,8 @@ package core.basesyntax;
 
 public class Main {
     public static void main(String[] args) {
-        final int ARRAY_LENGTH = 5;
-        Figure[] figures = new Figure[ARRAY_LENGTH];
+        final int arrayLength = 5;
+        Figure[] figures = new Figure[arrayLength];
         FigureSupplier figureSupplier = new FigureSupplier();
 
         for (int i = 0; i < figures.length; i++) {
