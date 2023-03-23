@@ -1,15 +1,12 @@
 package core.basesyntax;
 
-/**
- * Feel free to remove this class and create your own.
- */
 public class Square extends Figure {
     private final double side;
 
-    public Square(double side) {
+    public Square(double side, Color color) {
         this.type = getClass().getSimpleName();
         this.side = side;
-        this.color = ColorSupplier.getRandomColor();
+        this.color = color;
     }
 
     @Override

@@ -5,12 +5,12 @@ public class IsoscelesTrapezoid extends Figure {
     private final double bottom;
     private final double side;
 
-    public IsoscelesTrapezoid(double top, double bottom, double side) {
+    public IsoscelesTrapezoid(double top, double bottom, double side, Color color) {
         this.type = getClass().getSimpleName();
         this.top = top;
         this.bottom = bottom;
         this.side = side;
-        this.color = ColorSupplier.getRandomColor();
+        this.color = color;
     }
 
     @Override

@@ -3,10 +3,10 @@ package core.basesyntax;
 public class Circle extends Figure {
     private final double radius;
 
-    public Circle(double radius) {
+    public Circle(double radius, Color color) {
         this.type = getClass().getSimpleName();
         this.radius = radius;
-        this.color = ColorSupplier.getRandomColor();
+        this.color = color;
     }
 
     @Override

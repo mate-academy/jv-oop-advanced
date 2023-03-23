@@ -4,11 +4,11 @@ public class RightTriangle extends Figure {
     private final double firstLeg;
     private final double secondLeg;
 
-    public RightTriangle(double firstLeg, double secondLeg) {
+    public RightTriangle(double firstLeg, double secondLeg, Color color) {
         this.type = getClass().getSimpleName();
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        this.color = ColorSupplier.getRandomColor();
+        this.color = color;
     }
 
     @Override

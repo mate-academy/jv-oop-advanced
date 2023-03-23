@@ -4,11 +4,11 @@ public class Rectangle extends Figure {
     private final double height;
     private final double width;
 
-    public Rectangle(double height, double width) {
+    public Rectangle(double height, double width, Color color) {
         this.type = getClass().getSimpleName();
         this.height = height;
         this.width = width;
-        this.color = ColorSupplier.getRandomColor();
+        this.color = color;
     }
 
     @Override
