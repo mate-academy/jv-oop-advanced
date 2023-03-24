@@ -8,30 +8,7 @@ public class FigureSupplier {
     private static final int RADIUS = 10;
     private static final Color DEFAULT_COLOR = Color.WHITE;
     private final Random random = new Random();
-    private final ColorSupplier color = new ColorSupplier();
-    private final double firstSide = random.nextDouble() * MAX_SIDE;
-    private final double secondSide = random.nextDouble() * MAX_SIDE;
-    private final double thirdSide = random.nextDouble() * MAX_SIDE;
-
-    private Square prepareSquare() {
-        return new Square(color.getRandomColor(), firstSide);
-    }
-
-    private Circle prepareCircle() {
-        return new Circle(color.getRandomColor(), firstSide);
-    }
-
-    private RightTriangle prepareRightTriangle() {
-        return new RightTriangle(color.getRandomColor(), firstSide, secondSide);
-    }
-
-    private IsoscelesTrapezoid prepareIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(color.getRandomColor(), firstSide, secondSide, thirdSide);
-    }
-
-    private Rectangle prepareRectangle() {
-        return new Rectangle(color.getRandomColor(), firstSide, secondSide);
-    }
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
@@ -51,5 +28,28 @@ public class FigureSupplier {
 
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, RADIUS);
+    }
+
+    private Square prepareSquare() {
+        return new Square(colorSupplier.getRandomColor(), random.nextDouble() * MAX_SIDE);
+    }
+
+    private Circle prepareCircle() {
+        return new Circle(colorSupplier.getRandomColor(), random.nextDouble() * MAX_SIDE);
+    }
+
+    private RightTriangle prepareRightTriangle() {
+        return new RightTriangle(colorSupplier.getRandomColor(), random.nextDouble() * MAX_SIDE,
+                random.nextDouble() * MAX_SIDE);
+    }
+
+    private IsoscelesTrapezoid prepareIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextDouble() * MAX_SIDE,
+                random.nextDouble() * MAX_SIDE, random.nextDouble() * MAX_SIDE);
+    }
+
+    private Rectangle prepareRectangle() {
+        return new Rectangle(colorSupplier.getRandomColor(), random.nextDouble() * MAX_SIDE,
+                random.nextDouble() * MAX_SIDE);
     }
 }
