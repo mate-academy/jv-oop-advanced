@@ -7,15 +7,16 @@ public class IsoscelesTrapezoid extends Figure {
     private int fourthLeg;
     private double area;
 
-    public IsoscelesTrapezoid(int firstLeg, int secondLeg, int fourthLeg) {
+    public IsoscelesTrapezoid(int firstLeg, int secondLeg, int fourthLeg, String color) {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
         this.fourthLeg = fourthLeg;
+        setColor(color);
+        this.area = getArea();
     }
 
-    @Override
-    public String getColor() {
-        return new ColorSupplier().getRandomColor();
+    public void setArea(double area) {
+        this.area = area;
     }
 
     public String getName() {

@@ -6,18 +6,19 @@ public class Rectangle extends Figure {
     private int secondLeg;
     private double area;
 
-    public Rectangle(int firstLeg, int secondLeg) {
+    public Rectangle(int firstLeg, int secondLeg, String color) {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
+        setColor(color);
+        this.area = getArea();
+    }
+
+    public void setArea(double area) {
+        this.area = area;
     }
 
     public String getName() {
         return name;
-    }
-
-    @Override
-    public String getColor() {
-        return new ColorSupplier().getRandomColor();
     }
 
     @Override

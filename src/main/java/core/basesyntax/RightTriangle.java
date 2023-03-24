@@ -5,13 +5,14 @@ public class RightTriangle extends Figure {
     private int firstLeg;
     private double area;
 
-    public RightTriangle(int firstLeg) {
+    public RightTriangle(int firstLeg, String color) {
         this.firstLeg = firstLeg;
+        this.area = getArea();
+        setColor(color);
     }
 
-    @Override
-    public String getColor() {
-        return new ColorSupplier().getRandomColor();
+    public void setArea(double area) {
+        this.area = area;
     }
 
     public String getName() {
