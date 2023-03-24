@@ -4,32 +4,33 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
-    private final double maxSide = 10;
-    private final Color defaultColor = Color.WHITE;
+    private static final double MAX_SIDE = 10;
+    private static final int RADIUS = 10;
+    private final Color DEFAULT_COLOR = Color.WHITE;
     private final Random random = new Random();
-    private final double firstSide = random.nextDouble() * maxSide;
-    private final double secondSide = random.nextDouble() * maxSide;
-    private final double thirdSide = random.nextDouble() * maxSide;
+    private final ColorSupplier color = new ColorSupplier();
+    private final double firstSide = random.nextDouble() * MAX_SIDE;
+    private final double secondSide = random.nextDouble() * MAX_SIDE;
+    private final double thirdSide = random.nextDouble() * MAX_SIDE;
 
     private Square prepareSquare() {
-        return new Square(firstSide, ColorSupplier.getRandomColor());
+        return new Square(color.getRandomColor(), firstSide);
     }
 
     private Circle prepareCircle() {
-        return new Circle(firstSide, ColorSupplier.getRandomColor());
+        return new Circle(color.getRandomColor(), firstSide);
     }
 
     private RightTriangle prepareRightTriangle() {
-        return new RightTriangle(firstSide, secondSide, ColorSupplier.getRandomColor());
+        return new RightTriangle(color.getRandomColor(), firstSide, secondSide);
     }
 
     private IsoscelesTrapezoid prepareIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(firstSide, secondSide, thirdSide,
-                ColorSupplier.getRandomColor());
+        return new IsoscelesTrapezoid(color.getRandomColor(), firstSide, secondSide, thirdSide);
     }
 
     private Rectangle prepareRectangle() {
-        return new Rectangle(firstSide, secondSide, ColorSupplier.getRandomColor());
+        return new Rectangle(color.getRandomColor(), firstSide, secondSide);
     }
 
     public Figure getRandomFigure() {
@@ -49,7 +50,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        int defaultRadius = 10;
-        return new Circle(defaultRadius, defaultColor);
+        return new Circle(DEFAULT_COLOR, RADIUS);
     }
 }

@@ -4,11 +4,10 @@ public class Rectangle extends Figure {
     private final double height;
     private final double width;
 
-    public Rectangle(double height, double width, Color color) {
-        this.type = getClass().getSimpleName();
+    public Rectangle(Color color, double height, double width) {
+        super(color);
         this.height = height;
         this.width = width;
-        this.color = color;
     }
 
     @Override
@@ -18,7 +17,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + type + ", area: " + getArea()
+        System.out.println("Figure: " + getClass().getSimpleName() + ", area: " + getArea()
                 + ", height: " + height + ", width: " + width + ", color: " + color);
     }
 }
