@@ -29,9 +29,9 @@ public class FigureSupplier {
         }
     }
 
-    public Figure getDefaultFigure() {
-        int defaultRadiusCircle = 10;
-        String defaultColor = Color.WHITE.toString();
-        return new Circle(defaultRadiusCircle, defaultColor);
+    public final Figure getDefaultFigure() {
+        final int defaultRadius = 10;
+        final String defaultWhiteColor = Color.WHITE.toString();
+        return new Circle(defaultRadius, defaultWhiteColor);
     }
 }
