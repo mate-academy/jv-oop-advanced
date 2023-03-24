@@ -7,6 +7,10 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
+    public Circle() {
+        radius = random.nextDouble();
+    }
+
     @Override
     public String getData() {
         return "Figure: circle, area: " + area + " sq.units, radius: " + radius

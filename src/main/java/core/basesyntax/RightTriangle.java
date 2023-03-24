@@ -12,7 +12,6 @@ public class RightTriangle extends Figure {
     }
 
     public RightTriangle() {
-        Random random = new Random();
         firstLeg = random.nextDouble();
         secondLeg = random.nextDouble();
     }

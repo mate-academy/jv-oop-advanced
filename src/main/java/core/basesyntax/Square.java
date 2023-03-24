@@ -7,6 +7,10 @@ public class Square extends Figure {
         this.side = side;
     }
 
+    public Square() {
+        side = random.nextDouble();
+    }
+
     @Override
     public double getArea() {
         return side * side;

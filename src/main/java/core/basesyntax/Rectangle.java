@@ -9,6 +9,11 @@ public class Rectangle extends Figure {
         this.secondSide = secondSide;
     }
 
+    public Rectangle() {
+        firstSide = random.nextDouble();
+        secondSide = random.nextDouble();
+    }
+
     @Override
     public double getArea() {
         return firstSide * secondSide;

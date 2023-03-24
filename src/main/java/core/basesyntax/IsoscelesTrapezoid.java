@@ -5,10 +5,16 @@ public class IsoscelesTrapezoid extends Figure {
     private double bigSide;
     private double altitude;
 
-    public IsoscelesTrapezoid(double a, double b, double c) {
-        littleSide = a;
-        bigSide = b;
-        altitude = c;
+    public IsoscelesTrapezoid(double littleSide, double bigSide, double altitude) {
+        this.littleSide = littleSide;
+        this.bigSide = bigSide;
+        this.altitude = altitude;
+    }
+
+    public IsoscelesTrapezoid() {
+        littleSide = random.nextDouble();
+        bigSide = random.nextDouble();
+        altitude = random.nextDouble();
     }
 
     @Override

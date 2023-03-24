@@ -10,20 +10,19 @@ public class FigureSupplier {
         Figure figure;
         switch (randomFigure) {
             case CIRCLE:
-                figure = new Circle(random.nextDouble());
+                figure = new Circle();
                 break;
             case SQUARE:
-                figure = new Square(random.nextDouble());
+                figure = new Square();
                 break;
             case RECTANGLE:
-                figure = new Rectangle(random.nextDouble(), random.nextDouble());
+                figure = new Rectangle();
                 break;
             case RIGHTTRIANGLE:
-                figure = new RightTriangle(random.nextDouble(), random.nextDouble());
+                figure = new RightTriangle();
                 break;
             case ISOSCELESTRAPESOID:
-                figure = new IsoscelesTrapezoid(random.nextDouble(), random.nextDouble(),
-                        random.nextDouble());
+                figure = new IsoscelesTrapezoid();
                 break;
             default:
                 figure = getDefaultFigure();
@@ -34,7 +33,7 @@ public class FigureSupplier {
 
     public static Figure getDefaultFigure() {
         Circle circle = new Circle(10.0);
-        circle.color = RandomColor.WHITE.toString();
+        circle.color = Color.WHITE.toString();
         return circle;
     }
 }
