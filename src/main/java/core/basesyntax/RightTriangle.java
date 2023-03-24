@@ -6,9 +6,9 @@ public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
-    public RightTriangle(double a, double b) {
-        firstLeg = a;
-        secondLeg = b;
+    public RightTriangle(double firstLeg, double secondLeg) {
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
     }
 
     public RightTriangle() {
@@ -19,14 +19,12 @@ public class RightTriangle extends Figure {
 
     @Override
     public double getArea() {
-        area = firstLeg * secondLeg * 0.5;
-        return area;
+        return firstLeg * secondLeg * 0.5;
     }
 
     @Override
     public String getData() {
-        data = "Figure: right triangle, area: " + area + " sq.units, first leg: " + firstLeg
+        return "Figure: right triangle, area: " + area + " sq.units, first leg: " + firstLeg
                 + " units, second leg: " + secondLeg + " units, color: " + color;
-        return data;
     }
 }

@@ -3,20 +3,18 @@ package core.basesyntax;
 public class Square extends Figure {
     private double side;
 
-    public Square(double a) {
-        side = a;
+    public Square(double side) {
+        this.side = side;
     }
 
     @Override
     public double getArea() {
-        area = side * side;
-        return area;
+        return side * side;
     }
 
     @Override
     public String getData() {
-        data = "Figure: square, area: " + area + " sq.units, side: " + side
+        return "Figure: square, area: " + area + " sq.units, side: " + side
                 + " units, color: " + color;
-        return data;
     }
 }

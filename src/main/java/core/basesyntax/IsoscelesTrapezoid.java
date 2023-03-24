@@ -13,15 +13,13 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double getArea() {
-        area = (littleSide + bigSide) * 0.5 * altitude;
-        return area;
+        return (littleSide + bigSide) * 0.5 * altitude;
     }
 
     @Override
     public String getData() {
-        data = "Figure: isosceles trapezoid, area: " + area + " sq.units, little side: "
+        return "Figure: isosceles trapezoid, area: " + area + " sq.units, little side: "
                 + littleSide + " units, big side: " + bigSide + " units, altitude: " + altitude
                 + " units, color: " + color;
-        return data;
     }
 }

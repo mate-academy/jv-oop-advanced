@@ -9,14 +9,12 @@ public class Circle extends Figure {
 
     @Override
     public String getData() {
-        data = "Figure: circle, area: " + area + " sq.units, radius: " + radius
-               + " units, color: " + color;
-        return data;
+        return "Figure: circle, area: " + area + " sq.units, radius: " + radius
+                + " units, color: " + color;
     }
 
     @Override
     public double getArea() {
-        double area = Math.PI * radius * radius;
-        return area;
+        return Math.PI * radius * radius;
     }
 }
