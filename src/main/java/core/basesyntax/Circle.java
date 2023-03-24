@@ -3,8 +3,8 @@ package core.basesyntax;
 public class Circle extends Figure {
     private double radius;
 
-    public Circle(double a) {
-        radius = a;
+    public Circle(double radius) {
+        this.radius = radius;
     }
 
     @Override
