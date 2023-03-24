@@ -44,8 +44,9 @@ public class FigureSupplier {
     }
 
     private IsoscelesTrapezoid prepareIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextDouble() * MAX_SIDE,
-                random.nextDouble() * MAX_SIDE, random.nextDouble() * MAX_SIDE);
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                random.nextDouble() * MAX_SIDE, random.nextDouble() * MAX_SIDE,
+                random.nextDouble() * MAX_SIDE);
     }
 
     private Rectangle prepareRectangle() {
