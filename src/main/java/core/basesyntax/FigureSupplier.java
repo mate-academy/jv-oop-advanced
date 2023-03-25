@@ -1,9 +1,10 @@
 package core.basesyntax;
 
+import java.util.Locale;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final String WHITE = "white";
+    private static final String DEFAULT_COLOR = "white";
     private static final int RADIUS_DEFAULT = 10;
     private static final int MAX_RANDOM = 25;
     private static final int ONE = 1;
@@ -11,7 +12,7 @@ public class FigureSupplier {
     private int randomInt;
 
     public Figure getDefaultFigure() {
-        return new Circle(RADIUS_DEFAULT, WHITE);
+        return new Circle(RADIUS_DEFAULT, DEFAULT_COLOR);
     }
 
     public Figure getRandomFigure() {
@@ -42,7 +43,7 @@ public class FigureSupplier {
     }
 
     private String color() {
-        return new ColorSupplier().getRandomColor();
+        return new ColorSupplier().getRandomColor().toString().toLowerCase(Locale.ROOT);
     }
 
     private Figure getRandomCircle() {
@@ -51,19 +52,19 @@ public class FigureSupplier {
 
     private Figure getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(randomNumberForLegs(),
-                randomNumberForLegs(),randomNumberForLegs(),color());
+                randomNumberForLegs(), randomNumberForLegs(), color());
     }
 
     private Figure getRandomRectangle() {
         return new Rectangle(randomNumberForLegs(),
-                randomNumberForLegs(),color());
+                randomNumberForLegs(), color());
     }
 
     private Figure getRandomRightTriangle() {
-        return new Square(randomNumberForLegs(),color());
+        return new Square(randomNumberForLegs(), color());
     }
 
     private Figure getRandomSquare() {
-        return new Square(randomNumberForLegs(),color());
+        return new Square(randomNumberForLegs(), color());
     }
 }

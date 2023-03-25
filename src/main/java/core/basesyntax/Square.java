@@ -8,11 +8,6 @@ public class Square extends Figure {
     public Square(int firstLeg, String color) {
         this.firstLeg = firstLeg;
         setColor(color);
-        this.area = getArea();
-    }
-
-    public void setArea(double area) {
-        this.area = area;
     }
 
     public String getName() {

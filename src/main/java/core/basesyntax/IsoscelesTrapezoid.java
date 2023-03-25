@@ -12,11 +12,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.secondLeg = secondLeg;
         this.fourthLeg = fourthLeg;
         setColor(color);
-        this.area = getArea();
-    }
-
-    public void setArea(double area) {
-        this.area = area;
     }
 
     public String getName() {

@@ -10,11 +10,6 @@ public class Rectangle extends Figure {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
         setColor(color);
-        this.area = getArea();
-    }
-
-    public void setArea(double area) {
-        this.area = area;
     }
 
     public String getName() {
