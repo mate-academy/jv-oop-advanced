@@ -10,8 +10,8 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: right triangle, area: " + String.format("%.2f", getArea()) +
-                ", side: " + side + ", color: " + color);
+        System.out.println("Figure: right triangle, area: " + String.format("%.2f", getArea())
+                + ", side: " + side + ", color: " + color);
     }
 
     @Override
