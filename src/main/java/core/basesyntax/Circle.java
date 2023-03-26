@@ -1,9 +1,8 @@
 package core.basesyntax;
 
-public class Circle extends Figure {
-    private int radius;
+import java.util.Random;
 
-    private ColorSupplier colorSupplier = new ColorSupplier();
+public class Circle extends Figure {
 
     public Circle() {
     }
@@ -13,14 +12,14 @@ public class Circle extends Figure {
 
     @Override
     public double getArea() {
-        return Math.PI * radius * radius;
+        return Math.PI * getRadius() * getRadius();
     }
 
     @Override
     public void draw() {
         System.out.print("Figure:" + new Circle()
                 + "area:" + new Circle().getArea() + "units"
-                + "side:" + radius + "units"
+                + "side:" + getRadius() + "units"
                 + "color:" + colorSupplier.getRandomColor());
     }
 }

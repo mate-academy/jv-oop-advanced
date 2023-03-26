@@ -1,22 +1,22 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private int width;
-    private ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Rectangle() {
+    public Rectangle(){}
+
+    public Rectangle(int getHeight, int getWidth, Color color) {
     }
 
     @Override
     public double getArea() {
-        return getHeight() * width;
+        return getHeight() * getWidth();
     }
 
     @Override
     public void draw() {
         System.out.print("Figure: " + new Rectangle()
                 + "area: " + new Rectangle().getArea() + " sq.units"
-                + "side: " + width + "units"
+                + "side: " + getWidth() + "units"
                 + "color: " + colorSupplier.getRandomColor());
     }
 }
