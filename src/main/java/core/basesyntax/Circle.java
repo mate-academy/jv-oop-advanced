@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Circle extends Figure {
 
     public Circle() {
@@ -20,6 +18,6 @@ public class Circle extends Figure {
         System.out.print("Figure:" + new Circle()
                 + "area:" + new Circle().getArea() + "units"
                 + "side:" + getRadius() + "units"
-                + "color:" + colorSupplier.getRandomColor());
+                + "color:" + getColorSupplier().getRandomColor());
     }
 }

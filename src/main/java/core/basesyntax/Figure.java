@@ -7,6 +7,7 @@ public abstract class Figure implements AreaCalculate, Drawable {
     private int parallelSideA;
     private int parallelSideB;
     private int width;
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     protected Figure() {
     }
@@ -35,7 +36,9 @@ public abstract class Figure implements AreaCalculate, Drawable {
         return side;
     }
 
-    ColorSupplier colorSupplier = new ColorSupplier();
+    public ColorSupplier getColorSupplier() {
+        return colorSupplier;
+    }
 
     @Override
     public double getArea() {

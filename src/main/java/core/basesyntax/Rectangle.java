@@ -2,7 +2,8 @@ package core.basesyntax;
 
 public class Rectangle extends Figure {
 
-    public Rectangle(){}
+    public Rectangle(){
+    }
 
     public Rectangle(int getHeight, int getWidth, Color color) {
     }
@@ -17,6 +18,6 @@ public class Rectangle extends Figure {
         System.out.print("Figure: " + new Rectangle()
                 + "area: " + new Rectangle().getArea() + " sq.units"
                 + "side: " + getWidth() + "units"
-                + "color: " + colorSupplier.getRandomColor());
+                + "color: " + getColorSupplier().getRandomColor());
     }
 }
