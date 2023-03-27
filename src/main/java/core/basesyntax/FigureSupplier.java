@@ -4,27 +4,28 @@ import java.util.Random;
 
 public class FigureSupplier {
     private final Random random = new Random();
+    private final int FIGURES_BOUND = 5;
+    private final int LENGTH_BOUND = 100;
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         final String color = colorSupplier.getRandomColor();
-        final int index = random.nextInt(5);
-        final int randomLength_1 = random.nextInt(100);
-        final int randomLength_2 = random.nextInt(100);
-        final int randomLength_3 = random.nextInt(100);
-
+        final int index = random.nextInt(FIGURES_BOUND);
+        final int firstRandom = random.nextInt(LENGTH_BOUND);
+        final int secondRandom = random.nextInt(LENGTH_BOUND);
+        final int thirdRandom = random.nextInt(LENGTH_BOUND);
         switch (index) {
             case 0:
-                return new Circle(randomLength_1, color);
+                return new Circle(firstRandom, color);
             case 1:
-                return new IsoscelesTrapezoid(randomLength_1, randomLength_2,
-                        randomLength_3, color);
+                return new IsoscelesTrapezoid(firstRandom, secondRandom,
+                        thirdRandom, color);
             case 2:
-                return new Rectangle(randomLength_1, randomLength_2, color);
+                return new Rectangle(firstRandom, secondRandom, color);
             case 3:
-                return new RightTriangle(randomLength_1, randomLength_2, color);
+                return new RightTriangle(firstRandom, secondRandom, color);
             default:
-                return new Square(randomLength_1, color);
+                return new Square(firstRandom, color);
         }
     }
 
