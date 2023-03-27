@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class FigureSupplier {
     private final Random random = new Random();
-    private final int FIGURES_BOUND = 5;
-    private final int LENGTH_BOUND = 100;
+    private static final int FIGURES_BOUND = 5;
+    private static final int LENGTH_BOUND = 100;
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
