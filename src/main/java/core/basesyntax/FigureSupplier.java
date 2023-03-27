@@ -8,23 +8,23 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         final String color = colorSupplier.getRandomColor();
-        final int INDEX = random.nextInt(5);
-        final int RANDOM_LENGTH_1 = random.nextInt(100);
-        final int RANDOM_LENGTH_2 = random.nextInt(100);
-        final int RANDOM_LENGTH_3 = random.nextInt(100);
+        final int index = random.nextInt(5);
+        final int randomLength_1 = random.nextInt(100);
+        final int randomLength_2 = random.nextInt(100);
+        final int randomLength_3 = random.nextInt(100);
 
-        switch (INDEX) {
+        switch (index) {
             case 0:
-                return new Circle(RANDOM_LENGTH_1, color);
+                return new Circle(randomLength_1, color);
             case 1:
-                return new IsoscelesTrapezoid(RANDOM_LENGTH_1, RANDOM_LENGTH_2,
-                        RANDOM_LENGTH_3, color);
+                return new IsoscelesTrapezoid(randomLength_1, randomLength_2,
+                        randomLength_3, color);
             case 2:
-                return new Rectangle(RANDOM_LENGTH_1, RANDOM_LENGTH_2, color);
+                return new Rectangle(randomLength_1, randomLength_2, color);
             case 3:
-                return new RightTriangle(RANDOM_LENGTH_1, RANDOM_LENGTH_2, color);
+                return new RightTriangle(randomLength_1, randomLength_2, color);
             default:
-                return new Square(RANDOM_LENGTH_1, color);
+                return new Square(randomLength_1, color);
         }
     }
 
