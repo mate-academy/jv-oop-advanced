@@ -4,26 +4,31 @@ import java.util.Random;
 
 class FigureSupplier {
     private final Random random = new Random();
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     private Square createSquare() {
-        return new Square(colorSupplier.getRandomColor());
+        return new Square(colorSupplier.getRandomColor(),
+                10 * random.nextDouble());
     }
 
     private RightTriangle createRightTriangle() {
-        return new RightTriangle(colorSupplier.getRandomColor());
+        return new RightTriangle(colorSupplier.getRandomColor(),
+                10 * random.nextDouble(), 10 * random.nextDouble());
     }
 
     private Rectangle createRectangle() {
-        return new Rectangle(colorSupplier.getRandomColor());
+        return new Rectangle(colorSupplier.getRandomColor(),
+                10 * random.nextDouble(), 10 * random.nextDouble());
     }
 
     private IsoscelesTrapezoid createIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(colorSupplier.getRandomColor());
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                10 * random.nextDouble(), 10 * random.nextDouble());
     }
 
     private Circle createCircle() {
-        return new Circle(colorSupplier.getRandomColor());
+        return new Circle(colorSupplier.getRandomColor(),
+                10 * random.nextDouble());
     }
 
     public String getRandomFigure() {
@@ -31,28 +36,22 @@ class FigureSupplier {
 
         switch (randomNumber) {
             case 0:
-                return createSquare().draw() + ", color: "
-                       + colorSupplier.getRandomColor().name().toLowerCase();
+                return createSquare().draw();
             case 1:
-                return createRightTriangle().draw() + ", color: "
-                       + colorSupplier.getRandomColor().name().toLowerCase();
+                return createRightTriangle().draw();
             case 2:
-                return createRectangle().draw() + ", color: "
-                       + colorSupplier.getRandomColor().name().toLowerCase();
+                return createRectangle().draw();
             case 3:
-                return createIsoscelesTrapezoid().draw() + ", color: "
-                       + colorSupplier.getRandomColor().name().toLowerCase();
+                return createIsoscelesTrapezoid().draw();
             default:
-                return createCircle().draw() + ", color: "
-                       + colorSupplier.getRandomColor().name().toLowerCase();
+                return createCircle().draw();
         }
     }
 
     public String getDefaultFigure() {
-        double radius = 10;
-        double area = Math.PI * radius;
-        return String.format("Figure: circle, area: %.2f sq.units, "
-                + "radius: %.2f units, color: white", area, Math.PI * radius);
+        final double defaultRadius = 10.0;
+        final String defaultColor = "white";
+        final Circle circle = new Circle(defaultColor, defaultRadius);
+        return circle.draw();
     }
-
 }

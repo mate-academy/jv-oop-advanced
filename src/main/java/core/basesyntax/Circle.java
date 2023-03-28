@@ -1,14 +1,11 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Circle extends AbstractFigure {
-    private double radius;
+    private final double radius;
 
-    public Circle(Colors color) {
+    public Circle(String color, double radius) {
         super(color);
-        Random random = new Random();
-        radius = 10 * random.nextDouble();
+        this.radius = radius;
     }
 
     @Override
@@ -17,8 +14,14 @@ public class Circle extends AbstractFigure {
     }
 
     @Override
+    public String getColor() {
+        return super.getColor();
+    }
+
+    @Override
     public String draw() {
         return String.format("Figure: circle, area: %.2f sq.units, "
-        + "radius: %.2f units", calculateArea(), radius);
+                + "radius: %.2f units, color: %s",
+                calculateArea(), radius, getColor());
     }
 }

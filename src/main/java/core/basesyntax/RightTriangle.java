@@ -1,16 +1,13 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 class RightTriangle extends AbstractFigure {
-    private double width;
-    private double height;
+    private final double width;
+    private final double height;
 
-    public RightTriangle(Colors color) {
+    public RightTriangle(String color, double width, double height) {
         super(color);
-        Random random = new Random();
-        width = random.nextDouble() * 10;
-        height = random.nextDouble() * 10;
+        this.width = width;
+        this.height = height;
     }
 
     @Override
@@ -19,9 +16,14 @@ class RightTriangle extends AbstractFigure {
     }
 
     @Override
+    public String getColor() {
+        return super.getColor();
+    }
+
+    @Override
     public String draw() {
         return String.format("Figure: right triangle, area: %.2f sq.units, "
-        + "width: %.2f units, height: %.2f units",
-       calculateArea(), width, height);
+                        + "width: %.2f units, height: %.2f units, color: %s",
+                calculateArea(), width, height, getColor());
     }
 }
