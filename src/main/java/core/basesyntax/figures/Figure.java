@@ -2,7 +2,7 @@ package core.basesyntax.figures;
 
 import core.basesyntax.ColorSupplier;
 
-public abstract class Figure implements FigureEvaluation, isDrawable {
+public abstract class Figure implements FigureEvaluation, IsDrawable {
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private String color;
 

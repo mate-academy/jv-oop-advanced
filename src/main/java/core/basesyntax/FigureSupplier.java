@@ -6,7 +6,6 @@ import core.basesyntax.figures.IsoscelesTrapezoid;
 import core.basesyntax.figures.Rectangle;
 import core.basesyntax.figures.RightTriangle;
 import core.basesyntax.figures.Square;
-
 import java.util.Random;
 
 public class FigureSupplier {
@@ -21,12 +20,13 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int index = random.nextInt(FIGURES_QUANTITY);
-        switch(index) {
+        switch (index) {
             case 0: {
                 return new Circle(random.nextInt(MAX_VALUE));
             }
             case 1: {
-                return new IsoscelesTrapezoid(random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
+                return new IsoscelesTrapezoid(random.nextInt(MAX_VALUE),
+                        random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
             }
             case 2: {
                 return new Rectangle(random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
