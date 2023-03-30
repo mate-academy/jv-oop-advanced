@@ -11,31 +11,51 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
+    private Square createRandomSquare() {
+        return new Square(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_VALUE));
+    }
+
+    private Rectangle createRandomRectangle() {
+        return new Rectangle(random.nextInt(MAX_VALUE),
+                random.nextInt(MAX_VALUE),
+                colorSupplier.getRandomColor());
+    }
+
+    private RightTriangle createRandomRightTriangle() {
+        return new RightTriangle(random.nextInt(MAX_VALUE),
+                random.nextInt(MAX_VALUE),
+                colorSupplier.getRandomColor());
+    }
+
+    private Circle createRandomCircle() {
+        return new Circle(random.nextInt(MAX_VALUE),
+                colorSupplier.getRandomColor());
+    }
+
+    private IsoscelesTrapezoid createRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(random.nextInt(MAX_VALUE),
+                random.nextInt(MAX_VALUE),
+                random.nextInt(),
+                colorSupplier.getRandomColor());
+    }
+
     public Figure getRandomFigure() {
         int figureType = random.nextInt(NUMBER_OF_FIGURES);
 
         switch (figureType) {
             case 0:
-                return new Square(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_VALUE));
+                return createRandomSquare();
             case 1:
-                return new Rectangle(random.nextInt(MAX_VALUE),
-                        random.nextInt(MAX_VALUE),
-                        colorSupplier.getRandomColor());
+                return createRandomRectangle();
             case 2:
-                return new RightTriangle(random.nextInt(MAX_VALUE),
-                        random.nextInt(MAX_VALUE),
-                        colorSupplier.getRandomColor());
+                return createRandomRightTriangle();
             case 3:
-                return new Circle(random.nextInt(MAX_VALUE),
-                        colorSupplier.getRandomColor());
+                return createRandomCircle();
             case 4:
-                return new IsoscelesTrapezoid(random.nextInt(MAX_VALUE),
-                        random.nextInt(MAX_VALUE),
-                        random.nextInt(),
-                        colorSupplier.getRandomColor());
+                return createRandomIsoscelesTrapezoid();
             default:
-                return null;
+                throw new IllegalArgumentException("Invalid figure type");
         }
     }
 

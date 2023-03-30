@@ -19,5 +19,4 @@ public class Circle extends Figure {
                 + " sq.units, radius: " + radius
                 + " units, color: " + getColor());
     }
-
 }
