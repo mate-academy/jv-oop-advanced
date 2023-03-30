@@ -11,28 +11,35 @@ public class FigureSupplier {
         switch (randomFigure) {
             case CIRCLE:
                 figure = new Circle();
+                figure.color = figure.getColor();
                 break;
             case SQUARE:
                 figure = new Square();
+                figure.color = figure.getColor();
                 break;
             case RECTANGLE:
                 figure = new Rectangle();
+                figure.color = figure.getColor();
                 break;
             case RIGHTTRIANGLE:
                 figure = new RightTriangle();
+                figure.color = figure.getColor();
                 break;
             case ISOSCELESTRAPESOID:
                 figure = new IsoscelesTrapezoid();
+                figure.color = figure.getColor();
                 break;
             default:
                 figure = getDefaultFigure();
+                figure.color = figure.getColor();
                 break;
         }
         return figure;
     }
 
     public static Figure getDefaultFigure() {
-        Circle circle = new Circle(10.0);
+        double defaultRadius = 10.0;
+        Circle circle = new Circle(defaultRadius);
         circle.color = Color.WHITE.toString();
         return circle;
     }
