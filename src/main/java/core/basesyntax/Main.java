@@ -1,18 +1,19 @@
 package core.basesyntax;
 
 public class Main {
+    private static final FigureSupplier figureSupplier = new FigureSupplier();
+    private static final int SIZE_OF_ARRAY = 10;
 
     public static void main(String[] args) {
-        Square square = new Square(7, Color.WHITE);
-        square.draw();
-        Rectangle rectangle = new Rectangle(4, 7, Color.WHITE);
-        rectangle.draw();
-        RightTriangle rightTriangle = new RightTriangle(5, 7, Color.WHITE);
-        rightTriangle.draw();
-        Circle circle = new Circle(6, Color.WHITE);
-        circle.draw();
-        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(5, 6, 7, Color.WHITE);
-        isoscelesTrapezoid.draw();
-    }
 
+        Figure[] figures = new Figure[SIZE_OF_ARRAY];
+        for (int i = 0; i < SIZE_OF_ARRAY / 2; i++) {
+            figures[i] = figureSupplier.getRandomFigure();
+            figures[i].draw();
+        }
+        for (int i = SIZE_OF_ARRAY / 2; i < SIZE_OF_ARRAY; i++) {
+            figures[i] = figureSupplier.getDefaultFigure();
+            figures[i].draw();
+        }
+    }
 }
