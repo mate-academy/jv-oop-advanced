@@ -1,9 +1,6 @@
 package core.basesyntax;
 
-import core.basesyntax.figures.Circle;
 import core.basesyntax.figures.Figure;
-import core.basesyntax.figures.RightTriangle;
-import core.basesyntax.figures.Square;
 
 public class HelloWorld {
     private static FigureSupplier figureSupplier = new FigureSupplier();
@@ -13,9 +10,9 @@ public class HelloWorld {
                 figureSupplier.getRandomFigure(),
                 figureSupplier.getRandomFigure(),
                 figureSupplier.getRandomFigure(),
-                new Circle(27),
-                new Square(15),
-                new RightTriangle(25,30)
+                figureSupplier.getDefaultFigure(),
+                figureSupplier.getDefaultFigure(),
+                figureSupplier.getDefaultFigure()
         };
         for (Figure figure: figures) {
             figure.draw();

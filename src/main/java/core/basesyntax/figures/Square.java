@@ -3,8 +3,9 @@ package core.basesyntax.figures;
 public class Square extends Figure {
     private int side;
 
-    public Square(int side) {
+    public Square(int side, String color) {
         this.side = side;
+        this.setColor(color);
     }
 
     public int getSide() {

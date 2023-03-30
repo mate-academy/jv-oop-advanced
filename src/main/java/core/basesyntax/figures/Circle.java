@@ -3,8 +3,9 @@ package core.basesyntax.figures;
 public class Circle extends Figure {
     private int radius;
 
-    public Circle(int radius) {
+    public Circle(int radius, String color) {
         this.radius = radius;
+        this.setColor(color);
     }
 
     public int getRadius() {
