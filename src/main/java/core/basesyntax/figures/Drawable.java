@@ -1,6 +1,6 @@
 package core.basesyntax.figures;
 
-public interface IsDrawable {
+public interface Drawable {
 
     void draw();
 

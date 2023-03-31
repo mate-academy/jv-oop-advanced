@@ -1,6 +1,6 @@
 package core.basesyntax.figures;
 
-public abstract class Figure implements FigureEvaluation, IsDrawable {
+public abstract class Figure implements FigureEvaluation, Drawable {
     private String color;
 
     public String getColor() {
