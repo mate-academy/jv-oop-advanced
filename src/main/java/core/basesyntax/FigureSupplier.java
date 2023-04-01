@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class FigureSupplier{
+public class FigureSupplier {
     public Figure getRandomFigure() {
         Random random = new Random();
         int index = random.nextInt(RandomFigure.values().length);
@@ -32,7 +32,8 @@ public class FigureSupplier{
                 double randomLittleSide = random.nextDouble();
                 double randomBigSide = random.nextDouble();
                 double randomAltitude = random.nextDouble();
-                figure = new IsoscelesTrapezoid(randomLittleSide, randomBigSide, randomAltitude, randomColor);
+                figure = new IsoscelesTrapezoid(randomLittleSide, randomBigSide,
+                        randomAltitude, randomColor);
                 break;
             default:
                 figure = getDefaultFigure();
