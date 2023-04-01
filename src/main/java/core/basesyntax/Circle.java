@@ -12,9 +12,9 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String getData() {
-        return "Figure: circle, area: " + area + " sq.units, radius: " + radius
-                + " units, color: " + color;
+    public void draw() {
+        System.out.println("Figure: circle, area: " + area + " sq.units, radius: " + radius
+                + " units, color: " + color);
     }
 
     @Override

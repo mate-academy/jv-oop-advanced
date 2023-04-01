@@ -20,8 +20,8 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String getData() {
-        return "Figure: right triangle, area: " + area + " sq.units, first leg: " + firstLeg
-                + " units, second leg: " + secondLeg + " units, color: " + color;
+    public void draw() {
+        System.out.println("Figure: right triangle, area: " + area + " sq.units, first leg: " + firstLeg
+                + " units, second leg: " + secondLeg + " units, color: " + color);
     }
 }
