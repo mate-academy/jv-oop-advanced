@@ -10,7 +10,7 @@ public class Square extends Figure {
     }
 
     public Square() {
-        color = Color.values()[random.nextInt(Color.values().length)].name();
+        color = getColor();
         side = random.nextDouble();
     }
 

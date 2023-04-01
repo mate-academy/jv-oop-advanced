@@ -5,11 +5,11 @@ public class Main {
         Figure[] figures = new Figure[4];
         for (int a = 0; a < figures.length; a++) {
             if (a <= figures.length / 2) {
-                figures[a] = FigureSupplier.getRandomFigure();
+                figures[a] = new FigureSupplier().getRandomFigure();
                 figures[a].area = figures[a].getArea();
                 figures[a].draw();
             } else {
-                figures[a] = FigureSupplier.getDefaultFigure();
+                figures[a] = new FigureSupplier().getDefaultFigure();
                 figures[a].area = figures[a].getArea();
                 figures[a].draw();
             }
