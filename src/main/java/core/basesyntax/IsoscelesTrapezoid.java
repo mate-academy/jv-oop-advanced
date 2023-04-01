@@ -4,17 +4,20 @@ public class IsoscelesTrapezoid extends Figure {
     private double littleSide;
     private double bigSide;
     private double altitude;
+    private String color;
 
-    public IsoscelesTrapezoid(double littleSide, double bigSide, double altitude) {
+    public IsoscelesTrapezoid(double littleSide, double bigSide, double altitude, String color) {
         this.littleSide = littleSide;
         this.bigSide = bigSide;
         this.altitude = altitude;
+        this.color = color;
     }
 
     public IsoscelesTrapezoid() {
         littleSide = random.nextDouble();
         bigSide = random.nextDouble();
         altitude = random.nextDouble();
+        color = Color.values()[random.nextInt(Color.values().length)].name();
     }
 
     @Override

@@ -3,8 +3,10 @@ package core.basesyntax;
 public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
+    private String color;
 
-    public RightTriangle(double firstLeg, double secondLeg) {
+    public RightTriangle(double firstLeg, double secondLeg, String color) {
+        this.color = color;
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
@@ -12,6 +14,7 @@ public class RightTriangle extends Figure {
     public RightTriangle() {
         firstLeg = random.nextDouble();
         secondLeg = random.nextDouble();
+        color = Color.values()[random.nextInt(Color.values().length)].name();
     }
 
     @Override
