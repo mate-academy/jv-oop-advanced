@@ -4,13 +4,12 @@ public class IsoscelesTrapezoid extends Figure {
     private double firstBase;
     private double secondBase;
     private double leg;
-    private String color;
 
     public IsoscelesTrapezoid(double firstBase, double secondBase, double leg, String color) {
+        super(color);
         this.firstBase = firstBase;
         this.secondBase = secondBase;
         this.leg = leg;
-        this.color = color;
     }
 
     @Override
@@ -25,6 +24,6 @@ public class IsoscelesTrapezoid extends Figure {
                 + ", first base: " + firstBase
                 + ", second base: " + secondBase
                 + ", leg: " + leg
-                + ", color: " + color);
+                + ", color: " + getColor());
     }
 }
