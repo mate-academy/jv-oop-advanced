@@ -17,7 +17,7 @@ public class IsoscelesTrapezoid extends Figure {
         littleSide = random.nextDouble();
         bigSide = random.nextDouble();
         altitude = random.nextDouble();
-        color = getColor();
+        color = Color.values()[random.nextInt(Color.values().length)].name();
     }
 
     @Override

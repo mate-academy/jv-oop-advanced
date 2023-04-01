@@ -11,7 +11,7 @@ public class Circle extends Figure {
 
     public Circle() {
         radius = random.nextDouble();
-        color = getColor();
+        color = Color.values()[random.nextInt(Color.values().length)].name();
     }
 
     @Override

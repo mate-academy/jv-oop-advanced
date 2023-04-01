@@ -14,7 +14,7 @@ public class RightTriangle extends Figure {
     public RightTriangle() {
         firstLeg = random.nextDouble();
         secondLeg = random.nextDouble();
-        color = getColor();
+        color = Color.values()[random.nextInt(Color.values().length)].name();
     }
 
     @Override

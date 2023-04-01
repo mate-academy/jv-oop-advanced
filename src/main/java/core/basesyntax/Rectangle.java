@@ -14,7 +14,7 @@ public class Rectangle extends Figure {
     public Rectangle() {
         firstSide = random.nextDouble();
         secondSide = random.nextDouble();
-        color = getColor();
+        color = Color.values()[random.nextInt(Color.values().length)].name();
     }
 
     @Override

@@ -36,7 +36,7 @@ public class FigureSupplier{
                 break;
             default:
                 figure = getDefaultFigure();
-                figure.color = figure.getColor();
+                figure.color = Color.values()[random.nextInt(Color.values().length)].name();
                 break;
         }
         return figure;
