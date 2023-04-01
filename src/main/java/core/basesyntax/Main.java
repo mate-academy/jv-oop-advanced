@@ -7,13 +7,11 @@ public class Main {
             if (a <= figures.length / 2) {
                 figures[a] = FigureSupplier.getRandomFigure();
                 figures[a].area = figures[a].getArea();
-                String data = figures[a].getData();
-                System.out.println(data);
+                figures[a].draw();
             } else {
                 figures[a] = FigureSupplier.getDefaultFigure();
                 figures[a].area = figures[a].getArea();
-                figures[a].data = figures[a].getData();
-                System.out.println(figures[a].data);
+                figures[a].draw();
             }
         }
     }
