@@ -17,7 +17,7 @@ public class RightTriangle extends Figure {
     public void draw() {
         System.out.println("Figure: " + new RightTriangle()
                 + "area: " + new RightTriangle().getArea() + " sq.units"
-                + "side: " + getWidth() + "units"
+                + "side: " + getWidth() + " units"
                 + "color: " + getColorSupplier().getRandomColor());
     }
 }
