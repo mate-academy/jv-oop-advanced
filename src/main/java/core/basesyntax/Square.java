@@ -1,10 +1,10 @@
 package core.basesyntax;
 
-public class Square extends Figure implements ShapeAreaCalculator, ShapePropertyDisplay {
+public class Square extends Figure {
     private double sideLength;
 
     public Square(String color, double sideLength) {
-        this.color = color;
+        super(color);
         this.sideLength = sideLength;
     }
 
@@ -15,7 +15,7 @@ public class Square extends Figure implements ShapeAreaCalculator, ShapeProperty
 
     @Override
     public void displayProperty() {
-        System.out.println("Figure: square, color is " + color + ", size of the side is " + sideLength
-                + ", area: " + calculateArea());
+        System.out.println("Figure: square, color: " + super.getColor()
+                + ", size of the side:" + sideLength + ", area: " + calculateArea());
     }
 }

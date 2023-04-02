@@ -1,11 +1,17 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements ShapeAreaCalculator, ShapePropertyDisplay {
+public class RightTriangle extends Figure {
+    private static final double VALUE_WITH_FORMULA = 0.5;
+
     private double sideLength;
 
     private double heightOfTheTriangle;
 
-    private static final double VALUE_WITH_FORMULA = 0.5;
+    public RightTriangle(String color, double sideLength, double heightOfTheTriangle) {
+        super(color);
+        this.sideLength = sideLength;
+        this.heightOfTheTriangle = heightOfTheTriangle;
+    }
 
     @Override
     public double calculateArea() {
@@ -14,8 +20,9 @@ public class RightTriangle extends Figure implements ShapeAreaCalculator, ShapeP
 
     @Override
     public void displayProperty() {
-        System.out.println("Figure: right triangle, color is " + color + ", size of the side is " + sideLength
-                + ", size of the height " + heightOfTheTriangle + ", area: " + calculateArea());
+        System.out.println("Figure: right triangle, color: " + super.getColor()
+                + ", size of the side: " + sideLength
+                + ", size of the height: " + heightOfTheTriangle + ", area: " + calculateArea());
     }
 }
 

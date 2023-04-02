@@ -1,12 +1,12 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements ShapeAreaCalculator, ShapePropertyDisplay {
+public class Rectangle extends Figure {
     private double sizeLongSide;
 
     private double sizeShortSide;
 
     public Rectangle(String color, double sizeLongSide, double sizeShortSide) {
-        this.color = color;
+        super(color);
         this.sizeLongSide = sizeLongSide;
         this.sizeShortSide = sizeShortSide;
     }
@@ -18,7 +18,8 @@ public class Rectangle extends Figure implements ShapeAreaCalculator, ShapePrope
 
     @Override
     public void displayProperty() {
-        System.out.println("Figure: rectangle, color is " + color + ", size of the long side is " + sizeLongSide
-                + ", size of the short side " + sizeShortSide + ", area: " + calculateArea());
+        System.out.println("Figure: rectangle, color: " + super.getColor()
+                + ", size of the long side: " + sizeLongSide
+                + ", size of the short side: " + sizeShortSide + ", area: " + calculateArea());
     }
 }

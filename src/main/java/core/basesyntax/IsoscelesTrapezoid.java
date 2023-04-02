@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements ShapeAreaCalculator, ShapePropertyDisplay {
+public class IsoscelesTrapezoid extends Figure {
     private static final int VALUE_WITH_FORMULA = 2;
 
     private double sizeOfTheHeight;
@@ -11,7 +11,7 @@ public class IsoscelesTrapezoid extends Figure implements ShapeAreaCalculator, S
 
     public IsoscelesTrapezoid(String color, double sizeOfTheHeight,
                               double sizeOfTheSmallerBase, double sizeOfTheLargeBase) {
-        this.color = color;
+        super(color);
         this.sizeOfTheHeight = sizeOfTheHeight;
         this.sizeOfTheSmallerBase = sizeOfTheSmallerBase;
         this.sizeOfTheLargeBase = sizeOfTheLargeBase;
@@ -24,7 +24,8 @@ public class IsoscelesTrapezoid extends Figure implements ShapeAreaCalculator, S
 
     @Override
     public void displayProperty() {
-        System.out.println("Figure: isosceles trapezoid, color is " + color + ", size of the height is "
-                + sizeOfTheHeight + ", size of smaller base: " + sizeOfTheSmallerBase + "Area: " + calculateArea());
+        System.out.println("Figure: isosceles trapezoid, color: " + super.getColor()
+                + ", size of the height: " + sizeOfTheHeight + ", size of smaller base: "
+                + sizeOfTheSmallerBase + ", area: " + calculateArea());
     }
 }
