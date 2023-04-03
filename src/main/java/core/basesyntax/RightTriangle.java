@@ -1,14 +1,14 @@
 package core.basesyntax;
 
 public class RightTriangle implements Figure {
-    double a, b, c;
-    Color color;
+    private final double sideA, sideB, sideC;
+    private final Color color;
 
-    RightTriangle(double a, double b, double c, Color color) {
+    RightTriangle(double sideA, double sideB, double sideC, Color color) {
         this.color = color;
-        this.a = a;
-        this.b = b;
-        this.c = c;
+        this.sideA = sideA;
+        this.sideB = sideB;
+        this.sideC = sideC;
     }
 
     @Override
@@ -19,13 +19,13 @@ public class RightTriangle implements Figure {
     @Override
     public double getArea() {
         double s;
-        s = Math.sqrt((a * b) / 2);
+        s = Math.sqrt((sideA * sideB) / 2);
         return s;
     }
 
     @Override
     public String display() {
-        return "Figure: " + getName() + ", area: " + getArea() + " units, sides: " + a +
-                "," + b + "," + c + " units, color: " + getColor();
+        return "Figure: " + getName() + ", area: " + getArea() + " units, sides: " + sideA +
+                "," + sideB + "," + sideC + " units, color: " + getColor();
     }
 }

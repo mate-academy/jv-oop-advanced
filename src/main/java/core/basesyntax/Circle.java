@@ -1,9 +1,8 @@
 package core.basesyntax;
 
 public class Circle implements Figure {
-    double PI = 3.1415;
-    double radius;
-    Color color;
+    private final double radius;
+    private final Color color;
 
     Circle(double radius, Color color) {
         this.color = color;
@@ -17,11 +16,13 @@ public class Circle implements Figure {
 
     @Override
     public double getArea() {
+        double PI = 3.1415;
         return PI * radius * radius;
     }
 
     @Override
     public String display() {
-        return "Figure: " + getName() + ", area: " + getArea() + "units, side: " + radius + " units, color: " + getColor();
+        return "Figure: " + getName() + ", area: " + getArea() +
+                "units, side: " + radius + " units, color: " + getColor();
     }
 }

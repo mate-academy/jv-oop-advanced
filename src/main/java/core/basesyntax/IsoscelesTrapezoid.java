@@ -1,14 +1,14 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid implements Figure {
-    double a, b, h;
-    Color color;
+    private final double sideA, sideB, height;
+    private final Color color;
 
-    IsoscelesTrapezoid(double a, double b, double h, Color color) {
+    IsoscelesTrapezoid(double sideA, double sideB, double height, Color color) {
         this.color = color;
-        this.a = a;
-        this.b = b;
-        this.h = h;
+        this.sideA = sideA;
+        this.sideB = sideB;
+        this.height = height;
     }
 
     @Override
@@ -19,12 +19,13 @@ public class IsoscelesTrapezoid implements Figure {
     @Override
     public double getArea() {
         double s;
-        s = Math.sqrt(((a + b) / 2) * h);
+        s = Math.sqrt(((sideA + sideB) / 2) * height);
         return s;
     }
 
     @Override
     public String display() {
-        return "Figure: " + getName() + ", area: " + getArea() + " units, side: " + a + "," + b + " height: " + h + " units, color: " + getColor();
+        return "Figure: " + getName() + ", area: " + getArea() + " units, side: " + sideA + "," + sideB
+                + " height: " + height + " units, color: " + getColor();
     }
 }

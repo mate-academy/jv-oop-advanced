@@ -1,13 +1,13 @@
 package core.basesyntax;
 
 public class Rectangle implements Figure {
-    double a, b;
-    Color color;
+    private final double sideA, sideB;
+    private final Color color;
 
-    Rectangle(double a, double b, Color color) {
+    Rectangle(double sideA, double sideB, Color color) {
         this.color = color;
-        this.a = a;
-        this.b = b;
+        this.sideA = sideA;
+        this.sideB = sideB;
     }
 
     @Override
@@ -18,12 +18,13 @@ public class Rectangle implements Figure {
     @Override
     public double getArea() {
         double s;
-        s = Math.sqrt(a * b);
+        s = Math.sqrt(sideA * sideB);
         return s;
     }
 
     @Override
     public String display() {
-        return "Figure: " + getName() + ", area: " + getArea() + " units, side: " + a + "," + b + " units, color: " + getColor();
+        return "Figure: " + getName() + ", area: " + getArea() + " units, side: " + sideA
+                + "," + sideB + " units, color: " + getColor();
     }
 }

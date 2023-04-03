@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 public class Square implements Figure {
-    double side;
-    double diagonal;
-    Color color;
+    private final double side;
+    private final double diagonal;
+    private final Color color;
 
     Square(double side, double diagonal, Color color) {
         this.color = color;
@@ -25,6 +25,7 @@ public class Square implements Figure {
 
     @Override
     public String display() {
-        return "Figure: " + getName() + ", area: " + getArea() + " units, side: " + side + " units, color: " + getColor();
+        return "Figure: " + getName() + ", area: " + getArea() + " units, side: "
+                + side + " units, color: " + getColor();
     }
 }
