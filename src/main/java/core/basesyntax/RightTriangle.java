@@ -1,7 +1,9 @@
 package core.basesyntax;
 
 public class RightTriangle implements Figure {
-    private final double sideA, sideB, sideC;
+    private final double sideA;
+    private final double sideB;
+    private final double sideC;
     private final Color color;
 
     RightTriangle(double sideA, double sideB, double sideC, Color color) {
@@ -25,7 +27,7 @@ public class RightTriangle implements Figure {
 
     @Override
     public String display() {
-        return "Figure: " + getName() + ", area: " + getArea() + " units, sides: " + sideA +
-                "," + sideB + "," + sideC + " units, color: " + getColor();
+        return "Figure: " + getName() + ", area: " + getArea() + " units, sides: "
+                + sideA + "," + sideB + "," + sideC + " units, color: " + getColor();
     }
 }

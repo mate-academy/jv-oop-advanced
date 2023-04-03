@@ -1,7 +1,8 @@
 package core.basesyntax;
 
 public class Rectangle implements Figure {
-    private final double sideA, sideB;
+    private final double sideA;
+    private final double sideB;
     private final Color color;
 
     Rectangle(double sideA, double sideB, Color color) {

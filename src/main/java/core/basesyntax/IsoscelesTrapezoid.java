@@ -1,7 +1,9 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid implements Figure {
-    private final double sideA, sideB, height;
+    private final double sideA;
+    private final double sideB;
+    private final double height;
     private final Color color;
 
     IsoscelesTrapezoid(double sideA, double sideB, double height, Color color) {
@@ -25,7 +27,8 @@ public class IsoscelesTrapezoid implements Figure {
 
     @Override
     public String display() {
-        return "Figure: " + getName() + ", area: " + getArea() + " units, side: " + sideA + "," + sideB
-                + " height: " + height + " units, color: " + getColor();
+        return "Figure: " + getName() + ", area: " + getArea()
+                + " units, side: " + sideA + "," + sideB + " height: "
+                + height + " units, color: " + getColor();
     }
 }

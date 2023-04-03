@@ -16,13 +16,12 @@ public class Circle implements Figure {
 
     @Override
     public double getArea() {
-        double PI = 3.1415;
-        return PI * radius * radius;
+        return 3.1415 * radius * radius;
     }
 
     @Override
     public String display() {
-        return "Figure: " + getName() + ", area: " + getArea() +
-                "units, side: " + radius + " units, color: " + getColor();
+        return "Figure: " + getName() + ", area: " + getArea()
+                + "units, side: " + radius + " units, color: " + getColor();
     }
 }
