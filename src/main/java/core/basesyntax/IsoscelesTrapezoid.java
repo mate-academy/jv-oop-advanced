@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-class IsoscelesTrapezoid extends AbstractFigure {
+public class IsoscelesTrapezoid extends AbstractFigure {
     private final double middleLine;
     private final double height;
 
@@ -13,11 +13,6 @@ class IsoscelesTrapezoid extends AbstractFigure {
     @Override
     public double calculateArea() {
         return middleLine * height;
-    }
-
-    @Override
-    public String getColor() {
-        return super.getColor();
     }
 
     @Override

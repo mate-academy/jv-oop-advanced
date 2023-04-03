@@ -16,11 +16,6 @@ public class Rectangle extends AbstractFigure {
     }
 
     @Override
-    public String getColor() {
-        return super.getColor();
-    }
-
-    @Override
     public String draw() {
         return String.format("Figure: rectangle, area: %.2f sq.units, "
                         + "width: %.2f units, length: %.2f units, color: %s",

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-class RightTriangle extends AbstractFigure {
+public class RightTriangle extends AbstractFigure {
     private final double width;
     private final double height;
 
@@ -13,11 +13,6 @@ class RightTriangle extends AbstractFigure {
     @Override
     public double calculateArea() {
         return (width * height) / 2;
-    }
-
-    @Override
-    public String getColor() {
-        return super.getColor();
     }
 
     @Override
