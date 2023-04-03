@@ -6,7 +6,8 @@ public class Square extends Figure {
     public Square() {
     }
 
-    public Square(int getSide, Color color) {
+    public Square(int getSide, String color) {
+        this.color = color;
     }
 
     @Override
@@ -16,9 +17,9 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        System.out.print("Figure: " + new Square()
-                + "area: " + new Square().getArea() + " sq.units"
+        System.out.print("Figure: " + getClass().getSimpleName()
+                + "area: " + this.getArea() + " sq.units"
                 + "side: " + side + "units"
-                + "color: " + getColorSupplier().getRandomColor());
+                + "color: " + this.color);
     }
 }

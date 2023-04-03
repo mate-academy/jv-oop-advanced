@@ -5,7 +5,8 @@ public class RightTriangle extends Figure {
     public RightTriangle() {
     }
 
-    public RightTriangle(int getHeight, int getWidth, Color color) {
+    public RightTriangle(int getHeight, int getWidth, String color) {
+        this.color = color;
     }
 
     @Override
@@ -15,9 +16,9 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + new RightTriangle()
-                + "area: " + new RightTriangle().getArea() + " sq.units"
+        System.out.println("Figure: " + getClass().getSimpleName()
+                + "area: " + this.getArea() + " sq.units"
                 + "side: " + getWidth() + " units"
-                + "color: " + getColorSupplier().getRandomColor());
+                + "color: " + this.color);
     }
 }
