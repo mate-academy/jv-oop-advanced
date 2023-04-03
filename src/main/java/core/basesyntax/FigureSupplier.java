@@ -13,29 +13,45 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
+    public Figure randomCircle() {
+        return new Circle(colorSupplier.getRandomColor(), getDouble());
+    }
+
+    public Figure randomIsoscelesTrapezoid() {
+        double firstParallel = getDouble();
+        double secondParallel = getDouble();
+        while (firstParallel == secondParallel) {
+            secondParallel = getDouble();
+        }
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                firstParallel, secondParallel, getDouble());
+    }
+
+    public Figure randomRectangle() {
+        return new Rectangle(colorSupplier.getRandomColor(), getDouble(), getDouble());
+    }
+
+    public Figure randomRightTriangle() {
+        return new RightTriangle(colorSupplier.getRandomColor(), getDouble(), getDouble());
+    }
+
+    public Figure randomSquare() {
+        return new Square(colorSupplier.getRandomColor(), getDouble());
+    }
+
     public Figure getRandomFigure() {
         int choice = random.nextInt(FIGURES_AMOUNT);
         switch (choice) {
             case 0:
-                return new Circle(colorSupplier.getRandomColor(), getDouble());
+                return randomCircle();
             case 1:
-                double firstParallel = getDouble();
-                double secondParallel = getDouble();
-                while (firstParallel == secondParallel) {
-                    secondParallel = getDouble();
-                }
-                return new IsoscelesTrapezoid(
-                        colorSupplier.getRandomColor(),
-                        firstParallel,
-                        secondParallel,
-                        getDouble()
-                );
+                return randomIsoscelesTrapezoid();
             case 2:
-                return new Rectangle(colorSupplier.getRandomColor(), getDouble(), getDouble());
+                return randomRectangle();
             case 3:
-                return new RightTriangle(colorSupplier.getRandomColor(), getDouble(), getDouble());
+                return randomRightTriangle();
             default:
-                return new Square(colorSupplier.getRandomColor(), getDouble());
+                return randomSquare();
         }
     }
 
