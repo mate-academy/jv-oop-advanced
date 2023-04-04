@@ -5,11 +5,12 @@ import java.util.Random;
 public class FigureSupplier {
     private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
     private static final int DEFAULT_RADIUS = 10;
+    private static final int MAX_FIGURE_TYPES = 5;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public AbstractFigure getRandomFigure() {
-        int randomNumber = random.nextInt(5);
+        int randomNumber = random.nextInt(MAX_FIGURE_TYPES);
         switch (randomNumber) {
             case 0:
                 return createSquare();
@@ -20,7 +21,7 @@ public class FigureSupplier {
             case 3:
                 return createIsoscelesTrapezoid();
             default:
-                return createCircle();
+                return getDefaultFigure();
         }
     }
 
