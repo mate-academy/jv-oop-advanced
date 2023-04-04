@@ -1,10 +1,10 @@
 package core.basesyntax;
 
 class RightTriangle extends Figure {
-    double sideA;
-    double sideB;
-    double sideC;
-    Color color;
+    private final double sideA;
+    private final double sideB;
+    private final double sideC;
+    private final Color color;
 
     RightTriangle(double sideA, double sideB, double sideC, Color color) {
         name = "RightTriangle";

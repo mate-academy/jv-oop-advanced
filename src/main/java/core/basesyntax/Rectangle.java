@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 class Rectangle extends Figure {
-    double sideA;
-    double sideB;
-    Color color;
+    private final double sideA;
+    private final double sideB;
+    private final Color color;
 
     Rectangle(double sideA, double sideB, Color color) {
         name = "Rectangle";

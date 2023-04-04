@@ -1,10 +1,10 @@
 package core.basesyntax;
 
 class IsoscelesTrapezoid extends Figure {
-    double sideA;
-    double sideB;
-    double height;
-    Color color;
+    private final double sideA;
+    private final double sideB;
+    private final double height;
+    private final Color color;
 
     IsoscelesTrapezoid(double sideA, double sideB, double height, Color color) {
         name = "IsoscelesTrapezoid";

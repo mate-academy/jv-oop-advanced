@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 class Square extends Figure {
-    double side;
-    double diagonal;
-    Color color;
+    private final double side;
+    private final double diagonal;
+    private final Color color;
 
     Square(double side, double diagonal, Color color) {
         name = "Square";
