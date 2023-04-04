@@ -27,7 +27,7 @@ public class FigureSupplier {
         return figures.get(random.nextInt(figures.size()));
     }
 
-    public Figure getDefaultFigure() {
+    public Circle getDefaultFigure() {
         return new Circle(10, Color.WHITE);
     }
 

@@ -1,14 +1,16 @@
 package core.basesyntax;
 
-public interface Figure {
+abstract class Figure {
 
-    String getColor();
+    protected String name = "";
 
-    double getArea();
+    abstract String Color();
 
-    default String getName() {
-        return this.getClass().getSimpleName().toLowerCase();
+    abstract double Area();
+
+    abstract String ShowName();
+
+    String display() {
+        return null;
     }
-
-    String display();
 }

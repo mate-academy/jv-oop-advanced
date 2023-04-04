@@ -1,31 +1,37 @@
 package core.basesyntax;
 
-public class Rectangle implements Figure {
-    private final double sideA;
-    private final double sideB;
-    private final Color color;
+class Rectangle extends Figure {
+    double sideA;
+    double sideB;
+    Color color;
 
     Rectangle(double sideA, double sideB, Color color) {
+        name = "Rectangle";
         this.color = color;
         this.sideA = sideA;
         this.sideB = sideB;
     }
 
     @Override
-    public String getColor() {
+    String Color() {
         return color.name().toLowerCase();
     }
 
     @Override
-    public double getArea() {
+    double Area() {
         double s;
-        s = Math.sqrt(sideA * sideB);
+        s = (sideA * sideB);
         return s;
     }
 
     @Override
+    String ShowName() {
+        return this.name;
+    }
+
+    @Override
     public String display() {
-        return "Figure: " + getName() + ", area: " + getArea() + " units, side: " + sideA
-                + "," + sideB + " units, color: " + getColor();
+        return "Figure: " + ShowName() + ", area: " + Area() + " units, side: " + sideA
+                + "," + sideB + " units, color: " + Color();
     }
 }

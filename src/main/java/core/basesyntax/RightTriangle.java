@@ -1,12 +1,13 @@
 package core.basesyntax;
 
-public class RightTriangle implements Figure {
-    private final double sideA;
-    private final double sideB;
-    private final double sideC;
-    private final Color color;
+class RightTriangle extends Figure {
+    double sideA;
+    double sideB;
+    double sideC;
+    Color color;
 
     RightTriangle(double sideA, double sideB, double sideC, Color color) {
+        name = "RightTriangle";
         this.color = color;
         this.sideA = sideA;
         this.sideB = sideB;
@@ -14,20 +15,25 @@ public class RightTriangle implements Figure {
     }
 
     @Override
-    public String getColor() {
+    String Color() {
         return color.name().toLowerCase();
     }
 
     @Override
-    public double getArea() {
+    double Area() {
         double s;
-        s = Math.sqrt((sideA * sideB) / 2);
+        s = ((sideA * sideB) / 2);
         return s;
     }
 
     @Override
+    String ShowName() {
+        return this.name;
+    }
+
+    @Override
     public String display() {
-        return "Figure: " + getName() + ", area: " + getArea() + " units, sides: "
-                + sideA + "," + sideB + "," + sideC + " units, color: " + getColor();
+        return "Figure: " + ShowName() + ", area: " + Area() + " units, sides: "
+                + sideA + "," + sideB + "," + sideC + " units, color: " + Color();
     }
 }

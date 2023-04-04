@@ -1,27 +1,33 @@
 package core.basesyntax;
 
-public class Circle implements Figure {
-    private final double radius;
-    private final Color color;
+class Circle extends Figure {
+    double radius;
+    Color color;
 
     Circle(double radius, Color color) {
+        name = "Circle";
         this.color = color;
         this.radius = radius;
     }
 
     @Override
-    public String getColor() {
+    String Color() {
         return color.name().toLowerCase();
     }
 
     @Override
-    public double getArea() {
+    double Area() {
         return 3.1415 * radius * radius;
     }
 
     @Override
+    String ShowName() {
+        return this.name;
+    }
+
+    @Override
     public String display() {
-        return "Figure: " + getName() + ", area: " + getArea()
-                + "units, side: " + radius + " units, color: " + getColor();
+        return "Figure: " + ShowName() + ", area: " + Area()
+                + "units, side: " + radius + " units, color: " + Color();
     }
 }

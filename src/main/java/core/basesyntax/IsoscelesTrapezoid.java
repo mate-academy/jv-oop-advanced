@@ -1,12 +1,13 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid implements Figure {
-    private final double sideA;
-    private final double sideB;
-    private final double height;
-    private final Color color;
+class IsoscelesTrapezoid extends Figure {
+    double sideA;
+    double sideB;
+    double height;
+    Color color;
 
     IsoscelesTrapezoid(double sideA, double sideB, double height, Color color) {
+        name = "IsoscelesTrapezoid";
         this.color = color;
         this.sideA = sideA;
         this.sideB = sideB;
@@ -14,21 +15,26 @@ public class IsoscelesTrapezoid implements Figure {
     }
 
     @Override
-    public String getColor() {
+    String Color() {
         return color.name().toLowerCase();
     }
 
     @Override
-    public double getArea() {
+    double Area() {
         double s;
-        s = Math.sqrt(((sideA + sideB) / 2) * height);
+        s = (((sideA + sideB) / 2) * height);
         return s;
     }
 
     @Override
+    String ShowName() {
+        return this.name;
+    }
+
+    @Override
     public String display() {
-        return "Figure: " + getName() + ", area: " + getArea()
+        return "Figure: " + ShowName() + ", area: " + Area()
                 + " units, side: " + sideA + "," + sideB + " height: "
-                + height + " units, color: " + getColor();
+                + height + " units, color: " + Color();
     }
 }
