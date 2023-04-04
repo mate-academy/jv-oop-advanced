@@ -2,36 +2,56 @@ package core.basesyntax;
 
 class Square extends Figure {
     private final double side;
-    private final double diagonal;
-    private final Color color;
+    private double diagonal;
+    private Color color;
 
     Square(double side, double diagonal, Color color) {
         name = "Square";
-        this.color = color;
+        this.setColor(color);
         this.side = side;
-        this.diagonal = diagonal;
+        this.setDiagonal(diagonal);
     }
 
     @Override
-    String Color() {
-        return color.name().toLowerCase();
+    String color() {
+        return getColor().name().toLowerCase();
     }
 
     @Override
-    double Area() {
+    double area() {
         double s;
-        s = (diagonal * diagonal) / 2;
+        s = (getDiagonal() * getDiagonal()) / 2;
         return s;
     }
 
     @Override
-    String ShowName() {
+    String showName() {
         return this.name;
     }
 
     @Override
     public String display() {
-        return "Figure: " + ShowName() + ", area: " + Area() + " units, side: "
-                + side + " units, color: " + Color();
+        return "Figure: " + showName() + ", area: " + area() + " units, side: "
+                + getSide() + " units, color: " + color();
+    }
+
+    public double getSide() {
+        return side;
+    }
+
+    public double getDiagonal() {
+        return diagonal;
+    }
+
+    public void setDiagonal(double diagonal) {
+        this.diagonal = diagonal;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
     }
 }

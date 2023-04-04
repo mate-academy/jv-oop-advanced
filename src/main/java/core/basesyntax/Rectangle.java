@@ -1,37 +1,61 @@
 package core.basesyntax;
 
 class Rectangle extends Figure {
-    private final double sideA;
-    private final double sideB;
-    private final Color color;
+    private double sideA;
+    private double sideB;
+    private Color color;
 
     Rectangle(double sideA, double sideB, Color color) {
         name = "Rectangle";
-        this.color = color;
-        this.sideA = sideA;
-        this.sideB = sideB;
+        this.setColor(color);
+        this.setSideA(sideA);
+        this.setSideB(sideB);
     }
 
     @Override
-    String Color() {
-        return color.name().toLowerCase();
+    String color() {
+        return getColor().name().toLowerCase();
     }
 
     @Override
-    double Area() {
+    double area() {
         double s;
-        s = (sideA * sideB);
+        s = (getSideA() * getSideB());
         return s;
     }
 
     @Override
-    String ShowName() {
+    String showName() {
         return this.name;
     }
 
     @Override
     public String display() {
-        return "Figure: " + ShowName() + ", area: " + Area() + " units, side: " + sideA
-                + "," + sideB + " units, color: " + Color();
+        return "Figure: " + showName() + ", area: " + area() + " units, side: " + getSideA()
+                + "," + getSideB() + " units, color: " + color();
+    }
+
+    public double getSideA() {
+        return sideA;
+    }
+
+    public void setSideA(double sideA) {
+        this.sideA = sideA;
+    }
+
+    public double getSideB() {
+        return sideB;
+    }
+
+    public void setSideB(double sideB) {
+        this.sideB = sideB;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
     }
 }

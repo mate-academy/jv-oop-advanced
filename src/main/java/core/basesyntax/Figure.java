@@ -4,11 +4,11 @@ abstract class Figure {
 
     protected String name = "";
 
-    abstract String Color();
+    abstract String color();
 
-    abstract double Area();
+    abstract double area();
 
-    abstract String ShowName();
+    abstract String showName();
 
     String display() {
         return null;

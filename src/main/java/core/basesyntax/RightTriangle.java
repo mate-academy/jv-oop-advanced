@@ -1,39 +1,71 @@
 package core.basesyntax;
 
 class RightTriangle extends Figure {
-    private final double sideA;
-    private final double sideB;
-    private final double sideC;
-    private final Color color;
+    private double sideA;
+    private double sideB;
+    private double sideC;
+    private Color color;
 
     RightTriangle(double sideA, double sideB, double sideC, Color color) {
         name = "RightTriangle";
-        this.color = color;
-        this.sideA = sideA;
-        this.sideB = sideB;
-        this.sideC = sideC;
+        this.setColor(color);
+        this.setSideA(sideA);
+        this.setSideB(sideB);
+        this.setSideC(sideC);
     }
 
     @Override
-    String Color() {
-        return color.name().toLowerCase();
+    String color() {
+        return getColor().name().toLowerCase();
     }
 
     @Override
-    double Area() {
+    double area() {
         double s;
-        s = ((sideA * sideB) / 2);
+        s = ((getSideA() * getSideB()) / 2);
         return s;
     }
 
     @Override
-    String ShowName() {
+    String showName() {
         return this.name;
     }
 
     @Override
     public String display() {
-        return "Figure: " + ShowName() + ", area: " + Area() + " units, sides: "
-                + sideA + "," + sideB + "," + sideC + " units, color: " + Color();
+        return "Figure: " + showName() + ", area: " + area() + " units, sides: "
+                + getSideA() + "," + getSideB() + "," + getSideC() + " units, color: " + color();
+    }
+
+    public double getSideA() {
+        return sideA;
+    }
+
+    public void setSideA(double sideA) {
+        this.sideA = sideA;
+    }
+
+    public double getSideB() {
+        return sideB;
+    }
+
+    public void setSideB(double sideB) {
+        this.sideB = sideB;
+    }
+
+    public double getSideC() {
+        return sideC;
+    }
+
+    public void setSideC(double sideC) {
+        this.sideC = sideC;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
     }
 }

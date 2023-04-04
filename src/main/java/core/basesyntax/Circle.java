@@ -1,33 +1,49 @@
 package core.basesyntax;
 
 class Circle extends Figure {
-    private final double radius;
-    private final Color color;
+    private  double radius;
+    private Color color;
 
     Circle(double radius, Color color) {
         name = "Circle";
-        this.color = color;
-        this.radius = radius;
+        this.setColor(color);
+        this.setRadius(radius);
     }
 
     @Override
-    String Color() {
-        return color.name().toLowerCase();
+    String color() {
+        return getColor().name().toLowerCase();
     }
 
     @Override
-    double Area() {
-        return 3.1415 * radius * radius;
+    double area() {
+        return 3.1415 * getRadius() * getRadius();
     }
 
     @Override
-    String ShowName() {
+    String showName() {
         return this.name;
     }
 
     @Override
     public String display() {
-        return "Figure: " + ShowName() + ", area: " + Area()
-                + "units, side: " + radius + " units, color: " + Color();
+        return "Figure: " + showName() + ", area: " + area()
+                + "units, side: " + getRadius() + " units, color: " + color();
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    public void setColor(Color color) {
+        this.color = color;
     }
 }
