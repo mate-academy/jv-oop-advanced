@@ -4,33 +4,33 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_COUNT = 4;
-    private static final int MAX_RADIUS = 10;
-    private Random rnd = new Random();
+    private static final int DEFAULT_RADIUS = 10;
+    private Random random = new Random();
     private final int index = new Random().nextInt(MAX_COUNT);
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         switch (index) {
             case 0:
-                return new Circle(rnd.nextInt(), colorSupplier.getRandomColor().toString());
+                return new Circle(random.nextInt(), colorSupplier.getRandomColor().name());
             case 1:
-                return new IsoscelesTrapezoid(rnd.nextInt(),rnd.nextInt(),
-                        rnd.nextInt(),
-                        colorSupplier.getRandomColor().toString());
+                return new IsoscelesTrapezoid(random.nextInt(),random.nextInt(),
+                        random.nextInt(),
+                        colorSupplier.getRandomColor().name());
             case 2:
-                return new Rectangle(rnd.nextInt(), rnd.nextInt(),
-                        colorSupplier.getRandomColor().toString());
+                return new Rectangle(random.nextInt(), random.nextInt(),
+                        colorSupplier.getRandomColor().name());
             case 3:
-                return new RightTriangle(rnd.nextInt(), rnd.nextInt(),
-                        colorSupplier.getRandomColor().toString());
+                return new RightTriangle(random.nextInt(), random.nextInt(),
+                        colorSupplier.getRandomColor().name());
             case 4:
-                return new Square(rnd.nextInt(), colorSupplier.getRandomColor().toString());
+                return new Square(random.nextInt(), colorSupplier.getRandomColor().name());
             default:
                 return getDefaultFigure();
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(MAX_RADIUS, Color.WHITE.toString());
+        return new Circle(DEFAULT_RADIUS, Color.WHITE.toString());
     }
 }
