@@ -16,9 +16,9 @@ public class Rectangle extends AbstractFigure {
     }
 
     @Override
-    public String draw() {
-        return String.format("Figure: rectangle, area: %.2f sq.units, "
-                        + "width: %.2f units, length: %.2f units, color: %s",
+    public void draw() {
+        System.out.printf("Figure: rectangle, area: %.2f sq.units, "
+                + "width: %.2f units, length: %.2f units, color: %s%n",
                 calculateArea(), width, length, getColor());
     }
 }

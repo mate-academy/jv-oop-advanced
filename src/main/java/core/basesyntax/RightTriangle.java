@@ -16,9 +16,9 @@ public class RightTriangle extends AbstractFigure {
     }
 
     @Override
-    public String draw() {
-        return String.format("Figure: right triangle, area: %.2f sq.units, "
-                        + "width: %.2f units, height: %.2f units, color: %s",
+    public void draw() {
+        System.out.printf("Figure: right triangle, area: %.2f sq.units, "
+                + "width: %.2f units, height: %.2f units, color: %s%n",
                 calculateArea(), width, height, getColor());
     }
 }

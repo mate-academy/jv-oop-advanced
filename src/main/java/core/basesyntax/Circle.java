@@ -14,9 +14,9 @@ public class Circle extends AbstractFigure {
     }
 
     @Override
-    public String draw() {
-        return String.format("Figure: circle, area: %.2f sq.units, "
-                + "radius: %.2f units, color: %s",
+    public void draw() {
+        System.out.printf("Figure: circle, area: %.2f sq.units, "
+                + "radius: %.2f units, color: %s%n",
                 calculateArea(), radius, getColor());
     }
 }

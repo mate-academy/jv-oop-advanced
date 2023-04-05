@@ -3,14 +3,14 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    public static final int FIGURE_COUNT = 5;
     private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
     private static final int DEFAULT_RADIUS = 10;
-    private static final int MAX_FIGURE_TYPES = 5;
-    private final Random random = new Random();
+    private Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public AbstractFigure getRandomFigure() {
-        int randomNumber = random.nextInt(MAX_FIGURE_TYPES);
+        int randomNumber = random.nextInt(FIGURE_COUNT);
         switch (randomNumber) {
             case 0:
                 return createSquare();
