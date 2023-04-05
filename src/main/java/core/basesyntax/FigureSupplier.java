@@ -12,19 +12,19 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         switch (index) {
             case 0:
-                return new Circle(random.nextInt(), colorSupplier.getRandomColor().name());
+                return new Circle(random.nextInt(), colorSupplier.getRandomColor());
             case 1:
                 return new IsoscelesTrapezoid(random.nextInt(),random.nextInt(),
                         random.nextInt(),
-                        colorSupplier.getRandomColor().name());
+                        colorSupplier.getRandomColor());
             case 2:
                 return new Rectangle(random.nextInt(), random.nextInt(),
-                        colorSupplier.getRandomColor().name());
+                        colorSupplier.getRandomColor());
             case 3:
                 return new RightTriangle(random.nextInt(), random.nextInt(),
-                        colorSupplier.getRandomColor().name());
+                        colorSupplier.getRandomColor());
             case 4:
-                return new Square(random.nextInt(), colorSupplier.getRandomColor().name());
+                return new Square(random.nextInt(), colorSupplier.getRandomColor());
             default:
                 return getDefaultFigure();
         }
