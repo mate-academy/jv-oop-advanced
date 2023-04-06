@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final double CIRCLE_RADIUS = 10.0;
+    private static final double DEFAULT_RADIUS = 10.0;
     private Random random = new Random();
 
     public Figure getRandomFigure() {
@@ -11,21 +11,24 @@ public class FigureSupplier {
         RandomFigure randomFigure = RandomFigure.values()[index];
         switch (randomFigure) {
             case CIRCLE:
-                return new Circle();
+                return new Circle(random.nextDouble(), new ColorSupplier().getRandomColor());
             case SQUARE:
-                return new Square();
+                return new Square(random.nextDouble(), new ColorSupplier().getRandomColor());
             case RECTANGLE:
-                return new Rectangle();
+                return new Rectangle(random.nextDouble(), random.nextDouble(),
+                        new ColorSupplier().getRandomColor());
             case RIGHTTRIANGLE:
-                return new RightTriangle();
+                return new RightTriangle(random.nextDouble(), random.nextDouble(),
+                        new ColorSupplier().getRandomColor());
             case ISOSCELESTRAPESOID:
-                return new IsoscelesTrapezoid();
+                return new IsoscelesTrapezoid(random.nextDouble(), random.nextDouble(),
+                        random.nextDouble(), new ColorSupplier().getRandomColor());
             default:
                 return getDefaultFigure();
         }
     }
 
     protected Figure getDefaultFigure() {
-        return new Circle(CIRCLE_RADIUS, Color.WHITE.name());
+        return new Circle(DEFAULT_RADIUS, Color.WHITE.name());
     }
 }
