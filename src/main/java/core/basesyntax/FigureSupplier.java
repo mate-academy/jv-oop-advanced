@@ -7,7 +7,7 @@ public class FigureSupplier {
     private static final String DEFAULT_COLOR = Color.WHITE.name();
     private Random random = new Random();
 
-    public Figure getRandomFigure() {
+    public Figures getRandomFigure() {
         int index = random.nextInt(Figure.values().length);
         Figure randomFigure = Figure.values()[index];
         switch (randomFigure) {
@@ -29,7 +29,7 @@ public class FigureSupplier {
         }
     }
 
-    public Figure getDefaultFigure() {
+    public Figures getDefaultFigure() {
         return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
     }
 }
