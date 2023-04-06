@@ -3,36 +3,18 @@ package core.basesyntax;
 class Square extends Figure {
     private final double side;
     private double diagonal;
-    private Color color;
 
     Square(double side, double diagonal, Color color) {
-        name = "Square";
-        this.setColor(color);
+        super(color.name());
         this.side = side;
         this.setDiagonal(diagonal);
     }
 
     @Override
-    String color() {
-        return getColor().name().toLowerCase();
-    }
-
-    @Override
-    double area() {
+    public double area() {
         double s;
         s = (getDiagonal() * getDiagonal()) / 2;
         return s;
-    }
-
-    @Override
-    String showName() {
-        return this.name;
-    }
-
-    @Override
-    public String display() {
-        return "Figure: " + showName() + ", area: " + area() + " units, side: "
-                + getSide() + " units, color: " + color();
     }
 
     public double getSide() {
@@ -47,11 +29,10 @@ class Square extends Figure {
         this.diagonal = diagonal;
     }
 
-    public Color getColor() {
-        return color;
-    }
-
-    public void setColor(Color color) {
-        this.color = color;
+    @Override
+    public String draw() {
+        return "Figure: " + getName() + ", area: " + area()
+                + " units, side: " + getSide() + " units, color: "
+                + getColor();
     }
 }

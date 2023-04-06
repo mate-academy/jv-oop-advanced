@@ -4,38 +4,19 @@ class IsoscelesTrapezoid extends Figure {
     private double sideA;
     private double sideB;
     private double height;
-    private Color color;
 
     IsoscelesTrapezoid(double sideA, double sideB, double height, Color color) {
-        name = "IsoscelesTrapezoid";
-        this.setColor(color);
+        super(color.name());
         this.setSideA(sideA);
         this.setSideB(sideB);
         this.setHeight(height);
     }
 
     @Override
-    String color() {
-        return getColor().name().toLowerCase();
-    }
-
-    @Override
-    double area() {
+    public double area() {
         double s;
         s = (((getSideA() + getSideB()) / 2) * getHeight());
         return s;
-    }
-
-    @Override
-    String showName() {
-        return this.name;
-    }
-
-    @Override
-    public String display() {
-        return "Figure: " + showName() + ", area: " + area()
-                + " units, side: " + getSideA() + "," + getSideB() + " height: "
-                + getHeight() + " units, color: " + color();
     }
 
     public double getSideA() {
@@ -62,11 +43,10 @@ class IsoscelesTrapezoid extends Figure {
         this.height = height;
     }
 
-    public Color getColor() {
-        return color;
-    }
-
-    public void setColor(Color color) {
-        this.color = color;
+    @Override
+    public String draw() {
+        return "Figure: " + getName() + ", area: " + area()
+                + " units, side: " + getSideA() + "," + getSideB() + " height: "
+                + getHeight() + " units, color: " + getColor();
     }
 }

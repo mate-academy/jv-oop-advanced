@@ -1,16 +1,17 @@
 package core.basesyntax;
 
-abstract class Figure {
+public abstract class Figure implements AreaCalculator, Drawable {
 
-    protected String name = "";
+    protected String color;
 
-    abstract String color();
+    public Figure(String color) {
+        this.color = color;
+    }
 
-    abstract double area();
-
-    abstract String showName();
-
-    String display() {
-        return null;
+    public String getColor() {
+        return color.toLowerCase();
+    }
+    public String getName() {
+        return this.getClass().getSimpleName();
     }
 }
