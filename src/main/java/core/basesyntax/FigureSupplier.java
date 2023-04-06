@@ -3,50 +3,29 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final double CIRCLE_RADIUS = 10.0;
+    private Random random = new Random();
+
     public Figure getRandomFigure() {
-        Random random = new Random();
         int index = random.nextInt(RandomFigure.values().length);
         RandomFigure randomFigure = RandomFigure.values()[index];
-        Figure figure;
-        String randomColor = new ColorSupplier().getRandomColor();
         switch (randomFigure) {
             case CIRCLE:
-                double randomRadius = random.nextDouble();
-                figure = new Circle(randomRadius, randomColor);
-                break;
+                return new Circle();
             case SQUARE:
-                double randomSide = random.nextDouble();
-                figure = new Square(randomSide, randomColor);
-                break;
+                return new Square();
             case RECTANGLE:
-                double randomFirstSide = random.nextDouble();
-                double randomSecondSide = random.nextDouble();
-                figure = new Rectangle(randomFirstSide, randomSecondSide, randomColor);
-                break;
+                return new Rectangle();
             case RIGHTTRIANGLE:
-                double randomFirstLeg = random.nextDouble();
-                double randomSecondLeg = random.nextDouble();
-                figure = new RightTriangle(randomFirstLeg, randomSecondLeg, randomColor);
-                break;
+                return new RightTriangle();
             case ISOSCELESTRAPESOID:
-                double randomLittleSide = random.nextDouble();
-                double randomBigSide = random.nextDouble();
-                double randomAltitude = random.nextDouble();
-                figure = new IsoscelesTrapezoid(randomLittleSide, randomBigSide,
-                        randomAltitude, randomColor);
-                break;
+                return new IsoscelesTrapezoid();
             default:
-                figure = getDefaultFigure();
-                figure.color = Color.values()[random.nextInt(Color.values().length)].name();
-                break;
+                return getDefaultFigure();
         }
-        return figure;
     }
 
-    public static Figure getDefaultFigure() {
-        final double defaultRadius = 10.0;
-        final String color = Color.WHITE.name();
-        Circle circle = new Circle(defaultRadius, color);
-        return circle;
+    protected Figure getDefaultFigure() {
+        return new Circle(CIRCLE_RADIUS, Color.WHITE.name());
     }
 }

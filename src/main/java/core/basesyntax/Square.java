@@ -1,16 +1,19 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public class Square extends Figure {
     private double side;
-    private String color;
+    private Random random = new Random();
 
     public Square(double side, String color) {
-        this.color = color;
+        super(color);
         this.side = side;
     }
 
     public Square() {
-        color = Color.values()[random.nextInt(Color.values().length)].name();
+        setColor(random);
+        this.color = getColor();
         side = random.nextDouble();
     }
 
@@ -21,7 +24,7 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: square, area: " + area + " sq.units, side: " + side
+        System.out.println("Figure: square, area: " + getArea() + " sq.units, side: " + side
                 + " units, color: " + color);
     }
 }
