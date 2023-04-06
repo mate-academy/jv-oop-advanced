@@ -11,6 +11,7 @@ public abstract class Figure implements AreaCalculator, Drawable {
     public String getColor() {
         return color.toLowerCase();
     }
+
     public String getName() {
         return this.getClass().getSimpleName();
     }
