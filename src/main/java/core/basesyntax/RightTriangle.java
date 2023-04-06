@@ -1,12 +1,12 @@
 package core.basesyntax;
 
-class RightTriangle extends Figure {
+public class RightTriangle extends Figure {
     private double sideA;
     private double sideB;
     private double sideC;
 
-    RightTriangle(double sideA, double sideB, double sideC, Color color) {
-        super(color.name());
+    public RightTriangle(double sideA, double sideB, double sideC, String color) {
+        super(color);
         this.setSideA(sideA);
         this.setSideB(sideB);
         this.setSideC(sideC);

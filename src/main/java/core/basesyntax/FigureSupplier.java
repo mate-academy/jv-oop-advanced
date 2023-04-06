@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int MAGIC_NUMBER = 10;
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
@@ -28,7 +29,7 @@ public class FigureSupplier {
     }
 
     public Circle getDefaultFigure() {
-        return new Circle(10, Color.WHITE);
+        return new Circle(MAGIC_NUMBER, Color.WHITE.name());
     }
 
     private double getRandomProperty() {

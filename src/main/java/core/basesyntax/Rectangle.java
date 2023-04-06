@@ -1,11 +1,11 @@
 package core.basesyntax;
 
-class Rectangle extends Figure {
+public class Rectangle extends Figure {
     private double sideA;
     private double sideB;
 
-    Rectangle(double sideA, double sideB, Color color) {
-        super(color.name());
+    public Rectangle(double sideA, double sideB, String color) {
+        super(color);
         this.setSideA(sideA);
         this.setSideB(sideB);
     }
