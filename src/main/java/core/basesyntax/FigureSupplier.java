@@ -39,12 +39,12 @@ public class FigureSupplier {
         return new Circle(radius, color);
     }
 
-    private IsoscelesTrapeoid getRandomIsoscelesTrapezoid() {
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
         int high = random.nextInt(MAX_VALUE);
         int top = random.nextInt(MAX_VALUE);
         int bottom = random.nextInt(MAX_VALUE);
         Color color = colorSupplier.getRandomColor();
-        return new IsoscelesTrapeoid(top, bottom, high, color);
+        return new IsoscelesTrapezoid(top, bottom, high, color);
     }
 
     private Rectangle getRandomRectangle() {
