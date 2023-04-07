@@ -1,8 +1,5 @@
 package core.basesyntax;
 
-/**
- * Class with main methods.
- */
 public class Application {
     public static void main(String[] args) {
         FigureSupplier supplier = new FigureSupplier();
