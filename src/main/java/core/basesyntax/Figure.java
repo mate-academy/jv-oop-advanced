@@ -3,7 +3,7 @@ package core.basesyntax;
 /**
  * Represents a figure that can be drawn and has a color and area.
  */
-public abstract class Figure implements FigureDraw, AreaCalculator {
+public abstract class Figure implements Drawable, AreaCalculator {
     private String color;
 
     public Figure(String color) {
