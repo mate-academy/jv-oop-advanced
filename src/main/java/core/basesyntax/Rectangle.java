@@ -12,21 +12,11 @@ public class Rectangle extends Figure {
 
     @Override
     public double area() {
-        double s;
-        s = (getSideA() * getSideB());
-        return s;
-    }
-
-    public double getSideA() {
-        return sideA;
+        return sideA * sideB;
     }
 
     public void setSideA(double sideA) {
         this.sideA = sideA;
-    }
-
-    public double getSideB() {
-        return sideB;
     }
 
     public void setSideB(double sideB) {
@@ -34,9 +24,9 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String draw() {
-        return "Figure: " + getName() + ", area: " + area()
-                + " units, side: " + getSideA() + "," + getSideB()
-                + " units, color: " + getColor();
+    public void draw() {
+        System.out.println("Figure: " + getName() + ", area: " + area()
+                + " units, side: " + sideA + "," + sideB
+                + " units, color: " + getColor());
     }
 }
