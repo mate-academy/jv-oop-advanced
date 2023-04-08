@@ -5,7 +5,7 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int MAGIC_NUMBER = 10;
     private final Random random = new Random();
-    ColorSupplier supplier = new ColorSupplier();
+    private final ColorSupplier supplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
 
