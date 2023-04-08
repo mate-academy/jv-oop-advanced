@@ -22,6 +22,8 @@ public class FigureSupplier {
                 return getRandomRectangle();
             case 4:
                 return getRandomIsoscelesTrapezoid();
+            default:
+                break;
         }
         return getRandomFigure();
     }
