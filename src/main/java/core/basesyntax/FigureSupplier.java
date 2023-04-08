@@ -8,7 +8,7 @@ public class FigureSupplier {
     private static final int DEFAULT_RADIUS = 10;
     private static final int RANGE = 101;
     private static final Random random = new Random();
-    private static final ColorSupplier randomColor = new ColorSupplier();
+    private static final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
