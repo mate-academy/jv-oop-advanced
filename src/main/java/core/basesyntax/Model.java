@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public enum Models {
+public enum Model {
     CIRCLE,
     ISOSCELES_TRAPEZOID,
     RECTANGLE,

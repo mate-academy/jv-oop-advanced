@@ -9,11 +9,11 @@ public class FigureSupplier {
 
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    private Models models;
 
     public Figure getRandomFigure() {
-        models = Models.values()[random.nextInt(Models.values().length)];
-        switch (models) {
+        final Model model;
+        model = Model.values()[random.nextInt(Model.values().length)];
+        switch (model) {
             case CIRCLE:
                 return getRandomCircle();
             case ISOSCELES_TRAPEZOID:
@@ -22,10 +22,8 @@ public class FigureSupplier {
                 return getRandomRectangle();
             case RIGHT_TRIANGLE:
                 return getRandomRightTriangle();
-            case SQUARE:
-                return getRandomSquare();
             default:
-                return getRandomFigure();
+                return getRandomSquare();
         }
     }
 
@@ -40,11 +38,11 @@ public class FigureSupplier {
     }
 
     private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
-        int high = random.nextInt(MAX_VALUE);
+        int height = random.nextInt(MAX_VALUE);
         int top = random.nextInt(MAX_VALUE);
         int bottom = random.nextInt(MAX_VALUE);
         Color color = colorSupplier.getRandomColor();
-        return new IsoscelesTrapezoid(top, bottom, high, color);
+        return new IsoscelesTrapezoid(top, bottom, height, color);
     }
 
     private Rectangle getRandomRectangle() {
