@@ -4,14 +4,14 @@ public class RightTriangle extends Figure {
     private double sideA;
     private double sideB;
 
-    private String color() {
-        return getColor();
-    }
-
     public RightTriangle(double sideA, double sideB, String color) {
         super(color);
         this.setSideA(sideA);
         this.setSideB(sideB);
+    }
+
+    private String color() {
+        return getColor();
     }
 
     @Override

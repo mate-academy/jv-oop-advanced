@@ -5,15 +5,15 @@ public class IsoscelesTrapezoid extends Figure {
     private double sideB;
     private double height;
 
-    private String color() {
-        return getColor();
-    }
-
     public IsoscelesTrapezoid(double sideA, double sideB, double height, String color) {
         super(color);
         this.setSideA(sideA);
         this.setSideB(sideB);
         this.setHeight(height);
+    }
+
+    private String color() {
+        return getColor();
     }
 
     @Override

@@ -10,7 +10,7 @@ public class Main {
         for (int i = 1; i < figures.length; i++) {
             figures[i] = figureSupplier.getRandomFigure();
         }
-        for(Figure result: figures) {
+        for (Figure result : figures) {
             result.draw();
         }
     }
