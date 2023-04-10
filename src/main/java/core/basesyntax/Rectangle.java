@@ -4,6 +4,10 @@ public class Rectangle extends Figure {
     private double sideA;
     private double sideB;
 
+    private String color() {
+        return getColor();
+    }
+
     public Rectangle(double sideA, double sideB, String color) {
         super(color);
         this.setSideA(sideA);
@@ -27,6 +31,6 @@ public class Rectangle extends Figure {
     public void draw() {
         System.out.println("Figure: " + getName() + ", area: " + area()
                 + " units, side: " + sideA + "," + sideB
-                + " units, color: " + getColor());
+                + " units, color: " + color());
     }
 }

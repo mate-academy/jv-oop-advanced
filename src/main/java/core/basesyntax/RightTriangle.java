@@ -4,6 +4,10 @@ public class RightTriangle extends Figure {
     private double sideA;
     private double sideB;
 
+    private String color() {
+        return getColor();
+    }
+
     public RightTriangle(double sideA, double sideB, String color) {
         super(color);
         this.setSideA(sideA);
@@ -27,6 +31,6 @@ public class RightTriangle extends Figure {
     public void draw() {
         System.out.println("Figure: " + getName() + ", area: " + area()
                 + " units, sides: " + sideA + "," + sideB + ","
-                + " units, color: " + getColor());
+                + " units, color: " + color());
     }
 }

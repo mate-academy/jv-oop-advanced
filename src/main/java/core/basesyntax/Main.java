@@ -7,10 +7,11 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure defaultFigure = figureSupplier.getDefaultFigure();
         figures[0] = defaultFigure;
-        defaultFigure.draw();
         for (int i = 1; i < figures.length; i++) {
             figures[i] = figureSupplier.getRandomFigure();
-            figures[i].draw();
+        }
+        for(Figure result: figures) {
+            result.draw();
         }
     }
 }
