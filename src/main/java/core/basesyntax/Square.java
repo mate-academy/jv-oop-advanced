@@ -16,4 +16,11 @@ public class Square extends Figure{
     public double getArea() {
         return leg * leg;
     }
+    @Override
+    public void draw() {
+        System.out.println("Square:");
+        System.out.println("leg: " + leg);
+        System.out.println("Area: " + getArea());
+        System.out.println();
+    }
 }

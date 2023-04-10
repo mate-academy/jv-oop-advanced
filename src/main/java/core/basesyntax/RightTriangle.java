@@ -22,4 +22,12 @@ public class RightTriangle extends Figure {
     public double getArea() {
         return firstLeg * secondLeg;
     }
+    @Override
+    public void draw() {
+        System.out.println("Right triangle:");
+        System.out.println("First Leg: " + firstLeg);
+        System.out.println("Second Leg: " + secondLeg);
+        System.out.println("Area: " + getArea());
+        System.out.println();
+    }
 }

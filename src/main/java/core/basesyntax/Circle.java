@@ -17,4 +17,11 @@ public class Circle extends Figure{
     public double getArea() {
         return Math.PI * radius * radius;
     }
+    @Override
+    public void draw() {
+        System.out.println("Circle:");
+        System.out.println("Radius: " + radius);
+        System.out.println("Area: " + getArea());
+        System.out.println();
+    }
 }
