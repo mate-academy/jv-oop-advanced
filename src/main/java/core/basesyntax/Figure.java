@@ -1,9 +1,17 @@
 package core.basesyntax;
 
-import static core.basesyntax.ColorSupplier.getRandomColor;
+public abstract class Figure implements SquareOfFigure, Information {
+    private String color;
 
-public interface Figure {
-        public abstract double getArea();
-        public abstract void draw();
+    public Figure(String color) {
+        this.color = color;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
 }
-

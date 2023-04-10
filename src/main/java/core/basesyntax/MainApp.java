@@ -9,7 +9,7 @@ public class MainApp {
 
         // Generate the first half of the array with random figures
         for (int i = 0; i < arraySize / 2; i++) {
-            figures[i] = figureSupplier.getRandomFigure(colorSupplier.getRandomColor());
+            figures[i] = figureSupplier.getRandomFigure(ColorSupplier.getRandomColor());
         }
 
         // Generate the second half of the array with the default figure
