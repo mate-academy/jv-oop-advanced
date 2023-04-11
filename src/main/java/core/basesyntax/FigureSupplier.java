@@ -29,8 +29,7 @@ public class FigureSupplier {
     }
 
     private Figure getRandomRectangle() {
-        return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(MAX_NUMBER),
-                random.nextInt(MAX_NUMBER));
+        return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(MAX_NUMBER));
     }
 
     private Figure getRandomRightTriangle() {
