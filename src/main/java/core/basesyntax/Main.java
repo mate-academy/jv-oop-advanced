@@ -8,11 +8,10 @@ public class Main {
         for (int i = 0; i < figure.length; i++) {
             if (i < figure.length / 2) {
                 figure[i] = figureSupplier.getRandomFigure();
-                figure[i].draw();
             } else {
                 figure[i] = figureSupplier.getDefaultFigure();
-                figure[i].draw();
             }
+            figure[i].draw();
         }
     }
 }
