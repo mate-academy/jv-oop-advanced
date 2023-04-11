@@ -24,26 +24,26 @@ public class FigureSupplier {
         }
     }
 
-    public Figure getRandomSquare() {
+    private Figure getRandomSquare() {
         return new Square(colorSupplier.getRandomColor(), random.nextInt(MAX_NUMBER));
     }
 
-    public Figure getRandomRectangle() {
+    private Figure getRandomRectangle() {
         return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(MAX_NUMBER),
                 random.nextInt(MAX_NUMBER));
     }
 
-    public Figure getRandomRightTriangle() {
+    private Figure getRandomRightTriangle() {
         return new RightTriangle(colorSupplier.getRandomColor(),
                 random.nextInt(MAX_NUMBER), random.nextInt(MAX_NUMBER));
     }
 
-    public Figure getRandomCircle() {
+    private Figure getRandomCircle() {
         return new Circle(colorSupplier.getRandomColor(),
                 random.nextInt(MAX_NUMBER));
     }
 
-    public Figure getRandomIsoscelesTrapezoid() {
+    private Figure getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                 random.nextInt(MAX_NUMBER), random.nextInt(MAX_NUMBER),
                 random.nextInt(MAX_NUMBER));
