@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 public class Square implements Figure {
-    private int side;
+    private double side;
 
-    public Square(int side) {
+    public Square(double side) {
         this.side = side;
     }
 

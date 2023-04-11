@@ -1,10 +1,10 @@
 package core.basesyntax;
 
-public class RightTriangle implements Figure{
-    private int sideA;
-    private int sideB;
+public class RightTriangle implements Figure {
+    private double sideA;
+    private double sideB;
 
-    public RightTriangle(int sideA, int sideB) {
+    public RightTriangle(double sideA, double sideB) {
         this.sideA = sideA;
         this.sideB = sideB;
     }
@@ -14,6 +14,4 @@ public class RightTriangle implements Figure{
     public double gerArea() {
         return sideA * sideB / 2;
     }
-
-
 }

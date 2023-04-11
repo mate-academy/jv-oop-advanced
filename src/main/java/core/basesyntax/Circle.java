@@ -1,8 +1,9 @@
 package core.basesyntax;
 
 public class Circle implements Figure {
-    private int radius;
-    public Circle(int radius) {
+    private double radius;
+
+    public Circle(double radius) {
         this.radius = radius;
     }
 
