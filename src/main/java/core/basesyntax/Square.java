@@ -15,7 +15,7 @@ public class Square implements Figure {
     }
 
     public void draw() {
-        System.out.println(getArea());
+        System.out.println("Figure: square, area: " + getArea() + " sq.units, side: " + side + " units, color: " + color);
     }
 
     @Override
