@@ -3,18 +3,25 @@ package core.basesyntax;
 public class Rectangle implements Figure {
     private double width;
     private double height;
+    private String color;
 
-    public Rectangle(double width, double height) {
+    public Rectangle(double width, double height, String color) {
         this.width = width;
         this.height = height;
+        this.color = color;
     }
 
     @Override
-    public double gerArea() {
-        return width * height;
+    public double getArea() {
+        return height * width ;
     }
 
     public void draw() {
-        System.out.println(gerArea());
+        System.out.println(getArea());
+    }
+
+    @Override
+    public String getColor() {
+        return color;
     }
 }
