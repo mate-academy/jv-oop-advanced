@@ -13,4 +13,8 @@ public class Rectangle implements Figure {
     public double gerArea() {
         return width * height;
     }
+
+    public void draw() {
+        System.out.println(gerArea());
+    }
 }

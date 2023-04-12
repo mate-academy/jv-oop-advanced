@@ -15,4 +15,8 @@ public class IsoscelesTrapezoid implements Figure{
     public double gerArea() {
         return (sideA + sideB) / 2 * height ;
     }
+
+    public void draw() {
+        System.out.println(gerArea());
+    }
 }

@@ -11,4 +11,8 @@ public class Circle implements Figure {
     public double gerArea() {
         return Math.PI * radius * radius;
     }
+
+    public void draw() {
+        System.out.println(gerArea());
+    }
 }

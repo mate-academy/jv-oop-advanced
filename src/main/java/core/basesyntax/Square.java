@@ -11,4 +11,8 @@ public class Square implements Figure {
     public double gerArea() {
         return side * side;
     }
+
+    public void draw() {
+        System.out.println(gerArea());
+    }
 }

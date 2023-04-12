@@ -14,4 +14,8 @@ public class RightTriangle implements Figure {
     public double gerArea() {
         return sideA * sideB / 2;
     }
+
+    public void draw() {
+        System.out.println(gerArea());
+    }
 }
