@@ -22,7 +22,6 @@ public class RightTriangle extends Figure {
         return firstLeg;
     }
 
-
     @Override
   public double getArea() {
         return (base * height) / 2.0;
