@@ -1,30 +1,29 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid implements Figure{
-    private double sideT;
-    private double sideY;
-    private double height1;
-    private String color;
-
-    public IsoscelesTrapezoid(double sideT, double sideY, double height1, String color) {
-        this.sideT = sideT;
-        this.sideY = sideY;
-        this.height1 = height1;
-        this.color = color;
+public class IsoscelesTrapezoid extends Figure{
+    private double height;
+    private double shortSide;
+    private double longSide;
+    public IsoscelesTrapezoid(String color, double height, double longSide, double shortSide) {
+        super(color);
+        this.height = height;
+        this.longSide = longSide;
+        this.shortSide = shortSide;
     }
-
 
     @Override
     public double getArea() {
-        return (sideT + sideY) / 2 * height1;
-    }
-
-    public void draw() {
-        System.out.println("Figure: rectangle, area: " + getArea() + " sq.units, sideT: " + sideT + " sq.units, sidey: " + sideY + " height1 " + height1 + " units, color: " + color);
+        return 0.5 * (longSide + shortSide) * height;
     }
 
     @Override
-    public String getColor() {
-        return color;
+    public void draw() {
+        System.out.println("Figure: isoscelesTrapezoid");
+        System.out.println("Area: " + getArea() + " sq. units");
+        System.out.println("Height: " + height + " units");
+        System.out.println("ShortSide: " + shortSide + " units");
+        System.out.println("LongSide: " + longSide + " units");
+        System.out.println("Color: " + color);
+        System.out.println(" " );
     }
 }
