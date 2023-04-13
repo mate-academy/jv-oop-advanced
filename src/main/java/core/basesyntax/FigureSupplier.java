@@ -17,7 +17,6 @@ public class FigureSupplier {
                 return new RightTriangle(
             color,
             getRandomNumber(3, 5),
-            getRandomNumber(1, 10),
             getRandomNumber(6, 15),
             getRandomNumber(1, 20));
             case 3:
