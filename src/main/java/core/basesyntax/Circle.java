@@ -13,7 +13,7 @@ public class Circle extends Figure {
         System.out.println("Figure: Circle, area: "
                 + getArea() + " sq.units, side: "
                 + getRadius() + " units, color: "
-                + getColor().toString().toLowerCase());
+                + getColor().name().toLowerCase());
     }
 
     private int getRadius() {

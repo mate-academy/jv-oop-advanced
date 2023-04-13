@@ -19,7 +19,7 @@ public class Rectangle extends Figure {
                 + " units, second side: "
                 + getSizeTwo()
                 + " units, color: "
-                + getColor().toString().toLowerCase());
+                + getColor().name().toLowerCase());
     }
 
     public int getSizeOne() {

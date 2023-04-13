@@ -19,7 +19,7 @@ public class RightTriangle extends Figure {
                 + " units, second leg: "
                 + getSecondLeg()
                 + " units, color: "
-                + getColor().toString().toLowerCase());
+                + getColor().name().toLowerCase());
     }
 
     public int getFirstLeg() {

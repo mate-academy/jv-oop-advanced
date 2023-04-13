@@ -15,7 +15,7 @@ public class Square extends Figure {
                 + " sq.units, side: "
                 + getSide()
                 + " units, color: "
-                + getColor().toString().toLowerCase());
+                + getColor().name().toLowerCase());
     }
 
     public int getSide() {

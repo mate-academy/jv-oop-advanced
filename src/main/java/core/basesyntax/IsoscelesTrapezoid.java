@@ -27,7 +27,7 @@ public class IsoscelesTrapezoid extends Figure {
                 + " units, lateral side: "
                 + getSideSize()
                 + " units, color: "
-                + getColor().toString().toLowerCase());
+                + getColor().name().toLowerCase());
     }
 
     public int getTopSize() {
