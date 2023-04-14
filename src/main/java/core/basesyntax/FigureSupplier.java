@@ -23,29 +23,29 @@ public class FigureSupplier {
             case 4:
                 return createRandomTrapezoid(color);
             default:
-                return null;
+                return getDefaultFigure();
         }
     }
 
-    private Square createRandomSquare(String color) {
+    public Square createRandomSquare(String color) {
         return new Square(color, getRandomNumber(1, 15));
     }
 
-    private RightTriangle createRandomTriangle(String color) {
+    public RightTriangle createRandomTriangle(String color) {
         return new RightTriangle(
         color, getRandomNumber(1, 15), getRandomNumber(2, 14), getRandomNumber(2, 16));
     }
 
-    private Rectangle createRandomRectangle(String color) {
+    public Rectangle createRandomRectangle(String color) {
         return new Rectangle(color, getRandomNumber(1, 15), getRandomNumber(2, 16));
     }
 
-    private IsoscelesTrapezoid createRandomTrapezoid(String color) {
+    public IsoscelesTrapezoid createRandomTrapezoid(String color) {
         return new IsoscelesTrapezoid(
         color, getRandomNumber(1, 15), getRandomNumber(2, 16), getRandomNumber(2, 16));
     }
 
-    private Circle createRandomCircle(String color) {
+    public Circle createRandomCircle(String color) {
         return new Circle(color, getRandomNumber(1, 15));
     }
 
