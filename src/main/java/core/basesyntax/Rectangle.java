@@ -10,11 +10,6 @@ public class Rectangle extends Figure {
         this.width = width;
     }
 
-    @Override
-    public String getName() {
-        return "Rectangle";
-    }
-
     public double getLength() {
         return length;
     }

@@ -13,11 +13,6 @@ public class Square extends Figure {
     }
 
     @Override
-    public String getName() {
-        return "Square";
-    }
-
-    @Override
   public double getArea() {
         return side * side;
     }

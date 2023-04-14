@@ -12,11 +12,6 @@ public class RightTriangle extends Figure {
         this.height = height;
     }
 
-    @Override
-    public String getName() {
-        return "RightTriangle";
-    }
-
     public double getFirstLeg() {
         return firstLeg;
     }

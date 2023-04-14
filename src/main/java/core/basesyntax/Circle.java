@@ -15,11 +15,6 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String getName() {
-        return "Circle";
-    }
-
-    @Override
   public void draw() {
         System.out.println(
                 "Figure : "

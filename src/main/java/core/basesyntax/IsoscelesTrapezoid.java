@@ -13,11 +13,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.height = height;
     }
 
-    @Override
-    public String getName() {
-        return "IsoscelesTrapezoid";
-    }
-
     public double getFirstParallel() {
         return firstParallel;
     }
