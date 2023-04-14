@@ -5,11 +5,12 @@ import java.util.Random;
 public class FigureSupplier {
     private static final String DEFAULT_COLOR = "White";
     private static final double MAX_NUMBER = 10;
+    private static final int RANDOM_INDEX = 6;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int index = random.nextInt(6);
+        int index = random.nextInt(RANDOM_INDEX);
         String color = colorSupplier.getRandomColor();
         switch (index) {
             case 0:
