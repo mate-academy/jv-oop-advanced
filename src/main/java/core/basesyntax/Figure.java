@@ -10,6 +10,4 @@ public abstract class Figure implements AreaCalculator {
     public String getColor() {
         return color;
     }
-
 }
-
