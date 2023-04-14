@@ -1,21 +1,21 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private final String color;
     private final double firstParallel;
     private final double secondParallel;
     private final double height;
 
     public IsoscelesTrapezoid(
             String color, double firstParallel, double secondParallel, double height) {
-        this.color = color;
+        super(color);
         this.firstParallel = firstParallel;
         this.secondParallel = secondParallel;
         this.height = height;
     }
 
-    public String getColor() {
-        return color;
+    @Override
+    public String getName() {
+        return "IsoscelesTrapezoid";
     }
 
     public double getFirstParallel() {
