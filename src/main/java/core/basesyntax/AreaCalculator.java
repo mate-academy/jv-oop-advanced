@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public interface AreaCalculator extends Drawable {
+public interface AreaCalculator {
     double getArea();
 }
