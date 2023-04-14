@@ -14,14 +14,14 @@ public class Circle extends Figure {
     }
 
     @Override
-  public void draw() {
+    public void draw() {
         System.out.println(
                 "Figure : "
-                + "circle,"
-                + " radius : "
-                + radius
-                + " units,"
-                + " color : "
-                + getColor());
+                        + "circle,"
+                        + " radius : "
+                        + radius
+                        + " units,"
+                        + " color : "
+                        + getColor());
     }
 }
