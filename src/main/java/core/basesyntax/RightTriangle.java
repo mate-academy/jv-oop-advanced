@@ -1,21 +1,20 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private final String color;
     private final double firstLeg;
     private final double base;
     private final double height;
 
-    public RightTriangle(
-            String color, double firstLeg, double base, double height) {
-        this.color = color;
+    public RightTriangle(String color, double firstLeg, double base, double height) {
+        super(color);
         this.firstLeg = firstLeg;
         this.base = base;
         this.height = height;
     }
 
-    public String getColor() {
-        return color;
+    @Override
+    public String getName() {
+        return "RightTriangle";
     }
 
     public double getFirstLeg() {
