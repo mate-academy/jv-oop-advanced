@@ -3,7 +3,8 @@ package core.basesyntax;
 public class Rectangle extends Figure {
     private double width;
     private double height;
-    public Rectangle(String color, double width, double height) {
+
+    public Rectangle(Color color, double width, double height) {
         super(color);
         this.width = width;
         this.height = height;
@@ -21,6 +22,6 @@ public class Rectangle extends Figure {
         System.out.println("Width: " + width + " units");
         System.out.println("Height: " + height + " units");
         System.out.println("Color: " + color);
-        System.out.println(" " );
+        System.out.println(" ");
     }
 }

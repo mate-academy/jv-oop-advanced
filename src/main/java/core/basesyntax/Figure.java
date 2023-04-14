@@ -1,8 +1,9 @@
 package core.basesyntax;
 
 public class Figure implements Area, Drawable {
-    public String color;
-    public Figure(String color) {
+    public Color color;
+
+    public Figure(Color color) {
         this.color = color;
     }
 
@@ -13,6 +14,5 @@ public class Figure implements Area, Drawable {
 
     @Override
     public void draw() {
-
     }
 }

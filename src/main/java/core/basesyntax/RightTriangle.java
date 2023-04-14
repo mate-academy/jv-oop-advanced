@@ -4,7 +4,7 @@ public class RightTriangle extends Figure {
     private double longerLeg;
     private double shorterLeg;
 
-    public RightTriangle(String color, double longerLeg, double shorterLeg) {
+    public RightTriangle(Color color, double longerLeg, double shorterLeg) {
         super(color);
         this.longerLeg = longerLeg;
         this.shorterLeg = shorterLeg;
@@ -22,6 +22,6 @@ public class RightTriangle extends Figure {
         System.out.println("LongerLeg: " + longerLeg + " units");
         System.out.println("ShorterLeg: " + shorterLeg + " units");
         System.out.println("Color: " + color);
-        System.out.println(" " );
+        System.out.println(" ");
     }
 }

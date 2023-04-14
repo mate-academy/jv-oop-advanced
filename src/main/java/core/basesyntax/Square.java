@@ -3,7 +3,7 @@ package core.basesyntax;
 public class Square extends Figure {
     private double squareSide;
 
-    public Square(String color, double squareSide) {
+    public Square(Color color, double squareSide) {
         super(color);
         this.squareSide = squareSide;
     }
@@ -19,6 +19,6 @@ public class Square extends Figure {
         System.out.println("Area: " + getArea() + " sq. units");
         System.out.println("Side: " + squareSide + " units");
         System.out.println("Color: " + color);
-        System.out.println(" " );
+        System.out.println(" ");
     }
 }
