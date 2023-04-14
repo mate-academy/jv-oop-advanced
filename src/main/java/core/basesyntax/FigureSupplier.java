@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final String DEFAULT_COLOR = "White";
-    private static final int DEFAULT_RADIUS = 10;
+    private static final double MAX_NUMBER = 10;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -27,33 +27,29 @@ public class FigureSupplier {
         }
     }
 
-    public Square createRandomSquare(String color) {
-        return new Square(color, getRandomNumber(1, 15));
-    }
-
-    public RightTriangle createRandomTriangle(String color) {
-        return new RightTriangle(
-        color, getRandomNumber(1, 15), getRandomNumber(2, 14), getRandomNumber(2, 16));
-    }
-
-    public Rectangle createRandomRectangle(String color) {
-        return new Rectangle(color, getRandomNumber(1, 15), getRandomNumber(2, 16));
-    }
-
-    public IsoscelesTrapezoid createRandomTrapezoid(String color) {
-        return new IsoscelesTrapezoid(
-        color, getRandomNumber(1, 15), getRandomNumber(2, 16), getRandomNumber(2, 16));
-    }
-
-    public Circle createRandomCircle(String color) {
-        return new Circle(color, getRandomNumber(1, 15));
-    }
-
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR,DEFAULT_RADIUS);
+        return new Circle(DEFAULT_COLOR, MAX_NUMBER);
     }
 
-    private int getRandomNumber(int min, int max) {
-        return random.nextInt(max - min + 1) + min;
+    private Rectangle createRandomRectangle(String color) {
+        return new Rectangle(color, random.nextDouble(), random.nextDouble());
+    }
+
+    private IsoscelesTrapezoid createRandomTrapezoid(String color) {
+        return new IsoscelesTrapezoid(
+                color, random.nextDouble(), random.nextDouble(), random.nextDouble());
+    }
+
+    private Circle createRandomCircle(String color) {
+        return new Circle(color, random.nextDouble());
+    }
+
+    private Square createRandomSquare(String color) {
+        return new Square(color, random.nextDouble());
+    }
+
+    private RightTriangle createRandomTriangle(String color) {
+        return new RightTriangle(color, random.nextDouble(),
+                random.nextDouble(), random.nextDouble());
     }
 }
