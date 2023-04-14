@@ -1,6 +1,5 @@
 package core.basesyntax;
 
-
 import java.util.Random;
 
 public class FigureSupplier {
@@ -55,7 +54,6 @@ public class FigureSupplier {
     private IsoscelesTrapezoid createIsoscelesTrapezoid(Color color) {
         double base1 = Math.random() * 100;
         double base2 = Math.random() * 100;
-        double leg = Math.random() * 100;
         double height = Math.random() * 100;
         return new IsoscelesTrapezoid(color, base1, base2, height);
     }
