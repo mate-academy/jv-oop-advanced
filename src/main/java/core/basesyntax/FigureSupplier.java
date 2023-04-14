@@ -6,6 +6,7 @@ public class FigureSupplier {
     private Random random = new Random();
     private ColorSupplier colorSupplier;
     private static final double CONSTANT_CASE = 10;
+    private static final double MAX_SIDE_LENGTH = 100;
 
     public FigureSupplier(ColorSupplier colorSupplier) {
         this.colorSupplier = colorSupplier;
@@ -29,36 +30,38 @@ public class FigureSupplier {
         }
     }
 
+    public Figure getDefaultFigure() {
+        return new Circle(Color.WHITE, CONSTANT_CASE);
+    }
+
     private Square createSquare(Color color) {
-        double sideLength = Math.random() * 100;
+        double sideLength = Math.random() * MAX_SIDE_LENGTH;
         return new Square(color, sideLength);
     }
 
     private Rectangle createRectangle(Color color) {
-        double length = Math.random() * 100;
-        double width = Math.random() * 100;
+        double length = Math.random() * MAX_SIDE_LENGTH;
+        double width = Math.random() * MAX_SIDE_LENGTH;
         return new Rectangle(color, length, width);
     }
 
     private RightTriangle createRightTriangle(Color color) {
-        double base = Math.random() * 100;
-        double height = Math.random() * 100;
+        double base = Math.random() * MAX_SIDE_LENGTH;
+        double height = Math.random() * MAX_SIDE_LENGTH;
         return new RightTriangle(color, base, height);
     }
 
     private Circle createCircle(Color color) {
-        double radius = Math.random() * 100;
+        double radius = Math.random() * MAX_SIDE_LENGTH;
         return new Circle(color, radius);
     }
 
     private IsoscelesTrapezoid createIsoscelesTrapezoid(Color color) {
-        double base1 = Math.random() * 100;
-        double base2 = Math.random() * 100;
-        double height = Math.random() * 100;
+        double base1 = Math.random() * MAX_SIDE_LENGTH;
+        double base2 = Math.random() * MAX_SIDE_LENGTH;
+        double height = Math.random() * MAX_SIDE_LENGTH;
         return new IsoscelesTrapezoid(color, base1, base2, height);
     }
-
-    public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE, CONSTANT_CASE);
-    }
 }
+
+
