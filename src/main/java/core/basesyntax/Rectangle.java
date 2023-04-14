@@ -21,7 +21,7 @@ public class Rectangle extends Figure {
         System.out.println("Area: " + getArea() + " sq. units");
         System.out.println("Width: " + width + " units");
         System.out.println("Height: " + height + " units");
-        System.out.println("Color: " + color);
+        System.out.println("Color: " + getColor());
         System.out.println(" ");
     }
 }

@@ -24,7 +24,7 @@ public class IsoscelesTrapezoid extends Figure {
         System.out.println("Height: " + height + " units");
         System.out.println("ShortSide: " + shortSide + " units");
         System.out.println("LongSide: " + longSide + " units");
-        System.out.println("Color: " + color);
+        System.out.println("Color: " + getColor());
         System.out.println(" ");
     }
 }

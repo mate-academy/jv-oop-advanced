@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Figure implements Area, Drawable {
-    public Color color;
+    private Color color;
 
     public Figure(Color color) {
         this.color = color;
@@ -14,5 +14,9 @@ public class Figure implements Area, Drawable {
 
     @Override
     public void draw() {
+    }
+
+    public Color getColor() {
+        return color;
     }
 }

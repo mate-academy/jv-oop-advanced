@@ -5,7 +5,7 @@ import java.util.Random;
 public class FigureSupplier {
     private Random random = new Random();
     private ColorSupplier colorSupplier;
-    private final double CONSTANT_CASE = 10;
+    private static final double CONSTANT_CASE = 10;
 
     public FigureSupplier(ColorSupplier colorSupplier) {
         this.colorSupplier = colorSupplier;
