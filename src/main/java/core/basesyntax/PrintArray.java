@@ -4,7 +4,8 @@ import core.basesyntax.figures.Figure;
 import core.basesyntax.supplier.ColorSupplier;
 
 public class PrintArray {
-    private static final ColorSupplier.FigureSupplier figureSupplier = new ColorSupplier.FigureSupplier();
+    private static final ColorSupplier.FigureSupplier figureSupplier
+            = new ColorSupplier.FigureSupplier();
     private static final int NUMBERS_OF_FIGURE = 6;
 
     public static void main(String[] args) {

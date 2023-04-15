@@ -1,20 +1,20 @@
 package core.basesyntax.supplier;
 
-import core.basesyntax.figures.*;
+import core.basesyntax.figures.Circle;
+import core.basesyntax.figures.Figure;
+import core.basesyntax.figures.IsoscelesTrapezoid;
+import core.basesyntax.figures.Rectangle;
+import core.basesyntax.figures.RightTriangle;
+import core.basesyntax.figures.Square;
 import core.basesyntax.model.Color;
 import java.util.Random;
-
 
 public class ColorSupplier {
     public String getRandomColor() {
         return Color.values()[new Random().nextInt(Color.values().length)].name();
     }
 
-    public static class FigureSupplier{
-
-        public String getRandomColor() {
-            return getRandomColor();
-        }
+    public static class FigureSupplier {
 
         private static final int MAX_NUMBER = 100;
         private static final int FIGURES_NUMBER = 5;
