@@ -1,7 +1,5 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.model.Figure;
-
 public class RightTriangle extends Figure {
     private double height;
     private double base;
