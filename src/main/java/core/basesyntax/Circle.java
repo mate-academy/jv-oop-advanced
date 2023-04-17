@@ -18,10 +18,10 @@ public class Circle extends Figure implements AreaFigure {
 
     @Override
     public String toString() {
-        return "Figure: circle " + "area: " +
-                getArea() + " sq.units, " +
-                "radius: " + radius +
-                " color: " + getColor();
+        return "Figure: circle " + "area: "
+                + getArea() + " sq.units, "
+                + "radius: " + radius
+                + " color: " + getColor();
     }
 
     @Override

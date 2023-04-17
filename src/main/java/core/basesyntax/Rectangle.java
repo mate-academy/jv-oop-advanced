@@ -3,6 +3,7 @@ package core.basesyntax;
 public class Rectangle extends Figure implements AreaFigure {
     private double firstLeg;
     private double secondLeg;
+
     public Rectangle(String color, double firstLeg, double secondLeg) {
         super(color);
         this.firstLeg = firstLeg;
@@ -30,9 +31,10 @@ public class Rectangle extends Figure implements AreaFigure {
         if (getArea() == 0) {
             throw new AreaException("Rectangle`s area is 0");
         }
-        return "Figure: rectangle " + "area :" +
-                getArea() + " sq.units, " + " firstLeg: " +
-                firstLeg + " units, " + " secondLeg " + secondLeg +
+        return "Figure: rectangle " + "area :"
+                + getArea() + " sq.units, " + " firstLeg: "
+                + firstLeg + " units, " + " secondLeg "
+                + secondLeg +
                 " units," + " color: " + getColor();
     }
 

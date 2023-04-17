@@ -31,12 +31,12 @@ public class RightTriangle extends Figure implements AreaFigure {
         if (getArea() == 0) {
             throw new AreaException("Right triangle`s area is 0");
         }
-        return "Figure: triangle, " +
-                "area : " + getArea() +
-                " sq.units, " +
-                " firstLeg: " + firstLeg +
-                " units, secondLeg: " + secondLeg +
-                " units" + " color:" + getColor();
+        return "Figure: triangle, "
+                + "area : " + getArea()
+                + " sq.units, "
+                + " firstLeg: " + firstLeg
+                + " units, secondLeg: " + secondLeg
+                + " units" + " color:" + getColor();
     }
 
     @Override

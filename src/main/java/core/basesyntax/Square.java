@@ -21,11 +21,11 @@ public class Square extends Figure implements AreaFigure {
         if (getArea() == 0) {
             throw new AreaException("Square`s area is 0");
         }
-        return "Figure: " + "square, " +
-                "area: " + getArea() +
-                " sq.units, " +
-                " side: " + firstLeg +
-                " units, " + " color: " + getColor();
+        return "Figure: " + "square, "
+                + "area: " + getArea()
+                + " sq.units, "
+                + " side: " + firstLeg
+                + " units, " + " color: " + getColor();
     }
 
     @Override
@@ -33,6 +33,4 @@ public class Square extends Figure implements AreaFigure {
         double area = firstLeg * firstLeg;
         return Math.round(area * 100) / 100;
     }
-
-
 }

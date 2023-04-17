@@ -41,14 +41,13 @@ public class IsoscelesTrapezoid extends Figure implements AreaFigure {
         if (getArea() == 0) {
             throw new AreaException("Isosceles trapezoid`s area is 0");
         }
-        return "Figure: isosceles trapezoid, " +
-                "area: " + getArea() +
-                " sq.units, firstLeg: " + firstLeg +
-                " units, secondLeg: " + secondLeg +
-                " units, " + "high: " + high +
-                " units, " + "color: " + getColor();
+        return "Figure: isosceles trapezoid, "
+                + "area: " + getArea()
+                + " sq.units, firstLeg: " + firstLeg
+                + " units, secondLeg: " + secondLeg
+                + " units, " + "high: " + high
+                + " units, " + "color: " + getColor();
     }
-
 
     @Override
     public double getArea() {
