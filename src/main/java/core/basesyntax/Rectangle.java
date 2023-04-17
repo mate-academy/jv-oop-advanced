@@ -29,7 +29,7 @@ public class Rectangle extends Figure {
     @Override
     public String toString() {
         if (getArea() == 0) {
-            throw new AreaException("Rectangle`s area is 0");
+            return ("Rectangle`s area is 0");
         }
         return "Figure: rectangle " + "area :"
                 + getArea() + " sq.units, " + " firstLeg: "

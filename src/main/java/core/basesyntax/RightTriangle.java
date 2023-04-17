@@ -29,7 +29,7 @@ public class RightTriangle extends Figure {
     @Override
     public String toString() {
         if (getArea() == 0) {
-            throw new AreaException("Right triangle`s area is 0");
+            return ("Right triangle`s area is 0");
         }
         return "Figure: triangle, "
                 + "area : " + getArea()

@@ -39,7 +39,7 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public String toString() {
         if (getArea() == 0) {
-            throw new AreaException("Isosceles trapezoid`s area is 0");
+            return ("Isosceles trapezoid`s area is 0");
         }
         return "Figure: isosceles trapezoid, "
                 + "area: " + getArea()
