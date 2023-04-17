@@ -34,8 +34,8 @@ public class Rectangle extends Figure implements AreaFigure {
         return "Figure: rectangle " + "area :"
                 + getArea() + " sq.units, " + " firstLeg: "
                 + firstLeg + " units, " + " secondLeg "
-                + secondLeg +
-                " units," + " color: " + getColor();
+                + secondLeg + " units,"
+                + " color: " + getColor();
     }
 
     @Override
