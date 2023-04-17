@@ -19,7 +19,7 @@ public class Square extends Figure {
     @Override
     public String toString() {
         if (getArea() == 0) {
-           return  ("Square`s area is 0");
+            return ("Square`s area is 0");
         }
         return "Figure: " + "square, "
                 + "area: " + getArea()
