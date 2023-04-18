@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 public class FigureSupplier {
@@ -19,10 +17,9 @@ public class FigureSupplier {
                 return getRandomRightTriangle();
             case 2:
                 return getRandomTrapezoid();
-            case 3:
+            default:
                 return getRandomRectangle();
         }
-        return null;
     }
 
     public Figure getRandomSquare() {
