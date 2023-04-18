@@ -1,14 +1,8 @@
-package core.basesyntax;
-
-import java.util.Random;
+package core.basesyntax.figures;
 
 public class RightTriangle extends Figure {
-    private static final int MAX_LEG = 20;
     private int firstLeg;
     private int secondLeg;
-
-    public RightTriangle() {
-    }
 
     public RightTriangle(String color, int firstLeg, int secondLeg) {
         super(color);
@@ -18,7 +12,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public double getArea() {
-        return (firstLeg * secondLeg) / 2f;
+        return (double) (firstLeg * secondLeg) / 2;
     }
 
     @Override
@@ -26,12 +20,5 @@ public class RightTriangle extends Figure {
         System.out.println("Figure: right triangle, area: " + getArea() + " sq.units, firstLeg: "
                 + firstLeg + " units, secondLeg: " + secondLeg
                 + " units, color: " + getColor().toLowerCase());
-    }
-
-    @Override
-    public Figure createRandomFigure() {
-        Random random = new Random();
-        return new RightTriangle(new ColorSupplier().getRandomColor(),
-                random.nextInt(MAX_LEG), random.nextInt(MAX_LEG));
     }
 }
