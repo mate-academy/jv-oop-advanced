@@ -2,12 +2,12 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class FigureSupplire {
+public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
     private static final int MAX_VALUE = 100;
     private static final String DEFAULT_COLOR = Color.WHITE.name();
     private static final int DEFAULT_RADIUS = 10;
-    private final ColorSupplire colorSupplire = new ColorSupplire();
+    private final ColorSupplier colorSupplire = new ColorSupplier();
     private final Random random = new Random();
 
     public Figure getDefaultFigure() {
