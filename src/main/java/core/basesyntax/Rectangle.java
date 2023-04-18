@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure {
+public class Rectangle extends Figure implements DrawFigure, AreaCalculator {
     private double firstLeg;
     private double secondLeg;
 
@@ -27,15 +27,15 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String toString() {
+    public void draw() {
         if (getArea() == 0) {
-            return ("Rectangle`s area is 0");
+            System.out.println(("Rectangle`s area is 0"));
         }
-        return "Figure: rectangle " + "area :"
+        System.out.println("Figure: rectangle " + "area: "
                 + getArea() + " sq.units, " + " firstLeg: "
                 + firstLeg + " units, " + " secondLeg "
                 + secondLeg + " units,"
-                + " color: " + getColor();
+                + " color: " + getColor());
     }
 
     @Override

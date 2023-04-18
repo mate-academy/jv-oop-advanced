@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends Figure {
+public class Square extends Figure implements DrawFigure, AreaCalculator {
     private double firstLeg;
 
     public Square(String color, double firstLeg) {
@@ -17,15 +17,15 @@ public class Square extends Figure {
     }
 
     @Override
-    public String toString() {
+    public void draw() {
         if (getArea() == 0) {
-            return ("Square`s area is 0");
+            System.out.println(("Square`s area is 0"));
         }
-        return "Figure: " + "square, "
+        System.out.println("Figure: " + "square, "
                 + "area: " + getArea()
                 + " sq.units, "
                 + " side: " + firstLeg
-                + " units, " + " color: " + getColor();
+                + " units, " + " color: " + getColor());
     }
 
     @Override

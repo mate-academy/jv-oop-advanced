@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure {
+public class Circle extends Figure implements DrawFigure, AreaCalculator {
     private double radius;
 
     public Circle(String color, double radius) {
@@ -17,11 +17,11 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "Figure: circle " + "area: "
+    public void draw() {
+        System.out.println("Figure: circle " + "area: "
                 + getArea() + " sq.units, "
                 + "radius: " + radius
-                + " color: " + getColor();
+                + " color: " + getColor());
     }
 
     @Override
