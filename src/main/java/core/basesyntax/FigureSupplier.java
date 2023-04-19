@@ -11,19 +11,20 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         switch (random.nextInt(FIGURES_AMOUNT)) {
-            case 1:
+            case 0:
                 figure = new Square(supplier.getRandomColor(), MAGIC_NUMBER);
                 break;
-            case 2:
+            case 1:
                 figure = new Circle(supplier.getRandomColor(), MAGIC_NUMBER);
                 break;
-            case 3:
+            case 2:
                 figure = new RightTriangle(supplier.getRandomColor(), MAGIC_NUMBER, MAGIC_NUMBER);
                 break;
-            case 4:
-                figure = new IsoscelesTrapezoid(supplier.getRandomColor(), MAGIC_NUMBER, MAGIC_NUMBER, MAGIC_NUMBER);
+            case 3:
+                figure = new IsoscelesTrapezoid(supplier.getRandomColor(), MAGIC_NUMBER,
+                        MAGIC_NUMBER, MAGIC_NUMBER);
                 break;
-            case 5:
+            case 4:
                 figure = new Rectangle(supplier.getRandomColor(), MAGIC_NUMBER, MAGIC_NUMBER);
                 break;
             default:
