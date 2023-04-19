@@ -3,65 +3,79 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int MAX_COUNT_OF_FIGURES = 5;
+    private static final int MAX_VALUE_FOR_BOUND = 100;
+    private static final int RADIUS_BY_DEFAULT = 10;
+    private static final Color COLOR_BY_DEFAULT = Color.WHITE;
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
-    private int randomeRadius = 0;
-    private int squareRandomeSide = 0;
-    private int rectangleRandomASide = 0;
-    private int rectangleRandomBSide = 0;
-    private int firstRandomeLeg = 0;
-    private int secondRandomeLeg = 0;
-    private int trapezoidRandomeASide = 0;
-    private int trapezoidRandomeBSide = 0;
-    private int trapezoidRandomeHeigth = 0;
 
     public Figure getRandomFigure() {
-        String figureType = getRandomeType();
+        int index = getRandomeType();
         Figure figure = null;
-        switch (figureType) {
-            case "circle":
-                randomeRadius = random.nextInt(100);
-                figure = new Circle(randomeRadius, colorSupplier.getRandomColor());
+        switch (index) {
+            case 0:
+                figure = createCircle();
                 break;
-            case "square":
-                squareRandomeSide = random.nextInt(100);
-                figure = new Square(squareRandomeSide, colorSupplier.getRandomColor());
+            case 1:
+                figure = createSquare();
                 break;
-            case "rectangle":
-                rectangleRandomASide = random.nextInt(100);
-                rectangleRandomBSide = random.nextInt(100);
-                figure = new Rectangle(rectangleRandomASide,
-                                       rectangleRandomBSide,
-                                       colorSupplier.getRandomColor());
+            case 2:
+
+                figure = createRectangle();
                 break;
-            case "righttriangle":
-                firstRandomeLeg = random.nextInt(100);
-                secondRandomeLeg = random.nextInt(100);
-                figure = new RightTriangle(firstRandomeLeg,
-                                           secondRandomeLeg,
-                                           colorSupplier.getRandomColor());
-                break;
-            case "isoscelestrapezoid":
-                trapezoidRandomeASide = random.nextInt(100);
-                trapezoidRandomeBSide = random.nextInt(100);
-                trapezoidRandomeHeigth = random.nextInt(100);
-                figure = new IsoscelesTrapezoid(trapezoidRandomeASide,
-                                                trapezoidRandomeBSide,
-                                                trapezoidRandomeHeigth,
-                                                colorSupplier.getRandomColor());
+            case 3:
+
+                figure = createRightTriangle();
                 break;
             default:
+                figure = createIsoscelesTrapezoid();
                 break;
         }
         return figure;
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, "white");
+        return new Circle(RADIUS_BY_DEFAULT, COLOR_BY_DEFAULT);
     }
 
-    private String getRandomeType() {
-        int index = new Random().nextInt(Figures.values().length);
-        return Figures.values()[index].toString().toLowerCase();
+    private int getRandomeType() {
+        return random.nextInt(MAX_COUNT_OF_FIGURES);
+    }
+
+    private Circle createCircle() {
+        int randomeRadius = random.nextInt(MAX_VALUE_FOR_BOUND);
+        return new Circle(randomeRadius, colorSupplier.getRandomColor());
+    }
+
+    private Square createSquare() {
+        int squareRandomeSide = random.nextInt(MAX_VALUE_FOR_BOUND);
+        return new Square(squareRandomeSide, colorSupplier.getRandomColor());
+    }
+
+    private Rectangle createRectangle() {
+        int rectangleRandomASide = random.nextInt(MAX_VALUE_FOR_BOUND);
+        int rectangleRandomBSide = random.nextInt(MAX_VALUE_FOR_BOUND);
+        return new Rectangle(rectangleRandomASide,
+                rectangleRandomBSide,
+                colorSupplier.getRandomColor());
+    }
+
+    private RightTriangle createRightTriangle() {
+        int firstRandomeLeg = random.nextInt(MAX_VALUE_FOR_BOUND);
+        int secondRandomeLeg = random.nextInt(MAX_VALUE_FOR_BOUND);
+        return new RightTriangle(firstRandomeLeg,
+                secondRandomeLeg,
+                colorSupplier.getRandomColor());
+    }
+
+    private IsoscelesTrapezoid createIsoscelesTrapezoid() {
+        int trapezoidRandomeASide = random.nextInt(MAX_VALUE_FOR_BOUND);
+        int trapezoidRandomeBSide = random.nextInt(MAX_VALUE_FOR_BOUND);
+        int trapezoidRandomeHeigth = random.nextInt(MAX_VALUE_FOR_BOUND);
+        return new IsoscelesTrapezoid(trapezoidRandomeASide,
+                trapezoidRandomeBSide,
+                trapezoidRandomeHeigth,
+                colorSupplier.getRandomColor());
     }
 }

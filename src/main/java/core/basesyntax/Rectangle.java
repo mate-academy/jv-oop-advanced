@@ -4,30 +4,28 @@ public class Rectangle extends Figure {
     private int aside;
     private int bside;
 
-    public Rectangle(int aside, int bside, String color) {
+    public Rectangle(int aside, int bside, Color color) {
         this.aside = aside;
         this.bside = bside;
         setColor(color);
-        setFigureType("reactangle");
     }
 
     @Override
-    public void calculateArea() {
-        setArea(aside * bside);
+    public double calculateArea() {
+        return aside * bside;
     }
 
     @Override
-    public String toString() {
-        return super.toString()
-                + getFigureType()
+    public void draw() {
+        System.out.println("Figure: reactangle"
                 + ", area: "
-                + getArea()
+                + calculateArea()
                 + " sq.units"
                 + ", a side: "
                 + aside
                 + " units, b side: "
                 + bside
                 + " units, color: "
-                + getColor();
+                + getColor().name().toLowerCase());
     }
 }

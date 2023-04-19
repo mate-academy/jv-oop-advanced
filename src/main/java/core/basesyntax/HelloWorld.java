@@ -15,10 +15,7 @@ public class HelloWorld {
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
-        }
-
-        for (Figure figure : figures) {
-            System.out.println(figure);
+            figures[i].draw();
         }
     }
 }
