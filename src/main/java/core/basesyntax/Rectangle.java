@@ -1,18 +1,18 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private int aside;
-    private int bside;
+    private int width;
+    private int length;
 
-    public Rectangle(int aside, int bside, Color color) {
-        this.aside = aside;
-        this.bside = bside;
+    public Rectangle(int width, int length, Color color) {
+        this.width = width;
+        this.length = length;
         setColor(color);
     }
 
     @Override
     public double calculateArea() {
-        return aside * bside;
+        return width * length;
     }
 
     @Override
@@ -21,10 +21,10 @@ public class Rectangle extends Figure {
                 + ", area: "
                 + calculateArea()
                 + " sq.units"
-                + ", a side: "
-                + aside
-                + " units, b side: "
-                + bside
+                + ", width: "
+                + width
+                + " units, length: "
+                + length
                 + " units, color: "
                 + getColor().name().toLowerCase());
     }

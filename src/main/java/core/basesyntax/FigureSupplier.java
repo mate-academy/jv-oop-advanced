@@ -21,11 +21,9 @@ public class FigureSupplier {
                 figure = createSquare();
                 break;
             case 2:
-
                 figure = createRectangle();
                 break;
             case 3:
-
                 figure = createRightTriangle();
                 break;
             default:
@@ -54,10 +52,10 @@ public class FigureSupplier {
     }
 
     private Rectangle createRectangle() {
-        int rectangleRandomASide = random.nextInt(MAX_VALUE_FOR_BOUND);
-        int rectangleRandomBSide = random.nextInt(MAX_VALUE_FOR_BOUND);
-        return new Rectangle(rectangleRandomASide,
-                rectangleRandomBSide,
+        int rectangleRandomWidth = random.nextInt(MAX_VALUE_FOR_BOUND);
+        int rectangleRandomLength = random.nextInt(MAX_VALUE_FOR_BOUND);
+        return new Rectangle(rectangleRandomWidth,
+                rectangleRandomLength,
                 colorSupplier.getRandomColor());
     }
 
