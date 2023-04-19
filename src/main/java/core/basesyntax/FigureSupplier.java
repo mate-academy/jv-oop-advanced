@@ -13,16 +13,17 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         int indexPossibleClass = random.nextInt(figure.length);
         Class randomClass = figure[indexPossibleClass];
-        if (Circle.class.equals(randomClass)) {
-            return generateNewCircle();
-        } else if (Square.class.equals(randomClass)) {
-            return generateNewSquare();
-        } else if (RightTriangle.class.equals(randomClass)) {
-            return generateNewRightTriangle();
-        } else if (Rectangle.class.equals(randomClass)) {
-            return generateNewRectangle();
-        } else {
-            return generateNewIsoscelesTrapezoid();
+        switch (randomClass.getSimpleName()) {
+            case "Circle":
+                return generateNewCircle();
+            case "Square":
+                return generateNewSquare();
+            case "RightTriangle":
+                return generateNewRightTriangle();
+            case "Rectangle":
+                return generateNewRectangle();
+            default:
+                return generateNewIsoscelesTrapezoid();
         }
     }
 
