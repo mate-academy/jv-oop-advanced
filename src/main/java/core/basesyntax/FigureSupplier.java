@@ -4,14 +4,11 @@ import java.util.Locale;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final double RADIUS_CONSTANT = 10;
-
+    private static final double DEFAULT_RADIUS = 10;
     private Random random = new Random();
-
+    private ColorSupplier colorSupplier = new ColorSupplier();
     private final Class[] figure = {Circle.class, Square.class, RightTriangle.class,
             Rectangle.class, IsoscelesTrapezoid.class};
-
-    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int indexPossibleClass = random.nextInt(figure.length);
@@ -53,6 +50,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(PossibleColors.WHITE.name().toLowerCase(Locale.ROOT), RADIUS_CONSTANT);
+        return new Circle(PossibleColors.WHITE.name().toLowerCase(Locale.ROOT), DEFAULT_RADIUS);
     }
 }

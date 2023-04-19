@@ -1,12 +1,8 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private static final int VALUE_WITH_FORMULA = 2;
-
     private double sizeOfTheHeight;
-
     private double sizeOfTheSmallerBase;
-
     private double sizeOfTheLargeBase;
 
     public IsoscelesTrapezoid(String color, double sizeOfTheHeight,
@@ -19,7 +15,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double calculateArea() {
-        return ((sizeOfTheLargeBase + sizeOfTheSmallerBase) / VALUE_WITH_FORMULA) * sizeOfTheHeight;
+        return ((sizeOfTheLargeBase + sizeOfTheSmallerBase) / 2) * sizeOfTheHeight;
     }
 
     @Override

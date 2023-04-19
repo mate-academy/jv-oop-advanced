@@ -1,25 +1,24 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private double sizeLongSide;
+    private double length;
+    private double width;
 
-    private double sizeShortSide;
-
-    public Rectangle(String color, double sizeLongSide, double sizeShortSide) {
+    public Rectangle(String color, double length, double width) {
         super(color);
-        this.sizeLongSide = sizeLongSide;
-        this.sizeShortSide = sizeShortSide;
+        this.length = length;
+        this.width = width;
     }
 
     @Override
     public double calculateArea() {
-        return sizeLongSide * sizeShortSide;
+        return length * width;
     }
 
     @Override
     public void displayProperty() {
         System.out.println("Figure: rectangle, color: " + super.getColor()
-                + ", size of the long side: " + sizeLongSide
-                + ", size of the short side: " + sizeShortSide + ", area: " + calculateArea());
+                + ", size of the length: " + length
+                + ", size of the width: " + width + ", area: " + calculateArea());
     }
 }

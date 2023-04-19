@@ -1,28 +1,25 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private static final double VALUE_WITH_FORMULA = 0.5;
+    private double firstLeg;
+    private double secondLeg;
 
-    private double sideLength;
-
-    private double heightOfTheTriangle;
-
-    public RightTriangle(String color, double sideLength, double heightOfTheTriangle) {
+    public RightTriangle(String color, double firstLeg, double secondLeg) {
         super(color);
-        this.sideLength = sideLength;
-        this.heightOfTheTriangle = heightOfTheTriangle;
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
     }
 
     @Override
     public double calculateArea() {
-        return VALUE_WITH_FORMULA * sideLength * heightOfTheTriangle;
+        return 0.5 * firstLeg * secondLeg;
     }
 
     @Override
     public void displayProperty() {
         System.out.println("Figure: right triangle, color: " + super.getColor()
-                + ", size of the side: " + sideLength
-                + ", size of the height: " + heightOfTheTriangle + ", area: " + calculateArea());
+                + ", size of the first leg: " + firstLeg
+                + ", size of the second leg: " + secondLeg + ", area: " + calculateArea());
     }
 }
 

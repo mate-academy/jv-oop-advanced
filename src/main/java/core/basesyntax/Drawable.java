@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public interface ShapePropertyDisplay {
+public interface Drawable {
     void displayProperty();
 }
