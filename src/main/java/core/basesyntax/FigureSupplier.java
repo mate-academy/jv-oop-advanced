@@ -8,8 +8,7 @@ public class FigureSupplier {
     private static final int FIGURE_TYPE = 5;
     private static final int RADIUS_DEFAULT_CIRCLE = 10;
     private static final String COLORS = Color.WHILE.name();
-    ColorSupplier colorSupplier = new ColorSupplier();
-
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure(Color color) {
         int figureType = random.nextInt(FIGURE_TYPE);
@@ -26,12 +25,13 @@ public class FigureSupplier {
                 return createRandomRightTriangle(color);
         }
     }
+
     private Square createRandomSquare(Color color) {
         double side = random.nextDouble() * MAX_DIMENSION;
         return new Square(color.name(), side);
     }
 
-    private Rectangle createRandomRectangle(Color  color) {
+    private Rectangle createRandomRectangle(Color color) {
         double length = random.nextDouble() * MAX_DIMENSION;
         double width = random.nextDouble() * MAX_DIMENSION;
         return new Rectangle(color.name(), length, width);
@@ -57,7 +57,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        String color =  COLORS;
+        String color = COLORS;
         double radius = RADIUS_DEFAULT_CIRCLE;
         return new Circle(color, radius);
     }
