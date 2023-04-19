@@ -6,9 +6,11 @@ public class FigureSupplier {
     public static final int NUM_OF_CLASSES = 5;
     public static final int DEFAULT_RADIUS = 10;
     public static final int MAX_SIZE = 100;
+    private final Random random = new Random();
+    private final Color randomColor = Color.valueOf(new ColorSupplier().getRandomColor());
 
     public Figure getRandomFigure() {
-        switch (new Random().nextInt(NUM_OF_CLASSES)) {
+        switch (random.nextInt(NUM_OF_CLASSES)) {
             case 0:
                 return getRandomCircle();
             case 1:
@@ -25,36 +27,39 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_RADIUS, Colors.WHITE);
+        return new Circle(DEFAULT_RADIUS, Color.WHITE);
     }
 
     public Figure getRandomCircle() {
-        return new Circle(new Random().nextInt(MAX_SIZE),
-                Colors.valueOf(new ColorSupplier().getRandomColor()));
+        int randomSize = random.nextInt(MAX_SIZE);
+        return new Circle(randomSize, randomColor);
     }
 
     public Figure getRandomIsoscelesTrapezoid() {
+        int randomSize1 = random.nextInt(MAX_SIZE);
+        int randomSize2 = random.nextInt(MAX_SIZE);
+        int randomSize3 = random.nextInt(MAX_SIZE);
         return new IsoscelesTrapezoid(
-                new Random().nextInt(MAX_SIZE),
-                new Random().nextInt(MAX_SIZE),
-                new Random().nextInt(MAX_SIZE),
-                Colors.valueOf(new ColorSupplier().getRandomColor()));
+                randomSize1,
+                randomSize2,
+                randomSize3,
+                randomColor);
     }
 
     public Figure getRandomRectangle() {
-        return new Rectangle(new Random().nextInt(MAX_SIZE),
-                new Random().nextInt(MAX_SIZE),
-                Colors.valueOf(new ColorSupplier().getRandomColor()));
+        int randomSize1 = random.nextInt(MAX_SIZE);
+        int randomSize2 = random.nextInt(MAX_SIZE);
+        return new Rectangle(randomSize1, randomSize2, randomColor);
     }
 
     public Figure getRandomRightTriangle() {
-        return new RightTriangle(new Random().nextInt(MAX_SIZE),
-                new Random().nextInt(MAX_SIZE),
-                Colors.valueOf(new ColorSupplier().getRandomColor()));
+        int randomSize1 = random.nextInt(MAX_SIZE);
+        int randomSize2 = random.nextInt(MAX_SIZE);
+        return new RightTriangle(randomSize1, randomSize2, randomColor);
     }
 
     public Figure getRandomSquare() {
-        return new Square(new Random().nextInt(MAX_SIZE),
-                Colors.valueOf(new ColorSupplier().getRandomColor()));
+        int randomSize = random.nextInt(MAX_SIZE);
+        return new Square(randomSize, randomColor);
     }
 }

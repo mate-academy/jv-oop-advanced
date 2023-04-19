@@ -4,8 +4,8 @@ public class Rectangle extends Figure {
     private final int sizeOne;
     private final int sizeTwo;
 
-    public Rectangle(int sizeOne, int sizeTwo, Colors color) {
-        super(sizeOne * sizeTwo, color);
+    public Rectangle(int sizeOne, int sizeTwo, Color color) {
+        super(color);
         this.sizeOne = sizeOne;
         this.sizeTwo = sizeTwo;
     }
@@ -13,7 +13,7 @@ public class Rectangle extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: Rectangle, area: "
-                + getArea()
+                + calculateArea()
                 + " sq.units, first side: "
                 + getSizeOne()
                 + " units, second side: "
@@ -28,5 +28,10 @@ public class Rectangle extends Figure {
 
     public int getSizeTwo() {
         return sizeTwo;
+    }
+
+    @Override
+    public double calculateArea() {
+        return sizeOne * sizeTwo;
     }
 }

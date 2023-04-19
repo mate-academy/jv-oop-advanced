@@ -6,20 +6,17 @@ public class IsoscelesTrapezoid extends Figure {
     private final int bottomSize;
     private final int sideSize;
 
-    public IsoscelesTrapezoid(int topSize, int bottomSize, int sideSize, Colors color) {
-        super(Math.sqrt(Math.pow(topSize + bottomSize, 2)
-                * (topSize - bottomSize + 2 * sideSize)
-                * (bottomSize - topSize + 2 * sideSize)) / 4, color);
+    public IsoscelesTrapezoid(int topSize, int bottomSize, int sideSize, Color color) {
+        super(color);
         this.topSize = topSize;
         this.bottomSize = bottomSize;
         this.sideSize = sideSize;
-
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: Isosceles Trapezoid, area: "
-                + getArea()
+                + calculateArea()
                 + " sq.units, top side: "
                 + getTopSize()
                 + " units, bottom side: "
@@ -40,5 +37,12 @@ public class IsoscelesTrapezoid extends Figure {
 
     public int getSideSize() {
         return sideSize;
+    }
+
+    @Override
+    public double calculateArea() {
+        return Math.sqrt(Math.pow(topSize + bottomSize, 2)
+                * (topSize - bottomSize + 2 * sideSize)
+                * (bottomSize - topSize + 2 * sideSize)) / 4;
     }
 }
