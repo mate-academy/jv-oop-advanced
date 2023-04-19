@@ -3,6 +3,7 @@ package core.basesyntax;
 public class Main {
     private static final int ARRAY_SIZE = 6;
     private static final int ARRAY_HALF = 6 / 2;
+
     public static void main(String[] args) {
         Figure[] figures = new Figure[ARRAY_SIZE];
         FigureSupplier figureSupplier = new FigureSupplier();
