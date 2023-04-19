@@ -12,10 +12,14 @@ public class Rectangle extends Figure {
 
     @Override
     public void printInfo() {
-        setArea(sideA * sideB);
-        System.out.println("Figure: rectangle, area: " + getArea()
+        System.out.println("Figure: rectangle, area: " + areaCalculator()
                 + ", side a: " + sideA
                 + ", side b: " + sideB
                 + ", color: " + getColor());
+    }
+
+    @Override
+    public double areaCalculator() {
+        return sideA * sideB;
     }
 }

@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public interface FigureAreaCalculator {
+public interface FigurePrintInfo {
     void printInfo();
 }

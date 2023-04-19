@@ -1,16 +1,16 @@
 package core.basesyntax;
 
 public class Main {
-    private static final int MAGIC_NUMBER = 6;
+    private static final int ARRAY_LENGTH = 6;
 
     public static void main(String[] args) {
-        Figure[] figuresArray = new Figure[MAGIC_NUMBER];
+        Figure[] figuresArray = new Figure[ARRAY_LENGTH];
         FigureSupplier supplier = new FigureSupplier();
 
-        for (int i = 0; i < 2; i++) {
-            figuresArray[i] = supplier.getRandomFigure();
-        }
-        for (int i = 3; i < 5; i++) {
+        for (int i = 0; i < figuresArray.length; i++) {
+            if (i <= figuresArray.length / 2) {
+                figuresArray[i] = supplier.getRandomFigure();
+            }
             figuresArray[i] = supplier.getDefaultFigure();
         }
         for (Figure figure : figuresArray) {
