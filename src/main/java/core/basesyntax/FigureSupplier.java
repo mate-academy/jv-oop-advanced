@@ -5,8 +5,8 @@ import java.util.Random;
 public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
-    private static final int countOfFigure = 5;
-    private static final int sideSize = 10;
+    private final int countOfFigure = 5;
+    private final int sideSize = 10;
 
     public Figure getRandomFigure() {
         switch (getRandomTypeOfFigure()) {
