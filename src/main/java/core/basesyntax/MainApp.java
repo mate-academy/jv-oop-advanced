@@ -1,26 +1,24 @@
 package core.basesyntax;
 
 public class MainApp {
+    private static final int ARRAY_SIZE = 6;
+
     public static void main(String[] args) {
-        int arraySize = 6;
+        int arraySize = ARRAY_SIZE;
         Figure[] figures = new Figure[arraySize];
         FigureSupplier figureSupplier = new FigureSupplier();
         ColorSupplier colorSupplier = new ColorSupplier();
+        String randomColor = colorSupplier.getRandomColor();
 
-        // Generate the first half of the array with random figures
         for (int i = 0; i < arraySize / 2; i++) {
-            figures[i] = figureSupplier.getRandomFigure(ColorSupplier.getRandomColor());
+            figures[i] = figureSupplier.getRandomFigure(randomColor);
+            figures[i].draw();
         }
 
-        // Generate the second half of the array with the default figure
-        Figure defaultFigure = figureSupplier.getDefaultFigure();
         for (int i = arraySize / 2; i < arraySize; i++) {
+            Figure defaultFigure = figureSupplier.getDefaultFigure();
             figures[i] = defaultFigure;
-        }
-
-        // Display the list of figures
-        for (Figure figure : figures) {
-            figure.draw();
+            figures[i].draw();
         }
     }
 }

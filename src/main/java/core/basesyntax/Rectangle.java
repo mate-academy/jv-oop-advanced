@@ -4,8 +4,6 @@ public class Rectangle extends Figure {
     private double width;
     private double length;
 
-    private String color;
-
     public Rectangle(String color, double width, double length) {
         super(color);
         this.width = width;

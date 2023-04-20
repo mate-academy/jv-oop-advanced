@@ -1,6 +1,8 @@
 package core.basesyntax;
 
-public abstract class Figure implements SquareOfFigure, Information {
+public abstract class Figure implements AreaCalculator, Drawable {
+    private ColorSupplier colorSupplier = new ColorSupplier();
+    private String randomColor = colorSupplier.getRandomColor();
     private String color;
 
     public Figure(String color) {
