@@ -14,21 +14,23 @@ public class FigureSupplier {
         switch (random.nextInt(FIGURES_AMOUNT)) {
             case 0:
                 return new Square(supplier.getRandomColor(),
-                        random.nextDouble(RANDOM_PROPERTIES));
+                        random.nextDouble() * RANDOM_PROPERTIES);
             case 1:
                 return new Circle(supplier.getRandomColor(),
-                        random.nextDouble(RANDOM_PROPERTIES));
+                        random.nextDouble() * RANDOM_PROPERTIES);
             case 2:
                 return new RightTriangle(supplier.getRandomColor(),
-                        random.nextDouble(RANDOM_PROPERTIES), random.nextDouble(RANDOM_PROPERTIES));
+                        random.nextDouble() * RANDOM_PROPERTIES,
+                        random.nextDouble() * RANDOM_PROPERTIES);
             case 3:
                 return new IsoscelesTrapezoid(supplier.getRandomColor(),
-                        random.nextDouble(RANDOM_PROPERTIES),
-                        random.nextDouble(RANDOM_PROPERTIES),
-                        random.nextDouble(RANDOM_PROPERTIES));
+                        random.nextDouble() * RANDOM_PROPERTIES,
+                        random.nextDouble() * RANDOM_PROPERTIES,
+                        random.nextDouble() * RANDOM_PROPERTIES);
             case 4:
                 return new Rectangle(supplier.getRandomColor(),
-                        random.nextDouble(RANDOM_PROPERTIES), random.nextDouble(RANDOM_PROPERTIES));
+                        random.nextDouble() * RANDOM_PROPERTIES,
+                        random.nextDouble() * RANDOM_PROPERTIES);
             default:
                 return getDefaultFigure();
         }
