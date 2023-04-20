@@ -12,18 +12,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.height = height;
     }
 
-    public int getSmallerSide() {
-        return smallerSide;
-    }
-
-    public int getBiggerSide() {
-        return biggerSide;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
     @Override
     public double getArea() {
         return 0.5 * (biggerSide * smallerSide) * height;
@@ -33,9 +21,9 @@ public class IsoscelesTrapezoid extends Figure {
     public void draw() {
         System.out.println("Figure: Isosceles Trapezoid, "
                 + "area: " + getArea()
-                + ", bigger side: " + getBiggerSide()
-                + ", smaller side: " + getSmallerSide()
-                + ", height: " + getHeight()
+                + ", bigger side: " + biggerSide
+                + ", smaller side: " + smallerSide
+                + ", height: " + height
                 + ", color: " + getColor());
     }
 }

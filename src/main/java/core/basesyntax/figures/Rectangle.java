@@ -1,34 +1,26 @@
 package core.basesyntax.figures;
 
 public class Rectangle extends Figure {
-    private final int smallerSide;
-    private final int biggerSide;
+    private final int height;
+    private final int width;
 
-    public Rectangle(String color, int smallerSide, int biggerSide) {
+    public Rectangle(String color, int height, int width) {
         super(color);
-        this.smallerSide = smallerSide;
-        this.biggerSide = biggerSide;
-    }
-
-    public int getSmallerSide() {
-        return smallerSide;
-    }
-
-    public int getBiggerSide() {
-        return biggerSide;
+        this.height = height;
+        this.width = width;
     }
 
     @Override
     public double getArea() {
-        return smallerSide * biggerSide;
+        return height * width;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: Rectangle, "
                 + "area: " + getArea()
-                + ", bigger side: " + getBiggerSide()
-                + ", smaller side: " + getSmallerSide()
+                + ", height: " + height
+                + ", width: " + width
                 + ", color: " + getColor());
     }
 }

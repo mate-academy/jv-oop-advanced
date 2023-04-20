@@ -3,7 +3,7 @@ package core.basesyntax.suppliers.colorsuppliers;
 import core.basesyntax.enums.Color;
 import java.util.Random;
 
-public class RandomColorSupplier {
+public class ColorSupplier {
     protected final Color[] colors = Color.values();
     private final Random random = new Random();
 
