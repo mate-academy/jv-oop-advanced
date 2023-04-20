@@ -10,11 +10,14 @@ public class FigureSupplier extends ColorSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
+    public int getRandomFiguresCount() {
+        return random.nextInt(FIGURES_COUNT);
+    }
+
     public Figure getRandomFigure() {
-        int figureNumber = random.nextInt(FIGURES_COUNT);
         String color = colorSupplier.getRandomColor().toString();
 
-        switch (figureNumber) {
+        switch (getRandomFiguresCount()) {
             case 0:
                 int radius = random.nextInt(MAX_SIDE);
                 return new Circle(color, radius);
