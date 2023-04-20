@@ -3,33 +3,41 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier extends ColorSupplier {
-    public static final int MAX_FIGURE = 3;
+    public static final int FIGURES_COUNT = 5;
     public static final int MAX_SIDE = 20;
+    public static final int MAX_RADIUS = 10;
+    public static final String WHITE_COLOR = "WHITE";
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        int figureNumber = random.nextInt(MAX_FIGURE);
-        int firstNumber = random.nextInt(MAX_SIDE);
-        int secondNumber = random.nextInt(MAX_SIDE);
-        int thirdNumber = random.nextInt(MAX_SIDE);
-        String color = String.valueOf(colorSupplier.getRandomColor());
+        int figureNumber = random.nextInt(FIGURES_COUNT);
+        String color = colorSupplier.getRandomColor().toString();
 
         switch (figureNumber) {
             case 0:
-                return new Circle(color, firstNumber);
+                int radius = random.nextInt(MAX_SIDE);
+                return new Circle(color, radius);
             case 1:
-                return new IsoscelesTrapezoid(color, firstNumber, secondNumber, thirdNumber);
+                int sideA = random.nextInt(MAX_SIDE);
+                int sideB = random.nextInt(MAX_SIDE);
+                int height = random.nextInt(MAX_SIDE);
+                return new IsoscelesTrapezoid(color, sideA, sideB, height);
             case 2:
-                return new Rectangle(color, firstNumber, secondNumber);
+                int width = random.nextInt(MAX_SIDE);
+                height = random.nextInt(MAX_SIDE);
+                return new Rectangle(color, width, height);
             case 3:
-                return new RightTriangle(color, firstNumber, secondNumber);
+                sideA = random.nextInt(MAX_SIDE);
+                sideB = random.nextInt(MAX_SIDE);
+                return new RightTriangle(color, sideA, sideB);
             default:
-                return new Square(color, firstNumber);
+                int side = random.nextInt(MAX_SIDE);
+                return new Square(color, side);
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("WHITE", 10);
+        return new Circle(WHITE_COLOR, MAX_RADIUS);
     }
 }
