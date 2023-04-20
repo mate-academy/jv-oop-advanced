@@ -9,35 +9,32 @@ public class FigureSupplier {
     private static final String DEFAULT_CIRCLE_COLOR = Color.WHITE.name();
     private final Random random = new Random();
     private final ColorSupplier supplier = new ColorSupplier();
-    private Figure figure;
 
     public Figure getRandomFigure() {
         switch (random.nextInt(FIGURES_AMOUNT)) {
             case 0:
-                figure = new Square(supplier.getRandomColor(), RANDOM_PROPERTIES);
-                break;
+                return new Square(supplier.getRandomColor(),
+                        random.nextDouble(RANDOM_PROPERTIES));
             case 1:
-                figure = new Circle(supplier.getRandomColor(), RANDOM_PROPERTIES);
-                break;
+                return new Circle(supplier.getRandomColor(),
+                        random.nextDouble(RANDOM_PROPERTIES));
             case 2:
-                figure = new RightTriangle(supplier.getRandomColor(),
-                        RANDOM_PROPERTIES, RANDOM_PROPERTIES);
-                break;
+                return new RightTriangle(supplier.getRandomColor(),
+                        random.nextDouble(RANDOM_PROPERTIES), random.nextDouble(RANDOM_PROPERTIES));
             case 3:
-                figure = new IsoscelesTrapezoid(supplier.getRandomColor(), RANDOM_PROPERTIES,
-                        RANDOM_PROPERTIES, RANDOM_PROPERTIES);
-                break;
+                return new IsoscelesTrapezoid(supplier.getRandomColor(),
+                        random.nextDouble(RANDOM_PROPERTIES),
+                        random.nextDouble(RANDOM_PROPERTIES),
+                        random.nextDouble(RANDOM_PROPERTIES));
             case 4:
-                figure = new Rectangle(supplier.getRandomColor(), RANDOM_PROPERTIES,
-                        RANDOM_PROPERTIES);
-                break;
+                return new Rectangle(supplier.getRandomColor(),
+                        random.nextDouble(RANDOM_PROPERTIES), random.nextDouble(RANDOM_PROPERTIES));
             default:
-                break;
+                return getDefaultFigure();
         }
-        return figure;
     }
 
     public Figure getDefaultFigure() {
-        return figure = new Circle(DEFAULT_CIRCLE_COLOR, DEFAULT_CIRCLE_RADIUS);
+        return new Circle(DEFAULT_CIRCLE_COLOR, DEFAULT_CIRCLE_RADIUS);
     }
 }

@@ -10,8 +10,9 @@ public class Main {
         for (int i = 0; i < figuresArray.length; i++) {
             if (i <= figuresArray.length / 2) {
                 figuresArray[i] = supplier.getRandomFigure();
+            } else {
+                figuresArray[i] = supplier.getDefaultFigure();
             }
-            figuresArray[i] = supplier.getDefaultFigure();
         }
         for (Figure figure : figuresArray) {
             figure.printInfo();
