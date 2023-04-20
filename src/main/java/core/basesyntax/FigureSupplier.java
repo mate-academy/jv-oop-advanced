@@ -6,18 +6,16 @@ public class FigureSupplier extends ColorSupplier {
     public static final int FIGURES_COUNT = 5;
     public static final int MAX_SIDE = 20;
     public static final int MAX_RADIUS = 10;
-    public static final String WHITE_COLOR = "WHITE";
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
-    public int getRandomFiguresCount() {
+    public int getRandomFiguresTypeNumber() {
         return random.nextInt(FIGURES_COUNT);
     }
 
     public Figure getRandomFigure() {
-        String color = colorSupplier.getRandomColor().toString();
-
-        switch (getRandomFiguresCount()) {
+        String color = colorSupplier.getRandomColor().name();
+        switch (getRandomFiguresTypeNumber()) {
             case 0:
                 int radius = random.nextInt(MAX_SIDE);
                 return new Circle(color, radius);
@@ -41,6 +39,6 @@ public class FigureSupplier extends ColorSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(WHITE_COLOR, MAX_RADIUS);
+        return new Circle(Color.WHITE.name(), MAX_RADIUS);
     }
 }
