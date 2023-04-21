@@ -19,7 +19,6 @@ public class Figure implements Drawable, Calculate {
     }
 
     public double getArea() {
-        // метод расчета площади фигуры
         return 0.0;
     }
 

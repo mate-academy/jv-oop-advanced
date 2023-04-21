@@ -4,30 +4,36 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static Random random = new Random();
-
+    public static final double DEFAULT_MAX = 10.0;
     public static Figure getRandomFigure() {
         int type = random.nextInt(5);
-        String color = ColorSupplier.getRandomColor();
-        double parameter1 = random.nextDouble() * 10 + 1;
-        double parameter2 = random.nextDouble() * 10 + 1;
+        String color = String.valueOf(ColorSupplier.getRandomColor());
+        double parameter1 = random.nextDouble() * DEFAULT_MAX + 1;
+        double parameter2 = random.nextDouble() * DEFAULT_MAX + 1;
         switch (type) {
             case 0:
-                return new Square(color, parameter1);
+                return new Square(color,getRandomParameter(DEFAULT_MAX));
             case 1:
-                return new Rectangle(color, parameter1, parameter2);
+                return new Rectangle(color, getRandomParameter(DEFAULT_MAX), (DEFAULT_MAX));
             case 2:
-                return new RightTriangle(color, parameter1, parameter2);
+                return new RightTriangle(color, getRandomParameter(DEFAULT_MAX), (DEFAULT_MAX));
             case 3:
-                return (Figure) new Circle(color, parameter1);
+                return new Circle(color,getRandomParameter (DEFAULT_MAX));
             case 4:
-                return new IsoscelesTrapezoid(color, parameter1, parameter2,
-                        parameter2 + random.nextDouble() * 10 + 1);
+                return new IsoscelesTrapezoid(color, getRandomParameter(DEFAULT_MAX),
+                        getRandomParameter  (DEFAULT_MAX),getRandomParameter (DEFAULT_MAX));
             default:
                 throw new RuntimeException("Unknown figure type");
         }
     }
 
-    public static Figure getDefaultFigure() {
-        return (Figure) new Circle("white", 10);
+    private static double getRandomParameter(double defaultMax) {
+        return defaultMax;
     }
-}
+
+    public static final int DEFAULT_RADIUS = 10;
+    public static final String DEFAULT_COLOR = Color.WHITE.name();
+
+    public static Figure getDefaultFigure() {
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
+    }}
