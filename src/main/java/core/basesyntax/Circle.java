@@ -1,11 +1,10 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private String color;
     private double radius;
 
     public Circle(String color, double radius) {
-        this.color = color;
+        super(color);
         this.radius = radius;
     }
 
@@ -14,6 +13,8 @@ public class Circle extends Figure {
     }
 
     public void draw() {
-        System.out.println("Circle: color=" + color + ", radius=" + radius + ", area=" + getArea());
+        System.out.println("Circle: radius=" + radius
+                + ", area=" + getArea()
+                + ", and color=" + this.getColor());
     }
 }

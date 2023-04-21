@@ -23,7 +23,6 @@ public class Figure implements Drawable, Calculate {
     }
 
     public void draw() {
-        // метод отображения информации о фигуре
         System.out.println("Figure: " + this.getClass().getSimpleName() + ", color: " + color);
     }
 }
