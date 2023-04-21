@@ -3,15 +3,17 @@ package core.basesyntax;
 import java.util.Random;
 
 class FigureSupplier {
-    private static final int ARRAY_SIZE = 6;
-    private static final double MAX_SIZE = 10.0;
-    private static final Random RANDOM = new Random();
-    private static double size = RANDOM.nextDouble() * MAX_SIZE + 1;
-    private static final String DEFAULT_COLOR = "WHITE";
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
     private static final double DEFAULT_SIZE = 10.0;
+    private static final double MAX_SIZE = 10.0;
+    private ColorSupplier colorSupplier = new ColorSupplier();
+    private String randomColor = colorSupplier.getRandomColor();
+    private Random random = new Random();
 
-    public static Figure getRandomFigure(String randomColor) {
-        switch (RANDOM.nextInt(5)) {
+    public Figure getRandomFigure() {
+        String randomColor = colorSupplier.getRandomColor();
+        double size = random.nextDouble() * MAX_SIZE + 1;
+        switch (random.nextInt(5)) {
             case 0:
                 return new Square(randomColor, size);
             case 1:

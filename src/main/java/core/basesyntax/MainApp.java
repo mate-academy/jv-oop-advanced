@@ -4,18 +4,13 @@ public class MainApp {
     private static final int ARRAY_SIZE = 6;
 
     public static void main(String[] args) {
-        int arraySize = ARRAY_SIZE;
-        Figure[] figures = new Figure[arraySize];
+        Figure[] figures = new Figure[ARRAY_SIZE];
         FigureSupplier figureSupplier = new FigureSupplier();
-        ColorSupplier colorSupplier = new ColorSupplier();
-        String randomColor = colorSupplier.getRandomColor();
-
-        for (int i = 0; i < arraySize / 2; i++) {
-            figures[i] = figureSupplier.getRandomFigure(randomColor);
+        for (int i = 0; i < ARRAY_SIZE / 2; i++) {
+            figures[i] = figureSupplier.getRandomFigure();
             figures[i].draw();
         }
-
-        for (int i = arraySize / 2; i < arraySize; i++) {
+        for (int i = ARRAY_SIZE / 2; i < ARRAY_SIZE; i++) {
             Figure defaultFigure = figureSupplier.getDefaultFigure();
             figures[i] = defaultFigure;
             figures[i].draw();
