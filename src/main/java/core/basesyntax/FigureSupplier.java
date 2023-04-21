@@ -3,8 +3,11 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static Random random = new Random();
     public static final double DEFAULT_MAX = 10.0;
+    public static final int DEFAULT_RADIUS = 10;
+    public static final String DEFAULT_COLOR = Color.WHITE.name();
+    private static Random random = new Random();
+
     public static Figure getRandomFigure() {
         int type = random.nextInt(5);
         String color = String.valueOf(ColorSupplier.getRandomColor());
@@ -18,10 +21,10 @@ public class FigureSupplier {
             case 2:
                 return new RightTriangle(color, getRandomParameter(DEFAULT_MAX), (DEFAULT_MAX));
             case 3:
-                return new Circle(color,getRandomParameter (DEFAULT_MAX));
+                return new Circle(color,getRandomParameter(DEFAULT_MAX));
             case 4:
                 return new IsoscelesTrapezoid(color, getRandomParameter(DEFAULT_MAX),
-                        getRandomParameter  (DEFAULT_MAX),getRandomParameter (DEFAULT_MAX));
+                        getRandomParameter(DEFAULT_MAX),getRandomParameter(DEFAULT_MAX));
             default:
                 throw new RuntimeException("Unknown figure type");
         }
@@ -31,9 +34,7 @@ public class FigureSupplier {
         return defaultMax;
     }
 
-    public static final int DEFAULT_RADIUS = 10;
-    public static final String DEFAULT_COLOR = Color.WHITE.name();
-
     public static Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
-    }}
+    }
+}
