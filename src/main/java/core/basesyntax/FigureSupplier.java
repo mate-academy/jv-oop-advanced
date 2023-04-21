@@ -5,11 +5,11 @@ import java.util.Random;
 public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
-    private final int countOfFigure = 5;
-    private final int sideSize = 10;
+    private static final int FIGURES_COUNT = 5;
+    private static final int DEFAULT_SIDE = 10;
 
-    public Figure getRandomFigure() {
-        switch (getRandomTypeOfFigure()) {
+    public Figure getFigure() {
+        switch (getRandomFigure()) {
             case 0:
                 return createCircle();
             case 1:
@@ -19,38 +19,42 @@ public class FigureSupplier {
             case 3:
                 return createRightTriangle();
             default:
-                return createIsoscelesTrapezoid();
+                return getDefaultFigure();
         }
     }
 
-    private int getRandomTypeOfFigure() {
-        return random.nextInt(countOfFigure);
+    public Figure getDefaultFigure() {
+        return createIsoscelesTrapezoid();
+    }
+
+    private int getRandomFigure() {
+        return random.nextInt(FIGURES_COUNT);
     }
 
     private Circle createCircle() {
-        return new Circle(colorSupplier.getRandomColor(), random.nextInt(sideSize));
+        return new Circle(colorSupplier.getRandomColor(), random.nextInt(DEFAULT_SIDE));
     }
 
     private Square createSquare() {
-        return new Square(colorSupplier.getRandomColor(), random.nextInt(sideSize));
+        return new Square(colorSupplier.getRandomColor(), random.nextInt(DEFAULT_SIDE));
     }
 
     private Rectangle createRectangle() {
         return new Rectangle(colorSupplier.getRandomColor(),
-                random.nextInt(sideSize),
-                random.nextInt(sideSize));
+                random.nextInt(DEFAULT_SIDE),
+                random.nextInt(DEFAULT_SIDE));
     }
 
     private RightTriangle createRightTriangle() {
         return new RightTriangle(colorSupplier.getRandomColor(),
-                random.nextInt(sideSize),
-                random.nextInt(sideSize));
+                random.nextInt(DEFAULT_SIDE),
+                random.nextInt(DEFAULT_SIDE));
     }
 
     private IsoscelesTrapezoid createIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                random.nextInt(sideSize),
-                random.nextInt(sideSize),
-                random.nextInt(sideSize));
+                random.nextInt(DEFAULT_SIDE),
+                random.nextInt(DEFAULT_SIDE),
+                random.nextInt(DEFAULT_SIDE));
     }
 }
