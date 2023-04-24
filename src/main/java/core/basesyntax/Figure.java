@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements IArea, IDraw{
+public abstract class Figure implements IArea, IDraw {
     private final String color;
 
     public Figure(String color) {

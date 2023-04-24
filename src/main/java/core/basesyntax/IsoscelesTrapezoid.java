@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure{
+public class IsoscelesTrapezoid extends Figure {
     private final int upperBase;
     private final int lowerBase;
     private final int rib;
@@ -26,8 +26,8 @@ public class IsoscelesTrapezoid extends Figure{
 
     @Override
     public double getArea() {
-        return 0.5 * (upperBase + lowerBase) *
-                Math.pow((rib * rib - Math.pow(0.5 * (lowerBase - upperBase),2)), 0.5);
+        return 0.5 * (upperBase + lowerBase)
+                * Math.pow((rib * rib - Math.pow(0.5 * (lowerBase - upperBase),2)), 0.5);
     }
 
     @Override
