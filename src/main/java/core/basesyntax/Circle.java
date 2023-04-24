@@ -5,7 +5,7 @@ public class Circle extends Figure {
 
     public Circle(Color color, int radius) {
         this.radius = radius;
-        setColor(Color.valueOf(String.valueOf(color)));
+        setColor(color);
     }
 
     @Override
