@@ -7,7 +7,7 @@ public class Rectangle extends Figure {
     public Rectangle(Color color, int length, int width) {
         this.width = width;
         this.length = length;
-        setColor(Color.valueOf(String.valueOf(color)));
+        setColor(color);
     }
 
     @Override
