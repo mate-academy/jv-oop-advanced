@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Figure implements Area, Draw {
-    private String color;
+    private final String color;
 
     public Figure(String color) {
         this.color = color;
@@ -9,10 +9,6 @@ public class Figure implements Area, Draw {
 
     public String getColor() {
         return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
     }
 
     @Override

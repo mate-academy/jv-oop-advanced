@@ -6,9 +6,12 @@ public class FigureSupplier {
     private static final ColorSupplier COLOR_SUPPLIER = new ColorSupplier();
     private static final Random RANDOM = new Random();
     private static final double RANDOM_PARAMETRS = RANDOM.nextInt(100);
+    private static final int FIGURE_COUNT = 5;
+    private static final int CIRCLE_RADIUS = 10;
+    private static final String CIRCLE_COLOR = "white";
 
     public Figure getRandomFigure() {
-        int value = RANDOM.nextInt(5);
+        int value = RANDOM.nextInt(FIGURE_COUNT);
         switch (value) {
             case 0:
                 return new Square(COLOR_SUPPLIER.getRandomColor(), RANDOM_PARAMETRS);
@@ -29,6 +32,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", 10);
+        return new Circle(CIRCLE_COLOR, CIRCLE_RADIUS);
     }
 }
