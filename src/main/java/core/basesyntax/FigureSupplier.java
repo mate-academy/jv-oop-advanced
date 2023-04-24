@@ -3,35 +3,32 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final ColorSupplier COLOR_SUPPLIER = new ColorSupplier();
-    private static final Random RANDOM = new Random();
-    private static final double RANDOM_PARAMETRS = RANDOM.nextInt(100);
     private static final int FIGURE_COUNT = 5;
     private static final int CIRCLE_RADIUS = 10;
-    private static final String CIRCLE_COLOR = "white";
+    private static final int MAX_RANDOM = 100;
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        int value = RANDOM.nextInt(FIGURE_COUNT);
+        String color = colorSupplier.getRandomColor().name();
+        double randomParameter = random.nextInt(MAX_RANDOM);
+        int value = random.nextInt(FIGURE_COUNT);
         switch (value) {
             case 0:
-                return new Square(COLOR_SUPPLIER.getRandomColor(), RANDOM_PARAMETRS);
+                return new Square(color, randomParameter);
             case 1:
-                return new Rectangle(COLOR_SUPPLIER.getRandomColor(),
-                        RANDOM_PARAMETRS, RANDOM_PARAMETRS);
+                return new Rectangle(color, randomParameter, randomParameter);
             case 2:
-                return new RightTriangle(COLOR_SUPPLIER.getRandomColor(),
-                        RANDOM_PARAMETRS, RANDOM_PARAMETRS);
+                return new RightTriangle(color, randomParameter, randomParameter);
             case 3:
-                return new Circle(COLOR_SUPPLIER.getRandomColor(), RANDOM_PARAMETRS);
+                return new Circle(color, randomParameter);
             default:
-                return new IsoscelesTrapezoid(COLOR_SUPPLIER.getRandomColor(),
-                        RANDOM_PARAMETRS,
-                        RANDOM_PARAMETRS,
-                        RANDOM_PARAMETRS);
+                return new IsoscelesTrapezoid(color, randomParameter,
+                        randomParameter, randomParameter);
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(CIRCLE_COLOR, CIRCLE_RADIUS);
+        return new Circle(Color.WHITE.name(), CIRCLE_RADIUS);
     }
 }
