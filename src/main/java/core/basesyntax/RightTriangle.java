@@ -7,7 +7,7 @@ public class RightTriangle extends Figure {
     public RightTriangle(Color color, int height, int hypotenuse) {
         this.height = height;
         this.hypotenuse = hypotenuse;
-        setColor(Color.valueOf(String.valueOf(color)));
+        setColor(color);
     }
 
     @Override
