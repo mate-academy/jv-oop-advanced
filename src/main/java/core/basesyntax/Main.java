@@ -1,12 +1,15 @@
 package core.basesyntax;
 
 import core.basesyntax.figures.Figure;
-import core.basesyntax.figures.Square;
+import core.basesyntax.suppliers.FigureSupplier;
 
 public class Main {
     public static void main(String[] args) {
-        Square square = new Square(25);
-        square.draw();
-
+        FigureSupplier randFigure = new FigureSupplier();
+        Figure[] figures = new Figure[6];
+        for (int i = 0; i < figures.length; i++) {
+            figures[i] = randFigure.getRandomFigure();
+            figures[i].draw();
+        }
     }
 }

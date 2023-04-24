@@ -2,21 +2,21 @@ package core.basesyntax.figures;
 
 import core.basesyntax.enums.Color;
 
-public class Square extends Figure implements Drawable, AreaCalculator {
-    private int side;
+public class Circle extends Figure implements Drawable, AreaCalculator {
+    private int radius;
 
-    public Square(Color color, int side) {
+    public Circle(Color color, int radius) {
         super(color);
-        this.side = side;
+        this.radius = radius;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: SQUARE, area: "
+        System.out.println("Figure: CIRCLE, area: "
                 + getArea()
                 + " sq.units, "
-                + "side A: "
-                + side
+                + "radius: "
+                + radius
                 + " units,"
                 + " color: "
                 + getColor());
@@ -24,6 +24,6 @@ public class Square extends Figure implements Drawable, AreaCalculator {
 
     @Override
     public double getArea() {
-        return side * side;
+        return Math.ceil(Math.PI * radius * radius);
     }
 }
