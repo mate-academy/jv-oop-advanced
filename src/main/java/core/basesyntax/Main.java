@@ -11,9 +11,12 @@ public class Main {
             } else {
                 figures[i] = FigureSupplier.getDefaultFigure();
             }
-        }
-        for (Figure figure : figures) {
-            figure.draw();
+            for (Figure figure : figures) {
+                if (figure != null) {
+                    figure.draw();
+                }
+            }
         }
     }
 }
+

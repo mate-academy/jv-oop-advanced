@@ -19,14 +19,14 @@ public class FigureSupplier {
             case 0:
                 return new Square(color,DEFAULT_MAX);
             case 1:
-                return new Rectangle(color,DEFAULT_MAX, DEFAULT_MAX);
+                return new Rectangle(color, DEFAULT_MAX, DEFAULT_MAX);
             case 2:
                 return new RightTriangle(color,DEFAULT_MAX, DEFAULT_MAX);
             case 3:
-                return new Circle(color,DEFAULT_MAX);
+                return new Circle(color, DEFAULT_MAX);
             case 4:
-                return new IsoscelesTrapezoid(color,DEFAULT_MAX,
-                       DEFAULT_MAX,DEFAULT_MAX);
+                return new IsoscelesTrapezoid(color, DEFAULT_MAX,
+                       DEFAULT_MAX, DEFAULT_MAX);
             default:
                 throw new RuntimeException("Unknown figure type");
         }
