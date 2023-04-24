@@ -8,11 +8,11 @@ public class Rectangle extends Figure {
         super.setColor(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
-        super.setArea(getArea());
+        super.setArea(calculateArea());
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return firstSide * secondSide;
     }
 
@@ -22,6 +22,6 @@ public class Rectangle extends Figure {
                         + "area: %.1f sq. units, "
                         + "firstSide: %.1f sq. units, secondSide: %.1f sq. units,"
                         + " color: %s\n",
-                getArea(), firstSide, secondSide, getColor());
+                calculateArea(), firstSide, secondSide, getColor());
     }
 }

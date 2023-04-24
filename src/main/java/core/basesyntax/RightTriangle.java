@@ -8,11 +8,11 @@ public class RightTriangle extends Figure {
         super.setColor(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        super.setArea(getArea());
+        super.setArea(calculateArea());
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return (firstLeg * secondLeg) / 2;
     }
 
@@ -23,6 +23,6 @@ public class RightTriangle extends Figure {
                         + " firstLeg: %.1f sq. units,"
                         + " secondLeg: %.1f sq. units"
                         + " color: %s\n",
-                getArea(), firstLeg, secondLeg, getColor());
+                calculateArea(), firstLeg, secondLeg, getColor());
     }
 }

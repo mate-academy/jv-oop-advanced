@@ -10,11 +10,11 @@ public class IsoscelesTrapezoid extends Figure {
         this.height = height;
         this.firstBase = firstBase;
         this.secondBase = secondBase;
-        super.setArea(getArea());
+        super.setArea(calculateArea());
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return ((firstBase + secondBase) / 2) * height;
     }
 
@@ -26,6 +26,6 @@ public class IsoscelesTrapezoid extends Figure {
                         + " firstParallel: %.1f sq. units,"
                         + " secondParallel: %.1f sq. units,"
                         + " color: %s\n",
-                getArea(), height, firstBase, secondBase, getColor());
+                calculateArea(), height, firstBase, secondBase, getColor());
     }
 }

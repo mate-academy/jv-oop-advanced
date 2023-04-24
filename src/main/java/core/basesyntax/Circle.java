@@ -6,11 +6,11 @@ public class Circle extends Figure {
     public Circle(String color, double radius) {
         super.setColor(color);
         this.radius = radius;
-        super.setArea(getArea());
+        super.setArea(calculateArea());
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return Math.PI * radius * radius;
     }
 
@@ -20,6 +20,6 @@ public class Circle extends Figure {
                         + " area: %.1f sq. units,"
                         + " radius: %.1f sq. units,"
                         + " color: %s\n",
-                getArea(), radius, getColor());
+                calculateArea(), radius, getColor());
     }
 }

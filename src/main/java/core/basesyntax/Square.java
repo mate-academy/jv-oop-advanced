@@ -6,11 +6,11 @@ public class Square extends Figure {
     public Square(String color, double side) {
         super.setColor(color);
         this.side = side;
-        super.setArea(getArea());
+        super.setArea(calculateArea());
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return side * side;
     }
 
@@ -20,6 +20,6 @@ public class Square extends Figure {
                         + " area: %.1f sq. units,"
                         + " side: %.1f sq. units,"
                         + " color: %s\n",
-                getArea(), side, getColor());
+                calculateArea(), side, getColor());
     }
 }
