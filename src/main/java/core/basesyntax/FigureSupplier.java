@@ -3,53 +3,52 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    Figure getRandomFigureName() {
-        final int maxSize = 20;
-        final int minSize = 5;
-        Figure figure = new Figure();
-        figure.setColor(new ColorSupplier().getRandomColor());
-        int index = new Random().nextInt(Forms.values().length);
-        String value = Forms.values()[index].toString();
-        figure.setName(value);
-        switch (figure.getName()) {
+    protected Figure getRandomFigureName() {
+        int maxSize = 20;
+        int minSize = 5;
+        ColorSupplier colorSupplier = new ColorSupplier();
+        Random random = new Random();
+        int index = random.nextInt(Forms.values().length);
+        String value = Forms.values()[index].getForm();
+        switch (value) {
             case "CIRCLE":
-                int radius = new Random().nextInt(maxSize) + minSize;
+                int radius = random.nextInt(maxSize) + minSize;
                 Figure circle = new Circle(radius);
-                circle.setColor(figure.getColor());
+                circle.setColor(colorSupplier.getRandomColor());
                 circle.getArea();
-                circle.getDraw();
-                return figure;
+                circle.draw();
+                return circle;
             case "RECTANGLE":
-                int widht = new Random().nextInt(maxSize) + minSize;
-                int height = new Random().nextInt(maxSize) + minSize;
+                int widht = random.nextInt(maxSize) + minSize;
+                int height = random.nextInt(maxSize) + minSize;
                 Figure rectangle = new Rectangle(widht, height);
-                rectangle.setColor(figure.getColor());
+                rectangle.setColor(colorSupplier.getRandomColor());
                 rectangle.getArea();
-                rectangle.getDraw();
+                rectangle.draw();
                 return rectangle;
             case "SQUARE":
-                int side = new Random().nextInt(maxSize) + minSize;
+                int side = random.nextInt(maxSize) + minSize;
                 Figure square = new Square(side);
-                square.setColor(figure.getColor());
+                square.setColor(colorSupplier.getRandomColor());
                 square.getArea();
-                square.getDraw();
+                square.draw();
                 return square;
             case "TRIANGLE":
-                int firstLeg = new Random().nextInt(maxSize) + minSize;
-                int secondLeg = new Random().nextInt(maxSize) + minSize;
+                int firstLeg = random.nextInt(maxSize) + minSize;
+                int secondLeg = random.nextInt(maxSize) + minSize;
                 Figure rightTriangle = new RightTriangle(firstLeg, secondLeg);
-                rightTriangle.setColor(figure.getColor());
+                rightTriangle.setColor(colorSupplier.getRandomColor());
                 rightTriangle.getArea();
-                rightTriangle.getDraw();
+                rightTriangle.draw();
                 return rightTriangle;
             case "TRAPEZOID" :
-                int basisDown = new Random().nextInt(maxSize) + minSize;
-                int basisUp = new Random().nextInt(basisDown - 1) + basisDown - 2;
-                int height1 = new Random().nextInt(maxSize) + minSize;
+                int basisDown = random.nextInt(maxSize) + minSize;
+                int basisUp = random.nextInt(basisDown - 1) + basisDown - 2;
+                int height1 = random.nextInt(maxSize) + minSize;
                 Figure isoscelesTrapezoid = new IsoscelesTrapezoid(basisDown, basisUp, height1);
-                isoscelesTrapezoid.setColor(figure.getColor());
+                isoscelesTrapezoid.setColor(colorSupplier.getRandomColor());
                 isoscelesTrapezoid.getArea();
-                isoscelesTrapezoid.getDraw();
+                isoscelesTrapezoid.draw();
                 return isoscelesTrapezoid;
             default:
                 return null;
@@ -57,25 +56,13 @@ public class FigureSupplier {
 
     }
 
-    Figure getDefaultFigure() {
-        Figure figure = new Figure();
-        Figure circle = new Circle(10);
-        circle.setColor("WHITE");
+    protected Figure getDefaultFigure() {
+        int defaultSize = 10;
+        String defaultColor = "WHITE";
+        Figure circle = new Circle(defaultSize);
+        circle.setColor(defaultColor);
         circle.getArea();
-        circle.getDraw();
+        circle.draw();
         return circle;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
