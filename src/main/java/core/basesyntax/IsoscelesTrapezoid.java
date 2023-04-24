@@ -9,7 +9,7 @@ public class IsoscelesTrapezoid extends Figure {
         this.bottomBase = bottomBase;
         this.height = height;
         this.topBase = topBase;
-        setColor(Color.valueOf(String.valueOf(color)));
+        setColor(color);
     }
 
     @Override
