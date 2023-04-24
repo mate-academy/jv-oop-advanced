@@ -6,8 +6,8 @@ public class RightTriangle extends Figure {
     private final double secondLeg;
 
     public RightTriangle(String color, double firstLeg, double secondLeg) {
+        super(color);
         name = "right triangle";
-        setColor(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
@@ -21,6 +21,6 @@ public class RightTriangle extends Figure {
     public void draw() {
         System.out.println(String.format("Figure: %s, area: %.3f sq.units, first leg: "
                         + "%s units, second leg: %s units, color: %s",
-                name, getArea(), firstLeg, secondLeg, getColor()));
+                name, getArea(), firstLeg, secondLeg, color));
     }
 }

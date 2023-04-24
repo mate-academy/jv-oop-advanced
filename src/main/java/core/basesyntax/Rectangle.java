@@ -6,8 +6,8 @@ public class Rectangle extends Figure {
     private final double height;
 
     public Rectangle(String color, double width, double height) {
+        super(color);
         name = "rectangle";
-        setColor(color);
         this.width = width;
         this.height = height;
     }
@@ -21,7 +21,7 @@ public class Rectangle extends Figure {
     public void draw() {
         System.out.println(String.format("Figure: %s, area: %.3f sq.units, widht: %s "
                         + "units, height: %s units, color: %s",
-                name, getArea(), width, height, getColor()));
+                name, getArea(), width, height, color));
     }
 
 }
