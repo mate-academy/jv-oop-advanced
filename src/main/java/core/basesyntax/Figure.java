@@ -10,6 +10,4 @@ public abstract class Figure implements Drawable, AreaCalculator {
     public String getColor() {
         return color;
     }
-
-    abstract String printFigureType();
 }

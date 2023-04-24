@@ -4,27 +4,21 @@ public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
-    RightTriangle(String color, double randomFirstLeg, double randomSecondLeg) {
+    RightTriangle(String color, double firstLeg, double secondLeg) {
         super(color);
-        this.firstLeg = randomFirstLeg;
-        this.secondLeg = randomSecondLeg;
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
     }
 
     @Override
-    String printFigureType() {
-        return "Figure: triangle";
-    }
-
-    @Override
-    public double printArea() {
+    public double calculateArea() {
         return (firstLeg * secondLeg) * 0.5;
     }
 
     @Override
     public void draw() {
-        System.out.println(printFigureType()
-                + " area: "
-                + printArea()
+        System.out.println("Figure: triangle, area: "
+                + calculateArea()
                 + " sq.units, firstLeg: "
                 + firstLeg
                 + " units, secondLeg: "

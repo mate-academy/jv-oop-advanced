@@ -1,34 +1,28 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private double randomSide1;
-    private double randomSide2;
+    private double width;
+    private double height;
 
-    Rectangle(String color, double randomSide1, double randomSide2) {
+    Rectangle(String color, double width, double height) {
         super(color);
-        this.randomSide1 = randomSide1;
-        this.randomSide2 = randomSide2;
+        this.width = width;
+        this.width = height;
     }
 
     @Override
-    String printFigureType() {
-        return "Figure: rectangle";
-    }
-
-    @Override
-    public double printArea() {
-        return randomSide1 * randomSide2;
+    public double calculateArea() {
+        return width * height;
     }
 
     @Override
     public void draw() {
-        System.out.println(printFigureType()
-                + " area: "
-                + printArea()
-                + " sq.units, firstSide: "
-                + randomSide1
-                + " units, secondSide: "
-                + randomSide2
+        System.out.println("Figure: rectangle, area: "
+                + calculateArea()
+                + " sq.units, width: "
+                + width
+                + " units, height: "
+                + height
                 + " units, color: "
                 + getColor());
     }

@@ -1,38 +1,32 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private double randomUpperBase;
-    private double randomLowerBase;
-    private double randomHeight;
+    private double upperBase;
+    private double lowerBase;
+    private double height;
 
-    IsoscelesTrapezoid(String color, double randomBase, double randomHeight) {
+    public IsoscelesTrapezoid(String color, double base, double height) {
         super(color);
-        randomUpperBase = randomBase;
-        randomLowerBase = randomBase;
-        this.randomHeight = randomHeight;
+        upperBase = base;
+        lowerBase = base;
+        this.height = height;
     }
 
     @Override
-    String printFigureType() {
-        return "Figure: trapezoid";
-    }
-
-    @Override
-    public double printArea() {
-        return (randomLowerBase + randomUpperBase) * randomHeight / 2;
+    public double calculateArea() {
+        return (lowerBase + upperBase) * height / 2;
     }
 
     @Override
     public void draw() {
-        System.out.println(printFigureType()
-                + ", area: "
-                + printArea()
+        System.out.println("Figure: trapezoid, area: "
+                + calculateArea()
                 + " sq.units, upperBase: "
-                + randomUpperBase
+                + upperBase
                 + " units, lowerBase: "
-                + randomLowerBase
+                + lowerBase
                 + " units, height: "
-                + randomHeight
+                + height
                 + ", color: "
                 + getColor());
     }
