@@ -15,7 +15,7 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        String color = colorSupplier.getRandomColor().name();
+        Color color = Color.valueOf(colorSupplier.getRandomColor().name());
         switch (random.nextInt(FIGURES_COUNT)) {
             case 0:
                 int side = random.nextInt(MAX_VALUE);
@@ -40,6 +40,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.name(), MAX_RADIUS);
+        return new Circle(Color.WHITE, MAX_RADIUS);
     }
 }
