@@ -8,10 +8,10 @@ public class FigureSupplier {
     private static final int DEFAULT_RADIUS = 10;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final String color = colorSupplier.getRandomColor();
 
     public Figure getRandomFigure() {
         int number = random.nextInt(NUMBER_OF_FIGURE);
+        String color = colorSupplier.getRandomColor();
         switch (number) {
             case 0:
                 Circle circle = new Circle();
