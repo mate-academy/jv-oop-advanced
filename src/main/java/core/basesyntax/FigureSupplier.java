@@ -6,14 +6,12 @@ import java.util.Random;
 public class FigureSupplier {
     private static final double DEFAULT_RADIUS = 10;
     private static final int MAX_NUMBER = 50;
+    private static final int MAX_NUMBER_OF_FIGURE = 4;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
-    private final Class[] figure = {Circle.class, Square.class, RightTriangle.class,
-            Rectangle.class, IsoscelesTrapezoid.class};
 
     public Figure getRandomFigure() {
-        int figureIndex = random.nextInt(figure.length);
-        switch (figureIndex) {
+        switch (random.nextInt(MAX_NUMBER_OF_FIGURE)) {
             case 0:
                 return generateNewCircle();
             case 1:

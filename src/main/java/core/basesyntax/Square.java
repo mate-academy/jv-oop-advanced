@@ -14,11 +14,6 @@ public class Square extends Figure {
     }
 
     @Override
-    public void displayProperty() {
-
-    }
-
-    @Override
     public void draw() {
         System.out.println("Figure: square, color: " + super.getColor()
                 + ", side size:" + sideLength + ", area: " + calculateArea());
