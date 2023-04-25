@@ -11,6 +11,6 @@ public class ColorSupplier {
 
     public String getRandomColor() {
         int randomColorIndex = random.nextInt(Colors.values().length);
-        return Colors.values()[randomColorIndex].getValue();
+        return Colors.values()[randomColorIndex].name().toLowerCase();
     }
 }
