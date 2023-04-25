@@ -1,12 +1,10 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private final double radius;
+    private double radius;
 
-    public Circle(String color, double radius) {
-        super.setColor(color);
+    public void setRadius(double radius) {
         this.radius = radius;
-        super.setArea(calculateArea());
     }
 
     @Override

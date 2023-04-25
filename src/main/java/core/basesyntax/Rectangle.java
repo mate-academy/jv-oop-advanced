@@ -1,14 +1,15 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private final double firstSide;
-    private final double secondSide;
+    private double firstSide;
+    private double secondSide;
 
-    public Rectangle(String color, double firstSide, double secondSide) {
-        super.setColor(color);
+    public void setFirstSide(double firstSide) {
         this.firstSide = firstSide;
+    }
+
+    public void setSecondSide(double secondSide) {
         this.secondSide = secondSide;
-        super.setArea(calculateArea());
     }
 
     @Override

@@ -5,40 +5,50 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int NUMBER_OF_FIGURE = 5;
     private static final int MAX_UNIQUE_PROPERTY = 150;
+    private static final int DEFAULT_RADIUS = 10;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final String color = colorSupplier.getRandomColor();
 
     public Figure getRandomFigure() {
         int number = random.nextInt(NUMBER_OF_FIGURE);
         switch (number) {
             case 0:
-                String colorCircle = colorSupplier.getRandomColor();
-                double radius = random.nextInt(MAX_UNIQUE_PROPERTY);
-                return new Circle(colorCircle, radius);
+                Circle circle = new Circle();
+                circle.setColor(color);
+                circle.setRadius(random.nextInt(MAX_UNIQUE_PROPERTY));
+                return circle;
             case 1:
-                String colorRectangle = colorSupplier.getRandomColor();
-                double firstSide = random.nextInt(MAX_UNIQUE_PROPERTY);
-                double secondSide = random.nextInt(MAX_UNIQUE_PROPERTY);
-                return new Rectangle(colorRectangle, firstSide, secondSide);
+                Rectangle rectangle = new Rectangle();
+                rectangle.setColor(color);
+                rectangle.setFirstSide(random.nextInt(MAX_UNIQUE_PROPERTY));
+                rectangle.setSecondSide(random.nextInt(MAX_UNIQUE_PROPERTY));
+                return rectangle;
             case 2:
-                String colorSquare = colorSupplier.getRandomColor();
-                double side = random.nextInt(MAX_UNIQUE_PROPERTY);
-                return new Square(colorSquare, side);
+                Square square = new Square();
+                square.setColor(color);
+                square.setSide(random.nextInt(MAX_UNIQUE_PROPERTY));
+                return square;
             case 3:
-                String colorTriangle = colorSupplier.getRandomColor();
-                double firstLeg = random.nextInt(MAX_UNIQUE_PROPERTY);
-                double secondLeg = random.nextInt(MAX_UNIQUE_PROPERTY);
-                return new RightTriangle(colorTriangle, firstLeg, secondLeg);
+                RightTriangle triangle = new RightTriangle();
+                triangle.setColor(color);
+                triangle.setFirstLeg(random.nextInt(MAX_UNIQUE_PROPERTY));
+                triangle.setSecondLeg(random.nextInt(MAX_UNIQUE_PROPERTY));
+                return triangle;
             default:
-                String colorTrapezoid = colorSupplier.getRandomColor();
-                double height = random.nextInt(MAX_UNIQUE_PROPERTY);
-                double firstBase = random.nextInt(MAX_UNIQUE_PROPERTY);
-                double secondBase = random.nextInt(MAX_UNIQUE_PROPERTY);
-                return new IsoscelesTrapezoid(colorTrapezoid, height, firstBase, secondBase);
+                IsoscelesTrapezoid trapezoid = new IsoscelesTrapezoid();
+                trapezoid.setColor(color);
+                trapezoid.setHeight(random.nextInt(MAX_UNIQUE_PROPERTY));
+                trapezoid.setFirstBase(random.nextInt(MAX_UNIQUE_PROPERTY));
+                trapezoid.setSecondBase(random.nextInt(MAX_UNIQUE_PROPERTY));
+                return trapezoid;
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.getValue(), 10);
+        Circle circle = new Circle();
+        circle.setColor(Color.WHITE.name().toLowerCase());
+        circle.setRadius(DEFAULT_RADIUS);
+        return circle;
     }
 }
