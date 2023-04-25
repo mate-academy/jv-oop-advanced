@@ -3,31 +3,40 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    Figure figure;
-    ColorSupplier colorSupplier = new ColorSupplier();
-    private static Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
+    private Random random = new Random();
+    private Figure figure = new Figure(colorSupplier.getRandomColor());
+    private final int MAX_UNITS = 20;
+    private final int DEFAULT_NUM = 10;
+
     public Figure getRandomFigure() {
         int randomNumber = random.nextInt(Color.values().length);
         switch (randomNumber) {
             case 0:
-                figure = new Square(random.nextInt(20) + 1, figure.color);
+                figure = new Square(random.nextInt(MAX_UNITS) + 1,
+                        colorSupplier.getRandomColor());
                 break;
             case 1:
-                figure = new Rectangle(random.nextInt(20) + 1, random.nextInt(20) + 1, figure.color);
+                figure = new Rectangle(random.nextInt(MAX_UNITS) + 1,
+                        random.nextInt(MAX_UNITS) + 1, colorSupplier.getRandomColor());
                 break;
             case 2:
-                figure = new RightTriangle(random.nextInt(20) + 1, random.nextInt(20) + 1, figure.color);
+                figure = new RightTriangle(random.nextInt(MAX_UNITS) + 1,
+                        random.nextInt(MAX_UNITS) + 1, colorSupplier.getRandomColor());
                 break;
             case 3:
-                figure = new Circle(random.nextInt(20) + 1, figure.color);
+                figure = new Circle(random.nextInt(MAX_UNITS) + 1,
+                        colorSupplier.getRandomColor());
                 break;
-            case 4:
-                figure = new IsoscelesTrapezoid(random.nextInt(20) + 1, random.nextInt(20) + 1, random.nextInt(20) + 1, figure.color);
+            default:
+                figure = new IsoscelesTrapezoid(random.nextInt(MAX_UNITS) + 1,
+                        random.nextInt(MAX_UNITS) + 1, random.nextInt(MAX_UNITS) + 1,
+                        colorSupplier.getRandomColor());
         }
         return figure;
-
     }
+
     public Figure getDefaultFigure() {
-        return new Circle(10, "white");
+        return new Circle(DEFAULT_NUM, "white");
     }
 }

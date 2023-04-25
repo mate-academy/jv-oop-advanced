@@ -12,6 +12,8 @@ public class Main {
         for (int i = array.length / 2; i < array.length; i++) {
             array[i] = figureSupplier.getDefaultFigure();
         }
-        System.out.println(Arrays.toString(array));
+        for (Figure arr : array) {
+            arr.draw();
+        }
     }
 }

@@ -1,12 +1,12 @@
 package core.basesyntax;
 
 public enum Color {
-    RED("Red"),
-    ORANGE("Orange"),
-    YELLOW("Yellow"),
-    GREEN("Green"),
-    BLUE("Blue"),
-    VIOLET("Violet");
+    RED("red"),
+    ORANGE("orange"),
+    YELLOW("yellow"),
+    GREEN("green"),
+    BLUE("blue"),
+    VIOLET("violet");
 
     private final String value;
 

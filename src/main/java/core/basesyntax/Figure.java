@@ -1,12 +1,13 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public class Figure implements Drawing {
     protected String color;
 
     public Figure(String color) {
         this.color = color;
     }
-    public abstract double getArea();
 
-    public abstract void draw();
+    @Override
+    public void draw() {
+    }
 }
