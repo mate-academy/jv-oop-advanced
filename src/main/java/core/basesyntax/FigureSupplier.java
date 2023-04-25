@@ -9,16 +9,9 @@ public class FigureSupplier {
     private final Random random;
     private final ColorSupplier colorSupplier;
 
-
     public FigureSupplier(Random random, ColorSupplier colorSupplier) {
-
         this.random = random;
         this.colorSupplier = colorSupplier;
-    }
-
-    public FigureSupplier(Random random) {
-
-        this.random = random;
     }
 
     public Figure getRandomFigure() {
