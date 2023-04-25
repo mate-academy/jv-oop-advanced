@@ -14,41 +14,35 @@ public class FigureSupplier {
         int randomNameFigure = random.nextInt(FIGURES_COUNT);
         switch (randomNameFigure) {
             case 0:
-                Circle circle = new Circle();
-                circle.setColor(colorSupplier.getRandomColor());
-                circle.setRadius(random.nextInt(MAX_RANGE) + 1);
+                Circle circle = new Circle(colorSupplier.getRandomColor(),
+                        random.nextInt(MAX_RANGE) + 1);
                 return circle;
             case 1:
-                Square square = new Square();
-                square.setColor(colorSupplier.getRandomColor());
-                square.setSide(random.nextInt(MAX_RANGE) + 1);
+                Square square = new Square(colorSupplier.getRandomColor(),
+                        random.nextInt(MAX_RANGE) + 1);
                 return square;
             case 2:
-                RightTriangle rightTriangle = new RightTriangle();
-                rightTriangle.setColor(colorSupplier.getRandomColor());
-                rightTriangle.setFirstLeg(random.nextInt(MAX_RANGE) + 1);
-                rightTriangle.setSecondLeg(random.nextInt(MAX_RANGE) + 1);
+                RightTriangle rightTriangle = new RightTriangle(colorSupplier.getRandomColor(),
+                        random.nextInt(MAX_RANGE) + 1,
+                        random.nextInt(MAX_RANGE) + 1);
                 return rightTriangle;
             case 3:
-                Rectangle rectangle = new Rectangle();
-                rectangle.setColor(colorSupplier.getRandomColor());
-                rectangle.setWidth(random.nextInt(MAX_RANGE) + 1);
-                rectangle.setLength(random.nextInt(MAX_RANGE) + 1);
+                Rectangle rectangle = new Rectangle(colorSupplier.getRandomColor(),
+                        random.nextInt(MAX_RANGE) + 1,
+                        random.nextInt(MAX_RANGE) + 1);
                 return rectangle;
             default:
-                IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
-                isoscelesTrapezoid.setColor(colorSupplier.getRandomColor());
-                isoscelesTrapezoid.setHeight(random.nextInt(MAX_RANGE) + 1);
-                isoscelesTrapezoid.setFirstSide(random.nextInt(MAX_RANGE) + 1);
-                isoscelesTrapezoid.setSecondSide(random.nextInt(MAX_RANGE) + 1);
+                IsoscelesTrapezoid isoscelesTrapezoid =
+                        new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                                random.nextInt(MAX_RANGE) + 1,
+                                random.nextInt(MAX_RANGE) + 1,
+                                random.nextInt(MAX_RANGE) + 1);
                 return isoscelesTrapezoid;
         }
     }
 
     public Figure getDefaultFigure() {
-        Circle circle = new Circle();
-        circle.setColor(DEFAULT_COLOR);
-        circle.setRadius(DEFAULT_RADIUS);
+        Circle circle = new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
         return circle;
     }
 }

@@ -9,13 +9,6 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
-    public Circle() {
-    }
-
-    public void setRadius(int radius) {
-        this.radius = radius;
-    }
-
     @Override
     public double calculateArea() {
         return Math.PI * (radius * radius);
