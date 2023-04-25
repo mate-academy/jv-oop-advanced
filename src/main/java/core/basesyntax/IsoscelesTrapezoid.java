@@ -27,6 +27,5 @@ public class IsoscelesTrapezoid extends Figure {
                 + secondBase
                 + " units, color: "
                 + getColor());
-
     }
 }
