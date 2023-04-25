@@ -23,34 +23,29 @@ public class FigureSupplier {
 
         switch (randomFigureNumber) {
             case 0:
-                String squareColor = colorSupplier.getRandomColor();
-                double squareSideSize = getRandomSize();
-                return new Square(squareColor, squareSideSize);
+                String color = colorSupplier.getRandomColor();
+                double side = getRandomSize();
+                return new Square(color, side);
             case 1:
-                String rectangleColor = colorSupplier.getRandomColor();
-                double rectangleWidth = getRandomSize();
-                double rectangleHeight = getRandomSize();
-                return new Rectangle(rectangleColor, rectangleWidth, rectangleHeight);
+                color = colorSupplier.getRandomColor();
+                double width = getRandomSize();
+                double length = getRandomSize();
+                return new Rectangle(color, width, length);
             case 2:
-                String triangleColor = colorSupplier.getRandomColor();
-                double triangleFirstLeg = getRandomSize();
-                double triangleSecondLeg = getRandomSize();
-                return new RightTriangle(triangleColor, triangleFirstLeg, triangleSecondLeg);
+                color = colorSupplier.getRandomColor();
+                double firstLeg = getRandomSize();
+                double secondLeg = getRandomSize();
+                return new RightTriangle(color, firstLeg, secondLeg);
             case 3:
-                String circleColor = colorSupplier.getRandomColor();
-                double circleRadius = getRandomSize();
-                return new Circle(circleColor, circleRadius);
+                color = colorSupplier.getRandomColor();
+                double radius = getRandomSize();
+                return new Circle(color, radius);
             case 4:
-                String trapezoidColor = colorSupplier.getRandomColor();
-                double trapezoidTopSide = getRandomSize();
-                double trapezoidBottomSide = getRandomSize();
-                double trapezoidHeight = getRandomSize();
-                return new IsoscelesTrapezoid(
-                        trapezoidColor,
-                        trapezoidTopSide,
-                        trapezoidBottomSide,
-                        trapezoidHeight
-                );
+                color = colorSupplier.getRandomColor();
+                double topSide = getRandomSize();
+                double bottomSide = getRandomSize();
+                double height = getRandomSize();
+                return new IsoscelesTrapezoid(color, topSide, bottomSide, height);
             default:
                 return null;
         }
