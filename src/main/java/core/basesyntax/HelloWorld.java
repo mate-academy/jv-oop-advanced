@@ -3,7 +3,6 @@ package core.basesyntax;
 import core.basesyntax.figures.Figure;
 
 public class HelloWorld {
-
     private static final int FIGURE_COUNT = 10;
 
     public static void main(String[] args) {

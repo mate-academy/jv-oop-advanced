@@ -11,14 +11,14 @@ public class Square extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return Math.PI * longAxis * shortAxis;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: square, area: "
-                    + String.format("%.2f", getArea())
+                    + String.format("%.2f", calculateArea())
                     + " sq.units, shortAxis: "
                     + String.format("%.2f", shortAxis)
                     + " sq.units, longAxis: "

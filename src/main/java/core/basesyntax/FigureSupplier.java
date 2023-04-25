@@ -16,10 +16,8 @@ public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier(random);
 
     public Figure getRandomFigure() {
-
         int index = random.nextInt(MAX_COUNT_FIGURE);
         String randomColor = colorSupplier.getRandomColor();
-
         switch (index) {
             case 0:
                 double radius = random.nextDouble() * MAX_LENGTH;
@@ -31,20 +29,19 @@ public class FigureSupplier {
             case 2:
                 double length = random.nextDouble() * MAX_LENGTH;
                 double width = random.nextDouble() * MAX_LENGTH;
-
                 return new Rectangle(randomColor, length, width);
             case 3:
                 double firstLeg = random.nextDouble() * MAX_LENGTH;
                 double secondLeg = random.nextDouble() * MAX_LENGTH;
-
                 return new RightTriangle(randomColor, firstLeg, secondLeg);
             default:
                 double upSide = random.nextDouble() * MAX_LENGTH;
                 double downSide = random.nextDouble() * MAX_LENGTH;
+                double height = random.nextDouble() * MAX_LENGTH;
                 return new IsoscelesTrapezoid(randomColor,
                             upSide,
                             downSide,
-                            random.nextDouble() * MAX_LENGTH);
+                            height);
         }
     }
 

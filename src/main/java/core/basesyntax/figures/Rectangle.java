@@ -11,13 +11,13 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return length * width;
     }
 
     public void draw() {
         System.out.println("Figure: rectangle, area: "
-                    + String.format("%.2f", getArea())
+                    + String.format("%.2f", calculateArea())
                     + " sq.units, firstSide: "
                     + String.format("%.2f", length)
                     + " units, secondSide: "
