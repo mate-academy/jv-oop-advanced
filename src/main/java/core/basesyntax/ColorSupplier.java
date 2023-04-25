@@ -9,8 +9,8 @@ public class ColorSupplier {
         this.random = random;
     }
 
-    public String getRandomColor() {
+    public Color getRandomColor() {
         int randomIndex = random.nextInt(Color.values().length);
-        return Color.values()[randomIndex].name().toLowerCase();
+        return Color.values()[randomIndex];
     }
 }

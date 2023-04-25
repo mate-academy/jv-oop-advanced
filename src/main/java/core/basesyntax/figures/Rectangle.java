@@ -1,21 +1,15 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.Color;
+
 public class Rectangle extends Figure {
     private final double sideA;
     private final double sideB;
 
-    public Rectangle(String color, double sideA, double sideB) {
+    public Rectangle(Color color, double sideA, double sideB) {
         super(color);
         this.sideA = sideA;
         this.sideB = sideB;
-    }
-
-    public double getSideA() {
-        return sideA;
-    }
-
-    public double getSideB() {
-        return sideB;
     }
 
     @Override
