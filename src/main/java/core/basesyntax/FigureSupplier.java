@@ -5,35 +5,37 @@ import java.util.Random;
 public class FigureSupplier {
     public static final int MAX_NUMBER_OF_FIGURE = 4;
     public static final int MAX_SIZE_OF_PARAMETER = 10;
+    public static final int DEFAULT_NUMBER = 10;
+    public static final String DEFAULT_COLOR = "white";
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final Circle circle = new Circle("white", 10);
 
     public Figure getRandomFigure() {
         switch (random.nextInt(MAX_NUMBER_OF_FIGURE)) {
             case 0:
-                return new Square(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_SIZE_OF_PARAMETER));
+                int side = random.nextInt(MAX_SIZE_OF_PARAMETER);
+                return new Square(colorSupplier.getRandomColor(), side);
             case 1:
-                return new Rectangle(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_SIZE_OF_PARAMETER),
-                        random.nextInt(MAX_SIZE_OF_PARAMETER));
+                int width = random.nextInt(MAX_SIZE_OF_PARAMETER);
+                int length = random.nextInt(MAX_SIZE_OF_PARAMETER);
+                return new Rectangle(colorSupplier.getRandomColor(), width, length);
             case 2:
-                return new RightTriangle(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_SIZE_OF_PARAMETER),
-                        random.nextInt(MAX_SIZE_OF_PARAMETER));
+                int firstLeg = random.nextInt(MAX_SIZE_OF_PARAMETER);
+                int secondLeg = random.nextInt(MAX_SIZE_OF_PARAMETER);
+                return new RightTriangle(colorSupplier.getRandomColor(), firstLeg, secondLeg);
             case 3:
-                return new Circle(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_SIZE_OF_PARAMETER));
+                int radius = random.nextInt(MAX_SIZE_OF_PARAMETER);
+                return new Circle(colorSupplier.getRandomColor(), radius);
             default:
+                int topSide = random.nextInt(MAX_SIZE_OF_PARAMETER);
+                int downSide = random.nextInt(MAX_SIZE_OF_PARAMETER);
+                int lateraSide = random.nextInt(MAX_SIZE_OF_PARAMETER);
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_SIZE_OF_PARAMETER),
-                        random.nextInt(MAX_SIZE_OF_PARAMETER),
-                        random.nextInt(MAX_SIZE_OF_PARAMETER));
+                        topSide, downSide, lateraSide);
         }
     }
 
     public Figure getDefaultFigure() {
-        return circle;
+        return new Circle(DEFAULT_COLOR, DEFAULT_NUMBER);
     }
 }

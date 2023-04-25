@@ -1,23 +1,23 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private final int firstSide;
-    private final int secondSide;
+    private final int width;
+    private final int length;
 
     public Rectangle(String color, int firstSide, int secondSide) {
         super(color);
-        this.firstSide = firstSide;
-        this.secondSide = secondSide;
+        this.width = firstSide;
+        this.length = secondSide;
     }
 
     @Override
-    public double getArea() {
-        return firstSide * secondSide;
+    public double calculateArea() {
+        return width * length;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + getArea() + " sq.units, firstSide: "
-                + firstSide + ", secondSide: " + secondSide + " units, color: " + getColor());
+        System.out.println("Figure: rectangle, area: " + calculateArea() + " sq.units, width: "
+                + width + ", length: " + length + " units, color: " + getColor());
     }
 }
