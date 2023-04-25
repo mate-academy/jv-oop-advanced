@@ -23,7 +23,6 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-
         switch (random.nextInt(MAX_NUMBER_OF_FIGURES)) {
             case 0:
                 double radius = random.nextDouble() * MAX_SIZE;
