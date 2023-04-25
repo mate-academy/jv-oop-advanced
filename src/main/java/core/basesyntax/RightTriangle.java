@@ -10,14 +10,17 @@ public class RightTriangle extends Figure {
         this.secondLeg = secondLeg;
     }
 
+    public RightTriangle() {
+    }
+
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return 0.5 * firstLeg * secondLeg;
     }
 
     @Override
-    public String printFigure() {
-        return "Figure: right triangle, area: " + String.format("%.1f", getArea())
+    public String draw() {
+        return "Figure: right triangle, area: " + String.format("%.1f", calculateArea())
                 + " firstLeg: " + firstLeg
                 + " secondLeg: " + secondLeg
                 + " color: " + getColor();

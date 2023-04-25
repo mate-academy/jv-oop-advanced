@@ -8,14 +8,17 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
+    public Circle() {
+    }
+
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return Math.PI * (radius * radius);
     }
 
     @Override
-    public String printFigure() {
-        return "Figure: circle, area: " + String.format("%.1f", getArea())
+    public String draw() {
+        return "Figure: circle, area: " + String.format("%.1f", calculateArea())
                 + " sq.units, side: " + radius
                 + " units, color: " + getColor();
     }

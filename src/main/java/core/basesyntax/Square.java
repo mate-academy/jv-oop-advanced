@@ -8,14 +8,17 @@ public class Square extends Figure {
         this.side = side;
     }
 
+    public Square() {
+    }
+
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return side * side;
     }
 
     @Override
-    public String printFigure() {
-        return "Figure: square, area: " + String.format("%.1f", getArea())
+    public String draw() {
+        return "Figure: square, area: " + String.format("%.1f", calculateArea())
                 + " sq.units, side: " + side
                 + " units, color: " + getColor();
     }

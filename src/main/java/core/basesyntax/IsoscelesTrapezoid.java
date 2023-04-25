@@ -12,14 +12,17 @@ public class IsoscelesTrapezoid extends Figure {
         this.height = height;
     }
 
+    public IsoscelesTrapezoid() {
+    }
+
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return 0.5 * (firstSide + secondSide) * height;
     }
 
     @Override
-    public String printFigure() {
-        return "Figure: isosceles trapezoid, area: " + String.format("%.1f", getArea())
+    public String draw() {
+        return "Figure: isosceles trapezoid, area: " + String.format("%.1f", calculateArea())
                 + " sq.units, side: " + firstSide
                 + " units, side: " + secondSide
                 + " units, height: " + height
