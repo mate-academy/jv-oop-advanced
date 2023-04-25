@@ -4,22 +4,25 @@ import java.text.DecimalFormat;
 import java.util.Random;
 
 public class FigureSupplier {
+    public static final int TOTAL_AMOUNT_OF_FIGURES = 5;
+    public static final String DEFAULT_FIGURE_COLOR = "white";
+    public static final double DEFAULT_FIGURE_SIZE = 10;
+    public static final int MAX_FIGURE_SIZE = 100;
+    public static final double MIN_DECIMAL_PART = 0.001;
     private final DecimalFormat df = new DecimalFormat("#.###");
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     private double getRandomSize() {
-        int maxFigureSize = 100;
-        double minDecimalPart = 0.001;
-        double randomNumber = random.nextDouble() * maxFigureSize + minDecimalPart;
+
+        double randomNumber = random.nextDouble() * MAX_FIGURE_SIZE + MIN_DECIMAL_PART;
         String formattedRandomNumber = df.format(randomNumber);
 
         return Double.parseDouble(formattedRandomNumber);
     }
 
     public Figure getRandomFigure() {
-        int totalAmountOfFigures = 5;
-        int randomFigureNumber = random.nextInt(totalAmountOfFigures);
+        int randomFigureNumber = random.nextInt(TOTAL_AMOUNT_OF_FIGURES);
 
         switch (randomFigureNumber) {
             case 0:
@@ -40,20 +43,16 @@ public class FigureSupplier {
                 color = colorSupplier.getRandomColor();
                 double radius = getRandomSize();
                 return new Circle(color, radius);
-            case 4:
+            default:
                 color = colorSupplier.getRandomColor();
                 double topSide = getRandomSize();
                 double bottomSide = getRandomSize();
                 double height = getRandomSize();
                 return new IsoscelesTrapezoid(color, topSide, bottomSide, height);
-            default:
-                return null;
         }
     }
 
     public Figure getDefaultFigure() {
-        String defaultFigureColor = "white";
-        double defaultFigureSize = 10;
-        return new Circle(defaultFigureColor, defaultFigureSize);
+        return new Circle(DEFAULT_FIGURE_COLOR, DEFAULT_FIGURE_SIZE);
     }
 }
