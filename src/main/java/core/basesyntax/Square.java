@@ -3,8 +3,8 @@ package core.basesyntax;
 public class Square extends Figure {
     private final int side;
 
-    public Square(int side, Color color) {
-        super(color);
+    public Square(int side, String color) {
+        super(Color.valueOf(color));
         this.side = side;
     }
 
