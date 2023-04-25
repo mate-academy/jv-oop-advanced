@@ -31,7 +31,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(RADIUS_OF_CIRCLE,"White");
+        return new Circle(RADIUS_OF_CIRCLE,"WHITE");
     }
 }
 
