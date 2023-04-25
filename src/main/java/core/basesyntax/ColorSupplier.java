@@ -1,5 +1,6 @@
 package core.basesyntax;
 
+import java.util.Locale;
 import java.util.Random;
 
 public class ColorSupplier {
@@ -10,6 +11,7 @@ public class ColorSupplier {
     }
 
     public String getRandomColor() {
-        return Color.values()[random.nextInt(Color.values().length)].getValue();
+        int randomIndex = random.nextInt(Color.values().length);
+        return Color.values()[randomIndex].name().toLowerCase();
     }
 }

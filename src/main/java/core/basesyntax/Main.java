@@ -13,12 +13,12 @@ public class Main {
         Figure[] figures = new Figure[NUMBER_OF_FIGURES];
         for (int i = 0; i < NUMBER_OF_FIGURES / 2; i++) {
             figures[i] = figureSupplier.getRandomFigure();
-            System.out.println(figures[i].draw());
+            figures[i].draw();
         }
         System.out.println(); // to separate generated figures from default figures
         for (int i = NUMBER_OF_FIGURES / 2; i < NUMBER_OF_FIGURES; i++) {
             figures[i] = figureSupplier.getDefaultFigure();
-            System.out.println(figures[i].draw());
+            figures[i].draw();
         }
     }
 }
