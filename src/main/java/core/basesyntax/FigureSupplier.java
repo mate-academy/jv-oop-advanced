@@ -10,6 +10,8 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final Color COLOR_OF_DEFAULT_FIGURE = Color.WHITE;
+    private static final int RADIUS_OF_DEFAULT_CIRCLE = 10;
     private static final int MAX_VALUE_FOR_FIGURE_PROPERTY = 100;
     private static final int NUMBER_OF_FIGURES = 5;
     private Random random;
@@ -55,8 +57,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        Color color = Color.WHITE;
-        int radius = 10;
-        return new Circle(color, radius);
+        return new Circle(COLOR_OF_DEFAULT_FIGURE, RADIUS_OF_DEFAULT_CIRCLE);
     }
 }
