@@ -8,12 +8,11 @@ public class Main {
         Figure[] figures = new Figure[NUMBER_OF_FIGURES];
         for (int i = 0; i < figures.length / 2; i++) {
             figures[i] = figureSupplier.getRandomFigure();
+            figures[i].drawFigure();
         }
         for (int i = figures.length / 2; i < NUMBER_OF_FIGURES; i++) {
             figures[i] = figureSupplier.getDefaultFigure();
-        }
-        for (Figure figure : figures) {
-            figure.printFigureInfo();
+            figures[i].drawFigure();
         }
     }
 }
