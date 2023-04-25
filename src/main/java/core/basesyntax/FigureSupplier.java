@@ -8,21 +8,10 @@ public class FigureSupplier {
     private static final int FIGURES_COUNT = 4;
     private final Random random;
     private final ColorSupplier color;
-    private final Circle circle;
-    private final Rectangle rectangle;
-    private final RightTriangle rightTriangle;
-    private final Square square;
-    private final IsoscelesTrapezoid isoscelesTrapezoid;
 
     public FigureSupplier() {
         this.random = new Random();
         this.color = new ColorSupplier();
-        this.circle = new Circle(getRandomSize(), color.getRandomColor());
-        this.rectangle = new Rectangle(getRandomSize(), getRandomSize(), color.getRandomColor());
-        this.rightTriangle = new RightTriangle(getRandomSize(), color.getRandomColor());
-        this.square = new Square(getRandomSize(), color.getRandomColor());
-        this.isoscelesTrapezoid = new IsoscelesTrapezoid(getRandomSize(), getRandomSize(),
-                getRandomSize(), color.getRandomColor());
     }
 
     public int getRandomSize() {
@@ -33,15 +22,16 @@ public class FigureSupplier {
         int value = random.nextInt(FIGURES_COUNT);
         switch (value) {
             case 0:
-                return circle;
+                return new Circle(getRandomSize(), color.getRandomColor());
             case 1:
-                return rectangle;
+                return new Rectangle(getRandomSize(), getRandomSize(), color.getRandomColor());
             case 2:
-                return rightTriangle;
+                return new RightTriangle(getRandomSize(), color.getRandomColor());
             case 3:
-                return square;
+                return new Square(getRandomSize(), color.getRandomColor());
             default:
-                return isoscelesTrapezoid;
+                return new IsoscelesTrapezoid(getRandomSize(), getRandomSize(),
+                        getRandomSize(), color.getRandomColor());
         }
     }
 
