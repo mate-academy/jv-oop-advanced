@@ -3,63 +3,63 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final Random random = new Random();
-    private final ColorSupplier colorSupplier = new ColorSupplier();
-    private Figure figure;
-    private final Figure defaultFigure = new Circle(Color.WHITE, 10);
+    public static final int FIGURE_COUNT = 5;
+    public static final int FIGURE_MAXIMUM_VALUESE = 20;
 
     public Figure getRandomFigure() {
-        int randomFigureNumber = random.nextInt(5);
+        int randomFigureNumber = new Random().nextInt(FIGURE_COUNT);
         switch (randomFigureNumber) {
             case 0:
-                figure = getRandomSquare();
-                break;
+                return getRandomSquare();
             case 1:
-                figure = getRandomRectangle();
-                break;
+                return getRandomRectangle();
             case 2:
-                figure = getRandomRightTriangle();
-                break;
+                return getRandomRightTriangle();
             case 3:
-                figure = getRandomCircle();
-                break;
-            case 4:
-                figure = getRandomIsoscelesTrapezoid();
-                break;
+                return getRandomCircle();
             default:
-                break;
+                return getRandomIsoscelesTrapezoid();
         }
-        return figure;
     }
 
     public Figure getRandomSquare() {
-        return new Square(colorSupplier.getRandomColor(), random.nextInt(20));
+        Random random = new Random();
+        ColorSupplier colorSupplier = new ColorSupplier();
+        return new Square(colorSupplier.getRandomColor(), random.nextInt(FIGURE_MAXIMUM_VALUESE));
     }
 
     public Figure getRandomRectangle() {
+        Random random = new Random();
+        ColorSupplier colorSupplier = new ColorSupplier();
         return new Rectangle(colorSupplier.getRandomColor(),
-                random.nextInt(20),
-                random.nextInt(20));
+                random.nextInt(FIGURE_MAXIMUM_VALUESE),
+                random.nextInt(FIGURE_MAXIMUM_VALUESE));
     }
 
     public Figure getRandomRightTriangle() {
+        final Random random = new Random();
+        final ColorSupplier colorSupplier = new ColorSupplier();
         return new RightTriangle(colorSupplier.getRandomColor(),
-                random.nextInt(20),
-                random.nextInt(20));
+                random.nextInt(FIGURE_MAXIMUM_VALUESE),
+                random.nextInt(FIGURE_MAXIMUM_VALUESE));
     }
 
     public Figure getRandomCircle() {
-        return new Circle(colorSupplier.getRandomColor(), random.nextInt(20));
+        final Random random = new Random();
+        final ColorSupplier colorSupplier = new ColorSupplier();
+        return new Circle(colorSupplier.getRandomColor(), random.nextInt(FIGURE_MAXIMUM_VALUESE));
     }
 
     public Figure getRandomIsoscelesTrapezoid() {
+        Random random = new Random();
+        ColorSupplier colorSupplier = new ColorSupplier();
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                random.nextInt(20),
-                random.nextInt(10),
-                random.nextInt(20));
+                random.nextInt(FIGURE_MAXIMUM_VALUESE),
+                random.nextInt(FIGURE_MAXIMUM_VALUESE),
+                random.nextInt(FIGURE_MAXIMUM_VALUESE));
     }
 
     public Figure getDefaultFigure() {
-        return defaultFigure;
+        return new Circle(Color.WHITE, 10);
     }
 }
