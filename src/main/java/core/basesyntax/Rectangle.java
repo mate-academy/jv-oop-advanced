@@ -4,13 +4,21 @@ public class Rectangle extends Figure {
     private int width;
     private int length;
 
-    public Rectangle(String color, int width, int length) {
-        super.setColor(color);
+    public Rectangle(Color color, int width, int length) {
+        super(color);
         this.width = width;
         this.length = length;
     }
 
     public Rectangle() {
+    }
+
+    public void setWidth(int width) {
+        this.width = width;
+    }
+
+    public void setLength(int length) {
+        this.length = length;
     }
 
     @Override
