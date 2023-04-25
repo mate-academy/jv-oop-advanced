@@ -6,8 +6,8 @@ public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
     public static final int FIGURE_MAXIMUM_VALUESE = 20;
     public static final int DEFAULT_FIGURE_MAXIMUM_VALUESE = 10;
-    Random random = new Random();
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int randomFigureNumber = new Random().nextInt(FIGURE_COUNT);
