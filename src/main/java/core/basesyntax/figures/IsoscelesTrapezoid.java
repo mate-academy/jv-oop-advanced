@@ -25,14 +25,14 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return (topSide + bottomSide) / 2 * hight;
     }
 
     @Override
     public String draw() {
         return "Figure: Isosceles Trapezoid, area: "
-                + getArea() + " sq.units, topSide: "
+                + calculateArea() + " sq.units, topSide: "
                 + getTopSide() + " units, bottomSide: "
                 + getBottomSide() + " units, hight: "
                 + getHight() + " units, color: "

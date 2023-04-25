@@ -19,14 +19,14 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return sideA * sideB;
     }
 
     @Override
     public String draw() {
         return "Figure: Rectangle, area: "
-                + getArea() + " sq.units, sideA: "
+                + calculateArea() + " sq.units, sideA: "
                 + getSideA() + " units, sideB: "
                 + getSideB() + " units, color: "
                 + getColor();
