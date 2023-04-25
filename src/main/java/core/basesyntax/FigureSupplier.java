@@ -5,22 +5,22 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final double DEFAULT_RADIUS = 10;
+    private static final int MAX_NUMBER = 50;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
     private final Class[] figure = {Circle.class, Square.class, RightTriangle.class,
             Rectangle.class, IsoscelesTrapezoid.class};
 
     public Figure getRandomFigure() {
-        int indexPossibleClass = random.nextInt(figure.length);
-        Class randomClass = figure[indexPossibleClass];
-        switch (randomClass.getSimpleName()) {
-            case "Circle":
+        int figureIndex = random.nextInt(figure.length);
+        switch (figureIndex) {
+            case 0:
                 return generateNewCircle();
-            case "Square":
+            case 1:
                 return generateNewSquare();
-            case "RightTriangle":
+            case 2:
                 return generateNewRightTriangle();
-            case "Rectangle":
+            case 3:
                 return generateNewRectangle();
             default:
                 return generateNewIsoscelesTrapezoid();
@@ -28,26 +28,32 @@ public class FigureSupplier {
     }
 
     private IsoscelesTrapezoid generateNewIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextDouble(),
-                random.nextDouble(), random.nextDouble());
+        int randomBaseOne = random.nextInt(MAX_NUMBER);
+        int randomBaseTwo = random.nextInt(MAX_NUMBER);
+        int randomHeight = random.nextInt(MAX_NUMBER);
+        return new IsoscelesTrapezoid(colorSupplier.randomColor(),
+                randomBaseOne,randomBaseTwo,randomHeight);
     }
 
     private Rectangle generateNewRectangle() {
-        return new Rectangle(colorSupplier.getRandomColor(), random.nextDouble(),
+        return new Rectangle(colorSupplier.randomColor(), random.nextDouble(),
                 random.nextDouble());
     }
 
     private RightTriangle generateNewRightTriangle() {
-        return new RightTriangle(colorSupplier.getRandomColor(),
-                random.nextDouble(), random.nextDouble());
+        int randomBase = random.nextInt(MAX_NUMBER);
+        int randomHeight = random.nextInt(MAX_NUMBER);
+        return new RightTriangle(colorSupplier.randomColor(), randomBase, randomHeight);
     }
 
     private Square generateNewSquare() {
-        return new Square(colorSupplier.getRandomColor(), random.nextDouble());
+        int randomSide = random.nextInt(MAX_NUMBER);
+        return new Square(colorSupplier.randomColor(), randomSide);
     }
 
     private Circle generateNewCircle() {
-        return new Circle(colorSupplier.getRandomColor(), random.nextDouble());
+        int randomRadius = random.nextInt(MAX_NUMBER);
+        return new Circle(colorSupplier.randomColor(), randomRadius);
     }
 
     public Figure getDefaultFigure() {
