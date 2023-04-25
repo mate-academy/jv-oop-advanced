@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.text.DecimalFormat;
-
 public class Circle extends Figure {
     private final int radius;
 
@@ -9,8 +7,6 @@ public class Circle extends Figure {
         super(color);
         this.radius = radius;
     }
-
-
 
     @Override
     public double getArea() {

@@ -16,8 +16,8 @@ public class FigureSupplier {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
-    private Figure getRandomCircle() { return new Circle(colorSupplier.getRandomColor(),
-            random.nextInt(MAX_VALUE));
+    private Figure getRandomCircle() {
+        return new Circle(colorSupplier.getRandomColor(), random.nextInt(MAX_VALUE));
     }
 
     private Figure getRandomSquare() {
