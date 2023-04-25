@@ -5,6 +5,9 @@ import java.util.Random;
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
     public static final int FIGURE_MAXIMUM_VALUESE = 20;
+    public static final int DEFAULT_FIGURE_MAXIMUM_VALUESE = 10;
+    Random random = new Random();
+    ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int randomFigureNumber = new Random().nextInt(FIGURE_COUNT);
@@ -23,36 +26,26 @@ public class FigureSupplier {
     }
 
     public Figure getRandomSquare() {
-        Random random = new Random();
-        ColorSupplier colorSupplier = new ColorSupplier();
         return new Square(colorSupplier.getRandomColor(), random.nextInt(FIGURE_MAXIMUM_VALUESE));
     }
 
     public Figure getRandomRectangle() {
-        Random random = new Random();
-        ColorSupplier colorSupplier = new ColorSupplier();
         return new Rectangle(colorSupplier.getRandomColor(),
                 random.nextInt(FIGURE_MAXIMUM_VALUESE),
                 random.nextInt(FIGURE_MAXIMUM_VALUESE));
     }
 
     public Figure getRandomRightTriangle() {
-        final Random random = new Random();
-        final ColorSupplier colorSupplier = new ColorSupplier();
         return new RightTriangle(colorSupplier.getRandomColor(),
                 random.nextInt(FIGURE_MAXIMUM_VALUESE),
                 random.nextInt(FIGURE_MAXIMUM_VALUESE));
     }
 
     public Figure getRandomCircle() {
-        final Random random = new Random();
-        final ColorSupplier colorSupplier = new ColorSupplier();
         return new Circle(colorSupplier.getRandomColor(), random.nextInt(FIGURE_MAXIMUM_VALUESE));
     }
 
     public Figure getRandomIsoscelesTrapezoid() {
-        Random random = new Random();
-        ColorSupplier colorSupplier = new ColorSupplier();
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                 random.nextInt(FIGURE_MAXIMUM_VALUESE),
                 random.nextInt(FIGURE_MAXIMUM_VALUESE),
@@ -60,6 +53,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE, 10);
+        return new Circle(Color.WHITE, DEFAULT_FIGURE_MAXIMUM_VALUESE);
     }
 }
