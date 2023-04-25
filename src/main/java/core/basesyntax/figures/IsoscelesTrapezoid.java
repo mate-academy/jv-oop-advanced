@@ -2,7 +2,7 @@ package core.basesyntax.figures;
 
 import core.basesyntax.enums.Color;
 
-public class IsoscelesTrapezoid extends Figure implements Drawable, AreaCalculator {
+public class IsoscelesTrapezoid extends Figure {
     private int sideA;
     private int sideB;
     private int height;

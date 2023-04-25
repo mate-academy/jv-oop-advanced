@@ -1,12 +1,17 @@
 package core.basesyntax.suppliers;
 
 import core.basesyntax.enums.Color;
-import core.basesyntax.figures.*;
+import core.basesyntax.figures.Circle;
+import core.basesyntax.figures.Figure;
+import core.basesyntax.figures.IsoscelesTrapezoid;
+import core.basesyntax.figures.Rectangle;
+import core.basesyntax.figures.RightTriangle;
+import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private Random random = new Random();
-    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         switch (random.nextInt(9)) {

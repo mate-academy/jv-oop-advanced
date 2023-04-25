@@ -2,7 +2,7 @@ package core.basesyntax.figures;
 
 import core.basesyntax.enums.Color;
 
-public class Circle extends Figure implements Drawable, AreaCalculator {
+public class Circle extends Figure {
     private int radius;
 
     public Circle(Color color, int radius) {
