@@ -2,7 +2,7 @@ package core.basesyntax.figures;
 
 import core.basesyntax.enums.Color;
 
-public class Rectangle extends Figure {
+public class Rectangle extends Figure implements Drawable, AreaCalculator {
     private int sideA;
     private int sideB;
 

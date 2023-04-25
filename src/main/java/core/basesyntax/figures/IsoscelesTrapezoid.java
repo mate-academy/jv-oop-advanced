@@ -3,14 +3,14 @@ package core.basesyntax.figures;
 import core.basesyntax.enums.Color;
 
 public class IsoscelesTrapezoid extends Figure {
-    private int sideA;
-    private int sideB;
+    private int baseUp;
+    private int baseDown;
     private int height;
 
-    public IsoscelesTrapezoid(Color color, int sideA, int sideB, int height) {
+    public IsoscelesTrapezoid(Color color, int baseUp, int baseDown, int height) {
         super(color);
-        this.sideA = sideA;
-        this.sideB = sideB;
+        this.baseUp = baseUp;
+        this.baseDown = baseDown;
         this.height = height;
     }
 
@@ -19,11 +19,11 @@ public class IsoscelesTrapezoid extends Figure {
         System.out.println("Figure: ISOSCELES TRAPEZOID, area: "
                 + getArea()
                 + " sq.units, "
-                + "side A: "
-                + sideA
+                + "base UP: "
+                + baseUp
                 + " units,"
-                + "side B: "
-                + sideB
+                + "base DOWN: "
+                + baseDown
                 + " units,"
                 + " height: "
                 + height
@@ -33,6 +33,6 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double getArea() {
-        return height * (sideA * sideB);
+        return height * (baseDown + baseUp) * 0.5;
     }
 }
