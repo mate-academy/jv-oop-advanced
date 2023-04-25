@@ -9,15 +9,15 @@ public class Square extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return side * side;
     }
 
     @Override
-    public void drow() {
+    public void draw() {
         System.out.println("Figure: Square"
                 + ", area: "
-                + getArea()
+                + calculateArea()
                 + " sq.units"
                 + ", side: "
                 + side

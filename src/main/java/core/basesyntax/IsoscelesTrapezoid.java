@@ -14,15 +14,15 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return ((firstParallel + secondParallel) / 2) * height;
     }
 
     @Override
-    public void drow() {
+    public void draw() {
         System.out.println("Figure: isosceles trapezoid"
                 + ", area: "
-                + getArea()
+                + calculateArea()
                 + " sq.units"
                 + ", firstParallel: "
                 + firstParallel

@@ -9,15 +9,15 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return Math.PI * Math.pow(radius,2);
     }
 
     @Override
-    public void drow() {
+    public void draw() {
         System.out.println("Figure: circle"
                 + ", area: "
-                + getArea()
+                + calculateArea()
                 + " sq.units"
                 + ", radius: "
                 + radius

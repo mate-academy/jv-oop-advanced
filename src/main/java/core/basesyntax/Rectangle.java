@@ -11,15 +11,15 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return length * width;
     }
 
     @Override
-    public void drow() {
+    public void draw() {
         System.out.println("Figure: rectangle"
                 + ", area: "
-                + getArea()
+                + calculateArea()
                 + " sq.units"
                 + ", length: "
                 + length
