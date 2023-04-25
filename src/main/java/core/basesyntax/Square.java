@@ -22,5 +22,4 @@ public class Square extends Figure {
                 + " units, color: "
                 + getColor().name().toLowerCase());
     }
-
 }

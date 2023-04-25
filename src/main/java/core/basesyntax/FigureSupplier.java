@@ -35,33 +35,39 @@ public class FigureSupplier {
     private Figure createRandomCircle() {
         Color randomColor = randomColorSupplier.getRandomColor();
         String colorName = randomColor.name();
-        return new Circle(colorName, random.nextInt(MAX_RADIUS));
+        int radius = random.nextInt(MAX_RADIUS);
+        return new Circle(colorName, radius);
     }
 
     private Figure createRandomSquare() {
-        return new Square(randomColorSupplier.getRandomColor(), random.nextInt(MAX_SIDE));
+        Color randomColor = randomColorSupplier.getRandomColor();
+        int side = random.nextInt(MAX_SIDE);
+        return new Square(randomColor, side);
     }
 
     private Figure createRectangle() {
-        return new Rectangle(randomColorSupplier.getRandomColor(),
-                random.nextInt(MAX_SIDE),
-                random.nextInt(MAX_SIDE));
+        Color randomColor = randomColorSupplier.getRandomColor();
+        int width = random.nextInt(MAX_SIDE);
+        int height = random.nextInt(MAX_SIDE);
+        return new Rectangle(randomColor, width, height);
     }
 
     private Figure createRandomRightTriangle() {
-        return new RightTriangle(randomColorSupplier.getRandomColor(),
-                random.nextInt(MAX_SIDE),
-                random.nextInt(MAX_SIDE));
+        Color randomColor = randomColorSupplier.getRandomColor();
+        int base = random.nextInt(MAX_SIDE);
+        int height = random.nextInt(MAX_SIDE);
+        return new RightTriangle(randomColor, base, height);
     }
 
     private Figure createRandomIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(randomColorSupplier.getRandomColor(),
-                random.nextInt(MAX_LENGTH),
-                random.nextInt(MAX_LENGTH),
-                random.nextInt(MAX_LENGTH));
+        Color randomColor = randomColorSupplier.getRandomColor();
+        int topBase = random.nextInt(MAX_LENGTH);
+        int bottomBase = random.nextInt(MAX_LENGTH);
+        int height = random.nextInt(MAX_LENGTH);
+        return new IsoscelesTrapezoid(randomColor, topBase, bottomBase, height);
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.White.name(), DEFAULT_RADIUS);
+        return new Circle(Color.WHITE.name(), DEFAULT_RADIUS);
     }
 }
