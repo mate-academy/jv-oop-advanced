@@ -3,37 +3,38 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    static final ColorSupplier colorSupplier = new ColorSupplier();
-    static final int maxParameterValue = 50;
-    static final int FIGURES_COUNT = 5;
-    static final Random random = new Random();
-    static final int DEFAULT_RADIUS = 10;
+    private static final int MAX_PARAMETER_VALUE = 50;
+    private static final int FIGURES_COUNT = 5;
+    private static final int DEFAULT_RADIUS = 10;
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
         String color = colorSupplier.getRandomColor();
-        double side = new Random().nextInt(maxParameterValue);
-        double width = new Random().nextInt(maxParameterValue);
-        double height = new Random().nextInt(maxParameterValue);
-        double radius = new Random().nextInt(maxParameterValue);
-        double base = new Random().nextInt(maxParameterValue);
-        double firstLeg = new Random().nextInt(maxParameterValue);
-        double secondLeg = new Random().nextInt(maxParameterValue);
         int value = random.nextInt(FIGURES_COUNT);
         switch (value) {
             case 0:
+                double side = random.nextInt(MAX_PARAMETER_VALUE);
                 return new Square(color, side);
             case 1:
+                double width = random.nextInt(MAX_PARAMETER_VALUE);
+                double height = random.nextInt(MAX_PARAMETER_VALUE);
                 return new Rectangle(color, width, height);
             case 2:
+                double radius = random.nextInt(MAX_PARAMETER_VALUE);
                 return new Circle(color, radius);
             case 3:
-                return new IsoscelesTrapezoid(color, base, height);
+                double base = random.nextInt(MAX_PARAMETER_VALUE);
+                double trapezoidHeight = random.nextInt(MAX_PARAMETER_VALUE);
+                return new IsoscelesTrapezoid(color, base, trapezoidHeight);
             default:
+                double firstLeg = random.nextInt(MAX_PARAMETER_VALUE);
+                double secondLeg = random.nextInt(MAX_PARAMETER_VALUE);
                 return new RightTriangle(color, firstLeg, secondLeg);
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.getValue(), DEFAULT_RADIUS);
+        return new Circle(Color.WHITE.name().toLowerCase(), DEFAULT_RADIUS);
     }
 }
