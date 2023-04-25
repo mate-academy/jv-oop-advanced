@@ -27,5 +27,3 @@ public class IsoscelesTrapezoid extends Figure {
                 + height + " units, color: " + getColor());
     }
 }
-
-
