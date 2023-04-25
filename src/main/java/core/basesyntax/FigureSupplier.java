@@ -11,20 +11,28 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int index = random.nextInt(FIGURES_TYPES_QUANTITY) + 1;
-        int randomNumber = random.nextInt(MAX_RANDOM_OF_FIGURES_PARAMETERS) + 1;
         String randomColor = new ColorSupplier().getRandomColor();
         switch (index) {
             case 1:
-                return new Circle(randomColor, randomNumber);
+                int radius = random.nextInt(MAX_RANDOM_OF_FIGURES_PARAMETERS) + 1;
+                return new Circle(randomColor, radius);
             case 2:
-                return new Square(randomColor, randomNumber);
+                int side = random.nextInt(MAX_RANDOM_OF_FIGURES_PARAMETERS) + 1;
+                return new Square(randomColor, side);
             case 3:
-                return new Rectangle(randomColor, randomNumber, randomNumber);
+                int rectangleHeight = random.nextInt(MAX_RANDOM_OF_FIGURES_PARAMETERS) + 1;
+                int rectangleWidth = random.nextInt(MAX_RANDOM_OF_FIGURES_PARAMETERS) + 1;
+                return new Rectangle(randomColor, rectangleHeight, rectangleWidth);
             case 4:
-                return new RightTriangle(randomColor, randomNumber, randomNumber);
+                int firstLeg = random.nextInt(MAX_RANDOM_OF_FIGURES_PARAMETERS) + 1;
+                int secondLeg = random.nextInt(MAX_RANDOM_OF_FIGURES_PARAMETERS) + 1;
+                return new RightTriangle(randomColor, firstLeg, secondLeg);
             default:
-                return new IsoscelesTrapezoid(randomColor, randomNumber, randomNumber,
-                        randomNumber);
+                int firstBaseSide = random.nextInt(MAX_RANDOM_OF_FIGURES_PARAMETERS) + 1;
+                int secondBaseSide = random.nextInt(MAX_RANDOM_OF_FIGURES_PARAMETERS) + 1;
+                int isoscelesTrapezoidHeight = random.nextInt(MAX_RANDOM_OF_FIGURES_PARAMETERS) + 1;
+                return new IsoscelesTrapezoid(randomColor, firstBaseSide, secondBaseSide,
+                        isoscelesTrapezoidHeight);
         }
     }
 
