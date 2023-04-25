@@ -10,10 +10,10 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final static int MAX_RANDOM_PARAMETER = 50;
-    private final static int DEFAULT_RADIUS = 10;
-    private final static int NUMBER_OF_RANDOM_FIGURE = 5;
-    private final static Color DEFAULT_COLOR = Color.WHITE;
+    private static final int MAX_RANDOM_PARAMETER = 50;
+    private static final int DEFAULT_RADIUS = 10;
+    private static final int NUMBER_OF_RANDOM_FIGURE = 5;
+    private static final Color DEFAULT_COLOR = Color.WHITE;
 
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
