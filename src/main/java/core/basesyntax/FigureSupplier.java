@@ -7,7 +7,7 @@ public class FigureSupplier {
     public static final int MAX_NUMBER = 100;
     public static final int MAX_BOUND = 5;
     private final Random random = new Random();
-    private final String getRandomColor = new ColorSupplier().getRandomColor();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int randomFigure = random.nextInt(MAX_BOUND) + 1;
@@ -28,35 +28,36 @@ public class FigureSupplier {
     }
 
     public Figure defaultFigure() {
-        return new Circle(Color.WHITE.getValue(),DEFAULT_RADIUS);
+        return new Circle(Color.WHITE.name().toLowerCase(), DEFAULT_RADIUS);
     }
 
     public Figure getRandomCircle() {
         int randomRadius = random.nextInt(MAX_NUMBER);
-        return new Circle(getRandomColor, randomRadius);
+        return new Circle(colorSupplier.randomColor(), randomRadius);
     }
 
     public Figure getRandomSquare() {
         int randomSide = random.nextInt(MAX_NUMBER);
-        return new Square(getRandomColor, randomSide);
+        return new Square(colorSupplier.randomColor(), randomSide);
     }
 
     public Figure getRandomRightTriangle() {
         int randomBase = random.nextInt(MAX_NUMBER);
         int randomHeight = random.nextInt(MAX_NUMBER);
-        return new RightTriangle(getRandomColor, randomBase, randomHeight);
+        return new RightTriangle(colorSupplier.randomColor(), randomBase, randomHeight);
     }
 
     public Figure getRandomIsoscelesTrapezoid() {
         int randomBaseOne = random.nextInt(MAX_NUMBER);
         int randomBaseTwo = random.nextInt(MAX_NUMBER);
         int randomHeight = random.nextInt(MAX_NUMBER);
-        return new IsoscelesTrapezoid(getRandomColor,randomBaseOne,randomBaseTwo,randomHeight);
+        return new IsoscelesTrapezoid(colorSupplier.randomColor(),
+                   randomBaseOne,randomBaseTwo,randomHeight);
     }
 
     public Figure getRandomRectangle() {
-        int randomWight = random.nextInt(MAX_NUMBER);
+        int randomWidth = random.nextInt(MAX_NUMBER);
         int randomHeight = random.nextInt(MAX_NUMBER);
-        return new Rectangle(getRandomColor,randomWight,randomHeight);
+        return new Rectangle(colorSupplier.randomColor(),randomWidth,randomHeight);
     }
 }
