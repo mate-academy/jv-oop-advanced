@@ -15,8 +15,9 @@ public abstract class Figure implements Figureable {
         this.color = color;
     }
 
-    public abstract double getArea();
-
-    public void draw() {
+    public double getArea() {
+        return 0;
     }
+
+    public abstract void draw();
 }
