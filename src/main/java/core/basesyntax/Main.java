@@ -12,8 +12,8 @@ public class Main {
             }
         }
 
-        for (Figure figure : figures) {
-            figure.draw();
+        for (int i = 0; i < figures.length; i++) {
+            figures[i].draw();
         }
     }
 }
