@@ -1,23 +1,10 @@
 package core.basesyntax;
 
-public abstract class Figure {
-    private String color;
+public interface Figure {
 
-    public Figure(String color) {
-        this.color = color;
-    }
+    double getArea();
 
-    public String getColor() {
-        return color;
-    }
+    String getColor();
 
-    public abstract double getArea();
-
-    public abstract String getName();
-
-    public void draw() {
-        System.out.println("Figure: " + getName()
-                + ", area: " + getArea()
-                + " sq.units, color: " + color);
-    }
+    void draw();
 }
