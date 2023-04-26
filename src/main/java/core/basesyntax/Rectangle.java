@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Area, Drawing {
+public class Rectangle extends Figure implements Area, Drawable {
     private double high;
     private double width;
 
@@ -21,6 +21,5 @@ public class Rectangle extends Figure implements Area, Drawing {
                 + getArea() + " sq.units, high: "
                 + high + " units, width: "
                 + width + " units, color: " + color);
-
     }
 }

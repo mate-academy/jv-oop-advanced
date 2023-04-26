@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements Area, Drawing {
+public class Circle extends Figure implements Area, Drawable {
     private double radius;
 
     public Circle(double radius, String color) {
@@ -10,7 +10,7 @@ public class Circle extends Figure implements Area, Drawing {
 
     @Override
     public double getArea() {
-        return (radius * radius) * 3.14;
+        return radius * radius * Math.PI;
     }
 
     @Override
