@@ -42,7 +42,8 @@ public class FigureSupplier {
         }
         return new Figure(colorSupplier.getRandomColor()) {
             @Override
-            public void draw() {
+            public double getArea() {
+                return 0;
             }
         };
     }
