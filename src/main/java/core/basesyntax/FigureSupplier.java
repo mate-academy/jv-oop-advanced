@@ -11,45 +11,31 @@ public class FigureSupplier {
         final Random random = new Random();
         final int figureNumber = random.nextInt(FIGURE_COUNT);
         final ColorSupplier colorSupplier = new ColorSupplier();
-        final Figure circle = new Circle(colorSupplier.getRandomColor(),
-                random.nextDouble());
-        final Figure square = new Square(colorSupplier.getRandomColor(),
-                random.nextInt(MAX_LENGTH_OF_SEGMENT));
-        final Figure rectangle = new Rectangle(colorSupplier.getRandomColor(),
-                random.nextInt(MAX_LENGTH_OF_SEGMENT), random.nextInt(MAX_LENGTH_OF_SEGMENT));
-        final Figure rightTriangle = new RightTriangle(colorSupplier.getRandomColor(),
-                random.nextDouble(), random.nextDouble());
-        final Figure isoscelesTrapezoid = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                random.nextDouble(), random.nextDouble(), random.nextInt(MAX_LENGTH_OF_SEGMENT));
         switch (figureNumber) {
             case 0:
-                circle.draw();
-                break;
+                return new Circle(colorSupplier.getRandomColor(),
+                        random.nextDouble());
             case 1:
-                square.draw();
-                break;
+                return new Square(colorSupplier.getRandomColor(),
+                        random.nextInt(MAX_LENGTH_OF_SEGMENT));
             case 2:
-                rectangle.draw();
-                break;
+                return new Rectangle(colorSupplier.getRandomColor(),
+                        random.nextInt(MAX_LENGTH_OF_SEGMENT),
+                        random.nextInt(MAX_LENGTH_OF_SEGMENT));
             case 3:
-                rightTriangle.draw();
-                break;
+                return new RightTriangle(colorSupplier.getRandomColor(),
+                        random.nextDouble(), random.nextDouble());
             case 4:
-                isoscelesTrapezoid.draw();
-                break;
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        random.nextDouble(), random.nextDouble(),
+                        random.nextInt(MAX_LENGTH_OF_SEGMENT));
             default:
                 break;
         }
-        return new Figure(colorSupplier.getRandomColor()) {
-            @Override
-            public double getArea() {
-                return 0;
-            }
-        };
+        return null;
     }
 
     public Figure getDefaultFigure() {
-        new Circle(Color.WHITE.toString(), DEFAULT_RADIUS).draw();
-        return new Circle(Color.WHITE.toString(), DEFAULT_RADIUS);
+        return new Circle(Color.WHITE.name(), DEFAULT_RADIUS);
     }
 }
