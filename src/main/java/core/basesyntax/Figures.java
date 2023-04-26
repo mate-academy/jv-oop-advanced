@@ -5,5 +5,5 @@ public enum Figures {
     ISOSCELESTRAPEZOID,
     RIGHTTRIANGLE,
     RECTANGLE,
-    SQUARE,
+    SQUARE
 }
