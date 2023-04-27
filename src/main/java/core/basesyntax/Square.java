@@ -19,6 +19,5 @@ public class Square extends Figure {
                 + ", area: " + getArea()
                 + " sq.units, side: " + side
                 + " units, color: " + getColor());
-
     }
 }
