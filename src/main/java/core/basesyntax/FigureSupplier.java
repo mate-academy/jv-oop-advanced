@@ -3,14 +3,16 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    protected Figure getRandomFigureName() {
-        int maxSize = 20;
-        int minSize = 5;
+    private static final int maxSize = 20;
+    private static final int minSize = 5;
+    private static final int defaultSize = 10;
+    private static final String defaultColor = "WHITE";
+    private final Random random = new Random();
+
+    public Figure getRandomFigureName() {
         ColorSupplier colorSupplier = new ColorSupplier();
-        Random random = new Random();
         int index = random.nextInt(Forms.values().length);
-        String value = Forms.values()[index].getForm();
-        switch (value) {
+        switch (Forms.values()[index].getForm()) {
             case "CIRCLE":
                 int radius = random.nextInt(maxSize) + minSize;
                 Figure circle = new Circle(radius);
@@ -41,7 +43,7 @@ public class FigureSupplier {
                 rightTriangle.getArea();
                 rightTriangle.draw();
                 return rightTriangle;
-            case "TRAPEZOID" :
+            case "TRAPEZOID":
                 int basisDown = random.nextInt(maxSize) + minSize;
                 int basisUp = random.nextInt(basisDown - 1) + basisDown - 2;
                 int height1 = random.nextInt(maxSize) + minSize;
@@ -51,14 +53,12 @@ public class FigureSupplier {
                 isoscelesTrapezoid.draw();
                 return isoscelesTrapezoid;
             default:
-                return null;
+                System.out.println("Figure not found");
         }
-
+        return null;
     }
 
     protected Figure getDefaultFigure() {
-        int defaultSize = 10;
-        String defaultColor = "WHITE";
         Figure circle = new Circle(defaultSize);
         circle.setColor(defaultColor);
         circle.getArea();
