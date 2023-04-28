@@ -25,7 +25,6 @@ public class FigureSupplier {
                 return getRandomIsoscelesTrapezoid();
             default:
                 return getDefaultFigure();
-
         }
     }
 
@@ -58,7 +57,6 @@ public class FigureSupplier {
 
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
-
     }
 }
 
