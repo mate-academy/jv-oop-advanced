@@ -8,7 +8,7 @@ public abstract class Figure implements AreaCalculator, Printable {
     }
 
     public void setColor(Color color) {
-    this.color = color;
+        this.color = color;
     }
 
     public Color getColor() {
