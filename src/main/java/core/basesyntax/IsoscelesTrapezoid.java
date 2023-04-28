@@ -5,11 +5,11 @@ public class IsoscelesTrapezoid extends Figure {
     private double bottom;
     private double height;
 
-    public IsoscelesTrapezoid(double top, double bottom, double high, String color) {
+    public IsoscelesTrapezoid(double top, double bottom, double height, String color) {
         super(color);
         this.top = top;
         this.bottom = bottom;
-        this.height = high;
+        this.height = height;
     }
 
     @Override
