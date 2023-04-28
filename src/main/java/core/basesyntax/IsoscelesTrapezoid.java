@@ -3,18 +3,18 @@ package core.basesyntax;
 public class IsoscelesTrapezoid extends Figure {
     private double top;
     private double bottom;
-    private double high;
+    private double height;
 
     public IsoscelesTrapezoid(double top, double bottom, double high, String color) {
         super(color);
         this.top = top;
         this.bottom = bottom;
-        this.high = high;
+        this.height = high;
     }
 
     @Override
     public double getArea() {
-        return ((top + bottom) / 2) * high;
+        return ((top + bottom) / 2) * height;
     }
 
     @Override
@@ -22,8 +22,8 @@ public class IsoscelesTrapezoid extends Figure {
         System.out.println("Figure: isosceles trapezoid, area: "
                 + getArea() + " sq.units, top: "
                 + top + " units, bottom: "
-                + bottom + " units, high: "
-                + high + " units, color: " + color);
+                + bottom + " units, height: "
+                + height + " units, color: " + color);
 
     }
 }
