@@ -23,6 +23,5 @@ public class IsoscelesTrapezoid extends Figure {
                 + " sq.units, firstLeg: " + firstLeg + "units, secondLeg: "
                 + secondLeg + "units, angle: " + angle + " units, color: "
                 + getColor().name().toLowerCase());
-
     }
 }

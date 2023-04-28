@@ -15,38 +15,38 @@ public class FigureSupplier {
         this.colorSupplier = colorSupplier;
     }
 
-    private int randomInt() {
+    public int randomInt() {
         return random.nextInt(BOUND);
     }
 
-    private Figure getRandomCircle() {
+    public Figure getRandomCircle() {
         return new Circle(Color.valueOf(colorSupplier.getRandomColor()), randomInt());
     }
 
-    private Figure getRandomSquare() {
+    public Figure getRandomSquare() {
         return new Square(Color.valueOf(colorSupplier.getRandomColor()), randomInt());
     }
 
-    private Figure getRandomTriangle() {
+    public Figure getRandomTriangle() {
         return new RightTriangle(Color.valueOf(colorSupplier.getRandomColor()),
                 randomInt(), randomInt());
     }
 
-    private Figure getRandomTrapezoid() {
+    public Figure getRandomTrapezoid() {
         return new IsoscelesTrapezoid(Color.valueOf(colorSupplier.getRandomColor()), randomInt(),
                 randomInt(), randomInt());
     }
 
-    private Figure getRandomRectangle() {
+    public Figure getRandomRectangle() {
         return new Rectangle(Color.valueOf(colorSupplier.getRandomColor()),
                 randomInt(), randomInt());
     }
 
-    protected Figure getDefaultFigure() {
+    public Figure getDefaultFigure() {
         return new Circle(DEFAULT_CIRCLE_COLOR, DEFAULT_CIRCLE_RADIUS);
     }
 
-    protected Figure getRandomFigure() {
+    public Figure getRandomFigure() {
         switch (random.nextInt(NUMBERS_OF_FIGURE)) {
             case 0:
                 return getRandomCircle();

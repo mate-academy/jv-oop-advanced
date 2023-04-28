@@ -10,13 +10,14 @@ public class Main {
         final ColorSupplier colorSupplier = new ColorSupplier(random);
         final FigureSupplier figureSupplier = new FigureSupplier(random, colorSupplier);
         Figure[] figures = new Figure[NUMBER_OF_FIGURES];
-        for (int i = 0; i < NUMBER_OF_FIGURES / 2; i++) {
-            figures[i] = figureSupplier.getRandomFigure();
-            figures[i].draw();
-        }
-        for (int i = NUMBER_OF_FIGURES / 2; i < NUMBER_OF_FIGURES; i++) {
-            figures[i] = figureSupplier.getDefaultFigure();
-            figures[i].draw();
+        for (int i = 0; i < NUMBER_OF_FIGURES; i++) {
+            if (i < NUMBER_OF_FIGURES / 2) {
+                figures[i] = figureSupplier.getRandomFigure();
+                figures[i].draw();
+            } else {
+                figures[i] = figureSupplier.getDefaultFigure();
+                figures[i].draw();
+            }
         }
     }
 }
