@@ -1,13 +1,14 @@
 package core.basesyntax;
 
-public abstract class Figure implements Area, PrintInfo {
+public abstract class Figure implements AreaCalculator, Printable {
     private Color color;
 
     public Figure(Color color) {
         this.color = color;
     }
 
-    protected Figure() {
+    public void setColor(Color color) {
+    this.color = color;
     }
 
     public Color getColor() {
