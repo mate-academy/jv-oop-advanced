@@ -15,33 +15,6 @@ public class FigureSupplier {
         this.colorSupplier = colorSupplier;
     }
 
-    public int randomInt() {
-        return random.nextInt(BOUND);
-    }
-
-    public Figure getRandomCircle() {
-        return new Circle(Color.valueOf(colorSupplier.getRandomColor()), randomInt());
-    }
-
-    public Figure getRandomSquare() {
-        return new Square(Color.valueOf(colorSupplier.getRandomColor()), randomInt());
-    }
-
-    public Figure getRandomTriangle() {
-        return new RightTriangle(Color.valueOf(colorSupplier.getRandomColor()),
-                randomInt(), randomInt());
-    }
-
-    public Figure getRandomTrapezoid() {
-        return new IsoscelesTrapezoid(Color.valueOf(colorSupplier.getRandomColor()), randomInt(),
-                randomInt(), randomInt());
-    }
-
-    public Figure getRandomRectangle() {
-        return new Rectangle(Color.valueOf(colorSupplier.getRandomColor()),
-                randomInt(), randomInt());
-    }
-
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_CIRCLE_COLOR, DEFAULT_CIRCLE_RADIUS);
     }
@@ -61,5 +34,32 @@ public class FigureSupplier {
             default:
                 return getDefaultFigure();
         }
+    }
+
+    private int randomInt() {
+        return random.nextInt(BOUND);
+    }
+
+    private Figure getRandomCircle() {
+        return new Circle(Color.valueOf(colorSupplier.getRandomColor()), randomInt());
+    }
+
+    private Figure getRandomSquare() {
+        return new Square(Color.valueOf(colorSupplier.getRandomColor()), randomInt());
+    }
+
+    private Figure getRandomTriangle() {
+        return new RightTriangle(Color.valueOf(colorSupplier.getRandomColor()),
+                randomInt(), randomInt());
+    }
+
+    private Figure getRandomTrapezoid() {
+        return new IsoscelesTrapezoid(Color.valueOf(colorSupplier.getRandomColor()), randomInt(),
+                randomInt(), randomInt());
+    }
+
+    private Figure getRandomRectangle() {
+        return new Rectangle(Color.valueOf(colorSupplier.getRandomColor()),
+                randomInt(), randomInt());
     }
 }
