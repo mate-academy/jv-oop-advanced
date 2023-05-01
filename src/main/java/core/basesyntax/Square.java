@@ -11,7 +11,6 @@ public class Square extends Figure {
 
     @Override
     public void getDraw() {
-        super.getDraw();
     }
 
     @Override

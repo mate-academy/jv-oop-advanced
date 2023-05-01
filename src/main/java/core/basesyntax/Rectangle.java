@@ -13,7 +13,6 @@ public class Rectangle extends Figure {
 
     @Override
     public void getDraw() {
-        super.getDraw();
     }
 
     @Override

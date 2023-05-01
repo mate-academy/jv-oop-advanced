@@ -5,6 +5,9 @@ import java.util.Random;
 public class FIgureSupplier {
     private static final int FIGURE_COUNT = 5;
     private static final int MAX_VALUE = 10;
+    private static final int RADIUS_CIRCLE = 10;
+    private static final String COLOR_CIRCLE = "WHITE";
+
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -27,11 +30,11 @@ public class FIgureSupplier {
             case 4:
                 return new Square(random.nextInt(MAX_VALUE), colorSupplier.getRandomColor());
             default:
-                throw new IllegalStateException("Unexpected value: " + index);
+                return getDefaultFigure();
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, "white");
+        return new Circle(RADIUS_CIRCLE, COLOR_CIRCLE);
     }
 }

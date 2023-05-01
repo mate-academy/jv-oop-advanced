@@ -13,7 +13,6 @@ public class RightTriangle extends Figure {
 
     @Override
     public void getDraw() {
-        super.getDraw();
     }
 
     @Override

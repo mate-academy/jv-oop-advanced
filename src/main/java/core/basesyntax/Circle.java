@@ -11,7 +11,6 @@ public class Circle extends Figure {
 
     @Override
     public void getDraw() {
-        super.getDraw();
     }
 
     @Override
