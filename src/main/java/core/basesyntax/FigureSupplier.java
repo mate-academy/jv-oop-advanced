@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int FIGURE_NUM = 5; //FIGURE_NUM - number of figure subclasses
+    private static final int NUMBER_OF_FIGURES = 5; //FIGURE_NUM - number of figure subclasses
     private static final int MAX_RANDOM = 9;
 
     private final ColorSupplier colorSupplier = new ColorSupplier();
@@ -11,7 +11,7 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         Figure figure;
-        int randomFigure = random.nextInt(FIGURE_NUM);
+        int randomFigure = random.nextInt(NUMBER_OF_FIGURES);
 
         switch (randomFigure) {
             case 0:
@@ -37,11 +37,11 @@ public class FigureSupplier {
         return figure;
     }
 
-    private int getRandomSide() {
-        return random.nextInt(MAX_RANDOM) + 1;
+    public Figure getDefaultFigure() {
+        return new Circle(10, Color.WHITE.name());
     }
 
-    public Figure getDefaultFigure() {
-        return new Circle(10, "WHITE");
+    private int getRandomSide() {
+        return random.nextInt(MAX_RANDOM) + 1;
     }
 }
