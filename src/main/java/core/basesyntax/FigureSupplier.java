@@ -3,45 +3,60 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final Random RANDOM = new Random();
+    private static final Random random = new Random();
 
     public static Figure getRandomFigure() {
-        Figure figure;
-        String color = ColorSupplier.getRandomColor();
-
-        switch (RANDOM.nextInt(5)) {
+        switch (random.nextInt(5)) {
             case 0:
-                double side = RANDOM.nextInt(10) + 1;
-                figure = new Square(side, color);
-                break;
+                return prepareSquare();
             case 1:
-                double length = RANDOM.nextInt(10) + 1;
-                double width = RANDOM.nextInt(10) + 1;
-                figure = new Rectangle(length, width, color);
-                break;
+                return prepareRectangle();
             case 2:
-                double firstLeg = RANDOM.nextInt(10) + 1;
-                double secondLeg = RANDOM.nextInt(10) + 1;
-                figure = new RightTriangle(firstLeg, secondLeg, color);
-                break;
+                return prepareRightTriangle();
             case 3:
-                double radius = RANDOM.nextInt(10) + 1;
-                figure = new Circle(color, radius);
-                break;
+                return prepareCircle();
             case 4:
-                double base1 = RANDOM.nextInt(10) + 1;
-                double base2 = RANDOM.nextInt(10) + 1;
-                double height = RANDOM.nextInt(10) + 1;
-                figure = new IsoscelesTrapezoid(base1, base2, height, color);
-                break;
+                return prepareIsoscelesTrapezoid();
             default:
-                throw new IllegalStateException("Unexpected value: " + RANDOM.nextInt(5));
+                throw new IllegalStateException();
         }
+    }
 
-        return figure;
+    private static Square prepareSquare() {
+        double side = random.nextInt(10) + 1;
+        Color color = ColorSupplier.getRandomColor();
+        return new Square(side, color);
+    }
+
+    private static Rectangle prepareRectangle() {
+        double width = random.nextInt(10) + 1;
+        double height = random.nextInt(10) + 1;
+        Color color = ColorSupplier.getRandomColor();
+        return new Rectangle(width, height, color);
+    }
+
+    private static RightTriangle prepareRightTriangle() {
+        double firstLeg = random.nextInt(10) + 1;
+        double secondLeg = random.nextInt(10) + 1;
+        Color color = ColorSupplier.getRandomColor();
+        return new RightTriangle(firstLeg, secondLeg, color);
+    }
+
+    private static Circle prepareCircle() {
+        double radius = random.nextInt(10) + 1;
+        Color color = ColorSupplier.getRandomColor();
+        return new Circle(radius, color);
+    }
+
+    private static IsoscelesTrapezoid prepareIsoscelesTrapezoid() {
+        double upperBase = random.nextInt(10) + 1;
+        double lowerBase = random.nextInt(10) + 1;
+        double height = random.nextInt(10) + 1;
+        Color color = ColorSupplier.getRandomColor();
+        return new IsoscelesTrapezoid(upperBase, lowerBase, height, color);
     }
 
     public static Figure getDefaultFigure() {
-        return new Circle("white", 10);
+        return new Circle(10, Color.WHITE);
     }
 }
