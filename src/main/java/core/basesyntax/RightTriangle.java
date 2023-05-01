@@ -26,4 +26,3 @@ public class RightTriangle extends Figure {
                 + getColor());
     }
 }
-

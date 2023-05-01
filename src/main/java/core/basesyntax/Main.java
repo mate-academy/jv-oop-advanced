@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Main {
-    private static FigureSupplier figureSupplier = new FigureSupplier();
+    private static final FigureSupplier figureSupplier = new FigureSupplier();
     private static final int SIZE_ARRAY = 20;
 
     public static void main(String[] args) {

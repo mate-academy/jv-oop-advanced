@@ -12,22 +12,22 @@ public class FigureSupplier {
 
     public Figure getRandomFigureName() {
         int index = random.nextInt(Form.values().length);
-        switch (Form.values()[index].getForm()) {
-            case "CIRCLE":
+        switch (Form.values()[index]) {
+            case CIRCLE:
                 return prepareCircle(random.nextInt(MAX_SIZE) + MIN_SIZE,
                         colorSupplier.getRandomColor());
-            case "RECTANGLE":
+            case RECTANGLE:
                 return prepareRectangle(random.nextInt(MAX_SIZE) + MIN_SIZE,
                         random.nextInt(MAX_SIZE) + MIN_SIZE,
                         colorSupplier.getRandomColor());
-            case "SQUARE":
+            case SQUARE:
                 return prepareSquare(random.nextInt(MAX_SIZE) + MIN_SIZE,
                         colorSupplier.getRandomColor());
-            case "TRIANGLE":
+            case TRIANGLE:
                 return prepareTriangle(random.nextInt(MAX_SIZE) + MIN_SIZE,
                         random.nextInt(MAX_SIZE) + MIN_SIZE,
                         colorSupplier.getRandomColor());
-            case "TRAPEZOID":
+            case TRAPEZOID:
                 return prepareTrapezoid(random.nextInt(MAX_SIZE) + MIN_SIZE,
                         random.nextInt(MAX_SIZE) + MIN_SIZE,
                         random.nextInt(MAX_SIZE) + MIN_SIZE,
@@ -79,6 +79,5 @@ public class FigureSupplier {
         isoscelesTrapezoid.getArea();
         isoscelesTrapezoid.draw();
         return isoscelesTrapezoid;
-
     }
 }
