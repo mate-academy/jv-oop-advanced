@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class FIgureSupplier {
+public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
     private static final int MAX_VALUE = 10;
     private static final int RADIUS_CIRCLE = 10;
