@@ -1,13 +1,15 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    int top, bot, side;
+    private int top;
+    private int bot;
+    private int side;
 
     public IsoscelesTrapezoid(int top, int bot, int side, String color) {
+        super(color);
         this.top = top;
         this.bot = bot;
         this.side = side;
-        super.color = color;
     }
 
     private double getHeight() {
@@ -21,7 +23,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Trapezoid top side is " + top + ", bot side is " + bot + ", leg is " + side +
-                " and the color is " + color);
+        System.out.println("Figure: trapezoid, top side: " + top + ", bot side: " + bot + ", leg: "
+                + side + ", area: " + this.getArea() + ", color: " + getColor());
     }
 }

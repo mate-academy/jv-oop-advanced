@@ -1,12 +1,13 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private int sideA, sideB;
+    private int sideA;
+    private int sideB;
 
     public Rectangle(int sideA, int sideB, String color) {
+        super(color);
         this.sideA = sideA;
         this.sideB = sideB;
-        super.color = color;
     }
 
     @Override
@@ -16,6 +17,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Rectangle sides are " + sideA + " and " + sideB + ", rectangle color is " + color);
+        System.out.println("Figure: rectangle, side A: " + sideA + ", side B: "
+                + sideB + ", area: " + this.getArea() + ", color: " + getColor());
     }
 }

@@ -1,12 +1,13 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private int firstLeg, secondLeg;
+    private int firstLeg;
+    private int secondLeg;
 
     public RightTriangle(int firstLeg, int secondLeg, String color) {
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        super.color = color;
     }
 
     private double getHypotenuse() {
@@ -20,7 +21,8 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Triangle first leg is " + firstLeg + ", triangle second leg is " + secondLeg +
-                ", hypotenuse is " + getHypotenuse());
+        System.out.println("Figure: triangle, first leg: " + firstLeg + ", second leg: "
+                + secondLeg + ", hypotenuse: " + getHypotenuse() + ", area: "
+                + this.getArea() + "color: " + getColor());
     }
 }

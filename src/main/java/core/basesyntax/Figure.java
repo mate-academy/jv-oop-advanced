@@ -1,9 +1,13 @@
 package core.basesyntax;
 
-public abstract class Figure {
-    String color;
+public abstract class Figure implements AreaCalculator, Drawable {
+    private String color;
 
-    public abstract double getArea();
+    public Figure(String color) {
+        this.color = color;
+    }
 
-    public abstract void draw();
+    public String getColor() {
+        return color;
+    }
 }
