@@ -6,7 +6,7 @@ public class FigureSupplier {
     private static final int MAX_SIZE = 20;
     private static final int MIN_SIZE = 5;
     private static final int DEFAULT_SIZE = 10;
-    private static final String DEFAULT_COLOR = Color.WHITE.getColor();
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
