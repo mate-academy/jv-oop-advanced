@@ -60,6 +60,8 @@ public class DefaultFigureSupplier implements FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, Color.WHITE);
+        double defaultRadius = 10.0;
+        Color defaultColor = Color.WHITE;
+        return new Circle(defaultRadius, defaultColor);
     }
 }
