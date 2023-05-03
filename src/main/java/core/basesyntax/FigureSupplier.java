@@ -11,7 +11,7 @@ public class FigureSupplier {
         this.colorSupplier = colorSupplier;
     }
 
-    public Figure getRandomFigure() {
+    public Drawable getRandomFigure() {
         String color = colorSupplier.getRandomColor();
         String[] figureTypes = {"Square", "Rectangle",
                 "Right Rectangle", "Circle", "Isosceles Trapezoid"};
@@ -20,10 +20,10 @@ public class FigureSupplier {
         return createFigure(figureType, random, colorSupplier);
     }
 
-    private static Figure createFigure(String figureType,
-                                       Random random,
-                                       ColorSupplier colorSupplier) {
-        Figure figure;
+    private static Drawable createFigure(String figureType,
+                                         Random random,
+                                         ColorSupplier colorSupplier) {
+        Drawable figure;
         switch (figureType) {
             case "Square":
                 double side = random.nextDouble() * 10 + 1;
@@ -60,7 +60,7 @@ public class FigureSupplier {
         return figure;
     }
 
-    public static Figure getDefaultFigure() {
-        return (Figure) new Circle(10, "white");
+    public static Drawable getDefaultFigure() {
+        return (Drawable) new Circle(10, "white");
     }
 }

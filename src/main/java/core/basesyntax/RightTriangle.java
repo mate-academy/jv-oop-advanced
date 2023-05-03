@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-class RightTriangle extends Shape {
+class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
@@ -20,14 +20,5 @@ class RightTriangle extends Shape {
                 + " first leg: " + firstLeg
                 + " second leg: " + secondLeg
                 + " color: " + getColor());
-    }
-
-    @Override
-    public String toString() {
-        return "RightTriangle{"
-                + "firstLeg=" + firstLeg
-                + ", secondLeg=" + secondLeg
-                + ", color='" + getColor() + '\''
-                + '}';
     }
 }
