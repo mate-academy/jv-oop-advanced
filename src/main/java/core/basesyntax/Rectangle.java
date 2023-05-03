@@ -40,7 +40,8 @@ public class Rectangle extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: Rectangle\nColor: " + getColor() + "\nArea: " + getArea()
-                + "\nFirst leg: " + thirdLeg + "\nSecond leg: " + secondLeg + "\nThird leg: " + thirdLeg);
+                + "\nFirst leg: " + thirdLeg + "\nSecond leg: " + secondLeg
+                + "\nThird leg: " + thirdLeg);
     }
 
     @Override

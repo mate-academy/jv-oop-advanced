@@ -1,14 +1,15 @@
 package core.basesyntax;
 
 import java.util.Random;
+
 public class FigureSupplier {
-    ColorSupplier colorSupplier = new ColorSupplier();
-    Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
         Figure figure;
-        int NUMBER_OF_FIGURES = 5;
-        int randomFigure = random.nextInt(NUMBER_OF_FIGURES);
+        int numberOfFigures = 5;
+        int randomFigure = random.nextInt(numberOfFigures);
 
         switch (randomFigure) {
             case 0:
@@ -35,8 +36,8 @@ public class FigureSupplier {
     }
 
     private double getRandomSide() {
-        int MAX_SIDE_UNITS = 19;
-        return random.nextDouble(MAX_SIDE_UNITS) + 1;
+        int maxSideUnits = 19;
+        return random.nextDouble(maxSideUnits) + 1;
     }
 
     public Figure getDefaultFigure() {
