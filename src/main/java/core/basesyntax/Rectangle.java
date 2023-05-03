@@ -39,8 +39,8 @@ public class Rectangle extends Figure implements Drawable, Areable {
 
     @Override
     public void draw() {
-        System.out.println("Figure: Rectangle\nColor: " + getColor() + "\nFirst leg: " + thirdLeg
-                + "\nSecond leg: " + secondLeg + "\nThird leg: " + thirdLeg);
+        System.out.println("Figure: Rectangle\nColor: " + getColor() + "\nArea: " + getArea()
+                + "\nFirst leg: " + thirdLeg + "\nSecond leg: " + secondLeg + "\nThird leg: " + thirdLeg);
     }
 
     @Override

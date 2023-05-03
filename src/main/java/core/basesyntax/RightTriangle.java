@@ -29,7 +29,7 @@ public class RightTriangle extends Figure implements Drawable, Areable {
 
     @Override
     public void draw() {
-        System.out.println("Figure: Right rectangle\nColor: " + getColor()
+        System.out.println("Figure: Right rectangle\nColor: " + getColor() + "\nArea: " + getArea()
                 + "\nFirst leg: " + firstLeg + "\nSecond leg: " + secondLeg);
     }
 

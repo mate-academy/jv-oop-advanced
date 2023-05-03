@@ -19,7 +19,7 @@ public class Circle extends Figure implements Drawable, Areable {
 
     @Override
     public void draw() {
-        System.out.println("Figure: Circle\nColor : " + getColor() + "\nRadius: " + radius);
+        System.out.println("Figure: Circle\nColor : " + getColor() + "\nArea: " + getArea() + "\nRadius: " + radius);
     }
 
     @Override
