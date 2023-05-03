@@ -5,8 +5,8 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
     private static final int MAX_VALUE = 10;
-    private static final int RADIUS_CIRCLE = 10;
-    private static final String COLOR_CIRCLE = "WHITE";
+    private static final int DEFAULT_RADIUS = 10;
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
 
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
@@ -27,14 +27,12 @@ public class FigureSupplier {
                 return new RightTriangle(random.nextInt(MAX_VALUE),
                         random.nextInt(MAX_VALUE),
                         colorSupplier.getRandomColor());
-            case 4:
-                return new Square(random.nextInt(MAX_VALUE), colorSupplier.getRandomColor());
             default:
-                return getDefaultFigure();
+                return new Square(random.nextInt(MAX_VALUE), colorSupplier.getRandomColor());
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(RADIUS_CIRCLE, COLOR_CIRCLE);
+        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
     }
 }

@@ -6,11 +6,12 @@ public class Main {
         AreaCalculator[] figure = new AreaCalculator[6];
         for (int i = 0; i < figure.length; i++) {
             if (i < figure.length / 2) {
-                System.out.println(figureSupplier.getRandomFigure());
+                figureSupplier.getRandomFigure().draw();
+                figureSupplier.getRandomFigure().getArea();
             } else {
-                System.out.println(figureSupplier.getDefaultFigure());
+                figureSupplier.getDefaultFigure().draw();
+                figureSupplier.getDefaultFigure().getArea();
             }
         }
     }
 }
-

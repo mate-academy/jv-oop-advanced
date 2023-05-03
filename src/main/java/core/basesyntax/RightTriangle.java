@@ -3,16 +3,15 @@ package core.basesyntax;
 public class RightTriangle extends Figure {
     private int sideR;
     private int height;
-    private String color;
 
     public RightTriangle(int sideR, int height, String color) {
+        super(color);
         this.sideR = sideR;
         this.height = height;
-        this.color = color;
     }
 
     @Override
-    public void getDraw() {
+    public void draw() {
     }
 
     @Override
