@@ -36,8 +36,8 @@ public class FigureSupplier {
     }
 
     private double getRandomSide() {
-        int maxSideUnits = 19;
-        return random.nextDouble(maxSideUnits) + 1;
+        int maxSideUnits = 9;
+        return maxSideUnits * random.nextDouble() + 1;
     }
 
     public Figure getDefaultFigure() {
