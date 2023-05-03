@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Drawable{
+public class Rectangle extends Figure implements Drawable, Areable {
 
     private double firstLeg;
     private double secondLeg;
@@ -41,5 +41,12 @@ public class Rectangle extends Figure implements Drawable{
     public void draw() {
         System.out.println("Figure: Rectangle\nColor: " + getColor() + "\nFirst leg: " + thirdLeg
                 + "\nSecond leg: " + secondLeg + "\nThird leg: " + thirdLeg);
+    }
+
+    @Override
+    public double getArea() {
+        double semiPerimeter = (firstLeg + secondLeg + thirdLeg) / 2;
+        return Math.sqrt(semiPerimeter * (semiPerimeter - firstLeg) * (semiPerimeter - secondLeg)
+                * (semiPerimeter - thirdLeg));
     }
 }
