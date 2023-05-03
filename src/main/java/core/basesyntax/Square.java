@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends Figure implements Drawable, AreaCalc {
+public class Square extends Figure {
 
     private double side;
 
