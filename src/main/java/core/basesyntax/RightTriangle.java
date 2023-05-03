@@ -11,7 +11,7 @@ public class RightTriangle extends Figure {
         this.secondLeg = secondLeg;
     }
 
-        @Override
+    @Override
     public void draw() {
         System.out.println("Figure: Right rectangle\nColor: " + getColor() + "\nArea: " + getArea()
                 + "\nFirst leg: " + firstLeg + "\nSecond leg: " + secondLeg);
