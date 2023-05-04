@@ -3,7 +3,6 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-
     public static final int MAX_VALUE_OF_PARAMETER = 25;
     public static final int DEFAULT_RADIUS = 10;
     public static final int NUMBER_OF_FIGURES = 5;
@@ -24,7 +23,8 @@ public class FigureSupplier {
                 return prepareRightTriangle();
             case (4):
                 return prepareIsoscelesTrapezoid();
-            default: return getDefaultFigure();
+            default:
+                return getDefaultFigure();
         }
     }
 
