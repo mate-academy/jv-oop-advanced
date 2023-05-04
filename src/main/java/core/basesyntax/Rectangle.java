@@ -1,21 +1,22 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private int weight;
+    private int width;
     private int height;
 
     public Rectangle(int weight, int height, String color) {
         super(color);
-        this.weight = weight;
+        this.width = weight;
         this.height = height;
     }
 
     @Override
-    public void draw() {
+    public double getArea() {
+        return width * height;
     }
 
     @Override
-    public double getArea() {
-        return weight * height;
+    public void draw() {
+        System.out.println(getArea());
     }
 }
