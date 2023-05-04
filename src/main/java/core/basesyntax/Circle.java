@@ -5,14 +5,14 @@ public class Circle extends Figure {
 
     public Circle(Color color, int radius) {
         super(color);
-        this.color = color;
         this.radius = radius;
     }
 
     @Override
     public void draw() {
         String line = "Figure: Circle, area: ";
-        System.out.println(line + calculateArea() + ", radius: " + radius + ", color: " + color);
+        System.out.println(line + calculateArea() + ", radius: " + radius
+                + ", color: " + getColor());
     }
 
     @Override

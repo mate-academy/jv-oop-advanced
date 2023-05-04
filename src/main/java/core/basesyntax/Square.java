@@ -5,14 +5,13 @@ public class Square extends Figure {
 
     public Square(Color color, int side) {
         super(color);
-        this.color = color;
         this.side = side;
     }
 
     @Override
     public void draw() {
         String line = "Figure: Square, area: ";
-        System.out.println(line + calculateArea() + ", side: " + side + ", color: " + color);
+        System.out.println(line + calculateArea() + ", side: " + side + ", color: " + getColor());
     }
 
     @Override
