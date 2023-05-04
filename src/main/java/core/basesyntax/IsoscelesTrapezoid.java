@@ -19,3 +19,4 @@ public class IsoscelesTrapezoid extends Figure {
         return height * middleLine;
     }
 }
+

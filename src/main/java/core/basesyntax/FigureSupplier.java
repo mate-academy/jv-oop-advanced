@@ -36,3 +36,4 @@ public class FigureSupplier {
         return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
     }
 }
+
