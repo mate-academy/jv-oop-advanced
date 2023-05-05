@@ -8,44 +8,55 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier supplier = new ColorSupplier();
 
+    private Figure prepareRightTriangle() {
+        return new RightTriangle(supplier.getRandomColor(),
+                random.nextInt(MAX_VALUE),
+                random.nextInt(MAX_VALUE));
+    }
+
+    private Figure prepareSquare() {
+        return new Square(supplier.getRandomColor(), random.nextInt(MAX_VALUE));
+    }
+
+    private Figure prepareIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(supplier.getRandomColor(),
+                random.nextInt(MAX_VALUE),
+                random.nextInt(MAX_VALUE),
+                random.nextInt(MAX_VALUE));
+    }
+
+    private Figure prepareRectangle() {
+        return new Rectangle(supplier.getRandomColor(),
+                random.nextInt(MAX_VALUE),
+                random.nextInt(MAX_VALUE));
+    }
+
+    private Figure prepareCircle() {
+        return new Circle(supplier.getRandomColor(), random.nextInt(MAX_VALUE));
+    }
+
+    private Figure prepareDefaultCircle() {
+        return new Circle(Color.WHITE, random.nextInt(MAX_VALUE));
+    }
+
     public Figure getRandomFigure() {
         int index = random.nextInt(FIGURE);
 
         switch (index) {
             case 0:
-                Figure circle = new Circle(supplier.getRandomColor(), random.nextInt(MAX_VALUE));
-                System.out.println(circle.draw());
-                break;
+                return prepareCircle();
             case 1:
-                Figure rectangle = new Rectangle(supplier.getRandomColor(),
-                        random.nextInt(MAX_VALUE),
-                        random.nextInt(MAX_VALUE));
-                System.out.println(rectangle.draw());
-                break;
+                return prepareRectangle();
             case 2:
-                Figure isoscelesTrapezoid = new IsoscelesTrapezoid(supplier.getRandomColor(),
-                        random.nextInt(MAX_VALUE),
-                        random.nextInt(MAX_VALUE),
-                        random.nextInt(MAX_VALUE));
-                System.out.println(isoscelesTrapezoid.draw());
-                break;
+                return prepareIsoscelesTrapezoid();
             case 3:
-                Figure square = new Square(supplier.getRandomColor(), random.nextInt(MAX_VALUE));
-                System.out.println(square.draw());
-                break;
+                return prepareSquare();
             default:
-                Figure rightTriangle = new RightTriangle(supplier.getRandomColor(),
-                        random.nextInt(MAX_VALUE),
-                        random.nextInt(MAX_VALUE));
-                System.out.println(rightTriangle.draw());
-                break;
+                return prepareRightTriangle();
         }
-        return null;
     }
 
     public Figure getDefaultFigure() {
-        Figure circle = new Circle(Color.WHITE, MAX_VALUE);
-        System.out.println(circle.draw());
-        return circle;
+        return prepareDefaultCircle();
     }
 }

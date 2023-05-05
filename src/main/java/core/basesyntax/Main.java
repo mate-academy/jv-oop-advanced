@@ -8,9 +8,9 @@ public class Main {
         Array[] figure = new Array[6];
         for (int i = 0; i < figure.length; i++) {
             if (i < figure.length / 2) {
-                figureSupplier.getRandomFigure();
+                figureSupplier.getRandomFigure().draw();
             } else {
-                figureSupplier.getDefaultFigure();
+                figureSupplier.getDefaultFigure().draw();
             }
         }
     }
