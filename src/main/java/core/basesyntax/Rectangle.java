@@ -8,7 +8,6 @@ public class Rectangle extends Figure {
         super(color);
         this.sideA = sideA;
         this.sideB = sideB;
-
     }
 
     @Override

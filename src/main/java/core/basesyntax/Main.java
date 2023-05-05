@@ -12,7 +12,6 @@ public class Main {
                 figures[i] = figureSupplier.getRandomFigure();
             } else {
                 figures[i] = figureSupplier.createDefaultFigure();
-
             }
             figures[i].draw();
         }
