@@ -5,7 +5,7 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
         int numberOfFigure = 6;
         Figure[] figures = new Figure[numberOfFigure];
-        for (int i = 0; i < numberOfFigure; i++) {
+        for (int i = 0; i < figures.length; i++) {
             if (i < numberOfFigure / 2) {
                 figureSupplier.getRandomFigure().draw();
             } else {
