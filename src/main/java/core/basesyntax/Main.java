@@ -14,8 +14,5 @@ public class Main {
             }
             figures[i].draw();
         }
-        for (Figure figure : figures) {
-            figure.draw();
-        }
     }
 }
