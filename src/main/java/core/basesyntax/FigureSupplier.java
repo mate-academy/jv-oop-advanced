@@ -3,14 +3,14 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int countFigures = 5;
-    private static final int defaultRadius = 10;
-    private static final int bound = 50;
+    private static final int COUNT_FIGURES = 5;
+    private static final int DEFAULT_RADIUS = 10;
+    private static final int BOUND = 50;
     private final Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        switch (random.nextInt(countFigures)) {
+        switch (random.nextInt(COUNT_FIGURES)) {
             case 0:
                 return getRandomCircle();
             case 1:
@@ -27,29 +27,29 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.name(), defaultRadius);
+        return new Circle(Color.WHITE.name(), DEFAULT_RADIUS);
     }
 
     private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(bound),
-                random.nextInt(bound), random.nextInt(bound));
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(BOUND),
+                random.nextInt(BOUND), random.nextInt(BOUND));
     }
 
     private Rectangle getRandomRectangle() {
-        return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(bound),
-                random.nextInt(bound));
+        return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(BOUND),
+                random.nextInt(BOUND));
     }
 
     private RightTriangle getRandomRightTriangle() {
         return new RightTriangle(colorSupplier.getRandomColor(),
-                random.nextInt(bound), random.nextInt(bound));
+                random.nextInt(BOUND), random.nextInt(BOUND));
     }
 
     private Square getRandomSquare() {
-        return new Square(colorSupplier.getRandomColor(), random.nextInt(bound));
+        return new Square(colorSupplier.getRandomColor(), random.nextInt(BOUND));
     }
 
     private Circle getRandomCircle() {
-        return new Circle(colorSupplier.getRandomColor(), random.nextInt(bound));
+        return new Circle(colorSupplier.getRandomColor(), random.nextInt(BOUND));
     }
 }
