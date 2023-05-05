@@ -14,44 +14,38 @@ public class FigureSupplier {
         switch (index) {
             case 0:
                 Figure circle = new Circle(supplier.getRandomColor(), random.nextInt(MAX_VALUE));
-                circle.getArea();
-                circle.draw();
-                return circle;
+                System.out.println(circle.draw());
+                break;
             case 1:
                 Figure rectangle = new Rectangle(supplier.getRandomColor(),
                         random.nextInt(MAX_VALUE),
                         random.nextInt(MAX_VALUE));
-                rectangle.getArea();
-                rectangle.draw();
-                return rectangle;
+                System.out.println(rectangle.draw());
+                break;
             case 2:
                 Figure isoscelesTrapezoid = new IsoscelesTrapezoid(supplier.getRandomColor(),
                         random.nextInt(MAX_VALUE),
                         random.nextInt(MAX_VALUE),
                         random.nextInt(MAX_VALUE));
-                isoscelesTrapezoid.getArea();
-                isoscelesTrapezoid.draw();
-                return isoscelesTrapezoid;
+                System.out.println(isoscelesTrapezoid.draw());
+                break;
             case 3:
                 Figure square = new Square(supplier.getRandomColor(), random.nextInt(MAX_VALUE));
-                square.getArea();
-                square.draw();
-                return square;
+                System.out.println(square.draw());
+                break;
             default:
                 Figure rightTriangle = new RightTriangle(supplier.getRandomColor(),
                         random.nextInt(MAX_VALUE),
                         random.nextInt(MAX_VALUE));
-                rightTriangle.getArea();
-                rightTriangle.draw();
-                return rightTriangle;
+                System.out.println(rightTriangle.draw());
+                break;
         }
+        return null;
     }
 
     public Figure getDefaultFigure() {
-
         Figure circle = new Circle(Color.WHITE, MAX_VALUE);
-        circle.getArea();
-        circle.draw();
+        System.out.println(circle.draw());
         return circle;
     }
 }

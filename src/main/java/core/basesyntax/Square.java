@@ -1,11 +1,10 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    private final Color color;
     private final double sideLength;
 
     public Square(Color color, double sideLength) {
-        this.color = color;
+        super(color);
         this.sideLength = sideLength;
     }
 
@@ -15,9 +14,9 @@ public class Square extends Figure {
     }
 
     @Override
-    public void draw() {
-        System.out.println("Figure: square, area: " + getArea()
+    public String draw() {
+        return "Figure: square, area: " + getArea()
                 + " sq.units, side length: " + sideLength
-                + " units, color: " + color);
+                + " units, color: " + getColor();
     }
 }

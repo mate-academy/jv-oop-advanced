@@ -1,14 +1,15 @@
 package core.basesyntax;
 
+import java.lang.reflect.Array;
+
 public class Main {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        Area[] figure = new Area[6];
+        Array[] figure = new Array[6];
         for (int i = 0; i < figure.length; i++) {
             if (i < figure.length / 2) {
                 figureSupplier.getRandomFigure();
-            }
-            if (i > figure.length / 2) {
+            } else {
                 figureSupplier.getDefaultFigure();
             }
         }
