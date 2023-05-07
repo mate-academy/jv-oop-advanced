@@ -1,10 +1,11 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements CalculateAble {
+public class Rectangle extends Figure {
     private double height;
     private double weight;
+
     @Override
-    public double getArea() {
-        return height * weight;
+    public void drawArea() {
+        System.out.println("Figure's area is " + height * weight);
     }
 }

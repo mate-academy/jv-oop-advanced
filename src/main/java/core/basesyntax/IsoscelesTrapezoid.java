@@ -1,8 +1,11 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements CalculateAble {
+public class IsoscelesTrapezoid extends Figure {
+    private double sideA;
+    private double sideB;
+    private double height;
     @Override
-    public double getArea() {
-        return 0;
+    public void drawArea() {
+        System.out.println("Figure's area is " + ((sideA + sideB) / 2) * height);
     }
 }

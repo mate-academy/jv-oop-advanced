@@ -1,10 +1,10 @@
 package core.basesyntax;
 
-public class Square extends Figure implements CalculateAble {
+public class Square extends Figure {
     private double side;
 
     @Override
-    public double getArea() {
-        return side * side;
+    public void drawArea() {
+        System.out.println("Figure's area is " + side * side);
     }
 }

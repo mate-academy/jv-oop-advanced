@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements CalculateAble {
+public class Circle extends Figure {
     double radius;
     @Override
-    public double getArea() {
-        return Math.PI * radius * radius;
+    public void drawArea() {
+        System.out.println("Figure's area is " + Math.PI * radius * radius);
     }
 }
