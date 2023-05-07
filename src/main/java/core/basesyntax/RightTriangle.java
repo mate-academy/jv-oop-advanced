@@ -12,12 +12,12 @@ public class RightTriangle extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: rightTriangle; " +
-                this.drawArea() +
-                "; height: " + height +
-                "; base: " + base +
-                "; colour: " + this.getColor() +
-                ';';
+        return "Figure: rightTriangle; "
+                + this.drawArea()
+                + "; height: " + height
+                + "; base: " + base
+                + "; colour: " + this.getColor()
+                + ';';
     }
 
     @Override

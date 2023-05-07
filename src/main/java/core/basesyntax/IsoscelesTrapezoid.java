@@ -14,13 +14,13 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: isoscelesTrapezoid; " +
-                this.drawArea() +
-                "; sideA: " + sideA +
-                "; sideB: " + sideB +
-                "; height: " + height +
-                "; colour: " + this.getColor() +
-                ';';
+        return "Figure: isoscelesTrapezoid; "
+                + this.drawArea()
+                + "; sideA: " + sideA
+                + "; sideB: " + sideB
+                + "; height: " + height
+                + "; colour: " + this.getColor()
+                + ';';
     }
 
     @Override

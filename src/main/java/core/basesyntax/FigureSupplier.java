@@ -18,8 +18,8 @@ public class FigureSupplier {
             case (2): return new Rectangle();
             case (3): return new RightTriangle();
             case (4): return new Square();
+            default: return null;
         }
-        return null;
     }
 
     public static Figure getDefaultFigure() {

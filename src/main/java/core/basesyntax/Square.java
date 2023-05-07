@@ -10,11 +10,11 @@ public class Square extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: square; " +
-                this.drawArea() +
-                "; side: " + side +
-                "; colour: " + this.getColor() +
-                ';';
+        return "Figure: square; "
+                + this.drawArea()
+                + "; side: " + side
+                + "; colour: " + this.getColor()
+                + ';';
     }
 
     @Override

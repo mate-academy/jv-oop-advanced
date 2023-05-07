@@ -12,12 +12,12 @@ public class Rectangle extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: rectangle; " +
-                this.drawArea() +
-                "; height: " + height +
-                "; weight: " + weight +
-                "; colour: " + this.getColor() +
-                ';';
+        return "Figure: rectangle; "
+                + this.drawArea()
+                + "; height: " + height
+                + "; weight: " + weight
+                + "; colour: " + this.getColor()
+                + ';';
     }
 
     @Override
