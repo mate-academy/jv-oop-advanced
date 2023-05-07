@@ -1,11 +1,27 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private double height;
-    private double weight;
+    private int height;
+    private int weight;
+
+    public Rectangle() {
+        super(ColorSupplier.getRandomColor());
+        height = FigureSupplier.getRandomLength();
+        weight = FigureSupplier.getRandomLength();
+    }
 
     @Override
-    public void drawArea() {
-        System.out.println("Figure's area is " + height * weight);
+    public String toString() {
+        return "Figure: rectangle; " +
+                this.drawArea() +
+                "; height: " + height +
+                "; weight: " + weight +
+                "; colour: " + this.getColor() +
+                ';';
+    }
+
+    @Override
+    public String drawArea() {
+        return "area: " + (height * weight) + " sq.units";
     }
 }
