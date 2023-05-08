@@ -7,12 +7,11 @@ public class FigureSupplier {
     private static final int MIN_NUMBER = 1;
     private static final int MAX_NUMBER = 30;
     private static final int DEFAULT_SIZE = 10;
-    private static final String DEFAULT_COLOR = "WHITE";
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
     private static final Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-
         switch (random.nextInt(FIGURES_COUNT)) {
             case 0:
                 return createRandomSquare();
@@ -25,6 +24,10 @@ public class FigureSupplier {
             default:
                 return createRandomRightTriangle();
         }
+    }
+
+    public Figure createDefaultFigure() {
+        return new Circle(DEFAULT_COLOR, DEFAULT_SIZE);
     }
 
     private Square createRandomSquare() {
@@ -54,9 +57,5 @@ public class FigureSupplier {
         return new Rectangle(colorSupplier.getRandomColor(),
         random.nextInt(MAX_NUMBER - MIN_NUMBER + 1) + MIN_NUMBER,
         random.nextInt(MAX_NUMBER - MIN_NUMBER + 1) + MIN_NUMBER);
-    }
-
-    public Figure createDefaultFigure() {
-        return new Circle(DEFAULT_COLOR,DEFAULT_SIZE);
     }
 }
