@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class ColorSupplier {
-    Random random = new Random();
+    private Random random = new Random();
     public String getRandomColor() {
         int variant = random.nextInt(Color.values().length);
         switch (variant) {
@@ -11,6 +11,7 @@ public class ColorSupplier {
             case (1): return Color.SILVER.name();
             case (2): return Color.RED.name();
             case (3): return Color.GOLD.name();
+
             default: return Color.WHITE.name();
         }
     }

@@ -1,11 +1,12 @@
 package core.basesyntax;
+
 import java.util.Random;
 
 public class FigureSupplier {
-    Random random = new Random();
     private final static int defaultLength = 10;
     private final static String defaultColor = Color.WHITE.name();
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private Random random = new Random();
+    private  ColorSupplier colorSupplier = new ColorSupplier();
 
     public int getRandomLength() {
 
@@ -45,13 +46,13 @@ public class FigureSupplier {
         return new Rectangle(color, length, length + 3);
     }
 
-    private Figure getRightTriangle(){
+    private Figure getRightTriangle() {
         int length = getRandomLength();
         String color = colorSupplier.getRandomColor();
         return new RightTriangle(color, length + 3, length);
     }
 
-    private Figure getSquare(){
+    private Figure getSquare() {
         int length = getRandomLength();
         String color = colorSupplier.getRandomColor();
         return new Square(color,length);
