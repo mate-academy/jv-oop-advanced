@@ -6,7 +6,7 @@ public class FigureSupplier {
     private final static int defaultLength = 10;
     private final static String defaultColor = Color.WHITE.name();
     private Random random = new Random();
-    private  ColorSupplier colorSupplier = new ColorSupplier();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public int getRandomLength() {
 
