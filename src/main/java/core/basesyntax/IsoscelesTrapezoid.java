@@ -5,17 +5,17 @@ public class IsoscelesTrapezoid extends Figure {
     private int sideB;
     private int height;
 
-    public IsoscelesTrapezoid() {
-        super(ColorSupplier.getRandomColor());
-        sideA = FigureSupplier.getRandomLength();
-        sideB = FigureSupplier.getRandomLength();
-        height = FigureSupplier.getRandomLength();
+    public IsoscelesTrapezoid(String color, int sideA, int sideB, int height) {
+        super(color);
+        this.sideA = sideA;
+        this.sideB = sideB;
+        this.height = height;
     }
 
     @Override
     public String toString() {
         return "Figure: isoscelesTrapezoid; "
-                + this.drawArea()
+                + "area: " + getArea() + " sq.units"
                 + "; sideA: " + sideA
                 + "; sideB: " + sideB
                 + "; height: " + height
@@ -24,7 +24,12 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String drawArea() {
-        return "area: " + (((sideA + sideB) / 2) * height) + " sq.units";
+    public double getArea() {
+        return ((sideA + sideB) / 2) * height;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("area: " + getArea() + " sq.units");
     }
 }

@@ -1,28 +1,59 @@
 package core.basesyntax;
-
 import java.util.Random;
 
 public class FigureSupplier {
+    Random random = new Random();
+    private final static int defaultLength = 10;
+    private final static String defaultColor = Color.WHITE.name();
+    ColorSupplier colorSupplier = new ColorSupplier();
 
-    public static int getRandomLength() {
-        Random random = new Random();
-        return random.nextInt(9) + 1;
+    public int getRandomLength() {
+
+        return random.nextInt(defaultLength) + 1;
     }
 
-    public static Figure getRandomFigure() {
-        Random random = new Random();
-        int figure = random.nextInt(4);
+    public Figure getRandomFigure() {
+        int figure = random.nextInt(5);
         switch (figure) {
-            case (0): return new Circle();
-            case (1): return new IsoscelesTrapezoid();
-            case (2): return new Rectangle();
-            case (3): return new RightTriangle();
-            case (4): return new Square();
-            default: return null;
+            case (0): return getCircle();
+            case (1): return getIsoscelesTrapezoid();
+            case (2): return getRectangle();
+            case (3): return getRightTriangle();
+            default: return getSquare();
         }
     }
 
-    public static Figure getDefaultFigure() {
-        return new Circle("WHITE", 10);
+    public Figure getDefaultFigure() {
+        return new Circle(defaultColor, defaultLength);
+    }
+
+    private Figure getCircle() {
+        int radius = getRandomLength();
+        String color = colorSupplier.getRandomColor();
+        return new Circle(color, radius);
+    }
+
+    private Figure getIsoscelesTrapezoid() {
+        int length = getRandomLength();
+        String color = colorSupplier.getRandomColor();
+        return new IsoscelesTrapezoid(color, length, length + 4, length + 2);
+    }
+
+    private Figure getRectangle() {
+        int length = getRandomLength();
+        String color = colorSupplier.getRandomColor();
+        return new Rectangle(color, length, length + 3);
+    }
+
+    private Figure getRightTriangle(){
+        int length = getRandomLength();
+        String color = colorSupplier.getRandomColor();
+        return new RightTriangle(color, length + 3, length);
+    }
+
+    private Figure getSquare(){
+        int length = getRandomLength();
+        String color = colorSupplier.getRandomColor();
+        return new Square(color,length);
     }
 }

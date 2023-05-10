@@ -4,16 +4,16 @@ public class Rectangle extends Figure {
     private int height;
     private int weight;
 
-    public Rectangle() {
-        super(ColorSupplier.getRandomColor());
-        height = FigureSupplier.getRandomLength();
-        weight = FigureSupplier.getRandomLength();
+    public Rectangle(String color, int height, int weight) {
+        super(color);
+        this.height = height;
+        this.weight = weight;
     }
 
     @Override
     public String toString() {
         return "Figure: rectangle; "
-                + this.drawArea()
+                + "area: " + getArea() + " sq.units"
                 + "; height: " + height
                 + "; weight: " + weight
                 + "; colour: " + this.getColor()
@@ -21,7 +21,12 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String drawArea() {
-        return "area: " + (height * weight) + " sq.units";
+    public double getArea() {
+        return height * weight;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("area: " + getArea() + " sq.units");
     }
 }
