@@ -9,21 +9,16 @@ public class Square extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "Figure: square; "
-                + "area: " + getArea() + " sq.units"
-                + "; side: " + side
-                + "; colour: " + this.getColor()
-                + ';';
-    }
-
-    @Override
     public double getArea() {
         return side * side;
     }
 
     @Override
     public void draw() {
-        System.out.println("area: " + getArea() + " sq.units");
+        System.out.println("Figure: square; "
+                + "area: " + getArea() + " sq.units"
+                + "; side: " + side
+                + "; colour: " + this.getColor()
+                + ';');
     }
 }

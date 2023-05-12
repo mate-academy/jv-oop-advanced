@@ -12,7 +12,7 @@ public class Main {
             }
         }
         for (Figure fig : arrayFig) {
-            System.out.println(fig);
+            fig.draw();
         }
     }
 }

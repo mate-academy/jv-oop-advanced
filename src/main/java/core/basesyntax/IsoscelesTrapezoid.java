@@ -13,23 +13,18 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "Figure: isoscelesTrapezoid; "
-                + "area: " + getArea() + " sq.units"
-                + "; sideA: " + sideA
-                + "; sideB: " + sideB
-                + "; height: " + height
-                + "; colour: " + this.getColor()
-                + ';';
-    }
-
-    @Override
     public double getArea() {
         return ((sideA + sideB) / 2) * height;
     }
 
     @Override
     public void draw() {
-        System.out.println("area: " + getArea() + " sq.units");
+        System.out.println("Figure: isoscelesTrapezoid; "
+                + "area: " + getArea() + " sq.units"
+                + "; sideA: " + sideA
+                + "; sideB: " + sideB
+                + "; height: " + height
+                + "; colour: " + this.getColor()
+                + ';');
     }
 }

@@ -11,22 +11,17 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "Figure: rightTriangle; "
-                + "area: " + getArea() + " sq.units"
-                + "; height: " + height
-                + "; base: " + base
-                + "; colour: " + this.getColor()
-                + ';';
-    }
-
-    @Override
     public double getArea() {
         return (height * base) / 2;
     }
 
     @Override
     public void draw() {
-        System.out.println("area: " + getArea() + " sq.units");
+        System.out.println("Figure: rightTriangle; "
+                + "area: " + getArea() + " sq.units"
+                + "; height: " + height
+                + "; base: " + base
+                + "; colour: " + this.getColor()
+                + ';');
     }
 }
