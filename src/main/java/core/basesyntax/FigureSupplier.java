@@ -40,8 +40,8 @@ public class FigureSupplier {
                 Square square = new Square(side);
                 square.setColor(colorSupplier.getRandomColor());
                 return square;
-            }
         }
+    }
 
     public Figure getDefaultFigure() {
         int radius = 10;

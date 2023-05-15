@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private int radius;
+    private final int radius;
 
     public Circle(int radius) {
         this.radius = radius;
@@ -12,6 +12,7 @@ public class Circle extends Figure {
     }
 
     public void draw() {
-        System.out.println("Figure: circle, area: " + getArea() + " sq. units, radius: " + radius + " units, color: " + getColor());
+        System.out.println("Figure: circle, area: " + getArea() + " sq. units, radius: " + radius +
+                " units, color: " + getColor());
     }
 }
