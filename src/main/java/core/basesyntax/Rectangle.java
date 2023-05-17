@@ -44,7 +44,4 @@ public class Rectangle extends Figure {
         builder.append(" units ");
         System.out.println(builder.toString());
     }
-
-
-
 }
