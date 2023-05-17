@@ -1,16 +1,13 @@
 package core.basesyntax;
 
-import java.util.Random;
-
-public class Circle extends Figure implements FigureBehaviour {
+public class Circle extends Figure {
 
     private int radius;
-    private final Random random = new Random();
-    private final int MAXRADIUS = 50;
 
-    public Circle(){
-         this.setName("circle");
-     }
+    public Circle(int radius) {
+        this.setName("circle");
+        this.setRadius(radius);
+    }
 
     public void setRadius(int radius) {
         this.radius = radius;
@@ -22,26 +19,17 @@ public class Circle extends Figure implements FigureBehaviour {
 
     @Override
     public double obtainArea() {
-        return radius*radius*Math.PI;
+        return radius * radius * Math.PI;
     }
 
     @Override
     public void draw() {
-        StringBuilder builder = new StringBuilder(this.getName());
-        builder.append(", area: ");
-        builder.append(String.format("%.2f", this.obtainArea()));
-        builder.append(" sq.units,");
-        builder.append(" radius: ");
+        super.draw();
+        StringBuilder builder = new StringBuilder();
+        builder.append(", radius: ");
         builder.append(this.getRadius());
         builder.append(" units");
-        builder.append(" color: ");
-        builder.append(this.getColor());
         System.out.println(builder.toString());
     }
 
-    @Override
-    public void setRandomProperties() {
-        super.setRandomProperties();
-        setRadius(this.random.nextInt(MAXRADIUS));
-    }
 }

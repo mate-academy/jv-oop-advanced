@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public abstract class  Figure {
+public abstract class Figure {
 
     private String color;
-    private String Name;
+    private String FigureName;
 
     public void setColor(String color) {
         this.color =  color;
@@ -14,18 +14,24 @@ public abstract class  Figure {
     }
 
     public void setName(String name) {
-        Name = name;
+        FigureName = name;
     }
 
     public String getName() {
-        return Name;
+        return FigureName;
     }
 
-    public void setRandomProperties() {
-
+    public double obtainArea() {
+        return 0.00;
     }
 
     public void draw() {
-        //System.out.println(this.getName()+", area: " +this.obtainArea()+ " sq.units, color "+ this.getColor());
+        StringBuilder builder = new StringBuilder(this.getName());
+        builder.append(", color: ");
+        builder.append(this.getColor());
+        builder.append(", area: ");
+        builder.append(String.format("%.2f", this.obtainArea()));
+        builder.append(" sq.units");
+        System.out.print(builder.toString());
     }
 }

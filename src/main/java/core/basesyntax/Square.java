@@ -1,16 +1,14 @@
 package core.basesyntax;
 
-import java.util.Random;
-
-public class Square extends Figure implements FigureBehaviour {
+public class Square extends Figure {
 
     private int side;
-    private final Random random = new Random();
-    private final int MAXSIDE = 100;
 
-    public Square() {
+    public Square(int side) {
         this.setName("square");
+        this.setSide(side);
     }
+
     public void setSide(int side) {
         this.side = side;
     }
@@ -21,21 +19,16 @@ public class Square extends Figure implements FigureBehaviour {
 
     @Override
     public double obtainArea() {
-       return side*side;
+        return side * side;
     }
 
     @Override
     public void draw() {
-        StringBuilder builder = new StringBuilder(this.getName());
-        builder.append(", area: ");
-        builder.append(String.format("%.2f", this.obtainArea()));
-        builder.append(" sq.units,");
-        builder.append(" side: ");
+        super.draw();
+        StringBuilder builder = new StringBuilder();
+        builder.append(", side: ");
         builder.append(this.getSide());
         builder.append(" units");
-        builder.append(" color: ");
-        builder.append(this.getColor());
         System.out.println(builder.toString());
-
     }
 }

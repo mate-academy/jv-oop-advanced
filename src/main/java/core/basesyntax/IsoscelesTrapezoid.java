@@ -1,34 +1,32 @@
 package core.basesyntax;
 
-import java.util.Random;
+public class IsoscelesTrapezoid extends Figure {
 
-public class IsoscelesTrapezoid extends Figure implements FigureBehaviour {
-
-    private int longerBase;
-    private int shorterBase;
+    private int firstBase;
+    private int secondBase;
     private int height;
-    private final Random random = new Random();
-    private final int MAXDIFFERENCE = 30;
-    private final int MAXSHORTERBASE = 50;
 
-    public IsoscelesTrapezoid(){
+    public IsoscelesTrapezoid(int firstBase,int secondBase,int height) {
         this.setName("isosceles trapezoid");
+        this.setFirstBase(firstBase);
+        this.setSecondBase(secondBase);
+        this.setHeight(height);
     }
 
-    public void setLongerBase(int longerBase) {
-        this.longerBase = longerBase;
+    public void setFirstBase(int firstBase) {
+        this.firstBase = firstBase;
     }
 
-    public int getLongerBase() {
-        return longerBase;
+    public int getFirstBase() {
+        return firstBase;
     }
 
-    public void setShorterBase(int shorterBase) {
-        this.shorterBase = shorterBase;
+    public void setSecondBase(int secondBase) {
+        this.secondBase = secondBase;
     }
 
-    public int getShorterBase() {
-        return shorterBase;
+    public int getSecondBase() {
+        return secondBase;
     }
 
     public void setHeight(int height) {
@@ -40,35 +38,21 @@ public class IsoscelesTrapezoid extends Figure implements FigureBehaviour {
     }
 
     @Override
-    public void setRandomProperties() {
-        super.setRandomProperties();
-        this.setShorterBase(this.random.nextInt(MAXSHORTERBASE));
-        this.setLongerBase(this.shorterBase+this.random.nextInt(MAXDIFFERENCE));
-        this.setHeight(this.random.nextInt(MAXSHORTERBASE+MAXDIFFERENCE));
-    }
-
-    @Override
     public double obtainArea() {
-        return ((this.shorterBase+this.longerBase)*this.height/2);
+        return ((this.firstBase + this.secondBase) * this.height / 2);
     }
 
     @Override
     public void draw() {
-        StringBuilder builder = new StringBuilder(this.getName());
-        builder.append(", area: ");
-        builder.append(String.format("%.2f", this.obtainArea()));
-        builder.append(" sq.units, ");
-        builder.append("longbase: ");
-        builder.append(this.getLongerBase());
-        builder.append(" units, ");
-        builder.append("shortbase: ");
-        builder.append(getShorterBase());
-        builder.append(" units, ");
-        builder.append("height: ");
+        super.draw();
+        StringBuilder builder = new StringBuilder();
+        builder.append(", firstbase: ");
+        builder.append(this.getFirstBase());
+        builder.append(" units, secondbase: ");
+        builder.append(getSecondBase());
+        builder.append(" units, height: ");
         builder.append(this.getHeight());
-        builder.append(" units, ");
-        builder.append("color: ");
-        builder.append(this.getColor());
+        builder.append(" units");
         System.out.println(builder.toString());
     }
 }

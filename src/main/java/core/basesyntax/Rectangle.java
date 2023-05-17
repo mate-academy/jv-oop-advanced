@@ -1,26 +1,49 @@
 package core.basesyntax;
 
-import java.util.Random;
+public class Rectangle extends Figure {
 
-public class Rectangle extends RightTriangle implements FigureBehaviour {
+    private int firstLeg;
+    private int secondLeg;
 
-    private final int MAXLEG = 100;
-    private final Random random = new Random();
-
-    public Rectangle() {
+    public Rectangle(int firstValue,int secondValue) {
         this.setName("rectangle");
+        this.setFirstLeg(firstValue);
+        this.setSecondLeg(secondValue);
+    }
+
+    public void setFirstLeg(int firstLeg) {
+        this.firstLeg = firstLeg;
+    }
+
+    public int getFirstLeg() {
+        return firstLeg;
+    }
+
+    public void setSecondLeg(int secondLeg) {
+        this.secondLeg = secondLeg;
+    }
+
+    public int getSecondLeg() {
+        return secondLeg;
     }
 
     @Override
     public double obtainArea() {
-        return this.getFirstLeg()*this.getSecondLeg();
+        return this.getFirstLeg() * this.getSecondLeg();
+    }
+    @Override
+    public void draw() {
+        super.draw();
+        StringBuilder builder = new StringBuilder();
+        builder.append("firstleg: ");
+        builder.append(this.getFirstLeg());
+        builder.append(" units, ");
+        builder.append("secondleg: ");
+        builder.append(this.getSecondLeg());
+        builder.append(" units ");
+        System.out.println(builder.toString());
     }
 
-    @Override
-    public void setRandomProperties() {
-        super.setRandomProperties();
-        this.setFirstLeg(this.random.nextInt(MAXLEG));
-        this.setSecondLeg(this.random.nextInt(MAXLEG));
-    }
+
 
 }
