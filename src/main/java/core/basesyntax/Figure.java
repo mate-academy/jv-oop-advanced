@@ -3,10 +3,10 @@ package core.basesyntax;
 public abstract class Figure {
 
     private String color;
-    private String FigureName;
+    private String figureName;
 
     public void setColor(String color) {
-        this.color =  color;
+        this.color = color;
     }
 
     public String getColor() {
@@ -14,11 +14,11 @@ public abstract class Figure {
     }
 
     public void setName(String name) {
-        FigureName = name;
+        figureName = name;
     }
 
     public String getName() {
-        return FigureName;
+        return figureName;
     }
 
     public double obtainArea() {

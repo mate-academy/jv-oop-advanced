@@ -31,6 +31,7 @@ public class Rectangle extends Figure {
     public double obtainArea() {
         return this.getFirstLeg() * this.getSecondLeg();
     }
+
     @Override
     public void draw() {
         super.draw();
