@@ -53,6 +53,8 @@ public class IsoscelesTrapezoid extends Figure {
         builder.append(" units, height: ");
         builder.append(this.getHeight());
         builder.append(" units");
+        builder.append(", color: ");
+        builder.append(this.getColor());
         System.out.println(builder.toString());
     }
 }

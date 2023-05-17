@@ -29,6 +29,8 @@ public class Square extends Figure {
         builder.append(", side: ");
         builder.append(this.getSide());
         builder.append(" units");
+        builder.append(", color: ");
+        builder.append(this.getColor());
         System.out.println(builder.toString());
     }
 }

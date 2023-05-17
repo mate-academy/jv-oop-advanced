@@ -42,6 +42,8 @@ public class Rectangle extends Figure {
         builder.append("secondleg: ");
         builder.append(this.getSecondLeg());
         builder.append(" units ");
+        builder.append(", color: ");
+        builder.append(this.getColor());
         System.out.println(builder.toString());
     }
 }

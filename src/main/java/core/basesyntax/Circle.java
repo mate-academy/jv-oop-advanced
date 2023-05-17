@@ -29,6 +29,8 @@ public class Circle extends Figure {
         builder.append(", radius: ");
         builder.append(this.getRadius());
         builder.append(" units");
+        builder.append(", color: ");
+        builder.append(this.getColor());
         System.out.println(builder.toString());
     }
 

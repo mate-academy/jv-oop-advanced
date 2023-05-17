@@ -26,11 +26,10 @@ public abstract class Figure {
     }
 
     public void draw() {
-        StringBuilder builder = new StringBuilder(this.getName());
-        builder.append(", color: ");
-        builder.append(this.getColor());
+        StringBuilder builder = new StringBuilder("Figure: ");
+        builder.append(this.getName());
         builder.append(", area: ");
-        builder.append(String.format("%.2f", this.obtainArea()));
+        builder.append(String.format("%.1f", this.obtainArea()));
         builder.append(" sq.units");
         System.out.print(builder.toString());
     }
