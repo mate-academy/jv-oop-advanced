@@ -4,13 +4,12 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final double DEFAULT_RADIUS = 10.0;
-    private static final double MAX_RADIUS = 100;
-    private static final int FIGURE_COUNT = 4;
+    private static final int RANDOM_MULTIPLIER = 100;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int figureNumber = random.nextInt(FIGURE_COUNT);
+        int figureNumber = random.nextInt(FigureNames.values().length);
         String randomColor = colorSupplier.getRandomColor();
 
         switch (FigureNames.values()[figureNumber]) {
@@ -26,12 +25,12 @@ public class FigureSupplier {
                 double equalSides = getDouble();
                 return new IsoscelesTrapezoid(getDouble(),equalSides, getDouble(),randomColor);
             default:
-                throw new IllegalArgumentException();
+                throw new IllegalArgumentException("Wrong figure type");
         }
     }
 
     private double getDouble() {
-        return random.nextDouble() * 100;
+        return random.nextDouble() * RANDOM_MULTIPLIER;
     }
 
     public Figure getDefaultFigure() {
