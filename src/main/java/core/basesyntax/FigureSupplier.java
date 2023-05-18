@@ -37,20 +37,20 @@ public class FigureSupplier {
 
     public Figure getRectangle() {
         int firstValue  = this.random.nextInt(100);
-        int secondValue= this.random.nextInt(100);
+        int secondValue = this.random.nextInt(100);
         return new Rectangle(firstValue,secondValue);
     }
 
     public Figure getIsoscelesTrapezoid() {
-        int firstValue  = this.random.nextInt(100);
-        int secondValue= this.random.nextInt(100);
+        int firstValue = this.random.nextInt(100);
+        int secondValue = this.random.nextInt(100);
         int thirdValue = this.random.nextInt(100);
         return new IsoscelesTrapezoid(firstValue,secondValue,thirdValue);
     }
 
     public Figure getRightTriangle() {
         int firstValue  = this.random.nextInt(100);
-        int secondValue= this.random.nextInt(100);
+        int secondValue = this.random.nextInt(100);
         return new RightTriangle(firstValue,secondValue);
     }
 
