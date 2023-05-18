@@ -1,12 +1,10 @@
 package core.basesyntax;
-
 public class Circle extends Figure {
-
     private int radius;
 
     public Circle(int radius) {
         this.setName("circle");
-        this.setRadius(radius);
+        this.radius = radius;
     }
 
     public void setRadius(int radius) {
@@ -33,5 +31,4 @@ public class Circle extends Figure {
         builder.append(this.getColor());
         System.out.println(builder.toString());
     }
-
 }

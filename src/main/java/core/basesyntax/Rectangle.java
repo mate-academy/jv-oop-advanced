@@ -1,14 +1,12 @@
 package core.basesyntax;
-
 public class Rectangle extends Figure {
-
     private int firstLeg;
     private int secondLeg;
 
     public Rectangle(int firstValue,int secondValue) {
         this.setName("rectangle");
-        this.setFirstLeg(firstValue);
-        this.setSecondLeg(secondValue);
+        this.firstLeg = firstValue;
+        this.secondLeg = secondValue;
     }
 
     public void setFirstLeg(int firstLeg) {

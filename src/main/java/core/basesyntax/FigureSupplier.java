@@ -1,40 +1,62 @@
 package core.basesyntax;
-
 import java.util.Random;
-
 public class FigureSupplier {
-
     private final Random random = new Random();
-
     public Figure getRandomFigure() {
         Figure figure;
         ColorSupplier colorSupplier = new ColorSupplier();
         int index = this.random.nextInt(6);
-        int firstValue = this.random.nextInt(100);
-        int secondValue = this.random.nextInt(100);
-        int thirdValue = this.random.nextInt(100);
         switch (index) {
             case 1:
-                figure = new Circle(firstValue);
+                figure = getCircle();
                 break;
             case 2:
-                figure = new Rectangle(firstValue,secondValue);
+                figure = getRectangle();
                 break;
             case 3:
-                figure = new RightTriangle(firstValue,secondValue);
+                figure = getRightTriangle();
                 break;
             case 4:
-                figure = new IsoscelesTrapezoid(firstValue,secondValue,thirdValue);
+                figure = getIsoscelesTrapezoid();
                 break;
             case 5:
-                figure = new Square(firstValue);
+                figure = getSquare();
                 break;
             default:
-                figure = new RightTriangle(firstValue,secondValue);
+                figure = getRightTriangle();
                 break;
         }
         figure.setColor(colorSupplier.getRandomColor());
         return figure;
+    }
+
+    public Figure getCircle() {
+        int firstValue = this.random.nextInt(100);
+        return new Circle(firstValue);
+    }
+
+    public Figure getRectangle() {
+        int firstValue  = this.random.nextInt(100);
+        int secondValue= this.random.nextInt(100);
+        return new Rectangle(firstValue,secondValue);
+    }
+
+    public Figure getIsoscelesTrapezoid() {
+        int firstValue  = this.random.nextInt(100);
+        int secondValue= this.random.nextInt(100);
+        int thirdValue = this.random.nextInt(100);
+        return new IsoscelesTrapezoid(firstValue,secondValue,thirdValue);
+    }
+
+    public Figure getRightTriangle() {
+        int firstValue  = this.random.nextInt(100);
+        int secondValue= this.random.nextInt(100);
+        return new RightTriangle(firstValue,secondValue);
+    }
+
+    public Figure getSquare() {
+        int firstValue = this.random.nextInt(100);
+        return new Square(firstValue);
     }
 
     public Figure getDefaultFigure() {
