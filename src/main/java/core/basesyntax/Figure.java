@@ -21,10 +21,6 @@ public abstract class Figure implements FigureBehaviour {
         return figureName;
     }
 
-   /* public double obtainArea() {
-        return 0.00;
-    }*/
-
     public void draw() {
         StringBuilder builder = new StringBuilder("Figure: ");
         builder.append(this.getName());
