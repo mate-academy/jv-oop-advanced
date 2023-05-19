@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public class RightRectangle extends FigureAbstract implements Figure {
+public class RightRectangle  implements Figure {
     private final int firstLeg;
     private final int secondLeg;
-
+    private final String color;
 
     public RightRectangle(String color, int firstSide, int secondSide) {
         this.color = color;

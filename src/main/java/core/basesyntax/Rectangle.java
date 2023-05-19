@@ -1,8 +1,9 @@
 package core.basesyntax;
 
-public class Rectangle extends FigureAbstract implements Figure {
+public class Rectangle implements Figure {
     private final int width;
     private final int length;
+    private final String color;
 
     public Rectangle(String color, int length, int width) {
         this.width = width;
