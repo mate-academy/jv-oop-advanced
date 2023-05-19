@@ -5,3 +5,4 @@ public interface FigureBehaviour {
 
     public double obtainArea();
 }
+

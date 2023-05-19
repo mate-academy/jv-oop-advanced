@@ -1,9 +1,11 @@
 
 package core.basesyntax;
+
 import java.util.Random;
 
 public class FigureSupplier {
     private final Random random = new Random();
+
     public Figure getRandomFigure() {
         Figure figure;
         ColorSupplier colorSupplier = new ColorSupplier();
@@ -38,7 +40,7 @@ public class FigureSupplier {
     }
 
     public Figure getRectangle() {
-        int firstValue  = this.random.nextInt(100);
+        int firstValue = this.random.nextInt(100);
         int secondValue = this.random.nextInt(100);
         return new Rectangle(firstValue,secondValue);
     }
@@ -51,7 +53,7 @@ public class FigureSupplier {
     }
 
     public Figure getRightTriangle() {
-        int firstValue  = this.random.nextInt(100);
+        int firstValue = this.random.nextInt(100);
         int secondValue = this.random.nextInt(100);
         return new RightTriangle(firstValue,secondValue);
     }
