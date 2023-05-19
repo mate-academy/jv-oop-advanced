@@ -22,7 +22,6 @@ public class Circle extends Figure {
         return radius * radius * Math.PI;
     }
 
-    @Override
     public void draw() {
         super.draw();
         StringBuilder builder = new StringBuilder();

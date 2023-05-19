@@ -1,7 +1,7 @@
 
 package core.basesyntax;
 
-public abstract class Figure {
+public abstract class Figure implements FigureBehaviour {
     private String color;
     private String figureName;
 
@@ -21,9 +21,9 @@ public abstract class Figure {
         return figureName;
     }
 
-    public double obtainArea() {
+   /* public double obtainArea() {
         return 0.00;
-    }
+    }*/
 
     public void draw() {
         StringBuilder builder = new StringBuilder("Figure: ");
