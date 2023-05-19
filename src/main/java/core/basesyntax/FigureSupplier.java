@@ -4,15 +4,14 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int NUMBER_OF_FIGURES = 5;
-    private final String DEFAULT_COLOR = "WHITE";
-    private final int DEFAULT_RADIUS = 10;
-    private final int MAX_BOUND = 50;
+    private final String defaultColor = "WHITE";
+    private final int defaultRadius = 10;
+    private final int maxBound = 50;
     private final Random random = new Random();
     private final ColorSupplier supplier = new ColorSupplier();
-    String randomColor = supplier.getRandomColor();
 
     private int generateRandomValue() {
-        return random.nextInt(MAX_BOUND) + 1;
+        return random.nextInt(maxBound) + 1;
     }
 
     public Figure getRandomFigure() {
@@ -20,21 +19,24 @@ public class FigureSupplier {
 
         switch (figureType) {
             case 0:
-                return new Square(randomColor, generateRandomValue());
+                return new Square(supplier.getRandomColor(), generateRandomValue());
             case 1:
-                return new Circle(randomColor, generateRandomValue());
+                return new Circle(supplier.getRandomColor(), generateRandomValue());
             case 2:
-                return new Rectangle(randomColor, generateRandomValue(), generateRandomValue());
+                return new Rectangle(supplier.getRandomColor(),
+                        generateRandomValue(), generateRandomValue());
             case 3:
-                return new RightRectangle(randomColor, generateRandomValue(), generateRandomValue());
+                return new RightTriangle(supplier.getRandomColor(),
+                        generateRandomValue(), generateRandomValue());
             case 4:
-                return new IsoscelesTrapezoid(randomColor, generateRandomValue(), generateRandomValue(), generateRandomValue());
+                return new IsoscelesTrapezoid(supplier.getRandomColor(), generateRandomValue(),
+                        generateRandomValue(), generateRandomValue());
             default:
                 throw new IllegalStateException("Unexpected value: " + figureType);
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
+        return new Circle(defaultColor, defaultRadius);
     }
 }
