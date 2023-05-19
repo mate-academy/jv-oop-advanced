@@ -12,21 +12,36 @@ public class FigureSupplier {
 
         switch (figureType) {
             case 0:
-                return new Square(supplier.getRandomColor(), random.nextInt(50) + 1);
+                String randomColorForSquare = supplier.getRandomColor();
+                int randomValueForSquare = random.nextInt(50) + 1;
+                return new Square(randomColorForSquare, randomValueForSquare);
             case 1:
-                return new Circle(supplier.getRandomColor(), random.nextInt(50) + 1);
+                String randomColorForCircle = supplier.getRandomColor();
+                int randomValueForCircle = random.nextInt(50) + 1;
+               return new Circle(randomColorForCircle, randomValueForCircle);
             case 2:
-                return new Rectangle(supplier.getRandomColor(), random.nextInt(50) + 1, random.nextInt(50) + 1);
+                String randomColorForRectangle = supplier.getRandomColor();
+                int randomValueForRectangleLegOne = random.nextInt(50) + 1;
+                int randomValueForRectangleLegTwo = random.nextInt(50) + 1;
+                return new Rectangle(randomColorForRectangle, randomValueForRectangleLegOne, randomValueForRectangleLegTwo);
             case 3:
-                return new RightRectangle(supplier.getRandomColor(), random.nextInt(50) + 1, random.nextInt(50) + 1);
+                String randomColorForRightRectangle = supplier.getRandomColor();
+                int randomValueForFirstSide = random.nextInt(50) + 1;
+                int randomValueForSecondSide = random.nextInt(50) + 1;
+               return new RightRectangle(randomColorForRightRectangle, randomValueForFirstSide, randomValueForSecondSide);
             case 4:
-                return new IsoscelesTrapezoid(supplier.getRandomColor(), random.nextInt(50) + 1, random.nextInt(50) + 1, random.nextInt(50) + 1);
+                String randomColorForIsoscelesTrapezoid = supplier.getRandomColor();
+                int randomValueUpperBase = random.nextInt(50) + 1;
+                int randomValueLowerCase = random.nextInt(50) + 1;
+                int randomValueForHeight = random.nextInt(50) + 1;
+                return new IsoscelesTrapezoid(randomColorForIsoscelesTrapezoid, randomValueUpperBase, randomValueLowerCase, randomValueForHeight);
+            default:
+                throw new IllegalStateException("Unexpected value: " + figureType);
         }
-        return null;
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("White", 10);
+       return new Circle("White", 10);
     }
 
 }

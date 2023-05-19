@@ -17,13 +17,12 @@ public class IsoscelesTrapezoid extends FigureAbstract implements Figure {
         return (double) ((upperBase + lowerBase) * height) / 2;
     }
 
-
     @Override
-    public String toString() {
-        return "Figure:IsoscelesTrapezoid," +
+    public void draw() {
+        System.out.println("Figure:IsoscelesTrapezoid," +
                 "area:" + getArea() +
                 " sq.units,lowerBase:" + lowerBase +
                 " units,upperBase:" + upperBase +
-                " units,height:" + height + " units,color:" + color;
+                " units,height:" + height + " units,color:" + color);
     }
 }

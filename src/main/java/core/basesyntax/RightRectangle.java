@@ -17,10 +17,10 @@ public class RightRectangle extends FigureAbstract implements Figure {
     }
 
     @Override
-    public String toString() {
-        return "Figure:RightRectangle," +
+    public void draw() {
+        System.out.println("Figure:RightRectangle," +
                 "area:" + getArea() +
                 " sq.units,firstLeg:" +
-                firstLeg + " units,secondLeg:" + secondLeg + " units,color:" + color;
+                firstLeg + " units,secondLeg:" + secondLeg + " units,color:" + color);
     }
 }

@@ -10,14 +10,16 @@ public class Main {
 
         Figure[] figures = new Figure[SIZE_OF_ARRAY];
 
-        for(int i = 0; i < SIZE_OF_ARRAY / 2; i++){
+        for (int i = 0; i < SIZE_OF_ARRAY / 2; i++) {
             figures[i] = figureSupplier.getRandomFigure();
-            System.out.println(figures[i]);
         }
 
-        for(int i = SIZE_OF_ARRAY / 2 ;i < SIZE_OF_ARRAY;i++){
+        for (int i = SIZE_OF_ARRAY / 2; i < SIZE_OF_ARRAY; i++) {
             figures[i] = figureSupplier.getDefaultFigure();
-            System.out.println(figures[i]);
+        }
+
+        for (Figure figure : figures) {
+            figure.draw();
         }
 
     }

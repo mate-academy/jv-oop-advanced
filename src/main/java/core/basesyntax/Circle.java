@@ -13,11 +13,10 @@ public class Circle extends FigureAbstract implements Figure {
         return (int) Math.PI * radius * radius;
     }
 
-
     @Override
-    public String toString() {
-        return "Figure:Circle," +
+    public void draw() {
+        System.out.println("Figure:Circle," +
                 "area:" + getArea() + " sq.units,radius:" +
-                radius + " units,color:" + color;
+                radius + " units,color:" + color);
     }
 }

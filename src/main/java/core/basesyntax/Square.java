@@ -14,10 +14,9 @@ public class Square extends FigureAbstract implements Figure {
     }
 
     @Override
-    public String toString() {
-        return "Figure:Square," +
+    public void draw() {
+        System.out.println("Figure:Square," +
                 "area:" + getArea() +
-                " sq.units,side:" + side + " units,color:" + color;
-
+                " sq.units,side:" + side + " units,color:" + color);
     }
 }

@@ -10,19 +10,17 @@ public class Rectangle extends FigureAbstract implements Figure {
         this.color = color;
     }
 
-
     @Override
     public double getArea() {
         return (double) width * length;
     }
 
     @Override
-    public String toString() {
-        return "Figure:Rectangle," +
+    public void draw() {
+        System.out.println("Figure:Rectangle," +
                 "area:" + getArea() +
                 " sq.units,width:" + width +
                 " units,length:" + length +
-                " units,color:" + color;
-
+                " units,color:" + color);
     }
 }
