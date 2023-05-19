@@ -22,6 +22,5 @@ public class RightTriangle extends Figure {
                 + "legHeight: " + String.format("%.2f", legHeight)
                 + " units, legBase: " + String.format("%.2f", legBase)
                 + " units, color: " + color);
-
     }
 }

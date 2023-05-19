@@ -19,6 +19,5 @@ public class Square extends Figure {
                 + String.format("%.2f", getArea()) + " sq.units"
                 + " side: " + String.format("%.2f", side)
                 + " units, color: " + color);
-
     }
 }
