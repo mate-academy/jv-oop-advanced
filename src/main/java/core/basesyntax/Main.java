@@ -1,8 +1,5 @@
 package core.basesyntax;
 
-/**
- * Feel free to remove this class and create your own.
- */
 public class Main {
     private static final FigureSupplier figureSupplier = new FigureSupplier();
 
@@ -14,7 +11,7 @@ public class Main {
             } else {
                 figure[i] = figureSupplier.getDefaultFigure();
             }
-            figure[i].drawTheFigure();
+            figure[i].draw();
         }
     }
 }
