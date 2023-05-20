@@ -13,7 +13,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     public double getArea() {
-        return (at+bt) * ht;
+        return (at + bt) * ht;
     }
 
     public void draw() {
