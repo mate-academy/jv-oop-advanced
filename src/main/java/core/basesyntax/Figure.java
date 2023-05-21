@@ -1,7 +1,7 @@
 
 package core.basesyntax;
 
-public abstract class Figure implements FigureBehaviour {
+public abstract class Figure implements FigureBehaviour, FigureDraw {
     private String color;
     private String figureName;
 
