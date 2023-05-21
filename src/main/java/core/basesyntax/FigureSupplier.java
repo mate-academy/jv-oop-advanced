@@ -5,11 +5,13 @@ import java.util.Random;
 
 public class FigureSupplier {
     private final Random random = new Random();
+    public static final int FIGURE_COUNT = 5;
+    public static final int MAX_RANDOM_VALUE = 100;
 
     public Figure getRandomFigure() {
         Figure figure;
         ColorSupplier colorSupplier = new ColorSupplier();
-        int index = this.random.nextInt(6);
+        int index = this.random.nextInt(FIGURE_COUNT);
         switch (index) {
             case 1:
                 figure = getCircle();
@@ -35,31 +37,31 @@ public class FigureSupplier {
     }
 
     public Figure getCircle() {
-        int firstValue = this.random.nextInt(100);
+        int firstValue = this.random.nextInt(MAX_RANDOM_VALUE);
         return new Circle(firstValue);
     }
 
     public Figure getRectangle() {
-        int firstValue = this.random.nextInt(100);
-        int secondValue = this.random.nextInt(100);
+        int firstValue = this.random.nextInt(MAX_RANDOM_VALUE);
+        int secondValue = this.random.nextInt(MAX_RANDOM_VALUE);
         return new Rectangle(firstValue,secondValue);
     }
 
     public Figure getIsoscelesTrapezoid() {
-        int firstValue = this.random.nextInt(100);
-        int secondValue = this.random.nextInt(100);
-        int thirdValue = this.random.nextInt(100);
+        int firstValue = this.random.nextInt(MAX_RANDOM_VALUE);
+        int secondValue = this.random.nextInt(MAX_RANDOM_VALUE);
+        int thirdValue = this.random.nextInt(MAX_RANDOM_VALUE);
         return new IsoscelesTrapezoid(firstValue,secondValue,thirdValue);
     }
 
     public Figure getRightTriangle() {
-        int firstValue = this.random.nextInt(100);
-        int secondValue = this.random.nextInt(100);
+        int firstValue = this.random.nextInt(MAX_RANDOM_VALUE);
+        int secondValue = this.random.nextInt(MAX_RANDOM_VALUE);
         return new RightTriangle(firstValue,secondValue);
     }
 
     public Figure getSquare() {
-        int firstValue = this.random.nextInt(100);
+        int firstValue = this.random.nextInt(MAX_RANDOM_VALUE);
         return new Square(firstValue);
     }
 
