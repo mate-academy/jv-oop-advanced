@@ -4,15 +4,11 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int NUMBER_OF_FIGURES = 5;
-    private final String defaultColor = "WHITE";
-    private final int defaultRadius = 10;
-    private final int maxBound = 50;
+    private static final Color DEFAULT_COLOR = Color.WHITE;
+    private static final int DEFAULT_VALUE = 10;
+    private static final int MAX_BOUND = 50;
     private final Random random = new Random();
     private final ColorSupplier supplier = new ColorSupplier();
-
-    private int generateRandomValue() {
-        return random.nextInt(maxBound) + 1;
-    }
 
     public Figure getRandomFigure() {
         int figureType = random.nextInt(NUMBER_OF_FIGURES);
@@ -37,6 +33,10 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(defaultColor, defaultRadius);
+        return new Circle(DEFAULT_COLOR, DEFAULT_VALUE);
+    }
+
+    private int generateRandomValue() {
+        return random.nextInt(MAX_BOUND) + 1;
     }
 }
