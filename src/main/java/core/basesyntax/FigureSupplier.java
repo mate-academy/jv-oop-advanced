@@ -7,6 +7,7 @@ public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
     public static final int MAX_RANDOM_VALUE = 100;
     private final Random random = new Random();
+
     public Figure getRandomFigure() {
         Figure figure;
         ColorSupplier colorSupplier = new ColorSupplier();
