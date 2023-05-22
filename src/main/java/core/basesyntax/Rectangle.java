@@ -34,6 +34,8 @@ public class Rectangle extends Figure {
     @Override
     public void draw() {
         super.draw();
-        System.out.println("firstleg: " + this.getFirstLeg() + " units, secondleg: " + this.getSecondLeg() +  " units, color:" + this.getColor());
+        String string = ", firstleg: " + this.getFirstLeg() + " units,";
+        string = string + " secondleg: " + this.getSecondLeg() + " units, color:" + this.getColor();
+        System.out.println(string);
     }
 }

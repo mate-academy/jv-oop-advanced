@@ -44,6 +44,8 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public void draw() {
         super.draw();
-        System.out.println(", firstbase: " + this.getFirstBase() + " units, secondbase: " + this.getSecondBase() + " units, color: " + this.getColor());
+        String string = ", firstbase: " + this.getFirstBase() + " units,";
+        string = string + " secondbase: " + this.getSecondBase() + " units, color:" + this.getColor();
+        System.out.println(string);
     }
 }
