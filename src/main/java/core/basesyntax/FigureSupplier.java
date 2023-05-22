@@ -7,6 +7,7 @@ public class FigureSupplier {
     public static final int MAX_VALUE = 50;
     public static final int DEFAULT_RADIUS = 10;
     public static final String DEFAULT_COLOR = "WHITE";
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
@@ -28,7 +29,6 @@ public class FigureSupplier {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
-    private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     private Circle getRandomCircle() {
@@ -40,7 +40,8 @@ public class FigureSupplier {
         int longerBase = random.nextInt(MAX_VALUE);
         int shorterBase = random.nextInt(MAX_VALUE);
         int height = random.nextInt(MAX_VALUE);
-        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), longerBase, shorterBase, height);
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                longerBase, shorterBase, height);
     }
 
     private Rectangle getRandomRectangle() {
