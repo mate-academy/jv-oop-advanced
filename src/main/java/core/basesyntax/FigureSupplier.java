@@ -8,6 +8,7 @@ public class FigureSupplier {
     public static final int DEFAULT_RADIUS = 10;
     public static final String DEFAULT_COLOR = "WHITE";
     private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
@@ -28,8 +29,6 @@ public class FigureSupplier {
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
-
-    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     private Circle getRandomCircle() {
         int radius = random.nextInt(MAX_VALUE);
