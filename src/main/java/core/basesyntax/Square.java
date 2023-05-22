@@ -24,12 +24,6 @@ public class Square extends Figure {
     @Override
     public void draw() {
         super.draw();
-        StringBuilder builder = new StringBuilder();
-        builder.append(", side: ");
-        builder.append(this.getSide());
-        builder.append(" units");
-        builder.append(", color: ");
-        builder.append(this.getColor());
-        System.out.println(builder.toString());
+        System.out.println(", side: " + this.getSide() + " units, color: " + this.getColor() );
     }
 }
