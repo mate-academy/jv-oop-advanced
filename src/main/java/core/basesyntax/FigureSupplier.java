@@ -6,7 +6,7 @@ public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
     public static final int MAX_VALUE = 50;
     public static final int DEFAULT_RADIUS = 10;
-    public static final String DEFAULT_COLOR = "WHITE";
+    public static final String DEFAULT_WHITE = "WHITE";
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -27,7 +27,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
+        return new Circle(DEFAULT_WHITE, DEFAULT_RADIUS);
     }
 
     private Circle getRandomCircle() {
@@ -44,8 +44,8 @@ public class FigureSupplier {
     }
 
     private Rectangle getRandomRectangle() {
-        int width = random.nextInt(MAX_VALUE);
-        int height = random.nextInt(MAX_VALUE);
+        int width = random.nextInt(MAX_VALUE + 1);
+        int height = random.nextInt(MAX_VALUE + 1);
         return new Rectangle(colorSupplier.getRandomColor(), width,height);
     }
 
