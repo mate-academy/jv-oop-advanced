@@ -1,7 +1,6 @@
-
 package core.basesyntax;
 
-public abstract class Figure implements FigureBehaviour, FigureDraw {
+public abstract class Figure implements AreaCalculator, FigureDraw {
     private String color;
     private String figureName;
 
@@ -22,11 +21,12 @@ public abstract class Figure implements FigureBehaviour, FigureDraw {
     }
 
     public void draw() {
-        StringBuilder builder = new StringBuilder("Figure: ");
+       /* StringBuilder builder = new StringBuilder("Figure: ");
         builder.append(this.getName());
         builder.append(", area: ");
         builder.append(String.format("%.1f", this.obtainArea()));
-        builder.append(" sq.units");
-        System.out.print(builder.toString());
+        builder.append(" sq.units");*/
+        System.out.print("Figure: " + this.getName() + ", area: " + String.format("%.1f", this.obtainArea()) + " sq.units");
+        //System.out.print(builder.toString());
     }
 }

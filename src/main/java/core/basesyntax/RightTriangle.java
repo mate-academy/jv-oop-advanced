@@ -1,4 +1,3 @@
-
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
@@ -35,15 +34,6 @@ public class RightTriangle extends Figure {
     @Override
     public void draw() {
         super.draw();
-        StringBuilder builder = new StringBuilder();
-        builder.append(", firstleg: ");
-        builder.append(this.getFirstLeg());
-        builder.append(" units, ");
-        builder.append("secondleg: ");
-        builder.append(this.getSecondLeg());
-        builder.append(" units");
-        builder.append(", color: ");
-        builder.append(this.getColor());
-        System.out.println(builder.toString());
+        System.out.println(", firstleg: " + this.getFirstLeg() + " units, secondleg: " + this.getSecondLeg() + " units, color: " + this.getColor());
     }
 }

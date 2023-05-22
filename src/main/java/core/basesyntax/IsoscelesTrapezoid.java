@@ -1,4 +1,3 @@
-
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
@@ -45,16 +44,6 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public void draw() {
         super.draw();
-        StringBuilder builder = new StringBuilder();
-        builder.append(", firstbase: ");
-        builder.append(this.getFirstBase());
-        builder.append(" units, secondbase: ");
-        builder.append(getSecondBase());
-        builder.append(" units, height: ");
-        builder.append(this.getHeight());
-        builder.append(" units");
-        builder.append(", color: ");
-        builder.append(this.getColor());
-        System.out.println(builder.toString());
+        System.out.println(", firstbase: " + this.getFirstBase() + " units, secondbase: " + this.getSecondBase() + " units, color: " + this.getColor());
     }
 }
