@@ -21,7 +21,8 @@ public abstract class Figure implements AreaCalculator, FigureDraw {
     }
 
     public void draw() {
-        String string =  "Figure: " + this.getName() + ", area: " + String.format("%.1f", this.obtainArea()) + " sq.units";
+        String string = "Figure: " + this.getName();
+        string += ", area: " + String.format("%.1f", this.obtainArea()) + " sq.units";
         System.out.print(string);
     }
 }
