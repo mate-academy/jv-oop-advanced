@@ -5,7 +5,6 @@ public class RightTriangle extends Figure {
     private int secondLeg;
 
     public RightTriangle(int firstLeg,int secondLeg) {
-        this.setName("triangle");
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }

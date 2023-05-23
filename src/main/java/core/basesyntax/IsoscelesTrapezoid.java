@@ -6,7 +6,6 @@ public class IsoscelesTrapezoid extends Figure {
     private int height;
 
     public IsoscelesTrapezoid(int firstBase,int secondBase,int height) {
-        this.setName("isosceles trapezoid");
         this.firstBase = firstBase;
         this.secondBase = secondBase;
         this.height = height;

@@ -9,4 +9,3 @@ public enum Colors {
     Cyan,
     White
 }
-

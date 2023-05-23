@@ -1,10 +1,13 @@
 package core.basesyntax;
 
+import java.awt.*;
 import java.util.Random;
 
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
     public static final int MAX_RANDOM_VALUE = 100;
+    public static final int DEFAULT_RADIUS = 10;
+    public static final String DEFAULT_COLOR = Colors.White.name();
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
@@ -65,8 +68,8 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        Circle circle = new Circle(10);
-        circle.setColor(Colors.White.name());
+        Circle circle = new Circle(DEFAULT_RADIUS);
+        circle.setColor(DEFAULT_COLOR);
         return circle;
     }
 }

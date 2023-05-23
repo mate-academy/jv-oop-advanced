@@ -5,7 +5,6 @@ public class Rectangle extends Figure {
     private int secondLeg;
 
     public Rectangle(int firstValue,int secondValue) {
-        this.setName("rectangle");
         this.firstLeg = firstValue;
         this.secondLeg = secondValue;
     }
