@@ -1,31 +1,32 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private int firstLeg;
-    private int secondLeg;
-    private int thirdLeg;
+    private int firstLength;
+    private int secondLength;
+    private int thirdLength;
 
-    public IsoscelesTrapezoid(int firstLeg, int secondLeg, int thirdLeg) {
-        this.firstLeg = firstLeg;
-        this.secondLeg = secondLeg;
-        this.thirdLeg = thirdLeg;
+    public IsoscelesTrapezoid(int firstLength, int secondLength, int thirdLength, String color) {
+        this.firstLength = firstLength;
+        this.secondLength = secondLength;
+        this.thirdLength = thirdLength;
+        super.setColor(color);
     }
 
     @Override
     public double getArea() {
-        return (double) (((firstLeg + secondLeg) / 2)
-                * (Math.sqrt(Math.pow((double) thirdLeg, 2))
-                - (Math.pow(((double) firstLeg - secondLeg) / 2, 2))));
+        return (double) (((firstLength + secondLength) / 2)
+                * (Math.sqrt(Math.pow((double) thirdLength, 2))
+                - (Math.pow(((double) firstLength - secondLength) / 2, 2))));
     }
 
     @Override
     public void draw() {
         System.out.println(
                 "Figure: IsoscelesTrapezoid, area: " + getArea()
-                        + "sq.units, firstLeg: " + firstLeg
-                        + " units, secondLeg: " + secondLeg
-                        + " units, firstLeg: " + firstLeg
-                        + " units, color: " + getColor()
+                        + "sq.units, firstLeg: " + firstLength
+                        + " units, secondLeg: " + secondLength
+                        + " units, thirdLeg: " + thirdLength
+                        + " units, color: " + super.getColor()
         );
     }
 }
