@@ -5,7 +5,7 @@ import java.util.Random;
 public class FigureSupplier {
     static final int DEFAULT_CIRCLE_RADIUS = 10;
     static final int SIDE_LENGTH = 100;
-    static final String DEFAULT_CIRCLE_COLOR = "white";
+    static final String DEFAULT_CIRCLE_COLOR = String.valueOf(Color.WHITE);
     static final int FIGURE_COUNT = 5;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();

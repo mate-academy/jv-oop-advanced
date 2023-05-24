@@ -6,11 +6,12 @@ public class Application {
 
         Figure[] figures = new Figure[6];
         for (int i = 0; i < 6; i++) {
-            figures[i] = supplier.getRandomFigure();
-        }
-
-        for (Figure figure: figures) {
-            figure.draw();
+            if (i < 3) {
+                figures[i] = supplier.getRandomFigure();
+            } else {
+                figures[i] = supplier.getDefaultFigure();
+            }
+            figures[i].draw();
         }
     }
 }
