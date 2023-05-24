@@ -11,6 +11,7 @@ public class FigureSupplier {
     public FigureSupplier(ColorSupplier colorSupplier) {
         this.colorSupplier = colorSupplier;
     }
+
     public Figure getRandomFigure() {
         int index = random.nextInt(FIGURE_COUNT);
         int side = random.nextInt(MAX_RANDOM);
