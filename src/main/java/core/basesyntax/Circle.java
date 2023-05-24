@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import com.sun.jdi.Value;
-
 public class Circle extends Figure {
     private final int radius;
 
@@ -17,9 +15,12 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: circle, area: " +
-                getArea() + " sq.units, radius: " +
-                radius + " units, color: " +
+        System.out.println("Figure: circle, area: "
+                +
+                getArea() + " sq.units, radius: "
+                +
+                radius + " units, color: "
+                +
                 getColor());
     }
 }
