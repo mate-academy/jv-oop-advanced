@@ -20,6 +20,7 @@ public class Circle extends Figure {
         return radius * radius * Math.PI;
     }
 
+    @Override
     public void draw() {
         super.draw();
         System.out.println(", radius: " + this.getRadius() + " units, color: " + this.getColor());
