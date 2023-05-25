@@ -1,18 +1,18 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private final int width;
+    private final int length;
     private final int height;
 
-    public Rectangle(int width, int height, String color) {
+    public Rectangle(int length, int height, String color) {
         super(color);
-        this.width = width;
+        this.length = length;
         this.height = height;
     }
 
     @Override
     public double getArea() {
-        return width * height;
+        return length * height;
     }
 
     @Override
@@ -21,7 +21,7 @@ public class Rectangle extends Figure {
                 +
                 getArea() + " sq.units, width: "
                 +
-                width + " units, height: "
+                length + " units, height: "
                 +
                 height + "units, color: "
                 +
