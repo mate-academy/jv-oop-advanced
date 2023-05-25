@@ -4,9 +4,10 @@ public class Rectangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
-    public Rectangle(int firstValue,int secondValue) {
+    public Rectangle(int firstValue,int secondValue,String color) {
         this.firstLeg = firstValue;
         this.secondLeg = secondValue;
+        this.setColor(color);
     }
 
     public void setFirstLeg(int firstLeg) {
@@ -26,15 +27,15 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double obtainArea() {
+    public double calculateArea() {
         return this.getFirstLeg() * this.getSecondLeg();
     }
 
     @Override
     public void draw() {
         super.draw();
-        String string = ", firstleg: " + this.getFirstLeg() + " units,";
-        string += " secondleg: " + this.getSecondLeg() + " units, color:" + this.getColor();
+        String string = ", firstleg: " + this.firstLeg + " units,";
+        string += " secondleg: " + secondLeg + " units, color:" + this.getColor();
         System.out.println(string);
     }
 }

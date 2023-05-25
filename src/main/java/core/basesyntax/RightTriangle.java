@@ -4,9 +4,10 @@ public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
-    public RightTriangle(int firstLeg,int secondLeg) {
+    public RightTriangle(int firstLeg,int secondLeg,String color) {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
+        this.setColor(color);
     }
 
     public void setFirstLeg(int firstLeg) {
@@ -26,15 +27,15 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double obtainArea() {
+    public double calculateArea() {
         return this.firstLeg * this.secondLeg / 2;
     }
 
     @Override
     public void draw() {
         super.draw();
-        String string = ", firstleg: " + this.getFirstLeg() + " units,";
-        string += " secondleg: " + this.getSecondLeg() + " units, color:" + this.getColor();
+        String string = ", firstleg: " + firstLeg + " units,";
+        string += " secondleg: " + secondLeg + " units, color:" + this.getColor();
         System.out.println(string);
     }
 }

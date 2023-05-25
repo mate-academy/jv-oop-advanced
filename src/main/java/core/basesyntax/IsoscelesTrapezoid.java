@@ -5,10 +5,11 @@ public class IsoscelesTrapezoid extends Figure {
     private int secondBase;
     private int height;
 
-    public IsoscelesTrapezoid(int firstBase,int secondBase,int height) {
+    public IsoscelesTrapezoid(int firstBase,int secondBase,int height,String color) {
         this.firstBase = firstBase;
         this.secondBase = secondBase;
         this.height = height;
+        this.setColor(color);
     }
 
     public void setFirstBase(int firstBase) {
@@ -36,15 +37,15 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double obtainArea() {
+    public double calculateArea() {
         return ((this.firstBase + this.secondBase) * this.height / 2);
     }
 
     @Override
     public void draw() {
         super.draw();
-        String string = ", firstbase: " + this.getFirstBase() + " units,";
-        string += " secondbase: " + this.getSecondBase() + " units, color:" + this.getColor();
+        String string = ", firstbase: " + firstBase + " units,";
+        string += " secondbase: " + secondBase + " units, color:" + this.getColor();
         System.out.println(string);
     }
 }
