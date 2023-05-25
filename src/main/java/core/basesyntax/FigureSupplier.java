@@ -63,6 +63,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-      return new Circle(DEFAULT_RADIUS,DEFAULT_COLOR);
+        return new Circle(DEFAULT_RADIUS,DEFAULT_COLOR);
     }
 }
