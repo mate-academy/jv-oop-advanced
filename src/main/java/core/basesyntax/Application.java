@@ -12,12 +12,11 @@ public class Application {
         for (int i = 0; i < ARRAY_SIZE; i++) {
             if (i < HALF_SIZE) {
                 figures[i] = figureSupplier.getRandomFigure();
-                figures[i].draw();
             }
             if (i >= HALF_SIZE) {
                 figures[i] = figureSupplier.getDefaultFigure();
-                figures[i].draw();
             }
+            figures[i].draw();
         }
     }
 }
