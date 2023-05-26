@@ -28,14 +28,14 @@ public class RightTriangle extends Figure {
 
     @Override
     public double calculateArea() {
-        return this.firstLeg * this.secondLeg / 2;
+        return firstLeg * secondLeg / 2;
     }
 
     @Override
     public void draw() {
         super.draw();
         String string = ", firstleg: " + firstLeg + " units,";
-        string += " secondleg: " + secondLeg + " units, color:" + this.getColor();
+        string += " secondleg: " + secondLeg + " units, color:" + getColor();
         System.out.println(string);
     }
 }

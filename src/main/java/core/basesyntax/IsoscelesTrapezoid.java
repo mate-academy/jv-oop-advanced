@@ -38,14 +38,14 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double calculateArea() {
-        return ((this.firstBase + this.secondBase) * this.height / 2);
+        return ((firstBase + secondBase) * height / 2);
     }
 
     @Override
     public void draw() {
         super.draw();
         String string = ", firstbase: " + firstBase + " units,";
-        string += " secondbase: " + secondBase + " units, color:" + this.getColor();
+        string += " secondbase: " + secondBase + " units, color:" + getColor();
         System.out.println(string);
     }
 }

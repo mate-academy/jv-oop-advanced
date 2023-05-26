@@ -28,14 +28,14 @@ public class Rectangle extends Figure {
 
     @Override
     public double calculateArea() {
-        return this.getFirstLeg() * this.getSecondLeg();
+        return getFirstLeg() * getSecondLeg();
     }
 
     @Override
     public void draw() {
         super.draw();
         String string = ", firstleg: " + this.firstLeg + " units,";
-        string += " secondleg: " + secondLeg + " units, color:" + this.getColor();
+        string += " secondleg: " + secondLeg + " units, color:" + getColor();
         System.out.println(string);
     }
 }
