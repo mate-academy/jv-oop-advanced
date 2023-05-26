@@ -23,7 +23,7 @@ public class Rectangle extends Figure {
                 +
                 length + " units, height: "
                 +
-                height + "units, color: "
+                height + " units, color: "
                 +
                 getColor());
     }
