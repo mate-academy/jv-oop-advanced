@@ -20,6 +20,6 @@ public class RightTriangle extends Figure {
         String name = "right triangle";
         System.out.println("Figure: " + name + ", area: " + getArea()
                 + " sq. units, firstLeg: " + firstLeg
-                + " units, secondLeg: " + secondLeg + " units, color: " + getColor());
+                + " units, secondLeg: " + secondLeg + " units, color: " + getColor().toLowerCase());
     }
 }
