@@ -14,5 +14,4 @@ public abstract class Figure implements DrawInfo, AreaCalculator {
     public void setColor(String color) {
         this.color = color;
     }
-
 }

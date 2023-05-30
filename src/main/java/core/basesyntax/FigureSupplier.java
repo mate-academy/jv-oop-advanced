@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int RANDOM_VALUE = 15;
+    private static final int MAX_VALUE = 15;
     private static final int DEFAULT_RADIUS = 10;
     private static final String DEFAULT_COLOR = Color.WHITE.name();
     private final Random random = new Random();
@@ -16,31 +16,31 @@ public class FigureSupplier {
             case CIRCLE:
                 return new Circle(
                         colorSupplier.getRandomColor(),
-                        random.nextInt(RANDOM_VALUE)
+                        random.nextInt(MAX_VALUE)
                 );
             case SQUARE:
                 return new Square(
                         colorSupplier.getRandomColor(),
-                        random.nextInt(RANDOM_VALUE)
+                        random.nextInt(MAX_VALUE)
                 );
             case RECTANGLE:
                 return new Rectangle(
                         colorSupplier.getRandomColor(),
-                        random.nextInt(RANDOM_VALUE),
-                        random.nextInt(RANDOM_VALUE)
+                        random.nextInt(MAX_VALUE),
+                        random.nextInt(MAX_VALUE)
                 );
             case RIGHT_TRIANGLE:
                 return new RightTriangle(
                         colorSupplier.getRandomColor(),
-                        random.nextInt(RANDOM_VALUE),
-                        random.nextInt(RANDOM_VALUE)
+                        random.nextInt(MAX_VALUE),
+                        random.nextInt(MAX_VALUE)
                 );
             case ISOSCELES_TRAPEZOID:
                 return new IsoscelesTrapezoid(
                         colorSupplier.getRandomColor(),
-                        random.nextInt(RANDOM_VALUE),
-                        random.nextInt(RANDOM_VALUE),
-                        random.nextInt(RANDOM_VALUE)
+                        random.nextInt(MAX_VALUE),
+                        random.nextInt(MAX_VALUE),
+                        random.nextInt(MAX_VALUE)
                 );
             default:
                 throw new RuntimeException("This object is not a required type");
@@ -50,5 +50,4 @@ public class FigureSupplier {
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
-
 }

@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private static final int DIVIDER = 2;
     private final int firstSide;
     private final int secondSide;
     private final int height;
@@ -15,7 +14,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double getArea() {
-        return (double) (firstSide + secondSide) / DIVIDER * height;
+        return (double) (firstSide + secondSide) / 2 * height;
     }
 
     @Override
