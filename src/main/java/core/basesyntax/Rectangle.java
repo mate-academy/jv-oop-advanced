@@ -1,14 +1,12 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure {
+public class Rectangle implements Figure {
     private int width;
     private int heights;
-
-    public Rectangle() {
-    }
+    private Color color;
 
     public Rectangle(int width, int heights, Color color) {
-        super.color = color;
+        this.color = color;
         this.width = width;
         this.heights = heights;
     }

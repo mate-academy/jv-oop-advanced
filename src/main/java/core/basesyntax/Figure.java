@@ -1,10 +1,8 @@
 package core.basesyntax;
 
-public abstract class Figure {
-    protected Color color;
+public interface Figure {
+    double getArea();
 
-    public abstract double getArea();
-
-    public abstract void draw();
+    void draw();
 
 }
