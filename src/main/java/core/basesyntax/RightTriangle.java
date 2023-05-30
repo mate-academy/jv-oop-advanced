@@ -20,7 +20,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("RightTriangle area = " + getArea() + ", color: " +
-                color.name() + ", firstLeg: " + firstLeg + ", secondLeg: " + secondLeg);
+        System.out.println("RightTriangle area = " + getArea() + ", color: "
+                + color.name() + ", firstLeg: " + firstLeg + ", secondLeg: " + secondLeg);
     }
 }
