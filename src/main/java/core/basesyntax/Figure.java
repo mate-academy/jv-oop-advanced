@@ -1,8 +1,6 @@
 package core.basesyntax;
 
-public interface Figure {
-    double getArea();
-
-    void draw();
-
+public abstract class Figure implements FigureMaths{
+    protected Color color;
+    public abstract void draw();
 }
