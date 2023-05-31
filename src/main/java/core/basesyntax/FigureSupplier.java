@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_INT = 10;
+    private static final int FIGURES_NUMBER = 5;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -12,7 +13,7 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        int figureNumber = random.nextInt(5);
+        int figureNumber = random.nextInt(FIGURES_NUMBER);
 
         switch (figureNumber) {
             case 0:
@@ -25,9 +26,8 @@ public class FigureSupplier {
                 return getRectangle();
             case 4:
                 return getSquare();
-            default: getDefaultFigure();
+            default: return getDefaultFigure();
         }
-        return null;
     }
 
     private Figure getIsoscelesTrapezoid() {
