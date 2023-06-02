@@ -1,7 +1,7 @@
-package core.basesyntax.figures;
+package core.basesyntax.figure;
 
-import core.basesyntax.enums.Color;
-import core.basesyntax.enums.FigureType;
+import core.basesyntax.enumforfigure.Color;
+import core.basesyntax.enumforfigure.FigureType;
 
 public class IsoscelesTrapezoid extends Figure {
     private int firstBase;
@@ -9,10 +9,9 @@ public class IsoscelesTrapezoid extends Figure {
     private int height;
 
     public IsoscelesTrapezoid(int firstBase, int secondBase, int height, Color color) {
+        super(color, FigureType.ISOSCELESTRAPEZOID);
         this.firstBase = firstBase;
         this.secondBase = secondBase;
-        this.color = color;
-        this.figureType = FigureType.ISOSCELESTRAPEZOID;
     }
 
     @Override

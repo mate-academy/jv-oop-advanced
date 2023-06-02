@@ -1,15 +1,14 @@
-package core.basesyntax.figures;
+package core.basesyntax.figure;
 
-import core.basesyntax.enums.Color;
-import core.basesyntax.enums.FigureType;
+import core.basesyntax.enumforfigure.Color;
+import core.basesyntax.enumforfigure.FigureType;
 
 public class Square extends Figure {
     private int side;
 
     public Square(int side, Color color) {
+        super(color, FigureType.SQUARE);
         this.side = side;
-        this.color = color;
-        figureType = FigureType.SQUARE;
     }
 
     @Override

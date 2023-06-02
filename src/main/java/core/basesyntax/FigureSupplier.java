@@ -1,13 +1,13 @@
 package core.basesyntax;
 
-import core.basesyntax.enums.Color;
-import core.basesyntax.enums.FigureType;
-import core.basesyntax.figures.Circle;
-import core.basesyntax.figures.Figure;
-import core.basesyntax.figures.IsoscelesTrapezoid;
-import core.basesyntax.figures.Rectangle;
-import core.basesyntax.figures.RightTriangle;
-import core.basesyntax.figures.Square;
+import core.basesyntax.enumforfigure.Color;
+import core.basesyntax.enumforfigure.FigureType;
+import core.basesyntax.figure.Circle;
+import core.basesyntax.figure.Figure;
+import core.basesyntax.figure.IsoscelesTrapezoid;
+import core.basesyntax.figure.Rectangle;
+import core.basesyntax.figure.RightTriangle;
+import core.basesyntax.figure.Square;
 import java.util.Random;
 
 public class FigureSupplier {

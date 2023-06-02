@@ -1,17 +1,16 @@
-package core.basesyntax.figures;
+package core.basesyntax.figure;
 
-import core.basesyntax.enums.Color;
-import core.basesyntax.enums.FigureType;
+import core.basesyntax.enumforfigure.Color;
+import core.basesyntax.enumforfigure.FigureType;
 
 public class Rectangle extends Figure {
     private int width;
     private int length;
 
     public Rectangle(int side, int height, Color color) {
+        super(color, FigureType.RECTANGLE);
         this.width = side;
         this.length = height;
-        this.color = color;
-        this.figureType = FigureType.RECTANGLE;
     }
 
     @Override

@@ -1,4 +1,4 @@
-package core.basesyntax.interfaces;
+package core.basesyntax.interfaceforfigure;
 
 public interface Drawable {
     void draw();

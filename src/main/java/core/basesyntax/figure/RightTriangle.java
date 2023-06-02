@@ -1,17 +1,16 @@
-package core.basesyntax.figures;
+package core.basesyntax.figure;
 
-import core.basesyntax.enums.Color;
-import core.basesyntax.enums.FigureType;
+import core.basesyntax.enumforfigure.Color;
+import core.basesyntax.enumforfigure.FigureType;
 
 public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
     public RightTriangle(int side, int height, Color color) {
+        super(color, FigureType.RIGHTTRIANGLE);
         this.firstLeg = side;
         this.secondLeg = height;
-        this.color = color;
-        this.figureType = FigureType.RIGHTTRIANGLE;
     }
 
     @Override

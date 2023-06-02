@@ -1,15 +1,14 @@
-package core.basesyntax.figures;
+package core.basesyntax.figure;
 
-import core.basesyntax.enums.Color;
-import core.basesyntax.enums.FigureType;
+import core.basesyntax.enumforfigure.Color;
+import core.basesyntax.enumforfigure.FigureType;
 
 public class Circle extends Figure {
     private int radius;
 
     public Circle(int side, Color color) {
+        super(color, FigureType.CIRCLE);
         this.radius = side;
-        this.color = color;
-        figureType = FigureType.CIRCLE;
     }
 
     @Override
