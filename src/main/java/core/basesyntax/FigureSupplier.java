@@ -1,12 +1,26 @@
 package core.basesyntax;
 
+import core.basesyntax.enums.Color;
+import core.basesyntax.enums.FigureType;
+import core.basesyntax.figures.Circle;
+import core.basesyntax.figures.Figure;
+import core.basesyntax.figures.IsoscelesTrapezoid;
+import core.basesyntax.figures.Rectangle;
+import core.basesyntax.figures.RightTriangle;
+import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    protected Figure getRandomFigure() {
-        int index = new Random().nextInt(FigureType.values().length);
+    private static final int MAX_VALUE = 1000;
+    private static final int DEFAULT_RADIUS = 10;
+    private static final Color DEFAULT_COLOR = Color.WHITE;
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+
+    public Figure getRandomFigure() {
+        int index = random.nextInt(FigureType.values().length);
         FigureType figureType = FigureType.values()[index];
-        Color randomColor = new ColorSupplier().getRandomColor();
+        Color randomColor = colorSupplier.getRandomColor();
 
         if (figureType == FigureType.SQUARE) {
             return new Square(getRandomInt(), randomColor);
@@ -25,13 +39,10 @@ public class FigureSupplier {
     }
 
     private int getRandomInt() {
-        final int maxval = 1000;
-        return new Random().nextInt(maxval) + 1;
+        return random.nextInt(MAX_VALUE) + 1;
     }
 
     public Figure getDefaultFigure() {
-        final int radius = 10;
-        final Color color = Color.WHITE;
-        return new Circle(radius, color);
+        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
     }
 }

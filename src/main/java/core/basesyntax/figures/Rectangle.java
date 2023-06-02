@@ -1,4 +1,7 @@
-package core.basesyntax;
+package core.basesyntax.figures;
+
+import core.basesyntax.enums.Color;
+import core.basesyntax.enums.FigureType;
 
 public class Rectangle extends Figure {
     private int width;
@@ -17,7 +20,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void getFigureInfo() {
+    public void draw() {
         //Figure: square, area: 25.0 sq.units, side: 5 units, color: blue
         System.out.println("Figure: " + this.figureType + ", area: "
                 + this.getArea() + " sq.units, width: " + this.width + " units, length: "
