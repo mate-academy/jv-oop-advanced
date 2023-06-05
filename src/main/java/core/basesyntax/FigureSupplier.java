@@ -5,40 +5,29 @@ import java.util.Random;
 public class FigureSupplier {
     private static final String DEFAULT_COLOR = "white";
     private static final double DEFAULT_RADIUS = 10.0;
-    private ColorSupplier colorSupplier;
+    private static final int FIGURE_COUNT = 5;
+    private ColorSupplier colorSupplier = new ColorSupplier();
+    private Random random = new Random();
 
     public FigureSupplier(ColorSupplier colorSupplier) {
         this.colorSupplier = colorSupplier;
     }
 
     public AbstractFigure getRandomFigure() {
-        Random random = new Random();
-        int figureType = random.nextInt(5);
+        int figureType = random.nextInt(FIGURE_COUNT);
         String color = colorSupplier.getRandomColor();
 
         switch (figureType) {
             case 0:
-                double squareSide = getRandomParameter();
-                return new Square(color, squareSide);
+                return getRandomSquare(color);
             case 1:
-                double rectangleLength = getRandomParameter();
-                double rectangleWidth = getRandomParameter();
-                return new Rectangle(color, rectangleLength, rectangleWidth);
+                return getRandomRectangle(color);
             case 2:
-                double triangleFirstLeg = getRandomParameter();
-                double triangleSecondLeg = getRandomParameter();
-                return new RightTriangle(color, triangleFirstLeg, triangleSecondLeg);
+                return getRandomRightTriangle(color);
             case 3:
-                double circleRadius = getRandomParameter();
-                return new Circle(color, circleRadius);
+                return getRandomCircle(color);
             default:
-                double trapezoidUpperBase = random.nextDouble() * 10 + 1;
-                double trapezoidLowerBase = random.nextDouble() * 10 + 1;
-                double trapezoidHeight = random.nextDouble() * 10 + 1;
-                return new IsoscelesTrapezoid(color,
-                        trapezoidUpperBase,
-                        trapezoidLowerBase,
-                        trapezoidHeight);
+                return getRandomIsoscelesTrapezoid(color);
         }
     }
 
@@ -46,7 +35,36 @@ public class FigureSupplier {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
+    private Square getRandomSquare(String color) {
+        double side = getRandomParameter();
+        return new Square(color, side);
+    }
+
+    private Rectangle getRandomRectangle(String color) {
+        double length = getRandomParameter();
+        double width = getRandomParameter();
+        return new Rectangle(color, length, width);
+    }
+
+    private RightTriangle getRandomRightTriangle(String color) {
+        double firstLeg = getRandomParameter();
+        double secondLeg = getRandomParameter();
+        return new RightTriangle(color, firstLeg, secondLeg);
+    }
+
+    private Circle getRandomCircle(String color) {
+        double radius = getRandomParameter();
+        return new Circle(color, radius);
+    }
+
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid(String color) {
+        double topBase = getRandomParameter();
+        double bottomBase = getRandomParameter();
+        double height = getRandomParameter();
+        return new IsoscelesTrapezoid(color, topBase, bottomBase, height);
+    }
+
     private double getRandomParameter() {
-        return new Random().nextDouble() * 10 + 1;
+        return random.nextDouble() * 10 + 1;
     }
 }
