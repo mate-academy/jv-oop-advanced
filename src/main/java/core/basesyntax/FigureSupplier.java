@@ -9,10 +9,6 @@ public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
 
-    public FigureSupplier(ColorSupplier colorSupplier) {
-        this.colorSupplier = colorSupplier;
-    }
-
     public AbstractFigure getRandomFigure() {
         int figureType = random.nextInt(FIGURE_COUNT);
         String color = colorSupplier.getRandomColor();
