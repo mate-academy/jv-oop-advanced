@@ -3,6 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int DEFAULT_RADIUS = 10;
     private final Random random = new Random();
     private final ColorSupplier randomColor = new ColorSupplier();
 
@@ -39,7 +40,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.toString(), 10);
+        return new Circle(Color.WHITE.toString(), DEFAULT_RADIUS);
     }
 
 }
