@@ -5,6 +5,8 @@ import java.util.Random;
 public class FigureSupplier {
     private static final Random random = new Random();
     private static final Shape[] shapes = Shape.values();
+    private static final int RADIUS = 10;
+    private static final String COLOR = "WHITE";
     private Circle prepareCircle() {
         return new Circle();
     }
@@ -41,6 +43,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("WHITE", 10);
+        return new Circle(COLOR, RADIUS);
     }
 }
