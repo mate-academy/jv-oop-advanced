@@ -8,10 +8,6 @@ public class Square extends Figure {
         this.side = side;
     }
 
-    public void setSide(double side) {
-        this.side = side;
-    }
-
     public double getSide() {
         return side;
     }
@@ -23,7 +19,7 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: square, area: " + getArea() + " sq.units, side: "
+        System.out.println("Figure: Square, area: " + getArea() + " sq.units, side: "
                 + getSide() + " units, Color: " + getColor());
     }
 }

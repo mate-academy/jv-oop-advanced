@@ -18,14 +18,6 @@ public class Rectangle extends Figure {
         return sideB;
     }
 
-    public void setSideA(double sideA) {
-        this.sideA = sideA;
-    }
-
-    public void setSideB(double sideB) {
-        this.sideB = sideB;
-    }
-
     @Override
     public double getArea() {
         return sideA * sideB;
@@ -33,7 +25,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + getArea() + " sq.units, sideA: "
+        System.out.println("Figure: Rectangle, area: " + getArea() + " sq.units, sideA: "
                 + getSideA() + " sideB: " + getSideB() + " sq.units, Color: " + getColor());
     }
 }
