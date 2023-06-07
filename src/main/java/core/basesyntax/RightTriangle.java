@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class RightTriangle extends Figure {
     private static final int NUMBER = 10;
-    private final Random RANDOM = new Random();
-    private final ColorSupplier COLOR_SUPPLIER = new ColorSupplier();
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
     private double firstLeg;
     private double secondLeg;
 
@@ -14,9 +14,9 @@ public class RightTriangle extends Figure {
     }
 
     private void setRightTriangle() {
-        firstLeg = RANDOM.nextInt(NUMBER);
-        secondLeg = RANDOM.nextInt(NUMBER);
-        setColor(COLOR_SUPPLIER.getRandomColor());
+        firstLeg = random.nextInt(NUMBER);
+        secondLeg = random.nextInt(NUMBER);
+        setColor(colorSupplier.getRandomColor());
     }
 
     @Override

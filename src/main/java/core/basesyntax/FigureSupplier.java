@@ -3,30 +3,35 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final Random RANDOM = new Random();
-    private final Shape[] SHAPES = Shape.values();
-    private static final int RADIUS = 10;
     private static final String COLOR = "WHITE";
+    private static final int RADIUS = 10;
+    private final Random random = new Random();
+    private final Shape[] shapes = Shape.values();
+
     private Circle prepareCircle() {
         return new Circle();
     }
+
     private Square prepareSquare() {
         return new Square();
     }
+
     private Rectangle prepareRectangle() {
         return new Rectangle();
     }
+
     private IsoscelesTrapezoid prepareIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid();
     }
+
     private RightTriangle prepareRightTriangle() {
         return new RightTriangle();
     }
 
     public Figure getRandomFigure() {
-        int randomNumber = RANDOM.nextInt(SHAPES.length);
+        int randomNumber = random.nextInt(shapes.length);
 
-        switch (SHAPES[randomNumber]) {
+        switch (shapes[randomNumber]) {
             case CIRCLE:
                 return prepareCircle();
             case SQUARE:

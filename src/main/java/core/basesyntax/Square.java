@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class Square extends Figure {
     private static final int NUMBER = 10;
-    private final Random RANDOM = new Random();
-    private final ColorSupplier COLOR_SUPPLIER = new ColorSupplier();
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
     private int side;
 
     Square() {
@@ -13,8 +13,8 @@ public class Square extends Figure {
     }
 
     private void setSquare() {
-        side = RANDOM.nextInt(NUMBER);
-        setColor(COLOR_SUPPLIER.getRandomColor());
+        side = random.nextInt(NUMBER);
+        setColor(colorSupplier.getRandomColor());
     }
 
     @Override

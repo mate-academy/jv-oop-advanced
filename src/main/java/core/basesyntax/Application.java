@@ -5,7 +5,7 @@ import java.util.Random;
 public class Application {
     private static final Random RANDOM = new Random();
     private static final int FIGURES_COUNT = 20;
-    private static FigureSupplier figureSupplier = new FigureSupplier();
+    private static final FigureSupplier FIGURE_SUPPLIER = new FigureSupplier();
 
     public static void main(String[] args) {
         int randomNumber = RANDOM.nextInt(FIGURES_COUNT);
@@ -13,9 +13,9 @@ public class Application {
         for (int i = 0; i < randomNumber; i++) {
             Figure figure;
             if (i < halfOfRandomNumber) {
-                figure = figureSupplier.getRandomFigure();
+                figure = FIGURE_SUPPLIER.getRandomFigure();
             } else {
-                figure = figureSupplier.getDefaultFigure();
+                figure = FIGURE_SUPPLIER.getDefaultFigure();
             }
             figure.draw();
 

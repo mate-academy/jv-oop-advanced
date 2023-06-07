@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class Rectangle extends Figure {
     private static final int NUMBER = 10;
-    private final Random RANDOM = new Random();
-    private final ColorSupplier COLOR_SUPPLIER = new ColorSupplier();
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
     private int firstSide;
     private int secondSide;
 
@@ -14,9 +14,9 @@ public class Rectangle extends Figure {
     }
 
     private void setRectangle() {
-        firstSide = RANDOM.nextInt(NUMBER);
-        secondSide = RANDOM.nextInt(NUMBER);
-        setColor(COLOR_SUPPLIER.getRandomColor());
+        firstSide = random.nextInt(NUMBER);
+        secondSide = random.nextInt(NUMBER);
+        setColor(colorSupplier.getRandomColor());
     }
 
     @Override

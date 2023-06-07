@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class IsoscelesTrapezoid extends Figure {
     private static final int NUMBER = 10;
-    private final Random RANDOM = new Random();
-    private final ColorSupplier COLOR_SUPPLIER = new ColorSupplier();
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     private double firstSide;
     private double secondSide;
@@ -16,10 +16,10 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     private void setIsoscelesTrapezoid() {
-        firstSide = RANDOM.nextInt(NUMBER);
-        secondSide = RANDOM.nextInt(NUMBER);
-        height = RANDOM.nextInt(NUMBER);
-        setColor(COLOR_SUPPLIER.getRandomColor());
+        firstSide = random.nextInt(NUMBER);
+        secondSide = random.nextInt(NUMBER);
+        height = random.nextInt(NUMBER);
+        setColor(colorSupplier.getRandomColor());
     }
 
     @Override
