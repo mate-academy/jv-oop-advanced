@@ -1,14 +1,22 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public class RightTriangle extends Figure {
+    private static final int NUMBER = 10;
+    private final Random RANDOM = new Random();
+    private final ColorSupplier COLOR_SUPPLIER = new ColorSupplier();
     private double firstLeg;
     private double secondLeg;
 
     RightTriangle() {
-        firstLeg = random.nextInt(NUMBER);
-        secondLeg = random.nextInt(NUMBER);
-        setArea(getArea());
-        setColor(colorSupplier.getRandomColor());
+        setRightTriangle();
+    }
+
+    private void setRightTriangle() {
+        firstLeg = RANDOM.nextInt(NUMBER);
+        secondLeg = RANDOM.nextInt(NUMBER);
+        setColor(COLOR_SUPPLIER.getRandomColor());
     }
 
     @Override

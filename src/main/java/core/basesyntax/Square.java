@@ -1,12 +1,20 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public class Square extends Figure {
+    private static final int NUMBER = 10;
+    private final Random RANDOM = new Random();
+    private final ColorSupplier COLOR_SUPPLIER = new ColorSupplier();
     private int side;
 
     Square() {
-        side = random.nextInt(NUMBER);
-        setArea(getArea());
-        setColor(colorSupplier.getRandomColor());
+        setSquare();
+    }
+
+    private void setSquare() {
+        side = RANDOM.nextInt(NUMBER);
+        setColor(COLOR_SUPPLIER.getRandomColor());
     }
 
     @Override

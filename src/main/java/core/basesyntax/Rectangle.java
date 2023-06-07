@@ -1,14 +1,22 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public class Rectangle extends Figure {
+    private static final int NUMBER = 10;
+    private final Random RANDOM = new Random();
+    private final ColorSupplier COLOR_SUPPLIER = new ColorSupplier();
     private int firstSide;
     private int secondSide;
 
     Rectangle() {
-        firstSide = random.nextInt(NUMBER);
-        secondSide = random.nextInt(NUMBER);
-        setArea(getArea());
-        setColor(colorSupplier.getRandomColor());
+        setRectangle();
+    }
+
+    private void setRectangle() {
+        firstSide = RANDOM.nextInt(NUMBER);
+        secondSide = RANDOM.nextInt(NUMBER);
+        setColor(COLOR_SUPPLIER.getRandomColor());
     }
 
     @Override

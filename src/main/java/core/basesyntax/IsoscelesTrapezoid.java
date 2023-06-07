@@ -1,16 +1,25 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public class IsoscelesTrapezoid extends Figure {
+    private static final int NUMBER = 10;
+    private final Random RANDOM = new Random();
+    private final ColorSupplier COLOR_SUPPLIER = new ColorSupplier();
+
     private double firstSide;
     private double secondSide;
     private int height;
 
     IsoscelesTrapezoid() {
-        firstSide = random.nextInt(NUMBER);
-        secondSide = random.nextInt(NUMBER);
-        height = random.nextInt(NUMBER);
-        setArea(getArea());
-        setColor(colorSupplier.getRandomColor());
+        setIsoscelesTrapezoid();
+    }
+
+    private void setIsoscelesTrapezoid() {
+        firstSide = RANDOM.nextInt(NUMBER);
+        secondSide = RANDOM.nextInt(NUMBER);
+        height = RANDOM.nextInt(NUMBER);
+        setColor(COLOR_SUPPLIER.getRandomColor());
     }
 
     @Override
