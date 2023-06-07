@@ -5,22 +5,36 @@ import java.util.Random;
 public class FigureSupplier {
     private static final Random random = new Random();
     private static final Shape[] shapes = Shape.values();
+    private Circle prepareCircle() {
+        return new Circle();
+    }
+    private Square prepareSquare() {
+        return new Square();
+    }
+    private Rectangle prepareRectangle() {
+        return new Rectangle();
+    }
+    private IsoscelesTrapezoid prepareIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid();
+    }
+    private RightTriangle prepareRightTriangle() {
+        return new RightTriangle();
+    }
 
     public Figure getRandomFigure() {
         int randomNumber = random.nextInt(shapes.length);
-        String figureName = shapes[randomNumber].name();
 
-        switch (figureName) {
-            case "CIRCLE":
-                return new Circle();
-            case "SQUARE":
-                return new Square();
-            case "RECTANGLE":
-                return new Rectangle();
-            case "RIGHT_TRIANGLE":
-                return new RightTriangle();
-            case "ISOSCELES_TRAPEZOID":
-                return new IsoscelesTrapezoid();
+        switch (shapes[randomNumber]) {
+            case CIRCLE:
+                return prepareCircle();
+            case SQUARE:
+                return prepareSquare();
+            case RECTANGLE:
+                return prepareRectangle();
+            case RIGHT_TRIANGLE:
+                return prepareRightTriangle();
+            case ISOSCELES_TRAPEZOID:
+                return prepareIsoscelesTrapezoid();
             default:
                 return getDefaultFigure();
         }
