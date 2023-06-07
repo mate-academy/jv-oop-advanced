@@ -7,12 +7,11 @@ public class Main {
         for (int i = 0; i < arrayOfFigure.length; i++) {
             if (i < arrayOfFigure.length / 2) {
                 arrayOfFigure[i] = figureSupplier.getRandomFigure();
+                arrayOfFigure[i].print();
             } else {
                 arrayOfFigure[i] = figureSupplier.getDefaultFigure();
+                arrayOfFigure[i].print();
             }
-        }
-        for (Figure figure : arrayOfFigure) {
-            figure.print();
         }
     }
 }
