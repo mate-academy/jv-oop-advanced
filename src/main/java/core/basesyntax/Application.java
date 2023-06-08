@@ -9,16 +9,14 @@ public class Application {
 
     public static void main(String[] args) {
         int randomNumber = RANDOM.nextInt(FIGURES_COUNT);
-        int halfOfRandomNumber = randomNumber / 2;
         for (int i = 0; i < randomNumber; i++) {
             Figure figure;
-            if (i < halfOfRandomNumber) {
+            if (i < randomNumber / 2) {
                 figure = FIGURE_SUPPLIER.getRandomFigure();
             } else {
                 figure = FIGURE_SUPPLIER.getDefaultFigure();
             }
             figure.draw();
-
         }
     }
 }
