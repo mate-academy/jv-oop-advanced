@@ -15,7 +15,7 @@ public class RightTriangle extends Figure {
     }
     
     @Override
-    public void print() {
+    public void draw() {
         String rectanglePrint = "Figure: rightTriangle: rectangle, area: " + getCountSquare()
                 + " sq.units, firstLeg: " + firstLeg + " units, secondLeg: "
                 + secondLeg + " units, color: "

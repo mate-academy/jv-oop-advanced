@@ -15,7 +15,7 @@ public class Rectangle extends Figure {
     }
     
     @Override
-    public void print() {
+    public void draw() {
         String rectanglePrint =
                 "Figure: rectangle, area: " + getCountSquare() + " sq.units, sideA: " + sideA
                         + " units, sideB: " + sideB + " units, color: " + getColor();

@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class FigureSupplier implements NumberSupplier, ColorSupplier {
     private static final int RADIUS_CIRCLE = 10;
-    private static final String DEFAULT_COLOR = Color.BLACK.toString();
+    private static final String DEFAULT_COLOR = Color.BLACK.name();
     private static final int AMOUNT_OF_FIGURE_TYPE = 5;
     private static final int MAX_SIZE_VALUE_OF_SIDE = 20;
     private final Random random = new Random();

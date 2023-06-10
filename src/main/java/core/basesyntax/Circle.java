@@ -13,7 +13,7 @@ public class Circle extends Figure {
     }
     
     @Override
-    public void print() {
+    public void draw() {
         String circlePrint = "Figure: circle, area: " + getCountSquare()
                 + " sq.units, radius: " + radius
                 + " units, color: " + getColor();
