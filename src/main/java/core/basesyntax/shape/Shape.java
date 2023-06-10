@@ -7,6 +7,8 @@ import core.basesyntax.type.Color;
 
 public abstract class Shape
         implements Colorable, Geometrical, Drawable {
+    public static final byte SHAPES_COUNT = 5;
+
     private Color color;
 
     public Shape(Color color) {
