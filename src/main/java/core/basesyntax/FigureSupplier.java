@@ -12,35 +12,29 @@ public class FigureSupplier {
         int index = random.nextInt(Figures.values().length);
         Figures figureType = Figures.values()[index];
 
-        if (figureType == Figures.SQUARE) {
-            return createNewSquare();
-        }
-        if (figureType == Figures.RECTANGLE) {
-            return createNewRectangle();
-        }
-        if (figureType == Figures.RIGHT_TRIANGLE) {
-            return createNewRightTriangle();
-        }
-        if (figureType == Figures.CIRCLE) {
-            return createNewCircle();
-        }
-        if (figureType == Figures.ISOSCELES_TRAPEZOID) {
-            return createNewIsoscelesTrapezoid();
-        } else {
-            return null;
-
+        switch (figureType) {
+            case SQUARE:
+                return createNewSquare();
+            case RECTANGLE:
+                return createNewRectangle();
+            case RIGHT_TRIANGLE:
+                return createNewRightTriangle();
+            case ISOSCELES_TRAPEZOID:
+                return createNewIsoscelesTrapezoid();
+            default:
+                return createNewCircle();
         }
     }
 
     public Figure createNewSquare() {
         return new Square(randomColor.getRandomColor(),
-                random.nextDouble() + random.nextInt(MAX_LENGTH));
+                    random.nextDouble() + random.nextInt(MAX_LENGTH));
     }
 
     public Figure createNewRectangle() {
         return new Rectangle(randomColor.getRandomColor(),
-                random.nextDouble() + random.nextInt(MAX_LENGTH),
-                random.nextDouble() + random.nextInt(MAX_LENGTH));
+                    random.nextDouble() + random.nextInt(MAX_LENGTH),
+                    random.nextDouble() + random.nextInt(MAX_LENGTH));
     }
 
     public Figure createNewRightTriangle() {
@@ -65,3 +59,4 @@ public class FigureSupplier {
     }
 
 }
+
