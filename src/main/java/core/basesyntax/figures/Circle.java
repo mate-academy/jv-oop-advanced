@@ -1,13 +1,16 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.dataprocessor.ColorSupplier;
-
 public class Circle extends Figure {
     private final int radius;
 
     public Circle(String color, int radius) {
         super(color);
         this.radius = radius;
+    }
+
+    @Override
+    public String getColor() {
+        return super.getColor();
     }
 
     public int getRadius() {
@@ -21,8 +24,7 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        ColorSupplier colorSupplier = new ColorSupplier();
         System.out.println("Figure: circle, area: " + area() + " sq.unit, radius: "
-                + getRadius() + " units, color: " + colorSupplier.getRandomColor());
+                + getRadius() + " units, color: " + getColor());
     }
 }

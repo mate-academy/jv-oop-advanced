@@ -1,7 +1,5 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.dataprocessor.ColorSupplier;
-
 public class Rectangle extends Figure {
     private final int length;
     private final int weight;
@@ -21,15 +19,19 @@ public class Rectangle extends Figure {
     }
 
     @Override
+    public String getColor() {
+        return super.getColor();
+    }
+
+    @Override
     public double area() {
         return getLength() * getWeight();
     }
 
     @Override
     public void draw() {
-        ColorSupplier colorSupplier = new ColorSupplier();
         System.out.println("Figure: rectangle, area: " + area() + " sq.unit, length: "
                 + getLength() + " units, weight: " + getWeight()
-                + " units, color: " + colorSupplier.getRandomColor());
+                + " units, color: " + getColor());
     }
 }
