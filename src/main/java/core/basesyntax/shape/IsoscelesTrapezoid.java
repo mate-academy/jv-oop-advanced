@@ -16,7 +16,7 @@ public class IsoscelesTrapezoid extends Shape {
 
     @Override
     public double getArea() {
-        return (this.height / 2) * (this.base1 + this.base2);
+        return (height / 2) * (base1 + base2);
     }
 
     @Override
@@ -24,11 +24,11 @@ public class IsoscelesTrapezoid extends Shape {
         StringBuilder stringBuilder = new StringBuilder();
 
         stringBuilder.append("Shape: Isosceles trapezoid");
-        stringBuilder.append(", area: ").append(this.getArea()).append(" sq. units");
-        stringBuilder.append(", base 1: ").append(this.base1).append(" units");
-        stringBuilder.append(", base 2: ").append(this.base2).append(" units");
-        stringBuilder.append(", height: ").append(this.height).append(" units");
-        stringBuilder.append(", color: ").append(this.color.name());
+        stringBuilder.append(", area: ").append(getArea()).append(" sq. units");
+        stringBuilder.append(", base 1: ").append(base1).append(" units");
+        stringBuilder.append(", base 2: ").append(base2).append(" units");
+        stringBuilder.append(", height: ").append(height).append(" units");
+        stringBuilder.append(", color: ").append(color.name());
 
         System.out.println(stringBuilder);
     }

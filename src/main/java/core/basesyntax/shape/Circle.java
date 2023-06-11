@@ -12,7 +12,7 @@ public class Circle extends Shape {
 
     @Override
     public double getArea() {
-        return Math.PI * this.radius * this.radius;
+        return Math.PI * radius * radius;
     }
 
     @Override
@@ -20,9 +20,9 @@ public class Circle extends Shape {
         StringBuilder stringBuilder = new StringBuilder();
 
         stringBuilder.append("Shape: Circle");
-        stringBuilder.append(", area: ").append(this.getArea()).append(" sq. units");
-        stringBuilder.append(", radius: ").append(this.radius).append(" units");
-        stringBuilder.append(", color: ").append(this.color.name());
+        stringBuilder.append(", area: ").append(getArea()).append(" sq. units");
+        stringBuilder.append(", radius: ").append(radius).append(" units");
+        stringBuilder.append(", color: ").append(color.name());
 
         System.out.println(stringBuilder);
     }

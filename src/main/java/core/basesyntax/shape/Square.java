@@ -12,7 +12,7 @@ public class Square extends Shape {
 
     @Override
     public double getArea() {
-        return this.side * this.side;
+        return side * side;
     }
 
     @Override
@@ -20,9 +20,9 @@ public class Square extends Shape {
         StringBuilder stringBuilder = new StringBuilder();
 
         stringBuilder.append("Shape: Square");
-        stringBuilder.append(", area: ").append(this.getArea()).append(" sq. units");
-        stringBuilder.append(", side: ").append(this.side).append(" units");
-        stringBuilder.append(", color: ").append(this.color.name());
+        stringBuilder.append(", area: ").append(getArea()).append(" sq. units");
+        stringBuilder.append(", side: ").append(side).append(" units");
+        stringBuilder.append(", color: ").append(color.name());
 
         System.out.println(stringBuilder);
     }

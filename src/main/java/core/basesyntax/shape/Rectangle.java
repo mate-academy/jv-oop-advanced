@@ -14,7 +14,7 @@ public class Rectangle extends Shape {
 
     @Override
     public double getArea() {
-        return this.width * this.height;
+        return width * height;
     }
 
     @Override
@@ -22,10 +22,10 @@ public class Rectangle extends Shape {
         StringBuilder stringBuilder = new StringBuilder();
 
         stringBuilder.append("Shape: Rectangle");
-        stringBuilder.append(", area: ").append(this.getArea()).append(" sq. units");
-        stringBuilder.append(", width: ").append(this.width).append(" units");
-        stringBuilder.append(", height: ").append(this.height).append(" units");
-        stringBuilder.append(", color: ").append(this.color.name());
+        stringBuilder.append(", area: ").append(getArea()).append(" sq. units");
+        stringBuilder.append(", width: ").append(width).append(" units");
+        stringBuilder.append(", height: ").append(height).append(" units");
+        stringBuilder.append(", color: ").append(color.name());
 
         System.out.println(stringBuilder);
     }

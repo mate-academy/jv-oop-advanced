@@ -14,7 +14,7 @@ public class RightTriangle extends Shape {
 
     @Override
     public double getArea() {
-        return (this.base1 * this.base2) / 2.0;
+        return (base1 * base2) / 2.0;
     }
 
     @Override
@@ -22,10 +22,10 @@ public class RightTriangle extends Shape {
         StringBuilder stringBuilder = new StringBuilder();
 
         stringBuilder.append("Shape: Right triangle");
-        stringBuilder.append(", area: ").append(this.getArea()).append(" sq. units");
-        stringBuilder.append(", base 1: ").append(this.base1).append(" units");
-        stringBuilder.append(", base 2: ").append(this.base2).append(" units");
-        stringBuilder.append(", color: ").append(this.color.name());
+        stringBuilder.append(", area: ").append(getArea()).append(" sq. units");
+        stringBuilder.append(", base 1: ").append(base1).append(" units");
+        stringBuilder.append(", base 2: ").append(base2).append(" units");
+        stringBuilder.append(", color: ").append(color.name());
 
         System.out.println(stringBuilder);
     }
