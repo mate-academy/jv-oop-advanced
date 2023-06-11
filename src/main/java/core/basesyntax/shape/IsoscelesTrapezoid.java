@@ -28,7 +28,7 @@ public class IsoscelesTrapezoid extends Shape {
         stringBuilder.append(", base 1: ").append(this.base1).append(" units");
         stringBuilder.append(", base 2: ").append(this.base2).append(" units");
         stringBuilder.append(", height: ").append(this.height).append(" units");
-        stringBuilder.append(", color: ").append(this.getStringColor());
+        stringBuilder.append(", color: ").append(this.color.name());
 
         System.out.println(stringBuilder);
     }

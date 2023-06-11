@@ -25,7 +25,7 @@ public class Rectangle extends Shape {
         stringBuilder.append(", area: ").append(this.getArea()).append(" sq. units");
         stringBuilder.append(", width: ").append(this.width).append(" units");
         stringBuilder.append(", height: ").append(this.height).append(" units");
-        stringBuilder.append(", color: ").append(this.getStringColor());
+        stringBuilder.append(", color: ").append(this.color.name());
 
         System.out.println(stringBuilder);
     }

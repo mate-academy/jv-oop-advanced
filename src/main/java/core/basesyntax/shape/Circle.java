@@ -22,7 +22,7 @@ public class Circle extends Shape {
         stringBuilder.append("Shape: Circle");
         stringBuilder.append(", area: ").append(this.getArea()).append(" sq. units");
         stringBuilder.append(", radius: ").append(this.radius).append(" units");
-        stringBuilder.append(", color: ").append(this.getStringColor());
+        stringBuilder.append(", color: ").append(this.color.name());
 
         System.out.println(stringBuilder);
     }
