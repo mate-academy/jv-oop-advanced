@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.figure;
 
 public class IsoscelesTrapezoid extends Figure {
     private double leg;
@@ -15,12 +15,12 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    double getArea() {
+    public double getArea() {
         return (upperSide + downSide) / 2 * height;
     }
 
     @Override
-    void draw() {
+    public void draw() {
         System.out.printf("Figure: right rectangle, area: %.2f sq.units, leg: %.2f units, upper side: %.2f units, down side: %.2f units, color: %s%n", getArea(), leg, upperSide, downSide, getColor());
     }
 }

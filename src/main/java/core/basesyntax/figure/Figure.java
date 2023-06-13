@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.figure;
 
 public abstract class Figure {
     private String color;
@@ -7,9 +7,9 @@ public abstract class Figure {
         this.color = color;
     }
 
-    abstract double getArea();
+  public   abstract double getArea();
 
-    abstract void draw();
+   public abstract void draw();
 
     public String getColor() {
         return color;
