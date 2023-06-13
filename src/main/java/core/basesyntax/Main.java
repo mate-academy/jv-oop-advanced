@@ -3,7 +3,7 @@ package core.basesyntax;
 import core.basesyntax.figure.Figure;
 import core.basesyntax.supplier.FigureSupplier;
 
-public class Dispatcher {
+public class Main {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figures = new Figure[6];
@@ -18,5 +18,4 @@ public class Dispatcher {
             figure.draw();
         }
     }
-
 }
