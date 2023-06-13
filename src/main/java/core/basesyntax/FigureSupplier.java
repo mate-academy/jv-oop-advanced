@@ -4,9 +4,10 @@ import java.util.Random;
 
 public class FigureSupplier {
     private final Random random = new Random();
+    private static final int FIGURE_COUNT = 5;
 
     public Figure getRandomFigure() {
-        switch (random.nextInt(5)) {
+        switch (random.nextInt(FIGURE_COUNT)) {
             case (0):
                 return getRandomCircle();
             case (1):
@@ -15,9 +16,8 @@ public class FigureSupplier {
                 return getRandomRectangle();
             case (3):
                 return getRandomRightTriangle();
-            case (4):
+            default:
                 return getRandomIsoscelesTrapezoid();
-            default: return null;
         }
     }
 
