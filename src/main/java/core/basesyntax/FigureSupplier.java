@@ -4,6 +4,8 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
+    private static final int MAX_VALUE = 10;
+    private static final int DEFAULT_RADIUS = 10;
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
@@ -22,34 +24,30 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        Circle circle = new Circle(10);
+        Circle circle = new Circle(DEFAULT_RADIUS);
         circle.setColor("WHITE");
         return circle;
     }
 
     private Rectangle getRandomRectangle() {
-        Rectangle rectangle = new Rectangle(random.nextInt(10), random.nextInt(10));
-        return rectangle;
+        return new Rectangle(random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
     }
 
     private Circle getRandomCircle() {
-        Circle circle = new Circle(random.nextInt(10));
-        return circle;
+        return new Circle(random.nextInt(MAX_VALUE));
     }
 
     private Square getRandomSquare() {
-        Square square = new Square(random.nextInt(10));
-        return square;
+        return new Square(random.nextInt(MAX_VALUE));
     }
 
     private RightTriangle getRandomRightTriangle() {
-        RightTriangle triangle = new RightTriangle(random.nextInt(10), random.nextInt(10));
-        return triangle;
+        return new RightTriangle(random.nextInt(MAX_VALUE),
+                random.nextInt(MAX_VALUE));
     }
 
     private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
-        IsoscelesTrapezoid trapezoid = new IsoscelesTrapezoid(random.nextInt(10),
-                random.nextInt(10),random.nextInt(10));
-        return trapezoid;
+        return new IsoscelesTrapezoid(random.nextInt(MAX_VALUE),
+                random.nextInt(MAX_VALUE),random.nextInt(MAX_VALUE));
     }
 }

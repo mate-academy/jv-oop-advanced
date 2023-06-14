@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public interface PrintFigureInfo {
+public interface PrintInfo {
     void printInfo();
 }
