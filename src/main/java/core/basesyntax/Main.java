@@ -9,9 +9,7 @@ public class Main {
             if (i < figures.length / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
                 figures[i].draw();
-            }
-
-            else {
+            } else {
                 figures[i] = figureSupplier.getDefaultFigure();
                 figures[i].draw();
             }
