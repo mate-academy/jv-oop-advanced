@@ -1,11 +1,10 @@
-package core.basesyntax.Figures;
+package core.basesyntax.figures;
 
-import core.basesyntax.AbstractClasses.Figure;
+import core.basesyntax.abstractClasses.Figure;
 
-public class IsoscelesTrapezoid extends Figure {
+public class RightTriangle extends Figure {
     private final int firstSide;
     private final int secondSide;
-    private final int height;
 
     public int getFirstSide() {
         return firstSide;
@@ -15,27 +14,21 @@ public class IsoscelesTrapezoid extends Figure {
         return secondSide;
     }
 
-    public int getHeight() {
-        return height;
-    }
-
-    public IsoscelesTrapezoid(int firstSide, int secondSide, int height) {
+    public RightTriangle(int firstSide, int secondSide) {
         this.firstSide = firstSide;
         this.secondSide = secondSide;
-        this.height = height;
     }
 
     @Override
     public double getArea() {
-        return Math.round(((double) ((firstSide + secondSide) / 2) * height) * 100.0) / 100.0;
+        return Math.round(((double) (firstSide * secondSide) / 2) * 100.0) / 100.0;
     }
 
     @Override
     public String drawInfo() {
-        return "IsoscelesTrapezoid:"
+        return "RightTriangle:"
                 + " firstSide = " + getFirstSide()
                 + " secondSide = " + getSecondSide()
-                + " height = " + getHeight()
                 + "; color = " + getColor()
                 + "; area = " + getArea();
     }

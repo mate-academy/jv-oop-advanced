@@ -1,8 +1,8 @@
-package core.basesyntax.AbstractClasses;
+package core.basesyntax.abstractClasses;
 
-import core.basesyntax.ColorSupply.ColorSupplier;
-import core.basesyntax.Interfaces.AreaDefinition;
-import core.basesyntax.Interfaces.Drawable;
+import core.basesyntax.colorSupply.ColorSupplier;
+import core.basesyntax.interfaces.AreaDefinition;
+import core.basesyntax.interfaces.Drawable;
 
 public abstract class Figure implements Drawable, AreaDefinition {
     private String color;

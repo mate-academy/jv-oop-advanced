@@ -1,4 +1,4 @@
-package core.basesyntax.FigureSupply;
+package core.basesyntax.figureSupply;
 
 public enum FigureEnum {
     CIRCLE,

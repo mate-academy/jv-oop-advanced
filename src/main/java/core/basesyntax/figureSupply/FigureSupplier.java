@@ -1,7 +1,7 @@
-package core.basesyntax.FigureSupply;
+package core.basesyntax.figureSupply;
 
-import core.basesyntax.AbstractClasses.Figure;
-import core.basesyntax.Figures.*;
+import core.basesyntax.abstractClasses.Figure;
+import core.basesyntax.figures.*;
 
 import java.util.Random;
 

@@ -1,6 +1,6 @@
-package core.basesyntax.Figures;
+package core.basesyntax.figures;
 
-import core.basesyntax.AbstractClasses.Figure;
+import core.basesyntax.abstractClasses.Figure;
 
 public class Square extends Figure {
     private final int side;
