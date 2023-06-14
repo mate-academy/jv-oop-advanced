@@ -9,7 +9,6 @@ public class FigureSupplier {
     static final int RANDOM_LENGTH_MAX = 10;
     static final int RANDOM_LENGTH_MIN = 1;
     private final Random random = new Random();
-    private boolean defCircle;
 
     public Figure getRandomFigure() {
         int valVar1 = random.nextInt(RANDOM_LENGTH_MAX - RANDOM_LENGTH_MIN) + RANDOM_LENGTH_MIN;
@@ -30,14 +29,12 @@ public class FigureSupplier {
                 return new RightTriangle(valVar1, valVar2);
             case ("SQUARE"):
                 return new Square(valVar1);
+            default:
+                return null;
         }
-        return null;
     }
 
-/**
- * public Figure getDefaultFigure() - this method should always return white circle with radius 10.
- */
-    public Figure getDefaultFigure(){
+    public Figure getDefaultFigure() {
         return new Circle(10);
     }
 }
