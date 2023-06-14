@@ -17,7 +17,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    protected float getArea() {
+    public float getArea() {
         return sideA * sideB;
     }
 

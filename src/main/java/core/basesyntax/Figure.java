@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-public abstract class Figure implements Drawable {
+public abstract class Figure implements Drawable, Area {
     protected Color color;
-
-    protected abstract float getArea();
 }

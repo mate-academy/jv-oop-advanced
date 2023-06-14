@@ -14,7 +14,7 @@ public class Square extends Figure {
     }
 
     @Override
-    protected float getArea() {
+    public float getArea() {
         return side * side;
     }
 

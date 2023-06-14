@@ -20,7 +20,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    protected float getArea() {
+    public float getArea() {
         return 0.5f * base * secondLeg;
     }
 
