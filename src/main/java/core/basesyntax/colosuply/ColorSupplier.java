@@ -1,4 +1,4 @@
-package core.basesyntax.colorSupply;
+package core.basesyntax.colosuply;
 
 import java.util.Random;
 

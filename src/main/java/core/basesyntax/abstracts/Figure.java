@@ -1,6 +1,6 @@
-package core.basesyntax.abstractClasses;
+package core.basesyntax.abstracts;
 
-import core.basesyntax.colorSupply.ColorSupplier;
+import core.basesyntax.colosuply.ColorSupplier;
 import core.basesyntax.interfaces.AreaDefinition;
 import core.basesyntax.interfaces.Drawable;
 
