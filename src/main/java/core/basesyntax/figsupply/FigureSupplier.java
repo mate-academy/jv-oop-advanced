@@ -1,13 +1,13 @@
 package core.basesyntax.figsupply;
 
 import core.basesyntax.abstracts.Figure;
-import java.util.Random;
 import core.basesyntax.figures.Circle;
 import core.basesyntax.figures.IsoscelesTrapezoid;
 import core.basesyntax.figures.Rectangle;
 import core.basesyntax.figures.RightTriangle;
 import core.basesyntax.figures.Square;
 
+import java.util.Random;
 
 public class FigureSupplier {
     static final int RANDOM_LENGTH_MAX = 10;
