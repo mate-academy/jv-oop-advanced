@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    public float hypotenuse;
-    public float base;
-    public float secondLeg;
+    private float hypotenuse;
+    private float base;
+    private float secondLeg;
 
     public RightTriangle(float hypotenuse, float opposite, float adjacent, String color) {
         this.hypotenuse = hypotenuse;

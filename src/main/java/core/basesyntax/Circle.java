@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    protected float radius;
+    private float radius;
 
     public Circle(float radius, String color) {
         this.radius = radius;
@@ -25,5 +25,7 @@ public class Circle extends Figure {
                 + " and the area of "
                 + getArea());
     }
+
+
 }
 
