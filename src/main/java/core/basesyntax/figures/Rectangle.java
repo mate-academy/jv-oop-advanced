@@ -6,17 +6,17 @@ public class Rectangle extends Figure {
     private final int firstSide;
     private final int secondSide;
 
+    public Rectangle(int firstSide, int secondSide) {
+        this.firstSide = firstSide;
+        this.secondSide = secondSide;
+    }
+
     public int getFirstSide() {
         return firstSide;
     }
 
     public int getSecondSide() {
         return secondSide;
-    }
-
-    public Rectangle(int firstSide, int secondSide) {
-        this.firstSide = firstSide;
-        this.secondSide = secondSide;
     }
 
     @Override

@@ -7,6 +7,12 @@ public class IsoscelesTrapezoid extends Figure {
     private final int secondSide;
     private final int height;
 
+    public IsoscelesTrapezoid(int firstSide, int secondSide, int height) {
+        this.firstSide = firstSide;
+        this.secondSide = secondSide;
+        this.height = height;
+    }
+
     public int getFirstSide() {
         return firstSide;
     }
@@ -17,12 +23,6 @@ public class IsoscelesTrapezoid extends Figure {
 
     public int getHeight() {
         return height;
-    }
-
-    public IsoscelesTrapezoid(int firstSide, int secondSide, int height) {
-        this.firstSide = firstSide;
-        this.secondSide = secondSide;
-        this.height = height;
     }
 
     @Override

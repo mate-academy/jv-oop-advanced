@@ -5,12 +5,12 @@ import core.basesyntax.abstracts.Figure;
 public class Square extends Figure {
     private final int side;
 
-    public int getSide() {
-        return side;
-    }
-
     public Square(int side) {
         this.side = side;
+    }
+
+    public int getSide() {
+        return side;
     }
 
     @Override

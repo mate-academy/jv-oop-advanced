@@ -5,12 +5,12 @@ import core.basesyntax.abstracts.Figure;
 public class Circle extends Figure {
     private final int radius;
 
-    public int getRadius() {
-        return radius;
-    }
-
     public Circle(int radius) {
         this.radius = radius;
+    }
+
+    public int getRadius() {
+        return radius;
     }
 
     @Override
