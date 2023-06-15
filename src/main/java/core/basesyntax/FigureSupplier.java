@@ -5,25 +5,23 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int LIMIT = 70;
     private static final int DEFAULT_RADIUS = 10;
+    private static final int FIGURE_COUNT = 5;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        int numberFigure = random.nextInt(7);
+        int numberFigure = random.nextInt(FIGURE_COUNT);
         switch (numberFigure) {
-            case 1:
+            case 0:
                 return prepareSquare();
-            case 2:
+            case 1:
                 return prepareRectangle();
-            case 3:
+            case 2:
                 return prepareCircle();
-            case 4:
+            case 3:
                 return prepareIsoscelesTrapezoid();
-            case 5:
-                return prepareRightTriangle();
             default:
-                return getDefaultFigure();
-
+                return prepareRightTriangle();
         }
     }
 

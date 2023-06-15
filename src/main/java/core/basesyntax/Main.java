@@ -7,10 +7,10 @@ public class Main {
         FigureSupplier figureTwo = new FigureSupplier();
         Figure secondFigure = figureTwo.getRandomFigure();
         FigureSupplier figureThree = new FigureSupplier();
-        Figure thirdFigure = figureThree.getRandomFigure();
+        Figure thirdFigure = figureThree.getDefaultFigure();
         Figure[] arraysFigure = {firstFigure, secondFigure, thirdFigure};
         for (int i = 0; i < arraysFigure.length; i++) {
-            System.out.println(arraysFigure[i].getDraw());
+            System.out.println(arraysFigure[i].draw());
         }
     }
 }
