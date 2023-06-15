@@ -1,4 +1,5 @@
 package core.basesyntax.figsupply;
+
 import static core.basesyntax.figsupply.FigureType.values;
 
 import core.basesyntax.abstracts.Figure;
