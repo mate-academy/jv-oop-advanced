@@ -55,6 +55,6 @@ public class FigureSupplier {
     private Figure prepareRightTriangle() {
         int firstLeg = random.nextInt(LIMIT);
         int secondLeg = random.nextInt(LIMIT);
-        return new Rectangle(firstLeg, secondLeg, colorSupplier.getRandomColor());
+        return new RightTriangle(firstLeg, secondLeg, colorSupplier.getRandomColor());
     }
 }
