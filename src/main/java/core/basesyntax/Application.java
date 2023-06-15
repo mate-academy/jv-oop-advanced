@@ -5,7 +5,6 @@ import core.basesyntax.figsupply.FigureSupplier;
 
 public class Application {
     public static void main(String[] args) {
-        // create three balls using class Lottery and print information about them in console
         Figure[] figures = new Figure[6];
         FigureSupplier figureSupplier = new FigureSupplier();
 
@@ -17,9 +16,9 @@ public class Application {
             }
         }
 
-        for (int j = 0; j < figures.length; j++) {
-            if (figures[j] != null) {
-                System.out.println("Element " + (j + 1) + ": " + figures[j].drawInfo());
+        for (Figure figure : figures) {
+            if (figure != null) {
+                figure.drawInfo();
             }
         }
     }

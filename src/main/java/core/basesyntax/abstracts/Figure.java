@@ -1,14 +1,17 @@
 package core.basesyntax.abstracts;
 
-import core.basesyntax.colosuply.ColorSupplier;
+import core.basesyntax.colosuply.Color;
 import core.basesyntax.interfaces.AreaDefinition;
 import core.basesyntax.interfaces.Drawable;
 
 public abstract class Figure implements Drawable, AreaDefinition {
-    private String color;
+    private final Color color;
 
-    public String getColor() {
-        final ColorSupplier colorSupplier = new ColorSupplier();
-        return colorSupplier.getRandomColor();
+    public Figure(Color color) {
+        this.color = color;
+    }
+
+    public Color getColor() {
+        return color;
     }
 }

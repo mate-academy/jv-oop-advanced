@@ -1,6 +1,6 @@
 package core.basesyntax.figsupply;
 
-public enum FigureEnum {
+public enum FigureType {
     CIRCLE,
     ISOSCELES_TRAPEZOID,
     RECTANGLE,

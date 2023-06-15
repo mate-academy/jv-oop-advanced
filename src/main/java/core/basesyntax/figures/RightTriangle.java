@@ -1,12 +1,14 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.abstracts.Figure;
+import core.basesyntax.colosuply.Color;
 
 public class RightTriangle extends Figure {
     private final int firstSide;
     private final int secondSide;
 
-    public RightTriangle(int firstSide, int secondSide) {
+    public RightTriangle(int firstSide, int secondSide, Color color) {
+        super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
     }
@@ -21,15 +23,15 @@ public class RightTriangle extends Figure {
 
     @Override
     public double getArea() {
-        return Math.round(((double) (firstSide * secondSide) / 2) * 100.0) / 100.0;
+        return Math.round((double) (firstSide * secondSide) / 2);
     }
 
     @Override
-    public String drawInfo() {
-        return "RightTriangle:"
+    public void drawInfo() {
+        System.out.println("RightTriangle:"
                 + " firstSide = " + getFirstSide()
                 + " secondSide = " + getSecondSide()
                 + "; color = " + getColor()
-                + "; area = " + getArea();
+                + "; area = " + getArea());
     }
 }

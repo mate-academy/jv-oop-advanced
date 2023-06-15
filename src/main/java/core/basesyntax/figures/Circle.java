@@ -1,11 +1,13 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.abstracts.Figure;
+import core.basesyntax.colosuply.Color;
 
 public class Circle extends Figure {
     private final int radius;
 
-    public Circle(int radius) {
+    public Circle(int radius, Color color) {
+        super(color);
         this.radius = radius;
     }
 
@@ -15,14 +17,14 @@ public class Circle extends Figure {
 
     @Override
     public double getArea() {
-        return Math.round(Math.PI * radius * radius * 100.0) / 100.0;
+        return Math.round(Math.PI * radius * radius);
     }
 
     @Override
-    public String drawInfo() {
-        return "Circle:"
+    public void drawInfo() {
+        System.out.println("Circle:"
                 + " radius = " + getRadius()
                 + "; color = " + getColor()
-                + "; area = " + getArea();
+                + "; area = " + getArea());
     }
 }
