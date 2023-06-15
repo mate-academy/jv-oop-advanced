@@ -1,4 +1,5 @@
 package core.basesyntax.figsupply;
+import static core.basesyntax.figsupply.FigureType.values;
 
 import core.basesyntax.abstracts.Figure;
 import core.basesyntax.colosuply.Color;
@@ -9,7 +10,6 @@ import core.basesyntax.figures.Rectangle;
 import core.basesyntax.figures.RightTriangle;
 import core.basesyntax.figures.Square;
 import java.util.Random;
-import static core.basesyntax.figsupply.FigureType.values;
 
 public class FigureSupplier {
     static final int RANDOM_LENGTH_MAX = 10;
