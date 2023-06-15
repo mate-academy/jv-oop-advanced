@@ -9,7 +9,6 @@ import core.basesyntax.figures.Rectangle;
 import core.basesyntax.figures.RightTriangle;
 import core.basesyntax.figures.Square;
 import java.util.Random;
-
 import static core.basesyntax.figsupply.FigureType.values;
 
 public class FigureSupplier {
