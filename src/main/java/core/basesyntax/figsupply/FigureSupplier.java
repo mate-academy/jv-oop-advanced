@@ -3,12 +3,11 @@ package core.basesyntax.figsupply;
 import core.basesyntax.abstracts.Figure;
 import core.basesyntax.colosuply.Color;
 import core.basesyntax.colosuply.ColorSupplier;
-import core.basesyntax.figures.Square;
 import core.basesyntax.figures.Circle;
 import core.basesyntax.figures.IsoscelesTrapezoid;
 import core.basesyntax.figures.Rectangle;
 import core.basesyntax.figures.RightTriangle;
-
+import core.basesyntax.figures.Square;
 import java.util.Random;
 
 import static core.basesyntax.figsupply.FigureType.values;
@@ -25,16 +24,25 @@ public class FigureSupplier {
 
         switch (figureType) {
             case CIRCLE:
-                return new Circle(getRandomLength(), colorSupplier.getRandomColor());
+                return new Circle(getRandomLength(),
+                        colorSupplier.getRandomColor());
             case ISOSCELES_TRAPEZOID:
-                return new IsoscelesTrapezoid(getRandomLength(), getRandomLength(), getRandomLength(), colorSupplier.getRandomColor());
+                return new IsoscelesTrapezoid(getRandomLength(),
+                        getRandomLength(),
+                        getRandomLength(),
+                        colorSupplier.getRandomColor());
             case RECTANGLE:
-                return new Rectangle(getRandomLength(), getRandomLength(), colorSupplier.getRandomColor());
+                return new Rectangle(getRandomLength(),
+                        getRandomLength(),
+                        colorSupplier.getRandomColor());
             case RIGHT_TRIANGLE:
-                return new RightTriangle(getRandomLength(), getRandomLength(), colorSupplier.getRandomColor());
+                return new RightTriangle(getRandomLength(),
+                        getRandomLength(),
+                        colorSupplier.getRandomColor());
             case SQUARE:
             default:
-                return new Square(getRandomLength(), colorSupplier.getRandomColor());
+                return new Square(getRandomLength(),
+                        colorSupplier.getRandomColor());
         }
     }
 
