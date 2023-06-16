@@ -12,13 +12,19 @@ public class FigureSupplier {
         int index = random.nextInt(FIGURE_COUNT);
         switch (index) {
             case 0:
-                return new Square(colorSupplier.getRandomColor(), getRandomSide());
+                return new Square(colorSupplier.getRandomColor(),
+                        getRandomSide());
             case 1:
-                return new Rectangle(colorSupplier.getRandomColor(), getRandomHeight(), getRandomWidth());
+                return new Rectangle(colorSupplier.getRandomColor(),
+                        getRandomHeight(),
+                        getRandomWidth());
             case 2:
-                return new RightTriangle(colorSupplier.getRandomColor(), getRandomFirstLeg(), getRandomSecondLeg());
+                return new RightTriangle(colorSupplier.getRandomColor(),
+                        getRandomFirstLeg(),
+                        getRandomSecondLeg());
             case 3:
-                return new Circle(colorSupplier.getRandomColor(), getRandomRadius());
+                return new Circle(colorSupplier.getRandomColor(),
+                        getRandomRadius());
             case 4:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                         getRandomHeight(),

@@ -17,7 +17,6 @@ public class Circle extends Figure {
         return Math.PI * radius * radius;
     }
 
-
     @Override
     public String draw() {
         return "Figure: " + Figures.CIRCLE.name() + ", area: "
