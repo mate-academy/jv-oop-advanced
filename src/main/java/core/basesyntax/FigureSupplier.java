@@ -4,14 +4,14 @@ import java.util.Random;
 
 public class FigureSupplier {
     private Random random = new Random();
-    private String randomFigure = "";
+    private FiguresList figuresList;
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        randomFigure = String.valueOf(FiguresList.values()
-                [random.nextInt(FiguresList.values().length)]);
+        figuresList = FiguresList.values()
+                [random.nextInt(FiguresList.values().length)];
 
-        switch (randomFigure) {
+        switch (figuresList.name()) {
             case "SQUARE":
                 return new Square(random.nextInt(19) + 1, colorSupplier.getRandomColor());
             case "RECTANGLE":

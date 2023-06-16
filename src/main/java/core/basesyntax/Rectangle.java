@@ -6,20 +6,21 @@ public class Rectangle extends Figure {
     private int width;
     private String color;
 
+
     public Rectangle(int height, int width, String color) {
+        super(color);
         this.height = height;
         this.width = width;
-        this.color = color;
     }
 
     @Override
     public double area() {
-        return height * width;
+        return (float) height * width;
     }
 
     @Override
     public String canDraw() {
         return String.format("Figure: rectangle, area: %.2f sq.units, height: %d units, "
-                + "width: %d units, color: %s", (float) height * width, height, width, color);
+                + "width: %d units, color: %s", area(), height, width, getColor());
     }
 }

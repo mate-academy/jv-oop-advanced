@@ -7,9 +7,9 @@ public class RightTriangle extends Figure {
     private String color;
 
     public RightTriangle(int firstLeg, int secondLeg, String color) {
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        this.color = color;
     }
 
     @Override
@@ -21,6 +21,6 @@ public class RightTriangle extends Figure {
     public String canDraw() {
         return String.format("Figure: right triangle, area: %.2f sq.units, firstLeg: %d units, "
                         + "secondLeg: %d units, color: %s",
-                firstLeg * secondLeg * 0.5, firstLeg, secondLeg, color);
+                area(), firstLeg, secondLeg, getColor());
     }
 }
