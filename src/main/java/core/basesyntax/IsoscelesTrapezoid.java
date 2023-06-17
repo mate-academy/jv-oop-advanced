@@ -22,12 +22,12 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String draw() {
-        return "Figure: " + Figures.ISOSCELES_TRAPEZOID.name() + ", area: "
+    public void draw() {
+        System.out.println("Figure: " + Figures.ISOSCELES_TRAPEZOID.name() + ", area: "
                 + calculateArea() + " sq.units, "
                 + "height: " + height + " units, "
                 + "first base: " + firstBase + " units, "
                 + "second base: " + secondBase + " units, "
-                + "color: " + getColor();
+                + "color: " + getColor());
     }
 }

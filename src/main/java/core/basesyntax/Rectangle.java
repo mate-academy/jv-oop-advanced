@@ -20,11 +20,11 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String draw() {
-        return "Figure: " + Figures.RECTANGLE.name() + ", area: "
+    public void draw() {
+        System.out.println("Figure: " + Figures.RECTANGLE.name() + ", area: "
                 + calculateArea() + " sq.units, "
                 + "width: " + width + " units, "
                 + "height: " + height + " units, "
-                + "color: " + getColor();
+                + "color: " + getColor());
     }
 }
