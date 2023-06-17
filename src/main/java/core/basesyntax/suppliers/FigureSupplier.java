@@ -18,7 +18,6 @@ public class FigureSupplier {
         ColorSupplier colorSupplier = new ColorSupplier();
         String color = colorSupplier.getRandomColor();
         Figure figure = null;
-
         switch (shape) {
             case SQUARE:
                 int side = new Random().nextInt(MAX);
@@ -47,7 +46,6 @@ public class FigureSupplier {
             default:
                 break;
         }
-
         return figure;
     }
 
