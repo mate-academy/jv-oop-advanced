@@ -51,7 +51,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     protected String getSizeDescription() {
-        return "bottomBase:" + bottomBase + " units, upperBase: "
+        return "bottomBase: " + bottomBase + " units, upperBase: "
                 + upperBase + " units, leg: " + leg + " units";
     }
 }

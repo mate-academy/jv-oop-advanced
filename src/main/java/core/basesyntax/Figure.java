@@ -19,7 +19,7 @@ public abstract class Figure implements Drawable {
     @Override
     public void draw() {
         System.out.println("Figure: " + getShape().getDescription().toLowerCase()
-                + ", area:" + String.format("%.2f", getArea()) + " sq.units, "
+                + ", area: " + String.format("%.2f", getArea()) + " sq.units, "
                 + getSizeDescription() + ", color: " + color.name().toLowerCase());
     }
 
