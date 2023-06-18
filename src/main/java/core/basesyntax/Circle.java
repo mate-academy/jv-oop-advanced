@@ -3,7 +3,6 @@ package core.basesyntax;
 public class Circle extends Figure {
 
     private int radius;
-    private String color;
 
     public Circle(int radius, String color) {
         super(color);
@@ -16,7 +15,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String canDraw() {
+    public String draw() {
         return String.format("Figure: circle, area: %.2f sq.units, radius: %d units, color: %s",
                 area(), radius, getColor());
     }

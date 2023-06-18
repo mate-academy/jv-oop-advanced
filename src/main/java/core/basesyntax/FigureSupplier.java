@@ -3,32 +3,38 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int DEFAULT_RADIUS = 10;
+    private static final String DEFAULT_COLOR = "white";
+    private static final int RANDOM_MAX = 19;
+    private static final int RANDOM_MIN = 1;
     private Random random = new Random();
-    private FiguresList figuresList;
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        figuresList = FiguresList.values()
-                [random.nextInt(FiguresList.values().length)];
-
-        switch (figuresList.name()) {
+        FiguresType figuresType = FiguresType.values()
+                [random.nextInt(FiguresType.values().length)];;
+        switch (figuresType.name()) {
             case "SQUARE":
-                return new Square(random.nextInt(19) + 1, colorSupplier.getRandomColor());
+                return new Square(random.nextInt(RANDOM_MAX) + RANDOM_MIN,
+                        colorSupplier.getRandomColor());
             case "RECTANGLE":
-                return new Rectangle(random.nextInt(19) + 1,
-                        random.nextInt(19) + 1, colorSupplier.getRandomColor());
+                return new Rectangle(random.nextInt(RANDOM_MAX) + RANDOM_MIN,
+                        random.nextInt(RANDOM_MAX) + RANDOM_MIN, colorSupplier.getRandomColor());
             case "RIGHT_TRIANGLE":
-                return new RightTriangle(random.nextInt(19) + 1,
-                        random.nextInt(19) + 1, colorSupplier.getRandomColor());
+                return new RightTriangle(random.nextInt(RANDOM_MAX) + RANDOM_MIN,
+                        random.nextInt(RANDOM_MAX) + RANDOM_MIN,
+                        colorSupplier.getRandomColor());
             case "CIRCLE":
-                return new Circle(random.nextInt(19) + 1, colorSupplier.getRandomColor());
+                return new Circle(random.nextInt(RANDOM_MAX) + RANDOM_MIN,
+                        colorSupplier.getRandomColor());
             default:
-                return new IsoscelesTrapezoid(random.nextInt(19) + 1, random.nextInt(19) + 1,
-                        random.nextInt(19) + 1, colorSupplier.getRandomColor());
+                return new IsoscelesTrapezoid(random.nextInt(RANDOM_MAX) + RANDOM_MIN,
+                        random.nextInt(RANDOM_MAX) + RANDOM_MIN,
+                        random.nextInt(RANDOM_MAX) + RANDOM_MIN, colorSupplier.getRandomColor());
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, "white");
+        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
     }
 }
