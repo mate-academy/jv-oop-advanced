@@ -18,7 +18,7 @@ public abstract class Figure implements Drawable, AreaCalculator {
                 + getSizeDescription() + ", color: " + getColor().name().toLowerCase());
     }
 
-    public abstract Shape getShape();
+    protected abstract Shape getShape();
 
-    public abstract String getSizeDescription();
+    protected abstract String getSizeDescription();
 }
