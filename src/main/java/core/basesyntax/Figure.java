@@ -11,10 +11,6 @@ public abstract class Figure implements Drawable {
         return color;
     }
 
-    public void setColor(Color color) {
-        this.color = color;
-    }
-
     @Override
     public void draw() {
         System.out.println("Figure: " + getShape().getDescription().toLowerCase()
