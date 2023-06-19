@@ -11,7 +11,7 @@ public class HelloWorld {
         FigureSupplier figureSupplier = new FigureSupplier();
 
         for (int i = 0; i < ARRAY_SIZE; i++) {
-            if (i < 3) {
+            if (i < ARRAY_SIZE / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();

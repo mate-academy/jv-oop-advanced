@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public abstract class Figure implements Drawable {
-    public static final int MAX_SIZE = 100;
     private Color color;
 
     public Figure(Color color) {
@@ -20,12 +19,12 @@ public abstract class Figure implements Drawable {
     public void draw() {
         System.out.println("Figure: " + getShape().getDescription().toLowerCase()
                 + ", area: " + String.format("%.2f", getArea()) + " sq.units, "
-                + getSizeDescription() + ", color: " + color.name().toLowerCase());
+                + getSizeDescription() + ", color: " + getColor().name().toLowerCase());
     }
 
     public abstract double getArea();
 
     public abstract Shape getShape();
 
-    protected abstract String getSizeDescription();
+    public abstract String getSizeDescription();
 }

@@ -3,6 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    public static final int MAX_SIZE = 100;
     public static final int DEFAULT_RADIUS = 10;
     public static final Color DEFAULT_COLOR = Color.WHITE;
     private Random random = new Random();
@@ -14,28 +15,26 @@ public class FigureSupplier {
 
         switch (randomShape) {
             case CIRCLE:
-                return new Circle(randomColor, random.nextInt(Figure.MAX_SIZE));
+                return new Circle(randomColor, random.nextInt(MAX_SIZE));
             case ISOSCELES_TRAPEZOID:
                 return new IsoscelesTrapezoid(randomColor,
-                        random.nextInt(Figure.MAX_SIZE),
-                        random.nextInt(Figure.MAX_SIZE),
-                        random.nextInt(Figure.MAX_SIZE));
+                        random.nextInt(MAX_SIZE),
+                        random.nextInt(MAX_SIZE),
+                        random.nextInt(MAX_SIZE));
             case RECTANGLE:
                 return new Rectangle(randomColor,
-                        random.nextInt(Figure.MAX_SIZE),
-                        random.nextInt(Figure.MAX_SIZE));
+                        random.nextInt(MAX_SIZE),
+                        random.nextInt(MAX_SIZE));
             case RIGHT_TRIANGLE:
                 return new RightTriangle(randomColor,
-                        random.nextInt(Figure.MAX_SIZE),
-                        random.nextInt(Figure.MAX_SIZE));
+                        random.nextInt(MAX_SIZE),
+                        random.nextInt(MAX_SIZE));
             case SQUARE:
                 return new Square(randomColor,
-                        random.nextInt(Figure.MAX_SIZE));
+                        random.nextInt(MAX_SIZE));
             default:
-                System.out.println("Something went wrong!");
-                break;
+                throw new RuntimeException("Something went wrong! Unknown figure shape: " + randomShape);
         }
-        return null;
     }
 
     public Figure getDefaultFigure() {
