@@ -22,11 +22,6 @@ public class Circle extends Figure {
     }
 
     @Override
-    protected Shape getShape() {
-        return Shape.CIRCLE;
-    }
-
-    @Override
     protected String getSizeDescription() {
         return "radius: " + radius + " units";
     }

@@ -2,21 +2,8 @@ package core.basesyntax;
 
 public enum Shape {
     CIRCLE,
-    ISOSCELES_TRAPEZOID("Isosceles Trapezoid"),
+    ISOSCELES_TRAPEZOID,
     RECTANGLE,
-    RIGHT_TRIANGLE("Right Triangle"),
+    RIGHT_TRIANGLE,
     SQUARE;
-
-    private String description;
-
-    Shape() {
-    }
-
-    private Shape(String description) {
-        this.description = description;
-    }
-
-    public String getDescription() {
-        return description != null ? description : name();
-    }
 }

@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
+    public static final String SHAPE_NAME = "Right Triangle";
     private int firstLeg;
     private int secondLeg;
 
@@ -32,8 +33,8 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    protected Shape getShape() {
-        return Shape.RIGHT_TRIANGLE;
+    protected String getShapeName() {
+        return SHAPE_NAME;
     }
 
     @Override

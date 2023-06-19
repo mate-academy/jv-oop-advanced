@@ -13,12 +13,14 @@ public abstract class Figure implements Drawable, AreaCalculator {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getShape().getDescription().toLowerCase()
+        System.out.println("Figure: " + getShapeName().toLowerCase()
                 + ", area: " + String.format("%.2f", calculateArea()) + " sq.units, "
                 + getSizeDescription() + ", color: " + getColor().name().toLowerCase());
     }
 
-    protected abstract Shape getShape();
+    protected String getShapeName() {
+        return this.getClass().getSimpleName();
+    }
 
     protected abstract String getSizeDescription();
 }
