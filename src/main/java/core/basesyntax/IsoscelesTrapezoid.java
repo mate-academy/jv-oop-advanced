@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements SelfAware {
+public class IsoscelesTrapezoid extends Figure implements FigureDescriptor {
     private int leg;
     private int bottomBase;
     private int upperBase;

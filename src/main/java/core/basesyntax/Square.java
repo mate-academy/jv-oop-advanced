@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends Figure implements SelfAware {
+public class Square extends Figure implements FigureDescriptor {
     private int side;
 
     public Square(Color color, int side) {

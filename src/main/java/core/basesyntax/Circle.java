@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements SelfAware {
+public class Circle extends Figure implements FigureDescriptor {
     private int radius;
 
     public Circle(Color color, int radius) {

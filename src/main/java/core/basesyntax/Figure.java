@@ -14,17 +14,18 @@ public abstract class Figure implements Drawable, AreaCalculator {
     @Override
     public void draw() {
         StringBuilder sb = new StringBuilder("Figure: ");
-        if (this instanceof SelfAware) {
-            sb.append(((SelfAware) this).getShape().getDescription().toLowerCase());
+        if (this instanceof FigureDescriptor) {
+            sb.append(((FigureDescriptor) this).getShape().getDescription().toLowerCase());
         } else {
             sb.append(this.getClass().getSimpleName().toLowerCase());
         }
         sb.append(", area: ").append(String.format("%.2f", calculateArea()))
                 .append(" sq.units, ");
-        if (this instanceof SelfAware) {
-            sb.append(((SelfAware) this).getSizeDescription());
+        if (this instanceof FigureDescriptor) {
+            sb.append(((FigureDescriptor) this).getSizeDescription());
         } else {
-            sb.append("unknown dimensions");
+            throw new RuntimeException("Cannot get figure dimensions: "
+                    + this.getClass().getName() + ".draw() method should be implemented!");
         }
         sb.append(", color: ").append(getColor().name().toLowerCase());
 

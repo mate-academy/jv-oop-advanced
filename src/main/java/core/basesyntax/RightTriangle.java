@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements SelfAware {
+public class RightTriangle extends Figure implements FigureDescriptor {
     private int firstLeg;
     private int secondLeg;
 
@@ -33,7 +33,7 @@ public class RightTriangle extends Figure implements SelfAware {
 
     @Override
     public Shape getShape() {
-        return Shape.RECTANGLE;
+        return Shape.RIGHT_TRIANGLE;
     }
 
     @Override

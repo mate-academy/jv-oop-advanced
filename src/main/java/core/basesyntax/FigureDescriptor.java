@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public interface SelfAware {
+public interface FigureDescriptor {
     Shape getShape();
     String getSizeDescription();
 }
