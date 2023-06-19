@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure {
+public class RightTriangle extends Figure implements SelfAware {
     private int firstLeg;
     private int secondLeg;
 
@@ -32,12 +32,12 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    protected Shape getShape() {
+    public Shape getShape() {
         return Shape.RECTANGLE;
     }
 
     @Override
-    protected String getSizeDescription() {
+    public String getSizeDescription() {
         return "firstLeg: " + firstLeg + " units, secondLeg: " + secondLeg + " units";
     }
 }

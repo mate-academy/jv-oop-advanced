@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends Figure {
+public class Square extends Figure implements SelfAware {
     private int side;
 
     public Square(Color color, int side) {
@@ -22,12 +22,12 @@ public class Square extends Figure {
     }
 
     @Override
-    protected Shape getShape() {
+    public Shape getShape() {
         return Shape.SQUARE;
     }
 
     @Override
-    protected String getSizeDescription() {
+    public String getSizeDescription() {
         return "side: " + side + " units";
     }
 }

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure {
+public class Rectangle extends Figure implements SelfAware {
     private int side1;
     private int side2;
 
@@ -32,12 +32,12 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    protected Shape getShape() {
+    public Shape getShape() {
         return Shape.RECTANGLE;
     }
 
     @Override
-    protected String getSizeDescription() {
+    public String getSizeDescription() {
         return "side1: " + side1 + " units, side2: " + side2 + " units";
     }
 }

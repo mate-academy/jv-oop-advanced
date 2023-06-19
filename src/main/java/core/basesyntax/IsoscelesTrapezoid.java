@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure {
+public class IsoscelesTrapezoid extends Figure implements SelfAware {
     private int leg;
     private int bottomBase;
     private int upperBase;
@@ -45,12 +45,12 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    protected Shape getShape() {
+    public Shape getShape() {
         return Shape.ISOSCELES_TRAPEZOID;
     }
 
     @Override
-    protected String getSizeDescription() {
+    public String getSizeDescription() {
         return "bottomBase: " + bottomBase + " units, upperBase: "
                 + upperBase + " units, leg: " + leg + " units";
     }

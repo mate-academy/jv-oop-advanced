@@ -13,12 +13,21 @@ public abstract class Figure implements Drawable, AreaCalculator {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getShape().getDescription().toLowerCase()
-                + ", area: " + String.format("%.2f", calculateArea()) + " sq.units, "
-                + getSizeDescription() + ", color: " + getColor().name().toLowerCase());
+        StringBuilder sb = new StringBuilder("Figure: ");
+        if (this instanceof SelfAware) {
+            sb.append(((SelfAware) this).getShape().getDescription().toLowerCase());
+        } else {
+            sb.append(this.getClass().getSimpleName().toLowerCase());
+        }
+        sb.append(", area: ").append(String.format("%.2f", calculateArea()))
+                .append(" sq.units, ");
+        if (this instanceof SelfAware) {
+            sb.append(((SelfAware) this).getSizeDescription());
+        } else {
+            sb.append("unknown dimensions");
+        }
+        sb.append(", color: ").append(getColor().name().toLowerCase());
+
+        System.out.println(sb.toString());
     }
-
-    protected abstract Shape getShape();
-
-    protected abstract String getSizeDescription();
 }

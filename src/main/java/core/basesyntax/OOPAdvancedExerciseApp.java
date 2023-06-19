@@ -3,7 +3,7 @@ package core.basesyntax;
 /**
  * Feel free to remove this class and create your own.
  */
-public class HelloWorld {
+public class OOPAdvancedExerciseApp {
     private static final int ARRAY_SIZE = 6;
 
     public static void main(String[] args) {

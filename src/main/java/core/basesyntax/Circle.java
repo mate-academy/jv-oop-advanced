@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure {
+public class Circle extends Figure implements SelfAware {
     private int radius;
 
     public Circle(Color color, int radius) {
@@ -21,13 +21,11 @@ public class Circle extends Figure {
         return Math.PI * radius * radius;
     }
 
-    @Override
-    protected Shape getShape() {
+    public Shape getShape() {
         return Shape.CIRCLE;
     }
 
-    @Override
-    protected String getSizeDescription() {
+    public String getSizeDescription() {
         return "radius: " + radius + " units";
     }
 }
