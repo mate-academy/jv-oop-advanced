@@ -27,7 +27,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return (1.0d * firstLeg * secondLeg) / 2;
     }
 
@@ -37,7 +37,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    protected String getSizeDescription() {
+    public String getSizeDescription() {
         return "firstLeg: " + firstLeg + " units, secondLeg: " + secondLeg + " units";
     }
 }

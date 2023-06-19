@@ -17,7 +17,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return side * side;
     }
 
@@ -27,7 +27,7 @@ public class Square extends Figure {
     }
 
     @Override
-    protected String getSizeDescription() {
+    public String getSizeDescription() {
         return "side: " + side + " units";
     }
 }

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements Drawable {
+public abstract class Figure implements Drawable, AreaCalculator {
     private Color color;
 
     public Figure(Color color) {
@@ -14,11 +14,9 @@ public abstract class Figure implements Drawable {
     @Override
     public void draw() {
         System.out.println("Figure: " + getShape().getDescription().toLowerCase()
-                + ", area: " + String.format("%.2f", getArea()) + " sq.units, "
+                + ", area: " + String.format("%.2f", calculateArea()) + " sq.units, "
                 + getSizeDescription() + ", color: " + getColor().name().toLowerCase());
     }
-
-    public abstract double getArea();
 
     public abstract Shape getShape();
 

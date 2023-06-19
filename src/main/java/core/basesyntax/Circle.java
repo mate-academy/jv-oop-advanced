@@ -17,7 +17,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return Math.PI * radius * radius;
     }
 
@@ -27,7 +27,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    protected String getSizeDescription() {
+    public String getSizeDescription() {
         return "radius: " + radius + " units";
     }
 }

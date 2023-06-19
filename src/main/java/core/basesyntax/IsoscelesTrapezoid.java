@@ -37,7 +37,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return (Math.sqrt(
                     Math.pow(leg, 2) - Math.pow((Math.abs(bottomBase - upperBase) / 2), 2)
                 )
@@ -50,7 +50,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    protected String getSizeDescription() {
+    public String getSizeDescription() {
         return "bottomBase: " + bottomBase + " units, upperBase: "
                 + upperBase + " units, leg: " + leg + " units";
     }

@@ -33,7 +33,8 @@ public class FigureSupplier {
                 return new Square(randomColor,
                         random.nextInt(MAX_SIZE));
             default:
-                throw new RuntimeException("Something went wrong! Unknown figure shape: " + randomShape);
+                throw new RuntimeException("Something went wrong! Unknown figure shape: "
+                        + randomShape);
         }
     }
 

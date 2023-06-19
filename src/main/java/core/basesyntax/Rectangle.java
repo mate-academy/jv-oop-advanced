@@ -27,7 +27,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return side1 * side2;
     }
 
@@ -37,7 +37,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    protected String getSizeDescription() {
+    public String getSizeDescription() {
         return "side1: " + side1 + " units, side2: " + side2 + " units";
     }
 }
