@@ -32,12 +32,12 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public Shape getShape() {
+    protected Shape getShape() {
         return Shape.RECTANGLE;
     }
 
     @Override
-    public String getSizeDescription() {
+    protected String getSizeDescription() {
         return "side1: " + side1 + " units, side2: " + side2 + " units";
     }
 }

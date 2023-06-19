@@ -22,12 +22,12 @@ public class Square extends Figure {
     }
 
     @Override
-    public Shape getShape() {
+    protected Shape getShape() {
         return Shape.SQUARE;
     }
 
     @Override
-    public String getSizeDescription() {
+    protected String getSizeDescription() {
         return "side: " + side + " units";
     }
 }

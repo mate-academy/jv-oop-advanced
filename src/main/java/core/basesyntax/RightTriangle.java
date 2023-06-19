@@ -32,12 +32,12 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public Shape getShape() {
+    protected Shape getShape() {
         return Shape.RECTANGLE;
     }
 
     @Override
-    public String getSizeDescription() {
+    protected String getSizeDescription() {
         return "firstLeg: " + firstLeg + " units, secondLeg: " + secondLeg + " units";
     }
 }

@@ -45,12 +45,12 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public Shape getShape() {
+    protected Shape getShape() {
         return Shape.ISOSCELES_TRAPEZOID;
     }
 
     @Override
-    public String getSizeDescription() {
+    protected String getSizeDescription() {
         return "bottomBase: " + bottomBase + " units, upperBase: "
                 + upperBase + " units, leg: " + leg + " units";
     }
