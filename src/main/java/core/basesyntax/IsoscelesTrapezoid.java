@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements FigureDescriptor {
+public class IsoscelesTrapezoid extends Figure {
     private int leg;
     private int bottomBase;
     private int upperBase;
@@ -45,12 +45,12 @@ public class IsoscelesTrapezoid extends Figure implements FigureDescriptor {
     }
 
     @Override
-    public Shape getShape() {
+    protected Shape getShape() {
         return Shape.ISOSCELES_TRAPEZOID;
     }
 
     @Override
-    public String getSizeDescription() {
+    protected String getSizeDescription() {
         return "bottomBase: " + bottomBase + " units, upperBase: "
                 + upperBase + " units, leg: " + leg + " units";
     }

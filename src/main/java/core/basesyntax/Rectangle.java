@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements FigureDescriptor {
+public class Rectangle extends Figure {
     private int side1;
     private int side2;
 
@@ -32,12 +32,12 @@ public class Rectangle extends Figure implements FigureDescriptor {
     }
 
     @Override
-    public Shape getShape() {
+    protected Shape getShape() {
         return Shape.RECTANGLE;
     }
 
     @Override
-    public String getSizeDescription() {
+    protected String getSizeDescription() {
         return "side1: " + side1 + " units, side2: " + side2 + " units";
     }
 }

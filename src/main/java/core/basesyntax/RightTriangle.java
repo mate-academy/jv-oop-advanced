@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements FigureDescriptor {
+public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
@@ -32,12 +32,12 @@ public class RightTriangle extends Figure implements FigureDescriptor {
     }
 
     @Override
-    public Shape getShape() {
+    protected Shape getShape() {
         return Shape.RIGHT_TRIANGLE;
     }
 
     @Override
-    public String getSizeDescription() {
+    protected String getSizeDescription() {
         return "firstLeg: " + firstLeg + " units, secondLeg: " + secondLeg + " units";
     }
 }

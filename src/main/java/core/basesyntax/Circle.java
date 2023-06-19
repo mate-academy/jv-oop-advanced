@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements FigureDescriptor {
+public class Circle extends Figure {
     private int radius;
 
     public Circle(Color color, int radius) {
@@ -21,11 +21,13 @@ public class Circle extends Figure implements FigureDescriptor {
         return Math.PI * radius * radius;
     }
 
-    public Shape getShape() {
+    @Override
+    protected Shape getShape() {
         return Shape.CIRCLE;
     }
 
-    public String getSizeDescription() {
+    @Override
+    protected String getSizeDescription() {
         return "radius: " + radius + " units";
     }
 }
