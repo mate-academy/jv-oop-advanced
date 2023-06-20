@@ -3,9 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int MAX_SIZE = 100;
-    public static final int DEFAULT_RADIUS = 10;
-    public static final Color DEFAULT_COLOR = Color.WHITE;
+    private static final int MAX_SIZE = 100;
+    private static final int DEFAULT_RADIUS = 10;
+    private static final Color DEFAULT_COLOR = Color.WHITE;
+
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -15,27 +16,31 @@ public class FigureSupplier {
 
         switch (randomShape) {
             case CIRCLE:
-                return new Circle(randomColor, random.nextInt(MAX_SIZE));
+                return new Circle(randomColor, getRandomDimension());
             case ISOSCELES_TRAPEZOID:
                 return new IsoscelesTrapezoid(randomColor,
-                        random.nextInt(MAX_SIZE),
-                        random.nextInt(MAX_SIZE),
-                        random.nextInt(MAX_SIZE));
+                        getRandomDimension(),
+                        getRandomDimension(),
+                        getRandomDimension());
             case RECTANGLE:
                 return new Rectangle(randomColor,
-                        random.nextInt(MAX_SIZE),
-                        random.nextInt(MAX_SIZE));
+                        getRandomDimension(),
+                        getRandomDimension());
             case RIGHT_TRIANGLE:
                 return new RightTriangle(randomColor,
-                        random.nextInt(MAX_SIZE),
-                        random.nextInt(MAX_SIZE));
+                        getRandomDimension(),
+                        getRandomDimension());
             case SQUARE:
                 return new Square(randomColor,
-                        random.nextInt(MAX_SIZE));
+                        getRandomDimension());
             default:
                 throw new RuntimeException("Something went wrong! Unknown figure shape: "
                         + randomShape);
         }
+    }
+
+    private int getRandomDimension() {
+        return random.nextInt(MAX_SIZE);
     }
 
     public Figure getDefaultFigure() {
