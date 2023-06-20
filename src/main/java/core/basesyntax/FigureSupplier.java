@@ -11,9 +11,11 @@ public class FigureSupplier {
             case 0:
                 return new Square(random.nextDouble() * 10, getRandomColor());
             case 1:
-                return new Rectangle(random.nextDouble() * 10, random.nextDouble() * 10, getRandomColor());
+                return new Rectangle(random.nextDouble() * 10, random.nextDouble() * 10,
+                        getRandomColor());
             case 2:
-                return new RightTriangle(random.nextDouble() * 10, random.nextDouble() * 10, getRandomColor());
+                return new RightTriangle(random.nextDouble() * 10, random.nextDouble() * 10,
+                        getRandomColor());
             case 3:
                 return new Circle(random.nextDouble() * 10, getRandomColor());
             case 4:
