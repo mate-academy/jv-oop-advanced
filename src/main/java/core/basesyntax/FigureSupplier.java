@@ -16,30 +16,30 @@ public class FigureSupplier {
 
         switch (randomShape) {
             case CIRCLE:
-                return new Circle(randomColor, getRandomDimension());
+                return new Circle(randomColor, getRandomSize());
             case ISOSCELES_TRAPEZOID:
                 return new IsoscelesTrapezoid(randomColor,
-                        getRandomDimension(),
-                        getRandomDimension(),
-                        getRandomDimension());
+                        getRandomSize(),
+                        getRandomSize(),
+                        getRandomSize());
             case RECTANGLE:
                 return new Rectangle(randomColor,
-                        getRandomDimension(),
-                        getRandomDimension());
+                        getRandomSize(),
+                        getRandomSize());
             case RIGHT_TRIANGLE:
                 return new RightTriangle(randomColor,
-                        getRandomDimension(),
-                        getRandomDimension());
+                        getRandomSize(),
+                        getRandomSize());
             case SQUARE:
                 return new Square(randomColor,
-                        getRandomDimension());
+                        getRandomSize());
             default:
                 throw new RuntimeException("Something went wrong! Unknown figure shape: "
                         + randomShape);
         }
     }
 
-    private int getRandomDimension() {
+    private int getRandomSize() {
         return random.nextInt(MAX_SIZE);
     }
 
