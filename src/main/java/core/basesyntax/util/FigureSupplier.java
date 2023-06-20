@@ -10,6 +10,12 @@ import core.basesyntax.figure.Square;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int NUMBER_OF_FIGURES = 5;
+    private static final int MAX_RANDOM_NUMBER = 100;
+
+    private static final int DEFAULT_FIGURE_NUMBER = 10;
+    private static final Color DEFAULT_FIGURE_COLOR = Color.WHITE;
+
     private final Random random;
     private final ColorSupplier colorSupplier;
 
@@ -19,29 +25,29 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        int randomNumber = getRandomNumber(5);
+        int randomNumber = getRandomNumber(NUMBER_OF_FIGURES);
         switch (randomNumber) {
             case 1:
-                return new Square(getRandomNumber(100), getRandomColor());
+                return new Square(getRandomNumberForFigure(), getRandomColor());
             case 2:
                 return new Rectangle(
-                        getRandomNumber(100),
-                        getRandomNumber(100),
+                        getRandomNumberForFigure(),
+                        getRandomNumberForFigure(),
                         getRandomColor()
                 );
             case 3:
                 return new RightTriangle(
-                        getRandomNumber(100),
-                        getRandomNumber(100),
+                        getRandomNumberForFigure(),
+                        getRandomNumberForFigure(),
                         getRandomColor()
                 );
             case 4:
-                return new Circle(getRandomNumber(100), getRandomColor());
+                return new Circle(getRandomNumberForFigure(), getRandomColor());
             case 5:
                 return new IsoscelesTrapezoid(
-                        getRandomNumber(100),
-                        getRandomNumber(100),
-                        getRandomNumber(100),
+                        getRandomNumberForFigure(),
+                        getRandomNumberForFigure(),
+                        getRandomNumberForFigure(),
                         getRandomColor()
                 );
             default:
@@ -57,11 +63,15 @@ public class FigureSupplier {
         return random.nextInt(to) + 1;
     }
 
+    private int getRandomNumberForFigure() {
+        return getRandomNumber(MAX_RANDOM_NUMBER);
+    }
+
     private Color getRandomColor() {
         return Color.valueOf(colorSupplier.getRandomColor());
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, Color.WHITE);
+        return new Circle(DEFAULT_FIGURE_NUMBER, DEFAULT_FIGURE_COLOR);
     }
 }
