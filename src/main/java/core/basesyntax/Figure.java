@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Figure implements AreaCalculator, Drawable{
+public class Figure implements AreaCalculator, Drawable {
     @Override
     public double getArea() {
         return 0;
