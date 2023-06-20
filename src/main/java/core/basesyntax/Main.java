@@ -7,11 +7,11 @@ public class Main {
 
         for (int i = 0; i < figures.length; i++) {
             if (i < figures.length / 2) {
-                figureSupplier.getRandomFigure().getArea();
-                figureSupplier.getRandomFigure().draw();
+                figures[i] = figureSupplier.getRandomFigure();
+                figures[i].draw();
             } else {
-                figureSupplier.getDefaultFigure().getArea();
-                figureSupplier.getDefaultFigure().draw();
+                figures[i] = figureSupplier.getDefaultFigure();
+                figures[i].draw();
             }
         }
     }
