@@ -16,10 +16,14 @@ public class Circle extends Figure {
         return Math.PI * Math.pow(radius, 2);
     }
 
-
     public void draw() {
         DecimalFormat decimalFormat = new DecimalFormat("#.#");
-        System.out.println("Figure: circle, area: " + decimalFormat.format(getArea()) + " sq.units, radius: " + (int) radius +
-                " units, color: " + color);
+        System.out.println("Figure: circle, area: "
+                + decimalFormat.format(getArea())
+                + " sq.units, radius: "
+                + (int) radius
+                +
+                " units, color: "
+                + color);
     }
 }
