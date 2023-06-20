@@ -3,7 +3,7 @@ package core.basesyntax;
 /**
  * Feel free to remove this class and create your own.
  */
-public class getResult {
+public class Result {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figures = new Figure[6];
