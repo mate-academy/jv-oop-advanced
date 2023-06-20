@@ -20,10 +20,17 @@ public class IsoscelesTrapezoid extends Figure {
         return (baseA + baseB) * height / 2;
     }
 
-
     public void draw() {
         DecimalFormat decimalFormat = new DecimalFormat("#.#");
-        System.out.println("Figure: isosceles trapezoid, area: " + decimalFormat.format(getArea()) + " sq.units, baseA: " + (int) baseA +
-                " units, baseB: " + (int) baseB + " units, height: " + (int) height + " units, color: " + color);
+        System.out.println("Figure: isosceles trapezoid, area: " + decimalFormat.format(getArea())
+                + " sq.units, baseA: "
+                + (int) baseA
+                +
+                " units, baseB: "
+                + (int) baseB
+                + " units, height: "
+                + (int) height
+                + " units, color: "
+                + color);
     }
 }
