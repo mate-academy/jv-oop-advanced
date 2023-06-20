@@ -13,7 +13,6 @@ public class RightTriangle extends Figure {
         this.color = color;
     }
 
-
     @Override
     public double getArea() {
         return (base * height) / 2;
@@ -21,7 +20,14 @@ public class RightTriangle extends Figure {
 
     public void draw() {
         DecimalFormat decimalFormat = new DecimalFormat("#.#");
-        System.out.println("Figure: right triangle, area: " + decimalFormat.format(getArea()) + " sq.units, base: " + (int) base +
-                " units, height: " + (int) height + " units, color: " + color);
+        System.out.println("Figure: right triangle, area: "
+                + decimalFormat.format(getArea())
+                + " sq.units, base: "
+                + (int) base
+                +
+                " units, height: "
+                + (int) height
+                + " units, color: "
+                g+ color);
     }
 }
