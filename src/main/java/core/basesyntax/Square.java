@@ -18,6 +18,11 @@ public class Square extends Figure {
 
     public void draw() {
         DecimalFormat decimalFormat = new DecimalFormat("#.#");
-        System.out.println("Figure: square, area: " + decimalFormat.format(getArea()) + " sq.units, side: " + (int) side + " units, color: " + color);
+        System.out.println("Figure: square, area: "
+                + decimalFormat.format(getArea())
+                + " sq.units, side: "
+                + (int) side
+                + " units, color: "
+                + color);
     }
 }
