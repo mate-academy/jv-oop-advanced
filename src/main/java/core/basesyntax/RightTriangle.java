@@ -28,6 +28,6 @@ public class RightTriangle extends Figure {
                 " units, height: "
                 + (int) height
                 + " units, color: "
-                g+ color);
+                + color);
     }
 }
