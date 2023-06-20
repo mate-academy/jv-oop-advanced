@@ -20,6 +20,13 @@ public class Rectangle extends Figure {
 
     public void draw() {
         DecimalFormat decimalFormat = new DecimalFormat("#.#");
-        System.out.println("Figure: rectangle, area: " + decimalFormat.format(getArea()) + " sq.units, length: " + (int) length + " units, width: " + (int) width + " units, color: " + color);
+        System.out.println("Figure: rectangle, area: "
+                + decimalFormat.format(getArea())
+                + " sq.units, length: "
+                + (int) length
+                + " units, width: "
+                + (int) width
+                + " units, color: "
+                + color);
     }
 }
