@@ -5,7 +5,6 @@ import java.text.DecimalFormat;
 public class RightTriangle extends Figure {
     private double base;
     private double height;
-    private Color color;
 
     public RightTriangle(double base, double height, Color color) {
         this.base = base;
