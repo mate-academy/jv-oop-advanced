@@ -5,10 +5,9 @@ import java.text.DecimalFormat;
 public class Circle extends Figure {
     private double radius;
 
-    public Circle(double radius, Color color) {
-        super();
+    public Circle(Color color, double radius) {
+        super(color);
         this.radius = radius;
-        this.color = color;
     }
 
     @Override
@@ -24,6 +23,6 @@ public class Circle extends Figure {
                 + (int) radius
                 +
                 " units, color: "
-                + color);
+                + getColor());
     }
 }
