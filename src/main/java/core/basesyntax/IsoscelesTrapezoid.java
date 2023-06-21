@@ -11,7 +11,7 @@ public class IsoscelesTrapezoid extends Rectangle {
 
     @Override
     public String toString() {
-        return "IsoscelesTrapezoid sideB=" + sideB + ", sideA=" + sideA + ", color="
+        return "IsoscelesTrapezoid : sideB=" + sideB + ", sideA=" + sideA + ", color="
                 + color + ", area=" + area;
     }
 
