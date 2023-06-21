@@ -7,11 +7,11 @@ public class IsoscelesTrapezoid extends Figure {
     private double baseB;
     private double height;
 
-    public IsoscelesTrapezoid(double baseA, double baseB, double height, Color color) {
+    public IsoscelesTrapezoid(Color color, double baseA, double baseB, double height) {
+        super(color);
         this.baseA = baseA;
         this.baseB = baseB;
         this.height = height;
-        this.color = color;
     }
 
     @Override
@@ -30,6 +30,6 @@ public class IsoscelesTrapezoid extends Figure {
                 + " units, height: "
                 + (int) height
                 + " units, color: "
-                + color);
+                + getColor());
     }
 }
