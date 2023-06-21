@@ -7,11 +7,15 @@ import java.util.Arrays;
  */
 public class HelloWorld {
     public static void main(String[] args) {
-        Figure[] figures = new Figure[]{
-                new Figure().getDefaultFigure(), new Figure().getDefaultFigure(),
-                new Figure().getDefaultFigure(), new Figure().getRandomFigure(),
-                new Figure().getRandomFigure(), new Figure().getRandomFigure()
-        };
+        FigureSupplier figureSupplier = new FigureSupplier();
+        Figure[] figures = new Figure[6];
+        for (int index = 0; index < figures.length; ++index) {
+            if (index < 3) {
+                figures[index] = figureSupplier.getDefaultFigure();
+            } else {
+                figures[index] = figureSupplier.getRandomFigure();
+            }
+        }
         System.out.println(Arrays.toString(figures));
     }
 }

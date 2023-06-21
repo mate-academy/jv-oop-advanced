@@ -28,7 +28,7 @@ public class FigureSupplier {
             case RIGHT_TRIANGLE:
                 return new RightTriangle(random.nextInt(100),
                         random.nextInt(100), COLOR_SUPPLIER.getRandomColor());
-            default: return new Figure();
+            default: return null;
         }
     }
 
