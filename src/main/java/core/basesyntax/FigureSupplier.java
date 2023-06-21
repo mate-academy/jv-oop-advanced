@@ -5,7 +5,7 @@ import java.util.Random;
 public class FigureSupplier {
     private static final double DEFAULT_RADIUS = 10;
     private static final String DEFAULT_COLOR = Color.WHITE.name();
-    private  static final Random RANDOM = new Random();
+    private final Random random = new Random();
     private static final Shape[] SHAPES = Shape.values();
     private static final ColorSupplier COLOR_SUPPLIER = new ColorSupplier();
 
@@ -14,15 +14,20 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        switch (SHAPES[RANDOM.nextInt(SHAPES.length)]) {
-            case CIRCLE: return new Circle(RANDOM.nextInt(100),  COLOR_SUPPLIER.getRandomColor());
-            case ISOSCELES_TRAPEZOID: return new IsoscelesTrapezoid(RANDOM.nextInt(100),
-                    RANDOM.nextInt(100), RANDOM.nextInt(10), COLOR_SUPPLIER.getRandomColor());
-            case SQUARE: return new Square(RANDOM.nextInt(100), COLOR_SUPPLIER.getRandomColor());
-            case RECTANGLE: return new Rectangle(RANDOM.nextInt(100),
-                    RANDOM.nextInt(100), COLOR_SUPPLIER.getRandomColor());
-            case RIGHT_TRIANGLE: return new RightTriangle(RANDOM.nextInt(100),
-                    RANDOM.nextInt(100), COLOR_SUPPLIER.getRandomColor());
+        switch (SHAPES[random.nextInt(SHAPES.length)]) {
+            case CIRCLE:
+                return new Circle(random.nextInt(100), COLOR_SUPPLIER.getRandomColor());
+            case ISOSCELES_TRAPEZOID:
+                return new IsoscelesTrapezoid(random.nextInt(100),
+                        random.nextInt(100), random.nextInt(10), COLOR_SUPPLIER.getRandomColor());
+            case SQUARE:
+                return new Square(random.nextInt(100), COLOR_SUPPLIER.getRandomColor());
+            case RECTANGLE:
+                return new Rectangle(random.nextInt(100),
+                        random.nextInt(100), COLOR_SUPPLIER.getRandomColor());
+            case RIGHT_TRIANGLE:
+                return new RightTriangle(random.nextInt(100),
+                        random.nextInt(100), COLOR_SUPPLIER.getRandomColor());
         }
         return new Figure();
     }

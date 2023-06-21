@@ -16,6 +16,6 @@ public class Rectangle extends Square {
 
     @Override
     public String toString() {
-        return "Rectangle " + "sideB=" + sideB + ", sideA=" + sideA + ", color=" + color + ", area=" + area ;
+        return "Rectangle sideB=" + sideB + ", sideA=" + sideA + ", color=" + color + ", area=" + area;
     }
 }

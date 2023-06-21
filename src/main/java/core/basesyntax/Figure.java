@@ -15,7 +15,7 @@ public class Figure implements AreaCalculator {
 
     @Override
     public String toString() {
-        return "Figure " + "color='" + color + ", area=" + area + ", figureSupplier=" + figureSupplier ;
+        return "Figure color=" + color + ", area=" + area;
     }
 
     @Override

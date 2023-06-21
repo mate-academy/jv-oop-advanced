@@ -18,7 +18,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public String toString() {
-        return "RightTriangle " + "firstLeg=" + firstLeg + ", secondLeg=" + secondLeg + ", color='" + color
-                + ", area=" + area ;
+        return "RightTriangle firstLeg=" + firstLeg + ", secondLeg=" + secondLeg + ", color='" + color
+                + ", area=" + area;
     }
 }
