@@ -7,9 +7,11 @@ import java.util.Arrays;
  */
 public class HelloWorld {
     public static void main(String[] args) {
-        Figure[] figures = new Figure[]{new Figure().getDefaultFigure(), new Figure().getDefaultFigure(),
-                new Figure().getDefaultFigure(), new Figure().getRandomFigure(), new Figure().getRandomFigure(),
-                new Figure().getRandomFigure()};
+        Figure[] figures = new Figure[]{
+                new Figure().getDefaultFigure(), new Figure().getDefaultFigure(),
+                new Figure().getDefaultFigure(), new Figure().getRandomFigure(),
+                new Figure().getRandomFigure(), new Figure().getRandomFigure()
+        };
         System.out.println(Arrays.toString(figures));
     }
 }

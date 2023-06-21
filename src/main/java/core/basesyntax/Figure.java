@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Figure {
+public class Figure implements AreaCalculator {
     protected String color;
     protected double area;
     private final FigureSupplier figureSupplier = new FigureSupplier();
@@ -13,16 +13,13 @@ public class Figure {
         return figureSupplier.getDefaultFigure();
     }
 
-    public double getArea() {
-        return area;
+    @Override
+    public String toString() {
+        return "Figure " + "color='" + color + ", area=" + area + ", figureSupplier=" + figureSupplier ;
     }
 
     @Override
-    public String toString() {
-        return "Figure{" +
-                "color='" + color + '\'' +
-                ", area=" + area +
-                ", figureSupplier=" + figureSupplier +
-                '}';
+    public double calculateArea() {
+        return area;
     }
 }
