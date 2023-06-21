@@ -17,6 +17,7 @@ public class IsoscelesTrapezoid extends Rectangle {
 
     @Override
     public double calculateArea() {
-        return height / 2 * (sideA + sideB);
+        return (height / 2) * (sideA + sideB);
     }
+
 }

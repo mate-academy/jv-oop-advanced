@@ -31,4 +31,5 @@ public class FigureSupplier {
         }
         return new Figure();
     }
+
 }
