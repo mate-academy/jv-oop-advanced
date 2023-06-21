@@ -5,13 +5,13 @@ import java.text.DecimalFormat;
 public class Rectangle extends Figure {
     private double length;
     private double width;
-    private Color color;
 
     public Rectangle(double length, double width, Color color) {
         this.length = length;
         this.width = width;
         this.color = color;
     }
+
 
     @Override
     public double getArea() {
