@@ -7,9 +7,9 @@ public class RightTriangle extends Figure {
     private double height;
 
     public RightTriangle(double base, double height, Color color) {
+        super(color);
         this.base = base;
         this.height = height;
-        this.color = color;
     }
 
     @Override
@@ -27,6 +27,6 @@ public class RightTriangle extends Figure {
                 " units, height: "
                 + (int) height
                 + " units, color: "
-                + color);
+                + getColor());
     }
 }
