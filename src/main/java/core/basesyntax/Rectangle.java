@@ -12,7 +12,6 @@ public class Rectangle extends Figure {
         this.color = color;
     }
 
-
     @Override
     public double getArea() {
         return length * width;
