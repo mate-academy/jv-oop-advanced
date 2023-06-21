@@ -4,7 +4,6 @@ import java.text.DecimalFormat;
 
 public class Square extends Figure {
     private double side;
-    private Color color;
 
     public Square(double side, Color color) {
         this.side = side;
