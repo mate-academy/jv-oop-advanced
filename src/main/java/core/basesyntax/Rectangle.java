@@ -6,10 +6,10 @@ public class Rectangle extends Figure {
     private double length;
     private double width;
 
-    public Rectangle(double length, double width, Color color) {
+    public Rectangle(Color color, double length, double width) {
+        super(color);
         this.length = length;
         this.width = width;
-        this.color = color;
     }
 
     @Override
@@ -26,6 +26,6 @@ public class Rectangle extends Figure {
                 + " units, width: "
                 + (int) width
                 + " units, color: "
-                + color);
+                + getColor());
     }
 }
