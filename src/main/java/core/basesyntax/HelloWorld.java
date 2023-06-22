@@ -6,7 +6,7 @@ import java.util.Arrays;
  * Feel free to remove this class and create your own.
  */
 public class HelloWorld {
-    private static final int  FIGURE_ARRAY_LENGTH = 6;
+    private static final int FIGURE_ARRAY_LENGTH = 6;
     private static final int MIDDLE_FIGURE_ARRAY_LENGTH = 3;
 
     public static void main(String[] args) {
