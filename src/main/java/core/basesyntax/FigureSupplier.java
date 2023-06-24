@@ -4,6 +4,8 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int COUNT_OF_FIGURE = 5; //Count of different figure classes
+    public static final int MAX_BOUND = 1000;
+    public static final int DEFAULT_RADIUS = 10;
     private Random random;
     private ColorSupplier colorSupplier;
 
@@ -13,7 +15,6 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        int bound = 1000;
         /*
         typeOfFigure : 0 - IsoscelesTrapezoid,
         1 - Square,
@@ -24,44 +25,43 @@ public class FigureSupplier {
         int typeOfFigure = random.nextInt(COUNT_OF_FIGURE);
         switch (typeOfFigure) {
             case 0 :
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        random.nextInt(bound), random.nextInt(bound), random.nextInt(bound));
+                return getRandomIsoscelesTrapezoid();
             case 1 :
-                return new Square(colorSupplier.getRandomColor(), random.nextInt(bound));
+                return getRandomSquare();
             case 2 :
-                return new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(bound));
+                return getRandomRightTriangle();
             case 3 :
-                return new Circle(colorSupplier.getRandomColor(), random.nextInt(bound));
+                return getRandomCircle();
             case 4 :
-                return new Rectangle(colorSupplier.getRandomColor(),
-                        random.nextInt(bound), random.nextInt(bound));
+                return getRandomRectangle();
             default:
-                return new Square(Color.BLACK, 10);
+                return getDefaultFigure();
         }
     }
 
     public Figure getDefaultFigure() {
-        /*
-        typeOfFigure : 0 - IsoscelesTrapezoid,
-        1 - Square,
-        2 - RightTriangle,
-        3 - Circle,
-        4 - Rectangle
-         */
-        int typeOfFigure = random.nextInt(COUNT_OF_FIGURE);
-        switch (typeOfFigure) {
-            case 0 :
-                return new IsoscelesTrapezoid(Color.RED, 10, 20, 15);
-            case 1 :
-                return new Square(Color.GREY, 10);
-            case 2 :
-                return new RightTriangle(Color.BLUE, 10);
-            case 3 :
-                return new Circle(Color.BLACK, 10);
-            case 4 :
-                return new Rectangle(Color.WHITE, 20, 10);
-            default:
-                return new Square(Color.BLACK, 10);
-        }
+        return new Circle(Color.WHITE, DEFAULT_RADIUS);
+    }
+
+    private Figure getRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_BOUND), random.nextInt(MAX_BOUND), random.nextInt(MAX_BOUND));
+    }
+
+    private Figure getRandomSquare() {
+        return new Square(colorSupplier.getRandomColor(), random.nextInt(MAX_BOUND));
+    }
+
+    private Figure getRandomCircle() {
+        return new Circle(colorSupplier.getRandomColor(), random.nextInt(MAX_BOUND));
+    }
+
+    private Figure getRandomRectangle() {
+        return new Rectangle(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_BOUND), random.nextInt(MAX_BOUND));
+    }
+
+    private Figure getRandomRightTriangle() {
+        return new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(MAX_BOUND));
     }
 }
