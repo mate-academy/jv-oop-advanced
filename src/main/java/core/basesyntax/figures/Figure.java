@@ -1,25 +1,17 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.behaviour.Area;
+import core.basesyntax.behaviour.AreaCalculator;
 import core.basesyntax.behaviour.Drawable;
+import core.basesyntax.colors.Color;
 
-public abstract class Figure implements Drawable, Area {
-    private final String color;
+public abstract class Figure implements Drawable, AreaCalculator {
+    private final Color color;
 
-    public Figure(String color) {
+    public Figure(Color color) {
         this.color = color;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
-
-    public enum Color {
-        WHITE,
-        YELLOW,
-        GREEN,
-        BLUE,
-        RED
-    }
-
 }

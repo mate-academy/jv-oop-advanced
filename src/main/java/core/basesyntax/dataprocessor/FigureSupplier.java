@@ -1,8 +1,8 @@
 package core.basesyntax.dataprocessor;
 
+import core.basesyntax.colors.Color;
 import core.basesyntax.figures.Circle;
 import core.basesyntax.figures.Figure;
-import core.basesyntax.figures.Figure.Color;
 import core.basesyntax.figures.IsoscelesTrapezoid;
 import core.basesyntax.figures.Rectangle;
 import core.basesyntax.figures.RightTriangle;
@@ -41,11 +41,11 @@ public class FigureSupplier {
         }
     }
 
-    public int getRandomSize() {
-        return MIN_SIDE_SIZE + random.nextInt(MAX_SIDE_SIZE);
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
-    public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR.name(), DEFAULT_RADIUS);
+    private int getRandomSize() {
+        return MIN_SIDE_SIZE + random.nextInt(MAX_SIDE_SIZE);
     }
 }

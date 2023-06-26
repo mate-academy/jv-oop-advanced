@@ -1,32 +1,34 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.colors.Color;
+
 public class Rectangle extends Figure {
     private final int length;
-    private final int weight;
+    private final int width;
 
-    public Rectangle(String color, int length, int weight) {
+    public Rectangle(Color color, int length, int width) {
         super(color);
         this.length = length;
-        this.weight = weight;
+        this.width = width;
     }
 
     public int getLength() {
         return length;
     }
 
-    public int getWeight() {
-        return weight;
+    public int getWidth() {
+        return width;
     }
 
     @Override
     public double getArea() {
-        return getLength() * getWeight();
+        return length * width;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: rectangle, area: " + getArea() + " sq.unit, length: "
-                + getLength() + " units, weight: " + getWeight()
-                + " units, color: " + getColor());
+                + length + " units, weight: " + width
+                + " units, color: " + getColor().name());
     }
 }
