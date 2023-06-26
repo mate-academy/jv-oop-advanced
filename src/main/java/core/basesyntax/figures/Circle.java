@@ -8,23 +8,18 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
-    @Override
-    public String getColor() {
-        return super.getColor();
-    }
-
     public int getRadius() {
         return radius;
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return Math.pow(getRadius(), 2) * Math.PI;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: circle, area: " + area() + " sq.unit, radius: "
+        System.out.println("Figure: circle, area: " + getArea() + " sq.unit, radius: "
                 + getRadius() + " units, color: " + getColor());
     }
 }

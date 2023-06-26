@@ -41,7 +41,7 @@ public class FigureSupplier {
         }
     }
 
-    private int getRandomSize() {
+    public int getRandomSize() {
         return MIN_SIDE_SIZE + random.nextInt(MAX_SIDE_SIZE);
     }
 

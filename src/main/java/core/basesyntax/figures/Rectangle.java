@@ -19,18 +19,13 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String getColor() {
-        return super.getColor();
-    }
-
-    @Override
-    public double area() {
+    public double getArea() {
         return getLength() * getWeight();
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + area() + " sq.unit, length: "
+        System.out.println("Figure: rectangle, area: " + getArea() + " sq.unit, length: "
                 + getLength() + " units, weight: " + getWeight()
                 + " units, color: " + getColor());
     }

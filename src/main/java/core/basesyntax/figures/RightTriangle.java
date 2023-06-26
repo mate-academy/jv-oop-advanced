@@ -19,18 +19,13 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String getColor() {
-        return super.getColor();
-    }
-
-    @Override
-    public double area() {
+    public double getArea() {
         return (float) (firstLeg * secondLeg) / 2;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: right triangle, area: " + area() + " sq.unit, side: "
+        System.out.println("Figure: right triangle, area: " + getArea() + " sq.unit, side: "
                 + getSide() + " units, height: " + getHeight()
                 + " units, color: " + getColor());
     }
