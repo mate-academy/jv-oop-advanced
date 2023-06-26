@@ -21,16 +21,16 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        switch (random.nextInt(NUMBER_OF_FIGURES + 1)) {
-            case 1 :
+        switch (random.nextInt(NUMBER_OF_FIGURES)) {
+            case 0 :
                 return getRandomCircle();
-            case 2 :
+            case 1 :
                 return getRandomIsoscelesTrapezoid();
-            case 3 :
+            case 2 :
                 return getRandomRectangle();
-            case 4 :
+            case 3 :
                 return getRandomRightTriangle();
-            case 5 :
+            case 4 :
                 return getRandomSquare();
             default:
                 return getDefaultFigure();

@@ -4,7 +4,7 @@ import core.basesyntax.Color;
 import core.basesyntax.Drawable;
 
 public abstract class Figure implements Drawable {
-    private Color color;
+    protected Color color;
 
     public Figure(Color color) {
         this.color = color;
