@@ -12,36 +12,33 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX = 20;
+    private static final Random RANDOM = new Random();
+    private static final int CONSTANT_RADIUS = 10;
 
     public Figure getRandomFigure() {
-        Shape shape = Shape.values()[new Random().nextInt(Shape.values().length)];
+        int numberOfShapes = Shape.values().length;
+        int randomShapeNumber = RANDOM.nextInt(numberOfShapes);
+        Shape shape = Shape.values()[randomShapeNumber];
         ColorSupplier colorSupplier = new ColorSupplier();
         String color = colorSupplier.getRandomColor();
         Figure figure = null;
+        int randomFigureSize = RANDOM.nextInt(MAX);
         switch (shape) {
             case SQUARE:
-                int side = new Random().nextInt(MAX);
-                figure = new Square(side, color);
+                figure = new Square(randomFigureSize, color);
                 break;
             case RECTANGLE:
-                int width = new Random().nextInt(MAX);
-                int height = new Random().nextInt(MAX);
-                figure = new Rectangle(width, height, color);
+                figure = new Rectangle(randomFigureSize, randomFigureSize, color);
                 break;
             case RIGHT_TRIANGLE:
-                int firstLeg = new Random().nextInt(MAX);
-                int secondLeg = new Random().nextInt(MAX);
-                figure = new RightTriangle(firstLeg, secondLeg, color);
+                figure = new RightTriangle(randomFigureSize, randomFigureSize, color);
                 break;
             case CIRCLE:
-                int radius = new Random().nextInt(MAX);
-                figure = new Circle(radius, color);
+                figure = new Circle(randomFigureSize, color);
                 break;
             case ISOSCELES_TRAPEZOID:
-                int topSide = new Random().nextInt(MAX);
-                int bottomSide = new Random().nextInt(MAX);
-                int height1 = new Random().nextInt(MAX);
-                figure = new IsoscelesTrapezoid(height1, topSide, bottomSide, color);
+                figure = new IsoscelesTrapezoid(randomFigureSize, randomFigureSize,
+                        randomFigureSize, color);
                 break;
             default:
                 break;
@@ -50,6 +47,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, Color.WHITE.name());
+        return new Circle(CONSTANT_RADIUS, Color.WHITE.name());
     }
 }

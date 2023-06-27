@@ -6,6 +6,10 @@ import core.basesyntax.services.Obtainable;
 public abstract class Figure implements Drawable, Obtainable {
     private String color;
 
+    public Figure(String color) {
+        this.color = color;
+    }
+
     public String getColor() {
         return color;
     }
