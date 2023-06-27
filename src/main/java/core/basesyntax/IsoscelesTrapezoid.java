@@ -21,10 +21,9 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double getArea() {
-
         double oneLeg = (bottomSide - upperSide) / 2;
         double height = Math.sqrt(Math.pow(side, 2) - Math.pow(oneLeg, 2));
-        return ((bottomSide + upperSide) / 2) * height;
 
+        return ((bottomSide + upperSide) / 2) * height;
     }
 }
