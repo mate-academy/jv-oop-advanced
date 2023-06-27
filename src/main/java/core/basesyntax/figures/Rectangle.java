@@ -12,14 +12,6 @@ public class Rectangle extends Figure {
         this.width = width;
     }
 
-    public int getLength() {
-        return length;
-    }
-
-    public int getWidth() {
-        return width;
-    }
-
     @Override
     public double getArea() {
         return length * width;

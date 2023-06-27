@@ -12,17 +12,9 @@ public class RightTriangle extends Figure {
         this.secondLeg = secondLeg;
     }
 
-    public int getFirstLeg() {
-        return firstLeg;
-    }
-
-    public int getSecondLeg() {
-        return secondLeg;
-    }
-
     @Override
     public double getArea() {
-        return (float) (firstLeg * secondLeg) / 2;
+        return (double) (firstLeg * secondLeg) / 2;
     }
 
     @Override
