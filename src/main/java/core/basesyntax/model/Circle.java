@@ -23,9 +23,10 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure Circle, measure: " + getArea()
-                                        + ", Color: " + getColor()
-                                    + " , Radius is: " + getRadius());
+        System.out.println("Figure Circle"
+                + "\nRadius is: " + getRadius()
+                + "\nmeasure: " + getArea()
+                + "\nColor: " + getColor());
 
     }
 }

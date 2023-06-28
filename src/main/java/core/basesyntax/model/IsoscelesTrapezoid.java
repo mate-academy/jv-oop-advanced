@@ -44,10 +44,14 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure IsoscelesTrapezoid, total measure: " + getArea()
-                + ", Color: " + getColor() + ", first side is: " + getFirstSize()
-                + ", second side is: " + getSecondSize() + ", third side is: " + getThirdSize());
+        System.out.println("Figure IsoscelesTrapezoid"
+                + "\nfirst side is: " + getFirstSize()
+                + "\nsecond side is: " + getSecondSize()
+                + "\nthird side is: " + getThirdSize()
+                + "\nmeasure: " + getArea()
+                + "\nColor: " + getColor());
     }
+
 }
 
 

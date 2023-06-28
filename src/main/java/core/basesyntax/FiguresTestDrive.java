@@ -14,6 +14,7 @@ public class FiguresTestDrive {
         }
         for (Figure figure : figures) {
             figure.draw();
+            System.out.println();
         }
     }
 }

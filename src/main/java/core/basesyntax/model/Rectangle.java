@@ -33,7 +33,8 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure Rectangle, measure: " + getArea() + ", Color: " + getColor());
-
+        System.out.println("Figure Rectangle"
+                + "\nmeasure: " + getArea()
+                + "\nColor: " + getColor());
     }
 }
