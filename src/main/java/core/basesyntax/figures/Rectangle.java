@@ -1,7 +1,7 @@
 package core.basesyntax.figures;
 
 public class Rectangle extends Figure {
-    private final int firstSide; //ToDo getters and setters;
+    private final int firstSide;
     private final int secondSide;
 
     public Rectangle(String color, int firstSide, int secondSide) {
