@@ -9,7 +9,6 @@ public class RightTriangle extends Figure {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
         super.area = getArea();
-
     }
 
     @Override
