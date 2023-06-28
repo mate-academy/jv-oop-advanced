@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.figures;
 
 public class Triangle extends Figure {
     private double firstLeg;
@@ -26,7 +26,6 @@ public class Triangle extends Figure {
     @Override
     public double getArea() {
         double semiPerimeter = (firstLeg + secondLeg + thirdLeg) / 2;
-
         return Math.sqrt(semiPerimeter * (semiPerimeter - firstLeg) * (semiPerimeter - secondLeg)
                 * (semiPerimeter - thirdLeg));
     }

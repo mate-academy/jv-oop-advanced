@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.figures;
 
 public class IsoscelesTrapezoid extends Figure {
     private final double upperSide;
@@ -23,7 +23,6 @@ public class IsoscelesTrapezoid extends Figure {
     public double getArea() {
         double oneLeg = (bottomSide - upperSide) / 2;
         double height = Math.sqrt(Math.pow(side, 2) - Math.pow(oneLeg, 2));
-
         return ((bottomSide + upperSide) / 2) * height;
     }
 }
