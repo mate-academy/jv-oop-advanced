@@ -2,7 +2,6 @@ package figure;
 
 import java.util.Random;
 import tools.Color;
-import tools.FigureSupplier;
 
 public abstract class Figure implements FigureInterface {
     protected static final int MAX_SIDE_FIGURE = 14;
