@@ -4,7 +4,6 @@ import core.basesyntax.model.Color;
 import core.basesyntax.model.Drawable;
 
 public class IsoscelesTrapezoid extends Figure {
-
     private int firstParallel;
     private int secondParallel;
     private int side;
