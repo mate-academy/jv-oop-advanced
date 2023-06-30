@@ -1,8 +1,8 @@
 package core.basesyntax;
 
-import figure.Figure;
+import core.basesyntax.figure.Figure;
+import core.basesyntax.tools.FigureSupplier;
 import java.util.Random;
-import tools.FigureSupplier;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,9 +1,11 @@
-package figure;
+package core.basesyntax.figure;
 
+import core.basesyntax.behaviour.FigureCreation;
+import core.basesyntax.behaviour.FigureDraw;
+import core.basesyntax.tools.Color;
 import java.util.Random;
-import tools.Color;
 
-public abstract class Figure implements FigureInterface {
+public abstract class Figure implements FigureDraw, FigureCreation {
     protected static final int MAX_SIDE_FIGURE = 14;
     private Color colorFigure;
     private String name;
@@ -40,7 +42,7 @@ public abstract class Figure implements FigureInterface {
 
     @Override
     public void draw() {
-        System.out.print("figure: " + name + " area: " + area + " sq.units");
+        System.out.print("figure: " + getName() + " area: " + area + " sq.units");
     }
 
     @Override

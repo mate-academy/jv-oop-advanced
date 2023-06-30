@@ -1,4 +1,4 @@
-package figure;
+package core.basesyntax.figure;
 
 public class IsoscelesTrapezoid extends Figure {
     private int baseSide = 0;
@@ -44,8 +44,8 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public void randomFigure() {
         super.randomFigure();
-        setBaseSide(Figure.randomSideFigure());
-        setTwoSides(Figure.randomSideFigure());
+        setBaseSide(randomSideFigure());
+        setTwoSides(randomSideFigure());
         resultArea();
     }
 }

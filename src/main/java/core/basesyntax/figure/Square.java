@@ -1,4 +1,4 @@
-package figure;
+package core.basesyntax.figure;
 
 public class Square extends Figure {
 
@@ -30,7 +30,7 @@ public class Square extends Figure {
     @Override
     public void randomFigure() {
         super.randomFigure();
-        side = Figure.randomSideFigure();
+        side = randomSideFigure();
         resultArea();
     }
 }

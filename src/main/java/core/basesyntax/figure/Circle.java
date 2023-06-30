@@ -1,6 +1,6 @@
-package figure;
+package core.basesyntax.figure;
 
-import tools.Color;
+import core.basesyntax.tools.Color;
 
 public class Circle extends Figure {
 
@@ -40,7 +40,7 @@ public class Circle extends Figure {
     @Override
     public void randomFigure() {
         super.randomFigure();
-        this.radius = Figure.randomSideFigure();
+        this.radius = randomSideFigure();
         resultArea();
     }
 }

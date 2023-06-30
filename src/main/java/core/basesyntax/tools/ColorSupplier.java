@@ -1,4 +1,4 @@
-package tools;
+package core.basesyntax.tools;
 
 import java.util.Random;
 

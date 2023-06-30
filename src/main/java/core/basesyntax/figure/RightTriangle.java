@@ -1,4 +1,4 @@
-package figure;
+package core.basesyntax.figure;
 
 public class RightTriangle extends Figure {
 
@@ -40,8 +40,8 @@ public class RightTriangle extends Figure {
     @Override
     public void randomFigure() {
         super.randomFigure();
-        setFirstLeg(Figure.randomSideFigure());
-        setSecondLeg(Figure.randomSideFigure());
+        setFirstLeg(randomSideFigure());
+        setSecondLeg(randomSideFigure());
         resultArea();
     }
 }

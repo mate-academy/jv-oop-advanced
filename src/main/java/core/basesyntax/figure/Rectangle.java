@@ -1,4 +1,4 @@
-package figure;
+package core.basesyntax.figure;
 
 public class Rectangle extends Figure {
 
@@ -41,8 +41,8 @@ public class Rectangle extends Figure {
     @Override
     public void randomFigure() {
         super.randomFigure();
-        setLengthRectangle(Figure.randomSideFigure());
-        setWidthRectangle(Figure.randomSideFigure());
+        setLengthRectangle(randomSideFigure());
+        setWidthRectangle(randomSideFigure());
         resultArea();
     }
 }
