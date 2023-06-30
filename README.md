@@ -18,18 +18,18 @@ In the `main()` method we need to create an array of figures (the size of array 
 
 For this purpose create two more classes:
 - `ColorSupplier` with `public String getRandomColor()` method - for generating random color, 
-- and `FigureSupplier` with `public Figure getRandomFigure()` method - for generating figure with random properties.
+- and `FigureSupplier` with `public figure getRandomFigure()` method - for generating figure with random properties.
 
 **The other half** of figures should have the same, default parameters. 
 
 For this purpose create a new method in the `FigureSupplier` class:
-- `public Figure getDefaultFigure()` - this method should always return white circle with radius 10.
+- `public figure getDefaultFigure()` - this method should always return white circle with radius 10.
 
 After generating the array, we need to display the entire list of objects that we have, for example:
 
 ```
- Figure: square, area: 25.0 sq.units, side: 5 units, color: blue
- Figure: triangle, area: 12.5 sq.units, firstLeg: 7 units, secondLeg: 5 units, color: yellow
+ figure: square, area: 25.0 sq.units, side: 5 units, color: blue
+ figure: triangle, area: 12.5 sq.units, firstLeg: 7 units, secondLeg: 5 units, color: yellow
 ```
 
 #### [Try to avoid these common mistakes, while solving task](https://mate-academy.github.io/jv-program-common-mistakes/java-core/abstract-class-interface/oop-advanced)

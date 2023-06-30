@@ -55,7 +55,7 @@ Please see [this article](https://mate-academy.github.io/style-guides/java/java.
 public class FigureSupplier {
     private Random random = new Random();
 
-    public Figure getRandomFigure() {
+    public figure getRandomFigure() {
         int `figureNumber` = random.nextInt(5);
         // generate a specific figure based on the `figureNumber` value
     }
@@ -67,7 +67,7 @@ public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
     private Random random = new Random();
 
-    public Figure getRandomFigure() {
+    public figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
         // generate a specific figure based on the `figureNumber` value
     }
@@ -88,7 +88,7 @@ Static methods are in general a bad practice. Let's better create an instance of
 To be able to call non-static method, we just need to create an instance of the class: 
 ```
 FigureSupplier figureSupplier = new FigureSupplier();
-Figure randomFigure = figureSupplier.getRandomFigure();
+figure randomFigure = figureSupplier.getRandomFigure();
 ```
 
 #### You should create several random Figures, so you will use a loop. Please don't create a `new FigureSupplier()` inside the loop.
