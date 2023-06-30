@@ -1,8 +1,7 @@
 package core.basesyntax.main;
 
-import core.basesyntax.colorSupplier.ColorSupplier;
-import core.basesyntax.figureSupplier.FigureSupplier;
-import core.basesyntax.figures.*;
+import core.basesyntax.figures.Figure;
+import core.basesyntax.processes.FigureSupplier;
 
 public class Main {
     public static final int FIGURES = 6;

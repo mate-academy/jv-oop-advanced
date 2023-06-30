@@ -1,8 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.colorSupplier.Color;
+import core.basesyntax.colors.Color;
 
-public class Square extends Figure{
+public class Square extends Figure {
     private final int side;
 
     public Square(Color color, int side) {

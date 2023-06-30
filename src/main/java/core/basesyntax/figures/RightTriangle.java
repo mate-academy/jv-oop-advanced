@@ -1,8 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.colorSupplier.Color;
+import core.basesyntax.colors.Color;
 
-public class RightTriangle extends Figure{
+public class RightTriangle extends Figure {
     private final int firstLeg;
     private final int secondLeg;
 

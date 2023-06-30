@@ -1,8 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.colorSupplier.Color;
+import core.basesyntax.colors.Color;
 
-public class Rectangle extends Figure{
+public class Rectangle extends Figure {
     private final int length;
     private final int height;
 

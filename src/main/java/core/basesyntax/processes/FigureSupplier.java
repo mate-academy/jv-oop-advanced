@@ -1,10 +1,13 @@
-package core.basesyntax.figureSupplier;
-import core.basesyntax.colorSupplier.ColorSupplier;
-import core.basesyntax.figures.*;
-import core.basesyntax.colorSupplier.Color;
+package core.basesyntax.processes;
 
+import core.basesyntax.colors.Color;
+import core.basesyntax.figures.Circle;
+import core.basesyntax.figures.Figure;
+import core.basesyntax.figures.IsoscelesTrapezoid;
+import core.basesyntax.figures.Rectangle;
+import core.basesyntax.figures.RightTriangle;
+import core.basesyntax.figures.Square;
 import java.util.Random;
-
 
 public class FigureSupplier {
     private static final int DEFAULT_RADIUS = 10;

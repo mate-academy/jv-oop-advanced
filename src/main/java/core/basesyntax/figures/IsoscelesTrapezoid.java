@@ -1,8 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.colorSupplier.Color;
+import core.basesyntax.colors.Color;
 
-public class IsoscelesTrapezoid extends Figure{
+public class IsoscelesTrapezoid extends Figure {
     private final int upperBase;
     private final int lowerBase;
     private final int height;
@@ -21,11 +21,11 @@ public class IsoscelesTrapezoid extends Figure{
 
     @Override
     public void draw() {
-        System.out.println("Isosceles trapezoid: area - "+ getArea()
+        System.out.println("Isosceles trapezoid: area - " + getArea()
                            + ", upper base - " + upperBase
                            + ", lower base - " + lowerBase
                            + ", height - " + height
                            + ", color - " + getColor().name()
-                           +'.');
+                           + '.');
     }
 }
