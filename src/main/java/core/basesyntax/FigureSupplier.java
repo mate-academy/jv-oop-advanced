@@ -8,7 +8,7 @@ public class FigureSupplier {
     private Random random = new Random();
     private Circle circle = new Circle(Colors.WHITE.name(), RADIUS);
 
-    public Figure getRandomFigure(){
+    public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
             switch (figureNumber) {
                 case 0:

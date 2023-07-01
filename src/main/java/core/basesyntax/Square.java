@@ -23,6 +23,8 @@ public class Square extends Figure implements AreaCalculator {
 
     @Override
     public String draw() {
-        return "Figure: square" + ", " + "area: " + String.format("%.1f",getArea()) +" sq.units" + ", " + "side: " + side + " units" + ", " + "color: " + getColor().toLowerCase();
+        return "Figure: square" + ", " + "area: " + String.format("%.1f",getArea()) +
+                " sq.units" + ", " + "side: " + side + " units" +
+                ", " + "color: " + getColor().toLowerCase();
     }
 }

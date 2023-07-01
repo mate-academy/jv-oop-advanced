@@ -43,6 +43,9 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
 
     @Override
     public String draw() {
-        return "Figure: isoscelesTrapezoid" + ", " + "area: " + String.format("%.1f",getArea()) +" sq.units" + ", " + "height: " + height + " units" + ", " + "base: " + base + " units" + ", "+ "baseTop: " + baseTop + " units" + ", " + "color: " + getColor().toLowerCase();
+        return "Figure: isoscelesTrapezoid" + ", " + "area: " + String.format("%.1f",getArea()) +
+                " sq.units" + ", " + "height: " + height + " units" + ", " +
+                "base: " + base + " units" + ", " + "baseTop: " + baseTop +
+                " units" + ", " + "color: " + getColor().toLowerCase();
     }
 }
