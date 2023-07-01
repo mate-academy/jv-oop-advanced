@@ -19,8 +19,9 @@ class IsoscelesTrapezoid extends AbstractFigure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: isosceles trapezoid, area: " + getArea()
-                + " sq.units, top base: " + topBase + " units, bottom base: "
-                + bottomBase + " units, height: " + height + " units, color: " + getColor());
+        System.out.println("Figure: isosceles trapezoid, area: "
+                + getArea() + " sq.units, top base: " + topBase
+                + " units, bottom base: " + bottomBase + " units, height: "
+                + height + " units, color: " + getColor());
     }
 }
