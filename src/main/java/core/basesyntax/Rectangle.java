@@ -33,6 +33,7 @@ public class Rectangle extends Figure implements AreaCalculator {
 
     @Override
     public String draw() {
-        return "Figure: rectangle" + ", " + "area: " + String.format("%.1f",getArea()) +" sq.units" + ", " + "length: " + length + " units" + ", "  + "width: " + width + " units" + ", "+ "color: " + getColor().toLowerCase();
+        return "Figure: rectangle" + ", " + "area: " + String.format("%.1f",getArea()) + " sq.units" + ", " + "length: " + length + " units" + ", "
+                + "width: " + width + " units" + ", " + "color: " + getColor().toLowerCase();
     }
 }

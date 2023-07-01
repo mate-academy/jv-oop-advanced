@@ -24,12 +24,12 @@ public class FigureSupplier {
                     RightTriangle rightTriangle = new RightTriangle(new ColorSupplier().getRandomColor(),new Random().nextInt(10) + 1,new Random().nextInt(10) + 1);
                     return rightTriangle;
                 case 4:
-                    Square square = new Square(new ColorSupplier().getRandomColor(), new Random().nextInt(10)+1);
+                    Square square = new Square(new ColorSupplier().getRandomColor(), new Random().nextInt(10) + 1);
                     return square;
             }
             return null;
     }
-    public Figure getDefaultFigure(){
+    public Figure getDefaultFigure() {
         return circle;
     }
 }
