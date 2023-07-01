@@ -10,8 +10,6 @@ public class FigureSupplier {
     private static final int DEFAULT_VALUE = 10;
     private static final String DEFAULT_COLOR = Colors.WHITE.toString();
 
-
-
     public Figure getRandomFigure() {
         String color = colorSupplier.getRandomColor();
         switch (random.nextInt(NUMBER_OF_FIGURES)) {

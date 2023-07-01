@@ -5,15 +5,16 @@ public class Main {
     private static final FigureSupplier figureSupplier = new FigureSupplier();
 
     public static void main(String[] args) {
+        Figure[] figures = new Figure[6];
         for (int i = 0; i < ROOF_SIZE_OF_ARRAY; i++) {
             if (i < 3) {
-                figureSupplier.getRandomFigure().drawInfo();
+                figures[i] = figureSupplier.getRandomFigure();
             } else {
-                figureSupplier.getDefaultFigure().drawInfo();
+                figures[i] = figureSupplier.getDefaultFigure();
             }
-            if (i == 2) {
-                System.out.println("");
-            }
+        }
+        for (Figure figure : figures) {
+            figure.drawInfo();
         }
     }
 }
