@@ -5,7 +5,7 @@ import core.basesyntax.figures.Figure;
 /**
  * Feel free to remove this class and create your own.
  */
-public class HelloWorld {
+public class MainApp {
     private static final int DEFAULT_ARRAY_SIZE = 6;
 
     public static void main(String[] args) {
@@ -13,10 +13,11 @@ public class HelloWorld {
         FigureSupplier figureSupplier = new FigureSupplier(colorSupplier);
 
         Figure[] figures = new Figure[DEFAULT_ARRAY_SIZE];
-        for (int i = 0; i < figures.length / 2; i++) {
+        int figuresHalfSize = figures.length / 2;
+        for (int i = 0; i < figuresHalfSize; i++) {
             figures[i] = figureSupplier.getRandomFigure();
         }
-        for (int i = figures.length / 2; i < figures.length; i++) {
+        for (int i = figuresHalfSize; i < figures.length; i++) {
             figures[i] = figureSupplier.getDefaultFigure();
         }
 

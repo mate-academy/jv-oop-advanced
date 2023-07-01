@@ -10,10 +10,7 @@ public abstract class Figure implements Drawable {
         this.color = color;
     }
 
-    public void draw() {
-        System.out.println("Figure : ");
-    }
+    public abstract void draw();
 
     public abstract double getArea();
-
 }
