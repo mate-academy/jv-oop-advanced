@@ -1,15 +1,21 @@
 package core.basesyntax;
 
 import java.util.Random;
+import java.awt.Color;
 
 class FigureSupplier {
+    private static final int FIGURE_TYPES = 5;
+    private static final double MAX_PARAMETER = 10.0;
+    private static final double DEFAULT_RADIUS = 10.0;
+    private static final String DEFAULT_COLOR = "white";
+
+    private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        Random random = new Random();
-        int figureType = random.nextInt(5);
-        double param1 = random.nextDouble() * 10;
-        double param2 = random.nextDouble() * 10;
+        int figureType = random.nextInt(FIGURE_TYPES);
+        double param1 = random.nextDouble() * MAX_PARAMETER;
+        double param2 = random.nextDouble() * MAX_PARAMETER;
         String color = colorSupplier.getRandomColor();
 
         switch (figureType) {
@@ -29,6 +35,6 @@ class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", 10);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
