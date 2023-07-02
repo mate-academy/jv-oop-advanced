@@ -1,9 +1,8 @@
 package core.basesyntax.figures;
 
 public class Rectangle extends Figure {
-    private double firstSide;
-    private double secondSide;
-    private double thirdSide;
+    private final double firstSide;
+    private final double secondSide;
 
     public Rectangle(double firstSide, double secondSide, String color) {
         this.firstSide = firstSide;
@@ -16,7 +15,7 @@ public class Rectangle extends Figure {
     public void draw() {
         System.out.println("Figure: rectangle, area: " + super.area
                 + " sq.units, first side: " + this.firstSide
-                + " units, second side: " + secondSide
+                + " units, second side: " + this.secondSide
                 + " units, color: " + super.color);
     }
 

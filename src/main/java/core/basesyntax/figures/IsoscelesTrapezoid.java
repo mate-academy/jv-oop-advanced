@@ -1,9 +1,9 @@
 package core.basesyntax.figures;
 
 public class IsoscelesTrapezoid extends Figure {
-    private double edge;
-    private double largeBase;
-    private double smallBase;
+    private final double edge;
+    private final double largeBase;
+    private final double smallBase;
 
     public IsoscelesTrapezoid(double edge, double largeBase, double smallBase, String color) {
         this.edge = edge;
@@ -17,8 +17,8 @@ public class IsoscelesTrapezoid extends Figure {
     public void draw() {
         System.out.println("Figure: isosceles trapezoid, area: " + super.area
                 + " sq.units, edge: " + this.edge
-                + " units, large base: " + largeBase
-                + " units, small base: " + smallBase
+                + " units, large base: " + this.largeBase
+                + " units, small base: " + this.smallBase
                 + " units, color: " + super.color);
     }
 

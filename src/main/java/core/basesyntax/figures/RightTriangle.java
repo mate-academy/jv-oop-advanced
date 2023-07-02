@@ -1,9 +1,9 @@
 package core.basesyntax.figures;
 
 public class RightTriangle extends Figure {
-    private double firstLeg;
-    private double secondLeg;
-    private double hypotenuse;
+    private final double firstLeg;
+    private final double secondLeg;
+    private final double hypotenuse;
 
     public RightTriangle(double firstLeg, double secondLeg, double hypotenuse, String color) {
         this.firstLeg = firstLeg;
@@ -17,8 +17,8 @@ public class RightTriangle extends Figure {
     public void draw() {
         System.out.println("Figure: right triangle, area: " + super.area
                 + " sq.units, first leg: " + this.firstLeg
-                + " units, second leg: " + secondLeg
-                + " units, hypotenuse: " + hypotenuse
+                + " units, second leg: " + this.secondLeg
+                + " units, hypotenuse: " + this.hypotenuse
                 + " units, color: " + super.color);
     }
 
