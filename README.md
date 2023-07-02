@@ -10,7 +10,7 @@ You need to create corresponding classes for them(`Square`, `Rectangle`, `RightT
 All figures have 
 - **state** - all figures have `color`, but each figure type can also have one or several unique properties (`radius` for circle, `firstLeg` and `secondLeg` for right triangle, and so on).
 - **behaviour** - we can obtain the area of any figure and are able to draw it. To 'draw' means to print out all information about a figure using `System.out.println()` (you shouldn't override toString() method for this). 
-   
+   ``
 Think where you should declare these fields and methods: top level class / interface / bottom level classes.  
 
 In the `main()` method we need to create an array of figures (the size of array can be 3 or 6, it doesn't matter).
