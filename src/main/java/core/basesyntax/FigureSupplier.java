@@ -5,40 +5,37 @@ import java.util.Random;
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
     public static final int RADIUS = 10;
+    public static final int UPPER_LIMIT = 100;
+
     private Random random = new Random();
     private Circle circle = new Circle(Color.WHITE.name(), RADIUS);
+
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
         switch (figureNumber) {
             case 0:
-                Circle circle = new Circle(new ColorSupplier().getRandomColor(),
-                          new Random().nextInt(10) + 1);
-                return circle;
+                return new Circle(colorSupplier.getRandomColor(),random.nextInt(UPPER_LIMIT));
             case 1:
-                IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(
-                                                        new ColorSupplier().getRandomColor(),
-                                                  new Random().nextInt(10) + 1,
-                                                    new Random().nextInt(10) + 1,
-                                                new Random().nextInt(10) + 1);
-                return isoscelesTrapezoid;
+                return new IsoscelesTrapezoid(
+                        colorSupplier.getRandomColor(),
+                        random.nextInt(UPPER_LIMIT),
+                        random.nextInt(UPPER_LIMIT),
+                        random.nextInt(UPPER_LIMIT));
             case 2:
-                Rectangle rectangle = new Rectangle(new ColorSupplier().getRandomColor(),
-                                new Random().nextInt(10) + 1,
-                                new Random().nextInt(10) + 1);
-                return rectangle;
+                return new Rectangle(colorSupplier.getRandomColor(),
+                        random.nextInt(UPPER_LIMIT),
+                        random.nextInt(UPPER_LIMIT));
             case 3:
-                RightTriangle rightTriangle = new RightTriangle(
-                                              new ColorSupplier().getRandomColor(),
-                                       new Random().nextInt(10) + 1,
-                                     new Random().nextInt(10) + 1);
-                return rightTriangle;
+                return new RightTriangle(colorSupplier.getRandomColor(),
+                        random.nextInt(UPPER_LIMIT),
+                        random.nextInt(UPPER_LIMIT));
             case 4:
-                Square square = new Square(new ColorSupplier().getRandomColor(),
-                        new Random().nextInt(10) + 1);
-                return square;
+                return new Square(colorSupplier.getRandomColor(),
+                        random.nextInt(UPPER_LIMIT));
             default:
-                return null;
+                return circle;
         }
     }
 
