@@ -18,11 +18,11 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String draw() {
-        return "Figure : rectangle, area: "
+    public void draw() {
+        System.out.println("Figure : rectangle, area: "
                 + calculateArea() + " sq.units,"
                 + " firstLeg: " + firstLeg + " units,"
                 + " secondLeg: " + secondLeg + " units,"
-                + " color: " + getColor();
+                + " color: " + getColor().name().toLowerCase());
     }
 }
