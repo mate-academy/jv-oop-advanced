@@ -9,6 +9,7 @@ import core.basesyntax.shape.Square;
 import core.basesyntax.type.Color;
 
 public class ShapeSupplier extends BasicRandomValueSupplier {
+    private static final double DEFAULT_RADIUS = 10.0;
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     @Override
@@ -36,6 +37,6 @@ public class ShapeSupplier extends BasicRandomValueSupplier {
 
     @Override
     public Shape getDefault() {
-        return new Circle(colorSupplier.getDefault(), 10.0);
+        return new Circle(colorSupplier.getDefault(), DEFAULT_RADIUS);
     }
 }
