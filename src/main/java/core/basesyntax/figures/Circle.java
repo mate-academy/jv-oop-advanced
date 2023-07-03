@@ -3,6 +3,7 @@ package core.basesyntax.figures;
 import core.basesyntax.suppliers.Color;
 
 public class Circle extends Figure {
+    private static final double CALCULATION_PI_VALUE = Math.PI;
     private double radius;
 
     public Circle(Color color, double radius) {
@@ -12,12 +13,12 @@ public class Circle extends Figure {
 
     @Override
     public double calculateArea() {
-        return Math.pow(radius, 2) * Math.PI;
+        return CALCULATION_PI_VALUE * radius * radius;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: circle, area: " + calculateArea()
-                + " sq.units, radius: " + radius + " units, color: " + getColor());
+                + " sq.units, radius: " + radius + " units, color: " + getColor().name());
     }
 }
