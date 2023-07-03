@@ -1,6 +1,7 @@
 package core.basesyntax.model;
 
 public class IsoscelesTrapezoid extends Figure {
+    private static final double CONST_OF_AREA_EXPRESSION = 2;
     private double topBase;
     private double bottomBase;
     private double height;
@@ -14,8 +15,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double calculateArea() {
-        double area = 0.5 * height * (topBase + bottomBase);
-        return Math.round(area * 10.0) / 10.0;
+        return height * (topBase + bottomBase) / CONST_OF_AREA_EXPRESSION;
     }
 
     @Override
@@ -26,6 +26,6 @@ public class IsoscelesTrapezoid extends Figure {
                 + "topBase: " + topBase + " units"
                 + ", bottomBase: " + bottomBase + " units"
                 + ", height:" + height + " units"
-                + ", color: " + getColor());
+                + ", color: " + getColor().name());
     }
 }

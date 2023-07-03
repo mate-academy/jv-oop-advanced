@@ -10,8 +10,7 @@ public class Circle extends Figure {
 
     @Override
     public double calculateArea() {
-        double area = Math.PI * radius * radius;
-        return Math.round(area * 10.0) / 10.0;
+        return Math.PI * radius * radius;
     }
 
     @Override
@@ -20,6 +19,6 @@ public class Circle extends Figure {
                 + ": circle, "
                 + "area: " + calculateArea() + " sq.units, "
                 + "radius: " + radius + " units"
-                + ", color: " + getColor());
+                + ", color: " + getColor().name());
     }
 }

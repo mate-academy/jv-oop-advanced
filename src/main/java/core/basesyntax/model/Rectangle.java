@@ -12,8 +12,7 @@ public class Rectangle extends Figure {
 
     @Override
     public double calculateArea() {
-        double area = height * width;
-        return Math.round(area * 10.0) / 10.0;
+        return height * width;
     }
 
     @Override
@@ -23,6 +22,6 @@ public class Rectangle extends Figure {
                 + "area: " + calculateArea() + " sq.units, "
                 + "height: " + height + " units"
                 + ", width: " + width + " units"
-                + ", color: " + getColor());
+                + ", color: " + getColor().name());
     }
 }

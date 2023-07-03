@@ -1,6 +1,7 @@
 package core.basesyntax.model;
 
 public class RightTriangle extends Figure {
+    private static final double CONST_OF_AREA_EXPRESSION = 2;
     private double firstLeg;
     private double secondLeg;
 
@@ -12,8 +13,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public double calculateArea() {
-        double area = 0.5 * firstLeg * secondLeg;
-        return Math.round(area * 10.0) / 10.0;
+        return firstLeg * secondLeg / CONST_OF_AREA_EXPRESSION;
     }
 
     @Override
@@ -23,6 +23,6 @@ public class RightTriangle extends Figure {
                 + " area: " + calculateArea() + " sq.units, "
                 + "firstLeg: " + firstLeg + " units"
                 + ", secondLeg: " + secondLeg + " units"
-                + ", color: " + getColor());
+                + ", color: " + getColor().name());
     }
 }
