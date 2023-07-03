@@ -7,6 +7,7 @@ public class FigureSupplier {
     private static final int NUMBER_OF_FIGURES = 5;
     private static final double MAX_SIDE_SIZE = 50.0;
     private static final double DEFAULT_RADIUS_OF_CIRCLE = 10.0;
+    private static final int PRECISION_FOR_DOUBLE_VARIABLES = 2;
 
     private final Random randomizer = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
@@ -62,6 +63,6 @@ public class FigureSupplier {
 
     private double getRandomNumber() {
         double randomNumber = randomizer.nextDouble() * MAX_SIDE_SIZE;
-        return DoubleRounder.round(randomNumber, 2);
+        return DoubleRounder.round(randomNumber, PRECISION_FOR_DOUBLE_VARIABLES);
     }
 }
