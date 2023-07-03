@@ -9,7 +9,7 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final String DEFAULT_COLOR = "WHITE";
+    private static final Color DEFAULT_COLOR = Color.WHITE;
     private static final int DEFAULT_RADIUS = 10;
     private static final int FIGURE_TYPES_COUNT = 5;
     private static final int SIDE_LIMIT = 1000;
@@ -37,9 +37,11 @@ public class FigureSupplier {
             case 3:
                 return new Square(colorSupplier.getRandomColor(),
                         getRandomSide());
-            default:
+            case 4:
                 return new Circle(colorSupplier.getRandomColor(),
                         getRandomSide());
+            default:
+                return getDefaultFigure();
         }
     }
 
