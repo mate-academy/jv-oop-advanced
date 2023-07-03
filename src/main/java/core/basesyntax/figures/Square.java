@@ -6,7 +6,6 @@ public class Square extends Rectangle {
     public Square(String color, int side) {
         super(color, side, side);
         this.side = side;
-        super.area = this.calculateArea();
     }
 
     @Override
@@ -16,7 +15,7 @@ public class Square extends Rectangle {
 
     public void draw() {
         System.out.println("Figure: " + "square, "
-                + "area: " + area + " sq.units, "
+                + "area: " + calculateArea() + " sq.units, "
                 + "side: " + side + " units, "
                 + "color: " + color.toLowerCase()
         );

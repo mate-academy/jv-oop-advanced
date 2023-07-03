@@ -10,7 +10,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.bottomSide = bottomSide;
         this.topSide = topSide;
         this.height = height;
-        super.area = calculateArea();
     }
 
     @Override
@@ -20,7 +19,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     public void draw() {
         System.out.println("Figure: " + "isosceles trapezoid, "
-                + "area: " + area + " sq.units, "
+                + "area: " + calculateArea() + " sq.units, "
                 + "bottom side: " + bottomSide + " units, "
                 + "top side: " + topSide + " units, "
                 + "height: " + height + " units, "

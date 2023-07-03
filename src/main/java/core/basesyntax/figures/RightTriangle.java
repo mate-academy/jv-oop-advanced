@@ -8,7 +8,6 @@ public class RightTriangle extends Figure {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        super.area = calculateArea();
     }
 
     @Override
@@ -18,7 +17,7 @@ public class RightTriangle extends Figure {
 
     public void draw() {
         System.out.println("Figure: " + "right triangle, "
-                + "area: " + area + " sq.units, "
+                + "area: " + calculateArea() + " sq.units, "
                 + "first leg: " + firstLeg + " units, "
                 + "second leg: " + secondLeg + " units, "
                 + "color: " + color.toLowerCase()

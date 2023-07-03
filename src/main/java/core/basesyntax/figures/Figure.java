@@ -5,7 +5,6 @@ import core.basesyntax.Drawable;
 
 public abstract class Figure implements AreaCalculator, Drawable {
     protected final String color;
-    protected double area;
 
     protected Figure(String color) {
         this.color = color;
