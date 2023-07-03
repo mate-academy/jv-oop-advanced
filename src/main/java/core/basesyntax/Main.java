@@ -4,7 +4,6 @@ public class Main {
     public static final int FIGURE_NUMBER = 3;
 
     public static void main(String[] args) {
-
         Figure[] figures = new Figure[FIGURE_NUMBER];
         FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < FIGURE_NUMBER; i++) {

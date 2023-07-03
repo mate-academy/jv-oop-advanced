@@ -27,11 +27,8 @@ public class FigureSupplier {
                         getRandomSizeFigure(), getRandomSizeFigure());
             case 4 :
                 return new Circle(colorSupplier.getRandomColor(), getRandomSizeFigure());
-            default: getDefaultFigure();
-            break;
+            default: throw new IllegalArgumentException("Figure not Found");
         }
-        return getDefaultFigure();
-
     }
 
     private int getRandomSizeFigure() {
