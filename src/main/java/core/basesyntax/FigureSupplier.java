@@ -28,25 +28,25 @@ public class FigureSupplier {
 
         switch (randomFiguresName) {
             case CIRCLE:
-                int randomRadius = getRandomLength();
+                int randomRadius = randomLength();
                 return new Circle(randomColor, randomRadius);
             case ISOSCELES_TRAPEZOID:
-                int randomBottomSide = getRandomLength();
-                int randomTopSide = getRandomLength();
-                int randomHeight = getRandomLength();
+                int randomBottomSide = randomLength();
+                int randomTopSide = randomLength();
+                int randomHeight = randomLength();
                 return new IsoscelesTrapezoid(randomColor,
                         randomBottomSide, randomTopSide, randomHeight
                 );
             case RECTANGLE:
-                int randomFirstSide = getRandomLength();
-                int randomSecondSide = getRandomLength();
+                int randomFirstSide = randomLength();
+                int randomSecondSide = randomLength();
                 return new Rectangle(randomColor, randomFirstSide, randomSecondSide);
             case RIGHT_TRIANGLE:
-                int randomFirstLeg = getRandomLength();
-                int randomSecondLeg = getRandomLength();
+                int randomFirstLeg = randomLength();
+                int randomSecondLeg = randomLength();
                 return new RightTriangle(randomColor, randomFirstLeg, randomSecondLeg);
             default: // SQUARE
-                int randomSide = getRandomLength();
+                int randomSide = randomLength();
                 return new Square(randomColor, randomSide);
         }
     }
@@ -55,7 +55,7 @@ public class FigureSupplier {
         return new Circle(DEFAULT_COLOR.name(), DEFAULT_RADIUS);
     }
 
-    private int getRandomLength() {
+    private int randomLength() {
         return MIN_LENGTH + random.nextInt(MAX_LENGTH);
     }
 }

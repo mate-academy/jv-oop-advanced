@@ -6,12 +6,12 @@ public class Square extends Rectangle {
     public Square(String color, int side) {
         super(color, side, side);
         this.side = side;
-        super.area = getArea();
+        super.area = this.calculateArea();
     }
 
     @Override
-    public double getArea() {
-        return super.getArea();
+    public double calculateArea() {
+        return super.calculateArea();
     }
 
     public void draw() {

@@ -8,11 +8,11 @@ public class Rectangle extends Figure {
         super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
-        super.area = getArea();
+        super.area = calculateArea();
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return firstSide * secondSide;
     }
 
