@@ -4,14 +4,14 @@ public class Rectangle extends Figure {
     private double height;
     private double width;
 
-    public Rectangle(double height, double width, String color) {
+    public Rectangle(double height, double width, Color color) {
         super(color);
         this.height = height;
         this.width = width;
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         double area = height * width;
         return Math.round(area * 10.0) / 10.0;
     }
@@ -20,7 +20,7 @@ public class Rectangle extends Figure {
     public void draw() {
         System.out.println(super.getClass().getSuperclass().getName()
                 + ": rectangle, "
-                + "area: " + getArea() + " sq.units, "
+                + "area: " + calculateArea() + " sq.units, "
                 + "height: " + height + " units"
                 + ", width: " + width + " units"
                 + ", color: " + getColor());

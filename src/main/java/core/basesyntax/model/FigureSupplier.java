@@ -1,16 +1,20 @@
 package core.basesyntax.model;
 
 import java.util.Random;
+import org.decimal4j.util.DoubleRounder;
 
 public class FigureSupplier {
+    private static final int NUMBER_OF_FIGURES = 5;
     private static final double MAX_SIDE_SIZE = 50.0;
+    private static final double DEFAULT_RADIUS_OF_CIRCLE = 10.0;
+
     private final Random randomizer = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         Figure randomFigure;
-        String randomColor = colorSupplier.getRandomColor();
-        int codeOfRandomFigure = randomizer.nextInt(5);
+        Color randomColor = colorSupplier.getRandomColor();
+        int codeOfRandomFigure = randomizer.nextInt(NUMBER_OF_FIGURES);
         switch (codeOfRandomFigure) {
             case 0: {
                 double randomSide = getRandomNumber();
@@ -53,11 +57,11 @@ public class FigureSupplier {
 
     public Figure getDefaultFigure() {
         ColorSupplier colorSupplier = new ColorSupplier();
-        return new Circle(10.0, colorSupplier.getRandomColor());
+        return new Circle(DEFAULT_RADIUS_OF_CIRCLE, colorSupplier.getRandomColor());
     }
 
     private double getRandomNumber() {
         double randomNumber = randomizer.nextDouble() * MAX_SIDE_SIZE;
-        return Math.round(randomNumber * 100.0) / 100.0;
+        return DoubleRounder.round(randomNumber, 2);
     }
 }
