@@ -7,5 +7,3 @@ enum FigureEnum {
     RIGHT_TRIANGLE,
     SQUARE
 }
-
-

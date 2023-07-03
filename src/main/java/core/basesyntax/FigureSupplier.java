@@ -12,9 +12,8 @@ public class FigureSupplier {
 
     private static final int MIN_LENGTH = 1;
     private static final int MAX_LENGTH = 10;
-    final static int DEFAULT_RADIUS = 10;
-    final static ColorEnum DEFAULT_COLOR = ColorEnum.WHITE;
-
+    private static final int DEFAULT_RADIUS = 10;
+    private static final ColorEnum DEFAULT_COLOR = ColorEnum.WHITE;
 
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
