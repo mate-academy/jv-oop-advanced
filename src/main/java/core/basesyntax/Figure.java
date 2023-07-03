@@ -15,4 +15,5 @@ public abstract class Figure implements FigureBehavior {
         this.color = color;
     }
 
+    abstract void draw();
 }
