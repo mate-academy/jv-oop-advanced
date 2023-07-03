@@ -1,32 +1,27 @@
 package core.basesyntax.figures;
 
-public class Triangle extends Figure {
-    private double firstLeg;
-    private double secondLeg;
+import core.basesyntax.colors.Color;
+
+public class Triangle extends RightTriangle {
     private double thirdLeg;
 
-    public Triangle(String color, double firstLeg, double secondLeg, double thirdLeg) {
-        super(color);
-        this.firstLeg = firstLeg;
-        this.secondLeg = secondLeg;
+    public Triangle(Color color, double firstLeg, double secondLeg, double thirdLeg) {
+        super(color, firstLeg, secondLeg);
         this.thirdLeg = thirdLeg;
-    }
-
-    public Triangle(String color) {
-        super(color);
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: Rectangle\nColor: " + getColor() + "\nArea: " + getArea()
-                + "\nFirst leg: " + thirdLeg + "\nSecond leg: " + secondLeg
+        System.out.println("Figure: Rectangle\nColor: " + getColor() + "\nArea: " + calculateArea()
+                + "\nFirst leg: " + super.getFirstLeg() + "\nSecond leg: " + super.getSecondLeg()
                 + "\nThird leg: " + thirdLeg);
     }
 
     @Override
-    public double getArea() {
-        double semiPerimeter = (firstLeg + secondLeg + thirdLeg) / 2;
-        return Math.sqrt(semiPerimeter * (semiPerimeter - firstLeg) * (semiPerimeter - secondLeg)
+    public double calculateArea() {
+        double semiPerimeter = (super.getFirstLeg() + super.getSecondLeg() + thirdLeg) / 2;
+        return Math.sqrt(semiPerimeter * (semiPerimeter - super.getFirstLeg())
+                * (semiPerimeter - super.getSecondLeg())
                 * (semiPerimeter - thirdLeg));
     }
 }

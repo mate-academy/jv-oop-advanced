@@ -10,7 +10,7 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final String DEFAULT_COLOR = Color.WHITE.name();
+    private static final Color DEFAULT_COLOR = Color.WHITE;
     private static final double DEFAULT_RADIUS = 10.00;
     private static final int MAX_SIDE_UNITS = 9;
     private static final int MIN_SIDE_UNITS = 9;
