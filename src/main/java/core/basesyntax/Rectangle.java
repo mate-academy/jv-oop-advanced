@@ -1,26 +1,26 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private final FigureEnum figureName;
+    private final FigureType figureName;
     private final double length;
     private final double height;
 
-    public Rectangle(String color, double length, double height) {
+    public Rectangle(Color color, double length, double height) {
         super(color);
         this.length = length;
         this.height = height;
-        this.figureName = FigureEnum.RECTANGLE;
+        this.figureName = FigureType.RECTANGLE;
     }
 
     @Override
-    public double getFigureArea() {
+    public double calculateFigureArea() {
         return length * height;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: " + figureName
-                + " area: " + getFigureArea() + " sq.unit, side: "
+                + " area: " + calculateFigureArea() + " sq.unit, side: "
                 + "length " + length + " units, "
                 + "height " + height + " units, "
                 + "color: " + getColor());

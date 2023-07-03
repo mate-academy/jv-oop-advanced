@@ -1,26 +1,28 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private final FigureEnum figureName;
+    private static final int FIGURE_AREA_CONSTANT = 2;
+
+    private final FigureType figureName;
     private final double firstLeg;
     private final double secondLeg;
 
-    public RightTriangle(String color, double firstLeg, double secondLeg) {
+    public RightTriangle(Color color, double firstLeg, double secondLeg) {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        this.figureName = FigureEnum.RIGHT_TRIANGLE;
+        this.figureName = FigureType.RIGHT_TRIANGLE;
     }
 
     @Override
-    public double getFigureArea() {
-        return (firstLeg * secondLeg) / 2;
+    public double calculateFigureArea() {
+        return (firstLeg * secondLeg) / FIGURE_AREA_CONSTANT;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: " + figureName
-                + " area: " + getFigureArea() + " sq.unit, side: "
+                + " area: " + calculateFigureArea() + " sq.unit, side: "
                 + "firstLeg " + firstLeg + " units, "
                 + "secondLeg " + secondLeg + " units, "
                 + "color: " + getColor());

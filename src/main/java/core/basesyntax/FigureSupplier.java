@@ -3,17 +3,17 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final FigureEnum DEFAULT_FIGURE_NAME = FigureEnum.CIRCLE;
+    public static final FigureType DEFAULT_FIGURE_NAME = FigureType.CIRCLE;
     public static final double DEFAULT_CIRCLE_RADIUS = 10;
-    public static final String DEFAULT_CIRCLE_COLOR = Color.WHITE.name();
-    public static final int MAX_FIGURES = 6;
+    public static final Color DEFAULT_CIRCLE_COLOR = Color.WHITE;
+    public static final int MAX_FIGURES_NUMBER = 6;
 
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        int randomFigure = random.nextInt(FigureEnum.values().length);
-        FigureEnum defaultFigureName = FigureEnum.values()[randomFigure];
+        int randomFigure = random.nextInt(FigureType.values().length);
+        FigureType defaultFigureName = FigureType.values()[randomFigure];
         return getFigure(defaultFigureName);
     }
 
@@ -21,7 +21,7 @@ public class FigureSupplier {
         return new Circle(DEFAULT_FIGURE_NAME, DEFAULT_CIRCLE_RADIUS, DEFAULT_CIRCLE_COLOR);
     }
 
-    private Figure getFigure(FigureEnum figure) {
+    private Figure getFigure(FigureType figure) {
         switch (figure) {
             case SQUARE:
                 return new Square(colorSupplier.getRandomColor(), getRandomValue());
@@ -42,7 +42,7 @@ public class FigureSupplier {
     }
 
     private double getRandomValue() {
-        return random.nextInt(MAX_FIGURES);
+        return random.nextInt(MAX_FIGURES_NUMBER);
     }
 }
 

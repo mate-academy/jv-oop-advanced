@@ -1,24 +1,26 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    private final double squareSide;
-    private final FigureEnum figureName;
+    private static final int SQUARED_DEGREE = 2;
 
-    public Square(String color, double squareSide) {
+    private final double squareSide;
+    private final FigureType figureName;
+
+    public Square(Color color, double squareSide) {
         super(color);
         this.squareSide = squareSide;
-        this.figureName = FigureEnum.SQUARE;
+        this.figureName = FigureType.SQUARE;
     }
 
     @Override
-    public double getFigureArea() {
-        return Math.pow(squareSide, 2);
+    public double calculateFigureArea() {
+        return Math.pow(squareSide, SQUARED_DEGREE);
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: " + figureName
-                + " area: " + getFigureArea() + " sq.unit, "
+                + " area: " + calculateFigureArea() + " sq.unit, "
                 + "side: " + squareSide + " units, "
                 + "color: " + getColor());
     }

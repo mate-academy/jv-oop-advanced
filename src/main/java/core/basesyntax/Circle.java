@@ -1,30 +1,32 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private final FigureEnum figureName;
+    private static final int SQUARED_DEGREE = 2;
+
+    private final FigureType figureName;
     private final double radius;
 
-    public Circle(String color, double radius) {
+    public Circle(Color color, double radius) {
         super(color);
         this.radius = radius;
-        this.figureName = FigureEnum.CIRCLE;
+        this.figureName = FigureType.CIRCLE;
     }
 
-    public Circle(FigureEnum figureName, double radius, String color) {
+    public Circle(FigureType figureName, double radius, Color color) {
         super(color);
         this.figureName = figureName;
         this.radius = radius;
     }
 
     @Override
-    public double getFigureArea() {
-        return Math.pow(radius, 2) * Math.PI;
+    public double calculateFigureArea() {
+        return Math.pow(radius, SQUARED_DEGREE) * Math.PI;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: " + figureName
-                + " area: " + getFigureArea() + " sq.unit, "
+                + " area: " + calculateFigureArea() + " sq.unit, "
                 + "radius: " + radius + " units, "
                 + "color: " + getColor());
     }
