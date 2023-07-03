@@ -48,11 +48,11 @@ public class FigureSupplier {
         return figure;
     }
 
-    private double getRandomSide() {
-        return (random.nextDouble() * (MAX_SIDE_UNITS - MIN_SIDE_UNITS)) + MIN_SIDE_UNITS;
-    }
-
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
+    }
+
+    private double getRandomSide() {
+        return (random.nextDouble() * (MAX_SIDE_UNITS - MIN_SIDE_UNITS)) + MIN_SIDE_UNITS;
     }
 }

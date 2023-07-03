@@ -3,6 +3,7 @@ package core.basesyntax.figures;
 import core.basesyntax.colors.Color;
 
 public class RightTriangle extends Figure {
+    private static final double AREA_MULTIPLIER = 0.5;
     private final double firstLeg;
     private final double secondLeg;
 
@@ -22,7 +23,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: Right rectangle\nColor: " + getColor()
+        System.out.println("Figure: Right rectangle\nColor: " + getColor().name()
                 + "\nArea: " + this.calculateArea()
                 + "\nFirst leg: " + firstLeg
                 + "\nSecond leg: " + secondLeg);
@@ -30,6 +31,6 @@ public class RightTriangle extends Figure {
 
     @Override
     public double calculateArea() {
-        return 0.5 * firstLeg * secondLeg;
+        return AREA_MULTIPLIER * firstLeg * secondLeg;
     }
 }

@@ -3,6 +3,7 @@ package core.basesyntax.figures;
 import core.basesyntax.colors.Color;
 
 public class Rectangle extends Figure {
+    private static final double AREA_MULTIPLIER = 2;
     private final double firstSide;
     private final double secondSide;
 
@@ -14,12 +15,14 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: Rectangle\nColor: " + getColor() + "\nArea: " + calculateArea()
-                + "\nFirst side: " + firstSide + "\nSecond side: " + secondSide);
+        System.out.println("Figure: Rectangle\nColor: " + getColor().name()
+                + "\nArea: " + calculateArea()
+                + "\nFirst side: " + firstSide
+                + "\nSecond side: " + secondSide);
     }
 
     @Override
     public double calculateArea() {
-        return 2 * (firstSide + secondSide);
+        return AREA_MULTIPLIER * (firstSide + secondSide);
     }
 }

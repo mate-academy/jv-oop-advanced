@@ -3,6 +3,7 @@ package core.basesyntax.figures;
 import core.basesyntax.colors.Color;
 
 public class Triangle extends RightTriangle {
+    private static final int DIVIDER = 2;
     private double thirdLeg;
 
     public Triangle(Color color, double firstLeg, double secondLeg, double thirdLeg) {
@@ -12,15 +13,18 @@ public class Triangle extends RightTriangle {
 
     @Override
     public void draw() {
-        System.out.println("Figure: Rectangle\nColor: " + getColor() + "\nArea: " + calculateArea()
-                + "\nFirst leg: " + super.getFirstLeg() + "\nSecond leg: " + super.getSecondLeg()
+        System.out.println("Figure: Rectangle\nColor: " + getColor().name()
+                + "\nArea: " + calculateArea()
+                + "\nFirst leg: " + super.getFirstLeg()
+                + "\nSecond leg: " + super.getSecondLeg()
                 + "\nThird leg: " + thirdLeg);
     }
 
     @Override
     public double calculateArea() {
-        double semiPerimeter = (super.getFirstLeg() + super.getSecondLeg() + thirdLeg) / 2;
-        return Math.sqrt(semiPerimeter * (semiPerimeter - super.getFirstLeg())
+        double semiPerimeter = (super.getFirstLeg() + super.getSecondLeg() + thirdLeg) / DIVIDER;
+        return Math.sqrt(semiPerimeter
+                * (semiPerimeter - super.getFirstLeg())
                 * (semiPerimeter - super.getSecondLeg())
                 * (semiPerimeter - thirdLeg));
     }
