@@ -4,6 +4,7 @@ public class IsoscelesTrapezoid extends Figure {
     private double ceil;
     private double floor;
     private double side;
+
     public IsoscelesTrapezoid(String color, double ceil, double floor, double side) {
         super(color);
         this.ceil = ceil;
