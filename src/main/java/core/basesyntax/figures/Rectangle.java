@@ -1,17 +1,19 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.constants.ColorName;
+
 public class Rectangle extends Figure {
     private int firstSide;
     private int secondSide;
 
-    public Rectangle(String color, int length, int width) {
+    public Rectangle(ColorName color, int length, int width) {
         super(color);
         this.firstSide = length;
         this.secondSide = width;
     }
 
     @Override
-    public double getFigureArea() {
+    public double calculateFigureArea() {
         return firstSide * secondSide;
     }
 
@@ -20,7 +22,7 @@ public class Rectangle extends Figure {
         super.draw();
         System.out.println(", first side: " + firstSide
                 + ", second side: " + secondSide
-                + ", area: " + getFigureArea()
+                + ", area: " + calculateFigureArea()
                 + ".");
     }
 }

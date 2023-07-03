@@ -1,5 +1,6 @@
 package core.basesyntax.servise;
 
+import core.basesyntax.constants.ColorName;
 import core.basesyntax.constants.FigureName;
 import core.basesyntax.figures.Circle;
 import core.basesyntax.figures.Figure;
@@ -41,14 +42,17 @@ public class FigureSupplier {
                 return new Square(colorSupplier.getRandomColor(),
                         getRandomValue());
 
-            default:
+            case 4:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                         getRandomValue(), getRandomValue(), getRandomValue());
+
+            default:
+                return getDefaultFigure();
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("WHITE", DEFAULT_SIZE);
+        return new Circle(ColorName.WHITE, DEFAULT_SIZE);
     }
 
 }

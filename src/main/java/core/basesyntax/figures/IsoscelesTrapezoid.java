@@ -1,11 +1,13 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.constants.ColorName;
+
 public class IsoscelesTrapezoid extends Figure {
     private final int firstBase;
     private final int secondBase;
     private final int height;
 
-    public IsoscelesTrapezoid(String color, int firstBase, int secondBase, int height) {
+    public IsoscelesTrapezoid(ColorName color, int firstBase, int secondBase, int height) {
         super(color);
         this.firstBase = firstBase;
         this.secondBase = secondBase;
@@ -13,7 +15,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double getFigureArea() {
+    public double calculateFigureArea() {
         return (double) (firstBase + secondBase) * height / 2;
     }
 
@@ -23,7 +25,7 @@ public class IsoscelesTrapezoid extends Figure {
         System.out.println(", first base: " + firstBase
                 + ", second base: " + secondBase
                 + ", height: " + height
-                + ", area: " + getFigureArea()
+                + ", area: " + calculateFigureArea()
                 + ".");
     }
 }

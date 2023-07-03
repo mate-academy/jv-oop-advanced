@@ -1,17 +1,19 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.constants.ColorName;
+
 public class RightTriangle extends Figure {
     private final int firstLeg;
     private final int secondLeg;
 
-    public RightTriangle(String color, int firstLeg, int secondLeg) {
+    public RightTriangle(ColorName color, int firstLeg, int secondLeg) {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
 
     @Override
-    public double getFigureArea() {
+    public double calculateFigureArea() {
         return (double) firstLeg * secondLeg / 2;
     }
 
@@ -20,7 +22,7 @@ public class RightTriangle extends Figure {
         super.draw();
         System.out.println(", first leg: " + firstLeg
                 + ", second leg: " + secondLeg
-                + ", area: " + getFigureArea()
+                + ", area: " + calculateFigureArea()
                 + ".");
     }
 }
