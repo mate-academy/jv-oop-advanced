@@ -1,9 +1,9 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.AreaCalculator;
-import core.basesyntax.DrawAble;
+import core.basesyntax.Drawable;
 
-public abstract class Figure implements AreaCalculator, DrawAble {
+public abstract class Figure implements AreaCalculator, Drawable {
     protected final String color;
     protected double area;
 

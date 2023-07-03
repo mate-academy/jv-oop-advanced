@@ -6,8 +6,7 @@ class ColorSupplier {
     private final Random random = new Random();
 
     public String getRandomColor() {
-        int numberOfColors = ColorEnum.values().length;
-        int index = random.nextInt(numberOfColors);
+        int index = random.nextInt(ColorEnum.values().length);
         return ColorEnum.values()[index].name();
     }
 }

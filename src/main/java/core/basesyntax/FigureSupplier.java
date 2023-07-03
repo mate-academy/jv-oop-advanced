@@ -12,12 +12,12 @@ public class FigureSupplier {
 
     private static final int MIN_LENGTH = 1;
     private static final int MAX_LENGTH = 10;
+    final static int DEFAULT_RADIUS = 10;
+    final static ColorEnum DEFAULT_COLOR = ColorEnum.WHITE;
+
+
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
-
-    private int randNum() {
-        return MIN_LENGTH + random.nextInt(MAX_LENGTH);
-    }
 
     public Figure getRandomFigure() {
         String randomColor = colorSupplier.getRandomColor();
@@ -28,32 +28,34 @@ public class FigureSupplier {
 
         switch (randomFiguresName) {
             case CIRCLE:
-                int randomRadius = randNum();
+                int randomRadius = getRandomLength();
                 return new Circle(randomColor, randomRadius);
             case ISOSCELES_TRAPEZOID:
-                int randomBottomSide = randNum();
-                int randomTopSide = randNum();
-                int randomHeight = randNum();
+                int randomBottomSide = getRandomLength();
+                int randomTopSide = getRandomLength();
+                int randomHeight = getRandomLength();
                 return new IsoscelesTrapezoid(randomColor,
                         randomBottomSide, randomTopSide, randomHeight
                 );
             case RECTANGLE:
-                int randomFirstSide = randNum();
-                int randomSecondSide = randNum();
+                int randomFirstSide = getRandomLength();
+                int randomSecondSide = getRandomLength();
                 return new Rectangle(randomColor, randomFirstSide, randomSecondSide);
             case RIGHT_TRIANGLE:
-                int randomFirstLeg = randNum();
-                int randomSecondLeg = randNum();
+                int randomFirstLeg = getRandomLength();
+                int randomSecondLeg = getRandomLength();
                 return new RightTriangle(randomColor, randomFirstLeg, randomSecondLeg);
             default: // SQUARE
-                int randomSide = randNum();
+                int randomSide = getRandomLength();
                 return new Square(randomColor, randomSide);
         }
     }
 
     public Figure getDefaultFigure() {
-        final int defaultRadius = 10;
-        final ColorEnum defaultColor = ColorEnum.WHITE;
-        return new Circle(defaultColor.name(), defaultRadius);
+        return new Circle(DEFAULT_COLOR.name(), DEFAULT_RADIUS);
+    }
+
+    private int getRandomLength() {
+        return MIN_LENGTH + random.nextInt(MAX_LENGTH);
     }
 }
