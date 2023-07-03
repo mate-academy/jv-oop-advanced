@@ -12,7 +12,7 @@ import java.util.Random;
 
 public class FigureSuppliers {
     private static final int MAX_LENGTH = 30;
-    private static final int DEFAULT_RADIUS = 30;
+    private static final int DEFAULT_RADIUS = 10;
 
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
@@ -20,30 +20,37 @@ public class FigureSuppliers {
     public Figure getRandomFigure() {
         int index = random.nextInt(FiguresList.values().length);
         String figureName = FiguresList.values()[index].name();
+        Figure figure;
         switch (figureName) {
             case "SQUARE":
-                return new Square(colorSupplier.getRandomColor(),
+                figure = new Square(colorSupplier.getRandomColor(),
                         getRandomSide());
+                break;
             case "TRIANGLE":
-                return new RightTriangle(colorSupplier.getRandomColor(),
+                figure = new RightTriangle(colorSupplier.getRandomColor(),
                         getRandomSide(),
                         getRandomSide());
+                break;
             case "ISOSCELES_TRAPEZOID":
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                figure = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                         getRandomSide(),
                         getRandomSide(),
                         getRandomSide());
+                break;
             case "CIRCLE":
-                return new Circle(colorSupplier.getRandomColor(),
+                figure = new Circle(colorSupplier.getRandomColor(),
                         getRandomSide());
+                break;
             case "RECTANGLE":
-                return new Rectangle(colorSupplier.getRandomColor(),
+                figure = new Rectangle(colorSupplier.getRandomColor(),
                         getRandomSide(),
                         getRandomSide());
+                break;
             default:
+                figure = getDefaultFigure();
                 break;
         }
-        return getDefaultFigure();
+        return figure;
     }
 
     private int getRandomSide() {
