@@ -1,15 +1,16 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.properties.Drawing;
+import core.basesyntax.state.Color;
 
 public abstract class Figures implements Drawing {
-    private String color;
+    private Color color;
 
-    public void setColor(String color) {
+    public void setColor(Color color) {
         this.color = color;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 

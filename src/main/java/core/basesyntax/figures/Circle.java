@@ -1,16 +1,8 @@
 package core.basesyntax.figures;
 
 public class Circle extends Figures {
+    private static final int CALCULATION_CONSTANT = 10;
     private int radius;
-
-    public Circle(int radius, String color) {
-        setColor(color);
-        this.radius = radius;
-    }
-
-    public Circle() {
-
-    }
 
     public void setRadius(int radius) {
         this.radius = radius;
@@ -18,13 +10,13 @@ public class Circle extends Figures {
 
     @Override
     public double getArea() {
-        return Math.ceil((Math.PI * radius * radius) * 10) / 10;
+        return Math.ceil((Math.PI * radius * radius) * CALCULATION_CONSTANT) / CALCULATION_CONSTANT;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: circle, area: " + getArea()
                            + " sq.units, radius: " + radius
-                           + " " + unitOrUnits(radius) + ", color: " + getColor());
+                           + " " + unitOrUnits(radius) + ", color: " + getColor().getInfo());
     }
 }

@@ -16,7 +16,7 @@ public enum Color {
         this.color = color;
     }
 
-    public String getColor() {
+    public String getInfo() {
         return color;
     }
 }

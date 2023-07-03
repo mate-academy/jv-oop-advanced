@@ -1,20 +1,10 @@
 package core.basesyntax.figures;
 
 public class IsoscelesTrapezoid extends Figures {
+    private static final int MATH_CONSTANT = 2;
     private int bottomBase;
     private int topBase;
     private int height;
-
-    public IsoscelesTrapezoid(int bottomBase, int topBase, int height, String color) {
-        setColor(color);
-        this.bottomBase = bottomBase;
-        this.topBase = topBase;
-        this.height = height;
-    }
-
-    public IsoscelesTrapezoid() {
-
-    }
 
     public void setBottomBase(int bottomBase) {
         this.bottomBase = bottomBase;
@@ -30,7 +20,7 @@ public class IsoscelesTrapezoid extends Figures {
 
     @Override
     public double getArea() {
-        return (double)(bottomBase + topBase) / 2 * height;
+        return (double)(bottomBase + topBase) / MATH_CONSTANT * height;
     }
 
     @Override
@@ -40,6 +30,6 @@ public class IsoscelesTrapezoid extends Figures {
                            + " sq.units, bottom base: " + bottomBase
                            + " " + unitOrUnits(bottomBase) + ", top base: " + topBase
                            + " " + unitOrUnits(topBase) + ", height: " + height
-                           + " " + unitOrUnits(height) + ", color: " + getColor());
+                           + " " + unitOrUnits(height) + ", color: " + getColor().getInfo());
     }
 }
