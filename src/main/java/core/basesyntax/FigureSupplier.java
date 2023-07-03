@@ -9,14 +9,6 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    enum FiguresEnum {
-        CIRCLE,
-        ISOSCELES_TRAPEZOID,
-        RECTANGLE,
-        RIGHT_TRIANGLE,
-        SQUARE
-
-    }
 
     private static final int MIN_LENGTH = 1;
     private static final int MAX_LENGTH = 10;
@@ -30,9 +22,9 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         String randomColor = colorSupplier.getRandomColor();
 
-        int numberOfFigures = FiguresEnum.values().length;
+        int numberOfFigures = FigureEnum.values().length;
         int index = random.nextInt(numberOfFigures);
-        FiguresEnum randomFiguresName = FiguresEnum.values()[index];
+        FigureEnum randomFiguresName = FigureEnum.values()[index];
 
         switch (randomFiguresName) {
             case CIRCLE:
@@ -61,7 +53,7 @@ public class FigureSupplier {
 
     public Figure getDefaultFigure() {
         final int defaultRadius = 10;
-        final ColorSupplier.Color defaultColor = ColorSupplier.Color.WHITE;
+        final ColorEnum defaultColor = ColorEnum.WHITE;
         return new Circle(defaultColor.name(), defaultRadius);
     }
 }
