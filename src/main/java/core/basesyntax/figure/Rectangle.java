@@ -12,21 +12,17 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println(this);
+        String color = getColor().name().toLowerCase();
+        String info = "Figure: rectangle, "
+                + "area: " + getArea()
+                + " sq.units, length: " + length
+                + " units, width: " + width
+                + " units, color: " + color;
+        System.out.println(info);
     }
 
     @Override
     public double getArea() {
         return length * width;
-    }
-
-    @Override
-    public String toString() {
-        String color = getColor().name().toLowerCase();
-        return "Figure: rectangle, "
-                + "area: " + getArea()
-                + " sq.units, length: " + length
-                + " units, width: " + width
-                + " units, color: " + color;
     }
 }

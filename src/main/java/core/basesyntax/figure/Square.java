@@ -10,19 +10,15 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        System.out.println(this);
+        String color = getColor().name().toLowerCase();
+        String info = "Figure: square, area: " + getArea()
+                + " sq.units, side: " + side
+                + " units, color: " + color;
+        System.out.println(info);
     }
 
     @Override
     public double getArea() {
         return side * side;
-    }
-
-    @Override
-    public String toString() {
-        String color = getColor().name().toLowerCase();
-        return "Figure: square, area: " + getArea()
-                + " sq.units, side: " + side
-                + " units, color: " + color;
     }
 }
