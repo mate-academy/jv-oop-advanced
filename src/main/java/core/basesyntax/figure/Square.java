@@ -1,12 +1,26 @@
 package core.basesyntax.figure;
 
+import core.basesyntax.tools.Color;
+
 public class Square extends Figure {
 
     private int side = 0;
+    private double area = 0;
 
-    public Square(String name) {
+    public Square(String name, Color color) {
         setName(name);
+        setColor(color);
         randomFigure();
+    }
+
+    @Override
+    public double getArea() {
+        return area;
+    }
+
+    @Override
+    public void setArea(double area) {
+        this.area = area;
     }
 
     public int getSide() {
@@ -15,8 +29,10 @@ public class Square extends Figure {
 
     public void setSide(int side) {
         this.side = side;
+        resultArea();
     }
 
+    @Override
     public void resultArea() {
         setArea(side * side);
     }
@@ -24,13 +40,13 @@ public class Square extends Figure {
     @Override
     public void draw() {
         super.draw();
-        System.out.println(", side: " + side + " units, " + "color: " + getColor());
+        System.out.println(" area: " + getArea() + " sq.units"
+                + ", side: " + getSide() + " units, "
+                + "color: " + getColor().name());
     }
 
     @Override
     public void randomFigure() {
-        super.randomFigure();
-        side = randomSideFigure();
-        resultArea();
+        setSide(randomSideFigure());
     }
 }

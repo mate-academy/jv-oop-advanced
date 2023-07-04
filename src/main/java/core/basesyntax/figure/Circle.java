@@ -3,19 +3,34 @@ package core.basesyntax.figure;
 import core.basesyntax.tools.Color;
 
 public class Circle extends Figure {
-
     private int radius = 0;
+    private double area = 0;
 
     public Circle(String name) {
         setName(name);
         randomFigure();
     }
 
+    public Circle(String name, Color color) {
+        setName(name);
+        setColor(color);
+        randomFigure();
+    }
+
     public Circle(String name, int radius, Color color) {
         setName(name);
-        this.radius = radius;
         setColor(color);
-        resultArea();
+        setRadius(radius);
+    }
+
+    @Override
+    public double getArea() {
+        return area;
+    }
+
+    @Override
+    public void setArea(double area) {
+        this.area = area;
     }
 
     public int getRadius() {
@@ -24,8 +39,10 @@ public class Circle extends Figure {
 
     public void setRadius(int radius) {
         this.radius = radius;
+        resultArea();
     }
 
+    @Override
     public void resultArea() {
         setArea(2 * Math.PI * radius * radius);
     }
@@ -33,14 +50,14 @@ public class Circle extends Figure {
     @Override
     public void draw() {
         super.draw();
-        System.out.println(", radius: " + radius + " units, "
-                + "color: " + getColor());
+        System.out.println(" area: "
+                + getArea() + " sq.units"
+                + ", radius: " + getRadius() + " units, "
+                + "color: " + getColor().name());
     }
 
     @Override
     public void randomFigure() {
-        super.randomFigure();
-        this.radius = randomSideFigure();
-        resultArea();
+        setRadius(randomSideFigure());
     }
 }

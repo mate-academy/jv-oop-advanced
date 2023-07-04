@@ -1,5 +1,10 @@
 package core.basesyntax.behaviour;
 
+import core.basesyntax.figure.Figure;
+
 public interface FigureCreation {
-    void randomFigure();
+
+    Figure getRandomFigure();
+
+    Figure getDefaultFigure();
 }

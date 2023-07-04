@@ -1,13 +1,27 @@
 package core.basesyntax.figure;
 
+import core.basesyntax.tools.Color;
+
 public class Rectangle extends Figure {
 
     private int lengthRectangle = 0;
     private int widthRectangle = 0;
+    private double area = 0;
 
-    public Rectangle(String name) {
+    public Rectangle(String name, Color color) {
         setName(name);
+        setColor(color);
         randomFigure();
+    }
+
+    @Override
+    public double getArea() {
+        return area;
+    }
+
+    @Override
+    public void setArea(double area) {
+        this.area = area;
     }
 
     public int getLengthRectangle() {
@@ -33,14 +47,14 @@ public class Rectangle extends Figure {
     @Override
     public void draw() {
         super.draw();
-        System.out.println(", length: " + getLengthRectangle() + " units, "
+        System.out.println(" area: " + getArea() + " sq.units"
+                + ", length: " + getLengthRectangle() + " units, "
                 + "width: " + getWidthRectangle() + " units, "
-                + "color: " + getColor());
+                + "color: " + getColor().name());
     }
 
     @Override
     public void randomFigure() {
-        super.randomFigure();
         setLengthRectangle(randomSideFigure());
         setWidthRectangle(randomSideFigure());
         resultArea();

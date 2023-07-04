@@ -2,14 +2,12 @@ package core.basesyntax;
 
 import core.basesyntax.figure.Figure;
 import core.basesyntax.tools.FigureSupplier;
-import java.util.Random;
 
 public class Main {
-    public static void main(String[] args) {
+    private static FigureSupplier figureCreater = new FigureSupplier();
 
-        FigureSupplier figureCreater = new FigureSupplier();
-        int sizeLists = new Random().nextInt(FigureSupplier.MIN_COUNT_FIGURE + 1)
-                + (FigureSupplier.MAX_COUNT_FIGURE - FigureSupplier.MIN_COUNT_FIGURE);
+    public static void main(String[] args) {
+        final int sizeLists = 6;
         Figure[] figureLists = new Figure[sizeLists];
         for (int i = 0; i < sizeLists; ++i) {
             if (i < sizeLists / 2) {
