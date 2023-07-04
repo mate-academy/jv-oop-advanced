@@ -1,7 +1,6 @@
 package core.basesyntax.model.figure;
 
 import core.basesyntax.model.Color;
-import core.basesyntax.model.Drawable;
 
 public class RightTriangle extends Figure {
     private int firstLeg;
@@ -15,7 +14,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        String area = Drawable.doubleToString(area());
+        String area = this.doubleToString(area());
         String status = new StringBuilder()
                 .append("Figure: right triangle, area: ")
                 .append(area)

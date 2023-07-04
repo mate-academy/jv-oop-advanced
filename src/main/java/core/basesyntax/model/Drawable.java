@@ -4,7 +4,7 @@ package core.basesyntax.model;
 public interface Drawable {
     void draw();
 
-    static String doubleToString(double value) {
+    default String doubleToString(double value) {
         return String.format("%.1f", value).replace(",", ".");
     }
 }

@@ -1,7 +1,6 @@
 package core.basesyntax.model.figure;
 
 import core.basesyntax.model.Color;
-import core.basesyntax.model.Drawable;
 
 public class IsoscelesTrapezoid extends Figure {
     private int firstParallel;
@@ -17,7 +16,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        String area = Drawable.doubleToString(area());
+        String area = this.doubleToString(area());
         String status = new StringBuilder()
                 .append("Figure: rectangle, area: ")
                 .append(area)

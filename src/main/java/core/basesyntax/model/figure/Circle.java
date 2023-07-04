@@ -1,7 +1,6 @@
 package core.basesyntax.model.figure;
 
 import core.basesyntax.model.Color;
-import core.basesyntax.model.Drawable;
 
 public class Circle extends Figure {
     private final int radius;
@@ -13,7 +12,7 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        String area = Drawable.doubleToString(area());
+        String area = this.doubleToString(area());
         String status = new StringBuilder()
                 .append("Figure: circle, area: ")
                 .append(area)
