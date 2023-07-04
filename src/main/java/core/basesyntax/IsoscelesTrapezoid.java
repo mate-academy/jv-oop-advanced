@@ -23,7 +23,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    void setRandomParameters() {
+    protected void setRandomParameters() {
         this.color = colorSupplier.getRandomColor();
         this.baseLength1 = random.nextInt(MAX_PARAMETER_SIZE) + 1;
         this.baseLength2 = random.nextInt(MAX_PARAMETER_SIZE) + 1;
@@ -31,7 +31,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    void setDefaultParameters() {
+    protected void setDefaultParameters() {
         this.color = DEFAULT_COLOR;
         this.baseLength1 = DEFAULT_BASE_LENGTH_1;
         this.baseLength2 = DEFAULT_BASE_LENGTH_2;

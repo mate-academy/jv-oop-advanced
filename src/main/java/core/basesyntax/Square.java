@@ -19,13 +19,13 @@ public class Square extends Figure {
     }
 
     @Override
-    void setRandomParameters() {
+    protected void setRandomParameters() {
         this.color = colorSupplier.getRandomColor();
         this.side = random.nextInt(MAX_PARAMETER_SIZE) + 1;
     }
 
     @Override
-    void setDefaultParameters() {
+    protected void setDefaultParameters() {
         this.color = DEFAULT_COLOR;
         this.side = DEFAULT_SIDE;
     }

@@ -21,14 +21,14 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    void setRandomParameters() {
+    protected void setRandomParameters() {
         this.color = colorSupplier.getRandomColor();
         this.firstLeg = random.nextInt(MAX_PARAMETER_SIZE) + 1;
         this.secondLeg = random.nextInt(MAX_PARAMETER_SIZE) + 1;
     }
 
     @Override
-    void setDefaultParameters() {
+    protected void setDefaultParameters() {
         this.color = DEFAULT_COLOR;
         this.firstLeg = DEFAULT_FIRST_LEG;
         this.secondLeg = DEFAULT_SECOND_LEG;

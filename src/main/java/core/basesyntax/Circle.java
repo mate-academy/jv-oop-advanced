@@ -20,13 +20,13 @@ public class Circle extends Figure {
     }
 
     @Override
-    void setRandomParameters() {
+    protected void setRandomParameters() {
         this.color = colorSupplier.getRandomColor();
         this.radius = random.nextInt(MAX_PARAMETER_SIZE) + 1;
     }
 
     @Override
-    void setDefaultParameters() {
+    protected void setDefaultParameters() {
         this.color = DEFAULT_COLOR;
         this.radius = DEFAULT_RADIUS;
     }
