@@ -3,12 +3,12 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final ColorSupplier colorSupplier = new ColorSupplier();
-    private static final Random random = new Random();
     private static final int NUMBER_OF_FIGURES = 5;
     private static final int BOUND_VALUE = 20;
     private static final int DEFAULT_VALUE = 10;
     private static final String DEFAULT_COLOR = Colors.WHITE.toString();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
         String color = colorSupplier.getRandomColor();
@@ -21,10 +21,10 @@ public class FigureSupplier {
                 int secondLeg = random.nextInt(BOUND_VALUE);
                 return new RightTriangle(color, firstLeg, secondLeg);
             case 3:
-                int sideA = random.nextInt(BOUND_VALUE);
-                int sideB = random.nextInt(BOUND_VALUE);
+                int firstSide = random.nextInt(BOUND_VALUE);
+                int secondSide = random.nextInt(BOUND_VALUE);
                 int height = random.nextInt(BOUND_VALUE);
-                return new IsoscelesTrapezoid(color, sideA, sideB, height);
+                return new IsoscelesTrapezoid(color, firstSide, secondSide, height);
             case 4:
                 int length = random.nextInt(BOUND_VALUE);
                 int width = random.nextInt(BOUND_VALUE);
