@@ -1,8 +1,8 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    private static Color defaultColor = Color.GREEN;
-    private static int defaultSide = 10;
+    private static final Color DEFAULT_COLOR = Color.GREEN;
+    private static final int DEFAULT_SIDE = 10;
 
     private int side;
 
@@ -26,8 +26,8 @@ public class Square extends Figure {
 
     @Override
     void setDefaultParameters() {
-        this.color = defaultColor;
-        this.side = defaultSide;
+        this.color = DEFAULT_COLOR;
+        this.side = DEFAULT_SIDE;
     }
 
     @Override

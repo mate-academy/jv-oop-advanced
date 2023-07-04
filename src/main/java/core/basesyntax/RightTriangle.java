@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private static Color defaultColor = Color.BLUE;
-    private static int defaultFirstLeg = 6;
-    private static int defaultSecondLeg = 9;
+    private static final Color DEFAULT_COLOR = Color.BLUE;
+    private static final int DEFAULT_FIRST_LEG = 6;
+    private static final int DEFAULT_SECOND_LEG = 9;
 
     private int firstLeg;
     private int secondLeg;
@@ -29,9 +29,9 @@ public class RightTriangle extends Figure {
 
     @Override
     void setDefaultParameters() {
-        this.color = defaultColor;
-        this.firstLeg = defaultFirstLeg;
-        this.secondLeg = defaultSecondLeg;
+        this.color = DEFAULT_COLOR;
+        this.firstLeg = DEFAULT_FIRST_LEG;
+        this.secondLeg = DEFAULT_SECOND_LEG;
     }
 
     @Override

@@ -1,8 +1,8 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private static Color defaultColor = Color.WHITE;
-    private static int defaultRadius = 10;
+    private static final Color DEFAULT_COLOR = Color.WHITE;
+    private static final int DEFAULT_RADIUS = 10;
 
     private int radius;
 
@@ -27,8 +27,8 @@ public class Circle extends Figure {
 
     @Override
     void setDefaultParameters() {
-        this.color = defaultColor;
-        this.radius = defaultRadius;
+        this.color = DEFAULT_COLOR;
+        this.radius = DEFAULT_RADIUS;
     }
 
     @Override

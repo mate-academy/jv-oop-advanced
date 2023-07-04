@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private static Color defaultColor = Color.BLACK;
-    private static int defaultLength = 5;
-    private static int defaultWidth = 9;
+    private static final Color DEFAULT_COLOR = Color.BLACK;
+    private static final int DEFAULT_LENGTH = 5;
+    private static final int DEFAULT_WIDTH = 9;
 
     private int length;
     private int width;
@@ -29,9 +29,9 @@ public class Rectangle extends Figure {
 
     @Override
     void setDefaultParameters() {
-        this.color = defaultColor;
-        this.length = defaultLength;
-        this.width = defaultWidth;
+        this.color = DEFAULT_COLOR;
+        this.length = DEFAULT_LENGTH;
+        this.width = DEFAULT_WIDTH;
     }
 
     @Override

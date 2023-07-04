@@ -1,10 +1,10 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private static Color defaultColor = Color.VIOLET;
-    private static int defaultBaseLength1 = 2;
-    private static int defaultBaseLength2 = 7;
-    private static int defaultHeight = 3;
+    private static final Color DEFAULT_COLOR = Color.VIOLET;
+    private static final int DEFAULT_BASE_LENGTH_1 = 2;
+    private static final int DEFAULT_BASE_LENGTH_2 = 7;
+    private static final int DEFAULT_HEIGHT = 3;
 
     private int baseLength1;
     private int baseLength2;
@@ -32,10 +32,10 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     void setDefaultParameters() {
-        this.color = defaultColor;
-        this.baseLength1 = defaultBaseLength1;
-        this.baseLength2 = defaultBaseLength2;
-        this.height = defaultHeight;
+        this.color = DEFAULT_COLOR;
+        this.baseLength1 = DEFAULT_BASE_LENGTH_1;
+        this.baseLength2 = DEFAULT_BASE_LENGTH_2;
+        this.height = DEFAULT_HEIGHT;
     }
 
     @Override
