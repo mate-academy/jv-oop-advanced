@@ -14,7 +14,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        String area = this.doubleToString(area());
+        String area = this.doubleToString(getArea());
         String status = new StringBuilder()
                 .append("Figure: right triangle, area: ")
                 .append(area)
@@ -23,12 +23,12 @@ public class RightTriangle extends Figure {
                 .append(" units, secondLeg: ")
                 .append(secondLeg)
                 .append(" units, color: ")
-                .append(this.color).toString();
+                .append(getColor()).toString();
         System.out.println(status);
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return firstLeg * secondLeg / 2;
     }
 }

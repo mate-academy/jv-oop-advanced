@@ -16,7 +16,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        String area = this.doubleToString(area());
+        String area = this.doubleToString(getArea());
         String status = new StringBuilder()
                 .append("Figure: rectangle, area: ")
                 .append(area)
@@ -27,12 +27,12 @@ public class IsoscelesTrapezoid extends Figure {
                 .append(" units, side: ")
                 .append(side)
                 .append(" units, color: ")
-                .append(this.color).toString();
+                .append(getColor()).toString();
         System.out.println(status);
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         int hypotenuse = side;
         int firstLeg = Math.abs((firstParallel - secondParallel) / 2);
         double secondLeg = Math.sqrt(hypotenuse) - Math.sqrt(firstLeg);

@@ -10,28 +10,16 @@ import core.basesyntax.model.figure.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final Figure[] DEFAULT_FIGURES;
-    private static final int FIGURE_COUNT;
-    private static final int MAX_VALUE_PARAMETER;
-
-    static {
-        DEFAULT_FIGURES = new Figure[] {
-                new Square(Color.BLACK, 8),
-                new Circle(Color.WHITE, 10),
-                new IsoscelesTrapezoid(Color.BLUE, 9, 12, 6),
-                new Rectangle(Color.GREEN, 8, 10),
-                new RightTriangle(Color.RED, 12, 8) };
-        FIGURE_COUNT = DEFAULT_FIGURES.length;
-        MAX_VALUE_PARAMETER = 100;
-    }
-
-    private final Random random;
-    private final ColorSupplier colorSupplier;
-
-    {
-        random = new Random();
-        colorSupplier = new ColorSupplier();
-    }
+    private static final Figure[] DEFAULT_FIGURES = new Figure[] {
+            new Square(Color.BLACK, 8),
+            new Circle(Color.WHITE, 10),
+            new IsoscelesTrapezoid(Color.BLUE, 9, 12, 6),
+            new Rectangle(Color.GREEN, 8, 10),
+            new RightTriangle(Color.RED, 12, 8) };
+    private static final int FIGURE_COUNT = DEFAULT_FIGURES.length;
+    private static final int MAX_VALUE_PARAMETER = 100;
+    private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getDefaultFigure() {
         int targetValue = random.nextInt(FIGURE_COUNT);

@@ -14,7 +14,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        String area = this.doubleToString(area());
+        String area = this.doubleToString(getArea());
         String status = new StringBuilder()
                 .append("Figure: rectangle, area: ")
                 .append(area)
@@ -23,12 +23,12 @@ public class Rectangle extends Figure {
                 .append(" units, height: ")
                 .append(height)
                 .append(" units, color: ")
-                .append(this.color).toString();
+                .append(getColor()).toString();
         System.out.println(status);
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return width * height;
     }
 }
