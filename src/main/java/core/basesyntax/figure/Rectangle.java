@@ -2,7 +2,7 @@ package core.basesyntax.figure;
 
 import core.basesyntax.template.Figure;
 
-class Rectangle extends Figure {
+public class Rectangle extends Figure {
     private double length;
     private double width;
 
