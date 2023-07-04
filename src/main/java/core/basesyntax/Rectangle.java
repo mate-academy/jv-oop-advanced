@@ -1,25 +1,25 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private int longSide;
-    private int shortSide;
+    private final int length;
+    private final int width;
 
-    public Rectangle(String color, int longSide, int shortSide) {
+    public Rectangle(String color, int length, int width) {
         super(color);
-        this.longSide = longSide;
-        this.shortSide = shortSide;
+        this.length = length;
+        this.width = width;
     }
 
     @Override
     public double findArea() {
-        return longSide * shortSide;
+        return length * width;
     }
 
     @Override
     public void printInfo() {
         System.out.println("Figure: rectangle, area: "
-                + this.findArea() + " sq.units, longSide: "
-                + this.longSide + " units, shortSide: "
-                + this.shortSide + " units, color: " + this.getColor());
+                + findArea() + " sq.units, length: "
+                + length + " units, width: "
+                + width + " units, color: " + getColor());
     }
 }

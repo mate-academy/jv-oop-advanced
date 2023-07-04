@@ -2,8 +2,8 @@ package core.basesyntax;
 
 public class RightTriangle extends Figure {
     private static final int FORMULA_NUMBER = 2;
-    private int firstLeg;
-    private int secondLeg;
+    private final int firstLeg;
+    private final int secondLeg;
 
     public RightTriangle(String color, int firstLeg, int secondLeg) {
         super(color);
@@ -19,8 +19,8 @@ public class RightTriangle extends Figure {
     @Override
     public void printInfo() {
         System.out.println("Figure: right triangle, area: "
-                + this.findArea() + " sq.units, firstLeg: "
-                + this.firstLeg + " units, secondLeg: "
-                + this.secondLeg + " units, color: " + this.getColor());
+                + findArea() + " sq.units, firstLeg: "
+                + firstLeg + " units, secondLeg: "
+                + secondLeg + " units, color: " + getColor());
     }
 }

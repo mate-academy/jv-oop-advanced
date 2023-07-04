@@ -3,11 +3,13 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int RANDOM_NUMBER_BOUND = 100;
     private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
         int length = Shape.values().length;
-        int index = new Random().nextInt(length);
+        int index = random.nextInt(length);
         switch (Shape.values()[index]) {
             case CIRCLE: {
                 return getCircle();
@@ -27,42 +29,34 @@ public class FigureSupplier {
         }
     }
 
-    protected Figure getDefaultFigure() {
+    public Figure getDefaultFigure() {
         return new Circle("white", 10);
     }
 
-    public Figure getCircle() {
-        return new Circle(colorSupplier.getRandomColor(), this.getRandomNumber());
+    private Figure getCircle() {
+        return new Circle(colorSupplier.getRandomColor(), getRandomNumber());
     }
 
-    public Figure getSquare() {
-        return new Square(colorSupplier.getRandomColor(), this.getRandomNumber());
+    private Figure getSquare() {
+        return new Square(colorSupplier.getRandomColor(), getRandomNumber());
     }
 
-    public Figure getRightTriangle() {
+    private Figure getRightTriangle() {
         return new RightTriangle(colorSupplier.getRandomColor(),
-                this.getRandomNumber(), this.getRandomNumber());
+                getRandomNumber(), getRandomNumber());
     }
 
-    public Figure getRectangle() {
+    private Figure getRectangle() {
         return new Rectangle(colorSupplier.getRandomColor(),
-                this.getRandomNumber(), this.getRandomNumber());
+                getRandomNumber(), getRandomNumber());
     }
 
-    public Figure getIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), this.getRandomNumber(),
-                this.getRandomNumber(), this.getRandomNumber());
+    private Figure getIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomNumber(),
+                getRandomNumber(), getRandomNumber());
     }
 
-    public int getRandomNumber() {
-        return new Random().nextInt(100);
-    }
-
-    public enum Shape {
-        CIRCLE,
-        SQUARE,
-        RIGHT_TRIANGLE,
-        RECTANGLE,
-        ISOSCELES_TRAPEZOID
+    private int getRandomNumber() {
+        return random.nextInt(RANDOM_NUMBER_BOUND);
     }
 }

@@ -1,9 +1,6 @@
 package core.basesyntax;
 
-/**
- * Feel free to remove this class and create your own.
- */
-public abstract class Figure implements Area, PrintInfo {
+public abstract class Figure implements AreaCalculator, InfoPrinter {
     private final String color;
 
     public Figure(String color) {
@@ -11,6 +8,6 @@ public abstract class Figure implements Area, PrintInfo {
     }
 
     public String getColor() {
-        return this.color;
+        return color;
     }
 }

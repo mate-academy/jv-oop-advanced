@@ -8,13 +8,4 @@ public class ColorSupplier {
         int index = new Random().nextInt(number);
         return Color.values()[index].toString().toLowerCase();
     }
-
-    public enum Color {
-        BLACK,
-        WHITE,
-        BLUE,
-        GREEN,
-        PINK,
-        YELLOW
-    }
 }
