@@ -2,17 +2,17 @@ package core.basesyntax.figures;
 
 import core.basesyntax.ColorEnum;
 
-public class Square extends Rectangle {
+public class Square extends Figure {
     private final int side;
 
     public Square(ColorEnum color, int side) {
-        super(color, side, side);
+        super(color);
         this.side = side;
     }
 
     @Override
     public double calculateArea() {
-        return super.calculateArea();
+        return (side * side);
     }
 
     public void draw() {

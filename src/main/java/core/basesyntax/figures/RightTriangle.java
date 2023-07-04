@@ -14,7 +14,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public double calculateArea() {
-        return (firstLeg * secondLeg) / 2; //the formula of right triangle area
+        return (firstLeg * secondLeg) / 2;
     }
 
     public void draw() {

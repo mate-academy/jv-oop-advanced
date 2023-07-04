@@ -44,9 +44,11 @@ public class FigureSupplier {
                 int randomFirstLeg = randomLength();
                 int randomSecondLeg = randomLength();
                 return new RightTriangle(randomColor, randomFirstLeg, randomSecondLeg);
-            default: // SQUARE
+            case SQUARE:
                 int randomSide = randomLength();
                 return new Square(randomColor, randomSide);
+            default:
+                return getDefaultFigure();
         }
     }
 
