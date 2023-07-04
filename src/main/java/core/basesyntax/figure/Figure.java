@@ -14,6 +14,4 @@ public abstract class Figure implements AreaCalculator, Drawable {
     public Color getColor() {
         return color;
     }
-
-    public abstract void draw();
 }
