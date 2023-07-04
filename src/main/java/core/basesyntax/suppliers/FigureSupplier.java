@@ -9,23 +9,23 @@ import core.basesyntax.figure.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private Random random = new Random();
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private static final int DEFAULT_RADIUS = 10;
+    private static final int MAX_NUMBER = 30;
+    private static final int NUMBER_OF_FIGURES = 5;
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Color defaultColor = Color.WHITE;
-    private final int defaultRadius = 10;
-    private final int numberOfFigures = 5;
-    private final int maxNumber = 30;
 
     public Figure getDefaultFigure() {
-        return new Circle(defaultColor, defaultRadius);
+        return new Circle(defaultColor, DEFAULT_RADIUS);
     }
 
     public int getRandomSize() {
-        return random.nextInt(maxNumber);
+        return random.nextInt(MAX_NUMBER);
     }
 
     public Figure getRandomFigure() {
-        int index = random.nextInt(numberOfFigures);
+        int index = random.nextInt(NUMBER_OF_FIGURES);
         switch (index) {
             case 0:
                 return new Square(colorSupplier.getRandomColor(),getRandomSize());
