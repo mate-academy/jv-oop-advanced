@@ -29,9 +29,9 @@ public class FigureSupplier {
                 double secondRectSide = generateRandomDouble();
                 return new Rectangle(firstRectSide, secondRectSide, randomColor);
             case RIGHT_TRIANGLE:
-                double firstLeg  = generateRandomDouble();
-                double secondLeg  = generateRandomDouble();
-                return new RightTriangle(firstLeg , secondLeg , randomColor);
+                double firstLeg = generateRandomDouble();
+                double secondLeg = generateRandomDouble();
+                return new RightTriangle(firstLeg, secondLeg, randomColor);
             case SQUARE:
                 double squareSide = generateRandomDouble();
                 return new Square(squareSide, randomColor);
