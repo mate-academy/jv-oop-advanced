@@ -9,7 +9,6 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-
     private static final int MIN_LENGTH = 1;
     private static final int MAX_LENGTH = 10;
     private static final int DEFAULT_RADIUS = 10;
