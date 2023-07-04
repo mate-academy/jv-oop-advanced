@@ -4,21 +4,19 @@ public class Circle extends Figure {
     private final double radius;
 
     public Circle(double radius, String color) {
+        super(color);
         this.radius = radius;
-        super.color = color;
-        super.area = findArea();
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: circle, area: " + super.area
+        System.out.println("Figure: circle, area: " + findArea()
                 + " sq.units, radius: " + this.radius
-                + " units, color: " + super.color);
+                + " units, color: " + getColor());
     }
 
     @Override
-    protected double findArea() {
-        double unformattedArea = Math.PI * radius * radius;
-        return Math.round(unformattedArea * 1000.0) / 1000.0;
+    public double findArea() {
+        return Math.PI * radius * radius;
     }
 }

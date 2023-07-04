@@ -4,21 +4,19 @@ public class Square extends Figure {
     private final double side;
 
     public Square(double side, String color) {
+        super(color);
         this.side = side;
-        super.color = color;
-        super.area = findArea();
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: square, area: " + super.area
+        System.out.println("Figure: square, area: " + findArea()
                 + " sq.units, side: " + this.side
-                + " units, color: " + super.color);
+                + " units, color: " + getColor());
     }
 
     @Override
-    protected double findArea() {
-        double unformattedArea = side * side;
-        return Math.round(unformattedArea * 1000.0) / 1000.0;
+    public double findArea() {
+        return side * side;
     }
 }

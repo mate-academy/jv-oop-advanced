@@ -5,23 +5,21 @@ public class Rectangle extends Figure {
     private final double secondSide;
 
     public Rectangle(double firstSide, double secondSide, String color) {
+        super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
-        super.color = color;
-        super.area = findArea();
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + super.area
+        System.out.println("Figure: rectangle, area: " + findArea()
                 + " sq.units, first side: " + this.firstSide
                 + " units, second side: " + this.secondSide
-                + " units, color: " + super.color);
+                + " units, color: " + getColor());
     }
 
     @Override
-    protected double findArea() {
-        double unformattedArea = firstSide * secondSide;
-        return Math.round(unformattedArea * 1000.0) / 1000.0;
+    public double findArea() {
+        return firstSide * secondSide;
     }
 }

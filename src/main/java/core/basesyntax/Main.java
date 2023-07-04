@@ -10,12 +10,12 @@ public class Main {
     private static final int ARRAY_LENGTH = 6;
 
     public static void main(String[] args) {
-        FigureSupplier figureSupply = new FigureSupplier();
+        FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figures = new Figure[ARRAY_LENGTH];
         for (int i = 0; i < ARRAY_LENGTH; i++) {
-            figures[i] = figureSupply.getRandomFigure();
+            figures[i] = figureSupplier.getRandomFigure();
             if (i >= ARRAY_LENGTH / 2) {
-                figures[i] = figureSupply.getDefaultFigure();
+                figures[i] = figureSupplier.getDefaultFigure();
             }
             figures[i].draw();
         }

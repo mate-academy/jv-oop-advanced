@@ -9,7 +9,6 @@ public class FigureSupplier {
     private static final String DEFAULT_COLOR = String.valueOf(Color.WHITE).toLowerCase();
 
     private static final double MAX_VALUE = 100.0;
-    private static final double ROUND_SCALE = 1000.0;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -30,10 +29,9 @@ public class FigureSupplier {
                 double secondRectSide = generateRandomDouble();
                 return new Rectangle(firstRectSide, secondRectSide, randomColor);
             case RIGHT_TRIANGLE:
-                double theta1 = generateRandomDouble();
-                double theta2 = generateRandomDouble();
-                double hypotenuse = generateRandomDoubleGreaterThanBothLegs(theta1, theta2);
-                return new RightTriangle(theta1, theta2, hypotenuse, randomColor);
+                double firstLeg  = generateRandomDouble();
+                double secondLeg  = generateRandomDouble();
+                return new RightTriangle(firstLeg , secondLeg , randomColor);
             case SQUARE:
                 double squareSide = generateRandomDouble();
                 return new Square(squareSide, randomColor);
@@ -48,14 +46,7 @@ public class FigureSupplier {
     }
 
     private double generateRandomDouble() {
-        double unformattedResultValue = random.nextDouble() * MAX_VALUE;
-        return Math.round(unformattedResultValue * ROUND_SCALE) / ROUND_SCALE;
-    }
-
-    private double generateRandomDoubleGreaterThanBothLegs(double leg1, double leg2) {
-        double maxLeg = Math.max(leg1, leg2);
-        double unformattedResultValue = random.nextDouble() * (MAX_VALUE - maxLeg) + maxLeg;
-        return Math.round(unformattedResultValue * ROUND_SCALE) / ROUND_SCALE;
+        return random.nextDouble() * MAX_VALUE;
     }
 
     private double generateRandomDoubleInRange(double minValue, double maxValue) {
