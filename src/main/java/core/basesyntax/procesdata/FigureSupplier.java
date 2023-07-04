@@ -17,10 +17,6 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public int getRandomSize() {
-        return random.nextInt(MAX_SIDE_SIZE);
-    }
-
     public Figure getRandomFigure() {
         int index = random.nextInt(COUNT_OF_FIGURE);
         switch (index) {
@@ -45,5 +41,9 @@ public class FigureSupplier {
 
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
+    }
+
+    private int getRandomSize() {
+        return random.nextInt(MAX_SIDE_SIZE);
     }
 }
