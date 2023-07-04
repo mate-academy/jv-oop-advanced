@@ -11,32 +11,33 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         ColorSupplier colorSupplier = new ColorSupplier();
-        int index = random.nextInt(amountOfFigureTypes) + 1;
+        final int minIndex = 1;
+        int index = random.nextInt(amountOfFigureTypes) + minIndex;
         switch (index) {
             case 1:
                 return new Square(colorSupplier.getRandomColor(),
-                        random.nextInt(figureSideBounds) + 1);
+                        random.nextInt(figureSideBounds) + minIndex);
             case 2:
                 return new Rectangle(colorSupplier.getRandomColor(),
-                        random.nextInt(figureSideBounds) + 1,
-                        random.nextInt(figureSideBounds) + 1);
+                        random.nextInt(figureSideBounds) + minIndex,
+                        random.nextInt(figureSideBounds) + minIndex);
             case 3:
                 return new RightTriangle(colorSupplier.getRandomColor(),
-                        random.nextInt(figureSideBounds) + 1);
+                        random.nextInt(figureSideBounds) + minIndex);
             case 4:
                 return new Circle(colorSupplier.getRandomColor(),
-                        random.nextInt(figureSideBounds) + 1);
+                        random.nextInt(figureSideBounds) + minIndex);
             case 5:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        random.nextInt(figureSideBounds) + 1,
-                        random.nextInt(figureSideBounds) + 1,
-                        random.nextInt(figureSideBounds) + 1);
+                        random.nextInt(figureSideBounds) + minIndex,
+                        random.nextInt(figureSideBounds) + minIndex,
+                        random.nextInt(figureSideBounds) + minIndex);
             default:
-                throw new IllegalArgumentException("Illegal figure");
+                throw new IllegalArgumentException("Invalid figure index: " + index);
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR.toString(), DEFAULT_RADIUS);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
