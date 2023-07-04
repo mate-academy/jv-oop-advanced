@@ -31,8 +31,7 @@ public class FigureSupplier {
                 String rectangleColor = colorSupplier.getRandomColor();
                 double firstSide = getRandomSideLength();
                 double secondSide = getRandomSideLength();
-                double thirdSide = getRandomSideLength();
-                return new Rectangle(rectangleColor, firstSide, secondSide, thirdSide);
+                return new Rectangle(rectangleColor, firstSide, secondSide);
             case 3:
                 String rightRectangleColor = colorSupplier.getRandomColor();
                 int firstLeg = getRandomSideLength();

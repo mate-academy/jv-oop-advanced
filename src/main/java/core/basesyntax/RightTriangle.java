@@ -4,9 +4,6 @@ public class RightTriangle extends Figure {
     private int firstSide;
     private int secondSide;
 
-    public RightTriangle() {
-    }
-
     public RightTriangle(String color, int firstSide, int secondSide) {
         this.setColor(color);
         this.firstSide = firstSide;
