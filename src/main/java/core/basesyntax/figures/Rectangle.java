@@ -22,6 +22,7 @@ public class Rectangle extends Figures {
         System.out.println("Figure: rectangle, area: " + getArea()
                            + " sq.units, first side: " + firstSide
                            + " " + unitOrUnits(firstSide) + ", second side: " + secondSide
-                           + " " + unitOrUnits(secondSide) + ", color: " + getColor().getInfo());
+                           + " " + unitOrUnits(secondSide) + ", color: "
+                           + getColor().name().toLowerCase());
     }
 }

@@ -4,6 +4,7 @@ import core.basesyntax.properties.Drawing;
 import core.basesyntax.state.Color;
 
 public abstract class Figures implements Drawing {
+
     private Color color;
 
     public void setColor(Color color) {
@@ -11,6 +12,10 @@ public abstract class Figures implements Drawing {
     }
 
     public Color getColor() {
+        return color;
+    }
+
+    public Color name() {
         return color;
     }
 

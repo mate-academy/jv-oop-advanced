@@ -4,12 +4,12 @@ import core.basesyntax.properties.Figure;
 import core.basesyntax.suppliers.FigureSupplier;
 
 public class Main {
-    private static final int numberOfFields = 6;
+    private static final int NUMBER_OF_FIELDS = 6;
 
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
 
-        Figure[] drawings = new Figure[numberOfFields];
+        Figure[] drawings = new Figure[NUMBER_OF_FIELDS];
 
         for (int i = 0; i < drawings.length; i++) {
             if (i <= 2) {
