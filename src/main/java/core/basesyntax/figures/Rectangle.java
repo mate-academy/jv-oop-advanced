@@ -3,26 +3,26 @@ package core.basesyntax.figures;
 import core.basesyntax.enums.Color;
 
 public class Rectangle extends Figure {
-    private double firstLeg;
-    private double secondLeg;
+    private double width;
+    private double height;
 
-    public Rectangle(Color color, double firstLeg, double secondLeg) {
+    public Rectangle(Color color, double width, double height) {
         super(color);
-        this.firstLeg = firstLeg;
-        this.secondLeg = secondLeg;
+        this.width = width;
+        this.height = height;
     }
 
     @Override
     public double calculateArea() {
-        return firstLeg * secondLeg;
+        return width * height;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure : rectangle, area: "
                 + calculateArea() + " sq.units,"
-                + " firstLeg: " + firstLeg + " units,"
-                + " secondLeg: " + secondLeg + " units,"
+                + " width: " + width + " units,"
+                + " height: " + height + " units,"
                 + " color: " + getColor().name().toLowerCase());
     }
 }

@@ -10,7 +10,7 @@ import core.basesyntax.figures.RightTriangle;
 import core.basesyntax.figures.Square;
 import java.util.Random;
 
-public class FigureSuppliers {
+public class FigureSupplier {
     private static final int MAX_LENGTH = 30;
     private static final int DEFAULT_RADIUS = 10;
 
@@ -53,11 +53,11 @@ public class FigureSuppliers {
         return figure;
     }
 
-    private int getRandomSide() {
-        return random.nextInt(MAX_LENGTH);
-    }
-
     public Figure getDefaultFigure() {
         return new Circle(Color.WHITE, DEFAULT_RADIUS);
+    }
+
+    private int getRandomSide() {
+        return random.nextInt(MAX_LENGTH);
     }
 }
