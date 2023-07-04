@@ -15,10 +15,6 @@ public class FigureSupplier {
         return new Circle(DEFAULT_CIRCLE_COLOR, DEFAULT_CIRCLE_RADIUS);
     }
 
-    public int getRandomSideLength() {
-        return random.nextInt(MAX_SIDE_LENGTH) + MIN_SIDE_LENGTH;
-    }
-
     public Figure getRandomFigure() {
         switch (random.nextInt(FIGURES_COUNT)) {
             case 0:
@@ -27,10 +23,10 @@ public class FigureSupplier {
                 return new Circle(circleColor, radius);
             case 1:
                 String trapezoidColor = colorSupplier.getRandomColor();
-                double base1 = getRandomSideLength();
-                double base2 = getRandomSideLength();
+                double firstBase = getRandomSideLength();
+                double secondBase = getRandomSideLength();
                 double trapezoidSide = getRandomSideLength();
-                return new IsoscelesTrapezoid(trapezoidColor, base1, base2, trapezoidSide);
+                return new IsoscelesTrapezoid(trapezoidColor, firstBase, secondBase, trapezoidSide);
             case 2:
                 String rectangleColor = colorSupplier.getRandomColor();
                 double firstSide = getRandomSideLength();
@@ -49,5 +45,9 @@ public class FigureSupplier {
             default:
                 return getDefaultFigure();
         }
+    }
+
+    private int getRandomSideLength() {
+        return random.nextInt(MAX_SIDE_LENGTH) + MIN_SIDE_LENGTH;
     }
 }

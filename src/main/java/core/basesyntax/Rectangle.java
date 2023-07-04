@@ -1,9 +1,8 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    protected double firstSide;
-    protected double secondSide;
-    protected double thirdSide;
+    private double firstSide;
+    private double secondSide;
 
     public Rectangle() {
     }
@@ -12,17 +11,11 @@ public class Rectangle extends Figure {
         this.setColor(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
-        this.thirdSide = thirdSide;
     }
 
     @Override
     public double getArea() {
-        double halfPerimeter = (firstSide + secondSide + thirdSide) / 2;
-        return Math.sqrt(
-                halfPerimeter
-                * (halfPerimeter - firstSide)
-                * (halfPerimeter - secondSide)
-                * (halfPerimeter * thirdSide));
+        return firstSide * secondSide;
     }
 
     @Override
@@ -31,8 +24,7 @@ public class Rectangle extends Figure {
         info.append("Figure: triangle, area: ")
                 .append(getArea()).append(" sq.units, first side: ")
                 .append(firstSide).append(" units, second side: ")
-                .append(secondSide).append(" units, third side: ")
-                .append(thirdSide).append(" units, color: ")
+                .append(secondSide).append(" units, color: ")
                 .append(getColor());
         System.out.println(info);
     }
