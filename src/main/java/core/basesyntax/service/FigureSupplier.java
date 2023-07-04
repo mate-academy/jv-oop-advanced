@@ -1,4 +1,4 @@
-package core.basesyntax.servise;
+package core.basesyntax.service;
 
 import core.basesyntax.constants.ColorName;
 import core.basesyntax.constants.FigureName;
@@ -11,17 +11,12 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-
     private static final int MIN_SIZE = 1;
     private static final int MAX_SIZE = 30;
     private static final int DEFAULT_SIZE = 10;
     private static final int FIGURE_COUNT = FigureName.values().length;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
-
-    private int getRandomValue() {
-        return MIN_SIZE + random.nextInt(MAX_SIZE - MIN_SIZE);
-    }
 
     public Figure getRandomFigure() {
         int indexOfFigure = random.nextInt(FIGURE_COUNT);
@@ -55,4 +50,7 @@ public class FigureSupplier {
         return new Circle(ColorName.WHITE, DEFAULT_SIZE);
     }
 
+    private int getRandomValue() {
+        return MIN_SIZE + random.nextInt(MAX_SIZE - MIN_SIZE);
+    }
 }

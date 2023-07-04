@@ -70,7 +70,7 @@ public class StructureTest {
     String superclassSimpleName = superclass.getSimpleName();
     if (superclassSimpleName.equals("Object")) {
       Assert.fail("Class " + clazz.getSimpleName()
-              + " should have some parent class with common state for all servise - color");
+              + " should have some parent class with common state for all service - color");
     }
   }
 
@@ -108,7 +108,7 @@ public class StructureTest {
     if (interfaces.length == 0) {
       Assert.fail("Figures parent class " + clazz.getSuperclass().getSimpleName()
               +" should implement interfaces that describe common"
-              + " behavior for all classes of servise");
+              + " behavior for all classes of service");
     }
     if (interfaces.length == 1 && interfaces[0].getDeclaredMethods().length == 2) {
       Assert.fail("You should not put behavior into a single interface if "

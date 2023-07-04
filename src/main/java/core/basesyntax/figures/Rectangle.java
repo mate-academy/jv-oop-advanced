@@ -13,7 +13,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double calculateFigureArea() {
+    public double calculateArea() {
         return firstSide * secondSide;
     }
 
@@ -22,7 +22,7 @@ public class Rectangle extends Figure {
         super.draw();
         System.out.println(", first side: " + firstSide
                 + ", second side: " + secondSide
-                + ", area: " + calculateFigureArea()
+                + ", area: " + calculateArea()
                 + ".");
     }
 }

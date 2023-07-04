@@ -15,7 +15,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double calculateFigureArea() {
+    public double calculateArea() {
         return (double) (firstBase + secondBase) * height / 2;
     }
 
@@ -25,7 +25,7 @@ public class IsoscelesTrapezoid extends Figure {
         System.out.println(", first base: " + firstBase
                 + ", second base: " + secondBase
                 + ", height: " + height
-                + ", area: " + calculateFigureArea()
+                + ", area: " + calculateArea()
                 + ".");
     }
 }

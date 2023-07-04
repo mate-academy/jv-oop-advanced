@@ -1,4 +1,4 @@
-package core.basesyntax.servise;
+package core.basesyntax.service;
 
 import core.basesyntax.constants.ColorName;
 import java.util.Random;

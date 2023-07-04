@@ -13,7 +13,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double calculateFigureArea() {
+    public double calculateArea() {
         return (double) firstLeg * secondLeg / 2;
     }
 
@@ -22,7 +22,7 @@ public class RightTriangle extends Figure {
         super.draw();
         System.out.println(", first leg: " + firstLeg
                 + ", second leg: " + secondLeg
-                + ", area: " + calculateFigureArea()
+                + ", area: " + calculateArea()
                 + ".");
     }
 }

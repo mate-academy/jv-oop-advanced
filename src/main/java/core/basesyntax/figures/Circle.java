@@ -11,14 +11,14 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double calculateFigureArea() {
+    public double calculateArea() {
         return (double) Math.PI * radius * radius;
     }
 
     @Override
     public void draw() {
         super.draw();
-        System.out.println(", radius: " + radius + ", area: " + calculateFigureArea());
+        System.out.println(", radius: " + radius + ", area: " + calculateArea());
     }
 }
 

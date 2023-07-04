@@ -11,7 +11,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public double calculateFigureArea() {
+    public double calculateArea() {
         return (double) size * size;
     }
 
@@ -19,7 +19,7 @@ public class Square extends Figure {
     public void draw() {
         super.draw();
         System.out.println(", size: " + size
-                + ", area: " + calculateFigureArea()
+                + ", area: " + calculateArea()
                 + ".");
     }
 }
