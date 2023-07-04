@@ -6,18 +6,10 @@ public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
     private static final Color DEFAULT_COLOR = Color.WHITE;
     private static final int DEFAULT_RADIUS = 10;
-    private static final int BOT_RANDOM_VALUES = 1;
-    private static final int TOP_RANDOM_VALUES = 110;
+    private static final int BOTTOM_RANDOM_VALUES = 1;
+    private static final int TOP_RANDOM_VALUE = 110;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
-
-    public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
-    }
-
-    public int getRandomValues() {
-        return BOT_RANDOM_VALUES + random.nextInt(TOP_RANDOM_VALUES);
-    }
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
@@ -39,4 +31,13 @@ public class FigureSupplier {
                         getRandomValues());
         }
     }
+
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
+    }
+
+    private int getRandomValues() {
+        return BOTTOM_RANDOM_VALUES + random.nextInt(TOP_RANDOM_VALUE);
+    }
 }
+
