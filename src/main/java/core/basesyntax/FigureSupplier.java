@@ -32,12 +32,10 @@ public class FigureSupplier {
     }
 
     private int getRandomSizeFigure() {
-
         return MIN_SIDE + random.nextInt(MAX_SIDE);
     }
 
     public Figure getDefaultFigure() {
-
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
