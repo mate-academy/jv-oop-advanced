@@ -4,11 +4,11 @@ import core.basesyntax.services.Color;
 import java.util.Random;
 
 public class ColorSupplier {
-    private static final Random RANDOM = new Random();
+    private final Random randomGenerator = new Random();
 
     public String getRandomColor() {
         int numberOfColors = Color.values().length;
-        int index = RANDOM.nextInt(numberOfColors);
+        int index = randomGenerator.nextInt(numberOfColors);
         return Color.values()[index].name();
     }
 }
