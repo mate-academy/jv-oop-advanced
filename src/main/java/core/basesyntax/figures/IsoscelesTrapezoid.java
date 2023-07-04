@@ -1,11 +1,13 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.ColorEnum;
+
 public class IsoscelesTrapezoid extends Figure {
     private final int bottomSide;
     private final int topSide;
     private final int height;
 
-    public IsoscelesTrapezoid(String color, int bottomSide, int topSide, int height) {
+    public IsoscelesTrapezoid(ColorEnum color, int bottomSide, int topSide, int height) {
         super(color);
         this.bottomSide = bottomSide;
         this.topSide = topSide;
@@ -23,7 +25,7 @@ public class IsoscelesTrapezoid extends Figure {
                 + "bottom side: " + bottomSide + " units, "
                 + "top side: " + topSide + " units, "
                 + "height: " + height + " units, "
-                + "color: " + color.toLowerCase()
+                + "color: " + color.name().toLowerCase()
         );
     }
 }

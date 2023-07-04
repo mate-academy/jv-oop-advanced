@@ -1,9 +1,11 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.ColorEnum;
+
 public class Circle extends Figure {
     private final int radius;
 
-    public Circle(String color, int radius) {
+    public Circle(ColorEnum color, int radius) {
         super(color);
         this.radius = radius;
     }
@@ -17,7 +19,7 @@ public class Circle extends Figure {
         System.out.println("Figure: " + "circle, "
                 + "area: " + String.format("%,.1f", calculateArea()) + " sq.units, "
                 + "radius: " + radius + " units, "
-                + "color: " + color.toLowerCase()
+                + "color: " + color.name().toLowerCase()
         );
     }
 }

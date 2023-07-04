@@ -1,9 +1,11 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.ColorEnum;
+
 public class Square extends Rectangle {
     private final int side;
 
-    public Square(String color, int side) {
+    public Square(ColorEnum color, int side) {
         super(color, side, side);
         this.side = side;
     }
@@ -17,7 +19,7 @@ public class Square extends Rectangle {
         System.out.println("Figure: " + "square, "
                 + "area: " + calculateArea() + " sq.units, "
                 + "side: " + side + " units, "
-                + "color: " + color.toLowerCase()
+                + "color: " + color.name().toLowerCase()
         );
     }
 }

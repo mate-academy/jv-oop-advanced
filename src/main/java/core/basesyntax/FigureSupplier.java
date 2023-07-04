@@ -19,7 +19,7 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        String randomColor = colorSupplier.getRandomColor();
+        ColorEnum randomColor = colorSupplier.getRandomColor();
 
         int numberOfFigures = FigureEnum.values().length;
         int index = random.nextInt(numberOfFigures);
@@ -51,7 +51,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR.name(), DEFAULT_RADIUS);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
     private int randomLength() {
