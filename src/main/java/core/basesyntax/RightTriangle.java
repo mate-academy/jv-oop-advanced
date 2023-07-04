@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private static String defaultColor = Color.BLUE.name();
+    private static Color defaultColor = Color.BLUE;
     private static int defaultFirstLeg = 6;
     private static int defaultSecondLeg = 9;
 
@@ -9,6 +9,9 @@ public class RightTriangle extends Figure {
     private int secondLeg;
 
     public RightTriangle() {
+        if (FigureSupplier.isDefault()) {
+            setDefaultParameters();
+        }
         setRandomParameters();
     }
 
@@ -24,6 +27,7 @@ public class RightTriangle extends Figure {
         this.secondLeg = random.nextInt(MAX_PARAMETER_SIZE) + 1;
     }
 
+    @Override
     void setDefaultParameters() {
         this.color = defaultColor;
         this.firstLeg = defaultFirstLeg;
@@ -35,6 +39,6 @@ public class RightTriangle extends Figure {
         System.out.println("Figure: right triangle, area: " + this.calculateArea()
                 + " sq.units, first leg: " + firstLeg
                 + " units, second leg: " + secondLeg
-                + " units, color: " + color.toLowerCase());
+                + " units, color: " + color.name().toLowerCase());
     }
 }

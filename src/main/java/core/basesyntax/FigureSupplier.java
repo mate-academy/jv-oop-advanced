@@ -3,15 +3,21 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int FIGURE_NUMBER = 5;
+    public static final int MAX_NUMBER_OF_FIGURES = 5;
 
+    private static boolean isDefault = true;
     private int index;
-    private Figure randomFigure;
     private Random random = new Random();
-    private Figure defaultFigure = new Circle();
+    private Figure defaultFigure;
+    private Figure randomFigure;
+
+    public static boolean isDefault() {
+        return isDefault;
+    }
 
     public Figure getRandomFigure() {
-        index = random.nextInt(FIGURE_NUMBER);
+        isDefault = false;
+        index = random.nextInt(MAX_NUMBER_OF_FIGURES);
 
         switch (index) {
             case 0 :
@@ -35,7 +41,8 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        defaultFigure.setDefaultParameters();
+        isDefault = true;
+        defaultFigure = new Circle();
         return defaultFigure;
     }
 }

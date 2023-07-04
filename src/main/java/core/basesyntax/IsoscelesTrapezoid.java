@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private static String defaultColor = Color.VIOLET.name();
+    private static Color defaultColor = Color.VIOLET;
     private static int defaultBaseLength1 = 2;
     private static int defaultBaseLength2 = 7;
     private static int defaultHeight = 3;
@@ -11,6 +11,9 @@ public class IsoscelesTrapezoid extends Figure {
     private int height;
 
     public IsoscelesTrapezoid() {
+        if (FigureSupplier.isDefault()) {
+            setDefaultParameters();
+        }
         setRandomParameters();
     }
 
@@ -27,6 +30,7 @@ public class IsoscelesTrapezoid extends Figure {
         this.height = random.nextInt(MAX_PARAMETER_SIZE) + 1;
     }
 
+    @Override
     void setDefaultParameters() {
         this.color = defaultColor;
         this.baseLength1 = defaultBaseLength1;
@@ -40,6 +44,6 @@ public class IsoscelesTrapezoid extends Figure {
                 + " sq.units, baseLength1: " + baseLength1
                 + " units, baseLength2: " + baseLength2
                 + " units, height: " + height
-                + " units, color: " + color.toLowerCase());
+                + " units, color: " + color.name().toLowerCase());
     }
 }

@@ -1,13 +1,17 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private static String defaultColor = Color.WHITE.name();
+    private static Color defaultColor = Color.WHITE;
     private static int defaultRadius = 10;
 
     private int radius;
 
     public Circle() {
-        setRandomParameters();
+        if (FigureSupplier.isDefault()) {
+            setDefaultParameters();
+        } else {
+            setRandomParameters();
+        }
     }
 
     @Override
@@ -31,6 +35,6 @@ public class Circle extends Figure {
     public void draw() {
         System.out.println("Figure: circle, area: " + String.format("%.1f", this.calculateArea())
                 + " sq.units, radius: " + radius
-                + " units, color: " + color.toLowerCase());
+                + " units, color: " + color.name().toLowerCase());
     }
 }

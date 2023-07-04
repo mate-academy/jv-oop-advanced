@@ -1,12 +1,15 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    private static String defaultColor = Color.GREEN.name();
+    private static Color defaultColor = Color.GREEN;
     private static int defaultSide = 10;
 
     private int side;
 
     public Square() {
+        if (FigureSupplier.isDefault()) {
+            setDefaultParameters();
+        }
         setRandomParameters();
     }
 
@@ -21,6 +24,7 @@ public class Square extends Figure {
         this.side = random.nextInt(MAX_PARAMETER_SIZE) + 1;
     }
 
+    @Override
     void setDefaultParameters() {
         this.color = defaultColor;
         this.side = defaultSide;
@@ -30,6 +34,6 @@ public class Square extends Figure {
     public void draw() {
         System.out.println("Figure: square, area: " + this.calculateArea()
                 + " sq.units, side: " + side
-                + " units, color: " + color.toLowerCase());
+                + " units, color: " + color.name().toLowerCase());
     }
 }
