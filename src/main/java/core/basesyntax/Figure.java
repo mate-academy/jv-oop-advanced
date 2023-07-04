@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public abstract class Figure implements FigureBehavior {
+public abstract class Figure implements AreaCalculator, FigurePrinterInfo {
     private String color;
 
-    protected Figure(String color) {
+    public Figure(String color) {
         this.color = color;
     }
 
@@ -15,5 +15,4 @@ public abstract class Figure implements FigureBehavior {
         this.color = color;
     }
 
-    abstract void draw();
 }
