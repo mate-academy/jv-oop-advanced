@@ -27,11 +27,4 @@ public class Square extends Figure {
                 .append(getColor());
         System.out.println(info);
     }
-
-    @Override
-    public Figure getRandomFigure() {
-        String color = colorSupplier.getRandomColor();
-        int side = figureSupplier.getRandomSideLength();
-        return new Square(color, side);
-    }
 }

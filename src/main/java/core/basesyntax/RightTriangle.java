@@ -26,12 +26,4 @@ public class RightTriangle extends Rectangle {
                 .append(getColor());
         System.out.println(info);
     }
-
-    @Override
-    public Figure getRandomFigure() {
-        String color = colorSupplier.getRandomColor();
-        int firstSide = figureSupplier.getRandomSideLength();
-        int secondSide = figureSupplier.getRandomSideLength();
-        return new RightTriangle(color, firstSide, secondSide);
-    }
 }

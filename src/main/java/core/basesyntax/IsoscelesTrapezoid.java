@@ -32,13 +32,4 @@ public class IsoscelesTrapezoid extends Figure {
                 .append(getColor());
         System.out.println(info);
     }
-
-    @Override
-    public Figure getRandomFigure() {
-        String color = colorSupplier.getRandomColor();
-        double base1 = figureSupplier.getRandomSideLength();
-        double base2 = figureSupplier.getRandomSideLength();
-        double side = figureSupplier.getRandomSideLength();
-        return new IsoscelesTrapezoid(color, base1, base2, side);
-    }
 }

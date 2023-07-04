@@ -36,13 +36,4 @@ public class Rectangle extends Figure {
                 .append(getColor());
         System.out.println(info);
     }
-
-    @Override
-    public Figure getRandomFigure() {
-        String color = colorSupplier.getRandomColor();
-        double firstSide = figureSupplier.getRandomSideLength();
-        double secondSide = figureSupplier.getRandomSideLength();
-        double thirdSide = figureSupplier.getRandomSideLength();
-        return new IsoscelesTrapezoid(color, firstSide, secondSide, thirdSide);
-    }
 }

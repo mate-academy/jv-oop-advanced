@@ -25,11 +25,4 @@ public class Circle extends Figure {
                 .append(getColor());
         System.out.println(info);
     }
-
-    @Override
-    public Figure getRandomFigure() {
-        String color = colorSupplier.getRandomColor();
-        int radius = figureSupplier.getRandomSideLength();
-        return new Circle(color, radius);
-    }
 }
