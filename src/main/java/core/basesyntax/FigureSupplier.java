@@ -33,8 +33,10 @@ public class FigureSupplier {
                 randomFigure = new IsoscelesTrapezoid();
                 break;
             case 4 :
-            default:
                 randomFigure = new Circle();
+                break;
+            default:
+                getDefaultFigure();
         }
 
         return randomFigure;
