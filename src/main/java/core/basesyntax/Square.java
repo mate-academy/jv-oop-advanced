@@ -20,7 +20,6 @@ public class Square extends Figure {
 
     @Override
     protected void setRandomParameters() {
-        this.color = colorSupplier.getRandomColor();
         this.side = random.nextInt(MAX_PARAMETER_SIZE) + 1;
     }
 

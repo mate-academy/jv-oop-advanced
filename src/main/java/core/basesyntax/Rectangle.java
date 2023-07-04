@@ -22,7 +22,6 @@ public class Rectangle extends Figure {
 
     @Override
     protected void setRandomParameters() {
-        this.color = colorSupplier.getRandomColor();
         this.length = random.nextInt(MAX_PARAMETER_SIZE) + 1;
         this.width = random.nextInt(MAX_PARAMETER_SIZE) + 1;
     }

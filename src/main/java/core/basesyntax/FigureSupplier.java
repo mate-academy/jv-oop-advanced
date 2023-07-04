@@ -6,6 +6,7 @@ public class FigureSupplier {
     public static final int MAX_NUMBER_OF_FIGURES = 5;
 
     private static boolean isDefault = true;
+    private ColorSupplier colorSupplier = new ColorSupplier();
     private int index;
     private Random random = new Random();
     private Figure defaultFigure;
@@ -38,7 +39,7 @@ public class FigureSupplier {
             default:
                 getDefaultFigure();
         }
-
+        randomFigure.color = colorSupplier.getRandomColor();
         return randomFigure;
     }
 

@@ -7,7 +7,6 @@ public abstract class Figure implements AreaCalculator, Drawable {
 
     protected Color color;
     protected Random random = new Random();
-    protected ColorSupplier colorSupplier = new ColorSupplier();
 
     protected abstract void setDefaultParameters();
 

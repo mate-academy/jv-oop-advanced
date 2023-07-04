@@ -21,7 +21,6 @@ public class Circle extends Figure {
 
     @Override
     protected void setRandomParameters() {
-        this.color = colorSupplier.getRandomColor();
         this.radius = random.nextInt(MAX_PARAMETER_SIZE) + 1;
     }
 
