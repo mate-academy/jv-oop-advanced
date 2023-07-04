@@ -7,7 +7,7 @@ public class FigureSupplier {
     private static final Color DEFAULT_COLOR = Color.WHITE;
     private static final int DEFAULT_RADIUS = 10;
     private static final int BOTTOM_RANDOM_VALUES = 1;
-    private static final int TOP_RANDOM_VALUE = 110;
+    private static final int TOP_RANDOM_VALUE = 100;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
 
