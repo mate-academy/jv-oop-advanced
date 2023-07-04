@@ -29,11 +29,11 @@ public class FigureSupplier {
         }
     }
 
-    public int getRandomSize() {
-        return MIN_SIZE + random.nextInt(MAX_SIZE);
-    }
-
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
+    }
+
+    private int getRandomSize() {
+        return MIN_SIZE + random.nextInt(MAX_SIZE);
     }
 }
