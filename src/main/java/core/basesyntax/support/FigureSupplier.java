@@ -41,7 +41,7 @@ public class FigureSupplier {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
-    public int getRandomSize() {
+    private int getRandomSize() {
         return random.nextInt(MAX_SIZE_SIDE) + MIN_SIZE_SIDE;
     }
 }
