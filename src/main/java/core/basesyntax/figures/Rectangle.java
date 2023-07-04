@@ -3,7 +3,6 @@ package core.basesyntax.figures;
 import core.basesyntax.colors.Color;
 
 public class Rectangle extends Figure {
-    private static final double AREA_MULTIPLIER = 2;
     private final double firstSide;
     private final double secondSide;
 
@@ -23,6 +22,6 @@ public class Rectangle extends Figure {
 
     @Override
     public double calculateArea() {
-        return AREA_MULTIPLIER * (firstSide + secondSide);
+        return firstSide + secondSide;
     }
 }

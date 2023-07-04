@@ -3,7 +3,7 @@ package core.basesyntax.figures;
 import core.basesyntax.colors.Color;
 
 public class RightTriangle extends Figure {
-    private static final double AREA_MULTIPLIER = 0.5;
+    private static final double DIVIDER = 2;
     private final double firstLeg;
     private final double secondLeg;
 
@@ -31,6 +31,6 @@ public class RightTriangle extends Figure {
 
     @Override
     public double calculateArea() {
-        return AREA_MULTIPLIER * firstLeg * secondLeg;
+        return (firstLeg * secondLeg) / DIVIDER;
     }
 }
