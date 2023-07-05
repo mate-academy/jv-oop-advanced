@@ -1,17 +1,18 @@
 package core.basesyntax.figure;
 
+import core.basesyntax.behaviour.FigureAreaCalculator;
 import core.basesyntax.tools.Color;
 
-public class RightTriangle extends Figure {
+public class RightTriangle extends Figure implements FigureAreaCalculator {
+    private int firstLeg;
+    private int secondLeg;
+    private double area;
 
-    private int firstLeg = 0;
-    private int secondLeg = 0;
-    private double area = 0;
-
-    public RightTriangle(String name, Color color) {
-        setName(name);
-        setColor(color);
-        randomFigure();
+    public RightTriangle(String name, Color color, int firstLeg, int secondLeg) {
+        super(name, color);
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
+        resultArea();
     }
 
     @Override
@@ -50,10 +51,5 @@ public class RightTriangle extends Figure {
                 + ", firstLeg: " + getFirstLeg() + " units, "
                 + "secondLeg: " + getSecondLeg() + " units, "
                 + "color: " + getColor().name());
-    }
-
-    @Override
-    public void randomFigure() {
-        setLegs(randomSideFigure(), randomSideFigure());
     }
 }

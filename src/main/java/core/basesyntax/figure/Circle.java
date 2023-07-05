@@ -1,26 +1,22 @@
 package core.basesyntax.figure;
 
+import core.basesyntax.behaviour.FigureAreaCalculator;
 import core.basesyntax.tools.Color;
 
-public class Circle extends Figure {
-    private int radius = 0;
-    private double area = 0;
+public class Circle extends Figure implements FigureAreaCalculator {
+    private int radius;
+    private double area;
 
-    public Circle(String name) {
-        setName(name);
-        randomFigure();
-    }
-
-    public Circle(String name, Color color) {
-        setName(name);
-        setColor(color);
-        randomFigure();
+    public Circle(String name, Color color, int radius) {
+        super(name, color);
+        this.radius = radius;
+        resultArea();
     }
 
     public Circle(String name, int radius, Color color) {
-        setName(name);
-        setColor(color);
-        setRadius(radius);
+        super(name, color);
+        this.radius = radius;
+        resultArea();
     }
 
     @Override
@@ -54,10 +50,5 @@ public class Circle extends Figure {
                 + getArea() + " sq.units"
                 + ", radius: " + getRadius() + " units, "
                 + "color: " + getColor().name());
-    }
-
-    @Override
-    public void randomFigure() {
-        setRadius(randomSideFigure());
     }
 }

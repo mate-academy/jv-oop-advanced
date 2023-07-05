@@ -1,17 +1,18 @@
 package core.basesyntax.figure;
 
+import core.basesyntax.behaviour.FigureAreaCalculator;
 import core.basesyntax.tools.Color;
 
-public class Rectangle extends Figure {
+public class Rectangle extends Figure implements FigureAreaCalculator {
+    private int lengthRectangle;
+    private int widthRectangle;
+    private double area;
 
-    private int lengthRectangle = 0;
-    private int widthRectangle = 0;
-    private double area = 0;
-
-    public Rectangle(String name, Color color) {
-        setName(name);
-        setColor(color);
-        randomFigure();
+    public Rectangle(String name, Color color, int lengthRectangle, int widthRectangle) {
+        super(name, color);
+        this.lengthRectangle = lengthRectangle;
+        this.widthRectangle = widthRectangle;
+        resultArea();
     }
 
     @Override
@@ -51,12 +52,5 @@ public class Rectangle extends Figure {
                 + ", length: " + getLengthRectangle() + " units, "
                 + "width: " + getWidthRectangle() + " units, "
                 + "color: " + getColor().name());
-    }
-
-    @Override
-    public void randomFigure() {
-        setLengthRectangle(randomSideFigure());
-        setWidthRectangle(randomSideFigure());
-        resultArea();
     }
 }

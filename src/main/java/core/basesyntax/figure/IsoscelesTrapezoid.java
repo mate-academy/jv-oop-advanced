@@ -1,16 +1,18 @@
 package core.basesyntax.figure;
 
+import core.basesyntax.behaviour.FigureAreaCalculator;
 import core.basesyntax.tools.Color;
 
-public class IsoscelesTrapezoid extends Figure {
-    private int baseSide = 0;
-    private int twoSides = 0;
-    private double area = 0;
+public class IsoscelesTrapezoid extends Figure implements FigureAreaCalculator {
+    private int baseSide;
+    private int topSide;
+    private double area;
 
-    public IsoscelesTrapezoid(String name, Color color) {
-        setName(name);
-        setColor(color);
-        randomFigure();
+    public IsoscelesTrapezoid(String name, Color color, int baseSide, int topSide) {
+        super(name, color);
+        this.baseSide = baseSide;
+        this.topSide = topSide;
+        resultArea();
     }
 
     @Override
@@ -31,19 +33,19 @@ public class IsoscelesTrapezoid extends Figure {
         this.baseSide = baseSide;
     }
 
-    public int getTwoSides() {
-        return twoSides;
+    public int getTopSides() {
+        return topSide;
     }
 
-    public void setTwoSides(int twoSides) {
-        this.twoSides = twoSides;
+    public void setTopSides(int topSides) {
+        this.topSide = topSides;
     }
 
     public void resultArea() {
         setArea(
                 (1 / 2)
                 * getBaseSide()
-                * Math.sqrt((getTwoSides() * getTwoSides())
+                * Math.sqrt((getTopSides() * getTopSides())
                         - ((getBaseSide() * getBaseSide()) / 4))
         );
     }
@@ -53,14 +55,7 @@ public class IsoscelesTrapezoid extends Figure {
         super.draw();
         System.out.println(" area: " + getArea() + " sq.units"
                 + ", base: " + getBaseSide() + " units, "
-                + "side: " + getTwoSides() + " units, "
+                + "side: " + getTopSides() + " units, "
                 + "color: " + getColor().name());
-    }
-
-    @Override
-    public void randomFigure() {
-        setBaseSide(randomSideFigure());
-        setTwoSides(randomSideFigure());
-        resultArea();
     }
 }

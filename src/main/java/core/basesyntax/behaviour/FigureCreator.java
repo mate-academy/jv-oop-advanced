@@ -2,7 +2,7 @@ package core.basesyntax.behaviour;
 
 import core.basesyntax.figure.Figure;
 
-public interface FigureCreation {
+public interface FigureCreator {
 
     Figure getRandomFigure();
 
