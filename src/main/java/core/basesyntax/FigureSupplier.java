@@ -6,9 +6,8 @@ public class FigureSupplier {
     private static final int MAX_LENGTH = 50;
     private static final int FIGURE_COUNT = 5;
 
-
-    Random random = new Random();
-    ColorSupplier color = new ColorSupplier();
+    private final Random random = new Random();
+    private final ColorSupplier color = new ColorSupplier();
 
     public Figure getRandomFigure() {
         switch (random.nextInt(FIGURE_COUNT) + 1) {
@@ -20,7 +19,7 @@ public class FigureSupplier {
                 return getRandomRightTriangle();
             case 4:
                 return getRandomCircle();
-            case  5:
+            case 5:
                 return getRandomIsoscelesTrapezoid();
             default:
                 return getDefaultFigure();
@@ -50,11 +49,10 @@ public class FigureSupplier {
     }
 
     private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(color.getRandomColor(), random.nextInt(MAX_LENGTH) + 1, random.nextInt(MAX_LENGTH) + 1,
-                random.nextInt(MAX_LENGTH) + 1,
+        return new IsoscelesTrapezoid(color.getRandomColor(), random.nextInt(MAX_LENGTH) + 1,
+                random.nextInt(MAX_LENGTH) + 1, random.nextInt(MAX_LENGTH) + 1,
                 random.nextInt(MAX_LENGTH) + 1);
     }
-
 
     public Figure getDefaultFigure() {
         return new Circle(Colors.WHITE.toString(), 10);
