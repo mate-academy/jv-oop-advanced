@@ -1,9 +1,8 @@
 package core.basesyntax.figure;
 
-import core.basesyntax.behaviour.FigureAreaCalculator;
 import core.basesyntax.tools.Color;
 
-public class Circle extends Figure implements FigureAreaCalculator {
+public class Circle extends Figure {
     private int radius;
     private double area;
 

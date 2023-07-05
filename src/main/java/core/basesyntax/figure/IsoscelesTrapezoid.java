@@ -1,9 +1,8 @@
 package core.basesyntax.figure;
 
-import core.basesyntax.behaviour.FigureAreaCalculator;
 import core.basesyntax.tools.Color;
 
-public class IsoscelesTrapezoid extends Figure implements FigureAreaCalculator {
+public class IsoscelesTrapezoid extends Figure {
     private int baseSide;
     private int topSide;
     private double area;

@@ -1,11 +1,10 @@
 package core.basesyntax.figure;
 
 import core.basesyntax.behaviour.Drawable;
+import core.basesyntax.behaviour.FigureAreaCalculator;
 import core.basesyntax.tools.Color;
 
-import java.util.Random;
-
-public abstract class Figure implements Drawable {
+public abstract class Figure implements Drawable, FigureAreaCalculator {
     private Color colorFigure;
     private String name;
 

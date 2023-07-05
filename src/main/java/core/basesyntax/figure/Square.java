@@ -1,9 +1,8 @@
 package core.basesyntax.figure;
 
-import core.basesyntax.behaviour.FigureAreaCalculator;
 import core.basesyntax.tools.Color;
 
-public class Square extends Figure implements FigureAreaCalculator {
+public class Square extends Figure {
     private int side;
     private double area;
 

@@ -23,18 +23,23 @@ public class FigureSupplier implements FigureCreator {
         Color randomColor = colorSupplierHelper.getRandomColor(randomHelper);
         switch (randomFigureCase) {
             case 0:
-                return new Circle("circle", randomColor, randomHelper.nextInt(MAX_SIDE_FIGURE) + 1);
+                return new Circle("circle", randomColor,
+                        randomHelper.nextInt(MAX_SIDE_FIGURE) + 1);
             case 1:
-                return new Square("square", randomColor, randomHelper.nextInt(MAX_SIDE_FIGURE) + 1);
+                return new Square("square", randomColor,
+                        randomHelper.nextInt(MAX_SIDE_FIGURE) + 1);
             case 2:
                 return new Rectangle("rectangle", randomColor,
-                        randomHelper.nextInt(MAX_SIDE_FIGURE) + 1, randomHelper.nextInt(MAX_SIDE_FIGURE) + 1);
+                        randomHelper.nextInt(MAX_SIDE_FIGURE) + 1,
+                        randomHelper.nextInt(MAX_SIDE_FIGURE) + 1);
             case 3:
                 return new RightTriangle("rightTriangle", randomColor,
-                        randomHelper.nextInt(MAX_SIDE_FIGURE) + 1, randomHelper.nextInt(MAX_SIDE_FIGURE) + 1);
+                        randomHelper.nextInt(MAX_SIDE_FIGURE) + 1,
+                        randomHelper.nextInt(MAX_SIDE_FIGURE) + 1);
             case 4:
                 return new IsoscelesTrapezoid("isoscelesTrapezoid", randomColor,
-                        randomHelper.nextInt(MAX_SIDE_FIGURE) + 1, randomHelper.nextInt(MAX_SIDE_FIGURE) + 1);
+                        randomHelper.nextInt(MAX_SIDE_FIGURE) + 1,
+                        randomHelper.nextInt(MAX_SIDE_FIGURE) + 1);
             default:
                 return getDefaultFigure();
         }
