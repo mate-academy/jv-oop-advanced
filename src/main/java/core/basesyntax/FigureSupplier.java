@@ -2,10 +2,17 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class FigureSupplier {
+class FigureSupplier {
+    private ColorSupplier colorSupplier;
+    private Random random;
+
+    public FigureSupplier() {
+        colorSupplier = new ColorSupplier();
+        random = new Random();
+    }
+
     public Figure getRandomFigure() {
-        String color = ColorSupplier.getRandomColor();
-        Random random = new Random();
+        String color = colorSupplier.getRandomColor();
         int figureType = random.nextInt(5);
 
         switch (figureType) {
@@ -37,4 +44,5 @@ public class FigureSupplier {
         return new Circle("white", 10);
     }
 }
+
 
