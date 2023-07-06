@@ -3,7 +3,6 @@ package core.basesyntax;
 import java.util.Random;
 
 class FigureSupplier {
-    public final int FIGURE_COUNT = 5;
     private ColorSupplier colorSupplier;
     private Random random;
 
@@ -14,7 +13,7 @@ class FigureSupplier {
 
     public Figure getRandomFigure() {
         Color color = colorSupplier.getRandomColor();
-        int figureType = random.nextInt(FIGURE_COUNT);
+        int figureType = random.nextInt(5);
 
         switch (figureType) {
             case 0:
