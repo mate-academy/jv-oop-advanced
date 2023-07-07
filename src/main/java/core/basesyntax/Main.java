@@ -1,7 +1,7 @@
 package core.basesyntax;
 
-import core.basesyntax.figure.Figure;
 import core.basesyntax.behaviour.FigureCreator;
+import core.basesyntax.figure.Figure;
 import core.basesyntax.tools.FigureSupplier;
 
 public class Main {
