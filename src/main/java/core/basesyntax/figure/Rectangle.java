@@ -3,14 +3,14 @@ package core.basesyntax.figure;
 import core.basesyntax.tools.Color;
 
 public class Rectangle extends Figure {
-    private int lengthRectangle;
-    private int widthRectangle;
+    private int length;
+    private int width;
     private double area;
 
-    public Rectangle(String name, Color color, int lengthRectangle, int widthRectangle) {
+    public Rectangle(String name, Color color, int length, int width) {
         super(name, color);
-        this.lengthRectangle = lengthRectangle;
-        this.widthRectangle = widthRectangle;
+        this.length = length;
+        this.width = width;
         resultArea();
     }
 
@@ -24,32 +24,32 @@ public class Rectangle extends Figure {
         this.area = area;
     }
 
-    public int getLengthRectangle() {
-        return lengthRectangle;
+    public int getLength() {
+        return length;
     }
 
-    public void setLengthRectangle(int lengthRectangle) {
-        this.lengthRectangle = lengthRectangle;
+    public void setLength(int length) {
+        this.length = length;
     }
 
-    public int getWidthRectangle() {
-        return widthRectangle;
+    public int getWidth() {
+        return width;
     }
 
-    public void setWidthRectangle(int widthRectangle) {
-        this.widthRectangle = widthRectangle;
+    public void setWidth(int width) {
+        this.width = width;
     }
 
     public void resultArea() {
-        setArea(getLengthRectangle() * getWidthRectangle());
+        setArea(getLength() * getWidth());
     }
 
     @Override
     public void draw() {
         super.draw();
         System.out.println(" area: " + getArea() + " sq.units"
-                + ", length: " + getLengthRectangle() + " units, "
-                + "width: " + getWidthRectangle() + " units, "
+                + ", length: " + getLength() + " units, "
+                + "width: " + getWidth() + " units, "
                 + "color: " + getColor().name());
     }
 }

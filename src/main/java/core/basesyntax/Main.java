@@ -1,10 +1,11 @@
 package core.basesyntax;
 
 import core.basesyntax.figure.Figure;
+import core.basesyntax.behaviour.FigureCreator;
 import core.basesyntax.tools.FigureSupplier;
 
 public class Main {
-    private static FigureSupplier figureCreater = new FigureSupplier();
+    private static FigureCreator figureCreater = new FigureSupplier();
 
     public static void main(String[] args) {
         final int sizeLists = 6;

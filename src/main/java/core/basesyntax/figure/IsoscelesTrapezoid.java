@@ -3,14 +3,14 @@ package core.basesyntax.figure;
 import core.basesyntax.tools.Color;
 
 public class IsoscelesTrapezoid extends Figure {
-    private int baseSide;
-    private int topSide;
+    private int leftSide;
+    private int rightSide;
     private double area;
 
-    public IsoscelesTrapezoid(String name, Color color, int baseSide, int topSide) {
+    public IsoscelesTrapezoid(String name, Color color, int leftSide, int rightSide) {
         super(name, color);
-        this.baseSide = baseSide;
-        this.topSide = topSide;
+        this.leftSide = leftSide;
+        this.rightSide = rightSide;
         resultArea();
     }
 
@@ -24,28 +24,28 @@ public class IsoscelesTrapezoid extends Figure {
         this.area = area;
     }
 
-    public int getBaseSide() {
-        return baseSide;
+    public int getLeftSide() {
+        return leftSide;
     }
 
-    public void setBaseSide(int baseSide) {
-        this.baseSide = baseSide;
+    public void setLeftSide(int leftSide) {
+        this.leftSide = leftSide;
     }
 
-    public int getTopSides() {
-        return topSide;
+    public int getRightSide() {
+        return rightSide;
     }
 
-    public void setTopSides(int topSides) {
-        this.topSide = topSides;
+    public void setRightSide(int rightSide) {
+        this.rightSide = rightSide;
     }
 
     public void resultArea() {
         setArea(
                 (1 / 2)
-                * getBaseSide()
-                * Math.sqrt((getTopSides() * getTopSides())
-                        - ((getBaseSide() * getBaseSide()) / 4))
+                * getLeftSide()
+                * Math.sqrt((getRightSide() * getRightSide())
+                        - ((getLeftSide() * getLeftSide()) / 4))
         );
     }
 
@@ -53,8 +53,8 @@ public class IsoscelesTrapezoid extends Figure {
     public void draw() {
         super.draw();
         System.out.println(" area: " + getArea() + " sq.units"
-                + ", base: " + getBaseSide() + " units, "
-                + "side: " + getTopSides() + " units, "
+                + ", base: " + getLeftSide() + " units, "
+                + "side: " + getRightSide() + " units, "
                 + "color: " + getColor().name());
     }
 }

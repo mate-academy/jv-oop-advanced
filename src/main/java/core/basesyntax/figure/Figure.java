@@ -1,14 +1,14 @@
 package core.basesyntax.figure;
 
 import core.basesyntax.behaviour.Drawable;
-import core.basesyntax.behaviour.FigureAreaCalculator;
+import core.basesyntax.behaviour.AreaCalculator;
 import core.basesyntax.tools.Color;
 
-public abstract class Figure implements Drawable, FigureAreaCalculator {
+public abstract class Figure implements Drawable, AreaCalculator {
     private Color colorFigure;
     private String name;
 
-    Figure(String name, Color color) {
+    public Figure(String name, Color color) {
         this.name = name;
         this.colorFigure = color;
     }
