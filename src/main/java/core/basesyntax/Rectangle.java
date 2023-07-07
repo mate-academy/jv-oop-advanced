@@ -14,11 +14,11 @@ public class Rectangle extends Figure {
     public void draw() {
         System.out.println("core.basesyntax.Figure: " + getClass().getSimpleName()
                 + ", side one: " + sideOne + ", side two: " + sideTwo
-                + ", color: " + getColor() + ", area: " + calculateArea());
+                + ", color: " + getColor() + ", area: " + getArea());
     }
 
     @Override
-    public double calculateArea() {
+    public double getArea() {
         return sideOne * sideTwo;
     }
 }

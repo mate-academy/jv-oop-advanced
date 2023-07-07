@@ -4,10 +4,11 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final Random RANDOM = new Random();
+    private static final int intBound = 100;
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int indexFigure;
+        final int indexFigure;
         indexFigure = RANDOM.nextInt(4);
         switch (indexFigure) {
             case 0:
@@ -29,6 +30,6 @@ public class FigureSupplier {
     }
 
     private int getRandomInt() {
-        return RANDOM.nextInt(100);
+        return RANDOM.nextInt(intBound);
     }
 }
