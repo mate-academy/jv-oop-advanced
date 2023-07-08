@@ -6,9 +6,9 @@ public class ColorSupplier {
     private Random random = new Random();
 
     public String getRandomColor() {
-        int colorLength = ColorOfFigure.values().length;
+        int colorLength = FigureColor.values().length;
         int randomColorPosition = random.nextInt(colorLength);
-        String color = ColorOfFigure.values()[randomColorPosition].name();
+        String color = FigureColor.values()[randomColorPosition].name();
         return color;
     }
 }

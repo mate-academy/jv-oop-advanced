@@ -1,6 +1,6 @@
 package core.basesyntax.model;
 
-public enum ColorOfFigure {
+public enum FigureColor {
     WHITE,
     RED,
     ORANGE,
