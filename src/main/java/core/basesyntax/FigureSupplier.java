@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 import java.util.Random;
-import java.awt.Color;
 
 class FigureSupplier {
     private static final int FIGURE_TYPES = 5;
@@ -12,7 +11,7 @@ class FigureSupplier {
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figure getRandomFigure() {
+    public AbstractFigure getRandomFigure() {
         int figureType = random.nextInt(FIGURE_TYPES);
         double param1 = random.nextDouble() * MAX_PARAMETER;
         double param2 = random.nextDouble() * MAX_PARAMETER;
@@ -30,11 +29,11 @@ class FigureSupplier {
             case 4:
                 return new IsoscelesTrapezoid(color, param1, param2, param1);
             default:
-                return null;
+                return getDefaultFigure();
         }
     }
 
-    public Figure getDefaultFigure() {
+    public AbstractFigure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
