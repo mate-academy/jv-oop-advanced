@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-abstract class Figure implements AbstractFigure, AbstractColor {
+abstract class Figure implements Drawable, AbstractColor, AreaCalculator {
     protected String color;
 
     public Figure(String color) {
@@ -13,8 +13,5 @@ abstract class Figure implements AbstractFigure, AbstractColor {
 
     public abstract double getArea();
 
-    public void draw() {
-        System.out.println("Фігура: " + getClass().getSimpleName()
-                + ", площа: " + getArea() + ", колір: " + color);
-    }
+    public abstract void draw();
 }

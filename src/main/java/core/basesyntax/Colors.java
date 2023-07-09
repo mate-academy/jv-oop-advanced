@@ -1,13 +1,13 @@
 package core.basesyntax;
 
 public enum Colors {
-    Червоний,
-    Синій,
-    Зелений,
-    Жовтий,
-    Білий,
-    Чорний,
-    Помаранчевий,
-    Рожевий
+    Red,
+    Blue,
+    Green,
+    Yellow,
+    White,
+    Black,
+    Orange,
+    Pink
 
 }

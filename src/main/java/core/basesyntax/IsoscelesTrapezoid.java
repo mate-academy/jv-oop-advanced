@@ -18,8 +18,8 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     public void draw() {
-        System.out.println("Фігура: рівнобедрена трапеція, площа: " + getArea()
-                + " кв.од., основа1: " + baseOne + " , основа2: " + baseTwo
-                + " , висота: " + height + " , колір: " + color);
+        System.out.println("Figure: isosceles trapezoid, area: " + getArea()
+                + ", base1: " + baseOne + " , base2: " + baseTwo
+                + " , height: " + height + " , color: " + color);
     }
 }

@@ -32,11 +32,11 @@ public class FigureSupplier {
                 double catTwo = random.nextDouble() * 10 + 1;
                 return new RightTriangle(catOne, catTwo, color);
             default:
-                return new Square(12, "Чорний");
+                return new Square(12, "Pink");
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, "white");
+        return new Circle(10, "White");
     }
 }

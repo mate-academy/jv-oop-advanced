@@ -8,7 +8,6 @@ public class RightTriangle extends Figure {
         super(color);
         this.catOne = catOne;
         this.catTwo = catTwo;
-        //this.color = color;
     }
 
     @Override
@@ -18,7 +17,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Фігура: прямокутний трикутник, площа: " + getArea()
-                + " , катет1: " + catOne + " , катет2: " + catTwo + " , колір: " + color);
+        System.out.println("Figure: right triangle, area: " + getArea()
+                + " , cat1: " + catOne + " , cat2: " + catTwo + " , color: " + color);
     }
 }
