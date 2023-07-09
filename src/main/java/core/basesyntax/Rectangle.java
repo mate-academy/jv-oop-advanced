@@ -32,10 +32,10 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String draw() {
-        return "Figure: rectangle" + ", " + "area: " + String.format("%.1f",getArea())
+    public void draw() {
+        System.out.println("Figure: rectangle" + ", " + "area: " + String.format("%.1f",getArea())
                 + " sq.units" + ", " + "length: " + length + " units" + ", "
                 + "width: " + width + " units" + ", " + "color: "
-                + getColor().toLowerCase();
+                + getColor().toLowerCase());
     }
 }

@@ -4,11 +4,10 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
-    public static final int RADIUS = 10;
+    public static final int DEFAULT_RADIUS = 10;
     public static final int UPPER_LIMIT = 100;
 
     private Random random = new Random();
-    private Circle circle = new Circle(Color.WHITE.name(), RADIUS);
 
     private ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -31,15 +30,13 @@ public class FigureSupplier {
                 return new RightTriangle(colorSupplier.getRandomColor(),
                         random.nextInt(UPPER_LIMIT),
                         random.nextInt(UPPER_LIMIT));
-            case 4:
+            default:
                 return new Square(colorSupplier.getRandomColor(),
                         random.nextInt(UPPER_LIMIT));
-            default:
-                return circle;
         }
     }
 
     public Figure getDefaultFigure() {
-        return circle;
+        return new Circle(Color.WHITE.name(), DEFAULT_RADIUS);
     }
 }
