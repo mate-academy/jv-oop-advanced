@@ -8,15 +8,15 @@ public class Main {
     private static FigureCreator figureCreater = new FigureSupplier();
 
     public static void main(String[] args) {
-        final int sizeLists = 6;
-        Figure[] figureLists = new Figure[sizeLists];
-        for (int i = 0; i < sizeLists; ++i) {
-            if (i < sizeLists / 2) {
-                figureLists[i] = figureCreater.getRandomFigure();
+        final int arraySize = 6;
+        Figure[] figures = new Figure[arraySize];
+        for (int i = 0; i < arraySize; ++i) {
+            if (i < arraySize / 2) {
+                figures[i] = figureCreater.getRandomFigure();
             } else {
-                figureLists[i] = figureCreater.getDefaultFigure();
+                figures[i] = figureCreater.getDefaultFigure();
             }
-            figureLists[i].draw();
+            figures[i].draw();
         }
     }
 }

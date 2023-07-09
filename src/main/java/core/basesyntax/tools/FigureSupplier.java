@@ -47,6 +47,6 @@ public class FigureSupplier implements FigureCreator {
 
     @Override
     public Figure getDefaultFigure() {
-        return new Circle("circle",DEFAULT_SIDE, Color.WHITE);
+        return new Circle("circle", Color.WHITE, DEFAULT_SIDE);
     }
 }
