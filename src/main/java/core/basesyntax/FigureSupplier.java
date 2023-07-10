@@ -3,10 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-
     private static final int MIN_LENGTH_OF_SIDE = 1;
     private static final int MAX_LENGTH_OF_SIDE = 7;
-    private static final int RANDOM_SIZE_OF_ARRAY = 5;
     private static final int DEFAULT_RADIUS = 10;
     private static final Color DEFAULT_COLOR = Color.WHITE;
 
@@ -14,7 +12,7 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int size = RANDOM_SIZE_OF_ARRAY;
+        int size = 5;
         switch (size) {
             case 0:
                 return new Rectangle(colorSupplier.getColor(),
