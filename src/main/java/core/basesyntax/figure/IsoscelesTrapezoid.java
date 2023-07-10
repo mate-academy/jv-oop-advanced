@@ -14,18 +14,15 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double resultArea() {
-        return ((1 / 2)
-                * this.leftSide
-                * Math.sqrt((this.rightSide * this.rightSide)
-                - ((this.leftSide * this.leftSide) / 4)));
+        return 0.5 * leftSide * Math.sqrt(rightSide * rightSide - leftSide * leftSide / 4);
     }
 
     @Override
     public void draw() {
         super.draw();
         System.out.println(" area: " + resultArea() + " sq.units"
-                + ", base: " + this.leftSide + " units, "
-                + "side: " + this.rightSide + " units, "
+                + ", base: " + leftSide + " units, "
+                + "side: " + rightSide + " units, "
                 + "color: " + getColor().name());
     }
 }

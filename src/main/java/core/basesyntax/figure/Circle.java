@@ -12,7 +12,7 @@ public class Circle extends Figure {
 
     @Override
     public double resultArea() {
-        return (2 * Math.PI * radius * radius);
+        return Math.PI * radius * radius;
     }
 
     @Override
@@ -20,7 +20,7 @@ public class Circle extends Figure {
         super.draw();
         System.out.println(" area: "
                 + resultArea() + " sq.units"
-                + ", radius: " + this.radius + " units, "
+                + ", radius: " + radius + " units, "
                 + "color: " + getColor().name());
     }
 }

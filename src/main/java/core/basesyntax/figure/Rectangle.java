@@ -14,15 +14,15 @@ public class Rectangle extends Figure {
 
     @Override
     public double resultArea() {
-        return (this.length * this.width);
+        return length * width;
     }
 
     @Override
     public void draw() {
         super.draw();
         System.out.println(" area: " + resultArea() + " sq.units"
-                + ", length: " + this.length + " units, "
-                + "width: " + this.width + " units, "
+                + ", length: " + length + " units, "
+                + "width: " + width + " units, "
                 + "color: " + getColor().name());
     }
 }
