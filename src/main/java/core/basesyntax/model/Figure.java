@@ -1,9 +1,9 @@
 package core.basesyntax.model;
 
 import core.basesyntax.AreaCalculator;
-import core.basesyntax.DrawFigure;
+import core.basesyntax.Drawable;
 
-public abstract class Figure implements DrawFigure, AreaCalculator {
+public abstract class Figure implements Drawable, AreaCalculator {
     private String color;
 
     public Figure(String color) {
