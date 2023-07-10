@@ -6,6 +6,7 @@ public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
     public static final int CIRCLE_RADIUS = 10;
     private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
@@ -31,25 +32,25 @@ public class FigureSupplier {
     }
 
     private Square createRandomSquare() {
-        return new Square(ColorSupplier.getRandomColor(), getRandomDouble() * CIRCLE_RADIUS);
+        return new Square(colorSupplier.getRandomColor(), getRandomDouble() * CIRCLE_RADIUS);
     }
 
     private Rectangle createRandomRectangle() {
-        return new Rectangle(ColorSupplier.getRandomColor(), getRandomDouble() * CIRCLE_RADIUS,
+        return new Rectangle(colorSupplier.getRandomColor(), getRandomDouble() * CIRCLE_RADIUS,
                 getRandomDouble() * CIRCLE_RADIUS);
     }
 
     private Circle createRandomCircle() {
-        return new Circle(ColorSupplier.getRandomColor(), getRandomDouble() * CIRCLE_RADIUS);
+        return new Circle(colorSupplier.getRandomColor(), getRandomDouble() * CIRCLE_RADIUS);
     }
 
     private RightTriangle createRandomRightTriangle() {
-        return new RightTriangle(ColorSupplier.getRandomColor(), getRandomDouble() * CIRCLE_RADIUS,
+        return new RightTriangle(colorSupplier.getRandomColor(), getRandomDouble() * CIRCLE_RADIUS,
                 getRandomDouble() * CIRCLE_RADIUS);
     }
 
     private IsoscelesTrapezoid createRandomIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(ColorSupplier.getRandomColor(), getRandomDouble() * 10,
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomDouble() * 10,
                 getRandomDouble() * CIRCLE_RADIUS, getRandomDouble() * CIRCLE_RADIUS);
     }
 
