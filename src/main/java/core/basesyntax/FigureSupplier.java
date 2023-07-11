@@ -18,14 +18,13 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         String color = colorSupplier.getRandomColor();
 
-
-
         Figure[] figures = new Figure[]{
                 new Circle(color, getRandomLength()),
                 new Square(color, getRandomLength()),
                 new Rectangle(color, getRandomLength(), getRandomLength()),
                 new RightTriangle(color, getRandomLength(), getRandomLength()),
-                new IsoscelesTrapezoid(color, getRandomLength(), getRandomLength(), getRandomLength())
+                new IsoscelesTrapezoid(color, getRandomLength(),
+                    getRandomLength(), getRandomLength())
         };
 
         int index = random.nextInt(figures.length);

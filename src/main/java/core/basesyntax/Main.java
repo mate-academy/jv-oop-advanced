@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         Figure[] figures = new Figure[FIGURES_QUANTITY];
 
-        for (int i = 0; i < figures.length; i++){
+        for (int i = 0; i < figures.length; i++) {
             if (i < FIGURES_QUANTITY / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
             } else {
@@ -15,7 +15,7 @@ public class Main {
             }
         }
 
-        for (Figure figure : figures){
+        for (Figure figure : figures) {
             figure.draw();
         }
     }
