@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int DEFAULT_RADIUS = 10;
+    private static final int DEFAULT_RADIUS = 50;
     private static final Color DEFAULT_COLOR = Color.WHITE;
     private static final int MAX_LENGTH = 20;
     private static final int MIN_LENGTH = 1;
@@ -17,18 +17,30 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         String color = colorSupplier.getRandomColor();
+        int randomNumber = random.nextInt(5);
 
-        Figure[] figures = new Figure[]{
-                new Circle(color, getRandomLength()),
-                new Square(color, getRandomLength()),
-                new Rectangle(color, getRandomLength(), getRandomLength()),
-                new RightTriangle(color, getRandomLength(), getRandomLength()),
-                new IsoscelesTrapezoid(color, getRandomLength(),
-                    getRandomLength(), getRandomLength())
-        };
+        switch (randomNumber) {
+            case 0:
+                return  new Circle(color, getRandomLength());
+            case 1:
+                return new Square(color, getRandomLength());
+            case 2:
+                return new Rectangle(color, getRandomLength(), getRandomLength());
+            case 3:
+                return new RightTriangle(color, getRandomLength(), getRandomLength());
+            case 4:
+                return new IsoscelesTrapezoid(color, getRandomLength(),
+                        getRandomLength(), getRandomLength());
+            default:
+                return getDefaultFigure();
 
-        int index = random.nextInt(figures.length);
-        return figures[index];
+
+        }
+
+
+
+       // int index = random.nextInt(figures.length);
+       // return figures[index];
     }
 
     private int getRandomLength() {
