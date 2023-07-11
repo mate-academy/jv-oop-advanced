@@ -12,8 +12,8 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int size = 5;
-        switch (size) {
+        int randomNumber = random.nextInt(5);
+        switch (randomNumber) {
             case 0:
                 return new Rectangle(colorSupplier.getColor(),
                         getRandomSizeOfSide(), getRandomSizeOfSide());
