@@ -4,6 +4,7 @@ public class IsoscelesTrapezoid extends Figure {
     private int height;
     private int firstBase;
     private int secondBase;
+
     public IsoscelesTrapezoid (String color, int height, int firstBase, int secondBase) {
         super(color);
         this.height = height;
@@ -16,11 +17,11 @@ public class IsoscelesTrapezoid extends Figure {
         return height * (firstBase + secondBase) / 2.0;
     }
 
-    @Override
-    public void draw() {
+     @Override
+     public void draw () {
        System.out.println ("Figure: " + "IsoscelesTrapezoid, area: " + getArea()
-              + " sq.units," + "height: " + height + " units, " + "firstBase: "
-              + firstBase + " units, " + "secondBase: " + secondBase + " units, "
-              + "color: " + color);
+               + " sq.units," + "height: " + height + " units, " + "firstBase: "
+               + firstBase + " units, " + "secondBase: " + secondBase + " units, "
+               + "color: " + color);
     }
 }
