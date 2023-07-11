@@ -21,7 +21,7 @@ public class FigureSupplier {
 
         switch (randomNumber) {
             case 0:
-                return  new Circle(color, getRandomLength());
+                return new Circle(color, getRandomLength());
             case 1:
                 return new Square(color, getRandomLength());
             case 2:
@@ -33,14 +33,7 @@ public class FigureSupplier {
                         getRandomLength(), getRandomLength());
             default:
                 return getDefaultFigure();
-
-
         }
-
-
-
-       // int index = random.nextInt(figures.length);
-       // return figures[index];
     }
 
     private int getRandomLength() {
