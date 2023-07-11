@@ -4,40 +4,29 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
-    private Random random = new Random();
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figure getRandomFigure() {
-
-        String color = new ColorSupplier().getRandomColor();
+    public final Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
         switch (figureNumber) {
             case 0:
-                double side = getRandomSide();
-                return new Square(side, color);
+                return getRandomSquare();
             case 1:
-                double radius = getRandomRadius();
-                return new Circle(radius, color);
+                return getRandomCircle();
             case 2:
-                double baseOne = getRandomBase();
-                double baseTwo = getRandomBase();
-                double height = getRandomHeight();
-                return new IsoscelesTrapezoid(baseOne, baseTwo, height,
-                        color);
+                return getRandomIsoscelesTrapezoid();
             case 3:
-                double sideA = getRandomSide();
-                double sideB = getRandomSide();
-                return new Rectangle(sideA, sideB, color);
+                return getRandomRectangle();
             case 4:
-                double catOne = getRandomCat();
-                double catTwo = getRandomCat();
-                return new RightTriangle(catOne, catTwo, color);
+                return getRandomRightTriangle();
             default:
-                return new Square(12, "Pink");
+                return new Square(12, "PINK");
         }
     }
 
-    public Figure getDefaultFigure() {
-        return new Circle(10, "White");
+    public final Figure getDefaultFigure() {
+        return new Circle(10, "WHITE");
     }
 
     private double getRandomHeight() {
@@ -58,5 +47,26 @@ public class FigureSupplier {
 
     private double getRandomCat() {
         return random.nextDouble() * 10 + 1;
+    }
+
+    private Circle getRandomCircle() {
+        return new Circle(getRandomRadius(), colorSupplier.getRandomColor());
+    }
+
+    private Square getRandomSquare() {
+        return new Square(getRandomSide(), colorSupplier.getRandomColor());
+    }
+
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(getRandomBase(), getRandomBase(),
+                getRandomHeight(), colorSupplier.getRandomColor());
+    }
+
+    private Rectangle getRandomRectangle() {
+        return new Rectangle(getRandomSide(), getRandomSide(), colorSupplier.getRandomColor());
+    }
+
+    private RightTriangle getRandomRightTriangle() {
+        return new RightTriangle(getRandomCat(), getRandomCat(), colorSupplier.getRandomColor());
     }
 }
