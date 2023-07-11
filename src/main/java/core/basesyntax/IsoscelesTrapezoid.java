@@ -3,7 +3,6 @@ package core.basesyntax;
 import core.basesyntax.model.Figure;
 
 public class IsoscelesTrapezoid extends Figure {
-
     private final double topSide;
     private final double bottomSide;
     private final double height;

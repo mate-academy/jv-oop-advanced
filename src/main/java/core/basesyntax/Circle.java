@@ -3,7 +3,6 @@ package core.basesyntax;
 import core.basesyntax.model.Figure;
 
 public class Circle extends Figure {
-
     private final double radius;
 
     public Circle(String color, double radius) {

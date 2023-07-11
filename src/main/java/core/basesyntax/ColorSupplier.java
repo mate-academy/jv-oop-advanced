@@ -3,7 +3,6 @@ package core.basesyntax;
 import java.util.Random;
 
 public class ColorSupplier {
-
     private final Random rand = new Random();
 
     private enum Color {

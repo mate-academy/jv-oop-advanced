@@ -3,24 +3,23 @@ package core.basesyntax;
 import core.basesyntax.model.Figure;
 
 public class Rectangle extends Figure {
+    private final double sideA;
+    private final double sideB;
 
-    private final double side1;
-    private final double side2;
-
-    public Rectangle(String color, double side1, double side2) {
+    public Rectangle(String color, double sideA, double sideB) {
         super(color);
-        this.side1 = side1;
-        this.side2 = side2;
+        this.sideA = sideA;
+        this.sideB = sideB;
     }
 
     @Override
     public double getArea() {
-        return side1 * side2;
+        return sideA * sideB;
     }
 
     @Override
     public void drawFigure() {
         System.out.println("Figure is rectangle: color - " + getColor()
-                + ", side1/side2 length - " + side1 + "/" + side2 + ", area - " + getArea());
+                + ", side1/side2 length - " + sideA + "/" + sideB + ", area - " + getArea());
     }
 }
