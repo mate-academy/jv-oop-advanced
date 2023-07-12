@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 import core.basesyntax.model.Figure;
-import core.basesyntax.suppliers.FigureSupplier;
 import java.util.Random;
 
 public class FiguresTestDrive {

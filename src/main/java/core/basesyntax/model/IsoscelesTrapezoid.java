@@ -51,7 +51,6 @@ public class IsoscelesTrapezoid extends Figure {
                 + "\nmeasure: " + getArea()
                 + "\nColor: " + getColor());
     }
-
 }
 
 
