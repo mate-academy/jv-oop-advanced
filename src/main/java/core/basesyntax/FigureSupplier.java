@@ -4,32 +4,31 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final Random RANDOM = new Random();
-    private static final int intBound = 100;
-    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private static final int INT_BOUND = 100;
+    private static final ColorSupplier COLOR_SUPPLIER = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        final int indexFigure;
-        indexFigure = RANDOM.nextInt(4);
+        final int indexFigure = RANDOM.nextInt(4);
         switch (indexFigure) {
             case 0:
-                return new Circle(colorSupplier.getRandomColor(), getRandomInt());
+                return new Circle(COLOR_SUPPLIER.getRandomColor(), getRandomInt());
             case 1:
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomInt(),
+                return new IsoscelesTrapezoid(COLOR_SUPPLIER.getRandomColor(), getRandomInt(),
                         getRandomInt(), getRandomInt());
             case 2:
-                return new Rectangle(colorSupplier.getRandomColor(),
+                return new Rectangle(COLOR_SUPPLIER.getRandomColor(),
                         getRandomInt(), getRandomInt());
             case 3:
-                return new RightTriangle(colorSupplier.getRandomColor(),
+                return new RightTriangle(COLOR_SUPPLIER.getRandomColor(),
                         getRandomInt(), getRandomInt());
             case 4:
 
             default:
-                return new Square(colorSupplier.getRandomColor(), getRandomInt());
+                return new Square(COLOR_SUPPLIER.getRandomColor(), getRandomInt());
         }
     }
 
     private int getRandomInt() {
-        return RANDOM.nextInt(intBound);
+        return RANDOM.nextInt(INT_BOUND);
     }
 }

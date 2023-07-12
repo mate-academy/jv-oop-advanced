@@ -12,13 +12,13 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("core.basesyntax.Figure: " + getClass().getSimpleName()
+        System.out.println("Figure: " + getClass().getSimpleName()
                 + ", first leg: " + firstLeg + ", second leg " + secondLeg
                 + ", color: " + getColor() + ", area: " + getArea());
     }
 
     @Override
     public double getArea() {
-        return (double)(firstLeg * secondLeg) / 2;
+        return (double) (firstLeg * secondLeg) / 2;
     }
 }
