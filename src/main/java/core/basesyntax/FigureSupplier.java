@@ -3,8 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final static int FIGURE_COUNT = 5;
-    private final static int UPPER_INTEGER_BOUND = 10;
+    private static final int FIGURE_COUNT = 5;
+    private static final int UPPER_INTEGER_BOUND = 10;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -13,11 +13,14 @@ public class FigureSupplier {
             case 0:
                 return new Circle(colorSupplier.getRandomColor(), getRandomIntValue());
             case 1:
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomIntValue(), getRandomIntValue(), getRandomIntValue());
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomIntValue(),
+                        getRandomIntValue(), getRandomIntValue());
             case 2:
-                return new Rectangle(colorSupplier.getRandomColor(), getRandomIntValue(), getRandomIntValue());
+                return new Rectangle(colorSupplier.getRandomColor(), getRandomIntValue(),
+                        getRandomIntValue());
             case 3:
-                return new RightTriangle(colorSupplier.getRandomColor(), getRandomIntValue(), getRandomIntValue());
+                return new RightTriangle(colorSupplier.getRandomColor(), getRandomIntValue(),
+                        getRandomIntValue());
             case 4:
                 return new Square(colorSupplier.getRandomColor(), getRandomIntValue());
             default:
