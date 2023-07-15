@@ -23,11 +23,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(FigureSupplier.DEFAULT_COLOR, FigureSupplier.DEFAULT_RADIUS);
-    }
-
-    private String getFigureType() {
-        return FigureList.values()[random.nextInt(FigureList.values().length)].name();
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
     public Figure getRandomFigure() {
@@ -46,6 +42,10 @@ public class FigureSupplier {
             default:
                 return getIsoscelesTrapezoid(color);
         }
+    }
+
+    private String getFigureType() {
+        return FigureList.values()[random.nextInt(FigureList.values().length)].name();
     }
 
     private Figure getSquare(String color) {
