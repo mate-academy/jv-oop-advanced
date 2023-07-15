@@ -14,14 +14,6 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public enum FigureList {
-        CIRCLE,
-        ISOSCELES_TRAPEZOID,
-        RECTANGLE,
-        RIGHT_TRIANGLE,
-        SQUARE
-    }
-
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
