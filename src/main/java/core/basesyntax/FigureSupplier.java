@@ -1,32 +1,35 @@
 package core.basesyntax;
 
+import static core.basesyntax.Constant.COUNTER_FIGURE;
+
 import java.util.Random;
 
 public class FigureSupplier {
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        Figure figure = null;
-        Random random = new Random();
-        int randomNumber = random.nextInt(5);
+        Figure figure;
+
+        int randomNumber = random.nextInt(COUNTER_FIGURE);
         switch (randomNumber) {
             case 0 :
-                figure = new Circle();
+                figure = new Circle(colorSupplier.getRandomColor());
                 break;
             case 1 :
-                figure = new IsoscelesTrapezoid();
+                figure = new IsoscelesTrapezoid(colorSupplier.getRandomColor());
                 break;
             case 2 :
-                figure = new Rectangle();
+                figure = new Rectangle(colorSupplier.getRandomColor());
                 break;
             case 3 :
-                figure = new RightTriangle();
+                figure = new RightTriangle(colorSupplier.getRandomColor());
                 break;
             case 4 :
-                figure = new Square();
+                figure = new Square(colorSupplier.getRandomColor());
                 break;
             default:
-                System.out.println("Figure not founded");
-                break;
+                return getDefaultFigure();
         }
         return figure;
     }

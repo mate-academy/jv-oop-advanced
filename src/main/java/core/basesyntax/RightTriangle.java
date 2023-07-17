@@ -10,7 +10,8 @@ public class RightTriangle extends Figure {
         this.secondLeg = secondLeg;
     }
 
-    public RightTriangle() {
+    public RightTriangle(String color) {
+        super(color);
     }
 
     @Override
