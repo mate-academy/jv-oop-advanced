@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public interface Figure {
+public interface Figure extends Drawable {
     String getColor();
 
     double getArea();
 
-    void draw();
+
 }

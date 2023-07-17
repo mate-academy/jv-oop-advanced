@@ -6,11 +6,12 @@ public class Circle extends AbstractFigure {
 
     public Circle(String color, int radius) {
         super(color);
+        this.color = color;
         this.radius = radius;
     }
 
     public String getColor() {
-        return color;
+        return super.getColor();
     }
 
     @Override
@@ -20,7 +21,7 @@ public class Circle extends AbstractFigure {
 
     @Override
     public void draw() {
-        System.out.println("Circle - Color: " + color
-                + ", Radius: " + radius + ", Area: " + getArea());
+        System.out.println("Circle - Color: " + color + ", Radius: "
+                + radius + ", Area: " + getArea());
     }
 }

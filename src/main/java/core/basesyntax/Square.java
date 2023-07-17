@@ -7,6 +7,7 @@ public class Square extends AbstractFigure {
 
     public Square(String color, int side) {
         super(color);
+        this.color = color;
         this.side = side;
     }
 
