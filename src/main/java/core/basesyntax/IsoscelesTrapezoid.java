@@ -5,9 +5,6 @@ public class IsoscelesTrapezoid extends Figure {
         super(color);
     }
 
-    public IsoscelesTrapezoid() {
-    }
-
     @Override
     public void draw() {
         System.out.println("Figure: IsoscelesTrapezoid, color: " + super.getColor());

@@ -5,12 +5,8 @@ public class Square extends Figure {
         super(color);
     }
 
-    public Square() {
-    }
-
     @Override
     public void draw() {
-
         System.out.println("Figure: Square," + " color: " + super.getColor());
     }
 }
