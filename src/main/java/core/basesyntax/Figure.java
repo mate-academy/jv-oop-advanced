@@ -4,6 +4,4 @@ public interface Figure extends Drawable {
     String getColor();
 
     double getArea();
-
-
 }
