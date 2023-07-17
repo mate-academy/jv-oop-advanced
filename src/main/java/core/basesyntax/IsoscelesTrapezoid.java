@@ -8,6 +8,7 @@ class IsoscelesTrapezoid extends AbstractFigure {
 
     public IsoscelesTrapezoid(String color, int topBase, int bottomBase, int height) {
         super(color);
+        this.color = color;
         this.topBase = topBase;
         this.bottomBase = bottomBase;
         this.height = height;
@@ -15,7 +16,7 @@ class IsoscelesTrapezoid extends AbstractFigure {
 
     @Override
     public String getColor() {
-        return color;
+        return super.getColor();
     }
 
     @Override
@@ -25,6 +26,8 @@ class IsoscelesTrapezoid extends AbstractFigure {
 
     @Override
     public void draw() {
-        System.out.println("Isosceles Trapezoid - Color: " + color + ", Top Base: " + topBase + ", Bottom Base: " + bottomBase + ", Height: " + height + ", Area: " + getArea());
+        System.out.println("Isosceles Trapezoid - Color: " + color + ", Top Base: "
+                + topBase + ", Bottom Base: " + bottomBase + ", Height: " + height
+                + ", Area: " + getArea());
     }
 }
