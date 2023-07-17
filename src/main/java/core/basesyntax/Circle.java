@@ -3,10 +3,12 @@ package core.basesyntax;
 public class Circle extends AbstractFigure {
     private int radius;
     private String color;
+
     public Circle(String color, int radius) {
         super(color);
         this.radius = radius;
     }
+
     public String getColor() {
         return color;
     }
@@ -18,6 +20,7 @@ public class Circle extends AbstractFigure {
 
     @Override
     public void draw() {
-        System.out.println("Circle - Color: " + color + ", Radius: " + radius + ", Area: " + getArea());
+        System.out.println("Circle - Color: " + color
+                + ", Radius: " + radius + ", Area: " + getArea());
     }
 }
