@@ -10,10 +10,7 @@ public class HelloWorld {
         for (int i = 0; i < figures.length; i++) {
             FigureSupplier figureSupplier = new FigureSupplier();
             if (i < halfArray) {
-                ColorSupplier colorSupplier = new ColorSupplier();
                 Figure randomFigure = figureSupplier.getRandomFigure();
-                String randomColor = colorSupplier.getRandomColor();
-                randomFigure.setColor(randomColor);
                 figures[i] = randomFigure;
             } else {
                 Figure defaultFigure = figureSupplier.getDefaultFigure();
