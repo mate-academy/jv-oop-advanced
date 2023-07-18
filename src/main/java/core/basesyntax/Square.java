@@ -19,6 +19,7 @@ public class Square extends AbstractFigure {
     }
 
     public void draw() {
-        System.out.println("Square - Color: " + getColor() + ", Side: " + side + ", Area: " + getArea());
+        System.out.println("Square - Color: " + getColor() + ", Side: "
+                + side + ", Area: " + getArea());
     }
 }
