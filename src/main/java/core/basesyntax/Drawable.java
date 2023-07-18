@@ -1,3 +1,3 @@
 package core.basesyntax;
 
-public interface Drawable { String drawable(); }
+public interface Drawable { void draw(); }

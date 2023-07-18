@@ -3,44 +3,41 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int MAX_NUMBER = 20;
+    public static final int MAX_SIDE_LENGTH = 20;
     public static final int FIGUR_NUMBER = 5;
     private final Random random = new Random();
+    private final String color = new ColorSupplier().getRandomColor();
 
     public Figure getRandomFigure() {
         // Square getRandomFigure
-        String colorSquare = new ColorSupplier().getRandomColor();
-        double side = random.nextInt(MAX_NUMBER);
-        Figure square = new Square(side, colorSquare);
+        double side = random.nextInt(MAX_SIDE_LENGTH);
+        Figure square = new Square(side, color);
         // Rectangle getRandomFigure
         String colorRectangle = new ColorSupplier().getRandomColor();
-        double width = random.nextInt(MAX_NUMBER);
-        double heigth = random.nextInt(MAX_NUMBER);
+        double width = random.nextInt(MAX_SIDE_LENGTH);
+        double heigth = random.nextInt(MAX_SIDE_LENGTH);
         Figure rectangle = new Rectangle(width, heigth, colorRectangle);
         // Circle getRandomFigure
-        String colorCircle = new ColorSupplier().getRandomColor();
-        double radius = random.nextInt(MAX_NUMBER);
-        Figure circle = new Circle(radius, colorCircle);
+        double radius = random.nextInt(MAX_SIDE_LENGTH);
+        Figure circle = new Circle(radius, color);
         // RightTriangle getRandomFigure
-        String colorRightTriangle = new ColorSupplier().getRandomColor();
-        double firstLeg = random.nextInt(MAX_NUMBER);
-        double secondLeg = random.nextInt(MAX_NUMBER);
-        Figure rightTriangle = new RightTriangle(firstLeg, secondLeg, colorRightTriangle);
+        double firstLeg = random.nextInt(MAX_SIDE_LENGTH);
+        double secondLeg = random.nextInt(MAX_SIDE_LENGTH);
+        Figure rightTriangle = new RightTriangle(firstLeg, secondLeg, color);
         // IsoscelesTrapezoid getRandomFigure
-        String colorIsoscelesTrapezoid = new ColorSupplier().getRandomColor();
-        double bottomBase = random.nextInt(MAX_NUMBER);
-        double upperBase = random.nextInt(MAX_NUMBER);
-        double equalSides = random.nextInt(MAX_NUMBER);
+        double bottomBase = random.nextInt(MAX_SIDE_LENGTH);
+        double upperBase = random.nextInt(MAX_SIDE_LENGTH);
+        double equalSides = random.nextInt(MAX_SIDE_LENGTH);
         Figure isoscelesTrapezoid = new IsoscelesTrapezoid(bottomBase,
-                upperBase, equalSides, colorIsoscelesTrapezoid);
+                upperBase, equalSides, color);
         // Loop getRandomFigure
         Figure[] figures = {square, rectangle, circle, rightTriangle, isoscelesTrapezoid};
         return figures[random.nextInt(FIGUR_NUMBER)];
     }
 
     public Figure getDefaultFigure() {
-        double radius = 10;
-        String colorCircle = String.valueOf(Color.WHITE);
+        final double radius = 10;
+        final String colorCircle = String.valueOf(Color.WHITE);
         return new Circle(radius, colorCircle);
     }
 }
