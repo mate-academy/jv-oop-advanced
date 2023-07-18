@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-class IsoscelesTrapezoid extends AbstractFigure {
+class IsoscelesTrapezoid extends AbstractAreaCalculator {
     private String color;
     private int topBase;
     private int bottomBase;
@@ -12,11 +12,6 @@ class IsoscelesTrapezoid extends AbstractFigure {
         this.topBase = topBase;
         this.bottomBase = bottomBase;
         this.height = height;
-    }
-
-    @Override
-    public String getColor() {
-        return super.getColor();
     }
 
     @Override

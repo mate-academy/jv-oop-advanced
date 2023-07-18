@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends AbstractFigure {
+public class RightTriangle extends AbstractAreaCalculator {
     private int firstLeg;
 
     private int secondLeg;

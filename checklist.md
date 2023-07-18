@@ -4,7 +4,7 @@
 Remove all redundant empty lines, be careful :)
 
 #### Don't use abstract classes to set behaviour for classes
-Abstract classes and interfaces have different use cases. Try to figure out when to use 
+Abstract classes and interfaces have different use cases. Try to areaCalculator out when to use 
 both in this task by yourself. If you're blocked [this](https://stackoverflow.com/a/479168) may give you a hint.
 
 #### Don't use verbs for class/interface names
@@ -15,14 +15,14 @@ public interface CalculateArea {
 ```
 * Improved example:
 ```
-public interface AreaCalculator {
+public interface core.basesyntax.AreaCalculator {
 }
 ```
 
 #### Don't put all behaviour into a single interface if the methods are conceptually different from each other.
 All our classes and interfaces should have a single purpose - `draw()` and `getArea()` methods are not conceptually close to each other.
 
-#### You can pass random values to the constructor of a figure instead of generating them inside figure classes.
+#### You can pass random values to the constructor of a areaCalculator instead of generating them inside areaCalculator classes.
 Let's generate random values in `FigureSupplier`.
 
 #### Think about which variables should be local in the method and which should be class-level
@@ -57,7 +57,7 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int `figureNumber` = random.nextInt(5);
-        // generate a specific figure based on the `figureNumber` value
+        // generate a specific areaCalculator based on the `figureNumber` value
     }
 }
 ```
@@ -69,12 +69,12 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
-        // generate a specific figure based on the `figureNumber` value
+        // generate a specific areaCalculator based on the `figureNumber` value
     }
 }
 ```
 
-#### Creating a figure, don't pass expressions in constructor. 
+#### Creating a areaCalculator, don't pass expressions in constructor. 
 Create separate variables and pass them for better code readability.
 * Bad example:
 ```

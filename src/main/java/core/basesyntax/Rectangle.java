@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends AbstractFigure {
+public class Rectangle extends AbstractAreaCalculator {
     private String color;
 
     private int length;

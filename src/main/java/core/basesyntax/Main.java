@@ -6,18 +6,18 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier(colorSupplier);
 
         int arraySize = 6;
-        Figure[] figures = new Figure[arraySize];
+        AreaCalculator[] areaCalculators = new AreaCalculator[arraySize];
 
         for (int i = 0; i < arraySize / 2; i++) {
-            figures[i] = figureSupplier.getRandomFigure();
+            areaCalculators[i] = figureSupplier.getRandomFigure();
         }
 
         for (int i = arraySize / 2; i < arraySize; i++) {
-            figures[i] = figureSupplier.getDefaultFigure();
+            areaCalculators[i] = figureSupplier.getDefaultFigure();
         }
 
-        for (Figure figure : figures) {
-            figure.draw();
+        for (AreaCalculator areaCalculator : areaCalculators) {
+            areaCalculator.draw();
         }
     }
 }
