@@ -9,11 +9,11 @@ public class Main {
         for (int i = 0; i < figurs.length; i++) {
             if (i < 1) {
                 figurs[i] = randomFigure;
-                randomFigure.draw();
+                figurs[i].draw();
             }
             if (i == 1) {
                 figurs[i] = circle;
-                circle.draw();
+                figurs[i].draw();
             }
         }
     }
