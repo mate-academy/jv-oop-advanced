@@ -4,7 +4,9 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int MAX_SIDE_LENGTH = 20;
-    public static final int FIGUR_NUMBER = 5;
+    public static final int FIGURES_COUNT = 5;
+    public static final double DEFAULT_RADIUS = 10;
+    public static final String DEFAULT_COLOR = String.valueOf(Color.WHITE);
     private final Random random = new Random();
     private final String color = new ColorSupplier().getRandomColor();
 
@@ -13,10 +15,9 @@ public class FigureSupplier {
         double side = random.nextInt(MAX_SIDE_LENGTH);
         Figure square = new Square(side, color);
         // Rectangle getRandomFigure
-        String colorRectangle = new ColorSupplier().getRandomColor();
         double width = random.nextInt(MAX_SIDE_LENGTH);
         double heigth = random.nextInt(MAX_SIDE_LENGTH);
-        Figure rectangle = new Rectangle(width, heigth, colorRectangle);
+        Figure rectangle = new Rectangle(width, heigth, color);
         // Circle getRandomFigure
         double radius = random.nextInt(MAX_SIDE_LENGTH);
         Figure circle = new Circle(radius, color);
@@ -30,14 +31,22 @@ public class FigureSupplier {
         double equalSides = random.nextInt(MAX_SIDE_LENGTH);
         Figure isoscelesTrapezoid = new IsoscelesTrapezoid(bottomBase,
                 upperBase, equalSides, color);
-        // Loop getRandomFigure
-        Figure[] figures = {square, rectangle, circle, rightTriangle, isoscelesTrapezoid};
-        return figures[random.nextInt(FIGUR_NUMBER)];
+        int randomNumber = random.nextInt(FIGURES_COUNT);
+        switch (randomNumber) {
+            case 0:
+                return isoscelesTrapezoid;
+            case 1:
+                return rectangle;
+            case 2:
+                return circle;
+            case 3:
+                return rightTriangle;
+            default:
+                return square;
+        }
     }
 
     public Figure getDefaultFigure() {
-        final double radius = 10;
-        final String colorCircle = String.valueOf(Color.WHITE);
-        return new Circle(radius, colorCircle);
+        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
     }
 }
