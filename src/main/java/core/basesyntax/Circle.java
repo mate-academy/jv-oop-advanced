@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends AbstractAreaCalculator {
+public class Circle extends AbstractFigure {
     private int radius;
     private String color;
 
@@ -17,7 +17,7 @@ public class Circle extends AbstractAreaCalculator {
 
     @Override
     public void draw() {
-        System.out.println("Circle - Color: " + color + ", Radius: "
+        System.out.println("Circle - Color: " + getColor() + ", Radius: "
                 + radius + ", Area: " + getArea());
     }
 }

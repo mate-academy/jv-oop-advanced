@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends AbstractAreaCalculator {
+public class Rectangle extends AbstractFigure {
     private String color;
 
     private int length;
@@ -24,7 +24,7 @@ public class Rectangle extends AbstractAreaCalculator {
     }
 
     public void draw() {
-        System.out.println("Rectangle - Color: " + color + ", Length: "
+        System.out.println("Rectangle - Color: " + getColor() + ", Length: "
                 + length + ", Width: " + width + ", Area: " + getArea());
     }
 }

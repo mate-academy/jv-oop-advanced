@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-class IsoscelesTrapezoid extends AbstractAreaCalculator {
+class IsoscelesTrapezoid extends AbstractFigure {
     private String color;
     private int topBase;
     private int bottomBase;
@@ -21,7 +21,7 @@ class IsoscelesTrapezoid extends AbstractAreaCalculator {
 
     @Override
     public void draw() {
-        System.out.println("Isosceles Trapezoid - Color: " + color + ", Top Base: "
+        System.out.println("Isosceles Trapezoid - Color: " + getColor() + ", Top Base: "
                 + topBase + ", Bottom Base: " + bottomBase + ", Height: " + height
                 + ", Area: " + getArea());
     }

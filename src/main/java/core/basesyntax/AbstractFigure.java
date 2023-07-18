@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-abstract class AbstractAreaCalculator implements AreaCalculator,Drawable {
+abstract class AbstractFigure implements AreaCalculator,Drawable {
     private String color;
 
-    public AbstractAreaCalculator(String color) {
+    public AbstractFigure(String color) {
         this.color = color;
     }
 
