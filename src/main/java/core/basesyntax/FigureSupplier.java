@@ -3,44 +3,44 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    static final int MAX_SIDE = 10;
+    static final int NUM_FOR_FIGURE = 5;
+    static final int MIN_SIDE = 1;
+    static final String DEFAULT_COLOR = "WHITE";
     private ColorSupplier colorSupplier;
     private Random random = new Random();
-    private final int maxSide = 10;
-    private final int minSide = 1;
-    private final String defaultColor = "WHITE";
 
     public FigureSupplier(ColorSupplier colorSupplier) {
         this.colorSupplier = colorSupplier;
     }
 
     private Square getRandomSquare() {
-        return new Square(colorSupplier.getRandomColor(),random.nextInt(maxSide) + minSide);
+        return new Square(colorSupplier.getRandomColor(),random.nextInt(MAX_SIDE) + MIN_SIDE);
     }
 
     private Rectangle getRandomRectangle() {
         return new Rectangle(colorSupplier.getRandomColor(),
-                random.nextInt(maxSide) + 1, random.nextInt(maxSide) + minSide);
+                random.nextInt(MAX_SIDE) + 1, random.nextInt(MAX_SIDE) + MIN_SIDE);
     }
 
     private RightTriangle getRandomrightTriangle() {
         return new RightTriangle(colorSupplier.getRandomColor(),
-                random.nextInt(maxSide) + 1, random.nextInt(maxSide) + minSide);
+                random.nextInt(MAX_SIDE) + 1, random.nextInt(MAX_SIDE) + MIN_SIDE);
     }
 
     private Circle getRandomCircle() {
         return new Circle(colorSupplier.getRandomColor(),
-                random.nextInt(maxSide) + minSide);
+                random.nextInt(MAX_SIDE) + MIN_SIDE);
     }
 
     private IsoscelesTrapezoid getRandomisoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                random.nextInt(maxSide) + minSide, random.nextInt(maxSide)
-                + minSide, random.nextInt(maxSide) + minSide);
+                random.nextInt(MAX_SIDE) + MIN_SIDE, random.nextInt(MAX_SIDE)
+                + MIN_SIDE, random.nextInt(MAX_SIDE) + MIN_SIDE);
     }
 
     public AreaCalculator getRandomFigure() {
-        Random random = new Random();
-        int index = random.nextInt(5);
+        int index = random.nextInt(NUM_FOR_FIGURE);
         switch (index) {
             case 0:
                 return getRandomSquare();
@@ -58,6 +58,6 @@ public class FigureSupplier {
     }
 
     public AreaCalculator getDefaultFigure() {
-        return new Circle(defaultColor, maxSide);
+        return new Circle(DEFAULT_COLOR, MAX_SIDE);
     }
 }
