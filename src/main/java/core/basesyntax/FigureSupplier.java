@@ -20,12 +20,12 @@ public class FigureSupplier {
 
     private Rectangle getRandomRectangle() {
         return new Rectangle(colorSupplier.getRandomColor(),
-                random.nextInt(MAX_SIDE) + 1, random.nextInt(MAX_SIDE) + MIN_SIDE);
+                random.nextInt(MAX_SIDE) + MIN_SIDE, random.nextInt(MAX_SIDE) + MIN_SIDE);
     }
 
     private RightTriangle getRandomrightTriangle() {
         return new RightTriangle(colorSupplier.getRandomColor(),
-                random.nextInt(MAX_SIDE) + 1, random.nextInt(MAX_SIDE) + MIN_SIDE);
+                random.nextInt(MAX_SIDE) + MIN_SIDE, random.nextInt(MAX_SIDE) + MIN_SIDE);
     }
 
     private Circle getRandomCircle() {
