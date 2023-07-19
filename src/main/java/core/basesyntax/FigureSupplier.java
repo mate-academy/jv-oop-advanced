@@ -4,7 +4,6 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int MAX_SIDE_LENGTH = 20;
-    public static final int FIGURES_COUNT = 5;
     public static final double DEFAULT_RADIUS = 10;
     public static final String DEFAULT_COLOR = String.valueOf(Color.WHITE);
     private final Random random = new Random();
@@ -31,19 +30,8 @@ public class FigureSupplier {
         double equalSides = random.nextInt(MAX_SIDE_LENGTH);
         Figure isoscelesTrapezoid = new IsoscelesTrapezoid(bottomBase,
                 upperBase, equalSides, color);
-        int randomNumber = random.nextInt(FIGURES_COUNT);
-        switch (randomNumber) {
-            case 0:
-                return isoscelesTrapezoid;
-            case 1:
-                return rectangle;
-            case 2:
-                return circle;
-            case 3:
-                return rightTriangle;
-            default:
-                return square;
-        }
+        Figure[] figurs = {isoscelesTrapezoid, rectangle, circle, rightTriangle, square};
+        return figurs[random.nextInt(figurs.length)];
     }
 
     public Figure getDefaultFigure() {
