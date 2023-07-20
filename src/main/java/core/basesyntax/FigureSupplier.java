@@ -3,37 +3,37 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final Random random = new Random();
+    private static final int FIGURE_COUNT = 5;
+    private Random random = new Random();
 
     public Figure getRandomFigure() {
-        int figureType = random.nextInt(5);
-        switch (figureType) {
+        int figureNumber = random.nextInt(FIGURE_COUNT);
+        switch (figureNumber) {
             case 0:
-                return new Square(random.nextDouble() * 10,
-                        colorSupplier.getRendomColor());
+                return new Square(ColorSupplier.getRandomColor(),
+                        random.nextDouble() * 10 + 1);
             case 1:
-                return new Rectangle(random.nextDouble() * 10,
-                        random.nextDouble() * 10,
-                        colorSupplier.getRendomColor());
+                return new Rectangle(ColorSupplier.getRandomColor(),
+                        random.nextDouble() * 10 + 1,
+                        random.nextDouble() * 10 + 1);
             case 2:
-                return new RightTriangle(random.nextDouble() * 10,
-                        random.nextDouble() * 10,
-                        colorSupplier.getRendomColor());
+                return new RightTriangle(ColorSupplier.getRandomColor(),
+                        random.nextDouble() * 10 + 1,
+                        random.nextDouble() * 10 + 1);
             case 3:
-                return new Circle(random.nextDouble() * 10,
-                        colorSupplier.getRendomColor());
+                return new Circle(ColorSupplier.getRandomColor(),
+                        random.nextDouble() * 10 + 1);
             case 4:
-                return new IsoscelesTrapezoid(random.nextDouble() * 10,
-                        random.nextDouble() * 10,
-                        random.nextDouble() * 10,
-                        colorSupplier.getRendomColor());
+                return new IsoscelesTrapezoid(ColorSupplier.getRandomColor(),
+                        random.nextDouble() * 10 + 1,
+                        random.nextDouble() * 10 + 1,
+                        random.nextDouble() * 10 + 1);
             default:
-                throw new IllegalArgumentException("this figure not exist");
+                return null;
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, "white");
+        return new Circle(Color.WHITE, 10);
     }
 }

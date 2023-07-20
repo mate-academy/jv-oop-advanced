@@ -1,15 +1,16 @@
 package core.basesyntax;
 
-public class StartFigures {
+public class Main {
     public static void main(String[] args) {
-        FigureSupplier figureSupplier = new FigureSupplier();
-        Figure[] figures = new Figure[6];
+        int figureCount = 6;
 
-        for (int i = 0; i < figures.length / 2; i++) {
+        FigureSupplier figureSupplier = new FigureSupplier();
+
+        Figure[] figures = new Figure[figureCount];
+        for (int i = 0; i < figureCount / 2; i++) {
             figures[i] = figureSupplier.getRandomFigure();
         }
-
-        for (int i = figures.length / 2; i < figures.length; i++) {
+        for (int i = figureCount / 2; i < figureCount; i++) {
             figures[i] = figureSupplier.getDefaultFigure();
         }
 
@@ -18,4 +19,6 @@ public class StartFigures {
         }
     }
 }
+
+
 
