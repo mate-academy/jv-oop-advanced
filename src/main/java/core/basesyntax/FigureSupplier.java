@@ -14,6 +14,27 @@ public class FigureSupplier {
         this.colorSupplier = colorSupplier;
     }
 
+    public AreaCalculator getRandomFigure() {
+        int index = random.nextInt(NUM_FOR_FIGURE);
+        switch (index) {
+            case 0:
+                return getRandomSquare();
+            case 1:
+                return getRandomRectangle();
+            case 2:
+                return getRandomrightTriangle();
+            case 3:
+                return getRandomCircle();
+            case 4:
+                return getRandomisoscelesTrapezoid();
+            default:
+                throw new IllegalArgumentException("Invalid figure index");
+        }
+    }
+
+    public AbstractFigure getDefaultFigure() {
+        return new Circle(DEFAULT_COLOR, MAX_SIDE);
+    }
     private Square getRandomSquare() {
         return new Square(colorSupplier.getRandomColor(),random.nextInt(MAX_SIDE) + MIN_SIDE);
     }
@@ -37,27 +58,5 @@ public class FigureSupplier {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                 random.nextInt(MAX_SIDE) + MIN_SIDE, random.nextInt(MAX_SIDE)
                 + MIN_SIDE, random.nextInt(MAX_SIDE) + MIN_SIDE);
-    }
-
-    public AreaCalculator getRandomFigure() {
-        int index = random.nextInt(NUM_FOR_FIGURE);
-        switch (index) {
-            case 0:
-                return getRandomSquare();
-            case 1:
-                return getRandomRectangle();
-            case 2:
-                return getRandomrightTriangle();
-            case 3:
-                return getRandomCircle();
-            case 4:
-                return getRandomisoscelesTrapezoid();
-            default:
-                throw new IllegalArgumentException("Invalid figure index");
-        }
-    }
-
-    public AreaCalculator getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR, MAX_SIDE);
     }
 }

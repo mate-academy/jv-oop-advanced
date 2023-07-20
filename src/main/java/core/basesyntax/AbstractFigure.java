@@ -7,7 +7,6 @@ abstract class AbstractFigure implements AreaCalculator, Drawable {
         this.color = color;
     }
 
-    @Override
     public String getColor() {
         return color;
     }
