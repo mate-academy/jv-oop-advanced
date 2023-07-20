@@ -35,6 +35,7 @@ public class FigureSupplier {
     public AbstractFigure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, MAX_SIDE);
     }
+
     private Square getRandomSquare() {
         return new Square(colorSupplier.getRandomColor(),random.nextInt(MAX_SIDE) + MIN_SIDE);
     }
