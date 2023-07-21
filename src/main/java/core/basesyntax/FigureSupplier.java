@@ -13,7 +13,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        Circle circle = new Circle(10, "WHITE");
-        return circle;
+        return new Circle(10, "WHITE");
     }
 }

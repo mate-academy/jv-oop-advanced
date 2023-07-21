@@ -8,10 +8,6 @@ class Circle extends Figure {
         this.color = color;
     }
 
-    public Circle(Figure defaultFigure, Color color) {
-        super();
-    }
-
     @Override
     public double getArea() {
         return radius * radius * Math.PI;
