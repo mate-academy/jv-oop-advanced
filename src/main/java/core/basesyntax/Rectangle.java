@@ -4,8 +4,8 @@ public class Rectangle extends Figure {
     private double length;
     private double width;
 
-    public Rectangle(Color color, double length, double width) {
-        super(color);
+    public Rectangle(Color randomColor, double length, double width) {
+        super(DEFAULT_COLOR);
         this.length = length;
         this.width = width;
     }

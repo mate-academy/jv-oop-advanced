@@ -1,12 +1,14 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private double upperBase;
-    private double lowerBase;
-    private double height;
+    private final double upperBase;
+    private final double lowerBase;
+    private final double height;
 
-    public IsoscelesTrapezoid(Color color, double upperBase, double lowerBase, double height) {
-        super(color);
+    public IsoscelesTrapezoid(double upperBase,
+                              double lowerBase,
+                              double height) {
+        super(DEFAULT_COLOR);
         this.upperBase = upperBase;
         this.lowerBase = lowerBase;
         this.height = height;
@@ -14,6 +16,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double getArea() {
+
         return 0.5 * (upperBase + lowerBase) * height;
     }
 
