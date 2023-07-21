@@ -27,4 +27,3 @@ public class Rectangle extends Figure {
                 + color);
     }
 }
-
