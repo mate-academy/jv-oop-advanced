@@ -5,36 +5,55 @@ import java.util.Random;
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
     private final Random random = new Random();
+    private final int randomSite = random.nextInt(100) + 1;
+    private final int figureCount = random.nextInt(FIGURE_COUNT);
+    private final FigureList[] values = FigureList.values();
+    private final FigureList randomFigureType = values[figureCount];
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final String randomColor = colorSupplier.getRandomColor();
 
     public Figure getRandomFigure() {
-        int figureCount = random.nextInt(FIGURE_COUNT);
-        FigureList[] values = FigureList.values();
-        FigureList randomFigureType = values[figureCount];
-        ColorSupplier colorSupplier = new ColorSupplier();
-        String randomColor = colorSupplier.getRandomColor();
-
         switch (randomFigureType) {
             case CIRCLE:
-                double radius = random.nextInt(100);
-                return new Circle(radius, randomColor);
+                return getRandomCircle();
             case SQUARE:
-                double side = random.nextInt(100);
-                return new Square(side, randomColor);
-            case RECTANGLE: double length = random.nextInt(100);
-                double width = random.nextInt(100);
-                return new Rectangle(length, width, randomColor);
+                return getRandomSquare();
+            case RECTANGLE:
+                return getRandomRectangle();
             case ISOSCELES_TRAPEZOID:
-                double sideA = random.nextInt(100);
-                double sideB = random.nextInt(100);
-                double height = random.nextInt(100);
-                return new IsoscelesTrapezoid(sideA, sideB, height, randomColor);
-            case RIGHT_TRIANGLE:
-                double firstLeg = random.nextInt(100);
-                double secondLeg = random.nextInt(100);
-                return new RightTriangle(firstLeg, secondLeg, randomColor);
+                return getRandomIsoscelesTrapezoid();
             default:
-                throw new IllegalArgumentException("Unknown figure type: " + randomFigureType);
+                return getRandomRightTriangle();
         }
+    }
+
+    private Figure getRandomCircle() {
+        double radius = random.nextInt(randomSite);
+        return new Circle(radius, randomColor);
+    }
+
+    private Figure getRandomSquare() {
+        double side = random.nextInt(randomSite);
+        return new Square(side, randomColor);
+    }
+
+    private Figure getRandomRectangle() {
+        double length = random.nextInt(randomSite);
+        double width = random.nextInt(randomSite);
+        return new Rectangle(length, width, randomColor);
+    }
+
+    private Figure getRandomIsoscelesTrapezoid() {
+        double sideA = random.nextInt(randomSite);
+        double sideB = random.nextInt(randomSite);
+        double height = random.nextInt(randomSite);
+        return new IsoscelesTrapezoid(sideA, sideB, height, randomColor);
+    }
+
+    private Figure getRandomRightTriangle() {
+        double firstLeg = random.nextInt(randomSite);
+        double secondLeg = random.nextInt(randomSite);
+        return new RightTriangle(firstLeg, secondLeg, randomColor);
     }
 
     public Figure getDefaultFigure() {
