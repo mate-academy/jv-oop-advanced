@@ -11,10 +11,6 @@ public abstract class Figure implements AreaFigure, Drawable {
         return color;
     }
 
-    public void draw() {
-        System.out.println("Figure: " + getType() + ", area: "
-                + area() + " sq.units, color: " + color);
-    }
 
     public abstract String getType();
 }
