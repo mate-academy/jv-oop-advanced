@@ -4,16 +4,13 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
+    public static final double radius = 10;
+    public static final String color = "WHITE";
     private final Random random = new Random();
-    private final int randomSite = random.nextInt(100) + 1;
-    private final int figureCount = random.nextInt(FIGURE_COUNT);
-    private final FigureList[] values = FigureList.values();
-    private final FigureList randomFigureType = values[figureCount];
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final String randomColor = colorSupplier.getRandomColor();
 
     public Figure getRandomFigure() {
-        switch (randomFigureType) {
+        switch (FigureList.values()[random.nextInt(FIGURE_COUNT)]) {
             case CIRCLE:
                 return getRandomCircle();
             case SQUARE:
@@ -28,37 +25,35 @@ public class FigureSupplier {
     }
 
     private Figure getRandomCircle() {
-        double radius = random.nextInt(randomSite);
-        return new Circle(radius, randomColor);
+        double radius = random.nextInt(random.nextInt(100) + 1);
+        return new Circle(radius, colorSupplier.getRandomColor());
     }
 
     private Figure getRandomSquare() {
-        double side = random.nextInt(randomSite);
-        return new Square(side, randomColor);
+        double side = random.nextInt(random.nextInt(100) + 1);
+        return new Square(side, colorSupplier.getRandomColor());
     }
 
     private Figure getRandomRectangle() {
-        double length = random.nextInt(randomSite);
-        double width = random.nextInt(randomSite);
-        return new Rectangle(length, width, randomColor);
+        double length = random.nextInt(random.nextInt(100) + 1);
+        double width = random.nextInt(random.nextInt(100) + 1);
+        return new Rectangle(length, width, colorSupplier.getRandomColor());
     }
 
     private Figure getRandomIsoscelesTrapezoid() {
-        double sideA = random.nextInt(randomSite);
-        double sideB = random.nextInt(randomSite);
-        double height = random.nextInt(randomSite);
-        return new IsoscelesTrapezoid(sideA, sideB, height, randomColor);
+        double sideA = random.nextInt(random.nextInt(100) + 1);
+        double sideB = random.nextInt(random.nextInt(100) + 1);
+        double height = random.nextInt(random.nextInt(100) + 1);
+        return new IsoscelesTrapezoid(sideA, sideB, height, colorSupplier.getRandomColor());
     }
 
     private Figure getRandomRightTriangle() {
-        double firstLeg = random.nextInt(randomSite);
-        double secondLeg = random.nextInt(randomSite);
-        return new RightTriangle(firstLeg, secondLeg, randomColor);
+        double firstLeg = random.nextInt(random.nextInt(100) + 1);
+        double secondLeg = random.nextInt(random.nextInt(100) + 1);
+        return new RightTriangle(firstLeg, secondLeg, colorSupplier.getRandomColor());
     }
 
     public Figure getDefaultFigure() {
-        double radius = 10;
-        String color = "WHITE";
         return new Circle(radius, color);
     }
 }
