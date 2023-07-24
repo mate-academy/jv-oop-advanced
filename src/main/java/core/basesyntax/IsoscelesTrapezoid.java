@@ -10,20 +10,15 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public int area() {
+    public int getArea() {
         return (smallSide + bigSide) / 2 * height;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getType() + " area: " + area()
+        System.out.println("Figure: isosceles trapezoid, area: " + getArea()
                 + "sq.units, small side: " + smallSide
                 + " units, big side " + bigSide + " units, height "
                 + height + " units, color: " + getColor());
-    }
-
-    @Override
-    public String getType() {
-        return "isosceles trapezoid";
     }
 }
