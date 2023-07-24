@@ -1,13 +1,13 @@
 package core.basesyntax;
 
 class Rectangle extends Figure {
-    private double length;
-    private double width;
+    private final double length;
+    private final double width;
 
     public Rectangle(double length, double width, String color) {
+        super(color);
         this.length = length;
         this.width = width;
-        this.color = color;
     }
 
     @Override
