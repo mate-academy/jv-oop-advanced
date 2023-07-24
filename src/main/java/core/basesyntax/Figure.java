@@ -11,6 +11,5 @@ public abstract class Figure implements AreaFigure, Drawable {
         return color;
     }
 
-
     public abstract String getType();
 }
