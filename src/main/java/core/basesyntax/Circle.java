@@ -1,13 +1,11 @@
 package core.basesyntax;
 
-import static core.basesyntax.FigureSupplier.DEFAULT_COLOR;
-
 public class Circle extends Figure {
     private double radius;
     private final Color circleColor;
 
     public Circle(Color randomColor, double radius) {
-        super(DEFAULT_COLOR);
+        super(Parameters.DEFAULT_COLOR);
         this.radius = radius;
         this.circleColor = randomColor;
     }

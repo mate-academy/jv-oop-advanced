@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import static core.basesyntax.FigureSupplier.DEFAULT_COLOR;
-
 public class IsoscelesTrapezoid extends Figure {
     private final double upperBase;
     private final double lowerBase;
@@ -11,7 +9,7 @@ public class IsoscelesTrapezoid extends Figure {
     public IsoscelesTrapezoid(double upperBase,
                               double lowerBase,
                               double height, Color randomColor) {
-        super(DEFAULT_COLOR);
+        super(Parameters.DEFAULT_COLOR);
         this.upperBase = upperBase;
         this.lowerBase = lowerBase;
         this.height = height;
