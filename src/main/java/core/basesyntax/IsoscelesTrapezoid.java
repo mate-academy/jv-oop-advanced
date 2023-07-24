@@ -1,17 +1,21 @@
 package core.basesyntax;
 
+import static core.basesyntax.FigureSupplier.DEFAULT_COLOR;
+
 public class IsoscelesTrapezoid extends Figure {
     private final double upperBase;
     private final double lowerBase;
     private final double height;
+    private final Color isoscelestrapezoidColor;
 
     public IsoscelesTrapezoid(double upperBase,
                               double lowerBase,
-                              double height) {
+                              double height, Color randomColor) {
         super(DEFAULT_COLOR);
         this.upperBase = upperBase;
         this.lowerBase = lowerBase;
         this.height = height;
+        this.isoscelestrapezoidColor = randomColor;
     }
 
     @Override
@@ -31,6 +35,6 @@ public class IsoscelesTrapezoid extends Figure {
                 + " units, height: "
                 + height
                 + " units, color: "
-                + color);
+                + isoscelestrapezoidColor);
     }
 }

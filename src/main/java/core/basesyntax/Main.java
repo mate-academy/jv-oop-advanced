@@ -6,16 +6,9 @@ public class Main {
 
         FigureSupplier figureSupplier = new FigureSupplier();
 
-        Figure[] figures = new Figure[figureCount];
         for (int i = 0; i < figureCount; i++) {
-            if (i < figureCount / 2) {
-                figures[i] = figureSupplier.getRandomFigure();
-            } else {
-                figures[i] = figureSupplier.getDefaultFigure();
-            }
-        }
-
-        for (Figure figure : figures) {
+            Figure figure = (i < figureCount / 2) ? figureSupplier.getRandomFigure()
+                    : figureSupplier.getDefaultFigure();
             figure.draw();
         }
     }
