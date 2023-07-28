@@ -13,18 +13,20 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public void drawFigure() {
-        double square;
-        if (biggerBase < smallerBase) {
-            square = (smallerBase - biggerBase) / 2;
-        } else {
-            square = (biggerBase - smallerBase) / 2;
-        }
-
-        System.out.println("Figure: isosceles trapezoid, area: " + square
+    public void draw() {
+        System.out.println("Figure: isosceles trapezoid, area: " + getArea()
                         + " sq.units, bottom base: " + biggerBase
                         + " units, up base: " + smallerBase
                         + " units,"
                         + " color: " + getColor());
+    }
+
+    @Override
+    public double getArea() {
+        if (biggerBase < smallerBase) {
+            return (smallerBase - biggerBase) / 2;
+        } else {
+            return (biggerBase - smallerBase) / 2;
+        }
     }
 }
