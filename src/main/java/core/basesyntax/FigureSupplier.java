@@ -6,6 +6,7 @@ public class FigureSupplier {
     private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
     private static final double DEFAULT_RADIUS = 10;
     private Random randomizer = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
@@ -14,8 +15,7 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         final int figureIndex = randomizer.nextInt(FigureEnum.values().length);
         final FigureEnum randomFigure = FigureEnum.values()[figureIndex];
-        final int colorIndex = randomizer.nextInt(Color.values().length);
-        final String color = Color.values()[colorIndex].name().toLowerCase();
+        final String color = colorSupplier.getRandomColor();
         switch (randomFigure) {
             case CIRCLE: {
                 final double radius = randomizer.nextDouble();
