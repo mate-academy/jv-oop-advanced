@@ -3,13 +3,15 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int FIGURE_LENGTH_RANGE;
+    public static final double MIN_LENGTH_RANGE;
+    public static final double MAX_LENGTH_RANGE;
     public static final int FIGURE_COUNT;
     private final ColorSupplier colorSupplier;
     private final Random random;
 
     static {
-        FIGURE_LENGTH_RANGE = 10;
+        MIN_LENGTH_RANGE = 1;
+        MAX_LENGTH_RANGE = 10;
         FIGURE_COUNT = 5;
     }
 
@@ -19,15 +21,15 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        int figureIndex = random.nextInt(FIGURE_COUNT + 1);
+        int figureIndex = random.nextInt(FIGURE_COUNT);
         switch (figureIndex) {
-            case 1:
+            case 0:
                 return createCircle();
-            case 2:
+            case 1:
                 return createSquare();
-            case 3:
+            case 2:
                 return createRectangle();
-            case 4:
+            case 3:
                 return createRightTriangle();
             default:
                 return createIsoscelesTrapezoid();
@@ -35,7 +37,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", FIGURE_LENGTH_RANGE);
+        return new Circle("white", MAX_LENGTH_RANGE);
     }
 
     private Circle createCircle() {
@@ -73,7 +75,7 @@ public class FigureSupplier {
     }
 
     private double getRandomSideLength() {
-        return random.nextDouble() * FIGURE_LENGTH_RANGE;
+        return MIN_LENGTH_RANGE + random.nextDouble() * (MAX_LENGTH_RANGE - MIN_LENGTH_RANGE);
     }
 
     private boolean isNeedToResize(double a, double b) {
