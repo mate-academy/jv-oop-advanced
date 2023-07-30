@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int FIGURE_AMOUNT = 5;
-    private static final int MAX_RANDOM_NUMBER = 10;
+    private static final int MAX_RANDOM_NUMBER = 35;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
