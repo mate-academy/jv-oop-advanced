@@ -20,8 +20,6 @@ public class FigureSupplier {
                 return getRandomRightTriangle();
             case 3:
                 return getRandomCircle();
-            case 4:
-                return getRandomTrapezoid();
             default:
                 return getRandomTrapezoid();
         }
@@ -34,6 +32,7 @@ public class FigureSupplier {
 
         return new Square(sideLength, color);
     }
+
     private Rectangle getRandomRectangle() {
         int sideLength1 = random.nextInt(MAX_RANDOM_NUMBER);
         int sideLength2 = random.nextInt(MAX_RANDOM_NUMBER);
