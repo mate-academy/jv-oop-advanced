@@ -37,12 +37,10 @@ public class FigureSupplier {
                 final double secondLeg = randomizer.nextDouble();
                 return new RightTriangle(firstLeg, secondLeg, color);
             }
-            case SQUARE: {
+            case SQUARE:
+            default: {
                 final double side = randomizer.nextDouble();
                 return new Square(side, color);
-            }
-            default: {
-                return getDefaultFigure();
             }
         }
     }
