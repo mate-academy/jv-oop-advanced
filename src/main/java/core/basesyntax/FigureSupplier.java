@@ -31,7 +31,8 @@ public class FigureSupplier {
                 double randomLowerBaseSide = random.nextDouble();
                 double randomUpperBaseSide = random.nextDouble();
                 double height = random.nextDouble();
-                return new IsoscelesTrapezoid(randomColor, randomLowerBaseSide, randomUpperBaseSide, height);
+                return new IsoscelesTrapezoid(randomColor, randomLowerBaseSide,
+                        randomUpperBaseSide, height);
         }
 
     }
