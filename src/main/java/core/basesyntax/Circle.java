@@ -12,12 +12,12 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String toString() {
+    public void draw() {
         StringBuilder builder = new StringBuilder();
         builder.append("Figure: circle, area: ").append(getArea())
                 .append(" sq.units, radius: ").append(radius)
                 .append(" units, color: ").append(color.toLowerCase());
-        return builder.toString();
+        System.out.println(builder);
     }
 
     @Override

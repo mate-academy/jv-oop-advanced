@@ -14,13 +14,13 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String toString() {
+    public void draw() {
         StringBuilder builder = new StringBuilder();
         builder.append("Figure: right triangle, area: ").append(getArea())
                 .append(" sq.units, firstLeg: ").append(firstLeg)
                 .append(" units, secondLeg: ").append(secondLeg)
                 .append(" units, color: ").append(color.toLowerCase());
-        return builder.toString();
+        System.out.println(builder);
     }
 
     @Override

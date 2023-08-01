@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public interface IFigureSupplier {
+public interface SupplyFiguresAble {
     Figure getRandomFigure();
 
     Figure getDefaultFigure();

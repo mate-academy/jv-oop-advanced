@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements IFigureToString,IFigureGetArea {
+public abstract class Figure implements Drawable, AreaCalculator {
     protected String color;
 
     public Figure() {
@@ -11,7 +11,7 @@ public abstract class Figure implements IFigureToString,IFigureGetArea {
     }
 
     @Override
-    public abstract String toString();
+    public abstract void draw();
 
     @Override
     public abstract double getArea();

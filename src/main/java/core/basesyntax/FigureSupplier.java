@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class FigureSupplier implements IFigureSupplier {
+public class FigureSupplier implements SupplyFiguresAble {
     private static final Random random = new Random();
     private static final ColorSupplier colorSupplier = new ColorSupplier();
     private static final int NUMBER_OF_FIGURE = 5;
@@ -42,6 +42,6 @@ public class FigureSupplier implements IFigureSupplier {
 
     @Override
     public Figure getDefaultFigure() {
-        return new Circle(Colors.WHITE.name(), RADIUS_OF_BASE_CIRCLE);
+        return new Circle(Color.WHITE.name(), RADIUS_OF_BASE_CIRCLE);
     }
 }

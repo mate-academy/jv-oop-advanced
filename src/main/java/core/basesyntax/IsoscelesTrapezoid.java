@@ -16,14 +16,14 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String toString() {
+    public void draw() {
         StringBuilder builder = new StringBuilder();
         builder.append("Figure: isosceles trapezoid, area: ").append(getArea())
                 .append(" sq.units, smaller base: ").append(smallerBase)
                 .append(" units, large base: ").append(largeBase)
                 .append(" units, side: ").append(side)
                 .append(" units, color: ").append(color.toLowerCase());
-        return builder.toString();
+        System.out.println(builder);
     }
 
     @Override
