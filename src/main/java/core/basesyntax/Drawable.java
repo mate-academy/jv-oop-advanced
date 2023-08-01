@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public interface FigureIllustrator {
+public interface Drawable {
     void draw();
 }

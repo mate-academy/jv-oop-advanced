@@ -6,7 +6,7 @@ public class FigureSupplier {
     private static final double CIRCLE_RADIUS = 10;
     private static final String CIRCLE_COLOR = Color.WHITE.name();
     private Random random = new Random();
-    private Figures[] figures = Figures.values();
+    private FigureType[] figures = FigureType.values();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
