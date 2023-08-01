@@ -5,7 +5,7 @@ public class IsoscelesTrapezoid extends Figure {
     protected final int topBase;
     protected final int height;
 
-    public IsoscelesTrapezoid(final String color, final int bottomBase, final int topBase,
+    public IsoscelesTrapezoid(Color color, final int bottomBase, final int topBase,
                               final int height) {
         super(color);
         this.bottomBase = bottomBase;
@@ -14,7 +14,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     //constructor for rectangle case
-    public IsoscelesTrapezoid(final String color, final int base, final int height) {
+    public IsoscelesTrapezoid(Color color, final int base, final int height) {
         this(color, base, base, height);
     }
 

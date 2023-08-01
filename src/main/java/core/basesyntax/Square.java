@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Square extends Rectangle {
-    public Square(final String color, final int side) {
+    public Square(Color color, final int side) {
         super(color, side, side);
     }
 

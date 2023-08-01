@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Rectangle extends IsoscelesTrapezoid {
-    public Rectangle(final String color, final int base, final int height) {
+    public Rectangle(final Color color, final int base, final int height) {
         super(color, base, height);
     }
 
