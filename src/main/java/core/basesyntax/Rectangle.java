@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends AbstractFigure {
+public class Rectangle extends Figure {
     private double length;
     private double width;
 
@@ -17,5 +17,12 @@ public class Rectangle extends AbstractFigure {
     @Override
     public double getArea() {
         return Math.round(length * width * 100.0) / 100.0;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println(String.format("Figure: %s, area: %.2f sq.units, "
+                        + "length: %.2f units, width: %.2f units, color: %s",
+                getName(), getArea(), length, width, getColor()));
     }
 }
