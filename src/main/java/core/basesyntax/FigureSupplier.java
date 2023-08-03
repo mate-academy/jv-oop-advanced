@@ -62,8 +62,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        String color = DEFAULT_COLOR;
-        int radius = DEFAULT_LENGTH;
-        return new Circle(color, radius);
+        return new Circle(DEFAULT_COLOR, DEFAULT_LENGTH);
     }
 }
