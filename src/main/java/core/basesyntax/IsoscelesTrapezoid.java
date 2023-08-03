@@ -24,7 +24,7 @@ public class IsoscelesTrapezoid extends Figure {
         System.out.print(" Base1 - " + base1);
         System.out.print(", Base2 - " + base2);
         System.out.print(", Height - " + height);
-        System.out.print(", Area - " + (((base1 + base2) * height) / 2.0));
+        System.out.print(", Area - " + getArea());
         System.out.print(", Color: " + getColor().toLowerCase() + "\n");
     }
 }

@@ -1,8 +1,8 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private int height;
-    private int width;
+    private final int height;
+    private final int width;
 
     public Rectangle(int height, int width, String color) {
         super(color);
@@ -21,7 +21,7 @@ public class Rectangle extends Figure {
         System.out.print("Rectangle, ");
         System.out.print(" Height - " + height);
         System.out.print(", Wigth - " + width);
-        System.out.print(", Area - " + (height * width));
+        System.out.print(", Area - " + getArea());
         System.out.print(", Color: " + getColor().toLowerCase() + "\n");
     }
 }

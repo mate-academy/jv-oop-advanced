@@ -18,7 +18,7 @@ public class Square extends Figure {
         System.out.print("Figure: ");
         System.out.print("Square, ");
         System.out.print("Side - " + side);
-        System.out.print(", Area - " + (side * side));
+        System.out.print(", Area - " + getArea());
         System.out.print(", Color: " + getColor().toLowerCase() + "\n");
     }
 }

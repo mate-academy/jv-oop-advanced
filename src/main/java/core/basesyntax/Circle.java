@@ -18,7 +18,7 @@ public class Circle extends Figure {
         System.out.print("Figure: ");
         System.out.print("Circle, ");
         System.out.print("Radius - " + radius);
-        System.out.print(", Area - " + (Math.PI * radius * radius));
+        System.out.print(", Area - " + getArea());
         System.out.print(", Color: " + getColor().toLowerCase() + "\n");
     }
 }
