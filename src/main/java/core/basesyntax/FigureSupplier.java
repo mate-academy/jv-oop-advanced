@@ -49,8 +49,7 @@ public class FigureSupplier {
     private RightTriangle getRandomRightTriangle() {
         int firstLeg = random.nextInt(MAX_RANDOM_NUMBER);
         int secondLeg = random.nextInt(MAX_RANDOM_NUMBER);
-        String randomColor = colorSupplier.getRandomColor();
-        Color color = Color.valueOf(randomColor);
+        Color color = Color.valueOf(colorSupplier.getRandomColor());
 
         return new RightTriangle(firstLeg, secondLeg, color);
     }
@@ -76,4 +75,5 @@ public class FigureSupplier {
     public Figure getDefaultFigure() {
         return new Circle(10, Color.WHITE);
     }
+    // Що тут змінити?
 }

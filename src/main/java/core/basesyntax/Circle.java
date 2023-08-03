@@ -10,8 +10,8 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("Figure: circle, ")
+        StringBuilder stringBuilder = new StringBuilder()
+                .append("Figure: circle, ")
                 .append("area: ").append(getArea()).append(" sq.units,")
                 .append("radius: ").append(radius).append(" units, ")
                 .append("color: ").append(getColor().name().toLowerCase());
