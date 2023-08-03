@@ -26,11 +26,15 @@ public class FigureSupplier {
     }
 
     private Square getRandomSquare() {
-        int sideLength = random.nextInt(MAX_RANDOM_NUMBER);
-        String randomColor = colorSupplier.getRandomColor();
-        Color color = Color.valueOf(randomColor);
+        int sideLength = getRandomLength();
+        Color color = Color.valueOf(colorSupplier.getRandomColor());
 
         return new Square(sideLength, color);
+    }
+
+    private int getRandomLength() {
+        int sideLength = random.nextInt(MAX_RANDOM_NUMBER);
+        return sideLength;
     }
 
     private Rectangle getRandomRectangle() {
