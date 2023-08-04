@@ -5,7 +5,7 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int FIGURE_AMOUNT = 5;
     private static final int MAX_RANDOM_NUMBER = 35;
-    private static final Color DEFAULT_COLOR = Color.valueOf(Color.WHITE.name().toLowerCase());
+    private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
     private static final int DEFAULT_LENGTH = 10;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
@@ -29,7 +29,7 @@ public class FigureSupplier {
 
     private Square getRandomSquare() {
         int sideLength = getRandomLength();
-        Color color = Color.valueOf(colorSupplier.getRandomColor());
+        String color = colorSupplier.getRandomColor();
 
         return new Square(sideLength, color);
     }
@@ -43,7 +43,7 @@ public class FigureSupplier {
         int sideLength1 = random.nextInt(MAX_RANDOM_NUMBER);
         int sideLength2 = random.nextInt(MAX_RANDOM_NUMBER);
         String randomColor = colorSupplier.getRandomColor();
-        Color color = Color.valueOf(randomColor);
+        String color = colorSupplier.getRandomColor();
 
         return new Rectangle(sideLength1, sideLength2, color);
     }
@@ -51,7 +51,7 @@ public class FigureSupplier {
     private RightTriangle getRandomRightTriangle() {
         int firstLeg = random.nextInt(MAX_RANDOM_NUMBER);
         int secondLeg = random.nextInt(MAX_RANDOM_NUMBER);
-        Color color = Color.valueOf(colorSupplier.getRandomColor());
+        String color = colorSupplier.getRandomColor();
 
         return new RightTriangle(firstLeg, secondLeg, color);
     }
@@ -61,15 +61,14 @@ public class FigureSupplier {
         int secondBase = random.nextInt(MAX_RANDOM_NUMBER);
         int height = random.nextInt(MAX_RANDOM_NUMBER);
         String randomColor = colorSupplier.getRandomColor();
-        Color color = Color.valueOf(randomColor);
+        String color = colorSupplier.getRandomColor();
 
         return new IsoscelesTrapezoid(firstBase, secondBase, height, color);
     }
 
     private Circle getRandomCircle() {
         int radius = random.nextInt(MAX_RANDOM_NUMBER);
-        String randomColor = colorSupplier.getRandomColor();
-        Color color = Color.valueOf(randomColor);
+        String color = colorSupplier.getRandomColor();
 
         return new Circle(radius, color);
     }

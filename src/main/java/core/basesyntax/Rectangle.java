@@ -4,7 +4,7 @@ public class Rectangle extends Figure {
     private double sideLength1;
     private double sideLength2;
 
-    public Rectangle(double sideLength1, double sideLength2, Color color) {
+    public Rectangle(double sideLength1, double sideLength2, String color) {
         super(color);
         this.sideLength1 = sideLength1;
         this.sideLength2 = sideLength2;
@@ -17,7 +17,7 @@ public class Rectangle extends Figure {
                 .append("area: ").append(getArea()).append(" sq.units, ")
                 .append("side1: ").append(sideLength1).append(" units, ")
                 .append("side2: ").append(sideLength2).append(" units, ")
-                .append("color: ").append(getColor().name().toLowerCase());
+                .append("color: ").append(getColor().toLowerCase());
         System.out.println(stringBuilder);
     }
 

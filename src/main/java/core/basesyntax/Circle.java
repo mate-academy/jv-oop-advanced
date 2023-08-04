@@ -3,7 +3,7 @@ package core.basesyntax;
 public class Circle extends Figure {
     private double radius;
 
-    public Circle(double radius, Color color) {
+    public Circle(double radius, String color) {
         super(color);
         this.radius = radius;
     }
@@ -14,7 +14,7 @@ public class Circle extends Figure {
                 .append("Figure: circle, ")
                 .append("area: ").append(getArea()).append(" sq.units,")
                 .append("radius: ").append(radius).append(" units, ")
-                .append("color: ").append(getColor().name().toLowerCase());
+                .append("color: ").append(getColor().toLowerCase());
         System.err.println(stringBuilder);
     }
 

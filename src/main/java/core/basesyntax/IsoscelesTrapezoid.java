@@ -5,7 +5,7 @@ public class IsoscelesTrapezoid extends Figure {
     private double secondBase;
     private double height;
 
-    public IsoscelesTrapezoid(double firstBase, double secondBase, double height, Color color) {
+    public IsoscelesTrapezoid(double firstBase, double secondBase, double height, String color) {
         super(color);
         this.firstBase = firstBase;
         this.secondBase = secondBase;
@@ -20,7 +20,7 @@ public class IsoscelesTrapezoid extends Figure {
                 .append("firstBase: ").append(firstBase).append(" units, ")
                 .append("secondBase: ").append(secondBase).append(" units, ")
                 .append("height: ").append(height).append(" units, ")
-                .append("color: ").append(getColor().name().toLowerCase());
+                .append("color: ").append(getColor().toLowerCase());
         System.out.println(stringBuilder);
     }
 
