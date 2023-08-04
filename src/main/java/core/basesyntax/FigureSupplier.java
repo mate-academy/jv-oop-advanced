@@ -11,7 +11,7 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        switch (Figures.values()[randomizer.nextInt(Figures.values().length)]) {
+        switch (FigureType.values()[randomizer.nextInt(FigureType.values().length)]) {
             case CIRCLE:
                 return prepareCircle();
             case ISOSCELESTRAPEZOID:
