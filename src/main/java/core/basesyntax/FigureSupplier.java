@@ -46,12 +46,12 @@ public class FigureSupplier {
     }
 
     public RightTriangle getRandomRightTriangle() {
-        return  new RightTriangle(colorSupplier.getRandomColor(),
+        return new RightTriangle(colorSupplier.getRandomColor(),
                 random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
     }
 
     public IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
-        return  new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                 random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
     }
 }
