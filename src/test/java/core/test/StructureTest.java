@@ -106,7 +106,7 @@ public class StructureTest {
   private void checkSuperClassInterfaces(Class clazz) {
     Class[] interfaces = clazz.getInterfaces();
     if (interfaces.length == 0) {
-      Assert.fail("FigureType parent class " + clazz.getSuperclass().getSimpleName()
+      Assert.fail("Figures parent class " + clazz.getSuperclass().getSimpleName()
               +" should implement interfaces that describe common"
               + " behavior for all classes of figures");
     }
