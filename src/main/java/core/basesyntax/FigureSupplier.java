@@ -5,6 +5,8 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int FIGURE_AMOUNT = 5;
     private static final int MAX_RANDOM_NUMBER = 35;
+    private static final Color DEFAULT_COLOR = Color.valueOf(Color.WHITE.name().toLowerCase());
+    private static final int DEFAULT_LENGTH = 10;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -73,7 +75,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, Color.WHITE);
+        return new Circle(DEFAULT_LENGTH, DEFAULT_COLOR);
     }
     // Що тут змінити?
 }
