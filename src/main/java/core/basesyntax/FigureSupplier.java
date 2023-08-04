@@ -4,21 +4,21 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int VALUE_LIMIT = 10;
-    private static final String DEFAULT_COLOR = "WHITE";
+    private static final ColorType DEFAULT_COLOR = ColorType.WHITE;
     private static final int DEFAULT_RADIUS = 10;
 
     private final Random randomizer = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        switch (randomizer.nextInt(Figures.values().length)) {
-            case 1:
+        switch (FigureType.values()[randomizer.nextInt(FigureType.values().length)]) {
+            case CIRCLE:
                 return prepareCircle();
-            case 2:
+            case ISOSCELESTRAPEZOID:
                 return prepareIsoscelesTrapezoid();
-            case 3:
+            case RIGHTTRIANGLE:
                 return prepareRightTriangle();
-            case 4:
+            case RECTANGLE:
                 return prepareRectangle();
             default:
                 return prepareSquare();
