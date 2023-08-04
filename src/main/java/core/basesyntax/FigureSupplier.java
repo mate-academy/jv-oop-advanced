@@ -3,9 +3,9 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int MAX_VALUE = 15;
-    public static final int DEFAULT_VALUE = 10;
-    public static final Color DEFAULT_COLOR = Color.WHITE;
+    private static final int MAX_VALUE = 15;
+    private static final int DEFAULT_VALUE = 10;
+    private static final Color DEFAULT_COLOR = Color.WHITE;
 
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
@@ -32,25 +32,25 @@ public class FigureSupplier {
         return new Circle(DEFAULT_COLOR.name(), DEFAULT_VALUE);
     }
 
-    public Circle getRandomCircle() {
+    private Circle getRandomCircle() {
         return new Circle(colorSupplier.getRandomColor(), random.nextInt(MAX_VALUE));
     }
 
-    public Square getRandomSquare() {
+    private Square getRandomSquare() {
         return new Square(colorSupplier.getRandomColor(), random.nextInt(MAX_VALUE));
     }
 
-    public Rectangle getRandomRectangle() {
+    private Rectangle getRandomRectangle() {
         return new Rectangle(colorSupplier.getRandomColor(),
                 random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
     }
 
-    public RightTriangle getRandomRightTriangle() {
+    private RightTriangle getRandomRightTriangle() {
         return new RightTriangle(colorSupplier.getRandomColor(),
                 random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
     }
 
-    public IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                 random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
     }
