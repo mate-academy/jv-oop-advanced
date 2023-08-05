@@ -6,7 +6,7 @@ public class FigureSupplier {
     private static final int MAX_SIZE = 100;
     private static final int DEFAULT_RADIUS = 10;
     private final Random random = new Random();
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
 
