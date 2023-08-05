@@ -4,34 +4,32 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_SIZE = 100;
-    private Random random = new Random();
+    private static final int DEFAULT_RADIUS = 10;
+    private final Random random = new Random();
+    ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        ColorSupplier spl = new ColorSupplier();
 
-        String rndFigure = FiguresName.values()[random.nextInt(FiguresName.values().length)]
-                .toString();
-
-        switch (rndFigure) {
-            case "Circle":
-                return new Circle(random.nextInt(MAX_SIZE), spl.getRandomColor());
-            case "Square":
-                return new Square(random.nextInt(MAX_SIZE), spl.getRandomColor());
-            case "Rectangle":
+        switch (FiguresName.values()[random.nextInt(FiguresName.values().length)]) {
+            case CIRCLE :
+                return new Circle(random.nextInt(MAX_SIZE), colorSupplier.getRandomColor());
+            case SQUARE :
+                return new Square(random.nextInt(MAX_SIZE), colorSupplier.getRandomColor());
+            case RECTANGLE:
                 return new Rectangle(random.nextInt(MAX_SIZE), random.nextInt(MAX_SIZE),
-                        spl.getRandomColor());
-            case "RightTriangle" :
+                        colorSupplier.getRandomColor());
+            case RIGHTTRIANGLE :
                 return new RightTriangle(random.nextInt(MAX_SIZE), random.nextInt(MAX_SIZE),
-                        spl.getRandomColor());
-            case "IsoscelesTrapezoid" :
+                        colorSupplier.getRandomColor());
+            case ISOSCELESTRAPEZOID :
                 return new IsoscelesTrapezoid(random.nextInt(MAX_SIZE), random.nextInt(MAX_SIZE),
-                        random.nextInt(MAX_SIZE), spl.getRandomColor());
+                        random.nextInt(MAX_SIZE), colorSupplier.getRandomColor());
             default:
                 return getRandomFigure();
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, "white");
+        return new Circle(DEFAULT_RADIUS, "white");
     }
 }
