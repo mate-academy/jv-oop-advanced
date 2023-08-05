@@ -3,24 +3,21 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final Random random = new Random();
+    private final ColorSupplier colorSupplier;
+    private final Random random = new Random();
 
-    public static Figure getRandomFigure() {
-        Figure[] figures = {
-                new Square(random.nextInt(10) + 1, ColorSupplier.getRandomColor()),
-                new Rectangle(random.nextInt(10) + 1,
-                        random.nextInt(10) + 1, ColorSupplier.getRandomColor()),
-                new RightTriangle(random.nextInt(10) + 1, random.nextInt(10) + 1,
-                        ColorSupplier.getRandomColor()),
-                new Circle(random.nextInt(10) + 1, ColorSupplier.getRandomColor()),
-                new IsoscelesTrapezoid(random.nextInt(10) + 1, random.nextInt(10) + 1,
-                        random.nextInt(10) + 1, ColorSupplier.getRandomColor())
-        };
-        int randomIndex = random.nextInt(figures.length);
-        return figures[randomIndex];
+    public FigureSupplier(ColorSupplier colorSupplier) {
+        this.colorSupplier = colorSupplier;
     }
 
-    public static Figure getDefaultFigure() {
-        return new Circle(10, ColorSupplier.getRandomColor());
+    public Figure getRandomFigure() {
+        Figure[] figures = {
+                new Square(5, colorSupplier.getRandomColor()),
+                new Rectangle(4, 6, colorSupplier.getRandomColor()),
+                new Circle(3, colorSupplier.getRandomColor()),
+                new RightTriangle(3, 4, colorSupplier.getRandomColor()),
+                new IsoscelesTrapezoid(5, 7, 4, colorSupplier.getRandomColor())
+        };
+        return figures[random.nextInt(figures.length)];
     }
 }
