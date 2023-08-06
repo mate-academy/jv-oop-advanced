@@ -1,25 +1,27 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private final double topBase;
-    private final double bottomBase;
-    private final double height;
+    private double topBase;
+    private double bottomBase;
+    private double height;
 
-    public IsoscelesTrapezoid(double topBase, double bottomBase, double height, String color) {
+    public IsoscelesTrapezoid(String color, double topBase, double bottomBase, double height) {
         super(color);
         this.topBase = topBase;
         this.bottomBase = bottomBase;
         this.height = height;
     }
 
+    @Override
     public double calculateArea() {
-        return 0.5 * (topBase + bottomBase) * height;
+        return ((topBase + bottomBase) / 2) * height;
     }
 
+    @Override
     public void draw() {
         System.out.println("Figure: isosceles trapezoid, area: " + calculateArea()
-                + " sq.units, top base: " + topBase
-                + " units, bottom base: " + bottomBase
-                + " units, height: " + height + " units, color: " + getColor());
+                + " sq.units, topBase: "
+                + topBase + " units, bottomBase: " + bottomBase + " units, height: "
+                + height + " units, color: " + getColor());
     }
 }
