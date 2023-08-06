@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class ColorSupplier {
-    public static final int COLOR_COUNT;
+    private static final int COLOR_COUNT;
     private Random random;
 
     static {
