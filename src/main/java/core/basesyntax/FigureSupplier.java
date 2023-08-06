@@ -13,9 +13,12 @@ public class FigureSupplier {
         Figure[] figures = new Figure[]{
                 new Circle(colorSupplier.getRandomColor(), getRandomValue()),
                 new Square(colorSupplier.getRandomColor(), getRandomValue()),
-                new Rectangle(colorSupplier.getRandomColor(), getRandomValue(), getRandomValue()),
-                new RightTriangle(colorSupplier.getRandomColor(), getRandomValue(), getRandomValue()),
-                new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomValue(), getRandomValue(), getRandomValue())
+                new Rectangle(colorSupplier.getRandomColor(), getRandomValue(),
+                        getRandomValue()),
+                new RightTriangle(colorSupplier.getRandomColor(), getRandomValue(),
+                        getRandomValue()),
+                new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomValue(),
+                        getRandomValue(), getRandomValue())
         };
         return figures[random.nextInt(figures.length)];
     }
