@@ -48,8 +48,9 @@ public class FigureSupplier {
                         (RANDOM_RANGE_MAX - RANDOM_RANGE_MIN) + 1) + RANDOM_RANGE_MIN;
                 return new Square(colorSupplier.getRandomColor(), side);
             }
+            default:
+                return getDefaultFigure();
         }
-        return getDefaultFigure();
     }
 
     public Figure getDefaultFigure() {
