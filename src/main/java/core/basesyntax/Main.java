@@ -7,12 +7,10 @@ public class Main {
 
         Figure[] figures = new Figure[6];
         for (int i = 0; i < figures.length; i++) {
-            if (i < figures.length / 2) {
-                figures[i] = figureSupplier.getRandomFigure();
-            } else {
-                figures[i] = figureSupplier.getDefaultFigure();
-            }
+            figures[i] = figureSupplier.getRandomFigure();
         }
+        figures[5] = new IsoscelesTrapezoid(colorSupplier.getRandomColor(), 10, 20, 15);
+
         for (Figure figure : figures) {
             figure.draw();
         }
