@@ -1,5 +1,7 @@
 package core.basesyntax;
 
+import java.util.Locale;
+
 public class Square extends Figure{
     private int side;
 
@@ -10,7 +12,7 @@ public class Square extends Figure{
 
     @Override
     public void draw() {
-
+        System.out.println("Figure: square, area: " + area() + " sq.units, side: " + side + " units, color: " + color.toLowerCase());
     }
 
     @Override
