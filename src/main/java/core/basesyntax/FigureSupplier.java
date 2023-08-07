@@ -23,6 +23,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", VALUE);
+        return new Circle(Color.WHITE.name(), VALUE);
     }
 }
