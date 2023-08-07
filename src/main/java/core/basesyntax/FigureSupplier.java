@@ -3,19 +3,13 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final double MIN_LENGTH_RANGE;
-    private static final double MAX_LENGTH_RANGE;
-    private static final int FIGURE_COUNT;
+    private static final double MIN_LENGTH_RANGE = 1;
+    private static final double MAX_LENGTH_RANGE = 10;
+    private static final int FIGURE_COUNT = 5;
     private final ColorSupplier colorSupplier;
     private final Random random;
 
-    static {
-        MIN_LENGTH_RANGE = 1;
-        MAX_LENGTH_RANGE = 10;
-        FIGURE_COUNT = 5;
-    }
-
-    {
+    public FigureSupplier() {
         colorSupplier = new ColorSupplier();
         random = new Random();
     }
@@ -55,7 +49,7 @@ public class FigureSupplier {
     private Rectangle createRectangle() {
         String color = colorSupplier.getRandomColor();
         double length = getRandomSideLength();
-        double width = getResizedSideLength(length, length);
+        double width = getRandomSideLength();
         return new Rectangle(color, length, width);
     }
 
@@ -69,24 +63,12 @@ public class FigureSupplier {
     private IsoscelesTrapezoid createIsoscelesTrapezoid() {
         String color = colorSupplier.getRandomColor();
         double baseOne = getRandomSideLength();
-        double baseTwo = getResizedSideLength(baseOne, baseOne);
+        double baseTwo = getRandomSideLength();
         double height = getRandomSideLength();
         return new IsoscelesTrapezoid(color, baseOne, baseTwo, height);
     }
 
     private double getRandomSideLength() {
         return MIN_LENGTH_RANGE + random.nextDouble() * (MAX_LENGTH_RANGE - MIN_LENGTH_RANGE);
-    }
-
-    private boolean isNeedToResize(double a, double b) {
-        double delta = 0.00001;
-        return Math.abs(a - b) < delta;
-    }
-
-    private double getResizedSideLength(double a, double b) {
-        while (isNeedToResize(a, b)) {
-            b = getRandomSideLength();
-        }
-        return b;
     }
 }
