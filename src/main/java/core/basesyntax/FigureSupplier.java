@@ -15,27 +15,37 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         switch (random.nextInt(FIGURE_COUNT)) {
             case 0: {
-                int radius = random.nextInt((RANDOM_RANGE_MAX - RANDOM_RANGE_MIN) + 1) + RANDOM_RANGE_MIN;
+                int radius = random.nextInt(
+                        (RANDOM_RANGE_MAX - RANDOM_RANGE_MIN) + 1) + RANDOM_RANGE_MIN;
                 return new Circle(colorSupplier.getRandomColor(), radius);
             }
             case 1: {
-                int sideA = random.nextInt((RANDOM_RANGE_MAX - RANDOM_RANGE_MIN) + 1) + RANDOM_RANGE_MIN;
-                int sideB = random.nextInt((RANDOM_RANGE_MAX - RANDOM_RANGE_MIN) + 1) + RANDOM_RANGE_MIN;
-                int height = random.nextInt((RANDOM_RANGE_MAX - RANDOM_RANGE_MIN) + 1) + RANDOM_RANGE_MIN;
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), sideA, sideB, height);
+                int sideA = random.nextInt(
+                        (RANDOM_RANGE_MAX - RANDOM_RANGE_MIN) + 1) + RANDOM_RANGE_MIN;
+                int sideB = random.nextInt(
+                        (RANDOM_RANGE_MAX - RANDOM_RANGE_MIN) + 1) + RANDOM_RANGE_MIN;
+                int height = random.nextInt(
+                        (RANDOM_RANGE_MAX - RANDOM_RANGE_MIN) + 1) + RANDOM_RANGE_MIN;
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        sideA, sideB, height);
             }
             case 2: {
-                int sideA = random.nextInt((RANDOM_RANGE_MAX - RANDOM_RANGE_MIN) + 1) + RANDOM_RANGE_MIN;
-                int sideB = random.nextInt((RANDOM_RANGE_MAX - RANDOM_RANGE_MIN) + 1) + RANDOM_RANGE_MIN;
+                int sideA = random.nextInt(
+                        (RANDOM_RANGE_MAX - RANDOM_RANGE_MIN) + 1) + RANDOM_RANGE_MIN;
+                int sideB = random.nextInt(
+                        (RANDOM_RANGE_MAX - RANDOM_RANGE_MIN) + 1) + RANDOM_RANGE_MIN;
                 return new Rectangle(colorSupplier.getRandomColor(), sideA, sideB);
             }
             case 3: {
-                int firstLeg = random.nextInt((RANDOM_RANGE_MAX - RANDOM_RANGE_MIN) + 1) + RANDOM_RANGE_MIN;
-                int secondLeg = random.nextInt((RANDOM_RANGE_MAX - RANDOM_RANGE_MIN) + 1) + RANDOM_RANGE_MIN;
+                int firstLeg = random.nextInt(
+                        (RANDOM_RANGE_MAX - RANDOM_RANGE_MIN) + 1) + RANDOM_RANGE_MIN;
+                int secondLeg = random.nextInt(
+                        (RANDOM_RANGE_MAX - RANDOM_RANGE_MIN) + 1) + RANDOM_RANGE_MIN;
                 return new RightTriangle(colorSupplier.getRandomColor(), firstLeg, secondLeg);
             }
             case 4: {
-                int side = random.nextInt((RANDOM_RANGE_MAX - RANDOM_RANGE_MIN) + 1) + RANDOM_RANGE_MIN;
+                int side = random.nextInt(
+                        (RANDOM_RANGE_MAX - RANDOM_RANGE_MIN) + 1) + RANDOM_RANGE_MIN;
                 return new Square(colorSupplier.getRandomColor(), side);
             }
         }
