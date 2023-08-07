@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Locale;
 
-public class Square extends Figure{
+public class Square extends Figure {
     private int side;
 
     public Square(String color, int side) {
@@ -17,6 +17,6 @@ public class Square extends Figure{
 
     @Override
     public double area() {
-        return (double) side*side;
+        return (double) side * side;
     }
 }

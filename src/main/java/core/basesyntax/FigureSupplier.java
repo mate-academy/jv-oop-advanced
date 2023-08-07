@@ -11,6 +11,7 @@ public class FigureSupplier {
 
     private static final String DEFAULT_COLOR = "WHITE";
     private static final int DEFAULT_RADIUS = 10;
+
     public Figure getRandomFigure() {
         switch (random.nextInt(FIGURE_COUNT)) {
             case 0: {
@@ -26,7 +27,7 @@ public class FigureSupplier {
             case 2: {
                 int sideA = random.nextInt((RANDOM_RANGE_MAX - RANDOM_RANGE_MIN) + 1) + RANDOM_RANGE_MIN;
                 int sideB = random.nextInt((RANDOM_RANGE_MAX - RANDOM_RANGE_MIN) + 1) + RANDOM_RANGE_MIN;
-                return  new Rectangle(colorSupplier.getRandomColor(), sideA, sideB);
+                return new Rectangle(colorSupplier.getRandomColor(), sideA, sideB);
             }
             case 3: {
                 int firstLeg = random.nextInt((RANDOM_RANGE_MAX - RANDOM_RANGE_MIN) + 1) + RANDOM_RANGE_MIN;
@@ -40,6 +41,7 @@ public class FigureSupplier {
         }
         return getDefaultFigure();
     }
+
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }

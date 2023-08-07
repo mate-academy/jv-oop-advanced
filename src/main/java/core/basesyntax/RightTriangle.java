@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure{
+public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
@@ -17,6 +17,6 @@ public class RightTriangle extends Figure{
 
     @Override
     public double area() {
-        return (double) (firstLeg*secondLeg)/2;
+        return (double) (firstLeg * secondLeg) / 2;
     }
 }
