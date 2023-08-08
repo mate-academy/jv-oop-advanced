@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 abstract class Figure implements IDrawble {
-    protected String color = "Unset";
+    protected String color;
 
     public Figure() {
     }

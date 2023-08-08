@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private double radius = 0;
+    private double radius;
 
     public Circle() {
     }
@@ -12,7 +12,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    double getArea() {
+    public double getArea() {
         return Math.PI * radius * radius;
     }
 
