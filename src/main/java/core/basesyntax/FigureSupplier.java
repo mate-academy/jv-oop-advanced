@@ -9,7 +9,7 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        switch (new Random().nextInt(5)) {
+        switch (random.nextInt(5)) {
             case 0: return new Square(random.nextDouble(), colorSupplier.getRandomColor());
             case 1: return new Rectangle(random.nextDouble(), random.nextDouble(),
                     colorSupplier.getRandomColor());

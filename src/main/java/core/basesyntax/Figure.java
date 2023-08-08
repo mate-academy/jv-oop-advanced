@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-abstract class Figure implements IDrawble {
+abstract class Figure implements Drawble, GettibleArea {
     protected String color;
 
     public Figure() {
@@ -9,8 +9,6 @@ abstract class Figure implements IDrawble {
     public Figure(String color) {
         this.color = color;
     }
-
-    abstract double getArea();
 
     @Override
     public String draw() {

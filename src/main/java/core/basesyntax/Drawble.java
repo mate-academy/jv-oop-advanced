@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public interface IDrawble {
+public interface Drawble {
     String draw();
 }
