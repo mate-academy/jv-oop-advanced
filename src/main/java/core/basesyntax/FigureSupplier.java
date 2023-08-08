@@ -10,16 +10,36 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         switch (random.nextInt(5)) {
-            case 0: return new Square(random.nextDouble(), colorSupplier.getRandomColor());
-            case 1: return new Rectangle(random.nextDouble(), random.nextDouble(),
-                    colorSupplier.getRandomColor());
-            case 2: return new Circle(random.nextDouble(), colorSupplier.getRandomColor());
-            case 3: return new RightTriangle(random.nextDouble(), random.nextDouble(),
-                    colorSupplier.getRandomColor());
-            case 4: return new IsoscelesTrapezoid(random.nextDouble(), random.nextDouble(),
-                    random.nextDouble(), colorSupplier.getRandomColor());
+            case 0: return createSquare();
+            case 1: return createRectangle();
+            case 2: return createCircle();
+            case 3: return createRightTriangle();
+            case 4: return createIsoscelesTrapezoid();
             default: return getDefaultFigure();
         }
+    }
+
+    private Figure createSquare() {
+        return new Square(random.nextDouble(), colorSupplier.getRandomColor());
+    }
+
+    private Figure createRectangle() {
+        return new Rectangle(random.nextDouble(), random.nextDouble(),
+                colorSupplier.getRandomColor());
+    }
+
+    private Figure createCircle() {
+        return new Circle(random.nextDouble(), colorSupplier.getRandomColor());
+    }
+
+    private Figure createRightTriangle() {
+        return new RightTriangle(random.nextDouble(), random.nextDouble(),
+                colorSupplier.getRandomColor());
+    }
+
+    private Figure createIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(random.nextDouble(), random.nextDouble(),
+                random.nextDouble(), colorSupplier.getRandomColor());
     }
 
     public Figure getDefaultFigure() {
