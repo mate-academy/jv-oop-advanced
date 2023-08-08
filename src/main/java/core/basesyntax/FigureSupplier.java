@@ -11,7 +11,7 @@ public class FigureSupplier {
     private Random random = new Random();
 
     private int getRandomNumber() {
-        return new Random().nextInt((int) MAX_NUMBER + 1);
+        return random .nextInt((int) MAX_NUMBER + 1);
     }
 
     public Figure getRandomFigure() {
