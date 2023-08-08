@@ -8,6 +8,8 @@ public class FigureSupplier {
 
     private static final int VALUE = 10;
 
+    private static final int FIGURES_COUNT = 5;
+
     private final Random random = new Random();
 
     private final ColorSupplier colorSupplier;
@@ -17,9 +19,30 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        return new Rectangle(colorSupplier.getRandomColor(),
-                random.nextInt(MAX_VALUE),
-                random.nextInt(MAX_VALUE));
+        int figureNumber = random.nextInt(FIGURES_COUNT);
+        switch (figureNumber) {
+            case 0:
+                return new Rectangle(colorSupplier.getRandomColor(),
+                        random.nextInt(MAX_VALUE),
+                        random.nextInt(MAX_VALUE));
+            case 1:
+                return new Square(colorSupplier.getRandomColor(),
+                        random.nextInt(MAX_VALUE));
+            case 2:
+                return new RightTriangle(colorSupplier.getRandomColor(),
+                        random.nextInt(MAX_VALUE),
+                        random.nextInt(MAX_VALUE));
+            case 3:
+                return new Circle(colorSupplier.getRandomColor(),
+                        VALUE);
+            case 4:
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        random.nextInt(MAX_VALUE),
+                        random.nextInt(MAX_VALUE),
+                        random.nextInt(MAX_VALUE));
+            default:
+                throw new IllegalArgumentException("Invalid figure type: " + figureNumber);
+        }
     }
 
     public Figure getDefaultFigure() {
