@@ -16,52 +16,48 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int figureIndex = random.nextInt(FIGURE_COUNT);
+        String color = colorSupplier.getRandomColor();
         switch (figureIndex) {
             case 0:
-                return createCircle();
+                return createCircle(color);
             case 1:
-                return createSquare();
+                return createSquare(color);
             case 2:
-                return createRectangle();
+                return createRectangle(color);
             case 3:
-                return createRightTriangle();
+                return createRightTriangle(color);
             default:
-                return createIsoscelesTrapezoid();
+                return createIsoscelesTrapezoid(color);
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", MAX_LENGTH_RANGE);
+        return new Circle(Color.WHITE.name(), MAX_LENGTH_RANGE);
     }
 
-    private Circle createCircle() {
+    private Circle createCircle(String color) {
         double radius = getRandomSideLength();
-        String color = colorSupplier.getRandomColor();
         return new Circle(color, radius);
     }
 
-    private Square createSquare() {
-        String color = colorSupplier.getRandomColor();
+    private Square createSquare(String color) {
         double side = getRandomSideLength();
         return new Square(color, side);
     }
 
-    private Rectangle createRectangle() {
-        String color = colorSupplier.getRandomColor();
+    private Rectangle createRectangle(String color) {
         double length = getRandomSideLength();
         double width = getRandomSideLength();
         return new Rectangle(color, length, width);
     }
 
-    private RightTriangle createRightTriangle() {
-        String color = colorSupplier.getRandomColor();
+    private RightTriangle createRightTriangle(String color) {
         double firstLeg = getRandomSideLength();
         double secondLeg = getRandomSideLength();
         return new RightTriangle(color, firstLeg, secondLeg);
     }
 
-    private IsoscelesTrapezoid createIsoscelesTrapezoid() {
-        String color = colorSupplier.getRandomColor();
+    private IsoscelesTrapezoid createIsoscelesTrapezoid(String color) {
         double baseOne = getRandomSideLength();
         double baseTwo = getRandomSideLength();
         double height = getRandomSideLength();
