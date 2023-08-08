@@ -14,6 +14,7 @@ public class FigureSupplier {
     private static final Color DEFAULT_COLOR = Color.WHITE;
     private static final int MAX_LENGTH = 20;
     private static final int MIN_LENGTH = 1;
+    private static final int NUMBER_OF_FIGURES = 5;
 
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
@@ -24,17 +25,24 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         String color = colorSupplier.getRandomColor();
+        int figureIndex = random.nextInt(NUMBER_OF_FIGURES);
 
-        Figure[] figures = new Figure[]{
-            new Circle(color, getRandomLength()),
-            new Square(color, getRandomLength()),
-            new Rectangle(color, getRandomLength(), getRandomLength()),
-            new RightTriangle(color, getRandomLength(), getRandomLength()),
-            new IsoscelesTrapezoid(color, getRandomLength(), getRandomLength(), getRandomLength())
-        };
-
-        int index = random.nextInt(figures.length);
-        return figures[index];
+        switch (figureIndex) {
+            case 0:
+                return new Circle(color, getRandomLength());
+            case 1:
+                return new Square(color, getRandomLength());
+            case 2:
+                return new Rectangle(color, getRandomLength(), getRandomLength());
+            case 3:
+                return new RightTriangle(color, getRandomLength(), getRandomLength());
+            case 4:
+                return new IsoscelesTrapezoid(
+                        color, getRandomLength(), getRandomLength(), getRandomLength()
+                );
+            default:
+                return getDefaultFigure();
+        }
     }
 
     private int getRandomLength() {
