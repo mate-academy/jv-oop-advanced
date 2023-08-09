@@ -11,13 +11,13 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double getSquare() {
+    public double getArea() {
         return (double) (firstLeg * secondLeg) / 2;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: right triangle, area: " + getSquare()
+        System.out.println("Figure: right triangle, area: " + getArea()
                 + " sq.units, first leg: " + firstLeg
                 + " units, second leg: " + secondLeg
                 + " units, color: " + getColor());
