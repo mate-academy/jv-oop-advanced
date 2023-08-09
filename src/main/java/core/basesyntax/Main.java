@@ -1,9 +1,6 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Main {
-    public static final Random RANDOM = new Random();
     private static final int FIGURE_COUNT = 6;
     private static final FigureSupplier FIGURE_SUPPLIER = new FigureSupplier();
 
@@ -15,13 +12,7 @@ public class Main {
                 continue;
             }
             figures[i] = FIGURE_SUPPLIER.getDefaultFigure();
-        }
-        printFigures(figures);
-    }
-
-    private static void printFigures(Figure[] figures) {
-        for (Figure figure : figures) {
-            figure.draw();
+            figures[i].draw();
         }
     }
 }
