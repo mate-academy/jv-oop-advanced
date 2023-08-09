@@ -23,4 +23,3 @@ public class RightTriangle extends Figure {
         return (firstLeg * secondLeg) / 2;
     }
 }
-
