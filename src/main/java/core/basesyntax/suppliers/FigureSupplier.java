@@ -9,39 +9,31 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    static final double MAX_LENGTH = 25.0;
-    static final int AMOUNT_OF_FIGURES = 5;
+    private static final double MAX_LENGTH = 25.0;
+    private static final int AMOUNT_OF_FIGURES = 5;
+    private static final int DEFAULT_RADIUS = 10;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.getColor(), 10);
+        return new Circle(Color.WHITE.getColor(), DEFAULT_RADIUS);
     }
 
     public Figure getRandomFigure() {
-        int randomFigure = random.nextInt(AMOUNT_OF_FIGURES) + 1;
+        int randomFigureIndex = random.nextInt(AMOUNT_OF_FIGURES);
         String color = colorSupplier.getRandomColor();
-        switch (randomFigure) {
-            case 1:
-                double radius = MAX_LENGTH * random.nextDouble();
-                return new Circle(color, radius);
-            case 2:
-                double lowBase = MAX_LENGTH * random.nextDouble();
-                double upperBase = MAX_LENGTH * random.nextDouble();
-                double sidePart = MAX_LENGTH * random.nextDouble();
-                return new IsoscelesTrapezoid(color, lowBase, upperBase, sidePart);
-            case 3:
-                double firstSide = MAX_LENGTH * random.nextDouble();
-                double secondSide = MAX_LENGTH * random.nextDouble();
-                return new Rectangle(color, firstSide, secondSide);
-            case 4:
-                double firstSideTriangle = MAX_LENGTH * random.nextDouble();
-                double secondSideTriangle = MAX_LENGTH * random.nextDouble();
-                return new RightTriangle(color, firstSideTriangle, secondSideTriangle);
-            case 5:
-                double sideOfSquare = MAX_LENGTH * random.nextDouble();
-                return new Square(color, sideOfSquare);
+        switch (randomFigureIndex) {
+            case 0: return new Circle(color, getRandomUnits());
+            case 1: return new IsoscelesTrapezoid(color, getRandomUnits(),
+                    getRandomUnits(), getRandomUnits());
+            case 2: return new Rectangle(color, getRandomUnits(), getRandomUnits());
+            case 3: return new RightTriangle(color, getRandomUnits(), getRandomUnits());
+            case 4: return new Square(color, getRandomUnits());
             default: return getDefaultFigure();
         }
+    }
+
+    private double getRandomUnits() {
+        return MAX_LENGTH * random.nextDouble();
     }
 }
