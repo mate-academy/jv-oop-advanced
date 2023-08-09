@@ -4,7 +4,7 @@ public class IsoscelesTrapezoid extends Figure {
     private int high;
     private int middleLine;
 
-    public IsoscelesTrapezoid(Color color, int high, int middleLine) {
+    public IsoscelesTrapezoid(String color, int high, int middleLine) {
         super(color);
         this.high = high;
         this.middleLine = middleLine;
@@ -17,6 +17,9 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println(this);
+        System.out.println("Figure: isosceles trapezoid, area: " + getSquare()
+                + " sq.units, high: " + high
+                + " units, middle line: " + middleLine
+                + " units, color: " + getColor());
     }
 }
