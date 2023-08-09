@@ -50,11 +50,11 @@ public class FigureSupplier {
                 getRandomValue(), getRandomValue());
     }
 
-    public Figure getDefaultFigure() {
-        return new Circle(COLOR, CIRCLE_DEFAULT_RADIUS);
-    }
-
     private int getRandomValue() {
         return random.nextInt(MAX_VALUE);
+    }
+
+    public Figure getDefaultFigure() {
+        return new Circle(COLOR, CIRCLE_DEFAULT_RADIUS);
     }
 }
