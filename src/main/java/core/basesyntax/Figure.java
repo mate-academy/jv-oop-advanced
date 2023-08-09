@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-abstract class Figure implements Drawble, GettibleArea {
+abstract class Figure implements Drawable, AreaCalculator {
     protected String color;
 
     public Figure() {
@@ -10,7 +10,6 @@ abstract class Figure implements Drawble, GettibleArea {
         this.color = color;
     }
 
-    @Override
     public String draw() {
         return System.out.printf("Figure: %s, \tColor: %s, \tArea: %s, \t",
                 getClass().getSimpleName(), color, getArea()).toString();
