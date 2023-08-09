@@ -12,7 +12,6 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         String randomColor = colorSupplier.getRandomColor();
         int index = random.nextInt(NUMBER_OF_FIGURES);
-
         switch (index) {
             case 0:
                 return new Circle(randomColor, getRandomUnits());
@@ -31,10 +30,10 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.name(), DEFAULT_RADIUS);
+        return new Circle(Color.WHITE.name().toLowerCase(), DEFAULT_RADIUS);
     }
 
-    public int getRandomUnits() {
+    public double getRandomUnits() {
         return random.nextInt(MAX_UNITS);
     }
 }
