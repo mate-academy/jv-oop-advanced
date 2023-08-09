@@ -1,10 +1,9 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure{
+public class IsoscelesTrapezoid extends Figure {
     private int height;
     private int firstMainPart;
     private int secondMainPart;
-
 
     public IsoscelesTrapezoid(String color, int height, int firstMainPart, int secondMainPart) {
         super(color);
@@ -12,10 +11,12 @@ public class IsoscelesTrapezoid extends Figure{
         this.secondMainPart = secondMainPart;
         this.height = height;
     }
+
     @Override
     public int getArea() {
         return ((firstMainPart + secondMainPart) / 2) * height;
     }
+
     @Override
     public void draw() {
         System.out.println("Figure: isosceles trapezoid, area: " + getArea()
