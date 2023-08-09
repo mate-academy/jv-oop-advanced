@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int DEFAULT_UNITS = 10;
+    private static final int DEFAULT_RADIUS = 10;
     private static final int NUMBER_OF_FIGURES = 5;
     private static final int MAX_UNITS = 35;
     private Random random = new Random();
@@ -31,7 +31,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.name(), DEFAULT_UNITS);
+        return new Circle(Color.WHITE.name(), DEFAULT_RADIUS);
     }
 
     public int getRandomUnits() {
