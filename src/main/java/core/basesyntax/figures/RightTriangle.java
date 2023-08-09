@@ -18,9 +18,9 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String draw() {
-        return String.format("Figure: %s right triangle, first side: %.2f, "
-                        + "second side: %.2f, hypotenuse: %.2f, area: %.2f",
-                this.color, this.firstSide, this.secondSide, this.hypotenuse, this.getArea());
+    public void draw() {
+        System.out.println(String.format("Figure: %s right triangle,"
+                        + " first side: %.2f, second side: %.2f, hypotenuse: %.2f, area: %.2f",
+                this.color, this.firstSide, this.secondSide, this.hypotenuse, this.getArea()));
     }
 }

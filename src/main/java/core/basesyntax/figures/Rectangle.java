@@ -16,9 +16,9 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String draw() {
-        return String.format("Figure: %s rectangle, first side: %.2f,"
-                        + " second side: %.2f, area: %.2f",
-                this.color, this.firstSide, this.secondSide, this.getArea());
+    public void draw() {
+        System.out.println(String.format("Figure: %s rectangle,"
+                        + " first side: %.2f, second side: %.2f, area: %.2f",
+                       this.color, this.firstSide, this.secondSide, this.getArea()));
     }
 }
