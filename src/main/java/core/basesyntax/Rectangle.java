@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Shape {
+public class Rectangle extends Figure implements Drawable, AreaCalculator {
     private int sideA;
     private int sideB;
 
@@ -11,18 +11,13 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    public int figureArea() {
+    public int getArea() {
         return sideA * sideB;
     }
 
     @Override
-    public String getColor() {
-        return color;
-    }
-
-    @Override
-    public void drawFigure() {
-        System.out.println("Figure: rectangle, area: " + figureArea() + " sq. units, length: "
+    public void draw() {
+        System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, length: "
                 + sideA + " units, width: " + sideB + " units, color: " + color);
     }
 }
