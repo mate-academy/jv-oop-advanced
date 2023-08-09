@@ -25,7 +25,8 @@ public class FigureSupplier {
                         random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
             default:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
+                        random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE),
+                        random.nextInt(MAX_VALUE));
         }
     }
 
