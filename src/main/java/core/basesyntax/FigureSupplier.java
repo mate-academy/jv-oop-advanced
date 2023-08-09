@@ -26,7 +26,7 @@ public class FigureSupplier {
     }
 
     private double getParameter() {
-        return random.nextDouble(MAX_SIZE_OF_PARAMETER);
+        return random.nextDouble() * MAX_SIZE_OF_PARAMETER;
     }
 
     public Figure getDefaultFigure() {
