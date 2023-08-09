@@ -23,10 +23,9 @@ public class FigureSupplier {
                 return getRectangle();
             case "RightTriangle":
                 return getRightTriangle();
-            case "IsoscelesTraezoid":
+            default:
                 return getIsoscelesTrapezoid();
         }
-        return null;
     }
 
     private Circle getCircle() {
@@ -42,7 +41,8 @@ public class FigureSupplier {
     }
 
     private RightTriangle getRightTriangle() {
-        return new RightTriangle(colorSupplier.getRandomColor(), getRandomValue(), getRandomValue());
+        return new RightTriangle(colorSupplier.getRandomColor(), getRandomValue(),
+                getRandomValue());
     }
 
     private IsoscelesTrapezoid getIsoscelesTrapezoid() {
