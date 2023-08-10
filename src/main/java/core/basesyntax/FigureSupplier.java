@@ -4,39 +4,34 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_INDEX = 5;
-    private static final int MAX_UNITS = 100;
-    private static final Random random = new Random();
-    private static final String DEFAULT_COLOR = Color.values()[0].name().toLowerCase();
+    private static final double MAX_UNITS = 100;
     private static final int DEFAULT_RADIUS = 10;
+    private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
         int randomIndex = random.nextInt(MAX_INDEX);
         switch (randomIndex) {
             case 0:
-                return new Square("square",
-                                  new ColorSupplier().getRandomColor(),
-                                  random.nextInt(MAX_UNITS));
+                return new Square(new ColorSupplier().getRandomColor(),
+                                  random.nextDouble(MAX_UNITS));
             case 1:
-                return new Rectangle("rectangle",
-                                     new ColorSupplier().getRandomColor(),
-                                     random.nextInt(MAX_UNITS), random.nextInt(MAX_UNITS));
+                return new Rectangle(new ColorSupplier().getRandomColor(),
+                                     random.nextDouble(MAX_UNITS), random.nextDouble(MAX_UNITS));
             case 2:
-                return new Circle("circle",
-                                  new ColorSupplier().getRandomColor(),
-                                  random.nextInt(MAX_UNITS));
+                return new Circle(new ColorSupplier().getRandomColor(),
+                                  random.nextDouble(MAX_UNITS));
             case 3:
-                return new RightTriangle("right triangle",
-                                         new ColorSupplier().getRandomColor(),
-                                         random.nextInt(MAX_UNITS), random.nextInt(MAX_UNITS));
+                return new RightTriangle(new ColorSupplier().getRandomColor(),
+                                    random.nextDouble(MAX_UNITS), random.nextDouble(MAX_UNITS));
             default:
-                return new IsoscelesTrapezoid("isosceles trapezoid",
-                                              new ColorSupplier().getRandomColor(),
-                                              random.nextInt(MAX_UNITS), random.nextInt(MAX_UNITS),
-                                              random.nextInt(MAX_UNITS), random.nextInt(MAX_UNITS));
+                return new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(),
+                                     random.nextDouble(MAX_UNITS), random.nextDouble(MAX_UNITS),
+                                     random.nextDouble(MAX_UNITS), random.nextDouble(MAX_UNITS));
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("circle", DEFAULT_COLOR, DEFAULT_RADIUS);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }

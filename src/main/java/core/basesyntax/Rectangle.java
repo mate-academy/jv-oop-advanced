@@ -1,14 +1,13 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private int firstSide;
-    private int secondSide;
+    private final double firstSide;
+    private final double secondSide;
 
-    public Rectangle(String type, String color, int firstSide, int secondSide) {
-        super(type, color);
+    public Rectangle(String color, double firstSide, double secondSide) {
+        super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
-
     }
 
     @Override
@@ -18,8 +17,10 @@ public class Rectangle extends Figure {
 
     @Override
     public String getDrawing() {
-        return "Figure : " + getType() + ", area: " + getArea()
-                 + " sq.units, first side: " + firstSide + " second side: "
-                 + secondSide + " units, color: " + getColor();
+        return "Figure : " + this.getClass().getSimpleName().toLowerCase()
+                + ", area: " + String.format("%.2f", getArea())
+                + " sq.units, first side: " + firstSide
+                + " second side: " + secondSide + " units, color: "
+                + getColor();
     }
 }
