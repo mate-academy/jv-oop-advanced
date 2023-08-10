@@ -1,9 +1,8 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private final String name = "Rectangle";
-    private double length;
-    private double width;
+    private final double length;
+    private final double width;
 
     public Rectangle(String color, double length, double width) {
         super(color);
@@ -13,18 +12,12 @@ public class Rectangle extends Figure {
 
     @Override
     public String drawFigure() {
-        return "Figure: " + name + ", area: " + getArea() + " sq.units" + getUniqueProperties()
-                + ", color: " + color;
+        return "Figure: rectangle, area: " + getArea() + " sq.units, length: "
+                + length + " units, width: " + width + " units, color: " + color;
     }
 
     @Override
     public double getArea() {
         return length * width;
-    }
-
-    @Override
-    public String getUniqueProperties() {
-        return ", length: " + length + " units" + ", width: "
-                + width + " units";
     }
 }

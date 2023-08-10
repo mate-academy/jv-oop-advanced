@@ -1,8 +1,7 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private final String name = "Circle";
-    private double radius;
+    private final double radius;
 
     public Circle(String color, double radius) {
         super(color);
@@ -11,18 +10,12 @@ public class Circle extends Figure {
 
     @Override
     public String drawFigure() {
-        return "Figure: " + name + ", area: " + getArea() + " sq.units" + getUniqueProperties()
-                + ", color: " + color;
+        return "Figure: circle, area: " + getArea() + " sq.units, radius: "
+                + radius + " units, color: " + color;
     }
 
     @Override
     public double getArea() {
         return Math.PI * radius * radius;
-    }
-
-    @Override
-    public String getUniqueProperties() {
-        return ", radius: " + radius + " units";
-
     }
 }
