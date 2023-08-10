@@ -1,8 +1,7 @@
 package core.basesyntax;
 
 public abstract class Figure implements Draw {
-    private String color;
-    private double square;
+    private final String color;
 
     public Figure(String color) {
         this.color = color;
