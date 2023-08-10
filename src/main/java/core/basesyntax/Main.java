@@ -1,10 +1,7 @@
 package core.basesyntax;
 
-/**
- * Feel free to remove this class and create your own.
- */
 public class Main {
-    public static final int ARRAY_SIZE = 6;
+    private static final int ARRAY_SIZE = 6;
 
     public static void main(String[] args) {
         Figure[] figures = new Figure[ARRAY_SIZE];
@@ -13,10 +10,9 @@ public class Main {
             if (ARRAY_SIZE / 2 > i) {
                 figures[i] = figureSuplier.getRandomFigure();
             } else {
-                figures[i] = figures[i - ARRAY_SIZE / 2];
+                figures[i] = figureSuplier.getDefaultFigure();
             }
             figures[i].draw();
         }
     }
 }
-

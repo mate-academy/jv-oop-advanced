@@ -1,11 +1,12 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private int height;
-    private int firstMainPart;
-    private int secondMainPart;
+    private double height;
+    private double firstMainPart;
+    private double secondMainPart;
 
-    public IsoscelesTrapezoid(String color, int height, int firstMainPart, int secondMainPart) {
+    public IsoscelesTrapezoid(String color, double height, double firstMainPart,
+                              double secondMainPart) {
         super(color);
         this.firstMainPart = firstMainPart;
         this.secondMainPart = secondMainPart;
@@ -13,7 +14,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public int getArea() {
+    public double getArea() {
         return ((firstMainPart + secondMainPart) / 2) * height;
     }
 
@@ -22,6 +23,6 @@ public class IsoscelesTrapezoid extends Figure {
         System.out.println("Figure: isosceles trapezoid, area: " + getArea()
                 + " sq. units, upper base: " + firstMainPart
                 + " units, lower base: " + secondMainPart
-                + " units, height: " + height + " units, color: " + color);
+                + " units, height: " + height + " units, color: " + getColor());
     }
 }

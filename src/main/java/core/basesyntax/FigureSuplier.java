@@ -3,13 +3,14 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSuplier {
-    public static final String DEFAULT_COLOR = "White";
-    public static final int DEFAULT_RADIUS = 10;
-    private static ColorSuplier colorSuplier = new ColorSuplier();
-    private static Random random = new Random();
+    private static final String DEFAULT_COLOR = "White";
+    private static final int DEFAULT_RADIUS = 10;
+    private static final int FIGURE_COUNT = 5;
+    private ColorSuplier colorSuplier = new ColorSuplier();
+    private Random random = new Random();
 
     public Figure getRandomFigure() {
-        switch (random.nextInt(5)) {
+        switch (random.nextInt(FIGURE_COUNT)) {
             case 0: return createCircle();
             case 1: return createRectangle();
             case 2: return createSquare();
@@ -19,29 +20,31 @@ public class FigureSuplier {
         }
     }
 
-    public Figure createRectangle() {
-        return new Rectangle(colorSuplier.getRandomColor(),random.nextInt(),random.nextInt());
+    private Figure createRectangle() {
+        return new Rectangle(colorSuplier.getRandomColor(), random.nextDouble(),
+                random.nextDouble());
     }
 
-    public Figure createSquare() {
-        return new Square(colorSuplier.getRandomColor(), random.nextInt());
+    private Figure createSquare() {
+        return new Square(colorSuplier.getRandomColor(),
+                random.nextDouble());
     }
 
-    public Figure createRightTriangle() {
-        return new RightTriangle(colorSuplier.getRandomColor(),random.nextInt(),
-                random.nextInt());
+    private Figure createRightTriangle() {
+        return new RightTriangle(colorSuplier.getRandomColor(), random.nextDouble(),
+                random.nextDouble());
     }
 
-    public Figure createCircle() {
-        return new Circle(colorSuplier.getRandomColor(), random.nextInt());
+    private Figure createCircle() {
+        return new Circle(colorSuplier.getRandomColor(), random.nextDouble());
     }
 
-    public Figure createTrapezoid() {
-        return new IsoscelesTrapezoid(colorSuplier.getRandomColor(),random.nextInt(),
-                random.nextInt(), random.nextInt());
+    private Figure createTrapezoid() {
+        return new IsoscelesTrapezoid(colorSuplier.getRandomColor(), random.nextDouble(),
+                random.nextDouble(), random.nextDouble());
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR,DEFAULT_RADIUS);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
