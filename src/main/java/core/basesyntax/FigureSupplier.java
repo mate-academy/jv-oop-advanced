@@ -8,22 +8,22 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         String colorOfFigure = colorSupplier.getRandomColor();
-        int numberOfFigure = random.nextInt(5);
-        double randomSize = random.nextDouble();
+        int numberOfFigure = random.nextInt(6);
+        if (numberOfFigure == 0) {
+            return new Circle(colorOfFigure, random.nextDouble());
+        }
         if (numberOfFigure == 1) {
-            return new Circle(colorOfFigure, randomSize);
+            return new Square(colorOfFigure, random.nextDouble());
         }
         if (numberOfFigure == 2) {
-            return new Square(colorOfFigure, randomSize);
+            return new RightTriangle(colorOfFigure, random.nextDouble(), random.nextDouble());
         }
         if (numberOfFigure == 3) {
-            return new RightTriangle(colorOfFigure, randomSize, randomSize);
+            return new Rectangle(colorOfFigure, random.nextDouble(), random.nextDouble());
         }
         if (numberOfFigure == 4) {
-            return new Rectangle(colorOfFigure, randomSize, randomSize);
-        }
-        if (numberOfFigure == 5) {
-            return new IsoscelesTrapezoid(colorOfFigure, randomSize, randomSize, randomSize);
+            return new IsoscelesTrapezoid(colorOfFigure,
+                    random.nextDouble(), random.nextDouble(), random.nextDouble());
         }
         return getDefaultFigure();
     }
