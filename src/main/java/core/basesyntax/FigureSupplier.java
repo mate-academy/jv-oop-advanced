@@ -13,23 +13,23 @@ public class FigureSupplier {
         switch (random.nextInt(FIGURE_QUANTITY)) {
             case 0:
                 return new Circle(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_SEGMENT_LENGTH));
+                        random.nextDouble() * MAX_SEGMENT_LENGTH);
             case 1:
                 return new Rectangle(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_SEGMENT_LENGTH),
-                        random.nextInt(MAX_SEGMENT_LENGTH));
+                        random.nextDouble() * MAX_SEGMENT_LENGTH,
+                        random.nextDouble() * MAX_SEGMENT_LENGTH);
             case 2:
                 return new Square(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_SEGMENT_LENGTH));
+                        random.nextDouble() * MAX_SEGMENT_LENGTH);
             case 3:
                 return new RightTriangle(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_SEGMENT_LENGTH),
-                        random.nextInt(MAX_SEGMENT_LENGTH));
+                        random.nextDouble() * MAX_SEGMENT_LENGTH,
+                        random.nextDouble() * MAX_SEGMENT_LENGTH);
             default:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_SEGMENT_LENGTH),
-                        random.nextInt(MAX_SEGMENT_LENGTH),
-                        random.nextInt(MAX_SEGMENT_LENGTH));
+                        random.nextDouble() * MAX_SEGMENT_LENGTH,
+                        random.nextDouble() * MAX_SEGMENT_LENGTH,
+                        random.nextDouble() * MAX_SEGMENT_LENGTH);
         }
     }
 
