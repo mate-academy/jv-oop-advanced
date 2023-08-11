@@ -3,8 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private Random random = new Random();
     public static final int MAX_VALUE = 50;
+    private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Figure circle = new Circle("White", 10);
 
