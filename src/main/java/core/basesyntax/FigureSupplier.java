@@ -3,14 +3,14 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int MAX_INDEX = 5;
-    private static final double MAX_UNITS = 100;
-    private static final int DEFAULT_RADIUS = 10;
-    private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
-    private final Random random = new Random();
+    private static int maxIndex = 5;
+    private static double maxUnits = 100;
+    private static int defaultRadius = 10;
+    private static String defaultColor = Color.WHITE.name().toLowerCase();
+    private Random random = new Random();
 
     public Figure getRandomFigure() {
-        int randomIndex = random.nextInt(MAX_INDEX);
+        int randomIndex = random.nextInt(maxIndex);
         switch (randomIndex) {
             case 0:
                 return new Square(new ColorSupplier().getRandomColor(),
@@ -32,6 +32,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
+        return new Circle(defaultColor, defaultRadius);
     }
 }
