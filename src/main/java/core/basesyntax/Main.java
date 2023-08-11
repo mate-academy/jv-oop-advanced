@@ -3,9 +3,6 @@ package core.basesyntax;
 import core.basesyntax.figures.Figure;
 import core.basesyntax.suppliers.FigureSupplier;
 
-/**
- * Feel free to remove this class and create your own.
- */
 public class Main {
     private static final int MAX_FIGURES = 6;
 
