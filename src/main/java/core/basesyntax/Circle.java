@@ -14,10 +14,11 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String getDrawing() {
-        return "Figure : " + this.getClass().getSimpleName().toLowerCase()
+    public boolean getDrawing() {
+        System.out.println("Figure : " + this.getClass().getSimpleName().toLowerCase()
                 + ", area: " + String.format("%.2f", getArea())
                 + " sq.units, radius: " + radius + " units, color: "
-                + getColor();
+                + getColor());
+        return false;
     }
 }

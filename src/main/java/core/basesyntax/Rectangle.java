@@ -16,11 +16,12 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String getDrawing() {
-        return "Figure : " + this.getClass().getSimpleName().toLowerCase()
+    public boolean getDrawing() {
+        System.out.println("Figure : " + this.getClass().getSimpleName().toLowerCase()
                 + ", area: " + String.format("%.2f", getArea())
                 + " sq.units, first side: " + firstSide
                 + " second side: " + secondSide + " units, color: "
-                + getColor();
+                + getColor());
+        return false;
     }
 }

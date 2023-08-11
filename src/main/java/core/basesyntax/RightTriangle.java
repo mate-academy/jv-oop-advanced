@@ -16,10 +16,11 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String getDrawing() {
-        return "Figure : " + this.getClass().getSimpleName().toLowerCase()
+    public boolean getDrawing() {
+        System.out.println("Figure : " + this.getClass().getSimpleName().toLowerCase()
                 + ", area: " + String.format("%.2f", getArea())
                 + " sq.units, first leg: " + firstLeg + " second leg: "
-                + secondLeg + " units, color: " + getColor();
+                + secondLeg + " units, color: " + getColor());
+        return false;
     }
 }

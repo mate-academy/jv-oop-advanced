@@ -14,20 +14,20 @@ public class FigureSupplier {
         switch (randomIndex) {
             case 0:
                 return new Square(new ColorSupplier().getRandomColor(),
-                                  random.nextDouble(MAX_UNITS));
+                                  random.nextDouble());
             case 1:
                 return new Rectangle(new ColorSupplier().getRandomColor(),
-                                     random.nextDouble(MAX_UNITS), random.nextDouble(MAX_UNITS));
+                                     random.nextDouble(), random.nextDouble());
             case 2:
                 return new Circle(new ColorSupplier().getRandomColor(),
-                                  random.nextDouble(MAX_UNITS));
+                                  random.nextDouble());
             case 3:
                 return new RightTriangle(new ColorSupplier().getRandomColor(),
-                                    random.nextDouble(MAX_UNITS), random.nextDouble(MAX_UNITS));
+                                    random.nextDouble(), random.nextDouble());
             default:
                 return new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(),
-                                     random.nextDouble(MAX_UNITS), random.nextDouble(MAX_UNITS),
-                                     random.nextDouble(MAX_UNITS), random.nextDouble(MAX_UNITS));
+                                     random.nextDouble(), random.nextDouble(),
+                                     random.nextDouble(), random.nextDouble());
         }
     }
 
