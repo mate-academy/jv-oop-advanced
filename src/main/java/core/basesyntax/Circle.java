@@ -9,9 +9,9 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String drawFigure() {
-        return "Figure: circle, area: " + getArea() + " sq.units, radius: "
-                + radius + " units, color: " + color;
+    public void drawFigure() {
+        System.out.println("Figure: circle, area: " + getArea() + " sq.units, radius: "
+                + radius + " units, color: " + color);
     }
 
     @Override
