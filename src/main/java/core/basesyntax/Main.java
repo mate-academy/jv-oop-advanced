@@ -3,17 +3,14 @@ package core.basesyntax;
 public class Main {
 
     public static void main(String[] args) {
-
         FigureSupplier figureSupplier = new FigureSupplier();
-        Figure square = new Square(3, "red");
-        Figure circle = figureSupplier.getDefoltFigure();
-        Figure rectangle = new Rectangle(4, 5, "blue");
+        Figure randomFigureOne = figureSupplier.getRandomFigure();
+        Figure randomFigureTwo = figureSupplier.getRandomFigure();
+        Figure defoltFigure = figureSupplier.getDefoltFigure();
 
-        Figure[] figures = new Figure[] {square, circle, rectangle};
+        Figure[] figures = new Figure[] {randomFigureOne, randomFigureTwo, defoltFigure};
         for (Figure figure : figures) {
             System.out.println(figure.printInfo());
         }
-
     }
-
 }
