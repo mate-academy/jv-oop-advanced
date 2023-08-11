@@ -13,7 +13,7 @@ public class FigureSupplier {
     private static final int COUNT_OF_FIGURES = 5;
     private static final double MAX_LENGTH = 25.0;
     private static final double MIN_LENGTH = 1.0;
-    private static final String DEFAULT_COLOR = Color.WHITE.name();
+    private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
     private static final double DEFAULT_LENGTH = 10.0;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
