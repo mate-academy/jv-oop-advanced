@@ -1,10 +1,10 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private int width;
-    private int length;
+    private double width;
+    private double length;
 
-    public Rectangle(String color, int width, int length) {
+    public Rectangle(String color, double width, double length) {
         super(color);
         this.length = length;
         this.width = width;
@@ -22,5 +22,4 @@ public class Rectangle extends Figure {
                 + ", Length: " + length + ", Color: "
                 + getColor());
     }
-
 }
