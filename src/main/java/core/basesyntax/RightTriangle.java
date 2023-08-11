@@ -11,6 +11,7 @@ public class RightTriangle extends Figure {
         this.hypotenuse = hypotenuse;
         this.base = base;
     }
+
     @Override
     public double getArea() {
         return perpendicular * base * 0.5;
@@ -19,8 +20,8 @@ public class RightTriangle extends Figure {
     @Override
     public void draw() {
         System.out.printf(
-                "Figure: right triangle, area: %.2f sq.units, " +
-                        "perpendicular: %.2f, hypotenuse: %.2f, base: %.2f, color: %s%n",
+                "Figure: right triangle, area: %.2f sq.units, "
+                        + "perpendicular: %.2f, hypotenuse: %.2f, base: %.2f, color: %s%n",
                 this.getArea(), perpendicular, hypotenuse, base, this.getColor());
 
     }

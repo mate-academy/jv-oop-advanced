@@ -6,12 +6,12 @@ public class FigureSupplier {
     private static Random random = new Random();
     private static ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figure getDefaultFigure(){
+    public Figure getDefaultFigure() {
         return new Circle(colorSupplier.getRandomColor(), 10.0);
     }
 
-    public Figure getRandomFigure(){
-        switch (random.nextInt(5)){
+    public Figure getRandomFigure() {
+        switch (random.nextInt(5)) {
             case 0:
                 return new Rectangle(
                         colorSupplier.getRandomColor(),
@@ -42,11 +42,12 @@ public class FigureSupplier {
                         getSide(),
                         getSide()
                 );
+            default:
+                return null;
         }
-        return null;
     }
     
-    private double getSide(){
+    private double getSide() {
         return random.nextDouble() * 10;
     }
 

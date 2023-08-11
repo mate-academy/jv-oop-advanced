@@ -9,7 +9,7 @@ public class Main {
                 figureSupplier.getRandomFigure(),
                 figureSupplier.getRandomFigure()
         };
-        for (Figure figure: figures){
+        for (Figure figure: figures) {
             figure.draw();
         }
     }
