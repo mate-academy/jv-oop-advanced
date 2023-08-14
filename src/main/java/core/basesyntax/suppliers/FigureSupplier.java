@@ -16,10 +16,6 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    private int getRandomUnits() {
-        return random.nextInt(MAX_LENGTH);
-    }
-
     public Figure getDefaultFigure() {
         return new Circle(Color.WHITE.getColor(), DEFAULT_RADIUS);
     }
@@ -42,5 +38,9 @@ public class FigureSupplier {
             default:
                 return getDefaultFigure();
         }
+    }
+
+    private int getRandomUnits() {
+        return random.nextInt(MAX_LENGTH);
     }
 }

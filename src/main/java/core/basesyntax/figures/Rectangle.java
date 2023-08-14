@@ -17,7 +17,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println(String.format("Side A: %s, Side B: %s",
-                width, height));
+        System.out.println(String.format("Side A: %s, Side B: %s, Color: %s, Area: %.2f",
+                width, height, color, getArea()));
     }
 }
