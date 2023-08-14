@@ -13,7 +13,6 @@ public class FigureSupplier {
 
     private ColorSupplier colorSupplire = new ColorSupplier();
 
-
     public Figure getRandomFigure() {
         switch (randomFigure.nextInt(MAX_RANDOM_PROPERTIES)) {
             case 1:
