@@ -1,9 +1,9 @@
 package core.basesyntax.figures;
 
 public class IsoscelesTrapezoid extends Figure {
-    protected double topSide;
-    protected double bottomSide;
-    protected double height;
+    private double topSide;
+    private double bottomSide;
+    private double height;
 
     public IsoscelesTrapezoid(String color, double topSide, double bottomSide, double height) {
         super(color);

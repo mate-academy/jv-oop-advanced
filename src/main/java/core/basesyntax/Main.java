@@ -8,7 +8,6 @@ class Main {
     private static final FigureSupplier figureSupplier = new FigureSupplier();
 
     public static void main(String[] params) {
-
         Figure[] figures = new Figure[FIGURES_AMOUNT];
 
         for (int i = 0; i < figures.length; i++) {
