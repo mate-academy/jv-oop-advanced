@@ -19,13 +19,12 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("Figure: right triangle, area: ").append(getArea())
-                .append(", hypotenuse: ").append(hypotenuse)
-                .append(", firstLeg: ").append(firstLeg)
-                .append(", secondLeg: ").append(secondLeg)
-                .append(", color: ").append(getColor())
-                .append('\n');
-        System.out.println(stringBuilder.toString());
+        System.out.println(
+                "Figure: right triangle, area: " + getArea()
+                + ", hypotenuse: " + hypotenuse
+                + ", firstLeg: " + firstLeg
+                + ", secondLeg: " + secondLeg
+                + ", color: " + getColor()
+                + "\n");
     }
 }

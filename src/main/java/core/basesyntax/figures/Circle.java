@@ -15,11 +15,11 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("Figure: circle, area: ").append(getArea())
-                     .append(", radius: ").append(radius)
-                     .append(", color: ").append(getColor())
-                     .append('\n');
-        System.out.println(stringBuilder.toString());
+
+        System.out.println(
+                "Figure: circle, area: " + getArea()
+                + ", radius: " + radius
+                + ", color: " + getColor()
+                + "\n");
     }
 }

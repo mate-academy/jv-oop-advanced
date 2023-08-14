@@ -17,12 +17,11 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("Figure: rectangle, area: ").append(getArea())
-                .append(", firstSide: ").append(firstSide)
-                .append(", secondSide: ").append(secondSide)
-                .append(", color:").append(getColor())
-                .append('\n');
-        System.out.println(stringBuilder.toString());
+        System.out.println(
+                "Figure: rectangle, area: " + getArea()
+                + ", firstSide: " + firstSide
+                + ", secondSide: " + secondSide
+                + ", color: " + getColor()
+                + "\n");
     }
 }

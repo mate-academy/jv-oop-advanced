@@ -15,11 +15,10 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        StringBuilder stringBuilder = new StringBuilder();
-        stringBuilder.append("Figure: square, area: ").append(getArea())
-                .append(", side: ").append(side)
-                .append(", color:").append(getColor())
-                .append('\n');
-        System.out.println(stringBuilder.toString());
+        System.out.println(
+                "Figure: square, area: " + getArea()
+                + ", side: " + side
+                + ", color: " + getColor()
+                + "\n");
     }
 }
