@@ -3,9 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-
     private static final double MAX_LENGTH = 25.0;
-
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -18,10 +16,10 @@ public class FigureSupplier {
         String color = colorSupplier.getRandomColor();
         switch (randomFigureIndex) {
             case 0: return new Circle(getRandomUnits(), color);
-            case 1: return new IsoscelesTrapezoid(getRandomUnits(),getRandomUnits(),color);
-            case 2: return new Rectangle(getRandomUnits(),getRandomUnits(),color);
-            case 3: return new RightTriangle(getRandomUnits(),color);
-            case 4: return new Square(getRandomUnits(),color);
+            case 1: return new IsoscelesTrapezoid(getRandomUnits(), getRandomUnits(), color);
+            case 2: return new Rectangle(getRandomUnits(), getRandomUnits(), color);
+            case 3: return new RightTriangle(getRandomUnits(), color);
+            case 4: return new Square(getRandomUnits(), color);
             default: return getDefaultFigure();
         }
     }
