@@ -5,10 +5,11 @@ public class IsoscelesTrapezoid extends Figure {
     private double secondSide;
     private double height;
 
-    public IsoscelesTrapezoid(String color, double firstSide, double secondSide) {
+    public IsoscelesTrapezoid(String color, double firstSide, double secondSide, double height) {
         super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
+        this.height = height;
     }
 
     public double getFirstSide() {
@@ -30,9 +31,9 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: isosceles trapezoid, area: "
-                + calculateArea() + "sq.units, firstSide:" + getFirstSide()
-                + ", secondSide: " + getSecondSide() + ", height: " + getHeight()
-                + ", color: " + getColor());
+        System.out.println(String.format("Figure: isosceles trapezoid, area: %1f "
+                        + "sq.units, firstSide: %1f, secondSide:"
+                        + "%1f, height: %1f, color: %s", calculateArea(), getFirstSide(),
+                getSecondSide(), getHeight(), getColor()));
     }
 }

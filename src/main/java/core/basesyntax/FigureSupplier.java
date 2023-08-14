@@ -20,7 +20,7 @@ public class FigureSupplier {
                 return new Square(colorSupplier.getRandomColor(), randomSize());
             case 2:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        randomSize(), randomSize());
+                        randomSize(), randomSize(), randomSize());
             case 3:
                 return new RightTriangle(colorSupplier.getRandomColor(),
                         randomSize(), randomSize());
