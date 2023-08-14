@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-
     private double base;
     private double height;
 
@@ -16,7 +15,7 @@ public class RightTriangle extends Figure {
         System.out.println("Figure: right triangle , area : " + getArea()
                 + " sq.units , base : " + base
                 + " units , height : " + height
-                + " units , color :" + getColor());
+                + " units , color : " + getColor());
     }
 
     @Override
