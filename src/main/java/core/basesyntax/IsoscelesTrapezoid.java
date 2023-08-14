@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private final int firstSide;
-    private final int secondSide;
-    private final int hipOfTrapezoid;
+    private int firstSide;
+    private int secondSide;
+    private int hipOfTrapezoid;
 
     public IsoscelesTrapezoid(String color, int firstSide, int secondSide, int hipOfTrapezoid) {
         super(color);
@@ -14,25 +14,15 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double getArea() {
-        int bigSide;
-        int smallSide;
-        if (firstSide == secondSide) {
-            return firstSide * secondSide;
-        }
-        if (firstSide > secondSide) {
-            bigSide = firstSide;
-            smallSide = secondSide;
-        } else {
-            bigSide = secondSide;
-            smallSide = firstSide;
-        }
+        int bigSide = Math.max(firstSide, secondSide);
+        int smallSide = Math.min(firstSide,secondSide);
         double firstLeg = (double) (bigSide - smallSide) / 2;
         double height = Math.sqrt(hipOfTrapezoid * hipOfTrapezoid - firstLeg * firstLeg);
         return height * (bigSide + smallSide) / 2;
     }
 
     @Override
-    public void toDraw() {
+    public void draw() {
         System.out.println("Figure: isosceles trapezoid, area: "
                 + String.format("%.1f", getArea())
                 + " sq.units, first side: "

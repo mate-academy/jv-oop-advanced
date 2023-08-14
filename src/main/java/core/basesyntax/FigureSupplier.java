@@ -11,53 +11,48 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        Figure figure;
         int index = random.nextInt(BOUND);
         switch (index) {
             case 0:
-                figure = toGetCircle();
-                break;
+                return getCircle();
             case 1:
-                figure = toGetIsoscelesTrapezoid();
-                break;
+                return getIsoscelesTrapezoid();
             case 2:
-                figure = toGetSquare();
-                break;
+                return getSquare();
             case 3:
-                figure = toGetRightTriangle();
-                break;
+                return getRightTriangle();
             default:
-                figure = toGetRectangle();
+                return getRectangle();
         }
-        return figure;
     }
 
-    private int getInt() {
+    private int getRandomInt() {
         return random.nextInt(MAX_VALUE) + 1;
     }
 
-    private String getColor() {
+    private String getRandomColor() {
         return colorSupplier.getRandomColor();
     }
 
-    private Figure toGetCircle() {
-        return new Circle(getColor(), getInt());
+    private Figure getCircle() {
+        return new Circle(getRandomColor(), getRandomInt());
     }
 
-    private Figure toGetIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(getColor(), getInt(), getInt(), getInt());
+    private Figure getIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(getRandomColor(), getRandomInt(),
+                getRandomInt(), getRandomInt());
     }
 
-    private Figure toGetRectangle() {
-        return new Rectangle(getColor(), getInt(), getInt());
+    private Figure getRectangle() {
+        return new Rectangle(getRandomColor(), getRandomInt(), getRandomInt());
     }
 
-    private Figure toGetRightTriangle() {
-        return new RightTriangle(getColor(), getInt(), getInt());
+    private Figure getRightTriangle() {
+        return new RightTriangle(getRandomColor(), getRandomInt(), getRandomInt());
     }
 
-    private Figure toGetSquare() {
-        return new Square(getColor(), getInt());
+    private Figure getSquare() {
+        return new Square(getRandomColor(), getRandomInt());
     }
 
     public Figure getDefaultFigure() {

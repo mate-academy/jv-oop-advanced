@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    private final int side;
+    private int side;
 
     public Square(String color, int side) {
         super(color);
@@ -14,7 +14,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public void toDraw() {
+    public void draw() {
         System.out.println("Figure: square, area: "
                 + String.format("%.1f", getArea())
                 + " sq.units, side: "
