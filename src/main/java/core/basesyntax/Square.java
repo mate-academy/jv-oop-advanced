@@ -18,5 +18,4 @@ public class Square extends Figure {
         System.out.println(String.format("Figure: %s square, side: %.2f, area: %.2f",
                 this.color, this.side, this.getArea()));
     }
-
 }

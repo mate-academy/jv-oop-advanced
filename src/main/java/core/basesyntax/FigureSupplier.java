@@ -1,5 +1,6 @@
 package core.basesyntax;
 
+import core.basesyntax.enums.Color;
 import java.util.Random;
 
 public class FigureSupplier {
@@ -10,11 +11,7 @@ public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getDefaultFigure() {
-        return new Circle("white", DEFAULT_RADIOS);
-    }
-
-    private double getRandomUnits() {
-        return MAX_LENGTH * random.nextDouble();
+        return new Circle(Color.WHITE.name(), DEFAULT_RADIOS);
     }
 
     public Figure getRandomFigure() {
@@ -37,4 +34,7 @@ public class FigureSupplier {
         }
     }
 
+    private double getRandomUnits() {
+        return MAX_LENGTH * random.nextDouble();
+    }
 }

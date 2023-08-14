@@ -1,5 +1,5 @@
 package core.basesyntax.interfaces;
 
-public interface Shape extends Drawable {
+public interface Shape {
     double getArea();
 }
