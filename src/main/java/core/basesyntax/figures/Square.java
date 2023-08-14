@@ -1,10 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Area;
-import core.basesyntax.Drawable;
 import core.basesyntax.Figure;
 
-public class Square extends Figure implements Drawable, Area {
+public class Square extends Figure {
     private final int side;
 
     public Square(String color, int side) {

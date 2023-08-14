@@ -7,7 +7,7 @@ public abstract class Figure implements Drawable, Area {
         this.color = color;
     }
 
-    public String getColor(){
+    public String getColor() {
         return color;
     }
 }

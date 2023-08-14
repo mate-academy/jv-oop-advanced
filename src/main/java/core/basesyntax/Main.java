@@ -1,9 +1,8 @@
 package core.basesyntax;
 
-import core.basesyntax.figures.*;
-
 public class Main {
     public static final int NUM_OF_FIGURES = 6;
+
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figures = new Figure[NUM_OF_FIGURES];
@@ -12,7 +11,7 @@ public class Main {
             if (i < figures.length / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
                 figures[i].draw();
-            }else {
+            } else {
                 figures[i] = figureSupplier.getDefaultFigure();
                 figures[i].draw();
             }

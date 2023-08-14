@@ -1,10 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Area;
-import core.basesyntax.Drawable;
 import core.basesyntax.Figure;
 
-public class Rectangle extends Figure implements Drawable, Area{
+public class Rectangle extends Figure {
     private final int width;
     private final int height;
 

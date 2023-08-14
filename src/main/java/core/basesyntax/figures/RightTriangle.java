@@ -1,10 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Area;
-import core.basesyntax.Drawable;
 import core.basesyntax.Figure;
 
-public class RightTriangle extends Figure implements Drawable, Area {
+public class RightTriangle extends Figure {
     private final double firsLeg;
     private final double secondLeg;
 

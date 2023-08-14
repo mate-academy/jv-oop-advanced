@@ -1,10 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Area;
-import core.basesyntax.Drawable;
 import core.basesyntax.Figure;
 
-public class IsoscelesTrapezoid extends Figure implements Drawable, Area {
+public class IsoscelesTrapezoid extends Figure {
     private final int firstSide;
     private final int secondSide;
     private final int height;
@@ -18,10 +16,10 @@ public class IsoscelesTrapezoid extends Figure implements Drawable, Area {
 
     @Override
     public void draw() {
-        System.out.println("Figure: IsoscelesTrapezoid has " +  firstSide
-                + ", secondSide " + secondSide + ", height " +  height
+        System.out.println("Figure: IsoscelesTrapezoid has " + firstSide
+                + ", secondSide " + secondSide + ", height " + height
                 + " and area " + getArea()
-                + " units" + "color: " +  getColor().toLowerCase());
+                + " units" + "color: " + getColor().toLowerCase());
     }
 
     @Override

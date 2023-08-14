@@ -1,10 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Area;
-import core.basesyntax.Drawable;
 import core.basesyntax.Figure;
 
-public class Circle extends Figure implements Drawable, Area {
+public class Circle extends Figure {
     private final int radius;
 
     public Circle(String color, int radius) {
@@ -12,10 +10,9 @@ public class Circle extends Figure implements Drawable, Area {
         this.radius = radius;
     }
 
-
     @Override
     public void draw() {
-        System.out.println("Figure: circle has " + radius  + " and area " + getArea()
+        System.out.println("Figure: circle has " + radius + " and area " + getArea()
                 + " units " + "color: " + getColor().toLowerCase());
     }
 
