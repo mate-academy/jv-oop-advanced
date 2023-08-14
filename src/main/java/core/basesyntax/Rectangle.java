@@ -28,6 +28,5 @@ public class Rectangle extends Figure {
         System.out.println(String.format("Figure: rectangle, area: %.1f sq.units, firstSide: "
                         + "%.1f, secondSide: %.1f, color: %s",
                 calculateArea(), getFirstSide(), getSecondSide(), getColor()));
-
     }
 }
