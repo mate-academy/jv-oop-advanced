@@ -2,67 +2,51 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class FigureSupplier {
-    private final int dimensionLimit = 100;
-    private Random random = new Random();
-    private ColorSupplier colorSupplier = new ColorSupplier();
+public final class FigureSupplier {
+    private final double DIMENSION_LIMIT = 100.0;
+    private final double DEFAULT_RADIUS = 10;
+    private final int FIGURE_TYPE_COUNT = 5;
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private int figureIndex;
 
     public Figure getRandomFigure() {
-        Figures figure = getRandomFigureFromEnum();
-        switch (figure) {
-            case CIRCLE:
-                Circle circle = new Circle();
-                circle.setRadius(getRandomDimension());
-                circle.setColor(colorSupplier.getRandomColor());
-                return circle;
-            case ISOSCELES_TRAPEZOID:
-                IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
-                isoscelesTrapezoid.setHeight(getRandomDimension());
-                isoscelesTrapezoid.setTopSide(getRandomDimension());
-                isoscelesTrapezoid.setBottomSide(isoscelesTrapezoid.getTopSide());
+        figureIndex = random.nextInt(FIGURE_TYPE_COUNT) + 1;
+        switch (figureIndex) {
+            case 1:
+                return new Circle(colorSupplier.getRandomColor(), getRandomDimension());
+            case 2:
+                IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(
+                        colorSupplier.getRandomColor(),
+                        getRandomDimension(),
+                        getRandomDimension(),
+                        getRandomDimension());
 
                 while (isoscelesTrapezoid.getBottomSide() <= isoscelesTrapezoid.getTopSide()) {
                     isoscelesTrapezoid.setBottomSide(getRandomDimension());
                 }
 
-                isoscelesTrapezoid.setColor(colorSupplier.getRandomColor());
                 return isoscelesTrapezoid;
-            case RECTANGLE:
-                Rectangle rectangle = new Rectangle();
-                rectangle.setHeight(getRandomDimension());
-                rectangle.setWidth(getRandomDimension());
-                rectangle.setColor(colorSupplier.getRandomColor());
-                return rectangle;
-            case RIGHT_TRIANGLE:
-                RightTriangle rightTriangle = new RightTriangle();
-                rightTriangle.setFirstLeg(getRandomDimension());
-                rightTriangle.setSecondLeg(getRandomDimension());
-                rightTriangle.setColor(colorSupplier.getRandomColor());
-                return rightTriangle;
-            case SQUARE:
-                Square square = new Square();
-                square.setSide(getRandomDimension());
-                square.setColor(colorSupplier.getRandomColor());
-                return square;
+            case 3:
+                return new Rectangle(colorSupplier.getRandomColor(),
+                                     getRandomDimension(),
+                                     getRandomDimension());
+            case 4:
+                return new RightTriangle(colorSupplier.getRandomColor(),
+                                         getRandomDimension(),
+                                         getRandomDimension());
+            case 5:
+                return new Square(colorSupplier.getRandomColor(), getRandomDimension());
             default:
-                return new Figure();
+                return getDefaultFigure();
         }
     }
 
-    private Figures getRandomFigureFromEnum() {
-        int index = random.nextInt(Figures.values().length);
-        Figures figure = Figures.values()[index];
-        return figure;
-    }
-
     public Figure getDefaultFigure() {
-        Circle circle = new Circle();
-        circle.setRadius(10);
-        circle.setColor("white");
-        return circle;
+        return new Circle(Color.WHITE.name().toLowerCase(), DEFAULT_RADIUS);
     }
 
-    private int getRandomDimension() {
-        return random.nextInt(dimensionLimit);
+    private double getRandomDimension() {
+        return random.nextDouble() * DIMENSION_LIMIT;
     }
 }

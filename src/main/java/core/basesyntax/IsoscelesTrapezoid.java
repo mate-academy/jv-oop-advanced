@@ -1,45 +1,38 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private int topSide;
-    private int bottomSide;
-    private int height;
+    private double topSide;
+    private double bottomSide;
+    private double height;
 
-    public int getTopSide() {
+    public IsoscelesTrapezoid(String color, double topSide, double bottomSide, double height) {
+        super(color);
+        this.topSide = topSide;
+        this.bottomSide = bottomSide;
+        this.height = height;
+    }
+
+    public double getTopSide() {
         return topSide;
     }
 
-    public void setTopSide(int topSide) {
-        this.topSide = topSide;
-    }
-
-    public int getBottomSide() {
+    public double getBottomSide() {
         return bottomSide;
     }
 
-    public void setBottomSide(int bottomSide) {
+    public void setBottomSide(double bottomSide) {
         this.bottomSide = bottomSide;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
     }
 
     @Override
     public double getArea() {
-        return (double) ((topSide + bottomSide) / 2) * height;
+        return ((topSide + bottomSide) / 2) * height;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: isosceles trapezoid, " + "area: " + getArea() + " sq.units, "
-                + "topSide: " + topSide + " units, "
-                + "bottomSide: " + bottomSide + " units, "
-                + "height: " + height + " units, "
-                + "color: " + getColor());
+        System.out.println(String.format("Figure: isosceles trapezoid, area: %.2f sq.units, "
+                        + "topSide: %.2f units, bottomSide: %.2f units, height: %.2f units, color: %s",
+                           getArea(), topSide, bottomSide, height, color));
     }
 }
