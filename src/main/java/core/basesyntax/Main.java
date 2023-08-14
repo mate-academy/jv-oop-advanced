@@ -7,12 +7,12 @@ public class Main {
     public static void main(String[] args) {
         Figure[] figures = new Figure[ARRAY_SIZE];
         for (int i = 0; i < ARRAY_SIZE; i++) {
-            figures[i] = figureSupplier.getRandomFigure();
-            if (i > (ARRAY_SIZE - 1) / 2) {
+            if (i < (ARRAY_SIZE) / 2) {
+                figures[i] = figureSupplier.getRandomFigure();
+            } else {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
             figures[i].drew();
         }
-
     }
 }

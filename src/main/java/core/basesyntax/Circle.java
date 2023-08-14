@@ -18,5 +18,4 @@ public class Circle extends Figure {
     public double getArea() {
         return Math.PI * radius * radius;
     }
-
 }
