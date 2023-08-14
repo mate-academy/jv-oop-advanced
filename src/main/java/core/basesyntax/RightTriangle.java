@@ -19,6 +19,6 @@ public class RightTriangle extends Figure {
     public void draw() {
         System.out.println(String.format("Figure: right triangle, area: %.2f sq.units, "
                         + "firstLeg: %.2f units, secondLeg: %.2f units, color: %s",
-                           getArea(), firstLeg, secondLeg, color));
+                           getArea(), firstLeg, secondLeg, getColor()));
     }
 }
