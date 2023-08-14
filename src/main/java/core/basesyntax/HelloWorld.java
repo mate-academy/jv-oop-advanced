@@ -10,8 +10,7 @@ public class HelloWorld {
                 figureSupplier.getRandomFigure(), figureSupplier.getDefaultFigure(),
                 figureSupplier.getDefaultFigure()};
         for (Figure figure : figures) {
-            System.out.println(figure);
+            System.out.println(figure.draw());
         }
     }
-
 }

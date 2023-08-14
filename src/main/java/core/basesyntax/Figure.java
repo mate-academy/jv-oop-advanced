@@ -18,7 +18,7 @@ public abstract class Figure implements AreaCalculator, FigureDraw {
     public abstract double getArea();
 
     @Override
-    public abstract void draw();
+    public abstract String draw();
 
     @Override
     public String toString() {
