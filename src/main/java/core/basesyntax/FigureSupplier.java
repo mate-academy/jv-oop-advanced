@@ -8,6 +8,8 @@ public class FigureSupplier {
     private static final double DEFAULT_RADIUS = 10;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
+    private String color;
+    private double randomValue;
 
     public Figure getRandomFigure() {
         switch (random.nextInt(COUNT_OF_FIGURE)) {
@@ -25,29 +27,40 @@ public class FigureSupplier {
     }
 
     private Figure createCircle() {
-        return new Circle(colorSupplier.getRandomColor(), random.nextDouble());
+        color = colorSupplier.getRandomColor();
+        randomValue = random.nextDouble();
+
+        return new Circle(color, randomValue);
     }
 
     private Figure createRightTriangle() {
-        return new RightTriangle(colorSupplier.getRandomColor(),
-                random.nextDouble(),
-                random.nextDouble());
+        color = colorSupplier.getRandomColor();
+        randomValue = random.nextDouble();
+        return new RightTriangle(color,
+                randomValue,
+                randomValue);
     }
 
     private Figure createSquare() {
-        return new Square(colorSupplier.getRandomColor(), random.nextDouble());
+        color = colorSupplier.getRandomColor();
+        randomValue = random.nextDouble();
+        return new Square(color, randomValue);
     }
 
     private Figure createRectangle() {
-        return new Rectangle(colorSupplier.getRandomColor(),
-                random.nextDouble(),
-                random.nextDouble());
+        color = colorSupplier.getRandomColor();
+        randomValue = random.nextDouble();
+        return new Rectangle(color,
+                randomValue,
+                randomValue);
     }
 
     private Figure createIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                random.nextDouble(),
-                random.nextDouble(),
-                random.nextDouble());
+        color = colorSupplier.getRandomColor();
+        randomValue = random.nextDouble();
+        return new IsoscelesTrapezoid(color,
+                randomValue,
+                randomValue,
+                randomValue);
     }
 }
