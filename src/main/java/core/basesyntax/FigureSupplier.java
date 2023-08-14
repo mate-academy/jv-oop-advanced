@@ -3,28 +3,27 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int MAX_RANDOM_PROPERTIES = 5;
-
+    public static final int NUMBER_OF_FIGURES = 5;
     public static final int DEFAULT_CIRCLE_RADIUS = 10;
-
-    private Random randomFigure = new Random();
-
+    public static final int RANDOM_SIDE = 9;
+    private Random random = new Random();
+    private int side = random.nextInt(RANDOM_SIDE);
     private Figure circleDefault = new Circle(DEFAULT_CIRCLE_RADIUS, "white");
-
     private ColorSupplier colorSupplire = new ColorSupplier();
+    private String color = colorSupplire.getRandomColor();
 
-    public Figure getRandomFigure() {
-        switch (randomFigure.nextInt(MAX_RANDOM_PROPERTIES)) {
+    public Figure getRandom() {
+        switch (random.nextInt(NUMBER_OF_FIGURES)) {
             case 1:
-                return new Circle(4, colorSupplire.getRandomColor());
+                return new Circle(side, color);
             case 2:
-                return new Square(5, colorSupplire.getRandomColor());
+                return new Square(side, color);
             case 3:
-                return new Rectangle(4, 6, colorSupplire.getRandomColor());
+                return new Rectangle(side, side, color);
             case 4:
-                return new RightTriangle(4, 4, colorSupplire.getRandomColor());
+                return new RightTriangle(side, side, color);
             default:
-                return new IsoscelesTrapezoid(3, 4, 5, colorSupplire.getRandomColor());
+                return new IsoscelesTrapezoid(side, side, side, color);
         }
     }
 

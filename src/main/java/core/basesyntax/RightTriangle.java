@@ -4,11 +4,6 @@ public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
-    public RightTriangle(double sideA, double sideB) {
-        this.firstLeg = sideA;
-        this.secondLeg = sideB;
-    }
-
     public RightTriangle(double sideA, double sideB, String color) {
         super(color);
         this.firstLeg = sideA;
@@ -20,14 +15,7 @@ public class RightTriangle extends Figure {
         return (firstLeg * secondLeg) / 2;
     }
 
-    @Override
     public String draw() {
-        return "Figure: rightTriangle, area: " + getArea() + " sq.units, sideA: "
-                + firstLeg + " units, sideB: " + secondLeg + " units, color: " + getColor();
-    }
-
-    @Override
-    public String toString() {
         return "Figure: rightTriangle, area: " + getArea() + " sq.units, sideA: "
                 + firstLeg + " units, sideB: " + secondLeg + " units, color: " + getColor();
     }

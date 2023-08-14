@@ -4,11 +4,6 @@ public class Rectangle extends Figure {
     private double sideA;
     private double sideB;
 
-    public Rectangle(double sideA, double sideB) {
-        this.sideA = sideA;
-        this.sideB = sideB;
-    }
-
     public Rectangle(double sideA, double sideB, String color) {
         super(color);
         this.sideA = sideA;
@@ -19,14 +14,9 @@ public class Rectangle extends Figure {
         return sideA * sideB;
     }
 
-    @Override
     public String draw() {
         return "Figure: rectangle, area: " + getArea() + " sq.units, sideA: "
                 + sideA + " units, sideB: " + sideB + " units, color: " + getColor();
     }
 
-    public String toString() {
-        return "Figure: rectangle, area: " + getArea() + " sq.units, sideA: "
-                + sideA + " units, sideB: " + sideB + " units, color: " + getColor();
-    }
 }

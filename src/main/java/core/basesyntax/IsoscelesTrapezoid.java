@@ -1,16 +1,9 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-
     private double sideA;
     private double sideB;
     private double sideC;
-
-    public IsoscelesTrapezoid(double sideA, double sideB, double sideC) {
-        this.sideA = sideA;
-        this.sideB = sideB;
-        this.sideC = sideC;
-    }
 
     public IsoscelesTrapezoid(double sideA, double sideB, double sideC, String color) {
         super(color);
@@ -25,14 +18,7 @@ public class IsoscelesTrapezoid extends Figure {
                 - Math.pow((sideA - sideB), 2) / 4);
     }
 
-    @Override
     public String draw() {
-        return "Figure: isoscelesTrapezoid, area: " + getArea() + " sq.units, sideA: "
-                + sideA + " units, sideB: " + sideB + " units, sideC: " + sideC
-                + " units, color: " + getColor();
-    }
-
-    public String toString() {
         return "Figure: isoscelesTrapezoid, area: " + getArea() + " sq.units, sideA: "
                 + sideA + " units, sideB: " + sideB + " units, sideC: " + sideC
                 + " units, color: " + getColor();
