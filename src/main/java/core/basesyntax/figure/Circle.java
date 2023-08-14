@@ -1,7 +1,5 @@
 package core.basesyntax.figure;
 
-import core.basesyntax.interfaces.AreaCalculator;
-import core.basesyntax.interfaces.DrawFigure;
 import core.basesyntax.Figure;
 
 public class Circle extends Figure {
