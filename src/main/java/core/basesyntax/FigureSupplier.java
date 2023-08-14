@@ -12,30 +12,39 @@ public class FigureSupplier {
     public static final int DEFAULT_RADIUS = 10;
     public static final Color DEFAULT_COLOR = Color.WHITE;
     private final ColorSupplier colorSupplier = new ColorSupplier();
-
     private final Random random = new Random();
+    private final Circle defaultCircle = new Circle(DEFAULT_COLOR.name(), DEFAULT_RADIUS);
 
     public Figure getRandomFigure() {
         int randomIndex = random.nextInt(FIGURE_COUNT);
         String color = colorSupplier.getRandomColor();
         switch (randomIndex) {
             case 0:
-                return new Square(color, random.nextInt());
+                int squareSide = random.nextInt();
+                return new Square(color, squareSide);
             case 1:
-                return new RightTriangle(color,random.nextDouble(), random.nextDouble());
+                double firstLeg = random.nextDouble();
+                double secondLeg = random.nextDouble();
+                return new RightTriangle(color, firstLeg, secondLeg);
             case 2:
-                return new Rectangle(color, random.nextInt(), random.nextInt());
+                int width = random.nextInt();
+                int height = random.nextInt();
+                return new Rectangle(color, width, height);
             case 3:
-                return new IsoscelesTrapezoid(color,random.nextInt(),
-                        random.nextInt(), random.nextInt());
+                int firstSide = random.nextInt();
+                int secondSide = random.nextInt();
+                int heightTrapezoid = random.nextInt();
+                return new IsoscelesTrapezoid(color,firstSide,
+                        secondSide, heightTrapezoid);
             case 4:
-                return new Circle(color, random.nextInt());
+                int radius = random.nextInt();
+                return new Circle(color, radius);
             default:
                 return getDefaultFigure();
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR.toString(), DEFAULT_RADIUS);
+        return defaultCircle;
     }
 }
