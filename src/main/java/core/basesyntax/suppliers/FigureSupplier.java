@@ -1,6 +1,12 @@
 package core.basesyntax.suppliers;
 
-import core.basesyntax.figures.*;
+import core.basesyntax.figures.Circle;
+import core.basesyntax.figures.Color;
+import core.basesyntax.figures.Figure;
+import core.basesyntax.figures.IsoscelesTrapezoid;
+import core.basesyntax.figures.Rectangle;
+import core.basesyntax.figures.RightTriangle;
+import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
@@ -25,7 +31,8 @@ public class FigureSupplier {
             case 0:
                 return new Circle(color, (int) getRandomUnits());
             case 1:
-                return new IsoscelesTrapezoid(color, getRandomUnits(), getRandomUnits(), getRandomUnits());
+                return new IsoscelesTrapezoid(color, getRandomUnits(),
+                        getRandomUnits(), getRandomUnits());
             case 2:
                 return new Rectangle(color, getRandomUnits(), getRandomUnits());
             case 3:

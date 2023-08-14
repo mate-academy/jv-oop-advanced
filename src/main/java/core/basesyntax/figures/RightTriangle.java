@@ -1,8 +1,5 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.figures.AreaCalculator;
-import core.basesyntax.figures.Figure;
-
 public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
