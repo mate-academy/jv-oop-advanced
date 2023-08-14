@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final double DEFAULT_RADIUS = 10.0;
-    private static final int NUMBER_OF_FIGURE = 4;
+    private static final int NUMBER_OF_FIGURE = 5;
     private static final double MAXIMUM_VALUE = 50.0;
     private final Circle defaultFigure = new Circle(Color.WHITE.name()
             .toLowerCase(), DEFAULT_RADIUS);

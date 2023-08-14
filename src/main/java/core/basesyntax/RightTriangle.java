@@ -14,16 +14,8 @@ public class RightTriangle extends Figure {
         return firstLeg;
     }
 
-    public void setFirstLeg(double firstLeg) {
-        this.firstLeg = firstLeg;
-    }
-
     public double getSecondLeg() {
         return secondLeg;
-    }
-
-    public void setSecondLeg(double secondLeg) {
-        this.secondLeg = secondLeg;
     }
 
     @Override
@@ -33,8 +25,8 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: right triangle, area: " + calculateArea()
-                + " sq.units, firstLeg: " + firstLeg + ", secondLeg: "
-                + secondLeg + ", color: " + getColor());
+        System.out.println(String.format("Figure: right triangle, area: %.1f sq.units, "
+                        + "firstLeg: %.1f, secondLeg: %.1f, color:  %s",
+                calculateArea(), getFirstLeg(), getSecondLeg(), getColor()));
     }
 }
