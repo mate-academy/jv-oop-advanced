@@ -5,37 +5,31 @@ import java.util.Random;
 public final class FigureSupplier {
     private static final double DIMENSION_LIMIT = 100.0;
     private static final double DEFAULT_RADIUS = 10;
-    private static final int FIGURE_TYPE_COUNT = 5;
+    private static final int FIGURE_TYPE_COUNT = 4;
     private final Random random = new Random();
-    private final ColorSupplier colorSupplier = new ColorSupplier();
-    private int figureIndex;
 
     public Figure getRandomFigure() {
-        figureIndex = random.nextInt(FIGURE_TYPE_COUNT) + 1;
+        final ColorSupplier colorSupplier = new ColorSupplier();
+        int figureIndex = random.nextInt(FIGURE_TYPE_COUNT);
+
         switch (figureIndex) {
-            case 1:
+            case 0:
                 return new Circle(colorSupplier.getRandomColor(), getRandomDimension());
-            case 2:
-                IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(
+            case 1:
+                return new IsoscelesTrapezoid(
                         colorSupplier.getRandomColor(),
                         getRandomDimension(),
                         getRandomDimension(),
                         getRandomDimension());
-
-                while (isoscelesTrapezoid.getBottomSide() <= isoscelesTrapezoid.getTopSide()) {
-                    isoscelesTrapezoid.setBottomSide(getRandomDimension());
-                }
-
-                return isoscelesTrapezoid;
-            case 3:
+            case 2:
                 return new Rectangle(colorSupplier.getRandomColor(),
                                      getRandomDimension(),
                                      getRandomDimension());
-            case 4:
+            case 3:
                 return new RightTriangle(colorSupplier.getRandomColor(),
                                          getRandomDimension(),
                                          getRandomDimension());
-            case 5:
+            case 4:
                 return new Square(colorSupplier.getRandomColor(), getRandomDimension());
             default:
                 return getDefaultFigure();
