@@ -29,7 +29,7 @@ public class FigureSupplier {
         String color = colorSupplier.getRandomColor();
         switch (randomIndex) {
             case 0:
-                return new Circle(color, (int) getRandomUnits());
+                return new Circle(color, getRandomUnits());
             case 1:
                 return new IsoscelesTrapezoid(color, getRandomUnits(),
                         getRandomUnits(), getRandomUnits());
