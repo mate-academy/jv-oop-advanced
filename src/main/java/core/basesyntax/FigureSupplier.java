@@ -50,7 +50,7 @@ public class FigureSupplier {
 
     private Circle getRandomCircle() {
         return new Circle(colorSupplier.getRandomColor(),
-                random.nextInt(DEFAULT_RADIUS));
+                random.nextInt(SIDE_LENGTH_MAX));
     }
 
     private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
