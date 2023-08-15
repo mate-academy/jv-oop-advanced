@@ -29,6 +29,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.NAVY.name(), 9d);
+        return new Circle(Color.NAVY.name(), 10d);
     }
 }
