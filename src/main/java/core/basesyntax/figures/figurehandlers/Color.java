@@ -1,6 +1,6 @@
 package core.basesyntax.figures.figurehandlers;
 
-public enum Colors {
+public enum Color {
     BLUE,
     WHITE,
     PINK,

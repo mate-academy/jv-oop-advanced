@@ -17,15 +17,15 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int randomIndex = random.nextInt(FIGURES_COUNT) + 1;
+        int randomIndex = random.nextInt(FIGURES_COUNT);
 
         switch (randomIndex) {
-            case 1: {
+            case 0: {
                 String color = colorSupplier.getRandomColor();
                 int radius = getRandomValue();
                 return getRandomCircle(color, radius);
             }
-            case 2: {
+            case 1: {
                 String color = colorSupplier.getRandomColor();
                 int lowBase = getRandomValue();
                 int highBase = getRandomValue();
@@ -33,20 +33,20 @@ public class FigureSupplier {
                 int height = getRandomValue();
                 return getRandomIsoscelesTrapezoid(color, lowBase, highBase, leg, height);
             }
-            case 3: {
+            case 2: {
                 String color = colorSupplier.getRandomColor();
                 int hypotenuse = getRandomValue();
                 int firstLeg = getRandomValue();
                 int secondLeg = getRandomValue();
                 return new RightTriangle(color, hypotenuse, firstLeg, secondLeg);
             }
-            case 4: {
+            case 3: {
                 String color = colorSupplier.getRandomColor();
                 int firstSide = getRandomValue();
                 int secondSide = getRandomValue();
                 return new Rectangle(color, firstSide, secondSide);
             }
-            case 5: {
+            case 4: {
                 String color = colorSupplier.getRandomColor();
                 int side = getRandomValue();
                 return new Square(color, side);
@@ -71,7 +71,6 @@ public class FigureSupplier {
 
     private RightTriangle getRandomRightTriangle(String color, int hypotenuse,
                                                  int firstLeg, int secondLeg) {
-
         return new RightTriangle(color, hypotenuse, firstLeg, secondLeg);
     }
 
