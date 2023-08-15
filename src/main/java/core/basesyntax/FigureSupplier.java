@@ -3,15 +3,14 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-
-    enum Shape { CIRCLE, SQUARE, RECTANGLE, TRIANGLE, TRAPEZOID }
-
+    private static final double RADIUS = 10;
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
 
     public Figure getRandomFigure() {
+        Shape shape = Shape.values()[random.nextInt(Shape.values().length)];
 
-        switch (Shape.values()[random.nextInt(Shape.values().length)]) {
+        switch (shape) {
             case CIRCLE:
                 return new Circle(random.nextInt(10) + 1,
                                         colorSupplier.gerRandomColor());
@@ -34,7 +33,7 @@ public class FigureSupplier {
         }
     }
 
-    public Figure getDefoltFigure() {
-        return new Circle(10, ColorSupplier.Color.WHITE.name());
+    public Figure getDefaultFigure() {
+        return new Circle(RADIUS, Color.WHITE.name());
     }
 }
