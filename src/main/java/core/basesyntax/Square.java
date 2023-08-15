@@ -12,7 +12,7 @@ public class Square extends Figure {
         return side * side;
     }
 
-    public String printInfo() {
+    public String draw() {
         return "Figure: square, "
              + "area: " + this.getArea() + " sq.units, "
              + "side: " + side + " units, "

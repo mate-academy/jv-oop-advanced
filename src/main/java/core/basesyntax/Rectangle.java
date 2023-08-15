@@ -14,7 +14,7 @@ public class Rectangle extends Figure {
         return shortSide * longSide;
     }
 
-    public String printInfo() {
+    public String draw() {
         return "Figure: rectangle, "
              + "area: " + this.getArea() + " sq.units, "
              + "shortSide: " + shortSide + " units, "

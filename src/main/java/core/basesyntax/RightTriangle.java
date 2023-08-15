@@ -14,7 +14,7 @@ public class RightTriangle extends Figure {
         return (firstLeg * secondLeg) / 2;
     }
 
-    public String printInfo() {
+    public String draw() {
         return "Figure: right triangle, "
              + "area: " + this.getArea() + " sq.units, "
              + "firstLeg: " + firstLeg + " units, "

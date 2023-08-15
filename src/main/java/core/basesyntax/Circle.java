@@ -13,7 +13,7 @@ public class Circle extends Figure {
         return PI * (radius * radius);
     }
 
-    public String printInfo() {
+    public String draw() {
         return "Figure: circle, "
              + "area: " + this.getArea() + " sq.units, "
              + "radius: " + radius + " units, "

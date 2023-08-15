@@ -16,7 +16,7 @@ public class IsoscelesTrapezoid extends Figure {
         return (height / 2) * (topSide + bottomSide);
     }
 
-    public String printInfo() {
+    public String draw() {
         return "Figure: isosceles trapezoid, "
              + "area: " + this.getArea() + " sq.units, "
              + "topSide: " + topSide + " units, "

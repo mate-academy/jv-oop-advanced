@@ -5,8 +5,8 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
 
         for (int i = 0; i < 6; i++) {
-            System.out.println(i > 2 ? figureSupplier.getDefaultFigure().printInfo()
-                                     : figureSupplier.getRandomFigure().printInfo());
+            System.out.println(i > 2 ? figureSupplier.getDefaultFigure().draw()
+                                     : figureSupplier.getRandomFigure().draw());
         }
     }
 }
