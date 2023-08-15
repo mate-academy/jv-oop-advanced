@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class IsoscelesTrapezoid implements DrawFigure{
+public abstract class IsoscelesTrapezoid implements DrawFigure {
 
     private Color color;
     private int base;
@@ -14,6 +14,7 @@ public abstract class IsoscelesTrapezoid implements DrawFigure{
 
     @Override
     public void figureInfo() {
-        System.out.println(NameOfFigure.IsoscelesTrapezoid + " - color: " + color + " base: " + base + " edge: " + edge);
+        System.out.println(NameOfFigure.IsoscelesTrapezoid + " - color: "
+                + color + " base: " + base + " edge: " + edge);
     }
 }

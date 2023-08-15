@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class RightTriangle implements DrawFigure{
+public abstract class RightTriangle implements DrawFigure {
 
     private Color color;
     private int firstLeg;
@@ -14,6 +14,7 @@ public abstract class RightTriangle implements DrawFigure{
 
     @Override
     public void figureInfo() {
-        System.out.println(NameOfFigure.RightTriangle + " - color: " + color + " first leg: " + firstLeg + " second leg: " + secondLeg);
+        System.out.println(NameOfFigure.RightTriangle + " - color: " + color
+                + " first leg: " + firstLeg + " second leg: " + secondLeg);
     }
 }

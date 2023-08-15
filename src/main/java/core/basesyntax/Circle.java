@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Circle implements DrawFigure{
+public abstract class Circle implements DrawFigure {
 
     private Color color;
     private int radius;

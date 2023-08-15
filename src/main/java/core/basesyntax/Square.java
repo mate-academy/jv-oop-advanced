@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Square implements DrawFigure{
+public abstract class Square implements DrawFigure {
 
     private Color color;
     private int diagonal;
