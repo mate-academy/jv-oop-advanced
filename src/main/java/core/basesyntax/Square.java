@@ -13,8 +13,8 @@ public class Square extends Figure {
         return side * side;
     }
 
-    public String draw() {
-        return "Figure: square, area: " + getArea() + " sq.units, side: "
-                + side + " units, color: " + getColor();
+    public void draw() {
+        System.out.println("Figure: square, area: " + getArea() + " sq.units, side: "
+                + side + " units, color: " + getColor());
     }
 }

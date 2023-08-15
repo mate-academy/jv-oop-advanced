@@ -18,9 +18,9 @@ public class IsoscelesTrapezoid extends Figure {
                 - Math.pow((sideA - sideB), 2) / 4);
     }
 
-    public String draw() {
-        return "Figure: isoscelesTrapezoid, area: " + getArea() + " sq.units, sideA: "
+    public void draw() {
+        System.out.println("Figure: isoscelesTrapezoid, area: " + getArea() + " sq.units, sideA: "
                 + sideA + " units, sideB: " + sideB + " units, sideC: " + sideC
-                + " units, color: " + getColor();
+                + " units, color: " + getColor());
     }
 }

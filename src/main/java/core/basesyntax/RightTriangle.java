@@ -15,8 +15,8 @@ public class RightTriangle extends Figure {
         return (firstLeg * secondLeg) / 2;
     }
 
-    public String draw() {
-        return "Figure: rightTriangle, area: " + getArea() + " sq.units, sideA: "
-                + firstLeg + " units, sideB: " + secondLeg + " units, color: " + getColor();
+    public void draw() {
+        System.out.println("Figure: rightTriangle, area: " + getArea() + " sq.units, sideA: "
+                + firstLeg + " units, sideB: " + secondLeg + " units, color: " + getColor());
     }
 }

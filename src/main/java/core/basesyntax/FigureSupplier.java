@@ -8,7 +8,6 @@ public class FigureSupplier {
     public static final int RANDOM_SIDE = 9;
     private Random random = new Random();
     private int side = random.nextInt(RANDOM_SIDE);
-    private Figure circleDefault = new Circle(DEFAULT_CIRCLE_RADIUS, "white");
     private ColorSupplier colorSupplire = new ColorSupplier();
     private String color = colorSupplire.getRandomColor();
 
@@ -28,6 +27,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return circleDefault;
+        Circle circle = new Circle(DEFAULT_CIRCLE_RADIUS, Color.WHITE.name().toLowerCase());
+        return circle;
     }
 }

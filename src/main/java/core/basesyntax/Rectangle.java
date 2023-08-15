@@ -14,9 +14,9 @@ public class Rectangle extends Figure {
         return sideA * sideB;
     }
 
-    public String draw() {
-        return "Figure: rectangle, area: " + getArea() + " sq.units, sideA: "
-                + sideA + " units, sideB: " + sideB + " units, color: " + getColor();
+    public void draw() {
+        System.out.println("Figure: rectangle, area: " + getArea() + " sq.units, sideA: "
+                + sideA + " units, sideB: " + sideB + " units, color: " + getColor());
     }
 
 }
