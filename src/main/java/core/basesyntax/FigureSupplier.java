@@ -8,7 +8,7 @@ public class FigureSupplier {
 
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    int randomFigureSide = random.nextInt(13);
+    private final int randomFigureSide = random.nextInt(13);
 
     public Figure getDefaultFigure() {
         return new Circle(COLOUR, RADIUS);

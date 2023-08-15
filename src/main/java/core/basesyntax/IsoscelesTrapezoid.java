@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements Drawable, AreaCounter {
+public class IsoscelesTrapezoid extends Figure {
     private int upperSide;
     private int downSide;
     private int height;
@@ -21,6 +21,6 @@ public class IsoscelesTrapezoid extends Figure implements Drawable, AreaCounter 
     public void draw() {
         System.out.println("Figure: isosceles trapezoid, area: " + getArea()
                 + " sq.units, upper side: " + upperSide + " units, down side: "
-                + downSide + " units, height: " + height + " units, colour: " + colour);
+                + downSide + " units, height: " + height + " units, colour: " + getColour());
     }
 }
