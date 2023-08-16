@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private int radius;
+    private double radius;
 
-    public Circle(String colour, int radius) {
+    public Circle(String colour, double radius) {
         super(colour);
         this.radius = radius;
     }
