@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle implements Figure{
+public class Rectangle implements Figure {
     private double length;
     private double width;
     private String color;
@@ -18,6 +18,8 @@ public class Rectangle implements Figure{
 
     @Override
     public void draw() {
-        System.out.printf("Figure: rectangle, area: %.2f sq.units, length: %.2f units, width: %.2f units, color: %s\n", getArea(), length, width, color);
+        System.out.printf("Figure: rectangle, area: %.2f sq.units,"
+                        + " length: %.2f units, width: %.2f units, color: %s\n",
+                getArea(), length, width, color);
     }
 }
