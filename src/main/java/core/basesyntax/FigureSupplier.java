@@ -5,30 +5,31 @@ import java.util.Random;
 public class FigureSupplier {
     private static final String COLOUR = "white";
     private static final int RADIUS = 10;
-
+    private static final int MAXSIZE = 13;
+    private static final int TOTAL_FIGURE_AMOUNT = 6;
     private final Random random = new Random();
-    private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final int randomFigureSide = random.nextInt(13);
+    private final ColourSupplier colourSupplier = new ColourSupplier();
 
     public Figure getDefaultFigure() {
         return new Circle(COLOUR, RADIUS);
     }
 
     public Figure getRandomFigure() {
-        String randomColor = colorSupplier.getRandomColor();
-        int randomFigureNumber = random.nextInt(6);
+        String randomColour = colourSupplier.getRandomColour();
+        int randomFigureNumber = random.nextInt(TOTAL_FIGURE_AMOUNT);
+        int randomFigureSide = random.nextInt(MAXSIZE);
 
         switch (randomFigureNumber) {
             case 0:
-                return new Circle(randomColor, randomFigureSide);
+                return new Circle(randomColour, randomFigureSide);
             case 1:
-                return new Square(randomColor, randomFigureSide);
+                return new Square(randomColour, randomFigureSide);
             case 2:
-                return new RightTriangle(randomColor, randomFigureSide, randomFigureSide);
+                return new RightTriangle(randomColour, randomFigureSide, randomFigureSide);
             case 3:
-                return new Rectangle(randomColor, randomFigureSide, randomFigureSide);
+                return new Rectangle(randomColour, randomFigureSide, randomFigureSide);
             case 4:
-                return new IsoscelesTrapezoid(randomColor, randomFigureSide,
+                return new IsoscelesTrapezoid(randomColour, randomFigureSide,
                         randomFigureSide, randomFigureSide);
             default:
                 return getDefaultFigure();
