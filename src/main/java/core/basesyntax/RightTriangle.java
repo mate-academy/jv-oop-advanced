@@ -9,11 +9,13 @@ public class RightTriangle extends Figure {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
+
     @Override
     public double getArea() {
         double area = firstLeg * secondLeg;
         return area / 2;
     }
+
     @Override
     public void draw() {
         System.out.println("Figure: " + getName() + ", area: " + getArea()
