@@ -10,6 +10,7 @@ public class RightTriangle extends Figure {
         this.secondLeg = secondLeg;
         setArea();
     }
+
     public double getArea() {
         return (firstLeg * secondLeg) / 2;
     }

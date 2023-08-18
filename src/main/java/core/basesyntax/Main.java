@@ -9,4 +9,5 @@ public class Main {
         Figure rectangle1 = new Rectangle("Rectangle1","dark",3, 7);
         rectangle1.getFigure();
     }
+
 }
