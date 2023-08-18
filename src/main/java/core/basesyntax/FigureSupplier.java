@@ -4,9 +4,9 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final Random RANDOM = new Random();
-    private Figure figure;
+    private Area figure;
 
-    public Figure getRandomFigure() {
+    public Area getRandomFigure() {
         int indexOfFigure = RANDOM.nextInt(5);
         String color = new ColorSupplier().getRandomColor();
         double firstRandom = RANDOM.nextDouble() * 10 + 1;
@@ -34,7 +34,7 @@ public class FigureSupplier {
         return figure;
     }
 
-    public Figure getDefaultFigure() {
+    public Area getDefaultFigure() {
         return new Circle(10, "white");
     }
 }

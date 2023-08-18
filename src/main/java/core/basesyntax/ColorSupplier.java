@@ -3,11 +3,19 @@ package core.basesyntax;
 import java.util.Random;
 
 public class ColorSupplier {
-    private static final String[] COLORS = {"blue", "yellow", "green", "grey", "black", "purple"};
-    private static final Random RANDOM = new Random();
+
+    private String color;
+
+    private String[] colors = {"blue", "yellow", "green", "grey", "black", "purple"};
+
+    private Random random = new Random();
+
+    public String getColor() {
+        return color;
+    }
 
     public String getRandomColor() {
-        int getIndex = RANDOM.nextInt(COLORS.length);
-        return COLORS[getIndex];
+        int getIndex = random.nextInt(colors.length);
+        return colors[getIndex];
     }
 }
