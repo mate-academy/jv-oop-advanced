@@ -10,4 +10,5 @@ public class ColorSupplier {
     public Color getRandomColor () {
         return colors[random.nextInt(bound)];
     }
+
 }

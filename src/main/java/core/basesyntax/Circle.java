@@ -1,15 +1,16 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements Parametrs{
+public class Circle extends Figure {
     private double radius;
 
-    public Circle(String name, double radius) {
-        super(name);
+    public Circle(String name, String color, double radius) {
+        super(name, color);
         this.radius = radius;
+        calculateArea();
     }
 
     public double getArea() {
-        return Math.PI + Math.pow(radius, 2);
+        return Math.PI * radius * radius;
     }
 
     @Override
@@ -21,6 +22,4 @@ public class Circle extends Figure implements Parametrs{
     public boolean isSimple() {
         return true;
     }
-
-
 }

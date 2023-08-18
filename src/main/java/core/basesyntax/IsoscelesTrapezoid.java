@@ -5,11 +5,12 @@ public class IsoscelesTrapezoid extends Figure implements Parametrs{
     private double secondBase;
     private double height;
 
-    public IsoscelesTrapezoid(String name, double firsBase, double secondBase, double height) {
-        super(name);
+    public IsoscelesTrapezoid(String name, String color, double firsBase, double secondBase, double height) {
+        super(name, color);
         this.firsBase = firsBase;
         this.secondBase = secondBase;
         this.height = height;
+        calculateArea();
     }
 
     public double getArea() {

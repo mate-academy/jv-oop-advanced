@@ -3,9 +3,10 @@ package core.basesyntax;
 public class Square extends Figure implements Parametrs{
     private double side;
 
-    public Square(String name, double side) {
-        super(name);
+    public Square(String name,String color, double side) {
+        super(name, color);
         this.side = side;
+        calculateArea();
     }
 
     public double getArea() {
