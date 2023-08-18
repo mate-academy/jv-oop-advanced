@@ -19,18 +19,18 @@ public class FigureSupplier {
                     getRandomSide());
         } else if (randomNumber == 2) {
             return new Rectangle("RandomRectangle",
-                    getDefaultFigure().getColor(),
+                    getDefaultFigure().getColor().toString(),
                     getRandomSide(),
                     getRandomSide());
         } else if (randomNumber == 3) {
             return new IsoscelesTrapezoid("RandomIsoscelesTrapezoid",
-                    getDefaultFigure().getColor(),
+                    getDefaultFigure().getColor().toString(),
                     getRandomSide(),
                     getRandomSide(),
                     getRandomSide());
         } else {
             return new RightTriangle("RandomRightTriangle",
-                    getDefaultFigure().getColor(),
+                    getDefaultFigure().getColor().toString(),
                     getRandomSide(),
                     getRandomSide());
         }
@@ -48,7 +48,6 @@ public class FigureSupplier {
 
     //create default figure
     public Figure getDefaultFigure() {
-        return new Circle("defaultFigure", "white", 10);
+        return new Circle("defaultFigure", "WHITE", 10);
     }
-
 }
