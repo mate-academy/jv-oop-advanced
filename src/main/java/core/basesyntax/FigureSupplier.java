@@ -6,7 +6,7 @@ public class FigureSupplier {
     private static final String COLOUR = Colour.WHITE.name();
     private static final int RADIUS = 10;
     private static final double MAXSIZE = 50.0;
-    private static final int TOTAL_FIGURE_AMOUNT = 6;
+    private static final int TOTAL_FIGURE_AMOUNT = 5;
     private final Random random = new Random();
     private final ColourSupplier colourSupplier = new ColourSupplier();
 
