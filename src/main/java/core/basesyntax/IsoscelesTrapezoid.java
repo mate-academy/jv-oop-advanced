@@ -9,16 +9,15 @@ public class IsoscelesTrapezoid extends Figure {
         this.leg = leg;
         this.height = height;
     }
-
     @Override
     public double getArea() {
         double height2 = height;
         return (height2 / 2) * leg * 2;
     }
-
     @Override
     public void draw() {
-        System.out.println("Figure: " + getName() + ", area: " + getArea() + " sq. units, leg: " + leg + " units, height: "
+        System.out.println("Figure: " + getName() + ", area: " + getArea() + " sq. units, leg: "
+                + leg + " units, height: "
                 + height + " units, color: " + getColor() + ".");
     }
 }
