@@ -6,7 +6,7 @@ public class FigureSupplier {
     private static final int MAX_VALUE = 10;
     private static final int FIGURE_AMOUNT = 5;
 
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int randomIndex = new Random().nextInt(FIGURE_AMOUNT);
@@ -15,7 +15,7 @@ public class FigureSupplier {
             case 0:
                 return createRandomCircle();
             case 1:
-                return  createRandomIsoscelesTrapezoid();
+                return createRandomIsoscelesTrapezoid();
             case 2:
                 return createRandomRectangle();
             case 3:
