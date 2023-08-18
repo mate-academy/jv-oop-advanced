@@ -1,20 +1,25 @@
 package core.basesyntax;
 
-public abstract class RightTriangle implements DrawFigure {
-
-    private Color color;
+public class RightTriangle extends Figure {
+    private static final int TWO = 2;
     private int firstLeg;
     private int secondLeg;
 
-    public RightTriangle(Color color, int firstLeg, int secondLeg) {
-        this.color = color;
+    public RightTriangle(String color, int firstLeg, int secondLeg) {
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
 
     @Override
-    public void figureInfo() {
-        System.out.println(NameOfFigure.RightTriangle + " - color: " + color
-                + " first leg: " + firstLeg + " second leg: " + secondLeg);
+    public double getArea() {
+        return (firstLeg * secondLeg) / TWO;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Figure: Right Triangle, area: " + getArea() +
+                " sq.units, first leg: " + firstLeg + ", second leg: " + secondLeg +
+                ", color: " + getColor());
     }
 }

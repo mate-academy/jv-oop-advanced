@@ -1,20 +1,25 @@
 package core.basesyntax;
 
-public abstract class Rectangle implements DrawFigure {
-
-    private Color color;
+public class Rectangle extends Figure {
     private int length;
     private int width;
 
-    public Rectangle(Color color, int length, int width) {
-        this.color = color;
+    public Rectangle(String color, int length, int width) {
+        super(color);
         this.length = length;
         this.width = width;
     }
 
     @Override
-    public void figureInfo() {
-        System.out.println(NameOfFigure.Rectangle + " - color: " + color
-                + " length: " + length + " width: " + width);
+    public double getArea() {
+        return length * width;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Figure: Rectangle, area: " + getArea() +
+                " sq.units, length: " + length + ", widtd: " + width +
+                ", color: " + getColor());
     }
 }
+

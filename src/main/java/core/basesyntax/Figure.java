@@ -1,14 +1,11 @@
 package core.basesyntax;
 
-public class Figure {
-
-    private final NameOfFigure nameOfFigure;
-    private final Color color;
-    private final int number;
-
-    public Figure(NameOfFigure nameOfFigure, Color color, int number) {
-        this.nameOfFigure = nameOfFigure;
+public abstract class Figure implements AreaCalculator, Drawable{
+    private String color;
+    public Figure(String color) {
         this.color = color;
-        this.number = number;
+    }
+    protected String getColor() {
+        return color;
     }
 }

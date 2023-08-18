@@ -1,17 +1,22 @@
 package core.basesyntax;
 
-public abstract class Square implements DrawFigure {
+public class Square extends Figure {
+    private int sideLength;
 
-    private Color color;
-    private int diagonal;
-
-    public Square(Color color, int diagonal) {
-        this.color = color;
-        this.diagonal = diagonal;
+    public Square(String color, int sideLength) {
+        super(color);
+        this.sideLength = sideLength;
     }
 
     @Override
-    public void figureInfo() {
-        System.out.println(NameOfFigure.Square + " - color: " + color + " diagonal: " + diagonal);
+    public double getArea() {
+        return sideLength * sideLength;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Figure: Square, area: " + getArea() +
+                " sq.units, side length: " + sideLength +
+                ", color: " + getColor());
     }
 }
