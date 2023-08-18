@@ -11,12 +11,13 @@ public class Rectangle extends Figure {
         setArea();
     }
 
+    @Override
     public double getArea() {
         return height * weight;
     }
 
     @Override
-    public void getFigure() {
+    public void draw() {
         System.out.println("---------------------------------");
         System.out.println("name: " + getName());
         System.out.println("color: " + getColor());

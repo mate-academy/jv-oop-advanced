@@ -3,51 +3,53 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int boundRandomFigureNumber = 5;
+    private static final int boundRandomSide = 10;
+    private static final double defaultRadius = 10;
     private Random random = new Random();
-    private double randomNumber;
+
+    public Figure getDefaultFigure() {
+        return new Circle(DefaultFigure.defaultFigure.toString(),
+                DefaultFigure.WHITE.toString(),
+                defaultRadius);
+    }
 
     public Figure getRandomFigure() {
-        getRandomFigureNumber();
-        ColorSupplier colorSupplier = new ColorSupplier();
+        int randomNumber = getRandomFigureNumber();
         if (randomNumber == 0) {
             return new Circle("RandomCircle",
-                    colorSupplier.getRandomColor().toString(),
+                    ColorSupplier.getRandomColor(),
                     getRandomSide());
         } else if (randomNumber == 1) {
             return new Square("RandomSquare",
-                    colorSupplier.getRandomColor().toString(),
+                    ColorSupplier.getRandomColor(),
                     getRandomSide());
         } else if (randomNumber == 2) {
             return new Rectangle("RandomRectangle",
-                    getDefaultFigure().getColor().toString(),
+                    ColorSupplier.getRandomColor(),
                     getRandomSide(),
                     getRandomSide());
         } else if (randomNumber == 3) {
             return new IsoscelesTrapezoid("RandomIsoscelesTrapezoid",
-                    getDefaultFigure().getColor().toString(),
+                    ColorSupplier.getRandomColor(),
                     getRandomSide(),
                     getRandomSide(),
                     getRandomSide());
         } else {
             return new RightTriangle("RandomRightTriangle",
-                    getDefaultFigure().getColor().toString(),
+                    ColorSupplier.getRandomColor(),
                     getRandomSide(),
                     getRandomSide());
         }
     }
 
-    //get random number for chose random what figure create
-    public void getRandomFigureNumber() {
-        this.randomNumber = random.nextInt(5);
+    private int getRandomFigureNumber() {
+        int randomNumber = random.nextInt(boundRandomFigureNumber);
+        return randomNumber;
     }
 
-    //get random number for create random figure parameters
-    public double getRandomSide() {
-        return randomNumber = random.nextInt(10) + 1;
-    }
-
-    //create default figure
-    public Figure getDefaultFigure() {
-        return new Circle("defaultFigure", "WHITE", 10);
+    private double getRandomSide() {
+        double randomSide = random.nextInt(boundRandomSide) + 1;
+        return randomSide;
     }
 }

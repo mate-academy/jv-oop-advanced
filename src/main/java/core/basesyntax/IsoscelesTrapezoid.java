@@ -17,12 +17,13 @@ public class IsoscelesTrapezoid extends Figure {
         setArea();
     }
 
+    @Override
     public double getArea() {
         return (firsBase + secondBase) / 2 * height;
     }
 
     @Override
-    public void getFigure() {
+    public void draw() {
         System.out.println("---------------------------------");
         System.out.println("name: " + getName());
         System.out.println("color: " + getColor());
