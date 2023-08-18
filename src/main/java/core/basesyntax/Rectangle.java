@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Parametrs{
+public class Rectangle extends Figure{
     private double height;
     private double weight;
 
@@ -8,20 +8,19 @@ public class Rectangle extends Figure implements Parametrs{
         super(name, color);
         this.height = height;
         this.weight = weight;
-        calculateArea();
+        setArea();
     }
     public double getArea() {
         return height * weight;
     }
 
-
     @Override
-    public boolean isFlat() {
-        return true;
-    }
-
-    @Override
-    public boolean isSimple() {
-        return false;
+    public void getFigure() {
+        System.out.println("---------------------------------");
+        System.out.println("name: " + getName());
+        System.out.println("color: " + getColor());
+        System.out.println("area: " + getArea());
+        System.out.println("height: " + height);
+        System.out.println("weight: " + weight);
     }
 }

@@ -10,18 +10,13 @@ public abstract class Figure implements Parametrs{
         this.color = color;
     }
     public abstract double getArea();
-
-    public void calculateArea(){
+    public void setArea(){
         this.area = getArea();
     }
-    public void getFigure() {
-        System.out.println("---------------------------------");
-        System.out.println("name: " + name);
-        System.out.println("color: " + color);
-        System.out.println("area: " + area);
-        System.out.println("isFlat: " + isFlat());
-        System.out.println("isSimple: " + isSimple());
+    public String getName() {
+        return name;
     }
-
-
+    public String getColor() {
+        return color;
+    }
 }

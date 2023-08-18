@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements Parametrs{
+public class IsoscelesTrapezoid extends Figure {
     private double firsBase;
     private double secondBase;
     private double height;
@@ -10,7 +10,7 @@ public class IsoscelesTrapezoid extends Figure implements Parametrs{
         this.firsBase = firsBase;
         this.secondBase = secondBase;
         this.height = height;
-        calculateArea();
+        setArea();
     }
 
     public double getArea() {
@@ -18,12 +18,13 @@ public class IsoscelesTrapezoid extends Figure implements Parametrs{
     }
 
     @Override
-    public boolean isFlat() {
-        return true;
-    }
-
-    @Override
-    public boolean isSimple() {
-        return false;
+    public void getFigure() {
+        System.out.println("---------------------------------");
+        System.out.println("name: " + getName());
+        System.out.println("color: " + getColor());
+        System.out.println("area: " + getArea());
+        System.out.println("firstBase: " + firsBase);
+        System.out.println("secondBase: " + secondBase);
+        System.out.println("height: " + height);
     }
 }

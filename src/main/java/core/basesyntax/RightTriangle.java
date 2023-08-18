@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements Parametrs{
+public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
@@ -8,19 +8,19 @@ public class RightTriangle extends Figure implements Parametrs{
         super(name, color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        calculateArea();
+        setArea();
     }
     public double getArea() {
         return (firstLeg * secondLeg) / 2;
     }
 
     @Override
-    public boolean isFlat() {
-        return true;
-    }
-
-    @Override
-    public boolean isSimple() {
-        return false;
+    public void getFigure() {
+        System.out.println("---------------------------------");
+        System.out.println("name: " + getName());
+        System.out.println("color: " + getColor());
+        System.out.println("area: " + getArea());
+        System.out.println("firsLeg: " + firstLeg);
+        System.out.println("secondLeg: " + secondLeg);
     }
 }
