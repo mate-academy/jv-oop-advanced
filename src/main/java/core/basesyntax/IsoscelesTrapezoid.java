@@ -14,7 +14,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.firsBase = firsBase;
         this.secondBase = secondBase;
         this.height = height;
-        setArea();
     }
 
     @Override

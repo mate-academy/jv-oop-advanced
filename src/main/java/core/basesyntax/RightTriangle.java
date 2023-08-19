@@ -8,7 +8,6 @@ public class RightTriangle extends Figure {
         super(name, color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        setArea();
     }
 
     @Override

@@ -11,6 +11,9 @@ public class Main {
             if (i < figuresArray.length / 2) {
                 figuresArray[i] = figureSupplier.getRandomFigure();
                 figuresArray[i].draw();
+            } else {
+                figuresArray[i] = figureSupplier.getDefaultFigure();
+                figuresArray[i].draw();
             }
         }
     }
