@@ -28,6 +28,10 @@ public class FigureSupplier {
         }
     }
 
+    public Figure getDefaultFigure() {
+        return new Circle(Color.WHITE.name(), MAX_VALUE);
+    }
+
     private Figure createRandomCircle() {
         String color = colorSupplier.getRandomColor();
         int radius = random.nextInt(MAX_VALUE);
@@ -65,9 +69,5 @@ public class FigureSupplier {
         int sideLength = random.nextInt(MAX_VALUE);
 
         return new Square(color, sideLength);
-    }
-
-    public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.name(), MAX_VALUE);
     }
 }

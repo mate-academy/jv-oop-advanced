@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private static final int TWO = 2;
     private int firstLeg;
     private int secondLeg;
 
@@ -13,7 +12,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public double getArea() {
-        return (firstLeg * secondLeg) / TWO;
+        return (firstLeg * secondLeg) / 2;
     }
 
     @Override

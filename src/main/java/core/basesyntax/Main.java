@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Main {
-    private static final int START_INDEX = 0;
     private static final int FIGURES_AMOUNT = 6;
     private static final int HALF = 2;
 
@@ -9,7 +8,7 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figures = new Figure[FIGURES_AMOUNT];
 
-        for (int i = START_INDEX; i < figures.length; i++) {
+        for (int i = 0; i < figures.length; i++) {
             if (i < figures.length / HALF) {
                 figures[i] = figureSupplier.getRandomFigure();
             } else {
