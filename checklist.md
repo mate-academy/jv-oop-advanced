@@ -84,7 +84,7 @@ Square square = new Square(random.nextInt(10) + 1);
 #### Don't use static methods in your solution
 Static methods are in general a bad practice. Let's better create an instance of a class which method you want to call.
 
-#### Don't extend your `Main/Application` class from `FigureSupplier` or `ColorSupplier`.
+#### Don't extend your `Main/Application` class from `FigureSupplier` or `core.basesyntax.ColorSupplier`.
 To be able to call non-static method, we just need to create an instance of the class: 
 ```
 FigureSupplier figureSupplier = new FigureSupplier();
