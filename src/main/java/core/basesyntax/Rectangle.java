@@ -5,9 +5,9 @@ public class Rectangle extends Figure {
     private double secondSideLength;
 
     public Rectangle(double firstSideLength, double secondSideLength, String color) {
+        super(color);
         this.firstSideLength = firstSideLength;
         this.secondSideLength = secondSideLength;
-        setColor(color);
     }
 
     @Override

@@ -4,20 +4,19 @@ public class IsoscelesTrapezoid extends Figure {
     private static final int NUMBER_TWO = 2;
     private double firstSideLength;
     private double secondSideLength;
-    private double heightLength;
+    private double height;
 
-    public IsoscelesTrapezoid(double heightLength, double firstSideLength,
+    public IsoscelesTrapezoid(double height, double firstSideLength,
                               double secondSideLength, String color) {
-        this.heightLength = heightLength;
+        super(color);
+        this.height = height;
         this.firstSideLength = firstSideLength;
         this.secondSideLength = secondSideLength;
-
-        setColor(color);
     }
 
     @Override
     public double calculateArea() {
-        return (firstSideLength + secondSideLength) / NUMBER_TWO * heightLength;
+        return (firstSideLength + secondSideLength) / NUMBER_TWO * height;
     }
 
     @Override
@@ -26,6 +25,6 @@ public class IsoscelesTrapezoid extends Figure {
                 + " sq.units, firstSideLength: "
                 + (int) firstSideLength + " units, secondSideLength: "
                 + (int) secondSideLength + " units, heightLength: "
-                + (int) heightLength + " units, color: " + getColor());
+                + (int) height + " units, color: " + getColor());
     }
 }

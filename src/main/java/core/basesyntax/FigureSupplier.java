@@ -3,47 +3,35 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final Random random = new Random();
-    private static final Random randomNumber = new Random();
-    private static final int NUMBER_OF_FIGURES = 5;
-    private static final int TEN_NUMBER = 10;
-    private static final int ONE_NUMBER = 1;
-    private static final ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
+    private static final int NUMBER_OF_BOUND = 6;
+    private static final int DEFAULT_SIZE = 10;
+    private static final String DEFAULT_COLOR = "WHITE";
+    private final ColorSupplier colorSupplier = new ColorSupplier();
     private static final FigureSupplier figureSupplier = new FigureSupplier();
 
     public Figure getRandomFigure() {
-        int indexOfColor = random.nextInt(NUMBER_OF_FIGURES);
-        Figure randomFigure = null;
+        int indexOfColor = random.nextInt(NUMBER_OF_BOUND);
+        Figure randomFigure;
         switch (indexOfColor) {
             case 1: {
-                randomFigure = new Square(randomNumber.nextDouble() * TEN_NUMBER + ONE_NUMBER,
-                        colorSupplier.getRandomColor());
+                randomFigure = createRandomSquare(colorSupplier);
                 break;
             }
             case 2: {
-                randomFigure = new Rectangle(randomNumber.nextDouble() * TEN_NUMBER + ONE_NUMBER,
-                        randomNumber.nextDouble() * TEN_NUMBER + ONE_NUMBER,
-                        colorSupplier.getRandomColor());
+                randomFigure = createRandomRectangle(colorSupplier);
                 break;
             }
             case 3: {
-                randomFigure = new RightTriangle(
-                        randomNumber.nextDouble() * TEN_NUMBER + ONE_NUMBER,
-                        randomNumber.nextDouble() * TEN_NUMBER + ONE_NUMBER,
-                        colorSupplier.getRandomColor());
+                randomFigure = createRandomRightTriangle(colorSupplier);
                 break;
             }
             case 4: {
-                randomFigure = new Circle(randomNumber.nextDouble() * TEN_NUMBER + ONE_NUMBER,
-                        colorSupplier.getRandomColor());
+                randomFigure = createRandomCircle(colorSupplier);
                 break;
             }
             case 5: {
-                randomFigure = new IsoscelesTrapezoid(
-                        randomNumber.nextDouble() * TEN_NUMBER + ONE_NUMBER,
-                        randomNumber.nextDouble() * TEN_NUMBER + ONE_NUMBER,
-                        randomNumber.nextDouble() * TEN_NUMBER + ONE_NUMBER,
-                        colorSupplier.getRandomColor());
+                randomFigure = createRandomIsoscelesTrapezoid(colorSupplier);
                 break;
             }
             default: {
@@ -54,6 +42,35 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(TEN_NUMBER, "white");
+        return new Circle(DEFAULT_SIZE, DEFAULT_COLOR);
+    }
+
+    private Square createRandomSquare(ColorSupplier colorSupplier) {
+        return new Square(random.nextDouble() * DEFAULT_SIZE + 1,
+                colorSupplier.getRandomColor());
+    }
+
+    private Rectangle createRandomRectangle(ColorSupplier colorSupplier) {
+        return new Rectangle(random.nextDouble() * DEFAULT_SIZE + 1,
+                random.nextDouble() * DEFAULT_SIZE + 1,
+                colorSupplier.getRandomColor());
+    }
+
+    private RightTriangle createRandomRightTriangle(ColorSupplier colorSupplier) {
+        return new RightTriangle(random.nextDouble() * DEFAULT_SIZE + 1,
+                random.nextDouble() * DEFAULT_SIZE + 1,
+                colorSupplier.getRandomColor());
+    }
+
+    private Circle createRandomCircle(ColorSupplier colorSupplier) {
+        return new Circle(random.nextDouble() * DEFAULT_SIZE + 1,
+                colorSupplier.getRandomColor());
+    }
+
+    private IsoscelesTrapezoid createRandomIsoscelesTrapezoid(ColorSupplier colorSupplier) {
+        return new IsoscelesTrapezoid(random.nextDouble() * DEFAULT_SIZE + 1,
+                random.nextDouble() * DEFAULT_SIZE + 1,
+                random.nextDouble() * DEFAULT_SIZE + 1,
+                colorSupplier.getRandomColor());
     }
 }
