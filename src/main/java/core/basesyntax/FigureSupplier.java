@@ -14,29 +14,23 @@ public class FigureSupplier {
         int indexOfColor = random.nextInt(NUMBER_OF_BOUND);
         Figure randomFigure;
         switch (indexOfColor) {
-            case 0: {
+            case 0:
                 randomFigure = createRandomSquare(colorSupplier);
                 break;
-            }
-            case 1: {
+            case 1:
                 randomFigure = createRandomRectangle(colorSupplier);
                 break;
-            }
-            case 2: {
+            case 2:
                 randomFigure = createRandomRightTriangle(colorSupplier);
                 break;
-            }
-            case 3: {
+            case 3:
                 randomFigure = createRandomCircle(colorSupplier);
                 break;
-            }
-            case 4: {
+            case 4:
                 randomFigure = createRandomIsoscelesTrapezoid(colorSupplier);
                 break;
-            }
-            default: {
+            default:
                 return figureSupplier.getDefaultFigure();
-            }
         }
         return randomFigure;
     }
