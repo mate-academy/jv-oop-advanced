@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int NUMBER_OF_BOUND = 6;
+    private static final int NUMBER_OF_BOUND = 5;
     private static final int DEFAULT_SIZE = 10;
     private static final String DEFAULT_COLOR = "WHITE";
     private static final FigureSupplier figureSupplier = new FigureSupplier();
@@ -14,23 +14,23 @@ public class FigureSupplier {
         int indexOfColor = random.nextInt(NUMBER_OF_BOUND);
         Figure randomFigure;
         switch (indexOfColor) {
-            case 1: {
+            case 0: {
                 randomFigure = createRandomSquare(colorSupplier);
                 break;
             }
-            case 2: {
+            case 1: {
                 randomFigure = createRandomRectangle(colorSupplier);
                 break;
             }
-            case 3: {
+            case 2: {
                 randomFigure = createRandomRightTriangle(colorSupplier);
                 break;
             }
-            case 4: {
+            case 3: {
                 randomFigure = createRandomCircle(colorSupplier);
                 break;
             }
-            case 5: {
+            case 4: {
                 randomFigure = createRandomIsoscelesTrapezoid(colorSupplier);
                 break;
             }
