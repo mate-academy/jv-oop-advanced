@@ -16,7 +16,7 @@ import org.junit.Test;
 
 public class StructureTest {
   private static final List<String> figureClassNames = List
-      .of("Circle", "Square", "IsoscelesTrapezoid", "Rectangle", "RightTriangle");
+      .of("Circle", "Square", "ISOSCELESTRAPEZOID", "Rectangle", "TRIANGLE");
   private static List<Class> allClasses = new ArrayList<>();
 
   @BeforeClass
