@@ -11,7 +11,6 @@ public class Main {
             if (i < arraySize / 2) {
                 figure[i] = figureSupplier.getRandomFigure();
             } else {
-
                 figure[i] = figureSupplier.getDefaultFigure();
             }
 

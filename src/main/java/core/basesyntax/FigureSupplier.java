@@ -9,9 +9,7 @@ public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getDefaultFigure() {
-
-        return new Circle(String.valueOf(Color.WHITE), RADIUS);
-
+        return new Circle(Color.WHITE.name(), RADIUS);
     }
 
     public Figure getRandomFigure() {
