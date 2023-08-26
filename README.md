@@ -5,7 +5,7 @@ __Solve the task using OOP principles__
 Task:
 
 There are some figures of the following types: square, rectangle, right triangle, circle, isosceles trapezoid.
-You need to create corresponding classes for them(`Square`, `Rectangle`, `RightTriangle`, `Circle`, `IsoscelesTrapezoid`)
+You need to create corresponding classes for them(`core.basesyntax.Square`, `Rectangle`, `RightTriangle`, `Circle`, `IsoscelesTrapezoid`)
 
 All figures have 
 - **state** - all figures have `color`, but each figure type can also have one or several unique properties (`radius` for circle, `firstLeg` and `secondLeg` for right triangle, and so on).
