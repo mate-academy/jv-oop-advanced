@@ -37,6 +37,7 @@ public class RightTriangle extends Figure {
     public double getThirdSide() {
         return Math.sqrt((firstSide * firstSide) + (secondSide * secondSide));
     }
+
     public void setSecondSide(double secondSide) {
         this.secondSide = secondSide;
     }

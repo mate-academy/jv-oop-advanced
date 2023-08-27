@@ -43,8 +43,7 @@ public class IsoscelesTrapezoid extends Figure {
     public void setHeight(double height) {
         if (height < side) {
             this.height = height;
-        }
-        else {
+        } else {
             System.out.println("ERROR: height must be smaller than side.");
         }
     }
@@ -56,8 +55,7 @@ public class IsoscelesTrapezoid extends Figure {
     public void setSide(double side) {
         if (side > height) {
             this.side = side;
-        }
-        else {
+        } else {
             System.out.println("ERROR: side must be larger than height.");
         }
     }
@@ -77,8 +75,9 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public void draw() {
         System.out.println("" + getColor() + " isosceles trapezoid with area of "
-                + area() + " sq.units, lower base of " + getLowerBase() + " units, higher base of "
-                + higherBase + " units, height of " + height + " units and sides of " + side + " units");
+                + area() + " sq.units, lower base of " + getLowerBase()
+                + " units, higher base of " + higherBase + " units, height of "
+                + height + " units and sides of " + side + " units");
     }
     @Override
     public double area() {

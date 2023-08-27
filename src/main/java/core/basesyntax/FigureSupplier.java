@@ -31,7 +31,8 @@ public class FigureSupplier {
                 break;
             case 4:
                 randomFigure = new IsoscelesTrapezoid(cs.getRandomColor(),
-                        random.nextInt(maximalSize), random.nextInt(maximalSize), random.nextInt(maximalSize));
+                        random.nextInt(maximalSize), random.nextInt(maximalSize),
+                        random.nextInt(maximalSize));
                 break;
             default:
                 randomFigure = getDefaultFigure();

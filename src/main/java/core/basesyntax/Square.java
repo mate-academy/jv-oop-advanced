@@ -22,13 +22,13 @@ public class Square extends Figure {
     }
 
     @Override
-    public void draw () {
+    public void draw() {
         System.out.println("" + getColor() + " square with area of " + area()
                 + " sq.units and side of " + side + " units");
     }
 
     @Override
-    public double area () {
+    public double area() {
         return side * side;
     }
 }
