@@ -79,6 +79,7 @@ public class IsoscelesTrapezoid extends Figure {
                 + " units, higher base of " + higherBase + " units, height of "
                 + height + " units and sides of " + side + " units");
     }
+
     @Override
     public double area() {
         return ((getHigherBase() + getLowerBase()) * getHeight()) / 2;
