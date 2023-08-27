@@ -4,7 +4,7 @@ package core.basesyntax;
  * Feel free to remove this class and create your own.
  */
 public class Main {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         FigureSupplier fs = new FigureSupplier();
         int sizeOfArray = 6;
         Figure[] figureArray = new Figure[sizeOfArray];
@@ -15,7 +15,7 @@ public class Main {
             figureArray[i] = fs.getRandomDefaultFigure();
         }
         for (int i = 0; i < sizeOfArray; ++i) {
-            figureArray[i].Draw();
+            figureArray[i].draw();
         }
     }
 }

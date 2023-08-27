@@ -3,22 +3,27 @@ package core.basesyntax;
 public abstract class Figure implements Drawable {
     private String color;
 
-    public Figure () {
+    public Figure() {
         color = "WHITE";
     }
-    public Figure (String color) {
+
+    public Figure(String color) {
         this.color = color;
     }
-    public String getColor () {
+
+    public String getColor() {
         return color;
     }
+
     public void setColor(String color) {
         this.color = color;
     }
-    public void Draw () {
+
+    public void draw() {
         System.out.println();
     }
-    public double Area () {
+
+    public double area() {
         return 0;
     }
 }

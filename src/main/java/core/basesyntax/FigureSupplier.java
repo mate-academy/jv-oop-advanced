@@ -7,10 +7,12 @@ public class FigureSupplier {
     private ColorSupplier cs = new ColorSupplier();
     private int maximalSize = 100;
     private int numberOfFigureClasses = 5;
-    public Figure getDefaultFigure () {
+
+    public Figure getDefaultFigure() {
         return new Circle();
     }
-    public Figure getRandomFigure () {
+
+    public Figure getRandomFigure() {
         int whatFigureWillItBe = random.nextInt(numberOfFigureClasses);
         Figure randomFigure;
         switch (whatFigureWillItBe) {
@@ -37,7 +39,8 @@ public class FigureSupplier {
         }
         return randomFigure;
     }
-    public Figure getRandomDefaultFigure () {
+
+    public Figure getRandomDefaultFigure() {
         int whatFigureWillItBe = random.nextInt(numberOfFigureClasses);
         Figure randomFigure;
         switch (whatFigureWillItBe) {
