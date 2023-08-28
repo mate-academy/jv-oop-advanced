@@ -6,11 +6,9 @@ public class IsoscelesTrapezoid extends Figure {
     private double higherBase;
 
     public IsoscelesTrapezoid() {
-        double defaultSide = 5;
-        double defaultHeight = 4;
-        height = defaultHeight;
-        side = defaultSide;
-        higherBase = defaultSide;
+        height = 4;
+        side = 5;
+        higherBase = 5;
     }
 
     public IsoscelesTrapezoid(String color) {
