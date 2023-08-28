@@ -5,9 +5,8 @@ public class RightTriangle extends Figure {
     private double secondSide;
 
     public RightTriangle() {
-        double defaultSide = 10;
-        firstSide = defaultSide;
-        secondSide = defaultSide;
+        firstSide = 10;
+        secondSide = 10;
     }
 
     public RightTriangle(String color, double firstSide) {

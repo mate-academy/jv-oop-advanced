@@ -4,8 +4,7 @@ public class Square extends Figure {
     private double side;
 
     public Square() {
-        double defaultSide = 10;
-        side = defaultSide;
+        side = 10;
     }
 
     public Square(String color, double side) {

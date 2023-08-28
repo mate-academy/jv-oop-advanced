@@ -4,8 +4,7 @@ public class Rectangle extends Square {
     private double secondSide;
 
     public Rectangle() {
-        double defaultSide = 10;
-        secondSide = defaultSide;
+        secondSide = 10;
     }
 
     public Rectangle(String color, double side) {
