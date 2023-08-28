@@ -12,7 +12,7 @@ public class Main {
             figureArray[i] = fs.getRandomFigure();
         }
         for (int i = (sizeOfArray / 2); i < sizeOfArray; ++i) {
-            figureArray[i] = fs.getRandomDefaultFigure();
+            figureArray[i] = fs.getDefaultFigure();
         }
         for (int i = 0; i < sizeOfArray; ++i) {
             figureArray[i].draw();

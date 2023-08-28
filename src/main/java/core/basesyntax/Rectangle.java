@@ -3,11 +3,6 @@ package core.basesyntax;
 public class Rectangle extends Square {
     private double secondSide;
 
-    public Rectangle() {
-        double defaultSide = 10;
-        secondSide = defaultSide;
-    }
-
     public Rectangle(String color, double side) {
         super(color, side);
     }
@@ -27,12 +22,12 @@ public class Rectangle extends Square {
 
     @Override
     public void draw() {
-        System.out.println("" + getColor() + " rectangle with area of " + area()
+        System.out.println("" + getColor() + " rectangle with area of " + getArea()
                 + " sq.units and sides of " + getSide() + " units and " + secondSide + " units");
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return getSide() * secondSide;
     }
 }

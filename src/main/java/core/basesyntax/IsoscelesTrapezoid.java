@@ -5,28 +5,15 @@ public class IsoscelesTrapezoid extends Figure {
     private double side;
     private double higherBase;
 
-    public IsoscelesTrapezoid() {
-        height = 4;
-        side = 5;
-        higherBase = 5;
-    }
-
-    public IsoscelesTrapezoid(String color) {
-        super(color);
-        height = 4;
-        side = 5;
-        higherBase = 5;
-    }
-
     public IsoscelesTrapezoid(String color, double height, double side, double higherBase) {
         super(color);
         if (side > height) {
             this.height = height;
             this.side = side;
         } else if (side == height) {
-            double forCaseWhenSideEqualsHeigth = 1.0;
+            double forCaseWhenSideEqualsHeight = 1.0;
             this.height = height;
-            this.side = (side + forCaseWhenSideEqualsHeigth);
+            this.side = (side + forCaseWhenSideEqualsHeight);
         } else {
             this.height = side;
             this.side = height;
@@ -73,13 +60,13 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public void draw() {
         System.out.println("" + getColor() + " isosceles trapezoid with area of "
-                + area() + " sq.units, lower base of " + getLowerBase()
+                + getArea() + " sq.units, lower base of " + getLowerBase()
                 + " units, higher base of " + higherBase + " units, height of "
                 + height + " units and sides of " + side + " units");
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return ((getHigherBase() + getLowerBase()) * getHeight()) / 2;
     }
 }
