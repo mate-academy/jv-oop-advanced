@@ -5,32 +5,32 @@ import java.util.Random;
 public class FigureSupplier {
     private static final Random random = new Random();
     private static final ColorSupplier colorSupplier = new ColorSupplier();
-    private static final int MAGIC_NUMBER = 100;
+    private static final int MAX_LENGTH = 100;
     private static final int FIGURE_COUNT = 5;
+
+    private static final int DEFAULT_RADIUS = 10;
+    private static final String DEFAULT_COLOR = "white";
 
     public Figure getRandomFigure() {
         final String randomColor = colorSupplier.getRandomColor();
         final int index = random.nextInt(FIGURE_COUNT);
-        final int randomProperty = random.nextInt(MAGIC_NUMBER);
-        final int randomProperty1 = random.nextInt(MAGIC_NUMBER);
-        final int randomProperty2 = random.nextInt(MAGIC_NUMBER);
-
+        final int randomProperty = random.nextInt(MAX_LENGTH);
         switch (index) {
             case 0:
                 return new Circle(randomProperty, randomColor);
             case 1:
-                return new IsoscelesTrapezoid(randomProperty, randomProperty1,
-                        randomProperty2, randomColor);
+                return new IsoscelesTrapezoid(randomProperty, randomProperty,
+                        randomProperty, randomColor);
             case 2:
-                return new Rectangle(randomProperty, randomProperty1, randomColor);
+                return new Rectangle(randomProperty, randomProperty, randomColor);
             case 3:
-                return new RightTriangle(randomProperty, randomProperty1, randomColor);
+                return new RightTriangle(randomProperty, randomProperty, randomColor);
             default:
                 return new Square(randomProperty, randomColor);
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, Color.WHITE.name());
+        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
     }
 }
