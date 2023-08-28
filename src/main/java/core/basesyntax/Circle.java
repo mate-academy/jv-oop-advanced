@@ -4,8 +4,7 @@ public class Circle extends Figure {
     private double radius;
 
     public Circle() {
-        double defaultRadius = 10;
-        radius = defaultRadius;
+        radius = 10;
     }
 
     public Circle(String color, double radius) {
