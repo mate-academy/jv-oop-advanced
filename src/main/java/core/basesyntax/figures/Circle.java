@@ -6,7 +6,8 @@ public class Circle extends Figure {
     private static final double PI = 3.14;
     private int radius;
 
-    public Circle(int radius) {
+    public Circle(int radius, String color) {
+        super(color);
         this.radius = radius;
     }
 
@@ -16,7 +17,8 @@ public class Circle extends Figure {
     }
 
     public void draw() {
-        System.out.println("Figure: " + getName() + ", area: " + getArea()
+        System.out.println("Figure: " + getClass().getSimpleName().toLowerCase()
+                + ", area: " + getArea()
                 + " sq.units, radius: " + radius + " units, color: " + getColor());
     }
 }

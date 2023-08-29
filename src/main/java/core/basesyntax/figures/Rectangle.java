@@ -6,7 +6,8 @@ public class Rectangle extends Figure {
     private int length;
     private int width;
 
-    public Rectangle(int length, int width) {
+    public Rectangle(int length, int width, String color) {
+        super(color);
         this.length = length;
         this.width = width;
     }
@@ -17,9 +18,9 @@ public class Rectangle extends Figure {
     }
 
     public void draw() {
-        System.out.println("Figure: " + getName() + ", area: " + getArea()
-                + " sq.units, length: " + length + " units, width "
-                + width + " units, color: " + getColor());
+        System.out.println("Figure: " + getClass().getSimpleName().toLowerCase()
+                + ", area: " + getArea() + " sq.units, length: "
+                + length + " units, width " + width + " units, color: " + getColor());
     }
 
 }
