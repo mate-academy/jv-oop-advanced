@@ -1,6 +1,5 @@
 package core.basesyntax.random;
 
-import core.basesyntax.Color;
 import core.basesyntax.Figure;
 import core.basesyntax.figures.Circle;
 import core.basesyntax.figures.IsoscelesTrapezoid;
@@ -11,6 +10,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
+    private static final int DIMENSION_LIMIT = 10;
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
 
@@ -23,41 +23,24 @@ public class FigureSupplier {
         Figure figure;
         switch (figureNumber) {
             case 0:
-                figure = new Square(getRandomNumber(10));
-                figure.setName("square");
-                figure.setColor(colorSupplier.getRandomColor());
-                break;
+                return new Square(getRandomNumber(DIMENSION_LIMIT), colorSupplier.getRandomColor());
             case 1:
-                figure = new Rectangle(getRandomNumber(10), getRandomNumber(10));
-                figure.setName("rectangle");
-                figure.setColor(colorSupplier.getRandomColor());
-                break;
+                return new Rectangle(getRandomNumber(DIMENSION_LIMIT),
+                        getRandomNumber(DIMENSION_LIMIT), colorSupplier.getRandomColor());
             case 2:
-                figure = new RightTriangle(getRandomNumber(10), getRandomNumber(10));
-                figure.setName("right triangle");
-                figure.setColor(colorSupplier.getRandomColor());
-                break;
+                return new RightTriangle(getRandomNumber(DIMENSION_LIMIT),
+                        getRandomNumber(DIMENSION_LIMIT), colorSupplier.getRandomColor());
             case 3:
-                figure = new Circle(getRandomNumber(10));
-                figure.setName("circle");
-                figure.setColor(colorSupplier.getRandomColor());
-                break;
+                return new Circle(getRandomNumber(DIMENSION_LIMIT), colorSupplier.getRandomColor());
             default:
-                figure = new IsoscelesTrapezoid(getRandomNumber(10), getRandomNumber(10),
-                        getRandomNumber(10));
-                figure.setName("isosceles trapezoid");
-                figure.setColor(colorSupplier.getRandomColor());
-                break;
+                return new IsoscelesTrapezoid(getRandomNumber(DIMENSION_LIMIT),
+                        getRandomNumber(DIMENSION_LIMIT),
+                        getRandomNumber(DIMENSION_LIMIT), colorSupplier.getRandomColor());
         }
-        return figure;
     }
 
     public Figure getDefaultFigure() {
-        Figure figure;
-        figure = new Circle(10);
-        figure.setName("circle");
-        figure.setColor(Color.WHITE.name().toLowerCase());
-        return figure;
+        return new Circle(10,colorSupplier.getDefaultColor());
     }
 
 }
