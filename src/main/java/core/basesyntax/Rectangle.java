@@ -8,7 +8,6 @@ public class Rectangle extends Figure {
         this.width = width;
         this.height = height;
         this.color = color;
-
     }
 
     @Override
