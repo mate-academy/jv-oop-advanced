@@ -24,4 +24,3 @@ public class RightTriangle extends Figure {
                 + " units, secondLeg: " + secondLeg + " units, color: " + getColor());
     }
 }
-
