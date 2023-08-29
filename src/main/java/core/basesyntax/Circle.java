@@ -19,7 +19,6 @@ public class Circle extends Figure {
         System.out.println("We have the figure circle with radius " + radius + " , with the area "
                     + Math.PI * radius * radius + "and color " + color);
     }
-
 }
 
 
