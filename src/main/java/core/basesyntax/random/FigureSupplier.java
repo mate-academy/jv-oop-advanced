@@ -10,7 +10,8 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
-    private static final int DIMENSION_LIMIT = 10;
+    private static final int DIMENSION_LIMIT = 8;
+    private static final int DEFAULT_RADIUS = 10;
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
 
@@ -40,7 +41,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10,colorSupplier.getDefaultColor());
+        return new Circle(DEFAULT_RADIUS, colorSupplier.getDefaultColor());
     }
 
 }
