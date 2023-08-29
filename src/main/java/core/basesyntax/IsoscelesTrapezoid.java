@@ -14,7 +14,6 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double getArea() {
-
         return 4 * (radiusInscribedCircle * radiusInscribedCircle) / sin(angleBase);
     }
 
