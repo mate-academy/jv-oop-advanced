@@ -4,14 +4,13 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int DIMENSION_VALUE_LIMIT = 10;
-    private static final String DEFAULT_COLOR = "WHITE";
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
     private static final int DEFAULT_RADIUS = 10;
 
     private final Random randomizer = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-
         switch (randomizer.nextInt(Form.values().length)) {
             case 1:
                 return prepareCircle();

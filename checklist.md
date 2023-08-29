@@ -78,7 +78,7 @@ public class FigureSupplier {
 Create separate variables and pass them for better code readability.
 * Bad example:
 ```
-core.basesyntax.Square square = new core.basesyntax.Square(random.nextInt(10) + 1);
+Square square = new Square(random.nextInt(10) + 1);
 ```
 
 #### Don't use static methods in your solution
