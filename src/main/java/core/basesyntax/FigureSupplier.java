@@ -12,7 +12,7 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
 
-        switch (randomizer.nextInt(Figures.values().length)) {
+        switch (randomizer.nextInt(Form.values().length)) {
             case 1:
                 return prepareCircle();
             case 2:
