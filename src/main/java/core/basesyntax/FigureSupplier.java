@@ -24,7 +24,8 @@ public class FigureSupplier {
                 return new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(SIDE_LIMIT),
                         random.nextInt(0, 10));
             case 4:
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(SIDE_LIMIT),
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        random.nextInt(SIDE_LIMIT),
                         random.nextInt(SIDE_LIMIT));
             default:
                 return getDefaultFigure();
@@ -32,8 +33,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-
-
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
