@@ -16,13 +16,12 @@ public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
 
-    public int getRandomNumber(int number) {
+    private int getRandomNumber(int number) {
         return (random.nextInt(number) + 1);
     }
 
     public Figure getRandomFigure() {
         int figureNumber = getRandomNumber(FIGURE_COUNT);
-        Figure figure;
         switch (figureNumber) {
             case 0:
                 return new Square(getRandomNumber(DIMENSION_LIMIT), colorSupplier.getRandomColor());
