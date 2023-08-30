@@ -1,3 +1,4 @@
+
 package core.basesyntax.random;
 
 import core.basesyntax.Figure;
