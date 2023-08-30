@@ -11,7 +11,7 @@ public class IsoscelesTrapezoid extends FigureAbstract {
         this.length = length;
         this.width = width;
         this.height = height;
-        this.area = getArea();
+        area = getArea();
     }
 
     @Override
@@ -20,8 +20,8 @@ public class IsoscelesTrapezoid extends FigureAbstract {
     }
 
     @Override
-    public String drawInfo() {
-        return "Figure: "
+    public void draw() {
+        System.out.println("Figure: "
                 +
                 getName()
                 +
@@ -33,6 +33,6 @@ public class IsoscelesTrapezoid extends FigureAbstract {
                 +
                 ", height: " + height
                 +
-                ", color: " + getColor();
+                ", color: " + getColor());
     }
 }

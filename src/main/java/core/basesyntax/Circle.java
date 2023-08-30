@@ -7,7 +7,7 @@ public class Circle extends FigureAbstract {
     protected Circle(String name, String color, int radius) {
         super(name, color);
         this.radius = radius;
-        this.area = getArea();
+        area = getArea();
     }
 
     public int getRadius() {
@@ -24,8 +24,8 @@ public class Circle extends FigureAbstract {
     }
 
     @Override
-    public String drawInfo() {
-        return "Figure: "
+    public void draw() {
+        System.out.println("Figure: "
                 +
                 getName()
                 +
@@ -33,6 +33,6 @@ public class Circle extends FigureAbstract {
                 +
                 ", radius: " + radius
                 +
-                ", color: " + getColor();
+                ", color: " + getColor());
     }
 }

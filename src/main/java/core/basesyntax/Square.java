@@ -7,7 +7,7 @@ public class Square extends FigureAbstract {
     protected Square(String name, String color, int side) {
         super(name, color);
         this.side = side;
-        this.area = getArea();
+        area = getArea();
     }
 
     @Override
@@ -16,8 +16,8 @@ public class Square extends FigureAbstract {
     }
 
     @Override
-    public String drawInfo() {
-        return "Figure: "
+    public void draw() {
+        System.out.println("Figure: "
                 +
                 getName()
                 +
@@ -25,6 +25,6 @@ public class Square extends FigureAbstract {
                 +
                 ", side: " + side
                 +
-                ", color: " + getColor();
+                ", color: " + getColor());
     }
 }

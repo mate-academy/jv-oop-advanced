@@ -9,7 +9,7 @@ public class RightTriangle extends FigureAbstract {
         super(name, color);
         this.length = length;
         this.width = width;
-        this.area = getArea();
+        area = getArea();
     }
 
     @Override
@@ -18,8 +18,8 @@ public class RightTriangle extends FigureAbstract {
     }
 
     @Override
-    public String drawInfo() {
-        return "Figure: "
+    public void draw() {
+        System.out.println("Figure: "
                 +
                 getName()
                 +
@@ -29,6 +29,6 @@ public class RightTriangle extends FigureAbstract {
                 +
                 ", width: " + width
                 +
-                ", color: " + getColor();
+                ", color: " + getColor());
     }
 }
