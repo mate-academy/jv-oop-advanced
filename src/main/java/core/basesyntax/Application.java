@@ -8,6 +8,7 @@ import core.basesyntax.random.FigureSupplier;
  */
 public class Application {
     private static final int DEFAULT_FIGURE = 6;
+
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figures = new Figure[DEFAULT_FIGURE];

@@ -4,9 +4,9 @@ import core.basesyntax.abstracts.Figure;
 import core.basesyntax.figures.Circle;
 import core.basesyntax.figures.IsoscelesTrapezoid;
 import core.basesyntax.figures.Rectangle;
-import java.util.Random;
 import core.basesyntax.figures.RightTriangle;
 import core.basesyntax.figures.Square;
+import java.util.Random;
 
 public class FigureSupplier {
     private static final int NUMBER_OF_FIGURES = 5;
@@ -23,9 +23,11 @@ public class FigureSupplier {
                 return new IsoscelesTrapezoid(supplier.getRandomColor(),
                     random.nextDouble(), random.nextDouble(), random.nextDouble());
             case 2:
-                return new Rectangle(supplier.getRandomColor(), random.nextDouble(), random.nextDouble());
+                return new Rectangle(supplier.getRandomColor(),
+                    random.nextDouble(), random.nextDouble());
             case 3:
-                return new RightTriangle(supplier.getRandomColor(), random.nextDouble(), random.nextDouble());
+                return new RightTriangle(supplier.getRandomColor(),
+                    random.nextDouble(), random.nextDouble());
             default:
                 return new Square(supplier.getRandomColor(), random.nextDouble());
         }
