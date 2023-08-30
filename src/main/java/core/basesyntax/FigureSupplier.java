@@ -19,14 +19,13 @@ public class FigureSupplier {
                 return new Square(colorSupplier.getRandomColor(), random.nextInt(SIDE_LIMIT));
             case 2:
                 return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(SIDE_LIMIT),
-                        random.nextInt(0, 10));
+                        random.nextInt(SIDE_LIMIT));
             case 3:
                 return new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(SIDE_LIMIT),
-                        random.nextInt(0, 10));
+                        random.nextInt(SIDE_LIMIT));
             case 4:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        random.nextInt(SIDE_LIMIT),
-                        random.nextInt(SIDE_LIMIT));
+                        random.nextInt(SIDE_LIMIT), random.nextInt(SIDE_LIMIT));
             default:
                 return getDefaultFigure();
         }
