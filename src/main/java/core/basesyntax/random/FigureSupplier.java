@@ -1,8 +1,12 @@
 package core.basesyntax.random;
 
 import core.basesyntax.abstracts.Figure;
-import core.basesyntax.figures.*;
+import core.basesyntax.figures.Circle;
+import core.basesyntax.figures.IsoscelesTrapezoid;
+import core.basesyntax.figures.Rectangle;
 import java.util.Random;
+import core.basesyntax.figures.RightTriangle;
+import core.basesyntax.figures.Square;
 
 public class FigureSupplier {
     private static final int NUMBER_OF_FIGURES = 5;
@@ -16,8 +20,8 @@ public class FigureSupplier {
             case 0:
                 return new Circle(supplier.getRandomColor(), random.nextInt());
             case 1:
-                return new IsoscelesTrapezoid(supplier.getRandomColor(), random.nextDouble(),
-                    random.nextDouble(), random.nextDouble());
+                return new IsoscelesTrapezoid(supplier.getRandomColor(),
+                    random.nextDouble(), random.nextDouble(), random.nextDouble());
             case 2:
                 return new Rectangle(supplier.getRandomColor(), random.nextDouble(), random.nextDouble());
             case 3:

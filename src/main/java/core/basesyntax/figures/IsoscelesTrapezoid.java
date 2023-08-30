@@ -23,10 +23,10 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: isoscelesTrapezoid"
-            + " area:" + getArea()
-            + " sq.units, upperBase: " + upperBase
-            + " units, bottomBase: " + bottomBase
-            + " units, side: " + side
-            + " units, color: " + getColor().toLowerCase());
+                + " area:" + getArea()
+                + " sq.units, upperBase: " + upperBase
+                + " units, bottomBase: " + bottomBase
+                + " units, side: " + side
+                + " units, color: " + getColor().toLowerCase());
     }
 }
