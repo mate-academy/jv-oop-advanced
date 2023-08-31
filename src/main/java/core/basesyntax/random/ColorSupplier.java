@@ -5,12 +5,10 @@ import java.util.Random;
 
 public class ColorSupplier {
     private final Random random = new Random();
-    private String color;
 
     public String getRandomColor() {
         int value = random.nextInt(Color.values().length);
-        color = String.valueOf(Color.values()[value]);
-        return color;
+        return Color.values()[value].name();
     }
 
     public String getDefaultColor() {
