@@ -3,10 +3,6 @@ package core.basesyntax;
 public class Rectangle extends Square {
     private double secondSide;
 
-    public Rectangle(String color, double side) {
-        super(color, side);
-    }
-
     public Rectangle(String color, double side, double secondSide) {
         super(color, side);
         this.secondSide = secondSide;

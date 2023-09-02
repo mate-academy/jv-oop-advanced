@@ -11,9 +11,9 @@ public class IsoscelesTrapezoid extends Figure {
             this.height = height;
             this.side = side;
         } else if (side == height) {
-            double forCaseWhenSideEqualsHeight = 1.0;
+            final double ADD_WHEN_SIDE_EQUALS_HEIGHT = 1.0;
             this.height = height;
-            this.side = (side + forCaseWhenSideEqualsHeight);
+            this.side = (side + ADD_WHEN_SIDE_EQUALS_HEIGHT);
         } else {
             this.height = side;
             this.side = height;
