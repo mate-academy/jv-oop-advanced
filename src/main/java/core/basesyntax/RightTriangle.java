@@ -1,15 +1,20 @@
 package core.basesyntax;
 
 public class RightTriangle extends FigureAbstract {
+    private static RightTriangle rightTriangle = new RightTriangle();
     private int length;
     private int width;
     private int area;
 
-    protected RightTriangle(String name, String color, int length, int width) {
-        super(name, color);
+    protected RightTriangle(String color, int length, int width) {
+        super(color);
         this.length = length;
         this.width = width;
         area = getArea();
+    }
+
+    public RightTriangle() {
+
     }
 
     @Override
@@ -21,7 +26,7 @@ public class RightTriangle extends FigureAbstract {
     public void draw() {
         System.out.println("Figure: "
                 +
-                getName()
+                rightTriangle.getClass().getSimpleName().toLowerCase()
                 +
                 ", area: " + area
                 +

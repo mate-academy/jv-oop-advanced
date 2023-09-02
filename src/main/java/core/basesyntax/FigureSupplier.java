@@ -1,54 +1,60 @@
 package core.basesyntax;
 
-import static core.basesyntax.FigureType.CIRCLE;
-import static core.basesyntax.FigureType.ISOSCELESTRAPEZOID;
-import static core.basesyntax.FigureType.RECTANGLE;
-import static core.basesyntax.FigureType.RIGHTTRIANGLE;
-import static core.basesyntax.FigureType.SQUARE;
-
 import java.util.Random;
 
 public class FigureSupplier {
-    static final int RADIUS_CIRCLE = 10;
-    private static final String NAME_FIGURE = "circle";
+    private static final int RADIUS_CIRCLE = 10;
     private static final String WHITE_COLOR = Color.WHITE.name().toLowerCase();
-    private final Random random = new Random();
+    private static Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
+    //private utility method
+    private static int getNumberFrom1to100() {
+        return random.nextInt(101);
+    }
+
     public FigureAbstract getDefaultFigure() {
-        return new Circle(NAME_FIGURE, WHITE_COLOR, RADIUS_CIRCLE);
+        return new Circle(WHITE_COLOR, RADIUS_CIRCLE);
     }
 
     public FigureAbstract getRandomFigure() {
         FigureType[] figures = FigureType.values();
         int index = random.nextInt(figures.length);
         FigureType figureType = figures[index];
-        if (figureType == SQUARE) {
-            return new Square(figureType.name().toLowerCase(),
-                    colorSupplier.getRandomColor().toLowerCase(),
-                    (int) (Math.random() * 101));
-        } else if (figureType == CIRCLE) {
-            return new Circle(figureType.name(),
-                    colorSupplier.getRandomColor().toLowerCase(),
-                    (int) (Math.random() * 101));
-        } else if (figureType == RECTANGLE) {
-            return new Rectangle(figureType.name(),
-                    colorSupplier.getRandomColor().toLowerCase(),
-                    (int) (Math.random() * 101),
-                    (int) (Math.random() * 101));
-        } else if (figureType == RIGHTTRIANGLE) {
-            return new Rectangle(figureType.name(),
-                    colorSupplier.getRandomColor().toLowerCase(),
-                    (int) (Math.random() * 101),
-                    (int) (Math.random() * 101));
-        } else if (figureType == ISOSCELESTRAPEZOID) {
-            return new IsoscelesTrapezoid(figureType.name(),
-                    colorSupplier.getRandomColor().toLowerCase(),
-                    (int) (Math.random() * 101),
-                    (int) (Math.random() * 101),
-                    (int) (Math.random() * 101));
-        } else {
-            return getDefaultFigure();
+
+        switch (figureType) {
+            case SQUARE:
+                return new Square(
+                        colorSupplier.getRandomColor().toLowerCase(),
+                        getNumberFrom1to100()
+                );
+            case CIRCLE:
+                return new Circle(
+                        colorSupplier.getRandomColor().toLowerCase(),
+                        getNumberFrom1to100()
+                );
+            case RECTANGLE:
+                return new Rectangle(
+                        colorSupplier.getRandomColor().toLowerCase(),
+                        getNumberFrom1to100(),
+                        getNumberFrom1to100()
+                );
+            case RIGHTTRIANGLE:
+                return new RightTriangle(
+                        colorSupplier.getRandomColor().toLowerCase(),
+                        getNumberFrom1to100(),
+                        getNumberFrom1to100()
+
+                );
+            case ISOSCELESTRAPEZOID:
+                return new IsoscelesTrapezoid(
+                        colorSupplier.getRandomColor().toLowerCase(),
+                        getNumberFrom1to100(),
+                        getNumberFrom1to100(),
+                        getNumberFrom1to100()
+                );
+            default:
+                return getDefaultFigure();
         }
     }
 }

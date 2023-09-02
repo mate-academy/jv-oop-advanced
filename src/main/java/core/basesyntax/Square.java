@@ -1,11 +1,15 @@
 package core.basesyntax;
 
 public class Square extends FigureAbstract {
+    private static Square square = new Square();
     private int side;
     private int area;
 
-    protected Square(String name, String color, int side) {
-        super(name, color);
+    public Square() {
+    }
+
+    protected Square(String color, int side) {
+        super(color);
         this.side = side;
         area = getArea();
     }
@@ -19,7 +23,7 @@ public class Square extends FigureAbstract {
     public void draw() {
         System.out.println("Figure: "
                 +
-                getName()
+                square.getClass().getSimpleName().toLowerCase()
                 +
                 ", area: " + area
                 +

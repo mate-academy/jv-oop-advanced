@@ -1,21 +1,17 @@
 package core.basesyntax;
 
 public class Circle extends FigureAbstract {
+    private static final Circle CIRCLE = new Circle();
     private int radius;
     private int area;
 
-    protected Circle(String name, String color, int radius) {
-        super(name, color);
+    public Circle() {
+    }
+
+    protected Circle(String color, int radius) {
+        super(color);
         this.radius = radius;
         area = getArea();
-    }
-
-    public int getRadius() {
-        return radius;
-    }
-
-    public void setRadius(int radius) {
-        this.radius = radius;
     }
 
     @Override
@@ -27,7 +23,7 @@ public class Circle extends FigureAbstract {
     public void draw() {
         System.out.println("Figure: "
                 +
-                getName()
+                CIRCLE.getClass().getSimpleName().toLowerCase()
                 +
                 ", area: " + area
                 +

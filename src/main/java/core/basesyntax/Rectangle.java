@@ -1,15 +1,20 @@
 package core.basesyntax;
 
 public class Rectangle extends FigureAbstract {
+    private static Rectangle rectangle = new Rectangle();
     private int length;
     private int width;
     private int area;
 
-    public Rectangle(String name, String color, int length, int width) {
-        super(name, color);
+    public Rectangle(String color, int length, int width) {
+        super(color);
         this.length = length;
         this.width = width;
         area = getArea();
+    }
+
+    public Rectangle() {
+
     }
 
     @Override
@@ -21,7 +26,7 @@ public class Rectangle extends FigureAbstract {
     public void draw() {
         System.out.println("Figure: "
                 +
-                getName()
+                rectangle.getClass().getSimpleName().toLowerCase()
                 +
                 ", area: " + area
                 +

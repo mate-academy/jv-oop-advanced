@@ -1,17 +1,22 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends FigureAbstract {
+    private static IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
     private int length;
     private int width;
     private int height;
     private int area;
 
-    protected IsoscelesTrapezoid(String name, String color, int length, int width, int height) {
-        super(name, color);
+    protected IsoscelesTrapezoid(String color, int length, int width, int height) {
+        super(color);
         this.length = length;
         this.width = width;
         this.height = height;
         area = getArea();
+    }
+
+    public IsoscelesTrapezoid() {
+
     }
 
     @Override
@@ -23,7 +28,7 @@ public class IsoscelesTrapezoid extends FigureAbstract {
     public void draw() {
         System.out.println("Figure: "
                 +
-                getName()
+                isoscelesTrapezoid.getClass().getSimpleName().toLowerCase()
                 +
                 ", area: " + area
                 +
