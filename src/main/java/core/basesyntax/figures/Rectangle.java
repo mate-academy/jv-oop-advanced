@@ -6,16 +6,11 @@ public class Rectangle extends Figure {
     private double length;
     private double width;
 
-
-    public void setLength(double length) {
+    public Rectangle(double length, double width, String color) {
         this.length = length;
-    }
-
-
-    public void setWidth(double width) {
         this.width = width;
+        setColor(color);
     }
-
 
     @Override
     public double area() {
@@ -25,7 +20,7 @@ public class Rectangle extends Figure {
     @Override
     public void draw() {
         System.out.print("Figure: rectangle, area: ");
-        System.out.print(setDecimalFormat(area()));
+        System.out.print(getDecimalFormat(area()));
         System.out.print(" sq.units, length: " + length + " units, width: "
                 + width + " units, color: " + getColor());
         System.out.println();

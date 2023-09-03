@@ -2,20 +2,15 @@ package core.basesyntax.figures;
 
 import core.basesyntax.abstracts.Figure;
 
-public class IsoscelesTrapezoid  extends Figure {
+public class IsoscelesTrapezoid extends Figure {
     private double parallelSide;
     private double height;
 
-
-    public void setParallelSide(double parallelSide) {
+    public IsoscelesTrapezoid(double parallelSide, double height, String color) {
         this.parallelSide = parallelSide;
-    }
-
-
-    public void setHeight(double height) {
         this.height = height;
+        setColor(color);
     }
-
 
     @Override
     public double area() {
@@ -25,7 +20,7 @@ public class IsoscelesTrapezoid  extends Figure {
     @Override
     public void draw() {
         System.out.print("Figure: isosceles trapezoid, area: ");
-        System.out.print(setDecimalFormat(area()));
+        System.out.print(getDecimalFormat(area()));
         System.out.print(" sq.units, parallel side: " + parallelSide + " units, height: "
                 + height + " units, color: " + getColor());
         System.out.println();
