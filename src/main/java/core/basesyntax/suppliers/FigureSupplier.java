@@ -1,7 +1,7 @@
 package core.basesyntax.suppliers;
 
 import core.basesyntax.abstracts.Figure;
-import core.basesyntax.enums.Colors;
+import core.basesyntax.enums.Color;
 import core.basesyntax.figures.Circle;
 import core.basesyntax.figures.IsoscelesTrapezoid;
 import core.basesyntax.figures.Rectangle;
@@ -45,6 +45,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, Colors.WHITE.name().toLowerCase());
+        return new Circle(DEF_PARAMETER, Color.WHITE.name().toLowerCase());
     }
 }

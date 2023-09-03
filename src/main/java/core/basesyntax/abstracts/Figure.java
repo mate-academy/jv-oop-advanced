@@ -8,12 +8,12 @@ public abstract class Figure implements Drawable, Calculatable {
     private String color;
     private final DecimalFormat decimalFormat = new DecimalFormat("#.#");
 
-    public String getColor() {
-        return color;
+    public Figure(String color) {
+        this.color = color;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public String getColor() {
+        return color;
     }
 
     protected String getDecimalFormat(double number) {

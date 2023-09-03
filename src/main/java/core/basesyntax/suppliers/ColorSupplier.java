@@ -1,13 +1,13 @@
 package core.basesyntax.suppliers;
 
-import core.basesyntax.enums.Colors;
+import core.basesyntax.enums.Color;
 import java.util.Random;
 
 public class ColorSupplier {
     private final Random random = new Random();
 
     public String getRandomColor() {
-        int index = random.nextInt(Colors.values().length);
-        return Colors.values()[index].name().toLowerCase();
+        int index = random.nextInt(Color.values().length);
+        return Color.values()[index].name().toLowerCase();
     }
 }
