@@ -5,10 +5,10 @@ import java.util.Random;
 public class FigureSupplier {
     private Random random = new Random();
     private ColorSupplier cs = new ColorSupplier();
-    private static int DEFAULT_SIZE_BOUND = 100;
-    private static int NUMBER_OF_FIGURE_CLASSES = 5;
-    private static int DEFAULT_RADIUS = 10;
-    private static String DEFAULT_COLOR = "WHITE";
+    static private int DEFAULT_SIZE_BOUND = 100;
+    static private int NUMBER_OF_FIGURE_CLASSES = 5;
+    static private int DEFAULT_RADIUS = 10;
+    static private String DEFAULT_COLOR = "WHITE";
 
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
