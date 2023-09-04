@@ -3,8 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final Random random = new Random();
-    private static final ColorSupplier colorSupplier = new ColorSupplier();
+    private static final Random RANDOM = new Random();
+    private static final ColorSupplier COLOR_SUPPLIER = new ColorSupplier();
     private static final int MAX_LENGTH = 100;
     private static final int FIGURE_COUNT = 5;
 
@@ -12,9 +12,9 @@ public class FigureSupplier {
     private static final String DEFAULT_COLOR = "white";
 
     public Figure getRandomFigure() {
-        final String randomColor = colorSupplier.getRandomColor();
-        final int index = random.nextInt(FIGURE_COUNT);
-        final int randomProperty = random.nextInt(MAX_LENGTH);
+        final String randomColor = COLOR_SUPPLIER.getRandomColor();
+        final int index = RANDOM.nextInt(FIGURE_COUNT);
+        final int randomProperty = RANDOM.nextInt(MAX_LENGTH);
         switch (index) {
             case 0:
                 return new Circle(randomProperty, randomColor);
