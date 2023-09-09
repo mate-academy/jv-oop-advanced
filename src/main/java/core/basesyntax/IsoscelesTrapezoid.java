@@ -5,7 +5,7 @@ public class IsoscelesTrapezoid extends Figure {
     private final int sideB;
     private final int height;
 
-    public IsoscelesTrapezoid(Colors color, int sideA, int sideB, int height) {
+    public IsoscelesTrapezoid(String color, int sideA, int sideB, int height) {
         this.color = color;
         this.sideA = sideA;
         this.sideB = sideB;
@@ -13,15 +13,15 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public int areaCalculator() {
+    public double getArea() {
         return (this.sideA + this.sideB) / 2 * this.height;
     }
 
     @Override
-    public void informationCalculator() {
+    public void draw() {
         String trapezoidInformation = String.valueOf(new StringBuilder()
                 .append("Figure: isoscelesTrapezoid, area: ")
-                .append(areaCalculator())
+                .append(getArea())
                 .append("sq.units, sideA: ")
                 .append(this.sideA)
                 .append("units, sideB: ")

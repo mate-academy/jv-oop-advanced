@@ -10,8 +10,8 @@ public class Main {
             } else {
                 array[i] = randomFigures.getDefaultFigure();
             }
-            array[i].areaCalculator();
-            array[i].informationCalculator();
+            array[i].getArea();
+            array[i].draw();
         }
     }
 }

@@ -4,22 +4,22 @@ public class Rectangle extends Figure {
     private final int length;
     private final int height;
 
-    public Rectangle(Colors randomColor, int length, int height) {
+    public Rectangle(String randomColor, int length, int height) {
         this.color = randomColor;
         this.length = length;
         this.height = height;
     }
 
     @Override
-    public int areaCalculator() {
+    public double getArea() {
         return height * length;
     }
 
     @Override
-    public void informationCalculator() {
+    public void draw() {
         String rectangleInformation = String.valueOf(new StringBuilder()
                 .append("Figure: rectangle, area: ")
-                .append(areaCalculator())
+                .append(getArea())
                 .append(" sq.units, length: ")
                 .append(this.length)
                 .append(" units, height: ")

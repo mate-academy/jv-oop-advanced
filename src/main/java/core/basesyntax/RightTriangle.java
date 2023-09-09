@@ -4,22 +4,22 @@ public class RightTriangle extends Figure {
     private final int base;
     private final int height;
 
-    public RightTriangle(Colors color, int base, int height) {
+    public RightTriangle(String color, int base, int height) {
         this.color = color;
         this.base = base;
         this.height = height;
     }
 
     @Override
-    public int areaCalculator() {
+    public double getArea() {
         return base * height / 2;
     }
 
     @Override
-    public void informationCalculator() {
+    public void draw() {
         String triangleInformation = String.valueOf(new StringBuilder()
                 .append("Figure: right triangle, area: ")
-                .append(areaCalculator())
+                .append(getArea())
                 .append("sq.units, base: ")
                 .append(this.base)
                 .append(" units, height: ")
@@ -28,5 +28,4 @@ public class RightTriangle extends Figure {
                 .append(color));
         System.out.println(triangleInformation);
     }
-
 }
