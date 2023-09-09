@@ -17,31 +17,31 @@ public class FigureSupplier {
 
         switch (randomFigureType) {
             case "square":
-                double side = Math.random() * 10;
+                double side = getRandomSquare();
                 return new Square(randomColor, side);
             case "rectangle":
-                double length = Math.random() * 10;
-                double width = Math.random() * 10;
+                double length = getRandomSquare();
+                double width = getRandomSquare();
                 return new Rectangle(randomColor, length, width);
             case "right triangle":
-                double firstLeg = Math.random() * 10;
-                double secondLeg = Math.random() * 10;
-                double hypotenuse = Math.random() * 10;
+                double firstLeg = getRandomSquare();
+                double secondLeg = getRandomSquare();
+                double hypotenuse = getRandomSquare();
                 return new RightTriangle(randomColor, firstLeg, secondLeg, hypotenuse);
             case "circle":
-                double radius = Math.random() * 10;
+                double radius = getRandomSquare();
                 return new Circle(randomColor, radius);
             case "isosceles trapezoid":
-                double topBase = Math.random() * 10;
-                double bottomBase = Math.random() * 10;
-                double height = Math.random() * 10;
-                return new IsoscelesTrapezoid(randomColor, topBase, bottomBase, height);
             default:
-                return new Circle("WHITE", 10);
+                return new Circle("WHITE", 10); // explain this moment please
         }
     }
 
-    public Figure getDefaultFigure() {
+    final Figure getDefaultFigure() {
         return new Circle("WHITE", 10);
+    }
+
+    public double getRandomSquare() {
+        return Math.random() * 10;
     }
 }

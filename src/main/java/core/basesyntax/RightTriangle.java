@@ -4,7 +4,6 @@ public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
     private double hypotenuse;
-    private String randomColor = new ColorSupplier().getRandomColor();
 
     public RightTriangle(String color, double firstLeg, double secondLeg, double hypotenuse) {
         super(color);
@@ -14,20 +13,16 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "Figure: right triangle, area: " + (firstLeg * secondLeg) / 2
-                + " sq.units, firstSide: " + firstLeg + " units, secondSide: "
-                + secondLeg + " units, hypotenuse: " + hypotenuse
-                + " units, color: " + randomColor;
-    }
-
-    @Override
     public double getArea() {
         return (firstLeg * secondLeg) / 2;
     }
 
     @Override
     public void draw() {
-        System.out.println("Right triangle was drawn");
+        String randomColor = new ColorSupplier().getRandomColor();
+        System.out.println("Figure: right triangle, area: " + getArea()
+                + " sq.units, firstSide: " + firstLeg + " units, secondSide: "
+                + secondLeg + " units, hypotenuse: " + hypotenuse
+                + " units, color: " + randomColor);
     }
 }
