@@ -2,6 +2,7 @@ package core.basesyntax;
 
 public class Circle extends Figure {
     private double radius;
+    private String randomColor = new ColorSupplier().getRandomColor();
 
     public Circle(String color, double radius) {
         super(color);
@@ -11,7 +12,7 @@ public class Circle extends Figure {
     @Override
     public String toString() {
         return "Figure: circle, area: " + (Math.PI * radius * radius) + " sq.units, radius: "
-                + radius + " units, color: " + new ColorSupplier().getRandomColor();
+                + radius + " units, color: " + randomColor;
     }
 
     @Override

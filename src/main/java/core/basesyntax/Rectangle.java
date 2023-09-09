@@ -3,6 +3,7 @@ package core.basesyntax;
 public class Rectangle extends Figure {
     private double firstSide;
     private double secondSide;
+    private String randomColor = new ColorSupplier().getRandomColor();
 
     public Rectangle(String color, double firstSide, double secondSide) {
         super(color);
@@ -14,7 +15,7 @@ public class Rectangle extends Figure {
     public String toString() {
         return "Figure: rectangle, area: " + (firstSide * secondSide)
                 + " sq.units, firstSide: " + firstSide + " units, secondSide: "
-                + secondSide + " units, color: " + new ColorSupplier().getRandomColor();
+                + secondSide + " units, color: " + randomColor;
     }
 
     @Override

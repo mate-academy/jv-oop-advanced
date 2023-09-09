@@ -2,6 +2,7 @@ package core.basesyntax;
 
 public class Square extends Figure {
     private double side;
+    private String randomColor = new ColorSupplier().getRandomColor();
 
     public Square(String color, double side) {
         super(color);
@@ -11,7 +12,7 @@ public class Square extends Figure {
     @Override
     public String toString() {
         return "Figure: square, area: " + Math.pow(side, 2) + " sq.units, side: " + side
-                + " units, color: " + new ColorSupplier().getRandomColor();
+                + " units, color: " + randomColor;
     }
 
     @Override

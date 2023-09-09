@@ -3,16 +3,16 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private ColorSupplier color = new ColorSupplier();
+    private Random random = new Random();
+
     public Figure getRandomFigure() {
-        String randomColor = ColorSupplier.getRandomColor();
-        // if getRandomColor() not be static, will be next problem:
-        // Non-static method 'getRandomColor()' cannot be referenced from a static context
+        String randomColor = color.getRandomColor();
         final String[] figures = {"square",
                                   "rectangle",
                                   "right triangle",
                                   "circle",
                                   "isosceles trapezoid"};
-        Random random = new Random();
         String randomFigureType = figures[random.nextInt(figures.length)];
 
         switch (randomFigureType) {
