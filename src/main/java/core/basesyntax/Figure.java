@@ -1,5 +1,6 @@
 package core.basesyntax;
 
-public class Figure {
-    String color;
+public abstract class Figure {
+    private String color;
+    private int area;
 }
