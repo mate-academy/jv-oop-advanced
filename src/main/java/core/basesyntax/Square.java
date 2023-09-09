@@ -15,7 +15,13 @@ public class Square extends Figure {
 
     @Override
     public void informationCalculator() {
-        String squareInformation = "Figure: square, area: " + areaCalculator() + " sq.units, side: " + this.side + " units, color: " + color;
+        String squareInformation = String.valueOf(new StringBuilder()
+                .append("Figure: square, area: ")
+                .append(areaCalculator())
+                .append(" sq.units, side: ")
+                .append(this.side)
+                .append(" units, color: ")
+                .append(color));
         System.out.println(squareInformation);
     }
 

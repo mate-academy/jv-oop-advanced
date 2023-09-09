@@ -21,7 +21,12 @@ public class Circle extends Figure {
 
     @Override
     public void informationCalculator() {
-        String circleInformation = "Figure: circle, area: " + areaCalculator() + " sq.units, radius: " + this.radius + " units, color: " + this.color;
+        String circleInformation = new StringBuilder().append("Figure: circle, area: ")
+                .append(areaCalculator())
+                .append(" sq.units, radius: ")
+                .append(this.radius)
+                .append(" units, color: ")
+                .append(this.color).toString();
         System.out.println(circleInformation);
     }
 }

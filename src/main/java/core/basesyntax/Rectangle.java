@@ -17,7 +17,15 @@ public class Rectangle extends Figure {
 
     @Override
     public void informationCalculator() {
-        String rectangleInformation = "Figure: rectangle, area: " + areaCalculator() + " sq.units, length: " + this.length + " units, height: " + this.height + " units, color: " + color;
+        String rectangleInformation = String.valueOf(new StringBuilder()
+                .append("Figure: rectangle, area: ")
+                .append(areaCalculator())
+                .append(" sq.units, length: ")
+                .append(this.length)
+                .append(" units, height: ")
+                .append(this.height)
+                .append(" units, color: ")
+                .append(color));
         System.out.println(rectangleInformation);
     }
 }

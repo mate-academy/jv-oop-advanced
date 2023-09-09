@@ -17,7 +17,15 @@ public class RightTriangle extends Figure implements AreaCalculator, Information
 
     @Override
     public void informationCalculator() {
-        String triangleInformation = "Figure: right triangle, area: " + areaCalculator() + "sq.units, base: " + this.base + " units, height: " + this.height + " units, color: " + color;
+        String triangleInformation = String.valueOf(new StringBuilder()
+                .append("Figure: right triangle, area: ")
+                .append(areaCalculator())
+                .append("sq.units, base: ")
+                .append(this.base)
+                .append(" units, height: ")
+                .append(this.height)
+                .append(" units, color: ")
+                .append(color));
         System.out.println(triangleInformation);
     }
 

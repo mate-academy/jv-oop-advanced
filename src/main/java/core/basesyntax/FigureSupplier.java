@@ -16,11 +16,18 @@ public class FigureSupplier {
             case SQUARE:
                 return new Square(colorSupplier.getRandomColor(), random.nextInt(bound));
             case TRIANGLE:
-                return new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(bound), random.nextInt(bound));
+                return new RightTriangle(colorSupplier.getRandomColor(),
+                        random.nextInt(bound),
+                        random.nextInt(bound));
             case RECTANGLE:
-                return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(bound), random.nextInt(bound));
+                return new Rectangle(colorSupplier.getRandomColor(),
+                        random.nextInt(bound),
+                        random.nextInt(bound));
             case TRAPEZOID:
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(bound), random.nextInt(bound), random.nextInt(bound));
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        random.nextInt(bound),
+                        random.nextInt(bound),
+                        random.nextInt(bound));
             default:
                 throw new IllegalStateException("Unexpected value: " + randomFigure);
         }

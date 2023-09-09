@@ -19,7 +19,17 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator, Inform
 
     @Override
     public void informationCalculator() {
-        String trapezoidInformation = "Figure: isoscelesTrapezoid, area: " + areaCalculator() + "sq.units, sideA: " + this.sideA + "units, sideB: " + this.sideB + " units, height: " + this.height + " units, color: " + color;
+        String trapezoidInformation = String.valueOf(new StringBuilder()
+                .append("Figure: isoscelesTrapezoid, area: ")
+                .append(areaCalculator())
+                .append("sq.units, sideA: ")
+                .append(this.sideA)
+                .append("units, sideB: ")
+                .append(this.sideB)
+                .append(" units, height: ")
+                .append(this.height)
+                .append(" units, color: ")
+                .append(color));
         System.out.println(trapezoidInformation);
     }
 }
