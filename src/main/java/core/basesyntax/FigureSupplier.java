@@ -5,12 +5,15 @@ import java.util.Random;
 public class FigureSupplier {
     public Figure getRandomFigure() {
         String randomColor = ColorSupplier.getRandomColor();
-        String[] figures = {"square",
-                            "rectangle",
-                            "right triangle",
-                            "circle",
-                            "isosceles trapezoid"};
-        String randomFigureType = figures[new Random().nextInt(figures.length)];
+        // if getRandomColor() not be static, will be next problem:
+        // Non-static method 'getRandomColor()' cannot be referenced from a static context
+        final String[] figures = {"square",
+                                  "rectangle",
+                                  "right triangle",
+                                  "circle",
+                                  "isosceles trapezoid"};
+        Random random = new Random();
+        String randomFigureType = figures[random.nextInt(figures.length)];
 
         switch (randomFigureType) {
             case "square":
@@ -34,7 +37,7 @@ public class FigureSupplier {
                 double height = Math.random() * 10;
                 return new IsoscelesTrapezoid(randomColor, topBase, bottomBase, height);
             default:
-                return null;
+                return new Circle("WHITE", 10);
         }
     }
 
