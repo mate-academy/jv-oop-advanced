@@ -5,14 +5,11 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int FIGURES_COUNT = 5;
     private static final int DEFAULT_RADIUS = 10;
+    private static final Color DEFAULT_COLOR = Color.WHITE;
     private static final int MIN_SIZE = 1;
     private static final int MAX_SIZE = 10;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
-
-    private int randomSize() {
-        return random.nextInt(MAX_SIZE - MIN_SIZE) + MIN_SIZE;
-    }
 
     public Figure getRandomFigure() {
         switch (random.nextInt(FIGURES_COUNT)) {
@@ -34,6 +31,10 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE, DEFAULT_RADIUS);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
+    }
+
+    private int randomSize() {
+        return random.nextInt(MAX_SIZE - MIN_SIZE) + MIN_SIZE;
     }
 }
