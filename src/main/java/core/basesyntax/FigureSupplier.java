@@ -12,22 +12,22 @@ public class FigureSupplier {
         FiguresList randomFigure = FiguresList.values()[index];
         switch (randomFigure) {
             case CIRCLE:
-                return new Circle(String.valueOf(colorSupplier.getRandomColor()),
+                return new Circle(colorSupplier.getRandomColor(),
                         random.nextInt(BOUND));
             case SQUARE:
-                return new Square(String.valueOf(colorSupplier.getRandomColor()),
+                return new Square(colorSupplier.getRandomColor(),
                         random.nextInt(BOUND));
 
             case TRIANGLE:
-                return new RightTriangle(String.valueOf(colorSupplier.getRandomColor()),
+                return new RightTriangle(colorSupplier.getRandomColor(),
                         random.nextInt(BOUND),
                         random.nextInt(BOUND));
             case RECTANGLE:
-                return new Rectangle(String.valueOf(colorSupplier.getRandomColor()),
+                return new Rectangle(colorSupplier.getRandomColor(),
                         random.nextInt(BOUND),
                         random.nextInt(BOUND));
             case TRAPEZOID:
-                return new IsoscelesTrapezoid(String.valueOf(colorSupplier.getRandomColor()),
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                         random.nextInt(BOUND),
                         random.nextInt(BOUND),
                         random.nextInt(BOUND));
