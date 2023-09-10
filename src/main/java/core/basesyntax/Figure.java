@@ -7,6 +7,7 @@ public abstract class Figure implements FigurePrinter, AreaCalculator {
     public String getColor() {
         return color;
     }
+
     public double getArea() {
         return area;
     }

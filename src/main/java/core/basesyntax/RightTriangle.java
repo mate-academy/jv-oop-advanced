@@ -8,7 +8,7 @@ public class RightTriangle extends Figure {
     public RightTriangle() {
     }
 
-    public RightTriangle(int hypotenuse, int firstLeg, int secondLeg, String color ) {
+    public RightTriangle(int hypotenuse, int firstLeg, int secondLeg, String color) {
         this.hypotenuse = hypotenuse;
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
@@ -23,6 +23,8 @@ public class RightTriangle extends Figure {
 
     @Override
     public void printFigure() {
-        System.out.println("Figure: RightTriangle, area: " + getArea() + " sq.units, hypotenuse: " + hypotenuse + "units, firstLeg: " +  firstLeg + " units, secondLeg: " + secondLeg + " units, color: " + getColor());
+        System.out.println("Figure: RightTriangle, area: " + getArea() + " sq.units, hypotenuse: "
+                + hypotenuse + "units, firstLeg: " + firstLeg + " units, secondLeg: "
+                + secondLeg + " units, color: " + getColor());
     }
 }
