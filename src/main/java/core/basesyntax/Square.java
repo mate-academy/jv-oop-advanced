@@ -17,17 +17,18 @@ public class Square extends Figure {
     }
 
     @Override
-    public int area() {
+    public int getArea() {
         return side * side;
     }
 
     @Override
-    public int perimeter() {
+    public int getPerimeter() {
         return side * 4;
     }
 
     @Override
-    public String toString() {
-        return super.toString() + ", side: " + side + ", color: " + getColor();
+    public void draw() {
+        super.draw();
+        System.out.println(", side: " + side);
     }
 }

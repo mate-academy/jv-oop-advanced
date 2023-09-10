@@ -37,23 +37,23 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public int area() {
+    public int getArea() {
         return Math.min(firstBase, secondBase) * height
                 + (Math.max(firstBase, secondBase) - Math.min(firstBase, secondBase))
                 * height / 2;
     }
 
     @Override
-    public int perimeter() {
+    public int getPerimeter() {
         int leg = (Math.max(firstBase, secondBase) - Math.min(firstBase, secondBase)) / 2;
         return firstBase + secondBase + 2 * (int) Math.sqrt(Math.pow(leg, 2) + Math.pow(height, 2));
     }
 
     @Override
-    public String toString() {
-        return super.toString() + ", first base: " + firstBase
+    public void draw() {
+        super.draw();
+        System.out.println(", first base: " + firstBase
                 + ", second base: " + secondBase
-                + ", height: " + height
-                + ", color: " + getColor();
+                + ", height: " + height);
     }
 }

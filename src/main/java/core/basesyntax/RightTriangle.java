@@ -27,20 +27,20 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public int area() {
+    public int getArea() {
         return firstLeg * secondLeg / 2;
     }
 
     @Override
-    public int perimeter() {
+    public int getPerimeter() {
         return firstLeg + secondLeg + (int) Math.sqrt(Math.pow(firstLeg, 2)
                 + Math.pow(secondLeg, 2));
     }
 
     @Override
-    public String toString() {
-        return super.toString() + ", first leg: " + firstLeg
-                + ", second leg: " + secondLeg
-                + ", color: " + getColor();
+    public void draw() {
+        super.draw();
+        System.out.println(", first leg: " + firstLeg
+                + ", second leg: " + secondLeg);
     }
 }

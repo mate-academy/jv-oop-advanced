@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements HasArea, HasPerimeter {
+public abstract class Figure implements HasArea, HasPerimeter, Drawable {
     private Color color;
 
     public Figure(Color color) {
@@ -15,13 +15,14 @@ public abstract class Figure implements HasArea, HasPerimeter {
         this.color = color;
     }
 
-    public abstract int area();
+    public abstract int getArea();
 
-    public abstract int perimeter();
+    public abstract int getPerimeter();
 
-    @Override
-    public String toString() {
-        return "Figure: " + this.getClass().getSimpleName() + ", area: " + area()
-                + ", perimeter: " + perimeter();
+    public void draw() {
+        System.out.print("Figure: " + this.getClass().getSimpleName()
+                + ", area: " + getArea()
+                + ", perimeter: " + getPerimeter()
+                + ", color: " + getColor().toString().toLowerCase());
     }
 }

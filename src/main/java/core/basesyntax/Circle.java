@@ -17,17 +17,18 @@ public class Circle extends Figure {
     }
 
     @Override
-    public int area() {
+    public int getArea() {
         return (int) (Math.PI * radius * radius);
     }
 
     @Override
-    public int perimeter() {
+    public int getPerimeter() {
         return (int) (Math.PI * radius * 2);
     }
 
     @Override
-    public String toString() {
-        return super.toString() + ", radius: " + radius + ", color: " + getColor();
+    public void draw() {
+        super.draw();
+        System.out.println(", radius: " + radius);
     }
 }

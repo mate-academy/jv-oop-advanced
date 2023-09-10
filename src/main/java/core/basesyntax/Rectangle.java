@@ -27,19 +27,19 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public int area() {
+    public int getArea() {
         return firstSide * secondSide;
     }
 
     @Override
-    public int perimeter() {
+    public int getPerimeter() {
         return firstSide * 2 + secondSide * 2;
     }
 
     @Override
-    public String toString() {
-        return super.toString() + ", first side: " + firstSide
-                + ", second side: " + secondSide
-                + ", color: " + getColor();
+    public void draw() {
+        super.draw();
+        System.out.println(", first side: " + firstSide
+                + ", second side: " + secondSide);
     }
 }
