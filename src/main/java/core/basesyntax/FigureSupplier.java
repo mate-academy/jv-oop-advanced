@@ -59,9 +59,9 @@ public class FigureSupplier {
     }
 
     private RightTriangle getRandomRightTriangle(String randomColor) {
-        double firstLeg = getRandomSquare();
-        double secondLeg = getRandomSquare();
-        double hypotenuse = getRandomSquare();
+        double firstLeg = Math.random() * 10;
+        double secondLeg = Math.random() * 10;
+        double hypotenuse = Math.random() * 10;
         return new RightTriangle(randomColor, firstLeg, secondLeg, hypotenuse);
     }
 }
