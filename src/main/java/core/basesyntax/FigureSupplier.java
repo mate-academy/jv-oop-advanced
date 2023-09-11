@@ -26,36 +26,57 @@ public class FigureSupplier {
 
         switch (typeOfFigure) {
             case 1:
-                int radius = getProperValue();
-                return new Circle(colorSupplier.getRandomColor(), radius);
+                return getRandomCircle();
 
             case 2:
-                int upperBase = getProperValue();
-                int bottomBase = getProperValue();
-                int altitude = getProperValue();
-                return new IsoscelesTrapezoid(
-                        colorSupplier.getRandomColor(), upperBase, bottomBase, altitude);
+                return getRandomIsoscelesTrapezoid();
 
             case 3:
-                int rectangleHeight = getProperValue();
-                int width = getProperValue();
-                return new Rectangle(colorSupplier.getRandomColor(), rectangleHeight, width);
+                return getRandomRectangle();
 
             case 4:
-                int rightTriangleHeight = getProperValue();
-                int base = getProperValue();
-                return new RightTriangle(colorSupplier.getRandomColor(), rightTriangleHeight, base);
+                return getRandomRightTriangle();
 
             case 5:
-                int side = getProperValue();
-                return new Square(colorSupplier.getRandomColor(), side);
+                return getRandomSquare();
 
             default:
                 return getDefaultFigure();
         }
     }
 
+    private Circle getRandomCircle() {
+        int radius = getProperValue();
+        return new Circle(colorSupplier.getRandomColor(), radius);
+    }
+
+    private Square getRandomSquare() {
+        int side = getProperValue();
+        return new Square(colorSupplier.getRandomColor(), side);
+    }
+
+    private RightTriangle getRandomRightTriangle() {
+        int rightTriangleHeight = getProperValue();
+        int base = getProperValue();
+        return new RightTriangle(colorSupplier.getRandomColor(), rightTriangleHeight, base);
+    }
+
+    private Rectangle getRandomRectangle() {
+        int rectangleHeight = getProperValue();
+        int width = getProperValue();
+        return new Rectangle(colorSupplier.getRandomColor(), rectangleHeight, width);
+    }
+
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+        int upperBase = getProperValue();
+        int bottomBase = getProperValue();
+        int altitude = getProperValue();
+        return new IsoscelesTrapezoid(
+                colorSupplier.getRandomColor(), upperBase, bottomBase, altitude);
+    }
+
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_FIGURE_COLOR, DEFAULT_FIGURE_PROPERTY_VALUE);
     }
+
 }
