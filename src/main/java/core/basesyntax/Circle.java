@@ -15,7 +15,7 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        String randomColor = new ColorSupplier().getRandomColor();
+        String randomColor = new ColorSupplier().getRandomColor(); // please explain what I should to do here
         System.out.println("Figure: circle, area: " + getArea() + " sq.units, radius: "
                 + radius + " units, color: " + randomColor);
     }

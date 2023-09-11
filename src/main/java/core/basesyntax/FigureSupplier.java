@@ -17,23 +17,17 @@ public class FigureSupplier {
 
         switch (randomFigureType) {
             case "square":
-                double side = getRandomSquare();
-                return new Square(randomColor, side);
+                return getRandomSquare(randomColor);
             case "rectangle":
-                double length = getRandomSquare();
-                double width = getRandomSquare();
-                return new Rectangle(randomColor, length, width);
+                return getRandomRectangle(randomColor);
             case "right triangle":
-                double firstLeg = getRandomSquare();
-                double secondLeg = getRandomSquare();
-                double hypotenuse = getRandomSquare();
-                return new RightTriangle(randomColor, firstLeg, secondLeg, hypotenuse);
+                return getRandomRightTriangle(randomColor);
             case "circle":
-                double radius = getRandomSquare();
-                return new Circle(randomColor, radius);
+                return getRandomCircle(randomColor);
             case "isosceles trapezoid":
+                return getRandomIsoscelesTrapezoid(randomColor);
             default:
-                return new Circle("WHITE", 10); // explain this moment please
+                return getDefaultFigure();
         }
     }
 
@@ -41,7 +35,33 @@ public class FigureSupplier {
         return new Circle("WHITE", 10);
     }
 
-    public double getRandomSquare() {
-        return Math.random() * 10;
+    private Circle getRandomCircle(String randomColor) {
+        double radius = Math.random() * 10;
+        return new Circle(randomColor, radius);
+    }
+
+    private Rectangle getRandomRectangle(String randomColor) {
+        double length = Math.random() * 10;
+        double width = Math.random() * 10;
+        return new Rectangle(randomColor, length, width);
+    }
+
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid(String randomColor) {
+        double topBase = Math.random() * 10;
+        double bottomBase = Math.random() * 10;
+        double height = Math.random() * 10;
+        return new IsoscelesTrapezoid(randomColor, topBase, bottomBase, height);
+    }
+
+    private Square getRandomSquare(String randomColor) {
+        double side = Math.random() * 10;
+        return new Square(randomColor, side);
+    }
+
+    private RightTriangle getRandomRightTriangle(String randomColor) {
+        double firstLeg = getRandomSquare();
+        double secondLeg = getRandomSquare();
+        double hypotenuse = getRandomSquare();
+        return new RightTriangle(randomColor, firstLeg, secondLeg, hypotenuse);
     }
 }
