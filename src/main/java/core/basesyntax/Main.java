@@ -8,12 +8,9 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figures = new Figure[NUMBER_OF_FIGURES];
 
-        for (int i = 0; i < NUMBER_OF_FIGURES; i++) {
-            if (i < HALF_OF_THE_FIGURES) {
-                figures[i] = figureSupplier.getRandomFigure();
-                continue;
-            }
-            figures[i] = figureSupplier.getDefaultFigure();
+        for (int i = 0; i < HALF_OF_THE_FIGURES; i++) {
+            figures[i] = figureSupplier.getRandomFigure();
+            figures[HALF_OF_THE_FIGURES + i] = figureSupplier.getDefaultFigure();
         }
 
         for (Figure figure: figures) {
