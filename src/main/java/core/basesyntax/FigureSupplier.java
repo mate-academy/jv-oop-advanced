@@ -45,6 +45,10 @@ public class FigureSupplier {
         }
     }
 
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_FIGURE_COLOR, DEFAULT_FIGURE_PROPERTY_VALUE);
+    }
+
     private Circle getRandomCircle() {
         int radius = getProperValue();
         return new Circle(colorSupplier.getRandomColor(), radius);
@@ -73,10 +77,6 @@ public class FigureSupplier {
         int altitude = getProperValue();
         return new IsoscelesTrapezoid(
                 colorSupplier.getRandomColor(), upperBase, bottomBase, altitude);
-    }
-
-    public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_FIGURE_COLOR, DEFAULT_FIGURE_PROPERTY_VALUE);
     }
 
 }
