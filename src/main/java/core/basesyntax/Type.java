@@ -5,5 +5,5 @@ public enum Type {
     ISOSCELESTRAPEZOID,
     RESTANGLE,
     SQUARE,
-    RIGHTTRIANGLE
+    RIGHTTRIANGLE,
 }

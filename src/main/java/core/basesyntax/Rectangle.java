@@ -11,23 +11,16 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public int areaCalculation() {
+    public int getArea() {
         return width * height;
     }
 
     @Override
-    public void ableToDraw() {
+    public void draw() {
         System.out.println(
-                "Figure : rectangle, area: "
-                        + areaCalculation()
-                        + " sq.units, "
-                        + "width: "
-                        + width
-                        + " units, "
-                        + "height: "
-                        + height
-                        + " units, "
-                        + "color: "
-                        + color);
+                "Figure : rectangle, area: " + getArea() + " sq.units, "
+                        + "width: " + width + " units, "
+                        + "height: " + height + " units, "
+                        + "color: " + color);
     }
 }

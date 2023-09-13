@@ -11,28 +11,29 @@ public class FigureSupplier {
         switch (figures) {
             case SQUARE: {
                 Square square = new Square(RANDOM.nextInt(100),
-                        COLOR_SUPPLIER.getRandomColor().toString());
+                        COLOR_SUPPLIER.getRandomColor().toString().toLowerCase());
                 return square;
             }
             case ISOSCELESTRAPEZOID: {
                 IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(RANDOM.nextInt(100),
                         RANDOM.nextInt(100), RANDOM.nextInt(100),
-                        COLOR_SUPPLIER.getRandomColor().toString());
+                        COLOR_SUPPLIER.getRandomColor().toString().toLowerCase());
                 return isoscelesTrapezoid;
             }
             case CIRCLE: {
                 Circle circle = new Circle(RANDOM.nextInt(100),
-                        COLOR_SUPPLIER.getRandomColor().toString());
+                        COLOR_SUPPLIER.getRandomColor().toString().toLowerCase());
                 return circle;
             }
             case RESTANGLE: {
                 Rectangle rectangle = new Rectangle(RANDOM.nextInt(100),RANDOM.nextInt(100),
-                        COLOR_SUPPLIER.getRandomColor().toString());
+                        COLOR_SUPPLIER.getRandomColor().toString().toLowerCase());
                 return rectangle;
             }
             case RIGHTTRIANGLE: {
                 RightTriangle rightTriangle = new RightTriangle(RANDOM.nextInt(100),
-                        RANDOM.nextInt(100), COLOR_SUPPLIER.getRandomColor().toString());
+                        RANDOM.nextInt(100),
+                        COLOR_SUPPLIER.getRandomColor().toString().toLowerCase());
                 return rightTriangle;
             }
             default: {
