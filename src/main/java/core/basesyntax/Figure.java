@@ -4,6 +4,10 @@ public abstract class Figure implements FigurePrinter, AreaCalculator {
     private String color;
     private double area;
 
+    public Figure(String color) {
+        this.color = color;
+    }
+
     public String getColor() {
         return color;
     }
@@ -14,9 +18,5 @@ public abstract class Figure implements FigurePrinter, AreaCalculator {
 
     public void setArea(double area) {
         this.area = area;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
     }
 }

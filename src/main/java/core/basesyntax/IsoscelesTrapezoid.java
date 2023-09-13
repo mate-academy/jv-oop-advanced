@@ -5,14 +5,11 @@ public class IsoscelesTrapezoid extends Figure {
     private int biggestSide;
     private int smallestSide;
 
-    public IsoscelesTrapezoid(){
-    }
-
     public IsoscelesTrapezoid(int biggestSide, int smallestSide, int leg, String color) {
+        super(color);
         this.biggestSide = biggestSide;
         this.smallestSide = smallestSide;
         this.leg = leg;
-        setColor(color);
         setArea(obtainArea());
     }
 
