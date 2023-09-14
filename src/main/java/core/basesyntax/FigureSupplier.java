@@ -7,37 +7,35 @@ public class FigureSupplier {
     private static final ColorSupplier COLOR_SUPPLIER = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        Type figures = Type.values()[new Random().nextInt(Type.values().length)];
-        switch (figures) {
+        Type figure = Type.values()[RANDOM.nextInt(Type.values().length)];
+        switch (figure) {
             case SQUARE: {
-                Square square = new Square(RANDOM.nextInt(100),
+                Square square = new Square(RANDOM.nextInt(101),
                         COLOR_SUPPLIER.getRandomColor().toString().toLowerCase());
                 return square;
             }
             case ISOSCELESTRAPEZOID: {
-                IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(RANDOM.nextInt(100),
-                        RANDOM.nextInt(100), RANDOM.nextInt(100),
+                return new IsoscelesTrapezoid(RANDOM.nextInt(101),
+                        RANDOM.nextInt(101), RANDOM.nextInt(101),
                         COLOR_SUPPLIER.getRandomColor().toString().toLowerCase());
-                return isoscelesTrapezoid;
             }
             case CIRCLE: {
-                Circle circle = new Circle(RANDOM.nextInt(100),
+                return new Circle(RANDOM.nextInt(101),
                         COLOR_SUPPLIER.getRandomColor().toString().toLowerCase());
-                return circle;
             }
             case RESTANGLE: {
-                Rectangle rectangle = new Rectangle(RANDOM.nextInt(100),RANDOM.nextInt(100),
+                return new Rectangle(RANDOM.nextInt(101),RANDOM.nextInt(101),
                         COLOR_SUPPLIER.getRandomColor().toString().toLowerCase());
-                return rectangle;
             }
             case RIGHTTRIANGLE: {
-                RightTriangle rightTriangle = new RightTriangle(RANDOM.nextInt(100),
-                        RANDOM.nextInt(100),
+                return new RightTriangle(RANDOM.nextInt(101),
+                        RANDOM.nextInt(101),
                         COLOR_SUPPLIER.getRandomColor().toString().toLowerCase());
-                return rightTriangle;
             }
             default: {
-                return null;
+                return new RightTriangle(RANDOM.nextInt(101),
+                        RANDOM.nextInt(101),
+                        COLOR_SUPPLIER.getRandomColor().toString().toLowerCase());
             }
         }
     }
