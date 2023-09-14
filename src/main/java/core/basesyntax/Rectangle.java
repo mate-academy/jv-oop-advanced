@@ -8,7 +8,6 @@ public class Rectangle extends Figure {
         super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
-        setArea(obtainArea());
     }
 
     @Override
@@ -18,7 +17,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void printFigure() {
-        System.out.println("Figure: rectangle, area: " + getArea() + " sq.units, firstSide: "
+        System.out.println("Figure: rectangle, area: " + obtainArea() + " sq.units, firstSide: "
                 + firstSide + " units, secondSide: " + secondSide + " units, color: " + getColor());
     }
 }

@@ -10,7 +10,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.biggestSide = biggestSide;
         this.smallestSide = smallestSide;
         this.leg = leg;
-        setArea(obtainArea());
     }
 
     @Override
@@ -21,7 +20,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void printFigure() {
-        System.out.println("Figure: isoscelesTrapezoid, area: " + getArea()
+        System.out.println("Figure: isoscelesTrapezoid, area: " + obtainArea()
                 + " sq.units, biggestSide: " + biggestSide + " units, smallestSide: "
                 + smallestSide + " units, leg: " + leg + " units, color: " + getColor());
     }

@@ -10,7 +10,6 @@ public class RightTriangle extends Figure {
         this.hypotenuse = hypotenuse;
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        setArea(obtainArea());
     }
 
     @Override
@@ -20,7 +19,8 @@ public class RightTriangle extends Figure {
 
     @Override
     public void printFigure() {
-        System.out.println("Figure: rightTriangle, area: " + getArea() + " sq.units, hypotenuse: "
+        System.out.println("Figure: rightTriangle, area: " + obtainArea()
+                + " sq.units, hypotenuse: "
                 + hypotenuse + "units, firstLeg: " + firstLeg + " units, secondLeg: "
                 + secondLeg + " units, color: " + getColor());
     }
