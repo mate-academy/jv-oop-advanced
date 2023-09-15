@@ -1,5 +1,7 @@
 package core.basesyntax;
 
 public interface AreaCalculator {
-    int areaCalculation();
+    default int calculateArea() {
+        return 0;
+    }
 }
