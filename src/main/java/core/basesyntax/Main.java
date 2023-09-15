@@ -3,7 +3,7 @@ package core.basesyntax;
 public class Main {
     private static final FigureSupplier FIGURE_SUPPLIER = new FigureSupplier();
     private static final int NUMBER_OF_REPEAT = 4;
-    private static final Figure [] figures = new Figure[4];
+    private static final Figure [] figures = new Figure[NUMBER_OF_REPEAT];
     private static final int MIDDLE = figures.length / 2;
 
     public static void main(String[] args) {

@@ -2,8 +2,8 @@ package core.basesyntax;
 
 public enum Type {
     CIRCLE,
-    ISOSCELESTRAPEZOID,
+    ISOSCELES_TRAPEZOID,
     RESTANGLE,
     SQUARE,
-    RIGHTTRIANGLE,
+    RIGHT_TRIANGLE,
 }
