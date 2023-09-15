@@ -1,15 +1,15 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    private int side;
+    private double side;
 
-    public Square(int side, Color color) {
+    public Square(double side, String color) {
         this.side = side;
         this.color = color;
     }
 
     @Override
-    public int calculateArea() {
+    public double calculateArea() {
         return side * side;
     }
 

@@ -3,41 +3,43 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final Random RANDOM = new Random();
-    private static final ColorSupplier COLOR_SUPPLIER = new ColorSupplier();
     private static final int RANGE = 101;
     private static final int RADIUS = 10;
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        Type figure = Type.values()[RANDOM.nextInt(Type.values().length)];
+        Type [] types = Type.values();
+        Type figure = types[random.nextInt(types.length)];
+        String randomColor = colorSupplier.getRandomColor();
         switch (figure) {
             case SQUARE: {
-                return new Square(RANDOM.nextInt(RANGE),
-                        COLOR_SUPPLIER.getRandomColor());
+                return new Square(random.nextInt(RANGE),
+                        randomColor);
             }
             case ISOSCELES_TRAPEZOID: {
-                return new IsoscelesTrapezoid(RANDOM.nextInt(RANGE),
-                        RANDOM.nextInt(RANGE), RANDOM.nextInt(RANGE),
-                        COLOR_SUPPLIER.getRandomColor());
+                return new IsoscelesTrapezoid(random.nextInt(RANGE),
+                        random.nextInt(RANGE), random.nextInt(RANGE),
+                        randomColor);
             }
             case CIRCLE: {
-                return new Circle(RANDOM.nextInt(RANGE),
-                        COLOR_SUPPLIER.getRandomColor());
+                return new Circle(random.nextInt(RANGE),
+                        randomColor);
             }
             case RESTANGLE: {
-                return new Rectangle(RANDOM.nextInt(RANGE),RANDOM.nextInt(RANGE),
-                        COLOR_SUPPLIER.getRandomColor());
+                return new Rectangle(random.nextInt(RANGE),random.nextInt(RANGE),
+                        randomColor);
             }
             default: {
-                return new RightTriangle(RANDOM.nextInt(RANGE),
-                        RANDOM.nextInt(RANGE),
-                        COLOR_SUPPLIER.getRandomColor());
+                return new RightTriangle(random.nextInt(RANGE),
+                        random.nextInt(RANGE),
+                        randomColor);
             }
         }
     }
 
     public Figure getDefaultFigure() {
-        Circle circle = new Circle(RADIUS, Color.WHITE);
+        Circle circle = new Circle(RADIUS, Color.WHITE.name());
         return circle;
     }
 }
