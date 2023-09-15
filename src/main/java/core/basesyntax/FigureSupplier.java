@@ -6,6 +6,7 @@ public class FigureSupplier {
     private static final Random RANDOM = new Random();
     private static final ColorSupplier COLOR_SUPPLIER = new ColorSupplier();
     private static final int RANGE = 101;
+    private static final int RADIUS = 10;
 
     public Figure getRandomFigure() {
         Type figure = Type.values()[RANDOM.nextInt(Type.values().length)];
@@ -36,7 +37,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        Circle circle = new Circle(10, Color.WHITE);
+        Circle circle = new Circle(RADIUS, Color.WHITE);
         return circle;
     }
 }
