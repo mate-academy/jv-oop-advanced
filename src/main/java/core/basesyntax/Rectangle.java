@@ -19,6 +19,6 @@ public class Rectangle extends Figure {
     public void draw() {
         System.out.println("Figure: rectangle, area: " + calculateArea()
                 + " sq.units, first leg: " + firstLeg + " units, second leg: "
-                + secondLeg + " units, color: " + color.name());
+                + secondLeg + " units, color: " + getColor().name());
     }
 }

@@ -1,7 +1,13 @@
 package core.basesyntax;
 
-public class Figure extends FigureProperty implements AreaCalculator, Drawable {
+public class Figure implements AreaCalculator, Drawable {
+    private final Color color;
+
     public Figure(Color color) {
-        super(color);
+        this.color = color;
+    }
+
+    public Color getColor() {
+        return color;
     }
 }
