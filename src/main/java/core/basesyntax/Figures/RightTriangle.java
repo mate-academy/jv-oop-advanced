@@ -1,6 +1,5 @@
 package core.basesyntax.Figures;
 
-import core.basesyntax.Color;
 import core.basesyntax.Shape;
 
 public class RightTriangle extends Shape {
@@ -28,6 +27,9 @@ public class RightTriangle extends Shape {
 
     @Override
     public void draw() {
-        System.out.println("Figure: Right Triangle, color=" + getColor() + ", firstLeg=" + firstLeg + ", secondLeg=" + secondLeg + ", area=" + getArea());
+        System.out.println("Figure: Right Triangle, color=" + getColor()
+                + ", firstLeg=" + firstLeg
+                + ", secondLeg=" + secondLeg
+                + ", area=" + getArea());
     }
 }

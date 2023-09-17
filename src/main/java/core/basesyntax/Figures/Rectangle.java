@@ -27,6 +27,9 @@ public class Rectangle extends Shape {
 
     @Override
     public void draw() {
-        System.out.println("Figure: Rectangle, color=" + getColor() + ", length=" + getLength() + ", width=" + getWidth() + ", area=" + getArea());
+        System.out.println("Figure: Rectangle, color=" + getColor()
+                + ", length=" + length
+                + ", width=" + width
+                + ", area=" + getArea());
     }
 }
