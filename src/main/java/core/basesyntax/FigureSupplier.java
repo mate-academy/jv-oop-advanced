@@ -39,7 +39,7 @@ public class FigureSupplier {
         }
     }
 
-    public Figure getDefaultFigure() {
+    public AreaCalculatable getDefaultFigure() {
         return new Circle("WHITE", 10);
     }
 }
