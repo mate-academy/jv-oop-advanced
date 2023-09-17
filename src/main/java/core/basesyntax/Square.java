@@ -1,6 +1,4 @@
-package core.basesyntax.Figures;
-
-import core.basesyntax.Shape;
+package core.basesyntax;
 
 public class Square extends Shape {
     private final double side;

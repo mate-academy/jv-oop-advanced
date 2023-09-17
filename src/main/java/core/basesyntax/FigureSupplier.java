@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import core.basesyntax.Figures.*;
-
 import java.util.Random;
 
 public class FigureSupplier {
@@ -19,14 +17,14 @@ public class FigureSupplier {
         switch (choice) {
             case 0:
                 return new Square(colorSupplier.getRandomColor().toString(),
-                        random.nextInt() * 10 + 1);
+                        random.nextInt(10) + 1);
             case 1:
                 return new RightTriangle(colorSupplier.getRandomColor().toString(),
                         random.nextDouble() * 10 + 1,
                         random.nextDouble() * 10 + 1);
             case 2:
                 return new Circle(colorSupplier.getRandomColor().toString(),
-                        random.nextInt() * 10 + 1);
+                        random.nextInt(10) + 1);
             case 3:
                 return new Rectangle(colorSupplier.getRandomColor().toString(),
                         random.nextDouble() * 10 + 1,

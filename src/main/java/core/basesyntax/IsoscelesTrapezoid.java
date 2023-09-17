@@ -1,6 +1,4 @@
-package core.basesyntax.Figures;
-
-import core.basesyntax.Shape;
+package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Shape {
     private final double upperBase;
@@ -34,9 +32,9 @@ public class IsoscelesTrapezoid extends Shape {
     @Override
     public void draw() {
         System.out.println("Figure: Isosceles Trapezoid, color="
-                + getColor() + ", upperBase=" + getUpperBase()
-                + ", lowerBase=" + getLowerBase()
-                + ", height=" + getHeight()
+                + getColor() + ", upperBase=" + upperBase
+                + ", lowerBase=" + lowerBase
+                + ", height=" + height
                 + ", area=" + getArea());
     }
 }

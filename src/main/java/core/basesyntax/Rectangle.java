@@ -1,6 +1,4 @@
-package core.basesyntax.Figures;
-
-import core.basesyntax.Shape;
+package core.basesyntax;
 
 public class Rectangle extends Shape {
     private final double length;
