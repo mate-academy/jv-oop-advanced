@@ -9,11 +9,9 @@ public class Main {
 
         for (int i = 0; i < NUM_FIGURES; i++) {
             figures[i] = figureSupplier.getRandomFigure();
-        }
-
-        for (Figure figure : figures) {
-            System.out.println("Figure: " + figure.getClass().getSimpleName()
-                    + ", area: " + figure.getArea() + " sq.units, color: " + figure.getColor());
+            System.out.println("Figure: " + figures[i].getClass().getSimpleName()
+                    + ", area: " + figures[i].getArea()
+                    + " sq.units, color: " + figures[i].getColor());
         }
     }
 }
