@@ -20,7 +20,7 @@ public class FigureSupplier {
             case 1:
                 return new Rectangle(getRandomSide(), getRandomSide(), randomColor);
             case 2:
-                return new RightTriangle(getRandomSide() + 1, getRandomSide() + 1, randomColor);
+                return new RightTriangle(getRandomSide(), getRandomSide(), randomColor);
             case 3:
                 return new Circle(getRandomSide(), randomColor);
             default:
