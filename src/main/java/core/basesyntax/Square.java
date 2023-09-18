@@ -15,6 +15,6 @@ public class Square extends Figure implements Drawable, AreaCalculator {
 
     @Override
     public void draw() {
-
+        System.out.printf("Figure: Square | side length: %.2f | area: %.2f | color: %s\n", sideLength, calculateArea(), getColor());
     }
 }

@@ -19,6 +19,7 @@ public class IsoscelesTrapezoid extends Figure implements Drawable, AreaCalculat
 
     @Override
     public void draw() {
-
+        System.out.printf("Figure: Isosceles Trapezoid | first side length: %.2f | second side length: %.2f |" +
+                "\nheight: %.2f | area: %.2f | color: %s\n", firstSide, secondSide, height, calculateArea(), getColor());
     }
 }
