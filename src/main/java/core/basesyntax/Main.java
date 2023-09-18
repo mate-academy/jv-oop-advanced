@@ -13,7 +13,7 @@ public class Main {
         }
 
         for (int i = 3; i < 6; i++) {
-            figures[i] = figureSupplier.getFigureRandom();
+            figures[i] = figureSupplier.getDefaultFigure();
         }
 
         for (Drawable figure : figures) {
