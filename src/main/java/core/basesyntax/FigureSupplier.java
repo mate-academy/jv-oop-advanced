@@ -17,6 +17,7 @@ public class FigureSupplier {
     public double getRandomRadius() {
         return random.nextDouble() * MAX_RANDOM_RADIUS + 1;
     }
+
     public Figure getFigureRandom() {
         int choice = random.nextInt(5);
 
