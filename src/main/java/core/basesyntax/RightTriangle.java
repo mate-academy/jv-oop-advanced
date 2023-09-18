@@ -4,13 +4,15 @@ public class RightTriangle extends Figure implements Drawable, AreaCalculator {
     private double firstLeg;
     private double secondLeg;
 
-    public RightTriangle(String color) {
+    public RightTriangle(String color, double firstLeg, double secondLeg) {
         super(color);
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
     }
 
     @Override
     public double calculateArea() {
-        return 0;
+        return (firstLeg * secondLeg) / 2.0;
     }
 
     @Override

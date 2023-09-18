@@ -3,13 +3,14 @@ package core.basesyntax;
 public class Square extends Figure implements Drawable, AreaCalculator {
     private double sideLength;
 
-    public Square(String color) {
+    public Square(String color, double sideLength) {
         super(color);
+        this.sideLength = sideLength;
     }
 
     @Override
     public double calculateArea() {
-        return 0;
+        return sideLength * sideLength;
     }
 
     @Override
