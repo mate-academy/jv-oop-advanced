@@ -19,6 +19,8 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.printf("Figure: Isosceles Trapezoid | first side length: %.2f | second side length: %.2f | height: %.2f | area: %.2f | color: %s\n", firstSide, secondSide, height, calculateArea(), getColor());
+        System.out.printf("Figure: Isosceles Trapezoid | first side length: %.2f |"
+                        + " second side length: %.2f | height: %.2f | area: %.2f | color: %s\n",
+                firstSide, secondSide, height, calculateArea(), getColor());
     }
 }
