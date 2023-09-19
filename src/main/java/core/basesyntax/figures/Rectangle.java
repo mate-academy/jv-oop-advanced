@@ -19,9 +19,9 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-         System.out.println("Figure: Rectangle | height: " + String.format("%.2f", height)
-                + " | width: " + String.format("%.2f", width)
-                + " | area: " + String.format("%.2f", calculateArea())
-                + " | color: " + getColor());
+        System.out.println("Figure: Rectangle | height: " + String.format("%.2f", height)
+                 + " | width: " + String.format("%.2f", width)
+                 + " | area: " + String.format("%.2f", calculateArea())
+                 + " | color: " + getColor());
     }
 }
