@@ -10,22 +10,23 @@ public class FigureSupplier {
     private static final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        final int randomSizeRange = random.nextInt(10) + 1;
+        final int maxValue = 10;
+        final int randomSize = random.nextInt(maxValue) + 1;
 
         switch (random.nextInt(FIGURES_COUNT)) {
             case 0:
-                return new Circle(colorSupplier.getRandomColor(), randomSizeRange);
+                return new Circle(colorSupplier.getRandomColor(), randomSize);
             case 1:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        randomSizeRange, randomSizeRange, randomSizeRange);
+                        randomSize, randomSize, randomSize);
             case 2:
                 return new Rectangle(colorSupplier.getRandomColor(),
-                        randomSizeRange, randomSizeRange);
+                        randomSize, randomSize);
             case 3:
                 return new RightTriangle(colorSupplier.getRandomColor(),
-                        randomSizeRange, randomSizeRange);
+                        randomSize, randomSize);
             default:
-                return new Square(colorSupplier.getRandomColor(), randomSizeRange);
+                return new Square(colorSupplier.getRandomColor(), randomSize);
         }
     }
 
