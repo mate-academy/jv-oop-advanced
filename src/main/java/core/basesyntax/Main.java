@@ -8,10 +8,12 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
 
         for (int i = 0; i < NUM_FIGURES; i++) {
-            figures[i] = figureSupplier.getRandomFigure();
-            System.out.println("Figure: " + figures[i].getClass().getSimpleName()
-                    + ", area: " + figures[i].getArea()
-                    + " sq.units, color: " + figures[i].getColor());
+            if (i < NUM_FIGURES / 2) {
+                figures[i] = figureSupplier.getRandomFigure();
+            } else {
+                figures[i] = figureSupplier.getDefaultFigure();
+            }
+            figures[i].draw();
         }
     }
 }
