@@ -19,8 +19,10 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.printf("Figure: Right Triangle | first leg length: %.2f |"
-                        + " second leg length: %.2f | area: %.2f | color: %s\n",
-                firstLeg, secondLeg, calculateArea(), getColor());
+        System.out.println("Figure: Right Triangle | first leg length: "
+                + String.format("%.2f", firstLeg) + " | second leg length: "
+                + String.format("%.2f", secondLeg) + " | area: "
+                + String.format("%.2f", calculateArea()) + " | color: "
+                + getColor());
     }
 }
