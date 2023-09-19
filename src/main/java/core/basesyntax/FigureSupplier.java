@@ -13,7 +13,7 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int randomType = random.nextInt(NUM_FIGURE_TYPES);
-        String randomColor = new ColorSupplier().getRandomColor();
+        String randomColor = colorSupplier.getRandomColor();
         switch (randomType) {
             case 0:
                 return new Square(getRandomSide(), randomColor);
