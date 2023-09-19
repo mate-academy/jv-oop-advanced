@@ -10,15 +10,21 @@ public class FigureSupplier {
             case 0:
                 return new Square(new ColorSupplier().getRandomColor(), random.nextInt(10));
             case 1:
-                return new Circle(new ColorSupplier().getRandomColor(), random.nextInt(10));
+                return new Rectangle(new ColorSupplier().getRandomColor(),
+                        random.nextInt(10),
+                        random.nextInt(10));
             case 2:
-                return new Rectangle(new ColorSupplier().getRandomColor(), random.nextInt(10), random.nextInt(10));
+                return new RightTriangle(new ColorSupplier().getRandomColor(),
+                        random.nextInt(10),
+                        random.nextInt(10));
             case 3:
-                return new RightTriangle(new ColorSupplier().getRandomColor(), random.nextInt(10), random.nextInt(10));
-            case 4:
-                return new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(), random.nextInt(10), random.nextInt(10), random.nextInt(10));
+                return new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(),
+                        random.nextInt(10),
+                        random.nextInt(10),
+                        random.nextInt(10));
+            default:
+                return new Circle(new ColorSupplier().getRandomColor(), random.nextInt(10));
         }
-        return null;
     }
 
     public Figure getDefaultFigure() {

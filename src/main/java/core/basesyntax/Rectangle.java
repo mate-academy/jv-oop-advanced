@@ -10,7 +10,6 @@ public class Rectangle extends Figure {
         this.secondLeg = secondLeg;
     }
 
-
     @Override
     public double calculateArea() {
         return firstLeg * secondLeg;
@@ -18,7 +17,8 @@ public class Rectangle extends Figure {
 
     @Override
     public String display() {
-        return "Figure: rectangle, area " + String.format("%.2f", calculateArea()) + " sq. units, firstLeg " + firstLeg
-                + " units, secondLeg " + secondLeg + " units, color: " + getColor();
+        return "Figure: rectangle, area " + String.format("%.2f", calculateArea())
+                + " sq. units, firstLeg " + firstLeg + " units, secondLeg "
+                + secondLeg + " units, color: " + getColor();
     }
 }
