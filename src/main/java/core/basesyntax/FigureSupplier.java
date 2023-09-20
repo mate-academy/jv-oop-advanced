@@ -16,9 +16,8 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         final int randomSize = random.nextInt(MAX_VALUE) + 1;
-        FigureType[] figures = FigureType.values();
 
-        switch (figures[random.nextInt(figures.length)]) {
+        switch (getRandomFigureType()) {
             case CIRCLE:
                 return new Circle(colorSupplier.getRandomColor(), randomSize);
             case ISOSCELES_TRAPEZOID:
@@ -37,5 +36,10 @@ public class FigureSupplier {
 
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_FIGURE_VALUE);
+    }
+
+    private FigureType getRandomFigureType() {
+        FigureType[] figures = FigureType.values();
+        return figures[random.nextInt(figures.length)];
     }
 }
