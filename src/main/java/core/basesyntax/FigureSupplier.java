@@ -12,6 +12,7 @@ public class FigureSupplier {
     private static final ColorSupplier colorSupplier = new ColorSupplier();
     private static final int MAX_VALUE = 10;
     private static final int DEFAULT_FIGURE_VALUE = 10;
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
 
     public Figure getRandomFigure() {
         final int randomSize = random.nextInt(MAX_VALUE) + 1;
@@ -35,6 +36,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.name(), DEFAULT_FIGURE_VALUE);
+        return new Circle(DEFAULT_COLOR, DEFAULT_FIGURE_VALUE);
     }
 }
