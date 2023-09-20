@@ -39,7 +39,7 @@ public class FigureSupplier {
     }
 
     private FigureType getRandomFigureType() {
-        FigureType[] figures = FigureType.values();
-        return figures[random.nextInt(figures.length)];
+        FigureType[] figureTypes = FigureType.values();
+        return figureTypes[random.nextInt(figureTypes.length)];
     }
 }
