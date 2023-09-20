@@ -10,11 +10,12 @@ import java.util.Random;
 public class FigureSupplier {
     private static final Random random = new Random();
     private static final ColorSupplier colorSupplier = new ColorSupplier();
+    private static final int MAX_VALUE = 10;
+    private static final int DEFAULT_FIGURE_VALUE = 10;
 
     public Figure getRandomFigure() {
-        final int maxValue = 10;
-        final int randomSize = random.nextInt(maxValue) + 1;
-        Figures[] figures = Figures.values();
+        final int randomSize = random.nextInt(MAX_VALUE) + 1;
+        FigureType[] figures = FigureType.values();
 
         switch (figures[random.nextInt(figures.length)]) {
             case CIRCLE:
@@ -34,6 +35,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Colors.WHITE.name(), 10);
+        return new Circle(Color.WHITE.name(), DEFAULT_FIGURE_VALUE);
     }
 }
