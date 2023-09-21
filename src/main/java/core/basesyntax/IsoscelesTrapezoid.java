@@ -1,9 +1,6 @@
 package core.basesyntax;
 
-import java.text.DecimalFormat;
-
 public class IsoscelesTrapezoid extends Figure {
-    private DecimalFormat decimalFormat = new DecimalFormat("#.##");
     private double upperBase;
     private double lowerBase;
     private double height;

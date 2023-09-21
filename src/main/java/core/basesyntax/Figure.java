@@ -1,6 +1,9 @@
 package core.basesyntax;
 
-public class Figure implements GetArea {
+import java.text.DecimalFormat;
+
+public class Figure implements AreaCalculator {
+    protected final DecimalFormat decimalFormat = new DecimalFormat("#.##");
     private String color;
 
     public void setColor(String color) {

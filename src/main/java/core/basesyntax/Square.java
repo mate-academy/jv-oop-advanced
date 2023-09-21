@@ -1,9 +1,6 @@
 package core.basesyntax;
 
-import java.text.DecimalFormat;
-
 public class Square extends Figure {
-    private DecimalFormat decimalFormat = new DecimalFormat("#.##");
     private double sideLength;
 
     public Square(double sideLength, String color) {

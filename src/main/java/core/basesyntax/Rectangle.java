@@ -1,9 +1,6 @@
 package core.basesyntax;
 
-import java.text.DecimalFormat;
-
 public class Rectangle extends Figure {
-    private DecimalFormat decimalFormat = new DecimalFormat("#.##");
     private double length;
     private double width;
 

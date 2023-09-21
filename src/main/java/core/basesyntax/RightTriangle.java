@@ -1,9 +1,6 @@
 package core.basesyntax;
 
-import java.text.DecimalFormat;
-
 public class RightTriangle extends Figure {
-    private DecimalFormat decimalFormat = new DecimalFormat("#.##");
     private double firstLeg;
     private double secondLeg;
 

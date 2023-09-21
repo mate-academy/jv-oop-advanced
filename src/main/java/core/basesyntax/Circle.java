@@ -1,9 +1,6 @@
 package core.basesyntax;
 
-import java.text.DecimalFormat;
-
 public class Circle extends Figure {
-    private DecimalFormat decimalFormat = new DecimalFormat("#.##");
     private double radius;
 
     public Circle(double radius, String color) {
