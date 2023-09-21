@@ -23,7 +23,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void getArea() {
+    public void draw() {
         double area = length * width;
         System.out.println("Figure: rectangle, area: " + decimalFormat.format(area)
                 + " sq.units, length: "

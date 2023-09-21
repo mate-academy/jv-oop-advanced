@@ -17,7 +17,7 @@ public class HelloWorld {
         }
 
         for (Figure figure : figures) {
-            figure.getArea();
+            figure.draw();
         }
     }
 }

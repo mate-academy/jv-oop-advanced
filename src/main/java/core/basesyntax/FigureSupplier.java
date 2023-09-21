@@ -41,8 +41,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        double defaultRadius = 10.0;
-        String defaultColor = "white";
         return new Circle(DEFAULT_RADIUS,DEFAULT_COLOR);
     }
 }

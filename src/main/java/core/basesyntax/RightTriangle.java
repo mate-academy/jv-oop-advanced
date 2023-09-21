@@ -24,7 +24,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void getArea() {
+    public void draw() {
         double area = 0.5 * firstLeg * secondLeg;
         System.out.println("Figure: right triangle, area: "
                 + decimalFormat.format(area) + " sq.units, firstLeg: "

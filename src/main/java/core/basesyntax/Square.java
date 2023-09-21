@@ -17,7 +17,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public void getArea() {
+    public void draw() {
         double area = sideLength * sideLength;
         System.out.println("Figure: square, area: " + decimalFormat.format(area)
                 + " sq.units, side: " + decimalFormat.format(sideLength)

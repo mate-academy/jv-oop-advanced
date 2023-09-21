@@ -17,7 +17,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public void getArea() {
+    public void draw() {
         double area = (Math.PI * radius * radius);
         System.out.println("Figure: circle, area: " + decimalFormat.format(area)
                 + " sq.units, radius: " + decimalFormat.format(radius)

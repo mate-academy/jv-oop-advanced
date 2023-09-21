@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.text.DecimalFormat;
 
-public class Figure implements AreaCalculator {
+public class Figure implements Drawable {
     protected final DecimalFormat decimalFormat = new DecimalFormat("#.##");
     private String color;
 
@@ -15,7 +15,7 @@ public class Figure implements AreaCalculator {
     }
 
     @Override
-    public void getArea() {
+    public void draw() {
 
     }
 }

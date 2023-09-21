@@ -30,7 +30,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public void getArea() {
+    public void draw() {
         double area = ((upperBase + lowerBase) * height / 2);
         System.out.println("Figure: isosceles trapezoid, area: " + decimalFormat.format(area)
                 + " sq.units, upperBase: " + decimalFormat.format(upperBase)
