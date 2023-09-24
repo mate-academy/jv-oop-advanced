@@ -3,7 +3,7 @@ package core.basesyntax.services;
 import core.basesyntax.Colors;
 import core.basesyntax.model.Figure;
 
-public class ColorSupplier extends Figure {
+public class ColorSupplier {
 
     public String getRandomColor() {
         int index = getRandom().nextInt(Colors.values().length);
