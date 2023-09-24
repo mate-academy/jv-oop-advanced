@@ -5,7 +5,6 @@ import core.basesyntax.services.ColorSupplier;
 import core.basesyntax.services.FigureSupplier;
 
 public class Circle extends Figure {
-    // Площа = π × r2
     private final double pi = 3.14;
     private double radius;
     private FigureSupplier figureSupplier = new FigureSupplier();
