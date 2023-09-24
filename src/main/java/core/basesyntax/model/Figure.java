@@ -5,8 +5,6 @@ import core.basesyntax.services.Drawable;
 import java.util.Random;
 
 public abstract class Figure implements AreaCalculator, Drawable {
-    private final int figureCount = 10;
-    private final Random random = new Random();
     private String color;
     private double area;
 
