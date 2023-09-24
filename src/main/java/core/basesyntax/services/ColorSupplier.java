@@ -1,23 +1,14 @@
 package core.basesyntax.services;
 
-import core.basesyntax.Colors;
-import core.basesyntax.model.Figure;
+import core.basesyntax.Color;
+import java.util.Random;
 
 public class ColorSupplier {
+    private final Random random = new Random();
 
     public String getRandomColor() {
-        int index = getRandom().nextInt(Colors.values().length);
-        Colors color = Colors.values()[index];
+        int index = random.nextInt(Color.values().length);
+        Color color = Color.values()[index];
         return color.name().toLowerCase();
-    }
-
-    @Override
-    public double calculateArea() {
-        return 0;
-    }
-
-    @Override
-    public void draw() {
-
     }
 }
