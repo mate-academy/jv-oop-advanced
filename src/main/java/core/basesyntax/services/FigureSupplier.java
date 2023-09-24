@@ -4,7 +4,7 @@ import core.basesyntax.Colors;
 import core.basesyntax.figures.Circle;
 import core.basesyntax.model.Figure;
 
-public class FigureSupplier extends Figure {
+public class FigureSupplier {
 
     public int getFigureCountFromModel() {
         return getFigureCount();
