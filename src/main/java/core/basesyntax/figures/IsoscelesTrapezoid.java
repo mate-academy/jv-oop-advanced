@@ -5,17 +5,6 @@ import core.basesyntax.services.ColorSupplier;
 import core.basesyntax.services.FigureSupplier;
 
 public class IsoscelesTrapezoid extends Figure {
-    private FigureSupplier figureSupplier = new FigureSupplier();
-    private ColorSupplier colorSupplier = new ColorSupplier();
-    /*
-    Площа = (1/2) * h * (a + b),
-
-    де:
-
-    "h" - висота трапеції,
-    "a" - довжина нижньої основи,
-    "b" - длина верхньої основи.
-     */
     private double height;
     private double upperBase;
     private double lowerBase;
