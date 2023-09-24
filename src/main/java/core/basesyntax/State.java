@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class State {
+public abstract class State implements Figure {
     private String color;
 
     protected State(String color) {
