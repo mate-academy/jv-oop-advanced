@@ -7,8 +7,6 @@ import core.basesyntax.services.FigureSupplier;
 public class Circle extends Figure {
     private final double pi = 3.14;
     private double radius;
-    private FigureSupplier figureSupplier = new FigureSupplier();
-    private ColorSupplier colorSupplier = new ColorSupplier();
 
     @Override
     public double calculateArea() {
