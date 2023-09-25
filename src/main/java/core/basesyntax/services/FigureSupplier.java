@@ -11,7 +11,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final int figureCeilingParam = 10;
+    private static final int MAX_NUMBER = 10;
     private final Random random = new Random();
 
     public Figure getDefaultFigure() {
