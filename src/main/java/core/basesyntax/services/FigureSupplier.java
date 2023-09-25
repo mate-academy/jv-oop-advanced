@@ -50,13 +50,11 @@ public class FigureSupplier {
                 rightTriangle.setSecondLeg(random.nextInt(MAX_NUMBER) + 1);
                 rightTriangle.setColor(colorSupplier.getRandomColor());
                 return rightTriangle;
-            case 5:
+            default:
                 Square square = new Square();
                 square.setSide(random.nextInt(MAX_NUMBER) + 1);
                 square.setColor(colorSupplier.getRandomColor());
                 return square;
-            default:
-                return getDefaultFigure();
         }
     }
 }
