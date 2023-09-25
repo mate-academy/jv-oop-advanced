@@ -3,7 +3,6 @@ package core.basesyntax.figures;
 import core.basesyntax.model.Figure;
 
 public class Circle extends Figure {
-    private final double pi = 3.14;
     private double radius;
 
     public double getRadius() {
@@ -16,7 +15,7 @@ public class Circle extends Figure {
 
     @Override
     public double calculateArea() {
-        return pi * radius;
+        return Math.PI * radius;
     }
 
     @Override
