@@ -25,7 +25,7 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        int figure = random.nextInt(random.nextInt(MAX_AMOUNT_OF_FIGURES));
+        int figure = random.nextInt(random.nextInt(MAX_AMOUNT_OF_FIGURES) + 1);
         switch (figure) {
             case 0:
                 return buildCircle();
