@@ -7,11 +7,11 @@ public class Application {
         Figure[] figures = new Figure[Number_Of_Figures];
         for (int i = 0; i < figures.length / 2; i++) {
             figures[i] = figureSupplier.getRandomFigure();
-            figures[i].toDraw();
+            figures[i].draw();
         }
         for (int i = figures.length / 2; i < figures.length; i++) {
             figures[i] = figureSupplier.getDefaultFigure();
-            figures[i].toDraw();
+            figures[i].draw();
         }
     }
 

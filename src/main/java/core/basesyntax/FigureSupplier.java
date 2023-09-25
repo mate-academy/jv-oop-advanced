@@ -6,11 +6,11 @@ public class FigureSupplier {
     private static final int NUMBER_OF_FIGURES = 5;
     private static final int MAX_RANGE = 100;
     private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int indexOfFigure = random.nextInt(NUMBER_OF_FIGURES);
-        int indexOfColor = random.nextInt(Color.values().length);
-        String randomColor = Color.values()[indexOfColor].name();
+        String randomColor = colorSupplier.getRandomColor();
         int randomParameterA = random.nextInt(MAX_RANGE);
         int randomParameterB = random.nextInt(MAX_RANGE);
         int randomParameterC = random.nextInt(MAX_RANGE);
@@ -31,6 +31,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, Color.white.name());
+        return new Circle(10, Color.WHITE.name());
     }
 }
