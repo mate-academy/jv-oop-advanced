@@ -19,7 +19,7 @@ public class FigureSupplier {
     public Figure getDefaultFigure() {
         Circle defaultFigure = new Circle();
         defaultFigure.setRadius(DEFAULT_RADIUS);
-        defaultFigure.setColor(Color.WHITE.name().toLowerCase());
+        defaultFigure.setColor(DEFAULT_COLOR);
         return defaultFigure;
     }
 
