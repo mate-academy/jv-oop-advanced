@@ -10,10 +10,10 @@ import core.basesyntax.model.Figure;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final ColorSupplier colorSupplier = new ColorSupplier();
-    private static final int MAX_NUMBER = 10;
+    private static final int DEFAULT_RADIUS = 10;
     private static final int MAX_AMOUNT_OF_FIGURES = 6;
-    private final int DEFAULT_RADIUS = 10;
+    private static final int MAX_NUMBER = 10;
+    private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
     public Figure getDefaultFigure() {
