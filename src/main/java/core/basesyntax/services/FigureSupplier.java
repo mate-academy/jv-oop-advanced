@@ -21,7 +21,7 @@ public class FigureSupplier {
         return defaultFigure;
     }
 
-    public Figure getRandomFigure(String figure) {
+    public Figure getRandomFigure() {
         switch (figure) {
             case "new Circle()":
                 Circle circle = new Circle();
