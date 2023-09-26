@@ -1,20 +1,18 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.model.Color;
 import core.basesyntax.model.Figure;
 
 public class Square extends Figure {
     private double side;
 
-    public Square(double side) {
+    public Square(double side, Color color) {
         this.side = side;
+        super.setColor(color);
     }
 
     public double getSide() {
         return side;
-    }
-
-    public void setSide(double side) {
-        this.side = side;
     }
 
     @Override

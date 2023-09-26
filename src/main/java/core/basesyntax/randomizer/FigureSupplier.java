@@ -14,43 +14,39 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int MAX_VALUE = 20;
     private static final int DEFAULT_RADIUS = 10;
+    private static final Color DEFAULT_COLOR = Color.WHITE;
 
-    Random random = new Random();
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
     public Figure getRandomFigure() {
         Figures figureName = Figures.values()[random.nextInt(Figures.values().length)];
 
-        Figure figure = new Figure();
-
         switch (figureName) {
             case CIRCLE:
-                figure = new Circle(random.nextInt(MAX_VALUE));
-                break;
+                return new Circle(random.nextInt(MAX_VALUE),
+                                  colorSupplier.getRandomColor());
             case ISOSCELES_TRAPEZOID:
-                figure = new IsoscelesTrapezoid(random.nextInt(MAX_VALUE),
+                return new IsoscelesTrapezoid(random.nextInt(MAX_VALUE),
                                        random.nextInt(MAX_VALUE),
-                                       random.nextInt(MAX_VALUE));
-                break;
+                                       random.nextInt(MAX_VALUE),
+                                       colorSupplier.getRandomColor());
             case RECTANGLE:
-                figure = new Rectangle(random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
-                break;
+                return new Rectangle(random.nextInt(MAX_VALUE),
+                                     random.nextInt(MAX_VALUE),
+                                     colorSupplier.getRandomColor());
             case RIGHT_TRIANGLE:
-                figure = new RightTriangle(random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
-                break;
+                return new RightTriangle(random.nextInt(MAX_VALUE),
+                                         random.nextInt(MAX_VALUE),
+                                         colorSupplier.getRandomColor());
             case SQUARE:
-                figure = new Square(random.nextInt(MAX_VALUE));
-                break;
+                return new Square(random.nextInt(MAX_VALUE),
+                                  colorSupplier.getRandomColor());
+            default:
+                return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
         }
-
-        figure.setColor(colorSupplier.getRandomColor());
-
-        return figure;
     }
 
     public Figure getDefaultFigure() {
-        Circle circle = new Circle(DEFAULT_RADIUS);
-        circle.setColor(Color.WHITE);
-
-        return circle;
+        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
     }
 }

@@ -1,30 +1,24 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.model.Color;
 import core.basesyntax.model.Figure;
 
 public class Rectangle extends Figure {
     private double firstSide;
     private double secondSide;
 
-    public Rectangle(double firstSide, double secondSide) {
+    public Rectangle(double firstSide, double secondSide, Color color) {
         this.firstSide = firstSide;
         this.secondSide = secondSide;
+        super.setColor(color);
     }
 
     public double getFirstSide() {
         return firstSide;
     }
 
-    public void setFirstSide(double firstSide) {
-        this.firstSide = firstSide;
-    }
-
     public double getSecondSide() {
         return secondSide;
-    }
-
-    public void setSecondSide(double secondSide) {
-        this.secondSide = secondSide;
     }
 
     @Override
