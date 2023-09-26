@@ -8,7 +8,6 @@ import core.basesyntax.figures.Square;
 import core.basesyntax.model.Color;
 import core.basesyntax.model.Figure;
 import core.basesyntax.model.Figures;
-
 import java.util.Random;
 
 public class FigureSupplier {
@@ -18,6 +17,7 @@ public class FigureSupplier {
 
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
+
     public Figure getRandomFigure() {
         Figures figureName = Figures.values()[random.nextInt(Figures.values().length)];
 

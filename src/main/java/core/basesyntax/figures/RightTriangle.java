@@ -17,7 +17,6 @@ public class RightTriangle extends Figure {
         return firstLeg;
     }
 
-
     public double getSecondLeg() {
         return secondLeg;
     }
