@@ -2,20 +2,25 @@ package core.basesyntax;
 
 public class Square extends Figure {
     private double side;
+    static final int POWER_VALUE = 2;
 
     public Square(String color, double side) {
-        super(color);
+        super(color.toLowerCase());
         this.side = side;
     }
 
     @Override
     public double calculateArea() {
-        return Math.pow(side, 2);
+        return Math.pow(side, POWER_VALUE);
     }
 
     @Override
-    public String display() {
-        return "Figure: square, area " + String.format("%.2f", calculateArea())
-                + " sq. units, side " + side + " units, color: " + getColor();
+    public void draw() {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("Figure: square, area ")
+                .append(String.format("%.2f", calculateArea()))
+                .append(" sq. units, side ").append(side)
+                .append(" units, color: ").append(getColor());
+        System.out.println(stringBuilder);
     }
 }

@@ -3,22 +3,27 @@ package core.basesyntax;
 public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
+    static final int HALF_DIVIDER = 2;
 
     public RightTriangle(String color, double firstLeg, double secondLeg) {
-        super(color);
+        super(color.toLowerCase());
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
 
     @Override
     public double calculateArea() {
-        return (firstLeg * secondLeg) / 2;
+        return (firstLeg * secondLeg) / HALF_DIVIDER;
     }
 
     @Override
-    public String display() {
-        return "Figure: right rectangle, area " + String.format("%.2f", calculateArea())
-                + " sq. units, firstLeg " + firstLeg + " units, secondLeg "
-                + secondLeg + " units, color: " + getColor();
+    public void draw() {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("Figure: right rectangle, area ")
+                .append(String.format("%.2f", calculateArea()))
+                .append(" sq. units, firstLeg ").append(firstLeg)
+                .append(" units, secondLeg ").append(secondLeg)
+                .append(" units, color: ").append(getColor());
+        System.out.println(stringBuilder);
     }
 }

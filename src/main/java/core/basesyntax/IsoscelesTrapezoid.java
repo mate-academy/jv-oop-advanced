@@ -5,9 +5,13 @@ public class IsoscelesTrapezoid extends Figure {
     private double topLeg;
     private double sideLeg;
     private double height;
+    static final int NUMBER_OF_ALL_SIDES = 4;
+    static final int SQUARE_ROOT_VALUE = 2;
+    static final int POWER_VALUE = 2;
+    static final int HALF_DIVIDER = 2;
 
     public IsoscelesTrapezoid(String color, double baseLeg, double topLeg, double sideLeg) {
-        super(color);
+        super(color.toLowerCase());
         this.baseLeg = baseLeg;
         this.topLeg = topLeg;
         this.sideLeg = sideLeg;
@@ -15,15 +19,20 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double calculateArea() {
-        height = Math.sqrt((4 * Math.pow(sideLeg, 2))
-                - Math.pow((topLeg > baseLeg ? topLeg - baseLeg : baseLeg - topLeg), 2));
-        return ((topLeg + baseLeg) * height) / 2;
+        height = Math.sqrt((NUMBER_OF_ALL_SIDES * Math.pow(sideLeg, SQUARE_ROOT_VALUE))
+                - Math.pow((topLeg > baseLeg ? topLeg - baseLeg : baseLeg - topLeg), POWER_VALUE));
+        return ((topLeg + baseLeg) / HALF_DIVIDER) * height;
     }
 
     @Override
-    public String display() {
-        return "Figure: right rectangle, area " + String.format("%.2f", calculateArea())
-                + " sq. units, baseLeg " + baseLeg + " units, topLeg " + topLeg
-                + " units, sideLeg " + sideLeg + " units, color: " + getColor();
+    public void draw() {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("Figure: isosceles trapezoid, area ")
+                .append(String.format("%.2f", calculateArea()))
+                .append(" sq. units, baseLeg ").append(baseLeg)
+                .append(" units, topLeg ").append(topLeg)
+                .append(" units, sideLeg ").append(sideLeg)
+                .append(" units, color: ").append(getColor());
+        System.out.println(stringBuilder);
     }
 }

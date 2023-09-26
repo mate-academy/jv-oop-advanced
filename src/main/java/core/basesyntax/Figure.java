@@ -11,5 +11,5 @@ public abstract class Figure implements CalculateArea {
         return color;
     }
 
-    public abstract String display();
+    public abstract void draw();
 }
