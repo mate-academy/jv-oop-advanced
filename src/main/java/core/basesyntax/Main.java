@@ -4,9 +4,10 @@ import core.basesyntax.figures.Figure;
 import core.basesyntax.figuresuppliers.FigureSupplier;
 
 public class Main {
+    private static final int SIZE = 4;
+
     public static void main(String[] args) {
-        int size = 4;
-        Figure[] arr = new Figure[size];
+        Figure[] arr = new Figure[SIZE];
         FigureSupplier supplier = new FigureSupplier();
 
         for (int i = 0; i < arr.length / 2; i++) {

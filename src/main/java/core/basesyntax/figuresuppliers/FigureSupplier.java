@@ -1,5 +1,6 @@
 package core.basesyntax.figuresuppliers;
 
+import core.basesyntax.color.Color;
 import core.basesyntax.color.ColorSupplier;
 import core.basesyntax.figures.Circle;
 import core.basesyntax.figures.Figure;
@@ -10,31 +11,41 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    public Figure getRandomFigure() {
-        int sizeOne = new Random().nextInt(10) + 1;
-        int sizeTwo = new Random().nextInt(10) + 1;
-        int sizeThree = new Random().nextInt(10) + 1;
+    static final Color DEFAULT_COLOR = Color.WHITE;
+    static final int MAX_EDGE = 10;
+    static final int ANNEX = 1;
+    static final int DEFAULT_RADIUS = 10;
 
+    private ColorSupplier colorSupplier = new ColorSupplier();
+    private Random random = new Random();
+
+    public Figure getRandomFigure() {
+        int sizeOne = random.nextInt(MAX_EDGE) + ANNEX;
         int index = new Random().nextInt(FigureType.values().length);
         FigureType figureType = FigureType.values()[index];
+        Color randomColor = colorSupplier.getRandomColor();
 
         switch (figureType) {
             case SQUARE:
-                return new Square(ColorSupplier.getRandomColor(), sizeOne);
+                return new Square(randomColor, sizeOne);
             case RECTANGLE:
-                return new Rectangle(ColorSupplier.getRandomColor(), sizeOne, sizeTwo);
+                int sizeTwo = random.nextInt(MAX_EDGE) + ANNEX;
+                return new Rectangle(randomColor, sizeOne, sizeTwo);
             case RIGHT_TRIANGLE:
-                return new RightTriangle(ColorSupplier.getRandomColor(), sizeOne, sizeTwo);
+                sizeTwo = random.nextInt(MAX_EDGE) + ANNEX;
+                return new RightTriangle(randomColor, sizeOne, sizeTwo);
             case CIRCLE:
-                return new Circle(ColorSupplier.getRandomColor(), sizeOne);
+                return new Circle(randomColor, sizeOne);
             case ISOSCELES_TRAPEZOID:
-                return new IsoscelesTrapezoid(ColorSupplier.getRandomColor(),
+                sizeTwo = random.nextInt(MAX_EDGE) + ANNEX;
+                int sizeThree = random.nextInt(MAX_EDGE) + ANNEX;
+                return new IsoscelesTrapezoid(randomColor,
                         sizeOne, sizeTwo, sizeThree);
-            default: return null;
+            default: return getDefaultFigure();
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", 10);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }

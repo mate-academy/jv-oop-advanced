@@ -1,13 +1,15 @@
 package core.basesyntax.figures;
 
-public abstract class Figure implements IPrintable, IFigure {
-    private String color;
+import core.basesyntax.color.Color;
 
-    public Figure(String color) {
+public abstract class Figure implements IPrintable, AreaCalculator {
+    private Color color;
+
+    public Figure(Color color) {
         this.color = color;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 }
