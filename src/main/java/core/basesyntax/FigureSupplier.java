@@ -3,9 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    static final int NUMBER_OF_FIGURES = 5;
-    static final int MAX_SIZE = 10;
-    static final int DEFAULT_VALUE = 10;
+    private static final int NUMBER_OF_FIGURES = 5;
+    private static final int MAX_SIZE = 10;
+    private static final int DEFAULT_VALUE = 10;
+
     public Figure getRandomFigure() {
         Random random = new Random();
         int values = random.nextInt(NUMBER_OF_FIGURES);

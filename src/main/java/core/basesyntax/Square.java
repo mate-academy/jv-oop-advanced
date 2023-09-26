@@ -1,8 +1,8 @@
 package core.basesyntax;
 
 public class Square extends Figure {
+    private static final int POWER_VALUE = 2;
     private double side;
-    static final int POWER_VALUE = 2;
 
     public Square(String color, double side) {
         super(color.toLowerCase());

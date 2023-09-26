@@ -1,14 +1,15 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
+    private static final int NUMBER_OF_ALL_SIDES = 4;
+    private static final int SQUARE_ROOT_VALUE = 2;
+    private static final int POWER_VALUE = 2;
+    private static final int HALF_DIVIDER = 2;
+
     private double baseLeg;
     private double topLeg;
     private double sideLeg;
     private double height;
-    static final int NUMBER_OF_ALL_SIDES = 4;
-    static final int SQUARE_ROOT_VALUE = 2;
-    static final int POWER_VALUE = 2;
-    static final int HALF_DIVIDER = 2;
 
     public IsoscelesTrapezoid(String color, double baseLeg, double topLeg, double sideLeg) {
         super(color.toLowerCase());

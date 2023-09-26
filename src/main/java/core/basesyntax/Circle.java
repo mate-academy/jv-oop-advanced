@@ -1,8 +1,8 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
+    private static final int POWER_VALUE = 2;
     private double radius;
-    static final int POWER_VALUE = 2;
 
     public Circle(String color, double radius) {
         super(color.toLowerCase());

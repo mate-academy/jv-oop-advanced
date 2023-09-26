@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
+    private static final int HALF_DIVIDER = 2;
     private double firstLeg;
     private double secondLeg;
-    static final int HALF_DIVIDER = 2;
 
     public RightTriangle(String color, double firstLeg, double secondLeg) {
         super(color.toLowerCase());
