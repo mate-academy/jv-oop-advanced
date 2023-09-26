@@ -5,7 +5,7 @@ import core.basesyntax.randomizer.FigureSupplier;
 
 public class Main {
     public static void main(String[] args) {
-        int lengthOfArray = 6;
+        final int lengthOfArray = 6;
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figures = new Figure[lengthOfArray];
 

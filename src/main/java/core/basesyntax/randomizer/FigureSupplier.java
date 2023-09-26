@@ -5,36 +5,51 @@ import core.basesyntax.figures.IsoscelesTrapezoid;
 import core.basesyntax.figures.Rectangle;
 import core.basesyntax.figures.RightTriangle;
 import core.basesyntax.figures.Square;
-import core.basesyntax.model.Colors;
+import core.basesyntax.model.Color;
 import core.basesyntax.model.Figure;
+import core.basesyntax.model.Figures;
+
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int MAX_VALUE = 50;
+    private static final int MAX_VALUE = 20;
+    private static final int DEFAULT_RADIUS = 10;
 
+    Random random = new Random();
+    ColorSupplier colorSupplier = new ColorSupplier();
     public Figure getRandomFigure() {
-        Random random = new Random();
-        ColorSupplier colorSupplier = new ColorSupplier();
+        Figures figureName = Figures.values()[random.nextInt(Figures.values().length)];
 
-        Circle circle = new Circle(random.nextInt(MAX_VALUE));
-        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(random.nextInt(MAX_VALUE),
-                                            random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
-        Rectangle rectangle = new Rectangle(random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
-        RightTriangle rightTriangle = new RightTriangle(random.nextInt(MAX_VALUE),
-                                                        random.nextInt(MAX_VALUE));
-        Square square = new Square(random.nextInt(MAX_VALUE));
+        Figure figure = new Figure();
 
-        Figure[] figures = {circle, isoscelesTrapezoid, rectangle, rightTriangle, square};
+        switch (figureName) {
+            case CIRCLE:
+                figure = new Circle(random.nextInt(MAX_VALUE));
+                break;
+            case ISOSCELES_TRAPEZOID:
+                figure = new IsoscelesTrapezoid(random.nextInt(MAX_VALUE),
+                                       random.nextInt(MAX_VALUE),
+                                       random.nextInt(MAX_VALUE));
+                break;
+            case RECTANGLE:
+                figure = new Rectangle(random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
+                break;
+            case RIGHT_TRIANGLE:
+                figure = new RightTriangle(random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
+                break;
+            case SQUARE:
+                figure = new Square(random.nextInt(MAX_VALUE));
+                break;
+        }
 
-        Figure figure = figures[new Random().nextInt(figures.length - 1)];
         figure.setColor(colorSupplier.getRandomColor());
 
         return figure;
     }
 
     public Figure getDefaultFigure() {
-        Circle circle = new Circle(10);
-        circle.setColor(Colors.WHITE.name());
+        Circle circle = new Circle(DEFAULT_RADIUS);
+        circle.setColor(Color.WHITE);
 
         return circle;
     }
