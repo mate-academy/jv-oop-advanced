@@ -13,7 +13,7 @@ public class Main {
             if (ARRAY_SIZE / 2 > i) {
                 figures[i] = figureSupplier.getRandomFigure();
             } else {
-                figures[i] = figures[i - ARRAY_SIZE / 2];
+                figures[i] = figureSupplier.getDefaultFigure();
             }
             figures[i].draw();
         }

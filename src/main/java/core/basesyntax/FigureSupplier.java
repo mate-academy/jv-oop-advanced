@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MIN_LENGTH_OF_SIDE = 1;
+    private static final int MAX_NUMBER_OF_FIGURES = 5;
     private static final int MAX_LENGTH_OF_SIDE = 300;
     private static final int DEFAULT_RADIUS = 10;
     private static final Color DEFAULT_COLOR = Color.WHITE;
@@ -12,7 +13,7 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int randomNumber = random.nextInt(5);
+        int randomNumber = random.nextInt(MAX_NUMBER_OF_FIGURES);
         switch (randomNumber) {
             case 0:
                 return new Rectangle(colorSupplier.getRandomColor(),
