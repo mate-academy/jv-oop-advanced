@@ -16,17 +16,17 @@ import org.junit.Test;
 
 public class StructureTest {
   private static final List<String> figureClassNames = List
-      .of("Circle", "Square", "IsoscelesTrapezoid", "core.basesyntax.Rectangle", "RightTriangle");
+          .of("Circle", "Square", "IsoscelesTrapezoid", "Rectangle", "RightTriangle");
   private static List<Class> allClasses = new ArrayList<>();
 
   @BeforeClass
   public static void init() {
     try {
       allClasses = getClasses("core.basesyntax");
-      if (allClasses.isEmpty()) {
+      if (allClasses.size() == 0) {
         Assert.fail("You should not rename base core.basesyntax package "
-            + "and path to project and project name should not contain spaces "
-            + "or words in cyrillic");
+                + "and path to project and project name should not contain spaces "
+                + "or words in cyrillic");
       }
     } catch (Exception e) {
       throw new RuntimeException("Could not load classes ", e);
