@@ -16,14 +16,14 @@ import org.junit.Test;
 
 public class StructureTest {
   private static final List<String> figureClassNames = List
-      .of("Circle", "Square", "IsoscelesTrapezoid", "Rectangle", "RightTriangle");
+      .of("Circle", "Square", "IsoscelesTrapezoid", "core.basesyntax.Rectangle", "RightTriangle");
   private static List<Class> allClasses = new ArrayList<>();
 
   @BeforeClass
   public static void init() {
     try {
       allClasses = getClasses("core.basesyntax");
-      if (allClasses.size() == 0) {
+      if (allClasses.isEmpty()) {
         Assert.fail("You should not rename base core.basesyntax package "
             + "and path to project and project name should not contain spaces "
             + "or words in cyrillic");
