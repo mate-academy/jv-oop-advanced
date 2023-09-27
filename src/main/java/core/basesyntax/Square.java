@@ -12,7 +12,7 @@ public class Square extends GeometricFigure {
     public void draw() {
         System.out.println("Figure: square, area: "
                 + getArea()
-                + " , side: "
+                + ", side: "
                 + side + ", color: "
                 + color);
     }

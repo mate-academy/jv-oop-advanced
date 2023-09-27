@@ -14,7 +14,7 @@ public class RightTriangle extends GeometricFigure {
     public void draw() {
         System.out.println("Figure: right triangle, area: "
                 + getArea()
-                + " , first leg: "
+                + ", first leg: "
                 + firstLeg + ", second leg:"
                 + secondLeg
                 + ", color: "

@@ -17,7 +17,7 @@ public class Circle extends GeometricFigure {
     public void draw() {
         System.out.println("Figure: circle, area: "
                 + getArea()
-                + " , radius: "
+                + ", radius: "
                 + radius + ", color: " + color);
     }
 }
