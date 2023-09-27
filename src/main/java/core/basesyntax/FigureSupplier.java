@@ -9,7 +9,7 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        Type [] types = Type.values();
+        Type[] types = Type.values();
         Type figure = types[random.nextInt(types.length)];
         Color randomColor = colorSupplier.getRandomColor();
         switch (figure) {
@@ -27,7 +27,7 @@ public class FigureSupplier {
                         randomColor);
             }
             case RESTANGLE: {
-                return new Rectangle(random.nextInt(RANGE) + 1,random.nextInt(RANGE) + 1,
+                return new Rectangle(random.nextInt(RANGE) + 1, random.nextInt(RANGE) + 1,
                         randomColor);
             }
             default: {
@@ -39,7 +39,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        Circle circle = new Circle(RADIUS, Color.WHITE);
-        return circle;
+        return new Circle(RADIUS, Color.WHITE);
     }
 }
