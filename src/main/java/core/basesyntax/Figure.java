@@ -8,6 +8,10 @@ public class Figure implements Drawable, AreaCalculate {
 
     }
 
+    public String getColor() {
+        return color;
+    }
+
     @Override
     public double getArea() {
         return 0;

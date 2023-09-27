@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private String color;
     private double length;
     private double width;
 
@@ -22,6 +21,6 @@ public class Rectangle extends Figure {
                 +
                 getArea() + " sq.units, length: "
                 +
-                length + " units, width: " + width + " units, color: " + color);
+                length + " units, width: " + width + " units, color: " + getColor());
     }
 }
