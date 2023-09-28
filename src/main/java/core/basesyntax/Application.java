@@ -3,9 +3,6 @@ package core.basesyntax;
 import core.basesyntax.model.Figure;
 import core.basesyntax.model.FigureSupplier;
 
-/**
- * Feel free to remove this class and create your own.
- */
 public class Application {
     private static final int ARRAY_SIZE = 6;
 
