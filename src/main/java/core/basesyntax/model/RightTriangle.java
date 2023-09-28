@@ -1,5 +1,9 @@
 package core.basesyntax.model;
 
+import static core.basesyntax.constants.AreaCalculationConstants.ZERO_POINT_FIVE;
+import static core.basesyntax.constants.StringBuildingConstants.COMMA;
+import static core.basesyntax.constants.StringBuildingConstants.SPACE;
+
 public class RightTriangle extends Figure {
 
     private final double hypotenuse;
@@ -22,13 +26,13 @@ public class RightTriangle extends Figure {
     public void draw() {
         StringBuilder builder = new StringBuilder("Figure:");
         builder.append(" right triangle").append(COMMA)
-                .append(" area: ").append(getArea()).append(WORD_SEPARATOR)
+                .append(" area: ").append(getArea()).append(SPACE)
                 .append("sq.units").append(COMMA)
-                .append(" hypotenuse: ").append(hypotenuse).append(WORD_SEPARATOR)
+                .append(" hypotenuse: ").append(hypotenuse).append(SPACE)
                 .append("units").append(COMMA)
-                .append(" legHeight: ").append(legHeight).append(WORD_SEPARATOR)
+                .append(" legHeight: ").append(legHeight).append(SPACE)
                 .append("units").append(COMMA)
-                .append(" legBase: ").append(legBase).append(WORD_SEPARATOR)
+                .append(" legBase: ").append(legBase).append(SPACE)
                 .append("units").append(COMMA)
                 .append(" color: ").append(color);
         System.out.println(builder);

@@ -1,5 +1,10 @@
 package core.basesyntax.model;
 
+import static core.basesyntax.constants.AreaCalculationConstants.FOUR;
+import static core.basesyntax.constants.AreaCalculationConstants.TWO;
+import static core.basesyntax.constants.StringBuildingConstants.COMMA;
+import static core.basesyntax.constants.StringBuildingConstants.SPACE;
+
 public class IsoscelesTrapezoid extends Figure {
 
     private final int leg;
@@ -27,13 +32,13 @@ public class IsoscelesTrapezoid extends Figure {
     public void draw() {
         StringBuilder builder = new StringBuilder("Figure:");
         builder.append(" isosceles trapezoid").append(COMMA)
-                .append(" area: ").append(getArea()).append(WORD_SEPARATOR)
+                .append(" area: ").append(getArea()).append(SPACE)
                 .append("sq.units").append(COMMA)
-                .append(" leg: ").append(leg).append(WORD_SEPARATOR)
+                .append(" leg: ").append(leg).append(SPACE)
                 .append("units").append(COMMA)
-                .append(" shortBase: ").append(shortBase).append(WORD_SEPARATOR)
+                .append(" shortBase: ").append(shortBase).append(SPACE)
                 .append("units").append(COMMA)
-                .append(" longBase: ").append(longBase).append(WORD_SEPARATOR)
+                .append(" longBase: ").append(longBase).append(SPACE)
                 .append("units").append(COMMA)
                 .append(" color: ").append(color);
         System.out.println(builder);
