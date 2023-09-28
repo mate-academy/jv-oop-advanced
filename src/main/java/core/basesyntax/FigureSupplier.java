@@ -5,9 +5,9 @@ import java.util.Random;
 public class FigureSupplier {
 
     private static final int MAX_FIGURES_TYPES = 5;
-    private static final int SIZE_LIMIT = 5; //додано виключно щоб не генерувалися великі int
+    private static final int SIZE_LIMIT = 5;
     private ColorSupplier colorSupplier = new ColorSupplier();
-    private Random random = new Random(); //Об"єкт рандому
+    private Random random = new Random();
 
     public Figure getRandomFigure() {
         Color randomColor = colorSupplier.getRandomColor();
