@@ -1,12 +1,7 @@
 package core.basesyntax;
 
-public class Figure implements AreaCalculator, Drawer {
+public class Figure implements Drawer {
     Color color;
-
-    @Override
-    public double getArea() {
-        return 0;
-    }
 
     @Override
     public void draw() {
