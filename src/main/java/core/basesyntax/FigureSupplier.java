@@ -30,12 +30,14 @@ public class FigureSupplier {
         }
     }
 
-
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
     }
 
     private int getRandomNumber() {
+        if (random.nextInt(MAX_LENGTH) == 0) {
+            return random.nextInt(MAX_LENGTH);
+        }
         return random.nextInt(MAX_LENGTH);
     }
 }
