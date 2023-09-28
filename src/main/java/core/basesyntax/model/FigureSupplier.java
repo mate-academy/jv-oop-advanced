@@ -15,7 +15,8 @@ public class FigureSupplier {
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        switch (availableFigures[random.nextInt(availableFigures.length)]) {
+        AvailableFigure nextFigure = availableFigures[random.nextInt(availableFigures.length)];
+        switch (nextFigure) {
             case CIRCLE:
                 return getRandomCircle();
             case SQUARE:
@@ -36,47 +37,55 @@ public class FigureSupplier {
     }
 
     private Figure getRandomCircle() {
-        String color = colorSupplier.getRandomColor();
-        int radius = random.nextInt(MAX_SIDE_UNITS_NUMBER) + MIN_SIDE_UNITS_NUMBER;
+        String color = getRandomColor();
+        int radius = generateRandomLength();
         return new Circle(color, radius);
     }
 
     private Figure getRandomSquare() {
-        String color = colorSupplier.getRandomColor();
-        int side = random.nextInt(MAX_SIDE_UNITS_NUMBER) + MIN_SIDE_UNITS_NUMBER;
+        String color = getRandomColor();
+        int side = generateRandomLength();
         return new Square(color, side);
     }
 
     private Figure getRandomRectangle() {
-        String color = colorSupplier.getRandomColor();
-        int width = random.nextInt(MAX_SIDE_UNITS_NUMBER) + MIN_SIDE_UNITS_NUMBER;
+        String color = getRandomColor();
+        int width = generateRandomLength();
         int height = generateUnequalInt(width);
         return new Rectangle(color, width, height);
     }
 
     private Figure getRandomRightTriangle() {
-        String color = colorSupplier.getRandomColor();
-        int legHeight = random.nextInt(MAX_SIDE_UNITS_NUMBER) + MIN_SIDE_UNITS_NUMBER;
+        String color = getRandomColor();
+        int legHeight = generateRandomLength();
         int legBase = generateUnequalInt(legHeight);
         double hypotenuse = Math.round(Math.sqrt((legBase * legBase + legHeight * legHeight)));
         return new RightTriangle(color, hypotenuse, legHeight, legBase);
     }
 
     private Figure getIsoscelesTrapezoid() {
-        String color = colorSupplier.getRandomColor();
-        int firstBase = random.nextInt(MAX_SIDE_UNITS_NUMBER) + MIN_SIDE_UNITS_NUMBER;
+        String color = getRandomColor();
+        int firstBase = generateRandomLength();
         int secondBase = generateUnequalInt(firstBase);
         int shortBase = Math.min(firstBase, secondBase);
         int longBase = Math.max(firstBase, secondBase);
-        int leg = random.nextInt(MAX_SIDE_UNITS_NUMBER) + MIN_SIDE_UNITS_NUMBER;
+        int leg = generateRandomLength();
         return new IsoscelesTrapezoid(color, leg, shortBase, longBase);
     }
 
     private int generateUnequalInt(int number) {
         int unequalInt;
         do {
-            unequalInt = random.nextInt(MAX_SIDE_UNITS_NUMBER) + MIN_SIDE_UNITS_NUMBER;
+            unequalInt = generateRandomLength();
         } while (unequalInt == number);
         return unequalInt;
+    }
+
+    private String getRandomColor() {
+        return colorSupplier.getRandomColor();
+    }
+
+    private int generateRandomLength() {
+        return random.nextInt(MAX_SIDE_UNITS_NUMBER) + MIN_SIDE_UNITS_NUMBER;
     }
 }
