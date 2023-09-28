@@ -30,7 +30,7 @@ public class FigureSupplier {
                 return new IsoscelesTrapezoid(sideA, trapezoidSideB, trapezoidHeight,
                     randomColor);
             default:
-                return null;
+                return new Figure();
         }
 
     }
