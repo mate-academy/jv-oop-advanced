@@ -5,8 +5,8 @@ public class Application {
 
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        GeometricFigure[] figures = new GeometricFigure[FIGURE_COUNT];
-        for (int i = 0; i < figures.length; i++) {
+        Figure[] figures = new Figure[FIGURE_COUNT];
+        for (int i = 0; i < FIGURE_COUNT; i++) {
             if (i < FIGURE_COUNT / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
             } else {
