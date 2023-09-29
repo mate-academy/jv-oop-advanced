@@ -12,15 +12,12 @@ public class IsoscelesTrapezoid extends Figure {
         this.color = color;
     }
 
-    // The Pythagorean Theorem
     private double calculateHeight(double firstParallel, double secondParallel, double side) {
-        // h is the square root of c² - (a-b)²/4
         return Math.pow(side, 2) - Math.pow(firstParallel - secondParallel, 2) / 4;
     }
 
     @Override
     public double getArea() {
-        // and getArea() = (a + b) * h / 2
         return (topBase + bottomBase) * calculateHeight(topBase, bottomBase, side) / 2;
     }
 
