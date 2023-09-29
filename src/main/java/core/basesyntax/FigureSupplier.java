@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int FIGURE_COUNT = 5;
+    private static final int FIGURE_COUNT = 5;
     private static final double MAX_SIZE = 10;
     private static final double MIN_SIZE = 1;
     private static final double DEFAULT_RADIUS = 10;
@@ -43,5 +43,9 @@ public class FigureSupplier {
 
     private double getRandomSize(Random random) {
         return random.nextDouble() * (MAX_SIZE - MIN_SIZE) + MIN_SIZE;
+    }
+
+    public int getFigureCount() {
+        return FIGURE_COUNT;
     }
 }
