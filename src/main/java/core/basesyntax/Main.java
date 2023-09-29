@@ -4,20 +4,17 @@ public class Main {
 
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        Figure[] Figures = new Figure[6];
-        for (int i = 0; i < Figures.length / 2; i++) {
-            Figures[i] = figureSupplier.getRandomFigure();
+        Figure[] figures = new Figure[6];
+        for (int i = 0; i < figures.length / 2; i++) {
+            figures[i] = figureSupplier.getRandomFigure();
         }
 
-        for (int i = Figures.length / 2; i < Figures.length; i++) {
-            Figures[i] = figureSupplier.getDefaultFigure();
+        for (int i = figures.length / 2; i < figures.length; i++) {
+            figures[i] = figureSupplier.getDefaultFigure();
         }
-
-        for(Figure figure:Figures){
+        for (Figure figure:figures) {
             figure.draw();
             System.out.println();
         }
-
-
     }
 }
