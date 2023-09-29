@@ -8,9 +8,9 @@ public class Rectangle extends Figure {
     private double secondSide;
 
     public Rectangle(double firstSide, double secondSide, Color color) {
+        super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
-        super.setColor(color);
     }
 
     public double getFirstSide() {

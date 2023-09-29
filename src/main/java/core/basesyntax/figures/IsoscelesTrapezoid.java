@@ -9,10 +9,10 @@ public class IsoscelesTrapezoid extends Figure {
     private double bottomBase;
 
     public IsoscelesTrapezoid(double leg, double topBase, double bottomBase, Color color) {
+        super(color);
         this.leg = leg;
         this.topBase = topBase;
         this.bottomBase = bottomBase;
-        super.setColor(color);
     }
 
     public double getLeg() {
