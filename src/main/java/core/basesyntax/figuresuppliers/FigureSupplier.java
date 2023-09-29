@@ -11,16 +11,16 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    static final Color DEFAULT_COLOR = Color.WHITE;
-    static final int MAX_EDGE = 10;
-    static final int ANNEX = 1;
-    static final int DEFAULT_RADIUS = 10;
+    private static final Color DEFAULT_COLOR = Color.WHITE;
+    private static final int MAX_EDGE = 10;
+    private static final int ANNEX = 1;
+    private static final int DEFAULT_RADIUS = 10;
 
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
 
     public Figure getRandomFigure() {
-        int sizeOne = random.nextInt(MAX_EDGE) + ANNEX;
+        int sizeOne = getSize();
         int index = new Random().nextInt(FigureType.values().length);
         FigureType figureType = FigureType.values()[index];
         Color randomColor = colorSupplier.getRandomColor();
@@ -29,20 +29,25 @@ public class FigureSupplier {
             case SQUARE:
                 return new Square(randomColor, sizeOne);
             case RECTANGLE:
-                int sizeTwo = random.nextInt(MAX_EDGE) + ANNEX;
+                int sizeTwo = getSize();
                 return new Rectangle(randomColor, sizeOne, sizeTwo);
             case RIGHT_TRIANGLE:
-                sizeTwo = random.nextInt(MAX_EDGE) + ANNEX;
+                sizeTwo = getSize();
                 return new RightTriangle(randomColor, sizeOne, sizeTwo);
             case CIRCLE:
                 return new Circle(randomColor, sizeOne);
             case ISOSCELES_TRAPEZOID:
-                sizeTwo = random.nextInt(MAX_EDGE) + ANNEX;
-                int sizeThree = random.nextInt(MAX_EDGE) + ANNEX;
+                sizeTwo = getSize();
+                int sizeThree = getSize();
                 return new IsoscelesTrapezoid(randomColor,
                         sizeOne, sizeTwo, sizeThree);
-            default: return getDefaultFigure();
+            default:
+                return getDefaultFigure();
         }
+    }
+
+    private int getSize() {
+        return random.nextInt(MAX_EDGE) + ANNEX;
     }
 
     public Figure getDefaultFigure() {

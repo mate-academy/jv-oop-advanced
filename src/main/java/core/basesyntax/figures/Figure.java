@@ -2,7 +2,7 @@ package core.basesyntax.figures;
 
 import core.basesyntax.color.Color;
 
-public abstract class Figure implements IPrintable, AreaCalculator {
+public abstract class Figure implements Printable, AreaCalculator {
     private Color color;
 
     public Figure(Color color) {
