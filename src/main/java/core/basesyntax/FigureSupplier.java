@@ -16,41 +16,32 @@ public class FigureSupplier {
 
         switch (randomChoice) {
             case 0:
-                double squareSide = getRandomSize();
                 return new Square(
-                        squareSide,
+                        getRandomSize(),
                         color
                 );
             case 1:
-                double length = getRandomSize();
-                double width = getRandomSize();
                 return new Rectangle(
-                        length,
-                        width,
+                        getRandomSize(),
+                        getRandomSize(),
                         color
                 );
             case 2:
-                double base = getRandomSize();
-                double height = getRandomSize();
                 return new RightTriangle(
-                        base,
-                        height,
+                        getRandomSize(),
+                        getRandomSize(),
                         color
                 );
             case 3:
-                double radius = getRandomSize();
                 return new Circle(
-                        radius,
+                        getRandomSize(),
                         color
                 );
             default:
-                double topBase = getRandomSize();
-                double bottomBase = getRandomSize();
-                double trapezoidSide = getRandomSize();
                 return new IsoscelesTrapezoid(
-                        topBase,
-                        bottomBase,
-                        trapezoidSide,
+                        getRandomSize(),
+                        getRandomSize(),
+                        getRandomSize(),
                         color
                 );
         }
