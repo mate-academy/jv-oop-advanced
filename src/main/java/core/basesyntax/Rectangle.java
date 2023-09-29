@@ -19,6 +19,7 @@ public class Rectangle implements Figure {
         System.out.println("First side: " + firstSide);
         System.out.println("Second side: " + secondSide);
         System.out.println("Area: " + getArea());
+        System.out.println("Color: " + color);
     }
 
     //formula a * b

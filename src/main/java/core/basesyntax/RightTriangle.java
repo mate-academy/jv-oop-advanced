@@ -17,10 +17,11 @@ public class RightTriangle implements Figure {
     }
     @Override
     public void draw(){
-        System.out.println("Drawing a square...");
+        System.out.println("Drawing a RightTriangle...");
         System.out.println("firstAngle: " + firstAngle);
         System.out.println("secondAngle: " + secondAngle);
         System.out.println("Area: " + getArea());
+        System.out.println("Color: " + color);
     }
     //formula (a*b) / 2
 }

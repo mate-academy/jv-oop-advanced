@@ -13,9 +13,10 @@ public class Circle implements Figure {
     }
     @Override
     public void draw(){
-        System.out.println("Drawing a square...");
+        System.out.println("Drawing a Circle...");
         System.out.println("Radius: " + radius);
         System.out.println("Area: " + getArea());
+        System.out.println("Color: " + color);
     }
     //formula p * r * r
 }

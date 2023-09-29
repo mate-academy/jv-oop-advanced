@@ -17,6 +17,7 @@ public class Square implements Figure {
             System.out.println("Drawing a square...");
             System.out.println("Side: " + side);
             System.out.println("Area: " + getArea());
+            System.out.println("Color: " + color);
         }
 
 }

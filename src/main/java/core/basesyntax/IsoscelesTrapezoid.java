@@ -18,11 +18,12 @@ public class IsoscelesTrapezoid implements Figure {
     }
     @Override
     public void draw(){
-        System.out.println("Drawing a square...");
+        System.out.println("Drawing a IsoscelesTrapezoid...");
         System.out.println("firstBase: " + firstBase);
         System.out.println("secondBase: " + secondBase);
         System.out.println("height: " + height);
         System.out.println("Area: " + getArea());
+        System.out.println("Color: " + color);
     }
     //Formula (a*b)/2 * h
 

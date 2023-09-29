@@ -9,6 +9,7 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         int randomChoice = random.nextInt(5);
 
+
         switch (randomChoice) {
             case 0:
                 return new Square(random.nextDouble() * 10, colorSupplier.getRandomColor().name());
