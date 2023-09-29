@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Figure implements Drawer, AreaCalculator {
+public class Figure implements Drawable, AreaCalculator {
     private Color color;
 
     public Color getColor() {

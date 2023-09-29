@@ -13,7 +13,7 @@ public class Main {
             }
         }
 
-        for (Drawer figure : figures) {
+        for (Drawable figure : figures) {
             figure.draw();
         }
     }
