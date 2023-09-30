@@ -3,7 +3,6 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-
     private static final int MAX_FIGURES_TYPES = 5;
     private static final int SIZE_LIMIT = 5;
     private ColorSupplier colorSupplier = new ColorSupplier();
@@ -27,8 +26,7 @@ public class FigureSupplier {
             case 5:
                 int trapezoidSideB = random.nextInt(SIZE_LIMIT) + 1;
                 int trapezoidHeight = random.nextInt(SIZE_LIMIT) + 1;
-                return new IsoscelesTrapezoid(sideA, trapezoidSideB, trapezoidHeight,
-                    randomColor);
+                return new IsoscelesTrapezoid(sideA, trapezoidSideB, trapezoidHeight, randomColor);
             default:
                 return new Figure();
         }
