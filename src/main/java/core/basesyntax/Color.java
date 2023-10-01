@@ -10,5 +10,9 @@ public enum Color {
     GREEN,
     GRAY,
     RED,
-    ORANGE
+    ORANGE;
+
+    public static Color getRandomColor() {
+        return null;
+    }
 }

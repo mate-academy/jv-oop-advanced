@@ -3,17 +3,20 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private static final Color DEFAULT_COLOR = Color.WHITE;
+    private static final double DEFAULT_RADIUS = 10.0;
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        String randomColor = String.valueOf(colorSupplier.getRandomColor());
-        Random random = new Random();
-        int figureType = random.nextInt(5);
+        Color randomColor = Color.getRandomColor();
+        int numberOfFigureTypes = 5;
+        int figureType = random.nextInt(numberOfFigureTypes);
 
         switch (figureType) {
             case 0:
                 double sideLength = random.nextDouble() * 10 + 1;
-                return new Square(randomColor, sideLength);
+                return prepareSquare(randomColor, sideLength);
 
             case 1:
                 double width = random.nextDouble() * 10 + 1;
@@ -36,11 +39,15 @@ public class FigureSupplier {
                 return new IsoscelesTrapezoid(randomColor, topBase, bottomBase, trapezoidHeight);
 
             default:
-                return null;
+                return getDefaultFigure();
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("WHITE", 10);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
+    }
+
+    private Figure prepareSquare(Color color, double sideLength) {
+        return new Square(color, sideLength);
     }
 }
