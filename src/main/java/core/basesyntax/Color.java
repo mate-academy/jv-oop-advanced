@@ -12,7 +12,4 @@ public enum Color {
     RED,
     ORANGE;
 
-    public static Color getRandomColor() {
-        return null;
-    }
 }
