@@ -1,6 +1,6 @@
 package core.basesyntax.model;
 
-public class Circle extends Figure implements AreaCalculator {
+public class Circle extends Figure {
     private static final double PI = 3.14;
     private int radius;
 

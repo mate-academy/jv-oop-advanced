@@ -1,6 +1,6 @@
 package core.basesyntax.model;
 
-public class Rectangle extends Figure implements AreaCalculator {
+public class Rectangle extends Figure {
     private int length;
     private int width;
 
