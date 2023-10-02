@@ -1,8 +1,9 @@
 package core.basesyntax;
 
 public class HelloWorld {
+    private static final int NUMBER_OF_FIGURES = 6;
+
     public static void main(String[] args) {
-        final int NUMBER_OF_FIGURES = 6;
         FigureSupplier figureSupplier = new FigureSupplier();
         ColorSupplier colorSupplier = new ColorSupplier();
         Figure[] figures = new Figure[NUMBER_OF_FIGURES];
