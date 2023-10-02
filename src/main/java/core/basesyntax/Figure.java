@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Figure implements Drawable, AreaCalculator, PerimeterCalculator {
+public abstract class Figure implements Drawable, AreaCalculator, PerimeterCalculator {
     private String defColor;
 
     public Figure() {
@@ -14,17 +14,4 @@ public class Figure implements Drawable, AreaCalculator, PerimeterCalculator {
         return defColor;
     }
 
-    @Override
-    public void draw() {
-    }
-
-    @Override
-    public double getArea() {
-        return 0;
-    }
-
-    @Override
-    public double getPerimeter() {
-        return 0;
-    }
 }
