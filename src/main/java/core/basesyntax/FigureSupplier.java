@@ -6,7 +6,7 @@ public class FigureSupplier {
     private static final int MAX_LENGTH = 100;
     private static final int FIGURE_COUNT = 5;
     private static final int DEFAULT_RADIUS = 10;
-    private static final String DEFAULT_COLOR = String.valueOf(Color.WHITE);
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
 
     private final Random random = new Random();
     private final ColorSupplier supplier = new ColorSupplier();
@@ -35,9 +35,6 @@ public class FigureSupplier {
     }
 
     private int getRandomNumber() {
-        if (random.nextInt(MAX_LENGTH) == 0) {
-            return random.nextInt(MAX_LENGTH);
-        }
-        return random.nextInt(MAX_LENGTH);
+        return random.nextInt(MAX_LENGTH - 1) + 1;
     }
 }
