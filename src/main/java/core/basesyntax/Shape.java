@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 public enum Shape {
-    CIRCLE,
+    SQUARE,
     TRIANGLE,
     RECTANGLE,
-    SQUARE,
-    TRAPEZOID
+    TRAPEZOID,
+    CIRCLE
 }

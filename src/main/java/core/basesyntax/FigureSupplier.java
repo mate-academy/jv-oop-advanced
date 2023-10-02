@@ -15,7 +15,6 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int randomShapeIndex = random.nextInt(FIGURES_COUNT);
-
         switch (Shape.values()[randomShapeIndex].toString()) {
             case "CIRCLE" :
                 return new Circle(getRandomSideSize(), getRandomColor());
@@ -38,7 +37,6 @@ public class FigureSupplier {
 
     private String getRandomColor() {
         ColorSupplier colorSupplier = new ColorSupplier();
-
         return colorSupplier.getRandomColor();
     }
 }
