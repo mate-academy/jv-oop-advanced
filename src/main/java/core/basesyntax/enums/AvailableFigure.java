@@ -5,6 +5,5 @@ public enum AvailableFigure {
     SQUARE,
     RECTANGLE,
     RIGHT_TRIANGLE,
-    ISOSCELES_TRAPEZOID;
-
+    ISOSCELES_TRAPEZOID
 }
