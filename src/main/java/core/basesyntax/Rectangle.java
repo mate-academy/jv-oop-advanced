@@ -11,9 +11,6 @@ public class Rectangle extends Figure {
         this.length = length;
     }
 
-    public Rectangle() {
-    }
-
     public int getHeight() {
         return height;
     }
