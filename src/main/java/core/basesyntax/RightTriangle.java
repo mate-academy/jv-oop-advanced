@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.text.DecimalFormat;
 
 public class RightTriangle extends Figure {
-    private static final double HALF_DEVIDE = 0.5;
+    private static final double HALF_DIVIDE = 0.5;
 
     private int firstLeg;
     private int secondLeg;
@@ -16,7 +16,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public double getArea() {
-        return HALF_DEVIDE * firstLeg * secondLeg;
+        return  HALF_DIVIDE * firstLeg * secondLeg;
     }
 
     @Override
