@@ -12,7 +12,9 @@ public class RightTriangle extends Figure {
 
     @Override
     public double getArea() {
-        return (side * height) / 2;
+        double sideD = side;
+        double heightD = height;
+        return (sideD * heightD) / 2d;
     }
 
     @Override
