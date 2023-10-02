@@ -1,26 +1,23 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private final int firstLeg;
-    private final int secondLeg;
 
-    public RightTriangle(int firstLeg, int secondLeg, String color) {
-        super.setColor(color);
-        this.firstLeg = firstLeg;
-        this.secondLeg = secondLeg;
+    private double sideA;
+
+    public RightTriangle(String color, double sideA) {
+        super(color);
+        this.sideA = sideA;
     }
 
     @Override
     public double getArea() {
-        return 0.5 * firstLeg * secondLeg;
+        return sideA * sideA * Math.sqrt(3) / 4;
     }
 
     @Override
-    public String draw() {
-        return "Figure: triangle, "
-                + "area: " + getArea() + " sq.units, "
-                + "firstLeg: " + firstLeg + " units, "
-                + "secondLeg: " + secondLeg + " units, "
-                + "color: " + super.getColor().toLowerCase();
+    public void draw() {
+        System.out.println("Figure : isoscelesTriangle, area: " + getArea() + " sq.units, side: "
+                + sideA + " units, color: "
+                + getColor());
     }
 }
