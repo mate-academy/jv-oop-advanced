@@ -19,7 +19,8 @@ public class FigureSupplier {
             case 3:
                 return new Circle(randomSide, randomColor.getRandomColor());
             case 4:
-                return new IsoscelesTrapezoid(randomSide, randomSide, randomSide / 1.1, randomColor.getRandomColor());
+                return new IsoscelesTrapezoid(randomSide, randomSide,
+                        randomSide / 1.1, randomColor.getRandomColor());
             default:
                 return new Circle();
         }

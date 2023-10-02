@@ -11,7 +11,8 @@ public class RightTriangle extends Figure {
         this.catheteA = catheteA;
         this.catheteB = catheteB;
     }
-    public RightTriangle(){
+
+    public RightTriangle() {
 
     }
 
