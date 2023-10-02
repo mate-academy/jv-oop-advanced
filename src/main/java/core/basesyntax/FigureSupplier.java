@@ -55,7 +55,4 @@ public class FigureSupplier {
         return random.nextDouble() * (MAX_SIZE - MIN_SIZE) + MIN_SIZE;
     }
 
-    public int getFigureCount() {
-        return FIGURE_COUNT;
-    }
 }
