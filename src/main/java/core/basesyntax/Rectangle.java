@@ -20,6 +20,6 @@ public class Rectangle extends Figure {
         System.out.println("Figure: rectangle, area: " + getArea() + " sq.units, "
                 + "first side: " + firstSide + " units, "
                 + "second side: " + secondSide + " units, "
-                + "color: " + getColor());
+                + "color: " + getColor().name());
     }
 }
