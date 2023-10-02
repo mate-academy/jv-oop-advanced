@@ -20,13 +20,13 @@ public class FigureSupplier {
             case "CIRCLE" :
                 return new Circle(getRandomSideSize(), getRandomColor());
             case "TRIANGLE" :
-                return new Triangle(getRandomSideSize(), getRandomSideSize(), getRandomColor());
+                return new RightTriangle(getRandomSideSize(), getRandomSideSize(), getRandomColor());
             case "RECTANGLE":
                 return new Rectangle(getRandomSideSize(), getRandomSideSize(), getRandomColor());
             case "SQUARE":
                 return new Square(getRandomSideSize(), getRandomColor());
             case "TRAPEZOID":
-                return new Trapezoid(getRandomSideSize(), getRandomSideSize(), getRandomSideSize(), getRandomColor());
+                return new IsoscelesTrapezoid(getRandomSideSize(), getRandomSideSize(), getRandomSideSize(), getRandomColor());
             default:
                 return getDefaultFigure();
         }
