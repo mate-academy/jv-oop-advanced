@@ -1,13 +1,18 @@
 package core.basesyntax;
 
 public class Main {
+    private static final int COUTN_OBJECT = 5;
+    private static final Figure[] arrayOfFigures = new Figure[COUTN_OBJECT];
+    private static final FigureSupplier figureSupplier = new FigureSupplier();
+
     public static void main(String[] args) {
-        Figure[] arrayOfFigures = new Figure[5];
-        for (int i = 0; i < arrayOfFigures.length / 2; i++) {
-            arrayOfFigures[i] = new Figure().getRandomFigure();
-        }
-        for (int i = arrayOfFigures.length / 2; i < arrayOfFigures.length; i++) {
-            arrayOfFigures[i] = new Figure().getDefaultFigure();
+
+        for (int i = 0; i < arrayOfFigures.length; i++) {
+            if (i <= arrayOfFigures.length / 2) {
+                arrayOfFigures[i] = figureSupplier.getRandomFigure();
+            } else {
+                arrayOfFigures[i] = figureSupplier.getDefaultFigure();
+            }
         }
         for (Figure figure : arrayOfFigures) {
             figure.draw();

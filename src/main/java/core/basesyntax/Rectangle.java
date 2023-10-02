@@ -23,12 +23,12 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    double getArea() {
+    public double getArea() {
         return getHeight() * getLength();
     }
 
     @Override
-    void draw() {
+    public void draw() {
         System.out.println("Figure: rectangle, area: " + getArea()
                 + " sq.cm., sides: " + SIDE_RECTANGLE + " units, length: "
                 + getLength() + " cm., height: " + getHeight() + " cm., color: " + getColor());

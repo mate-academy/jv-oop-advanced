@@ -9,10 +9,10 @@ public class RightTriangle extends Figure {
     public RightTriangle(int catheteA, int catheteB, Color color) {
         super(color);
         this.catheteA = catheteA;
-        this.catheteB = catheteA;
+        this.catheteB = catheteB;
     }
+    public RightTriangle(){
 
-    public RightTriangle() {
     }
 
     public int getCatheteA() {
@@ -24,12 +24,12 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    double getArea() {
+    public double getArea() {
         return 0.5 * getCatheteA() * getCatheteB();
     }
 
     @Override
-    void draw() {
+    public void draw() {
         System.out.println("Figure: triangle, area: " + getArea()
                 + " sq.cm., sides: " + SIDE_RIGHT_TRIANGLE + " units, firstLeg: "
                 + getCatheteA() + " cm., secondLeg: " + getCatheteB()

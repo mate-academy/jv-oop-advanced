@@ -13,9 +13,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.topLength = topLength;
     }
 
-    public IsoscelesTrapezoid() {
-    }
-
     public int getHeight() {
         return height;
     }
@@ -29,12 +26,12 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    double getArea() {
+    public double getArea() {
         return 0.5 * (getTopLength() + getLength()) * getHeight();
     }
 
     @Override
-    void draw() {
+   public void draw() {
         System.out.println("Figure: isosceles trapezoid, area: " + getArea()
                 + " sq.cm., sides: " + SIDE_ISOSCELES_TRAPEZOID + " units, length: "
                 + getLength() + " cm., height: " + getHeight() + " cm., topLengthSide: "
