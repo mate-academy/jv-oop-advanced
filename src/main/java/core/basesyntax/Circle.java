@@ -5,8 +5,8 @@ public class Circle extends AbstractFigure {
     private String color;
 
     public Circle(double radius, String color) {
+        super(color);
         this.radius = radius;
-        this.color = color;
     }
 
     @Override

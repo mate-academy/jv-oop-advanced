@@ -6,10 +6,9 @@ public class RightTriangle extends AbstractFigure {
     private String color;
 
     public RightTriangle(double firstAngle,double secondAngle,String color) {
+        super(color);
         this.firstAngle = firstAngle;
         this.secondAngle = secondAngle;
-        this.color = color;
-
     }
 
     @Override

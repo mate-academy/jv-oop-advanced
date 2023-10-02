@@ -6,9 +6,9 @@ public class Rectangle extends AbstractFigure {
     private String color;
 
     public Rectangle(double firstSide, double secondSide, String color) {
+        super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
-        this.color = color;
     }
 
     @Override
