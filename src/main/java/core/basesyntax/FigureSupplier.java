@@ -12,17 +12,22 @@ public class FigureSupplier {
 
         switch (randomChoice) {
             case 0:
-                return new Square(random.nextDouble() * magicNumber, colorSupplier.getRandomColor().name());
+                return new Square(random.nextDouble() * magicNumber,
+                        colorSupplier.getRandomColor().name());
             case 1:
-                return new Rectangle(random.nextDouble() * magicNumber, random.nextDouble() * magicNumber,
+                return new Rectangle(random.nextDouble() * magicNumber,
+                           random.nextDouble() * magicNumber,
                                      colorSupplier.getRandomColor().name());
             case 2:
-                return new RightTriangle(random.nextDouble() * magicNumber, random.nextDouble() * magicNumber,
+                return new RightTriangle(random.nextDouble() * magicNumber,
+                          random.nextDouble() * magicNumber,
                                      colorSupplier.getRandomColor().name());
             case 3:
-                return new Circle(random.nextDouble() * magicNumber, colorSupplier.getRandomColor().name());
+                return new Circle(random.nextDouble() * magicNumber,
+                                    colorSupplier.getRandomColor().name());
             case 4:
-                return new IsoscelesTrapezoid(random.nextDouble() * magicNumber, random.nextDouble() * magicNumber,
+                return new IsoscelesTrapezoid(random.nextDouble() * magicNumber,
+                         random.nextDouble() * magicNumber,
                         random.nextDouble() * magicNumber, colorSupplier.getRandomColor().name());
             default:
                 return null;
