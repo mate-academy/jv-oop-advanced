@@ -17,11 +17,6 @@ public class Rectangle extends AbstractFigure {
     }
 
     @Override
-    public String getColor() {
-        return color;
-    }
-
-    @Override
     public void draw() {
         System.out.println("Drawing a rectangle...");
         System.out.println("First side: " + firstSide);

@@ -19,11 +19,6 @@ public class IsoscelesTrapezoid extends AbstractFigure {
     }
 
     @Override
-    public String getColor() {
-        return color;
-    }
-
-    @Override
     public void draw() {
         System.out.println("Drawing a IsoscelesTrapezoid...");
         System.out.println("firstBase: " + firstBase);

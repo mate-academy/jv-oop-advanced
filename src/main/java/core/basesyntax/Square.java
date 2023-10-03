@@ -15,11 +15,6 @@ public class Square extends AbstractFigure {
     }
 
     @Override
-    public String getColor() {
-        return color;
-    }
-
-    @Override
     public void draw() {
         System.out.println("Drawing a square...");
         System.out.println("Side: " + side);

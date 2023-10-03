@@ -17,11 +17,6 @@ public class RightTriangle extends AbstractFigure {
     }
 
     @Override
-    public String getColor() {
-        return color;
-    }
-
-    @Override
     public void draw() {
         System.out.println("Drawing a RightTriangle...");
         System.out.println("firstAngle: " + firstAngle);
