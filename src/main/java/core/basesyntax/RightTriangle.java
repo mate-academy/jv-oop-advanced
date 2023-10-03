@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-
     private double sideA;
 
     public RightTriangle(String color, double sideA) {
