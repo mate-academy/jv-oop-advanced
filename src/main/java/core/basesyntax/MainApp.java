@@ -15,7 +15,7 @@ public class MainApp {
             }
         }
         for (Figure figure : figures) {
-            figure.print();
+            figure.draw();
         }
     }
 }

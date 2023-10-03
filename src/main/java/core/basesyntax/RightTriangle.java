@@ -11,16 +11,14 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double getArea() {
-        double sideD = side;
-        double heightD = height;
-        return (sideD * heightD) / 2d;
+    public double calculateArea() {
+        return (side * height) * 0.5;
     }
 
     @Override
-    public void print() {
+    public void draw() {
         System.out.println("Figure: Circle "
-                + " area " + getArea() + " sq.units,"
+                + " area " + calculateArea() + " sq.units,"
                 + " side " + side + " units"
                 + " height " + height + " units"
                 + " color " + color);
