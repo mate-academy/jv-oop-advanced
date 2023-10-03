@@ -1,13 +1,13 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private Color color;
     private int side;
     private int height;
 
     public RightTriangle(Color color, int side, int height) {
-        this.color = color;
+        super(color);
         this.side = side;
+        this.height = height;
     }
 
     @Override
@@ -21,6 +21,6 @@ public class RightTriangle extends Figure {
                 + " area " + calculateArea() + " sq.units,"
                 + " side " + side + " units"
                 + " height " + height + " units"
-                + " color " + color);
+                + " color " + getColor());
     }
 }

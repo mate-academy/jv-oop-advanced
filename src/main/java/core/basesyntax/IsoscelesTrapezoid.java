@@ -1,12 +1,11 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private Color color;
     private int side;
     private int height;
 
     public IsoscelesTrapezoid(Color color, int side, int height) {
-        this.color = color;
+        super(color);
         this.side = side;
         this.height = height;
     }
@@ -22,6 +21,6 @@ public class IsoscelesTrapezoid extends Figure {
                 + " area " + calculateArea() + " sq.units,"
                 + " side " + side + " units,"
                 + " height " + height + " units,"
-                + " color " + color);
+                + " color " + getColor());
     }
 }
