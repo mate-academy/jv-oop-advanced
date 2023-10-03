@@ -1,11 +1,11 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private int firstSide;
-    private int secondSide;
-    private int height;
+    private double firstSide;
+    private double secondSide;
+    private double height;
 
-    public IsoscelesTrapezoid(int firstSide, int secondSide, int height, Color color) {
+    public IsoscelesTrapezoid(double firstSide, double secondSide, double height, Color color) {
         super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
@@ -22,30 +22,30 @@ public class IsoscelesTrapezoid extends Figure {
         System.out.println("Figure: isosceles trapezoid, area: " + getArea() + " sq.units, "
                 + "firstSide: " + getFirstSide() + " units, "
                 + "secondSide: " + getSecondSide() + " units, "
-                + "height: " + getHeight() + "units, color: " + getColor());
+                + "height: " + getHeight() + " units, color: " + getColor());
     }
 
-    public int getFirstSide() {
+    public double getFirstSide() {
         return firstSide;
     }
 
-    public void setFirstSide(int firstSide) {
+    public void setFirstSide(double firstSide) {
         this.firstSide = firstSide;
     }
 
-    public int getSecondSide() {
+    public double getSecondSide() {
         return secondSide;
     }
 
-    public void setSecondSide(int secondSide) {
+    public void setSecondSide(double secondSide) {
         this.secondSide = secondSide;
     }
 
-    public int getHeight() {
+    public double getHeight() {
         return height;
     }
 
-    public void setHeight(int height) {
+    public void setHeight(double height) {
         this.height = height;
     }
 }
