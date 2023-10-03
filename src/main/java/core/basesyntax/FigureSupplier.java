@@ -3,35 +3,45 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final Random random = new Random();
-    private final ColorSupplier randomColor = new ColorSupplier();
-    private final Circle defaultCircle = new Circle(10, Color.WHITE);
+    private static final Color DEFAULT_COLOR = Color.WHITE;
+    private static final int MAX = 10;
+    private static final int ANNEX = 1;
+    private static final int DEFAULT_RADIUS = 10;
+    private ColorSupplier colorSupplier = new ColorSupplier();
+    private Random random = new Random();
 
     public Figure getRandomFigure() {
-        int randomFigureType = random.nextInt(5);
-        int randomSide = random.nextInt() * 16;
-        int randomMultiplier = random.nextInt(3) + 2;
+        int sizeOne = getSize();
+        int index = new Random().nextInt(FigureType.values().length);
+        FigureType figureType = FigureType.values()[index];
+        Color randomColor = colorSupplier.getRandomColor();
 
-        switch (randomFigureType) {
-            case 0:
-                return new Square(randomSide, randomColor.getRandomColor());
-            case 1:
-                return new Rectangle(randomSide,
-                        randomSide * randomMultiplier, randomColor.getRandomColor());
-            case 2:
-                return new RightTriangle(randomSide,
-                        randomSide * randomMultiplier, randomColor.getRandomColor());
-            case 3:
-                return new Circle(randomSide, randomColor.getRandomColor());
-            case 4:
-                return new IsoscelesTrapezoid(randomSide, randomSide,
-                        randomSide / 1.1, randomColor.getRandomColor());
+        switch (figureType) {
+            case SQUARE:
+                return new Square(sizeOne, randomColor);
+            case RECTANGLE:
+                int sizeTwo = getSize();
+                return new Rectangle(sizeOne, sizeTwo, randomColor);
+            case RIGHT_TRIANGLE:
+                sizeTwo = getSize();
+                return new RightTriangle(sizeOne, sizeTwo, randomColor);
+            case CIRCLE:
+                return new Circle(sizeOne, randomColor);
+            case ISOSCELES_TRAPEZOID:
+                sizeTwo = getSize();
+                int sizeThree = getSize();
+                return new IsoscelesTrapezoid(
+                        sizeOne, sizeTwo, sizeThree, randomColor);
             default:
-                return new Circle(randomSide, randomColor.getRandomColor());
+                return new Circle(sizeOne, randomColor);
         }
     }
 
-    public Circle getDefaultFigure() {
-        return defaultCircle;
+    private int getSize() {
+        return random.nextInt(MAX) + ANNEX;
+    }
+
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
     }
 }
