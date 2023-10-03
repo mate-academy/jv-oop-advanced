@@ -2,11 +2,11 @@ package core.basesyntax;
 
 public class Circle extends AbstractFigure {
     private double radius;
-    private String color;
 
     public Circle(double radius, String color) {
         super(color);
         this.radius = radius;
+        this.color = color;
     }
 
     @Override
@@ -26,5 +26,4 @@ public class Circle extends AbstractFigure {
         System.out.println("Area: " + getArea());
         System.out.println("Color: " + color);
     }
-    //formula p * r * r
 }

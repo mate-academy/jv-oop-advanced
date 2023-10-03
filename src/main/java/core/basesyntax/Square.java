@@ -2,11 +2,11 @@ package core.basesyntax;
 
 public class Square extends AbstractFigure {
     private double side;
-    private String color;
 
     public Square(double side, String color) {
         super(color);
         this.side = side;
+        this.color = color;
     }
 
     @Override

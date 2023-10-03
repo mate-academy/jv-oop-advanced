@@ -3,12 +3,12 @@ package core.basesyntax;
 public class RightTriangle extends AbstractFigure {
     private double firstAngle;
     private double secondAngle;
-    private String color;
 
     public RightTriangle(double firstAngle,double secondAngle,String color) {
         super(color);
         this.firstAngle = firstAngle;
         this.secondAngle = secondAngle;
+        this.color = color;
     }
 
     @Override
@@ -29,5 +29,4 @@ public class RightTriangle extends AbstractFigure {
         System.out.println("Area: " + getArea());
         System.out.println("Color: " + color);
     }
-    //formula (a*b) / 2
 }
