@@ -10,7 +10,7 @@ public class HelloWorld {
         Figure figure5 = new Circle("Black", 15);
         Figure[] figures = new Figure[]{figure1, figure2, figure3, figure4, figure5};
         for (Figure figure : figures) {
-            figure.draw();
+            figure.drawable();
         }
     }
 }
