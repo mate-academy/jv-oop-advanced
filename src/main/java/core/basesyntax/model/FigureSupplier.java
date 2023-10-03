@@ -9,7 +9,10 @@ public class FigureSupplier {
     private Random random = new Random();
     private ColorSupplier randomColor = new ColorSupplier();
 
-    public Figure getRandomFigure(String shape) {
+    public Figure getRandomFigure() {
+        Shape[] shapes = Shape.values();
+        String shape = shapes[random.nextInt(shapes.length)].name();
+
         switch (shape) {
             case ("CIRCLE"):
                 return new Circle(randomColor.getRandomColor(), random.nextInt(MAX_VALUE));

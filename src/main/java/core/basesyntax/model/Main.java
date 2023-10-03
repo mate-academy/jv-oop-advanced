@@ -13,8 +13,7 @@ public class Main {
                 figureSupplier.getDefaultFigure().draw();
             } else {
                 figureSupplier
-                        .getRandomFigure(Shape.values()[random.nextInt(Shape.values().length)]
-                        .name()).draw();
+                        .getRandomFigure().draw();
             }
         }
     }
