@@ -54,5 +54,4 @@ public class FigureSupplier {
     private double getRandomSize() {
         return random.nextDouble() * (MAX_SIZE - MIN_SIZE) + MIN_SIZE;
     }
-
 }

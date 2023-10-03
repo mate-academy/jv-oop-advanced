@@ -20,5 +20,4 @@ public class Circle extends Figure {
                         + " radius: " + radius + " unit.,"
                         + " color: " + color);
     }
-
 }
