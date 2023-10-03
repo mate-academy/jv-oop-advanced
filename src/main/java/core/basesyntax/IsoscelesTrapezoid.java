@@ -1,19 +1,25 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements Drawable, AreaCalculator {
+public class IsoscelesTrapezoid extends Figure {
     private double firstSide;
     private double secondSide;
-    private double hight;
-    public IsoscelesTrapezoid (String color, double firstSide, double secondSide, double hight) {
+    private double height;
+
+    public IsoscelesTrapezoid(String color, double firstSide, double secondSide, double height) {
         super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
-        this.hight = hight;
+        this.height = height;
+    }
+
+    @Override
+    public String getAdditionalInfo() {
+        return "firstSide: " + firstSide + ", secondSide: " + secondSide + ", hight: " + height;
     }
 
     @Override
     public double getArea() {
-        return (firstSide + secondSide) / 2 * hight;
+        return (firstSide + secondSide) / 2 * height;
     }
 
     @Override

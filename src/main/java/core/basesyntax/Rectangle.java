@@ -1,12 +1,18 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Drawable, AreaCalculator {
+public class Rectangle extends Figure {
     private double hight;
     private double width;
+
     public Rectangle(String color, double hight, double width) {
         super(color);
         this.hight = hight;
         this.width = width;
+    }
+
+    @Override
+    public String getAdditionalInfo() {
+        return "hight: " + hight + ", widht: " + width;
     }
 
     @Override
