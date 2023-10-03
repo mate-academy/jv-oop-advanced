@@ -3,14 +3,13 @@ package core.basesyntax;
 import java.util.Random;
 
 public class RightTriangle extends Figure {
-    private String name = "Right triangle";
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
-    private final int maxFirstLeg = 10;
-    private final int maxSecondLeg = 10;
+    static final int MAX_FIRST_LEG = 10;
+    static final int MAX_SECOND_LEG = 10;
     private String color = colorSupplier.getRandomColor();
-    private double firstLeg = random.nextInt(maxFirstLeg) + 1;
-    private double secondLeg = random.nextInt(maxSecondLeg) + 1;
+    private double firstLeg = random.nextInt(MAX_FIRST_LEG) + 1;
+    private double secondLeg = random.nextInt(MAX_SECOND_LEG) + 1;
     private double base = Math. sqrt((firstLeg * firstLeg) + (secondLeg * secondLeg));
 
     public RightTriangle() {
@@ -18,10 +17,6 @@ public class RightTriangle extends Figure {
 
     public RightTriangle(String color) {
         super(color);
-    }
-
-    public String getName() {
-        return name;
     }
 
     public double getFirstLeg() {
@@ -47,7 +42,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getName() + ", area: "
+        System.out.println("Figure: Right triangle" + ", area: "
                 + getArea() + " sq.units" + ", base: "
                 + getBase() + " units" + ", firstLeg: " + getFirstLeg()
                 + " units" + ", secondLeg: " + getSecondLeg()

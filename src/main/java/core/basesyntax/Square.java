@@ -3,22 +3,17 @@ package core.basesyntax;
 import java.util.Random;
 
 public class Square extends Figure {
-    private String name = "Square";
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
-    private final int maxSide = 8;
+    static final int MAX_SIDE = 8;
     private String color = colorSupplier.getRandomColor();
-    private double side = random.nextInt(maxSide) + 1;
+    private double side = random.nextInt(MAX_SIDE) + 1;
 
     public Square() {
     }
 
     public Square(String color) {
         super(color);
-    }
-
-    public String getName() {
-        return name;
     }
 
     public String getColor() {
@@ -36,7 +31,7 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getName() + ", area: "
+        System.out.println("Figure: Square" + ", area: "
                 + getArea() + " sq.units" + ", side: "
                 + getSide() + " units" + ", perimeter: " + getPerimeter()
                 + " units" + ", color: " + getColor());

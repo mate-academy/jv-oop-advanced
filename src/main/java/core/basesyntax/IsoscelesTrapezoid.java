@@ -3,28 +3,24 @@ package core.basesyntax;
 import java.util.Random;
 
 public class IsoscelesTrapezoid extends Figure {
-    private String name = "IsoscelesTrapezoid";
+
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
     private String color = colorSupplier.getRandomColor();
-    private final int maxFirstBase = 8;
-    private final int maxSecondBase = 12;
-    private final int maxHeight = 6;
-    private final int maxSide = 8;
-    private double firstBase = random.nextInt(maxFirstBase) + 1;
-    private double secondBase = random.nextInt(maxSecondBase) + maxFirstBase + 1;
-    private double height = random.nextInt(maxHeight) + 1;
-    private double side = random.nextInt(maxSide) + 1;
+    static final int MAX_FIRST_BASE = 8;
+    static final int MAX_SECOND_BASE = 12;
+    static final int MAX_HEIGHT = 6;
+    static final int MAX_SIDE = 8;
+    private double firstBase = random.nextInt(MAX_FIRST_BASE) + 1;
+    private double secondBase = random.nextInt(MAX_SECOND_BASE) + MAX_FIRST_BASE + 1;
+    private double height = random.nextInt(MAX_HEIGHT) + 1;
+    private double side = random.nextInt(MAX_SIDE) + 1;
 
     public IsoscelesTrapezoid() {
     }
 
     public IsoscelesTrapezoid(String color) {
         super(color);
-    }
-
-    public String getName() {
-        return name;
     }
 
     public double getFirstBase() {
@@ -49,7 +45,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getName() + ", area: "
+        System.out.println("Figure: IsoscelesTrapezoid" + ", area: "
                 + getArea() + " sq.units" + ", firstBase: "
                 + getFirstBase() + " units" + ", secondBase: " + getSecondBase()
                 + " units" + ", side: " + getSide() + " units" + ", height: "

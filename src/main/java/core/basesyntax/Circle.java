@@ -3,28 +3,24 @@ package core.basesyntax;
 import java.util.Random;
 
 public class Circle extends Figure {
-    private String name = "circle";
+
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
     private String color = colorSupplier.getRandomColor();
-    private final int maxRadius = 10;
-    private double radius = random.nextInt(maxRadius) + 1;
+    static final int MAX_RADIUS = 10;
+    private double radius = random.nextInt(MAX_RADIUS) + 1;
 
     public Circle() {
     }
 
-    public Circle(String color, String name, double radius) {
-        this.name = name;
+    public Circle(String color, double radius) {
+
         this.radius = radius;
         this.color = color;
     }
 
     public String getColorSupplier() {
         return color;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public double getRadius() {
@@ -38,7 +34,7 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getName() + ", area: " + getArea()
+        System.out.println("Figure: Circle" + ", area: " + getArea()
                 + " sq.units" + ", radius: "
                 + getRadius() + " units" + ", perimeter: " + getPerimeter()
                 + " units" + ", color: " + getColorSupplier());
