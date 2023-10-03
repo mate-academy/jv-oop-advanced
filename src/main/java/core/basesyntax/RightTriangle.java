@@ -3,8 +3,8 @@ package core.basesyntax;
 import java.text.DecimalFormat;
 
 public class RightTriangle extends Figure {
+    private static final DecimalFormat decimalFormat = new DecimalFormat("#.##");
     private static final double HALF_DIVIDE = 0.5;
-
     private int firstLeg;
     private int secondLeg;
 
@@ -21,7 +21,6 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        DecimalFormat decimalFormat = new DecimalFormat("#.##");
         String formattedArea = decimalFormat.format(getArea());
         System.out.println("Figure: " + this.getClass().getSimpleName() + ", Area: "
                 + formattedArea + " sq.units, firstLeg:"

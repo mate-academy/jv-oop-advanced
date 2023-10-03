@@ -3,10 +3,10 @@ package core.basesyntax;
 import java.text.DecimalFormat;
 
 public class Circle extends Figure {
-
+    private static final DecimalFormat decimalFormat = new DecimalFormat("#.##");
     private int radius;
 
-    public Circle(String color,int radius) {
+    public Circle(String color, int radius) {
         super(color);
         this.radius = radius;
     }
@@ -26,10 +26,9 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        DecimalFormat decimalFormat = new DecimalFormat("#.##");
         String formattedArea = decimalFormat.format(getArea());
         System.out.println("Figure: " + this.getClass().getSimpleName() + ", Area: "
-                + formattedArea + " sq.units, Radius: "
-                + radius + " Units, color: " + super.getColor());
+                + formattedArea + " sq. units, Radius: "
+                + radius + " Units, Color: " + super.getColor());
     }
 }

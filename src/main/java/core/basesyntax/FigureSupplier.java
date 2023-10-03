@@ -13,8 +13,7 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         String color = colorSupplier.getRandomColor();
-        int figureNumber = random.nextInt(FIGURE_NUMBER);
-        switch (figureNumber) {
+        switch (random.nextInt(FIGURE_NUMBER)) {
             case 0:
                 return new Circle(color, random.nextInt(MAX_FIGURE_VALUES));
             case 1:

@@ -3,6 +3,7 @@ package core.basesyntax;
 import java.text.DecimalFormat;
 
 public class Rectangle extends Figure {
+    private static final DecimalFormat decimalFormat = new DecimalFormat("#.##");
     private int length;
     private int width;
 
@@ -19,7 +20,6 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        DecimalFormat decimalFormat = new DecimalFormat("#.##");
         String formattedArea = decimalFormat.format(getArea());
         System.out.println("Figure: " + this.getClass().getSimpleName() + ", Area: "
                 + formattedArea + " sq.units, length: "

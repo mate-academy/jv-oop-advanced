@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class ColorSupplier {
-    private Colors[] allColors = allColors = Colors.values();
+    private Colors[] allColors = Colors.values();
     private Random random = new Random();
 
     public String getRandomColor() {

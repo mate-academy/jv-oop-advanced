@@ -3,6 +3,7 @@ package core.basesyntax;
 import java.text.DecimalFormat;
 
 public class IsoscelesTrapezoid extends Figure {
+    private static final DecimalFormat decimalFormat = new DecimalFormat("#.##");
     private int firstParallel;
     private int secondParallel;
     private int height;
@@ -45,7 +46,6 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        DecimalFormat decimalFormat = new DecimalFormat("#.##");
         String formattedArea = decimalFormat.format(getArea());
         System.out.println("Figure: " + this.getClass().getSimpleName() + ", Area: "
                 + formattedArea + " sq.units, First Parallel: "
