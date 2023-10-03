@@ -21,7 +21,7 @@ public class FigureSupplier {
                         random.nextInt(MAX_VALUE));
             case ("RECTANGLE"):
                 return new Rectangle(randomColor.getRandomColor(),
-                        random.nextInt(), random.nextInt(MAX_VALUE));
+                        random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
             case ("RIGHT_TRIANGLE"):
                 return new RightTriangle(randomColor.getRandomColor(),
                         random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
