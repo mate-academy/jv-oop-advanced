@@ -1,13 +1,13 @@
 package core.basesyntax;
 
 public class Main {
-    private static final FigureSupplier figureSupplier = new FigureSupplier();
+    private static final int countObjects = 5;
 
     public static void main(String[] args) {
-        int countObjects = 5;
+        FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] arrayOfFigures = new Figure[countObjects];
         for (int i = 0; i < arrayOfFigures.length; i++) {
-            if (i <= arrayOfFigures.length / 2) {
+            if (i < arrayOfFigures.length / 2) {
                 arrayOfFigures[i] = figureSupplier.getRandomFigure();
             } else {
                 arrayOfFigures[i] = figureSupplier.getDefaultFigure();

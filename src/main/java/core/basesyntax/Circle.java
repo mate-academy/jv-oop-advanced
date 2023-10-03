@@ -8,13 +8,9 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
-    public int getRadius() {
-        return radius;
-    }
-
     @Override
     public double getArea() {
-        return Math.PI * Math.pow(getRadius(), 2);
+        return Math.PI * Math.pow(radius, 2);
     }
 
     @Override
@@ -23,4 +19,3 @@ public class Circle extends Figure {
                 + " sq.cm., units, color: " + getColor());
     }
 }
-
