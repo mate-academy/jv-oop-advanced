@@ -9,7 +9,7 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
         Random random = new Random();
         for (int i = 0; i < ARRAY_LENGTH; i++) {
-            if (i > 2) {
+            if (i >= ARRAY_LENGTH / 2) {
                 figureSupplier.getDefaultFigure().draw();
             } else {
                 figureSupplier
