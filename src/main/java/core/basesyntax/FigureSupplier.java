@@ -29,7 +29,8 @@ class FigureSupplier {
             case 3:
                 return new Circle(getRandomNumber(), color.toString());
             case 4:
-                return new IsoscelesTrapezoid(getRandomNumber(), getRandomNumber(), getRandomNumber(), color.toString());
+                return new IsoscelesTrapezoid(getRandomNumber(), getRandomNumber(),
+                        getRandomNumber(), color.toString());
             default:
                 return new Circle(DEFAULT_RADIOUS, DEFAULT_COLOR.toString());
         }

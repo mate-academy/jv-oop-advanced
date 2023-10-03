@@ -4,7 +4,7 @@ import java.util.Random;
 
 class ColorSupplier {
 
-    Random random = new Random();
+    private Random random = new Random();
     private Color[] colors = Color.values();
 
     public Color getRandomColor() {
