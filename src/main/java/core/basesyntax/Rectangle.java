@@ -1,21 +1,16 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Rectangle extends Figure {
-    private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final Random random = new Random();
-    private String color = colorSupplier.getRandomColor();
-    static final int MAX_SIDE = 6;
-    static final int MAX_BASE = 10;
-    private double side = random.nextInt(MAX_SIDE) + 1;
-    private double base = random.nextInt(MAX_BASE) + MAX_SIDE + 1;
+    private double side;
+    private double base;
 
     public Rectangle() {
     }
 
-    public Rectangle(String color) {
+    public Rectangle(String color, double side, double base) {
         super(color);
+        this.base = base;
+        this.side = side;
     }
 
     public double getSide() {
@@ -24,10 +19,6 @@ public class Rectangle extends Figure {
 
     public double getBase() {
         return base;
-    }
-
-    public String getColor() {
-        return color;
     }
 
     @Override

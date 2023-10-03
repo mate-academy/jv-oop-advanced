@@ -1,26 +1,22 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class IsoscelesTrapezoid extends Figure {
 
-    private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final Random random = new Random();
-    private String color = colorSupplier.getRandomColor();
-    static final int MAX_FIRST_BASE = 8;
-    static final int MAX_SECOND_BASE = 12;
-    static final int MAX_HEIGHT = 6;
-    static final int MAX_SIDE = 8;
-    private double firstBase = random.nextInt(MAX_FIRST_BASE) + 1;
-    private double secondBase = random.nextInt(MAX_SECOND_BASE) + MAX_FIRST_BASE + 1;
-    private double height = random.nextInt(MAX_HEIGHT) + 1;
-    private double side = random.nextInt(MAX_SIDE) + 1;
+    private double firstBase;
+    private double secondBase;
+    private double height;
+    private double side;
 
     public IsoscelesTrapezoid() {
     }
 
-    public IsoscelesTrapezoid(String color) {
+    public IsoscelesTrapezoid(String color, double firstBase,
+                              double secondBase, double height, double side) {
         super(color);
+        this.firstBase = firstBase;
+        this.secondBase = secondBase;
+        this.height = height;
+        this.side = side;
     }
 
     public double getFirstBase() {
@@ -37,10 +33,6 @@ public class IsoscelesTrapezoid extends Figure {
 
     public double getSide() {
         return side;
-    }
-
-    public String getColor() {
-        return color;
     }
 
     @Override

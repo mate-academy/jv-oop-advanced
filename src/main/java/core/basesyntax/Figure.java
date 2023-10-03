@@ -10,7 +10,7 @@ public abstract class Figure implements Drawable, AreaCalculator, PerimeterCalcu
         this.color = color;
     }
 
-    public String getDefColor() {
+    public String getColor() {
         return color;
     }
 }

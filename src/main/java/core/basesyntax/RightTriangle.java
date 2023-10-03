@@ -1,22 +1,16 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class RightTriangle extends Figure {
-    private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final Random random = new Random();
-    static final int MAX_FIRST_LEG = 10;
-    static final int MAX_SECOND_LEG = 10;
-    private String color = colorSupplier.getRandomColor();
-    private double firstLeg = random.nextInt(MAX_FIRST_LEG) + 1;
-    private double secondLeg = random.nextInt(MAX_SECOND_LEG) + 1;
-    private double base = Math. sqrt((firstLeg * firstLeg) + (secondLeg * secondLeg));
+    private double firstLeg;
+    private double secondLeg;
 
     public RightTriangle() {
     }
 
-    public RightTriangle(String color) {
+    public RightTriangle(String color, double firstLeg, double secondLeg) {
         super(color);
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
     }
 
     public double getFirstLeg() {
@@ -28,11 +22,7 @@ public class RightTriangle extends Figure {
     }
 
     public double getBase() {
-        return base;
-    }
-
-    public String getColor() {
-        return color;
+        return Math. sqrt((firstLeg * firstLeg) + (secondLeg * secondLeg));
     }
 
     @Override
@@ -52,6 +42,6 @@ public class RightTriangle extends Figure {
 
     @Override
     public double getPerimeter() {
-        return base + firstLeg + secondLeg;
+        return getBase() + firstLeg + secondLeg;
     }
 }

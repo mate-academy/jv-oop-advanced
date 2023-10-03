@@ -1,23 +1,15 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Square extends Figure {
-    private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final Random random = new Random();
-    static final int MAX_SIDE = 8;
-    private String color = colorSupplier.getRandomColor();
-    private double side = random.nextInt(MAX_SIDE) + 1;
+
+    private double side;
 
     public Square() {
     }
 
-    public Square(String color) {
+    public Square(String color, double side) {
         super(color);
-    }
-
-    public String getColor() {
-        return color;
+        this.side = side;
     }
 
     public double getSide() {
