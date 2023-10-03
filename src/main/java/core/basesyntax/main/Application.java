@@ -12,13 +12,13 @@ public class Application {
         for (int i = 0; i < ARRAY_LENGTH; i++) {
             if (i < ARRAY_LENGTH / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
-                continue;
+            } else {
+                figures[i] = figureSupplier.getDefaultFigure();
             }
-            figures[i] = figureSupplier.getDefaultFigure();
         }
 
         for (Figure figure : figures) {
-            figure.toDraw();
+            figure.draw();
         }
     }
 }
