@@ -10,7 +10,6 @@ public class Rectangle extends Figure {
         this.width = width;
     }
 
-    @Override
     public double getArea() {
         return length * width;
     }
