@@ -1,8 +1,10 @@
 package core.basesyntax;
 
 public class Main {
+    private static final int MAIN_LOOP_COUNT = 10;
+
     public static void main(String[] args) {
-        Drawable[] figures = new Drawable[10];
+        Drawable[] figures = new Drawable[MAIN_LOOP_COUNT];
         FigureSupplier figureSupplier = new FigureSupplier();
 
         for (int i = 0; i < figures.length; i++) {
