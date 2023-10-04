@@ -34,18 +34,22 @@ public class FigureSupplier {
     }
 
     private Figure getRandomTrapezoid() {
-        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(MAX_BOUND), random.nextInt(MAX_BOUND), random.nextInt(MAX_BOUND));
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(MAX_BOUND),
+                random.nextInt(MAX_BOUND), random.nextInt(MAX_BOUND));
     }
 
     private Figure getRandomRectangle() {
-        return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(MAX_BOUND), random.nextInt(MAX_BOUND));
+        return new Rectangle(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_BOUND), random.nextInt(MAX_BOUND));
     }
 
     private Figure getRandomTriangle() {
-        return new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(MAX_BOUND));
+        return new RightTriangle(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_BOUND));
     }
 
     private Figure getRandomSquare() {
-        return new Square(colorSupplier.getRandomColor(), random.nextInt(MAX_BOUND));
+        return new Square(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_BOUND));
     }
 }
