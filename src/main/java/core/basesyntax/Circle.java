@@ -1,12 +1,17 @@
 package core.basesyntax;
 
 public class Circle extends Figure implements Area, FigureSupplier {
-    float radius;
+    public void setRadius(float radius) {
+        this.radius = radius;
+    }
+
+    private float radius;
 
     @Override
     public double getArea() {
         return radius * radius * Math.PI;
     }
+
     @Override
     public Figure getRandomFigure() {
         ColorSupplier nextColor = new ColorSupplier();
@@ -15,6 +20,7 @@ public class Circle extends Figure implements Area, FigureSupplier {
         area = getArea();
         return this;
     }
+
     @Override
     public Figure getDefaultFigure() {
         radius = 10;

@@ -1,8 +1,16 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure implements Area, FigureSupplier {
-    float sideA;
-    float sideB;
+    public void setSideA(float sideA) {
+        this.sideA = sideA;
+    }
+
+    public void setSideB(float sideB) {
+        this.sideB = sideB;
+    }
+
+    private float sideA;
+    private float sideB;
 
     @Override
     public double getArea() {
