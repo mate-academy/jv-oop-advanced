@@ -4,7 +4,8 @@ import java.util.Random;
 
 class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
-    private static final double DEFAULT_RADIOUS = 10;
+    private static final int RANDOM_NUMBER = 20;
+    private static final double DEFAULT_RADIUS = 10;
     private static final Color DEFAULT_COLOR = Color.WHITE;
     private ColorSupplier colorSupplier;
 
@@ -32,15 +33,15 @@ class FigureSupplier {
                 return new IsoscelesTrapezoid(getRandomNumber(), getRandomNumber(),
                         getRandomNumber(), color.toString());
             default:
-                return new Circle(DEFAULT_RADIOUS, DEFAULT_COLOR.toString());
+                return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR.toString());
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_RADIOUS, DEFAULT_COLOR.toString());
+        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR.toString());
     }
 
     private double getRandomNumber() {
-        return random.nextDouble() * 20 + 1;
+        return random.nextDouble() * RANDOM_NUMBER + 1;
     }
 }
