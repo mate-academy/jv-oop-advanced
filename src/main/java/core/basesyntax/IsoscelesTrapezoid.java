@@ -13,10 +13,10 @@ public class IsoscelesTrapezoid extends Figure implements Area, Drawable {
 
     @Override
     public Figure getRandomFigureSup() {
-        ColorSupplier nextColor = new ColorSupplier();
         sideA = getRandom().nextInt();
         sideB = getRandom().nextInt();
         high = getRandom().nextInt();
+        ColorSupplier nextColor = new ColorSupplier();
         setColor(nextColor.getRandomColor()); ;
         setArea(getArea());
         return this;
