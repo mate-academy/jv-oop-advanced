@@ -5,7 +5,7 @@ public class Square implements Figure {
     private double sideLength;
 
     public Square(String string, double sideLength) {
-        this.color = color;
+        this.color = string;
         this.sideLength = sideLength;
     }
 
@@ -16,7 +16,7 @@ public class Square implements Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure square,area:" + getArea() +
-                "sq.units,side:" + sideLength + "units,color:" + color);
+        System.out.println("Figure square,area:" + getArea() + "sq.units,side:"
+                + sideLength + "units,color:" + color);
     }
 }
