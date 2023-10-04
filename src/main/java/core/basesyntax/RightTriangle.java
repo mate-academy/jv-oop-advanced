@@ -13,8 +13,8 @@ public class RightTriangle extends Figure implements Area, Drawable {
     @Override
     public Figure getRandomFigureSup() {
         ColorSupplier nextColor = new ColorSupplier();
-        firstLeg = random.nextInt();
-        secondLeg = random.nextInt();
+        firstLeg = getRandom().nextInt();
+        secondLeg = getRandom().nextInt();
         setColor(nextColor.getRandomColor()); ;
         setArea(getArea());
         return this;

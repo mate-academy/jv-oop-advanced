@@ -12,7 +12,7 @@ public class Circle extends Figure implements Area, Drawable {
     @Override
     public Figure getRandomFigureSup() {
         ColorSupplier nextColor = new ColorSupplier();
-        radius = random.nextInt();
+        radius = getRandom().nextInt();
         setColor(nextColor.getRandomColor()); ;
         setArea(getArea());
         return this;

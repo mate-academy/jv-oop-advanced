@@ -13,8 +13,8 @@ public class Rectangle extends Figure implements Area, Drawable {
     @Override
     public Figure getRandomFigureSup() {
         ColorSupplier nextColor = new ColorSupplier();
-        setSideA(random.nextInt());
-        setSideB(random.nextInt());
+        setSideA(getRandom().nextInt());
+        setSideB(getRandom().nextInt());
         setColor(nextColor.getRandomColor());
         setArea(getArea());
         return this;

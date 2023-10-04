@@ -12,7 +12,7 @@ public class Square extends Figure implements Area, Drawable {
     @Override
     public Figure getRandomFigureSup() {
         ColorSupplier nextColor = new ColorSupplier();
-        sideLength = random.nextInt();
+        sideLength = getRandom().nextInt();
         setColor(nextColor.getRandomColor()); ;
         setArea(getArea());
         return this;
