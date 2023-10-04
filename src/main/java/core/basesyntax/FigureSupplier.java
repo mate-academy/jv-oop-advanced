@@ -24,7 +24,7 @@ public class FigureSupplier {
                 return getRandomSquare();
         }
     }
-    
+
     public Figure getDefaultFigure() {
         return new Circle(COLOR_DEFAULT, DEFAULT_RADIUS);
     }
@@ -34,13 +34,11 @@ public class FigureSupplier {
     }
 
     private Figure getRandomTrapezoid() {
-        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(MAX_BOUND),
-                random.nextInt(MAX_BOUND), random.nextInt(MAX_BOUND));
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(MAX_BOUND), random.nextInt(MAX_BOUND), random.nextInt(MAX_BOUND));
     }
 
     private Figure getRandomRectangle() {
-        return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(MAX_BOUND),
-                random.nextInt(MAX_BOUND));
+        return new Rectangle(colorSupplier.getRandomColor(), random.nextInt(MAX_BOUND), random.nextInt(MAX_BOUND));
     }
 
     private Figure getRandomTriangle() {
