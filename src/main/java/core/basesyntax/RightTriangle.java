@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements Area, FigureSupplier {
+public class RightTriangle extends Figure implements Area, Drawable {
 
     private float firstLeg;
     private float secondLeg;
@@ -11,7 +11,7 @@ public class RightTriangle extends Figure implements Area, FigureSupplier {
     }
 
     @Override
-    public Figure getRandomFigure() {
+    public Figure getRandomFigureSup() {
         ColorSupplier nextColor = new ColorSupplier();
         firstLeg = random.nextInt();
         secondLeg = random.nextInt();
@@ -21,7 +21,7 @@ public class RightTriangle extends Figure implements Area, FigureSupplier {
     }
 
     @Override
-    public Figure getDefaultFigure() {
+    public Figure getDefaultFigureSup() {
         firstLeg = 4;
         secondLeg = 3;
         setColor(Color.WHITE);
@@ -37,4 +37,18 @@ public class RightTriangle extends Figure implements Area, FigureSupplier {
         this.secondLeg = secondLeg;
     }
 
+    public float getFirstLeg() {
+        return firstLeg;
+    }
+
+    public float getSecondLeg() {
+        return secondLeg;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Figure: " + getType() + ", area: " + getArea() + " sq.units, firstLeg:"
+                + " " + getFirstLeg() + " units, secondLeg: " + getSecondLeg() + " units, color: "
+                + getColor());
+    }
 }

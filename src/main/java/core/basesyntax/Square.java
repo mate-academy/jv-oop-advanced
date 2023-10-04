@@ -1,6 +1,7 @@
 package core.basesyntax;
 
-public class Square extends Figure implements Area, FigureSupplier {
+public class Square extends Figure implements Area, Drawable {
+
 
     private float sideLength;
 
@@ -10,7 +11,7 @@ public class Square extends Figure implements Area, FigureSupplier {
     }
 
     @Override
-    public Figure getRandomFigure() {
+    public Figure getRandomFigureSup() {
         ColorSupplier nextColor = new ColorSupplier();
         sideLength = random.nextInt();
         setColor(nextColor.getRandomColor()); ;
@@ -19,7 +20,7 @@ public class Square extends Figure implements Area, FigureSupplier {
     }
 
     @Override
-    public Figure getDefaultFigure() {
+    public Figure getDefaultFigureSup() {
         sideLength = 5;
         setColor(Color.GREEN); ;
         setArea(getArea());
@@ -28,5 +29,15 @@ public class Square extends Figure implements Area, FigureSupplier {
 
     public void setSideLength(float sideLength) {
         this.sideLength = sideLength;
+    }
+
+    public float getSideLength() {
+        return sideLength;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Figure: " + getType() + ", area: " + getArea() + " sq.units, side:"
+                + " " + getSideLength() + " units, color: " + getColor());
     }
 }

@@ -1,6 +1,7 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements Area, FigureSupplier {
+public class Circle extends Figure implements Area, Drawable {
+
 
     private float radius;
 
@@ -10,7 +11,7 @@ public class Circle extends Figure implements Area, FigureSupplier {
     }
 
     @Override
-    public Figure getRandomFigure() {
+    public Figure getRandomFigureSup() {
         ColorSupplier nextColor = new ColorSupplier();
         radius = random.nextInt();
         setColor(nextColor.getRandomColor()); ;
@@ -19,8 +20,8 @@ public class Circle extends Figure implements Area, FigureSupplier {
     }
 
     @Override
-    public Figure getDefaultFigure() {
-        radius = 10;
+    public Figure getDefaultFigureSup() {
+        setRadius(10);
         setColor(Color.WHITE); ;
         setArea(getArea());
         return this;
@@ -30,4 +31,13 @@ public class Circle extends Figure implements Area, FigureSupplier {
         this.radius = radius;
     }
 
+    public float getRadius() {
+        return radius;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Figure: " + getType() + ", area: " + getArea()
+                + " sq.units, radius: " + getRadius() + " units, color: "+ getColor());
+    }
 }

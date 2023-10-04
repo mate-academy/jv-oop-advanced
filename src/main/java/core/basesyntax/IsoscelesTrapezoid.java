@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements Area, FigureSupplier {
+public class IsoscelesTrapezoid extends Figure implements Area, Drawable {
 
     private float sideA;
     private float sideB;
@@ -12,7 +12,7 @@ public class IsoscelesTrapezoid extends Figure implements Area, FigureSupplier {
     }
 
     @Override
-    public Figure getRandomFigure() {
+    public Figure getRandomFigureSup() {
         ColorSupplier nextColor = new ColorSupplier();
         sideA = random.nextInt();
         sideB = random.nextInt();
@@ -22,7 +22,7 @@ public class IsoscelesTrapezoid extends Figure implements Area, FigureSupplier {
     }
 
     @Override
-    public Figure getDefaultFigure() {
+    public Figure getDefaultFigureSup() {
         sideA = 8;
         sideB = 16;
         high = 10;
@@ -43,4 +43,22 @@ public class IsoscelesTrapezoid extends Figure implements Area, FigureSupplier {
         this.high = high;
     }
 
+    public float getSideA() {
+        return sideA;
+    }
+
+    public float getSideB() {
+        return sideB;
+    }
+
+    public float getHigh() {
+        return high;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Figure: " + getType() + ", area: " + getArea() + " sq.units, sideA: "
+                + getSideA() + " units, secondLeg: " + getSideB() + " units, high: " + getHigh()
+                + " color: " + getColor());
+    }
 }
