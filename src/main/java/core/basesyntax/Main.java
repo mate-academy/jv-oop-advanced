@@ -5,6 +5,7 @@ public class Main {
         Figure[] figures = new Figure[6];
         FigureSupplier figureSupplier = new FigureSupplier();
         int groupFigures = 2;
+
         for (int i = 0; i < figures.length; i++) {
             if (i < figures.length / groupFigures) {
                 figures[i] = figureSupplier.getRandomFigure();
@@ -13,6 +14,7 @@ public class Main {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
         }
+
         for (Figure figure : figures) {
             figure.draw();
         }
