@@ -2,9 +2,9 @@ package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure implements Area, FigureSupplier {
 
-    float sideA;
-    float sideB;
-    float high;
+    private float sideA;
+    private float sideB;
+    private float high;
 
     @Override
     public double getArea() {

@@ -2,8 +2,8 @@ package core.basesyntax;
 
 public class RightTriangle extends Figure implements Area, FigureSupplier {
 
-    float firstLeg;
-    float secondLeg;
+    private float firstLeg;
+    private float secondLeg;
 
     @Override
     public double getArea() {

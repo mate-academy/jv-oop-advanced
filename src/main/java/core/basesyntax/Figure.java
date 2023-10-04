@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public abstract class Figure {
+
     private Color color;
     private double area;
     public double getArea() {
@@ -10,6 +11,7 @@ public abstract class Figure {
     public void setArea(double area) {
         this.area = area;
     }
+
     public Color getColor() {
         return color;
     }
