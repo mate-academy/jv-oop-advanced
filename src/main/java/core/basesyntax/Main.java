@@ -10,6 +10,7 @@ public class Main {
             if (i < figures.length / groupFigures) {
                 figures[i] = figureSupplier.getRandomFigure();
             }
+
             if (i >= figures.length / groupFigures) {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
