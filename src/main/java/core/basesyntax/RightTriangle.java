@@ -6,15 +6,16 @@ public class RightTriangle implements Figure {
     private double height;
 
     public RightTriangle(String color, double base, double height) {
-    this.color = color;
-    this.base = base;
-    this.height = height;
+        this.color = color;
+        this.base = base;
+        this.height = height;
 
     }
+
     @Override
      public double getArea() {
-    return 0.5 * base * height;
-}
+        return 0.5 * base * height;
+    }
 
     @Override
     public void draw() {
