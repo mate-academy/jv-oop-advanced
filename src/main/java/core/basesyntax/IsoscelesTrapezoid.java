@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure implements Area, FigureSupplier {
+
     float sideA;
     float sideB;
     float high;
@@ -29,4 +30,17 @@ public class IsoscelesTrapezoid extends Figure implements Area, FigureSupplier {
         setArea(getArea());
         return this;
     }
+
+    public void setSideA(float sideA) {
+        this.sideA = sideA;
+    }
+
+    public void setSideB(float sideB) {
+        this.sideB = sideB;
+    }
+
+    public void setHigh(float high) {
+        this.high = high;
+    }
+
 }

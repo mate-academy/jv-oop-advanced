@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public class Square extends Figure implements Area, FigureSupplier {
+
     private float sideLength;
 
     @Override
@@ -23,5 +24,9 @@ public class Square extends Figure implements Area, FigureSupplier {
         setColor(Color.GREEN); ;
         setArea(getArea());
         return this;
+    }
+
+    public void setSideLength(float sideLength) {
+        this.sideLength = sideLength;
     }
 }

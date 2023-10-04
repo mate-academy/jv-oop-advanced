@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure implements Area, FigureSupplier {
+
     float firstLeg;
     float secondLeg;
 
@@ -27,4 +28,13 @@ public class RightTriangle extends Figure implements Area, FigureSupplier {
         setArea(getArea());
         return this;
     }
+
+    public void setFirstLeg(float firstLeg) {
+        this.firstLeg = firstLeg;
+    }
+
+    public void setSecondLeg(float secondLeg) {
+        this.secondLeg = secondLeg;
+    }
+
 }
