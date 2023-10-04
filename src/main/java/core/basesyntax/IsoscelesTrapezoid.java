@@ -21,6 +21,7 @@ public class IsoscelesTrapezoid implements Figure {
     @Override
     public void draw() {
         System.out.println("Figure isoscel,area:" + getArea() + "sq.units,upper base:"
-                + upperBase + "units,lowerbase:" + lowerBase + "units,height:" + height + "units,color:" + color);
+                + upperBase + "units,lowerbase:" + lowerBase
+                + "units,height:" + height + "units,color:" + color);
     }
 }
