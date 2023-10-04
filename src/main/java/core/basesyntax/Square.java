@@ -2,7 +2,6 @@ package core.basesyntax;
 
 public class Square extends Figure implements Area, Drawable {
 
-
     private float sideLength;
 
     @Override

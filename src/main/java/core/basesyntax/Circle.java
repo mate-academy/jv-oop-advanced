@@ -2,7 +2,6 @@ package core.basesyntax;
 
 public class Circle extends Figure implements Area, Drawable {
 
-
     private float radius;
 
     @Override
@@ -38,6 +37,6 @@ public class Circle extends Figure implements Area, Drawable {
     @Override
     public void draw() {
         System.out.println("Figure: " + getType() + ", area: " + getArea()
-                + " sq.units, radius: " + getRadius() + " units, color: "+ getColor());
+                + " sq.units, radius: " + getRadius() + " units, color: " + getColor());
     }
 }

@@ -13,27 +13,27 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         figure = FigType.values()[random.nextInt(FigType.values().length)];
         switch (figure) {
-            case Circle:  Circle circle = new Circle();
-            circle.getRandomFigureSup();
-            circle.setType(figure);
-            return circle;
+            case Circle: Circle circle = new Circle();
+                circle.getRandomFigureSup();
+                circle.setType(figure);
+                return circle;
             case Square: Square square = new Square();
-            square.getRandomFigureSup();
-            square.setType(figure);
-            return square;
+                square.getRandomFigureSup();
+                square.setType(figure);
+                return square;
             case Rectangle: Rectangle rectangle = new Rectangle();
-            rectangle.getRandomFigureSup();
-            rectangle.setType(figure);
-            return rectangle;
+                rectangle.getRandomFigureSup();
+                rectangle.setType(figure);
+                return rectangle;
             case RightTriangle: RightTriangle rightTriangle = new RightTriangle();
-            rightTriangle.getRandomFigureSup();
-            rightTriangle.setType(figure);
-            return rightTriangle;
-            case IsoscelesTrapezoid: IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
-            isoscelesTrapezoid.getRandomFigureSup();
-            isoscelesTrapezoid.setType(figure);
-            return isoscelesTrapezoid;
-            default:return null;
+                rightTriangle.getRandomFigureSup();
+                rightTriangle.setType(figure);
+                return rightTriangle;
+            case IsoscelesTrapezoid: IsoscelesTrapezoid isosTrap = new IsoscelesTrapezoid();
+                isosTrap.getRandomFigureSup();
+                isosTrap.setType(figure);
+                return isosTrap;
+            default: return null;
         }
 
     }
