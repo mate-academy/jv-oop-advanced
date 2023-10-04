@@ -2,17 +2,13 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public abstract class Figure implements Drawable {
+public abstract class Figure implements Area, Drawable {
 
     private Random random = new Random();
     private Color color;
     private double area;
 
     private FigType type;
-
-    public double getArea() {
-        return area;
-    }
 
     public void setArea(double area) {
         this.area = area;
@@ -47,6 +43,9 @@ public abstract class Figure implements Drawable {
     public abstract Figure getDefaultFigureSup();
 
     public abstract void draw();
+
+    public abstract double getArea();
+
 }
 
 

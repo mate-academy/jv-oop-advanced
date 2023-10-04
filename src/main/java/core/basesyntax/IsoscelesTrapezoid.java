@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements Area, Drawable {
+public class IsoscelesTrapezoid extends Figure{
 
     private float sideA;
     private float sideB;
