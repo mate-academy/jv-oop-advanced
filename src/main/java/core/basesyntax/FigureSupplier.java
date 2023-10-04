@@ -6,10 +6,6 @@ public class FigureSupplier {
     private Random random = new Random();
     private FigType figure;
 
-    public FigType getRandomFigType() {
-        return FigType.values()[random.nextInt(FigType.values().length)];
-    }
-
     public Figure getRandomFigure() {
         figure = FigType.values()[random.nextInt(FigType.values().length)];
         switch (figure) {
@@ -35,7 +31,6 @@ public class FigureSupplier {
                 return isosTrap;
             default: return null;
         }
-
     }
 
     public Figure getDefaultFigure() {

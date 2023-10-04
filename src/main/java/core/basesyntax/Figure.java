@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public abstract class Figure implements Area, Drawable {
+public abstract class Figure implements CalculateArea, Drawable {
 
     private Random random = new Random();
     private Color color;
