@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-
+    static final int SIDE_COUNT = 4;
     private double side;
 
     public Square() {
@@ -31,6 +31,6 @@ public class Square extends Figure {
 
     @Override
     public double getPerimeter() {
-        return side * 4;
+        return side * SIDE_COUNT;
     }
 }
