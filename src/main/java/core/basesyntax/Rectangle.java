@@ -1,13 +1,6 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure implements Area, FigureSupplier {
-    public void setSideA(float sideA) {
-        this.sideA = sideA;
-    }
-
-    public void setSideB(float sideB) {
-        this.sideB = sideB;
-    }
 
     private float sideA;
     private float sideB;
@@ -22,8 +15,8 @@ public class Rectangle extends Figure implements Area, FigureSupplier {
         ColorSupplier nextColor = new ColorSupplier();
         sideA = random.nextInt();
         sideB = random.nextInt();
-        color = nextColor.getRandomColor();
-        area = getArea();
+        setColor(nextColor.getRandomColor()); ;
+        setArea(getArea());
         return this;
     }
 
@@ -31,8 +24,16 @@ public class Rectangle extends Figure implements Area, FigureSupplier {
     public Figure getDefaultFigure() {
         sideA = 6;
         sideB = 11;
-        color = Color.WHITE;
-        area = getArea();
+        setColor(Color.WHITE); ;
+        setArea(getArea());
         return this;
+    }
+
+    public void setSideA(float sideA) {
+        this.sideA = sideA;
+    }
+
+    public void setSideB(float sideB) {
+        this.sideB = sideB;
     }
 }

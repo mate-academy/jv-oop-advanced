@@ -15,8 +15,8 @@ public class IsoscelesTrapezoid extends Figure implements Area, FigureSupplier {
         ColorSupplier nextColor = new ColorSupplier();
         sideA = random.nextInt();
         sideB = random.nextInt();
-        color = nextColor.getRandomColor();
-        area = getArea();
+        setColor(nextColor.getRandomColor()); ;
+        setArea(getArea());
         return this;
     }
 
@@ -25,8 +25,8 @@ public class IsoscelesTrapezoid extends Figure implements Area, FigureSupplier {
         sideA = 8;
         sideB = 16;
         high = 10;
-        color = Color.WHITE;
-        area = getArea();
+        setColor(Color.WHITE); ;
+        setArea(getArea());
         return this;
     }
 }

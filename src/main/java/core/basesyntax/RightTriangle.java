@@ -14,8 +14,8 @@ public class RightTriangle extends Figure implements Area, FigureSupplier {
         ColorSupplier nextColor = new ColorSupplier();
         firstLeg = random.nextInt();
         secondLeg = random.nextInt();
-        color = nextColor.getRandomColor();
-        area = getArea();
+        setColor(nextColor.getRandomColor()); ;
+        setArea(getArea());
         return this;
     }
 
@@ -23,8 +23,8 @@ public class RightTriangle extends Figure implements Area, FigureSupplier {
     public Figure getDefaultFigure() {
         firstLeg = 4;
         secondLeg = 3;
-        color = Color.WHITE;
-        area = getArea();
+        setColor(Color.WHITE);
+        setArea(getArea());
         return this;
     }
 }

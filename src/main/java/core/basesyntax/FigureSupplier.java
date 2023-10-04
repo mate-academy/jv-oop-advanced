@@ -6,5 +6,6 @@ public interface FigureSupplier {
      Random random = new Random();
 
      Figure getRandomFigure();
+
      Figure getDefaultFigure();
 }

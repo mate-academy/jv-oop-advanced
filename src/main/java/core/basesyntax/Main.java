@@ -2,7 +2,7 @@ package core.basesyntax;
 
 public class Main {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Figure[] figures = new Figure[8];
         Circle circle = new Circle();
         figures[0] = circle.getRandomFigure();

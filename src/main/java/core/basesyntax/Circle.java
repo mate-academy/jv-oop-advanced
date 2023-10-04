@@ -1,9 +1,6 @@
 package core.basesyntax;
 
 public class Circle extends Figure implements Area, FigureSupplier {
-    public void setRadius(float radius) {
-        this.radius = radius;
-    }
 
     private float radius;
 
@@ -16,16 +13,21 @@ public class Circle extends Figure implements Area, FigureSupplier {
     public Figure getRandomFigure() {
         ColorSupplier nextColor = new ColorSupplier();
         radius = random.nextInt();
-        color = nextColor.getRandomColor();
-        area = getArea();
+        setColor(nextColor.getRandomColor()); ;
+        setArea(getArea());
         return this;
     }
 
     @Override
     public Figure getDefaultFigure() {
         radius = 10;
-        color = Color.WHITE;
-        area = getArea();
+        setColor(Color.WHITE); ;
+        setArea(getArea());
         return this;
     }
+
+    public void setRadius(float radius) {
+        this.radius = radius;
+    }
+
 }
