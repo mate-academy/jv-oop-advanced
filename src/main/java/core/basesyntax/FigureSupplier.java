@@ -30,7 +30,8 @@ public class FigureSupplier {
     }
 
     private Figure getRandomCircle() {
-        return new Circle(colorSupplier.getRandomColor(), random.nextInt(MAX_BOUND));
+        return new Circle(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_BOUND));
     }
 
     private Figure getRandomTrapezoid() {
