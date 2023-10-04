@@ -15,7 +15,8 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure : isoscelesTriangle, area: " + getArea() + " sq.units, side: "
+        System.out.println("Figure : isoscelesTriangle, area: "
+                + getArea() + " sq.units, side: "
                 + sideA + " units, color: "
                 + getColor());
     }
