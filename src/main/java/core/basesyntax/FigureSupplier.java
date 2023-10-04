@@ -3,11 +3,11 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private final Random random = new Random();
+    private final String randomColor = new ColorSupplier().getRandomColor();
+    private final int randomFigure = random.nextInt(5);
 
     public Figure getRandomFigure() {
-        Random random = new Random();
-        String randomColor = new ColorSupplier().getRandomColor();
-        int randomFigure = random.nextInt(5);
         switch (randomFigure) {
             case 0:
                 return new Square(randomColor, random.nextInt(10));
@@ -17,11 +17,9 @@ public class FigureSupplier {
                 return new RightTriangle(randomColor, random.nextInt(10), random.nextInt(10));
             case 3:
                 return new Circle(randomColor, random.nextInt(10));
-            case 4:
+            default:
                 return new IsoscelesTrapezoid(randomColor, random.nextInt(10),
                         random.nextInt(10), random.nextInt(10));
-            default:
-                return null;
         }
     }
 

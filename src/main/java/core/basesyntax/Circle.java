@@ -5,14 +5,19 @@ public class Circle extends Figure {
 
     public Circle(String color, double radius) {
         super(color);
-        this.figureType = "circle";
+        setFigureType("circle");
         this.radius = radius;
-        this.area = Math.PI * radius * radius;
+        setArea(calculateArea());
     }
 
     @Override
-    public void printInfo() {
-        System.out.println("Figure: " + figureType + ", area: " + area
-                + " sq.units, radius: " + radius + ", color: " + color);
+    public void draw() {
+        System.out.println("Figure: " + getFigureType() + ", area: " + getArea()
+                + " sq.units, radius: " + radius + ", color: " + getColor());
+    }
+
+    @Override
+    public double calculateArea() {
+        return Math.PI * radius * radius;
     }
 }

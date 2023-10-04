@@ -5,14 +5,19 @@ public class Square extends Figure {
 
     public Square(String color, double side) {
         super(color);
-        this.figureType = "square";
+        setFigureType("square");
         this.side = side;
-        this.area = side * side;
+        setArea(calculateArea());
     }
 
     @Override
-    public void printInfo() {
-        System.out.println("Figure: " + figureType + ", area: " + area
-                + " sq.units, side: " + side + ", color: " + color);
+    public void draw() {
+        System.out.println("Figure: " + getFigureType() + ", area: " + getArea()
+                + " sq.units, side: " + side + ", color: " + getColor());
+    }
+
+    @Override
+    public double calculateArea() {
+        return side * side;
     }
 }

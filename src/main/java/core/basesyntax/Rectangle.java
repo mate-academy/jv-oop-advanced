@@ -6,15 +6,21 @@ public class Rectangle extends Figure {
 
     public Rectangle(String color, double side1, double side2) {
         super(color);
-        this.figureType = "rectangle";
+        setFigureType("rectangle");
         this.side1 = side1;
         this.side2 = side2;
-        this.area = side1 * side2;
+        setArea(calculateArea());
     }
 
     @Override
-    public void printInfo() {
-        System.out.println("Figure: " + figureType + ", area: " + area + " sq.units, side1: "
-                + side1 + ", side2: " + side2 + ", color: " + color);
+    public void draw() {
+        System.out.println("Figure: " + getFigureType() + ", area: " + getArea()
+                + " sq.units, side1: " + side1 + ", side2: "
+                + side2 + ", color: " + getColor());
+    }
+
+    @Override
+    public double calculateArea() {
+        return side1 * side2;
     }
 }
