@@ -10,7 +10,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public double getArea() {
-        return sideA * sideA * Math.sqrt(3) / 4;
+        return Math.pow(sideA, 2) * (Math.sqrt(3) / 4);
     }
 
     @Override
