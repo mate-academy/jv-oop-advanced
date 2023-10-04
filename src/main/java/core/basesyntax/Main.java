@@ -17,7 +17,7 @@ public class Main {
         figures[6] = square.getDefaultFigure();
         figures[7] = rightTriangle.getDefaultFigure();
         for (int i = 0; i < 8; i++) {
-            System.out.println( figures[i] );
+            System.out.println(figures[i]);
         }
     }
 }
