@@ -1,13 +1,9 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class RightTriangle extends Figure {
     private double rightTriangleSide;
-    private Random random = new Random();
-    private ColorSupplier colorSupplier = new ColorSupplier();
 
-    public RightTriangle(double area, String color, double rightTriangleSide) {
+    public RightTriangle(double area, Color color, double rightTriangleSide) {
         super(area, color);
         this.rightTriangleSide = rightTriangleSide;
     }
@@ -16,9 +12,14 @@ public class RightTriangle extends Figure {
 
     }
 
+    private double getHeight() {
+        return Math.sqrt(getRightTriangleSide() * getRightTriangleSide()
+                - (0.5 * getRightTriangleSide()) * (0.5 * getRightTriangleSide()));
+    }
+
     @Override
     public double countArea() {
-        return 0.5 * rightTriangleSide * rightTriangleSide;
+        return 0.5 * getRightTriangleSide() * getHeight();
     }
 
     public double getRightTriangleSide() {
@@ -27,14 +28,9 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        RightTriangle randomRightTriangle = getRandomRightTriangle();
         System.out.println("Figure: RightTriangle, area: "
-                + randomRightTriangle.countArea() + " sq.units, side: "
-                + randomRightTriangle.getRightTriangleSide() + " units, color: "
-                + colorSupplier.getRandomColor());
-    }
-
-    public RightTriangle getRandomRightTriangle() {
-        return new RightTriangle(countArea(), colorSupplier.getRandomColor(), random.nextInt(100));
+                + countArea() + " sq.units, side: "
+                + getRightTriangleSide() + " units, color: "
+                + getColor());
     }
 }

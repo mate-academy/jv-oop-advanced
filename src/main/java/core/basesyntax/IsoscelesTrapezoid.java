@@ -3,14 +3,13 @@ package core.basesyntax;
 import java.util.Random;
 
 public class IsoscelesTrapezoid extends Figure {
+    private Random random = new Random();
     private double isoscelesTrapezoidSide;
     private double baseUp;
     private double baseDown;
     private double height;
-    private Random random = new Random();
-    private ColorSupplier colorSupplier = new ColorSupplier();
 
-    public IsoscelesTrapezoid(double area, String color, double isoscelesTrapezoidSide,
+    public IsoscelesTrapezoid(double area, Color color, double isoscelesTrapezoidSide,
                               double baseDown, double baseUp) {
         super(area, color);
         this.isoscelesTrapezoidSide = isoscelesTrapezoidSide;
@@ -31,46 +30,26 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     public double getHeight() {
-        return Math.sqrt(isoscelesTrapezoidSide * isoscelesTrapezoidSide
-                - ((baseDown - baseUp) / 2) * ((baseDown - baseUp) / 2));
+        return Math.sqrt(getIsoscelesTrapezoidSide() * getIsoscelesTrapezoidSide()
+                - ((getBaseDown() - getBaseUp()) / 2) * ((getBaseDown() - getBaseUp()) / 2));
     }
 
     @Override
     public double countArea() {
-        return getHeight() * ((baseUp + baseDown) / 2);
+        return getHeight() * ((getBaseUp() + getBaseDown()) / 2);
     }
 
     public double getIsoscelesTrapezoidSide() {
         return isoscelesTrapezoidSide;
     }
 
-    public double getRandomSide() {
-        return random.nextInt(100);
-    }
-
-    public IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
-        double randomSide = getRandomSide();
-
-        double maxBase = 2 * randomSide;
-        double minBase = randomSide;
-
-        double randomBaseUp = Math.round((minBase + (maxBase - minBase)
-                * random.nextDouble()) * 100.0) / 100.0;
-        double randomBaseDown = Math.round((minBase + (maxBase - minBase)
-                * random.nextDouble()) * 100.0) / 100.0;
-
-        return new IsoscelesTrapezoid(countArea(), colorSupplier.getRandomColor(), randomSide,
-                randomBaseDown, randomBaseUp);
-    }
-
     @Override
     public void draw() {
-        IsoscelesTrapezoid randomIsoscelesTrapezoid = getRandomIsoscelesTrapezoid();
         System.out.println("Figure: IsoscelesTrapezoid, area: "
-                + randomIsoscelesTrapezoid.countArea() + " sq.units, side: "
-                + randomIsoscelesTrapezoid.getIsoscelesTrapezoidSide() + " units, baseDown: "
-                + randomIsoscelesTrapezoid.getBaseDown() + " units, baseUp: "
-                + randomIsoscelesTrapezoid.getBaseUp() + " units, color: "
-                + colorSupplier.getRandomColor());
+                + countArea() + " sq.units, side: "
+                + getIsoscelesTrapezoidSide() + " units, baseDown: "
+                + getBaseDown() + " units, baseUp: "
+                + getBaseUp() + " units, color: "
+                + getColor());
     }
 }
