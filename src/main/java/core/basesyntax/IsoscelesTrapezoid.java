@@ -1,13 +1,13 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid implements Figure {
+public class IsoscelesTrapezoid extends Figure {
     private String color;
     private double upperBase;
     private double lowerBase;
     private double height;
 
     public IsoscelesTrapezoid(String color, double upperBase, double lowerBase, double height) {
-        this.color = color;
+        super(color);
         this.upperBase = upperBase;
         this.lowerBase = lowerBase;
         this.height = height;
