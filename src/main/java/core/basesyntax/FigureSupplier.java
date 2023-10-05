@@ -6,32 +6,24 @@ public class FigureSupplier {
     private final int vaultOfClasses = 5;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    private String randomColor = colorSupplier.getRandomColor();
-
-    public String getRandomColor() {
-        return randomColor;
-    }
-
-    public void setRandomColor(String randomColor) {
-        this.randomColor = randomColor;
-    }
 
     public Figure getRandomFigure() {
+        String color = colorSupplier.getRandomColor();
         int randomValue = random.nextInt(vaultOfClasses);
         int index = random.nextInt(5);
         if (index == 0) {
-            return new Circle(randomColor, randomValue);
+            return new Circle(color, randomValue);
         }
         if (index == 1) {
-            return new Square(randomColor, randomValue);
+            return new Square(color, randomValue);
         }
         if (index == 2) {
-            return new Rectangle(randomColor, randomValue, randomValue);
+            return new Rectangle(color, randomValue, randomValue);
         }
         if (index == 3) {
-            return new RightTriangle(randomColor, randomValue, randomValue);
+            return new RightTriangle(color, randomValue, randomValue);
         }
-        return new IsoscelesTrapezoid(randomColor,
+        return new IsoscelesTrapezoid(color,
                 randomValue, randomValue, randomValue);
     }
 
