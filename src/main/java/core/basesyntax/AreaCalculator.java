@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public interface HasArea {
+public interface AreaCalculator {
     public abstract double calculateArea();
 }

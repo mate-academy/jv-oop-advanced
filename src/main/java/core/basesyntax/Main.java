@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Figure[] figureArray = new Figure[6];
         FigureSupplier figureSupplier = new FigureSupplier();
-        for (int i = 0;i < figureArray.length;i++) {
+        for (int i = 0; i < figureArray.length; i++) {
             if (i < 3) {
                 figureArray[i] = figureSupplier.getRandomFigure();
             } else {
@@ -12,7 +12,7 @@ public class Main {
             }
         }
 
-        for (Figure figure:figureArray) {
+        for (Figure figure: figureArray) {
             figure.draw();
         }
     }

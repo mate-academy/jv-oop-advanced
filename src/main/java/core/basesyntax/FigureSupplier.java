@@ -3,9 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int FIGURE_TYPE_BOUND = 5;
     private final Random random = new Random();
     private final String randomColor = new ColorSupplier().getRandomColor();
-    private final int randomFigure = random.nextInt(5);
+    private final int randomFigure = random.nextInt(FIGURE_TYPE_BOUND);
 
     public Figure getRandomFigure() {
         switch (randomFigure) {
