@@ -1,22 +1,18 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    static final FigType type = FigType.Circle;
     private float radius;
+    private double area;
 
     public Circle(Color color, float radius) {
         super(color);
         this.radius = radius;
-    }
-
-    @Override
-    public double getArea() {
-        return radius * radius * Math.PI;
+        this.area = radius * radius * Math.PI;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + type + ", area: " + getArea()
+        System.out.println("Figure: " + this.getClass().getSimpleName() + ", area: " + area
                 + " sq.units, radius: " + radius + " units, color: " + getColor());
     }
 }
