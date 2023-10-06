@@ -3,22 +3,17 @@ package core.basesyntax;
 import java.util.Random;
 
 public class IsoscelesTrapezoid extends Figure {
-    private Random random = new Random();
     private double isoscelesTrapezoidSide;
     private double baseUp;
     private double baseDown;
     private double height;
 
-    public IsoscelesTrapezoid(double area, Color color, double isoscelesTrapezoidSide,
+    public IsoscelesTrapezoid(Color color, double isoscelesTrapezoidSide,
                               double baseDown, double baseUp) {
-        super(area, color);
+        super(color);
         this.isoscelesTrapezoidSide = isoscelesTrapezoidSide;
         this.baseDown = baseDown;
         this.baseUp = baseUp;
-    }
-
-    public IsoscelesTrapezoid() {
-
     }
 
     public double getBaseDown() {

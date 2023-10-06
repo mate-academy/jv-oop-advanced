@@ -4,14 +4,10 @@ public class Rectangle extends Figure {
     private double rectangleSideOne;
     private double rectangleSideTwo;
 
-    public Rectangle(double area, Color color, double rectangleSideOne, double rectangleSideTwo) {
-        super(area, color);
+    public Rectangle(Color color, double rectangleSideOne, double rectangleSideTwo) {
+        super(color);
         this.rectangleSideOne = rectangleSideOne;
         this.rectangleSideTwo = rectangleSideTwo;
-    }
-
-    public Rectangle() {
-
     }
 
     @Override

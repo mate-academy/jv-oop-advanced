@@ -4,16 +4,11 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int FIGURE_NUMBER = 5;
-    private static final int RANDOM_BOUND = 10;
-    private static final double DEFAULT_CIRCLE_AREA = 100 * Math.PI;
+    private static final int RANDOM_MULTIPLIER = 100;
+    private static final int DEFAULT_CIRCLE_RAD = 10;
 
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
-    private Square square = new Square();
-    private Rectangle rectangle = new Rectangle();
-    private RightTriangle rightTriangle = new RightTriangle();
-    private Circle circle = new Circle();
-    private IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_NUMBER) + 1;
@@ -21,27 +16,25 @@ public class FigureSupplier {
 
         switch (figureNumber) {
             case 1:
-                return new Square(square.countArea(), randomColor,
-                        random.nextInt(RANDOM_BOUND) + 1);
+                return new Square(randomColor, random.nextDouble() * RANDOM_MULTIPLIER);
             case 2:
-                return new Circle(circle.countArea(), randomColor,
-                        random.nextInt(RANDOM_BOUND) + 1);
+                return new Circle(randomColor,random.nextDouble() * RANDOM_MULTIPLIER);
             case 3:
-                return new Rectangle(rectangle.countArea(), randomColor,
-                        random.nextInt(RANDOM_BOUND) + 1, random.nextInt(RANDOM_BOUND) + 1);
+                return new Rectangle(randomColor, random.nextDouble() * RANDOM_MULTIPLIER,
+                        random.nextDouble() * RANDOM_MULTIPLIER);
             case 4:
-                return new RightTriangle(rightTriangle.countArea(),
-                        randomColor, random.nextInt(RANDOM_BOUND) + 1);
+                return new RightTriangle(
+                        randomColor, random.nextDouble() * RANDOM_MULTIPLIER);
             case 5:
-                return new IsoscelesTrapezoid(isoscelesTrapezoid.countArea(), randomColor,
-                        random.nextInt(RANDOM_BOUND) + 1, random.nextInt(2 * RANDOM_BOUND) + 1,
-                        random.nextInt(2 * RANDOM_BOUND) + 1);
+                return new IsoscelesTrapezoid(randomColor, random.nextDouble() * RANDOM_MULTIPLIER,
+                        random.nextDouble() * RANDOM_MULTIPLIER,
+                        random.nextDouble() * RANDOM_MULTIPLIER);
             default:
-                return null;
+                return getDefaultFigure();
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_CIRCLE_AREA, Color.WHITE, RANDOM_BOUND);
+        return new Circle(Color.WHITE, DEFAULT_CIRCLE_RAD);
     }
 }
