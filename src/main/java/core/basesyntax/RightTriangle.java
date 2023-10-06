@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-
+    static final  FigType type = FigType.RightTriangle;
     private float firstLeg;
     private float secondLeg;
 
@@ -9,46 +9,16 @@ public class RightTriangle extends Figure {
     public double getArea() {
         return firstLeg * secondLeg / 2;
     }
-
-    @Override
-    public Figure getRandomFigureSup() {
-        ColorSupplier nextColor = new ColorSupplier();
-        firstLeg = getRandom().nextInt();
-        secondLeg = getRandom().nextInt();
-        setColor(nextColor.getRandomColor()); ;
-        setArea(getArea());
-        return this;
-    }
-
-    @Override
-    public Figure getDefaultFigureSup() {
-        firstLeg = 4;
-        secondLeg = 3;
-        setColor(Color.WHITE);
-        setArea(getArea());
-        return this;
-    }
-
-    public void setFirstLeg(float firstLeg) {
+    public RightTriangle(Color color, float firstLeg, float secondLeg) {
+        super(color);
         this.firstLeg = firstLeg;
-    }
-
-    public void setSecondLeg(float secondLeg) {
         this.secondLeg = secondLeg;
-    }
-
-    public float getFirstLeg() {
-        return firstLeg;
-    }
-
-    public float getSecondLeg() {
-        return secondLeg;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getType() + ", area: " + getArea() + " sq.units, firstLeg:"
-                + " " + getFirstLeg() + " units, secondLeg: " + getSecondLeg() + " units, color: "
+        System.out.println("Figure: " + type + ", area: " + getArea() + " sq.units, firstLeg:"
+                + " " + firstLeg + " units, secondLeg: " + secondLeg + " units, color: "
                 + getColor());
     }
 }

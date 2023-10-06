@@ -5,38 +5,25 @@ import java.util.Random;
 public class FigureSupplier {
     private Random random = new Random();
     private FigType figure;
+    private static final Color DEFAULT_COLOR = Color.WHITE;
+    private static final float DEFAULT_RADIUS = 10;
 
     public Figure getRandomFigure() {
+        FiguresRindomizer randomFigure = new FiguresRindomizer();
         figure = FigType.values()[random.nextInt(FigType.values().length)];
         switch (figure) {
-            case Circle: Circle circle = new Circle();
-                circle.getRandomFigureSup();
-                circle.setType(figure);
-                return circle;
-            case Square: Square square = new Square();
-                square.getRandomFigureSup();
-                square.setType(figure);
-                return square;
-            case Rectangle: Rectangle rectangle = new Rectangle();
-                rectangle.getRandomFigureSup();
-                rectangle.setType(figure);
-                return rectangle;
-            case RightTriangle: RightTriangle rightTriangle = new RightTriangle();
-                rightTriangle.getRandomFigureSup();
-                rightTriangle.setType(figure);
-                return rightTriangle;
-            case IsoscelesTrapezoid: IsoscelesTrapezoid isosTrap = new IsoscelesTrapezoid();
-                isosTrap.getRandomFigureSup();
-                isosTrap.setType(figure);
-                return isosTrap;
+            case Circle: return randomFigure.getRandomCircle();
+            case Square: return randomFigure.getRandomSquare();
+            case Rectangle: return randomFigure.getRandomRectangle();
+            case RightTriangle:return randomFigure.getRandomRightTriangle();
+            case IsoscelesTrapezoid: return randomFigure.getRandomIsoscelesTrapezoid();
             default: return null;
         }
     }
 
     public Figure getDefaultFigure() {
-        Circle circle = new Circle();
-        circle.getDefaultFigureSup();
-        circle.setType(FigType.Circle);
+        Circle circle = new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
+        circle.setArea(circle.getArea());
         return circle;
     }
 }
