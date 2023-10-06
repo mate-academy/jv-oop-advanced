@@ -2,6 +2,7 @@ package core.basesyntax;
 
 public class Main {
     static final int MAX_FIG_COUNT = 6;
+
     public static void main(String[] args) {
         Figure[] figures = new Figure[MAX_FIG_COUNT];
         FigureSupplier figSup = new FigureSupplier();
