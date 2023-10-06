@@ -1,5 +1,6 @@
 package core.basesyntax;
 
+import java.awt.Shape;
 import java.util.Random;
 
 public class FigureSupplier {
@@ -11,20 +12,25 @@ public class FigureSupplier {
         String color = colorSupplier.getRandomColor();
         int randomValue = random.nextInt(vaultOfClasses);
         int index = random.nextInt(5);
-        if (index == 0) {
-            return new Circle(color, randomValue);
+        Shape shape;
+        switch (index) {
+            case 0:
+                shape = (Shape) new Circle(color, randomValue);
+                break;
+            case 1:
+                shape = (Shape) new Square(color, randomValue);
+                break;
+            case 2:
+                shape = (Shape) new Rectangle(color, randomValue, randomValue);
+                break;
+            case 3:
+                shape = (Shape) new RightTriangle(color, randomValue, randomValue);
+                break;
+            default:
+                // Handle the case when index is not 0, 1, 2, or 3
+                throw new IllegalArgumentException("Invalid index value");
         }
-        if (index == 1) {
-            return new Square(color, randomValue);
-        }
-        if (index == 2) {
-            return new Rectangle(color, randomValue, randomValue);
-        }
-        if (index == 3) {
-            return new RightTriangle(color, randomValue, randomValue);
-        }
-        return new IsoscelesTrapezoid(color,
-                randomValue, randomValue, randomValue);
+        return (Figure) shape;
     }
 
     public Figure getDefaultFigure() {
