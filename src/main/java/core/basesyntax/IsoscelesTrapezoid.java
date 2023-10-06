@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class IsoscelesTrapezoid extends Figure {
     private double isoscelesTrapezoidSide;
     private double baseUp;
