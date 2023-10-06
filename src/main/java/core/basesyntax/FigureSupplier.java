@@ -5,10 +5,10 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int FIGURE_TYPE_BOUND = 5;
     private final Random random = new Random();
-    private final String randomColor = new ColorSupplier().getRandomColor();
-    private final int randomFigure = random.nextInt(FIGURE_TYPE_BOUND);
 
     public Figure getRandomFigure() {
+        String randomColor = new ColorSupplier().getRandomColor();
+        int randomFigure = random.nextInt(FIGURE_TYPE_BOUND);
         switch (randomFigure) {
             case 0:
                 return new Square(randomColor, random.nextInt(10));
