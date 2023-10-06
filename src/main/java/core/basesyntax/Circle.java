@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    static final  FigType type = FigType.Circle;
+    static final FigType type = FigType.Circle;
     private float radius;
 
     public Circle(Color color, float radius) {

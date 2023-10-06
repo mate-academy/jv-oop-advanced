@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    static final  FigType type = FigType.IsoscelesTrapezoid;
+    static final FigType type = FigType.IsoscelesTrapezoid;
     private float sideA;
     private float sideB;
     private float high;
@@ -12,6 +12,7 @@ public class IsoscelesTrapezoid extends Figure {
         this.sideB = sideB;
         this.high = high;
     }
+
     @Override
     public double getArea() {
         return sideA + sideB * high;

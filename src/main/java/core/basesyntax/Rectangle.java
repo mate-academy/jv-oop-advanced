@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    static final  FigType type = FigType.Rectangle;
+    static final FigType type = FigType.Rectangle;
     private float sideA;
     private float sideB;
 
@@ -16,6 +16,7 @@ public class Rectangle extends Figure {
         System.out.println("Figure: " + type + ", area: " + getArea() + " sq.units, sideA: "
                 + sideA + " units, sideB: " + sideB + " units, color: " + getColor());
     }
+
     @Override
     public double getArea() {
         return sideA * sideB;

@@ -1,13 +1,14 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    static final  FigType type = FigType.Square;
+    static final FigType type = FigType.Square;
     private float sideLength;
 
     public Square(Color color, float sideLength) {
         super(color);
         this.sideLength = sideLength;
     }
+
     @Override
     public double getArea() {
         return sideLength * sideLength;
