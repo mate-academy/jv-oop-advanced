@@ -15,7 +15,7 @@ public class FigureSupplier {
             case Circle: return randomFigure.getRandomCircle();
             case Square: return randomFigure.getRandomSquare();
             case Rectangle: return randomFigure.getRandomRectangle();
-            case RightTriangle:return randomFigure.getRandomRightTriangle();
+            case RightTriangle: return randomFigure.getRandomRightTriangle();
             case IsoscelesTrapezoid: return randomFigure.getRandomIsoscelesTrapezoid();
             default: return null;
         }
