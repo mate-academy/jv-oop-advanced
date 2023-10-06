@@ -2,16 +2,15 @@ package core.basesyntax;
 
 public class HelloWorld {
     public static void main(String[] args) {
+        final int radius = 15;
         FigureSupplier figureSupplier = new FigureSupplier();
-        Figure figure1 = figureSupplier.getRandomFigure();
-        Figure figure2 = figureSupplier.getRandomFigure();
-        Figure figure3 = figureSupplier.getRandomFigure();
-        Figure figure4 = figureSupplier.getDefaultFigure();
-        Figure figure5 = new Circle("Black", 15);
-        Figure[] figures = new Figure[]{figure1, figure2, figure3, figure4, figure5};
+        Figure[] figures = new Figure[5];
+        for (int i = 0; i <= 4; i++) {
+            figures[i] = figureSupplier.getRandomFigure();
+        }
+        figures[5] = new Circle("Black", radius);
         for (Figure figure : figures) {
             figure.draw();
         }
     }
 }
-

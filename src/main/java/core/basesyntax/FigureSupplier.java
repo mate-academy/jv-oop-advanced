@@ -3,15 +3,16 @@ package core.basesyntax;
 import java.awt.Shape;
 import java.util.Random;
 
-public class FigureSupplier {
-    private final int vaultOfClasses = 5;
+public final class FigureSupplier {
+    public static final int RADIUS = 10;
+    public static final int FIGURE_COUNT = 5;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         String color = colorSupplier.getRandomColor();
-        int randomValue = random.nextInt(vaultOfClasses);
-        int index = random.nextInt(5);
+        int randomValue = random.nextInt(FIGURE_COUNT);
+        int index = random.nextInt(FIGURE_COUNT);
         Shape shape;
         switch (index) {
             case 0:
@@ -34,6 +35,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("White", 10);
+        return new Circle("White", RADIUS);
     }
 }
