@@ -1,11 +1,10 @@
 package core.basesyntax;
-import static core.basesyntax.FigureSupplier.side;
 
 public class Square extends Figure {
     private final int side;
 
     public Square(Form randomForm, Color randomColor, int side) {
-        super(randomColor, randomForm);
+        super(randomForm,randomColor);
         this.side = side;
     }
 
