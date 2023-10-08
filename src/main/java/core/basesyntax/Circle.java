@@ -3,15 +3,15 @@ package core.basesyntax;
 public class Circle extends Figure {
     private int radius;
 
+    public Circle(int radius) {
+        this.radius = radius;
+    }
+
     public int getRadius() {
         return radius;
     }
 
     public void setRadius(int radius) {
-    }
-
-    public Circle(int radius) {
-        this.radius = radius;
     }
 
     @Override
@@ -20,6 +20,8 @@ public class Circle extends Figure {
     }
 
     @Override
-    public void draw() {System.out.println("Figure: circle, area: " + getArea() + " sq.units, radius: " + getRadius() + " units, color: " + getColor());
+        public void draw() {
+        System.out.println("Figure: circle, area: " + getArea()
+                + " sq.units, radius: " + getRadius() + " units, color: " + getColor());
     }
 }
