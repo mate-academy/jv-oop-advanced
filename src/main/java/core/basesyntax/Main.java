@@ -1,10 +1,12 @@
 package core.basesyntax;
 
+import static core.basesyntax.FigureSupplier.COUNT_FIGURE;
+import static core.basesyntax.FigureSupplier.arrayFigures;
+
 public class Main {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        Figure [] arrayFigures = new Figure[6];
-        for (int i = 0; i < arrayFigures.length; i++) {
+        for (int i = 0; i < COUNT_FIGURE; i++) {
             if (i < (arrayFigures.length / 2)) {
                 arrayFigures[i] = figureSupplier.getRandomFigure();
                 arrayFigures[i].draw();
