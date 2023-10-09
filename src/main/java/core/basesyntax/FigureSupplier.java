@@ -10,38 +10,30 @@ public class FigureSupplier {
     private static final String DEFAULT_COLOR = Color.WHITE.name();
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final int randomRadius = random.nextInt((100) + 1);
-    private final int randomSide = random.nextInt((100) + 1);
-    private final int randomSideA = random.nextInt((100) + 1);
-    private final int randomSideB = random.nextInt((100) + 1);
-    private final int randomSideC = random.nextInt((100) + 1);
-    private final int randomBaseA = random.nextInt((100) + 1);
-    private final int randomBaseB = random.nextInt((100) + 1);
-    private final int randomFirstLeg = random.nextInt((100) + 1);
-    private final int randomSecondLeg = random.nextInt((100) + 1);
     private Figure randomFigure;
 
     public Figure getRandomFigure() {
         int index = random.nextInt(NUMBER_OF_FIGURES);
+        int randomValue = random.nextInt((100) + 1);
         switch (index) {
             case 0:
-                randomFigure = new Circle(randomRadius);
+                randomFigure = new Circle(randomValue);
                 randomFigure.setColor(colorSupplier.getRandomColor());
                 break;
             case 1:
-                randomFigure = new Rectangle(randomSideA, randomSideB);
+                randomFigure = new Rectangle(randomValue, randomValue);
                 randomFigure.setColor(colorSupplier.getRandomColor());
                 break;
             case 2:
-                randomFigure = new Square(randomSide);
+                randomFigure = new Square(randomValue);
                 randomFigure.setColor(colorSupplier.getRandomColor());
                 break;
             case 3:
-                randomFigure = new IsoscelesTrapezoid(randomBaseA, randomBaseB, randomSideC);
+                randomFigure = new IsoscelesTrapezoid(randomValue, randomValue, randomValue);
                 randomFigure.setColor(colorSupplier.getRandomColor());
                 break;
             case 4:
-                randomFigure = new RightTriangle(randomFirstLeg, randomSecondLeg);
+                randomFigure = new RightTriangle(randomValue, randomValue);
                 randomFigure.setColor(colorSupplier.getRandomColor());
                 break;
             default:
