@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final Random random = new Random();
+    private static Random random = new Random();
     private static int side = 0;
     private static int firstleg = 0;
     private static int secondleg = 0;
@@ -15,29 +15,29 @@ public class FigureSupplier {
         return forms[index];
     }
 
-    public static <side, firstleg, secondleg> Figure getRandomFigure() {
-        static final side = random.nextInt(100);
-        static final firstleg = random.nextInt(100);
-        static final secondleg = random.nextInt(100);
+    public static Figure getRandomFigure() {
+        side = random.nextInt(100);
+        firstleg = random.nextInt(100);
+        secondleg = random.nextInt(100);
         Form randomForm = getRandomForm();
-        if (randomForm.equals(Form.CIRCLE)) {
+        if (randomForm.name().equals("Circle")) {
             figures = new Circle(getRandomForm(), ColorSupplier.getRandomColor(), side);
         }
-        if (randomForm.equals(Form.RECTANGLE)) {
+        if (randomForm.name().equals("Rectangle")) {
             figures = new Rectangle(getRandomForm(),
                     ColorSupplier.getRandomColor(), firstleg, secondleg);
         }
-        if (randomForm.equals(Form.RIGHT_TRIANGLE)) {
+        if (randomForm.name().equals("RightTriangle")) {
             figures = new RightTriangle(getRandomForm(), ColorSupplier.getRandomColor(), side);
         }
-        if (randomForm.equals(Form.SQUARE)) {
+        if (randomForm.name().equals("Square")) {
             figures = new Square(getRandomForm(), ColorSupplier.getRandomColor(), side);
         }
         return figures;
     }
 
     public static Figure getDefaultFigure() {
-        return new Circle(Form.CIRCLE, Color.WHITE, 10);
+        return new Circle(Form.Circle, Color.WHITE, 10);
     }
 
     public static Figure getFigures() {

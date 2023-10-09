@@ -1,8 +1,8 @@
 package core.basesyntax;
 
 public enum Form {
-    Circle,
-    Rectangle,
-    RightTriangle,
-    Square
+    CIRCLE,
+    RECTANGLE,
+    RIGHT_TRIANGLE,
+    SQUARE
 }

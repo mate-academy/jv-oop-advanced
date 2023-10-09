@@ -9,10 +9,11 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void draw() {
+    public Figure draw() {
         System.out.println("Figure: right rectangle, area: " + side * side / 2
                 + "sq.units, firstLeg: "
                 + side + " units, secondLeg: " + side
                 + "units, color: " + this.getColors());
+        return null;
     }
 }

@@ -24,6 +24,11 @@ public abstract class Figure implements Drawable {
     public void setForms(Form forms) {
         this.forms = forms;
     }
-    
+
+    @Override
+    public Figure draw() {
+        System.out.println("не то что надо выводит! не пойму почему с figure использует");
+        return null;
+    }
 }
 

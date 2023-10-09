@@ -11,10 +11,11 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void draw() {
+    public Figure draw() {
         System.out.println("Figure: rectangle, area: "
                 + this.firstLeg + secondLeg + "sq.units, firstLeg: "
                 + this.firstLeg + " units, secondLeg: " + secondLeg
                 + "units, color: " + this.getColors());
+        return this;
     }
 }
