@@ -14,26 +14,28 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int index = random.nextInt(NUMBER_OF_FIGURES);
-        int randomValue = random.nextInt((100) + 1);
+        int randomValue1 = random.nextInt((100) + 1);
+        int randomValue2 = random.nextInt((100) + 1);
+        int randomValue3 = random.nextInt((100) + 1);
         switch (index) {
             case 0:
-                randomFigure = new Circle(randomValue);
+                randomFigure = new Circle(randomValue1);
                 randomFigure.setColor(colorSupplier.getRandomColor());
                 break;
             case 1:
-                randomFigure = new Rectangle(randomValue, randomValue);
+                randomFigure = new Rectangle(randomValue1, randomValue2);
                 randomFigure.setColor(colorSupplier.getRandomColor());
                 break;
             case 2:
-                randomFigure = new Square(randomValue);
+                randomFigure = new Square(randomValue1);
                 randomFigure.setColor(colorSupplier.getRandomColor());
                 break;
             case 3:
-                randomFigure = new IsoscelesTrapezoid(randomValue, randomValue, randomValue);
+                randomFigure = new IsoscelesTrapezoid(randomValue1, randomValue2, randomValue3);
                 randomFigure.setColor(colorSupplier.getRandomColor());
                 break;
             case 4:
-                randomFigure = new RightTriangle(randomValue, randomValue);
+                randomFigure = new RightTriangle(randomValue1, randomValue2);
                 randomFigure.setColor(colorSupplier.getRandomColor());
                 break;
             default:
