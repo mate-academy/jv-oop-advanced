@@ -3,13 +3,13 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final int FIGURES_COUNT = 3;
+    private final int figuresCount = 3;
 
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         Figure figure;
-        FigureType randomFigureType = FigureType.values()[new Random().nextInt(FIGURES_COUNT)];
+        FigureType randomFigureType = FigureType.values()[new Random().nextInt(figuresCount)];
 
         switch (randomFigureType) {
             case SQUARE:
