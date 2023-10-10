@@ -3,37 +3,37 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final int figuresCount = 3;
-
+    private final int figuresCount = FigureType.values().length;
+    private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         Figure figure;
-        FigureType randomFigureType = FigureType.values()[new Random().nextInt(figuresCount)];
+        FigureType randomFigureType = FigureType.values()[random.nextInt(figuresCount)];
 
         switch (randomFigureType) {
             case SQUARE:
-                figure = new Square(getRandomIn100to0Range(),
+                figure = new Square(getRandomIn100to1Range(),
                         colorSupplier.getRandomColor());
                 break;
             case RIGHT_TRIANGLE:
-                figure = new RightTriangle(getRandomIn100to0Range(),
-                        getRandomIn100to0Range(),
+                figure = new RightTriangle(getRandomIn100to1Range(),
+                        getRandomIn100to1Range(),
                         colorSupplier.getRandomColor());
                 break;
             case RECTANGLE:
-                figure = new Rectangle(getRandomIn100to0Range(),
-                        getRandomIn100to0Range(),
+                figure = new Rectangle(getRandomIn100to1Range(),
+                        getRandomIn100to1Range(),
                         colorSupplier.getRandomColor());
                 break;
             case ISOSCELES_TRAPEZOID:
-                figure = new IsoscelesTrapezoid(getRandomIn100to0Range(),
-                        getRandomIn100to0Range(),
-                        getRandomIn100to0Range(),
+                figure = new IsoscelesTrapezoid(getRandomIn100to1Range(),
+                        getRandomIn100to1Range(),
+                        getRandomIn100to1Range(),
                         colorSupplier.getRandomColor());
                 break;
             default:
-                figure = new Circle(getRandomIn100to0Range(),
+                figure = new Circle(getRandomIn100to1Range(),
                         colorSupplier.getRandomColor());
                 break;
         }
@@ -45,7 +45,7 @@ public class FigureSupplier {
         return new Circle(10, Color.WHITE.name());
     }
 
-    private int getRandomIn100to0Range() {
-        return new Random().nextInt(100) + 1;
+    private int getRandomIn100to1Range() {
+        return random.nextInt(100) + 1;
     }
 }

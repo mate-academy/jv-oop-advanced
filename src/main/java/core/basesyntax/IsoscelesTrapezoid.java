@@ -2,9 +2,7 @@ package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
     private double topSide;
-
     private double bottomSide;
-
     private double height;
 
     public IsoscelesTrapezoid(double topSide, double bottomSide, double height, String color) {
@@ -27,6 +25,5 @@ public class IsoscelesTrapezoid extends Figure {
                 + " units, bottomSide " + bottomSide
                 + " units, height " + height
                 + " units, color: " + getColor());
-
     }
 }
