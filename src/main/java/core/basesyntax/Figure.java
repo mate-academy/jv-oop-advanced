@@ -10,5 +10,6 @@ public abstract class Figure implements Drawable, AreaCalculator {
     public Color getColor() {
         return color;
     }
+
     public abstract double getArea();
 }
