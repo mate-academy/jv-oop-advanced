@@ -6,8 +6,9 @@ public class FigureSupplier {
     private static final Random random = new Random();
 
     public Figure getRandomFigure() {
-        int choice = random.nextInt(5);
-        String color = new ColorSupplier().getRandomColor();
+        final int n = 5;
+        int choice = random.nextInt(n);
+        Color color = Color.getRandomColor();
 
         switch (choice) {
             case 0:
@@ -30,6 +31,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", 10);
+        return new Circle(Color.WHITE, 10);
     }
 }
