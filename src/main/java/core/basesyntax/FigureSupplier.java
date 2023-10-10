@@ -21,7 +21,7 @@ public class FigureSupplier {
             case 3: return new RightTriangle(nextColor.getRandomColor(),
                     random.nextInt(), random.nextInt());
             case 4: return new Square(nextColor.getRandomColor(), random.nextInt());
-            default: return null;
+            default: return getDefaultFigure();
         }
     }
 

@@ -11,7 +11,7 @@ public class IsoscelesTrapezoid extends Figure {
         this.sideA = sideA;
         this.sideB = sideB;
         this.high = high;
-        area = sideA + sideB * high;
+        this.area = getArea();
     }
 
     @Override
@@ -19,5 +19,10 @@ public class IsoscelesTrapezoid extends Figure {
         System.out.println("Figure: " + this.getClass().getSimpleName() + ", area: " + area
                 + " sq.units, sideA: " + sideA + " units, sideB: " + sideB + " units, high: "
                 + high + " color: " + getColor());
+    }
+
+    @Override
+    public double getArea() {
+        return sideA + sideB * high;
     }
 }

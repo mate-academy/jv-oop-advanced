@@ -7,12 +7,17 @@ public class Square extends Figure {
     public Square(Color color, float sideLength) {
         super(color);
         this.sideLength = sideLength;
-        area = sideLength * sideLength;
+        this.area = getArea();
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: " + this.getClass().getSimpleName() + ", area: " + area
                 + " sq.units, side: " + sideLength + " units, color: " + getColor());
+    }
+
+    @Override
+    public double getArea() {
+        return sideLength * sideLength;
     }
 }

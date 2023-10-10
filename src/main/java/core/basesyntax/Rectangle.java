@@ -9,7 +9,7 @@ public class Rectangle extends Figure {
         super(color);
         this.sideA = sideA;
         this.sideB = sideB;
-        area = sideA * sideB;
+        this.area = getArea();
     }
 
     @Override
@@ -17,5 +17,10 @@ public class Rectangle extends Figure {
         System.out.println("Figure: " + this.getClass().getSimpleName() + ", area: " + area
                 + " sq.units, sideA: " + sideA + " units, sideB: " + sideB + " units, color: "
                 + getColor());
+    }
+
+    @Override
+    public double getArea() {
+        return sideA * sideB;
     }
 }
