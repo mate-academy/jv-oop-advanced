@@ -3,6 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int DEFAULT_RADIUS = 10;
+    private static final String COLOR = "white";
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
@@ -30,11 +32,11 @@ public class FigureSupplier {
                 return new IsoscelesTrapezoid(trapezoidUpperBase, trapezoidLowerBase,
                         trapezoidHeight, colorSupplier.getRandomColor());
             default:
-                return null;
+                return getDefaultFigure();
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, "white");
+        return new Circle(DEFAULT_RADIUS, COLOR);
     }
 }
