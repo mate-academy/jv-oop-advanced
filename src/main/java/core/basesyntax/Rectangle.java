@@ -7,7 +7,7 @@ public class Rectangle extends Figure {
     public Rectangle(String color, int shortSide, int longSide) {
         super(color);
         this.shortSide = shortSide;
-        this.longSide =longSide;
+        this.longSide = longSide;
     }
 
     public int getShortSide() {
@@ -31,7 +31,7 @@ public class Rectangle extends Figure {
         return "Figure: rectangle, area: " + areaCalculator()
                 + " sq.units, short side: " + this.shortSide
                 + " units, long side: " + this.longSide
-                + " units, color: " + this.color;
+                + " units, color: " + this.getColor();
     }
 
     @Override

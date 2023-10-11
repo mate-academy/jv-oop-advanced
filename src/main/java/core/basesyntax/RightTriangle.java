@@ -31,7 +31,7 @@ public class RightTriangle extends Figure {
         return "Figure: right triangle, area: " + areaCalculator()
                 + " sq.units, first leg: " + this.firstLeg
                 + " units, second leg: " + this.secondLeg
-                + " units, color: " + this.color;
+                + " units, color: " + this.getColor();
     }
 
     @Override

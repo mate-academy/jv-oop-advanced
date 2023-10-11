@@ -20,7 +20,7 @@ public class Circle extends Figure {
     public String draw() {
         return "Figure: circle, area: " + areaCalculator()
                 + " sq.units, radius: " + this.radius
-                + " units, color: " + this.color;
+                + " units, color: " + this.getColor();
     }
 
     @Override

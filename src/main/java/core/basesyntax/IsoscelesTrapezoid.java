@@ -42,7 +42,7 @@ public class IsoscelesTrapezoid extends Figure {
                 + " sq.units, short side: " + this.shortSide
                 + " units, long side: " + this.longSide
                 + " units, height: " + this.height
-                + " units, color: " + this.color;
+                + " units, color: " + this.getColor();
     }
 
     @Override
