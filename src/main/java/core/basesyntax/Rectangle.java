@@ -20,6 +20,6 @@ public class Rectangle extends BaseFigure {
         System.out.printf("Figure: rectangle, area: %.1f sq.units, length: %d units,"
                         + " width: %d units, color: %s%n",
                 getArea(), rectangleLength, rectangleWidth,
-                color.toString().toLowerCase());
+                color.name().toLowerCase());
     }
 }

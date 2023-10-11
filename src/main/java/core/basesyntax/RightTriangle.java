@@ -19,6 +19,6 @@ public class RightTriangle extends BaseFigure {
     public void draw() {
         System.out.printf("Figure: right triangle, area: %.1f sq.units, "
                         + "leg base: %d units, leg height: %d units, color: %s%n",
-                getArea(), legBase, legHeight, color.toString().toLowerCase());
+                getArea(), legBase, legHeight, color.name().toLowerCase());
     }
 }

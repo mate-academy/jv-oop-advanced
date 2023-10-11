@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
 
-        Figure[] figures = new Figure[6];
+        Drawable[] figures = new Drawable[6];
         FigureSupplier figureSupplier = new FigureSupplier();
 
         for (int i = 0; i < figures.length / 2; i++) {

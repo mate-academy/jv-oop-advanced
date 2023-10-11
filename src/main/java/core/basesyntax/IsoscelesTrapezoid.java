@@ -26,6 +26,6 @@ public class IsoscelesTrapezoid extends BaseFigure {
                        + "%d units, height trapezoid:"
                        + " %d units, color: %s%n",
                 getArea(), firstOppositeSide, secondOppositeSide,
-                heightTrapezoid, color.toString().toLowerCase());
+                heightTrapezoid, color.name().toLowerCase());
     }
 }
