@@ -4,6 +4,8 @@ import java.util.Random;
 
 public class FigureSupplier {
     private final int figuresCount = FigureType.values().length;
+    private final int radius = 10;
+    private final int length = 100;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -13,27 +15,27 @@ public class FigureSupplier {
 
         switch (randomFigureType) {
             case SQUARE:
-                figure = new Square(getRandomIn100to1Range(),
+                figure = new Square(getRandomLength(),
                         colorSupplier.getRandomColor());
                 break;
             case RIGHT_TRIANGLE:
-                figure = new RightTriangle(getRandomIn100to1Range(),
-                        getRandomIn100to1Range(),
+                figure = new RightTriangle(getRandomLength(),
+                        getRandomLength(),
                         colorSupplier.getRandomColor());
                 break;
             case RECTANGLE:
-                figure = new Rectangle(getRandomIn100to1Range(),
-                        getRandomIn100to1Range(),
+                figure = new Rectangle(getRandomLength(),
+                        getRandomLength(),
                         colorSupplier.getRandomColor());
                 break;
             case ISOSCELES_TRAPEZOID:
-                figure = new IsoscelesTrapezoid(getRandomIn100to1Range(),
-                        getRandomIn100to1Range(),
-                        getRandomIn100to1Range(),
+                figure = new IsoscelesTrapezoid(getRandomLength(),
+                        getRandomLength(),
+                        getRandomLength(),
                         colorSupplier.getRandomColor());
                 break;
             default:
-                figure = new Circle(getRandomIn100to1Range(),
+                figure = new Circle(getRandomLength(),
                         colorSupplier.getRandomColor());
                 break;
         }
@@ -42,10 +44,10 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, Color.WHITE.name());
+        return new Circle(radius, Color.WHITE.name());
     }
 
-    private int getRandomIn100to1Range() {
-        return random.nextInt(100) + 1;
+    private int getRandomLength() {
+        return random.nextInt(length) + 1;
     }
 }
