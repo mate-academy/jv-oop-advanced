@@ -5,7 +5,8 @@ import java.util.Random;
 public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
-    private final String[] listFigure = new String[]{"Circle", "Square", "Rectangle", "RightTriangle", "IsoscelesTrapezoid"};
+    private final String[] listFigure = new String[]
+            {"Circle", "Square", "Rectangle", "RightTriangle", "IsoscelesTrapezoid"};
 
     public Figure getRandomFigure() {
         String randomFigure = listFigure[random.nextInt(listFigure.length)];
