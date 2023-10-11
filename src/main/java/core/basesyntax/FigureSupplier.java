@@ -3,50 +3,59 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    static final int COUNT_FIGURE = 6;
-    static final Figure[] arrayFigures = new Figure[COUNT_FIGURE];
     private static final int NUMBER_OF_FIGURES = 5;
     private static final int DEFAULT_RADIUS = 10;
     private static final String DEFAULT_COLOR = Color.WHITE.name();
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    private Figure randomFigure;
+
+    private Integer getInteger() {
+        Integer randomInteger = random.nextInt((100) + 1);
+        return randomInteger;
+    }
+
+    private Circle prepareCircle() {
+        return new Circle(colorSupplier.getRandomColor(),getInteger());
+    }
+
+    private Rectangle prepareRectangle() {
+        return new Rectangle(colorSupplier.getRandomColor(), getInteger(), getInteger());
+    }
+
+    private Square prepareSquare() {
+        return new Square(colorSupplier.getRandomColor(), getInteger());
+    }
+
+    private IsoscelesTrapezoid prepareIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                getInteger(), getInteger(), getInteger());
+    }
+
+    private RightTriangle prepareRightTriangle() {
+        return new RightTriangle(colorSupplier.getRandomColor(), getInteger(), getInteger());
+    }
 
     public Figure getRandomFigure() {
         int index = random.nextInt(NUMBER_OF_FIGURES);
-        int randomValue1 = random.nextInt((100) + 1);
-        int randomValue2 = random.nextInt((100) + 1);
-        int randomValue3 = random.nextInt((100) + 1);
         switch (index) {
             case 0:
-                randomFigure = new Circle(randomValue1);
-                randomFigure.setColor(colorSupplier.getRandomColor());
-                break;
+                return prepareCircle();
             case 1:
-                randomFigure = new Rectangle(randomValue1, randomValue2);
-                randomFigure.setColor(colorSupplier.getRandomColor());
-                break;
+                return prepareRectangle();
             case 2:
-                randomFigure = new Square(randomValue1);
-                randomFigure.setColor(colorSupplier.getRandomColor());
-                break;
+                return prepareSquare();
             case 3:
-                randomFigure = new IsoscelesTrapezoid(randomValue1, randomValue2, randomValue3);
-                randomFigure.setColor(colorSupplier.getRandomColor());
-                break;
+                return prepareIsoscelesTrapezoid();
             case 4:
-                randomFigure = new RightTriangle(randomValue1, randomValue2);
-                randomFigure.setColor(colorSupplier.getRandomColor());
-                break;
+                return prepareRightTriangle();
             default:
-                break;
+                getDefoultFigure();
         }
-        return randomFigure;
+        return getRandomFigure();
     }
 
     public Figure getDefoultFigure() {
-        Figure circle = new Circle(DEFAULT_RADIUS);
-        circle.setColor(DEFAULT_COLOR);
+        Figure circle = new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
         return circle;
     }
 }
