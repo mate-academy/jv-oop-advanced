@@ -7,7 +7,7 @@ public class FigureSupplier {
     private static final int MAX_SIDE_FIGURE = 10;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
-    private final int randomSide = random.nextInt(MAX_SIDE_FIGURE) + 1;;
+    private final int randomSide = random.nextInt(MAX_SIDE_FIGURE) + 1;
 
     public Drawable getRandomFigure() {
         Color randomColor = colorSupplier.getRandomColor();
