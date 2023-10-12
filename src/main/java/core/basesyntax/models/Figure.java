@@ -1,9 +1,9 @@
 package core.basesyntax.models;
 
+import core.basesyntax.interfaces.AreaDerived;
 import core.basesyntax.interfaces.Drawable;
-import core.basesyntax.interfaces.Obtain;
 
-public abstract class Figure implements Drawable, Obtain {
+public abstract class Figure implements Drawable, AreaDerived {
     private String color;
     private double area;
 

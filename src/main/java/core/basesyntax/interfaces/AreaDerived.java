@@ -1,5 +1,5 @@
 package core.basesyntax.interfaces;
 
-public interface Obtain {
+public interface AreaDerived {
     double obtainArea();
 }
