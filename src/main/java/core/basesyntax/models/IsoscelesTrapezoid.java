@@ -5,14 +5,6 @@ public class IsoscelesTrapezoid extends Figure {
     private double sideB;
     private double height;
 
-    public IsoscelesTrapezoid(String color, double area, double sideA,
-                              double sideB, double height) {
-        super(color, area);
-        this.sideA = sideA;
-        this.sideB = sideB;
-        this.height = height;
-    }
-
     public IsoscelesTrapezoid() {
     }
 
@@ -41,8 +33,8 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String draw(Object o) {
-        return o.toString();
+    public String draw() {
+        return this.toString();
     }
 
     @Override

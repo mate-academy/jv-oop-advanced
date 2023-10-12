@@ -6,11 +6,6 @@ public class Circle extends Figure {
     public Circle() {
     }
 
-    public Circle(String color, double radius, double area) {
-        super(color, area);
-        this.radius = radius;
-    }
-
     public double getRadius() {
         return radius;
     }
@@ -30,7 +25,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String draw(Object o) {
-        return o.toString();
+    public String draw() {
+        return this.toString();
     }
 }

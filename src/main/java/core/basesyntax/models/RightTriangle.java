@@ -8,12 +8,6 @@ public class RightTriangle extends Figure {
 
     }
 
-    public RightTriangle(String color, double firstLeg, double secondLeg, double area) {
-        super(color, area);
-        this.firstLeg = firstLeg;
-        this.secondLeg = secondLeg;
-    }
-
     public double getFirstLeg() {
         return firstLeg;
     }
@@ -44,7 +38,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String draw(Object o) {
-        return o.toString();
+    public String draw() {
+        return this.toString();
     }
 }

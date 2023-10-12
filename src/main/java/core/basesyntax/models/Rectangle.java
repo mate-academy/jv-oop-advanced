@@ -4,12 +4,6 @@ public class Rectangle extends Figure {
     private int width;
     private int height;
 
-    public Rectangle(String color, double area, int width, int height) {
-        super(color, area);
-        this.width = width;
-        this.height = height;
-    }
-
     public Rectangle() {
     }
 
@@ -30,8 +24,8 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String draw(Object o) {
-        return o.toString();
+    public String draw() {
+        return this.toString();
     }
 
     @Override

@@ -16,7 +16,7 @@ public class Main {
         }
 
         for (Figure figure : figures) {
-            System.out.println(figure.draw(figure));
+            System.out.println(figure.draw());
         }
     }
 }

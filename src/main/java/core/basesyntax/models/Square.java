@@ -7,11 +7,6 @@ public class Square extends Figure {
 
     }
 
-    public Square(String color, double side, double area) {
-        super(color, area);
-        this.side = side;
-    }
-
     public double getSide() {
         return side;
     }
@@ -31,7 +26,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public String draw(Object o) {
-        return o.toString();
+    public String draw() {
+        return this.toString();
     }
 }

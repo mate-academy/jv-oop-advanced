@@ -7,11 +7,6 @@ public abstract class Figure implements Drawable, AreaDerived {
     private String color;
     private double area;
 
-    public Figure(String color, double area) {
-        this.color = color;
-        this.area = area;
-    }
-
     public Figure() {
     }
 
