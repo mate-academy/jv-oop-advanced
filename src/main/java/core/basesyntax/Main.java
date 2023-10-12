@@ -1,21 +1,20 @@
 package core.basesyntax;
 
 public class Main {
-    private static final FigureSupplier FIGURE_SUPPLIER = new FigureSupplier();
-    private static final int NUMBER_OF_REPEAT = 4;
-    private static final Figure[] figures = new Figure[4];
-    private static final int MIDDLE = figures.length / 2;
-
     public static void main(String[] args) {
-        for (int i = 0; i < MIDDLE; i++) {
-            figures[i] = FIGURE_SUPPLIER.getRandomFigure();
-            figures[i].draw();
+        Figure[] figures = new Figure[4];
+        FigureSupplier figureSupplier = new FigureSupplier();
+        for (int i = 0; i < figures.length; i++) {
+            if (i < figures.length / 2) {
+                figures[i] = figureSupplier.getRandomFigure();
+            } else {
+                figures[i] = figureSupplier.getDefaultFigure();
+            }
         }
-        for (int i = MIDDLE; i < NUMBER_OF_REPEAT; i++) {
-            figures[i] = FIGURE_SUPPLIER.getDefaultFigure();
-            figures[i].draw();
+        for (Figure figure : figures) {
+            figure.draw();
         }
     }
-}
 
+}
 
