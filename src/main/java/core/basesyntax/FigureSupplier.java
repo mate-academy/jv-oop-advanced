@@ -4,17 +4,12 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int BOUND = 5;
+    private static final double MAX_DIMENSION = 10.0;
+    private static final int DEFAULT_RADIUS = 10;
+    private static final String DEFAULT_COLOR = "white";
 
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
-
-    public Random getRandom() {
-        return random;
-    }
-
-    public void setRandom(Random random) {
-        this.random = random;
-    }
 
     public Figure getRandomFigure() {
         int type = random.nextInt(BOUND);
@@ -34,21 +29,19 @@ public class FigureSupplier {
             case 3:
                 double radius = getRandomDimension();
                 return new Circle(radius, color);
-            case 4:
+            default:
                 double topBase = getRandomDimension();
                 double bottomBase = getRandomDimension();
                 double height = getRandomDimension();
                 return new IsoscelesTrapezoid(topBase, bottomBase, height, color);
-            default:
-                return null;
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, "white");
+        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
     }
 
     private double getRandomDimension() {
-        return random.nextDouble() * 10 + 1;
+        return random.nextDouble() * MAX_DIMENSION + 1;
     }
 }
