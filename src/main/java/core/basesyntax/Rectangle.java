@@ -1,21 +1,25 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private final int firstLeg;
-    private final int secondLeg;
+    private final double width;
+    private final double height;
 
-    public Rectangle(Form randomForm, Color randomColor, int firstleg, int secondLeg) {
-        super(randomForm, randomColor);
-        this.firstLeg = firstleg;
-        this.secondLeg = secondLeg;
+    public Rectangle(double width, double height, Color color) {
+        this.width = width;
+        this.height = height;
+        this.color = color;
     }
 
     @Override
-    public Figure draw() {
+    public double calculateArea() {
+        return width * height;
+    }
+
+    @Override
+    public void draw() {
         System.out.println("Figure: rectangle, area: "
-                + this.firstLeg + secondLeg + "sq.units, firstLeg: "
-                + this.firstLeg + " units, secondLeg: " + secondLeg
-                + "units, color: " + this.getColors());
-        return this;
+                + calculateArea() + "sq.units, width: "
+                + width + " units, height: " + height
+                + "units, color: " + color);
     }
 }

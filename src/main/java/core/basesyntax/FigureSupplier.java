@@ -3,49 +3,39 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final Random random = new Random();
-    private static int side = 0;
-    private static int firstleg = 0;
-    private static int secondleg = 0;
-    private static final Form[] forms = Form.values();
-    private static Figure figures;
+    private static final int RANGE = 100;
+    private static final int RADIUS = 10;
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public static Form getRandomForm() {
-        int index = random.nextInt(forms.length);
-        return forms[index];
+    public Figure getRandomFigure() {
+        Type[] types = Type.values();
+        Type figure = types[random.nextInt(types.length)];
+        Color randomColor = colorSupplier.getRandomColor();
+        switch (figure) {
+            case SQUARE: {
+                return new Square(random.nextInt(RANGE) + 1, randomColor);
+            }
+            case ISOSCELES_TRAPEZOID: {
+                return new IsoscelesTrapezoid(random.nextInt(RANGE)
+                        + 1, random.nextInt(RANGE) + 1, random.nextInt(RANGE), randomColor);
+            }
+            case CIRCLE: {
+                return new Circle(random.nextInt(RADIUS) + 1, randomColor);
+            }
+            case RECTANGLE: {
+                return new Rectangle(random.nextInt(RANGE)
+                        + 1, random.nextInt(RANGE) + 1, randomColor);
+            }
+            default: {
+                return new RightTriangle(random.nextInt(RANGE)
+                        + 1, random.nextInt(RANGE) + 1, randomColor);
+            }
+        }
     }
 
-    public static Figure getRandomFigure() {
-        side = random.nextInt(100);
-        firstleg = random.nextInt(100);
-        secondleg = random.nextInt(100);
-        Form randomForm = getRandomForm();
-        if (randomForm.name().equals("Circle")) {
-            figures = new Circle(getRandomForm(), ColorSupplier.getRandomColor(), side);
-        }
-        if (randomForm.name().equals("Rectangle")) {
-            figures = new Rectangle(getRandomForm(),
-                    ColorSupplier.getRandomColor(), firstleg, secondleg);
-        }
-        if (randomForm.name().equals("RightTriangle")) {
-            figures = new RightTriangle(getRandomForm(), ColorSupplier.getRandomColor(), side);
-        }
-        if (randomForm.name().equals("Square")) {
-            figures = new Square(getRandomForm(), ColorSupplier.getRandomColor(), side);
-        }
-        return figures;
-    }
-
-    public static Figure getDefaultFigure() {
-        return new Circle(Form.Circle, Color.WHITE, 10);
-    }
-
-    public static Figure getFigures() {
-        return figures;
-    }
-
-    public static void setFigures(Figure figures) {
-        FigureSupplier.figures = figures;
+    public Figure getDefaultFigure() {
+        return new Circle(RADIUS, Color.WHITE);
     }
 }
 
