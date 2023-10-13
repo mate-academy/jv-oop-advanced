@@ -12,7 +12,8 @@ public class RightTriangle extends Figure {
 
     @Override
     public double calculateArea() {
-        return Math.sqrt((firstLeg * firstLeg) + (secondLeg * secondLeg));
+        double result = (firstLeg * firstLeg) + (secondLeg * secondLeg);
+        return Math.sqrt(result);
     }
 
     @Override
