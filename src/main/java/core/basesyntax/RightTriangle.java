@@ -11,14 +11,14 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double areaCalculate() {
         return ((double) (leg1 * leg2) / 2);
     }
 
     @Override
-    public void drow() {
+    public void draw() {
         System.out.println("Figure: Circle, color: " + getColor()
-                + " leg1: " + leg1 + " leg2: " + leg2 + ", area: " + getArea());
+                + " leg1: " + leg1 + " leg2: " + leg2 + ", area: " + areaCalculate());
 
     }
 }
