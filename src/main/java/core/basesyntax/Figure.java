@@ -1,12 +1,18 @@
 package core.basesyntax;
 
-public abstract class Figure implements Draw{
+public abstract class Figure implements Draw {
     private final String name;
     private int sideA;
     private int sideB;
     private int side;
     private int height;
     private String color;
+
+    public Figure(String name, int side, String color) {
+        this.name = name;
+        this.side = side;
+        this.color = color;
+    }
 
     public Figure(String name, int sideA, int sideB, String color) {
         this.name = name;
@@ -17,12 +23,6 @@ public abstract class Figure implements Draw{
 
     public abstract void getsSquare();
 
-    public Figure(String name, int side, String color) {
-        this.name = name;
-        this.side = side;
-        this.color = color;
-    }
-
     public Figure(String name, int sideA, int sideB, int height, String color) {
         this.name = name;
         this.sideA = sideA;
@@ -30,7 +30,6 @@ public abstract class Figure implements Draw{
         this.height = height;
         this.color = color;
     }
-
 
     public String getName() {
         return name;
