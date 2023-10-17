@@ -6,7 +6,7 @@ public abstract class Figure implements Draw {
     private int sideB;
     private int side;
     private int height;
-    private String color;
+    private final String color;
 
     public Figure(String name, int side, String color) {
         this.name = name;
