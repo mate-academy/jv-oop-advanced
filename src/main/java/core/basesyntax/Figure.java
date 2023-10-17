@@ -21,8 +21,6 @@ public abstract class Figure implements Draw {
         this.color = color;
     }
 
-    public abstract void getsSquare();
-
     public Figure(String name, int sideA, int sideB, int height, String color) {
         this.name = name;
         this.sideA = sideA;
@@ -30,6 +28,8 @@ public abstract class Figure implements Draw {
         this.height = height;
         this.color = color;
     }
+
+    public abstract void getsSquare();
 
     public String getName() {
         return name;
