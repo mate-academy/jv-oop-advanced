@@ -7,16 +7,17 @@ public class HelloWorld {
     public static void main(String[] args) {
 
         Figure[] array = new Figure[6];
-        FigureSupplier supl = new FigureSupplier();
+        FigureSupplier supplier = new FigureSupplier();
         for (int i = 0; i < array.length / 2; i++) {
-            array[i] = supl.getRandomFigure();
+            array[i] = supplier.getRandomFigure();
         }
 
         for (int i = array.length / 2; i < array.length; i++) {
-            array[i] = supl.getDefault();
+            array[i] = supplier.getDefault();
         }
         for (int i = 0; i < array.length; i++) {
-            array[i].getsSquare();
+            array[i].getSquare();
+            array[i].draw();
         }
     }
 }
