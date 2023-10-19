@@ -2,6 +2,7 @@ package core.basesyntax;
 
 public class Square extends Figure {
     private final int side;
+
     public Square(int side, String color) {
         super(color);
         this.side = side;
@@ -13,7 +14,7 @@ public class Square extends Figure {
 
     @Override
     public double getSquare() {
-          return side * side;
+        return side * side;
     }
 
     @Override

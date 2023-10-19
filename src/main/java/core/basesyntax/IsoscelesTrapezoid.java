@@ -23,6 +23,7 @@ public class IsoscelesTrapezoid extends Figure {
     public int getHeight() {
         return height;
     }
+
     @Override
     public double getSquare() {
         return ((double) (sideA + sideB) / 2) * 0.5;
