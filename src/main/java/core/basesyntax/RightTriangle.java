@@ -1,15 +1,16 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private double firstLeg = 0;
-    private double secondLeg = 0;
+    private double firstLeg;
+    private double secondLeg;
 
-    RightTriangle() {
-        super("right triangle", Color.WHITE);
+    public RightTriangle() {
+
     }
 
-    RightTriangle(Color color) {
-        super("right triangle", color);
+    public RightTriangle(double firstLeg, double secondLeg) {
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
     }
 
     public double getFirstLeg() {
@@ -17,11 +18,7 @@ public class RightTriangle extends Figure {
     }
 
     public void setFirstLeg(double firstLeg) {
-        if (firstLeg > 0) {
-            this.firstLeg = firstLeg;
-        } else {
-            System.out.println("Triangle leg can't be negative or equal to zero!");
-        }
+        this.firstLeg = firstLeg;
     }
 
     public double getSecondLeg() {
@@ -29,31 +26,23 @@ public class RightTriangle extends Figure {
     }
 
     public void setSecondLeg(double secondLeg) {
-        if (secondLeg > 0) {
-            this.secondLeg = secondLeg;
-        } else {
-            System.out.println("Triangle leg can't be negative or equal to zero!");
-        }
+        this.secondLeg = secondLeg;
     }
 
     public void setLegs(double firstLeg, double secondLeg) {
-        if (firstLeg > 0 && secondLeg > 0) {
-            this.firstLeg = firstLeg;
-            this.secondLeg = secondLeg;
-        } else {
-            System.out.println("Triangle legs can't be negative or equal to zero!");
-        }
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return firstLeg * secondLeg / 2;
     }
 
     @Override
     public void draw() {
-        String info = "Figure: " + getName();
-        info += ", area: " + area();
+        String info = "Figure: right triangle";
+        info += ", area: " + getArea();
         info += " sq.units, firstLeg: " + firstLeg;
         info += " units, secondLeg: " + secondLeg;
         info += " units, color: " + getColor().name();

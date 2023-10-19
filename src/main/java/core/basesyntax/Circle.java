@@ -1,14 +1,14 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private double radius = 0;
+    private double radius;
 
-    Circle() {
-        super("circle", Color.WHITE);
+    public Circle() {
+
     }
 
-    Circle(Color color) {
-        super("circle", color);
+    public Circle(double radius) {
+        this.radius = radius;
     }
 
     public double getRadius() {
@@ -16,22 +16,18 @@ public class Circle extends Figure {
     }
 
     public void setRadius(double radius) {
-        if (radius > 0) {
-            this.radius = radius;
-        } else {
-            System.out.println("Circle radius can't be negative or equal to zero!");
-        }
+        this.radius = radius;
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return Math.PI * radius * radius;
     }
 
     @Override
     public void draw() {
-        String info = "Figure: " + getName();
-        info += ", area: " + area();
+        String info = "Figure: circle";
+        info += ", area: " + getArea();
         info += " sq.units, radius: " + radius;
         info += " units, color: " + getColor().name();
         System.out.println(info);

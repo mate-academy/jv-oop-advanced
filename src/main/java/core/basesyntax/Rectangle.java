@@ -1,15 +1,16 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private double sideA = 0;
-    private double sideB = 0;
+    private double sideA;
+    private double sideB;
 
-    Rectangle() {
-        super("rectangle", Color.WHITE);
+    public Rectangle() {
+
     }
 
-    Rectangle(Color color) {
-        super("rectangle", color);
+    public Rectangle(double sideA, double sideB) {
+        this.sideA = sideA;
+        this.sideB = sideB;
     }
 
     public double getSideA() {
@@ -17,11 +18,7 @@ public class Rectangle extends Figure {
     }
 
     public void setSideA(double sideA) {
-        if (sideA > 0) {
-            this.sideA = sideA;
-        } else {
-            System.out.println("Rectangle side can't be negative or equal to zero!");
-        }
+        this.sideA = sideA;
     }
 
     public double getSideB() {
@@ -29,31 +26,23 @@ public class Rectangle extends Figure {
     }
 
     public void setSideB(double sideB) {
-        if (sideB > 0) {
-            this.sideB = sideB;
-        } else {
-            System.out.println("Rectangle side can't be negative or equal to zero!");
-        }
+        this.sideB = sideB;
     }
 
     public void setSides(double sideA, double sideB) {
-        if (sideA > 0 && sideB > 0) {
-            this.sideA = sideA;
-            this.sideB = sideB;
-        } else {
-            System.out.println("Rectangle sides can't be negative or equal to zero!");
-        }
+        this.sideA = sideA;
+        this.sideB = sideB;
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return sideA * sideB;
     }
 
     @Override
     public void draw() {
-        String info = "Figure: " + getName();
-        info += ", area: " + area();
+        String info = "Figure: rectangle";
+        info += ", area: " + getArea();
         info += " sq.units, sideA: " + sideA;
         info += " units, sideB: " + sideB;
         info += " units, color: " + getColor().name();

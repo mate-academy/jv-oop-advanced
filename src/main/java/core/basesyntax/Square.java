@@ -1,14 +1,14 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    private double side = 0;
+    private double side;
 
-    Square() {
-        super("square", Color.WHITE);
+    public Square() {
+
     }
 
-    Square(Color color) {
-        super("square", color);
+    public Square(double side) {
+        this.side = side;
     }
 
     public double getSide() {
@@ -16,22 +16,18 @@ public class Square extends Figure {
     }
 
     public void setSide(double side) {
-        if (side > 0) {
-            this.side = side;
-        } else {
-            System.out.println("Square side can't be negative or equal to zero!");
-        }
+        this.side = side;
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return side * side;
     }
 
     @Override
     public void draw() {
-        String info = "Figure: " + getName();
-        info += ", area: " + area();
+        String info = "Figure: square";
+        info += ", area: " + getArea();
         info += " sq.units, side: " + side;
         info += " units, color: " + getColor().name();
         System.out.println(info);
