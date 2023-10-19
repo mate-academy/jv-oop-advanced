@@ -29,6 +29,6 @@ public class Rectangle extends Figure {
 
     @Override
     public double getSquare() {
-       return getSideA() * getSideB();
+        return getSideA() * getSideB();
     }
 }
