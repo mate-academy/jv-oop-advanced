@@ -8,8 +8,6 @@ public abstract class Figure implements Drawer {
         this.color = color;
     }
 
-
-
     public abstract void obtainTheArea();
 
     public String getColor() {
