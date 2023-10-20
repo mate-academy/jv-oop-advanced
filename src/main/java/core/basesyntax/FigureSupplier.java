@@ -7,10 +7,11 @@ public class FigureSupplier {
     public static final int DEFAULT_RADIUS = 10;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final Figure[] figuresArray;
+    private final Figure[] figures;
 
-    public FigureSupplier(int arrayLength) {
-        figuresArray = new Figure[arrayLength];
+    public FigureSupplier(int figureCount) {
+        figures = new Figure[figureCount];
+        setFigures();
     }
 
     public Figure getRandomFigure() {
@@ -50,7 +51,17 @@ public class FigureSupplier {
         return random.nextInt(1000) / 100.00;
     }
 
-    public Figure[] getFiguresArray() {
-        return figuresArray;
+    public Figure[] getFigures() {
+        return figures;
+    }
+
+    private void setFigures() {
+        for (int i = 0; i < figures.length; i++) {
+            if (i < figures.length / 2) {
+                figures[i] = getRandomFigure();
+            } else {
+                figures[i] = getDefaultFigure();
+            }
+        }
     }
 }
