@@ -5,6 +5,5 @@ public enum FigureType {
     RECTANGLE,
     ISOSCELES_TRAPEZOID,
     CIRCLE,
-    RIGHT_TRIANGLE;
-
+    RIGHT_TRIANGLE
 }
