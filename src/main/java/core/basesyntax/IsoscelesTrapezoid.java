@@ -5,10 +5,6 @@ public class IsoscelesTrapezoid extends Figure {
     private double sideA;
     private double sideB;
 
-    public IsoscelesTrapezoid() {
-
-    }
-
     public IsoscelesTrapezoid(double edge, double sideA, double sideB) {
         this.edge = edge;
         this.sideA = sideA;

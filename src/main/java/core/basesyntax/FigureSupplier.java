@@ -7,6 +7,11 @@ public class FigureSupplier {
     public static final int DEFAULT_RADIUS = 10;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final Figure[] figuresArray;
+
+    public FigureSupplier(int arrayLength) {
+        figuresArray = new Figure[arrayLength];
+    }
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
@@ -38,12 +43,14 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        Circle circle = new Circle();
-        circle.setRadius(DEFAULT_RADIUS);
-        return circle;
+        return new Circle(DEFAULT_RADIUS);
     }
 
     private double getRandomValue() {
         return random.nextInt(1000) / 100.00;
+    }
+
+    public Figure[] getFiguresArray() {
+        return figuresArray;
     }
 }

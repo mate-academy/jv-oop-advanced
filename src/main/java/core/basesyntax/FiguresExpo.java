@@ -2,19 +2,17 @@ package core.basesyntax;
 
 public class FiguresExpo {
     public static void main(String[] args) {
-        Figure[] figures = new Figure[10];
-        FigureSupplier figureSupplier = new FigureSupplier();
+        FigureSupplier figureSupplier = new FigureSupplier(3);
+        Figure[] figures = figureSupplier.getFiguresArray();
 
         for (int i = 0; i < figures.length; i++) {
-            if (i < 5) {
+            if (i <= figures.length / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
+                figures[i].draw();
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
+                figures[i].draw();
             }
-        }
-
-        for (Figure figure: figures) {
-            figure.draw();
         }
     }
 }
