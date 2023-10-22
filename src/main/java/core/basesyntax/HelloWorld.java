@@ -8,6 +8,7 @@ public class HelloWorld {
 
         Figure[] array = new Figure[6];
         FigureSupplier supplier = new FigureSupplier();
+
         for (int i = 0; i < array.length / 2; i++) {
             array[i] = supplier.getRandomFigure();
         }
@@ -15,9 +16,9 @@ public class HelloWorld {
         for (int i = array.length / 2; i < array.length; i++) {
             array[i] = supplier.getDefault();
         }
-        for (int i = 0; i < array.length; i++) {
-            array[i].getSquare();
-            array[i].draw();
+        for (Figure figure : array) {
+            figure.getArea();
+            figure.draw();
         }
     }
 }

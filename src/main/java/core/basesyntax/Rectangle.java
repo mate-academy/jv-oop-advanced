@@ -21,14 +21,13 @@ public class Rectangle extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure : " + getClass().getSimpleName()
-                + ", Area: " + getSquare()
+                + ", Area: " + getArea()
                 + ", sideA " + getSideA()
                 + ", sideB " + getSideB()
                 + ", Color: " + getColor());
     }
 
-    @Override
-    public double getSquare() {
+    public double getArea() {
         return getSideA() * getSideB();
     }
 }

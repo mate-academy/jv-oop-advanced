@@ -19,14 +19,14 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double getSquare() {
+    public double getArea() {
         return ((double) (getSideA() * getSideB()) / 2);
     }
 
     @Override
     public void draw() {
         System.out.println("Figure : " + getClass().getSimpleName()
-                + ", Area: " + getSquare()
+                + ", Area: " + getArea()
                 + ", sideA " + getSideA()
                 + ", sideB " + getSideB()
                 + ", Color: " + getColor());
