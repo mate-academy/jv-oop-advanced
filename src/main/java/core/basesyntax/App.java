@@ -12,7 +12,8 @@ public class App {
             } else {
                 arrayOfFigures[i] = figureSupplier.getDefaultFigure();
             }
-            System.out.println(arrayOfFigures[i]);
+            arrayOfFigures[i].findArea();
+            System.out.println(arrayOfFigures[i].drawFigure());
         }
     }
 }

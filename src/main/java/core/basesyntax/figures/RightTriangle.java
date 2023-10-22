@@ -25,8 +25,8 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String toString() {
-        return super.toString()
+    public String drawFigure() {
+        return super.drawFigure()
                 + "base: "
                 + getBase()
                 + " units, "
