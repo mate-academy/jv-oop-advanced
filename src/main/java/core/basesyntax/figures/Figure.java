@@ -2,19 +2,16 @@ package core.basesyntax.figures;
 
 import core.basesyntax.enums.Color;
 import core.basesyntax.interfaces.AreaCalculator;
-import core.basesyntax.interfaces.Draw;
+import core.basesyntax.interfaces.Drawable;
 import java.text.DecimalFormat;
 
-public class Figure implements AreaCalculator, Draw {
+public class Figure implements AreaCalculator, Drawable {
     protected String color;
     protected String name;
-    protected double area;
-    private final DecimalFormat format = new DecimalFormat("#.##");
+    protected final DecimalFormat format = new DecimalFormat("#.##");
 
     public Figure() {
-        this.color = null;
-        this.name = "";
-        this.area = 0.0;
+
     }
 
     public Figure(String name, Color color) {
@@ -34,19 +31,15 @@ public class Figure implements AreaCalculator, Draw {
         this.color = color.name().toLowerCase();
     }
 
-    public double getArea() {
-        return this.area;
-    }
-
-    public String drawFigure() {
-        return "Figure: " + getName()
+    public void draw() {
+        System.out.println("Figure: " + getName()
                 + ", color: " + getColor()
                 + ", area: " + format.format(getArea())
-                + " sq. units, ";
+                + " sq. units, ");
     }
 
     @Override
-    public void findArea() {
-        area = 0;
+    public double getArea() {
+        return 0.0;
     }
 }

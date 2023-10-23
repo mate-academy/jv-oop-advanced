@@ -21,18 +21,16 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String drawFigure() {
-        return super.drawFigure()
-                + "base: "
-                + getBase()
-                + " units, "
-                + "height: "
-                + getHeight()
-                + " units";
+    public void draw() {
+        System.out.println("Figure: " + getName()
+                + ", color: " + getColor()
+                + ", area: " + format.format(getArea()) + " sq. units, "
+                + "base: " + getBase() + " units, "
+                + "height: " + getHeight() + " units");
     }
 
     @Override
-    public void findArea() {
-        area = getBase() * getHeight() / 2.0;
+    public double getArea() {
+        return getBase() * getHeight() / 2.0;
     }
 }

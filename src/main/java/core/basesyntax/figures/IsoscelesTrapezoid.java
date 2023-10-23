@@ -27,21 +27,17 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String drawFigure() {
-        return super.drawFigure()
-                + "bottom base: "
-                + getBottomBase()
-                + " units, "
-                + "top base: "
-                + getTopBase()
-                + " units, "
-                + "height: "
-                + getHeight()
-                + " units";
+    public void draw() {
+        System.out.println("Figure: " + getName()
+                + ", color: " + getColor()
+                + ", area: " + format.format(getArea()) + " sq. units, "
+                + "bottom base: " + getBottomBase() + " units, "
+                + "top base: " + getTopBase() + " units, "
+                + "height: " + getHeight() + " units");
     }
 
     @Override
-    public void findArea() {
-        area = ((getBottomBase() + getTopBase()) / 2.00) * getHeight();
+    public double getArea() {
+        return ((getBottomBase() + getTopBase()) / 2.00) * getHeight();
     }
 }

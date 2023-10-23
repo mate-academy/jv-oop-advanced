@@ -21,18 +21,16 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String drawFigure() {
-        return super.drawFigure()
-                + "side one: "
-                + getSideOne()
-                + " units, "
-                + "side two: "
-                + getSideTwo()
-                + " units";
+    public void draw() {
+        System.out.println("Figure: " + getName()
+                + ", color: " + getColor()
+                + ", area: " + format.format(getArea()) + " sq. units, "
+                + "side one: " + getSideOne() + " units, "
+                + "side two: " + getSideTwo() + " units");
     }
 
     @Override
-    public void findArea() {
-        this.area = getSideOne() * getSideTwo();
+    public double getArea() {
+        return getSideOne() * getSideTwo();
     }
 }

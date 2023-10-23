@@ -15,15 +15,15 @@ public class Square extends Figure {
     }
 
     @Override
-    public String drawFigure() {
-        return super.drawFigure()
-                + "side: "
-                + getSide()
-                + " units";
+    public void draw() {
+        System.out.println("Figure: " + getName()
+                + ", color: " + getColor()
+                + ", area: " + format.format(getArea()) + " sq. units, "
+                + "side: " + getSide() + " units");
     }
 
     @Override
-    public void findArea() {
-        area = Math.pow(getSide(), 2);
+    public double getArea() {
+        return Math.pow(getSide(), 2);
     }
 }

@@ -15,15 +15,15 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String drawFigure() {
-        return super.drawFigure()
-                + "radius: "
-                + getRadius()
-                + " units";
+    public void draw() {
+        System.out.println("Figure: " + getName()
+                + ", color: " + getColor()
+                + ", area: " + format.format(getArea()) + " sq. units, "
+                + "radius: " + getRadius() + " units");
     }
 
     @Override
-    public void findArea() {
-        area = Math.PI * Math.pow(getRadius(), 2);
+    public double getArea() {
+        return Math.PI * Math.pow(getRadius(), 2);
     }
 }
