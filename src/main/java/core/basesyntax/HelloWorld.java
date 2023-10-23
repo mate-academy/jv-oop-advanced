@@ -15,18 +15,7 @@ public class HelloWorld {
             } else {
                 array[i] = supplier.getDefaultFigure();
             }
-        }
-
-        for (int i = 0; i < array.length / 2; i++) {
-            array[i] = supplier.getRandomFigure();
-        }
-
-        for (int i = array.length / 2; i < array.length; i++) {
-            array[i] = supplier.getDefaultFigure();
-        }
-        for (Figure figure : array) {
-            figure.getArea();
-            figure.draw();
+            array[i].draw();
         }
     }
 }
