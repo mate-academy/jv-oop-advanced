@@ -6,14 +6,10 @@ public class RightTriangle extends Figure {
     private int base;
     private int height;
 
-    {
-        name = "right triangle";
-    }
-
-    public RightTriangle(int base, int height, Color color) {
+    public RightTriangle(String name, int base, int height, Color color) {
+        super(name, color);
         this.base = base;
         this.height = height;
-        this.color = color.name().toLowerCase();
     }
 
     public int getBase() {

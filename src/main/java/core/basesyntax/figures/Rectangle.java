@@ -6,14 +6,10 @@ public class Rectangle extends Figure {
     private int sideOne;
     private int sideTwo;
 
-    {
-        name = "rectangle";
-    }
-
-    public Rectangle(int sideOne, int sideTwo, Color color) {
+    public Rectangle(String name, int sideOne, int sideTwo, Color color) {
+        super(name, color);
         this.sideOne = sideOne;
         this.sideTwo = sideTwo;
-        this.color = color.name().toLowerCase();
     }
 
     public int getSideOne() {

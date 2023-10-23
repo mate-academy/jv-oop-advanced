@@ -5,13 +5,9 @@ import core.basesyntax.enums.Color;
 public class Square extends Figure {
     private int side;
 
-    {
-        name = "square";
-    }
-
-    public Square(int side, Color color) {
+    public Square(String name, int side, Color color) {
+        super(name, color);
         this.side = side;
-        this.color = color.name().toLowerCase();
     }
 
     public int getSide() {

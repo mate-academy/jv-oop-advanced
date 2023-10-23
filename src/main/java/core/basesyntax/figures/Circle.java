@@ -5,13 +5,9 @@ import core.basesyntax.enums.Color;
 public class Circle extends Figure {
     private int radius;
 
-    {
-        name = "circle";
-    }
-
-    public Circle(int radius, Color color) {
+    public Circle(String name, int radius, Color color) {
+        super(name, color);
         this.radius = radius;
-        this.color = color.name().toLowerCase();
     }
 
     public int getRadius() {

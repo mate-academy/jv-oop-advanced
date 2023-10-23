@@ -18,8 +18,9 @@ public class Figure implements AreaCalculator, Draw {
         this.area = 0.0;
     }
 
-    public Figure(String name) {
+    public Figure(String name, Color color) {
         this.name = name;
+        this.color = color.name().toLowerCase();
     }
 
     public String getName() {

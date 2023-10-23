@@ -20,25 +20,30 @@ public class FigureSupplier {
 
         switch (figureName) {
             case CIRCLE -> {
-                return new Circle(random.nextInt(0, 20),
+                return new Circle("circle",
+                        random.nextInt(0, 20),
                         colorSupplier.getRandomColor());
             }
             case SQUARE -> {
-                return new Square(random.nextInt(0, 20),
+                return new Square("square",
+                        random.nextInt(0, 20),
                         colorSupplier.getRandomColor());
             }
             case RECTANGLE -> {
-                return new Rectangle(random.nextInt(0, 20),
+                return new Rectangle("rectangle",
+                        random.nextInt(0, 20),
                         random.nextInt(0, 20),
                         colorSupplier.getRandomColor());
             }
             case RIGHT_TRIANGLE -> {
-                return new RightTriangle(random.nextInt(0, 20),
+                return new RightTriangle("right triangle",
+                        random.nextInt(0, 20),
                         random.nextInt(0, 20),
                         colorSupplier.getRandomColor());
             }
             case ISOSCELES_TRAPEZOID -> {
-                return new IsoscelesTrapezoid(random.nextInt(0, 20),
+                return new IsoscelesTrapezoid("isosceles trapezoid",
+                        random.nextInt(0, 20),
                         random.nextInt(0, 20),
                         random.nextInt(0, 20),
                         colorSupplier.getRandomColor());
@@ -47,7 +52,7 @@ public class FigureSupplier {
         return null;
     }
     public Figure getDefaultFigure() {
-        return new Circle(10, Color.WHITE);
+        return new Circle("circle", 10, Color.WHITE);
     }
 
 }
