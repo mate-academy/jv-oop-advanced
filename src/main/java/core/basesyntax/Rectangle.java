@@ -27,6 +27,7 @@ public class Rectangle extends Figure {
                 + ", Color: " + getColor());
     }
 
+    @Override
     public double getArea() {
         return getSideA() * getSideB();
     }

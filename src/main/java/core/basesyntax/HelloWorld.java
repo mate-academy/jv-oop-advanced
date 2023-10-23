@@ -9,12 +9,20 @@ public class HelloWorld {
         Figure[] array = new Figure[6];
         FigureSupplier supplier = new FigureSupplier();
 
+        for (int i = 0; i < array.length; i++) {
+            if (i <= array.length / 2) {
+                array[i] = supplier.getRandomFigure();
+            } else {
+                array[i] = supplier.getDefaultFigure();
+            }
+        }
+
         for (int i = 0; i < array.length / 2; i++) {
             array[i] = supplier.getRandomFigure();
         }
 
         for (int i = array.length / 2; i < array.length; i++) {
-            array[i] = supplier.getDefault();
+            array[i] = supplier.getDefaultFigure();
         }
         for (Figure figure : array) {
             figure.getArea();

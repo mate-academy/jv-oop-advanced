@@ -3,9 +3,9 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int DEFAULT_RADIUS = 10;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
-    private final int radiusOfCircle = 10;
 
     public Figure getRandomFigure() {
         int radius = random.nextInt(1,10);
@@ -24,12 +24,12 @@ public class FigureSupplier {
                     colorSupplier.getRandomColor());
             case 5 -> new IsoscelesTrapezoid(sideA, sideB,
                     height, colorSupplier.getRandomColor());
-            default -> null;
+            default -> getDefaultFigure();
         };
     }
 
-    public Figure getDefault() {
-        return new Circle(radiusOfCircle,
-                Color.WHITE.toString().toLowerCase());
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_RADIUS,
+                Color.WHITE.name().toLowerCase());
     }
 }
