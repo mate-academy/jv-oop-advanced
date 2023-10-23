@@ -9,7 +9,6 @@ public class IsoscelesTrapezoid extends CommonValues {
 
     private String color;
 
-
     public IsoscelesTrapezoid(double base1, double base2, double height, String color) {
         this.base1 = base1;
         this.base2 = base2;
@@ -29,6 +28,7 @@ public class IsoscelesTrapezoid extends CommonValues {
 
     @Override
     public void draw() {
-        System.out.println("Figure: IsoscelesTrapezoid, area: " + getArea() + " sq. units, base1: " + base1 + " units, base2: " + base2 + " units, height: " + height + " units, color: " + color);
+        System.out.println("Figure: IsoscelesTrapezoid, area: " + getArea() + " sq. units, base1: " + base1 + " units, "
+                + "base2: " + base2 + " units, height: " + height + " units, color: " + color);
     }
 }

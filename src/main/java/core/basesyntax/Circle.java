@@ -20,6 +20,7 @@ public class Circle extends CommonValues {
 
     @Override
     public void draw() {
-        System.out.println("Figure: circle, area: " + getArea() + "sq. units, radius: " + radius + " units, color: " + color);
+        System.out.println("Figure: circle, area: " + getArea() + "sq. units, "
+                + "radius: " + radius + " units, color: " + color);
     }
 }
