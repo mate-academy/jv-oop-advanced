@@ -3,7 +3,6 @@ package core.basesyntax.figures;
 import core.basesyntax.enums.Color;
 import core.basesyntax.interfaces.AreaCalculator;
 import core.basesyntax.interfaces.Draw;
-
 import java.text.DecimalFormat;
 
 public class Figure implements AreaCalculator, Draw {

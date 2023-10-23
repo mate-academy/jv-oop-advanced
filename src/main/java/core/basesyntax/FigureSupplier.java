@@ -48,9 +48,12 @@ public class FigureSupplier {
                         random.nextInt(0, 20),
                         colorSupplier.getRandomColor());
             }
+            default -> {
+                return null;
+            }
         }
-        return null;
     }
+
     public Figure getDefaultFigure() {
         return new Circle("circle", 10, Color.WHITE);
     }
