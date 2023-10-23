@@ -10,10 +10,6 @@ public class Figure implements AreaCalculator, Drawable {
     protected String name;
     protected final DecimalFormat format = new DecimalFormat("#.##");
 
-    public Figure() {
-
-    }
-
     public Figure(String name, Color color) {
         this.name = name;
         this.color = color.name().toLowerCase();
