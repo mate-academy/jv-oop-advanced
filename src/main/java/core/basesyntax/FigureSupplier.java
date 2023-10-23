@@ -19,26 +19,25 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         int randomFigureIndex = random.nextInt(FigureInstance.values().length);
         FigureInstance figureName = FigureInstance.values()[randomFigureIndex];
-        FigureSupplier figureSupplier = new FigureSupplier();
 
         switch (figureName) {
             case CIRCLE -> {
-                return figureSupplier.getCircle();
+                return getCircle();
             }
             case SQUARE -> {
-                return figureSupplier.getSquare();
+                return getSquare();
             }
             case RECTANGLE -> {
-                return figureSupplier.getRectangle();
+                return getRectangle();
             }
             case RIGHT_TRIANGLE -> {
-                return figureSupplier.getRightTriangle();
+                return getRightTriangle();
             }
             case ISOSCELES_TRAPEZOID -> {
-                return figureSupplier.getIsoscelesTrapezoid();
+                return getIsoscelesTrapezoid();
             }
             default -> {
-                return figureSupplier.getDefaultFigure();
+                return getDefaultFigure();
             }
         }
     }
