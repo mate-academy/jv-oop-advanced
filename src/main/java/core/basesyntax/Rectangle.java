@@ -1,26 +1,18 @@
 package core.basesyntax;
 
-public class Rectangle extends CommonValues {
+public class Rectangle extends Figure {
     private double length;
-
     private double width;
 
-    private String color;
-
-    public Rectangle(double length, double width, String color) {
+    public Rectangle(double length, double width, Color color) {
+        super(color);
         this.length = length;
         this.width = width;
-        this.color = color;
     }
 
     @Override
     public double getArea() {
         return length * width;
-    }
-
-    @Override
-    public String getColor() {
-        return color;
     }
 
     @Override
