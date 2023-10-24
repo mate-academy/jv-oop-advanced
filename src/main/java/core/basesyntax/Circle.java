@@ -13,10 +13,6 @@ public class Circle extends CommonValues {
         return Math.PI * radius * radius;
     }
 
-    @Override
-    public String getColor() {
-        return color;
-    }
 
     @Override
     public void draw() {
