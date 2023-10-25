@@ -4,30 +4,56 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
-    private ColorSupplier randomColor = new ColorSupplier();
-    private Random random = new Random();
-    private int figureNumber = random.nextInt(FIGURE_COUNT);
-    private double dimension = Math.round((random.nextDouble() * 100) / 10);
+    public static final String defaultFigureColor = Color.WHITE.name();
+    public static final double defaultFigureRadius = 10.0;
+
+    private Square squareObject() {
+        return new Square(new ColorSupplier().getRandomColor(),
+                new Random().nextInt(10));
+    }
+
+    private RightTriangle rightTriangleObject() {
+        return new RightTriangle(new ColorSupplier().getRandomColor(),
+                new Random().nextInt(10),
+                new Random().nextInt(10));
+    }
+
+    private Rectangle rectangleObject() {
+        return new Rectangle(new ColorSupplier().getRandomColor(),
+                new Random().nextInt(10),
+                new Random().nextInt(10));
+    }
+
+    private IsoscelesTrapezoid isoscelesTrapezoidObject() {
+        return new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(),
+                new Random().nextInt(10),
+                new Random().nextInt(10),
+                new Random().nextInt(10));
+    }
+
+    private Circle circleObject() {
+        return new Circle(new ColorSupplier().getRandomColor(),
+                new Random().nextInt(10));
+    }
 
     public Figure getRandomFigure() {
+        int figureNumber = new Random().nextInt(FIGURE_COUNT);
         switch (figureNumber) {
             case 0:
-                return new Square(randomColor.getRandomColor(),dimension);
+                return squareObject();
             case 1:
-                return new RightTriangle(randomColor.getRandomColor(),dimension,dimension);
-            case 2:
-                return new Rectangle(randomColor.getRandomColor(),dimension,dimension);
+                return rightTriangleObject();
             case 3:
-                return new IsoscelesTrapezoid(randomColor.getRandomColor(),
-                        dimension,dimension,dimension);
+                return rectangleObject();
             case 4:
-                return new Circle(randomColor.getRandomColor(),dimension);
+                return isoscelesTrapezoidObject();
             default:
-                return null;
+                return circleObject();
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.name(), 10.0);
+        return new Circle(defaultFigureColor, defaultFigureRadius);
     }
 }
+
