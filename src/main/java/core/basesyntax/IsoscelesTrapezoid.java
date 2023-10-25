@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends GeometryFigure implements Figure {
+public class IsoscelesTrapezoid extends Figure {
     private double upperSide;
     private double lowerSide;
     private double height;
@@ -18,7 +18,7 @@ public class IsoscelesTrapezoid extends GeometryFigure implements Figure {
     }
 
     @Override
-    public void draw() {
+    public Figure draw() {
         System.out.println("Figure: isosceles trapezoid, area: "
                 + getArea()
                 + " sq. units, upper side: "
@@ -27,5 +27,6 @@ public class IsoscelesTrapezoid extends GeometryFigure implements Figure {
                 + lowerSide + " units, height: "
                 + height + " units, color: "
                 + getColor());
+        return null;
     }
 }
