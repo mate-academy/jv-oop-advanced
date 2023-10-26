@@ -29,48 +29,42 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        String name = "Circle";
         int radius = 10;
         Color color = Color.WHITE;
-        return new Circle(name, color, radius);
+        return new Circle(color, radius);
     }
 
     private Square createRandomSquare() {
-        String name = "Square";
         Color color = colorSupplier.getRandomColor();
         int side = random.nextInt(MAX_PROPERTIES_VALUE);
-        return new Square(name, color, side);
+        return new Square(color, side);
     }
 
     private Circle createRandomCircle() {
-        String name = "Circle";
         Color color = colorSupplier.getRandomColor();
         int radius = random.nextInt(MAX_PROPERTIES_VALUE);
-        return new Circle(name, color, radius);
+        return new Circle(color, radius);
     }
 
     private IsoscelesTrapezoid createRandomIsoscelesTrapezoid() {
-        String name = "Isosceles Trapezoid";
         Color color = colorSupplier.getRandomColor();
         int lowerBase = random.nextInt(MAX_PROPERTIES_VALUE);
         int upperBase = random.nextInt(MAX_PROPERTIES_VALUE);
         int side = random.nextInt(MAX_PROPERTIES_VALUE);
-        return new IsoscelesTrapezoid(name, color, lowerBase, upperBase, side);
+        return new IsoscelesTrapezoid(color, lowerBase, upperBase, side);
     }
 
     private Rectangle createRandomRectangle() {
-        String name = "Rectangle";
         Color color = colorSupplier.getRandomColor();
         int firstSide = random.nextInt(MAX_PROPERTIES_VALUE);
         int secondSide = random.nextInt(MAX_PROPERTIES_VALUE);
-        return new Rectangle(name, color, firstSide, secondSide);
+        return new Rectangle(color, firstSide, secondSide);
     }
 
     private RightTriangle createRandomRightTriangle() {
-        String name = "RightTriangle";
         Color color = colorSupplier.getRandomColor();
         int firstLeg = random.nextInt(MAX_PROPERTIES_VALUE);
         int secondLeg = random.nextInt(MAX_PROPERTIES_VALUE);
-        return new RightTriangle(name, color, firstLeg, secondLeg);
+        return new RightTriangle(color, firstLeg, secondLeg);
     }
 }
