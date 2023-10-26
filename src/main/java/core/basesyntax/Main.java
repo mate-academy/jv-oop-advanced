@@ -6,7 +6,7 @@ public class Main {
 
         FigureSupplier figureSupplier = new FigureSupplier();
 
-        Figure[] figures = new Figure[6];
+        Figure[] figures = new Figure[figuresArraySize];
 
         for (int i = 0; i < figures.length; i++) {
             if (i < figuresArraySize / 2) {
