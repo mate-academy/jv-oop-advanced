@@ -4,37 +4,10 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
-    public static final String defaultFigureColor = Color.WHITE.name();
-    public static final double defaultFigureRadius = 10.0;
-
-    private Square squareObject() {
-        return new Square(new ColorSupplier().getRandomColor(),
-                new Random().nextInt(10));
-    }
-
-    private RightTriangle rightTriangleObject() {
-        return new RightTriangle(new ColorSupplier().getRandomColor(),
-                new Random().nextInt(10),
-                new Random().nextInt(10));
-    }
-
-    private Rectangle rectangleObject() {
-        return new Rectangle(new ColorSupplier().getRandomColor(),
-                new Random().nextInt(10),
-                new Random().nextInt(10));
-    }
-
-    private IsoscelesTrapezoid isoscelesTrapezoidObject() {
-        return new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(),
-                new Random().nextInt(10),
-                new Random().nextInt(10),
-                new Random().nextInt(10));
-    }
-
-    private Circle circleObject() {
-        return new Circle(new ColorSupplier().getRandomColor(),
-                new Random().nextInt(10));
-    }
+    public static final String DEFAULT_FIGURE_COLOR = Color.WHITE.name();
+    public static final double DEFAULT_FIGURE_RADIUS = 10.0;
+    public static final String RANDOM_COLOR = new ColorSupplier().getRandomColor();
+    public static final double RANDOM_DIMENSION = new Random().nextInt(10);
 
     public Figure getRandomFigure() {
         int figureNumber = new Random().nextInt(FIGURE_COUNT);
@@ -53,7 +26,28 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(defaultFigureColor, defaultFigureRadius);
+        return new Circle(DEFAULT_FIGURE_COLOR, DEFAULT_FIGURE_RADIUS);
     }
-}
 
+    private Square squareObject() {
+        return new Square(RANDOM_COLOR, RANDOM_DIMENSION);
+    }
+
+    private RightTriangle rightTriangleObject() {
+        return new RightTriangle(RANDOM_COLOR, RANDOM_DIMENSION, RANDOM_DIMENSION);
+    }
+
+    private Rectangle rectangleObject() {
+        return new Rectangle(RANDOM_COLOR, RANDOM_DIMENSION, RANDOM_DIMENSION);
+    }
+
+    private IsoscelesTrapezoid isoscelesTrapezoidObject() {
+        return new IsoscelesTrapezoid(RANDOM_COLOR,
+                RANDOM_DIMENSION, RANDOM_DIMENSION, RANDOM_DIMENSION);
+    }
+
+    private Circle circleObject() {
+        return new Circle(RANDOM_COLOR, RANDOM_DIMENSION);
+    }
+
+}
