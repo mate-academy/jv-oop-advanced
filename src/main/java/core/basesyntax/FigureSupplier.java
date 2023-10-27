@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 import core.basesyntax.figures.*;
-
 import java.util.Random;
 
 public class FigureSupplier {
@@ -20,9 +19,9 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int maxLengthInUnits = 100;
-        double firstRandomValue = random.nextDouble()* maxLengthInUnits;
-        double secondRandomValue = random.nextDouble()* maxLengthInUnits;
-        double thirdRandomValue = random.nextDouble()* maxLengthInUnits;
+        double firstRandomValue = random.nextDouble() * maxLengthInUnits;
+        double secondRandomValue = random.nextDouble() * maxLengthInUnits;
+        double thirdRandomValue = random.nextDouble() * maxLengthInUnits;
 
         int figuresTypesNumber = 5;
         int randomChoice = random.nextInt(figuresTypesNumber);
@@ -43,6 +42,7 @@ public class FigureSupplier {
             }
         };
     }
+
     public Figure getDefaultFigure() {
         return defaultFigure;
     }

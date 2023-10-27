@@ -1,15 +1,15 @@
 package core.basesyntax.figures;
 
-public class RightTriangle extends Figure{
-    private double rightLeg;
-    private double leftLeg;
-    private double hypotenuse;
+public class RightTriangle extends Figure {
+    private final double rightLeg;
+    private final double leftLeg;
+    private final double hypotenuse;
 
     public RightTriangle(String color, double rightLeg, double leftLeg) {
         super(color);
         this.rightLeg = rightLeg;
         this.leftLeg = leftLeg;
-        this.hypotenuse = Math.sqrt(rightLeg*rightLeg + leftLeg*leftLeg);
+        this.hypotenuse = Math.sqrt(rightLeg * rightLeg + leftLeg * leftLeg);
         calcArea();
     }
 
