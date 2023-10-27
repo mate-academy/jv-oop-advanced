@@ -7,8 +7,6 @@ public abstract class Figure implements AreaFigure {
         this.color = color;
     }
 
-    abstract void toInformation();
-
     public String getColor() {
         return color;
     }

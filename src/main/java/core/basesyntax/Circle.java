@@ -10,7 +10,7 @@ public class Circle extends Figure {
 
     @Override
     public double getAreaFigure() {
-        return radius * Math.PI;
+        return (radius * radius) * Math.PI;
     }
 
     @Override
@@ -19,12 +19,12 @@ public class Circle extends Figure {
     }
 
     @Override
-    public void toInformation() {
-        System.out.println("Figure: Circle, area: "
+    public String toString() {
+        return "Figure: Circle, area: "
                 + String.format("%.2f", getAreaFigure())
                 + " sq. units, radius: "
                 + String.format("%.0f", radius)
                 + " units, color: "
-                + getColor());
+                + getColor();
     }
 }

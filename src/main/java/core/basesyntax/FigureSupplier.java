@@ -3,12 +3,15 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int SIZE_INDEXES = 5;
+    private static final int RADIUS_CIRCLE = 10;
+    private static final int RANDOM_NUMBER = 100;
     private static final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
 
-        int randomFigureType = random.nextInt(5);
+        int randomFigureType = random.nextInt(SIZE_INDEXES);
 
         switch (randomFigureType) {
             case 0:
@@ -30,19 +33,19 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.name(), 10);
+        return new Circle(Color.WHITE.name(), RADIUS_CIRCLE);
     }
 
     private double getRandomSideLength() {
-        return random.nextDouble() * 100;
+        return random.nextDouble(RANDOM_NUMBER);
     }
 
     private double getRandomRadius() {
-        return random.nextDouble() * 50;
+        return random.nextDouble(RANDOM_NUMBER);
     }
 
     private double getRandomHeight() {
-        return random.nextDouble() * 30;
+        return random.nextDouble(RANDOM_NUMBER);
     }
 }
 

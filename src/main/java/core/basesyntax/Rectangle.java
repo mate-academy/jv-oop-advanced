@@ -21,13 +21,13 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void toInformation() {
-        System.out.println("Figure: Rectangle, area: "
+    public String toString() {
+        return "Figure: Rectangle, area: "
                 + String.format("%.2f", getAreaFigure()) + " sq. units, height: "
                 + String.format("%.0f", height)
                 + " units, width: "
                 + String.format("%.0f", width)
                 + " units, color: "
-                + getColor());
+                + getColor();
     }
 }
