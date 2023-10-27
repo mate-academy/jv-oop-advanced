@@ -6,8 +6,6 @@ public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
     public static final String DEFAULT_FIGURE_COLOR = Color.WHITE.name();
     public static final double DEFAULT_FIGURE_RADIUS = 10.0;
-    public static final String RANDOM_COLOR = new ColorSupplier().getRandomColor();
-    public static final double RANDOM_DIMENSION = new Random().nextInt(10);
 
     public Figure getRandomFigure() {
         int figureNumber = new Random().nextInt(FIGURE_COUNT);
@@ -30,24 +28,33 @@ public class FigureSupplier {
     }
 
     private Square squareObject() {
-        return new Square(RANDOM_COLOR, RANDOM_DIMENSION);
+        double randomDimension = new Random().nextInt(10);
+        String randomColor = new ColorSupplier().getRandomColor();
+        return new Square(randomColor, randomDimension);
     }
 
     private RightTriangle rightTriangleObject() {
-        return new RightTriangle(RANDOM_COLOR, RANDOM_DIMENSION, RANDOM_DIMENSION);
+        double randomDimension = new Random().nextInt(10);
+        String randomColor = new ColorSupplier().getRandomColor();
+        return new RightTriangle(randomColor, randomDimension, randomDimension);
     }
 
     private Rectangle rectangleObject() {
-        return new Rectangle(RANDOM_COLOR, RANDOM_DIMENSION, RANDOM_DIMENSION);
+        double randomDimension = new Random().nextInt(10);
+        String randomColor = new ColorSupplier().getRandomColor();
+        return new Rectangle(randomColor, randomDimension, randomDimension);
     }
 
     private IsoscelesTrapezoid isoscelesTrapezoidObject() {
-        return new IsoscelesTrapezoid(RANDOM_COLOR,
-                RANDOM_DIMENSION, RANDOM_DIMENSION, RANDOM_DIMENSION);
+        double randomDimension = new Random().nextInt(10);
+        String randomColor = new ColorSupplier().getRandomColor();
+        return new IsoscelesTrapezoid(randomColor, randomDimension,
+                randomDimension, randomDimension);
     }
 
     private Circle circleObject() {
-        return new Circle(RANDOM_COLOR, RANDOM_DIMENSION);
+        double randomDimension = new Random().nextInt(10);
+        String randomColor = new ColorSupplier().getRandomColor();
+        return new Circle(randomColor, randomDimension);
     }
-
 }
