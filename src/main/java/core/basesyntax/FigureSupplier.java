@@ -1,13 +1,12 @@
 package core.basesyntax;
 
+import java.util.Random;
 import core.basesyntax.figures.Circle;
 import core.basesyntax.figures.Figure;
-import core.basesyntax.figures.Rectangle;
-import core.basesyntax.figures.Square;
 import core.basesyntax.figures.IsoscelesTrapezoid;
+import core.basesyntax.figures.Rectangle;
 import core.basesyntax.figures.RightTriangle;
-
-import java.util.Random;
+import core.basesyntax.figures.Square;
 
 public class FigureSupplier {
     private final ColorSupplier colorSupplier;
@@ -25,9 +24,9 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int maxLengthInUnits = 100;
-        double firstRandomValue = random.nextDouble() * maxLengthInUnits;
-        double secondRandomValue = random.nextDouble() * maxLengthInUnits;
-        double thirdRandomValue = random.nextDouble() * maxLengthInUnits;
+        double firstValue = random.nextDouble() * maxLengthInUnits;
+        double secondValue = random.nextDouble() * maxLengthInUnits;
+        double thirdValue = random.nextDouble() * maxLengthInUnits;
 
         int figuresTypesNumber = 5;
         int randomChoice = random.nextInt(figuresTypesNumber);
@@ -37,11 +36,11 @@ public class FigureSupplier {
         // But array uses too much time to create and memory
         // Enhanced switch to optimize the code
         return switch (randomChoice) {
-            case 0 -> new Circle(randomColor, firstRandomValue);
-            case 1 -> new Square(randomColor, firstRandomValue);
-            case 2 -> new Rectangle(randomColor, firstRandomValue, secondRandomValue);
-            case 3 -> new RightTriangle(randomColor, firstRandomValue, secondRandomValue);
-            case 4 -> new IsoscelesTrapezoid(randomColor, firstRandomValue, secondRandomValue, thirdRandomValue);
+            case 0 -> new Circle(randomColor, firstValue);
+            case 1 -> new Square(randomColor, firstValue);
+            case 2 -> new Rectangle(randomColor, firstValue, secondValue);
+            case 3 -> new RightTriangle(randomColor, firstValue, secondValue);
+            case 4 -> new IsoscelesTrapezoid(randomColor, firstValue, secondValue, thirdValue);
             default -> {
                 assert false : "Default case should not be reached.";
                 yield null;
