@@ -32,8 +32,6 @@ public class FigureSupplier {
         int randomChoice = random.nextInt(figuresTypesNumber);
         String randomColor = colorSupplier.getRandomColor();
 
-        // I can create random object of four propositions using switch or using array
-        // But array uses too much time to create and memory
         // Enhanced switch to optimize the code
         return switch (randomChoice) {
             case 0 -> new Circle(randomColor, firstValue);
