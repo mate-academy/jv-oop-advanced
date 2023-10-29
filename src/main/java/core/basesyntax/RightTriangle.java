@@ -16,14 +16,14 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double getAreaFigure() {
+    public double calculateArea() {
         return 0.5 * (firstLeg * secondLeg);
     }
 
     @Override
     public String toString() {
         return "Figure: RightTriangle, area: "
-                + String.format("%.2f", getAreaFigure())
+                + String.format("%.2f", calculateArea())
                 + " sq. units, firstLeg: "
                 + String.format("%.0f", firstLeg)
                 + " units, secondLeg: "

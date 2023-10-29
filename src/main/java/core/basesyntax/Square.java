@@ -14,14 +14,14 @@ public class Square extends Figure {
     }
 
     @Override
-    public double getAreaFigure() {
+    public double calculateArea() {
         return side * side;
     }
 
     @Override
     public String toString() {
         return "Figure: square, area: "
-                + String.format("%.2f", getAreaFigure())
+                + String.format("%.2f", calculateArea())
                 + " sq. units, side: "
                 + String.format("%.0f", side)
                 + " units, color: "

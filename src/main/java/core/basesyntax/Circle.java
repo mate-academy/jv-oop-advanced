@@ -9,7 +9,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double getAreaFigure() {
+    public double calculateArea() {
         return (radius * radius) * Math.PI;
     }
 
@@ -21,7 +21,7 @@ public class Circle extends Figure {
     @Override
     public String toString() {
         return "Figure: Circle, area: "
-                + String.format("%.2f", getAreaFigure())
+                + String.format("%.2f", calculateArea())
                 + " sq. units, radius: "
                 + String.format("%.0f", radius)
                 + " units, color: "

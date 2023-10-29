@@ -16,14 +16,14 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double getAreaFigure() {
+    public double calculateArea() {
         return height * width;
     }
 
     @Override
     public String toString() {
         return "Figure: Rectangle, area: "
-                + String.format("%.2f", getAreaFigure()) + " sq. units, height: "
+                + String.format("%.2f", calculateArea()) + " sq. units, height: "
                 + String.format("%.0f", height)
                 + " units, width: "
                 + String.format("%.0f", width)
