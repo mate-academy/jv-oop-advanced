@@ -9,9 +9,9 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static Figure defaultFigure;
     private final ColorSupplier colorSupplier;
     private final Random random;
-    private static Figure defaultFigure;
 
     public FigureSupplier() {
         // Should I pass this random object to color supplier constructor, or it is bad practice ?
@@ -26,7 +26,9 @@ public class FigureSupplier {
         int randomChoice = random.nextInt(figuresTypesNumber);
         String randomColor = colorSupplier.getRandomColor();
 
-        double firstLength, secondLength, thirdLength;
+        double firstLength;
+        double secondLength;
+        double thirdLength;
         switch (randomChoice) {
             case 0:
                 firstLength = random.nextDouble() * maxLengthInUnits;
@@ -55,7 +57,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        if (defaultFigure==null) {
+        if (defaultFigure == null) {
             final int defaultRadius = 10;
             final String defaultColor = Color.WHITE.name();
             defaultFigure = new Circle(defaultColor, defaultRadius);
