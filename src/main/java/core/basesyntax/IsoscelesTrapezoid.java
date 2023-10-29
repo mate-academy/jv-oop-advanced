@@ -20,7 +20,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     private double getSemiperimeter() {
-        return  (sideUp + sideLow) / (2 * legC);
+        return (sideUp + sideLow) / (2 * legC);
     }
 
     @Override
