@@ -11,9 +11,7 @@ import java.util.Random;
 public class FigureSupplier {
     private final ColorSupplier colorSupplier;
     private final Random random;
-    private final double defaultRadius = 10;
-    private final String defaultColor = Color.WHITE.name();
-    private final Figure defaultFigure = new Circle(defaultColor, defaultRadius);
+    private static Figure defaultFigure;
 
     public FigureSupplier() {
         // Should I pass this random object to color supplier constructor, or it is bad practice ?
@@ -23,30 +21,45 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        int maxLengthInUnits = 100;
-        double firstValue = random.nextDouble() * maxLengthInUnits;
-        double secondValue = random.nextDouble() * maxLengthInUnits;
-        double thirdValue = random.nextDouble() * maxLengthInUnits;
-
-        int figuresTypesNumber = 5;
+        final int maxLengthInUnits = 100;
+        final int figuresTypesNumber = 5;
         int randomChoice = random.nextInt(figuresTypesNumber);
         String randomColor = colorSupplier.getRandomColor();
 
-        // Enhanced switch to optimize the code
-        return switch (randomChoice) {
-            case 0 -> new Circle(randomColor, firstValue);
-            case 1 -> new Square(randomColor, firstValue);
-            case 2 -> new Rectangle(randomColor, firstValue, secondValue);
-            case 3 -> new RightTriangle(randomColor, firstValue, secondValue);
-            case 4 -> new IsoscelesTrapezoid(randomColor, firstValue, secondValue, thirdValue);
-            default -> {
+        double firstLength, secondLength, thirdLength;
+        switch (randomChoice) {
+            case 0:
+                firstLength = random.nextDouble() * maxLengthInUnits;
+                return new Circle(randomColor, firstLength);
+            case 1:
+                firstLength = random.nextDouble() * maxLengthInUnits;
+                return new Square(randomColor, firstLength);
+            case 2:
+                firstLength = random.nextDouble() * maxLengthInUnits;
+                secondLength = random.nextDouble() * maxLengthInUnits;
+                return new Rectangle(randomColor, firstLength, secondLength);
+            case 3:
+                firstLength = random.nextDouble() * maxLengthInUnits;
+                secondLength = random.nextDouble() * maxLengthInUnits;
+                return new RightTriangle(randomColor, firstLength, secondLength);
+            case 4:
+                firstLength = random.nextDouble() * maxLengthInUnits;
+                secondLength = random.nextDouble() * maxLengthInUnits;
+                thirdLength = random.nextDouble() * maxLengthInUnits;
+                return new IsoscelesTrapezoid(randomColor, firstLength, secondLength, thirdLength);
+            default:
                 assert false : "Default case should not be reached.";
-                yield null;
-            }
-        };
+                return null;
+        }
+
     }
 
     public Figure getDefaultFigure() {
+        if (defaultFigure==null) {
+            final int defaultRadius = 10;
+            final String defaultColor = Color.WHITE.name();
+            defaultFigure = new Circle(defaultColor, defaultRadius);
+        }
         return defaultFigure;
     }
 }
