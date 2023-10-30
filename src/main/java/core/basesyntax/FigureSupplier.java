@@ -5,12 +5,43 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int MAX_NUMBER = 10;
     private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
+    private Figure[] figure = {
+            new Rectangle(
+                    colorSupplier.getRandomColor(),
+                    this.getRandom(MAX_NUMBER),
+                    this.getRandom(MAX_NUMBER)
+            ),
+            new Circle(
+                    colorSupplier.getRandomColor(),
+                    this.getRandom(MAX_NUMBER)
+            ),
+            new Square(
+                    colorSupplier.getRandomColor(),
+                    this.getRandom(MAX_NUMBER)
+            ),
+            new RightTriangle(
+                    colorSupplier.getRandomColor(),
+                    this.getRandom(MAX_NUMBER),
+                    this.getRandom(MAX_NUMBER)
+            ),
+            new IsoscelesTrapezoid(
+                    colorSupplier.getRandomColor(),
+                    this.getRandom(MAX_NUMBER),
+                    this.getRandom(MAX_NUMBER),
+                    this.getRandom(MAX_NUMBER)
+            )
+    };
 
-    public int getRandom() {
-        return random.nextInt(MAX_NUMBER) + 1;
+    public int getRandom(int maxNumber) {
+        return random.nextInt(maxNumber) + 1;
+    }
+
+    public Figure getRandomFigure() {
+        return this.figure[this.getRandom(4)];
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.toString(), 10);
+        return new Circle(Color.WHITE.name(), 10);
     }
 }

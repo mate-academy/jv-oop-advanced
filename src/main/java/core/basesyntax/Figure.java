@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements InterfaceFigure {
+public class Figure implements InterfaceFigure {
     private String color;
 
     public Figure(String color) {
@@ -11,5 +11,12 @@ public abstract class Figure implements InterfaceFigure {
         return color;
     }
 
-    public abstract void draw();
+    @Override
+    public double getArea() {
+        return 0;
+    }
+
+    void draw() {
+
+    }
 }
