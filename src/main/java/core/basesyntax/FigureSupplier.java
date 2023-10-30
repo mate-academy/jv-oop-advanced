@@ -3,10 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private Random random = new Random();
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        ColorSupplier colorSupplier = new ColorSupplier();
 
         final int figureType = random.nextInt(5);
 
@@ -33,7 +33,7 @@ public class FigureSupplier {
                 return new IsoscelesTrapezoid(color, topBase, bottomBase, heightTrapezoid);
 
             default:
-                return null;
+                return getDefaultFigure();
         }
 
     }

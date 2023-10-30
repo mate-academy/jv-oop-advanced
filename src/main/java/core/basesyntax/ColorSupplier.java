@@ -2,9 +2,11 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class ColorSupplier {
-    private Random random = new Random();
-    private final String[] colors = {"red", "green", "blue", "yellow", "purple", "orange", "pink"};
+class ColorSupplier {
+
+    private static final String[] colors = {"red", "green", "blue", "yellow", "purple",
+            "orange", "pink"};
+    private final Random random = new Random();
 
     public String getRandomColor() {
         int index = random.nextInt(colors.length);
