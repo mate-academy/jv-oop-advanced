@@ -4,11 +4,13 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_NUMBER = 10;
+    private static final int FIGURE_COUNT = 5;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
+    private Circle circle = new Circle(Color.WHITE.name(), 10);
 
     public Figure getRandomFigure() {
-        int randomFigurre = random.nextInt(5);
+        int randomFigurre = random.nextInt(FIGURE_COUNT);
         switch (randomFigurre) {
             case 0:
                 return new Rectangle(
@@ -45,6 +47,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.name(), 10);
+        return circle;
     }
 }

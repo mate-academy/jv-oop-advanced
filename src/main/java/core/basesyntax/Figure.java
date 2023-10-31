@@ -18,6 +18,5 @@ public class Figure implements GetArea, Drawable {
 
     @Override
     public void draw() {
-
     }
 }
