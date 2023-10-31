@@ -6,39 +6,42 @@ public class FigureSupplier {
     private static final int MAX_NUMBER = 10;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
-    private Figure[] figure = {
-            new Rectangle(
-                    colorSupplier.getRandomColor(),
-                    this.getRandom(MAX_NUMBER),
-                    this.getRandom(MAX_NUMBER)
-            ),
-            new Circle(
-                    colorSupplier.getRandomColor(),
-                    this.getRandom(MAX_NUMBER)
-            ),
-            new Square(
-                    colorSupplier.getRandomColor(),
-                    this.getRandom(MAX_NUMBER)
-            ),
-            new RightTriangle(
-                    colorSupplier.getRandomColor(),
-                    this.getRandom(MAX_NUMBER),
-                    this.getRandom(MAX_NUMBER)
-            ),
-            new IsoscelesTrapezoid(
-                    colorSupplier.getRandomColor(),
-                    this.getRandom(MAX_NUMBER),
-                    this.getRandom(MAX_NUMBER),
-                    this.getRandom(MAX_NUMBER)
-            )
-    };
-
-    public int getRandom(int maxNumber) {
-        return random.nextInt(maxNumber) + 1;
-    }
 
     public Figure getRandomFigure() {
-        return this.figure[this.getRandom(4)];
+        int randomFigurre = random.nextInt(5);
+        switch (randomFigurre) {
+            case 0:
+                return new Rectangle(
+            colorSupplier.getRandomColor(),
+                    random.nextInt(MAX_NUMBER) + 1,
+                    random.nextInt(MAX_NUMBER) + 1
+        );
+            case 1:
+                return new RightTriangle(
+                        colorSupplier.getRandomColor(),
+                        random.nextInt(MAX_NUMBER) + 1,
+                        random.nextInt(MAX_NUMBER) + 1
+                );
+            case 2:
+                return new Square(
+                        colorSupplier.getRandomColor(),
+                        random.nextInt(MAX_NUMBER) + 1
+                );
+            case 3:
+                return new Circle(
+                        colorSupplier.getRandomColor(),
+                        random.nextInt(MAX_NUMBER) + 1
+                );
+            case 4:
+                return new IsoscelesTrapezoid(
+                        colorSupplier.getRandomColor(),
+                        random.nextInt(MAX_NUMBER) + 1,
+                        random.nextInt(MAX_NUMBER) + 1,
+                        random.nextInt(MAX_NUMBER) + 1
+                );
+            default:
+                return null;
+        }
     }
 
     public Figure getDefaultFigure() {
