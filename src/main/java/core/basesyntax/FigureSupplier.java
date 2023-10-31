@@ -5,8 +5,8 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int MAX_NUMBER = 10;
     private static final int FIGURE_COUNT = 5;
-    private Random random = new Random();
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
     private Circle circle = new Circle(Color.WHITE.name(), 10);
 
     public Figure getRandomFigure() {
