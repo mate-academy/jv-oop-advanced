@@ -1,7 +1,6 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.ColorSupplier;
-
 import java.util.Random;
 
 public class RightTriangle extends Figure {
