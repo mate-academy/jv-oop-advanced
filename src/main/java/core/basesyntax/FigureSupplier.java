@@ -9,7 +9,7 @@ public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
 
     private static final int DEFAULT_RADIUS = 10;
-    private static final String DEFAULT_COLOR = "white";
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
 
     public Figure getRandomFigure() {
         final String randomColor = COLOR_SUPPLIER.getRandomColor();
