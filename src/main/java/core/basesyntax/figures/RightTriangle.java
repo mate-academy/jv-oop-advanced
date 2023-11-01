@@ -15,6 +15,7 @@ public class RightTriangle extends Figure {
         this.leftLeg = leftLeg;
         this.hypotenuse = Math.sqrt(rightLeg * rightLeg + leftLeg * leftLeg);
     }
+
     public RightTriangle(ColorSupplier colorSupplier, Random random, int maxLength) {
         this(colorSupplier.getRandomColor(),
                 getRandomLength(random, maxLength),
@@ -33,6 +34,6 @@ public class RightTriangle extends Figure {
 
     @Override
     public double calcArea() {
-        return  0.5 * rightLeg * leftLeg;
+        return 0.5 * rightLeg * leftLeg;
     }
 }

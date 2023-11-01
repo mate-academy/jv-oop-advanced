@@ -11,6 +11,7 @@ public class Square extends Figure {
         super(color);
         this.side = side;
     }
+
     public Square(ColorSupplier colorSupplier, Random random, int maxLength) {
         this(colorSupplier.getRandomColor(),
                 getRandomLength(random, maxLength));

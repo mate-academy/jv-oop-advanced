@@ -13,6 +13,7 @@ public class Rectangle extends Figure {
         this.upperSide = upperSide;
         this.leftSide = leftSide;
     }
+
     public Rectangle(ColorSupplier colorSupplier, Random random, int maxLength) {
         this(colorSupplier.getRandomColor(),
                 getRandomLength(random, maxLength),

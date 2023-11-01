@@ -11,6 +11,7 @@ public class Circle extends Figure {
         this(colorSupplier.getRandomColor(),
                 getRandomLength(random, maxLength));
     }
+
     public Circle(String color, double radius) {
         super(color);
         this.radius = radius;
