@@ -13,7 +13,6 @@ public class FigureSupplier {
     public static final int figuresTypesNumber = 5;
     private static final int defaultRadius = 10;
     private static final String defaultColor = Color.WHITE.name();
-    private static final Figure defaultFigure = new Circle(defaultColor, defaultRadius);
     private final ColorSupplier colorSupplier;
     private final Random random;
 
@@ -54,6 +53,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return defaultFigure;
+        return new Circle(defaultColor, defaultRadius);
     }
 }
