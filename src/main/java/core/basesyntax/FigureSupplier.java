@@ -9,7 +9,7 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int maxLengthInUnits = 100;
+    public static final int maxLength = 100;
     public static final int figuresTypesNumber = 5;
     private static final int defaultRadius = 10;
     private static final String defaultColor = Color.WHITE.name();
@@ -23,16 +23,28 @@ public class FigureSupplier {
         this.random = new Random();
         this.colorSupplier = new ColorSupplier(random);
     }
+    public double getRandomLength() {
+        return random.nextDouble() * maxLength;
+    }
 
     public Figure getRandomFigure() {
         int randomChoice = random.nextInt(figuresTypesNumber);
-
+        String color = colorSupplier.getRandomColor();
         return switch (randomChoice) {
-            case 0 -> new Circle(colorSupplier, random, maxLengthInUnits);
-            case 1 -> new Square(colorSupplier, random, maxLengthInUnits);
-            case 2 -> new Rectangle(colorSupplier, random, maxLengthInUnits);
-            case 3 -> new RightTriangle(colorSupplier, random, maxLengthInUnits);
-            case 4 -> new IsoscelesTrapezoid(colorSupplier, random, maxLengthInUnits);
+            case 0 -> new Circle(color,
+                    getRandomLength());
+            case 1 -> new Square(color,
+                    getRandomLength());
+            case 2 -> new Rectangle(color,
+                    getRandomLength(),
+                    getRandomLength());
+            case 3 -> new RightTriangle(color,
+                    getRandomLength(),
+                    getRandomLength());
+            case 4 -> new IsoscelesTrapezoid(color,
+                    getRandomLength(),
+                    getRandomLength(),
+                    getRandomLength());
             default -> {
                 assert false : "Default case should not be reached.";
                 yield null;

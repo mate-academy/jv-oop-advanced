@@ -1,8 +1,5 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.ColorSupplier;
-import java.util.Random;
-
 public class Rectangle extends Figure {
     private final double upperSide;
     private final double leftSide;
@@ -13,19 +10,16 @@ public class Rectangle extends Figure {
         this.leftSide = leftSide;
     }
 
-    public Rectangle(ColorSupplier colorSupplier, Random random, int maxLength) {
-        this(colorSupplier.getRandomColor(),
-                getRandomLength(random, maxLength),
-                getRandomLength(random, maxLength));
-    }
-
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle");
-        System.out.println("Color: " + color);
-        System.out.println("Area: " + roundDouble(calcArea()) + " sq. units");
-        System.out.println("Upper Side: " + roundDouble(upperSide) + " units");
-        System.out.println("Left Side: " + roundDouble(leftSide) + " units");
+        String output = "Figure: rectangle" + System.lineSeparator()
+                + "Color: " + color + System.lineSeparator()
+                + "Area: " + roundDouble(calcArea()) + " sq. units" + System.lineSeparator()
+                + "Upper Side: " + roundDouble(upperSide) + " units" + System.lineSeparator()
+                + "Left Side: " + roundDouble(leftSide) + " units";
+
+        System.out.println(output);
+
     }
 
     @Override
