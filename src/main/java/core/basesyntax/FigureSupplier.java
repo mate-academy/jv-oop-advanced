@@ -23,6 +23,7 @@ public class FigureSupplier {
         this.random = new Random();
         this.colorSupplier = new ColorSupplier(random);
     }
+
     public double getRandomLength() {
         return random.nextDouble() * maxLength;
     }
