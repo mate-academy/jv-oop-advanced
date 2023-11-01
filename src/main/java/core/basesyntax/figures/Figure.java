@@ -1,16 +1,16 @@
 package core.basesyntax.figures;
 
-public abstract class Figure implements Drawable {
+import java.util.Random;
+
+public abstract class Figure implements Drawable, Calculatable {
     protected String color;
-    protected double area;
+    public static double getRandomLength(Random random, int maxLength) {
+        return random.nextDouble()*maxLength;
+    }
 
     protected Figure(String color) {
         this.color = color;
     }
-
-    public abstract void draw();
-
-    public abstract void calcArea();
 
     public String roundDouble(double num) {
         // Prints out only 2 digits after point for doubles

@@ -9,7 +9,11 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static Figure defaultFigure;
+    public static final int maxLengthInUnits = 100;
+    public static final int figuresTypesNumber = 5;
+    private static final int defaultRadius = 10;
+    private static final String defaultColor = Color.WHITE.name();
+    private static final Figure defaultFigure = new Circle(defaultColor, defaultRadius);
     private final ColorSupplier colorSupplier;
     private final Random random;
 
@@ -21,47 +25,22 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        final int maxLengthInUnits = 100;
-        final int figuresTypesNumber = 5;
         int randomChoice = random.nextInt(figuresTypesNumber);
-        String randomColor = colorSupplier.getRandomColor();
 
-        double firstLength;
-        double secondLength;
-        double thirdLength;
-        switch (randomChoice) {
-            case 0:
-                firstLength = random.nextDouble() * maxLengthInUnits;
-                return new Circle(randomColor, firstLength);
-            case 1:
-                firstLength = random.nextDouble() * maxLengthInUnits;
-                return new Square(randomColor, firstLength);
-            case 2:
-                firstLength = random.nextDouble() * maxLengthInUnits;
-                secondLength = random.nextDouble() * maxLengthInUnits;
-                return new Rectangle(randomColor, firstLength, secondLength);
-            case 3:
-                firstLength = random.nextDouble() * maxLengthInUnits;
-                secondLength = random.nextDouble() * maxLengthInUnits;
-                return new RightTriangle(randomColor, firstLength, secondLength);
-            case 4:
-                firstLength = random.nextDouble() * maxLengthInUnits;
-                secondLength = random.nextDouble() * maxLengthInUnits;
-                thirdLength = random.nextDouble() * maxLengthInUnits;
-                return new IsoscelesTrapezoid(randomColor, firstLength, secondLength, thirdLength);
-            default:
+        return switch (randomChoice) {
+            case 0 -> new Circle(colorSupplier, random, maxLengthInUnits);
+            case 1 -> new Square(colorSupplier, random, maxLengthInUnits);
+            case 2 -> new Rectangle(colorSupplier, random, maxLengthInUnits);
+            case 3 -> new RightTriangle(colorSupplier, random, maxLengthInUnits);
+            case 4 -> new IsoscelesTrapezoid(colorSupplier, random, maxLengthInUnits);
+            default -> {
                 assert false : "Default case should not be reached.";
-                return null;
-        }
-
+                yield null;
+            }
+        };
     }
 
     public Figure getDefaultFigure() {
-        if (defaultFigure == null) {
-            final int defaultRadius = 10;
-            final String defaultColor = Color.WHITE.name();
-            defaultFigure = new Circle(defaultColor, defaultRadius);
-        }
         return defaultFigure;
     }
 }
