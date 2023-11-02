@@ -53,7 +53,7 @@ public class FigureSupplier {
     public Figure getDefaultFigure() {
         Circle circle = new Circle();
         circle.setRadius(10);
-         circle.setColor("WHITE");
+        circle.setColor("WHITE");
         return circle;
     }
 }
