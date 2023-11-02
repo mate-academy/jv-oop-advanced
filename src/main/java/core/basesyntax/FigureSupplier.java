@@ -6,35 +6,53 @@ public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
     private static final int MAX_RANDOM_VALUE = 100;
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final Figure defaultFigure = new Circle(Color.WHITE.name().toLowerCase(), 10);
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
-        FigureList className = FigureList.values()[figureNumber];
+        FigureList figureName = FigureList.values()[figureNumber];
         Figure figure;
-        switch (className) {
-            case Circle -> figure = new Circle(colorSupplier.getRandomColor(),
-                    random.nextInt(MAX_RANDOM_VALUE));
-            case Rectangle -> figure = new Rectangle(colorSupplier.getRandomColor(),
-                    random.nextInt(MAX_RANDOM_VALUE),
-                    random.nextInt(MAX_RANDOM_VALUE));
-            case IsoscelesTrapezoid ->
-                    figure = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                    random.nextInt(MAX_RANDOM_VALUE),
-                    random.nextInt(MAX_RANDOM_VALUE),
-                    random.nextInt(MAX_RANDOM_VALUE));
-            case Square -> figure = new Square(colorSupplier.getRandomColor(),
-                    random.nextInt(MAX_RANDOM_VALUE));
-            case RightTriangle -> figure = new RightTriangle(colorSupplier.getRandomColor(),
-                    random.nextInt(MAX_RANDOM_VALUE),
-                    random.nextInt(MAX_RANDOM_VALUE));
+        switch (figureName) {
+            case CIRCLE -> figure = createRandomCircle();
+            case RECTANGLE -> figure = createRandomRectangle();
+            case ISOSCELES_TRAPEZOID -> figure = createRandomIsoscelesTrapezoid();
+            case SQUARE -> figure = createRandomSquare();
+            case RIGHT_TRIANGLE -> figure = createRandomRightTriangle();
             default -> figure = null;
         }
         return figure;
     }
 
+    private RightTriangle createRandomRightTriangle() {
+        return new RightTriangle(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_RANDOM_VALUE),
+                random.nextInt(MAX_RANDOM_VALUE));
+    }
+
+    private Square createRandomSquare() {
+        return new Square(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_RANDOM_VALUE));
+    }
+
+    private IsoscelesTrapezoid createRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_RANDOM_VALUE),
+                random.nextInt(MAX_RANDOM_VALUE),
+                random.nextInt(MAX_RANDOM_VALUE));
+    }
+
+    private Rectangle createRandomRectangle() {
+        return new Rectangle(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_RANDOM_VALUE),
+                random.nextInt(MAX_RANDOM_VALUE));
+    }
+
+    private Circle createRandomCircle() {
+        return new Circle(colorSupplier.getRandomColor(),
+                random.nextInt(MAX_RANDOM_VALUE));
+    }
+
     public Figure getDefaultFigure() {
-        return defaultFigure;
+        return new Circle(Color.WHITE.name().toLowerCase(), 10);
     }
 }
