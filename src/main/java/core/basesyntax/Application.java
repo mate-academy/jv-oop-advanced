@@ -4,18 +4,18 @@ import java.util.Random;
 
 public class Application {
 
-    private static final Figure[] figures = new Figure[new Random().nextInt(3, 6)];
-    private static final FigureSupplier figure = new FigureSupplier();
+    private static final Figure[] FIGURES = new Figure[new Random().nextInt(3, 6)];
+    private static final FigureSupplier FIGURE_SUPPLIER = new FigureSupplier();
 
     public static void main(String[] args) {
 
-        for (int i = 0; i < figures.length / 2 + 1; i++) {
-            figures[i] = figure.getRandomFigure();
+        for (int i = 0; i < FIGURES.length / 2 + 1; i++) {
+            FIGURES[i] = FIGURE_SUPPLIER.getRandomFigure();
         }
-        for (int j = figures.length / 2; j < figures.length; j++) {
-            figures[j] = figure.getDefaultFigure();
+        for (int j = FIGURES.length / 2; j < FIGURES.length; j++) {
+            FIGURES[j] = FIGURE_SUPPLIER.getDefaultFigure();
         }
-        for (Figure figureShow : figures) {
+        for (Figure figureShow : FIGURES) {
             System.out.println(figureShow.info());
         }
     }
