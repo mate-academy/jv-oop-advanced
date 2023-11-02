@@ -14,14 +14,18 @@ public class RightTriangle extends Figure {
 
     @Override
     public String info() {
-        double area = (double) (firstLeg * secondLeg) / 2;
         return "Figure: RightTriagle, area: "
-                + area
+                + area()
                 + " sq. units, first leg: "
                 + firstLeg
                 + " units, second leg: "
                 + secondLeg
                 + " units, color: "
                 + getColor();
+    }
+
+    @Override
+    public double area() {
+        return (double) (firstLeg * secondLeg) / 2;
     }
 }

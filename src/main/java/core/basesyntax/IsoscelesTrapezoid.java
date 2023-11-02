@@ -14,14 +14,18 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String info() {
-        double area = height * side;
         return "Figure: rectangle, area: "
-                + area
+                + area()
                 + " sq. units, side: "
                 + side
                 + " units, height: "
                 + height
                 + " units, color: "
                 + getColor();
+    }
+
+    @Override
+    public double area() {
+        return height * side;
     }
 }

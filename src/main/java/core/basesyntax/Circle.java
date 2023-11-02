@@ -11,12 +11,16 @@ public class Circle extends Figure {
 
     @Override
     public String info() {
-        double area = radius * radius * PI;
         return "Figure: circle, area: "
-                + area
+                + area()
                 + " sq. units, radius: "
                 + radius
                 + " units, color: "
                 + getColor();
+    }
+
+    @Override
+    public double area() {
+        return radius * radius * PI;
     }
 }
