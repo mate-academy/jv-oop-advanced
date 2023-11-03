@@ -5,9 +5,9 @@ public class Rectangle extends Figure {
     private final double height;
 
     public Rectangle(double width, double height, Color color) {
+        super(color);
         this.width = width;
         this.height = height;
-        this.color = color;
     }
 
     @Override

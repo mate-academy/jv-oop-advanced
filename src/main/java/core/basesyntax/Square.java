@@ -4,8 +4,8 @@ public class Square extends Figure {
     private final double side;
 
     public Square(double side, Color color) {
+        super(color);
         this.side = side;
-        this.color = color;
     }
 
     @Override

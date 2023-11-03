@@ -4,13 +4,13 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int RANGE = 100;
-    private static final int RADIUS = 10;
+    private static final int DEFAULT_RADIUS = 10;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        Type[] types = Type.values();
-        Type figure = types[random.nextInt(types.length)];
+        Figuretype[] figuretypes = Figuretype.values();
+        Figuretype figure = figuretypes[random.nextInt(figuretypes.length)];
         Color randomColor = colorSupplier.getRandomColor();
         switch (figure) {
             case SQUARE: {
@@ -21,7 +21,7 @@ public class FigureSupplier {
                         + 1, random.nextInt(RANGE) + 1, random.nextInt(RANGE), randomColor);
             }
             case CIRCLE: {
-                return new Circle(random.nextInt(RADIUS) + 1, randomColor);
+                return new Circle(random.nextInt(DEFAULT_RADIUS) + 1, randomColor);
             }
             case RECTANGLE: {
                 return new Rectangle(random.nextInt(RANGE)
@@ -35,7 +35,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(RADIUS, Color.WHITE);
+        return new Circle(DEFAULT_RADIUS, Color.WHITE);
     }
 }
 

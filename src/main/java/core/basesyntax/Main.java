@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Main {
-
     public static final int COUNT = 4;
 
     public static void main(String[] args) {
