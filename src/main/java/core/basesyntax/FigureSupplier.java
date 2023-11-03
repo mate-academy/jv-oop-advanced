@@ -3,53 +3,58 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final Random FIGURE_INDEX = new Random();
-    private static final Random FIRST_SIDE = new Random();
-    private static final Random SECOND_SIDE = new Random();
-    private static final int DEFAULT_RADIUS = 10;
+    private static final Random random = new Random();
+    private static final int DEFAULT_LENGTH = 10;
     private static final String DEFAULT_COLOR = Color.WHITE.toString();
 
+    private int getIndex() {
+        return random.nextInt(4);
+    }
+
+    private int getFirstSide() {
+        return random.nextInt(1,10);
+    }
+
+    private int getSecondSide() {
+        return random.nextInt(1,10);
+    }
+
     public Figure getRandomFigure() {
-        final int index = FIGURE_INDEX.nextInt(5);
-        final int firstSide = FIRST_SIDE.nextInt(1, 10);
-        final int secondSide = SECOND_SIDE.nextInt(1, 10);
-        switch (index) {
+        switch (getIndex()) {
             case 0:
                 Circle circle = new Circle();
-                circle.setRadius(firstSide);
+                circle.setRadius(getFirstSide());
                 circle.setColor(new ColorSupplier().getRandomColor());
                 return circle;
             case 1:
                 Square square = new Square();
-                square.setSide(firstSide);
+                square.setSide(getFirstSide());
                 square.setColor(new ColorSupplier().getRandomColor());
                 return square;
             case 2:
                 Rectangle rectangle = new Rectangle();
-                rectangle.setLength(firstSide);
-                rectangle.setHeight(secondSide);
+                rectangle.setLength(getFirstSide());
+                rectangle.setHeight(getSecondSide());
                 rectangle.setColor(new ColorSupplier().getRandomColor());
                 return rectangle;
             case 3:
                 IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
-                isoscelesTrapezoid.setSide(firstSide);
-                isoscelesTrapezoid.setHeight(secondSide);
+                isoscelesTrapezoid.setSide(getFirstSide());
+                isoscelesTrapezoid.setHeight(getSecondSide());
                 isoscelesTrapezoid.setColor(new ColorSupplier().getRandomColor());
                 return isoscelesTrapezoid;
-            case 4:
+            default:
                 RightTriangle rightTriangle = new RightTriangle();
-                rightTriangle.setFirstLeg(firstSide);
-                rightTriangle.setSecondLeg(secondSide);
+                rightTriangle.setFirstLeg(getFirstSide());
+                rightTriangle.setSecondLeg(getSecondSide());
                 rightTriangle.setColor(new ColorSupplier().getRandomColor());
                 return rightTriangle;
-            default:
-                return getDefaultFigure();
         }
     }
 
     public Figure getDefaultFigure() {
         Circle circle = new Circle();
-        circle.setRadius(DEFAULT_RADIUS);
+        circle.setRadius(DEFAULT_LENGTH);
         circle.setColor(DEFAULT_COLOR);
         return circle;
     }

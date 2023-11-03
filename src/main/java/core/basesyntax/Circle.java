@@ -10,9 +10,9 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String info() {
+    public String draw() {
         return "Figure: circle, area: "
-                + area()
+                + getArea()
                 + " sq. units, radius: "
                 + radius
                 + " units, color: "
@@ -20,7 +20,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return radius * radius * PI;
     }
 }

@@ -13,9 +13,9 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String info() {
+    public String draw() {
         return "Figure: RightTriagle, area: "
-                + area()
+                + getArea()
                 + " sq. units, first leg: "
                 + firstLeg
                 + " units, second leg: "
@@ -25,7 +25,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return (double) (firstLeg * secondLeg) / 2;
     }
 }

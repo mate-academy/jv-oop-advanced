@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-
     private int height;
     private int length;
 
@@ -14,9 +13,9 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String info() {
+    public String draw() {
         return "Figure: rectangle, area: "
-                + area()
+                + getArea()
                 + " sq. units, height: "
                 + " units, length: "
                 + length
@@ -27,7 +26,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return height * length;
     }
 }
