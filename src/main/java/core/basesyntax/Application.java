@@ -5,19 +5,19 @@ import java.util.Random;
 public class Application {
     private static final Random RANDOM_VALUE = new Random();
     private static final int FIGURES_AMOUNT = RANDOM_VALUE.nextInt(3, 6);
-    private static final Figure[] FIGURES = new Figure[FIGURES_AMOUNT];
-    private static final FigureSupplier figureSupplier = new FigureSupplier();
 
     public static void main(String[] args) {
-        for (int i = 0; i < FIGURES.length; i++) {
-            if (i <= FIGURES.length / 2) {
-                FIGURES[i] = figureSupplier.getRandomFigure();
+        final Figure[] figures = new Figure[FIGURES_AMOUNT];
+        final FigureSupplier figureSupplier = new FigureSupplier();
+        for (int i = 0; i < figures.length; i++) {
+            if (i <= figures.length / 2) {
+                figures[i] = figureSupplier.getRandomFigure();
             }
-            if (i >= FIGURES.length / 2) {
-                FIGURES[i] = figureSupplier.getDefaultFigure();
+            if (i >= figures.length / 2) {
+                figures[i] = figureSupplier.getDefaultFigure();
             }
         }
-        for (Figure figureShow : FIGURES) {
+        for (Figure figureShow : figures) {
             System.out.println(figureShow.info());
         }
     }
