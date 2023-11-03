@@ -3,8 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class Application {
-    private static final Random random = new Random();
-    private static final int FIGURES_AMOUNT = random.nextInt(3, 6);
+    private static final Random RANDOM_VALUE = new Random();
+    private static final int FIGURES_AMOUNT = RANDOM_VALUE.nextInt(3, 6);
     private static final Figure[] FIGURES = new Figure[FIGURES_AMOUNT];
     private static final FigureSupplier figureSupplier = new FigureSupplier();
 
