@@ -5,9 +5,12 @@ import java.util.Random;
 public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
+    int figureType = random.nextInt(5);
+    public static final int FIGURE_COUNT = 5;
+    private static final Figure DEFAULT_FIGURE = new Circle(10, Colors.WHITE);
 
     public Figure getRandomFigure() {
-        int figureType = random.nextInt(5);
+        int figureType = random.nextInt(FIGURE_COUNT);
 
         switch (figureType) {
             case 0:
@@ -35,6 +38,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, Color.white);
+        return DEFAULT_FIGURE;
     }
 }

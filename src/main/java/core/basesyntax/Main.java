@@ -1,7 +1,8 @@
 package core.basesyntax;
 
 public class Main {
-    private static final Figure[] figures = new Figure[6];
+    private static final int FIGURES = 6;
+    private static final Figure[] figures = new Figure[FIGURES];
     private static final FigureSupplier figureSupplier = new FigureSupplier();
 
     public static void main(String[] args) {

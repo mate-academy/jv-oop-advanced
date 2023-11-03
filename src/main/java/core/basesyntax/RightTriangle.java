@@ -4,7 +4,7 @@ public class RightTriangle extends Figure {
     private double base;
     private double height;
 
-    public RightTriangle(double base, double height, Color color) {
+    public RightTriangle(double base, double height, Colors color) {
         super(color);
         this.base = base;
         this.height = height;
