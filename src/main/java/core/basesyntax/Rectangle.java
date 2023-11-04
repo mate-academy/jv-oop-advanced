@@ -29,12 +29,4 @@ public class Rectangle extends Figure {
     public double getArea() {
         return height * length;
     }
-
-    public Rectangle prepareRectangle() {
-        Rectangle prepareRectangle = new Rectangle();
-        prepareRectangle.setLength(side());
-        prepareRectangle.setHeight(side());
-        prepareRectangle.setColor(color());
-        return prepareRectangle;
-    }
 }

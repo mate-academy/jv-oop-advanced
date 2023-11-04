@@ -2,9 +2,8 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public abstract class Figure implements AreaCalculator, Drawable, FigureLogic {
+public abstract class Figure implements AreaCalculator, Drawable {
     private String color;
-    private final Random random = new Random();
 
     public String getColor() {
         return color;
@@ -14,15 +13,13 @@ public abstract class Figure implements AreaCalculator, Drawable, FigureLogic {
         this.color = color;
     }
 
-    @Override
     public int side() {
         final int minLength = 1;
         final int maxLength = 10;
-        return random.nextInt(minLength, maxLength);
+        return new Random().nextInt(minLength, maxLength);
     }
 
-    @Override
-    public String color() {
+    public String getRandomColor() {
         return new ColorSupplier().getRandomColor();
     }
 }

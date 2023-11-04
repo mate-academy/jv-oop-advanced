@@ -28,12 +28,4 @@ public class RightTriangle extends Figure {
     public double getArea() {
         return (double) (firstLeg * secondLeg) / 2;
     }
-
-    public RightTriangle prepareTriangle() {
-        RightTriangle prepareTriangle = new RightTriangle();
-        prepareTriangle.setFirstLeg(side());
-        prepareTriangle.setSecondLeg(side());
-        prepareTriangle.setColor(color());
-        return prepareTriangle;
-    }
 }

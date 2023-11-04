@@ -22,10 +22,4 @@ public class Square extends Figure {
         return side * side;
     }
 
-    public Square prepareSquare() {
-        Square prepareSquare = new Square();
-        prepareSquare.setSide(side());
-        prepareSquare.setColor(color());
-        return prepareSquare;
-    }
 }
