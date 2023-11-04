@@ -23,4 +23,11 @@ public class Circle extends Figure {
     public double getArea() {
         return radius * radius * PI;
     }
+
+    public Circle prepareCircle() {
+        Circle circle = new Circle();
+        circle.setRadius(side());
+        circle.setColor(color());
+        return circle;
+    }
 }

@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class Application {
-    private static final int FIGURES_AMOUNT = new Random().nextInt(3, 6);
+    private static final int FIGURES_AMOUNT = new Random().nextInt(3, 7);
 
     public static void main(String[] args) {
         final Figure[] figures = new Figure[FIGURES_AMOUNT];

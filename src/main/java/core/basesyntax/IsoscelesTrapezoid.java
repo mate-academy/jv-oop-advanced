@@ -28,4 +28,12 @@ public class IsoscelesTrapezoid extends Figure {
     public double getArea() {
         return height * side;
     }
+
+    public IsoscelesTrapezoid prepareTrapezoid() {
+        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
+        isoscelesTrapezoid.setSide(side());
+        isoscelesTrapezoid.setHeight(side());
+        isoscelesTrapezoid.setColor(color());
+        return isoscelesTrapezoid;
+    }
 }

@@ -3,53 +3,25 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final Random random = new Random();
+    private static final int INDEX_BOUND = 5;
     private static final int DEFAULT_LENGTH = 10;
     private static final String DEFAULT_COLOR = Color.WHITE.toString();
-
-    private int getIndex() {
-        return random.nextInt(4);
-    }
-
-    private int getFirstSide() {
-        return random.nextInt(1,10);
-    }
-
-    private int getSecondSide() {
-        return random.nextInt(1,10);
-    }
+    private final Random index = new Random();
+    private final Circle prepareCircle = new Circle();
+    private final Rectangle prepareRectangle = new Rectangle();
+    private final IsoscelesTrapezoid prepareTrapezoid = new IsoscelesTrapezoid();
+    private final RightTriangle prepareTriangle = new RightTriangle();
+    private final Square preparedSquare = new Square();
 
     public Figure getRandomFigure() {
-        switch (getIndex()) {
-            case 0:
-                Circle circle = new Circle();
-                circle.setRadius(getFirstSide());
-                circle.setColor(new ColorSupplier().getRandomColor());
-                return circle;
-            case 1:
-                Square square = new Square();
-                square.setSide(getFirstSide());
-                square.setColor(new ColorSupplier().getRandomColor());
-                return square;
-            case 2:
-                Rectangle rectangle = new Rectangle();
-                rectangle.setLength(getFirstSide());
-                rectangle.setHeight(getSecondSide());
-                rectangle.setColor(new ColorSupplier().getRandomColor());
-                return rectangle;
-            case 3:
-                IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
-                isoscelesTrapezoid.setSide(getFirstSide());
-                isoscelesTrapezoid.setHeight(getSecondSide());
-                isoscelesTrapezoid.setColor(new ColorSupplier().getRandomColor());
-                return isoscelesTrapezoid;
-            default:
-                RightTriangle rightTriangle = new RightTriangle();
-                rightTriangle.setFirstLeg(getFirstSide());
-                rightTriangle.setSecondLeg(getSecondSide());
-                rightTriangle.setColor(new ColorSupplier().getRandomColor());
-                return rightTriangle;
-        }
+        return switch (index.nextInt(INDEX_BOUND)) {
+            case 0 -> prepareCircle.prepareCircle();
+            case 1 -> preparedSquare.prepareSquare();
+            case 2 -> prepareRectangle.prepareRectangle();
+            case 3 -> prepareTrapezoid.prepareTrapezoid();
+            case 4 -> prepareTriangle.prepareTriangle();
+            default -> getDefaultFigure();
+        };
     }
 
     public Figure getDefaultFigure() {

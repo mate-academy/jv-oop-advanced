@@ -21,4 +21,11 @@ public class Square extends Figure {
     public double getArea() {
         return side * side;
     }
+
+    public Square prepareSquare() {
+        Square prepareSquare = new Square();
+        prepareSquare.setSide(side());
+        prepareSquare.setColor(color());
+        return prepareSquare;
+    }
 }
