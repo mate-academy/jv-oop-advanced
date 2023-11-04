@@ -28,8 +28,7 @@ public class FigureSupplier {
                         + 1, random.nextInt(RANGE) + 1, randomColor);
             }
             default: {
-                return new RightTriangle(random.nextInt(RANGE)
-                        + 1, random.nextInt(RANGE) + 1, randomColor);
+                return getDefaultFigure();
             }
         }
     }
