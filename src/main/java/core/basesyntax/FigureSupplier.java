@@ -2,46 +2,48 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class FigureSupplier {
+public class FigureSupplier implements SideCalculator {
     private static final int INDEX_BOUND = 5;
     private static final int DEFAULT_LENGTH = 10;
-    private static final String DEFAULT_COLOR = Color.WHITE.toString();
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
     private static final Random index = new Random();
 
+    // Initializing fields of object using constructor looks better,
+    // but also takes more code at this example
     private Circle getPrepareCircle() {
         Circle circle = new Circle();
-        circle.setRadius(circle.side());
+        circle.setRadius(side());
         circle.setColor(circle.getRandomColor());
         return circle;
     }
 
     private Square getPreparedSquare() {
         Square square = new Square();
-        square.setSide(square.side());
+        square.setSide(side());
         square.setColor(square.getRandomColor());
         return square;
     }
 
     private IsoscelesTrapezoid getPrepareTrapezoid() {
         IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
-        isoscelesTrapezoid.setSide(isoscelesTrapezoid.side());
-        isoscelesTrapezoid.setHeight(isoscelesTrapezoid.side());
+        isoscelesTrapezoid.setSide(side());
+        isoscelesTrapezoid.setHeight(side());
         isoscelesTrapezoid.setColor(isoscelesTrapezoid.getRandomColor());
         return isoscelesTrapezoid;
     }
 
     private Rectangle getPrepareRectangle() {
         Rectangle rectangle = new Rectangle();
-        rectangle.setLength(rectangle.side());
-        rectangle.setHeight(rectangle.side());
+        rectangle.setLength(side());
+        rectangle.setHeight(side());
         rectangle.setColor(rectangle.getRandomColor());
         return rectangle;
     }
 
     private RightTriangle getPrepareTriangle() {
         RightTriangle triangle = new RightTriangle();
-        triangle.setFirstLeg(triangle.side());
-        triangle.setSecondLeg(triangle.side());
+        triangle.setFirstLeg(side());
+        triangle.setSecondLeg(side());
         triangle.setColor(triangle.getRandomColor());
         return triangle;
     }
@@ -62,5 +64,12 @@ public class FigureSupplier {
         circle.setRadius(DEFAULT_LENGTH);
         circle.setColor(DEFAULT_COLOR);
         return circle;
+    }
+
+    @Override
+    public int side() {
+        final int minLength = 1;
+        final int maxLength = 10;
+        return new Random().nextInt(minLength, maxLength);
     }
 }
