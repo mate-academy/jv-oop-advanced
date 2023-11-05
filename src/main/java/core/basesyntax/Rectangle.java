@@ -1,15 +1,13 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private int height;
-    private int length;
+    private final int height;
+    private final int length;
 
-    public void setLength(int length) {
-        this.length = length;
-    }
-
-    public void setHeight(int height) {
+    public Rectangle(String color, int height, int length) {
+        super(color);
         this.height = height;
+        this.length = length;
     }
 
     @Override

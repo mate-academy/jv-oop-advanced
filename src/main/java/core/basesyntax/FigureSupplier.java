@@ -4,66 +4,23 @@ import java.util.Random;
 
 public class FigureSupplier implements SideCalculator {
     private static final int INDEX_BOUND = 5;
-    private static final int DEFAULT_LENGTH = 10;
     private static final String DEFAULT_COLOR = Color.WHITE.name();
+    private static final int DEFAULT_LENGTH = 10;
     private static final Random index = new Random();
-
-    // Initializing fields of object using constructor looks better,
-    // but also takes more code at this example
-    private Circle getPrepareCircle() {
-        Circle circle = new Circle();
-        circle.setRadius(side());
-        circle.setColor(circle.getRandomColor());
-        return circle;
-    }
-
-    private Square getPreparedSquare() {
-        Square square = new Square();
-        square.setSide(side());
-        square.setColor(square.getRandomColor());
-        return square;
-    }
-
-    private IsoscelesTrapezoid getPrepareTrapezoid() {
-        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
-        isoscelesTrapezoid.setSide(side());
-        isoscelesTrapezoid.setHeight(side());
-        isoscelesTrapezoid.setColor(isoscelesTrapezoid.getRandomColor());
-        return isoscelesTrapezoid;
-    }
-
-    private Rectangle getPrepareRectangle() {
-        Rectangle rectangle = new Rectangle();
-        rectangle.setLength(side());
-        rectangle.setHeight(side());
-        rectangle.setColor(rectangle.getRandomColor());
-        return rectangle;
-    }
-
-    private RightTriangle getPrepareTriangle() {
-        RightTriangle triangle = new RightTriangle();
-        triangle.setFirstLeg(side());
-        triangle.setSecondLeg(side());
-        triangle.setColor(triangle.getRandomColor());
-        return triangle;
-    }
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         return switch (index.nextInt(INDEX_BOUND)) {
-            case 0 -> getPrepareCircle();
-            case 1 -> getPreparedSquare();
-            case 2 -> getPrepareRectangle();
-            case 3 -> getPrepareTrapezoid();
-            case 4 -> getPrepareTriangle();
-            default -> getDefaultFigure();
+            case 0 -> prepareCircle();
+            case 1 -> preparedSquare();
+            case 2 -> prepareRectangle();
+            case 3 -> prepareTrapezoid();
+            default -> prepareTriangle();
         };
     }
 
     public Figure getDefaultFigure() {
-        Circle circle = new Circle();
-        circle.setRadius(DEFAULT_LENGTH);
-        circle.setColor(DEFAULT_COLOR);
-        return circle;
+        return defaultFigure();
     }
 
     @Override
@@ -71,5 +28,29 @@ public class FigureSupplier implements SideCalculator {
         final int minLength = 1;
         final int maxLength = 10;
         return new Random().nextInt(minLength, maxLength);
+    }
+
+    private Circle prepareCircle() {
+        return new Circle(colorSupplier.getRandomColor(), side());
+    }
+
+    private Square preparedSquare() {
+        return new Square(colorSupplier.getRandomColor(), side());
+    }
+
+    private Rectangle prepareRectangle() {
+        return new Rectangle(colorSupplier.getRandomColor(), side(), side());
+    }
+
+    private IsoscelesTrapezoid prepareTrapezoid() {
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), side(), side());
+    }
+
+    private RightTriangle prepareTriangle() {
+        return new RightTriangle(colorSupplier.getRandomColor(), side(), side());
+    }
+
+    private Circle defaultFigure() {
+        return new Circle(DEFAULT_COLOR, DEFAULT_LENGTH);
     }
 }

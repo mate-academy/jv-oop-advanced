@@ -3,9 +3,10 @@ package core.basesyntax;
 import static java.lang.Math.PI;
 
 public class Circle extends Figure {
-    private int radius;
+    private final int radius;
 
-    public void setRadius(int radius) {
+    public Circle(String color, int radius) {
+        super(color);
         this.radius = radius;
     }
 
@@ -23,5 +24,4 @@ public class Circle extends Figure {
     public double getArea() {
         return radius * radius * PI;
     }
-
 }

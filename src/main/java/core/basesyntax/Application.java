@@ -14,9 +14,8 @@ public class Application {
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
+            System.out.println(figures[i].draw());
         }
-        for (Figure figureShow : figures) {
-            System.out.println(figureShow.draw());
-        }
+
     }
 }
