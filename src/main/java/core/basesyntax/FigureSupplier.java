@@ -2,11 +2,13 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class FigureSupplier implements SideCalculator {
+public class FigureSupplier {
     private static final int INDEX_BOUND = 5;
+    private static final int SIDE_BOUND = 10;
     private static final String DEFAULT_COLOR = Color.WHITE.name();
     private static final int DEFAULT_LENGTH = 10;
     private static final Random index = new Random();
+    private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
@@ -23,11 +25,9 @@ public class FigureSupplier implements SideCalculator {
         return defaultFigure();
     }
 
-    @Override
-    public int side() {
+    private int side() {
         final int minLength = 1;
-        final int maxLength = 10;
-        return new Random().nextInt(minLength, maxLength);
+        return random.nextInt(minLength, SIDE_BOUND);
     }
 
     private Circle prepareCircle() {
