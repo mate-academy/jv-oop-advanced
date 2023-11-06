@@ -8,16 +8,18 @@ public class Rectangle extends Figure {
         super(color);
         this.width = width;
         this.height = height;
+
     }
 
     @Override
-    public double calculateArea() {
+    public double getArea() {
         return width * height;
+
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + calculateArea() + " sq. units, width: "
+        System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, width: "
                 + width + " units, height: " + height + " units, color: " + getColor());
     }
 
