@@ -9,33 +9,24 @@ public class FigureSupplier {
     private static final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        Figure figure;
         int figureType = random.nextInt(FIGURE_COUNT);
         Color color = colorSupplier.getRandomColor();
-        if (figureType == 1) {
-            double radius = random.nextInt(1, MAX_SIDE_LENGTH);
-            figure = new Circle(radius, color);
-        } else if (figureType == 2) {
-            double firstBase = random.nextInt(1, MAX_SIDE_LENGTH);
-            double secondBase = random.nextInt(1, MAX_SIDE_LENGTH);
-            double height = random.nextInt(1, MAX_SIDE_LENGTH);
-            figure = new IsoscelesTrapezoid(firstBase, secondBase, height, color);
-        } else if (figureType == 3) {
-            double firstSide = random.nextInt(1, MAX_SIDE_LENGTH);
-            double secondSide = random.nextInt(1, MAX_SIDE_LENGTH);
-            figure = new Rectangle(firstSide, secondSide, color);
-        } else if (figureType == 4) {
-            double firstLeg = random.nextInt(1, MAX_SIDE_LENGTH);
-            double secondLeg = random.nextInt(1, MAX_SIDE_LENGTH);
-            figure = new RightTriangle(firstLeg, secondLeg, color);
-        } else {
-            double side = random.nextInt(1, MAX_SIDE_LENGTH);
-            figure = new Square(side, color);
-        }
-        return figure;
+
+        return switch (figureType) {
+            case 1 -> new Circle(getRandomSide(), color);
+            case 2 -> new IsoscelesTrapezoid(getRandomSide(), getRandomSide(),
+                    getRandomSide(), color);
+            case 3 -> new Rectangle(getRandomSide(), getRandomSide(), color);
+            case 4 -> new RightTriangle(getRandomSide(), getRandomSide(), color);
+            default -> new Square(getRandomSide(), color);
+        };
     }
 
     public Figure getDefaultFigure() {
         return new Circle(10, Color.WHITE);
+    }
+
+    private int getRandomSide() {
+        return random.nextInt(1, MAX_SIDE_LENGTH);
     }
 }
