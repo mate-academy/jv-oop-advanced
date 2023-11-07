@@ -1,14 +1,7 @@
 package core.basesyntax;
 
-abstract class Figure {
+interface Figure {
+    double getArea();
 
-    protected String color;
-
-    public Figure(String color) {
-        this.color = color;
-    }
-
-    abstract double getArea();
-
-    abstract void draw();
+    void draw();
 }
