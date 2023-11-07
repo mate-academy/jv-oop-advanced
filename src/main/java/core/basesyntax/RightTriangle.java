@@ -1,12 +1,11 @@
 package core.basesyntax;
 
-class RightTriangle implements Figure {
-    private String color;
+class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
     public RightTriangle(String color, double firstLeg, double secondLeg) {
-        this.color = color;
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
@@ -18,7 +17,7 @@ class RightTriangle implements Figure {
     @Override
     public void draw() {
         System.out.println("Figure: triangle, area: " + getArea()
-                + " sq. units, firstLeg: " + firstLeg + " units, secondLeg: " + secondLeg
-                + " units, color: " + color);
+                + " sq. units, firstLeg: " + this.firstLeg + " units, secondLeg: " + this.secondLeg
+                + " units, color: " + this.color);
     }
 }
