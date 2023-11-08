@@ -133,7 +133,7 @@ public class StructureTest {
     }
     return classes;
   }
-
+  
   private static List<Class> findClasses(File directory, String packageName)
           throws ClassNotFoundException {
     List<Class> classes = new ArrayList<Class>();
