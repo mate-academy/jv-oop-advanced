@@ -15,11 +15,10 @@ public class Circle extends Figure {
     public double getArea() {
         double area = 3.14 * radius * 2;
         return area;
-
     }
 
     @Override
-    public void printFigureInfo() {
+    public void draw() {
         System.out.println("Figure: Circle, area: "
                 + decimalFormat.format(getArea())
                 + " units, radius: "

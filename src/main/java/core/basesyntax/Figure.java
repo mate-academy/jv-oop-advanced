@@ -4,8 +4,7 @@ public class Figure implements Drawble, AreaCalculator {
     protected String color;
 
     @Override
-    public void printFigureInfo() {
-
+    public void draw() {
     }
 
     @Override

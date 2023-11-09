@@ -11,10 +11,6 @@ public class FigureSupplier {
 
     private ColorSupplier colorSupplier = new ColorSupplier();
 
-    private int getRandomValue() {
-        return random.nextInt(MAX_VALUE) + MIN_VALUE;
-    }
-
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT) + 1;
         switch (figureNumber) {
@@ -45,5 +41,9 @@ public class FigureSupplier {
 
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_VALUE, String.valueOf(Color.WHITE.name().toLowerCase()));
+    }
+
+    private int getRandomValue() {
+        return random.nextInt(MAX_VALUE) + MIN_VALUE;
     }
 }

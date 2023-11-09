@@ -13,14 +13,13 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public void printFigureInfo() {
+    public void draw() {
         System.out.println("Figure: Right triangle, area: "
                 + getArea() + " units, sideA: "
                 + sideA + " units, sideB: "
                 + sideB + " units, height: "
                 + height + " color:"
                 + color);
-
     }
 
     @Override
