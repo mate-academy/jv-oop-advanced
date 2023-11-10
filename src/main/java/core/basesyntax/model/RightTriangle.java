@@ -3,11 +3,10 @@ package core.basesyntax.model;
 import core.basesyntax.model.enums.Color;
 
 public class RightTriangle extends Figure {
-
     private Integer firstLeg;
     private Integer secondLeg;
 
-    public RightTriangle(Color color, Integer firstLeg, Integer secondLeg) {
+    public RightTriangle(String color, Integer firstLeg, Integer secondLeg) {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
@@ -24,6 +23,6 @@ public class RightTriangle extends Figure {
                 + calculateArea() + " sq. units, firstLeg: "
                 + firstLeg + " units, secondLeg: "
                 + secondLeg + " units, color: "
-                + getColor().toString().toLowerCase());
+                + getColor().toLowerCase());
     }
 }

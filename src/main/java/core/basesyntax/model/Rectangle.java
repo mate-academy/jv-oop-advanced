@@ -3,11 +3,10 @@ package core.basesyntax.model;
 import core.basesyntax.model.enums.Color;
 
 public class Rectangle extends Figure {
-
     private Integer sideA;
     private Integer sideB;
 
-    public Rectangle(Color color, Integer sideA, Integer sideB) {
+    public Rectangle(String color, Integer sideA, Integer sideB) {
         super(color);
         this.sideA = sideA;
         this.sideB = sideB;
@@ -24,6 +23,6 @@ public class Rectangle extends Figure {
                 + calculateArea() + " sq. units, sideA: "
                 + sideA + " units, sideB: "
                 + sideB + " units, color: "
-                + getColor().toString().toLowerCase());
+                + getColor().toLowerCase());
     }
 }

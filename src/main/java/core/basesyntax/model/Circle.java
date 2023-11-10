@@ -3,10 +3,8 @@ package core.basesyntax.model;
 import core.basesyntax.model.enums.Color;
 
 public class Circle extends Figure {
-
     private Integer radius;
-
-    public Circle(Color color, Integer radius) {
+    public Circle(String color, Integer radius) {
         super(color);
         this.radius = radius;
     }
@@ -21,6 +19,6 @@ public class Circle extends Figure {
         System.out.println("Figure: circle, area: "
                 + calculateArea() + " sq. units, radius: "
                 + radius + " units, color: "
-                + getColor().toString().toLowerCase());
+                + getColor().toLowerCase());
     }
 }

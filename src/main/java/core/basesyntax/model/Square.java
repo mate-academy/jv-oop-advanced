@@ -3,10 +3,9 @@ package core.basesyntax.model;
 import core.basesyntax.model.enums.Color;
 
 public class Square extends Figure {
-
     private Integer sideLength;
 
-    public Square(Color color, Integer sideLength) {
+    public Square(String color, Integer sideLength) {
         super(color);
         this.sideLength = sideLength;
     }
@@ -21,6 +20,6 @@ public class Square extends Figure {
         System.out.println("Figure: circle, area: "
                 + calculateArea() + " sq. units, sideLength: "
                 + sideLength + " units, color: "
-                + getColor().toString().toLowerCase());
+                + getColor().toLowerCase());
     }
 }

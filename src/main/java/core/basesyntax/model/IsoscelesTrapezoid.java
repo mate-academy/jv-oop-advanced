@@ -3,12 +3,11 @@ package core.basesyntax.model;
 import core.basesyntax.model.enums.Color;
 
 public class IsoscelesTrapezoid extends Figure {
-
     private Integer sideA;
     private Integer sideB;
     private Integer height;
 
-    public IsoscelesTrapezoid(Color color, Integer sideA, Integer sideB, Integer height) {
+    public IsoscelesTrapezoid(String color, Integer sideA, Integer sideB, Integer height) {
         super(color);
         this.sideA = sideA;
         this.sideB = sideB;
@@ -27,7 +26,7 @@ public class IsoscelesTrapezoid extends Figure {
                 + sideA + " units, sideB: "
                 + sideB + " units, height: "
                 + height + " units, color: "
-                + getColor().toString().toLowerCase());
+                + getColor().toLowerCase());
     }
 
 }
