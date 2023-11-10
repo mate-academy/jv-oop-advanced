@@ -1,7 +1,5 @@
 package core.basesyntax.model;
 
-import core.basesyntax.model.enums.Color;
-
 public class IsoscelesTrapezoid extends Figure {
     private Integer sideA;
     private Integer sideB;

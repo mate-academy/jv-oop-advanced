@@ -1,9 +1,8 @@
 package core.basesyntax.model;
 
-import core.basesyntax.model.enums.Color;
-
 public class Circle extends Figure {
     private Integer radius;
+
     public Circle(String color, Integer radius) {
         super(color);
         this.radius = radius;

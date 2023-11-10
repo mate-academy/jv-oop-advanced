@@ -1,6 +1,5 @@
 package core.basesyntax.model;
 
-import core.basesyntax.model.enums.Color;
 import core.basesyntax.model.interfaces.AreaCalculator;
 import core.basesyntax.model.interfaces.Drawable;
 

@@ -1,7 +1,5 @@
 package core.basesyntax.model;
 
-import core.basesyntax.model.enums.Color;
-
 public class Square extends Figure {
     private Integer sideLength;
 

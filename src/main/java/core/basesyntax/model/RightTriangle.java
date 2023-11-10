@@ -1,7 +1,5 @@
 package core.basesyntax.model;
 
-import core.basesyntax.model.enums.Color;
-
 public class RightTriangle extends Figure {
     private Integer firstLeg;
     private Integer secondLeg;
