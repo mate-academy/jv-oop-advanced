@@ -23,3 +23,4 @@ public class RightTriangle extends Figure {
         return (int) Math.sqrt(result);
     }
 }
+

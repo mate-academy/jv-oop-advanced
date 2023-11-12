@@ -5,3 +5,4 @@ public abstract class Figure implements Drawable {
 
     public abstract double calculateArea();
 }
+

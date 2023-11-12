@@ -10,3 +10,4 @@ public class ColorSupplier {
         return String.valueOf(Color.values()[index]);
     }
 }
+
