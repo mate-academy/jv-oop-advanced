@@ -7,11 +7,14 @@ package core.basesyntax;
 public class Circle extends Figure {
     private int radius;
 
+<<<<<<< HEAD
     /**
      * Конструктор Circle.
      * @param radius радіус кола
      */
 
+=======
+>>>>>>> a0b1bb2 (remove encoding config from checkstyle plugin)
     public Circle(String color, int radius) {
         super(color);
         this.radius = radius;

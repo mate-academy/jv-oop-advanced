@@ -1,11 +1,17 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    private int side; // ✅ Додано змінну `side`
+
+    private int side;
 
     public Square(String color, int side) {
         super(color);
-        this.side = side; // ✅ Ініціалізація змінної
+        this.side = side;
+    private int side;
+
+    public Square(String color, int side) {
+        super(color);
+        this.side = side;
     }
 
     @Override
