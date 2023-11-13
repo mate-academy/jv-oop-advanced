@@ -1,10 +1,7 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Application {
-    private static final Random RANDOM_NUMBER = new Random();
-    private static final int ARRAY_LENGTH = RANDOM_NUMBER.nextInt(10);
+    private static final int ARRAY_LENGTH = 6;
 
     public static void main(String[] args) {
         Figure[] figures = new Figure[ARRAY_LENGTH];

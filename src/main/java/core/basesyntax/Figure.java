@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements FigureDrawer, AreaCalculator {
+public abstract class Figure implements Drawer, AreaCalculator {
     private final String color;
 
     public Figure(String color) {
