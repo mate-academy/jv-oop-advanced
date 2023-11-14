@@ -1,14 +1,11 @@
 package core.basesyntax;
 
-import java.util.Random;
-
-public class Circle extends Figure implements FigureInfo {
+public class Circle extends Figure implements AreaCalculaton,PrintInfo {
     private final double radius;
 
-    public Circle(double radius,String color) {
+    public Circle(double radius, String color) {
         super(color);
         this.radius = radius;
-
     }
 
     @Override
@@ -17,9 +14,8 @@ public class Circle extends Figure implements FigureInfo {
     }
 
     @Override
-    public void draw() {
-        System.out.println("Figure" + " " + "Circle" + " " + "radius" + " " + radius + " " + "Area" + " " + getArea() + " ");
-
-
+    public String getInformation() {
+        return "Figure" + " " + "Circle" + " " + "Radius" + " " + radius + " " + "Area" + " "
+                + getArea() + " " + "Color" + " " + color;
     }
 }

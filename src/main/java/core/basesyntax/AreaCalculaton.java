@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-public interface FigureInfo {
+public interface AreaCalculaton {
     double getArea();
-
-      void draw();
 }
