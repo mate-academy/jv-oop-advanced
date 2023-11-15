@@ -14,9 +14,9 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         Random random = new Random();
         int randomType = random.nextInt(NUMBER_OF_FIGURES);
-        double randomMax = random.nextInt(Integer.MAX_VALUE);
-        double randomMax1 = random.nextInt(Integer.MAX_VALUE);
-        double randomMax2 = random.nextInt(Integer.MAX_VALUE);
+        double randomMax = random.nextDouble(Integer.MAX_VALUE);
+        double randomMax1 = random.nextDouble(Integer.MAX_VALUE);
+        double randomMax2 = random.nextDouble(Integer.MAX_VALUE);
         String randomColor = colorSupplier.getRandomColor();
 
         switch (randomType) {
@@ -30,7 +30,6 @@ public class FigureSupplier {
                 return new RightTriangle(randomMax, randomMax1, randomColor);
             default:
                 return new IsoscelesTrapezoid(randomMax, randomMax1, randomMax2, randomColor);
-
         }
     }
 
