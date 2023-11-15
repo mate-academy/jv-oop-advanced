@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements Drawable {
+public abstract class Figure implements Drawable, AreaMeasuringCapable {
     private static final double ROUND_NUMBER = 1000.0;
     protected Color color;
 

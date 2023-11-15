@@ -8,11 +8,7 @@ public class Square extends Figure {
         this.side = side;
     }
 
-    public double getPerimeter() {
-        return round(4 * side);
-    }
-
-    public double getArea() {
+    public double calculateArea() {
         return round(side * side);
     }
 
@@ -21,8 +17,7 @@ public class Square extends Figure {
         System.out.println(
                 "Figure: right triangle"
                         + ", side: " + round(side) + " units"
-                        + ", area: " + getArea() + " sq. units"
-                        + ", perimeter: " + getPerimeter() + " units"
+                        + ", area: " + calculateArea() + " sq. units"
                         + ", color: " + color
         );
     }

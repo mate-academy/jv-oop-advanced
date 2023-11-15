@@ -10,7 +10,7 @@ public class RightTriangle extends Figure {
         this.height = height;
     }
 
-    public double getArea() {
+    public double calculateArea() {
         return round((side * height) / 2);
     }
 
@@ -20,7 +20,7 @@ public class RightTriangle extends Figure {
                 "Figure: right triangle"
                         + ", firstLeg: " + round(side) + " units"
                         + ", secondLeg: " + round(height) + " units"
-                        + ", area: " + getArea() + " sq. units"
+                        + ", area: " + calculateArea() + " sq. units"
                         + ", color: " + color
         );
     }

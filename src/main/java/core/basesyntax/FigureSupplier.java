@@ -7,7 +7,7 @@ public class FigureSupplier {
     private static final double MIN_VALUE_FOR_RANDOM_UNIT = 5.0;
     private static final double MAX_VALUE_FOR_RANDOM_UNIT = 55.0;
     private static final double CIRCLE_RADIUS = 10.0;
-    private static final int NUMBERS_OF_FIGURES = 4;
+    private static final int NUMBERS_OF_FIGURES = 5;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -18,7 +18,8 @@ public class FigureSupplier {
             case 1 -> getRandomRightTriangle();
             case 2 -> getIsoscelesTrapezoid();
             case 3 -> getRandomSquare();
-            default -> getRandomRectangle();
+            case 4 -> getRandomRectangle();
+            default -> getDefaultFigure();
         };
 
     }

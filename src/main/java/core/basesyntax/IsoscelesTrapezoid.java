@@ -12,30 +12,12 @@ public class IsoscelesTrapezoid extends Figure {
         this.leg = leg;
     }
 
-    public double getLongerBase() {
-        return longerBase;
-    }
-
-    public double getShorterBase() {
-        return shorterBase;
-    }
-
-    public double getLeg() {
-        return leg;
-    }
-
-    public double getArea() {
+    public double calculateArea() {
         return round(((longerBase + shorterBase) * getHeight()) / 2);
     }
 
-    public double getHeight() {
-
+    private double getHeight() {
         return round((Math.sqrt(4 * Math.pow(leg, 2) - Math.pow(longerBase - shorterBase, 2))) / 2);
-    }
-
-    public double getPerimeter() {
-
-        return round(longerBase + shorterBase + 2 * leg);
     }
 
     @Override
@@ -45,8 +27,7 @@ public class IsoscelesTrapezoid extends Figure {
                 + ", shorter base: " + round(shorterBase) + " units"
                 + ", leg: " + round(leg) + " units"
                 + ", height: " + getHeight() + " units"
-                + ", area: " + getArea() + " sq. units"
-                + ", perimeter: " + getPerimeter() + " units"
+                + ", area: " + calculateArea() + " sq. units"
                 + ", color: " + color);
     }
 }

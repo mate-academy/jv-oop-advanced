@@ -10,11 +10,7 @@ public class Rectangle extends Figure {
         this.height = height;
     }
 
-    public double getPerimeter() {
-        return round(2 * (width + height));
-    }
-
-    public double getArea() {
+    public double calculateArea() {
         return round(width * height);
     }
 
@@ -24,8 +20,7 @@ public class Rectangle extends Figure {
                 "Figure: rectangle"
                         + ", width: " + round(width) + " units"
                         + ", height: " + round(height) + " units"
-                        + ", area: " + getArea() + " sq. units"
-                        + ", perimeter: " + getPerimeter() + " units"
+                        + ", area: " + calculateArea() + " sq. units"
                         + ", color: " + color
         );
     }
