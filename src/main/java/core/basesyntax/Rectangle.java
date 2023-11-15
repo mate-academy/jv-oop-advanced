@@ -1,9 +1,8 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Drawable{
-
-    private double width;
-    private double height;
+public class Rectangle extends Figure {
+    private final double width;
+    private final double height;
 
     public Rectangle(Color color, double width, double height) {
         super(color);
@@ -22,12 +21,12 @@ public class Rectangle extends Figure implements Drawable{
     @Override
     public void draw() {
         System.out.println(
-                "Figure: rectangle" +
-                        ", width: " + width + " units" +
-                        ", height: " + height + " units"+
-                        ", area: " + getArea() +" sq. units"+
-                        ", perimeter: " + getPerimeter() +" units"+
-                        ", color: " + color
+                "Figure: rectangle"
+                        + ", width: " + round(width) + " units"
+                        + ", height: " + round(height) + " units"
+                        + ", area: " + getArea() + " sq. units"
+                        + ", perimeter: " + getPerimeter() + " units"
+                        + ", color: " + color
         );
     }
 }

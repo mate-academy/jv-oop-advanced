@@ -1,7 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements Drawable{
-
+public class Circle extends Figure {
     private final double radius;
 
     public Circle(Color color, double radius) {
@@ -12,12 +11,12 @@ public class Circle extends Figure implements Drawable{
     @Override
     public void draw() {
         System.out.println(
-                "Figure: circle" +
-                        ", radius: " + getRadius() + " units" +
-                        ", area: " + getArea() + " sq. units"+
-                        ", perimeter: " + getPerimeter() +" units"+
-                        ", diameter: " + getDiameter() +" units"+
-                        ", color: " + color
+                "Figure: circle"
+                        + ", radius: " + getRadius() + " units"
+                        + ", area: " + getArea() + " sq. units"
+                        + ", perimeter: " + getPerimeter() + " units"
+                        + ", diameter: " + getDiameter() + " units"
+                        + ", color: " + color
         );
 
     }
@@ -27,7 +26,7 @@ public class Circle extends Figure implements Drawable{
     }
 
     public double getRadius() {
-        return radius;
+        return round(radius);
     }
 
     public double getArea() {

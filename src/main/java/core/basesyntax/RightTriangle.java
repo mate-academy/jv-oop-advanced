@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements Drawable {
-    private double base;
-    private double hipotenuse;
-    private double height;
+public class RightTriangle extends Figure {
+    private final double base;
+    private final double hipotenuse;
+    private final double height;
 
     public RightTriangle(Color color, double base, double hipotenuse, double height) {
         super(color);
@@ -24,13 +24,13 @@ public class RightTriangle extends Figure implements Drawable {
     @Override
     public void draw() {
         System.out.println(
-                "Figure: right triangle" +
-                        ", base: " + base + " units" +
-                        ", hipotenuse: " + hipotenuse + " units"+
-                        ", height: " + height + " units"+
-                        ", area: " + getArea() +" sq. units"+
-                        ", perimeter: " + getPerimeter() +" units"+
-                        ", color: " + color
+                "Figure: right triangle"
+                        + ", base: " + round(base) + " units"
+                        + ", hipotenuse: " + round(hipotenuse) + " units"
+                        + ", height: " + round(height) + " units"
+                        + ", area: " + getArea() + " sq. units"
+                        + ", perimeter: " + getPerimeter() + " units"
+                        + ", color: " + color
         );
     }
 }

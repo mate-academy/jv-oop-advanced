@@ -2,9 +2,17 @@ package core.basesyntax;
 
 public class Main {
     public static void main(String[] args) {
-        new IsoscelesTrapezoid(Color.BLACK,10,8,5).draw();
-        new Circle(Color.BLACK,6).draw();
-        new Rectangle(Color.BLACK,4, 6).draw();
-        new RightTriangle(Color.BLACK,3, 5,4).draw();
+        FigureSupplier figureSupplier = new FigureSupplier();
+        Figure[] figures = new Figure[]{
+                figureSupplier.getRandomFigure(),
+                figureSupplier.getRandomFigure(),
+                figureSupplier.getRandomFigure(),
+                figureSupplier.getDefaultFigure(),
+                figureSupplier.getDefaultFigure(),
+                figureSupplier.getDefaultFigure(),
+        };
+        for (Figure figure : figures) {
+            figure.draw();
+        }
     }
 }

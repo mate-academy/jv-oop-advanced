@@ -1,7 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements Drawable{
-
+public class IsoscelesTrapezoid extends Figure {
     private final double longerBase;
     private final double shorterBase;
     private final double leg;
@@ -31,7 +30,7 @@ public class IsoscelesTrapezoid extends Figure implements Drawable{
 
     public double getHeight() {
 
-        return round((Math.sqrt(4 * Math.pow(leg,2) - Math.pow(longerBase - shorterBase, 2))) / 2);
+        return round((Math.sqrt(4 * Math.pow(leg, 2) - Math.pow(longerBase - shorterBase, 2))) / 2);
     }
 
     public double getPerimeter() {
@@ -41,15 +40,13 @@ public class IsoscelesTrapezoid extends Figure implements Drawable{
 
     @Override
     public void draw() {
-        System.out.println(
-                "Figure: isosceles trapezoid" +
-                        ", longer base: " + longerBase + " units" +
-                        ", shorter base: " + shorterBase + " units"+
-                        ", leg: " + leg + " units"+
-                        ", height: " + getHeight() +" units"+
-                        ", area: " + getArea() +" sq. units"+
-                        ", perimeter: " + getPerimeter() +" units"+
-                        ", color: " + color
-        );
+        System.out.println("Figure: isosceles trapezoid"
+                + ", longer base: " + round(longerBase) + " units"
+                + ", shorter base: " + round(shorterBase) + " units"
+                + ", leg: " + round(leg) + " units"
+                + ", height: " + getHeight() + " units"
+                + ", area: " + getArea() + " sq. units"
+                + ", perimeter: " + getPerimeter() + " units"
+                + ", color: " + color);
     }
 }
