@@ -3,50 +3,51 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+
+    private static final double MIN_VALUE_FOR_RANDOM_UNIT = 5.0;
+    private static final double MAX_VALUE_FOR_RANDOM_UNIT = 55.0;
+    private static final double CIRCLE_RADIUS = 10.0;
+    private static final int NUMBERS_OF_FIGURES = 4;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int randomIndexForMethod = random.nextInt(5);
-        switch (randomIndexForMethod) {
-            case 0:
-                return getRandomCircle();
-            case 1:
-                return getRandomRightTriangle();
-            case 2:
-                return getIsoscelesTrapezoid();
-            case 3:
-                return getRandomSquare();
-            case 4:
-                return getRandomRectangle();
-            default:
-                return getDefaultFigure();
-        }
+        int randomIndexForMethod = random.nextInt(NUMBERS_OF_FIGURES);
+        return switch (randomIndexForMethod) {
+            case 0 -> getRandomCircle();
+            case 1 -> getRandomRightTriangle();
+            case 2 -> getIsoscelesTrapezoid();
+            case 3 -> getRandomSquare();
+            default -> getRandomRectangle();
+        };
 
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE, 10);
+        return new Circle(Color.WHITE, CIRCLE_RADIUS);
     }
 
     private Figure getRandomCircle() {
-        return new Circle(colorSupplier.getRandomColor(), random.nextDouble(200));
+        return new Circle(
+                colorSupplier.getRandomColor(),
+                random.nextDouble(MAX_VALUE_FOR_RANDOM_UNIT)
+        );
     }
 
     private Figure getIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(
                 colorSupplier.getRandomColor(),
-                random.nextDouble(49, 101),
-                random.nextDouble(7, 35),
-                random.nextDouble(49, 101)
+                random.nextDouble(MIN_VALUE_FOR_RANDOM_UNIT, MAX_VALUE_FOR_RANDOM_UNIT),
+                random.nextDouble(MIN_VALUE_FOR_RANDOM_UNIT, MAX_VALUE_FOR_RANDOM_UNIT),
+                random.nextDouble(MIN_VALUE_FOR_RANDOM_UNIT, MAX_VALUE_FOR_RANDOM_UNIT)
         );
     }
 
     private Figure getRandomRectangle() {
         return new Rectangle(
                 colorSupplier.getRandomColor(),
-                random.nextDouble(30, 70),
-                random.nextDouble(10, 40)
+                random.nextDouble(MIN_VALUE_FOR_RANDOM_UNIT, MAX_VALUE_FOR_RANDOM_UNIT),
+                random.nextDouble(MIN_VALUE_FOR_RANDOM_UNIT, MAX_VALUE_FOR_RANDOM_UNIT)
 
         );
     }
@@ -54,16 +55,16 @@ public class FigureSupplier {
     private Figure getRandomRightTriangle() {
         return new RightTriangle(
                 colorSupplier.getRandomColor(),
-                random.nextDouble(10, 100),
-                random.nextDouble(50, 150),
-                random.nextDouble(10, 100)
+                random.nextDouble(MIN_VALUE_FOR_RANDOM_UNIT, MAX_VALUE_FOR_RANDOM_UNIT),
+                random.nextDouble(MIN_VALUE_FOR_RANDOM_UNIT, MAX_VALUE_FOR_RANDOM_UNIT)
+
         );
     }
 
     private Figure getRandomSquare() {
         return new Square(
                 colorSupplier.getRandomColor(),
-                random.nextDouble(4, 50)
+                random.nextDouble(MIN_VALUE_FOR_RANDOM_UNIT, MAX_VALUE_FOR_RANDOM_UNIT)
         );
     }
 }
