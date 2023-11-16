@@ -3,7 +3,6 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-
     private static final double MIN_VALUE_FOR_RANDOM_UNIT = 5.0;
     private static final double MAX_VALUE_FOR_RANDOM_UNIT = 55.0;
     private static final double CIRCLE_RADIUS = 10.0;
