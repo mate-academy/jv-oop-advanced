@@ -16,8 +16,8 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String getInformation() {
-        return "Figure" + " " + "Rectangle" + " " + "FirstLeg" + " " + firstLeg + " " + "SecondLeg"
-                + " " + secondLeg + " " + "Area" + " " + getArea() + " " + "Color" + " " + color;
+    public void draw() {
+        System.out.println("Figure" + " " + "Rectangle" + " " + "FirstLeg" + " " + firstLeg + " " + "SecondLeg"
+                + " " + secondLeg + " " + "Area" + " " + getArea() + " " + "Color" + " " + color);
     }
 }

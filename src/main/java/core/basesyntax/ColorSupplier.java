@@ -10,7 +10,7 @@ public class ColorSupplier {
         return Color.values()[index].name();
     }
 
-    public String getWhiteColor() {
+    public String getDefaultColor() {
         return Color.WHITE.name();
     }
 }
