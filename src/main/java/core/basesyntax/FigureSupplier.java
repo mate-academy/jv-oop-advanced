@@ -7,7 +7,8 @@ public class FigureSupplier {
     private Random random = new Random();
 
     public Figure getRandomFigure() {
-        int figureType = random.nextInt(5);
+        int numberOfFigureTypes = 5;
+        int figureType = random.nextInt(numberOfFigureTypes);
         String color = colorSupplier.getRandomColor();
 
         switch (figureType) {
@@ -34,7 +35,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        String whiteColor = Colors.WHITE.toString();
+        String whiteColor = Color.WHITE.toString();
         return new Circle(whiteColor, 10);
     }
 }
