@@ -10,14 +10,6 @@ public class Rectangle extends Figure {
         this.length = length;
     }
 
-    public double getLength() {
-        return length;
-    }
-
-    public double getWide() {
-        return wide;
-    }
-
     @Override
     public double calculateArea() {
         double area = wide * length;
@@ -27,8 +19,8 @@ public class Rectangle extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: rectangle, area: " + calculateArea()
-                + ", wide: " + getWide()
-                + ", length:" + getLength()
+                + ", wide: " + wide
+                + ", length:" + length
                 + ", color: " + getColor());
     }
 }
