@@ -1,9 +1,6 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.interfaces.Area;
-import core.basesyntax.interfaces.Draw;
-
-public class Rectangle extends Figure implements Area, Draw {
+public class Rectangle extends Figure {
     private int length;
     private int width;
 
