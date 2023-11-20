@@ -10,15 +10,14 @@ import java.util.Random;
 
 public class FigureSupplier {
     private ColorSupplier colorSupplier;
+    private Random random = new Random();
+    private int randomShape = random.nextInt(5);
 
     public FigureSupplier(ColorSupplier colorSupplier) {
         this.colorSupplier = colorSupplier;
     }
 
     public Figure getRandomFigure() {
-        Random random = new Random();
-        int randomShape = random.nextInt(5);
-
         switch (randomShape) {
             case 0:
                 return new Square(colorSupplier.getRandomColor(), random.nextInt(10) + 1);
