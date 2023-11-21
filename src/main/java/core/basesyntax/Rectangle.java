@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements AreaCalculator, Painter {
+public class Rectangle extends Figure {
     private final int firstSide;
     private final int secondSide;
 
@@ -11,7 +11,6 @@ public class Rectangle extends Figure implements AreaCalculator, Painter {
         this.secondSide = secondSide;
     }
 
-
     @Override
     public void getArea() {
         area = firstSide * secondSide;
@@ -19,6 +18,8 @@ public class Rectangle extends Figure implements AreaCalculator, Painter {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + name + ", area: " + area + " sq. units, " + "firstSide: " + firstSide + " units, " + "secondSide: " + secondSide + " units, " + "color: " + color);
+        System.out.println("Figure: " + name + ", area: " + area + " sq. units, " + "firstSide: "
+                + firstSide + " units, " + "secondSide: "
+                + secondSide + " units, " + "color: " + color);
     }
 }

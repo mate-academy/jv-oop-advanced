@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements AreaCalculator, Painter {
+public class RightTriangle extends Figure {
     private final int firstLeg;
     private final int secondLeg;
 
@@ -11,7 +11,6 @@ public class RightTriangle extends Figure implements AreaCalculator, Painter {
         this.secondLeg = secondLeg;
     }
 
-
     @Override
     public void getArea() {
         area = (double) (firstLeg * secondLeg) / 2;
@@ -19,6 +18,8 @@ public class RightTriangle extends Figure implements AreaCalculator, Painter {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + name + ", area: " + area + " sq. units, " + "firstLeg: " + firstLeg + " units, " + "secondLeg: " + secondLeg + " units, " + "color: " + color);
+        System.out.println("Figure: " + name + ", area: " + area + " sq. units, "
+                + "firstLeg: " + firstLeg + " units, "
+                + "secondLeg: " + secondLeg + " units, " + "color: " + color);
     }
 }
