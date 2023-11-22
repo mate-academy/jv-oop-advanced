@@ -23,7 +23,7 @@ public class FigureSupplier {
 
         switch (figureNumber) {
             case 0:
-                return new Square(randomAreaProperty, color);
+                return new Square(getRandomLength(), color);
             case 1:
                 return new Rectangle(randomAreaProperty, randomAreaPropertySecond, color);
             case 2:
