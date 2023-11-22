@@ -4,8 +4,8 @@ import core.basesyntax.Figure;
 
 public class Rectangle extends Figure {
     private static final String TYPE = "rectangle";
-    private double length = 5;
-    private double width = 2;
+    private double length;
+    private double width;
 
     public Rectangle(double length, double width, String color) {
         super(color);
