@@ -23,15 +23,9 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
   public void draw() {
-        double area = calculateArea();
-        double roundedArea = Math.round(area * 100.0) / 100.0;
-        double roundedHeight = Math.round(height * 100.0) / 100.0;
-        double roundedParallelSideFirst = Math.round(parallelSideFirst * 100.0) / 100.0;
-        double roundedParallelSideSecond = Math.round(parallelSideSecond * 100.0) / 100.0;
-
-        System.out.println("Figure: " + TYPE + ", area: " + roundedArea + " sq. units, height: "
-                + roundedHeight + " units, parallelSideFirst: " + roundedParallelSideFirst
-                + " units, parallelSideSecond: " + roundedParallelSideSecond + " units color: "
-                + getColor());
+        System.out.println("Figure: " + TYPE + ", area: " + getRoundedValue(calculateArea())
+                + " sq. units, height: " + getRoundedValue(height) + " units, parallelSideFirst: "
+                + getRoundedValue(parallelSideFirst) + " units, parallelSideSecond: "
+                + getRoundedValue(parallelSideSecond) + " units color: " + getColor());
     }
 }

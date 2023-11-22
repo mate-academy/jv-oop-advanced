@@ -20,11 +20,7 @@ public class Square extends Figure {
 
     @Override
   public void draw() {
-        double area = calculateArea();
-        double roundedArea = Math.round(area * 100.0) / 100.0;
-        double roundedSide = Math.round(side * 100.0) / 100.0;
-
-        System.out.println("Figure: " + TYPE + ", area: " + roundedArea + " sq. units, side: "
-                + roundedSide + " units, color: " + getColor());
+        System.out.println("Figure: " + TYPE + ", area: " + getRoundedValue(calculateArea())
+                + " sq. units, side: " + getRoundedValue(side) + " units, color: " + getColor());
     }
 }

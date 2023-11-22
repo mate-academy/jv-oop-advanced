@@ -20,13 +20,8 @@ public class Rectangle extends Figure {
 
     @Override
   public void draw() {
-        double area = calculateArea();
-        double roundedArea = Math.round(area * 100.0) / 100.0;
-        double roundedLength = Math.round(length * 100.0) / 100.0;
-        double roundedWidth = Math.round(width * 100.0) / 100.0;
-
-        System.out.println("Figure: " + TYPE + ", area: " + roundedArea + " sq. units, length: "
-                + roundedLength + " units, width: " + roundedWidth + " units, color: "
-                + getColor());
+        System.out.println("Figure: " + TYPE + ", area: " + getRoundedValue(calculateArea())
+                + " sq. units, length: " + getRoundedValue(length) + " units, width: "
+                + getRoundedValue(width) + " units, color: " + getColor());
     }
 }

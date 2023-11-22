@@ -20,13 +20,8 @@ public class RightTriangle extends Figure {
 
     @Override
   public void draw() {
-        double area = calculateArea();
-        double roundedArea = Math.round(area * 100.0) / 100.0;
-        double roundedFirstLeg = Math.round(firstLeg * 100.0) / 100.0;
-        double roundedSecondLeg = Math.round(secondLeg * 100.0) / 100.0;
-
-        System.out.println("Figure: " + TYPE + ", area: " + roundedArea + " sq. units, firstLeg: "
-                + roundedFirstLeg + " units, secondLeg: " + roundedSecondLeg + " units, color: "
-                + getColor());
+        System.out.println("Figure: " + TYPE + ", area: " + getRoundedValue(calculateArea())
+                + " sq. units, firstLeg: " + getRoundedValue(firstLeg) + " units, secondLeg: "
+                + getRoundedValue(secondLeg) + " units, color: " + getColor());
     }
 }

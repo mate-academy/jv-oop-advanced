@@ -11,7 +11,8 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
-    private static final int RADIUS = 5;
+    private static final int DEFAULT_RADIUS = 5;
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
     private static final int MAX_LENGTH = 10;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
