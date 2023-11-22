@@ -10,7 +10,6 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-
     private static final int FIGURE_COUNT = 5;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
