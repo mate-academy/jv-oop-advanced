@@ -40,7 +40,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(RADIUS, Color.WHITE.name());
+        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
     }
 }
 
