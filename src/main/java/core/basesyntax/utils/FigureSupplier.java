@@ -27,7 +27,6 @@ public class FigureSupplier {
                 return new RightTriangle(randomAreaProperty, randomAreaPropertySecond, color);
             case 3:
                 return new Circle(randomAreaProperty, color);
-            case 4:
             default:
                 return new IsoscelesTrapezoid(randomAreaProperty, randomAreaPropertySecond,
                     randomAreaPropertyThird, color);
