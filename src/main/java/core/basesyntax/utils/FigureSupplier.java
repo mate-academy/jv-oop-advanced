@@ -16,9 +16,6 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
-        double randomAreaProperty = random.nextDouble() * 10 + 1;
-        double randomAreaPropertySecond = random.nextDouble() * 10 + 1;
-        double randomAreaPropertyThird = random.nextDouble() * 10 + 1;
         String color = colorSupplier.getRandomColor();
 
         switch (figureNumber) {
