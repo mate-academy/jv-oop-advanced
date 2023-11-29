@@ -1,23 +1,17 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Circle extends Figure {
-    private double radius;
+    private final String circleColor;
+    private final double radius;
 
-    private String circleColor = new Figure().getColor();
-
-    public Circle(Random random) {
-        this.radius = Math.abs(random.nextDouble());
-        this.circleColor = ColorSupplier.getRandomColor();
-        draw();
+    public Circle(int radius, String color) {
+        this.radius = radius;
+        this.circleColor = color;
     }
 
-    public Circle(int radius) {
-        this.circleColor = Color.WHITE.name();
+    public Circle(int radius, Color color) {
+        this.circleColor = color.name();
         this.radius = radius;
-        draw();
-
     }
 
     @Override

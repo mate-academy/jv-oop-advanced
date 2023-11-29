@@ -10,8 +10,10 @@ public class Main {
             if (i < figures.length / 2) {
                 Figure randomFigure = figureSupplier.getRandomFigure();
                 figures[i] = randomFigure;
+                figures[i].draw();
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
+                figures[i].draw();
             }
         }
     }

@@ -1,19 +1,17 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class IsoscelesTrapezoid extends Figure {
-    private double heightOfTrapezoid;
-    private double upHorizontalSide;
-    private double downHorizontalSide;
-    private String ispscelesTrapezoidColor = new Figure().getColor();
+    private final int heightOfTrapezoid;
+    private final int upHorizontalSide;
+    private final int downHorizontalSide;
+    private String isoscelesTrapezoidColor = new Figure().getColor();
 
-    public IsoscelesTrapezoid(Random random) {
-        this.heightOfTrapezoid = Math.abs(random.nextInt());
-        this.upHorizontalSide = Math.abs(random.nextInt());
-        this.downHorizontalSide = Math.abs(random.nextInt());
-        this.ispscelesTrapezoidColor = ColorSupplier.getRandomColor();
-        draw();
+    public IsoscelesTrapezoid(int heightOfTrapezoid, int upHorizontalSide,
+                              int downHorizontalSide, String color) {
+        this.heightOfTrapezoid = heightOfTrapezoid;
+        this.downHorizontalSide = downHorizontalSide;
+        this.upHorizontalSide = upHorizontalSide;
+        this.isoscelesTrapezoidColor = color;
     }
 
     @Override
@@ -27,6 +25,6 @@ public class IsoscelesTrapezoid extends Figure {
                 + " sq. units, down horizontal side: " + downHorizontalSide
                 + " sq. units, up horizontal side: " + upHorizontalSide
                 + " sq. units, height of trapezoid: "
-                + heightOfTrapezoid + " units, color: " + ispscelesTrapezoidColor);
+                + heightOfTrapezoid + " units, color: " + isoscelesTrapezoidColor);
     }
 }

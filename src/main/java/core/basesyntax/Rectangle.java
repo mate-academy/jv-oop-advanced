@@ -1,17 +1,14 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Rectangle extends Figure {
     private int sideA;
     private int sideB;
     private String rectangleColor = new Figure().getColor();
 
-    public Rectangle(Random random) {
-        this.sideA = Math.abs(random.nextInt());
-        this.sideB = Math.abs(random.nextInt());
-        this.rectangleColor = ColorSupplier.getRandomColor();
-        draw();
+    public Rectangle(int sideA, int sideB, String color) {
+        this.sideA = sideA;
+        this.sideB = sideB;
+        this.rectangleColor = color;
     }
 
     @Override
