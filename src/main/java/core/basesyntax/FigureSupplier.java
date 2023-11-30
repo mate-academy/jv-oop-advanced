@@ -4,19 +4,24 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int NUMBER_OF_FIGURES = 5;
-    private static final Random random = new Random();
+    private final Random random;
     private final ColorSupplier colorSupplier;
 
     public FigureSupplier(ColorSupplier colorSupplier) {
         this.colorSupplier = colorSupplier;
+        this.random = new Random();
+
+    }
+
+    private double generateRandomSize() {
+        return random.nextDouble() * 100;
     }
 
     public Figure getRandomFigure() {
         int randomType = random.nextInt(NUMBER_OF_FIGURES);
-        // Assuming max size for a figure is 100 for the example
-        double randomSize = random.nextDouble() * 100;
-        double randomSize1 = random.nextDouble() * 100;
-        double randomSize2 = random.nextDouble() * 100;
+        double randomSize = generateRandomSize();
+        double randomSize1 = generateRandomSize();
+        double randomSize2 = generateRandomSize();
         String randomColor = colorSupplier.getColorRandom();
         switch (randomType) {
             case 0:
