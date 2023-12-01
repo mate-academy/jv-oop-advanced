@@ -2,12 +2,10 @@ package core.basesyntax;
 
 public class Square extends Figure {
     private double side;
-
     public Square(double side, Color color) {
         this.side = side;
         this.setColor(color);
     }
-
     @Override
     public double getArea() {
 

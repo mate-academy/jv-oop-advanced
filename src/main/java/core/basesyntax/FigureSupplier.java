@@ -8,8 +8,13 @@ public class FigureSupplier {
     public static final int DEFAULT_RADIUS = 10;
     public static final Color DEFAULT_COLOR = Color.WHITE;
 
-    private static final Random random = new Random();
-    private static final ColorSupplier colorSupplier = new ColorSupplier();
+    private Random random;
+    private ColorSupplier colorSupplier;
+
+    public FigureSupplier() {
+        this.random = new Random();
+        this.colorSupplier = new ColorSupplier();
+    }
 
     public Figure getRandomFigure() {
         int figureType = random.nextInt(FIGURE_COUNT);
