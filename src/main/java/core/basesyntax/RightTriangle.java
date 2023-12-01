@@ -5,9 +5,9 @@ public class RightTriangle extends Figure {
     private int height;
 
     public RightTriangle(int side, int height, String color) {
+        super(color);
         this.side = side;
         this.height = height;
-        this.color = color;
     }
 
     @Override

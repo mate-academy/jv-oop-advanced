@@ -6,10 +6,10 @@ public class IsoscelesTrapezoid extends Figure {
     private int secondParallel;
 
     public IsoscelesTrapezoid(int height, int firstParallel, int secondParallel, String color) {
+        super(color);
         this.height = height;
         this.firstParallel = firstParallel;
         this.secondParallel = secondParallel;
-        this.color = color;
     }
 
     @Override
