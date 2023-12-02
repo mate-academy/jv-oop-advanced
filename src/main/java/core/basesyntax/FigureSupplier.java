@@ -21,10 +21,11 @@ public class FigureSupplier {
                 return new RightTriangle(colorSupplier.getRandomColor(),
                         getRandomNumber(), getRandomNumber());
             case 3:
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomNumber()
-                        , getRandomNumber(), getRandomNumber());
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomNumber(),
+                         getRandomNumber(), getRandomNumber());
             case 4:
-                return new Rectangle(colorSupplier.getRandomColor(), getRandomNumber(), getRandomNumber());
+                return new Rectangle(colorSupplier.getRandomColor(),
+                        getRandomNumber(), getRandomNumber());
             default:
                 return getDefaultFigure();
         }
