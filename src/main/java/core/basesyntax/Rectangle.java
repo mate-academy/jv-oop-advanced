@@ -1,0 +1,24 @@
+package core.basesyntax;
+
+public class Rectangle extends Figure {
+    private int width;
+    private int length;
+
+    public Rectangle(String color, int width, int length) {
+        super(color);
+        this.length = length;
+        this.width = width;
+    }
+
+    @Override
+    public double getArea() {
+        return width * length;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("I am rectangle, my area is: " + getArea()
+                + " width and length: " + width + " " + length
+                + ", color" + getColor());
+    }
+}
