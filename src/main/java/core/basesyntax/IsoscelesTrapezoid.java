@@ -15,9 +15,9 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public void draw() {
         System.out.printf("Figure: isosceles trapezoid, area: %.1f sq. units, "
-                        + "height: %d units, first parallel: %d units, second parallel %d units, color: %s\n"
-                , getArea(), height, firstParallel, secondParallel, color);
-
+                        + "height: %d units, first parallel: %d units, "
+                        + "second parallel %d units, color: %s\n",
+                        getArea(), height, firstParallel, secondParallel, color);
     }
 
     @Override
