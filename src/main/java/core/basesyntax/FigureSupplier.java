@@ -14,17 +14,17 @@ public class FigureSupplier {
         int first = new Random().nextInt(maxValue);
         switch (number) {
             case 0:
-                return new Circle(colorSupplier.getRandomColor(), first);
+                return new Circle(colorSupplier.getRandomColor(),  new Random().nextInt(maxValue));
             case 1:
-                return new Rectangle(colorSupplier.getRandomColor(), first,
+                return new Rectangle(colorSupplier.getRandomColor(), new Random().nextInt(maxValue),
                         new Random().nextInt(maxValue));
             case 2:
-                return new Square(colorSupplier.getRandomColor(), first);
+                return new Square(colorSupplier.getRandomColor(), new Random().nextInt(maxValue));
             case 3:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), first,
                         new Random().nextInt(maxValue), new Random().nextInt(maxValue));
             default:
-                return new RightTriangle(colorSupplier.getRandomColor(), first,
+                return new RightTriangle(colorSupplier.getRandomColor(), new Random().nextInt(maxValue),
                         new Random().nextInt(maxValue));
         }
     }
