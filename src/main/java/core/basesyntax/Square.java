@@ -16,7 +16,7 @@ public class Square extends Figure {
     @Override
     public void draw() {
         System.out.println("I am square, my area is " + getArea()
-                + " side: " + side
-                + ", color: " + getColor());
+                + " my side is " + side
+                + ", my color is " + getColor() + "\n");
     }
 }
