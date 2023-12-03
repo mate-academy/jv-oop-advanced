@@ -13,9 +13,9 @@ public class RightTriangle extends Figure {
     @Override
     public void draw() {
         System.out.println("I am right treangle, my area is " + getArea()
-                + " my first leg and second leg are: " + firstLeg
+                + " my first leg and second leg are " + firstLeg
                 + " " + secondLeg
-                + ", my color: " + getColor());
+                + ", my color is " + getColor() + "\n");
     }
 
     @Override
