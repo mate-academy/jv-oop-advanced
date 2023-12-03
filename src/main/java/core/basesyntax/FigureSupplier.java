@@ -5,27 +5,28 @@ import java.util.Random;
 public class FigureSupplier {
     private static final String DEFAULT_COLOR = "WHITE";
     private static final int DEFAULT_VALUE = 10;
-    private final int numberOfFigures = 5;
-    private final int maxValue = 15;
+    private static final int NUMBER_OF_FIGURES = 5;
+    private static final int MAX_VALUE = 15;
+    private final Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int number = new Random().nextInt(numberOfFigures);
-        int first = new Random().nextInt(maxValue);
+        int number = random.nextInt(NUMBER_OF_FIGURES);
+        int first = random.nextInt(MAX_VALUE);
         switch (number) {
             case 0:
                 return new Circle(colorSupplier.getRandomColor(), first);
             case 1:
                 return new Rectangle(colorSupplier.getRandomColor(), first,
-                        new Random().nextInt(maxValue));
+                        random.nextInt(MAX_VALUE));
             case 2:
                 return new Square(colorSupplier.getRandomColor(), first);
             case 3:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), first,
-                        new Random().nextInt(maxValue), new Random().nextInt(maxValue));
+                        random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
             default:
                 return new RightTriangle(colorSupplier.getRandomColor(), first,
-                        new Random().nextInt(maxValue));
+                        random.nextInt(MAX_VALUE));
         }
     }
 

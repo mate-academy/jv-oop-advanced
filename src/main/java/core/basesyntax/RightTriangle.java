@@ -11,15 +11,15 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void draw() {
-        System.out.println("I am right treangle, my area is " + getArea()
-                + " my first leg and second leg are " + firstLeg
-                + " " + secondLeg
-                + ", my color is " + getColor() + "\n");
+    public double calculateArea() {
+        return (firstLeg * secondLeg) / 2;
     }
 
     @Override
-    public double getArea() {
-        return (firstLeg * secondLeg) / 2;
+    public void draw() {
+        System.out.println("I am right treangle, my area is " + calculateArea()
+                + " my first leg and second leg are " + firstLeg
+                + " " + secondLeg
+                + ", my color is " + getColor() + "\n");
     }
 }
