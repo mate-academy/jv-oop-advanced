@@ -9,7 +9,8 @@ public class Main {
                 figures[i] = figureSupplier.getDefaultFigure();
             } else {
                 figures[i] = figureSupplier.getRandomFigure();
-            } figures[i].draw();
+            }
+            figures[i].draw();
         }
     }
 }
