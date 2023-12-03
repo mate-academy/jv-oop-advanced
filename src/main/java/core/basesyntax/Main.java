@@ -11,6 +11,6 @@ public class Main {
                 figures[i] = figureSupplier.getRandomFigure();
             }
             figures[i].draw();
+            }
         }
     }
-}
