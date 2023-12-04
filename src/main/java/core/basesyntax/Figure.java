@@ -9,5 +9,5 @@ public abstract class Figure implements AreaCalculator, Drawable {
 
     public String getColor() {
         return color;
-    } // I need this getter to get color in overrided method "draw" in every figure class
+    }
 }

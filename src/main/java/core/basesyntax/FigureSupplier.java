@@ -10,23 +10,32 @@ public class FigureSupplier {
     private final Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
+    public int getGeometricProperty() {
+        int geometricProperty = random.nextInt(1, NUMBER_OF_FIGURES + 1);
+        return geometricProperty;
+    }
+
+    public int getRandomValue() {
+        int randomValue = random.nextInt(1, MAX_VALUE);
+        return randomValue;
+    }
+
     public Figure getRandomFigure() {
-        int number = random.nextInt(NUMBER_OF_FIGURES);
-        int first = random.nextInt(MAX_VALUE);
-        switch (number) {
-            case 0:
-                return new Circle(colorSupplier.getRandomColor(), first);
+        String color = colorSupplier.getRandomColor();
+        switch (getGeometricProperty()) {
             case 1:
-                return new Rectangle(colorSupplier.getRandomColor(), first,
-                        random.nextInt(MAX_VALUE));
+                return new Circle(color, getRandomValue());
             case 2:
-                return new Square(colorSupplier.getRandomColor(), first);
+                return new Rectangle(color, getRandomValue(),
+                        getRandomValue());
             case 3:
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), first,
-                        random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE));
+                return new Square(color, getRandomValue());
+            case 4:
+                return new IsoscelesTrapezoid(color, getRandomValue(),
+                        getRandomValue(), getRandomValue());
             default:
-                return new RightTriangle(colorSupplier.getRandomColor(), first,
-                        random.nextInt(MAX_VALUE));
+                return new RightTriangle(color, getRandomValue(),
+                        getRandomValue());
         }
     }
 
