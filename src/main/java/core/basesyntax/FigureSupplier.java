@@ -12,8 +12,8 @@ public class FigureSupplier {
     private ColorSupplier colorSupplier;
 
     public FigureSupplier() {
-        this.random = new Random();
-        this.colorSupplier = new ColorSupplier();
+        random = new Random();
+        colorSupplier = new ColorSupplier();
     }
 
     public Figure getRandomFigure() {

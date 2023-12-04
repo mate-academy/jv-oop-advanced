@@ -5,9 +5,9 @@ public class Rectangle extends Figure {
     private double secondSide;
 
     public Rectangle(double firstSide, double secondSide, Color color) {
+        super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
-        this.setColor(color);
     }
 
     @Override
@@ -17,10 +17,9 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        double area = getArea();
         System.out.println(new StringBuilder()
                 .append("Figure: rectangle, ")
-                .append("area: ").append(area).append(" sq. units, ")
+                .append("area: ").append(getArea()).append(" sq. units, ")
                 .append("first side: ").append(firstSide).append(" units, ")
                 .append("second side: ").append(secondSide).append(" units, ")
                 .append("color: ").append(this.getColor())
