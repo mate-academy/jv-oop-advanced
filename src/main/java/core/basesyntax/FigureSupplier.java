@@ -9,9 +9,16 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int NUMBER_OF_SHAPES = 5;
+    private static final int SQUARE = 0;
+    private static final int RECTANGLE = 1;
+    private static final int RIGHT_TRIANGLE = 2;
+    private static final int CIRCLE = 3;
+    private static final int TRAPEZOID = 4;
     private final ColorSupplier colorSupplier;
     private final Random random = new Random();
-    private final int randomShape = random.nextInt(5);
+
+    private final int randomShape = random.nextInt(NUMBER_OF_SHAPES);
 
     public FigureSupplier(ColorSupplier colorSupplier) {
         this.colorSupplier = colorSupplier;
@@ -19,20 +26,31 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         return switch (randomShape) {
-            case 0 -> new Square(colorSupplier.getRandomColor(), random.nextInt(10) + 1);
-            case 1 -> new Rectangle(colorSupplier.getRandomColor(), random.nextInt(10) + 1,
-                    random.nextInt(10) + 1);
-            case 2 -> new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(10) + 1,
-                    random.nextInt(10) + 1);
-            case 3 -> new Circle(colorSupplier.getRandomColor(), random.nextInt(10) + 1);
-            case 4 -> new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                    random.nextInt(10) + 1,
-                    random.nextInt(10) + 1, random.nextInt(10) + 1);
-            default -> null;
+            case SQUARE -> new Square(colorSupplier.getRandomColor(), getRandomSize());
+            case RECTANGLE -> new Rectangle(colorSupplier
+                    .getRandomColor(),
+                    getRandomSize(),
+                    getRandomSize());
+            case RIGHT_TRIANGLE -> new RightTriangle(colorSupplier
+                    .getRandomColor(),
+                    getRandomSize(),
+                    getRandomSize());
+            case CIRCLE -> new Circle(colorSupplier.getRandomColor(), getRandomSize());
+            case TRAPEZOID -> new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                    getRandomSize(), getRandomSize(), getRandomSize());
+            default -> throw new IllegalArgumentException("Invalid shape index");
         };
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("White", 10);
+        return new Circle("White", getDefaultSize());
+    }
+
+    private int getRandomSize() {
+        return random.nextInt(10) + 1;
+    }
+
+    private int getDefaultSize() {
+        return 10;
     }
 }
