@@ -4,7 +4,7 @@ public class Square extends Figure {
     private int size;
 
     public Square(String color, int size) {
-        this.color = color;
+        super(color);
         this.size = size;
     }
 
