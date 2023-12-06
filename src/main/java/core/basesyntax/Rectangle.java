@@ -6,7 +6,6 @@ public class Rectangle extends Figure {
     private int height;
 
     public Rectangle(String color, int base, int height) {
-        super(color);
         this.color = color;
         this.base = base;
         this.height = height;
