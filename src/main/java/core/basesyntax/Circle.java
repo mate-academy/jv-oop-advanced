@@ -1,8 +1,6 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-
-    private String color;
     private int radius;
 
     public Circle(String color, int radius) {
@@ -20,5 +18,3 @@ public class Circle extends Figure {
         System.out.println("Figure: Circle " + ", Color: " + color + ", radius " + radius);
     }
 }
-
-

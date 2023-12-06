@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private String color;
     private int base;
     private int height;
 
@@ -21,4 +20,3 @@ public class RightTriangle extends Figure {
         System.out.println("Figure: RightTriangle" + ", Color: " + color + ", area: " + getArea());
     }
 }
-
