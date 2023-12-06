@@ -3,12 +3,18 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final String WHITE = "WHITE";
-    private Random random = new Random();
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private static final int RADIUS = 10;
+    private static final int FIGURES = 4;
+    private Random random;
+    private ColorSupplier colorSupplier;
+
+    public FigureSupplier() {
+        random = new Random();
+        colorSupplier = new ColorSupplier();
+    }
 
     public Figure getRandomFigure() {
-        int randomNumber = random.nextInt(4);
+        int randomNumber = random.nextInt(FIGURES);
         switch (randomNumber) {
             case 0:
                 return new Square(colorSupplier.getRandomColor(), random.nextInt());
@@ -27,6 +33,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(WHITE, 10);
+        return new Circle(Color.WHITE.name(), RADIUS);
     }
 }
