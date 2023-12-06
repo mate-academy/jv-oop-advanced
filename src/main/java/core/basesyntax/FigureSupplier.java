@@ -15,9 +15,10 @@ public class FigureSupplier {
     private static final int RIGHT_TRIANGLE = 2;
     private static final int CIRCLE = 3;
     private static final int TRAPEZOID = 4;
+    private static final String DEFAULT_COLOR = "White";
+    private static final int DEFAULT_SIZE = 10;
     private final ColorSupplier colorSupplier;
     private final Random random = new Random();
-
     private final int randomShape = random.nextInt(NUMBER_OF_SHAPES);
 
     public FigureSupplier(ColorSupplier colorSupplier) {
@@ -43,14 +44,10 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("White", getDefaultSize());
+        return new Circle(DEFAULT_COLOR, DEFAULT_SIZE);
     }
 
     private int getRandomSize() {
         return random.nextInt(10) + 1;
-    }
-
-    private int getDefaultSize() {
-        return 10;
     }
 }

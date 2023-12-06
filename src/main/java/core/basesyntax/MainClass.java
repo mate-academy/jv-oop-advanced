@@ -6,15 +6,14 @@ public class MainClass {
     public static void main(String[] args) {
         ColorSupplier colorSupplier = new ColorSupplier();
         FigureSupplier figureSupplier = new FigureSupplier(colorSupplier);
+        int i = 0;
         Figure[] figures = new Figure[6];
 
-        for (int i = 0; i < 6; i++) {
-            figures[i] = (i < 3) ? figureSupplier.getRandomFigure() :
+        for (i = 0; i < figures.length; i++) {
+            figures[i] = (i < figures.length / 2) ? figureSupplier.getRandomFigure() :
                     figureSupplier.getDefaultFigure();
+            figures[i].draw();
         }
 
-        for (Figure figure : figures) {
-            figure.draw();
-        }
     }
 }
