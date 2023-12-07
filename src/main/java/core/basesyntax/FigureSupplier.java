@@ -2,17 +2,15 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class FigureSupplier{
+public class FigureSupplier {
+    private static final int CLASS_NUM = 5;
     private ColorSupplier supplier = new ColorSupplier();
-    private static  final int CLASS_NUM = 5;
-    Random random = new Random();
-
+    private Random random = new Random();
 
     public Figure getRandomFigure() {
         int classNum = random.nextInt(CLASS_NUM);
         Color randomColor = supplier.getRandomColor();
         int randomInt = random.nextInt();
-
         switch (classNum) {
             case 0:
                 return new Circle(randomColor, randomInt);
