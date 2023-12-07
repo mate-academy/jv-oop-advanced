@@ -3,10 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final int FIGURE_COUNT = 6;
-    private final int MAX_SIDE_LENGTH = 101;
-    private final int DEFAULT_RADIUS = 10;
-    private final Color DEFAULT_COLOR = Color.WHITE;
+    private static final int FIGURE_COUNT = 6;
+    private static final int MAX_SIDE_LENGTH = 101;
+    private static final int DEFAULT_RADIUS = 10;
+    private static final Color DEFAULT_COLOR = Color.WHITE;
     private final Random random;
     private final ColorSupplier colorSupplier;
 
