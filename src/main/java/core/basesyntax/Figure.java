@@ -1,0 +1,16 @@
+package core.basesyntax;
+
+/**
+ * Feel free to remove this class and create your own.
+ */
+public abstract class  Figure implements AreaCalculator, ShapeDefinition {
+    private Color color;
+    ColorSupplier supplier = new ColorSupplier();
+    public Figure(Color color) {
+        this.color = color;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+}
