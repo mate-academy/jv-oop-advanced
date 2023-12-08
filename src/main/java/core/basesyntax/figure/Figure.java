@@ -8,10 +8,6 @@ public abstract class Figure implements AreaCalculator {
         this.color = color;
     }
 
-    public String getColor() {
-        return color;
-    }
-
     @Override
     public String toString() {
         return "Figure: " + this.getClass().getSimpleName().toLowerCase()
