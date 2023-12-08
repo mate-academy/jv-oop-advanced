@@ -15,7 +15,7 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public double calculateArea() {
         //widening casting eliminates precision loss in the return statement?
-        return 0.5 * (double) height * ((double) sideA + (double) sideB);
+        return 0.5 * (double) height * (sideA + sideB);
     }
 
     @Override
