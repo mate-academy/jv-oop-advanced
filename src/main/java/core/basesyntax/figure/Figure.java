@@ -14,7 +14,7 @@ public abstract class Figure implements AreaCalculator {
 
     @Override
     public String toString() {
-        return "Figure: " + this.getClass().getSimpleName()
+        return "Figure: " + this.getClass().getSimpleName().toLowerCase()
                 + ", area: " + getArea() + " sq. units"
                 + ", color: " + color;
     }
