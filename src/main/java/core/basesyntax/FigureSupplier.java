@@ -25,7 +25,7 @@ public class FigureSupplier {
                         randomInt);
             case 4:
                 return new RightTriangle(randomColor,
-                        randomInt, randomInt, randomInt);
+                        randomInt, randomInt);
             default:
                 return null;
         }

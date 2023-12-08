@@ -11,18 +11,14 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public Object getArea() {
-        return Integer.valueOf(sideA * sideB);
+    public double calculateArea() {
+        return sideA * sideB;
     }
 
     @Override
     public void draw() {
-        System.out.println("Rectangle:");
-    }
-
-    @Override
-    public String toString() {
-        return ("Color: " + getColor() + ", Sides A-B: " + sideA + " " + sideB
-                + ", Area: " + getArea());
+        System.out.println("Rectangle: Color: " + getColor()
+                + " Sides A-B: " + sideA + ", " + sideB
+                + " Area: " + calculateArea() + "\n");
     }
 }

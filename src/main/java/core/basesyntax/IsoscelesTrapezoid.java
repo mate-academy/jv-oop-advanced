@@ -13,19 +13,15 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public Double getArea() {
+    public double calculateArea() {
         //widening casting eliminates precision loss in the return statement?
         return 0.5 * (double) height * ((double) sideA + (double) sideB);
     }
 
     @Override
     public void draw() {
-        System.out.println("IsoscelesTrapezoid:");
-    }
-
-    @Override
-    public String toString() {
-        return ("Color: " + getColor() + ", Sides A-B: " + sideA + " " + sideB
-                + ", Height: " + height + ", Area: " + getArea());
+        System.out.println("Isosceles trapezoid: Color: " + getColor() + ", Sides A-B: "
+                + sideA + " " + sideB
+                + ", Height: " + height + ", Area: " + calculateArea() + "\n");
     }
 }
