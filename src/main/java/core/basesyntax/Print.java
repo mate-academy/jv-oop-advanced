@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public interface BrhaviorPrint {
+public interface Print {
     public void printInfo();
 }
