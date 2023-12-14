@@ -4,6 +4,12 @@ public class Rectangle extends Figure {
     private double firstSide;
     private double secondSide;
 
+    public Rectangle(String color, double firstSide, double secondSide) {
+        super(color);
+        this.firstSide = firstSide;
+        this.secondSide = secondSide;
+    }
+
     @Override
     public void calculateArea() {
         this.setArea(firstSide * secondSide);
