@@ -50,4 +50,5 @@ public class IsoscelesTrapezoid extends Figure {
     public void calculateArea() {
         this.setArea((firstBase * secondBase) * 0.5 * height);
     }
+
 }
