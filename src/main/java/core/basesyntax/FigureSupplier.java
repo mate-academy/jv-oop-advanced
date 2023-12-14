@@ -8,7 +8,7 @@ public class FigureSupplier {
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figure getRandomFigure() {
+    private Figure[] getArrayFigures() {
         Figure circle = new Circle(colorSupplier.getRandomColor(),random.nextInt(MAX_FOR_FIGURE));
         Figure trapezoid = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                 random.nextInt(MAX_FOR_FIGURE),random.nextInt(MAX_FOR_FIGURE),
@@ -19,8 +19,12 @@ public class FigureSupplier {
                 random.nextInt(MAX_FOR_FIGURE),random.nextInt(MAX_FOR_FIGURE));
         Figure square = new Square(colorSupplier.getRandomColor(),random.nextInt(MAX_FOR_FIGURE));
         Figure[] figures = new Figure[]{circle,trapezoid,rectangle,triangle,square};
-        int index = random.nextInt(figures.length);
-        return figures[index];
+        return figures;
+    }
+
+    public Figure getRandomFigure() {
+        int index = random.nextInt(getArrayFigures().length);
+        return getArrayFigures()[index];
     }
 
     public Figure getDefaultFigure() {

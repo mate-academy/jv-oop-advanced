@@ -10,6 +10,7 @@ public class RightTriangle extends Figure {
         this.secondLeg = secondLeg;
     }
 
+    @Override
     public void printInfo() {
         System.out.println(" Figure: triangle, area: "
                 + getArea() + " sq. units, firstLeg: " + firstLeg

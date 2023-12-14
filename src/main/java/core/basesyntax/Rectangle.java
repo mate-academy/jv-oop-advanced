@@ -10,6 +10,7 @@ public class Rectangle extends Figure {
         this.height = height;
     }
 
+    @Override
     public void printInfo() {
         System.out.println(" Figure: rectangle, area: "
                 + getArea() + " sq. units, width: " + width
