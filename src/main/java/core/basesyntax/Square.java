@@ -17,8 +17,8 @@ public class Square extends Figure {
     }
 
     @Override
-    public void calculateArea() {
-        this.setArea(side * side);
+    public double calculateArea() {
+        return(side * side);
     }
 
     @Override

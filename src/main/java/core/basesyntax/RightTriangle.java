@@ -36,7 +36,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void calculateArea() {
-        this.setArea(firstLeg * secondLeg * 0.5);
+    public double calculateArea() {
+        return (firstLeg * secondLeg * 0.5);
     }
 }

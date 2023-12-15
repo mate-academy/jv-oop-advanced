@@ -11,8 +11,8 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void calculateArea() {
-        this.setArea(firstSide * secondSide);
+    public double calculateArea() {
+        return (firstSide * secondSide);
     }
 
     @Override
