@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         final int size = 6;
         Figure[] figureArray = new Figure[size];
-        FigureSupplier figureSupplier =new FigureSupplier();
+        FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < size; i++) {
             if (i < size / 2) {
                 figureArray[i] = figureSupplier.getRandomFigure();
