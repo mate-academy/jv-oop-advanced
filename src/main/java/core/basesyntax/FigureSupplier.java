@@ -3,17 +3,17 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    static final int FIGURES_NUMBER = 5;
-    static final double DEFAULT_RADIUS = 10;
+    private static final int FIGURES_NUMBER = 5;
+    private static final double DEFAULT_RADIUS = 10;
     static Random random = new Random();
 
     static ColorSupplier colorSupplier = new ColorSupplier();
 
-    public static Figure getDefaultFigure() {
+    public Figure getDefaultFigure() {
         return new Circle(Color.WHITE.name(), DEFAULT_RADIUS);
     }
 
-    public static Figure getRandomFigure() {
+    public Figure getRandomFigure() {
         int randomFigure = random.nextInt(FIGURES_NUMBER);
         return switch (randomFigure) {
             case 0 -> new Square(colorSupplier.getRandomColor(), random.nextDouble());
