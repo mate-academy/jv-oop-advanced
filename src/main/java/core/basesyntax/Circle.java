@@ -2,14 +2,13 @@ package core.basesyntax;
 
 class Circle extends Figure {
     private double radius;
-    private String color;
 
     public Circle(double radius, String color) {
         this.radius = radius;
-        this.color = color;
+        setColor(color);
     }
 
-    public double getArea() {
+    public double calculateArea() {
         return Math.PI * radius * radius;
     }
 
@@ -17,9 +16,7 @@ class Circle extends Figure {
         return "circle";
     }
 
-    public String getInfo() {
-        return "radius: " + radius + " unit, " + "color: " + color;
+    public String draw() {
+        return "radius: " + radius + " unit, " + "color: " + getColor();
     }
 }
-
-

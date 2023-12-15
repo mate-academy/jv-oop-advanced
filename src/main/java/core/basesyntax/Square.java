@@ -2,14 +2,13 @@ package core.basesyntax;
 
 class Square extends Figure {
     private double side;
-    private String color;
 
     public Square(double side, String color) {
         this.side = side;
-        this.color = color;
+        setColor(color);
     }
 
-    public double getArea() {
+    public double calculateArea() {
         return side * side;
     }
 
@@ -17,9 +16,7 @@ class Square extends Figure {
         return "square";
     }
 
-    public String getInfo() {
-        return "side: " + side + " unit, " + "color: " + color;
+    public String draw() {
+        return "side: " + side + " unit, " + "color: " + getColor();
     }
 }
-
-

@@ -19,10 +19,7 @@ public class Main {
         // information about figures
         for (Figure figure : figures) {
             System.out.println("figure: " + figure.getName() + ", square: "
-                    + figure.getArea() + " sq.units., " + figure.getInfo());
+                    + figure.calculateArea() + " sq.units., " + figure.draw());
         }
     }
 }
-
-
-
