@@ -17,14 +17,6 @@ public class RightTriangle extends Figure {
         this.side = side;
     }
 
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
     @Override
     public double getArea() {
         return (Math.pow(side, 2) * Math.sqrt(3)) / 4;

@@ -16,14 +16,6 @@ public class Square extends Figure {
         return this.side;
     }
 
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
     @Override
     public double getArea() {
         return Math.pow(side,2);

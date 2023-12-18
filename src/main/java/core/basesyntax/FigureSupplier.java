@@ -8,6 +8,8 @@ public class FigureSupplier {
     private static final Random random = new Random();
     private static final double MAX_BOUND_SIDE = 100.0;
     private static final double MIN_BOUND_SIDE = 1.0;
+    private static final int NUM_ROUND1 = 10000;
+    private static final double NUM_ROUND2 = 100.0;
 
     public Figure getRandomFigure() {
         int typeOfFigure = random.nextInt(5);
@@ -44,7 +46,7 @@ public class FigureSupplier {
 
     private double getRandomDoubleInRange(double min, double max) {
         double result = random.nextDouble();
-        return ((int) (result * 10000) / 100.0);
+        return ((int) (result * NUM_ROUND1) / NUM_ROUND2);
     }
 
 }

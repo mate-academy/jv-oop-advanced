@@ -27,14 +27,6 @@ public class Rectangle extends Figure {
         this.width = width;
     }
 
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
     @Override
     public double getArea() {
         return this.length * this.width;
