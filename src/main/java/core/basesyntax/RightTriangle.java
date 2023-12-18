@@ -10,14 +10,17 @@ class RightTriangle extends Figure {
         setColor(color);
     }
 
+    @Override
     public double calculateArea() {
         return (firstLeg * secondLeg) / 2;
     }
 
+    @Override
     public String getName() {
         return "right triangle";
     }
 
+    @Override
     public String draw() {
         return "first leg: " + firstLeg + " unit, second leg: "
                 + secondLeg + " unit, " + "color: " + getColor();

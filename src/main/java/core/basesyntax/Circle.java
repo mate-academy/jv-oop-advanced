@@ -8,14 +8,17 @@ class Circle extends Figure {
         setColor(color);
     }
 
+    @Override
     public double calculateArea() {
         return Math.PI * radius * radius;
     }
 
+    @Override
     public String getName() {
         return "circle";
     }
 
+    @Override
     public String draw() {
         return "radius: " + radius + " unit, " + "color: " + getColor();
     }

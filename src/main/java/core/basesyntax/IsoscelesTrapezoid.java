@@ -12,14 +12,17 @@ class IsoscelesTrapezoid extends Figure {
         setColor(color);
     }
 
+    @Override
     public double calculateArea() {
         return (upperBase + lowerBase) * height / 2;
     }
 
+    @Override
     public String getName() {
         return "isosceles trapezoid";
     }
 
+    @Override
     public String draw() {
         return "upper base: " + upperBase + " unit, lower base: " + lowerBase
                 + " unit, height: "

@@ -8,14 +8,17 @@ class Square extends Figure {
         setColor(color);
     }
 
+    @Override
     public double calculateArea() {
         return side * side;
     }
 
+    @Override
     public String getName() {
         return "square";
     }
 
+    @Override
     public String draw() {
         return "side: " + side + " unit, " + "color: " + getColor();
     }
