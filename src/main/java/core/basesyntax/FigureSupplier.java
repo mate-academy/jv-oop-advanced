@@ -3,9 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-
-    private static final ColorSupplier colorSupplier = new ColorSupplier();
-    private static final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
     private static final double MAX_BOUND_SIDE = 100.0;
     private static final double MIN_BOUND_SIDE = 1.0;
     private static final int NUM_ROUND1 = 10000;
@@ -38,7 +37,6 @@ public class FigureSupplier {
                         colorSupplier.getRandomColor());
             default:
                 return null;
-
         }
     }
 
@@ -50,5 +48,4 @@ public class FigureSupplier {
         double result = random.nextDouble();
         return ((int) (result * NUM_ROUND1) / NUM_ROUND2);
     }
-
 }
