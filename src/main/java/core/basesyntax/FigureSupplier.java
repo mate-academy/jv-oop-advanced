@@ -10,9 +10,11 @@ public class FigureSupplier {
     private static final double MIN_BOUND_SIDE = 1.0;
     private static final int NUM_ROUND1 = 10000;
     private static final double NUM_ROUND2 = 100.0;
+    private static final int COUNT_FIGURES = 5;
+    private static final double DEFAULT_RADIUS_CIRCLE = 10.0;
 
     public Figure getRandomFigure() {
-        int typeOfFigure = random.nextInt(5);
+        int typeOfFigure = random.nextInt(COUNT_FIGURES);
 
         switch (typeOfFigure) {
             case 0:
@@ -41,7 +43,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10.0, Color.WHITE.name());
+        return new Circle(DEFAULT_RADIUS_CIRCLE, Color.WHITE.name());
     }
 
     private double getRandomDoubleInRange(double min, double max) {
