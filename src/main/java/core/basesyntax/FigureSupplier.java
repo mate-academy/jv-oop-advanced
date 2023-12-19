@@ -11,18 +11,18 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         int randomFigureNumber = random.nextInt(NUMBER_OF_FIGURES);
         return switch (randomFigureNumber) {
-            case 0 -> new Square(random.nextDouble(), colorSupplier.getRandomColor().name());
+            case 0 -> new Square(random.nextDouble(), colorSupplier.getRandomColor());
             case 1 -> new Rectangle(random.nextDouble(), random.nextDouble(),
-                    colorSupplier.getRandomColor().name());
+                    colorSupplier.getRandomColor());
             case 2 -> new RightTriangle(random.nextDouble(), random.nextDouble(),
-                    colorSupplier.getRandomColor().name());
-            case 3 -> new Circle(random.nextDouble(), colorSupplier.getRandomColor().name());
+                    colorSupplier.getRandomColor());
+            case 3 -> new Circle(random.nextDouble(), colorSupplier.getRandomColor());
             default -> new IsoscelesTrapezoid(random.nextDouble(),random.nextDouble(),
-                    random.nextDouble(), colorSupplier.getRandomColor().name());
+                    random.nextDouble(), colorSupplier.getRandomColor());
         };
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_RADIUS,Color.WHITE.name());
+        return new Circle(DEFAULT_RADIUS, Color.WHITE.name());
     }
 }

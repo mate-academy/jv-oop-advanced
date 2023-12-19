@@ -12,9 +12,7 @@ public class Main {
             } else {
                 figureArray[i] = figureSupplier.getDefaultFigure();
             }
-        }
-        for (int j = 0; j < figureArraySize; j++) {
-            figureArray[j].draw();
+            figureArray[i].draw();
         }
     }
 }
