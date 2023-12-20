@@ -1,12 +1,13 @@
 package core.basesyntax.figure;
 
 public class Circle extends Figure {
-    double radius;
+    private double radius;
 
     public Circle (double radius) {
         this.radius = radius;
         this.figureName = FigureName.Circle;
     }
+
     public Circle (double radius, Color color) {
         this.radius = radius;
         this.figureName = FigureName.Circle;
@@ -25,6 +26,5 @@ public class Circle extends Figure {
                 + "area: " + getArea() + " sq. units, "
                 + "radius: " + radius + ", "
                 + "color: " + color;
-
     }
 }

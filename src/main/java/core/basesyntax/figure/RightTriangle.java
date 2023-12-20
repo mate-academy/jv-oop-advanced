@@ -1,14 +1,15 @@
 package core.basesyntax.figure;
 
 public class RightTriangle extends Figure {
-    double firstLeg;
-    double secondLeg;
+    private double firstLeg;
+    private double secondLeg;
 
     public RightTriangle (double firstLeg, double secondLeg) {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
         this.figureName = FigureName.RightTriangle;
     }
+
     @Override
     public double getArea() {
         return (firstLeg * secondLeg) / 2;
@@ -20,6 +21,5 @@ public class RightTriangle extends Figure {
                 + "area: " + getArea() + " sq. units, "
                 + "firstLeg: " + firstLeg + ", secondLeg: " + secondLeg
                 + ", color: " + color;
-
     }
 }

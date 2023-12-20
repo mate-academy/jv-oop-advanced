@@ -1,14 +1,15 @@
 package core.basesyntax.figure;
 
 public class Rectangle extends Figure {
-    double sideBasis;
-    double height;
+    private double sideBasis;
+    private double height;
 
-    Rectangle(double sideBasis, double height) {
+    public Rectangle (double sideBasis, double height) {
         this.sideBasis = sideBasis;
         this.height = height;
         this.figureName = FigureName.Rectangle;
     }
+
     @Override
     public double getArea() {
         return (sideBasis * height) / 2;
@@ -20,6 +21,5 @@ public class Rectangle extends Figure {
                 + "area: " + getArea() + " sq. units, "
                 + "sideBasis: " + sideBasis + ", height: " + height
                 + ", color: " + color;
-
     }
 }

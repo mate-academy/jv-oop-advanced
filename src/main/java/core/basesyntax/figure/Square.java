@@ -1,12 +1,13 @@
 package core.basesyntax.figure;
 
 public class Square extends Figure {
-    double side;
+    private double side;
 
     public Square (double side) {
         this.side = side;
         this.figureName = FigureName.Square;
     }
+
     @Override
     public double getArea() {
         return side * side;
