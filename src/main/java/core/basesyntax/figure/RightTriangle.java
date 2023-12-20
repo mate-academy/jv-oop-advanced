@@ -4,10 +4,10 @@ public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
-    public RightTriangle (double firstLeg, double secondLeg) {
+    public RightTriangle(double firstLeg, double secondLeg) {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        this.figureName = FigureName.RightTriangle;
+        this.setFigureName(FigureName.RightTriangle);
     }
 
     @Override
@@ -17,9 +17,9 @@ public class RightTriangle extends Figure {
 
     @Override
     public String draw() {
-        return "Figure: " + figureName + ", "
+        return "Figure: " + this.getFigureName() + ", "
                 + "area: " + getArea() + " sq. units, "
                 + "firstLeg: " + firstLeg + ", secondLeg: " + secondLeg
-                + ", color: " + color;
+                + ", color: " + this.getColor();
     }
 }

@@ -5,8 +5,8 @@ public class IsoscelesTrapezoid extends Figure {
     private double sideSecond;
     private double height;
 
-    public IsoscelesTrapezoid (double sideFirst, double sideSecond, double height) {
-        this.figureName = FigureName.IsoscelesTrapezoid;
+    public IsoscelesTrapezoid(double sideFirst, double sideSecond, double height) {
+        this.setFigureName(FigureName.IsoscelesTrapezoid);
         this.sideFirst = sideFirst;
         this.sideSecond = sideSecond;
         this.height = height;
@@ -19,9 +19,9 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String draw() {
-        return "Figure: " + figureName + ", "
+        return "Figure: " + this.getFigureName() + ", "
                 + "area: " + getArea() + " sq. units, "
                 + "sidefirst: " + sideFirst + ", sideSecond: " + sideSecond + ", height: " + height
-                + ", color: " + color;
+                + ", color: " + this.getColor();
     }
 }

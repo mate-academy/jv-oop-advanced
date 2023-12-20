@@ -5,13 +5,13 @@ public class Circle extends Figure {
 
     public Circle (double radius) {
         this.radius = radius;
-        this.figureName = FigureName.Circle;
+        this.setFigureName(FigureName.Circle);
     }
 
-    public Circle (double radius, Color color) {
+    public Circle(double radius, Color color) {
         this.radius = radius;
-        this.figureName = FigureName.Circle;
-        super.color = color;
+        this.setFigureName(FigureName.Circle);
+        this.setColor(Color.white);
     }
 
     @Override
@@ -22,9 +22,9 @@ public class Circle extends Figure {
 
     @Override
     public String draw() {
-        return "Figure: " + figureName + ", "
+        return "Figure: " + this.getFigureName() + ", "
                 + "area: " + getArea() + " sq. units, "
                 + "radius: " + radius + ", "
-                + "color: " + color;
+                + "color: " + this.getColor();
     }
 }

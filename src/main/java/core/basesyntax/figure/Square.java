@@ -3,9 +3,9 @@ package core.basesyntax.figure;
 public class Square extends Figure {
     private double side;
 
-    public Square (double side) {
+    public Square(double side) {
         this.side = side;
-        this.figureName = FigureName.Square;
+        this.setFigureName(FigureName.Square);
     }
 
     @Override
@@ -15,10 +15,9 @@ public class Square extends Figure {
 
     @Override
     public String draw() {
-        return "Figure: " + figureName + ", "
+        return "Figure: " + this.getFigureName() + ", "
                 + "area: " + getArea() + " sq. units, "
                 + "side: " + side
-                + ", color: " + color;
-
+                + ", color: " + this.getColor();
     }
 }

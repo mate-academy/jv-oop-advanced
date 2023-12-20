@@ -4,10 +4,10 @@ public class Rectangle extends Figure {
     private double sideBasis;
     private double height;
 
-    public Rectangle (double sideBasis, double height) {
+    public Rectangle(double sideBasis, double height) {
         this.sideBasis = sideBasis;
         this.height = height;
-        this.figureName = FigureName.Rectangle;
+        this.setFigureName(FigureName.Rectangle);
     }
 
     @Override
@@ -17,9 +17,9 @@ public class Rectangle extends Figure {
 
     @Override
     public String draw() {
-        return "Figure: " + figureName + ", "
+        return "Figure: " + this.getFigureName() + ", "
                 + "area: " + getArea() + " sq. units, "
                 + "sideBasis: " + sideBasis + ", height: " + height
-                + ", color: " + color;
+                + ", color: " + this.getColor();
     }
 }
