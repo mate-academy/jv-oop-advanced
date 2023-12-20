@@ -1,4 +1,4 @@
-package core.basesyntax.figure;
+package core.basesyntax;
 
 import java.util.Random;
 

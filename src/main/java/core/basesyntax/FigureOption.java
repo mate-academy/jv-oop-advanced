@@ -1,4 +1,4 @@
-package core.basesyntax.figure;
+package core.basesyntax;
 
 public interface FigureOption {
     double getArea();

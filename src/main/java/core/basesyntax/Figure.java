@@ -1,4 +1,4 @@
-package core.basesyntax.figure;
+package core.basesyntax;
 
 public abstract class Figure implements FigureOption {
     private Color color = new ColorSupplier().getRandomColor();

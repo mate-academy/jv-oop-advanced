@@ -1,4 +1,4 @@
-package core.basesyntax.figure;
+package core.basesyntax;
 
 public class Circle extends Figure {
     private double radius;
@@ -11,7 +11,7 @@ public class Circle extends Figure {
     public Circle(double radius, Color color) {
         this.radius = radius;
         this.setFigureName(FigureName.Circle);
-        this.setColor(Color.white);
+        this.setColor(color);
     }
 
     @Override
