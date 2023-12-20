@@ -1,6 +1,11 @@
 package core.basesyntax;
 
-public abstract class Figure implements FigureOption {
+import core.basesyntax.enums.Color;
+import core.basesyntax.enums.FigureName;
+import core.basesyntax.interfaces.Area;
+import core.basesyntax.interfaces.Draw;
+
+public abstract class Figure implements Area, Draw {
     private Color color = new ColorSupplier().getRandomColor();
     private FigureName figureName;
 

@@ -1,5 +1,9 @@
 package core.basesyntax;
 
+import core.basesyntax.enums.Color;
+import core.basesyntax.enums.FigureName;
+import core.basesyntax.figure.*;
+
 import java.util.Random;
 
 public class FigureSupplier {

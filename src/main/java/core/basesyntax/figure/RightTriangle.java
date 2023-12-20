@@ -1,4 +1,7 @@
-package core.basesyntax;
+package core.basesyntax.figure;
+
+import core.basesyntax.Figure;
+import core.basesyntax.enums.FigureName;
 
 public class RightTriangle extends Figure {
     private double firstLeg;

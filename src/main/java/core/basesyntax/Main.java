@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class HelloWorld {
+public class Main {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figureArr = new Figure[6];
