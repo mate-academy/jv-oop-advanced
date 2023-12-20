@@ -3,7 +3,7 @@ package core.basesyntax.figure;
 public class Circle extends Figure {
     private double radius;
 
-    public Circle (double radius) {
+    public Circle(double radius) {
         this.radius = radius;
         this.setFigureName(FigureName.Circle);
     }
@@ -17,7 +17,6 @@ public class Circle extends Figure {
     @Override
     public double getArea() {
         return ((int)(Math.PI * radius * radius) * 100)/100;
-
     }
 
     @Override
