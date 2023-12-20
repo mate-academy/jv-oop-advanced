@@ -3,8 +3,8 @@ package core.basesyntax.figure;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final int BoundMax = 20;
-    private final int BoundMin = 1;
+    private final int boundMax = 20;
+    private final int boundMin = 1;
     private final Random random = new Random();
     private int indexFigureName;
 
@@ -12,23 +12,23 @@ public class FigureSupplier {
         indexFigureName = random.nextInt(FigureName.values().length);
         switch (FigureName.values()[indexFigureName]) {
             case Circle:
-                double radius = random.nextInt(BoundMin, BoundMax);
+                double radius = random.nextInt(boundMin, boundMax);
                 return new Circle(radius);
             case IsoscelesTrapezoid:
-                double sideFirst = random.nextInt(BoundMin, BoundMax);
-                double sideSecond = random.nextInt(BoundMin, BoundMax);
-                double height = random.nextInt(BoundMin, BoundMax);
+                double sideFirst = random.nextInt(boundMin, boundMax);
+                double sideSecond = random.nextInt(boundMin, boundMax);
+                double height = random.nextInt(boundMin, boundMax);
                 return new IsoscelesTrapezoid(sideFirst, sideSecond, height);
             case Rectangle:
-                double sideBasis = random.nextInt(BoundMin, BoundMax);
-                height = random.nextInt(BoundMin, BoundMax);
+                double sideBasis = random.nextInt(boundMin, boundMax);
+                height = random.nextInt(boundMin, boundMax);
                 return new Rectangle(sideBasis, height);
             case RightTriangle:
-                double firstLeg = random.nextInt(BoundMin, BoundMax);
-                double secondLeg = random.nextInt(BoundMin, BoundMax);
+                double firstLeg = random.nextInt(boundMin, boundMax);
+                double secondLeg = random.nextInt(boundMin, boundMax);
                 return new RightTriangle(firstLeg, secondLeg);
             case Square:
-                double side = random.nextInt(BoundMin, BoundMax);
+                double side = random.nextInt(boundMin, boundMax);
                 return new Square(side);
             default:
                 return null;
