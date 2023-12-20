@@ -4,7 +4,6 @@ import core.basesyntax.Figure;
 import core.basesyntax.enums.Color;
 import core.basesyntax.enums.FigureName;
 
-
 public class Circle extends Figure {
     private double radius;
 
