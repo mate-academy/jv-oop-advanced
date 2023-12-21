@@ -1,12 +1,11 @@
 package core.basesyntax;
 
-import core.basesyntax.enums.Color;
 import core.basesyntax.enums.FigureName;
 import core.basesyntax.interfaces.AreaCalculator;
 import core.basesyntax.interfaces.Drawable;
 
 public abstract class Figure implements AreaCalculator, Drawable {
-    private Color color;
+    private String color;
     private FigureName figureName;
 
     public void setFigureName(FigureName figureName) {
@@ -17,11 +16,11 @@ public abstract class Figure implements AreaCalculator, Drawable {
         return figureName;
     }
 
-    public Color getColor() {
+    public String getColor() {
         return color;
     }
 
-    public void setColor(Color color) {
+    public void setColor(String color) {
         this.color = color;
     }
 

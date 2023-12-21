@@ -14,6 +14,7 @@ public class Main {
             }
             if (i >= figureArr.length / 2) {
                 figureArr[i] = figureSupplier.getDefaultFigure();
+                figureArr[i].setColor("WHITE");
                 System.out.println(figureArr[i].draw());
             }
         }
