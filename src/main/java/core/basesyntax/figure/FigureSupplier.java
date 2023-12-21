@@ -11,7 +11,7 @@ public class FigureSupplier {
     private final Random random = new Random();
     private int indexFigureName;
 
-    public int RandomParameters() {
+    public int randomParameters() {
         return random.nextInt(boundMin, boundMax);
     }
 
@@ -19,23 +19,23 @@ public class FigureSupplier {
         indexFigureName = random.nextInt(FigureName.values().length);
         switch (FigureName.values()[indexFigureName]) {
             case CIRCLE:
-                double radius = RandomParameters();
+                double radius = randomParameters();
                 return new Circle(radius);
             case ISOSCELEXTRAPEZOID:
-                double sideFirst = RandomParameters();
-                double sideSecond = RandomParameters();
-                double height = RandomParameters();
+                double sideFirst = randomParameters();
+                double sideSecond = randomParameters();
+                double height = randomParameters();
                 return new IsoscelesTrapezoid(sideFirst, sideSecond, height);
             case RECTANGLE:
-                double sideBasis = RandomParameters();
-                height = RandomParameters();
+                double sideBasis = randomParameters();
+                height = randomParameters();
                 return new Rectangle(sideBasis, height);
             case RIGHTTRIANGLE:
-                double firstLeg = RandomParameters();
-                double secondLeg = RandomParameters();
+                double firstLeg = randomParameters();
+                double secondLeg = randomParameters();
                 return new RightTriangle(firstLeg, secondLeg);
             case SQUARE:
-                double side = RandomParameters();
+                double side = randomParameters();
                 return new Square(side);
             default:
                 return null;
