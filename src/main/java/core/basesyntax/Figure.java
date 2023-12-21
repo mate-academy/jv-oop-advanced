@@ -2,11 +2,11 @@ package core.basesyntax;
 
 import core.basesyntax.enums.Color;
 import core.basesyntax.enums.FigureName;
-import core.basesyntax.interfaces.Area;
-import core.basesyntax.interfaces.Draw;
+import core.basesyntax.interfaces.AreaCalculator;
+import core.basesyntax.interfaces.Drawable;
 
-public abstract class Figure implements Area, Draw {
-    private Color color = new ColorSupplier().getRandomColor();
+public abstract class Figure implements AreaCalculator, Drawable {
+    private Color color;
     private FigureName figureName;
 
     public void setFigureName(FigureName figureName) {
@@ -23,5 +23,9 @@ public abstract class Figure implements Area, Draw {
 
     public void setColor(Color color) {
         this.color = color;
+    }
+
+    public void setColor() {
+        this.color = new ColorSupplier().getRandomColor();
     }
 }

@@ -10,7 +10,8 @@ public class RightTriangle extends Figure {
     public RightTriangle(double firstLeg, double secondLeg) {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        this.setFigureName(FigureName.RightTriangle);
+        this.setFigureName(FigureName.RIGHTTRIANGLE);
+        this.setColor();
     }
 
     @Override

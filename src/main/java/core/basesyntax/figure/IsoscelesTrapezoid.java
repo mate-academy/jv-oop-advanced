@@ -9,10 +9,11 @@ public class IsoscelesTrapezoid extends Figure {
     private double height;
 
     public IsoscelesTrapezoid(double sideFirst, double sideSecond, double height) {
-        this.setFigureName(FigureName.IsoscelesTrapezoid);
+        this.setFigureName(FigureName.ISOSCELEXTRAPEZOID);
         this.sideFirst = sideFirst;
         this.sideSecond = sideSecond;
         this.height = height;
+        this.setColor();
     }
 
     @Override

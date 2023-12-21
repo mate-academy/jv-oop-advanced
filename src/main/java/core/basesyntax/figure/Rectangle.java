@@ -10,7 +10,8 @@ public class Rectangle extends Figure {
     public Rectangle(double sideBasis, double height) {
         this.sideBasis = sideBasis;
         this.height = height;
-        this.setFigureName(FigureName.Rectangle);
+        this.setFigureName(FigureName.RECTANGLE);
+        this.setColor();
     }
 
     @Override

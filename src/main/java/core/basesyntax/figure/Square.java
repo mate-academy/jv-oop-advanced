@@ -8,7 +8,8 @@ public class Square extends Figure {
 
     public Square(double side) {
         this.side = side;
-        this.setFigureName(FigureName.Square);
+        this.setFigureName(FigureName.SQUARE);
+        this.setColor();
     }
 
     @Override
