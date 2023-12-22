@@ -1,10 +1,6 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class RightTriangle extends Figure {
-    private ColorSupplier colorSupplier = new ColorSupplier();
-    private Random random = new Random();
 
     private double cat1;
     private double cat2;
@@ -20,14 +16,6 @@ public class RightTriangle extends Figure {
         cat2 = random.nextDouble() * 20;
         name = "RightTriangle";
         color = colorSupplier.getRandomColor();
-    }
-
-    @Override
-    public void generateDefaultParameters() {
-        cat1 = 3;
-        cat2 = 4;
-        color = "Green";
-        name = "RightTriangle";
     }
 
     @Override

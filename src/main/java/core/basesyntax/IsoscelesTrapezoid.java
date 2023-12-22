@@ -1,10 +1,6 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class IsoscelesTrapezoid extends Figure {
-    private ColorSupplier colorSupplier = new ColorSupplier();
-    private Random random = new Random();
 
     private double bottomBase;
 
@@ -26,15 +22,6 @@ public class IsoscelesTrapezoid extends Figure {
         lateralSide = random.nextDouble() * 20;
         name = "IsoscelesTrapezoid";
         color = colorSupplier.getRandomColor();
-    }
-
-    @Override
-    public void generateDefaultParameters() {
-        bottomBase = 10;
-        upperBase = 20;
-        lateralSide = 13;
-        color = "Purple";
-        name = "IsoscelesTrapezoid";
     }
 
     @Override
