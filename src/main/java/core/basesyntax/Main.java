@@ -1,10 +1,16 @@
 package core.basesyntax;
 
-/**
- * Feel free to remove this class and create your own.
- */
 public class Main {
     public static void main(String[] args) {
-        new Circle("BLACK",4).draw();
+        Figure[] figures = new Figure[6];
+        int half = figures.length / 2;
+        FigureSupplier figureSupplier = new FigureSupplier();
+        for (int i = 0; i < figures.length; i++) {
+            if (i < half) {
+                figures[i] = figureSupplier.getRandomFigure();
+                continue;
+            }
+            figures[i] = figureSupplier.getDefaultFigure();
+        }
     }
 }
