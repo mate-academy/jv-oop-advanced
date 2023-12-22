@@ -1,16 +1,14 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private double area;
     private double verticalSide;
     private double horizontalSide;
 
-    public void setVerticalSide(double verticalSide) {
+    public Rectangle(String color, double verticalSide, double horizontalSide) {
+        super(color);
         this.verticalSide = verticalSide;
-    }
-
-    public void setHorizontalSide(double horizontalSide) {
         this.horizontalSide = horizontalSide;
+        this.area = areaCalculator();
     }
 
     public double getVerticalSide() {
@@ -21,19 +19,16 @@ public class Rectangle extends Figure {
         return horizontalSide;
     }
 
-    public double getArea() {
-        return area;
-    }
-
+    @Override
     public double areaCalculator() {
-        return area = verticalSide * horizontalSide;
+        return this.area = verticalSide * horizontalSide;
     }
 
     @Override
-    public String draw() {
-        return "Figure: rectangle, area: " + getArea() + " sq. units, vertical side: "
+    public void draw() {
+        System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, vertical side: "
                 + getVerticalSide() + " units, horizontal side: "
                 + getHorizontalSide() + " units, color: "
-                + getColor();
+                + getColor());
     }
 }

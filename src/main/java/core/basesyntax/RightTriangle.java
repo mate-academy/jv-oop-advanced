@@ -1,16 +1,14 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private double area;
     private double firstLeg;
     private double secondLeg;
 
-    public void setFirstLeg(double firstLeg) {
+    public RightTriangle(String color, double firstLeg, double secondLeg) {
+        super(color);
         this.firstLeg = firstLeg;
-    }
-
-    public void setSecondLeg(double secondLeg) {
         this.secondLeg = secondLeg;
+        this.area = areaCalculator();
     }
 
     public double getFirstLeg() {
@@ -21,19 +19,16 @@ public class RightTriangle extends Figure {
         return secondLeg;
     }
 
-    public double getArea() {
-        return area;
-    }
-
+    @Override
     public double areaCalculator() {
-        return area = (firstLeg * secondLeg) / 2;
+        return this.area = (firstLeg * secondLeg) / 2;
     }
 
     @Override
-    public String draw() {
-        return "Figure: right trianle, area: " + getArea() + " sq. units, first leg: "
+    public void draw() {
+        System.out.println("Figure: right trianle, area: " + getArea() + " sq. units, first leg: "
                 + getFirstLeg() + " units, second leg: "
                 + getSecondLeg() + " units, color: "
-                + getColor();
+                + getColor());
     }
 }

@@ -3,58 +3,59 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int unitsLimit = (25 - 1) + 1;
-    private static final int figureNumber = 4;
+
+    private static final int MIN_LENGTH = 1;
+    private static final int MAX_LENGTH = 25;
+    private static final int FIGURE_AMOUNT = 4;
+    private static final int DEFAULT_NUMBER = 10;
     private Random random = new Random();
     private ColorSupplier supplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int randomNumber = random.nextInt(figureNumber);
+        int randomNumber = random.nextInt(FIGURE_AMOUNT);
         switch (randomNumber) {
             case 0:
-                Square square = new Square();
-                square.setColor(supplier.getRandomColor().name());
-                square.setSide(random.nextInt(unitsLimit));
-                square.areaCalculator();
-                return square;
+                return getRandomSquare();
             case 1:
-                Rectangle rectangle = new Rectangle();
-                rectangle.setColor(supplier.getRandomColor().name());
-                rectangle.setVerticalSide(random.nextInt(unitsLimit));
-                rectangle.setHorizontalSide(random.nextInt(unitsLimit));
-                rectangle.areaCalculator();
-                return rectangle;
+                return getRandomRectangle();
             case 2:
-                RightTriangle rightTriangle = new RightTriangle();
-                rightTriangle.setColor(supplier.getRandomColor().name());
-                rightTriangle.setFirstLeg(random.nextInt(unitsLimit));
-                rightTriangle.setSecondLeg(random.nextInt(unitsLimit));
-                rightTriangle.areaCalculator();
-                return rightTriangle;
+                return getRandomRightTriangle();
             case 3:
-                Circle circle = new Circle();
-                circle.setColor(supplier.getRandomColor().name());
-                circle.setRadius(random.nextInt(unitsLimit));
-                circle.diameterCalculator();
-                circle.areaCalculator();
-                return circle;
+                return getRandomCircle();
             default:
-                IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
-                isoscelesTrapezoid.setColor(supplier.getRandomColor().name());
-                isoscelesTrapezoid.setUpperBase(random.nextInt(unitsLimit));
-                isoscelesTrapezoid.setLowerBase(random.nextInt(unitsLimit));
-                isoscelesTrapezoid.heightCalculator();
-                isoscelesTrapezoid.areaCalculator();
-                return isoscelesTrapezoid;
+                return getRandomIsoscelesTrapezoid();
         }
     }
 
+    private Square getRandomSquare() {
+        return new Square(supplier.getRandomColor().name(),
+                          random.nextInt(MIN_LENGTH, MAX_LENGTH));
+    }
+
+    private Rectangle getRandomRectangle() {
+        return new Rectangle(supplier.getRandomColor().name(),
+                             random.nextInt(MIN_LENGTH, MAX_LENGTH),
+                             random.nextInt(MIN_LENGTH, MAX_LENGTH));
+    }
+
+    private RightTriangle getRandomRightTriangle() {
+        return new RightTriangle(supplier.getRandomColor().name(),
+                                 random.nextInt(MIN_LENGTH, MAX_LENGTH),
+                                 random.nextInt(MIN_LENGTH, MAX_LENGTH));
+    }
+
+    private Circle getRandomCircle() {
+        return new Circle(supplier.getRandomColor().name(),
+                          random.nextInt(MIN_LENGTH, MAX_LENGTH));
+    }
+
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(supplier.getRandomColor().name(),
+                                      random.nextInt(MIN_LENGTH, MAX_LENGTH),
+                                      random.nextInt(MIN_LENGTH, MAX_LENGTH));
+    }
+
     public Figure getDefaultFigure() {
-        Circle circle = new Circle();
-        circle.setColor(Color.WHITE.name());
-        circle.setRadius(10);
-        circle.diameterCalculator();
-        circle.areaCalculator();
-        return circle;
+        return new Circle(Color.WHITE.name(), DEFAULT_NUMBER);
     }
 }
