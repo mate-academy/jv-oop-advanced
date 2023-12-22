@@ -8,7 +8,6 @@ public class RightTriangle extends Figure {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        this.area = areaCalculator();
     }
 
     public double getFirstLeg() {
@@ -21,12 +20,12 @@ public class RightTriangle extends Figure {
 
     @Override
     public double areaCalculator() {
-        return this.area = (firstLeg * secondLeg) / 2;
+        return (firstLeg * secondLeg) / 2;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: right trianle, area: " + getArea() + " sq. units, first leg: "
+        System.out.println("Figure: right trianle, area: " + areaCalculator() + " sq. units, first leg: "
                 + getFirstLeg() + " units, second leg: "
                 + getSecondLeg() + " units, color: "
                 + getColor());

@@ -8,7 +8,6 @@ public class Rectangle extends Figure {
         super(color);
         this.verticalSide = verticalSide;
         this.horizontalSide = horizontalSide;
-        this.area = areaCalculator();
     }
 
     public double getVerticalSide() {
@@ -21,12 +20,12 @@ public class Rectangle extends Figure {
 
     @Override
     public double areaCalculator() {
-        return this.area = verticalSide * horizontalSide;
+        return verticalSide * horizontalSide;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, vertical side: "
+        System.out.println("Figure: rectangle, area: " + areaCalculator() + " sq. units, vertical side: "
                 + getVerticalSide() + " units, horizontal side: "
                 + getHorizontalSide() + " units, color: "
                 + getColor());
