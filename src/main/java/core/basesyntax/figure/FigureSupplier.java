@@ -3,18 +3,17 @@ package core.basesyntax.figure;
 import core.basesyntax.Figure;
 import core.basesyntax.ColorSupplier;
 import core.basesyntax.enums.FigureName;
-
 import java.util.Random;
 
 public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
-    String color;
+    private String color;
 
     private int randomParameters() {
-        final int BOUNDMAX = 20;
-        final int BOUNDMIN = 1;
-        return random.nextInt(BOUNDMIN, BOUNDMAX);
+        final int boundMax = 20;
+        final int boundMin = 1;
+        return random.nextInt(boundMin, boundMax);
     }
 
     public Figure getRandomFigure() {
@@ -50,8 +49,8 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        final int DEFAULTRADIUS = 10;
-        final String DEFAULTCOLOR = "WHITE";
-        return new Circle(DEFAULTRADIUS, DEFAULTCOLOR);
+        final int defaultRadius = 10;
+        color = colorSupplier.getDefaultColor();
+        return new Circle(defaultRadius, color);
     }
 }

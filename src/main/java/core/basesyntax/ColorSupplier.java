@@ -9,4 +9,7 @@ public class ColorSupplier {
     public String getRandomColor() {
         return Color.values()[random.nextInt(Color.values().length)].toString();
     }
+    public String getDefaultColor() {
+        return "WHITE";
+    }
 }
