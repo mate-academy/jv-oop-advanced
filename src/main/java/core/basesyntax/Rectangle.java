@@ -2,24 +2,24 @@ package core.basesyntax;
 
 public class Rectangle extends Figure {
     private final int width;
-    private final int height;
+    private final int length;
 
-    public Rectangle(String color, int width, int height) {
+    public Rectangle(String color, int width, int length) {
         super(color);
         this.width = width;
-        this.height = height;
+        this.length = length;
     }
 
     @Override
     public double getArea() {
-        return width * height;
+        return width * length;
     }
 
     @Override
     public String toString() {
         return "Figure: rectangle, area: "
                 + getArea() + " sq. units, width: "
-                + width + " units, height: " + height
+                + width + " units, length: " + length
                 + " units, color: " + getColor();
     }
 }

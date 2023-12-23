@@ -16,8 +16,8 @@ public class FigureSupplier {
                 return new Square(colorSupplier.getRandomColor(), randomSide);
             case 2:
                 int randomWidth = random.nextInt(MAX_VALUES - 4) + 1;
-                int randomHeight = random.nextInt(MAX_VALUES) + 3;
-                return new Rectangle(colorSupplier.getRandomColor(), randomWidth, randomHeight);
+                int randomLength = random.nextInt(MAX_VALUES) + 3;
+                return new Rectangle(colorSupplier.getRandomColor(), randomWidth, randomLength);
             case 3:
                 int randomFirstLeg = random.nextInt(MAX_VALUES - 4) + 1;
                 int randomSecondLeg = random.nextInt(MAX_VALUES) + 1;
@@ -29,7 +29,7 @@ public class FigureSupplier {
             case 5:
                 int randomBaseA = random.nextInt(MAX_VALUES - 5) + 2;
                 int randomBaseB = random.nextInt(MAX_VALUES - 2) + 4;
-                randomHeight = random.nextInt(MAX_VALUES) + 1;
+                int randomHeight = random.nextInt(MAX_VALUES) + 1;
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                         randomBaseA, randomBaseB, randomHeight);
             default:
