@@ -9,7 +9,7 @@ public class Main {
             randomFigure[i + 3] = figureSupplier.getDefaultFigure();
         }
         for (int i = 0; i < 6; i++) {
-            System.out.println(randomFigure[i]);
+            System.out.println(randomFigure[i].draw());
         }
     }
 }
