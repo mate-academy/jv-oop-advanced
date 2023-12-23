@@ -9,7 +9,7 @@ public class IsoscelesTrapezoid extends Figure {
         super(color);
         this.upperBase = upperBase;
         this.lowerBase = lowerBase;
-        this.height = heightCalculator();
+        this.height = calculateHeight();
     }
 
     public double getUpperBase() {
@@ -24,18 +24,19 @@ public class IsoscelesTrapezoid extends Figure {
         return height;
     }
 
-    public double heightCalculator() {
+    public double calculateHeight() {
         return this.height = (upperBase + lowerBase) / 2;
     }
 
-    public double areaCalculator() {
+    @Override
+    public double calculateArea() {
         return ((upperBase + lowerBase) / 2) * height;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: isosceles trapezoid, area: "
-                + areaCalculator() + " sq. units, upper base: "
+                + calculateArea() + " sq. units, upper base: "
                 + getUpperBase() + " units, lower base: "
                 + getLowerBase() + " units, height: "
                 + getHeight() + " units, color: "

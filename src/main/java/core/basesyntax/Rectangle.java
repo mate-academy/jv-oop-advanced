@@ -19,14 +19,14 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double areaCalculator() {
+    public double calculateArea() {
         return verticalSide * horizontalSide;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: rectangle, area: "
-                + areaCalculator() + " sq. units, vertical side: "
+                + calculateArea() + " sq. units, vertical side: "
                 + getVerticalSide() + " units, horizontal side: "
                 + getHorizontalSide() + " units, color: "
                 + getColor());
