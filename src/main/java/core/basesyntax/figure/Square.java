@@ -6,10 +6,10 @@ import core.basesyntax.enums.FigureName;
 public class Square extends Figure {
     private double side;
 
-    public Square(double side) {
+    public Square(double side, String color) {
         this.side = side;
         this.setFigureName(FigureName.SQUARE);
-        this.setColor();
+        this.setColor(color);
     }
 
     @Override
@@ -18,10 +18,10 @@ public class Square extends Figure {
     }
 
     @Override
-    public String draw() {
-        return "Figure: " + this.getFigureName() + ", "
+    public void draw() {
+        System.out.println("Figure: " + this.getFigureName() + ", "
                 + "area: " + getArea() + " sq. units, "
                 + "side: " + side
-                + ", color: " + this.getColor();
+                + ", color: " + this.getColor());
     }
 }

@@ -4,12 +4,12 @@ import core.basesyntax.Figure;
 import core.basesyntax.enums.FigureName;
 
 public class Circle extends Figure {
-    private double radius;
+    private final double radius;
 
-    public Circle(double radius) {
+    public Circle(double radius, String color) {
         this.radius = radius;
         this.setFigureName(FigureName.CIRCLE);
-        this.setColor();
+        this.setColor(color);
     }
 
     @Override
@@ -18,10 +18,10 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String draw() {
-        return "Figure: " + this.getFigureName() + ", "
+    public void draw() {
+        System.out.println("Figure: " + this.getFigureName() + ", "
                 + "area: " + getArea() + " sq. units, "
                 + "radius: " + radius + ", "
-                + "color: " + this.getColor();
+                + "color: " + this.getColor());
     }
 }

@@ -1,50 +1,57 @@
 package core.basesyntax.figure;
 
 import core.basesyntax.Figure;
+import core.basesyntax.ColorSupplier;
 import core.basesyntax.enums.FigureName;
+
 import java.util.Random;
 
 public class FigureSupplier {
-    private final int boundMax = 20;
-    private final int boundMin = 1;
-    private final int defaultRadius = 10;
+    private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
-    private int indexFigureName;
+    String color;
 
-    public int randomParameters() {
-        return random.nextInt(boundMin, boundMax);
+    private int randomParameters() {
+        final int BOUNDMAX = 20;
+        final int BOUNDMIN = 1;
+        return random.nextInt(BOUNDMIN, BOUNDMAX);
     }
 
     public Figure getRandomFigure() {
-        indexFigureName = random.nextInt(FigureName.values().length);
+        int indexFigureName = random.nextInt(FigureName.values().length);
         switch (FigureName.values()[indexFigureName]) {
             case CIRCLE:
                 double radius = randomParameters();
-                return new Circle(radius);
+                color = colorSupplier.getRandomColor();
+                return new Circle(radius, color);
             case ISOSCELEXTRAPEZOID:
                 double sideFirst = randomParameters();
                 double sideSecond = randomParameters();
                 double height = randomParameters();
-                return new IsoscelesTrapezoid(sideFirst, sideSecond, height);
+                color = colorSupplier.getRandomColor();
+                return new IsoscelesTrapezoid(sideFirst, sideSecond, height, color);
             case RECTANGLE:
                 double sideBasis = randomParameters();
                 height = randomParameters();
-                return new Rectangle(sideBasis, height);
+                color = colorSupplier.getRandomColor();
+                return new Rectangle(sideBasis, height, color);
             case RIGHTTRIANGLE:
                 double firstLeg = randomParameters();
                 double secondLeg = randomParameters();
-                return new RightTriangle(firstLeg, secondLeg);
+                color = colorSupplier.getRandomColor();
+                return new RightTriangle(firstLeg, secondLeg, color);
             case SQUARE:
                 double side = randomParameters();
-                return new Square(side);
+                color = colorSupplier.getRandomColor();
+                return new Square(side, color);
             default:
-                return null;
+                return getDefaultFigure();
         }
     }
 
     public Figure getDefaultFigure() {
-        Figure circle = new Circle(defaultRadius);
-        circle.setColor("WHITE");
-        return circle;
+        final int DEFAULTRADIUS = 10;
+        final String DEFAULTCOLOR = "WHITE";
+        return new Circle(DEFAULTRADIUS, DEFAULTCOLOR);
     }
 }

@@ -7,11 +7,11 @@ public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
-    public RightTriangle(double firstLeg, double secondLeg) {
+    public RightTriangle(double firstLeg, double secondLeg, String color) {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
         this.setFigureName(FigureName.RIGHTTRIANGLE);
-        this.setColor();
+        this.setColor(color);
     }
 
     @Override
@@ -20,10 +20,10 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String draw() {
-        return "Figure: " + this.getFigureName() + ", "
+    public void draw() {
+        System.out.println("Figure: " + this.getFigureName() + ", "
                 + "area: " + getArea() + " sq. units, "
                 + "firstLeg: " + firstLeg + ", secondLeg: " + secondLeg
-                + ", color: " + this.getColor();
+                + ", color: " + this.getColor());
     }
 }

@@ -7,11 +7,11 @@ public class Rectangle extends Figure {
     private double sideBasis;
     private double height;
 
-    public Rectangle(double sideBasis, double height) {
+    public Rectangle(double sideBasis, double height, String color) {
         this.sideBasis = sideBasis;
         this.height = height;
         this.setFigureName(FigureName.RECTANGLE);
-        this.setColor();
+        this.setColor(color);
     }
 
     @Override
@@ -20,10 +20,10 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String draw() {
-        return "Figure: " + this.getFigureName() + ", "
+    public void draw() {
+        System.out.println("Figure: " + this.getFigureName() + ", "
                 + "area: " + getArea() + " sq. units, "
                 + "sideBasis: " + sideBasis + ", height: " + height
-                + ", color: " + this.getColor();
+                + ", color: " + this.getColor());
     }
 }

@@ -10,12 +10,11 @@ public class Main {
         for (int i = 0; i < figureArr.length; i++) {
             if (i < figureArr.length / 2) {
                 figureArr[i] = figureSupplier.getRandomFigure();
-                System.out.println(figureArr[i].draw());
+                figureArr[i].draw();
             }
             if (i >= figureArr.length / 2) {
                 figureArr[i] = figureSupplier.getDefaultFigure();
-                figureArr[i].setColor("WHITE");
-                System.out.println(figureArr[i].draw());
+                figureArr[i].draw();
             }
         }
     }
