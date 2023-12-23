@@ -67,3 +67,4 @@ public class FigureSupplier {
         return new Circle(Color.WHITE.name(), DEFAULT_NUMBER);
     }
 }
+
