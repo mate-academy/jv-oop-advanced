@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-
     private double radius;
 
     public void printInfo() {
@@ -9,6 +8,7 @@ public class Circle extends Figure {
                 + ", " + "area: " + calculateArea()
                 + ", " + "radius: " + getRadius()
                 + ", " + "color: " + getColor());
+
     }
 
     @Override

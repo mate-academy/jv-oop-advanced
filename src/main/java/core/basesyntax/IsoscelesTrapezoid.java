@@ -1,11 +1,8 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-
     private double bottomBase;
-
     private double upperBase;
-
     private double lateralSide;
 
     @Override

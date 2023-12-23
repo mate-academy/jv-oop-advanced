@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-
     private double cat1;
     private double cat2;
 
