@@ -28,31 +28,39 @@ public class FigureSupplier {
     }
 
     private Square getRandomSquare() {
-        return new Square(supplier.getRandomColor().name(),
-                          random.nextInt(MIN_LENGTH, MAX_LENGTH));
+        return new Square(randomColorSupplier(),
+                          randomValueSupplier());
     }
 
     private Rectangle getRandomRectangle() {
-        return new Rectangle(supplier.getRandomColor().name(),
-                             random.nextInt(MIN_LENGTH, MAX_LENGTH),
-                             random.nextInt(MIN_LENGTH, MAX_LENGTH));
+        return new Rectangle(randomColorSupplier(),
+                             randomValueSupplier(),
+                             randomValueSupplier());
     }
 
     private RightTriangle getRandomRightTriangle() {
-        return new RightTriangle(supplier.getRandomColor().name(),
-                                 random.nextInt(MIN_LENGTH, MAX_LENGTH),
-                                 random.nextInt(MIN_LENGTH, MAX_LENGTH));
+        return new RightTriangle(randomColorSupplier(),
+                                 randomValueSupplier(),
+                                 randomValueSupplier());
     }
 
     private Circle getRandomCircle() {
-        return new Circle(supplier.getRandomColor().name(),
-                          random.nextInt(MIN_LENGTH, MAX_LENGTH));
+        return new Circle(randomColorSupplier(),
+                          randomValueSupplier());
     }
 
     private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(supplier.getRandomColor().name(),
-                                      random.nextInt(MIN_LENGTH, MAX_LENGTH),
-                                      random.nextInt(MIN_LENGTH, MAX_LENGTH));
+        return new IsoscelesTrapezoid(randomColorSupplier(),
+                                      randomValueSupplier(),
+                                      randomValueSupplier());
+    }
+
+    private String randomColorSupplier() {
+        return supplier.getRandomColor();
+    }
+
+    private double randomValueSupplier() {
+        return random.nextInt(MIN_LENGTH, MAX_LENGTH);
     }
 
     public Figure getDefaultFigure() {
