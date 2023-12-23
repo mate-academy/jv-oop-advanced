@@ -8,9 +8,9 @@ public class Main {
         for (int i = 0; i < figures.length; i++) {
             if (i < half) {
                 figures[i] = figureSupplier.getRandomFigure();
-                continue;
+            } else {
+                figures[i] = figureSupplier.getDefaultFigure();
             }
-            figures[i] = figureSupplier.getDefaultFigure();
         }
     }
 }
