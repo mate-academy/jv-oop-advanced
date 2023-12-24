@@ -10,20 +10,20 @@ public class FigureSupplier {
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        switch (getRandomInt(FIGURE_COUNT)) {
+        switch (random.nextInt(FIGURE_COUNT)) {
             case 1:
-                return new Circle(getRandomColor(), getRandomInt(MAX));
+                return new Circle(getRandomColor(), getRandomInt());
             case 2:
-                return new Rectangle(getRandomColor(), getRandomInt(MAX),
-                        getRandomInt(MAX));
+                return new Rectangle(getRandomColor(), getRandomInt(),
+                        getRandomInt());
             case 3:
-                return new Square(getRandomColor(), getRandomInt(MAX));
+                return new Square(getRandomColor(), getRandomInt());
             case 4:
-                return new RightTriangle(getRandomColor(), getRandomInt(MAX),
-                        getRandomInt(MAX));
+                return new RightTriangle(getRandomColor(), getRandomInt(),
+                        getRandomInt());
             case 5:
-                return new IsoscelesTrapezoid(getRandomColor(), getRandomInt(MAX),
-                        getRandomInt(MAX), getRandomInt(MAX));
+                return new IsoscelesTrapezoid(getRandomColor(), getRandomInt(),
+                        getRandomInt(), getRandomInt());
             default:
                 return getDefaultFigure();
         }
@@ -37,7 +37,7 @@ public class FigureSupplier {
         return supplier.getRandomColor();
     }
 
-    private int getRandomInt(int max) {
-        return random.nextInt(max);
+    private int getRandomInt() {
+        return random.nextInt(MAX);
     }
 }
