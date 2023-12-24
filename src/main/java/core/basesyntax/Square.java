@@ -2,10 +2,10 @@ package core.basesyntax;
 
 public class Square extends Figure {
     private double side;
+    private String name;
+    private String color;
 
-    public Square(double side, String name, String color) {
-        super(name, color);
-        this.side = side;
+    public Square() {
     }
 
     @Override
@@ -25,4 +25,23 @@ public class Square extends Figure {
         return side;
     }
 
+    public void setSide(double side) {
+        this.side = side;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
 }

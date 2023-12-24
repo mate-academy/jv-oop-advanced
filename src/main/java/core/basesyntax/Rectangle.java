@@ -3,11 +3,10 @@ package core.basesyntax;
 public class Rectangle extends Figure {
     private double sideA;
     private double sideB;
+    private String name;
+    private String color;
 
-    public Rectangle(double sideA, double sideB, String name, String color) {
-        super(name, color);
-        this.sideA = sideA;
-        this.sideB = sideB;
+    public Rectangle() {
     }
 
     @Override
@@ -30,5 +29,29 @@ public class Rectangle extends Figure {
 
     public double getSideB() {
         return sideB;
+    }
+
+    public void setSideA(double sideA) {
+        this.sideA = sideA;
+    }
+
+    public void setSideB(double sideB) {
+        this.sideB = sideB;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 }
