@@ -4,17 +4,17 @@ public class Circle extends Figure {
     private final int radius;
 
     public Circle(String color, int radius) {
-        this.setName("circle");
-        this.setColor(color);
+        this.name = "circle";
+        this.color = color;
         this.radius = radius;
     }
 
     @Override
     public void draw() {
-        String drawString = FIGURE + getName() + AREA
+        String drawString = FIGURE + name + AREA
                 + String.format("%.1f", getArea()) + SQ_UNITS
                 + "radius: " + radius + UNITS
-                + "color: " + getColor();
+                + "color: " + color;
         System.out.println(drawString);
     }
 

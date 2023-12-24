@@ -4,17 +4,17 @@ public class Square extends Figure {
     private final int side;
 
     public Square(String color, int side) {
-        this.setName("square");
-        this.setColor(color);
+        this.name = "square";
+        this.color = color;
         this.side = side;
     }
 
     @Override
     public void draw() {
-        String drawString = FIGURE + getName() + AREA
+        String drawString = FIGURE + name + AREA
                 + String.format("%.1f", getArea()) + SQ_UNITS
                 + "side: " + side + UNITS
-                + "color: " + getColor();
+                + "color: " + color;
         System.out.println(drawString);
     }
 
