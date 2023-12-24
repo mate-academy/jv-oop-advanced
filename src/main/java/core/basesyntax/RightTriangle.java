@@ -4,17 +4,15 @@ public class RightTriangle extends Figure {
     private double cat1;
     private double cat2;
 
-    @Override
-    public double calculateArea() {
-        return (cat1 * cat2) / 2;
+    public RightTriangle(double cat1, double cat2,String name, String color) {
+        super(name, color);
+        this.cat1 = cat1;
+        this.cat2 = cat2;
     }
 
     @Override
-    public void generateRandomParameters() {
-        cat1 = random.nextDouble() * 20;
-        cat2 = random.nextDouble() * 20;
-        name = "RightTriangle";
-        color = colorSupplier.getRandomColor();
+    public double calculateArea() {
+        return (cat1 * cat2) / 2;
     }
 
     @Override

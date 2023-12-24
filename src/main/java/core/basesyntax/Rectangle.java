@@ -4,16 +4,15 @@ public class Rectangle extends Figure {
     private double sideA;
     private double sideB;
 
+    public Rectangle(double sideA, double sideB, String name, String color) {
+        super(name, color);
+        this.sideA = sideA;
+        this.sideB = sideB;
+    }
+
     @Override
     public double calculateArea() {
         return sideA * sideB;
-    }
-
-    public void generateRandomParameters() {
-        sideA = random.nextDouble() * 20;
-        sideB = random.nextDouble() * 20;
-        name = "Rectangle";
-        color = colorSupplier.getRandomColor();
     }
 
     @Override

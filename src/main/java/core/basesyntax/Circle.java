@@ -3,6 +3,11 @@ package core.basesyntax;
 public class Circle extends Figure {
     private double radius;
 
+    public Circle(double radius,String name, String color) {
+        super(name,color);
+        this.radius = radius;
+    }
+
     public void printInfo() {
         System.out.println("Figure: " + getName()
                 + ", " + "area: " + calculateArea()
@@ -16,17 +21,8 @@ public class Circle extends Figure {
         return Math.PI * (radius * radius);
     }
 
-    public void generateRandomParameters() {
-        radius = random.nextDouble() * 20;
-        name = "Circle";
-        color = colorSupplier.getRandomColor();
-    }
-
     public double getRadius() {
         return radius;
     }
 
-    public void setRadius(double radius) {
-        this.radius = radius;
-    }
 }

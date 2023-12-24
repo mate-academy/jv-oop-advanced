@@ -5,20 +5,19 @@ public class IsoscelesTrapezoid extends Figure {
     private double upperBase;
     private double lateralSide;
 
+    public IsoscelesTrapezoid(double bottomBase, double upperBase,
+                              double lateralSide, String name, String color) {
+        super(name, color);
+        this.bottomBase = bottomBase;
+        this.upperBase = upperBase;
+        this.lateralSide = lateralSide;
+    }
+
     @Override
     public double calculateArea() {
         return ((upperBase + bottomBase) / 2)
                 *
                 Math.sqrt((lateralSide * lateralSide) - (Math.pow(bottomBase - upperBase, 2) / 4));
-    }
-
-    @Override
-    public void generateRandomParameters() {
-        bottomBase = random.nextDouble() * 20;
-        upperBase = random.nextDouble() * 20;
-        lateralSide = random.nextDouble() * 20;
-        name = "IsoscelesTrapezoid";
-        color = colorSupplier.getRandomColor();
     }
 
     @Override
