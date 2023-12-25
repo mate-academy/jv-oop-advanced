@@ -1,14 +1,13 @@
 package core.basesyntax.figures;
 
 public class RightTriangle extends Shape {
-    private int firstLeg;
-    private int secondLeg;
+    private final int firstLeg;
+    private final int secondLeg;
 
     public RightTriangle(String color, int firstLeg, int secondLeg) {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        area = calculateArea();
     }
 
     @Override
@@ -19,7 +18,7 @@ public class RightTriangle extends Shape {
     @Override
     public void draw() {
         System.out.println("Figure: right triangle,"
-                + " area: " + area + " sq. units,"
+                + " area: " + calculateArea() + " sq. units,"
                 + " firstLeg: " + firstLeg + " units,"
                 + " secondLeg: " + secondLeg + " units,"
                 + " color: " + color + "\"");

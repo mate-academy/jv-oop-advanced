@@ -6,7 +6,6 @@ public class Circle extends Shape {
     public Circle(String color, int radius) {
         super(color);
         this.radius = radius;
-        area = calculateArea();
     }
 
     @Override

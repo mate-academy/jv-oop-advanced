@@ -10,7 +10,6 @@ public class IsoscelesTrapezoid extends Shape {
         this.upperBase = upperBase;
         this.lowerBase = lowerBase;
         this.height = height;
-        area = calculateArea();
     }
 
     @Override

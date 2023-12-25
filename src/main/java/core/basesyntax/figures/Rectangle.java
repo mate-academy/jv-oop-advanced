@@ -1,14 +1,13 @@
 package core.basesyntax.figures;
 
 public class Rectangle extends Shape {
-    private int sideA;
-    private int sideB;
+    private final int sideA;
+    private final int sideB;
 
     public Rectangle(String color, int sideA, int sideB) {
         super(color);
         this.sideA = sideA;
         this.sideB = sideB;
-        area = calculateArea();
     }
 
     @Override

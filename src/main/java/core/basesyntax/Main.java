@@ -3,22 +3,19 @@ package core.basesyntax;
 import core.basesyntax.figures.Shape;
 import core.basesyntax.suppliers.FigureSupplier;
 
-/**
- * Feel free to remove this class and create your own.
- */
 public class Main {
+    static final int ARRAY_LENGTH = 6;
+
     public static void main(String[] args) {
-        Shape[] shapes = new Shape[6];
+        Shape[] shapes = new Shape[ARRAY_LENGTH];
         FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < shapes.length; i++) {
-            while (i < 3) {
-                shapes[i++] = figureSupplier.getRandomFigure();
+            if (i < 3) {
+                shapes[i] = figureSupplier.getRandomFigure();
+            } else {
+                shapes[i] = figureSupplier.getDefaultFigure();
             }
-            shapes[i] = figureSupplier.getDefaultFigure();
-        }
-
-        for (Shape shape : shapes) {
-            shape.draw();
+            shapes[i].draw();
         }
     }
 }

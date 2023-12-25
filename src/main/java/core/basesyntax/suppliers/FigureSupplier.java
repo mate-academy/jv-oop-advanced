@@ -11,32 +11,36 @@ import java.util.Random;
 public class FigureSupplier {
     /** Checkstyle plugin throws an error on the constant name with more than two capital
      *  letters in the row. So I had to use camelCase for the constants */
-    private final int numberLimit = 45;
-    private final int coefficient = 2;
+    static final int NUMBER_LIMIT = 45;
+    static final int NUMBER_OF_FIGURES = 5;
+    static final int ZERO_EXCLUSIVE = 1;
+    static final int TRAPEZOID_COEFFICIENT = 2;
+    static final int DEFAULT_RADIUS = 10;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Shape getRandomFigure() {
-
-        Shape[] shapes = new Shape[]{
-                new Circle(colorSupplier.getRandomColor(),random.nextInt(numberLimit)),
-                new IsoscelesTrapezoid(colorSupplier.getRandomColor(),getRandomSide(),
-                        getRandomSide() * coefficient, getRandomSide()),
-                new Rectangle(colorSupplier.getRandomColor(),getRandomSide(),getRandomSide()),
-                new RightTriangle(colorSupplier.getRandomColor(), getRandomSide(), getRandomSide()),
-                new Square(colorSupplier.getRandomColor(), getRandomSide()),
-                new Circle(colorSupplier.getRandomColor(), getRandomSide())
+        int randomValue = random.nextInt(NUMBER_OF_FIGURES) + ZERO_EXCLUSIVE;
+        return switch (randomValue) {
+            case 1 -> new Circle(getRandomColor(), getRandomSide());
+            case 2 -> new IsoscelesTrapezoid(getRandomColor(), getRandomSide(),
+                    getRandomSide() * TRAPEZOID_COEFFICIENT, getRandomSide());
+            case 3 -> new Rectangle(getRandomColor(), getRandomSide(), getRandomSide());
+            case 4 -> new RightTriangle(getRandomColor(), getRandomSide(), getRandomSide());
+            case 5 -> new Square(getRandomColor(), getRandomSide());
+            default -> throw new IllegalStateException("Unexpected value: " + randomValue);
         };
-
-        int randomIndex = random.nextInt(shapes.length);
-        return shapes[randomIndex];
     }
 
     public int getRandomSide() {
-        return random.nextInt(numberLimit);
+        return random.nextInt(NUMBER_LIMIT);
+    }
+
+    public String getRandomColor() {
+        return colorSupplier.getRandomColor();
     }
 
     public Shape getDefaultFigure() {
-        return new Circle("white", 10);
+        return new Circle(Color.WHITE.name(), DEFAULT_RADIUS);
     }
 }
