@@ -5,9 +5,14 @@ public class IsoscelesTrapezoid extends Figure {
     private double upperBase;
     private double lateralSide;
     private String name;
-    private String color;
 
-    public IsoscelesTrapezoid() {
+    public IsoscelesTrapezoid(double bottomBase, double upperBase,
+                              double lateralSide, String name, String color) {
+        super(color);
+        this.bottomBase = bottomBase;
+        this.upperBase = upperBase;
+        this.lateralSide = lateralSide;
+        this.name = name;
     }
 
     @Override
@@ -39,28 +44,8 @@ public class IsoscelesTrapezoid extends Figure {
         return lateralSide;
     }
 
-    public void setBottomBase(double bottomBase) {
-        this.bottomBase = bottomBase;
-    }
-
-    public void setUpperBase(double upperBase) {
-        this.upperBase = upperBase;
-    }
-
-    public void setLateralSide(double lateralSide) {
-        this.lateralSide = lateralSide;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getColor() {
-        return color;
     }
 
     public void setColor(String color) {

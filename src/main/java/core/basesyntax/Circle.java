@@ -3,15 +3,11 @@ package core.basesyntax;
 public class Circle extends Figure {
     private double radius;
     private String name;
-    private String color;
-
-    public Circle() {
-    }
 
     public Circle(double radius, String name, String color) {
+        super(color);
         this.radius = radius;
         this.name = name;
-        this.color = color;
     }
 
     public void printInfo() {
@@ -31,23 +27,12 @@ public class Circle extends Figure {
         return radius;
     }
 
-    public void setRadius(double radius) {
-        this.radius = radius;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public String getColor() {
-        return color;
     }
 
     public void setColor(String color) {
         this.color = color;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
 }

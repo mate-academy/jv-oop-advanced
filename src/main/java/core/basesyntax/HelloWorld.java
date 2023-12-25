@@ -8,11 +8,13 @@ public class HelloWorld {
 
         Figure[] figures = new Figure[MAX_FIGURES];
         for (int i = 0; i < figures.length; ++i) {
-            if (i < 3) {
-                figureSupplier.getRandomFigure().printInfo();
-                continue;
+            if (i < figures.length / 2) {
+                figures[i] = figureSupplier.getRandomFigure();
+                figures[i].printInfo();
+            } else {
+                figures[i] = figureSupplier.getDefaultFigure();
+                figures[i].printInfo();
             }
-            figureSupplier.getDefaultFigure().printInfo();
         }
     }
 }

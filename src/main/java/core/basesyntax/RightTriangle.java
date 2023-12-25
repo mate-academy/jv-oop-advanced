@@ -4,9 +4,12 @@ public class RightTriangle extends Figure {
     private double cat1;
     private double cat2;
     private String name;
-    private String color;
 
-    public RightTriangle() {
+    public RightTriangle(double cat1, double cat2, String name, String color) {
+        super(color);
+        this.cat1 = cat1;
+        this.cat2 = cat2;
+        this.name = name;
     }
 
     @Override
@@ -31,24 +34,8 @@ public class RightTriangle extends Figure {
         return cat2;
     }
 
-    public void setCat1(double cat1) {
-        this.cat1 = cat1;
-    }
-
-    public void setCat2(double cat2) {
-        this.cat2 = cat2;
-    }
-
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getColor() {
-        return color;
     }
 
     public void setColor(String color) {
