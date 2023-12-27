@@ -13,7 +13,7 @@ public class HelloWorld {
                 new FigureSupplier().getDefaultFigure(),
                 new FigureSupplier().getDefaultFigure()};
         for (int i = 0; i < figures.length; i++) {
-            figures[i].fullInfo();
+            figures[i].draw();
         }
     }
 }

@@ -6,13 +6,13 @@ public class IsoscelesTrapezoid extends FigureForOther {
     }
 
     @Override
-    public double area() {
+    public double calculatorArea() {
         return Math.pow(getThirdSide(), 2) - Math.pow(getSecondSide() - getFirstSide(), 2);
     }
 
     @Override
-    public void fullInfo() {
-        System.out.println("Figure: trapezoid, area: " + area()
+    public void draw() {
+        System.out.println("Figure: trapezoid, area: " + calculatorArea()
                 + " sq. units, small side: " + getFirstSide()
                 + " units, big side: " + getSecondSide() + " units, left or right side: "
                 + getThirdSide() + " units, color: " + getColor());

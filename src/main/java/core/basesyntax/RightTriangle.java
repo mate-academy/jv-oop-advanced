@@ -1,20 +1,25 @@
 package core.basesyntax;
 
-public class RightTriangle extends FigureForTriangle {
+public class RightTriangle extends Figure {
+    private final int firstLeg;
+    private final int secondLeg;
+
     public RightTriangle(String color, int firstLeg, int secondLeg) {
-        super(color, firstLeg, secondLeg);
+        super(color);
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
     }
 
     @Override
-    public double area() {
-        return (getFirstLeg() * getSecondLeg()) / 2;
+    public double calculatorArea() {
+        return (firstLeg * secondLeg) / 2;
     }
 
     @Override
-    public void fullInfo() {
-        System.out.println("Figure: triangle, area: " + area()
-                + " sq. units, firstLeg: " + getFirstLeg()
-                + " units, secondLeg: " + getSecondLeg()
+    public void draw() {
+        System.out.println("Figure: triangle, area: " + calculatorArea()
+                + " sq. units, firstLeg: " + firstLeg
+                + " units, secondLeg: " + secondLeg
                 + " units, color: " + getColor());
     }
 }

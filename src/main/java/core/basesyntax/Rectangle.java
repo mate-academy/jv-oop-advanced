@@ -6,14 +6,14 @@ public class Rectangle extends FigureForOther {
     }
 
     @Override
-    public double area() {
+    public double calculatorArea() {
         return getFirstSide() * getSecondSide();
     }
 
     @Override
-    public void fullInfo() {
+    public void draw() {
         System.out.println("Figure: rectangle, area: "
-                + area() + "sq. units, first side: " + getFirstSide()
+                + calculatorArea() + "sq. units, first side: " + getFirstSide()
                 + " units, second side: " + getSecondSide()
                 + " color: " + getColor());
     }

@@ -6,13 +6,13 @@ public class Square extends FigureForOther {
     }
 
     @Override
-    public double area() {
+    public double calculatorArea() {
         return getFirstSide() * getFirstSide();
     }
 
     @Override
-    public void fullInfo() {
-        System.out.println("Figure: square, area: " + area()
+    public void draw() {
+        System.out.println("Figure: square, area: " + calculatorArea()
                 + " sq. units, side: " + getFirstSide()
                 + " units, color: " + getColor());
     }
