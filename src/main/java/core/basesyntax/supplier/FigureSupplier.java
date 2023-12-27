@@ -10,6 +10,8 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int FIGURE_COUNT = 6;
+    private static final String DEFAULT_COLOR = "WHITE";
+    private static final double DEFAULT_NUMBER = 10.0;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -64,18 +66,17 @@ public class FigureSupplier {
                 return getRightTriangle();
             case 3:
                 return getSquare();
-            case 4:
-                return getIsoscelesTrapezoid();
             default:
-                return getDefaultFigure();
+                return getIsoscelesTrapezoid();
+
         }
 
     }
 
     public Figure getDefaultFigure() {
         Circle circle = new Circle();
-        circle.setColor(Color.WHITE.name());
-        circle.setRadius(10);
+        circle.setColor(DEFAULT_COLOR);
+        circle.setRadius(DEFAULT_NUMBER);
         return circle;
     }
 
