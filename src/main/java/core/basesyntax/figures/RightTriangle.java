@@ -20,15 +20,11 @@ public class RightTriangle extends Figure {
         this.side = side;
     }
 
-    public RightTriangle(String color, double firstLeg, double secondLeg) {
-        super(color);
-        this.high = firstLeg;
-        this.side = secondLeg;
-    }
-
     @Override
     public void draw() {
-
+        System.out.println("Figure: " + getClass().getSimpleName() + " area: " + getArea()
+                + " hight " + getHigh() + " side " + getSide()
+                + ", color: " + getColor());
     }
 
     @Override

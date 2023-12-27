@@ -11,14 +11,11 @@ public class Square extends Figure {
         this.side = side;
     }
 
-    public Square(String color, double side) {
-        super(color);
-        this.side = side;
-    }
-
     @Override
     public void draw() {
-
+        System.out.println("Figure: " + getClass().getSimpleName() + ", area: "
+                + getArea() + " side " + getSide()
+                + ", color: " + getColor());
     }
 
     @Override
