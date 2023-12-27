@@ -56,7 +56,6 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int index = random.nextInt(FIGURE_COUNT);
-        Figure figure = new Figure();
         switch (index) {
             case 0:
                 return getCircle();
