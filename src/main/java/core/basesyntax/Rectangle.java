@@ -4,10 +4,11 @@ class Rectangle extends Figure {
     private double length;
     private double width;
 
-    public Rectangle(double length, double width, String color) {
+    public Rectangle(double length, double width, ColorSupplier.Color color) {
+        super(color);
         this.length = length;
         this.width = width;
-        setColor(color);
+        setName("rectangle");
     }
 
     @Override
@@ -16,12 +17,11 @@ class Rectangle extends Figure {
     }
 
     @Override
-    public String getName() {
-        return "rectangle";
-    }
-
-    @Override
     public String draw() {
-        return "length: " + length + " unit, width: " + width + " unit, " + "color: " + getColor();
+        String figureDetails = "length: " + length + " unit, width: "
+                + width + " unit, " + "color: " + getColor();
+
+        // include additional information for draw()
+        return super.draw() + "\n" + figureDetails;
     }
 }

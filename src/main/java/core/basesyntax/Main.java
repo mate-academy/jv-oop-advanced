@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Main {
-
     public static void main(String[] args) {
         int arraySize = 6; // array size
         Figure[] figures = new Figure[arraySize];
@@ -9,13 +8,25 @@ public class Main {
 
         for (int i = 0; i < arraySize; i++) {
             if (i < arraySize / 2) {
-                figures[i] = figureSupplier.getRandomFigure();
+                Figure randomFigure = figureSupplier.getRandomFigure();
+                if (randomFigure != null) {
+                    figures[i] = randomFigure;
+                } else {
+                    System.out.println("Null figure received from getRandomFigure()");
+                }
             } else {
-                figures[i] = figureSupplier.getDefaultFigure();
+                Figure defaultFigure = figureSupplier.getDefaultFigure();
+                if (defaultFigure != null) {
+                    figures[i] = defaultFigure;
+                } else {
+                    System.out.println("Null figure received from getDefaultFigure()");
+                }
             }
 
-            System.out.println("figure: " + figures[i].getName() + ", square: "
-                    + figures[i].calculateArea() + " sq.units., " + figures[i].draw());
+            if (figures[i] != null) {
+                System.out.println("figure: " + figures[i].getName() + ", square: "
+                        + figures[i].calculateArea() + " sq.units., " + figures[i].draw());
+            }
         }
     }
 }

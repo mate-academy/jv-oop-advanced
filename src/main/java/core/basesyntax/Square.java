@@ -3,9 +3,10 @@ package core.basesyntax;
 class Square extends Figure {
     private double side;
 
-    public Square(double side, String color) {
+    public Square(double side, ColorSupplier.Color color) {
+        super(color);
         this.side = side;
-        setColor(color);
+        setName("square");
     }
 
     @Override
@@ -14,12 +15,10 @@ class Square extends Figure {
     }
 
     @Override
-    public String getName() {
-        return "square";
-    }
-
-    @Override
     public String draw() {
-        return "side: " + side + " unit, " + "color: " + getColor();
+        String figureDetails = "side: " + side + " unit, " + "color: " + getColor();
+
+        // include additional information for draw()
+        return super.draw() + "\n" + figureDetails;
     }
 }

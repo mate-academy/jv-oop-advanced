@@ -9,8 +9,12 @@ public class ColorSupplier {
         random = new Random();
     }
 
-    public String getRandomColor() {
-        String[] colors = {"red", "blue", "yellow", "green", "orange"};
+    public enum Color {
+        RED, BLUE, YELLOW, GREEN, ORANGE, BLACK;
+    }
+
+    public Color getRandomColor() {
+        Color[] colors = Color.values();
         int randomNumber = random.nextInt(colors.length);
         return colors[randomNumber];
     }

@@ -3,9 +3,10 @@ package core.basesyntax;
 class Circle extends Figure {
     private double radius;
 
-    public Circle(double radius, String color) {
+    public Circle(double radius, ColorSupplier.Color color) {
+        super(color);
         this.radius = radius;
-        setColor(color);
+        setName("circle");
     }
 
     @Override
@@ -14,12 +15,10 @@ class Circle extends Figure {
     }
 
     @Override
-    public String getName() {
-        return "circle";
-    }
-
-    @Override
     public String draw() {
-        return "radius: " + radius + " unit, " + "color: " + getColor();
+        String figureDetails = "radius: " + radius + " unit, " + "color: " + getColor();
+
+        // include additional information for draw()
+        return super.draw() + "\n" + figureDetails;
     }
 }

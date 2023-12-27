@@ -4,10 +4,11 @@ class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
-    public RightTriangle(double firstLeg, double secondLeg, String color) {
+    public RightTriangle(double firstLeg, double secondLeg, ColorSupplier.Color color) {
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        setColor(color);
+        setName("right triangle");
     }
 
     @Override
@@ -16,13 +17,12 @@ class RightTriangle extends Figure {
     }
 
     @Override
-    public String getName() {
-        return "right triangle";
-    }
-
-    @Override
     public String draw() {
-        return "first leg: " + firstLeg + " unit, second leg: "
-                + secondLeg + " unit, " + "color: " + getColor();
+        String figureDetails = "first leg: "
+                + firstLeg + " unit, second leg: " + secondLeg
+                + " unit, " + "color: " + getColor();
+
+        // include additional information for draw()
+        return super.draw() + "\n" + figureDetails;
     }
 }

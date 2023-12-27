@@ -5,21 +5,22 @@ import java.util.Random;
 public class FigureSupplier {
     private Random random;
     private int numFigures;
-    private double defaultRadius;
-    private String defaultColor;
+    private final double defaultRadius = 10.0;
+    private final int maxRandomValue = 10;
+    private ColorSupplier colorSupplier;
+    private final ColorSupplier.Color defaultColor = ColorSupplier.Color.BLACK;
 
     public FigureSupplier() {
         random = new Random();
-        numFigures = 5;
-        defaultRadius = 10.0;
-        defaultColor = "white";
+        numFigures = 4;
+        colorSupplier = new ColorSupplier();
     }
 
     public Figure getRandomFigure() {
         double randomValue = getRandomValue();
-        String color = new ColorSupplier().getRandomColor();
+        ColorSupplier.Color color = colorSupplier.getRandomColor();
 
-        int randomNumber = random.nextInt(numFigures);
+        int randomNumber = random.nextInt(numFigures + 1);
 
         switch (randomNumber) {
             case 0:
@@ -33,16 +34,15 @@ public class FigureSupplier {
             case 4:
                 return new IsoscelesTrapezoid(randomValue, randomValue, randomValue, color);
             default:
-                return null;
+                throw new IllegalStateException("Invalid random number: " + randomNumber);
         }
+    }
+
+    private double getRandomValue() {
+        return random.nextDouble() * maxRandomValue;
     }
 
     public Figure getDefaultFigure() {
         return new Circle(defaultRadius, defaultColor);
     }
-
-    private double getRandomValue() {
-        return random.nextDouble() * 10;
-    }
 }
-
