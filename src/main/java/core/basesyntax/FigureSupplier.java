@@ -3,14 +3,18 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final Random r = new Random();
+    private static final ColorSupplier colorSupplier = new ColorSupplier();
+
     public Figure getRandomFigure() {
-        Random r = new Random();
-        Figure[] figures = {new Circle(new ColorSupplier().getRandomColor(), r.nextInt()),
-                new Square(new ColorSupplier().getRandomColor(), r.nextInt()),
-            new RightTriangle(new ColorSupplier().getRandomColor(), r.nextInt(), r.nextInt()),
-            new Rectangle(new ColorSupplier().getRandomColor(), r.nextInt(), r.nextInt()),
-            new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(),
-                    r.nextInt(), r.nextInt(), r.nextInt())};
+        Figure[] figures = {new Circle(colorSupplier.getRandomColor(), r.nextInt(0, 1000)),
+                new Square(colorSupplier.getRandomColor(), r.nextInt(0, 1000)),
+                new RightTriangle(colorSupplier.getRandomColor(),
+                        r.nextInt(0, 1000), r.nextInt(0, 1000)),
+                new Rectangle(colorSupplier.getRandomColor(), r.nextInt(0, 1000),
+                        r.nextInt(0, 1000)),
+                new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                    r.nextInt(0, 1000), r.nextInt(0, 1000), r.nextInt(0, 1000))};
         return figures[r.nextInt(0, 5)];
     }
 

@@ -6,13 +6,13 @@ package core.basesyntax;
 
 public class HelloWorld {
     public static void main(String[] args) {
-        Figure[] figures = {new FigureSupplier().getRandomFigure(),
-                new FigureSupplier().getRandomFigure(),
-                new FigureSupplier().getRandomFigure(),
-                new FigureSupplier().getDefaultFigure(),
-                new FigureSupplier().getDefaultFigure(),
-                new FigureSupplier().getDefaultFigure()};
+        Figure[] figures = new Figure[6];
         for (int i = 0; i < figures.length; i++) {
+            if (i < 3) {
+                figures[i] = new FigureSupplier().getRandomFigure();
+            } else {
+                figures[i] = new FigureSupplier().getDefaultFigure();
+            }
             figures[i].draw();
         }
     }
