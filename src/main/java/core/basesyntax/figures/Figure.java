@@ -6,7 +6,11 @@ import core.basesyntax.Drawable;
 public class Figure implements Drawable, AreaCalculator {
     private String color;
 
-    public Figure(String color) {
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
         this.color = color;
     }
 

@@ -3,7 +3,6 @@ package core.basesyntax.figures;
 public class IsoscelesTrapezoid extends Figure {
     private double firstSide;
     private double secondSide;
-
     private double high;
 
     public double getFirstSide() {
@@ -30,16 +29,11 @@ public class IsoscelesTrapezoid extends Figure {
         this.high = high;
     }
 
-    public IsoscelesTrapezoid(String color, double firstSide, double secondSide, double high) {
-        super(color);
-        this.firstSide = firstSide;
-        this.secondSide = secondSide;
-        this.high = high;
-    }
-
     @Override
     public void draw() {
-        super.draw();
+        System.out.println("Figure: " + getClass().getSimpleName() + ", area: " + getArea()
+                + " firstSide " + getFirstSide() + " secondSide " + getSecondSide()
+                + " hight " + getHigh() + ", color: " + getColor());
     }
 
     @Override

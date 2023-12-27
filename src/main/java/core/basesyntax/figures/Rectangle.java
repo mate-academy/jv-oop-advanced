@@ -20,15 +20,11 @@ public class Rectangle extends Figure {
         this.width = width;
     }
 
-    public Rectangle(String color, double length, double width) {
-        super(color);
-        this.length = length;
-        this.width = width;
-    }
-
     @Override
     public void draw() {
-        super.draw();
+        System.out.println("Figure: " + getClass().getSimpleName() + ", area: " + getArea()
+                + " length " + " " + getLength() + " width " + getWidth()
+                + ", color: " + getColor());
     }
 
     @Override
