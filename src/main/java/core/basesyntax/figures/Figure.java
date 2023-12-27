@@ -1,9 +1,9 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.AreaCalculator;
-import core.basesyntax.Drawable;
+import core.basesyntax.interfaces.AreaCalculator;
+import core.basesyntax.interfaces.Drawable;
 
-public class Figure implements Drawable, AreaCalculator {
+public abstract class Figure implements Drawable,AreaCalculator {
     private String color;
 
     public String getColor() {
@@ -12,15 +12,5 @@ public class Figure implements Drawable, AreaCalculator {
 
     public void setColor(String color) {
         this.color = color;
-    }
-
-    @Override
-    public void draw() {
-
-    }
-
-    @Override
-    public double getArea() {
-        return 0;
     }
 }

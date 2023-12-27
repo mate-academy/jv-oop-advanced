@@ -22,13 +22,14 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getClass().getSimpleName() + ", area: " + getArea()
-                + " length " + " " + getLength() + " width " + getWidth()
-                + ", color: " + getColor());
+        System.out.println("Figure: " + getClass().getSimpleName() + ", area: "
+                + this.getRadiusArea() + " length " + " "
+                + getLength() + " width " + getWidth() + ", color: "
+                + getColor());
     }
 
     @Override
-    public double getArea() {
+    public double getRadiusArea() {
         return length * width;
     }
 }
