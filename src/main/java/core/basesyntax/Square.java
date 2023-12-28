@@ -3,10 +3,9 @@ package core.basesyntax;
 class Square extends Figure {
     private double side;
 
-    public Square(double side, ColorSupplier.Color color) {
-        super(color);
+    public Square(double side, String color) {
+        super("square", color);
         this.side = side;
-        setName("square");
     }
 
     @Override

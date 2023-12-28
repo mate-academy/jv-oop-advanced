@@ -4,11 +4,10 @@ class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
-    public RightTriangle(double firstLeg, double secondLeg, ColorSupplier.Color color) {
-        super(color);
+    public RightTriangle(double firstLeg, double secondLeg, String color) {
+        super("right triangle", color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        setName("right triangle");
     }
 
     @Override

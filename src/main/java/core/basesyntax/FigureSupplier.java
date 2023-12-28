@@ -4,21 +4,20 @@ import java.util.Random;
 
 public class FigureSupplier {
     private Random random;
-    private int numFigures;
+    private final int numFigures = 4;
     private final double defaultRadius = 10.0;
     private final int maxRandomValue = 10;
     private ColorSupplier colorSupplier;
-    private final ColorSupplier.Color defaultColor = ColorSupplier.Color.BLACK;
+    private final String defaultColor = "BLACK";
 
     public FigureSupplier() {
         random = new Random();
-        numFigures = 4;
         colorSupplier = new ColorSupplier();
     }
 
     public Figure getRandomFigure() {
         double randomValue = getRandomValue();
-        ColorSupplier.Color color = colorSupplier.getRandomColor();
+        String color = String.valueOf(colorSupplier.getRandomColor());
 
         int randomNumber = random.nextInt(numFigures + 1);
 

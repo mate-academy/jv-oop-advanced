@@ -7,20 +7,12 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
 
         for (int i = 0; i < arraySize; i++) {
-            if (i < arraySize / 2) {
+            if (i < figures.length / 2) {
                 Figure randomFigure = figureSupplier.getRandomFigure();
-                if (randomFigure != null) {
-                    figures[i] = randomFigure;
-                } else {
-                    System.out.println("Null figure received from getRandomFigure()");
-                }
+                figures[i] = randomFigure;
             } else {
                 Figure defaultFigure = figureSupplier.getDefaultFigure();
-                if (defaultFigure != null) {
-                    figures[i] = defaultFigure;
-                } else {
-                    System.out.println("Null figure received from getDefaultFigure()");
-                }
+                figures[i] = defaultFigure;
             }
 
             if (figures[i] != null) {
