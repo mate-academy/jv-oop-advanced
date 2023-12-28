@@ -17,13 +17,13 @@ public class FigureSupplier {
         for (int i = 0; i < UNIQUE_PARAMETER; i++) {
             number[i] = random.nextInt(MAXIMUM_NUMBER);
         }
-        int numberIndex = 0;
+        int i = 0;
         return switch (figure) {
-            case SQUARE -> new Square(number[numberIndex], color);
-            case RECTANGLE -> new Rectangle(number[numberIndex++], number[numberIndex++], color);
-            case RIGHTTRIANGLE -> new RightTriangle(number[numberIndex++], number[numberIndex++], color);
-            case CIRCLE -> new Circle(number[numberIndex++], color);
-            default -> new IsoscelesTrapezoid(number[numberIndex++], number[numberIndex++], number[numberIndex++], color);
+            case SQUARE -> new Square(number[i], color);
+            case RECTANGLE -> new Rectangle(number[i++], number[i++], color);
+            case RIGHTTRIANGLE -> new RightTriangle(number[i++], number[i++], color);
+            case CIRCLE -> new Circle(number[i++], color);
+            default -> new IsoscelesTrapezoid(number[i++], number[i++], number[i++], color);
         };
     }
 
