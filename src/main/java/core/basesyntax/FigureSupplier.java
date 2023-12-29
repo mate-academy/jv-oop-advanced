@@ -8,7 +8,7 @@ public class FigureSupplier {
     private final double defaultRadius = 10.0;
     private final int maxRandomValue = 10;
     private ColorSupplier colorSupplier;
-    private final String defaultColor = "BLACK";
+    private final String defaultColor = Color.YELLOW.name();
 
     public FigureSupplier() {
         random = new Random();
@@ -30,18 +30,16 @@ public class FigureSupplier {
                 return new RightTriangle(randomValue, randomValue, color);
             case 3:
                 return new Circle(randomValue, color);
-            case 4:
-                return new IsoscelesTrapezoid(randomValue, randomValue, randomValue, color);
             default:
-                throw new IllegalStateException("Invalid random number: " + randomNumber);
+                return getDefaultFigure();
         }
-    }
-
-    private double getRandomValue() {
-        return random.nextDouble() * maxRandomValue;
     }
 
     public Figure getDefaultFigure() {
         return new Circle(defaultRadius, defaultColor);
+    }
+
+    private double getRandomValue() {
+        return random.nextDouble() * maxRandomValue;
     }
 }
