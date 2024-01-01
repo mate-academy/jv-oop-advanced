@@ -2,7 +2,7 @@ package core.basesyntax.figures;
 
 import java.util.Random;
 
-public class Circle extends Figure {
+public class Circle extends AbstractFigure {
     private static final int MAX_SIZE_VALUE = 101;
     private int radius;
     private Random random = new Random();
@@ -13,7 +13,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public void drawTheFigure() {
+    public void draw() {
         System.out.println("Figure: circle, area: " + getArea()
                 + " sq. units, radius: " + radius + " units, color: " + color.toLowerCase());
     }

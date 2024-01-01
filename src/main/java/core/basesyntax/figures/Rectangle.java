@@ -3,7 +3,7 @@ package core.basesyntax.figures;
 import core.basesyntax.ColorSupplier;
 import core.basesyntax.FigureSupplier;
 
-public class Rectangle extends Figure {
+public class Rectangle extends AbstractFigure {
     private int firstSide;
     private int secondSide;
     private ColorSupplier colorSupplier = new ColorSupplier();
@@ -16,7 +16,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void drawTheFigure() {
+    public void draw() {
         System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, "
                 + "first side: " + firstSide + " units, second side: " + secondSide
                 + " units, color: " + color.toLowerCase());
