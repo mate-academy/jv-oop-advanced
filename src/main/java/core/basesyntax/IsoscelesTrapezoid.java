@@ -19,12 +19,11 @@ class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public long draw() {
+    public void draw() {
         String figureDetails = "upper base: " + upperBase + " unit, lower base: " + lowerBase
                 + " unit, height: " + height + " unit, " + "color: " + getColor();
 
-        System.out.println(super.draw());
+        super.draw();
         System.out.println(figureDetails);
-        return 0;
     }
 }

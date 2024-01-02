@@ -16,12 +16,11 @@ class Rectangle extends Figure {
     }
 
     @Override
-    public long draw() {
+    public void draw() {
         String figureDetails = "length: " + length + " unit, width: "
                 + width + " unit, " + "color: " + getColor();
 
-        System.out.println(super.draw());
+        super.draw();
         System.out.println(figureDetails);
-        return 0;
     }
 }

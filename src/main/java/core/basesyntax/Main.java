@@ -17,7 +17,8 @@ public class Main {
 
             if (figures[i] != null) {
                 System.out.println("figure: " + figures[i].getName() + ", square: "
-                        + figures[i].calculateArea() + " sq.units., " + figures[i].draw());
+                        + figures[i].calculateArea() + " sq.units.");
+                figures[i].draw();
             }
         }
     }

@@ -19,8 +19,7 @@ public abstract class Figure implements Drawable, AreaCalculator {
     }
 
     @Override
-    public long draw() {
+    public void draw() {
         System.out.println("Drawing " + getName() + " with color " + getColor() + "...");
-        return 0;
     }
 }

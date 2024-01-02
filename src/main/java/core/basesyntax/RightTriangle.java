@@ -16,13 +16,12 @@ class RightTriangle extends Figure {
     }
 
     @Override
-    public long draw() {
+    public void draw() {
         String figureDetails = "first leg: "
                 + firstLeg + " unit, second leg: " + secondLeg
                 + " unit, " + "color: " + getColor();
 
-        System.out.println(super.draw());
+        super.draw();
         System.out.println(figureDetails);
-        return 0;
     }
 }

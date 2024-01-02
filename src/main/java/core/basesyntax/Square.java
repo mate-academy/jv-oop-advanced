@@ -14,11 +14,10 @@ class Square extends Figure {
     }
 
     @Override
-    public long draw() {
+    public void draw() {
         String figureDetails = "side: " + side + " unit, " + "color: " + getColor();
 
-        System.out.println(super.draw());
+        super.draw();
         System.out.println(figureDetails);
-        return 0;
     }
 }
