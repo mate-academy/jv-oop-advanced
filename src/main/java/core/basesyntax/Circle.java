@@ -18,6 +18,8 @@ class Circle extends Figure {
         String figureDetails = "radius: " + radius + " unit, " + "color: " + getColor();
 
         super.draw();
+        System.out.println("figure: " + getName() + ", square: "
+                + calculateArea() + " sq.units.");
         System.out.println(figureDetails);
     }
 }

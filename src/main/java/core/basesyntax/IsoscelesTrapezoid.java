@@ -24,6 +24,8 @@ class IsoscelesTrapezoid extends Figure {
                 + " unit, height: " + height + " unit, " + "color: " + getColor();
 
         super.draw();
+        System.out.println("figure: " + getName() + ", square: "
+                + calculateArea() + " sq.units.");
         System.out.println(figureDetails);
     }
 }

@@ -21,6 +21,8 @@ class Rectangle extends Figure {
                 + width + " unit, " + "color: " + getColor();
 
         super.draw();
+        System.out.println("figure: " + getName() + ", square: "
+                + calculateArea() + " sq.units.");
         System.out.println(figureDetails);
     }
 }
