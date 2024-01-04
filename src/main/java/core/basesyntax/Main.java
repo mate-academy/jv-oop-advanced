@@ -1,22 +1,17 @@
-package core.basesyntax;
+
+import core.basesyntax.Figure;
+import core.basesyntax.FigureSupplier;
 
 public class Main {
+    private static final int COUNT = 3;
 
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        int count = 3;
-        int i = 0;
-        while (i < count) {
-            Figure randomFigure = figureSupplier.getRandomFigure();
-            randomFigure.draw();
-            i++;
-        }
 
-        i = 0;
-        while (i < count) {
-            Figure defaultFigure = figureSupplier.getDefaultFigure();
-            defaultFigure.draw();
-            i++;
+        for (int i = 0; i < 2 * COUNT; i++) {
+            Figure currentFigure = (i < COUNT) ? figureSupplier.getRandomFigure() :
+                    figureSupplier.getDefaultFigure();
+            currentFigure.draw();
         }
     }
 }

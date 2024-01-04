@@ -2,8 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public abstract class AbstractFigure implements Figure {
-
+public abstract class AbstractFigure implements core.basesyntax.Figure {
     protected Color color;
 
     public AbstractFigure(Color color) {
@@ -11,10 +10,9 @@ public abstract class AbstractFigure implements Figure {
     }
 
     public AbstractFigure() {
-
     }
 
-    protected static Color getRandomColor() {
+    public static Color getRandomColor() {
         Random random = new Random();
         return Color.values()[random.nextInt(Color.values().length)];
     }
@@ -26,4 +24,6 @@ public abstract class AbstractFigure implements Figure {
     public abstract double getArea();
 
     public abstract void draw();
+
+    public abstract Color getColor();
 }

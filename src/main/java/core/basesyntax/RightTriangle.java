@@ -1,27 +1,27 @@
 package core.basesyntax;
 
-public abstract class RightTriangle extends AbstractFigure {
+public abstract class RightTriangle extends AbstractFigure implements Drawable, AreaCalculator {
+    private final double legRight;
+    private final double legLeft;
 
-    private final double leg1;
-
-    private final double leg2;
-
-    public RightTriangle(double leg1, double leg2, Color color) {
+    public RightTriangle(double legRight, double legLeft, Color color) {
         super(color);
-        this.leg1 = leg1;
-        this.leg2 = leg2;
+        this.legRight = legRight;
+        this.legLeft = legLeft;
     }
 
     @Override
     public double getArea() {
-        return 0.5 * leg1 * leg2;
+        return 0.5 * legRight * legLeft;
     }
 
     @Override
     public void draw() {
-        System.out.println("Drawing: straight tricuspid, squares: "
-                + getArea() + " sq. ode, first leg: " + leg1 + " ode,"
-                + " friend of a friend's leg: " + leg2 + " od., color: "
+        System.out.println("Рисуем: прямоугольный треугольник, площадь: "
+                + getArea() + " кв. ед., правая нога: " + legRight + " ед.,"
+                + " левая нога: " + legLeft + " ед., цвет: "
                 + color);
     }
+
+    public abstract Color getColor();
 }

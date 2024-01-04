@@ -6,19 +6,17 @@ public abstract class Circle extends AbstractFigure {
 
     public Circle(double radius, Color color) {
         super(color);
+
         this.radius = radius;
     }
-
     public Circle(double radius) {
-
         this(radius, AbstractFigure.getRandomColor());
     }
-
     @Override
     public double getArea() {
         return Math.PI * radius * radius;
-    }
 
+    }
     @Override
     public void draw() {
         System.out.println("Figure: circle, square: "
@@ -26,5 +24,6 @@ public abstract class Circle extends AbstractFigure {
                 + radius + " unit, color: "
                 + color);
     }
-}
 
+    public abstract Color getColor();
+}
