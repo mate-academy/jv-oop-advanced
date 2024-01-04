@@ -22,8 +22,4 @@ public class RightTriangle extends AbstractFigure {
                 + " leftleg: " + legLeft + " unit, color: "
                 + color);
     }
-
-    public Color getColor() {
-        return null;
-    }
 }

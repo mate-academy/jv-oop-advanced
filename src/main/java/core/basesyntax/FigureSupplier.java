@@ -7,7 +7,6 @@ public class FigureSupplier {
     private static final double DEFAULT_RADIUS = 10.0;
 
     private final Random random = new Random();
-
     private final ColorSuplier colorSuplier = new ColorSuplier();
 
     public AbstractFigure getRandomFigure() {

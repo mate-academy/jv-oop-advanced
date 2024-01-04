@@ -13,5 +13,4 @@ public abstract class AbstractFigure implements Drawable, AreaCalculator {
     public Color getColor() {
         return color;
     }
-
 }
