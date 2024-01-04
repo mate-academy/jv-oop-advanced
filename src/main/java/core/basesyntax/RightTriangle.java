@@ -1,6 +1,7 @@
 package core.basesyntax;
 
-public abstract class RightTriangle extends AbstractFigure implements Drawable, AreaCalculator {
+public abstract class RightTriangle extends AbstractFigure
+        implements Drawable, AreaCalculator {
     private final double legRight;
     private final double legLeft;
 
