@@ -1,7 +1,6 @@
 package core.basesyntax;
 
-public abstract class RightTriangle extends AbstractFigure
-        implements Drawable, AreaCalculator {
+public class RightTriangle extends AbstractFigure {
     private final double legRight;
     private final double legLeft;
 
@@ -18,11 +17,13 @@ public abstract class RightTriangle extends AbstractFigure
 
     @Override
     public void draw() {
-        System.out.println("Рисуем: прямоугольный треугольник, площадь: "
-                + getArea() + " кв. ед., правая нога: " + legRight + " ед.,"
-                + " левая нога: " + legLeft + " ед., цвет: "
+        System.out.println("Drawing: right triangle, area:"
+                + getArea() + " square unit, rightleg.: " + legRight + " un.,"
+                + " leftleg: " + legLeft + " unit, color: "
                 + color);
     }
 
-    public abstract Color getColor();
+    public Color getColor() {
+        return null;
+    }
 }

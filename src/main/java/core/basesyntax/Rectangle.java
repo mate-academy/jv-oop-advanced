@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Rectangle extends AbstractFigure {
+public class Rectangle extends AbstractFigure {
     private final double length;
     private final double width;
 
@@ -21,6 +21,4 @@ public abstract class Rectangle extends AbstractFigure {
                 + " sq. units, " + "length: " + length + " units, width: "
                 + width + " units, color: " + color);
     }
-
-    public abstract Color getColor();
 }

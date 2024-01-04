@@ -5,11 +5,12 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
     private static final double DEFAULT_RADIUS = 10.0;
-    private static final Color DEFAULT_COLOR = AbstractFigure.getDefaultColor();
 
     private final Random random = new Random();
 
-    public core.basesyntax.Figure getRandomFigure() {
+    private final ColorSuplier colorSuplier = new ColorSuplier();
+
+    public AbstractFigure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
         return switch (figureNumber) {
             case 0 -> createRandomCircle();
@@ -21,47 +22,27 @@ public class FigureSupplier {
         };
     }
 
-    public core.basesyntax.Figure getDefaultFigure() {
-        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR) {
-            @Override
-            public Color getColor() {
-                return null;
-            }
-        };
+    public AbstractFigure getDefaultFigure() {
+        return new Circle(DEFAULT_RADIUS, colorSuplier.getDefaultColor());
     }
 
     private Circle createRandomCircle() {
-        return new Circle(generateRandomSize(), AbstractFigure.getRandomColor()) {
-            @Override
-            public Color getColor() {
-                return null;
-            }
-        };
+        return new Circle(generateRandomSize(), colorSuplier.getRandomColor());
     }
 
     private Rectangle createRandomRectangle() {
         return new Rectangle(generateRandomSize(), generateRandomSize(),
-                AbstractFigure.getRandomColor()) {
-            @Override
-            public Color getColor() {
-                return null;
-            }
-        };
+                colorSuplier.getRandomColor());
     }
 
     private RightTriangle createRandomRightTriangle() {
         return new RightTriangle(generateRandomSize(), generateRandomSize(),
-                AbstractFigure.getRandomColor()) {
-            @Override
-            public Color getColor() {
-                return null;
-            }
-        };
+                colorSuplier.getRandomColor());
     }
 
     private Square createRandomSquare() {
         return new Square(generateRandomSize(),
-                AbstractFigure.getRandomColor());
+                colorSuplier.getRandomColor());
     }
 
     private IsoscelesTrapezoid createRandomIsoscelesTrapezoid() {
@@ -69,12 +50,7 @@ public class FigureSupplier {
                 generateRandomSize(),
                 generateRandomSize(),
                 generateRandomSize(),
-                AbstractFigure.getRandomColor()) {
-            @Override
-            public Color getColor() {
-                return null;
-            }
-        };
+                colorSuplier.getRandomColor());
     }
 
     private double generateRandomSize() {

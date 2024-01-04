@@ -1,8 +1,6 @@
 package core.basesyntax;
 
-import java.util.Random;
-
-public abstract class AbstractFigure implements core.basesyntax.Figure {
+public abstract class AbstractFigure implements Drawable, AreaCalculator {
     protected Color color;
 
     public AbstractFigure(Color color) {
@@ -12,18 +10,8 @@ public abstract class AbstractFigure implements core.basesyntax.Figure {
     public AbstractFigure() {
     }
 
-    public static Color getRandomColor() {
-        Random random = new Random();
-        return Color.values()[random.nextInt(Color.values().length)];
+    public Color getColor() {
+        return color;
     }
 
-    public static Color getDefaultColor() {
-        return Color.WHITE;
-    }
-
-    public abstract double getArea();
-
-    public abstract void draw();
-
-    public abstract Color getColor();
 }

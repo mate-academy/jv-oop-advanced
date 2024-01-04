@@ -1,5 +1,5 @@
 
-import core.basesyntax.Figure;
+import core.basesyntax.AbstractFigure;
 import core.basesyntax.FigureSupplier;
 
 public class Main {
@@ -9,8 +9,12 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
 
         for (int i = 0; i < 2 * COUNT; i++) {
-            Figure currentFigure = (i < COUNT) ? figureSupplier.getRandomFigure() :
-                    figureSupplier.getDefaultFigure();
+            AbstractFigure currentFigure;
+            if (i < COUNT) {
+                currentFigure = figureSupplier.getRandomFigure();
+            } else {
+                currentFigure = figureSupplier.getDefaultFigure();
+            }
             currentFigure.draw();
         }
     }

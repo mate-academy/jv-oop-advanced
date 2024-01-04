@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class IsoscelesTrapezoid extends AbstractFigure {
+public class IsoscelesTrapezoid extends AbstractFigure {
     private final double sideA;
     private final double sideB;
     private final double height;
@@ -14,15 +14,8 @@ public abstract class IsoscelesTrapezoid extends AbstractFigure {
         this.height = height;
     }
 
-    public IsoscelesTrapezoid(double sideA,
-                              double sideB,
-                              double height) {
-        this(sideA, sideB, height, AbstractFigure.getRandomColor());
-    }
-
     @Override
     public double getArea() {
-
         return 0.5 * (sideA + sideB) * height;
     }
 
@@ -34,6 +27,4 @@ public abstract class IsoscelesTrapezoid extends AbstractFigure {
                 + sideB + " od., height: " + height + " od., "
                 + "color: " + color);
     }
-
-    public abstract Color getColor();
 }
