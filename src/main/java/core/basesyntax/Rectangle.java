@@ -1,14 +1,15 @@
 package core.basesyntax;
 
-class Rectangle implements Figure {
+public abstract class Rectangle extends AbstractFigure {
+
     private final double length;
+
     private final double width;
-    private final Color color;
 
     public Rectangle(double length, double width, Color color) {
+        super(color);
         this.length = length;
         this.width = width;
-        this.color = color;
     }
 
     @Override
@@ -18,8 +19,8 @@ class Rectangle implements Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: straight-square, squares: " + getArea()
-                + " square one, dominant: " + length + " odes, width: "
-                + width + " od., color: " + color);
+        System.out.println("Figure: rectangle, area: " + getArea()
+                + " sq. units, " + "length: " + length + " units, width: "
+                + width + " units, color: " + color);
     }
 }

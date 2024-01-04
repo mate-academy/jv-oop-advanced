@@ -1,9 +1,29 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public abstract class AbstractFigure implements Figure {
-    protected final Color color;
+
+    protected Color color;
 
     public AbstractFigure(Color color) {
         this.color = color;
     }
+
+    public AbstractFigure() {
+
+    }
+
+    protected static Color getRandomColor() {
+        Random random = new Random();
+        return Color.values()[random.nextInt(Color.values().length)];
+    }
+
+    public static Color getDefaultColor() {
+        return Color.WHITE;
+    }
+
+    public abstract double getArea();
+
+    public abstract void draw();
 }

@@ -1,21 +1,39 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends AbstractFigure {
-    // Добавьте свои поля и методы, если необходимо
+public abstract class IsoscelesTrapezoid extends AbstractFigure {
 
-    public IsoscelesTrapezoid(double sideA, double sideB, double height, Color color) {
+    private final double sideA;
+
+    private final double sideB;
+
+    private final double height;
+
+    public IsoscelesTrapezoid(double sideA,
+                              double sideB, double height,
+                              Color color) {
         super(color);
-        // Инициализация своих полей
+        this.sideA = sideA;
+        this.sideB = sideB;
+        this.height = height;
+    }
+
+    public IsoscelesTrapezoid(double sideA,
+                              double sideB,
+                              double height) {
+        this(sideA, sideB, height, AbstractFigure.getRandomColor());
     }
 
     @Override
     public double getArea() {
-        // Реализация расчета площади
-        return 0;
+        return 0.5 * (sideA + sideB) * height;
     }
 
     @Override
     public void draw() {
-        // Реализация вывода информации о фигуре
+        System.out.println("Drawing: isosceles"
+                + " trapezoid, area: " + getArea() + " sq. "
+                + "ode, side A: " + sideA + " od., side B: "
+                + sideB + " od., height: " + height + " od., "
+                + "color: " + color);
     }
 }
