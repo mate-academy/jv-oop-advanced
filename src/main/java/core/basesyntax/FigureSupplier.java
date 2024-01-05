@@ -5,6 +5,7 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
     private static final double DEFAULT_RADIUS = 10.0;
+    private static final double GEOMETRIC_PROPERTY_SIZE = 10.0;
 
     private final Random random = new Random();
     private final ColorSuplier colorSuplier = new ColorSuplier();
@@ -53,6 +54,6 @@ public class FigureSupplier {
     }
 
     private double generateRandomSize() {
-        return random.nextDouble() * 10 + 1;
+        return random.nextDouble() * GEOMETRIC_PROPERTY_SIZE + 1;
     }
 }
