@@ -10,5 +10,3 @@ public abstract class AbstractFigure implements AreaCalculator, Drawable {
         this.color = color;
     }
 }
-
-

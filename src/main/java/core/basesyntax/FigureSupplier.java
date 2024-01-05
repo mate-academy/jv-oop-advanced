@@ -9,7 +9,7 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int MAX_SIZE_VALUE = 101;
+    private static final int MAX_SIZE_VALUE = 100;
     private static final String DEFAULT_COLOR = "white";
     private static final int DEFAULT_NUMBER = 10;
     private Random random = new Random();
@@ -17,48 +17,43 @@ public class FigureSupplier {
 
     public AbstractFigure getRandomFigure() {
         int index = random.nextInt(Figure.values().length);
-        String nameOfFigure = Figure.values()[index].name();
+        Figure figureName = Figure.values()[index];
 
-        switch (nameOfFigure) {
-            case "CIRCLE" : return getRandomCircle();
-            case "ISOSCELES_TRAPEZOID" : return getRandomIsoscelesTrapezoid();
-            case "RECTANGLE" : return getRandomRectangle();
-            case "RIGHT_TRIANGLE" : return getRandomRightTriangle();
+        switch (figureName) {
+            case CIRCLE: return getRandomCircle();
+            case ISOSCELES_TRAPEZOID: return getRandomIsoscelesTrapezoid();
+            case RECTANGLE: return getRandomRectangle();
+            case RIGHT_TRIANGLE: return getRandomRightTriangle();
             default : return getRandomSquare();
         }
     }
 
     private AbstractFigure getRandomIsoscelesTrapezoid() {
-        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(
+        return new IsoscelesTrapezoid(
                 colorSupplier.getRandomColor(),
                 getRandomSize(), getRandomSize(), getRandomSize());
-        return isoscelesTrapezoid;
     }
 
     private AbstractFigure getRandomRectangle() {
-        Rectangle rectangle = new Rectangle(colorSupplier.getRandomColor(),
+        return new Rectangle(colorSupplier.getRandomColor(),
                 getRandomSize(), getRandomSize());
-        return rectangle;
     }
 
     private AbstractFigure getRandomRightTriangle() {
-        RightTriangle rightTriangle = new RightTriangle(colorSupplier.getRandomColor(),
+        return new RightTriangle(colorSupplier.getRandomColor(),
                 getRandomSize(), getRandomSize());
-        return rightTriangle;
     }
 
     private AbstractFigure getRandomSquare() {
-        Square square = new Square(colorSupplier.getRandomColor(), getRandomSize());
-        return square;
+        return new Square(colorSupplier.getRandomColor(), getRandomSize());
     }
 
     private AbstractFigure getRandomCircle() {
-        Square circle = new Square(colorSupplier.getRandomColor(), getRandomSize());
-        return circle;
+        return new Square(colorSupplier.getRandomColor(), getRandomSize());
     }
 
     private int getRandomSize() {
-        return random.nextInt(MAX_SIZE_VALUE);
+        return random.nextInt(MAX_SIZE_VALUE + 1);
     }
 
     public AbstractFigure getDefaultFigure() {

@@ -23,5 +23,3 @@ public class Circle extends AbstractFigure {
         return Math.PI * radius * radius;
     }
 }
-
-

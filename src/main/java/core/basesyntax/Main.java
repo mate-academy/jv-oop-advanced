@@ -3,7 +3,7 @@ package core.basesyntax;
 import core.basesyntax.figures.AbstractFigure;
 
 public class Main {
-    public static final int ARRAY_SIZE = 6;
+    private static final int ARRAY_SIZE = 6;
 
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
