@@ -18,7 +18,6 @@ public class RightTriangle extends Figure {
                 + " units, color: " + super.getColor());
     }
 
-    @Override
     public int obtainArea() {
         return (int) (0.5 * firstLeg * secondLeg);
     }

@@ -21,7 +21,6 @@ public class IsoscelesTrapezoid extends Figure {
                 + " units, color: " + super.getColor());
     }
 
-    @Override
     public int obtainArea() {
         return (int) (0.5 * height * (baseSideA + baseSideB));
     }
