@@ -3,7 +3,6 @@ package core.basesyntax;
 public class RightTriangle extends Figure {
     private int leg1;
     private int leg2;
-    private String className = this.getClass().getSimpleName();
 
     public RightTriangle(int leg1, int leg2, String color) {
         super(color);
@@ -17,8 +16,8 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String drawing() {
-        return "Figure: " + className + ", "
+    public String draw() {
+        return "Figure: " + getClass().getSimpleName() + ", "
                 + "area: " + getArea() + " sq. units, "
                 + "First leg " + leg1 + " units, "
                 + "Second leg " + leg2 + " units, "
