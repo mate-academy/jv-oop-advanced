@@ -15,6 +15,7 @@ public class Square extends Figure {
                 + " units, color: " + super.getColor());
     }
 
+    @Override
     public int obtainArea() {
         return (int) Math.pow(side, 2);
     }

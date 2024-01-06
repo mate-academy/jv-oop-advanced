@@ -15,6 +15,7 @@ public class Circle extends Figure {
                 + " units, color: " + super.getColor());
     }
 
+    @Override
     public int obtainArea() {
         return (int) (Math.PI * Math.pow(radius, 2));
     }

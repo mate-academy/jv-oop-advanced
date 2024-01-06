@@ -18,6 +18,7 @@ public class Rectangle extends Figure {
                 + " units, color: " + super.getColor());
     }
 
+    @Override
     public int obtainArea() {
         return sideA * sideB;
     }
