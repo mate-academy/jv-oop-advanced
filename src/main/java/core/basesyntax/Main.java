@@ -12,7 +12,7 @@ public class Main {
             figures[i] = figureSupplier.getRandomFigure(random.nextInt(5));
         }
         for (Figure figure : figures) {
-            System.out.println(figure.draw());
+            figure.draw();
         }
     }
 }
