@@ -12,5 +12,6 @@ public abstract class Figures implements Area, Drawable {
     }
 
     public abstract double getArea();
+
     public abstract void draw();
 }
