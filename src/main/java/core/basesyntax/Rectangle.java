@@ -1,26 +1,26 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private int size1;
-    private int size2;
+    private int sizeA;
+    private int sizeB;
 
-    public Rectangle(int size1, int size2, String color) {
+    public Rectangle(int sizeA, int sizeB, String color) {
         super(color);
-        this.size1 = size1;
-        this.size2 = size2;
+        this.sizeA = sizeA;
+        this.sizeB = sizeB;
     }
 
     @Override
     public double getArea() {
-        return size1 * size2;
+        return sizeA * sizeB;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: " + getClass().getSimpleName() + ", "
                 + "area: " + getArea() + " sq. units, "
-                + "First size " + size1 + " units, "
-                + "Second size " + size2 + " units, "
+                + "First size " + sizeA + " units, "
+                + "Second size " + sizeB + " units, "
                 + "color: " + getColor());
     }
 }
