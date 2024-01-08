@@ -1,6 +1,4 @@
-package model;
-
-import core.basesyntax.ColorSupplier;
+package core.basesyntax;
 
 import java.text.DecimalFormat;
 import java.util.Random;
@@ -22,7 +20,8 @@ public class Circle extends ColorSupplier implements Figure, Draw {
     @Override
     public void draw() {
         DecimalFormat df = new DecimalFormat("#.##");
-        System.out.println("Name: circle, radius: " + radius + ", area: " + df.format(getArea()) + ", color: " + color);
+        System.out.println("Name: circle, radius: " + radius + ", area: "
+                + df.format(getArea()) + ", color: " + color);
 
     }
 }

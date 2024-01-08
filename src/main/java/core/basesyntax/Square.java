@@ -1,8 +1,8 @@
-package model;
+package core.basesyntax;
 
 import java.text.DecimalFormat;
 
-public class Square implements Figure, Draw{
+public class Square implements Figure, Draw {
     private int side;
     private String color;
 
@@ -19,6 +19,7 @@ public class Square implements Figure, Draw{
     @Override
     public void draw() {
         DecimalFormat df = new DecimalFormat("#.##");
-        System.out.println("Name: square, " + "side: " + side + ", area: " + getArea() + ", color: " + color);
+        System.out.println("Name: square, " + "side: " + side + ", area: "
+                + getArea() + ", color: " + color);
     }
 }

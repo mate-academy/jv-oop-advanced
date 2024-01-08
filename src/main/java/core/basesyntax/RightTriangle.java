@@ -1,10 +1,10 @@
-package model;
+package core.basesyntax;
 
 import java.text.DecimalFormat;
 
 public class RightTriangle implements Figure, Draw {
-    private int firstLeg ;
-    private int secondLeg ;
+    private int firstLeg;
+    private int secondLeg;
     private String color;
 
     public RightTriangle(int firstLeg, int secondLeg, String color) {
@@ -21,7 +21,8 @@ public class RightTriangle implements Figure, Draw {
     @Override
     public void draw() {
         DecimalFormat df = new DecimalFormat("#.##");
-        System.out.println("Name: RightTriangle, firstLeg: " + firstLeg + ", secondLeg: " + secondLeg + ", area: " + df.format(getArea()) + ", color: " + color);
+        System.out.println("Name: RightTriangle, firstLeg: " + firstLeg + ", secondLeg: "
+                + secondLeg + ", area: " + df.format(getArea()) + ", color: " + color);
 
     }
 }

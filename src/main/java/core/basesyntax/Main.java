@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import model.*;
-
 public class Main {
     public static void main(String[] args) {
         Draw[] figures = new Draw[5];

@@ -1,6 +1,4 @@
-package model;
-
-import core.basesyntax.ColorSupplier;
+package core.basesyntax;
 
 import java.text.DecimalFormat;
 import java.util.Random;
@@ -18,10 +16,9 @@ public class IsoscelesTrapezoid extends ColorSupplier implements Figure, Draw {
         this.color = getRandomColor();
     }
 
-
     @Override
     public double getArea() {
-        return 0.5*(baseOne * baseTwo) * height;
+        return 0.5 * (baseOne * baseTwo) * height;
     }
 
     @Override
