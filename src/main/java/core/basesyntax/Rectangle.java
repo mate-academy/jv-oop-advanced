@@ -1,25 +1,25 @@
 package core.basesyntax;
 
 public class Rectangle extends Figures {
-    private int side_a;
-    private int side_b;
+    private int firstBases;
+    private int secondBases;
 
-    public Rectangle(String color, int side_a, int side_b) {
+    public Rectangle(String color, int firstBases, int secondBases) {
         super(color);
-        this.side_a = side_a;
-        this.side_b = side_b;
+        this.firstBases = firstBases;
+        this.secondBases = secondBases;
     }
 
     @Override
     public double getArea() {
-        return side_a * side_b;
+        return firstBases * secondBases;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: Rectangle, area:" + getArea()
-                + " sq. units, side a: " + side_a
-                + " units, side b: " + side_b
+                + " sq. units, side a: " + firstBases
+                + " units, side b: " + secondBases
                 + " units, color: " + getColor());
     }
 }
