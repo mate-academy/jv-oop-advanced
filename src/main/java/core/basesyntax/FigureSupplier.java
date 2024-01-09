@@ -15,9 +15,11 @@ public class FigureSupplier {
             case 0:
                 return new Square(colorSupplier.getRandomColor(), getRandomSize());
             case 1:
-                return new Rectangle(colorSupplier.getRandomColor(), getRandomSize(), getRandomSize());
+                return new Rectangle(colorSupplier.getRandomColor(),
+                        getRandomSize(), getRandomSize());
             case 2:
-                return new RightTriangle(colorSupplier.getRandomColor(), getRandomSize(), getRandomSize());
+                return new RightTriangle(colorSupplier.getRandomColor(),
+                        getRandomSize(), getRandomSize());
             case 3:
                 return new Circle(colorSupplier.getRandomColor(), getRandomSize());
             default:
