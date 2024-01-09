@@ -10,7 +10,7 @@ public class FigureSupplier {
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figures getRandomFigure() {
+    public Figure getRandomFigure() {
         switch (random.nextInt(FIGURE_COUNT)) {
             case 0:
                 return new Square(colorSupplier.getRandomColor(), random.nextInt(MAX_SIZE) + 1);
@@ -22,17 +22,13 @@ public class FigureSupplier {
                         random.nextInt(MAX_SIZE) + 1, random.nextInt(MAX_SIZE) + 1);
             case 3:
                 return new Circle(colorSupplier.getRandomColor(), random.nextInt(MAX_SIZE) + 1);
-            case 4:
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        random.nextInt(MAX_SIZE) + 1, random.nextInt(MAX_SIZE) + 1,
-                        random.nextInt(MAX_SIZE) + 1);
             default:
                 System.out.println("Invalid value, change it");
                 return null;
         }
     }
 
-    public Figures getDefaultFigure() {
+    public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
