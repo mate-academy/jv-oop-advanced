@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.text.DecimalFormat;
 
-public class Square implements Figure, Draw {
+public class Square extends ColorSupplier {
     private int side;
     private String color;
 

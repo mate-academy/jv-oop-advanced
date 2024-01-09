@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.text.DecimalFormat;
 import java.util.Random;
 
-public class Circle extends ColorSupplier implements Figure, Draw {
+public class Circle extends ColorSupplier {
     private int radius;
     private String color;
 

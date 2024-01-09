@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.text.DecimalFormat;
 
-public class RightTriangle implements Figure, Draw {
+public class RightTriangle extends ColorSupplier {
     private int firstLeg;
     private int secondLeg;
     private String color;

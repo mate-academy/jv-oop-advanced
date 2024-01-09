@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.text.DecimalFormat;
 import java.util.Random;
 
-public class IsoscelesTrapezoid extends ColorSupplier implements Figure, Draw {
+public class IsoscelesTrapezoid extends ColorSupplier {
     private int baseOne;
     private int baseTwo;
     private int height;

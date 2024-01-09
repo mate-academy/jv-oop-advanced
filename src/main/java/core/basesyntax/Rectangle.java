@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.text.DecimalFormat;
 import java.util.Random;
 
-public class Rectangle extends ColorSupplier implements Figure, Draw {
+public class Rectangle extends ColorSupplier {
     private int widht;
     private int height;
     private String color;
