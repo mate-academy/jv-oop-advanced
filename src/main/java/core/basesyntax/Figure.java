@@ -10,5 +10,4 @@ public abstract class Figure implements Area, Drawable {
     public String getColor() {
         return color;
     }
-
 }
