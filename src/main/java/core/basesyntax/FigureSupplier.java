@@ -4,7 +4,8 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
-    private static final int BOUND = 100;
+    private static final int MIN_SIDE = 1;
+    private static final int MAX_SIDE = 100;
     private static final String DEFAULT_COLOR = Color.WHITE.name();
     private static final double DEFAULT_RADIUS = 10.0;
     private Random random = new Random();
@@ -15,47 +16,26 @@ public class FigureSupplier {
         int figureNumber = random.nextInt(FIGURE_COUNT);
         switch (figureNumber) {
             case 0:
-                double side = sideNotNull();
-                randomFigure = new Square(colorSupplier.getRandomColor(), side);
-                break;
+                return new Square(colorSupplier.getRandomColor(), getRandomSide());
             case 1:
-                double firstSide = sideNotNull();
-                double secondSide = sideNotNull();
-                randomFigure = new Rectangle(colorSupplier.getRandomColor(),
-                        firstSide, secondSide);
-                break;
+                return new Rectangle(colorSupplier.getRandomColor(),
+                        getRandomSide(), getRandomSide());
             case 2:
-                double firstLeg = sideNotNull();
-                double secondLeg = sideNotNull();
-                randomFigure = new RightTriangle(colorSupplier.getRandomColor(),
-                        firstLeg, secondLeg);
-                break;
+                return new RightTriangle(colorSupplier.getRandomColor(),
+                        getRandomSide(), getRandomSide());
             case 3:
-                double radius = sideNotNull();
-                randomFigure = new Circle(colorSupplier.getRandomColor(), radius);
-                break;
-            case 4:
-                double shortLeg = sideNotNull();
-                double longLeg = sideNotNull();
-                double height = sideNotNull();
-                randomFigure = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        shortLeg, longLeg, height);
-                break;
+                return new Circle(colorSupplier.getRandomColor(), getRandomSide());
             default:
-                throw new IllegalStateException();
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        getRandomSide(), getRandomSide(), getRandomSide());
         }
-        return randomFigure;
     }
 
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
-    private double sideNotNull() {
-        double side = random.nextInt(BOUND);
-        while (side == 0) {
-            side = random.nextInt(BOUND);
-        }
-        return side;
+    private double getRandomSide() {
+        return random.nextInt(MIN_SIDE, MAX_SIDE);
     }
 }
