@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Main {
-
     private static final int arraySize = 6;
 
     public static void main(String[] args) {
@@ -11,15 +10,12 @@ public class Main {
 
         for (int i = 0; i < arraySize; i++) {
             if (i < figures.length / 2) {
-                figures[i] = figureSupplier.getRandomFigure();;
+                figures[i] = figureSupplier.getRandomFigure();
             } else {
-                figures[i] = figureSupplier.getDefaultFigure();;
+                figures[i] = figureSupplier.getDefaultFigure();
             }
 
-            if (figures[i] != null) {
-
-                figures[i].draw();
-            }
+            figures[i].draw();
         }
     }
 }

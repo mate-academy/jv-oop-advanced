@@ -1,10 +1,10 @@
 package core.basesyntax;
 
 class Square extends Figure {
-    private double side;
+    private final double side;
 
     public Square(double side, String color) {
-        super("square", color);
+        super(Square.class.getSimpleName(), color);
         this.side = side;
     }
 
