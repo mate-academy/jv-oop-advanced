@@ -3,52 +3,59 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int FIGURE_COUNT = 5;
-    // made BOUND = 100 to generate random int which will be more than 0, because we
-    // can't have figure shapes or area lower than 0
-    public static final int BOUND = 100;
+    private static final int FIGURE_COUNT = 5;
+    private static final int BOUND = 100;
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
+    private static final double DEFAULT_RADIUS = 10.0;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
-    private Figure defaultFigure = new Circle(Color.WHITE.name(), 10.0);
     private Figure randomFigure;
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
         switch (figureNumber) {
             case 0:
-                double side = random.nextInt(BOUND);
+                double side = sideNotNull();
                 randomFigure = new Square(colorSupplier.getRandomColor(), side);
                 break;
             case 1:
-                double firstSide = random.nextInt(BOUND);
-                double secondSide = random.nextInt(BOUND);
+                double firstSide = sideNotNull();
+                double secondSide = sideNotNull();
                 randomFigure = new Rectangle(colorSupplier.getRandomColor(),
                         firstSide, secondSide);
                 break;
             case 2:
-                double firstLeg = random.nextInt(BOUND);
-                double secondLeg = random.nextInt(BOUND);
+                double firstLeg = sideNotNull();
+                double secondLeg = sideNotNull();
                 randomFigure = new RightTriangle(colorSupplier.getRandomColor(),
                         firstLeg, secondLeg);
                 break;
             case 3:
-                double radius = random.nextInt(BOUND);
+                double radius = sideNotNull();
                 randomFigure = new Circle(colorSupplier.getRandomColor(), radius);
                 break;
             case 4:
-                double shortLeg = random.nextInt(BOUND);
-                double longLeg = random.nextInt(BOUND);
-                double height = random.nextInt(BOUND);
+                double shortLeg = sideNotNull();
+                double longLeg = sideNotNull();
+                double height = sideNotNull();
                 randomFigure = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                         shortLeg, longLeg, height);
                 break;
             default:
-                randomFigure = getDefaultFigure();
+                throw new IllegalStateException();
         }
         return randomFigure;
     }
 
     public Figure getDefaultFigure() {
-        return defaultFigure;
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
+    }
+
+    private double sideNotNull() {
+        double side = random.nextInt(BOUND);
+        while (side == 0) {
+            side = random.nextInt(BOUND);
+        }
+        return side;
     }
 }
