@@ -18,7 +18,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String toString() {
+    public String draw() {
         return "Figure: IsoscelesTrapezoid, firstLeg: "
                 + firstLeg
                 + ", secondLeg: "

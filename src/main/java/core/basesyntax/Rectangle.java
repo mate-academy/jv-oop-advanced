@@ -16,7 +16,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String toString() {
+    public String draw() {
         return "Figure: Rectangle, area: "
                 + getArea()
                 + " firstLeg: "
