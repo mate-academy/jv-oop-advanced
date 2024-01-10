@@ -5,11 +5,10 @@ public class Main {
         Figure [] figures = new Figure[6];
         FigureSupplier figureSupplier = new FigureSupplier();
 
-        for (int i = 0; i < figures.length; i++ ) {
+        for (int i = 0; i < figures.length; i++) {
             if (i < 3) {
                 figures[i] = figureSupplier.getRandomFigure();
-            }
-            else {
+            } else {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
             figures[i].draw();
