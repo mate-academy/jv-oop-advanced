@@ -1,8 +1,6 @@
 package core.basesyntax;
 
-import java.text.DecimalFormat;
-
-public class Square extends ColorSupplier {
+public class Square extends FigureSupplier {
     private int side;
     private String color;
 
@@ -18,7 +16,6 @@ public class Square extends ColorSupplier {
 
     @Override
     public void draw() {
-        DecimalFormat df = new DecimalFormat("#.##");
         System.out.println("Name: square, " + "side: " + side + ", area: "
                 + getArea() + ", color: " + color);
     }

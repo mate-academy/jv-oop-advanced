@@ -2,7 +2,7 @@ package core.basesyntax;
 
 public class Main {
     public static void main(String[] args) {
-        Draw[] figures = new Draw[5];
+        Figure[] figures = new Figure[5];
         figures[0] = new Circle();
         figures[1] = new IsoscelesTrapezoid();
         figures[2] = new Rectangle();
@@ -10,7 +10,7 @@ public class Main {
         figures[4] = new Square(4, "Green");
 
         // Выводим все фигуры
-        for (Draw figure : figures) {
+        for (Figure figure : figures) {
             figure.draw();
         }
     }

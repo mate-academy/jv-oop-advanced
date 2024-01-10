@@ -1,15 +1,14 @@
 package core.basesyntax;
 
 import java.text.DecimalFormat;
-import java.util.Random;
 
-public class Circle extends ColorSupplier {
+public class Circle extends FigureSupplier {
     private int radius;
     private String color;
 
     public Circle() {
-        this.radius = new Random().nextInt(4) + 1;
-        this.color = getRandomColor();
+        this.radius = getDefaultRadius();
+        this.color = getDefaultColor();
     }
 
     @Override
@@ -22,6 +21,5 @@ public class Circle extends ColorSupplier {
         DecimalFormat df = new DecimalFormat("#.##");
         System.out.println("Name: circle, radius: " + radius + ", area: "
                 + df.format(getArea()) + ", color: " + color);
-
     }
 }

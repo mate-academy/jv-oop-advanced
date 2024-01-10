@@ -1,17 +1,16 @@
 package core.basesyntax;
 
 import java.text.DecimalFormat;
-import java.util.Random;
 
-public class Rectangle extends ColorSupplier {
+public class Rectangle extends FigureSupplier {
     private int widht;
     private int height;
-    private String color;
+    private ColorSupplier colorSupplier;
 
     public Rectangle() {
-        this.widht = new Random().nextInt(4) + 1;
-        this.height = new Random().nextInt(4) + 1;
-        this.color = getRandomColor();
+        this.widht = getRandomFigure();
+        this.height = getRandomFigure();
+        this.colorSupplier = new ColorSupplier();
     }
 
     @Override
@@ -23,7 +22,8 @@ public class Rectangle extends ColorSupplier {
     public void draw() {
         DecimalFormat df = new DecimalFormat("#.##");
         System.out.println("Name: rectangle, widht: " + widht
-                + ", height: " + height + ", area: " + df.format(getArea()) + ", color: " + color);
+                + ", height: " + height + ", area: " + df.format(getArea())
+                + ", color: " + ColorSupplier.getRandomColor());
 
     }
 }

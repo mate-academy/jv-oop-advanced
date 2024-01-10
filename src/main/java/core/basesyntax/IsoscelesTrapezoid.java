@@ -1,19 +1,18 @@
 package core.basesyntax;
 
 import java.text.DecimalFormat;
-import java.util.Random;
 
-public class IsoscelesTrapezoid extends ColorSupplier {
+public class IsoscelesTrapezoid extends FigureSupplier {
     private int baseOne;
     private int baseTwo;
     private int height;
-    private String color;
+    private ColorSupplier colorSupplier;
 
     public IsoscelesTrapezoid() {
-        this.baseOne = new Random().nextInt(4) + 1;;
-        this.baseTwo = new Random().nextInt(4) + 1;;
-        this.height = new Random().nextInt(4) + 1;;
-        this.color = getRandomColor();
+        this.baseOne = getRandomFigure();
+        this.baseTwo = getRandomFigure();
+        this.height = getRandomFigure();
+        this.colorSupplier = new ColorSupplier();
     }
 
     @Override
@@ -26,6 +25,6 @@ public class IsoscelesTrapezoid extends ColorSupplier {
         DecimalFormat df = new DecimalFormat("#.##");
         System.out.println("Name: IsoscelesTrapezoid, baseOne: " + baseOne + ", baseTwo: "
                 + baseTwo + ", height:" + height + ", area: " + df.format(getArea())
-                + ", color: " + color);
+                + ", color: " + ColorSupplier.getRandomColor());
     }
 }
