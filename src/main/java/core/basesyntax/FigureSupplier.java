@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int NUM_FIGURES = 5;
+    private static final int NUM_FIGURES = 4;
     private static final double DEFAULT_RADIUS = 10.0;
     private static final int MAX_RANDOM_VALUE = 10;
     private static final String DEFAULT_COLOR = Color.YELLOW.name();
@@ -30,15 +30,13 @@ public class FigureSupplier {
                 return new RightTriangle(randomValue, randomValue, color);
             case 3:
                 return new Circle(randomValue, color);
-            case 4:
-                return new IsoscelesTrapezoid(randomValue, randomValue, randomValue, color);
             default:
-                return getDefaultFigure();
+                return new IsoscelesTrapezoid(randomValue, randomValue, randomValue, color);
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR); // using name() instead of toString()
+        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
     }
 
     private double getRandomValue() {
