@@ -3,13 +3,14 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int MAX_NUMBER = 10;
+    private static final int NUMBER_OF_FIGURES = 5;
+    private static final int DEFAULT_RADIUS = 10;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
-    private final int maxNumber = 10;
 
     public Figure getRandomFigure() {
-        final int numberOfFigures = 5;
-        int randomIndex = random.nextInt(numberOfFigures);
+        int randomIndex = random.nextInt(NUMBER_OF_FIGURES);
 
         return switch (randomIndex) {
             case 0 -> getRandomCircle();
@@ -21,46 +22,44 @@ public class FigureSupplier {
     }
 
     public Circle getDefaultFigure() {
-        final int radius = 10;
-
-        return new Circle(Color.WHITE.name(), radius);
+        return new Circle(Color.WHITE.name(), DEFAULT_RADIUS);
     }
 
     private Circle getRandomCircle() {
         String color = colorSupplier.getRandomColor();
-        int radius = random.nextInt(maxNumber) + 1;
+        int radius = random.nextInt(MAX_NUMBER) + 1;
 
         return new Circle(color, radius);
     }
 
     private IsoscelesTrapezoid getRandomIsoTrapezoid() {
         String color = colorSupplier.getRandomColor();
-        int longBase = random.nextInt(maxNumber) + 1;
-        int shortBase = random.nextInt(maxNumber) + 1;
-        int height = random.nextInt(maxNumber) + 1;
+        int longBase = random.nextInt(MAX_NUMBER) + 1;
+        int shortBase = random.nextInt(MAX_NUMBER) + 1;
+        int height = random.nextInt(MAX_NUMBER) + 1;
 
         return new IsoscelesTrapezoid(color, longBase, shortBase, height);
     }
 
     private Rectangle getRandomRectangle() {
         String color = colorSupplier.getRandomColor();
-        int length = random.nextInt(maxNumber) + 1;
-        int height = random.nextInt(maxNumber) + 1;
+        int length = random.nextInt(MAX_NUMBER) + 1;
+        int height = random.nextInt(MAX_NUMBER) + 1;
 
         return new Rectangle(color, length, height);
     }
 
     private RightTriangle getRandomRightTriangle() {
         String color = colorSupplier.getRandomColor();
-        int base = random.nextInt(maxNumber) + 1;
-        int height = random.nextInt(maxNumber) + 1;
+        int base = random.nextInt(MAX_NUMBER) + 1;
+        int height = random.nextInt(MAX_NUMBER) + 1;
 
         return new RightTriangle(color, base, height);
     }
 
     private Square getRandomSquare() {
         String color = colorSupplier.getRandomColor();
-        int side = random.nextInt(maxNumber) + 1;
+        int side = random.nextInt(MAX_NUMBER) + 1;
 
         return new Square(color, side);
     }

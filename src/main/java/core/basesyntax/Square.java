@@ -14,7 +14,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println("Figure: Isosceles Trapezoid, area: " + calculateArea()
                 + " sq. units, side: " + side
                 + " units, color: " + super.getColor());
