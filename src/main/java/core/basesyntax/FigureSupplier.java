@@ -3,7 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int FIGURE_COUNT = 5;
+    public static final int FIGURE_COUNT = 5;
+    public static final int DEFAULT_RADIUS = 10;
+    public static final String DEFAULT_COLOR = "white";
+    public static final double MAX_SIDE_LENGTH = 10;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
@@ -20,7 +23,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", 10); // Default white circle with radius 10
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
     private Square createRandomSquare(String color) {
@@ -41,7 +44,7 @@ public class FigureSupplier {
     }
 
     private Circle createRandomCircle(String color) {
-        double radius = getRandomRadius();
+        double radius = getRandomSide();
         return new Circle(color, (int) radius);
     }
 
@@ -53,10 +56,6 @@ public class FigureSupplier {
     }
 
     private double getRandomSide() {
-        return random.nextDouble() * 10; // Random side length between 0 and 10
-    }
-
-    private double getRandomRadius() {
-        return random.nextDouble() * 10; // Random radius between 0 and 10
+        return random.nextDouble() * MAX_SIDE_LENGTH;
     }
 }
