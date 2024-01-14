@@ -30,8 +30,9 @@ public class FigureSupplier {
                 int shortBase = (int) (Math.random() * 100 + 1);
                 int heightBase = (int) ((Math.random() * 100) + 1);
                 return new IsoscelesTrapezoid(color, longBase, shortBase, heightBase);
+            default:
+                return null;
         }
-        return null;
     }
 
     public Figure getDefaultFigure() {

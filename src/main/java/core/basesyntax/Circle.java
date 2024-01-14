@@ -1,18 +1,19 @@
 package org.example;
 
+import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
 public class Circle extends Figure {
-    private int radius;
-    private static DecimalFormat decimalFormat = new DecimalFormat("#.##");
+    private final double radius;
+    private final DecimalFormat decimalFormat = new DecimalFormat("#.##");
+
+    {
+        decimalFormat.setRoundingMode(RoundingMode.HALF_UP);
+    }
 
     public Circle(Color color, int radius) {
         super(color);
         this.radius = radius;
-    }
-
-    public double getRadius() {
-        return radius;
     }
 
     @Override
@@ -22,7 +23,8 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Shape: circle, area: " + decimalFormat.format(area()) + "sq. units, radius: " + radius
+        System.out.println("Shape: circle, area: " + decimalFormat.format(area())
+                + "sq. units, radius: " + radius
                 + " sq. units, color: " + getColor());
     }
 }
