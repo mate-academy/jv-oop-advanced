@@ -1,14 +1,14 @@
-package core.basesyntax;
+package org.example;
 
 public class Square extends Figure {
-    private int side;
+    private  int side;
 
     public Square(Color color, int side) {
         super(color);
         this.side = side;
     }
 
-    public double getSide() {
+    public int getSide() {
         return side;
     }
 

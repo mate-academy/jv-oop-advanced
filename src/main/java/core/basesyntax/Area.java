@@ -1,4 +1,4 @@
-package core.basesyntax;
+package org.example;
 
 public interface Area {
     double area();

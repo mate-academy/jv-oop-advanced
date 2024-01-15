@@ -1,4 +1,4 @@
-package core.basesyntax;
+package org.example;
 
 public abstract class Figure implements Drawable, Area {
     private final Color color;

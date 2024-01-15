@@ -1,4 +1,4 @@
-package core.basesyntax;
+package org.example;
 
 public class RightTriangle extends Figure {
     private int base;

@@ -1,4 +1,4 @@
-package core.basesyntax;
+package org.example;
 
 public class IsoscelesTrapezoid extends Figure {
     private int longBase;
