@@ -1,10 +1,7 @@
 package core.basesyntax;
 
-//import java.util.Random;
-
 public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    //private final Random random = new Random();
 
     public Figure getRandomFigure() {
         int type = (int) (Math.random() * 5);
