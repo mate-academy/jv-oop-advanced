@@ -11,16 +11,10 @@ public abstract class Figure implements AreaCalculator, Drawable {
     }
 
     public String getColor() {
-        return color;
+        return color.toLowerCase();
     }
 
     public String getStringFormat(double doubleNum) {
         return String.format("%,.1f", doubleNum);
     }
-
-    @Override
-    public abstract void draw();
-
-    @Override
-    public abstract double calculateArea();
 }
