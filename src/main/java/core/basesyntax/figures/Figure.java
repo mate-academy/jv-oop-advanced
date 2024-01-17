@@ -1,15 +1,13 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.figures.interfaces.AreaCalculator;
-import core.basesyntax.figures.suppliers.RoundCalculator;
+import core.basesyntax.figures.interfaces.Drawable;
 
-public abstract class Figure implements AreaCalculator {
-    public static final int NEAREST_TENTH = 10;
-    private RoundCalculator roundCalculator = new RoundCalculator();
+public abstract class Figure implements AreaCalculator, Drawable {
     private String color;
 
-    public double getRound(double area) {
-        return roundCalculator.roundCalc(area);
+    public Figure(String color) {
+        this.color = color;
     }
 
     public void setColor(String color) {
@@ -21,4 +19,8 @@ public abstract class Figure implements AreaCalculator {
     }
 
     public abstract void draw();
+
+    public String getStringFormat(double doubleNum) {
+        return String.format("%,.1f", doubleNum);
+    }
 }

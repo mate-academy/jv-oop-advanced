@@ -5,22 +5,22 @@ public class Rectangle extends Figure {
     private double secondLeg;
 
     public Rectangle(double firstLeg, double secondLeg, String color) {
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
         setColor(color);
     }
 
     @Override
-    public double areaCalc() {
-        double area = firstLeg * secondLeg;
-        return getRound(area);
+    public double calculateArea() {
+        return firstLeg * secondLeg;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + areaCalc()
-                + " sq. units, First leg: " + firstLeg + " units, "
-                + "Second Leg: " + secondLeg + " units, "
+        System.out.println("Figure: rectangle, area: " + getStringFormat(calculateArea())
+                + " sq. units, First leg: " + getStringFormat(firstLeg) + " units, "
+                + "Second Leg: " + getStringFormat(secondLeg) + " units, "
                 + "color: " + getColor());
     }
 }

@@ -4,20 +4,20 @@ public class Square extends Figure {
     private double side;
 
     public Square(double side, String color) {
+        super(color);
         this.side = side;
         setColor(color);
     }
 
     @Override
-    public double areaCalc() {
-        double area = Math.pow(side, 2);
-        return getRound(area);
+    public double calculateArea() {
+        return Math.pow(side, 2);
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: square, area: " + areaCalc()
-                + " sq. units, side: " + side + " units, "
+        System.out.println("Figure: square, area: " + getStringFormat(calculateArea())
+                + " sq. units, side: " + getStringFormat(side) + " units, "
                 + "color: " + getColor());
     }
 }

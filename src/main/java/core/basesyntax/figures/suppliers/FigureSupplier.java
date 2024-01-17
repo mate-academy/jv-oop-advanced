@@ -9,45 +9,46 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int FIGURES_COUNT = 5;
+    private static final int FIGURES_COUNT = 5;
+    private static final int DEFAULT_RADIUS = 10;
+    private static final String DEFAULT_COLOR = "white";
 
-    private Figure figure;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
-    private RoundCalculator roundCalculator = new RoundCalculator();
 
     public Figure getRandomFigure() {
-        int randomFigure = random.nextInt(FIGURES_COUNT);
-        double[] randomNumber = new double[3];
+        Figure figure;
+
+        int figureNumber = random.nextInt(FIGURES_COUNT);
         String randomColor = colorSupplier.getRandomColor();
 
-        for (int i = 0; i < randomNumber.length; i++) {
-            randomNumber[i] = roundCalculator.roundCalc(random.nextDouble(100));
-        }
-
-        switch (randomFigure) {
+        switch (figureNumber) {
             case 0:
                 return getDefaultFigure();
             case 1:
-                figure = new IsoscelesTrapezoid(randomNumber[0],
-                        randomNumber[1], randomNumber[2], randomColor);
+                figure = new IsoscelesTrapezoid(getRandomGeometricProperty(),
+                        getRandomGeometricProperty(),
+                        getRandomGeometricProperty(), randomColor);
                 break;
             case 2:
-                figure = new Rectangle(randomNumber[0],randomNumber[1], randomColor);
+                figure = new Rectangle(getRandomGeometricProperty(),
+                        getRandomGeometricProperty(), randomColor);
                 break;
             case 3:
-                figure = new RightTriangle(randomNumber[0], randomNumber[1], randomColor);
-                break;
-            case 4:
-                figure = new Square(randomNumber[0], randomColor);
+                figure = new RightTriangle(getRandomGeometricProperty(),
+                        getRandomGeometricProperty(), randomColor);
                 break;
             default:
-                System.out.println("Invalid figure number");
+                figure = new Square(getRandomGeometricProperty(), randomColor);
         }
         return figure;
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, "white");
+        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
+    }
+
+    private double getRandomGeometricProperty() {
+        return random.nextDouble(100);
     }
 }
