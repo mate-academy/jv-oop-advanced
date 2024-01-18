@@ -1,10 +1,11 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private final int length;
-    private final int width;
+    private final double length;
+    private final double width;
 
-    public Rectangle(Color color, int length, int width) {
+    public Rectangle(Color color, double length, double width) {
+
         super(color);
         this.length = length;
         this.width = width;
@@ -17,8 +18,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Shape: rectangle, area: " + calculateArea()
-                + "sq. units, length: " + length
-                + "sq. units, width: " + width + "sq. units, color: " + getColor());
+        System.out.println("Shape: rectangle, area: " + calculateArea() + "sq. units, length: "
+                + length + "sq. units, width: " + width + "sq. units, color: " + getColor());
     }
 }

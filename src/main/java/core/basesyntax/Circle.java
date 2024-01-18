@@ -4,8 +4,8 @@ import java.math.RoundingMode;
 import java.text.DecimalFormat;
 
 public class Circle extends Figure {
+    private static final DecimalFormat decimalFormat = new DecimalFormat("#.##");
     private final int radius;
-    private final DecimalFormat decimalFormat = new DecimalFormat("#.##");
 
     public Circle(Color color, int radius) {
         super(color);
