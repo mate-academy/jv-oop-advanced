@@ -15,7 +15,7 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public String info() {
         return "Figure: isoscelesTrapezoid, area: "
-                + area()
+                + getArea()
                 + " sq. units, side: "
                 + side
                 + " units, height: "
@@ -25,7 +25,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return height * side;
     }
 }

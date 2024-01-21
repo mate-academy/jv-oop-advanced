@@ -16,7 +16,7 @@ public class Rectangle extends Figure {
     @Override
     public String info() {
         return "Figure: rectangle, area: "
-                + area()
+                + getArea()
                 + " sq. units, length: "
                 + length
                 + " units, height: "
@@ -26,7 +26,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return height * length;
     }
 }
