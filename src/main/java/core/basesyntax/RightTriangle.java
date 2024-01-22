@@ -28,6 +28,6 @@ public class RightTriangle extends Figure {
     public void drawable() {
         System.out.println("Figure: Right triangle, first leg " + getFirstLeg()
                 + " units, second leg " + getSecondLeg() + " units + area: "
-                + calculateArea() + "sq. units, color " + getColor());
+                + calculateArea() + " sq. units, color " + getColor());
     }
 }

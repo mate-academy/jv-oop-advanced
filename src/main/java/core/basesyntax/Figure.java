@@ -15,7 +15,6 @@ public abstract class Figure implements Drawable, AreaCalculator {
         this.color = color;
     }
 
-    @Override
     public void drawable() {
 
     }

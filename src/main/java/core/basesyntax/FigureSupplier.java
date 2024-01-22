@@ -3,31 +3,44 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int FIGURE_COUNT = 5;
-    public static final double MAX_VALUE_PROPERTIES = 50;
-    public static final String DEFAULT_COLOR = "white";
-    public static final double DEFAULT_RADIUS = 10;
+    private static final int FIGURE_COUNT = 5;
+    private static final double MAX_VALUE_PROPERTIES = 50;
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
+    private static final double DEFAULT_RADIUS = 10;
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
-    private Figure[] figures = new Figure [] {
-            new Circle(colorSupplier.getRandomColor(), random.nextDouble(MAX_VALUE_PROPERTIES)),
-            new Square(random.nextDouble(MAX_VALUE_PROPERTIES), colorSupplier.getRandomColor()),
-            new RightTriangle(random.nextDouble(MAX_VALUE_PROPERTIES),
-                    random.nextDouble(MAX_VALUE_PROPERTIES),
-                    colorSupplier.getRandomColor()),
-            new Rectangle(random.nextDouble(MAX_VALUE_PROPERTIES),
-                    random.nextDouble(MAX_VALUE_PROPERTIES),
-                    colorSupplier.getRandomColor()),
-            new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                    random.nextDouble(MAX_VALUE_PROPERTIES),
-                    random.nextDouble(MAX_VALUE_PROPERTIES),
-                    random.nextDouble(MAX_VALUE_PROPERTIES))
-    };
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
-        int index = random.nextInt(figures.length);
-        return figures[index];
+        switch (figureNumber) {
+            case 1 -> {
+                double randomRadius = random.nextDouble(MAX_VALUE_PROPERTIES);
+                return new Circle(colorSupplier.getRandomColor(), randomRadius);
+            }
+            case 2 -> {
+                double randomSide = random.nextDouble(MAX_VALUE_PROPERTIES);
+                return new Square(randomSide, colorSupplier.getRandomColor());
+            }
+            case 3 -> {
+                double randomFirstLeg = random.nextDouble(MAX_VALUE_PROPERTIES);
+                double randomSecondLeg = random.nextDouble(MAX_VALUE_PROPERTIES);
+                return new RightTriangle(randomFirstLeg, randomSecondLeg,
+                        colorSupplier.getRandomColor());
+            }
+            case 4 -> {
+                double randomFirstSide = random.nextDouble(MAX_VALUE_PROPERTIES);
+                double randomSecondSide = random.nextDouble(MAX_VALUE_PROPERTIES);
+                return new Rectangle(randomFirstSide, randomSecondSide,
+                        colorSupplier.getRandomColor());
+            }
+            default -> {
+                double randomShorterSide = random.nextDouble(MAX_VALUE_PROPERTIES);
+                double randomLongerSide = random.nextDouble(MAX_VALUE_PROPERTIES);
+                double randomHeight = random.nextDouble(MAX_VALUE_PROPERTIES);
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        randomShorterSide, randomLongerSide, randomHeight);
+            }
+        }
     }
 
     public Figure getDefaultFigure() {

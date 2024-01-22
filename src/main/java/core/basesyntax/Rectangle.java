@@ -27,6 +27,6 @@ public class Rectangle extends Figure {
     public void drawable() {
         System.out.println("Figure: Rectangle, first side " + getFirstSide()
                 + " units, second side " + getSecondSide() + " units + area: "
-                + calculateArea() + "sq. units, color " + getColor());
+                + calculateArea() + " sq. units, color " + getColor());
     }
 }
