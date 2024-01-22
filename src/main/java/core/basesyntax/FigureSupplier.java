@@ -7,9 +7,9 @@ public class FigureSupplier {
     private final double defaultvalue = 10;
     private final String defaultcolor = "white";
     private final ColorSupplier colorSupplier = new ColorSupplier();
+    Random random = new Random();
 
     public Figure getRandomFigure() {
-        Random random = new Random();
         int choice = random.nextInt(minfigures);
         switch (choice) {
             case 0:
