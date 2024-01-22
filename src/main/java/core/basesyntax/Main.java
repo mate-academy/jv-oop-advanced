@@ -5,12 +5,14 @@ public class Main {
         int arraySize = 6;
         Figure[] figures = new Figure[arraySize];
 
+        FigureSupplier figureSupplier = new FigureSupplier();
+
         for (int i = 0; i < arraySize / 2; i++) {
-            figures[i] = FigureSupplier.getRandomFigure();
+            figures[i] = figureSupplier.getRandomFigure();
         }
 
         for (int i = arraySize / 2; i < arraySize; i++) {
-            figures[i] = FigureSupplier.getDefaultFigure();
+            figures[i] = figureSupplier.getDefaultFigure();
         }
 
         for (Figure figure : figures) {
