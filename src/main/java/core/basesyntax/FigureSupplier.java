@@ -41,8 +41,7 @@ public class FigureSupplier {
 
         switch (figureNumber) {
             case 0:
-                return new Circle(colorSupplier.getRandomColor()
-                        , circleRadius);
+                return new Circle(colorSupplier.getRandomColor(), circleRadius);
             case 1:
                 return new RightTriangle(firstRightTriangleLeg, secondRightTriangleLeg,
                         colorSupplier.getRandomColor());
