@@ -10,8 +10,7 @@ public class FigureSupplier {
     private final Random random = new Random();
 
     private double getRandomSide() {
-        Random random1 = new Random();
-        return random1.nextDouble() * 10 + 1;
+        return random.nextDouble() * 10 + 1;
     }
 
     public Figure getRandomFigure() {
