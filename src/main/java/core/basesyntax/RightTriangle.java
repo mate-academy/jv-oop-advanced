@@ -10,26 +10,19 @@ public class RightTriangle extends Figure {
         this.secondLeg = secondLeg;
     }
 
-    @Override
     public double getHypotenuse() {
         return Math.sqrt(firstLeg * firstLeg + secondLeg * secondLeg);
     }
 
-    @Override
     public double getArea() {
         return 0.5 * firstLeg * secondLeg;
     }
 
     @Override
-    public String draw() {
-        return "Figure: RightTriangle, area: " + String.format("%.2f", getArea())
+    public void draw() {
+        System.out.println("Figure: RightTriangle, area: " + String.format("%.2f", getArea())
                 + " sq.units, first leg:" + String.format("%.2f", firstLeg)
                 + ", second leg" + String.format("%.2f", secondLeg) + " hypotenuse: "
-                + String.format("%.2f", getHypotenuse()) + " units, color:" + getColor();
-    }
-
-    @Override
-    public String toString() {
-        return draw();
+                + String.format("%.2f", getHypotenuse()) + " units, color:" + getColor());
     }
 }

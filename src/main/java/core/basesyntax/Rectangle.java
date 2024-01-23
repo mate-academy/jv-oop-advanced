@@ -10,28 +10,20 @@ public class Rectangle extends Figure {
         this.width = width;
     }
 
-    @Override
     public double getDiagonal() {
         return Math.sqrt(length * length + width * width);
     }
 
-    @Override
     public double getArea() {
         return length * width;
     }
 
     @Override
-    public String draw() {
-        return "Figure: Rectangle, area: " + String.format("%.2f", getArea())
+    public void draw() {
+        System.out.println("Figure: Rectangle, area: " + String.format("%.2f", getArea())
                 + " sq.units, length: " + String.format("%.2f", length)
                 + ", width: " + String.format("%.2f", width)
                 + " , diagonal: " + String.format("%.2f", getDiagonal())
-                + " units, color:" + getColor();
+                + " units, color:" + getColor());
     }
-
-    @Override
-    public String toString() {
-        return draw();
-    }
-
 }

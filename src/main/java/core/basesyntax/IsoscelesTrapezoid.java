@@ -18,15 +18,10 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String draw() {
-        return "Figure: IsoscelesTrapezoid, area:" + String.format("%.2f", getArea())
+    public void draw() {
+        System.out.println("Figure: IsoscelesTrapezoid, area:" + String.format("%.2f", getArea())
                 + " sq.units, first side: "
                 + String.format("%.2f", firstSide) + ", second side: "
-                + String.format("%.2f", secondSide) + ", color:" + getColor();
-    }
-
-    @Override
-    public String toString() {
-        return draw();
+                + String.format("%.2f", secondSide) + ", color:" + getColor());
     }
 }
