@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int FIGURE_COUNT = 5;
+    private static final int FIGURE_COUNT = 5;
     private static final double DEFAULT_RADIUS = 10;
     private static final String DEFAULT_COLOR = Color.WHITE.name();
     private static final int MAX_GEOMETRIC_PROPERTY_SIZE = 10;
@@ -18,31 +18,22 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
         String randomColor = colorSupplier.getRandomColor();
-        double circleRadius = getRandomValue();
-        double firstRightTriangleLeg = getRandomValue();
-        double secondRightTriangleLeg = getRandomValue();
-        double squareSide = getRandomValue();
-        double firstSideIsoscelesTrapezoid = getRandomValue();
-        double secondSideIsoscelesTrapezoid = getRandomValue();
-        double heightIsoscelesTrapezoid = getRandomValue();
-        double rectangleLength = getRandomValue();
-        double rectangleWidth = getRandomValue();
 
         switch (figureNumber) {
             case 0:
-                return new Circle(randomColor, circleRadius);
+                return new Circle(randomColor, getRandomValue());
             case 1:
-                return new RightTriangle(firstRightTriangleLeg, secondRightTriangleLeg,
+                return new RightTriangle(getRandomValue(), getRandomValue(),
                         randomColor);
             case 2:
-                return new Square(squareSide, randomColor);
+                return new Square(getRandomValue(), randomColor);
             case 3:
-                return new IsoscelesTrapezoid(firstSideIsoscelesTrapezoid,
-                        secondSideIsoscelesTrapezoid,
-                        heightIsoscelesTrapezoid,
+                return new IsoscelesTrapezoid(getRandomValue(),
+                        getRandomValue(),
+                        getRandomValue(),
                         randomColor);
             default:
-                return new Rectangle(rectangleLength, rectangleWidth,
+                return new Rectangle(getRandomValue(), getRandomValue(),
                         randomColor);
         }
     }

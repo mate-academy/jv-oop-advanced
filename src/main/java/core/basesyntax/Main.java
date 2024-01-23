@@ -7,13 +7,9 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
 
         for (int i = 0; i < figures.length; i++) {
-            if (i < middle) {
-                figures[i] = figureSupplier.getRandomFigure();
-                figures[i].draw();
-            } else {
-                figures[i] = figureSupplier.getDefaultFigure();
-                figures[i].draw();
-            }
+            figures[i] = (i < middle) ? figureSupplier.getRandomFigure()
+                    : figureSupplier.getDefaultFigure();
+            figures[i].draw();
         }
     }
 }
