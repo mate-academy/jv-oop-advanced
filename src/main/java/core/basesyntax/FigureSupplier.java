@@ -9,6 +9,7 @@ import java.util.Random;
 
 public class FigureSupplier extends ColorSupplier {
     private static final int NUMBER_OF_FIGURES = 5;
+    private static final int DEFAULT_LENGTH = 10;
 
     private Random random = new Random();
 
@@ -24,6 +25,6 @@ public class FigureSupplier extends ColorSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, "white");
+        return new Circle(DEFAULT_LENGTH, Color.WHITE.name());
     }
 }
