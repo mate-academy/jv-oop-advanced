@@ -14,10 +14,10 @@ public class Square extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "Figure: square, area: "
+    public void draw() {
+        System.out.println("Figure: square, area: "
                 + calculateArea() + " sq. units, "
                 + "side: " + side + " units, "
-                + "color: " + color + ".";
+                + "color: " + color + ".");
     }
 }
