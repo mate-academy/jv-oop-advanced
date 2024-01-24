@@ -1,11 +1,13 @@
 package core.basesyntax;
 
 public class FigureSupplier {
+    public static final Color WHITE = Color.WHITE;
+    public static final int DEFAULT_FIGURE_RADIUS = 10;
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int type = (int) (Math.random() * 5);
-        String color = colorSupplier.getRandomColor();
+        Color color = colorSupplier.getRandomColor();
 
         switch (type) {
             case 0:
@@ -33,6 +35,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", 10);
+        return new Circle(WHITE, DEFAULT_FIGURE_RADIUS);
     }
 }
