@@ -1,39 +1,30 @@
 package core.basesyntax;
 
+import core.basesyntax.figures.Circle;
+import core.basesyntax.figures.IsoscelesTrapezoid;
+import core.basesyntax.figures.Rectangle;
+import core.basesyntax.figures.RightTriangle;
+import core.basesyntax.figures.Square;
 import java.util.Random;
 
-public class FigureSupplier {
-    private static final int NUM_FIGURE_TYPES = 5;
-    private static final String DEFAULT_COLOR = "white";
+public class FigureSupplier extends ColorSupplier {
+    private static final int NUMBER_OF_FIGURES = 5;
+    private static final int DEFAULT_LENGTH = 10;
 
-    private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final Random random = new Random();
+    private Random random = new Random();
 
     public Figure getRandomFigure() {
-        int choice = random.nextInt(NUM_FIGURE_TYPES);
-        String color = colorSupplier.getRandomColor();
-        switch (choice) {
-            case 0:
-                return new Square(random.nextDouble() * 10 + 1, color);
-            case 1:
-                return new Rectangle(random.nextDouble() * 10 + 1,
-                        random.nextDouble() * 10 + 1, color);
-            case 2:
-                return new RightTriangle(random.nextDouble() * 10 + 1,
-                        random.nextDouble() * 10 + 1, color);
-            case 3:
-                return new Circle(random.nextDouble() * 10 + 1, color);
-            case 4:
-                return new IsoscelesTrapezoid(
-                        random.nextDouble() * 10 + 1,
-                        random.nextDouble() * 10 + 1,
-                        random.nextDouble() * 10 + 1, color);
-            default:
-                throw new IllegalArgumentException("Invalid choice");
-        }
+        return switch (random.nextInt(NUMBER_OF_FIGURES)) {
+            case 1 -> new Square(random.nextInt(), getRandomColor());
+            case 2 -> new Rectangle(random.nextInt(), random.nextInt(), getRandomColor());
+            case 3 -> new RightTriangle(random.nextInt(), random.nextInt(), getRandomColor());
+            case 4 -> new Circle(random.nextInt(), getRandomColor());
+            default -> new IsoscelesTrapezoid(
+                    random.nextInt(), random.nextInt(), random.nextInt(), getRandomColor());
+        };
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, DEFAULT_COLOR);
+        return new Circle(DEFAULT_LENGTH, Color.WHITE.name());
     }
 }
