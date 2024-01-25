@@ -9,8 +9,8 @@ public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        ColorSupplier colorSupplier = new ColorSupplier();
-        String randomFigureName = FIGURE_TYPE.values()[random.nextInt(FIGURE_TYPE.values().length)].name();
+        String randomFigureName = FigureType.values()
+                [random.nextInt(FigureType.values().length)].name();
 
         switch (randomFigureName) {
             case "CIRCLE":
