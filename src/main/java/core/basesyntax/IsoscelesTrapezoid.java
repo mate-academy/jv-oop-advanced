@@ -3,7 +3,7 @@ package core.basesyntax;
 public class IsoscelesTrapezoid extends Color implements Figure {
     private double upperBase;
     private double lowerBase;
-    private double height;;
+    private double height;
 
     public IsoscelesTrapezoid(String color, double upperBase, double lowerBase, double height) {
         super.setColor(color);
