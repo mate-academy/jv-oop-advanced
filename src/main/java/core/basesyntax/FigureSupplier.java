@@ -3,32 +3,35 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final Random RANDOM = new Random();
+    public static final int DEFAULT_RADIUS = 10;
+
+    private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         ColorSupplier colorSupplier = new ColorSupplier();
-        String randomFigureName = Figures.values()[RANDOM.nextInt(Figures.values().length)].name();
+        String randomFigureName = FIGURE_TYPE.values()[random.nextInt(FIGURE_TYPE.values().length)].name();
 
         switch (randomFigureName) {
             case "CIRCLE":
-                return new Circle(colorSupplier.getRandomColor(), RANDOM.nextDouble());
+                return new Circle(colorSupplier.getRandomColor(), random.nextDouble());
             case "SQUARE":
-                return new Square(colorSupplier.getRandomColor(), RANDOM.nextDouble());
+                return new Square(colorSupplier.getRandomColor(), random.nextDouble());
             case "RECTANGLE":
-                return new Rectangle(colorSupplier.getRandomColor(), RANDOM.nextDouble(),
-                        RANDOM.nextDouble());
+                return new Rectangle(colorSupplier.getRandomColor(), random.nextDouble(),
+                        random.nextDouble());
             case "RIGHT_TRIANGLE":
-                return new RightTriangle(colorSupplier.getRandomColor(), RANDOM.nextDouble(),
-                        RANDOM.nextDouble());
+                return new RightTriangle(colorSupplier.getRandomColor(), random.nextDouble(),
+                        random.nextDouble());
             case "ISOSCELES_TRAPEZOID":
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), RANDOM.nextDouble(),
-                        RANDOM.nextDouble(), RANDOM.nextDouble());
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextDouble(),
+                        random.nextDouble(), random.nextDouble());
             default:
                 return null;
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.name(), 10);
+        return new Circle(Color.WHITE.name(), DEFAULT_RADIUS);
     }
 }
