@@ -1,7 +1,6 @@
-package core.basesyntax.Figures;
+package core.basesyntax.figures;
 
 import core.basesyntax.Color;
-import core.basesyntax.Figure;
 
 public class RightTriangle extends Color {
     private double firstLeg;
