@@ -1,6 +1,9 @@
-package core.basesyntax;
+package core.basesyntax.Figures;
 
-public class Square extends Color implements Figure {
+import core.basesyntax.Color;
+import core.basesyntax.Figure;
+
+public class Square extends Color {
     private double sideLength;
 
     public Square(String color, double sideLength) {

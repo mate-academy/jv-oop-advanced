@@ -1,6 +1,9 @@
-package core.basesyntax;
+package core.basesyntax.Figures;
 
-public class Rectangle extends Color implements Figure {
+import core.basesyntax.Color;
+import core.basesyntax.Figure;
+
+public class Rectangle extends Color {
 
     private double length;
     private double width;
