@@ -11,7 +11,7 @@ public class FigureSupplier {
         return random.nextInt(ORIGIN, BOUND);
     }
 
-    public static Figure getRandomFigure() {
+    public Figure getRandomFigure() {
         FigureSupplier figureSupplier = new FigureSupplier();
         int index = random.nextInt(Name.values().length);
         Name name = Name.values()[index];
