@@ -2,13 +2,13 @@ package core.basesyntax;
 
 import java.text.DecimalFormat;
 
-public class Circle extends FigureSupplier {
+public class Circle implements Drawable {
     private int radius;
     private String color;
 
-    public Circle() {
-        this.radius = defaultRadius;
-        this.color = defaultColor;
+    public Circle(int radius, String color) {
+        this.radius = radius;
+        this.color = color;
     }
 
     @Override
@@ -23,4 +23,3 @@ public class Circle extends FigureSupplier {
                 + df.format(getArea()) + ", color: " + color);
     }
 }
-

@@ -1,12 +1,12 @@
 package core.basesyntax;
 
-public class Square extends FigureSupplier {
+public class Square implements Drawable {
     private int side;
     private String color;
 
     public Square() {
         this.side = 4;
-        this.color = "green";
+        this.color = "White";
     }
 
     @Override

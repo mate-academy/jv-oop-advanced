@@ -2,18 +2,15 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public abstract class FigureSupplier implements Figure, Drawable {
-    protected int defaultRadius;
-    protected String defaultColor;
-
-    public FigureSupplier() {
-        this.defaultRadius = 10;
-        this.defaultColor = "white";
+public class FigureSupplier {
+    public Circle getDefaultFigure() {
+        int radius = 10;
+        String color = "White";
+        return new Circle(radius, color);
     }
 
     public int getRandomFigure() {
-        //for the generation of figures with episodic powers
-        int randvalues = new Random().nextInt(4) + 1;
-        return randvalues;
+        int randValues = new Random().nextInt(4) + 1;
+        return randValues;
     }
 }
