@@ -1,8 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Color;
+import core.basesyntax.Figure;
 
-public class IsoscelesTrapezoid extends Color {
+public class IsoscelesTrapezoid extends Figure {
     private double upperBase;
     private double lowerBase;
     private double height;

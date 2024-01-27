@@ -1,9 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Color;
+import core.basesyntax.Figure;
 
-public class Rectangle extends Color {
-
+public class Rectangle extends Figure {
     private double length;
     private double width;
 
@@ -20,7 +19,6 @@ public class Rectangle extends Color {
 
     @Override
     public void draw() {
-
         System.out.println("Type: rectangle, color: "
                 + getColor()
                 + " area: "
