@@ -1,8 +1,6 @@
 package core.basesyntax;
 
-public interface Drawable {
-    double getArea();
-
+public interface Drawable extends Area {
     void draw();
 
 }

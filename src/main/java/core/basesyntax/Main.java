@@ -2,16 +2,26 @@ package core.basesyntax;
 
 public class Main {
     public static void main(String[] args) {
-        FigureSupplier figureSupplier = new FigureSupplier();
-        Circle circle = figureSupplier.getDefaultFigure();
-        Square square = new Square();
-        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
-        Rectangle rectangle = new Rectangle();
-        RightTriangle rightTriangle = new RightTriangle();
+        final int FiguresNumber = 5;
+        Drawable[] figures = new Drawable[FiguresNumber];
+        Figure.FigureSupplier figureSupplier = new Figure.FigureSupplier();
+        ColorSupplier colorSupplier = new ColorSupplier();
 
-        for (Drawable figure : new Drawable[]{rightTriangle, isoscelesTrapezoid,
-                rectangle, square, circle}) {
-            figure.draw();
+        for (int i = 0; i < figures.length; i++) {
+            if (i == 0) {
+                figures[i] = new Square();
+            } else if (i == 1) {
+                figures[i] = new Rectangle(figureSupplier, colorSupplier);
+            } else if (i == 2) {
+                figures[i] = new Circle(figureSupplier.getRandomFigure(),
+                        colorSupplier.getRandomColor());
+            } else if (i == 3) {
+                figures[i] = new IsoscelesTrapezoid(figureSupplier, colorSupplier);
+            } else {
+                figures[i] = new RightTriangle();
+            }
+            figures[i].draw();
         }
     }
 }
+

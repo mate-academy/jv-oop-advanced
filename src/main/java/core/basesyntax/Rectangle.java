@@ -2,28 +2,27 @@ package core.basesyntax;
 
 import java.text.DecimalFormat;
 
-public class Rectangle extends FigureSupplier implements Drawable {
-    private int widht;
+public class Rectangle extends Figure {
+    private int width;
     private int height;
     private String color;
-    private ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Rectangle() {
-        this.widht = getRandomFigure();
-        this.height = getRandomFigure();
+    public Rectangle(Figure.FigureSupplier figureSupplier, ColorSupplier colorSupplier) {
+        this.width = figureSupplier.getRandomFigure();
+        this.height = figureSupplier.getRandomFigure();
         this.color = colorSupplier.getRandomColor();
     }
 
     @Override
     public double getArea() {
-        return widht * height;
+        return width * height;
     }
 
     @Override
     public void draw() {
         DecimalFormat df = new DecimalFormat("#.##");
-        System.out.println("Name: rectangle, widht: " + widht
+        System.out.println("Name: rectangle, width: " + width
                 + ", height: " + height + ", area: " + df.format(getArea())
-                + ", color: " + color.toLowerCase());
+                + ", color: " + color);
     }
 }

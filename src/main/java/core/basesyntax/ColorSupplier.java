@@ -1,4 +1,3 @@
-
 package core.basesyntax;
 
 import java.util.Random;
@@ -9,6 +8,6 @@ public class ColorSupplier {
     public String getRandomColor() {
         int index = random.nextInt(ColorEnum.values().length);
         ColorEnum color = ColorEnum.values()[index];
-        return color.name();
+        return color.name().toLowerCase();
     }
 }

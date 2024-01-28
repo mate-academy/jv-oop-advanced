@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.text.DecimalFormat;
 
-public class Circle implements Drawable {
+public class Circle extends Figure {
     private int radius;
     private String color;
 
@@ -20,6 +20,6 @@ public class Circle implements Drawable {
     public void draw() {
         DecimalFormat df = new DecimalFormat("#.##");
         System.out.println("Name: circle, radius: " + radius + ", area: "
-                + df.format(getArea()) + ", color: " + color);
+                + df.format(getArea()) + ", color: " + color.toLowerCase());
     }
 }

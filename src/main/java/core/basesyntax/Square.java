@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square implements Drawable {
+public class Square extends Figure {
     private int side;
     private String color;
 

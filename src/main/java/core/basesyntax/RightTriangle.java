@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.text.DecimalFormat;
 
-public class RightTriangle implements Drawable {
+public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
     private String color;
@@ -23,6 +23,5 @@ public class RightTriangle implements Drawable {
         DecimalFormat df = new DecimalFormat("#.##");
         System.out.println("Name: rightTriangle, firstLeg: " + firstLeg + ", secondLeg: "
                 + secondLeg + ", area: " + df.format(getArea()) + ", color: " + color);
-
     }
 }
