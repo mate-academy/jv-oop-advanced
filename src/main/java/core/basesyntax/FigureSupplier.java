@@ -8,41 +8,61 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-
+    private static final String DEFAULT_COLOR = "WHITE";
+    private static final int DEFAULT_RADIUS = 10;
     private static final int QUANITY_OF_TYPES = 5;
-    private String color = ColorSupplier.getRandomColor();
+    private ColorSupplier colorSupplier = new ColorSupplier();
+    private String color = colorSupplier.getRandomColor();
+    private Random random = new Random();
+    private int figureType = random.nextInt(QUANITY_OF_TYPES);
+
+    private Circle preparedCirce() {
+        return new Circle(color,
+                (double) Math.round(random.nextDouble() * 100) / 100);
+    }
+
+    private IsoscelesTrapezoid preparedTrapezoid() {
+        return new IsoscelesTrapezoid(color,
+                (double) Math.round(random.nextDouble() * 100) / 100,
+                (double) Math.round(random.nextDouble() * 100) / 100,
+                (double) Math.round(random.nextDouble() * 100) / 100);
+    }
+
+    private Rectangle preparedRectangle() {
+        return new Rectangle(color,
+                (double) Math.round(random.nextDouble() * 100) / 100,
+                (double) Math.round(random.nextDouble() * 100) / 100);
+    }
+
+    private RightTriangle preparedTriangle() {
+        return new RightTriangle(color,
+                (double) Math.round(random.nextDouble() * 100) / 100,
+                (double) Math.round(random.nextDouble() * 100) / 100);
+    }
+
+    private Square preparedSquare() {
+        return new Square(color,
+                (double) Math.round(random.nextDouble() * 100) / 100);
+    }
 
     public Figure getRandomFigure() {
-
-        Random random = new Random();
-        int figureType = random.nextInt(QUANITY_OF_TYPES);
-
         switch (figureType) {
             case 0:
-                return new Circle(color,
-                        (double) Math.round(random.nextDouble() * 100) / 100);
+                return preparedCirce();
             case 1:
-                return new IsoscelesTrapezoid(color,
-                        (double) Math.round(random.nextDouble() * 100) / 100,
-                        (double) Math.round(random.nextDouble() * 100) / 100,
-                        (double) Math.round(random.nextDouble() * 100) / 100);
+                return preparedTrapezoid();
             case 2:
-                return new Rectangle(color,
-                        (double) Math.round(random.nextDouble() * 100) / 100,
-                        (double) Math.round(random.nextDouble() * 100) / 100);
+                return preparedRectangle();
             case 3:
-                return new RightTriangle(color,
-                        (double) Math.round(random.nextDouble() * 100) / 100,
-                        (double) Math.round(random.nextDouble() * 100) / 100);
+                return preparedTriangle();
             case 4:
-                return new Square(color,
-                        (double) Math.round(random.nextDouble() * 100) / 100);
+                return preparedSquare();
             default:
-                return null;
+                return getDefaultFigure();
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("White", 10);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
