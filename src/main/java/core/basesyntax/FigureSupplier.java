@@ -1,7 +1,10 @@
 package core.basesyntax;
 
-import core.basesyntax.concretefigures.*;
-
+import core.basesyntax.concretefigures.Circle;
+import core.basesyntax.concretefigures.IsoscelesTrapezoid;
+import core.basesyntax.concretefigures.Rectangle;
+import core.basesyntax.concretefigures.RightTriangle;
+import core.basesyntax.concretefigures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
@@ -10,30 +13,39 @@ public class FigureSupplier {
     private static final int MAX_PARAMETER_OF_FIGURE = 100;
     private static final int DEFAULT_CIRCLE_RADIUS = 10;
 
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figure getRandomFigure(){
+    public Figure getRandomFigure() {
 
         int randomFigure = new Random().nextInt(AMOUNT_OF_FIGURES);
 
         switch (randomFigure) {
             case 1:
-                return new Circle(colorSupplier.getRandomColor(), getRandomParameter());
+                return new Circle(colorSupplier.getRandomColor(),
+                        getRandomParameter());
             case 2:
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomParameter(), getRandomParameter(), getRandomParameter());
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        getRandomParameter(),
+                        getRandomParameter(),
+                        getRandomParameter());
             case 3:
-                return new Rectangle(colorSupplier.getRandomColor(), getRandomParameter(), getRandomParameter());
+                return new Rectangle(colorSupplier.getRandomColor(),
+                        getRandomParameter(),
+                        getRandomParameter());
             case 4:
-                return new RightTriangle(colorSupplier.getRandomColor(), getRandomParameter(), getRandomParameter());
+                return new RightTriangle(colorSupplier.getRandomColor(),
+                        getRandomParameter(),
+                        getRandomParameter());
             case 5:
-                return new Square(colorSupplier.getRandomColor(), getRandomParameter());
+                return new Square(colorSupplier.getRandomColor(),
+                        getRandomParameter());
             default:
                 return getDefaultFigure();
         }
 
     }
 
-    private int getRandomParameter(){
+    private int getRandomParameter() {
         return new Random().nextInt(MAX_PARAMETER_OF_FIGURE);
     }
 
