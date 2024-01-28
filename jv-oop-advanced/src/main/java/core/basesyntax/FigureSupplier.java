@@ -3,49 +3,40 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static ColorSupplier colorSupplier = new ColorSupplier();
-    private static Random random = new Random();
-
-    public enum FigureConstants {
-        CIRCLE_RADIUS(10),
-        CIRCLE_COLOR("WHITE"),
-        FIGURES_QUANTITY(5);
-
-        private final Object value;
-
-        FigureConstants(Object value) {
-            this.value = value;
-        }
-
-        public Object getValue() {
-            return value;
-        }
-    }
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
+    private static final int DEFAULT_RADIUS = 10;
+    private static final int FIGURES_QUANTITY = 5;
+    private static final int MAX_NUMBER = 20;
+    private ColorSupplier colorSupplier = new ColorSupplier();
+    private Random random = new Random();
 
     public FigureSupplier(ColorSupplier colorSupplier) {
         this.colorSupplier = colorSupplier;
     }
 
     public Figure getDefaultFigure() {
-        return new Circle((int) FigureConstants.CIRCLE_RADIUS.getValue(),
-                (String) FigureConstants.CIRCLE_COLOR.getValue());
+        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
     }
 
     public Figure getRandomFigure() {
         String randomColor = colorSupplier.getRandomColor();
-        int randomFigure = random.nextInt((int) FigureConstants.FIGURES_QUANTITY.getValue());
+        int randomFigure = random.nextInt(FIGURES_QUANTITY);
 
         switch (randomFigure) {
             case 0:
-                return new Square(15, randomColor);
+                return new Square(random.nextInt(MAX_NUMBER), randomColor);
             case 1:
-                return new Rectangle(10, 15, randomColor);
+                return new Rectangle(random.nextInt(MAX_NUMBER), random.nextInt(MAX_NUMBER),
+                        randomColor);
             case 2:
-                return new RightTriangle(4, 8, randomColor);
+                return new RightTriangle(random.nextInt(MAX_NUMBER), random.nextInt(MAX_NUMBER),
+                        randomColor);
             case 3:
-                return new Circle(20, randomColor);
+                return new Circle(random.nextInt(MAX_NUMBER), randomColor);
             case 4:
-                return new IsoscelesTrapezoid(10, 20, 15, randomColor);
+                return new IsoscelesTrapezoid(random.nextInt(MAX_NUMBER),
+                        random.nextInt(MAX_NUMBER), random.nextInt(MAX_NUMBER),
+                        randomColor);
             default:
                 return getDefaultFigure();
         }

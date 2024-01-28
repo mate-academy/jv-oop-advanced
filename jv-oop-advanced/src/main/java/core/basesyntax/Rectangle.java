@@ -18,14 +18,6 @@ public class Rectangle extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, length: "
-                + getLength() + " units, width: " + getWidth() + " units, color: " + color);
-    }
-
-    public double getLength() {
-        return length;
-    }
-
-    public double getWidth() {
-        return width;
+                + length + " units, width: " + width + " units, color: " + color);
     }
 }
