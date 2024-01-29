@@ -33,12 +33,10 @@ public class FigureSupplier {
                         randomColor);
             case 3:
                 return new Circle(random.nextInt(MAX_NUMBER), randomColor);
-            case 4:
+            default:
                 return new IsoscelesTrapezoid(random.nextInt(MAX_NUMBER),
                         random.nextInt(MAX_NUMBER), random.nextInt(MAX_NUMBER),
                         randomColor);
-            default:
-                return getDefaultFigure();
         }
     }
 }
