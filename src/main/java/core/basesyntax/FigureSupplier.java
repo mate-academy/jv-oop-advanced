@@ -13,12 +13,10 @@ public class FigureSupplier {
     private static final int QUANITY_OF_TYPES = 5;
     private static final int CONSTANT = 100;
     private ColorSupplier colorSupplier = new ColorSupplier();
-    private String color = colorSupplier.getRandomColor();
     private Random random = new Random();
-    private int figureType = random.nextInt(QUANITY_OF_TYPES);
-    private double randomDouble = (double) Math.round(random.nextDouble() * CONSTANT) / CONSTANT;
 
     public Figure getRandomFigure() {
+        int figureType = random.nextInt(QUANITY_OF_TYPES);
         switch (figureType) {
             case 0:
                 return preparedCirce();
@@ -39,23 +37,32 @@ public class FigureSupplier {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
+    private double getRandomDouble() {
+        return (double) Math.round(random.nextDouble() * CONSTANT) / CONSTANT;
+    }
+
     private RightTriangle preparedTriangle() {
-        return new RightTriangle(color, randomDouble, randomDouble);
+        return new RightTriangle(
+                colorSupplier.getRandomColor(), getRandomDouble(), getRandomDouble());
     }
 
     private Square preparedSquare() {
-        return new Square(color, randomDouble);
+        return new Square(colorSupplier.getRandomColor(), getRandomDouble());
     }
 
     private Circle preparedCirce() {
-        return new Circle(color, randomDouble);
+        return new Circle(colorSupplier.getRandomColor(), getRandomDouble());
     }
 
     private IsoscelesTrapezoid preparedTrapezoid() {
-        return new IsoscelesTrapezoid(color, randomDouble, randomDouble, randomDouble);
+        return new IsoscelesTrapezoid(
+                colorSupplier.getRandomColor(),
+                getRandomDouble(),
+                getRandomDouble(),
+                getRandomDouble());
     }
 
     private Rectangle preparedRectangle() {
-        return new Rectangle(color, randomDouble, randomDouble);
+        return new Rectangle(colorSupplier.getRandomColor(), getRandomDouble(), getRandomDouble());
     }
 }
