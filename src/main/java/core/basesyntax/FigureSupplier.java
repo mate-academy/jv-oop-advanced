@@ -3,43 +3,37 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final String[] figures = {
-            "Circle",
-            "Rectangle",
-            "Square",
-            "Right Triangle",
-            "Isosceles Trapezoid"
-    };
+    private static final int DEFAULT_RADIUS = 10;
+    private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
     private static final int MAX_LENGTH = 11;
-    private static final int FIGURE_COUNT = figures.length;
-    // Array with random numbers of max 3, because
-    // that's the maximum numbers that Isosceles Trapezoid can use.
-    private static final int RANDOM_LENGTHS_COUNT = 3;
-    private int[] randomLengths = new int[RANDOM_LENGTHS_COUNT];
+    private static final int FIGURE_COUNT = FigureType.values().length;
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
 
     public Figure getRandomFigure() {
-        String chosenFigure = figures[random.nextInt(FIGURE_COUNT)];
-        String color = colorSupplier.getRandomColor();
+        int figureIndex = random.nextInt(FIGURE_COUNT);
+        FigureType figureType = FigureType.values()[figureIndex];
+        String randomFigure = figureType.name();
+        String randomColor = colorSupplier.getRandomColor();
 
-        for (int i = 0; i < RANDOM_LENGTHS_COUNT; i++) {
-            randomLengths[i] = random.nextInt(MAX_LENGTH);
-        }
-
-        return switch (chosenFigure) {
-            case "Circle" -> new Circle(randomLengths[0], color);
-            case "Rectangle" -> new Rectangle(randomLengths[0], randomLengths[1], color);
-            case "Square" -> new Square(randomLengths[0], color);
-            case "Right Triangle" -> new RightTriangle(randomLengths[0], randomLengths[1], color);
-            default -> new IsoscelesTrapezoid(randomLengths[0],
-                    randomLengths[1],
-                    randomLengths[2],
-                    color);
+        return switch (randomFigure) {
+            case "CIRCLE" -> new Circle(getRandomNumber(), randomColor);
+            case "RECTANGLE" -> new Rectangle(getRandomNumber(), getRandomNumber(), randomColor);
+            case "SQUARE" -> new Square(getRandomNumber(), randomColor);
+            case "RIGHT_TRIANGLE" -> new RightTriangle(getRandomNumber(), getRandomNumber(),
+                    randomColor);
+            default -> new IsoscelesTrapezoid(getRandomNumber(),
+                    getRandomNumber(),
+                    getRandomNumber(),
+                    randomColor);
         };
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, "white");
+        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
+    }
+
+    private int getRandomNumber() {
+        return random.nextInt(MAX_LENGTH);
     }
 }
