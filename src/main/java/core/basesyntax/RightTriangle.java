@@ -1,17 +1,14 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private static final String FIGURE_NAME = "right triangle";
     private double firstSide;
     private double secondSide;
-    private ColorSupplier colorSupplier = new ColorSupplier();
 
-    public RightTriangle(double firstSide, double secondSide) {
+    public RightTriangle(String color, double firstSide, double secondSide) {
+        super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
-        setFigureName(FIGURE_NAME);
         setArea(calculateArea());
-        setColor(colorSupplier.getRandomColor());
     }
 
     @Override
@@ -21,8 +18,10 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getFigureName() + ", color: " + getColor() + ", area: "
-                + getArea() + " sq. units, first side: " + firstSide + " units, second side: "
+        System.out.println("Figure: " + this.getClass().getSimpleName()
+                + ", color: " + getColor() + ", area: "
+                + getArea() + " sq. units, first side: "
+                + firstSide + " units, second side: "
                 + secondSide + " units");
     }
 }

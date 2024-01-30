@@ -3,25 +3,44 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int RADIUS_LENGTH = 10;
-    private static final String WHITE_COLOR = Color.WHITE.name();
+    private static final int DEFAULT_RADIUS_LENGTH = 10;
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
     private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
+    private Figure figure;
 
     public Figure getRandomFigure() {
-        double randomValue = random.nextDouble();
-        Square square = new Square(randomValue);
-        Circle circle = new Circle(randomValue);
-        RightTriangle rightTriangle = new RightTriangle(randomValue, randomValue);
-        Rectangle rectangle = new Rectangle(randomValue, randomValue);
-        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(randomValue,
-                randomValue, randomValue);
-        Figure[] figure = {square, circle, rectangle, rightTriangle, isoscelesTrapezoid};
-        int position = random.nextInt(figure.length);
-        return figure[position];
+        int randomSwitchValue = random.nextInt(1, 5);
+        switch (randomSwitchValue) {
+            case 1:
+                figure = new RightTriangle(colorSupplier.getRandomColor(),
+                        getRandomValue(), getRandomValue());
+                break;
+            case 2:
+                figure = new Square(colorSupplier.getRandomColor(), getRandomValue());
+                break;
+            case 3:
+                figure = new Rectangle(colorSupplier.getRandomColor(),
+                        getRandomValue(), getRandomValue());
+                break;
+            case 4:
+                figure = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        getRandomValue(), getRandomValue(), getRandomValue());
+                break;
+            case 5:
+                figure = new Circle(colorSupplier.getRandomColor(),getRandomValue());
+                break;
+            default:
+                break;
+        }
+        return figure;
     }
 
     public Figure getDefaultFigure() {
-        Circle circle = new Circle(RADIUS_LENGTH, WHITE_COLOR);
-        return circle;
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS_LENGTH);
+    }
+
+    public double getRandomValue() {
+        return random.nextDouble(1, 10);
     }
 }
