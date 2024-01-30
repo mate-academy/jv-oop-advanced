@@ -18,9 +18,10 @@ public class FigureSupplier {
                 new Circle(new ColorSupplier().getRandomColor(), random.nextInt(bound))
 
         };
-        return array[random.nextInt(4)];
+        return array[random.nextInt(5)];
     }
-    public Figure getDefaultFigure(){
+
+    public Figure getDefaultFigure() {
         return new Circle(Color.WHITE.toString(), 10);
     }
 }

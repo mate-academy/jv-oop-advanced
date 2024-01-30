@@ -6,10 +6,17 @@ public class Square extends Figure {
     public Square(String color, int side) {
         super(color);
         this.side = side;
+        calcArea();
     }
 
     @Override
-    public void getArea() {
-        System.out.println(side * side);
+    public void calcArea() {
+        setArea(side * side);
+    }
+
+    @Override
+    public String toString() {
+        return "Figure: square, area: " + getArea() + " sq. units, side: "
+                + side + " units," + " color: " + getColor();
     }
 }

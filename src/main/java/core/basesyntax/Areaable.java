@@ -1,5 +1,5 @@
 package core.basesyntax;
 
 public interface Areaable {
-    void getArea();
+    void calcArea();
 }

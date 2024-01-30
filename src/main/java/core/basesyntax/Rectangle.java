@@ -5,13 +5,21 @@ public class Rectangle extends Figure {
     private int secondSide;
 
     public Rectangle(String color, int oneSide, int secondSide) {
-        super(color);
+        this.setColor(color);
         this.oneSide = oneSide;
         this.secondSide = secondSide;
+        calcArea();
     }
 
     @Override
-    public void getArea() {
-        System.out.println(oneSide * secondSide);
+    public void calcArea() {
+        setArea(oneSide * secondSide);
+    }
+
+    @Override
+    public String toString() {
+        return "Figure: rectangle, area: " + getArea() + " sq. units, oneside: "
+                + oneSide + " units," + " secondSide: " + secondSide + " units,"
+                + " color: " + getColor();
     }
 }

@@ -8,10 +8,18 @@ public class RightTriangle extends Figure {
         super(color);
         this.oneSide = oneSide;
         this.secondSide = secondSide;
+        calcArea();
     }
 
     @Override
-    public void getArea() {
-        System.out.println(oneSide * secondSide / 2);
+    public void calcArea() {
+        setArea((double) (oneSide * secondSide) / 2);
+    }
+
+    @Override
+    public String toString() {
+        return "Figure: rightTriangle, area: " + getArea() + " sq. units, oneside: "
+                + oneSide + " units," + " secondSide: " + secondSide + " units,"
+                + " color: " + getColor();
     }
 }
