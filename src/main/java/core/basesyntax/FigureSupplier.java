@@ -25,7 +25,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        int radiusCircle = 10;
         return new Circle(DEFAULT_RADIUS, MyColor.WHITE);
     }
 }
