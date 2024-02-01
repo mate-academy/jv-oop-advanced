@@ -10,10 +10,10 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private ColorSupplier colorSupplier;
-    private Random random = new Random();
     private static final int MIN_RANDOM_PARAMETER = 1;
     private static final int MAX_RANDOM_PARAMETER = 10;
+    private ColorSupplier colorSupplier;
+    private Random random = new Random();
 
     public FigureSupplier(ColorSupplier colorSupplier) {
         this.colorSupplier = colorSupplier;
@@ -44,7 +44,7 @@ public class FigureSupplier {
         return new Circle(Colors.WHITE.toString().toLowerCase(), 10);
     }
 
-        private Figures getRandomFigureType() {
+    private Figures getRandomFigureType() {
         int index = random.nextInt(Figures.values().length);
         return Figures.values()[index];
     }
