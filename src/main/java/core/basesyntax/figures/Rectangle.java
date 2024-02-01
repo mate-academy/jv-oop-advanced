@@ -20,8 +20,8 @@ public class Rectangle extends Figure {
     @Override
     public void drawInfo() {
         System.out.println("Figure: Rectangle, area: "
-                + Math.round(calculateArea() * 10.0) / 10.0 + " sp. units, first side " + sideA
-                + "units, second side " + sideB + " units, color: " + color.toLowerCase());
+                + Math.round(calculateArea() * 10.0) / 10.0 + " sp. units, first side " + (int)sideA
+                + "units, second side " + (int)sideB + " units, color: " + color.toLowerCase());
     }
 }
 

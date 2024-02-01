@@ -11,11 +11,12 @@ import java.util.Random;
 
 public class FigureSupplier {
     private ColorSupplier colorSupplier;
-    private Random random;
+    private Random random = new Random();
+    private static final int MIN_RANDOM_PARAMETER = 1;
+    private static final int MAX_RANDOM_PARAMETER = 10;
 
     public FigureSupplier(ColorSupplier colorSupplier) {
         this.colorSupplier = colorSupplier;
-        this.random = new Random();
     }
 
     public Figure getRandomFigure() {
@@ -35,21 +36,20 @@ public class FigureSupplier {
                 return new IsoscelesTrapezoid(randomColor, getRandomParameter(),
                         getRandomParameter(), getRandomParameter());
             default:
-                System.out.println("This figure doesn't exist");
+                throw new IllegalArgumentException("This figure doesn't exist");
         }
-        return null;
     }
 
     public Figure getDefaultFigure() {
         return new Circle(Colors.WHITE.toString().toLowerCase(), 10);
     }
 
-    private Figures getRandomFigureType() {
-        int index = new Random().nextInt(Figures.values().length);
+        private Figures getRandomFigureType() {
+        int index = random.nextInt(Figures.values().length);
         return Figures.values()[index];
     }
 
     private double getRandomParameter() {
-        return random.nextInt(1,10);
+        return random.nextInt(MIN_RANDOM_PARAMETER,MAX_RANDOM_PARAMETER + 1);
     }
 }

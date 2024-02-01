@@ -21,6 +21,6 @@ public class RightTriangle extends Figure {
     public void drawInfo() {
         System.out.println("Figure: RightTriangle, area: "
                 + Math.round(calculateArea() * 10.0) / 10.0 + " units, height: "
-                + height + " units, base: " + base + " units, color: " + color.toLowerCase());
+                + (int)height + " units, base: " + (int)base + " units, color: " + color.toLowerCase());
     }
 }
