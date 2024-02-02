@@ -1,17 +1,15 @@
 package core.basesyntax;
 
-import static core.basesyntax.Name.RECTANGLE;
+import static core.basesyntax.Shape.RECTANGLE;
 
 public class Rectangle extends Figure {
     private int length;
     private int width;
 
-    public Rectangle(int length, int width) {
+    public Rectangle(int length, int width, Color color) {
+        super(color);
         this.length = length;
         this.width = width;
-        this.name = getName();
-        this.area = getArea();
-        this.color = getColor();
     }
 
     public int getLength() {
@@ -23,11 +21,10 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public Name getName() {
+    public Shape getName() {
         return RECTANGLE;
     }
 
-    @Override
     public double getArea() {
         return length * width;
     }

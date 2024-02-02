@@ -1,19 +1,17 @@
 package core.basesyntax;
 
-import static core.basesyntax.Name.ISOSCELES_TRAPESOID;
+import static core.basesyntax.Shape.ISOSCELES_TRAPESOID;
 
 public class IsoscelesTrapezoid extends Figure {
     private int lowBase;
     private int topBase;
     private int hight;
 
-    public IsoscelesTrapezoid(int lowBase, int topBase, int hight) {
+    public IsoscelesTrapezoid(int lowBase, int topBase, int hight, Color color) {
+        super(color);
         this.lowBase = lowBase;
         this.topBase = topBase;
         this.hight = hight;
-        this.name = getName();
-        this.area = getArea();
-        this.color = getColor();
     }
 
     public int getLowBase() {
@@ -29,11 +27,10 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public Name getName() {
+    public Shape getName() {
         return ISOSCELES_TRAPESOID;
     }
 
-    @Override
     public double getArea() {
         return (lowBase + topBase) / 2 * hight;
     }

@@ -1,13 +1,17 @@
 package core.basesyntax;
 
-public abstract class Figure implements Figures {
-    protected Name name;
+public abstract class Figure implements Descriptive, Area {
+    protected Shape shape;
     protected Color color;
-    protected double area;
 
-    public abstract Name getName();
+    public Figure(Color color) {
+        this.color = color;
+    }
 
-    public abstract double getArea();
+    protected Figure() {
+    }
+
+    public abstract Shape getName();
 
     public abstract Color getColor();
 }

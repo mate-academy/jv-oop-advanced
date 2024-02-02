@@ -1,15 +1,13 @@
 package core.basesyntax;
 
-import static core.basesyntax.Name.SQUARE;
+import static core.basesyntax.Shape.SQUARE;
 
 public class Square extends Figure {
     private int side;
 
-    public Square(int side) {
+    public Square(int side, Color color) {
+        super(color);
         this.side = side;
-        this.name = getName();
-        this.area = getArea();
-        this.color = getColor();
     }
 
     public int getSide() {
@@ -17,7 +15,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public Name getName() {
+    public Shape getName() {
         return SQUARE;
     }
 
@@ -28,7 +26,7 @@ public class Square extends Figure {
 
     @Override
     public Color getColor() {
-        return new ColorSupplier().getRandomColor();
+        return color;
     }
 
     @Override

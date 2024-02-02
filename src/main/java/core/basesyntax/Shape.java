@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public enum Name {
+public enum Shape {
     CIRCLE,
     ISOSCELES_TRAPESOID,
     RIGHT_TRIANGLE,

@@ -6,36 +6,30 @@ public class FigureSupplier {
     private static final int ORIGIN = 1;
     private static final int BOUND = 10;
     private static final Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public static int getRandomInt() {
         return random.nextInt(ORIGIN, BOUND);
     }
 
     public Figure getRandomFigure() {
-        FigureSupplier figureSupplier = new FigureSupplier();
-        int index = random.nextInt(Name.values().length);
-        Name name = Name.values()[index];
-        Figure figure = null;
-        switch (name.name()) {
+        int index = random.nextInt(Shape.values().length);
+        Shape shape = Shape.values()[index];
+        switch (shape.name()) {
             case "CIRCLE" :
-                figure = new Circle(getRandomInt(), null);
-                break;
+                return new Circle(getRandomInt(), colorSupplier.getRandomColor());
             case "ISOSCELES_TRAPESOID" :
-                figure = new IsoscelesTrapezoid(getRandomInt(), getRandomInt(), getRandomInt());
-                break;
+                return new IsoscelesTrapezoid(getRandomInt(), getRandomInt(), getRandomInt(),
+                        colorSupplier.getRandomColor());
             case "RIGHT_TRIANGLE" :
-                figure = new RightTriangle(getRandomInt(), getRandomInt());
-                break;
+                return new RightTriangle(getRandomInt(), getRandomInt(),
+                        colorSupplier.getRandomColor());
             case "RECTANGLE" :
-                figure = new RightTriangle(getRandomInt(), getRandomInt());
-                break;
-            case "SQUARE" :
-                figure = new Square(getRandomInt());
-                break;
+                return new RightTriangle(getRandomInt(), getRandomInt(),
+                        colorSupplier.getRandomColor());
             default:
-                figure = null;
+                return new Square(getRandomInt(), colorSupplier.getRandomColor());
         }
-        return figure;
     }
 
     public Figure getDefaultFigure() {
