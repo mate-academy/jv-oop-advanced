@@ -5,15 +5,16 @@ public class RightTriangle extends Figure {
     private int opposite;
     private int adjacent;
 
-    public RightTriangle(String name, int area, String color, int hypotenuse, int opposite, int adjacent) {
+    public RightTriangle(String name, int area, String color, int hyp, int opp, int adj) {
         super(name, area, color);
-        this.hypotenuse = hypotenuse;
-        this.adjacent = adjacent;
-        this.opposite = opposite;
+        this.hypotenuse = hyp;
+        this.adjacent = adj;
+        this.opposite = opp;
     }
 
     @Override
     public String toString() {
-        return super.toString() + ", hypotenuse: " + hypotenuse + ", opposite: " + opposite + ", adjacent: " + adjacent;
+        return String.format("%s, hypotenuse: %d, opposite: %d, adjacent: %d",
+                super.toString(), (int) hypotenuse, (int) opposite, (int) adjacent);
     }
 }

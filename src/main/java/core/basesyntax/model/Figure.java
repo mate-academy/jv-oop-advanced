@@ -17,10 +17,9 @@ public class Figure {
 
     @Override
     public String toString() {
-        return "Figure{" +
-                "name='" + name + '\'' +
-                ", area=" + area +
-                ", color=" + color +
-                '}';
+        return "Figure: "
+                + "name = " + name
+                + ", area = " + area
+                + ", color = " + color;
     }
 }
