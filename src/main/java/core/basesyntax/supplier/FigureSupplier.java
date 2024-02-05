@@ -57,6 +57,6 @@ public class FigureSupplier {
     }
 
     private int randomValue() {
-       return random.nextInt(100);
+        return random.nextInt(100);
     }
 }
