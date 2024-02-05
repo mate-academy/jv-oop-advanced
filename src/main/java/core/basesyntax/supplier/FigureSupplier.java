@@ -1,19 +1,20 @@
 package core.basesyntax.supplier;
 
-import core.basesyntax.model.Figure;
-import core.basesyntax.model.Square;
+import core.basesyntax.model.Circle;
 import core.basesyntax.model.IsoscelesTrapezoid;
 import core.basesyntax.model.Rectangle;
 import core.basesyntax.model.RightTriangle;
-import core.basesyntax.model.Circle;
+import core.basesyntax.model.Square;
+import core.basesyntax.model.Figure;
 import java.util.Random;
+
 
 public class FigureSupplier {
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
+    private Figure[] figures = new Figure[5];
 
     public Figure getRandomFigure() {
-        Figure[] figures = new Figure[5];
         Figure square = new Square("Square",
                 randomValue(),
                 colorSupplier.getRandomColor(),
@@ -45,9 +46,9 @@ public class FigureSupplier {
                 randomValue());
 
         figures[0] = square;
-        figures[1] = circle;
+        figures[1] = isoscelesTrapezoid;
         figures[2] = rightTriangle;
-        figures[3] = isoscelesTrapezoid;
+        figures[3] = circle;
         figures[4] = rectangle;
         return figures[random.nextInt(figures.length)];
     }
@@ -57,7 +58,7 @@ public class FigureSupplier {
 
     }
 
-    private int randomValue(){
+    private int randomValue() {
        return random.nextInt(100);
     }
 }
