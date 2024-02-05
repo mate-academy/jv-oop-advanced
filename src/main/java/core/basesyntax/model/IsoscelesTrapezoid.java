@@ -5,11 +5,16 @@ public class IsoscelesTrapezoid extends Figure {
     private int secondSide;
     private int parallelSide;
 
-    public IsoscelesTrapezoid(String name, int area, String color, int fSide, int secSide, int parSide) {
+    public IsoscelesTrapezoid(String name,
+                              int area,
+                              String color,
+                              int firstSide,
+                              int secondSide,
+                              int parallelSide) {
         super(name, area, color);
-        this.firstSide = fSide;
-        this.secondSide = secSide;
-        this.parallelSide = parSide;
+        this.firstSide = firstSide;
+        this.secondSide = secondSide;
+        this.parallelSide = parallelSide;
 
     }
 
