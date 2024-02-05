@@ -3,9 +3,6 @@ package core.basesyntax;
 import core.basesyntax.model.Figure;
 import core.basesyntax.supplier.FigureSupplier;
 
-/**
- * Feel free to remove this class and create your own.
- */
 public class Main {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
@@ -18,8 +15,8 @@ public class Main {
                 figureSupplier.getDefaultFigure()
         };
         for (Figure figure : figures) {
-            System.out.println(figure.toString());
+            figure.draw();
+            System.out.println(figure.area());
         }
     }
-
 }

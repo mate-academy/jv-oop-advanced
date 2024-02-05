@@ -3,24 +3,29 @@ package core.basesyntax.model;
 public class IsoscelesTrapezoid extends Figure {
     private int firstSide;
     private int secondSide;
-    private int parallelSide;
+    private int height;
 
     public IsoscelesTrapezoid(String name,
-                              int area,
                               String color,
                               int firstSide,
                               int secondSide,
-                              int parallelSide) {
-        super(name, area, color);
+                              int height) {
+        super(name, color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
-        this.parallelSide = parallelSide;
+        this.height = height;
 
     }
 
     @Override
-    public String toString() {
-        return super.toString() + " First Side: " + firstSide + ", Second Side: " + secondSide
-                + ", Parallel Side: " + parallelSide;
+    public void draw() {
+        super.draw();
+        System.out.println("First Side: " + firstSide + ", Second Side: " + secondSide
+                + ", Parallel Side: " + height);
+    }
+
+    @Override
+    public double area() {
+        return ((firstSide + secondSide) * height) / 2;
     }
 }

@@ -1,25 +1,23 @@
 package core.basesyntax.model;
 
-public class Figure {
+public class Figure implements Drawable, FigureArea {
     private String name;
-    private double area;
     private String color;
 
-    public Figure(String name, double area, String color) {
+    public Figure(String name, String color) {
         this.name = name;
-        this.area = area;
         this.color = color;
     }
 
-    public Figure() {
-
+    @Override
+    public void draw() {
+        System.out.println("Figure: "
+                + "name = " + name
+                + ", color = " + color);
     }
 
     @Override
-    public String toString() {
-        return "Figure: "
-                + "name = " + name
-                + ", area = " + area
-                + ", color = " + color;
+    public double area() {
+        return 0;
     }
 }

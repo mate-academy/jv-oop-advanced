@@ -15,31 +15,25 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         final Figure square = new Square("Square",
-                randomValue(),
                 colorSupplier.getRandomColor(),
                 randomValue());
 
         final Figure isoscelesTrapezoid = new IsoscelesTrapezoid("Isosceles Trapezoid",
-                randomValue(),
                 colorSupplier.getRandomColor(),
                 randomValue(),
                 randomValue(),
                 randomValue());
 
         final Figure rightTriangle = new RightTriangle("Right Triangle",
-                randomValue(),
                 colorSupplier.getRandomColor(),
-                randomValue(),
                 randomValue(),
                 randomValue());
 
         final Figure circle = new Circle("Circle",
-                randomValue(),
                 colorSupplier.getRandomColor(),
                 randomValue());
 
         final Figure rectangle = new Rectangle("Rectangle",
-                randomValue(),
                 colorSupplier.getRandomColor(),
                 randomValue(),
                 randomValue());
@@ -53,7 +47,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("Default Circle", 100, colorSupplier.getWhiteColor(), 10);
+        return new Circle("Default Circle", colorSupplier.getWhiteColor(), 10);
     }
 
     private int randomValue() {
