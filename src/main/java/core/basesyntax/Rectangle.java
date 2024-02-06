@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-class Rectangle extends Figure implements FigureArea {
+class Rectangle extends Figure {
 
     private String name = "rectangle";
     private String color;
