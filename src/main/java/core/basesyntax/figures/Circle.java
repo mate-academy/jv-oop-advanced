@@ -17,7 +17,7 @@ public class Circle extends Figure {
                 + ", color: " + getColor());
     }
 
-    public double getRadiusArea() {
+    public double calculateArea() {
         return Math.PI * radius * radius;
     }
 }

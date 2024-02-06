@@ -3,7 +3,7 @@ package core.basesyntax.figures;
 public class IsoscelesTrapezoid extends Figure {
     private double firstSide;
     private double secondSide;
-    private double high;
+    private double height;
 
     public double getFirstSide() {
         return firstSide;
@@ -21,24 +21,24 @@ public class IsoscelesTrapezoid extends Figure {
         this.secondSide = secondSide;
     }
 
-    public double getHigh() {
-        return high;
+    public double getHeight() {
+        return height;
     }
 
-    public void setHigh(double high) {
-        this.high = high;
+    public void setHeight(double height) {
+        this.height = height;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: " + getClass().getSimpleName() + ", area: "
-                + this.getRadiusArea() + " firstSide " + getFirstSide()
-                + " secondSide " + getSecondSide() + " hight " + getHigh()
+                + this.calculateArea() + " firstSide " + getFirstSide()
+                + " secondSide " + getSecondSide() + " hight " + getHeight()
                 + ", color: " + getColor());
     }
 
     @Override
-    public double getRadiusArea() {
-        return (firstSide + secondSide) * high;
+    public double calculateArea() {
+        return height * (firstSide + secondSide) / 2;
     }
 }

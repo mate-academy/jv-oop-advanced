@@ -23,13 +23,13 @@ public class Rectangle extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: " + getClass().getSimpleName() + ", area: "
-                + this.getRadiusArea() + " length " + " "
+                + this.calculateArea() + " length " + " "
                 + getLength() + " width " + getWidth() + ", color: "
                 + getColor());
     }
 
     @Override
-    public double getRadiusArea() {
+    public double calculateArea() {
         return length * width;
     }
 }
