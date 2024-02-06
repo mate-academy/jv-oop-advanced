@@ -4,14 +4,13 @@ public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
-    //counting area of right triangle
     @Override
-    public double countArea(Figure figure) {
-        return area = 0.5 * firstLeg * secondLeg;
+    public double countArea() {
+        return 0.5 * firstLeg * secondLeg;
     }
 
-    public void printInfo(Figure figure) {
-        System.out.println("Figure: right triangle, " + "area: " + figure.countArea(figure)
+    public void draw(Figure figure) {
+        System.out.println("Figure: right triangle, " + "area: " + figure.countArea()
                 + " sq.units, " + "first leg: " + firstLeg + " units,"
                 + " second leg " + secondLeg + " units,"
                 + " color: " + figure.getColor());

@@ -4,14 +4,13 @@ public class Rectangle extends Figure {
     private int firstSide;
     private int secondSide;
 
-    //counting area of rectangle
     @Override
-    public double countArea(Figure figure) {
-        return area = firstSide * secondSide;
+    public double countArea() {
+        return firstSide * secondSide;
     }
 
-    public void printInfo(Figure figure) {
-        System.out.println("Figure: rectangle, " + "area: " + figure.countArea(figure)
+    public void draw(Figure figure) {
+        System.out.println("Figure: rectangle, " + "area: " + figure.countArea()
                 + " sq.units, " + "first side: " + firstSide + " units,"
                 + " second side " + secondSide + " units,"
                 + " color: " + figure.getColor());

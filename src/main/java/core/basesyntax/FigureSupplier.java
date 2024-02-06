@@ -28,7 +28,7 @@ public class FigureSupplier {
         Circle defaultCircle = new Circle();
         defaultCircle.setRadius(CONST_RADIUS);
         defaultCircle.setColor(COLOR_WHITE);
-        defaultCircle.countArea(defaultCircle);
+        defaultCircle.countArea();
         return defaultCircle;
     }
 

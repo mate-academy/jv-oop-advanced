@@ -1,7 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements AreaCalculator, PrintInfo {
-    protected double area;
+public abstract class Figure implements AreaCalculator, Drawable {
     private String color;
 
     public String getColor() {
