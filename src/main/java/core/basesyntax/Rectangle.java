@@ -2,7 +2,7 @@ package core.basesyntax;
 
 class Rectangle extends Figure implements FigureArea {
 
-    public final static String name = "rectangle";
+    public final String name = "rectangle";
     private String color;
     private double firstSideLength;
     private double secondSideLength;

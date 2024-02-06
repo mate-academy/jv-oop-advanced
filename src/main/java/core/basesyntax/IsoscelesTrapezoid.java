@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 class IsoscelesTrapezoid extends Figure implements FigureArea {
-    public final static String name = "isosceles trapezoid";
+    public final String name = "isosceles trapezoid";
     private String color;
     private double firstSideLength;
     private double secondSideLength;
