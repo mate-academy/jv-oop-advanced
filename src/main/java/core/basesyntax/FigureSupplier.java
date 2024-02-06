@@ -5,22 +5,22 @@ import java.util.Random;
 public class FigureSupplier {
     public Figure getRandomFigure() {
         Random random = new Random();
-        double randomNum = random.nextInt(5);
+        double randomNum = random.nextInt(1, 5);
 
         switch ((int) randomNum) {
-            case 0:
+            case 1:
                 return new Circle(new ColorSupplier()
                         .getRandomColor(), randomNum);
-            case 1:
+            case 2:
                 return new Square(new ColorSupplier()
                         .getRandomColor(), randomNum);
-            case 2:
+            case 3:
                 return new Rectangle(new ColorSupplier()
                         .getRandomColor(), randomNum, randomNum);
-            case 3:
+            case 4:
                 return new RightTriangle(new ColorSupplier()
                         .getRandomColor(), randomNum);
-            case 4:
+            case 5:
                 return new IsoscelesTrapezoid(new ColorSupplier()
                         .getRandomColor(), randomNum, randomNum);
             default:
