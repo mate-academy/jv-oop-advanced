@@ -4,11 +4,16 @@ import core.basesyntax.model.Color;
 import java.util.Random;
 
 public class ColorSupplier {
+    private final Random random = new Random();
+
+    public Random getRandom() {
+        return random;
+    }
 
     public String getRandomColor() {
-        Random random = new Random();
         int indexOfColor = random.nextInt(Color.values().length);
         return Color.values()[indexOfColor].name();
     }
 }
+
 

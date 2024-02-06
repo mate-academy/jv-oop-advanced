@@ -1,8 +1,8 @@
 package core.basesyntax.model;
 
 public class Rectangle extends Figure {
-    private int lenght;
-    private int width;
+    private final int lenght;
+    private final int width;
     private String color;
 
     public Rectangle(String color, int lenght, int width) {

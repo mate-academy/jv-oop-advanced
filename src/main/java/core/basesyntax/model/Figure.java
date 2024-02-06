@@ -14,15 +14,11 @@ public abstract class Figure implements Drawable, AreaCalculator {
         return color;
     }
 
-    @Override
-    public int calculateArea() {
-        return 0;
-    }
+    public abstract int calculateArea();
 
-    @Override
-    public void draw() {
-
-    }
+    public abstract void draw();
 }
+
+
 
 
