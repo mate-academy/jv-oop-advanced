@@ -2,7 +2,7 @@ package core.basesyntax;
 
 class RightTriangle extends Figure implements FigureArea {
 
-    public final String name = "right triangle";
+    private String name = "right triangle";
     private String color;
     private double sideLength;
 
@@ -17,6 +17,10 @@ class RightTriangle extends Figure implements FigureArea {
     public RightTriangle(String color, double sideLength) {
         this.color = color;
         this.sideLength = sideLength;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public String getColor() {

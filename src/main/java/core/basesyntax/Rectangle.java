@@ -2,7 +2,7 @@ package core.basesyntax;
 
 class Rectangle extends Figure implements FigureArea {
 
-    public final String name = "rectangle";
+    private String name = "rectangle";
     private String color;
     private double firstSideLength;
     private double secondSideLength;
@@ -22,13 +22,18 @@ class Rectangle extends Figure implements FigureArea {
         this.secondSideLength = secondSideLength;
     }
 
+    public String getName() {
+        return name;
+    }
+
     public String getColor() {
         return color;
     }
 
-    public double getFistSideLength() {
+    public double getFirstSideLength() {
         return firstSideLength;
     }
+
 
     public double getSecondSideLength() {
         return secondSideLength;

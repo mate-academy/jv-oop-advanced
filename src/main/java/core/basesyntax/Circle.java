@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 class Circle extends Figure implements FigureArea {
-    public final String name = "circle";
+    private String name = "circle";
     private double radius;
     private String color;
 
@@ -16,6 +16,18 @@ class Circle extends Figure implements FigureArea {
     public Circle(String color, double radius) {
         this.radius = radius;
         this.color = color;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    public String getColor() {
+        return color;
     }
 
     @Override

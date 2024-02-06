@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 class Square extends Figure implements FigureArea {
-    public final String name = "square";
+    private String name = "square";
     private String color;
     private double sideLength;
 
@@ -16,6 +16,10 @@ class Square extends Figure implements FigureArea {
     public Square(String color, double sideLength) {
         this.color = color;
         this.sideLength = sideLength;
+    }
+
+    public String getName() {
+        return name;
     }
 
     public String getColor() {
