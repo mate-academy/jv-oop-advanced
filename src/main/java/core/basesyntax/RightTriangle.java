@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements FigureArea {
+class RightTriangle extends Figure implements FigureArea {
 
     final public static String name = "right triangle";
     private String color;
@@ -34,7 +34,7 @@ public class RightTriangle extends Figure implements FigureArea {
 
     @Override
     public String getFigureInformation() {
-        return "Figure: " + name +  ", area: " + calculateFigureArea()
+        return "Figure: " + name + ", area: " + calculateFigureArea()
                 + " sq. units, sideLength: " + sideLength
                 + " units, color: " + color;
     }

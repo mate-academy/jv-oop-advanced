@@ -2,7 +2,7 @@ package core.basesyntax;
 
 public abstract class Figure {
 
-    public Color color;
+    private Color color;
 
     public abstract String getFigureInformation();
 }

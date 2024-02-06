@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements FigureArea {
+class Rectangle extends Figure implements FigureArea {
 
     final public static String name = "rectangle";
     private String color;
@@ -41,7 +41,7 @@ public class Rectangle extends Figure implements FigureArea {
 
     @Override
     public String getFigureInformation() {
-        return "Figure: " + name +  ", area: " + calculateFigureArea()
+        return "Figure: " + name + ", area: " + calculateFigureArea()
                 + " sq. units, firstSideLength: "
                 + firstSideLength + " units, secondSideLength: "
                 + secondSideLength + " units, color: " + color;
