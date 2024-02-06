@@ -34,7 +34,6 @@ class Rectangle extends Figure implements FigureArea {
         return firstSideLength;
     }
 
-
     public double getSecondSideLength() {
         return secondSideLength;
     }
