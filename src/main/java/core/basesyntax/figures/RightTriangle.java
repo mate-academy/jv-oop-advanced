@@ -1,15 +1,15 @@
 package core.basesyntax.figures;
 
 public class RightTriangle extends Figure {
-    private double high;
+    private double height;
     private double side;
 
-    public double getHigh() {
-        return high;
+    public double getHeight() {
+        return height;
     }
 
-    public void setHigh(double high) {
-        this.high = high;
+    public void setHeight(double height) {
+        this.height = height;
     }
 
     public double getSide() {
@@ -23,13 +23,13 @@ public class RightTriangle extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: " + getClass().getSimpleName()
-                + " area: " + this.getRadiusArea() + " hight "
-                + getHigh() + " side " + getSide() + ", color: "
+                + " area: " + this.calculateArea() + " hight "
+                + getHeight() + " side " + getSide() + ", color: "
                 + getColor());
     }
 
     @Override
-    public double getRadiusArea() {
-        return (high * side) / 2;
+    public double calculateArea() {
+        return (height * side) / 2;
     }
 }
