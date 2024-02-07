@@ -15,5 +15,3 @@ public class ColorSupplier {
         return Color.values()[indexOfColor].name();
     }
 }
-
-

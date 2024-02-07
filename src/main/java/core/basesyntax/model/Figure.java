@@ -18,7 +18,3 @@ public abstract class Figure implements Drawable, AreaCalculator {
 
     public abstract void draw();
 }
-
-
-
-

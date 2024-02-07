@@ -10,7 +10,6 @@ import core.basesyntax.model.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-
     private static final double DEFAULT_RADIUS = 10.0;
     private static final String DEFAULT_COLOR = Color.WHITE.name();
     private static final int NUMBER_OF_FIGURES = 5;
@@ -46,4 +45,3 @@ public class FigureSupplier {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
-

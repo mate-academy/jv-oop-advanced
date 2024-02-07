@@ -1,20 +1,19 @@
 package core.basesyntax.model;
 
 public class Rectangle extends Figure {
-    private final int lenght;
+    private final int length;
     private final int width;
     private String color;
 
-    public Rectangle(String color, int lenght, int width) {
-
+    public Rectangle(String color, int length, int width) {
         super(color);
-        this.lenght = lenght;
+        this.length = length;
         this.width = width;
         this.color = color;
     }
 
-    public int getLenght() {
-        return lenght;
+    public int getLength() {
+        return length;
     }
 
     public int getWidth() {
@@ -28,19 +27,18 @@ public class Rectangle extends Figure {
 
     @Override
     public int calculateArea() {
-        return lenght * width;
+        return length * width;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: Rectangle, area: "
                 + calculateArea()
-                + " sq.units, lenght: "
-                + lenght
+                + " sq.units, length: "
+                + length
                 + " units, width: "
                 + width
                 + " units, color: "
                 + getColor());
     }
 }
-
