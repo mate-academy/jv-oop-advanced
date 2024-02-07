@@ -7,17 +7,24 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
+        Random random = new Random();
 
-        Figure[] figures = new Figure[new Random().nextInt(6)];
-        for (int i = 0; i < figures.length; i++) {
-            if (i <= 3) {
+        int arraySize = calculateArraySize(random);
+        Figure[] figures = new Figure[arraySize];
+
+        int halfSize = arraySize / 2;
+
+        for (int i = 0; i < halfSize; i++) {
+            if (arraySize > halfSize) {
                 figures[i] = figureSupplier.getRandomFigure();
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
+            figures[i].draw();
         }
-        for (Figure figure : figures) {
-            figure.draw();
-        }
+    }
+
+    private static int calculateArraySize(Random random) {
+        return random.nextInt(4) + 3;
     }
 }

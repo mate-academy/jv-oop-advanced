@@ -28,7 +28,7 @@ public class FigureSupplier {
             case 2:
                 return new RightTriangle(color.getRandomColor(),
                         (int) (random.nextDouble() * MAX_DEMENSION),
-                        random.nextInt() * MAX_DEMENSION);
+                        (int)(random.nextDouble() * MAX_DEMENSION));
             case 3:
                 return new IsoscelesTrapezoid(color.getRandomColor(),
                         (int) (random.nextDouble() * MAX_DEMENSION),
