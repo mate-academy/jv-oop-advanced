@@ -1,14 +1,15 @@
 package core.basesyntax;
 
-abstract class AbstractFigure implements Figure {
-    private String color;
+import core.basesyntax.service.Color;
 
-    public AbstractFigure(String color) {
+public abstract class AbstractFigure implements AreaCalculator, Drawable {
+    private Color color;
+
+    public AbstractFigure(Color color) {
         this.color = color;
     }
 
-    @Override
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 }

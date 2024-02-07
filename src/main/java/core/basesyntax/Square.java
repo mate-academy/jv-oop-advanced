@@ -1,9 +1,11 @@
 package core.basesyntax;
 
-class Square extends AbstractFigure {
+import core.basesyntax.service.Color;
+
+public class Square extends AbstractFigure {
     private double side;
 
-    public Square(double side, String color) {
+    public Square(double side, Color color) {
         super(color);
         this.side = side;
     }

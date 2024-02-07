@@ -1,9 +1,11 @@
 package core.basesyntax;
 
-class Circle extends AbstractFigure {
+import core.basesyntax.service.Color;
+
+public class Circle extends AbstractFigure {
     private double radius;
 
-    public Circle(double radius, String color) {
+    public Circle(double radius, Color color) {
         super(color);
         this.radius = radius;
     }

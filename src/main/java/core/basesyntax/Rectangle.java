@@ -1,10 +1,12 @@
 package core.basesyntax;
 
-class Rectangle extends AbstractFigure {
+import core.basesyntax.service.Color;
+
+public class Rectangle extends AbstractFigure {
     private double length;
     private double width;
 
-    public Rectangle(double length, double width, String color) {
+    public Rectangle(double length, double width, Color color) {
         super(color);
         this.length = length;
         this.width = width;

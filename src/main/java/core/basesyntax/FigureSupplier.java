@@ -1,17 +1,19 @@
 package core.basesyntax;
 
+import core.basesyntax.service.Color;
+import core.basesyntax.service.ColorSupplier;
 import java.util.Random;
 
-class FigureSupplier {
+public class FigureSupplier {
     private ColorSupplier colorSupplier;
 
     public FigureSupplier(ColorSupplier colorSupplier) {
         this.colorSupplier = colorSupplier;
     }
 
-    public Figure getRandomFigure() {
+    public AbstractFigure getRandomFigure() {
         Random random = new Random();
-        int figureType = random.nextInt(5);
+        int figureType = random.nextInt(FigureType.values().length);
 
         switch (figureType) {
             case 0:
@@ -29,11 +31,13 @@ class FigureSupplier {
                         + 1, random.nextDouble() * 10 + 1, random
                         .nextDouble() * 10 + 1, colorSupplier.getRandomColor());
             default:
-                return null;
+                return getDefaultFigure();
+
         }
     }
 
-    public Figure getDefaultFigure() {
-        return new Circle(10, "white");
+    public AbstractFigure getDefaultFigure() {
+        Color defaultColor = Color.valueOf(Constants.DEFAULT_COLOR);
+        return new Circle(Constants.DEFAULT_RADIUS, defaultColor);
     }
 }

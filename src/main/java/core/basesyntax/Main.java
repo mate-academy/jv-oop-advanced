@@ -1,17 +1,19 @@
 package core.basesyntax;
 
+import core.basesyntax.service.ColorSupplier;
+
 public class Main {
     public static void main(String[] args) {
         ColorSupplier colorSupplier = new ColorSupplier();
         FigureSupplier figureSupplier = new FigureSupplier(colorSupplier);
 
-        Figure[] figures = new Figure[3];
+        AbstractFigure[] figures = new AbstractFigure[3];
 
         for (int i = 0; i < 3; i++) {
             figures[i] = figureSupplier.getRandomFigure();
         }
 
-        for (Figure figure : figures) {
+        for (AbstractFigure figure : figures) {
             figure.draw();
         }
     }
