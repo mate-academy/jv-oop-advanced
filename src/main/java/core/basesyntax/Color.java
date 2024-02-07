@@ -11,9 +11,5 @@ public enum Color {
     PINK,
     BLACK;
 
-    @Override
-    public String toString() {
-        return name().toLowerCase();
-    }
 }
 
