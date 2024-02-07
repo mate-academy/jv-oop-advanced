@@ -3,10 +3,8 @@ package core.basesyntax;
 public class Rectangle extends Figure {
     private final double height;
     private final double width;
-    private final String color;
 
     public Rectangle(double height, double width, String color) {
-        this.color = color;
         this.height = height;
         this.width = width;
     }
@@ -17,8 +15,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void getDraw() {
+    public void draw() {
         System.out.println("Figure: Rectangle" + ", Color: " + color + ", area: " + getArea());
     }
-
 }
