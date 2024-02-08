@@ -14,6 +14,8 @@ import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
+import static org.junit.Assert.fail;
+
 public class StructureTest {
   private static final List<String> figureClassNames = List
       .of("Circle", "Square", "IsoscelesTrapezoid", "Rectangle", "RightTriangle");
@@ -24,7 +26,7 @@ public class StructureTest {
     try {
       allClasses = getClasses("core.basesyntax");
       if (allClasses.size() == 0) {
-        Assert.fail("You should not rename base core.basesyntax package "
+        fail("You should not rename base core.basesyntax package "
             + "and path to project and project name should not contain spaces "
             + "or words in cyrillic");
       }
@@ -52,7 +54,7 @@ public class StructureTest {
     Optional<Class> optionalClass = allClasses.stream().filter(c -> c.getSimpleName().equals(name))
             .findAny();
     if (optionalClass.isEmpty()) {
-      Assert.fail("You should create class called " + name);
+      fail("You should create class called " + name);
     }
     return optionalClass.get();
   }
@@ -60,7 +62,7 @@ public class StructureTest {
   private void checkClassInterfaces(Class clazz) {
     Class[] interfaces = clazz.getInterfaces();
     if (interfaces.length != 0) {
-      Assert.fail("Class " + clazz.getSimpleName() + " should not "
+      fail("Class " + clazz.getSimpleName() + " should not "
               + "implement any interfaces. Let parent class implement them.");
     }
   }
@@ -69,7 +71,7 @@ public class StructureTest {
     Class superclass = clazz.getSuperclass();
     String superclassSimpleName = superclass.getSimpleName();
     if (superclassSimpleName.equals("Object")) {
-      Assert.fail("Class " + clazz.getSimpleName()
+      fail("Class " + clazz.getSimpleName()
               + " should have some parent class with common state for all figures - color");
     }
   }
@@ -87,7 +89,7 @@ public class StructureTest {
             Collectors.groupingBy(Function.identity(),
                     Collectors.counting()));
     if (!classesMap.containsValue((long) figureClassNames.size())) {
-      Assert.fail("Your figure classes should have common parent");
+      fail("Your figure classes should have common parent");
     }
     int numberOfCommonSuperclasses = 0;
     Class superclass = null;
@@ -98,7 +100,7 @@ public class StructureTest {
       }
     }
     if (numberOfCommonSuperclasses > 1) {
-      Assert.fail("You should have only one common superclass for your figure classes");
+      fail("You should have only one common superclass for your figure classes");
     }
     checkSuperClassInterfaces(superclass);
   }
@@ -106,12 +108,12 @@ public class StructureTest {
   private void checkSuperClassInterfaces(Class clazz) {
     Class[] interfaces = clazz.getInterfaces();
     if (interfaces.length == 0) {
-      Assert.fail("Figures parent class " + clazz.getSuperclass().getSimpleName()
+      fail("Figures parent class " + clazz.getSuperclass().getSimpleName()
               +" should implement interfaces that describe common"
               + " behavior for all classes of figures");
     }
     if (interfaces.length == 1 && interfaces[0].getDeclaredMethods().length == 2) {
-      Assert.fail("You should not put behavior into a single interface if "
+      fail("You should not put behavior into a single interface if "
               + "the methods are conceptually different from each other.");
     }
   }
