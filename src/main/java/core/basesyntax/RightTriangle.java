@@ -5,7 +5,6 @@ public class RightTriangle extends Figure {
     private double height;
 
     public RightTriangle(double base, double height, String color) {
-
         this.base = base;
         this.height = height;
         this.setColor(color);
