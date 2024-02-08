@@ -3,6 +3,11 @@ package core.basesyntax;
 public class Square extends Figure {
     private int side;
 
+    public Square(int side, String color) {
+        this.side = side;
+        super.setColor(color);
+    }
+
     @Override
     public double countArea() {
         return Math.pow(side, 2);

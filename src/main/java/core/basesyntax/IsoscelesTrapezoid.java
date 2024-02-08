@@ -6,6 +6,13 @@ public class IsoscelesTrapezoid extends Figure {
     private int lateralSideC;
     private double hight;
 
+    public IsoscelesTrapezoid(int upperBaseA, int lowerBaseB, int lateralSideC, String color) {
+        this.upperBaseA = upperBaseA;
+        this.lowerBaseB = lowerBaseB;
+        this.lateralSideC = lateralSideC;
+        super.setColor(color);
+    }
+
     @Override
     public double countArea() {
         hight = Math.sqrt(Math.pow(lateralSideC, 2) - Math.pow(((lowerBaseB - upperBaseA) / 2), 2));
