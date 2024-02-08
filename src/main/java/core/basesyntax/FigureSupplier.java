@@ -37,7 +37,7 @@ public class FigureSupplier {
     }
 
     public AbstractFigure getDefaultFigure() {
-        Color defaultColor = Color.valueOf(Constants.DEFAULT_COLOR);
+        Color defaultColor = Color.WHITE;
         return new Circle(Constants.DEFAULT_RADIUS, defaultColor);
     }
 }

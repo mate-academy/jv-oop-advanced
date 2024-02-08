@@ -20,6 +20,6 @@ public class Rectangle extends AbstractFigure {
     @Override
     public void draw() {
         System.out.println("Figure: rectangle, area: " + getArea()
-                + " units, width: " + width + ", color: " + getColor());
+                + " units, width: " + width + ", color: " + color);
     }
 }

@@ -18,6 +18,6 @@ public class Circle extends AbstractFigure {
     @Override
     public void draw() {
         System.out.println("Figure: circle, area: " + getArea() + " sq. units, radius: " + radius
-                + " units, color: " + getColor());
+                + " units, color: " + color);
     }
 }

@@ -3,13 +3,13 @@ package core.basesyntax;
 import core.basesyntax.service.Color;
 
 public abstract class AbstractFigure implements AreaCalculator, Drawable {
-    private Color color;
+    protected Color color;
 
     public AbstractFigure(Color color) {
         this.color = color;
     }
 
-    public Color getColor() {
-        return color;
-    }
+    public abstract double getArea();
+
+    public abstract void draw();
 }
