@@ -12,14 +12,6 @@ public class Rectangle extends Figure {
         this.color = color;
     }
 
-    public int getLength() {
-        return length;
-    }
-
-    public int getWidth() {
-        return width;
-    }
-
     @Override
     public String getColor() {
         return color;
