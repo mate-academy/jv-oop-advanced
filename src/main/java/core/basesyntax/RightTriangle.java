@@ -1,9 +1,8 @@
-package core.basesyntax.figures;
+package core.basesyntax;
 
 public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
-    private String color;
 
     public RightTriangle(double firstLeg, double secondLeg, String color) {
         super(color);

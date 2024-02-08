@@ -1,7 +1,8 @@
-package core.basesyntax.figures;
+package core.basesyntax;
 
-public abstract class Figure implements Drawable, Getarea {
+public abstract class Figure implements Drawable, AreaCalculator {
 
+    protected double radius;
     protected String color;
 
     public Figure(String color) {
@@ -18,8 +19,4 @@ public abstract class Figure implements Drawable, Getarea {
 
         this.color = color;
     }
-
-    public abstract double getArea();
-
-    public abstract void draw();
 }

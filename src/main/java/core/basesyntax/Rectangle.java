@@ -1,9 +1,8 @@
-package core.basesyntax.figures;
+package core.basesyntax;
 
 public class Rectangle extends Figure {
     private double length;
     private double width;
-    private String color;
 
     public Rectangle(double length, double width, String color) {
         super(color);
