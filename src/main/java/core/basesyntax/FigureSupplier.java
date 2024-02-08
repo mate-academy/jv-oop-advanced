@@ -22,11 +22,9 @@ public class FigureSupplier {
             case 4:
                 return new IsoscelesTrapezoid(random.nextDouble() * 10, random.nextDouble() * 10,
                         random.nextDouble() * 10, colorSupplier.getRandomColor());
-            case 5:
+            default:
                 return new RightTriangle(random.nextDouble() * 10, random.nextDouble() * 10,
                         colorSupplier.getRandomColor());
-            default:
-                return null;
         }
     }
 
