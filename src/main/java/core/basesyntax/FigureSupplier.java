@@ -7,6 +7,7 @@ public class FigureSupplier {
         public static final int DEFAULT_RADIUS = 10;
         public static final String DEFAULT_COLOR = "white";
     }
+
     private ColorSupplier colorSupplier;
     private Random random;
 
