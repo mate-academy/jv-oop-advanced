@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import core.basesyntax.service.Color;
-
 public class RightTriangle extends AbstractFigure {
     private double firstLeg;
     private double secondLeg;
@@ -21,6 +19,6 @@ public class RightTriangle extends AbstractFigure {
     public void draw() {
         System.out.println("Figure: right triangle, area: " + getArea()
                 + " sq. units, firstLeg: " + firstLeg + " units, secondLeg: "
-                + secondLeg + ", color: " + color);
+                + secondLeg + ", color: " + getColor());
     }
 }

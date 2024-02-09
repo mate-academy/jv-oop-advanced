@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import core.basesyntax.service.Color;
-
 public class IsoscelesTrapezoid extends AbstractFigure {
     private double upperBase;
     private double lowerBase;
@@ -23,6 +21,6 @@ public class IsoscelesTrapezoid extends AbstractFigure {
     public void draw() {
         System.out.println("Figure: isosceles trapezoid, area: " + getArea()
                 + " sq. units, upperBase: " + upperBase + " units, lowerBase: "
-                + lowerBase + ", legs: " + legs + ", color: " + color);
+                + lowerBase + ", legs: " + legs + ", color: " + getColor());
     }
 }

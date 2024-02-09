@@ -1,43 +1,48 @@
 package core.basesyntax;
 
-import core.basesyntax.service.Color;
-import core.basesyntax.service.ColorSupplier;
 import java.util.Random;
 
 public class FigureSupplier {
+    public static class Constants {
+        public static final int DEFAULT_RADIUS = 10;
+        public static final String DEFAULT_COLOR = "white";
+    }
     private ColorSupplier colorSupplier;
+    private Random random;
 
     public FigureSupplier(ColorSupplier colorSupplier) {
         this.colorSupplier = colorSupplier;
+        this.random = new Random();
     }
 
     public AbstractFigure getRandomFigure() {
-        Random random = new Random();
-        int figureType = random.nextInt(FigureType.values().length);
+        int figureType = random.nextInt(5);
 
         switch (figureType) {
             case 0:
-                return new Square(random.nextDouble() * 10 + 1, colorSupplier.getRandomColor());
+                return new Square(getRandomLength(), colorSupplier.getRandomColor());
             case 1:
-                return new Rectangle(random.nextDouble() * 10 + 1, random.nextDouble() * 10
-                        + 1, colorSupplier.getRandomColor());
+                return new Rectangle(getRandomLength(), getRandomLength(), colorSupplier
+                        .getRandomColor());
             case 2:
-                return new RightTriangle(random.nextDouble() * 10
-                        + 1, random.nextDouble() * 10 + 1, colorSupplier.getRandomColor());
+                return new RightTriangle(getRandomLength(), getRandomLength(), colorSupplier
+                        .getRandomColor());
             case 3:
-                return new Circle(random.nextDouble() * 10 + 1, colorSupplier.getRandomColor());
+                return new Circle(getRandomLength(), colorSupplier.getRandomColor());
             case 4:
-                return new IsoscelesTrapezoid(random.nextDouble() * 10
-                        + 1, random.nextDouble() * 10 + 1, random
-                        .nextDouble() * 10 + 1, colorSupplier.getRandomColor());
+                return new IsoscelesTrapezoid(getRandomLength(), getRandomLength(),
+                        getRandomLength(), colorSupplier.getRandomColor());
             default:
                 return getDefaultFigure();
 
         }
     }
 
+    private double getRandomLength() {
+        return random.nextDouble() * 10 + 1;
+    }
+
     public AbstractFigure getDefaultFigure() {
-        Color defaultColor = Color.WHITE;
-        return new Circle(Constants.DEFAULT_RADIUS, defaultColor);
+        return new Circle(Constants.DEFAULT_RADIUS, Color.WHITE);
     }
 }

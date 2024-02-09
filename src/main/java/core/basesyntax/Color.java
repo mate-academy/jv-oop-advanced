@@ -1,4 +1,4 @@
-package core.basesyntax.service;
+package core.basesyntax;
 
 public enum Color {
     RED, GREEN, BLUE, YELLOW, PURPLE, ORANGE, WHITE;

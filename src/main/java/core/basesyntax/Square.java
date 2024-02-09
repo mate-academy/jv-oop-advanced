@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import core.basesyntax.service.Color;
-
 public class Square extends AbstractFigure {
     private double side;
 
@@ -18,6 +16,6 @@ public class Square extends AbstractFigure {
     @Override
     public void draw() {
         System.out.println("Figure: square, area: " + getArea() + " sq. units, side: "
-                + side + " units, color: " + color);
+                + side + " units, color: " + getColor());
     }
 }

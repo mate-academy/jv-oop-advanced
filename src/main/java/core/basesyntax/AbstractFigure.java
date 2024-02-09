@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import core.basesyntax.service.Color;
-
 public abstract class AbstractFigure implements AreaCalculator, Drawable {
     protected Color color;
 
@@ -9,7 +7,7 @@ public abstract class AbstractFigure implements AreaCalculator, Drawable {
         this.color = color;
     }
 
-    public abstract double getArea();
-
-    public abstract void draw();
+    public Color getColor() {
+        return color;
+    }
 }

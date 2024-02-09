@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import core.basesyntax.service.ColorSupplier;
-
 public class Main {
     public static final int FIGURE_COUNT = 6;
 
