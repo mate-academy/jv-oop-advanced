@@ -11,7 +11,8 @@ public class Main {
             } else {
                 figureArray[i] = figureSupplier.getDefaultFigure();
             }
-            figureArray[i].draw(figureArray[i]);
+            figureArray[i].countArea();
+            figureArray[i].draw();
         }
     }
 }

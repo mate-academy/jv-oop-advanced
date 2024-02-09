@@ -13,10 +13,11 @@ public class Square extends Figure {
         return Math.pow(side, 2);
     }
 
-    public void draw(Figure figure) {
-        System.out.println("Figure: square, " + "area: " + figure.countArea()
+    @Override
+    public void draw() {
+        System.out.println("Figure: square, " + "area: " + countArea()
                 + " sq.units, " + "side: " + side + " units, "
-                + "color: " + figure.getColor());
+                + "color: " + getColor());
     }
 
     public int getSide() {

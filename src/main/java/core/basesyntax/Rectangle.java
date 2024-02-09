@@ -15,11 +15,12 @@ public class Rectangle extends Figure {
         return firstSide * secondSide;
     }
 
-    public void draw(Figure figure) {
-        System.out.println("Figure: rectangle, " + "area: " + figure.countArea()
+    @Override
+    public void draw() {
+        System.out.println("Figure: rectangle, " + "area: " + countArea()
                 + " sq.units, " + "first side: " + firstSide + " units,"
                 + " second side " + secondSide + " units,"
-                + " color: " + figure.getColor());
+                + " color: " + getColor());
     }
 
     public int getFirstSide() {

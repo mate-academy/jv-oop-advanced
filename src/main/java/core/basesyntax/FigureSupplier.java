@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int CONST_RADIUS = 10;
-    private static final int NUM = 100;
+    private static final int MAX_SIDE = 100;
     private static final int NUM_OF_FIGURE = 5;
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
@@ -25,41 +25,34 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        Circle defaultCircle = new Circle(CONST_RADIUS, Color.WHITE.name());
-        defaultCircle.countArea();
-        return defaultCircle;
+        return new Circle(CONST_RADIUS, Color.WHITE.name());
     }
 
     private Figure getRandomCircle() {
-        Circle circle = new Circle(getRandomNum(), colorSupplier.getRandomColor());
-        return circle;
+        return new Circle(getRandomSide(), colorSupplier.getRandomColor());
     }
 
     private Figure getRandomSquare() {
-        Square square = new Square(getRandomNum(), colorSupplier.getRandomColor());
-        return square;
+        return new Square(getRandomSide(), colorSupplier.getRandomColor());
     }
 
     private Figure getRandomRightTriangle() {
-        RightTriangle triangle = new RightTriangle(getRandomNum(), getRandomNum(),
+        return new RightTriangle(getRandomSide(), getRandomSide(),
                 colorSupplier.getRandomColor());
-        return triangle;
     }
 
     private Figure getRandomRectangle() {
-        Rectangle rectangle = new Rectangle(getRandomNum(), getRandomNum(),
+        return new Rectangle(getRandomSide(), getRandomSide(),
                 colorSupplier.getRandomColor());
-        return rectangle;
     }
 
     private Figure getRandomIsoscelesTrapezoid() {
-        IsoscelesTrapezoid trapezoid = new IsoscelesTrapezoid(getRandomNum(), getRandomNum(),
-                getRandomNum(), colorSupplier.getRandomColor());
-        return trapezoid;
+        return new IsoscelesTrapezoid(getRandomSide(), getRandomSide(),
+                getRandomSide(), colorSupplier.getRandomColor());
     }
 
-    private int getRandomNum() {
-        return random.nextInt(NUM);
+    private int getRandomSide() {
+        return random.nextInt(MAX_SIDE);
     }
 
     private int getRandomFigureNumber() {
