@@ -9,7 +9,7 @@ public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        Figure [] figure = {
+        Figure[] figure = {
                 new Circle(colorSupplier.getRandomColor(), random.nextInt(1, DEFAULT_VALUE)),
                 new Rectangle(colorSupplier.getRandomColor(), random.nextInt(1, DEFAULT_VALUE),
                         random.nextInt(1, DEFAULT_VALUE)),

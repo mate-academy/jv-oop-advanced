@@ -19,6 +19,6 @@ public class RightTriangle extends Figure {
 
     @Override
     public double calculate() {
-        return firstLeg * secondLeg;
+        return (double) (firstLeg * secondLeg) / 2;
     }
 }
