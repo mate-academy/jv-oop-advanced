@@ -1,20 +1,13 @@
 package core.basesyntax;
 
 public abstract class Figure implements Drawable, AreaCalculable {
-    private String color;
+    private Color color;
 
-    public Figure(String color) {
+    public Figure(Color color) {
         this.color = color;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
-    }
-
-    public abstract double getArea();
-
-    public void draw() {
-        System.out.println("Figure: " + this.getClass().getSimpleName()
-                + ", area: " + this.getArea() + " sq. units, color: " + this.getColor());
     }
 }
