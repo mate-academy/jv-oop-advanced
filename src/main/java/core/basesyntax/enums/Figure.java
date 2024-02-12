@@ -1,6 +1,6 @@
 package core.basesyntax.enums;
 
-public enum Figures {
+public enum Figure {
     SQUARE,
     RECTANGLE,
     RIGHT_TRIANGLE,

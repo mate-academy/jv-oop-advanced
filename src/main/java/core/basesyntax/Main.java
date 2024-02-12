@@ -1,11 +1,11 @@
 package core.basesyntax;
 
 public class Main {
-    public static void main(String[] args) {
-        ColorSupplier colorSupplier = new ColorSupplier();
-        FigureSupplier figureSupplier = new FigureSupplier(colorSupplier);
+    private static final int SIZE_OF_FIGURES_ARRAY = 6;
 
-        Figure [] figures = new Figure[6];
+    public static void main(String[] args) {
+        FigureSupplier figureSupplier = new FigureSupplier();
+        Figure [] figures = new Figure[SIZE_OF_FIGURES_ARRAY];
 
         for (int i = 0; i < figures.length; i++) {
             if (i < figures.length / 2) {

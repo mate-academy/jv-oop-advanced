@@ -5,4 +5,8 @@ import core.basesyntax.interfaces.Info;
 
 public abstract class Figure implements Info, Area {
     protected String color;
+
+    protected Figure(String color) {
+        this.color = color;
+    }
 }
