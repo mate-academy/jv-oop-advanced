@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public interface Arable {
+public interface AreaCalculator {
     double getArea();
 }
