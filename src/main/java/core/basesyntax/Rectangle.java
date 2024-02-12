@@ -2,22 +2,22 @@ package core.basesyntax;
 
 class Rectangle extends Figure {
     private double width;
-    private double length;
+    private double height;
 
-    public Rectangle(String color, double width, double height) {
+    public Rectangle(Color color, double width, double height) {
         super(color);
         this.width = width;
-        this.length = height;
+        this.height = height;
     }
 
     @Override
     public double calculateArea() {
-        return width * length;
+        return width * height;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + calculateArea() + " sq. units, length: "
-                + length + " units, width: " + width + " units, color: " + color);
+        System.out.println("Figure: rectangle, area: " + calculateArea() + " sq. units, width: "
+                + width + " units, height: " + height + " units, color: " + color);
     }
 }

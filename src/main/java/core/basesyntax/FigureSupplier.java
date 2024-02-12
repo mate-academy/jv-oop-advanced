@@ -3,6 +3,9 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int NUM_FIGURE_TYPES = 5;
+    private static final int WHITE_CIRCLE_RADIUS = 10;
+
     private ColorSupplier colorSupplier;
 
     public FigureSupplier(ColorSupplier colorSupplier) {
@@ -10,9 +13,9 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        String colorName = colorSupplier.getRandomColor();
+        Color colorName = colorSupplier.getRandomColor();
         Random random = new Random();
-        int choice = random.nextInt(5);
+        int choice = random.nextInt(NUM_FIGURE_TYPES);
         return switch (choice) {
             case 0 -> new Square(colorName, random.nextDouble() * 10 + 1);
             case 1 -> new Rectangle(colorName, random.nextDouble() * 10 + 1,
@@ -27,6 +30,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", 10);
+        return new Circle(Color.WHITE, WHITE_CIRCLE_RADIUS);
     }
 }
