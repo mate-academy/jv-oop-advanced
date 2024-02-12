@@ -1,10 +1,9 @@
 package core.basesyntax.figure;
 
 public abstract class Figure implements AreaCalculator {
+    private final Color color;
 
-    private final String color;
-
-    protected Figure(String color) {
+    protected Figure(Color color) {
         this.color = color;
     }
 
@@ -12,6 +11,6 @@ public abstract class Figure implements AreaCalculator {
     public String toString() {
         return "Figure: " + this.getClass().getSimpleName().toLowerCase()
                 + ", area: " + getArea() + " sq. units"
-                + ", color: " + color;
+                + ", color: " + color.toString().toLowerCase();
     }
 }
