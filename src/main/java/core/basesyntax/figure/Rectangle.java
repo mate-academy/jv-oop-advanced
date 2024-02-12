@@ -1,13 +1,13 @@
-package core.basesyntax;
+package core.basesyntax.figure;
 
-class Rectangle extends Figure {
+import core.basesyntax.supplier.Color;
 
-    private String name = "rectangle";
-    private String color;
+public class Rectangle extends Figure {
+    private Color color;
     private double firstSideLength;
     private double secondSideLength;
 
-    public Rectangle(String color) {
+    public Rectangle(Color color) {
         this.color = color;
     }
 
@@ -16,17 +16,13 @@ class Rectangle extends Figure {
         this.secondSideLength = secondSideLength;
     }
 
-    public Rectangle(String color, double fistSideLength, double secondSideLength) {
+    public Rectangle(Color color, double fistSideLength, double secondSideLength) {
         this.color = color;
         this.firstSideLength = fistSideLength;
         this.secondSideLength = secondSideLength;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
@@ -39,15 +35,15 @@ class Rectangle extends Figure {
     }
 
     @Override
-    public double calculateFigureArea() {
+    public double calculateArea() {
         return this.firstSideLength * this.secondSideLength;
     }
 
     @Override
-    public String getFigureInformation() {
-        return "Figure: " + name + ", area: " + calculateFigureArea()
+    public String draw() {
+        return "Figure: " + getClass().getSimpleName() + ", area: " + calculateArea()
                 + " sq. units, firstSideLength: "
                 + firstSideLength + " units, secondSideLength: "
-                + secondSideLength + " units, color: " + color;
+                + secondSideLength + " units, color: " + color.name();
     }
 }

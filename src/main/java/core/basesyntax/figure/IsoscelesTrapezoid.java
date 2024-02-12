@@ -1,12 +1,13 @@
-package core.basesyntax;
+package core.basesyntax.figure;
 
-class IsoscelesTrapezoid extends Figure {
-    private String name = "isosceles trapezoid";
-    private String color;
+import core.basesyntax.supplier.Color;
+
+public class IsoscelesTrapezoid extends Figure {
+    private Color color;
     private double firstSideLength;
     private double secondSideLength;
 
-    public IsoscelesTrapezoid(String color) {
+    public IsoscelesTrapezoid(Color color) {
         this.color = color;
     }
 
@@ -15,17 +16,13 @@ class IsoscelesTrapezoid extends Figure {
         this.secondSideLength = secondSideLength;
     }
 
-    public IsoscelesTrapezoid(String color, double firstSideLength, double secondSideLength) {
+    public IsoscelesTrapezoid(Color color, double firstSideLength, double secondSideLength) {
         this.color = color;
         this.firstSideLength = firstSideLength;
         this.secondSideLength = secondSideLength;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
@@ -38,15 +35,15 @@ class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double calculateFigureArea() {
+    public double calculateArea() {
         return this.firstSideLength * this.secondSideLength;
     }
 
     @Override
-    public String getFigureInformation() {
-        return "Figure: " + name + ", area: " + calculateFigureArea()
+    public String draw() {
+        return "Figure: " + getClass().getSimpleName() + ", area: " + calculateArea()
                 + " sq. units, firstSideLength: "
                 + firstSideLength + " units, secondSideLength: "
-                + secondSideLength + " units, color: " + color;
+                + secondSideLength + " units, color: " + color.name();
     }
 }
