@@ -1,13 +1,13 @@
 package core.basesyntax.figure;
 
-public enum FigureColor {
-    WHITE,
+public enum Color {
     BLACK,
+    BLUE,
+    BROWN,
     YELLOW,
     RED,
     GREEN,
-    BLUE,
     ORANGE,
     GREY,
-    BROWN
+    WHITE
 }
