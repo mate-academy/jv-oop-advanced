@@ -3,8 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final Random random = new Random();
     private static final int NUMBER_OF_FIGURES = 5;
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
         ColorSupplier cs = new ColorSupplier();
@@ -13,7 +13,8 @@ public class FigureSupplier {
             case 2 -> new Rectangle(cs.getRandomColor(), getRandomDouble(), getRandomDouble());
             case 3 -> new RightTriangle(cs.getRandomColor(), getRandomDouble(), getRandomDouble());
             case 4 -> new Circle(cs.getRandomColor(), getRandomDouble());
-            case 5 -> new IsoscelesTrapezoid(cs.getRandomColor(), getRandomDouble(), getRandomDouble(), getRandomDouble());
+            case 5 -> new IsoscelesTrapezoid(
+                    cs.getRandomColor(), getRandomDouble(), getRandomDouble(), getRandomDouble());
             default -> getDefaultFigure();
         };
     }
@@ -22,7 +23,7 @@ public class FigureSupplier {
         return Math.round(random.nextDouble() * 100);
     }
 
-    public Figure getDefaultFigure(){
+    public Figure getDefaultFigure() {
         return new Circle(Color.WHITE, 10);
     }
 }

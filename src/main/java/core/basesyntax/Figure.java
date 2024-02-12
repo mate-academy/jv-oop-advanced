@@ -13,6 +13,6 @@ public abstract class Figure implements Drawable, Arable {
     public String draw() {
         return "Figure: " + name
                 + ", Color: " + color
-                +  ", area: " + (double) Math.round(getArea() * 100) / 100 + " sq. units, ";
+                + ", area: " + (double) Math.round(getArea() * 100) / 100 + " sq. units, ";
     }
 }
