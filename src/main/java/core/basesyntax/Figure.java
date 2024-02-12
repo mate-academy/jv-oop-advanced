@@ -27,5 +27,5 @@ public abstract class Figure implements AreaCalculator {
         this.area = area;
     }
 
-    abstract public String draw();
+    abstract String draw();
 }

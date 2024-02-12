@@ -20,7 +20,10 @@ public class HelloWorld {
         }
     }
 
-    private static void initializePoolOfFigures(Figure[] figuresPool, int splitIndex, FigureSupplier figureSupplier) {
+    private static void initializePoolOfFigures(
+            Figure[] figuresPool,
+            int splitIndex,
+            FigureSupplier figureSupplier) {
         for (int i = 0; i < figuresPool.length; i++) {
             if (i < splitIndex) {
                 figuresPool[i] = figureSupplier.getRandomFigure();

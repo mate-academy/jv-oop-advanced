@@ -38,7 +38,9 @@ public class FigureSupplier {
     }
 
     private IsoscelesTrapezoid createRandomIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomSize(), getRandomSize(), getRandomSize());
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                getRandomSize(), getRandomSize(),
+                getRandomSize());
     }
 
     private Circle createRandomCircle() {
