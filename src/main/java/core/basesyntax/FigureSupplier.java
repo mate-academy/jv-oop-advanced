@@ -7,8 +7,8 @@ public class FigureSupplier {
     private static final int BOUND_OF_SIDES = 100;
     private static final int DEFAULT_RADIUS_OF_CIRCLE = 10;
     private static final int INDEX_OF_FIGURE = 5;
-    private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final Random random = new Random();
+    private static final Random RANDOM = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         Figure[] figuresPool = {
@@ -18,7 +18,7 @@ public class FigureSupplier {
                 createRandomSquare(),
                 createRandomRightTriangle()
         };
-        return figuresPool[random.nextInt(INDEX_OF_FIGURE)];
+        return figuresPool[RANDOM.nextInt(INDEX_OF_FIGURE)];
     }
 
     public Figure getDefaultFigure() {
@@ -48,6 +48,6 @@ public class FigureSupplier {
     }
 
     private int getRandomSize() {
-        return random.nextInt(BOUND_OF_SIDES) + 1;
+        return RANDOM.nextInt(BOUND_OF_SIDES) + 1;
     }
 }
