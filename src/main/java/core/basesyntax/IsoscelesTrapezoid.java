@@ -10,12 +10,11 @@ public class IsoscelesTrapezoid extends Figure {
         this.baseSide = baseSide;
         this.topSide = topSide;
         this.height = height;
-        setArea(calculateArea());
     }
 
     @Override
     public String draw() {
-        return "Figure: isoscelesTrapezoid, area: " + getArea() + " sq. units,"
+        return "Figure: isoscelesTrapezoid, area: " + calculateArea() + " sq. units,"
                 + " baseSide: " + baseSide + " units,"
                 + " topSide: " + topSide + " units,"
                 + " height: " + height + " units,"

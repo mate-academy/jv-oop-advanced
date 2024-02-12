@@ -2,7 +2,6 @@ package core.basesyntax;
 
 public abstract class Figure implements AreaCalculator, Drawable {
     private Color color;
-    private double area;
 
     public Figure() {
     }
@@ -17,13 +16,5 @@ public abstract class Figure implements AreaCalculator, Drawable {
 
     public void setColor(Color color) {
         this.color = color;
-    }
-
-    public double getArea() {
-        return area;
-    }
-
-    public void setArea(double area) {
-        this.area = area;
     }
 }

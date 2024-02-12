@@ -9,8 +9,7 @@ public class Main {
         Random random = new Random();
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figuresPool = new Figure[random.nextInt(RANDOM_NUMBER_OF_FIGURES)];
-        int splitIndex = figuresPool.length / 2;
-        initializePoolOfFigures(figuresPool, splitIndex, figureSupplier);
+        initializePoolOfFigures(figuresPool, figureSupplier);
         printInfo(figuresPool);
     }
 
@@ -22,8 +21,8 @@ public class Main {
 
     private static void initializePoolOfFigures(
             Figure[] figuresPool,
-            int splitIndex,
             FigureSupplier figureSupplier) {
+        int splitIndex = figuresPool.length / 2;
         for (int i = 0; i < figuresPool.length; i++) {
             if (i < splitIndex) {
                 figuresPool[i] = figureSupplier.getRandomFigure();

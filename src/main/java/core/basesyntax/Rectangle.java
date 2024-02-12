@@ -8,11 +8,10 @@ public class Rectangle extends Figure {
         this.setColor(color);
         this.oneSide = oneSide;
         this.secondSide = secondSide;
-        setArea(calculateArea());
     }
 
     public String draw() {
-        return "Figure: rectangle, area: " + getArea() + " sq. units,"
+        return "Figure: rectangle, area: " + calculateArea() + " sq. units,"
                 + " oneSide: " + oneSide + " units,"
                 + " secondSide: " + secondSide + " units,"
                 + " color: " + getColor();
