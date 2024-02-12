@@ -1,18 +1,16 @@
 package core.basesyntax;
 
-import java.text.DecimalFormat;
-
 public class IsoscelesTrapezoid extends Figure {
     private int baseOne;
     private int baseTwo;
     private int height;
     private String color;
 
-    public IsoscelesTrapezoid(Figure.FigureSupplier figureSupplier, ColorSupplier colorSupplier) {
-        this.baseOne = figureSupplier.getRandomFigure();
-        this.baseTwo = figureSupplier.getRandomFigure();
-        this.height = figureSupplier.getRandomFigure();
-        this.color = colorSupplier.getRandomColor();
+    public IsoscelesTrapezoid(int baseOne, int baseTwo, int height, String color) {
+        this.baseOne = baseOne;
+        this.baseTwo = baseTwo;
+        this.height = height;
+        this.color = color;
     }
 
     @Override
@@ -22,9 +20,8 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        DecimalFormat df = new DecimalFormat("#.##");
         System.out.println("Name: isoscelesTrapezoid, baseOne: " + baseOne + ", baseTwo: "
-                + baseTwo + ", height:" + height + ", area: " + df.format(getArea())
+                + baseTwo + ", height:" + height + ", area: " + getFormat().format(getArea())
                 + ", color: " + color);
     }
 }

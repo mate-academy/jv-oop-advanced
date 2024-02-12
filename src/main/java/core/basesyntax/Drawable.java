@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public interface Drawable extends Area {
+public interface Drawable {
     void draw();
 
 }

@@ -1,16 +1,14 @@
 package core.basesyntax;
 
-import java.text.DecimalFormat;
-
 public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
     private String color;
 
-    public RightTriangle() {
-        this.firstLeg = 4;
-        this.secondLeg = 5;
-        this.color = "green";
+    public RightTriangle(int firstLeg, int secondLeg, String color) {
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
+        this.color = color;
     }
 
     @Override
@@ -20,8 +18,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        DecimalFormat df = new DecimalFormat("#.##");
         System.out.println("Name: rightTriangle, firstLeg: " + firstLeg + ", secondLeg: "
-                + secondLeg + ", area: " + df.format(getArea()) + ", color: " + color);
+                + secondLeg + ", area: " + getFormat().format(getArea()) + ", color: " + color);
     }
 }

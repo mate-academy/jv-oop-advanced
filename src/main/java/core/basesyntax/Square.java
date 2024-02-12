@@ -4,9 +4,9 @@ public class Square extends Figure {
     private int side;
     private String color;
 
-    public Square() {
-        this.side = 4;
-        this.color = "White";
+    public Square(int side, String color) {
+        this.side = side;
+        this.color = color;
     }
 
     @Override
