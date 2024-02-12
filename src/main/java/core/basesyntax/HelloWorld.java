@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import static java.lang.System.out;
-
 import core.basesyntax.figure.Figure;
 import core.basesyntax.supplier.FigureSupplier;
 
@@ -22,7 +20,7 @@ public class HelloWorld {
         }
 
         for (Figure figure : figures) {
-            out.println(figure);
+            System.out.println(figure);
         }
     }
 }
