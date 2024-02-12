@@ -4,8 +4,8 @@ public class Square extends Figure {
     private int side;
 
     public Square(int side, String color) {
+        super(ColorSupplier.Color.valueOf(color));
         this.side = side;
-        this.color = color;
     }
 
     @Override

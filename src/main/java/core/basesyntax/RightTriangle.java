@@ -5,9 +5,9 @@ public class RightTriangle extends Figure {
     private int secondLeg;
 
     public RightTriangle(int firstLeg, int secondLeg, String color) {
+        super(ColorSupplier.Color.valueOf(color));
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        this.color = color;
     }
 
     @Override

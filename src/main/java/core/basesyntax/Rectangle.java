@@ -5,9 +5,9 @@ public class Rectangle extends Figure {
     private int width;
 
     public Rectangle(int length, int width, String color) {
+        super(ColorSupplier.Color.valueOf(color));
         this.length = length;
         this.width = width;
-        this.color = color;
     }
 
     @Override
