@@ -1,12 +1,14 @@
-package core.basesyntax;
+package core.basesyntax.figures;
+
+import core.basesyntax.Color;
+import core.basesyntax.Figure;
 
 public class IsoscelesTrapezoid extends Figure {
-    private String color;
     private int base;
     private int height;
     private int upperSide;
 
-    public IsoscelesTrapezoid(String color, int femur, int height, int upperSide) {
+    public IsoscelesTrapezoid(Color color, int femur, int height, int upperSide) {
         this.color = color;
         this.base = femur;
         this.height = height;
@@ -21,7 +23,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public int getArea() {
+    public double getArea() {
         return (base + upperSide) / 2 * height;
     }
 }

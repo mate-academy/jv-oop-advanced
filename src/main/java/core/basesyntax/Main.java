@@ -1,12 +1,17 @@
 package core.basesyntax;
 
+import core.basesyntax.supliers.FigureSupplier;
+
 public class Main {
+
+    private static final int NUMBER_OF_FIGURES = 6;
+
     public static void main(String[] args) {
-        FigureSuplier figureSuplier = new FigureSuplier();
-        Figure[] figures = new Figure[6];
-        for (int i = 0; i < 6; i++) {
-            figures[i] = i < 3 ? figureSuplier.getRandomFigure()
-                    : figureSuplier.getDefaultFigure();
+        FigureSupplier figureSupplier = new FigureSupplier();
+        Figure[] figures = new Figure[NUMBER_OF_FIGURES];
+        for (int i = 0; i < NUMBER_OF_FIGURES; i++) {
+            figures[i] = i < 3 ? figureSupplier.getRandomFigure()
+                    : figureSupplier.getDefaultFigure();
         }
         for (Figure figure : figures) {
             figure.draw();
