@@ -8,7 +8,7 @@ public class Rectangle extends Figure {
         this.setColor(color);
         this.oneSide = oneSide;
         this.secondSide = secondSide;
-        calcArea();
+        setArea(calculateArea());
     }
 
     public String draw() {
@@ -19,7 +19,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void calcArea() {
-        setArea(oneSide * secondSide);
+    public double calculateArea() {
+        return oneSide * secondSide;
     }
 }

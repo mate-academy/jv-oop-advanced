@@ -8,7 +8,7 @@ public class RightTriangle extends Figure {
         super(color);
         this.oneSide = oneSide;
         this.secondSide = secondSide;
-        calcArea();
+        setArea(calculateArea());
     }
 
     @Override
@@ -20,7 +20,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void calcArea() {
-        setArea((double) (oneSide * secondSide) / 2);
+    public double calculateArea() {
+        return (double) (oneSide * secondSide) / 2;
     }
 }
