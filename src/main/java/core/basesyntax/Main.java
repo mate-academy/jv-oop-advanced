@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class HelloWorld {
+public class Main {
     public static final int RANDOM_NUMBER_OF_FIGURES = 50;
 
     public static void main(String[] args) {
