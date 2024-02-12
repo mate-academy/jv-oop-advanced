@@ -4,7 +4,7 @@ public class RightTriangle extends Figure {
     private int oneSide;
     private int secondSide;
 
-    public RightTriangle(String color, int oneSide, int secondSide) {
+    public RightTriangle(Color color, int oneSide, int secondSide) {
         super(color);
         this.oneSide = oneSide;
         this.secondSide = secondSide;
@@ -12,14 +12,15 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void calcArea() {
-        setArea((double) (oneSide * secondSide) / 2);
+    public String draw() {
+        return "Figure: rightTriangle, area: " + getArea() + " sq. units,"
+                + " oneSide: " + oneSide + " units,"
+                + " secondSide: " + secondSide + " units,"
+                + " color: " + getColor();
     }
 
     @Override
-    public String toString() {
-        return "Figure: rightTriangle, area: " + getArea() + " sq. units, oneside: "
-                + oneSide + " units," + " secondSide: " + secondSide + " units,"
-                + " color: " + getColor();
+    public void calcArea() {
+        setArea((double) (oneSide * secondSide) / 2);
     }
 }

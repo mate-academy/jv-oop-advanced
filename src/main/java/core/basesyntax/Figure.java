@@ -1,22 +1,21 @@
 package core.basesyntax;
 
-public abstract class Figure implements Areaable {
-    private String color;
-
+public abstract class Figure implements AreaCalculator {
+    private Color color;
     private double area;
 
     public Figure() {
     }
 
-    public Figure(String color) {
+    public Figure(Color color) {
         this.color = color;
     }
 
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(Color color) {
         this.color = color;
     }
 
@@ -27,4 +26,6 @@ public abstract class Figure implements Areaable {
     public void setArea(double area) {
         this.area = area;
     }
+
+    abstract public String draw();
 }

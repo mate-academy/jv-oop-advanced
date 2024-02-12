@@ -1,23 +1,32 @@
 package core.basesyntax;
 
-import java.util.Arrays;
 import java.util.Random;
 
-/**
- * Feel free to remove this class and create your own.
- */
 public class HelloWorld {
+    public static final int RANDOM_NUMBER_OF_FIGURES = 50;
+
     public static void main(String[] args) {
+        Random random = new Random();
         FigureSupplier figureSupplier = new FigureSupplier();
-        Figure[] figures = new Figure[new Random().nextInt(50)];
-        int avenger = figures.length / 2;
-        for (int i = 0; i < figures.length; i++) {
-            if (i < avenger) {
-                figures[i] = figureSupplier.getRandomFigure();
+        Figure[] figuresPool = new Figure[random.nextInt(RANDOM_NUMBER_OF_FIGURES)];
+        int splitIndex = figuresPool.length / 2;
+        initializePoolOfFigures(figuresPool, splitIndex, figureSupplier);
+        printInfo(figuresPool);
+    }
+
+    private static void printInfo(Figure[] figures) {
+        for (Figure figure : figures) {
+            System.out.println(figure.draw());
+        }
+    }
+
+    private static void initializePoolOfFigures(Figure[] figuresPool, int splitIndex, FigureSupplier figureSupplier) {
+        for (int i = 0; i < figuresPool.length; i++) {
+            if (i < splitIndex) {
+                figuresPool[i] = figureSupplier.getRandomFigure();
             } else {
-                figures[i] = figureSupplier.getDefaultFigure();
+                figuresPool[i] = figureSupplier.getDefaultFigure();
             }
         }
-        System.out.println(Arrays.toString(figures));
     }
 }
