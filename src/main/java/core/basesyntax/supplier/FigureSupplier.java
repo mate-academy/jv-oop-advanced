@@ -1,8 +1,8 @@
 package core.basesyntax.supplier;
 
 import core.basesyntax.figure.Circle;
+import core.basesyntax.figure.Color;
 import core.basesyntax.figure.Figure;
-import core.basesyntax.figure.FigureColor;
 import core.basesyntax.figure.IsoscelesTrapezoid;
 import core.basesyntax.figure.Rectangle;
 import core.basesyntax.figure.RightTriangle;
@@ -10,11 +10,11 @@ import core.basesyntax.figure.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-
     private static final int FIGURE_AMOUNT_MAX = 5;
     private static final int FIGURE_AMOUNT_MIN = 1;
     private static final int DEFAULT_RADIUS = 10;
-    private static final String DEFAULT_COLOR = FigureColor.WHITE.name().toLowerCase();
+    private static final Color DEFAULT_COLOR = Color.WHITE;
+
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
