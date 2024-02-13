@@ -2,7 +2,6 @@ package core.basesyntax.figures;
 
 import core.basesyntax.AreaCalculator;
 import core.basesyntax.Drawable;
-import core.basesyntax.Figure;
 
 public class Circle extends Figure implements Drawable, AreaCalculator {
     private final double radius;

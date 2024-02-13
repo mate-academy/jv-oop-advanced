@@ -1,7 +1,7 @@
-package core.basesyntax;
+package core.basesyntax.figures;
 
 public abstract class Figure {
-    public String color;
+    protected String color;
 
     public Figure(String color) {
         this.color = color;
