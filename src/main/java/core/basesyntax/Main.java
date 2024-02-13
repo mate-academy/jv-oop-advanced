@@ -9,7 +9,7 @@ public class Main {
     public static void main(String[] args) {
         Figure[] figures = new Figure[FIGURE_COUNT];
         for (int i = 0; i < FIGURE_COUNT; i++) {
-            if (i < 3) {
+            if (i < FIGURE_COUNT / 2) {
                 figures[i] = new FigureSupplier().getRandomFigure();
             } else {
                 figures[i] = new FigureSupplier().getDefaultFigure();
