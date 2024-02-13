@@ -11,10 +11,8 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    double getArea() {
-        double value = (double) (firstLeg * secondLeg) / 2;
-        System.out.println(value);
-        return value;
+    public double getArea() {
+        return (double) (firstLeg * secondLeg) / 2;
     }
 
     @Override

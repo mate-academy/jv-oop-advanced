@@ -1,15 +1,12 @@
 package core.basesyntax.models;
 
-import core.basesyntax.interfaces.FigureBehavior;
-import java.util.Random;
+import core.basesyntax.interfaces.AreaCalculator;
+import core.basesyntax.interfaces.Drawable;
 
-public abstract class Figure implements FigureBehavior {
-    public static final Random RANDOM = new Random();
+public abstract class Figure implements Drawable, AreaCalculator {
     protected String color;
 
     public Figure(String color) {
         this.color = color;
     }
-
-    abstract double getArea();
 }

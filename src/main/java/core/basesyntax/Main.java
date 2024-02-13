@@ -12,14 +12,11 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < figures.length; i++) {
             if (i < middleIndex) {
-                Figure figure = figureSupplier.getRandomFigure();
-                figures[i] = figure;
-                figure.draw();
+                figures[i] = figureSupplier.getRandomFigure();;
             } else {
-                Figure figure = figureSupplier.getDefaultFigure();
-                figures[i] = figure;
-                figure.draw();
+                figures[i] = figureSupplier.getDefaultFigure();;
             }
+            figures[i].draw();
         }
     }
 }

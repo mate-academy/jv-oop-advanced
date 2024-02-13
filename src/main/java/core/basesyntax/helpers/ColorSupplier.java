@@ -1,14 +1,15 @@
 package core.basesyntax.helpers;
 
-import core.basesyntax.enums.Colors;
+import core.basesyntax.enums.Color;
 import core.basesyntax.interfaces.RandomNumber;
-import core.basesyntax.models.Figure;
+
+import java.util.Random;
 
 public class ColorSupplier implements RandomNumber {
-    private static final Colors[] COLORS = Colors.values();
+    private static final Color[] COLORS = Color.values();
 
-    public String getRandomColor() {
-        int randomIndex = getRandomNumber(Figure.RANDOM, COLORS.length);
+    public String getRandomColor(Random random) {
+        int randomIndex = getRandomNumber(random, COLORS.length);
         return COLORS[randomIndex].name();
     }
 }

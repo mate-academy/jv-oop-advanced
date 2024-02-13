@@ -1,6 +1,6 @@
 package core.basesyntax.enums;
 
-public enum Figures {
+public enum FigureType {
     CIRCLE,
     RIGHT_TRIANGLE,
     ISOSCELES_TRAPEZOID,
