@@ -1,5 +1,5 @@
 package core.basesyntax.interfaces;
 
-public interface Info {
+public interface InfoFigure {
     void drawInfo();
 }

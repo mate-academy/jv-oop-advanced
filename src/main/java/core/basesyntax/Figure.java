@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-import core.basesyntax.interfaces.Area;
-import core.basesyntax.interfaces.Info;
+import core.basesyntax.interfaces.AreaFigure;
+import core.basesyntax.interfaces.InfoFigure;
 
-public abstract class Figure implements Info, Area {
+public abstract class Figure implements InfoFigure, AreaFigure {
     protected String color;
 
     protected Figure(String color) {
