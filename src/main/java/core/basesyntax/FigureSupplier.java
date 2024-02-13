@@ -9,7 +9,7 @@ import java.util.Random;
 
 public class FigureSupplier {
 
-    private static final int AMOUNT_OF_FIGURES = 5;
+    private static final int AMOUNT_OF_FIGURES = 4;
     private static final int MAX_PARAMETER_VALUE = 100;
     private static final int DEFAULT_CIRCLE_RADIUS = 10;
 
@@ -20,19 +20,19 @@ public class FigureSupplier {
         int randomFigure = new Random().nextInt(AMOUNT_OF_FIGURES);
 
         switch (randomFigure) {
-            case 1:
+            case 0:
                 return new Circle(colorSupplier.getRandomColor(),
                         getRandomParameter());
-            case 2:
+            case 1:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                         getRandomParameter(),
                         getRandomParameter(),
                         getRandomParameter());
-            case 3:
+            case 2:
                 return new Rectangle(colorSupplier.getRandomColor(),
                         getRandomParameter(),
                         getRandomParameter());
-            case 4:
+            case 3:
                 return new RightTriangle(colorSupplier.getRandomColor(),
                         getRandomParameter(),
                         getRandomParameter());
