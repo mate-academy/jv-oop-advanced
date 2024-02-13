@@ -10,7 +10,7 @@ import java.util.Random;
 public class FigureSupplier {
 
     private static final int AMOUNT_OF_FIGURES = 5;
-    private static final int MAX_PARAMETER_OF_FIGURE = 100;
+    private static final int MAX_PARAMETER_VALUE = 100;
     private static final int DEFAULT_CIRCLE_RADIUS = 10;
 
     private ColorSupplier colorSupplier = new ColorSupplier();
@@ -46,7 +46,7 @@ public class FigureSupplier {
     }
 
     private int getRandomParameter() {
-        return new Random().nextInt(MAX_PARAMETER_OF_FIGURE);
+        return new Random().nextInt(MAX_PARAMETER_VALUE);
     }
 
     public Figure getDefaultFigure() {
