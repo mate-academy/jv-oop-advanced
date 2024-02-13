@@ -9,7 +9,7 @@ import java.util.Random;
 
 public class FigureSupplier {
 
-    private static final int AMOUNT_OF_FIGURES = 4;
+    private static final int AMOUNT_OF_FIGURES = 5;
     private static final int MAX_PARAMETER_VALUE = 100;
     private static final int DEFAULT_CIRCLE_RADIUS = 10;
 
@@ -36,7 +36,7 @@ public class FigureSupplier {
                 return new RightTriangle(colorSupplier.getRandomColor(),
                         getRandomParameter(),
                         getRandomParameter());
-            case 5:
+            case 4:
                 return new Square(colorSupplier.getRandomColor(),
                         getRandomParameter());
             default:
