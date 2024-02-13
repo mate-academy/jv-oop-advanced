@@ -3,7 +3,7 @@ package core.basesyntax.figures;
 import core.basesyntax.AreaCalculator;
 import core.basesyntax.Drawable;
 
-public class IsoscelesTrapezoid extends Figure implements Drawable, AreaCalculator {
+public class IsoscelesTrapezoid extends Figure {
     private final double upperSide;
     private final double lowerSide;
     private final double height;

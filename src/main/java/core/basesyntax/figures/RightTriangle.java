@@ -3,7 +3,7 @@ package core.basesyntax.figures;
 import core.basesyntax.AreaCalculator;
 import core.basesyntax.Drawable;
 
-public class RightTriangle extends Figure implements Drawable, AreaCalculator {
+public class RightTriangle extends Figure {
     private final double firstLeg;
     private final double secondLeg;
 
