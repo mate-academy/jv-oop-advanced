@@ -3,40 +3,40 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    Random random = new Random();
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         FigureTypes type = FigureTypes.values()[random.nextInt(FigureTypes.values().length)];
         switch (type) {
             case SQUARE:
                 Square square = new Square();
-                square.leg = random.nextInt(1,100);
-                square.color = colorSupplier.getRandomColor();
+                square.setLeg(random.nextInt(1,100));
+                square.setColor(colorSupplier.getRandomColor());
                 return square;
             case RECTANGLE:
                 Rectangle rectangle = new Rectangle();
-                rectangle.firstLeg = random.nextInt(1,100);
-                rectangle.secondLeg = random.nextInt(1,100);
-                rectangle.color = colorSupplier.getRandomColor();
+                rectangle.setFirstLeg(random.nextInt(1,100));
+                rectangle.setSecondLeg(random.nextInt(1,100));
+                rectangle.setColor(colorSupplier.getRandomColor());
                 return rectangle;
             case RIGHT_TRIANGLE:
                 RightTriangle rightTriangle = new RightTriangle();
-                rightTriangle.firstLeg = random.nextInt(1,100);
-                rightTriangle.secondLeg = random.nextInt(1,100);
-                rightTriangle.color = colorSupplier.getRandomColor();
+                rightTriangle.setFirstLeg(random.nextInt(1,100));
+                rightTriangle.setSecondLeg(random.nextInt(1,100));
+                rightTriangle.setColor(colorSupplier.getRandomColor());
                 return rightTriangle;
             case CIRCLE:
                 Circle circle = new Circle();
-                circle.color = colorSupplier.getRandomColor();
-                circle.radius = random.nextInt(1,100);
+                circle.setColor(colorSupplier.getRandomColor());
+                circle.setRadius(random.nextInt(1,100));
                 return circle;
             case ISOSCELES_TRAPEZOID:
                 IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
-                isoscelesTrapezoid.leg = random.nextInt(1,100);
-                isoscelesTrapezoid.firstBase = random.nextInt(1,100);
-                isoscelesTrapezoid.secondBase = random.nextInt(1,100);
-                isoscelesTrapezoid.color = colorSupplier.getRandomColor();
+                isoscelesTrapezoid.setLeg(random.nextInt(1,100));
+                isoscelesTrapezoid.setFirstBase(random.nextInt(1,100));
+                isoscelesTrapezoid.setSecondBase(random.nextInt(1,100));
+                isoscelesTrapezoid.setColor(colorSupplier.getRandomColor());
                 return isoscelesTrapezoid;
             default:
                 return null;
@@ -45,8 +45,8 @@ public class FigureSupplier {
 
     public Figure getDefaultFigure() {
         Circle circle = new Circle();
-        circle.color = "White";
-        circle.radius = 10;
+        circle.setColor("White");
+        circle.setRadius(10);
         return circle;
     }
 }

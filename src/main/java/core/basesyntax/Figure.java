@@ -1,8 +1,13 @@
 package core.basesyntax;
 
-abstract class Figure {
-        String color;
+abstract class Figure implements AreaAble, DrawAble {
+    private String color;
 
-        public abstract Double area();
-        public abstract void info();
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getColor() {
+        return color;
+    }
 }
