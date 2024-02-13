@@ -2,7 +2,7 @@ package core.basesyntax;
 
 public class Main {
 
-    public static final int AMOUNT_OF_FIGURES = 6;
+    public static final int AMOUNT_OF_CREATING_FIGURES = 6;
 
     public static void main(String[] args) {
 
