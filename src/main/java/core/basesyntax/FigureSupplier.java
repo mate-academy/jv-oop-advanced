@@ -14,10 +14,11 @@ public class FigureSupplier {
     private static final int DEFAULT_CIRCLE_RADIUS = 10;
 
     private ColorSupplier colorSupplier = new ColorSupplier();
+    private Random random = new Random();
 
     public Figure getRandomFigure() {
 
-        int randomFigure = new Random().nextInt(AMOUNT_OF_FIGURES);
+        int randomFigure = random.nextInt(AMOUNT_OF_FIGURES);
 
         switch (randomFigure) {
             case 0:
