@@ -14,7 +14,7 @@ public class Application {
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
-           figures[i].draw();
+            figures[i].draw();
         }
     }
 }

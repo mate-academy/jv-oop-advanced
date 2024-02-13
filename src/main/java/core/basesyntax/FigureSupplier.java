@@ -18,28 +18,18 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int chooser = random.nextInt(FIGURE_COUNT);
-        Figure figure = getDefaultFigure();
-        switch (chooser) {
-            case 0:
-                figure = new Circle(random.nextInt(MAX_RANDOM_VALUE) + 1);
-                break;
-            case 1:
-                figure = new Square(random.nextInt(MAX_RANDOM_VALUE) + 1);
-                break;
-            case 2:
-                figure = new Rectangle(random.nextInt(MAX_RANDOM_VALUE) + 1, random.nextInt(MAX_RANDOM_VALUE) + 1);
-                break;
-            case 3:
-                figure = new RightTriangle(random.nextInt(MAX_RANDOM_VALUE) + 1, random.nextInt(MAX_RANDOM_VALUE) + 1);
-                break;
-            case 4:
-                figure = new IsoscelesTrapezoid(random.nextInt(MAX_RANDOM_VALUE) + 1,
-                        random.nextInt(MAX_RANDOM_VALUE) + 1,
-                        random.nextInt(MAX_RANDOM_VALUE) + 1);
-                break;
-            default:
-
-        }
+        Figure figure = switch (chooser) {
+            case 0 -> new Circle(random.nextInt(MAX_RANDOM_VALUE) + 1);
+            case 1 -> new Square(random.nextInt(MAX_RANDOM_VALUE) + 1);
+            case 2 -> new Rectangle(random.nextInt(MAX_RANDOM_VALUE) + 1,
+                    random.nextInt(MAX_RANDOM_VALUE) + 1);
+            case 3 -> new RightTriangle(random.nextInt(MAX_RANDOM_VALUE) + 1,
+                    random.nextInt(MAX_RANDOM_VALUE) + 1);
+            case 4 -> new IsoscelesTrapezoid(random.nextInt(MAX_RANDOM_VALUE) + 1,
+                    random.nextInt(MAX_RANDOM_VALUE) + 1,
+                    random.nextInt(MAX_RANDOM_VALUE) + 1);
+            default -> getDefaultFigure();
+        };
         figure.setColor(colorSupplier.getRandomColor());
         return figure;
     }
