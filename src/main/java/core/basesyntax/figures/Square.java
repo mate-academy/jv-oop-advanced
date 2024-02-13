@@ -7,13 +7,13 @@ public class Square extends Figure {
     private int side;
 
     public Square(Color color, int side) {
-        this.color = color;
+        super(color);
         this.side = side;
     }
 
     @Override
     public void draw() {
-        System.out.println("Square has " + color + "color and side lenght "
+        System.out.println("Square has " + getColor() + "color and side lenght "
                 + side + ". Area is " + getArea());
     }
 

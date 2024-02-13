@@ -7,15 +7,19 @@ public class Rectangle extends Figure {
     private int horizontalSide;
     private int verticalSide;
 
+    public Rectangle(Color color) {
+        super(color);
+    }
+
     public Rectangle(Color color, int horizontalSide, int verticalSide) {
-        this.color = color;
+        super(color);
         this.horizontalSide = horizontalSide;
         this.verticalSide = verticalSide;
     }
 
     @Override
     public void draw() {
-        System.out.println("Rectangle has " + color + "color."
+        System.out.println("Rectangle has " + getColor() + "color."
                 + "Sides lengh is " + horizontalSide + " and " + verticalSide
                 + ". Area is " + getArea());
     }

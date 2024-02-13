@@ -9,7 +9,7 @@ public class IsoscelesTrapezoid extends Figure {
     private int upperSide;
 
     public IsoscelesTrapezoid(Color color, int femur, int height, int upperSide) {
-        this.color = color;
+        super(color);
         this.base = femur;
         this.height = height;
         this.upperSide = upperSide;
@@ -17,7 +17,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Isosceles trapezoid has " + color
+        System.out.println("Isosceles trapezoid has " + getArea()
                 + " color and femur length " + base
                 + ". Area is " + getArea());
     }

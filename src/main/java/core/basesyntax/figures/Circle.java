@@ -7,13 +7,13 @@ public class Circle extends Figure {
     private int radius;
 
     public Circle(Color color, int radius) {
-        this.color = color;
+        super(color);
         this.radius = radius;
     }
 
     @Override
     public void draw() {
-        System.out.println("Circle has " + color + " and radius " + radius
+        System.out.println("Circle has " + getColor() + " and radius " + radius
                 + ". Area is " + getArea());
     }
 

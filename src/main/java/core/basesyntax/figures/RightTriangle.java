@@ -8,14 +8,14 @@ public class RightTriangle extends Figure {
     private int secondLeg;
 
     public RightTriangle(Color color, int firstLeg, int secondLeg) {
-        this.color = color;
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
 
     @Override
     public void draw() {
-        System.out.println("Right triangle has " + color
+        System.out.println("Right triangle has " + getColor()
                 + "color. First leg is " + firstLeg
                 + " and second leg is " + secondLeg
                 + ". Area is " + getArea());

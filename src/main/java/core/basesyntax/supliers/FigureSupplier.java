@@ -11,7 +11,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int FIGURE_COUNT = 4;
-    private static final int SIDE_LENGTH = 15;
+    private static final int RANDOM_SIDE_LENGTH_BOUND = 15;
     private static final int RADIUS = 10;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
@@ -22,27 +22,27 @@ public class FigureSupplier {
         Figure figure;
         switch (figureNumber) {
             case 0:
-                int side = random.nextInt(SIDE_LENGTH) + 1;
+                int side = random.nextInt(RANDOM_SIDE_LENGTH_BOUND) + 1;
                 figure = new Square(color, side);
                 break;
             case 1:
-                int horizontalSide = random.nextInt(SIDE_LENGTH) + 1;
-                int verticalSide = random.nextInt(SIDE_LENGTH) + 1;
+                int horizontalSide = random.nextInt(RANDOM_SIDE_LENGTH_BOUND) + 1;
+                int verticalSide = random.nextInt(RANDOM_SIDE_LENGTH_BOUND) + 1;
                 figure = new Rectangle(color,horizontalSide,verticalSide);
                 break;
             case 2:
-                int base = random.nextInt(SIDE_LENGTH) + 1;
-                int height = random.nextInt(SIDE_LENGTH) + 1;
-                int upperSide = random.nextInt(SIDE_LENGTH) + 1;
+                int base = random.nextInt(RANDOM_SIDE_LENGTH_BOUND) + 1;
+                int height = random.nextInt(RANDOM_SIDE_LENGTH_BOUND) + 1;
+                int upperSide = random.nextInt(RANDOM_SIDE_LENGTH_BOUND) + 1;
                 figure = new IsoscelesTrapezoid(color,base, height, upperSide);
                 break;
             case 3:
-                int firstLeg = random.nextInt(SIDE_LENGTH) + 1;
-                int secondLeg = random.nextInt(SIDE_LENGTH) + 1;
+                int firstLeg = random.nextInt(RANDOM_SIDE_LENGTH_BOUND) + 1;
+                int secondLeg = random.nextInt(RANDOM_SIDE_LENGTH_BOUND) + 1;
                 figure = new RightTriangle(color, firstLeg, secondLeg);
                 break;
             case 4:
-                int radius = random.nextInt(SIDE_LENGTH) + 1;
+                int radius = random.nextInt(RANDOM_SIDE_LENGTH_BOUND) + 1;
                 figure = new Circle(color,radius);
                 break;
             default:
