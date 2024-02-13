@@ -1,8 +1,6 @@
 package core.basesyntax;
 
-import core.basesyntax.figures.Circle;
-
-public class Main {
+public class Application {
     public static void main(String[] args) {
     }
 }

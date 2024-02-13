@@ -1,8 +1,5 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.AreaCalculator;
-import core.basesyntax.Drawable;
-
 public class Rectangle extends Figure {
     private final double firstSide;
     private final double secondSide;
