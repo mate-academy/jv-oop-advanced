@@ -9,13 +9,12 @@ public class Application {
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figures = new Figure[ARRAY_SIZE];
         for (int i = 0; i < figures.length;i++) {
-            if (i >= figures.length / 2) {
+            if (i < ARRAY_SIZE / 2) {
+                figures[i] = figureSupplier.getRandomFigure();
+            } else {
                 figures[i] = figureSupplier.getDefaultFigure();
-                figures[i].draw();
-                continue;
             }
-            figures[i] = figureSupplier.getRandomFigure();
-            figures[i].draw();
+           figures[i].draw();
         }
     }
 }
