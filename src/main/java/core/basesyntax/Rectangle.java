@@ -11,24 +11,14 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String getColor() {
-        return super.getColor();
-    }
-
-    @Override
-    public void setColor(String color) {
-        super.setColor(color);
-    }
-
-    @Override
     public String getPrint() {
-        return "Figure: rectangle, area: " + getArea() + "sq. units, "
+        return "Figure: rectangle, area: " + calculateArea() + "sq. units, "
                 + " width: " + width + " units, "
                 + " height: " + height + " units, " + "color: " + getColor();
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return width * height;
     }
 }
