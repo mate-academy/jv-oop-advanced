@@ -16,7 +16,10 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String draw() {
-        return super.draw() + "length: " + length + " units, width: " + width + " units";
+    public void draw() {
+        super.draw();
+        System.out.print("length: " + length
+                + " units, width: " + width + " units"
+                + System.lineSeparator());
     }
 }

@@ -10,9 +10,9 @@ public abstract class Figure implements Drawable, AreaCalculator {
     }
 
     @Override
-    public String draw() {
-        return "Figure: " + name
+    public void draw() {
+        System.out.print("Figure: " + name
                 + ", color: " + color
-                + ", area: " + (double) Math.round(getArea() * 100) / 100 + " sq. units, ";
+                + ", area: " + (double) Math.round(getArea() * 100) / 100 + " sq. units, ");
     }
 }

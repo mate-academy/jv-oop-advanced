@@ -14,7 +14,8 @@ public class Square extends Figure {
     }
 
     @Override
-    public String draw() {
-        return super.draw() + "side: " + side + " units";
+    public void draw() {
+        super.draw();
+        System.out.print("side: " + side + " units" + System.lineSeparator());
     }
 }

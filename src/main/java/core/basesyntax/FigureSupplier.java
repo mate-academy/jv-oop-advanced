@@ -8,12 +8,12 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         ColorSupplier cs = new ColorSupplier();
-        return switch (random.nextInt(FIGURE_COUNT + 1)) {
-            case 1 -> new Square(cs.getRandomColor(), getRandomDouble());
-            case 2 -> new Rectangle(cs.getRandomColor(), getRandomDouble(), getRandomDouble());
-            case 3 -> new RightTriangle(cs.getRandomColor(), getRandomDouble(), getRandomDouble());
-            case 4 -> new Circle(cs.getRandomColor(), getRandomDouble());
-            case 5 -> new IsoscelesTrapezoid(
+        return switch (random.nextInt(FIGURE_COUNT)) {
+            case 0 -> new Square(cs.getRandomColor(), getRandomDouble());
+            case 1 -> new Rectangle(cs.getRandomColor(), getRandomDouble(), getRandomDouble());
+            case 2 -> new RightTriangle(cs.getRandomColor(), getRandomDouble(), getRandomDouble());
+            case 3 -> new Circle(cs.getRandomColor(), getRandomDouble());
+            case 4 -> new IsoscelesTrapezoid(
                     cs.getRandomColor(), getRandomDouble(), getRandomDouble(), getRandomDouble());
             default -> getDefaultFigure();
         };

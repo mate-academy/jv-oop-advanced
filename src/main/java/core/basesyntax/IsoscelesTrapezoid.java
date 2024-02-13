@@ -18,9 +18,11 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String draw() {
-        return super.draw() + "upperSide: " + upperSide
+    public void draw() {
+        super.draw();
+        System.out.print("upperSide: " + upperSide
                 + " units, lowerSide: " + lowerSide
-                + " units, height: " + height + " units";
+                + " units, height: " + height + " units"
+                + System.lineSeparator());
     }
 }

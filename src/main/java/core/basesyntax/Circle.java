@@ -13,7 +13,8 @@ public class Circle extends Figure {
         return Math.PI * radius * radius;
     }
 
-    public String draw() {
-        return super.draw() + "radius: " + radius + " units";
+    public void draw() {
+        super.draw();
+        System.out.print("radius: " + radius + " units" + System.lineSeparator());
     }
 }

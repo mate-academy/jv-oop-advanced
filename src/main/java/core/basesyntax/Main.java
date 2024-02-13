@@ -12,9 +12,7 @@ public class Main {
             } else {
                 FIGURES[i] = figureSupplier.getDefaultFigure();
             }
-        }
-        for (Figure figure : FIGURES) {
-            System.out.println(figure.draw());
+            FIGURES[i].draw();
         }
     }
 }
