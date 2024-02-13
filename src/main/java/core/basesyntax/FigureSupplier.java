@@ -15,7 +15,7 @@ public class FigureSupplier {
     private static final String DEFAULT_COLOR = "White";
 
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    private Random random = new Random();
+    private final Random random = new Random();
 
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_CIRCLE_RADIUS);
