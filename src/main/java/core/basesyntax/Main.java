@@ -4,18 +4,18 @@ import core.basesyntax.figures.Figure;
 import core.basesyntax.suppliers.FigureSupplier;
 
 public class Main {
-    private static final int NUMBER_OF_FIGURES = 20;
-    private static final Figure[] FIGURES = new Figure[NUMBER_OF_FIGURES];
     private static final FigureSupplier figureSupplier = new FigureSupplier();
 
     public static void main(String[] args) {
-        for (int i = 0; i < NUMBER_OF_FIGURES; i++) {
-            if (i < NUMBER_OF_FIGURES / 2) {
-                FIGURES[i] = figureSupplier.getRandomFigure();
+        int numberOfFigures = 20;
+        Figure[] figures = new Figure[numberOfFigures];
+        for (int i = 0; i < numberOfFigures; i++) {
+            if (i < numberOfFigures / 2) {
+                figures[i] = figureSupplier.getRandomFigure();
             } else {
-                FIGURES[i] = figureSupplier.getDefaultFigure();
+                figures[i] = figureSupplier.getDefaultFigure();
             }
-            FIGURES[i].draw();
+            figures[i].draw();
         }
     }
 }

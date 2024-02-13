@@ -1,12 +1,17 @@
 package core.basesyntax.suppliers;
 
+import core.basesyntax.figures.Circle;
 import core.basesyntax.figures.Color;
-import core.basesyntax.figures.*;
-
+import core.basesyntax.figures.Figure;
+import core.basesyntax.figures.IsoscelesTrapezoid;
+import core.basesyntax.figures.Rectangle;
+import core.basesyntax.figures.RightTriangle;
+import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
+    private static final int DEFAULT_RADIUS = 10;
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
@@ -27,6 +32,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE, 10);
+        return new Circle(Color.WHITE, DEFAULT_RADIUS);
     }
 }
