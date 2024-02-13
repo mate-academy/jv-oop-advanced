@@ -4,20 +4,18 @@ public class RightTriangle extends Figure {
     private double height;
     private double side;
 
+    public RightTriangle(String color, double height, double side) {
+        super(color);
+        this.height = height;
+        this.side = side;
+    }
+
     public double getHeight() {
         return height;
     }
 
-    public void setHeight(double height) {
-        this.height = height;
-    }
-
     public double getSide() {
         return side;
-    }
-
-    public void setSide(double side) {
-        this.side = side;
     }
 
     @Override
