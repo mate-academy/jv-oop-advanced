@@ -16,21 +16,13 @@ public class RightTriangle extends Figure implements Drawable, AreaCalculator {
     @Override
     public void draw(Figure triangle) {
         System.out.println("Figure: rectangle, area: " + getArea(triangle) + " sq. units, "
-                + "first leg: " + getFirstLeg() + " units, "
-                + "second leg: " + getSecondLeg() + " units, "
+                + "first leg: " + firstLeg + " units, "
+                + "second leg: " + secondLeg + " units, "
                 + "color: " + triangle.color);
     }
 
     @Override
     public double getArea(Figure figure) {
         return this.firstLeg * this.secondLeg / 2;
-    }
-
-    public double getFirstLeg() {
-        return firstLeg;
-    }
-
-    public double getSecondLeg() {
-        return secondLeg;
     }
 }

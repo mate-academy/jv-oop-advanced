@@ -16,17 +16,9 @@ public class Rectangle extends Figure implements Drawable, AreaCalculator {
     @Override
     public void draw(Figure rectangle) {
         System.out.println("Figure: rectangle, area: " + getArea(rectangle) + " sq. units, "
-                + "first side: " + getFirstSide() + " units, "
-                + "second side: " + getSecondSide() + " units, "
+                + "first side: " + firstSide + " units, "
+                + "second side: " + secondSide + " units, "
                 + "color: " + rectangle.color);
-    }
-
-    public double getFirstSide() {
-        return firstSide;
-    }
-
-    public double getSecondSide() {
-        return secondSide;
     }
 
     @Override
