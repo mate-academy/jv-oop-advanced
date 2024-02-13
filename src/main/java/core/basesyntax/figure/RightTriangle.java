@@ -3,24 +3,11 @@ package core.basesyntax.figure;
 import core.basesyntax.supplier.Color;
 
 public class RightTriangle extends Figure {
-    private Color color;
     private double sideLength;
 
-    public RightTriangle(Color color) {
-        this.color = color;
-    }
-
-    public RightTriangle(double sideLength) {
-        this.sideLength = sideLength;
-    }
-
     public RightTriangle(Color color, double sideLength) {
-        this.color = color;
+        super(color);
         this.sideLength = sideLength;
-    }
-
-    public Color getColor() {
-        return color;
     }
 
     public double getSideLength() {
@@ -36,6 +23,6 @@ public class RightTriangle extends Figure {
     public String draw() {
         return "Figure: " + getClass().getSimpleName() + ", area: " + calculateArea()
                 + " sq. units, sideLength: " + sideLength
-                + " units, color: " + color.name();
+                + " units, color: " + getColor().name();
     }
 }

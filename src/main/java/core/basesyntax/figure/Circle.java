@@ -4,27 +4,14 @@ import core.basesyntax.supplier.Color;
 
 public class Circle extends Figure {
     private double radius;
-    private Color color;
-
-    public Circle(double radius) {
-        this.radius = radius;
-    }
-
-    public Circle(Color color) {
-        this.color = color;
-    }
 
     public Circle(Color color, double radius) {
+        super(color);
         this.radius = radius;
-        this.color = color;
     }
 
     public double getRadius() {
         return radius;
-    }
-
-    public Color getColor() {
-        return color;
     }
 
     @Override
@@ -37,6 +24,6 @@ public class Circle extends Figure {
         return "Figure: " + getClass().getSimpleName()
                 + ", area: " + calculateArea()
                 + " sq. units, radius: " + radius
-                + " units, color: " + color.name();
+                + " units, color: " + getColor().name();
     }
 }
