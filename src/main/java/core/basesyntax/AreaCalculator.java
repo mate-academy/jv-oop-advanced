@@ -4,5 +4,5 @@ import core.basesyntax.figures.Figure;
 
 public interface AreaCalculator {
 
-    double getArea(Figure figure);
+    double getArea();
 }
