@@ -1,4 +1,6 @@
-package core.basesyntax;
+package core.basesyntax.figure;
+
+import core.basesyntax.AreaCalculator;
 
 public abstract class Figure implements AreaCalculator {
     private String color;
@@ -15,5 +17,4 @@ public abstract class Figure implements AreaCalculator {
         this.color = color;
     }
 
-    public abstract String getPrint();
 }

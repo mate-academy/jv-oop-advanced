@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.figure;
 
 public class IsoscelesTrapezoid extends Figure {
     private int firstSide;
