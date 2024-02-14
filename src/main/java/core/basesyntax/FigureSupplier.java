@@ -3,6 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int MIN_RANDOM_UNITS = 1;
     private static final int MAX_RANDOM_UNITS = 11;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
@@ -10,7 +11,7 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         String randomShape = getRandomShape();
         String randomColor = colorSupplier.getRandomColor();
-        int randomUnits = random.nextInt(1, MAX_RANDOM_UNITS);
+        int randomUnits = random.nextInt(MIN_RANDOM_UNITS, MAX_RANDOM_UNITS);
 
         switch (randomShape) {
             case "SQUARE":
