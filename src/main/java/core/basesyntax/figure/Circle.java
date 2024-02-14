@@ -1,4 +1,6 @@
-package core.basesyntax;
+package core.basesyntax.figure;
+
+import core.basesyntax.Figure;
 
 public class Circle extends Figure {
     private int radius;
@@ -17,13 +19,13 @@ public class Circle extends Figure {
     }
 
     @Override
-    double calculateArea() {
-        return Math.round(Math.PI * radius * radius);
+    public double calculateArea() {
+        return Math.round(Math.PI * getRadius() * getRadius());
     }
 
     @Override
     public void draw() {
         super.draw();
-        System.out.println(", radius: " + radius + " units");
+        System.out.println(", radius: " + getRadius() + " units");
     }
 }

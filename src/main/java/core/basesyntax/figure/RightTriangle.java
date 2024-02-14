@@ -1,4 +1,6 @@
-package core.basesyntax;
+package core.basesyntax.figure;
+
+import core.basesyntax.Figure;
 
 public class RightTriangle extends Figure {
     private int firstLeg;
@@ -34,7 +36,7 @@ public class RightTriangle extends Figure {
     @Override
     public void draw() {
         super.draw();
-        System.out.println(", firstLeg: " + firstLeg + " units"
-                + ", secondLeg: " + secondLeg + " units");
+        System.out.println(", firstLeg: " + getFirstLeg() + " units"
+                + ", secondLeg: " + getSecondLeg() + " units");
     }
 }

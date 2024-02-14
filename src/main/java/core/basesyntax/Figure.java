@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements Drawable {
+public abstract class Figure implements Drawable, AreaCalculator {
     private String name;
     private String color;
 
@@ -25,12 +25,12 @@ public abstract class Figure implements Drawable {
         this.color = color;
     }
 
-    abstract double calculateArea();
+    public abstract double calculateArea();
 
     public void draw() {
-        System.out.print("Figure: " + toCamelCase(name)
+        System.out.print("Figure: " + toCamelCase(getName())
                 + ", area: " + calculateArea() + " sq. units"
-                + ", color: " + toCamelCase(color));
+                + ", color: " + toCamelCase(getColor()));
     }
 
     private String toCamelCase(String input) {
