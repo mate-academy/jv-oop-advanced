@@ -4,6 +4,12 @@ class Rectangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
+    public Rectangle(int a, int b, String str) {
+        this.firstLeg = a;
+        this.secondLeg = b;
+        setColor(str);
+    }
+
     public int getSecondLeg() {
         return secondLeg;
     }
@@ -21,13 +27,14 @@ class Rectangle extends Figure {
     }
 
     @Override
-    public Double area() {
+    public Double calculateArea() {
         return (double) firstLeg * secondLeg;
     }
 
     @Override
-    public void info() {
-        System.out.println("Figure: rectangle, area: " + area() + " sq. units, first leg: "
+    public void draw() {
+        System.out.println("Figure: rectangle, area: " + calculateArea()
+                + " sq. units, first leg: "
                 + firstLeg + ", second leg: " + secondLeg
                 + " units, color: " + getColor());
     }
