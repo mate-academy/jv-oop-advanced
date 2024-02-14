@@ -1,11 +1,14 @@
-package core.basesyntax;
+package core.basesyntax.figure;
+
+import core.basesyntax.Color;
+import core.basesyntax.Figure;
 
 public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
-    private final String color;
+    private final Color color;
 
-    public RightTriangle(double firstLeg, double secondLeg, String color) {
+    public RightTriangle(double firstLeg, double secondLeg, Color color) {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
         this.color = color;
@@ -20,7 +23,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    double getArea() {
+    public double getArea() {
         return firstLeg * secondLeg / 2;
     }
 }

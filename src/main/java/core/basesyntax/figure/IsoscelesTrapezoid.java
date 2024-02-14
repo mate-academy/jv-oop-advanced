@@ -1,12 +1,15 @@
-package core.basesyntax;
+package core.basesyntax.figure;
+
+import core.basesyntax.Color;
+import core.basesyntax.Figure;
 
 public class IsoscelesTrapezoid extends Figure {
     private double shortSide;
     private double longSide;
     private double trapezoidH;
-    private final String color;
+    private final Color color;
 
-    public IsoscelesTrapezoid(double shortSide, double longSide, double trapezoidH, String color) {
+    public IsoscelesTrapezoid(double shortSide, double longSide, double trapezoidH, Color color) {
         this.shortSide = shortSide;
         this.longSide = longSide;
         this.trapezoidH = trapezoidH;
@@ -23,7 +26,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    double getArea() {
+    public double getArea() {
         return ((longSide + shortSide) * trapezoidH) / 2;
     }
 }

@@ -1,10 +1,13 @@
-package core.basesyntax;
+package core.basesyntax.figure;
+
+import core.basesyntax.Color;
+import core.basesyntax.Figure;
 
 public class Square extends Figure {
     private double side;
-    private final String color;
+    private final Color color;
 
-    Square(double side, String color) {
+    public Square(double side, Color color) {
         this.side = side;
         this.color = color;
     }
@@ -17,7 +20,7 @@ public class Square extends Figure {
     }
 
     @Override
-    double getArea() {
+    public double getArea() {
         return side * side;
     }
 }
