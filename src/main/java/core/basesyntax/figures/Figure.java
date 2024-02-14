@@ -4,17 +4,16 @@ import core.basesyntax.interfaces.AreaCalculator;
 import core.basesyntax.interfaces.Drawable;
 
 public abstract class Figure implements Drawable, AreaCalculator {
-    private String name;
     private Color color;
 
-    public Figure(String name, Color color) {
+    public Figure(Color color) {
         this.color = color;
-        this.name = name;
     }
 
     @Override
     public void draw() {
-        System.out.print("Figure: " + name
+        System.out.print("Figure: " + getClass().getSimpleName()
+                .replace("T", " t").toLowerCase()
                 + ", color: " + color
                 + ", area: " + (double) Math.round(getArea()) + " sq. units, ");
     }

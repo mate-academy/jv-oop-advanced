@@ -4,7 +4,7 @@ public class Circle extends Figure {
     private double radius;
 
     public Circle(Color color, double radius) {
-        super("circle", color);
+        super(color);
         this.radius = radius;
     }
 
