@@ -1,23 +1,22 @@
 package core.basesyntax.model;
 
 public class Figure implements Drawable, FigureArea {
-    private String name;
-    private String color;
+    private Color color;
 
-    public Figure(String name, String color) {
-        this.name = name;
+    public Figure(Color color) {
         this.color = color;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: "
-                + "name = " + name
-                + ", color = " + color);
+                + getClass().getSimpleName()
+                + ", color = " + color
+                + ", area = " + getArea());
     }
 
     @Override
-    public double area() {
-        return 0;
+    public double getArea() {
+        throw new UnsupportedOperationException("Area calculation not implemented for this figure");
     }
 }

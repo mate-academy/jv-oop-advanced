@@ -1,23 +1,26 @@
-package core.basesyntax.model;
+package core.basesyntax.figure;
+
+import core.basesyntax.model.Color;
+import core.basesyntax.model.Figure;
 
 public class Rectangle extends Figure {
     private int firstSide;
     private int secondSide;
 
-    public Rectangle(String name, String color, int firstSide, int secondSide) {
-        super(name, color);
+    public Rectangle(Color color, int firstSide, int secondSide) {
+        super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
     }
 
     @Override
     public void draw() {
-        super.draw();
         System.out.println("firstSide: " + firstSide + ", secondSide: " + secondSide);
+        super.draw();
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return firstSide * secondSide;
     }
 }
