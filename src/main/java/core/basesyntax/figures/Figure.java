@@ -10,11 +10,7 @@ public abstract class Figure implements Drawable, AreaCalculator {
         this.color = color;
     }
 
-    @Override
-    public void draw() {
-        System.out.print("Figure: " + getClass().getSimpleName()
-                .replace("T", " t").toLowerCase()
-                + ", color: " + color
-                + ", area: " + (double) Math.round(getArea()) + " sq. units, ");
+    public Color getColor() {
+        return color;
     }
 }

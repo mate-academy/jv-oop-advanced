@@ -17,9 +17,10 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        super.draw();
-        System.out.print("firstLeg: " + firstLeg
-                + " units, secondLeg: " + secondLeg + " units"
-                + System.lineSeparator());
+        System.out.println("Figure: right triangle, color: "
+                + getColor().toString().toLowerCase()
+                + ", area: " + Math.round(getArea())
+                + " sq. units, firstLeg: " + firstLeg
+                + " units, secondLeg: " + secondLeg + " units");
     }
 }
