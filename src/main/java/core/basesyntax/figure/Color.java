@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.figure;
 
 public enum Color {
     WHITE,
@@ -10,6 +10,4 @@ public enum Color {
     PURPLE,
     PINK,
     BLACK;
-
 }
-
