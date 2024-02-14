@@ -31,10 +31,11 @@ public class FigureSupplier {
                     random.nextInt(MIN_RANDOM_NUMBER,MAX_RANDOM_NUMBER));
             case 3 -> new Square(colorSupplier.getRandomColor(),
                     random.nextInt(MIN_RANDOM_NUMBER,MAX_RANDOM_NUMBER));
-            default -> new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+            case 4 -> new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                     random.nextInt(MIN_RANDOM_NUMBER,MAX_RANDOM_NUMBER),
                     random.nextInt(MIN_RANDOM_NUMBER,MAX_RANDOM_NUMBER),
                     random.nextInt(MIN_RANDOM_NUMBER,MAX_RANDOM_NUMBER));
+            default -> getDefaultFigure();
         };
     }
 
