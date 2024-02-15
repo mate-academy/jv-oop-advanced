@@ -4,10 +4,10 @@ class Rectangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
-    public Rectangle(int a, int b, String str) {
-        this.firstLeg = a;
-        this.secondLeg = b;
-        setColor(str);
+    public Rectangle(int firstLeg, int secondLeg, String color) {
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
+        setColor(color);
     }
 
     public int getSecondLeg() {
@@ -27,7 +27,7 @@ class Rectangle extends Figure {
     }
 
     @Override
-    public Double calculateArea() {
+    public double calculateArea() {
         return (double) firstLeg * secondLeg;
     }
 

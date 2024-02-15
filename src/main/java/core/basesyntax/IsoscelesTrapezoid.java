@@ -5,11 +5,11 @@ public class IsoscelesTrapezoid extends Figure {
     private int secondBase;
     private int leg;
 
-    public IsoscelesTrapezoid(int a, int b, int c, String str) {
-        this.firstBase = a;
-        this.secondBase = b;
-        this.leg = c;
-        setColor(str);
+    public IsoscelesTrapezoid(int firstBase, int secondBase, int leg, String color) {
+        this.firstBase = firstBase;
+        this.secondBase = secondBase;
+        this.leg = leg;
+        setColor(color);
     }
 
     public int getLeg() {
@@ -37,7 +37,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public Double calculateArea() {
+    public double calculateArea() {
         return (double) leg * leg - (firstBase - secondBase) * (firstBase - secondBase) / 4;
     }
 

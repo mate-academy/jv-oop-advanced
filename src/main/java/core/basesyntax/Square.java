@@ -1,11 +1,11 @@
 package core.basesyntax;
 
-class Square extends Figure {
+public class Square extends Figure {
     private int leg;
 
-    public Square(int a, String str) {
-        this.leg = a;
-        setColor(str);
+    public Square(int leg, String color) {
+        this.leg = leg;
+        setColor(color);
     }
 
     public void setLeg(int leg) {
@@ -17,7 +17,7 @@ class Square extends Figure {
     }
 
     @Override
-    public Double calculateArea() {
+    public double calculateArea() {
         return (double) leg * leg;
     }
 

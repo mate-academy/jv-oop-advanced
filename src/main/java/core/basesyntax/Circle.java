@@ -3,9 +3,9 @@ package core.basesyntax;
 class Circle extends Figure {
     private int radius;
 
-    public Circle(int a, String str) {
-        this.radius = a;
-        setColor(str);
+    public Circle(int radius, String color) {
+        this.radius = radius;
+        setColor(color);
     }
 
     public int getRadius() {
@@ -17,7 +17,7 @@ class Circle extends Figure {
     }
 
     @Override
-    public Double calculateArea() {
+    public double calculateArea() {
         return (double) radius * radius * Math.PI;
     }
 
