@@ -3,7 +3,7 @@ package core.basesyntax;
 import core.basesyntax.suppliers.FigureSupplier;
 
 public class Main {
-    public static final int FIGURES_AMOUNT = 5;
+    private static final int FIGURES_AMOUNT = 5;
 
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();

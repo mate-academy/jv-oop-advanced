@@ -9,11 +9,11 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int MIN_RANDOM_NUMBER = 1;
-    public static final int MAX_RANDOM_NUMBER = 100;
-    public static final int DEFAULT_RADIUS = 10;
-    public static final int FIGURE_TYPES_AMOUNT = 6;
-    public static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
+    private static final int MIN_RANDOM_NUMBER = 1;
+    private static final int MAX_RANDOM_NUMBER = 100;
+    private static final int DEFAULT_RADIUS = 10;
+    private static final int FIGURE_TYPES_AMOUNT = 6;
+    private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
 
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
@@ -29,7 +29,7 @@ public class FigureSupplier {
                     getRandomNumber(),
                     getRandomNumber(),
                     getRandomNumber());
-            default -> new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
+            default -> getDefaultFigure();
         };
     }
 
@@ -39,5 +39,9 @@ public class FigureSupplier {
 
     private int getRandomNumber() {
         return random.nextInt(MIN_RANDOM_NUMBER, MAX_RANDOM_NUMBER);
+    }
+
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
