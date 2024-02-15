@@ -1,7 +1,7 @@
 package core.basesyntax.figure;
 
-import core.basesyntax.geometry_interfaces.AreaCalculator;
-import core.basesyntax.geometry_interfaces.Drawable;
+import core.basesyntax.geometry.interfaces.AreaCalculator;
+import core.basesyntax.geometry.interfaces.Drawable;
 
 public abstract class Figure implements Drawable, AreaCalculator {
     protected String color;

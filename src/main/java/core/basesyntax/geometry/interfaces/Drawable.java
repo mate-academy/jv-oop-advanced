@@ -1,4 +1,4 @@
-package core.basesyntax.geometry_interfaces;
+package core.basesyntax.geometry.interfaces;
 
 public interface Drawable {
     void draw();
