@@ -7,22 +7,22 @@ public class IsoscelesTrapezoid extends Figure {
     private double shortSide;
     private double longSide;
     private double trapezoidH;
-    private final Color color;
 
     public IsoscelesTrapezoid(double shortSide, double longSide, double trapezoidH, Color color) {
+        super.setColor(color);
         this.shortSide = shortSide;
         this.longSide = longSide;
         this.trapezoidH = trapezoidH;
-        this.color = color;
     }
 
+    @Override
     public void draw() {
         System.out.println(
                 "Figure: trapezoid, area: " + getArea()
                         + " sq. units, shortSide: " + this.shortSide
                         + " sq. units, longSide: " + this.longSide
                         + " units, h: " + this.trapezoidH
-                        + " units, color: " + this.color);
+                        + " units, color: " + super.getColor());
     }
 
     @Override

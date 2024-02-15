@@ -11,35 +11,38 @@ import core.basesyntax.figure.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final Random random = new Random();
-    private final int randomizer = random.nextInt(Shapes.values().length) + 1;
+    public static final double BOUND_OF_SIZE = 100;
+    public static final double DEFAULT_CIRCLE_RADIUS = 10;
+    public static final Color DEFAULT_CIRCLE_COLOR = Color.WHITE;
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
+        int randomizer = random.nextInt(Shapes.values().length) + 1;
         switch (randomizer) {
             case 1: return new Circle(
-                    random.nextDouble(100),
+                    random.nextDouble(BOUND_OF_SIZE),
                     ColorSupplier.getRandomColor());
             case 2: return new Square(
-                    random.nextDouble(100),
+                    random.nextDouble(BOUND_OF_SIZE),
                     ColorSupplier.getRandomColor());
             case 3: return new Rectangle(
-                    random.nextDouble(100),
-                    random.nextDouble(100),
+                    random.nextDouble(BOUND_OF_SIZE),
+                    random.nextDouble(BOUND_OF_SIZE),
                     ColorSupplier.getRandomColor());
             case 4: return new RightTriangle(
-                    random.nextDouble(100),
-                    random.nextDouble(100),
+                    random.nextDouble(BOUND_OF_SIZE),
+                    random.nextDouble(BOUND_OF_SIZE),
                     ColorSupplier.getRandomColor());
             case 5: return new IsoscelesTrapezoid(
-                    random.nextDouble(100),
-                    random.nextDouble(100),
-                    random.nextDouble(100),
+                    random.nextDouble(BOUND_OF_SIZE),
+                    random.nextDouble(BOUND_OF_SIZE),
+                    random.nextDouble(BOUND_OF_SIZE),
                     ColorSupplier.getRandomColor());
-            default: return new Circle(10, Color.WHITE);
+            default: return new Circle(DEFAULT_CIRCLE_RADIUS, DEFAULT_CIRCLE_COLOR);
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, Color.WHITE);
+        return new Circle(DEFAULT_CIRCLE_RADIUS, DEFAULT_CIRCLE_COLOR);
     }
 }

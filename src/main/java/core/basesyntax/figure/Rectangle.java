@@ -6,12 +6,11 @@ import core.basesyntax.Figure;
 public class Rectangle extends Figure {
     private double sideA;
     private double sideB;
-    private final Color color;
 
     public Rectangle(double sideA, double sideB, Color color) {
+        super.setColor(color);
         this.sideA = sideA;
         this.sideB = sideB;
-        this.color = color;
     }
 
     @Override
@@ -20,7 +19,7 @@ public class Rectangle extends Figure {
                 "Figure: rectangle, area: " + getArea()
                         + " sq. units, a: " + this.sideA
                         + " units, b: " + this.sideB
-                        + " units, color: " + this.color);
+                        + " units, color: " + super.getColor());
     }
 
     @Override

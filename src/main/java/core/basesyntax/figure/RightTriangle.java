@@ -6,20 +6,20 @@ import core.basesyntax.Figure;
 public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
-    private final Color color;
 
     public RightTriangle(double firstLeg, double secondLeg, Color color) {
+        super.setColor(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        this.color = color;
     }
 
+    @Override
     public void draw() {
         System.out.println(
                 "Figure: triangle, area: " + getArea()
                 + " sq. units, firstLeg: " + this.firstLeg
                 + " units, secondLeg: " + this.secondLeg
-                + " units, color: " + this.color);
+                + " units, color: " + super.getColor());
     }
 
     @Override

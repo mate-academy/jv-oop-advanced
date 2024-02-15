@@ -2,24 +2,20 @@ package core.basesyntax;
 
 import core.basesyntax.supplier.FigureSupplier;
 
-/**
- * Feel free to remove this class and create your own.
- */
 public class Main {
-    private static final int ITERATIONS = 6;
+    private static final int FIGURES_NUMBER = 6;
 
     public static void main(String[] args) {
-        Figure[] figures = new Figure[ITERATIONS];
+        Figure[] figures = new Figure[FIGURES_NUMBER];
         FigureSupplier figureSupplier = new FigureSupplier();
-        for (int i = 0; i < figures.length; i++) {
-            if (i < figures.length / 2) {
+        for (int i = 0; i < FIGURES_NUMBER; i++) {
+            if (i < FIGURES_NUMBER / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
+                figures[i].draw();
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
+                figures[i].draw();
             }
-        }
-        for (Figure fig: figures) {
-            fig.draw();
         }
     }
 }

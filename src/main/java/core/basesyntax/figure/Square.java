@@ -5,18 +5,18 @@ import core.basesyntax.Figure;
 
 public class Square extends Figure {
     private double side;
-    private final Color color;
 
     public Square(double side, Color color) {
+        super.setColor(color);
         this.side = side;
-        this.color = color;
     }
 
+    @Override
     public void draw() {
         System.out.println(
                 "Figure: square, area: " + getArea()
                         + " sq. units, side: " + this.side
-                        + " units, color: " + this.color);
+                        + " units, color: " + super.getColor());
     }
 
     @Override
