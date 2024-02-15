@@ -10,7 +10,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_FIGURES_TYPES = 5;
-    private static final int SIZE_LIMIT = 5;
+    private static final int SIDE_LENGTH_LIMIT = 5;
     private static final int DEFAULT_CIRCLE_RADIUS = 10;
     private static final String DEFAULT_COLOR = "White";
 
@@ -23,28 +23,36 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         String randomColor = colorSupplier.getRandomColor();
-        int sideA = getRandomSize();
+        int sideA = getRandomSideLength();
+        Figure figure;
         switch (random.nextInt(MAX_FIGURES_TYPES) + 1) {
             case 1:
-                return new Circle(randomColor, sideA);
+                figure = new Circle(randomColor, sideA);
+                break;
             case 2:
-                return new Square(randomColor, sideA);
+                figure = new Square(randomColor, sideA);
+                break;
             case 3:
-                int rectangleSideB = getRandomSize();
-                return new Rectangle(randomColor, sideA, rectangleSideB);
+                int rectangleSideB = getRandomSideLength();
+                figure = new Rectangle(randomColor, sideA, rectangleSideB);
+                break;
             case 4:
-                int triangleSideB = getRandomSize();
-                return new RightTriangle(randomColor, sideA, triangleSideB);
+                int triangleSideB = getRandomSideLength();
+                figure = new RightTriangle(randomColor, sideA, triangleSideB);
+                break;
             case 5:
-                int trapezoidSideB = getRandomSize();
-                int trapezoidHeight = getRandomSize();
-                return new IsoscelesTrapezoid(randomColor, sideA, trapezoidSideB, trapezoidHeight);
+                int trapezoidSideB = getRandomSideLength();
+                int trapezoidHeight = getRandomSideLength();
+                figure = new IsoscelesTrapezoid(randomColor, sideA,
+                                                trapezoidSideB, trapezoidHeight);
+                break;
             default:
-                return getDefaultFigure();
+                figure = getDefaultFigure();
         }
+        return figure;
     }
 
-    private int getRandomSize() {
-        return random.nextInt(SIZE_LIMIT) + 1;
+    private int getRandomSideLength() {
+        return random.nextInt(SIDE_LENGTH_LIMIT) + 1;
     }
 }
