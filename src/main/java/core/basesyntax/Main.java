@@ -11,11 +11,10 @@ public class Main {
         for (int i = 0; i < FIGURES_NUMBER; i++) {
             if (i < FIGURES_NUMBER / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
-                figures[i].draw();
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
-                figures[i].draw();
             }
+            figures[i].draw();
         }
     }
 }

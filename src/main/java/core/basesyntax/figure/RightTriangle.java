@@ -8,7 +8,7 @@ public class RightTriangle extends Figure {
     private double secondLeg;
 
     public RightTriangle(double firstLeg, double secondLeg, Color color) {
-        super.setColor(color);
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
@@ -19,7 +19,7 @@ public class RightTriangle extends Figure {
                 "Figure: triangle, area: " + getArea()
                 + " sq. units, firstLeg: " + this.firstLeg
                 + " units, secondLeg: " + this.secondLeg
-                + " units, color: " + super.getColor());
+                + " units, color: " + getColor());
     }
 
     @Override

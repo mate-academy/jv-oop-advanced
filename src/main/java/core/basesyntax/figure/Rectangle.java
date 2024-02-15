@@ -8,7 +8,7 @@ public class Rectangle extends Figure {
     private double sideB;
 
     public Rectangle(double sideA, double sideB, Color color) {
-        super.setColor(color);
+        super(color);
         this.sideA = sideA;
         this.sideB = sideB;
     }
@@ -19,7 +19,7 @@ public class Rectangle extends Figure {
                 "Figure: rectangle, area: " + getArea()
                         + " sq. units, a: " + this.sideA
                         + " units, b: " + this.sideB
-                        + " units, color: " + super.getColor());
+                        + " units, color: " + getColor());
     }
 
     @Override

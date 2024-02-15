@@ -9,7 +9,7 @@ public class IsoscelesTrapezoid extends Figure {
     private double trapezoidH;
 
     public IsoscelesTrapezoid(double shortSide, double longSide, double trapezoidH, Color color) {
-        super.setColor(color);
+        super(color);
         this.shortSide = shortSide;
         this.longSide = longSide;
         this.trapezoidH = trapezoidH;
