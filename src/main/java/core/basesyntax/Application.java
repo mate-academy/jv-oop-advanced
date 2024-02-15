@@ -12,11 +12,11 @@ public class Application {
         for (int i = 0; i < FIGURES_COUNT; i++) {
             if (i < FIGURES_COUNT / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
-                figures[i].draw();
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
-                figures[i].draw();
             }
+            figures[i].draw();
+
         }
     }
 }
