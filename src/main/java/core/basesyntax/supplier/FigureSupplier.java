@@ -1,6 +1,6 @@
 package core.basesyntax.supplier;
 
-import core.basesyntax.enums.Color;
+import core.basesyntax.constant.Color;
 import core.basesyntax.figure.Circle;
 import core.basesyntax.figure.Figure;
 import core.basesyntax.figure.IsoscelesTrapezoid;
@@ -14,7 +14,6 @@ public class FigureSupplier {
     private static final int DEFAULT_RADIUS_FOR_CIRCLE = 10;
     private static final String DEFAULT_COLOR = Color.WHITE.name();
     private final ColorSupplier colorSupplier = new ColorSupplier();
-
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
@@ -32,7 +31,7 @@ public class FigureSupplier {
             case 4:
                 return new Circle(colorSupplier.getRandomColor(), areaValue);
             default:
-                return null;
+                return getDefaultFigure();
         }
     }
 

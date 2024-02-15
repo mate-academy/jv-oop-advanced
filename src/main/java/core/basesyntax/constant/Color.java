@@ -1,4 +1,4 @@
-package core.basesyntax.enums;
+package core.basesyntax.constant;
 
 public enum Color {
     WHITE,

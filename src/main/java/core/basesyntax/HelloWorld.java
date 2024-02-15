@@ -3,9 +3,6 @@ package core.basesyntax;
 import core.basesyntax.figure.Figure;
 import core.basesyntax.supplier.FigureSupplier;
 
-/**
- * Feel free to remove this class and create your own.
- */
 public class HelloWorld {
     private static final int SIZE_OF_FIGURES_ARRAY = 6;
     private static final FigureSupplier figureSupplier = new FigureSupplier();
@@ -19,9 +16,8 @@ public class HelloWorld {
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
+            figures[i].draw();
         }
-        for (Figure figure : figures) {
-            figure.draw();
-        }
+
     }
 }
