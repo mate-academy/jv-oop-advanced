@@ -32,7 +32,7 @@ public class FigureSupplier {
                 return new RightTriangle(colorSupplier.getRandomColor(),
                         getRandomValue(), getRandomValue());
             default:
-                return new Circle(Color.WHITE, DEFAULT_RADIUS);
+                return getRandomFigure();
 
         }
     }
