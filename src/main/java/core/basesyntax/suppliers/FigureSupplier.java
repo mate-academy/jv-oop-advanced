@@ -9,7 +9,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_VALUE = 100;
-    private static final String DEFAULT_COLOR = "White";
+    private static final String DEFAULT_COLOR = Color.WHITE.getText();
     private static final int DEFAULT_RADIUS = 10;
     private final Random random;
     private final ColorSupplier colorSupplier;
