@@ -1,5 +1,6 @@
 package core.basesyntax;
 
+import core.basesyntax.figures.Figure;
 import core.basesyntax.suppliers.FigureSupplier;
 
 public class Main {
@@ -7,9 +8,11 @@ public class Main {
 
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
+        Figure[] figures = new Figure[FIGURES_AMOUNT];
 
         for (int i = 0; i < FIGURES_AMOUNT; i++) {
-            figureSupplier.getRandomFigure().draw();
+            figures[i] = figureSupplier.getRandomFigure();
+            figures[i].draw();
             System.out.println();
         }
     }
