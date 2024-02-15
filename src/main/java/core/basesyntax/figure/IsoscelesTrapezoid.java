@@ -1,4 +1,6 @@
-package core.basesyntax;
+package core.basesyntax.figure;
+
+import core.basesyntax.figure.Figure;
 
 public class IsoscelesTrapezoid extends Figure {
     private double height;

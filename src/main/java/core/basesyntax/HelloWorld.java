@@ -1,5 +1,8 @@
 package core.basesyntax;
 
+import core.basesyntax.figure.Figure;
+import core.basesyntax.supplier.FigureSupplier;
+
 /**
  * Feel free to remove this class and create your own.
  */
