@@ -10,7 +10,7 @@ import core.basesyntax.figure.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int NUMBERS_OF_FIGURES = 4;
+    private static final int NUMBERS_OF_FIGURES = 5;
     private static final int DEFAULT_RADIUS_FOR_CIRCLE = 10;
     private static final String DEFAULT_COLOR = Color.WHITE.name();
     private final ColorSupplier colorSupplier = new ColorSupplier();
@@ -29,8 +29,10 @@ public class FigureSupplier {
                 return new RightTriangle(colorSupplier.getRandomColor(), areaValue, areaValue);
             case 3 :
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), areaValue, areaValue);
-            default:
+            case 4:
                 return new Circle(colorSupplier.getRandomColor(), areaValue);
+            default:
+                return null;
         }
     }
 
