@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.figures;
 
 public class Rectangle extends Figure {
     private double sideA;
@@ -17,8 +17,8 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + this.area()
-                          + "sq. units, first side: " + this.sideA + "units, second side: "
-                          + this.sideB + "units, color: " + this.color);
+        System.out.println("Figure: rectangle, area: " + area()
+                          + "sq. units, first side: " + sideA + "units, second side: "
+                          + sideB + "units, color: " + color);
     }
 }

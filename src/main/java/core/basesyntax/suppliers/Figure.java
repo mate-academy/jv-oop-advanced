@@ -1,10 +1,9 @@
-package core.basesyntax;
+package core.basesyntax.suppliers;
 
-public enum Shape {
+public enum Figure {
     CIRCLE,
     ISOSCELES_TRAPEZOID,
     RECTANGLE,
     RIGHT_TRIANGLE,
     SQUARE
-
 }
