@@ -4,8 +4,8 @@ public class Square extends Figure {
     private int leg;
 
     public Square(int leg, String color) {
+        super(color);
         this.leg = leg;
-        setColor(color);
     }
 
     public void setLeg(int leg) {
