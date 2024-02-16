@@ -13,29 +13,30 @@ public class FigureSupplier {
     private static final int NUMBERS_OF_FIGURES = 5;
     private static final int DEFAULT_RADIUS_FOR_CIRCLE = 10;
     private static final String DEFAULT_COLOR = Color.WHITE.name();
+
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
         int type = random.nextInt(NUMBERS_OF_FIGURES);
-        double areaValue = random.nextDouble();
-        switch (type) {
-            case 0 :
-                return new Rectangle(colorSupplier.getRandomColor(), areaValue, areaValue);
-            case 1 :
-                return new Square(colorSupplier.getRandomColor(), areaValue);
-            case 2 :
-                return new RightTriangle(colorSupplier.getRandomColor(), areaValue, areaValue);
-            case 3 :
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), areaValue, areaValue);
-            case 4:
-                return new Circle(colorSupplier.getRandomColor(), areaValue);
-            default:
-                return getDefaultFigure();
-        }
+        return switch (type) {
+            case 0 -> new Rectangle(colorSupplier.getRandomColor(),
+                    getRandomDouble(), getRandomDouble());
+            case 1 -> new Square(colorSupplier.getRandomColor(), getRandomDouble());
+            case 2 -> new RightTriangle(colorSupplier.getRandomColor(),
+                    getRandomDouble(), getRandomDouble());
+            case 3 -> new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                    getRandomDouble(), getRandomDouble());
+            case 4 -> new Circle(colorSupplier.getRandomColor(), getRandomDouble());
+            default -> getDefaultFigure();
+        };
     }
 
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS_FOR_CIRCLE);
+    }
+
+    private double getRandomDouble() {
+        return random.nextDouble();
     }
 }
