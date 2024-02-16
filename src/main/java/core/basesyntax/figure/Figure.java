@@ -1,8 +1,9 @@
 package core.basesyntax.figure;
 
 public abstract class Figure implements Drawable, AreaCalculator {
+    private static final String REGEX_STRING = "(\\p{Ll})(\\p{Lu})";
+
     protected Color color;
-    private static final String REGEX = "(\\p{Ll})(\\p{Lu})";
 
     public Figure(Color color) {
         this.color = color;
@@ -10,7 +11,7 @@ public abstract class Figure implements Drawable, AreaCalculator {
 
     public void draw() {
         String figureName = this.getClass().getSimpleName()
-                .replaceAll(Figure.REGEX, "$1 $2")
+                .replaceAll(Figure.REGEX_STRING, "$1 $2")
                 .toLowerCase();
         System.out.print("Figure: " + figureName
                 + ", area: " + calculateArea()
