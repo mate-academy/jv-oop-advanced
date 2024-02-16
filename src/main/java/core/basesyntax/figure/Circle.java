@@ -5,8 +5,8 @@ import core.basesyntax.Figure;
 public class Circle extends Figure {
     private int radius;
 
-    public Circle(String name, String color, int radius) {
-        super(name, color);
+    public Circle(String color, int radius) {
+        super(color);
         this.radius = radius;
     }
 
