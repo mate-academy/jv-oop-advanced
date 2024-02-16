@@ -2,6 +2,6 @@ package core.basesyntax;
 
 interface FigureArea {
 
-    double getArea();
+    double calculateArea();
 }
 

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-abstract class ColorsOfFigures implements FigureArea, FigureOutput {
+public abstract class ColorsOfFigures implements FigureArea, Drawable {
     private String color;
 
     public ColorsOfFigures(String color) {
