@@ -12,6 +12,8 @@ import java.util.Random;
 public class FigureSupplier {
     private static final Color DEFAULT_COLOR = Color.WHITE;
     private static final double DEFAULT_SIZE = 10;
+    private static final int NUMBER_OF_CLASSES = 5;
+    private static final int MAX_BOUNDARY = 100;
     private final ColorSupplier colorSupplier;
     private final Random random;
 
@@ -21,8 +23,7 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        final int numberOfClasses = 5;
-        int index = random.nextInt(numberOfClasses);
+        int index = random.nextInt(NUMBER_OF_CLASSES);
         Color randomColor = colorSupplier.getRandomColor();
         Figure randomFigure;
         switch (index) {
@@ -61,7 +62,6 @@ public class FigureSupplier {
     }
 
     private double getRandomValue() {
-        final int maxBoundary = 100;
-        return random.nextDouble(maxBoundary);
+        return random.nextDouble(MAX_BOUNDARY);
     }
 }
