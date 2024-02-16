@@ -1,6 +1,7 @@
 package core.basesyntax.suppliers;
 
 import core.basesyntax.figures.Circle;
+import core.basesyntax.figures.Figure;
 import core.basesyntax.figures.IsoscelesTrapezoid;
 import core.basesyntax.figures.Rectangle;
 import core.basesyntax.figures.RightTriangle;
@@ -9,21 +10,21 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_VALUE = 100;
-    private static final String DEFAULT_COLOR = Color.WHITE.getText();
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
     private static final int DEFAULT_RADIUS = 10;
     private final Random random;
     private final ColorSupplier colorSupplier;
-    private Figure figure;
+    private Shape figure;
 
     public FigureSupplier() {
         random = new Random();
         colorSupplier = new ColorSupplier();
     }
 
-    public core.basesyntax.figures.Figure getRandomFigure() {
+    public Figure getRandomFigure() {
         String color = colorSupplier.getRandomColor();
-        int index = random.nextInt(Figure.values().length);
-        figure = Figure.values()[index];
+        int index = random.nextInt(Shape.values().length);
+        figure = Shape.values()[index];
 
         switch (figure) {
             case CIRCLE:
