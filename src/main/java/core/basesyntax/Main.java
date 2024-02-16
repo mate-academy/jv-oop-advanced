@@ -13,7 +13,6 @@ public class Main {
         for (int i = 0; i < FIGURES_AMOUNT; i++) {
             figures[i] = figureSupplier.getRandomFigure();
             figures[i].draw();
-            System.out.println();
         }
     }
 }
