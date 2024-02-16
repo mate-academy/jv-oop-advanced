@@ -10,7 +10,7 @@ public class Circle extends Figure {
 
     @Override
     public double getArea() {
-        return Math.PI * radius * radius; // не використовував pow оскільки всього 2 степінь
+        return Math.PI * Math.pow(radius, 2);
     }
 
     @Override
