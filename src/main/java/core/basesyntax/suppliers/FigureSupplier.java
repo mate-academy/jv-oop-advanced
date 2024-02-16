@@ -17,7 +17,6 @@ public class FigureSupplier {
     private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
 
     private final Random random = new Random();
-    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         return switch (random.nextInt(FIGURE_TYPES_AMOUNT)) {
@@ -35,7 +34,7 @@ public class FigureSupplier {
     }
 
     private String getRandomColor() {
-        return colorSupplier.getRandomColor();
+        return new ColorSupplier().getRandomColor();
     }
 
     private int getRandomNumber() {
