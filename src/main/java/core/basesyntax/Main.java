@@ -11,7 +11,7 @@ public class Main {
         Figure[] figures = new Figure[FIGURES_AMOUNT];
 
         for (int i = 0; i < FIGURES_AMOUNT; i++) {
-            if (FIGURES_AMOUNT - i > FIGURES_AMOUNT / 2) {
+            if (i < FIGURES_AMOUNT / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
