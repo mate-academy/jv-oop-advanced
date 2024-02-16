@@ -1,9 +1,9 @@
 package core.basesyntax.supplier;
 
-import core.basesyntax.Colors;
-import core.basesyntax.Figure;
-import core.basesyntax.Shapes;
+import core.basesyntax.Color;
+import core.basesyntax.Shape;
 import core.basesyntax.figure.Circle;
+import core.basesyntax.figure.Figure;
 import core.basesyntax.figure.IsoscelesTrapezoid;
 import core.basesyntax.figure.Rectangle;
 import core.basesyntax.figure.RightTriangle;
@@ -18,22 +18,26 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int randomShape = random.nextInt(Shapes.values().length);
+        int randomShape = random.nextInt(Shape.values().length);
         String randomColor = colorSupplier.getRandomColor();
-        int randomUnits = random.nextInt(MIN_RANDOM_UNITS, MAX_RANDOM_UNITS);
 
         return switch (randomShape) {
-            case 0 -> new Square(randomColor, randomUnits);
-            case 1 -> new Rectangle(randomColor, randomUnits, randomUnits);
-            case 2 -> new RightTriangle(randomColor, randomUnits, randomUnits);
-            case 3 -> new Circle(randomColor, randomUnits);
-            case 4 -> new IsoscelesTrapezoid(randomColor, randomUnits, randomUnits, randomUnits);
+            case 0 -> new Square(randomColor, getRandomUnits());
+            case 1 -> new Rectangle(randomColor, getRandomUnits(), getRandomUnits());
+            case 2 -> new RightTriangle(randomColor, getRandomUnits(), getRandomUnits());
+            case 3 -> new Circle(randomColor, getRandomUnits());
+            case 4 -> new IsoscelesTrapezoid(
+                    randomColor, getRandomUnits(), getRandomUnits(), getRandomUnits());
             default -> throw new IllegalArgumentException("Unexpected value: " + randomShape);
         };
     }
 
     public Figure getDefaultFigure() {
-        String defaultColor = Colors.WHITE.name();
+        String defaultColor = Color.WHITE.name();
         return new Circle(defaultColor, DEFAULT_UNITS);
+    }
+
+    private int getRandomUnits() {
+        return random.nextInt(MIN_RANDOM_UNITS, MAX_RANDOM_UNITS);
     }
 }

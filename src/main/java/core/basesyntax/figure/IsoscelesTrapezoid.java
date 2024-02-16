@@ -1,7 +1,5 @@
 package core.basesyntax.figure;
 
-import core.basesyntax.Figure;
-
 public class IsoscelesTrapezoid extends Figure {
     private int firstLeg;
     private int secondLeg;
@@ -46,8 +44,8 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public void draw() {
         super.draw();
-        System.out.println(", firstLeg: " + getFirstLeg() + " units"
-                + ", secondLeg: " + getSecondLeg() + " units"
-                + ", height" + getHeight() + " units");
+        System.out.println(", firstLeg: " + firstLeg + " units"
+                + ", secondLeg: " + secondLeg + " units"
+                + ", height" + height + " units");
     }
 }

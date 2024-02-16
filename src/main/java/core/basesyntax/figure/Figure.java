@@ -1,4 +1,7 @@
-package core.basesyntax;
+package core.basesyntax.figure;
+
+import core.basesyntax.AreaCalculator;
+import core.basesyntax.Drawable;
 
 public abstract class Figure implements Drawable, AreaCalculator {
     private String color;
@@ -20,6 +23,6 @@ public abstract class Figure implements Drawable, AreaCalculator {
     public void draw() {
         System.out.print("Figure: " + getClass().getSimpleName()
                 + ", area: " + calculateArea() + " sq. units"
-                + ", color: " + getColor().toLowerCase());
+                + ", color: " + color.toLowerCase());
     }
 }
