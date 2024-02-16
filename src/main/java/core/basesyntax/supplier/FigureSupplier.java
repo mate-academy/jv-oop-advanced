@@ -23,39 +23,40 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         final int numberOfClasses = 5;
         int index = random.nextInt(numberOfClasses);
-        Color color = colorSupplier.getRandomColor();
-
+        Color randomColor = colorSupplier.getRandomColor();
+        Figure randomFigure;
         switch (index) {
             case 0:
-                double radius = getRandomValues();
-                return new Circle(color, radius);
+                double radius = getRandomValue();
+                return new Circle(randomColor, radius);
             case 1:
-                double side = getRandomValues();
-                return new Square(color, side);
+                double side = getRandomValue();
+                randomFigure =  new Square(randomColor, side);
             case 2:
-                double firstBase = getRandomValues();
-                double secondBase = getRandomValues();
-                double height = getRandomValues();
-                return new IsoscelesTrapezoid(color, firstBase, secondBase, height);
+                double firstBase = getRandomValue();
+                double secondBase = getRandomValue();
+                double height = getRandomValue();
+                randomFigure = new IsoscelesTrapezoid(randomColor, firstBase, secondBase, height);
             case 3:
-                double side1 = getRandomValues();
-                double side2 = getRandomValues();
-                return new Rectangle(color, side1, side2);
+                double side1 = getRandomValue();
+                double side2 = getRandomValue();
+                randomFigure = new Rectangle(randomColor, side1, side2);
             case 4:
-                double firstLeg = getRandomValues();
-                double secondLeg = getRandomValues();
-                return new RightTriangle(color, firstLeg, secondLeg);
+                double firstLeg = getRandomValue();
+                double secondLeg = getRandomValue();
+                randomFigure = new RightTriangle(randomColor, firstLeg, secondLeg);
             default:
-                return getDefaultFigure();
+                randomFigure = getDefaultFigure();
         }
+        return randomFigure;
     }
 
-    public static Figure getDefaultFigure() {
+    public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_SIZE);
     }
 
-    private double getRandomValues() {
-        int maxBoundary = 100;
-        return this.random.nextDouble(maxBoundary);
+    private double getRandomValue() {
+        final int maxBoundary = 100;
+        return random.nextDouble(maxBoundary);
     }
 }

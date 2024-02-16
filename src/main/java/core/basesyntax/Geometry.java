@@ -6,22 +6,19 @@ import java.util.Random;
 
 public class Geometry {
 
+    private static final int MAX_NUMBER_OF_FIGURES_TO_GENERATE = 20;
     public static void main(String[] args) {
-        final int maxNumberOfFiguresToGenerate = 20;
         Random random = new Random();
-        int numberOfFigures = random.nextInt(maxNumberOfFiguresToGenerate) + 1;
+        int numberOfFigures = random.nextInt(MAX_NUMBER_OF_FIGURES_TO_GENERATE) + 1;
         Figure[] figures = new Figure[numberOfFigures];
         FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < figures.length; i++) {
             if (i < figures.length / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
             } else {
-                figures[i] = FigureSupplier.getDefaultFigure();
+                figures[i] = figureSupplier.getDefaultFigure();
             }
-        }
-
-        for (Figure figure : figures) {
-            figure.draw();
+            figures[i].draw();
         }
     }
 }
