@@ -4,9 +4,10 @@ import java.util.Random;
 
 public class FigureSupplier {
     private Random random = new Random();
+    private static final int FIGURE_COUNT = 5;
 
     public Figure getRandomFigure() {
-        switch (random.nextInt(5)) {
+        switch (random.nextInt(FIGURE_COUNT)) {
             case 0:
                 return new Square(random.nextDouble() * 10 + 1, "green");
             case 1:
