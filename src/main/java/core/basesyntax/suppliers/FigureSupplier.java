@@ -18,6 +18,8 @@ public class FigureSupplier {
         int index = random.nextInt(RANDOM_BOUND);
         int size1 = random.nextInt(SIZE_BOUND) + 1;
         int size2 = random.nextInt(SIZE_BOUND) + 1;
+        int size3 = random.nextInt(SIZE_BOUND) + 1;
+
         GeometricFigure figure = GeometricFigure.values()[index];
         String color = colorSupplier.getRandomColor();
 
@@ -32,7 +34,7 @@ public class FigureSupplier {
                 return new Rectangle(color, size1, size2);
             }
             case TRAPEZOID -> {
-                return new IsoscelesTrapezoid(color, size1, size2, random.nextInt(SIZE_BOUND));
+                return new IsoscelesTrapezoid(color, size1, size2, size3);
             }
             default -> {
                 return new Circle(color, size1);
