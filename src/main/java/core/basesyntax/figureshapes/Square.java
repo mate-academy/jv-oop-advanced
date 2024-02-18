@@ -1,9 +1,8 @@
 package core.basesyntax.figureshapes;
 
 import core.basesyntax.Figure;
-import core.basesyntax.FigureArea;
 
-public class Square extends Figure implements FigureArea {
+public class Square extends Figure {
     private int side;
 
     public Square(int side, String color) {

@@ -1,9 +1,8 @@
 package core.basesyntax.figureshapes;
 
 import core.basesyntax.Figure;
-import core.basesyntax.FigureArea;
 
-public class Rectangle extends Figure implements FigureArea {
+public class Rectangle extends Figure {
     private int length;
     private int width;
 

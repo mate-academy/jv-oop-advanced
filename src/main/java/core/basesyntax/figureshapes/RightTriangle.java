@@ -1,9 +1,8 @@
 package core.basesyntax.figureshapes;
 
 import core.basesyntax.Figure;
-import core.basesyntax.FigureArea;
 
-public class RightTriangle extends Figure implements FigureArea {
+public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 

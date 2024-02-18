@@ -1,9 +1,8 @@
 package core.basesyntax.figureshapes;
 
 import core.basesyntax.Figure;
-import core.basesyntax.FigureArea;
 
-public class Circle extends Figure implements FigureArea {
+public class Circle extends Figure {
     private int radius;
 
     public Circle(int radius,String color) {

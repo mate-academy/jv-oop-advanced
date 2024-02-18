@@ -1,9 +1,8 @@
 package core.basesyntax.figureshapes;
 
 import core.basesyntax.Figure;
-import core.basesyntax.FigureArea;
 
-public class IsoscelesTrapezoid extends Figure implements FigureArea {
+public class IsoscelesTrapezoid extends Figure {
     private int upperBase;
     private int lowerBase;
     private int height;
