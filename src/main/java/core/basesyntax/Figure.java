@@ -8,8 +8,6 @@ public abstract class Figure implements Drawable, AreaCalculable {
     }
 
     public void draw() {
-        System.out.println("Figure: " + this.getClass().getSimpleName() + ", area: "
-                + getArea() + " sq. units, color: " + color);
     }
 }
 
