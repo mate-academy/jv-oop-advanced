@@ -1,29 +1,28 @@
 package core.basesyntax.figure;
 
-import core.basesyntax.supplier.Color;
+import core.basesyntax.colors.Color;
 
 public class Square extends Figure {
     private final double side;
 
-    public Square(double side, Color randomColor, String name) {
-        super(randomColor, name);
+    public Square(double side, Color randomColor) {
+        super(randomColor, "Square");
         this.side = side;
     }
 
     @Override
     public double calculateArea() {
-        return side * 2;
+        return side * side;
     }
 
     @Override
     public void draw() {
-        String formatedResult = "Figure: " + getFigureName()
+        System.out.println("Figure: " + getFigureName()
                 + System.lineSeparator()
-                + "area: " + side + " sq. units"
+                + "area: " + calculateArea() + " sq. units"
                 + System.lineSeparator()
                 + "a: " + side + " units"
                 + System.lineSeparator()
-                + "color: " + getColor();
-        System.out.println(formatedResult);
+                + "color: " + getColor());
     }
 }

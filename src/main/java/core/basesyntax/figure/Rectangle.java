@@ -1,13 +1,13 @@
 package core.basesyntax.figure;
 
-import core.basesyntax.supplier.Color;
+import core.basesyntax.colors.Color;
 
 public class Rectangle extends Figure {
     private final double firstSide;
     private final double secondSide;
 
-    public Rectangle(double firstSide, double secondSide, Color randomColor, String name) {
-        super(randomColor, name);
+    public Rectangle(double firstSide, double secondSide, Color randomColor) {
+        super(randomColor, "Rectangle");
         this.firstSide = firstSide;
         this.secondSide = secondSide;
     }
@@ -19,7 +19,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        String formatedResult = "Figure: " + getFigureName()
+        System.out.println("Figure: " + getFigureName()
                 + System.lineSeparator()
                 + "area: " + calculateArea() + " sq. units"
                 + System.lineSeparator()
@@ -27,7 +27,6 @@ public class Rectangle extends Figure {
                 + System.lineSeparator()
                 + "b: " + secondSide + " units"
                 + System.lineSeparator()
-                + "color: " + getColor();
-        System.out.println(formatedResult);
+                + "color: " + getColor());
     }
 }

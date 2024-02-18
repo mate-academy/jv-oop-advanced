@@ -1,12 +1,12 @@
 package core.basesyntax.figure;
 
-import core.basesyntax.supplier.Color;
+import core.basesyntax.colors.Color;
 
 public class RightTriangle extends Figure {
     private final double side;
 
-    public RightTriangle(double side, Color randomColor, String name) {
-        super(randomColor, name);
+    public RightTriangle(double side, Color randomColor) {
+        super(randomColor, "RightTriangle");
         this.side = side;
     }
 
@@ -17,13 +17,12 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        String formatedResult = "Figure: " + getFigureName()
+        System.out.println("Figure: " + getFigureName()
                 + System.lineSeparator()
                 + "area: " + calculateArea() + " sq. units"
                 + System.lineSeparator()
                 + "a: " + side + " units"
                 + System.lineSeparator()
-                + "color: " + getColor();
-        System.out.println(formatedResult);
+                + "color: " + getColor());
     }
 }

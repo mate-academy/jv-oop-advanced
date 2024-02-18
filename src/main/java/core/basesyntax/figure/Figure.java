@@ -1,8 +1,8 @@
 package core.basesyntax.figure;
 
-import core.basesyntax.supplier.AreaCalculator;
-import core.basesyntax.supplier.Color;
-import core.basesyntax.supplier.Drawable;
+import core.basesyntax.behavior.AreaCalculator;
+import core.basesyntax.behavior.Drawable;
+import core.basesyntax.colors.Color;
 
 public class Figure implements Drawable, AreaCalculator {
     private final String figureName;

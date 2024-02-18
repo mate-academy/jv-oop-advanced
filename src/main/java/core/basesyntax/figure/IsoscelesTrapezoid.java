@@ -1,6 +1,6 @@
 package core.basesyntax.figure;
 
-import core.basesyntax.supplier.Color;
+import core.basesyntax.colors.Color;
 
 public class IsoscelesTrapezoid extends Figure {
     private final double firstBase;
@@ -8,8 +8,8 @@ public class IsoscelesTrapezoid extends Figure {
     private final double height;
 
     public IsoscelesTrapezoid(double firstBase, double secondBase, double height,
-                               Color randomColor, String name) {
-        super(randomColor, name);
+                              Color randomColor) {
+        super(randomColor, "IsoscelesTrapezoid");
         this.firstBase = firstBase;
         this.secondBase = secondBase;
         this.height = height;
@@ -22,7 +22,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        String formatedResult = "Figure: " + getFigureName()
+        System.out.println("Figure: " + getFigureName()
                 + System.lineSeparator()
                 + "area: " + calculateArea() + " sq. units"
                 + System.lineSeparator()
@@ -32,7 +32,6 @@ public class IsoscelesTrapezoid extends Figure {
                 + System.lineSeparator()
                 + "height: " + height + " units"
                 + System.lineSeparator()
-                + "color: " + getColor();
-        System.out.println(formatedResult);
+                + "color: " + getColor());
     }
 }
