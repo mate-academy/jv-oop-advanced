@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class HelloWorld {
-    private static FigureSupplier figureSupplier = new FigureSupplier();
+    private static final FigureSupplier figureSupplier = new FigureSupplier();
     private static final int NUMBER_OF_FIGURES = 6;
 
     public static void main(String[] args) {
