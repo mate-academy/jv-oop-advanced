@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import core.basesyntax.figures.Figure;
 
-public class Application {
+public class Main {
     private static final int MAX_FIGURES = 6;
 
     public static void main(String[] args) {
