@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class HelloWorld {
-    public static final int NUMBERS_OF_FIGURES = 6;
+    private static final int NUMBERS_OF_FIGURES = 6;
 
     public static void main(String[] args) {
         ColorSupplier colorSupplier = new ColorSupplier();
