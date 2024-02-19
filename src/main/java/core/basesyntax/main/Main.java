@@ -1,6 +1,6 @@
-package core.basesyntax.Main;
+package core.basesyntax.main;
 
-import core.basesyntax.Suppliers.FigureSupplier;
+import core.basesyntax.suppliers.FigureSupplier;
 
 public class Main {
     private static final int TEST_ARRAY = 6;

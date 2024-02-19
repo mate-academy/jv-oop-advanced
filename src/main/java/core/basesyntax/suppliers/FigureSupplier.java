@@ -1,7 +1,7 @@
-package core.basesyntax.Suppliers;
+package core.basesyntax.suppliers;
 
-import core.basesyntax.Colors.Color;
-import core.basesyntax.Figures.*;
+import core.basesyntax.colors.Color;
+import core.basesyntax.figures.*;
 
 import java.util.Random;
 
@@ -35,7 +35,7 @@ public class FigureSupplier {
                 result = new Rectangle(colorSupplier.getRandomColor(), getRandomSize(),
                         getRandomSize()).getDraw();
             case 5:
-                result = new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomSize(),
+                result = new SoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomSize(),
                         getRandomSize(), getRandomSize()).getDraw();
         }
         return result;

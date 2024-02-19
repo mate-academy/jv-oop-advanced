@@ -1,7 +1,7 @@
-package core.basesyntax.Figures;
+package core.basesyntax.figures;
 
-import core.basesyntax.Interfaces.AreaCalculator;
-import core.basesyntax.Interfaces.Draw;
+import core.basesyntax.interfaces.AreaCalculator;
+import core.basesyntax.interfaces.Draw;
 
 public abstract class Figure implements AreaCalculator, Draw {
     private String color;

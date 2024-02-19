@@ -1,26 +1,26 @@
-package core.basesyntax.Figures;
+package core.basesyntax.figures;
 
-public class Square extends Figure {
-    private int side;
+public class Circle extends Figure {
+    private int radius;
 
-    public Square(int side, String color) {
+    public Circle(int radius, String color) {
         super(color);
-        this.side = side;
+        this.radius = radius;
     }
 
     @Override
     public double getArea() {
-        return side * side;
+        return (int) (Math.PI * radius * radius);
     }
 
     @Override
     public String getDraw() {
-        return "Figure: square, "
+        return "Figure: circle, "
                 + "area: "
                 + getArea()
                 + " sq. units, "
-                + "side: "
-                + side
+                + "radius: "
+                + radius
                 + " units, "
                 + "color: "
                 + getColor();
