@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.figures;
 
 public class Circle extends Figure {
     private double radius;
@@ -8,14 +8,14 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
-    public double getArea() {
+    public double calculateArea() {
         return Math.PI * radius * radius;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: circle, area: "
-                + getArea() + " sq. units, radius: "
+                + calculateArea() + " sq. units, radius: "
                 + radius + " units, color: "
                 + getColor().toLowerCase());
     }

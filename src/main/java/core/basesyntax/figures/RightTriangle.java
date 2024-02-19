@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.figures;
 
 public class RightTriangle extends Figure {
     private double firstLeg;
@@ -11,14 +11,14 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return (firstLeg * secondLeg) / 2;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: triangle, area: "
-                + getArea() + " sq. units, firstLeg: "
+                + calculateArea() + " sq. units, firstLeg: "
                 + firstLeg + " units, secondLeg "
                 + secondLeg + " units, color: "
                 + getColor().toLowerCase());

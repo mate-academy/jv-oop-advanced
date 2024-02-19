@@ -1,5 +1,8 @@
 package core.basesyntax;
 
+import core.basesyntax.figures.Figure;
+import core.basesyntax.suppliers.FigureSupplier;
+
 /**
  * Feel free to remove this class and create your own.
  */
@@ -15,10 +18,7 @@ public class Main {
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
-        }
-
-        for (Figure figure: figures) {
-            figure.draw();
+            figures[i].draw();
         }
     }
 

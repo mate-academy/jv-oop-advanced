@@ -1,5 +1,13 @@
-package core.basesyntax;
+package core.basesyntax.suppliers;
 
+import core.basesyntax.enums.Color;
+import core.basesyntax.enums.FigureType;
+import core.basesyntax.figures.Circle;
+import core.basesyntax.figures.Figure;
+import core.basesyntax.figures.IsoscelesTrapezoid;
+import core.basesyntax.figures.Rectangle;
+import core.basesyntax.figures.RightTriangle;
+import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
@@ -29,11 +37,14 @@ public class FigureSupplier {
                 return new RightTriangle(colorSupplier.getRandomColor(),
                         random.nextDouble(SIZE_RANGE),
                         random.nextDouble(SIZE_RANGE));
-            default:
+            case ISOSCELES_TRAPEZOID:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                         random.nextDouble(SIZE_RANGE),
                         random.nextDouble(SIZE_RANGE),
                         random.nextDouble(SIZE_RANGE));
+            default:
+                return DEFAULT_FIGURE;
+
         }
     }
 

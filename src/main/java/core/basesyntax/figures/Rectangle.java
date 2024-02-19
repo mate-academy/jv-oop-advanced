@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.figures;
 
 public class Rectangle extends Figure {
     private double height;
@@ -11,14 +11,14 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return height * width;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: rectangle, area: "
-                + getArea() + " sq. units, height: "
+                + calculateArea() + " sq. units, height: "
                 + height + " units, width "
                 + width + " units, color: "
                 + getColor().toLowerCase());
