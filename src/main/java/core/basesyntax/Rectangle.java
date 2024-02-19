@@ -14,6 +14,7 @@ public class Rectangle extends Figure implements AreaCalculator {
     public int getArea() {
         return width * height;
     }
+
     @Override
     public String toString() {
         return "Figure: Rectangle, "
@@ -27,8 +28,6 @@ public class Rectangle extends Figure implements AreaCalculator {
                 + height
                 + " units, "
                 + "color: "
-                + color;
+                + getColor();
     }
-
-
 }

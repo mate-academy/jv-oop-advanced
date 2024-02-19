@@ -15,8 +15,10 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
     @Override
     public int getArea() {
         int halfPerimeter = (upSide + underSide + side * 2) / 2;
-        return (int) Math.sqrt(((halfPerimeter - underSide) * (halfPerimeter - upSide) * (halfPerimeter - side) * 2));
+        return (int) Math.sqrt(((halfPerimeter - underSide) * (halfPerimeter - upSide)
+                * (halfPerimeter - side) * 2));
     }
+
     @Override
     public String toString() {
         return "Figure: isoscelesTrapezoid, "
@@ -32,8 +34,6 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
                 + side
                 + " units, "
                 + "color: "
-                + color;
+                + getColor();
     }
-
-
 }

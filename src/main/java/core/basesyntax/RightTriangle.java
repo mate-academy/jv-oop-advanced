@@ -12,6 +12,7 @@ public class RightTriangle extends Figure implements AreaCalculator {
     public int getArea() {
         return (int) ((side * side) * Math.sqrt(3)) / 4;
     }
+
     @Override
     public String toString() {
         return "Figure: rightTriangle, "
@@ -22,8 +23,6 @@ public class RightTriangle extends Figure implements AreaCalculator {
                 + side
                 + " units, "
                 + "color: "
-                + color;
+                + getColor();
     }
-
-
 }

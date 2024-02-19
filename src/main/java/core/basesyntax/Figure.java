@@ -1,13 +1,14 @@
 package core.basesyntax;
 
-import java.util.Arrays;
-
 public abstract class Figure {
-    public String color;
-
+    private String color;
+    public String getColor() {
+        return color;
+    }
     public Figure(String color) {
         this.color = color;
     }
+
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
         String[] figures = new String[6];
