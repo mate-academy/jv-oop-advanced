@@ -6,7 +6,7 @@ public class RightTriangle extends Figure {
     private final double side;
 
     public RightTriangle(double side, Color randomColor) {
-        super(randomColor, "RightTriangle");
+        super(randomColor);
         this.side = side;
     }
 
@@ -17,7 +17,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getFigureName()
+        System.out.println("Figure: " + getClass().getSimpleName()
                 + System.lineSeparator()
                 + "area: " + calculateArea() + " sq. units"
                 + System.lineSeparator()

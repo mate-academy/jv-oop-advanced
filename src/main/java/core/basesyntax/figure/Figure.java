@@ -4,29 +4,14 @@ import core.basesyntax.behavior.AreaCalculator;
 import core.basesyntax.behavior.Drawable;
 import core.basesyntax.colors.Color;
 
-public class Figure implements Drawable, AreaCalculator {
-    private final String figureName;
+public abstract class Figure implements Drawable, AreaCalculator {
     private final Color color;
 
-    public Figure(Color color, String figureName) {
+    public Figure(Color color) {
         this.color = color;
-        this.figureName = figureName;
     }
 
     public Color getColor() {
         return color;
-    }
-
-    public String getFigureName() {
-        return figureName;
-    }
-
-    @Override
-    public void draw() {
-    }
-
-    @Override
-    public double calculateArea() {
-        return 0;
     }
 }

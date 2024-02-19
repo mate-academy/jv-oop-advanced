@@ -7,7 +7,7 @@ public class Rectangle extends Figure {
     private final double secondSide;
 
     public Rectangle(double firstSide, double secondSide, Color randomColor) {
-        super(randomColor, "Rectangle");
+        super(randomColor);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
     }
@@ -19,7 +19,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getFigureName()
+        System.out.println("Figure: " + getClass().getSimpleName()
                 + System.lineSeparator()
                 + "area: " + calculateArea() + " sq. units"
                 + System.lineSeparator()

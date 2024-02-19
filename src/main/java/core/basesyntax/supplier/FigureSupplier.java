@@ -10,22 +10,26 @@ import core.basesyntax.figure.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final Random random = new Random();
-    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private static final Random RANDOM = new Random();
+    private static final ColorSupplier COLOR_SUPPLIER = new ColorSupplier();
+    private static final int FIGURE_NUMBER = 5;
+    private static final double DEFAULT_RADIUS = 10.0;
+    private static final Color DEFAULT_COLOR = Color.WHITE;
+    private static final double MIN_RAND = 10.0;
+    private static final double MAX_RAND = 50.0;
 
     public Figure getRandomFigure() {
-        int figureNumber = 5;
-        int randIndex = random.nextInt(figureNumber);
+        int randIndex = RANDOM.nextInt(FIGURE_NUMBER);
         Figure figure;
 
         switch (randIndex) {
-            case 0 -> figure = new Circle(getRandomDouble(), colorSupplier.getRandomColor());
+            case 0 -> figure = new Circle(getRandomDouble(), COLOR_SUPPLIER.getRandomColor());
             case 1 -> figure = new IsoscelesTrapezoid(getRandomDouble(), getRandomDouble(),
-                        getRandomDouble(), colorSupplier.getRandomColor());
+                        getRandomDouble(), COLOR_SUPPLIER.getRandomColor());
             case 2 -> figure = new Rectangle(getRandomDouble(), getRandomDouble(),
-                        colorSupplier.getRandomColor());
-            case 3 -> figure = new RightTriangle(getRandomDouble(), colorSupplier.getRandomColor());
-            case 4 -> figure = new Square(getRandomDouble(), colorSupplier.getRandomColor());
+                        COLOR_SUPPLIER.getRandomColor());
+            case 3 -> figure = new RightTriangle(getRandomDouble(), COLOR_SUPPLIER.getRandomColor());
+            case 4 -> figure = new Square(getRandomDouble(), COLOR_SUPPLIER.getRandomColor());
             default -> throw new IllegalArgumentException("Unexpected value for CASE_INDEX: "
                     + randIndex);
         }
@@ -33,14 +37,10 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        double defaultRadius = 10.0;
-        Color defaultColor = Color.WHITE;
-        return new Circle(defaultRadius, defaultColor);
+        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
     }
 
     private double getRandomDouble() {
-        final double minRand = 10.0;
-        final double maxRand = 50.0;
-        return random.nextDouble(minRand, maxRand);
+        return RANDOM.nextDouble(MIN_RAND, MAX_RAND);
     }
 }

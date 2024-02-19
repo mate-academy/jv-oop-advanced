@@ -9,7 +9,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     public IsoscelesTrapezoid(double firstBase, double secondBase, double height,
                               Color randomColor) {
-        super(randomColor, "IsoscelesTrapezoid");
+        super(randomColor);
         this.firstBase = firstBase;
         this.secondBase = secondBase;
         this.height = height;
@@ -22,7 +22,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getFigureName()
+        System.out.println("Figure: " + getClass().getSimpleName()
                 + System.lineSeparator()
                 + "area: " + calculateArea() + " sq. units"
                 + System.lineSeparator()
