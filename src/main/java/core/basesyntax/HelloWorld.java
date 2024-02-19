@@ -1,5 +1,6 @@
 package core.basesyntax;
 
+import core.basesyntax.figure.Figure;
 import core.basesyntax.supplier.FigureSupplier;
 
 /**

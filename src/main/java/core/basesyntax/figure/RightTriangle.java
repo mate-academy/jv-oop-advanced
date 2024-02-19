@@ -1,7 +1,5 @@
 package core.basesyntax.figure;
 
-import core.basesyntax.Figure;
-
 public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
