@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-import core.basesyntax.randomizers.FigureSupplier;
+import core.basesyntax.supplier.FigureSupplier;
 
 /**
  * Feel free to remove this class and create your own.

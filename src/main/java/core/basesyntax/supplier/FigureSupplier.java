@@ -1,12 +1,12 @@
-package core.basesyntax.randomizers;
+package core.basesyntax.supplier;
 
 import core.basesyntax.Color;
 import core.basesyntax.Figure;
-import core.basesyntax.figureshapes.Circle;
-import core.basesyntax.figureshapes.IsoscelesTrapezoid;
-import core.basesyntax.figureshapes.Rectangle;
-import core.basesyntax.figureshapes.RightTriangle;
-import core.basesyntax.figureshapes.Square;
+import core.basesyntax.figure.Circle;
+import core.basesyntax.figure.IsoscelesTrapezoid;
+import core.basesyntax.figure.Rectangle;
+import core.basesyntax.figure.RightTriangle;
+import core.basesyntax.figure.Square;
 import java.util.Random;
 
 public class FigureSupplier {
@@ -37,7 +37,7 @@ public class FigureSupplier {
                         random.nextInt(MAXVALUE),
                         color.getRandomColor());
             default:
-                return new Circle(DEFAULTCIRCLESIZE,Color.WHITE.name());
+                return new FigureSupplier().getDefaultFigure();
         }
     }
 }
