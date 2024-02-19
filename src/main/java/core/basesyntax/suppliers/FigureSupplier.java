@@ -5,7 +5,7 @@ import core.basesyntax.figures.Circle;
 import core.basesyntax.figures.Figures;
 import core.basesyntax.figures.Rectangle;
 import core.basesyntax.figures.RightTriangle;
-import core.basesyntax.figures.SoscelesTrapezoid;
+import core.basesyntax.figures.IsoscelesTrapezoid;
 import core.basesyntax.figures.Square;
 import java.util.Random;
 
@@ -44,7 +44,7 @@ public class FigureSupplier {
                         getRandomSize()).getDraw();
                 break;
             case 5:
-                result = new SoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomSize(),
+                result = new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomSize(),
                         getRandomSize(), getRandomSize()).getDraw();
                 break;
             default:

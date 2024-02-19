@@ -1,11 +1,11 @@
 package core.basesyntax.figures;
 
-public class SoscelesTrapezoid extends Figure {
+public class IsoscelesTrapezoid extends Figure {
     private int upSide;
     private int underSide;
     private int side;
 
-    public SoscelesTrapezoid(String color, int upSide, int underSide, int side) {
+    public IsoscelesTrapezoid(String color, int upSide, int underSide, int side) {
         super(color);
         this.upSide = upSide;
         this.underSide = underSide;
