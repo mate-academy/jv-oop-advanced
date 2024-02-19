@@ -9,22 +9,27 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         switch (random.nextInt(FIGURE_COUNT)) {
             case 0:
-                return new Square(random.nextDouble() * 10 + 1, Color.GREEN.name());
+                return new Square(getRandomValue(), getRandomColor());
             case 1:
-                return new Rectangle(random.nextDouble() * 10 + 1,
-                        random.nextDouble() * 10 + 1, Color.RED.name());
+                return new Rectangle(getRandomValue(), getRandomValue(), getRandomColor());
             case 2:
-                return new RightTriangle(random.nextDouble() * 10 + 1,
-                        random.nextDouble() * 10 + 1, Color.PURPLE.name());
+                return new RightTriangle(getRandomValue(), getRandomValue(), getRandomColor());
             case 3:
-                return new Circle(random.nextDouble() * 10 + 1, Color.ORANGE.name());
+                return new Circle(getRandomValue(), getRandomColor());
             case 4:
-                return new IsoscelesTrapezoid(random.nextDouble() * 10 + 1,
-                        random.nextDouble() * 10 + 1,
-                        random.nextDouble() * 10 + 1, Color.PINK.name());
+                return new IsoscelesTrapezoid(getRandomValue(), getRandomValue(), getRandomValue(),
+                        getRandomColor());
             default:
                 return null;
         }
+    }
+
+    private double getRandomValue() {
+        return random.nextDouble() * 10 + 1;
+    }
+
+    private String getRandomColor() {
+        return Color.values()[random.nextInt(Color.values().length)].name();
     }
 
     public Figure[] getDefaultFigures() {
