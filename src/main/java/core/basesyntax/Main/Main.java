@@ -1,19 +1,12 @@
-package core.basesyntax;
+package core.basesyntax.Main;
 
-public abstract class Figure implements AreaCalculator {
-    private String color;
+import core.basesyntax.Suppliers.FigureSupplier;
 
-    public Figure(String color) {
-        this.color = color;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public static void main(String[] args) {
+public class Main {
+    private static final int TEST_ARRAY = 6;
+    public static void main(String... args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        String[] figures = new String[6];
+        String[] figures = new String[TEST_ARRAY];
         for (int i = 0; i < figures.length; i++) {
             if (i < figures.length / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
@@ -24,4 +17,3 @@ public abstract class Figure implements AreaCalculator {
         }
     }
 }
-

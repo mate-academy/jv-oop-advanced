@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.Figures;
 
 public class Rectangle extends Figure {
     private int width;
@@ -11,12 +11,12 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public int getArea() {
+    public double getArea() {
         return width * height;
     }
 
     @Override
-    public String toString() {
+    public String getDraw() {
         return "Figure: Rectangle, "
                 + "area: "
                 + getArea()

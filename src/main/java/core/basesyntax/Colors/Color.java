@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.Colors;
 
 public enum Color {
     RED,
@@ -8,4 +8,3 @@ public enum Color {
     WHITE,
     BLACK
 }
-

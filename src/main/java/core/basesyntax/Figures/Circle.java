@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.Figures;
 
 public class Circle extends Figure {
     private int radius;
@@ -9,12 +9,12 @@ public class Circle extends Figure {
     }
 
     @Override
-    public int getArea() {
+    public double getArea() {
         return (int) (Math.PI * radius * radius);
     }
 
     @Override
-    public String toString() {
+    public String getDraw() {
         return "Figure: circle, "
                 + "area: "
                 + getArea()

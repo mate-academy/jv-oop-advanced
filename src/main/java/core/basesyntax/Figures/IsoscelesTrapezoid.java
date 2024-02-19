@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.Figures;
 
 public class IsoscelesTrapezoid extends Figure {
     private int upSide;
@@ -13,14 +13,14 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public int getArea() {
+    public double getArea() {
         int halfPerimeter = (upSide + underSide + side * 2) / 2;
         return (int) Math.sqrt(((halfPerimeter - underSide) * (halfPerimeter - upSide)
                 * (halfPerimeter - side) * 2));
     }
 
     @Override
-    public String toString() {
+    public String getDraw() {
         return "Figure: isoscelesTrapezoid, "
                 + "area: "
                 + getArea()

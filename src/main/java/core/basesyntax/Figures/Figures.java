@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.Figures;
 
 public enum Figures {
     CIRCLE,
