@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-import core.basesyntax.behavior.FigureArea;
-import core.basesyntax.behavior.FigureDescription;
+import core.basesyntax.behavior.AreaCalculator;
+import core.basesyntax.behavior.Drawable;
 
-public abstract class Figure implements FigureArea, FigureDescription {
+public abstract class Figure implements AreaCalculator, Drawable {
     private String color;
 
     public Figure(String color) {
@@ -17,8 +17,4 @@ public abstract class Figure implements FigureArea, FigureDescription {
     public void setColor(String color) {
         this.color = color;
     }
-
-    public abstract void draw();
-
-    public abstract double calculateArea();
 }
