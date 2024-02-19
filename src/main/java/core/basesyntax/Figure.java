@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public abstract class ColorsOfFigures implements FigureArea, Drawable {
+public abstract class Figure implements AreaCalculatable, Drawable {
     private String color;
 
-    public ColorsOfFigures(String color) {
+    public Figure(String color) {
         this.color = color;
     }
 

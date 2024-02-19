@@ -7,7 +7,7 @@ public class HelloWorld {
         ColorSupplier colorSupplier = new ColorSupplier();
         FigureSupplier figureSupplier = new FigureSupplier(colorSupplier);
 
-        FigureArea[] figures = new FigureArea[6];
+        Figure[] figures = new Figure[NUMBERS_OF_FIGURES];
 
         for (int i = 0; i < NUMBERS_OF_FIGURES; i++) {
             if (i < NUMBERS_OF_FIGURES / 2) {
@@ -15,7 +15,7 @@ public class HelloWorld {
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
-            ((Drawable) figures[i]).draw();
+            figures[i].draw();
         }
     }
 }
