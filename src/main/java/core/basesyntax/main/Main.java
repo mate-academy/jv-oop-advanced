@@ -4,6 +4,7 @@ import core.basesyntax.suppliers.FigureSupplier;
 
 public class Main {
     private static final int TEST_ARRAY = 6;
+
     public static void main(String... args) {
         FigureSupplier figureSupplier = new FigureSupplier();
         String[] figures = new String[TEST_ARRAY];

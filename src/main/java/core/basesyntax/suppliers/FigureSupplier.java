@@ -1,8 +1,12 @@
 package core.basesyntax.suppliers;
 
 import core.basesyntax.colors.Color;
-import core.basesyntax.figures.*;
-
+import core.basesyntax.figures.Circle;
+import core.basesyntax.figures.Figures;
+import core.basesyntax.figures.RightTriangle;
+import core.basesyntax.figures.Square;
+import core.basesyntax.figures.Rectangle;
+import core.basesyntax.figures.SoscelesTrapezoid;
 import java.util.Random;
 
 public class FigureSupplier {
@@ -21,22 +25,30 @@ public class FigureSupplier {
         return random.nextInt(MAX_SIZE);
     }
 
+
     public String getRandomFigure() {
-        int index = random.nextInt(MIN_VALUE, Figures.values().length);
+        int index = random.nextInt(MIN_VALUE, Figures.values().length + MIN_VALUE);
         String result = "";
         switch (index) {
             case 1:
                 result = new Circle(getRandomSize(), colorSupplier.getRandomColor()).getDraw();
+                break;
             case 2:
                 result = new Square(getRandomSize(), colorSupplier.getRandomColor()).getDraw();
+                break;
             case 3:
                 result = new RightTriangle(getRandomSize(), colorSupplier.getRandomColor()).getDraw();
+                break;
             case 4:
                 result = new Rectangle(colorSupplier.getRandomColor(), getRandomSize(),
                         getRandomSize()).getDraw();
+                break;
             case 5:
                 result = new SoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomSize(),
                         getRandomSize(), getRandomSize()).getDraw();
+                break;
+            default:
+                break;
         }
         return result;
     }
