@@ -8,13 +8,11 @@ public class Application {
 
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        Figure[] figures = new Figure[ARRAY_LENGTH];
-        for (int i = 0; i < ARRAY_LENGTH; i++) {
-            figures[i] = i < ARRAY_LENGTH
+        Figure[] figures = new Figure[FIGURES_AMOUNT];
+        for (int i = 0; i < FIGURES_AMOUNT; i++) {
+            figures[i] = i < FIGURES_AMOUNT
                     / 2 ? figureSupplier.getRandomFigure() : figureSupplier.getDefaultFigure();
-        }
-        for (Figure figure : figures) {
-            figure.draw();
+            figures[i].draw();
         }
     }
 }
