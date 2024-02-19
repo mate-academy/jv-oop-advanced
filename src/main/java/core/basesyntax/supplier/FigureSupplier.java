@@ -27,8 +27,9 @@ public class FigureSupplier {
             case 1 -> figure = new IsoscelesTrapezoid(getRandomDouble(), getRandomDouble(),
                         getRandomDouble(), COLOR_SUPPLIER.getRandomColor());
             case 2 -> figure = new Rectangle(getRandomDouble(), getRandomDouble(),
-                        COLOR_SUPPLIER.getRandomColor());
-            case 3 -> figure = new RightTriangle(getRandomDouble(), COLOR_SUPPLIER.getRandomColor());
+                    COLOR_SUPPLIER.getRandomColor());
+            case 3 -> figure = new RightTriangle(getRandomDouble(),
+                    COLOR_SUPPLIER.getRandomColor());
             case 4 -> figure = new Square(getRandomDouble(), COLOR_SUPPLIER.getRandomColor());
             default -> throw new IllegalArgumentException("Unexpected value for CASE_INDEX: "
                     + randIndex);
