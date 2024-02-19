@@ -1,5 +1,11 @@
-package core.basesyntax;
+package core.basesyntax.supplier;
 
+import core.basesyntax.figure.Circle;
+import core.basesyntax.figure.Figure;
+import core.basesyntax.figure.IsoscelesTrapezoid;
+import core.basesyntax.figure.Rectangle;
+import core.basesyntax.figure.RightTriangle;
+import core.basesyntax.figure.Square;
 import java.util.Random;
 
 public class FigureSupplier {
@@ -9,10 +15,6 @@ public class FigureSupplier {
     private static final Color DEFAULT_COLOR = Color.WHITE;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
-
-    public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS_OF_CIRCLE);
-    }
 
     public Figure getRandomFigure() {
         int sideLength = random.nextInt(MAX_SIZE) + 1;
@@ -28,5 +30,9 @@ public class FigureSupplier {
                     sideLength, sideLength, sideLength);
             default -> getDefaultFigure();
         };
+    }
+
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS_OF_CIRCLE);
     }
 }

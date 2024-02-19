@@ -1,4 +1,6 @@
-package core.basesyntax;
+package core.basesyntax.figure;
+
+import core.basesyntax.supplier.Color;
 
 public class Rectangle extends Figure {
     private final double length;
