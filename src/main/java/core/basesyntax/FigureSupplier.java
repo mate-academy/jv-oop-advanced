@@ -32,11 +32,7 @@ public class FigureSupplier {
         return Color.values()[random.nextInt(Color.values().length)].name();
     }
 
-    public Figure[] getDefaultFigures() {
-        Figure[] defaultFigures = new Figure[FIGURE_COUNT];
-        for (int i = 0; i < FIGURE_COUNT; i++) {
-            defaultFigures[i] = getRandomFigure();
-        }
-        return defaultFigures;
+    public Figure getDefaultFigure() {
+        return new Circle(10.0, "white");
     }
 }
