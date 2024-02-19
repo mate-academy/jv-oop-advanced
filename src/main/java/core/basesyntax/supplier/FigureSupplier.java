@@ -23,36 +23,32 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        Figure randomFigure;
+        Figure figure;
 
         int randomIndex = random.nextInt(FigureType.values().length);
-        FigureType randomFigureType = FigureType.values()[randomIndex];
+        FigureType figureType = FigureType.values()[randomIndex];
 
-        switch (randomFigureType) {
+        switch (figureType) {
             case CIRCLE:
-                randomFigure = getRandomCircle();
+                figure = getRandomCircle();
                 break;
             case SQUARE:
-                randomFigure = getRandomSquare();
+                figure = getRandomSquare();
                 break;
             case RECTANGLE:
-                randomFigure = getRandomRectangle();
+                figure = getRandomRectangle();
                 break;
             case TRIANGLE:
-                randomFigure = getRandomTriangle();
+                figure = getRandomTriangle();
                 break;
             case TRAPEZOID:
-                randomFigure = getRandomTrapezoid();
+                figure = getRandomTrapezoid();
                 break;
             default:
-                randomFigure = getDefaultFigure();
+                figure = getDefaultFigure();
         }
 
-        return randomFigure;
-    }
-
-    public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR, DEFAULT_SIZE);
+        return figure;
     }
 
     private Circle getRandomCircle() {
@@ -82,5 +78,9 @@ public class FigureSupplier {
 
     private int getRandomSize() {
         return random.nextInt(MAX_SIZE) + 1;
+    }
+
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_COLOR, DEFAULT_SIZE);
     }
 }
