@@ -8,6 +8,7 @@ public class FigureSupplier {
     private static final String DEFAULT_COLOR = Color.WHITE.toString();
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
+
     public String getDefaultFigure() {
         return new Circle(DEFAULT_SIZE, DEFAULT_COLOR).toString();
     }
