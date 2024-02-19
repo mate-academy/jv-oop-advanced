@@ -1,10 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.AreaCalculator;
 import core.basesyntax.Color;
-import core.basesyntax.Drawable;
 
-public class Circle extends Figure implements AreaCalculator, Drawable {
+public class Circle extends Figure {
     private final double radius;
     private Color color;
 

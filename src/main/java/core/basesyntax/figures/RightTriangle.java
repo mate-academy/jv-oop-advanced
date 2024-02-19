@@ -1,10 +1,8 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.AreaCalculator;
 import core.basesyntax.Color;
-import core.basesyntax.Drawable;
 
-public class RightTriangle extends Figure implements AreaCalculator, Drawable {
+public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
     private Color color;
