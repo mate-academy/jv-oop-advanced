@@ -15,11 +15,12 @@ public class FigureSupplier {
     private static final int DEFAULT_SIZE = 10;
     private static final Color DEFAULT_COLOR = Color.WHITE;
 
-    private ColorSupplier colorSupplier;
-    private final Random random = new Random();
+    private final ColorSupplier colorSupplier;
+    private final Random random;
 
-    public FigureSupplier(ColorSupplier colorSupplier) {
+    public FigureSupplier(ColorSupplier colorSupplier, Random random) {
         this.colorSupplier = colorSupplier;
+        this.random = random;
     }
 
     public Figure getRandomFigure() {

@@ -1,10 +1,11 @@
 package core.basesyntax.figure;
 
+import core.basesyntax.common.AreaCalculable;
 import core.basesyntax.common.Drawable;
 import core.basesyntax.enums.Color;
 import core.basesyntax.enums.FigureType;
 
-public abstract class Figure implements Drawable {
+public abstract class Figure implements Drawable, AreaCalculable {
     private FigureType type;
     private Color color;
 
@@ -20,6 +21,4 @@ public abstract class Figure implements Drawable {
     public FigureType getType() {
         return type;
     }
-
-    public abstract double getArea();
 }
