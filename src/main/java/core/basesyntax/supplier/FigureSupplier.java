@@ -10,34 +10,42 @@ import core.basesyntax.figure.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int NUMBEROFFIGURES = 5;
-    private static final int DEFAULTCIRCLESIZE = 10;
+    private static final int NUMBER_OF_FIGURES = 5;
+    private static final int DEFAULT_CIRCLE_SIZE = 10;
     private static final int MAXVALUE = 1000;
     private Random random = new Random();
     private ColorSupplier color = new ColorSupplier();
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULTCIRCLESIZE,Color.WHITE.name());
+        return new Circle(DEFAULT_CIRCLE_SIZE,Color.WHITE.name());
     }
 
     public Figure getRandomFigure() {
-        switch (random.nextInt(NUMBEROFFIGURES)) {
+        Figure figure = null;
+        switch (random.nextInt(NUMBER_OF_FIGURES)) {
             case 0:
-                return new Circle(random.nextInt(MAXVALUE), color.getRandomColor());
+                figure = new Circle(random.nextInt(MAXVALUE), color.getRandomColor());
+                break;
             case 1:
-                return new Square(random.nextInt(MAXVALUE), color.getRandomColor());
+                figure = new Square(random.nextInt(MAXVALUE), color.getRandomColor());
+                break;
             case 2:
-                return new Rectangle(random.nextInt(MAXVALUE),random.nextInt(MAXVALUE),
+                figure = new Rectangle(random.nextInt(MAXVALUE),random.nextInt(MAXVALUE),
                         color.getRandomColor());
+                break;
             case 3:
-                return new RightTriangle(random.nextInt(MAXVALUE),random.nextInt(MAXVALUE),
+                figure = new RightTriangle(random.nextInt(MAXVALUE),random.nextInt(MAXVALUE),
                         color.getRandomColor());
+                break;
             case 4:
-                return new IsoscelesTrapezoid(random.nextInt(MAXVALUE),random.nextInt(MAXVALUE),
+                figure = new IsoscelesTrapezoid(random.nextInt(MAXVALUE),random.nextInt(MAXVALUE),
                         random.nextInt(MAXVALUE),
                         color.getRandomColor());
+                break;
             default:
-                return new FigureSupplier().getDefaultFigure();
+                figure = getDefaultFigure();
+                break;
         }
+        return figure;
     }
 }

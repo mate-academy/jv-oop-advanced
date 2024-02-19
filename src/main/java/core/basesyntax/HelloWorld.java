@@ -3,24 +3,19 @@ package core.basesyntax;
 import core.basesyntax.figure.Figure;
 import core.basesyntax.supplier.FigureSupplier;
 
-/**
- * Feel free to remove this class and create your own.
- */
 public class HelloWorld {
-    private static int FIGURE_AMOUNT = 6;
-    private static int halfOfArray = (FIGURE_AMOUNT + FIGURE_AMOUNT % 2) / 2;
+    private static int FIGURE_AMOUNT = 7;
     private static FigureSupplier figure = new FigureSupplier();
-    private static Figure[] arrayOfFigures = new Figure[FIGURE_AMOUNT];
 
     public static void main(String[] args) {
+        Figure[] arrayOfFigures = new Figure[FIGURE_AMOUNT];
         for (int i = 0; i < arrayOfFigures.length; i++) {
-            if (i < halfOfArray) {
+            if (i < (FIGURE_AMOUNT / 2)) {
                 arrayOfFigures[i] = figure.getRandomFigure();
-                arrayOfFigures[i].draw();
             } else {
                 arrayOfFigures[i] = figure.getDefaultFigure();
-                arrayOfFigures[i].draw();
             }
+            arrayOfFigures[i].draw();
         }
     }
 }
