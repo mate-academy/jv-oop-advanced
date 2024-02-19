@@ -33,7 +33,8 @@ public class FigureSupplier {
                         random.nextDouble(MAX_SIZE) + 1,
                         random.nextDouble(MAX_SIZE) + 1,
                         random.nextDouble(MAX_SIZE) + 1);
-            default: return getDeafultFigure();
+            default:
+                return getDeafultFigure();
         }
     }
 }
