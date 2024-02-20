@@ -8,7 +8,6 @@ import core.basesyntax.figures.IsoscelesTrapezoid;
 import core.basesyntax.figures.Rectangle;
 import core.basesyntax.figures.RightTriangle;
 import core.basesyntax.figures.Square;
-
 import java.util.Random;
 
 public class FigureSupplier {
