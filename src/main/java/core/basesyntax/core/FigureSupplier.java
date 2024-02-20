@@ -1,14 +1,13 @@
-package core.basesyntax;
+package core.basesyntax.core;
 
 import java.util.Random;
 
 public class FigureSupplier {
-
+    private static final int MAX_DIMENSION = 10;
     private final Random random = new Random();
 
     private int getRandomDimension() {
-
-        return random.nextInt(10) + 1;
+        return random.nextInt(MAX_DIMENSION) + 1;
     }
 
     public Figure getRandomFigure() {

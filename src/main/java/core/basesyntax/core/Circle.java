@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.core;
 
 public class Circle extends Figure {
     public Circle(double radius, String color) {

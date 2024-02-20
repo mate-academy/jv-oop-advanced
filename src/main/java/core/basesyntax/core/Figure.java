@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.core;
 
 abstract class Figure implements Drawable, AreaCalculator {
     protected double radius;
