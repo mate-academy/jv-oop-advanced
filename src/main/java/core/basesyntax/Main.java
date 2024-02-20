@@ -1,21 +1,18 @@
 package core.basesyntax;
 
-import static core.basesyntax.FigureSupplier.getRandomFigure;
-
 public class Main {
-    static final int FIGURE_LENGTH = 6;
+    static final int FIGURES_LENGTH = 6;
 
     public static void main(String[] args) {
-        Figure[] figure = new Figure[FIGURE_LENGTH];
+        Figure[] figures = new Figure[FIGURES_LENGTH];
         FigureSupplier figureSupplier = new FigureSupplier();
-        for (int i = 0; i < figure.length; i++) {
-            figure[i] = getRandomFigure();
-            if (i >= FIGURE_LENGTH / 2) {
-                figure[i] = figureSupplier.getDefaultFigure();
+        for (int i = 0; i < figures.length; i++) {
+            if (i < FIGURES_LENGTH / 2) {
+                figures[i] = figureSupplier.getRandomFigure();
+            } else {
+                figures[i] = figureSupplier.getDefaultFigure();
             }
-        }
-        for (int i = 0; i < figure.length; i++) {
-            figure[i].describe();
+            figures[i].describe();
         }
     }
 }
