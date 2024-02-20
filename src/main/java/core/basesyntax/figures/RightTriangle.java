@@ -10,19 +10,14 @@ public class RightTriangle extends Figure {
 
     @Override
     public double getArea() {
-        return (int) ((side * side) * Math.sqrt(3)) / 4;
+        return Math.ceil(((side * side) * Math.sqrt(3)) / 4);
     }
 
     @Override
-    public String getDraw() {
-        return "Figure: rightTriangle, "
-                + "area: "
-                + getArea()
-                + " sq. units, "
-                + "side: "
-                + side
-                + " units, "
-                + "color: "
-                + getColor();
+    public void draw() {
+        System.out.println("Figure: rightTriangle, " + "area: "
+                + getArea() + " sq. units, " + "side: "
+                + side + " units, " + "color: "
+                + getColor());
     }
 }
