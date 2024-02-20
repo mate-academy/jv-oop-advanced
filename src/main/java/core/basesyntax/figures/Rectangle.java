@@ -5,10 +5,9 @@ import core.basesyntax.Color;
 public class Rectangle extends Figure {
     private double length;
     private double width;
-    private Color color;
 
     public Rectangle(Color color, double length, double width) {
-        this.color = color;
+        super(color);
         this.length = length;
         this.width = width;
     }
@@ -21,6 +20,6 @@ public class Rectangle extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: rectangle, area: " + calculateArea() + " sq. units, length: "
-                + length + " units, width: " + width + ", color: " + color);
+                + length + " units, width: " + width + ", color: " + getColor());
     }
 }

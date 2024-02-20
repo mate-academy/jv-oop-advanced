@@ -10,6 +10,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_FIGURES = 6;
+    private static final int MAX_SIDE_LENGTH = 10;
     private static final Color DEFAULT_COLOR = Color.WHITE;
     private static final double DEFAULT_RADIUS = 10;
     private ColorSupplier colorSupplier = new ColorSupplier();
@@ -34,7 +35,7 @@ public class FigureSupplier {
     }
 
     public double getRandomLength() {
-        return random.nextInt(100) + 1;
+        return random.nextInt(MAX_SIDE_LENGTH) + 1;
     }
 
 }

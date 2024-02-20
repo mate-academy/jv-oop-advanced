@@ -5,10 +5,9 @@ import core.basesyntax.Color;
 public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
-    private Color color;
 
     public RightTriangle(Color color, double firstLeg, double secondLeg) {
-        this.color = color;
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
@@ -22,6 +21,6 @@ public class RightTriangle extends Figure {
     public void draw() {
         System.out.println("Figure: right triangle; area: " + calculateArea()
                 + " sq. units; first leg: " + firstLeg + " units; second leg: "
-                + secondLeg + " units; color: " + color);
+                + secondLeg + " units; color: " + getColor());
     }
 }

@@ -4,10 +4,9 @@ import core.basesyntax.Color;
 
 public class Circle extends Figure {
     private final double radius;
-    private Color color;
 
     public Circle(Color color,double radius) {
-        this.color = color;
+        super(color);
         this.radius = radius;
     }
 
@@ -19,6 +18,6 @@ public class Circle extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: circle, area: " + calculateArea() + " sq. units, radius: "
-                + radius + " unit, color: " + color);
+                + radius + " unit, color: " + getColor());
     }
 }
