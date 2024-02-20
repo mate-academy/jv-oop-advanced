@@ -33,10 +33,10 @@ public class FigureSupplier {
             case 5:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), getRandomSize(),
                         getRandomSize(), getRandomSize());
-            default:
+            default: getDefaultFigure();
                 break;
         }
-        return null;
+        return getRandomFigure();
     }
 
     public Figure getDefaultFigure() {
