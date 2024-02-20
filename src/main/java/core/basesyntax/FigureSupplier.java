@@ -35,7 +35,8 @@ public class FigureSupplier {
                         random.nextDouble(RANGE_VALUE));
             }
             default -> {
-                return getDefaultFigure();
+                throw new IllegalStateException("Can't recognize this figure type: " 
+                    + randomFigure.name());
             }
         }
     }
