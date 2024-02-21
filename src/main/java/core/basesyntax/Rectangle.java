@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import static core.basesyntax.Shape.RECTANGLE;
-
 public class Rectangle extends Figure {
     private int length;
     private int width;
@@ -21,8 +19,8 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public Shape getName() {
-        return RECTANGLE;
+    public String getName() {
+        return getClass().getSimpleName();
     }
 
     @Override

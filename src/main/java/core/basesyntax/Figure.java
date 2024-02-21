@@ -11,9 +11,7 @@ public abstract class Figure implements Descriptive, Area {
     protected Figure() {
     }
 
-    public abstract Shape getName();
-
-    public abstract double getArea();
+    public abstract String getName();
 
     public abstract Color getColor();
 }

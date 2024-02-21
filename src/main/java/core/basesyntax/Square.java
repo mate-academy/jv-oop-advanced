@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import static core.basesyntax.Shape.SQUARE;
-
 public class Square extends Figure {
     private int side;
 
@@ -15,8 +13,8 @@ public class Square extends Figure {
     }
 
     @Override
-    public Shape getName() {
-        return SQUARE;
+    public String getName() {
+        return getClass().getSimpleName();
     }
 
     @Override

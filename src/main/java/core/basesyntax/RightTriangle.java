@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import static core.basesyntax.Shape.RIGHT_TRIANGLE;
-
 public class RightTriangle extends Figure {
     private int base;
     private int height;
@@ -9,7 +7,7 @@ public class RightTriangle extends Figure {
     public RightTriangle(int base, int height, Color color) {
         super(color);
         this.base = base;
-        this.height = height;;
+        this.height = height;
     }
 
     public int getBase() {
@@ -21,8 +19,8 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public Shape getName() {
-        return RIGHT_TRIANGLE;
+    public String getName() {
+        return getClass().getSimpleName();
     }
 
     public double getArea() {

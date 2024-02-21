@@ -1,20 +1,21 @@
 package core.basesyntax;
 
-import static core.basesyntax.Shape.CIRCLE;
-
 public class Circle extends Figure {
     private int radius;
 
     public Circle(int radius, Color color) {
+        this.radius = radius;
+        this.color = color;
+    }
 
+    public Circle(Color color, int radius) {
         this.color = color;
         this.radius = radius;
-        this.shape = getName();
     }
 
     @Override
-    public Shape getName() {
-        return CIRCLE;
+    public String getName() {
+        return getClass().getSimpleName();
     }
 
     public double getArea() {
@@ -32,7 +33,24 @@ public class Circle extends Figure {
 
     @Override
     public void describe() {
+
         System.out.println("Figure: " + getName() + ", area: " + getArea() + " sq, radius: "
                 + getRadius() + " units, color: " + getColor());
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

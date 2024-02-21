@@ -1,17 +1,15 @@
 package core.basesyntax;
 
-import static core.basesyntax.Shape.ISOSCELES_TRAPESOID;
-
 public class IsoscelesTrapezoid extends Figure {
     private int lowBase;
     private int topBase;
-    private int hight;
+    private int height;
 
-    public IsoscelesTrapezoid(int lowBase, int topBase, int hight, Color color) {
+    public IsoscelesTrapezoid(int lowBase, int topBase, int height, Color color) {
         super(color);
         this.lowBase = lowBase;
         this.topBase = topBase;
-        this.hight = hight;
+        this.height = height;
     }
 
     public int getLowBase() {
@@ -22,17 +20,17 @@ public class IsoscelesTrapezoid extends Figure {
         return topBase;
     }
 
-    public int getHight() {
-        return hight;
+    public int getHeight() {
+        return height;
     }
 
     @Override
-    public Shape getName() {
-        return ISOSCELES_TRAPESOID;
+    public String getName() {
+        return getClass().getSimpleName();
     }
 
     public double getArea() {
-        return (lowBase + topBase) / 2 * hight;
+        return (lowBase + topBase) / 2 * height;
     }
 
     @Override
@@ -44,6 +42,6 @@ public class IsoscelesTrapezoid extends Figure {
     public void describe() {
         System.out.println("Figure: " + getName() + ", area: " + getArea() + " sq, lowBase: "
                 + getLowBase() + " units, topBase : " + getTopBase() + " units, hight: "
-                + getHight() + " units, color: " + getColor());
+                + getHeight() + " units, color: " + getColor());
     }
 }
