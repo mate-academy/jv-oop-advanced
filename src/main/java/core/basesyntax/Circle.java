@@ -38,19 +38,3 @@ public class Circle extends Figure {
                 + getRadius() + " units, color: " + getColor());
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

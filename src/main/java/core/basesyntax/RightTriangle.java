@@ -38,4 +38,3 @@ public class RightTriangle extends Figure {
                 + getBase() + " units, height: " + getHeight() + " units, color: " + getColor());
     }
 }
-
