@@ -33,9 +33,8 @@ public class IsoscelesTrapezoid extends Figure {
         return (lowBase + topBase) / 2 * height;
     }
 
-    @Override
     public Color getColor() {
-        return new ColorSupplier().getRandomColor();
+        return color;
     }
 
     @Override

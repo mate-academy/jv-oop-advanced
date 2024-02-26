@@ -28,9 +28,8 @@ public class Rectangle extends Figure {
         return length * width;
     }
 
-    @Override
     public Color getColor() {
-        return new ColorSupplier().getRandomColor();
+        return color;
     }
 
     @Override

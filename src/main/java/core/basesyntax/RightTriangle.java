@@ -27,9 +27,8 @@ public class RightTriangle extends Figure {
         return 0.5 * base * height;
     }
 
-    @Override
     public Color getColor() {
-        return new ColorSupplier().getRandomColor();
+        return color;
     }
 
     @Override

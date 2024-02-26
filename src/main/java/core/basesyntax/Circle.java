@@ -26,7 +26,6 @@ public class Circle extends Figure {
         return radius;
     }
 
-    @Override
     public Color getColor() {
         return color;
     }

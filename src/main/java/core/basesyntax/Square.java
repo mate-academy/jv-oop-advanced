@@ -22,7 +22,6 @@ public class Square extends Figure {
         return side * side;
     }
 
-    @Override
     public Color getColor() {
         return color;
     }
