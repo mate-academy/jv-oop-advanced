@@ -3,6 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    public static final double DEFAULT_RADIUS = 10.0;
     private static final int FIGURE_COUNT = 5;
     private static final double MIN_RANDOM_VALUE = 1.0;
     private static final double MAX_RANDOM_VALUE = 10.0;
@@ -11,16 +12,18 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         switch (random.nextInt(FIGURE_COUNT)) {
             case 0:
-                return new Square(getRandomValue(), getRandomColor());
+                return new Square(getRandomValue(), ColorSupplier.getInstance().getRandomColor());
             case 1:
-                return new Rectangle(getRandomValue(), getRandomValue(), getRandomColor());
+                return new Rectangle(getRandomValue(), getRandomValue(),
+                        ColorSupplier.getInstance().getRandomColor());
             case 2:
-                return new RightTriangle(getRandomValue(), getRandomValue(), getRandomColor());
+                return new RightTriangle(getRandomValue(), getRandomValue(),
+                        ColorSupplier.getInstance().getRandomColor());
             case 3:
-                return new Circle(getRandomValue(), getRandomColor());
+                return new Circle(getRandomValue(), ColorSupplier.getInstance().getRandomColor());
             case 4:
                 return new IsoscelesTrapezoid(getRandomValue(), getRandomValue(), getRandomValue(),
-                        getRandomColor());
+                        ColorSupplier.getInstance().getRandomColor());
             default:
                 return null;
         }
@@ -30,11 +33,8 @@ public class FigureSupplier {
         return random.nextDouble() * (MAX_RANDOM_VALUE - MIN_RANDOM_VALUE) + MIN_RANDOM_VALUE;
     }
 
-    private String getRandomColor() {
-        return Color.values()[random.nextInt(Color.values().length)].name();
-    }
-
     public Figure getDefaultFigure() {
-        return new Circle(10.0, "white");
+        return new Circle(DEFAULT_RADIUS, "white");
     }
 }
+
