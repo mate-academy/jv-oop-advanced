@@ -11,20 +11,21 @@ public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
+        ColorSupplier colorSupplier = new ColorSupplier();
         switch (random.nextInt(FIGURE_COUNT)) {
             case 0:
-                return new Square(getRandomValue(), ColorSupplier.getRandomColor());
+                return new Square(getRandomValue(), colorSupplier.getRandomColor());
             case 1:
                 return new Rectangle(getRandomValue(), getRandomValue(),
-                        ColorSupplier.getRandomColor());
+                        colorSupplier.getRandomColor());
             case 2:
                 return new RightTriangle(getRandomValue(), getRandomValue(),
-                        ColorSupplier.getRandomColor());
+                        colorSupplier.getRandomColor());
             case 3:
-                return new Circle(getRandomValue(), ColorSupplier.getRandomColor());
+                return new Circle(getRandomValue(), colorSupplier.getRandomColor());
             case 4:
-                return new IsoscelesTrapezoid(getRandomValue(), getRandomValue(), getRandomValue(),
-                        ColorSupplier.getRandomColor());
+                return new IsoscelesTrapezoid(getRandomValue(), getRandomValue(),
+                        getRandomValue(), colorSupplier.getRandomColor());
             default:
                 return null;
         }
