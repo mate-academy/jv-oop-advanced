@@ -16,11 +16,11 @@ public class FigureSupplier {
                         getRandomDouble(),
                         getRandomDouble());
             case 2:
-                return  new Rectangle(colorSupplier.getRandomColor(),
+                return new Rectangle(colorSupplier.getRandomColor(),
                         getRandomDouble(),
                         getRandomDouble());
-            case  3:
-                return  new RightTriangle(colorSupplier.getRandomColor(),
+            case 3:
+                return new RightTriangle(colorSupplier.getRandomColor(),
                         getRandomDouble(),
                         getRandomDouble());
             case 4:
