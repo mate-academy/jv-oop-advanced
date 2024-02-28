@@ -3,34 +3,26 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final double RADIUS = 10;
-    private static final Color COLOR = Color.WHITE;
-
-    enum RandomFigure {
-        CIRCLE,
-        ISOSCELES_TRAPEZOID,
-        RECTANGLE,
-        RIGHT_TRIANGLE,
-        SQUARE
-    }
+    private static final double DEFAULT_RADIUS = 10;
+    private static final Color DEFAULT_COLOR = Color.WHITE;
 
     private Random index = new Random();
     private ColorSupplier color = new ColorSupplier();
 
     public Figure getRandomFigure() {
 
-        switch (RandomFigure.values()[index.nextInt(RandomFigure.values().length)]) {
-            case CIRCLE:
+        switch (index.nextInt(5)) {
+            case 1:
                 return new Circle(color.getRandomColor(), index.nextDouble());
-            case SQUARE:
+            case 2:
                 return new Square(color.getRandomColor(), index.nextDouble());
-            case RECTANGLE:
+            case 3:
                 return new Rectangle(color.getRandomColor(), index.nextDouble(),
                         index.nextDouble());
-            case RIGHT_TRIANGLE:
+            case 4:
                 return new RightTriangle(color.getRandomColor(), index.nextDouble(),
                         index.nextDouble());
-            case ISOSCELES_TRAPEZOID:
+            case 5:
                 return new IsoscelesTrapezoid(color.getRandomColor(), index.nextDouble(),
                         index.nextDouble(), index.nextDouble());
             default:
@@ -39,6 +31,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(COLOR, RADIUS);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
