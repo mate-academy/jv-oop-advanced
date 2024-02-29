@@ -1,21 +1,21 @@
 package core.basesyntax;
 
-public class Figure {
+public class Figure implements Drawable {
     private String color;
 
     public Figure(String color) {
         this.color = color;
     }
 
-
-    public void draw(Figure figure) {
-        System.out.println(figure);
+    @Override
+    public String toString() {
+        return "Figure: " + getClass().getSimpleName()
+                + ", color: " + color.toLowerCase()
+                + ", ";
     }
 
     @Override
-    public String toString() {
-        return "Figure: " + getClass().getSimpleName() +
-                ", color: " + color.toLowerCase() +
-                ", ";
+    public void draw(Figure figure) {
+        System.out.println(figure);
     }
 }

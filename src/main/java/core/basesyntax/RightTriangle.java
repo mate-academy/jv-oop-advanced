@@ -10,7 +10,6 @@ public class RightTriangle extends Figure {
 
     @Override
     public String toString() {
-        return super.toString() +
-                "side: " + side;
+        return super.toString() + "side: " + side;
     }
 }

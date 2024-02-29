@@ -14,9 +14,9 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String toString() {
-        return super.toString() +
-                "leg: " + leg +
-                ", downBase: " + downBase +
-                ", upBase: " + upBase;
+        return super.toString()
+                + "leg: " + leg
+                + ", downBase: " + downBase
+                + ", upBase: " + upBase;
     }
 }

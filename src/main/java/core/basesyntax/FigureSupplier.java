@@ -7,7 +7,7 @@ public class FigureSupplier {
     private static ColorSupplier colorSupplier = new ColorSupplier();
     private static final String COLOR = colorSupplier.getRandomColor();
     private Random random = new Random();
-    FigureTypes figureType;
+    private FigureTypes figureType;
 
     public Figure getRandomFigure() {
         int index = random.nextInt(FigureTypes.values().length);
@@ -30,8 +30,10 @@ public class FigureSupplier {
             case SQUARE -> {
                 return new Square(COLOR, random.nextInt(BOUND));
             }
+            default -> {
+                return null;
+            }
         }
-        return null;
     }
 
     public Figure getDefaultFigure() {

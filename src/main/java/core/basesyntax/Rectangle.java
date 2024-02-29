@@ -12,8 +12,8 @@ public class Rectangle extends Figure {
 
     @Override
     public String toString() {
-        return super.toString() +
-                "width: " + width +
-                ", height: " + height;
+        return super.toString()
+                + "width: " + width
+                + ", height: " + height;
     }
 }
