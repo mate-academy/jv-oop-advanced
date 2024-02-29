@@ -27,8 +27,8 @@ public class IsoscelesTrapezoid implements Figura {
 
     @Override
     public double getArea() {
-        return ((lenthUp + lenthDown) / 4)*
-                Math.sqrt((4 * lenthSide * lenthSide)
+        return ((lenthUp + lenthDown) / 4)
+                *Math.sqrt((4 * lenthSide * lenthSide)
                         - ((lenthUp - lenthDown) * (lenthUp - lenthDown)));
     }
 }

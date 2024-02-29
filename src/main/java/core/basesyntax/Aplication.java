@@ -8,11 +8,11 @@ public class Aplication {
         FigureSupplier figureSupplier = new FigureSupplier();
         Figura[] figuras = new Figura[6];
         for (int i = 0; i < 6; i++ ) {
-          if (i < 3) {
+            if (i < 3) {
                 System.out.println(figuras[i] = figureSupplier.getRandomFigure());
-                } else {
+                  } else {
                 System.out.println(figuras[i] = figureSupplier.getDefaultFigure());
-          }
+            }
         }
 
     }

@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class FigureSupplier extends ColorSupplier {
     private final Random random = new Random();
+
     public Figura getRandomFigure() {
         int caseIndex = random.nextInt(4);
         switch (caseIndex) {
