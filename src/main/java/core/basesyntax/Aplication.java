@@ -10,7 +10,7 @@ public class Aplication {
         for (int i = 0; i < 6; i++ ) {
             if (i < 3) {
                 System.out.println(figuras[i] = figureSupplier.getRandomFigure());
-                  } else {
+            } else {
                 System.out.println(figuras[i] = figureSupplier.getDefaultFigure());
             }
         }
