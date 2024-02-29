@@ -5,7 +5,7 @@ public class RightTriangle implements Figura {
     private final double secondLeg;
     private final String color;
 
-    public RightTriangle (double firstLeg, double secondLeg, String color) {
+    public RightTriangle(double firstLeg, double secondLeg, String color) {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
         this.color = color;
@@ -19,7 +19,7 @@ public class RightTriangle implements Figura {
         return this.color;
     }
 
-    public double getSecondLeg () {
+    public double getSecondLeg() {
         return secondLeg;
     }
 
