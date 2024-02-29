@@ -21,7 +21,7 @@ public class IsoscelesTrapezoid implements Figura {
                 + "lenthUp = " + this.lenthUp + " units"
                 + ", lenthDown = " + this.lenthDown + " units"
                 + ", lenthSide = " + this.lenthSide
-                +  " units, color: '"
+                + " units, color: '"
                 + this.color + "'";
     }
 
@@ -31,4 +31,5 @@ public class IsoscelesTrapezoid implements Figura {
                 * Math.sqrt((4 * lenthSide * lenthSide)
                         - ((lenthUp - lenthDown) * (lenthUp - lenthDown)));
     }
+
 }

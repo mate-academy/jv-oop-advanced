@@ -8,6 +8,7 @@ public class Circle implements Figura {
         this.color = color;
         this.radius = radius;
     }
+
     @Override
     public String toString() {
         return "Figure : circle, "
