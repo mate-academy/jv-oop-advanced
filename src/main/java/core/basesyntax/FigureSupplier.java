@@ -1,11 +1,10 @@
 package core.basesyntax;
 
-import java.util.Objects;
 import java.util.Random;
 
 public class FigureSupplier extends ColorSupplier {
     private final Random random = new Random();
-    public Figura getRandomFigure(){
+    public Figura getRandomFigure() {
         int caseIndex = random.nextInt(4);
         switch (caseIndex) {
             case 0:
@@ -35,7 +34,9 @@ public class FigureSupplier extends ColorSupplier {
     }
 
     public IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(random.nextInt(100) + 1,random.nextInt(100) + 1,random.nextInt(100) + 1,getRandomColor());
+        return new IsoscelesTrapezoid(random.nextInt(100) + 1,
+                random.nextInt(100) + 1,random.nextInt(100) + 1,
+                getRandomColor());
     }
 
     public Figura getDefaultFigure() {

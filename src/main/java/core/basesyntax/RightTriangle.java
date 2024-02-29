@@ -9,6 +9,7 @@ public class RightTriangle implements Figura {
         this.secondLeg = secondLeg;
         this.color = color;
     }
+
     public double getFirstLeg() {
         return this.firstLeg;
     }
@@ -35,4 +36,5 @@ public class RightTriangle implements Figura {
     public double getArea() {
         return 0.5 * firstLeg * secondLeg;
     }
+
 }

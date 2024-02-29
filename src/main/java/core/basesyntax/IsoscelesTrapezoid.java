@@ -6,7 +6,7 @@ public class IsoscelesTrapezoid implements Figura {
     private final double lenthSide;
     private final String color;
 
-    public IsoscelesTrapezoid(double lenthUp,double lenthDown,double lenthSide,String color) {
+    public IsoscelesTrapezoid(double lenthUp, double lenthDown, double lenthSide, String color) {
         this.lenthUp = lenthUp;
         this.lenthDown = lenthDown;
         this.lenthSide = lenthSide;
@@ -19,14 +19,16 @@ public class IsoscelesTrapezoid implements Figura {
                 + "area: " + getArea()
                 + " sq. units, "
                 + "lenthUp = " + this.lenthUp + " units"
-                + ", lenthDown = " + this.lenthDown +" units"
+                + ", lenthDown = " + this.lenthDown + " units"
                 + ", lenthSide = " + this.lenthSide
-                 + " units, color: '"
+                +  " units, color: '"
                 + this.color + "'";
     }
 
     @Override
     public double getArea() {
-        return ((lenthUp + lenthDown)/4) * Math.sqrt((4 * lenthSide * lenthSide) - ((lenthUp-lenthDown) * (lenthUp-lenthDown)));
+        return ((lenthUp + lenthDown) / 4)*
+                Math.sqrt((4 * lenthSide * lenthSide)
+                        - ((lenthUp - lenthDown) * (lenthUp - lenthDown)));
     }
 }

@@ -4,7 +4,7 @@ public class Square implements Figura {
     private final double side;
     private final String color;
 
-    Square (double side,String color) {
+    Square(double side, String color) {
         this.side = side;
         this.color = color;
     }
@@ -13,6 +13,7 @@ public class Square implements Figura {
     public double getArea() {
         return side * side;
     }
+
     @Override
     public String toString() {
         return "Figure : square, "

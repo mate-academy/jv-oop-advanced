@@ -2,7 +2,7 @@ package core.basesyntax;
 
 public class Rectangle extends RightTriangle {
 
-    public Rectangle(double firstLeg, double secondLeg,String color) {
+    public Rectangle(double firstLeg, double secondLeg, String color) {
         super(firstLeg, secondLeg, color);
     }
 
