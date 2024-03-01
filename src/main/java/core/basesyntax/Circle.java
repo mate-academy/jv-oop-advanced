@@ -1,26 +1,27 @@
 package core.basesyntax;
 
-public class Circle implements Figura {
+public class Circle extends Figure {
+    private static final double PI = Math.PI;
     private final double radius;
-    private final String color;
 
     public Circle(double radius,String color) {
-        this.color = color;
+        super(color);
         this.radius = radius;
+    }
+
+
+    @Override
+    public double getArea() {
+        return radius * radius * PI;
+
     }
 
     @Override
     public String toString() {
-        return "Figure : circle, "
-                + "area: " + getArea()
-                + " sq. units, radius: "
-                + this.radius + " units, color: '"
-                + this.color + "'";
-    }
-
-    @Override
-    public double getArea() {
-        return Math.PI * this.radius * this.radius;
+        return "Figure: circle, area: "
+                + getArea() + " sq. units, radius : "
+                + radius + " units, color : "
+                + getColor();
     }
 
 }

@@ -2,46 +2,27 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class FigureSupplier extends ColorSupplier {
+public class FigureSupplier {
+    private static final int COUNT_FIGURES = 5;
+    private static final int MAX_VALUE = 100;
     private final Random random = new Random();
+    ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figura getRandomFigure() {
-        int caseIndex = random.nextInt(4);
-        switch (caseIndex) {
-            case 0:
-                return getRandomSquare();
-            case 1:
-                return getRandomIsoscelesTrapezoid();
-            case 2:
-                return getRandomRightTriagle();
-            case 3:
-                return getRandomRectangle();
-            default:
-                System.out.println("Error");
-        }
-        return null;
+    public Figure getRandomFigure() {
+        int indexRandomFigure = random.nextInt(COUNT_FIGURES);
+        int randomValue = random.nextInt(MAX_VALUE);
+        return switch (indexRandomFigure) {
+            case 0 -> new Circle(randomValue, colorSupplier.getRandomColor());
+            case 1 -> new Square(randomValue, colorSupplier.getRandomColor());
+            case 2 -> new Rectangle(randomValue, randomValue, colorSupplier.getRandomColor());
+            case 3 -> new RightTriangle(randomValue, randomValue, colorSupplier.getRandomColor());
+            case 4 -> new IsoscelesTrapezoid(randomValue, randomValue, randomValue, colorSupplier.getRandomColor());
+            default -> null;
+        };
     }
 
-    public Square getRandomSquare() {
-        return new Square(random.nextInt(100) + 1,getRandomColor());
-    }
-
-    public Rectangle getRandomRectangle() {
-        return new Rectangle(random.nextInt(100) + 1,random.nextInt(100) + 1,getRandomColor());
-    }
-
-    public RightTriangle getRandomRightTriagle() {
-        return new RightTriangle(random.nextInt(100) + 1,random.nextInt(100) + 1,getRandomColor());
-    }
-
-    public IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(random.nextInt(100) + 1,
-                random.nextInt(100) + 1,random.nextInt(100) + 1,
-                getRandomColor());
-    }
-
-    public Figura getDefaultFigure() {
-        return new Circle(10,getRandomColor());
+    public Figure getDefaultFigure() {
+        return new Circle(10,"White");
     }
 
 }

@@ -1,24 +1,27 @@
 package core.basesyntax;
 
-public class Rectangle extends RightTriangle {
+public class Rectangle extends Figure {
+    private final double firstLeg;
+    private final double secondLeg;
 
     public Rectangle(double firstLeg, double secondLeg, String color) {
-        super(firstLeg, secondLeg, color);
-    }
-
-    @Override
-    public String toString() {
-        return "Figure : right thiangle, "
-                + "area: " + getArea()
-                + " sq. units, firstLeg = "
-                + getFirstLeg() + ", secondLeg = "
-                + getSecondLeg()
-                + " units, color: '"
-                + getColor() + "'";
+        super(color);
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
     }
 
     @Override
     public double getArea() {
-        return getFirstLeg() * getSecondLeg();
+        return firstLeg * secondLeg;
     }
+
+    @Override
+    public String toString() {
+        return "Figure: rectangle, area: "
+                + getArea() + " sq. units, firatLeg : "
+                + firstLeg + " units, " + "secondLeg : "
+                + secondLeg + "units, " + " color : "
+                + getColor();
+    }
+
 }
