@@ -1,11 +1,15 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private double side;
+    private double base;
+    private double height;
+    private double hypotenuse;
 
     public RightTriangle(String color, double side) {
         super(color);
-        this.side = side;
+        this.base = base;
+        this.height = height;
+        this.hypotenuse = hypotenuse;
     }
 
     @Override

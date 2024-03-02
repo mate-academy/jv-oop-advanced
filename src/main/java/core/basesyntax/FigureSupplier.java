@@ -25,7 +25,8 @@ public class FigureSupplier {
                 return new Rectangle(COLOR, random.nextInt(BOUND), random.nextInt(BOUND));
             }
             case RIGHT_TRIANGLE -> {
-                return new RightTriangle(COLOR, random.nextInt(BOUND));
+                return new RightTriangle(COLOR, random.nextInt(BOUND), random.nextInt(BOUND),
+                        random.nextInt(BOUND));
             }
             case SQUARE -> {
                 return new Square(COLOR, random.nextInt(BOUND));
