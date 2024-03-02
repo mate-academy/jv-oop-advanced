@@ -27,24 +27,16 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double areaCalculation() {
+    public double getArea() {
         return firstSide * secondSide;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: rectangle"
-                + ", firstSide = "
-                + firstSide
-                + " units"
-                + ", secondSide = "
-                + secondSide
-                + " units"
-                + ", area = "
-                + areaCalculation()
-                + " units"
-                + ", color = "
-                + getColor()
-        );
+                + ", firstSide = " + firstSide + " units"
+                + ", secondSide = " + secondSide + " units"
+                + ", area = " + getArea() + " units"
+                + ", color = " + getColor());
     }
 }
