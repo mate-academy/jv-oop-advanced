@@ -25,7 +25,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_VALUE,DEFAULT_COLOR);
+        return new Circle(DEFAULT_VALUE, DEFAULT_COLOR);
     }
-
 }
