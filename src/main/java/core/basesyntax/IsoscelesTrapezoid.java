@@ -5,6 +5,13 @@ public class IsoscelesTrapezoid extends Figure {
     private double secondBase;
     private double side;
 
+    public IsoscelesTrapezoid(String color, double firstBase, double secondBase, double side) {
+        super(color);
+        this.firstBase = firstBase;
+        this.secondBase = secondBase;
+        this.side = side;
+    }
+
     public double getFirstBase() {
         return firstBase;
     }
@@ -18,11 +25,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     public void setSecondBase(double secondBase) {
-        if (secondBase >= firstBase) {
-            this.secondBase = secondBase;
-        } else {
-            System.out.println("firstBase should be less or equal secondBase");
-        }
+        this.secondBase = secondBase;
     }
 
     public double getSide() {
@@ -34,13 +37,18 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double areaOfFigure() {
-        return ((firstBase + secondBase) / 4) * Math.sqrt(4 * (side * side)
-                - Math.pow(((firstBase - secondBase)), 2));
+    public double areaCalculation() {
+        if (secondBase >= firstBase) {
+            return ((firstBase + secondBase) / 4) * Math.sqrt(4 * (side * side)
+                    - Math.pow(((firstBase - secondBase)), 2));
+        } else {
+            return ((firstBase + secondBase) / 4) * Math.sqrt(4 * (side * side)
+                    - Math.pow(((secondBase - firstBase)), 2));
+        }
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println("Figure: isoscelesTrapezoid"
                 + ", firstBase = "
                 + firstBase
@@ -52,20 +60,10 @@ public class IsoscelesTrapezoid extends Figure {
                 + side
                 + " units"
                 + ", area = "
-                + areaOfFigure()
+                + areaCalculation()
                 + " units"
                 + ", color = "
                 + getColor()
         );
-    }
-
-    @Override
-    public Figure getRandomFigure() {
-        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
-        isoscelesTrapezoid.setColor(ColorSupplier.getRandomColor());
-        isoscelesTrapezoid.setFirstBase(random.nextDouble(30));
-        isoscelesTrapezoid.setSecondBase(isoscelesTrapezoid.getFirstBase() + random.nextDouble(30));
-        isoscelesTrapezoid.setSide(random.nextDouble(20));
-        return isoscelesTrapezoid;
     }
 }
