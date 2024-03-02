@@ -5,6 +5,13 @@ public class RightTriangle extends Figure {
     private double secondLeg;
     private double hypotenuse;
 
+    public RightTriangle(String color, double firstLeg, double secondLeg) {
+        super(color);
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
+        setHypotenuse();
+    }
+
     public double getFirstLeg() {
         return firstLeg;
     }
@@ -30,12 +37,12 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double areaOfFigure() {
+    public double areaCalculation() {
         return (firstLeg * secondLeg) / 2;
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println("Figure: rightTriangle"
                 + ", firstLeg = "
                 + firstLeg
@@ -47,20 +54,10 @@ public class RightTriangle extends Figure {
                 + hypotenuse
                 + " units"
                 + ", area = "
-                + areaOfFigure()
+                + areaCalculation()
                 + " units"
                 + ", color = "
-                + ColorSupplier.getRandomColor()
+                + getColor()
         );
-    }
-
-    @Override
-    public Figure getRandomFigure() {
-        RightTriangle rightTriangle = new RightTriangle();
-        rightTriangle.setColor(ColorSupplier.getRandomColor());
-        rightTriangle.setFirstLeg(random.nextDouble(30));
-        rightTriangle.setSecondLeg(random.nextDouble(30));
-        rightTriangle.setHypotenuse();
-        return rightTriangle;
     }
 }
