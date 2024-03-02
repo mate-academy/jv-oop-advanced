@@ -2,49 +2,49 @@ package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
     private double side;
-    private double firstBases;
-    private double secondBases;
+    private double firstBase;
+    private double secondBase;
 
-    public IsoscelesTrapezoid(Color color, double side, double fistBases, double secondBases) {
+    public IsoscelesTrapezoid(String color, double side, double fistBase, double secondBase) {
         super(color);
         this.side = side;
-        this.firstBases = firstBases;
-        this.secondBases = secondBases;
+        this.firstBase = firstBase;
+        this.secondBase = secondBase;
     }
 
     public double getSide() {
         return side;
     }
 
-    public double getFirstBases() {
-        return firstBases;
+    public double getFirstBase() {
+        return firstBase;
     }
 
-    public double getSecondBases() {
-        return secondBases;
+    public double getSecondBase() {
+        return secondBase;
     }
 
     public void setSide(double side) {
         this.side = side;
     }
 
-    public void setFirstBases(double firstBases) {
-        this.firstBases = firstBases;
+    public void setFirstBase(double firstBase) {
+        this.firstBase = firstBase;
     }
 
-    public void setSecondBases(double secondBases) {
-        this.secondBases = secondBases;
+    public void setSecondBase(double secondBase) {
+        this.secondBase = secondBase;
     }
 
     @Override
     public double getArea() {
-        return (firstBases + secondBases) / 2 * side;
+        return (firstBase + secondBase) / 2 * side;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: isosceles trapezoid, area: " + getArea()
-                + " sq. units, firstBase: " + firstBases + " units, secondBase: "
-                + secondBases + " units, height: " + side + " units, color: " + getColor());
+                + " sq. units, firstBase: " + firstBase + " units, secondBase: "
+                + secondBase + " units, height: " + side + " units, color: " + getColor());
     }
 }
