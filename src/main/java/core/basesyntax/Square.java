@@ -5,7 +5,8 @@ public class Square extends Figure {
     private String color = Colors.YELLOW.name();
 
     public double getArea() {
-        area = sideSquare * sideSquare;
+        double area = sideSquare * sideSquare;
+        this.setArea(area);
         return area;
     }
 

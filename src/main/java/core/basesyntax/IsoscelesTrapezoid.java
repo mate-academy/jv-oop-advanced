@@ -7,7 +7,8 @@ public class IsoscelesTrapezoid extends Figure {
     private String color = Colors.YELLOW.name();
 
     public double getArea() {
-        area = (downSideTrapesoid + upSideTrapesoid) / 2 * hightTrapesoid;
+        double area = (downSideTrapesoid + upSideTrapesoid) / 2 * hightTrapesoid;
+        this.setArea(area);
         return area;
     }
 

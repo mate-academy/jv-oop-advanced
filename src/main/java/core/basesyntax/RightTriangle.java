@@ -6,7 +6,8 @@ public class RightTriangle extends Figure {
     private String color = Colors.GREEN.name();
 
     public double getArea() {
-        area = firstLeg * secondLeg / 2;
+        double area = firstLeg * secondLeg / 2;
+        this.setArea(area);
         return area;
     }
 

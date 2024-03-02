@@ -6,7 +6,8 @@ public class Rectangle extends Figure {
     private String color = Colors.BLUE.name();
 
     public double getArea() {
-        area = firstSideRectangle * secondSideRectangle;
+        double area = firstSideRectangle * secondSideRectangle;
+        this.setArea(area);
         return area;
     }
 

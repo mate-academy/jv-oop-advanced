@@ -5,7 +5,8 @@ public class Circle extends Figure {
     private String color = Colors.RED.name();
 
     public double getArea() {
-        area = radius * radius * Math.PI;
+        double area = radius * radius * Math.PI;
+        this.setArea(area);
         return area;
     }
 
