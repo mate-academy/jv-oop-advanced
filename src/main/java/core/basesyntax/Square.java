@@ -11,6 +11,12 @@ public class Square extends Figure {
     @Override
     public String toString() {
 
-        return super.toString() + "side: " + side;
+        return super.toString() + "side: " + side
+                + ", area: " + getArea();
+    }
+
+    @Override
+    public double getArea() {
+        return side * side;
     }
 }

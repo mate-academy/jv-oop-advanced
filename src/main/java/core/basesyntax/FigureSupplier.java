@@ -20,7 +20,7 @@ public class FigureSupplier {
             }
             case ISSOSCELES_TRAPEZOID -> {
                 return new IsoscelesTrapezoid(COLOR, random.nextInt(BOUND),
-                        random.nextInt(BOUND), random.nextInt(BOUND));
+                        random.nextInt(BOUND), random.nextInt(BOUND), random.nextInt(BOUND));
             }
             case RECTANGLE -> {
                 return new Rectangle(COLOR, random.nextInt(BOUND), random.nextInt(BOUND));

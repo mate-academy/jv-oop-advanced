@@ -14,6 +14,12 @@ public class Rectangle extends Figure {
     public String toString() {
         return super.toString()
                 + "width: " + width
-                + ", height: " + height;
+                + ", height: " + height
+                + ", area: " + getArea();
+    }
+
+    @Override
+    public double getArea() {
+        return width * height;
     }
 }

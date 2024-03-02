@@ -18,4 +18,8 @@ public class Figure implements Drawable {
     public void draw(Figure figure) {
         System.out.println(figure);
     }
+
+    public double getArea() {
+        return 0;
+    }
 }

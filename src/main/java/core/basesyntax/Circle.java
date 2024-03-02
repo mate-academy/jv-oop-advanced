@@ -10,6 +10,13 @@ public class Circle extends Figure {
 
     @Override
     public String toString() {
-        return super.toString() + "radius: " + radius;
+        return super.toString() + "radius: " + radius
+                + ", area: " + getArea();
     }
+
+    @Override
+    public double getArea() {
+        return Math.PI * radius * radius;
+    }
+
 }
