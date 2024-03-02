@@ -4,6 +4,12 @@ public class Rectangle extends Figure {
     private double firstSide;
     private double secondSide;
 
+    public Rectangle(String color, double firstSide, double secondSide) {
+        super(color);
+        this.firstSide = firstSide;
+        this.secondSide = secondSide;
+    }
+
     public double getFirstSide() {
         return firstSide;
     }
@@ -21,12 +27,12 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double areaOfFigure() {
+    public double areaCalculation() {
         return firstSide * secondSide;
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println("Figure: rectangle"
                 + ", firstSide = "
                 + firstSide
@@ -35,19 +41,10 @@ public class Rectangle extends Figure {
                 + secondSide
                 + " units"
                 + ", area = "
-                + areaOfFigure()
+                + areaCalculation()
                 + " units"
                 + ", color = "
                 + getColor()
         );
-    }
-
-    @Override
-    public Figure getRandomFigure() {
-        Rectangle rectangle = new Rectangle();
-        rectangle.setColor(ColorSupplier.getRandomColor());
-        rectangle.setFirstSide(random.nextDouble(30));
-        rectangle.setSecondSide(random.nextDouble(30));
-        return rectangle;
     }
 }
