@@ -37,7 +37,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double areaCalculation() {
+    public double getArea() {
         if (secondBase >= firstBase) {
             return ((firstBase + secondBase) / 4) * Math.sqrt(4 * (side * side)
                     - Math.pow(((firstBase - secondBase)), 2));
@@ -50,20 +50,10 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: isoscelesTrapezoid"
-                + ", firstBase = "
-                + firstBase
-                + " units"
-                + ", secondBase = "
-                + secondBase
-                + " units"
-                + ", side = "
-                + side
-                + " units"
-                + ", area = "
-                + areaCalculation()
-                + " units"
-                + ", color = "
-                + getColor()
-        );
+                + ", firstBase = " + firstBase + " units"
+                + ", secondBase = " + secondBase + " units"
+                + ", side = " + side + " units"
+                + ", area = " + getArea() + " units"
+                + ", color = " + getColor());
     }
 }
