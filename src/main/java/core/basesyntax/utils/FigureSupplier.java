@@ -9,28 +9,27 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        FigureType randomType = getRandomFigureType();
+        FigureType randomFigureType = getRandomFigureType();
         double randomNumber = Math.round(random.nextDouble() * 10 + 1);
         double randomNumber2 = Math.round(random.nextDouble() * 10 + 1);
         double randomNumber3 = Math.round(random.nextDouble() * 10 + 1);
 
-        switch (randomType) {
-            case Circle:
+        switch (randomFigureType) {
+            case CIRCLE:
                 return new Circle(colorSupplier.getRandomColor(), randomNumber);
-            case Square:
+            case SQUARE:
                 return new Square(colorSupplier.getRandomColor(), randomNumber);
-            case Rectangle:
+            case RECTANGLE:
                 return new Rectangle(colorSupplier.getRandomColor(), randomNumber, randomNumber2);
-            case RightTriangle:
+            case RIGHT_TRIANGLE:
                 return new RightTriangle(colorSupplier.getRandomColor(),
                         randomNumber,
                         randomNumber2);
-            case IsoscelesTrapezoid:
+            case ISOSCELES_TRAPEZOID:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                         randomNumber,
                         randomNumber2,
@@ -41,8 +40,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-
-        return new Circle(10, Color.YELLOW);
+        return new Circle(Color.WHITE, 10);
     }
 
     private FigureType getRandomFigureType() {

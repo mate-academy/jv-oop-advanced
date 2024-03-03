@@ -7,21 +7,8 @@ public class IsoscelesTrapezoid extends Figure {
     private double baseB;
     private double height;
 
-    public IsoscelesTrapezoid(double baseA, double baseB, double height) {
-        this.baseA = baseA;
-        this.baseB = baseB;
-        this.height = height;
-    }
-
     public IsoscelesTrapezoid(Color color, double baseA, double baseB, double height) {
         super(color);
-        this.baseA = baseA;
-        this.baseB = baseB;
-        this.height = height;
-    }
-
-    public IsoscelesTrapezoid(double area, Color color, double baseA, double baseB, double height) {
-        super(area, color);
         this.baseA = baseA;
         this.baseB = baseB;
         this.height = height;
@@ -52,16 +39,16 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double calculate() {
+    public double calculateArea() {
         return (baseA + baseB) * height / 2;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: IsoscelesTrapezoid, " + "area: " + calculate() + " sq. units, "
-                + "topBase: " + (int) baseA
-                + " units, bottomBase: " + (int) baseB
-                + " units, height: " + (int) height
+        System.out.println("Figure: IsoscelesTrapezoid, " + "area: " + calculateArea()
+                + " sq. units, " + "topBase: " + baseA
+                + " units, bottomBase: " + baseB
+                + " units, height: " + height
                 + " units, color: " + getColor().toString().toLowerCase());
     }
 }

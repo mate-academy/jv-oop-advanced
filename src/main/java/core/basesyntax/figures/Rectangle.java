@@ -3,21 +3,10 @@ package core.basesyntax.figures;
 import core.basesyntax.utils.Color;
 
 public class Rectangle extends Square {
-
     private double side2;
-
-    public Rectangle(double side, double side2) {
-        super(side);
-        this.side2 = side2;
-    }
 
     public Rectangle(Color color, double side, double side2) {
         super(color, side);
-        this.side2 = side2;
-    }
-
-    public Rectangle(double area, Color color, double side, double side2) {
-        super(area, color, side);
         this.side2 = side2;
     }
 
@@ -30,13 +19,13 @@ public class Rectangle extends Square {
     }
 
     @Override
-    public double calculate() {
+    public double calculateArea() {
         return getSide() * side2;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, " + "area: " + calculate()
+        System.out.println("Figure: rectangle, " + "area: " + calculateArea()
                 + " sq. units, " + "side1: " + getSide()
                 + " units, side2: " + side2 + " units, color: "
                 + getColor().toString().toLowerCase());

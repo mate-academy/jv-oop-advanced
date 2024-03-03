@@ -13,7 +13,8 @@ public class App {
         Figure[] figures = {figureSupplier.getRandomFigure(),
                 figureSupplier.getRandomFigure(),
                 figureSupplier.getRandomFigure(),
-                figureSupplier.getRandomFigure()};
+                figureSupplier.getRandomFigure()
+        };
 
         for (Figure figure : figures) {
             figure.draw();

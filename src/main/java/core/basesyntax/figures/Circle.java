@@ -3,19 +3,11 @@ package core.basesyntax.figures;
 import core.basesyntax.utils.Color;
 
 public class Circle extends Figure {
-
     private double radius;
-
-    public Circle() {
-    }
 
     public Circle(Color color, double radius) {
         super(color);
         this.radius = radius;
-    }
-
-    public Circle(double area, Color color) {
-        super(area, color);
     }
 
     public Circle(double area, Color color, double radius) {
@@ -32,15 +24,15 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double calculate() {
+    public double calculateArea() {
         return Math.PI * radius * radius;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: circle, "
-                + "area: " + (double) Math.round(calculate() * 10) / 10
-                + " sq. units, " + "radius: " + (int) radius
+                + "area: " + Math.round(calculateArea() * 10) / 10
+                + " sq. units, " + "radius: " + radius
                 + " units, color: " + getColor().toString().toLowerCase());
     }
 }

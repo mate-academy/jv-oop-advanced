@@ -37,7 +37,7 @@ public abstract class Figure implements DrawFigure, CalculateArea {
     }
 
     @Override
-    public double calculate() {
+    public double calculateArea() {
         return area;
     }
 

@@ -3,23 +3,11 @@ package core.basesyntax.figures;
 import core.basesyntax.utils.Color;
 
 public class RightTriangle extends Figure {
-
     private double firstLeg;
     private double secondLeg;
 
-    public RightTriangle(double firstLeg, double secondLeg) {
-        this.firstLeg = firstLeg;
-        this.secondLeg = secondLeg;
-    }
-
     public RightTriangle(Color color, double firstLeg, double secondLeg) {
         super(color);
-        this.firstLeg = firstLeg;
-        this.secondLeg = secondLeg;
-    }
-
-    public RightTriangle(double area, Color color, double firstLeg, double secondLeg) {
-        super(area, color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
@@ -41,13 +29,13 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double calculate() {
+    public double calculateArea() {
         return firstLeg * secondLeg / 2;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: right triangle, " + "area: " + calculate() + " sq. units, "
+        System.out.println("Figure: right triangle, " + "area: " + calculateArea() + " sq. units, "
                 + "firstLeg: " + firstLeg
                 + " units, secondLeg: " + secondLeg + " units, color: "
                 + getColor().toString().toLowerCase());
