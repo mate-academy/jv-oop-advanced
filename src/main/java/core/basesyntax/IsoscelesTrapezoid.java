@@ -1,13 +1,22 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private int hightTrapesoid = 22;
-    private int downSideTrapesoid = 50;
-    private int upSideTrapesoid = 20;
-    private String color = Colors.YELLOW.name();
+    private int hightTrapesoid;
+    private int downSideTrapesoid;
+    private int upSideTrapesoid;
+    private String color;
+
+    public IsoscelesTrapezoid(String color, int hightTrapesoid,
+                              int downSideTrapesoid, int upSideTrapesoid) {
+        this.downSideTrapesoid = downSideTrapesoid;
+        this.color = color;
+        this.hightTrapesoid = hightTrapesoid;
+        this.upSideTrapesoid = upSideTrapesoid;
+    }
 
     public double getArea() {
-        double area = (downSideTrapesoid + upSideTrapesoid) / 2 * hightTrapesoid;
+        double area = (downSideTrapesoid + upSideTrapesoid) / 2
+                * hightTrapesoid;
         this.setArea(area);
         return area;
     }
@@ -18,21 +27,5 @@ public class IsoscelesTrapezoid extends Figure {
                 + ", hTrapesoid : " + hightTrapesoid
                 + ", dowvSideTrapesoid : " + downSideTrapesoid + ", upSideTrapesoid : "
                 + upSideTrapesoid + ", color : " + color);
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public void setDownSideTrapesoid(int downSideTrapesoid) {
-        this.downSideTrapesoid = downSideTrapesoid;
-    }
-
-    public void setHightTrapesoid(int hightTrapesoid) {
-        this.hightTrapesoid = hightTrapesoid;
-    }
-
-    public void setUpSideTrapesoid(int upSideTrapesoid) {
-        this.upSideTrapesoid = upSideTrapesoid;
     }
 }

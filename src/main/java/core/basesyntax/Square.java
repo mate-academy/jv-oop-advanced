@@ -1,8 +1,13 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    private int sideSquare = 20;
-    private String color = Colors.YELLOW.name();
+    private int sideSquare;
+    private String color;
+
+    public Square(String color, int sideSquare) {
+        this.color = color;
+        this.sideSquare = sideSquare;
+    }
 
     public double getArea() {
         double area = sideSquare * sideSquare;
@@ -13,13 +18,5 @@ public class Square extends Figure {
     public void paintFigure() {
         System.out.println("Figure : sqaure, area : " + getArea() + ", side : "
                 + sideSquare + ", color : " + color);
-    }
-
-    public void setSideSquare(int sideSquare) {
-        this.sideSquare = sideSquare;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
     }
 }

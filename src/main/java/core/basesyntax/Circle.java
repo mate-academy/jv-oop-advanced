@@ -1,8 +1,13 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private int radius = 15;
-    private String color = Colors.RED.name();
+    private int radius;
+    private String color;
+
+    public Circle(String color, int radius) {
+        this.color = color;
+        this.radius = radius;
+    }
 
     public double getArea() {
         double area = radius * radius * Math.PI;
@@ -14,13 +19,5 @@ public class Circle extends Figure {
     public void paintFigure() {
         System.out.println("Figure : Circle, area : " + getArea() + ", radius : "
                 + radius + ", color : " + color);
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public void setRadius(int radius) {
-        this.radius = radius;
     }
 }

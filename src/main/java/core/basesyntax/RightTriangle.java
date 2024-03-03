@@ -1,9 +1,15 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private int firstLeg = 20;
-    private int secondLeg = 30;
-    private String color = Colors.GREEN.name();
+    private int firstLeg;
+    private int secondLeg;
+    private String color;
+
+    public RightTriangle(String color, int firstLeg, int secondLeg) {
+        this.color = color;
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
+    }
 
     public double getArea() {
         double area = firstLeg * secondLeg / 2;
@@ -15,17 +21,5 @@ public class RightTriangle extends Figure {
     public void paintFigure() {
         System.out.println("Figure : RightTriangle, area : " + getArea() + ", firstLeg : "
                 + firstLeg + ", secondLeg  : " + secondLeg + ", color : " + color);
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public void setFirstLeg(int firstLeg) {
-        this.firstLeg = firstLeg;
-    }
-
-    public void setSecondLeg(int secondLeg) {
-        this.secondLeg = secondLeg;
     }
 }
