@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Shape implements Drawable, AreaCalculable {
+public abstract class Shape{
     protected String color;
 
     public Shape(String color) {
