@@ -18,6 +18,6 @@ public class RightTriangle extends Shape {
     @Override
     public void draw() {
         System.out.println("Figure: right triangle, area: " + getArea() + " sq.units," 
-            + " base: " + base + ", height: " + height + ", color: " + color);
+                + " base: " + base + ", height: " + height + ", color: " + color);
     }
 }
