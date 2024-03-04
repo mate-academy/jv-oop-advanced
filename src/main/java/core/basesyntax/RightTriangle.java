@@ -11,13 +11,13 @@ public class RightTriangle extends Shape {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return (base * height) / 2;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: right triangle, area: " + getArea() + " sq.units," 
+        System.out.println("Figure: right triangle, area: " + calculateArea() + " sq.units," 
                 + " base: " + base + ", height: " + height + ", color: " + color);
     }
 }
