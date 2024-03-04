@@ -25,6 +25,11 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
+    public void draw() {
+        System.out.println(this);
+    }
+
+    @Override
     public double getArea() {
         return ((downBase + upBase) / 2) * height;
     }

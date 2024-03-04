@@ -19,6 +19,11 @@ public class Rectangle extends Figure {
     }
 
     @Override
+    public void draw() {
+        System.out.println(this);
+    }
+
+    @Override
     public double getArea() {
         return width * height;
     }

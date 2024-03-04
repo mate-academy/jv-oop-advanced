@@ -21,6 +21,11 @@ public class RightTriangle extends Figure {
     }
 
     @Override
+    public void draw() {
+        System.out.println(this);
+    }
+
+    @Override
     public double getArea() {
         return (base * height) / 2;
     }
