@@ -4,7 +4,7 @@ public class RightTriangle extends Shape {
     private double base;
     private double height;
 
-    public RightTriangle(String color, double base, double height) {
+    public RightTriangle(Color color, double base, double height) {
         super(color);
         this.base = base;
         this.height = height;
@@ -17,7 +17,7 @@ public class RightTriangle extends Shape {
 
     @Override
     public void draw() {
-        System.out.println("Figure: right triangle, area: " + calculateArea() + " sq.units," 
-                + " base: " + base + ", height: " + height + ", color: " + color);
+        System.out.println("Figure: right triangle, area: " + calculateArea() + " sq.units, base: " 
+                + base + ", height: " + height + ", color: " + color.name().toLowerCase());
     }
 }
