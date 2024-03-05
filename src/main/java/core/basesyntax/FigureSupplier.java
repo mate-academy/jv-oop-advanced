@@ -1,8 +1,7 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class FigureSupplier {
+
     public static Figure getRandomFigure() {
         int randomNumber = (int) (Math.random() * 5);
 

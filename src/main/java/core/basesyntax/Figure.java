@@ -20,7 +20,9 @@ public abstract class Figure implements Drawable, Colorful {
     }
 
     public abstract double getArea();
+
     public abstract void draw();
+
     public String getColor() {
         return color;
     }
