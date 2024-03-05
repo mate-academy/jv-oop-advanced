@@ -8,4 +8,9 @@ public abstract class Figure implements Drawable {
     }
 
     public abstract String getArea();
+
+    @Override
+    public String draw() {
+        return color;
+    }
 }

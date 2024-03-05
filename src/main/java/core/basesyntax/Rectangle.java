@@ -16,6 +16,6 @@ public class Rectangle extends Figure {
     }
     @Override
     public String draw() {
-        return getArea();
+        return "Figure: Rectangle, area:" + getArea() + "sq. units, sideA: " + sideA + " units, sideB: " + sideB + "units, color:" + super.draw();
     }
 }

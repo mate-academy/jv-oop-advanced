@@ -10,10 +10,11 @@ public class Square extends Figure implements Drawable {
 
     @Override
     public String getArea() {
-        return 0;
+
+        return String.valueOf(side * side);
     }
     @Override
     public String draw() {
-        return null;
+        return "Figure: Square, area:" + getArea() + "sq. units, side: " + side + "units, color:" + super.draw();
     }
 }
