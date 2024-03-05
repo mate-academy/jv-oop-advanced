@@ -12,10 +12,14 @@ public class RightTriangle extends Figure {
 
     @Override
     public String getArea() {
-        return String.valueOf((firstLeg * secondLeg)/2);
+        return String.valueOf((firstLeg * secondLeg) / 2);
     }
+
     @Override
     public String draw() {
-        return "Figure: RightTriangle, area:" + getArea() + "sq. units, firstLeg: " + firstLeg + " units, secondLeg: " + secondLeg + "units, color:" + super.draw();
+        return "Figure: RightTriangle, area:" + getArea()
+                + "sq. units, firstLeg: " + firstLeg
+                + " units, secondLeg: " + secondLeg
+                + "units, color:" + super.draw();
     }
 }
