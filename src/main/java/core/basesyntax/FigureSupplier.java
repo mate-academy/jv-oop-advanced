@@ -4,41 +4,25 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_PARAMETER = 10;
-    private static final int FIGURE_TYPES = 5;
     private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Shape getRandomFigure() {
-        int figureType = random.nextInt(FIGURE_TYPES);
-        ColorSupplier colorSupplier = new ColorSupplier();
-        String color = colorSupplier.getRandomColor();
+        Color color = colorSupplier.getRandomColor();
+        int figureType = random.nextInt(5);
         switch (figureType) {
             case 0:
-                return new Circle(color, getRandomParameter());
+                return new Circle(color, random.nextInt(MAX_PARAMETER) + 1);
             case 1:
-                return new Square(color, getRandomParameter());
+                return new Square(color, random.nextInt(MAX_PARAMETER) + 1);
             case 2:
-                return new Rectangle(
-                    color, 
-                    getRandomParameter(), 
-                    getRandomParameter()
-                );
+                return new Rectangle(color, random.nextInt(MAX_PARAMETER) + 1, random.nextInt(MAX_PARAMETER) + 1);
             case 3:
-                return new IsoscelesTrapezoid(
-                    color, 
-                    getRandomParameter(), 
-                    getRandomParameter(), 
-                    getRandomParameter()
-                );
+                return new IsoscelesTrapezoid(color, random.nextInt(MAX_PARAMETER) + 1, random.nextInt(MAX_PARAMETER) + 1, random.nextInt(MAX_PARAMETER) + 1);
+            case 4:
+                return new RightTriangle(color, random.nextInt(MAX_PARAMETER) + 1, random.nextInt(MAX_PARAMETER) + 1);
             default:
-                return getDefaultFigure();
+                return new Circle(color, 10);
         }
-    }
-
-    private int getRandomParameter() {
-        return random.nextInt(MAX_PARAMETER) + 1;
-    }
-
-    public Shape getDefaultFigure() {
-        return new Circle("white", 10);
     }
 }
