@@ -1,9 +1,14 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure implements Drawable {
-    private String color;
     private int sideA;
     private int sideB;
+
+    public Rectangle(String color, int sideA, int sideB) {
+        super(color);
+        this.sideA = sideA;
+        this.sideB = sideB;
+    }
 
     @Override
     public int getArea() {

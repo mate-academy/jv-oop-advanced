@@ -1,9 +1,12 @@
 package core.basesyntax;
 
 public class Square extends Figure implements Drawable {
-    private String color;
     private int side;
 
+    public Square(String color, int side) {
+        super(color);
+        this.side = side;
+    }
 
     @Override
     public int getArea() {
