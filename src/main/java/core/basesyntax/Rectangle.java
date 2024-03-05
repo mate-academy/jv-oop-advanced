@@ -1,26 +1,23 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Shape {
-    private double topBase;
-    private double bottomBase;
-    private double height;
+public class Rectangle extends Shape {
+    private double length;
+    private double width;
 
-    public IsoscelesTrapezoid(Color color, double topBase, double bottomBase, double height) {
+    public Rectangle(Color color, double length, double width) {
         super(color);
-        this.topBase = topBase;
-        this.bottomBase = bottomBase;
-        this.height = height;
+        this.length = length;
+        this.width = width;
     }
 
     @Override
     public double calculateArea() {
-        return ((topBase + bottomBase) / 2) * height;
+        return length * width;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: isosceles trapezoid, area: " + calculateArea() + " sq.units,");
-        System.out.println("topBase: " + topBase + ", bottomBase: " + bottomBase + 
-                           ", height: " + height + ", color: " + color.name().toLowerCase());
+        System.out.println("Figure: rectangle, area: " + calculateArea() + " sq.units, length: " 
+                + length + ", width: " + width + ", color: " + color.name().toLowerCase());
     }
 }
