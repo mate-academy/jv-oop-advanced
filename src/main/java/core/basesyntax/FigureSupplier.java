@@ -1,5 +1,7 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public class FigureSupplier {
     private static final int MAX_PARAMETER = 10;
     private Random random = new Random();
@@ -20,7 +22,7 @@ public class FigureSupplier {
             case 4:
                 return new RightTriangle(color, random.nextInt(MAX_PARAMETER) + 1, random.nextInt(MAX_PARAMETER) + 1);
             default:
-                return new Circle(color, 10);
+                return getDefaultFigure();
         }
     }
 
