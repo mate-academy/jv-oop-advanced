@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class FigureSupplier {
     private static final int MAX_PARAMETER = 10;
     private Random random = new Random();
@@ -24,5 +22,9 @@ public class FigureSupplier {
             default:
                 return new Circle(color, 10);
         }
+    }
+
+    public Shape getDefaultFigure() {
+        return new Circle(Color.BLUE, 10);
     }
 }
