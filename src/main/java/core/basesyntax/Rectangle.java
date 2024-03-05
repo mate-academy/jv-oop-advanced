@@ -1,2 +1,4 @@
-package core.basesyntax;public class Rectangle {
+package core.basesyntax;
+
+public class Rectangle {
 }
