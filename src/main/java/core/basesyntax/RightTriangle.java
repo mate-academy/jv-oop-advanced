@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements Drawable {
+public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
@@ -11,11 +11,11 @@ public class RightTriangle extends Figure implements Drawable {
     }
 
     @Override
-    public int getArea() {
-        return 0;
+    public String getArea() {
+        return String.valueOf((firstLeg * secondLeg)/2);
     }
     @Override
     public String draw() {
-        return null;
+        return getArea();
     }
 }

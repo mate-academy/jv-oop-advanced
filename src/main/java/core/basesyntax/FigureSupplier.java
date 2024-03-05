@@ -1,12 +1,11 @@
 package core.basesyntax;
 
-public class FigureSupplier extends Figure{
+public class FigureSupplier{
 
-    public FigureSupplier(String color) {
-        super(color);
+    public Figure getRandomFigure(){
+        return ;
     }
-
     public Figure getDefaultFigure(){
-
+        return ;
     }
 }

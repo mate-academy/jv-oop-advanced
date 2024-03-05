@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements Drawable {
+public class IsoscelesTrapezoid extends Figure {
     private int upperSide;
     private int downSide;
     private int height;
@@ -13,11 +13,12 @@ public class IsoscelesTrapezoid extends Figure implements Drawable {
     }
 
     @Override
-    public int getArea() {
-        return 0;
+    public String getArea() {
+        return String.valueOf(((upperSide + downSide) * height)/2);
     }
+
     @Override
     public String draw() {
-        return null;
+        return getArea();
     }
 }

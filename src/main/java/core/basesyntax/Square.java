@@ -9,7 +9,7 @@ public class Square extends Figure implements Drawable {
     }
 
     @Override
-    public int getArea() {
+    public String getArea() {
         return 0;
     }
     @Override
