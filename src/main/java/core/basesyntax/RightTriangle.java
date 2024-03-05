@@ -18,10 +18,8 @@ public class RightTriangle extends RandomFigure {
 
     @Override
     public void draw() {
-        System.out.println("Loading a Right triangle");
-        System.out.println("Area - " + getArea());
-        System.out.println("Color - " + color);
-        System.out.println("First angle - " + firstAngle);
-        System.out.println("Second angle - " + secondAngle);
+        System.out.println("Loading a Right triangle \n" + "Area - " + getArea() + "\n"
+                + "Color - " + color + "\n" + "First angle - " + firstAngle + "\n"
+                + "Second angle - " + secondAngle);
     }
 }

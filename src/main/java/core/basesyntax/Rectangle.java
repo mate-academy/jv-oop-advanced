@@ -18,10 +18,8 @@ public class Rectangle extends RandomFigure {
 
     @Override
     public void draw() {
-        System.out.println("Loading a Rectangle");
-        System.out.println("Area: " + getArea());
-        System.out.println("Color: " + color);
-        System.out.println("First side: " + firstSide);
-        System.out.println("Second side: " + secondSide);
+        System.out.println("Loading a Rectangle \n" + "Area: " + getArea() + "\n"
+                + "Color: " + color + "\n" + "First side: " + firstSide + "\n"
+                + "Second side: " + secondSide);
     }
 }

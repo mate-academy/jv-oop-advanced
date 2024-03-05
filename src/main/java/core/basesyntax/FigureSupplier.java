@@ -7,6 +7,7 @@ public class FigureSupplier {
     private static final int NUMBER_OF_FIGURES = 5;
     private final Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
+    private double newRandomLength = random.nextDouble() * DEFAULT_LENGTH;
 
     public RandomFigure getRandomFigure() {
         String randomColor = colorSupplier.getRandomColor().name();
@@ -15,18 +16,15 @@ public class FigureSupplier {
 
         switch (randomNumber) {
             case 0:
-                return new Circle(random.nextDouble() * DEFAULT_LENGTH, randomColor);
+                return new Circle(newRandomLength, randomColor);
             case 1:
-                return new Rectangle(random.nextDouble() * DEFAULT_LENGTH,
-                        random.nextDouble() * DEFAULT_LENGTH, randomColor);
+                return new Rectangle(newRandomLength, newRandomLength, randomColor);
             case 2:
-                return new RightTriangle(random.nextDouble() * DEFAULT_LENGTH,
-                        random.nextDouble() * DEFAULT_LENGTH, randomColor);
+                return new RightTriangle(newRandomLength, newRandomLength, randomColor);
             case 3:
-                return new Square(random.nextDouble() * DEFAULT_LENGTH, randomColor);
+                return new Square(newRandomLength, randomColor);
             case 4:
-                return new IsoscelesTrapezoid(random.nextDouble() * DEFAULT_LENGTH,
-                        random.nextDouble() * DEFAULT_LENGTH, random.nextDouble() * DEFAULT_LENGTH,
+                return new IsoscelesTrapezoid(newRandomLength, newRandomLength, newRandomLength,
                         randomColor);
             default:
                 return null;

@@ -16,9 +16,7 @@ public class Square extends RandomFigure {
 
     @Override
     public void draw() {
-        System.out.println("Loading a Square");
-        System.out.println("Area: " + getArea());
-        System.out.println("Color: " + color);
-        System.out.println("Side: " + side);
+        System.out.println("Loading a Square \n" + "Area: " + getArea() + "\n"
+                + "Color: " + color + "\n" + "Side: " + side);
     }
 }

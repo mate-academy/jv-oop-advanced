@@ -16,9 +16,7 @@ public class Circle extends RandomFigure {
 
     @Override
     public void draw() {
-        System.out.println("Loading a Circle");
-        System.out.println("Area - " + getArea());
-        System.out.println("Color - " + color);
-        System.out.println("Radius - " + radius);
+        System.out.println("Loading a Circle \n" + "Area - " + getArea() + "\n"
+                + "Color - " + color + "\n" + "Radius - " + radius);
     }
 }
