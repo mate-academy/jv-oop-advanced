@@ -10,27 +10,27 @@ public class FigureSupplier {
         Figure[] figures = {
                 new IsoscelesTrapezoid(
                         colorSupplier.getRandomColor(),
-                        random.nextInt(),
-                        random.nextInt(),
-                        random.nextInt()
+                        random.nextInt(1000),
+                        random.nextInt(1000),
+                        random.nextInt(1000)
                 ),
                 new Circle(
                         colorSupplier.getRandomColor(),
-                        random.nextInt()
+                        random.nextInt(1000)
                 ),
                 new RightTriangle(
                         colorSupplier.getRandomColor(),
-                        random.nextInt(),
-                        random.nextInt()
+                        random.nextInt(1000),
+                        random.nextInt(1000)
                 ),
                 new Rectangle(
                         colorSupplier.getRandomColor(),
-                        random.nextInt(),
-                        random.nextInt()
+                        random.nextInt(1000),
+                        random.nextInt(1000)
                 ),
                 new Square(
                         colorSupplier.getRandomColor(),
-                        random.nextInt()
+                        random.nextInt(1000)
                 )};
         return figures[random.nextInt(figures.length)];
     }
