@@ -13,4 +13,9 @@ public class Circle extends Figure {
         return Math.PI * radius * radius;
     }
 
+    @Override
+    public Figure draw() {
+        System.out.println("Figure: Circle, area: " + getArea() + " sq. units, radius: " + radius + " units, color: " + getColor());
+        return null;
+    }
 }

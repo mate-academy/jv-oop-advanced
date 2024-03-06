@@ -12,8 +12,5 @@ public class Main {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
         }
-        for (int i = 0; i < figures.length; i++) {
-            System.out.println(figures[i]);
-        }
     }
 }
