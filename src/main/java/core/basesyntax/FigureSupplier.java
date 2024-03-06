@@ -5,7 +5,8 @@ import java.util.Random;
 public class FigureSupplier {
 
     public Figure getRandomFigure() {
-        Random random = new Random();//adding bound: 1000 to avoid wrong area and to leave clarity code
+        Random random = new Random();
+        //adding bound: 1000 to avoid wrong area and to leave clarity code
         ColorSupplier colorSupplier = new ColorSupplier();
         Figure[] figures = {
                 new IsoscelesTrapezoid(
