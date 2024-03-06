@@ -10,8 +10,4 @@ public abstract class Figure implements GetArea, Drawable {
     public Colors getColor() {
         return color;
     }
-
-    public void setColor(String color) {
-        this.color = Colors.valueOf(color);
-    }
 }
