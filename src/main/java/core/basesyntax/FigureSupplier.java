@@ -3,11 +3,12 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    public static final int FIGURE_COUNT = 5;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        int indexFigure = random.nextInt(5);
+        int indexFigure = random.nextInt(FIGURE_COUNT);
         switch (indexFigure) {
             case 0:
                 return new Circle(colorSupplier.getRandomColor(), getRandomDouble());
