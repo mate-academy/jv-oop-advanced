@@ -3,7 +3,7 @@ package core.basesyntax;
 public class Main {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        Figure[] figures = new Figure[6];
+        final Figure[] figures = new Figure[6];
 
         for (int i = 0; i < figures.length; i++) {
             if (i < 3) {
@@ -12,9 +12,8 @@ public class Main {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
         }
-
         for (int i = 0; i < figures.length; i++) {
-            System.out.println(i + 1 + " " + figures[i].draw());
+            System.out.println(figures[i]);
         }
     }
 }

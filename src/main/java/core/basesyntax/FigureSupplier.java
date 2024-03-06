@@ -3,40 +3,42 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int DEFAULT_RADIUS = 10;
+    private static final int MAX_VALUE = 1000;
+    //adding bound: 1000 to avoid wrong area and to leave clarity code
+    private static final Random random = new Random();
+    private static final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        Random random = new Random();
-        //adding bound: 1000 to avoid wrong area and to leave clarity code
-        ColorSupplier colorSupplier = new ColorSupplier();
         Figure[] figures = {
                 new IsoscelesTrapezoid(
                         colorSupplier.getRandomColor(),//Color
-                        random.nextInt(1000),//upperSide
-                        random.nextInt(1000),//downSide
-                        random.nextInt(1000)//height
+                        random.nextInt(MAX_VALUE),//upperSide
+                        random.nextInt(MAX_VALUE),//downSide
+                        random.nextInt(MAX_VALUE)//height
                 ),
                 new Circle(
                         colorSupplier.getRandomColor(),//color
-                        random.nextInt(1000)//radius
+                        random.nextInt(MAX_VALUE)//radius
                 ),
                 new RightTriangle(
                         colorSupplier.getRandomColor(),//color
-                        random.nextInt(1000),//firstLeg
-                        random.nextInt(1000)//secondLeg
+                        random.nextInt(MAX_VALUE),//firstLeg
+                        random.nextInt(MAX_VALUE)//secondLeg
                 ),
                 new Rectangle(
                         colorSupplier.getRandomColor(),//color
-                        random.nextInt(1000),//sideA
-                        random.nextInt(1000)//sideB
+                        random.nextInt(MAX_VALUE),//sideA
+                        random.nextInt(MAX_VALUE)//sideB
                 ),
                 new Square(
                         colorSupplier.getRandomColor(),//color
-                        random.nextInt(1000)//side
+                        random.nextInt(MAX_VALUE)//side
                 )};
         return figures[random.nextInt(figures.length)];
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Colors.WHITE.toString(), 10);
+        return new Circle(Colors.WHITE, DEFAULT_RADIUS);
     }
 }

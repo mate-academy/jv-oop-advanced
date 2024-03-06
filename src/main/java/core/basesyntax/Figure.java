@@ -1,16 +1,17 @@
 package core.basesyntax;
 
-public abstract class Figure implements Drawable {
-    private String color;
+public abstract class Figure implements GetArea {
+    private Colors color;
 
-    public Figure(String color) {
+    public Figure(Colors color) {
         this.color = color;
     }
 
-    public abstract String getArea();
-
-    @Override
-    public String draw() {
+    public Colors getColor() {
         return color;
+    }
+
+    public void setColor(String color) {
+        this.color = Colors.valueOf(color);
     }
 }
