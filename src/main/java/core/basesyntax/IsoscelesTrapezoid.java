@@ -2,33 +2,32 @@ package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
     private String color;
-    private final int trSide1;
-    private final int trSide2;
-    private final int trHeight;
+    private final int sideLengthA;
+    private final int sideLengthB;
+    private final int height;
 
-    public IsoscelesTrapezoid(int trSide1, int trSide2, int trHeight) {
-        this.trSide1 = trSide1;
-        this.trSide2 = trSide2;
-        this.trHeight = trHeight;
+    public IsoscelesTrapezoid(int sideLengthA, int sideLengthB, int height) {
+        this.sideLengthA = sideLengthA;
+        this.sideLengthB = sideLengthB;
+        this.height = height;
     }
 
-    public IsoscelesTrapezoid(String color, int trSide1, int trSide2, int trHeight) {
+    public IsoscelesTrapezoid(String color, int sideLengthA, int sideLengthB, int trHeight) {
         this.color = color;
-        this.trSide1 = trSide1;
-        this.trSide2 = trSide2;
-        this.trHeight = trHeight;
+        this.sideLengthA = sideLengthA;
+        this.sideLengthB = sideLengthB;
+        this.height = trHeight;
     }
 
     @Override
     public double getArea() {
-        return ((trSide1 + trSide2) / 2 * trHeight);
+        return ((sideLengthA + sideLengthB) / 2 * height);
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: trapezoid, area: " + getArea()
-                + " sq. units, parallel side 1: " + trSide1 + " units, parallel side 2: "
-                + trSide2 + ", color: " + getColor());
+                + " sq. units, parallel side 1: " + sideLengthA + " units, parallel side 2: "
+                + sideLengthB + ", color: " + getColor());
     }
-
 }

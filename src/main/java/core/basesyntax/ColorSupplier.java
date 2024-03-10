@@ -10,5 +10,4 @@ public class ColorSupplier {
         int randomIndex = random.nextInt(color.length);
         return color[randomIndex].name().toLowerCase();
     }
-
 }
