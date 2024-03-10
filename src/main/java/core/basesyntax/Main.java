@@ -13,8 +13,7 @@ public class Main {
             if (i < numberOfFigures / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
                 figures[i].setColor(colorSupplier.getRandomColor());
-            }
-            else {
+            } else {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
         }
