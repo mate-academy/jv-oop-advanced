@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private String color = getColor();
-    private int height;
-    private int width;
+    private String color;
+    private final int height;
+    private final int width;
 
     public Rectangle(int height, int width) {
         this.height = height;
@@ -23,7 +23,6 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        super.draw();
         System.out.println("Figure: rectangle, area: " + getArea()
                 + " sq. units, height: " + height + " units, width: "
                 + width + ", color: " + getColor());
