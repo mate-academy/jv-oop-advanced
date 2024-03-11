@@ -4,7 +4,7 @@ public class Rectangle extends Figure {
     private int sideA;
     private int sideB;
 
-    public Rectangle(Colors color, int sideA, int sideB) {
+    public Rectangle(Color color, int sideA, int sideB) {
         super(color);
         this.sideA = sideA;
         this.sideB = sideB;
