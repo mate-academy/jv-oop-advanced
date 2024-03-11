@@ -11,7 +11,7 @@ public class FigureSupplier {
     private static final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        switch (random.nextInt(5)){
+        switch (random.nextInt(5)) {
             case 0:
                 return new IsoscelesTrapezoid(
                         colorSupplier.getRandomColor(),//Color
