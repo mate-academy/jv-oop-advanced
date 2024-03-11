@@ -35,10 +35,10 @@ public class FigureSupplier {
                         colorSupplier.getRandomColor(),//color
                         random.nextInt(MAX_VALUE)//side
                 )};
-        return figures[random.nextInt(figures.length)].draw();
+        return figures[random.nextInt(figures.length)];
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Colors.WHITE, DEFAULT_RADIUS).draw();
+        return new Circle(Colors.WHITE, DEFAULT_RADIUS);
     }
 }
