@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private String color;
+
     private final int sideLengthA;
     private final int sideLengthB;
     private final int height;
@@ -27,7 +27,7 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: trapezoid, area: " + getArea()
-                + " sq. units, parallel side 1: " + sideLengthA + " units, parallel side 2: "
-                + sideLengthB + ", color: " + getColor());
+                + " sq. units, sideLengthA: " + sideLengthA + " units, sideLengthB: "
+                + sideLengthB + ", color: " + color);
     }
 }
