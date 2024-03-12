@@ -5,7 +5,7 @@ public class Main {
         int numberOfFigures = 6;
 
         FigureSupplier figureSupplier = new FigureSupplier();
-        Figure[] figures = new Figure[6];
+        Figure[] figures = new Figure[numberOfFigures];
 
         for (int i = 0; i < numberOfFigures; i++) {
             if (i < numberOfFigures / 2) {
