@@ -13,7 +13,7 @@ public class Application {
             } else {
                 figures[i] = figureSupplier.getDeafultFigure();
             }
-            figures[i].drawFigure();
+            figures[i].draw();
         }
     }
 }

@@ -1,7 +1,6 @@
 package core.basesyntax.model;
 
 public class Square extends Figure {
-    private static final String FIGURE_NAME = "Square";
     private double figureSideSize;
 
     @Override
@@ -10,10 +9,10 @@ public class Square extends Figure {
     }
 
     @Override
-    public void drawFigure() {
-        System.out.format("Figure: %s, area: %.1f sq. units, "
+    public void draw() {
+        System.out.format("Figure: Square, area: %.1f sq. units, "
                         + "side size: %.1f sq. units, color: %s \n",
-                FIGURE_NAME, getArea(), figureSideSize, getColor());
+                getArea(), figureSideSize, getColor());
     }
 
     public void setFigureSideSize(double figureSideSize) {

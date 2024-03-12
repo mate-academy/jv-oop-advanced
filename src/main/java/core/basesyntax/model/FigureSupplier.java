@@ -1,5 +1,6 @@
 package core.basesyntax.model;
 
+import core.basesyntax.color.Color;
 import core.basesyntax.color.ColorSupplier;
 import java.util.Random;
 
@@ -52,7 +53,7 @@ public class FigureSupplier {
 
     public Figure getDeafultFigure() {
         Circle circle = new Circle();
-        circle.setColor("WHITE");
+        circle.setColor(Color.WHITE.name());
         circle.setFigureRadius(DEFAULT_SIZE);
         return circle;
     }

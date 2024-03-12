@@ -1,7 +1,6 @@
 package core.basesyntax.model;
 
 public class Rectangle extends Figure {
-    private static final String FIGURE_NAME = "Rectangle";
     private double figureWidth;
     private double figureHeight;
 
@@ -11,10 +10,10 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void drawFigure() {
-        System.out.format("Figure: %s, area: %.1f sq. units, "
+    public void draw() {
+        System.out.format("Figure: Rectangle, area: %.1f sq. units, "
                         + "width: %.1f sq. units, height: %.1f, color: %s \n",
-                FIGURE_NAME, getArea(), figureWidth, figureHeight, getColor());
+                getArea(), figureWidth, figureHeight, getColor());
     }
 
     public void setFigureWidth(double figureWidth) {
