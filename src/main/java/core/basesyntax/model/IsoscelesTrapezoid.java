@@ -1,9 +1,17 @@
 package core.basesyntax.model;
 
 public class IsoscelesTrapezoid extends Figure {
-    private double figureTopSide;
-    private double figureBottomSide;
-    private double figureHeight;
+    private final double figureTopSide;
+    private final double figureBottomSide;
+    private final double figureHeight;
+
+    public IsoscelesTrapezoid(double figureTopSide, double figureBottomSide,
+                              double figureHeight, String color) {
+        this.figureTopSide = figureTopSide;
+        this.figureBottomSide = figureBottomSide;
+        this.figureHeight = figureHeight;
+        setColor(color);
+    }
 
     @Override
     public double getArea() {
@@ -16,17 +24,5 @@ public class IsoscelesTrapezoid extends Figure {
                         + "bottom side: %.1f sq. units, top side: %.1f sq. units,"
                         + "height: %.1f sq. units, color: %s \n",
                 getArea(),figureBottomSide,figureTopSide, figureHeight, getColor());
-    }
-
-    public void setFigureTopSide(double figureTopSide) {
-        this.figureTopSide = figureTopSide;
-    }
-
-    public void setFigureBottomSide(double figureBottomSide) {
-        this.figureBottomSide = figureBottomSide;
-    }
-
-    public void setFigureHeight(double figureHeight) {
-        this.figureHeight = figureHeight;
     }
 }

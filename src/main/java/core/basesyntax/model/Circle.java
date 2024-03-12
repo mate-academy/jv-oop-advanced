@@ -1,7 +1,12 @@
 package core.basesyntax.model;
 
 public class Circle extends Figure {
-    private double figureRadius;
+    private final double figureRadius;
+
+    public Circle(double figureRadius, String color) {
+        this.figureRadius = figureRadius;
+        setColor(color);
+    }
 
     @Override
     public double getArea() {
@@ -14,9 +19,5 @@ public class Circle extends Figure {
                         + "radius: %.1f sq. units,color: %s \n",
                 getArea(),figureRadius, getColor());
 
-    }
-
-    public void setFigureRadius(double figureRadius) {
-        this.figureRadius = figureRadius;
     }
 }

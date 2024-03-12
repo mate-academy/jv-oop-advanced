@@ -1,8 +1,14 @@
 package core.basesyntax.model;
 
 public class Rectangle extends Figure {
-    private double figureWidth;
-    private double figureHeight;
+    private final double figureWidth;
+    private final double figureHeight;
+
+    public Rectangle(double figureWidth, double figureHeight, String color) {
+        this.figureWidth = figureWidth;
+        this.figureHeight = figureHeight;
+        setColor(color);
+    }
 
     @Override
     public double getArea() {
@@ -14,13 +20,5 @@ public class Rectangle extends Figure {
         System.out.format("Figure: Rectangle, area: %.1f sq. units, "
                         + "width: %.1f sq. units, height: %.1f, color: %s \n",
                 getArea(), figureWidth, figureHeight, getColor());
-    }
-
-    public void setFigureWidth(double figureWidth) {
-        this.figureWidth = figureWidth;
-    }
-
-    public void setFigureHeight(double figureHeight) {
-        this.figureHeight = figureHeight;
     }
 }
