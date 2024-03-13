@@ -16,6 +16,5 @@ public class Application {
         for (Figure fig : figures) {
             fig.draw();
         }
-
     }
 }
