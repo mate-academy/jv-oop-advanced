@@ -36,7 +36,7 @@ public class FigureSupplier {
         }
     }
 
-    private Double getRandomValueForFigureParameter() {
+    private double getRandomValueForFigureParameter() {
         int randomMultiplier = 100;
         return random.nextDouble(randomMultiplier);
     }
