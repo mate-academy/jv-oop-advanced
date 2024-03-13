@@ -11,29 +11,26 @@ public class FigureSupplier {
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        Figure[] figures = new Figure[FIGURES_QUANTITY];
-        int randomIndex = random.nextInt(figures.length);
+        int randomIndex = random.nextInt(FIGURES_QUANTITY);
         ColorSupplier colorSupplier = new ColorSupplier();
 
-        Figure randomFigure;
-        randomFigure = switch (randomIndex) {
-            case 0 -> figures[0] = new Circle(colorSupplier.getRandomColor(),
+        return switch (randomIndex) {
+            case 0 -> new Circle(colorSupplier.getRandomColor(),
                     random.nextInt(BOUND_MAX));
-            case 1 -> figures[1] = new Square(colorSupplier.getRandomColor(),
+            case 1 -> new Square(colorSupplier.getRandomColor(),
                     random.nextInt(BOUND_MAX));
-            case 2 -> figures[2] = new Rectangle(colorSupplier.getRandomColor(),
+            case 2 -> new Rectangle(colorSupplier.getRandomColor(),
                     random.nextInt(BOUND_MAX),
                     random.nextInt(BOUND_MAX));
-            case 3 -> figures[3] = new RightTriangle(colorSupplier.getRandomColor(),
+            case 3 -> new RightTriangle(colorSupplier.getRandomColor(),
                     random.nextInt(BOUND_MAX),
                     random.nextInt(BOUND_MAX));
-            case 4 -> figures[4] = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+            case 4 -> new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                     random.nextInt(BOUND_MAX),
                     random.nextInt(BOUND_MAX),
                     random.nextInt(BOUND_MAX));
             default -> null;
         };
-        return randomFigure;
     }
 
     public Figure getDefaultFigure() {
