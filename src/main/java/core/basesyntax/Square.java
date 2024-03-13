@@ -7,10 +7,12 @@ public class Square extends Figure {
         super(color);
         this.side = side;
     }
+
     @Override
     public double getArea() {
         return side * side;
     }
+
     @Override
     public void draw() {
         StringBuilder builder = new StringBuilder();

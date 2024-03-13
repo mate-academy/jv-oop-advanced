@@ -15,16 +15,24 @@ public class FigureSupplier {
                 return new Circle(randomColor, getRandomValueForFigureParameter());
             }
             case 1: {
-                return new IsoscelesTrapezoid(randomColor, getRandomValueForFigureParameter(), getRandomValueForFigureParameter(), getRandomValueForFigureParameter());
+                return new IsoscelesTrapezoid(randomColor,
+                        getRandomValueForFigureParameter(),
+                        getRandomValueForFigureParameter(),
+                        getRandomValueForFigureParameter());
             }
             case 2: {
-                return new Rectangle(randomColor, getRandomValueForFigureParameter(), getRandomValueForFigureParameter());
+                return new Rectangle(randomColor,
+                        getRandomValueForFigureParameter(),
+                        getRandomValueForFigureParameter());
             }
             case 3: {
-                return new RightTriangle(randomColor, getRandomValueForFigureParameter(), getRandomValueForFigureParameter());
+                return new RightTriangle(randomColor,
+                        getRandomValueForFigureParameter(),
+                        getRandomValueForFigureParameter());
             }
             default: {
-                return new Square(randomColor, getRandomValueForFigureParameter());
+                return new Square(randomColor,
+                        getRandomValueForFigureParameter());
             }
         }
     }

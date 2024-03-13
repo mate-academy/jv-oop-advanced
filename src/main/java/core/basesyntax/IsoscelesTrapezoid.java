@@ -11,10 +11,12 @@ public class IsoscelesTrapezoid extends Figure {
         this.lowerBase = lowerSide;
         this.height = height;
     }
+
     @Override
     public double getArea() {
         return 0.5 * (upperBase + lowerBase) * height;
     }
+
     @Override
     public void draw() {
         StringBuilder builder = new StringBuilder();

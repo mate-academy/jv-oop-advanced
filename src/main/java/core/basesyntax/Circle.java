@@ -7,10 +7,12 @@ public class Circle extends Figure {
         super(color);
         this.radius = radius;
     }
+
     @Override
     public double getArea() {
         return radius * radius * Math.PI;
     }
+
     @Override
     public void draw() {
         StringBuilder builder = new StringBuilder();
