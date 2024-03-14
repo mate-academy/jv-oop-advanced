@@ -13,8 +13,8 @@ public class Application {
             }
         }
 
-        for (Figure fig : figures) {
-            fig.draw();
+        for (Figure figure : figures) {
+            figure.draw();
         }
     }
 }
