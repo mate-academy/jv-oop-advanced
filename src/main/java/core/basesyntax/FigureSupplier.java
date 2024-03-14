@@ -8,32 +8,32 @@ public class FigureSupplier {
     private static final int initialCircleRadius = 10;
     private final Random random = new Random();
 
-    public Figure getRandomFigure() {
+    public AbstractFigure getRandomFigure() {
         int numberOfFigure = random.nextInt(figuresCount);
         String randomColor = ColorSupplier.getRandomColor();
 
         switch (numberOfFigure) {
             case 0: {
-                return new Circle(randomColor, getRandomValueForFigureParameter());
+                return new CircleFigure(randomColor, getRandomValueForFigureParameter());
             }
             case 1: {
-                return new IsoscelesTrapezoid(randomColor,
+                return new IsoscelesTrapezoidFigure(randomColor,
                         getRandomValueForFigureParameter(),
                         getRandomValueForFigureParameter(),
                         getRandomValueForFigureParameter());
             }
             case 2: {
-                return new Rectangle(randomColor,
+                return new RectangleFigure(randomColor,
                         getRandomValueForFigureParameter(),
                         getRandomValueForFigureParameter());
             }
             case 3: {
-                return new RightTriangle(randomColor,
+                return new RightTriangleFigure(randomColor,
                         getRandomValueForFigureParameter(),
                         getRandomValueForFigureParameter());
             }
             default: {
-                return new Square(randomColor,
+                return new SquareFigure(randomColor,
                         getRandomValueForFigureParameter());
             }
         }
@@ -43,7 +43,7 @@ public class FigureSupplier {
         return random.nextDouble(randomFigureRangeParameter);
     }
 
-    public Figure getDefaultFigure() {
-        return new Circle(ColorSupplier.getRandomColor(), initialCircleRadius);
+    public AbstractFigure getDefaultFigure() {
+        return new CircleFigure(ColorSupplier.getRandomColor(), initialCircleRadius);
     }
 }
