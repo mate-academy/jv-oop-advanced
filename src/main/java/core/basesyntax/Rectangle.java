@@ -17,15 +17,10 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        StringBuilder builder = new StringBuilder();
-        builder.append("Figure: rectangle, area: ")
-                .append(getArea())
-                .append(" sq. units, width: ")
-                .append(width)
-                .append(" sq. units, length: ")
-                .append(length)
-                .append(" units, color: ")
-                .append(getColor());
-        System.out.println(builder);
+        System.out.printf("Figure: rectangle, area: %s sq. units, width: %s  sq. units, length: %s units, color: %s%n",
+                getArea(),
+                width,
+                length,
+                getColor());
     }
 }

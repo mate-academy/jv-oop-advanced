@@ -15,13 +15,9 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        StringBuilder builder = new StringBuilder();
-        builder.append("Figure: circle, area: ")
-                .append(getArea())
-                .append(" sq. units, radius: ")
-                .append(radius)
-                .append(" units, color: ")
-                .append(getColor());
-        System.out.println(builder);
+        System.out.printf("Figure: circle, area: %s sq. units, radius: %s units, color: %s%n",
+                getArea(),
+                radius,
+                getColor());
     }
 }

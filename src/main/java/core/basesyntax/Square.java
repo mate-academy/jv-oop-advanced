@@ -15,13 +15,9 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        StringBuilder builder = new StringBuilder();
-        builder.append("Figure: square, area: ")
-                .append(getArea())
-                .append(" sq. units, side: ")
-                .append(side)
-                .append(" units, color: ")
-                .append(getColor());
-        System.out.println(builder);
+        System.out.printf("Figure: square, area: %s sq. units, side: %s units, color: %s",
+                getArea(),
+                side,
+                getColor());
     }
 }
