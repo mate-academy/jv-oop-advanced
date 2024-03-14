@@ -1,13 +1,5 @@
 package core.basesyntax;
 
-public abstract class Figure implements Figurable {
-    private final String color;
-
-    public Figure(String color) {
-        this.color = color;
-    }
-
-    public String getColor() {
-        return color;
-    }
+public interface Figure extends AreaCalculator, Drawer {
+    String getColor();
 }
