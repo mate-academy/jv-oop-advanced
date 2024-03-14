@@ -15,7 +15,7 @@ public class SquareFigure extends AbstractFigure {
 
     @Override
     public void draw() {
-        System.out.printf("Figure: square, area: %s sq. units, side: %s units, color: %s",
+        System.out.printf("Figure: square, area: %s sq. units, side: %s units, color: %s%n",
                 getArea(),
                 side,
                 getColor());
