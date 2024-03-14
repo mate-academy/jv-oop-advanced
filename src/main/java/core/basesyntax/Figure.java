@@ -1,4 +1,5 @@
 package core.basesyntax;
 
-public interface Figure extends Flatness, Info {
+public interface Figure extends Drawable, AreaCalculator {
+
 }
