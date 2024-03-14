@@ -4,15 +4,16 @@ import java.util.Random;
 
 public class FigureSuplier {
     private static final int NUMBER_COUNT = 10;
-    private static final int FIGURE_COUNT = 5;
+    private static final int FIGURE_COUNT = 10;
+    private static final double DEAFAULT_RADIUS = 10.0;
     private final ColorSuplier colorSuplier;
+    private Random random = new Random();
 
     public FigureSuplier(ColorSuplier colorSuplier) {
         this.colorSuplier = colorSuplier;
     }
 
     public Figure getRandomFigure() {
-        Random random = new Random();
         int randomFigureType = random.nextInt(FIGURE_COUNT);
         String randomColor = colorSuplier.getRandomColor();
 
@@ -43,6 +44,6 @@ public class FigureSuplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("White", 10.0);
+        return new Circle("White", DEAFAULT_RADIUS);
     }
 }
