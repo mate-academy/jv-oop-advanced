@@ -15,26 +15,26 @@ public class FigureSupplier {
 
         switch (numberOfFigure) {
             case 0: {
-                return new CircleFigure(randomColor, getRandomValueForFigureParameter());
+                return new Circle(randomColor, getRandomValueForFigureParameter());
             }
             case 1: {
-                return new IsoscelesTrapezoidFigure(randomColor,
+                return new IsoscelesTrapezoid(randomColor,
                         getRandomValueForFigureParameter(),
                         getRandomValueForFigureParameter(),
                         getRandomValueForFigureParameter());
             }
             case 2: {
-                return new RectangleFigure(randomColor,
+                return new Rectangle(randomColor,
                         getRandomValueForFigureParameter(),
                         getRandomValueForFigureParameter());
             }
             case 3: {
-                return new RightTriangleFigure(randomColor,
+                return new RightTriangle(randomColor,
                         getRandomValueForFigureParameter(),
                         getRandomValueForFigureParameter());
             }
             default: {
-                return new SquareFigure(randomColor,
+                return new Square(randomColor,
                         getRandomValueForFigureParameter());
             }
         }
@@ -45,6 +45,6 @@ public class FigureSupplier {
     }
 
     public AbstractFigure getDefaultFigure() {
-        return new CircleFigure(colorSupplier.getRandomColor(), INITIAL_CIRCLE_RADIUS);
+        return new Circle(colorSupplier.getRandomColor(), INITIAL_CIRCLE_RADIUS);
     }
 }
