@@ -14,8 +14,8 @@ public class FigureSupplier {
         random = new Random();
     }
 
-    public double getRandomDimension(Random random,int maxCount) {
-        return random.nextDouble() * maxCount;
+    private double getRandomDimension() {
+        return random.nextDouble() * MAX_LENGTH;
     }
 
     public Figure getRandomFigure() {
@@ -24,24 +24,24 @@ public class FigureSupplier {
 
         switch (randomFigureType) {
             case 0:
-                double randomRadius = getRandomDimension(random, MAX_LENGTH);
+                double randomRadius = getRandomDimension();
                 return new Circle(randomColor, randomRadius);
             case 1:
-                double randomTopSide = getRandomDimension(random, MAX_LENGTH);
-                double randomBottomSide = getRandomDimension(random, MAX_LENGTH);
-                double randomHeight = getRandomDimension(random, MAX_LENGTH);
+                double randomTopSide = getRandomDimension();
+                double randomBottomSide = getRandomDimension();
+                double randomHeight = getRandomDimension();
                 return new IsoscelesTrapezoid(randomColor, randomTopSide, randomBottomSide,
                         randomHeight);
             case 2:
-                double randomHeightRect = getRandomDimension(random, MAX_LENGTH);;
-                double randomWidth = getRandomDimension(random, MAX_LENGTH);
+                double randomHeightRect = getRandomDimension();;
+                double randomWidth = getRandomDimension();
                 return new Rectangle(randomColor, randomHeightRect, randomWidth);
             case 3:
-                double randomFirstLeg = getRandomDimension(random, MAX_LENGTH);
-                double randomSecondLeg = getRandomDimension(random, MAX_LENGTH);
+                double randomFirstLeg = getRandomDimension();
+                double randomSecondLeg = getRandomDimension();
                 return new RightTriangle(randomColor, randomFirstLeg, randomSecondLeg);
             case 4:
-                double randomSide = getRandomDimension(random, MAX_LENGTH);
+                double randomSide = getRandomDimension();
                 return new Square(randomColor, randomSide);
             default:
                 throw new IllegalStateException("Unexpected value: " + randomFigureType);
