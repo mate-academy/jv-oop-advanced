@@ -2,8 +2,8 @@ package core.basesyntax;
 
 public class Main {
     public static void main(String[] args) {
-        ColorSuplier colorSuplier = new ColorSuplier();
-        FigureSuplier figureSuplier = new FigureSuplier(colorSuplier);
+        ColorSupplier colorSupplier = new ColorSupplier();
+        FigureSupplier figureSuplier = new FigureSupplier();
 
         int arraySize = 6;
         Figure[] figures = new Figure[arraySize];
