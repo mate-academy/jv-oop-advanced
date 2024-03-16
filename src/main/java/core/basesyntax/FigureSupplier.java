@@ -45,6 +45,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(colorSupplier.getRandomColor(), INITIAL_CIRCLE_RADIUS);
+        return new Circle(Color.WHITE.name(), INITIAL_CIRCLE_RADIUS);
     }
 }
