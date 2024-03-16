@@ -3,7 +3,7 @@ package core.basesyntax;
 public class Application {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        AbstractFigure[] figures = new AbstractFigure[6];
+        Figure[] figures = new Figure[6];
 
         for (int i = 0; i < figures.length; i++) {
             if (i >= figures.length / 2) {
@@ -13,7 +13,7 @@ public class Application {
             }
         }
 
-        for (AbstractFigure figure : figures) {
+        for (Figure figure : figures) {
             figure.draw();
         }
     }

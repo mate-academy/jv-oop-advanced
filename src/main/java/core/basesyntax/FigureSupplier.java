@@ -9,7 +9,7 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public AbstractFigure getRandomFigure() {
+    public Figure getRandomFigure() {
         int numberOfFigure = random.nextInt(FIGURES_COUNT);
         String randomColor = colorSupplier.getRandomColor();
 
@@ -44,7 +44,7 @@ public class FigureSupplier {
         return random.nextDouble(RANDOM_FIGURE_RANGE_PARAMETER);
     }
 
-    public AbstractFigure getDefaultFigure() {
+    public Figure getDefaultFigure() {
         return new Circle(colorSupplier.getRandomColor(), INITIAL_CIRCLE_RADIUS);
     }
 }
