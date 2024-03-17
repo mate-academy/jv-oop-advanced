@@ -20,7 +20,7 @@ public class IsoscelesTrapezoid extends RightTriangle {
     }
 
     @Override
-    public void toDraw() {
+    public void draw() {
         System.out.println("Figure: " + this.getClass().getSimpleName().toLowerCase()
                 + ", area: " + getArea() + " sq. units,"
                 + " firstLeg: " + getFirstLeg() + " units,"
