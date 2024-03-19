@@ -1,2 +1,7 @@
-package core.basesyntax;public class Calculator {
+
+package core.basesyntax;
+
+public interface Calculator {
+    double getArea();
 }
+

@@ -1,2 +1,6 @@
-package core.basesyntax;public class Draw {
+
+package core.basesyntax;
+
+public interface Draw {
+    void draw();
 }
