@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends RandomFigure {
+public class Rectangle extends Figure {
     private double firstSide;
     private double secondSide;
 
@@ -8,7 +8,6 @@ public class Rectangle extends RandomFigure {
         super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
-        this.color = color;
     }
 
     @Override
@@ -18,7 +17,7 @@ public class Rectangle extends RandomFigure {
 
     @Override
     public void draw() {
-        System.out.println("Loading a Rectangle \n" + "Area: " + getArea() + "\n"
+        System.out.println("Rectangle \n" + "Area: " + getArea() + "\n"
                 + "Color: " + color + "\n" + "First side: " + firstSide + "\n"
                 + "Second side: " + secondSide);
     }

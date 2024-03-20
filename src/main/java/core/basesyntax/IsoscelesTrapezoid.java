@@ -1,13 +1,12 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends RandomFigure {
+public class IsoscelesTrapezoid extends Figure {
     private double topBase;
     private double lowBase;
     private double height;
 
     public IsoscelesTrapezoid(double topBase, double lowBase, double height, String color) {
         super(color);
-        this.color = color;
         this.height = height;
         this.topBase = topBase;
         this.lowBase = lowBase;
@@ -15,12 +14,12 @@ public class IsoscelesTrapezoid extends RandomFigure {
 
     @Override
     public double getArea() {
-        return (topBase * lowBase) / 2 * height;
+        return (double) (height / 2) * (topBase * lowBase);
     }
 
     @Override
     public void draw() {
-        System.out.println("Loading a Isosceles trapezoid \n" + "Area - " + getArea() + "\n"
+        System.out.println("Isosceles trapezoid \n" + "Area - " + getArea() + "\n"
                 + "Color - " + color + "\n" + "Height - " + height + "\n"
                 + "Top base - " + topBase + "\n" + "Low base - " + lowBase);
     }

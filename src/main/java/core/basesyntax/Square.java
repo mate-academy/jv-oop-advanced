@@ -1,12 +1,11 @@
 package core.basesyntax;
 
-public class Square extends RandomFigure {
+public class Square extends Figure {
     private double side;
 
     public Square(double side, String color) {
         super(color);
         this.side = side;
-        this.color = color;
     }
 
     @Override
@@ -16,7 +15,7 @@ public class Square extends RandomFigure {
 
     @Override
     public void draw() {
-        System.out.println("Loading a Square \n" + "Area: " + getArea() + "\n"
+        System.out.println("Square \n" + "Area: " + getArea() + "\n"
                 + "Color: " + color + "\n" + "Side: " + side);
     }
 }
