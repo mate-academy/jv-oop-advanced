@@ -11,7 +11,7 @@ public class FigureSupplier {
     private Random random = new Random();
 
     public Figure getRandomFigure() {
-        Figures randomFigure = Figures.values()[random.nextInt(FIGURE_COUNT)];
+        GeometricFigure randomFigure = GeometricFigure.values()[random.nextInt(FIGURE_COUNT)];
         switch (randomFigure) {
             case SQUARE:
                 return getRandomSquare();
@@ -28,28 +28,28 @@ public class FigureSupplier {
         }
     }
 
-    public Figure getRandomSquare() {
+    private Figure getRandomSquare() {
+        return new Square(colorSupplier.getRandomColor(), random.nextInt(MAX_SIZE));
+    }
+
+    private Figure getRandomCircle() {
         return new Circle(colorSupplier.getRandomColor(), random.nextInt(MAX_SIZE));
     }
 
-    public Figure getRandomCircle() {
-        return new Circle(colorSupplier.getRandomColor(), random.nextInt(MAX_SIZE));
-    }
-
-    public Figure getRandomRectangle() {
+    private Figure getRandomRectangle() {
         return new Rectangle(colorSupplier.getRandomColor(),
                 random.nextInt(MAX_SIZE),
                 random.nextInt(MAX_SIZE)
         );
     }
 
-    public Figure getRandomRightTriangle() {
+    private Figure getRandomRightTriangle() {
         return new RightTriangle(colorSupplier.getRandomColor(),
                 random.nextInt(MAX_SIZE),
                 random.nextInt(MAX_SIZE));
     }
 
-    public Figure getRandomIsoscelesTrapezoid() {
+    private Figure getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                 random.nextInt(MAX_SIZE),
                 random.nextInt(MAX_SIZE),

@@ -12,18 +12,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.height = height;
     }
 
-    public int getTopBasis() {
-        return topBasis;
-    }
-
-    public int getBottomBasis() {
-        return bottomBasis;
-    }
-
-    public int getHeight() {
-        return height;
-    }
-
     @Override
     public double getArea() {
         return Math.round(0.5 * (topBasis + bottomBasis) * height);
@@ -31,11 +19,11 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: isosceles trapezoid, area: " + this.getArea()
+        String result = "Figure: isosceles trapezoid, area: " + this.getArea()
                 + " sq. units, top basis: "
                 + topBasis + " units, bottom basis: "
                 + bottomBasis + " units, height: "
-                + height + " units, color: " + getColor().toLowerCase()
-        );
+                + height + " units, color: " + getColor().toLowerCase() + "\n";
+        System.out.printf(result);
     }
 }
