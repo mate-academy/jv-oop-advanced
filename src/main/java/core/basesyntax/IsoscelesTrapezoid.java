@@ -23,7 +23,7 @@ public class IsoscelesTrapezoid extends Figure {
                 + " sq. units, top basis: "
                 + topBasis + " units, bottom basis: "
                 + bottomBasis + " units, height: "
-                + height + " units, color: " + getColor().toLowerCase() + "\n";
+                + height + " units, color: " + getColor().toLowerCase() + System.lineSeparator();
         System.out.printf(result);
     }
 }

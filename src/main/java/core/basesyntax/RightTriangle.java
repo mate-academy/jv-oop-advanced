@@ -20,7 +20,7 @@ public class RightTriangle extends Figure {
         String result = "Figure: right triangle, area: " + this.getArea()
                 + " sq. units, first leg: "
                 + firstLeg + " units, second leg: "
-                + secondLeg + " units, color: " + getColor().toLowerCase() + "\n";
+                + secondLeg + " units, color: " + getColor().toLowerCase() + System.lineSeparator();
         System.out.printf(result);
     }
 }
