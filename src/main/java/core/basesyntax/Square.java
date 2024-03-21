@@ -7,10 +7,6 @@ public class Square extends Figure {
         this.side = side;
     }
 
-    public int getSide() {
-        return side;
-    }
-
     @Override
     public double getArea() {
         return side * side;
@@ -19,7 +15,7 @@ public class Square extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: " + getClass().getSimpleName()
-                + ", area - " + getArea() + ", side - " + getSide()
+                + ", area - " + getArea() + ", side - " + side
                 + ", color - " + getColor());
     }
 }

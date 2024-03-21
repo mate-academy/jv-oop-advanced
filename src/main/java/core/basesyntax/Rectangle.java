@@ -8,16 +8,8 @@ public class Rectangle extends Figure {
         this.length = length;
     }
 
-    public int getLength() {
-        return length;
-    }
-
     public void setWidth(int width) {
         this.width = width;
-    }
-
-    public int getWidth() {
-        return width;
     }
 
     @Override
@@ -28,7 +20,7 @@ public class Rectangle extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: " + getClass().getSimpleName() + ", area - "
-                    + getArea() + ", width - " + getWidth()
-                    + ", length - " + getLength() + ", color - " + getColor());
+                    + getArea() + ", width - " + width
+                    + ", length - " + length + ", color - " + getColor());
     }
 }

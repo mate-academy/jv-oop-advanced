@@ -8,16 +8,8 @@ public class RightTriangle extends Figure {
         this.firstLeg = firstLeg;
     }
 
-    public int getFirstLeg() {
-        return firstLeg;
-    }
-
     public void setSecondLeg(int secondLeg) {
         this.secondLeg = secondLeg;
-    }
-
-    public int getSecondLeg() {
-        return secondLeg;
     }
 
     @Override

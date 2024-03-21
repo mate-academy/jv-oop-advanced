@@ -11,48 +11,48 @@ public class FigureSupplier {
 
     public IsoscelesTrapezoid getIsoscelesTrapezoid() {
         IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
-        isoscelesTrapezoid.setFirstBasis(random.nextInt(FIGURE_COUNT));
-        isoscelesTrapezoid.setSecondBasis(random.nextInt(FIGURE_COUNT));
-        isoscelesTrapezoid.setHeight(random.nextInt(FIGURE_COUNT));
+        isoscelesTrapezoid.setFirstBasis(random.nextInt());
+        isoscelesTrapezoid.setSecondBasis(random.nextInt());
+        isoscelesTrapezoid.setHeight(random.nextInt());
         isoscelesTrapezoid.setColor(colorSupplier.getRandomColor());
         return isoscelesTrapezoid;
     }
 
     public RightTriangle getRightTriangle() {
         RightTriangle rightTriangle = new RightTriangle();
-        rightTriangle.setFirstLeg(random.nextInt(FIGURE_COUNT));
-        rightTriangle.setSecondLeg(random.nextInt(FIGURE_COUNT));
+        rightTriangle.setFirstLeg(random.nextInt());
+        rightTriangle.setSecondLeg(random.nextInt());
         rightTriangle.setColor(colorSupplier.getRandomColor());
         return rightTriangle;
     }
 
     public Circle getCircle() {
         Circle circle = new Circle();
-        circle.setRadius(random.nextInt(FIGURE_COUNT));
+        circle.setRadius(random.nextInt());
         circle.setColor(colorSupplier.getRandomColor());
         return circle;
     }
 
     public Square getSquare() {
         Square square = new Square();
-        square.setSide(random.nextInt(FIGURE_COUNT));
+        square.setSide(random.nextInt());
         square.setColor(colorSupplier.getRandomColor());
         return square;
     }
 
     public Rectangle getRectangle() {
         Rectangle rectangle = new Rectangle();
-        rectangle.setLength(random.nextInt(FIGURE_COUNT));
-        rectangle.setWidth(random.nextInt(FIGURE_COUNT));
+        rectangle.setLength(random.nextInt());
+        rectangle.setWidth(random.nextInt());
         rectangle.setColor(colorSupplier.getRandomColor());
         return rectangle;
     }
 
-    public Figure getDefoltFigure() {
-        Circle defoltFigure = new Circle();
-        defoltFigure.setColor(DEFAULT_COLOR);
-        defoltFigure.setRadius(DEFAULT_NUMBER);
-        return defoltFigure;
+    public Figure getDefaultFigure() {
+        Circle defaultFigure = new Circle();
+        defaultFigure.setColor(DEFAULT_COLOR);
+        defaultFigure.setRadius(DEFAULT_NUMBER);
+        return defaultFigure;
     }
 
     public Figure getRandomFigure() {
@@ -63,7 +63,7 @@ public class FigureSupplier {
             case 2: return getCircle();
             case 3: return getSquare();
             case 4: return getRectangle();
-            default: return getDefoltFigure();
+            default: return getDefaultFigure();
         }
     }
 }
