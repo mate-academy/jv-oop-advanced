@@ -11,7 +11,7 @@ public class FigureSupplier {
     private Random random = new Random();
 
     public Figure getRandomFigure() {
-        GeometricFigure randomFigure = GeometricFigure.values()[random.nextInt(FIGURE_COUNT)];
+        FigureName randomFigure = FigureName.values()[random.nextInt(FIGURE_COUNT)];
         switch (randomFigure) {
             case SQUARE:
                 return getRandomSquare();

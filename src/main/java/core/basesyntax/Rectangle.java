@@ -12,7 +12,7 @@ public class Rectangle extends Figure {
 
     @Override
     public double getArea() {
-        return Math.round(length * width * 1.0);
+        return length * width;
     }
 
     @Override
