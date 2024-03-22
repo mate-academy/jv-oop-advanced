@@ -14,7 +14,7 @@ public class Square extends Figure {
     @Override
     public double getArea() {
         double area = side * side;
-        return Math.round(area * 10.0) / 10.0;
+        return Math.round(area * ROUNDING_PRECISION) / ROUNDING_PRECISION;
     }
 
     @Override

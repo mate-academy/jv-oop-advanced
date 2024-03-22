@@ -15,7 +15,7 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public double getArea() {
         double area = 0.5 * (base1 + base2) * height;
-        return Math.round(area * 10.0) / 10.0;
+        return Math.round(area * ROUNDING_PRECISION) / ROUNDING_PRECISION;
     }
 
     @Override
