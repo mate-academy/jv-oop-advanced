@@ -14,29 +14,30 @@ public class FigureSupplier extends Figure {
     public Figure getRandomFigure() {
         int figureType = random.nextInt(FIGURE_COUNT);
         switch (figureType) {
-            case 0 : {
+            case 0 -> {
                 return new Circle(color, random.nextInt(10) + 1);
             }
-            case 1 : {
+            case 1 -> {
                 return new Square(color, random.nextInt(10) + 1);
             }
-            case 2 : {
+            case 2 -> {
                 return new Rectangle(color, random.nextInt(10) + 1,
                         random.nextInt(10) + 1);
             }
-            case 3 : {
-                return new RightTriangle(color,random.nextInt(10) + 1,
+            case 3 -> {
+                return new RightTriangle(color, random.nextInt(10) + 1,
                         random.nextInt(10) + 1);
             }
-            case 4 : {
-                return new IsoscelesTrapezoid(color,random.nextInt(10) + 1,
-                                                    random.nextInt(10) + 1,
-                                                    random.nextInt(10) + 1)
-                        ;
+            case 4 -> {
+                return new IsoscelesTrapezoid(
+                        color, random.nextInt(10) + 1,
+                        random.nextInt(10) + 1,
+                        random.nextInt(10) + 1
+                );
             }
-
-            default:
+            default -> {
                 return new Figure();
+            }
         }
 
     }

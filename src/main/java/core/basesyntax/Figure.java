@@ -8,7 +8,6 @@ public class Figure implements Drawable, AreaCalculator {
     }
 
     public Figure() {
-
     }
 
     public String getColor() {
@@ -17,7 +16,6 @@ public class Figure implements Drawable, AreaCalculator {
 
     @Override
     public void draw() {
-
     }
 
     @Override
