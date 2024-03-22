@@ -3,16 +3,15 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier extends Figure {
-    //generating figures with random properties.
     public static final int FIGURE_COUNT = 5;
     private static final Random random = new Random();
-    private static final int randomNumber = random.nextInt(DEFAULT_LENGTH) + 1;
     private static final Color WHITE = Color.WHITE;
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final String color = colorSupplier.getRandomColor();
 
     public Figure getRandomFigure() {
         int figureType = random.nextInt(FIGURE_COUNT);
+        String color = colorSupplier.getRandomColor();
+        int randomNumber = random.nextInt(DEFAULT_LENGTH) + 1;
         switch (figureType) {
             case 0 -> {
                 return new Circle(color,randomNumber);
