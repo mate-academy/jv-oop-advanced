@@ -7,9 +7,7 @@ public class Main {
         for (int i = 0; i < arrayOfFigures.length; i++) {
             arrayOfFigures[i] = (i < 3) ? figureSupplier.getRandomFigure()
                     : figureSupplier.getDefaultFigure();
-        }
-        for (Figure figure : arrayOfFigures) {
-            figure.draw();
+            arrayOfFigures[i].draw();
         }
     }
 }

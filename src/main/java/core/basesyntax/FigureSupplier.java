@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class FigureSupplier extends Figure {
+public class FigureSupplier implements AreaCalculator {
     public static final int FIGURE_COUNT = 5;
     private static final Random random = new Random();
     private static final Color WHITE = Color.WHITE;
@@ -35,12 +35,17 @@ public class FigureSupplier extends Figure {
                 );
             }
             default -> {
-                return new Figure();
+                return getDefaultFigure();
             }
         }
     }
 
     public Figure getDefaultFigure() {
         return new Circle(WHITE.name(), DEFAULT_LENGTH);
+    }
+
+    @Override
+    public double getArea() {
+        return 0;
     }
 }

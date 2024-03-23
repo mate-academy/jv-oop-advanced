@@ -1,8 +1,6 @@
 package core.basesyntax;
 
-public class Figure implements Drawable, AreaCalculator {
-    protected static final double ROUNDING_PRECISION = 10.0;
-    protected static final int DEFAULT_LENGTH = 10;
+public abstract class Figure implements Drawable, AreaCalculator {
     private String color;
 
     public Figure(String color) {
@@ -16,12 +14,4 @@ public class Figure implements Drawable, AreaCalculator {
         return color;
     }
 
-    @Override
-    public void draw() {
-    }
-
-    @Override
-    public double getArea() {
-        return 0;
-    }
 }
