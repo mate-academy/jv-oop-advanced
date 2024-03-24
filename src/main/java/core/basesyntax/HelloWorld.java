@@ -8,17 +8,17 @@ import java.util.Random;
 public class HelloWorld {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        Figure[] figures = new Figure[new Random().nextInt(5)];
+        Random random = new Random();
+        int figureCount = random.nextInt(5);
 
+        Figure[] figures = new Figure[figureCount];
         for (int i = 0; i < figures.length; i++) {
             if (i < figures.length / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
-        }
-        for (Figure figure : figures) {
-            figure.draw();
+            figures[i].draw();
         }
     }
 }

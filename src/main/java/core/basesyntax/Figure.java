@@ -4,7 +4,6 @@ public abstract class Figure implements DrawFigure {
     private String color;
 
     public Figure(String color) {
-
         this.color = color;
     }
 
@@ -13,7 +12,6 @@ public abstract class Figure implements DrawFigure {
     }
 
     public void setColor(String color) {
-
         this.color = color;
     }
 }

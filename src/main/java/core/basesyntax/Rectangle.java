@@ -30,6 +30,7 @@ public class Rectangle extends Figure {
     public void draw() {
         System.out.println("Figure: " + getClass().getSimpleName() + ','
                 + " firstSide: " + firstSide
-                + " secondSide: " + secondSide);
+                + " secondSide: " + secondSide
+                + " color: " + getColor());
     }
 }

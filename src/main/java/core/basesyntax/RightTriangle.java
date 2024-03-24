@@ -30,6 +30,7 @@ public class RightTriangle extends Figure {
     public void draw() {
         System.out.println("Figure: " + getClass().getSimpleName() + ','
                 + " firstLeg: " + getFirstLeg()
-                + " secondLeg: " + getSecondLeg());
+                + " secondLeg: " + getSecondLeg()
+                + " color: " + getColor());
     }
 }
