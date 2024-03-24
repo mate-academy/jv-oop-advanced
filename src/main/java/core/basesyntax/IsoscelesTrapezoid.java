@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends AbstractFigure {
+public class IsoscelesTrapezoid extends Figure {
     private int height;
     private int smallerSide;
     private int biggerSide;
@@ -19,7 +19,12 @@ public class IsoscelesTrapezoid extends AbstractFigure {
 
     @Override
     public String getFigureInfo() {
-        return "Figure: isosceles trapezoid, area: " + String.format("%.2f", getArea())
+        return null;
+    }
+
+    @Override
+    public String toString() {
+        return "Figure: isosceles trapezoid, area: " + String.format("%.1f", getArea())
                 + " sq. units, height: " + height + " units, smaller side: " + smallerSide
                 + " units, bigger side: " + biggerSide + " units, color: "
                 + getColor().name().toLowerCase();

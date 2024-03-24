@@ -9,4 +9,9 @@ public class ColorSupplier {
         int index = random.nextInt(Color.values().length);
         return Color.values()[index];
     }
+
+    public Color getDefaultColor() {
+        int index = 0;
+        return Color.values()[index];
+    }
 }
