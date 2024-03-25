@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import javax.xml.namespace.QName;
-
 public class Square extends Figure {
     private double side;
 
@@ -14,8 +12,10 @@ public class Square extends Figure {
         return side * side;
     }
 
-      @Override
+    @Override
     public String draw() {
-        return "Figure: square, area: " + String.format("%.1f", getArea()) + " sq. units, side: " + String.format("%.1f", side) + " units, color: " + getColor();
+        return "Figure: square, area: " + String.format("%.1f", getArea())
+                + " sq. units, side: " + String.format("%.1f", side)
+                + " units, color: " + getColor();
     }
 }

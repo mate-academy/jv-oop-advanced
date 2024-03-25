@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure  {
+public class RightTriangle extends Figure {
     private double base;
     private double height;
 
@@ -17,9 +17,10 @@ public class RightTriangle extends Figure  {
         return 0.5 * base * height;
     }
 
-
     @Override
     public String draw() {
-        return "Figure: rightTriangle, area: " + String.format("%.1f", getArea()) + " sq. units, base: " + String.format("%.1f", base) + " units, height: " + String.format("%.1f", height) + " units, color: " + getColor();
+        return "Figure: rightTriangle, area: " + String.format("%.1f", getArea())
+                + " sq. units, base: " + String.format("%.1f", base) + " units, height: "
+                + String.format("%.1f", height) + " units, color: " + getColor();
     }
 }

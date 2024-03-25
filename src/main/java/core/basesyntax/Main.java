@@ -3,7 +3,6 @@ package core.basesyntax;
 public class Main {
     public static void main(String[] args) {
 
-
         Figure[] figures = new Figure[6];
         int firstHalf = figures.length / 2;
 
@@ -18,9 +17,5 @@ public class Main {
                 System.out.println(figures[i].draw());
             }
         }
-
-
-
-
     }
 }

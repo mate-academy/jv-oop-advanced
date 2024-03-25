@@ -12,9 +12,10 @@ public class Circle extends Figure {
         return Math.PI * radius * radius;
     }
 
-
     @Override
     public String draw() {
-        return "Figure: circle, area: " + String.format("%.1f", getArea()) + " sq. units, radius: " + String.format("%.1f", radius) + " units, color: " + getColor();
+        return "Figure: circle, area: " + String.format("%.1f", getArea())
+                + " sq. units, radius: " + String.format("%.1f", radius)
+                + " units, color: " + getColor();
     }
 }

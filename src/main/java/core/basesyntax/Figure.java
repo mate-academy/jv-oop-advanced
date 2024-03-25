@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public abstract class Figure implements AreaCalculator, Draweble {
     private String color;
 

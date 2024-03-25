@@ -17,9 +17,10 @@ public class Rectangle extends Figure {
         return length * width;
     }
 
-
     @Override
     public String draw() {
-        return "Figure: rectangle, area: " + String.format("%.1f", getArea()) + " sq. units, width: " + String.format("%.1f", width) + " units, length: " + String.format("%.1f", length) + " units, color: " + getColor();
+        return "Figure: rectangle, area: " + String.format("%.1f", getArea())
+                + " sq. units, width: " + String.format("%.1f", width) + " units, length: "
+                + String.format("%.1f", length) + " units, color: " + getColor();
     }
 }
