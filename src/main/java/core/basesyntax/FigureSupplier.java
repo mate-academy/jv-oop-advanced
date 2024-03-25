@@ -4,47 +4,43 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int NUMBER_LIMIT = 100;
+    private static final int NUM_FIGURE_TYPES = 5;
     private static final int DEFAULT_RADIUS = 10;
     private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        ColorSupplier colorSupplier = new ColorSupplier();
-        int figureType = random.nextInt(5); // 0 to 4 representing the different figure types
+        int figureType = random.nextInt(NUM_FIGURE_TYPES);
+        Color color = colorSupplier.getRandomColor();
         switch (figureType) {
-            case 0:
-                // Create a Circle
+            case 0 -> {
                 int radius = random.nextInt(NUMBER_LIMIT) + 1;
-                Color color = colorSupplier.getRandomColor();
                 return new Circle(radius, color);
-            case 1:
-                // Create an IsoscelesTrapezoid
+            }
+            case 1 -> {
                 int height = random.nextInt(NUMBER_LIMIT) + 1;
                 int smallerSide = random.nextInt(NUMBER_LIMIT) + 1;
                 int biggerSide = random.nextInt(NUMBER_LIMIT) + 1;
-                color = colorSupplier.getRandomColor();
                 return new IsoscelesTrapezoid(height, smallerSide, biggerSide, color);
-            case 2:
-                // Create a Rectangle
+            }
+            case 2 -> {
                 int width = random.nextInt(NUMBER_LIMIT) + 1;
                 int length = random.nextInt(NUMBER_LIMIT) + 1;
-                color = colorSupplier.getRandomColor();
                 return new Rectangle(width, length, color);
-            case 3:
-                // Create a RightTriangle
+            }
+            case 3 -> {
                 int firstLeg = random.nextInt(NUMBER_LIMIT) + 1;
                 int secondLeg = random.nextInt(NUMBER_LIMIT) + 1;
-                color = colorSupplier.getRandomColor();
                 return new RightTriangle(firstLeg, secondLeg, color);
-            default:
-                // Create a Square
+            }
+            default -> {
                 int generalSide = random.nextInt(NUMBER_LIMIT) + 1;
-                color = colorSupplier.getRandomColor();
                 return new Square(generalSide, color);
+            }
         }
     }
 
     public Figure getDefaultFigure() {
-        ColorSupplier colorSupplier = new ColorSupplier();
         Color color = colorSupplier.getDefaultColor();
         return new Circle(DEFAULT_RADIUS, color);
     }

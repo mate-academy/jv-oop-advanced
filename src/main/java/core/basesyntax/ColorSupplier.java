@@ -3,6 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class ColorSupplier {
+    private static final int DEFAULT_COLOR_INDEX = 0;
     private final Random random = new Random();
 
     public Color getRandomColor() {
@@ -11,7 +12,6 @@ public class ColorSupplier {
     }
 
     public Color getDefaultColor() {
-        int index = 0;
-        return Color.values()[index];
+        return Color.values()[DEFAULT_COLOR_INDEX];
     }
 }
