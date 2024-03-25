@@ -6,11 +6,12 @@ public class FigureSupplier {
     private static final int MAX_RANDOM_INT = 100;
     private static final double MAX_RANDOM_DOUBLE = 100.0;
     private static final int DEFAULT_FIGURE_SIDE = 10;
+    private static final int MAX_FIGURE_NUMBER = 5;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int figure = random.nextInt(5);
+        int figure = random.nextInt(MAX_FIGURE_NUMBER);
         switch (figure) {
             case 0: return new Circle(colorSupplier.getRandomColor(), getRandomInt());
             case 1: return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
