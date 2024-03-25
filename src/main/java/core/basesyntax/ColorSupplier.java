@@ -4,18 +4,11 @@ import java.util.Random;
 
 public class ColorSupplier {
 
-    public static String getRandomColor() {
+    private static final Random RANDOM = new Random();
 
-        String[] colors = {
-                "red", "blue", "green", "yellow",
-                "orange", "purple", "pink", "cyan",
-                "magenta", "brown"
-        };
-
-        Random random = new Random();
-        int randomIndex = random.nextInt(colors.length);
-
+    public static Color getRandomColor() {
+        Color[] colors = Color.values();
+        int randomIndex = RANDOM.nextInt(colors.length);
         return colors[randomIndex];
     }
-
 }

@@ -17,7 +17,7 @@ public class FigureSupplier {
             case 4:
                 return new IsoscelesTrapezoid(ColorSupplier.getRandomColor(), 6, 10, 4);
             default:
-                return new Circle("white", 10);
+                return new Circle(Color.WHITE, 10);
         }
     }
 }
