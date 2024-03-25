@@ -10,30 +10,27 @@ import java.util.Random;
 
 public class FigureSupplier {
     private final Random random = new Random();
-    private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figure getRandomFigure() {
+    public Figure getRandomFigure(ColorSupplier colorSupplier) {
         FigureType randomFigureType = getRandomFigureType();
-        double randomNumber = Math.round(random.nextDouble() * 10 + 1);
-        double randomNumber2 = Math.round(random.nextDouble() * 10 + 1);
-        double randomNumber3 = Math.round(random.nextDouble() * 10 + 1);
 
         switch (randomFigureType) {
             case CIRCLE:
-                return new Circle(colorSupplier.getRandomColor(), randomNumber);
+                return new Circle(colorSupplier.getRandomColor(), getRandomNumber());
             case SQUARE:
-                return new Square(colorSupplier.getRandomColor(), randomNumber);
+                return new Square(colorSupplier.getRandomColor(), getRandomNumber());
             case RECTANGLE:
-                return new Rectangle(colorSupplier.getRandomColor(), randomNumber, randomNumber2);
+                return new Rectangle(colorSupplier.getRandomColor(),
+                        getRandomNumber(), getRandomNumber());
             case RIGHT_TRIANGLE:
                 return new RightTriangle(colorSupplier.getRandomColor(),
-                        randomNumber,
-                        randomNumber2);
+                        getRandomNumber(),
+                        getRandomNumber());
             case ISOSCELES_TRAPEZOID:
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        randomNumber,
-                        randomNumber2,
-                        randomNumber3);
+                        getRandomNumber(),
+                        getRandomNumber(),
+                        getRandomNumber());
             default:
                 return getDefaultFigure();
         }
@@ -43,10 +40,13 @@ public class FigureSupplier {
         return new Circle(Color.WHITE, 10);
     }
 
+    private double getRandomNumber() {
+        return Math.round(random.nextDouble() * 10 + 1);
+    }
+
     private FigureType getRandomFigureType() {
         FigureType[] types = FigureType.values();
         int randomIndex = random.nextInt(types.length);
         return types[randomIndex];
     }
-
 }
