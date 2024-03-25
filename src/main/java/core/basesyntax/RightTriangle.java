@@ -22,7 +22,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: right triangle {area: " + String.format("%.1f", getArea())
+        return "Figure: right triangle, area: " + String.format("%.1f", getArea())
                 + " sq. units, first leg: " + firstLeg + " units, second leg: "
                 + secondLeg + " units, color: " + getColor().name().toLowerCase();
     }
