@@ -3,9 +3,6 @@ package core.basesyntax;
 import core.basesyntax.figures.Figure;
 import core.basesyntax.service.FigureSupplier;
 
-/**
- * Feel free to remove this class and create your own.
- */
 public class Application {
 
     public static void main(String[] args) {
