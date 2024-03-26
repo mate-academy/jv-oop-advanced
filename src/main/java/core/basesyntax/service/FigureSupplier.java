@@ -35,9 +35,10 @@ public class FigureSupplier {
                 return new Rectangle(colorSupplier.getRandomColor(),
                         width, height);
             case 3:
-                int sideRectangle = random.nextInt(1, MAX_NUMBERS);
+                int base = random.nextInt(1, MAX_NUMBERS);
+                int heightRightTriangle = random.nextInt(1, MAX_NUMBERS);
                 return new RightTriangle(colorSupplier.getRandomColor(),
-                        sideRectangle);
+                        base, heightRightTriangle);
             case 4:
                 int sideSquare = random.nextInt(1, MAX_NUMBERS);
                 return new Square(colorSupplier.getRandomColor(),
