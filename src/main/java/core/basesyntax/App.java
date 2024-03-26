@@ -12,5 +12,6 @@ public class App {
             }
             figures[i].draw();
         }
+        System.out.println("-------------------");
     }
 }
