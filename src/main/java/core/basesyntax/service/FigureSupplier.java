@@ -20,23 +20,28 @@ public class FigureSupplier {
 
         switch (choice) {
             case 0:
-                return new Circle(colorSupplier.getRandomColor(),
-                        random.nextInt(1, MAX_NUMBERS));
+                int radius = random.nextInt(1, MAX_NUMBERS);
+                return new Circle(colorSupplier.getRandomColor(), radius);
+
             case 1:
+                int largeBase = random.nextInt(1, MAX_NUMBERS);
+                int smallerBase = largeBase / 2;
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        random.nextInt(1, MAX_NUMBERS),
-                        random.nextInt(1, MAX_NUMBERS),
+                        largeBase, smallerBase,
                         random.nextInt(1, MAX_NUMBERS));
             case 2:
+                int width = random.nextInt(1, MAX_NUMBERS);
+                int height = random.nextInt(1, MAX_NUMBERS);
                 return new Rectangle(colorSupplier.getRandomColor(),
-                        random.nextInt(1, MAX_NUMBERS),
-                        random.nextInt(1, MAX_NUMBERS));
+                        width, height);
             case 3:
+                int sideRectangle = random.nextInt(1, MAX_NUMBERS);
                 return new RightTriangle(colorSupplier.getRandomColor(),
-                        random.nextInt(1, MAX_NUMBERS));
+                        sideRectangle);
             case 4:
+                int sideSquare = random.nextInt(1, MAX_NUMBERS);
                 return new Square(colorSupplier.getRandomColor(),
-                        random.nextInt(1, MAX_NUMBERS));
+                        sideSquare);
             default:
         }
         return null;
