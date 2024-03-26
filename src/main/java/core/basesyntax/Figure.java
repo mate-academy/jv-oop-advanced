@@ -1,30 +1,27 @@
 package core.basesyntax;
 
-public abstract class Figure implements Drawable, Colorful {
-    protected String color;
+public abstract class Figure implements Drawable {
+    protected Color color;
 
     public Figure() {
-        this.color = "white";
+        this.color = Color.WHITE;
     }
 
-    public interface Drawable {
-        void draw();
-    }
-
-    public interface Colorful {
-        String getColor();
-    }
-
-    public Figure(String color) {
+    public Figure(Color color) {
         this.color = color;
     }
 
     public abstract double getArea();
 
-    public abstract void draw();
-
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
-}
 
+    @Override
+    public void draw() {
+        System.out.println("Figure: " + getFigureName() + ", area: " + getArea()
+                + " sq. units, color: " + getColor());
+    }
+
+    protected abstract String getFigureName();
+}

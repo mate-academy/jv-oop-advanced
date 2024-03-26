@@ -1,24 +1,30 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private final double firstLeg;
-    private final double secondLeg;
+    private final double width;
+    private final double height;
 
-    public Rectangle(Color color, double firstLeg, double secondLeg) {
-        super(String.valueOf(color));
-        this.firstLeg = firstLeg;
-        this.secondLeg = secondLeg;
+    public Rectangle(Color color, double width, double height) {
+        super(color);
+        this.width = width;
+        this.height = height;
     }
 
     @Override
     public double getArea() {
-        return firstLeg * secondLeg;
+        return width * height;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: RightTriangle, area : " + getArea()
-                + " sq. units, firstLeg: " + firstLeg
-                + " secondLeg: " + secondLeg + " units, color: " + color);
+                + " sq. units, width: " + width
+                + " height: " + height + " units, color: " + color);
     }
+
+    @Override
+    protected String getFigureName() {
+        return "Rectangle";
+    }
+
 }

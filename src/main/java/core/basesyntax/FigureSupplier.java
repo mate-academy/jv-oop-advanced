@@ -1,9 +1,12 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public class FigureSupplier {
 
     public static Figure getRandomFigure() {
-        int randomNumber = (int) (Math.random() * 5);
+        Random random = new Random();
+        int randomNumber = random.nextInt(5);
 
         switch (randomNumber) {
             case 0:
