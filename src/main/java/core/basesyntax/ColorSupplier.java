@@ -7,7 +7,6 @@ public class ColorSupplier {
     private final int indexOfColor = new Random().nextInt(MAX_VALUE);
     private final Color colorOfFigure = Color.values()[indexOfColor];
 
-
     public String getColorOfFigure() {
         return colorOfFigure.name();
     }

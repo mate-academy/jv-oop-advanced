@@ -1,15 +1,12 @@
 package core.basesyntax;
 
-import java.util.Random;
-
-public class Square extends Figure implements AreaCalculate, Drawable{
+public class Square extends Figure {
     private int side;
 
-    public Square(int side, String color){
+    public Square(int side, String color) {
         super(color);
         this.side = side;
     }
-
 
     @Override
     public double getArea() {

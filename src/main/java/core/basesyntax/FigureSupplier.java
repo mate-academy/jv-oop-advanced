@@ -15,8 +15,7 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-
-    public Figure getRandomFigure(){
+    public Figure getRandomFigure() {
         String randomColor = colorSupplier.getColorOfFigure();
         int randomFigure = random.nextInt(NUMBER_OF_FIGURES);
 
@@ -40,7 +39,8 @@ public class FigureSupplier {
 
         }
     }
-    public Figure getDefaultFigure(){
+
+    public Figure getDefaultFigure() {
         int randomFigure = random.nextInt(3);
         switch (randomFigure) {
             case 0:

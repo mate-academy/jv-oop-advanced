@@ -1,13 +1,11 @@
 package core.basesyntax;
 
-import java.util.Random;
-
-public class IsoscelesTrapezoid extends Figure implements AreaCalculate, Drawable {
+public class IsoscelesTrapezoid extends Figure {
     private int lowerBase;
     private int upperBase;
     private int side;
 
-    public IsoscelesTrapezoid(int lowerBase, int upperBase, int side, String color){
+    public IsoscelesTrapezoid(int lowerBase, int upperBase, int side, String color) {
         super(color);
         this.lowerBase = lowerBase;
         this.upperBase = upperBase;
@@ -22,7 +20,8 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculate, Drawabl
 
     @Override
     public void drawFigure() {
-        System.out.println(("Figure: right triangle, upper base: " + upperBase + ", lower base: " + lowerBase
-                + ", side " + side + ", area: " + getArea() + ", color: " + getColor()));
+        System.out.println(("Figure: right triangle, upper base: " + upperBase
+                + ", lower base: " + lowerBase + ", side " + side
+                + ", area: " + getArea() + ", color: " + getColor()));
     }
 }
