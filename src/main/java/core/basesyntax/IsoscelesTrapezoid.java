@@ -6,7 +6,6 @@ public class IsoscelesTrapezoid extends Figure {
     private int lowerBase;
     private int upperBase;
     private int side;
-    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public IsoscelesTrapezoid() {
     }
@@ -15,14 +14,13 @@ public class IsoscelesTrapezoid extends Figure {
         this.lowerBase = lowerBase;
         this.upperBase = upperBase;
         this.side = side;
-        setColor(color);
     }
 
     public IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
         int lowerBase = new Random().nextInt(15);
         int upperBase = new Random().nextInt(15);
         int side = new Random().nextInt(15);
-        String color = colorSupplier.getColorOfFigure();
+        String color = getColor();
         return new IsoscelesTrapezoid(lowerBase, upperBase, side, color);
     }
 
@@ -33,7 +31,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println(("Figure: Isosceles Trapezoid, upper base: "
                 + upperBase + ", lower base: " + lowerBase + ", side "
                 + side + ", area: " + getArea() + ", color: " + getColor()));

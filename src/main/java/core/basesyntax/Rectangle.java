@@ -5,7 +5,6 @@ import java.util.Random;
 public class Rectangle extends Figure {
     private int firstSide;
     private int secondSide;
-    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Rectangle(int firstSide, int secondSide, String color) {
         this.firstSide = firstSide;
@@ -17,7 +16,7 @@ public class Rectangle extends Figure {
     }
 
     public Rectangle getRandomRectangle() {
-        String color = colorSupplier.getColorOfFigure();
+        String color = getColor();
         int firstSide = new Random().nextInt(15);
         int secondSide = new Random().nextInt(15);
         return new Rectangle(firstSide, secondSide, color);
@@ -29,7 +28,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println(("Figure: rectangle, first side: "
                 + firstSide + ", second side: "
                 + secondSide + ", area: "

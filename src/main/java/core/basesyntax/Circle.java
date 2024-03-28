@@ -4,7 +4,6 @@ import java.util.Random;
 
 public class Circle extends Figure {
     private int radius;
-    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Circle(int radius, String color) {
         this.radius = radius;
@@ -12,10 +11,12 @@ public class Circle extends Figure {
     }
 
     public Circle() {
+        this.radius = new Random().nextInt(15);
+        getColor();
     }
 
     public Circle getRandomCircle() {
-        String color = colorSupplier.getColorOfFigure();
+        String color = getColor();
         int radius = new Random().nextInt(15);
         return new Circle(radius, color);
     }
@@ -32,7 +33,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println("Figure: circle, radius: " + radius + ", area: "
                 + getArea() + ", color: " + getColor());
     }

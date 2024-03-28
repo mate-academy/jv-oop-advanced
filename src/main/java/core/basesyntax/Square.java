@@ -4,11 +4,9 @@ import java.util.Random;
 
 public class Square extends Figure {
     private int side;
-    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Square(int side, String color) {
-        this.side = side;
-        setColor(color);
+        this.side = side;;
     }
 
     public Square() {
@@ -16,7 +14,7 @@ public class Square extends Figure {
     }
 
     public Square getRandomSquare() {
-        String color = colorSupplier.getColorOfFigure();
+        String color = getColor();
         int side = new Random().nextInt(10);
         return new Square(side, color);
     }
@@ -27,7 +25,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println("Figure: square, side: " + side + ", area: "
                 + getArea() + ", color: " + getColor());
     }

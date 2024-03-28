@@ -7,8 +7,6 @@ public class RightTriangle extends Figure {
     private int base;
     private int height;
 
-    private ColorSupplier colorSupplier = new ColorSupplier();
-
     public RightTriangle(int base, int height, String color) {
         this.height = height;
         this.base = base;
@@ -19,7 +17,7 @@ public class RightTriangle extends Figure {
     }
 
     public RightTriangle getRandomRightTriangle() {
-        String color = colorSupplier.getColorOfFigure();
+        String color = getColor();
         int base = new Random().nextInt(10);
         int height = new Random().nextInt(10);
         return new RightTriangle(base, height, color);
@@ -31,7 +29,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println(("Figure: right triangle, height: " + height + ", base: "
                 + base + ", area: " + getArea() + ", color: " + getColor()));
 
