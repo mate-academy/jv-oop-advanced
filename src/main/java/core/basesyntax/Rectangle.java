@@ -30,9 +30,9 @@ public class Rectangle extends Figure {
 
     @Override
     public void drawFigure() {
-        System.out.println(("Figure: rectangle, first side: " + firstSide
-                + ", second side: " + secondSide
-                + ", area: " + getArea()
-                + ", color: " + getColor()));
+        System.out.println(("Figure: rectangle, first side: "
+                + firstSide + ", second side: "
+                + secondSide + ", area: "
+                + getArea() + ", color: " + getColor()));
     }
 }
