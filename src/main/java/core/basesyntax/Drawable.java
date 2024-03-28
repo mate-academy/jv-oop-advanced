@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public interface DrawPrinter {
+public interface Drawable {
     void draw();
 }
