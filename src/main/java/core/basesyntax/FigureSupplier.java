@@ -12,21 +12,22 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int figure = random.nextInt(MAX_FIGURE_NUMBER);
-        switch (figure) {
-            case 0: return new Circle(colorSupplier.getRandomColor(), getRandomInt());
-            case 1: return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+        return switch (figure) {
+            case 0 -> new Circle(colorSupplier.getRandomColor(), getRandomInt());
+            case 1 -> new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                     getRandomDouble(),
                     getRandomDouble(),
                     getRandomDouble());
-            case 2: return new Rectangle(colorSupplier.getRandomColor(),
+            case 2 -> new Rectangle(colorSupplier.getRandomColor(),
                     getRandomDouble(),
                     getRandomDouble());
-            case 3: return new RightTriangle(colorSupplier.getRandomColor(),
+            case 3 -> new RightTriangle(colorSupplier.getRandomColor(),
                     getRandomDouble(),
                     getRandomDouble());
-            default: return new Square(colorSupplier.getRandomColor(),
-                    getRandomDouble());
-        }
+            case 4 -> new Square(colorSupplier.getRandomColor(),
+                     getRandomDouble());
+            default -> throw new IllegalArgumentException("Invalid figure number" + figure);
+        };
     }
 
     public Figure getDefaultFigure() {
@@ -34,10 +35,10 @@ public class FigureSupplier {
     }
 
     private int getRandomInt() {
-        return new Random().nextInt(MAX_RANDOM_INT);
+        return random.nextInt(MAX_RANDOM_INT);
     }
 
     private double getRandomDouble() {
-        return new Random().nextDouble(MAX_RANDOM_DOUBLE);
+        return random.nextDouble(MAX_RANDOM_DOUBLE);
     }
 }
