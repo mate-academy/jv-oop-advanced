@@ -12,19 +12,6 @@ public class Circle extends Figure {
 
     public Circle() {
         this.radius = new Random().nextInt(15);
-        getColor();
-    }
-
-    public Circle getRandomCircle() {
-        String color = getColor();
-        int radius = new Random().nextInt(15);
-        return new Circle(radius, color);
-    }
-
-    public Circle getDefaultCircle() {
-        String color = Color.WHITE.name();
-        int radius = 10;
-        return new Circle(radius, color);
     }
 
     @Override

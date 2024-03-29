@@ -8,20 +8,9 @@ public class IsoscelesTrapezoid extends Figure {
     private int side;
 
     public IsoscelesTrapezoid() {
-    }
-
-    public IsoscelesTrapezoid(int lowerBase, int upperBase, int side, String color) {
-        this.lowerBase = lowerBase;
-        this.upperBase = upperBase;
-        this.side = side;
-    }
-
-    public IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
-        int lowerBase = new Random().nextInt(15);
-        int upperBase = new Random().nextInt(15);
-        int side = new Random().nextInt(15);
-        String color = getColor();
-        return new IsoscelesTrapezoid(lowerBase, upperBase, side, color);
+        this.side = new Random().nextInt(15);
+        this.upperBase = new Random().nextInt(15);
+        this.lowerBase = new Random().nextInt(15);
     }
 
     @Override
