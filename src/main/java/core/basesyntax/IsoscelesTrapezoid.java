@@ -1,16 +1,15 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class IsoscelesTrapezoid extends Figure {
     private int lowerBase;
     private int upperBase;
     private int side;
 
-    public IsoscelesTrapezoid() {
-        this.side = new Random().nextInt(15);
-        this.upperBase = new Random().nextInt(15);
-        this.lowerBase = new Random().nextInt(15);
+    public IsoscelesTrapezoid(int lowerBase, int upperBase, int sode, String color) {
+        this.side = side;
+        this.upperBase = upperBase;
+        this.lowerBase = lowerBase;
+        setColor(color);
     }
 
     @Override

@@ -1,14 +1,13 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class RightTriangle extends Figure {
     private int base;
     private int height;
 
-    public RightTriangle() {
-        this.base = new Random().nextInt(15);
-        this.height = new Random().nextInt(15);
+    public RightTriangle(int base, int height, String color) {
+        this.base = base;
+        this.height = height;
+        setColor(color);
     }
 
     @Override
