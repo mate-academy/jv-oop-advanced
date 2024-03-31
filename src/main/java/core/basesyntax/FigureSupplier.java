@@ -5,6 +5,8 @@ import java.util.Random;
 public class FigureSupplier {
     public static final int FIGURE_TYPES = 5;
     public static final int MAX_SIDE_LEN = 100;
+    public static final int RADIUS = 10;
+    public static final Color DEFAULT_COL = Color.WHITE;
     private static final Random random = new Random();
 
     public Figure getRandomFigure() {
@@ -28,8 +30,8 @@ public class FigureSupplier {
     }
 
     public static Figure getDefaultFigure() {
-        Figure defaultFigure = new Circle(10);
-        defaultFigure.setColor("white");
+        Figure defaultFigure = new Circle(RADIUS);
+        defaultFigure.setColor(DEFAULT_COL.name().toLowerCase());
         return defaultFigure;
     }
 }

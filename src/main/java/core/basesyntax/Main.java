@@ -7,16 +7,15 @@ public class Main {
 
     public static void main(String[] args) {
         Figure[] figures = new Figure[FIGURE_COUNT];
-        for (int i = 0; i < figures.length / 2; i++) {
-            Figure randomFigure = figureSupplier.getRandomFigure();
-            randomFigure.setColor(colorSupplier.getRandomColor());
-            figures[i] = randomFigure;
-        }
-        for (int i = figures.length / 2; i < figures.length; i++) {
-            figures[i] = FigureSupplier.getDefaultFigure();
-        }
-        for (Figure figure : figures) {
-            figure.draw();
+        for (int i = 0; i < FIGURE_COUNT; i++) {
+            if (i < FIGURE_COUNT / 2) {
+                Figure randomFigure = figureSupplier.getRandomFigure();
+                randomFigure.setColor(colorSupplier.getRandomColor());
+                figures[i] = randomFigure;
+            } else {
+                figures[i] = FigureSupplier.getDefaultFigure();
+            }
+            figures[i].draw();
         }
     }
 }
