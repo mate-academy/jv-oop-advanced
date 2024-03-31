@@ -3,41 +3,36 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final FigureType[] FIGURE_TYPES = FigureType.values();
-    private static final int FIGURE_COUNT = FIGURE_TYPES.length;
-    private final Random random = new Random();
-    private final ColorSupplier colorSupplier = new ColorSupplier();
+    public static final int FIGURE_COUNT = 5;
+    private static final Random random = new Random();
+    private static final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        FigureType figureType = getRandomFigureType();
+        final int figureType = random.nextInt(FIGURE_COUNT);
         String color = colorSupplier.getRandomColor();
+        switch (figureType) {
+            case 0:
+                return new Square(color, getRandomValue());
+            case 1:
+                return new Rectangle(color, getRandomValue(), getRandomValue());
+            case 2:
+                return new RightTriangle(color, getRandomValue(), getRandomValue());
+            case 3:
+                return new Circle(color, getRandomValue());
+            case 4:
+                return new IsoscelesTrapezoid(color, getRandomValue(),
+                        getRandomValue(), getRandomValue());
+            default:
+                throw new IllegalStateException("Unexpected value: " + figureType);
+        }
 
-        return switch (figureType) {
-            case SQUARE -> new Square(color, getRandomSide());
-            case RECTANGLE -> new Rectangle(color, getRandomSide(), getRandomSide());
-            case RIGHT_TRIANGLE -> new RightTriangle(color, getRandomSide(), getRandomSide());
-            case CIRCLE -> new Circle(color, getRandomRadius());
-            case ISOSCELES_TRAPEZOID ->
-                    new IsoscelesTrapezoid(color, getRandomSide(),
-                            getRandomSide(), getRandomSide());
-            default -> throw new IllegalStateException("Unexpected value: " + figureType);
-        };
     }
 
     public Figure getDefaultFigure() {
         return new Circle("white", 10);
     }
 
-    private double getRandomSide() {
+    private double getRandomValue() {
         return random.nextDouble() * 10 + 1;
-    }
-
-    private double getRandomRadius() {
-        return random.nextDouble() * 10 + 1;
-    }
-
-    private FigureType getRandomFigureType() {
-        int index = random.nextInt(FIGURE_COUNT);
-        return FIGURE_TYPES[index];
     }
 }
