@@ -25,11 +25,10 @@ public class FigureSupplier {
             default:
                 throw new IllegalStateException("Unexpected value: " + figureType);
         }
-
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", 10);
+        return new Circle(Color.WHITE.name(), 10);
     }
 
     private double getRandomValue() {
