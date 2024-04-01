@@ -8,30 +8,32 @@ public class FigureSupplier {
     public static final int DEFAULT_RADIUS = 10;
     public static final Color DEFAULT_COLOR = Color.WHITE;
     private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int choice = random.nextInt(FIGURE_TYPES);
-        int side1 = random.nextInt(MAX_SIDES_LENGTH) + 1;
-        int side2 = random.nextInt(MAX_SIDES_LENGTH) + 1;
-        int side3 = random.nextInt(MAX_SIDES_LENGTH) + 1;
-        ColorSupplier colorSupplier = new ColorSupplier();
         String color = colorSupplier.getRandomColor();
 
         switch (choice) {
             case 0:
-                return new Circle(side1, color);
+                return new Circle(getRandomLength(), color);
             case 1:
-                return new Square(side1, color);
+                return new Square(getRandomLength(), color);
             case 2:
-                return new Rectangle(side1, side2, color);
+                return new Rectangle(getRandomLength(), getRandomLength(), color);
             case 3:
-                return new RightTriangle(side1, side2, color);
+                return new RightTriangle(getRandomLength(), getRandomLength(), color);
             default:
-                return new IsoscelesTrapezoid(side1, side2, side3, color);
+                return new IsoscelesTrapezoid(
+                        getRandomLength(), getRandomLength(), getRandomLength(), color);
         }
     }
 
-    public static Figure getDefaultFigure() {
+    private int getRandomLength() {
+        return random.nextInt(MAX_SIDES_LENGTH) + 1;
+    }
+
+    public Figure getDefaultFigure() {
         Figure defaultFigure = new Circle(DEFAULT_RADIUS,
                 DEFAULT_COLOR.name().toLowerCase());
         return defaultFigure;

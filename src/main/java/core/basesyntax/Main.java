@@ -8,10 +8,9 @@ public class Main {
         Figure[] figures = new Figure[FIGURE_COUNT];
         for (int i = 0; i < FIGURE_COUNT; i++) {
             if (i < FIGURE_COUNT / 2) {
-                Figure randomFigure = figureSupplier.getRandomFigure();
-                figures[i] = randomFigure;
+                figures[i] = figureSupplier.getRandomFigure();
             } else {
-                figures[i] = FigureSupplier.getDefaultFigure();
+                figures[i] = figureSupplier.getDefaultFigure();
             }
             figures[i].draw();
         }

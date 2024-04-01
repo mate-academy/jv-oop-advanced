@@ -3,20 +3,18 @@ package core.basesyntax;
 public class IsoscelesTrapezoid extends Figure {
     private int downSide;
     private int topSide;
-    private int lateralSide;
+    private int height;
 
-    public IsoscelesTrapezoid(int downSide, int topSide, int lateralSide, String color) {
+    public IsoscelesTrapezoid(int downSide, int topSide, int height, String color) {
         this.downSide = downSide;
         this.topSide = topSide;
-        this.lateralSide = lateralSide;
+        this.height = height;
         this.setColor(color);
     }
 
     @Override
     public double getArea() {
-        double heightTrapezoid = Math.sqrt(Math.pow(lateralSide, 2)
-                - ((Math.pow((downSide - topSide), 2)) / 4));
-        return Math.round(((downSide + topSide) / 2) * heightTrapezoid);
+        return ((downSide + topSide) / 2) * height;
     }
 
     @Override
@@ -25,7 +23,7 @@ public class IsoscelesTrapezoid extends Figure {
                 + "area: " + getArea() + " sq. units, "
                 + "downSide: " + getDownSide() + " units, "
                 + "topSide: " + getTopSide() + " units, "
-                + "lateralSide: " + getLateralSide() + " units, "
+                + "height: " + getHeight() + " units, "
                 + "color: " + getColor());
     }
 
@@ -33,8 +31,8 @@ public class IsoscelesTrapezoid extends Figure {
         return downSide;
     }
 
-    public int getLateralSide() {
-        return lateralSide;
+    public int getHeight() {
+        return height;
     }
 
     public int getTopSide() {
