@@ -3,9 +3,12 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int FIGURE_COUNT = 5;
-    private static final Random random = new Random();
-    private static final ColorSupplier colorSupplier = new ColorSupplier();
+    private static final int FIGURE_COUNT = 5;
+    private static final double MAX_RANDOM_VALUE = 10;
+    private static final double MIN_RANDOM_VALUE = 1;
+
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         final int figureType = random.nextInt(FIGURE_COUNT);
@@ -28,10 +31,10 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.name(), 10);
+        return new Circle(Color.WHITE.name(), MAX_RANDOM_VALUE);
     }
 
     private double getRandomValue() {
-        return random.nextDouble() * 10 + 1;
+        return random.nextDouble() * (MAX_RANDOM_VALUE - MIN_RANDOM_VALUE) + MIN_RANDOM_VALUE;
     }
 }
