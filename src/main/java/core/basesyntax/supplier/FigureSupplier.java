@@ -5,7 +5,7 @@ import core.basesyntax.entity.Circle;
 import core.basesyntax.entity.IsoscelesTrapezoid;
 import core.basesyntax.entity.Rectangle;
 import core.basesyntax.entity.RightTriangle;
-import core.basesyntax.entity.Square;qq
+import core.basesyntax.entity.Square;
 import java.util.Random;
 
 public class FigureSupplier {
