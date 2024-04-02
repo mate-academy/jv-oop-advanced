@@ -1,27 +1,10 @@
 package core.basesyntax;
 
-public abstract class Figure implements Drawable {
-    protected Color color;
-
+public abstract class Figure implements figureArea {
+    String color;
     public Figure() {
-        this.color = Color.WHITE;
+        ColorSupplier color = new ColorSupplier();
+        this.color = color.getRandomColor();
     }
-
-    public Figure(Color color) {
-        this.color = color;
-    }
-
-    public abstract double getArea();
-
-    public Color getColor() {
-        return color;
-    }
-
-    @Override
-    public void draw() {
-        System.out.println("Figure: " + getFigureName() + ", area: " + getArea()
-                + " sq. units, color: " + getColor());
-    }
-
-    protected abstract String getFigureName();
+    abstract String getFigureInfo();
 }

@@ -1,34 +1,28 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private final double topSize;
-    private final double bottomSide;
-    private final double height;
-
-    public IsoscelesTrapezoid(Color color, double topSize, double bottomSide, double height) {
-        super(color);
-        this.topSize = topSize;
-        this.bottomSide = bottomSide;
-        this.height = height;
+    private int firstBase;
+    private int secondBase;
+    private int heigh;
+    public IsoscelesTrapezoid(int firstBase, int secondBase, int heigh) {
+        this.firstBase = firstBase;
+        this.secondBase = secondBase;
+        this.heigh = heigh;
+    }
+    public IsoscelesTrapezoid(int firstBase, int secondBase, int heigh, String color) {
+        this.firstBase = firstBase;
+        this.secondBase = secondBase;
+        this.heigh = heigh;
+        super.color = color;
+    }
+    @Override
+    public double getFigureArea() {
+        return (firstBase * secondBase) * heigh / 2;
     }
 
     @Override
-
-    public double getArea() {
-        return ((topSize * bottomSide) * height) / 2;
+    public String getFigureInfo() {
+        return "Figure: IsoscelesTrapezoid, area: " + getFigureArea() + " sq. units, firstBase: " + firstBase + " secondBase " + secondBase + " heigh " + heigh + " units, color: " + super.color;
     }
-
-    @Override
-
-    public void draw() {
-        System.out.println("Figure: RightTriangle, area : " + getArea() + " sq. units, topSize: "
-                + topSize + " bottomSide: "
-                + bottomSide + " height: " + height + " units, color: " + color);
-    }
-
-    @Override
-    protected String getFigureName() {
-        return "IsoscelesTrapezoid";
-    }
-
+    /* Wzór na pole trapezu równoramiennego (a+b)*h /2 */
 }

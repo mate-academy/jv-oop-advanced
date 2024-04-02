@@ -1,32 +1,25 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-
-    private final double width;
-    private final double height;
-
-    public RightTriangle(Color color, double width, double height) {
-        super(color);
-        this.width = width;
-        this.height = height;
+    private int base;
+    private int heigh;
+    public RightTriangle(int base, int heigh) {
+        this.base = base;
+        this.heigh = heigh;
+    }
+    public RightTriangle(int base, int heigh, String color) {
+        this.base = base;
+        this.heigh = heigh;
+        super.color = color;
+    }
+    @Override
+    public double getFigureArea() {
+        return (base * heigh) / 2;
     }
 
     @Override
-    public double getArea() {
-        return (width * height) / 2;
+    public String getFigureInfo() {
+        return "Figure: RightTriangle, area: " + getFigureArea() + " sq. units, base: " + base + " heigh " + heigh + " units, color: " + super.color;
     }
-
-    @Override
-    public void draw() {
-        System.out.println("Figure: RightTriangle, area : " + getArea()
-                + " sq. units, width: " + width
-                + " height: " + height + " units, color: " + color);
-    }
-
-    @Override
-    protected String getFigureName() {
-        return "RightTriangle";
-    }
-
+    /* Wzór na pole trójkąta prostokątnego (a*h)/2 */
 }
-

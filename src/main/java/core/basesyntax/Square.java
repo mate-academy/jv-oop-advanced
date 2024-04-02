@@ -1,27 +1,24 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    private final double side;
+    private int side;
 
-    public Square(Color color, double side) {
-        super(color);
+    public Square(int side) {
         this.side = side;
     }
-
+    public Square(int side, String color) {
+        this.side = side;
+        super.color = color;
+    }
     @Override
-    public double getArea() {
+    public double getFigureArea() {
         return side * side;
     }
 
     @Override
-    public void draw() {
-        System.out.println("Figure: RightTriangle, area : " + getArea() + " sq. units, side: "
-                + side + " units, color: " + color);
+    public String getFigureInfo() {
+        return "Figure: Square, area: " + getFigureArea() + " sq. units, side: " + side + " units, color: " + super.color;
     }
-
-    @Override
-    protected String getFigureName() {
-        return "Square";
-    }
+    /* Wzór na pole kwadratu a*a */
 
 }

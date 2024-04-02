@@ -1,30 +1,25 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private final double width;
-    private final double height;
-
-    public Rectangle(Color color, double width, double height) {
-        super(color);
-        this.width = width;
-        this.height = height;
+    private int base;
+    private int side;
+    public Rectangle(int base, int side) {
+        this.base = base;
+        this.side = side;
+    }
+    public Rectangle(int base, int side, String color) {
+        this.base = base;
+        this.side = side;
+        super.color = color;
+    }
+    @Override
+    public double getFigureArea() {
+        return base * side;
     }
 
     @Override
-    public double getArea() {
-        return width * height;
+    public String getFigureInfo() {
+        return "Figure: Rectangle, area: " + getFigureArea() + " sq. units, base: " + base + " side " + side + " units, color: " + super.color;
     }
-
-    @Override
-    public void draw() {
-        System.out.println("Figure: RightTriangle, area : " + getArea()
-                + " sq. units, width: " + width
-                + " height: " + height + " units, color: " + color);
-    }
-
-    @Override
-    protected String getFigureName() {
-        return "Rectangle";
-    }
-
+    /* Wzór na pole Prostokąta a*b */
 }

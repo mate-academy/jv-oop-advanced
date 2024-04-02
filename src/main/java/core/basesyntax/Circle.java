@@ -1,27 +1,22 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private final double radius;
-
-    public Circle(Color color, double radius) {
-        super(color);
+    private int radius;
+    public Circle(int radius) {
         this.radius = radius;
     }
-
+    public Circle(int radius, String color) {
+        this.radius = radius;
+        super.color = color;
+    }
     @Override
-    public double getArea() {
-        return Math.PI * radius * radius;
+    public double getFigureArea() {
+        return Math.round(Math.PI * radius * radius);
     }
 
     @Override
-    public void draw() {
-        System.out.println("Figure: Circle, area : " + getArea()
-                + " sq. units, radius: " + radius + " units, color: " + color);
+    public String getFigureInfo() {
+        return "Figure: Circle, area: " + getFigureArea() + " sq. units, radius: " + radius + " units, color: " + super.color;
     }
-
-    @Override
-    protected String getFigureName() {
-        return "Circle";
-    }
-
+    /* Wzór na pole koła pi*r*r */
 }
