@@ -10,37 +10,35 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final Circle CIRCLE = new Circle("white", 10);
     private static final double BOUND = 200;
-
-    private double getRandomNumber() {
-        return new Random().nextDouble(BOUND);
-    }
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
+        double firstRandomNumber = random.nextDouble(BOUND);
+        double secondRandomNumber = random.nextDouble(BOUND);
+        double thirdRandomNumber = random.nextDouble(BOUND);
+        int index = random.nextInt(Figures.values().length);
         ColorSupplier color = new ColorSupplier();
-
-        int index = new Random().nextInt(Figures.values().length);
         Figure figure;
         switch (Figures.values()[index]) {
-            case CIRCLE -> figure = new Circle(color.getRandomColor(), getRandomNumber());
-            case ISOSCELES_Trapezoid -> figure =
-                    new IsoscelesTrapezoid(color.getRandomColor(), getRandomNumber(),
-                    getRandomNumber(), getRandomNumber());
+            case CIRCLE -> figure = new Circle(color.getRandomColor(), firstRandomNumber);
+            case ISOSCELES_TRAPEZOID -> figure =
+                    new IsoscelesTrapezoid(color.getRandomColor(), firstRandomNumber,
+                            secondRandomNumber, thirdRandomNumber);
             case RECTANGLE -> figure =
-                    new Rectangle(color.getRandomColor(), getRandomNumber(), getRandomNumber());
+                    new Rectangle(color.getRandomColor(), firstRandomNumber, secondRandomNumber);
             case RIGHT_TRIANGLE ->
                     figure = new RightTriangle(color.getRandomColor(),
-                            getRandomNumber(), getRandomNumber());
+                            firstRandomNumber, secondRandomNumber);
             case SQUARE -> figure =
-                    new Square(color.getRandomColor(), getRandomNumber());
-            default -> figure = CIRCLE;
+                    new Square(color.getRandomColor(), firstRandomNumber);
+            default -> figure = new Circle("white", 10);
         }
         return figure;
 
     }
 
     public Figure getDefaultFigure() {
-        return CIRCLE;
+        return new Circle("white", 10);
     }
 }

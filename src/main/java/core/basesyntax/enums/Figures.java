@@ -2,7 +2,7 @@ package core.basesyntax.enums;
 
 public enum Figures {
     CIRCLE,
-    ISOSCELES_Trapezoid,
+    ISOSCELES_TRAPEZOID,
     RECTANGLE,
     RIGHT_TRIANGLE,
     SQUARE

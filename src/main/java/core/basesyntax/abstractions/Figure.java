@@ -18,5 +18,3 @@ public abstract class Figure implements FigureDrawing, FigureArea {
         this.color = color;
     }
 }
-
-
