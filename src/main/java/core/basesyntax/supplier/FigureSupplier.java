@@ -10,10 +10,12 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int MAX_VALUE = 100;
+    public static final String DEFAULT_COLOR = "white";
+    public static final int DEFAULT_RADIUS = 10;
+    private ColorSupplier colorSupplier = new ColorSupplier();
+    private Random random = new Random();
 
     public Figure getRandomFigure() {
-        ColorSupplier colorSupplier = new ColorSupplier();
-        Random random = new Random();
         Figure figure;
 
         switch (random.nextInt(5)) {
@@ -44,7 +46,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        Circle circle = new Circle("white", 10);
+        Circle circle = new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
         return circle;
     }
 
