@@ -3,12 +3,12 @@ package core.basesyntax;
 import java.util.Random;
 
 public enum Color {
-    WHITE,
-    BLACK,
-    YELLOW,
-    BLUE,
-    RED,
-    PURPLE;
+    white,
+    black,
+    yellow,
+    blue,
+    red,
+    purple;
 
     private static final Color[] VALUES = values();
     private static final int SIZE = VALUES.length;
