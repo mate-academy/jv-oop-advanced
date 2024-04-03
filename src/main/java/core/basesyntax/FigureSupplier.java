@@ -10,7 +10,7 @@ class FigureSupplier {
     }
 
     // Method to generate figures with random properties
-    public Figure getRandomFigure() {
+    public Area getRandomFigure() {
         Random random = new Random();
         String color = colorSupplier.getRandomColor();
         int figureType = random.nextInt(5);
@@ -41,7 +41,7 @@ class FigureSupplier {
     }
 
     // Method to generate the default figure (white circle with radius 10)
-    public Figure getDefaultFigure() {
+    public Area getDefaultFigure() {
         return new Circle(10, "White");
     }
 }

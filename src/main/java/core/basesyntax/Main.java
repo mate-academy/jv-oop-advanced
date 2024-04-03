@@ -5,20 +5,20 @@ public class Main {
         ColorSupplier colorSupplier = new ColorSupplier();
         FigureSupplier figureSupplier = new FigureSupplier(colorSupplier);
 
-        Figure[] figures = new Figure[6]; // Array of 6 figures
+        Drawable[] figures = new Drawable[6]; // Array of 6 drawable figures
 
         // Generate the first half of figures with random properties
         for (int i = 0; i < 3; i++) {
-            figures[i] = figureSupplier.getRandomFigure();
+            figures[i] = (Drawable) figureSupplier.getRandomFigure();
         }
 
         // Generate the second half of figures with default properties
         for (int i = 3; i < 6; i++) {
-            figures[i] = figureSupplier.getDefaultFigure();
+            figures[i] = (Drawable) figureSupplier.getDefaultFigure();
         }
 
         // Display all figures
-        for (Figure figure : figures) {
+        for (Drawable figure : figures) {
             figure.draw();
         }
     }
