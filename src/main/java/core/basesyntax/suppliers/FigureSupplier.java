@@ -12,26 +12,27 @@ import java.util.Random;
 public class FigureSupplier {
     private static final double BOUND = 200;
     private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         double firstRandomNumber = random.nextDouble(BOUND);
         double secondRandomNumber = random.nextDouble(BOUND);
         double thirdRandomNumber = random.nextDouble(BOUND);
         int index = random.nextInt(Figures.values().length);
-        ColorSupplier color = new ColorSupplier();
+        String color = colorSupplier.getRandomColor();
         Figure figure;
         switch (Figures.values()[index]) {
-            case CIRCLE -> figure = new Circle(color.getRandomColor(), firstRandomNumber);
+            case CIRCLE -> figure = new Circle(color, firstRandomNumber);
             case ISOSCELES_TRAPEZOID -> figure =
-                    new IsoscelesTrapezoid(color.getRandomColor(), firstRandomNumber,
+                    new IsoscelesTrapezoid(color, firstRandomNumber,
                             secondRandomNumber, thirdRandomNumber);
             case RECTANGLE -> figure =
-                    new Rectangle(color.getRandomColor(), firstRandomNumber, secondRandomNumber);
+                    new Rectangle(color, firstRandomNumber, secondRandomNumber);
             case RIGHT_TRIANGLE ->
-                    figure = new RightTriangle(color.getRandomColor(),
+                    figure = new RightTriangle(color,
                             firstRandomNumber, secondRandomNumber);
             case SQUARE -> figure =
-                    new Square(color.getRandomColor(), firstRandomNumber);
+                    new Square(color, firstRandomNumber);
             default -> figure = new Circle("white", 10);
         }
         return figure;
