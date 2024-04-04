@@ -6,7 +6,7 @@ public class Circle extends Figure {
     private int radius;
 
     public Circle(String color, int radius) {
-        super(String.valueOf(color));
+        super(color);
         this.radius = radius;
     }
 

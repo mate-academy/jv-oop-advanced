@@ -3,34 +3,30 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int MAX_NUMBER = 100;
     private final Random random = new Random();
     private final ColorSupplier color = new ColorSupplier();
-    private final NumberSupplier number = new NumberSupplier();
 
     public Figure getRandomFigure() {
+        int number = random.nextInt(MAX_NUMBER);
         int figureType = random.nextInt(5);
 
         switch (figureType) {
             case 0:
-                return new Circle(color.getRandomColor(),
-                        (int) number.getRandomNumber());
+                return new Circle(color.getRandomColor(), number);
             case 1:
-                return new Square(color.getRandomColor(),
-                        (int) number.getRandomNumber());
+                return new Square(color.getRandomColor(), number);
             case 2:
-                return new Rectangle(color.getRandomColor(),
-                        (int) number.getRandomNumber(),
-                        (int) number.getRandomNumber());
+                int number2 = random.nextInt(MAX_NUMBER);
+                return new Rectangle(color.getRandomColor(), number, number2);
             case 3:
-                return new RightTriangle(color.getRandomColor(),
-                        (int) number.getRandomNumber(),
-                        (int) number.getRandomNumber());
+                int number3 = random.nextInt(MAX_NUMBER);
+                return new RightTriangle(color.getRandomColor(), number, number3);
             case 4:
-                return new IsoscelesTrapezoid(color.getRandomColor(),
-                        (int) number.getRandomNumber(),
-                        (int) number.getRandomNumber(),
-                        (int) number.getRandomNumber(),
-                        (int) number.getRandomNumber());
+                int lowBase = random.nextInt(MAX_NUMBER);
+                int side = random.nextInt(MAX_NUMBER);
+                int height = random.nextInt(MAX_NUMBER);
+                return new IsoscelesTrapezoid(color.getRandomColor(),number, lowBase, side, height);
             default:
                 return getDefaultFigure();
         }
