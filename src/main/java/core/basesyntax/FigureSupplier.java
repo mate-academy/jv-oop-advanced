@@ -3,6 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 class FigureSupplier {
+    public static final int FigureCount = 5;
+    private Random random = new Random();
     private ColorSupplier colorSupplier;
 
     public FigureSupplier(ColorSupplier colorSupplier) {
@@ -11,9 +13,8 @@ class FigureSupplier {
 
     // Method to generate figures with random properties
     public Area getRandomFigure() {
-        Random random = new Random();
         String color = colorSupplier.getRandomColor();
-        int figureType = random.nextInt(5);
+        int figureType = random.nextInt(FigureCount);
         // 0: Square, 1: Rectangle, 2: RightTriangle, 3: Circle, 4: IsoscelesTrapezoid
         switch (figureType) {
             case 0:
