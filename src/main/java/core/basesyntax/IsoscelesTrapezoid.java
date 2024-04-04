@@ -1,6 +1,8 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends AbstrFigure {
+import java.text.DecimalFormat;
+
+public class IsoscelesTrapezoid extends Figure {
     private int upperBase;
     private int lowerBase;
     private int height;
@@ -14,7 +16,10 @@ public class IsoscelesTrapezoid extends AbstrFigure {
 
     @Override
     public double getArea() {
-        return 0.5 * (upperBase + lowerBase) * height;
+        double area = 0.5 * (upperBase + lowerBase) * height;
+        DecimalFormat decimalFormat = new DecimalFormat("#.0");
+        String formattedArea = decimalFormat.format(area).replace(',', '.');
+        return Double.parseDouble(formattedArea);
     }
 
     @Override

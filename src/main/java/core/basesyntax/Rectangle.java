@@ -1,7 +1,8 @@
 package core.basesyntax;
 
-public class Rectangle extends AbstrFigure {
-    private final String figure = "rectangle";
+import java.text.DecimalFormat;
+
+public class Rectangle extends Figure {
     private int sideA;
     private int sideB;
 
@@ -13,7 +14,10 @@ public class Rectangle extends AbstrFigure {
 
     @Override
     public double getArea() {
-        return sideA * sideB;
+        double area = Math.PI * sideA * sideB;
+        DecimalFormat decimalFormat = new DecimalFormat("#.0");
+        String formattedArea = decimalFormat.format(area).replace(',', '.');
+        return Double.parseDouble(formattedArea);
     }
 
     @Override

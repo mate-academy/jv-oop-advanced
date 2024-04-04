@@ -29,20 +29,21 @@ public class FigureSupplier {
 
     public Figure getDefaultFigure() {
         int figureType = random.nextInt(FIGURE_NUMBER);
+        String color = "white";
 
         switch (figureType) {
             case 0:
-                return new Square("White", 10);
+                return new Square(color, 10);
             case 1:
-                return new IsoscelesTrapezoid("White", 10, 5, 5);
+                return new IsoscelesTrapezoid(color, 10, 5, 5);
             case 2:
-                return new Circle("White", 10);
+                return new Circle(color, 10);
             case 3:
-                return new RightTriangle("White", 10, 10);
+                return new RightTriangle(color, 10, 10);
             case 4:
-                return new Rectangle("White", 10, 5);
+                return new Rectangle(color, 10, 5);
             default:
-                return new Circle("White", 10);
+                return new Circle(color, 10);
         }
     }
 
