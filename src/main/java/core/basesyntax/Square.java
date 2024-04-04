@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.text.DecimalFormat;
-
 public class Square extends Figure {
     private int side;
 
@@ -12,10 +10,7 @@ public class Square extends Figure {
 
     @Override
     public double getArea() {
-        double area = side * side;
-        DecimalFormat decimalFormat = new DecimalFormat("#.0");
-        String formattedArea = decimalFormat.format(area).replace(',', '.');
-        return Double.parseDouble(formattedArea);
+        return side * side;
     }
 
     @Override

@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.text.DecimalFormat;
-
 public class Rectangle extends Figure {
     private int sideA;
     private int sideB;
@@ -14,10 +12,7 @@ public class Rectangle extends Figure {
 
     @Override
     public double getArea() {
-        double area = Math.PI * sideA * sideB;
-        DecimalFormat decimalFormat = new DecimalFormat("#.0");
-        String formattedArea = decimalFormat.format(area).replace(',', '.');
-        return Double.parseDouble(formattedArea);
+        return Math.PI * sideA * sideB;
     }
 
     @Override

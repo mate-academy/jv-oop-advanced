@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.text.DecimalFormat;
-
 public class Circle extends Figure {
     private int radius;
 
@@ -12,10 +10,7 @@ public class Circle extends Figure {
 
     @Override
     public double getArea() {
-        double area = Math.PI * radius * radius;
-        DecimalFormat decimalFormat = new DecimalFormat("#.0");
-        String formattedArea = decimalFormat.format(area).replace(',', '.');
-        return Double.parseDouble(formattedArea);
+        return Math.PI * radius * radius;
     }
 
     @Override

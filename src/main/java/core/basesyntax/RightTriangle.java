@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.text.DecimalFormat;
-
 public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
@@ -14,10 +12,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public double getArea() {
-        double area = 0.5 * firstLeg * secondLeg;
-        DecimalFormat decimalFormat = new DecimalFormat("#.0");
-        String formattedArea = decimalFormat.format(area).replace(',', '.');
-        return Double.parseDouble(formattedArea);
+        return 0.5 * firstLeg * secondLeg;
     }
 
     @Override
