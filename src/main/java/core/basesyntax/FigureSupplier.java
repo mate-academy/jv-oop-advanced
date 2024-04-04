@@ -8,7 +8,7 @@ public class FigureSupplier {
     private static final ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
 
-    public int generateRandomSide() {
+    private int generateRandomSide() {
         return random.nextInt(MAX_NUMBER) + 1;
     }
 
@@ -33,23 +33,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        int figureType = random.nextInt(FIGURE_NUMBER);
-        String color = "white";
-
-        switch (figureType) {
-            case 0:
-                return new Square(color, 10);
-            case 1:
-                return new IsoscelesTrapezoid(color, 10, 5, 5);
-            case 2:
-                return new Circle(color, 10);
-            case 3:
-                return new RightTriangle(color, 10, 10);
-            case 4:
-                return new Rectangle(color, 10, 5);
-            default:
-                return new Circle(color, 10);
-        }
+        return new Circle("white", 10);
     }
 
     private Figure createRandomSquare(String color) {
