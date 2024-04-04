@@ -1,25 +1,26 @@
 package core.basesyntax;
 
-public class Square extends Figure implements Obtainable, Drawable{
+class Square extends Figure {
+    private final int side;
 
-    private static final String name = "Square";
-    private double sideLength;
-    private double area;
-
-    public Square(Color color, double sideLength, double area, String name) {
-        super(color, name);
-        this.sideLength = sideLength;
+    public Square(int side, String color) {
+        super(color);
+        this.side = side;
     }
 
     @Override
-    public void obtain() {
-        area = sideLength * sideLength;
+    public String getColor() {
+        return color;
+    }
+
+    @Override
+    public double obtain() {
+        return side * side;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + name
-                + ", Area " + area
-                + ", Color: " + getColor());
+        System.out.println("Figure: square, area: " + obtain() + " sq. units, side: "
+                + side + " units, color: " + color);
     }
 }

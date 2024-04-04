@@ -1,28 +1,31 @@
 package core.basesyntax;
 
-public abstract class RightTriangle extends Figure implements Obtainable, Drawable {
+class RightTriangle extends Figure {
+    private final int firstLeg;
+    private final int secondLeg;
 
-    private static final String name = "RightTriangle";
-    private double firstLeg;
-    private double secondLeg;
-    private double area;
-
-    public RightTriangle(Color color, double firstLeg, double secondLeg, double area, String name) {
-        super(color, name);
+    public RightTriangle(int firstLeg, int secondLeg, String color) {
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        this.area = area;
     }
 
     @Override
-    public void obtain() {
-        area = (firstLeg * secondLeg) / 2;
+    public String getColor() {
+        return color;
+    }
+
+    @Override
+    public double obtain() {
+        return 0.5 * firstLeg * secondLeg;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + name
-                + ", Area: " + area
-                + " Color: " + getColor());
+        System.out.println("Figure: right triangle, area: " + obtain()
+                + " sq. units, firstLeg: "
+                + firstLeg
+                + " units, secondLeg: " + secondLeg
+                + " units, color: " + color);
     }
 }

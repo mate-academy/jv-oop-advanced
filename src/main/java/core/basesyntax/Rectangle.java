@@ -1,29 +1,28 @@
 package core.basesyntax;
 
-public abstract class Rectangle extends Figure implements Obtainable, Drawable {
+class Rectangle extends Figure {
+    private final int length;
+    private final int width;
 
-    private static final String name = "Rectangle";
-    private double length;
-    private double width;
-    private double area;
-
-    public Rectangle(Color color, double length, double width, double area, String name) {
-        super(color, name);
+    public Rectangle(int length, int width, String color) {
+        super(color);
         this.length = length;
         this.width = width;
-        this.area = area;
     }
 
     @Override
-    public void obtain() {
-        area = length * width;
+    public String getColor() {
+        return color;
+    }
 
+    @Override
+    public double obtain() {
+        return length * width;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + name
-                + ", Area " + area
-                + ", Color: " + getColor());
+        System.out.println("Figure: rectangle, area: " + obtain() + " sq. units, length: " + length
+                + " units, width: " + width + " units, color: " + color);
     }
 }

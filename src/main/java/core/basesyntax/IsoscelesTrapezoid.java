@@ -1,31 +1,31 @@
 package core.basesyntax;
 
-public abstract class IsoscelesTrapezoid extends Figure implements Obtainable, Drawable {
+class IsoscelesTrapezoid extends Figure {
+    private final int base1;
+    private final int base2;
+    private final int height;
 
-    private static final String name = "IsoscelesTrapezoid";
-    private double topBase;
-    private double bottomBase;
-    private double height;
-    private double area;
-
-    public IsoscelesTrapezoid(Color color, double topBase, double bottomBase, double height, double area, String name) {
-        super(color, name);
-        this.topBase = topBase;
-        this.bottomBase = bottomBase;
+    public IsoscelesTrapezoid(int base1, int base2, int height, String color) {
+        super(color);
+        this.base1 = base1;
+        this.base2 = base2;
         this.height = height;
-        this.area = area;
     }
 
     @Override
-    public void obtain() {
-        area = ((topBase + bottomBase) / 2) * height;
+    public String getColor() {
+        return color;
+    }
+
+    @Override
+    public double obtain() {
+        return 0.5 * (base1 + base2) * height;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + name
-                + ", Area: " + area
-                + " Color: " + getColor());
+        System.out.println("Figure: isosceles trapezoid, area: " + obtain() + " sq. units, base1: "
+                + base1 + " units, base2: " + base2 + " units, height: "
+                + height + " units, color: " + color);
     }
-
 }

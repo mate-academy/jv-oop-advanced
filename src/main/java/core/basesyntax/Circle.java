@@ -1,25 +1,27 @@
 package core.basesyntax;
 
-public abstract class Circle extends Figure implements Obtainable, Drawable {
-    private static final String name = "Circle";
-    private double radius;
-    private double area;
+public class Circle extends Figure {
+    private int radius;
 
-    public Circle(Color color, double radius, double area, String name) {
-        super(color, name);
+    public Circle(int radius, String color) {
+        super(color);
         this.radius = radius;
-        this.area = area;
     }
 
-   @Override
-   public void obtain(){
-        area = radius * radius * Math.PI;
-   }
+    @Override
+    public String getColor() {
+        return color;
+    }
 
-   @Override
-    public void draw(){
-       System.out.println("Figure: " + name
-               + ", Area: " + area
-               + " Color: " + getColor());
-   }
+    @Override
+    public double obtain() {
+        return Math.PI * radius * radius;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Figure: circle, area: " + obtain()
+                + " sq. units, radius: " + radius
+                + " units, color: " + color);
+    }
 }
