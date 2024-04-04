@@ -1,12 +1,14 @@
 package core.basesyntax;
 
-public abstract class Figure implements FigureArea {
-    protected String color;
+public abstract class Figure implements CalculatableArea {
+    protected Color color;
+    private static final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure() {
-        ColorSupplier color = new ColorSupplier();
-        this.color = color.getRandomColor();
+        this.color = Color.valueOf(colorSupplier.getRandomColor());
     }
 
-    abstract String getFigureInfo();
+    public Figure(Color color) {
+        this.color = color;
+    }
 }

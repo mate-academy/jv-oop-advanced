@@ -3,28 +3,31 @@ package core.basesyntax;
 import static core.basesyntax.ColorSupplier.RANDOM;
 
 public class FigureSupplier {
+    private static final int FIGURE_COUNT = 5;
+    private static final int MIN_LENGTH = 2;
+    private static final int MAX_LENGTH = 10;
 
     public Figure getRandomFigure() {
-        int ran = RANDOM.nextInt(5);
-        int a = RANDOM.nextInt(10) + 2;
-        int b = RANDOM.nextInt(10) + 2;
-        int c = RANDOM.nextInt(10) + 2;
+        int ran = RANDOM.nextInt(FIGURE_COUNT);
+        int a = RANDOM.nextInt(MAX_LENGTH - MIN_LENGTH + 1) + MIN_LENGTH;
+        int b = RANDOM.nextInt(MAX_LENGTH - MIN_LENGTH + 1) + MIN_LENGTH;
+        int c = RANDOM.nextInt(MAX_LENGTH - MIN_LENGTH + 1) + MIN_LENGTH;
         switch (ran) {
             case (0):
                 return new Square(a);
             case (1):
-                return new Rectangle(a,b);
+                return new Rectangle(a, b);
             case (2):
-                return new RightTriangle(a,b);
+                return new RightTriangle(a, b);
             case (3):
-                return new Circle(a);
+                return new Circle(a, Color.WHITE);
             default:
-                return new IsoscelesTrapezoid(a,b,c);
+                return new IsoscelesTrapezoid(a, b, c);
         }
 
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, "white");
+        return new Circle(10, Color.WHITE);
     }
 }

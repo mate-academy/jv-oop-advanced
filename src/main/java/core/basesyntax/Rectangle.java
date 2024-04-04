@@ -9,20 +9,20 @@ public class Rectangle extends Figure {
         this.side = side;
     }
 
-    public Rectangle(int base, int side, String color) {
+    public Rectangle(int base, int side, Color color) {
         this.base = base;
         this.side = side;
         super.color = color;
     }
 
     @Override
-    public double getFigureArea() {
+    public double getArea() {
         return base * side;
     }
 
     @Override
     public String getFigureInfo() {
-        return "Figure: Rectangle, area: " + getFigureArea() + " sq. units, base: " + base
+        return "Figure: Rectangle, area: " + getArea() + " sq. units, base: " + base
                 + " side " + side + " units, color: " + super.color;
     }
     /* Wzór na pole Prostokąta a*b */

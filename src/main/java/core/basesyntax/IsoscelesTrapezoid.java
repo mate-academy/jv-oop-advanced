@@ -11,7 +11,7 @@ public class IsoscelesTrapezoid extends Figure {
         this.heigh = heigh;
     }
 
-    public IsoscelesTrapezoid(int firstBase, int secondBase, int heigh, String color) {
+    public IsoscelesTrapezoid(int firstBase, int secondBase, int heigh, Color color) {
         this.firstBase = firstBase;
         this.secondBase = secondBase;
         this.heigh = heigh;
@@ -19,13 +19,13 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double getFigureArea() {
+    public double getArea() {
         return (firstBase * secondBase) * heigh / 2;
     }
 
     @Override
     public String getFigureInfo() {
-        return "Figure: IsoscelesTrapezoid, area: " + getFigureArea() + " sq. units, firstBase: "
+        return "Figure: IsoscelesTrapezoid, area: " + getArea() + " sq. units, firstBase: "
                 + firstBase + " secondBase "
                 + secondBase + " heigh " + heigh + " units, color: " + super.color;
     }
