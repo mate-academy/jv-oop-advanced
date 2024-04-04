@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public abstract class Figure implements Drawable, AreaCalculator {
-    protected String color;
+    private String color;
 
     public Figure(String color) {
         this.color = color;
@@ -11,6 +11,10 @@ public abstract class Figure implements Drawable, AreaCalculator {
     public void draw() {
         System.out.println("Figure: " + this.getClass().getSimpleName().toLowerCase()
                 + ", area: " + getArea()
-                + " sq. units, color: " + color);
+                + " sq. units, color: " + getColor());
+    }
+
+    public String getColor() {
+        return color;
     }
 }

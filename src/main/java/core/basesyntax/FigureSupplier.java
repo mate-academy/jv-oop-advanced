@@ -3,16 +3,15 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final int FIGURE_COUNT = 5;
-    public static final int MAX_RANDOM_VALUE = 10000;
-    public static final double VALUE_SCALE = 100.0;
-    public static final String DEFAULT_COLOR = "Black";
-    public static final double DEFAULT_SIZE = 1.0;
-    public static final String DEFAULT_SQUARE_COLOR = "White";
-    public static final double DEFAULT_SQUARE_SIZE = 10.0;
-
     private static final Random random = new Random();
     private static final ColorSupplier colorSupplier = new ColorSupplier();
+    private static final int FIGURE_COUNT = 5;
+    private static final int MAX_RANDOM_VALUE = 10000;
+    private static final int VALUE_SCALE = 100;
+    private static final String DEFAULT_COLOR = "Black";
+    private static final double DEFAULT_SIZE = 1.0;
+    private static final String DEFAULT_SQUARE_COLOR = "White";
+    private static final double DEFAULT_SQUARE_SIZE = 10.0;
 
     public Figure getRandomFigure() {
         switch (random.nextInt(FIGURE_COUNT)) {
