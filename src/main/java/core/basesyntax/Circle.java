@@ -2,16 +2,13 @@ package core.basesyntax;
 
 public class Circle extends Figure {
 
-    private final String nameFigure = "Circle";
     private double radius;
 
-    public Circle(String color, double radius) {
-        super(color);
-        this.radius = radius;
-    }
+    private String color;
 
-    public String getNameFigure() {
-        return nameFigure;
+    public Circle(String color, double radius) {
+        this.radius = radius;
+        this.color = color;
     }
 
     public double getRadius() {
@@ -22,14 +19,22 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
     @Override
-    public double area() {
+    public double getArea() {
         return Math.PI * Math.pow(getRadius(), 2);
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getNameFigure() + ", area: " + Math.round(area()
+        System.out.println("Figure: " + FigureName.Circle.name() + ", area: " + Math.round(getArea()
                 * 10.0) / 10.0 + " sq. units, radius: " + Math.round(getRadius() * 10.0)
                 / 10.0 + " units, color: " + getColor() + ".");
     }

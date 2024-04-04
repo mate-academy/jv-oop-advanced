@@ -1,16 +1,21 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    private final String nameFigure = "Square";
     private double leg;
 
+    private String color;
+
     public Square(String color, double leg) {
-        super(color);
         this.leg = leg;
+        this.color = color;
     }
 
-    public String getNameFigure() {
-        return nameFigure;
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public double getLeg() {
@@ -22,14 +27,15 @@ public class Square extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return Math.pow(getLeg(), 2);
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + getNameFigure() + ", area: " + Math.round(area()
-                * 10.0) / 10.0 + " sq. units, leg: " + Math.round(getLeg()
-                * 10.0) / 10.0 + " units, color: " + getColor() + ".");
+        System.out.println("Figure: " + FigureName.Square.name() + ", area: "
+                + Math.round(getArea() * 10.0) / 10.0 + " sq. units, leg: "
+                + Math.round(getLeg() * 10.0) / 10.0 + " units, color: "
+                + getColor() + ".");
     }
 }
