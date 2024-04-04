@@ -7,16 +7,14 @@ public class Main {
 
         Figure[] figures = new Figure[6];
 
-        for (int i = 0; i < figures.length; i++) {
+        for (int i = 0; i < 6; i++) {
             Figure figure;
             if (i < 3) {
                 figure = (Figure) figureSupplier.getRandomFigure();
-                figure.draw();
             } else {
                 figure = (Figure) figureSupplier.getDefaultFigure();
-                figure.draw();
             }
-            figures[i] = (Figure) figure;
+            figure.draw();
         }
     }
 }
