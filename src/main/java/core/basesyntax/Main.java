@@ -7,10 +7,9 @@ public class Main {
 
         for (int i = 0; i < figures.length / 2; i++) {
             figures[i] = figureSupplier.getRandomFigure();
-        }
-
-        for (int i = figures.length / 2; i < figures.length; i++) {
-            figures[i] = figureSupplier.getDefaultFigure();
+            for (int j = figures.length / 2; j < figures.length; j++) {
+                figures[j] = figureSupplier.getDefaultFigure();
+            }
         }
 
         for (Figure figure: figures) {
