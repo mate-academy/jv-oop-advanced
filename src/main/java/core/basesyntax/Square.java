@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public class Square extends Figure implements Obtainable, Drawable{
+
     private static final String name = "Square";
     private double sideLength;
     private double area;

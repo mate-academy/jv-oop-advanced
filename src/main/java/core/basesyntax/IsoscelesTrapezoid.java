@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public abstract class IsoscelesTrapezoid extends Figure implements Obtainable, Drawable {
+
     private static final String name = "IsoscelesTrapezoid";
     private double topBase;
     private double bottomBase;

@@ -9,6 +9,7 @@ public class FigureSupplier {
     private Random random;
     private ColorSupplier colorSupplier;
 
+
     public FigureSupplier(Random random, ColorSupplier colorSupplier) {
         this.random = random;
         this.colorSupplier = colorSupplier;

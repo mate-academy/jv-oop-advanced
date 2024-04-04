@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public abstract class RightTriangle extends Figure implements Obtainable, Drawable {
+
     private static final String name = "RightTriangle";
     private double firstLeg;
     private double secondLeg;

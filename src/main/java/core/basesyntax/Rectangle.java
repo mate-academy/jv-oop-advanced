@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public abstract class Rectangle extends Figure implements Obtainable, Drawable {
+
     private static final String name = "Rectangle";
     private double length;
     private double width;

@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public class Figure implements Obtainable, Drawable{
+
     private Color color;
     private String name;
 
