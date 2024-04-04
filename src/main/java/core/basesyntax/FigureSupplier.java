@@ -11,11 +11,9 @@ class FigureSupplier {
         this.colorSupplier = colorSupplier;
     }
 
-    // Method to generate figures with random properties
     public Area getRandomFigure() {
         String color = colorSupplier.getRandomColor();
         int figureType = random.nextInt(FigureCount);
-        // 0: Square, 1: Rectangle, 2: RightTriangle, 3: Circle, 4: IsoscelesTrapezoid
         switch (figureType) {
             case 0:
                 double side = random.nextDouble() * 10 + 1;
@@ -41,8 +39,7 @@ class FigureSupplier {
         }
     }
 
-    // Method to generate the default figure (white circle with radius 10)
-    public Area getDefaultFigure() {
+    public final Area getDefaultFigure() {
         return new Circle(10, "White");
     }
 }

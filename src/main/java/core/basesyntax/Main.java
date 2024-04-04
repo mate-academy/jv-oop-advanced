@@ -5,21 +5,18 @@ public class Main {
         ColorSupplier colorSupplier = new ColorSupplier();
         FigureSupplier figureSupplier = new FigureSupplier(colorSupplier);
 
-        Drawable[] figures = new Drawable[6]; // Array of 6 drawable figures
+        Figure[] figures = new Figure[6];
 
-        // Generate the first half of figures with random properties
-        for (int i = 0; i < 3; i++) {
-            figures[i] = (Drawable) figureSupplier.getRandomFigure();
-        }
-
-        // Generate the second half of figures with default properties
-        for (int i = 3; i < 6; i++) {
-            figures[i] = (Drawable) figureSupplier.getDefaultFigure();
-        }
-
-        // Display all figures
-        for (Drawable figure : figures) {
-            figure.draw();
+        for (int i = 0; i < figures.length; i++) {
+            Figure figure;
+            if (i < 3) {
+                figure = (Figure) figureSupplier.getRandomFigure();
+                figure.draw();
+            } else {
+                figure = (Figure) figureSupplier.getDefaultFigure();
+                figure.draw();
+            }
+            figures[i] = (Figure) figure;
         }
     }
 }
