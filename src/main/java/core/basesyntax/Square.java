@@ -3,6 +3,7 @@ package core.basesyntax;
 public class Square extends AbstrFigure {
     private final String figure = "square";
     private int side;
+
     public Square(String color, int side) {
         super(color);
         this.side = side;

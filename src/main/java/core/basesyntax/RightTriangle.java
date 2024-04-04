@@ -2,7 +2,7 @@ package core.basesyntax;
 
 public class RightTriangle extends AbstrFigure {
     private final String figure = "right triangle";
-    private  int firstLeg;
+    private int firstLeg;
     private int secondLeg;
 
     public RightTriangle(String color, int firstLeg, int secondLeg) {

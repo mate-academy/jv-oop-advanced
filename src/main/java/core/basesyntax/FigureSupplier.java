@@ -3,14 +3,14 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-private static final int FIGURE_NUMBER = 5;
-private static final int MAX_NUMBER = 10;
-Random random = new Random();
+    private static final int FIGURE_NUMBER = 5;
+    private static final int MAX_NUMBER = 10;
+    private Random random = new Random();
 
     public Figure getRandomFigure() {
-        int FigureType = random.nextInt(FIGURE_NUMBER);
+        int figureType = random.nextInt(FIGURE_NUMBER);
 
-        switch (FigureType) {
+        switch (figureType) {
             case 0:
                 return createRandomSquare();
             case 1:
@@ -27,9 +27,9 @@ Random random = new Random();
     }
 
     public Figure getDefaultFigure() {
-        int FigureType = random.nextInt(FIGURE_NUMBER);
+        int figureType = random.nextInt(FIGURE_NUMBER);
 
-        switch (FigureType) {
+        switch (figureType) {
             case 0:
                 return new Square("White", 10);
             case 1:
@@ -51,7 +51,7 @@ Random random = new Random();
         return new Square(color, side);
     }
 
-    private  Figure createRandomIsoscelesTrapezoid() {
+    private Figure createRandomIsoscelesTrapezoid() {
         String color = ColorSupplier.getRandomColor();
         int upperBase = random.nextInt(MAX_NUMBER) + 1;
         int lowerBase = random.nextInt(MAX_NUMBER) + 1;

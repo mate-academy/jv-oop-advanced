@@ -2,7 +2,7 @@ package core.basesyntax;
 
 public class Circle extends AbstrFigure {
     private final String figure = "circle";
-    private  int radius;
+    private int radius;
 
     public Circle(String color, int radius) {
         super(color);

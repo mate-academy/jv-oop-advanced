@@ -4,6 +4,7 @@ public class Rectangle extends AbstrFigure {
     private final String figure = "rectangle";
     private int sideA;
     private int sideB;
+
     public Rectangle(String color, int sideA, int sideB) {
         super(color);
         this.sideA = sideA;
