@@ -1,7 +1,13 @@
 package core.basesyntax;
 
-public interface Figure {
-    double getArea();
-    
-    void draw();
+public abstract class Figure implements Drawable {
+    protected String color;
+
+    public Figure(String color) {
+        this.color = color;
+    }
+
+    public String getColor() {
+        return color;
+    }
 }
