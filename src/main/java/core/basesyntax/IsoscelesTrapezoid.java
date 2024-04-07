@@ -7,9 +7,6 @@ class IsoscelesTrapezoid extends Figure {
 
     public IsoscelesTrapezoid(double topBase, double bottomBase, double height, Color color) {
         super(color);
-        if (topBase <= 0 || bottomBase <= 0 || height <= 0) {
-            throw new IllegalArgumentException("Dimensions must be positive.");
-        }
         this.topBase = topBase;
         this.bottomBase = bottomBase;
         this.height = height;
