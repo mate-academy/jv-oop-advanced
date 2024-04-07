@@ -4,14 +4,14 @@ class Rectangle extends Figure {
     private final int length;
     private final int width;
 
-    public Rectangle(int length, int width, String color) {
+    public Rectangle(int length, int width, Color color) {
         super(color);
         this.length = length;
         this.width = width;
     }
 
     @Override
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 

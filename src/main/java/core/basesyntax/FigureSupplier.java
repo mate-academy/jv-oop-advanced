@@ -3,9 +3,9 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int DEFAULT_RADIUS = 8;
-    private static final String DEFAULT_COLOR = "Black";
-    private static final int MAX_SIDE_SIZE = 29;
+    private static final int DEFAULT_RADIUS = 10;
+    private static final Color DEFAULT_COLOR = Color.WHITE;
+    private static final int MAX_SIDE_SIZE = 40;
 
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();

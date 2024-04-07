@@ -3,13 +3,13 @@ package core.basesyntax;
 class Square extends Figure {
     private final int side;
 
-    public Square(int side, String color) {
+    public Square(int side, Color color) {
         super(color);
         this.side = side;
     }
 
     @Override
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 
