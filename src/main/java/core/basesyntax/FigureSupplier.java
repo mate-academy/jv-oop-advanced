@@ -9,7 +9,9 @@ public class FigureSupplier {
         if (index == 0) {
             figure = new Circle(new Random().nextInt());
         } else if (index == 1) {
-            figure = new IsoscelesTrapezoid(new Random().nextInt(), new Random().nextInt(), new Random().nextInt());
+            figure = new IsoscelesTrapezoid(new Random().nextInt(),
+                    new Random().nextInt(),
+                    new Random().nextInt());
         } else if (index == 2) {
             figure = new Rectangle(new Random().nextInt(), new Random().nextInt());
         } else if (index == 3) {
