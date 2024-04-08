@@ -5,6 +5,12 @@ public class IsoscelesTrapezoid extends Figure {
     private int secondParallelSide;
     private int height;
 
+    public IsoscelesTrapezoid(int firstLeg, int secondParallelSide, int height) {
+        this.firstParallelSide = firstLeg;
+        this.secondParallelSide = secondParallelSide;
+        this.height = height;
+    }
+
     public int getFirstParallelSide() {
         return firstParallelSide;
     }
@@ -29,12 +35,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.height = height;
     }
 
-    public IsoscelesTrapezoid(int firstLeg, int secondParallelSide, int height) {
-        this.firstParallelSide = firstLeg;
-        this.secondParallelSide = secondParallelSide;
-        this.height = height;
-    }
-
     @Override
     double calculateArea() {
         return (this.firstParallelSide + this.secondParallelSide) * 0.5 * this.height;
@@ -42,7 +42,8 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     void draw() {
-        System.out.println("Figure: trapezoid, area: " + calculateArea() + " sq. units, firstParallelSide: "
+        System.out.println("Figure: trapezoid, area: " + calculateArea()
+                + " sq. units, firstParallelSide: "
                 + this.firstParallelSide + " units, secondParallelSide: " + this.secondParallelSide
                 + " units, height: " + this.height + " units, color: " + this.getColor());
     }
