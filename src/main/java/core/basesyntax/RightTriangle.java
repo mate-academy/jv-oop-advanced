@@ -34,6 +34,6 @@ public class RightTriangle extends Figure {
     void draw() {
         System.out.println("Figure: triangle, area: " + calculateArea() + " sq. units, firstLeg: "
                 + this.firstLeg + " units, secondLeg: " + this.secondLeg
-                + " units, color: " + this.getColor());
+                + " units, color: " + super.getColor());
     }
 }
