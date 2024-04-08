@@ -68,7 +68,7 @@ public class StructureTest {
   private void checkFigureSuperclassExistence(Class clazz) {
     Class superclass = clazz.getSuperclass();
     String superclassSimpleName = superclass.getSimpleName();
-    if (superclassSimpleName.equals("Object")) {
+    if (superclassSimpleName.equals("AbstractFigure")) {
       Assert.fail("Class " + clazz.getSimpleName()
               + " should have some parent class with common state for all figures - color");
     }

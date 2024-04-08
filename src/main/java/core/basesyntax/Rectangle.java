@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure {
+public class Rectangle extends AbstractFigure {
     private int length;
     private int width;
 
@@ -26,12 +26,12 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    double calculateArea() {
+    public double calculateArea() {
         return this.length * this.width;
     }
 
     @Override
-    void draw() {
+    public void draw() {
         System.out.println("Figure: rectangle, area: " + calculateArea() + " sq. units, length: "
                 + this.length + " units, width: " + this.width + " units, color: "
                 + super.getColor());

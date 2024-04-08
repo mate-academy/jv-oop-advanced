@@ -3,14 +3,13 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public Figure getRandomFigure() {
-        Figure figure;
+    public AbstractFigure getRandomFigure() {
+        AbstractFigure figure;
         int index = new Random().nextInt(Figures.values().length);
         if (index == 0) {
             figure = new Circle(new Random().nextInt());
         } else if (index == 1) {
-            figure = new IsoscelesTrapezoid(new Random().nextInt(), new Random().nextInt(),
-                    new Random().nextInt());
+            figure = new IsoscelesTrapezoid(new Random().nextInt(), new Random().nextInt(), new Random().nextInt());
         } else if (index == 2) {
             figure = new Rectangle(new Random().nextInt(), new Random().nextInt());
         } else if (index == 3) {
@@ -22,9 +21,8 @@ public class FigureSupplier {
         return figure;
     }
 
-    public Figure getDefaultFigure() {
-        Figure figure = new Circle(new Random().nextInt());
-        figure.setColor(Color.white);
+    public AbstractFigure getDefaultFigure() {
+        AbstractFigure figure = new Circle(new Random().nextInt());
         return figure;
     }
 }
