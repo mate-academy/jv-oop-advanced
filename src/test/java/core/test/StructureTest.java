@@ -19,7 +19,7 @@ public class StructureTest {
       .of("Circle", "Square", "IsoscelesTrapezoid", "Rectangle", "RightTriangle");
   private static List<Class> allClasses = new ArrayList<>();
 
-  @BeforeClass
+  @BeforeClass6
   public static void init() {
     try {
       allClasses = getClasses("core.basesyntax");
@@ -68,7 +68,7 @@ public class StructureTest {
   private void checkFigureSuperclassExistence(Class clazz) {
     Class superclass = clazz.getSuperclass();
     String superclassSimpleName = superclass.getSimpleName();
-    if (superclassSimpleName.equals("AbstractFigure")) {
+    if (superclassSimpleName.equals("Object")) {
       Assert.fail("Class " + clazz.getSimpleName()
               + " should have some parent class with common state for all figures - color");
     }

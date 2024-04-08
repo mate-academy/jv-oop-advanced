@@ -3,8 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public AbstractFigure getRandomFigure() {
-        AbstractFigure figure;
+    public Figure getRandomFigure() {
+        Figure figure;
         int index = new Random().nextInt(Figures.values().length);
         if (index == 0) {
             figure = new Circle(new Random().nextInt());
@@ -23,8 +23,8 @@ public class FigureSupplier {
         return figure;
     }
 
-    public AbstractFigure getDefaultFigure() {
-        AbstractFigure figure = new Circle(new Random().nextInt());
+    public Figure getDefaultFigure() {
+        Figure figure = new Circle(new Random().nextInt());
         return figure;
     }
 }
