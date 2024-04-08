@@ -19,7 +19,7 @@ public class StructureTest {
       .of("Circle", "Square", "IsoscelesTrapezoid", "Rectangle", "RightTriangle");
   private static List<Class> allClasses = new ArrayList<>();
 
-  @BeforeClass6
+  @BeforeClass
   public static void init() {
     try {
       allClasses = getClasses("core.basesyntax");
