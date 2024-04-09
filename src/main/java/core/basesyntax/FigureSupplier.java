@@ -16,7 +16,8 @@ public class FigureSupplier {
             case 1:
                 return new Rectangle(random.nextInt(10) + 1, random.nextInt(10) + 1, randomColor);
             case 2:
-                return new RightTriangle(random.nextInt(10) + 1, random.nextInt(10) + 1, randomColor);
+                return new RightTriangle(random.nextInt(10) + 1,
+                        random.nextInt(10) + 1, randomColor);
             case 3:
                 return new Circle(random.nextInt(10) + 1, randomColor);
             default:

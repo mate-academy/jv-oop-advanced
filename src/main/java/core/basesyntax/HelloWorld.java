@@ -6,7 +6,8 @@ public class HelloWorld {
         Figure[] figures = new Figure[arraySize];
 
         for (int i = 0; i < arraySize; i++) {
-            figures[i] = i < arraySize / 2 ? FigureSupplier.getRandomFigure() : FigureSupplier.getDefaultFigure();
+            figures[i] = i < arraySize / 2 ? FigureSupplier.getRandomFigure()
+                    : FigureSupplier.getDefaultFigure();
         }
 
         for (Figure figure : figures) {
