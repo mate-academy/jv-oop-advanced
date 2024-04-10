@@ -5,7 +5,7 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int MAX_NUMBER = 100;
     private static final int FIGURE_NUMBER = 5;
-    private static final Random random = new Random();
+    private final Random random = new Random();
     private final ColorSupplier color = new ColorSupplier();
 
     public Figure getRandomFigure() {
@@ -25,10 +25,10 @@ public class FigureSupplier {
                 return new RightTriangle(color.getRandomColor(), number, number3);
             case 4:
                 int lowBase = random.nextInt(MAX_NUMBER);
-                int side = random.nextInt(MAX_NUMBER);
+                int topBase = random.nextInt(MAX_NUMBER);
                 int height = random.nextInt(MAX_NUMBER);
                 return new IsoscelesTrapezoid(color.getRandomColor(),
-                        number, lowBase, side, height);
+                        topBase, lowBase, height);
             default:
                 return getDefaultFigure();
         }
