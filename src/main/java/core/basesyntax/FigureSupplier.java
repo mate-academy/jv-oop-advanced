@@ -3,30 +3,38 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final Random random = new Random();
-    private static final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public static Figure getRandomFigure() {
+    private static int FIGURES_COUNT = 5;
+    private static int DEFAULT_CIRCLE_RADIUS = 10;
+    private static String DEFAULT_CIRCLE_COLOR = "white";
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+
+    public Figure getRandomFigure() {
         String randomColor = colorSupplier.getRandomColor();
-        int choice = random.nextInt(5);
+        int choice = random.nextInt(FIGURES_COUNT);
 
         switch (choice) {
             case 0:
-                return new Square(random.nextInt(10) + 1, randomColor);
+                return new Square(getRandomSide(), randomColor);
             case 1:
-                return new Rectangle(random.nextInt(10) + 1, random.nextInt(10) + 1, randomColor);
+                return new Rectangle(getRandomSide(), getRandomSide(), randomColor);
             case 2:
-                return new RightTriangle(random.nextInt(10) + 1,
-                        random.nextInt(10) + 1, randomColor);
+                return new RightTriangle(getRandomSide(), getRandomSide(), randomColor);
             case 3:
-                return new Circle(random.nextInt(10) + 1, randomColor);
+                return new Circle(getRandomSide(), randomColor);
+            case 4:
             default:
-                return new IsoscelesTrapezoid(random.nextInt(10) + 1, random.nextInt(10) + 1,
-                        random.nextInt(10) + 1, randomColor);
+                return new IsoscelesTrapezoid(getRandomSide(), getRandomSide(),
+                        getRandomSide(), randomColor);
         }
     }
 
-    public static Figure getDefaultFigure() {
-        return new Circle(10, "white");
+    private int getRandomSide() {
+        return random.nextInt(10) + 1;
+    }
+
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_CIRCLE_RADIUS, DEFAULT_CIRCLE_COLOR);
     }
 }

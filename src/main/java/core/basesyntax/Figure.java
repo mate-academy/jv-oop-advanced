@@ -7,7 +7,7 @@ public abstract class Figure implements Drawable {
         this.color = color;
     }
 
-    public String getColor() {
+    private String getColor() {
         return color;
     }
 }
