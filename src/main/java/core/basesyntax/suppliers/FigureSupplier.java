@@ -11,10 +11,12 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_GEOMETRIC_PROPERTY = 10;
+    private static final int DEFAULT_RADIUS = 10;
+    private static final int FIGURE_COUNT = 5;
     private Random random = new Random();
 
     public Figure getRandomFigure() {
-        int value = random.nextInt(1, 6);
+        int value = random.nextInt(FIGURE_COUNT);
         return switch (value) {
             case 1 -> new Circle(randomDouble(1, MAX_GEOMETRIC_PROPERTY),
                     ColorSupplier.getRandomColor());
@@ -39,7 +41,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(MAX_GEOMETRIC_PROPERTY, Color.values()[0].toString());
+        return new Circle(DEFAULT_RADIUS, Color.WHITE.name());
     }
 
     private double randomDouble(double min, double max) {

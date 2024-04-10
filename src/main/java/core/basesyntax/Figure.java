@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements FigureAreaObtain, FigureInfoPrinter {
+public abstract class Figure implements AreaObtain, InfoPrinter {
     private String color;
 
     public Figure(String color) {
