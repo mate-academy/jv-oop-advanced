@@ -1,21 +1,19 @@
 package core.basesyntax;
 
-public abstract class Figure implements FigureBehavior {
+public abstract class Figure implements FigureAreaObtain, FigureInfoPrinter {
     private String color;
 
     public Figure(String color) {
         this.color = color;
     }
 
-    public Figure() {
-    }
-
-    public String draw() {
-        return "Figure: " + getClass().getSimpleName()
+    @Override
+    public void draw() {
+        System.out.println("Figure: " + getClass().getSimpleName()
                 + "\n\tArea: "
                 + String.format("%.2f", obtainArea())
                 + " sq. units\n\tColor: "
-                + getColor();
+                + getColor());
     }
 
     public String getColor() {

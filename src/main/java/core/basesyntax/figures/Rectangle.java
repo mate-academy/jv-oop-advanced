@@ -18,12 +18,12 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String draw() {
-        return super.draw()
-                + "\n\tSide A = С: "
+    public void draw() {
+        super.draw();
+        System.out.println("\tSide A = С: "
                 + sideA
                 + "\n\tSide B = D: "
                 + sideB
-                + "\n--------------------";
+                + "\n--------------------");
     }
 }

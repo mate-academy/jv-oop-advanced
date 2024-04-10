@@ -16,10 +16,10 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String draw() {
-        return super.draw()
-                + "\n\tSide A = B = C: "
+    public void draw() {
+        super.draw();
+        System.out.println("\tSide A = B = C: "
                 + side
-                + "\n--------------------";
+                + "\n--------------------");
     }
 }

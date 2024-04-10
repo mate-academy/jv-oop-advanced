@@ -12,7 +12,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.sideA = sideA;
         this.sideB = sideB;
         this.height = height;
-
     }
 
     @Override
@@ -21,14 +20,14 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String draw() {
-        return super.draw()
-                + "\n\tSide A: "
+    public void draw() {
+        super.draw();
+        System.out.println("\tSide A: "
                 + sideA
                 + "\n\tSide B: "
                 + sideB
                 + "\n\tHeight H: "
                 + height
-                + "\n--------------------";
+                + "\n--------------------");
     }
 }

@@ -16,10 +16,10 @@ public class Square extends Figure {
     }
 
     @Override
-    public String draw() {
-        return super.draw()
-                + "\n\tSide : "
+    public void draw() {
+        super.draw();
+        System.out.println("\tSide : "
                 + side
-                + "\n--------------------";
+                + "\n--------------------");
     }
 }

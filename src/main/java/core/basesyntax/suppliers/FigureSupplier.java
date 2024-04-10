@@ -10,32 +10,39 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int MAX_GEOMETRIC_PROPERTY = 10;
     private Random random = new Random();
 
     public Figure getRandomFigure() {
-        switch (random.nextInt(1,6)) {
-            case 1: return new Circle(randomDouble(1, 10), ColorSupplier.getRandomColor());
-            case 2: return new IsoscelesTrapezoid(randomDouble(6, 10), randomDouble(7, 10),
+        int value = random.nextInt(1, 6);
+        return switch (value) {
+            case 1 -> new Circle(randomDouble(1, MAX_GEOMETRIC_PROPERTY),
+                    ColorSupplier.getRandomColor());
+            case 2 -> new IsoscelesTrapezoid(randomDouble(6, MAX_GEOMETRIC_PROPERTY),
+                    randomDouble(7, MAX_GEOMETRIC_PROPERTY),
                     randomDouble(3, 6), ColorSupplier.getRandomColor());
-            case 3:
-                double sideA = randomDouble(5, 10);
-                double sideB = randomDouble(5, 10);;
+            case 3 -> {
+                double sideA = randomDouble(5, MAX_GEOMETRIC_PROPERTY);
+                double sideB = randomDouble(5, MAX_GEOMETRIC_PROPERTY);
                 while (sideA == sideB) {
-                    sideA = randomDouble(5, 10);
+                    sideA = randomDouble(5, MAX_GEOMETRIC_PROPERTY);
                 }
-                return new Rectangle(sideA, sideB, ColorSupplier.getRandomColor());
-            case 4: return new RightTriangle(randomDouble(1, 10), ColorSupplier.getRandomColor());
-            case 5: return new Square(randomDouble(1, 10), ColorSupplier.getRandomColor());
-            default: break;
-        }
-        return null;
+                yield new Rectangle(sideA, sideB, ColorSupplier.getRandomColor());
+            }
+            case 4 -> new RightTriangle(randomDouble(1, MAX_GEOMETRIC_PROPERTY),
+                    ColorSupplier.getRandomColor());
+            case 5 -> new Square(randomDouble(1, MAX_GEOMETRIC_PROPERTY),
+                    ColorSupplier.getRandomColor());
+            default -> throw new IllegalStateException("Unexpected value: " + value);
+        };
+
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, Color.values()[0].toString());
+        return new Circle(MAX_GEOMETRIC_PROPERTY, Color.values()[0].toString());
     }
 
-    public double randomDouble(double min, double max) {
+    private double randomDouble(double min, double max) {
         return Math.floor((min + random.nextDouble() * (max - min)) * 100) / 100;
     }
 }

@@ -10,7 +10,7 @@ public class Main {
         for (int i = 0; i < figures.length; i++) {
             figures[i] = i < figures.length / 2
                     ? supplier.getRandomFigure() : supplier.getDefaultFigure();
-            System.out.println(figures[i].draw());
+            figures[i].draw();
         }
     }
 }
