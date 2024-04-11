@@ -7,7 +7,8 @@ public class HelloWorld {
         FigureSupplier figureSupplier = new FigureSupplier();
 
         for (int i = 0; i < arraySize; i++) {
-            figures[i] = i < arraySize / 2 ? figureSupplier.getRandomFigure()
+            figures[i] = i < arraySize / 2
+                    ? figureSupplier.getRandomFigure()
                     : figureSupplier.getDefaultFigure();
             figures[i].draw();
         }

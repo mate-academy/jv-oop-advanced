@@ -6,6 +6,7 @@ public class FigureSupplier {
 
     private static int FIGURES_COUNT = 5;
     private static int DEFAULT_CIRCLE_RADIUS = 10;
+    private static int MAX_RANDOM_SIDE = 10;
     private static String DEFAULT_CIRCLE_COLOR = "white";
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
@@ -22,16 +23,16 @@ public class FigureSupplier {
             case 2:
                 return new RightTriangle(getRandomSide(), getRandomSide(), randomColor);
             case 3:
-                return new Circle(getRandomSide(), randomColor);
-            case 4:
-            default:
                 return new IsoscelesTrapezoid(getRandomSide(), getRandomSide(),
                         getRandomSide(), randomColor);
+            case 4:
+            default:
+                return getDefaultFigure();
         }
     }
 
     private int getRandomSide() {
-        return random.nextInt(10) + 1;
+        return random.nextInt(MAX_RANDOM_SIDE) + 1;
     }
 
     public Figure getDefaultFigure() {
