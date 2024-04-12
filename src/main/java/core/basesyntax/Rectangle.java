@@ -9,7 +9,7 @@ class Rectangle implements Figure {
         this.length = length;
         this.width = width;
         this.color = color;
-}
+    }
 
     @Override
     public double getArea() {
@@ -18,6 +18,6 @@ class Rectangle implements Figure {
 
     @Override
     public void draw() {
-        System.out.println(getArea() +  length +  width + color);
+        System.out.println(getArea() + length + width + color);
     }
 }
