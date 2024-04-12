@@ -3,7 +3,6 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-
     private static int FIGURES_COUNT = 5;
     private static int DEFAULT_CIRCLE_RADIUS = 10;
     private static int MAX_RANDOM_SIDE = 10;
