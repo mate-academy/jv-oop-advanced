@@ -1,15 +1,15 @@
 package core.basesyntax;
 
-class RightTriangle implements Figure {
-    private String color;
-    private double firstLeg;
-    private double secondLeg;
+    class RightTriangle implements Figure {
+        private final double firstLeg;
+        private final double secondLeg;
+        private final String color;
 
-    public RightTriangle(double color, double firstLeg, String secondLeg) {
-        this.color = color;
-        this.firstLeg = firstLeg;
-        this.secondLeg = secondLeg;
-    }
+        public RightTriangle(double firstLeg, double secondLeg, String color) {
+            this.firstLeg = firstLeg;
+            this.secondLeg = secondLeg;
+            this.color = color;
+        }
 
     @Override
     public double getArea() {

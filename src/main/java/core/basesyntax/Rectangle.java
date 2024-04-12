@@ -1,15 +1,15 @@
 package core.basesyntax;
 
 class Rectangle implements Figure {
-    private String color;
-    private double length;
-    private double width;
+    private final double length;
+    private final double width;
+    private final String color;
 
-    public Rectangle(double color, double length, String width) {
-        this.color = color;
+    public Rectangle(double length, double width, String color) {
         this.length = length;
         this.width = width;
-    }
+        this.color = color;
+}
 
     @Override
     public double getArea() {
