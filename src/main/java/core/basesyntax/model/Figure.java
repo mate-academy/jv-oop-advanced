@@ -1,4 +1,5 @@
 package core.basesyntax.model;
+
 import core.basesyntax.Draw;
 import core.basesyntax.FindArea;
 
