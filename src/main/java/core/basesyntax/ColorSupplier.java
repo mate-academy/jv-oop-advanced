@@ -1,6 +1,6 @@
 package core.basesyntax;
-import java.util.Random;
 
+import java.util.Random;
 
 class ColorSupplier {
     private final String[] colors = {"red", "blue", "green", "yellow", "orange", "purple"};
