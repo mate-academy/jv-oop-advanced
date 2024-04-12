@@ -21,4 +21,3 @@ class Rectangle implements Figure {
         System.out.println(getArea() +  length +  width + color);
     }
 }
-
