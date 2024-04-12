@@ -1,0 +1,24 @@
+package core.basesyntax;
+
+class Rectangle implements Figure {
+    private String color;
+    private double length;
+    private double width;
+
+    public Rectangle(double color, double length, String width) {
+        this.color = color;
+        this.length = length;
+        this.width = width;
+    }
+
+    @Override
+    public double getArea() {
+        return length * width;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, length: " + length + " units, width: " + width + " units, color: " + color);
+    }
+}
+
