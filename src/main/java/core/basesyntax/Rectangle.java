@@ -18,7 +18,7 @@ class Rectangle implements Figure {
 
     @Override
     public void draw() {
-        System.out.println("area: " + getArea() + " length: " + length + " width: " + width + " color: " + color);
+        System.out.println(getArea() +  length +  width + color);
     }
 }
 

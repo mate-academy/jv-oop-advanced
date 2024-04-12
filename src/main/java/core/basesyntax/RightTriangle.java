@@ -18,6 +18,6 @@ class RightTriangle implements Figure {
 
     @Override
     public void draw() {
-        System.out.println("area: " + getArea() + " firstLeg: " + firstLeg + " secondLeg: " + secondLeg + " color: " + color);
+        System.out.println(getArea() + firstLeg + secondLeg + color);
     }
 }

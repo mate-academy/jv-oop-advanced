@@ -20,6 +20,6 @@ class IsoscelesTrapezoid implements Figure {
 
     @Override
     public void draw() {
-        System.out.println("area: " + getArea() + " upper base: " + upperBase + " lower base: " + lowerBase + " height: " + height + " color: " + color);
+        System.out.println(getArea() + upperBase + lowerBase + height + color);
     }
 }
