@@ -3,7 +3,7 @@ package core.basesyntax.figures;
 import core.basesyntax.utils.Color;
 
 public class Circle extends Figure {
-    protected double radius;
+    private double radius;
 
     public Circle(Color color, double radius) {
         super(color);

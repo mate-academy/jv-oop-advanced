@@ -9,9 +9,11 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int RANDOM_RANGE_MAX = 10;
     private final Random random = new Random();
+    ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figure getRandomFigure(ColorSupplier colorSupplier) {
+    public Figure getRandomFigure() {
         FigureType randomFigureType = getRandomFigureType();
 
         switch (randomFigureType) {
@@ -37,11 +39,11 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE, 10);
+        return new Circle(Color.WHITE, RANDOM_RANGE_MAX);
     }
 
     private double getRandomNumber() {
-        return Math.round(random.nextDouble() * 10 + 1);
+        return Math.round(random.nextDouble() * RANDOM_RANGE_MAX + 1);
     }
 
     private FigureType getRandomFigureType() {

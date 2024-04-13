@@ -5,7 +5,7 @@ import core.basesyntax.utils.Color;
 import core.basesyntax.utils.Drawable;
 
 public abstract class Figure implements Drawable, AreaCalculator {
-    private Color color;
+    protected Color color;
 
     public Figure() {
     }

@@ -12,12 +12,10 @@ public class App {
 
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        ColorSupplier colorSupplier = new ColorSupplier();
-
         Figure[] figures = new Figure[SIZE_ARRAY];
 
         for (int i = 0; i < figures.length; i++) {
-            figures[i] = figureSupplier.getRandomFigure(colorSupplier);
+            figures[i] = figureSupplier.getRandomFigure();
         }
 
         for (Figure figure : figures) {
