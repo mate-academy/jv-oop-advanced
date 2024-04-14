@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Figure implements FigureProcess, FigureDrawing {
+public class Figure implements AreaCalculator, FigureDrawing {
     private String color;
 
     public Figure() {
@@ -16,13 +16,8 @@ public class Figure implements FigureProcess, FigureDrawing {
     }
 
     @Override
-    public String toString() {
-        return "Figure: ";
-    }
-
-    @Override
     public void draw() {
-
+        System.out.print("Figure: ");
     }
 
     @Override

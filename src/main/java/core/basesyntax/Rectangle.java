@@ -13,7 +13,10 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Rectangle was drawn");
+        super.draw();
+        System.out.println("rectangle, area: " + this.getArea()
+                + " sq. units, a: " + this.aside + " units, b: " + this.bside
+                + " units, color: " + super.getColor());
     }
 
     @Override
@@ -21,10 +24,4 @@ public class Rectangle extends Figure {
         return aside * bside;
     }
 
-    @Override
-    public String toString() {
-        return super.toString() + "rectangle, area: " + this.getArea()
-                + " sq. units, a: " + this.aside + " units, b: " + this.bside
-                + " units, color: " + super.getColor();
-    }
 }

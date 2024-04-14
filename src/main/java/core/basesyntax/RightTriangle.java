@@ -13,19 +13,15 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Right triangle was drawn");
+        super.draw();
+        System.out.println("triangle, area: " + this.getArea()
+                + " sq. units, firstLeg: " + this.aside + " units, secondLeg: "
+                + this.bside + " units, color: " + super.getColor());
     }
 
     @Override
     public double getArea() {
         return aside * bside / 2;
-    }
-
-    @Override
-    public String toString() {
-        return super.toString() + "triangle, area: " + this.getArea()
-                + " sq. units, firstLeg: " + this.aside + " units, secondLeg: "
-                + this.bside + " units, color: " + super.getColor();
     }
 
 }
