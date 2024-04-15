@@ -24,7 +24,8 @@ public class FigureSupplier {
                 RightTriangle randomRightTriangle = new RightTriangle(null, 0, 0);
                 return randomRightTriangle.getRandomRightTriangle();
             case 4:
-                IsoscelesTrapezoid randomIsoscelesTrapezoid = new IsoscelesTrapezoid(null, 0, 0, 0, 0);
+                IsoscelesTrapezoid randomIsoscelesTrapezoid = new IsoscelesTrapezoid(null, 0,
+                        0, 0, 0);
                 return randomIsoscelesTrapezoid.getRandomIsoscelesTrapezoid();
             default:
                 return getDefaultFigure();

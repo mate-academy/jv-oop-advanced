@@ -3,13 +3,21 @@ package core.basesyntax;
 import java.util.Random;
 
 public class IsoscelesTrapezoid extends Figure {
+    private static final int MAX_NUMBER = 100;
     private int side;
     private int topBase;
     private int lowBase;
     private int height;
-    private static final int MAX_NUMBER = 100;
     private final Random random = new Random();
     private final ColorSupplier color = new ColorSupplier();
+
+    public IsoscelesTrapezoid(String color, int side, int topBase, int lowBase, int height) {
+        super(color);
+        this.side = side;
+        this.topBase = topBase;
+        this.lowBase = lowBase;
+        this.height = height;
+    }
 
     public IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
         int side = random.nextInt(MAX_NUMBER);
@@ -17,13 +25,6 @@ public class IsoscelesTrapezoid extends Figure {
         int lowBase = random.nextInt(MAX_NUMBER);
         int height = random.nextInt(MAX_NUMBER);
         return new IsoscelesTrapezoid(color.getRandomColor(), side, topBase, lowBase, height);
-    }
-    public IsoscelesTrapezoid(String color, int side, int topBase, int lowBase, int height) {
-        super(color);
-        this.side = side;
-        this.topBase = topBase;
-        this.lowBase = lowBase;
-        this.height = height;
     }
 
     public double getSide() {

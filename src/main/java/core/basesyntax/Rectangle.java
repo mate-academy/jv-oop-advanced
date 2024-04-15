@@ -3,21 +3,22 @@ package core.basesyntax;
 import java.util.Random;
 
 public class Rectangle extends Figure {
+    private static final int MAX_NUMBER = 100;
     private int width;
     private int height;
-    private static final int MAX_NUMBER = 100;
     private final Random random = new Random();
     private final ColorSupplier color = new ColorSupplier();
+
+    public Rectangle(String color, int width, int height) {
+        super(color);
+        this.width = width;
+        this.height = height;
+    }
 
     public Rectangle getRandomRectangle() {
         int width = random.nextInt(MAX_NUMBER);
         int height = random.nextInt(MAX_NUMBER);
         return new Rectangle(color.getRandomColor(), width, height);
-    }
-    public Rectangle(String color, int width, int height) {
-        super(color);
-        this.width = width;
-        this.height = height;
     }
 
     public double getWidth() {
