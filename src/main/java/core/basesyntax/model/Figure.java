@@ -1,9 +1,9 @@
 package core.basesyntax.model;
 
-import core.basesyntax.Draw;
-import core.basesyntax.FindArea;
+import core.basesyntax.AreaCalculator;
+import core.basesyntax.Drawable;
 
-public abstract class Figure implements Draw, FindArea {
+public abstract class Figure implements Drawable, AreaCalculator {
     private final Color color;
 
     public Figure(Color color) {

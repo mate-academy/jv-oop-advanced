@@ -10,14 +10,11 @@ public class Main {
         Figure[] figures = new Figure[amountOfCreatedFigures];
         for (int i = 0; i < amountOfCreatedFigures; i++) {
             if (i == 1) {
-                figures[i] = figureSupplier.getDefaultFigure();
-            } else {
                 figures[i] = figureSupplier.getRandomFigure();
+            } else {
+                figures[i] = figureSupplier.getDefaultFigure();
             }
-        }
-
-        for (Figure figure : figures) {
-            figure.draw();
+            figures[i].draw();
         }
     }
 }

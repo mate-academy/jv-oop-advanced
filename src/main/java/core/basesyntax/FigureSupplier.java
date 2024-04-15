@@ -12,36 +12,40 @@ public class FigureSupplier {
     private static final int FIGURE_AMOUNT = 4;
     private static final int MAX_VALUE_FOR_RANDOM_FIGURE = 50;
     private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getDefaultFigure() {
         return new Circle(Color.WHITE, 10);
     }
 
     public Figure getRandomFigure() {
-        int randomIndex = random.nextInt(FIGURE_AMOUNT);
-        return new Figure[]{getRandomCircle(), getRandomRectangle(), getRandomIsoscelesTrapezoid(),
-                getRandomRightRectangle()}[randomIndex];
+        return switch (random.nextInt(FIGURE_AMOUNT)) {
+            case 0 -> getRandomIsoscelesTrapezoid();
+            case 1 -> getRandomRectangle();
+            case 2 -> getRandomRightRectangle();
+            default -> getRandomCircle();
+        };
     }
 
     private Figure getRandomCircle() {
-        return new Circle(ColorSupplier.getRandomColor(),
+        return new Circle(colorSupplier.getRandomColor(),
                 random.nextInt(MAX_VALUE_FOR_RANDOM_FIGURE));
     }
 
     private Figure getRandomRectangle() {
-        return new Rectangle(ColorSupplier.getRandomColor(),
+        return new Rectangle(colorSupplier.getRandomColor(),
                 random.nextInt(MAX_VALUE_FOR_RANDOM_FIGURE),
                 random.nextInt(MAX_VALUE_FOR_RANDOM_FIGURE));
     }
 
     private Figure getRandomRightRectangle() {
-        return new RightTriangle(ColorSupplier.getRandomColor(),
+        return new RightTriangle(colorSupplier.getRandomColor(),
                 random.nextInt(MAX_VALUE_FOR_RANDOM_FIGURE),
                 random.nextInt(MAX_VALUE_FOR_RANDOM_FIGURE));
     }
 
     private Figure getRandomIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(ColorSupplier.getRandomColor(),
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                 random.nextInt(MAX_VALUE_FOR_RANDOM_FIGURE),
                 random.nextInt(MAX_VALUE_FOR_RANDOM_FIGURE),
                 random.nextInt(MAX_VALUE_FOR_RANDOM_FIGURE));
