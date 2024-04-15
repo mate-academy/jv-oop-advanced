@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.figures;
 
 public class RightTriangle extends Figure {
     private double aside;
@@ -6,7 +6,7 @@ public class RightTriangle extends Figure {
     private double bside;
 
     public RightTriangle(String color, double aside, double bside) {
-        super.setColor(color);
+        super(color);
         this.aside = aside;
         this.bside = bside;
     }

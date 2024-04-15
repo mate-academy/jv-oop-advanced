@@ -1,4 +1,7 @@
-package core.basesyntax;
+package core.basesyntax.suppliers;
+
+import core.basesyntax.Color;
+import core.basesyntax.figures.*;
 
 import java.util.Random;
 
@@ -10,28 +13,26 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int figureOption = random.nextInt(NUMBER_OF_FIGURES);
-        Figure figure = new Figure();
         switch (figureOption) {
             case 0:
-                figure = getRandomSquare();
-                break;
+                Square square = getRandomSquare();
+                return square;
             case 1:
-                figure = getRandomRectangle();
-                break;
+                Rectangle rectangle = getRandomRectangle();
+                return rectangle;
             case 2:
-                figure = getRandomRightTriangle();
-                break;
+                RightTriangle rightTriangle = getRandomRightTriangle();
+                return rightTriangle;
             case 3:
-                figure = getRandomCircle();
-                break;
+                Circle circle = getRandomCircle();
+                return circle;
             case 4:
-                figure = getRandomIsoscelesTrapezoid();
-                break;
+                IsoscelesTrapezoid isoscelesTrapezoid = getRandomIsoscelesTrapezoid();
+                return isoscelesTrapezoid;
             default:
                 break;
         }
-
-        return figure;
+        return null;
     }
 
     public Figure getDefaultFigure() {

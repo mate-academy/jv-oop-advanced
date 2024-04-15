@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.figures;
 
 public class Rectangle extends Figure {
     private double aside;
@@ -6,7 +6,7 @@ public class Rectangle extends Figure {
     private double bside;
 
     public Rectangle(String color, double aside, double bside) {
-        super.setColor(color);
+        super(color);
         this.aside = aside;
         this.bside = bside;
     }
