@@ -1,8 +1,19 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
+    private static final int MAX_NUMBER = 100;
+    private final Random random = new Random();
+    private final ColorSupplier color = new ColorSupplier();
+
+    public RightTriangle getRandomRightTriangle() {
+        int firstLeg = random.nextInt(MAX_NUMBER);
+        int secondLeg = random.nextInt(MAX_NUMBER);
+        return new RightTriangle(color.getRandomColor(), firstLeg, secondLeg);
+    }
 
     public RightTriangle(String color, int firstLeg, int secondLeg) {
         super(color);
