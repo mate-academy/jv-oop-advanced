@@ -18,5 +18,4 @@ public abstract class Figure implements AreaCalculator, Drawable {
     public void draw() {
         System.out.print("Figure: ");
     }
-
 }

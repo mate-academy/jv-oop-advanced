@@ -2,7 +2,6 @@ package core.basesyntax.figures;
 
 public class RightTriangle extends Figure {
     private double aside;
-
     private double bside;
 
     public RightTriangle(String color, double aside, double bside) {
@@ -23,5 +22,4 @@ public class RightTriangle extends Figure {
     public double getArea() {
         return aside * bside / 2;
     }
-
 }

@@ -2,7 +2,6 @@ package core.basesyntax.figures;
 
 public class Rectangle extends Figure {
     private double aside;
-
     private double bside;
 
     public Rectangle(String color, double aside, double bside) {
@@ -23,5 +22,4 @@ public class Rectangle extends Figure {
     public double getArea() {
         return aside * bside;
     }
-
 }
