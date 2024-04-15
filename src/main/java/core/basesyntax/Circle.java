@@ -22,9 +22,9 @@ public class Circle extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: circle, " +
-                "area: " + area() + " units " +
-                ", radius: " + area() + " sq. units " +
-                ", color: " + getColor();
+        return "Figure: circle, "
+                +"area: " + area() + " units"
+                +", radius: " + area() + " sq. units"
+                +", color: " + getColor();
     }
 }

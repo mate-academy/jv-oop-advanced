@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
-    Random random = new Random();
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int randomNumber = random.nextInt(FIGURE_COUNT);
@@ -33,8 +33,8 @@ public class FigureSupplier {
                 int firstDistance = random.nextInt(20);
                 int secondDistance = random.nextInt(20);
                 int height = random.nextInt(20);
-                String colorIsoscelesTrapezoid = colorSupplier.getRandomColor();
-                return new IsoscelesTrapezoid(firstDistance, secondDistance, height, colorIsoscelesTrapezoid);
+                String colorTrap = colorSupplier.getRandomColor();
+                return new IsoscelesTrapezoid(firstDistance, secondDistance, height, colorTrap);
             default:
                 return new Circle(10, "white");
 

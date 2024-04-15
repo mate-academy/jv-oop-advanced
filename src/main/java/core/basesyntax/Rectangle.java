@@ -22,10 +22,10 @@ public class Rectangle extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: rectangle, " +
-                "firstSide: " + firstSide + " units " +
-                ", secondSide: " + secondSide + " units " +
-                ", color: " + getColor() +
-                ", area: " + area() + " sq. units";
+        return "Figure: rectangle, "
+                + ", area: " + area() + " sq. units"
+                + ", firstSide: " + firstSide + " units"
+                + ", secondSide: " + secondSide + " units"
+                + ", color: " + getColor();
     }
 }

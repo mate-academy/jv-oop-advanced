@@ -24,11 +24,12 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: isoscelesTrapezoid, " +
-                "firstSide: " + firstSide + " units " +
-                ", secondSide: " + secondSide + " units " +
-                ", height: " + height + " units " +
-                ", color: " + getColor() +
-                ", area: " + area() + " sq. units";
+        return "Figure: isoscelesTrapezoid,"
+                + " area: " + area() + " sq. units"
+                + ", firstSide: " + firstSide + " units"
+                + ", secondSide: " + secondSide + " units"
+                + ", height: " + height + " units"
+                + ", color: " + getColor();
+
     }
 }

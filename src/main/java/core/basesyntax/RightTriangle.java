@@ -22,10 +22,10 @@ public class RightTriangle extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: rightTriangle, " +
-                "firstLeg: " + firstLeg + " units " +
-                ", secondLeg: " + secondLeg + " units " +
-                ", color: " + getColor() +
-                ", area: " + area() + " sq. units";
+        return "Figure: rightTriangle, "
+                + "firstLeg: " + firstLeg + " units "
+                + ", secondLeg: " + secondLeg + " units "
+                + ", color: " + getColor()
+                + ", area: " + area() + " sq. units";
     }
 }

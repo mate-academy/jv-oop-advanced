@@ -33,5 +33,4 @@ public class ColorSupplier {
         return randomColor = colors[randomNumber];
     }
 
-
 }
