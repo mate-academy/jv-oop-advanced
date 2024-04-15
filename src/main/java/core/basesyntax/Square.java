@@ -10,8 +10,8 @@ public class Square extends Figure {
     }
 
     @Override
-    public int area() {
-        return (int) side * side;
+    public double areaCalculation() {
+        return (double) side * side;
     }
 
     @Override
@@ -23,7 +23,7 @@ public class Square extends Figure {
     public String toString() {
         return "Figure: square, "
                 + "side: " + side + " units"
-                + ", area: " + area() + " sq. units"
+                + ", area: " + areaCalculation() + " sq. units"
                 + ", color: " + color;
     }
 }

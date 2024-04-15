@@ -11,8 +11,8 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public int area() {
-        return (int) (firstLeg * secondLeg) / 2;
+    public double areaCalculation() {
+        return (double) (firstLeg * secondLeg) / 2;
     }
 
     @Override
@@ -26,6 +26,6 @@ public class RightTriangle extends Figure {
                 + "firstLeg: " + firstLeg + " units "
                 + ", secondLeg: " + secondLeg + " units "
                 + ", color: " + getColor()
-                + ", area: " + area() + " sq. units";
+                + ", area: " + areaCalculation() + " sq. units";
     }
 }

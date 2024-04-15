@@ -6,12 +6,11 @@ public class Circle extends Figure {
     public Circle(int radius, String color) {
         this.radius = radius;
         setColor(color);
-        area();
     }
 
     @Override
-    public int area() {
-        return (int) Math.PI * radius * radius;
+    public double areaCalculation() {
+        return (double) Math.PI * radius * radius;
     }
 
     @Override
@@ -23,8 +22,8 @@ public class Circle extends Figure {
     @Override
     public String toString() {
         return "Figure: circle, "
-                + "area: " + area() + " units"
-                + ", radius: " + area() + " sq. units"
+                + "area: " + areaCalculation() + " units"
+                + ", radius: " + radius + " sq. units"
                 + ", color: " + getColor();
     }
 }

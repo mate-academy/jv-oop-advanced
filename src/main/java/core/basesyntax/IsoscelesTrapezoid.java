@@ -13,8 +13,8 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public int area() {
-        return (int) ((firstSide + secondSide) * height) / 2;
+    public double areaCalculation() {
+        return (double) ((firstSide + secondSide) * height) / 2;
     }
 
     @Override
@@ -25,11 +25,10 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public String toString() {
         return "Figure: isoscelesTrapezoid,"
-                + " area: " + area() + " sq. units"
+                + " area: " + areaCalculation() + " sq. units"
                 + ", firstSide: " + firstSide + " units"
                 + ", secondSide: " + secondSide + " units"
                 + ", height: " + height + " units"
                 + ", color: " + getColor();
-
     }
 }

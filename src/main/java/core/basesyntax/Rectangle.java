@@ -11,8 +11,8 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public int area() {
-        return (int) firstSide * secondSide;
+    public double areaCalculation() {
+        return (double) firstSide * secondSide;
     }
 
     @Override
@@ -23,7 +23,7 @@ public class Rectangle extends Figure {
     @Override
     public String toString() {
         return "Figure: rectangle, "
-                + ", area: " + area() + " sq. units"
+                + ", area: " + areaCalculation() + " sq. units"
                 + ", firstSide: " + firstSide + " units"
                 + ", secondSide: " + secondSide + " units"
                 + ", color: " + getColor();
