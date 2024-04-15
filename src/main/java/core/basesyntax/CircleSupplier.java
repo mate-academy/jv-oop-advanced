@@ -1,12 +1,12 @@
 package core.basesyntax;
 
-public class FigureSupplier extends Circle {
+public class CircleSupplier {
 
     private final int rad = 10;
     private final double area = Math.PI * rad * rad;
-    private final String color = Colors.WHITE.toString();
+    private final Colors color = Colors.WHITE;
 
-    public final void getDefaultFigure() {
+    public final void writeDefaultCircle() {
         System.out.println("Figure: Circle, area: " + area
                 + " sq. units, " + "radius: " + rad + " units, color: " + color);
     }

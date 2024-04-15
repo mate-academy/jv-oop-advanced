@@ -1,27 +1,24 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class RightTriangle extends Figure {
     private int kat;
     private int kat1;
-    private int area;
-    private String color = new ColorSupplier().getRandomColor();
+    private Colors color;
 
-    public void setFigure() {
-        this.kat = new Random().nextInt(11);
-        this.kat1 = new Random().nextInt(11);
+    public RightTriangle() {
+        this.kat = random.nextInt(1, 11);
+        this.kat1 = random.nextInt(1, 11);
+        this.color = colorSupplier.getRandomColor();
     }
 
     @Override
-    public double area() {
-        this.area = this.kat * kat1 / 2;
-        return area;
+    public double getArea() {
+        return this.kat * kat1 / 2;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: Right Triangle, area: " + area()
+        System.out.println("Figure: Right Triangle, area: " + getArea()
                 + " sq. units, " + " side a: " + kat
                 + " side b: " + kat1 + " units, color: " + color);
     }

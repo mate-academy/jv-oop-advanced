@@ -1,33 +1,25 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Circle extends Figure {
     private double rad;
-    private double area;
-    private String color = new ColorSupplier().getRandomColor();
+    private Colors color;
 
-    public void setFigure() {
-        this.rad = new Random().nextInt(11);
-    }
-
-    public void defCircle(int r) {
-        this.rad = r;
-    }
-
+public Circle(){
+        this.rad = random.nextInt(1,11);
+        this.color = colorSupplier.getRandomColor();
+}
     public void setColor(Colors color) {
-        this.color = color.toString();
+        this.color = color;
     }
 
     @Override
-    public double area() {
-        this.area = Math.PI * this.rad * this.rad;
-        return area;
+    public double getArea() {
+        return Math.PI * this.rad * this.rad;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: Circle, area: " + area()
+        System.out.println("Figure: Circle, area: " + getArea()
                 + " sq. units, " + "radius: " + rad + " units, color: " + color);
     }
 }
