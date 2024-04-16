@@ -24,7 +24,7 @@ public class FigureSupplier {
             case 4:
                 return createIsoscelesTrapezoid(figureColor);
             default:
-                return new Circle(10, Color.WHITE);
+                return new Circle(10, Color.WHITE.name());
 
         }
     }
