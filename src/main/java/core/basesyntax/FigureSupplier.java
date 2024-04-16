@@ -7,42 +7,61 @@ public class FigureSupplier {
     public static final int FIGURE_RANDOM_PARAMETR = 20;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
+    private String colorFigure = colorSupplier.getRandomColor();
 
     public Figure getRandomFigure() {
         int randomNumber = random.nextInt(FIGURE_COUNT);
 
         switch (randomNumber) {
             case 0:
-                int radius = FIGURE_RANDOM_PARAMETR;
-                String colorCircle = colorSupplier.getRandomColor();
-                return new Circle(radius, colorCircle);
+               return createCircle();
             case 1:
-                int side = FIGURE_RANDOM_PARAMETR;
-                String colorSquare = colorSupplier.getRandomColor();
-                return new Square(side, colorSquare);
+                return createSquare();
             case 2:
-                int firstLeg = FIGURE_RANDOM_PARAMETR;
-                int secondLeg = FIGURE_RANDOM_PARAMETR;
-                String colorRightTriangle = colorSupplier.getRandomColor();
-                return new RightTriangle(firstLeg, secondLeg, colorRightTriangle);
+                return createRightTriangle();
             case 3:
-                int firstSide = FIGURE_RANDOM_PARAMETR;
-                int secondSide = FIGURE_RANDOM_PARAMETR;
-                String colorRectangle = colorSupplier.getRandomColor();
-                return new Rectangle(firstSide, secondSide, colorRectangle);
+                return createRectangle();
             case 4:
-                int firstDistance = FIGURE_RANDOM_PARAMETR;
-                int secondDistance = FIGURE_RANDOM_PARAMETR;
-                int height = FIGURE_RANDOM_PARAMETR;
-                String colorTrap = colorSupplier.getRandomColor();
-                return new IsoscelesTrapezoid(firstDistance, secondDistance, height, colorTrap);
+                return createIsoscelesTrapezoid();
             default:
-                return new Circle(10, "\\white");
+                return new Circle(10, "white");
 
         }
     }
 
+    private Circle createCircle() {
+        int radius = FIGURE_RANDOM_PARAMETR;
+        return new Circle(radius,colorFigure);
+
+    }
+
+    private Square createSquare() {
+        int side = FIGURE_RANDOM_PARAMETR;
+        return new Square(side, colorFigure);
+    }
+
+    private RightTriangle createRightTriangle() {
+        int firstLeg = FIGURE_RANDOM_PARAMETR;
+        int secondLeg = FIGURE_RANDOM_PARAMETR;
+        return new RightTriangle(firstLeg, secondLeg, colorFigure);
+    }
+
+    private Rectangle createRectangle() {
+        int firstSide = FIGURE_RANDOM_PARAMETR;
+        int secondSide = FIGURE_RANDOM_PARAMETR;
+        return new Rectangle(firstSide, secondSide, colorFigure);
+    }
+
+    private IsoscelesTrapezoid createIsoscelesTrapezoid() {
+        int firstDistance = FIGURE_RANDOM_PARAMETR;
+        int secondDistance = FIGURE_RANDOM_PARAMETR;
+        int height = FIGURE_RANDOM_PARAMETR;
+        return new IsoscelesTrapezoid(firstDistance, secondDistance, height, colorFigure);
+    }
+
     public Figure getDefaultFigure() {
-        return new Circle(10, "white");
+        int deFaultRadius = 10;
+        String defaultWhiteColor = Color.WHITE.name();
+        return new Circle(deFaultRadius, defaultWhiteColor);
     }
 }
