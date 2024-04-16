@@ -14,7 +14,7 @@ public class FigureSupplier {
 
         switch (randomNumber) {
             case 0:
-               return createCircle();
+                return createCircle();
             case 1:
                 return createSquare();
             case 2:
