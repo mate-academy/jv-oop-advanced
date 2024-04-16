@@ -14,19 +14,24 @@ public class FigureSupplier {
 
         switch (figureType) {
             case 0:
-                return new Circle(color.getRandomColor(), random.nextInt(MAX_NUMBER));
+                return new Circle(color.getRandomColor(),
+                        random.nextInt(MAX_NUMBER));
             case 1:
-                return new Square(color.getRandomColor(), random.nextInt(MAX_NUMBER));
+                return new Square(color.getRandomColor(),
+                        random.nextInt(MAX_NUMBER));
             case 2:
-                return new Rectangle(color.getRandomColor(), random.nextInt(MAX_NUMBER),
+                return new Rectangle(color.getRandomColor(),
+                        random.nextInt(MAX_NUMBER),
                         random.nextInt(MAX_NUMBER));
             case 3:
-                return new RightTriangle(color.getRandomColor(), random.nextInt(MAX_NUMBER),
+                return new RightTriangle(color.getRandomColor(),
+                        random.nextInt(MAX_NUMBER),
                         random.nextInt(MAX_NUMBER));
             case 4:
                 return new IsoscelesTrapezoid(color.getRandomColor(),
-                        random.nextInt(MAX_NUMBER), random.nextInt(MAX_NUMBER),
-                        random.nextInt(MAX_NUMBER), random.nextInt(MAX_NUMBER));
+                        random.nextInt(MAX_NUMBER),
+                        random.nextInt(MAX_NUMBER),
+                        random.nextInt(MAX_NUMBER));
             default:
                 return getDefaultFigure();
         }
