@@ -5,8 +5,8 @@ public class Square extends Figure {
     private Colors color;
 
     public Square() {
-        this.side = random.nextInt(1, 11);
-        this.color = colorSupplier.getRandomColor();
+        this.side = getRandom().nextInt(1, 11);
+        this.color = getColorSupplier().getRandomColor();
     }
 
     @Override

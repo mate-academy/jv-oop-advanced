@@ -4,10 +4,11 @@ public class Circle extends Figure {
     private double rad;
     private Colors color;
 
-public Circle(){
-        this.rad = random.nextInt(1,11);
-        this.color = colorSupplier.getRandomColor();
-}
+    public Circle() {
+        this.rad = getRandom().nextInt(1,11);
+        this.color = getColorSupplier().getRandomColor();
+    }
+
     public void setColor(Colors color) {
         this.color = color;
     }

@@ -7,10 +7,10 @@ public class IsoscelesTrapezoid extends Figure {
     private Colors color;
 
     public IsoscelesTrapezoid() {
-        this.heigh = random.nextInt(1, 11);
-        this.lowSide = random.nextInt(1, 11);
-        this.hightSide = random.nextInt(1, 11);
-        this.color = colorSupplier.getRandomColor();
+        this.heigh = getRandom().nextInt(1, 11);
+        this.lowSide = getRandom().nextInt(1, 11);
+        this.hightSide = getRandom().nextInt(1, 11);
+        this.color = getColorSupplier().getRandomColor();
     }
 
     @Override

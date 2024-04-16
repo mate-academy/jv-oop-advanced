@@ -6,9 +6,9 @@ public class RightTriangle extends Figure {
     private Colors color;
 
     public RightTriangle() {
-        this.kat = random.nextInt(1, 11);
-        this.kat1 = random.nextInt(1, 11);
-        this.color = colorSupplier.getRandomColor();
+        this.kat = getRandom().nextInt(1, 11);
+        this.kat1 = getRandom().nextInt(1, 11);
+        this.color = getColorSupplier().getRandomColor();
     }
 
     @Override

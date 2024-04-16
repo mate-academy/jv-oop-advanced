@@ -6,9 +6,9 @@ public class Rectangle extends Figure {
     private Colors color;
 
     public Rectangle() {
-        this.sidea = random.nextInt(1, 11);
-        this.sideb = random.nextInt(1, 11);
-        this.color = colorSupplier.getRandomColor();
+        this.sidea = getRandom().nextInt(1, 11);
+        this.sideb = getRandom().nextInt(1, 11);
+        this.color = getColorSupplier().getRandomColor();
     }
 
     @Override
