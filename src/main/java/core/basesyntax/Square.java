@@ -1,4 +1,8 @@
 package core.basesyntax;
 
-public class Square {
+public class Square implements Figure{
+    @Override
+    public double getArea() {
+        return 0;
+    }
 }
