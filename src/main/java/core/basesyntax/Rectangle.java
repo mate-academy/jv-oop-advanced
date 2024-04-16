@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-class Rectangle implements Figure {
+class Rectangle extends AbstractFigure {
     private final double length;
     private final double width;
     private final String color;
@@ -19,5 +19,10 @@ class Rectangle implements Figure {
     @Override
     public void draw() {
         System.out.println(getArea() + length + width + color);
+    }
+
+    @Override
+    public String getColor() {
+        return color;
     }
 }
