@@ -1,14 +1,14 @@
 package core.basesyntax;
 
-class Rectangle extends AbstractFigure {
+public class Rectangle extends AbstractFigure {
+    private final String color;
     private final double length;
     private final double width;
-    private final String color;
 
-    public Rectangle(double length, double width, String color) {
+    public Rectangle(double length, double width, Color color) {
+        this.color = String.valueOf(color);
         this.length = length;
         this.width = width;
-        this.color = color;
     }
 
     @Override
@@ -18,11 +18,12 @@ class Rectangle extends AbstractFigure {
 
     @Override
     public void draw() {
-        System.out.println(getArea() + length + width + color);
+        System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, length: " +
+                length + " units, width: " + width + " units, color: " + color);
     }
 
     @Override
-    public String getColor() {
-        return color;
+    public Color getColor() {
+        return Color.valueOf(color);
     }
 }

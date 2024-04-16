@@ -31,13 +31,15 @@ class FigureSupplier {
                 return new IsoscelesTrapezoid(rand.nextDouble() * 10 + 1,
                         rand.nextDouble() * 10 + 1,
                         rand.nextDouble() * 10 + 1,
-                        colorSupplier.getRandomColor());
+                        colorSupplier.getRandomColor()) {
+                    @Override
+                    public Color getColor() {
+                        return null;
+                    }
+                };
+
             default:
                 throw new IllegalArgumentException("Invalid figure type");
         }
-    }
-
-    public Figure getDefaultFigure() {
-        return new Circle("white", 10);
     }
 }

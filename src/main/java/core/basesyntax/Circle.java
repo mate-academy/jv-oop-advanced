@@ -1,10 +1,11 @@
 package core.basesyntax;
 
-class Circle extends AbstractFigure {
-    private double radius;
+public class Circle extends AbstractFigure {
+    private final Color color;
+    private final double radius;
 
-    public Circle(String color, double radius) {
-        super(color);
+    public Circle(Color color, double radius) {
+        this.color = color;
         this.radius = radius;
     }
 
@@ -15,9 +16,12 @@ class Circle extends AbstractFigure {
 
     @Override
     public void draw() {
-        System.out.println("Circle");
-        System.out.println("Radius: " + radius);
-        System.out.println("Color: " + color);
-        System.out.println("Area: " + getArea());
+        System.out.println("Figure: circle, area: " + getArea() + " sq. units, radius: " +
+                radius + " units, color: " + color);
+    }
+
+    @Override
+    public Color getColor() {
+        return color;
     }
 }

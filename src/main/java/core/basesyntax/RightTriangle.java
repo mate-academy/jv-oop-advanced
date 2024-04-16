@@ -1,14 +1,14 @@
 package core.basesyntax;
 
-class RightTriangle extends AbstractFigure {
+public class RightTriangle extends AbstractFigure {
+    private final String color;
     private final double firstLeg;
     private final double secondLeg;
-    private final String color;
 
-    public RightTriangle(double firstLeg, double secondLeg, String color) {
+    public RightTriangle(double firstLeg, double secondLeg, Color color) {
+        this.color = String.valueOf(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        this.color = color;
     }
 
     @Override
@@ -18,15 +18,12 @@ class RightTriangle extends AbstractFigure {
 
     @Override
     public void draw() {
-        System.out.println("Right Triangle");
-        System.out.println("First Leg: " + firstLeg);
-        System.out.println("Second Leg: " + secondLeg);
-        System.out.println("Color: " + color);
-        System.out.println("Area: " + getArea());
+        System.out.println("Figure: right triangle, area: " + getArea() + " sq. units, first leg: " +
+                firstLeg + " units, second leg: " + secondLeg + " units, color: " + color);
     }
 
     @Override
-    public String getColor() {
-        return color;
+    public Color getColor() {
+        return Color.valueOf(color);
     }
 }
