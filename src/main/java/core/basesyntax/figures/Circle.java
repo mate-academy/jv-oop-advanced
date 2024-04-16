@@ -1,11 +1,9 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.utils.Color;
-
 public class Circle extends Figure {
     private double radius;
 
-    public Circle(Color color, double radius) {
+    public Circle(String color, double radius) {
         super(color);
         this.radius = radius;
     }
@@ -28,6 +26,6 @@ public class Circle extends Figure {
         System.out.println("Figure: circle, "
                 + "area: " + Math.round(calculateArea() * 10) / 10
                 + " sq. units, " + "radius: " + radius
-                + " units, color: " + getColor().toString().toLowerCase());
+                + " units, color: " + getColor().toLowerCase());
     }
 }

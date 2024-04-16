@@ -1,13 +1,11 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.utils.Color;
-
 public class IsoscelesTrapezoid extends Figure {
     private double baseA;
     private double baseB;
     private double height;
 
-    public IsoscelesTrapezoid(Color color, double baseA, double baseB, double height) {
+    public IsoscelesTrapezoid(String color, double baseA, double baseB, double height) {
         super(color);
         this.baseA = baseA;
         this.baseB = baseB;
@@ -49,6 +47,6 @@ public class IsoscelesTrapezoid extends Figure {
                 + " sq. units, " + "topBase: " + baseA
                 + " units, bottomBase: " + baseB
                 + " units, height: " + height
-                + " units, color: " + getColor().toString().toLowerCase());
+                + " units, color: " + getColor().toLowerCase());
     }
 }

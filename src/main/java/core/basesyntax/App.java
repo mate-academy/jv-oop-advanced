@@ -14,7 +14,12 @@ public class App {
         Figure[] figures = new Figure[SIZE_ARRAY];
 
         for (int i = 0; i < figures.length; i++) {
-            figures[i] = figureSupplier.getRandomFigure();
+            if (i <= (figures.length / 2)) {
+                figures[i] = figureSupplier.getRandomFigure();
+            } else {
+                figures[i] = figureSupplier.getDefaultFigure();
+            }
+
         }
 
         for (Figure figure : figures) {
