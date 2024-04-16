@@ -25,10 +25,8 @@ class RightTriangle extends AbstractFigure {
         System.out.println("Area: " + getArea());
     }
 
-
     @Override
     public String getColor() {
         return color;
     }
-
 }
