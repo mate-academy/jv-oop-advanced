@@ -9,7 +9,8 @@ public class Main {
         int defaultFigureIndex = figures.length / 2;
 
         for (int i = 0; i < figures.length; i++) {
-            figures[i] = (i < defaultFigureIndex) ? figureSupplier.getRandomFigure() : figureSupplier.getRandomFigure();
+            figures[i] = (i < defaultFigureIndex) ? figureSupplier.getRandomFigure()
+                    : figureSupplier.getRandomFigure();
             figures[i].draw();
         }
     }

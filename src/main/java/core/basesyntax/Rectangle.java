@@ -18,8 +18,7 @@ public class Rectangle extends AbstractFigure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, length: " +
-                length + " units, width: " + width + " units, color: " + color);
+        System.out.println(getArea() + length + width + color);
     }
 
     @Override

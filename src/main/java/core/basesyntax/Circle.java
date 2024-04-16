@@ -16,7 +16,7 @@ public class Circle extends AbstractFigure {
 
     @Override
     public void draw() {
-        System.out.println(getArea() + radius +"color:" + color);
+        System.out.println(getArea() + radius + "color:" + color);
     }
 
     @Override
