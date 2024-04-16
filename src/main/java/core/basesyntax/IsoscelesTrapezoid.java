@@ -13,7 +13,6 @@ class IsoscelesTrapezoid extends AbstractFigure {
         this.height = height;
     }
 
-
     @Override
     public double getArea() {
         return 0.5 * (upperBase + lowerBase) * height;
