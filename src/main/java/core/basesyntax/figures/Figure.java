@@ -4,7 +4,7 @@ import core.basesyntax.utils.AreaCalculator;
 import core.basesyntax.utils.Drawable;
 
 public abstract class Figure implements Drawable, AreaCalculator {
-    protected String color;
+    private String color;
 
     public Figure() {
     }

@@ -11,19 +11,13 @@ public class App {
 
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        Figure[] figures = new Figure[SIZE_ARRAY];
 
-        for (int i = 0; i < figures.length; i++) {
-            if (i <= (figures.length / 2)) {
-                figures[i] = figureSupplier.getRandomFigure();
+        for (int i = 0; i < SIZE_ARRAY; i++) {
+            if (i <= (SIZE_ARRAY / 2)) {
+                figureSupplier.getRandomFigure().draw();
             } else {
-                figures[i] = figureSupplier.getDefaultFigure();
+                figureSupplier.getDefaultFigure().draw();
             }
-
-        }
-
-        for (Figure figure : figures) {
-            figure.draw();
         }
     }
 }

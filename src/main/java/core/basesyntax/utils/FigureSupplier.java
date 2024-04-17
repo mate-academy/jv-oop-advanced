@@ -36,26 +36,26 @@ public class FigureSupplier {
         return new Circle(Color.WHITE.toString(), RANDOM_RANGE_MAX);
     }
 
-    public Circle getRandomCircle() {
+    private Circle getRandomCircle() {
         return new Circle(colorSupplier.getRandomColor(), getRandomNumber());
     }
 
-    public Square getRandomSquare() {
+    private Square getRandomSquare() {
         return new Square(colorSupplier.getRandomColor(), getRandomNumber());
     }
 
-    public Rectangle getRandomRectangle() {
+    private Rectangle getRandomRectangle() {
         return new Rectangle(colorSupplier.getRandomColor(),
                 getRandomNumber(), getRandomNumber());
     }
 
-    public RightTriangle getRandomRightTriangle() {
+    private RightTriangle getRandomRightTriangle() {
         return new RightTriangle(colorSupplier.getRandomColor(),
                 getRandomNumber(),
                 getRandomNumber());
     }
 
-    public IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                 getRandomNumber(),
                 getRandomNumber(),
