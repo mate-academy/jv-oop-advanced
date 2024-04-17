@@ -35,7 +35,7 @@ public class FigureSupplier {
 
     private Circle createCircle(String color) {
         int radius = randomSize();
-        return new Circle(radius,color);
+        return new Circle(radius, color);
     }
 
     private Square createSquare(String color) {
