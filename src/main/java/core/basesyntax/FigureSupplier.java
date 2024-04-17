@@ -7,6 +7,7 @@ public class FigureSupplier {
     public static final int FIGURE_RANDOM_PARAMETR = 20;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
+    private final int DEFAULT_RADIUS = 10;
 
     public Figure getRandomFigure() {
         String figureColor = colorSupplier.getRandomColor();
@@ -28,7 +29,7 @@ public class FigureSupplier {
         }
     }
 
-    public int randomSize () {
+    public int randomSize() {
         return random.nextInt(FIGURE_RANDOM_PARAMETR);
     }
 
@@ -62,7 +63,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        final int DEFAULT_RADIUS = 10;
         String defaultWhiteColor = Color.WHITE.name();
         return new Circle(DEFAULT_RADIUS, defaultWhiteColor);
     }
