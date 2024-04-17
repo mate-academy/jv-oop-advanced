@@ -25,43 +25,45 @@ public class FigureSupplier {
                 return createIsoscelesTrapezoid(figureColor);
             default:
                 return new Circle(10, Color.WHITE.name());
-
         }
     }
 
-    private Circle createCircle(String color) {
-        int radius = FIGURE_RANDOM_PARAMETR;
-        return new Circle(radius,color);
+    public int randomSize () {
+        return random.nextInt(FIGURE_RANDOM_PARAMETR);
+    }
 
+    private Circle createCircle(String color) {
+        int radius = randomSize();
+        return new Circle(radius,color);
     }
 
     private Square createSquare(String color) {
-        int side = FIGURE_RANDOM_PARAMETR;
+        int side = randomSize();
         return new Square(side, color);
     }
 
     private RightTriangle createRightTriangle(String color) {
-        int firstLeg = FIGURE_RANDOM_PARAMETR;
-        int secondLeg = FIGURE_RANDOM_PARAMETR;
+        int firstLeg = randomSize();
+        int secondLeg = randomSize();
         return new RightTriangle(firstLeg, secondLeg, color);
     }
 
     private Rectangle createRectangle(String color) {
-        int firstSide = FIGURE_RANDOM_PARAMETR;
-        int secondSide = FIGURE_RANDOM_PARAMETR;
+        int firstSide = randomSize();
+        int secondSide = randomSize();
         return new Rectangle(firstSide, secondSide, color);
     }
 
     private IsoscelesTrapezoid createIsoscelesTrapezoid(String color) {
-        int firstDistance = FIGURE_RANDOM_PARAMETR;
-        int secondDistance = FIGURE_RANDOM_PARAMETR;
-        int height = FIGURE_RANDOM_PARAMETR;
+        int firstDistance = randomSize();
+        int secondDistance = randomSize();
+        int height = randomSize();
         return new IsoscelesTrapezoid(firstDistance, secondDistance, height, color);
     }
 
     public Figure getDefaultFigure() {
-        int deFaultRadius = 10;
+        final int DEFAULT_RADIUS = 10;
         String defaultWhiteColor = Color.WHITE.name();
-        return new Circle(deFaultRadius, defaultWhiteColor);
+        return new Circle(DEFAULT_RADIUS, defaultWhiteColor);
     }
 }
