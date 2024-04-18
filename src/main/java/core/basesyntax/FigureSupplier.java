@@ -27,34 +27,34 @@ public class FigureSupplier {
         }
     }
 
-    public Figure getCircle() {
+    public Figure getDefaultFigure() {
+        return new Circle(Color.WHITE.name(), 10);
+    }
+
+    private Figure getCircle() {
         return new Circle(colorSupplier.getRandomColor(), sizeSupplier.getRandomSize());
     }
 
-    public Figure getSquare() {
+    private Figure getSquare() {
         return new Square(colorSupplier.getRandomColor(), sizeSupplier.getRandomSize());
     }
 
-    public Figure getRectangle() {
+    private Figure getRectangle() {
         return new Rectangle(colorSupplier.getRandomColor(),
                 sizeSupplier.getRandomSize(),
                 sizeSupplier.getRandomSize());
     }
 
-    public Figure getRightTriangle() {
+    private Figure getRightTriangle() {
         return new RightTriangle(colorSupplier.getRandomColor(),
                 sizeSupplier.getRandomSize(),
                 sizeSupplier.getRandomSize());
     }
 
-    public Figure getIsoscelesTrapezoid() {
+    private Figure getIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                 sizeSupplier.getRandomSize(),
                 sizeSupplier.getRandomSize(),
                 sizeSupplier.getRandomSize());
-    }
-
-    public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.name(), 10);
     }
 }
