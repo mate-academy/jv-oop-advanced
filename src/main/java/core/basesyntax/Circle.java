@@ -1,17 +1,11 @@
 package core.basesyntax;
 
-public class Circle implements Figure{
-    int radius;
-    public Circle(int radius) {
-        this.radius = radius;
-    }
+public class Circle implements Figure {
+    final int radius = 10;
+    final String color = "WHITE";
     @Override
-    public double getArea() {
-        return Math.PI * radius * radius;
-    }
-
-    @Override
-    public String getPrint() {
-        return null;
+    public void draw() {
+        System.out.println("Figure: circle, radius: " + radius + ",color: " + color);
     }
 }
+
