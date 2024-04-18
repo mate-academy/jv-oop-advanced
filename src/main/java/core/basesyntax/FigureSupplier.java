@@ -16,13 +16,16 @@ public class FigureSupplier {
             case 0:
                 return new Square(random.nextDouble() * maxSize,color);
             case 1:
-                return new Rectangle( random.nextDouble() * maxSize, random.nextDouble() * maxSize, color);
+                return new Rectangle(random.nextDouble() * maxSize,
+                        random.nextDouble() * maxSize, color);
             case 2:
-                return new RightTriangle(random.nextDouble() * maxSize, random.nextDouble() * maxSize, color);
+                return new RightTriangle(random.nextDouble() * maxSize,
+                        random.nextDouble() * maxSize, color);
             case 3:
                 return new Circle(random.nextDouble() * maxSize, color);
             case 4:
-                return new IsoscelesTrapezoid(random.nextDouble() * maxSize, random.nextDouble() * maxSize, random.nextDouble() * maxSize, color);
+                return new IsoscelesTrapezoid(random.nextDouble() * maxSize,
+                        random.nextDouble() * maxSize, random.nextDouble() * maxSize, color);
             default:
                 return null;
         }
