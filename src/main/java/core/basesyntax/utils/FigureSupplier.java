@@ -33,7 +33,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.toString(), RANDOM_RANGE_MAX);
+        return new Circle(Color.WHITE.name(), RANDOM_RANGE_MAX);
     }
 
     private Circle getRandomCircle() {
