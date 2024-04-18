@@ -1,14 +1,14 @@
 package core.basesyntax;
 
-public abstract class Figure implements FigureBehavior, FigureProperties {
-    protected String color;
+public abstract class Figure implements AreaCalculator, Drawable  {
+    protected Color color;
 
-    protected Figure(String color) {
+    protected Figure(Color color) {
         this.color = color;
     }
 
     @Override
-    public String getColor() {
-        return color;
+    public void draw() {
+        System.out.println("Figure: " + this.getClass().getSimpleName() + ", color: " + color);
     }
 }

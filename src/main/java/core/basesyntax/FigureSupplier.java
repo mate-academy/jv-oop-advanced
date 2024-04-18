@@ -3,30 +3,32 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final Random RANDOM = new Random();
+    private final int maxSize = 10;
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public static Figure getRandomFigure() {
-        switch (RANDOM.nextInt(5)) {
+    public Figure getRandomFigure() {
+        Color color = colorSupplier.getRandomColor();
+        int numFigureTypes = 5;
+        int figureType = random.nextInt(numFigureTypes);
+
+        switch (figureType) {
             case 0:
-                return new Square(RANDOM.nextInt(10) + 1, ColorSupplier.getRandomColor());
+                return new Square(random.nextDouble() * maxSize,color);
             case 1:
-                return new Rectangle(RANDOM.nextInt(10) + 1,
-                        RANDOM.nextInt(10) + 1, ColorSupplier.getRandomColor());
+                return new Rectangle( random.nextDouble() * maxSize, random.nextDouble() * maxSize, color);
             case 2:
-                return new RightTriangle(RANDOM.nextInt(10) + 1,
-                        RANDOM.nextInt(10) + 1, ColorSupplier.getRandomColor());
+                return new RightTriangle(random.nextDouble() * maxSize, random.nextDouble() * maxSize, color);
             case 3:
-                return new Circle(RANDOM.nextInt(10) + 1, ColorSupplier.getRandomColor());
+                return new Circle(random.nextDouble() * maxSize, color);
             case 4:
-                return new IsoscelesTrapezoid(RANDOM.nextInt(10) + 1,
-                        RANDOM.nextInt(10) + 1,
-                        RANDOM.nextInt(10) + 1, ColorSupplier.getRandomColor());
+                return new IsoscelesTrapezoid(random.nextDouble() * maxSize, random.nextDouble() * maxSize, random.nextDouble() * maxSize, color);
             default:
                 return null;
         }
     }
 
-    public static Figure getDefaultFigure() {
-        return new Circle(10, "white");
+    public Figure getDefaultFigure() {
+        return new Circle(maxSize, Color.WHITE);
     }
 }
