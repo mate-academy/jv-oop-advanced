@@ -6,18 +6,13 @@ public class FigureSupplier {
     private static final Color DEFAULT_COLOR = Color.WHITE;
     private static final int DEFAULT_RADIUS = 10;
     private static final int MAX_SIZE = 10;
-    private final ColorSupplier colorSupplier;
-
-    {
-        colorSupplier = new ColorSupplier();
-    }
-
+    private static final int NUM_FIGURE_TYPES = 5;
+    private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
         Color color = colorSupplier.getRandomColor();
-        int numFigureTypes = 5;
-        int figureType = random.nextInt(numFigureTypes);
+        int figureType = random.nextInt(NUM_FIGURE_TYPES);
 
         switch (figureType) {
             case 0:
