@@ -1,6 +1,6 @@
 package core.basesyntax;
 
 public interface Figure {
-    double getArea();
-    String getPrint();
+    public double getArea();
+    void draw();
 }
