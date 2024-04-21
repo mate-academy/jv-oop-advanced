@@ -1,7 +1,8 @@
 package core.basesyntax;
 
 public abstract class Figure implements Drawable {
-    String color;
+    private String color;
+
     abstract int getArea();
 
 }
