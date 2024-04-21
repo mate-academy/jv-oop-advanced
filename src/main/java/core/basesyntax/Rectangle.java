@@ -1,9 +1,10 @@
 package core.basesyntax;
 
-public class Rectangle implements Figure{
+public class Rectangle extends Figure {
     private int height;
     private int said;
     private String color;
+
     public Rectangle(int height, int said, String color) {
         this.height = height;
         this.said = said;
@@ -11,13 +12,13 @@ public class Rectangle implements Figure{
     }
 
     @Override
-    public double getArea() {
-        return 0.5 * said * height;
+    public int getArea() {
+        return (int) (0.5 * said * height);
     }
 
     @Override
-    public void draw() {
-        System.out.println("Figure: rectangle, area: " + getArea() + "sq. units, side: "
-                + said + "units, height: " + height + "units, color: " + color);
+    public String draw() {
+        return "Figure: rectangle, area: " + getArea() + " sq. units, side: "
+                + said + " units, height: " + height + " units, color: " + color;
     }
 }
