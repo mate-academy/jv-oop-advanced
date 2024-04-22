@@ -10,15 +10,6 @@ public class RightTriangle extends Figure {
         this.secondLeg = secondLeg;
     }
 
-    public static RightTriangle getRandomRightTriangle() {
-        ColorSupplier colorSupplier = new ColorSupplier();
-        return new RightTriangle(
-                DimensionSupplier.getRandomDimension(),
-                DimensionSupplier.getRandomDimension(),
-                colorSupplier.getRandomColor()
-        );
-    }
-
     @Override
     public void draw() {
         System.out.println(

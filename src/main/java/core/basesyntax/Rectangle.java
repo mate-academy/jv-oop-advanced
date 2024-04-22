@@ -10,15 +10,6 @@ public class Rectangle extends Figure {
         this.width = width;
     }
 
-    public static Rectangle getRandomRectangle() {
-        ColorSupplier colorSupplier = new ColorSupplier();
-        return new Rectangle(
-                DimensionSupplier.getRandomDimension(),
-                DimensionSupplier.getRandomDimension(),
-                colorSupplier.getRandomColor()
-        );
-    }
-
     @Override
     public void draw() {
         System.out.println(

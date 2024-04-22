@@ -8,14 +8,6 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
-    public static Circle getRandomCircle() {
-        ColorSupplier colorSupplier = new ColorSupplier();
-        return new Circle(
-                DimensionSupplier.getRandomDimension(),
-                colorSupplier.getRandomColor()
-        );
-    }
-
     @Override
     public void draw() {
         System.out.println(

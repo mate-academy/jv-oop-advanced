@@ -12,16 +12,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.topBase = topBase;
     }
 
-    public static IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
-        ColorSupplier colorSupplier = new ColorSupplier();
-        return new IsoscelesTrapezoid(
-                DimensionSupplier.getRandomDimension(),
-                DimensionSupplier.getRandomDimension(),
-                DimensionSupplier.getRandomDimension(),
-                colorSupplier.getRandomColor()
-        );
-    }
-
     @Override
     public void draw() {
         System.out.println(

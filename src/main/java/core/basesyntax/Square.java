@@ -8,14 +8,6 @@ public class Square extends Figure {
         this.side = side;
     }
 
-    public static Square getRandomSquare() {
-        ColorSupplier colorSupplier = new ColorSupplier();
-        return new Square(
-                DimensionSupplier.getRandomDimension(),
-                colorSupplier.getRandomColor()
-        );
-    }
-
     @Override
     public void draw() {
         System.out.println(
