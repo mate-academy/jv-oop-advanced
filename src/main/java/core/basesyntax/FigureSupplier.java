@@ -4,7 +4,10 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int FIGURE_SUBTYPES = 5;
-    private static final int CIRCLE_RADIUS = 10;
+    private static final int DEFAULT_CIRCLE_RADIUS = 10;
+    //limit of figure size when generating randomly
+    private static final int MIN_DIMENSION = 1;
+    private static final int MAX_DIMENSION = 100;
     private static final Random random = new Random();
     private static final ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -13,31 +16,31 @@ public class FigureSupplier {
         switch (figureChoice) {
             case 0 :
                 return new Circle(
-                        DimensionSupplier.getRandomDimension(),
+                        getRandomDimension(),
                         colorSupplier.getRandomColor()
                 );
             case 1 :
                 return new Rectangle(
-                        DimensionSupplier.getRandomDimension(),
-                        DimensionSupplier.getRandomDimension(),
+                        getRandomDimension(),
+                        getRandomDimension(),
                         colorSupplier.getRandomColor()
                 );
             case 2 :
                 return new Square(
-                        DimensionSupplier.getRandomDimension(),
+                        getRandomDimension(),
                         colorSupplier.getRandomColor()
                 );
             case 3 :
                 return new RightTriangle(
-                        DimensionSupplier.getRandomDimension(),
-                        DimensionSupplier.getRandomDimension(),
+                        getRandomDimension(),
+                        getRandomDimension(),
                         colorSupplier.getRandomColor()
                 );
             case 4 :
                 return new IsoscelesTrapezoid(
-                        DimensionSupplier.getRandomDimension(),
-                        DimensionSupplier.getRandomDimension(),
-                        DimensionSupplier.getRandomDimension(),
+                        getRandomDimension(),
+                        getRandomDimension(),
+                        getRandomDimension(),
                         colorSupplier.getRandomColor()
                 );
             default :
@@ -46,6 +49,10 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(CIRCLE_RADIUS, Color.WHITE);
+        return new Circle(DEFAULT_CIRCLE_RADIUS, Color.WHITE);
+    }
+
+    private int getRandomDimension() {
+        return random.nextInt(MIN_DIMENSION, MAX_DIMENSION);
     }
 }
