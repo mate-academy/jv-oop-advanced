@@ -11,7 +11,7 @@ public class Circle extends Figure {
     public static Circle getRandomCircle() {
         ColorSupplier colorSupplier = new ColorSupplier();
         return new Circle(
-                getRandomDimension(),
+                DimensionSupplier.getRandomDimension(),
                 colorSupplier.getRandomColor()
         );
     }
@@ -20,7 +20,7 @@ public class Circle extends Figure {
     public void draw() {
         System.out.println(
                 "Figure: circle, area "
-                + getArea()
+                + calculateArea()
                 + ", radius: "
                 + radius
                 + ", color: "
@@ -29,7 +29,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return Math.PI * radius * radius;
     }
 }

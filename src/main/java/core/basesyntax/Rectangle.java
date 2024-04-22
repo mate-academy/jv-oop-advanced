@@ -13,8 +13,8 @@ public class Rectangle extends Figure {
     public static Rectangle getRandomRectangle() {
         ColorSupplier colorSupplier = new ColorSupplier();
         return new Rectangle(
-                getRandomDimension(),
-                getRandomDimension(),
+                DimensionSupplier.getRandomDimension(),
+                DimensionSupplier.getRandomDimension(),
                 colorSupplier.getRandomColor()
         );
     }
@@ -23,7 +23,7 @@ public class Rectangle extends Figure {
     public void draw() {
         System.out.println(
                 "Figure: rectangle, area "
-                        + getArea()
+                        + calculateArea()
                         + ", height "
                         + height
                         + ", width "
@@ -34,7 +34,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return width * height;
     }
 }

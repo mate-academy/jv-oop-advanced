@@ -11,7 +11,7 @@ public class Square extends Figure {
     public static Square getRandomSquare() {
         ColorSupplier colorSupplier = new ColorSupplier();
         return new Square(
-                getRandomDimension(),
+                DimensionSupplier.getRandomDimension(),
                 colorSupplier.getRandomColor()
         );
     }
@@ -20,7 +20,7 @@ public class Square extends Figure {
     public void draw() {
         System.out.println(
                 "Figure: square, area "
-                        + getArea()
+                        + calculateArea()
                         + ", side: "
                         + side
                         + ", color: "
@@ -30,7 +30,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return side * side;
     }
 }

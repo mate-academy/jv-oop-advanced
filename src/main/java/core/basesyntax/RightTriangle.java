@@ -13,8 +13,8 @@ public class RightTriangle extends Figure {
     public static RightTriangle getRandomRightTriangle() {
         ColorSupplier colorSupplier = new ColorSupplier();
         return new RightTriangle(
-                getRandomDimension(),
-                getRandomDimension(),
+                DimensionSupplier.getRandomDimension(),
+                DimensionSupplier.getRandomDimension(),
                 colorSupplier.getRandomColor()
         );
     }
@@ -23,7 +23,7 @@ public class RightTriangle extends Figure {
     public void draw() {
         System.out.println(
                 "Figure: right triangle, area "
-                        + getArea()
+                        + calculateArea()
                         + ", first leg: "
                         + firstLeg
                         + ", second leg "
@@ -34,7 +34,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return firstLeg * secondLeg / 2.0;
     }
 }

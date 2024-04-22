@@ -15,9 +15,9 @@ public class IsoscelesTrapezoid extends Figure {
     public static IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
         ColorSupplier colorSupplier = new ColorSupplier();
         return new IsoscelesTrapezoid(
-                getRandomDimension(),
-                getRandomDimension(),
-                getRandomDimension(),
+                DimensionSupplier.getRandomDimension(),
+                DimensionSupplier.getRandomDimension(),
+                DimensionSupplier.getRandomDimension(),
                 colorSupplier.getRandomColor()
         );
     }
@@ -26,7 +26,7 @@ public class IsoscelesTrapezoid extends Figure {
     public void draw() {
         System.out.println(
                 "Figure: isosceles trapezoid, area "
-                        + getArea()
+                        + calculateArea()
                         + ", leg "
                         + leg
                         + ", lower base "
@@ -39,7 +39,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         double semiPerimeter = (topBase + lowerBase + (leg * 2.0)) / 2;
         return Math.sqrt(
                 (semiPerimeter - topBase)
