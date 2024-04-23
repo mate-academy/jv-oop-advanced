@@ -116,3 +116,4 @@ that will be returning always `String` representation of the concrete enum const
 
 #### Write informative messages when you commit code or open a PR.
 Bad examples of commit/PR messages: `done`/`fixed`/`commit`/`solution`/`added homework`/`my solution` and other one-word, abstract or random messages. 
+

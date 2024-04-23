@@ -3,7 +3,6 @@ package core.basesyntax;
 public class RightTriangle extends Figure {
     private double legA;
     private double legB;
-    private String color;
 
     public RightTriangle(double legA, double legB, String color) {
         this.legA = legA;

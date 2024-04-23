@@ -1,9 +1,5 @@
 package core.basesyntax;
 
-public abstract class Figure implements CalculatingArea {
-
-    public abstract void draw();
-
-    @Override
-    public abstract double getArea();
+public abstract class Figure implements AreaCalculator, Drawing {
+    protected String color;
 }
