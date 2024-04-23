@@ -2,39 +2,39 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class FigureSupplier implements ColorSupplier {
+public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
     private static final int FIGURE_PARAMETER = 10;
     private static final int DEFAULT_RADIUS = 10;
-    private static final String DEFAULT_COLOR = "WHITE";
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
     private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        final String color = ColorSupplier.getRandomColor();
+        final String color = colorSupplier.getRandomColor();
         int index = random.nextInt(FIGURE_COUNT);
+        int rndFigureParameter = random.nextInt(FIGURE_PARAMETER);
         switch (index) {
             case 0:
-                return new Circle(random.nextInt(FIGURE_PARAMETER),color);
+                return new Circle(color, rndFigureParameter);
 
             case 1:
-                return new IsoscelesTrapezoid(random.nextInt(FIGURE_PARAMETER),
-                        random.nextInt(FIGURE_PARAMETER),random.nextInt(FIGURE_PARAMETER),color);
+                return new IsoscelesTrapezoid(color,rndFigureParameter,
+                        rndFigureParameter,rndFigureParameter);
 
             case 2:
-                return new Rectangle(random.nextInt(FIGURE_PARAMETER),
-                         random.nextInt(FIGURE_PARAMETER),color);
+                return new Rectangle(color,rndFigureParameter,rndFigureParameter);
 
             case 3:
-                return new Square(random.nextInt(FIGURE_PARAMETER),color);
+                return new Square(color,rndFigureParameter);
 
             case 4:
             default:
-                return new RightTriangle(random.nextInt(FIGURE_PARAMETER),
-                         random.nextInt(FIGURE_PARAMETER),color);
+                return new RightTriangle(color,rndFigureParameter,rndFigureParameter);
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_RADIUS,DEFAULT_COLOR);
+        return new Circle(DEFAULT_COLOR,DEFAULT_RADIUS);
     }
 }

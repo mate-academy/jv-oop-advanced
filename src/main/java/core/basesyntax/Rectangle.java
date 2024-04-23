@@ -3,12 +3,12 @@ package core.basesyntax;
 public class Rectangle extends Figure {
     private int height;
     private int said;
-    private String color;
 
-    public Rectangle(int height, int said, String color) {
+    public Rectangle(String color,int height,int said) {
+        super(color);
         this.height = height;
         this.said = said;
-        this.color = color;
+
     }
 
     @Override
@@ -17,8 +17,8 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String draw() {
-        return "Figure: rectangle, area: " + getArea() + " sq. units, side: "
-                + said + " units, height: " + height + " units, color: " + color;
+    public void draw() {
+        System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, side: "
+                + said + " units, height: " + height + " units, color: " + getColor());
     }
 }
