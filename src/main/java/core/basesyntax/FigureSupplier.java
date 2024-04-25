@@ -3,9 +3,9 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int NUMBER_OF_FIGURE_TYPES = 5;
     private final ColorSupplier colorSupplier;
     private final Random rand = new Random();
-    private static final int NUMBER_OF_FIGURE_TYPES = 5;
 
     public FigureSupplier(ColorSupplier colorSupplier) {
         this.colorSupplier = colorSupplier;
@@ -41,13 +41,11 @@ public class FigureSupplier {
         return new Rectangle(width, height, color);
     }
 
-
     private Figure createRandomRightTriangle(Color color) {
         double base = rand.nextDouble() * 10 + 1;
         double height = rand.nextDouble() * 10 + 1;
         return new RightTriangle(base, height, color);
     }
-
 
     private Figure createRandomCircle(Color color) {
         double radius = rand.nextDouble() * 10 + 1;

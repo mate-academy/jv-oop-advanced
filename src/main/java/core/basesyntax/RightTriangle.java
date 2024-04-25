@@ -18,8 +18,8 @@ public class RightTriangle extends AbstractFigure implements Figure {
 
     @Override
     public void draw() {
-        System.out.println("Area: " + getArea() + ", First Leg: " + firstLeg +
-                ", Second Leg: " + secondLeg + ", Color: " + color);
+        System.out.println("Area: " + getArea() + ", First Leg: " + firstLeg
+                + ", Second Leg: " + secondLeg + ", Color: " + color);
     }
 
     @Override

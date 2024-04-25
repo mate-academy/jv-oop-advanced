@@ -20,8 +20,9 @@ public class IsoscelesTrapezoid extends AbstractFigure implements Figure {
 
     @Override
     public void draw() {
-        System.out.println("Area: " + getArea() + ", Upper Base: " + upperBase +
-                ", Lower Base: " + lowerBase + ", Height: " + height + ", Color: " + color);
+        System.out.println(getArea() + ", Upper Base: " + upperBase
+                + ", Lower Base: " + lowerBase + ", Height: "
+                + height + ", Color: " + color);
     }
 
     @Override

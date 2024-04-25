@@ -18,8 +18,8 @@ public class Rectangle extends AbstractFigure implements Figure {
 
     @Override
     public void draw() {
-        System.out.println("Area: " + getArea() + ", Length: " + length +
-                ", Width: " + width + ", Color: " + color);
+        System.out.println("Area: " + getArea() + ", Length: " + length
+                + ", Width: " + width + ", Color: " + color);
     }
 
     @Override
