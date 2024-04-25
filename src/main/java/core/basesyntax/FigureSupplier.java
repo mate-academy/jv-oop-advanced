@@ -64,7 +64,8 @@ public class FigureSupplier {
 
             @Override
             public void draw() {
-                System.out.println(getArea() + topBase + bottomBase + height + ", Color: " + getColor());
+                System.out.println(getArea() + topBase + bottomBase + height
+                        + ", Color: " + getColor());
             }
 
             @Override
