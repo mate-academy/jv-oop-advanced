@@ -1,12 +1,12 @@
 package core.basesyntax;
 
-public class Rectangle extends AbstractFigure {
-    private final String color;
+public class Rectangle extends AbstractFigure implements Figure {
+    private final Color color;
     private final double length;
     private final double width;
 
     public Rectangle(double length, double width, Color color) {
-        this.color = String.valueOf(color);
+        this.color = color;
         this.length = length;
         this.width = width;
     }
@@ -18,11 +18,12 @@ public class Rectangle extends AbstractFigure {
 
     @Override
     public void draw() {
-        System.out.println(getArea() + length + width + color);
+        System.out.println("Area: " + getArea() + ", Length: " + length +
+                ", Width: " + width + ", Color: " + color);
     }
 
     @Override
     public Color getColor() {
-        return Color.valueOf(color);
+        return color;
     }
 }

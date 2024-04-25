@@ -1,12 +1,12 @@
 package core.basesyntax;
 
-public class RightTriangle extends AbstractFigure {
-    private final String color;
+public class RightTriangle extends AbstractFigure implements Figure {
+    private final Color color;
     private final double firstLeg;
     private final double secondLeg;
 
     public RightTriangle(double firstLeg, double secondLeg, Color color) {
-        this.color = String.valueOf(color);
+        this.color = color;
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
@@ -18,11 +18,12 @@ public class RightTriangle extends AbstractFigure {
 
     @Override
     public void draw() {
-        System.out.println(getArea() + firstLeg + secondLeg + color);
+        System.out.println("Area: " + getArea() + ", First Leg: " + firstLeg +
+                ", Second Leg: " + secondLeg + ", Color: " + color);
     }
 
     @Override
     public Color getColor() {
-        return Color.valueOf(color);
+        return color;
     }
 }

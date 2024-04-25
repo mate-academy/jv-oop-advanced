@@ -1,14 +1,13 @@
 package core.basesyntax;
 
-public abstract class IsoscelesTrapezoid extends AbstractFigure {
-    private final String color;
+public class IsoscelesTrapezoid extends AbstractFigure implements Figure {
+    private final Color color;
     private final double upperBase;
     private final double lowerBase;
     private final double height;
 
-    public IsoscelesTrapezoid(double upperBase, double lowerBase, double height, Color color) {
-        super();
-        this.color = String.valueOf(color);
+    public IsoscelesTrapezoid(Color color, double upperBase, double lowerBase, double height) {
+        this.color = color;
         this.upperBase = upperBase;
         this.lowerBase = lowerBase;
         this.height = height;
@@ -21,6 +20,12 @@ public abstract class IsoscelesTrapezoid extends AbstractFigure {
 
     @Override
     public void draw() {
-        System.out.println(getArea() + upperBase + lowerBase + height + color);
+        System.out.println("Area: " + getArea() + ", Upper Base: " + upperBase +
+                ", Lower Base: " + lowerBase + ", Height: " + height + ", Color: " + color);
+    }
+
+    @Override
+    public Color getColor() {
+        return color;
     }
 }
