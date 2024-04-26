@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends AbstractFigure implements Figure {
+public class RightTriangle extends AbstractFigure {
     private final Color color;
     private final double firstLeg;
     private final double secondLeg;

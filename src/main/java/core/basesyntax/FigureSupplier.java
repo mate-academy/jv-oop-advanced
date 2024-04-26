@@ -32,46 +32,30 @@ public class FigureSupplier {
 
     private Figure createRandomSquare(Color color) {
         double sideLength = rand.nextDouble() * 10 + 1;
-        return new Square(color, sideLength);
+        return (Figure) new Square(color, sideLength);
     }
 
     private Figure createRandomRectangle(Color color) {
         double width = rand.nextDouble() * 10 + 1;
         double height = rand.nextDouble() * 10 + 1;
-        return new Rectangle(width, height, color);
+        return (Figure) new Rectangle(height, width, color);
     }
 
     private Figure createRandomRightTriangle(Color color) {
         double base = rand.nextDouble() * 10 + 1;
         double height = rand.nextDouble() * 10 + 1;
-        return new RightTriangle(base, height, color);
+        return (Figure) new RightTriangle(height, base, color);
     }
-
     private Figure createRandomCircle(Color color) {
         double radius = rand.nextDouble() * 10 + 1;
-        return new Circle(color, radius);
+        return (Figure) new Circle(color, radius);
     }
 
     private Figure createRandomIsoscelesTrapezoid(Color color) {
         double topBase = rand.nextDouble() * 10 + 1;
         double bottomBase = rand.nextDouble() * 10 + 1;
         double height = rand.nextDouble() * 10 + 1;
-        return new IsoscelesTrapezoid(color, topBase, bottomBase, height) {
-            @Override
-            public double getArea() {
-                return ((topBase + bottomBase) / 2) * height;
-            }
-
-            @Override
-            public void draw() {
-                System.out.println(getArea() + topBase + bottomBase + height
-                        + ", Color: " + getColor());
-            }
-
-            @Override
-            public Color getColor() {
-                return null;
-            }
-        };
+        return (Figure) new IsoscelesTrapezoid(color, topBase, bottomBase, height);
     }
 }
+

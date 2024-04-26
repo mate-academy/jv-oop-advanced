@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class AbstractFigure {
+public abstract class AbstractFigure implements Figure {
     public abstract double getArea();
 
     public abstract void draw();
