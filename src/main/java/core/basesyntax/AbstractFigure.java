@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class AbstractFigure implements Figure {
+public abstract class AbstractFigure implements Figure, Draw {
     protected final Colors color;
 
     public AbstractFigure(Colors color) {

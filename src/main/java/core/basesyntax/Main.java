@@ -12,7 +12,9 @@ public class Main {
             }
         }
         for (Figure figure : figures) {
-            figure.draw();
+            if (figure instanceof Draw) {
+                ((Draw) figure).draw();
+            }
         }
     }
 }
