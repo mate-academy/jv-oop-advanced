@@ -4,10 +4,11 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final Random RANDOM = new Random();
+
     public static Figure getDefaultFigure() {
-    Colors color = Colors.WHITE;
-    double radius = 10;
-    return new Circle(color, radius);
+        Colors color = Colors.WHITE;
+        double radius = 10;
+        return new Circle(color, radius);
     }
 
     private static double getRandomSide() {
@@ -31,7 +32,8 @@ public class FigureSupplier {
             case 1 -> new Rectangle(color, getRandomSide(), getRandomSide());
             case 2 -> new RightTriangle(color, getRandomSide(), getRandomSide());
             case 3 -> new Circle(color, getRandomRadius());
-            case 4 -> new IsoscelesTrapezoid(color, getRandomSide(), getRandomSide(), getRandomHeight());
+            case 4 -> new IsoscelesTrapezoid(color, getRandomSide(), getRandomSide(),
+                    getRandomHeight());
             default -> null;
         };
     }

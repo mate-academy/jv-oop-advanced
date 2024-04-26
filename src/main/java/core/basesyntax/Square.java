@@ -3,7 +3,8 @@ package core.basesyntax;
 public class Square implements Figure {
     private final Colors color;
     private final double side;
-    public Square (Colors color, double side) {
+
+    public Square (Colors color, double side){
         this.color = color;
         this.side = side;
     }
@@ -15,7 +16,7 @@ public class Square implements Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: Square, area: " + calculateArea() + " sq. units, side: " + side + "units, color: "
-                + color);
+        System.out.println("Figure: Square, area: " + calculateArea() + " sq. units, side: " + side
+                + "units, color: " + color);
     }
 }
