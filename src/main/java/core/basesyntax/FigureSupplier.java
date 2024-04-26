@@ -46,6 +46,7 @@ public class FigureSupplier {
         double height = rand.nextDouble() * 10 + 1;
         return (Figure) new RightTriangle(height, base, color);
     }
+
     private Figure createRandomCircle(Color color) {
         double radius = rand.nextDouble() * 10 + 1;
         return (Figure) new Circle(color, radius);
