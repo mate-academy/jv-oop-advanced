@@ -1,12 +1,11 @@
 package core.basesyntax;
 
-public class Rectangle implements Figure {
-    private final Colors color;
+public class Rectangle extends AbstractFigure {
     private final double side1;
     private final double side2;
 
     public Rectangle(Colors color, double side1, double side2) {
-        this.color = color;
+        super(color);
         this.side1 = side1;
         this.side2 = side2;
     }
