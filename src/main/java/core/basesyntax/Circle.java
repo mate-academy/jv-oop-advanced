@@ -4,7 +4,7 @@ public class Circle implements Figure {
     private final Colors color;
     private final double radius;
 
-    public Circle (Colors color, double radius){
+    public Circle(Colors color, double radius) {
         this.color = color;
         this.radius = radius;
     }

@@ -4,7 +4,7 @@ public class Square implements Figure {
     private final Colors color;
     private final double side;
 
-    public Square (Colors color, double side){
+    public Square(Colors color, double side) {
         this.color = color;
         this.side = side;
     }

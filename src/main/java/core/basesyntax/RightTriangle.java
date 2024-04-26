@@ -5,7 +5,7 @@ public class RightTriangle implements Figure {
     private final double firstLeg;
     private final double secondLeg;
 
-    public RightTriangle(Colors color, double firstLeg, double secondLeg){
+    public RightTriangle(Colors color, double firstLeg, double secondLeg) {
         this.color = color;
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
@@ -18,7 +18,8 @@ public class RightTriangle implements Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: RightTriangle, area: " + calculateArea() + " sq. units, firstLeg: "
-                + firstLeg + " units, secondLeg: " + secondLeg + " units, color: " + color);
+        System.out.println("Figure: RightTriangle, area: " + calculateArea()
+                + " sq. units, firstLeg: " + firstLeg + " units, secondLeg: "
+                + secondLeg + " units, color: " + color);
     }
 }
