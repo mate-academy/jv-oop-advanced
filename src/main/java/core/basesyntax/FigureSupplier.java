@@ -4,6 +4,9 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int NUMBER_OF_FIGURE_TYPES = 5;
+    private static final double RANDOM_RANGE = 10.0;
+    private static final double RANDOM_MINIMUM = 1.0;
+
     private final ColorSupplier colorSupplier;
     private final Random rand = new Random();
 
@@ -11,7 +14,7 @@ public class FigureSupplier {
         this.colorSupplier = colorSupplier;
     }
 
-    public Figure getRandomFigure() {
+    public AbstractFigure getRandomFigure() {
         int figureType = rand.nextInt(NUMBER_OF_FIGURE_TYPES);
         Color randomColor = colorSupplier.getRandomColor();
         switch (figureType) {
@@ -30,33 +33,36 @@ public class FigureSupplier {
         }
     }
 
-    private Figure createRandomSquare(Color color) {
-        double sideLength = rand.nextDouble() * 10 + 1;
-        return (Figure) new Square(color, sideLength);
+    private double getRandomDouble() {
+        return rand.nextDouble() * RANDOM_RANGE + RANDOM_MINIMUM;
     }
 
-    private Figure createRandomRectangle(Color color) {
-        double width = rand.nextDouble() * 10 + 1;
-        double height = rand.nextDouble() * 10 + 1;
-        return (Figure) new Rectangle(height, width, color);
+    private Square createRandomSquare(Color color) {
+        double sideLength = getRandomDouble();
+        return new Square(color, sideLength);
     }
 
-    private Figure createRandomRightTriangle(Color color) {
-        double base = rand.nextDouble() * 10 + 1;
-        double height = rand.nextDouble() * 10 + 1;
-        return (Figure) new RightTriangle(height, base, color);
+    private Rectangle createRandomRectangle(Color color) {
+        double width = getRandomDouble();
+        double height = getRandomDouble();
+        return new Rectangle(width, height, color);
     }
 
-    private Figure createRandomCircle(Color color) {
-        double radius = rand.nextDouble() * 10 + 1;
-        return (Figure) new Circle(color, radius);
+    private RightTriangle createRandomRightTriangle(Color color) {
+        double base = getRandomDouble();
+        double height = getRandomDouble();
+        return new RightTriangle(base, height, color);
     }
 
-    private Figure createRandomIsoscelesTrapezoid(Color color) {
-        double topBase = rand.nextDouble() * 10 + 1;
-        double bottomBase = rand.nextDouble() * 10 + 1;
-        double height = rand.nextDouble() * 10 + 1;
-        return (Figure) new IsoscelesTrapezoid(color, topBase, bottomBase, height);
+    private Circle createRandomCircle(Color color) {
+        double radius = getRandomDouble();
+        return new Circle(color, radius);
+    }
+
+    private IsoscelesTrapezoid createRandomIsoscelesTrapezoid(Color color) {
+        double topBase = getRandomDouble();
+        double bottomBase = getRandomDouble();
+        double height = getRandomDouble();
+        return new IsoscelesTrapezoid(color, topBase, bottomBase, height);
     }
 }
-
