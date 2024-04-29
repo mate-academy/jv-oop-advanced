@@ -2,18 +2,19 @@ package core.basesyntax;
 
 public class Main {
     public static void main(String[] args) {
-        Figure[] figures = new Figure[6];
+        AreaCalculator [] figures = new AreaCalculator[6];
+        final FigureSupplier figureSupplier = new FigureSupplier();
 
         for (int i = 0; i < figures.length; i++) {
             if (i % 2 == 0) {
-                figures[i] = FigureSupplier.getRandomFigure();
+                figures[i] = figureSupplier.getRandomFigure();
             } else {
-                figures[i] = FigureSupplier.getDefaultFigure();
+                figures[i] = figureSupplier.getDefaultFigure();
             }
         }
-        for (Figure figure : figures) {
-            if (figure instanceof Draw) {
-                ((Draw) figure).draw();
+        for (AreaCalculator figure : figures) {
+            if (figure instanceof Drawable) {
+                ((Drawable) figure).draw();
             }
         }
     }
