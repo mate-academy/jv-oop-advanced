@@ -1,15 +1,18 @@
-package core.basesyntax;
+package core.basesyntax.figures;
+
+import core.basesyntax.util.Colors;
 
 public class Circle extends Figure {
-    private double rad;
+
+    private int rad;
     private Colors color;
 
     public Circle() {
-        this.rad = getRandom().nextInt(1,11);
-        this.color = getColorSupplier().getRandomColor();
+        this.rad = getRandomNum();
     }
 
-    public void setColor(Colors color) {
+    public Circle(int rad, Colors color) {
+        this.rad = rad;
         this.color = color;
     }
 

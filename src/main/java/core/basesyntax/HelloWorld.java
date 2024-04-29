@@ -1,26 +1,44 @@
 package core.basesyntax;
 
-import java.util.Random;
+import core.basesyntax.figures.Circle;
+import core.basesyntax.figures.Figure;
+import core.basesyntax.figures.IsoscelesTrapezoid;
+import core.basesyntax.figures.Rectangle;
+import core.basesyntax.figures.RightTriangle;
+import core.basesyntax.figures.Square;
 
-public class HelloWorld extends CircleSupplier {
+public class HelloWorld {
     public static void main(String[] args) {
-        final Random random = new Random();
-        Circle circle = new Circle();
-        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
-        Rectangle rectangle = new Rectangle();
-        RightTriangle rightTriangle = new RightTriangle();
-        Square square = new Square();
-        Figure[] choise = {circle, isoscelesTrapezoid, rectangle, rightTriangle, square};
-        Figure[] figures = new Figure[6];
-        for (int i = 0; i < figures.length / 2; i++) {
-            figures[i] = choise[random.nextInt(choise.length)];
-            figures[i].getArea();
-            figures[i].draw();
-        }
+        Figure defCircle = new Circle().getDefaultFigure();
 
-        for (int i = figures.length / 2; i < figures.length; i++) {
-            new CircleSupplier().writeDefaultCircle();
+        for (int i = 1; i <= 6; i++) {
+            if (i < 4) {
+                chooseFigure((int)(Math.random() * 6) + 1);
+            } else {
+                defCircle.draw();
+            }
         }
     }
 
+    private static void chooseFigure(int a) {
+        switch (a) {
+            case 1:
+                new Circle().draw();
+                break;
+            case 2:
+                new IsoscelesTrapezoid().draw();
+                break;
+            case 3:
+                new Rectangle().draw();
+                break;
+            case 4:
+                new RightTriangle().draw();
+                break;
+            case 5:
+                new Square().draw();
+                break;
+            default:
+                break;
+        }
+    }
 }
