@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final Random RANDOM = new Random();
+    private static final Random RANDOM = new Random();
 
     public AreaCalculator getDefaultFigure() {
         Colors color = Colors.WHITE;
