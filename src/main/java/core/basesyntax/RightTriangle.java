@@ -19,6 +19,6 @@ public class RightTriangle extends AbstractFigure {
     public void draw() {
         System.out.println("Figure: RightTriangle, area: " + calculateArea()
                 + " sq. units, firstLeg: " + firstLeg + " units, secondLeg: "
-                + secondLeg + " units, color: " + color);
+                + secondLeg + " units, color: " + color.name());
     }
 }

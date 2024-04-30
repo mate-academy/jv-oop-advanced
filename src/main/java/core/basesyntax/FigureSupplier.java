@@ -4,18 +4,19 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final Random RANDOM = new Random();
+    private static final int FIGURE_COUNT = 5;
 
-    public AreaCalculator getDefaultFigure() {
+    public final AbstractFigure getDefaultFigure() {
         Colors color = Colors.WHITE;
         double radius = 10;
         return new Circle(color, radius);
     }
 
-    public AreaCalculator getRandomFigure() {
+    public final AbstractFigure getRandomFigure() {
         Colors color = ColorSupplier.getRandomColor();
-        int randomizer = RANDOM.nextInt(5);
+        int randomIndex = RANDOM.nextInt(FIGURE_COUNT);
 
-        return switch (randomizer) {
+        return switch (randomIndex) {
             case 0 -> new Square(color, getRandomSide());
             case 1 -> new Rectangle(color, getRandomSide(), getRandomSide());
             case 2 -> new RightTriangle(color, getRandomSide(), getRandomSide());
@@ -26,15 +27,15 @@ public class FigureSupplier {
         };
     }
 
-    private double getRandomSide() {
+    private static double getRandomSide() {
         return RANDOM.nextDouble() * 10;
     }
 
-    private double getRandomRadius() {
+    private static double getRandomRadius() {
         return RANDOM.nextDouble() * 10;
     }
 
-    private double getRandomHeight() {
+    private static double getRandomHeight() {
         return RANDOM.nextDouble() * 10;
     }
 }
