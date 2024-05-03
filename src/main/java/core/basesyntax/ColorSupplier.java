@@ -5,14 +5,6 @@ import java.util.Random;
 public class ColorSupplier {
     private int rand = new Random().nextInt(5);
 
-    public int getRand() {
-        return rand;
-    }
-
-    public void setRand(int rand) {
-        this.rand = rand;
-    }
-
     public String generateRandomColor() {
         switch (rand) {
             case 0:

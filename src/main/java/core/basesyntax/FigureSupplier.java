@@ -9,7 +9,6 @@ public class FigureSupplier {
         int figureRandomiser = 4;
         int paramsRandomizer1 = new Random().nextInt(magic);
         int paramsRandomizer2 = new Random().nextInt(magic);
-        int paramsRandomizer3 = new Random().nextInt(magic);
         String randomColor = new ColorSupplier().generateRandomColor();
         switch (new Random().nextInt(4)) {
             case 0:
@@ -18,7 +17,7 @@ public class FigureSupplier {
                 return new Rectangle(randomColor, paramsRandomizer1, paramsRandomizer2);
             case 2:
                 return new IsoscelesTrapezoid(randomColor, paramsRandomizer1,
-                        paramsRandomizer2, paramsRandomizer3);
+                        paramsRandomizer2, new Random().nextInt(magic));
             case 3:
                 return new Square(randomColor, paramsRandomizer1);
             case 4:

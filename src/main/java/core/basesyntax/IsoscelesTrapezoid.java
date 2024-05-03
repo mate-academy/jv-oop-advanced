@@ -17,30 +17,6 @@ public class IsoscelesTrapezoid extends Figure {
 
     }
 
-    public int getHeight() {
-        return height;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
-    }
-
-    public int getUpperBasis() {
-        return upperBasis;
-    }
-
-    public void setUpperBasis(int upperBasis) {
-        this.upperBasis = upperBasis;
-    }
-
-    public int getLowerBasis() {
-        return lowerBasis;
-    }
-
-    public void setLowerBasis(int lowerBasis) {
-        this.lowerBasis = lowerBasis;
-    }
-
     @Override
     public String draw() {
         return "IsoscelesTrapezoid{" + " color= " + getColor()

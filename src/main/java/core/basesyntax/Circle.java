@@ -8,14 +8,6 @@ public class Circle extends Figure {
         this.radius = raduis;
     }
 
-    public Circle() {
-
-    }
-
-    public int getRadius() {
-        return radius;
-    }
-
     @Override
     public String toString() {
         return "Circle{"

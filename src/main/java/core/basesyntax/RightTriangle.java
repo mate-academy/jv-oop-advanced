@@ -12,10 +12,6 @@ public class RightTriangle extends Figure {
 
     }
 
-    public int getSide() {
-        return side;
-    }
-
     @Override
     public String draw() {
         return "RightTriangle{" + "color= " + getColor()
