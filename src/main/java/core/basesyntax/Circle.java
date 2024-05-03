@@ -4,7 +4,7 @@ public class Circle extends AbstractFigure {
     private final double radius;
 
     public Circle(Color color, double radius) {
-        this.color = color;
+        super(color);
         this.radius = radius;
     }
 
@@ -15,11 +15,11 @@ public class Circle extends AbstractFigure {
 
     @Override
     public void draw() {
-        System.out.println(getArea() + radius + "color:" + color);
+        System.out.println("Area: " + getArea() + ", Radius: " + radius + ", Color: " + getColor());
     }
 
     @Override
     public Color getColor() {
-        return color;
+        return null;
     }
 }

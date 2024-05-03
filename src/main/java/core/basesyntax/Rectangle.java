@@ -5,7 +5,7 @@ public class Rectangle extends AbstractFigure {
     private final double width;
 
     public Rectangle(double length, double width, Color color) {
-        this.color = this.color;
+        super(color);
         this.length = length;
         this.width = width;
     }
@@ -18,11 +18,11 @@ public class Rectangle extends AbstractFigure {
     @Override
     public void draw() {
         System.out.println("Area: " + getArea() + ", Length: " + length
-                + ", Width: " + width + ", Color: " + color);
+                + ", Width: " + width + ", Color: " + getColor());
     }
 
     @Override
     public Color getColor() {
-        return color;
+        return null;
     }
 }

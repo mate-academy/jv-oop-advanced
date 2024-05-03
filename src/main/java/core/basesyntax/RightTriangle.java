@@ -5,7 +5,7 @@ public class RightTriangle extends AbstractFigure {
     private final double secondLeg;
 
     public RightTriangle(double firstLeg, double secondLeg, Color color) {
-        this.color = this.color;
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
@@ -18,11 +18,11 @@ public class RightTriangle extends AbstractFigure {
     @Override
     public void draw() {
         System.out.println("Area: " + getArea() + ", First Leg: " + firstLeg
-                + ", Second Leg: " + secondLeg + ", Color: " + color);
+                + ", Second Leg: " + secondLeg + ", Color: " + getColor());
     }
 
     @Override
     public Color getColor() {
-        return color;
+        return null;
     }
 }
