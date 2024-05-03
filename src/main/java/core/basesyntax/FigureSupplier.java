@@ -8,10 +8,11 @@ public class FigureSupplier {
     private static final double RANDOM_MINIMUM = 1.0;
 
     private final ColorSupplier colorSupplier;
-    private final Random rand = new Random();
+    private final Random rand;
 
     public FigureSupplier(ColorSupplier colorSupplier) {
         this.colorSupplier = colorSupplier;
+        this.rand = new Random();
     }
 
     public AbstractFigure getRandomFigure() {

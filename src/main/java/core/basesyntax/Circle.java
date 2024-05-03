@@ -15,11 +15,11 @@ public class Circle extends AbstractFigure {
 
     @Override
     public void draw() {
-        System.out.println("Area: " + getArea() + ", Radius: " + radius + ", Color: " + getColor());
+        System.out.println(getArea() + radius + "color:" + color);
     }
 
     @Override
     public Color getColor() {
-        return null;
+        return color;
     }
 }

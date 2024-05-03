@@ -18,11 +18,11 @@ public class Rectangle extends AbstractFigure {
     @Override
     public void draw() {
         System.out.println("Area: " + getArea() + ", Length: " + length
-                + ", Width: " + width + ", Color: " + getColor());
+                + ", Width: " + width + ", Color: " + color);
     }
 
     @Override
     public Color getColor() {
-        return null;
+        return color;
     }
 }
