@@ -5,7 +5,7 @@ public class Main {
         ColorSupplier colorSupplier = new ColorSupplier();
         FigureSupplier figureSupplier = new FigureSupplier(colorSupplier);
         for (int i = 0; i < 6; i++) {
-            AbstractFigure figure = (AbstractFigure) figureSupplier.getRandomFigure();
+            AbstractFigure figure = figureSupplier.getRandomFigure();
             figure.draw();
         }
     }

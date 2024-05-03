@@ -23,9 +23,4 @@ public class IsoscelesTrapezoid extends AbstractFigure {
                 + ", Lower Base: " + lowerBase + ", Height: "
                 + height + ", Color: " + color);
     }
-
-    @Override
-    public Color getColor() {
-        return color;
-    }
 }

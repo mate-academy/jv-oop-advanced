@@ -17,9 +17,4 @@ public class Square extends AbstractFigure {
     public void draw() {
         System.out.println(getArea() + side + "color" + color);
     }
-
-    @Override
-    public Color getColor() {
-        return color;
-    }
 }

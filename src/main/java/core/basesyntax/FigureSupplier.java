@@ -3,10 +3,6 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int NUMBER_OF_FIGURE_TYPES = 5;
-    private static final double RANDOM_RANGE = 10.0;
-    private static final double RANDOM_MINIMUM = 1.0;
-
     private final ColorSupplier colorSupplier;
     private final Random rand;
 
@@ -16,26 +12,36 @@ public class FigureSupplier {
     }
 
     public AbstractFigure getRandomFigure() {
-        int figureType = rand.nextInt(NUMBER_OF_FIGURE_TYPES);
+        int figureType = rand.nextInt(5);
         Color randomColor = colorSupplier.getRandomColor();
+        AbstractFigure figure;
         switch (figureType) {
             case 0:
-                return createRandomSquare(randomColor);
+                figure = createRandomSquare(randomColor);
+                break;
             case 1:
-                return createRandomRectangle(randomColor);
+                figure = createRandomRectangle(randomColor);
+                break;
             case 2:
-                return createRandomRightTriangle(randomColor);
+                figure = createRandomRightTriangle(randomColor);
+                break;
             case 3:
-                return createRandomCircle(randomColor);
+                figure = createRandomCircle(randomColor);
+                break;
             case 4:
-                return createRandomIsoscelesTrapezoid(randomColor);
+                figure = createRandomIsoscelesTrapezoid(randomColor);
+                break;
             default:
                 throw new IllegalArgumentException("Invalid figure type");
         }
+        System.out.println("Generated figure type: " + figureType);
+        return figure;
     }
 
-    private double getRandomDouble() {
-        return rand.nextDouble() * RANDOM_RANGE + RANDOM_MINIMUM;
+    public AbstractFigure getDefaultFigure() {
+        Color defaultColor = Color.WHITE;
+        double defaultRadius = 10.0;
+        return new Circle(defaultColor, defaultRadius);
     }
 
     private Square createRandomSquare(Color color) {
@@ -65,5 +71,9 @@ public class FigureSupplier {
         double bottomBase = getRandomDouble();
         double height = getRandomDouble();
         return new IsoscelesTrapezoid(color, topBase, bottomBase, height);
+    }
+
+    private double getRandomDouble() {
+        return rand.nextDouble() * 10.0 + 1.0;
     }
 }
