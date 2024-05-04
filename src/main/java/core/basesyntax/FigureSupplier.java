@@ -3,8 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final String defaultFigureColor = Color.WHITE.name();
-    private static final int defaultCircleRaduis = 10;
+    private static final String DEFAULT_FIGURE_COLOR = Color.WHITE.name();
+    private static final int DEFAULT_CIRCLE_RADUIS = 10;
     private static final int SIDE_SIZE_LIMIT = 100;
     private static final int NUMBER_OF_FIGURE_TYPES = 5;
     private final Random random = new Random();
@@ -32,7 +32,7 @@ public class FigureSupplier {
     }
 
     public Circle getDefaultFigure() {
-        return new Circle(defaultFigureColor, defaultCircleRaduis);
+        return new Circle(DEFAULT_FIGURE_COLOR, DEFAULT_CIRCLE_RADUIS);
     }
 
     public Circle getRandomCircle() {
@@ -55,5 +55,4 @@ public class FigureSupplier {
     public RightTriangle getRandomRightTriangle() {
         return new RightTriangle(randomColor, paramsRandomizer1);
     }
-
 }
