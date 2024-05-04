@@ -22,13 +22,13 @@ public class Square extends Figure {
     }
 
     @Override
-    public String draw() {
-        return "Square{" + "color= " + getColor()
+    public void draw() {
+        System.out.println("Square{" + "color= " + getColor()
                 + " side="
                 + side
                 + " area="
                 + this.getArea()
-                + '}';
+                + '}');
     }
 
     @Override

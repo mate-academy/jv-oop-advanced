@@ -21,15 +21,15 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String draw() {
-        return "Circle{"
+    public void draw() {
+        System.out.println("Circle{"
                 + "color= "
                 + getColor()
                 + " raduis="
                 + radius
                 + " area="
                 + this.getArea()
-                + '}';
+                + '}');
     }
 
     @Override

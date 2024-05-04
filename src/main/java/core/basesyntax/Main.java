@@ -8,11 +8,9 @@ public class Main {
             if (i < figures.length / 2) {
                 figures[i] = randomFigureSupplier.getRandomFigure();
             } else {
-                figures[i] = FigureSupplier.getDefaultFigure();
+                figures[i] = new FigureSupplier().getDefaultFigure();
             }
-        }
-        for (Figure figure : figures) {
-            System.out.println(figure.draw());
+            figures[i].draw();
         }
     }
 }
