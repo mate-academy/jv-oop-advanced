@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public abstract class AbstractFigure implements Figure {
-    protected String color;
+    private String color;
 
     public AbstractFigure(String color) {
         this.color = color;
@@ -16,4 +16,10 @@ public abstract class AbstractFigure implements Figure {
                 this.getClass().getSimpleName(), getArea(), color);
         System.out.println(figureInfo);
     }
+
+    @Override
+    public String getColor() {
+        return color;
+    }
 }
+
