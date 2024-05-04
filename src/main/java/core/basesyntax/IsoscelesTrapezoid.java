@@ -13,10 +13,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.lowerBasis = lowerBasis;
     }
 
-    public IsoscelesTrapezoid() {
-
-    }
-
     @Override
     public void draw() {
         System.out.println("IsoscelesTrapezoid{" + " color= " + getColor()

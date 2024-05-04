@@ -10,10 +10,6 @@ public class Rectangle extends Figure {
         this.width = width;
     }
 
-    public Rectangle() {
-
-    }
-
     @Override
     public void draw() {
         System.out.println("Rectangle{" + " color = " + getColor()

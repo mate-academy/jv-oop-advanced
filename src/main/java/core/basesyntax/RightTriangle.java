@@ -8,10 +8,6 @@ public class RightTriangle extends Figure {
         this.side = side;
     }
 
-    public RightTriangle() {
-
-    }
-
     @Override
     public void draw() {
         System.out.println("RightTriangle{" + "color= " + getColor()
