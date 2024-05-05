@@ -1,9 +1,6 @@
 package core.basesyntax;
 
-/**
- * Feel free to remove this class and create your own.
- */
-public class HelloWorld {
+public class App {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figures = new Figure[6];
