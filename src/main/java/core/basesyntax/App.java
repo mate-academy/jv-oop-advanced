@@ -10,9 +10,7 @@ public class App {
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
-            if (figures[i] != null) {
-                figures[i].draw();
-            }
+            figures[i].draw();
         }
     }
 }

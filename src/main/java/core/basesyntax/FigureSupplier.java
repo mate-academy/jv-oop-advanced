@@ -3,15 +3,15 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final String DEFAULT_COLOR = "White";
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
     private static final double MAX_CIRCLE_RADIUS = 10;
-    private static final int RANDOM_INDEX = 6;
+    private static final int RANDOM_INDEX = 5;
     private final Random random;
     private final ColorSupplier colorSupplier;
 
     public FigureSupplier() {
-        this.random = new Random();
-        this.colorSupplier = new ColorSupplier();
+        random = new Random();
+        colorSupplier = new ColorSupplier();
     }
 
     public Figure getRandomFigure() {
@@ -22,8 +22,7 @@ public class FigureSupplier {
             case 1 -> createRandomRectangle(color);
             case 2 -> createRandomRightTriangle(color);
             case 3 -> createRandomCircle(color);
-            case 4 -> createRandomIsoscelesTrapezoid(color);
-            default -> getDefaultFigure();
+            default -> createRandomIsoscelesTrapezoid(color);
         };
     }
 
