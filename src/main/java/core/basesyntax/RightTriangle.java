@@ -18,10 +18,6 @@ public class RightTriangle extends Figure {
                 + '}');
     }
 
-    public void setSide(int side) {
-        this.side = side;
-    }
-
     @Override
     public double getArea() {
         return (Math.sqrt(3) / 4) * Math.pow(side, 2);

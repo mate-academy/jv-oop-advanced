@@ -9,18 +9,6 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "Circle{"
-                + "radius"
-                + radius
-                + '}';
-    }
-
-    public void setRadius(int radius) {
-        this.radius = radius;
-    }
-
-    @Override
     public void draw() {
         System.out.println("Circle{"
                 + "color= "
