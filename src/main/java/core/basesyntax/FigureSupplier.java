@@ -4,7 +4,7 @@ import java.awt.*;
 import java.util.Random;
 
 public class FigureSupplier {
-    public Figure getRandomFigure() {
+    public static Figure getRandomFigure() {
         Random random = new Random();
         int figureType = random.nextInt(5);
         String color = ColorSupplier.getRandomColor();
