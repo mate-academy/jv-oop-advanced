@@ -9,15 +9,19 @@ public class Rectangle extends Figure {
         this.length = length;
         this.width = width;
     }
+
     public double getLength() {
         return length;
     }
+
     public void setLength(double length) {
         this.length = length;
     }
+
     public double getWidth() {
         return width;
     }
+
     public void setWidth(double width) {
         this.width = width;
     }
@@ -30,7 +34,7 @@ public class Rectangle extends Figure {
     @Override
     void draw() {
         System.out.println("Rectangle color: " + getColor()
-            + ", Length = " + length + ", Width = " + width
-            + "Area = " + getArea());
+                + ", Length = " + length + ", Width = " + width
+                + "Area = " + getArea());
     }
 }
