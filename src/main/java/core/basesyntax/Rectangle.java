@@ -1,6 +1,9 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
+    private int firstSide;
+    private int secondSide;
+
     public int getFirstSide() {
         return firstSide;
     }
@@ -16,9 +19,6 @@ public class Rectangle extends Figure {
     public void setSecondSide(int secondSide) {
         this.secondSide = secondSide;
     }
-
-    private int firstSide;
-    private int secondSide;
 
     @Override
     public double calculateArea() {
