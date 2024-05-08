@@ -9,11 +9,14 @@ import core.basesyntax.model.Square;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int NUMBER_OF_FIGURES = 5;
+    private static final int RANDOM_BOUND = 50;
+    private static final int CIRCLE_RADIUS = 10;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int index = random.nextInt(5);
+        int index = random.nextInt(NUMBER_OF_FIGURES);
         return switch (index) {
             case 0 -> new Circle(colorSupplier.getRandomColor(), getRandomInt());
             case 1 -> new Rectangle(colorSupplier.getRandomColor(), getRandomDouble(),
@@ -27,7 +30,7 @@ public class FigureSupplier {
     }
 
     private int getRandomInt() {
-        return random.nextInt(50);
+        return random.nextInt(RANDOM_BOUND);
     }
 
     private double getRandomDouble() {
@@ -35,6 +38,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", 10);
+        return new Circle("white", CIRCLE_RADIUS);
     }
 }
