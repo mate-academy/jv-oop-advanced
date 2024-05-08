@@ -32,9 +32,8 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    void draw() {
+    public void draw() {
         System.out.println("Rectangle color: " + getColor()
-                + ", Length = " + length + ", Width = " + width
-                + "Area = " + getArea());
+                + ", Length = " + length + ", Width = " + width);
     }
 }

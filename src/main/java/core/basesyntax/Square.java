@@ -22,7 +22,7 @@ public class Square extends Figure {
     }
 
     @Override
-    void draw() {
+    public void draw() {
         System.out.println("Square color: " + getColor()
                 + ", Side length = " + sideLength
                 + "Area = " + getArea());
