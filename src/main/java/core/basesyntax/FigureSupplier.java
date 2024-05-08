@@ -7,7 +7,7 @@ public class FigureSupplier {
         Random random = new Random();
         int figureType = random.nextInt(5);
         String color = ColorSupplier.getRandomColor();
-        switch (figureType){
+        switch (figureType) {
             case 0:
                 double squareSide = random.nextDouble() * 10 + 1;
                 return new Square(color, squareSide);
@@ -26,11 +26,13 @@ public class FigureSupplier {
                 double trapezoidBase1 = random.nextDouble() * 10 + 1;
                 double trapezoidBase2 = random.nextDouble() * 10 + 1;
                 double trapezoidHeight = random.nextDouble() * 10 + 1;
-                return new IsoscelesTrapezoid(color, trapezoidBase1, trapezoidBase2, trapezoidHeight);
+                return new IsoscelesTrapezoid(color, trapezoidBase1, trapezoidBase2,
+                    trapezoidHeight);
             default:
                 return null;
         }
     }
+
     public static Figure getDefaultFigure() {
         return new Circle("White", 10);
     }
