@@ -8,7 +8,7 @@ public class MainApp {
         ColorSuplier colorSuplier = new ColorSuplier();
         Figure figure = new Square(colorSuplier.getRandomColor(), 5);
         figure.draw();
-        figure = new Circle( colorSuplier.getRandomColor(), 3);
+        figure = new IsoscelesTrapezoid(colorSuplier.getRandomColor(),3, 5, 4);
         figure.draw();
     }
 }
