@@ -17,7 +17,8 @@ public class RightTriangle extends Figure{
 
     @Override
     public void draw() {
-        System.out.println("This is a "
+        System.out.println(
+                "This is a "
                 + this.getColor()
                 + " rectangle with bottom side = " + bottom + " cm "
                 + " rectangle with altitude = " + altitude + " cm "

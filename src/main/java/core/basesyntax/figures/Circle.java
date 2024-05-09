@@ -1,16 +1,16 @@
 package core.basesyntax.figures;
 
-public class Square extends Figure {
-    private double side;
+public class Circle extends Figure {
+    private double radius;
 
-    public Square(String color, double side) {
+    public Circle(String color, double radius) {
         super(color);
-        this.side = side;
+        this.radius = radius;
     }
 
     @Override
     public double getArea() {
-        return this.side * this.side;
+        return Math.PI * radius * radius;
     }
 
     @Override
@@ -18,7 +18,7 @@ public class Square extends Figure {
         System.out.println(
                 "This is a "
                 + this.getColor()
-                + " square with four sides with " + side + " cm "
+                + " rectangle with radius = " + radius + " cm "
                 + " and area " + this.getArea() + " square cm"
         );
     }
