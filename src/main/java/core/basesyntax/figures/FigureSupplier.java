@@ -18,11 +18,11 @@ public class FigureSupplier {
                 return new Circle(color, radius);
 
             case 2:
-                int side= random.nextInt(maxSize) + 1;
+                int side = random.nextInt(maxSize) + 1;
                 return new Circle(color, side);
 
             case 3:
-                int firstLeg= random.nextInt(maxSize) + 1;
+                int firstLeg = random.nextInt(maxSize) + 1;
                 int secondLeg = random.nextInt(maxSize) + 1;
                 return new RightTriangle(color, firstLeg, secondLeg);
 
