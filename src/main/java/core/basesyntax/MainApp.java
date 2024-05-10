@@ -12,7 +12,7 @@ public class MainApp {
             if (i < figures / 2) {
                 figure = figureSupplier.getRandomFigure();
             } else {
-                figure = figureSupplier.getDefaultFigure();
+                figure = figureSupplier.getDefaultFigure(figures / 2);
             }
             figure.draw();
         }
