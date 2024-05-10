@@ -4,9 +4,13 @@ import core.basesyntax.color.ColorSuplier;
 import java.util.Random;
 
 public class FigureSupplier {
+    public Figure getRandomFigure() {
+        return getFigure();
+    }
+
     private final Random random = new Random();
 
-    public Figure getRandomFigure() {
+    private Figure getFigure() {
         final int figures = 5;
         final int maxSize = 99;
         ColorSuplier colorSuplier = new ColorSuplier();
