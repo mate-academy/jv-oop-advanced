@@ -1,32 +1,25 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private int firstSide;
-    private int secondSide;
+    private final int firstSide;
+    private final int secondSide;
+
+    public Rectangle(int firstSide, int secondSide) {
+        this.firstSide = firstSide;
+        this.secondSide = secondSide;
+    }
 
     public int getFirstSide() {
         return firstSide;
-    }
-
-    public void setFirstSide(int firstSide) {
-        this.firstSide = firstSide;
     }
 
     public int getSecondSide() {
         return secondSide;
     }
 
-    public void setSecondSide(int secondSide) {
-        this.secondSide = secondSide;
-    }
-
     @Override
     public double calculateArea() {
         return firstSide * secondSide;
-    }
-
-    public String getName() {
-        return "rectangle";
     }
 
     @Override

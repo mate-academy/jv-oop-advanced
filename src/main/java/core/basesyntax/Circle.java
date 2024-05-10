@@ -1,10 +1,10 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private int radius;
+    private final int radius;
 
-    public String getName() {
-        return "circle";
+    public Circle(int radius) {
+        this.radius = radius;
     }
 
     @Override
@@ -24,7 +24,4 @@ public class Circle extends Figure {
         return radius;
     }
 
-    public void setRadius(int radius) {
-        this.radius = radius;
-    }
 }

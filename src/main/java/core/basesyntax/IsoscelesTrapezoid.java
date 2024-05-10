@@ -1,12 +1,14 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private int bottomSide;
-    private int topSide;
-    private int height;
+    private final int bottomSide;
+    private final int topSide;
+    private final int height;
 
-    public String getName() {
-        return "isosceles trapezoid";
+    public IsoscelesTrapezoid(int bottomSide, int topSide, int height) {
+        this.bottomSide = bottomSide;
+        this.topSide = topSide;
+        this.height = height;
     }
 
     @Override
@@ -28,23 +30,11 @@ public class IsoscelesTrapezoid extends Figure {
         return bottomSide;
     }
 
-    public void setBottomSide(int bottomSide) {
-        this.bottomSide = bottomSide;
-    }
-
     public int getTopSide() {
         return topSide;
     }
 
-    public void setTopSide(int topSide) {
-        this.topSide = topSide;
-    }
-
     public int getHeight() {
         return height;
-    }
-
-    public void setHeight(int height) {
-        this.height = height;
     }
 }
