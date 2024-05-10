@@ -3,11 +3,6 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final String CIRCLE = "circle";
-    public static final String ISOSCELES_TRAPEZOID = "isosceles trapezoid";
-    public static final String RECTANGLE = "rectangle";
-    public static final String RIGHT_TRIANGLE = "right triangle";
-    public static final String SQUARE = "square";
     public static final int FIGURE_COUNT = 5;
     public static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
     public static final int MIN_LENGTH = 1;
