@@ -1,28 +1,28 @@
 package core.basesyntax.figures;
 
 public class RightTriangle extends Figure{
-    private double bottom;
-    private double altitude;
+    private int firstLeg;
+    private int secondLeg;
 
-    public RightTriangle(String color, double bottom, double altitude) {
+    public RightTriangle(String color, int firstLeg, int secondLeg) {
         super(color);
-        this.bottom = bottom;
-        this.altitude = altitude;
+        this.firstLeg = firstLeg > secondLeg ? firstLeg : secondLeg;
+        this.secondLeg = secondLeg < firstLeg ? secondLeg : firstLeg;
     }
 
     @Override
     public double getArea() {
-        return bottom * altitude / 2.0;
+        return firstLeg * Math.sqrt(firstLeg * firstLeg - secondLeg * secondLeg) / 2.0;
     }
 
     @Override
     public void draw() {
         System.out.println(
-                "This is a "
-                + this.getColor()
-                + " rectangle with bottom side = " + bottom + " cm "
-                + " rectangle with altitude = " + altitude + " cm "
-                + " and area " + this.getArea() + " square cm"
+                "Figure: "
+                + "triangle, area: " +  (double) ((long) (getArea() * 10)) / 10 + " sq. units,"
+                + " firstLeg: " + firstLeg + " units,"
+                + " secondtLeg: " + secondLeg + " units,"
+                + " color: "  + getColor()
         );
     }
 }
