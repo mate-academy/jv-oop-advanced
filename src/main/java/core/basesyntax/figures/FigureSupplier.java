@@ -5,10 +5,10 @@ import java.util.Random;
 
 public class FigureSupplier {
     private final Random random = new Random();
-    private final int figures = 5;
-    private final int maxSize = 99;
 
     public Figure getRandomFigure() {
+        final int figures = 5;
+        final int maxSize = 99;
         ColorSuplier colorSuplier = new ColorSuplier();
         int numberFigure = random.nextInt(figures);
         String color = colorSuplier.getRandomColor();
