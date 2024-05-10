@@ -1,7 +1,8 @@
 package core.basesyntax;
 
-import core.basesyntax.color.ColorSuplier;
-import core.basesyntax.figures.*;
+
+import core.basesyntax.figures.Figure;
+import core.basesyntax.figures.FigureSupplier;
 
 public class MainApp {
     public static void main(String[] args) {
