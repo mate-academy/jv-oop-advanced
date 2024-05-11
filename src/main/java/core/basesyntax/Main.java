@@ -2,6 +2,7 @@ package core.basesyntax;
 
 public class Main {
     private static final int DIVISOR = 2;
+
     public static void main(String[] args) {
 
         AbstractFigure [] figures = new AbstractFigure[6];
@@ -14,6 +15,7 @@ public class Main {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
         }
+
         for (Drawable figure : figures) {
             figure.draw();
         }
