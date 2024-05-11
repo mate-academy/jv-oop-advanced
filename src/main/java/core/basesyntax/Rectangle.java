@@ -4,10 +4,10 @@ public class Rectangle extends AbstractFigure {
     private final double height;
     private final double width;
 
-    public Rectangle(Colors color, double side1, double side2) {
+    public Rectangle(Colors color, double height, double width) {
         super(color);
-        this.height = side1;
-        this.width = side2;
+        this.height = height;
+        this.width = width;
     }
 
     @Override

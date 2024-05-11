@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public class RightTriangle extends AbstractFigure {
+    private static final int DIVISOR = 2;
     private final double firstLeg;
     private final double secondLeg;
 
@@ -12,7 +13,7 @@ public class RightTriangle extends AbstractFigure {
 
     @Override
     public double calculateArea() {
-        return firstLeg * secondLeg / 2;
+        return firstLeg * secondLeg / DIVISOR;
     }
 
     @Override

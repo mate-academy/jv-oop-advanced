@@ -16,6 +16,6 @@ public class Square extends AbstractFigure {
     @Override
     public void draw() {
         System.out.println("Figure: Square, area: " + calculateArea() + " sq. units, side: " + side
-                + "units, color: " + color.name());
+                + " units, color: " + color.name());
     }
 }
