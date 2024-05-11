@@ -4,11 +4,11 @@ import core.basesyntax.color.ColorSuplier;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final Random random = new Random();
-    private final int figures = 5;
-    private final int maxSize = 99;
-    private final String defaultColor = "white";
-    private final int defaultRadius = 10;
+    private static final Random random = new Random();
+    private static final int figures = 5;
+    private static final int maxSize = 99;
+    private static final String defaultColor = "white";
+    private static final int defaultRadius = 10;
 
     public Figure getRandomFigure() {
         return getFigure();
