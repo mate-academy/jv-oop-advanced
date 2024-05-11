@@ -10,10 +10,10 @@ public class FigureSupplier {
     private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
     private static final int DEFAULT_RADIUS = 10;
     private static final ColorSuplier COLOR_SUPLIER = new ColorSuplier();
-    private final Random RANDOM = new Random();
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        int numberFigure = RANDOM.nextInt(FIGURES_QUANTITY);
+        int numberFigure = random.nextInt(FIGURES_QUANTITY);
         String color = COLOR_SUPLIER.getRandomColor();
         switch (numberFigure) {
             case 1:
@@ -36,7 +36,7 @@ public class FigureSupplier {
     }
 
     private int randomSize() {
-        return RANDOM.nextInt(MAX_SIZE) + 1;
+        return random.nextInt(MAX_SIZE) + 1;
     }
 
     private IsoscelesTrapezoid getRandomIsoscelesTrapezoid(String color) {
