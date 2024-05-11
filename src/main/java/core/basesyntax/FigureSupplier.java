@@ -21,14 +21,14 @@ public class FigureSupplier {
         };
     }
 
-    public Figure circle() {
+    private Figure circle() {
         Circle circle = new Circle(randomValue());
         circle.setName(FigureName.CIRCLE.name().toLowerCase());
         circle.setColor(randomColor());
         return circle;
     }
 
-    public Figure isoscelesTrapezoid() {
+    private Figure isoscelesTrapezoid() {
         IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(
                 randomValue(), randomValue(), randomValue()
         );
@@ -39,21 +39,21 @@ public class FigureSupplier {
         return isoscelesTrapezoid;
     }
 
-    public Figure rectangle() {
+    private Figure rectangle() {
         Rectangle rectangle = new Rectangle(randomValue(), randomValue());
         rectangle.setName(FigureName.RECTANGLE.name().toLowerCase());
         rectangle.setColor(randomColor());
         return rectangle;
     }
 
-    public Figure rightTriangle() {
+    private Figure rightTriangle() {
         RightTriangle rightTriangle = new RightTriangle(randomValue(), randomValue());
         rightTriangle.setName(FigureName.RIGHT_TRIANGLE.name().toLowerCase().replace('_', ' '));
         rightTriangle.setColor(randomColor());
         return rightTriangle;
     }
 
-    public Figure square() {
+    private Figure square() {
         Square square = new Square(randomValue());
         square.setName(FigureName.SQUARE.name().toLowerCase());
         square.setColor(randomColor());
