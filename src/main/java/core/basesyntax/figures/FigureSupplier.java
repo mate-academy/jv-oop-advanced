@@ -6,14 +6,14 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final Random RANDOM = new Random();
-    private static final int FIGURES = 5;
+    private static final int FIGURES_QUANTITY = 5;
     private static final int MAX_SIZE = 99;
     private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
     private static final int DEFAULT_RADIUS = 10;
 
     public Figure getRandomFigure() {
         ColorSuplier colorSuplier = new ColorSuplier();
-        int numberFigure = RANDOM.nextInt(FIGURES);
+        int numberFigure = RANDOM.nextInt(FIGURES_QUANTITY);
         String color = colorSuplier.getRandomColor();
         switch (numberFigure) {
             case 1:
