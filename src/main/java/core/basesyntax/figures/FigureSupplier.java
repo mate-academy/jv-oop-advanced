@@ -4,7 +4,7 @@ import core.basesyntax.color.ColorSuplier;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final Random random = new Random();
+    private static final Random RANDOM = new Random();
     private static final int figures = 5;
     private static final int maxSize = 99;
     private static final String defaultColor = "white";
@@ -18,7 +18,7 @@ public class FigureSupplier {
         final int figures = 5;
         final int maxSize = 99;
         ColorSuplier colorSuplier = new ColorSuplier();
-        int numberFigure = random.nextInt(figures);
+        int numberFigure = RANDOM.nextInt(figures);
         String color = colorSuplier.getRandomColor();
         switch (numberFigure) {
             case 1:
@@ -39,25 +39,25 @@ public class FigureSupplier {
     }
 
     private IsoscelesTrapezoid getRandomIsoscelesTrapezoid(int size, String color) {
-        int top = random.nextInt(size) + 1;
-        int down = random.nextInt(size) + 1;
-        int altitude = random.nextInt(size) + 1;
+        int top = RANDOM.nextInt(size) + 1;
+        int down = RANDOM.nextInt(size) + 1;
+        int altitude = RANDOM.nextInt(size) + 1;
         return new IsoscelesTrapezoid(color, top, down, altitude);
     }
 
     private RightTriangle getRandomRightTriangle(int maxSize, String color) {
-        int firstLeg = random.nextInt(maxSize) + 1;
-        int secondLeg = random.nextInt(maxSize) + 1;
+        int firstLeg = RANDOM.nextInt(maxSize) + 1;
+        int secondLeg = RANDOM.nextInt(maxSize) + 1;
         return new RightTriangle(color, firstLeg, secondLeg);
     }
 
     private Square getRandomSquare(int size, String color) {
-        int side = random.nextInt(size) + 1;
+        int side = RANDOM.nextInt(size) + 1;
         return new Square(color, side);
     }
 
     private Circle getRandomCircle(int size, String color) {
-        int radius = random.nextInt(size) + 1;
+        int radius = RANDOM.nextInt(size) + 1;
         return new Circle(color, radius);
     }
 
