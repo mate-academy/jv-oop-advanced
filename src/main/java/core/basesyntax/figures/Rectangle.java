@@ -1,5 +1,7 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.utility.Utility;
+
 public class Rectangle extends Figure {
     private int width;
     private int height;
@@ -22,7 +24,7 @@ public class Rectangle extends Figure {
                 + this.getColor()
                 + " rectangle with width = " + width + " cm "
                 + " rectangle with height = " + height + " cm "
-                + " and area " + this.getArea() + " square cm"
+                + " and area " + Utility.roundAfterPoint(getArea(), 1) + " square cm"
         );
     }
 }

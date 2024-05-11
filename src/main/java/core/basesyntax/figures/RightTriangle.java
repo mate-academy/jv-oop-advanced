@@ -1,5 +1,7 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.utility.Utility;
+
 public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
@@ -19,7 +21,7 @@ public class RightTriangle extends Figure {
     public void draw() {
         System.out.println(
                 "Figure: "
-                + "triangle, area: " + (double) ((long) (getArea() * 10)) / 10 + " sq. units,"
+                + "triangle, area: " + Utility.roundAfterPoint(getArea(), 1) + " sq. units,"
                 + " firstLeg: " + firstLeg + " units,"
                 + " secondtLeg: " + secondLeg + " units,"
                 + " color: " + getColor()

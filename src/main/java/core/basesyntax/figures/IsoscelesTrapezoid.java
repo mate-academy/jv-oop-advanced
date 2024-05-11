@@ -1,5 +1,7 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.utility.Utility;
+
 public class IsoscelesTrapezoid extends Figure {
     private int top;
     private int bottom;
@@ -22,7 +24,7 @@ public class IsoscelesTrapezoid extends Figure {
         System.out.println(
                 "Figure: "
                 + "Isosceles trapezoid, area: "
-                        + (double) ((long) (getArea() * 10)) / 10 + " sq. units,"
+                        + Utility.roundAfterPoint(getArea(), 1) + " sq. units,"
                 + " top: " + top + " units,"
                 + " bottom: " + bottom + " units,"
                 + " altitude: " + altitude + " units,"
