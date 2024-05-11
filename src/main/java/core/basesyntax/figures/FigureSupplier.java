@@ -1,5 +1,6 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.color.Color;
 import core.basesyntax.color.ColorSuplier;
 import java.util.Random;
 
@@ -7,7 +8,7 @@ public class FigureSupplier {
     private static final Random RANDOM = new Random();
     private static final int FIGURES = 5;
     private static final int MAX_SIZE = 99;
-    private static final String defaultColor = "white";
+    private static final String defaultColor = Color.WHITE.name().toLowerCase();
     private static final int defaultRadius = 10;
 
     public Figure getRandomFigure() {
