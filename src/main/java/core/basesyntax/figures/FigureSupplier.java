@@ -22,12 +22,11 @@ public class FigureSupplier {
         String color = colorSuplier.getRandomColor();
         switch (numberFigure) {
             case 1:
-                int radius = random.nextInt(maxSize) + 1;
-                return new Circle(color, radius);
+                return getRandomCircle(maxSize, color);
 
             case 2:
                 int side = random.nextInt(maxSize) + 1;
-                return new Circle(color, side);
+                return new Square(color, side);
 
             case 3:
                 int firstLeg = random.nextInt(maxSize) + 1;
@@ -43,6 +42,11 @@ public class FigureSupplier {
             default:
                 return new Circle(color, random.nextInt(maxSize));
         }
+    }
+
+    private Circle getRandomCircle(int size, String color) {
+        int radius = random.nextInt(size) + 1;
+        return new Circle(color, radius);
     }
 
     public Figure getDefaultFigure() {
