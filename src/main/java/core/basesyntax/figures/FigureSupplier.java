@@ -8,8 +8,8 @@ public class FigureSupplier {
     private static final Random RANDOM = new Random();
     private static final int FIGURES = 5;
     private static final int MAX_SIZE = 99;
-    private static final String defaultColor = Color.WHITE.name().toLowerCase();
-    private static final int defaultRadius = 10;
+    private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
+    private static final int DEFAULT_RADIUS = 10;
 
     public Figure getRandomFigure() {
         return getFigure();
@@ -61,6 +61,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(defaultColor, defaultRadius);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
