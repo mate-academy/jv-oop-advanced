@@ -38,10 +38,8 @@ public class FigureSupplier {
                 return getRandomRightTriangle(color);
 
             case 4:
-                return getRandomIsoscelesTrapezoid(color);
-
             default:
-                return getDefaultFigure();
+                return getRandomIsoscelesTrapezoid(color);
         }
     }
 
