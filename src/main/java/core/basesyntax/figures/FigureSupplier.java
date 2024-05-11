@@ -15,6 +15,14 @@ public class FigureSupplier {
         return getFigure();
     }
 
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
+    }
+
+    private static int randomSize() {
+        return RANDOM.nextInt(MAX_SIZE) + 1;
+    }
+
     private Figure getFigure() {
         ColorSuplier colorSuplier = new ColorSuplier();
         int numberFigure = RANDOM.nextInt(FIGURES);
@@ -58,9 +66,5 @@ public class FigureSupplier {
     private Circle getRandomCircle(int size, String color) {
         int radius = RANDOM.nextInt(size) + 1;
         return new Circle(color, radius);
-    }
-
-    public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
