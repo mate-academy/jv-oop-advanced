@@ -5,8 +5,8 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final Random RANDOM = new Random();
-    private static final int figures = 5;
-    private static final int maxSize = 99;
+    private static final int FIGURES = 5;
+    private static final int MAX_SIZE = 99;
     private static final String defaultColor = "white";
     private static final int defaultRadius = 10;
 
@@ -15,26 +15,24 @@ public class FigureSupplier {
     }
 
     private Figure getFigure() {
-        final int figures = 5;
-        final int maxSize = 99;
         ColorSuplier colorSuplier = new ColorSuplier();
-        int numberFigure = RANDOM.nextInt(figures);
+        int numberFigure = RANDOM.nextInt(FIGURES);
         String color = colorSuplier.getRandomColor();
         switch (numberFigure) {
             case 1:
-                return getRandomCircle(maxSize, color);
+                return getRandomCircle(MAX_SIZE, color);
 
             case 2:
-                return getRandomSquare(maxSize, color);
+                return getRandomSquare(MAX_SIZE, color);
 
             case 3:
-                return getRandomRightTriangle(maxSize, color);
+                return getRandomRightTriangle(MAX_SIZE, color);
 
             case 4:
-                return getRandomIsoscelesTrapezoid(maxSize, color);
+                return getRandomIsoscelesTrapezoid(MAX_SIZE, color);
 
             default:
-                return getRandomCircle(maxSize, color);
+                return getRandomCircle(MAX_SIZE, color);
         }
     }
 
