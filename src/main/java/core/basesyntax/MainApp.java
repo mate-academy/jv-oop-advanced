@@ -5,7 +5,7 @@ import core.basesyntax.figures.FigureSupplier;
 
 public class MainApp {
     public static final int FIGURES = 6;
-    
+
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
 
