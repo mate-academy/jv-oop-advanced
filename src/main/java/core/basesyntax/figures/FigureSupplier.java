@@ -5,16 +5,16 @@ import core.basesyntax.color.ColorSuplier;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final Random RANDOM = new Random();
     private static final int FIGURES_QUANTITY = 5;
     private static final int MAX_SIZE = 99;
     private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
     private static final int DEFAULT_RADIUS = 10;
+    private static final ColorSuplier COLOR_SUPLIER = new ColorSuplier();
+    private final Random RANDOM = new Random();
 
     public Figure getRandomFigure() {
-        ColorSuplier colorSuplier = new ColorSuplier();
         int numberFigure = RANDOM.nextInt(FIGURES_QUANTITY);
-        String color = colorSuplier.getRandomColor();
+        String color = COLOR_SUPLIER.getRandomColor();
         switch (numberFigure) {
             case 1:
                 return getRandomCircle(color);
@@ -35,7 +35,7 @@ public class FigureSupplier {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
-    private static int randomSize() {
+    private int randomSize() {
         return RANDOM.nextInt(MAX_SIZE) + 1;
     }
 
