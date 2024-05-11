@@ -7,8 +7,8 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final int figures = 5;
     private final int maxSize = 99;
-    private final String DEFAULT_COLOR = "white";
-    private final int DEFAULT_RADIUS = 10;
+    private final String defaultColor = "white";
+    private final int defaultRadius = 10;
 
     public Figure getRandomFigure() {
         return getFigure();
@@ -46,6 +46,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
+        return new Circle(defaultColor, defaultRadius);
     }
 }
