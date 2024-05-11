@@ -25,23 +25,35 @@ public class FigureSupplier {
                 return getRandomCircle(maxSize, color);
 
             case 2:
-                int side = random.nextInt(maxSize) + 1;
-                return new Square(color, side);
+                return getRandomSquare(maxSize, color);
 
             case 3:
-                int firstLeg = random.nextInt(maxSize) + 1;
-                int secondLeg = random.nextInt(maxSize) + 1;
-                return new RightTriangle(color, firstLeg, secondLeg);
+                return getRandomRightTriangle(maxSize, color);
 
             case 4:
-                int top = random.nextInt(maxSize) + 1;
-                int down = random.nextInt(maxSize) + 1;
-                int altitude = random.nextInt(maxSize) + 1;
-                return new IsoscelesTrapezoid(color, top, down, altitude);
+                return getRandomIsoscelesTrapezoid(maxSize, color);
 
             default:
-                return new Circle(color, random.nextInt(maxSize));
+                return getRandomCircle(maxSize, color);
         }
+    }
+
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid(int size, String color) {
+        int top = random.nextInt(size) + 1;
+        int down = random.nextInt(size) + 1;
+        int altitude = random.nextInt(size) + 1;
+        return new IsoscelesTrapezoid(color, top, down, altitude);
+    }
+
+    private RightTriangle getRandomRightTriangle(int maxSize, String color) {
+        int firstLeg = random.nextInt(maxSize) + 1;
+        int secondLeg = random.nextInt(maxSize) + 1;
+        return new RightTriangle(color, firstLeg, secondLeg);
+    }
+
+    private Square getRandomSquare(int size, String color) {
+        int side = random.nextInt(size) + 1;
+        return new Square(color, side);
     }
 
     private Circle getRandomCircle(int size, String color) {
