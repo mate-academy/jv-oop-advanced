@@ -1,5 +1,7 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.utility.Utility;
+
 public class Circle extends Figure {
     private int radius;
 
@@ -17,7 +19,7 @@ public class Circle extends Figure {
     public void draw() {
         System.out.println(
                 "Figure: "
-                + "circle, area: " + (double) ((long) (getArea() * 10)) / 10 + " sq. units,"
+                + "circle, area: " + Utility.roundAfterPoint(getArea(), 1) + " sq. units,"
                 + " radius: " + radius + " units,"
                 + " color: " + getColor()
         );
