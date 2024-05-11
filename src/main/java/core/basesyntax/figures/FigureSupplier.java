@@ -29,42 +29,42 @@ public class FigureSupplier {
         String color = colorSuplier.getRandomColor();
         switch (numberFigure) {
             case 1:
-                return getRandomCircle(MAX_SIZE, color);
+                return getRandomCircle(color);
 
             case 2:
-                return getRandomSquare(MAX_SIZE, color);
+                return getRandomSquare(color);
 
             case 3:
-                return getRandomRightTriangle(MAX_SIZE, color);
+                return getRandomRightTriangle(color);
 
             case 4:
-                return getRandomIsoscelesTrapezoid(MAX_SIZE, color);
+                return getRandomIsoscelesTrapezoid(color);
 
             default:
-                return getRandomCircle(MAX_SIZE, color);
+                return getDefaultFigure();
         }
     }
 
-    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid(int size, String color) {
-        int top = RANDOM.nextInt(size) + 1;
-        int down = RANDOM.nextInt(size) + 1;
-        int altitude = RANDOM.nextInt(size) + 1;
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid(String color) {
+        int top = randomSize();
+        int down = randomSize();
+        int altitude = randomSize();
         return new IsoscelesTrapezoid(color, top, down, altitude);
     }
 
-    private RightTriangle getRandomRightTriangle(int maxSize, String color) {
-        int firstLeg = RANDOM.nextInt(maxSize) + 1;
-        int secondLeg = RANDOM.nextInt(maxSize) + 1;
+    private RightTriangle getRandomRightTriangle(String color) {
+        int firstLeg = randomSize();
+        int secondLeg = randomSize();
         return new RightTriangle(color, firstLeg, secondLeg);
     }
 
-    private Square getRandomSquare(int size, String color) {
-        int side = RANDOM.nextInt(size) + 1;
+    private Square getRandomSquare(String color) {
+        int side = randomSize();
         return new Square(color, side);
     }
 
-    private Circle getRandomCircle(int size, String color) {
-        int radius = RANDOM.nextInt(size) + 1;
+    private Circle getRandomCircle(String color) {
+        int radius = randomSize();
         return new Circle(color, radius);
     }
 }
