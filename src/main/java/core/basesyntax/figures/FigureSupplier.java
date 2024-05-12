@@ -9,22 +9,19 @@ public class FigureSupplier {
     private static final int MAX_SIZE = 99;
     private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
     private static final int DEFAULT_RADIUS = 10;
-    private static final ColorSuplier COLOR_SUPLIER = new ColorSuplier();
+    private final ColorSuplier colorSuplier = new ColorSuplier();
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
         int numberFigure = random.nextInt(FIGURES_QUANTITY);
-        String color = COLOR_SUPLIER.getRandomColor();
+        String color = colorSuplier.getRandomColor();
         switch (numberFigure) {
             case 1:
                 return getRandomCircle(color);
-
             case 2:
                 return getRandomSquare(color);
-
             case 3:
                 return getRandomRightTriangle(color);
-
             case 4:
             default:
                 return getRandomIsoscelesTrapezoid(color);
