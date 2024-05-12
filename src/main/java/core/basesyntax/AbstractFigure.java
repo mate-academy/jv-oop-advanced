@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public abstract class AbstractFigure implements Figure {
-    private String color;
+    private final String color;
     private static final String FIGURE_INFO_FORMAT = "Figure: %s, area: %.2f sq. units, color: %s";
 
     public AbstractFigure(String color) {
