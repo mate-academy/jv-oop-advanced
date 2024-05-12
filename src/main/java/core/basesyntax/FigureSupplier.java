@@ -4,9 +4,10 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final Random random = new Random();
+    private static final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        String color = new ColorSupplier().getRandomColor();
+        String color = String.valueOf(colorSupplier.getRandomColor());
         int figureType = random.nextInt(5); // 5 figure types
 
         switch (figureType) {

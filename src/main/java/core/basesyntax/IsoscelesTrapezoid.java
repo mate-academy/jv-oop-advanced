@@ -1,26 +1,28 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends AbstractFigure {
-    private double base1;
-    private double base2;
-    private double height;
+    private static final double DEFAULT_AREA = 0.5;
+    private static final String DRAW_FORMAT = "firstBase: %.2f units, secondBase: %.2f units, Height: %.2f units";
 
-    public IsoscelesTrapezoid(String color, double base1, double base2, double height) {
+    private final double firstBase;
+    private final double secondBase;
+    private final double height;
+
+    public IsoscelesTrapezoid(String color, double firstBase, double secondBase, double height) {
         super(color);
-        this.base1 = base1;
-        this.base2 = base2;
+        this.firstBase = firstBase;
+        this.secondBase = secondBase;
         this.height = height;
     }
 
     @Override
     public double getArea() {
-        return 0.5 * (base1 + base2) * height;
+        return DEFAULT_AREA * (firstBase + secondBase) * height;
     }
 
     @Override
     public void draw() {
         super.draw();
-        System.out.println("Base1: " + base1 + " units, Base2: "
-                + base2 + " units, Height: " + height + " units");
+        System.out.printf(DRAW_FORMAT + "%n", firstBase, secondBase, height);
     }
 }
