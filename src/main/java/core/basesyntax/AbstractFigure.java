@@ -2,7 +2,6 @@ package core.basesyntax;
 
 public abstract class AbstractFigure implements Figure {
     private final String color;
-    private static final String FIGURE_INFO_FORMAT = "Figure: %s, area: %.2f sq. units, color: %s";
 
     public AbstractFigure(String color) {
         this.color = color;
@@ -13,7 +12,7 @@ public abstract class AbstractFigure implements Figure {
 
     @Override
     public void draw() {
-        String figureInfo = String.format(FIGURE_INFO_FORMAT,
+        String figureInfo = String.format("Figure: %s, area: %.2f sq. units, color: %s",
                 this.getClass().getSimpleName(), getArea(), color);
         System.out.println(figureInfo);
     }
@@ -23,3 +22,4 @@ public abstract class AbstractFigure implements Figure {
         return color;
     }
 }
+

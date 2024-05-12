@@ -2,7 +2,8 @@ package core.basesyntax;
 
 public class IsoscelesTrapezoid extends AbstractFigure {
     private static final double DEFAULT_AREA = 0.5;
-    private static final String DRAW_FORMAT = "firstBase: %.2f units, secondBase: %.2f units, Height: %.2f units";
+    private static final String DRAW_FORMAT = "firstBase: %.2f units, "
+            + "secondBase: %.2f units, Height: %.2f units";
 
     private final double firstBase;
     private final double secondBase;

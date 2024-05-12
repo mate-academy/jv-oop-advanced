@@ -3,7 +3,8 @@ package core.basesyntax;
 public class RightTriangle extends AbstractFigure {
     private static final double DEFAULT_AREA_FACTOR = 0.5;
     private static final String FIGURE_TYPE = "right triangle";
-    private static final String DRAW_FORMAT = "Figure: %s, area: %.2f sq. units, base: %.2f units, height: %.2f units, color: %s";
+    private static final String DRAW_FORMAT = "Figure: %s, area: %.2f sq. units, "
+            + "base: %.2f units, height: %.2f units, color: %s";
 
     private final double base;
     private final double height;
@@ -21,7 +22,8 @@ public class RightTriangle extends AbstractFigure {
 
     @Override
     public void draw() {
-        String figureInfo = String.format(DRAW_FORMAT, FIGURE_TYPE, getArea(), base, height, getColor());
+        String figureInfo = String.format(DRAW_FORMAT, FIGURE_TYPE, getArea(),
+                base, height, getColor());
         System.out.println(figureInfo);
     }
 }

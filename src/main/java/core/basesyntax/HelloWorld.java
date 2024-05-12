@@ -1,17 +1,20 @@
 package core.basesyntax;
 
 public class HelloWorld {
+    private static final int NUM_FIGURES = 6;
+    private static final int HALF_NUM_FIGURES = NUM_FIGURES / 2;
+
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        Figure[] figures = new Figure[6]; // Array size can be 3 or 6
+        Figure[] figures = new Figure[NUM_FIGURES];
 
         // Generating the first half of figures with random parameters
-        for (int i = 0; i < figures.length / 2; i++) {
+        for (int i = 0; i < HALF_NUM_FIGURES; i++) {
             figures[i] = figureSupplier.getRandomFigure();
         }
 
         // Generating the second half of figures with default parameters
-        for (int i = figures.length / 2; i < figures.length; i++) {
+        for (int i = HALF_NUM_FIGURES; i < NUM_FIGURES; i++) {
             figures[i] = figureSupplier.getDefaultFigure();
         }
 
@@ -21,4 +24,3 @@ public class HelloWorld {
         }
     }
 }
-
