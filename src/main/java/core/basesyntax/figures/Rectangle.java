@@ -1,10 +1,13 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.util.Colors;
+
 public class Rectangle extends Figure {
     private int sidea;
     private int sideb;
 
-    public Rectangle() {
+    public Rectangle(Colors color) {
+        super(color);
         this.sidea = getRandomNum();
         this.sideb = getRandomNum();
     }

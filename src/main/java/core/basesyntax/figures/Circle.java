@@ -5,15 +5,15 @@ import core.basesyntax.util.Colors;
 public class Circle extends Figure {
 
     private int rad;
-    private Colors color;
 
-    public Circle() {
+    public Circle(Colors color) {
+        super(color);
         this.rad = getRandomNum();
     }
 
-    public Circle(int rad, Colors color) {
+    public Circle(Colors color, int rad) {
+        super(color);
         this.rad = rad;
-        this.color = color;
     }
 
     @Override
@@ -24,6 +24,6 @@ public class Circle extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: Circle, area: " + getArea()
-                + " sq. units, " + "radius: " + rad + " units, color: " + color);
+                + " sq. units, " + "radius: " + rad + " units, color: " + getColor());
     }
 }

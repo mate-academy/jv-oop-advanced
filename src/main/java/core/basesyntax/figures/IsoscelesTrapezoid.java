@@ -1,11 +1,14 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.util.Colors;
+
 public class IsoscelesTrapezoid extends Figure {
     private int heigh;
     private int lowSide;
     private int hightSide;
 
-    public IsoscelesTrapezoid() {
+    public IsoscelesTrapezoid(Colors color) {
+        super(color);
         this.heigh = getRandomNum();
         this.lowSide = getRandomNum();
         this.hightSide = getRandomNum();

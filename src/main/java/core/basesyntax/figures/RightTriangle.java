@@ -1,10 +1,13 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.util.Colors;
+
 public class RightTriangle extends Figure {
     private int kat;
     private int kat1;
 
-    public RightTriangle() {
+    public RightTriangle(Colors color) {
+        super(color);
         this.kat = getRandomNum();
         this.kat1 = getRandomNum();
     }
