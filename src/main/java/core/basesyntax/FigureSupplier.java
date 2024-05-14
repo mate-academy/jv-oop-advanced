@@ -7,23 +7,31 @@ public class FigureSupplier {
     private static final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        String color = String.valueOf(colorSupplier.getRandomColor());
-        int figureType = random.nextInt(5); // 5 figure types
+        Color color = colorSupplier.getRandomColor();
+        FigureType figureType = getRandomFigureType();
 
         return switch (figureType) {
-            case 0 -> new Square(color, random.nextDouble() * 10 + 1); // side between 1 and 10
-            case 1 -> new Rectangle(color, random.nextDouble() * 10
-                    + 1, random.nextDouble() * 10 + 1);
-            case 2 -> new RightTriangle(color, random.nextDouble() * 10
-                    + 1, random.nextDouble() * 10 + 1);
-            case 3 -> new Circle(color, random.nextDouble() * 10 + 1); // radius between 1 and 10
-            case 4 -> new IsoscelesTrapezoid(color, random.nextDouble() * 10 + 1,
+            case CIRCLE -> new Circle(color.name(), random.nextDouble() * 10 + 1);
+            case SQUARE -> new Square(color.name(), random.nextDouble() * 10 + 1);
+            case RECTANGLE -> new Rectangle(color.name(), random.nextDouble() * 10 + 1,
+                    random.nextDouble() * 10 + 1);
+            case RIGHT_TRIANGLE -> new RightTriangle(color.name(), random.nextDouble() * 10 + 1,
+                    random.nextDouble() * 10 + 1);
+            case ISOSCELES_TRAPEZOID -> new IsoscelesTrapezoid(color.name(),
+                    random.nextDouble() * 10 + 1,
                     random.nextDouble() * 10 + 1, random.nextDouble() * 10 + 1);
-            default -> throw new IllegalStateException("Unexpected value: " + figureType);
+            default -> throw new IllegalStateException("Unexpected figure type: " + figureType);
         };
     }
 
     public Figure getDefaultFigure() {
         return new Circle("white", 10); // Default figure: white circle, radius 10
     }
+
+    private FigureType getRandomFigureType() {
+        FigureType[] figureTypes = FigureType.values();
+        int index = random.nextInt(figureTypes.length);
+        return figureTypes[index];
+    }
 }
+

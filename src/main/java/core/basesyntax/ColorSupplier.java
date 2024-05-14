@@ -7,11 +7,6 @@ public class ColorSupplier {
 
     public Color getRandomColor() {
         Color[] colors = Color.values();
-        int index = RANDOM.nextInt(colors.length);
-        return colors[index];
-    }
-
-    public enum Color {
-        RED, BLUE, GREEN, YELLOW, ORANGE
+        return colors[RANDOM.nextInt(colors.length)];
     }
 }
