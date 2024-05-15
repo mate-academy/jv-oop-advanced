@@ -23,7 +23,8 @@ public class FigureSupplier {
             case RECTANGLE -> new Rectangle(color.name(), dimension1, dimension2);
             case RIGHT_TRIANGLE -> new RightTriangle(color.name(), dimension1, dimension2);
             case ISOSCELES_TRAPEZOID -> {
-                double dimension3 = random.nextDouble() * (MAX_DIMENSION - MIN_DIMENSION) + MIN_DIMENSION;
+                double dimension3 = random.nextDouble() * (MAX_DIMENSION - MIN_DIMENSION)
+                        + MIN_DIMENSION;
                 yield new IsoscelesTrapezoid(color.name(), dimension1, dimension2, dimension3);
             }
         };
