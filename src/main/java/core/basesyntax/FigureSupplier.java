@@ -36,7 +36,6 @@ public class FigureSupplier {
 
     private FigureType getRandomFigureType() {
         FigureType[] figureTypes = FigureType.values();
-        int index = random.nextInt(figureTypes.length);
-        return figureTypes[index];
+        return figureTypes[random.nextInt(figureTypes.length)];
     }
 }
