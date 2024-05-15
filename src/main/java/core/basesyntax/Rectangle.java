@@ -1,8 +1,8 @@
 package core.basesyntax;
 
 public class Rectangle extends AbstractFigure {
-    private double length;
-    private double width;
+    private final double length;
+    private final double width;
 
     public Rectangle(String color, double length, double width) {
         super(color);
@@ -11,14 +11,14 @@ public class Rectangle extends AbstractFigure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return length * width;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: rectangle, area: "
-                + getArea() + " sq. units, length: "
+                + calculateArea() + " sq. units, length: "
                 + length + " units, width: " + width + " units, color: " + getColor());
     }
 }

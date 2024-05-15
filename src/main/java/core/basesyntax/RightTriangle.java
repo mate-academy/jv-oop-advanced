@@ -16,13 +16,13 @@ public class RightTriangle extends AbstractFigure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return DEFAULT_AREA_FACTOR * base * height;
     }
 
     @Override
     public void draw() {
-        String figureInfo = String.format(DRAW_FORMAT, FIGURE_TYPE, getArea(),
+        String figureInfo = String.format(DRAW_FORMAT, FIGURE_TYPE, calculateArea(),
                 base, height, getColor());
         System.out.println(figureInfo);
     }

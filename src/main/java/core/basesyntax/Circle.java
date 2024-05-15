@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Circle extends AbstractFigure {
-    private double radius;
+    private final double radius;
 
     public Circle(String color, double radius) {
         super(color);
@@ -9,7 +9,7 @@ public class Circle extends AbstractFigure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return Math.PI * radius * radius;
     }
 

@@ -8,12 +8,12 @@ public abstract class AbstractFigure implements Figure {
     }
 
     @Override
-    public abstract double getArea();
+    public abstract double calculateArea();
 
     @Override
     public void draw() {
         System.out.printf("Figure: %s, area: %.2f sq. units, color: %s\n",
-                getClass().getSimpleName(), getArea(), color);
+                getClass().getSimpleName(), calculateArea(), color);
     }
 
     @Override

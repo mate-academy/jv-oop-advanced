@@ -17,7 +17,7 @@ public class IsoscelesTrapezoid extends AbstractFigure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return DEFAULT_AREA * (firstBase + secondBase) * height;
     }
 
