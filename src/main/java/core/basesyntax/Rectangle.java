@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-import abstracts.Figure;
+import abstracts.FigureAbstract;
 import enums.Color;
 
-public class Rectangle extends Figure {
+public class Rectangle extends FigureAbstract {
     private double sideA;
     private double sideB;
 

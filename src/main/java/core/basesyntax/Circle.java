@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-import abstracts.Figure;
+import abstracts.FigureAbstract;
 import enums.Color;
 
-public class Circle extends Figure {
+public class Circle extends FigureAbstract {
     private double radius;
 
     public Circle(Color color, double radius) {

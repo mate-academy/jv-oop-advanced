@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-import abstracts.Figure;
+import abstracts.FigureAbstract;
 import enums.Color;
 
-public class IsoscelesTrapezoid extends Figure {
+public class IsoscelesTrapezoid extends FigureAbstract {
     private double mainSideTop;
     private double mainSideDown;
     private double high;

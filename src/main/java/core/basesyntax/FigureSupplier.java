@@ -1,5 +1,6 @@
 package core.basesyntax;
 
+import abstracts.FigureAbstract;
 import enums.Color;
 import enums.Figure;
 import java.util.Random;
@@ -14,7 +15,7 @@ public class FigureSupplier {
 
     private final Random random = new Random();
 
-    public abstracts.Figure getRandomFigure() {
+    public FigureAbstract getRandomFigure() {
         Figure randomFigure = figures[random.nextInt(figures.length)];
 
         switch (randomFigure) {
@@ -46,7 +47,7 @@ public class FigureSupplier {
         }
     }
 
-    public abstracts.Figure getDefaultFigure() {
+    public FigureAbstract getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_UNITS);
     }
 
