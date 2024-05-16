@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 import abstracts.Figure;
+import enums.Color;
 
 /**
  * Feel free to remove this class and create your own.
@@ -12,9 +13,9 @@ public class HelloWorld {
         Figure figure1 = figureSupplier.getRandomFigure();
         Figure figure2 = figureSupplier.getRandomFigure();
         Figure figure3 = figureSupplier.getRandomFigure();
-        Figure figure4 = figureSupplier.getRandomFigure();
-        Figure figure5 = figureSupplier.getRandomFigure();
-        Figure figure6 = figureSupplier.getRandomFigure();
+        Figure figure4 = figureSupplier.getDefaultFigure();
+        Figure figure5 = new RightTriangle(Color.RED, 34, 15);
+        Figure figure6 = new Square(Color.GREEN, 50);
 
         Figure[] figures = new Figure[] {
                 figure1,

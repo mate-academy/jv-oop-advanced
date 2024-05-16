@@ -1,41 +1,43 @@
 package core.basesyntax;
 
-import abstracts.Figure;
-import enums.Colors;
-import enums.Figures;
+import enums.Color;
+import enums.Figure;
 import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_UNITS = 100;
-    private static final Figures[] FIGURES = Figures.values();
-    private static final ColorSupplier COLOR_SUPPLIER = new ColorSupplier();
+    private static final int DEFAULT_UNITS = 10;
+    private static final Color DEFAULT_COLOR = Color.WHITE;
+
+    private final Figure[] figures = Figure.values();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     private final Random random = new Random();
 
-    public Figure getRandomFigure() {
-        Figures randomFigure = FIGURES[random.nextInt(FIGURES.length)];
+    public abstracts.Figure getRandomFigure() {
+        Figure randomFigure = figures[random.nextInt(figures.length)];
 
         switch (randomFigure) {
             case SQUARE:
-                return new Square(COLOR_SUPPLIER.getRandomColor(), getRandomUnits());
+                return new Square(colorSupplier.getRandomColor(), getRandomUnits());
             case CIRCLE:
-                return new Circle(COLOR_SUPPLIER.getRandomColor(), getRandomUnits());
+                return new Circle(colorSupplier.getRandomColor(), getRandomUnits());
             case TRAPEZOID:
                 return new IsoscelesTrapezoid(
-                        COLOR_SUPPLIER.getRandomColor(),
+                        colorSupplier.getRandomColor(),
                         getRandomUnits(),
                         getRandomUnits(),
                         getRandomUnits()
                 );
             case RIGHTTRIANGLE:
                 return new RightTriangle(
-                        COLOR_SUPPLIER.getRandomColor(),
+                        colorSupplier.getRandomColor(),
                         getRandomUnits(),
                         getRandomUnits()
                 );
             case RECTANGLE:
                 return new Rectangle(
-                        COLOR_SUPPLIER.getRandomColor(),
+                        colorSupplier.getRandomColor(),
                         getRandomUnits(),
                         getRandomUnits()
                 );
@@ -44,8 +46,8 @@ public class FigureSupplier {
         }
     }
 
-    public Figure getDefaultFigure() {
-        return new Circle(Colors.white, 10);
+    public abstracts.Figure getDefaultFigure() {
+        return new Circle(DEFAULT_COLOR, DEFAULT_UNITS);
     }
 
     private int getRandomUnits() {

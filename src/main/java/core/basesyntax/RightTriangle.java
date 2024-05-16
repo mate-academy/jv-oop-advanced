@@ -1,13 +1,13 @@
 package core.basesyntax;
 
 import abstracts.Figure;
-import enums.Colors;
+import enums.Color;
 
 public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
-    public RightTriangle(Colors color, double firstLeg, double secondLeg) {
+    public RightTriangle(Color color, double firstLeg, double secondLeg) {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;

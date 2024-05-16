@@ -1,17 +1,17 @@
 package abstracts;
 
-import enums.Colors;
+import enums.Color;
 import interfaces.AreaCalculable;
 import interfaces.Drawable;
 
 public abstract class Figure implements AreaCalculable, Drawable {
-    protected Colors color;
+    protected Color color;
 
-    protected Figure(Colors color) {
+    protected Figure(Color color) {
         this.color = color;
     }
 
-    public Colors getColor() {
+    public Color getColor() {
         return color;
     }
 }

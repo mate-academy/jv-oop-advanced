@@ -1,13 +1,13 @@
 package core.basesyntax;
 
-import enums.Colors;
+import enums.Color;
 import java.util.Random;
 
 public class ColorSupplier {
-    private static final Colors[] colors = Colors.values();
+    private static final Color[] colors = Color.values();
     private final Random random = new Random();
 
-    public Colors getRandomColor() {
+    public Color getRandomColor() {
         return colors[random.nextInt(colors.length)];
     }
 }

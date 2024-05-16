@@ -1,6 +1,6 @@
 package enums;
 
-public enum Figures {
+public enum Figure {
     CIRCLE,
     TRAPEZOID,
     RECTANGLE,

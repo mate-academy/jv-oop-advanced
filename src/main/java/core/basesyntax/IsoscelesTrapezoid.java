@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 import abstracts.Figure;
-import enums.Colors;
+import enums.Color;
 
 public class IsoscelesTrapezoid extends Figure {
     private double mainSideTop;
@@ -9,7 +9,7 @@ public class IsoscelesTrapezoid extends Figure {
     private double high;
 
     public IsoscelesTrapezoid(
-            Colors color,
+            Color color,
             double mainSideTop,
             double mainSideDown,
             double high) {
