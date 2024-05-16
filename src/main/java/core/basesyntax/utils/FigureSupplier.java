@@ -1,6 +1,11 @@
 package core.basesyntax.utils;
 
-import core.basesyntax.figures.*;
+import core.basesyntax.figures.Circle;
+import core.basesyntax.figures.IsoscelesTrapezoid;
+import core.basesyntax.figures.Rectangle;
+import core.basesyntax.figures.RightTriangle;
+import core.basesyntax.figures.Square;
+import core.basesyntax.figures.Figure;
 
 import java.util.Random;
 
