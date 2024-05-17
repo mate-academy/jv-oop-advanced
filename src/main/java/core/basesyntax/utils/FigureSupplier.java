@@ -29,8 +29,8 @@ public class FigureSupplier {
         FigureType figureType = getRandomFigureType();
         return switch (figureType) {
             case CIRCLE -> new Circle(colorSupplier.getRandomColor(), size1);
-            case ISOSCELES_TRAPEZOID -> new IsoscelesTrapezoid
-                    (colorSupplier.getRandomColor(), size1, size2, size3);
+            case ISOSCELES_TRAPEZOID -> new IsoscelesTrapezoid(
+                    colorSupplier.getRandomColor(), size1, size2, size3);
             case RECTANGLE -> new Rectangle(colorSupplier.getRandomColor(), size1, size2);
             case RIGHT_TRIANGLE -> new RightTriangle(colorSupplier.getRandomColor(), size1, size2);
             case SQUARE -> new Square(colorSupplier.getRandomColor(), size1);
