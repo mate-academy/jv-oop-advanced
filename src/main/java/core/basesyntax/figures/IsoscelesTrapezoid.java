@@ -1,11 +1,11 @@
 package core.basesyntax.figures;
 
 public class IsoscelesTrapezoid extends Figure {
-    private final int base1;
-    private final int base2;
-    private final int height;
+    private final double base1;
+    private final double base2;
+    private final double height;
 
-    public IsoscelesTrapezoid(String color, int base1, int base2, int height) {
+    public IsoscelesTrapezoid(String color, double base1, double base2, double height) {
         super(color);
         this.base1 = base1;
         this.base2 = base2;
@@ -14,7 +14,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double calculateArea() {
-        return ((double) (base1 + base2) / 2) * height;
+        return ((base1 + base2) / 2) * height;
     }
 
     @Override
