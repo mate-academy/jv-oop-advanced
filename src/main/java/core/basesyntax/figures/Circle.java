@@ -1,29 +1,24 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.util.Colors;
+import core.basesyntax.util.Color;
 
 public class Circle extends Figure {
 
-    private int rad;
+    private int radius;
 
-    public Circle(Colors color) {
+    public Circle(Color color, int radius) {
         super(color);
-        this.rad = getRandomNum();
-    }
-
-    public Circle(Colors color, int rad) {
-        super(color);
-        this.rad = rad;
+        this.radius = radius;
     }
 
     @Override
-    public double getArea() {
-        return Math.PI * this.rad * this.rad;
+    public double calculateArea() {
+        return Math.PI * this.radius * this.radius;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: Circle, area: " + getArea()
-                + " sq. units, " + "radius: " + rad + " units, color: " + getColor());
+        System.out.println("Figure: Circle, area: " + calculateArea()
+                + " sq. units, " + "radius: " + radius + " units, color: " + getColor());
     }
 }
