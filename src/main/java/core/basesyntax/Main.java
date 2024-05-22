@@ -1,6 +1,5 @@
 package core.basesyntax;
 
-
 public class Main {
     private static final int NUMBER_OF_FIGURES = 6;
 
@@ -14,7 +13,6 @@ public class Main {
         for (int i = figures.length / 2; i < figures.length; i++) {
             figures[i] = figureSupplier.getDefaultFigure();
         }
-
         for (Figure figure : figures) {
             figure.draw();
         }
