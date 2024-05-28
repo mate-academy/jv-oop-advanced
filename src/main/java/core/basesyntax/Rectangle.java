@@ -4,10 +4,10 @@ public class Rectangle extends Figure {
     private int firstSide;
     private int secondSide;
 
-    public Rectangle(String color, int a, int b) {
+    public Rectangle(String color, int firstSide, int secondSide) {
         super(color);
-        this.firstSide = a;
-        this.secondSide = b;
+        this.firstSide = firstSide;
+        this.secondSide = secondSide;
     }
 
     @Override
