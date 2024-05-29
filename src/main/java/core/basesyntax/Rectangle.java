@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 class Rectangle extends Figure {
-
     private final double length;
     private final double width;
 
@@ -18,6 +17,7 @@ class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Rectangle [color=" + color + ", length=" + length + ", width=" + width + "]");
+        System.out.println("Rectangle [color=" + color + ", length=" + length
+                + ", width=" + width + "]");
     }
 }
