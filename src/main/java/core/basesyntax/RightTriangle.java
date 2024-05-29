@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-class RightTriangle extends Figure {
+public class RightTriangle extends FigureBase {
     private final double firstLeg;
     private final double secondLeg;
 
