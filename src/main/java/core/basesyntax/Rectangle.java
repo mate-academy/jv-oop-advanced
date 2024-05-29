@@ -1,23 +1,37 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private int firstSide;
-    private int secondSide;
+    private static final String OUTPUT_RECTANGLE = "Figure: rectangle, "
+            + "area: %.2f sq. units, "
+            + "width: %.2f units, "
+            + "length: %.2f units, "
+            + "color: %s";
+    private double width;
+    private double length;
 
-    public Rectangle(String color, int firstSide, int secondSide) {
+    public Rectangle() {
+
+    }
+
+    public Rectangle(Color color, double width, double length) {
         super(color);
-        this.firstSide = firstSide;
-        this.secondSide = secondSide;
+        this.width = width;
+        this.length = length;
     }
 
     @Override
-    public double getArea() {
-        return firstSide * secondSide;
+    public double calculateArea() {
+        this.area = width * length;
+        return area;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, first side: "
-                + firstSide + " units, second side: " + secondSide + ", color: " + getColor());
+        System.out.println(String.format(OUTPUT_RECTANGLE,
+                this.area,
+                this.width,
+                this.length,
+                this.color
+        ));
     }
 }

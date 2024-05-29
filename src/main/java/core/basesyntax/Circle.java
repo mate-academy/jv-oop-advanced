@@ -1,21 +1,31 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private final int radius;
 
-    public Circle(String color, int radius) {
+    private static final String OUTPUT_CIRCLE = "Figure: circle, "
+            + "area: %.2f sq. units, "
+            + "radius: %.2f units, "
+            + "color: %s";
+
+    private double radius;
+
+    public Circle() {
+
+    }
+
+    public Circle(Color color, double radius) {
         super(color);
         this.radius = radius;
     }
 
     @Override
-    public double getArea() {
-        return Math.PI * (radius * radius);
+    public void draw() {
+        System.out.println(String.format(OUTPUT_CIRCLE, this.area, this.radius, this.color));
     }
 
     @Override
-    public void draw() {
-        System.out.println("Figure: circle, area: " + getArea() + " sq. units, radius: "
-                + radius + " units, color: " + getColor());
+    public double calculateArea() {
+        this.area = radius * radius * Math.PI;
+        return area;
     }
 }
