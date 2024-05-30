@@ -1,7 +1,5 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Color;
-
 public class RightTriangle extends Figure {
 
     private static final String OUTPUT_RIGHT_TRIANGLE = "Figure: rightTriangle, "
@@ -16,7 +14,7 @@ public class RightTriangle extends Figure {
 
     }
 
-    public RightTriangle(Color color, double base, double height) {
+    public RightTriangle(String color, double base, double height) {
         super(color);
         this.base = base;
         this.height = height;
@@ -34,7 +32,7 @@ public class RightTriangle extends Figure {
                 this.area,
                 this.base,
                 this.height,
-                this.color
+                getColor()
         ));
     }
 }

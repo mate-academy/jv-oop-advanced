@@ -1,7 +1,5 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Color;
-
 public class Rectangle extends Figure {
     private static final String OUTPUT_RECTANGLE = "Figure: rectangle, "
             + "area: %.2f sq. units, "
@@ -15,7 +13,7 @@ public class Rectangle extends Figure {
 
     }
 
-    public Rectangle(Color color, double width, double length) {
+    public Rectangle(String color, double width, double length) {
         super(color);
         this.width = width;
         this.length = length;
@@ -33,7 +31,7 @@ public class Rectangle extends Figure {
                 this.area,
                 this.width,
                 this.length,
-                this.color
+                getColor()
         ));
     }
 }

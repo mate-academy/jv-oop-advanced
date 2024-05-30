@@ -1,7 +1,5 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Color;
-
 public class Circle extends Figure {
 
     private static final String OUTPUT_CIRCLE = "Figure: circle, "
@@ -15,14 +13,14 @@ public class Circle extends Figure {
 
     }
 
-    public Circle(Color color, double radius) {
+    public Circle(String color, double radius) {
         super(color);
         this.radius = radius;
     }
 
     @Override
     public void draw() {
-        System.out.println(String.format(OUTPUT_CIRCLE, this.area, this.radius, this.color));
+        System.out.println(String.format(OUTPUT_CIRCLE, this.area, this.radius, getColor()));
     }
 
     @Override

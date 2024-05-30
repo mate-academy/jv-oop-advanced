@@ -1,7 +1,5 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Color;
-
 public class Square extends Figure {
     private static final String OUTPUT_SQUARE = "Figure: square, "
             + "area: %.2f sq. units, "
@@ -13,7 +11,7 @@ public class Square extends Figure {
 
     }
 
-    public Square(Color color, double side) {
+    public Square(String color, double side) {
         super(color);
         this.side = side;
     }
@@ -29,7 +27,7 @@ public class Square extends Figure {
         System.out.println(String.format(OUTPUT_SQUARE,
                 this.area,
                 this.side,
-                this.color
+                getColor()
         ));
     }
 }

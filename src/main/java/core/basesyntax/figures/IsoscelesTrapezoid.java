@@ -1,7 +1,5 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.Color;
-
 public class IsoscelesTrapezoid extends Figure {
 
     private static final String OUTPUT_ISOSCELESTRAPEZOID = "Figure: isoscelesTrapezoid, "
@@ -13,7 +11,8 @@ public class IsoscelesTrapezoid extends Figure {
     private double lowDiagonal;
     private double height;
 
-    public IsoscelesTrapezoid(Color color, double highDiagonal, double lowDiagonal, double height) {
+    public IsoscelesTrapezoid(String color, double highDiagonal,
+                              double lowDiagonal, double height) {
         super(color);
         this.highDiagonal = highDiagonal;
         this.lowDiagonal = lowDiagonal;
@@ -34,7 +33,7 @@ public class IsoscelesTrapezoid extends Figure {
                 this.highDiagonal,
                 this.lowDiagonal,
                 this.height,
-                this.color
+                getColor()
         ));
     }
 }

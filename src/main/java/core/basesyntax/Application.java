@@ -4,17 +4,17 @@ import core.basesyntax.figures.Figure;
 import core.basesyntax.suppliers.FigureSupplier;
 
 public class Application {
-    public static void main(String[] args) {
-        Figure[] figures = new Figure[6];
-        FigureSupplier figureSupplier = new FigureSupplier();
-        for (int i = 0; i < 3; i++) {
-            figures[i] = figureSupplier.getRandomFigure();
-            figures[i].calculateArea();
-            figures[i].draw();
-        }
+    private static final int SIZE_OF_ARRAY = 6;
 
-        for (int i = 3; i < 6; i++) {
-            figures[i] = figureSupplier.getDefaultFigure();
+    public static void main(String[] args) {
+        Figure[] figures = new Figure[SIZE_OF_ARRAY];
+        FigureSupplier figureSupplier = new FigureSupplier();
+        for (int i = 0; i < figures.length; i++) {
+            if (i < SIZE_OF_ARRAY / 2) {
+                figures[i] = figureSupplier.getDefaultFigure();
+            } else {
+                figures[i] = figureSupplier.getRandomFigure();
+            }
             figures[i].calculateArea();
             figures[i].draw();
         }
