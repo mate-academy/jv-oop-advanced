@@ -19,7 +19,10 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + this.getClass().getSimpleName().toLowerCase()
-                + ", area: " + getArea() + " sq. units, radius: " + radius + " units, color: " + getColor());
+        //musiałem zmienić przez ciągły błąd przy clean install characters (found 105). [LineLength]
+        String figureDetails = "Figure: " + this.getClass().getSimpleName().toLowerCase()
+                + ", area: " + getArea() + " sq. units, radius: " + getRadius()
+                + " units, color: " + getColor();
+        System.out.println(figureDetails);
     }
 }
