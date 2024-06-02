@@ -27,6 +27,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
+        calculateArea();
         System.out.println(String.format(OUTPUT_RECTANGLE,
                 this.area,
                 this.width,
