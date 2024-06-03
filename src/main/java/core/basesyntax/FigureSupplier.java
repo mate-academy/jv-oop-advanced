@@ -23,7 +23,8 @@ public class FigureSupplier {
             case 3:
                 return new RightTriangle(color, getRandomValue(), getRandomValue());
             case 4:
-                return new IsoscelesTrapezoid(color, getRandomValue(), getRandomValue(), getRandomValue());
+                return new IsoscelesTrapezoid(color, getRandomValue(), getRandomValue(), 
+                        getRandomValue());
             default:
                 return getDefaultFigure();
         }
