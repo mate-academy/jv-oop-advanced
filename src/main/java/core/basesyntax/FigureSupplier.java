@@ -5,25 +5,25 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
     private static final double MAX_RANDOM_VALUE = 10.0;
-    private static final Color DEFAULT_COLOR = Color.WHITE;
+    private static final String DEFAULT_COLOR = "white";
     private static final double DEFAULT_RADIUS = 10.0;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int figureType = random.nextInt(FIGURE_COUNT);
-        Color color = colorSupplier.getRandomColor();
+        String randomColor = colorSupplier.getRandomColor();
         switch (figureType) {
             case 0:
-                return new Circle(color, getRandomValue());
+                return new Circle(randomColor, getRandomValue());
             case 1:
-                return new Square(color, getRandomValue());
+                return new Square(randomColor, getRandomValue());
             case 2:
-                return new Rectangle(color, getRandomValue(), getRandomValue());
+                return new Rectangle(randomColor, getRandomValue(), getRandomValue());
             case 3:
-                return new RightTriangle(color, getRandomValue(), getRandomValue());
+                return new RightTriangle(randomColor, getRandomValue(), getRandomValue());
             case 4:
-                return new IsoscelesTrapezoid(color, getRandomValue(), getRandomValue(), 
+                return new IsoscelesTrapezoid(randomColor, getRandomValue(), getRandomValue(), 
                         getRandomValue());
             default:
                 return getDefaultFigure();
