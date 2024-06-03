@@ -28,9 +28,8 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        calculateArea();
         System.out.println(String.format(OUTPUT_RIGHT_TRIANGLE,
-                this.area,
+                calculateArea(),
                 this.base,
                 this.height,
                 getColor()

@@ -27,10 +27,9 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        calculateArea();
         System.out.println(String.format(
                 OUTPUT_ISOSCELESTRAPEZOID,
-                this.area,
+                calculateArea(),
                 this.highDiagonal,
                 this.lowDiagonal,
                 this.height,

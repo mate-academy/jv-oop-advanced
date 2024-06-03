@@ -20,8 +20,7 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        calculateArea();
-        System.out.println(String.format(OUTPUT_CIRCLE, this.area, this.radius, getColor()));
+        System.out.println(String.format(OUTPUT_CIRCLE, calculateArea(), this.radius, getColor()));
     }
 
     @Override

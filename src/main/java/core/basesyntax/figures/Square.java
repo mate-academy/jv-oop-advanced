@@ -24,9 +24,8 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        calculateArea();
         System.out.println(String.format(OUTPUT_SQUARE,
-                this.area,
+                calculateArea(),
                 this.side,
                 getColor()
         ));
