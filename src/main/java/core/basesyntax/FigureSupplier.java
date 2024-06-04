@@ -9,9 +9,9 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int ran = RANDOM.nextInt(FIGURE_COUNT);
-        int a = RANDOM.nextInt(MAX_LENGTH - MIN_LENGTH + 1) + MIN_LENGTH;
-        int b = RANDOM.nextInt(MAX_LENGTH - MIN_LENGTH + 1) + MIN_LENGTH;
-        int c = RANDOM.nextInt(MAX_LENGTH - MIN_LENGTH + 1) + MIN_LENGTH;
+        int a = RANDOM.nextInt(MAX_LENGTH + 1);
+        int b = RANDOM.nextInt(MAX_LENGTH + 1);
+        int c = RANDOM.nextInt(MAX_LENGTH + 1);
         switch (ran) {
             case (0):
                 return new Square(a);

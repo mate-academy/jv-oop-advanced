@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements FigureInfo, CalculatableArea {
+public abstract class Figure implements FigureInfo, AreaCalculator {
     private static final ColorSupplier colorSupplier = new ColorSupplier();
     protected Color color;
 
