@@ -9,15 +9,14 @@ public class Square extends Figure {
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return side * side;
     }
 
     @Override
     public void draw() {
-        String figureDetails = "Figure: " + this.getClass().getSimpleName().toLowerCase()
-                + ", area: " + getArea() + " sq. units, side: " + side
-                + " units, color: " + getColor();
-        System.out.println(figureDetails);
+        System.out.println("Figure: " + this.getClass().getSimpleName().toLowerCase()
+                + ", area: " + calculateArea() + " sq. units, side: " + side
+                + " units, color: " + getColor());
     }
 }

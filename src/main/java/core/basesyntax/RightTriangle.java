@@ -10,23 +10,15 @@ public class RightTriangle extends Figure {
         this.secondLeg = secondLeg;
     }
 
-    public double getFirstLeg() {
-        return firstLeg;
-    }
-
-    public double getSecondLeg() {
-        return secondLeg;
-    }
-
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return 0.5 * firstLeg * secondLeg;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: " + this.getClass().getSimpleName().toLowerCase()
-                + ", area: " + getArea() + " sq. units, first leg: " + getFirstLeg()
-                + " units, second leg: " + getSecondLeg() + " units, color: " + getColor());
+                + ", area: " + calculateArea() + " sq. units, first leg: " + firstLeg
+                + " units, second leg: " + secondLeg + " units, color: " + getColor());
     }
 }
