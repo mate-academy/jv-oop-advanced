@@ -21,7 +21,8 @@ class FigureSupplier {
             case 3:
                 return new Circle(colorSupplier.getRandomColor(), random.nextInt(10) + 1);
             case 4:
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(10) + 1,
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        random.nextInt(10) + 1,
                         random.nextInt(10) + 1, random.nextInt(10) + 1);
             default:
                 return null;
