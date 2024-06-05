@@ -10,14 +10,4 @@ abstract class Figure implements Obtain, Draw {
     public String getColor() {
         return color;
     }
-
-    @Override
-    public double getArea() {
-        return 0;
-    }
-
-    @Override
-    public void draw() {
-
-    }
 }
