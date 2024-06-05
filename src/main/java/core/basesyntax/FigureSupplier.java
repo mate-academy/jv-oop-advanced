@@ -4,8 +4,8 @@ import java.util.Random;
 
 class FigureSupplier {
     private static final int BOUND = 10;
-    private static final int RADIUS = 10;  //Default Circle radius
-    private static final String COLOR = "WHITE"; //Default Circle color
+    private static final int RADIUS = 10; // Default Circle radius
+    private static final String COLOR = "WHITE"; // Default Circle color
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
