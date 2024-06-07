@@ -12,7 +12,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + width * height + " sq. units,"
+        System.out.println("Figure: rectangle, area: " + getArea() + " sq. units,"
                 + " width: " + width + " units, height: " + height
                 + " units, color: " + this.getColor());
     }
@@ -31,5 +31,10 @@ public class Rectangle extends Figure {
 
     public void setHeight(int height) {
         this.height = height;
+    }
+
+    @Override
+    public double getArea() {
+        return width * height;
     }
 }
