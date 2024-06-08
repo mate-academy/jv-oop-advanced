@@ -1,11 +1,8 @@
 package core.basesyntax;
 
-import java.text.DecimalFormat;
-
 public class RightTriangle extends Figure {
     private double side;
     private double height;
-    private DecimalFormat df = new DecimalFormat("#.00");
 
     public RightTriangle(String color, double side, double height) {
         super(color);
@@ -20,8 +17,9 @@ public class RightTriangle extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: right triangle, area: " + df.format(getArea()) + " sq. units, side: "
-                + df.format(side) + " units, height: " + df.format(height) + " units, color: "
+        return "Figure: right triangle, area: " + getDecimalFormat().format(getArea())
+                + " sq. units, side: " + getDecimalFormat().format(side) + " units, height: "
+                + getDecimalFormat().format(height) + " units, color: "
                 + getColor();
     }
 }

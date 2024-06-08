@@ -1,10 +1,7 @@
 package core.basesyntax;
 
-import java.text.DecimalFormat;
-
 public class Square extends Figure {
     private double side;
-    private DecimalFormat df = new DecimalFormat("#.00");
 
     public Square(String color, double side) {
         super(color);
@@ -18,7 +15,8 @@ public class Square extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: square, area: " + df.format(getArea()) + " sq. units, side: "
-                + df.format(side) + " units, color: " + getColor();
+        return "Figure: square, area: " + getDecimalFormat().format(getArea())
+                + " sq. units, side: " + getDecimalFormat().format(side) + " units, color: "
+                + getColor();
     }
 }

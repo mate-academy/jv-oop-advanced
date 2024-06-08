@@ -1,12 +1,9 @@
 package core.basesyntax;
 
-import java.text.DecimalFormat;
-
 public class IsoscelesTrapezoid extends Figure {
     private double sideA;
     private double sideB;
     private double height;
-    private DecimalFormat df = new DecimalFormat("#.00");
 
     public IsoscelesTrapezoid(String color, double sideA, double sideB, double height) {
         super(color);
@@ -22,8 +19,9 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: isosceles trapezoid, area: " + df.format(getArea())
-                + " sq. units, side A: " + df.format(sideA) + " units, side B: "
-                + df.format(sideB) + ", height: " + df.format(height) + " color: " + getColor();
+        return "Figure: isosceles trapezoid, area: " + getDecimalFormat().format(getArea())
+                + " sq. units, side A: " + getDecimalFormat().format(sideA) + " units, side B: "
+                + getDecimalFormat().format(sideB) + ", height: "
+                + getDecimalFormat().format(height) + " color: " + getColor();
     }
 }

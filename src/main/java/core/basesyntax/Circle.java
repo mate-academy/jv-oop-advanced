@@ -1,10 +1,7 @@
 package core.basesyntax;
 
-import java.text.DecimalFormat;
-
 public class Circle extends Figure {
     private double radius;
-    private DecimalFormat df = new DecimalFormat("#.00");
 
     public Circle(String color, double area) {
         super(color);
@@ -18,7 +15,8 @@ public class Circle extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: circle, area: " + df.format(getArea()) + " sq. units, radius: "
-                + df.format(radius) + "  units, color: " + getColor();
+        return "Figure: circle, area: " + getDecimalFormat().format(getArea())
+                + " sq. units, radius: "
+                + getDecimalFormat().format(radius) + "  units, color: " + getColor();
     }
 }

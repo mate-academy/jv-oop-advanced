@@ -1,11 +1,8 @@
 package core.basesyntax;
 
-import java.text.DecimalFormat;
-
 public class Rectangle extends Figure {
     private double sideA;
     private double sideB;
-    private DecimalFormat df = new DecimalFormat("#.00");
 
     public Rectangle(String color, double sideA, double sideB) {
         super(color);
@@ -20,8 +17,9 @@ public class Rectangle extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: rectangle, area: " + df.format(getArea()) + " sq. units, side A: "
-                + df.format(sideA) + " units, side B: " + df.format(sideB)
+        return "Figure: rectangle, area: " + getDecimalFormat().format(getArea())
+                + " sq. units, side A: " + getDecimalFormat().format(sideA)
+                + " units, side B: " + getDecimalFormat().format(sideB)
                 + " units, color: " + getColor();
     }
 }
