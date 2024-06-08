@@ -1,23 +1,30 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private int topSide;
-    private int leftSide;
+    private double length;
+    private double width;
 
-    public Rectangle(int topSide, int leftSide, String color) {
-        this.topSide = topSide;
-        this.leftSide = leftSide;
+    public Rectangle(double topSide, double leftSide, String color) {
+        this.length = topSide;
+        this.width = leftSide;
         this.setColor(color);
     }
 
     public void draw() {
         System.out.printf("Figure: rectangle, topSide "
-                + topSide
+                + length
                 + ", leftSide: "
-                + leftSide
+                + width
+                + ", area: "
+                + this.calculateArea()
                 + ", color: "
                 + getColor().toLowerCase()
                 + "\n"
         );
+    }
+
+    public double calculateArea() {
+        double result = length * width;
+        return Math.ceil(result);
     }
 }

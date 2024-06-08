@@ -1,10 +1,10 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private int firstLeg;
-    private int secondLeg;
+    private double firstLeg;
+    private double secondLeg;
 
-    public RightTriangle(int firstLeg, int secondLeg, String color) {
+    public RightTriangle(double firstLeg, double secondLeg, String color) {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
         this.setColor(color);
@@ -15,9 +15,16 @@ public class RightTriangle extends Figure {
                 + firstLeg
                 + ", secondLeg: "
                 + secondLeg
+                + ", area: "
+                + this.calculateArea()
                 + ", color: "
                 + getColor().toLowerCase()
                 + "\n"
         );
+    }
+
+    public double calculateArea() {
+        double result = firstLeg * secondLeg / 2;
+        return Math.ceil(result);
     }
 }
