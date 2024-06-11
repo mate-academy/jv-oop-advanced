@@ -3,9 +3,11 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private final Random random = new Random();
+
     public Figure getRandomFigure() {
         ColorSupplier colorSupplier = new ColorSupplier();
-        int index = new Random().nextInt(FigureType.values().length);
+        int index = random.nextInt(FigureType.values().length);
         FigureType figureName = FigureType.values()[index];
         switch (figureName) {
             case SQUARE:
@@ -30,7 +32,8 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("WHITE",10);
+        Circle circle = new Circle("WHITE", 10);
+        return circle;
     }
 
     public int getRandomSide() {
