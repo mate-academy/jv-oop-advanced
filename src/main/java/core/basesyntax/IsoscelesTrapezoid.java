@@ -37,7 +37,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    double getArea() {
+    public double area() {
         return ((firstBase + secondBase) * height) / 2;
     }
 
@@ -45,6 +45,7 @@ public class IsoscelesTrapezoid extends Figure {
     public void draw() {
         System.out.println("Isosceles Trapezoid - Color: " + getColor()
                 + ", Base 1: " + firstBase + ", Base 2: " + secondBase
-                + ", Height: " + height + ", Area: " + getArea());
+                + ", Height: " + height + ", Area: " + area());
     }
+
 }
