@@ -3,37 +3,65 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static Figure getRandomFigure() {
-        Random random = new Random();
-        int figureType = random.nextInt(5);
-        String color = ColorSupplier.getRandomColor();
+    private static final int FIGURE_TYPES = 5;
+    private static final double DIMENSION_RANGE = 10.0;
+    private final Random random;
+    private final ColorSupplier colorSupplier;
+
+    public FigureSupplier(Random random, ColorSupplier colorSupplier) {
+        this.random = random;
+        this.colorSupplier = colorSupplier;
+    }
+
+    public Figure getRandomFigure() {
+        int figureType = random.nextInt(FIGURE_TYPES);
+        String color = colorSupplier.getRandomColor();
         switch (figureType) {
             case 0:
-                double squareSide = random.nextDouble() * 10 + 1;
-                return new Square(color, squareSide);
+                return createSquare(color);
             case 1:
-                double rectLength = random.nextDouble() * 10 + 1;
-                double rectWidth = random.nextDouble() * 10 + 1;
-                return new Rectangle(color, rectLength, rectWidth);
+                return createRectangle(color);
             case 2:
-                double triangleFirstLeg = random.nextDouble() * 10 + 1;
-                double triangleSecondLeg = random.nextDouble() * 10 + 1;
-                return new RightTriangle(color, triangleFirstLeg, triangleSecondLeg);
+                return createRightTriangle(color);
             case 3:
-                double circleRadius = random.nextDouble() * 10 + 1;
-                return new Circle(color, circleRadius);
+                return createCircle(color);
             case 4:
-                double trapezoidBase1 = random.nextDouble() * 10 + 1;
-                double trapezoidBase2 = random.nextDouble() * 10 + 1;
-                double trapezoidHeight = random.nextDouble() * 10 + 1;
-                return new IsoscelesTrapezoid(color, trapezoidBase1, trapezoidBase2,
-                    trapezoidHeight);
+                return createIsoscelesTrapezoid(color);
             default:
                 return null;
         }
     }
 
-    public static Figure getDefaultFigure() {
+    public Figure getDefaultFigure() {
         return Figure.getDefaultFigure();
+    }
+
+    private Figure createSquare(String color) {
+        double side = random.nextDouble() * DIMENSION_RANGE + 1;
+        return new Square(color, side);
+    }
+
+    private Figure createRectangle(String color) {
+        double length = random.nextDouble() * DIMENSION_RANGE + 1;
+        double width = random.nextDouble() * DIMENSION_RANGE + 1;
+        return new Rectangle(color, length, width);
+    }
+
+    private Figure createRightTriangle(String color) {
+        double firstLeg = random.nextDouble() * DIMENSION_RANGE + 1;
+        double secondLeg = random.nextDouble() * DIMENSION_RANGE + 1;
+        return new RightTriangle(color, firstLeg, secondLeg);
+    }
+
+    private Figure createCircle(String color) {
+        double radius = random.nextDouble() * DIMENSION_RANGE + 1;
+        return new Circle(color, radius);
+    }
+
+    private Figure createIsoscelesTrapezoid(String color) {
+        double base1 = random.nextDouble() * DIMENSION_RANGE + 1;
+        double base2 = random.nextDouble() * DIMENSION_RANGE + 1;
+        double height = random.nextDouble() * DIMENSION_RANGE + 1;
+        return new IsoscelesTrapezoid(color, base1, base2, height);
     }
 }
