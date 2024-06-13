@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 import static core.basesyntax.Figure.DEFAULT_COLOR;
 import static core.basesyntax.Figure.DEFAULT_RADIUS;
+
+import java.util.Random;
 
 public class FigureSupplier {
     private static final int FIGURE_TYPES = 5;
