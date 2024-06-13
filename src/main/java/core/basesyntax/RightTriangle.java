@@ -3,7 +3,7 @@ package core.basesyntax;
 public class RightTriangle extends Figure {
     private double side;
 
-    public RightTriangle(Color color, double side) {
+    public RightTriangle(String color, double side) {
         super(color);
         this.side = side;
     }
@@ -14,9 +14,8 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void drawFigure() {
-        double area = calculateArea();
-        System.out.println("Figure: right triangle, area: " + area + " sq. units, side: "
+    public void draw() {
+        System.out.println("Figure: right triangle, area: " + calculateArea() + " sq. units, side: "
                 + getSide() + " units, color: " + getColor());
     }
 

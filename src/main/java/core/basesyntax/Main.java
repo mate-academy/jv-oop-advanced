@@ -12,7 +12,7 @@ public class Main {
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
-            figures[i].drawFigure();
+            figures[i].draw();
         }
     }
 }
