@@ -27,5 +27,4 @@ public class Square extends Figure {
                 + ", Side length = " + sideLength
                 + "Area = " + area());
     }
-
 }

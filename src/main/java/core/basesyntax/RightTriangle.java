@@ -38,5 +38,4 @@ public class RightTriangle extends Figure {
                 + ", Second leg length = " + secondLeg
                 + "Area = " + area());
     }
-
 }

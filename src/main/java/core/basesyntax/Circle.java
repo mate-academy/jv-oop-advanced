@@ -27,5 +27,4 @@ public class Circle extends Figure {
                 + ", Radius: " + radius
                 + ", Area: " + area());;
     }
-
 }

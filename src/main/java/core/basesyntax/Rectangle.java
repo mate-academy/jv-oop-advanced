@@ -37,5 +37,4 @@ public class Rectangle extends Figure {
                 + ", Length = " + length + ", Width = " + width
                 + "Area = " + area());
     }
-
 }

@@ -2,6 +2,9 @@ package core.basesyntax;
 
 import java.util.Random;
 
+import static core.basesyntax.Figure.DEFAULT_COLOR;
+import static core.basesyntax.Figure.DEFAULT_RADIUS;
+
 public class FigureSupplier {
     private static final int FIGURE_TYPES = 5;
     private static final double DIMENSION_RANGE = 10.0;
@@ -25,15 +28,13 @@ public class FigureSupplier {
                 return createRightTriangle(color);
             case 3:
                 return createCircle(color);
-            case 4:
-                return createIsoscelesTrapezoid(color);
             default:
-                return null;
+                return createIsoscelesTrapezoid(color);
         }
     }
 
     public Figure getDefaultFigure() {
-        return Figure.getDefaultFigure();
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
     private Figure createSquare(String color) {
