@@ -1,15 +1,10 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Square extends Figure {
-    public static final int MAXIMUM_SIZE = 50;
     private int side;
-    private Random random = new Random();
 
-    @Override
-    public void randomizeProperty() {
-        side = random.nextInt(MAXIMUM_SIZE);
+    public Square(int side) {
+        this.side = side;
     }
 
     @Override
@@ -21,6 +16,6 @@ public class Square extends Figure {
     public void drawFigure() {
         System.out.println("Figure: Square, " + "area: " + this.getArea()
                             + " sq. units, side: " + this.side
-                            + " units, color: " + super.getColor());
+                            + " units, color: " + super.getColor().name());
     }
 }
