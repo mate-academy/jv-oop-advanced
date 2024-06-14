@@ -11,7 +11,7 @@ public class RightTriangle extends Figure {
     private double height;
 
     public RightTriangle() {
-
+        super();
     }
 
     public RightTriangle(Color color, double base, double height) {
@@ -22,17 +22,32 @@ public class RightTriangle extends Figure {
 
     @Override
     public double calculateArea() {
-        this.area = 0.5 * base * height;
-        return area;
+        return 0.5 * base * height;
     }
 
     @Override
     public void draw() {
-        System.out.println(String.format(OUTPUT_RIGHT_TRIANGLE,
-                this.area,
-                this.base,
-                this.height,
-                this.color
-        ));
+        System.out.printf(OUTPUT_RIGHT_TRIANGLE,
+                calculateArea(),
+                base,
+                height,
+                color
+        );
+    }
+
+    public double getBase() {
+        return base;
+    }
+
+    public void setBase(double base) {
+        this.base = base;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
     }
 }

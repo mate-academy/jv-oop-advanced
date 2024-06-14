@@ -8,7 +8,7 @@ public class Square extends Figure {
     private double side;
 
     public Square() {
-
+        super();
     }
 
     public Square(Color color, double side) {
@@ -18,16 +18,23 @@ public class Square extends Figure {
 
     @Override
     public double calculateArea() {
-        this.area = side * side;
-        return area;
+        return side * side;
     }
 
     @Override
     public void draw() {
-        System.out.println(String.format(OUTPUT_SQUARE,
-                this.area,
-                this.side,
-                this.color
-        ));
+        System.out.printf(OUTPUT_SQUARE,
+                calculateArea(),
+                side,
+                color
+        );
+    }
+
+    public double getSide() {
+        return side;
+    }
+
+    public void setSide(double side) {
+        this.side = side;
     }
 }
