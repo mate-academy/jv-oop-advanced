@@ -8,7 +8,6 @@ public class Square extends Figure {
     private double side;
 
     public Square() {
-        super();
     }
 
     public Square(Color color, double side) {

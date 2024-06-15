@@ -13,7 +13,6 @@ public class Application {
             } else {
                 figures[i] = figureSupplier.getRandomFigure();
             }
-            figures[i].calculateArea();
             figures[i].draw();
         }
     }

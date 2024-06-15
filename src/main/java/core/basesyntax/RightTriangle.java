@@ -1,8 +1,7 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-
-    private static final String OUTPUT_RIGHT_TRIANGLE = "Figure: rightTriangle, "
+    private static final String DRAW_FORMAT = "Figure: rightTriangle, "
             + "area: %.2f sq. units, "
             + "base: %.2f units, "
             + "height: %.2f units, "
@@ -27,7 +26,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.printf(OUTPUT_RIGHT_TRIANGLE,
+        System.out.printf(DRAW_FORMAT,
                 calculateArea(),
                 base,
                 height,
