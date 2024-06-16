@@ -6,41 +6,33 @@ public class FigureSupplier {
     public static final int RANGE_BOUND = 5;
     public static final int DEFAULT_RADIUS = 10;
     public static final int MAXIMUM_LENGTH = 50;
+    public static final String DEFAULT_COLOR = "WHITE";
     private Random random = new Random();
-    private Figure figure;
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int randomInt = random.nextInt(RANGE_BOUND);
-        int randomSideOne = 1 + random.nextInt(MAXIMUM_LENGTH);
-        int randomSideTwo = 1 + random.nextInt(MAXIMUM_LENGTH);
-        int randomSideThree = 1 + random.nextInt(MAXIMUM_LENGTH);
-        switch (randomInt) {
+        int index = random.nextInt(RANGE_BOUND);
+        switch (index) {
             case 0:
-                figure = new Square(randomSideOne);
-                break;
+                return new Square(colorSupplier.getRandomColor(), randomSize());
             case 1:
-                figure = new Rectangle(randomSideOne, randomSideTwo);
-                break;
+                return new Rectangle(colorSupplier.getRandomColor(), randomSize(), randomSize());
             case 2:
-                figure = new RightTriangle(randomSideOne, randomSideTwo);
-                break;
+                return new RightTriangle(colorSupplier.getRandomColor(), randomSize(),
+                        randomSize());
             case 3:
-                figure = new Circle(randomSideOne);
-                break;
-            case 4:
-                figure = new IsoscelesTrapezoid(randomSideOne, randomSideTwo,
-                        randomSideThree);
-                break;
+                return new Circle(colorSupplier.getRandomColor(), randomSize());
             default:
-                break;
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        randomSize(), randomSize(), randomSize());
         }
-        return figure;
+    }
+
+    private int randomSize() {
+        return 1 + random.nextInt(MAXIMUM_LENGTH);
     }
 
     public Figure getDefaultFigure() {
-        Circle circle = new Circle(DEFAULT_RADIUS);
-        figure = circle;
-        figure.setColor(Color.White);
-        return figure;
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
