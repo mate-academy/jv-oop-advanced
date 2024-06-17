@@ -6,7 +6,6 @@ public class FigureSupplier {
     public static final int RANGE_BOUND = 5;
     public static final int DEFAULT_RADIUS = 10;
     public static final int MAXIMUM_LENGTH = 50;
-    public static final String DEFAULT_COLOR = "WHITE";
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -33,6 +32,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
+        return new Circle(Color.WHITE.name(), DEFAULT_RADIUS);
     }
 }
