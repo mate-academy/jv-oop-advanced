@@ -27,8 +27,4 @@ public class IsoscelesTrapezoid extends Figure {
         return 0.5 * (base1 + base2) * height;
     }
 
-    @Override
-    public void draw(Figure figure) {
-        System.out.println(figure);
-    }
 }

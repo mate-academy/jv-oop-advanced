@@ -20,8 +20,4 @@ public class Square extends Figure {
         return side * side;
     }
 
-    @Override
-    public void draw(Figure figure) {
-        System.out.println(figure);
-    }
 }

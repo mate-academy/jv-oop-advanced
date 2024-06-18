@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements AreaCalculator, Drawable {
+public abstract class Figure implements AreaComputable, DrawableFigure {
     private String color;
 
     public Figure(String color) {
@@ -9,6 +9,11 @@ public abstract class Figure implements AreaCalculator, Drawable {
 
     public String getColor() {
         return color;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println(this);
     }
 
 }

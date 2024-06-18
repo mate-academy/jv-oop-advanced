@@ -22,8 +22,4 @@ public class Rectangle extends Figure {
         return length * width;
     }
 
-    @Override
-    public void draw(Figure figure) {
-        System.out.println(figure);
-    }
 }

@@ -23,8 +23,4 @@ public class RightTriangle extends Figure {
         return 0.5 * firstLeg * secondLeg;
     }
 
-    @Override
-    public void draw(Figure figure) {
-        System.out.println(figure);
-    }
 }

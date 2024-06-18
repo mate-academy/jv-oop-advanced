@@ -20,8 +20,4 @@ public class Circle extends Figure {
         return Math.PI * radius * radius;
     }
 
-    @Override
-    public void draw(Figure figure) {
-        System.out.println(figure);
-    }
 }
