@@ -1,4 +1,5 @@
 package core.basesyntax;
+
 public class FIgureSupplier {
   private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
