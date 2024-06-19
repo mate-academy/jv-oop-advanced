@@ -1,2 +1,3 @@
-package core.basesyntax;public interface AreaCalculable {
+package core.basesyntax;
+public interface AreaCalculable {
 }
