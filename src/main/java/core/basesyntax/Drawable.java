@@ -1,2 +1,3 @@
-package core.basesyntax;public interface Drawable {
+package core.basesyntax;
+public interface Drawable {
 }
