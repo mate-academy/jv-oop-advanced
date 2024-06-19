@@ -8,7 +8,8 @@ public class Square extends Figure {
         this.side = side;
     }
 
-    public int getArea() {
+    @Override
+    public double getArea() {
         return side * side;
     }
 
@@ -21,7 +22,7 @@ public class Square extends Figure {
     public void draw() {
         System.out.println("\nFigure: Square, "
                 + "area: "
-                + getArea()
+                + String.format("%.2f", getArea())
                 + " units, side: "
                 + side
                 + " units, color:"

@@ -10,6 +10,7 @@ public class RightTriangle extends Figure {
         this.secondSide = secondSide;
     }
 
+    @Override
     public double getArea() {
         return 0.5 * firstSide * secondSide;
     }
@@ -23,7 +24,7 @@ public class RightTriangle extends Figure {
     public void draw() {
         System.out.println("\nFigure: RightTriangle, "
                 + "area: "
-                + getArea()
+                + String.format("%.2f", getArea())
                 + " units, side: "
                 + firstSide
                 + " units, side: "

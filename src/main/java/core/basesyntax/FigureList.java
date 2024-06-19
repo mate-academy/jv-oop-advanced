@@ -2,8 +2,8 @@ package core.basesyntax;
 
 public enum FigureList {
     SQUARE,
-    RIGHTTRIANGLE,
+    RIGHT_TRIANGLE,
     RECTANGLE,
-    ISOSCELESTRAPEZOID,
+    ISOSCELES_TRAPEZOID,
     CIRCLE
 }

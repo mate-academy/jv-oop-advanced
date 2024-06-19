@@ -10,7 +10,8 @@ public class Rectangle extends Figure {
         this.secondSide = secondSide;
     }
 
-    public int getArea() {
+    @Override
+    public double getArea() {
         return firstSide * secondSide;
     }
 
@@ -18,11 +19,11 @@ public class Rectangle extends Figure {
     public void draw() {
         System.out.println("\nFigure: Rectangle, "
                 + "area: "
-                + getArea()
+                + String.format("%.2f", getArea())
                 + " units, firstLeg: "
                 + firstSide
                 + " units, secondLeg: "
-                + firstSide
+                + secondSide
                 + " units, color: "
                 + getColor());
     }

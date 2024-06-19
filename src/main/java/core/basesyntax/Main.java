@@ -10,8 +10,9 @@ public class Main {
         for (int i = 0; i < COUNT_OF_FIGURES; i++) {
             figures[i] = figuresupplier.getRandomFigure();
         }
-        for (int i = 0; i < COUNT_OF_FIGURES; i++) {
-            figures[i].draw();
+
+        for (Figure figure : figures) {
+            figure.draw();
         }
 
         Figure a = figuresupplier.getDefaultFigure();

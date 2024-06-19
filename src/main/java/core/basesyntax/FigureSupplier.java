@@ -15,38 +15,32 @@ public class FigureSupplier {
 
         switch (FigureList.values()[randomFigure]) {
             case SQUARE:
-                return new Square(randomColor, random.nextInt(6) + 1);
+                return new Square(randomColor, getRandomNumber());
             case CIRCLE:
-                return new Circle(randomColor,
-                        random.nextInt(8) + 1);
-            case ISOSCELESTRAPEZOID:
+                return new Circle(randomColor, getRandomNumber());
+            case ISOSCELES_TRAPEZOID:
                 return new IsoscelesTrapezoid(randomColor,
-                        random.nextInt(10 + 1),
-                        random.nextInt(10 + 1),
-                        random.nextInt(5) + 1);
+                        getRandomNumber(),
+                        getRandomNumber(),
+                        getRandomNumber());
             case RECTANGLE:
                 return new Rectangle(randomColor,
-                        random.nextInt(10) + 1,
-                        random.nextInt(2) + 1);
-            case RIGHTTRIANGLE:
+                        getRandomNumber(),
+                        getRandomNumber());
+            case RIGHT_TRIANGLE:
                 return new RightTriangle(randomColor,
-                        random.nextInt(10) + 1,
-                        random.nextInt(5) + 1);
+                        getRandomNumber(),
+                        getRandomNumber());
             default:
                 return getDefaultFigure();
         }
     }
 
-    public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR, RADIUS);
+    private int getRandomNumber() {
+        return random.nextInt(20) + 1;
     }
 
-    public void draw() {
-        System.out.println("\nFigure: Circle, "
-                + " units, side: "
-                + RADIUS
-                + " units,"
-                + " color: "
-                + DEFAULT_COLOR);
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_COLOR, RADIUS);
     }
 }

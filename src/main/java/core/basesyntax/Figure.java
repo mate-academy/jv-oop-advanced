@@ -7,5 +7,7 @@ public abstract class Figure implements Draw {
         this.color = color;
     }
 
+    public abstract double getArea();
+
     public abstract String getColor();
 }
