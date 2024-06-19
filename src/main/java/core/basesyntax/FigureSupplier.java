@@ -17,7 +17,6 @@ public class FigureSupplier {
                 int radius = random.nextInt(MAX_SIZE);
                 yield new Circle(supplier.getRandomColor().getDisplayName(),
                         radius);
-
             }
             case 2 -> {
                 int base1 = random.nextInt(MAX_SIZE);
