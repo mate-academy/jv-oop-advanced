@@ -16,7 +16,7 @@ public class Rectangle extends Figure {
     }
 
     public String draw() {
-        return "Figure: square, Area: "
+        return "Figure: Rectangle, Area: "
                 + getArea()
                 + " units, First side: "
                 + firstSide
