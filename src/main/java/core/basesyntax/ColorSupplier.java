@@ -1,4 +1,5 @@
 package core.basesyntax;
+
 public class ColorSupplier {
   private String[] colors = {"red", "blue", "green", "yellow", "pink", "white", "black"};
 
