@@ -19,7 +19,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String getColor() {
-        return color;
+        return super.getColor();
     }
 
     @Override

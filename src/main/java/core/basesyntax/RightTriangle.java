@@ -17,7 +17,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public String getColor() {
-        return color;
+        return super.getColor();
     }
 
     @Override

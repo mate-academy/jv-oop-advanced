@@ -6,18 +6,14 @@ public class Main {
     public static void main(String[] args) {
         FigureSupplier figuresupplier = new FigureSupplier();
         Figure [] figures = new Figure[COUNT_OF_FIGURES];
+        Figure defaultFigure = figuresupplier.getDefaultFigure();
 
-        for (int i = 0; i < COUNT_OF_FIGURES; i++) {
-            figures[i] = figuresupplier.getRandomFigure();
-        }
+        defaultFigure.draw();
 
         for (Figure figure : figures) {
+            figure = figuresupplier.getRandomFigure();
             figure.draw();
         }
-
-        Figure a = figuresupplier.getDefaultFigure();
-        a.draw();
-
     }
 }
 
