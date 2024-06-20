@@ -6,8 +6,4 @@ public abstract class Figure implements Drawable, AreaCalculable {
     public Figure(Color color) {
         this.color = color;
     }
-
-    public abstract double getArea();
-
-    public abstract void draw();
 }
