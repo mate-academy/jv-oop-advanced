@@ -16,11 +16,6 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String getColor() {
-        return super.getColor();
-    }
-
-    @Override
     public void draw() {
         System.out.println("\nFigure: RightTriangle, "
                 + "area: "
@@ -29,7 +24,7 @@ public class RightTriangle extends Figure {
                 + firstSide
                 + " units, side: "
                 + secondSide
-                + " units, color:"
+                + " units, color: "
                 + getColor());
     }
 }

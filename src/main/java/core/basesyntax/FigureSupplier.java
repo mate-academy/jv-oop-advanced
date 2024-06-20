@@ -7,11 +7,11 @@ public class FigureSupplier {
     private static final int RADIUS = 10;
     private static final int MAX_RANDOM_NUMBER = 20;
     private final Random random = new Random();
-    private final ColorSupplier colorsupplier = new ColorSupplier();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int randomFigure = random.nextInt(FigureType.values().length);
-        String randomColor = colorsupplier.getRandomColor();
+        String randomColor = colorSupplier.getRandomColor();
 
         switch (FigureType.values()[randomFigure]) {
             case SQUARE:

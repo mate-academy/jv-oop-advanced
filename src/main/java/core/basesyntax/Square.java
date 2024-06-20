@@ -9,11 +9,6 @@ public class Square extends Figure {
     }
 
     @Override
-    public String getColor() {
-        return super.getColor();
-    }
-
-    @Override
     public double getArea() {
         return side * side;
     }
@@ -25,7 +20,7 @@ public class Square extends Figure {
                 + String.format("%.2f", getArea())
                 + " units, side: "
                 + side
-                + " units, color:"
+                + " units, color: "
                 + getColor());
     }
 }

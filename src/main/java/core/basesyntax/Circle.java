@@ -9,11 +9,6 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String getColor() {
-        return super.getColor();
-    }
-
-    @Override
     public double getArea() {
         return Math.PI * Math.pow(radius,2);
     }

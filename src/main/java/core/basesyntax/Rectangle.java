@@ -11,11 +11,6 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String getColor() {
-        return super.getColor();
-    }
-
-    @Override
     public double getArea() {
         return firstSide * secondSide;
     }
