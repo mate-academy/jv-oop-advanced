@@ -15,30 +15,6 @@ public class RightTriangle extends Figure {
         this.hypotenuse = hypotenuse;
     }
 
-    public double getFirstLeg() {
-        return this.firstLeg;
-    }
-
-    public void setFirstLeg(double firstLeg) {
-        this.firstLeg = firstLeg;
-    }
-
-    public double getSecondLeg() {
-        return this.secondLeg;
-    }
-
-    public void setSecondLeg(double secondLeg) {
-        this.secondLeg = secondLeg;
-    }
-
-    public double getHypotenuse() {
-        return this.hypotenuse;
-    }
-
-    public void setHypotenuse(double hypotenuse) {
-        this.hypotenuse = hypotenuse;
-    }
-
     @Override
     public double getArea() {
         return this.firstLeg * this.secondLeg / 2;

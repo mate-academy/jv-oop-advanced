@@ -15,30 +15,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.height = height;
     }
 
-    public double getHeight() {
-        return this.height;
-    }
-
-    public void setHeight(double height) {
-        this.height = height;
-    }
-
-    public double getSecondLeg() {
-        return this.secondLeg;
-    }
-
-    public void setSecondLeg(double secondLeg) {
-        this.secondLeg = secondLeg;
-    }
-
-    public double getFirstLeg() {
-        return this.firstLeg;
-    }
-
-    public void setFirstLeg(double firstLeg) {
-        this.firstLeg = firstLeg;
-    }
-
     @Override
     public double getArea() {
         return (this.firstLeg + this.secondLeg) * this.height / 2;
