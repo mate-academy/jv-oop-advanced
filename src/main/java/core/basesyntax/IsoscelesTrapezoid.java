@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
+    public static final String SHAPE_NAME = "isosceles trapezoid";
     private double firstLeg;
     private double secondLeg;
     private double height;
@@ -22,7 +23,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: isosceles trapezoid, area: "
+        System.out.println("Figure: " + SHAPE_NAME + ", area: "
                 + getArea() + " sq. units, firstLeg: "
                 + this.firstLeg + " units, secondLeg: "
                 + this.secondLeg + " units, height: "

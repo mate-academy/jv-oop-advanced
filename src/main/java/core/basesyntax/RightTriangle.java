@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
+    public static final String SHAPE_NAME = "right triangle";
     private double firstLeg;
     private double secondLeg;
     private double hypotenuse;
@@ -22,9 +23,9 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: right triangle, area: "
+        System.out.println("Figure: " + SHAPE_NAME + ", area: "
                 + getArea() + " sq. units, firstLeg: " + this.firstLeg
                 + " units, secondLeg: " + this.secondLeg + " units, "
-                + ", hypotenuse: " + this.hypotenuse + " units, color: " + getColor());
+                + " hypotenuse: " + this.hypotenuse + " units, color: " + getColor());
     }
 }
