@@ -19,6 +19,6 @@ public class Rectangle extends Figure {
     public void draw() {
         System.out.println("Figure: rectangle, area: " + String.format("%.2f", getArea())
                 + " sq. cm, wight: " + String.format("%.2f", width) + " sq. cm, length: "
-                + String.format("%.2f", length) + " cm, color: " + color);
+                + String.format("%.2f", length) + " cm, color: " + getColor());
     }
 }

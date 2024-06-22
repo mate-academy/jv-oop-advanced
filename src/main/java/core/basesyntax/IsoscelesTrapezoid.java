@@ -14,7 +14,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double getArea() {
-        return ((firstLeg + secondLeg) * height) / 2;
+        return (firstLeg + secondLeg) / 2 * height;
     }
 
     @Override
@@ -22,6 +22,6 @@ public class IsoscelesTrapezoid extends Figure {
         System.out.println("Figure: isosceles trapezoid, area: " + String.format("%.2f", getArea())
                 + " sq. cm, firstLeg: " + String.format("%.2f", firstLeg) + "cm, secondLeg: "
                 + String.format("%.2f", secondLeg) + " cm, height: " + String.format("%.2f", height)
-                + "cm, color: " + color);
+                + "cm, color: " + getColor());
     }
 }

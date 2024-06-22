@@ -12,13 +12,13 @@ public class RightTriangle extends Figure {
 
     @Override
     public double getArea() {
-        return base * height / 2;
+        return 0.5 * base * height;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: right triangle, area: " + String.format("%.2f", getArea())
                 + " sq. cm, base: " + String.format("%.2f", base) + " sq. cm, height: "
-                + String.format("%.2f", height) + " cm, color: " + color);
+                + String.format("%.2f", height) + " cm, color: " + getColor());
     }
 }
