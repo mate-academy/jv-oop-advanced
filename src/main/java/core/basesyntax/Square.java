@@ -1,7 +1,8 @@
 package core.basesyntax;
 
+import core.basesyntax.enums.FigureType;
+
 public class Square extends Figure {
-    public static final String SHAPE_NAME = "square";
     private double side;
 
     public Square(String color, double side) {
@@ -16,7 +17,7 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + SHAPE_NAME + " , area: "
+        System.out.println("Figure: " + FigureType.SQUARE.name().toLowerCase() + " , area: "
                 + getArea() + " sq. units, side: "
                 + this.side + " units, color: " + getColor());
     }

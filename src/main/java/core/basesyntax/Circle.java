@@ -1,7 +1,8 @@
 package core.basesyntax;
 
+import core.basesyntax.enums.FigureType;
+
 public class Circle extends Figure {
-    public static final String SHAPE_NAME = "circle";
     private double radius;
 
     public Circle(String color, double radius) {
@@ -19,8 +20,8 @@ public class Circle extends Figure {
     }
 
     public void draw() {
-        System.out.println("Figure: " + SHAPE_NAME + ", area: "
-                + getArea() + " sq. units, radius: "
+        System.out.println("Figure: " + FigureType.CIRCLE.name().toLowerCase()
+                + ", area: " + getArea() + " sq. units, radius: "
                 + getRadius() + " units, color: " + getColor());
     }
 }

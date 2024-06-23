@@ -1,7 +1,8 @@
 package core.basesyntax;
 
+import core.basesyntax.enums.FigureType;
+
 public class Rectangle extends Figure {
-    public static final String SHAPE_NAME = "rectangle";
     private double firstLeg;
     private double secondLeg;
 
@@ -18,8 +19,9 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + SHAPE_NAME + ", area: "
-                + getArea() + " sq. units, firstLeg : " + this.firstLeg + " units, "
-                + " secondLeg: " + this.secondLeg + " units, color: " + getColor());
+        System.out.println("Figure: " + FigureType.RECTANGLE.name().toLowerCase()
+                + ", area: " + getArea() + " sq. units, firstLeg : "
+                + this.firstLeg + " units, " + " secondLeg: "
+                + this.secondLeg + " units, color: " + getColor());
     }
 }

@@ -1,6 +1,8 @@
 package core.basesyntax;
 
-public abstract class Figure implements AreaCalculatable {
+import core.basesyntax.enums.Drawlable;
+
+public abstract class Figure implements AreaCalculatable, Drawlable {
     private String color;
 
     public Figure(String color) {
@@ -10,7 +12,4 @@ public abstract class Figure implements AreaCalculatable {
     public String getColor() {
         return color;
     }
-
-    public abstract void draw();
-
 }

@@ -1,7 +1,8 @@
 package core.basesyntax;
 
+import core.basesyntax.enums.FigureType;
+
 public class RightTriangle extends Figure {
-    public static final String SHAPE_NAME = "right triangle";
     private double firstLeg;
     private double secondLeg;
     private double hypotenuse;
@@ -23,8 +24,8 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + SHAPE_NAME + ", area: "
-                + getArea() + " sq. units, firstLeg: " + this.firstLeg
+        System.out.println("Figure: " + FigureType.RIGHT_TRIANGLE.name().toLowerCase()
+                + ", area: " + getArea() + " sq. units, firstLeg: " + this.firstLeg
                 + " units, secondLeg: " + this.secondLeg + " units, "
                 + " hypotenuse: " + this.hypotenuse + " units, color: " + getColor());
     }
