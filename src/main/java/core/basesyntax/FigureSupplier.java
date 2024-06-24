@@ -22,7 +22,7 @@ public class FigureSupplier {
             case RECTANGLE -> new Rectangle(randomColor,
                     random.nextDouble(MAX_RANGE_VALUE),
                     random.nextDouble(MAX_RANGE_VALUE));
-            case CIRCLE-> new Circle(randomColor,
+            case CIRCLE -> new Circle(randomColor,
                     random.nextDouble(MAX_RANGE_VALUE));
             case RIGHT_TRIANGLE -> new RightTriangle(randomColor,
                     random.nextDouble(MAX_RANGE_VALUE),
