@@ -1,9 +1,19 @@
 package core.basesyntax.figure;
 
-public interface Figure {
+public abstract class Figure implements CalculatorArea, Drawable {
+    protected String color;
 
-    double getArea();
+    public Figure(String color) {
+        this.color = color;
+    }
 
-    void draw();
+    @Override
+    public double getArea() {
+        return 0;
+    }
 
+    @Override
+    public void draw() {
+
+    }
 }
