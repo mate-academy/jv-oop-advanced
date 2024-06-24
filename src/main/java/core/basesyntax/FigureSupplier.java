@@ -5,34 +5,34 @@ import core.basesyntax.enums.FigureType;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final Random RANDOM = new Random();
-    public static final ColorSupplier COLOR_SUPPLIER = new ColorSupplier();
     public static final double MAX_RANGE_VALUE = 100;
     public static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
     public static final int DEFAULT_RADIUS = 10;
 
     public Figure getRandomFigure() {
-        int indexRandom = RANDOM.nextInt(FigureType.values().length);
-        String figureName = FigureType.values()[indexRandom].name();
-        String randomColor = COLOR_SUPPLIER.getRandomColor();
+        Random random = new Random();
+        ColorSupplier colorSupplier = new ColorSupplier();
+        int indexRandom = random.nextInt(FigureType.values().length);
+        FigureType randomFigureType = FigureType.values()[indexRandom];
+        String randomColor = colorSupplier.getRandomColor();
 
-        return switch (figureName) {
-            case "SQUARE" -> new Square(randomColor,
-                    RANDOM.nextDouble(MAX_RANGE_VALUE));
-            case "RECTANGLE" -> new Rectangle(randomColor,
-                    RANDOM.nextDouble(MAX_RANGE_VALUE),
-                    RANDOM.nextDouble(MAX_RANGE_VALUE));
-            case "CIRCLE" -> new Circle(randomColor,
-                    RANDOM.nextDouble(MAX_RANGE_VALUE));
-            case "RIGHT_TRIANGLE" -> new RightTriangle(randomColor,
-                    RANDOM.nextDouble(MAX_RANGE_VALUE),
-                    RANDOM.nextDouble(MAX_RANGE_VALUE),
-                    RANDOM.nextDouble(MAX_RANGE_VALUE));
-            case "ISOSCELES_TRAPEZOID" -> new IsoscelesTrapezoid(randomColor,
-                    RANDOM.nextDouble(MAX_RANGE_VALUE),
-                    RANDOM.nextDouble(MAX_RANGE_VALUE),
-                    RANDOM.nextDouble(MAX_RANGE_VALUE));
-            default -> throw new IllegalStateException("Unexpected value: " + figureName);
+        return switch (randomFigureType) {
+            case SQUARE -> new Square(randomColor,
+                    random.nextDouble(MAX_RANGE_VALUE));
+            case RECTANGLE -> new Rectangle(randomColor,
+                    random.nextDouble(MAX_RANGE_VALUE),
+                    random.nextDouble(MAX_RANGE_VALUE));
+            case CIRCLE-> new Circle(randomColor,
+                    random.nextDouble(MAX_RANGE_VALUE));
+            case RIGHT_TRIANGLE -> new RightTriangle(randomColor,
+                    random.nextDouble(MAX_RANGE_VALUE),
+                    random.nextDouble(MAX_RANGE_VALUE),
+                    random.nextDouble(MAX_RANGE_VALUE));
+            case ISOSCELES_TRAPEZOID -> new IsoscelesTrapezoid(randomColor,
+                    random.nextDouble(MAX_RANGE_VALUE),
+                    random.nextDouble(MAX_RANGE_VALUE),
+                    random.nextDouble(MAX_RANGE_VALUE));
+            default -> throw new IllegalStateException("Unexpected value: " + randomFigureType);
         };
     }
 

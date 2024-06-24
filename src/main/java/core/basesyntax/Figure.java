@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import core.basesyntax.enums.Drawlable;
-
 public abstract class Figure implements AreaCalculatable, Drawlable {
     private String color;
 
