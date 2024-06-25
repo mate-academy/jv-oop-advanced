@@ -19,7 +19,8 @@ public class FigureSupplier {
             case 2 :
                 return new RightTriangle(color, random.nextDouble(), random.nextDouble());
             case 3 :
-                return new IsoscelesTrapezoid(color, random.nextDouble(), random.nextDouble(), random.nextDouble());
+                return new IsoscelesTrapezoid(color,
+                        random.nextDouble(), random.nextDouble(), random.nextDouble());
             case 4 :
                 return new Rectangle(color, random.nextDouble(), random.nextDouble());
             default :
