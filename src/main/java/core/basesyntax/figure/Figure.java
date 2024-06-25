@@ -7,12 +7,7 @@ public abstract class Figure implements AreaCalculator, Drawable {
         this.color = color;
     }
 
-    @Override
-    public double getArea() {
-        return 0;
-    }
-
-    @Override
-    public void draw() {
+    public String getColor() {
+        return color;
     }
 }
