@@ -20,6 +20,7 @@ public class RightTriangle extends Figure {
         System.out.println(getDescription());
     }
 
+    @Override
     public String getDescription() {
         return "Figure: right triangle, area: "
                 + getArea()

@@ -10,9 +10,7 @@ public class Main {
             figures[i] = i < ARRAY_SIZE / 2
                     ? figureSupplier.getRandomFigure()
                     : figureSupplier.getDefaultFigure();
-        }
-        for (Figure figure : figures) {
-            figure.draw();
+            figures[i].draw();
         }
     }
 }

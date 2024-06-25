@@ -18,6 +18,7 @@ public class Square extends Figure {
         System.out.println(getDescription());
     }
 
+    @Override
     public String getDescription() {
         return "Figure: square, area: "
                 + getArea()

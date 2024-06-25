@@ -20,6 +20,7 @@ public class Rectangle extends Figure {
         System.out.println(getDescription());
     }
 
+    @Override
     public String getDescription() {
         return "Figure: rectangle, area: "
                 + getArea()

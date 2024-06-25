@@ -22,6 +22,7 @@ public class IsoscelesTrapezoid extends Figure {
         System.out.println(getDescription());
     }
 
+    @Override
     public String getDescription() {
         return "Figure: isosceles trapezoid, area: "
                 + getArea()
