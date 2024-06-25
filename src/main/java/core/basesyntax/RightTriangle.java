@@ -18,7 +18,7 @@ public class RightTriangle implements Figure {
 
     @Override
     public void draw() {
-        System.out.println("Square: color="
+        System.out.println("RightTriangle: color="
                 + color
                 + ", firstLeg="
                 + firstLeg

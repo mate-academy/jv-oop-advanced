@@ -16,7 +16,7 @@ public class Circle implements Figure {
 
     @Override
     public void draw() {
-        System.out.println("Square: color="
+        System.out.println("Circle: color="
                 + color
                 + ", radius="
                 + radius
