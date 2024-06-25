@@ -4,7 +4,7 @@
 Remove all redundant empty lines, be careful :)
 
 #### Don't use abstract classes to set behavior for classes
-Abstract classes and interfaces have different use cases. Try to areaHelper out when to use 
+Abstract classes and interfaces have different use cases. Try to figure out when to use 
 both in this task by yourself. If you're blocked [this](https://stackoverflow.com/a/479168) may give you a hint.
 
 #### Don't use verbs for class/interface names
@@ -22,7 +22,7 @@ public interface AreaCalculator {
 #### Don't put all behavior into a single interface if the methods are conceptually different from each other.
 All our classes and interfaces should have a single purpose - the `draw()` and `getArea()` methods are not conceptually close to each other.
 
-#### You can pass random values to the constructor of a areaHelper instead of generating them inside areaHelper classes.
+#### You can pass random values to the constructor of a figure instead of generating them inside figure classes.
 Let's generate random values in `FigureSupplier`.
 
 #### Think about which variables should be local in the method and which should be class-level
@@ -57,7 +57,7 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int `figureNumber` = random.nextInt(5);
-        // generate a specific areaHelper based on the `figureNumber` value
+        // generate a specific figure based on the `figureNumber` value
     }
 }
 ```
@@ -69,12 +69,12 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
-        // generate a specific areaHelper based on the `figureNumber` value
+        // generate a specific figure based on the `figureNumber` value
     }
 }
 ```
 
-#### Creating a areaHelper, don't pass expressions in the constructor. 
+#### Creating a figure, don't pass expressions in the constructor. 
 Create separate variables and pass them on for better code readability.
 * Bad example:
 ```
