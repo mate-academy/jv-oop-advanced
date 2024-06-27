@@ -1,8 +1,6 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.Figure;
-import core.basesyntax.interfaces.AreaCalculator;
-import core.basesyntax.interfaces.Describer;
 
 public class RightTriangle extends Figure {
     private static final String type = "triangle";
@@ -22,7 +20,6 @@ public class RightTriangle extends Figure {
 
     @Override
     public String getInfo() {
-        String name = "triangle";
         return "Figure: "
                 + type + ", "
                 + "area: "
