@@ -15,7 +15,7 @@ public class Rectangle extends Figure {
 
     @Override
     public double getArea() {
-        return (double) width * height;
+        return width * height;
     }
 
     @Override
