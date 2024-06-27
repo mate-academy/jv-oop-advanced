@@ -1,7 +1,11 @@
 package core.basesyntax;
 
-import core.basesyntax.figures.*;
 import core.basesyntax.enums.Type;
+import core.basesyntax.figures.Square;
+import core.basesyntax.figures.Rectangle;
+import core.basesyntax.figures.RightTriangle;
+import core.basesyntax.figures.Circle;
+import core.basesyntax.figures.IsoscelesTrapezoid;
 import java.util.Random;
 
 public class FigureSupplier {
