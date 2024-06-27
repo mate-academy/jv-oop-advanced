@@ -1,5 +1,5 @@
 package core.basesyntax.interfaces;
 
-public interface Describer {
+public interface Drawable {
     String getInfo();
 }
