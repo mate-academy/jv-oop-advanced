@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-import core.basesyntax.interfaces.AreaCalculator;
-import core.basesyntax.interfaces.Describer;
+import core.basesyntax.interfaces.AreaCalculable;
+import core.basesyntax.interfaces.Drawable;
 
-public abstract class Figure implements Describer, AreaCalculator {
+public abstract class Figure implements Drawable, AreaCalculable {
     private String type = "circle";
     private String color = "WHITE";
 
