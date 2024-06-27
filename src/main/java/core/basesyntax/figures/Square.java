@@ -1,8 +1,6 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.Figure;
-import core.basesyntax.interfaces.AreaCalculator;
-import core.basesyntax.interfaces.Describer;
 
 public class Square extends Figure {
     private static final String type = "square";
