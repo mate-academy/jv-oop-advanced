@@ -9,12 +9,11 @@ import core.basesyntax.figures.IsoscelesTrapezoid;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int MAX = 20;
     private static final int MIN = 1;
+    private static final int MAX = 20;
     private static final int DEFAULT_RADIUS = 10;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
-
 
     public Figure getRandomFigure() {
         int indexOfType = random.nextInt(Type.values().length);
@@ -28,7 +27,7 @@ public class FigureSupplier {
             case RECTANGLE -> new Rectangle(sideA, sideB, color);
             case TRIANGLE -> new RightTriangle(sideA, sideB, color);
             case CIRCLE -> new Circle(sideA, color);
-            default -> new IsoscelesTrapezoid(sideA, sideB, sideC, color);
+            case TRAPEZOID -> new IsoscelesTrapezoid(sideA, sideB, sideC, color);
         };
     }
 
