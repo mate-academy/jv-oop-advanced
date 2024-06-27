@@ -22,7 +22,6 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String getInfo() {
-        String name = "trapezoid";
         return "Figure: "
                 + type + ", "
                 + "area: "
