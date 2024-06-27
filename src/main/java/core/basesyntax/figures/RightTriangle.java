@@ -3,14 +3,14 @@ package core.basesyntax.figures;
 import core.basesyntax.Figure;
 
 public class RightTriangle extends Figure {
-    private static final String type = "triangle";
     private final int firstLeg;
     private final int secondLeg;
 
     public RightTriangle(int firstLeg, int secondLeg, String color) {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        this.color = color;
+        this.setColor(color);
+        this.setType("right triangle");
     }
 
     @Override
@@ -21,7 +21,7 @@ public class RightTriangle extends Figure {
     @Override
     public String getInfo() {
         return "Figure: "
-                + type + ", "
+                + getType() + ", "
                 + "area: "
                 + this.getArea()
                 + " sq. units, "
@@ -32,6 +32,6 @@ public class RightTriangle extends Figure {
                 + secondLeg
                 + " units, "
                 + "color: "
-                + color;
+                + getColor();
     }
 }

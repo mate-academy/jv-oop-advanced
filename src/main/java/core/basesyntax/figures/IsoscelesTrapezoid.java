@@ -3,7 +3,6 @@ package core.basesyntax.figures;
 import core.basesyntax.Figure;
 
 public class IsoscelesTrapezoid extends Figure {
-    private static final String type = "trapezoid";
     private final int top;
     private final int bottom;
     private final int height;
@@ -12,7 +11,8 @@ public class IsoscelesTrapezoid extends Figure {
         this.top = top;
         this.bottom = bottom;
         this.height = height;
-        this.color = color;
+        this.setColor(color);
+        this.setType("isosceles trapezoid");
     }
 
     @Override
@@ -23,7 +23,7 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public String getInfo() {
         return "Figure: "
-                + type + ", "
+                + getType() + ", "
                 + "area: "
                 + this.getArea()
                 + " sq. units, "
@@ -37,6 +37,6 @@ public class IsoscelesTrapezoid extends Figure {
                 + height
                 + " units, "
                 + "color: "
-                + color;
+                + getColor();
     }
 }

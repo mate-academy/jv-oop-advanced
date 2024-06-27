@@ -3,12 +3,12 @@ package core.basesyntax.figures;
 import core.basesyntax.Figure;
 
 public class Square extends Figure {
-    private static final String type = "square";
     private final int side;
 
     public Square(int side, String color) {
         this.side = side;
-        this.color = color;
+        this.setColor(color);
+        this.setType("square");
     }
 
     @Override
@@ -19,7 +19,7 @@ public class Square extends Figure {
     @Override
     public String getInfo() {
         return "Figure: "
-                + type + ", "
+                + getType() + ", "
                 + "area: "
                 + this.getArea()
                 + " sq. units, "
@@ -27,6 +27,6 @@ public class Square extends Figure {
                 + side
                 + " units, "
                 + "color: "
-                + color;
+                + getColor();
     }
 }

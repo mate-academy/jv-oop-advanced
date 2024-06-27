@@ -11,7 +11,7 @@ public class Circle extends Figure {
 
     public Circle(int radius, String color) {
         this.radius = radius;
-        this.color = color;
+        this.setColor(color);
     }
 
     @Override
@@ -22,7 +22,7 @@ public class Circle extends Figure {
     @Override
     public String getInfo() {
         return "Figure: "
-                + type + ", "
+                + getType() + ", "
                 + "area: "
                 + this.getArea()
                 + " sq. units, "
@@ -30,6 +30,6 @@ public class Circle extends Figure {
                 + radius
                 + " units, "
                 + "color: "
-                + color;
+                + getColor();
     }
 }
