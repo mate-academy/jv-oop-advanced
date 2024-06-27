@@ -7,32 +7,23 @@ public class FigureSupplier {
     private static final Random RANDOM = new Random();
     private static final String DEF_CIRCLE_COLOR = Color.WHITE.name();
     private static final int DEF_CIRCLE_RADIUS = 10;
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private static final int BOUND = 5;
+    private static final ColorSupplier COLOR_SUPPLIER = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int figureType = RANDOM.nextInt(5);
-        String color = colorSupplier.getRandomColor();
+        int figureType = RANDOM.nextInt(BOUND);
 
         switch (figureType) {
             case 0:
-                return new Square(color,
-                        getRandomSide());
+                return createSquare();
             case 1:
-                return new Rectangle(color,
-                        getRandomSide(),
-                        getRandomSide());
+                return createRectangle();
             case 2:
-                return new RightTriangle(color,
-                        getRandomSide(),
-                        getRandomSide());
+                return createRightTriangle();
             case 3:
-                return new Circle(color,
-                        getRandomSide());
+                return createCircle();
             case 4:
-                return new IsoscelesTrapezoid(color,
-                        getRandomSide(),
-                        getRandomSide(),
-                        getRandomSide());
+                return createIsoscelesTrapezoid();
             default:
                 return getDefaultFigure();
         }
@@ -44,6 +35,35 @@ public class FigureSupplier {
 
     public Figure getDefaultFigure() {
         return new Circle(DEF_CIRCLE_COLOR, DEF_CIRCLE_RADIUS);
+    }
+
+    private Square createSquare() {
+        return new Square(COLOR_SUPPLIER.getRandomColor(),
+                getRandomSide());
+    }
+
+    private Rectangle createRectangle() {
+        return new Rectangle(COLOR_SUPPLIER.getRandomColor(),
+                getRandomSide(),
+                getRandomSide());
+    }
+
+    private RightTriangle createRightTriangle() {
+        return new RightTriangle(COLOR_SUPPLIER.getRandomColor(),
+                getRandomSide(),
+                getRandomSide());
+    }
+
+    private Circle createCircle() {
+        return new Circle(COLOR_SUPPLIER.getRandomColor(),
+                getRandomSide());
+    }
+
+    private IsoscelesTrapezoid createIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(COLOR_SUPPLIER.getRandomColor(),
+                getRandomSide(),
+                getRandomSide(),
+                getRandomSide());
     }
 }
 
