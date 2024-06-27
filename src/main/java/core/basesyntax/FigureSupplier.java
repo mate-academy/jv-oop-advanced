@@ -19,18 +19,13 @@ public class FigureSupplier {
         int sideA = random.nextInt(MIN, MAX);
         int sideB = random.nextInt(MIN, MAX);
         int sideC = random.nextInt(MIN, MAX);
-        switch (type) {
-            case SQUARE:
-                return new Square(sideA, color);
-            case RECTANGLE:
-                return new Rectangle(sideA, sideB, color);
-            case TRIANGLE:
-                return new RightTriangle(sideA, sideB, color);
-            case CIRCLE:
-                return new Circle(sideA, color);
-            default:
-                return new IsoscelesTrapezoid(sideA, sideB, sideC, color);
-        }
+        return switch (type) {
+            case SQUARE -> new Square(sideA, color);
+            case RECTANGLE -> new Rectangle(sideA, sideB, color);
+            case TRIANGLE -> new RightTriangle(sideA, sideB, color);
+            case CIRCLE -> new Circle(sideA, color);
+            default -> new IsoscelesTrapezoid(sideA, sideB, sideC, color);
+        };
     }
 
     public Figure getDefaultFigure() {
