@@ -15,13 +15,17 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
+    private int randomSide() {
+        return random.nextInt(MIN, MAX);
+    }
+
     public Figure getRandomFigure() {
         int indexOfType = random.nextInt(Type.values().length);
         Type type = Type.values()[indexOfType];
         String color = colorSupplier.getRandomColor();
-        int sideA = random.nextInt(MIN, MAX);
-        int sideB = random.nextInt(MIN, MAX);
-        int sideC = random.nextInt(MIN, MAX);
+        int sideA = randomSide();
+        int sideB = randomSide();
+        int sideC = randomSide();
         return switch (type) {
             case SQUARE -> new Square(sideA, color);
             case RECTANGLE -> new Rectangle(sideA, sideB, color);
