@@ -29,12 +29,12 @@ public class FigureSupplier {
         }
     }
 
-    public double getRandomSide() {
-        return RANDOM.nextDouble(MAX_VALUE);
-    }
-
     public Figure getDefaultFigure() {
         return new Circle(DEF_CIRCLE_COLOR, DEF_CIRCLE_RADIUS);
+    }
+
+    private double getRandomSide() {
+        return RANDOM.nextDouble(MAX_VALUE);
     }
 
     private Square createSquare() {
