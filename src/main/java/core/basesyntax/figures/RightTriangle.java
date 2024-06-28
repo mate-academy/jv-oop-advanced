@@ -19,7 +19,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String getInfo() {
+    public String draw() {
         return "Figure: "
                 + getType() + ", "
                 + "area: "

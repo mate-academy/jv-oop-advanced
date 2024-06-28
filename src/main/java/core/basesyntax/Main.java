@@ -13,7 +13,7 @@ public class Main {
         }
 
         for (Figure figure : arrayOfFigures) {
-            System.out.println(figure.getInfo());
+            System.out.println(figure.draw());
         }
     }
 }
