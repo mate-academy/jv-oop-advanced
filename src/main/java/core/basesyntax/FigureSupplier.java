@@ -15,10 +15,6 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    private int randomSide() {
-        return random.nextInt(MIN, MAX);
-    }
-
     public Figure getRandomFigure() {
         int indexOfType = random.nextInt(Type.values().length);
         Type type = Type.values()[indexOfType];
@@ -37,5 +33,9 @@ public class FigureSupplier {
 
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_RADIUS);
+    }
+
+    private int randomSide() {
+        return random.nextInt(MIN, MAX);
     }
 }
