@@ -6,7 +6,7 @@ import core.basesyntax.interfaces.AreaCalculable;
 import core.basesyntax.interfaces.Drawable;
 
 public abstract class Figure implements Drawable, AreaCalculable {
-    private String type = Type.CIRCLE.name().toLowerCase();;
+    private String type = Type.CIRCLE.name().toLowerCase();
     private String color = Color.WHITE.name();
 
     public String getType() {
