@@ -16,9 +16,9 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void print() {
-        System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, width: "
+    public String print() {
+        return "Figure: rectangle, area: " + getArea() + " sq. units, width: "
                 + width + " units, height: " + height + " units, color: "
-                + new ColorSupplier().getRandomColor());
+                + getColor();
     }
 }

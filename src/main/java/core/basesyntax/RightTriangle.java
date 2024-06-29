@@ -9,7 +9,11 @@ public class RightTriangle extends Figure {
         super(color);
         this.base = base;
         this.height = height;
-        this.hypotenuse = Math.sqrt(base * base + height * height);
+        this.hypotenuse = getHypotenuse();
+    }
+
+    public double getHypotenuse() {
+        return Math.sqrt(base * base + height * height);
     }
 
     @Override
@@ -18,10 +22,10 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void print() {
-        System.out.println("Figure: right triangle, area: " + getArea()
+    public String print() {
+        return "Figure: right triangle, area: " + getArea()
                 + " sq. units, base: " + base
                 + " units, height: " + height + " units, hypotenuse: " + hypotenuse
-                + " units, color: " + new ColorSupplier().getRandomColor());
+                + " units, color: " + getColor();
     }
 }

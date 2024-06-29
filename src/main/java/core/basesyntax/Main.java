@@ -3,18 +3,20 @@ package core.basesyntax;
 public class Main {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        Figure[] figures = new Figure[6];
+        final int Array_Size = 6;
+        Figure[] figures = new Figure[Array_Size];
+        final int Half_Array = figures.length / 2;
 
-        for (int i = 0; i < figures.length / 2; i++) {
+        for (int i = 0; i < Half_Array; i++) {
             figures[i] = figureSupplier.getRandomFigure();
         }
 
-        for (int i = figures.length / 2; i < figures.length; i++) {
+        for (int i = Half_Array; i < figures.length; i++) {
             figures[i] = figureSupplier.getDefaultFigure();
         }
 
         for (Figure figure : figures) {
-            figure.print();
+            System.out.println(figure.print());
         }
     }
 }
