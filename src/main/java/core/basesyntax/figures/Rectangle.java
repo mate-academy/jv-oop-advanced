@@ -10,7 +10,6 @@ public class Rectangle extends Figure {
         this.width = width;
         this.height = height;
         this.setColor(color);
-        this.setType("rectangle");
     }
 
     @Override
@@ -21,7 +20,7 @@ public class Rectangle extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: "
-                + getType() + ", "
+                + this.getClass().getSimpleName().toLowerCase() + ", "
                 + "area: "
                 + this.getArea()
                 + " sq. units, "

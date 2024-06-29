@@ -8,7 +8,6 @@ public class Square extends Figure {
     public Square(int side, String color) {
         this.side = side;
         this.setColor(color);
-        this.setType("square");
     }
 
     @Override
@@ -19,7 +18,7 @@ public class Square extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: "
-                + getType() + ", "
+                + this.getClass().getSimpleName().toLowerCase() + ", "
                 + "area: "
                 + this.getArea()
                 + " sq. units, "

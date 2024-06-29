@@ -10,7 +10,6 @@ public class RightTriangle extends Figure {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
         this.setColor(color);
-        this.setType("right triangle");
     }
 
     @Override
@@ -21,7 +20,7 @@ public class RightTriangle extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: "
-                + getType() + ", "
+                + this.getClass().getSimpleName().toLowerCase() + ", "
                 + "area: "
                 + this.getArea()
                 + " sq. units, "
