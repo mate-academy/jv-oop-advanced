@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 import core.basesyntax.enums.Color;
-import core.basesyntax.enums.Type;
 import core.basesyntax.interfaces.AreaCalculable;
 import core.basesyntax.interfaces.Drawable;
 
