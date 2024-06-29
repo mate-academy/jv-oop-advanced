@@ -26,7 +26,8 @@ public class FigureSupplier {
             case RECTANGLE -> new Rectangle(randomSide(), randomSide(), color);
             case TRIANGLE -> new RightTriangle(randomSide(), randomSide(), color);
             case CIRCLE -> new Circle(randomSide(), color);
-            case TRAPEZOID -> new IsoscelesTrapezoid(randomSide(), randomSide(), randomSide(), color);
+            case TRAPEZOID -> new IsoscelesTrapezoid(randomSide(),
+                    randomSide(), randomSide(), color);
         };
     }
 
