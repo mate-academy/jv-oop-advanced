@@ -20,8 +20,8 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String draw() {
-        return "Figure: "
+    public void draw() {
+        System.out.println("Figure: "
                 + getType() + ", "
                 + "area: "
                 + this.getArea()
@@ -30,6 +30,6 @@ public class Circle extends Figure {
                 + radius
                 + " units, "
                 + "color: "
-                + getColor();
+                + getColor());
     }
 }
