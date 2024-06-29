@@ -1,5 +1,6 @@
 package core.basesyntax;
 
+import core.basesyntax.enums.Color;
 import core.basesyntax.enums.Type;
 import core.basesyntax.figures.Circle;
 import core.basesyntax.figures.IsoscelesTrapezoid;
@@ -12,7 +13,7 @@ public class FigureSupplier {
     private static final int MIN = 1;
     private static final int MAX = 20;
     private static final int DEFAULT_RADIUS = 10;
-    private static final String DEFAULT_COLOR = "WHITE";
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -20,15 +21,12 @@ public class FigureSupplier {
         int indexOfType = random.nextInt(Type.values().length);
         Type type = Type.values()[indexOfType];
         String color = colorSupplier.getRandomColor();
-        int sideA = randomSide();
-        int sideB = randomSide();
-        int sideC = randomSide();
         return switch (type) {
-            case SQUARE -> new Square(sideA, color);
-            case RECTANGLE -> new Rectangle(sideA, sideB, color);
-            case TRIANGLE -> new RightTriangle(sideA, sideB, color);
-            case CIRCLE -> new Circle(sideA, color);
-            case TRAPEZOID -> new IsoscelesTrapezoid(sideA, sideB, sideC, color);
+            case SQUARE -> new Square(randomSide(), color);
+            case RECTANGLE -> new Rectangle(randomSide(), randomSide(), color);
+            case TRIANGLE -> new RightTriangle(randomSide(), randomSide(), color);
+            case CIRCLE -> new Circle(randomSide(), color);
+            case TRAPEZOID -> new IsoscelesTrapezoid(randomSide(), randomSide(), randomSide(), color);
         };
     }
 
