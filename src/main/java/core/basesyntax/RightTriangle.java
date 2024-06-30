@@ -5,7 +5,7 @@ public class RightTriangle extends Figure {
     private double height;
     private double hypotenuse;
 
-    public RightTriangle(Color color, double base, double height) {
+    public RightTriangle(String color, double base, double height) {
         super(color);
         this.base = base;
         this.height = height;
@@ -22,10 +22,10 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String print() {
-        return "Figure: right triangle, area: " + getArea()
+    public void draw() {
+        System.out.println("Figure: right triangle, area: " + getArea()
                 + " sq. units, base: " + base
                 + " units, height: " + height + " units, hypotenuse: " + hypotenuse
-                + " units, color: " + getColor();
+                + " units, color: " + getColor());
     }
 }
