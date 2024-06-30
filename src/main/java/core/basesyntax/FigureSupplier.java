@@ -3,34 +3,38 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final String DEFAULT_COLOR = Color.WHITE.toString();
+    private static final int DEFAULT_NUMBER = 10;
     private static final int FIGURE_BORDER = 5;
     private static final int BORDER = 101;
-    private int randomFigureIndex;
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
 
+    public int randomSide() {
+        return random.nextInt(BORDER);
+    }
+
     public Figure getRandomFigure() {
-        randomFigureIndex = random.nextInt(FIGURE_BORDER);
+        int randomFigureIndex = random.nextInt(FIGURE_BORDER);
         switch (randomFigureIndex) {
             case 0 :
-                return new Circle(colorSupplier.getRandomColor(), random.nextInt(BORDER));
+                return new Circle(colorSupplier.getRandomColor(), randomSide());
             case 1 :
-                return new Square(colorSupplier.getRandomColor(), random.nextInt(BORDER));
+                return new Square(colorSupplier.getRandomColor(), randomSide());
             case 2 :
-                return new Rectangle(colorSupplier.getRandomColor(),
-                        random.nextInt(BORDER), random.nextInt(BORDER));
+                return new Rectangle(colorSupplier.getRandomColor(), randomSide(), randomSide());
             case 3 :
                 return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        random.nextInt(BORDER), random.nextInt(BORDER), random.nextInt(BORDER));
+                        randomSide(), randomSide(), randomSide());
             case 4 :
-                return new RightTriangle(colorSupplier.getRandomColor(),
-                        random.nextInt(BORDER), random.nextInt(BORDER));
+                return new RightTriangle(colorSupplier.getRandomColor(), randomSide(),
+                        randomSide());
             default:
                 return getDefaultFigure();
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", 10);
+        return new Circle(DEFAULT_COLOR, DEFAULT_NUMBER);
     }
 }
