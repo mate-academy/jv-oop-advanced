@@ -1,11 +1,12 @@
 package core.basesyntax.model.impl;
 
+import core.basesyntax.model.Color;
 import core.basesyntax.model.Figure;
 
 public class RightTriangle extends Figure {
     private final int side;
 
-    public RightTriangle(String color, int side) {
+    public RightTriangle(Color color, int side) {
         super(color);
         this.side = side;
     }

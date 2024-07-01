@@ -1,5 +1,6 @@
 package core.basesyntax.util;
 
+import core.basesyntax.model.Color;
 import core.basesyntax.model.Figure;
 import core.basesyntax.model.impl.Circle;
 import core.basesyntax.model.impl.IsoscelesTrapezoid;
@@ -13,12 +14,12 @@ public class FigureSupplier {
     private static final int MIN_LENGTH_FIGURE = 1;
     private static final int MAX_LENGTH_FIGURE = 100;
     private static final int DEFAULT_RADIUS_CIRCLE = 10;
-    private static final String DEFAULT_COLOR_CIRCLE = "WHITE";
+    private static final Color DEFAULT_COLOR_CIRCLE = Color.WHITE;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        String color = colorSupplier.getRandomColor();
+        Color color = colorSupplier.getRandomColor();
         int indexFigure = random.nextInt(QUANTITY_FIGURE);
 
         return switch (indexFigure) {

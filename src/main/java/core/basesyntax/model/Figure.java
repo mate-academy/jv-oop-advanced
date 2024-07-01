@@ -4,9 +4,9 @@ import core.basesyntax.util.AreaCalculator;
 import core.basesyntax.util.Drawable;
 
 public abstract class Figure implements AreaCalculator, Drawable {
-    protected String color;
+    protected Color color;
 
-    public Figure(String color) {
+    public Figure(Color color) {
         this.color = color;
     }
 

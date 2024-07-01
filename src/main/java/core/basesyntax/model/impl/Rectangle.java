@@ -1,12 +1,13 @@
 package core.basesyntax.model.impl;
 
+import core.basesyntax.model.Color;
 import core.basesyntax.model.Figure;
 
 public class Rectangle extends Figure {
     private final int firstSide;
     private final int secondSide;
 
-    public Rectangle(String color, int firstSide, int secondSide) {
+    public Rectangle(Color color, int firstSide, int secondSide) {
         super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
