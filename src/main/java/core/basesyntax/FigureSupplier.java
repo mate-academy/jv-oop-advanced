@@ -3,6 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final String FIGURE_COLOR = Color.WHITE.name().toLowerCase();
     private static final int FIGURE_AMOUNT = 5;
     private static final int SIDE_LENGTH = 10;
     private static final int RADIUS = 10;
@@ -29,12 +30,12 @@ public class FigureSupplier {
         }
     }
 
-    private int getRandomLength() {
-        return random.nextInt(SIDE_LENGTH) + 1;
+    public Figure getDefaultFigure() {
+        return new Circle(FIGURE_COLOR, RADIUS);
     }
 
-    public Figure getDefaultFigure() {
-        return new Circle("white", RADIUS);
+    private int getRandomLength() {
+        return random.nextInt(SIDE_LENGTH) + 1;
     }
 }
 

@@ -7,12 +7,13 @@ public class Circle extends Figure {
     public Circle(String color, double radius) {
         super(color);
         this.radius = radius;
-        this.area = Math.round(Math.PI * (radius * radius));
+        this.area = getArea();
     }
 
     @Override
     public double getArea() {
-        return area;
+        double area = Math.PI * (radius * radius);
+        return Math.round(area);
     }
 
     @Override
