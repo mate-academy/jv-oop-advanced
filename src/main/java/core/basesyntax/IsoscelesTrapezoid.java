@@ -23,6 +23,6 @@ public class IsoscelesTrapezoid extends Figure {
                 + getArea() + " sq. units, bottom side: "
                 + bottomSide + " units, upper side: "
                 + upperSide + " units, height: "
-                + height + " units, color: " + super.getColor());
+                + height + " units, color: " + getColor());
     }
 }
