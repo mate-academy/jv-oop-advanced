@@ -1,12 +1,11 @@
 package core.basesyntax.model.impl;
 
-import core.basesyntax.model.Color;
 import core.basesyntax.model.Figure;
 
 public class Square extends Figure {
     private final int side;
 
-    public Square(Color color, int side) {
+    public Square(String color, int side) {
         super(color);
         this.side = side;
     }

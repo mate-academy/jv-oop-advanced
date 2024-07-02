@@ -13,43 +13,47 @@ public class FigureSupplier {
     private static final int QUANTITY_FIGURE = 5;
     private static final int MIN_LENGTH_FIGURE = 1;
     private static final int MAX_LENGTH_FIGURE = 100;
-    private static final int DEFAULT_RADIUS_CIRCLE = 10;
-    private static final Color DEFAULT_COLOR_CIRCLE = Color.WHITE;
+    private static final int DEFAULT_RADIUS = 10;
+    private static final String DEFAULT_COLOR = Color.WHITE.toString();
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        Color color = colorSupplier.getRandomColor();
+        String color = colorSupplier.getRandomColor();
         int indexFigure = random.nextInt(QUANTITY_FIGURE);
 
         return switch (indexFigure) {
             case 0 -> new Circle(
                     color,
-                    random.nextInt(MIN_LENGTH_FIGURE, MAX_LENGTH_FIGURE + 1)
+                    getRandomSide()
                     );
             case 1 -> new IsoscelesTrapezoid(
                     color,
-                    random.nextInt(MIN_LENGTH_FIGURE, MAX_LENGTH_FIGURE + 1),
-                    random.nextInt(MIN_LENGTH_FIGURE, MAX_LENGTH_FIGURE + 1),
-                    random.nextInt(MIN_LENGTH_FIGURE, MAX_LENGTH_FIGURE + 1)
+                    getRandomSide(),
+                    getRandomSide(),
+                    getRandomSide()
                     );
             case 2 -> new Rectangle(
                     color,
-                    random.nextInt(MIN_LENGTH_FIGURE, MAX_LENGTH_FIGURE + 1),
-                    random.nextInt(MIN_LENGTH_FIGURE, MAX_LENGTH_FIGURE + 1)
+                    getRandomSide(),
+                    getRandomSide()
             );
             case 3 -> new RightTriangle(
                     color,
-                    random.nextInt(MIN_LENGTH_FIGURE, MAX_LENGTH_FIGURE + 1)
+                    getRandomSide()
             );
             default -> new Square(
                     color,
-                    random.nextInt(MIN_LENGTH_FIGURE, MAX_LENGTH_FIGURE + 1)
+                    getRandomSide()
             );
         };
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR_CIRCLE, DEFAULT_RADIUS_CIRCLE);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
+    }
+
+    private int getRandomSide() {
+        return random.nextInt(MIN_LENGTH_FIGURE, MAX_LENGTH_FIGURE + 1);
     }
 }

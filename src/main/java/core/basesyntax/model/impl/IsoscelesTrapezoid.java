@@ -1,6 +1,5 @@
 package core.basesyntax.model.impl;
 
-import core.basesyntax.model.Color;
 import core.basesyntax.model.Figure;
 
 public class IsoscelesTrapezoid extends Figure {
@@ -9,7 +8,7 @@ public class IsoscelesTrapezoid extends Figure {
     private final int high;
 
     public IsoscelesTrapezoid(
-            Color color,
+            String color,
             int firstBase,
             int secondBase,
             int high) {
