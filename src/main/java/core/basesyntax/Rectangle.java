@@ -4,7 +4,7 @@ public class Rectangle extends Figure implements Area{
     private double length;
     private double width;
 
-    public Rectangle(String color, int length, int width) {
+    public Rectangle(String color, double length, double width) {
         super(color);
         this.length = length;
         this.width = width;

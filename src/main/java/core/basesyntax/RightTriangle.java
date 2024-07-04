@@ -4,7 +4,7 @@ public class RightTriangle extends Figure implements Area{
     private double firstLeg;
     private double secondLeg;
 
-    public RightTriangle(String color, int firstLeg, int secondLeg, int hypotenuse) {
+    public RightTriangle(String color, double firstLeg, double secondLeg) {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
