@@ -1,14 +1,22 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure{
-    private int firstLeg;
-    private int secondLeg;
-    private int hypotenuse;
+public class RightTriangle extends Figure implements Area{
+    private double firstLeg;
+    private double secondLeg;
 
     public RightTriangle(String color, int firstLeg, int secondLeg, int hypotenuse) {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        this.hypotenuse = hypotenuse;
+    }
+
+    @Override
+    public double getArea() {
+        return 0.5 * firstLeg * secondLeg;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Figure: triangle, area: " + getArea() + " sq. units, firstLeg: " + firstLeg + " units, secondLeg: " + secondLeg + " units, color: " + getColor());
     }
 }
