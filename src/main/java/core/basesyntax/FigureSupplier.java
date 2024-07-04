@@ -9,7 +9,7 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         final int Max = 5;
         int figureType = random.nextInt(Max);
-        String color = colorSupplier.getRandomColor();
+        String color = String.valueOf(colorSupplier.getRandomColor());
 
         switch (figureType) {
             case 0:
