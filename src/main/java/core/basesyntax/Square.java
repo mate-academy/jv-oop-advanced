@@ -15,9 +15,9 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: square, area:"
-                + df.format(getArea()) + "sq. units, side: "
-                + df.format(side) + "units, color: "
+        System.out.println("Figure: square, area: "
+                + df.format(getArea()) + " sq. units, side: "
+                + df.format(side) + " units, color: "
                 + getColor());
     }
 }

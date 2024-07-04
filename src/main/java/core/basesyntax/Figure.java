@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.text.DecimalFormat;
 
-public abstract class Figure implements Area{
+public abstract class Figure implements Area {
     protected static final DecimalFormat df = new DecimalFormat("#.00");
     private String color;
 
