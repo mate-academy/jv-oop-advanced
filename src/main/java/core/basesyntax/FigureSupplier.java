@@ -5,10 +5,10 @@ import java.util.Random;
 public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
+    private final int MAX = 5;
 
     public Figure getRandomFigure() {
-        final int Max = 5;
-        int figureType = random.nextInt(Max);
+        int figureType = random.nextInt(MAX);
         String color = String.valueOf(colorSupplier.getRandomColor());
 
         switch (figureType) {
