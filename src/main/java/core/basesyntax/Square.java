@@ -16,8 +16,8 @@ package core.basesyntax;
     @Override
     public void draw() {
         System.out.println("Figure: square, area:"
-                + getArea() + "sq. units, side: "
-                + side + "units, color: "
+                + df.format(getArea()) + "sq. units, side: "
+                + df.format(side) + "units, color: "
                 + getColor());
     }
 }

@@ -16,8 +16,8 @@ public class Circle extends Figure implements Area{
     @Override
     public void draw() {
         System.out.println("Figure: circle, area: "
-                + getArea() + " sq. units, radius: "
-                + radius + " units, color: "
+                + df.format(getArea()) + " sq. units, radius: "
+                + df.format(radius) + " units, color: "
                 + getColor());
     }
 }

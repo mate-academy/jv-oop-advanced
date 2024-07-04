@@ -18,9 +18,9 @@ public class Rectangle extends Figure implements Area{
     @Override
     public void draw() {
         System.out.println("Figure: rectangle, area: "
-                + getArea() + " sq. units, length: "
-                + length + " units, width: "
-                + width + " units, color: "
+                + df.format(getArea()) + " sq. units, length: "
+                + df.format(length) + " units, width: "
+                + df.format(width) + " units, color: "
                 + getColor());
     }
 }

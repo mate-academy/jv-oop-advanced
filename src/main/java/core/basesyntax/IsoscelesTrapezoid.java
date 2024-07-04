@@ -20,10 +20,10 @@ public class IsoscelesTrapezoid extends Figure implements Area{
     @Override
     public void draw() {
         System.out.println("Figure: isosceles trapezoid, area: "
-                + getArea() + " sq. units, base1: "
-                + base1 + " units, base2: "
-                + base2 + " units, height: "
-                + height + " units, color: "
+                + df.format(getArea()) + " sq. units, base1: "
+                + df.format(base1) + " units, base2: "
+                + df.format(base2) + " units, height: "
+                + df.format(height) + " units, color: "
                 + getColor());
     }
 }
