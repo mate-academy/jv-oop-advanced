@@ -20,8 +20,10 @@ public class FigureSupplier {
         } else if (randomValue == 3) {
             return new Circle(colorSupplier.getRandomColor(), RANDOM.nextDouble() * MAX_SIZE);
         } else if (randomValue == 4) {
-            return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), RANDOM.nextDouble() * MAX_SIZE,
-                    RANDOM.nextDouble() * MAX_SIZE, RANDOM.nextDouble() * MAX_SIZE);
+            return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                    RANDOM.nextDouble() * MAX_SIZE,
+                    RANDOM.nextDouble() * MAX_SIZE,
+                    RANDOM.nextDouble() * MAX_SIZE);
         } else {
             return getDefaultFigure();
         }
