@@ -10,19 +10,19 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         int figureType = random.nextInt(maxValue);
         String color = String.valueOf(colorSupplier.getRandomColor());
+        double randomSide = random.nextDouble() * 10;
 
         switch (figureType) {
             case 0:
-                return new Square(color, random.nextDouble() * 10);
+                return new Square(color, randomSide);
             case 1:
-                return new Rectangle(color, random.nextDouble() * 10, random.nextDouble() * 10);
+                return new Rectangle(color, randomSide, randomSide);
             case 2:
-                return new RightTriangle(color, random.nextDouble() * 10, random.nextDouble() * 10);
+                return new RightTriangle(color, randomSide, randomSide);
             case 3:
-                return new Circle(color, random.nextDouble() * 10);
+                return new Circle(color, randomSide);
             case 4:
-                return new IsoscelesTrapezoid(color, random.nextDouble()
-                        * 10, random.nextDouble() * 10, random.nextDouble() * 10);
+                return new IsoscelesTrapezoid(color, randomSide, randomSide, randomSide);
             default:
                 return getDefaultFigure();
         }
