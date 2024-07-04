@@ -3,9 +3,12 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final String defaultColor = "white";
+    private static final int defaultSize = 10;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
     private final int maxValue = 5;
+
 
     public Figure getRandomFigure() {
         int figureType = random.nextInt(maxValue);
@@ -29,6 +32,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", 10);
+        return new Circle(defaultColor, defaultSize);
     }
 }
