@@ -9,7 +9,6 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final int maxValue = 5;
 
-
     public Figure getRandomFigure() {
         int figureType = random.nextInt(maxValue);
         String color = String.valueOf(colorSupplier.getRandomColor());
