@@ -1,9 +1,6 @@
 package core.basesyntax;
 
-import java.text.DecimalFormat;
-
-public abstract class Figure implements Area {
-    protected static final DecimalFormat df = new DecimalFormat("#.00");
+public abstract class Figure implements AreaCalculable {
     private String color;
 
     public Figure(String color) {
@@ -11,7 +8,7 @@ public abstract class Figure implements Area {
     }
 
     @Override
-    public abstract double getArea();
+    public abstract void getArea();
 
     public String getColor() {
         return color;

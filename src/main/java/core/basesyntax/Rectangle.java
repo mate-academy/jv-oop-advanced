@@ -3,6 +3,7 @@ package core.basesyntax;
 public class Rectangle extends Figure {
     private double length;
     private double width;
+    private double area;
 
     public Rectangle(String color, double length, double width) {
         super(color);
@@ -11,16 +12,16 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double getArea() {
-        return length * width;
+    public void getArea() {
+        area = length * width;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: rectangle, area: "
-                + df.format(getArea()) + " sq. units, length: "
-                + df.format(length) + " units, width: "
-                + df.format(width) + " units, color: "
+                + area + " sq. units, length: "
+                + length + " units, width: "
+                + width + " units, color: "
                 + getColor());
     }
 }

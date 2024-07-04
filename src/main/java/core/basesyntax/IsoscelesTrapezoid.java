@@ -4,6 +4,7 @@ public class IsoscelesTrapezoid extends Figure {
     private double base1;
     private double base2;
     private double height;
+    private double area;
 
     public IsoscelesTrapezoid(String color, double base1, double base2, double height) {
         super(color);
@@ -13,17 +14,17 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double getArea() {
-        return 0.5 * (base1 + base2) * height;
+    public void getArea() {
+        area = 0.5 * (base1 + base2) * height;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: isosceles trapezoid, area: "
-                + df.format(getArea()) + " sq. units, base1: "
-                + df.format(base1) + " units, base2: "
-                + df.format(base2) + " units, height: "
-                + df.format(height) + " units, color: "
+                + area + " sq. units, base1: "
+                + base1 + " units, base2: "
+                + base2 + " units, height: "
+                + height + " units, color: "
                 + getColor());
     }
 }

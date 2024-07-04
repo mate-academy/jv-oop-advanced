@@ -2,6 +2,7 @@ package core.basesyntax;
 
 public class Square extends Figure {
     private double side;
+    private double area;
 
     public Square(String color, double side) {
         super(color);
@@ -9,15 +10,15 @@ public class Square extends Figure {
     }
 
     @Override
-    public double getArea() {
-        return side * side;
+    public void getArea() {
+        area = side * side;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: square, area: "
-                + df.format(getArea()) + " sq. units, side: "
-                + df.format(side) + " units, color: "
+                + area + " sq. units, side: "
+                + side + " units, color: "
                 + getColor());
     }
 }

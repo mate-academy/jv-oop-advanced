@@ -2,6 +2,7 @@ package core.basesyntax;
 
 public class Circle extends Figure {
     private double radius;
+    private double area;
 
     public Circle(String color, double radius) {
         super(color);
@@ -9,15 +10,15 @@ public class Circle extends Figure {
     }
 
     @Override
-    public double getArea() {
-        return Math.PI * radius * radius;
+    public void getArea() {
+        area = Math.PI * radius * radius;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: circle, area: "
-                + df.format(getArea()) + " sq. units, radius: "
-                + df.format(radius) + " units, color: "
+                + area + " sq. units, radius: "
+                + radius + " units, color: "
                 + getColor());
     }
 }
