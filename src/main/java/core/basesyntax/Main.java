@@ -12,7 +12,7 @@ public class Main {
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
-            figures[i].Paint();
+            figures[i].paint();
         }
     }
 }
