@@ -12,13 +12,16 @@ public class FigureSupplier {
         if (randomValue == 0) {
             return new Square(colorSupplier.getRandomColor(), RANDOM.nextDouble() * MAX_SIZE);
         } else if (randomValue == 1) {
-            return new Rectangle(colorSupplier.getRandomColor(), RANDOM.nextDouble() * MAX_SIZE, RANDOM.nextDouble() * MAX_SIZE);
+            return new Rectangle(colorSupplier.getRandomColor(), RANDOM.nextDouble() * MAX_SIZE,
+                    RANDOM.nextDouble() * MAX_SIZE);
         } else if (randomValue == 2) {
-            return new RightTriangle(colorSupplier.getRandomColor(), RANDOM.nextDouble() * MAX_SIZE, RANDOM.nextDouble() * MAX_SIZE);
+            return new RightTriangle(colorSupplier.getRandomColor(), RANDOM.nextDouble() * MAX_SIZE,
+                    RANDOM.nextDouble() * MAX_SIZE);
         } else if (randomValue == 3) {
             return new Circle(colorSupplier.getRandomColor(), RANDOM.nextDouble() * MAX_SIZE);
         } else if (randomValue == 4) {
-            return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), RANDOM.nextDouble() * MAX_SIZE, RANDOM.nextDouble() * MAX_SIZE, RANDOM.nextDouble() * MAX_SIZE);
+            return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), RANDOM.nextDouble() * MAX_SIZE,
+                    RANDOM.nextDouble() * MAX_SIZE, RANDOM.nextDouble() * MAX_SIZE);
         } else {
             return getDefaultFigure();
         }
