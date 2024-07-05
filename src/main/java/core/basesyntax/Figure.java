@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 import core.basesyntax.interfase.figure.AreaCalculator;
-import core.basesyntax.interfase.figure.DrawFigure;
+import core.basesyntax.interfase.figure.Drawable;
 
-public abstract class Figure implements AreaCalculator, DrawFigure {
+public abstract class Figure implements AreaCalculator, Drawable {
     private String color;
 
     public Figure(String color) {
