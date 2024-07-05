@@ -1,9 +1,10 @@
-package core.basesyntax;
+package core.basesyntax.figure;
+
+import core.basesyntax.Figure;
 
 public class Rectangle extends Figure {
     private double length;
     private double width;
-    private double area;
 
     public Rectangle(String color, double length, double width) {
         super(color);

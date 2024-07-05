@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.color;
 
 public enum Color {
     red,

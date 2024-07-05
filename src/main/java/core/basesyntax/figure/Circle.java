@@ -1,8 +1,9 @@
-package core.basesyntax;
+package core.basesyntax.figure;
+
+import core.basesyntax.Figure;
 
 public class Circle extends Figure {
     private double radius;
-    private double area;
 
     public Circle(String color, double radius) {
         super(color);
