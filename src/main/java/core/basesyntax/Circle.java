@@ -1,2 +1,4 @@
-package core.basesyntax;public class Circle {
+package core.basesyntax;
+
+public class Circle {
 }
