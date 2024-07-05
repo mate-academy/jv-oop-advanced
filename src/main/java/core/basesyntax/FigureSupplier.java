@@ -1,39 +1,45 @@
 package core.basesyntax;
 
+import core.basesyntax.color.Color;
 import core.basesyntax.color.ColorSupplier;
 import core.basesyntax.figure.*;
 
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final String defaultColor = "white";
-    private static final int defaultSize = 10;
-    private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final Random random = new Random();
-    private final int maxValue = 5;
+    private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
+    private static final int DEFAULT_SIZE = 10;
+    private static final ColorSupplier colorSupplier = new ColorSupplier();
+    private static final Random random = new Random();
+    private static final int MAX_SIDE_LENGTH = 10;
+    private static final int maxValue = 5;
 
     public Figure getRandomFigure() {
         int figureType = random.nextInt(maxValue);
-        String color = String.valueOf(colorSupplier.getRandomColor());
-        double randomSide = random.nextDouble() * 10;
+        String randomColor = colorSupplier.getRandomColor();
+        double randomSide = getRandomSide();
 
         switch (figureType) {
             case 0:
-                return new Square(color, randomSide);
+                return new Square(randomColor.toLowerCase(), randomSide);
             case 1:
-                return new Rectangle(color, randomSide, randomSide);
+                return new Rectangle(randomColor, randomSide, randomSide);
             case 2:
-                return new RightTriangle(color, randomSide, randomSide);
+                return new RightTriangle(randomColor, randomSide, randomSide);
             case 3:
-                return new Circle(color, randomSide);
+                return new Circle(randomColor, randomSide);
             case 4:
-                return new IsoscelesTrapezoid(color, randomSide, randomSide, randomSide);
+                return new IsoscelesTrapezoid(randomColor, randomSide, randomSide, randomSide);
             default:
                 return getDefaultFigure();
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(defaultColor, defaultSize);
+        return new Circle(DEFAULT_COLOR, DEFAULT_SIZE);
+    }
+
+    private double getRandomSide() {
+        return random.nextDouble() * MAX_SIDE_LENGTH;
     }
 }
