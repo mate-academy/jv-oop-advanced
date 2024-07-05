@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import core.basesyntax.Figure;
-
 public class Square extends Figure {
     private double side;
 

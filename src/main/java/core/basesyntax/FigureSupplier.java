@@ -31,11 +31,11 @@ public class FigureSupplier {
         }
     }
 
-    public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR, DEFAULT_SIZE);
-    }
-
     private double getRandomSide() {
         return random.nextDouble() * MAX_SIDE_LENGTH;
+    }
+
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_COLOR, DEFAULT_SIZE);
     }
 }
