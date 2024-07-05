@@ -1,4 +1,4 @@
-package core.basesyntax.interfase.figure;
+package core.basesyntax;
 
 public interface AreaCalculator {
     double getArea();

@@ -1,8 +1,5 @@
 package core.basesyntax;
 
-import core.basesyntax.interfase.figure.AreaCalculator;
-import core.basesyntax.interfase.figure.Drawable;
-
 public abstract class Figure implements AreaCalculator, Drawable {
     private String color;
 

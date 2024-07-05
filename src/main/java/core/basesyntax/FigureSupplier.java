@@ -1,9 +1,5 @@
 package core.basesyntax;
 
-import core.basesyntax.color.Color;
-import core.basesyntax.color.ColorSupplier;
-import core.basesyntax.figure.*;
-
 import java.util.Random;
 
 public class FigureSupplier {
