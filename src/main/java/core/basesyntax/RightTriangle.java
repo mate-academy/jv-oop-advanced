@@ -1,8 +1,8 @@
 package core.basesyntax;
 
 public class RightTriangle {
-    double kat1;
-    double kat2;
+    private double kat1;
+    private double kat2;
 
     public double getKat1() {
         return kat1;
@@ -19,7 +19,8 @@ public class RightTriangle {
     public void setKat2(double kat2) {
         this.kat2 = kat2;
     }
-    public int getArea(){
+
+    public int getArea() {
         return (int) (0.5 * getKat1() * getKat2());
     }
 }

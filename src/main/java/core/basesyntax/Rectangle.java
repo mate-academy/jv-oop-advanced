@@ -20,7 +20,7 @@ public class Rectangle {
         this.width = width;
     }
 
-    public int getArea(){
+    public int getArea() {
         return getLength() * getWidth();
     }
 }

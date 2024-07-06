@@ -3,7 +3,7 @@ package core.basesyntax;
 public class IsoscelesTrapezoid {
     private int side1;
     private int side2;
-    private int h;
+    private int high;
 
     public int getSide1() {
         return side1;
@@ -13,8 +13,8 @@ public class IsoscelesTrapezoid {
         return side2;
     }
 
-    public int getH() {
-        return h;
+    public int getHigh() {
+        return high;
     }
 
     public void setSide2(int side2) {
@@ -25,11 +25,11 @@ public class IsoscelesTrapezoid {
         this.side1 = side1;
     }
 
-    public void setH(int h) {
-        this.h = h;
+    public void setH(int high) {
+        this.high = high;
     }
 
-    public int getArea(){
-        return (getSide1() * getSide2() * getH()) / 2;
+    public int getArea() {
+        return (getSide1() * getSide2() * getHigh()) / 2;
     }
 }
