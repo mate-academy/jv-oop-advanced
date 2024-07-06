@@ -20,8 +20,17 @@ public class Square extends ColorSupplier implements Figure {
         this.side2 = side2;
     }
 
-    public static int getArea() {
+    public int getArea() {
         return getSide1() * getSide2();
+    }
+
+    @Override
+    public void setColor(String color) {
+    }
+
+    @Override
+    public String getColor() {
+        return "";
     }
 
     @Override
