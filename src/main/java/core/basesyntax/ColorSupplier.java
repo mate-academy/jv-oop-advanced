@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import com.sun.jdi.IntegerValue;
-
 import java.util.Random;
 
 public class ColorSupplier {

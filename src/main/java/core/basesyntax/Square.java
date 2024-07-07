@@ -31,9 +31,9 @@ public class Square extends Figure implements Drawable, AreaCalculator {
         return getSide1() * getSide2();
     }
 
-
     @Override
     public void draw() {
-        System.out.println("Figure square: area:" + getArea() + " sq. units, side1: " + getSide1() + " side2: " + getSide2() + " units, color: " + getColor());
+        System.out.println("Square: area: " + getArea() + " sq. units, side1: "
+                + getSide1() + " side2: " + getSide2() + " units, color: " + getColor());
     }
 }
