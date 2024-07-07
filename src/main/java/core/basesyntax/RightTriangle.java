@@ -20,16 +20,6 @@ public class RightTriangle extends Figure {
         return kat2;
     }
 
-    public void setKat1(double kat1) {
-
-        this.kat1 = kat1;
-    }
-
-    public void setKat2(double kat2) {
-
-        this.kat2 = kat2;
-    }
-
     @Override
     public double getArea() {
         return 0.5 * getKat1() * getKat2();
