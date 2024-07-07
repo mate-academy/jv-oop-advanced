@@ -1,14 +1,20 @@
 package core.basesyntax;
 
-public class Square extends ColorSupplier implements Figure {
-    private static int side1;
-    private static int side2;
+public class Square extends Figure implements Drawable, AreaCalculator {
+    private double side1;
+    private double side2;
 
-    public static int getSide1() {
+    public Square(double side1, double side2, Color color) {
+        super(color);
+        this.side1 = side1;
+        this.side2 = side2;
+    }
+
+    public double getSide1() {
         return side1;
     }
 
-    public static int getSide2() {
+    public double getSide2() {
         return side2;
     }
 
@@ -20,20 +26,14 @@ public class Square extends ColorSupplier implements Figure {
         this.side2 = side2;
     }
 
-    public int getArea() {
+    @Override
+    public double getArea() {
         return getSide1() * getSide2();
     }
 
-    @Override
-    public void setColor(String color) {
-    }
-
-    @Override
-    public String getColor() {
-        return "";
-    }
 
     @Override
     public void draw() {
+        System.out.println("Figure square: area:" + getArea() + " sq. units, side1: " + getSide1() + " side2: " + getSide2() + " units, color: " + getColor());
     }
 }

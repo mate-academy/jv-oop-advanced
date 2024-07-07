@@ -1,14 +1,20 @@
 package core.basesyntax;
 
-public class Rectangle {
-    private int length;
-    private int width;
+public class Rectangle extends Figure implements Drawable, AreaCalculator{
+    private double length;
+    private double width;
 
-    public int getLength() {
+    public Rectangle(double length, double width, Color color) {
+        super(color);
+        this.length = length;
+        this.width = width;
+    }
+
+    public double getLength() {
         return length;
     }
 
-    public int getWidth() {
+    public double getWidth() {
         return width;
     }
 
@@ -20,7 +26,13 @@ public class Rectangle {
         this.width = width;
     }
 
-    public int getArea() {
+    @Override
+    public double getArea() {
         return getLength() * getWidth();
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Rectangle, area: " + getArea() + " sq. units, length: " + getLength() + " units, width: " + getWidth() + " units, color: " + getColor());
     }
 }

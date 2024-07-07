@@ -1,20 +1,27 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid {
-    private int side1;
-    private int side2;
-    private int high;
+public class IsoscelesTrapezoid extends Figure implements Drawable, AreaCalculator{
+    private double side1;
+    private double side2;
+    private double high;
 
-    public int getSide1() {
+    public IsoscelesTrapezoid(double side1, double side2, double high, Color color) {
+        super(color);
+        this.side2 = side2;
+        this.side1 = side1;
+        this.high = high;
+    }
+
+    public double getSide1() {
         return side1;
     }
 
-    public int getSide2() {
-        return side2;
+    public double getHigh() {
+        return high;
     }
 
-    public int getHigh() {
-        return high;
+    public double getSide2() {
+        return side2;
     }
 
     public void setSide2(int side2) {
@@ -29,7 +36,14 @@ public class IsoscelesTrapezoid {
         this.high = high;
     }
 
-    public int getArea() {
+    @Override
+    public double getArea() {
         return (getSide1() * getSide2() * getHigh()) / 2;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("IsoscelesTrapezoid, area: " + getArea() + " sq. units, side1: " + getSide1()
+                + " units, side2: " + getSide2() + " units, high:" + getHigh() + " units, color: " + getColor());
     }
 }
