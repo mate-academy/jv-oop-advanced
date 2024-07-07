@@ -3,7 +3,8 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    Random random = new Random();
+    private Random random = new Random();
+
     public Figure getRandomFigure() {
         GeometricFigure figure = new GeometricFigureSupplier().getRandomFigure();
         ColorSupplier colorSupplier = new ColorSupplier();
