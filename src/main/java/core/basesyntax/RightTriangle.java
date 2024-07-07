@@ -37,9 +37,9 @@ public class RightTriangle extends Figure implements Drawable, AreaCalculator {
 
     @Override
     public void draw() {
-        System.out.println("RightTriangle, area: " + getArea()
-                + " sq. units, kat1: " + getKat1() + " units, kat2: "
-                + getKat2() + " units, color: " + getColor());
-
+        System.out.println(String.format("RightTriangle with area: %.2f sq. units, "
+                + "ka1: %.2f units, "
+                + "kat2: %.2f units, color: %s", getArea(), getKat1(), getKat2(), getColor()));
     }
 }
+

@@ -9,9 +9,10 @@ public class Main {
         Figure[] figures = new Figure[] {
                 new Circle(number, supplier.getRandomColor()),
                 new Rectangle(number, number, supplier.getRandomColor()),
-                new RightTriangle(number, number, supplier.getRandomColor()),
-                new Square(number, number, supplier.getRandomColor()),
                 new IsoscelesTrapezoid(number, number, number, supplier.getRandomColor()),
+                new RightTriangle(3, 4, supplier.getRandomColor()),
+                new RightTriangle(4, 2, supplier.getRandomColor()),
+                new Square(3, 4, supplier.getRandomColor()),
                 new FigureSupplier().getDefaultFigure()
         };
 

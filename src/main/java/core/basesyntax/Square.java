@@ -33,7 +33,7 @@ public class Square extends Figure implements Drawable, AreaCalculator {
 
     @Override
     public void draw() {
-        System.out.println("Square: area: " + getArea() + " sq. units, side1: "
-                + getSide1() + " side2: " + getSide2() + " units, color: " + getColor());
+        System.out.println(String.format("Square with area: %.2f sq. units, side1: %.2f units, "
+                + "side2: %.2f units, color: %s", getArea(), getSide1(), getSide2(), getColor()));
     }
 }

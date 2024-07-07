@@ -33,8 +33,7 @@ public class Rectangle extends Figure implements Drawable, AreaCalculator {
 
     @Override
     public void draw() {
-        System.out.println("Rectangle, area: " + getArea()
-                + " sq. units, length: " + getLength() + " units, width: "
-                + getWidth() + " units, color: " + getColor());
+        System.out.println(String.format("Rectangle with area: %.2f sq. units, length: %.2f units, "
+                + "width: %.2f units, color: %s", getArea(), getLength(), getWidth(), getColor()));
     }
 }

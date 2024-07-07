@@ -43,8 +43,8 @@ public class IsoscelesTrapezoid extends Figure implements Drawable, AreaCalculat
 
     @Override
     public void draw() {
-        System.out.println("IsoscelesTrapezoid, area: " + getArea() + " sq. units, side1: "
-                + getSide1() + " units, side2: " + getSide2()
-                + " units, high:" + getHigh() + " units, color: " + getColor());
+        System.out.println(String.format("IsoscelesTrapezoid with area: %.2f sq. units, "
+                + "side1: %.2f units, side2: %.2f units, high: %.2f units, "
+                + "color: %s", getArea(), getSide1(), getSide2(), getHigh(), getColor()));
     }
 }
