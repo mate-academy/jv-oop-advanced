@@ -5,37 +5,57 @@ import java.util.Random;
 public class FigureSupplier {
     private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
     private static final int DEFAULT_SIZE = 10;
-    private static final ColorSupplier colorSupplier = new ColorSupplier();
-    private static final Random random = new Random();
+    private static final ColorSupplier COLOR_SUPPLIER = new ColorSupplier();
+    private static final Random RANDOM = new Random();
     private static final int MAX_SIDE_LENGTH = 10;
-    private static final int maxValue = 5;
+    private static final int MAX_VALUE = 5;
 
     public Figure getRandomFigure() {
-        int figureType = random.nextInt(maxValue);
-        String randomColor = colorSupplier.getRandomColor();
+        int figureType = RANDOM.nextInt(MAX_VALUE);
+        String randomColor = COLOR_SUPPLIER.getRandomColor();
         double randomSide = getRandomSide();
 
         switch (figureType) {
             case 0:
-                return new Square(randomColor.toLowerCase(), randomSide);
+                return createSquare(randomColor, randomSide);
             case 1:
-                return new Rectangle(randomColor, randomSide, randomSide);
+                return createRectangle(randomColor, randomSide);
             case 2:
-                return new RightTriangle(randomColor, randomSide, randomSide);
+                return createRightTriangle(randomColor, randomSide);
             case 3:
-                return new Circle(randomColor, randomSide);
+                return createCircle(randomColor, randomSide);
             case 4:
-                return new IsoscelesTrapezoid(randomColor, randomSide, randomSide, randomSide);
+                return createIsoscelesTrapezoid(randomColor, randomSide);
             default:
                 return getDefaultFigure();
         }
     }
 
     private double getRandomSide() {
-        return random.nextDouble() * MAX_SIDE_LENGTH;
+        return RANDOM.nextDouble() * MAX_SIDE_LENGTH;
     }
 
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_SIZE);
+    }
+
+    private Square createSquare(String color, double side) {
+        return new Square(color.toLowerCase(), side);
+    }
+
+    private Rectangle createRectangle(String color, double side) {
+        return new Rectangle(color, side, side);
+    }
+
+    private RightTriangle createRightTriangle(String color, double side) {
+        return new RightTriangle(color, side, side);
+    }
+
+    private Circle createCircle(String color, double radius) {
+        return new Circle(color, radius);
+    }
+
+    private IsoscelesTrapezoid createIsoscelesTrapezoid(String color, double side) {
+        return new IsoscelesTrapezoid(color, side, side, side);
     }
 }
