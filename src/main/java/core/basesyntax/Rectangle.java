@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends FigureColor {
+public class Rectangle extends Colorable {
     private int firstSide;
     private int secondSide;
 
