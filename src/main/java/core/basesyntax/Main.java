@@ -11,13 +11,12 @@ public class Main {
                 new Rectangle(number, number, supplier.getRandomColor()),
                 new IsoscelesTrapezoid(number, number, number, supplier.getRandomColor()),
                 new RightTriangle(3, 4, supplier.getRandomColor()),
-                new RightTriangle(4, 2, supplier.getRandomColor()),
                 new Square(4, supplier.getRandomColor()),
                 new FigureSupplier().getDefaultFigure()
         };
 
-        for (Figure figure : figures) {
-            figure.draw();
+        for (int i = 0; i < figures.length; i++) {
+            figures[i].draw();
         }
     }
 }

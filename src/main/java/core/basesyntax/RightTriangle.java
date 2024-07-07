@@ -32,7 +32,7 @@ public class RightTriangle extends Figure implements Drawable, AreaCalculator {
 
     @Override
     public double getArea() {
-        return (0.5 * getKat1() * getKat2());
+        return 0.5 * getKat1() * getKat2();
     }
 
     @Override
