@@ -12,11 +12,9 @@ public class Square extends Figure implements Drawable, AreaCalculator {
         return side;
     }
 
-
     public void setSide(int side) {
         this.side = side;
     }
-
 
     @Override
     public double getArea() {
