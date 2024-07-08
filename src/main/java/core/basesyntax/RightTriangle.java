@@ -1,35 +1,36 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private double firstKat;
-    private double kat2;
+    private double firstLeg;
+    private double secondLeg;
 
-    public RightTriangle(double firstKat, double kat2, Color color) {
+    public RightTriangle(double firstLeg, double secondLeg, String color) {
         super(color);
-        this.firstKat = firstKat;
-        this.kat2 = kat2;
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
     }
 
-    public double getFirstKat() {
+    public double getFirstLeg() {
 
-        return firstKat;
+        return firstLeg;
     }
 
-    public double getKat2() {
+    public double getSecondLeg() {
 
-        return kat2;
+        return secondLeg;
     }
 
     @Override
     public double getArea() {
-        return 0.5 * getFirstKat() * getKat2();
+        return 0.5 * getFirstLeg() * getSecondLeg();
     }
 
     @Override
     public void draw() {
         System.out.println(String.format("RightTriangle with area: %.2f sq. units, "
-                + "firstKat: %.2f units, "
-                + "kat2: %.2f units, color: %s", getArea(), getFirstKat(), getKat2(), getColor()));
+                + "firstLeg: %.2f units, "
+                + "kat2: %.2f units, color: %s",
+                getArea(), getFirstLeg(), getSecondLeg(), getColor()));
     }
 }
 
