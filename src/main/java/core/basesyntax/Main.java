@@ -3,21 +3,16 @@ package core.basesyntax;
 import java.util.Random;
 
 public class Main {
+    private static final int SIZE_OF_ARRAY = 6;
     public static void main(String[] args) {
-        ColorSupplier supplier = new ColorSupplier();
-        double number = new Random().nextDouble(5);
         FigureSupplier figureSupplier = new FigureSupplier();
-        Figure[] figures = new Figure[] {
-                figureSupplier.getRandomFigure(),
-                figureSupplier.getRandomFigure(),
-                figureSupplier.getRandomFigure(),
-                figureSupplier.getNotRandomFigure(),
-                figureSupplier.getNotRandomFigure(),
-                figureSupplier.getNotRandomFigure(),
-                figureSupplier.getDefaultFigure()
-        };
-
+        Figure[] figures = new Figure[SIZE_OF_ARRAY];
         for (int i = 0; i < figures.length; i++) {
+            if (i < SIZE_OF_ARRAY / 2) {
+                figures[i] = figureSupplier.getRandomFigure();
+            } else {
+                figures[i] = figureSupplier.getDefaultFigure();
+            }
             figures[i].draw();
         }
     }
