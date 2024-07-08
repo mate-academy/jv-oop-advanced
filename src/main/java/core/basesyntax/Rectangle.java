@@ -1,12 +1,12 @@
-package model.figure;
+package core.basesyntax;
 
 import model.Figure;
 
 public class Rectangle extends Figure {
-    private final int firstSide;
-    private final int secondSide;
+    private final double firstSide;
+    private final double secondSide;
 
-    public Rectangle(String color, int firstSide, int secondSide) {
+    public Rectangle(String color, double firstSide, double secondSide) {
         super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
@@ -14,14 +14,14 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public int calculateArea() {
+    public double calculateArea() {
         return firstSide * secondSide;
     }
 
     @Override
     public void print() {
         System.out.println("Figure: Rectangle, area:  " + calculateArea()
-                + " sq. units, first side: " + firstSide + "first side: "
+                + " sq. units, first side: " + firstSide + " second side: "
                 + secondSide + " units, color: " + color);
     }
 }

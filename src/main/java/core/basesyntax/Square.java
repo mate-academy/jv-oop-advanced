@@ -1,18 +1,18 @@
-package model.figure;
+package core.basesyntax;
 
 import model.Figure;
 
 public class Square extends Figure {
-    private final int side;
+    private final double side;
 
-    public Square(String color, int side) {
+    public Square(String color, double side) {
         super(color);
         this.side = side;
         print();
     }
 
     @Override
-    public int calculateArea() {
+    public double calculateArea() {
         return side * side;
     }
 

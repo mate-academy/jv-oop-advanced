@@ -13,7 +13,7 @@ public class Application {
         Figure[] figures = new Figure[MAX_LENGTH_ARRAY];
 
         for (int i = 0; i < figures.length; i++) {
-            if (i % 2 == 0) {
+            if (i > 2) {
                 figures[i] = figureSupplier.getRandomFigure();
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();

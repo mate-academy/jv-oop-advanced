@@ -1,5 +1,5 @@
 package utility;
 
 public interface AreaCalculator {
-    int calculateArea();
+    double calculateArea();
 }

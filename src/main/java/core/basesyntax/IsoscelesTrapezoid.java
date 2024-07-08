@@ -1,4 +1,4 @@
-package model.figure;
+package core.basesyntax;
 
 import model.Figure;
 
@@ -8,9 +8,9 @@ public class IsoscelesTrapezoid extends Figure {
     private final double high;
 
     public IsoscelesTrapezoid(String color,
-                              int downSide,
-                              int upperSide,
-                              int high) {
+                              double downSide,
+                              double upperSide,
+                              double high) {
         super(color);
         this.downSide = downSide;
         this.upperSide = upperSide;
@@ -20,8 +20,8 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public int calculateArea() {
-        return (int) ((downSide + upperSide) * high) / 2;
+    public double calculateArea() {
+        return ((downSide + upperSide) * high) / 2;
     }
 
     @Override
