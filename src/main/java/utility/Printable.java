@@ -1,5 +1,5 @@
 package utility;
 
-public interface PrintInfo {
+public interface Printable {
     void print();
 }

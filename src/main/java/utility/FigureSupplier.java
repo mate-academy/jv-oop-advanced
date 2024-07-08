@@ -12,35 +12,38 @@ import model.figure.Square;
 public class FigureSupplier {
     public static final String DEFAULT_COLOR = "white";
     public static final int DEFAULT_DATA = 10;
+    public static final int MIN_RANDOM_VALUE = 1;
     public static final int MAX_RANDOM_VALUE = 100;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
     private final Color[] colors = Color.values();
 
     public Figure getRandomFigure() {
-        int figureType = random.nextInt(colors.length);
-        return switch (figureType) {
+        int figurIndex = random.nextInt(colors.length);
+        String randomColor = colorSupplier.getRandomColor();
+        int randomSide = generateRandomSideLength();
+        return switch (figurIndex) {
 
-            case 0 -> new Circle(colorSupplier.getRandomColor(),
-                    getRandomSide());
-            case 1 -> new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                    getRandomSide(),
-                    getRandomSide(),
-                    getRandomSide());
-            case 2 -> new Rectangle(colorSupplier.getRandomColor(),
-                    getRandomSide(),
-                    getRandomSide());
-            case 3 -> new RightTriangle(colorSupplier.getRandomColor(),
-                    getRandomSide(),
-                    getRandomSide());
-            default -> new Square(colorSupplier.getRandomColor(),
-                    getRandomSide());
+            case 0 -> new Circle(randomColor,
+                    randomSide);
+            case 1 -> new IsoscelesTrapezoid(randomColor,
+                    randomSide,
+                    randomSide,
+                    randomSide);
+            case 2 -> new Rectangle(randomColor,
+                    randomSide,
+                    randomSide);
+            case 3 -> new RightTriangle(randomColor,
+                    randomSide,
+                    randomSide);
+            default -> new Square(randomColor,
+                    randomSide);
         };
 
     }
 
-    public int getRandomSide() {
-        return random.nextInt(MAX_RANDOM_VALUE);
+    public int generateRandomSideLength() {
+        return random.nextInt(MIN_RANDOM_VALUE, MAX_RANDOM_VALUE);
     }
 
     public Figure getDefaultFigure() {

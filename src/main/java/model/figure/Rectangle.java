@@ -10,6 +10,7 @@ public class Rectangle extends Figure {
         super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
+        print();
     }
 
     @Override

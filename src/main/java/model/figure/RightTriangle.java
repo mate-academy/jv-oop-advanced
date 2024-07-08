@@ -10,6 +10,7 @@ public class RightTriangle extends Figure {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
+        print();
     }
 
     @Override

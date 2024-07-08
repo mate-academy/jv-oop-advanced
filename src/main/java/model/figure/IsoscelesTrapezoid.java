@@ -15,6 +15,7 @@ public class IsoscelesTrapezoid extends Figure {
         this.downSide = downSide;
         this.upperSide = upperSide;
         this.high = high;
+        print();
 
     }
 
