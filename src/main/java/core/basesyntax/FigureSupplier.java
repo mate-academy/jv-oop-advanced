@@ -6,6 +6,7 @@ public class FigureSupplier {
     private static final int MAX_COUNT = 5;
     private static final double DEFAULT_RADIUS = 10;
     private static final Color DEFAULT_COLOR = Color.WHITE;
+
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
     }
