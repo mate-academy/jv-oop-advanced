@@ -1,38 +1,37 @@
 package core.basesyntax;
 
+import static core.basesyntax.Circle.DEFAULT_RADIUS;
+import static core.basesyntax.Figure.MAX_VALUE;
+
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final Color COLOR = Color.WHITE;
+    private Random random = new Random();
+    private FigureTypeSupplier figureType = new FigureTypeSupplier();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        Figure figure;
-        GeometricFigure geometricFigure = new GeometricFigureSupplier().getRandomFigure();
-        int random = new Random().nextInt(1, 100);
-        String colorSupplier = new ColorSupplier().getRandomColor().toLowerCase();
-        switch (geometricFigure) {
+        switch (figureType.getFigureType()) {
             case CIRCLE:
-                figure = new Circle(random, colorSupplier);
-                break;
+                return new Circle(random.nextInt(MAX_VALUE), colorSupplier.getRandomColor());
             case RECTANGLE:
-                figure = new Rectangle(random, random, colorSupplier);
-                break;
+                return new Rectangle(random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE),
+                        colorSupplier.getRandomColor());
             case ISOSCELES_TRAPEZOID:
-                figure = new IsoscelesTrapezoid(random, random, random, colorSupplier);
-                break;
+                return new IsoscelesTrapezoid(random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE),
+                        random.nextInt(MAX_VALUE), colorSupplier.getRandomColor());
             case SQUARE:
-                figure = new Square(random, colorSupplier);
-                break;
+                return new Square(random.nextInt(MAX_VALUE), colorSupplier.getRandomColor());
             case RIGHT_TRIANGLE:
-                figure = new RightTriangle(random, random, colorSupplier);
-                break;
+                return new RightTriangle(random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE),
+                        colorSupplier.getRandomColor());
             default:
-                throw new IllegalStateException("Unexpected value: " + geometricFigure);
+                throw new IllegalStateException("Unexpected value: " + figureType);
         }
-        return figure;
     }
 
     public Figure getDefaultFigure() {
-        Color color = Color.WHITE;
-        return new Circle(10, color.name().toLowerCase());
+        return new Circle(DEFAULT_RADIUS, COLOR.name().toLowerCase());
     }
 }

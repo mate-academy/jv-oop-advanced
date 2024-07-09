@@ -1,10 +1,9 @@
 package core.basesyntax;
 
-public enum GeometricFigure {
+public enum FigureType {
     CIRCLE,
     RECTANGLE,
     ISOSCELES_TRAPEZOID,
     SQUARE,
     RIGHT_TRIANGLE
-
 }

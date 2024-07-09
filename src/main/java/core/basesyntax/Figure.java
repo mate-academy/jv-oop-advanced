@@ -1,6 +1,9 @@
 package core.basesyntax;
 
-public abstract class Figure implements AreaCalculable, Colorable {
+public abstract class Figure implements AreaCalculable, Drawable {
+    static final int ARRAYS_LENGTH = 6;
+    static final int MAX_VALUE = 100;
+
     private String color;
 
     public Figure(String color) {
@@ -10,10 +13,4 @@ public abstract class Figure implements AreaCalculable, Colorable {
     public String getColor() {
         return color;
     }
-
-    @Override
-    public abstract double getArea();
-
-    @Override
-    public abstract void draw();
 }
