@@ -9,5 +9,4 @@ public abstract class Figure implements AreaCalculator, Printable {
     public Figure(String color) {
         this.color = color;
     }
-
 }

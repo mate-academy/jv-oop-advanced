@@ -20,26 +20,23 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int figurIndex = random.nextInt(colors.length);
-        String randomColor = colorSupplier.getRandomColor();
-        double randomSide = generateRandomSideLength();
         return switch (figurIndex) {
 
-            case 0 -> new Circle(randomColor,
-                    randomSide);
-            case 1 -> new IsoscelesTrapezoid(randomColor,
-                    randomSide,
-                    randomSide,
-                    randomSide);
-            case 2 -> new Rectangle(randomColor,
-                    randomSide,
-                    randomSide);
-            case 3 -> new RightTriangle(randomColor,
-                    randomSide,
-                    randomSide);
-            default -> new Square(randomColor,
-                    randomSide);
+            case 0 -> new Circle(colorSupplier.getRandomColor(),
+                    generateRandomSideLength());
+            case 1 -> new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                    generateRandomSideLength(),
+                    generateRandomSideLength(),
+                    generateRandomSideLength());
+            case 2 -> new Rectangle(colorSupplier.getRandomColor(),
+                    generateRandomSideLength(),
+                    generateRandomSideLength());
+            case 3 -> new RightTriangle(colorSupplier.getRandomColor(),
+                    generateRandomSideLength(),
+                    generateRandomSideLength());
+            default -> new Square(colorSupplier.getRandomColor(),
+                    generateRandomSideLength());
         };
-
     }
 
     public double generateRandomSideLength() {
