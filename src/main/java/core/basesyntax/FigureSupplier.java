@@ -6,32 +6,38 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_VALUE = 100;
-    private static final Color DEFAULT_COLOR = Color.WHITE;
+    private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
     private Random random = new Random();
     private FigureTypeSupplier figureType = new FigureTypeSupplier();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Circle createCircle() {
-        return new Circle(random.nextInt(MAX_VALUE), colorSupplier.getRandomColor());
+    private int getRandomVariable() {
+        return random.nextInt(MAX_VALUE);
     }
 
-    public Rectangle createRectangle() {
-        return new Rectangle(random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE),
-                colorSupplier.getRandomColor());
+    private String getRandomColorFigure() {
+        return colorSupplier.getRandomColor();
     }
 
-    public IsoscelesTrapezoid createIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE),
-                random.nextInt(MAX_VALUE), colorSupplier.getRandomColor());
+    private Circle createCircle() {
+        return new Circle(getRandomVariable(), getRandomColorFigure());
     }
 
-    public Square createSquare() {
-        return new Square(random.nextInt(MAX_VALUE), colorSupplier.getRandomColor());
+    private Rectangle createRectangle() {
+        return new Rectangle(getRandomVariable(), getRandomVariable(), getRandomColorFigure());
     }
 
-    public RightTriangle createRightTriangle() {
-        return new RightTriangle(random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE),
-                colorSupplier.getRandomColor());
+    private IsoscelesTrapezoid createIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(getRandomVariable(), getRandomVariable(),
+                getRandomVariable(), getRandomColorFigure());
+    }
+
+    private Square createSquare() {
+        return new Square(getRandomVariable(), getRandomColorFigure());
+    }
+
+    private RightTriangle createRightTriangle() {
+        return new RightTriangle(getRandomVariable(), getRandomVariable(), getRandomColorFigure());
     }
 
     public Figure getRandomFigure() {
@@ -52,6 +58,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR.name().toLowerCase());
+        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
     }
 }

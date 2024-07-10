@@ -9,11 +9,10 @@ public class Main {
         for (int i = 0; i < figure.length; i++) {
             if (i < figure.length / 2) {
                 figure[i] = supplier.getRandomFigure();
-                figure[i].draw();
             } else {
                 figure[i] = supplier.getDefaultFigure();
-                figure[i].draw();
             }
+            figure[i].draw();
         }
     }
 }
