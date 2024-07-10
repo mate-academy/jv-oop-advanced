@@ -11,21 +11,41 @@ public class FigureSupplier {
     private FigureTypeSupplier figureType = new FigureTypeSupplier();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
+    public Circle createCircle() {
+        return new Circle(random.nextInt(MAX_VALUE), colorSupplier.getRandomColor());
+    }
+
+    public Rectangle createRectangle() {
+        return new Rectangle(random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE),
+                colorSupplier.getRandomColor());
+    }
+
+    public IsoscelesTrapezoid createIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE),
+                random.nextInt(MAX_VALUE), colorSupplier.getRandomColor());
+    }
+
+    public Square createSquare() {
+        return new Square(random.nextInt(MAX_VALUE), colorSupplier.getRandomColor());
+    }
+
+    public RightTriangle createRightTriangle() {
+        return new RightTriangle(random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE),
+                colorSupplier.getRandomColor());
+    }
+
     public Figure getRandomFigure() {
         switch (figureType.getRandomFigureType()) {
             case CIRCLE:
-                return new Circle(random.nextInt(MAX_VALUE), colorSupplier.getRandomColor());
+                return createCircle();
             case RECTANGLE:
-                return new Rectangle(random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE),
-                        colorSupplier.getRandomColor());
+                return createRectangle();
             case ISOSCELES_TRAPEZOID:
-                return new IsoscelesTrapezoid(random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE),
-                        random.nextInt(MAX_VALUE), colorSupplier.getRandomColor());
+                return createIsoscelesTrapezoid();
             case SQUARE:
-                return new Square(random.nextInt(MAX_VALUE), colorSupplier.getRandomColor());
+                return createSquare();
             case RIGHT_TRIANGLE:
-                return new RightTriangle(random.nextInt(MAX_VALUE), random.nextInt(MAX_VALUE),
-                        colorSupplier.getRandomColor());
+                return createRightTriangle();
             default:
                 throw new IllegalStateException("Unexpected value: " + figureType);
         }
