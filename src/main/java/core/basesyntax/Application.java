@@ -1,22 +1,23 @@
 package core.basesyntax;
 
 public class Application {
-    private static final int arrayLenght = 6;
-    private static FigureSupplier figureSupplier = new FigureSupplier();
+    private static final int ARRAY_LENGTH = 6;
+    private static final int ARRAY_HALF_LENGTH = ARRAY_LENGTH / 2;
 
     public static void main(String[] args) {
-        Figure[] figureArray = new Figure[arrayLenght];
+        FigureSupplier figureSupplier = new FigureSupplier();
+        Figure[] figureArray = new Figure[ARRAY_LENGTH];
 
-        for (int i = 0; i < arrayLenght / 2; i++) {
+        for (int i = 0; i < ARRAY_HALF_LENGTH; i++) {
             figureArray[i] = figureSupplier.getRandomFigure();
         }
 
-        for (int i = arrayLenght / 2; i < arrayLenght; i++) {
+        for (int i = ARRAY_HALF_LENGTH; i < ARRAY_LENGTH; i++) {
             figureArray[i] = figureSupplier.getDefaultFigure();
         }
 
         for (Figure figure : figureArray) {
-            System.out.println(figure.getFigureData());
+            figure.getFigureData();
         }
     }
 }

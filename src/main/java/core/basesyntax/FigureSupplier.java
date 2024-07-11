@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private int range = 40;
+    private final int range = 40;
     private ColorSupplier colorSupplier = new ColorSupplier();
     private final String[] figures = {"square",
             "rectangle",
@@ -39,8 +39,7 @@ public class FigureSupplier {
                     colorSupplier.getRandomColor());
             return trapezoid;
         }
-
-        return null;
+        return new Circle(10, "white");
     }
 
     public Figure getDefaultFigure() {

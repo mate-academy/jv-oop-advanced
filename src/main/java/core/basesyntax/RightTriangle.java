@@ -20,7 +20,8 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Drawing a righttrianangle");
+        System.out.println("Drawing a " + getColor() + " right trianangle, with "
+                + getSide() + " units site and " + getBase() + " units base");
     }
 
     @Override
@@ -29,10 +30,10 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String getFigureData() {
-        return "Figure: triangle, area: " + getArea()
+    public void getFigureData() {
+        System.out.println("Figure: triangle, area: " + getArea()
                 + " sq. units, side: " + getSide()
-                + " sq. units, base: " + getBase()
-                + " units, color: " + getColor();
+                + " units, base: " + getBase()
+                + " units, color: " + getColor());
     }
 }

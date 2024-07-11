@@ -20,7 +20,8 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Drawing a rectangle");
+        System.out.println("Drawing a " + getColor()
+                + " rectangle, with " + getSide() + " units side");
     }
 
     @Override
@@ -29,10 +30,10 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String getFigureData() {
-        return "Figure: rectangle, area: " + getArea()
+    public void getFigureData() {
+        System.out.println("Figure: rectangle, area: " + getArea()
                 + " sq. units, side: " + getSide()
-                + " sq. units, base: " + getBase()
-                + " units, color: " + getColor();
+                + " units, base: " + getBase()
+                + " units, color: " + getColor());
     }
 }
