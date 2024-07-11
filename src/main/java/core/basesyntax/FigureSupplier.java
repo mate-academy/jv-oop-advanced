@@ -11,6 +11,27 @@ public class FigureSupplier {
     private FigureTypeSupplier figureType = new FigureTypeSupplier();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
+    public Figure getRandomFigure() {
+        switch (figureType.getRandomFigureType()) {
+            case CIRCLE:
+                return createCircle();
+            case RECTANGLE:
+                return createRectangle();
+            case ISOSCELES_TRAPEZOID:
+                return createIsoscelesTrapezoid();
+            case SQUARE:
+                return createSquare();
+            case RIGHT_TRIANGLE:
+                return createRightTriangle();
+            default:
+                throw new IllegalStateException("Unexpected value: " + figureType);
+        }
+    }
+
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
+    }
+
     private int getRandomVariable() {
         return random.nextInt(MAX_VALUE);
     }
@@ -38,26 +59,5 @@ public class FigureSupplier {
 
     private RightTriangle createRightTriangle() {
         return new RightTriangle(getRandomVariable(), getRandomVariable(), getRandomColorFigure());
-    }
-
-    public Figure getRandomFigure() {
-        switch (figureType.getRandomFigureType()) {
-            case CIRCLE:
-                return createCircle();
-            case RECTANGLE:
-                return createRectangle();
-            case ISOSCELES_TRAPEZOID:
-                return createIsoscelesTrapezoid();
-            case SQUARE:
-                return createSquare();
-            case RIGHT_TRIANGLE:
-                return createRightTriangle();
-            default:
-                throw new IllegalStateException("Unexpected value: " + figureType);
-        }
-    }
-
-    public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
     }
 }
