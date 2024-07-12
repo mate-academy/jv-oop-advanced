@@ -5,41 +5,41 @@ import java.util.Random;
 public class FigureSupplier {
     private final int range = 40;
     private ColorSupplier colorSupplier = new ColorSupplier();
-    private final String[] figures = {"square",
-            "rectangle",
-            "righttriangle",
-            "circle",
-            "isoscelestrapezoid"};
+    private final FigureType[] figureTypes = FigureType.values();
     private Random random = new Random();
 
     public Figure getRandomFigure() {
-        int randomFigureIndex = random.nextInt(figures.length);
-        String figure = figures[randomFigureIndex];
+        int randomFigureIndex = random.nextInt(figureTypes.length);
+        String figure = figureTypes[randomFigureIndex].toString();
 
-        if (figure.equals("square")) {
+        if ("SQUARE".equals(figure)) {
             Figure square = new Square(random.nextInt(range), colorSupplier.getRandomColor());
             return square;
-        } else if (figure.equals("rectangle")) {
+        }
+        if ("RECTANGLE".equals(figure)) {
             Figure rectangle = new Rectangle(random.nextInt(range),
                     random.nextInt(range),
                     colorSupplier.getRandomColor());
             return rectangle;
-        } else if (figure.equals("righttriangle")) {
+        }
+        if ("RIGHTTRIANANGLE".equals(figure)) {
             Figure triangle = new RightTriangle(random.nextInt(range),
                     random.nextInt(range),
                     colorSupplier.getRandomColor());
             return triangle;
-        } else if (figure.equals("circle")) {
+        }
+        if ("CIRCLE".equals(figure)) {
             Figure circle = new Circle(random.nextInt(range), colorSupplier.getRandomColor());
             return circle;
-        } else if (figure.equals("isoscelestrapezoid")) {
+        }
+        if ("ISOSCELESTRAPEZOID".equals(figure)) {
             Figure trapezoid = new IsoscelesTrapezoid(random.nextInt(range),
                     random.nextInt(range),
                     random.nextInt(range),
                     colorSupplier.getRandomColor());
             return trapezoid;
         }
-        return new Circle(10, "white");
+        return getDefaultFigure();
     }
 
     public Figure getDefaultFigure() {

@@ -5,9 +5,9 @@ public class Rectangle extends Figure {
     private int base;
 
     public Rectangle(int side, int base, String color) {
+        super(color);
         this.side = side;
         this.base = base;
-        this.setColor(color);
     }
 
     public int getSide() {
