@@ -10,29 +10,29 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int randomFigureIndex = random.nextInt(figureTypes.length);
-        String figure = figureTypes[randomFigureIndex].toString();
+        FigureType figure = figureTypes[randomFigureIndex];
 
-        if ("SQUARE".equals(figure)) {
+        if (FigureType.SQUARE.equals(figure)) {
             Figure square = new Square(random.nextInt(range), colorSupplier.getRandomColor());
             return square;
         }
-        if ("RECTANGLE".equals(figure)) {
+        if (FigureType.RECTANGLE.equals(figure)) {
             Figure rectangle = new Rectangle(random.nextInt(range),
                     random.nextInt(range),
                     colorSupplier.getRandomColor());
             return rectangle;
         }
-        if ("RIGHTTRIANANGLE".equals(figure)) {
+        if (FigureType.RIGHTTRIANANGLE.equals(figure)) {
             Figure triangle = new RightTriangle(random.nextInt(range),
                     random.nextInt(range),
                     colorSupplier.getRandomColor());
             return triangle;
         }
-        if ("CIRCLE".equals(figure)) {
+        if (FigureType.CIRCLE.equals(figure)) {
             Figure circle = new Circle(random.nextInt(range), colorSupplier.getRandomColor());
             return circle;
         }
-        if ("ISOSCELESTRAPEZOID".equals(figure)) {
+        if (FigureType.ISOSCELESTRAPEZOID.equals(figure)) {
             Figure trapezoid = new IsoscelesTrapezoid(random.nextInt(range),
                     random.nextInt(range),
                     random.nextInt(range),
