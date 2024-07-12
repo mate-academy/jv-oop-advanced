@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import javax.swing.*;
-
 public class Square extends Figure {
     private double side;
 
@@ -19,12 +17,12 @@ public class Square extends Figure {
     }
 
     @Override
-    public double area() {
+    public double calculateArea() {
         return side * side;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: square, " + "area: " + area() + " sq. units," + " side: " + side + " units, " + "color: " + getColor());
+        System.out.printf("Figure: square, area: %s sq. units, side: %s units, color: %s%n", calculateArea(), side, getColor());
     }
 }
