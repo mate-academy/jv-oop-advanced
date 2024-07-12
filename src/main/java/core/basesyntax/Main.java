@@ -7,16 +7,15 @@ public class Main {
         Figure figures[] = new Figure[6];
 
         for (int i = 0; i < ARRAY_LENGHT; i++) {
-            if(i < ARRAY_LENGHT / 2) {
+            if (i < ARRAY_LENGHT / 2) {
                 figures[i] = new FigureSupplier().getRandomFigure();
                 figures[i].draw();
-                }
-            else {
+            } else {
                 figures[i] = new FigureSupplier().getDefaultFigure();
                 figures[i].draw();
             }
-            }
-
         }
+
     }
+}
 

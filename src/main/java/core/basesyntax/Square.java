@@ -5,8 +5,8 @@ import javax.swing.*;
 public class Square extends Figure {
     private double side;
 
-    public Square(double side) {
-        super();
+    public Square(double side, String color) {
+        super(color);
         this.side = side;
     }
 
@@ -25,6 +25,6 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: square," + "area: " + area() + "sq. units," + "side: " + side + "units, " + "color: " + color);
+        System.out.println("Figure: square, " + "area: " + area() + " sq. units," + " side: " + side + " units, " + "color: " + getColor());
     }
 }
