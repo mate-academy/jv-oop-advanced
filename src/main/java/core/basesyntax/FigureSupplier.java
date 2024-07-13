@@ -3,14 +3,15 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final Color CIRCLE_COLOR = Color.WHITE;
-    private static final int CIRCLE_RADIUS = 10;
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
+    private static final int DEFAULT_RADIUS = 10;
+    private static final int NUMBER_OF_FIGURES = 5;
     private static final Random random = new Random();
     private static final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        Color color = colorSupplier.getRandomColor();
-        switch (random.nextInt(5)) {
+        String color = colorSupplier.getRandomColor();
+        switch (random.nextInt(NUMBER_OF_FIGURES)) {
             case 0:
                 return createSquare(color);
             case 1:
@@ -25,26 +26,26 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(CIRCLE_COLOR, CIRCLE_RADIUS);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
-    private Square createSquare(Color color) {
+    private Square createSquare(String color) {
         return new Square(color, random.nextDouble());
     }
 
-    private RightTriangle createRightTriangle(Color color) {
+    private RightTriangle createRightTriangle(String color) {
         return new RightTriangle(color, random.nextDouble(), random.nextDouble());
     }
 
-    private Rectangle createRectangle(Color color) {
+    private Rectangle createRectangle(String color) {
         return new Rectangle(color, random.nextDouble(), random.nextDouble());
     }
 
-    private Circle createCircle(Color color) {
+    private Circle createCircle(String color) {
         return new Circle(color, random.nextDouble());
     }
 
-    private IsoscelesTrapezoid createIsoscelesTrapezoid(Color color) {
+    private IsoscelesTrapezoid createIsoscelesTrapezoid(String color) {
         return new IsoscelesTrapezoid(color, random.nextDouble(),
             random.nextDouble(), random.nextDouble());
     }
