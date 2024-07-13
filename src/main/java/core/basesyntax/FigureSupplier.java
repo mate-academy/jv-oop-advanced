@@ -5,9 +5,10 @@ import java.util.Random;
 public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    private int maxColorValue = 5;
-    private String defaultColor = "white";
-    private int defaultRadius = 10;
+    private final int maxColorValue = 5;
+    private final int maxRandomValue = 10;
+    private final String defaultColor = "white";
+    private final int defaultRadius = 10;
 
     public Figure getRandomFigure() {
         int randomNumber = random.nextInt(maxColorValue);
@@ -27,31 +28,31 @@ public class FigureSupplier {
     }
 
     public Figure getRandomCircle() {
-        int radius = random.nextInt(10);
+        int radius = random.nextInt(maxRandomValue);
         return new Circle(radius, colorSupplier.getRandomColor());
     }
 
     public Figure getRandomIsoscelesTrapezoid() {
-        int height = random.nextInt(10);
-        int base1 = random.nextInt(10);
-        int base2 = random.nextInt(10);
+        int height = random.nextInt(maxRandomValue);
+        int base1 = random.nextInt(maxRandomValue);
+        int base2 = random.nextInt(maxRandomValue);
         return new IsoscelesTrapezoid(height, base1, base2, colorSupplier.getRandomColor());
     }
 
     public Figure getRandomRectangle() {
-        int height = random.nextInt(10);
-        int width = random.nextInt(10);
+        int height = random.nextInt(maxRandomValue);
+        int width = random.nextInt(maxRandomValue);
         return new Rectangle(height, width, colorSupplier.getRandomColor());
     }
 
     public Figure getRandomRightTriangle() {
-        int side = random.nextInt(10);
-        int base = random.nextInt(10);
+        int side = random.nextInt(maxRandomValue);
+        int base = random.nextInt(maxRandomValue);
         return new RightTriangle(side, base, colorSupplier.getRandomColor());
     }
 
     public Figure getRandomSquare() {
-        int side = random.nextInt(10);
+        int side = random.nextInt(maxRandomValue);
         return new Square(side, colorSupplier.getRandomColor());
     }
 
