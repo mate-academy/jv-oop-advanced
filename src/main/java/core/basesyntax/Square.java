@@ -10,7 +10,7 @@ public class Square extends Figure {
 
     @Override
     public double calculateArea() {
-        return (side * side);
+        return side * side;
     }
 
     @Override
