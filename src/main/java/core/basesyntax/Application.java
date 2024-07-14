@@ -8,12 +8,12 @@ public class Application {
     public static void main(String[] args) {
         Figure [] figures = new Figure[QUANTITY_FIGURES];
         for (int i = 0; i < figures.length; i++) {
-           if (figures.length % QUANTITY_SIC == 0){
-               figures [ i ] = figureSupplier.getRandomFigure();
-           } else {
-               figures [ i ] = figureSupplier.getDefaultFigure();
-           }
-           figures[i].draw();
+            if (figures.length % QUANTITY_SIC == 0) {
+                figures [ i ] = figureSupplier.getRandomFigure();
+            } else {
+                figures [ i ] = figureSupplier.getDefaultFigure();
+            }
+            figures[i].draw();
 
         }
     }

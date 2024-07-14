@@ -10,9 +10,11 @@ public class FigureSupplier {
     private static final String DEFAULT_COLOR = Color.WHITE.name();
     private final Random random = new Random();
     private final ColorSupplier supplier = new ColorSupplier();
-private int getRandomSide () {
-    return random.nextInt(MIN_LENGTH_FIGURE, MAX_LENGTH_FIGURE + 1);
-}
+
+    private int getRandomSide() {
+        return random.nextInt(MIN_LENGTH_FIGURE, MAX_LENGTH_FIGURE + 1);
+    }
+
     public Figure getRandomFigure() {
         String color = supplier.getRandomColor();
         int indexFigure = random.nextInt(QUANTITY_FIGURE);
