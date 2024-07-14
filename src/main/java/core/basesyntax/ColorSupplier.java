@@ -10,12 +10,13 @@ public class ColorSupplier {
         return Color.values()[index].name();
     }
 
-    private enum Color {
+    enum Color {
         RED,
         ORANGE,
         YELLOW,
         GREEN,
         BLUE,
-        PURPLE
+        PURPLE,
+        WHITE
     }
 }
