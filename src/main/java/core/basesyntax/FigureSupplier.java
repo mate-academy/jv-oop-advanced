@@ -11,10 +11,6 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier supplier = new ColorSupplier();
 
-    private int getRandomSide() {
-        return random.nextInt(MIN_LENGTH_FIGURE, MAX_LENGTH_FIGURE + 1);
-    }
-
     public Figure getRandomFigure() {
         String color = supplier.getRandomColor();
         int indexFigure = random.nextInt(QUANTITY_FIGURE);
@@ -34,21 +30,23 @@ public class FigureSupplier {
                     color,
                     getRandomSide(),
                     getRandomSide()
-
-                    );
+            );
             case 3 -> new RightTriangle(
                     getRandomSide(),
                     color
-                        );
+            );
             default -> new Square(
                     getRandomSide(),
                     color
-
-                                );
+            );
         };
     }
 
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
+    }
+
+    private int getRandomSide() {
+        return random.nextInt(MIN_LENGTH_FIGURE, MAX_LENGTH_FIGURE + 1);
     }
 }
