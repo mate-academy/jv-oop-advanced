@@ -14,14 +14,16 @@ class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: "
-                + " the sides are of length: "
-                + side
-                + ", the bottom is of length: "
-                + bottom
-                + ", the top is of length: "
-                + top
-                + " and the color is: "
-                + super.color);
+        StringBuilder builder = new StringBuilder();
+        builder.append("Figure: ")
+                .append(" the sides are of length: ")
+                .append(side)
+                .append(", the bottom is of length: ")
+                .append(bottom)
+                .append(", the top is of length ")
+                .append(top)
+                .append(" and the color is: ")
+                .append(color);
+        System.out.println(builder.toString());
     }
 }

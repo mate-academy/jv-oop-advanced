@@ -10,10 +10,12 @@ class Square extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: "
-                + " the side is of length: "
-                + side
-                + " and the color is"
-                + color);
+        StringBuilder builder = new StringBuilder();
+        builder.append("Figure: ")
+                .append(" the side is of length: ")
+                .append(side)
+                .append(" and the color is ")
+                .append(color);
+        System.out.println(builder.toString());
     }
 }

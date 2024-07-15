@@ -12,12 +12,13 @@ class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: "
-                + " the first leg is: "
-                + firstLeg
-                + " and the second leg is: "
-                + secondLeg
-                + ", the color is: "
-                + color);
+        StringBuilder builder = new StringBuilder();
+        builder.append("Figure: the first leg is ")
+                .append(firstLeg)
+                .append(" and the second leg is ")
+                .append(secondLeg)
+                .append(" the color is: ")
+                .append(color);
+        System.out.println(builder.toString());
     }
 }
