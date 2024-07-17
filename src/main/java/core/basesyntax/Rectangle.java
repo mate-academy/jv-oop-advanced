@@ -20,5 +20,8 @@ class Rectangle extends Figure {
                 .append(" and the color is ")
                 .append(color);
         System.out.println(builder.toString());
+
+        // Ignore the console log below, it made it for the purpose of committing again with no changes made
+        System.out.println("Some new change made")
     }
 }
