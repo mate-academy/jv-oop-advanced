@@ -6,7 +6,8 @@ public class Circle extends Figure implements AreaCalculator {
 
     public Circle(String color, double radius) {
         super(color);
-        this.radius = radius;
+        double r = radius;  // Separate variable for better readability
+        this.radius = r;
     }
 
     @Override
@@ -16,6 +17,7 @@ public class Circle extends Figure implements AreaCalculator {
 
     @Override
     public void draw() {
-        System.out.println(String.format("Figure: circle, area: %.2f sq. units, radius: %.2f units, color: %s", getArea(), radius, getColor()));
+        System.out.println(String.format("Figure: circle, area: %.2f sq. units,"
+                + " radius: %.2f units, color: %s", getArea(), radius, getColor()));
     }
 }

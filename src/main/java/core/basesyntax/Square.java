@@ -5,7 +5,7 @@ public class Square extends Figure implements AreaCalculator {
 
     public Square(String color, double side) {
         super(color);
-        double s = side;  // For better readability
+        double s = side;  // Separate variable for better readability
         this.side = s;
     }
 
@@ -16,7 +16,8 @@ public class Square extends Figure implements AreaCalculator {
 
     @Override
     public void draw() {
-        System.out.println(String.format("Figure: square, area: %.2f sq. units," 
+        System.out.println(String.format("Figure: square, area: %.2f sq. units,"
                 + " side: %.2f units, color: %s", getArea(), side, getColor()));
     }
 }
+
