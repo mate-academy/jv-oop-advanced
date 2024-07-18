@@ -12,7 +12,7 @@ public class HelloWorld {
             } else {
                 figures[i] = figureSupplier.getRandomFigure();
             }
-            System.out.println(figures[i].draw());
+            figures[i].draw();
         }
 
     }
