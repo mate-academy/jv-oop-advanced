@@ -6,8 +6,8 @@ public class Rectangle extends Figure implements AreaCalculator {
 
     public Rectangle(String color, double width, double height) {
         super(color);
-        double w = width;  // Separate variable for better readability
-        double h = height;  // Separate variable for better readability
+        double w = width;
+        double h = height;
         this.width = w;
         this.height = h;
     }
@@ -19,6 +19,8 @@ public class Rectangle extends Figure implements AreaCalculator {
 
     @Override
     public void draw() {
-        System.out.println(String.format("Figure: rectangle, area: %.2f sq. units, width: %.2f units, height: %.2f units, color: %s", getArea(), width, height, getColor()));
+        System.out.println(String.format("Figure: rectangle, area: %.2f sq. units,"
+                + " width: %.2f units, height: %.2f units,"
+                + " color: %s", getArea(), width, height, getColor()));
     }
 }

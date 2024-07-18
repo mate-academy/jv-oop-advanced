@@ -23,6 +23,9 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
 
     @Override
     public void draw() {
-        System.out.println(String.format("Figure: isosceles trapezoid, area: %.2f sq. units, base1: %.2f units, base2: %.2f units, height: %.2f units, color: %s", getArea(), base1, base2, height, getColor()));
+        System.out.println(String.format("Figure: isosceles trapezoid,"
+                + " area: %.2f sq. units, base1: %.2f units,"
+                + " base2: %.2f units,"
+                + " height: %.2f units, color: %s", getArea(), base1, base2, height, getColor()));
     }
 }
