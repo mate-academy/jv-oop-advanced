@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.util.Arrays;
-
 public class HelloWorld {
     private static final int NUMBER_OF_FIGURES = 6;
 
