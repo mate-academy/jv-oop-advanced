@@ -14,12 +14,8 @@ public class Circle extends Figure implements AreaCalculator {
         return PI * radius * radius;
     }
 
-
-
-
-@Override
+    @Override
     public void draw() {
-        System.out.println(String.format("Figure: circle, area: %.2f sq. units,"
-                + " radius: %.2f units, color: %s", getArea(), radius, getColor()));
+        System.out.println(String.format("Figure: circle, area: %.2f sq. units, radius: %.2f units, color: %s", getArea(), radius, getColor()));
     }
 }
