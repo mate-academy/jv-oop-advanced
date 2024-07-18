@@ -20,8 +20,5 @@ class Rectangle extends Figure {
                 .append(" and the color is ")
                 .append(color);
         System.out.println(builder.toString());
-
-        // Ignore the console log below
-        System.out.println("Some new change made");
     }
 }

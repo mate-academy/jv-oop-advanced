@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-abstract class Figure implements IFigure {
+abstract class Figure implements Drawable {
     protected String color;
 
     public Figure(String color) {
