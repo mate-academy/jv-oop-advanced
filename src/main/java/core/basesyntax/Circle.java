@@ -4,9 +4,9 @@ public class Circle extends Figure implements AreaCalculator {
     private static final double PI = Math.PI;
     private final double radius;
 
-    public Circle(String color, double radius) {
+    public Circle(String color, double rad) {
         super(color);
-        double r = radius;
+        double r = rad;
         this.radius = r;
     }
 
