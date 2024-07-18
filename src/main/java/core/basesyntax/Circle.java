@@ -12,20 +12,16 @@ public class Circle extends Figure {
         return radius;
     }
 
-    public void setRadius(double radius) {
-        this.radius = radius;
-    }
-
     @Override
     public double getArea() {
         return Math.PI * radius * radius;
     }
 
     @Override
-    public String draw() {
-        return "Figure: Circle, area: "
+    public void draw() {
+        System.out.println("Figure: Circle, area: "
                 + String.format("%.2f",getArea())
                 + " sq. units, radius: "
-                + String.format("%.2f",getRadius()) + " units, color: " + getColor();
+                + String.format("%.2f",getRadius()) + " units, color: " + getColor());
     }
 }
