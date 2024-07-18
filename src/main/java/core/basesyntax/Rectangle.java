@@ -26,8 +26,8 @@ public class Rectangle extends Figure {
     @Override
     public String draw() {
         return "Figure: rectangle, area: "
-                + getArea() + " sq. units, length: "
-                + getLength() + " units, width: "
-                + getWidth() + " units, color: " + getColor();
+                + String.format("%.2f",getArea()) + " sq. units, length: "
+                + String.format("%.2f",getLength()) + " units, width: "
+                + String.format("%.2f",getWidth()) + " units, color: " + getColor();
     }
 }
