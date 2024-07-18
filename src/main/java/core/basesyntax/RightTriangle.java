@@ -27,7 +27,7 @@ public class RightTriangle extends Figure {
     public String draw() {
         return "Figure: rightTriangle, area: "
                 + String.format("%.2f",getArea()) + " sq. units, firstLeg: "
-                + String.format("%.2f",getFirstLeg()) + " units, b: "
+                + String.format("%.2f",getFirstLeg()) + " units, secondLeg: "
                 + String.format("%.2f",getSecondLeg()) + " units, color: " + getColor();
     }
 }
