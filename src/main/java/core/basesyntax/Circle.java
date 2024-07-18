@@ -12,7 +12,7 @@ public class Circle extends Figure {
         return radius;
     }
 
-    public void setRadius(int radius) {
+    public void setRadius(double radius) {
         this.radius = radius;
     }
 
