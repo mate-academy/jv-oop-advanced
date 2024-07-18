@@ -24,10 +24,10 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String draw() {
-        return "Figure: RightTriangle, area: "
-                + String.format("%.2f",getArea()) + " sq. units, firstLeg: "
-                + String.format("%.2f",getFirstLeg()) + " units, secondLeg: "
-                + String.format("%.2f",getSecondLeg()) + " units, color: " + getColor();
+    public void draw() {
+        System.out.println("Figure: RightTriangle, area: "
+                + String.format("%.2f", getArea()) + " sq. units, firstLeg: "
+                + String.format("%.2f", getFirstLeg()) + " units, secondLeg: "
+                + String.format("%.2f", getSecondLeg()) + " units, color: " + getColor());
     }
 }
