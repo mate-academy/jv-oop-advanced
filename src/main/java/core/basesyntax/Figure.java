@@ -6,5 +6,7 @@ abstract class Figure implements Drawable {
     public Figure(String color) {
         this.color = color;
     }
+
+    public abstract double getArea();
 }
 

@@ -11,12 +11,19 @@ class Rectangle extends Figure {
     }
 
     @Override
+    public double getArea() {
+        return topSide * rightSide;
+    }
+
+    @Override
     public void draw() {
         StringBuilder builder = new StringBuilder();
         builder.append("Figure: the top side is of length: ")
                 .append(topSide)
                 .append(" the right side is of length: ")
                 .append(rightSide)
+                .append(" the area is ")
+                .append(getArea())
                 .append(" and the color is ")
                 .append(color);
         System.out.println(builder.toString());

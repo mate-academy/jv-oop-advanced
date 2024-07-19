@@ -3,41 +3,39 @@ package core.basesyntax;
 import java.util.Random;
 
 class FigureSupplier {
-    public static final Random RANDOM = new Random();
-    public static final Color CIRCLE_COLOR = Color.WHITE;
+    public static final Random random = new Random();
+    public static final String DEFAULT_COLOR = Color.WHITE.name();
     public static final int CIRCLE_SIZE = 10;
-    public static final ColorSupplier COLOR_SUPPLIER = new ColorSupplier();
+    public static final ColorSupplier colorSupplier = new ColorSupplier();
+
+    public int randomSide(int maxSize) {
+        return random.nextInt(maxSize);
+    }
 
     public Figure getRandomFigure(int maxSize) {
-        String color = COLOR_SUPPLIER.getRandomColor();
-        int randFigureIndex = RANDOM.nextInt(AvailableFigure.values().length);
-        AvailableFigure figure = AvailableFigure.values()[randFigureIndex];
+        String color = colorSupplier.getRandomColor();
+        int randFigureIndex = random.nextInt(FigureType.values().length);
+        FigureType figure = FigureType.values()[randFigureIndex];
         switch (figure) {
             case RECTANGLE:
-                int randRightSide = RANDOM.nextInt(maxSize);
-                int randTopSide = RANDOM.nextInt(maxSize);
-                return new Rectangle(color, randTopSide, randRightSide);
+                return new Rectangle(color, randomSide(maxSize), randomSide(maxSize));
             case RIGHT_TRIANGLE:
-                int randFirstLeg = RANDOM.nextInt(maxSize);
-                int randSecondLeg = RANDOM.nextInt(maxSize);
-                return new RightTriangle(color, randFirstLeg, randSecondLeg);
+                return new RightTriangle(color, randomSide(maxSize), randomSide(maxSize));
             case CIRCLE:
-                int randRadius = RANDOM.nextInt(maxSize);
-                return new Circle(color, randRadius);
+                return new Circle(color, randomSide(maxSize));
             case SQUARE:
-                int randSquareSide = RANDOM.nextInt(maxSize);
-                return new Square(color, randSquareSide);
+                return new Square(color, randomSide(maxSize));
             case ISOSCELES_TRAPEZOID:
-                int randSide = RANDOM.nextInt(maxSize);
-                int randTop = RANDOM.nextInt(maxSize);
-                int randBottom = RANDOM.nextInt(maxSize);
-                return new IsoscelesTrapezoid(color, randTop, randBottom, randSide);
+                return new IsoscelesTrapezoid(color,
+                        randomSide(maxSize),
+                        randomSide(maxSize),
+                        randomSide(maxSize));
             default:
                 return getDefaultFigure();
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(CIRCLE_COLOR.name(), CIRCLE_SIZE);
+        return new Circle(DEFAULT_COLOR, CIRCLE_SIZE);
     }
 }

@@ -5,9 +5,10 @@ package core.basesyntax;
  */
 public class Main {
     public static final int MAX_LEN = 100;
+    public static final int FIGURE_AMOUNT = 6;
 
     public static void main(String[] args) {
-        Figure[] figuresArray = new Figure[6];
+        Figure[] figuresArray = new Figure[FIGURE_AMOUNT];
         FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < figuresArray.length; i++) {
             if (i > Math.floor(figuresArray.length / 2)) {
@@ -15,9 +16,7 @@ public class Main {
             } else {
                 figuresArray[i] = figureSupplier.getDefaultFigure();
             }
-        }
 
-        for (int i = 0; i < figuresArray.length; i++) {
             figuresArray[i].draw();
         }
     }

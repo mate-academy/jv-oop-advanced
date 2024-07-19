@@ -11,12 +11,19 @@ class RightTriangle extends Figure {
     }
 
     @Override
+    public double getArea() {
+        return (firstLeg * secondLeg) / 2;
+    }
+
+    @Override
     public void draw() {
         StringBuilder builder = new StringBuilder();
         builder.append("Figure: the first leg is ")
                 .append(firstLeg)
                 .append(" and the second leg is ")
                 .append(secondLeg)
+                .append(" the are is ")
+                .append(getArea())
                 .append(" the color is: ")
                 .append(color);
         System.out.println(builder.toString());

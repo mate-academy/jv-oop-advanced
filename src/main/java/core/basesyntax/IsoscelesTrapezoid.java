@@ -13,6 +13,11 @@ class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
+    public double getArea() {
+        return (top * bottom * side) / 3;
+    }
+
+    @Override
     public void draw() {
         StringBuilder builder = new StringBuilder();
         builder.append("Figure: ")
@@ -22,6 +27,8 @@ class IsoscelesTrapezoid extends Figure {
                 .append(bottom)
                 .append(", the top is of length ")
                 .append(top)
+                .append(" the area is: ")
+                .append(getArea())
                 .append(" and the color is: ")
                 .append(color);
         System.out.println(builder.toString());
