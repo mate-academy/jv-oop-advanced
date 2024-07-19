@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Main extends FigureSupplier {
+public class Main {
     private static final int NUMBER_OF_FIGURES = 6;
     private static final int FIRST_AMOUNT = 3;
 
