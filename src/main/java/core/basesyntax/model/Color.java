@@ -1,6 +1,6 @@
 package core.basesyntax.model;
 
-public abstract class Color implements Figure, Draw {
+public abstract class Color implements Draw, Figure {
     protected String color;
 
     public Color(String color) {

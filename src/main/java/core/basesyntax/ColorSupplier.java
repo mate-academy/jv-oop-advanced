@@ -1,12 +1,13 @@
 package core.basesyntax;
 
+import core.basesyntax.model.ColorRandomizer;
 import java.util.Random;
 
 public class ColorSupplier {
-    private static final String[] COLORS = {"Red", "Green", "Yellow", "white", "Black", "Blue"};
     private final Random random = new Random();
 
     public String getRandomColor() {
-        return COLORS[random.nextInt(COLORS.length)];
+        int colorIndex = random.nextInt(ColorRandomizer.values().length);
+        return ColorRandomizer.values()[colorIndex].toString();
     }
 }
