@@ -1,20 +1,20 @@
 package core.basesyntax;
 
 public class Main {
-    private static final int TEST_SIZE = 6;
-
-    private static FigureSupplier figureSupplier = new FigureSupplier();
-
     public static void main(String[] args) {
+        final int TEST_SIZE = 6;
         Figure[] figures = new Figure[TEST_SIZE];
-        figures[TEST_SIZE - 1] = figureSupplier.getDefaultFigure();
-        for (int i = 0; i < TEST_SIZE - 1; i++) {
+        FigureSupplier figureSupplier = new FigureSupplier();
+        for (int i = 0; i < figures.length; i++) {
             figures[i] = figureSupplier.getRandomFigure();
-            figures[i].draw();
         }
 
-        Figure defaultFigure = figureSupplier.getDefaultFigure();
-        figures[TEST_SIZE - 1] = defaultFigure;
-        figures[TEST_SIZE - 1].draw();
+        for (int i = figures.length / 2; i < figures.length; i++) {
+            figures[i] = figureSupplier.getDefaultFigure();
+        }
+
+        for (Figure figure : figures) {
+            figure.draw();
+        }
     }
 }
