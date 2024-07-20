@@ -8,8 +8,8 @@ public class FigureSupplier {
     private static final int FIGURE_AMOUNT = 5;
     private static final int MAX_LENGTH = 10;
 
-    private Random random = new Random();
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int figureType = random.nextInt(FIGURE_AMOUNT);
