@@ -1,20 +1,14 @@
 package core.basesyntax;
 
-import static core.basesyntax.Figure.DEFAULT_COLOR;
-import static core.basesyntax.Figure.DEFAULT_RADIUS;
-
 import java.util.Random;
 
 public class FigureSupplier {
+    public static final String DEFAULT_COLOR = "White";
+    public static final int DEFAULT_RADIUS = 10;
     private static final int FIGURE_TYPES = 5;
     private static final double DIMENSION_RANGE = 10.0;
-    private final Random random;
-    private final ColorSupplier colorSupplier;
-
-    public FigureSupplier(Random random, ColorSupplier colorSupplier) {
-        this.random = random;
-        this.colorSupplier = colorSupplier;
-    }
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int figureType = random.nextInt(FIGURE_TYPES);
@@ -38,31 +32,35 @@ public class FigureSupplier {
     }
 
     private Figure createSquare(String color) {
-        double side = random.nextDouble() * DIMENSION_RANGE + 1;
+        double side = getRandomDimension();
         return new Square(color, side);
     }
 
     private Figure createRectangle(String color) {
-        double length = random.nextDouble() * DIMENSION_RANGE + 1;
-        double width = random.nextDouble() * DIMENSION_RANGE + 1;
+        double length = getRandomDimension();
+        double width = getRandomDimension();
         return new Rectangle(color, length, width);
     }
 
     private Figure createRightTriangle(String color) {
-        double firstLeg = random.nextDouble() * DIMENSION_RANGE + 1;
-        double secondLeg = random.nextDouble() * DIMENSION_RANGE + 1;
+        double firstLeg = getRandomDimension();
+        double secondLeg = getRandomDimension();
         return new RightTriangle(color, firstLeg, secondLeg);
     }
 
     private Figure createCircle(String color) {
-        double radius = random.nextDouble() * DIMENSION_RANGE + 1;
+        double radius = getRandomDimension();
         return new Circle(color, radius);
     }
 
     private Figure createIsoscelesTrapezoid(String color) {
-        double base1 = random.nextDouble() * DIMENSION_RANGE + 1;
-        double base2 = random.nextDouble() * DIMENSION_RANGE + 1;
-        double height = random.nextDouble() * DIMENSION_RANGE + 1;
+        double base1 = getRandomDimension();
+        double base2 = getRandomDimension();
+        double height = getRandomDimension();
         return new IsoscelesTrapezoid(color, base1, base2, height);
+    }
+
+    private double getRandomDimension() {
+        return random.nextDouble() * DIMENSION_RANGE + 1;
     }
 }
