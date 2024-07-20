@@ -8,7 +8,7 @@ class FigureSupplier {
     public static final int CIRCLE_SIZE = 10;
     public static final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public int randomSide(int maxSize) {
+    private int randomSide(int maxSize) {
         return random.nextInt(maxSize);
     }
 
