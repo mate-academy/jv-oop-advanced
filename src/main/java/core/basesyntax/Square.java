@@ -1,12 +1,15 @@
 package core.basesyntax;
 
-public class Square implements Figure {
-    private String color;
-    private double side;
+public class Square extends Figure {
+    private final double side;
 
     public Square(String color, double side) {
-        this.color = color;
+        super(color);
         this.side = side;
+    }
+
+    public double getSide() {
+        return side;
     }
 
     @Override
@@ -21,11 +24,6 @@ public class Square implements Figure {
                 + "sq. units, side "
                 + side
                 + " units, color: "
-                + color);
-    }
-
-    @Override
-    public String getColor() {
-        return color;
+                + getColor());
     }
 }

@@ -3,45 +3,46 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int FIGURE_TYPES = 5;
     private static final int MAX_SIDE_LENGTH = 10;
-    private static final double MAX_RADIUS = 10.0;
-    private static final String DEFAULT_COLOR = "white";
-    private static final double DEFAULT_RADIUS = 10.0;
+    private final ColorSupplier colorSupplier;
+    private final Random random;
 
-    private Random random = new Random();
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    public FigureSupplier() {
+        colorSupplier = new ColorSupplier();
+        random = new Random();
+    }
 
     public Figure getRandomFigure() {
-        int figureType = random.nextInt(5);
-        String color = colorSupplier.getRandomColor();
-
-        switch (figureType) {
+        String color = colorSupplier.getRandomColor().name();
+        switch (random.nextInt(FIGURE_TYPES)) {
             case 0:
-                double side = random.nextDouble() * MAX_SIDE_LENGTH;
-                return new Square(color, side);
+                return new Square(color, getRandomSide());
             case 1:
-                double width = random.nextDouble() * MAX_SIDE_LENGTH;
-                double height = random.nextDouble() * MAX_SIDE_LENGTH;
-                return new Rectangle(color, width, height);
+                return new Rectangle(color, getRandomSide(), getRandomSide());
             case 2:
-                double firstLeg = random.nextDouble() * MAX_SIDE_LENGTH;
-                double secondLeg = random.nextDouble() * MAX_SIDE_LENGTH;
-                return new RightTriangle(color, firstLeg, secondLeg);
+                return new RightTriangle(color, getRandomSide(), getRandomSide());
             case 3:
-                double radius = random.nextDouble() * MAX_RADIUS;
-                return new Circle(color, radius);
+                return new Circle(color, getRandomRadius());
             case 4:
-                double base1 = random.nextDouble() * MAX_SIDE_LENGTH;
-                double base2 = random.nextDouble() * MAX_SIDE_LENGTH;
-                double trapezoidHeight = random.nextDouble() * MAX_SIDE_LENGTH;
-                return new IsoscelesTrapezoid(color, base1, base2, trapezoidHeight);
+                return new IsoscelesTrapezoid(color,
+                        getRandomSide(),
+                        getRandomSide(),
+                        getRandomSide());
             default:
                 return getDefaultFigure();
         }
     }
 
-    public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
+    private double getRandomSide() {
+        return random.nextDouble() * MAX_SIDE_LENGTH;
     }
 
+    private double getRandomRadius() {
+        return random.nextDouble() * MAX_SIDE_LENGTH;
+    }
+
+    public Figure getDefaultFigure() {
+        return new Circle(Color.WHITE.name(), 10.0);
+    }
 }
