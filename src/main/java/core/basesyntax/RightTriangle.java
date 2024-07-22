@@ -13,7 +13,7 @@ public class RightTriangle implements Figure {
 
     @Override
     public double getArea() {
-        return 0.5 * firstLeg * secondLeg;
+        return (firstLeg * secondLeg) / 2;
     }
 
     @Override
@@ -26,5 +26,10 @@ public class RightTriangle implements Figure {
                 + secondLeg
                 + " units, color: "
                 + color);
+    }
+
+    @Override
+    public String getColor() {
+        return color;
     }
 }

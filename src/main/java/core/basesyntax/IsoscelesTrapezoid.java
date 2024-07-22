@@ -15,7 +15,7 @@ public class IsoscelesTrapezoid implements Figure {
 
     @Override
     public double getArea() {
-        return 0.5 * (base1 + base2) * height;
+        return ((base1 + base2) / 2) * height;
     }
 
     @Override
@@ -27,5 +27,10 @@ public class IsoscelesTrapezoid implements Figure {
                 + base2 + " units, height: "
                 + height + " units, color: "
                 + color);
+    }
+
+    @Override
+    public String getColor() {
+        return color;
     }
 }

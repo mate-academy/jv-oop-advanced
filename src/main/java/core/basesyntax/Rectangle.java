@@ -26,4 +26,9 @@ public class Rectangle implements Figure {
                 + height + " units, color: "
                 + color);
     }
+
+    @Override
+    public String getColor() {
+        return color;
+    }
 }

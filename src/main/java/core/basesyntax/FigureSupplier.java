@@ -3,8 +3,13 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private static final int MAX_SIDE_LENGTH = 10;
+    private static final double MAX_RADIUS = 10.0;
+    private static final String DEFAULT_COLOR = "white";
+    private static final double DEFAULT_RADIUS = 10.0;
+
     private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int figureType = random.nextInt(5);
@@ -12,25 +17,31 @@ public class FigureSupplier {
 
         switch (figureType) {
             case 0:
-                return new Square(color, random.nextDouble() * 10);
+                double side = random.nextDouble() * MAX_SIDE_LENGTH;
+                return new Square(color, side);
             case 1:
-                return new Rectangle(color, random.nextDouble() * 10, random.nextDouble() * 10);
+                double width = random.nextDouble() * MAX_SIDE_LENGTH;
+                double height = random.nextDouble() * MAX_SIDE_LENGTH;
+                return new Rectangle(color, width, height);
             case 2:
-                return new RightTriangle(color, random.nextDouble() * 10, random.nextDouble() * 10);
+                double firstLeg = random.nextDouble() * MAX_SIDE_LENGTH;
+                double secondLeg = random.nextDouble() * MAX_SIDE_LENGTH;
+                return new RightTriangle(color, firstLeg, secondLeg);
             case 3:
-                return new Circle(color, random.nextDouble() * 10);
+                double radius = random.nextDouble() * MAX_RADIUS;
+                return new Circle(color, radius);
             case 4:
-                return new IsoscelesTrapezoid(color, random.nextDouble()
-                        * 10, random.nextDouble()
-                        * 10, random.nextDouble()
-                        * 10);
+                double base1 = random.nextDouble() * MAX_SIDE_LENGTH;
+                double base2 = random.nextDouble() * MAX_SIDE_LENGTH;
+                double trapezoidHeight = random.nextDouble() * MAX_SIDE_LENGTH;
+                return new IsoscelesTrapezoid(color, base1, base2, trapezoidHeight);
             default:
                 return getDefaultFigure();
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", 10);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
 }

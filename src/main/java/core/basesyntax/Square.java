@@ -23,4 +23,9 @@ public class Square implements Figure {
                 + " units, color: "
                 + color);
     }
+
+    @Override
+    public String getColor() {
+        return color;
+    }
 }
