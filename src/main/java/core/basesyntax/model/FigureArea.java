@@ -1,5 +1,5 @@
 package core.basesyntax.model;
 
-public interface Draw {
+public interface FigureArea {
     double getArea();
 }

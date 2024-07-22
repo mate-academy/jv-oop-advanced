@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 import core.basesyntax.model.Circle;
+import core.basesyntax.model.Color;
 import core.basesyntax.model.Figure;
 import core.basesyntax.model.IsoscelesTrapezoid;
 import core.basesyntax.model.Rectangle;
@@ -9,18 +10,23 @@ import core.basesyntax.model.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final String DEFAULT_COLOR = "WHITE";
+    private static final String DEFAULT_COLOR = String.valueOf(Color.WHITE);
+    private static final int NUMBER_OF_FIGURE_TYPES = 5;
     private static final int DEFAULT_RADIUS = 10;
     private static final int MAX_SIZE = 10;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
+        return new Circle(DEFAULT_COLOR, getRandomSize());
+    }
+
+    public double getRandomSize() {
+        return random.nextDouble() * MAX_SIZE;
     }
 
     public Figure getRandomFigure() {
-        int figureType = random.nextInt(5);
+        int figureType = random.nextInt(NUMBER_OF_FIGURE_TYPES);
         String color = colorSupplier.getRandomColor();
         switch (figureType) {
             case 0:
@@ -39,25 +45,22 @@ public class FigureSupplier {
     }
 
     private Circle createCircle(String color) {
-        return new Circle(color, random.nextDouble() * MAX_SIZE);
+        return new Circle(color, getRandomSize());
     }
 
     private Square createSquare(String color) {
-        return new Square(color, random.nextDouble() * MAX_SIZE);
+        return new Square(color, getRandomSize());
     }
 
     private Rectangle createRectangle(String color) {
-        return new Rectangle(color, random.nextDouble() * MAX_SIZE, random.nextDouble()
-                * MAX_SIZE);
+        return new Rectangle(color, getRandomSize(), getRandomSize());
     }
 
     private RightTriangle createRightTriangle(String color) {
-        return new RightTriangle(color, random.nextDouble() * MAX_SIZE, random.nextDouble()
-                * MAX_SIZE);
+        return new RightTriangle(color, getRandomSize(), getRandomSize());
     }
 
     private IsoscelesTrapezoid createIsoscelesTrapezoid(String color) {
-        return new IsoscelesTrapezoid(color, random.nextDouble() * MAX_SIZE, random.nextDouble()
-                * MAX_SIZE, random.nextDouble() * MAX_SIZE);
+        return new IsoscelesTrapezoid(color, getRandomSize(), getRandomSize(), getRandomSize());
     }
 }

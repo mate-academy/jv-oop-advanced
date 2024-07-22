@@ -1,6 +1,13 @@
 package core.basesyntax.model;
 
-public interface Figure {
+public abstract class Figure implements FigureArea, FigureDraw {
+    protected String color;
 
-    void draw();
+    public Figure(String color) {
+        this.color = color;
+    }
+
+    public String getColor() {
+        return color;
+    }
 }
