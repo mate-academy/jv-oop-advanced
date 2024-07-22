@@ -14,13 +14,7 @@ public class Main {
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
-            for (Figure figure : figures) {
-                if (figure != null) {
-                    System.out.println(figure);
-                } else {
-                    System.out.println("null");
-                }
-            }
+            figures[i].draw();
         }
     }
 }

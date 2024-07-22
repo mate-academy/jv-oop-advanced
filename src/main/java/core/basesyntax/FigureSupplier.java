@@ -21,10 +21,6 @@ public class FigureSupplier {
         return new Circle(DEFAULT_COLOR, getRandomSize());
     }
 
-    private double getRandomSize() {
-        return random.nextDouble() * MAX_SIZE;
-    }
-
     public Figure getRandomFigure() {
         int figureType = random.nextInt(NUMBER_OF_FIGURE_TYPES);
         String color = colorSupplier.getRandomColor();
@@ -62,5 +58,9 @@ public class FigureSupplier {
 
     private IsoscelesTrapezoid createIsoscelesTrapezoid(String color) {
         return new IsoscelesTrapezoid(color, getRandomSize(), getRandomSize(), getRandomSize());
+    }
+
+    private double getRandomSize() {
+        return random.nextDouble() * MAX_SIZE;
     }
 }
