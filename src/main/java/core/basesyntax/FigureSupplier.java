@@ -10,7 +10,7 @@ import core.basesyntax.model.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final String DEFAULT_COLOR = String.valueOf(Color.WHITE);
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
     private static final int NUMBER_OF_FIGURE_TYPES = 5;
     private static final int DEFAULT_RADIUS = 10;
     private static final int MAX_SIZE = 10;
@@ -21,7 +21,7 @@ public class FigureSupplier {
         return new Circle(DEFAULT_COLOR, getRandomSize());
     }
 
-    public double getRandomSize() {
+    private double getRandomSize() {
         return random.nextDouble() * MAX_SIZE;
     }
 
