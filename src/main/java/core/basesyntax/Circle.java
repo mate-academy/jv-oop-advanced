@@ -10,22 +10,13 @@ public class Circle extends Figure {
 
     public Circle(String color, int radius, String name) {
         super(color);
-        setName(name);
-        this.radius = radius;
-    }
-
-    public int getRadius() {
-        return radius;
-    }
-
-    public void setRadius(int radius) {
         this.radius = radius;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure name: circle, color: "
-                + getColor() + " radius: " + radius);
+                + getColor() + " radius: " + radius + " area: " + getArea());
     }
 
     @Override

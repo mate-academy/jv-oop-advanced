@@ -1,10 +1,12 @@
 package core.basesyntax;
 
-public class Figure implements Drawable, Countable {
+public class Figure implements Drawable, AreaCalculator {
     private String color;
     private String name;
+    private double area = getArea();
 
     public Figure() {
+
     }
 
     public Figure(String color) {
@@ -16,12 +18,10 @@ public class Figure implements Drawable, Countable {
         this.name = name;
     }
 
-    public void draw() {
-        System.out.println("Figure color: " + color + " name: " + name);
-    }
-
-    public double getArea() {
-        return 0;
+    public Figure(String color, String name, double area) {
+        this.color = color;
+        this.name = name;
+        this.area = area;
     }
 
     public String getColor() {
@@ -38,5 +38,15 @@ public class Figure implements Drawable, Countable {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public double getArea() {
+        return 0;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Figure name: " + name + " color: " + color + " area: " + getArea());
     }
 }
