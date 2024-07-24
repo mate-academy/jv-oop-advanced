@@ -16,9 +16,22 @@ public class FigureSupplier extends ColorSupplier {
 
     public Figure getRandomFigure() {
         String randomColor = getRandomColor();
-        String randomFigureName = getRandomFigureName();
+        // String randomFigureName = getRandomFigureName();
         double randomArea = random.nextDouble(MAX_AREA_LIMIT);
-        return new Figure(randomColor, randomFigureName, randomArea);
+        switch (getRandomFigureName()) {
+            case "CIRCLE":
+                return new Circle(randomColor, randomArea, FigureName.CIRCLE.name());
+            case "ISOSCELESTRAPEZOID":
+                return new IsoscelesTrapezoid(randomColor, randomArea,
+                        FigureName.ISOSCELESTRAPEZOID.name());
+            case "RECTANGLE":
+                return new Rectangle(randomColor, randomArea, FigureName.SQUARE.name());
+            case "RIGHTTRIANGLE":
+                return new Rectangle(randomColor, randomArea, FigureName.RIGHTTRIANGLE.name());
+            case "SQUARE":
+                return new Square(randomColor, randomArea, FigureName.SQUARE.name());
+            default: throw new RuntimeException("Wrong Figure type provided");
+        }
     }
 
     public Figure getDefaultFigure() {

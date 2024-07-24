@@ -2,8 +2,8 @@ package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
 
-    public IsoscelesTrapezoid(String color, String name) {
-        super(color, name);
+    public IsoscelesTrapezoid(String name, double area, String color) {
+        super(color, name, area);
     }
 
     @Override
