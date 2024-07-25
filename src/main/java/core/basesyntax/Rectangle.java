@@ -13,12 +13,13 @@ public class Rectangle extends Figure {
     @Override
     public double getArea() {
         double rectangleArea = side * base;
-        return getFormat("#.##", rectangleArea);
+        return getFormat(rectangleArea);
     }
 
     @Override
     public void draw() {
         System.out.println("Figure name: " + FigureName.RECTANGLE.name().toLowerCase()
-                + ", area: " + getArea() + " sq. units, color: " + getColor().toLowerCase());
+                + ", area: " + getArea() + " sq. units, side: " + side
+                + ", base: " + base + ", color: " + getColor().toLowerCase());
     }
 }

@@ -15,12 +15,14 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public double getArea() {
         double isoscelesTrapezoidArea = FORMULA_INDEX * (bottomBase + upperBase) * height;
-        return getFormat("#.##", isoscelesTrapezoidArea);
+        return getFormat(isoscelesTrapezoidArea);
     }
 
     @Override
     public void draw() {
         System.out.println("Figure name: " + FigureName.ISOSCELES_TRAPEZOID.name().toLowerCase()
-                + ", area: " + getArea() + " sq. units, color: " + getColor().toLowerCase());
+                + ", area: " + getArea() + " sq. units, bottom base: " + bottomBase
+                + ", upper base: " + upperBase + ", height: " + height
+                + ", color: " + getColor().toLowerCase());
     }
 }

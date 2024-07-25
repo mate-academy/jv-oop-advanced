@@ -1,6 +1,7 @@
 package core.basesyntax;
 
-import java.text.DecimalFormat;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public abstract class Figure implements Drawable, AreaCalculator {
     public static final double FORMULA_INDEX = 0.5;
@@ -14,9 +15,9 @@ public abstract class Figure implements Drawable, AreaCalculator {
         this.color = color;
     }
 
-    public double getFormat(String pattern, double number) {
-        DecimalFormat decimalFormat = new DecimalFormat(pattern);
-        double result = Double.parseDouble(decimalFormat.format(number));
+    public double getFormat(double number) {
+        BigDecimal bigDecimal = new BigDecimal(number).setScale(2, RoundingMode.HALF_UP);
+        double result = bigDecimal.doubleValue();
         return result;
     }
 

@@ -13,12 +13,13 @@ public class RightTriangle extends Figure {
     @Override
     public double getArea() {
         double rightTriangleArea = FORMULA_INDEX * firstLeg * secondLeg;
-        return getFormat("#.##", rightTriangleArea);
+        return getFormat(rightTriangleArea);
     }
 
     @Override
     public void draw() {
         System.out.println("Figure name: " + FigureName.RIGHT_TRIANGLE.name().toLowerCase()
-                + ", area: " + getArea() + " sq. units, color: " + getColor().toLowerCase());
+                + ", area: " + getArea() + " sq. units, first leg: " + firstLeg
+                + ", second leg: " + secondLeg + ", color: " + getColor().toLowerCase());
     }
 }
