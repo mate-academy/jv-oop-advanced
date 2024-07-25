@@ -1,9 +1,10 @@
 package core.basesyntax;
 
+import java.text.DecimalFormat;
+
 public abstract class Figure implements Drawable, AreaCalculator {
+    public static final double FORMULA_INDEX = 0.5;
     private String color;
-    private String name;
-    private double figureArea = getArea();
 
     public Figure() {
 
@@ -13,32 +14,14 @@ public abstract class Figure implements Drawable, AreaCalculator {
         this.color = color;
     }
 
-    public Figure(String color, String name) {
-        this.color = color;
-        this.name = name;
-    }
-
-    public Figure(String color, String name, double area) {
-        this.color = color;
-        this.name = name;
-        this.figureArea = area;
+    public double getFormat(String pattern, double number) {
+        DecimalFormat decimalFormat = new DecimalFormat(pattern);
+        double result = Double.parseDouble(decimalFormat.format(number));
+        return result;
     }
 
     public String getColor() {
         return color;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    @Override
-    public double getArea() {
-        return 0;
-    }
-
-    @Override
-    public void draw() {
-        System.out.println("Figure name: " + name + " color: " + color + " area: " + figureArea);
-    }
 }

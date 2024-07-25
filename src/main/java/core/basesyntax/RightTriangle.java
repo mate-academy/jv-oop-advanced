@@ -4,21 +4,21 @@ public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
-    public RightTriangle(String color, int firstLeg, int secondLeg, String name) {
-        super(color, name);
+    public RightTriangle(String color, int firstLeg, int secondLeg) {
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
 
-    public RightTriangle(String name, double area, String color) {
-        super(color, name, area);
+    @Override
+    public double getArea() {
+        double rightTriangleArea = FORMULA_INDEX * firstLeg * secondLeg;
+        return getFormat("#.##", rightTriangleArea);
     }
 
-    public int getFirstLeg() {
-        return firstLeg;
-    }
-
-    public int getSecondLeg() {
-        return secondLeg;
+    @Override
+    public void draw() {
+        System.out.println("Figure name: " + FigureName.RIGHT_TRIANGLE.name().toLowerCase()
+                + ", area: " + getArea() + " sq. units, color: " + getColor().toLowerCase());
     }
 }
