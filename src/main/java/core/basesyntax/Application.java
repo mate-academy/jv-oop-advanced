@@ -8,8 +8,11 @@ public class Application {
         Figure[] figures = new Figure[NUMBER_OF_FIGURES];
 
         for (int i = 0; i < NUMBER_OF_FIGURES; i++) {
-            figures[i] = (i < (figures.length / 2)) ? figureSupplier.getRandomFigure()
-                   : figureSupplier.getDefaultFigure();
+            if (i < (figures.length / 2)) {
+                figures[i] = figureSupplier.getRandomFigure();
+            } else {
+                figures[i] = figureSupplier.getDefaultFigure();
+            }
             figures[i].draw();
         }
     }
