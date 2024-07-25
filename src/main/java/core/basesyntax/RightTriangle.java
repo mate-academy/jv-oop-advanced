@@ -12,12 +12,13 @@ public class RightTriangle extends Figure {
 
     @Override
     public double getArea() {
-        return (double) firstLeg * secondLeg;
+        double area = (double) (firstLeg * secondLeg) / 2;
+        return (double) Math.round(area * 10) / 10;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: isosceles trapezoid, area: " + getArea() + " sq. units,"
+        System.out.println("Figure: right triangle, area: " + getArea() + " sq. units,"
                 + " firstLeg: " + firstLeg + " units," + " secondLeg: " + secondLeg + " units,"
                 + " color: " + getColor());
     }

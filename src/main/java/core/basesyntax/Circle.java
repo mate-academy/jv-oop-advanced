@@ -10,7 +10,8 @@ public class Circle extends Figure {
 
     @Override
     public double getArea() {
-        return ((double) Math.round(Math.PI * radius * radius * 10) / 10);
+        double area = Math.PI * radius * radius;
+        return (double) Math.round(area * 10) / 10;
     }
 
     @Override
