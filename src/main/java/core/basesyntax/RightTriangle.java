@@ -11,7 +11,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double calculateArea() {
         return (firstLeg * secondLeg) / 2;
     }
 
@@ -20,6 +20,6 @@ public class RightTriangle extends Figure {
         System.out.println("Right triangle color: " + getColor()
                 + ", First leg length = " + firstLeg
                 + ", Second leg length = " + secondLeg
-                + "Area = " + area());
+                + "Area = " + calculateArea());
     }
 }

@@ -11,7 +11,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double calculateArea() {
         return length * width;
     }
 
@@ -19,6 +19,6 @@ public class Rectangle extends Figure {
     public void draw() {
         System.out.println("Rectangle color: " + getColor()
                 + ", Length = " + length + ", Width = " + width
-                + "Area = " + area());
+                + "Area = " + calculateArea());
     }
 }
