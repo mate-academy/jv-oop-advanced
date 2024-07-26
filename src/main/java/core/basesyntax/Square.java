@@ -15,6 +15,6 @@ public class Square extends Figure {
 
     @Override
     public String getFigureData() {
-        return "side: " + side;
+        return "side: " + side + " units";
     }
 }

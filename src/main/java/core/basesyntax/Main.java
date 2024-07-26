@@ -2,11 +2,9 @@ package core.basesyntax;
 
 public class Main {
     private static final int ARRAY_SIZE = 6;
-    private static final double RANDOM_NUMBER = 3;
 
     public static void main(String[] args) {
         int i;
-        ColorSupplier colorSupplier = new ColorSupplier();
         Figure[] figureArray = new Figure[ARRAY_SIZE];
         FigureSupplier figureSupplier = new FigureSupplier();
 
@@ -15,7 +13,7 @@ public class Main {
         }
 
         while (i < figureArray.length) {
-            figureArray[i++] = new Circle(colorSupplier.getRandomColor(),RANDOM_NUMBER);
+            figureArray[i++] = figureSupplier.getDefaultFigure();
         }
 
         for (Figure figure: figureArray) {

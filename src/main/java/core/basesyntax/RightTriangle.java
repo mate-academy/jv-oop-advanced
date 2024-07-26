@@ -12,11 +12,11 @@ public class RightTriangle extends Figure {
 
     @Override
     public double getArea() {
-        return (base * height) / 2.0;
+        return base * height / 2.0;
     }
 
     @Override
     public String getFigureData() {
-        return "base: " + base + " height: " + height;
+        return "base: " + base + " units height: " + height + " units";
     }
 }
