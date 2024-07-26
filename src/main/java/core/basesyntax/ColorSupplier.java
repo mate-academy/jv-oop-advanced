@@ -1,5 +1,7 @@
 package core.basesyntax;
 
+import Figures.Color;
+
 import java.util.Random;
 
 public class ColorSupplier {

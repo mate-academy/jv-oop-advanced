@@ -1,5 +1,7 @@
 package core.basesyntax;
 
+import Figures.Figure;
+
 public class Main {
     private static final int NUMBER_OF_FIGURES = 10;
 

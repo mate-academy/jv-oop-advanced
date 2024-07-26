@@ -1,5 +1,7 @@
 package core.basesyntax;
 
+import Figures.*;
+
 import java.util.Random;
 
 public class FigureSupplier {

@@ -1,4 +1,4 @@
-package core.basesyntax;
+package Figures;
 
 public class Rectangle extends Figure {
     private double length;
