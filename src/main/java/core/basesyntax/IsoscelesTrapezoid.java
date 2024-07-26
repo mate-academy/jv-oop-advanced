@@ -23,5 +23,4 @@ public class IsoscelesTrapezoid extends Figure {
                 + ", Base 1: " + firstBase + ", Base 2: " + secondBase
                 + ", Height: " + height + ", Area: " + calculateArea());
     }
-
 }
