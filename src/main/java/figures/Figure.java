@@ -1,4 +1,4 @@
-package Figures;
+package figures;
 
 import core.basesyntax.AreaCalculator;
 import core.basesyntax.Drawable;

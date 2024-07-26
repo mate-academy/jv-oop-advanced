@@ -1,4 +1,4 @@
-package Figures;
+package figures;
 
 public class IsoscelesTrapezoid extends Figure {
     private double firstBase;

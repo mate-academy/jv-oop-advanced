@@ -1,4 +1,4 @@
-package Figures;
+package figures;
 
 public class Circle extends Figure {
     private double radius;

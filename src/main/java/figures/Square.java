@@ -1,4 +1,4 @@
-package Figures;
+package figures;
 
 public class Square extends Figure {
     private double sideLength;
