@@ -1,4 +1,4 @@
-package figures;
+package core.basesyntax.figures;
 
 public class Square extends Figure {
     private double sideLength;

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-import figures.Figure;
+import core.basesyntax.figures.Figure;
 
 public class Main {
     private static final int NUMBER_OF_FIGURES = 10;
