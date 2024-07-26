@@ -14,28 +14,48 @@ public class FigureSupplier {
 
         switch (randomiseFigureType()) {
             case CIRCLE:
-                figure = new Circle(color.getRandomColor(), random.nextDouble(RANDOM_MAX_VALUE));
+                figure = getCircle();
                 break;
             case ISOSCELES_TRAPEZOID:
-                figure = new IsoscelesTrapezoid(color.getRandomColor(),
-                        random.nextDouble(RANDOM_MAX_VALUE), random.nextDouble(RANDOM_MAX_VALUE),
-                        random.nextDouble(RANDOM_MAX_VALUE));
+                figure = getIsoscelesTrapezoidFigure();
                 break;
             case RIGHT_TRIANGLE:
-                figure = new RightTriangle(color.getRandomColor(),
-                        random.nextDouble(RANDOM_MAX_VALUE), random.nextDouble(RANDOM_MAX_VALUE));
+                figure = getRightTriangle();
                 break;
             case RECTANGLE:
-                figure = new Rectangle(color.getRandomColor(), random.nextDouble(RANDOM_MAX_VALUE),
-                        random.nextDouble(RANDOM_MAX_VALUE));
+                figure = getRectangle();
                 break;
             case SQUARE:
-                figure = new Square(color.getRandomColor(), random.nextDouble(RANDOM_MAX_VALUE));
+                figure = getSquare();
                 break;
             default:
                 getDefaultFigure();
         }
         return figure;
+    }
+
+    private Figure getSquare() {
+        return new Square(color.getRandomColor(),
+                random.nextDouble(RANDOM_MAX_VALUE));
+    }
+
+    private Figure getRectangle() {
+        return new Rectangle(color.getRandomColor(),
+                random.nextDouble(RANDOM_MAX_VALUE),
+                random.nextDouble(RANDOM_MAX_VALUE));
+    }
+
+    private Figure getRightTriangle() {
+        return new RightTriangle(color.getRandomColor(),
+                random.nextDouble(RANDOM_MAX_VALUE),
+                random.nextDouble(RANDOM_MAX_VALUE));
+    }
+
+    private Figure getIsoscelesTrapezoidFigure() {
+        return new IsoscelesTrapezoid(color.getRandomColor(),
+                random.nextDouble(RANDOM_MAX_VALUE),
+                random.nextDouble(RANDOM_MAX_VALUE),
+                random.nextDouble(RANDOM_MAX_VALUE));
     }
 
     public Figure getDefaultFigure() {
@@ -44,5 +64,9 @@ public class FigureSupplier {
 
     private FigureList randomiseFigureType() {
         return figures[random.nextInt(figures.length)];
+    }
+
+    private Figure getCircle() {
+        return new Circle(color.getRandomColor(), random.nextDouble(RANDOM_MAX_VALUE));
     }
 }
