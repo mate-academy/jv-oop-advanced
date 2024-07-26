@@ -17,6 +17,6 @@ public class RightTriangle extends Figure {
 
     @Override
     public String getFigureData() {
-        return base + " " + height;
+        return "base: " + base + " height: " + height;
     }
 }

@@ -19,7 +19,7 @@ public abstract class Figure implements AreaCalculationInterface, FigureDataInte
 
     public void draw() {
         System.out.println("Figure: " + getFigureName() + " area: "
-                + getArea() + "sq. units, side:"
+                + getArea() + "sq. units, "
                 + getFigureData() + ", color:"
                 + getColor());
     }

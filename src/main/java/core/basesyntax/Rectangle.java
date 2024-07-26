@@ -17,6 +17,6 @@ public class Rectangle extends Figure {
 
     @Override
     public String getFigureData() {
-        return length + " " + width;
+        return "length: " + length + " width: " + width;
     }
 }

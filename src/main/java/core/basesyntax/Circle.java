@@ -9,7 +9,7 @@ public class Circle extends Figure {
     }
 
     public String getFigureData() {
-        return String.valueOf(radius);
+        return "radius: " + radius;
     }
 
     @Override
