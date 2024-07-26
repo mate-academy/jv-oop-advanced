@@ -2,6 +2,7 @@ package core.basesyntax;
 
 public class Main {
     private static final int ARRAY_SIZE = 6;
+    private static final double RANDOM_NUMBER = 3;
 
     public static void main(String[] args) {
         int i;
@@ -14,7 +15,7 @@ public class Main {
         }
 
         while (i < figureArray.length) {
-            figureArray[i++] = new Circle(colorSupplier.getRandomColor(),3);
+            figureArray[i++] = new Circle(colorSupplier.getRandomColor(),RANDOM_NUMBER);
         }
 
         for (Figure figure: figureArray) {
