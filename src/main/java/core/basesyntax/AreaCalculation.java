@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public interface AreaCalculationInterface {
+public interface AreaCalculation {
     double getArea();
 }
