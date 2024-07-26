@@ -19,6 +19,6 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String getFigureData() {
-        return "lowerBase: " + lowerBase + " units upperBase: " + upperBase + " units height: " + height;
+        return "lowerBase: " + lowerBase + " units upperBase: " + upperBase + " units height: " + height + " units";
     }
 }

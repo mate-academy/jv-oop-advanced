@@ -18,10 +18,9 @@ public abstract class Figure implements AreaCalculation, FigureData {
     }
 
     public void draw() {
-        System.out.println("Figure: " + getFigureName() + " area: "
+        System.out.println(getColor() + "Figure: " + getFigureName() + " area: "
                 + getArea() + "sq. units, "
-                + getFigureData() + ", color:"
-                + getColor());
+                + getFigureData());
     }
 
     public String getFigureName() {
