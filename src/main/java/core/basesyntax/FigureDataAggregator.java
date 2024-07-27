@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public interface FigureData {
+public interface FigureDataAggregator {
     String getFigureData();
 }
