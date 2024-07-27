@@ -8,6 +8,7 @@ public class FigureSupplier {
     private static final FigureList[] figures = FigureList.values();
     private static final double RANDOM_MAX_VALUE = 5.1;
     private static final double DEFAULT_CIRCLE_RADIUS = 10;
+    private static final String DEFAULT_CIRCLE_COLOR = Color.WHITE.name();
 
     public Figure getRandomFigure() {
         Figure figure = null;
@@ -59,7 +60,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.name(), DEFAULT_CIRCLE_RADIUS);
+        return new Circle(DEFAULT_CIRCLE_COLOR, DEFAULT_CIRCLE_RADIUS);
     }
 
     private FigureList randomiseFigureType() {
