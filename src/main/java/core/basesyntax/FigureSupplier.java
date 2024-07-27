@@ -5,7 +5,7 @@ import java.util.Random;
 public class FigureSupplier {
     private static final ColorSupplier color = new ColorSupplier();
     private static final Random random = new Random();
-    private static final FigureList[] figures = FigureList.values();
+    private static final FigureType[] figures = FigureType.values();
     private static final double RANDOM_MAX_VALUE = 5.1;
     private static final double DEFAULT_CIRCLE_RADIUS = 10;
     private static final String DEFAULT_CIRCLE_COLOR = Color.WHITE.name();
@@ -63,7 +63,7 @@ public class FigureSupplier {
         return new Circle(DEFAULT_CIRCLE_COLOR, DEFAULT_CIRCLE_RADIUS);
     }
 
-    private FigureList randomiseFigureType() {
+    private FigureType randomiseFigureType() {
         return figures[random.nextInt(figures.length)];
     }
 

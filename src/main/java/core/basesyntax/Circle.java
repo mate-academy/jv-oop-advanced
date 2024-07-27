@@ -4,7 +4,7 @@ public class Circle extends Figure {
     private double radius;
 
     public Circle(String color, double radius) {
-        super(color, FigureList.CIRCLE.name());
+        super(color, FigureType.CIRCLE.name());
         this.radius = radius;
     }
 
