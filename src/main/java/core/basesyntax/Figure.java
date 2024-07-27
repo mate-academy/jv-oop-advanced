@@ -1,12 +1,10 @@
 package core.basesyntax;
 
-public abstract class Figure implements AreaCalculator, FigureDataAggregator {
-    protected String figureName;
+public abstract class Figure implements AreaCalculator, Drawable {
     protected String color;
 
-    public Figure(String color, String figureName) {
+    public Figure(String color) {
         this.color = color;
-        this.figureName = figureName;
     }
 
     public String getColor() {
@@ -15,15 +13,5 @@ public abstract class Figure implements AreaCalculator, FigureDataAggregator {
 
     public void setColor(String color) {
         this.color = color;
-    }
-
-    public void draw() {
-        System.out.println(getColor() + "Figure: " + getFigureName() + " area: "
-                + getArea() + "sq. units, "
-                + getFigureData());
-    }
-
-    public String getFigureName() {
-        return figureName;
     }
 }

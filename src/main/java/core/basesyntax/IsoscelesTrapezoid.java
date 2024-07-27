@@ -6,7 +6,7 @@ public class IsoscelesTrapezoid extends Figure {
     private double height;
 
     public IsoscelesTrapezoid(String color, double lowerBase, double upperBase, double height) {
-        super(color, FigureType.ISOSCELES_TRAPEZOID.name());
+        super(color);
         this.lowerBase = lowerBase;
         this.upperBase = upperBase;
         this.height = height;
@@ -18,8 +18,11 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String getFigureData() {
-        return "lowerBase: " + lowerBase + " units upperBase: " + upperBase + " units height: "
-                + height + " units";
+    public void draw() {
+        System.out.println("Figure: isosceles trapezoid, "
+                + "area: " + getArea() + "sq. units, "
+                + "lowerBase: " + lowerBase + " units upperBase: " + upperBase
+                + " units height: " + height + " units "
+                + "color: " + getColor().toLowerCase());
     }
 }
