@@ -36,31 +36,31 @@ public class FigureSupplier {
     }
 
     private Figure getSquare() {
-        return new core.basesyntax.Square(color.getRandomColor(),
+        return new Square(color.getRandomColor(),
                 random.nextDouble(RANDOM_MAX_VALUE));
     }
 
     private Figure getRectangle() {
-        return new core.basesyntax.Rectangle(color.getRandomColor(),
+        return new Rectangle(color.getRandomColor(),
                 random.nextDouble(RANDOM_MAX_VALUE),
                 random.nextDouble(RANDOM_MAX_VALUE));
     }
 
     private Figure getRightTriangle() {
-        return new core.basesyntax.RightTriangle(color.getRandomColor(),
+        return new RightTriangle(color.getRandomColor(),
                 random.nextDouble(RANDOM_MAX_VALUE),
                 random.nextDouble(RANDOM_MAX_VALUE));
     }
 
     private Figure getIsoscelesTrapezoidFigure() {
-        return new core.basesyntax.IsoscelesTrapezoid(color.getRandomColor(),
+        return new IsoscelesTrapezoid(color.getRandomColor(),
                 random.nextDouble(RANDOM_MAX_VALUE),
                 random.nextDouble(RANDOM_MAX_VALUE),
                 random.nextDouble(RANDOM_MAX_VALUE));
     }
 
     public Figure getDefaultFigure() {
-        return new core.basesyntax.Circle(DEFAULT_CIRCLE_COLOR, DEFAULT_CIRCLE_RADIUS);
+        return new Circle(DEFAULT_CIRCLE_COLOR, DEFAULT_CIRCLE_RADIUS);
     }
 
     private FigureType randomiseFigureType() {
@@ -68,7 +68,7 @@ public class FigureSupplier {
     }
 
     private Figure getCircle() {
-        return new core.basesyntax.Circle(color.getRandomColor(),
+        return new Circle(color.getRandomColor(),
                 random.nextDouble(RANDOM_MAX_VALUE));
     }
 }
