@@ -13,10 +13,7 @@ public class Main {
             } else {
                 figureArray[i] = figureSupplier.getDefaultFigure();
             }
-        }
-
-        for (Figure figure: figureArray) {
-            figure.draw();
+            figureArray[i].draw();
         }
     }
 }

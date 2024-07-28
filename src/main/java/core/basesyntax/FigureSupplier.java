@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final ColorSupplier color = new ColorSupplier();
+    private static final ColorSupplier colorSupplier = new ColorSupplier();
     private static final Random random = new Random();
     private static final FigureType[] figures = FigureType.values();
     private static final double RANDOM_MAX_VALUE = 5.1;
@@ -35,32 +35,32 @@ public class FigureSupplier {
         return figure;
     }
 
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_CIRCLE_COLOR, DEFAULT_CIRCLE_RADIUS);
+    }
+
     private Figure getSquare() {
-        return new Square(color.getRandomColor(),
+        return new Square(colorSupplier.getRandomColor(),
                 random.nextDouble(RANDOM_MAX_VALUE));
     }
 
     private Figure getRectangle() {
-        return new Rectangle(color.getRandomColor(),
+        return new Rectangle(colorSupplier.getRandomColor(),
                 random.nextDouble(RANDOM_MAX_VALUE),
                 random.nextDouble(RANDOM_MAX_VALUE));
     }
 
     private Figure getRightTriangle() {
-        return new RightTriangle(color.getRandomColor(),
+        return new RightTriangle(colorSupplier.getRandomColor(),
                 random.nextDouble(RANDOM_MAX_VALUE),
                 random.nextDouble(RANDOM_MAX_VALUE));
     }
 
     private Figure getIsoscelesTrapezoidFigure() {
-        return new IsoscelesTrapezoid(color.getRandomColor(),
+        return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
                 random.nextDouble(RANDOM_MAX_VALUE),
                 random.nextDouble(RANDOM_MAX_VALUE),
                 random.nextDouble(RANDOM_MAX_VALUE));
-    }
-
-    public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_CIRCLE_COLOR, DEFAULT_CIRCLE_RADIUS);
     }
 
     private FigureType randomiseFigureType() {
@@ -68,7 +68,7 @@ public class FigureSupplier {
     }
 
     private Figure getCircle() {
-        return new Circle(color.getRandomColor(),
+        return new Circle(colorSupplier.getRandomColor(),
                 random.nextDouble(RANDOM_MAX_VALUE));
     }
 }
