@@ -3,35 +3,34 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int FIGURE_COUNT = 5;
     private final Random rand = new Random();
-    private final ColorSupplier colorSuplier = new ColorSupplier();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int number = rand.nextInt(5);
+        int number = rand.nextInt(FIGURE_COUNT);
+        String randomColor = colorSupplier.getRandomColor();
         switch (number) {
             case 0:
-                return new Circle(colorSuplier.getRandomColor(), rand.nextDouble(100.00));
+                double radius = rand.nextDouble(100.00);
+                return new Circle(randomColor, radius);
             case 1:
-                return new Rectangle(
-                        colorSuplier.getRandomColor(),
-                        rand.nextDouble(100.00),
-                        rand.nextDouble(100.00));
+                double firstSide = rand.nextDouble(100.00);
+                double secondSide = rand.nextDouble(100.00);
+                return new Rectangle(randomColor, firstSide, secondSide);
             case 2:
-                return new Square(colorSuplier.getRandomColor(), rand.nextDouble(100.00));
+                double side = rand.nextDouble(100.00);
+                return new Square(randomColor, side);
             case 3:
-                return new IsoscelesTrapezoid(
-                        colorSuplier.getRandomColor(),
-                        rand.nextDouble(100.00),
-                        rand.nextDouble(100.00),
-                        rand.nextDouble(100.00),
-                        rand.nextDouble(85.00));
-            case 4:
-                return new RightTriangle(
-                        colorSuplier.getRandomColor(),
-                        rand.nextDouble(100.00),
-                        rand.nextDouble(100.00));
+                double topBase = rand.nextDouble(100.00);
+                double bottomBase = rand.nextDouble(100.00);
+                double leg = rand.nextDouble(100.00);
+                double baseAngle = rand.nextDouble(85.00);
+                return new IsoscelesTrapezoid(randomColor, topBase, bottomBase, leg, baseAngle);
             default:
-                return getDefaultFigure(); //unreachable code
+                double firstLeg = rand.nextDouble(100.00);
+                double secondLeg = rand.nextDouble(100.00);
+                return new RightTriangle(randomColor, firstLeg, secondLeg);
         }
     }
 
