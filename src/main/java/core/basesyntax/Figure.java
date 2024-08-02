@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements AreaCalculetion {
+public abstract class Figure implements AreaCalculation {
     public static final double COEFFICIENT = 0.5;
     private String color;
     private String name;
