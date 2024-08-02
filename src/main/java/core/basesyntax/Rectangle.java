@@ -1,12 +1,14 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements AreaCalculetion {
+public class Rectangle extends Figure {
     private double sideB;
     private double sideA;
 
     public Rectangle(double sideA, double sideB, String color, String name) {
         this.sideA = sideA;
         this.sideB = sideB;
+        setColor(color);
+        setName(name);
     }
 
     public double getSideA() {

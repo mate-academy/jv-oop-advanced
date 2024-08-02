@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements AreaCalculetion {
+public class IsoscelesTrapezoid extends Figure {
 
     private double baseB;
     private double baseA;
@@ -16,6 +16,8 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculetion {
         this.height = height;
         this.baseA = baseA;
         this.baseB = baseB;
+        setColor(color);
+        setName(name);
     }
 
     public double getHeight() {

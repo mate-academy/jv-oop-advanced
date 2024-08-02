@@ -1,8 +1,7 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public abstract class Figure implements AreaCalculetion {
     public static final double COEFFICIENT = 0.5;
-    private ColorSupplier randomColor = new ColorSupplier();
     private String color;
     private String name;
 
@@ -12,6 +11,10 @@ public abstract class Figure {
 
     public String getName() {
         return name;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
     }
 
     public void setName(String name) {

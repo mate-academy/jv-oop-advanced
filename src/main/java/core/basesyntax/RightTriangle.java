@@ -1,12 +1,14 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements AreaCalculetion {
+public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
     public RightTriangle(double firstLeg, double secondLeg, String color, String name) {
         this.secondLeg = secondLeg;
         this.firstLeg = firstLeg;
+        setColor(color);
+        setName(name);
     }
 
     public double getFirstLeg() {
