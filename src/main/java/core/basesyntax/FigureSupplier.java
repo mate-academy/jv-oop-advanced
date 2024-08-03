@@ -13,7 +13,7 @@ public class FigureSupplier {
             return new Square(
                      random.nextDouble(),
                     randomColor.getRandomColor(),
-                    names[index].toString()
+                    names[index].name()
             );
         }
         if (names[index].toString().equals("RECTANGLE")) {
@@ -21,7 +21,7 @@ public class FigureSupplier {
                           random.nextDouble(),
                           random.nextDouble(),
                           randomColor.getRandomColor(),
-                          names[index].toString()
+                          names[index].name()
                       );
         }
         if (names[index].toString().equals("RIGHT_TRIANGLE")) {
@@ -29,14 +29,14 @@ public class FigureSupplier {
                     random.nextDouble(),
                     random.nextDouble(),
                     randomColor.getRandomColor(),
-                    names[index].toString()
+                    names[index].name()
             );
         }
         if (names[index].toString().equals("CIRCLE")) {
             return new Circle(
                     random.nextDouble(),
                     randomColor.getRandomColor(),
-                    names[index].toString()
+                    names[index].name()
             );
         } else {
             return new IsoscelesTrapezoid(
@@ -44,7 +44,7 @@ public class FigureSupplier {
                     random.nextDouble(),
                     random.nextDouble(),
                     randomColor.getRandomColor(),
-                    names[index].toString()
+                    names[index].name()
             );
         }
     }

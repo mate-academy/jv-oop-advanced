@@ -1,8 +1,9 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private double firstLeg;
-    private double secondLeg;
+    public static final double COEFFICIENT = 0.5;
+    private final double firstLeg;
+    private final double secondLeg;
 
     public RightTriangle(double firstLeg, double secondLeg, String color, String name) {
         this.secondLeg = secondLeg;

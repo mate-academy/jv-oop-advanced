@@ -1,10 +1,10 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-
-    private double baseB;
-    private double baseA;
-    private double height;
+    public static final double COEFFICIENT = 0.5;
+    private final double baseB;
+    private final double baseA;
+    private final double height;
 
     public IsoscelesTrapezoid(
             double height,
