@@ -2,12 +2,8 @@ package core.basesyntax;
 
 import core.basesyntax.figures.Drawable;
 import core.basesyntax.service.FigureSupplier;
-
 import java.util.Arrays;
 
-/**
- * Feel free to remove this class and create your own.
- */
 public class Main {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
