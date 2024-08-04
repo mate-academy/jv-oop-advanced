@@ -5,13 +5,11 @@ import java.util.Locale;
 public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
-    private double area;
 
     public RightTriangle(String color, double firstLeg, double secondLeg) {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        this.area = calculateArea();
     }
 
     public double getFirstLeg() {
@@ -20,7 +18,6 @@ public class RightTriangle extends Figure {
 
     public void setFirstLeg(double firstLeg) {
         this.firstLeg = firstLeg;
-        this.area = calculateArea();
     }
 
     public double getSecondLeg() {
@@ -29,15 +26,9 @@ public class RightTriangle extends Figure {
 
     public void setSecondLeg(double secondLeg) {
         this.secondLeg = secondLeg;
-        this.area = calculateArea();
     }
 
     public double getArea() {
-        return area;
-    }
-
-    @Override
-    protected double calculateArea() {
         return firstLeg * secondLeg / 2;
     }
 
@@ -47,6 +38,6 @@ public class RightTriangle extends Figure {
                         + "first leg: %.1f units, "
                         + "second leg: %.1f units, "
                         + "color: %s\n",
-                area, firstLeg, secondLeg, color);
+                getArea(), firstLeg, secondLeg, color);
     }
 }

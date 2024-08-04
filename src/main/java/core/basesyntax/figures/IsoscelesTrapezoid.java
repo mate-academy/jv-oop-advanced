@@ -6,14 +6,12 @@ public class IsoscelesTrapezoid extends Figure {
     private double topSide;
     private double bottomSide;
     private double lateralSide;
-    private double area;
 
     public IsoscelesTrapezoid(String color, double topSide, double bottomSide, double lateralSide) {
         super(color);
         this.topSide = topSide;
         this.bottomSide = bottomSide;
         this.lateralSide = lateralSide;
-        this.area = calculateArea();
     }
 
     public double getTopSide() {
@@ -22,7 +20,6 @@ public class IsoscelesTrapezoid extends Figure {
 
     public void setTopSide(double topSide) {
         this.topSide = topSide;
-        this.area = calculateArea();
     }
 
     public double getBottomSide() {
@@ -31,7 +28,6 @@ public class IsoscelesTrapezoid extends Figure {
 
     public void setBottomSide(double bottomSide) {
         this.bottomSide = bottomSide;
-        this.area = calculateArea();
     }
 
     public double getLateralSide() {
@@ -40,15 +36,9 @@ public class IsoscelesTrapezoid extends Figure {
 
     public void setLateralSide(double lateralSide) {
         this.lateralSide = lateralSide;
-        this.area = calculateArea();
     }
 
     public double getArea() {
-        return area;
-    }
-
-    @Override
-    protected double calculateArea() {
         double a = this.topSide;
         double b = this.bottomSide;
         double c = this.lateralSide;
@@ -63,6 +53,6 @@ public class IsoscelesTrapezoid extends Figure {
                         + "bottom-side: %.1f units, "
                         + "lateral-side: %.1f units, "
                         + "color: %s\n",
-                area, topSide, bottomSide, lateralSide, color);
+                getArea(), topSide, bottomSide, lateralSide, color);
     }
 }

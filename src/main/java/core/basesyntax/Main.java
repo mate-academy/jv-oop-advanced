@@ -5,20 +5,21 @@ import core.basesyntax.service.FigureSupplier;
 import java.util.Arrays;
 
 public class Main {
+    private static final int ARRAY_LENGTH = 10;
+
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        int arrayLength = 10;
-        Drawable[] drawables = getDrawables(figureSupplier, arrayLength);
+        Drawable[] drawables = getDrawables(figureSupplier);
         Arrays.stream(drawables)
                 .forEach(Drawable::draw);
     }
 
-    private static Drawable[] getDrawables(FigureSupplier figureSupplier, int arrayLength) {
-        Drawable[] drawables = new Drawable[arrayLength];
-        for (int i = 0; i < arrayLength / 2; i++) {
+    private static Drawable[] getDrawables(FigureSupplier figureSupplier) {
+        Drawable[] drawables = new Drawable[Main.ARRAY_LENGTH];
+        for (int i = 0; i < Main.ARRAY_LENGTH / 2; i++) {
             drawables[i] = figureSupplier.getRandomFigure();
         }
-        for (int i = arrayLength / 2; i < arrayLength; i++) {
+        for (int i = Main.ARRAY_LENGTH / 2; i < Main.ARRAY_LENGTH; i++) {
             drawables[i] = figureSupplier.getDefaultFigure();
         }
         return drawables;

@@ -4,12 +4,10 @@ import java.util.Locale;
 
 public class Square extends Figure {
     private double side;
-    private double area;
 
     public Square(String color, double side) {
         super(color);
         this.side = side;
-        this.area = calculateArea();
     }
 
     public double getSide() {
@@ -18,15 +16,9 @@ public class Square extends Figure {
 
     public void setSide(double side) {
         this.side = side;
-        this.area = calculateArea();
     }
 
     public double getArea() {
-        return area;
-    }
-
-    @Override
-    protected double calculateArea() {
         return side * side;
     }
 
@@ -34,6 +26,6 @@ public class Square extends Figure {
     public void draw() {
         System.out.printf(Locale.US, "Figure: square, area: %.1f sq. units, "
                         + "side: %.1f units, color: %s\n",
-                area, side, color);
+                getArea(), side, color);
     }
 }

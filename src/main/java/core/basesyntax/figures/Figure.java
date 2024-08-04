@@ -15,5 +15,4 @@ public abstract class Figure implements Drawable {
         this.color = color;
     }
 
-    protected abstract double calculateArea();
 }
