@@ -15,12 +15,11 @@ public class Main {
     }
 
     private static Drawable[] getDrawables(FigureSupplier figureSupplier) {
-        Drawable[] drawables = new Drawable[Main.ARRAY_LENGTH];
-        for (int i = 0; i < Main.ARRAY_LENGTH / 2; i++) {
-            drawables[i] = figureSupplier.getRandomFigure();
-        }
-        for (int i = Main.ARRAY_LENGTH / 2; i < Main.ARRAY_LENGTH; i++) {
-            drawables[i] = figureSupplier.getDefaultFigure();
+        Drawable[] drawables = new Drawable[ARRAY_LENGTH];
+        for (int i = 0; i < ARRAY_LENGTH; i++) {
+            drawables[i] = i < ARRAY_LENGTH / 2
+                    ? figureSupplier.getRandomFigure()
+                    : figureSupplier.getDefaultFigure();
         }
         return drawables;
     }

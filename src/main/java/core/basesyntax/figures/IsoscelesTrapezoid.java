@@ -14,30 +14,7 @@ public class IsoscelesTrapezoid extends Figure {
         this.lateralSide = lateralSide;
     }
 
-    public double getTopSide() {
-        return topSide;
-    }
-
-    public void setTopSide(double topSide) {
-        this.topSide = topSide;
-    }
-
-    public double getBottomSide() {
-        return bottomSide;
-    }
-
-    public void setBottomSide(double bottomSide) {
-        this.bottomSide = bottomSide;
-    }
-
-    public double getLateralSide() {
-        return lateralSide;
-    }
-
-    public void setLateralSide(double lateralSide) {
-        this.lateralSide = lateralSide;
-    }
-
+    @Override
     public double getArea() {
         double a = this.topSide;
         double b = this.bottomSide;

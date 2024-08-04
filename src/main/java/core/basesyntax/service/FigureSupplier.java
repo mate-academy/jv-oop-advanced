@@ -13,6 +13,8 @@ import java.util.function.Supplier;
 
 public class FigureSupplier {
     private static final double UNIT_BOUND = 100;
+    private static final String DEFAULT_FIGURE_COLOR = "white";
+    private static final double DEFAULT_FIGURE_SIDE = 10;
     private final List<Supplier<Figure>> generators;
     private final ColorSupplier colorSupplier;
 
@@ -28,9 +30,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        String color = "White";
-        int radius = 10;
-        return new Circle(color, radius);
+        return new Circle(DEFAULT_FIGURE_COLOR, DEFAULT_FIGURE_SIDE);
     }
 
     public Figure getRandomFigure() {

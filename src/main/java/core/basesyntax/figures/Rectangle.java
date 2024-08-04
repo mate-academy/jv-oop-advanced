@@ -12,22 +12,7 @@ public class Rectangle extends Figure {
         this.lateralSide = lateralSide;
     }
 
-    public double getTopSide() {
-        return topSide;
-    }
-
-    public void setTopSide(double topSide) {
-        this.topSide = topSide;
-    }
-
-    public double getLateralSide() {
-        return lateralSide;
-    }
-
-    public void setLateralSide(double lateralSide) {
-        this.lateralSide = lateralSide;
-    }
-
+    @Override
     public double getArea() {
         return topSide * lateralSide;
     }
