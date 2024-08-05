@@ -3,53 +3,49 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private ColorSupplier randomColor = new ColorSupplier();
+    public static final String REQUESTED_TYPE = "circle";
+    public static final String REQUESTED_COLOR = "white";
+    public static final int REQUESTED_RADIUS = 10;
+    private final ColorSupplier randomColor = new ColorSupplier();
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        Name[] names = Name.values();
+        FigureType[] names = FigureType.values();
         int index = random.nextInt(names.length);
-        if (names[index].toString().equals("SQUARE")) {
-            return new Square(
-                     random.nextDouble(),
+        return switch (names[index].name()) {
+            case "SQUARE" -> new Square(
+                    random.nextDouble(),
                     randomColor.getRandomColor(),
                     names[index].name()
             );
-        }
-        if (names[index].toString().equals("RECTANGLE")) {
-            return new Rectangle(
-                          random.nextDouble(),
-                          random.nextDouble(),
-                          randomColor.getRandomColor(),
-                          names[index].name()
-                      );
-        }
-        if (names[index].toString().equals("RIGHT_TRIANGLE")) {
-            return new RightTriangle(
+            case "RECTANGLE" -> new Rectangle(
                     random.nextDouble(),
                     random.nextDouble(),
                     randomColor.getRandomColor(),
                     names[index].name()
             );
-        }
-        if (names[index].toString().equals("CIRCLE")) {
-            return new Circle(
+            case "RIGHT_TRIANGLE" -> new RightTriangle(
+                    random.nextDouble(),
                     random.nextDouble(),
                     randomColor.getRandomColor(),
                     names[index].name()
             );
-        } else {
-            return new IsoscelesTrapezoid(
+            case "CIRCLE" -> new Circle(
+                    random.nextDouble(),
+                    randomColor.getRandomColor(),
+                    names[index].name()
+            );
+            default -> new IsoscelesTrapezoid(
                     random.nextDouble(),
                     random.nextDouble(),
                     random.nextDouble(),
                     randomColor.getRandomColor(),
                     names[index].name()
             );
-        }
+        };
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10,"WHITE","CIRCLE");
+        return new Circle(REQUESTED_RADIUS, REQUESTED_COLOR, REQUESTED_TYPE);
     }
 }
