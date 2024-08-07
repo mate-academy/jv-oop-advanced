@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
+    private static final double NUMBER_TEN = 10.0;
     private double firstSide;
     private double secondSide;
 
@@ -12,7 +13,7 @@ public class Rectangle extends Figure {
 
     @Override
     public double calculateArea() {
-        return (double) Math.round((firstSide * secondSide) * 10) / 10;
+        return (double) Math.round((firstSide * secondSide) * NUMBER_TEN) / NUMBER_TEN;
     }
 
     @Override

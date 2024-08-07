@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public class Square extends Figure {
+    private static final double NUMBER_TEN = 10.0;
     private double side;
 
     public Square(String color, double side) {
@@ -10,7 +11,7 @@ public class Square extends Figure {
 
     @Override
     public double calculateArea() {
-        return (double) Math.round((side * side) * 10) / 10;
+        return (double) Math.round((side * side) * NUMBER_TEN) / NUMBER_TEN;
     }
 
     @Override
