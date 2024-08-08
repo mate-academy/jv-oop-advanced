@@ -13,11 +13,10 @@ public class IsoscelesTrapezoid extends Figure {
             String color,
             String name
     ) {
+        super(color,name);
         this.height = height;
         this.baseA = baseA;
         this.baseB = baseB;
-        setColor(color);
-        setName(name);
     }
 
     public double getHeight() {

@@ -3,9 +3,9 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public static final String REQUESTED_TYPE = FigureType.CIRCLE.name();
-    public static final String REQUESTED_COLOR = Color.WHITE.name();
-    public static final int REQUESTED_RADIUS = 10;
+    public static final String DEFAULT_TYPE = FigureType.CIRCLE.name();
+    public static final String DEFAULT_COLOR = Color.WHITE.name();
+    public static final int DEFAULT_RADIUS = 10;
     private final ColorSupplier randomColor = new ColorSupplier();
     private final Random random = new Random();
 
@@ -46,6 +46,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(REQUESTED_RADIUS, REQUESTED_COLOR, REQUESTED_TYPE);
+        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR, DEFAULT_TYPE);
     }
 }
