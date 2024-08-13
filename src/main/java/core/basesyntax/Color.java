@@ -4,10 +4,9 @@ public enum Color {
     red,
     green,
     black,
-    grey,
+    gray,
     brown,
     violet,
-    white,
     orange,
     yellow,
     pink
