@@ -4,29 +4,31 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_DIMENSION = 10;
-    private static final Random RANDOM = new Random();
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
         ColorSupplier colorSupplier = new ColorSupplier();
-        int figureType = RANDOM.nextInt(5);
+        int figureType = random.nextInt(5);
         String color = colorSupplier.getRandomColor();
         switch (figureType) {
             case 0:
-                return new Square((RANDOM.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION, color);
+                return new Square((random.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION, color);
             case 1:
-                return new RightTriangle((RANDOM.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION, (RANDOM.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION, color);
+                return new RightTriangle((random.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION,
+                        (random.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION, color);
             case 2:
-                return new Rectangle((RANDOM.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION, (RANDOM.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION, color);
+                return new Rectangle((random.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION,
+                        (random.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION, color);
             case 3:
-                return new IsoscelesTrapezoid((RANDOM.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION, (RANDOM.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION,
-                        (RANDOM.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION, color);
-            case 4:
-                return new Circle((RANDOM.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION, color);
+                return new IsoscelesTrapezoid((random.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION,
+                        (random.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION,
+                        (random.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION, color);
             default:
                 return getDefaultFigure();
         }
     }
+
     public Figure getDefaultFigure() {
-        return new Circle(10,"WHITE");
+        return new Circle(10, Color.WHITE.name());
     }
 }
