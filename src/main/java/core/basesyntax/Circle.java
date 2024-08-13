@@ -1,12 +1,11 @@
 package core.basesyntax;
 
-public class Circle implements FigureMethods {
+public class Circle extends Figure {
     private int radius;
-    private Color color;
 
-    public Circle(int radius, Color color) {
+    public Circle(int radius, String color) {
+        super(color);
         this.radius = radius;
-        this.color = color;
     }
 
     @Override
@@ -16,6 +15,7 @@ public class Circle implements FigureMethods {
 
     @Override
     public void draw() {
-        System.out.println("Figure: circle, area: " + getArea() + " sq. units, radius: " + radius + " units, color: " + color);
+        System.out.println("Figure: circle, area: " + getArea() + " sq. units, radius: "
+                + radius + " units, color: " + getColor());
     }
 }

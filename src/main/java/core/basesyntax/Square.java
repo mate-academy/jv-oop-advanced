@@ -1,9 +1,10 @@
 package core.basesyntax;
 
-public class Square implements FigureMethods {
+public class Square extends Figure {
     private int side;
 
-    public Square(int side) {
+    public Square(int side, String color) {
+        super(color);
         this.side = side;
     }
 
@@ -14,5 +15,7 @@ public class Square implements FigureMethods {
 
     @Override
     public void draw() {
+        System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, side: "
+                + side + " units, color: " + getColor());
     }
 }

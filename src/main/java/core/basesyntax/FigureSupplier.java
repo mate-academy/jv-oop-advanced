@@ -3,15 +3,30 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private Random random = new Random();
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private static final int MAX_DIMENSION = 10;
+    private static final Random RANDOM = new Random();
 
-    public FigureMethods getRandomFigure() {
-        int figureType = random.nextInt(5);
+    public Figure getRandomFigure() {
+        ColorSupplier colorSupplier = new ColorSupplier();
+        int figureType = RANDOM.nextInt(5);
         String color = colorSupplier.getRandomColor();
-        return null;
+        switch (figureType) {
+            case 0:
+                return new Square((RANDOM.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION, color);
+            case 1:
+                return new RightTriangle((RANDOM.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION, (RANDOM.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION, color);
+            case 2:
+                return new Rectangle((RANDOM.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION, (RANDOM.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION, color);
+            case 3:
+                return new IsoscelesTrapezoid((RANDOM.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION, (RANDOM.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION,
+                        (RANDOM.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION, color);
+            case 4:
+                return new Circle((RANDOM.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION, color);
+            default:
+                return getDefaultFigure();
+        }
     }
-    public FigureMethods getDefaultFigure() {
-        return new Circle(10, Color.WHITE) ;
+    public Figure getDefaultFigure() {
+        return new Circle(10,"WHITE");
     }
 }
