@@ -4,11 +4,12 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_DIMENSION = 10;
+    private static final int MAX_FIGURES = 5;
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
         ColorSupplier colorSupplier = new ColorSupplier();
-        int figureType = random.nextInt(5);
+        int figureType = random.nextInt(MAX_FIGURES);
         String color = colorSupplier.getRandomColor();
         switch (figureType) {
             case 0:
