@@ -6,7 +6,9 @@ public class FigureSupplier {
     private static final int MAX_DIMENSION = 10;
     private static final int DEFAULT_FIGURE_RADIUS = 10;
     private static final int MAX_FIGURES = 5;
+    private static final String CIRCLE_COLOR = Color.WHITE.name();
     private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         ColorSupplier colorSupplier = new ColorSupplier();
@@ -29,40 +31,44 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_FIGURE_RADIUS, Color.WHITE.name());
+        return new Circle(DEFAULT_FIGURE_RADIUS, CIRCLE_COLOR);
+    }
+
+    public int getRandomParameter() {
+        return (random.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION;
     }
 
     private Circle createCircle() {
-        int radius = (random.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION;
-        String color = new ColorSupplier().getRandomColor();
+        int radius = getRandomParameter();
+        String color = colorSupplier.getRandomColor();
         return new Circle(radius, color);
     }
 
     private Square createSquare() {
-        int side = (random.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION;
-        String color = new ColorSupplier().getRandomColor();
+        int side = getRandomParameter();
+        String color = colorSupplier.getRandomColor();
         return new Square(side, color);
     }
 
     private RightTriangle createRightTriangle() {
-        int leg1 = (random.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION;
-        int leg2 = (random.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION;
-        String color = new ColorSupplier().getRandomColor();
-        return new RightTriangle(leg1, leg2, color);
+        int firstLeg = getRandomParameter();
+        int secondLeg = getRandomParameter();
+        String color = colorSupplier.getRandomColor();
+        return new RightTriangle(firstLeg, secondLeg, color);
     }
 
     private Rectangle createRectangle() {
-        int width = (random.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION;
-        int height = (random.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION;
-        String color = new ColorSupplier().getRandomColor();
+        int width = getRandomParameter();
+        int height = getRandomParameter();
+        String color = colorSupplier.getRandomColor();
         return new Rectangle(width, height, color);
     }
 
     private IsoscelesTrapezoid createIsoscelesTrapezoid() {
-        int base1 = (random.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION;
-        int base2 = (random.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION;
-        int height = (random.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION;
-        String color = new ColorSupplier().getRandomColor();
-        return new IsoscelesTrapezoid(base1, base2, height, color);
+        int firstBase = getRandomParameter();
+        int secondBase = getRandomParameter();
+        int height = getRandomParameter();
+        String color = colorSupplier.getRandomColor();
+        return new IsoscelesTrapezoid(firstBase, secondBase, height, color);
     }
 }
