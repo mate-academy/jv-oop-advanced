@@ -6,7 +6,7 @@ public class FigureSupplier {
     private static final int MAX_DIMENSION = 10;
     private static final int DEFAULT_FIGURE_RADIUS = 10;
     private static final int MAX_FIGURES = 5;
-    private static final String CIRCLE_COLOR = Color.WHITE.name();
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -29,10 +29,10 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_FIGURE_RADIUS, CIRCLE_COLOR);
+        return new Circle(DEFAULT_FIGURE_RADIUS, DEFAULT_COLOR);
     }
 
-    public int getRandomParameter() {
+    private int getRandomParameter() {
         return (random.nextInt(MAX_DIMENSION) + 1) * MAX_DIMENSION;
     }
 
