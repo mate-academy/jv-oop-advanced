@@ -3,10 +3,11 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final Random RANDOM = new Random();
-    private static final String DEFAULT_COLOR = "white";
+    private final Random RANDOM = new Random();
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
     private static final int DEFAULT_RADIUS = 10;
     private static final int FIGURE_TYPES_COUNT = 5;
+    private static final int RANDOM_NUMBER_SIZE = 10;
 
     public Figure getRandomFigure() {
         int figurType = RANDOM.nextInt(FIGURE_TYPES_COUNT);
@@ -22,10 +23,9 @@ public class FigureSupplier {
                 return new RightTriangle(color, getRandomSize(),
                         getRandomSize(), getRandomSize());
             case 4:
+            default:
                 return new IsoscelesTrapezoid(color, getRandomSize(),
                         getRandomSize(), getRandomSize());
-            default:
-                return getDefaultFigure();
         }
     }
 
@@ -34,6 +34,6 @@ public class FigureSupplier {
     }
 
     private int getRandomSize() {
-        return RANDOM.nextInt(10) + 1;
+        return RANDOM.nextInt(RANDOM_NUMBER_SIZE) + 1;
     }
 }
