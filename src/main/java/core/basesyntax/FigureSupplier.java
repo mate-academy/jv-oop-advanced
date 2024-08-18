@@ -5,34 +5,30 @@ import java.util.Random;
 class FigureSupplier {
     private static final Random RANDOM = new Random();
     private static final double MAX_SIZE = 10.0;
-    private static final Color DEFAULT_COLOR = Color.WHITE;
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
     private static final double DEFAULT_RADIUS = 10.0;
-
+    private static final int MAX_COUNT = 5;
     private ColorSupplier colorSupplier = new ColorSupplier();
+    String randomColor = colorSupplier.getRandomColor();
+    double sizePartFigure = RANDOM.nextDouble() * MAX_SIZE;
 
     public Figure getRandomFigure() {
-        int figureType = RANDOM.nextInt(5);
+        int figureType = RANDOM.nextInt(MAX_COUNT);
 
         switch (figureType) {
             case 0:
-                return new Square(colorSupplier.getRandomColor(),
-                        RANDOM.nextDouble() * MAX_SIZE);
+                return new Square(randomColor, sizePartFigure);
             case 1:
-                return new Rectangle(colorSupplier.getRandomColor(),
-                        RANDOM.nextDouble() * MAX_SIZE,
-                        RANDOM.nextDouble() * MAX_SIZE);
+                return new Rectangle(randomColor, sizePartFigure, sizePartFigure);
             case 2:
-                return new RightTriangle(colorSupplier.getRandomColor(),
-                        RANDOM.nextDouble() * MAX_SIZE,
-                        RANDOM.nextDouble() * MAX_SIZE);
+                return new RightTriangle(randomColor, sizePartFigure, sizePartFigure);
             case 3:
-                return new Circle(colorSupplier.getRandomColor(),
-                        RANDOM.nextDouble() * MAX_SIZE);
+                return new Circle(randomColor, sizePartFigure);
             case 4:
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        RANDOM.nextDouble() * MAX_SIZE,
-                        RANDOM.nextDouble() * MAX_SIZE,
-                        RANDOM.nextDouble() * MAX_SIZE);
+                return new IsoscelesTrapezoid(randomColor,
+                        sizePartFigure,
+                        sizePartFigure,
+                        sizePartFigure);
             default:
                 return getDefaultFigure();
         }

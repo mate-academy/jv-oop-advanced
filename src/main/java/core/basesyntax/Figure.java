@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 abstract class Figure implements AreaCalculator, Drawable {
-    protected Color color;
+    protected String color;
 
-    public Figure(Color color) {
+    public Figure(String color) {
         this.color = color;
     }
 
