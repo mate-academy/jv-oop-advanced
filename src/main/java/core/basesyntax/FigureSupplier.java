@@ -9,8 +9,8 @@ class FigureSupplier {
     private static final double DEFAULT_RADIUS = 10.0;
     private static final int MAX_COUNT = 5;
     private ColorSupplier colorSupplier = new ColorSupplier();
-    String randomColor = colorSupplier.getRandomColor();
-    double sizePartFigure = RANDOM.nextDouble() * MAX_SIZE;
+    private String randomColor = colorSupplier.getRandomColor();
+    private double sizePartFigure = RANDOM.nextDouble() * MAX_SIZE;
 
     public Figure getRandomFigure() {
         int figureType = RANDOM.nextInt(MAX_COUNT);
