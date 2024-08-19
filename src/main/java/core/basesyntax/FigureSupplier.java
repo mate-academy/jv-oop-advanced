@@ -5,10 +5,10 @@ import java.util.Random;
 public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final int Figures_Count = 5;
+    private final int figuresCount = 5;
 
     public Figure getRandomFigure() {
-        int figureNumber = this.random.nextInt(this.Figures_Count);
+        int figureNumber = this.random.nextInt(this.figuresCount);
         String color = this.colorSupplier.getRandomColor();
 
         switch (figureNumber) {

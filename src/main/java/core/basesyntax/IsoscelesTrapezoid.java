@@ -46,8 +46,11 @@ public class IsoscelesTrapezoid extends Figure {
     public void drawArea() {
         double area = ((this.firstParallelSide + this.secondParallelSide) / 2) * this.height;
 
-        System.out.println("Figure: isosceles trapezoid, " + "area: " + area + " sq. units, height: "
-                + this.height + " units, " + "first parallel side: " + this.firstParallelSide
-                + ", second parallel side: " + this.secondParallelSide + ", color: " + this.getColor());
+        System.out.println("Figure: isosceles trapezoid, " + "area: " + area
+                + " sq. units, height: "
+                + this.height + " units, " + "first parallel side: "
+                + this.firstParallelSide
+                + ", second parallel side: " + this.secondParallelSide + ", color: "
+                + this.getColor());
     }
 }
