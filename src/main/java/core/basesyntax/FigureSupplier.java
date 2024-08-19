@@ -5,10 +5,10 @@ import java.util.Random;
 public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final int FIGURES_COUNT = 5;
+    private final int Figures_Count = 5;
 
     public Figure getRandomFigure() {
-        int figureNumber = this.random.nextInt(this.FIGURES_COUNT);
+        int figureNumber = this.random.nextInt(this.Figures_Count);
         String color = this.colorSupplier.getRandomColor();
 
         switch (figureNumber) {
@@ -21,7 +21,11 @@ public class FigureSupplier {
             case 3:
                 return new Circle(color, this.random.nextDouble());
             case 4:
-                return new IsoscelesTrapezoid(color, this.random.nextDouble(), this.random.nextDouble(), this.random.nextDouble());
+                return new IsoscelesTrapezoid(
+                        color, this.random.nextDouble(),
+                        this.random.nextDouble(),
+                        this.random.nextDouble()
+                );
             default:
                 return null;
         }

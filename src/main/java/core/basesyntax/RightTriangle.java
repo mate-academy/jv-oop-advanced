@@ -31,7 +31,8 @@ public class RightTriangle extends Figure {
     public void drawArea() {
         double area = 0.5 * this.firstLeg * this.secondLeg;
 
-        System.out.println("Figure: right triangle, " + "area: " + area + " sq. units, first leg: " + this.firstLeg + " units, " +
-                "second leg: " + this.secondLeg + ", color: " + this.getColor());
+        System.out.println("Figure: right triangle, " + "area: " + area + " sq. units, first leg: "
+                + this.firstLeg + " units, " + "second leg: "
+                + this.secondLeg + ", color: " + this.getColor());
     }
 }

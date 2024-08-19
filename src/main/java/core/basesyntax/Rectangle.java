@@ -31,7 +31,8 @@ public class Rectangle extends Figure {
     public void drawArea() {
         double area = this.firstSide * this.secondSide;
 
-        System.out.println("Figure: rectangle, " + "area: " + area + " sq. units, first side: " + this.firstSide + " units, " +
-                "second side: " + this.secondSide + " units, color: " + this.getColor());
+        System.out.println("Figure: rectangle, " + "area: " + area + " sq. units, first side: "
+                + this.firstSide + " units, "
+                + "second side: " + this.secondSide + " units, color: " + this.getColor());
     }
 }
