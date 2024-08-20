@@ -8,27 +8,31 @@ class FigureSupplier {
     private static final String DEFAULT_COLOR = Color.WHITE.name();
     private static final double DEFAULT_RADIUS = 10.0;
     private static final int MAX_COUNT = 5;
-    private ColorSupplier colorSupplier = new ColorSupplier();
-    private String randomColor = colorSupplier.getRandomColor();
-    private double sizePartFigure = RANDOM.nextDouble() * MAX_SIZE;
+
+    private String generateRandomColor() {
+        ColorSupplier colorSupplier = new ColorSupplier();
+        return colorSupplier.getRandomColor();
+    }
+
+    private double generateSizePartFigure() {
+        return RANDOM.nextDouble() * MAX_SIZE;
+    }
 
     public Figure getRandomFigure() {
-        int figureType = RANDOM.nextInt(MAX_COUNT);
-
-        switch (figureType) {
+        switch (RANDOM.nextInt(MAX_COUNT)) {
             case 0:
-                return new Square(randomColor, sizePartFigure);
+                return new Square(generateRandomColor(), generateSizePartFigure());
             case 1:
-                return new Rectangle(randomColor, sizePartFigure, sizePartFigure);
+                return new Rectangle(generateRandomColor(), generateSizePartFigure(), generateSizePartFigure());
             case 2:
-                return new RightTriangle(randomColor, sizePartFigure, sizePartFigure);
+                return new RightTriangle(generateRandomColor(), generateSizePartFigure(), generateSizePartFigure());
             case 3:
-                return new Circle(randomColor, sizePartFigure);
+                return new Circle(generateRandomColor(), generateSizePartFigure());
             case 4:
-                return new IsoscelesTrapezoid(randomColor,
-                        sizePartFigure,
-                        sizePartFigure,
-                        sizePartFigure);
+                return new IsoscelesTrapezoid(generateRandomColor(),
+                        generateSizePartFigure(),
+                        generateSizePartFigure(),
+                        generateSizePartFigure());
             default:
                 return getDefaultFigure();
         }
