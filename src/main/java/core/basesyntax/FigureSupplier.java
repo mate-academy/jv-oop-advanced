@@ -23,9 +23,13 @@ class FigureSupplier {
             case 0:
                 return new Square(generateRandomColor(), generateSizePartFigure());
             case 1:
-                return new Rectangle(generateRandomColor(), generateSizePartFigure(), generateSizePartFigure());
+                return new Rectangle(generateRandomColor(),
+                        generateSizePartFigure(),
+                        generateSizePartFigure());
             case 2:
-                return new RightTriangle(generateRandomColor(), generateSizePartFigure(), generateSizePartFigure());
+                return new RightTriangle(generateRandomColor(),
+                        generateSizePartFigure(),
+                        generateSizePartFigure());
             case 3:
                 return new Circle(generateRandomColor(), generateSizePartFigure());
             case 4:
