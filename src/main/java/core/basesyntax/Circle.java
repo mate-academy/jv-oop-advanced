@@ -17,7 +17,7 @@ public class Circle implements Figure {
     @Override
     public void draw() {
         System.out.println("Figure: circle, area: "
-                + getArea() + " sq. units, radius: "
+                + getArea() + " square units, radius: "
                 + radius + " units, color: "
                 + getColor());
     }

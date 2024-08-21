@@ -29,7 +29,7 @@ public class Rectangle implements Figure {
     @Override
     public String toString() {
         return "Figure: rectangle, area: " + getArea()
-                + " sq. units, width: " + width
+                + " square units, width: " + width
                 + " units, height: " + height
                 + " units, color: " + color;
     }
