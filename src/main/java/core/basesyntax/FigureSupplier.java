@@ -37,7 +37,6 @@ class FigureSupplier {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
-
     private String generateRandomColor() {
         ColorSupplier colorSupplier = new ColorSupplier();
         return colorSupplier.getRandomColor();
