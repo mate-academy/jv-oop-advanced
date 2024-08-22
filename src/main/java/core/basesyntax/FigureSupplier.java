@@ -28,6 +28,10 @@ public class FigureSupplier {
         }
     }
 
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_FIGURE_COLOR, DEFAULT_FIGURE_RADIUS);
+    }
+
     private RightTriangle getRightTriangle(String randomColor) {
         return new RightTriangle(randomColor, getRandomSize(), getRandomSize());
     }
@@ -48,10 +52,6 @@ public class FigureSupplier {
 
     private Circle getCircle(String randomColor) {
         return new Circle(randomColor, getRandomSize());
-    }
-
-    public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_FIGURE_COLOR, DEFAULT_FIGURE_RADIUS);
     }
 
     private double getRandomSize() {
