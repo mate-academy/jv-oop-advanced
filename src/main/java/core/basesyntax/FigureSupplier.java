@@ -7,7 +7,7 @@ public class FigureSupplier {
     private static final int DEFAULT_FIGURE_RADIUS = 10;
     private static final String DEFAULT_FIGURE_COLOR = Color.WHITE.name();
     private static final double RANDOM_SIDE_BOUND = 100.00;
-    private static final double RANDOM_ANGLE_BOUND = 850.00;
+    private static final double RANDOM_ANGLE_BOUND = 85.00;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -16,18 +16,38 @@ public class FigureSupplier {
         String randomColor = colorSupplier.getRandomColor();
         switch (number) {
             case 0:
-                return new Circle(randomColor, getRandomSize());
+                return getCircle(randomColor);
             case 1:
-                return new Rectangle(randomColor, getRandomSize(), getRandomSize());
+                return getRectangle(randomColor);
             case 2:
-                return new Square(randomColor, getRandomSize());
+                return getSquare(randomColor);
             case 3:
-                double baseAngle = random.nextDouble(RANDOM_ANGLE_BOUND);
-                return new IsoscelesTrapezoid(randomColor, getRandomSize(), getRandomSize(),
-                        getRandomSize(), baseAngle);
+                return getIsoscelesTrapezoid(randomColor);
             default:
-                return new RightTriangle(randomColor, getRandomSize(), getRandomSize());
+                return getRightTriangle(randomColor);
         }
+    }
+
+    private RightTriangle getRightTriangle(String randomColor) {
+        return new RightTriangle(randomColor, getRandomSize(), getRandomSize());
+    }
+
+    private IsoscelesTrapezoid getIsoscelesTrapezoid(String randomColor) {
+        double baseAngle = random.nextDouble(RANDOM_ANGLE_BOUND);
+        return new IsoscelesTrapezoid(randomColor, getRandomSize(), getRandomSize(),
+                getRandomSize(), baseAngle);
+    }
+
+    private Square getSquare(String randomColor) {
+        return new Square(randomColor, getRandomSize());
+    }
+
+    private Rectangle getRectangle(String randomColor) {
+        return new Rectangle(randomColor, getRandomSize(), getRandomSize());
+    }
+
+    private Circle getCircle(String randomColor) {
+        return new Circle(randomColor, getRandomSize());
     }
 
     public Figure getDefaultFigure() {
