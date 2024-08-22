@@ -5,14 +5,20 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int NUMBER_OF_FIGURE_MODELS = 5;
     private static final int MAX_DIMENSION = 10;
+    private static final String DEFAULT_COLOR = "white";
+    private static final double DEFAULT_RADIUS = 10.0;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
+    private int getRandomSide() {
+        return random.nextInt(MAX_DIMENSION) + 1;
+    }
+
     public Figure getRandomFigure() {
-        Color color = colorSupplier.getRandomColor();
-        int dimension1 = random.nextInt(MAX_DIMENSION) + 1;
-        int dimension2 = random.nextInt(MAX_DIMENSION) + 1;
-        int dimension3 = random.nextInt(MAX_DIMENSION) + 1;
+        String color = colorSupplier.getRandomColor();
+        int dimension1 = getRandomSide();
+        int dimension2 = getRandomSide();
+        int dimension3 = getRandomSide();
 
         switch (random.nextInt(NUMBER_OF_FIGURE_MODELS)) {
             case 0:
@@ -30,6 +36,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE, 10);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }

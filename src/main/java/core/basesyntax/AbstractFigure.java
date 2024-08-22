@@ -1,19 +1,23 @@
 package core.basesyntax;
 
 public abstract class AbstractFigure implements Figure {
-    private Color color;
+    private String color;
 
-    public AbstractFigure(Color color) {
+    public AbstractFigure(String color) {
+        this.color = color;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
         this.color = color;
     }
 
     @Override
-    public Color getColor() {
-        return color;
-    }
+    public void draw() {
 
-    public void setColor(Color color) {
-        this.color = color;
     }
 }
 

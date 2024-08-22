@@ -1,10 +1,10 @@
 package core.basesyntax;
 
 public class Square extends AbstractFigure {
-    private Color color;
+    private String color;
     private double side;
 
-    public Square(Color color, double side) {
+    public Square(String color, double side) {
         super(color);
         this.side = side;
     }
@@ -23,7 +23,7 @@ public class Square extends AbstractFigure {
     }
 
     @Override
-    public Color getColor() {
+    public String getColor() {
         return color;
     }
 }

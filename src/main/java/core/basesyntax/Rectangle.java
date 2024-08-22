@@ -1,11 +1,11 @@
 package core.basesyntax;
 
 public class Rectangle extends AbstractFigure {
-    private Color color;
+    private String color;
     private double width;
     private double height;
 
-    public Rectangle(Color color, double width, double height) {
+    public Rectangle(String color, double width, double height) {
         super(color);
         this.width = width;
         this.height = height;
@@ -22,7 +22,7 @@ public class Rectangle extends AbstractFigure {
     }
 
     @Override
-    public Color getColor() {
+    public String getColor() {
         return color;
     }
 

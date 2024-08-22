@@ -1,12 +1,12 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends AbstractFigure {
-    private Color color;
+    private String color;
     private double basis1;
     private double basis2;
     private double height;
 
-    public IsoscelesTrapezoid(Color color, double basis1, double basis2, double height) {
+    public IsoscelesTrapezoid(String color, double basis1, double basis2, double height) {
         super(color);
         this.basis1 = basis1;
         this.basis2 = basis2;
@@ -29,7 +29,7 @@ public class IsoscelesTrapezoid extends AbstractFigure {
     }
 
     @Override
-    public Color getColor() {
+    public String getColor() {
         return color;
     }
 }

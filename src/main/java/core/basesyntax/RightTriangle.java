@@ -1,11 +1,11 @@
 package core.basesyntax;
 
 public class RightTriangle extends AbstractFigure {
-    private Color color;
+    private String color;
     private double firstLeg;
     private double secondLeg;
 
-    public RightTriangle(Color color, double firstLeg, double secondLeg) {
+    public RightTriangle(String color, double firstLeg, double secondLeg) {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
@@ -26,7 +26,7 @@ public class RightTriangle extends AbstractFigure {
     }
 
     @Override
-    public Color getColor() {
+    public String getColor() {
         return color;
     }
 }
