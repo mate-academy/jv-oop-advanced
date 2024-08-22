@@ -1,7 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends AbstractFigure {
-    private String color;
+public class Rectangle extends Figure {
     private double width;
     private double height;
 
@@ -22,15 +21,10 @@ public class Rectangle extends AbstractFigure {
     }
 
     @Override
-    public String getColor() {
-        return color;
-    }
-
-    @Override
     public String toString() {
         return "Figure: rectangle, area: " + getArea()
                 + " square units, width: " + width
                 + " units, height: " + height
-                + " units, color: " + color;
+                + " units, color: " + getColor();
     }
 }

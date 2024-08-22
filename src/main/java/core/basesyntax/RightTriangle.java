@@ -1,7 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends AbstractFigure {
-    private String color;
+public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
@@ -23,10 +22,5 @@ public class RightTriangle extends AbstractFigure {
                 + firstLeg + " units, secondLeg: "
                 + secondLeg + " units, color: "
                 + getColor());
-    }
-
-    @Override
-    public String getColor() {
-        return color;
     }
 }
