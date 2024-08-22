@@ -5,11 +5,12 @@ import java.util.Random;
 public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final int figuresCount = 5;
+    private static final int FIGURE_COUNT = 5;
+    private static final double DEFAULT_FIGURE_RADIUS = 10.0;
 
     public Figure getRandomFigure() {
-        int figureNumber = this.random.nextInt(this.figuresCount);
-        String color = this.colorSupplier.getRandomColor();
+        int figureNumber = this.random.nextInt(this.FIGURE_COUNT);
+        Color color = this.colorSupplier.getRandomColor();
 
         switch (figureNumber) {
             case 0:
@@ -20,18 +21,16 @@ public class FigureSupplier {
                 return new RightTriangle(color, this.random.nextDouble(), this.random.nextDouble());
             case 3:
                 return new Circle(color, this.random.nextDouble());
-            case 4:
+            default:
                 return new IsoscelesTrapezoid(
                         color, this.random.nextDouble(),
                         this.random.nextDouble(),
                         this.random.nextDouble()
                 );
-            default:
-                return null;
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("White", 10.0);
+        return new Circle(Color.WHITE, this.DEFAULT_FIGURE_RADIUS);
     }
 }

@@ -6,7 +6,7 @@ public class IsoscelesTrapezoid extends Figure {
     private double secondParallelSide;
 
     public IsoscelesTrapezoid(
-            String color,
+            Color color,
             double height,
             double firstParallelSide,
             double secondParallelSide

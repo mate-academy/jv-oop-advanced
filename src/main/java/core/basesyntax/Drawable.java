@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public interface IFigure {
+public interface Drawable {
     void drawArea();
 }
