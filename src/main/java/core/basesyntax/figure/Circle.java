@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.figure;
 
 public class Circle extends Figure {
     private double radius;
@@ -20,5 +20,4 @@ public class Circle extends Figure {
                 + radius + " units, color: "
                 + getColor());
     }
-
 }

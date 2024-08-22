@@ -1,5 +1,8 @@
 package core.basesyntax;
 
+import core.basesyntax.figure.Figure;
+import core.basesyntax.supplier.FigureSupplier;
+
 public class Main {
     private static final int FIGURE_ARRAY_SIZE = 6;
 
@@ -17,4 +20,3 @@ public class Main {
         }
     }
 }
-

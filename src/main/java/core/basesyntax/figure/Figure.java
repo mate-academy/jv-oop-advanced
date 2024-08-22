@@ -1,4 +1,7 @@
-package core.basesyntax;
+package core.basesyntax.figure;
+
+import core.basesyntax.AreaCalculator;
+import core.basesyntax.Drawable;
 
 public abstract class Figure implements AreaCalculator, Drawable {
     private String color;
