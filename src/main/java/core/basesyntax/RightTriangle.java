@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public class RightTriangle implements  Figure {
+    private String color;
     private int firstSide;
     private int secondSide;
 

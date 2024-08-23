@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public class Circle implements Figure {
+    private String color;
     private int radius;
 
     @Override
