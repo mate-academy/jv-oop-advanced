@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-abstract class FigureBase implements FigureArea, FigureDrawable {
+abstract class FigureBase implements AreaCalculatable, FigureDrawable {
     protected String color;
 
     public FigureBase(String color) {
