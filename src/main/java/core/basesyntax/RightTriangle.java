@@ -1,6 +1,11 @@
 package core.basesyntax;
 
-public class RightTriangle {
+public class RightTriangle implements  Figure {
     private int firstSide;
     private int secondSide;
+
+    @Override
+    public double getArea() {
+        return firstSide * secondSide / 2;
+    }
 }
