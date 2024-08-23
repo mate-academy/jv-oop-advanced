@@ -9,4 +9,9 @@ public class Rectangle implements Figure {
     public double getArea() {
         return firstSide * secondSide;
     }
+
+    public void getInfo() {
+        System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, firstSide: " + firstSide
+                + " units, secondSide: " + secondSide + " units, color:" + color);
+    }
 }

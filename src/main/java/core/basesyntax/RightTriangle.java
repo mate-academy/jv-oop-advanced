@@ -9,4 +9,9 @@ public class RightTriangle implements  Figure {
     public double getArea() {
         return firstSide * secondSide / 2;
     }
+
+    public void getInfo() {
+        System.out.println("Figure: right triangle, area: " + getArea() + " sq. units, firstSide: " + firstSide
+                + " units, secondSide: " + secondSide + " units, color:" + color);
+    }
 }

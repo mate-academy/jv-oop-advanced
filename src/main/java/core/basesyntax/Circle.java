@@ -8,4 +8,9 @@ public class Circle implements Figure {
     public double getArea() {
         return Math.PI * radius * radius;
     }
+
+    public void getInfo() {
+        System.out.println("Figure: circle, area: " + getArea() + " sq. units, radius: " + radius
+                + " units, color:" + color);
+    }
 }

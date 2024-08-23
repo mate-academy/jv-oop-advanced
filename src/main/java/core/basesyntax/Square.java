@@ -8,4 +8,9 @@ public class Square implements Figure {
     public double getArea() {
         return side * side;
     }
+
+    public void getInfo() {
+        System.out.println("Figure: square, area: " + getArea() + " sq. units, side: "
+                + side + " units, color:" + color);
+    }
 }
