@@ -6,7 +6,7 @@ public class FigureSupplier {
     private Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figure getRandomFigure() {
+    public FigureDrawable getRandomFigure() {
         int value = random.nextInt(4);
         String color = colorSupplier.getRandomColor();
 
@@ -19,7 +19,7 @@ public class FigureSupplier {
                 return new Circle(color, random.nextInt(10) + 1);
             }
             case 2: {
-                return  new RightTriangle(color, random.nextInt(10) + 1,
+                return new RightTriangle(color, random.nextInt(10) + 1,
                         random.nextInt(10) + 1);
             }
             case 3: {
@@ -35,7 +35,7 @@ public class FigureSupplier {
         }
     }
 
-    public Figure getDefaultFigure() {
+    public FigureDrawable getDefaultFigure() {
         return new Circle("white", 10);
     }
 }
