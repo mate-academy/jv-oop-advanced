@@ -9,6 +9,11 @@ public class Circle implements Figure {
         return Math.PI * radius * radius;
     }
 
+    public Circle(String color, int radius) {
+        this.color = color;
+        this.radius = radius;
+    }
+
     public void getInfo() {
         System.out.println("Figure: circle, area: " + getArea() + " sq. units, radius: " + radius
                 + " units, color:" + color);
