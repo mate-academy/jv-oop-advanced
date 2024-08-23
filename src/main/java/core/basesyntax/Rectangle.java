@@ -16,7 +16,7 @@ public class Rectangle extends FigureBase {
     }
 
     @Override
-    public void getInfo() {
+    public void draw() {
         System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, firstSide: "
                 + firstSide + " units, secondSide: " + secondSide + " units, color: " + color);
     }

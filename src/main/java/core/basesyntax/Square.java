@@ -14,7 +14,7 @@ public class Square extends FigureBase {
     }
 
     @Override
-    public void getInfo() {
+    public void draw() {
         System.out.println("Figure: square, area: " + getArea() + " sq. units, side: "
                 + side + " units, color: " + color);
     }

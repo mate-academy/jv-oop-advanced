@@ -11,5 +11,5 @@ abstract class FigureBase implements AreaCalculatable, FigureDrawable {
     public abstract double getArea();
 
     @Override
-    public abstract void getInfo();
+    public abstract void draw();
 }

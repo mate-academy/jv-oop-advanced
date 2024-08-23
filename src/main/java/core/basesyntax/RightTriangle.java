@@ -16,7 +16,7 @@ public class RightTriangle extends FigureBase {
     }
 
     @Override
-    public void getInfo() {
+    public void draw() {
         System.out.println("Figure: right triangle, area: " + getArea() + " sq. units, firstSide: "
                 + firstSide + " units, secondSide: " + secondSide + " units, color: " + color);
     }

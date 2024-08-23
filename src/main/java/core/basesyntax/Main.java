@@ -15,7 +15,7 @@ public class Main {
         }
 
         for (FigureDrawable figure: figures) {
-            figure.getInfo();
+            figure.draw();
         }
     }
 }
