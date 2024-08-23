@@ -16,6 +16,7 @@ public class Rectangle implements Figure {
         this.secondSide = secondSide;
     }
 
+    @Override
     public void getInfo() {
         System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, firstSide: " + firstSide
                 + " units, secondSide: " + secondSide + " units, color:" + color);

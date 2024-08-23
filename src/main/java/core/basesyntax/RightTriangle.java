@@ -16,6 +16,7 @@ public class RightTriangle implements  Figure {
         this.secondSide = secondSide;
     }
 
+    @Override
     public void getInfo() {
         System.out.println("Figure: right triangle, area: " + getArea() + " sq. units, firstSide: " + firstSide
                 + " units, secondSide: " + secondSide + " units, color:" + color);

@@ -14,6 +14,7 @@ public class Square implements Figure {
         this.side = side;
     }
 
+    @Override
     public void getInfo() {
         System.out.println("Figure: square, area: " + getArea() + " sq. units, side: "
                 + side + " units, color:" + color);

@@ -14,6 +14,7 @@ public class Circle implements Figure {
         this.radius = radius;
     }
 
+    @Override
     public void getInfo() {
         System.out.println("Figure: circle, area: " + getArea() + " sq. units, radius: " + radius
                 + " units, color:" + color);
