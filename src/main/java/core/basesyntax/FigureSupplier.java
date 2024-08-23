@@ -8,33 +8,6 @@ class FigureSupplier {
     private static final int MAX_COUNT = 5;
     private final Random random = new Random();
 
-    private Figure createSquare() {
-        return new Square(generateRandomColor(), generateSizePartFigure());
-    }
-
-    private Figure createRectangle() {
-        return new Rectangle(generateRandomColor(),
-                generateSizePartFigure(),
-                generateSizePartFigure());
-    }
-
-    private Figure createRightTriangle() {
-        return new RightTriangle(generateRandomColor(),
-                generateSizePartFigure(),
-                generateSizePartFigure());
-    }
-
-    private Figure createCircle() {
-        return new Circle(generateRandomColor(), generateSizePartFigure());
-    }
-
-    private Figure createIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(generateRandomColor(),
-                generateSizePartFigure(),
-                generateSizePartFigure(),
-                generateSizePartFigure());
-    }
-
     public Figure getRandomFigure() {
         switch (random.nextInt(MAX_COUNT)) {
             case 0:
@@ -64,4 +37,32 @@ class FigureSupplier {
     private double generateSizePartFigure() {
         return random.nextDouble() * MAX_SIZE;
     }
+
+    private Figure createSquare() {
+        return new Square(generateRandomColor(), generateSizePartFigure());
+    }
+
+    private Figure createRectangle() {
+        return new Rectangle(generateRandomColor(),
+                generateSizePartFigure(),
+                generateSizePartFigure());
+    }
+
+    private Figure createRightTriangle() {
+        return new RightTriangle(generateRandomColor(),
+                generateSizePartFigure(),
+                generateSizePartFigure());
+    }
+
+    private Figure createCircle() {
+        return new Circle(generateRandomColor(), generateSizePartFigure());
+    }
+
+    private Figure createIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(generateRandomColor(),
+                generateSizePartFigure(),
+                generateSizePartFigure(),
+                generateSizePartFigure());
+    }
 }
+
