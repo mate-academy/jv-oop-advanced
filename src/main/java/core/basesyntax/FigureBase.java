@@ -6,10 +6,4 @@ abstract class FigureBase implements AreaCalculatable, Drawable {
     public FigureBase(String color) {
         this.color = color;
     }
-
-    @Override
-    public abstract double getArea();
-
-    @Override
-    public abstract void draw();
 }
