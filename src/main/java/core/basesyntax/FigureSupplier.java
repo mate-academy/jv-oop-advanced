@@ -8,7 +8,7 @@ public class FigureSupplier {
 
     public Drawable getRandomFigure() {
         int value = random.nextInt(4);
-        String color = colorSupplier.getRandomColor();
+        String color = colorSupplier.getRandomColor().toString();
 
         switch (value) {
             case 0: {
