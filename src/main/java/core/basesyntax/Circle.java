@@ -4,7 +4,7 @@ public class Circle extends Figure {
     private double radius;
 
     public Circle(double radius, String color) {
-        super.setColor(color);
+        super(color);
         this.radius = radius;
     }
 
@@ -16,6 +16,6 @@ public class Circle extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: circle, area:" + calculateArea() + "sq. units, radius: "
-                + radius + " color: " + getColor());
+                + radius + " color: " + color);
     }
 }
