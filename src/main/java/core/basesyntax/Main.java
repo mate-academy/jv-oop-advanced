@@ -6,11 +6,9 @@ public class Main {
     public static void main(String[] args) {
         Figure[] figures = new Figure[ARRAYSIZE];
         FigureSupplier figureSupplier = new FigureSupplier();
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0, j = 3; i < 3 && j < 6; i++, j++) {
             figures[i] = figureSupplier.getRandomFigure();
-        }
-        for (int i = 3; i < 6; i++) {
-            figures[i] = figureSupplier.getDefaultFigure();
+            figures[j] = figureSupplier.getDefaultFigure();
         }
         for (Figure figure : figures) {
             figure.draw();
