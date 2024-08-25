@@ -4,37 +4,34 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final double BOUND = 10.0;
-    private static final String circleColor = "white";
-    private static final double circleRadius = 10;
-    private FigureType figureType;
-    private int figureIndex;
+    private static final Color CIRCLE_COLOR = Color.WHITE;
+    private static final double CIRCLE_RADIUS = 10;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        figureIndex = random.nextInt(FigureType.values().length);
-        figureType = FigureType.values()[figureIndex];
+        int figureIndex = random.nextInt(FigureType.values().length);
+        FigureType figureType = FigureType.values()[figureIndex];
+        String randomColor = colorSupplier.getRandomColor();
         switch (figureType) {
             case ISOSCELES_TRAPEZOID:
                 return new IsoscelesTrapezoid(randDouble(), randDouble(), randDouble(),
-                        colorSupplier.getRandomColor());
+                        randomColor);
             case CIRCLE:
-                return new Circle(randDouble(),colorSupplier.getRandomColor());
+                return new Circle(randDouble(),randomColor);
             case RECTANGLE:
-                return new Rectangle(randDouble(), randDouble(),
-                        colorSupplier.getRandomColor());
+                return new Rectangle(randDouble(), randDouble(), randomColor);
             case RIGHT_TRIANGLE:
-                return new RightTriangle(randDouble(), randDouble(),
-                        colorSupplier.getRandomColor());
+                return new RightTriangle(randDouble(), randDouble(), randomColor);
             case SQUARE:
-                return new Square(randDouble(), colorSupplier.getRandomColor());
+                return new Square(randDouble(), randomColor);
             default:
                 return null;
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(circleRadius, circleColor);
+        return new Circle(CIRCLE_RADIUS, CIRCLE_COLOR.name());
     }
 
     private double randDouble() {

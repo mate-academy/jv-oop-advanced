@@ -1,17 +1,18 @@
 package core.basesyntax;
 
 public class Main {
-    private static final int ARRAYSIZE = 6;
+    private static final int ARRAY_SIZE = 6;
 
     public static void main(String[] args) {
-        Figure[] figures = new Figure[ARRAYSIZE];
+        Figure[] figures = new Figure[ARRAY_SIZE];
         FigureSupplier figureSupplier = new FigureSupplier();
-        for (int i = 0, j = 3; i < 3 && j < 6; i++, j++) {
-            figures[i] = figureSupplier.getRandomFigure();
-            figures[j] = figureSupplier.getDefaultFigure();
-        }
-        for (Figure figure : figures) {
-            figure.draw();
+        for (int i = 0; i < figures.length; i++) {
+            if (i < ARRAY_SIZE / 2) {
+                figures[i] = figureSupplier.getDefaultFigure();
+            } else {
+                figures[i] = figureSupplier.getRandomFigure();
+            }
+            figures[i].draw();
         }
     }
 }
