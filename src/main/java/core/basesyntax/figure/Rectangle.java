@@ -17,7 +17,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println(this.toString());
+        System.out.println(this);
     }
 
     @Override
