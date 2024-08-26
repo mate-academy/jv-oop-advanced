@@ -32,7 +32,12 @@ public class FigureSupplier {
                 return new Circle(color.name(), getRandomSide());
             case 4:
             default:
-                return new IsoscelesTrapezoid(color.name(), getRandomSide(), getRandomSide(), getRandomSide());
+                return new IsoscelesTrapezoid(
+                        color.name(),
+                        getRandomSide(),
+                        getRandomSide(),
+                        getRandomSide()
+                );
         }
     }
 
