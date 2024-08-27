@@ -4,8 +4,8 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final double BOUND = 10.0;
-    private static final Color CIRCLE_COLOR = Color.WHITE;
-    private static final double CIRCLE_RADIUS = 10;
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
+    private static final double DEFAULT_RADIUS = 10;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -31,7 +31,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(CIRCLE_RADIUS, CIRCLE_COLOR.name());
+        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
     }
 
     private double randDouble() {
