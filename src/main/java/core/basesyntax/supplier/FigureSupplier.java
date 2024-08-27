@@ -18,21 +18,21 @@ public class FigureSupplier {
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        Color color = colorSupplier.getRandomColor();
+        String color = colorSupplier.getRandomColor();
 
         switch (random.nextInt(NUMBER_OF_FIGURE_MODELS)) {
             case 0:
-                return new Square(color.name(), getRandomSide());
+                return new Square(color, getRandomSide());
             case 1:
-                return new Rectangle(color.name(), getRandomSide(), getRandomSide());
+                return new Rectangle(color, getRandomSide(), getRandomSide());
             case 2:
-                return new RightTriangle(color.name(), getRandomSide(), getRandomSide());
+                return new RightTriangle(color, getRandomSide(), getRandomSide());
             case 3:
-                return new Circle(color.name(), getRandomSide());
+                return new Circle(color, getRandomSide());
             case 4:
             default:
                 return new IsoscelesTrapezoid(
-                        color.name(),
+                        color,
                         getRandomSide(),
                         getRandomSide(),
                         getRandomSide()
