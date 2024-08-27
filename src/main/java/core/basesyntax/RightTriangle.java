@@ -10,13 +10,13 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public Figure createRandomFigure() {
-        return new RightTriangle(getRandomInt(), getRandomInt());
+    public double calculateFigureArea() {
+        return firstLeg * secondLeg / 2;
     }
 
     @Override
     public void printInformation() {
         System.out.println("Right triangle firstLeg: " + firstLeg + ", secondLeg: "
-                + secondLeg + " area: " + ((firstLeg * secondLeg / 2)) + " Color " + getColor());
+                + secondLeg + " area: " + calculateFigureArea() + " Color " + getColor());
     }
 }

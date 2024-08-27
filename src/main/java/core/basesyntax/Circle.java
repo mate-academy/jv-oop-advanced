@@ -8,14 +8,13 @@ public class Circle extends Figure {
     }
 
     @Override
-    public Figure createRandomFigure() {
-        return new Circle(getRandomInt());
+    public double calculateFigureArea() {
+        return Math.PI * Math.pow(radius, 2);
     }
 
     @Override
     public void printInformation() {
         System.out.println("Circle radius: " + radius
-                + " area: " + (Math.PI * Math.pow(radius, 2))
-                + " Color " + getColor());
+                + " area: " + calculateFigureArea() + " Color " + getColor());
     }
 }

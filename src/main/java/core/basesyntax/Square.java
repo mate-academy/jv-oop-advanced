@@ -8,13 +8,13 @@ public class Square extends Figure {
     }
 
     @Override
-    public Figure createRandomFigure() {
-        return new Square(getRandomInt());
+    public double calculateFigureArea() {
+        return Math.pow(side, 2);
     }
 
     @Override
     public void printInformation() {
-        System.out.println("Square side: " + side + " area: " + (Math.pow(side, 2))
+        System.out.println("Square side: " + side + " area: " + calculateFigureArea()
                 + " Color " + getColor());
     }
 }

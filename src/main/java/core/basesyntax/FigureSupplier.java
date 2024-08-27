@@ -5,15 +5,15 @@ import java.util.Random;
 public class FigureSupplier {
     private Random random = new Random();
     private Figure[] figures = {
-            new Circle(0),
-            new IsoscelesTrapezoid(0, 0, 0),
-            new Rectangle(0, 0),
-            new Square(0),
-            new RightTriangle(0, 0)};
+            new Circle(random.nextInt(50)),
+            new IsoscelesTrapezoid(random.nextInt(50), random.nextInt(50), random.nextInt(50)),
+            new Rectangle(random.nextInt(50), random.nextInt(50)),
+            new Square(random.nextInt(50)),
+            new RightTriangle(random.nextInt(50), random.nextInt(50))};
 
     public Figure getRandomFigure() {
         Figure figure = figures[random.nextInt(figures.length)];
-        return figure.createRandomFigure();
+        return figure;
     }
 
     public Figure getDefaultFigure() {

@@ -12,15 +12,14 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public Figure createRandomFigure() {
-        return new IsoscelesTrapezoid(getRandomInt(), getRandomInt(), getRandomInt());
+    public double calculateFigureArea() {
+        return ((shortBase + longBase) / 2) * height;
     }
 
     @Override
     public void printInformation() {
         System.out.println("IsoscelesTrapezoid short base: " + shortBase
                 + " long base: " + longBase + " height: " + height
-                + " area " + (((shortBase + longBase) / 2) * height)
-                + " Color " + getColor());
+                + " area " + calculateFigureArea() + " Color " + getColor());
     }
 }

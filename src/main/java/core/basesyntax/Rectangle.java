@@ -10,13 +10,13 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public Figure createRandomFigure() {
-        return new Rectangle(getRandomInt(), getRandomInt());
+    public double calculateFigureArea() {
+        return width * length;
     }
 
     @Override
     public void printInformation() {
         System.out.println("Rectangle length: " + length + ", width: " + width
-                + " area: " + (width * length) + " Color " + getColor());
+                + " area: " + calculateFigureArea() + " Color " + getColor());
     }
 }
