@@ -11,7 +11,7 @@ public class FigureSupplier {
 
     public Drawable getRandomFigure() {
         int value = random.nextInt(NUMBER_OF_FIGURES);
-        String color = colorSupplier.getRandomColor().toString();
+        String color = colorSupplier.getRandomColor();
 
         switch (value) {
             case 0:
