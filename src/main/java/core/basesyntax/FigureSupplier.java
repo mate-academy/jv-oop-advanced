@@ -30,31 +30,32 @@ public class FigureSupplier {
         }
     }
 
+    public Drawable getDefaultFigure() {
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
+    }
+
+    private int getRandomValue() {
+        return random.nextInt(MAX_RANDOM_VALUE) + 1;
+    }
+
     private IsoscelesTrapezoid createIsoscelesTrapezoid(String color) {
-        return new IsoscelesTrapezoid(color, random.nextInt(MAX_RANDOM_VALUE) + 1,
-                random.nextInt(MAX_RANDOM_VALUE) + 1,
-                random.nextInt(MAX_RANDOM_VALUE) + 1);
+        return new IsoscelesTrapezoid(color, getRandomValue(), getRandomValue(),
+                getRandomValue());
     }
 
     private Circle createCircle(String color) {
-        return new Circle(color, random.nextInt(MAX_RANDOM_VALUE) + 1);
+        return new Circle(color, getRandomValue());
     }
 
     private RightTriangle createRightTriangle(String color) {
-        return new RightTriangle(color, random.nextInt(MAX_RANDOM_VALUE) + 1,
-                random.nextInt(MAX_RANDOM_VALUE) + 1);
+        return new RightTriangle(color, getRandomValue(), getRandomValue());
     }
 
     private Rectangle createRectangle(String color) {
-        return new Rectangle(color, random.nextInt(MAX_RANDOM_VALUE) + 1,
-                random.nextInt(MAX_RANDOM_VALUE) + 1);
+        return new Rectangle(color, getRandomValue(), getRandomValue());
     }
 
     private Square createSquare(String color) {
-        return new Square(color, random.nextInt(MAX_RANDOM_VALUE) + 1);
-    }
-
-    public Drawable getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
+        return new Square(color, getRandomValue());
     }
 }
