@@ -4,19 +4,20 @@ public class Rectangle extends Figure {
     private int length;
     private int width;
 
-    public Rectangle(int length, int width) {
+    public Rectangle(String color, int length, int width) {
+        super(color);
         this.length = length;
         this.width = width;
     }
 
     @Override
-    public double calculateFigureArea() {
+    public double getArea() {
         return width * length;
     }
 
     @Override
-    public void printInformation() {
+    public void draw() {
         System.out.println("Rectangle length: " + length + ", width: " + width
-                + " area: " + calculateFigureArea() + " Color " + getColor());
+                + " area: " + getArea() + " Color " + getColor());
     }
 }
