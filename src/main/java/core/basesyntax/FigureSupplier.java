@@ -26,7 +26,7 @@ public class FigureSupplier {
             case SQUARE:
                 return new Square(randDouble(), randomColor);
             default:
-                return null;
+                return getDefaultFigure();
         }
     }
 
