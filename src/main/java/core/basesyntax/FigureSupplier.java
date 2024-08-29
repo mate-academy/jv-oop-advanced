@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-class FigureSupplier {
+public class FigureSupplier {
     private static final double MAX_SIZE = 10.0;
     private static final String DEFAULT_COLOR = Color.WHITE.name();
     private static final int MAX_COUNT = 5;

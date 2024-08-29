@@ -11,17 +11,4 @@ abstract class Figure implements AreaCalculator, Drawable {
     public Figure(String color) {
         this.color = color;
     }
-
-    public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR, MAX_SIZE);
-    }
-
-    private String generateRandomColor() {
-        ColorSupplier colorSupplier = new ColorSupplier();
-        return colorSupplier.getRandomColor();
-    }
-
-    private double generateSizePartFigure() {
-        return random.nextDouble() * MAX_SIZE;
-    }
 }
