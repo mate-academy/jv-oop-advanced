@@ -1,10 +1,10 @@
 package core.basesyntax;
 
 public class Main {
-    private static final int FIGURE_INDEX = 6;
+    private static final int ARRAY_SIZE_INDEX = 6;
 
     public static void main(String[] args) {
-        Figure[] figures = new Figure[FIGURE_INDEX];
+        Figure[] figures = new Figure[ARRAY_SIZE_INDEX];
         FigureSupplier figureSupplier = new FigureSupplier();
 
         for (int i = 0; i < figures.length; i++) {
