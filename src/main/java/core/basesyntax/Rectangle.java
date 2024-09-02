@@ -1,9 +1,8 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-
-    private String name = "Rectangle";
-    private double firstLeg, secondLeg;
+    private double firstLeg;
+    private double secondLeg;
     private String color;
 
     public Rectangle(double firstLeg, double secondLeg, String color) {
@@ -16,7 +15,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double findArea() {
+    public double getArea() {
         return firstLeg * secondLeg;
     }
 
@@ -32,14 +31,10 @@ public class Rectangle extends Figure {
         return color;
     }
 
-    public String getName() {
-        return name;
-    }
-
     @Override
-    public String printAllInformation() {
-        return "Figure" + ": " + getName() + ", area: " + findArea() +
-                " sq. units, firstLeg: " + getFirstLeg() + " units, secondLeg: " + getSecondLeg() +
-                " units, color: " + getColor();
+    public void printAllInformation() {
+        System.out.println("Figure" + ": " + getClass().getSimpleName() + ", area: " + getArea()
+                + " sq. units, firstLeg: " + getFirstLeg() + " units, secondLeg: " + getSecondLeg()
+                + " units, color: " + getColor());
     }
 }

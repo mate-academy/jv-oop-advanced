@@ -1,10 +1,12 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-
-    private String name = "Isosceles Trapezoid";
     private String color;
-    private double firstLeg, secondLeg, thirdLeg, height, smallPiece;
+    private double firstLeg;
+    private double secondLeg;
+    private double thirdLeg;
+    private double height;
+    private double smallPiece;
 
     public IsoscelesTrapezoid(double firstLeg, double secondLeg, double thirdLeg, String color) {
         this.firstLeg = firstLeg;
@@ -14,7 +16,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double findArea() {
+    public double getArea() {
         if (firstLeg > secondLeg) {
             smallPiece = (firstLeg - secondLeg) / 2;
         } else {
@@ -25,14 +27,10 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String printAllInformation() {
-        return "Figure" + ": " + getName() + ", area: " + findArea() +
-                " sq. units, firstLeg: " + getFirstLeg() + " units, secondLeg: " + getSecondLeg() +
-                " units, thirdLeg: " + getThirdLeg() + "units, color: " + getColor();
-    }
-
-    public String getName() {
-        return name;
+    public void printAllInformation() {
+        System.out.println("Figure" + ": " + getClass().getSimpleName() + ", area: " + getArea()
+                + " sq. units, firstLeg: " + getFirstLeg() + " units, secondLeg: " + getSecondLeg()
+                + " units, thirdLeg: " + getThirdLeg() + "units, color: " + getColor());
     }
 
     public String getColor() {

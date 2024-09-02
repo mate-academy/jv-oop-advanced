@@ -1,9 +1,8 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-
-    private String name = "Square";
-    private double firstLeg, secondLeg;
+    private double firstLeg;
+    private double secondLeg;
     private String color;
 
     public Square(double firstLeg, String color) {
@@ -16,12 +15,8 @@ public class Square extends Figure {
     }
 
     @Override
-    public double findArea() {
+    public double getArea() {
         return firstLeg * secondLeg;
-    }
-
-    public String getName() {
-        return name;
     }
 
     public double getFirstLeg() {
@@ -37,9 +32,9 @@ public class Square extends Figure {
     }
 
     @Override
-    public String printAllInformation() {
-        return "Figure" + ": " + getName() + ", area: " + findArea() +
-                " sq. units, firstLeg: " + getFirstLeg() + " units, secondLeg: " + getSecondLeg() +
-                " units, color: " + getColor();
+    public void printAllInformation() {
+        System.out.println("Figure" + ": " + getClass().getSimpleName() + ", area: " + getArea()
+                + " sq. units, firstLeg: " + getFirstLeg() + " units, secondLeg: " + getSecondLeg()
+                + " units, color: " + getColor());
     }
 }
