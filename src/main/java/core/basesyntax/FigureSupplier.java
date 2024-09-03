@@ -33,7 +33,8 @@ public class FigureSupplier {
                 double firstLeg4 = getRandomValue();
                 double secondLeg4 = getRandomValue();
                 double thirdLeg4 = getRandomValue();
-                return new IsoscelesTrapezoid(firstLeg4, secondLeg4, thirdLeg4, color);
+                double height = getRandomValue();
+                return new IsoscelesTrapezoid(firstLeg4, secondLeg4, thirdLeg4, height, color);
             default:
                 double firstLeg5 = getRandomValue();
                 return new Square(firstLeg5, color);

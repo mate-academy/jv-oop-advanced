@@ -6,17 +6,17 @@ public class Main {
     static final Random random = new Random();
 
     public static void main(String[] args) {
-        Figure circle = new Circle();
-        Figure rectangle = new Rectangle();
-        Figure rightTriangle = new RightTriangle();
-        Figure square = new Square();
-        Figure isoscelesTrapezoid = new Figure();
-        Figure[] figures = new Figure[]{circle, rectangle, rightTriangle,
-                square, isoscelesTrapezoid};
+        Figure[] figures = new Figure[4];
         FigureSupplier figure = new FigureSupplier();
-        Figure[] allFigures = new Figure[]{figure.getRandomFigure(figures),
-                figure.getRandomFigure(figures), figure.getRandomFigure(figures),
-                figure.getDefaultFigure(), figure.getDefaultFigure(), figure.getDefaultFigure()};
+        Figure[] allFigures = new Figure[6];
+        for (int i = 0; i < allFigures.length / 2; i++) {
+            allFigures[i] = figure.getRandomFigure(figures);
+        }
+
+        for (int j = allFigures.length / 2; j < allFigures.length; j++) {
+            allFigures[j] = figure.getDefaultFigure();
+        }
+
         for (int i = 0; i < allFigures.length; i++) {
             allFigures[i].draw();
         }

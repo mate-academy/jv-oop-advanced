@@ -8,21 +8,17 @@ public class IsoscelesTrapezoid extends Figure {
     private double height;
     private double smallPiece;
 
-    public IsoscelesTrapezoid(double firstLeg, double secondLeg, double thirdLeg, String color) {
+    public IsoscelesTrapezoid(double firstLeg, double secondLeg,
+                              double thirdLeg, double height, String color) {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
         this.thirdLeg = thirdLeg;
         this.color = color;
+        this.height = height;
     }
 
     @Override
     public double getArea() {
-        if (firstLeg > secondLeg) {
-            smallPiece = (firstLeg - secondLeg) / 2;
-        } else {
-            smallPiece = (secondLeg - firstLeg) / 2;
-        }
-        height = Math.sqrt((Math.pow(thirdLeg, 2) - Math.pow(smallPiece, 2)));
         return ((firstLeg + secondLeg) / 2) * height;
     }
 
