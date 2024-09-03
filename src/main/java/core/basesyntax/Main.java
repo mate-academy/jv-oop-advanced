@@ -18,7 +18,7 @@ public class Main {
                 figure.getRandomFigure(figures), figure.getRandomFigure(figures),
                 figure.getDefaultFigure(), figure.getDefaultFigure(), figure.getDefaultFigure()};
         for (int i = 0; i < allFigures.length; i++) {
-            allFigures[i].printAllInformation();
+            allFigures[i].draw();
         }
     }
 }

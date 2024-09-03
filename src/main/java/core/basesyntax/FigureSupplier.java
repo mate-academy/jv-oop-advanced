@@ -4,43 +4,44 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_VALUE = 20;
-    private static final int MAX_VALUE_OF_DEFAULT_FIGURE = 10;
-    private static final String COLOR_OF_DEFAULT_FIGURE = "White";
-    private static final Random random = new Random();
+    private static final int DEFAULT_RADIUS = 10;
+    private static final String DEFAULT_COLOR = "White";
+    private final Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
+
+    public double getRandomValue() {
+        double value = random.nextDouble(MAX_VALUE);
+        return value;
+    }
 
     public Figure getRandomFigure(Figure[] figures) {
         int index = random.nextInt(figures.length);
+        String color = colorSupplier.getRandomColor();
 
         switch (index) {
             case 0:
-                double radius = random.nextDouble(MAX_VALUE);
-                String color = colorSupplier.getRandomColor();
+                double radius = getRandomValue();
                 return new Circle(radius, color);
             case 1:
-                double firstLeg = random.nextDouble(MAX_VALUE);
-                double secondLeg = random.nextDouble(MAX_VALUE);
-                String color2 = colorSupplier.getRandomColor();
-                return new Rectangle(firstLeg, secondLeg, color2);
+                double firstLeg = getRandomValue();
+                double secondLeg = getRandomValue();
+                return new Rectangle(firstLeg, secondLeg, color);
             case 2:
-                double firstLeg3 = random.nextDouble(MAX_VALUE);
-                String color3 = colorSupplier.getRandomColor();
-                return new RightTriangle(firstLeg3, color3);
+                double firstLeg3 = getRandomValue();
+                return new RightTriangle(firstLeg3, color);
             case 3:
-                double firstLeg4 = random.nextDouble(MAX_VALUE);
-                double secondLeg4 = random.nextDouble(MAX_VALUE);
-                double thirdLeg4 = random.nextDouble(MAX_VALUE);
-                String color4 = colorSupplier.getRandomColor();
-                return new IsoscelesTrapezoid(firstLeg4, secondLeg4, thirdLeg4, color4);
+                double firstLeg4 = getRandomValue();
+                double secondLeg4 = getRandomValue();
+                double thirdLeg4 = getRandomValue();
+                return new IsoscelesTrapezoid(firstLeg4, secondLeg4, thirdLeg4, color);
             default:
-                double firstLeg5 = random.nextDouble(MAX_VALUE);
-                String color5 = colorSupplier.getRandomColor();
-                return new Square(firstLeg5, color5);
+                double firstLeg5 = getRandomValue();
+                return new Square(firstLeg5, color);
         }
     }
 
     public Figure getDefaultFigure() {
-        Figure circle = new Circle(MAX_VALUE_OF_DEFAULT_FIGURE, COLOR_OF_DEFAULT_FIGURE);
+        Figure circle = new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
         return circle;
     }
 }

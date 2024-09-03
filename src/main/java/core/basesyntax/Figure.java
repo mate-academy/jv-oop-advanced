@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Figure implements CalculateArea, Output {
+public class Figure implements AreaCalculator, Drawable {
     private String color;
     private double width;
     private double height;
@@ -11,7 +11,7 @@ public class Figure implements CalculateArea, Output {
     }
 
     @Override
-    public void printAllInformation() {
+    public void draw() {
         System.out.println("Figure" + ": " + getClass().getSimpleName() + ", area: " + getArea()
                 + " sq. units, firstLeg: " + getHeight() + " units, secondLeg: " + getWidth()
                 + " units, color: " + getColor());
