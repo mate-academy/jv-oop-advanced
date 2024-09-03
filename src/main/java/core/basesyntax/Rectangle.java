@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends FigCol {
+public class Rectangle extends FigureColor {
     private double width;
     private double height;
 

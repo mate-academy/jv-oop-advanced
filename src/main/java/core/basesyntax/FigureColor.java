@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public abstract class FigCol implements Figure {
+public abstract class FigureColor implements Figure {
     private Color color;
 
-    public FigCol(Color color) {
+    public FigureColor(Color color) {
         this.color = color;
     }
 
