@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public class Square extends FigCol implements Figure{
+public class Square extends FigCol {
     private double side;
 
-    public Square (double side, Color color) {
+    public Square(double side, Color color) {
         super(color);
         this.side = side;
     }
@@ -18,12 +18,12 @@ public class Square extends FigCol implements Figure{
 
     @Override
     public void draw() {
-        System.out.println("Figure: square, area: " + getArea() + " sq. units, side: " + side + " units, color: " + getColor());
+        System.out.println("Figure: square, area: "
+                + getArea() + " sq. units, side: " + side + " units, color: " + getColor());
     }
 
     @Override
     public double getArea() {
-        return side*side;
+        return side * side;
     }
 }
-

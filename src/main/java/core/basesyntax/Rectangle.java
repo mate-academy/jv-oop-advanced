@@ -1,10 +1,10 @@
 package core.basesyntax;
 
-public class Rectangle extends FigCol implements Figure{
+public class Rectangle extends FigCol {
     private double width;
     private double height;
 
-    public Rectangle(double width, double height, Color color){
+    public Rectangle(double width, double height, Color color) {
         super(color);
         this.height = height;
         this.width = width;
@@ -20,11 +20,13 @@ public class Rectangle extends FigCol implements Figure{
 
     @Override
     public double getArea() {
-        return width*height;
+        return width * height;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, width: " + width + " units, height: " + height + " units, color: " + getColor());
+        System.out.println("Figure: rectangle, area: " + getArea()
+                + " sq. units, width: " + width + " units, height: "
+                + height + " units, color: " + getColor());
     }
 }

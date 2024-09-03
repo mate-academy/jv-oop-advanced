@@ -1,10 +1,10 @@
 package core.basesyntax;
 
-public class RightTriangle extends FigCol implements Figure{
+public class RightTriangle extends FigCol {
     private double firstLeg;
     private double secondLeg;
 
-    public RightTriangle (double firstLeg, double secondLeg, Color color) {
+    public RightTriangle(double firstLeg, double secondLeg, Color color) {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
@@ -20,7 +20,9 @@ public class RightTriangle extends FigCol implements Figure{
 
     @Override
     public void draw() {
-        System.out.println("Figure: right triangle, area: " + getArea() + " sq. units, firstLeg: " + firstLeg + " units, secondLeg: " + secondLeg + " units, color: " + getColor());
+        System.out.println("Figure: right triangle, area: " + getArea()
+                + " sq. units, firstLeg: "
+                + firstLeg + " units, secondLeg: " + secondLeg + " units, color: " + getColor());
     }
 
     @Override

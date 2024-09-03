@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends FigCol implements Figure{
+public class Circle extends FigCol {
     private double radius;
 
     public Circle(double radius, Color color) {
@@ -8,14 +8,14 @@ public class Circle extends FigCol implements Figure{
         this.radius = radius;
     }
 
-
     public double getRadius() {
         return radius;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: circle, area: " + getArea() + " sq. units, radius: " + radius + " units, color: " + getColor());
+        System.out.println("Figure: circle, area: " + getArea()
+                + " sq. units, radius: " + radius + " units, color: " + getColor());
     }
 
     @Override

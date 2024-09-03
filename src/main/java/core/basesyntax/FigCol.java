@@ -1,19 +1,17 @@
 package core.basesyntax;
 
-public abstract class FigCol {
-        private Color color;  // Using a single Color instance instead of an array
+public abstract class FigCol implements Figure {
+    private Color color;
 
-        public FigCol(Color color) {
-            this.color = color;
-        }
+    public FigCol(Color color) {
+        this.color = color;
+    }
 
-        // Getter for color (optional, depending on your use case)
-        public Color getColor() {
-            return color;
-        }
+    public Color getColor() {
+        return color;
+    }
 
-        // You can also add a setter if needed
-        public void setColor(Color color) {
-            this.color = color;
-        }
+    public void setColor(Color color) {
+        this.color = color;
+    }
 }
