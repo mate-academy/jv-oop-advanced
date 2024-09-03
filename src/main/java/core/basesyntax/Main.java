@@ -5,7 +5,7 @@ public class Main {
 
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        Figure[] figures = new Figure[MAX_FIGURE_LENGTH];
+        Draw[] figures = new Draw[MAX_FIGURE_LENGTH];
 
         for (int i = 0; i < figures.length; i++) {
             if (i < figures.length / 2) {
