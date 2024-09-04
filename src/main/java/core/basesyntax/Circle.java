@@ -16,6 +16,6 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("This is a circle. It is " + color + " and has a radius of " + radius);
+        System.out.println("Figure: circle, area: " + getArea() + " sq. units, radius: " + radius + " units, color: " + color);
     }
 }

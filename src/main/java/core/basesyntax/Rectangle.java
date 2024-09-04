@@ -1,23 +1,26 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private final double side1;
-    private final double side2;
+    private final double firstSide;
+    private final double secondSide;
 
-    public Rectangle(String color, double side1, double side2) {
+    public Rectangle(String color, double firstSide, double secondSide) {
         super(color);
 
-        this.side1 = side1;
-        this.side2 = side2;
+        this.firstSide = firstSide;
+        this.secondSide = secondSide;
     }
 
     @Override
     public double getArea() {
-        return side1 * side2;
+        return firstSide * secondSide;
     }
 
     @Override
     public void draw() {
-        System.out.println("This is a square. It is " + color + " and has two sides of " + side1 + " and " + side2);
+        System.out.println(
+                "Figure: rectangle, area: " + getArea() + " sq. units, first side: "
+                        + firstSide + " units, second side: " + secondSide + " units, color: " + color
+        );
     }
 }
