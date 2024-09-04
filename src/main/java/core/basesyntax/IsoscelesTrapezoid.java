@@ -11,7 +11,8 @@ public class IsoscelesTrapezoid extends Figure {
         this.firstBase = firstBase;
         this.secondBase = secondBase;
         this.lateralSide = lateralSide;
-        this.height = (int) (Math.sqrt(Math.pow(lateralSide,2)-(Math.pow((firstBase- secondBase)/2,2))));
+        this.height = (int) (Math.sqrt(Math.pow(lateralSide, 2)
+                        - (Math.pow((firstBase - secondBase) / 2, 2))));
     }
 
     @Override
@@ -20,9 +21,10 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     public void printProperties() {
-        System.out.println("Figure: isosceles trapezoid," + " area: " + calculateArea() + " sq. units,"
-                            + " firsBase: " + firstBase + " units," + " secondBase: " + secondBase
-                            + " units," + " lateralSide: " + lateralSide + " units,"
-                            + " height: " + height + " units," + " color: " + color);
+        System.out.println("Figure: isosceles trapezoid," + " area: " + calculateArea()
+                            + " sq. units," + " firsBase: " + firstBase + " units,"
+                            + " secondBase: " + secondBase + " units," + " lateralSide: "
+                            + lateralSide + " units," + " height: " + height + " units,"
+                            + " color: " + color);
     }
 }
