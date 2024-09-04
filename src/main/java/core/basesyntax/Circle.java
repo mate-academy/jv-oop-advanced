@@ -5,11 +5,8 @@ public class Circle extends Figure {
     private double radius;
 
     public Circle(double radius, String color) {
+        super(color);
         this.radius = radius;
-        this.color = color;
-    }
-
-    public Circle() {
     }
 
     @Override

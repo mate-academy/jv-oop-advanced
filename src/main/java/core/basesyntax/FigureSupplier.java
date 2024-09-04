@@ -20,24 +20,16 @@ public class FigureSupplier {
 
         switch (index) {
             case 0:
-                double radius = getRandomValue();
-                return new Circle(radius, color);
+                return new Circle(getRandomValue(), color);
             case 1:
-                double firstLeg = getRandomValue();
-                double secondLeg = getRandomValue();
-                return new Rectangle(firstLeg, secondLeg, color);
+                return new Rectangle(getRandomValue(), getRandomValue(), color);
             case 2:
-                double firstLeg3 = getRandomValue();
-                return new RightTriangle(firstLeg3, color);
+                return new RightTriangle(getRandomValue(), color);
             case 3:
-                double firstLeg4 = getRandomValue();
-                double secondLeg4 = getRandomValue();
-                double thirdLeg4 = getRandomValue();
-                double height = getRandomValue();
-                return new IsoscelesTrapezoid(firstLeg4, secondLeg4, thirdLeg4, height, color);
+                return new IsoscelesTrapezoid(getRandomValue(), getRandomValue(),
+                        getRandomValue(), getRandomValue(), color);
             default:
-                double firstLeg5 = getRandomValue();
-                return new Square(firstLeg5, color);
+                return new Square(getRandomValue(), color);
         }
     }
 

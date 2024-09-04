@@ -7,13 +7,10 @@ public class RightTriangle extends Figure {
     private String color;
 
     public RightTriangle(double firstLeg, String color) {
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = firstLeg;
         this.thirdLeg = firstLeg;
-        this.color = color;
-    }
-
-    public RightTriangle() {
     }
 
     @Override

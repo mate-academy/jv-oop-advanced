@@ -2,30 +2,22 @@ package core.basesyntax;
 
 public class Figure implements AreaCalculator, Drawable {
     private String color;
-    private double width;
-    private double height;
+
+    public Figure(String color) {
+        this.color = color;
+    }
 
     @Override
     public double getArea() {
-        return width * height;
+        return 0;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure" + ": " + getClass().getSimpleName() + ", area: " + getArea()
-                + " sq. units, firstLeg: " + getHeight() + " units, secondLeg: " + getWidth()
-                + " units, color: " + getColor());
+        System.out.println("Figure" + ": " + getClass().getSimpleName());
     }
 
     public String getColor() {
         return color;
-    }
-
-    public double getHeight() {
-        return height;
-    }
-
-    public double getWidth() {
-        return width;
     }
 }

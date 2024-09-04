@@ -6,13 +6,11 @@ public class Rectangle extends Figure {
     private String color;
 
     public Rectangle(double firstLeg, double secondLeg, String color) {
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        this.color = color;
     }
 
-    public Rectangle() {
-    }
 
     @Override
     public double getArea() {
