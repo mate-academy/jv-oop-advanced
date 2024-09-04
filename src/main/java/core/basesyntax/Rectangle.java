@@ -8,16 +8,15 @@ public class Rectangle extends Figure {
         this.firstSide = firstSide;
         this.secondSide = secondSide;
         setColor(color);
-        obtainTheArea();
     }
 
-    public void obtainTheArea() {
-        setArea(firstSide * secondSide);
+    private double calculateAndSetArea() {
+        return firstSide * secondSide;
     }
 
     @Override
     public String draw() {
-        return "Figure: Rectangle, area: " + getArea()
+        return "Figure: Rectangle, area: " + calculateAndSetArea()
                 + " sq. units, firstSide: " + firstSide + " units, secondSide: "
                 + secondSide + " units, color: " + getColor();
     }

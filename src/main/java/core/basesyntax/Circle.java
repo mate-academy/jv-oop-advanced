@@ -7,16 +7,15 @@ public class Circle extends Figure {
     public Circle(int radius, String color) {
         this.radius = radius;
         setColor(color);
-        obtainTheArea();
     }
 
-    public void obtainTheArea() {
-        setArea(PI * radius * radius);
+    private double calculateAndSetArea() {
+        return PI * radius * radius;
     }
 
     @Override
     public String draw() {
-        return "Figure: Circle, area: " + getArea()
+        return "Figure: Circle, area: " + calculateAndSetArea()
                 + " sq. units, radius: " + radius
                 + " units, color: " + getColor();
     }

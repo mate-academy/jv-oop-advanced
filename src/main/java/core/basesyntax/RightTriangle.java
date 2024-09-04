@@ -8,16 +8,15 @@ public class RightTriangle extends Figure {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
         setColor(color);
-        obtainTheArea();
     }
 
-    public void obtainTheArea() {
-        setArea(firstLeg * secondLeg / 2);
+    private double calculateAndSetArea() {
+        return firstLeg * secondLeg / 2;
     }
 
     @Override
     public String draw() {
-        return "Figure: RightTriangle, area: " + getArea()
+        return "Figure: RightTriangle, area: " + calculateAndSetArea()
                 + " sq. units, firstLeg: " + firstLeg + " units, secondLeg: "
                 + secondLeg + " units, color: " + getColor();
     }

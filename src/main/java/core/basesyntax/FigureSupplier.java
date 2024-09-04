@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int BOUND = 10;
-    private static final int BOUND_OF_CASES = 10;
+    private static final int BOUND_OF_CASES = 5;
     private static final int DEFAULT_RADIUS = 12;
     private static final int FIGURE_COUNT = 3;
     private static final int ORIGIN = 1;
