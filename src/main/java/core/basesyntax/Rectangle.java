@@ -11,7 +11,6 @@ public class Rectangle extends Figure {
         this.secondLeg = secondLeg;
     }
 
-
     @Override
     public double getArea() {
         return firstLeg * secondLeg;
