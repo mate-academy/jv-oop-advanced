@@ -16,12 +16,13 @@ public class FigureSupplier {
         int index = random.nextInt(maxFigure);
         int num1 = random.nextInt(9) + 1;
         int num2 = random.nextInt(9) + 1;
+        int num3 = random.nextInt(9) + 1;
         String color = colorSupplier.getRandomColor();
 
         if (index == 0) {
             return new RightTriangle(color,num1, num2);
         } else if (index == 1) {
-            return new IsoscelesTrapezoid(color,num1);
+            return new IsoscelesTrapezoid(color, num1, num2, num3);
         } else if (index == 2) {
             return new Square(color,num1);
         } else if (index == 3) {
