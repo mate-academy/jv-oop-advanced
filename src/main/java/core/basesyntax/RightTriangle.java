@@ -36,8 +36,4 @@ public class RightTriangle extends Figure {
     public double getThirdLeg() {
         return thirdLeg;
     }
-
-    public String getColor() {
-        return color;
-    }
 }

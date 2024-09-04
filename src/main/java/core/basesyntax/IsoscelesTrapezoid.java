@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private String color;
     private double firstLeg;
     private double secondLeg;
     private double thirdLeg;
@@ -27,10 +26,6 @@ public class IsoscelesTrapezoid extends Figure {
         System.out.println("Figure" + ": " + getClass().getSimpleName() + ", area: " + getArea()
                 + " sq. units, firstLeg: " + getFirstLeg() + " units, secondLeg: " + getSecondLeg()
                 + " units, thirdLeg: " + getThirdLeg() + "units, color: " + getColor());
-    }
-
-    public String getColor() {
-        return color;
     }
 
     public double getFirstLeg() {

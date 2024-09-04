@@ -25,10 +25,6 @@ public class Rectangle extends Figure {
         return secondLeg;
     }
 
-    public String getColor() {
-        return color;
-    }
-
     @Override
     public void draw() {
         System.out.println("Figure" + ": " + getClass().getSimpleName() + ", area: " + getArea()

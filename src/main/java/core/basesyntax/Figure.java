@@ -7,6 +7,10 @@ public class Figure implements AreaCalculator, Drawable {
         this.color = color;
     }
 
+    public String getColor(){
+        return color;
+    }
+
     @Override
     public double getArea() {
         return 0;
@@ -15,9 +19,5 @@ public class Figure implements AreaCalculator, Drawable {
     @Override
     public void draw() {
         System.out.println("Figure" + ": " + getClass().getSimpleName());
-    }
-
-    public String getColor() {
-        return color;
     }
 }
