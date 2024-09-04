@@ -8,15 +8,16 @@ public class Main {
         final FigureSupplier figureSupplier = new FigureSupplier();
 
         for (int i = 0; i < FIGURE_QUANTITY; i++) {
-            if (i < MIDDLE_INDEX) {
-                figures[i] = figureSupplier.getRandomFigure();
-            } else {
-                figures[i] = figureSupplier.getDefaultFigure();
-            }
-        }
+            final Figure figure;
 
-        for (Figure figure : figures) {
+            if (i < MIDDLE_INDEX) {
+                figure = figureSupplier.getRandomFigure();
+            } else {
+                figure = figureSupplier.getDefaultFigure();
+            }
+
             figure.draw();
+            figures[i] = figure;
         }
     }
 }
