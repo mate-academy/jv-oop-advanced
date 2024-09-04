@@ -5,13 +5,13 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int MAX_VALUE = 20;
     private static final int DEFAULT_RADIUS = 10;
-    private static final String DEFAULT_COLOR = "White";
+    private static final String DEFAULT_COLOR = "WHITE";
     private final Random random = new Random();
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private double value;
 
     public double getRandomValue() {
-        double value = random.nextDouble(MAX_VALUE);
-        return value;
+        return value = random.nextDouble(MAX_VALUE);
     }
 
     public Figure getRandomFigure(Figure[] figures) {
