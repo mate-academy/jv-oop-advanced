@@ -10,31 +10,33 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
         String color = colorSupplier.getRandomColor();
+        double MAX_VALUE = 100;
 
         switch (figureNumber) {
             case 0:
-                final double radius = random.nextDouble() * 100;
+                final double radius = random.nextDouble() * MAX_VALUE;
 
                 return new Circle(color, radius);
             case 1:
-                final double side = random.nextDouble() * 100;
+                final double side = random.nextDouble() * MAX_VALUE;
 
                 return new Square(color, side);
             case 2:
-                final double firstSide = random.nextDouble() * 100;
-                final double secondSide = random.nextDouble() * 100;
+                final double firstSide = random.nextDouble() * MAX_VALUE;
+                final double secondSide = random.nextDouble() * MAX_VALUE;
 
                 return new Rectangle(color, firstSide, secondSide);
             case 3:
-                final double firstLeg = random.nextDouble() * 100;
-                final double secondLeg = random.nextDouble() * 100;
+                final double firstLeg = random.nextDouble() * MAX_VALUE;
+                final double secondLeg = random.nextDouble() * MAX_VALUE;
 
                 return new RightTriangle(color, firstLeg, secondLeg);
             default:
-                final double base = random.nextDouble() * 100;
-                final double lateralSide = random.nextDouble() * 100;
+                final double firstBase = random.nextDouble() * MAX_VALUE;
+                final double secondBase = random.nextDouble() * MAX_VALUE;
+                final double height = random.nextDouble() * MAX_VALUE;
 
-                return new IsoscelesTrapezoid(color, base, lateralSide);
+                return new IsoscelesTrapezoid(color, firstBase, secondBase, height);
         }
     }
 
