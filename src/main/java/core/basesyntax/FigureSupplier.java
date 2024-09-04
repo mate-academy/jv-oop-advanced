@@ -5,17 +5,17 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int MAX_VALUE = 20;
     private static final int DEFAULT_RADIUS = 10;
-    private static final String DEFAULT_COLOR = "WHITE";
+    private static final int AMOUNT_OF_FIGURES = 4;
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    private double value;
 
     public double getRandomValue() {
-        return value = random.nextDouble(MAX_VALUE);
+        return random.nextDouble(MAX_VALUE);
     }
 
-    public Figure getRandomFigure(Figure[] figures) {
-        int index = random.nextInt(figures.length);
+    public Figure getRandomFigure() {
+        int index = random.nextInt(AMOUNT_OF_FIGURES);
         String color = colorSupplier.getRandomColor();
 
         switch (index) {
@@ -42,7 +42,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        Figure circle = new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
-        return circle;
+        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
     }
 }

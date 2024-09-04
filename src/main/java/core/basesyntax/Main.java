@@ -4,16 +4,16 @@ import java.util.Random;
 
 public class Main {
     static final Random random = new Random();
+    static final int ARRAY_SIZE = 6;
 
     public static void main(String[] args) {
-        Figure[] figures = new Figure[4];
-        FigureSupplier figure = new FigureSupplier();
-        Figure[] allFigures = new Figure[6];
+        FigureSupplier figureSuplier = new FigureSupplier();
+        Figure[] allFigures = new Figure[ARRAY_SIZE];
         for (int i = 0; i < allFigures.length; i++) {
             if (i < allFigures.length / 2) {
-                allFigures[i] = figure.getRandomFigure(figures);
+                allFigures[i] = figureSuplier.getRandomFigure();
             } else {
-                allFigures[i] = figure.getDefaultFigure();
+                allFigures[i] = figureSuplier.getDefaultFigure();
             }
             allFigures[i].draw();
         }
