@@ -1,10 +1,21 @@
 package core.basesyntax;
 
-public class ColorSupplier {
-    public String getRandomColor() {
+import java.util.Random;
 
-        String[] colors = {"red","blue","white","black","green","purple"};
-        int index = (int) (Math.random() * colors.length);
-        return colors[index];
+public class ColorSupplier {
+    private final int maxValue = Color.values().length;
+    private final Random random;
+
+    public ColorSupplier(Random random) {
+        this.random = random;
+    }
+
+    public ColorSupplier() {
+        random = new Random();
+    }
+
+    public String getRandomColor() {
+        int index = random.nextInt(maxValue);
+        return String.valueOf(Color.values()[index]);
     }
 }
