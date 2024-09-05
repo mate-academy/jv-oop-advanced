@@ -10,10 +10,6 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    private double getRandomValue() {
-        return random.nextDouble(MAX_VALUE);
-    }
-
     public Figure getRandomFigure() {
         int index = random.nextInt(AMOUNT_OF_FIGURES);
         String color = colorSupplier.getRandomColor();
@@ -35,5 +31,9 @@ public class FigureSupplier {
 
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
+    }
+
+    private double getRandomValue() {
+        return random.nextDouble(MAX_VALUE);
     }
 }
