@@ -4,14 +4,16 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final String DEFAULT_COLOR = Color.WHITE.name();
-
+    private static final int FIGURES_AMOUNT = 5;
+    private static final int UNITS_BORDER = 20;
+    private static final int DEFAULT_RADIUS = 10;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private Figure figure;
 
     public Figure getRandomFigure() {
-        int randomFigure = random.nextInt(5);
-        int randomUnits = random.nextInt(20) + 1;
+        int randomFigure = random.nextInt(FIGURES_AMOUNT);
+        int randomUnits = random.nextInt(UNITS_BORDER) + 1;
         switch (randomFigure) {
             case 0:
                 figure = new Square(randomUnits);
@@ -29,15 +31,16 @@ public class FigureSupplier {
                 figure = new IsoscelesTrapezoid(randomUnits, randomUnits, randomUnits);
                 break;
             default:
-                return null;
+                break;
         }
 
-        figure.color = colorSupplier.getRandomColor();
+        figure.isColor(colorSupplier.getRandomColor());
+
         return figure;
     }
 
     public Figure getDefaultFigure() {
-        figure = new Circle(10);
+        figure = new Circle(DEFAULT_RADIUS);
         figure.color = DEFAULT_COLOR;
         return figure;
     }
