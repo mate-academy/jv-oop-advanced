@@ -12,14 +12,14 @@ public class IsoscelesTrapezoid extends Figure {
         setColor(color);
     }
 
-    private double calculateAndSetArea() {
+    public double calculateAndSetArea() {
         return (firstLeg * secondLeg) / 2 * height;
     }
 
     @Override
-    public String draw() {
-        return "Figure: IsoscelesTrapezoid, area: " + calculateAndSetArea()
+    public void draw() {
+        System.out.println("Figure: IsoscelesTrapezoid, area: " + calculateAndSetArea()
                 + " sq. units, firstLeg: " + firstLeg + " units, secondLeg: "
-                + secondLeg + " units, height: " + height + ", color: " + getColor();
+                + secondLeg + " units, height: " + height + ", color: " + getColor());
     }
 }

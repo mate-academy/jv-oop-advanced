@@ -10,14 +10,14 @@ public class RightTriangle extends Figure {
         setColor(color);
     }
 
-    private double calculateAndSetArea() {
+    public double calculateAndSetArea() {
         return firstLeg * secondLeg / 2;
     }
 
     @Override
-    public String draw() {
-        return "Figure: RightTriangle, area: " + calculateAndSetArea()
+    public void draw() {
+        System.out.println("Figure: RightTriangle, area: " + calculateAndSetArea()
                 + " sq. units, firstLeg: " + firstLeg + " units, secondLeg: "
-                + secondLeg + " units, color: " + getColor();
+                + secondLeg + " units, color: " + getColor());
     }
 }

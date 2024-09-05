@@ -10,14 +10,14 @@ public class Rectangle extends Figure {
         setColor(color);
     }
 
-    private double calculateAndSetArea() {
+    public double calculateAndSetArea() {
         return firstSide * secondSide;
     }
 
     @Override
-    public String draw() {
-        return "Figure: Rectangle, area: " + calculateAndSetArea()
+    public void draw() {
+        System.out.println("Figure: Rectangle, area: " + calculateAndSetArea()
                 + " sq. units, firstSide: " + firstSide + " units, secondSide: "
-                + secondSide + " units, color: " + getColor();
+                + secondSide + " units, color: " + getColor());
     }
 }

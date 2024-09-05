@@ -8,13 +8,13 @@ public class Square extends Figure {
         setColor(color);
     }
 
-    private double calculateAndSetArea() {
+    public double calculateAndSetArea() {
         return side * side;
     }
 
     @Override
-    public String draw() {
-        return "Figure: Square, area: " + calculateAndSetArea()
-                + " sq. units, side: " + side + " units, color: " + getColor();
+    public void draw() {
+        System.out.println("Figure: Square, area: " + calculateAndSetArea()
+                + " sq. units, side: " + side + " units, color: " + getColor());
     }
 }

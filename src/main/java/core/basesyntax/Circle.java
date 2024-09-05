@@ -9,14 +9,14 @@ public class Circle extends Figure {
         setColor(color);
     }
 
-    private double calculateAndSetArea() {
+    public double calculateAndSetArea() {
         return PI * radius * radius;
     }
 
     @Override
-    public String draw() {
-        return "Figure: Circle, area: " + calculateAndSetArea()
+    public void draw() {
+        System.out.println("Figure: Circle, area: " + calculateAndSetArea()
                 + " sq. units, radius: " + radius
-                + " units, color: " + getColor();
+                + " units, color: " + getColor());
     }
 }
