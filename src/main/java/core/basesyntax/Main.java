@@ -1,9 +1,6 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Main {
-    static final Random random = new Random();
     static final int ARRAY_SIZE = 6;
 
     public static void main(String[] args) {
@@ -17,6 +14,5 @@ public class Main {
             }
             allFigures[i].draw();
         }
-
     }
 }
