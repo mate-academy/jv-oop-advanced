@@ -9,39 +9,37 @@ public class FigureSupplier {
     private static final int DEFAULT_RADIUS = 10;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    private Figure figure;
 
     public Figure getRandomFigure() {
         int randomFigure = random.nextInt(FIGURES_AMOUNT);
-        int randomUnits = random.nextInt(UNITS_BORDER) + 1;
         switch (randomFigure) {
             case 0:
-                figure = new Square(randomUnits);
-                break;
+                int side = random.nextInt(UNITS_BORDER) + 1;
+                return new Square(colorSupplier.getRandomColor(), side);
             case 1:
-                figure = new Rectangle(randomUnits, randomUnits);
-                break;
+                double leftSide = random.nextInt(UNITS_BORDER) + 1;
+                double downSide = random.nextInt(UNITS_BORDER) + 1;
+                return new Rectangle(colorSupplier.getRandomColor(), leftSide, downSide);
             case 2:
-                figure = new RightTriangle(randomUnits,randomUnits);
-                break;
+                double firstLeg = random.nextInt(UNITS_BORDER) + 1;
+                double secondLeg = random.nextInt(UNITS_BORDER) + 1;
+                return new RightTriangle(colorSupplier.getRandomColor(), firstLeg, secondLeg);
             case 3:
-                figure = new Circle(randomUnits);
-                break;
+                double radius = random.nextInt(UNITS_BORDER) + 1;
+                return new Circle(colorSupplier.getRandomColor(), radius);
             case 4:
-                figure = new IsoscelesTrapezoid(randomUnits, randomUnits, randomUnits);
-                break;
+                /* upper base cant be the same as bottom base */
+                double upperBase = random.nextInt(UNITS_BORDER - 1) + 1;
+                double bottomBase = random.nextInt(UNITS_BORDER) + 1;
+                double lateralSide = random.nextInt(UNITS_BORDER) + 1;
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                                              upperBase, bottomBase, lateralSide);
             default:
-                break;
+                return null;
         }
-
-        figure.isColor(colorSupplier.getRandomColor());
-
-        return figure;
     }
 
     public Figure getDefaultFigure() {
-        figure = new Circle(DEFAULT_RADIUS);
-        figure.color = DEFAULT_COLOR;
-        return figure;
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
