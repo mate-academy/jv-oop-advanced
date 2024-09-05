@@ -2,22 +2,19 @@ package core.basesyntax;
 
 public class Main {
     private static final int FIGURE_QUANTITY = 6;
-    private static final int MIDDLE_INDEX = FIGURE_QUANTITY / 2;
-    private static final Figure[] figures = new Figure[FIGURE_QUANTITY];
-    private static final FigureSupplier figureSupplier = new FigureSupplier();
 
     public static void main(String[] args) {
-        for (int i = 0; i < FIGURE_QUANTITY; i++) {
-            final Figure figure;
+        FigureSupplier figureSupplier = new FigureSupplier();
+        Figure[] figures = new Figure[FIGURE_QUANTITY];
 
-            if (i < MIDDLE_INDEX) {
-                figure = figureSupplier.getRandomFigure();
+        for (int i = 0; i < figures.length; i++) {
+            if (i < FIGURE_QUANTITY / 2) {
+                figures[i] = figureSupplier.getRandomFigure();
             } else {
-                figure = figureSupplier.getDefaultFigure();
+                figures[i] = figureSupplier.getDefaultFigure();
             }
 
-            figure.draw();
-            figures[i] = figure;
+            figures[i].draw();
         }
     }
 }
