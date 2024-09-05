@@ -10,7 +10,7 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public double getRandomValue() {
+    private double getRandomValue() {
         return random.nextDouble(MAX_VALUE);
     }
 
