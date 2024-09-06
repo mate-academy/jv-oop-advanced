@@ -10,7 +10,7 @@ public class FigureSupplier {
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
-    public int getRandom(){
+    public int getRandom() {
         return random.nextInt(9) + 1;
     }
     
