@@ -23,8 +23,7 @@ public class FigureSupplier {
             case 1 -> new IsoscelesTrapezoid(color, getRandom(), getRandom(), getRandom());
             case 2 -> new Square(color, getRandom());
             case 3 -> new Circle(color, getRandom());
-            case 4 -> new Rectangle(color, getRandom(), getRandom());
-            default -> null;
+            default -> new Rectangle(color, getRandom(), getRandom());
         };
     }
 
