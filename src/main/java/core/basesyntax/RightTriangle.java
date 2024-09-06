@@ -19,14 +19,14 @@ public class RightTriangle extends FigureColor {
     }
 
     @Override
-    public void draw() {
-        System.out.println("Figure: right triangle, area: " + getArea()
+    public void drawable() {
+        System.out.println("Figure: right triangle, area: " + areaCalculator()
                 + " sq. units, firstLeg: "
                 + firstLeg + " units, secondLeg: " + secondLeg + " units, color: " + getColor());
     }
 
     @Override
-    public double getArea() {
+    public double areaCalculator() {
         return 0.5 * firstLeg * secondLeg;
     }
 }

@@ -19,14 +19,14 @@ public class Rectangle extends FigureColor {
     }
 
     @Override
-    public double getArea() {
-        return width * height;
+    public void drawable() {
+        System.out.println("Figure: rectangle, area: " + areaCalculator()
+                + " sq. units, width: " + width + " units, height: "
+                + height + " units, color: " + getColor());
     }
 
     @Override
-    public void draw() {
-        System.out.println("Figure: rectangle, area: " + getArea()
-                + " sq. units, width: " + width + " units, height: "
-                + height + " units, color: " + getColor());
+    public double areaCalculator() {
+        return width * height;
     }
 }

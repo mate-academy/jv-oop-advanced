@@ -2,21 +2,24 @@ package core.basesyntax;
 
 public class Main {
     public static void main(String[] args) {
-
-        Square square1 = new Square(5.0, Color.RED);
-        square1.draw();
-        IsoscelesTrapezoid isoscelesTrapezoid1 = new IsoscelesTrapezoid(10, 10, 20, Color.GREEN);
-        isoscelesTrapezoid1.draw();
-
+        int arrraysize = 3;
         FigureSupplier figureSupplier = new FigureSupplier();
 
-        Figure[] figures = new Figure[3];
+        FigureColor[] figures = new FigureColor[arrraysize];
         figures[0] = figureSupplier.getRandomRectangle();
         figures[1] = figureSupplier.getRandomCircle();
         figures[2] = figureSupplier.getRandomRightTriangle();
 
-        for (Figure figure : figures) {
-            figure.draw();
+        for (FigureColor figure : figures) {
+            figure.drawable();
         }
+
+        Square squareFirst = new Square(5.0, Color.RED);
+        squareFirst.drawable();
+        IsoscelesTrapezoid isoscelesTrapezoidFirst
+                = new IsoscelesTrapezoid(10, 10, 20, Color.GREEN);
+        isoscelesTrapezoidFirst.drawable();
+        Circle circleFirst = new Circle(30, Color.BLUE);
+        circleFirst.drawable();
     }
 }

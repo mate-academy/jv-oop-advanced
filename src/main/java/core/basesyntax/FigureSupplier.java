@@ -4,43 +4,43 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_SIDE = 100;
-    private final Random RANDOM = new Random();
+    private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figure getDefaultFigure() {
+    public final Circle getDefaultFigure() {
         return new Circle(10, Color.WHITE);
     }
 
     public Square getRandomSquare() {
-        double side = RANDOM.nextDouble(MAX_SIDE_LENGTH);
+        double side = random.nextDouble(MAX_SIDE);
         Color color = Color.valueOf(colorSupplier.getRandomColor());
         return new Square(side, color);
     }
 
     public Rectangle getRandomRectangle() {
-        double length = RANDOM.nextDouble(MAX_SIDE_LENGTH);
-        double width = RANDOM.nextDouble(MAX_SIDE_LENGTH);
+        double length = random.nextDouble(MAX_SIDE);
+        double width = random.nextDouble(MAX_SIDE);
         Color color = Color.valueOf(colorSupplier.getRandomColor());
         return new Rectangle(length, width, color);
     }
 
     public Circle getRandomCircle() {
-        double radius = RANDOM.nextDouble(MAX_RADIUS);
+        double radius = random.nextDouble(MAX_SIDE);
         Color color = Color.valueOf(colorSupplier.getRandomColor());
         return new Circle(radius, color);
     }
 
     public RightTriangle getRandomRightTriangle() {
-        double firstLeg = RANDOM.nextDouble(MAX_TRIANGLE_LEG);
-        double secondLeg = RANDOM.nextDouble(MAX_TRIANGLE_LEG);
+        double firstLeg = random.nextDouble(MAX_SIDE);
+        double secondLeg = random.nextDouble(MAX_SIDE);
         Color color = Color.valueOf(colorSupplier.getRandomColor());
         return new RightTriangle(firstLeg, secondLeg, color);
     }
 
     public IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
-        double base1 = RANDOM.nextDouble(MAX_TRAPEZOID_BASE);
-        double base2 = RANDOM.nextDouble(MAX_TRAPEZOID_BASE);
-        double height = RANDOM.nextDouble(MAX_TRAPEZOID_HEIGHT);
+        double base1 = random.nextDouble(MAX_SIDE);
+        double base2 = random.nextDouble(MAX_SIDE);
+        double height = random.nextDouble(MAX_SIDE);
         Color color = Color.valueOf(colorSupplier.getRandomColor());
         return new IsoscelesTrapezoid(base1, base2, height, color);
     }

@@ -13,13 +13,13 @@ public class Circle extends FigureColor {
     }
 
     @Override
-    public void draw() {
-        System.out.println("Figure: circle, area: " + getArea()
+    public void drawable() {
+        System.out.println("Figure: circle, area: " + areaCalculator()
                 + " sq. units, radius: " + radius + " units, color: " + getColor());
     }
 
     @Override
-    public double getArea() {
+    public double areaCalculator() {
         return Math.PI * radius * radius;
     }
 }
