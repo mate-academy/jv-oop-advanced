@@ -20,7 +20,7 @@ public class IsoscelesTrapezoid extends Figure {
         return 0.5 * (firstBase + secondBase) * height;
     }
 
-    public void printProperties() {
+    public void draw() {
         System.out.println("Figure: isosceles trapezoid," + " area: " + calculateArea()
                             + " sq. units," + " firsBase: " + firstBase + " units,"
                             + " secondBase: " + secondBase + " units," + " lateralSide: "

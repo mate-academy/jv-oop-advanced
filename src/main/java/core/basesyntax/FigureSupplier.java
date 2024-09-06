@@ -3,36 +3,32 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final int maxFigure = 5;
-    private Random random;
-    private ColorSupplier colorSupplier;
-    
-    public FigureSupplier() {
-        colorSupplier = new ColorSupplier();
-        random = new Random();
-    }
+    final int MAX_FIGURE = 5;
+    final int DEFAULT_NUMBER = 10;
+    final String DEFAULT_COLOR = "WHITE";
 
+    private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
+
+    public int getRandom(){
+        return random.nextInt(9) + 1;
+    }
+    
     public Figure getRandomFigure() {
-        int index = random.nextInt(maxFigure);
-        int num1 = random.nextInt(9) + 1;
-        int num2 = random.nextInt(9) + 1;
-        int num3 = random.nextInt(9) + 1;
+        int index = random.nextInt(MAX_FIGURE);
         String color = colorSupplier.getRandomColor();
 
-        if (index == 0) {
-            return new RightTriangle(color,num1, num2);
-        } else if (index == 1) {
-            return new IsoscelesTrapezoid(color, num1, num2, num3);
-        } else if (index == 2) {
-            return new Square(color,num1);
-        } else if (index == 3) {
-            return new Circle(color,num1);
-        } else {
-            return new Rectangle(color,num1,num2);
-        }
+        return switch (index) {
+            case 0 -> new RightTriangle(color, getRandom(), getRandom());
+            case 1 -> new IsoscelesTrapezoid(color, getRandom(), getRandom(), getRandom());
+            case 2 -> new Square(color, getRandom());
+            case 3 -> new Circle(color, getRandom());
+            case 4 -> new Rectangle(color, getRandom(), getRandom());
+            default -> null;
+        };
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("WHITE", 10);
+        return new Circle(DEFAULT_COLOR, DEFAULT_NUMBER);
     }
 }
