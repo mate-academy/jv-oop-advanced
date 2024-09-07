@@ -3,9 +3,9 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    final int MAX_FIGURE = 5;
-    final int DEFAULT_NUMBER = 10;
-    final String DEFAULT_COLOR = "WHITE";
+    private final int MAX_FIGURE = 5;
+    private final int DEFAULT_NUMBER = 10;
+    private final String DEFAULT_COLOR = "WHITE";
 
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
