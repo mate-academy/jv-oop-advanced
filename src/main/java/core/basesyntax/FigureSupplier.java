@@ -63,24 +63,4 @@ public class FigureSupplier {
         return new IsoscelesTrapezoid(base1, base2, height, color);
     }
 
-    public Square getSquare() {
-        return getRandomSquare();
-    }
-
-    public Rectangle getRectangle() {
-        return getRandomRectangle();
-    }
-
-    public Circle getCircle() {
-        return getRandomCircle();
-    }
-
-    public RightTriangle getRightTriangle() {
-        return getRandomRightTriangle();
-    }
-
-    public IsoscelesTrapezoid getIsoscelesTrapezoid() {
-        return getRandomIsoscelesTrapezoid();
-
-    }
 }
