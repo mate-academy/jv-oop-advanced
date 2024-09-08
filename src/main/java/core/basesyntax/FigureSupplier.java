@@ -11,7 +11,7 @@ public class FigureSupplier {
         int figureType = random.nextInt(5);
         switch (figureType) {
             case 0:
-                return getRandomSquare();
+                return getRandomSquare(randomColor);
             case 1:
                 return getRandomRectangle();
             case 2:
