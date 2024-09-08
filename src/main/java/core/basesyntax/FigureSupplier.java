@@ -9,6 +9,7 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int figureType = random.nextInt(5);
+        String randomColor = colorSupplier.getRandomColor();
         switch (figureType) {
             case 0:
                 return getRandomSquare(randomColor);
