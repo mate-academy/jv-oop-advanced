@@ -7,41 +7,62 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public final Circle getDefaultFigure() {
+    public final Figure getDefaultFigure() {
         return new Circle(10, Color.WHITE);
     }
 
-    public Square getRandomSquare() {
+    private Square getRandomSquare() {
         double side = random.nextDouble(MAX_SIDE);
         Color color = Color.valueOf(colorSupplier.getRandomColor());
         return new Square(side, color);
     }
 
-    public Rectangle getRandomRectangle() {
+    private Rectangle getRandomRectangle() {
         double length = random.nextDouble(MAX_SIDE);
         double width = random.nextDouble(MAX_SIDE);
         Color color = Color.valueOf(colorSupplier.getRandomColor());
         return new Rectangle(length, width, color);
     }
 
-    public Circle getRandomCircle() {
+    private Circle getRandomCircle() {
         double radius = random.nextDouble(MAX_SIDE);
         Color color = Color.valueOf(colorSupplier.getRandomColor());
         return new Circle(radius, color);
     }
 
-    public RightTriangle getRandomRightTriangle() {
+    private RightTriangle getRandomRightTriangle() {
         double firstLeg = random.nextDouble(MAX_SIDE);
         double secondLeg = random.nextDouble(MAX_SIDE);
         Color color = Color.valueOf(colorSupplier.getRandomColor());
         return new RightTriangle(firstLeg, secondLeg, color);
     }
 
-    public IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
         double base1 = random.nextDouble(MAX_SIDE);
         double base2 = random.nextDouble(MAX_SIDE);
         double height = random.nextDouble(MAX_SIDE);
         Color color = Color.valueOf(colorSupplier.getRandomColor());
         return new IsoscelesTrapezoid(base1, base2, height, color);
+    }
+
+    public Square getSquare() {
+        return getRandomSquare();
+    }
+
+    public Rectangle getRectangle() {
+        return getRandomRectangle();
+    }
+
+    public Circle getCircle() {
+        return getRandomCircle();
+    }
+
+    public RightTriangle getRightTriangle() {
+        return getRandomRightTriangle();
+    }
+
+    public IsoscelesTrapezoid getIsoscelesTrapezoid() {
+        return getRandomIsoscelesTrapezoid();
+
     }
 }

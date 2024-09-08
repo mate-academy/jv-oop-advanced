@@ -5,12 +5,12 @@ public class Main {
         int arrraysize = 3;
         FigureSupplier figureSupplier = new FigureSupplier();
 
-        FigureColor[] figures = new FigureColor[arrraysize];
-        figures[0] = figureSupplier.getRandomRectangle();
-        figures[1] = figureSupplier.getRandomCircle();
-        figures[2] = figureSupplier.getRandomRightTriangle();
+        Figure[] figures = new Figure[arrraysize];
+        figures[0] = figureSupplier.getRectangle();
+        figures[1] = figureSupplier.getCircle();
+        figures[2] = figureSupplier.getRightTriangle();
 
-        for (FigureColor figure : figures) {
+        for (Figure figure : figures) {
             figure.drawable();
         }
 
