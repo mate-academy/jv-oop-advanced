@@ -8,11 +8,6 @@ public class Square extends Figure {
         this.side = side;
     }
 
-    public Square(double side, Color color) {
-        super(color.name());
-        this.side = side;
-    }
-
     public void setSide(double side) {
         this.side = side;
     }

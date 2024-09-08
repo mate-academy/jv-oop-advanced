@@ -10,12 +10,6 @@ public class RightTriangle extends Figure {
         this.secondLeg = secondLeg;
     }
 
-    public RightTriangle(double firstLeg, double secondLeg, Color color) {
-        super(color.name());
-        this.firstLeg = firstLeg;
-        this.secondLeg = secondLeg;
-    }
-
     public double getFirstLeg(double firstLeg) {
         return firstLeg;
     }

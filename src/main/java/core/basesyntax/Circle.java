@@ -8,11 +8,6 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
-    public Circle(double radius, Color color) {
-        super(color.name());
-        this.radius = radius;
-    }
-
     public double getRadius() {
         return radius;
     }
