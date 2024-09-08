@@ -32,7 +32,6 @@ public class FigureSupplier {
 
     private Square getRandomSquare(String color) {
         double side = random.nextDouble(MAX_SIDE);
-        Color color = Color.valueOf(colorSupplier.getRandomColor());
         return new Square(side, color);
     }
 
