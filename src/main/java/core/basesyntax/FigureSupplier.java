@@ -7,8 +7,26 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public final Figure getDefaultFigure() {
-        return new Circle(10, Color.WHITE);
+    public Figure getRandomFigure() {
+        int figureType = random.nextInt(5);
+        switch (figureType) {
+            case 0:
+                return getRandomSquare();
+            case 1:
+                return getRandomRectangle();
+            case 2:
+                return getRandomCircle();
+            case 3:
+                return getRandomRightTriangle();
+            case 4:
+                return getRandomIsoscelesTrapezoid();
+            default:
+                throw new IllegalStateException("Unexpected value: " + figureType);
+        }
+    }
+
+    public static final Figure getDefaultFigure() {
+        return new Circle(10, "white");
     }
 
     private Square getRandomSquare() {
