@@ -1,6 +1,8 @@
 package core.basesyntax;
 
-public interface DoFigure {
+public interface DrawableFigure {
+
     double getArea();
+
     void draw();
 }
