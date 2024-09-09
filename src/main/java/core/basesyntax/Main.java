@@ -1,19 +1,22 @@
 package core.basesyntax;
 
 public class Main {
+    private static final int FIGURES_ARRAY_SIZE = 6;
+
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
 
-        Drawable[] figures = new Drawable[5];
+        Figure[] figures = new Figure[FIGURES_ARRAY_SIZE];
         for (int i = 0; i < figures.length; i++) {
-            figures[i] = figureSupplier.getRandomFigure();
+            if (i < figures.length / 2) {
+                figures[i] = figureSupplier.getRandomFigure();
+            } else {
+                figures[i] = figureSupplier.getDefaultFigure();
+            }
         }
 
-        for (Drawable figure : figures) {
+        for (Figure figure : figures) {
             figure.draw();
         }
-
-        Drawable defaultFigure = figureSupplier.getDefaultFigure();
-        defaultFigure.draw();
     }
 }

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends AbstractFigure {
+public class RightTriangle extends Figure {
     private final double firstLeg;
     private final double secondLeg;
 
@@ -20,5 +20,4 @@ public class RightTriangle extends AbstractFigure {
         System.out.println("Figure: right triangle, area: " + getArea() + " sq. units, firstLeg: "
                 + firstLeg + " units, secondLeg: " + secondLeg + " units, color: " + color);
     }
-
 }
