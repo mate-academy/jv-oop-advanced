@@ -2,7 +2,6 @@ package core.basesyntax;
 
 public class Circle extends Figure {
     private final int radius;
-    private final int index = 2;
 
     public Circle(String color, int radius) {
         super(color);
@@ -11,7 +10,8 @@ public class Circle extends Figure {
 
     @Override
     public double calculateArea() {
-        return Math.PI * Math.pow(radius, index);
+        final int power = 2;
+        return Math.PI * Math.pow(radius, power);
     }
 
     @Override
