@@ -1,6 +1,6 @@
 package base;
 
-public class Figure implements AreaCalculable, Drawable {
+public abstract class Figure implements AreaCalculator, Drawable {
     protected String color;
 
     public Figure(String color) {
@@ -8,12 +8,8 @@ public class Figure implements AreaCalculable, Drawable {
     }
 
     @Override
-    public double getArea() {
-        return 0;
-    }
+    public abstract double getArea();
 
     @Override
-    public void draw() {
-        System.out.println("Figure color: " + color);
-    }
+    public abstract void draw();
 }
