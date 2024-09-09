@@ -1,6 +1,5 @@
 package core.basesyntax;
 
-
 public class HelloWorld {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
@@ -13,7 +12,7 @@ public class HelloWorld {
         for (int i = 3; i < 6; i++) {
             figures[i] = figureSupplier.getDefaultFigure();
         }
-        for (Figure figure : figures){
+        for (Figure figure : figures) {
             figure.draw();
         }
     }

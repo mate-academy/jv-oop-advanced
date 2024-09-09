@@ -5,6 +5,7 @@ import java.util.Random;
 public class FigureSupplier {
     private static final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
+
     public Figure getRandomFigure() {
         int figureType = random.nextInt(5);
         String color = colorSupplier.getRandomColor();

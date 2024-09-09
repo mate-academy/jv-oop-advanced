@@ -8,6 +8,6 @@ public abstract class Figure implements DrawableFigure {
     }
 
     public String getColor() {
-        return  color;
+        return color;
     }
 }
