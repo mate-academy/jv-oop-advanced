@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements DrawableFigure {
+public abstract class Figure implements DrawableFigure, Measurable {
     private String color;
 
     public Figure(String color) {
