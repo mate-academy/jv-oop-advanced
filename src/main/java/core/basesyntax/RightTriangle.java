@@ -6,7 +6,7 @@ public class RightTriangle extends Figure {
     private final int hypotenuse;
     private final int index = 2;
 
-    public RightTriangle(String color, int firstLeg, int secondLeg) {
+    public RightTriangle(Color color, int firstLeg, int secondLeg) {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;

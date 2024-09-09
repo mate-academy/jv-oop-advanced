@@ -3,20 +3,20 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final int maxFigure = 5;
-    private final int defaultNumber = 10;
-    private final String defaultColor = "WHITE";
+    private static final int MAX_FIGURE = 5;
+    private static final int DEFAULT_NUMBER = 10;
+    private static final Color DEFAULT_COLOR = Color.WHITE;
 
-    private Random random = new Random();
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public int getRandom() {
         return random.nextInt(9) + 1;
     }
     
     public Figure getRandomFigure() {
-        int index = random.nextInt(maxFigure);
-        String color = colorSupplier.getRandomColor();
+        int index = random.nextInt(MAX_FIGURE);
+        Color color = colorSupplier.getRandomColor();
 
         return switch (index) {
             case 0 -> new RightTriangle(color, getRandom(), getRandom());
@@ -28,6 +28,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(defaultColor, defaultNumber);
+        return new Circle(DEFAULT_COLOR, DEFAULT_NUMBER);
     }
 }
