@@ -20,7 +20,8 @@ public class FigureSupplier {
             case 3:
                 return new Circle(color, getRandomSize());
             default:
-                return new IsoscelesTrapezoid(color, getRandomSize(), getRandomSize(), getRandomSize());
+                return new IsoscelesTrapezoid(color, getRandomSize(),
+                        getRandomSize(), getRandomSize());
         }
 
     }
