@@ -12,5 +12,6 @@ public enum Color {
     BROWN,
     TURQUOISE,
     LIME,
-    LAVENDER
+    LAVENDER,
+    WHITE
 }
