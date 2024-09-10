@@ -17,7 +17,6 @@ public class Circle extends BaseShape {
 
     @Override
     public double getArea() {
-        radius = Math.sqrt(radius / Math.PI);
-        return radius;
+        return Math.PI * radius * radius;
     }
 }

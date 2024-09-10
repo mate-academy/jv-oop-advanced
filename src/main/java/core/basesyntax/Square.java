@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public class Square extends BaseShape {
+    public static final double EXPONENT = 2.0;
     private double side;
 
     public Square(String color, double side) {
@@ -10,7 +11,7 @@ public class Square extends BaseShape {
 
     @Override
     public double getArea() {
-        return Math.pow(side, 2);
+        return Math.pow(side, EXPONENT);
     }
 
     @Override
