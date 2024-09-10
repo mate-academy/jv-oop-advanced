@@ -1,20 +1,19 @@
 package core.basesyntax;
 
 public class HelloWorld {
-    private static final int magicfigure = 6;
+    private static final int MAGIC_FIGURE = 6;
 
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        Figure[] figures = new Figure[magicfigure];
+        Figure[] figures = new Figure[MAGIC_FIGURE];
 
-        for (int i = 0; i < magicfigure; i++) {
-            if (i < 3) {
+        for (int i = 0; i < MAGIC_FIGURE; i++) {
+            if (i < MAGIC_FIGURE / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
-                figures[i].draw();
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
-                figures[i].draw();
             }
+            figures[i].draw();
         }
 
     }
