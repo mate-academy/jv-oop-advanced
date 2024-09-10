@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public interface Measurable {
+public interface AreaCalculator {
 
     double getArea();
 }
