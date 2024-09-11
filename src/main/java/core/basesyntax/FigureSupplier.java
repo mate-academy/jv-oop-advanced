@@ -13,18 +13,17 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int figureType = random.nextInt(FIGURE_TYPE_COUNT);
-        String randomColor = colorSupplier.getRandomColor();
         switch (figureType) {
             case 0:
-                return getRandomSquare(randomColor);
+                return getRandomSquare();
             case 1:
-                return getRandomRectangle(randomColor);
+                return getRandomRectangle();
             case 2:
-                return getRandomCircle(randomColor);
+                return getRandomCircle();
             case 3:
-                return getRandomRightTriangle(randomColor);
+                return getRandomRightTriangle();
             case 4:
-                return getRandomIsoscelesTrapezoid(randomColor);
+                return getRandomIsoscelesTrapezoid();
             default:
                 throw new IllegalStateException("Unexpected value: " + figureType);
         }
@@ -39,51 +38,51 @@ public class FigureSupplier {
     }
 
     public Square getSquare() {
-        return getRandomSquare(colorSupplier.getRandomColor());
+        return getRandomSquare();
     }
 
-    private Square getRandomSquare(String color) {
+    private Square getRandomSquare() {
         double side = getRandomSideLength();
-        return new Square(side, color);
+        return new Square(side, colorSupplier.getRandomColor());
     }
 
     public Rectangle getRectangle() {
-        return getRandomRectangle(colorSupplier.getRandomColor());
+        return getRandomRectangle();
     }
 
-    private Rectangle getRandomRectangle(String color) {
+    private Rectangle getRandomRectangle() {
         double width = getRandomSideLength();
         double height = getRandomSideLength();
-        return new Rectangle(width, height, color);
+        return new Rectangle(width, height, colorSupplier.getRandomColor());
     }
 
     public Circle getCircle() {
-        return getRandomCircle(colorSupplier.getRandomColor());
+        return getRandomCircle();
     }
 
-    private Circle getRandomCircle(String color) {
+    private Circle getRandomCircle() {
         double radius = getRandomSideLength();
-        return new Circle(radius, color);
+        return new Circle(radius, colorSupplier.getRandomColor());
     }
 
     public RightTriangle getRightTriangle() {
-        return getRandomRightTriangle(colorSupplier.getRandomColor());
+        return getRandomRightTriangle();
     }
 
-    private RightTriangle getRandomRightTriangle(String color) {
+    private RightTriangle getRandomRightTriangle() {
         double base = getRandomSideLength();
         double height = getRandomSideLength();
-        return new RightTriangle(base, height, color);
+        return new RightTriangle(base, height, colorSupplier.getRandomColor());
     }
 
     public IsoscelesTrapezoid getIsoscelesTrapezoid() {
-        return getRandomIsoscelesTrapezoid(colorSupplier.getRandomColor());
+        return getRandomIsoscelesTrapezoid();
     }
 
-    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid(String color) {
+    private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
         double topBase = getRandomSideLength();
         double bottomBase = getRandomSideLength();
         double height = getRandomSideLength();
-        return new IsoscelesTrapezoid(topBase, bottomBase, height, color);
+        return new IsoscelesTrapezoid(topBase, bottomBase, height, colorSupplier.getRandomColor());
     }
 }
