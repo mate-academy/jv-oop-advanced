@@ -3,14 +3,14 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int DEFAULT_LENGTH = 10;
+    private static final int DEFAULT_RADIUS = 10;
+    private static final Color DEFAULT_COLOR = Color.WHITE;
     private static final int NUMBER_OF_FIGURES = 5;
     private final Random random = new Random();
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        String randomColor = colorSupplier.getRandomColor().name();
-
+        String randomColor = colorSupplier.getRandomColor();
         int randomFigureIndex = random.nextInt(NUMBER_OF_FIGURES);
 
         return switch (randomFigureIndex) {
@@ -20,15 +20,15 @@ public class FigureSupplier {
             case 3 -> new Square(calculateLength(), randomColor);
             case 4 -> new IsoscelesTrapezoid(calculateLength(), calculateLength(),
                     calculateLength(), randomColor);
-            default -> null;
+            default -> getDefaultFigure();
         };
     }
 
-    private double calculateLength() {
-        return random.nextDouble() * DEFAULT_LENGTH;
+    public Figure getDefaultFigure() {
+        return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR.name());
     }
 
-    public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_LENGTH, Color.WHITE.name());
+    private double calculateLength() {
+        return random.nextDouble() * DEFAULT_RADIUS;
     }
 }

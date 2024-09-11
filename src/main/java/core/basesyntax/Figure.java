@@ -6,5 +6,4 @@ public abstract class Figure implements AreaCalculator, Drawable {
     public Figure(String color) {
         this.color = color;
     }
-
 }
