@@ -2,7 +2,7 @@ package core.basesyntax;
 
 public class Main {
     public static void main(String[] args) {
-        Figure[] figures = new Figure[4];
+        Figure[] figures = new Figure[Figure.amountOfFigures];
         FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < figures.length; i++) {
             if (i < figures.length / 2) {
@@ -10,7 +10,7 @@ public class Main {
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
-            figures[i].returnInfo();
+            figures[i].draw();
         }
     }
 }

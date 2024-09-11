@@ -7,27 +7,29 @@ public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Figure figure;
 
+    private int getSide() {
+        return random.nextInt(1,10);
+    }
+
     public Figure getRandomFigure() {
         int numOfFigure = random.nextInt(Figure.amountOfFigures);
+        String color = colorSupplier.getRandomColor();
         switch (numOfFigure) {
             case 0:
-                figure = new Circle(colorSupplier.getRandomColor(), random.nextInt(1,10));
+                figure = new Circle(color, getSide());
                 break;
             case 1:
-                figure = new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                        random.nextInt(1,10), random.nextInt(1,10),
-                        random.nextInt(1,10));
+                figure = new IsoscelesTrapezoid(color, getSide(),
+                        getSide(), getSide());
                 break;
             case 2:
-                figure = new Rectangle(colorSupplier.getRandomColor(), random.nextInt(1,10),
-                        random.nextInt(1,10));
+                figure = new Rectangle(color, getSide(), getSide());
                 break;
             case 3:
-                figure = new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(1,10),
-                        random.nextInt(1,10));
+                figure = new RightTriangle(color, getSide(), getSide());
                 break;
             case 4:
-                figure = new Square(colorSupplier.getRandomColor(), random.nextInt(1,10));
+                figure = new Square(color, getSide());
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + numOfFigure);
@@ -36,7 +38,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        figure = new Circle("White", 10);
+        figure = new Circle(colorSupplier.getConstantColor(), Figure.defaultRadius);
         return figure;
     }
 }

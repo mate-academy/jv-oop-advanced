@@ -9,8 +9,15 @@ public class Circle extends Figure {
     }
 
     @Override
-    public void returnInfo() {
-        System.out.println("Figure: circle, area: " + Math.round(Math.PI * radius * radius)
+    public double getArea() {
+        double pi = Math.PI;
+        double roundedPi = Math.round(pi * 100.0) / 100.0;
+        return roundedPi * radius * radius;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Figure: circle, area: " + getArea()
                 + " sq.units, radius: " + radius + " units, color: " + getColor());
     }
 }

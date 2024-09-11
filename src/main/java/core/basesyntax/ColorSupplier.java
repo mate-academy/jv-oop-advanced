@@ -8,4 +8,9 @@ public class ColorSupplier {
         Colors figureColor = Colors.values()[index];
         return figureColor.toString();
     }
+
+    public String getConstantColor() {
+        Colors figureColor = Colors.values()[5];
+        return figureColor.toString();
+    }
 }
