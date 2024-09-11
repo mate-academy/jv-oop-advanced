@@ -15,7 +15,6 @@ public class HelloWorld {
             }
             figures[i].draw();
         }
-
     }
 
 }
