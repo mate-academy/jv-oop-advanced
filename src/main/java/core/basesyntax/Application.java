@@ -1,18 +1,25 @@
 package core.basesyntax;
 
+import base.Figure;
 import service.FigureSupplier;
 
 public class Application {
-    private static final int LOOP_SIZE = 6;
+    private static final int SIZE_OF_ARRAY = 6;
 
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-
-        for (int i = 0; i < LOOP_SIZE / 2; i++) {
-            figureSupplier.getRandomFigure().draw();
+        Figure[] figures = new Figure[SIZE_OF_ARRAY];
+        // Fill array
+        for (int i = 0; i < figures.length; i++) {
+            if (i < figures.length / 2) {
+                figures[i] = figureSupplier.getRandomFigure();
+            } else {
+                figures[i] = figureSupplier.getDefaultFigure();
+            }
         }
-        for (int i = LOOP_SIZE / 2; i < LOOP_SIZE; i++) {
-            figureSupplier.getDefaultFigure().draw();
+        // Draw array
+        for (Figure figure : figures) {
+            figure.draw();
         }
     }
 }

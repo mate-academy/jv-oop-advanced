@@ -1,5 +1,6 @@
 package service;
 
+import base.Color;
 import base.Figure;
 import core.basesyntax.figure.Circle;
 import core.basesyntax.figure.IsoscelesTrapezoid;
@@ -11,27 +12,33 @@ import java.util.Random;
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
     private static final double DEFAULT_RADIUS = 10;
-    private static final String DEFAULT_COLOR = "white";
+    private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
 
     private static final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
+    private double getRandomSide() {
+        return random.nextDouble() * 10 + 1;
+    }
+
     public Figure getRandomFigure() {
         int figureType = random.nextInt(FIGURE_COUNT);
-        double randomNum = random.nextDouble() * 10 + 1;
         String color = colorSupplier.getRandomColor();
 
         switch (figureType) {
             case 0:
-                return new Circle(color,randomNum);
+                return new Circle(color, getRandomSide());
             case 1:
-                return new Square(color,randomNum);
+                return new Square(color, getRandomSide());
             case 2:
-                return new Rectangle(color,randomNum, randomNum);
+                return new Rectangle(color, getRandomSide(), getRandomSide());
             case 3:
-                return new RightTriangle(color, randomNum, randomNum);
+                return new RightTriangle(color, getRandomSide(), getRandomSide());
             case 4:
-                return new IsoscelesTrapezoid(color, randomNum, randomNum, randomNum);
+                return new IsoscelesTrapezoid(color,
+                        getRandomSide(),
+                        getRandomSide(),
+                        getRandomSide());
             default:
                 return getDefaultFigure();
         }
