@@ -33,22 +33,16 @@ public class FigureSupplier {
         return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
     }
 
-    public double getRandomSideLength() {
+    private double getRandomSideLength() {
         return random.nextDouble(MAX_SIDE);
     }
 
-    public Square getSquare() {
-        return getRandomSquare();
-    }
 
     private Square getRandomSquare() {
         double side = getRandomSideLength();
         return new Square(side, colorSupplier.getRandomColor());
     }
 
-    public Rectangle getRectangle() {
-        return getRandomRectangle();
-    }
 
     private Rectangle getRandomRectangle() {
         double width = getRandomSideLength();
@@ -56,18 +50,12 @@ public class FigureSupplier {
         return new Rectangle(width, height, colorSupplier.getRandomColor());
     }
 
-    public Circle getCircle() {
-        return getRandomCircle();
-    }
 
     private Circle getRandomCircle() {
         double radius = getRandomSideLength();
         return new Circle(radius, colorSupplier.getRandomColor());
     }
 
-    public RightTriangle getRightTriangle() {
-        return getRandomRightTriangle();
-    }
 
     private RightTriangle getRandomRightTriangle() {
         double base = getRandomSideLength();
@@ -75,9 +63,6 @@ public class FigureSupplier {
         return new RightTriangle(base, height, colorSupplier.getRandomColor());
     }
 
-    public IsoscelesTrapezoid getIsoscelesTrapezoid() {
-        return getRandomIsoscelesTrapezoid();
-    }
 
     private IsoscelesTrapezoid getRandomIsoscelesTrapezoid() {
         double topBase = getRandomSideLength();

@@ -1,8 +1,8 @@
 package core.basesyntax;
 
 public class Main {
+    public static final int arraySize = 6;
     public static void main(String[] args) {
-        final int arraySize = 6;
         FigureSupplier figureSupplier = new FigureSupplier();
 
         Figure[] figures = new Figure[arraySize];
@@ -12,7 +12,7 @@ public class Main {
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
-            figures[i].drawable();
+            figures[i].draw();
         }
     }
 }
