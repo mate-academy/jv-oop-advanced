@@ -4,7 +4,7 @@ public class Square extends Figure {
     public static final double EXPONENT = 2.0;
     private double side;
 
-    public Square(Color color, double side) {
+    public Square(String color, double side) {
         super(color);
         this.side = side;
     }

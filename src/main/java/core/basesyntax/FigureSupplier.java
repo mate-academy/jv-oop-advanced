@@ -11,7 +11,7 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int figureType = random.nextInt(NUMBER_OF_FIGURES);
-        Color color = colorSupplier.getRandomColor();
+        String color = colorSupplier.getRandomColor();
 
         switch (figureType) {
             case 0:
@@ -41,7 +41,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE, DEFAULT_RADIUS);
+        return new Circle(Color.WHITE.name(), DEFAULT_RADIUS);
     }
 
     private double getRandomValue() {
