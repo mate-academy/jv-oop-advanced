@@ -12,14 +12,11 @@ import java.util.Random;
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
     private static final double DEFAULT_RADIUS = 10;
+    private static final double RANDOM_SIDE = 10 + 1;
     private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
 
     private static final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
-
-    private double getRandomSide() {
-        return random.nextDouble() * 10 + 1;
-    }
 
     public Figure getRandomFigure() {
         int figureType = random.nextInt(FIGURE_COUNT);
@@ -46,5 +43,9 @@ public class FigureSupplier {
 
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
+    }
+
+    private double getRandomSide() {
+        return random.nextDouble() * RANDOM_SIDE;
     }
 }
