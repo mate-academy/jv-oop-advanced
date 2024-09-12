@@ -33,7 +33,7 @@ public class FigureSupplier {
         return new Circle(DEFAULT_RADIUS, DEFAULT_COLOR);
     }
 
-    private double getRandomSideLength() {
+    public double getRandomSideLength() {
         return random.nextDouble(MAX_SIDE);
     }
 
