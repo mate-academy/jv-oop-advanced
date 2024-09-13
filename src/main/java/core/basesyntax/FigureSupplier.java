@@ -13,10 +13,6 @@ public class FigureSupplier {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
-    private int getRandomSide() {
-        return random.nextInt(MIN_NUMBER, DEFAULT_RADIUS);
-    }
-
     public Figure getRandomFigure() {
         int index = random.nextInt(RandomFigure.values().length);
         RandomFigure randomFigure = RandomFigure.values()[index];
@@ -31,5 +27,9 @@ public class FigureSupplier {
             case ISOSCELES_TRAPEZOID -> new IsoscelesTrapezoid(randomColor, getRandomSide(),
                     getRandomSide(), getRandomSide());
         };
+    }
+
+    private int getRandomSide() {
+        return random.nextInt(MIN_NUMBER, DEFAULT_RADIUS);
     }
 }
