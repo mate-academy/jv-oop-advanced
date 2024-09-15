@@ -13,9 +13,6 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         FigureEnum figure = FigureEnum.values()[random.nextInt(SHAPE_RANDOM_BOUND)];
         String color = colorSupplier.getRandomColor();
-        int valueFirst = random.nextInt(VALUE_RANDOM_BOUND);
-        int valueSecond = random.nextInt(VALUE_RANDOM_BOUND);
-        int valueThird = random.nextInt(VALUE_RANDOM_BOUND);
         switch (figure) {
             case CIRCLE: {
                 return new Circle(color, generateRandomValue());
