@@ -18,24 +18,29 @@ public class FigureSupplier {
         int valueThird = random.nextInt(VALUE_RANDOM_BOUND);
         switch (figure) {
             case CIRCLE: {
-                return new Circle(color, valueFirst);
+                return new Circle(color, generateRandomValue());
             }
             case ISOSCELES_TRAPEZOID: {
-                return new IsoscelesTrapezoid(color, valueFirst, valueSecond, valueThird);
+                return new IsoscelesTrapezoid(color, generateRandomValue(), generateRandomValue(),
+                        generateRandomValue());
             }
             case RECTANGLE: {
-                return new Rectangle(color, valueFirst, valueSecond);
+                return new Rectangle(color, generateRandomValue(), generateRandomValue());
             }
             case RIGHT_TRIANGLE: {
-                return new RightTriangle(color, valueFirst, valueSecond);
+                return new RightTriangle(color, generateRandomValue(), generateRandomValue());
             }
             default: {
-                return new Square(color, valueFirst);
+                return new Square(color, generateRandomValue());
             }
         }
     }
 
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_VALUE);
+    }
+
+    private int generateRandomValue() {
+        return random.nextInt(VALUE_RANDOM_BOUND);
     }
 }

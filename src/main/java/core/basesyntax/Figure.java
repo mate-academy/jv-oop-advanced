@@ -10,4 +10,16 @@ public abstract class Figure implements AreaCalculator, Drawable {
     public String getColor() {
         return color;
     }
+
+    public String getFigureNameMessage() {
+        return "Figure: " + getClass().getSimpleName().toLowerCase() + ", ";
+    }
+
+    public String getFigureAreaMessage() {
+        return "area: " + calculateArea() + " sq. units, ";
+    }
+
+    public String getFigureColorMessage() {
+        return "color: " + getColor();
+    }
 }
