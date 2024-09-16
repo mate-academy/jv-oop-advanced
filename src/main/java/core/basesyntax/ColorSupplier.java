@@ -3,14 +3,16 @@ package core.basesyntax;
 import java.util.Random;
 
 public class ColorSupplier {
+    private static final Random RANDOM = new Random();
+
     public String getRandomColor() {
-        int index = new Random().nextInt(Colors.values().length);
+        int index = RANDOM.nextInt(Colors.values().length);
         Colors figureColor = Colors.values()[index];
-        return figureColor.toString();
+        return figureColor.name();
     }
 
     public String getConstantColor() {
-        Colors figureColor = Colors.values()[5];
-        return figureColor.toString();
+        Colors figureColor = Colors.values()[Colors.values().length - 1];
+        return figureColor.name();
     }
 }
