@@ -5,7 +5,7 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int SHAPE_RANDOM_BOUND = FigureEnum.values().length;
     private static final int VALUE_RANDOM_BOUND = 20;
-    private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
     private static final int DEFAULT_VALUE = 10;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
@@ -15,20 +15,28 @@ public class FigureSupplier {
         String color = colorSupplier.getRandomColor();
         switch (figure) {
             case CIRCLE: {
-                return new Circle(color, generateRandomValue());
+                int radius = generateRandomValue();
+                return new Circle(color, radius);
             }
             case ISOSCELES_TRAPEZOID: {
-                return new IsoscelesTrapezoid(color, generateRandomValue(), generateRandomValue(),
-                        generateRandomValue());
+                int firstBase = generateRandomValue();
+                int secondBase = generateRandomValue();
+                int height = generateRandomValue();
+                return new IsoscelesTrapezoid(color, firstBase, secondBase, height);
             }
             case RECTANGLE: {
-                return new Rectangle(color, generateRandomValue(), generateRandomValue());
+                int height = generateRandomValue();
+                int width = generateRandomValue();
+                return new Rectangle(color, height, width);
             }
             case RIGHT_TRIANGLE: {
-                return new RightTriangle(color, generateRandomValue(), generateRandomValue());
+                int firstLeg = generateRandomValue();
+                int secondLeg = generateRandomValue();
+                return new RightTriangle(color, firstLeg, secondLeg);
             }
             default: {
-                return new Square(color, generateRandomValue());
+                int side = generateRandomValue();
+                return new Square(color, side);
             }
         }
     }

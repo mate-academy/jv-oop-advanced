@@ -20,6 +20,6 @@ public abstract class Figure implements AreaCalculator, Drawable {
     }
 
     public String getFigureColorMessage() {
-        return "color: " + getColor();
+        return "color: " + getColor().toLowerCase();
     }
 }

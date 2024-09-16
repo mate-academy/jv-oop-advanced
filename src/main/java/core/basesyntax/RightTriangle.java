@@ -15,6 +15,10 @@ public class RightTriangle extends Figure {
         return (double) (firstLeg * secondLeg) / 2;
     }
 
+    public String getFigureNameMessage() {
+        return "Figure: right triangle, ";
+    }
+
     @Override
     public void draw() {
         System.out.println(

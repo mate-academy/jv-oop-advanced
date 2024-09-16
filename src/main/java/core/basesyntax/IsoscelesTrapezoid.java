@@ -17,6 +17,10 @@ public class IsoscelesTrapezoid extends Figure {
         return (double) (firstBase + secondBase) / 2 * height;
     }
 
+    public String getFigureNameMessage() {
+        return "Figure: isosceles trapezoid, ";
+    }
+
     @Override
     public void draw() {
         System.out.println(
