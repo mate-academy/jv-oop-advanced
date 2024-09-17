@@ -11,6 +11,9 @@ public class FigureSupplier {
     private static final SquareSupplier square = new SquareSupplier();
     private static final RightTriangleSupplier rightTriangle = new RightTriangleSupplier();
 
+    private int defaultRadius = 10;
+    private Color defaultColor = Color.WHITE;
+
     public Figure getRandomFigure() {
         Figure [] figures = {
                 circle.getRandomCircle(),
@@ -23,9 +26,6 @@ public class FigureSupplier {
         int randomIndex = random.nextInt(figures.length);
         return figures[randomIndex];
     }
-
-    private int defaultRadius = 10;
-    private Color defaultColor = Color.WHITE;
 
     public Figure getDefaultFigure() {
         return new Circle(defaultRadius, defaultColor);
