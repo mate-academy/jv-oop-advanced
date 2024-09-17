@@ -1,5 +1,7 @@
 package core.basesyntax;
+
 import java.util.Random;
+
 public class IsoscelesTrapezoidSupplier {
     private Random random = new Random();
     private RandomSize size = new RandomSize();

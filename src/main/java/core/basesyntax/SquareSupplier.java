@@ -1,5 +1,7 @@
 package core.basesyntax;
+
 import java.util.Random;
+
 public class SquareSupplier {
     private Random random = new Random();
     private RandomSize size = new RandomSize();

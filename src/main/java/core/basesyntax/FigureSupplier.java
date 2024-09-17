@@ -1,5 +1,7 @@
 package core.basesyntax;
+
 import java.util.Random;
+
 public class FigureSupplier {
     private Random random = new Random();
     private CircleSupplier circle = new CircleSupplier();
