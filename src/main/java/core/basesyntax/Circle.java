@@ -8,23 +8,15 @@ public class Circle extends Figure {
         super.color = color;
     }
 
-    public void setRadius(int radius) {
-        this.radius = radius;
-    }
-
-    public double getRadius() {
-        return radius;
-    }
-
     @Override
-    public double area() {
+    public double getArea() {
         return (Math.PI * radius * radius);
     }
 
     @Override
     public void draw() {
         System.out.println(
-                "Figure: circle, area: " + area() + " sq. units"
+                "Figure: circle, area: " + getArea() + " sq. units"
                         + ", radius: " + radius + " units"
                         + ", color: " + color);
     }

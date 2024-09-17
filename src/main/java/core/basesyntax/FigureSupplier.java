@@ -1,31 +1,22 @@
 package core.basesyntax;
-
 import java.util.Random;
-
 public class FigureSupplier {
     private Random random = new Random();
-    private ColorSupplier colorSupplier = new ColorSupplier();
-    private RandomSize size = new RandomSize();
-
-    private Figure circle = new Circle(size.getSize(), colorSupplier.getRandomColor());
-    private Figure isoscelesTrapezoid = new IsoscelesTrapezoid(size.getSize(),
-            size.getSize(), size.getSize(), colorSupplier.getRandomColor());
-    private Figure rectangle = new Rectangle(size.getSize(),
-            size.getSize(), colorSupplier.getRandomColor());
-    private Figure square = new Circle(size.getSize(),
-            colorSupplier.getRandomColor());
-    private Figure rightTriangle = new RightTriangle(size.getSize(),
-            size.getSize(), colorSupplier.getRandomColor());
-
-    private Figure [] figures = {
-            circle,
-            isoscelesTrapezoid,
-            rectangle,
-            square,
-            rightTriangle
-    };
+    private CircleSupplier circle = new CircleSupplier();
+    private IsoscelesTrapezoidSupplier isoscelesTrapezoid = new IsoscelesTrapezoidSupplier();
+    private RectangleSupplier rectangle = new RectangleSupplier();
+    private SquareSupplier square = new SquareSupplier();
+    private RectangleSupplier rightTriangle = new RectangleSupplier();
 
     public Figure getRandomFigure() {
+        Figure [] figures = {
+                circle.getRandomCircle(),
+                isoscelesTrapezoid.getRandomIsoscelesTrapezoid(),
+                rectangle.getRandomRectangle(),
+                square.getRandomSquare(),
+                rightTriangle.getRandomRectangle()
+        };
+
         int randomIndex = random.nextInt(figures.length);
         return figures[randomIndex];
     }
