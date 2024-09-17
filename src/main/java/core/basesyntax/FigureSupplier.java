@@ -9,7 +9,7 @@ public class FigureSupplier {
             = new IsoscelesTrapezoidSupplier();
     private static final RectangleSupplier rectangle = new RectangleSupplier();
     private static final SquareSupplier square = new SquareSupplier();
-    private static final RectangleSupplier rightTriangle = new RectangleSupplier();
+    private static final RightTriangleSupplier rightTriangle = new RightTriangleSupplier();
 
     public Figure getRandomFigure() {
         Figure [] figures = {
@@ -17,14 +17,17 @@ public class FigureSupplier {
                 isoscelesTrapezoid.getRandomIsoscelesTrapezoid(),
                 rectangle.getRandomRectangle(),
                 square.getRandomSquare(),
-                rightTriangle.getRandomRectangle()
+                rightTriangle.getRandomRightTriangle()
         };
 
         int randomIndex = random.nextInt(figures.length);
         return figures[randomIndex];
     }
 
+    private int defaultRadius = 10;
+    private Color defaultColor = Color.WHITE;
+
     public Figure getDefaultFigure() {
-        return new Circle(10, Color.WHITE);
+        return new Circle(defaultRadius, defaultColor);
     }
 }

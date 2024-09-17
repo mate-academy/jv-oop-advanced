@@ -2,27 +2,27 @@ package core.basesyntax;
 
 public class Application {
     public static void main(String[] args) {
-        int figureNumber = 11;
+        int totalNumberOfFigures = 11;
 
-        int figuresNumberInSetOne = 0;
-
-        if (figureNumber % 2 == 0) {
-            figuresNumberInSetOne = figureNumber / 2;
-        } else {
-            figuresNumberInSetOne = figureNumber / 2 + 1;
-        }
-
-        Figure [] result = new Figure[figureNumber];
+        Figure [] result = new Figure[totalNumberOfFigures];
         FigureSupplier figureSupplier = new FigureSupplier();
 
-        for (int i = 0; i < figuresNumberInSetOne; i++) {
+        for (int i = 0; i < totalNumberOfFigures / 2; i++) {
             result [i] = figureSupplier.getRandomFigure();
-            result [i].draw();
+            if (result [i] == null) {
+                System.out.println("Figure no " + i + "is null");
+            } else {
+                result[i].draw();
+            }
         }
 
-        for (int i = figuresNumberInSetOne; i < figureNumber; i++) {
+        for (int i = totalNumberOfFigures / 2; i < totalNumberOfFigures; i++) {
             result [i] = figureSupplier.getDefaultFigure();
-            result [i].draw();
+            if (result [i] == null) {
+                System.out.println("Figure no " + i + "is null");
+            } else {
+                result[i].draw();
+            }
         }
     }
 }
