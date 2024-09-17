@@ -1,14 +1,11 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class RightTriangleSupplier {
-    private Random random = new Random();
-    private RandomSize size = new RandomSize();
-    private ColorSupplier color = new ColorSupplier();
+    private static final RandomGeometricValue size = new RandomGeometricValue();
+    private static final ColorSupplier color = new ColorSupplier();
 
     public Figure getRandomRightTriangle() {
-        return new RightTriangle(size.getRandomSize(),
-                size.getRandomSize(), color.getRandomColor());
+        return new RightTriangle(size.getRandomGeometricValue(),
+                size.getRandomGeometricValue(), color.getRandomColor());
     }
 }

@@ -5,9 +5,25 @@ public class RightTriangle extends Figure {
     private int secondSide;
 
     public RightTriangle(int firstSide, int secondSide, Color color) {
+        super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
-        super.color = color;
+    }
+
+    public void setFirstSide(int firstSide) {
+        this.firstSide = firstSide;
+    }
+
+    public void setSecondSide(int secondSide) {
+        this.secondSide = secondSide;
+    }
+
+    public int getFirstSide() {
+        return firstSide;
+    }
+
+    public int getSecondSide() {
+        return secondSide;
     }
 
     @Override
@@ -20,7 +36,7 @@ public class RightTriangle extends Figure {
         System.out.println(
                 "Figure: right triangle, area: " + getArea() + " sq. units"
                         + ", first side: " + firstSide + " units"
-                        + ", second side: " + firstSide + " units"
-                        + ", color: " + color);
+                        + ", second side: " + secondSide + " units"
+                        + ", color: " + getColor());
     }
 }

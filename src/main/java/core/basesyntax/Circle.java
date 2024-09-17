@@ -4,8 +4,16 @@ public class Circle extends Figure {
     private int radius;
 
     public Circle(int radius, Color color) {
+        super(color);
         this.radius = radius;
-        super.color = color;
+    }
+
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+
+    public int getRadius() {
+        return radius;
     }
 
     @Override
@@ -18,6 +26,6 @@ public class Circle extends Figure {
         System.out.println(
                 "Figure: circle, area: " + getArea() + " sq. units"
                         + ", radius: " + radius + " units"
-                        + ", color: " + color);
+                        + ", color: " + getColor());
     }
 }
