@@ -3,9 +3,9 @@ package core.basesyntax;
 public class Rectangle extends Figure {
     private final double firstLeg;
     private final double secondLeg;
-    private final ColorSupplier color;
+    private final Color color;
 
-    public Rectangle(ColorSupplier color, double firstLeg, double secondLeg) {
+    public Rectangle(Color color, double firstLeg, double secondLeg) {
         this.color = color;
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
@@ -22,6 +22,6 @@ public class Rectangle extends Figure {
                 + calculateArea() + "sq. units, firstLeg: "
                 + firstLeg + " units, " + "secondLeg: "
                 + secondLeg + " units, "
-                + "color: " + color);
+                + "color: " + color.name());
     }
 }
