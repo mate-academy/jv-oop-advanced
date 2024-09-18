@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 4;
-    public static final Color DEFAULT_COLOR = Color.WHITE;
+    public static final String DEFAULT_COLOR = Color.WHITE.name();
     public static final double DEFAULT_RADIUS = 10.0;
     public static final double MAX_RANDOM_VALUE = 10.0;
     private final ColorSupplier colorSupplier = new ColorSupplier();
@@ -15,7 +15,7 @@ public class FigureSupplier {
     }
 
     public Figure getRandomFigure() {
-        Color color = Color.valueOf(colorSupplier.getRandomColor());
+        String color = colorSupplier.getRandomColor();
         int figureNumber = random.nextInt(FIGURE_COUNT);
         switch (figureNumber) {
             case 0:
@@ -35,23 +35,23 @@ public class FigureSupplier {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 
-    private IsoscelesTrapezoid createIsoscelesTrapezoid(Color color) {
+    private IsoscelesTrapezoid createIsoscelesTrapezoid(String color) {
         return new IsoscelesTrapezoid(color, getRandomValue(), getRandomValue(), getRandomValue());
     }
 
-    private Circle createCircle(Color color) {
+    private Circle createCircle(String color) {
         return new Circle(color, getRandomValue());
     }
 
-    private RightTriangle createRightTriangle(Color color) {
+    private RightTriangle createRightTriangle(String color) {
         return new RightTriangle(color, getRandomValue(), getRandomValue());
     }
 
-    private Rectangle createRectangle(Color color) {
+    private Rectangle createRectangle(String color) {
         return new Rectangle(color, getRandomValue(), getRandomValue());
     }
 
-    private Square createSquare(Color color) {
+    private Square createSquare(String color) {
         return new Square(color, getRandomValue());
     }
 }
