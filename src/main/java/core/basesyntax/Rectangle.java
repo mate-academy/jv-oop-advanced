@@ -3,10 +3,9 @@ package core.basesyntax;
 public class Rectangle extends Figure {
     private final double firstLeg;
     private final double secondLeg;
-    private final Color color;
 
     public Rectangle(Color color, double firstLeg, double secondLeg) {
-        this.color = color;
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
