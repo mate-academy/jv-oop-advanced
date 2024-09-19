@@ -1,24 +1,28 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private int radius;
+    private double radius;
 
-    public Circle(int radius, Color color) {
+    public Circle(double radius, Color color) {
         super(color);
         this.radius = radius;
     }
 
-    public void setRadius(int radius) {
-        this.radius = radius;
+    public void setRadius(double radius) {
+        if (radius <= 0) {
+            System.out.println("Gometric value need to be greater than zero");
+        } else {
+            this.radius = radius;
+        }
     }
 
-    public int getRadius() {
+    public double getRadius() {
         return radius;
     }
 
     @Override
     public double getArea() {
-        return (Math.PI * radius * radius);
+        return Math.PI * radius * radius;
     }
 
     @Override

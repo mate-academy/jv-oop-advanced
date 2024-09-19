@@ -1,12 +1,12 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoidSupplier {
-    private static final RandomGeometricValue randomSize = new RandomGeometricValue();
-    private static final ColorSupplier color = new ColorSupplier();
+    private RandomGeometricValue randomSize = new RandomGeometricValue();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(randomSize.getRandomGeometricValue(),
                 randomSize.getRandomGeometricValue(), randomSize.getRandomGeometricValue(),
-                color.getRandomColor());
+                colorSupplier.getRandomColor());
     }
 }

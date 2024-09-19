@@ -1,34 +1,42 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private int firstSide;
-    private int secondSide;
+    private double firstSide;
+    private double secondSide;
 
-    public RightTriangle(int firstSide, int secondSide, Color color) {
+    public RightTriangle(double firstSide, double secondSide, Color color) {
         super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
     }
 
-    public void setFirstSide(int firstSide) {
-        this.firstSide = firstSide;
+    public void setFirstSide(double firstSide) {
+        if (firstSide <= 0) {
+            System.out.println("Gometric value need to be greater than zero");
+        } else {
+            this.firstSide = firstSide;
+        }
     }
 
-    public void setSecondSide(int secondSide) {
-        this.secondSide = secondSide;
+    public void setSecondSide(double secondSide) {
+        if (secondSide <= 0) {
+            System.out.println("Gometric value need to be greater than zero");
+        } else {
+            this.secondSide = secondSide;
+        }
     }
 
-    public int getFirstSide() {
+    public double getFirstSide() {
         return firstSide;
     }
 
-    public int getSecondSide() {
+    public double getSecondSide() {
         return secondSide;
     }
 
     @Override
     public double getArea() {
-        return (firstSide * secondSide / 2);
+        return firstSide * secondSide / 2;
     }
 
     @Override

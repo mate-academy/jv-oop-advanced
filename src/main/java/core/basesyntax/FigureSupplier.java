@@ -3,13 +3,13 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final Random random = new Random();
-    private static final CircleSupplier circle = new CircleSupplier();
-    private static final IsoscelesTrapezoidSupplier isoscelesTrapezoid
+    private Random random = new Random();
+    private CircleSupplier circle = new CircleSupplier();
+    private IsoscelesTrapezoidSupplier isoscelesTrapezoid
             = new IsoscelesTrapezoidSupplier();
-    private static final RectangleSupplier rectangle = new RectangleSupplier();
-    private static final SquareSupplier square = new SquareSupplier();
-    private static final RightTriangleSupplier rightTriangle = new RightTriangleSupplier();
+    private RectangleSupplier rectangle = new RectangleSupplier();
+    private SquareSupplier square = new SquareSupplier();
+    private RightTriangleSupplier rightTriangle = new RightTriangleSupplier();
 
     private int defaultRadius = 10;
     private Color defaultColor = Color.WHITE;

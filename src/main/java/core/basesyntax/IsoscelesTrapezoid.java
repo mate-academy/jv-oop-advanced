@@ -1,44 +1,56 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private int firstSide;
-    private int secondSide;
-    private int height;
+    private double firstSide;
+    private double secondSide;
+    private double height;
 
-    public IsoscelesTrapezoid(int firstSide, int secondSide, int height, Color color) {
+    public IsoscelesTrapezoid(double firstSide, double secondSide, double height, Color color) {
         super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;
         this.height = height;
     }
 
-    public void setFirstSide(int firstSide) {
+    public void setFirstSide(double firstSide) {
+        if (firstSide <= 0) {
+            System.out.println("Gometric value need to be greater than zero");
+        } else {
         this.firstSide = firstSide;
+        }
     }
 
-    public void setSecondSide(int secondSide) {
-        this.secondSide = secondSide;
+    public void setSecondSide(double secondSide) {
+        if (secondSide <= 0) {
+            System.out.println("Gometric value need to be greater than zero");
+        } else {
+            this.secondSide = secondSide;
+        }
     }
 
-    public void setHeight(int height) {
-        this.height = height;
+    public void setHeight(double height) {
+        if (height <= 0) {
+            System.out.println("Gometric value need to be greater than zero");
+        } else {
+            this.height = height;
+        }
     }
 
-    public int getFirstSide() {
+    public double getFirstSide() {
         return firstSide;
     }
 
-    public int getSecondSide() {
+    public double getSecondSide() {
         return secondSide;
     }
 
-    public int getHeight() {
+    public double getHeight() {
         return height;
     }
 
     @Override
     public double getArea() {
-        return (firstSide * height * 0.5 + secondSide * height * 0.5);
+        return (firstSide + secondSide) * height * 0.5;
     }
 
     @Override

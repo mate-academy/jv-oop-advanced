@@ -1,10 +1,10 @@
 package core.basesyntax;
 
 public class SquareSupplier {
-    private static final RandomGeometricValue randomSize = new RandomGeometricValue();
-    private static final ColorSupplier color = new ColorSupplier();
+    private RandomGeometricValue randomSize = new RandomGeometricValue();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomSquare() {
-        return new Square(randomSize.getRandomGeometricValue(), color.getRandomColor());
+        return new Square(randomSize.getRandomGeometricValue(), colorSupplier.getRandomColor());
     }
 }

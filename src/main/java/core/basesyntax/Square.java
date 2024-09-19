@@ -1,31 +1,35 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    private int firstSide;
+    private double side;
 
-    public Square(int firstSide, Color color) {
+    public Square(double side, Color color) {
         super(color);
-        this.firstSide = firstSide;
+        this.side = side;
     }
 
-    public void setFirstSide(int firstSide) {
-        this.firstSide = firstSide;
+    public void setFirstSide(double side) {
+        if (side <= 0) {
+            System.out.println("Gometric value need to be greater than zero");
+        } else {
+            this.side = side;
+        }
     }
 
-    public int getFirstSide() {
-        return firstSide;
+    public double getFirstSide() {
+        return side;
     }
 
     @Override
     public double getArea() {
-        return firstSide * firstSide;
+        return side * side;
     }
 
     @Override
     public void draw() {
         System.out.println(
                 "Figure: square, area: " + getArea() + " sq. units"
-                        + ", side: " + firstSide + " units"
+                        + ", side: " + side + " units"
                         + ", color: " + getColor());
     }
 }
