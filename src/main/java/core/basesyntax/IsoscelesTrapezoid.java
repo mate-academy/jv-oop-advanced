@@ -16,7 +16,7 @@ public class IsoscelesTrapezoid extends Figure {
         if (firstSide <= 0) {
             System.out.println("Gometric value need to be greater than zero");
         } else {
-        this.firstSide = firstSide;
+            this.firstSide = firstSide;
         }
     }
 
