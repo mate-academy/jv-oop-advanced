@@ -32,7 +32,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    protected void moreInfo() {
+    public void moreInfo() {
         System.out.println("Figure: RightTriangle");
         System.out.println("FirstLeg: " + firstLeg + " units");
         System.out.println("SecondLeg: " + secondLeg + " units");

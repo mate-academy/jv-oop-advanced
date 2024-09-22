@@ -22,7 +22,7 @@ public class Square extends Figure {
     }
 
     @Override
-    protected void moreInfo() {
+    public void moreInfo() {
         System.out.println("Figure: Square");
         System.out.println("Side: " + side + " units");
     }

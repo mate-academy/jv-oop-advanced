@@ -22,7 +22,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    protected void moreInfo() {
+    public void moreInfo() {
         System.out.println("Figure: RightTriangle");
         System.out.println("Radius: " + radius + " units");
     }

@@ -1,13 +1,11 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public abstract class Figure implements Drawable, Area, Info {
     private String color;
 
     public Figure(String color) {
         this.color = color;
     }
-
-    public abstract double getArea();
 
     public String getColor() {
         return color;
@@ -17,12 +15,11 @@ public abstract class Figure {
         this.color = color;
     }
 
+    @Override
     public void draw() {
         moreInfo();
         System.out.println("Area: " + getArea() + " sq. units");
         System.out.println("Color: " + color);
         System.out.println();
     }
-
-    protected abstract void moreInfo();
 }

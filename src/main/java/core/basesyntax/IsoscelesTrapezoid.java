@@ -42,7 +42,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    protected void moreInfo() {
+    public void moreInfo() {
         System.out.println("Figure: IsoscelesTrapezoid");
         System.out.println("Base 1: " + base1 + " units");
         System.out.println("Base 2: " + base2 + " units");
