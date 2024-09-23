@@ -8,6 +8,7 @@ public class Square extends Figure {
         this.firstLeg = firstLeg;
     }
 
+    @Override
     public double calculateArea() {
         return firstLeg * firstLeg;
     }

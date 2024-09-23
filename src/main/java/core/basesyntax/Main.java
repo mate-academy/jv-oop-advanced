@@ -14,7 +14,7 @@ public class Main {
         }
         for (int i = 0; i < arrayOfFigure.length; i++) {
             arrayOfFigure[i].drawFigure();
-            if (i >= First_Half_Of_Array) {
+            if (i >= First_Half_Of_Array || i == 1) {
                 System.out.println();
             }
         }

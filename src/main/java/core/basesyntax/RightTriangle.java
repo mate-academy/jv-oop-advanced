@@ -9,7 +9,7 @@ public class RightTriangle extends Figure {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
-
+    @Override
     public double calculateArea() {
         return (firstLeg * secondLeg) * 0.5;
     }
