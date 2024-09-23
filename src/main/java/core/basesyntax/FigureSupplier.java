@@ -36,15 +36,15 @@ public class FigureSupplier {
         }
     }
 
+    public Figure getDefaultFigure() {
+        return new Circle(COLOR_OF_DEFAULT_FIGURE, RADIUS_OF_DEFAULT_FIGURE);
+    }
+
     private double minAndMaxDimension() {
         int minDimension = 1;
         int maxDimension = 10;
 
         return minDimension * random.nextDouble() * maxDimension;
-    }
-
-    public Figure getDefaultFigure() {
-        return new Circle(COLOR_OF_DEFAULT_FIGURE, RADIUS_OF_DEFAULT_FIGURE);
     }
 }
 
