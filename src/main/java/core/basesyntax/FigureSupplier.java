@@ -9,11 +9,12 @@ public class FigureSupplier {
     private static final int MAX_VALUE = 100;
     private static final String COLOR_OF_DEFAULT_FIGURE = "white";
 
+    private static final Random random = new Random();
+    private static final ColorSupplier colorSupplier = new ColorSupplier();
+
     public Figure getRandomFigure() {
 
-        ColorSupplier colorSupplier = new ColorSupplier();
-
-        int index = new Random().nextInt(SWITCH_BOUND);
+        int index = random.nextInt(SWITCH_BOUND);
         String color = colorSupplier.getRandomColor();
 
         switch (index) {
@@ -54,5 +55,4 @@ public class FigureSupplier {
     public int randomNumber() {
         return new Random().nextInt(ORIGIN, MAX_VALUE);
     }
-
 }
