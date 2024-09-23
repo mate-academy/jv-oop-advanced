@@ -9,14 +9,13 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figures = new Figure[ARRAY_SIZE];
         for (int i = 0; i < figures.length; i++) {
-            if (i < 3) {
+            if (i < ARRAY_SIZE / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
-        }
-        for (Figure figure : figures) {
-            figure.draw();
+            figures[i].draw();
         }
     }
 }
+
