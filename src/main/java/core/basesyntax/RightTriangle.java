@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-
     private double firstLeg;
     private double secondLeg;
 
@@ -23,7 +22,7 @@ public class RightTriangle extends Figure {
                 + " area: " + getArea()
                 + " sq.units,"
                 + " first leg: "
-                + firstLeg + " sq.units, "
+                + firstLeg + "units, "
                 + " second leg: " + secondLeg
                 + " units,"
                 + "color: " + getColor());
