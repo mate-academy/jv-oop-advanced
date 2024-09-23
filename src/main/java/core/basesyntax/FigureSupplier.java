@@ -3,25 +3,52 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private Random random = new Random();
-    private ColorSupplier supplier = new ColorSupplier();
-    private Figure isoscelesTrapezoid = new IsoscelesTrapezoid(supplier.getRandomColor(),
-            random.nextDouble(), random.nextDouble(), random.nextDouble());
-    private Figure rectangle = new Rectangle(supplier.getRandomColor(),
-            random.nextDouble(), random.nextDouble(), random.nextDouble());
-    private Figure circle = new Circle(supplier.getRandomColor(),
-            random.nextDouble());
-    private Figure rightTriangle = new RightTriangle(supplier.getRandomColor(),
-            random.nextDouble(), random.nextDouble());
-    private Figure square = new Square(supplier.getRandomColor(), random.nextDouble());
-    private Figure [] figures = {isoscelesTrapezoid, rectangle, circle, rightTriangle, square};
+    private static final int NUMBER = 5;
+    private static final double DEFAULT_RADIUS = 10.0;
 
     public Figure getRandomFigure() {
-        int index = random.nextInt(figures.length);
-        return figures[index];
+        Random random = new Random();
+        int index = random.nextInt(NUMBER);
+        ColorSupplier supplier = new ColorSupplier();
+        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid();
+        Rectangle rectangle = new Rectangle();
+        Circle circle = new Circle();
+        RightTriangle rightTriangle = new RightTriangle();
+        Square square = new Square();
+        Figure[] figures = {isoscelesTrapezoid, rectangle, circle, rightTriangle, square};
+
+        switch (index) {
+            case 0:
+                isoscelesTrapezoid.setHeight(random.nextDouble());
+                isoscelesTrapezoid.setSide(random.nextDouble());
+                isoscelesTrapezoid.setSideB(random.nextDouble());
+                isoscelesTrapezoid.setColor(supplier.getRandomColor());
+                return figures[index];
+            case 1:
+                rectangle.setLength(random.nextDouble());
+                rectangle.setWidth(random.nextDouble());
+                rectangle.setColor(supplier.getRandomColor());
+                return figures[index];
+            case 2:
+                circle.setRadius(random.nextDouble());
+                circle.setColor(supplier.getRandomColor());
+                return figures[index];
+            case 3:
+                rightTriangle.setSide(random.nextDouble());
+                rightTriangle.setHeight(random.nextDouble());
+                rightTriangle.setColor(supplier.getRandomColor());
+                return figures[index];
+            default:
+                square.setSide(random.nextDouble());
+                square.setColor(supplier.getRandomColor());
+                return figures[index];
+        }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Colors.WHITE, 10.0);
+        Circle circle = new Circle();
+        circle.setColor(Colors.WHITE);
+        circle.setRadius(DEFAULT_RADIUS);
+        return circle;
     }
 }
