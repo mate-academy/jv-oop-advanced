@@ -24,7 +24,7 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public void draw() {
         System.out.println("Фігура: рівнобедрена трапеція, площа: " + getArea()
-               + " кв. одиниць, перша основа: " + base1 + " одиниць, друга основа: " + base2
-                + " одиниць, висота: " + height + " одиниць, колір: " + getColor());
+                + " кв. одиниць, перша основа: " + base1 + " одиниць, друга основа: "
+                + base2 + " одиниць, висота: " + height + " одиниць, колір: " + getColor());
     }
 }

@@ -20,6 +20,6 @@ public class Square extends Figure {
     @Override
     public void draw() {
         System.out.println("Фігура: квадрат, площа: " + getArea()
-              + " кв. одиниць, сторона: " + side + " одиниць, колір: " + getColor());
+                + " кв. одиниць, сторона: " + side + " одиниць, колір: " + getColor());
     }
 }

@@ -22,7 +22,7 @@ public class Rectangle extends Figure {
     @Override
     public void draw() {
         System.out.println("Фігура: прямокутник, площа: " + getArea()
-               + " кв. одиниць, ширина: " + width + " одиниць, висота: "
+                + " кв. одиниць, ширина: " + width + " одиниць, висота: "
                 + height + " одиниць, колір: " + getColor());
     }
 }
