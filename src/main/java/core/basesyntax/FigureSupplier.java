@@ -3,27 +3,35 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final Random random = new Random();
+    private static final int FIGURE_COUNT = 5;
     private static final int MAX_VALUE = 10;
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
         ColorSupplier colorSupplier = new ColorSupplier();
         String color = colorSupplier.getRandomColor();
 
-        switch (random.nextInt(5)) {
+        switch (random.nextInt(FIGURE_COUNT)) {
             case 0:
-                return new Square(color, random.nextDouble() * MAX_VALUE);
+                double squareSide = random.nextDouble() * MAX_VALUE;
+                return new Square(color, squareSide);
             case 1:
-                return new Rectangle(color, random.nextDouble() * MAX_VALUE,
-                        random.nextDouble() * MAX_VALUE);
+                double rectangleWidth = random.nextDouble() * MAX_VALUE;
+                double rectangleHeight = random.nextDouble() * MAX_VALUE;
+                return new Rectangle(color, rectangleWidth, rectangleHeight);
             case 2:
-                return new RightTriangle(color, random.nextDouble() * MAX_VALUE,
-                        random.nextDouble() * MAX_VALUE);
+                double triangleFirstLeg = random.nextDouble() * MAX_VALUE;
+                double triangleSecondLeg = random.nextDouble() * MAX_VALUE;
+                return new RightTriangle(color, triangleFirstLeg, triangleSecondLeg);
             case 3:
-                return new Circle(color, random.nextDouble() * MAX_VALUE);
+                double circleRadius = random.nextDouble() * MAX_VALUE;
+                return new Circle(color, circleRadius);
             default:
-                return new IsoscelesTrapezoid(color, random.nextDouble() * MAX_VALUE,
-                        random.nextDouble() * MAX_VALUE, random.nextDouble() * MAX_VALUE);
+                double trapezoidUpperBase = random.nextDouble() * MAX_VALUE;
+                double trapezoidBottomBase = random.nextDouble() * MAX_VALUE;
+                double trapezoidHeight = random.nextDouble() * MAX_VALUE;
+                return new IsoscelesTrapezoid(color, trapezoidUpperBase,
+                        trapezoidBottomBase, trapezoidHeight);
         }
     }
 
