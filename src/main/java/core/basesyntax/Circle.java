@@ -7,13 +7,13 @@ public class Circle extends Figure {
         super(color);
         this.radius = radius;
     }
+
     @Override
     public double calculateArea() {
         return Math.PI * radius * radius;
     }
 
-    @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.print("Figure: circle, area "
                 + calculateArea() + " sq. units, radius: "
                 + radius + " units, color: " + getColor());

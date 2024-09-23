@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public abstract class Figure implements Picture {
     private final String color;
 
     public Figure(String color) {
@@ -13,9 +13,5 @@ public abstract class Figure {
 
     public double calculateArea() {
         return 1.;
-    }
-
-    public void drawFigure () {
-        System.out.println("Drawing a figure.");
     }
 }

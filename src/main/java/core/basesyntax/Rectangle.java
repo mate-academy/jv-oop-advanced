@@ -9,13 +9,13 @@ public class Rectangle extends Figure {
         this.length = length;
         this.height = height;
     }
+
     @Override
     public double calculateArea() {
         return length * height;
     }
 
-    @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println("Figure: rectangle, area: " + calculateArea()
                 + " sq. units, length: " + length + " units, height: "
                 + height + " units, color: " + getColor());

@@ -13,7 +13,7 @@ public class Main {
             arrayOfFigure[i] = FigureSupplier.getDefaultFigure();
         }
         for (int i = 0; i < arrayOfFigure.length; i++) {
-            arrayOfFigure[i].drawFigure();
+            arrayOfFigure[i].draw();
             if (i >= First_Half_Of_Array || i == 1) {
                 System.out.println();
             }

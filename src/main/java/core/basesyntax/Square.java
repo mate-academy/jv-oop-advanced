@@ -13,8 +13,7 @@ public class Square extends Figure {
         return firstLeg * firstLeg;
     }
 
-    @Override
-    public void drawFigure() {
+    public void draw() {
         System.out.println("Figure: square, " + "area: "
                 + calculateArea() + "sq. units, side: "
                 + firstLeg + " units, color: " + getColor());
