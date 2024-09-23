@@ -5,14 +5,15 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int LIMIT_NUMBER = 20;
     private static final int CIRCLE_RADIUS = 10;
-    private static final String CIRCLE_COLOR = "white";
+    private static final String CIRCLE_COLOR = Color.values()[10].name().toLowerCase();
+    private static final int FIGURES_COUNT = 5;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         String randomColor = colorSupplier.getRandomColor();
 
-        switch (random.nextInt(4)) {
+        switch (random.nextInt(FIGURES_COUNT)) {
             case 0:
                 return new Circle(randomColor, random.nextInt(LIMIT_NUMBER));
             case 1:
