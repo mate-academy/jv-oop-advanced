@@ -7,10 +7,10 @@ public class FigureSupplier {
     private static final int RADIUS_OF_DEFAULT_FIGURE = 10;
     private static final int ORIGIN = 1;
     private static final int MAX_VALUE = 100;
-    private static final String COLOR_OF_DEFAULT_FIGURE = "white";
+    private static final String COLOR_OF_DEFAULT_FIGURE = Color.WHITE.name();
 
-    private static final Random random = new Random();
-    private static final ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
 
@@ -53,6 +53,6 @@ public class FigureSupplier {
     }
 
     public int randomNumber() {
-        return new Random().nextInt(ORIGIN, MAX_VALUE);
+        return random.nextInt(ORIGIN, MAX_VALUE);
     }
 }
