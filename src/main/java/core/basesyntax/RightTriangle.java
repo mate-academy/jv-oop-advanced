@@ -22,7 +22,7 @@ public class RightTriangle extends Figure {
     @Override
     public void draw() {
         System.out.println("Фігура: прямокутний трикутник, площа: " + getArea()
-               + " кв. одиниць, перший катет: " + base + " одиниць, другий катет: "
+                + " кв. одиниць, перший катет: " + base + " одиниць, другий катет: "
                 + height + " одиниць, колір: " + getColor());
     }
 }

@@ -20,6 +20,6 @@ public class Circle extends Figure {
     @Override
     public void draw() {
         System.out.println("Фігура: коло, площа: " + getArea()
-               + " кв. одиниць, радіус: " + radius + " одиниць, колір: " + getColor());
+                + " кв. одиниць, радіус: " + radius + " одиниць, колір: " + getColor());
     }
 }
