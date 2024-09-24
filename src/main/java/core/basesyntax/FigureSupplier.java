@@ -23,9 +23,16 @@ public class FigureSupplier {
                         color);
             }
             case 1 -> {
-                return new IsoscelesTrapezoid(randomNumber(),
-                        randomNumber(),
-                        randomNumber(),
+                double base = randomNumber();
+                double side1;
+                double side2;
+                do {
+                    side1 = randomNumber();
+                    side2 = randomNumber();
+                } while (side1 + side2 <= base);
+                return new IsoscelesTrapezoid(side1,
+                        side2,
+                        base,
                         color);
             }
             case 2 -> {
@@ -53,6 +60,6 @@ public class FigureSupplier {
     }
 
     public int randomNumber() {
-        return random.nextInt(ORIGIN, MAX_VALUE);
+        return random.nextInt(MAX_VALUE) - ORIGIN;
     }
 }
