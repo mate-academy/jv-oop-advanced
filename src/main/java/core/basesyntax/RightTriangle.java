@@ -5,6 +5,12 @@ public class RightTriangle extends Figure {
     private double height;
     private double side;
 
+    public RightTriangle(String color, double height, double side) {
+        super(color);
+        this.height = height;
+        this.side = side;
+    }
+
     public double getHeight() {
         return height;
     }
@@ -26,9 +32,10 @@ public class RightTriangle extends Figure {
         System.out.println("Figure: Right Triangle, area: "
                 + getArea() + "sq. units, side "
                 + side + " units, height " + height
-                + " units, color: " + getColor().name());
+                + " units, color: " + getColor());
     }
 
+    @Override
     public double getArea() {
         return side * HALF * height;
     }
