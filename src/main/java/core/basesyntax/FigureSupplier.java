@@ -30,7 +30,7 @@ public class FigureSupplier {
                 return new IsoscelesTrapezoid(color, random.nextInt(MAX_RANDOM_VALUE) + 1,
                         random.nextInt(MAX_RANDOM_VALUE) + 1, random.nextInt(MAX_RANDOM_VALUE) + 1);
             default:
-                return null; // should not happen
+                throw new IllegalArgumentException("Invalid figure number: " + figureNumber);
         }
     }
 
