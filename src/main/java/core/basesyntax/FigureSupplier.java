@@ -8,6 +8,10 @@ public class FigureSupplier {
     public static final String DEFAULT_COLOR = Color.WHITE.name();
     public static final double DEFAULT_RADIUS = 10;
 
+    private int getRandomDimension() {
+        return random.nextInt(MAX_RANDOM_VALUE) + 1;
+    }
+
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
@@ -17,18 +21,24 @@ public class FigureSupplier {
 
         switch (figureNumber) {
             case 0:
-                return new Square(color, random.nextInt(MAX_RANDOM_VALUE) + 1);
+                int sideLength = getRandomDimension();
+                return new Square(color, sideLength);
             case 1:
-                return new Rectangle(color, random.nextInt(MAX_RANDOM_VALUE) + 1,
-                        random.nextInt(MAX_RANDOM_VALUE) + 1);
+                int width = getRandomDimension();
+                int height = getRandomDimension();
+                return new Rectangle(color, width, height);
             case 2:
-                return new RightTriangle(color, random.nextInt(MAX_RANDOM_VALUE) + 1,
-                        random.nextInt(MAX_RANDOM_VALUE) + 1);
+                int firstLeg = getRandomDimension();
+                int secondLeg = getRandomDimension();
+                return new RightTriangle(color, firstLeg, secondLeg);
             case 3:
-                return new Circle(color, random.nextInt(MAX_RANDOM_VALUE) + 1);
+                int radius = getRandomDimension();
+                return new Circle(color, radius);
             case 4:
-                return new IsoscelesTrapezoid(color, random.nextInt(MAX_RANDOM_VALUE) + 1,
-                        random.nextInt(MAX_RANDOM_VALUE) + 1, random.nextInt(MAX_RANDOM_VALUE) + 1);
+                int firstBase = getRandomDimension();
+                int secondBase = getRandomDimension();
+                int trapezoidHeight = getRandomDimension();
+                return new IsoscelesTrapezoid(color, firstBase, secondBase, trapezoidHeight);
             default:
                 throw new IllegalArgumentException("Invalid figure number: " + figureNumber);
         }
