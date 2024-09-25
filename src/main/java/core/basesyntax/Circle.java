@@ -14,11 +14,6 @@ public class Circle extends Figure {
     }
 
     @Override
-    protected String getName() {
-        return "circle";
-    }
-
-    @Override
     protected String getProperties() {
         return "radius: " + radius + " units";
     }

@@ -14,11 +14,6 @@ public class Square extends Figure {
     }
 
     @Override
-    protected String getName() {
-        return "square";
-    }
-
-    @Override
     protected String getProperties() {
         return "side: " + side + " units";
     }

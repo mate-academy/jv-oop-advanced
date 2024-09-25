@@ -16,11 +16,6 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    protected String getName() {
-        return "rectangle";
-    }
-
-    @Override
     protected String getProperties() {
         return "width: " + width + " units, height: " + height + " units";
     }

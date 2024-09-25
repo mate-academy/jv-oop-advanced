@@ -16,11 +16,6 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    protected String getName() {
-        return "right triangle";
-    }
-
-    @Override
     protected String getProperties() {
         return "firstLeg: " + firstLeg + " units, secondLeg: " + secondLeg + " units";
     }

@@ -18,11 +18,6 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    protected String getName() {
-        return "isosceles trapezoid";
-    }
-
-    @Override
     protected String getProperties() {
         return "base1: " + base1 + " units, base2: " + base2
                 + " units, height: " + height + " units";
