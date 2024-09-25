@@ -22,5 +22,4 @@ public class Square extends Figure {
     protected String getProperties() {
         return "side: " + side + " units";
     }
-
 }
