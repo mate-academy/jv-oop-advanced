@@ -1,12 +1,12 @@
 package core.basesyntax;
 
-public  class Figure {
+public class Figure {
 
     private String color;
 
-    private void toDraw(){
+    private void toDraw() {
         System.out.println();
     }
-    }
+}
 
 
