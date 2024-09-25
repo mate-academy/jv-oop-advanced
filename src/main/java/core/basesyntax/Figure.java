@@ -24,5 +24,4 @@ public abstract class Figure implements Drawable, AreaCalculator {
     }
 
     protected abstract String getProperties();
-
 }
