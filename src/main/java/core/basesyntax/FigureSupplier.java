@@ -42,14 +42,23 @@ public class FigureSupplier {
         Square square = new Square(
                 supplier.getRandomColor(),
                 random.nextDouble());
-        Figure[] figures = {isoscelesTrapezoid, rectangle, circle, rightTriangle, square};
-        return figures[index];
+        switch (index) {
+            case 0:
+                return isoscelesTrapezoid;
+            case 1:
+                return rectangle;
+            case 2:
+                return circle;
+            case 3:
+                return rightTriangle;
+            default:
+                return square;
+        }
     }
 
     public Figure getDefaultFigure() {
         Circle circle = new Circle(DEFAULT_COLOR,
-                random.nextDouble());
-        circle.setRadius(DEFAULT_RADIUS);
+                DEFAULT_RADIUS);
         return circle;
     }
 }
