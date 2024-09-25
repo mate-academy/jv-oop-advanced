@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Area{
+public class Rectangle extends Figure implements Area {
 
     private double width;
-    public double length;
+    private double length;
 
     @Override
     public double obtainTheArea() {

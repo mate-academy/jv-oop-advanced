@@ -2,25 +2,25 @@ package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure implements Area {
 
-    private double a; //Length of the upper base
-    private  double b; // Length of the lower base
-    private double h; // height
+    private double upperA; //Length of the upper base
+    private double lowerB; // Length of the lower base
+    private double height; // height
 
     @Override
     public double obtainTheArea() {
-        return (a + b) * h / 2;
+        return (lowerB + upperA) * height / 2;
     }
 
-    public void setH(double h) {
-        this.h = h;
+    public void setHeight(double height) {
+        this.height = height;
     }
 
-    public void setB(double b) {
-        this.b = b;
+    public void setLowerB(double lowerB) {
+        this.lowerB = lowerB;
     }
 
-    public void setA(double a) {
-        this.a = a;
+    public void setUpperA(double upperA) {
+        this.upperA = upperA;
     }
 }
 

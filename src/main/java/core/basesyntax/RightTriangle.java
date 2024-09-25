@@ -3,8 +3,7 @@ package core.basesyntax;
 public class RightTriangle extends Figure implements Area {
 
     private double katetA;
-    public double katetB;
-
+    private double katetB;
 
     @Override
     public double obtainTheArea() {
