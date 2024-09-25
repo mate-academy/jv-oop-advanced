@@ -8,12 +8,12 @@ public class FigureSupplier {
     public static final String DEFAULT_COLOR = Color.WHITE.name();
     public static final double DEFAULT_RADIUS = 10;
 
+    private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
+
     private int getRandomDimension() {
         return random.nextInt(MAX_RANDOM_VALUE) + 1;
     }
-
-    private Random random = new Random();
-    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
