@@ -16,7 +16,6 @@ public class RightTriangle extends Figure {
         System.out.println("Color: " + getColor());
         System.out.println("Both side length: " + bothside);
         System.out.println("Height length: " + height);
-        System.out.println("Area: " + getArea());
     }
 
     @Override

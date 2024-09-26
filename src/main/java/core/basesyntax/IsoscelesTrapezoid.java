@@ -19,7 +19,6 @@ public class IsoscelesTrapezoid extends Figure {
         System.out.println("Up both side length: " + upbothside);
         System.out.println("Down both side length: " + downbothside);
         System.out.println("Height length: " + height);
-        System.out.println("Area: " + getArea());
     }
 
     @Override

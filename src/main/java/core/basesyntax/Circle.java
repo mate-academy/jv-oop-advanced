@@ -13,7 +13,6 @@ public class Circle extends Figure {
         System.out.println("Figure: Circle");
         System.out.println("Color: " + getColor());
         System.out.println("Radius: " + radius);
-        System.out.println("Area: " + getArea());
     }
 
     @Override

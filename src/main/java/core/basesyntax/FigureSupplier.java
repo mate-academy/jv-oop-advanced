@@ -14,7 +14,6 @@ public class FigureSupplier {
 
     public static Figure getRandomFigure() {
         int figureType = random.nextInt(MAX_VALUE);
-
         String color = ColorSupplier.getRandomColor();
 
         switch (figureType) {
