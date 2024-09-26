@@ -5,11 +5,13 @@ public class Main {
 
     public static void main(String[] args) {
         FigureSupplier supplier = new FigureSupplier();
-        Figure [] figures = {supplier.getRandomFigure(), supplier.getRandomFigure(),
-                supplier.getRandomFigure(), supplier.getDefaultFigure(),
-                supplier.getDefaultFigure(), supplier.getDefaultFigure()};
-        for (Figure figure: figures) {
-            figure.draw();
+
+        for (int i = 0; i < FIGURES_QUANTITY; i++) {
+            if (i < 3) {
+                supplier.getRandomFigure().draw();
+                continue;
+            }
+            supplier.getDefaultFigure().draw();
         }
     }
 }

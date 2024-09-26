@@ -9,56 +9,30 @@ public class FigureSupplier {
     private ColorSupplier supplier = new ColorSupplier();
     private Random random = new Random();
 
-    public ColorSupplier getSupplier() {
-        return supplier;
-    }
-
-    public void setSupplier(ColorSupplier supplier) {
-        this.supplier = supplier;
-    }
-
-    public Random getRandom() {
-        return random;
-    }
-
-    public void setRandom(Random random) {
-        this.random = random;
-    }
-
     public Figure getRandomFigure() {
         int index = random.nextInt(FIGURE_COUNT);
-        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(
-                supplier.getRandomColor(), random.nextDouble(),
-                random.nextDouble(), random.nextDouble());
-        Rectangle rectangle = new Rectangle(
-                supplier.getRandomColor(),
-                random.nextDouble(), random.nextDouble());
-        Circle circle = new Circle(
-                supplier.getRandomColor(),
-                random.nextDouble());
-        RightTriangle rightTriangle = new RightTriangle(
-                supplier.getRandomColor(),
-                random.nextDouble(), random.nextDouble());
-        Square square = new Square(
-                supplier.getRandomColor(),
-                random.nextDouble());
+
         switch (index) {
             case 0:
-                return isoscelesTrapezoid;
+                return new IsoscelesTrapezoid(supplier.getRandomColor(),
+                        random.nextDouble(), random.nextDouble(),
+                        random.nextDouble());
             case 1:
-                return rectangle;
+                return new Rectangle(supplier.getRandomColor(),
+                        random.nextDouble(), random.nextDouble());
             case 2:
-                return circle;
+                return new Circle(supplier.getRandomColor(),
+                        random.nextDouble());
             case 3:
-                return rightTriangle;
+                return new RightTriangle(supplier.getRandomColor(),
+                        random.nextDouble(), random.nextDouble());
             default:
-                return square;
+                return new Square(supplier.getRandomColor(),
+                        random.nextDouble());
         }
     }
 
     public Figure getDefaultFigure() {
-        Circle circle = new Circle(DEFAULT_COLOR,
-                DEFAULT_RADIUS);
-        return circle;
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
