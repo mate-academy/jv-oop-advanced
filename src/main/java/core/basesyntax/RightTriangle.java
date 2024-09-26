@@ -10,10 +10,6 @@ public class RightTriangle extends Figure {
         this.height = height;
     }
 
-    public RightTriangle(String color) {
-        super(color);
-    }
-
     @Override
     public double getArea() {
         return 0.5 * base * height;

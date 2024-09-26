@@ -8,10 +8,6 @@ public class Square extends Figure {
         this.side = (int) side;
     }
 
-    public Square(String color) {
-        super(color);
-    }
-
     @Override
     public double getArea() {
         return side * side;

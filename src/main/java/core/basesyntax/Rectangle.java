@@ -10,10 +10,6 @@ public class Rectangle extends Figure {
         this.height = height;
     }
 
-    public Rectangle(String color) {
-        super(color);
-    }
-
     @Override
     public double getArea() {
         return width * height;
