@@ -26,7 +26,7 @@ abstract class Figure implements AreaCalculator, DrawInfo {
         }
 
         for (Figure figure : figures) {
-            figure.toDraw();
+            figure.draw();
         }
     }
 }
