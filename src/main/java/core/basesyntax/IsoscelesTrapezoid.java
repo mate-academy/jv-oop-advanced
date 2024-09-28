@@ -1,26 +1,28 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements Area {
+public class IsoscelesTrapezoid extends Figure {
+    private final double upperA; //Length of the upper base
+    private final double lowerB; // Length of the lower base
+    private final double height; // height
 
-    private double upperA; //Length of the upper base
-    private double lowerB; // Length of the lower base
-    private double height; // height
+    public IsoscelesTrapezoid(double upperA, double lowerB, double height) {
+        this.upperA = upperA;
+        this.lowerB = lowerB;
+        this.height = height;
+        setColor(new ColorSupplier().getRandomColor());
+    }
+
+    @Override
+    public void toDraw() {
+        System.out.println("Figure: isoscales trapezoid, area: " + obtainTheArea()
+                + " sq. units, length of the upper base: " + upperA
+                + " units, length of the lower base: " + lowerB
+                + " units, height: " + height + " units, color: " + getColor());
+    }
 
     @Override
     public double obtainTheArea() {
         return (lowerB + upperA) * height / 2;
-    }
-
-    public void setHeight(double height) {
-        this.height = height;
-    }
-
-    public void setLowerB(double lowerB) {
-        this.lowerB = lowerB;
-    }
-
-    public void setUpperA(double upperA) {
-        this.upperA = upperA;
     }
 }
 
