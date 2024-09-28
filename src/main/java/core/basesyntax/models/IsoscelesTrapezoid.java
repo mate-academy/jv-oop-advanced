@@ -1,4 +1,4 @@
-package core.basesyntax.model;
+package core.basesyntax.models;
 
 import core.basesyntax.Figure;
 
@@ -18,14 +18,30 @@ public class IsoscelesTrapezoid implements Figure {
     @Override
     public void draw() {
         System.out.println("Color: " + color
-                         + "Type: Isosceles Trapezoid"
-                         + "Height: " + height
-                         + "First Base: " + firstBase
-                         + "Second Base: " + secondBase);
+                + "Type: Isosceles Trapezoid"
+                + "Height: " + height
+                + "First Base: " + firstBase
+                + "Second Base: " + secondBase);
     }
 
     @Override
     public double getArea() {
         return (firstBase + secondBase) / 2 * height;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public double getFirstBase() {
+        return firstBase;
+    }
+
+    public double getSecondBase() {
+        return secondBase;
     }
 }
