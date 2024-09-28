@@ -1,24 +1,24 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private final double katetA;
-    private final double katetB;
+    private final double legA;
+    private final double legB;
 
-    public RightTriangle(double katetA, double katetB, String color) {
-        this.katetA = katetA;
-        this.katetB = katetB;
+    public RightTriangle(double legA, double legB, String color) {
+        this.legA = legA;
+        this.legB = legB;
         setColor(color);
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: right triangle, area: " + getArea()
-                + " sq. units, katet A: " + katetA + " units, katet B: " + katetB
+                + " sq. units, katet A: " + legA + " units, katet B: " + legB
                 + " units, color: " + getColor());
     }
 
     @Override
     public double getArea() {
-        return (katetA * katetB) / 2;
+        return (legA * legB) / 2;
     }
 }
