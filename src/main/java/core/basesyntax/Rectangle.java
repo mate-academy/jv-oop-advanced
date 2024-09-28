@@ -3,7 +3,6 @@ package core.basesyntax;
 public class Rectangle extends Figure {
     private final double width;
     private final double length;
-    private String color;
 
     public Rectangle(double width, double length, String color) {
         this.width = width;
