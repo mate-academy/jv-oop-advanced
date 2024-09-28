@@ -2,9 +2,10 @@ package core.basesyntax;
 
 public class Circle extends Figure {
     private final double radius;
+    private String color;
 
-    public Circle(double radius) {
-        setColor(Color.WHITE.name());
+    public Circle(double radius, String color) {
+        setColor(color);
         this.radius = radius;
     }
 

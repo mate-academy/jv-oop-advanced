@@ -3,11 +3,12 @@ package core.basesyntax;
 public class RightTriangle extends Figure {
     private final double katetA;
     private final double katetB;
+    private String color;
 
-    public RightTriangle(double katetA, double katetB) {
+    public RightTriangle(double katetA, double katetB, String color) {
         this.katetA = katetA;
         this.katetB = katetB;
-        setColor(new ColorSupplier().getRandomColor());
+        setColor(color);
     }
 
     @Override
