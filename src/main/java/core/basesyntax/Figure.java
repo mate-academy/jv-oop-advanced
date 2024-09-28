@@ -11,5 +11,3 @@ abstract class Figure implements AreaCalculator, Drawable {
         return color;
     }
 }
-
-
