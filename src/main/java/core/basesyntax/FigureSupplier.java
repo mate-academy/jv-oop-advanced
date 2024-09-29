@@ -16,8 +16,7 @@ public class FigureSupplier {
                     random.nextInt(10));
             case 4 -> new RightTriangle(colorSupplier.getRandomColor(), random.nextInt(10),
                     random.nextInt(10));
-            default -> new Square(colorSupplier.getRandomColor(), random.nextInt(10),
-                    random.nextInt(10));
+            default -> new Square(colorSupplier.getRandomColor(), random.nextInt(10));
         };
     }
 }
