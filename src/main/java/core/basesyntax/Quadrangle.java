@@ -11,13 +11,12 @@ public abstract class Quadrangle extends Figure implements Area {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return width * height;
     }
 
     @Override
-    public void draw() {
-        System.out.print(" height: " + height + ", width: " + width);
-        super.draw();
+    public String draw() {
+        return " height: " + height + ", width: " + width + super.draw();
     }
 }

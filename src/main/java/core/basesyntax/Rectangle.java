@@ -6,13 +6,12 @@ public class Rectangle extends Quadrangle {
     }
 
     @Override
-    public double area() {
-        return super.area();
+    public double getArea() {
+        return super.getArea();
     }
 
     @Override
-    public void draw() {
-        System.out.print("Figure: rectangle ,");
-        super.draw();
+    public String draw() {
+        return "Figure: rectangle ," + super.draw();
     }
 }

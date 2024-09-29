@@ -6,13 +6,12 @@ public class IsoscelesTrapezoid extends Quadrangle {
     }
 
     @Override
-    public double area() {
-        return super.area();
+    public double getArea() {
+        return super.getArea();
     }
 
     @Override
-    public void draw() {
-        System.out.print("Figure: isoscelesTrapezoid");
-        super.draw();
+    public String draw() {
+        return "Figure: isoscelesTrapezoid" + super.draw();
     }
 }

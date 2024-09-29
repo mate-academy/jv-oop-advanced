@@ -11,13 +11,12 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void draw() {
-        System.out.print("Figure: RightTriangle, height: " + height + ", leg: " + leg);
-        super.draw();
+    public String draw() {
+        return "Figure: RightTriangle, height: " + height + ", leg: " + leg + super.draw();
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return 0.5 * height * leg;
     }
 }

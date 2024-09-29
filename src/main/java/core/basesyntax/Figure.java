@@ -8,12 +8,12 @@ public abstract class Figure implements Area,Drawable {
     }
 
     @Override
-    public void draw() {
-        System.out.println(", area: " + area() + ", color: " + color);
+    public String draw() {
+        return ", area: " + getArea() + ", color: " + color;
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return 0;
     }
 }
