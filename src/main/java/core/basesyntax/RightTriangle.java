@@ -5,7 +5,7 @@ public class RightTriangle extends Figure {
     private final double secondLeg;
 
     public RightTriangle(Color color, double firstLeg, double secondLeg) {
-        super(color, (firstLeg * secondLeg) / 2);
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
@@ -14,10 +14,15 @@ public class RightTriangle extends Figure {
     public void draw() {
         System.out.printf("Figure: right triangle, area: %f, "
                         + "firstLeg: %f, secondLeg: %f, color: %s\n",
-                area,
+                getArea(),
                 firstLeg,
                 secondLeg,
                 color
         );
+    }
+
+    @Override
+    public double getArea() {
+        return ((firstLeg * secondLeg) / 2);
     }
 }

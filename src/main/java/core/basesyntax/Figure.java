@@ -1,11 +1,9 @@
 package core.basesyntax;
 
-public abstract class Figure implements Drawable {
+public abstract class Figure implements Drawable, AreaCalculable {
     protected Color color;
-    protected double area;
 
-    public Figure(Color color, double area) {
+    public Figure(Color color) {
         this.color = color;
-        this.area = area;
     }
 }
