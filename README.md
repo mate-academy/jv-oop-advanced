@@ -33,3 +33,4 @@ After generating the array, we need to display the entire list of objects that w
 ```
 
 #### [Try to avoid these common mistakes, while solving task](./checklist.md)
+
