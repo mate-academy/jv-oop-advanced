@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
+    private static final int DIVIDER_FOR_AREA = 2;
     private int bothside;
     private int height;
 
@@ -21,6 +22,6 @@ public class Rectangle extends Figure {
 
     @Override
     public double getArea() {
-        return (double) (bothside * height) / 2;
+        return (double) (bothside * height) / DIVIDER_FOR_AREA;
     }
 }

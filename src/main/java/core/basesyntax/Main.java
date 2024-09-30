@@ -3,7 +3,8 @@ package core.basesyntax;
 public class Main {
 
     public static void main(String[] args) {
-        FigureSupplier figureSupplier = new FigureSupplier();
+        ColorSupplier colorSupplier = new ColorSupplier();
+        FigureSupplier figureSupplier = new FigureSupplier(colorSupplier);
         Figure[] figures = new Figure[6];
 
         for (int i = 0; i < figures.length / 2; i++) {
