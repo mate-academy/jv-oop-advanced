@@ -6,8 +6,8 @@ public class FigureSupplier {
     private static final int FIGURES_AMOUNT = FigureName.values().length;
     private static final int MAX_SIZE = 10;
     private static final Color DEFAULT_COLOR = Color.WHITE;
-    Random random = new Random();
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         FigureName figureName = FigureName.values()[random.nextInt(FIGURES_AMOUNT)];

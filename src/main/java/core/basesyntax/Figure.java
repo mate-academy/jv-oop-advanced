@@ -8,6 +8,7 @@ public abstract class Figure implements Drawable {
     }
 
     public abstract double getArea();
+
     public abstract void draw();
 
     public String getColor() {
