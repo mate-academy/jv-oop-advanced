@@ -15,7 +15,7 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Shape:\t" + FigureName.CIRCLE
+        System.out.println("Shape:\t" + FigureName.CIRCLE.name()
                 + ",\tColor:\t" + this.getColor()
                 + ",\tArea:\t" + this.getArea()
                 + ",\tRadius:\t" + this.getRadius());

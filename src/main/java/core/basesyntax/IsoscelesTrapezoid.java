@@ -20,7 +20,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Shape:\t" + FigureName.ISOSCELES_TRAPEZOID
+        System.out.println("Shape:\t" + FigureName.ISOSCELES_TRAPEZOID.name()
                 + ",\tColor:\t" + this.getColor()
                 + ",\tArea:\t" + this.getArea()
                 + ",\tFirst Side:\t" + this.getFirstSide()

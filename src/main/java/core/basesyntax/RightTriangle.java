@@ -13,16 +13,16 @@ public class RightTriangle extends Figure {
 
     @Override
     public double getArea() {
-        return (firstLeg + secondLeg) / DIVIDER;
+        return (firstLeg * secondLeg) / DIVIDER;
     }
 
     @Override
     public void draw() {
-        System.out.println("Shape:\t" + FigureName.RIGHT_TRIANGLE
+        System.out.println("Shape:\t" + FigureName.RIGHT_TRIANGLE.name()
                 + ",\tColor:\t" + this.getColor()
                 + ",\tArea:\t" + this.getArea()
-                + ",\tFirst Leg:\t" + this.getSecondLeg()
-                + ",\tSecond Leg:\t" + this.getFirstLeg());
+                + ",\tFirst Leg:\t" + this.getFirstLeg()
+                + ",\tSecond Leg:\t" + this.getSecondLeg());
     }
 
     public double getFirstLeg() {

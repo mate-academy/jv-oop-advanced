@@ -8,6 +8,6 @@ public class ColorSupplier {
 
     public String getRandomColor() {
         Color color = Color.values()[random.nextInt(COLORS_AMOUNT)];
-        return color.toString();
+        return color.name();
     }
 }

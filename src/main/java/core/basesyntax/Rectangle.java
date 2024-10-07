@@ -17,7 +17,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Shape:\t" + FigureName.RECTANGLE
+        System.out.println("Shape:\t" + FigureName.RECTANGLE.name()
                 + ",\tColor:\t" + this.getColor()
                 + ",\tArea:\t" + this.getArea()
                 + ",\tFirst Side:\t" + this.getFirstSide()
