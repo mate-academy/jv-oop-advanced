@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    private static final FigureName figureName = FigureName.RECTANGLE;
     private double firstSide;
     private double secondSide;
 
@@ -18,7 +17,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("\nFigure:\t" + figureName
+        System.out.println("Shape:\t" + FigureName.RECTANGLE
                 + ",\tColor:\t" + this.getColor()
                 + ",\tArea:\t" + this.getArea()
                 + ",\tFirst Side:\t" + this.getFirstSide()

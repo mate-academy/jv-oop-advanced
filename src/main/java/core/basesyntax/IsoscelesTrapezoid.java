@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
-    private static final FigureName figureName = FigureName.ISOSCELES_TRAPEZOID;
     private static final int DIVIDER = 2;
     private double height;
     private double firstSide;
@@ -21,7 +20,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("\nFigure:\t" + figureName
+        System.out.println("Shape:\t" + FigureName.ISOSCELES_TRAPEZOID
                 + ",\tColor:\t" + this.getColor()
                 + ",\tArea:\t" + this.getArea()
                 + ",\tFirst Side:\t" + this.getFirstSide()

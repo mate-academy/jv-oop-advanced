@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private static final FigureName figureName = FigureName.RIGHT_TRIANGLE;
     private static final int DIVIDER = 2;
     private double firstLeg;
     private double secondLeg;
@@ -19,7 +18,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("\nFigure:\t" + figureName
+        System.out.println("Shape:\t" + FigureName.RIGHT_TRIANGLE
                 + ",\tColor:\t" + this.getColor()
                 + ",\tArea:\t" + this.getArea()
                 + ",\tFirst Leg:\t" + this.getSecondLeg()
