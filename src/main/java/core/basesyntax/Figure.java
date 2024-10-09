@@ -14,4 +14,6 @@ public abstract class Figure implements Draw {
     public void setColor(String color) {
         this.color = color;
     }
+
+    public abstract double getArea();
 }
