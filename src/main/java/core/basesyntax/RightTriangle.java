@@ -35,7 +35,7 @@ public class RightTriangle extends Figure implements Area, Draw {
     public void toDraw() {
         System.out.println("The Figure: Right Triangle; First leg = " + firstLeg
                 + "   Second leg = " + secondLeg
-                + "/n" + " Area: " + getArea()
-                + "/n" + "; Color: " + getColor());
+                + "\n" + " Area: " + getArea()
+                + "; Color: " + getColor() + "\n");
     }
 }

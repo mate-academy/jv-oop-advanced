@@ -24,6 +24,6 @@ public class Square extends Figure implements Area, Draw {
     @Override
     public void toDraw() {
         System.out.println("The Figure: Square; side = " + side
-                + "/n" + " Area: " + getArea() + "; Color: " + getColor());
+                + "\n" + " Area: " + getArea() + "; Color: " + getColor() + "\n");
     }
 }

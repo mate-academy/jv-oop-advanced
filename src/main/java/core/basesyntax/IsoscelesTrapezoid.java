@@ -45,8 +45,8 @@ public class IsoscelesTrapezoid extends Figure implements Area, Draw {
     public void toDraw() {
         System.out.println("The Figure: Trapezoid; First base = " + firstBase
                 + "   Second base = " + secondBase + " Height = " + height
-                + "/n" + " Area: " + getArea()
-                + "/n" + "; Color: " + getColor());
+                + "\n" + " Area: " + getArea()
+                + "; Color: " + getColor() + "\n");
 
     }
 }

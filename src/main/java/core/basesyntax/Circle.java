@@ -24,7 +24,7 @@ public class Circle extends Figure implements Area, Draw {
     @Override
     public void toDraw() {
         System.out.println("The Figure: Circle; radius = " + radius
-                +  "/n" + " Area: " + getArea()
-                + "/n" + "; Color: " + getColor());
+                +  "\n" + " Area: " + getArea()
+                + "; Color: " + getColor() + "\n");
     }
 }

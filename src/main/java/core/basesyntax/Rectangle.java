@@ -34,7 +34,7 @@ public class Rectangle extends Figure implements Area, Draw {
     @Override
     public void toDraw() {
         System.out.println("The Figure: Rectangle; First side = " + firstSide
-                + "   Second side = " + secondSide + "/n" + " Area: " + getArea()
-                + "/n" + "; Color: " + getColor());
+                + "   Second side = " + secondSide + " Area: " + getArea()
+                + "\n" + "; Color: " + getColor() + "\n");
     }
 }
