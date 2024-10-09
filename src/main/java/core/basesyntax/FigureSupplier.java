@@ -4,31 +4,41 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int NUMBER_OF_FIGURES = 5;
-    private ColorSupplier colorSupplier = new ColorSupplier();
-    private Random rand = new Random();
+    private static final double MAX_VALUE = 100;
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random rand = new Random();
 
     public Figure getRandomFigure() {
         int figureIndex = rand.nextInt(NUMBER_OF_FIGURES);
+
         String color = colorSupplier.getRandomColor();
         switch (figureIndex) {
             case 0:
-                return new Square(rand.nextDouble(100) + 1, color);
+                double side = rand.nextDouble(MAX_VALUE) + 1;
+                return new Square(side, color);
             case 1:
-                return new Rectangle(rand.nextDouble(100) + 1, rand.nextDouble(100) + 1, color);
+                double rectWidth = rand.nextDouble(MAX_VALUE) + 1;
+                double rectHeight = rand.nextDouble(MAX_VALUE) + 1;
+                return new Rectangle(rectWidth, rectHeight, color);
             case 2:
-                return new Circle(rand.nextDouble(100) + 1, color);
+                double radius = rand.nextDouble(MAX_VALUE) + 1;
+                return new Circle(radius, color);
             case 3:
-                return new RightTriangle(rand.nextDouble(100) + 1, rand.nextDouble(100) + 1, color);
+                double firstLeg = rand.nextDouble(MAX_VALUE) + 1;
+                double secondLeg = rand.nextDouble(100) + 1;
+                return new RightTriangle(firstLeg, secondLeg, color);
             case 4:
-                return new IsoscelesTrapezoid(rand.nextDouble(100) + 1,
-                        rand.nextDouble(100) + 1,
-                        rand.nextDouble(100) + 1, color);
+                double firstParallelSide = rand.nextDouble(MAX_VALUE) + 1;
+                double secondParallelSide = rand.nextDouble(MAX_VALUE) + 1;
+                double height = rand.nextDouble(MAX_VALUE) + 1;
+                return new IsoscelesTrapezoid(firstParallelSide, secondParallelSide,
+                        height, color);
             default:
                 return getDefaultFigure();
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, Colors.WHITE.toString());
+        return new Circle(10, Colors.WHITE.name());
     }
 }
