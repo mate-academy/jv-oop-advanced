@@ -11,7 +11,7 @@ public class Application {
         for (int i = 0; i < figures.length; i++) {
             if (i <= ARRAY_SIZE / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
-            } else if (i > ARRAY_SIZE / 2) {
+            } else {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
         }
