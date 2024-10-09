@@ -7,7 +7,7 @@ public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random rand = new Random();
 
-    public BaseEntity getRandomFigure() {
+    public Figure getRandomFigure() {
         int figureIndex = rand.nextInt(NUMBER_OF_FIGURES);
         String color = colorSupplier.getRandomColor();
         switch (figureIndex) {
@@ -28,7 +28,7 @@ public class FigureSupplier {
         }
     }
 
-    public BaseEntity getDefaultFigure() {
+    public Figure getDefaultFigure() {
         return new Circle(10, Colors.WHITE.toString());
     }
 }
