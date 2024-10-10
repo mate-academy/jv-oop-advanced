@@ -6,17 +6,17 @@ public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
     private static final int DEFAULT_VALUE = 10;
     private static final Color COLOR_WHITE = Color.WHITE;
-    private ColorSupplier colorSupplier = new ColorSupplier();
-    private Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        int figureNumber = random.nextInt(FIGURE_COUNT);
+        int figureNumber = getRandomNumber();
         String color = colorSupplier.getRandomColor();
 
-        int radius = random.nextInt(FIGURE_COUNT);
-        int sideOne = random.nextInt(FIGURE_COUNT);
-        int sideTwo = random.nextInt(FIGURE_COUNT);
-        int length = random.nextInt(FIGURE_COUNT);
+        int radius = getRandomNumber();
+        int sideOne = getRandomNumber();
+        int sideTwo = getRandomNumber();
+        int length = getRandomNumber();
 
         switch (figureNumber) {
             case 0:
@@ -37,5 +37,9 @@ public class FigureSupplier {
     public Figure getDefaultFigure() {
         String color = COLOR_WHITE.name().toLowerCase();
         return new Circle(color, DEFAULT_VALUE);
+    }
+
+    private int getRandomNumber() {
+        return random.nextInt(FIGURE_COUNT);
     }
 }
