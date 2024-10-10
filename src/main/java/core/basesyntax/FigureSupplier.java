@@ -13,24 +13,25 @@ public class FigureSupplier {
         int figureNumber = getRandomNumber();
         String color = colorSupplier.getRandomColor();
 
-        int radius = getRandomNumber();
-        int sideOne = getRandomNumber();
-        int sideTwo = getRandomNumber();
-        int length = getRandomNumber();
-
         switch (figureNumber) {
             case 0:
-                return new Square(color, sideOne);
+                return new Square(color, getRandomNumber());
             case 1:
-                return new Rectangle(color, sideOne,sideTwo);
+                return new Rectangle(color, getRandomNumber(), getRandomNumber());
             case 2:
-                return new RightTriangle(color, sideOne, sideTwo);
+                return new RightTriangle(color, getRandomNumber(), getRandomNumber());
             case 3:
-                return new Circle(color, radius);
+                return new Circle(color, getRandomNumber());
             case 4:
-                return new IsoscelesTrapezoid(color, sideOne, sideTwo, length);
+                return new IsoscelesTrapezoid(color,
+                            getRandomNumber(),
+                            getRandomNumber(),
+                            getRandomNumber());
             default:
-                return new IsoscelesTrapezoid(color, sideOne, sideTwo, length);
+                return new IsoscelesTrapezoid(color,
+                            getRandomNumber(),
+                            getRandomNumber(),
+                            getRandomNumber());
         }
     }
 

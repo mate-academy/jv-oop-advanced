@@ -5,7 +5,6 @@ public class Application {
 
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-
         Figure[] figures = new Figure[ARRAY_SIZE];
 
         for (int i = 0; i < figures.length; i++) {
@@ -14,7 +13,6 @@ public class Application {
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
             }
-
             figures[i].draw();
         }
     }
