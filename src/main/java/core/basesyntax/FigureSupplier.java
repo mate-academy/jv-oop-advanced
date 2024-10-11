@@ -4,11 +4,13 @@ import java.util.Random;
 
 public class FigureSupplier {
     private Random random = new Random();
+    private final int FIGURE_COUNT = 5;
+    ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figures getRandomFigure() {
-        int randomFigure = random.nextInt(5);
 
-        ColorSupplier colorSupplier = new ColorSupplier();
+    public Figure getRandomFigure() {
+        int randomFigure = random.nextInt(FIGURE_COUNT);
+
         String randomColor = colorSupplier.getRandomColor();
 
         switch (randomFigure) {
@@ -35,11 +37,12 @@ public class FigureSupplier {
                         randomDownSideTrapezoid,
                         randomUpSideTrapezoid);
             default:
-                return new Circle("White", 10);
+                return getDefaultFigure();
         }
     }
 
-    public Figures getDefaultFigure() {
-        return new Circle("White", 10);
+    public Figure getDefaultFigure() {
+        int defaultRadius = 10;
+        return new Circle("White", defaultRadius);
     }
 }

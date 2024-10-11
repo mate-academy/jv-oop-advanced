@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figures {
+public class Rectangle extends Figure {
     private int side;
     private int upAndDown;
 
@@ -12,12 +12,12 @@ public class Rectangle extends Figures {
 
     @Override
     public double area() {
-        return 2 * (side + upAndDown);
+        return side * upAndDown;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectagle, area: " + area()
+        System.out.println("Figure: rectangle, area: " + area()
                 + " sq. units, side: " + side + " units, up side and down side: " + upAndDown
                 + " units, color: " + getColor());
     }
