@@ -28,10 +28,7 @@ public class FigureSupplier {
                             getRandomNumber(),
                             getRandomNumber());
             default:
-                return new IsoscelesTrapezoid(color,
-                            getRandomNumber(),
-                            getRandomNumber(),
-                            getRandomNumber());
+                return getDefaultFigure();
         }
     }
 
