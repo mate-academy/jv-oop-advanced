@@ -4,12 +4,11 @@ import java.util.Random;
 
 public class FigureSupplier {
     private Random random = new Random();
-    private final int FIGURE_COUNT = 5;
-    ColorSupplier colorSupplier = new ColorSupplier();
-
+    private final int maxFigures = 5;
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int randomFigure = random.nextInt(FIGURE_COUNT);
+        int randomFigure = random.nextInt(maxFigures);
 
         String randomColor = colorSupplier.getRandomColor();
 
