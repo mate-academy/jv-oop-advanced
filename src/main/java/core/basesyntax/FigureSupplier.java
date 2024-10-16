@@ -16,15 +16,12 @@ public class FigureSupplier {
     
     public Figure getRandomFigure() {
         int indexFigure = randomNumber.nextInt(FIGURES_COUNT);
-        if (indexFigure == 0) {
-            return getRandomSquare();
-        } else if (indexFigure == 2) {
-            return getRandomRectangle();
-        } else if (indexFigure == 3) {
-            return getRandomRightTriangle();
-        } else {
-            return getIsoscelesTrapezoid();
-        }
+        return switch (indexFigure) {
+            case 0 -> getRandomSquare();
+            case 1 -> getRandomRectangle();
+            case 2 -> getRandomRightTriangle();
+            default -> getIsoscelesTrapezoid();
+        };
     }
 
     private Figure getIsoscelesTrapezoid() {
