@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class FigureSupplierImpl implements FigureSupplier {
+public class FigureSupplierImplementation implements FigureSupplier {
     private Random random = new Random();
 
     @Override
@@ -36,7 +36,7 @@ public class FigureSupplierImpl implements FigureSupplier {
     @Override
     public Figure getDefaultFigure() {
         var c = new Circle(10.0);
-        c.setColor(Colors.WHITE.toString());
+        c.setColor(Colors.WHITE.name());
         return c;
     }
 }

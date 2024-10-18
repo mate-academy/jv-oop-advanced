@@ -22,10 +22,10 @@ public class RightTriangle extends Figure {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Rectangle{");
+        final StringBuilder sb = new StringBuilder("RightTriangle{");
         sb.append("firstLeg=").append(firstLeg);
         sb.append(", secondLeg=").append(secondLeg);
-        sb.append(", color=").append(getColor());
+        sb.append(", color").append(getColor());
         sb.append('}');
         return sb.toString();
     }

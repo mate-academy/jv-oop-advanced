@@ -2,8 +2,8 @@ package core.basesyntax;
 
 public class Main {
     public static void main(String[] args) {
-        var supplierFigure = new FigureSupplierImpl();
-        var supplierColor = new ColorSupplier();
+        FigureSupplier supplierFigure = new FigureSupplierImplementation();
+        ColorSupplier supplierColor = new ColorSupplier();
         Figure[] array = new Figure[6];
         for (int i = 0; i < array.length / 2; i++) {
             var figure = supplierFigure.getRandomFigure();
