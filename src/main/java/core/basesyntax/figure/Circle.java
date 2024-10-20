@@ -5,7 +5,7 @@ import core.basesyntax.figure.enums.Color;
 public class Circle extends Figure {
     private int radius;
 
-    public Circle(int radius, Color color) {
+    public Circle(int radius, String color) {
         super(color);
         this.radius = radius;
     }
@@ -14,6 +14,7 @@ public class Circle extends Figure {
         return radius;
     }
 
+    @Override
     public double getArea() {
         double area = Math.PI * radius * radius;
         return (double) Math.round(area * 100) / 100;
@@ -21,7 +22,6 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-
         System.out.println("Figure: circle, "
                 + "area: " + getArea() + " sq. units, "
                 + "radius: " + radius + " units");

@@ -10,19 +10,18 @@ import core.basesyntax.figure.enums.Color;
 import java.util.Random;
 
 public class FigureSupplier {
-
     public static final int MAX_SIDE = 100;
     public static final int DEFAULT_RADIUS = 10;
-    public static final Color DEFAULT_COLOR = Color.WHITE;
+    public static final String DEFAULT_COLOR = Color.WHITE.toString();
     private static final String[] figures =
             new String[]{"Square", "Rectangle", "Triangle", "Circle", "Trapezoid"};
 
     private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        Random random = new Random();
         int figureRandom = random.nextInt(figures.length);
-        Color randomColor = colorSupplier.getRandomColor();
+        String randomColor = colorSupplier.getRandomColor();
         int side1 = 1 + random.nextInt(MAX_SIDE);
         int side2 = 1 + random.nextInt(MAX_SIDE);
         int side3 = 1 + random.nextInt(MAX_SIDE);

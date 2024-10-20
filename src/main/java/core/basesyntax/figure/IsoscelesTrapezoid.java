@@ -7,7 +7,7 @@ public class IsoscelesTrapezoid extends Figure {
     private int secondParallel;
     private int side;
 
-    public IsoscelesTrapezoid(int firstParallel, int secondParallel, int side, Color color) {
+    public IsoscelesTrapezoid(int firstParallel, int secondParallel, int side, String color) {
         super(color);
         this.firstParallel = firstParallel;
         this.secondParallel = secondParallel;
@@ -26,6 +26,7 @@ public class IsoscelesTrapezoid extends Figure {
         return side;
     }
 
+    @Override
     public double getArea() {
         double area = Math
                 .sqrt((firstParallel - secondParallel + 2 * side)

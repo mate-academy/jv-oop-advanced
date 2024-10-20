@@ -5,7 +5,7 @@ import core.basesyntax.figure.enums.Color;
 public class Square extends Figure {
     private int side;
 
-    public Square(int side, Color color) {
+    public Square(int side, String color) {
         super(color);
         this.side = side;
     }
@@ -15,10 +15,14 @@ public class Square extends Figure {
     }
 
     @Override
+    public double getArea() {
+        return side * side;
+    }
+
+    @Override
     public void draw() {
-        double area = side * side;
         System.out.println("Figure: square, "
-                + "area: " + area + " sq. units, "
+                + "area: " + getArea() + " sq. units, "
                 + "side: " + side + " units");
     }
 }

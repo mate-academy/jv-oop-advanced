@@ -1,12 +1,13 @@
 package core.basesyntax.figure;
 
 import core.basesyntax.figure.enums.Color;
+import core.basesyntax.figure.interfaces.AreaCalculator;
 import core.basesyntax.figure.interfaces.Drawable;
 
-public abstract class Figure implements Drawable {
-    private Color color;
+public abstract class Figure implements Drawable, AreaCalculator {
+    private String color;
 
-    public Figure(Color color) {
+    public Figure(String color) {
         this.color = color;
     }
 }
