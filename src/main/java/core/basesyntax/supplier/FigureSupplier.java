@@ -12,8 +12,8 @@ import java.util.Random;
 public class FigureSupplier {
     public static final int MAX_SIDE = 100;
     public static final int DEFAULT_RADIUS = 10;
-    public static final String DEFAULT_COLOR = Color.WHITE.toString();
-    private static final String[] figures =
+    public static final String DEFAULT_COLOR = Color.WHITE.name();
+    public static final String[] figures =
             new String[]{"Square", "Rectangle", "Triangle", "Circle", "Trapezoid"};
 
     private final ColorSupplier colorSupplier = new ColorSupplier();
@@ -22,9 +22,9 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         int figureRandom = random.nextInt(figures.length);
         String randomColor = colorSupplier.getRandomColor();
-        int side1 = 1 + random.nextInt(MAX_SIDE);
-        int side2 = 1 + random.nextInt(MAX_SIDE);
-        int side3 = 1 + random.nextInt(MAX_SIDE);
+        int side1 = getRandomInt(MAX_SIDE);
+        int side2 = getRandomInt(MAX_SIDE);
+        int side3 = getRandomInt(MAX_SIDE);
 
         return switch (figures[figureRandom]) {
             case "Square" -> new Square(side1, randomColor);
@@ -37,6 +37,10 @@ public class FigureSupplier {
                 yield null;
             }
         };
+    }
+
+    public int getRandomInt(int max) {
+        return 1 + random.nextInt(max);
     }
 
     public Figure getDefaultFigure() {

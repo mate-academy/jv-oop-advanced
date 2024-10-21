@@ -1,7 +1,5 @@
 package core.basesyntax.figure;
 
-import core.basesyntax.figure.enums.Color;
-
 public class IsoscelesTrapezoid extends Figure {
     private int firstParallel;
     private int secondParallel;

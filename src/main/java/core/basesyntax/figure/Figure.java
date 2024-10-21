@@ -1,6 +1,5 @@
 package core.basesyntax.figure;
 
-import core.basesyntax.figure.enums.Color;
 import core.basesyntax.figure.interfaces.AreaCalculator;
 import core.basesyntax.figure.interfaces.Drawable;
 

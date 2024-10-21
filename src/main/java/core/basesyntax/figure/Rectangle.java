@@ -1,7 +1,5 @@
 package core.basesyntax.figure;
 
-import core.basesyntax.figure.enums.Color;
-
 public class Rectangle extends Figure {
     private int firstSide;
     private int secondSide;
