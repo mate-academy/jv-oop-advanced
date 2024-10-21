@@ -33,13 +33,12 @@ public class FigureSupplier {
             case "Circle" -> new Circle(side1, randomColor);
             case "Trapezoid" -> new IsoscelesTrapezoid(side1, side2, side3, randomColor);
             default -> {
-                System.out.println("It should be impossible");
-                yield null;
+                throw new IllegalStateException("It should be impossible");
             }
         };
     }
 
-    public int getRandomInt(int max) {
+    private int getRandomInt(int max) {
         return 1 + random.nextInt(max);
     }
 
