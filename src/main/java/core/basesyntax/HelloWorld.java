@@ -5,9 +5,11 @@ package core.basesyntax;
  */
 public class HelloWorld {
     public static void main(String[] args) {
-        Figure[] figures = {new FigureSupplier().getRandomFigure(), new FigureSupplier().getDefaultFigure()
-                , new FigureSupplier().getRandomFigure(), new FigureSupplier().getDefaultFigure()
-                , new FigureSupplier().getRandomFigure(), new FigureSupplier().getRandomFigure()};
+        Figure[] figures = {new FigureSupplier().getRandomFigure(), new FigureSupplier()
+                .getDefaultFigure(),
+                new FigureSupplier().getRandomFigure(), new FigureSupplier().getDefaultFigure(),
+                new FigureSupplier().getRandomFigure(), new FigureSupplier().getRandomFigure()};
+
         for (Figure figure : figures) {
             figure.draw();
         }

@@ -32,7 +32,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double getArea() {
-        if (getFirstLeg() == getSecondLeg() && getTop() > getBottom()){
+        if (getFirstLeg() != getSecondLeg() && getTop() < getBottom()) {
             System.out.println("This is not isosceles ");
             return 0;
         }
@@ -47,7 +47,7 @@ public class IsoscelesTrapezoid extends Figure {
         System.out.println(" Figure: isosceles trapezoid, area: " + getArea()
                 + "sq. units, first leg : " + getFirstLeg() + ", second leg : " + getSecondLeg()
                 + "units, top leg : " + getTop() + " units, bottom leg: "
-                + getBottom() + " color: blue");
+                + getBottom() + " color: " + getColor());
 
     }
 }

@@ -3,19 +3,22 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private ColorSupplier colorSupplier = new ColorSupplier();
     public Figure getRandomFigure() {
+
         String[] figures = {"circle", "square", "RightTriangle", "trapezoid", "rectangle"};
         int index = new Random().nextInt(figures.length);
         Figure figure = null;
         String randomFigure = figures[index];
-        switch (randomFigure){
+        switch (randomFigure) {
             case "square" :
-                Figure square = new Square(new Random().nextInt(100), colorSupplier.getRandomColor());
+                Figure square = new Square(new Random().nextInt(100),
+                        colorSupplier.getRandomColor());
                 figure = square;
                 break;
             case "circle" :
-                Figure circle = new Circle(new Random().nextInt(100), colorSupplier.getRandomColor());
+                Figure circle = new Circle(new Random().nextInt(100),
+                        colorSupplier.getRandomColor());
                 figure = circle;
                 break;
             case "rectangle" :
@@ -24,8 +27,9 @@ public class FigureSupplier {
                 figure = rectangle;
                 break;
             case "RightTriangle" :
-                Figure RightTriangle = new RightTriangle(new Random().nextInt(100), colorSupplier.getRandomColor());
-                figure = RightTriangle;
+                Figure rightTriangle = new RightTriangle(new Random().nextInt(100),
+                        new Random().nextInt(100), colorSupplier.getRandomColor());
+                figure = rightTriangle;
                 break;
             case "trapezoid" :
                 Figure trapezoid = new IsoscelesTrapezoid(new Random().nextInt(50)
@@ -33,10 +37,13 @@ public class FigureSupplier {
                         .nextInt(50), colorSupplier.getRandomColor());
                 figure = trapezoid;
                 break;
+            default:
+                getRandomFigure();
+                break;
         }
         return figure;
     }
-    public Figure getDefaultFigure(){
-        return new Circle(10, String.valueOf(Color.WHITE));
+    public Figure getDefaultFigure() {
+        return new Circle(10, Color.WHITE.toString());
     }
 }
