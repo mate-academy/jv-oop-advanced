@@ -38,7 +38,7 @@ public class FigureSupplier {
                 figure = trapezoid;
                 break;
             default:
-                getRandomFigure();
+                getDefaultFigure();
                 break;
         }
         return figure;

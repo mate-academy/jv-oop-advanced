@@ -36,8 +36,8 @@ public class IsoscelesTrapezoid extends Figure {
             System.out.println("This is not isosceles ");
             return 0;
         }
-        double part1 = Math.pow(firstLeg, 2) - ((Math.pow((bottom - top),2) / 4));
-        double result = ((top + bottom) / 2) * Math.sqrt(part1);
+        double height = Math.sqrt(Math.pow(bottom, 2) - Math.pow(top, 2));
+        double result = ((top + bottom) / 2) * height;
         return result;
 
     }
