@@ -9,7 +9,7 @@ public class Circle extends AbstractFigure {
     }
 
     @Override
-    public double calculatedArea() {
+    public double calculateArea() {
         return Math.PI * radius * radius;
     }
 

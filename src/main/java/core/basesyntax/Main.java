@@ -21,7 +21,7 @@ public class Main {
         // Draw all figures
         for (Figure figure : figures) {
             figure.draw();
-            System.out.println("Area: " + figure.calculatedArea());
+            System.out.println("Area: " + figure.calculateArea());
             System.out.println();
         }
     }

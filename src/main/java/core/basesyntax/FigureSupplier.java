@@ -24,7 +24,7 @@ public class FigureSupplier {
                         random.nextDouble() * 10 + 1,
                         random.nextDouble() * 10 + 1);
             default:
-                return null;
+                throw new IllegalStateException("Unexpected value in random figure generation");
         }
     }
 

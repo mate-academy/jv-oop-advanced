@@ -11,7 +11,7 @@ public class Rectangle extends AbstractFigure {
     }
 
     @Override
-    public double calculatedArea() {
+    public double calculateArea() {
         return width * height;
     }
 

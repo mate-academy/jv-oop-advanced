@@ -9,7 +9,7 @@ public class Square extends AbstractFigure {
     }
 
     @Override
-    public double calculatedArea() {
+    public double calculateArea() {
         return side * side;
     }
 
