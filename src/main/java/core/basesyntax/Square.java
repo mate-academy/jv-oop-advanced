@@ -3,27 +3,28 @@ package core.basesyntax;
 public class Square extends FigureTwo implements AreaOfFigure,InfoFigure {
     //квадрат
 
-    public Square(String color, double firsSide) {
-        super(color, firsSide, firsSide);
+    public Square(String color, double firstSide) {
+        super(color, firstSide, firstSide);
     }
 
     @Override
     public double detAreaOfFigure() {
-        return getSecondSide() * getFirsSide();
+        return getSecondSide() * getFirstSide();
     }
 
     @Override
     public String infoFigure() {
-        return ("Длина : " + getFirsSide() + " см"
-                + " Ширина : " + getSecondSide() + " см"
-                + " Площадь квадрата = " + detAreaOfFigure());
+        return ("FirsSide : " + getFirstSide() + " см"
+                + " SecondSide : " + getSecondSide() + " см"
+                + " Area = " + detAreaOfFigure());
     }
 
     @Override
-    public String infoFromRigure() {
-        return ("Квадрат: " + "Длина: " + getFirsSide() + " см, "
-                + "Ширина: " + getSecondSide() + " см, "
-                + "Площадь квадрата: " + detAreaOfFigure()) + " см, "
-                + "Цвет: " + getColor();
+    public String infoFromFigure() {
+        return ("Square: "
+                + "FirsSide: " + getFirstSide() + " см, "
+                + "SecondSide: " + getSecondSide() + " см, "
+                + "Area: " + detAreaOfFigure()) + " см, "
+                + "Color: " + getColor();
     }
 }

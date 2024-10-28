@@ -2,17 +2,17 @@ package core.basesyntax;
 
 public class FigureTwo extends Figure {
 
-    private double firsSide; // длина
+    private double firstSide; // длина
     private double secondSide; // ширина
 
     public FigureTwo(String color, double firsSide, double secondSide) {
         super(color);
-        this.firsSide = firsSide;
+        this.firstSide = firsSide;
         this.secondSide = secondSide;
     }
 
-    public double getFirsSide() {
-        return firsSide;
+    public double getFirstSide() {
+        return firstSide;
     }
 
     public double getSecondSide() {

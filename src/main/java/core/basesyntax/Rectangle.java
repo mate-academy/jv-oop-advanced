@@ -9,21 +9,22 @@ public class Rectangle extends FigureTwo implements AreaOfFigure, InfoFigure {
 
     @Override
     public double detAreaOfFigure() {
-        return getFirsSide() * getSecondSide();
+        return getFirstSide() * getSecondSide();
     }
 
     @Override
     public String infoFigure() {
-        return ("Длина = " + getFirsSide()
+        return ("Длина = " + getFirstSide()
                 + " Ширина = " + getSecondSide()
-                + " Площадь прямоугольника = " + detAreaOfFigure());
+                + " Area = " + detAreaOfFigure());
     }
 
     @Override
-    public String infoFromRigure() {
-        return ("Прямоугольник: " + "Длина: " + getFirsSide() + " см, "
-                + "Ширина: " + getSecondSide() + " см , "
-                + "Площадь прямоугольник: " + detAreaOfFigure()) + " см, "
-                + "Цвет: " + getColor();
+    public String infoFromFigure() {
+        return ("Rectangle: "
+                + "FirsSide: " + getFirstSide() + " см, "
+                + "SecondSide: " + getSecondSide() + " см , "
+                + "Area: " + detAreaOfFigure()) + " см, "
+                + "Color: " + getColor();
     }
 }

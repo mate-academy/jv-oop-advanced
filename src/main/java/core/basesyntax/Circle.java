@@ -24,16 +24,16 @@ public class Circle extends Figure implements AreaOfFigure, InfoFigure {
 
     @Override
     public String infoFigure() {
-        return ("Радиус2 = " + radius + '\n'
-                + "Площадь круга = " + detAreaOfFigure());
+        return ("radius = " + radius + '\n'
+                + "Area = " + detAreaOfFigure());
     }
 
     @Override
-    public String infoFromRigure() { // работает
-        return ("Круг: "
-                + "Радиус: " + radius + " см, "
-                + "Площадь круга: " + detAreaOfFigure()) + " см, "
-                + "Цвет круга: " + getColor();
+    public String infoFromFigure() { // работает
+        return ("Circle: "
+                + "radius: " + radius + " см, "
+                + "Area of a circle: " + detAreaOfFigure()) + " см, "
+                + "Color: " + getColor();
     }
 
 }

@@ -10,22 +10,22 @@ public class RightTriangle extends FigureTwo implements AreaOfFigure, InfoFigure
 
     @Override
     public double detAreaOfFigure() {
-        return (getFirsSide() * height) / 2;
+        return (getFirstSide() * height) / 2;
     }
 
     @Override
     public String infoFigure() {
-        return ("Высота = " + height + "см ,"
-                + "Ширина = " + getSecondSide() + "см ,"
-                + "Площадь треугольника = " + detAreaOfFigure()) + "см";
+        return ("Height = " + height + "см ,"
+                + "FirsSide = " + getSecondSide() + "см ,"
+                + "Area = " + detAreaOfFigure()) + "см";
     }
 
     @Override
-    public String infoFromRigure() {
-        return ("Треугольник: "
-                + "Длина: " + getFirsSide() + " см, "
-                + "Высота: " + height + " см, "
-                + "Площадь треугольника: " + detAreaOfFigure()) + " см, "
-                + "Цвет: " + getColor();
+    public String infoFromFigure() {
+        return ("RightTriangle: "
+                + "FirsSide: " + getFirstSide() + " см, "
+                + "Height: " + height + " см, "
+                + "Area: " + detAreaOfFigure()) + " см, "
+                + "Color: " + getColor();
     }
 }

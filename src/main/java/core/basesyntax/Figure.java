@@ -7,9 +7,10 @@ public class Figure {
         this.color = color;
     }
 
-    public String infoFromRigure() {
+    public String infoFromFigure() {
         return "";
     }
+
 
     public String getColor() {
         return color;

@@ -11,24 +11,24 @@ public class IsoscelesTrapezoid extends FigureTwo implements AreaOfFigure, InfoF
 
     @Override
     public double detAreaOfFigure() {
-        return ((getFirsSide() + getSecondSide()) / 2) * height;
+        return ((getFirstSide() + getSecondSide()) / 2) * height;
     }
 
     @Override
     public String infoFigure() {
-        return ("Длина = " + getFirsSide() + " см ,"
-                + " Ширина = " + getSecondSide() + " см , "
-                + "Высота = " + height + " см , "
-                + " Площадь трапеция = " + detAreaOfFigure()) + " см";
+        return ("FirsSide = " + getFirstSide() + " см ,"
+                + " SecondSide = " + getSecondSide() + " см , "
+                + "Height = " + height + " см , "
+                + " Area = " + detAreaOfFigure()) + " см";
     }
 
     @Override
-    public String infoFromRigure() {
-        return ("Трапеция: "
-                + "Длина: " + getFirsSide() + " см, "
-                + "Ширина: " + getSecondSide() + " см, "
-                + "Высота: " + height + " см, "
-                + "Площадь трапеция: " + detAreaOfFigure()) + " см, "
-                + "Цвет: " + getColor();
+    public String infoFromFigure() {
+        return ("IsoscelesTrapezoid: "
+                + "FirsSide: " + getFirstSide() + " см, "
+                + "SecondSide: " + getSecondSide() + " см, "
+                + "Height: " + height + " см, "
+                + "Area: " + detAreaOfFigure()) + " см, "
+                + "Color: " + getColor();
     }
 }

@@ -7,9 +7,9 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
 
         for (int i = 0; i < 3; i++) {
-            System.out.println(figureSupplier.getRandomFigure().infoFromRigure());
+            System.out.println(figureSupplier.getRandomFigure().infoFromFigure());
 
-            System.out.println(figureSupplier.getDefaultFigure().infoFromRigure());
+            System.out.println(figureSupplier.getDefaultFigure().infoFromFigure());
         }
     }
 }
