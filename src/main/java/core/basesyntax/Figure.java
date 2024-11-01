@@ -1,15 +1,11 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public class Figure implements Drowbale, AreaCalculable {
     private String color;
 
     public Figure(String color) {
         this.color = color;
     }
-
-    public abstract double getArea();
-
-    public abstract void draw();
 
     public String getColor() {
         return color;
@@ -17,5 +13,15 @@ public abstract class Figure {
 
     public void setColor(String color) {
         this.color = color;
+    }
+
+    @Override
+    public double getArea() {
+        return 0;
+    }
+
+    @Override
+    public void draw() {
+
     }
 }
