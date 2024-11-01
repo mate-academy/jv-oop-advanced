@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements Drawable {
+public class RightTriangle extends Figure {
     private double base;
     private double height;
     private double hypotenuse;
