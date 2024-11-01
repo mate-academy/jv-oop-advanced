@@ -18,27 +18,27 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.toString().toLowerCase(), FigureName.CIRCLE.toString().toLowerCase(), 10);
+        return new Circle(Color.WHITE.name(), FigureName.CIRCLE.name(), 10);
     }
 
     private Circle getRandomCircle() {
-        return new Circle(new ColorSupplier().getRandomColor(), FigureName.CIRCLE.toString().toLowerCase(), new Random().nextInt(101));
+        return new Circle(new ColorSupplier().getRandomColor(), FigureName.CIRCLE.name(), new Random().nextInt(101));
     }
 
     private IsoscelesTrapezoid getIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(), FigureName.ISOSCELES_TRAPEZOID.toString().toLowerCase(), new Random().nextInt(101), new Random().nextInt(101), new Random().nextInt(101));
+        return new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(), FigureName.ISOSCELES_TRAPEZOID.name(), new Random().nextInt(101), new Random().nextInt(101), new Random().nextInt(101));
     }
 
     private Rectangle getRandomRectangle() {
-        return new Rectangle(new ColorSupplier().getRandomColor(), FigureName.RECTANGLE.toString().toLowerCase(), new Random().nextInt(101), new Random().nextInt(101));
+        return new Rectangle(new ColorSupplier().getRandomColor(), FigureName.RECTANGLE.name(), new Random().nextInt(101), new Random().nextInt(101));
     }
 
     private RightTriangle getRightTriangle() {
-        return new RightTriangle(new ColorSupplier().getRandomColor(), FigureName.RIGHT_TRIANGLE.toString().toLowerCase(), new Random().nextInt(101));
+        return new RightTriangle(new ColorSupplier().getRandomColor(), FigureName.RIGHT_TRIANGLE.name(), new Random().nextInt(101));
     }
 
     private Square getRandomSquare() {
-        return new Square(new ColorSupplier().getRandomColor(), FigureName.SQUARE.toString().toLowerCase(), new Random().nextInt(101));
+        return new Square(new ColorSupplier().getRandomColor(), FigureName.SQUARE.name(), new Random().nextInt(101));
     }
 
 }

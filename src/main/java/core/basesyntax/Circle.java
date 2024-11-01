@@ -11,7 +11,7 @@ public class Circle extends Figure implements AreaCalculator {
 
     @Override
     public int calculateArea() {
-        return radius * radius * (int) Math.PI;
+        return (int) (radius * radius * Math.PI);
 
     }
 
