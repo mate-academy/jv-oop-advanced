@@ -7,4 +7,5 @@ public enum FigureName {
     RECTANGLE,
     SQUARE,
     RIGHT_TRIANGLE
+
 }
