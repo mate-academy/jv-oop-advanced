@@ -15,11 +15,11 @@ public class IsoscelesTrapezoid extends FigureAbstract implements Figure {
 
     @Override
     public void draw() {
-
+System.out.println("Figure: IsoscelesTrapezoid, area: " + getArea() + "side1: " + side1 + ", side2: " + side2 + ", side3: " + side3 + ", side4: " + side4 + ", color: " + getColor());
     }
 
     @Override
     public double getArea() {
-        return ;
+        return side1 * side2 * side3 *side4;
     }
 }
