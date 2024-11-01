@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
-    int bottomBase;
-    int topBase;
-    int side;
+    private int bottomBase;
+    private int topBase;
+    private int side;
 
     public IsoscelesTrapezoid(String color, String name, int bottomBase, int topBase, int side) {
         super(color, name);
