@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure implements AreaCalculator {
-
     private int firstLag;
     private int secondLag;
 

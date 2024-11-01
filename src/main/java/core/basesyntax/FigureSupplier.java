@@ -5,7 +5,7 @@ import java.util.Random;
 public class FigureSupplier {
 
     public Figure getRandomFigure() {
-        Figure randomFigure = new Figure();
+        Figure randomFigure;
         int randomIndex = new Random().nextInt(5);
         switch (randomIndex) {
             case 0 -> randomFigure = getRandomCircle();
@@ -13,6 +13,7 @@ public class FigureSupplier {
             case 2 -> randomFigure = getRandomRectangle();
             case 3 -> randomFigure = getRightTriangle();
             case 4 -> randomFigure = getRandomSquare();
+            default -> randomFigure = new Figure();
         }
         return randomFigure;
     }
@@ -22,23 +23,36 @@ public class FigureSupplier {
     }
 
     private Circle getRandomCircle() {
-        return new Circle(new ColorSupplier().getRandomColor(), FigureName.CIRCLE.name(), new Random().nextInt(101));
+        return new Circle(new ColorSupplier().getRandomColor(),
+                FigureName.CIRCLE.name(),
+                new Random().nextInt(101));
     }
 
     private IsoscelesTrapezoid getIsoscelesTrapezoid() {
-        return new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(), FigureName.ISOSCELES_TRAPEZOID.name(), new Random().nextInt(101), new Random().nextInt(101), new Random().nextInt(101));
+        return new IsoscelesTrapezoid(new ColorSupplier().getRandomColor(),
+                FigureName.ISOSCELES_TRAPEZOID.name(),
+                new Random().nextInt(101),
+                new Random().nextInt(101),
+                new Random().nextInt(101));
     }
 
     private Rectangle getRandomRectangle() {
-        return new Rectangle(new ColorSupplier().getRandomColor(), FigureName.RECTANGLE.name(), new Random().nextInt(101), new Random().nextInt(101));
+        return new Rectangle(new ColorSupplier().getRandomColor(),
+                FigureName.RECTANGLE.name(),
+                new Random().nextInt(101),
+                new Random().nextInt(101));
     }
 
     private RightTriangle getRightTriangle() {
-        return new RightTriangle(new ColorSupplier().getRandomColor(), FigureName.RIGHT_TRIANGLE.name(), new Random().nextInt(101));
+        return new RightTriangle(new ColorSupplier().getRandomColor(),
+                FigureName.RIGHT_TRIANGLE.name(),
+                new Random().nextInt(101));
     }
 
     private Square getRandomSquare() {
-        return new Square(new ColorSupplier().getRandomColor(), FigureName.SQUARE.name(), new Random().nextInt(101));
+        return new Square(new ColorSupplier().getRandomColor(),
+                FigureName.SQUARE.name(),
+                new Random().nextInt(101));
     }
 
 }

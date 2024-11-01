@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class RightTriangle  extends Figure implements AreaCalculator{
-
     private int firstLag;
 
     public RightTriangle(String color, String name, int firstLag) {

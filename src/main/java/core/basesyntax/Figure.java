@@ -1,20 +1,19 @@
 package core.basesyntax;
 
 public class Figure {
-
     private String color;
     private String name;
 
-    public void draw() {
-        System.out.println(this);
+    public Figure(String color, String name) {
+        this.color = color;
+        this.name = name;
     }
 
     public Figure() {
     }
 
-    public Figure(String color, String name) {
-        this.color = color;
-        this.name = name;
+    public void draw() {
+        System.out.println(this);
     }
 
     public String getColor() {
