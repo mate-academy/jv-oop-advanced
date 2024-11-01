@@ -14,7 +14,11 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
 
     @Override
     public int calculateArea() {
-        return (int) (((bottomBase + topBase) / 2) * (Math.sqrt((Math.pow(side, 2)) - Math.pow((((Math.pow((bottomBase - topBase), 2)) + (Math.pow(side, 2)) - (Math.pow(side, 2))) / (2 * (bottomBase - topBase))), 2))));
+        return (int) (((bottomBase + topBase) / 2)
+                * (Math.sqrt((Math.pow(side, 2))
+                - Math.pow((((Math.pow((bottomBase - topBase), 2))
+                + (Math.pow(side, 2)) - (Math.pow(side, 2)))
+                / (2 * (bottomBase - topBase))), 2))));
     }
 
     @Override
