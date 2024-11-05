@@ -8,14 +8,14 @@ public class FigureSupplier {
 
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
-    private double randomDouble = random.nextDouble(MAX_FIGURE_SIDE_VALUE);
-    private String randomColor = colorSupplier.getRandomColor().toString().toLowerCase();
 
     public Figure getDefaultFigure() {
         return new Circle(10, Color.WHITE.toString().toLowerCase());
     }
 
     public Figure getRandomFigure() {
+        double randomDouble = random.nextDouble(MAX_FIGURE_SIDE_VALUE);
+        String randomColor = colorSupplier.getRandomColor().toString().toLowerCase();
         return switch (random.nextInt(FIGURES_AMOUNT)) {
             case 0 -> new Square(randomDouble,
                     randomColor);
