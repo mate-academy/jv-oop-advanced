@@ -11,18 +11,18 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double getArea() {
-        return length * width;
-    }
-
-    @Override
     public void draw() {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("Figure: rectangle, ")
                 .append("area: ").append(getArea()).append(" sq.units, ")
                 .append("length: ").append(length).append(" units, ")
                 .append("width: ").append(width).append(" units, ")
-                .append("color: ").append(color);
+                .append("color: ").append(color.name());
         System.out.println(stringBuilder.toString());
+    }
+
+    @Override
+    protected double getArea() {
+        return length * width;
     }
 }

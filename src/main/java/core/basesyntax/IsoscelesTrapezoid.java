@@ -13,12 +13,6 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double getArea() {
-        double h = Math.sqrt(Math.pow(leg, 2.0) - Math.pow((firstBase - secondBase), 2.0) / 4.0);
-        return (firstBase + secondBase) * h / 2.0;
-    }
-
-    @Override
     public void draw() {
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.append("Figure: isosceles trapezoid, ")
@@ -26,8 +20,14 @@ public class IsoscelesTrapezoid extends Figure {
                 .append("leg: ").append(leg).append(" units, ")
                 .append("firstBase: ").append(firstBase).append(" units, ")
                 .append("secondBase: ").append(secondBase).append(" units, ")
-                .append("color: ").append(color);
+                .append("color: ").append(color.name());
 
         System.out.println(stringBuilder.toString());
+    }
+
+    @Override
+    protected double getArea() {
+        double h = Math.sqrt(Math.pow(leg, 2.0) - Math.pow((firstBase - secondBase) / 2.0, 2.0));
+        return (firstBase + secondBase) * h / 2.0;
     }
 }
