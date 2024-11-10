@@ -11,7 +11,9 @@ public abstract class Figure {
     public void setColor(Color color) {
         this.color = color;
     }
-    public void setArea(double area) { this.area = area; }
+    public void setArea(double area) {
+        this.area = area;
+    }
 
     public String getFigure() {
         return figure.name().toLowerCase();

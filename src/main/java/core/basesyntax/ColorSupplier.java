@@ -8,7 +8,8 @@ public class ColorSupplier {
     private final Random random = new Random();
 
     public Color getRandomColor() {
-        int randomIndex = random.nextInt(availableColors.size() - 1);
+        int colorsMaxIndex = availableColors.size();
+        int randomIndex = random.nextInt(colorsMaxIndex);
         return availableColors.get(randomIndex);
     }
 }

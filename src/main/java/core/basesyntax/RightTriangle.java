@@ -4,8 +4,10 @@ public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
+    private static final int DEFAULT_LEG = 2;
+
     public RightTriangle(int firstLeg, int secondLeg, Color color) {
-        setFigure(FigureType.RIGHT_RECTANGLE);
+        setFigure(FigureType.RIGHT_TRIANGLE);
         setFirstLeg(firstLeg);
         setSecondLeg(secondLeg);
         setColor(color);
@@ -14,9 +16,9 @@ public class RightTriangle extends Figure {
     }
 
     public RightTriangle() {
-        setFigure(FigureType.RIGHT_RECTANGLE);
-        setFirstLeg(2);
-        setSecondLeg(2);
+        setFigure(FigureType.RIGHT_TRIANGLE);
+        setFirstLeg(DEFAULT_LEG);
+        setSecondLeg(DEFAULT_LEG);
         setColor(Color.BLUE);
         double area = getCalculatedArea();
         setArea(area);
