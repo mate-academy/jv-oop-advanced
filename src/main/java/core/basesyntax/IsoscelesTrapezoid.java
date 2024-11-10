@@ -1,6 +1,9 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
+    private static final String DEFAULT_DRAW_MESSAGE =
+            "Figure: %s, area: %s sq.units, top: %s units, "
+                    + "bottom: %s units, height: %s units, color: %s";
     private int topLength;
     private int bottomLength;
     private int height;
@@ -30,7 +33,7 @@ public class IsoscelesTrapezoid extends Figure {
     public void drawDetails() {
         System.out.println(
                 String.format(
-                        "Figure: %s, area: %s sq.units, top: %s units, bottom: %s units, height: %s units, color: %s",
+                        DEFAULT_DRAW_MESSAGE,
                         getFigure().toLowerCase(),
                         getArea(),
                         getTopLength(),

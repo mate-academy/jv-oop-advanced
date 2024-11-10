@@ -38,7 +38,7 @@ public class Square extends Figure {
     public void setSide(int side) {
         this.side = side;
     }
-    
+
     public int getSide() {
         return side;
     }

@@ -2,6 +2,8 @@ package core.basesyntax;
 
 public class RightTriangle extends Figure {
     private static final int DEFAULT_LEG = 2;
+    private static final String DEFAULT_DRAW_MESSAGE =
+            "Figure: %s, area: %s sq.units, firstLeg: %s units, secondLeg: %s units, color: %s";
 
     private int firstLeg;
     private int secondLeg;
@@ -31,9 +33,10 @@ public class RightTriangle extends Figure {
 
     @Override
     public void drawDetails() {
+
         System.out.println(
                 String.format(
-                        "Figure: %s, area: %s sq.units, firstLeg: %s units, secondLeg: %s units, color: %s",
+                        DEFAULT_DRAW_MESSAGE,
                         getFigure().toLowerCase(),
                         getArea(),
                         getFirstLeg(),

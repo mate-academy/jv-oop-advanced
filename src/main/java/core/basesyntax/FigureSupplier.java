@@ -22,7 +22,7 @@ public class FigureSupplier {
         FigureType randomFigure = availableFigures.get(randomIndex);
         Color randomColor = color.getRandomColor();
 
-        switch(randomFigure) {
+        switch (randomFigure) {
             case CIRCLE: return new Circle(
                     random.nextInt(MAX_RANDOM_INTEGER),
                     randomColor
