@@ -11,8 +11,12 @@ public class App {
         FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < figures.length; i++) {
             boolean isFirstPart = i < (FIGURES_LENGTH / 2);
+            if (isFirstPart) {
+                figures[i] = figureSupplier.getRandomFigure();
+            } else {
+                figures[i] = figureSupplier.getDefaultFigure();
+            }
 
-            figures[i] = figureSupplier.getRandomFigure(isFirstPart);
             figures[i].drawDetails();
         }
     }

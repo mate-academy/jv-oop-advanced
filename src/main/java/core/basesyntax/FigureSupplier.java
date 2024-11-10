@@ -15,7 +15,7 @@ public class FigureSupplier {
         return new Circle(DEFAULT_CIRCLE_RADIUS, Color.WHITE);
     }
 
-    public Figure getRandomFigure(boolean randomParameters) {
+    public Figure getRandomFigure() {
         int figuresMaxIndex = availableFigures.size();
         int randomIndex = random.nextInt(figuresMaxIndex);
 
