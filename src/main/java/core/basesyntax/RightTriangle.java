@@ -1,13 +1,8 @@
-// RightTriangle.java
-
-// Add an empty line after package declaration
 package core.basesyntax;
 
-import java.util.Random;
-
 public class RightTriangle extends Figure {
-    private double firstLeg;
-    private double secondLeg;
+    private final double firstLeg;
+    private final double secondLeg;
 
     // Add an empty line before constructor
     public RightTriangle(String color, double firstLeg, double secondLeg) {

@@ -1,6 +1,5 @@
 package core.basesyntax;
 
-import java.awt.*;
 import java.util.Random;
 
 public class FigureSupplier {
@@ -10,18 +9,16 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         String color = colorSupplier.getRandomColor();
-        switch (random.nextInt(5)) {
-            case 0:
-                return new Square(color, random.nextDouble() * MAX_SIZE);
-            case 1:
-                return new Rectangle(color, random.nextDouble() * MAX_SIZE, random.nextDouble() * MAX_SIZE);
-            case 2:
-                return new RightTriangle(color, random.nextDouble() * MAX_SIZE, random.nextDouble() * MAX_SIZE);
-            case 3:
-                return new Circle(color, random.nextDouble() * MAX_SIZE);
-            default:
-                return new IsoscelesTrapezoid(color, random.nextDouble() * MAX_SIZE, random.nextDouble() * MAX_SIZE, random.nextDouble() * MAX_SIZE);
-        }
+        return switch (random.nextInt(5)) {
+            case 0 -> new Square(color, random.nextDouble() * MAX_SIZE);
+            case 1 -> new Rectangle(color,
+                    random.nextDouble() * MAX_SIZE,
+                    random.nextDouble() * MAX_SIZE);
+            case 2 -> new RightTriangle(color, random.nextDouble() * MAX_SIZE, random.nextDouble() * MAX_SIZE);
+            case 3 -> new Circle(color, random.nextDouble() * MAX_SIZE);
+            default ->
+                    new IsoscelesTrapezoid(color, random.nextDouble() * MAX_SIZE, random.nextDouble() * MAX_SIZE, random.nextDouble() * MAX_SIZE);
+        };
     }
 
     public Figure getDefaultFigure() {
