@@ -17,15 +17,6 @@ public class RightTriangle extends Figure {
         setArea(area);
     }
 
-    public RightTriangle() {
-        setFigure(FigureType.RIGHT_TRIANGLE);
-        setFirstLeg(DEFAULT_LEG);
-        setSecondLeg(DEFAULT_LEG);
-        setColor(Color.BLUE);
-        double area = getCalculatedArea();
-        setArea(area);
-    }
-
     @Override
     public double getCalculatedArea() {
         return firstLeg * secondLeg / 2.0;

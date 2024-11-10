@@ -11,14 +11,6 @@ public class Square extends Figure {
         setArea(area);
     }
 
-    public Square() {
-        setFigure(FigureType.SQUARE);
-        setSide(2);
-        setColor(Color.BLUE);
-        double area = getCalculatedArea();
-        setArea(area);
-    }
-
     @Override
     public double getCalculatedArea() {
         return side * side;

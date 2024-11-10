@@ -11,17 +11,9 @@ public class Circle extends Figure {
         setArea(area);
     }
 
-    public Circle() {
-        setFigure(FigureType.CIRCLE);
-        setRadius(2);
-        setColor(Color.BLUE);
-        double area = Math.round(getCalculatedArea());
-        setArea(area);
-    }
-
     @Override
     public double getCalculatedArea() {
-        return Math.PI * radius * 2;
+        return Math.PI * radius * radius;
     }
 
     @Override

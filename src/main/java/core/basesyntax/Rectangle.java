@@ -15,15 +15,6 @@ public class Rectangle extends Figure {
         setColor(color);
     }
 
-    public Rectangle() {
-        setFigure(FigureType.RECTANGLE);
-        setWidth(2);
-        setLength(2);
-        double area = getCalculatedArea();
-        setArea(area);
-        setColor(Color.BLUE);
-    }
-
     @Override
     public double getCalculatedArea() {
         return width * length;

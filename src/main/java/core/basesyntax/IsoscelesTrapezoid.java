@@ -16,17 +16,9 @@ public class IsoscelesTrapezoid extends Figure {
         setColor(color);
     }
 
-    public IsoscelesTrapezoid() {
-        setFigure(FigureType.ISOSCELES_TRAPEZOID);
-        setTopLength(2);
-        setBottomLength(2);
-        setHeight(2);
-        setColor(Color.BLUE);
-    }
-
     @Override
     public double getCalculatedArea() {
-        return ((bottomLength * topLength) * height) / 2.0;
+        return ((topLength + bottomLength) * height) / 2.0;
     }
 
     @Override
