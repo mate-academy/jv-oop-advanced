@@ -23,6 +23,7 @@ public class Square extends Figure {
     public double getCalculatedArea() {
         return side * side;
     }
+
     @Override
     public void drawDetails() {
         System.out.println(
@@ -37,6 +38,7 @@ public class Square extends Figure {
     public void setSide(int side) {
         this.side = side;
     }
+    
     public int getSide() {
         return side;
     }

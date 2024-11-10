@@ -26,7 +26,13 @@ public class Circle extends Figure {
 
     @Override
     public void drawDetails() {
-        System.out.println(String.format("Figure: %s, area: %s sq.units, radius: %s units, color: %s", getFigure().toLowerCase(), getArea(), getRadius(), getColor().toString().toLowerCase()));
+        System.out.println(
+                String.format("Figure: %s, area: %s sq.units, radius: %s units, color: %s",
+                getFigure().toLowerCase(),
+                getArea(),
+                getRadius(),
+                getColor().toString().toLowerCase())
+        );
     }
 
     public void setRadius(int radius) {

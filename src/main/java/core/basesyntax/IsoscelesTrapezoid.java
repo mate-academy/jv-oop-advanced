@@ -25,10 +25,12 @@ public class IsoscelesTrapezoid extends Figure {
     public double getCalculatedArea() {
         return ((bottomLength * topLength) * height) / 2.0;
     }
+
     @Override
     public void drawDetails() {
         System.out.println(
-                String.format("Figure: %s, area: %s sq.units, top: %s units, bottom: %s units, height: %s units, color: %s",
+                String.format(
+                        "Figure: %s, area: %s sq.units, top: %s units, bottom: %s units, height: %s units, color: %s",
                         getFigure().toLowerCase(),
                         getArea(),
                         getTopLength(),
@@ -41,9 +43,11 @@ public class IsoscelesTrapezoid extends Figure {
     public void setBottomLength(int bottomLength) {
         this.bottomLength = bottomLength;
     }
+
     public void setTopLength(int topLength) {
         this.topLength = topLength;
     }
+
     public void setHeight(int height) {
         this.height = height;
     }
@@ -51,9 +55,11 @@ public class IsoscelesTrapezoid extends Figure {
     public int getBottomLength() {
         return bottomLength;
     }
+
     public int getTopLength() {
         return topLength;
     }
+
     public int getHeight() {
         return height;
     }

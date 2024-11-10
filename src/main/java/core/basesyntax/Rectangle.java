@@ -26,10 +26,12 @@ public class Rectangle extends Figure {
     public double getCalculatedArea() {
         return width * length;
     }
+
     @Override
     public void drawDetails() {
         System.out.println(
-                String.format("Figure: %s, area: %s sq.units, width: %s units, length: %s units, color: %s",
+                String.format(
+                        "Figure: %s, area: %s sq.units, width: %s units, length: %s units, color: %s",
                         getFigure().toLowerCase(),
                         getArea(),
                         getWidth(),
@@ -41,6 +43,7 @@ public class Rectangle extends Figure {
     public void setWidth(int width) {
         this.width = width;
     }
+
     public void setLength(int length) {
         this.length = length;
     }
@@ -48,6 +51,7 @@ public class Rectangle extends Figure {
     public int getWidth() {
         return width;
     }
+
     public int getLength() {
         return length;
     }

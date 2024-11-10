@@ -8,9 +8,11 @@ public abstract class Figure {
     public void setFigure(FigureType figure) {
         this.figure = figure;
     }
+
     public void setColor(Color color) {
         this.color = color;
     }
+
     public void setArea(double area) {
         this.area = area;
     }
@@ -18,13 +20,16 @@ public abstract class Figure {
     public String getFigure() {
         return figure.name().toLowerCase();
     }
+
     public Color getColor() {
         return color;
     }
+
     public double getArea() {
         return area;
     }
 
     public abstract double getCalculatedArea();
+
     public abstract void drawDetails();
 }

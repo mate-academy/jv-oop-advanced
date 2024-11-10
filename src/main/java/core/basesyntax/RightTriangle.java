@@ -1,10 +1,10 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
+    private static final int DEFAULT_LEG = 2;
+
     private int firstLeg;
     private int secondLeg;
-
-    private static final int DEFAULT_LEG = 2;
 
     public RightTriangle(int firstLeg, int secondLeg, Color color) {
         setFigure(FigureType.RIGHT_TRIANGLE);
@@ -28,10 +28,12 @@ public class RightTriangle extends Figure {
     public double getCalculatedArea() {
         return firstLeg * secondLeg / 2.0;
     }
+
     @Override
     public void drawDetails() {
         System.out.println(
-                String.format("Figure: %s, area: %s sq.units, firstLeg: %s units, secondLeg: %s units, color: %s",
+                String.format(
+                        "Figure: %s, area: %s sq.units, firstLeg: %s units, secondLeg: %s units, color: %s",
                         getFigure().toLowerCase(),
                         getArea(),
                         getFirstLeg(),
@@ -43,6 +45,7 @@ public class RightTriangle extends Figure {
     public void setFirstLeg(int firstLeg) {
         this.firstLeg = firstLeg;
     }
+
     public void setSecondLeg(int secondLeg) {
         this.secondLeg = secondLeg;
     }
@@ -50,6 +53,7 @@ public class RightTriangle extends Figure {
     public int getFirstLeg() {
         return firstLeg;
     }
+
     public int getSecondLeg() {
         return secondLeg;
     }
