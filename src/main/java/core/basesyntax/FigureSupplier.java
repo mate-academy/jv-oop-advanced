@@ -14,10 +14,12 @@ public class FigureSupplier {
             case 1 -> new Rectangle(color,
                     random.nextDouble() * MAX_SIZE,
                     random.nextDouble() * MAX_SIZE);
-            case 2 -> new RightTriangle(color, random.nextDouble() * MAX_SIZE, random.nextDouble() * MAX_SIZE);
+            case 2 -> new RightTriangle(color, random.nextDouble() * MAX_SIZE, random.nextDouble()
+                    * MAX_SIZE);
             case 3 -> new Circle(color, random.nextDouble() * MAX_SIZE);
             default ->
-                    new IsoscelesTrapezoid(color, random.nextDouble() * MAX_SIZE, random.nextDouble() * MAX_SIZE, random.nextDouble() * MAX_SIZE);
+                    new IsoscelesTrapezoid(color, random.nextDouble()
+                            * MAX_SIZE, random.nextDouble() * MAX_SIZE, random.nextDouble() * MAX_SIZE);
         };
     }
 
