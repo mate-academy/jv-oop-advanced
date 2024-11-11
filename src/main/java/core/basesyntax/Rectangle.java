@@ -12,6 +12,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
+        super.draw();
         System.out.println("width: " + width + " units, height: " + height + " units");
     }
 
