@@ -1,8 +1,12 @@
 package core.basesyntax;
 
-public abstract class Figure implements Drawable,Measurable{
+import core.basesyntax.Drawable;
+import core.basesyntax.Measurable;
+
+public abstract class Figure implements Drawable, Measurable {
     protected String color;
-    public Figure(String color){
+
+    public Figure(String color) {
         this.color = color;
     }
 
