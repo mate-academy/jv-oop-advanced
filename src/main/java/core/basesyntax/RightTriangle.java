@@ -12,6 +12,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
+        super.draw();
         System.out.println("firstLeg: " + firstLeg + " units, secondLeg: " + secondLeg + " units");
     }
 
