@@ -1,4 +1,4 @@
-package basesyntax.service;
+package core.basesyntax.service;
 
 import core.basesyntax.model.Color;
 

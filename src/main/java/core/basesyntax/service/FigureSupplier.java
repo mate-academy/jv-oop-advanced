@@ -1,13 +1,12 @@
-package basesyntax.service;
+package core.basesyntax.service;
 
-import basesyntax.model.Figure;
 import core.basesyntax.model.*;
 
 import java.util.Random;
 
 public class FigureSupplier {
 
-    public Figure getRandomFigure() {
+    public core.basesyntax.model.Figure getRandomFigure() {
         ColorSupplier colorSupplier = new ColorSupplier();
         Random random = new Random();
 
@@ -25,7 +24,7 @@ public class FigureSupplier {
         return figures[random.nextInt(figures.length)];
     }
 
-    public Figure getDefaultFigure() {
+    public core.basesyntax.model.Figure getDefaultFigure() {
         return new Circle(Color.White.name(), 2);
     }
 }

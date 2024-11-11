@@ -1,4 +1,4 @@
-package basesyntax.model;
+package core.basesyntax.model;
 
 public abstract class Figure {
     String color;
