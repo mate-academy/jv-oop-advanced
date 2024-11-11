@@ -1,11 +1,12 @@
 import java.util.Random;
 
 class FigSupplier {
+    private static final int FIGURE_COUNT = 5;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Shape getRandomFigure() {
-        int figureType = random.nextInt(5);
+        int figureType = random.nextInt(FIGURE_COUNT);
         String color = colorSupplier.getRandomColor();
         switch (figureType) {
             case 0:
@@ -19,7 +20,7 @@ class FigSupplier {
             case 4:
                 return new IsoscelesTrapezoid(color, 1 + random.nextDouble() * 10, 1 + random.nextDouble() * 10, 1 + random.nextDouble() * 10);
             default:
-                return null;
+                return getDefaultFigure();
         }
     }
         public Shape getDefaultFigure() {
