@@ -2,8 +2,6 @@ package core.basesyntax.model;
 
 import core.basesyntax.service.AreaCalculator;
 
-import java.text.DecimalFormat;
-
 public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
 
     private final double longerBase;

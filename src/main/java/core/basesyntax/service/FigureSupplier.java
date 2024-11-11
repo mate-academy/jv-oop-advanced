@@ -2,7 +2,6 @@ package core.basesyntax.service;
 
 import core.basesyntax.model.*;
 
-import java.text.DecimalFormat;
 import java.util.Random;
 
 public class FigureSupplier {
