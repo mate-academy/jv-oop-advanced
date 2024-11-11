@@ -10,13 +10,13 @@ public class HelloWorld {
         FigureSupplier supplier = new FigureSupplier();
         Figure[] figures = new Figure[COUNT_FIGURES];
         int i = 0;
-        for(; i < COUNT_FIGURES/2; i++){
+        for (; i < COUNT_FIGURES/2; i++){
             figures[i] = supplier.getRandomFigure();
         }
-        for(; i < COUNT_FIGURES; i++) {
+        for (; i < COUNT_FIGURES; i++) {
             figures[i] = supplier.getDefaultFigure();
         }
-        for(int num = 0; num < COUNT_FIGURES; num++) {
+        for (int num = 0; num < COUNT_FIGURES; num++) {
             System.out.println(figures[num].showInformation());
         }
     }

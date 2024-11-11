@@ -13,7 +13,7 @@ public class Circle extends Figure {
     }
     @Override
     public double countArea() {
-        return PI*radius*radius;
+        return PI * radius * radius;
     }
 
     @Override

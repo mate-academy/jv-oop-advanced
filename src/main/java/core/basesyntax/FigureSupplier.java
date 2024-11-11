@@ -7,15 +7,17 @@ import java.util.Random;
 public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier supplier = new ColorSupplier();
+    private static final int FIGURE_COUNT = 5;
+
     public Figure getRandomFigure() {
         Color color = supplier.getRandomColor();
-        return switch (random.nextInt(5)) {
+        return switch (random.nextInt(FIGURE_COUNT)) {
             case 0 -> getRandomCircle(color);
             case 1 -> getRandomRectangle(color);
             case 2 -> getRandomIsoscelentTrapezoid(color);
             case 3 -> getRandomSquare(color);
             case 4 -> getRandomRightTriangle(color);
-            default -> null;
+            default -> getDefaultFigure();
         };
     }
 
