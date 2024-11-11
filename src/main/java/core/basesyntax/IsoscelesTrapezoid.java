@@ -2,30 +2,30 @@ package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
     private double height;
-    private double aBase;
-    private double bBase;
+    private double firstBase;
+    private double secondBase;
 
-    public IsoscelesTrapezoid(double height, double aBase, double bBase, String color) {
+    public IsoscelesTrapezoid(double height, double firstBase, double secondBase, String color) {
         super(color);
         this.height = height;
-        this.aBase = aBase;
-        this.bBase = bBase;
+        this.firstBase = firstBase;
+        this.secondBase = secondBase;
     }
 
-    public double getbBase() {
-        return bBase;
+    public double getSecondBase() {
+        return secondBase;
     }
 
-    public void setbBase(double bBase) {
-        this.bBase = bBase;
+    public void setSecondBase(double secondBase) {
+        this.secondBase = secondBase;
     }
 
-    public double getaBase() {
-        return aBase;
+    public double getFirstBase() {
+        return firstBase;
     }
 
-    public void setaBase(double aBase) {
-        this.aBase = aBase;
+    public void setFirstBase(double firstBase) {
+        this.firstBase = firstBase;
     }
 
     public double getHeight() {
@@ -38,11 +38,14 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double calculateArea() {
-        return ((aBase + bBase) * height) / 2;
+        return ((firstBase + secondBase) * height) / 2;
     }
 
     @Override
     public void draw() {
-        System.out.printf("Figure: isosceles trapezoid, area: %s sq. units, a base: %s units, b base: %s units, height: %s units, color: %s%n", calculateArea(), aBase, bBase, height, getColor());
+        String firstPart = "Figure: isosceles trapezoid, area: " + calculateArea() + " sq. units, first base: ";
+        String secondPart = firstBase + " units, second base: " + secondBase + " units, height: ";
+        String thirdPart = height + " units, color: " + getColor();
+        System.out.println(firstPart + secondPart + thirdPart);
     }
 }
