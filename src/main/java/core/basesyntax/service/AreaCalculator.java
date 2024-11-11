@@ -1,7 +1,5 @@
-package core.basesyntax.model;
+package core.basesyntax.service;
 
 public interface AreaCalculator {
-    String color = "";
-    
-    void getArea();
+    double getArea();
 }
