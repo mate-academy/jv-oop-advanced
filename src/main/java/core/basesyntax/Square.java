@@ -5,12 +5,11 @@ public class Square extends Figure {
 
     public Square(String color,double side) {
         super(color);
-        this.side=side;
+        this.side = side;
     }
 
     @Override
     public void draw() {
-        super.draw();
         System.out.println("side: " + side + " units");
     }
 
