@@ -1,13 +1,12 @@
 package core.basesyntax;
 
 public class Circle extends Figure implements GetFigureArea {
-    private double radius = 5;
+    private double radius;
 
-    @Override
-    public String toString() {
-        return "Figure - circle: radius " + this.radius
+    public void draw() {
+        System.out.println("Figure - circle: radius " + this.radius
                 + " ,area " + this.getArea() + " color "
-                + this.color;
+                + this.getColor());
     }
 
     @Override

@@ -4,12 +4,11 @@ public class RightTriangle extends Figure implements GetFigureArea {
     private double firstLeg;
     private double secondLeg;
 
-    @Override
-    public String toString() {
-        return "Figure - RightTriangle: firstLeg " + this.firstLeg
+    public void draw() {
+        System.out.println("Figure - RightTriangle: firstLeg " + this.firstLeg
                 + " ,secondLeg " + this.secondLeg
                 + " ,area " + this.getArea() + " color "
-                + this.color;
+                + this.getColor());
     }
 
     @Override

@@ -3,11 +3,10 @@ package core.basesyntax;
 public class Square extends Figure implements GetFigureArea {
     private double side;
 
-    @Override
-    public String toString() {
-        return "Figure - Square: side " + this.side
+    public void draw() {
+        System.out.println("Figure - Square: side " + this.side
                 + " ,area " + this.getArea() + " color "
-                + this.color;
+                + this.getColor());
     }
 
     @Override

@@ -5,12 +5,11 @@ public class IsoscelesTrapezoid extends Figure implements GetFigureArea{
     private double base2;
     private double height;
 
-    @Override
-    public String toString() {
-        return "Figure - IsoscelesTrapezoid: base1 " + this.base1
+    public void draw() {
+        System.out.println("Figure - IsoscelesTrapezoid: base1 " + this.base1
                 + ", base2 " + this.base2 + " ,height " + this.height
                 + " ,area " + this.getArea() + " color "
-                + this.color;
+                + this.getColor());
     }
 
     @Override

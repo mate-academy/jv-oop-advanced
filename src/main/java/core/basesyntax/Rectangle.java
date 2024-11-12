@@ -4,12 +4,11 @@ public class Rectangle extends Figure implements GetFigureArea {
     private double side1;
     private double side2;
 
-    @Override
-    public String toString() {
-        return "Figure - Rectangle: side1 " + this.side1
+    public void draw() {
+        System.out.println("Figure - Rectangle: side1 " + this.side1
                 + " ,side2 " + this.side2
                 + " ,area " + this.getArea() + " color "
-                + this.color;
+                + this.getColor());
     }
 
     @Override

@@ -2,6 +2,8 @@ package core.basesyntax;
 
 public abstract class Figure {
     protected String color;
-
-    public abstract String toString();
+    public abstract void draw();
+    public String getColor() {
+        return this.color;
+    };
 }
