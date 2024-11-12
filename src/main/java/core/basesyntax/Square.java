@@ -15,7 +15,7 @@ public class Square extends Figure {
 
     @Override
     public void drawFigure() {
-        System.out.println("Квадрат { сторона = " + this.side + ", площа = "
-                            + getS() + ", колір - " + getColor() + " }");
+        System.out.println("Square { side = " + this.side + ", square = "
+                            + getS() + ", color - " + getColor() + " }");
     }
 }

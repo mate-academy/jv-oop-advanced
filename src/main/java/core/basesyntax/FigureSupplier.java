@@ -9,7 +9,7 @@ public class FigureSupplier {
         int index = random.nextInt(Figures.values().length);
         Figures figure = Figures.values()[index];
 
-        switch (figure.toString()) {
+        switch (figure.name()) {
             case "SQUARE":
                 return new Square(colorSupplier.getRandomColor(), random.nextDouble() * 100);
             case "RECTANGLE":
@@ -26,7 +26,7 @@ public class FigureSupplier {
                         random.nextDouble() * 100,
                         random.nextDouble() * 100);
             default:
-                return null;
+                throw new IllegalStateException("Unexpected value: " + figure.name());
         }
     }
 

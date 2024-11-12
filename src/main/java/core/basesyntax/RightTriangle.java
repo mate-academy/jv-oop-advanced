@@ -18,9 +18,9 @@ public class RightTriangle extends Figure {
 
     @Override
     public void drawFigure() {
-        System.out.println("Прямокутний трикутник { катет1 = " + this.leg1 + ", катет2 = "
-                            + this.leg2 + ", гіпотенуза = " + this.hypotenusa
-                            + ", площа = " + getS()
-                            + ", колір - " + getColor() + " }");
+        System.out.println("Right Triangle { leg 1 = " + this.leg1 + ", leg 2 = "
+                            + this.leg2 + ", hypotenusa = " + this.hypotenusa
+                            + ", square = " + getS()
+                            + ", color - " + getColor() + " }");
     }
 }

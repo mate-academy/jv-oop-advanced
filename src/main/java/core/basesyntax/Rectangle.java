@@ -17,7 +17,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void drawFigure() {
-        System.out.println("Прямокутник { сторона1 = " + this.side1 + ", сторона2 = " + this.side2
-                            + ", площа = " + getS() + ", колір - " + getColor() + " }");
+        System.out.println("Rectangle { side 1 = " + this.side1 + ", side 2 = " + this.side2
+                            + ", square = " + getS() + ", color - " + getColor() + " }");
     }
 }
