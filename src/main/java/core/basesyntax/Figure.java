@@ -1,8 +1,5 @@
 package core.basesyntax;
 
-import core.basesyntax.Drawable;
-import core.basesyntax.Measurable;
-
 public abstract class Figure implements Drawable, Measurable {
     protected String color;
 
@@ -12,6 +9,7 @@ public abstract class Figure implements Drawable, Measurable {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + this.getClass().getSimpleName() + ", area: " + getArea() + " sq. units, color: " + color);
+        System.out.println("Figure: " + this.getClass().getSimpleName()
+                + ", area: " + getArea() + " sq. units, color: " + color);
     }
 }

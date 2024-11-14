@@ -15,7 +15,8 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public void draw() {
         super.draw();
-        System.out.println("base1: " + base1 + " units, base2: " + base2 + " units, height: " + height + " units");
+        System.out.println("base1: " + base1 + " units, base2: "
+                + base2 + " units, height: " + height + " units");
     }
 
     @Override
