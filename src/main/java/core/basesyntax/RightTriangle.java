@@ -1,5 +1,5 @@
 package core.basesyntax;
 
-public class HelloWorld {
+public class RightTriangle {
 
 }
