@@ -1,13 +1,13 @@
 package core.basesyntax;
 
 public class FigureSupplier extends ColorSupplier {
-    public static final int Max_Size = 10;
+    public static final int MAX_SIZE = 10;
     private static final String DEFAULT_COLOR = "white";
     private static final int DEFAULT_RADIUS = 10; 
     private final Random random = new Random();
     public Figure getRandomFigure() { 
-    ColorSupplier color = new ColorSupplier();
-    String randomColor = color.getRandomColor();
+    ColorSupplier colorSupplier = new ColorSupplier();
+    String randomColor = colorSupplier.getRandomColor().toString();
     int randomed = new Random().nextInt(5);
     switch (randomed) {
             case 0:
