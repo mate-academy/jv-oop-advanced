@@ -33,8 +33,9 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        String firstPart = "Figure: rectangle, area: " + calculateArea() + "sq. units, first side: " + firstSide;
-        String secondPart = " units, second side: " + secondSide + " units, color: " + getColor();
-        System.out.println(firstPart + secondPart);
+        String firstPart = "Figure: rectangle, area: " + calculateArea();
+        String secondPart = "sq. units, first side: " + firstSide;
+        String thirdPart= " units, second side: " + secondSide + " units, color: " + getColor();
+        System.out.println(firstPart + secondPart + thirdPart);
     }
 }

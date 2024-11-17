@@ -8,7 +8,7 @@ public class FigureSupplier {
     private int maxBound = 5;
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
-    int index = random.nextInt(maxBound);
+    private int index = random.nextInt(maxBound);
 
     private int randomSize() {
         return 1 + random.nextInt(maxSize);
@@ -23,9 +23,11 @@ public class FigureSupplier {
             case 2:
                 return new Rectangle(colorSupplier.getRandomColor(), randomSize(), randomSize());
             case 3:
-                return new RightTriangle(randomSize(), randomSize(), colorSupplier.getRandomColor());
+                return new RightTriangle(randomSize(),
+                        randomSize(), colorSupplier.getRandomColor());
             default:
-                return new IsoscelesTrapezoid(randomSize(), randomSize(), randomSize(), colorSupplier.getRandomColor());
+                return new IsoscelesTrapezoid(randomSize(),
+                        randomSize(), randomSize(), colorSupplier.getRandomColor());
         }
     }
 
