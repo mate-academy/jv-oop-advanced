@@ -9,6 +9,7 @@ public enum Color {
     PINK,
     PURPLE
 }
+
 /*package core.basesyntax;
 
 public enum Color {

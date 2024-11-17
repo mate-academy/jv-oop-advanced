@@ -17,8 +17,9 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: Rectangle, area: " + getArea() + " sq. units, width: "
-                + width + " units, height: " + height + " units, color: " + getColor());
+        System.out.println("Figure: Rectangle, area: "
+        + getArea() + " sq. units, width: "
+        + width + " units, height: " + height + " units, color: " + getColor());
     }
 }
 
@@ -38,7 +39,8 @@ public class Rectangle extends Figure {
      }
     @Override
     public void draw() {
-        System.out.println("Figure : Rectangle, area :" + getArea() + " units, width : " + width + "units, height :" + height + " units, color :" + color);
+        System.out.println("Figure : Rectangle, area :" + getArea()
+         + " units, width : " + width + "units, height :" + height + " units, color :" + color);
     }
 
 }*/
