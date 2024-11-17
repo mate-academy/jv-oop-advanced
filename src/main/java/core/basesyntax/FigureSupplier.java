@@ -15,23 +15,23 @@ public class FigureSupplier extends ColorSupplier {
     switch (randomed) {
             case 0:
                 double squareSide = random.nextDouble() * MAX_SIZE + 1;
-                return new Square(squareSide, color);
+                return new Square(squareSide, randomColor);
             case 1:
                 double rectangleWidth = random.nextDouble() * MAX_SIZE + 1;
                 double rectangleHeight = random.nextDouble() * MAX_SIZE + 1;
-                return new Rectangle(rectangleWidth, rectangleHeight, color);
+                return new Rectangle(rectangleWidth, rectangleHeight, randomColor);
             case 2: 
                 double firstLeg = random.nextDouble() * MAX_SIZE + 1;
                 double secondLeg = random.nextDouble() * MAX_SIZE + 1;
-                return new RightTriangle(firstLeg, secondLeg, color);
+                return new RightTriangle(firstLeg, secondLeg, randomColor);
             case 3: 
                 double base1 = random.nextDouble() * MAX_SIZE + 1;
                 double base2 = random.nextDouble() * MAX_SIZE + 1;
                 double height = random.nextDouble() * MAX_SIZE + 1;
-                return new IsoscelesTrapezoid(base1, base2, height, color);
+                return new IsoscelesTrapezoid(base1, base2, height, randomColor);
             default: 
                 double radius = random.nextDouble() * MAX_SIZE + 1;
-                return new Circle(radius, color);
+                return new Circle(radius, randomColor);
     }
 }
      public Figure getDefaultFigure() {
