@@ -8,7 +8,6 @@ public class ColorSupplier {
         return Color.values()[index];
     }
 }
-
 /*package core.basesyntax;
 
 import java.util.Random;
@@ -20,3 +19,6 @@ public class ColorSupplier {
 }
 }
 */
+
+
+
