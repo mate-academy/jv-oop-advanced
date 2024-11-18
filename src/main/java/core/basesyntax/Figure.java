@@ -2,8 +2,6 @@ package core.basesyntax;
 
 public interface Figure {
     public void draw();
-
-    public double getArea();
 }
 
 /*package core.basesyntax;
