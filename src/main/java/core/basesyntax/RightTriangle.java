@@ -1,14 +1,13 @@
 package core.basesyntax;
 
-public class RightTriangle implements Figure {
+public class RightTriangle extends AbstractColor implements Figure {
     private double firstLeg;
     private double secondLeg;
-    private String color;
 
     public RightTriangle(double firstLeg, double secondLeg, String color) {
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        this.color = color;
     }
 
     @Override
@@ -21,7 +20,7 @@ public class RightTriangle implements Figure {
         System.out.println("Figure: RightTriangle, area: "
                 + getArea() + " sq. units, firstLeg: "
                 + firstLeg + " units, secondLeg: " + secondLeg + " units, color: " 
-                + color);
+                + getColor());
     }
 }
 

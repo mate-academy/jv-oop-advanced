@@ -1,12 +1,11 @@
 package core.basesyntax;
 
-public class Circle implements Figure {
+public class Circle extends AbstractColor implements Figure {
     private double radius;
-    private String color;
 
     public Circle(double radius, String color) {
+        super(color);
         this.radius = radius;
-        this.color = color;
     }
 
     @Override
@@ -18,7 +17,7 @@ public class Circle implements Figure {
     public void draw() {
         System.out.println("Figure: Circle, area: " + getArea() 
                 + " sq. units, radius: "
-                + radius + " units, color: " + color);
+                + radius + " units, color: " + getColor());
     }
 }
 
