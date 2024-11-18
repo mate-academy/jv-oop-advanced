@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public interface Figure {
-   public void draw();
+    public void draw();
 
     public double getArea();
 }
