@@ -1,17 +1,35 @@
-# jv-lottery
+# jv-oop-advanced
 
-Let's create a simple lottery that will return balls with a random color and random number.
+### Solve the task using OOP principles
 
-Your tasks are:
-- create a `Ball` class with the following fields: `color` and `number` and override the `toString()` method
-- create an enum with different colors
-- implement method `getRandomColor()` in class `ColorSupplier`. 
-This method should return a random color, based on the enum values (use the `Random` class for this) 
+Task:
 
-Then create a `Lottery` class with the `getRandomBall()` method, which will return the ball.
-This method should create a ball with a random color and a random number (the maximum possible number should be 100) and return this ball from the method.
+There are some figures of the following types: square, rectangle, right triangle, circle, isosceles trapezoid.
+You need to create corresponding classes for them(`Square`, `Rectangle`, `RightTriangle`, `Circle`, `IsoscelesTrapezoid`)
 
-To test the program, in the main() method, create three balls using the `getRandomBall()` method from the `Lottery` class.
-And print information about them in the console.
+All figures have 
+- **state** - all figures have `color`, but each figure type can also have one or several unique properties (`radius` for circle, `firstLeg` and `secondLeg` for right triangle, and so on).
+- **behavior** - we can obtain the area of any figure and are able to draw it. To 'draw' means to print out all information about a figure using `System.out.println()` (you shouldn't override the toString() method for this). 
+   
+Think where you should declare these fields and methods: top-level class/interface / bottom-level classes.  
+
+In the `main()` method we need to create an array of figures (the size of the array can be 3 or 6, it doesn't matter).
+**The first half** of figures in this array should be generated with random parameters. 
+
+For this purpose create two more classes:
+- `ColorSupplier` with `public String getRandomColor()` method - for generating random color, 
+- and `FigureSupplier` with the `public Figure getRandomFigure()` method - for generating figures with random properties.
+
+**The other half** of the figures should have the same, default parameters. 
+
+For this purpose create a new method in the `FigureSupplier` class:
+- `public Figure getDefaultFigure()` - this method should always return a white circle with a radius of 10.
+
+After generating the array, we need to display the entire list of objects that we have, for example:
+
+```
+ Figure: square, area: 25.0 sq. units, side: 5 units, color: blue
+ Figure: triangle, area: 12.5 sq. units, firstLeg: 7 units, secondLeg: 5 units, color: yellow
+```
 
 #### [Try to avoid these common mistakes, while solving task](./checklist.md)
