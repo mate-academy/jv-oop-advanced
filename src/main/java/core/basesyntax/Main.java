@@ -1,21 +1,17 @@
 package core.basesyntax;
 
 public class Main {
+    private static final int SIZE_OF_ARRAY = 6; // Константа для розміру масиву
+
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        final int arraySize = (int) (Math.random() * 10) + 1;
-        Figure[] figures = new Figure[arraySize];
+        Figure[] figures = new Figure[SIZE_OF_ARRAY];
 
         for (int i = 0; i < figures.length; i++) {
-            if (i < figures.length / 2) {
-                figures[i] = figureSupplier.getRandomFigure();
-            } else {
-                figures[i] = figureSupplier.getDefaultFigure();
-            }
-        }
-
-        for (Figure figure : figures) {
-            figure.draw();
+            figures[i] = i < figures.length / 2
+                    ? figureSupplier.getRandomFigure()
+                    : figureSupplier.getDefaultFigure();
+            figures[i].draw();
         }
     }
 }
