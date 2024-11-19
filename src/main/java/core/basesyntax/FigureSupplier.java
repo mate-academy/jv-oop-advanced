@@ -12,31 +12,31 @@ class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        Color color = colorSupplier.getRandomColor();
+        String color = colorSupplier.getRandomColor();
         switch (random.nextInt(FIGURE_TYPES_COUNT)) {
             case 0: {
                 int side = random.nextInt(MAX_DIMENSION) + MIN_DIMENSION;
-                return new Square(color, side);
+                return new Square(Color.valueOf(color), side);
             }
             case 1: {
-                int width = random.nextInt(MAX_DIMENSION) + MIN_DIMENSION;
-                int height = random.nextInt(MAX_DIMENSION) + MIN_DIMENSION;
-                return new Rectangle(color, width, height);
+                int firstLeg = random.nextInt(MAX_DIMENSION) + MIN_DIMENSION;
+                int secondLeg = random.nextInt(MAX_DIMENSION) + MIN_DIMENSION;
+                return new Rectangle(Color.valueOf(color), firstLeg, secondLeg);
             }
             case 2: {
-                int base = random.nextInt(MAX_DIMENSION) + MIN_DIMENSION;
-                int height = random.nextInt(MAX_DIMENSION) + MIN_DIMENSION;
-                return new RightTriangle(color, base, height);
+                int firstLeg = random.nextInt(MAX_DIMENSION) + MIN_DIMENSION;
+                int secondLeg = random.nextInt(MAX_DIMENSION) + MIN_DIMENSION;
+                return new RightTriangle(Color.valueOf(color), firstLeg, secondLeg);
             }
             case 3: {
                 int radius = random.nextInt(MAX_DIMENSION) + MIN_DIMENSION;
-                return new Circle(color, radius);
+                return new Circle(Color.valueOf(color), radius);
             }
             default: {
-                int base1 = random.nextInt(MAX_DIMENSION) + MIN_DIMENSION;
-                int base2 = random.nextInt(MAX_DIMENSION) + MIN_DIMENSION;
-                int height = random.nextInt(MAX_DIMENSION) + MIN_DIMENSION;
-                return new IsoscelesTrapezoid(color, base1, base2, height);
+                int topBase = random.nextInt(MAX_DIMENSION) + MIN_DIMENSION;
+                int bottomBase = random.nextInt(MAX_DIMENSION) + MIN_DIMENSION;
+                int secondLeg = random.nextInt(MAX_DIMENSION) + MIN_DIMENSION;
+                return new IsoscelesTrapezoid(Color.valueOf(color), topBase, bottomBase, secondLeg);
             }
         }
     }
