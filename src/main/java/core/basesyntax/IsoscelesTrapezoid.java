@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends AbstractColor {
+public class IsoscelesTrapezoid extends Figure {
     private double base1;
     private double base2;
     private double height;
@@ -13,13 +13,13 @@ public class IsoscelesTrapezoid extends AbstractColor {
     }
 
     @Override
-    public double getArea() {
+    public double AreaCalculator() {
         return 0.5 * (base1 + base2) * height;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: Trapezoid, area: " + getArea() + " sq. units, base1: "
+        System.out.println("Figure: Trapezoid, area: " + AreaCalculator() + " sq. units, base1: "
                 + base1 + " units, base2: " + base2 + " units, height: " + height
                 + " units, color: " + getColor());
     }
