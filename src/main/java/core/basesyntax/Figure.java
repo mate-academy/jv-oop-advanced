@@ -1,14 +1,13 @@
 package core.basesyntax;
 
 public abstract class Figure implements FigureInfo, AreaCalculator {
-    private static final ColorSupplier colorSupplier = new ColorSupplier();
-    protected Color color;
-
-    public Figure() {
-        this.color = Color.valueOf(colorSupplier.getRandomColor());
-    }
+    private Color color;
 
     public Figure(Color color) {
         this.color = color;
+    }
+
+    public Color getColor() {
+        return color;
     }
 }
