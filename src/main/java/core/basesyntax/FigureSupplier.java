@@ -49,4 +49,3 @@ class FigureSupplier {
         return new Circle(Color.WHITE.name(), DEFAULT_RADIUS);
     }
 }
-12
