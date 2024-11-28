@@ -9,8 +9,8 @@ public class FigureSupplier {
     private ColorSupplier supplier = new ColorSupplier();
     private Random random = new Random();
 
-    public Figure getRundomFigure() {
-        String color = supplier.getRandomColor();
+    public Figure getRandomFigure() {
+        Color color = supplier.getRandomColor();
         int randomFigure = random.nextInt(FIGURE_NUMBER);
         int randomSide = getRandomSide();
         return switch (randomFigure) {
@@ -24,7 +24,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_RADIUS, Color.WHITE.name());
+        return new Circle(DEFAULT_RADIUS, Color.WHITE);
     }
 
     private int getRandomSide() {
