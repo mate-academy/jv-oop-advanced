@@ -11,5 +11,6 @@ public enum Colors {
     PINK,
     CYAN,
     MAGENTA,
-    BLACK
+    BLACK,
+    WHITE
 }

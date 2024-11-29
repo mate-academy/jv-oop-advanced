@@ -34,7 +34,7 @@ public class Rectangle extends Shape {
 
     @Override
     public void draw() {
-        System.out.println("Shape: square, area: " + calculateArea()
+        System.out.println("Shape: rectangle, area: " + calculateArea()
                 + ", height: " + getHeight()
                 + ", width: " + getWidth()
                 + ", color: " + getColor());

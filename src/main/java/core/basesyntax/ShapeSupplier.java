@@ -10,7 +10,7 @@ public class ShapeSupplier {
     private Random randomizer = new Random();
 
     private int randomSize() {
-        return 1 + randomizer.nextInt();
+        return 1 + randomizer.nextInt(maxSize);
     }
 
     public Shape getRandomShape() {
@@ -33,7 +33,7 @@ public class ShapeSupplier {
     }
 
     public Shape getDefaultShape() {
-        return new Square(String.valueOf(Colors.RED), defaultSize);
+        return new Circle(String.valueOf(Colors.WHITE), defaultSize);
     }
 }
 
