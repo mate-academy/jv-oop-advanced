@@ -13,10 +13,6 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public double calculateArea() {
-        return Math.round((upperBase + lowerBase) / 2 * calculateHeight());
-    }
-
-    public double calculateHeight() {
         return Math.sqrt(Math.pow(side, 2) - Math.pow(((upperBase + lowerBase) / 2), 2));
     }
 

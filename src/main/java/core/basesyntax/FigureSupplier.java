@@ -4,22 +4,24 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
-    private Random rand = new Random();
+    private static final Random RANDOM = new Random();
+    private static final int CIRCLE_RADIUS = 10;
     private ColorSupplier colorSupplier = new ColorSupplier();
     private int firstParam = 0;
     private int secondParam = 0;
     private Color colorParam;
 
     public Figure getRandomFigure() {
-        firstParam = rand.nextInt(100);
-        secondParam = rand.nextInt(200);
+        firstParam = RANDOM.nextInt(100);
+        secondParam = RANDOM.nextInt(200);
         colorParam = colorSupplier.getRandomColor();
-        int number = rand.nextInt(FIGURE_COUNT);
+        int number = RANDOM.nextInt(FIGURE_COUNT);
         switch (number) {
             case 1:
                 return new Circle(firstParam, colorParam);
             case 2:
-                return new IsoscelesTrapezoid(firstParam, secondParam, colorParam);
+                double side = RANDOM.nextDouble(100);
+                return new IsoscelesTrapezoid(firstParam, secondParam, side, colorParam);
             case 3:
                 return new Rectangle(firstParam, secondParam, colorParam);
             case 4:
@@ -30,6 +32,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, Color.white);
+        return new Circle(CIRCLE_RADIUS, Color.white);
     }
 }
