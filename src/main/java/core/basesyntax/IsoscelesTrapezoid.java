@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
+    private double side;
     private double upperBase;
     private double lowerBase;
 
@@ -16,7 +17,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     public double calculateHeight() {
-        return Math.sqrt(upperBase + lowerBase);
+        return Math.sqrt(Math.pow(side, 2) - Math.pow(((upperBase + lowerBase) / 2), 2));
     }
 
     @Override
@@ -24,9 +25,9 @@ public class IsoscelesTrapezoid extends Figure {
         return "Figure: "
                 + this.getClass().getSimpleName().toLowerCase() + ", "
                 + "area: " + this.calculateArea() + " sq. units, "
+                + "side: " + this.side + ", "
                 + "upperBase: " + this.upperBase + ", "
                 + "lowerBase: " + this.lowerBase + ", "
-                + "color: " + getColor().toString()
-                + '}';
+                + "color: " + getColor().toString();
     }
 }

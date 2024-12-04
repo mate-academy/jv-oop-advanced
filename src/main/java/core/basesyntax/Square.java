@@ -3,14 +3,14 @@ package core.basesyntax;
 public class Square extends Figure {
     private double side;
 
-    public Square(Color color, double side) {
+    public Square(double side, Color color) {
         super(color);
         this.side = side;
     }
 
     @Override
     public double calculateArea() {
-        return Math.round(Math.pow(side, 2));
+        return Math.pow(side, 2);
     }
 
     @Override
@@ -19,7 +19,6 @@ public class Square extends Figure {
                 + this.getClass().getSimpleName().toLowerCase() + ", "
                 + "area: " + this.calculateArea() + " sq. units, "
                 + "side: " + this.side + ", "
-                + "color: " + getColor().toString()
-                + '}';
+                + "color: " + getColor().toString();
     }
 }

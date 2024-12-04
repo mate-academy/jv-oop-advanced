@@ -4,7 +4,7 @@ public class Rectangle extends Figure {
     private double width;
     private double height;
 
-    public Rectangle(Color color, double width, double height) {
+    public Rectangle(double width, double height, Color color) {
         super(color);
         this.width = width;
         this.height = height;
@@ -12,7 +12,7 @@ public class Rectangle extends Figure {
 
     @Override
     public double calculateArea() {
-        return Math.round(width * height);
+        return width * height;
     }
 
     @Override
@@ -22,7 +22,6 @@ public class Rectangle extends Figure {
                 + "area: " + this.calculateArea() + " sq. units, "
                 + "width: " + this.width + ", "
                 + "height: " + this.height + ", "
-                + "color: " + getColor().toString()
-                + '}';
+                + "color: " + getColor().toString();
     }
 }
