@@ -1,14 +1,13 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
+    private static final double ROUNDING_SCALE = 10.0;
 
     private double radius;
 
-    private String color;
-
-    public Circle(String color, double radius) {
+    public Circle(Color color, double radius) {
+        super(color);
         this.radius = radius;
-        this.color = color;
     }
 
     public double getRadius() {
@@ -19,23 +18,17 @@ public class Circle extends Figure {
         this.radius = radius;
     }
 
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
     @Override
     public double getArea() {
-        return Math.PI * Math.pow(getRadius(), 2);
+        return Math.PI * Math.pow(radius, 2);
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + FigureName.Circle.name() + ", area: " + Math.round(getArea()
-                * 10.0) / 10.0 + " sq. units, radius: " + Math.round(getRadius() * 10.0)
-                / 10.0 + " units, color: " + getColor() + ".");
+        System.out.println("Figure: Circle, area: "
+                + Math.round(getArea() * ROUNDING_SCALE) / ROUNDING_SCALE
+                + " sq. units, radius: "
+                + Math.round(radius * ROUNDING_SCALE) / ROUNDING_SCALE
+                + " units, color: " + getColor().name());
     }
 }

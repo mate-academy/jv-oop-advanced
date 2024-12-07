@@ -1,14 +1,13 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
+    private static final double ROUNDING_SCALE = 10.0;
 
     private double firstLeg;
     private double secondLeg;
 
-    private String color;
-
-    public RightTriangle(String color, double firstLeg, double secondLeg) {
-        this.color = color;
+    public RightTriangle(Color color, double firstLeg, double secondLeg) {
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
@@ -29,25 +28,20 @@ public class RightTriangle extends Figure {
         this.secondLeg = secondLeg;
     }
 
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
-    }
-
     @Override
     public double getArea() {
-        return (getFirstLeg() * getSecondLeg()) / 2;
+        return (firstLeg * secondLeg) / 2;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + FigureName.RightTriangle.name() + ", area: "
-                + Math.round(getArea() * 10.0) / 10.0 + " sq. units, firstLeg: "
-                + Math.round(getFirstLeg() * 10.0) / 10.0 + " units, second leg: "
-                + Math.round(getSecondLeg() * 10.0) / 10.0 + " units, color: "
-                + getColor() + ".");
+        System.out.println("Figure: " + FigureName.RIGHT_TRIANGLE.name()
+                + ", area: " + Math.round(getArea() * ROUNDING_SCALE) / ROUNDING_SCALE
+                + " sq. units, "
+                + "firstLeg: " + Math.round(firstLeg * ROUNDING_SCALE) / ROUNDING_SCALE
+                + " units, "
+                + "secondLeg: " + Math.round(secondLeg * ROUNDING_SCALE) / ROUNDING_SCALE
+                + " units, "
+                + "color: " + getColor().name() + ".");
     }
 }

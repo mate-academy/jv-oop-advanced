@@ -1,22 +1,16 @@
 package core.basesyntax;
 
-public class ColorSupplier {
-    private Colors[] colors = new Colors[]{
-            Colors.white,
-            Colors.black,
-            Colors.yellow,
-            Colors.red,
-            Colors.green,
-            Colors.blue,
-            Colors.gray
-    };
+import java.util.Random;
 
-    public String getRandomColor() {
-        int count = (int)(Math.random() * 6);
-        return colors[count].name();
+public class ColorSupplier {
+    private static final Color[] COLORS = Color.values();
+    private final Random random = new Random();
+
+    public Color getRandomColor() {
+        return COLORS[random.nextInt(COLORS.length)];
     }
 
-    public String getDefaultColor() {
-        return Colors.white.name();
+    public Color getDefaultColor() {
+        return Color.WHITE;
     }
 }

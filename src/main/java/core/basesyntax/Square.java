@@ -1,41 +1,35 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    private double leg;
+    private static final double ROUNDING_SCALE = 10.0;
 
-    private String color;
+    private double side;
 
-    public Square(String color, double leg) {
-        this.leg = leg;
-        this.color = color;
+    public Square(Color color, double side) {
+        super(color);
+        this.side = side;
     }
 
-    public String getColor() {
-        return color;
+    public double getSide() {
+        return side;
     }
 
-    public void setColor(String color) {
-        this.color = color;
-    }
-
-    public double getLeg() {
-        return leg;
-    }
-
-    public void setLeg(double leg) {
-        this.leg = leg;
+    public void setSide(double side) {
+        this.side = side;
     }
 
     @Override
     public double getArea() {
-        return Math.pow(getLeg(), 2);
+        return Math.pow(side, 2);
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + FigureName.Square.name() + ", area: "
-                + Math.round(getArea() * 10.0) / 10.0 + " sq. units, leg: "
-                + Math.round(getLeg() * 10.0) / 10.0 + " units, color: "
-                + getColor() + ".");
+        System.out.println("Figure: " + FigureName.SQUARE.name()
+                + ", area: " + Math.round(getArea() * ROUNDING_SCALE) / ROUNDING_SCALE
+                + " sq. units, "
+                + "side: " + Math.round(side * ROUNDING_SCALE) / ROUNDING_SCALE
+                + " units, "
+                + "color: " + getColor().name() + ".");
     }
 }
