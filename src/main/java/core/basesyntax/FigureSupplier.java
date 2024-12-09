@@ -8,7 +8,6 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int figureType = (int) (Math.random() * FIGURE_COUNT);
-        ;
         String color = colorSupplier.getRandomColor();
         switch (figureType) {
             case 0:
