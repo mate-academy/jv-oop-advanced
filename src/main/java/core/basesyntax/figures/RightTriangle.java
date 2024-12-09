@@ -5,7 +5,7 @@ public class RightTriangle extends Figure {
     private int side;
 
     public RightTriangle(String color, String name, int height, int side) {
-        super(color, name = "Right triangle");
+        super(color, name);
         this.height = height;
         this.side = side;
     }

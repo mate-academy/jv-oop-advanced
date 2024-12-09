@@ -12,15 +12,15 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         ColorSupplier randomColor = new ColorSupplier();
 
-        Figure circle = new Circle(randomColor.getRandomColor(), "", new Random().nextInt(20) + 1);
+        Figure circle = new Circle(randomColor.getRandomColor(), "Circle", new Random().nextInt(20) + 1);
         Figure isoscelesTrapezoid = new IsoscelesTrapezoid(randomColor.getRandomColor(),
-                "", new Random().nextInt(20) + 1, new Random().nextInt(20) + 1,
+                "Isosceles trapezoid", new Random().nextInt(20) + 1, new Random().nextInt(20) + 1,
                 new Random().nextInt(20) + 1);
-        Figure rectangle = new Rectangle(randomColor.getRandomColor(),"",
+        Figure rectangle = new Rectangle(randomColor.getRandomColor(),"Rectangle",
                 new Random().nextInt(20) + 1, new Random().nextInt(20) + 1);
-        Figure rightTriangle = new RightTriangle(randomColor.getRandomColor(), "",
+        Figure rightTriangle = new RightTriangle(randomColor.getRandomColor(), "Right triangle",
                 new Random().nextInt(20) + 1, new Random().nextInt(20) + 1);
-        Figure square = new Square(randomColor.getRandomColor(), "", new Random().nextInt(20) + 1);
+        Figure square = new Square(randomColor.getRandomColor(), "Square", new Random().nextInt(20) + 1);
 
         Figure[] figure = {circle, isoscelesTrapezoid, rectangle, rightTriangle, square};
         int randomIndex = new Random().nextInt(5);
