@@ -5,8 +5,8 @@ public class IsoscelesTrapezoid extends Figure {
     private int lowerBase;
     private int height;
 
-    public IsoscelesTrapezoid(String color, String name, int upperBase, int lowerBase, int height) {
-        super(color, name);
+    public IsoscelesTrapezoid(String color, int upperBase, int lowerBase, int height) {
+        super(color);
         this.upperBase = upperBase;
         this.lowerBase = lowerBase;
         this.height = height;
@@ -17,7 +17,7 @@ public class IsoscelesTrapezoid extends Figure {
         return (upperBase + lowerBase) * height / 2;
     }
 
-    public String getUnitsInfo() {
+    public String getFigureInfo() {
         return " upper base: " + upperBase + " lower base: "
                 + lowerBase + " height: " + height + " units,";
     }

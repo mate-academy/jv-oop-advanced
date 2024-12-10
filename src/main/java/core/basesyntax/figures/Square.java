@@ -3,8 +3,8 @@ package core.basesyntax.figures;
 public class Square extends Figure {
     private int side;
 
-    public Square(String color, String name, int side) {
-        super(color, name);
+    public Square(String color, int side) {
+        super(color);
         this.side = side;
     }
 
@@ -13,7 +13,7 @@ public class Square extends Figure {
         return side * side;
     }
 
-    public String getUnitsInfo() {
+    public String getFigureInfo() {
         return " side: " + side + " units,";
     }
 }

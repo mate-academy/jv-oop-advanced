@@ -4,8 +4,8 @@ public class Rectangle extends Figure {
     private int length;
     private int width;
 
-    public Rectangle(String color, String name, int length, int width) {
-        super(color, name);
+    public Rectangle(String color, int length, int width) {
+        super(color);
         this.length = length;
         this.width = width;
     }
@@ -15,7 +15,7 @@ public class Rectangle extends Figure {
         return length * width;
     }
 
-    public String getUnitsInfo() {
+    public String getFigureInfo() {
         return " length: " + length + " width: " + width + " units,";
     }
 }
