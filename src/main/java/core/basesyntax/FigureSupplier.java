@@ -9,24 +9,48 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int MAX_RANDOM_NUMBER = 20;
+    private static final int MAX_RANDOM_FIGURES = 5;
+    private static final int DEFAULT_RADIUS_LENGTH = 10;
+    private String randomColor = new ColorSupplier().getRandomColor();
+    private int firstRandomNumber = new Random().nextInt(MAX_RANDOM_NUMBER) + 1;
+    private int secondRandomNumber = new Random().nextInt(MAX_RANDOM_NUMBER) + 1;
+    private int thirdRandomNumber = new Random().nextInt(MAX_RANDOM_NUMBER) + 1;
+
     public Figure getRandomFigure() {
-        String randomColor = new ColorSupplier().getRandomColor();
-        int randomNumber = new Random().nextInt(20) + 1;
-
-        Figure circle = new Circle(randomColor, randomNumber);
-        Figure isoscelesTrapezoid = new IsoscelesTrapezoid(randomColor, randomNumber,
-                randomNumber, randomNumber);
-        Figure rectangle = new Rectangle(randomColor, randomNumber, randomNumber);
-        Figure rightTriangle = new RightTriangle(randomColor, randomNumber, randomNumber);
-        Figure square = new Square(randomColor, randomNumber);
-
-        Figure[] figure = {circle, isoscelesTrapezoid, rectangle, rightTriangle, square};
-        int randomIndex = new Random().nextInt(5);
-
-        return figure[randomIndex];
+        int randomIndex = new Random().nextInt(MAX_RANDOM_FIGURES);
+        return switch (randomIndex) {
+            case 0 -> getCircle();
+            case 1 -> getIsoscelesTrapezoid();
+            case 2 -> getRectangle();
+            case 3 -> getSquare();
+            case 4 -> getRightTriangle();
+            default -> getDefaultFigure();
+        };
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", 10);
+        return new Circle("white", DEFAULT_RADIUS_LENGTH);
+    }
+
+    private Figure getCircle() {
+        return new Circle(randomColor, firstRandomNumber);
+    }
+
+    private Figure getIsoscelesTrapezoid() {
+        return new IsoscelesTrapezoid(randomColor,
+                firstRandomNumber, secondRandomNumber, thirdRandomNumber);
+    }
+
+    private Figure getRectangle() {
+        return new Rectangle(randomColor, firstRandomNumber, secondRandomNumber);
+    }
+
+    private Figure getSquare() {
+        return new Square(randomColor, firstRandomNumber);
+    }
+
+    private Figure getRightTriangle() {
+        return new RightTriangle(randomColor, firstRandomNumber, secondRandomNumber);
     }
 }
