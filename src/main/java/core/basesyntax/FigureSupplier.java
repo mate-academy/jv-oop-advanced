@@ -36,7 +36,12 @@ public class FigureSupplier {
                     new RightTriangle(this.colorSupplier.getRandomColor(), firstLeg, secondLeg);
             case CIRCLE -> new Circle(this.colorSupplier.getRandomColor(), radius);
             case ISOSCELES_TRAPEZOID ->
-                    new IsoscelesTrapezoid(this.colorSupplier.getRandomColor(), trapSide, bottom, top);
+                    new IsoscelesTrapezoid(
+                            this.colorSupplier.getRandomColor(),
+                            trapSide,
+                            bottom,
+                            top
+                    );
         };
         return randomFigure;
     }
