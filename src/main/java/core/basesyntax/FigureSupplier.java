@@ -7,8 +7,10 @@ import core.basesyntax.models.RightTriangle;
 import core.basesyntax.models.Square;
 import java.util.Random;
 
+import static core.basesyntax.Colors.WHITE;
+
 public class FigureSupplier {
-    public static final String DEFAULT_COLOR = "rgb(255, 255, 255)";
+    public static final String DEFAULT_COLOR = WHITE.name();
     public static final double DEFAULT_RADIUS = 10.0;
     private final ColorSupplier colorSupplier;
 
