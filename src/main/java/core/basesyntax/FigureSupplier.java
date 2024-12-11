@@ -1,13 +1,13 @@
 package core.basesyntax;
 
+import static core.basesyntax.Colors.WHITE;
+
 import core.basesyntax.models.Circle;
 import core.basesyntax.models.IsoscelesTrapezoid;
 import core.basesyntax.models.Rectangle;
 import core.basesyntax.models.RightTriangle;
 import core.basesyntax.models.Square;
 import java.util.Random;
-
-import static core.basesyntax.Colors.WHITE;
 
 public class FigureSupplier {
     public static final String DEFAULT_COLOR = WHITE.name();
