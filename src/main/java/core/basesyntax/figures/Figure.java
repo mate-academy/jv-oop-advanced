@@ -10,10 +10,4 @@ public abstract class Figure implements AreaCalculable, FigureInfo {
     public String getColor() {
         return color;
     }
-
-    @Override
-    abstract public double getArea();
-
-    @Override
-    abstract public String getFigureInfo();
 }

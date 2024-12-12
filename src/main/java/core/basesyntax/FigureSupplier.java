@@ -39,7 +39,7 @@ public class FigureSupplier {
 
     private Figure getIsoscelesTrapezoid() {
         return new IsoscelesTrapezoid(randomColor,
-                firstRandomNumber, secondRandomNumber, thirdRandomNumber);
+                firstRandomNumber, firstRandomNumber, firstRandomNumber);
     }
 
     private Figure getRectangle() {
