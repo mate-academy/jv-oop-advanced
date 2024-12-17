@@ -1,15 +1,8 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Circle extends Figure {
     public static final double PI = 3.14159265358979323846;
     private int radius;
-
-    public Circle() {
-        super();
-        this.radius = new Random().nextInt(100);
-    }
 
     public Circle(int radius, String color) {
         super(color);
