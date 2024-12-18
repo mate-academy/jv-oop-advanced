@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Square implements CalculateArea {
+public class Rectangle extends Square {
     private double firstSide;
     private double secondSide;
 
