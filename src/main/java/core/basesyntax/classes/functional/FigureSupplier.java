@@ -10,6 +10,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int NUMBER_OF_FIGURES = 5;
+    private static final int RADIUS_SIZE = 10;
     private static final int MAX_SIDE_SIZE = 12;
 
     public Figure getRandomFigure() {
@@ -34,12 +35,11 @@ public class FigureSupplier {
                         random.nextInt(MAX_SIDE_SIZE), random.nextInt(MAX_SIDE_SIZE),
                         random.nextInt(MAX_SIDE_SIZE));
             default:
-                return new Circle("white", 10);
+                return new Circle("white", RADIUS_SIZE);
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", 10);
+        return new Circle("white", RADIUS_SIZE);
     }
 }
-
