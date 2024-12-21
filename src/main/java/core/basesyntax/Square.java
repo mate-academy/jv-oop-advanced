@@ -1,6 +1,8 @@
-package core.basesyntax.figures;
+package core.basesyntax;
 
-public class Square extends Figure{
+import core.basesyntax.Figure;
+
+public class Square extends Figure {
 
     // Figure: square, area: 25.0 sq. units, side: 5 units, color: blue
 

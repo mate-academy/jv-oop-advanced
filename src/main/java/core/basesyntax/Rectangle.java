@@ -1,6 +1,8 @@
-package core.basesyntax.figures;
+package core.basesyntax;
 
-public class Rectangle extends Figure{
+import core.basesyntax.Figure;
+
+public class Rectangle extends Figure {
 
     private int side1;
 
