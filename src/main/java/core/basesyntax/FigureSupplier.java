@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class FigureSupplier {
 
-    public Figure getDefaultFigure(){
+    public Figure getDefaultFigure() {
         Figure circle = new Circle("white", 10);
         return circle;
     }
