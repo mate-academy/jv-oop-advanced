@@ -10,17 +10,19 @@ public abstract class Figure implements Behavior {
         this.color = color;
     }
 
-    public String getName () {
+    public String getName() {
         return name;
     }
 
-    public double getArea () {
+    public double getArea() {
         return area;
     }
 
-    public void setArea (double area) {this.area = area;}
+    public void setArea(double area) {
+        this.area = area;
+    }
 
-    public String getColor () {
+    public String getColor() {
         return color;
     }
 
