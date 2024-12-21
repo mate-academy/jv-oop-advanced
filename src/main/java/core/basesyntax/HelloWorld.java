@@ -15,6 +15,9 @@ public class HelloWorld {
         figures[1] = figureSupplier.getRandomFigure ();
         figures[2] = figureSupplier.getDefaultFigure ();
         figures[3] = figureSupplier.getDefaultFigure ();
+        for(Figure f : figures){
+            f.draw ();
+        }
     }
 
 }

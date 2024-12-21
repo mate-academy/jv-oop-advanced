@@ -11,7 +11,7 @@ public class Square extends Figure {
     public Square ( String color, int side ) {
         super ( color );
         this.side = side;
-        setArea ( side*2);
+        setArea (side*side);
     }
 
 
