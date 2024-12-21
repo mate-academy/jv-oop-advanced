@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Square extends AbstractFigure {
-    private String color;
     private double side;
 
     public Square(String color, double side) {

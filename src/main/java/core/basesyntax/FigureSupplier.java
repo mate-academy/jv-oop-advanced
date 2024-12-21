@@ -7,7 +7,7 @@ public class FigureSupplier {
         Random random = new Random();
         ColorSupplier colorSupplier = new ColorSupplier();
         String color = colorSupplier.getRandomColor();
-        int figureType = random.nextInt(4);
+        int figureType = random.nextInt(5);
         switch (figureType) {
             case 0: //Circle
                 double radius = 1 + random.nextInt(10);

@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class RightTriangle extends AbstractFigure {
-    private String color;
     private double base;
     private double heigth;
 

@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Rectangle extends AbstractFigure {
-    private String color;
     private double length;
     private double width;
 
