@@ -6,7 +6,7 @@ public abstract class Figure implements Behavior {
     private double area = 0.0;
     private String color;
 
-    public Figure (String color) {
+    public Figure(String color) {
         this.color = color;
     }
 
@@ -26,7 +26,7 @@ public abstract class Figure implements Behavior {
         return color;
     }
 
-    public void setColor (String color) {
+    public void setColor(String color) {
         this.color = color;
     }
 }
