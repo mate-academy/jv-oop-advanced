@@ -16,7 +16,7 @@ public class Ellipse extends Figure {
 
     @Override
     public String printInformation() {
-        return "Figure: Rectangle, area: " + getArea()
+        return "Figure: Ellipse, area: " + getArea()
                 + "sq. units, lengthA: " + lengthA + " units, lengthB: "
                 + lengthB + " units, color: " + getColor();
     }

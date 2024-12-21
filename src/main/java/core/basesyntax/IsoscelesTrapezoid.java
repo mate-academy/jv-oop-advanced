@@ -18,7 +18,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String printInformation() {
-        return "Figure: RightTriangle, area: " + getArea()
+        return "Figure: IsoscelesTrapezoid, area: " + getArea()
                 + "sq. units, sideA: " + sideA + " units, sideB: " + sideB + " units, height: "
                 + height + " units, color: " + getColor();
     }
