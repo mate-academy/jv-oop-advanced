@@ -7,7 +7,7 @@ public class Circle extends Figure {
     public Circle(String color, int radius) {
         super(color);
         this.radius = radius;
-        setArea(Math.pow (radius, 2));
+        setArea(Math.pow(radius, 2));
     }
 
     public int getRadius() {

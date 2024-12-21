@@ -13,7 +13,7 @@ public class Rectangle extends Figure {
         setArea(side1 * side2);
     }
 
-    public int getSide1 () {
+    public int getSide1() {
         return side1;
     }
 
@@ -25,7 +25,7 @@ public class Rectangle extends Figure {
         return side2;
     }
 
-    public void setSide2 (int side2) {
+    public void setSide2(int side2) {
         this.side2 = side2;
     }
 
