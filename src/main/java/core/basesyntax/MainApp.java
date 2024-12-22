@@ -13,11 +13,10 @@ public class MainApp {
         for (int i = 0; i < figures.length; i++) {
             if (i < figures.length / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
-                System.out.println(figures[i].printInformation());
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
-                System.out.println(figures[i].printInformation());
             }
+            System.out.println(figures[i].printInformation());
         }
     }
 }

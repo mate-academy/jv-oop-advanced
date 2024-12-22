@@ -4,7 +4,8 @@ public class Ellipse extends Figure {
     private double lengthA;
     private double lengthB;
 
-    public Ellipse(double sideA, double lengthB) {
+    public Ellipse(double sideA, double lengthB, String color) {
+        super(color);
         this.lengthA = sideA;
         this.lengthB = lengthB;
     }
