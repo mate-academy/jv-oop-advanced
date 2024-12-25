@@ -2,7 +2,7 @@ package core.basesyntax;
 
 public abstract class Figure {
     private String color;
-    private int area;
+    private double area;
 
     public Figure() {
         color = new ColorSupplier().getRandomColor();

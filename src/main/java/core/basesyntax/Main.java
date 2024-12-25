@@ -5,11 +5,11 @@ public class Main {
         Figure[] figures = new Figure[6];
 
         for (int i = 0; i < figures.length / 2; i++) {
-            figures[i] = new FigureSuplier().getRandomFigure();
+            figures[i] = new FigureSupplier().getRandomFigure();
         }
 
         for (int i = 3; i < figures.length; i++) {
-            figures[i] = new FigureSuplier().getDeafoltFigure();
+            figures[i] = new FigureSupplier().getDefaultFigure();
         }
 
         for (Figure figure: figures) {

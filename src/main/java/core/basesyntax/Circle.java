@@ -17,7 +17,7 @@ public class Circle extends Figure implements FindArea {
 
     @Override
     public double getArea() {
-        return 2 * Math.PI * Math.pow(radius, 2);
+        return Math.PI * Math.pow(radius, 2);
     }
 
     @Override
