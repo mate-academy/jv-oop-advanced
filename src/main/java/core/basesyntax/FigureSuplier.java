@@ -1,6 +1,5 @@
 package core.basesyntax;
 
-import java.lang.invoke.SwitchPoint;
 import java.util.Random;
 
 public class FigureSuplier {
