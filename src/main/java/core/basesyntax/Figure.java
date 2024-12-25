@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public abstract class Figure  implements FindArea {
     private String color;
     private double area;
 
@@ -12,13 +12,11 @@ public abstract class Figure {
         this.color = color;
     }
 
-    public double getArea() {
-        return area;
-    }
-
     public void setArea(int area) {
         this.area = area;
     }
+
+    public abstract double getArea();
 
     public abstract void draw();
 

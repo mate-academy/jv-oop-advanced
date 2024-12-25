@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class IsoscelesTrapezoid extends Figure implements FindArea {
+public class IsoscelesTrapezoid extends Figure {
     private int biggerBaseSide;
     private int smallerBaseSide;
     private double side;

@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class Circle extends Figure implements FindArea {
+public class Circle extends Figure {
     private int radius;
 
     public Circle() {

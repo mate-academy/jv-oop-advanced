@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class RightTriangle extends Figure implements FindArea {
+public class RightTriangle extends Figure {
     private int firsLeg;
     private int secondLeg;
     private double thirdLeg;

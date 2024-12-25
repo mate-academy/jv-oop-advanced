@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class Square extends Figure implements FindArea {
+public class Square extends Figure {
     private int side;
 
     public Square() {
