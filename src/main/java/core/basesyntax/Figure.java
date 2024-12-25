@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure  implements FindArea {
+public abstract class Figure implements FindArea {
     private String color;
     private double area;
 
