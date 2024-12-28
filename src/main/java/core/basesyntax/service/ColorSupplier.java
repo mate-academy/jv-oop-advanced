@@ -1,7 +1,6 @@
 package core.basesyntax.service;
 
-import core.basesyntax.enums.Color;
-
+import core.basesyntax.variables.Color;
 import java.util.Random;
 
 public class ColorSupplier {

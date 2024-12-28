@@ -1,6 +1,6 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.enums.Color;
+import core.basesyntax.variables.Color;
 
 public class RightTriangle extends Figure {
     private double firstLeg;

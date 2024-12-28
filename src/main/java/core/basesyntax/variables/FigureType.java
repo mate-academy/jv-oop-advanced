@@ -1,4 +1,4 @@
-package core.basesyntax.enums;
+package core.basesyntax.variables;
 
 public enum FigureType {
     SQUARE,

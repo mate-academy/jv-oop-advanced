@@ -1,9 +1,13 @@
 package core.basesyntax.service;
 
-import core.basesyntax.enums.Color;
-import core.basesyntax.enums.FigureType;
-import core.basesyntax.figures.*;
-
+import core.basesyntax.figures.Circle;
+import core.basesyntax.figures.Figure;
+import core.basesyntax.figures.IsoscelesTrapezoid;
+import core.basesyntax.figures.Rectangle;
+import core.basesyntax.figures.RightTriangle;
+import core.basesyntax.figures.Square;
+import core.basesyntax.variables.Color;
+import core.basesyntax.variables.FigureType;
 import java.util.Random;
 
 public class FigureSupplier {
@@ -18,10 +22,26 @@ public class FigureSupplier {
 
         return switch (figureType) {
             case SQUARE -> new Square(color, RANDOM.nextDouble());
-            case RECTANGLE -> new Rectangle(color, RANDOM.nextDouble(), RANDOM.nextDouble());
-            case RIGHT_TRIANGLE -> new RightTriangle(color, RANDOM.nextDouble(), RANDOM.nextDouble());
-            case CIRCLE -> new Circle(color, RANDOM.nextDouble());
-            default -> new IsoscelesTrapezoid(color, RANDOM.nextDouble(), RANDOM.nextDouble(), RANDOM.nextDouble());
+            case RECTANGLE -> new Rectangle(
+                    color,
+                    RANDOM.nextDouble(),
+                    RANDOM.nextDouble()
+            );
+            case RIGHT_TRIANGLE -> new RightTriangle(
+                    color,
+                    RANDOM.nextDouble(),
+                    RANDOM.nextDouble()
+            );
+            case CIRCLE -> new Circle(
+                    color,
+                    RANDOM.nextDouble()
+            );
+            default -> new IsoscelesTrapezoid(
+                    color,
+                    RANDOM.nextDouble(),
+                    RANDOM.nextDouble(),
+                    RANDOM.nextDouble()
+            );
         };
     }
 
