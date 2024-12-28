@@ -30,7 +30,7 @@ public class FigureSupplier {
                 return new IsoscelesTrapezoid(getRandomColor(), random.nextInt(1, 10),
                         random.nextInt(1, 10), random.nextInt(1, 10));
             default:
-                return null;
+                return getDefaultFigure();
         }
     }
 

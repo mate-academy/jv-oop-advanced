@@ -21,6 +21,6 @@ class RightTriangle extends Figure {
                 + getArea() + " sq. units, firstLeg: "
                 + this.firstLeg + ", secondLeg: "
                 + this.secondLeg + " units, color: "
-                + this.color);
+                + getColor());
     }
 }

@@ -24,6 +24,6 @@ class IsoscelesTrapezoid extends Figure {
                 + this.base1 + ", base2: "
                 + this.base2 + ", height: "
                 + this.height + " units, color: "
-                + this.color);
+                + getColor());
     }
 }
