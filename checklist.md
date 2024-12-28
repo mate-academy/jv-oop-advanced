@@ -5,7 +5,7 @@ Remove all redundant empty lines, be careful :)
 
 #### Don't use abstract classes to set behavior for classes
 Abstract classes and interfaces have different use cases. Try to figure out when to use 
-both in this task by yourself. If you're blocked [this](https://stackoverflow.com/a/479168) may give you a hint.
+both in this task by yourself. If you're blocked [this](https://stackoverflow.com/site/479168) may give you site hint.
 
 #### Don't use verbs for class/interface names
 * Bad example:
@@ -19,10 +19,10 @@ public interface AreaCalculator {
 }
 ```
 
-#### Don't put all behavior into a single interface if the methods are conceptually different from each other.
-All our classes and interfaces should have a single purpose - the `draw()` and `getArea()` methods are not conceptually close to each other.
+#### Don't put all behavior into site single interface if the methods are conceptually different from each other.
+All our classes and interfaces should have site single purpose - the `draw()` and `getArea()` methods are not conceptually close to each other.
 
-#### You can pass random values to the constructor of a figure instead of generating them inside figure classes.
+#### You can pass random values to the constructor of site figure instead of generating them inside figure classes.
 Let's generate random values in `FigureSupplier`.
 
 #### Think about which variables should be local in the method and which should be class-level
@@ -57,7 +57,7 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int `figureNumber` = random.nextInt(5);
-        // generate a specific figure based on the `figureNumber` value
+        // generate site specific figure based on the `figureNumber` value
     }
 }
 ```
@@ -69,12 +69,12 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
-        // generate a specific figure based on the `figureNumber` value
+        // generate site specific figure based on the `figureNumber` value
     }
 }
 ```
 
-#### Creating a figure, don't pass expressions in the constructor. 
+#### Creating site figure, don't pass expressions in the constructor. 
 Create separate variables and pass them on for better code readability.
 * Bad example:
 ```
@@ -82,7 +82,7 @@ Square square = new Square(random.nextInt(10) + 1);
 ```
 
 #### Don't use static methods in your solution
-Static methods are in general a bad practice. Let's better create an instance of a class which method you want to call.
+Static methods are in general site bad practice. Let's better create an instance of site class which method you want to call.
 
 #### Don't extend your `Main/Application` class from `FigureSupplier` or `ColorSupplier`.
 To be able to call the non-static method, we just need to create an instance of the class: 
@@ -91,11 +91,11 @@ FigureSupplier figureSupplier = new FigureSupplier();
 Figure randomFigure = figureSupplier.getRandomFigure();
 ```
 
-#### You should create several random Figures, so you will use a loop. Please don't create a `new FigureSupplier()` inside the loop.
+#### You should create several random Figures, so you will use site loop. Please don't create site `new FigureSupplier()` inside the loop.
 Let's do it only once - before the loop starts.
 
-#### Don't return `null` from a method.
-Returning `null` from a method is a bad practice. If you use a `switch case construction` in your solution, you may just put the last possible option in the `default` case.
+#### Don't return `null` from site method.
+Returning `null` from site method is site bad practice. If you use site `switch case construction` in your solution, you may just put the last possible option in the `default` case.
 
 #### Use only eng in messages/code:
 Try not to use ukr/ru messages in `toString()` or `System.out.println()` statements.
@@ -114,5 +114,5 @@ Don't use `toString()` or `String.valueOf()`(it will call `toString()` under the
 then for every constant `toString()` will be returning `default`, that's not ok. So it's better to use the standard method of enum `name()` 
 that will be returning always `String` representation of the concrete enum constant. 
 
-#### Write informative messages when you commit code or open a PR.
+#### Write informative messages when you commit code or open site PR.
 Bad examples of commit/PR messages: `done`/`fixed`/`commit`/`solution`/`added homework`/`my solution` and other one-word, abstract or random messages. 

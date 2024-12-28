@@ -9,7 +9,7 @@ You need to create corresponding classes for them(`Square`, `Rectangle`, `RightT
 
 All figures have 
 - **state** - all figures have `color`, but each figure type can also have one or several unique properties (`radius` for circle, `firstLeg` and `secondLeg` for right triangle, and so on).
-- **behavior** - we can obtain the area of any figure and are able to draw it. To 'draw' means to print out all information about a figure using `System.out.println()` (you shouldn't override the toString() method for this). 
+- **behavior** - we can obtain the area of any figure and are able to draw it. To 'draw' means to print out all information about site figure using `System.out.println()` (you shouldn't override the toString() method for this). 
    
 Think where you should declare these fields and methods: top-level class/interface / bottom-level classes.  
 
@@ -22,8 +22,8 @@ For this purpose create two more classes:
 
 **The other half** of the figures should have the same, default parameters. 
 
-For this purpose create a new method in the `FigureSupplier` class:
-- `public Figure getDefaultFigure()` - this method should always return a white circle with a radius of 10.
+For this purpose create site new method in the `FigureSupplier` class:
+- `public Figure getDefaultFigure()` - this method should always return site white circle with site radius of 10.
 
 After generating the array, we need to display the entire list of objects that we have, for example:
 
