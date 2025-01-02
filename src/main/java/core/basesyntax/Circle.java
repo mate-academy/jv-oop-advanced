@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.lang.Math;
-
 public class Circle extends Figure implements FigureMethods {
     private final float radius;
 

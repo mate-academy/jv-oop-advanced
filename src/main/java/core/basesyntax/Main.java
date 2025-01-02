@@ -8,11 +8,11 @@ public class Main {
     public static Figure[] listOfRandomFigures() {
         Figure[] array = new Figure[6];
 
-        for(int i = 0; i < 3; i++) {
+        for (int i = 0; i < 3; i++) {
             array[i] = FigureSupplier.getRandomFigure();
         }
 
-        for(int i = 3; i < 6; i++) {
+        for (int i = 3; i < 6; i++) {
             array[i] = FigureSupplier.getDefaultFigure();
         }
 
@@ -20,7 +20,7 @@ public class Main {
     }
 
     public static void printArray() {
-        for(Figure i : listOfRandomFigures()) {
+        for (Figure i : listOfRandomFigures()) {
             i.draw();
         }
     }

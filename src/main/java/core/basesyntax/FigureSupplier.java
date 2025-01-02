@@ -3,10 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier extends ColorSupplier {
-    private final static Random picker = new Random();
+    private static final Random picker = new Random();
 
     public static Figure getRandomFigure() {
-        return switch(picker.nextInt(4)) {
+        return switch (picker.nextInt(4)) {
             case 0 -> new Circle(getRandomColor(), picker.nextInt(1, 50));
             case 1 -> new Rectangle(getRandomColor(), picker.nextInt(1, 50), picker.nextInt(1, 50));
             case 2 -> new RightTriangle(getRandomColor(), picker.nextInt(1, 50), picker.nextInt(1, 50));
