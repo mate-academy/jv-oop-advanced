@@ -18,7 +18,7 @@ public class Circle extends Figure implements FigureMethods {
     @Override
     public void draw() {
         System.out.println("Figure: " + getName() + ", area: "
-                + area() + ", radius: "
-                + radius + ", color: " + getColor());
+                + area() + " sq. units, radius: "
+                + radius + " units, color: " + getColor());
     }
 }

@@ -4,6 +4,8 @@ public abstract class Figure {
     private Colors color;
     private String name;
 
+    public abstract void draw();
+
     public Figure(Colors color, String name) {
         this.color = color;
         this.name = name;
