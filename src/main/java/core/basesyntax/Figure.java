@@ -4,8 +4,6 @@ public abstract class Figure {
     private Colors color;
     private String name;
 
-    public abstract void draw();
-
     public Figure(Colors color, String name) {
         this.color = color;
         this.name = name;
@@ -26,4 +24,6 @@ public abstract class Figure {
     public void setName(String name) {
         this.name = name;
     }
+
+    public abstract void draw();
 }
