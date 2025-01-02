@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements FigureMethods {
+public class Rectangle extends Figure {
     private final float firstSide;
     private final float secondSide;
 
