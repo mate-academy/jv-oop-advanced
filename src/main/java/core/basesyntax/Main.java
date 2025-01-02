@@ -1,6 +1,8 @@
 package core.basesyntax;
 
 public class Main {
+    private static final FigureSupplier figureSupplier = new FigureSupplier();
+
     public static void main(String[] args) {
         printArray();
     }
@@ -9,11 +11,11 @@ public class Main {
         Figure[] array = new Figure[6];
 
         for (int i = 0; i < 3; i++) {
-            array[i] = FigureSupplier.getRandomFigure();
+            array[i] = figureSupplier.getRandomFigure();
         }
 
         for (int i = 3; i < 6; i++) {
-            array[i] = FigureSupplier.getDefaultFigure();
+            array[i] = figureSupplier.getDefaultFigure();
         }
 
         return array;

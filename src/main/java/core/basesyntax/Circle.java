@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements FigureMethods {
+public class Circle extends Figure {
     private final float radius;
 
     public Circle(Colors color, float radius) {
@@ -8,7 +8,6 @@ public class Circle extends Figure implements FigureMethods {
         this.radius = radius;
     }
 
-    @Override
     public double area() {
         return Math.PI * Math.pow(radius, 2);
     }

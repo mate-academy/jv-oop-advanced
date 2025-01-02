@@ -14,7 +14,7 @@ public class IsoscelesTrapezoid extends Figure implements FigureMethods {
 
     @Override
     public double area() {
-        return (firstBase + secondBase) * height;
+        return ((firstBase + secondBase) / 2) * height;
     }
 
     @Override
