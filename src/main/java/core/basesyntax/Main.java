@@ -7,7 +7,7 @@ public class Main {
         printArray();
     }
 
-    public static Figure[] listOfRandomFigures() {
+    private static Figure[] listOfRandomFigures() {
         Figure[] array = new Figure[6];
 
         for (int i = 0; i < 3; i++) {
@@ -21,8 +21,10 @@ public class Main {
         return array;
     }
 
-    public static void printArray() {
-        for (Figure i : listOfRandomFigures()) {
+    private static void printArray() {
+        final Figure[] listOfRandomFigures = listOfRandomFigures();
+
+        for (Figure i : listOfRandomFigures) {
             i.draw();
         }
     }

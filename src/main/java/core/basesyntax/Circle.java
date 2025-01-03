@@ -3,7 +3,7 @@ package core.basesyntax;
 public class Circle extends Figure {
     private final float radius;
 
-    public Circle(Colors color, float radius) {
+    public Circle(Color color, float radius) {
         super(color, "Circle");
         this.radius = radius;
     }

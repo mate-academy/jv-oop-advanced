@@ -1,19 +1,19 @@
 package core.basesyntax;
 
 public abstract class Figure implements Drawable {
-    private Colors color;
+    private Color color;
     private String name;
 
-    public Figure(Colors color, String name) {
+    public Figure(Color color, String name) {
         this.color = color;
         this.name = name;
     }
 
-    public Colors getColor() {
+    public Color getColor() {
         return this.color;
     }
 
-    public void setColor(Colors color) {
+    public void setColor(Color color) {
         this.color = color;
     }
 
