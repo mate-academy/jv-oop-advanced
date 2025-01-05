@@ -6,6 +6,7 @@ public class Circle extends Figure{
         super(color);
         this.radius = radius;
     }
+
     @Override
     public void draw() {
         System.out.println("Figure: Circle, radius:" + radius + ", color: " + getColor());

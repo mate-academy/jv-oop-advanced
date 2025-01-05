@@ -9,6 +9,7 @@ public class RightTriangle extends Figure {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
+
     @Override
     public void draw() {
         System.out.println("RightTriangle: color = " + getColor() + ", firstLeg = " + firstLeg + ", secondLeg = " + secondLeg);

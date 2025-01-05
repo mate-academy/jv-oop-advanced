@@ -11,6 +11,7 @@ public class Main {
                 figures[i] = new Circle("Default Color", 5);
             }
         }
+
         for (Figure figure : figures) {
             figure.draw();
         }

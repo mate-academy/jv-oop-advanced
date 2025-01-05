@@ -8,6 +8,7 @@ public class Rectangle extends Figure {
         this.width = width;
         this.height = height;
     }
+
     @Override
     public void draw() {
         System.out.println("Figure: Rectangle, width: " + width + ", height: " + height + ", color: " + getColor());
