@@ -19,10 +19,13 @@ public interface AreaCalculator {
 }
 ```
 
-#### Don't put all behavior into a single interface if the methods are conceptually different from each other.
-All our classes and interfaces should have a single purpose - the `draw()` and `getArea()` methods are not conceptually close to each other.
+#### Don't put all behavior into a single interface if the methods are conceptually 
+different from each other.
+All our classes and interfaces should have a single purpose - the `draw()` and 
+`getArea()` methods are not conceptually close to each other.
 
-#### You can pass random values to the constructor of a figure instead of generating them inside figure classes.
+#### You can pass random values to the constructor of a figure instead of
+generating them inside figure classes.
 Let's generate random values in `FigureSupplier`.
 
 #### Think about which variables should be local in the method and which should be class-level
@@ -103,7 +106,8 @@ We want to make our code universal and consistent.
 
 #### Use name() for getting String representation of enum constants
 
-Don't use `toString()` or `String.valueOf()`(it will call `toString()` under the hood) for getting the `String` representation of enum constants. 
+Don't use `toString()` or `String.valueOf()`(it will call `toString()` under the hood) for getting the 
+`String` representation of enum constants. 
 `toString()` is common for all enum constants. If you override this method like below:
 ````
  @Override
@@ -111,7 +115,8 @@ Don't use `toString()` or `String.valueOf()`(it will call `toString()` under the
     return "default";
  }
 ````
-then for every constant `toString()` will be returning `default`, that's not ok. So it's better to use the standard method of enum `name()` 
+then for every constant `toString()` will be returning `default`, that's not ok.
+So it's better to use the standard method of enum `name()` 
 that will be returning always `String` representation of the concrete enum constant. 
 
 #### Write informative messages when you commit code or open a PR.
