@@ -12,7 +12,6 @@ public class Rectangle extends Figure {
     public double getArea() {
         return width * height;
     }
-
     @Override
     public String toString() {
         return "Rectangle with width: " + width + ", height: " + height + ", color: " + getColor();

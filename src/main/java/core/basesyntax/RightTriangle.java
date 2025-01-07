@@ -1,20 +1,20 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private final double base;
-    private final double height;
+    private final double firstLeg;
+    private final double secondLeg;
 
-    public RightTriangle(String color, double base, double height) {
+    public RightTriangle(String color, double firstLeg, double secondLeg) {
         super(color);
-        this.base = base;
-        this.height = height;
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
     }
     @Override
     public double getArea() {
-        return 0.5 * base * height;
+        return (firstLeg * secondLeg) / 2;
     }
     @Override
     public String toString() {
-        return "RightTriangle with base: " + base + ", height: " + height + ", color: " + getColor();
+        return "RightTriangle: color = " + getColor() + ", firstLeg = " + firstLeg + ", secondLeg = " + secondLeg;
     }
 }

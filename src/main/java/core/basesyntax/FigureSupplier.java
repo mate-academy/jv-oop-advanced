@@ -24,6 +24,7 @@ public class FigureSupplier {
                     new IsoscelesTrapezoid(color, RANDOM.nextDouble() * 10 + 1, RANDOM.nextDouble() * 10 + 1, RANDOM.nextDouble() * 10 + 1);
             default -> getDefaultFigure();
         };
+
     }
 
     }

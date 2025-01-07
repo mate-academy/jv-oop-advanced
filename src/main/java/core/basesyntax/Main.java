@@ -6,6 +6,7 @@ public class Main {
         Figure defaultFigure = figureSupplier.getDefaultFigure();
         System.out.println("Default figure: " + defaultFigure);
         System.out.println("Area: " + defaultFigure.getArea());
+
         for (int i = 0; i < 5; i++) {
             Figure randomFigure = figureSupplier.getRandomFigure();
             System.out.println("Random figure: " + randomFigure);

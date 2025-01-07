@@ -9,6 +9,7 @@ public abstract class Figure {
         return color;
     }
     public abstract double getArea();
+
     @Override
     public String toString() {
         return "Figure with color: " + color;
