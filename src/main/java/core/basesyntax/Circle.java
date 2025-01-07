@@ -8,7 +8,11 @@ public class Circle extends Figure{
     }
 
     @Override
-    public void draw() {
-        System.out.println("Figure: Circle, radius:" + radius + ", color: " + getColor());
+    public double getArea() {
+        return Math.PI * Math.pow(radius, 2);
+    }
+    @Override
+    public String toString() {
+        return "Circle with radius: " + radius + ", color: " + getColor();
     }
 }

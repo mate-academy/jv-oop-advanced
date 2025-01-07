@@ -8,10 +8,14 @@ public class Rectangle extends Figure {
         this.width = width;
         this.height = height;
     }
+    @Override
+    public double getArea() {
+        return width * height;
+    }
 
     @Override
-    public void draw() {
-        System.out.println("Figure: Rectangle, width: " + width + ", height: " + height + ", color: " + getColor());
+    public String toString() {
+        return "Rectangle with width: " + width + ", height: " + height + ", color: " + getColor();
 
     }
 }

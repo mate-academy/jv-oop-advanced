@@ -5,9 +5,12 @@ public abstract class Figure {
     public Figure(String color) {
         this.color = color;
     }
-
     public String getColor() {
         return color;
     }
-    public abstract void draw();
+    public abstract double getArea();
+    @Override
+    public String toString() {
+        return "Figure with color: " + color;
+    }
 }
