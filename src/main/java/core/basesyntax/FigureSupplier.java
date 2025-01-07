@@ -7,6 +7,7 @@ public class FigureSupplier {
     private static final int MAX_DIMENSION = 10;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
+
     private final int getRandomDimension() {
         return random.nextInt(MAX_DIMENSION) + 1;
     }
@@ -23,7 +24,7 @@ public class FigureSupplier {
                 );
             case 1:
                 return new Rectangle(
-                        getRandomDimension() ,
+                        getRandomDimension(),
                         getRandomDimension(),
                         color
                 );
