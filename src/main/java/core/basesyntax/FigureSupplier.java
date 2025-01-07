@@ -7,6 +7,9 @@ public class FigureSupplier {
     private static final int MAX_DIMENSION = 10;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
+    private final int getRandomDimension() {
+        return random.nextInt(MAX_DIMENSION) + 1;
+    }
 
     public Figure getRandomFigure() {
         int type = random.nextInt(FIGURE_COUNT);
@@ -15,28 +18,31 @@ public class FigureSupplier {
         switch (type) {
             case 0:
                 return new Square(
-                        random.nextInt(MAX_DIMENSION) + 1,
+                        getRandomDimension(),
                         color
                 );
             case 1:
                 return new Rectangle(
-                        random.nextInt(MAX_DIMENSION) + 1,
-                        random.nextInt(MAX_DIMENSION) + 1,
+                        getRandomDimension() ,
+                        getRandomDimension(),
                         color
                 );
             case 2:
                 return new RightTriangle(
-                        random.nextInt(MAX_DIMENSION) + 1,
-                        random.nextInt(MAX_DIMENSION) + 1,
+                        getRandomDimension(),
+                        getRandomDimension(),
                         color
                 );
             case 3:
-                return new Circle(random.nextInt(MAX_DIMENSION) + 1, color);
+                return new Circle(
+                        getRandomDimension(),
+                        color);
             case 4:
                 return new IsoscelesTrapezoid(
-                        random.nextInt(MAX_DIMENSION) + 1,
-                        random.nextInt(MAX_DIMENSION) + 1,
-                        random.nextInt(MAX_DIMENSION) + 1, color);
+                        getRandomDimension(),
+                        getRandomDimension(),
+                        getRandomDimension(),
+                        color);
             default:
                 return null;
         }
