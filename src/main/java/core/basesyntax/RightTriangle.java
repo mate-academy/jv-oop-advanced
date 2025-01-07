@@ -1,15 +1,14 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements InitializingProperties, DrawFigures {
-    public int firstLeg = 0;
-    public int secondLeg = 0;
+public class RightTriangle extends Figure {
+    private double firstLeg = 0;
+    private double secondLeg = 0;
 
-    public RightTriangle(int firstLeg, int secondLeg) {
-        super.name = "Right Triangle";
-        super.color = getRandomColor();
+    public RightTriangle(String color, double firstLeg, double secondLeg) {
+        super.setName("RightTriangle");
+        super.setColor(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        getDraw();
 
     }
 
@@ -21,8 +20,8 @@ public class RightTriangle extends Figure implements InitializingProperties, Dra
 
     @Override
     public void getDraw() {
-        System.out.println("Figure : " + super.name + ", area : " + getArea()
+        System.out.println("Figure : " + getName() + ", area : " + getArea()
                 + " units, firstLeg : " + firstLeg + " secondLeg : " + secondLeg
-                +" units, color : " + super.color);
+                + " units, color : " + getColor());
     }
 }

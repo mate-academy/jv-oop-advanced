@@ -2,42 +2,33 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class FigureSupplier extends ColorSupplier {
-    public static final int FIGURE_COUNT = 5;
-    private Random random = new Random();
+public class FigureSupplier {
 
-    public Figure[] getRandomFigure() {
+    private final Random random = new Random();
 
-     Figure [] figures = new Figure[]{new Square(random.nextInt(FIGURE_COUNT)),
-        //square.color = getRandomColor();
-        //square.name = "Square ";
-        //square.area = square.getArea();
+    private final int randomSize = random.nextInt(10);
 
-         new Rectangle(random.nextInt(FIGURE_COUNT), random.nextInt(FIGURE_COUNT)),
-        //rectangle.color = getRandomColor();
-        //rectangle.name = "Rectangle ";
-        //rectangle.area = rectangle.getArea();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
-        new RightTriangle(random.nextInt(FIGURE_COUNT), random.nextInt(FIGURE_COUNT)),
-        //rightTriangle.color = getRandomColor();
-        //rightTriangle.name = "Right Triangle ";
-        //rightTriangle.area = rightTriangle.getArea();
-
-         new IsoscelesTrapezoid(random.nextInt(FIGURE_COUNT),
-                random.nextInt(FIGURE_COUNT), random.nextInt(FIGURE_COUNT))
-        //isoscelesTrapezoid.color = getRandomColor();
-        //isoscelesTrapezoid.name = "Isosceles Trapezoid ";
-        //isoscelesTrapezoid.area = isoscelesTrapezoid.getArea();
-
-};
-     return figures;
-    }
-    public Figure getDefaultFigure() {
-        Figure circle = new Circle();
-        circle.color = "WHITE";
-        circle.name = "Circle ";
-        return circle;
+    public Figure getRandomFigure(int index) {
+        switch (index) {
+            case 0: return new Square(colorSupplier.getRandomColor(), randomSize);
+            case 1: return new Rectangle(colorSupplier.getRandomColor(),
+                    randomSize, randomSize);
+            default: return new RightTriangle(colorSupplier.getRandomColor(),
+                    randomSize, randomSize);
+//            case 3: return new Circle(colorSupplier.getRandomColor(), RANDOM_SIZE);
+//            default: return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+//                    RANDOM_SIZE, RANDOM_SIZE, RANDOM_SIZE);
+        }
     }
 
+    public Figure getDefaultFigure(int index) {
+        switch (index) {
+            case 4 : return new Circle("WHITE", 10);
+            default : return new IsoscelesTrapezoid("BLUE",10,10,10);
 
+        }
+    }
 }
+

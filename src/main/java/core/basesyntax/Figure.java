@@ -1,7 +1,23 @@
 package core.basesyntax;
 
-public class Figure extends ColorSupplier {
-    public String name;
-    public String color;
-    public double area = 0;
+abstract class Figure implements DrawFigures, InitializingProperties {
+
+    private String color;
+    private String name;
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

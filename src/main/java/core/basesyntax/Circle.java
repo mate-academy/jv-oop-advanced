@@ -1,13 +1,12 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements InitializingProperties, DrawFigures {
-    public static final int CIRCLE_COUNT = 10;
-    public int radius = CIRCLE_COUNT;
+public class Circle extends Figure {
+    private double radius = 0;
 
-    public Circle() {
-        super.name = "Circle";
-        super.color = "WHITE";
-        getDraw();
+    public Circle(String color, double radius) {
+        super.setName("Circle");
+        super.setColor(color);
+        this.radius = radius;
     }
 
     @Override
@@ -17,7 +16,7 @@ public class Circle extends Figure implements InitializingProperties, DrawFigure
 
     @Override
     public void getDraw() {
-        System.out.println("Figure : " + super.name + ", area : " + getArea()
-                + " units, radius : " + radius + " units, color : " + super.color);
+        System.out.println("Figure : " + getName() + ", area : " + getArea()
+                + " units, radius : " + radius + " units, color : " + getColor());
     }
 }

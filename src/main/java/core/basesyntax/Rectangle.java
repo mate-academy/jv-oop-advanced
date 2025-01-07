@@ -1,15 +1,14 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements InitializingProperties, DrawFigures {
-    public int widthRectangle = 0;
-    public int lengthRectangle = 0;
+public class Rectangle extends Figure {
+    private double widthRectangle = 0;
+    private double lengthRectangle = 0;
 
-    public Rectangle(int widthRectangle, int lengthRectangle) {
-        super.name = "Rectangle";
-        super.color = getRandomColor();
+    public Rectangle(String color, double widthRectangle, double lengthRectangle) {
+        super.setName("Rectangle");
+        super.setColor(color);
         this.widthRectangle = widthRectangle;
         this.lengthRectangle = lengthRectangle;
-        getDraw();
 
     }
 
@@ -20,8 +19,8 @@ public class Rectangle extends Figure implements InitializingProperties, DrawFig
 
     @Override
     public void getDraw() {
-        System.out.println("Figure : " + super.name + ", area : " + getArea()
+        System.out.println("Figure : " + getName() + ", area : " + getArea()
                 + " units, widthRectangle : " + widthRectangle + " lengthRectangle : "
-                + lengthRectangle + " units, color : " + super.color);
+                + lengthRectangle + " units, color : " + getColor());
     }
 }

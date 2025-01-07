@@ -1,13 +1,12 @@
 package core.basesyntax;
 
-public class Square extends Figure implements InitializingProperties, DrawFigures {
-    public int side = 0;
+public class Square extends Figure {
+    private double side = 0;
 
-    public Square(int side) {
-        super.name = "Square";
-        super.color = getRandomColor();
+    public Square(String color, double side) {
+        super.setName("Square");
+        super.setColor(color);
         this.side = side;
-        getDraw();
     }
 
     @Override
@@ -17,7 +16,7 @@ public class Square extends Figure implements InitializingProperties, DrawFigure
 
     @Override
     public void getDraw() {
-        System.out.println("Figure : " + super.name + ", area : " + getArea()
-                + " units, sides : " + side + " units, color : " + super.color);
+        System.out.println("Figure : " + getName() + ", area : " + getArea()
+                + " units, sides : " + side + " units, color : " + getColor());
     }
 }
