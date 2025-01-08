@@ -20,4 +20,3 @@ public class Circle extends Figure {
                 + " units, color: " + getColor());
     }
 }
-

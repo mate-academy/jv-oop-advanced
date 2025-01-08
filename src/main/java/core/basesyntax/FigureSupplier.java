@@ -3,8 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final Color DEFAULT_COLOR = Color.WHITE;
     private static final int FIGURE_COUNT = 5;
     private static final int MAX_DIMENSION = 10;
+    private static final Figure DEFAULT_FIGURE= new Circle(MAX_DIMENSION, DEFAULT_COLOR);
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
@@ -45,11 +47,11 @@ public class FigureSupplier {
                         getRandomDimension(),
                         color);
             default:
-                return null;
+                return DEFAULT_FIGURE;
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(MAX_DIMENSION, Color.WHITE);
+        return DEFAULT_FIGURE;
     }
 }
