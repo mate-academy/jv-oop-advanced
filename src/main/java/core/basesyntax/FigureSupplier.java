@@ -6,7 +6,7 @@ public class FigureSupplier {
     private static final Color DEFAULT_COLOR = Color.WHITE;
     private static final int FIGURE_COUNT = 5;
     private static final int MAX_DIMENSION = 10;
-    private static final Figure DEFAULT_FIGURE= new Circle(MAX_DIMENSION, DEFAULT_COLOR);
+    private static final Figure DEFAULT_FIGURE = new Circle(MAX_DIMENSION, DEFAULT_COLOR);
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
