@@ -7,7 +7,7 @@ public class FigureSupplier {
         ColorSupplier colorSupplier = new ColorSupplier();
         Random random = new Random();
         String color = colorSupplier.getRandomColor();
-        int figureType = random.nextInt(5);
+        final int figureType = random.nextInt(5);
 
         switch (figureType) {
             case 0: return new Square(color,
@@ -24,7 +24,7 @@ public class FigureSupplier {
                     random.nextDouble() * 10,
                     random.nextDouble() * 10,
                     random.nextDouble() * 10);
-            default: return null;
+            default: return getDefaultFigure();
         }
     }
 
