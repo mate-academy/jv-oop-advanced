@@ -1,0 +1,24 @@
+package core.basesyntax;
+
+public class Rectangle extends ColoredFigure {
+    private int sideA;
+    private int sideB;
+
+    public Rectangle(int sideA, int sideB, String color) {
+        super(color);
+        this.sideA = sideA;
+        this.sideB = sideB;
+    }
+
+    @Override
+    public double getArea() {
+        return sideA * sideB;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Figure: right triangle, area: " + getArea()
+                + " sq. units, first side: " + sideA + " units, second side: "
+                + sideB + " units,color: " + getColor());
+    }
+}
