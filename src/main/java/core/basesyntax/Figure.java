@@ -1,15 +1,13 @@
 package core.basesyntax;
 
-public abstract class Figure implements Shape, Colored {
-    private String color;
+public abstract class Figure implements AreaCalculator, Drawable {
+    private Color color;
 
-    public Figure(String color) {
+    public Figure(Color color) {
         this.color = color;
     }
 
-    // Implement getColor() from Colored interface
-    @Override
-    public String getColor() {
+    public Color getColor() {
         return color;
     }
 }
