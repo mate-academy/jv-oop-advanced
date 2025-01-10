@@ -17,7 +17,7 @@ public class Rectangle extends Figure {
 
     @Override
     public String draw() {
-        StringBuilder infoMessage = new StringBuilder("Figure: " + Figures.Rectangle + ", ")
+        StringBuilder infoMessage = new StringBuilder("Figure: " + Figures.Rectangle.name() + ", ")
                 .append("area: " + this.calculateArea() + " sq. units" + ", ")
                 .append("width: " + this.width + " sq. units" + ", ")
                 .append("height: " + this.height + " sq. units" + ", ")

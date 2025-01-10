@@ -1,5 +1,5 @@
 package classes;
 
-public interface Drowable {
+public interface Drawable {
     String draw();
 }

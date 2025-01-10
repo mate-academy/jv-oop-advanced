@@ -1,6 +1,6 @@
 package classes;
 
-public abstract class Figure implements Drowable {
+public abstract class Figure implements Drawable {
     private Color color;
 
     public Figure(Color color) {
