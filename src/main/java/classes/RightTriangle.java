@@ -12,7 +12,8 @@ public class RightTriangle extends Figure {
 
     @Override
     public String draw() {
-        StringBuilder infoMessage = new StringBuilder("Figure: " + Figures.Right_triangle.name() + ", ")
+        StringBuilder infoMessage = new StringBuilder()
+                .append("Figure: " + Figures.Right_triangle.name() + ", ")
                 .append("area: " + this.calculateArea() + " sq. units" + ", ")
                 .append("firstLeg: " + this.firstLeg + " units" + ", ")
                 .append("secondLeg: " + this.secondLeg + " units" + ", ")
