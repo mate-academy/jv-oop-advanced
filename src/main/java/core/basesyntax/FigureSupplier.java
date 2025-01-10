@@ -3,18 +3,18 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final Random RANDOM = new Random();
-    private static final int FIGURES_QUANTITY = 5;
+    private static final Random random = new Random();
+    private static final int FIGURES_QUAINTITY = 5;
     private static final int DEFAULT_RADIUS = 10;
-    private static final ColorSupplier colorSupplier = new ColorSupplier();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         Color color = colorSupplier.getRandomColor();
-        final int figureType = new Random().nextInt(FIGURES_QUANTITY);
+        final int figureType = random.nextInt(FIGURES_QUAINTITY);
 
-        double randomValue1 = RANDOM.nextDouble() * 10;
-        double randomValue2 = RANDOM.nextDouble() * 10;
-        double randomValue3 = RANDOM.nextDouble() * 10;
+        double randomValue1 = random.nextDouble() * 10;
+        double randomValue2 = random.nextDouble() * 10;
+        double randomValue3 = random.nextDouble() * 10;
 
         switch (figureType) {
             case 0:
@@ -33,7 +33,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        final Color circleColor = Color.WHITE;
-        return new Circle(circleColor, DEFAULT_RADIUS);
+        return new Circle(Color.WHITE, DEFAULT_RADIUS);
     }
 }
