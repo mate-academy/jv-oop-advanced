@@ -1,4 +1,4 @@
-package classes_inheritors;
+package classes;
 
 public class IsoscelesTrapezoid extends Figure {
 
@@ -20,7 +20,8 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String draw() {
-        StringBuilder infoMessage = new StringBuilder("Figure: " + Figures.Isosceles_Trapezoid + ", ")
+        StringBuilder infoMessage = new StringBuilder()
+                .append("Figure: " + Figures.Isosceles_Trapezoid + ", ")
                 .append("area: " + this.calculateArea() + " sq. units" + ", ")
                 .append("baseTop: " + this.baseTop + " sq. units" + ", ")
                 .append("baseBottom: " + this.baseBottom + " sq. units" + ", ")

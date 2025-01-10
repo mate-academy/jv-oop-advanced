@@ -1,4 +1,4 @@
-package classes_inheritors;
+package classes;
 
 public interface Drowable {
     String draw();

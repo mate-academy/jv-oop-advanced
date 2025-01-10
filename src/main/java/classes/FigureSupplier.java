@@ -1,11 +1,11 @@
-package classes_inheritors;
+package classes;
 
 import java.util.Random;
 
 public class FigureSupplier {
     public static final double DEFAULT_CIRCLE_RADIUS = 10.0;
-    Random random = new Random();
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private Random random = new Random();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     private double getPositiveRandomNumber() {
         return 1 + random.nextDouble(10);

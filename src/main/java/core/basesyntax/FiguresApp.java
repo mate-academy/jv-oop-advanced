@@ -1,6 +1,7 @@
 package core.basesyntax;
 
-import classes_inheritors.*;
+import classes.FigureSupplier;
+import classes.Figure;
 
 public class FiguresApp {
     private static final int FIGURE_COUNT = 6;
@@ -9,7 +10,7 @@ public class FiguresApp {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figuresArray = new Figure[FIGURE_COUNT];
-        for (int elementIndex = 0; elementIndex < FIGURE_COUNT; elementIndex++){
+        for (int elementIndex = 0; elementIndex < FIGURE_COUNT; elementIndex++) {
             if (elementIndex < HALF_COUNT) {
                 figuresArray[elementIndex] = figureSupplier.getRandomFigure();
             } else {
@@ -17,7 +18,7 @@ public class FiguresApp {
             }
         }
 
-        for(Figure figure : figuresArray) {
+        for (Figure figure : figuresArray) {
             System.out.println(figure.draw());
         }
     }

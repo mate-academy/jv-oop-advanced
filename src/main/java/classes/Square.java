@@ -1,7 +1,13 @@
-package classes_inheritors;
+package classes;
 
 public class Square extends Figure {
-    double side;
+    private double side;
+
+    public Square(Color color, double side) {
+        super(color);
+        this.setColor(color);
+        this.side = side;
+    }
 
     @Override
     public String toString() {
@@ -17,14 +23,12 @@ public class Square extends Figure {
         return infoMessage.toString();
     }
 
-    public Square(Color color, double side) {
-        super(color);
-        this.setColor(color);
-        this.side = side;
-    }
-
     @Override
     public double calculateArea() {
         return side * side;
+    }
+
+    public double getSide() {
+        return this.side;
     }
 }

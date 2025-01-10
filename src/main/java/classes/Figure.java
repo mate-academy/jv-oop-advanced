@@ -1,9 +1,9 @@
-package classes_inheritors;
+package classes;
 
 public abstract class Figure implements Drowable {
     private Color color;
 
-    Figure (Color color) {
+    public Figure(Color color) {
         this.color = color;
     }
 

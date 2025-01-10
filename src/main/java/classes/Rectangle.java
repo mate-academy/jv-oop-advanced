@@ -1,8 +1,14 @@
-package classes_inheritors;
+package classes;
 
 public class Rectangle extends Figure {
     private double width;
     private double height;
+
+    public Rectangle(Color color, double width, double height) {
+        super(color);
+        this.height = height;
+        this.width = width;
+    }
 
     @Override
     public String toString() {
@@ -17,12 +23,6 @@ public class Rectangle extends Figure {
                 .append("height: " + this.height + " sq. units" + ", ")
                 .append("color: " + this.getColor() + ".");
         return infoMessage.toString();
-    }
-
-    public Rectangle(Color color, double width, double height) {
-        super(color);
-        this.height = height;
-        this.width = width;
     }
 
     @Override
