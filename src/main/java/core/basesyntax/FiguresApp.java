@@ -1,7 +1,7 @@
 package core.basesyntax;
 
-import classes.FigureSupplier;
 import classes.Figure;
+import classes.FigureSupplier;
 
 public class FiguresApp {
     private static final int FIGURE_COUNT = 6;
