@@ -9,11 +9,6 @@ public class Square extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "Square";
-    }
-
-    @Override
     public String draw() {
         StringBuilder infoMessage = new StringBuilder("Figure: " + Figures.Square.name() + ", ")
                 .append("area: " + this.calculateArea() + " sq. units" + ", ")

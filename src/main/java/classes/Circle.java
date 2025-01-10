@@ -9,11 +9,6 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "Circle";
-    }
-
-    @Override
     public String draw() {
         StringBuilder infoMessage = new StringBuilder("Figure: " + Figures.Circle.name() + ", ")
                 .append("area: " + this.calculateArea() + " sq. units" + ", ")

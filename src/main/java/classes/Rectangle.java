@@ -11,11 +11,6 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "Rectangle";
-    }
-
-    @Override
     public String draw() {
         StringBuilder infoMessage = new StringBuilder("Figure: " + Figures.Rectangle.name() + ", ")
                 .append("area: " + this.calculateArea() + " sq. units" + ", ")

@@ -14,11 +14,6 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String toString() {
-        return "Isosceles trapezoid";
-    }
-
-    @Override
     public String draw() {
         StringBuilder infoMessage = new StringBuilder()
                 .append("Figure: " + Figures.Isosceles_Trapezoid.name() + ", ")
