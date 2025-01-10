@@ -19,8 +19,8 @@ public class RightTriangle extends Figure {
     public String draw() {
         StringBuilder infoMessage = new StringBuilder("Figure: " + Figures.Right_triangle.name() + ", ")
                 .append("area: " + this.calculateArea() + " sq. units" + ", ")
-                .append("firstLeg: " + this.firstLeg + " sq. units" + ", ")
-                .append("secondLeg: " + this.secondLeg + " sq. units" + ", ")
+                .append("firstLeg: " + this.firstLeg + " units" + ", ")
+                .append("secondLeg: " + this.secondLeg + " units" + ", ")
                 .append("color: " + this.getColor() + ".");
         return infoMessage.toString();
     }

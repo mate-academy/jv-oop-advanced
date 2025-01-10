@@ -23,9 +23,9 @@ public class IsoscelesTrapezoid extends Figure {
         StringBuilder infoMessage = new StringBuilder()
                 .append("Figure: " + Figures.Isosceles_Trapezoid.name() + ", ")
                 .append("area: " + this.calculateArea() + " sq. units" + ", ")
-                .append("baseTop: " + this.baseTop + " sq. units" + ", ")
-                .append("baseBottom: " + this.baseBottom + " sq. units" + ", ")
-                .append("height: " + this.height + " sq. units" + ", ")
+                .append("baseTop: " + this.baseTop + " units" + ", ")
+                .append("baseBottom: " + this.baseBottom + " units" + ", ")
+                .append("height: " + this.height + " units" + ", ")
                 .append("color: " + this.getColor() + ".");
         return infoMessage.toString();
     }

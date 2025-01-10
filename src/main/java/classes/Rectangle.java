@@ -19,8 +19,8 @@ public class Rectangle extends Figure {
     public String draw() {
         StringBuilder infoMessage = new StringBuilder("Figure: " + Figures.Rectangle.name() + ", ")
                 .append("area: " + this.calculateArea() + " sq. units" + ", ")
-                .append("width: " + this.width + " sq. units" + ", ")
-                .append("height: " + this.height + " sq. units" + ", ")
+                .append("width: " + this.width + " units" + ", ")
+                .append("height: " + this.height + " units" + ", ")
                 .append("color: " + this.getColor() + ".");
         return infoMessage.toString();
     }
