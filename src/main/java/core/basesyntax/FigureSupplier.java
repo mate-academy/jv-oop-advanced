@@ -6,9 +6,9 @@ public class FigureSupplier {
     private static final Random RANDOM = new Random();
     private static final int FIGURES_QUANTITY = 5;
     private static final int DEFAULT_RADIUS = 10;
+    ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        ColorSupplier colorSupplier = new ColorSupplier();
         Color color = colorSupplier.getRandomColor();
         final int figureType = new Random().nextInt(FIGURES_QUANTITY);
 
