@@ -32,7 +32,7 @@ public class FigureSupplier {
                 break;
             }
             default -> {
-                figure = null;
+                figure = new Circle(10, "white");
                 break;
             }
         }

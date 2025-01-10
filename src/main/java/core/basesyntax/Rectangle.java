@@ -17,7 +17,7 @@ public class Rectangle extends ColoredFigure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: right triangle, area: " + getArea()
+        System.out.println("Figure: rectangle, area: " + getArea()
                 + " sq. units, first side: " + sideA + " units, second side: "
                 + sideB + " units,color: " + getColor());
     }
