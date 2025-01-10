@@ -3,8 +3,12 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    public ColoredFigure getDefaultFigure() {
+        return new Circle(10, "white");
+    }
+
     public ColoredFigure getRandomFigure() {
-        ColoredFigure figure;
+        ColoredFigure figure = getDefaultFigure();
         String color = new ColorSupplier().getRandomColor();
         int index = new Random().nextInt(FigureType.values().length);
         switch (FigureType.values()[index]) {
@@ -32,14 +36,10 @@ public class FigureSupplier {
                 break;
             }
             default -> {
-                figure = new Circle(10, "white");
                 break;
             }
         }
         return figure;
     }
 
-    public Figure getDefaultFigure() {
-        return new Circle(10, "white");
-    }
 }

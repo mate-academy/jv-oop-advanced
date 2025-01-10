@@ -10,7 +10,7 @@ public class Square extends ColoredFigure {
 
     @Override
     public double getArea() {
-        return ((side * side) * 100) / 100;
+        return side * side;
     }
 
     @Override

@@ -11,7 +11,7 @@ public class Circle extends ColoredFigure {
 
     @Override
     public double getArea() {
-        return (Math.PI * (radius * radius) * 100) / 100;
+        return Math.PI * (radius * radius);
     }
 
     @Override
