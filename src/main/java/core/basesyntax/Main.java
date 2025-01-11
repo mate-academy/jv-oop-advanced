@@ -15,6 +15,5 @@ public class Main {
             }
             figures[i].draw();
         }
-
     }
 }
