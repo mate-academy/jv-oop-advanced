@@ -1,13 +1,28 @@
 package core.basesyntax;
 
-public class Square extends Rectangle {
-    public Square(double firstSide, double secondSide) {
-        super(firstSide, secondSide);
+public class Square extends Figure {
+    private double firstSide;
+
+    public Square(double firstSide) {
+        this.firstSide = firstSide;
+    }
+
+    public double getFirstSide() {
+        return firstSide;
+    }
+
+    public void setFirstSide(double firstSide) {
+        this.firstSide = firstSide;
     }
 
     @Override
     public void drawTheFigure() {
-        System.out.println("Figure: square, area: " + obtainTheArea() + ", color: " + color + ", side: " +
-                getFirstSide());
+        System.out.println("Figure: square, area: " + obtainTheArea() + ", color: " + color + ", first side: "
+                + firstSide);
+    }
+
+    @Override
+    public double obtainTheArea() {
+        return Math.pow(firstSide, 2);
     }
 }

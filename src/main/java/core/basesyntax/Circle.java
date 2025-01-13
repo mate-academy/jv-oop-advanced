@@ -3,8 +3,13 @@ package core.basesyntax;
 public class Circle extends Figure implements DrawTheFigure, ObtainTheArea {
     private double radius;
 
-    public Circle(double radius) {
+    public Circle() {
+        this.color = String.valueOf(Color.white);
+        this.radius = 10;
+    }
+    public Circle(double radius, String color) {
         this.radius = radius;
+        this.color = color;
     }
 
     public double getRadius() {

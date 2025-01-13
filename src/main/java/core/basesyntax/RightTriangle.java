@@ -4,9 +4,10 @@ public class RightTriangle extends Figure implements DrawTheFigure, ObtainTheAre
     private double firstLeg;
     private double secondLeg;
 
-    public RightTriangle(double firstLeg, double secondLeg) {
+    public RightTriangle(double firstLeg, double secondLeg, String color) {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
+        this.color = color;
     }
 
     public double getFirstLeg() {

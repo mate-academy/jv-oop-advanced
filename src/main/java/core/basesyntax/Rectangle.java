@@ -1,20 +1,12 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements DrawTheFigure, ObtainTheArea {
-    private double firstSide;
+public class Rectangle extends Square {
     private double secondSide;
 
-    public Rectangle(double firstSide, double secondSide) {
-        this.firstSide = firstSide;
+    public Rectangle(double firstSide, double secondSide, String color) {
+        super(firstSide);
+        this.color = color;
         this.secondSide = secondSide;
-    }
-
-    public double getFirstSide() {
-        return firstSide;
-    }
-
-    public void setFirstSide(double firstSide) {
-        this.firstSide = firstSide;
     }
 
     public double getSecondSide() {
@@ -25,15 +17,16 @@ public class Rectangle extends Figure implements DrawTheFigure, ObtainTheArea {
         this.secondSide = secondSide;
     }
 
-
     @Override
     public void drawTheFigure() {
-        System.out.println("Figure: rectangle, area: " + obtainTheArea() + ", color: " + color + ", first side: " +
-                firstSide + ", second side: " + secondSide);
+        System.out.println("Figure: rectangle, area: " + obtainTheArea() + ", color: " + color + ", first side: "
+                + getFirstSide() + ", second side: " + secondSide);
     }
 
     @Override
     public double obtainTheArea() {
-        return firstSide * secondSide;
+        return getFirstSide() * secondSide;
     }
+
+
 }

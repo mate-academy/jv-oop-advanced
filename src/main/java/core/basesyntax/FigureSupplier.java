@@ -3,21 +3,22 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    public Figure getRandomFigure() {
+    public static Figure getRandomFigure() {
         int index = new Random().nextInt(4);
         switch (index) {
             case 0:
-                return new Circle(new Random().nextDouble(100));
+                return new Circle(new Random().nextDouble(100), ColorSupplier.getRandomColor());
             case 1:
-                return new Rectangle(new Random().nextDouble(100), new Random().nextDouble(100));
+                return new Rectangle(new Random().nextDouble(100), new Random().nextDouble(100),
+                        ColorSupplier.getRandomColor());
             case 2:
-                return new RightTriangle(new Random().nextDouble(100), new Random().nextDouble(100));
+                return new RightTriangle(new Random().nextDouble(100), new Random().nextDouble(100),
+                        ColorSupplier.getRandomColor());
             case 3:
                 return new IsoscelesTrapezoid(new Random().nextDouble(100), new Random().nextDouble(100),
-                        new Random().nextDouble(100));
+                        new Random().nextDouble(100), ColorSupplier.getRandomColor());
             case 4:
-                double side = new Random().nextDouble(100);
-                return new Square(side, side);
+                return new Square(new Random().nextDouble(100));
             default:
                 return null;
         }

@@ -5,10 +5,11 @@ public class IsoscelesTrapezoid extends Figure implements  DrawTheFigure, Obtain
     private double secondBase;
     private double height;
 
-    public IsoscelesTrapezoid(double firstBase, double secondBase, double height) {
+    public IsoscelesTrapezoid(double firstBase, double secondBase, double height, String color) {
         this.firstBase = firstBase;
         this.secondBase = secondBase;
         this.height = height;
+        this.color = color;
     }
 
     public double getFirstBase() {
