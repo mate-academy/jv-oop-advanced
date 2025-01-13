@@ -4,8 +4,7 @@
 
 Task:
 
-There are some figures of the following types: square, rectangle, right triangle, circle,
-isosceles trapezoid.
+There are some figures of the following types: square, rectangle, right triangle, circle, isosceles trapezoid.
 You need to create corresponding classes for them(`Square`, `Rectangle`, `RightTriangle`, 
 `Circle`, `IsoscelesTrapezoid`)
 
