@@ -5,7 +5,7 @@ public class Rectangle extends Square {
 
     public Rectangle(double firstSide, double secondSide, String color) {
         super(firstSide);
-        this.color = color;
+        this.setColor(color);
         this.secondSide = secondSide;
     }
 
@@ -19,7 +19,8 @@ public class Rectangle extends Square {
 
     @Override
     public void drawTheFigure() {
-        System.out.println("Figure: rectangle, area: " + obtainTheArea() + ", color: " + color + ", first side: "
+        System.out.println("Figure: rectangle, area: " + obtainTheArea() + ", color: "
+                + getColor() + ", first side: "
                 + getFirstSide() + ", second side: " + secondSide);
     }
 
@@ -27,6 +28,5 @@ public class Rectangle extends Square {
     public double obtainTheArea() {
         return getFirstSide() * secondSide;
     }
-
 
 }
