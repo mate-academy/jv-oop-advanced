@@ -3,6 +3,10 @@ package core.basesyntax;
 public class Circle extends Figure implements DrawTheFigure, ObtainTheArea {
     private double radius;
 
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
     public double getRadius() {
         return radius;
     }

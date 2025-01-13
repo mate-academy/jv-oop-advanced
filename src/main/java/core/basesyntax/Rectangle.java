@@ -4,6 +4,11 @@ public class Rectangle extends Figure implements DrawTheFigure, ObtainTheArea {
     private double firstSide;
     private double secondSide;
 
+    public Rectangle(double firstSide, double secondSide) {
+        this.firstSide = firstSide;
+        this.secondSide = secondSide;
+    }
+
     public double getFirstSide() {
         return firstSide;
     }
