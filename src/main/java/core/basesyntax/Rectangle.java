@@ -23,8 +23,8 @@ public class Rectangle extends Figure implements DrawTheFigure, ObtainTheArea {
 
     @Override
     public void drawTheFigure() {
-        System.out.println("Figure: rectangle, area: " + obtainTheArea() + ", first side: " + firstSide +
-                ", second side: " + secondSide);
+        System.out.println("Figure: rectangle, area: " + obtainTheArea() + ", color: " + color + ", first side: " +
+                firstSide + ", second side: " + secondSide);
     }
 
     @Override
