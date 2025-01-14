@@ -6,9 +6,6 @@ package core.basesyntax;
 public class HelloWorld {
     public static void main(String[] args) {
         FigureSupplier supplier = new FigureSupplier();
-        //Figure figure = supplier.getRandomFigure();
-        //System.out.println(figure.getFigure());
-
         Figure[] figures = new Figure[6];
 
         for (int i = 0; i < figures.length; i++) {

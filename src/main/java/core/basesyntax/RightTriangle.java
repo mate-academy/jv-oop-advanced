@@ -1,8 +1,8 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    int firstLeg;
-    int secondLeg;
+    double firstLeg;
+    double secondLeg;
 
     public RightTriangle(int firstLeg, int secondLeg, String color) {
         super(color, (double) (firstLeg * secondLeg) / 2, "RightTriangle");
