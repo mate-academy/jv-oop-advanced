@@ -5,15 +5,13 @@ public class RightTriangle extends Figure {
     int secondLeg;
 
     public RightTriangle(int firstLeg, int secondLeg, String color) {
+        super(color, (double) (firstLeg * secondLeg) / 2, "RightTriangle");
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
-        super.color = color;
-        super.name = "RightTriangle";
-        super.area = (double) (firstLeg * secondLeg) / 2;
     }
 
     @Override
     public String getFigure() {
-        return "Figure: " + super.name + ", area: " + super.area + " sq. until, firstLeg: " + firstLeg + " until, secondLeg: " + secondLeg + " until, color: " + super.color;
+        return "Figure: " + super.name + ", area: " + super.area + " sq. units, firstLeg: " + firstLeg + " units, secondLeg: " + secondLeg + " units, color: " + super.color;
     }
 }

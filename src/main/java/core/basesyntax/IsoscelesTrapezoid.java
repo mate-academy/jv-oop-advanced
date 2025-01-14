@@ -6,12 +6,10 @@ public class IsoscelesTrapezoid extends Figure{
     double height;
 
     public IsoscelesTrapezoid(int firstLeg, int secondLeg, int height, String color) {
-    this.firstLeg = firstLeg;
-    this.secondLeg = secondLeg;
-    this.height = height;
-    super.color = color;
-    super.name = "IsoscelesTrapezoid";
-    super.area = (double) ((firstLeg + secondLeg) / 2) * height;
+        super(color, (double) ((firstLeg + secondLeg) / 2) * height, "IsoscelesTrapezoid");
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
+        this.height = height;
     }
     @Override
     public String getFigure(){

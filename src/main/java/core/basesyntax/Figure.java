@@ -5,5 +5,11 @@ public abstract class Figure {
     double area;
     String name;
 
+    public Figure(String color, double area, String name) {
+        this.color = color;
+        this.area = area;
+        this.name = name;
+    }
+
     public abstract String getFigure();
 }
