@@ -1,15 +1,18 @@
 package core.basesyntax;
 
 public class Main {
+    private static final int FIGURE_ARRAY_SIZE = 6;
+    private static final int FIXED_CIRCLE_COUNT = 3;
     public static void main(String[] args) {
-        Figure[] figure = new Figure[6];
-        for (int i = 0; i < figure.length; i++) {
-            if (i <= 2) {
-                figure[i] = new Circle();
+        Figure[] figures = new Figure[FIGURE_ARRAY_SIZE];
+        FigureSupplier figureSupplier = new FigureSupplier();
+        for (int i = 0; i < figures.length; i++) {
+            if (i <= FIXED_CIRCLE_COUNT - 1) {
+                figures[i] = figureSupplier.getDefaultFigure();
             } else {
-                figure[i] = FigureSupplier.getRandomFigure();
+                figures[i] = figureSupplier.getRandomFigure();
             }
-            figure[i].drawTheFigure(); // Викликаємо метод на об'єкті фігури
+            figures[i].drawTheFigure();
         }
     }
 }

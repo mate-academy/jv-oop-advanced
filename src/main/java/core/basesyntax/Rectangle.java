@@ -1,12 +1,13 @@
 package core.basesyntax;
 
-public class Rectangle extends Square {
+public class Rectangle extends Figure {
+    private double firstSide;
     private double secondSide;
 
     public Rectangle(double firstSide, double secondSide, String color) {
-        super(firstSide);
-        this.setColor(color);
+        this.firstSide = firstSide;
         this.secondSide = secondSide;
+        this.setColor(color);
     }
 
     public double getSecondSide() {
@@ -21,12 +22,12 @@ public class Rectangle extends Square {
     public void drawTheFigure() {
         System.out.println("Figure: rectangle, area: " + obtainTheArea() + ", color: "
                 + getColor() + ", first side: "
-                + getFirstSide() + ", second side: " + secondSide);
+                + firstSide + ", second side: " + secondSide);
     }
 
     @Override
     public double obtainTheArea() {
-        return getFirstSide() * secondSide;
+        return firstSide * secondSide;
     }
 
 }
