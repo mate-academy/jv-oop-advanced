@@ -3,6 +3,7 @@ package core.basesyntax;
 public class Main {
     private static final int FIGURE_ARRAY_SIZE = 6;
     private static final int FIXED_CIRCLE_COUNT = 3;
+
     public static void main(String[] args) {
         Figure[] figures = new Figure[FIGURE_ARRAY_SIZE];
         FigureSupplier figureSupplier = new FigureSupplier();

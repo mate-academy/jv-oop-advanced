@@ -21,9 +21,12 @@ public class FigureSupplier {
                         new Random().nextDouble(100), colorSupplier.getRandomColor());
             case 4:
                 return new Square(new Random().nextDouble(100), colorSupplier.getRandomColor());
+            default:
+                getDefaultFigure();
         }
         return getDefaultFigure();
     }
+
     public Figure getDefaultFigure() {
         return new Circle(10, Color.white.name());
     }
