@@ -1,14 +1,14 @@
 package core.basesyntax;
 
 public class Main {
-    public static void main(String[] args) {
-        final int arraySize = 5;
+    private static final int ARRAY_SIZE = 5;
 
+    public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        Figure[] figures = new Figure[arraySize];
+        Figure[] figures = new Figure[ARRAY_SIZE];
 
         for (int i = 0; i < figures.length; i++) {
-            if (i <= (figures.length + 1) / 2) {
+            if (i < figures.length - 1) {
                 figures[i] = figureSupplier.getRandomFigure(i);
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
