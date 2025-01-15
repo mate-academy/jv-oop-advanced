@@ -13,9 +13,7 @@ public abstract class Figure {
 
     public abstract double getArea();
 
-    public void draw() {
-
-    }
+    public abstract void draw();
 }
 
 
