@@ -16,7 +16,7 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: square, area: " + roundToTwoDecimals(getArea()) +
-                " sq. units, side: " + roundToTwoDecimals(side) + " units, color: " + color);
+        System.out.println("Figure: square, area: " + roundToTwoDecimals(getArea())
+                + " sq. units, side: " + roundToTwoDecimals(side) + " units, color: " + color);
     }
 }

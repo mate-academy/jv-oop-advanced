@@ -6,13 +6,17 @@ public abstract class Figure {
 
     public Figure(String color) {
             this.color = color;
-        }
+    }
 
-        public double roundToTwoDecimals(double value) {
-            return Math.round(value * 100.0) / 100.0;
+    public String getColor() {
+        return color;
     }
 
     public abstract double getArea();
 
     public abstract void draw();
+
+    public double roundToTwoDecimals(double value) {
+        return Math.round(value * 100.0) / 100.0;
+    }
 }
