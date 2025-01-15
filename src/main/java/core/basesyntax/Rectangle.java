@@ -19,7 +19,7 @@ public class Rectangle extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: rectangle, area: " + roundToTwoDecimals(getArea())
-                + " sq. units, width: " + roundToTwoDecimals(width) + " units, height: " + roundToTwoDecimals(height)
-                + " units, color: " + color);
+                + " sq. units, width: " + roundToTwoDecimals(width) + " units, height: "
+                + roundToTwoDecimals(height) + " units, color: " + color);
     }
 }

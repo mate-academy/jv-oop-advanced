@@ -19,7 +19,7 @@ public class RightTriangle extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: right triangle, area: " + roundToTwoDecimals(getArea())
-                + " sq. units, first leg: " + roundToTwoDecimals(firstLeg) + " units, second leg: " + roundToTwoDecimals(secondLeg)
-                + " units, color: " + color);
+                + " sq. units, first leg: " + roundToTwoDecimals(firstLeg) + " units, second leg: "
+                + roundToTwoDecimals(secondLeg) + " units, color: " + color);
     }
 }
