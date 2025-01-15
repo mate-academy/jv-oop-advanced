@@ -58,7 +58,7 @@ public class FigureSupplier {
                 return isoscelesTrapezoid;
 
             default:
-                return new Circle("Withe", 10);
+                return new Circle("White", 10);
         }
     }
 }
