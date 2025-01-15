@@ -8,10 +8,6 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
-    private int getRandomSize() {
-        return random.nextInt(MAX_VALUE_FOR_SIZE);
-    }
-
     public Figure getRandomFigure(int index) {
         String randomColor = colorSupplier.getRandomColor();
         switch (index) {
@@ -27,5 +23,8 @@ public class FigureSupplier {
     public Figure getDefaultFigure() {
         return new Circle("WHITE", DEFAULT_SIZE);
     }
-}
 
+    private int getRandomSize() {
+        return random.nextInt(MAX_VALUE_FOR_SIZE);
+    }
+}
