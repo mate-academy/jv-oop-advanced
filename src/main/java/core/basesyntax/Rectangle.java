@@ -12,9 +12,12 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + String.format("%.2f", getArea())
-                + " sq. units, width: " + String.format("%.2f", width) + " units, height: "
-                + String.format("%.2f", height) + " units, color: " + super.color);
+        System.out.println("Figure: rectangle, area: "
+                + String.format("%.2f", getArea())
+                + " sq. units, width: " + String.format("%.2f", width)
+                + " units, height: "
+                + String.format("%.2f", height)
+                + " units, color: " + super.color);
     }
 
     @Override
