@@ -18,7 +18,7 @@ public class IsoscelesTrapezoid extends Figure {
                 + " sq. units, base: " + String.format("%.2f", base)
                 + " units, top: " + String.format("%.2f", top)
                 + " units, height: " + String.format("%.2f", height)
-                + " units, color: " + super.color);
+                + " units, color: " + color);
     }
 
     @Override

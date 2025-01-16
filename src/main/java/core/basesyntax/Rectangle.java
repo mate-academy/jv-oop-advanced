@@ -17,7 +17,7 @@ public class Rectangle extends Figure {
                 + " sq. units, width: " + String.format("%.2f", width)
                 + " units, height: "
                 + String.format("%.2f", height)
-                + " units, color: " + super.color);
+                + " units, color: " + color);
     }
 
     @Override

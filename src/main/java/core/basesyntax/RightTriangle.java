@@ -17,7 +17,7 @@ public class RightTriangle extends Figure {
                 + " sq. units, first leg: " + String.format("%.2f", firstLeg)
                 + " units, second leg: "
                 + String.format("%.2f", secondLeg)
-                + " units, color: " + super.color);
+                + " units, color: " + color);
     }
 
     @Override

@@ -13,7 +13,7 @@ public class Circle extends Figure {
         System.out.println("Figure: circle, area: "
                 + String.format("%.2f", getArea())
                 + " sq. units, radius: " + String.format("%.2f", radius)
-                + " units, color: " + super.color);
+                + " units, color: " + color);
     }
 
     @Override
