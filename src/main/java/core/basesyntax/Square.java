@@ -10,8 +10,8 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: square, area: " + roundToTwoDecimals(getArea())
-                + " sq. units, side: " + roundToTwoDecimals(side) + " units, color: " + color);
+        System.out.println("Figure: square, area: " + String.format("%.2f", getArea())
+                + " sq. units, side: " + String.format("%.2f", side) + " units, color: " + super.color);
     }
 
     @Override

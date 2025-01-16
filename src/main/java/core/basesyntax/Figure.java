@@ -10,8 +10,4 @@ public abstract class Figure implements Drawable {
     public abstract void draw();
 
     public abstract double getArea();
-
-    public double roundToTwoDecimals(double value) {
-        return Math.round(value * 100.0) / 100.0;
-    }
 }
