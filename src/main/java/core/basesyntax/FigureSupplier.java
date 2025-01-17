@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
+    private static final int RANDOM_BOARD = 100;
 
     public Figure getRandomFigure() {
         String color = new ColorSupplier().getRandomColor();
@@ -11,28 +12,28 @@ public class FigureSupplier {
         Figure figure;
         switch (random.nextInt(FIGURE_COUNT)) {
             case 1:
-                double side = random.nextDouble();
+                double side = random.nextInt(RANDOM_BOARD);
                 figure = new Square(side, color);
                 break;
             case 2:
-                double side1 = random.nextDouble();
-                double side2 = random.nextDouble();
+                double side1 = random.nextInt(RANDOM_BOARD);
+                double side2 = random.nextInt(RANDOM_BOARD);
                 figure = new Rectangle(side1, side2, color);
                 break;
             case 3:
-                double firstLeg = random.nextDouble();
-                double secondLeg = random.nextDouble();
+                double firstLeg = random.nextInt(RANDOM_BOARD);
+                double secondLeg = random.nextInt(RANDOM_BOARD);
                 figure = new RightTriangle(firstLeg, secondLeg, color);
                 break;
             case 4:
-                double radius = random.nextDouble();
+                double radius = random.nextInt(RANDOM_BOARD);
                 figure = new Circle(radius, color);
                 break;
             default:
-                double firstbase = random.nextDouble();
-                double secondbase = random.nextDouble();
-                double height = random.nextDouble();
-                figure = new IsoscelesTrapezoid(firstbase, secondbase, height, color);
+                double firstBase = random.nextInt(RANDOM_BOARD);
+                double secondBase = random.nextInt(RANDOM_BOARD);
+                double height = random.nextInt(RANDOM_BOARD);
+                figure = new IsoscelesTrapezoid(firstBase, secondBase, height, color);
         }
         return figure;
     }
