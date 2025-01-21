@@ -1,8 +1,15 @@
-package core.basesyntax;
+package core.basesyntax.figure;
 
-public abstract class Figure implements FigureTasks {
+import core.basesyntax.AreaCalculable;
+import core.basesyntax.Printable;
+
+public abstract class Figure implements AreaCalculable, Printable {
 
     private String color;
+
+    public Figure(String color) {
+        this.color = color;
+    }
 
     public void setColor(String color) {
         this.color = color;
@@ -11,14 +18,8 @@ public abstract class Figure implements FigureTasks {
     public String getColor() {
         return color;
     }
-    public Figure(String color) {
-        this.color = color;
-    }
 
     @Override
-    public void GetPrint() {
+    public void getPrint() {
     }
-
-
-
 }

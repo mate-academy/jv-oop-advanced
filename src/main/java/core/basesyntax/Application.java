@@ -1,15 +1,21 @@
 package core.basesyntax;
 
+import core.basesyntax.figure.Figure;
+
 public class Application {
     public static void main(String[] args) {
 
-        Square square = new Square("Blue", 7);
-        square.GetPrint();
+        FigureSupplier figureSupplier = new FigureSupplier();
 
-        IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid("Red", 10, 13,6);
-        isoscelesTrapezoid.GetPrint();
+        Figure[] figures = new Figure[4];
+        figures[0] = figureSupplier.getRandomFigure();
+        figures[1] = figureSupplier.getRandomFigure();
+        figures[2] = figureSupplier.getDefaultFigure();
+        figures[3] = figureSupplier.getDefaultFigure();
 
-
+        for (Figure figure : figures) {
+            figure.getPrint();
+        }
 
     }
 }

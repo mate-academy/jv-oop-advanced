@@ -1,7 +1,4 @@
-package core.basesyntax;
-
-import static java.lang.Math.PI;
-import static java.lang.Math.pow;
+package core.basesyntax.figure;
 
 public class IsoscelesTrapezoid extends Figure {
 
@@ -17,12 +14,13 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public double GetArea() {
+    public double getArea() {
         return ((upperBase + lowerBase) / 2) * height;
     }
 
     @Override
-    public void GetPrint() {
-        System.out.println("Figura: Trójkąt " + "Pole: " + (((upperBase + lowerBase) / 2) * height) + " Kolor: " + getColor());
+    public void getPrint() {
+        System.out.println("Figura: Trójkąt " + "Pole: " + (((upperBase + lowerBase) / 2) * height)
+                + " Kolor: " + getColor());
     }
 }

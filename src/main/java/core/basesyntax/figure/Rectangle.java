@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.figure;
 
 public class Rectangle extends Figure {
 
@@ -12,12 +12,13 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public double GetArea() {
+    public double getArea() {
         return firstSide * secondSide;
     }
 
     @Override
-    public void GetPrint() {
-        System.out.println("Figura: Prostokąt " + "Pole: " + (firstSide * secondSide) + " Kolor: " + getColor());
+    public void getPrint() {
+        System.out.println("Figura: Prostokąt " + "Pole: " + (firstSide * secondSide)
+                + " Kolor: " + getColor());
     }
 }

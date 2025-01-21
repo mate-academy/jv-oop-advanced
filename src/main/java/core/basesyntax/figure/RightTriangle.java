@@ -1,4 +1,4 @@
-package core.basesyntax;
+package core.basesyntax.figure;
 
 public class RightTriangle extends Figure {
 
@@ -12,12 +12,13 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public double GetArea() {
+    public double getArea() {
         return height * arm / 2;
     }
 
     @Override
-    public void GetPrint() {
-        System.out.println("Figura: Trójkąt " + "Pole: " + (height * arm / 2) + " Kolor: " + getColor());
+    public void getPrint() {
+        System.out.println("Figura: Trójkąt " + "Pole: " + (height * arm / 2)
+                + " Kolor: " + getColor());
     }
 }

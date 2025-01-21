@@ -1,23 +1,29 @@
-package core.basesyntax;
+package core.basesyntax.figure;
 
-import static java.lang.Math.*;
+import static java.lang.Math.PI;
+import static java.lang.Math.pow;
 
 public class Circle extends Figure {
 
-    private final double radius;
+    private double radius;
 
-    public Circle(String color,double radius) {
+    public Circle(String color, double radius) {
         super(color);
         this.radius = radius;
     }
 
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+
     @Override
-    public double GetArea() {
+    public double getArea() {
         return PI * (pow(radius, 2));
     }
 
     @Override
-    public void GetPrint() {
-        System.out.println("Figura: Trójkąt " + "Pole: " + (PI * (pow(radius, 2))) + " Kolor: " + getColor());
+    public void getPrint() {
+        System.out.println("Figura: Koło " + "Pole: " + (PI * (pow(radius, 2))) + " Promień: "
+                + radius + " Kolor: " + getColor());
     }
 }
