@@ -2,8 +2,7 @@ package core.basesyntax;
 
 public class Square extends Figure {
 
-    private double side;
-    private double area = Math.pow(side, 2);
+    private final double side;
 
     public Square(String color, double side) {
         super(color);
@@ -14,7 +13,6 @@ public class Square extends Figure {
     public double GetArea() {
         return Math.pow(side, 2);
     }
-
 
 
     @Override
