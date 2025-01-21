@@ -22,7 +22,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public void getPrint() {
+    public void print() {
         System.out.println("Figura: Koło " + "Pole: " + (PI * (pow(radius, 2))) + " Promień: "
                 + radius + " Kolor: " + getColor());
     }

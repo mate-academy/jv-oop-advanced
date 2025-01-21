@@ -14,7 +14,7 @@ public class Application {
         figures[3] = figureSupplier.getDefaultFigure();
 
         for (Figure figure : figures) {
-            figure.getPrint();
+            figure.print();
         }
 
     }

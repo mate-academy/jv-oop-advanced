@@ -17,7 +17,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void getPrint() {
+    public void print() {
         System.out.println("Figura: Trójkąt " + "Pole: " + (height * arm / 2)
                 + " Kolor: " + getColor());
     }

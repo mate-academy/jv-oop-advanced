@@ -19,8 +19,8 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public void getPrint() {
-        System.out.println("Figura: Trójkąt " + "Pole: " + (((upperBase + lowerBase) / 2) * height)
+    public void print() {
+        System.out.println("Figura: Trapez " + "Pole: " + (((upperBase + lowerBase) / 2) * height)
                 + " Kolor: " + getColor());
     }
 }

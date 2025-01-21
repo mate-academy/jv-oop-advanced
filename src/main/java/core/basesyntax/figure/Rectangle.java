@@ -17,7 +17,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void getPrint() {
+    public void print() {
         System.out.println("Figura: Prostokąt " + "Pole: " + (firstSide * secondSide)
                 + " Kolor: " + getColor());
     }

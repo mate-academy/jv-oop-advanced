@@ -12,10 +12,11 @@ public class FigureSupplier {
 
     private ColorSupplier color = new ColorSupplier();
     private Random random = new Random();
-    private double randomDouble = 0;
+    private static final int FIGURE_COUNT = 5;
 
     public Figure getRandomFigure() {
-        int choseFigure = random.nextInt(5);
+        double randomDouble = 0;
+        int choseFigure = random.nextInt(FIGURE_COUNT);
         switch (choseFigure) {
 
             case 0:

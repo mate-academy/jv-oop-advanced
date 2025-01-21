@@ -20,6 +20,6 @@ public abstract class Figure implements AreaCalculable, Printable {
     }
 
     @Override
-    public void getPrint() {
+    public void print() {
     }
 }

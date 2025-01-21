@@ -15,7 +15,7 @@ public class Square extends Figure {
     }
 
     @Override
-    public void getPrint() {
+    public void print() {
         System.out.println("Figura: Kwadrat " + "Pole: " + Math.pow(side, 2)
                 + " Kolor: " + getColor());
     }
