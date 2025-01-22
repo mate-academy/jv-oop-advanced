@@ -16,10 +16,6 @@ public class FigureSupplier {
         return DEFAULT_FIGURES;
     }
 
-    private int getRandomNumber(int bound) {
-        return random.nextInt(1, bound);
-    }
-
     public Figure getRandomFigure() {
         int indexListOfFigure = random.nextInt(NUMBER_OF_FIGURE);
         String randomColor = colorSupplier.getRandomColor();
@@ -47,5 +43,9 @@ public class FigureSupplier {
                 return new IsoscelesTrapezoid(randomColor, isoscelesTrapezoidRandomFirstLeg,
                         isoscelesTrapezoidRandomSecondLeg, randomHeight);
         }
+    }
+
+    private int getRandomNumber(int bound) {
+        return random.nextInt(1, bound);
     }
 }
