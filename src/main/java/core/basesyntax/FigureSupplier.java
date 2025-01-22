@@ -1,11 +1,14 @@
 package core.basesyntax;
 
-public class FigureSupplier extends ColorSupplier {
+import java.util.Random;
+
+public class FigureSupplier {
     private static final int FIGURE_SIZE = 10;
     private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
     private static final int DEFAULT_RADIUS = 10;
     private static final Figure DEFAULT_FIGURES = new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
 
+    private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getDefaultFigure() {

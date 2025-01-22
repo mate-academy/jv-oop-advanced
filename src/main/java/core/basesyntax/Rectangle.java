@@ -10,14 +10,6 @@ public class Rectangle extends Figure {
         this.secondLeg = secondLeg;
     }
 
-    public int getFirstLeg() {
-        return firstLeg;
-    }
-
-    public int getSecondLeg() {
-        return secondLeg;
-    }
-
     @Override
     public double getArea() {
         return firstLeg * secondLeg;
