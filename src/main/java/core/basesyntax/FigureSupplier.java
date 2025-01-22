@@ -7,8 +7,8 @@ public class FigureSupplier {
     private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
     private static final int DEFAULT_RADIUS = 10;
     private static final Figure DEFAULT_FIGURES = new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
+    private static final Random random = new Random();
 
-    private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getDefaultFigure() {
