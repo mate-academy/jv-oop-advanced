@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public abstract class AbstractFigure {
+public abstract class Figure {
     private String color;
 
-    public AbstractFigure(String color) {
+    public Figure(String color) {
         this.color = color;
     }
 
@@ -13,9 +13,5 @@ public abstract class AbstractFigure {
 
     public abstract double getArea();
 
-    @Override
-    public String toString() {
-        return "color='" + color + '\'';
-    }
+    public abstract void draw();
 }
-

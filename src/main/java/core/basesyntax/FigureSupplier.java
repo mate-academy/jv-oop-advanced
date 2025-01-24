@@ -3,27 +3,31 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final Random RANDOM = new Random();
-    private static final ColorSupplier COLOR_SUPPLIER = new ColorSupplier();
 
-    public AbstractFigure getRandomFigure() {
-        int figureType = RANDOM.nextInt(5);
-        String color = COLOR_SUPPLIER.getRandomColor();
+    private ColorSupplier colorSupplier = new ColorSupplier();
+
+    public Figure getRandomFigure() {
+        Random random = new Random();
+        String color = colorSupplier.getRandomColor();
+        int figureType = random.nextInt(5);
+
         switch (figureType) {
             case 0:
-                return new Circle(color, RANDOM.nextDouble(1, 20));
+                return new Square(color, random.nextDouble() * 10);
             case 1:
-                return new Square(color, RANDOM.nextDouble(1, 20));
+                return new Rectangle(color, random.nextDouble() * 10, random.nextDouble() * 10);
             case 2:
-                return new Rectangle(color, RANDOM.nextDouble(1, 20), RANDOM.nextDouble(1, 20));
+                return new RightTriangle(color, random.nextDouble() * 10, random.nextDouble() * 10);
             case 3:
-                return new RightTriangle(color, RANDOM.nextDouble(1, 20), RANDOM.nextDouble(1, 20));
+                return new Circle(color, random.nextDouble() * 10);
+            case 4:
+                return new IsoscelesTrapezoid(color, random.nextDouble() * 10, random.nextDouble() * 10, random.nextDouble() * 10);
             default:
-                return new IsoscelesTrapezoid(color, RANDOM.nextDouble(1, 20), RANDOM.nextDouble(1, 20), RANDOM.nextDouble(1, 20));
+                return null;
         }
     }
 
-    public AbstractFigure getDefaultFigure() {
+    public Figure getDefaultFigure() {
         return new Circle("white", 10);
     }
 }
