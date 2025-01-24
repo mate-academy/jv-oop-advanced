@@ -13,7 +13,7 @@ public class FigureSupplier {
             case 0:
                 return new Circle(color, RANDOM.nextDouble(1, 20));
             case 1:
-                return new Square(RANDOM.nextDouble(1, 20), color);
+                return new Square(color, RANDOM.nextDouble(1, 20));
             case 2:
                 return new Rectangle(color, RANDOM.nextDouble(1, 20), RANDOM.nextDouble(1, 20));
             case 3:
@@ -27,4 +27,3 @@ public class FigureSupplier {
         return new Circle("white", 10);
     }
 }
-
