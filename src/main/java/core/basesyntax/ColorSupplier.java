@@ -10,3 +10,4 @@ public class ColorSupplier {
         return COLORS[random.nextInt(COLORS.length)];
     }
 }
+

@@ -32,3 +32,4 @@ public class FigureSupplier {
         return new Circle("white", 10);
     }
 }
+
