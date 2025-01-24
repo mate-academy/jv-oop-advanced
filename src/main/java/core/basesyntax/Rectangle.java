@@ -17,6 +17,6 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Фігура: прямокутник, площа: " + getArea() + " кв. одиниць, ширина: " + width + " одиниць, висота: " + height + " одиниць, колір: " + getColor());
+        System.out.println("Shape: rectangle, area: " + getArea() + " sq. units, width: " + width + " units, height: " + height + " units, color: " + getColor());
     }
 }

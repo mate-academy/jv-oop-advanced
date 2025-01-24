@@ -22,6 +22,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("білий", 10);
+        return new Circle("white", 10);
     }
 }
