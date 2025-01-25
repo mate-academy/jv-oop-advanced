@@ -6,8 +6,6 @@ public class FigureSupplier {
     private final int parametersNumber = 50;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final int randomParameter = random.nextInt(parametersNumber);
-    private final String color = colorSupplier.getRandomColor();
 
     public Figure getRandomFigure() {
         Figure[] figures = getFigures();
@@ -17,6 +15,8 @@ public class FigureSupplier {
     }
 
     private Figure[] getFigures() {
+        int randomParameter = random.nextInt(parametersNumber);
+        String color = colorSupplier.getRandomColor();
         Circle circle = new Circle(color, randomParameter);
         IsoscelesTrapezoid isoscelesTrapezoid =
                 new IsoscelesTrapezoid(color, randomParameter, randomParameter, randomParameter);
