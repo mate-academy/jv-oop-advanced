@@ -8,8 +8,8 @@ interface Figure {
 }
 
 class Square implements Figure {
-    private String color;
-    private double side;
+    private final String color;
+    private final double side;
 
     public Square(String color, double side) {
         this.color = color;
@@ -28,9 +28,9 @@ class Square implements Figure {
 }
 
 class Rectangle implements Figure {
-    private String color;
-    private double length;
-    private double width;
+    private final String color;
+    private final double length;
+    private final double width;
 
     public Rectangle(String color, double length, double width) {
         this.color = color;
@@ -50,9 +50,9 @@ class Rectangle implements Figure {
 }
 
 class RightTriangle implements Figure {
-    private String color;
-    private double firstLeg;
-    private double secondLeg;
+    private final String color;
+    private final double firstLeg;
+    private final double secondLeg;
 
     public RightTriangle(String color, double firstLeg, double secondLeg) {
         this.color = color;
@@ -72,8 +72,8 @@ class RightTriangle implements Figure {
 }
 
 class Circle implements Figure {
-    private String color;
-    private double radius;
+    private final String color;
+    private final double radius;
 
     public Circle(String color, double radius) {
         this.color = color;
@@ -92,10 +92,10 @@ class Circle implements Figure {
 }
 
 class IsoscelesTrapezoid implements Figure {
-    private String color;
-    private double base1;
-    private double base2;
-    private double height;
+    private final String color;
+    private final double base1;
+    private final double base2;
+    private final double height;
 
     public IsoscelesTrapezoid(String color, double base1, double base2, double height) {
         this.color = color;
@@ -132,20 +132,17 @@ class FigureSupplier {
         int figureType = random.nextInt(5); // 0 to 4 for five types
         String color = colorSupplier.getRandomColor();
 
-        switch (figureType) {
-            case 0:
-                return new Square(color, random.nextDouble() * 10 + 1); // side between 1 and 10
-            case 1:
-                return new Rectangle(color, random.nextDouble() * 10 + 1, random.nextDouble() * 10 + 1); // length and width between 1 and 10
-            case 2:
-                return new RightTriangle(color, random.nextDouble() * 10 + 1, random.nextDouble() * 10 + 1); // legs between 1 and 10
-            case 3:
-                return new Circle(color, random.nextDouble() * 10 + 1); // radius between 1 and 10
-            case 4:
-                return new IsoscelesTrapezoid(color, random.nextDouble() * 10 + 1, random.nextDouble() * 10 + 1, random.nextDouble() * 10 + 1); // bases and height between 1 and 10
-            default:
-                throw new IllegalArgumentException("Unexpected figure type: " + figureType);
-        }
+        return switch (figureType) {
+            case 0 -> new Square(color, random.nextDouble() * 10 + 1); // side between 1 and 10
+            case 1 ->
+                    new Rectangle(color, random.nextDouble() * 10 + 1, random.nextDouble() * 10 + 1); // length and width between 1 and 10
+            case 2 ->
+                    new RightTriangle(color, random.nextDouble() * 10 + 1, random.nextDouble() * 10 + 1); // legs between 1 and 10
+            case 3 -> new Circle(color, random.nextDouble() * 10 + 1); // radius between 1 and 10
+            case 4 ->
+                    new IsoscelesTrapezoid(color, random.nextDouble() * 10 + 1, random.nextDouble() * 10 + 1, random.nextDouble() * 10 + 1); // bases and height between 1 and 10
+            default -> throw new IllegalArgumentException("Unexpected figure type: " + figureType);
+        };
     }
 
     public Figure getDefaultFigure() {
