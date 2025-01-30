@@ -3,40 +3,46 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    public static final int figureCount = 4;
+
     public Figure getRandomFigure() {
         Random rd = new Random();
-        int randomNumber = rd.nextInt(4);
+        int randomNumber = rd.nextInt(figureCount);
         double maxDouble = 200.0;
         String randomColor = new ColorSupplier().getRandomColor();
+        double randomNumber1 = rd.nextDouble(maxDouble);
+        double randomNumber2 = rd.nextDouble(maxDouble);
 
         switch (randomNumber) {
             case 0:
-                return new Circle(randomColor, rd.nextDouble(maxDouble));
+                return new Circle(randomColor, randomNumber1);
 
             case 1:
+                double randomNumber3 = rd.nextDouble(maxDouble);
+
                 return new IsoscelesTrapezoid(
                     randomColor, 
-                    rd.nextDouble(maxDouble),
-                    rd.nextDouble(maxDouble),
-                    rd.nextDouble(maxDouble)
+                    randomNumber1,
+                    randomNumber2,
+                    randomNumber3
                 );
             
             case 2:
                 return new Rectangle(
                     randomColor,
-                    rd.nextDouble(maxDouble),
-                    rd.nextDouble(maxDouble)
+                    randomNumber1,
+                    randomNumber2
                 );
 
             case 3:
                 return new RightTriangle(
-                    randomColor,rd.nextDouble(maxDouble),
-                    rd.nextDouble(maxDouble),
-                    rd.nextDouble(maxDouble)
+                    randomColor,randomNumber1,
+                    randomNumber1,
+                    randomNumber2
                 );
 
             default:
-                return new Square(randomColor, rd.nextDouble(maxDouble));
+                return new Square(randomColor, randomNumber1);
         }
     }
 

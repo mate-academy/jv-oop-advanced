@@ -21,6 +21,6 @@ public class RightTriangle extends Figure {
                 + " sq. units, firstLeg: " + firstLeg
                 + ", height: " + height
                 + ", base: " + base
-                + ", color: " + super.getColor());
+                + ", color: " + getColor());
     }
 }

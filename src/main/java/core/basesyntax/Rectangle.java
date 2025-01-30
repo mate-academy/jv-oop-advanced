@@ -18,6 +18,6 @@ public class Rectangle extends Figure {
         System.out.println("Figure: rectangle, area: " + getArea()
                 + " sq. units, height: " + height
                 + ", width: " + width
-                + ", color: " + super.getColor());
+                + ", color: " + getColor());
     }
 }
