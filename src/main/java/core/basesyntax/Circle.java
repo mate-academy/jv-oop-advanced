@@ -8,7 +8,14 @@ public class Circle extends ColorSupplier {
     public Circle() {
         this.radius = new Random().nextInt(100);
         {
-            draw();
+            {
+                System.out.println("Figure: Circle, area: "
+                        + getArea()
+                        + " sq. units, radius : "
+                        + radius
+                        + " units, color: "
+                        + getRandomColor());
+            }
         }
     }
 
