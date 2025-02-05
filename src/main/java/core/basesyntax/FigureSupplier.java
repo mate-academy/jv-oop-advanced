@@ -10,7 +10,7 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         Random random = new Random();
         double randomSize = random.nextDouble() * 10 +1;
-        String color = colorSupplier.getRandomColor().toString();
+        String color = colorSupplier.getRandomColor().name();
         int figureType = random.nextInt(5);
 
         switch (figureType) {
@@ -25,7 +25,7 @@ public class FigureSupplier {
             case 4: // isosceles trapezoid
                 return new IsoscelesTrapezoid(color, randomSize, randomSize, randomSize);
             default:
-                return null;
+                return getDefaultFigure();
         }
     }
 
