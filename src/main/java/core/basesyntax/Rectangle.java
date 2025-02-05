@@ -1,26 +1,27 @@
 package core.basesyntax;
 
 class Rectangle extends Figure {
-    private double width;
-    private double height;
+    private final double length;
+    private final double width;
 
-    public Rectangle(String color, double width, double height) {
+    public Rectangle(String color, double length, double width) {
         super(color);
+        this.length = length;
         this.width = width;
-        this.height = height;
     }
 
-
     @Override
-    public double getArea() {
-        return width * height;
+    public double calculateArea() {
+        return length * width;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, color: "
-                + color + ", width: "
-                + width + " units, height: "
-                + height + " units, area: " + getArea() + " sq. units");
+        System.out.println("Figure: rectangle, area: "
+                + calculateArea() + " sq. units, length: "
+                + length + " units, width: "
+                + width + " units, color: " + getColor());
     }
 }
+
+

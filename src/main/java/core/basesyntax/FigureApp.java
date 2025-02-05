@@ -2,13 +2,21 @@ package core.basesyntax;
 
 public class FigureApp {
     public static void main(String[] args) {
-        Figure square = new Square("Red", 2.5);
-        Figure trapezoid = new IsoscelesTrapezoid("Blue", 3, 2, 4.1);
-        Figure circle = new Circle("Red", 2.5);
-        Figure rectangle = new Rectangle("Red", 2.5, 2.5);
-        square.draw();
-        trapezoid.draw();
-        rectangle.draw();
-        circle.draw();
+        FigureSupplier figureSupplier = new FigureSupplier();
+        Figure[] figures = new Figure[6];
+
+        for (int i = 0; i < 3; i++) {
+            figures[i] = figureSupplier.getRandomFigure();
+        }
+
+        for (int i = 3; i < 6; i++) {
+            figures[i] = figureSupplier.getDefaultFigure();
+        }
+
+        for (Figure figure : figures) {
+            figure.draw();
+        }
     }
 }
+
+
