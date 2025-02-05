@@ -3,12 +3,13 @@ package core.basesyntax;
 import java.util.Random;
 
 class FigureSupplier {
+    private static final int NUMBER_OF_FIGURE_TYPES = 5;
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random rand = new Random();
 
     public Figure getRandomFigure() {
         String color = colorSupplier.getRandomColor();
-        int figureType = rand.nextInt(5);
+        int figureType = rand.nextInt(NUMBER_OF_FIGURE_TYPES);
 
         switch (figureType) {
             case 0:
@@ -29,7 +30,7 @@ class FigureSupplier {
                         rand.nextDouble() * 10 + 1,
                         rand.nextDouble() * 10 + 1);
             default:
-                return null;
+                return new Circle(color, 10);
         }
     }
 
