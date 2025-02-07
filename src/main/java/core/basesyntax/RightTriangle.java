@@ -1,6 +1,8 @@
+package core.basesyntax;
+
 public class RightTriangle extends Figure {
-    private double firstLeg;
-    private double secondLeg;
+    private final double firstLeg;
+    private final double secondLeg;
 
     public RightTriangle(String color, double firstLeg, double secondLeg) {
         super(color);
@@ -10,7 +12,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public double getArea() {
-        return (firstLeg * secondLeg) / 2;
+        return 0.5 * firstLeg * secondLeg;
     }
 
     @Override
