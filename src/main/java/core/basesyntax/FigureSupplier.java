@@ -27,7 +27,7 @@ public class FigureSupplier {
                 square.draw();
                 break;
             case 5:
-                IsoscelesTrapezoid isoscelestrapezoid = new IsoscelesTrapezoid(Color.YELLOW, 18, 22, 45 );
+                IsoscelesTrapezoid isoscelestrapezoid = new IsoscelesTrapezoid(Color.YELLOW, 18, 22, 45);
                 isoscelestrapezoid.draw();
                 break;
                 default:
@@ -37,7 +37,7 @@ public class FigureSupplier {
         return result;
     }
 
-    public String getDefaultFigure(){
+    public String getDefaultFigure() {
         return "Figure: circle, radius: 10, color: WHITE";
     }
 }

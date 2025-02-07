@@ -8,7 +8,7 @@ public class MainApp {
 
     public void main(String[] args) {
         String[] figuresArray = new String[3];
-        for (int i = 0; i < figuresArray.length-1; i++) {
+        for (int i = 0; i < figuresArray.length - 1; i++) {
             figuresArray[i] = randomFigure;
         }
         figuresArray[2] = defaultFigure;
