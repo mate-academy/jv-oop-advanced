@@ -2,12 +2,12 @@ package core.basesyntax;
 
 public class MainApp {
 
-    FigureSupplier figureSupplier = new FigureSupplier();
-    String randomFigure = figureSupplier.getRandomFigure();
-    String defaultFigure = figureSupplier.getDefaultFigure();
+    static FigureSupplier figureSupplier = new FigureSupplier();
+    static Figure randomFigure = figureSupplier.getRandomFigure();
+    static Figure defaultFigure = figureSupplier.getDefaultFigure();
 
-    public void main(String[] args) {
-        String[] figuresArray = new String[3];
+    public static void main(Figure[] args) {
+        Figure[] figuresArray = new Figure[6];
         for (int i = 0; i < figuresArray.length - 1; i++) {
             figuresArray[i] = randomFigure;
         }
