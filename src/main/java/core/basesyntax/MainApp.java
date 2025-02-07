@@ -6,17 +6,14 @@ public class MainApp {
     String randomFigure = figureSupplier.getRandomFigure();
     String defaultFigure = figureSupplier.getDefaultFigure();
 
-    public String[] main(String[] args) {
-        String[] figuresArray = new String[6];
+    public void main(String[] args) {
+        String[] figuresArray = new String[3];
         for (int i = 0; i < figuresArray.length-1; i++) {
             figuresArray[i] = randomFigure;
         }
-        figuresArray[5] = defaultFigure;
-
-        return figuresArray;
-    }
-    @Override
-    public String toString() {
-        return (randomFigure + defaultFigure);
+        figuresArray[2] = defaultFigure;
+        System.out.println(figuresArray[0]);
+        System.out.println(figuresArray[1]);
+        System.out.println(figuresArray[2]);
     }
 }
