@@ -28,6 +28,7 @@ public class FigureSupplier extends ColorSupplier {
                 return new Rectangle(random.nextDouble(), random.nextDouble());
             }
             default:
+                System.out.println();
 
         }
         return figure;

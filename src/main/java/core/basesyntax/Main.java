@@ -12,11 +12,9 @@ public class Main {
         Figure whiteTriangle = figureSupplier.getDefaultFigure();
 
         Figure[] figures = {randomRightTriangle, randomCircle, randomSquare, randomTrapezoid, whiteTriangle};
-        for (int i = 0; i <= figures.length; i++) {
+        for (int i = 0; i < figures.length; i++) {
             if (i <= figures.length / 2) {
                 System.out.println(figures[i].getArea());
-            }
-            if (i > figures.length) {
             }
         }
         System.out.println(whiteTriangle.getArea() +" " + Color.WHITE);
