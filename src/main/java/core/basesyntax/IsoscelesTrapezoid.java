@@ -13,20 +13,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.height = height;
     }
 
-    @Override
-    public String toString() {
-        return "Figure: isosceles trapezoid, area: "
-                + getArea()
-                + " sq. units, small parallel: "
-                + smallParallel
-                + " units, big parallel parallel: "
-                + bigParallel
-                + " units, height: "
-                + height
-                + " units, color: "
-                + getColor();
-    }
-
     public double getSmallParallel() {
         return smallParallel;
     }
@@ -53,7 +39,16 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Isosceles Trapezoid is drawing");
+        System.out.println("Figure: isosceles trapezoid, area: "
+                + getArea()
+                + " sq. units, small parallel: "
+                + smallParallel
+                + " units, big parallel: "
+                + bigParallel
+                + " units, height: "
+                + height
+                + " units, color: "
+                + getColor());
     }
 
     @Override

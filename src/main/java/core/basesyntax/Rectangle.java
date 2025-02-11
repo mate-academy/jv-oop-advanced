@@ -10,18 +10,6 @@ public class Rectangle extends Figure {
         this.width = width;
     }
 
-    @Override
-    public String toString() {
-        return "Figure: rectangle, area: "
-                + getArea()
-                + " sq. units, length: "
-                + length
-                + " units, width: "
-                + width
-                + " units, color: "
-                + getColor();
-    }
-
     public double getLength() {
         return length;
     }
@@ -40,7 +28,14 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Rectangle is drawing");
+        System.out.println("Figure: rectangle, area: "
+                + getArea()
+                + " sq. units, length: "
+                + length
+                + " units, width: "
+                + width
+                + " units, color: "
+                + getColor());
     }
 
     @Override
