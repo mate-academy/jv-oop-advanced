@@ -9,7 +9,6 @@ public class FigureSupplier {
     private static final double MAX_SIZE = 10;
     private static final int NUMBER_OF_FIGURES = 5;
 
-
     public enum Figures {
         Square,
         Rectangle,
