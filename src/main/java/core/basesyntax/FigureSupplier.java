@@ -1,6 +1,6 @@
 package core.basesyntax;
-import java.util.Random;
 
+import java.util.Random;
 
 public class FigureSupplier {
     private static final Random RANDOM = new Random();
