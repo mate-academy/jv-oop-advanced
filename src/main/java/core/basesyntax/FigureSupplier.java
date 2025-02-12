@@ -9,6 +9,7 @@ public class FigureSupplier {
     private static final double MAX_SIZE = 10;
     private static final int NUMBER_OF_FIGURES = 5;
 
+
     public enum Figures {
         Square,
         Rectangle,
@@ -17,52 +18,40 @@ public class FigureSupplier {
         IsoscelesTrapezoid
     }
 
+    public double getRandomSize() {
+        BigDecimal bd;
+        bd = BigDecimal.valueOf(RANDOM.nextDouble(MAX_SIZE) + 1);
+        bd = bd.setScale(1, RoundingMode.HALF_UP);
+        return bd.doubleValue();
+    }
+
     public Figure getRandomFigure() {
         int figureType = RANDOM.nextInt(NUMBER_OF_FIGURES);
         String color;
-        BigDecimal bd;
 
         switch (figureType) {
             case 0:
-                bd = BigDecimal.valueOf(RANDOM.nextDouble(MAX_SIZE) + 1);
-                bd = bd.setScale(1, RoundingMode.HALF_UP);
-                double side = bd.doubleValue();
+                double side = getRandomSize();
                 color = ColorSupplier.getRandomColor();
                 return new Square(side, color);
             case 1:
-                bd = BigDecimal.valueOf(RANDOM.nextDouble(MAX_SIZE) + 1);
-                bd = bd.setScale(1, RoundingMode.HALF_UP);
-                double smallSide = bd.doubleValue();
-                bd = BigDecimal.valueOf(RANDOM.nextDouble(MAX_SIZE) + 1);
-                bd = bd.setScale(1, RoundingMode.HALF_UP);
-                double bigSide = bd.doubleValue();
+                double smallSide = getRandomSize();
+                double bigSide = getRandomSize();
                 color = ColorSupplier.getRandomColor();
                 return new Rectangle(smallSide, bigSide, color);
             case 2:
-                bd = BigDecimal.valueOf(RANDOM.nextDouble(MAX_SIZE) + 1);
-                bd = bd.setScale(1, RoundingMode.HALF_UP);
-                double firstLeg = bd.doubleValue();
-                bd = BigDecimal.valueOf(RANDOM.nextDouble(MAX_SIZE) + 1);
-                bd = bd.setScale(1, RoundingMode.HALF_UP);
-                double secondLeg = bd.doubleValue();
+                double firstLeg = getRandomSize();
+                double secondLeg = getRandomSize();
                 color = ColorSupplier.getRandomColor();
                 return new RightTriangle(firstLeg, secondLeg, color);
             case 3:
-                bd = BigDecimal.valueOf(RANDOM.nextDouble(MAX_SIZE) + 1);
-                bd = bd.setScale(1, RoundingMode.HALF_UP);
-                double radius = bd.doubleValue();
+                double radius = getRandomSize();
                 color = ColorSupplier.getRandomColor();
                 return new Circle(radius, color);
             default:
-                bd = BigDecimal.valueOf(RANDOM.nextDouble(MAX_SIZE) + 1);
-                bd = bd.setScale(1, RoundingMode.HALF_UP);
-                double smallBase = bd.doubleValue();
-                bd = BigDecimal.valueOf(RANDOM.nextDouble(MAX_SIZE) + 1);
-                bd = bd.setScale(1, RoundingMode.HALF_UP);
-                double bigBase = bd.doubleValue();
-                bd = BigDecimal.valueOf(RANDOM.nextDouble(MAX_SIZE) + 1);
-                bd = bd.setScale(1, RoundingMode.HALF_UP);
-                double height = bd.doubleValue();
+                double smallBase = getRandomSize();
+                double bigBase = getRandomSize();
+                double height = getRandomSize();
                 color = ColorSupplier.getRandomColor();
                 return new IsoscelesTrapezoid(smallBase, bigBase, height, color);
         }

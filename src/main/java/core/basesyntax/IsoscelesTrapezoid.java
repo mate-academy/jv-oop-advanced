@@ -25,8 +25,9 @@ public class IsoscelesTrapezoid extends Figure implements Interface {
     }
 
     public void draw() {
-        System.out.println("Figure: " + name + ", area: " + getArea() + " sq. units, small base: "
-                + smallBase + " units, big base: " + bigBase + " units, height: " + height +
-                " units, color: " + color);
+        System.out.println("Figure: " + name + ", area: " + getArea()
+                + " sq. units, small base: "
+                + smallBase + " units, big base: " + bigBase + " units, height: "
+                + height + " units, color: " + color);
     }
 }
