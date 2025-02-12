@@ -13,7 +13,8 @@ public class FigureSupplier {
             case 1: return new Square(color, RANDOM.nextInt(10) + 1);
             case 2: return new Rectangle(color, RANDOM.nextInt(10) + 1, RANDOM.nextInt(10) + 1);
             case 3: return new RightTriangle(color, RANDOM.nextInt(10) + 1, RANDOM.nextInt(10) + 1);
-            default: return new IsoscelesTrapezoid(color, RANDOM.nextInt(10) + 1, RANDOM.nextInt(10) + 1, RANDOM.nextInt(10) + 1);
+            default: return new IsoscelesTrapezoid(color, RANDOM.nextInt(10) + 1,
+                    RANDOM.nextInt(10) + 1, RANDOM.nextInt(10) + 1);
         }
     }
 
