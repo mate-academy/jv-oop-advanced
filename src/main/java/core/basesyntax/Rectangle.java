@@ -9,10 +9,12 @@ public class Rectangle extends BaseFigure {
         this.width = width;
         this.height = height;
     }
+
     @Override
     public double getArea() {
         return width * height;
     }
+
     @Override
     public void draw() {
         System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, width: "

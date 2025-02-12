@@ -9,10 +9,12 @@ public class RightTriangle extends BaseFigure {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }
+
     @Override
     public double getArea() {
         return 0.5 * firstLeg * secondLeg;
     }
+
     @Override
     public void draw() {
         System.out.println("Figure: right triangle, area: " + getArea() + " sq. units, "
