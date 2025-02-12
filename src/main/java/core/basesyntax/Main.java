@@ -3,15 +3,15 @@ package core.basesyntax;
 public class Main {
     public static void main(String[] args) {
         Figure[] figures = new Figure[6];
-        for(int i = 0; i < 3; i++){
+        for (int i = 0; i < 3; i++) {
             figures[i] = FigureSupplier.getRandomFigure();
         }
 
-        for(int i = 3; i < 6; i++){
+        for (int i = 3; i < 6; i++) {
             figures[i] = FigureSupplier.getDefaultFigure();
         }
 
-        for(int i = 0; i < 6; i++){
+        for (int i = 0; i < 6; i++) {
             figures[i].draw();
         }
     }

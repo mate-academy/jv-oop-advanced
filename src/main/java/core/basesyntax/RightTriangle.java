@@ -1,7 +1,8 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure implements Interface{
-    private final double firstLeg, secondLeg;
+    private final double firstLeg;
+    private final double secondLeg;
     private final String name = "right triangle";
 
     RightTriangle(double firstLeg, double secondLeg, String color) {
@@ -15,6 +16,7 @@ public class RightTriangle extends Figure implements Interface{
     }
 
     public void draw() {
-        System.out.println("Figure: " + name + ", area: " + getArea() + " sq. units, first leg: " + firstLeg + " units, second leg: " + secondLeg + " units, color: " + color);
+        System.out.println("Figure: " + name + ", area: " + getArea() + " sq. units, first leg: "
+                + firstLeg + " units, second leg: " + secondLeg + " units, color: " + color);
     }
 }

@@ -1,7 +1,8 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure implements Interface {
-    private final double bigSide, smallSide;
+    private final double bigSide;
+    private final double smallSide;
     private final String name = "rectangle";
 
     Rectangle(double bigSide, double smallSide, String color) {
@@ -15,6 +16,7 @@ public class Rectangle extends Figure implements Interface {
     }
 
     public void draw() {
-        System.out.println("Figure: " + name + ", area: " + getArea() + " sq. units, big side: " + bigSide + " units, small side: " + smallSide + " units, color: " + color);
+        System.out.println("Figure: " + name + ", area: " + getArea() + " sq. units, big side: " + bigSide
+                + " units, small side: " + smallSide + " units, color: " + color);
     }
 }

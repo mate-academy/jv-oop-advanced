@@ -20,16 +20,24 @@ public class FigureSupplier {
 
         switch (figureType) {
             case 0:
-                return new Square(Math.round((RANDOM.nextDouble(MAX_SIZE) + 1) * 10.0) / 10.0, ColorSupplier.getRandomColor());
+                return new Square(Math.round((RANDOM.nextDouble(MAX_SIZE) + 1) * 10.0) / 10.0,
+                        ColorSupplier.getRandomColor());
             case 1:
-                return new Rectangle(Math.round((RANDOM.nextDouble(MAX_SIZE) + 1) * 10.0) / 10.0, Math.round((RANDOM.nextDouble(MAX_SIZE) + 1) * 10.0) / 10.0, ColorSupplier.getRandomColor());
+                return new Rectangle(Math.round((RANDOM.nextDouble(MAX_SIZE) + 1) * 10.0) / 10.0,
+                        Math.round((RANDOM.nextDouble(MAX_SIZE) + 1) * 10.0) / 10.0,
+                        ColorSupplier.getRandomColor());
             case 2:
-                return new RightTriangle(Math.round((RANDOM.nextDouble(MAX_SIZE) + 1) * 10.0) / 10.0,Math.round((RANDOM.nextDouble(MAX_SIZE) + 1) * 10.0) / 10.0, ColorSupplier.getRandomColor());
+                return new RightTriangle(Math.round((RANDOM.nextDouble(MAX_SIZE) + 1) * 10.0) / 10.0,
+                        Math.round((RANDOM.nextDouble(MAX_SIZE) + 1) * 10.0) / 10.0,
+                        ColorSupplier.getRandomColor());
             case 3:
-                return new Circle(Math.round((RANDOM.nextDouble(MAX_SIZE) + 1) * 10.0) / 10.0, ColorSupplier.getRandomColor());
+                return new Circle(Math.round((RANDOM.nextDouble(MAX_SIZE) + 1) * 10.0) / 10.0,
+                        ColorSupplier.getRandomColor());
             default:
                 return new IsoscelesTrapezoid(Math.round((RANDOM.nextDouble(MAX_SIZE) + 1) * 10.0) / 10.0,
-                        Math.round((RANDOM.nextDouble(MAX_SIZE) + 1) * 10.0) / 10.0, Math.round((RANDOM.nextDouble(MAX_SIZE) + 1) * 10.0) / 10.0, ColorSupplier.getRandomColor());
+                        Math.round((RANDOM.nextDouble(MAX_SIZE) + 1) * 10.0) / 10.0,
+                        Math.round((RANDOM.nextDouble(MAX_SIZE) + 1) * 10.0) / 10.0,
+                        ColorSupplier.getRandomColor());
         }
     }
 

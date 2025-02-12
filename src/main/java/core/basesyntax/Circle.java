@@ -16,6 +16,7 @@ public class Circle extends Figure implements Interface {
     }
 
     public void draw() {
-        System.out.println("Figure: " + name + ", area: " + getArea() + " sq. units, radius: " + radius + " units, color: " + color);
+        System.out.println("Figure: " + name + ", area: " + getArea() + " sq. units, radius: " + radius +
+                " units, color: " + color);
     }
 }

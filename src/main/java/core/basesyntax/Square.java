@@ -14,6 +14,7 @@ public class Square extends Figure implements Interface {
     }
 
     public void draw() {
-        System.out.println("Figure: " + name + ", area: " + getArea() + " sq. units, side: " + side + " units, color: " + color);
+        System.out.println("Figure: " + name + ", area: " + getArea() +
+                " sq. units, side: " + side + " units, color: " + color);
     }
 }
