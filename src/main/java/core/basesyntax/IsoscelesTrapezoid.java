@@ -13,30 +13,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.height = height;
     }
 
-    public double getSmallParallel() {
-        return smallParallel;
-    }
-
-    public void setSmallParallel(double smallParallel) {
-        this.smallParallel = smallParallel;
-    }
-
-    public double getBigParallel() {
-        return bigParallel;
-    }
-
-    public void setBigParallel(double bigParallel) {
-        this.bigParallel = bigParallel;
-    }
-
-    public double getHeight() {
-        return height;
-    }
-
-    public void setHeight(double height) {
-        this.height = height;
-    }
-
     @Override
     public void draw() {
         System.out.println("Figure: isosceles trapezoid, area: "

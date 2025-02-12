@@ -30,11 +30,11 @@ public class FigureSupplier {
         }
     }
 
-    public double randomDouble() {
-        return random.nextDouble(MAX_RANDOM_VALUE);
-    }
-
     public Figure getDefaultFigure() {
         return new Circle(Color.WHITE.name(), DEFAULT_RADIUS);
+    }
+
+    private double randomDouble() {
+        return random.nextDouble(MAX_RANDOM_VALUE);
     }
 }
