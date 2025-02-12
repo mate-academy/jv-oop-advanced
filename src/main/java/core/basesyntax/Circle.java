@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class Circle extends Figure implements Interface {
+public class Circle extends Figure {
     private final double radius;
     private final String name = "circle";
     private final String color;

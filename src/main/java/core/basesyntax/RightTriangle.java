@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class RightTriangle extends Figure implements Interface {
+public class RightTriangle extends Figure {
     private final double firstLeg;
     private final double secondLeg;
     private final String name = "right triangle";

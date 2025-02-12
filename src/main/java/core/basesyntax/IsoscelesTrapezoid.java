@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class IsoscelesTrapezoid extends Figure implements Interface {
+public class IsoscelesTrapezoid extends Figure {
     private final double smallBase;
     private final double bigBase;
     private final double height;

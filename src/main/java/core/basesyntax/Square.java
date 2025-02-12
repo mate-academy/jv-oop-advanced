@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class Square extends Figure implements Interface {
+public class Square extends Figure{
     private final double side;
     private final String name = "square";
     private final String color;

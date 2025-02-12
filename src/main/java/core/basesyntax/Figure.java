@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-abstract class Figure {
+abstract class Figure implements Interface{
     private String color;
 
     public void setColor(String color) {

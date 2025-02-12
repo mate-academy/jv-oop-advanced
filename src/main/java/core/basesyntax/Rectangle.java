@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class Rectangle extends Figure implements Interface {
+public class Rectangle extends Figure {
     private final double bigSide;
     private final double smallSide;
     private final String name = "rectangle";
