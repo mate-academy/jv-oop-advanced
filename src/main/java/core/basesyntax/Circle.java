@@ -17,7 +17,8 @@ public class Circle extends BaseFigure {
     @Override
 
     public void draw() {
-        System.out.println("Figure: circle, area: " + getArea() + "sq. units, radius: " + radius + "units, " +
+        System.out.println("Figure: circle, area: " + getArea()
+                + "sq. units, radius: " + radius + "units, " +
                 "color: " + color);
     }
 }
