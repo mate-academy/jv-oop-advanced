@@ -2,45 +2,35 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class FigureSupplier extends ColorSupplier {
-
+public class FigureSupplier {
     public Figure getRandomFigure() {
         Random random = new Random();
-        Color randomColor = getRandomColor();
-        int randomNumber = random.nextInt();
-        int randomFigureNumber = random.nextInt(6);
-        Figure figure = new Figure();
+        ColorSupplier colorSupplier = new ColorSupplier();
+        String randomColor = colorSupplier.getRandomColor();
+        int randomFigureNumber = random.nextInt(5);
 
         switch (randomFigureNumber) {
+            case 0: {
+                return new RightTriangle(randomColor, random.nextDouble(), random.nextDouble());
+            }
             case 1: {
-                return new RightTriangle(random.nextDouble(), random.nextDouble());
+                return new Square(randomColor, random.nextDouble());
             }
             case 2: {
-                return new Square(random.nextDouble());
+                return new Circle(randomColor, random.nextDouble());
             }
             case 3: {
-                return new Circle(random.nextDouble());
-            }
-            case 4: {
-                return new Trapezoid(random.nextDouble(), random.nextDouble(), random.nextDouble());
-            }
-            case 5: {
-                return new Rectangle(random.nextDouble(), random.nextDouble());
+                return new IsoscelesTrapezoid(randomColor, random.nextDouble(), random.nextDouble(),
+                        random.nextDouble());
             }
             default:
-                System.out.println();
-
+                return new Rectangle(randomColor, random.nextDouble(), random.nextDouble());
         }
-        return figure;
     }
 
     public Figure getDefaultFigure() {
-        Figure whiteCircle = new Circle(10);
-        Color color = Color.WHITE;
+        Figure whiteCircle = new Circle(Color.WHITE.name(), 10);
+
         return whiteCircle;
     }
 }
-
-
-
-
