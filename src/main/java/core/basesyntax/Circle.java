@@ -1,10 +1,14 @@
 package core.basesyntax;
 
 import java.lang.Math;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class Circle extends Figure implements Interface {
     private final double radius;
     private final String name = "circle";
+    private final String color;
+    BigDecimal bd;
 
     Circle(double radius, String color) {
         this.radius = radius;
@@ -12,7 +16,9 @@ public class Circle extends Figure implements Interface {
     }
 
     public double getArea() {
-        return (Math.round(Math.PI * radius * radius) * 10.0) / 10.0;
+        bd = BigDecimal.valueOf(Math.PI * radius * radius);
+        bd = bd.setScale(1, RoundingMode.HALF_UP);
+        return bd.doubleValue();
     }
 
     public void draw() {

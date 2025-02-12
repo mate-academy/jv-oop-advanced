@@ -1,10 +1,15 @@
 package core.basesyntax;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class IsoscelesTrapezoid extends Figure implements Interface {
     private final double smallBase;
     private final double bigBase;
     private final double height;
-    private String name = "square";
+    private String name = "isosceles trapezoid";
+    private final String color;
+    BigDecimal bd;
 
     IsoscelesTrapezoid(double smallBase, double bigBase, double height, String color) {
         this.smallBase = smallBase;
@@ -14,7 +19,9 @@ public class IsoscelesTrapezoid extends Figure implements Interface {
     }
 
     public double getArea() {
-        return smallBase * bigBase * height / 2;
+        bd = BigDecimal.valueOf((smallBase + bigBase) * height / 2);
+        bd = bd.setScale(1, RoundingMode.HALF_UP);
+        return bd.doubleValue();
     }
 
     public void draw() {

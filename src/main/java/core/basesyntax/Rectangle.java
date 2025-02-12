@@ -1,9 +1,14 @@
 package core.basesyntax;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class Rectangle extends Figure implements Interface {
     private final double bigSide;
     private final double smallSide;
     private final String name = "rectangle";
+    private final String color;
+    BigDecimal bd;
 
     Rectangle(double bigSide, double smallSide, String color) {
         this.bigSide = bigSide;
@@ -12,7 +17,9 @@ public class Rectangle extends Figure implements Interface {
     }
 
     public double getArea() {
-        return (Math.round(bigSide * smallSide) * 10.0) / 10.0;
+        bd = BigDecimal.valueOf(bigSide * smallSide);
+        bd = bd.setScale(1, RoundingMode.HALF_UP);
+        return bd.doubleValue();
     }
 
     public void draw() {

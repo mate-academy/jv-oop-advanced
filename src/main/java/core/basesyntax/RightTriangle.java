@@ -1,9 +1,14 @@
 package core.basesyntax;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class RightTriangle extends Figure implements Interface{
     private final double firstLeg;
     private final double secondLeg;
     private final String name = "right triangle";
+    private final String color;
+    BigDecimal bd;
 
     RightTriangle(double firstLeg, double secondLeg, String color) {
         this.firstLeg = firstLeg;
@@ -12,7 +17,9 @@ public class RightTriangle extends Figure implements Interface{
     }
 
     public double getArea() {
-        return (Math.round(firstLeg * secondLeg / 2) * 10.0) / 10.0;
+        bd = BigDecimal.valueOf(firstLeg * secondLeg / 2);
+        bd = bd.setScale(1, RoundingMode.HALF_UP);
+        return bd.doubleValue();
     }
 
     public void draw() {

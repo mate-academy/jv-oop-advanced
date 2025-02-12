@@ -1,8 +1,13 @@
 package core.basesyntax;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class Square extends Figure implements Interface {
     private final double side;
     private final String name = "square";
+    private final String color;
+    BigDecimal bd;
 
     Square(double side, String color) {
         this.side = side;
@@ -10,7 +15,9 @@ public class Square extends Figure implements Interface {
     }
 
     public double getArea() {
-        return (Math.round(side * side) * 10.0) / 10.0;
+        bd = BigDecimal.valueOf(side * side);
+        bd = bd.setScale(1, RoundingMode.HALF_UP);
+        return bd.doubleValue();
     }
 
     public void draw() {
