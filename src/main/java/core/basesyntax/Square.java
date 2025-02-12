@@ -7,7 +7,7 @@ public class Square extends Figure implements Interface {
     private final double side;
     private final String name = "square";
     private final String color;
-    BigDecimal bd;
+    private BigDecimal bd;
 
     Square(double side, String color) {
         this.side = side;
@@ -21,7 +21,7 @@ public class Square extends Figure implements Interface {
     }
 
     public void draw() {
-        System.out.println("Figure: " + name + ", area: " + getArea() +
-                " sq. units, side: " + side + " units, color: " + color);
+        System.out.println("Figure: " + name + ", area: " + getArea()
+                + " sq. units, side: " + side + " units, color: " + color);
     }
 }

@@ -1,6 +1,5 @@
 package core.basesyntax;
 
-import java.lang.Math;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
@@ -8,7 +7,7 @@ public class Circle extends Figure implements Interface {
     private final double radius;
     private final String name = "circle";
     private final String color;
-    BigDecimal bd;
+    private BigDecimal bd;
 
     Circle(double radius, String color) {
         this.radius = radius;
@@ -22,7 +21,7 @@ public class Circle extends Figure implements Interface {
     }
 
     public void draw() {
-        System.out.println("Figure: " + name + ", area: " + getArea() + " sq. units, radius: " + radius +
-                " units, color: " + color);
+        System.out.println("Figure: " + name + ", area: " + getArea() + " sq. units, radius: " + radius
+                + " units, color: " + color);
     }
 }

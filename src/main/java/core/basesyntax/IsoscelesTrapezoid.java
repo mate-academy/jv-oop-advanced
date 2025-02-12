@@ -9,7 +9,7 @@ public class IsoscelesTrapezoid extends Figure implements Interface {
     private final double height;
     private String name = "isosceles trapezoid";
     private final String color;
-    BigDecimal bd;
+    private BigDecimal bd;
 
     IsoscelesTrapezoid(double smallBase, double bigBase, double height, String color) {
         this.smallBase = smallBase;

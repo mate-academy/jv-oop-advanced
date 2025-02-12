@@ -1,13 +1,13 @@
 package core.basesyntax;
 
-import java.util.Random;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.Random;
 
 public class FigureSupplier {
     private static final Random RANDOM = new Random();
-    private static double MAX_SIZE = 10;
-    private static int NUMBER_OF_FIGURES = 5;
+    private static final double MAX_SIZE = 10;
+    private static final int NUMBER_OF_FIGURES = 5;
 
     public enum Figures {
         Square,

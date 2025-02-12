@@ -8,7 +8,7 @@ public class Rectangle extends Figure implements Interface {
     private final double smallSide;
     private final String name = "rectangle";
     private final String color;
-    BigDecimal bd;
+    private BigDecimal bd;
 
     Rectangle(double bigSide, double smallSide, String color) {
         this.bigSide = bigSide;
