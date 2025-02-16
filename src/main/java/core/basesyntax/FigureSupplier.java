@@ -7,13 +7,13 @@ public class FigureSupplier {
     private static final int MAX_RADIUS = 10; // Maximum radius for circles
     private static final int MAX_HEIGHT = 15; // Maximum height for trapezoid
     private static final Random random = new Random();
+    private static final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int figureType = random.nextInt(5);
         // 0: Square, 1: Rectangle, 2: RightTriangle, 3: Circle, 4: IsoscelesTrapezoid
+        String color = colorSupplier.getRandomColor();
 
-        String color = ColorSupplier.getRandomColor();
-        switch (figureType) {
+        switch (random.nextInt(5)) {
             case 0:
                 return createRandomSquare(color);
             case 1:
