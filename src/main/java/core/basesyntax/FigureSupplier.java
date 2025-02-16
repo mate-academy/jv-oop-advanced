@@ -8,12 +8,12 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int figureType = random.nextInt(5);
+        int FIGURE_COUNT = random.nextInt(5);
 
-        return switch (figureType) {
+        return switch (FIGURE_COUNT) {
             case 0 -> new Square(
-                    random.nextDouble() * 10,
-                    colorSupplier.getRandomColor());
+                    colorSupplier.getRandomColor(),
+                    random.nextDouble() * 10);
             case 1 -> new Rectangle(
                     colorSupplier.getRandomColor(),
                     random.nextDouble() * 10,
@@ -32,11 +32,11 @@ public class FigureSupplier {
                             random.nextDouble() * 10,
                             random.nextDouble() * 10,
                             random.nextDouble() * 10);
-            default -> throw new IllegalArgumentException("Unexpected value: " + figureType);
+            default -> throw new IllegalArgumentException("Unexpected value: " + FIGURE_COUNT);
         };
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.BLACK.toString(), 14.0);
+        return new Circle(Color.WHITE.toString(), 10.0);
     }
 }

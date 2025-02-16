@@ -1,12 +1,11 @@
 package core.basesyntax;
 
-public class Square implements Figure {
+public class Square extends FigureBase {
 
-    private final String color;
     private final double side;
 
-    public Square(double side, String color) {
-        this.color = color;
+    public Square(String color, double side) {
+        super(color);
         this.side = side;
     }
 
