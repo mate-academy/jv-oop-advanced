@@ -8,7 +8,7 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figure getRandomFigure() {
+    public FigureBase getRandomFigure() {
         int figureType = random.nextInt(figureCount);
 
         return switch (figureType) {
@@ -37,7 +37,7 @@ public class FigureSupplier {
         };
     }
 
-    public Figure getDefaultFigure() {
+    public FigureBase getDefaultFigure() {
         return new Circle(Color.WHITE.toString(), 10.0);
     }
 }
