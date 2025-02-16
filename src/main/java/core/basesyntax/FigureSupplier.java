@@ -4,13 +4,14 @@ import java.util.Random;
 
 public class FigureSupplier {
 
+    private static final int figureCount = 5;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int FIGURE_COUNT = random.nextInt(5);
+        int figureType = random.nextInt(figureCount);
 
-        return switch (FIGURE_COUNT) {
+        return switch (figureType) {
             case 0 -> new Square(
                     colorSupplier.getRandomColor(),
                     random.nextDouble() * 10);
@@ -32,7 +33,7 @@ public class FigureSupplier {
                             random.nextDouble() * 10,
                             random.nextDouble() * 10,
                             random.nextDouble() * 10);
-            default -> throw new IllegalArgumentException("Unexpected value: " + FIGURE_COUNT);
+            default -> throw new IllegalArgumentException("Unexpected value: " + figureType);
         };
     }
 
