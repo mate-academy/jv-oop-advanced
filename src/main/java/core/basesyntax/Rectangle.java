@@ -2,33 +2,36 @@ package core.basesyntax;
 
 public class Rectangle extends Figure implements GetArea, Draw {
 
-    private double firstLeg;
-    private double secondLeg;
-    private double area = firstLeg * secondLeg;
+    private double width;
+    private double height;
 
     public double getFirstLeg() {
-        return firstLeg;
+        return width;
     }
 
     public void setFirstLeg(double firstLeg) {
-        this.firstLeg = firstLeg;
+        if (firstLeg > 0) {
+            this.width = firstLeg;
+        }
     }
 
     public double getSecondLeg() {
-        return secondLeg;
+        return height;
     }
 
     public void setSecondLeg(double secondLeg) {
-        this.secondLeg = secondLeg;
+        if (secondLeg > 0) {
+            this.height = secondLeg;
+        }
     }
 
     @Override
     public double area() {
-        return area;
+        return width * height;
     }
 
     @Override
     public void print() {
-        System.out.println("Figure: Rectangle, area: " + area() + " sq. units, " + "FirstLeg: " + firstLeg + ", SecondLeg: " + secondLeg + ", Color: " + getColor());
+        System.out.println("Figure: Rectangle, area: " + area() + " sq. units, " + "FirstLeg: " + width + ", SecondLeg: " + height + ", Color: " + getColor());
     }
 }

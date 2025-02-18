@@ -2,19 +2,20 @@ package core.basesyntax;
 
 public class Circle extends Figure implements GetArea, Draw {
     private double radius;
-    private double area = Math.PI * radius * radius;
 
     public double getRadius() {
         return radius;
     }
 
     public void setRadius(double radius) {
-        this.radius = radius;
+        if (radius > 0) {
+            this.radius = radius;
+        }
     }
 
     @Override
     public double area() {
-        return area;
+        return Math.PI * radius * radius;
     }
 
     @Override
