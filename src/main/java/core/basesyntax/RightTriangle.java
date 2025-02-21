@@ -34,6 +34,7 @@ public class RightTriangle extends Figure implements Drawable {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + super.getName() + ", area: " + area() + " sq. units, leg 1: " + leg1 + " units, leg 2: " + leg2 + " units, color: " + super.getColor());
+        System.out.println("Figure: " + super.getName() + ", area: " + area() + " sq. units, " +
+                           "leg 1: " + leg1 + " units, leg 2: " + leg2 + " units, color: " + super.getColor());
     }
 }
