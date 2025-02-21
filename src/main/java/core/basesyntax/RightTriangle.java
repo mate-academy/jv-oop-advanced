@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure implements Drawable {
+
     public double leg1;
     public double leg2;
 
@@ -13,6 +14,7 @@ public class RightTriangle extends Figure implements Drawable {
     public double getLeg1() {
         return leg1;
     }
+
     public double getLeg2() {
         return leg2;
     }
@@ -20,6 +22,7 @@ public class RightTriangle extends Figure implements Drawable {
     public void setLeg1(double leg1) {
         this.leg1 = leg1;
     }
+
     public void setLeg2(double leg2) {
         this.leg2 = leg2;
     }
