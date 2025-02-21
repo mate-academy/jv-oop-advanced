@@ -3,7 +3,6 @@ package core.basesyntax;
 public class RightTriangle extends Figure implements Drawable {
     public double leg1;
     public double leg2;
-    public double hypotenuse;
 
     public RightTriangle(String name, String color, double leg1, double leg2) {
         super(name, color);

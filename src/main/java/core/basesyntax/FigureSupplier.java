@@ -22,7 +22,7 @@ public class FigureSupplier {
             case 4:
                 return new IsoscelesTrapezoid("Isosceles Trapezoid", color,1 + random.nextDouble() * 9, 1 + random.nextDouble() * 9, 1 + random.nextDouble() * 9);
             default:
-                return null;
+                return new Circle("Circle", "White", 10);
         }
 
     }
