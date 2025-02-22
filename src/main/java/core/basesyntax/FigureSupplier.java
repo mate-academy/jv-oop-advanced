@@ -15,13 +15,16 @@ public class FigureSupplier {
             case 0:
                 return new Square("Square", color, 1 + random.nextDouble() * 9);
             case 1:
-                return new Rectangle("Rectangle", color, 1 + random.nextDouble() * 9, 1 + random.nextDouble() * 9);
+                return new Rectangle("Rectangle", color,
+                        1 + random.nextDouble() * 9, 1 + random.nextDouble() * 9);
             case 2:
-                return new RightTriangle("Right Triangle", color, 1 + random.nextDouble() * 9, 1 + random.nextDouble() * 9);
+                return new RightTriangle("Right Triangle", color,
+                        1 + random.nextDouble() * 9, 1 + random.nextDouble() * 9);
             case 3:
                 return new Circle("Circle", color,1 + random.nextDouble() * 9);
             case 4:
-                return new IsoscelesTrapezoid("Isosceles Trapezoid", color,1 + random.nextDouble() * 9, 1 + random.nextDouble() * 9, 1 + random.nextDouble() * 9);
+                return new IsoscelesTrapezoid("Isosceles Trapezoid", color,
+                        1 + random.nextDouble() * 9, 1 + random.nextDouble() * 9, 1 + random.nextDouble() * 9);
             default:
                 return new Circle("Circle", "White", 10);
         }
