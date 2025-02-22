@@ -35,6 +35,7 @@ public class Rectangle extends Figure implements Drawable {
     @Override
     public void draw() {
         System.out.println("Figure: " + super.getName() + ", area: " + area() + "sq. units, "
-                           + "length: " + length + " units, width: " + width + " units, color: " + super.getColor());
+                           + "length: " + length + " units, width: " + width
+                           + " units, color: " + super.getColor());
     }
 }

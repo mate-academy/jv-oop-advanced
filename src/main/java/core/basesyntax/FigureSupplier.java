@@ -24,7 +24,8 @@ public class FigureSupplier {
                 return new Circle("Circle", color,1 + random.nextDouble() * 9);
             case 4:
                 return new IsoscelesTrapezoid("Isosceles Trapezoid", color,
-                        1 + random.nextDouble() * 9, 1 + random.nextDouble() * 9, 1 + random.nextDouble() * 9);
+                        1 + random.nextDouble() * 9, 1 + random.nextDouble() * 9,
+                        1 + random.nextDouble() * 9);
             default:
                 return new Circle("Circle", "White", 10);
         }
