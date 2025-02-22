@@ -6,7 +6,8 @@ public class IsoscelesTrapezoid extends Figure implements Drawable {
     private double side2;
     private double height;
 
-    public IsoscelesTrapezoid(String name, String color, double side1, double side2, double height) {
+    public IsoscelesTrapezoid(String name, String color,
+                              double side1, double side2, double height) {
         super(name, color);
         this.side1 = side1;
         this.side2 = side2;
@@ -44,8 +45,8 @@ public class IsoscelesTrapezoid extends Figure implements Drawable {
 
     @Override
     public void draw() {
-        System.out.println("Figure: " + super.getName() + ", area: " + area() + "sq. units, " +
-                           "side 1: " + side1 + ", units" + ", side 2: " + side2 + " units, " +
-                           ",color: " + super.getColor());
+        System.out.println("Figure: " + super.getName() + ", area: " + area() + "sq. units, "
+                          + "side 1: " + side1 + ", units" + ", side 2: " + side2 + " units, "
+                          + ",color: " + super.getColor());
     }
 }
