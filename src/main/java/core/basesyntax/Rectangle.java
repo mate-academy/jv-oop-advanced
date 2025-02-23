@@ -1,22 +1,31 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    int sideA;
-    int sideB;
+    private double width;
+    private double height;
+
+    public Rectangle(String color, double width, double height) {
+        super(color);
+        this.width = width;
+        this.height = height;
+    }
+
     @Override
     public void toDraw() {
-        System.out.println("Figure: rectangle, area: "
-                + getArea()
-                + "sq. units, side 1 : "
-                + sideA
-                + "units ,side 2 : "
-                + sideB
-                + "units, color: "
-                + color);
+        StringBuilder str = new StringBuilder();
+        System.out.println(str
+                .append("Figure: rectangle, area: ")
+                .append(getArea())
+                .append("sq. units, side 1 : ")
+                .append(width)
+                .append("units ,side 2 : ")
+                .append(height)
+                .append("units, color: ")
+                .append(color));
     }
 
     @Override
     public double getArea() {
-        return sideA * sideB;
+        return width * height;
     }
 }
