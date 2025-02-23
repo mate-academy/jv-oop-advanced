@@ -14,9 +14,7 @@ public class Main {
         }
 
         for (Figure figure : figures) {
-            if (figure instanceof Drawable) {
-                ((Drawable) figure).draw();
-            }
+            figure.draw();
         }
     }
 }
