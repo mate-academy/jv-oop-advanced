@@ -20,7 +20,7 @@ public class IsoscelesTrapezoid extends Figure {
                 + "sq. units, side1: " + side1
                 + " side2: " + side2
                 + " units, height: " + height
-                + " units, color: " + color);
+                + " units, color: " + getColor());
     }
     public int getSide1() {
         return side1;
