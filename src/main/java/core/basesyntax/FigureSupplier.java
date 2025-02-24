@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class FigureSupplier extends UnitSupplier{
+public class FigureSupplier extends UnitSupplier {
     Random random = new Random();
     ColorSupplier supplier = new ColorSupplier();
 
@@ -27,5 +27,4 @@ public class FigureSupplier extends UnitSupplier{
     public Figure getDefaultFigure() {
         return new Circle(10, "WHITE");
     }
-
 }
