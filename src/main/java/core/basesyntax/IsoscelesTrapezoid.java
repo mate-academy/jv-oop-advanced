@@ -12,7 +12,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
     @Override
     public double getArea() {
-        return (side1 + side2) * height / 2;
+        return (side1 + side2) * height / 2.0;
     }
     @Override
     public void draw() {
