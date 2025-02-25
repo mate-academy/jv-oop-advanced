@@ -15,6 +15,6 @@ public class IsoscelesTrapezoid extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: isosceles trapezoid, side one: " + this.sideOne + ", side two: "
-                + this.sideTwo + " side three: " + this.sideThree + ". Color: " + this.color);
+                + this.sideTwo + ", side three: " + this.sideThree + ". Color: " + getColor());
     }
 }

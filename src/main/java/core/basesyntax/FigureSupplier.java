@@ -3,19 +3,19 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final int lowerBound = 1;
-    private final int upperBound = 100;
+    private static final int LOWER_BOUND = 1;
+    private static final int UPPER_BOUND = 100;
+    private static final int FORM_LENGTH = Form.values().length;
 
     public Figure getRandomFigure() {
-        int index = new Random().nextInt(Form.values().length);
-        int sideOne = new Random().nextInt(lowerBound, upperBound);
-        int sideTwo = new Random().nextInt(lowerBound, upperBound);
-        int sideThree = new Random().nextInt(lowerBound, upperBound);
+        int index = new Random().nextInt(FORM_LENGTH);
+        final int sideOne = new Random().nextInt(LOWER_BOUND, UPPER_BOUND);
+        final int sideTwo = new Random().nextInt(LOWER_BOUND, UPPER_BOUND);
+        final int sideThree = new Random().nextInt(LOWER_BOUND, UPPER_BOUND);
         ColorSupplier colorSupplier = new ColorSupplier();
         String color = colorSupplier.getRandomColor();
         Form form = Form.values()[index];
-        String figure = form.name();
-        return switch (figure) {
+        return switch (form.name()) {
             case "CIRCLE" -> (new Circle(color,sideOne));
             case "ISOSCELES_TRAPEZOID" -> new IsoscelesTrapezoid(color,
                     sideOne, sideTwo, sideThree);
@@ -26,6 +26,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("White", upperBound);
+        return new Circle("White", UPPER_BOUND);
     }
 }
