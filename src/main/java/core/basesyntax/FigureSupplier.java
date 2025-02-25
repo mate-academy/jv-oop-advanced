@@ -3,9 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    Random random = new Random();
-    public static final int MAX_SIZE = 100;
+    private static final int MAX_SIZE = 100;
+
     public Figure getRandomFigure() {
+        Random random = new Random();
         Figure figure;
         ColorSupplier colorSupplier = new ColorSupplier();
         Color randomColor = colorSupplier.getRandomColor();
