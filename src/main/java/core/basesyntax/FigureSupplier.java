@@ -8,25 +8,20 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int index = new Random().nextInt(Form.values().length);
+        int sideOne = new Random().nextInt(lowerBound, upperBound);
+        int sideTwo = new Random().nextInt(lowerBound, upperBound);
+        int sideThree = new Random().nextInt(lowerBound, upperBound);
         ColorSupplier colorSupplier = new ColorSupplier();
+        String color = colorSupplier.getRandomColor();
         Form form = Form.values()[index];
-        String figure = form.toString();
+        String figure = form.name();
         return switch (figure) {
-            case "CIRCLE" -> new Circle(colorSupplier.getRandomColor(),
-                    new Random().nextInt(lowerBound, upperBound));
-            case "ISOSCELES_TRAPEZOID" -> new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                    new Random().nextInt(lowerBound, upperBound),
-                    new Random().nextInt(lowerBound, upperBound),
-                    new Random().nextInt(lowerBound, upperBound));
-            case "RECTANGLE" -> new Rectangle(colorSupplier.getRandomColor(),
-                    new Random().nextInt(lowerBound, upperBound),
-                    new Random().nextInt(lowerBound, upperBound));
-            case "RIGHT_TRIANGLE" -> new RightTriangle(colorSupplier.getRandomColor(),
-                    new Random().nextInt(lowerBound, upperBound),
-                    new Random().nextInt(lowerBound, upperBound),
-                    new Random().nextInt(lowerBound, upperBound));
-            default -> new Square(colorSupplier.getRandomColor(),
-                    new Random().nextInt(lowerBound, upperBound));
+            case "CIRCLE" -> (new Circle(color,sideOne));
+            case "ISOSCELES_TRAPEZOID" -> new IsoscelesTrapezoid(color,
+                    sideOne, sideTwo, sideThree);
+            case "RECTANGLE" -> new Rectangle(color, sideOne, sideTwo);
+            case "RIGHT_TRIANGLE" -> new RightTriangle(color, sideOne, sideTwo, sideThree);
+            default -> new Square(color, sideOne);
         };
     }
 

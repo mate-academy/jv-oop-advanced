@@ -10,6 +10,6 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: right triangle, side one: " + sideOne + ". Color: " + color);
+        System.out.println("Figure: square, side one: " + this.sideOne + ". Color: " + this.color);
     }
 }

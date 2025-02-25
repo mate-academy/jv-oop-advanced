@@ -12,7 +12,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, side one: " + sideOne + ", side two: "
-                + sideTwo + ". Color: " + color);
+        System.out.println("Figure: rectangle, side one: " + this.sideOne + ", side two: "
+                + this.sideTwo + ". Color: " + this.color);
     }
 }
