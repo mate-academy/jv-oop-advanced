@@ -14,6 +14,4 @@ public abstract class Figure implements Shape, Drawable {
     public abstract double getArea();
 
     public abstract void draw();
-
-
 }
