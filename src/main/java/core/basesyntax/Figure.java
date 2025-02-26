@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public abstract class Figure implements Draw {
     private String color;
 
     public Figure(String color) {
@@ -8,9 +8,6 @@ public abstract class Figure {
     }
 
     public abstract double getArea();
-
-    public void draw() {
-    }
 
     public String getColor() {
         return color;
