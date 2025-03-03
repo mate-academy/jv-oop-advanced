@@ -1,7 +1,8 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure implements Drawing, AreaCalculator {
-    int firstLeg, secondLeg;
+    private int firstLeg;
+    private int secondLeg;
 
     public Rectangle(int firstLeg, int secondLeg, Colors colors) {
         this.firstLeg = firstLeg;
@@ -37,6 +38,9 @@ public class Rectangle extends Figure implements Drawing, AreaCalculator {
 
     @Override
     public String toString() {
-        return "Rectangle , area is " + calculateArea() + " sq. units, first leg: " +  getFirstLeg()  +  " sq. units, secound leg: " + getSecondLeg() + " units, color: " + getColor();
+        return "Rectangle, area is " + calculateArea() + " sq. units, "
+                + "first leg: " + getFirstLeg() + " units, "
+                + "second leg: " + getSecondLeg() + " units, "
+                + "color: " + getColor();
     }
 }

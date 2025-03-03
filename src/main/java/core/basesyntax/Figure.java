@@ -1,12 +1,13 @@
 package core.basesyntax;
 
- class Figure {
+class Figure {
     private Colors color;
+
     public Colors getColor() {
         return color;
     }
+
     public void setColor(Colors color) {
         this.color = color;
     }
-
 }

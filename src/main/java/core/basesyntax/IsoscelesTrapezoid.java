@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-import java.awt.*;
-
 public class IsoscelesTrapezoid extends Figure implements Drawing, AreaCalculator {
-    private int topLeg, bottomLeg, sides;
+    private int topLeg;
+    private int bottomLeg;
+    private int sides;
 
     public IsoscelesTrapezoid(int topLeg, int bottomLeg, int sides, Colors color) {
         this.topLeg = topLeg;
@@ -50,7 +50,10 @@ public class IsoscelesTrapezoid extends Figure implements Drawing, AreaCalculato
 
     @Override
     public String toString() {
-        return "Isosceles trapezoid , area is " + calculateArea() + " sq. units, top leg: " +  getTopLeg() + " units," +
-                " bottom leg: " + getBottomLeg() + " sides : " + getSides() + " units, color: " + getColor();
+        return "Isosceles trapezoid , area is "
+                + calculateArea() + " sq. units, top leg: "
+                + getTopLeg() + " units," + " bottom leg: "
+                + getBottomLeg() + " sides : " + getSides()
+                + " units, color: " + getColor();
     }
 }
