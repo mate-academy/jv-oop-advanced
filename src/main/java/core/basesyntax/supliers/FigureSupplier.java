@@ -9,21 +9,37 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final Random random = new Random();
+    private static final Random random = new Random();
+    private static final int MAX_SIZE = 50;
+    private static final String DEFAULT_COLOR = "White";
+    private static final String[] COLORS = {"Red", "Blue", "Green", "Yellow", "Black"};
 
     public Figure getRandomFigure() {
-        int type = random.nextInt(5);
-        return switch (type) {
-            case 0 -> new Circle();
-            case 1 -> new Square();
-            case 2 -> new Rectangle();
-            case 3 -> new RightTriangle();
-            case 4 -> new IsoscelesTrapezoid();
-            default -> throw new IllegalStateException("Unexpected value: " + type);
-        };
+        ColorSupplier colorSupplier = new ColorSupplier();
+        String color = colorSupplier.getRandomColor(); // Генерируем случайный цвет
+
+        switch (random.nextInt(5)) {
+            case 0:
+                return new Circle(getRandomSize(), color);
+            case 1:
+                return new Square(getRandomSize(), color);
+            case 2:
+                return new Rectangle(getRandomSize(), getRandomSize(), color);
+            case 3:
+                return new RightTriangle(getRandomSize(), getRandomSize(), color);
+            case 4:
+                return new IsoscelesTrapezoid(getRandomSize(), getRandomSize(),
+                        getRandomSize(), color);
+            default:
+                return getDefaultFigure();
+        }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10);
+        return new Circle(10, DEFAULT_COLOR);
+    }
+
+    private double getRandomSize() {
+        return Math.round(random.nextDouble() * MAX_SIZE * 10.0) / 10.0;
     }
 }

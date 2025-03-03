@@ -1,23 +1,16 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.Figure;
-import java.util.Random;
 
 public class Rectangle extends Figure {
     private double width;
     private double height;
+    private String color;
 
-    public Rectangle() {
-        super();
-        Random random = new Random();
-        this.width = Math.round(random.nextDouble(100) * 10.0) / 10.0;
-        this.height = Math.round(random.nextDouble(100) * 10.0) / 10.0;
-    }
-
-    public Rectangle(double width, double height) {
-        super();
+    public Rectangle(double width, double height, String color) {
         this.width = Math.round(width * 10.0) / 10.0;
         this.height = Math.round(height * 10.0) / 10.0;
+        this.color = color;
     }
 
     @Override
@@ -30,6 +23,6 @@ public class Rectangle extends Figure {
         System.out.println("Figure: rectangle, area: " + getArea()
                 + " sq. units, width: " + width
                 + " units, height: " + height
-                + " units, color: " + getColor());
+                + " units, color: " + color);
     }
 }

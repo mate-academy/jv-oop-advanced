@@ -9,7 +9,7 @@ public abstract class Figure implements AreaMeasurable, Drawable {
         color = new ColorSupplier().getRandomColor();
     }
 
-    public Figure(String color) {
+    public Figure(String color, int maxVa) {
         this.color = color;
     }
 

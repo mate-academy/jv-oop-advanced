@@ -1,19 +1,15 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.Figure;
-import java.util.Random;
 
 public class Circle extends Figure {
     private double radius;
+    private String color;
 
-    public Circle() {
-        super();
-        this.radius = Math.round(new Random().nextDouble(100) * 10.0) / 10.0;
-    }
-
-    public Circle(double radius) {
-        super();
+    public Circle(double radius, String color) {
         this.radius = Math.round(radius * 10.0) / 10.0;
+        this.color = color;
+
     }
 
     @Override
@@ -25,7 +21,6 @@ public class Circle extends Figure {
     public void draw() {
         System.out.println("Figure: circle, area: " + getArea()
                 + " sq. units, radius: " + radius
-                + " units, color: " + getColor());
+                + " units, color: " + color);
     }
 }
-
