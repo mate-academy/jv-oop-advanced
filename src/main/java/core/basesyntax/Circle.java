@@ -8,6 +8,7 @@ public class Circle extends Figure implements Drawing, AreaCalculator {
         this.radius = radius;
         this.setColor(color);
     }
+
     public void setRadius(int radius) {
         this.radius = radius;
     }
@@ -23,14 +24,9 @@ public class Circle extends Figure implements Drawing, AreaCalculator {
 
     @Override
     public void draw() {
-        System.out.println(this);
-    }
-
-    @Override
-    public String toString() {
-        return "Circle , area is "
+        System.out.println("Circle , area is "
                 + calculateArea() + " sq. units, sides: "
                 + getRadius() + " units, color: "
-                + getColor();
+                + getColor());
     }
 }

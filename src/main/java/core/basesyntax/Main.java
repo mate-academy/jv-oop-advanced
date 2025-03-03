@@ -9,7 +9,7 @@ public class Main {
             figures[i] = FIGURESUPPLIER.getRandomFigure();
         }
         for (Figure figure : figures) {
-            System.out.println(figure);
+            figure.draw();
         }
     }
 }

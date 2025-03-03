@@ -33,13 +33,8 @@ public class RightTriangle extends Figure implements Drawing, AreaCalculator {
 
     @Override
     public void draw() {
-        System.out.println(this);
-    }
-
-    @Override
-    public String toString() {
-        return "Right triangle, area: " + calculateArea() + " sq. units, first leg: "
+         System.out.println("Right triangle, area: " + calculateArea() + " sq. units, first leg: "
                 + getFirstLeg() + " units, second leg: " + getSecondLeg()
-                + " units, color: " + getColor();
+                + " units, color: " + getColor());
     }
 }

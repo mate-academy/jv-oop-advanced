@@ -23,13 +23,8 @@ public class Square extends Figure implements Drawing, AreaCalculator {
 
     @Override
     public void draw() {
-        System.out.println(this);
-    }
-
-    @Override
-    public String toString() {
-        return "Square, area is " + calculateArea() + " sq. units, "
+        System.out.println("Square, area is " + calculateArea() + " sq. units, "
                 + "sides: " + getSides() + " units, "
-                + "color: " + getColor();
+                + "color: " + getColor());
     }
 }

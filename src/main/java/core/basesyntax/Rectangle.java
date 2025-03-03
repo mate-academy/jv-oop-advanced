@@ -33,14 +33,9 @@ public class Rectangle extends Figure implements Drawing, AreaCalculator {
 
     @Override
     public void draw() {
-        System.out.println(this);
-    }
-
-    @Override
-    public String toString() {
-        return "Rectangle, area is " + calculateArea() + " sq. units, "
+        System.out.println("Rectangle, area is " + calculateArea() + " sq. units, "
                 + "first leg: " + getFirstLeg() + " units, "
                 + "second leg: " + getSecondLeg() + " units, "
-                + "color: " + getColor();
+                + "color: " + getColor());
     }
 }

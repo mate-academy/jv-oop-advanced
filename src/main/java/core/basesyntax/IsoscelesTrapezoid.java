@@ -45,15 +45,10 @@ public class IsoscelesTrapezoid extends Figure implements Drawing, AreaCalculato
 
     @Override
     public void draw() {
-        System.out.println(this);
-    }
-
-    @Override
-    public String toString() {
-        return "Isosceles trapezoid , area is "
+        System.out.println("Isosceles trapezoid , area is "
                 + calculateArea() + " sq. units, top leg: "
                 + getTopLeg() + " units," + " bottom leg: "
                 + getBottomLeg() + " sides : " + getSides()
-                + " units, color: " + getColor();
+                + " units, color: " + getColor());
     }
 }
