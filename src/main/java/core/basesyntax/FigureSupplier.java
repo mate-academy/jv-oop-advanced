@@ -5,6 +5,8 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int FIGURE_NUMBER = 5;
     private static final int MAX_LENGTH = 20;
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
+    private static final int DEFAULT_RADIUS = 10;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
@@ -26,15 +28,17 @@ public class FigureSupplier {
                         randomColor,
                         random.nextDouble() * MAX_LENGTH,
                         random.nextDouble() * MAX_LENGTH);
-            default:
+            case 4:
                 return new IsoscelesTrapezoid(
                         randomColor, random.nextDouble() * MAX_LENGTH,
                         random.nextDouble() * MAX_LENGTH,
                         random.nextDouble() * MAX_LENGTH);
+            default:
+                return getDefaultFigure();
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("WHITE", 10);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
