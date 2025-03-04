@@ -44,7 +44,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     public double calculateHeight() {
-        return sqrt(pow(getSide(), 2) * pow((bottomSide - upperSide) / 2, 2));
+        return sqrt(pow(getSide(), 2) - pow((bottomSide - upperSide) / 2, 2));
     }
 
     @Override

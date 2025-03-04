@@ -5,12 +5,13 @@ import java.util.Random;
 public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
-    private Figure[] figures = {new Circle(colorSupplier.getRandomColor(), random.nextDouble()),
-            new Square(colorSupplier.getRandomColor(), random.nextDouble()),
-            new Rectangle(colorSupplier.getRandomColor(), random.nextDouble(),random.nextDouble()),
-            new RightTriangle(colorSupplier.getRandomColor(),
+    private String randomColor = colorSupplier.getRandomColor();
+    private Figure[] figures = {new Circle(randomColor, random.nextDouble()),
+            new Square(randomColor, random.nextDouble()),
+            new Rectangle(randomColor, random.nextDouble(),random.nextDouble()),
+            new RightTriangle(randomColor,
                     random.nextDouble(),random.nextDouble()),
-            new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextDouble(),
+            new IsoscelesTrapezoid(randomColor, random.nextDouble(),
                     random.nextDouble(),random.nextDouble())};
 
     public Figure getDefaultFigure() {
