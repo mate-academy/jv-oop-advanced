@@ -17,7 +17,8 @@ public class FigureSupplier {
                             getRandomNumber(), getRandomNumber());
             case IsoscelesTrapezoid ->
                     new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                            getRandomNumber(), getRandomNumber());
+                            getRandomNumber(), getRandomNumber(),
+                            getRandomNumber());
             case Square ->
                     new Square(colorSupplier.getRandomColor(),
                             getRandomNumber());

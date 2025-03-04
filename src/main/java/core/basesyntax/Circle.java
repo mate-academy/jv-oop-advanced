@@ -20,7 +20,7 @@ public class Circle extends Figure {
     public String draw() {
         return "Figure: circle, area: "
                 + area()
-                + "sq. units, side: "
+                + "sq. units, radius: "
                 + radius
                 + " units, color: "
                 + getColor();
