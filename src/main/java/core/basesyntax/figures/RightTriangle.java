@@ -3,14 +3,14 @@ package core.basesyntax.figures;
 import core.basesyntax.Figure;
 
 public class RightTriangle extends Figure {
+    private static final double ROUNDING_FACTOR = 10.0;
     private double firstLeg;
     private double secondLeg;
-    private String color;
 
     public RightTriangle(double firstLeg, double secondLeg, String color) {
+        super(color);
         this.firstLeg = round(firstLeg);
         this.secondLeg = round(secondLeg);
-        this.color = color;
     }
 
     @Override
@@ -23,10 +23,10 @@ public class RightTriangle extends Figure {
         System.out.println("Figure: right triangle, area: " + getArea()
                 + " sq. units, first leg: " + firstLeg
                 + " units, second leg: " + secondLeg
-                + " units, color: " + color);
+                + " units, color: " + getColor());
     }
 
     private double round(double value) {
-        return Math.round(value * 10.0) / 10.0;
+        return Math.round(value * ROUNDING_FACTOR) / ROUNDING_FACTOR;
     }
 }

@@ -1,9 +1,7 @@
 package core.basesyntax;
 
-import core.basesyntax.supliers.ColorSupplier;
-
 public abstract class Figure implements AreaMeasurable, Drawable {
-    private String color = new ColorSupplier().getRandomColor();
+    private String color;
 
     public Figure() {
     }
@@ -11,5 +9,8 @@ public abstract class Figure implements AreaMeasurable, Drawable {
     public Figure(String color) {
         this.color = color;
     }
-}
 
+    public String getColor() {
+        return color;
+    }
+}

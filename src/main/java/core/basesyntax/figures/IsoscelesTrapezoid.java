@@ -3,16 +3,16 @@ package core.basesyntax.figures;
 import core.basesyntax.Figure;
 
 public class IsoscelesTrapezoid extends Figure {
+    private static final double ROUNDING_FACTOR = 10.0;
     private double base1;
     private double base2;
     private double height;
-    private String color;
 
-    public IsoscelesTrapezoid(double base1, double base2, double height, String color) {
-        this.base1 = round(base1);
-        this.base2 = round(base2);
+    public IsoscelesTrapezoid(double lowerBase, double upperBase, double height, String color) {
+        super(color);
+        this.base1 = round(lowerBase);
+        this.base2 = round(upperBase);
         this.height = round(height);
-        this.color = color;
     }
 
     @Override
@@ -26,10 +26,10 @@ public class IsoscelesTrapezoid extends Figure {
                 + " sq. units, base1: " + base1
                 + " units, base2: " + base2
                 + " units, height: " + height
-                + " units, color: " + color);
+                + " units, color: " + getColor());
     }
 
     private double round(double value) {
-        return Math.round(value * 10.0) / 10.0;
+        return Math.round(value * ROUNDING_FACTOR) / ROUNDING_FACTOR;
     }
 }

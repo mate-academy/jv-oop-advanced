@@ -12,14 +12,16 @@ public class HelloWorld {
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figureArray = new Figure[ARRAY_SIZE];
 
-        for (int i = 0; i < ARRAY_SIZE / 2; i++) {
-            figureArray[i] = figureSupplier.getRandomFigure();
+        for (int i = 0; i < ARRAY_SIZE; i++) {
+            if (i < ARRAY_SIZE / 2) {
+                figureArray[i] = figureSupplier.getRandomFigure();
+            } else {
+                figureArray[i] = figureSupplier.getDefaultFigure();
+            }
+
         }
-        for (int i = ARRAY_SIZE / 2; i < ARRAY_SIZE; i++) {
-            figureArray[i] = figureSupplier.getDefaultFigure();
-        }
-        for (final Figure figure : figureArray) {
-            System.out.println(figure);
+        for (int i = 0; i < ARRAY_SIZE; i++) {
+            figureArray[i].draw();
         }
     }
 }

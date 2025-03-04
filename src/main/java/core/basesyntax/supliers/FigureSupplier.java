@@ -9,9 +9,11 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final int MAX_VALUE = 50;
+    private static final String DEFAULT_COLOR = "White";
+    private static final double DEFAULT_NUMBER = 10.0;
+
     private final Random random = new Random();
-    private final int maxValue = 50;
-    private final String defaultColor = "White";
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
@@ -35,10 +37,10 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, defaultColor);
+        return new Circle(DEFAULT_NUMBER, DEFAULT_COLOR);
     }
 
     private double getRandomSize() {
-        return Math.round(random.nextDouble() * maxValue * 10.0) / 10.0;
+        return Math.round(random.nextDouble() * MAX_VALUE * DEFAULT_NUMBER) / DEFAULT_NUMBER;
     }
 }

@@ -3,12 +3,12 @@ package core.basesyntax.figures;
 import core.basesyntax.Figure;
 
 public class Circle extends Figure {
+    private static final double ROUNDING_FACTOR = 10.0;
     private double radius;
-    private String color;
 
     public Circle(double radius, String color) {
+        super(color);
         this.radius = round(radius);
-        this.color = color;
     }
 
     @Override
@@ -20,10 +20,10 @@ public class Circle extends Figure {
     public void draw() {
         System.out.println("Figure: circle, area: " + getArea()
                 + " sq. units, radius: " + radius
-                + " units, color: " + color);
+                + " units, color: " + getColor());
     }
 
     private double round(double value) {
-        return Math.round(value * 10.0) / 10.0;
+        return Math.round(value * ROUNDING_FACTOR) / ROUNDING_FACTOR;
     }
 }
