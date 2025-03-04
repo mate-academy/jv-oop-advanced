@@ -13,7 +13,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public void toDraw() {
+    public void draw() {
         System.out.println("Figure: Rectangle; Width: " + width
                             + " units; Height: " + height
                             + " units; Area: " + area

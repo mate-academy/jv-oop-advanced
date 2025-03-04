@@ -15,7 +15,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void toDraw() {
+    public void draw() {
         System.out.println("Figure: RightTriangle; First leg: " + firstLeg
                 + " units; Second leg:  " + secondLeg
                 + " units; hypotenuse: " + hypotenuse
