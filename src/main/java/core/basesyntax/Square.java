@@ -1,40 +1,27 @@
 package core.basesyntax;
 
 public class Square extends Figure {
-    private double firstLeg;
-    private double secondLeg;
+    private double side;
 
-    public Square(String color, double firstLeg, double secondLeg) {
+    public Square(String color, double side) {
         super(color);
-        this.firstLeg = firstLeg;
-        this.secondLeg = secondLeg;
+        this.side = side;
     }
 
-    public void setFirstLeg(double firstLeg) {
-        this.firstLeg = firstLeg;
+    public void setSide(double side) {
+        this.side = side;
     }
 
-    public void setSecondLeg(double secondLeg) {
-        this.secondLeg = secondLeg;
-    }
-
-    public double getFirstLeg() {
-        return firstLeg;
-    }
-
-    public double getSecondLeg() {
-        return secondLeg;
+    public double getSide() {
+        return side;
     }
 
     @Override
     public String draw() {
         return "Figure: square, area: "
                 + area()
-                + "sq. units, firstLeg: "
-                + firstLeg
-                + " units, "
-                + "secondLeg: "
-                + secondLeg
+                + "sq. units, side: "
+                + side
                 + " units, "
                 + "color: "
                 + getColor();
@@ -42,6 +29,6 @@ public class Square extends Figure {
 
     @Override
     public double area() {
-        return (firstLeg * secondLeg) / 2;
+        return side * side;
     }
 }

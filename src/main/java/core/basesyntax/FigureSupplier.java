@@ -20,7 +20,7 @@ public class FigureSupplier {
                             getRandomNumber(), getRandomNumber());
             case Square ->
                     new Square(colorSupplier.getRandomColor(),
-                            getRandomNumber(), getRandomNumber());
+                            getRandomNumber());
             case Rectangle ->
                     new Rectangle(colorSupplier.getRandomColor(),
                             getRandomNumber(), getRandomNumber());
