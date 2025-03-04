@@ -9,14 +9,13 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final Random random = new Random();
-    private static final int MAX_SIZE = 50;
-    private static final String DEFAULT_COLOR = "White";
-    private static final String[] COLORS = {"Red", "Blue", "Green", "Yellow", "Black"};
+    private final Random random = new Random();
+    private final int maxValue = 50;
+    private final String defaultColor = "White";
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        ColorSupplier colorSupplier = new ColorSupplier();
-        String color = colorSupplier.getRandomColor(); // Генерируем случайный цвет
+        String color = colorSupplier.getRandomColor();
 
         switch (random.nextInt(5)) {
             case 0:
@@ -36,10 +35,10 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, DEFAULT_COLOR);
+        return new Circle(10, defaultColor);
     }
 
     private double getRandomSize() {
-        return Math.round(random.nextDouble() * MAX_SIZE * 10.0) / 10.0;
+        return Math.round(random.nextDouble() * maxValue * 10.0) / 10.0;
     }
 }

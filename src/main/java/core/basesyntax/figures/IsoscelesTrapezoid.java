@@ -9,9 +9,9 @@ public class IsoscelesTrapezoid extends Figure {
     private String color;
 
     public IsoscelesTrapezoid(double base1, double base2, double height, String color) {
-        this.base1 = Math.round(base1 * 10.0) / 10.0;
-        this.base2 = Math.round(base2 * 10.0) / 10.0;
-        this.height = Math.round(height * 10.0) / 10.0;
+        this.base1 = round(base1);
+        this.base2 = round(base2);
+        this.height = round(height);
         this.color = color;
     }
 
@@ -27,5 +27,9 @@ public class IsoscelesTrapezoid extends Figure {
                 + " units, base2: " + base2
                 + " units, height: " + height
                 + " units, color: " + color);
+    }
+
+    private double round(double value) {
+        return Math.round(value * 10.0) / 10.0;
     }
 }

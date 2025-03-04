@@ -8,8 +8,8 @@ public class Rectangle extends Figure {
     private String color;
 
     public Rectangle(double width, double height, String color) {
-        this.width = Math.round(width * 10.0) / 10.0;
-        this.height = Math.round(height * 10.0) / 10.0;
+        this.width = round(width);
+        this.height = round(height);
         this.color = color;
     }
 
@@ -24,5 +24,9 @@ public class Rectangle extends Figure {
                 + " sq. units, width: " + width
                 + " units, height: " + height
                 + " units, color: " + color);
+    }
+
+    private double round(double value) {
+        return Math.round(value * 10.0) / 10.0;
     }
 }

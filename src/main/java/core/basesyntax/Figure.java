@@ -3,18 +3,13 @@ package core.basesyntax;
 import core.basesyntax.supliers.ColorSupplier;
 
 public abstract class Figure implements AreaMeasurable, Drawable {
-    private String color;
+    private String color = new ColorSupplier().getRandomColor();
 
     public Figure() {
-        color = new ColorSupplier().getRandomColor();
     }
 
-    public Figure(String color, int maxVa) {
+    public Figure(String color) {
         this.color = color;
-    }
-
-    public String getColor() {
-        return color;
     }
 }
 
