@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import core.basesyntax.FigureSupplier;
-
 import java.util.Random;
 
 public class Main {
@@ -30,20 +28,17 @@ public class Main {
             int figureType = random.nextInt(5);
             String color = colorSupplier.getRandomColor();
 
-            switch (figureType) {
-                case 0:
-                    return new Square(color, random.nextDouble() * 10);
-                case 1:
-                    return new Rectangle(color, random.nextDouble() * 10, random.nextDouble() * 10);
-                case 2:
-                    return new RightTriangle(color, random.nextDouble() * 10, random.nextDouble() * 10);
-                case 3:
-                    return new Circle(color, random.nextDouble() * 10);
-                case 4:
-                    return new IsoscelesTrapezoid(color, random.nextDouble() * 10, random.nextDouble() * 10, random.nextDouble() * 10);
-                default:
-                    return getDefaultFigure();
-            }
+            return switch (figureType) {
+                case 0 -> new Square(color, random.nextDouble() * 10);
+                case 1 -> new Rectangle(color, random.nextDouble() * 10, random.nextDouble() * 10);
+                case 2 -> new RightTriangle(color, random.nextDouble() * 10,
+                        random.nextDouble() * 10);
+                case 3 -> new Circle(color, random.nextDouble() * 10);
+                case 4 ->
+                        new IsoscelesTrapezoid(color, random.nextDouble() * 10, random.nextDouble()
+                                * 10, random.nextDouble() * 10);
+                default -> getDefaultFigure();
+            };
         }
 
         public Figure getDefaultFigure() {
