@@ -18,11 +18,11 @@ In the `main()` method we need to create an array of figures (the size of the ar
 
 For this purpose create two more classes:
 - `ColorSupplier` with `public String getRandomColor()` method - for generating random color, 
-- and `FigureSupplier` with the `public Figure getRandomFigure()` method - for generating figures with random properties.
+- and `core.basesyntax.Main.FigureSupplier` with the `public Figure getRandomFigure()` method - for generating figures with random properties.
 
 **The other half** of the figures should have the same, default parameters. 
 
-For this purpose create a new method in the `FigureSupplier` class:
+For this purpose create a new method in the `core.basesyntax.Main.FigureSupplier` class:
 - `public Figure getDefaultFigure()` - this method should always return a white circle with a radius of 10.
 
 After generating the array, we need to display the entire list of objects that we have, for example:
