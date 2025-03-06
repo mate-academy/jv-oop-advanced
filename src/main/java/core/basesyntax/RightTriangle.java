@@ -17,8 +17,7 @@ public class RightTriangle extends Figure implements Area {
     public void setFirstLeg(double firstLeg) {
         if (firstLeg > 0) {
             this.firstLeg = firstLeg;
-        }
-        else {
+        } else {
             System.out.println("Bok nie może być mniejszy od 0");
         }
     }
@@ -30,8 +29,7 @@ public class RightTriangle extends Figure implements Area {
     public void setSecondLeg(double secondLeg) {
         if (secondLeg > 0) {
             this.secondLeg = secondLeg;
-        }
-        else {
+        } else {
             System.out.println("Bok nie może być mniejszy od 0");
         }
     }

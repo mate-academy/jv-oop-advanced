@@ -19,8 +19,7 @@ public class IsoscelesTrapezoid extends Figure implements Area {
     public void setBottom(double bottom) {
         if (bottom > 0) {
             this.bottom = bottom;
-        }
-        else {
+        } else {
             System.out.println("Dolna długość nie może być mniejsza od 0");
         }
     }
@@ -32,8 +31,7 @@ public class IsoscelesTrapezoid extends Figure implements Area {
     public void setTop(double top) {
         if (top > 0) {
             this.top = top;
-        }
-        else {
+        } else {
             System.out.println("Górna długość nie może być mniejsza od 0");
         }
     }
@@ -45,8 +43,7 @@ public class IsoscelesTrapezoid extends Figure implements Area {
     public void setHight(double hight) {
         if (hight > 0) {
             this.hight = hight;
-        }
-        else {
+        } else {
             System.out.println("Wysokość trapezu nie może być mniejsza od 0");
         }
     }
