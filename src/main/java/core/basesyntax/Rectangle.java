@@ -13,21 +13,34 @@ public class Rectangle extends Figure implements Area {
     public double getSideOne() {
         return this.sideOne;
     }
+
     public void setSideOne(double sideOne) {
-        if (sideOne > 0) this.sideOne = sideOne;
-        else System.out.println("Bok nie może być mniejszy od 0");
+        if (sideOne > 0) {
+            this.sideOne = sideOne;
+        }
+        else {
+            System.out.println("Bok nie może być mniejszy od 0");
+        }
     }
+
     public double getSideTwo() {
         return this.sideTwo;
     }
+
     public void setSideTwo(double sideTwo) {
-        if (sideTwo > 0) this.sideTwo = sideTwo;
-        else System.out.println("Bok nie może być mniejszy od 0");
+        if (sideTwo > 0) {
+            this.sideTwo = sideTwo;
+        }
+        else {
+            System.out.println("Bok nie może być mniejszy od 0");
+        }
     }
+
     @Override
     public double getArea() {  // metoda statyczna
         return sideOne * sideTwo;
     }
+
     @Override
     public String toString() {
         System.out.println("Rectangle color: " + getColor() + " Długość boku pierwszego: " + getSideOne() + " Długość boku drugiego: " + getSideTwo());

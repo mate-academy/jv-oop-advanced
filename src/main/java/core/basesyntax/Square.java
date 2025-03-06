@@ -12,14 +12,21 @@ public class Square extends Figure implements Area {
     public double getSide() {
         return this.side;
     }
+
     public void setSide(double side) {
-        if (side > 0) this.side = side;
-        else System.out.println("Bok nie może być mniejszy od 0");
+        if (side > 0) {
+            this.side = side;
+        }
+        else {
+            System.out.println("Bok nie może być mniejszy od 0");
+        }
     }
+
     @Override
     public double getArea() {  // metoda statyczna
         return side * side;
     }
+
     @Override
     public String toString() {
         System.out.println("Square color: " + getColor() + " Długość boku: " + getSide());
