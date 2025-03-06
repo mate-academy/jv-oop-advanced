@@ -16,8 +16,7 @@ public class Square extends Figure implements Area {
     public void setSide(double side) {
         if (side > 0) {
             this.side = side;
-        }
-        else {
+        } else {
             System.out.println("Bok nie może być mniejszy od 0");
         }
     }

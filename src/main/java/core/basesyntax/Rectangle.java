@@ -17,8 +17,7 @@ public class Rectangle extends Figure implements Area {
     public void setSideOne(double sideOne) {
         if (sideOne > 0) {
             this.sideOne = sideOne;
-        }
-        else {
+        } else {
             System.out.println("Bok nie może być mniejszy od 0");
         }
     }
@@ -30,8 +29,7 @@ public class Rectangle extends Figure implements Area {
     public void setSideTwo(double sideTwo) {
         if (sideTwo > 0) {
             this.sideTwo = sideTwo;
-        }
-        else {
+        } else {
             System.out.println("Bok nie może być mniejszy od 0");
         }
     }

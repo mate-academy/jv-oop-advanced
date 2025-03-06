@@ -15,8 +15,7 @@ public class Circle extends Figure implements Area {
     public void setRadius(double radius) {
         if (radius > 0) {
             this.radius = radius;
-        }
-        else {
+        } else {
             System.out.println("Promień nie może być mniejszy od 0");
         }
     }
