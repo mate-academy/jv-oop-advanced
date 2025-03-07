@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends Figure implements Area {
+public class Circle extends Figure implements Area, Draw {
     private double radius;
 
     public Circle(Color color, double radius) {
@@ -16,7 +16,7 @@ public class Circle extends Figure implements Area {
         if (radius > 0) {
             this.radius = radius;
         } else {
-            System.out.println("Promień nie może być mniejszy od 0");
+            System.out.println("Radius cannot be less than 0");
         }
     }
 
@@ -26,8 +26,7 @@ public class Circle extends Figure implements Area {
     }
 
     @Override
-    public String toString() {
-        System.out.println("Circle color: " + getColor() + " Promień wynosi: " + getRadius());
-        return super.toString();
+    public void toDraw() {
+        System.out.println("Circle color: " + getColor() + " Radius equals: " + getRadius());
     }
 }

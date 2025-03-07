@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Area {
+public class Rectangle extends Figure implements Area, Draw {
     private double sideOne;
     private double sideTwo;
 
@@ -35,13 +35,12 @@ public class Rectangle extends Figure implements Area {
     }
 
     @Override
-    public double getArea() {  // metoda statyczna
+    public double getArea() {
         return sideOne * sideTwo;
     }
 
     @Override
-    public String toString() {
+    public void toDraw() {
         System.out.println("Rectangle color: " + getColor() + " Długość boku pierwszego: " + getSideOne() + " Długość boku drugiego: " + getSideTwo());
-        return super.toString();
     }
 }

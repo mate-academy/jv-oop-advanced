@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure implements Area {
+public class IsoscelesTrapezoid extends Figure implements Area, Draw {
     private double bottom;
     private double top;
     private double hight;
@@ -9,7 +9,7 @@ public class IsoscelesTrapezoid extends Figure implements Area {
         super.setColor(randomColor);
         this.bottom = v;
         this.top = v1;
-        this.hight = v1;
+        this.hight = v2;
     }
 
     public double getBottom() {
@@ -20,7 +20,7 @@ public class IsoscelesTrapezoid extends Figure implements Area {
         if (bottom > 0) {
             this.bottom = bottom;
         } else {
-            System.out.println("Dolna długość nie może być mniejsza od 0");
+            System.out.println("Bottom length cannot be less than 0");
         }
     }
 
@@ -32,7 +32,7 @@ public class IsoscelesTrapezoid extends Figure implements Area {
         if (top > 0) {
             this.top = top;
         } else {
-            System.out.println("Górna długość nie może być mniejsza od 0");
+            System.out.println("Top length cannot be less than 0");
         }
     }
 
@@ -44,18 +44,17 @@ public class IsoscelesTrapezoid extends Figure implements Area {
         if (hight > 0) {
             this.hight = hight;
         } else {
-            System.out.println("Wysokość trapezu nie może być mniejsza od 0");
+            System.out.println("The height of the trapezoid cannot be less than 0");
         }
     }
 
     @Override
-    public double getArea() {  // metoda statyczna
+    public double getArea() {
         return ((top + bottom) * hight) / 2;
     }
 
     @Override
-    public String toString() {
-        System.out.println("IsoscelesTrapezoid color: " + getColor() + " Górna długość wynosi: " + getTop() + " Dolna długość wynosi: " + getBottom() + " Wysokość trapezu wynosi: " + getHight());
-        return super.toString();
+    public void toDraw() {
+        System.out.println("IsoscelesTrapezoid color: " + getColor() + " The top length is: " + getTop() + " The bottom length is: " + getBottom() + " The height of the trapezoid is: " + getHight());
     }
 }

@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements Area {
+public class RightTriangle extends Figure implements Area, Draw {
     private double firstLeg;
     private double secondLeg;
 
@@ -18,7 +18,7 @@ public class RightTriangle extends Figure implements Area {
         if (firstLeg > 0) {
             this.firstLeg = firstLeg;
         } else {
-            System.out.println("Bok nie może być mniejszy od 0");
+            System.out.println("Side cannot be less than 0");
         }
     }
 
@@ -30,7 +30,7 @@ public class RightTriangle extends Figure implements Area {
         if (secondLeg > 0) {
             this.secondLeg = secondLeg;
         } else {
-            System.out.println("Bok nie może być mniejszy od 0");
+            System.out.println("Side cannot be less than 0");
         }
     }
 
@@ -40,8 +40,7 @@ public class RightTriangle extends Figure implements Area {
     }
 
     @Override
-    public String toString() {
-        System.out.println("RightTriangle color: " + getColor() + " Długość pierwszej nogi: " + getFirstLeg() + " Długość drugiej nogi: " + getSecondLeg());
-        return super.toString();
+    public void toDraw() {
+        System.out.println("RightTriangle color: " + getColor() + " Length of first leg: " + getFirstLeg() + " Length of second leg: " + getSecondLeg());
     }
 }

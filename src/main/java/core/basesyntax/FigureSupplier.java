@@ -6,7 +6,8 @@ public class FigureSupplier {
     private final Random RANDOM = new Random();
 
     public Figure getRandomFigure() {
-        int figureType = RANDOM.nextInt(5); // Randomly choose between 0, 1, 2, 3, 4
+        final int FIGURE_TYPES = 5;
+        int figureType = RANDOM.nextInt(FIGURE_TYPES); // Randomly choose between 0, 1, 2, 3, 4
 
         switch (figureType) {
             case 0:
@@ -20,8 +21,7 @@ public class FigureSupplier {
             case 4:
                 return new IsoscelesTrapezoid(ColorSupplier.getRandomColor(), Math.round(RANDOM.nextDouble() * 10 + 1), Math.round(RANDOM.nextDouble() * 10 + 1), Math.round(RANDOM.nextDouble() * 10 + 1)); // Base and height 1-10
             default:
-                Figure figure = null;
-                return figure;
+                return new Circle(Color.WHITE, 10); // Radius: 1-10
         }
     }
     //return Math.round(value * scale) / scale;
