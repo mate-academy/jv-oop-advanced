@@ -35,12 +35,13 @@ public class RightTriangle extends Figure implements Area, Draw {
     }
 
     @Override
-    public double getArea() {  // metoda statyczna
+    public double getArea() {
         return (firstLeg * secondLeg) / 2;
     }
 
     @Override
     public void toDraw() {
-        System.out.println("RightTriangle color: " + getColor() + " Length of first leg: " + getFirstLeg() + " Length of second leg: " + getSecondLeg());
+        System.out.println("RightTriangle color: " + getColor() + " Length of first leg: "
+                + getFirstLeg() + " Length of second leg: " + getSecondLeg());
     }
 }

@@ -41,6 +41,7 @@ public class Rectangle extends Figure implements Area, Draw {
 
     @Override
     public void toDraw() {
-        System.out.println("Rectangle color: " + getColor() + " Długość boku pierwszego: " + getSideOne() + " Długość boku drugiego: " + getSideTwo());
+        System.out.println("Rectangle color: " + getColor() + " Długość boku pierwszego: "
+                + getSideOne() + " Długość boku drugiego: " + getSideTwo());
     }
 }
