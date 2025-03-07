@@ -56,7 +56,7 @@ public class IsoscelesTrapezoid extends Figure implements Area, Draw {
     @Override
     public void toDraw() {
         System.out.println("IsoscelesTrapezoid color: " + getColor() + " The top length is: "
-                + getTop() + " The bottom length is: " + getBottom() +
-                " The height of the trapezoid is: " + getHight());
+                + getTop() + " The bottom length is: " + getBottom()
+                + " The height of the trapezoid is: " + getHight());
     }
 }
