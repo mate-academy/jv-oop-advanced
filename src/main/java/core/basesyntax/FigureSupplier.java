@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final String DEFAULT_COLOR = "White";
+    private static final String DEFAULT_COLOR = Color.WHITE.name();
     private static final double DEFAULT_RADIUS = 10.0d;
     private static final int FIGURE_COUNT = 5;
     private static final int MAX_VALUE = 100;
@@ -11,7 +11,6 @@ public class FigureSupplier {
     private Random random = new Random();
 
     public Figure getRandomFigure() {
-
         String color = colorSupplier.getRandomColor();
         int figureType = random.nextInt(FIGURE_COUNT);
         switch (figureType) {

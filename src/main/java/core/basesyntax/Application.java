@@ -10,11 +10,10 @@ public class Application {
         for (int i = 0; i < ARRAY_SIZE; i++) {
             if (i < HALF_ARRAY_SIZE) {
                 figures[i] = figureSupplier.getRandomFigure();
-                figures[i].draw();
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
-                figures[i].draw();
             }
+            figures[i].draw();
         }
     }
 }
