@@ -5,9 +5,8 @@ import java.util.Random;
 public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
-    int boundFigure = 5;
-    int boundSize = 100;
-
+    private int boundFigure = 5;
+    private int boundSize = 100;
 
     private int randomSize() {
         return random.nextInt(boundSize) + 1;
@@ -15,6 +14,7 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int randomFigure = random.nextInt(boundFigure) + 1;
+
         switch (randomFigure) {
             case 1:
                 return new Circle(randomSize(), colorSupplier.getRandomColor());
