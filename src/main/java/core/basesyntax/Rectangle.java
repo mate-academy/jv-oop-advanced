@@ -3,7 +3,6 @@ package core.basesyntax;
 public class Rectangle extends Figure implements Area, Draw {
     private int shorterSide;
     private int longerSide;
-    private static final String NAME = "Rectangle";
 
     public Rectangle(int shorterSide, int longerSide, String color) {
         super(color);
@@ -19,7 +18,7 @@ public class Rectangle extends Figure implements Area, Draw {
 
     @Override
     public void draw() {
-        String firstPart = "Figure: " + NAME + ", area: " + printArea();
+        String firstPart = "Figure: rectangle area: " + printArea();
         String secondPart = " sq. units, shorter site: " + shorterSide + " units, longer site: ";
         String thirdPart = longerSide + " units, color: " + getColor();
         System.out.println(firstPart + secondPart + thirdPart);
