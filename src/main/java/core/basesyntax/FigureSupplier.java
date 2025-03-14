@@ -6,13 +6,13 @@ public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
 
-    private int randomFigure = random.nextInt(5)+1;
+    private int randomFigure = random.nextInt(5) + 1;
 
-    private int randomSize(){
-        return random.nextInt(50)+1;
+    private int randomSize() {
+        return random.nextInt(50) + 1;
     }
 
-    public Figure getRandomFigure(){
+    public Figure getRandomFigure() {
         switch (randomFigure) {
             case 1:
                 return new Circle(randomSize(), colorSupplier.getRandomColor());
@@ -27,7 +27,7 @@ public class FigureSupplier {
         }
     }
 
-    public Figure getDefaultFigure(){
+    public Figure getDefaultFigure() {
         return new Circle(10, Color.WHITE.name());
     }
 }
