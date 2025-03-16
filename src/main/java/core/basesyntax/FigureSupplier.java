@@ -11,37 +11,41 @@ class FigureSupplier {
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
+    private int getRandomDimension() {
+        return random.nextInt(MAX_DIMENSION) + MIN_DIMENSION;
+    }
+
     public Figure getRandomFigure() {
         String color = colorSupplier.getRandomColor();
         switch (random.nextInt(FIGURE_TYPES_COUNT)) {
             case 0: {
-                int side = random.nextInt(MAX_DIMENSION) + MIN_DIMENSION;
-                return new Square(Color.valueOf(color), side);
+                int side = getRandomDimension();
+                return new Square(color, side);
             }
             case 1: {
-                int firstLeg = random.nextInt(MAX_DIMENSION) + MIN_DIMENSION;
-                int secondLeg = random.nextInt(MAX_DIMENSION) + MIN_DIMENSION;
-                return new Rectangle(Color.valueOf(color), firstLeg, secondLeg);
+                int width = getRandomDimension();
+                int height = getRandomDimension();
+                return new Rectangle(color, width, height);
             }
             case 2: {
-                int firstLeg = random.nextInt(MAX_DIMENSION) + MIN_DIMENSION;
-                int secondLeg = random.nextInt(MAX_DIMENSION) + MIN_DIMENSION;
-                return new RightTriangle(Color.valueOf(color), firstLeg, secondLeg);
+                int firstLeg = getRandomDimension();
+                int secondLeg = getRandomDimension();
+                return new RightTriangle(color, firstLeg, secondLeg);
             }
             case 3: {
-                int radius = random.nextInt(MAX_DIMENSION) + MIN_DIMENSION;
-                return new Circle(Color.valueOf(color), radius);
+                int radius = getRandomDimension();
+                return new Circle(color, radius);
             }
             default: {
-                int topBase = random.nextInt(MAX_DIMENSION) + MIN_DIMENSION;
-                int bottomBase = random.nextInt(MAX_DIMENSION) + MIN_DIMENSION;
-                int secondLeg = random.nextInt(MAX_DIMENSION) + MIN_DIMENSION;
-                return new IsoscelesTrapezoid(Color.valueOf(color), topBase, bottomBase, secondLeg);
+                int topBase = getRandomDimension();
+                int bottomBase = getRandomDimension();
+                int height = getRandomDimension();
+                return new IsoscelesTrapezoid(color, topBase, bottomBase, height);
             }
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE, DEFAULT_RADIUS);
+        return new Circle("WHITE", DEFAULT_RADIUS);
     }
 }
