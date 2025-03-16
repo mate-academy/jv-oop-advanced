@@ -3,13 +3,13 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final static int DEFAULT_COUNT_FIGURES = 5;
-    private final static int DEFAULT_RADIUS = 10;
-    private final static int CIRCLE_NUMBER = 0;
-    private final static int ISOSCELES_TRAPEZOID_NUMBER = 1;
-    private final static int RECTANGLE_NUMBER = 2;
-    private final static int RIGHT_TRIANGLE_NUMBER = 3;
-    private final static int SQUARE_NUMBER = 4;
+    private static final int DEFAULT_COUNT_FIGURES = 5;
+    private static final int DEFAULT_RADIUS = 10;
+    private static final int CIRCLE_NUMBER = 0;
+    private static final int ISOSCELES_TRAPEZOID_NUMBER = 1;
+    private static final int RECTANGLE_NUMBER = 2;
+    private static final int RIGHT_TRIANGLE_NUMBER = 3;
+    private static final int SQUARE_NUMBER = 4;
     int getDefaultRandomNumber = new Random().nextInt(100);
 
 
