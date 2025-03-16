@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Figure implements Draw {
+public class Figure implements AreaDrawer {
     private String color;
 
     public String getColor() {
@@ -13,6 +13,6 @@ public class Figure implements Draw {
 
     @Override
     public void drawArea() {
-
+        System.out.println(color);
     }
 }

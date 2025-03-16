@@ -3,39 +3,48 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private final static int DEFAULT_COUNT_FIGURES = 5;
+    private final static int DEFAULT_RADIUS = 10;
+    private final static int CIRCLE_NUMBER = 0;
+    private final static int ISOSCELES_TRAPEZOID_NUMBER = 1;
+    private final static int RECTANGLE_NUMBER = 2;
+    private final static int RIGHT_TRIANGLE_NUMBER = 3;
+    private final static int SQUARE_NUMBER = 4;
+    int getDefaultRandomNumber = new Random().nextInt(100);
+
 
     public Figure getRandomFigure() {
-        int figure = new Random().nextInt(5);
+        int figure = new Random().nextInt(DEFAULT_COUNT_FIGURES);
         String randomColor = new ColorSupplier().getRandomColor();
 
         switch (figure) {
-            case 0 -> {
-                return new Circle(new Random().nextInt(100), randomColor);
+            case CIRCLE_NUMBER -> {
+                return new Circle(getDefaultRandomNumber, randomColor);
             }
-            case 1 -> {
-                int topBase = new Random().nextInt(100);
-                int bottomBase = new Random().nextInt(100);
-                int height = new Random().nextInt(100);
+            case ISOSCELES_TRAPEZOID_NUMBER -> {
+                int topBase = getDefaultRandomNumber;
+                int bottomBase = getDefaultRandomNumber;
+                int height = getDefaultRandomNumber;
                 return new IsoscelesTrapezoid(topBase, bottomBase, height, randomColor);
             }
-            case 2 -> {
-                int length = new Random().nextInt(100);
-                int width = new Random().nextInt(100);
+            case RECTANGLE_NUMBER-> {
+                int length = getDefaultRandomNumber;
+                int width = getDefaultRandomNumber;
                 return new Rectangle(length, width, randomColor);
             }
-            case 3 -> {
-                int firstLeg = new Random().nextInt(100);
-                int secondLeg = new Random().nextInt(100);
+            case RIGHT_TRIANGLE_NUMBER -> {
+                int firstLeg = getDefaultRandomNumber;
+                int secondLeg = getDefaultRandomNumber;
                 return new RightTriangle(firstLeg, secondLeg, randomColor);
             }
-            case 4 -> {
-                int sideLength = new Random().nextInt(100);
+            case SQUARE_NUMBER -> {
+                int sideLength = getDefaultRandomNumber;
                 return new Square(sideLength, randomColor);
             }
         }
         return getDefaultFigure();
     }
     public Figure getDefaultFigure() {
-        return new Circle(10, Colors.WHITE.toString());
+        return new Circle(DEFAULT_RADIUS, Colors.WHITE.name());
     }
 }
