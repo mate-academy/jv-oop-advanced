@@ -34,11 +34,11 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        String sb = "Figure: Right Triangle, " +
-                "Color: " + getColor() +
-                ", First Leg: " + getFirstLeg() +
-                ", Second Leg: " + getSecondLeg() +
-                ", Area: " + getArea();
+        String sb = "Figure: Right Triangle, "
+                + "Color: " + getColor()
+                + ", First Leg: " + getFirstLeg()
+                + ", Second Leg: " + getSecondLeg()
+                + ", Area: " + getArea();
 
         System.out.println(sb);
     }

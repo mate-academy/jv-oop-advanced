@@ -7,10 +7,10 @@ public class Square extends Rectangle {
 
     @Override
     public void draw() {
-        String sb = "Figure: Square, " +
-                "Color: " + getColor() +
-                ", Wall: " + getFirstWall() +
-                ", Area: " + getArea();
+        String sb = "Figure: Square, "
+                + "Color: " + getColor()
+                + ", Wall: " + getFirstWall()
+                + ", Area: " + getArea();
 
         System.out.println(sb);
     }

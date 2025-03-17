@@ -34,11 +34,11 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        String sb = "Figure: Rectangle, " +
-                "Color: " + getColor() +
-                ", First Wall: " + getFirstWall() +
-                ", Second Wall: " + getSecondWall() +
-                ", Area: " + getArea();
+        String sb = "Figure: Rectangle, "
+                + "Color: " + getColor()
+                + ", First Wall: " + getFirstWall()
+                + ", Second Wall: " + getSecondWall()
+                + ", Area: " + getArea();
 
         System.out.println(sb);
     }
