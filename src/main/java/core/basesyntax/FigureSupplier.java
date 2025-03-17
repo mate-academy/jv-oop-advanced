@@ -11,10 +11,6 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    private int getRandomDimension() {
-        return random.nextInt(MAX_DIMENSION) + MIN_DIMENSION;
-    }
-
     public Figure getRandomFigure() {
         String color = colorSupplier.getRandomColor();
         int figureType = random.nextInt(FIGURE_TYPES_COUNT);
@@ -48,5 +44,9 @@ public class FigureSupplier {
 
     public Figure getDefaultFigure() {
         return new Circle(Color.WHITE.name(), DEFAULT_RADIUS);
+    }
+
+    private int getRandomDimension() {
+        return random.nextInt(MAX_DIMENSION) + MIN_DIMENSION;
     }
 }
