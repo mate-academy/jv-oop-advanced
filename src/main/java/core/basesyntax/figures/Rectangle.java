@@ -1,8 +1,5 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.ColorSupplier;
-import java.util.Random;
-
 public class Rectangle extends Figure {
 
     private double firstWall;
@@ -37,7 +34,11 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        String sb = "Figure: Rectangle, Color: " + getColor() + ", First Wall: " + getFirstWall() + ", Second Wall: " + getSecondWall() + ", Area: " + getArea();
+        String sb = "Figure: Rectangle, " +
+                "Color: " + getColor() +
+                ", First Wall: " + getFirstWall() +
+                ", Second Wall: " + getSecondWall() +
+                ", Area: " + getArea();
 
         System.out.println(sb);
     }

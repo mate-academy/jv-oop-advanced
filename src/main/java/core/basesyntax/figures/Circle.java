@@ -1,8 +1,5 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.ColorSupplier;
-import java.util.Random;
-
 public class Circle extends Figure {
 
     private double radius;
@@ -28,7 +25,10 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        String sb = "Figure: Circle, Color: " + getColor() + ", Radius: " + getRadius() + ", Area: " + getArea();
+        String sb = "Figure: Circle," +
+                " Color: " + getColor() +
+                ", Radius: " + getRadius() +
+                ", Area: " + getArea();
 
         System.out.println(sb);
     }

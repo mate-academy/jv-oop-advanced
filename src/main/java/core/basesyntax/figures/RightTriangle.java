@@ -1,8 +1,5 @@
 package core.basesyntax.figures;
 
-import core.basesyntax.ColorSupplier;
-import java.util.Random;
-
 public class RightTriangle extends Figure {
 
     private double firstLeg;
@@ -37,7 +34,11 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        String sb = "Figure: Right Triangle, Color: " + getColor() + ", First Leg: " + getFirstLeg() + ", Second Leg: " + getSecondLeg() + ", Area: " + getArea();
+        String sb = "Figure: Right Triangle, " +
+                "Color: " + getColor() +
+                ", First Leg: " + getFirstLeg() +
+                ", Second Leg: " + getSecondLeg() +
+                ", Area: " + getArea();
 
         System.out.println(sb);
     }
