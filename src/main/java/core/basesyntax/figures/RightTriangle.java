@@ -1,10 +1,13 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.ColorSupplier;
-
 import java.util.Random;
 
 public class RightTriangle extends Figure {
+
+    private double firstLeg;
+    private double secondLeg;
+
     public RightTriangle(String color, double firstLeg, double secondLeg) {
         super(color);
         this.firstLeg = firstLeg;
@@ -16,9 +19,6 @@ public class RightTriangle extends Figure {
         this.firstLeg = new Random().nextInt(9)+1;
         this.secondLeg = new Random().nextInt(9)+1;
     }
-
-    private double firstLeg;
-    private double secondLeg;
 
     public double getFirstLeg() {
         return firstLeg;

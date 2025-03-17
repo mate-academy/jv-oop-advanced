@@ -1,11 +1,12 @@
 package core.basesyntax.figures;
 
-public class Figure  implements Drawable, Calculable{
+public class Figure implements Drawable, Calculable {
+
+    private String color;
+
     public Figure(String color) {
         this.color = color;
     }
-
-    private String color;
 
     public String getColor() {
         return color;

@@ -1,10 +1,9 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.ColorSupplier;
-
 import java.util.Random;
 
-public class Circle extends Figure{
+public class Circle extends Figure {
 
     private double radius;
 
@@ -15,7 +14,7 @@ public class Circle extends Figure{
 
     public Circle() {
         super(new ColorSupplier().getRandomColor());
-        this.radius = new Random().nextInt(9)+1;
+        this.radius = new Random().nextInt(9) + 1;
     }
 
     public double getRadius() {

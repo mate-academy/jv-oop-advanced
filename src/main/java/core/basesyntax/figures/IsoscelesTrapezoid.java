@@ -1,10 +1,14 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.ColorSupplier;
-
 import java.util.Random;
 
 public class IsoscelesTrapezoid extends Figure {
+
+    private double firstWall;
+    private double secondWall;
+    private double height;
+
     public IsoscelesTrapezoid(String color, double firstWall, double secondWall, double height) {
         super(color);
         this.firstWall = firstWall;
@@ -14,14 +18,10 @@ public class IsoscelesTrapezoid extends Figure {
 
     public IsoscelesTrapezoid() {
         super(new ColorSupplier().getRandomColor());
-        this.firstWall = new Random().nextInt(9)+1;
-        this.secondWall = new Random().nextInt(9)+1;
-        this.height = new Random().nextInt(9)+1;
+        this.firstWall = new Random().nextInt(9) + 1;
+        this.secondWall = new Random().nextInt(9) + 1;
+        this.height = new Random().nextInt(9) + 1;
     }
-
-    private double firstWall;
-    private double secondWall;
-    private double height;
 
     public double getFirstWall() {
         return firstWall;

@@ -1,7 +1,6 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.ColorSupplier;
-
 import java.util.Random;
 
 public class Square extends Rectangle {
@@ -11,7 +10,7 @@ public class Square extends Rectangle {
 
     public Square() {
         super(new ColorSupplier().getRandomColor(), 0, 0);
-        double wall = new Random().nextInt(9)+1;
+        double wall = new Random().nextInt(9) + 1;
         this.setFirstWall(wall);
         this.setSecondWall(wall);
     }

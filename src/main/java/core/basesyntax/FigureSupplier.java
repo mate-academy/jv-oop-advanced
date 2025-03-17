@@ -1,14 +1,12 @@
 package core.basesyntax;
 
 import core.basesyntax.figures.*;
-
-
 import java.util.Random;
 
 public class FigureSupplier {
 
     public Figure getRandomFigure() {
-        int rnd = new Random().nextInt(4)+1;
+        int rnd = new Random().nextInt(4) + 1;
 
         return switch (rnd) {
             case 1 -> new Circle();
@@ -20,7 +18,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-
         return new Circle("white", 10);
     }
 }

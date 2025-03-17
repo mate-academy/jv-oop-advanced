@@ -1,10 +1,13 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.ColorSupplier;
-
 import java.util.Random;
 
 public class Rectangle extends Figure {
+
+    private double firstWall;
+    private double secondWall;
+
     public Rectangle(String color, double firstWall, double secondWall) {
         super(color);
         this.firstWall = firstWall;
@@ -13,12 +16,9 @@ public class Rectangle extends Figure {
 
     public Rectangle() {
         super(new ColorSupplier().getRandomColor());
-        this.firstWall = new Random().nextInt(9)+1;
-        this.secondWall = new Random().nextInt(9)+1;
+        this.firstWall = new Random().nextInt(9) + 1;
+        this.secondWall = new Random().nextInt(9) + 1;
     }
-
-    private double firstWall;
-    private double secondWall;
 
     public double getFirstWall() {
         return firstWall;
