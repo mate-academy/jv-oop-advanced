@@ -17,17 +17,32 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         String color = colorSupplier.getRandomColor();
-        switch (random.nextInt(FIGURE_TYPES_COUNT)) {
+        int figureType = random.nextInt(FIGURE_TYPES_COUNT);
+
+        switch (figureType) {
             case 0:
                 return new Square(color, getRandomDimension());
             case 1:
-                return new Rectangle(color, getRandomDimension(), getRandomDimension());
+                return new Rectangle(
+                        color,
+                        getRandomDimension(),
+                        getRandomDimension()
+                );
             case 2:
-                return new RightTriangle(color, getRandomDimension(), getRandomDimension());
+                return new RightTriangle(
+                        color,
+                        getRandomDimension(),
+                        getRandomDimension()
+                );
             case 3:
                 return new Circle(color, getRandomDimension());
             default:
-                return new IsoscelesTrapezoid(color, getRandomDimension(), getRandomDimension(), getRandomDimension());
+                return new IsoscelesTrapezoid(
+                        color,
+                        getRandomDimension(),
+                        getRandomDimension(),
+                        getRandomDimension()
+                );
         }
     }
 
