@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Main {
-    private static final int SIZE_OF_ARRAY = 6; // Константа розміру масиву
+    private static final int SIZE_OF_ARRAY = 6;
 
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
@@ -11,9 +11,7 @@ public class Main {
             figures[i] = (i < figures.length / 2)
                     ? figureSupplier.getRandomFigure()
                     : figureSupplier.getDefaultFigure();
-            figures[i].draw(); // Малюємо одразу після створення
+            figures[i].draw();
         }
     }
 }
-
-
