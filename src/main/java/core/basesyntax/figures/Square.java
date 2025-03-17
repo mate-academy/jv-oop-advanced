@@ -8,13 +8,6 @@ public class Square extends Rectangle {
         super(color, wall, wall);
     }
 
-    public Square() {
-        super(new ColorSupplier().getRandomColor(), 0, 0);
-        double wall = new Random().nextInt(9) + 1;
-        this.setFirstWall(wall);
-        this.setSecondWall(wall);
-    }
-
     @Override
     public void draw() {
         String sb = "Figure: Square, Color: " + getColor() + ", Wall: " + getFirstWall() + ", Area: " + getArea();

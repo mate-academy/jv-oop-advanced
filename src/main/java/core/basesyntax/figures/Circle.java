@@ -6,15 +6,11 @@ import java.util.Random;
 public class Circle extends Figure {
 
     private double radius;
+    private static final double PI = 3.14;
 
     public Circle(String color, double radius) {
         super(color);
         this.radius = radius;
-    }
-
-    public Circle() {
-        super(new ColorSupplier().getRandomColor());
-        this.radius = new Random().nextInt(9) + 1;
     }
 
     public double getRadius() {
@@ -27,7 +23,7 @@ public class Circle extends Figure {
 
     @Override
     public double getArea() {
-        return 2 * 3.14 * radius;
+        return PI * radius * radius;
     }
 
     @Override

@@ -14,12 +14,6 @@ public class RightTriangle extends Figure {
         this.secondLeg = secondLeg;
     }
 
-    public RightTriangle() {
-        super(new ColorSupplier().getRandomColor());
-        this.firstLeg = new Random().nextInt(9)+1;
-        this.secondLeg = new Random().nextInt(9)+1;
-    }
-
     public double getFirstLeg() {
         return firstLeg;
     }

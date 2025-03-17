@@ -14,12 +14,6 @@ public class Rectangle extends Figure {
         this.secondWall = secondWall;
     }
 
-    public Rectangle() {
-        super(new ColorSupplier().getRandomColor());
-        this.firstWall = new Random().nextInt(9) + 1;
-        this.secondWall = new Random().nextInt(9) + 1;
-    }
-
     public double getFirstWall() {
         return firstWall;
     }

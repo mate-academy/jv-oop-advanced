@@ -16,13 +16,6 @@ public class IsoscelesTrapezoid extends Figure {
         this.height = height;
     }
 
-    public IsoscelesTrapezoid() {
-        super(new ColorSupplier().getRandomColor());
-        this.firstWall = new Random().nextInt(9) + 1;
-        this.secondWall = new Random().nextInt(9) + 1;
-        this.height = new Random().nextInt(9) + 1;
-    }
-
     public double getFirstWall() {
         return firstWall;
     }
