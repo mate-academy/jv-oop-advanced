@@ -35,7 +35,7 @@ public class FigureSupplier {
                         getRandomDimension()
                 );
             case 3:
-                 return new Circle(color, getRandomDimension());
+                return new Circle(color, getRandomDimension());
             default:
                 return new IsoscelesTrapezoid(
                         color,
