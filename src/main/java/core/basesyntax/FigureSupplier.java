@@ -10,8 +10,7 @@ public class FigureSupplier {
     private static final int RECTANGLE_NUMBER = 2;
     private static final int RIGHT_TRIANGLE_NUMBER = 3;
     private static final int SQUARE_NUMBER = 4;
-    int getDefaultRandomNumber = new Random().nextInt(100);
-
+    private int getDefaultRandomNumber = new Random().nextInt(100);
 
     public Figure getRandomFigure() {
         int figure = new Random().nextInt(DEFAULT_COUNT_FIGURES);
@@ -27,7 +26,7 @@ public class FigureSupplier {
                 int height = getDefaultRandomNumber;
                 return new IsoscelesTrapezoid(topBase, bottomBase, height, randomColor);
             }
-            case RECTANGLE_NUMBER-> {
+            case RECTANGLE_NUMBER -> {
                 int length = getDefaultRandomNumber;
                 int width = getDefaultRandomNumber;
                 return new Rectangle(length, width, randomColor);
@@ -44,6 +43,7 @@ public class FigureSupplier {
         }
         return getDefaultFigure();
     }
+
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_RADIUS, Colors.WHITE.name());
     }

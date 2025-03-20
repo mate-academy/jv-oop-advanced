@@ -10,6 +10,6 @@ public class Circle extends Figure {
 
     @Override
     public void drawArea() {
-        System.out.println( Math.PI * radius * radius);
+        System.out.println(Math.PI * radius * radius);
     }
 }
