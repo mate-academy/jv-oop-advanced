@@ -5,13 +5,12 @@ import java.util.Random;
 public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
     private Random random = new Random();
+    private ColorSupplier color = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int figureNumber = random.nextInt(FIGURE_COUNT);
         // generate a specific figure based on the `figureNumber` value
-        ColorSupplier color = new ColorSupplier();
         Figure randomFigure = new Circle(10.0);
-        randomFigure.setColor(color.getRandomColor());
         switch (figureNumber) {
             case 0:
                 randomFigure = new Circle(random.nextDouble(100));
@@ -30,7 +29,7 @@ public class FigureSupplier {
                         random.nextDouble(100),random.nextDouble(100));
                 break;
             default:
-                return randomFigure;
+                randomFigure = getDefaultFigure();
         }
         randomFigure.setColor(color.getRandomColor());
         return randomFigure;
