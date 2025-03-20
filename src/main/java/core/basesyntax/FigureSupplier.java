@@ -40,8 +40,10 @@ public class FigureSupplier {
                 int sideLength = getDefaultRandomNumber;
                 return new Square(sideLength, randomColor);
             }
+            default -> {
+                return getDefaultFigure();
+            }
         }
-        return getDefaultFigure();
     }
 
     public Figure getDefaultFigure() {
