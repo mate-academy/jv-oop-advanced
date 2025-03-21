@@ -4,11 +4,12 @@ import java.util.Random;
 
 public class Supplier {
 
-    private Random random = new Random();
-    private ColorRandom colorSupplier = new ColorRandom();
+    private static final int FIGURE_COUNT = 5;
+    private final Random random = new Random();
+    private final ColorRandom colorSupplier = new ColorRandom();
 
     public Figure getRandomFigure() {
-        return switch (random.nextInt(5)) {
+        return switch (random.nextInt(FIGURE_COUNT)) {
             case 0 -> new Square(colorSupplier.getRandomColor(), random.nextDouble() * 10 + 1);
             case 1 ->
                     new Rectangle(colorSupplier.getRandomColor(), random.nextDouble() * 10 + 1, random.nextDouble() * 10 + 1);
