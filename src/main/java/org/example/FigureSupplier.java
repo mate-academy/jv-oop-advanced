@@ -3,12 +3,12 @@ package org.example;
 import java.util.Random;
 
 public class FigureSupplier {
-
-    private ColorSupplier colorSupplier = new ColorSupplier();
+    private static final int FIGURE_COUNT = 5;
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         Random random = new Random();
-        int choice = random.nextInt(5);
+        int choice = random.nextInt(FIGURE_COUNT);
         String color = colorSupplier.getRandomColor();
 
         switch (choice) {
@@ -32,7 +32,7 @@ public class FigureSupplier {
                 double heightTrapezoid = 5 + random.nextDouble() * 10;
                 return new IsoscelesTrapezoid(color, base1, base2, heightTrapezoid);
             default:
-                return null;
+                throw new IllegalArgumentException("Unexpected choice value: " + choice);
         }
     }
 
@@ -40,4 +40,5 @@ public class FigureSupplier {
         return new Circle("white", 10);
     }
 }
+
 
