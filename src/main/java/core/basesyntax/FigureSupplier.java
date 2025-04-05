@@ -50,7 +50,7 @@ public class FigureSupplier {
                 return isoscelesTrapezoid;
 
             default:
-                return null;
+                throw new RuntimeException("Unknown figure!");
         }
     }
 
