@@ -26,16 +26,14 @@ public class FigureSupplier {
             case 3:
                 return new Circle(randomLeg1,
                         ColorSupplier.getRandomColor());
-            case 4:
+            default:
                 return new IsoscelesTrapezoid(randomLeg1, randomLeg2, randomLeg3,
                         ColorSupplier.getRandomColor());
-            default:
-                return null;
 
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, ColorSupplier.Color.WHITE.toString());
+        return new Circle(10, ColorSupplier.Color.WHITE.name());
     }
 }
