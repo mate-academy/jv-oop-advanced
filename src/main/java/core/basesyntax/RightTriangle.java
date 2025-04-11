@@ -7,8 +7,9 @@ public class RightTriangle extends Figure {
 
     public RightTriangle(String color, double base, double height) {
         super(color);
-        getBase();
-        getHeight();
+        this.color = color;
+        this.base = base;
+        this.height = height;
     }
 
     @Override
@@ -21,7 +22,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public double getArea() {
-        return 1/2 * base * height;
+        return 0.5 * base * height;
     }
 
     public double getBase() {

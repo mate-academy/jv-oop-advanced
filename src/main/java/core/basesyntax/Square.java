@@ -6,7 +6,8 @@ public class Square extends Figure {
 
     public Square(String color, double side) {
         super(color);
-        getSide();
+        this.color = color;
+        this.side = side;
     }
 
     @Override

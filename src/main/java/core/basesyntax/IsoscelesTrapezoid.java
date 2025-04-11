@@ -8,9 +8,10 @@ public class IsoscelesTrapezoid extends Figure {
 
     public IsoscelesTrapezoid(String color, double firstB, double secondB, double height) {
         super(color);
-        getFirstB();
-        getSecondB();
-        getHeight();
+        this.color = color;
+        this.firstB = firstB;
+        this.secondB = secondB;
+        this.height = height;
     }
 
     @Override

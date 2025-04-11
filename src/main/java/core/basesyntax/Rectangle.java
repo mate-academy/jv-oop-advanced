@@ -7,8 +7,9 @@ public class Rectangle extends Figure {
 
     public Rectangle(String color, double height, double width) {
         super(color);
-        getHeight();
-        getWidth();
+        this.color = color;
+        this.height = height;
+        this.width = width;
     }
 
     @Override

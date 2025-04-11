@@ -5,7 +5,7 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int FIGURES_COUNT = 5;
     private static final String DEFAULT_COLOR = Colors.white.name();
-    private  static final double DEFAULT_RADIUS = 10;
+    private static final double DEFAULT_RADIUS = 10;
     private ColorSupplier colorSupplier = new ColorSupplier();
     private Random random = new Random();
 
