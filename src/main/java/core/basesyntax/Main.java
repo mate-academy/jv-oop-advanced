@@ -5,11 +5,12 @@ public class Main {
 
     public static void main(String[] args) {
         Figure[] figures = new Figure[COUNT_FIGURES];
+        FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < COUNT_FIGURES; i++) {
             if (i < COUNT_FIGURES / 2) {
-                figures[i] = new FigureSupplier().getRandomFigure();
+                figures[i] = figureSupplier.getRandomFigure();
             } else {
-                figures[i] = new FigureSupplier().getDefaultFigure();
+                figures[i] = figureSupplier.getDefaultFigure();
             }
             figures[i].draw();
         }
