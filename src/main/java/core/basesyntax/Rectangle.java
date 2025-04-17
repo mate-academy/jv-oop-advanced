@@ -4,8 +4,8 @@ public class Rectangle extends Figure{
     private int firstLeg;
     private int secondLeg;
 
-    public Rectangle(int secondLeg , int firstLeg , ColorSupplier colorSupplier) {
-        super(colorSupplier);
+    public Rectangle(int secondLeg , int firstLeg , ColorSupplier color) {
+        super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
     }

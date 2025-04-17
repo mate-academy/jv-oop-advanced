@@ -6,25 +6,25 @@ public class FigureSupplier {
 
     private final Random random = new Random();
 
-    public Figure getRandomFigure(ColorSupplier colorSupplier) {
+    public Figure getRandomFigure(ColorSupplier color) {
         int figureType = random.nextInt(5); // Случайный выбор типа фигуры
         switch (figureType) {
             case 0:
-                return new Circle(random.nextInt(10) + 1, colorSupplier);
+                return new Circle(random.nextInt(10) + 1, color);
             case 1:
-                return new Square(random.nextInt(10) + 1, colorSupplier);
+                return new Square(random.nextInt(10) + 1, color);
             case 2:
-                return new RightTriangle(random.nextInt(10) + 1, random.nextInt(10) + 1, colorSupplier);
+                return new RightTriangle(random.nextInt(10) + 1, random.nextInt(10) + 1, color);
             case 3:
-                return new IsoscelesTrapezoid(random.nextInt(10) + 1, random.nextInt(10) + 1, random.nextInt(10) + 1, colorSupplier);
+                return new IsoscelesTrapezoid(random.nextInt(10) + 1, random.nextInt(10) + 1, random.nextInt(10) + 1, color);
             case 4:
-                return new Rectangle(random.nextInt(10) + 1, random.nextInt(10) + 1, colorSupplier);
+                return new Rectangle(random.nextInt(10) + 1, random.nextInt(10) + 1, color);
             default:
                 return null;
         }
     }
 
-    public Figure getDefaultFigure(ColorSupplier colorSupplier) {
+    public Figure getDefaultFigure(ColorSupplier color) {
         return new Circle(10, new ColorSupplier() {
             @Override
             public String getRandomColor() {

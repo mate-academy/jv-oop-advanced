@@ -3,8 +3,8 @@ package core.basesyntax;
 public abstract class Figure implements Drawable {
     private String color;
 
-    public Figure(ColorSupplier colorSupplier) {
-        this.color = colorSupplier.getRandomColor();
+    public Figure(ColorSupplier color) {
+        this.color = color.getRandomColor();
     }
 
     public abstract double getArea();
