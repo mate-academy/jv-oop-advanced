@@ -7,9 +7,10 @@ public class ColorSupplier {
             "red", "purple", "yellow", "black", "white", "blue"
     };
 
-    final Random random = new Random();
+    static final Random random = new Random();
 
-    public String getRandomColor() {
+    public static String getRandomColor() {
         return colors[random.nextInt(colors.length)];
     }
+
 }

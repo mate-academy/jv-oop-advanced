@@ -6,7 +6,7 @@ public class FigureSupplier {
 
     private final Random random = new Random();
 
-    public Figure getRandomFigure(ColorSupplier color) {
+    public Figure getRandomFigure(String color) {
         int figureType = random.nextInt(5); // Случайный выбор типа фигуры
         switch (figureType) {
             case 0:
@@ -24,13 +24,8 @@ public class FigureSupplier {
         }
     }
 
-    public Figure getDefaultFigure(ColorSupplier color) {
-        return new Circle(10, new ColorSupplier() {
-            @Override
-            public String getRandomColor() {
-                return "white";
-            }
-        });
+    public Figure getDefaultFigure(String colorSupplier) {
+        return new Circle(10, "white");
     }
 }
 
