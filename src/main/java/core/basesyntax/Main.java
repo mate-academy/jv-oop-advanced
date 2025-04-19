@@ -8,8 +8,6 @@ public class Main {
         for (int i = 0; i < figures.length / 2; i++) {
             figures[i] = figureSupplier.getRandomFigure();
         }
-
-        // Друга половина — фігури за замовчуванням
         for (int i = figures.length / 2; i < figures.length; i++) {
             figures[i] = figureSupplier.getDefaultFigure();
         }
