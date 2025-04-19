@@ -1,5 +1,5 @@
 package core.basesyntax;
-
+//завдання
 public class Main {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
