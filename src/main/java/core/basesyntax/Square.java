@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.awt.*;
-
 public class Square extends Figure {
     private double side;
 

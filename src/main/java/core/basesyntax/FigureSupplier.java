@@ -1,6 +1,5 @@
 package core.basesyntax;
 import java.util.Random;
-import java.util.Random;
 
 public class FigureSupplier {
     private ColorSupplier colorSupplier = new ColorSupplier();

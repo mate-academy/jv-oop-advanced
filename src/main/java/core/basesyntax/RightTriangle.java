@@ -1,7 +1,5 @@
 package core.basesyntax;
 
-import java.awt.*;
-
 public class RightTriangle extends Figure {
     private double firstLeg;
     private double secondLeg;

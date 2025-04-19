@@ -5,15 +5,20 @@ public class Main {
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figures = new Figure[6];
 
-        for (int i = 0; i < 3; i++) {
-            figures[i] = figureSupplier.getRandomFigure();
-        }
-        for (int i = 3; i < 6; i++) {
+        // Перша половина — випадкові фігури
+        for (int i = 0; i < figures.length / 2; i++) {
             figures[i] = figureSupplier.getRandomFigure();
         }
 
+        // Друга половина — фігури за замовчуванням
+        for (int i = figures.length / 2; i < figures.length; i++) {
+            figures[i] = figureSupplier.getDefaultFigure();
+        }
+
+        // Вивід усіх фігур
         for (Figure figure : figures) {
             figure.draw();
         }
     }
 }
+
