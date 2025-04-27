@@ -10,27 +10,29 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         int numberOfRandomFigure = random.nextInt(FIGURE_COUNT);
         Figure figure;
+        int firstParam = random.nextInt(99) + 1;
+        int secondParam = random.nextInt(99) + 1;
+        int thirdParam = random.nextInt(99) + 1;
 
         switch (numberOfRandomFigure) {
             case 0:
-                figure = new Square(random.nextInt(1,100));
+                figure = new Square(firstParam);
                 figure.setColor(colorSupplier.getRandomColor());
                 break;
             case 1:
-                figure = new Rectangle(random.nextInt(1,100),random.nextInt(1,100));
+                figure = new Rectangle(firstParam, secondParam);
                 figure.setColor(colorSupplier.getRandomColor());
                 break;
             case 2:
-                figure = new Circle(random.nextInt(1,100));
+                figure = new Circle(firstParam);
                 figure.setColor(colorSupplier.getRandomColor());
                 break;
             case 3:
-                figure = new RightTriangle(random.nextInt(1,100),random.nextInt(1,100));
+                figure = new RightTriangle(firstParam, secondParam);
                 figure.setColor(colorSupplier.getRandomColor());
                 break;
             default:
-                figure = new IsoscelesTrapezoid(random.nextInt(1,100),random.nextInt(1,100),
-                        random.nextInt(1,100));
+                figure = new IsoscelesTrapezoid(firstParam, secondParam, thirdParam);
                 figure.setColor(colorSupplier.getRandomColor());
                 break;
         }
