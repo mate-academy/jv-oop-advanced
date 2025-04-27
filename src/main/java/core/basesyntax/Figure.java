@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public abstract class Figure implements BehaviorFigures{
     private String color;
 
     public String getColor() {
@@ -11,7 +11,5 @@ public abstract class Figure {
         this.color = color;
     }
 
-    public abstract double obtainArea();
 
-    public abstract void drawFigure();
 }
