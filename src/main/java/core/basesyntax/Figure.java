@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements BehaviorFigures{
+public abstract class Figure implements Areable, Drawable{
     private String color;
 
     public String getColor() {
