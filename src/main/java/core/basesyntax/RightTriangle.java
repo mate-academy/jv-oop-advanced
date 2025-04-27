@@ -32,7 +32,7 @@ public class RightTriangle extends Figure{
 
     @Override
     public void drawFigure() {
-        System.out.println("Figure: rectangle, area: " + obtainArea()
+        System.out.println("Figure: triangle, area: " + obtainArea()
                 + " sq. units, firstLeg " + firstLeg + " units, secondLeg: "
                 + secondLeg + " units, color: " + getColor().name());
     }
