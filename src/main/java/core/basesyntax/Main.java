@@ -11,10 +11,11 @@ public class Main {
             figures[i] = (i < figures.length / 2)
                     ? figureSupplier.getRandomFigure()
                     : figureSupplier.getDefaultFigure();
-        }
 
-        for (Figure figure : figures) {
-            figure.draw();
+            figures[i].draw();
         }
     }
 }
+
+
+
