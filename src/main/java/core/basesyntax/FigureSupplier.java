@@ -8,10 +8,6 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    private int generateRandomSize() {
-        return random.nextInt(10) + 1;
-    }
-
     public Figure getRandomFigure() {
         switch (random.nextInt(FIGURE_COUNT)) {
             case 0:
