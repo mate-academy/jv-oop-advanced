@@ -2,8 +2,8 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class Color {
-    private static final String[] COLORS = {"Red", "Blue", "Green", "Yellow", "Black"};
+public class ColorSupplier {
+    private static final String[] COLORS = {"Red", "Blue", "Green", "Yellow", "Black", "White"};
 
     public String getRandomColor() {
         Random random = new Random();
