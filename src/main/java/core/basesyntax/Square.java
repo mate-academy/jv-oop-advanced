@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Square extends AbstractFigure {
-    private final double side;
+    private double side;
 
     public Square(double side, String color) {
         super(color);
@@ -13,9 +13,7 @@ public class Square extends AbstractFigure {
         return side * side;
     }
 
-    @Override
-    public void draw() {
-        System.out.println("Figure: square, area: " + getArea() +
-                " sq. units, side: " + side + " units, color: " + getColor());
+    public double getSide() {
+        return side;
     }
 }

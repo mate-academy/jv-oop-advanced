@@ -3,26 +3,33 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int MAX_SIZE = 10;
-    private final Random random = new Random();
-    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private static final Random RANDOM = new Random();
+    private static final double MAX_SIZE = 100;
 
     public Figure getRandomFigure() {
+        ColorSupplier colorSupplier = new ColorSupplier();
         String color = colorSupplier.getRandomColor();
-        return switch (random.nextInt(5)) {
-            case 0 -> new Square(random.nextInt(MAX_SIZE) + 1, color);
-            case 1 -> new Circle(random.nextInt(MAX_SIZE) + 1, color);
-            case 2 -> new Rectangle(random.nextInt(MAX_SIZE) + 1,
-                    random.nextInt(MAX_SIZE) + 1, color);
-            case 3 -> new RightTriangle(random.nextInt(MAX_SIZE) + 1,
-                    random.nextInt(MAX_SIZE) + 1, color);
-            case 4 -> new IsoscelesTrapezoid(random.nextInt(MAX_SIZE) + 1,
-                    random.nextInt(MAX_SIZE) + 1, random.nextInt(MAX_SIZE) + 1, color);
-            default -> getDefaultFigure();
-        };
+
+        switch (RANDOM.nextInt(5)) {
+            case 0:
+                return new Square(RANDOM.nextDouble() * MAX_SIZE, color);
+            case 1:
+                return new Rectangle(RANDOM.nextDouble() * MAX_SIZE, RANDOM.nextDouble() * MAX_SIZE, color);
+            case 2:
+                return new RightTriangle(RANDOM.nextDouble() * MAX_SIZE, RANDOM.nextDouble() * MAX_SIZE, color);
+            case 3:
+                return new Circle(RANDOM.nextDouble() * MAX_SIZE, color);
+            default:
+                return new IsoscelesTrapezoid(
+                        RANDOM.nextDouble() * MAX_SIZE,
+                        RANDOM.nextDouble() * MAX_SIZE,
+                        RANDOM.nextDouble() * MAX_SIZE,
+                        color
+                );
+        }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, "White");
+        return new Circle(10, "white");
     }
 }
