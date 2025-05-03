@@ -1,6 +1,8 @@
 package core.basesyntax;
 
-import java.util.Random;
+import core.basesyntax.Rectangle;
+import core.basesyntax.RightTriangle;
+import core.basesyntax.IsoscelesTrapezoid;
 
 public class FigureSupplier {
     private static final int MAX_SIZE = 10;
@@ -8,21 +10,34 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        String color = colorSupplier.getRandomColor();
+        String color = colorSupplier.getRandomColor().getColorName();
+        int size = random.nextInt(MAX_SIZE) + 1;
+
         return switch (random.nextInt(5)) {
-            case 0 -> new Square(random.nextInt(MAX_SIZE) + 1, color);
-            case 1 -> new Circle(random.nextInt(MAX_SIZE) + 1, color);
-            case 2 -> new Rectangle(random.nextInt(MAX_SIZE) + 1,
+            case 0 -> new Square(size, color);
+            case 1 -> new Circle(size, color);
+            case 2 -> new Rectangle(size, random.nextInt(MAX_SIZE) + 1, color);
+            case 3 -> new RightTriangle(size, random.nextInt(MAX_SIZE) + 1, color);
+            case 4 -> new IsoscelesTrapezoid(size, random.nextInt(MAX_SIZE) + 1,
                     random.nextInt(MAX_SIZE) + 1, color);
-            case 3 -> new RightTriangle(random.nextInt(MAX_SIZE) + 1,
-                    random.nextInt(MAX_SIZE) + 1, color);
-            case 4 -> new IsoscelesTrapezoid(random.nextInt(MAX_SIZE) + 1,
-                    random.nextInt(MAX_SIZE) + 1, random.nextInt(MAX_SIZE) + 1, color);
             default -> getDefaultFigure();
         };
     }
 
-    public Figure getDefaultFigure() {
-        return new Circle(10, "White");
+    public Figure getRandomFigure() {
+        FigureColor color = colorSupplier.getRandomColor();
+        int size = random.nextInt(MAX_SIZE) + 1;
+        int secondSize = random.nextInt(MAX_SIZE) + 1;
+        int thirdSize = random.nextInt(MAX_SIZE) + 1;
+
+        return switch (random.nextInt(5)) {
+            case 0 -> new Square(size, color);
+            case 1 -> new Circle(size, color);
+            case 2 -> new Rectangle(size, secondSize, color);
+            case 3 -> new RightTriangle(size, secondSize, color);
+            case 4 -> new IsoscelesTrapezoid(size, secondSize, thirdSize, color);
+            default -> getDefaultFigure();
+        };
     }
+
 }
