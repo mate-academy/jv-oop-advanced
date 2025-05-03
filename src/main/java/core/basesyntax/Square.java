@@ -1,12 +1,11 @@
 package core.basesyntax;
 
-public class Square implements Figure {
+public class Square extends AbstractFigure {
     private final double side;
-    private final FigureColor color;
 
-    public Square(double side, FigureColor color) {
+    public Square(double side, String color) {
+        super(color);
         this.side = side;
-        this.color = color;
     }
 
     @Override
@@ -16,13 +15,7 @@ public class Square implements Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: square, area: " + getArea()
-                + " sq. units, side: " + side
-                + " units, color: " + color.name());
-    }
-
-    @Override
-    public FigureColor getColor() {
-        return color;
+        System.out.println("Figure: square, area: " + getArea() +
+                " sq. units, side: " + side + " units, color: " + getColor());
     }
 }

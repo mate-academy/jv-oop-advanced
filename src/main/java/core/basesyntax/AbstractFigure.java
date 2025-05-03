@@ -7,8 +7,8 @@ public abstract class AbstractFigure implements Figure {
         this.color = color;
     }
 
+    @Override
     public String getColor() {
         return color;
     }
 }
-
