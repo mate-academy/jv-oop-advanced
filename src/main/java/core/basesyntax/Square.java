@@ -2,9 +2,9 @@ package core.basesyntax;
 
 public class Square implements Figure {
     private final double side;
-    private final String color;
+    private final FigureColor color;
 
-    public Square(double side, String color) {
+    public Square(double side, FigureColor color) {
         this.side = side;
         this.color = color;
     }
@@ -18,11 +18,11 @@ public class Square implements Figure {
     public void draw() {
         System.out.println("Figure: square, area: " + getArea()
                 + " sq. units, side: " + side
-                + " units, color: " + getColor());
+                + " units, color: " + color.name());
     }
 
     @Override
-    public String getColor() {
+    public FigureColor getColor() {
         return color;
     }
 }

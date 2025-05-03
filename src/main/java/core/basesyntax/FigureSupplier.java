@@ -1,6 +1,4 @@
 package core.basesyntax;
-  // Імпортуємо інтерфейс Figure
-import java.util.Random;
 
 import java.util.Random;
 
@@ -10,17 +8,18 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int figureType = random.nextInt(5);
         String color = colorSupplier.getRandomColor();
-        switch (figureType) {
-            case 0:
-                return new Square(random.nextInt(MAX_SIZE) + 1, color);
-            case 1:
-                return new Circle(random.nextInt(MAX_SIZE) + 1, color);
-            // Implement other cases for Rectangle, RightTriangle, IsoscelesTrapezoid
-            default:
-                return getDefaultFigure();
-        }
+        return switch (random.nextInt(5)) {
+            case 0 -> new Square(random.nextInt(MAX_SIZE) + 1, color);
+            case 1 -> new Circle(random.nextInt(MAX_SIZE) + 1, color);
+            case 2 -> new Rectangle(random.nextInt(MAX_SIZE) + 1,
+                    random.nextInt(MAX_SIZE) + 1, color);
+            case 3 -> new RightTriangle(random.nextInt(MAX_SIZE) + 1,
+                    random.nextInt(MAX_SIZE) + 1, color);
+            case 4 -> new IsoscelesTrapezoid(random.nextInt(MAX_SIZE) + 1,
+                    random.nextInt(MAX_SIZE) + 1, random.nextInt(MAX_SIZE) + 1, color);
+            default -> getDefaultFigure();
+        };
     }
 
     public Figure getDefaultFigure() {
