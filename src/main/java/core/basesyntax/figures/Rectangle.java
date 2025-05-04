@@ -34,7 +34,7 @@ public class Rectangle extends AbstractFigure {
 
     @Override
     public String getSize() {
-        return "length: " + getLength() + " units, " + "width: " + getWidth() + " units, ";
+        return "length: " + getLength() + " units, " + "width: " + getWidth() + " units,";
     }
 
     @Override

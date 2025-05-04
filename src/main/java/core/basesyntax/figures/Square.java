@@ -24,7 +24,7 @@ public class Square extends AbstractFigure {
 
     @Override
     public String getSize() {
-        return "side: " + getSide() + " units, ";
+        return "side: " + getSide() + " units,";
     }
 
     @Override

@@ -45,7 +45,7 @@ public class IsoscelesTrapezoid extends AbstractFigure {
     @Override
     public String getSize() {
         return "sideUp: " + getSideUp() + " units, " + "sideDown: " + getSideDown() + " units, "
-                + "height: " + getHeight() + " units, ";
+                + "height: " + getHeight() + " units,";
     }
 
     @Override

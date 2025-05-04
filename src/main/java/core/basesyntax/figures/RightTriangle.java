@@ -35,7 +35,7 @@ public class RightTriangle extends AbstractFigure {
     @Override
     public String getSize() {
         return "firstLeg: " + getFirstLeg() + " units, " + "secondLeg: "
-                + getSecondLeg() + " units, ";
+                + getSecondLeg() + " units,";
     }
 
     @Override

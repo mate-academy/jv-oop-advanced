@@ -4,7 +4,7 @@ public class Circle extends AbstractFigure {
     private double radius;
     private final String color;
 
-    public Circle(int radius, String color) {
+    public Circle(double radius, String color) {
         setRadius(radius);
         this.color = color;
     }
@@ -13,7 +13,7 @@ public class Circle extends AbstractFigure {
         return radius;
     }
 
-    public void setRadius(int radius) {
+    public void setRadius(double radius) {
         this.radius = radius;
     }
 
@@ -24,7 +24,7 @@ public class Circle extends AbstractFigure {
 
     @Override
     public String getSize() {
-        return "radius: " + getRadius() + " units, ";
+        return "radius: " + getRadius() + " units,";
     }
 
     @Override

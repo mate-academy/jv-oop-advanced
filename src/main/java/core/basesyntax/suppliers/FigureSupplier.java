@@ -15,18 +15,18 @@ public class FigureSupplier {
         Random randomSize = new Random();
 
         if (figures.equals(Figures.Circle)) {
-            return new Circle(randomSize.nextInt(10), colorGeneration());
+            return new Circle(randomSize.nextInt(9) + 1, colorGeneration());
         } else if (figures.equals(Figures.IsoscelesTrapezoid)) {
-            return new IsoscelesTrapezoid(randomSize.nextInt(10), randomSize.nextInt(10),
-                    randomSize.nextInt(10), colorGeneration());
+            return new IsoscelesTrapezoid(randomSize.nextInt(9) + 1, randomSize.nextInt(9) + 1,
+                    randomSize.nextInt(9) + 1, colorGeneration());
         } else if (figures.equals(Figures.Rectangle)) {
-            return new Rectangle(randomSize.nextInt(10),
-                    randomSize.nextInt(10), colorGeneration());
+            return new Rectangle(randomSize.nextInt(9) + 1,
+                    randomSize.nextInt(9) + 1, colorGeneration());
         } else if (figures.equals(Figures.RightTriangle)) {
-            return new RightTriangle(randomSize.nextInt(10),
-                    randomSize.nextInt(10), colorGeneration());
+            return new RightTriangle(randomSize.nextInt(9) + 1,
+                    randomSize.nextInt(9) + 1, colorGeneration());
         } else {
-            return new Square(randomSize.nextInt(10), colorGeneration());
+            return new Square(randomSize.nextInt(9) + 1, colorGeneration());
         }
     }
 
