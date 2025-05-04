@@ -7,7 +7,7 @@ public class IsoscelesTrapezoid extends FigureImpl {
     private final double widthA;
     private final double widthB;
 
-    public IsoscelesTrapezoid(Color color, double height, double widthA, double widthB) {
+    public IsoscelesTrapezoid(Color color, double widthA, double widthB, double height) {
         super(color);
         this.widthA = widthA;
         this.widthB = widthB;
