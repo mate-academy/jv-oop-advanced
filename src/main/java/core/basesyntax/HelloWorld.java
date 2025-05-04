@@ -1,5 +1,7 @@
 package core.basesyntax;
 
+import core.basesyntax.suppliers.FigureSupplier;
+
 public class HelloWorld {
     public static void main(String[] args) {
         Figure[] figuresArr = new Figure[6];
