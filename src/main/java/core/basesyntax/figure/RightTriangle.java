@@ -14,7 +14,7 @@ public class RightTriangle extends AbstractFigure {
 
     @Override
     public double getArea() {
-        return (firstLeg + secondLeg) / 2;
+        return (firstLeg * secondLeg) / 2;
     }
 
     @Override
