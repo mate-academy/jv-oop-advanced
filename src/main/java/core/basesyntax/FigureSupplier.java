@@ -24,18 +24,13 @@ public class FigureSupplier {
         double b = random.nextDouble() * MAX_LENGTH + 1;
         double h = random.nextDouble() * MAX_LENGTH + 1;
 
-        switch (figureType) {
-            case 0:
-                return new Square(color, a);
-            case 1:
-                return new Rectangle(color, a, b);
-            case 2:
-                return new Circle(color, a);
-            case 3:
-                return new RightTriangle(color, a, b);
-            default:
-                return new IsoscelesTrapezoid(color, a, b, h);
-        }
+        return switch (figureType) {
+            case 0 -> new Square(color, a);
+            case 1 -> new Rectangle(color, a, b);
+            case 2 -> new Circle(color, a);
+            case 3 -> new RightTriangle(color, a, b);
+            default -> new IsoscelesTrapezoid(color, a, b, h);
+        };
     }
 
     public Figure getDefaultFigure() {
