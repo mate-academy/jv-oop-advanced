@@ -1,4 +1,4 @@
-package core.basesyntax.figures;
+package core.basesyntax;
 
 public class Rectangle extends AbstractFigure {
     private int length;

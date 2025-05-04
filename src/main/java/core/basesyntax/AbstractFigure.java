@@ -1,4 +1,4 @@
-package core.basesyntax.figures;
+package core.basesyntax;
 
 public abstract class AbstractFigure implements Figure {
     @Override

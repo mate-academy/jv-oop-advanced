@@ -1,4 +1,4 @@
-package core.basesyntax.figures;
+package core.basesyntax;
 
 public class RightTriangle extends AbstractFigure {
     private int firstLeg;
