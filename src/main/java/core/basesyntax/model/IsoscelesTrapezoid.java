@@ -9,9 +9,9 @@ public class IsoscelesTrapezoid extends FigureImpl {
 
     public IsoscelesTrapezoid(Color color, double height, double widthA, double widthB) {
         super(color);
-        this.height = height;
         this.widthA = widthA;
         this.widthB = widthB;
+        this.height = height;
     }
 
     @Override

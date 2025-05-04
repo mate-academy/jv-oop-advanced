@@ -20,9 +20,9 @@ public class FigureSupplier {
         int figureType = random.nextInt(FIGURE_COUNT);
         Color color = colorSupplier.getRandomColor();
 
-        double a = random.nextDouble();
-        double b = random.nextDouble();
-        double h = random.nextDouble();
+        double a = random.nextDouble() * MAX_LENGTH + 1;
+        double b = random.nextDouble() * MAX_LENGTH + 1;
+        double h = random.nextDouble() * MAX_LENGTH + 1;
 
         return switch (figureType) {
             case 0 -> new Square(color, a);
