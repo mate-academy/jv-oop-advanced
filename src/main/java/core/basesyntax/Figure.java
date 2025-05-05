@@ -1,9 +1,13 @@
 package core.basesyntax;
 
-public interface Figure {
-    String getSize();
+import core.basesyntax.interfaces.AreaCounter;
+import core.basesyntax.interfaces.Drawable;
 
-    double area();
+import java.awt.geom.Area;
 
-    String color();
+public abstract class Figure implements Drawable, AreaCounter {
+    public abstract String draw();
+
+    public abstract double area();
+
 }

@@ -9,15 +9,11 @@ public class HelloWorld {
 
         for (int i = 0; i < figuresArr.length / 2; i++) {
             figuresArr[i] = figureSupplier.getRandomFigure();
-            System.out.println("Figure: " + figuresArr[i].getClass().getSimpleName() + ", area: "
-                    + figuresArr[i].area() + " sq. units, " + figuresArr[i].getSize() + " color: "
-                        + figuresArr[i].color().toLowerCase());
+            System.out.println(figuresArr[i].draw());
         }
         for (int i = 3; i < figuresArr.length; i++) {
             figuresArr[i] = figureSupplier.getDefaultFigure();
-            System.out.println("Figure: " + figuresArr[i].getClass().getSimpleName() + ", area: "
-                    + figuresArr[i].area() + " sq. units, " + figuresArr[i].getSize() + " color: "
-                        + figuresArr[i].color().toLowerCase());
+            System.out.println(figuresArr[i].draw());
         }
     }
 }

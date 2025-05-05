@@ -1,41 +1,24 @@
 package core.basesyntax.figures;
 
-public class RightTriangle extends AbstractFigure {
-    private int firstLeg;
-    private int secondLeg;
-    private String color;
+import core.basesyntax.Figure;
+import core.basesyntax.enums.Color;
 
-    public RightTriangle(int firstLeg, int secondLeg, String color) {
-        setFirstLeg(firstLeg);
-        setSecondLeg(secondLeg);
+public class RightTriangle extends Figure {
+    private final int firstLeg;
+    private final int secondLeg;
+    private final Color color;
+
+    public RightTriangle(int firstLeg, int secondLeg, Color color) {
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
         this.color = color;
     }
 
-    public int getSecondLeg() {
-        return secondLeg;
-    }
-
-    public void setSecondLeg(int secondLeg) {
-        this.secondLeg = secondLeg;
-    }
-
-    public int getFirstLeg() {
-        return firstLeg;
-    }
-
-    public void setFirstLeg(int firstLeg) {
-        this.firstLeg = firstLeg;
-    }
-
     @Override
-    public String color() {
-        return color;
-    }
-
-    @Override
-    public String getSize() {
-        return "firstLeg: " + getFirstLeg() + " units, " + "secondLeg: "
-                + getSecondLeg() + " units,";
+    public String draw() {
+        return "Figure: Rectangle" + ", area: " + area() + " sq. units"
+                + ", firstLeg: " + firstLeg + " units, " + "secondLeg: " + secondLeg + " units, "
+                + "color: " + color;
     }
 
     @Override

@@ -1,30 +1,21 @@
 package core.basesyntax.figures;
 
-public class Circle extends AbstractFigure {
-    private double radius;
-    private final String color;
+import core.basesyntax.Figure;
+import core.basesyntax.enums.Color;
 
-    public Circle(double radius, String color) {
-        setRadius(radius);
+public class Circle extends Figure {
+    private final double radius;
+    private final Color color;
+
+    public Circle(double radius, Color color) {
+        this.radius = radius;
         this.color = color;
     }
 
-    public double getRadius() {
-        return radius;
-    }
-
-    public void setRadius(double radius) {
-        this.radius = radius;
-    }
-
     @Override
-    public String color() {
-        return color;
-    }
-
-    @Override
-    public String getSize() {
-        return "radius: " + getRadius() + " units,";
+    public String draw() {
+        return "Figure: Circle" + ", area: " + area() + " sq. units"
+                + ", radius: " + radius + " units, " + "color: " + color;
     }
 
     @Override

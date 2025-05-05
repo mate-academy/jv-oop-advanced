@@ -1,30 +1,21 @@
 package core.basesyntax.figures;
 
-public class Square extends AbstractFigure {
-    private int side;
-    private String color;
+import core.basesyntax.Figure;
+import core.basesyntax.enums.Color;
 
-    public Square(int side, String color) {
-        setSide(side);
+public class Square extends Figure {
+    private final int side;
+    private final Color color;
+
+    public Square(int side, Color color) {
+        this.side = side;
         this.color = color;
     }
 
-    public int getSide() {
-        return side;
-    }
-
-    public void setSide(int side) {
-        this.side = side;
-    }
-
     @Override
-    public String color() {
-        return color;
-    }
-
-    @Override
-    public String getSize() {
-        return "side: " + getSide() + " units,";
+    public String draw() {
+        return "Figure: Circle" + ", area: " + area() + " sq. units"
+                + ", side: " + side + " units, " + "color: " + color;
     }
 
     @Override

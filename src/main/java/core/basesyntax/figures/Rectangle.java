@@ -1,40 +1,24 @@
 package core.basesyntax.figures;
 
-public class Rectangle extends AbstractFigure {
-    private int length;
-    private int width;
-    private String color;
+import core.basesyntax.Figure;
+import core.basesyntax.enums.Color;
 
-    public Rectangle(int length, int width, String color) {
-        setWidth(width);
-        setLength(length);
+public class Rectangle extends Figure {
+    private final int length;
+    private final int width;
+    private final Color color;
+
+    public Rectangle(int length, int width, Color color) {
+        this.width = width;
+        this.length = length;
         this.color = color;
     }
 
-    public int getWidth() {
-        return width;
-    }
-
-    public void setWidth(int width) {
-        this.width = width;
-    }
-
-    public int getLength() {
-        return length;
-    }
-
-    public void setLength(int length) {
-        this.length = length;
-    }
-
     @Override
-    public String color() {
-        return color;
-    }
-
-    @Override
-    public String getSize() {
-        return "length: " + getLength() + " units, " + "width: " + getWidth() + " units,";
+    public String draw() {
+        return "Figure: Rectangle" + ", area: " + area() + " sq. units"
+                + ", length: " + length + " units, " + "sideDown: " + width + " units, "
+                + "color: " + color;
     }
 
     @Override
