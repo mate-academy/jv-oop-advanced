@@ -13,9 +13,8 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int MAX_SIZE = 9;
 
-    ColorSupplier colorSupplier = new ColorSupplier();
-
     public Figure getRandomFigure() {
+        ColorSupplier colorSupplier = new ColorSupplier();
         int figureIndex = new Random().nextInt(Figures.values().length);
         Figures figures = Figures.values()[figureIndex];
         Random randomSize = new Random();
