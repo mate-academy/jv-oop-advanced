@@ -5,18 +5,17 @@ import core.basesyntax.enums.FigureType;
 
 public class Square extends Figure {
     private final int side;
-    private final String color;
 
     public Square(int side, String color) {
+        super(color);
         this.side = side;
-        this.color = color;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: " + FigureType.SQUARE.name()
                 + ", area: " + area() + " sq. units"
-                    + ", side: " + side + " units, " + "color: " + color);
+                    + ", side: " + side + " units, " + "color: " + getColor());
     }
 
     @Override

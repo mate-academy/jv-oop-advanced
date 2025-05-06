@@ -16,29 +16,27 @@ public class FigureSupplier {
     private static final FigureType[] FIGURE_ARRAY = FigureType.values();
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
-
     private FigureType figuresType;
-
-    private int getRandomSize() {
-        return random.nextInt(MAX_SIZE) + 1;
-    }
 
     public Figure getRandomFigure() {
         int figureIndex = random.nextInt(FIGURE_ARRAY.length);
         figuresType = FIGURE_ARRAY[figureIndex];
-        Color color = colorSupplier.getRandomColor();
-        String colorName = color.name().toLowerCase();
+        String color = colorSupplier.getRandomColor();
 
         return switch (figuresType) {
-            case CIRCLE -> new Circle(getRandomSize(), colorName);
+            case CIRCLE -> new Circle(getRandomSize(), color);
             case ISOSCELESTRAPEZOID -> new IsoscelesTrapezoid(getRandomSize(),
-                    getRandomSize(), getRandomSize(), colorName);
+                    getRandomSize(), getRandomSize(), color);
             case RECTANGLE -> new Rectangle(getRandomSize(),
-                    getRandomSize(), colorName);
+                    getRandomSize(), color);
             case RIGHTTRIANGLE -> new RightTriangle(getRandomSize(),
-                    getRandomSize(), colorName);
-            case SQUARE -> new Square(getRandomSize(), colorName);
+                    getRandomSize(), color);
+            case SQUARE -> new Square(getRandomSize(), color);
         };
+    }
+
+    private int getRandomSize() {
+        return random.nextInt(MAX_SIZE) + 1;
     }
 
     public Figure getDefaultFigure() {

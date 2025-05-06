@@ -7,13 +7,12 @@ public class IsoscelesTrapezoid extends Figure {
     private final int base;
     private final int side;
     private final int height;
-    private final String color;
 
     public IsoscelesTrapezoid(int side, int base, int height, String color) {
+        super(color);
         this.side = side;
         this.base = base;
         this.height = height;
-        this.color = color;
     }
 
     @Override
@@ -21,7 +20,7 @@ public class IsoscelesTrapezoid extends Figure {
         System.out.println("Figure: " + FigureType.ISOSCELESTRAPEZOID.name()
                 + ", area: " + area() + " sq. units"
                     + ", sideUp: " + side + " units, " + "sideDown: " + base + " units, "
-                        + "height: " + height + " units," + "color: " + color);
+                        + "height: " + height + " units," + "color: " + getColor());
     }
 
     @Override

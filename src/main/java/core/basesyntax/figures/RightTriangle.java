@@ -6,12 +6,11 @@ import core.basesyntax.enums.FigureType;
 public class RightTriangle extends Figure {
     private final int sideA;
     private final int sideB;
-    private final String color;
 
     public RightTriangle(int sideA, int sideB, String color) {
+        super(color);
         this.sideA = sideA;
         this.sideB = sideB;
-        this.color = color;
     }
 
     @Override
@@ -19,7 +18,7 @@ public class RightTriangle extends Figure {
         System.out.println("Figure: " + FigureType.RIGHTTRIANGLE.name()
                     + ", area: " + area() + " sq. units"
                 + ", firstLeg: " + sideA + " units, " + "secondLeg: " + sideB + " units, "
-                + "color: " + color);
+                + "color: " + getColor());
     }
 
     @Override
