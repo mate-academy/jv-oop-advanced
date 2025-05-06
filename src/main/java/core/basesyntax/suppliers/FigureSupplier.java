@@ -12,28 +12,34 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_SIZE = 9;
+    private static final int DEFAULT_CIRCLE_RADIUS = 10;
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random random = new Random();
+    private int figureIndex;
+    private Figures figures;
+
+    private int getRandomSize() {
+        return random.nextInt(MAX_SIZE) + 1;
+    }
 
     public Figure getRandomFigure() {
-        ColorSupplier colorSupplier = new ColorSupplier();
-        int figureIndex = new Random().nextInt(Figures.values().length);
-        Figures figures = Figures.values()[figureIndex];
-        Random randomSize = new Random();
+        figureIndex = random.nextInt(Figures.values().length);
+        figures = Figures.values()[figureIndex];
         Color color = colorSupplier.getRandomColor();
 
         return switch (figures) {
-            case Circle -> new Circle(randomSize.nextInt(MAX_SIZE) + 1, color);
-            case IsoscelesTrapezoid -> new IsoscelesTrapezoid(randomSize.nextInt(MAX_SIZE) + 1,
-                    randomSize.nextInt(MAX_SIZE) + 1, randomSize.nextInt(MAX_SIZE) + 1,
-                                color);
-            case Rectangle -> new Rectangle(randomSize.nextInt(9) + 1,
-                    randomSize.nextInt(MAX_SIZE) + 1, color);
-            case RightTriangle -> new RightTriangle(randomSize.nextInt(MAX_SIZE) + 1,
-                    randomSize.nextInt(MAX_SIZE) + 1, color);
-            case Square -> new Square(randomSize.nextInt(MAX_SIZE) + 1, color);
+            case Circle -> new Circle(getRandomSize(), color.name().toLowerCase());
+            case IsoscelesTrapezoid -> new IsoscelesTrapezoid(getRandomSize(),
+                    getRandomSize(), getRandomSize(), color.name().toLowerCase());
+            case Rectangle -> new Rectangle(getRandomSize(),
+                    getRandomSize(), color.name().toLowerCase());
+            case RightTriangle -> new RightTriangle(getRandomSize(),
+                    getRandomSize(), color.name().toLowerCase());
+            case Square -> new Square(getRandomSize(), color.name().toLowerCase());
         };
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, Color.WHITE);
+        return new Circle(DEFAULT_CIRCLE_RADIUS, Color.WHITE.name().toLowerCase());
     }
 }

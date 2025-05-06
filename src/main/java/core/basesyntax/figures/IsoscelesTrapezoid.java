@@ -1,30 +1,29 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.Figure;
-import core.basesyntax.enums.Color;
 
 public class IsoscelesTrapezoid extends Figure {
-    private final int sideUp;
-    private final int sideDown;
+    private final int base;
+    private final int side;
     private final int height;
-    private final Color color;
+    private final String color;
 
-    public IsoscelesTrapezoid(int sideUp, int sideDown, int height, Color color) {
-        this.sideUp = sideUp;
-        this.sideDown = sideDown;
+    public IsoscelesTrapezoid(int side, int base, int height, String color) {
+        this.side = side;
+        this.base = base;
         this.height = height;
         this.color = color;
     }
 
     @Override
-    public String draw() {
-        return "Figure: IsoscelesTrapezoid" + ", area: " + area() + " sq. units"
-                + ", sideUp: " + sideUp + " units, " + "sideDown: " + sideDown + " units, "
-                    + "height: " + height + " units," + "color: " + color;
+    public void draw() {
+        System.out.println("Figure: IsoscelesTrapezoid" + ", area: " + area() + " sq. units"
+                + ", sideUp: " + side + " units, " + "sideDown: " + base + " units, "
+                    + "height: " + height + " units," + "color: " + color);
     }
 
     @Override
     public double area() {
-        return ((double) (sideUp + sideDown) / 2) * height;
+        return ((double) (side + base) / 2) * height;
     }
 }

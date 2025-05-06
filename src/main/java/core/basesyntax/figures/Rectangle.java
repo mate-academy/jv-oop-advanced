@@ -1,28 +1,27 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.Figure;
-import core.basesyntax.enums.Color;
 
 public class Rectangle extends Figure {
-    private final int length;
-    private final int width;
-    private final Color color;
+    private final int sideA;
+    private final int sideB;
+    private final String color;
 
-    public Rectangle(int length, int width, Color color) {
-        this.width = width;
-        this.length = length;
+    public Rectangle(int sideB, int sideA, String color) {
+        this.sideA = sideA;
+        this.sideB = sideB;
         this.color = color;
     }
 
     @Override
-    public String draw() {
-        return "Figure: Rectangle" + ", area: " + area() + " sq. units"
-                + ", length: " + length + " units, " + "sideDown: " + width + " units, "
-                + "color: " + color;
+    public void draw() {
+        System.out.println("Figure: Rectangle" + ", area: " + area() + " sq. units"
+                + ", length: " + sideA + " units, " + "sideDown: " + sideB + " units, "
+                + "color: " + color);
     }
 
     @Override
     public double area() {
-        return length * width;
+        return sideB * sideA;
     }
 }

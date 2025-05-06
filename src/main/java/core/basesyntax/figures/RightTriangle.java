@@ -1,28 +1,27 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.Figure;
-import core.basesyntax.enums.Color;
 
 public class RightTriangle extends Figure {
-    private final int firstLeg;
-    private final int secondLeg;
-    private final Color color;
+    private final int sideA;
+    private final int sideB;
+    private final String color;
 
-    public RightTriangle(int firstLeg, int secondLeg, Color color) {
-        this.firstLeg = firstLeg;
-        this.secondLeg = secondLeg;
+    public RightTriangle(int sideA, int sideB, String color) {
+        this.sideA = sideA;
+        this.sideB = sideB;
         this.color = color;
     }
 
     @Override
-    public String draw() {
-        return "Figure: Rectangle" + ", area: " + area() + " sq. units"
-                + ", firstLeg: " + firstLeg + " units, " + "secondLeg: " + secondLeg + " units, "
-                + "color: " + color;
+    public void draw() {
+        System.out.println("Figure: Rectangle" + ", area: " + area() + " sq. units"
+                + ", firstLeg: " + sideA + " units, " + "secondLeg: " + sideB + " units, "
+                + "color: " + color);
     }
 
     @Override
     public double area() {
-        return (double) (firstLeg * secondLeg) / 2;
+        return (double) (sideA * sideB) / 2;
     }
 }
