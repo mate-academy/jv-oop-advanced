@@ -1,6 +1,7 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.Figure;
+import core.basesyntax.enums.FigureType;
 
 public class IsoscelesTrapezoid extends Figure {
     private final int base;
@@ -17,9 +18,10 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: IsoscelesTrapezoid" + ", area: " + area() + " sq. units"
-                + ", sideUp: " + side + " units, " + "sideDown: " + base + " units, "
-                    + "height: " + height + " units," + "color: " + color);
+        System.out.println("Figure: " + FigureType.ISOSCELESTRAPEZOID.name()
+                + ", area: " + area() + " sq. units"
+                    + ", sideUp: " + side + " units, " + "sideDown: " + base + " units, "
+                        + "height: " + height + " units," + "color: " + color);
     }
 
     @Override

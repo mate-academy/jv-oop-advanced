@@ -2,7 +2,7 @@ package core.basesyntax.suppliers;
 
 import core.basesyntax.Figure;
 import core.basesyntax.enums.Color;
-import core.basesyntax.enums.Figures;
+import core.basesyntax.enums.FigureType;
 import core.basesyntax.figures.Circle;
 import core.basesyntax.figures.IsoscelesTrapezoid;
 import core.basesyntax.figures.Rectangle;
@@ -13,29 +13,31 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int MAX_SIZE = 9;
     private static final int DEFAULT_CIRCLE_RADIUS = 10;
+    private static final FigureType[] FIGURE_ARRAY = FigureType.values();
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
-    private int figureIndex;
-    private Figures figures;
+
+    private FigureType figuresType;
 
     private int getRandomSize() {
         return random.nextInt(MAX_SIZE) + 1;
     }
 
     public Figure getRandomFigure() {
-        figureIndex = random.nextInt(Figures.values().length);
-        figures = Figures.values()[figureIndex];
+        int figureIndex = random.nextInt(FIGURE_ARRAY.length);
+        figuresType = FIGURE_ARRAY[figureIndex];
         Color color = colorSupplier.getRandomColor();
+        String colorName = color.name().toLowerCase();
 
-        return switch (figures) {
-            case Circle -> new Circle(getRandomSize(), color.name().toLowerCase());
-            case IsoscelesTrapezoid -> new IsoscelesTrapezoid(getRandomSize(),
-                    getRandomSize(), getRandomSize(), color.name().toLowerCase());
-            case Rectangle -> new Rectangle(getRandomSize(),
-                    getRandomSize(), color.name().toLowerCase());
-            case RightTriangle -> new RightTriangle(getRandomSize(),
-                    getRandomSize(), color.name().toLowerCase());
-            case Square -> new Square(getRandomSize(), color.name().toLowerCase());
+        return switch (figuresType) {
+            case CIRCLE -> new Circle(getRandomSize(), colorName);
+            case ISOSCELESTRAPEZOID -> new IsoscelesTrapezoid(getRandomSize(),
+                    getRandomSize(), getRandomSize(), colorName);
+            case RECTANGLE -> new Rectangle(getRandomSize(),
+                    getRandomSize(), colorName);
+            case RIGHTTRIANGLE -> new RightTriangle(getRandomSize(),
+                    getRandomSize(), colorName);
+            case SQUARE -> new Square(getRandomSize(), colorName);
         };
     }
 

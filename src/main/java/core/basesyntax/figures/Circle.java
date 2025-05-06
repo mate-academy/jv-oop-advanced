@@ -1,8 +1,10 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.Figure;
+import core.basesyntax.enums.FigureType;
 
 public class Circle extends Figure {
+    private static final double PI = 3.14;
     private final double radius;
     private final String color;
 
@@ -13,12 +15,13 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: Circle" + ", area: " + area() + " sq. units"
-                + ", radius: " + radius + " units, " + "color: " + color);
+        System.out.println("Figure: " + FigureType.CIRCLE.name() + ", area: "
+                + area() + " sq. units"
+                    + ", radius: " + radius + " units, " + "color: " + color);
     }
 
     @Override
     public double area() {
-        return 3.14 * (radius * radius);
+        return PI * (radius * radius);
     }
 }
