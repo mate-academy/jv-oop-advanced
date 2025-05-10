@@ -1,0 +1,38 @@
+[33m758e6c4[m[33m ([m[1;36mHEAD -> [m[1;32mnew_branch[m[33m, [m[1;31morigin/new_branch[m[33m)[m FixedFigures2
+[33mbbc55ed[m FixedFigures
+[33m54512ca[m Figures
+[33m3b03b22[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m remove encoding config from checkstyle plugin
+[33mc672b59[m update checklist.md reference (#1323)
+[33mfe9d2a3[m Update ci.yml to java 17
+[33m05fe00b[m Create checklist.md
+[33mfb004a0[m Merge pull request #671 from mate-academy/CU-3b3kcup_OOP-Advanced-add-point-about-cyrillic-words-in-project-path-to-test-warning
+[33me18e57b[m refactored exceptuin message
+[33m35f3e96[m Merge pull request #553 from mate-academy/rename-test-package
+[33m1cf1ef2[m renamed test package
+[33m75f80af[m Merge pull request #463 from mate-academy/remove-comments
+[33m94d079a[m added access modifier
+[33mcbb55d3[m removed comments over test class
+[33m84cf4c1[m Merge pull request #456 from mate-academy/add-tests
+[33md4358ee[m make variable local
+[33mc94ccef[m readme fix
+[33me7eae0b[m add tests
+[33mb130854[m added point about toString method (#427)
+[33m740ae28[m Update README.md (#320)
+[33m2a5a258[m Update CI config
+[33me28dbd1[m Migrate from Travis to Github Actions
+[33m88a23b4[m changed task description (added task to create circle manually) (#247)
+[33mce163da[m Update .travis.yml
+[33m60ff5be[m Merge pull request #111 from mate-academy/edit-task-description
+[33m3cc6477[m edited README for OOP-Advanced task
+[33m0dc7f22[m Update README.md (#49)
+[33m1a0e606[m Merge pull request #48 from mate-academy/draw-detail
+[33m192c31c[m added more clarity for draw method
+[33m40abcbd[m Update README.md (#7)
+[33mfb59768[m update travis (#4)
+[33m17fadf3[m added link with common mistakes (#3)
+[33mc5fdcd2[m Merge pull request #2 from mate-academy/fixed-description
+[33m2609ea6[m fixed description of oop advanced task
+[33m5508668[m Merge pull request #1 from mate-academy/add-readme
+[33m06a8dfd[m fixed description
+[33m86fb7fa[m added readme
+[33m1a4d44b[m Initial commit
