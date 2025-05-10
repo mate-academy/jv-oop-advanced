@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9ee0f974-b8ea-4673-9acd-87fd1ed955f5" name="Changes" comment="Resolve">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/checklist.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/checklist.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/src/main/java/core/basesyntax/Circle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/src/main/java/core/basesyntax/Color.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/src/main/java/core/basesyntax/ColorSupplier.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/src/main/java/core/basesyntax/Drawable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/src/main/java/core/basesyntax/Figure.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/src/main/java/core/basesyntax/FigureSupplier.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/src/main/java/core/basesyntax/Form.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/src/main/java/core/basesyntax/IsoscelesTrapezoid.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/src/main/java/core/basesyntax/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/src/main/java/core/basesyntax/Rectangle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/src/main/java/core/basesyntax/RightTriangle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/src/main/java/core/basesyntax/Square.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/src/test/java/core/test/StructureTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/target/checkstyle-cachefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/target/checkstyle-checker.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/target/checkstyle-result.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/target/classes/core/basesyntax/Circle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/target/classes/core/basesyntax/Color.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/target/classes/core/basesyntax/ColorSupplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/target/classes/core/basesyntax/Drawable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/target/classes/core/basesyntax/Figure.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/target/classes/core/basesyntax/FigureSupplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/target/classes/core/basesyntax/Form.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/target/classes/core/basesyntax/IsoscelesTrapezoid.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/target/classes/core/basesyntax/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/target/classes/core/basesyntax/Rectangle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/target/classes/core/basesyntax/RightTriangle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/target/classes/core/basesyntax/Square.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/target/jv-oop-advanced-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/target/surefire-reports/TEST-core.test.StructureTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/target/surefire-reports/core.test.StructureTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/jv-oop-advanced/target/test-classes/core/test/StructureTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/src/main/java/core/basesyntax/Circle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/src/main/java/core/basesyntax/Color.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/src/main/java/core/basesyntax/ColorSupplier.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/src/main/java/core/basesyntax/Drawable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/src/main/java/core/basesyntax/Figure.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/src/main/java/core/basesyntax/FigureSupplier.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/src/main/java/core/basesyntax/Form.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/src/main/java/core/basesyntax/IsoscelesTrapezoid.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/src/main/java/core/basesyntax/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/src/main/java/core/basesyntax/Rectangle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/src/main/java/core/basesyntax/RightTriangle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/src/main/java/core/basesyntax/Square.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/src/test/java/core/test/StructureTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/target/checkstyle-cachefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/target/checkstyle-checker.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/target/checkstyle-result.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/target/classes/core/basesyntax/Circle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/target/classes/core/basesyntax/Color.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/target/classes/core/basesyntax/ColorSupplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/target/classes/core/basesyntax/Drawable.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/target/classes/core/basesyntax/Figure.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/target/classes/core/basesyntax/FigureSupplier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/target/classes/core/basesyntax/Form.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/target/classes/core/basesyntax/IsoscelesTrapezoid.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/target/classes/core/basesyntax/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/target/classes/core/basesyntax/Rectangle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/target/classes/core/basesyntax/RightTriangle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/target/classes/core/basesyntax/Square.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/target/jv-oop-advanced-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/target/surefire-reports/TEST-core.test.StructureTest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/target/surefire-reports/core.test.StructureTest.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jv-oop-advanced/target/test-classes/core/test/StructureTest.class" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="DankevichMisha &lt;83833016+dankevichmisha@users.noreply.github.com&gt;" />
+      </list>
+    </option>
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="8043598c-6f35-4870-9800-6bafedc1e473" />
+        <option name="url" value="https://github.com/DankevichMisha/jv-oop-advanced.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2WiQgRjxIUQMc8WoBn45Olg9jYW" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/mihail/githubprojects/jv-oop-advancedty&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="jv-oop-advancedty" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="jv-oop-advancedty" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9ee0f974-b8ea-4673-9acd-87fd1ed955f5" name="Changes" comment="" />
+      <created>1697213033802</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1697213033802</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Resolve">
+      <created>1697220219731</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1697220219731</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Resolve">
+      <created>1697220326705</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1697220326705</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Resolve">
+      <created>1697220407834</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1697220407834</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Resolve">
+      <created>1697221319839</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1697221319839</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Resolve">
+      <created>1697221653068</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1697221653068</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add files via upload&#10;&#10;bugs fixed" />
+    <MESSAGE value="Resolve" />
+    <option name="LAST_COMMIT_MESSAGE" value="Resolve" />
+  </component>
+</project>
