@@ -23,7 +23,7 @@ public interface AreaCalculator {
 All our classes and interfaces should have a single purpose - the `draw()` and `getArea()` methods are not conceptually close to each other.
 
 #### You can pass random values to the constructor of a figure instead of generating them inside figure classes.
-Let's generate random values in `FigureSupplier`.
+Let's generate random values in `core.basesyntax.Main.FigureSupplier`.
 
 #### Think about which variables should be local in the method and which should be class-level
 * Bad example:
@@ -52,7 +52,7 @@ public class AccauntService {
 Please see [this article](https://mate-academy.github.io/style-guides/java/java.html#s5.2.4-constant-names) to learn about constant fields and their naming requirements.
 * Bad example:
 ```
-public class FigureSupplier {
+public class core.basesyntax.Main.FigureSupplier {
     private Random random = new Random();
 
     public Figure getRandomFigure() {
@@ -63,7 +63,7 @@ public class FigureSupplier {
 ```
 * Improved example:
 ```
-public class FigureSupplier {
+public class core.basesyntax.Main.FigureSupplier {
     public static final int FIGURE_COUNT = 5;
     private Random random = new Random();
 
@@ -84,14 +84,14 @@ Square square = new Square(random.nextInt(10) + 1);
 #### Don't use static methods in your solution
 Static methods are in general a bad practice. Let's better create an instance of a class which method you want to call.
 
-#### Don't extend your `Main/Application` class from `FigureSupplier` or `ColorSupplier`.
+#### Don't extend your `Main/Application` class from `core.basesyntax.Main.FigureSupplier` or `ColorSupplier`.
 To be able to call the non-static method, we just need to create an instance of the class: 
 ```
-FigureSupplier figureSupplier = new FigureSupplier();
+core.basesyntax.Main.FigureSupplier figureSupplier = new core.basesyntax.Main.FigureSupplier();
 Figure randomFigure = figureSupplier.getRandomFigure();
 ```
 
-#### You should create several random Figures, so you will use a loop. Please don't create a `new FigureSupplier()` inside the loop.
+#### You should create several random Figures, so you will use a loop. Please don't create a `new core.basesyntax.Main.FigureSupplier()` inside the loop.
 Let's do it only once - before the loop starts.
 
 #### Don't return `null` from a method.
