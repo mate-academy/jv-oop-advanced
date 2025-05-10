@@ -1,0 +1,34 @@
+package core.basesyntax;
+
+public class IsoscelesTrapezoid extends Figure {
+    private double smallParallel;
+    private double bigParallel;
+    private double height;
+
+    public IsoscelesTrapezoid(String color, double smallParallel,
+                              double bigParallel, double height) {
+        super(color);
+        this.smallParallel = smallParallel;
+        this.bigParallel = bigParallel;
+        this.height = height;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Figure: isosceles trapezoid, area: "
+                + getArea()
+                + " sq. units, small parallel: "
+                + smallParallel
+                + " units, big parallel: "
+                + bigParallel
+                + " units, height: "
+                + height
+                + " units, color: "
+                + getColor());
+    }
+
+    @Override
+    public double getArea() {
+        return ((smallParallel + bigParallel) / 2) * height;
+    }
+}
