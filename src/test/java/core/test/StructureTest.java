@@ -48,6 +48,7 @@ public class StructureTest {
     checkSuperclass(figureClasses);
   }
 
+
   private Class checkFigureClassExistence(String name) {
     Optional<Class> optionalClass = allClasses.stream().filter(c -> c.getSimpleName().equals(name))
             .findAny();
