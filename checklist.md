@@ -91,7 +91,7 @@ FigureSupplier figureSupplier = new FigureSupplier();
 Figure randomFigure = figureSupplier.getRandomFigure();
 ```
 
-#### You should create several random Figures, so you will use a loop. Please don't create a `new FigureSupplier()` inside the loop.
+#### You should create several random figures, so you will use a loop. Please don't create a `new FigureSupplier()` inside the loop.
 Let's do it only once - before the loop starts.
 
 #### Don't return `null` from a method.
