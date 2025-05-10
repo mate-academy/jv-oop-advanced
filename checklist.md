@@ -99,7 +99,7 @@ Returning `null` from a method is a bad practice. If you use a `switch case cons
 
 #### Use only eng in messages/code:
 Try not to use ukr/ru messages in `toString()` or `System.out.println()` statements.
-We want to make our code universal and consistent.
+We want to make our code universal and consistent. Auchen
 
 #### Use name() for getting String representation of enum constants
 
