@@ -3,14 +3,14 @@ package core.basesyntax.model.impls;
 import core.basesyntax.model.Shape;
 
 public class IsoscelesTrapezoid extends Shape {
-    private double upperBse;
-    private double lowerBse;
+    private double upperBase;
+    private double lowerBase;
     private double height;
 
-    public IsoscelesTrapezoid(String color, double upperBse, double lowerBse, double height) {
+    public IsoscelesTrapezoid(String color, double upperBase, double lowerBase, double height) {
         super(color);
-        this.upperBse = upperBse;
-        this.lowerBse = lowerBse;
+        this.upperBase = upperBase;
+        this.lowerBase = lowerBase;
         this.height = height;
     }
 
@@ -21,23 +21,23 @@ public class IsoscelesTrapezoid extends Shape {
 
     @Override
     public double getArea() {
-        return (upperBse + lowerBse) / 2 * height;
+        return (upperBase + lowerBase) / 2 * height;
     }
 
     public double getUpperBse() {
-        return upperBse;
+        return upperBase;
     }
 
     public void setUpperBse(double upperBse) {
-        this.upperBse = upperBse;
+        this.upperBase = upperBse;
     }
 
     public double getLowerBse() {
-        return lowerBse;
+        return lowerBase;
     }
 
     public void setLowerBse(double lowerBse) {
-        this.lowerBse = lowerBse;
+        this.lowerBase = lowerBse;
     }
 
     public double getHeight() {

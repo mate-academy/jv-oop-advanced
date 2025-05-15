@@ -16,16 +16,16 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         Figures figure = figures[random.nextInt(figures.length)];
         return switch (figure) {
-            case CIRCLE -> new Circle(colorSupplier.getRandomColor(), random.nextDouble());
-            case RECTANGLE -> new Rectangle(colorSupplier.getRandomColor(), random.nextDouble(),
-                    random.nextDouble());
-            case SQUARE -> new Square(colorSupplier.getRandomColor(), random.nextDouble());
+            case CIRCLE -> new Circle(colorSupplier.getRandomColor(), random.nextDouble() + 1);
+            case RECTANGLE -> new Rectangle(colorSupplier.getRandomColor(), random.nextDouble() + 1,
+                    random.nextDouble() + 1);
+            case SQUARE -> new Square(colorSupplier.getRandomColor(), random.nextDouble() + 1);
             case ISOSCELES_TRAPEZOID ->
-                    new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextInt(),
-                            random.nextDouble(), random.nextDouble());
+                    new IsoscelesTrapezoid(colorSupplier.getRandomColor(), random.nextDouble() + 1,
+                            random.nextDouble() + 1, random.nextDouble() + 1);
             case RIGHT_TRIANGLE ->
-                    new RightTriangle(colorSupplier.getRandomColor(), random.nextDouble(),
-                            random.nextDouble());
+                    new RightTriangle(colorSupplier.getRandomColor(), random.nextDouble() + 1,
+                            random.nextDouble() + 1);
         };
     }
 
