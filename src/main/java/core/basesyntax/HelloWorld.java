@@ -14,7 +14,9 @@ public class HelloWorld {
                 figureSupplier.getDefaultFigure(), figureSupplier.getDefaultFigure()};
 
         for (var figure : figures) {
-            System.out.println(figure);
+            figure.draw();
+            System.out.println(figure.getColor());
+            System.out.println(figure.getArea());
         }
     }
 
