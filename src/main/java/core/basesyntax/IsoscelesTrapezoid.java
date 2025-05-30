@@ -6,10 +6,10 @@ public class IsoscelesTrapezoid extends AbstractFigure {
     private int secondLeg;
     private int height;
 
-    public IsoscelesTrapezoid(Color color, int secondLeg, int firstLeg, int height) {
+    public IsoscelesTrapezoid(Color color, int firstLeg, int secondLeg, int height) {
         super(color);
-        this.secondLeg = secondLeg;
         this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
         this.height = height;
     }
 
