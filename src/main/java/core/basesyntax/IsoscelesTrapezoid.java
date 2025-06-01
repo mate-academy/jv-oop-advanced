@@ -1,14 +1,12 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid implements Figure, Colorable {
-    private double topBase;
-    private double bottomBase;
-    private double height;
-    private String color;
+public class IsoscelesTrapezoid extends Figure {
+    private final double topBase;
+    private final double bottomBase;
+    private final double height;
 
-    public IsoscelesTrapezoid(String color, double topBase,
-                              double bottomBase, double height) {
-        this.color = color;
+    public IsoscelesTrapezoid(String color, double topBase, double bottomBase, double height) {
+        super(color);
         this.topBase = topBase;
         this.bottomBase = bottomBase;
         this.height = height;
@@ -16,19 +14,14 @@ public class IsoscelesTrapezoid implements Figure, Colorable {
 
     @Override
     public double getArea() {
-        return (topBase + bottomBase) * height / 2;
+        return 0.5 * (topBase + bottomBase) * height;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: isosceles trapezoid, area: "
-                + getArea() + " sq.units, top base: " + topBase
-                + " units, bottom base: " + bottomBase
-                + " units, height: " + height + " units, color: " + color);
-    }
-
-    @Override
-    public String getColor() {
-        return color;
+                + getArea() + " sq.units, top base: "
+                + topBase + " units, bottom base: " + bottomBase
+                + " units, height: " + height + " units, color: " + getColor());
     }
 }

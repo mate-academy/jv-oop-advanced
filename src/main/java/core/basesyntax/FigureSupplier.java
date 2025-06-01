@@ -4,38 +4,32 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
-    private static final int MAX_SIZE = 10;
-    private static final String DEFAULT_COLOR = "white";
-
+    private static final double MAX_VALUE = 100;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int index = random.nextInt(FIGURE_COUNT);
         String color = colorSupplier.getRandomColor();
-        switch (index) {
+        switch (random.nextInt(FIGURE_COUNT)) {
             case 0:
-                return new Circle(color, random.nextDouble() * MAX_SIZE);
+                return new Circle(color, getRandomDouble());
             case 1:
-                return new Square(color, random.nextDouble() * MAX_SIZE);
+                return new Rectangle(color, getRandomDouble(), getRandomDouble());
             case 2:
-                return new Rectangle(color, random.nextDouble() * MAX_SIZE,
-                        random.nextDouble() * MAX_SIZE);
+                return new Square(color, getRandomDouble());
             case 3:
-                return new RightTriangle(color,
-                        random.nextDouble() * MAX_SIZE,
-                        random.nextDouble() * MAX_SIZE);
-            case 4:
-                return new IsoscelesTrapezoid(color,
-                        random.nextDouble() * MAX_SIZE,
-                        random.nextDouble() * MAX_SIZE,
-                        random.nextDouble() * MAX_SIZE);
+                return new RightTriangle(color, getRandomDouble(), getRandomDouble());
             default:
-                return getDefaultFigure();
+                return new IsoscelesTrapezoid(color, getRandomDouble(), getRandomDouble(),
+                        getRandomDouble());
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_COLOR, 10);
+        return new Circle("white", 10);
+    }
+
+    private double getRandomDouble() {
+        return random.nextDouble() * MAX_VALUE;
     }
 }

@@ -1,9 +1,23 @@
 package core.basesyntax;
 
-public interface Figure {
-    double getArea();
+public class Figure implements Drawable, AreaCalculable {
+    private final String color;
 
-    void draw();
+    public Figure(String color) {
+        this.color = color;
+    }
 
-    String getColor();
+    public String getColor() {
+        return color;
+    }
+
+    @Override
+    public void draw() {
+        // реалізація в підкласах
+    }
+
+    @Override
+    public double getArea() {
+        return 0; // має бути перевизначено в підкласах
+    }
 }
