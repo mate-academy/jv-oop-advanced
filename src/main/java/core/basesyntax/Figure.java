@@ -7,4 +7,3 @@ public interface Figure {
 
     String getColor();
 }
-

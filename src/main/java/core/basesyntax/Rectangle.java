@@ -1,12 +1,12 @@
 package core.basesyntax;
 
-public class Rectangle extends ColorFigure {
-    private String color;
+public class Rectangle implements Figure, Colorable {
     private double width;
     private double height;
+    private String color;
 
     public Rectangle(String color, double width, double height) {
-        super(color);
+        this.color = color;
         this.width = width;
         this.height = height;
     }
@@ -18,10 +18,14 @@ public class Rectangle extends ColorFigure {
 
     @Override
     public void draw() {
-        System.out.println("Drawable: rectangle, area: " + getArea()
-                + " width: " + width
-                + " height: " + height
-                + " color: " + getColor());
+        System.out.println("Figure: rectangle, area: "
+                + getArea() + " sq.units, width: "
+                + width + " units, height: "
+                + height + " units, color: " + color);
+    }
 
+    @Override
+    public String getColor() {
+        return color;
     }
 }
