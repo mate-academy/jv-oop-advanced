@@ -17,8 +17,5 @@ public class Main {
         for (Drawable figure : figures) {
             figure.draw();
         }
-
     }
-
-
 }
