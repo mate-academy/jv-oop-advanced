@@ -3,39 +3,31 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private ColorSupplier colorSupplier = new ColorSupplier();
-    private Random random = new Random();
+    private static final int MAX_VALUE = 100;
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Drawable getRandomFigure() {
+    public Figure getRandomFigure() {
         String color = colorSupplier.getRandomColor();
-        int figureType = random.nextInt(5);
-
-        switch (figureType) {
+        switch (random.nextInt(5)) {
             case 0:
-                double side = 1 + random.nextDouble() * 10;
-                return new Square(color, side);
+                return new Circle(random.nextDouble() * MAX_VALUE, color);
             case 1:
-                double width = 1 + random.nextDouble() * 10;
-                double height = 1 + random.nextDouble() * 10;
-                return new Rectangle(color, width, height);
+                return new Square(random.nextDouble() * MAX_VALUE, color);
             case 2:
-                double firstLeg = 1 + random.nextDouble() * 10;
-                double secondLeg = 1 + random.nextDouble() * 10;
-                return new RightTriangle(color, firstLeg, secondLeg);
+                return new Rectangle(random.nextDouble() * MAX_VALUE,
+                        random.nextDouble() * MAX_VALUE, color);
             case 3:
-                double radius = 1 + random.nextDouble() * 10;
-                return new Circle(color, radius);
-            case 4:
-                double base1 = 1 + random.nextDouble() * 10;
-                double base2 = 1 + random.nextDouble() * 10;
-                double heightTrap = 1 + random.nextDouble() * 10;
-                return new IsoscelesTrapezoid(color, base1, base2, heightTrap);
+                return new RightTriangle(random.nextDouble() * MAX_VALUE,
+                        random.nextDouble() * MAX_VALUE, color);
             default:
-                return getDefaultFigure();
+                return new IsoscelesTrapezoid(random.nextDouble() * MAX_VALUE,
+                        random.nextDouble() * MAX_VALUE,
+                        random.nextDouble() * MAX_VALUE, color);
         }
     }
 
-    public Drawable getDefaultFigure() {
-        return new Circle("white", 10);
+    public Figure getDefaultFigure() {
+        return new Circle(10, "white");
     }
 }
