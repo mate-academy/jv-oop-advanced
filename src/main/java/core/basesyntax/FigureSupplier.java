@@ -6,21 +6,28 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         ColorSupplier color = new ColorSupplier();
         String randomColor = color.getRandomColor();
-        int randomNumber = new Random().nextInt(21) + 1;
         int randomFigure = new Random().nextInt(5) + 1;
 
         switch (randomFigure) {
             case 1:
-                return new Square(randomColor, randomNumber);
+                int side = new Random().nextInt(21) + 1;
+                return new Square(randomColor, side);
             case 2:
-                return new Circle(randomColor, randomNumber);
+                int radius = new Random().nextInt(21) + 1;
+                return new Circle(randomColor, radius);
             case 3:
-                return new Rectangle(randomColor, randomNumber, randomNumber);
+                int width = new Random().nextInt(21) + 1;
+                int heightRectangle = new Random().nextInt(21) + 1;
+                return new Rectangle(randomColor, width, heightRectangle);
             case 4:
-                return new RightTriangle(randomColor, randomNumber, randomNumber);
+                int firstLeg = new Random().nextInt(21) + 1;
+                int secondLeg = new Random().nextInt(21) + 1;
+                return new RightTriangle(randomColor, firstLeg, secondLeg);
             case 5:
-                return new IsoscelesTrapezoid(randomColor, randomNumber,
-                        randomNumber, randomNumber);
+                int topBase = new Random().nextInt(21) + 1;
+                int bottomBase = new Random().nextInt(21) + 1;
+                int heightTrapezoid = new Random().nextInt(21) + 1;
+                return new IsoscelesTrapezoid(randomColor, topBase, bottomBase, heightTrapezoid);
             default:
                 System.out.println("Error");
         }
