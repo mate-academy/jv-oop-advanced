@@ -13,23 +13,23 @@ public class FigureSupplier {
         String color = colorSupplier.getRandomColor();
         switch (figureType) {
             case 0:
-                double width = random.nextDouble();
-                double height = random.nextDouble();
+                double width = getRandomDouble();
+                double height = getRandomDouble();
                 return new Rectangle(color, width, height);
             case 1:
-                double firstLeg = random.nextDouble();
-                double secondLeg = random.nextDouble();
+                double firstLeg = getRandomDouble();
+                double secondLeg = getRandomDouble();
                 return new RightTriangle(color, firstLeg, secondLeg);
             case 2:
-                double side = random.nextDouble();
+                double side = getRandomDouble();
                 return new Square(color, side);
             case 3:
-                double radius = random.nextDouble();
+                double radius = getRandomDouble();
                 return new Circle(color, radius);
             case 4:
-                double base1 = random.nextDouble();
-                double base2 = random.nextDouble();
-                double trapHeight = random.nextDouble();
+                double base1 = getRandomDouble();
+                double base2 = getRandomDouble();
+                double trapHeight = getRandomDouble();
                 return new IsoscelesTrapezoid(color, base1, base2, trapHeight);
             default:
                 return getDefaultFigure();
@@ -41,6 +41,6 @@ public class FigureSupplier {
     }
     
     private double getRandomDouble() {
-        return 1 + random.nextInt(20); // random value from 1 to 20
+        return 1 + random.nextDouble() * 19;
     }
 }
