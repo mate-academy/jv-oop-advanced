@@ -23,7 +23,7 @@ public class FigureSupplier {
             case 2:
                 double width = random.nextDouble() * MAX_SIZE;
                 double length = random.nextDouble() * MAX_SIZE;
-                return new Rectangle(color,width, length);
+                return new Rectangle(color, width, length);
 
             case 3:
                 double firstLeg = random.nextDouble() * MAX_SIZE;
@@ -40,6 +40,7 @@ public class FigureSupplier {
 
         }
     }
+
     public Figure getDefaultFigure() {
         return new Circle("white", 10);
     }
