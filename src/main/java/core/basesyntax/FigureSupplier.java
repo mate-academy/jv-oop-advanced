@@ -7,7 +7,7 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figure getRandomFigure() {
+    public Figure.Figure getRandomFigure() {
         int randomIndex = random.nextInt(5);
         String color = colorSupplier.getRandomColor();
         switch (randomIndex) {
@@ -41,7 +41,7 @@ public class FigureSupplier {
         }
     }
 
-    public Figure getDefaultFigure() {
+    public Figure.Figure getDefaultFigure() {
         return new Circle("white", 10);
     }
 }

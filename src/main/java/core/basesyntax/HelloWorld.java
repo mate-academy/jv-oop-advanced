@@ -4,7 +4,7 @@ public class HelloWorld {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
 
-        Figure[] figures = new Figure[6];
+        Figure.Figure[] figures = new Figure.Figure[6];
 
         for (int i = 0; i < figures.length / 2; i++) {
             figures[i] = figureSupplier.getRandomFigure();
@@ -14,7 +14,7 @@ public class HelloWorld {
             figures[i] = figureSupplier.getDefaultFigure();
         }
 
-        for (Figure figure : figures) {
+        for (Figure.Figure figure : figures) {
             figure.draw();
         }
     }
