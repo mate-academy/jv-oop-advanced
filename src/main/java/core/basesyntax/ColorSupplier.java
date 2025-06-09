@@ -12,6 +12,12 @@ public class ColorSupplier {
         YELLOW,
         BROWN
     }
+
+    @Override
+    public String toString() {
+        return "default";
+    }
+
   private final Colors[] colors = {Colors.RED, Colors.BLACK, Colors.GREEN, Colors.BROWN, Colors.WHITE,
                                    Colors.BLUE, Colors.YELLOW};
 
