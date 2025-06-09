@@ -3,26 +3,26 @@ package core.basesyntax;
 import java.util.Random;
 
 public class ColorSupplier {
-     private enum Colors{
-        RED,
-        BLUE,
-        GREEN,
-        WHITE,
+    private enum Colors {
         BLACK,
-        YELLOW,
-        BROWN
+        BLUE,
+        BROWN,
+        GREEN,
+        RED,
+        WHITE,
+        YELLOW
     }
+
+    private final Colors[] colors = {Colors.BLACK, Colors.BLUE, Colors.BROWN, Colors.GREEN,
+            Colors.RED, Colors.WHITE, Colors.YELLOW};
 
     @Override
     public String toString() {
         return "default";
     }
 
-  private final Colors[] colors = {Colors.RED, Colors.BLACK, Colors.GREEN, Colors.BROWN, Colors.WHITE,
-                                   Colors.BLUE, Colors.YELLOW};
-
-  public  String getRandomColor() {
-      return (colors[new Random().nextInt(colors.length)].toString());
+    public String getRandomColor() {
+        return (colors[new Random().nextInt(colors.length)].toString());
     }
 
 }
