@@ -36,6 +36,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", 10.0);
+        return new Circle("WHITE", 10.0);
     }
 }

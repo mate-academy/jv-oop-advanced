@@ -3,10 +3,20 @@ package core.basesyntax;
 import java.util.Random;
 
 public class ColorSupplier {
-  private String[] colors = {"red", "blue", "green", "white", "black", "yellow", "brown"};
+     private enum Colors{
+        RED,
+        BLUE,
+        GREEN,
+        WHITE,
+        BLACK,
+        YELLOW,
+        BROWN
+    }
+  private final Colors[] colors = {Colors.RED, Colors.BLACK, Colors.GREEN, Colors.BROWN, Colors.WHITE,
+                                   Colors.BLUE, Colors.YELLOW};
 
   public  String getRandomColor() {
-      return new String(colors[new Random().nextInt(colors.length)]);
+      return (colors[new Random().nextInt(colors.length)].toString());
     }
 
 }
