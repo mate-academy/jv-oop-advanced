@@ -1,8 +1,6 @@
 package core.basesyntax;
 
-public interface Shape {
+public interface AreaCalculable {
 
     double getArea();
-
-    void draw();
 }
