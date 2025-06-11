@@ -1,10 +1,10 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure{
+public class Rectangle extends Figure {
     private double firstLeg;
     private double secondLeg;
 
-    public Rectangle(String color, double firstLeg, double secondLeg){
+    public Rectangle(String color, double firstLeg, double secondLeg) {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
@@ -18,8 +18,8 @@ public class Rectangle extends Figure{
     @Override
     public void draw() {
         System.out.println("Figure: Rectangle, color: " + getColor() + " , first leg: "
-                + firstLeg + "second led: " + secondLeg +
-                " , area: " + getArea());
+                + firstLeg + "second led: " + secondLeg
+                + " , area: " + getArea());
     }
 
 }

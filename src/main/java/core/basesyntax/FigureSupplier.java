@@ -1,6 +1,5 @@
 package core.basesyntax;
 
-import java.awt.*;
 import java.util.Random;
 
 public class FigureSupplier {
@@ -24,17 +23,18 @@ public class FigureSupplier {
                 return new Rectangle(color.name(), firstLeg, secondLeg);
             case 3 :
                 double firstLine = 1 + random.nextDouble() * 3;
-                double secondLine = 1 + random.nextDouble() *3;
+                double secondLine = 1 + random.nextDouble() * 3;
                 return new RightTriangle(color.name(), firstLine, secondLine);
             case 4 :
                 double leg1 = 1 + random.nextDouble() * 4;
                 double leg2 = 1 + random.nextDouble() * 4;
-                double heigh = 1 + random.nextDouble() *4;
+                double heigh = 1 + random.nextDouble() * 4;
                 return new IsoscelesTrapezoid(color.name(), leg1, leg2, heigh);
             default:
                 return getRandomFigure();
         }
     }
+
     public Figure getDefaultFigure() {
         return new Circle(Colors.WHITE.name(), 10);
     }
