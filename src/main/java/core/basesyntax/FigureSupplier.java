@@ -28,8 +28,8 @@ public class FigureSupplier {
             case 4 :
                 double leg1 = 1 + random.nextDouble() * 4;
                 double leg2 = 1 + random.nextDouble() * 4;
-                double heigh = 1 + random.nextDouble() * 4;
-                return new IsoscelesTrapezoid(color.name(), leg1, leg2, heigh);
+                double height = 1 + random.nextDouble() * 4;
+                return new IsoscelesTrapezoid(color.name(), leg1, leg2, height);
             default:
                 return getRandomFigure();
         }
