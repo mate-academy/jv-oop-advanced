@@ -10,7 +10,7 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final double getRandomSize = 1 + random.nextDouble() * 20;
 
-    public Figure getRandomFigure() {
+    public Drawable getRandomFigure() {
         Color color = colorSupplier.getRandomColor();
         int figureType = random.nextInt(5);
         switch (figureType) {
@@ -39,7 +39,7 @@ public class FigureSupplier {
         }
     }
 
-    public Figure getDefaultFigure() {
+    public Drawable getDefaultFigure() {
         return new Circle(DefaultColor, DefaultRadius);
     }
 }
