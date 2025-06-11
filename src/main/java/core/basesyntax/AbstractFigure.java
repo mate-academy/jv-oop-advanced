@@ -10,4 +10,8 @@ public abstract class AbstractFigure implements Figure {
     public String getColor() {
         return color;
     }
+
+    public abstract double getArea();
+
+    public abstract void draw();
 }
