@@ -3,39 +3,43 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final String DefaultColor = "WHITE";
+    private static final double DefaultRadius = 10;
     private static final int figureType = 5;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
+    private final double getRandomSize = 1 + random.nextDouble() * 20;
 
     public Figure getRandomFigure() {
-        Colors color = colorSupplier.getRandomColor();
+        Color color = colorSupplier.getRandomColor();
         int figureType = random.nextInt(5);
         switch (figureType) {
             case 0 :
-                double radius = 1 + random.nextDouble() * 20;
-                return new Circle(color.name(), radius);
+                double radius = getRandomSize;
+                return new Circle(color.name(), getRandomSize);
             case 1 :
-                double side = 1 + random.nextDouble() * 20;
-                return new Square(color.name(), side);
+                double side = getRandomSize;
+                return new Square(color.name(), getRandomSize);
             case 2 :
-                double firstLeg = 1 + random.nextDouble() * 5;
-                double secondLeg = 1 + random.nextDouble() * 5;
-                return new Rectangle(color.name(), firstLeg, secondLeg);
+                double firstLeg = getRandomSize;
+                double secondLeg = getRandomSize;
+                return new Rectangle(color.name(), getRandomSize, getRandomSize);
             case 3 :
-                double firstLine = 1 + random.nextDouble() * 3;
-                double secondLine = 1 + random.nextDouble() * 3;
-                return new RightTriangle(color.name(), firstLine, secondLine);
+                double firstLine = getRandomSize;
+                double secondLine = getRandomSize;
+                return new RightTriangle(color.name(), getRandomSize, getRandomSize);
             case 4 :
-                double leg1 = 1 + random.nextDouble() * 4;
-                double leg2 = 1 + random.nextDouble() * 4;
-                double height = 1 + random.nextDouble() * 4;
-                return new IsoscelesTrapezoid(color.name(), leg1, leg2, height);
+                double legFirst = getRandomSize;
+                double legSecond = getRandomSize;
+                double height = getRandomSize;
+                return new IsoscelesTrapezoid(color.name(), getRandomSize, getRandomSize,
+                        getRandomSize);
             default:
                 return getRandomFigure();
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Colors.WHITE.name(), 10);
+        return new Circle(DefaultColor, DefaultRadius);
     }
 }

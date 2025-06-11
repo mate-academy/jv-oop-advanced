@@ -1,26 +1,26 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid extends AbstractFigure {
-    private double leg1;
-    private double leg2;
+    private double legFirst;
+    private double legSecond;
     private double height;
 
-    public IsoscelesTrapezoid(String color, double leg1, double leg2, double height) {
+    public IsoscelesTrapezoid(String color, double legFirst, double legSecond, double height) {
         super(color);
-        this.leg1 = leg1;
-        this.leg2 = leg2;
+        this.legFirst = legFirst;
+        this.legSecond = legSecond;
         this.height = height;
     }
 
     @Override
     public double getArea() {
-        return ((leg1 + leg2) * height) / 2.0;
+        return ((legFirst + legSecond) * height) / 2.0;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: IsoscelesTrapezoid, color: " + getColor() + " , leg 1: "
-                + leg1 + "leg 2: " + leg2 + " ,heigh" + height
+                + legFirst + "leg 2: " + legSecond + " ,heigh" + height
                 + " , area: " + getArea());
     }
 }
