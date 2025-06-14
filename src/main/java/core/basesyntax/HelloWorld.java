@@ -1,5 +1,8 @@
 package core.basesyntax;
 
+import core.basesyntax.figures.Figure;
+import core.basesyntax.suppliers.FigureSupplier;
+
 public class HelloWorld {
     public static void main(String[] args) {
 
