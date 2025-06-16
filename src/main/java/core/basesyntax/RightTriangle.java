@@ -12,7 +12,7 @@ public class RightTriangle extends Figure implements Shape {
     @Override
     public String toString() {
         return "Figure: rightTriangle, area: " + calculateArea()
-                + " sq. units, firstLeg: " + firstLeg +" units, secondLeg: "
+                + " sq. units, firstLeg: " + firstLeg + " units, secondLeg: "
                 + secondLeg + " units, color: " + color;
     }
 }

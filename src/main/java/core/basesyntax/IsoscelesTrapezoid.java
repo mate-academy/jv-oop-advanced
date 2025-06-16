@@ -14,7 +14,7 @@ public class IsoscelesTrapezoid extends Figure {
     public String toString() {
         return "Figure: IsoscelesTrapezoid, area: "
                 + calculateArea() + " sq. units, base1: "
-                + base1 +" units, base2: " + base2 + " units, height: "
-                +  height + " units, color: " + color;
+                + base1 + " units, base2: " + base2 + " units, height: "
+                + height + " units, color: " + color;
     }
 }

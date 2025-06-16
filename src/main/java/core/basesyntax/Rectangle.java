@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle  extends Figure {
+public class Rectangle extends Figure {
     private final int firstSide = 6;
     private final int secondSide = 4;
 
@@ -13,7 +13,7 @@ public class Rectangle  extends Figure {
     public String toString() {
         return "Figure: Retangle, area: "
                 + calculateArea() + " sq. units, firstSide: "
-                + firstSide +" units, secondSide: "
+                + firstSide + " units, secondSide: "
                 + secondSide + " units, color: " + color;
     }
 }

@@ -12,6 +12,6 @@ public class Square extends Figure {
     public String toString() {
         return "Figure: square, area: "
                 + calculateArea() + " sq. units, side: " + side
-                +" units, color: " + color;
+                + " units, color: " + color;
     }
 }
