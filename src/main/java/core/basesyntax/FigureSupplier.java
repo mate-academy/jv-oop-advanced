@@ -16,7 +16,7 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         ColorSupplier cs = new ColorSupplier();
         String color = cs.getRandomColor();
-        Figures randomFigure= Figures.values()[RANDOM.nextInt(Figures.values().length)];
+        Figures randomFigure = Figures.values()[RANDOM.nextInt(Figures.values().length)];
 
         Figure figure;
 

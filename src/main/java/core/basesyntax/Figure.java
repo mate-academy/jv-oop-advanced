@@ -1,9 +1,7 @@
 package core.basesyntax;
 
 public abstract class Figure implements Shape {
-    String color;
-    double square;
-
+    protected String color;
     public String getColor() {
         return color;
     }
