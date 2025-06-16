@@ -1,9 +1,9 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.interfaces.AreaCalculator;
 import core.basesyntax.interfaces.Drawable;
-import core.basesyntax.interfaces.Measurable;
 
-public abstract class Figure implements Drawable, Measurable {
+public abstract class Figure implements AreaCalculator, Drawable {
     private String color;
 
     Figure(String color) {

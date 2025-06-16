@@ -1,27 +1,14 @@
 package core.basesyntax.suppliers;
 
+import core.basesyntax.enums.Color;
 import java.util.Random;
 
 public class ColorSupplier {
-    private final Colors[] colors = {Colors.BLACK, Colors.BLUE, Colors.BROWN, Colors.GREEN,
-            Colors.RED, Colors.WHITE, Colors.YELLOW};
-
-    @Override
-    public String toString() {
-        return "default";
-    }
+    private final Color[] colors = {Color.BLACK, Color.BLUE, Color.BROWN, Color.GREEN,
+            Color.RED, Color.WHITE, Color.YELLOW};
 
     public String getRandomColor() {
-        return (colors[new Random().nextInt(colors.length)].toString());
+        return (colors[new Random().nextInt(colors.length)].name());
     }
 
-    private enum Colors {
-        BLACK,
-        BLUE,
-        BROWN,
-        GREEN,
-        RED,
-        WHITE,
-        YELLOW
-    }
 }

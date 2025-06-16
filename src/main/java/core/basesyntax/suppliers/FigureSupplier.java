@@ -1,5 +1,6 @@
 package core.basesyntax.suppliers;
 
+import core.basesyntax.enums.Color;
 import core.basesyntax.figures.Circle;
 import core.basesyntax.figures.Figure;
 import core.basesyntax.figures.IsoscelesTrapezoid;
@@ -12,35 +13,39 @@ public class FigureSupplier {
     private static final int MIN_SIZE = 1;
     private static final int MAX_SIZE = 10;
 
+    private final int boundRandom = 5;
+    private final int sizeForDefaultFigure = 10;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
 
-        int figureType = random.nextInt(5);
+        int figureType = random.nextInt(boundRandom);
 
         String randomColor = colorSupplier.getRandomColor();
-        double size1 = MIN_SIZE + (MAX_SIZE - MIN_SIZE) * random.nextDouble();
-        double size2 = MIN_SIZE + (MAX_SIZE - MIN_SIZE) * random.nextDouble();
-        double size3 = MIN_SIZE + (MAX_SIZE - MIN_SIZE) * random.nextDouble();
 
         switch (figureType) {
             case 0:
-                return new Circle(randomColor, size1);
+                return new Circle(randomColor, getRandomSize());
             case 1:
-                return new Square(randomColor, size1);
+                return new Square(randomColor, getRandomSize());
             case 2:
-                return new Rectangle(randomColor, size1, size2);
+                return new Rectangle(randomColor, getRandomSize(), getRandomSize());
             case 3:
-                return new IsoscelesTrapezoid(randomColor, size1, size2, size3);
+                return new IsoscelesTrapezoid(randomColor, getRandomSize(),
+                                         getRandomSize(), getRandomSize());
             case 4:
-                return new RightTriangle(randomColor, size1, size2);
+                return new RightTriangle(randomColor, getRandomSize(), getRandomSize());
             default:
                 return getDefaultFigure();
         }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("WHITE", 10.0);
+        return new Circle(Color.WHITE.name(), sizeForDefaultFigure);
+    }
+
+    private double getRandomSize() {
+        return MIN_SIZE + (MAX_SIZE - MIN_SIZE) * random.nextDouble();
     }
 }
