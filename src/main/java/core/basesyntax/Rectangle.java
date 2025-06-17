@@ -3,14 +3,16 @@ package core.basesyntax;
 import java.util.Random;
 
 public class Rectangle extends Figure {
-    private Random random = new Random();
+    private final Random random = new Random();
     private final int firstSide = random.nextInt(10) + 1;
     private final int secondSide = random.nextInt(10) + 1;
 
+    @Override
     public double calculateArea() {
         return firstSide * secondSide;
     }
 
+    @Override
     public String draw() {
         return "Figure: retangle, area: "
                 + calculateArea() + " sq. units, firstSide: "

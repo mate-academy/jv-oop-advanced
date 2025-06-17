@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Figure {
+public class Figure implements Shape {
     protected String color;
 
     public String getColor() {
