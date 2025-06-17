@@ -1,15 +1,16 @@
 package core.basesyntax;
 
-public class Square extends Figure {
-    private final int side = 5;
+import java.util.Random;
 
-    @Override
+public class Square extends Figure {
+    Random random = new Random();
+    private final int side = random.nextInt(10) + 1;
+
     public double calculateArea() {
         return side * side;
     }
 
-    @Override
-    public String toString() {
+    public String draw() {
         return "Figure: square, area: "
                 + calculateArea() + " sq. units, side: " + side
                 + " units, color: " + color;

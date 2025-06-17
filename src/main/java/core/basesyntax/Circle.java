@@ -1,15 +1,16 @@
 package core.basesyntax;
 
-public class Circle extends Figure {
-    private final double radius = 10.0;
+import java.util.Random;
 
-    @Override
+public class Circle extends Figure {
+    Random random = new Random();
+    private final int radius = random.nextInt(10) + 1;
+
     public double calculateArea() {
         return Math.PI * Math.pow(radius, 2);
     }
 
-    @Override
-    public String toString() {
+    public String draw() {
         return "Figure: circle, area: " + calculateArea()
                 + " sq. units, radius: " + radius + " units, color: " + color;
     }

@@ -6,8 +6,15 @@ package core.basesyntax;
 public class Main {
     public static void main(String[] args) {
         FigureSupplier fs = new FigureSupplier();
-        Figure randomFigure = fs.getRandomFigure();
+        Figure[] randomFigures = new Figure[5];
 
-        System.out.println(randomFigure);
+        for (int i = 0; i < randomFigures.length; i++) {
+            Figure rf = fs.getRandomFigure();
+            randomFigures[i] = rf;
+        }
+
+        for (Figure figure: randomFigures) {
+            System.out.println(figure.draw());
+        }
     }
 }

@@ -1,16 +1,17 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure {
-    private final int firstLeg = 7;
-    private final int secondLeg = 5;
+import java.util.Random;
 
-    @Override
+public class RightTriangle extends Figure {
+    Random random = new Random();
+    private final int firstLeg = random.nextInt(10) + 1;
+    private final int secondLeg = random.nextInt(10) + 1;
+
     public double calculateArea() {
         return 0.5 * firstLeg * secondLeg;
     }
 
-    @Override
-    public String toString() {
+    public String draw() {
         return "Figure: rightTriangle, area: " + calculateArea()
                 + " sq. units, firstLeg: " + firstLeg + " units, secondLeg: "
                 + secondLeg + " units, color: " + color;

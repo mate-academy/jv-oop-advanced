@@ -1,17 +1,18 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure {
-    private final double base1 = 12.0;
-    private final double base2 = 8.0;
-    private final double height = 5.0;
+import java.util.Random;
 
-    @Override
+public class IsoscelesTrapezoid extends Figure {
+    Random random = new Random();
+    private final int base1 = random.nextInt(10) + 1;
+    private final int base2 = random.nextInt(10) + 1;
+    private final int height = random.nextInt(10) + 1;
+
     public double calculateArea() {
         return 0.5 * (base1 + base2) * height;
     }
 
-    @Override
-    public String toString() {
+    public String draw() {
         return "Figure: IsoscelesTrapezoid, area: "
                 + calculateArea() + " sq. units, base1: "
                 + base1 + " units, base2: " + base2 + " units, height: "
