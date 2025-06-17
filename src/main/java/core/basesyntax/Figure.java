@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Figure implements Shape {
+public abstract class Figure implements Shape {
     protected String color;
 
     public String getColor() {
@@ -11,11 +11,9 @@ public class Figure implements Shape {
         this.color = color;
     }
 
-    public double calculateArea(int side1, int side2) {
-        return side1 * side2;
-    }
+    @Override
+    public abstract double calculateArea();
 
-    public String draw() {
-        return "This is main Figure class";
-    }
+    @Override
+    public abstract String draw();
 }
