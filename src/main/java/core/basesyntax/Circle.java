@@ -13,7 +13,7 @@ public class Circle extends Figure {
 
     @Override
     public String draw() {
-        return "Figure: circle, area: " + calculateArea()
+        return "Figure: Circle, area: " + calculateArea()
                 + " sq. units, radius: " + radius + " units, color: " + color;
     }
 }
