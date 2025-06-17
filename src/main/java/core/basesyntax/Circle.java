@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class Circle extends Figure {
-    Random random = new Random();
+    private Random random = new Random();
     private final int radius = random.nextInt(10) + 1;
 
     public double calculateArea() {

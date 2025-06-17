@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class Rectangle extends Figure {
-    Random random = new Random();
+    private Random random = new Random();
     private final int firstSide = random.nextInt(10) + 1;
     private final int secondSide = random.nextInt(10) + 1;
 

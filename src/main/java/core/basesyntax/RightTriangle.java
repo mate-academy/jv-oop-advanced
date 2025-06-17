@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class RightTriangle extends Figure {
-    Random random = new Random();
+    private Random random = new Random();
     private final int firstLeg = random.nextInt(10) + 1;
     private final int secondLeg = random.nextInt(10) + 1;
 

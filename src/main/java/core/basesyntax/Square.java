@@ -3,7 +3,7 @@ package core.basesyntax;
 import java.util.Random;
 
 public class Square extends Figure {
-    Random random = new Random();
+    private Random random = new Random();
     private final int side = random.nextInt(10) + 1;
 
     public double calculateArea() {
