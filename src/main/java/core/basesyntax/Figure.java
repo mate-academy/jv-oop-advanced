@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure implements Shape {
+public abstract class Figure {
     protected String color;
 
     public String getColor() {
@@ -11,9 +11,7 @@ public abstract class Figure implements Shape {
         this.color = color;
     }
 
-    @Override
     public abstract double calculateArea();
 
-    @Override
     public abstract String draw();
 }
