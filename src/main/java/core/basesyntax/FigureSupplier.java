@@ -5,9 +5,19 @@ import java.util.Random;
 public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
+    private final int maxNumber = 5;
+    private final int maxBound = 10;
+
+    public int getMaxNumber() {
+        return maxNumber;
+    }
+
+    public int getMaxBound() {
+        return maxBound;
+    }
 
     public Figure getRandomFigure() {
-        int figureType = random.nextInt(5);
+        int figureType = random.nextInt(getMaxNumber());
         String color = colorSupplier.getRandomColor();
 
         switch (figureType) {
@@ -32,6 +42,6 @@ public class FigureSupplier {
     }
 
     private double randomDouble() {
-        return 1 + random.nextInt(10); // від 1 до 10
+        return random.nextInt(getMaxBound()) + 1;
     }
 }
