@@ -13,8 +13,8 @@ public class Circle extends Figure {
   }
 
   @Override
-  public void todraw() {
-    super.todraw();
+  public void draw() {
+    super.draw();
     System.out.println("Radius: " + radius);
   }
 }
