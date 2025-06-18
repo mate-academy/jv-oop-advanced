@@ -3,22 +3,15 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    public static final int FIGURE_COUNT = 5;
+    public static final int MAX_BOUND = 10;
+    public static final double DEFAULT_RADIUS = 10;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
-    private final int maxNumber = 5;
-    private final int maxBound = 10;
-
-    public int getMaxNumber() {
-        return maxNumber;
-    }
-
-    public int getMaxBound() {
-        return maxBound;
-    }
 
     public Figure getRandomFigure() {
-        int figureType = random.nextInt(getMaxNumber());
-        String color = colorSupplier.getRandomColor();
+        int figureType = random.nextInt(FIGURE_COUNT);
+        Color color = Color.valueOf(colorSupplier.getRandomColor());
 
         switch (figureType) {
             case 0:
@@ -38,10 +31,10 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10.0, "white");
+        return new Circle(DEFAULT_RADIUS, Color.WHITE);
     }
 
     private double randomDouble() {
-        return random.nextInt(getMaxBound()) + 1;
+        return random.nextInt(MAX_BOUND) + 1;
     }
 }
