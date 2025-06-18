@@ -6,9 +6,9 @@ public class FigureSupplier {
   private static final String DEFAULT_COLOR = "White";
   private static final double DEFAULT_RADIUS = 10;
   Random random = new Random();
-  int figureType = random.nextInt(5);
   
   public Figure getRandomFigure() {
+    int figureType = random.nextInt(5);
     switch (figureType) {
       case 0:
         return new Square(new ColorSupplier().getRandomColor(), (random.nextDouble(10)) + 1);
