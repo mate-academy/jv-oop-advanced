@@ -19,7 +19,7 @@ public class Main {
 
         // Print all figures
         for (Figure figure : figures) {
-            figure.todraw();
+            figure.draw();
             System.out.println("-------------------------");
         }
     }
