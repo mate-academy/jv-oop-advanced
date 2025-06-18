@@ -14,8 +14,8 @@ public class Rectangle extends Figure {
   }
 
   @Override
-  public void todraw() {
-    super.todraw();
+  public void draw() {
+    super.draw();
     System.out.println("Width: " + width);
     System.out.println("Height: " + height);
   }
