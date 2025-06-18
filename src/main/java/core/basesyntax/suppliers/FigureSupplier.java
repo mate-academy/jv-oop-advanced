@@ -12,15 +12,15 @@ import java.util.Random;
 public class FigureSupplier {
     private static final int MIN_SIZE = 1;
     private static final int MAX_SIZE = 10;
-    private static final int boundRandom = 5;
-    private static final int sizeForDefaultFigure = 10;
+    private static final int BOUND_RANDOM = 5;
+    private static final int SIZE_FOR_DEFAULT_fIGURE = 10;
 
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
 
-        int figureType = random.nextInt(boundRandom);
+        int figureType = random.nextInt(BOUND_RANDOM);
 
         String randomColor = colorSupplier.getRandomColor();
 
@@ -42,7 +42,7 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE.name(), sizeForDefaultFigure);
+        return new Circle(Color.WHITE.name(), SIZE_FOR_DEFAULT_fIGURE);
     }
 
     private double getRandomSize() {
