@@ -1,4 +1,4 @@
-package core.basesyntax
+package core.basesyntax;
 
 abstract class Figure {
   protected String color;
