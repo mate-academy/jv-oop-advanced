@@ -6,7 +6,7 @@ abstract class Figure {
     this.color = color;
   }
   public abstract double getArea();
-  public void todraw() {
+  public void draw() {
     System.out.println("Figure: " + this.getClass().getSimpleName());
     System.out.println("Color: " + color);
     System.out.println("Area: " + getArea());
