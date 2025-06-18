@@ -14,7 +14,6 @@ public class FigureSupplier {
     private static final int MAX_SIZE = 10;
     private static final int BOUND_RANDOM = 5;
     private static final int SIZE_FOR_DEFAULT_fIGURE = 10;
-
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 

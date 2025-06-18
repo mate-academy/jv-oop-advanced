@@ -1,7 +1,6 @@
 package core.basesyntax.figures;
 
 public class Rectangle extends Figure {
-
     private double recWidth;
     private double recLength;
 
@@ -11,24 +10,16 @@ public class Rectangle extends Figure {
         this.recLength = recLength;
     }
 
-    public double getRecWidth() {
-        return recWidth;
-    }
-
-    public double getRecLength() {
-        return recLength;
-    }
-
     @Override
     public void draw() {
-        System.out.println("Figure: Rectangle, " + "area: " + getArea()
-                           + " sq. units, width: " + getRecWidth()
-                           + ", length: " + getRecLength()
+        System.out.println("Figure: Rectangle, " + "area: " + calculateArea()
+                           + " sq. units, width: " + recWidth
+                           + ", length: " + recLength
                            + ", color: " + getColor());
     }
 
     @Override
-    public double getArea() {
+    public double calculateArea() {
         return recWidth * recLength;
     }
 }
