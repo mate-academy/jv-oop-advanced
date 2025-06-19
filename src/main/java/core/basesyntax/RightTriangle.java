@@ -23,7 +23,6 @@ public class RightTriangle implements Figure {
                         + "secondLeg: %.2f units, color: %s",
                 getArea(), firstLeg, secondLeg, color
         ));
-
     }
 }
 
