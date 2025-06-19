@@ -1,11 +1,10 @@
 package core.basesyntax;
 
-public class Circle implements Figure {
-    private String color;
+public class Circle extends FigureBase {
     private double radius;
 
     public Circle(String color, double radius) {
-        this.color = color;
+        super(color);
         this.radius = radius;
     }
 
@@ -20,5 +19,6 @@ public class Circle implements Figure {
                 "Figure: circle, area: %.2f sq. units, radius: %.2f units, color: %s",
                 getArea(), radius, color
         ));
+
     }
 }
