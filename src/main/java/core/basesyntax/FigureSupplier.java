@@ -6,7 +6,7 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int figureType = ThreadLocalRandom.current().nextInt(5);  // 5 типов фигур
+        int figureType = ThreadLocalRandom.current().nextInt(5);
         String color = colorSupplier.getRandomColor();
 
         switch (figureType) {
