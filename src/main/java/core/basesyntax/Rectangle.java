@@ -19,7 +19,8 @@ public class Rectangle implements AreaCalculable, Drawable {
     @Override
     public void draw() {
         System.out.println(String.format(
-                "Figure: rectangle, area: %.2f sq. units, width: %.2f units, height: %.2f units,"
+                "Figure: rectangle, area: %.2f sq. units, width: %.2f units,"
+                        + " height: %.2f units,"
                         + " color: %s",
                 getArea(), width, height, color));
     }
