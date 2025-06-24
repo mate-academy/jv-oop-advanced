@@ -19,8 +19,8 @@ public class RightTriangle implements AreaCalculable, Drawable {
     @Override
     public void draw() {
         System.out.println(String.format(
-                "Figure: triangle, area: %.2f sq. units, firstLeg: %.2f units, secondLeg: %.2f units,"
-                        + " color: %s",
+                "Figure: triangle, area: %.2f sq. units, firstLeg: %.2f units, "
+                        + "secondLeg: %.2f units, color: %s",
                 getArea(), firstLeg, secondLeg, color));
     }
 }
