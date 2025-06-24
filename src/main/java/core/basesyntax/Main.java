@@ -3,7 +3,7 @@ package core.basesyntax;
 public class Main {
     public static void main(String[] args) {
         int size = 6;
-        AreaCalculable[] figures = new AreaCalculable[size];
+        Figure[] figures = new Figure[size];
         FigureSupplier figureSupplier = new FigureSupplier();
 
         for (int i = 0; i < size / 2; i++) {
@@ -14,10 +14,8 @@ public class Main {
             figures[i] = figureSupplier.getDefaultFigure();
         }
 
-        for (AreaCalculable figure : figures) {
-            if (figure instanceof Drawable) {
-                ((Drawable) figure).draw();
-            }
+        for (Figure figure : figures) {
+            figure.draw();
         }
     }
 }
