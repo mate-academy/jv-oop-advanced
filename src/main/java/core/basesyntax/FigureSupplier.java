@@ -6,28 +6,19 @@ public class FigureSupplier {
     private static final int FIGURE_TYPES_COUNT = 5;
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public FigureSupplier() {
-    }
-
     public Figure getRandomFigure() {
         int figureType = ThreadLocalRandom.current().nextInt(FIGURE_TYPES_COUNT);
         String color = colorSupplier.getRandomColor();
 
         switch (figureType) {
             case 0:
-                double radius = getRandomDimension();
-                return new Circle(color, radius);
+                return new Circle(color, getRandomDimension());
             case 1:
-                double side = getRandomDimension();
-                return new Square(color, side);
+                return new Square(color, getRandomDimension());
             case 2:
-                double width = getRandomDimension();
-                double height = getRandomDimension();
-                return new Rectangle(color, width, height);
+                return new Rectangle(color, getRandomDimension(), getRandomDimension());
             case 3:
-                double firstLeg = getRandomDimension();
-                double secondLeg = getRandomDimension();
-                return new RightTriangle(color, firstLeg, secondLeg);
+                return new RightTriangle(color, getRandomDimension(), getRandomDimension());
             case 4:
                 double base1 = getRandomDimension();
                 double base2 = getRandomDimension();
