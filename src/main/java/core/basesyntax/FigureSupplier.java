@@ -5,21 +5,34 @@ import java.util.concurrent.ThreadLocalRandom;
 public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
+    public FigureSupplier() {
+    }
+
     public AreaCalculable getRandomFigure() {
         int figureType = ThreadLocalRandom.current().nextInt(5);
         String color = colorSupplier.getRandomColor();
 
         switch (figureType) {
             case 0:
-                return new Circle(color, randomValue());
+                double radius = ThreadLocalRandom.current().nextDouble(1, 100);
+                return new Circle(color, radius);
             case 1:
-                return new Square(color, randomValue());
+                double side = ThreadLocalRandom.current().nextDouble(1, 100);
+                return new Square(color, side);
             case 2:
-                return new Rectangle(color, randomValue(), randomValue());
+                double width = ThreadLocalRandom.current().nextDouble(1, 100);
+                double height = ThreadLocalRandom.current().nextDouble(1, 100);
+                return new Rectangle(color, width, height);
             case 3:
-                return new RightTriangle(color, randomValue(), randomValue());
+                double firstLeg = ThreadLocalRandom.current().nextDouble(1, 100);
+                double secondLeg = ThreadLocalRandom.current().nextDouble(1, 100);
+                return new RightTriangle(color, firstLeg, secondLeg);
             case 4:
-                return new IsoscelesTrapezoid(color, randomValue(), randomValue(), randomValue());
+                double base1 = ThreadLocalRandom.current().nextDouble(1, 100);
+                double base2 = ThreadLocalRandom.current().nextDouble(1, 100);
+                double leg = ThreadLocalRandom.current().nextDouble(
+                        Math.abs(base2 - base1) / 2 + 0.01, 100);
+                return new IsoscelesTrapezoid(color, base1, base2, leg);
             default:
                 return getDefaultFigure();
         }
@@ -28,8 +41,5 @@ public class FigureSupplier {
     public AreaCalculable getDefaultFigure() {
         return new Circle("white", 10);
     }
-
-    private double randomValue() {
-        return ThreadLocalRandom.current().nextDouble(1, 10);
-    }
 }
+

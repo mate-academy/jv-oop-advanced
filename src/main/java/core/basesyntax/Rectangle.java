@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 public class Rectangle implements AreaCalculable, Drawable {
-    private final String color;
-    private final double width;
-    private final double height;
+    private String color;
+    private double width;
+    private double height;
 
     public Rectangle(String color, double width, double height) {
         this.color = color;
@@ -18,9 +18,9 @@ public class Rectangle implements AreaCalculable, Drawable {
 
     @Override
     public void draw() {
-        System.out.printf(
-                "Figure: rectangle, area: %.2f sq. units, width: %.2f units, height: %.2f units, color: %s%n",
-                getArea(), width, height, color
-        );
+        System.out.println(String.format(
+                "Figure: rectangle, area: %.2f sq. units, width: %.2f units, height: %.2f units,"
+                        + " color: %s",
+                getArea(), width, height, color));
     }
 }

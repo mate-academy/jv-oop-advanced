@@ -1,10 +1,10 @@
 package core.basesyntax;
 
 public class IsoscelesTrapezoid implements AreaCalculable, Drawable {
-    private final String color;
-    private final double base1;
-    private final double base2;
-    private final double leg;
+    private String color;
+    private double base1;
+    private double base2;
+    private double leg;
 
     public IsoscelesTrapezoid(String color, double base1, double base2, double leg) {
         this.color = color;
@@ -21,10 +21,10 @@ public class IsoscelesTrapezoid implements AreaCalculable, Drawable {
 
     @Override
     public void draw() {
-        System.out.printf(
-                "Figure: isosceles trapezoid, area: %.2f sq. units, base1: %.2f units, base2: %.2f units, leg: %.2f units, color: %s%n",
-                getArea(), base1, base2, leg, color
-        );
+        System.out.println(String.format(
+                "Figure: isosceles trapezoid, area: %.2f sq. units, base1: %.2f units,"
+                        + " base2: %.2f units, leg: %.2f units, color: %s",
+                getArea(), base1, base2, leg, color));
     }
 }
 

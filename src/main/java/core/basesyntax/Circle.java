@@ -1,8 +1,8 @@
 package core.basesyntax;
 
 public class Circle implements AreaCalculable, Drawable {
-    private final String color;
-    private final double radius;
+    private String color;
+    private double radius;
 
     public Circle(String color, double radius) {
         this.color = color;
@@ -16,9 +16,10 @@ public class Circle implements AreaCalculable, Drawable {
 
     @Override
     public void draw() {
-        System.out.printf(
-                "Figure: circle, area: %.2f sq. units, radius: %.2f units, color: %s%n",
-                getArea(), radius, color
-        );
+        System.out.println(String.format(
+                "Figure: circle, area: %.2f sq. units, radius: %.2f units, color: %s",
+                getArea(), radius, color));
     }
 }
+
+

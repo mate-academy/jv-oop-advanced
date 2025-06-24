@@ -2,9 +2,9 @@ package core.basesyntax;
 
 public class Main {
     public static void main(String[] args) {
-        FigureSupplier figureSupplier = new FigureSupplier();
         int size = 6;
         AreaCalculable[] figures = new AreaCalculable[size];
+        FigureSupplier figureSupplier = new FigureSupplier();
 
         for (int i = 0; i < size / 2; i++) {
             figures[i] = figureSupplier.getRandomFigure();
@@ -21,3 +21,4 @@ public class Main {
         }
     }
 }
+
