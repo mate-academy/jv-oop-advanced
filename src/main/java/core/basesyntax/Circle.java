@@ -1,10 +1,11 @@
 package core.basesyntax;
 
-public class Circle extends FigureBase {
-    private double radius;
+public class Circle implements AreaCalculable, Drawable {
+    private final String color;
+    private final double radius;
 
     public Circle(String color, double radius) {
-        super(color);
+        this.color = color;
         this.radius = radius;
     }
 
@@ -15,10 +16,9 @@ public class Circle extends FigureBase {
 
     @Override
     public void draw() {
-        System.out.println(String.format(
-                "Figure: circle, area: %.2f sq. units, radius: %.2f units, color: %s",
+        System.out.printf(
+                "Figure: circle, area: %.2f sq. units, radius: %.2f units, color: %s%n",
                 getArea(), radius, color
-        ));
-
+        );
     }
 }

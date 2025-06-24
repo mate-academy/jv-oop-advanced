@@ -1,11 +1,12 @@
 package core.basesyntax;
 
-public class Rectangle extends FigureBase {
-    private double width;
-    private double height;
+public class Rectangle implements AreaCalculable, Drawable {
+    private final String color;
+    private final double width;
+    private final double height;
 
     public Rectangle(String color, double width, double height) {
-        super(color);
+        this.color = color;
         this.width = width;
         this.height = height;
     }
@@ -17,9 +18,9 @@ public class Rectangle extends FigureBase {
 
     @Override
     public void draw() {
-        System.out.println(String.format(
-                "Figure: rectangle, area: %.2f sq. units, width: %.2f units, height: %.2f units, color: %s",
+        System.out.printf(
+                "Figure: rectangle, area: %.2f sq. units, width: %.2f units, height: %.2f units, color: %s%n",
                 getArea(), width, height, color
-        ));
+        );
     }
 }
