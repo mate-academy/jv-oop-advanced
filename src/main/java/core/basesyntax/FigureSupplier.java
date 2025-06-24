@@ -22,7 +22,8 @@ public class FigureSupplier {
             case 4:
                 double base1 = getRandomDimension();
                 double base2 = getRandomDimension();
-                double leg = ThreadLocalRandom.current().nextDouble(Math.abs(base2 - base1) / 2 + 0.01, 100);
+                double leg = ThreadLocalRandom.current().nextDouble(
+                        Math.abs(base2 - base1) / 2 + 0.01, 100);
                 return new IsoscelesTrapezoid(color, base1, base2, leg);
             default:
                 return getDefaultFigure();
