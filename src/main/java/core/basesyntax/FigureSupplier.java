@@ -7,7 +7,7 @@ public class FigureSupplier {
     private Random random = new Random();
 
     public Figure getRandomFigure() {
-        int num = random.nextInt(MAX_NUMBER - 1) + 1;
+        int num = random.nextInt(MAX_NUMBER);
         Figure figure = createNewFigure(num);
 
         return figure;
@@ -23,15 +23,15 @@ public class FigureSupplier {
         ColorSupplier colorSupplier = new ColorSupplier();
         String color = colorSupplier.getRandomColor();
 
-        if (number == 1) {
+        if (number == 0) {
             return new Square(color,5.0);
-        } else if (number == 2) {
+        } else if (number == 1) {
             return new RightTriangle(color,8.0,5.0);
-        } else if (number == 3) {
+        } else if (number == 2) {
             return new Rectangle(color,6.0,7.0);
-        } else if (number == 4) {
+        } else if (number == 3) {
             return new IsoscelesTrapezoid(color,8.0,12.0,5.0,4.0);
-        } else if (number == 5) {
+        } else if (number == 4) {
             return new Circle(color,8.0);
         } else {
             return getDefaultFigure();
