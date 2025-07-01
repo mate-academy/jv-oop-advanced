@@ -1,11 +1,14 @@
-package core.basesyntax;
+package core.basesyntax.figure;
+
+import core.basesyntax.Color;
+import core.basesyntax.logic.Figure;
 
 public class Rectangle extends Figure {
 
     private final double firstSide;
     private final double secondSide;
 
-    public Rectangle(String color, double firstSide, double secondSide) {
+    public Rectangle(Color color, double firstSide, double secondSide) {
         super(color);
         this.firstSide = firstSide;
         this.secondSide = secondSide;

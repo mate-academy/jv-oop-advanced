@@ -1,5 +1,11 @@
 package core.basesyntax;
 
+import core.basesyntax.figure.Circle;
+import core.basesyntax.figure.IsoscelesTrapezoid;
+import core.basesyntax.figure.Rectangle;
+import core.basesyntax.figure.RightTriangle;
+import core.basesyntax.figure.Square;
+import core.basesyntax.logic.Figure;
 import java.util.Random;
 
 public class FigureSupplier {
@@ -28,7 +34,7 @@ public class FigureSupplier {
     public Figure getDefaultFigure() {
         final Color color = Color.WHITE;
         final int radius = 10;
-        return new Circle(color.name(), radius);
+        return new Circle(color, radius);
     }
 
     private double getRandomValue() {
@@ -37,30 +43,30 @@ public class FigureSupplier {
 
     private Square generateSquare(Color color) {
         double side = getRandomValue();
-        return new Square(color.name(), side);
+        return new Square(color, side);
     }
 
     private Rectangle generateRectangle(Color color) {
         double width = getRandomValue();
         double height = getRandomValue();
-        return new Rectangle(color.name(), width, height);
+        return new Rectangle(color, width, height);
     }
 
     private RightTriangle generateRightTriangle(Color color) {
         double firstLeg = getRandomValue();
         double secondLeg = getRandomValue();
-        return new RightTriangle(color.name(), firstLeg, secondLeg);
+        return new RightTriangle(color, firstLeg, secondLeg);
     }
 
     private Circle generateCircle(Color color) {
         double radius = getRandomValue();
-        return new Circle(color.name(), radius);
+        return new Circle(color, radius);
     }
 
     private IsoscelesTrapezoid generateTrapezoid(Color color) {
         double lowerBase = getRandomValue() + MIN_BASE_DIFFERENCE;
         double upperBase = random.nextDouble() * (lowerBase - MIN_BASE_DIFFERENCE) + MIN_VALUE;
         double height = getRandomValue();
-        return new IsoscelesTrapezoid(color.name(), lowerBase, upperBase, height);
+        return new IsoscelesTrapezoid(color, lowerBase, upperBase, height);
     }
 }

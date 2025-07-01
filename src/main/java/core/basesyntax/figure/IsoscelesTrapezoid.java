@@ -1,11 +1,14 @@
-package core.basesyntax;
+package core.basesyntax.figure;
+
+import core.basesyntax.Color;
+import core.basesyntax.logic.Figure;
 
 public class IsoscelesTrapezoid extends Figure {
-    private final double lowerBaseLength; // довжина нижньої основи має бути більше
-    private final double upperBaseLength; // довжина верхньої основи має бути менша
+    private final double lowerBaseLength;
+    private final double upperBaseLength;
     private final double heightLength;
 
-    public IsoscelesTrapezoid(String color, double lowerBaseLength,
+    public IsoscelesTrapezoid(Color color, double lowerBaseLength,
                               double upperBaseLength, double heightLength) {
         super(color);
         this.lowerBaseLength = lowerBaseLength;
