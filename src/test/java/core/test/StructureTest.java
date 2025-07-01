@@ -59,7 +59,7 @@ public class StructureTest {
 
   private void checkClassInterfaces(Class clazz) {
     Class[] interfaces = clazz.getInterfaces();
-    if (interfaces.length == 0) {
+    if (interfaces.length != 0) {
       Assert.fail("Class " + clazz.getSimpleName() + " should not "
               + "implement any interfaces. Let parent class implement them.");
     }
