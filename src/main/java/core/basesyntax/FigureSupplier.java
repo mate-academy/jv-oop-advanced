@@ -7,7 +7,7 @@ public class FigureSupplier {
     private Random random = new Random();
 
     public Figure getRandomFigure() {
-        int num = random.nextInt(MAX_NUMBER);
+        int num = random.nextInt(MAX_NUMBER - 1) + 1;
         Figure figure = createNewFigure(num);
 
         return figure;

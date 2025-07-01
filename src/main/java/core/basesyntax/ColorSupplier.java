@@ -11,25 +11,25 @@ public class ColorSupplier {
         int index = random.nextInt(MAX_INDEX);
         String color = "";
         switch (index) {
-            case 1:
+            case 0:
                 color = "red";
                 break;
-            case 2:
+            case 1:
                 color = "yellow";
                 break;
-            case 3:
+            case 2:
                 color = "green";
                 break;
-            case 4:
+            case 3:
                 color = "brown";
                 break;
-            case 5:
+            case 4:
                 color = "black";
                 break;
-            case 6:
+            case 5:
                 color = "white";
                 break;
-            case 7:
+            case 6:
                 color = "blue";
                 break;
             default:
