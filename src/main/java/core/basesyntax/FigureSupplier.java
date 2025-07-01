@@ -12,7 +12,7 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        String color = colorSupplier.getRandomColor();
+        Color color = colorSupplier.getRandomColor();
         int figureType = random.nextInt(FIGURE_TYPES_COUNT);
 
         return switch (figureType) {
@@ -26,41 +26,41 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        final String color = Color.WHITE.name().toLowerCase();
+        final Color color = Color.WHITE;
         final int radius = 10;
-        return new Circle(color, radius);
+        return new Circle(color.name(), radius);
     }
 
     private double getRandomValue() {
         return random.nextDouble() * (MAX_VALUE - MIN_VALUE) + MIN_VALUE;
     }
 
-    private Square generateSquare(String color) {
+    private Square generateSquare(Color color) {
         double side = getRandomValue();
-        return new Square(color, side);
+        return new Square(color.name(), side);
     }
 
-    private Rectangle generateRectangle(String color) {
+    private Rectangle generateRectangle(Color color) {
         double width = getRandomValue();
         double height = getRandomValue();
-        return new Rectangle(color, width, height);
+        return new Rectangle(color.name(), width, height);
     }
 
-    private RightTriangle generateRightTriangle(String color) {
+    private RightTriangle generateRightTriangle(Color color) {
         double firstLeg = getRandomValue();
         double secondLeg = getRandomValue();
-        return new RightTriangle(color, firstLeg, secondLeg);
+        return new RightTriangle(color.name(), firstLeg, secondLeg);
     }
 
-    private Circle generateCircle(String color) {
+    private Circle generateCircle(Color color) {
         double radius = getRandomValue();
-        return new Circle(color, radius);
+        return new Circle(color.name(), radius);
     }
 
-    private IsoscelesTrapezoid generateTrapezoid(String color) {
+    private IsoscelesTrapezoid generateTrapezoid(Color color) {
         double lowerBase = getRandomValue() + MIN_BASE_DIFFERENCE;
         double upperBase = random.nextDouble() * (lowerBase - MIN_BASE_DIFFERENCE) + MIN_VALUE;
         double height = getRandomValue();
-        return new IsoscelesTrapezoid(color, lowerBase, upperBase, height);
+        return new IsoscelesTrapezoid(color.name(), lowerBase, upperBase, height);
     }
 }
