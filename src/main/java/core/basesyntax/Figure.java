@@ -1,6 +1,4 @@
-package figures;
-
-import colors.Color;
+package core.basesyntax;
 
 public abstract class Figure implements AreaClaculator, InfoDrawer {
     protected Color color;

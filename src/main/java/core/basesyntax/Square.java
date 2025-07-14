@@ -1,6 +1,4 @@
-package figures;
-
-import colors.Color;
+package core.basesyntax;
 
 public class Square extends Figure {
     private double side;

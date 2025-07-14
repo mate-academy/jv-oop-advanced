@@ -1,6 +1,4 @@
-package suppliers;
-
-import colors.Color;
+package core.basesyntax;
 
 public class ColorSupplier extends Supplier {
     public Color getRandomColor() {

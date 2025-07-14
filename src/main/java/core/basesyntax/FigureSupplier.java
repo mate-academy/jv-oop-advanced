@@ -1,12 +1,4 @@
-package suppliers;
-
-import colors.Color;
-import figures.Circle;
-import figures.Figure;
-import figures.IsoscelesTrapezoid;
-import figures.Rectangle;
-import figures.RightTriangle;
-import figures.Square;
+package core.basesyntax;
 
 public class FigureSupplier extends Supplier {
     private static final double MIN_VALUE = 1.0;

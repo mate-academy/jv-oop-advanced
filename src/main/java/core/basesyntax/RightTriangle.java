@@ -1,6 +1,4 @@
-package figures;
-
-import colors.Color;
+package core.basesyntax;
 
 public class RightTriangle extends Figure {
     private double base;
