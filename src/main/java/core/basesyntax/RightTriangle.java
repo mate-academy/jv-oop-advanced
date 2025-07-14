@@ -33,6 +33,6 @@ public class RightTriangle extends Figure {
 
     @Override
     public String getInfo() {
-        return "RightTriangle{base=" + base + ";side=" + side + "}";
+        return "RightTriangle{color=" + color + ";base=" + base + ";side=" + side + "}";
     }
 }

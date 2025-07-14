@@ -33,6 +33,6 @@ public class Rectangle extends Figure {
 
     @Override
     public String getInfo() {
-        return "Rectangle{width=" + width + ";height=" + height + "}";
+        return "Rectangle{color" + color + ";width=" + width + ";height=" + height + "}";
     }
 }
