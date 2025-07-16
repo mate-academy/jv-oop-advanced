@@ -7,11 +7,11 @@ public class IsoscelesTrapezoid extends Figure {
     private int bigBase;
     private int height;
 
-    public IsoscelesTrapezoid(String color, int smallBase, int bigBase, int height) {
+    public IsoscelesTrapezoid(String color, int smallBase,
+                              int bigBase, int height) throws Exception {
         this.color = color;
-        if (smallBase <= 0 || bigBase <= 0 || height <= 0) {
-            System.out.println("Some of parameters is less than one");
-            return;
+        if (smallBase <= ZERO || bigBase <= ZERO || height <= ZERO) {
+            throw new Exception("Some of parameters is less than one");
         }
         this.smallBase = smallBase;
         this.bigBase = bigBase;

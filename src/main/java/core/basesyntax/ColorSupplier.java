@@ -12,8 +12,10 @@ public class ColorSupplier {
         WHITE
     }
 
+    private static final int colorsCount = Color.values().length;
+
     public String getRandomColor() {
-        int index = new Random().nextInt(Color.values().length);
+        int index = new Random().nextInt(colorsCount);
         return Color.values()[index].toString();
     }
 }

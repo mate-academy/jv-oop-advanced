@@ -6,11 +6,10 @@ public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
-    public RightTriangle(String color, int firstLeg, int secondLeg) {
+    public RightTriangle(String color, int firstLeg, int secondLeg) throws Exception {
         this.color = color;
-        if (firstLeg <= 0 || secondLeg <= 0) {
-            System.out.println("Some of parameters is less than one");
-            return;
+        if (firstLeg <= ZERO || secondLeg <= ZERO) {
+            throw new Exception("Some of parameters is less than one");
         }
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;

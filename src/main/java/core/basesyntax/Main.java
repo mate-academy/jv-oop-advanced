@@ -2,7 +2,7 @@ package core.basesyntax;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Figure[] figures = new Figure[6];
         FigureSupplier figureSupplier = new FigureSupplier();
         for (int i = 0; i < 6; i++) {

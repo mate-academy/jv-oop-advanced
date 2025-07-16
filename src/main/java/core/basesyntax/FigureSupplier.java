@@ -15,7 +15,7 @@ public class FigureSupplier {
     private static final int UPPER_BOUND = 50;
     private static final int STATIC_RADIUS = 10;
 
-    public Figure getRandomFigure() {
+    public Figure getRandomFigure() throws Exception {
         int index = new Random().nextInt(Figures.values().length);
         ColorSupplier colorSupplier = new ColorSupplier();
         String color = colorSupplier.getRandomColor();
@@ -42,7 +42,7 @@ public class FigureSupplier {
         }
     }
 
-    public Figure getDefaultFigure() {
+    public Figure getDefaultFigure() throws Exception {
         return new Circle(ColorSupplier.Color.WHITE.toString(), STATIC_RADIUS);
     }
 

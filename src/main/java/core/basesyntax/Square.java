@@ -5,11 +5,10 @@ public class Square extends Figure {
     private String color;
     private int side;
 
-    public Square(String color, int side) {
+    public Square(String color, int side) throws Exception {
         this.color = color;
-        if (side <= 0) {
-            System.out.println("Side is less than one");
-            return;
+        if (side <= ZERO) {
+            throw new Exception("Side is less than one");
         }
         this.side = side;
     }

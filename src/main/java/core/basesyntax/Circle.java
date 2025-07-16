@@ -5,11 +5,10 @@ public class Circle extends Figure {
     private String color;
     private int radius;
 
-    public Circle(String color, int radius) {
+    public Circle(String color, int radius) throws Exception {
         this.color = color;
-        if (radius <= 0) {
-            System.out.println("Radius is less than one");
-            return;
+        if (radius <= ZERO) {
+            throw new Exception("Radius is less than one");
         }
         this.radius = radius;
     }

@@ -6,11 +6,10 @@ public class Rectangle extends Figure {
     private int width;
     private int height;
 
-    public Rectangle(String color, int width, int height) {
+    public Rectangle(String color, int width, int height) throws Exception {
         this.color = color;
-        if (width <= 0 || height <= 0) {
-            System.out.println("Some of parameters is less than one");
-            return;
+        if (width <= ZERO || height <= ZERO) {
+            throw new Exception("Some of parameters is less than one");
         }
         this.width = width;
         this.height = height;
