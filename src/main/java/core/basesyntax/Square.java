@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends Figure implements WithArea {
+public class Square extends Figure {
 
     private int side;
 

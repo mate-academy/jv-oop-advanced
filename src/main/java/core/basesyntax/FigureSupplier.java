@@ -29,17 +29,20 @@ public class FigureSupplier {
                 return new RightTriangle(color, getRandomNumber(),getRandomNumber());
             }
             case ISOSCELES_TRAPEZOID -> {
-                return new IsoscelesTrapezoid(color, getRandomNumber(), getRandomNumber(), getRandomNumber());
+                return new IsoscelesTrapezoid(color, getRandomNumber(),
+                        getRandomNumber(), getRandomNumber());
+            }
+            default -> {
+                return null;
             }
         }
-        return null;
     }
 
     public Figure getDefaultFigure() {
         return new Circle(ColorSupplier.Color.WHITE.toString(), 10);
     }
 
-    private int getRandomNumber(){
+    private int getRandomNumber() {
         return new Random().nextInt(50);
     }
 }
