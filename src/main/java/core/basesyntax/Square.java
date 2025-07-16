@@ -3,6 +3,12 @@ package core.basesyntax;
 public class Square extends Figure implements WithArea {
 
     private int side;
+
+    public Square(String color, int side) {
+        super(color);
+        this.side = side;
+    }
+
     @Override
     public double getArea() {
         return side * side;

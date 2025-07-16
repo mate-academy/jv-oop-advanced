@@ -5,6 +5,14 @@ public class IsoscelesTrapezoid extends Figure implements WithArea {
     private int smallBase;
     private int bigBase;
     private int height;
+
+    public IsoscelesTrapezoid(String color, int smallBase, int bigBase, int height) {
+        super(color);
+        this.smallBase = smallBase;
+        this.bigBase = bigBase;
+        this.height = height;
+    }
+
     @Override
     public double getArea() {
         return (double) (smallBase + bigBase) * height / 2;
