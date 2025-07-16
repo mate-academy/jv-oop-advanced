@@ -2,10 +2,15 @@ package core.basesyntax;
 
 public class Circle extends Figure {
 
+    private String color;
     private int radius;
 
     public Circle(String color, int radius) {
-        super(color);
+        this.color = color;
+        if (radius <= 0) {
+            System.out.println("Radius is less than one");
+            return;
+        }
         this.radius = radius;
     }
 
@@ -15,7 +20,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String toString() {
+    public String draw() {
         return "Figure: "
                 + "circle, "
                 + "area: " + getArea() + " sq. units, "

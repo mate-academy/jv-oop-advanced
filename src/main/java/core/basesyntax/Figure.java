@@ -1,10 +1,7 @@
 package core.basesyntax;
 
-public abstract class Figure implements WithArea {
+public abstract class Figure implements Drawable {
 
-    protected String color;
+    abstract double getArea();
 
-    public Figure(String color) {
-        this.color = color.toLowerCase();
-    }
 }

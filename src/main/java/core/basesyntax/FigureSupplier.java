@@ -11,6 +11,10 @@ public class FigureSupplier {
         SQUARE
     }
 
+    private static final int LOWER_BOUND = 1;
+    private static final int UPPER_BOUND = 50;
+    private static final int STATIC_RADIUS = 10;
+
     public Figure getRandomFigure() {
         int index = new Random().nextInt(Figures.values().length);
         ColorSupplier colorSupplier = new ColorSupplier();
@@ -39,10 +43,10 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(ColorSupplier.Color.WHITE.toString(), 10);
+        return new Circle(ColorSupplier.Color.WHITE.toString(), STATIC_RADIUS);
     }
 
     private int getRandomNumber() {
-        return new Random().nextInt(50);
+        return new Random().nextInt(LOWER_BOUND, UPPER_BOUND);
     }
 }

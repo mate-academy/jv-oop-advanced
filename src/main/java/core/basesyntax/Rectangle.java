@@ -2,11 +2,16 @@ package core.basesyntax;
 
 public class Rectangle extends Figure {
 
+    private String color;
     private int width;
     private int height;
 
     public Rectangle(String color, int width, int height) {
-        super(color);
+        this.color = color;
+        if (width <= 0 || height <= 0) {
+            System.out.println("Some of parameters is less than one");
+            return;
+        }
         this.width = width;
         this.height = height;
     }
@@ -17,7 +22,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String toString() {
+    public String draw() {
         return "Figure: "
                 + "rectangle, "
                 + "area: " + getArea() + " sq. units, "
