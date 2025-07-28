@@ -8,6 +8,7 @@ public class Square extends Figure {
         this.setColor(color);
     }
 
+    @Override
     public void draw() {
         System.out.println("area: " + getArea() + "side: " + side + "color: " + getColor());
     }

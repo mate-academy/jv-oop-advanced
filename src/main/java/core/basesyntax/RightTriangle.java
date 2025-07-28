@@ -11,7 +11,8 @@ public class RightTriangle extends Figure {
         this.setColor(color);
     }
 
-    public void drow() {
+    @Override
+    public void draw() {
         System.out.println("area: " + getArea() + "first leg: " + firstLeg + "second leg: "
                 + secondLeg + "color: " + getColor());
     }

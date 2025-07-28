@@ -10,6 +10,7 @@ public class Rectangle extends Figure {
         this.setColor(color);
     }
 
+    @Override
     public void draw() {
         System.out.println("area: " + getArea() + "width: " + width + "height: " + height
                 + "color: " + getColor());
