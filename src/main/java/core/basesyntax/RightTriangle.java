@@ -18,13 +18,13 @@ public class RightTriangle extends Figure {
                 + " area: " + getArea()
                 + " sideA: " + sideA
                 + " sideB: " + sideB
-                + "color: " + color
+                + " ,color: " + color
         );
     }
 
     @Override
     public int getArea() {
-        return (1 / 2) * this.sideA * this.sideB;
+        return (this.sideA * this.sideB) / 2;
     }
 
 }
