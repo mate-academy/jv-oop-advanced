@@ -15,10 +15,10 @@ public class RightTriangle extends Figure {
         System.out.println(
                 "Figure:"
                 + " right triangle,"
-                + " area: " + getArea()
-                + " sideA: " + sideA
-                + " sideB: " + sideB
-                + " ,color: " + color
+                + " area: " + getArea() + ","
+                + " sideA: " + this.sideA + ","
+                + " sideB: " + this.sideB + ","
+                + " color: " + this.color
         );
     }
 

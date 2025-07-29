@@ -17,10 +17,10 @@ public class IsoscelesTrapezoid extends Figure {
         System.out.println(
                 "Figure: "
                 + "Trapezoid"
-                + " topBase: " + this.topBase
-                + " bottomBase: " + this.bottomBase
-                + " height: " + this.height
-                + " color: " + this.color
+                + " topBase: " + this.topBase + ","
+                + " bottomBase: " + this.bottomBase + ","
+                + " height: " + this.height + ","
+                + " color: " + this.color + ","
         );
     }
 

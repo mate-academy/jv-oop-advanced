@@ -19,7 +19,7 @@ public class Square extends Figure {
                 "Figure:"
                 + " square,"
                 + " area: " + getArea()
-                + "sq. units,"
+                + " sq. units,"
                 + " side: " + this.side
                 + "units, "
                 + " color: " + this.color

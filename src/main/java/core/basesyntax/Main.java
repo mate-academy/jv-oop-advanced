@@ -13,5 +13,9 @@ public class Main {
         for (int i = 3; i < 6; i++) {
             figures[i] = figureSupplier.getDefaultFigure();
         }
+
+        for (Figure figure : figures) {
+            figure.draw();
+        }
     }
 }
