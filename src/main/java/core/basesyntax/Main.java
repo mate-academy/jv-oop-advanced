@@ -1,10 +1,8 @@
 package core.basesyntax;
 
-import FigureSupplier;
-
 public class Main {
 
-    private static final int FIGURES_COUNT = 6; // Wybierz jedną, poprawną nazwę
+    private static final int FIGURES_COUNT = 6; 
 
     public static void main(String[] args) {
         Figure[] figures = new Figure[FIGURES_COUNT];
