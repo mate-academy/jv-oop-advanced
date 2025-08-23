@@ -1,12 +1,28 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    double sideA;
-    double sideB;
+    private double sideA;
+    private double sideB;
 
     public Rectangle(String color, double sideA, double sideB) {
         super(color);
         this.sideA = sideA;
+        this.sideB = sideB;
+    }
+
+    public double getSideA() {
+        return sideA;
+    }
+
+    public void setSideA(double sideA) {
+        this.sideA = sideA;
+    }
+
+    public double getSideB() {
+        return sideB;
+    }
+
+    public void setSideB(double sideB) {
         this.sideB = sideB;
     }
 
@@ -17,9 +33,9 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure name: " + name +
-                ", Figure area: " + calculateArea() +
-                ", Figure parameters: sideA=" + sideA + ", sideB=" + sideB +
-                ", Figure color: " + color);
+        System.out.println("Figure name: " + name
+                + ", Figure area: " + calculateArea()
+                + ", Figure parameters: sideA=" + sideA + ", sideB=" + sideB
+                + ", Figure color: " + color);
     }
 }

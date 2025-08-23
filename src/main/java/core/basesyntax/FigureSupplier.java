@@ -3,7 +3,7 @@ package core.basesyntax;
 public class FigureSupplier {
 
     public static Figure getRandomFigure(String color) {
-        int type = (int) (Math.random() * 5); // 0-4
+        int type = (int) (Math.random() * 5);
 
         return switch (type) {
             case 0 -> new Square(color, Math.random());
