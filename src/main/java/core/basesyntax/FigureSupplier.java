@@ -3,53 +3,42 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int FIGURE_TYPES = 5;
-    private static final double MAX_SIZE = 20.0;
-    private static final double MIN_SIZE = 1.0;
+    public static final int FIGURE_TYPES_COUNT = 5;
+    private static final int MAX_DIMENSION = 100;
     private static final double DEFAULT_RADIUS = 10.0;
-    private static final String DEFAULT_COLOR = "white";
-    private final ColorSupplier colorSupplier = new ColorSupplier();
-    private final Random random = new Random();
+    private static final String DEFAULT_COLOR = Color.WHITE.name().toLowerCase();
 
-    public AbstractFigure getRandomFigure() {
-        int type = random.nextInt(FIGURE_TYPES);
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+
+    public Figure getRandomFigure() {
         String color = colorSupplier.getRandomColor();
-        switch (type) {
+
+        int figureType = random.nextInt(FIGURE_TYPES_COUNT);
+        switch (figureType) {
             case 0:
-                return new Square(
-                        color,
-                        MIN_SIZE + random.nextDouble() * (MAX_SIZE - MIN_SIZE)
-                );
+                double radius = random.nextInt(MAX_DIMENSION) + 1;
+                return new Circle(color, radius);
             case 1:
-                return new Rectangle(
-                        color,
-                        MIN_SIZE + random.nextDouble() * (MAX_SIZE - MIN_SIZE),
-                        MIN_SIZE + random.nextDouble() * (MAX_SIZE - MIN_SIZE)
-                );
+                double side = random.nextInt(MAX_DIMENSION) + 1;
+                return new Square(color, side);
             case 2:
-                return new RightTriangle(
-                        color,
-                        MIN_SIZE + random.nextDouble() * (MAX_SIZE - MIN_SIZE),
-                        MIN_SIZE + random.nextDouble() * (MAX_SIZE - MIN_SIZE)
-                );
+                double width = random.nextInt(MAX_DIMENSION) + 1;
+                double height = random.nextInt(MAX_DIMENSION) + 1;
+                return new Rectangle(color, width, height);
             case 3:
-                return new Circle(
-                        color,
-                        MIN_SIZE + random.nextDouble() * (MAX_SIZE - MIN_SIZE)
-                );
-            case 4:
-                return new IsoscelesTrapezoid(
-                        color,
-                        MIN_SIZE + random.nextDouble() * (MAX_SIZE - MIN_SIZE),
-                        MIN_SIZE + random.nextDouble() * (MAX_SIZE - MIN_SIZE),
-                        MIN_SIZE + random.nextDouble() * (MAX_SIZE - MIN_SIZE)
-                );
-            default:
-                return getDefaultFigure();
+                double firstLeg = random.nextInt(MAX_DIMENSION) + 1;
+                double secondLeg = random.nextInt(MAX_DIMENSION) + 1;
+                return new RightTriangle(color, firstLeg, secondLeg);
+            default: // Case 4
+                double upperBase = random.nextInt(MAX_DIMENSION) + 1;
+                double lowerBase = random.nextInt(MAX_DIMENSION) + 1;
+                double heightTrap = random.nextInt(MAX_DIMENSION) + 1;
+                return new IsoscelesTrapezoid(color, upperBase, lowerBase, heightTrap);
         }
     }
 
-    public AbstractFigure getDefaultFigure() {
+    public Figure getDefaultFigure() {
         return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
