@@ -6,11 +6,12 @@ public class FigureSupplier {
         int type = (int) (Math.random() * 5);
 
         return switch (type) {
-            case 0 -> new Square(color, Math.random());
-            case 1 -> new Rectangle(color, Math.random(), Math.random());
-            case 2 -> new RightTriangle(color, Math.random(), Math.random());
-            case 3 -> new Circle(color, Math.random());
-            case 4 -> new IsoscelesTrapezoid(color, Math.random(), Math.random(), Math.random());
+            case 0 -> new Square(color, Math.random() * 10 + 1);
+            case 1 -> new Rectangle(color, Math.random() * 10 + 1, Math.random() * 10 + 1);
+            case 2 -> new RightTriangle(color, Math.random() * 10 + 1, Math.random() * 10 + 1);
+            case 3 -> new Circle(color, Math.random() * 10 + 1);
+            case 4 -> new IsoscelesTrapezoid(color, Math.random() * 10 + 1,
+                    Math.random() * 10 + 1, Math.random() * 10 + 1);
             default -> null;
         };
     }
