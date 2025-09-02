@@ -4,12 +4,12 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int MAX_NUMBER_OF_SIDE = 100;
-    private static final int MAX_OF_GENERATED_NUMBER = 5;
-    ColorSupplier colorSupplier = new ColorSupplier();
+    private static final int NUMBER_OF_FIGURES = 5;
+    private ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
     public Figure getRandomFigure() {
         String[] figures = {"square", "circle", "isosceles trapezoid", "rectangle", "right triangle"};
-        int index = random.nextInt(MAX_OF_GENERATED_NUMBER);
+        int index = random.nextInt(NUMBER_OF_FIGURES);
         switch (figures[index]){
             case "square": {
                 Square square = new Square();
@@ -32,7 +32,7 @@ public class FigureSupplier {
                 String color = colorSupplier.getRandomColor();
                 int base1 = random.nextInt(MAX_NUMBER_OF_SIDE);
                 int base2 = random.nextInt(MAX_NUMBER_OF_SIDE);
-                int height = random.nextInt(MAX_OF_GENERATED_NUMBER);
+                int height = random.nextInt(MAX_NUMBER_OF_SIDE);
                 isoscelesTrapezoid.setColor(color);
                 isoscelesTrapezoid.setBase1(base1);
                 isoscelesTrapezoid.setBase2(base2);
@@ -42,8 +42,8 @@ public class FigureSupplier {
             case "rectangle": {
                 Rectangle rectangle = new Rectangle();
                 String color = colorSupplier.getRandomColor();
-                int height = random.nextInt(MAX_OF_GENERATED_NUMBER);
-                int width = random.nextInt(MAX_OF_GENERATED_NUMBER);
+                int height = random.nextInt(MAX_NUMBER_OF_SIDE);
+                int width = random.nextInt(MAX_NUMBER_OF_SIDE);
                 rectangle.setColor(color);
                 rectangle.setHeight(height);
                 rectangle.setWidth(width);
