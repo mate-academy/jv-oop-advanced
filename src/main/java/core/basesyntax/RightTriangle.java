@@ -3,16 +3,28 @@ package core.basesyntax;
 public class RightTriangle extends Figure{
     int firstLeg;
     int secondLeg;
+    public void setFirstLeg(int firstLeg) {
+        this.firstLeg = firstLeg;
+    }
+    public void setSecondLeg(int secondLeg) {
+        this.secondLeg = secondLeg;
+    }
+    public int getFirstLeg() {
+        return firstLeg;
+    }
+    public int getSecondLeg() {
+        return secondLeg;
+    }
     @Override
-    public String draw() {
-        return "rectangle, " +
+    public void draw() {
+        System.out.println( "rectangle, " +
                 "area: " + getArea() + "sq. units, " +
                 "firstLeg: " + firstLeg + "units, " +
                 "secondLeg: " + secondLeg + "units, " +
-                "color: " + color;
+                "color: " + getColor());
     }
     @Override
     public int getArea() {
-        return (firstLeg + secondLeg) / 2;
+        return (firstLeg * secondLeg) / 2;
     }
 }

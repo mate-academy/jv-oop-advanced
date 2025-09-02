@@ -1,15 +1,27 @@
 package core.basesyntax;
 
 public class Rectangle extends Figure {
-    int width;
-    int height;
+    private int width;
+    private int height;
+    public void setWidth(int width) {
+        this.width = width;
+    }
+    public void setHeight(int height) {
+        this.height = height;
+    }
+    public int getWidth() {
+        return width;
+    }
+    public int getHeight() {
+        return height;
+    }
     @Override
-    public String draw() {
-       return "rectangle, " +
+    public void draw() {
+        System.out.println( "rectangle, " +
                "area: " + getArea() + "sq. units, " +
                "width: " + width + "units, " +
                "height: " + height + "units, " +
-               "color: " + color;
+               "color: " + getColor());
     }
     @Override
     public int getArea() {
