@@ -18,13 +18,13 @@ public class Rectangle extends Figure {
     @Override
     public void draw() {
         System.out.println( "rectangle, " +
-               "area: " + getArea() + "sq. units, " +
-               "width: " + width + "units, " +
-               "height: " + height + "units, " +
+               "area: " + getArea() + " sq. units, " +
+               "width: " + width + " units, " +
+               "height: " + height + " units, " +
                "color: " + getColor());
     }
     @Override
-    public int getArea() {
+    public double getArea() {
         return width * height;
     }
 }

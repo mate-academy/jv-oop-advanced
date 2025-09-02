@@ -18,13 +18,13 @@ public class RightTriangle extends Figure{
     @Override
     public void draw() {
         System.out.println( "rectangle, " +
-                "area: " + getArea() + "sq. units, " +
-                "firstLeg: " + firstLeg + "units, " +
-                "secondLeg: " + secondLeg + "units, " +
+                "area: " + getArea() + " sq. units, " +
+                "firstLeg: " + firstLeg + " units, " +
+                "secondLeg: " + secondLeg + " units, " +
                 "color: " + getColor());
     }
     @Override
-    public int getArea() {
+    public double getArea() {
         return (firstLeg * secondLeg) / 2;
     }
 }
