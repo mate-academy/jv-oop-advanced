@@ -1,8 +1,4 @@
 package core.basesyntax;
 
-public interface Figure {
-    double getArea();
-
-    void draw();
+public class Figure {
 }
-
