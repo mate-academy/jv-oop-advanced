@@ -6,9 +6,9 @@ public class IsoscelesTrapezoid extends Figure {
     private double baseB;
     private double height;
 
-    public IsoscelesTrapezoid(Color color, double leg, double baseA, double baseB) {
+    public IsoscelesTrapezoid(Color color, double leg, double baseA, double baseB, double height) {
         super(color);
-        if (leg <= 0 || baseA <= 0 || baseB <= 0) {
+        if (leg <= 0 || baseA <= 0 || baseB <= 0 || height <= 0) {
             throw new IllegalArgumentException("All sides must be > 0");
         }
         setLeg(leg);

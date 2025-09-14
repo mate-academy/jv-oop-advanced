@@ -12,25 +12,31 @@ public class FigureSupplier {
         int figureNumber = random.nextInt(FIGURE_COUNT);
         switch (figureNumber) {
             case 0:
-                int side = random.nextInt(MAX_PARAMETER_VALUE + 1);
-                return new Square(colorSupplier.getRandomColor(), side);
+                int side = random.nextInt(MAX_PARAMETER_VALUE) + 1;
+                return new Square(Color.valueOf(colorSupplier.getRandomColor()), side);
             case 1:
-                int radius = random.nextInt(MAX_PARAMETER_VALUE + 1);
-                return new Circle(colorSupplier.getRandomColor(), radius);
+                int radius = random.nextInt(MAX_PARAMETER_VALUE) + 1;
+                return new Circle(Color.valueOf(colorSupplier.getRandomColor()), radius);
             case 2:
-                int firstLeg = random.nextInt(MAX_PARAMETER_VALUE + 1);
-                int secondLeg = random.nextInt(MAX_PARAMETER_VALUE + 1);
-                return new RightTriangle(colorSupplier.getRandomColor(), firstLeg, secondLeg);
+                int firstLeg = random.nextInt(MAX_PARAMETER_VALUE) + 1;
+                int secondLeg = random.nextInt(MAX_PARAMETER_VALUE) + 1;
+                return new RightTriangle(Color.valueOf(colorSupplier.getRandomColor()),
+                        firstLeg,
+                        secondLeg);
             case 3:
-                int width = random.nextInt(MAX_PARAMETER_VALUE + 1);
-                int height = random.nextInt(MAX_PARAMETER_VALUE + 1);
-                return new Rectangle(colorSupplier.getRandomColor(), width, height);
+                int width = random.nextInt(MAX_PARAMETER_VALUE) + 1;
+                int height = random.nextInt(MAX_PARAMETER_VALUE) + 1;
+                return new Rectangle(Color.valueOf(colorSupplier.getRandomColor()), width, height);
             case 4:
-                int leg = random.nextInt(MAX_PARAMETER_VALUE + 1);
-                int baseA = random.nextInt(MAX_PARAMETER_VALUE + 1);
-                int baseB = random.nextInt(MAX_PARAMETER_VALUE + 1);
-                int h = random.nextInt(MAX_PARAMETER_VALUE + 1);
-                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(), baseA, baseB, h);
+                int leg = random.nextInt(MAX_PARAMETER_VALUE) + 1;
+                int baseA = random.nextInt(MAX_PARAMETER_VALUE) + 1;
+                int baseB = random.nextInt(MAX_PARAMETER_VALUE) + 1;
+                int h = random.nextInt(MAX_PARAMETER_VALUE) + 1;
+                return new IsoscelesTrapezoid(Color.valueOf(colorSupplier.getRandomColor()),
+                        leg,
+                        baseA,
+                        baseB,
+                        h);
             default:
                 throw new IllegalArgumentException("Invalid figure number " + figureNumber);
         }
