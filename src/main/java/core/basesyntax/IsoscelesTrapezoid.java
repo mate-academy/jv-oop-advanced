@@ -14,6 +14,7 @@ public class IsoscelesTrapezoid extends Figure {
         setLeg(leg);
         setBaseA(baseA);
         setBaseB(baseB);
+        setHeight(height);
     }
 
     public double getLeg() {
@@ -40,6 +41,14 @@ public class IsoscelesTrapezoid extends Figure {
         this.baseB = baseB;
     }
 
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
     @Override
     public double getArea() {
         return (baseA + baseB) * height / 2;
@@ -52,7 +61,8 @@ public class IsoscelesTrapezoid extends Figure {
         builder.append("leg: ").append(getLeg()).append(" units, ");
         builder.append("baseA: ").append(getBaseA()).append(" units, ");
         builder.append("baseB: ").append(getBaseB()).append(" units, ");
-        builder.append("color: ").append(getColor());
+        builder.append("height: ").append(getHeight()).append(" units, ");
+        builder.append("color: ").append(getColor().name());
         System.out.println(builder.toString());
     }
 }

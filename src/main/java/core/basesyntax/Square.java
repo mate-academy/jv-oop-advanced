@@ -29,7 +29,7 @@ public class Square extends Figure {
         StringBuilder builder = new StringBuilder("Figure: square, ");
         builder.append("area: ").append(String.format("%.1f",getArea())).append(" sq. units, ");
         builder.append("side: ").append(getSide()).append(" units, ");
-        builder.append("color: ").append(getColor());
+        builder.append("color: ").append(getColor().name());
         System.out.println(builder.toString());
     }
 }

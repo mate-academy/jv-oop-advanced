@@ -40,7 +40,7 @@ public class Rectangle extends Figure {
         builder.append("area: ").append(String.format("%.1f",getArea())).append(" sq. units, ");
         builder.append("width: ").append(getWidth()).append(" units, ");
         builder.append("height: ").append(getHeight()).append(" units, ");
-        builder.append("color: ").append(getColor());
+        builder.append("color: ").append(getColor().name());
         System.out.println(builder.toString());
     }
 }

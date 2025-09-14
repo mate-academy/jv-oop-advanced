@@ -31,7 +31,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public double getArea() {
-        return (firstLeg + secondLeg) / 2;
+        return (firstLeg * secondLeg) / 2;
     }
 
     @Override
@@ -40,7 +40,7 @@ public class RightTriangle extends Figure {
         builder.append("area: ").append(String.format("%.1f",getArea())).append(" sq. units, ");
         builder.append("first leg: ").append(getFirstLeg()).append(" units, ");
         builder.append("second leg: ").append(getSecondLeg()).append(" units, ");
-        builder.append("color: ").append(getColor());
+        builder.append("color: ").append(getColor().name());
         System.out.println(builder.toString());
     }
 }
