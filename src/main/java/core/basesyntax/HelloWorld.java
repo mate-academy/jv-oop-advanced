@@ -4,7 +4,7 @@ package core.basesyntax;
  * Feel free to remove this class and create your own.
  */
 public class HelloWorld {
-    private static int NUMBER_OF_FIGURES = 6;
+    private static final int NUMBER_OF_FIGURES = 6;
 
     public static void main(String[] args) {
 
