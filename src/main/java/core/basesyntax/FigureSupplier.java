@@ -13,31 +13,44 @@ public class FigureSupplier {
 
         switch (figure) {
             case TRIANGLE:
+                String triangleColor = colorSupplier.getRandomColor();
+                int firstLeg = rand.nextInt(MAX_INT);
+                int secondLeg = rand.nextInt(MAX_INT);
                 return new RightTriangle(
-                    colorSupplier.getRandomColor(),
-                    rand.nextInt(MAX_INT),
-                    rand.nextInt(MAX_INT));
+                    triangleColor,
+                    firstLeg,
+                    secondLeg);
             case TRAPEZOID:
+                String trapezoidColor = colorSupplier.getRandomColor();
+                int base1 = rand.nextInt(MAX_INT);
+                int base2 = rand.nextInt(MAX_INT);
+                int height = rand.nextInt(MAX_INT);
                 return new IsoscelesTrapezoid(
-                    colorSupplier.getRandomColor(),
-                    rand.nextInt(MAX_INT),
-                    rand.nextInt(MAX_INT),
-                    rand.nextInt(MAX_INT));
+                    trapezoidColor,
+                    base1,
+                    base2,
+                    height);
             case CIRCLE:
+                String circleColor = colorSupplier.getRandomColor();
+                int radius = rand.nextInt(MAX_INT);
                 return new Circle(
-                    colorSupplier.getRandomColor(),
-                    rand.nextInt(MAX_INT));
+                    circleColor,
+                    radius);
             case SQUARE:
+                String squareColor = colorSupplier.getRandomColor();
+                int side = rand.nextInt(MAX_INT);
                 return new Square(
-                    colorSupplier.getRandomColor(),
-                    rand.nextInt(MAX_INT));
+                    squareColor,
+                    side);
             case RECTANGLE:
-                return new Rectangle(
-                    colorSupplier.getRandomColor(),
-                    rand.nextInt(MAX_INT),
-                    rand.nextInt(MAX_INT));
             default:
-                return null;
+                String rectangleColor = colorSupplier.getRandomColor();
+                int length = rand.nextInt(MAX_INT);
+                int width = rand.nextInt(MAX_INT);
+                return new Rectangle(
+                    rectangleColor,
+                    length,
+                    width);
         }
     }
 
