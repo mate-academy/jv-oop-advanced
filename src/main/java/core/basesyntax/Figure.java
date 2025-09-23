@@ -3,7 +3,7 @@ package core.basesyntax;
 public class Figure implements FigureDrawer, AreaCalculator {
     private String color;
 
-    public  Figure(String color) {
+    public Figure(String color) {
         this.color = color;
     }
 
@@ -12,7 +12,9 @@ public class Figure implements FigureDrawer, AreaCalculator {
     }
 
     @Override
-    public void draw() {}
+    public void draw() {
+
+    }
 
     @Override
     public double calculateArea() {
