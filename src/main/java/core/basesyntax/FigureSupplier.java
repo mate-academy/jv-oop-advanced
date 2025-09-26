@@ -11,19 +11,17 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int randomFigure = random.nextInt(MAX_FIGURE_COUNT);
+        int firstSide = random.nextInt(MAX_PARAMETER) + 1;
+        int secondSide = random.nextInt(MAX_PARAMETER) + 1;
+        int height = random.nextInt(MAX_PARAMETER) + 1;
+        String color = colorSupplier.getRandomColor();
 
         return switch (randomFigure) {
-            case 0 -> new Square(random.nextInt(MAX_PARAMETER + 1), colorSupplier.getRandomColor());
-            case 1 -> new Rectangle(random.nextInt(MAX_PARAMETER + 1),
-                            random.nextInt(MAX_PARAMETER + 1),
-                            colorSupplier.getRandomColor());
-            case 2 -> new RightTriangle(random.nextInt(MAX_PARAMETER + 1),
-                            random.nextInt(MAX_PARAMETER + 1),
-                            colorSupplier.getRandomColor());
-            case 3 -> new Circle(random.nextInt(MAX_PARAMETER + 1), colorSupplier.getRandomColor());
-            case 4 -> new IsoscelesTrapezoid(random.nextInt(MAX_PARAMETER + 1),
-                            random.nextInt(MAX_PARAMETER + 1), random.nextInt(MAX_PARAMETER + 1),
-                            colorSupplier.getRandomColor());
+            case 0 -> new Square(firstSide, color);
+            case 1 -> new Rectangle(firstSide, secondSide, color);
+            case 2 -> new RightTriangle(firstSide, secondSide, color);
+            case 3 -> new Circle(firstSide, color);
+            case 4 -> new IsoscelesTrapezoid(firstSide, secondSide, height, color);
             default -> getDefaultFigure();
         };
 

@@ -16,7 +16,7 @@ public class Circle extends Figure {
     }
 
     @Override
-    protected float getArea() {
+    public float getArea() {
         return (float) Math.PI * (radius * radius);
     }
 }

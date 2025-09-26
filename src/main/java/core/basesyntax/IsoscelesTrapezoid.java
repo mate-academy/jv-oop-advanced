@@ -17,11 +17,11 @@ public class IsoscelesTrapezoid extends Figure {
         System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, horizontal side: "
                 + horizontalSide + " units, vertical side: "
                 + verticalSide + " units, height: "
-                + height + " color: " + color);
+                + height + " units, color: " + color);
     }
 
     @Override
-    protected float getArea() {
+    public float getArea() {
         return (horizontalSide + verticalSide) * (float) height / 2f;
     }
 }
