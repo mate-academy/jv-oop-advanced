@@ -8,13 +8,17 @@ public class Rectangle extends Figure {
         this.horizontalSide = horizontalSide;
         this.verticalSide = verticalSide;
         this.color = color;
-        area = horizontalSide * verticalSide;
     }
 
     @Override
-    public String draw() {
-        return "Figure: rectangle, area: " + area + " sq. units, horizontal side: "
-                + horizontalSide + " sq. units, vertical side: "
-                + verticalSide + " units, color: " + color;
+    public void draw() {
+        System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, horizontal side: "
+                + horizontalSide + " units, vertical side: "
+                + verticalSide + " units, color: " + color);
+    }
+
+    @Override
+    protected float getArea() {
+        return horizontalSide * verticalSide;
     }
 }

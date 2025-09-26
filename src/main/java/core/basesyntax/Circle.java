@@ -6,13 +6,17 @@ public class Circle extends Figure {
     public Circle(int radius, String color) {
         this.radius = radius;
         this.color = color;
-        area = (float) Math.PI * (radius * radius);
     }
 
     @Override
-    public String draw() {
-        return "Figure: circle, area: " + area
+    public void draw() {
+        System.out.println("Figure: circle, area: " + getArea()
                 + " sq. units, radius: " + radius
-                + " units, color: " + color;
+                + " units, color: " + color);
+    }
+
+    @Override
+    protected float getArea() {
+        return (float) Math.PI * (radius * radius);
     }
 }

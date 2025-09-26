@@ -10,14 +10,18 @@ public class IsoscelesTrapezoid extends Figure {
         this.verticalSide = verticalSide;
         this.height = height;
         this.color = color;
-        area = (horizontalSide + verticalSide) * (float) (height / 2);
     }
 
     @Override
-    public String draw() {
-        return "Figure: rectangle, area: " + area + " sq. units, horizontal side: "
-                + horizontalSide + " sq. units, vertical side: "
+    public void draw() {
+        System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, horizontal side: "
+                + horizontalSide + " units, vertical side: "
                 + verticalSide + " units, height: "
-                + height + " color: " + color;
+                + height + " color: " + color);
+    }
+
+    @Override
+    protected float getArea() {
+        return (horizontalSide + verticalSide) * (float) height / 2f;
     }
 }

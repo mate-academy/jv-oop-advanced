@@ -8,13 +8,17 @@ public class RightTriangle extends Figure {
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
         this.color = color;
-        area = (float) (firstLeg * secondLeg) / 2;
     }
 
     @Override
-    public String draw() {
-        return "Figure: right triangle, area: " + area + " sq. units, first leg: "
-                + firstLeg + " sq. units, second leg: "
-                + secondLeg + " units, color: " + color;
+    public void draw() {
+        System.out.println("Figure: right triangle, area: " + getArea() + " sq. units, first leg: "
+                + firstLeg + " units, second leg: "
+                + secondLeg + " units, color: " + color);
+    }
+
+    @Override
+    protected float getArea() {
+        return (float) (firstLeg * secondLeg) / 2;
     }
 }

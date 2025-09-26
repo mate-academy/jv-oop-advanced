@@ -6,13 +6,17 @@ public class Square extends Figure {
     public Square(int side, String color) {
         this.side = side;
         this.color = color;
-        area = side * side;
     }
 
     @Override
-    public String draw() {
-        return "Figure: square, area: " + area
+    public void draw() {
+        System.out.println("Figure: square, area: " + getArea()
                 + " sq. units, side: " + side
-                + " units, color: " + color;
+                + " units, color: " + color);
+    }
+
+    @Override
+    protected float getArea() {
+        return side * side;
     }
 }
