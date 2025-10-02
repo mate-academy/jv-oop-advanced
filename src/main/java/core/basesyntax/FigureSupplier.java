@@ -29,14 +29,14 @@ public class FigureSupplier {
                 int side = randomSize();
                 return new Square(color, side);
             case 3:
-                int sideA = randomSize();
-                int sideB = randomSize();
-                return new RightTriangle(color, sideA, sideB);
+                int firstLeg = randomSize();
+                int secondLeg = randomSize();
+                return new RightTriangle(color, firstLeg, secondLeg);
             default:
                 int baseA = randomSize();
                 int baseB = randomSize();
                 int height = randomSize();
-                return new IsoscelesTrapezoid(color, randomSize(), randomSize(), randomSize());
+                return new IsoscelesTrapezoid(color, baseA, baseB, height);
         }
     }
 
