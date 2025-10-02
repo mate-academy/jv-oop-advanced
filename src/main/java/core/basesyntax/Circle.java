@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    static final String FIGURE_NAME = "circle";
+    private static final String FIGURE_NAME = "circle";
     private int radius;
 
     public Circle(String color, int radius) {
