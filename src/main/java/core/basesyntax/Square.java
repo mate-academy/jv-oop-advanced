@@ -4,7 +4,7 @@ public class Square extends Figure {
     private static final String FIGURE_NAME = "Square";
     private int side;
 
-    public Square(Color color, int side) {
+    public Square(String color, int side) {
         super(color);
         this.side = side;
     }
@@ -18,7 +18,7 @@ public class Square extends Figure {
     @Override
     public void draw() {
         System.out.println("Figure: " + FIGURE_NAME + ", area: "
-                + getArea() + "sq. units, side: " + side
+                + getArea() + " sq. units, side: " + side
                 + " units, color: " + getColor());
     }
 }
