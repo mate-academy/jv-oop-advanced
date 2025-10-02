@@ -41,6 +41,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("WHITE", MAX_SIZE);
+        return new Circle("white", MAX_SIZE);
     }
 }
