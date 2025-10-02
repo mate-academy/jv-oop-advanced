@@ -6,9 +6,8 @@ public class FigureSupplier {
     public static final int FIGURE_COUNT = 5;
     public static final int MAX_SIZE = 10;
     public static final int MIN_SIZE = 1;
-    private final ColorSupplier colorSupplier = new ColorSupplier();
-
     private static final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     private int randomSize() {
         int size = random.nextInt(MAX_SIZE) + MIN_SIZE;
