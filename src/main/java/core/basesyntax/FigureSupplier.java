@@ -8,22 +8,26 @@ public class FigureSupplier {
     public static final int MIN_SIZE = 1;
 
     private Random random = new Random();
-    int size = random.nextInt(MAX_SIZE) + MIN_SIZE;
+
+    private int randomSize() {
+        int size = random.nextInt(MAX_SIZE) + MIN_SIZE;
+        return size;
+    }
 
     public Figure getRandomFigure() {
         Color color = ColorSupplier.getRandomColor();
         int type = random.nextInt(FIGURE_COUNT);
         switch (type) {
             case 0:
-             return new Circle(color, size);
+             return new Circle(color, randomSize());
             case 1:
-             return new Rectangle(color, size, size);
+             return new Rectangle(color, randomSize(), randomSize());
             case 2:
-             return new Square(color, size);
+             return new Square(color, randomSize());
             case 3:
-             return new RightTriangle(color, size, size);
+             return new RightTriangle(color, randomSize(), randomSize());
             default:
-             return new IsoscelesTrapezoid(color, size, size, size);
+             return new IsoscelesTrapezoid(color, randomSize(), randomSize(), randomSize());
         }
     }
     public Figure getDefaultFigure() {
