@@ -19,17 +19,18 @@ public class FigureSupplier {
         int type = random.nextInt(FIGURE_COUNT);
         switch (type) {
             case 0:
-             return new Circle(color, randomSize());
+                return new Circle(color, randomSize());
             case 1:
-             return new Rectangle(color, randomSize(), randomSize());
+                return new Rectangle(color, randomSize(), randomSize());
             case 2:
-             return new Square(color, randomSize());
+                return new Square(color, randomSize());
             case 3:
-             return new RightTriangle(color, randomSize(), randomSize());
+                return new RightTriangle(color, randomSize(), randomSize());
             default:
-             return new IsoscelesTrapezoid(color, randomSize(), randomSize(), randomSize());
+                return new IsoscelesTrapezoid(color, randomSize(), randomSize(), randomSize());
         }
     }
+
     public Figure getDefaultFigure() {
         return new Circle(Color.WHITE, MAX_SIZE);
     }

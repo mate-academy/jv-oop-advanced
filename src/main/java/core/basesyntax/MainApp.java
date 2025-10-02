@@ -2,10 +2,10 @@ package core.basesyntax;
 
 public class MainApp {
     public static void main(String[] args) {
-        final int ARRAY_SIZE = 6;
+        final int arraySize = 6;
 
         FigureSupplier supplier = new FigureSupplier();
-        Figure[] figures = new Figure[ARRAY_SIZE];
+        Figure[] figures = new Figure[arraySize];
 
         for (int i = 0; i < figures.length / 2; i++) {
             figures[i] = supplier.getRandomFigure();

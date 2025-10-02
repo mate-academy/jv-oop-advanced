@@ -1,11 +1,12 @@
 package core.basesyntax;
 
-public class Circle extends Figure {
-    final static String FIGURE_NAME = "Circle";
+public class Circle implements Figure {
+    private final Color color;
+    private static final String FIGURE_NAME = "Circle";
     private int radius;
 
     public Circle(Color color, int raduis) {
-        super(color);
+        this.color = color;
         this.radius = radius;
     }
 
@@ -19,6 +20,6 @@ public class Circle extends Figure {
     public void draw() {
         System.out.println("Figure: " + FIGURE_NAME + ", area: "
                 + getArea() + "sq. units, raduis: " + radius
-                + " units, color: " + getColor());
+                + " units, color: " + color);
     }
 }

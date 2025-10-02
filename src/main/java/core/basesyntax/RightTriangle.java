@@ -1,12 +1,13 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure {
-    final static String FIGURE_NAME = "Right Triangle";
+public class RightTriangle implements Figure {
+    private final Color color;
+    private static final String FIGURE_NAME = "Right Triangle";
     private int sideA;
-    private int sideB;;
+    private int sideB;
 
     public RightTriangle(Color color, int sideA, int sideB) {
-        super(color);
+        this.color = color;
         this.sideA = sideA;
         this.sideB = sideB;
     }
@@ -21,6 +22,6 @@ public class RightTriangle extends Figure {
     public void draw() {
         System.out.println("Figure: " + FIGURE_NAME + ", area: "
                 + getArea() + "sq. units, side A: " + sideA
-                + " units, side B: " + sideB + " units, color: " + getColor());
+                + " units, side B: " + sideB + " units, color: " + color);
     }
 }
