@@ -14,6 +14,7 @@ class Square implements Figure {
     public double getSide() {
         return side;
     }
+
     public String getColor() {
         return color;
     }
@@ -25,7 +26,9 @@ class Square implements Figure {
 
     @Override
     public void draw() {
-        System.out.println(String.format(Locale.US, "Figure: square, area: %.2f sq. units, side: %.1f units, " +
-                "color: %s", getArea(), side, color));
+        System.out.println(String.format(Locale.US,
+                "Figure: square, area: %.2f sq. units, side: %.1f units, "
+                        + "color: %s",
+                getArea(), side, color));
     }
 }

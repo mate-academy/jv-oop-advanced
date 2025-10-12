@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Locale;
 
-class RightTriangle implements  Figure {
+class RightTriangle implements Figure {
     private final double firstLeg;
     private final double secondLeg;
     private final String color;
@@ -12,12 +12,15 @@ class RightTriangle implements  Figure {
         this.secondLeg = secondLeg;
         this.color = color;
     }
+
     public double getFirstLeg() {
         return firstLeg;
     }
+
     public double getSecondLeg() {
         return secondLeg;
     }
+
     public String getColor() {
         return color;
     }
@@ -30,7 +33,8 @@ class RightTriangle implements  Figure {
     @Override
     public void draw() {
         System.out.println(String.format(Locale.US,
-                "Figure: right triangle, area: %.2f sq. units, firstLeg: %.1f units, secondLeg: %.1f units, " +
-                        "color: %s", getArea(), firstLeg, secondLeg, color));
+                "Figure: right triangle, area: %.2f sq. units, firstLeg: %.1f units, "
+                        + "secondLeg: %.1f units, color: %s",
+                getArea(), firstLeg, secondLeg, color));
     }
 }

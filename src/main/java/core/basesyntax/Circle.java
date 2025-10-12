@@ -15,7 +15,7 @@ class Circle implements Figure {
         return radius;
     }
 
-    public  String getColor() {
+    public String getColor() {
         return color;
     }
 

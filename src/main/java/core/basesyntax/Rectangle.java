@@ -33,7 +33,8 @@ public class Rectangle implements Figure {
     @Override
     public void draw() {
         System.out.println(String.format(Locale.US,
-                "Figure: rectangle, area: %.2f sq. units, width: %.1f units, height: %.1f units, color: %s",
+                "Figure: rectangle, area: %.2f sq. units, width: %.1f units, "
+                        + "height: %.1f units, color: %s",
                 getArea(), width, height, color));
     }
 }
