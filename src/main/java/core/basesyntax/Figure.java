@@ -11,6 +11,7 @@ public abstract class Figure implements Area, Drawable {
         return color;
     }
 
+
     @Override
     public abstract double getArea();
 
