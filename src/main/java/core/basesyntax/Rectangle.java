@@ -7,7 +7,7 @@ public class Rectangle implements Figure {
     private final double height;
     private final String color;
 
-    public Rectangle( double width, double height, String color) {
+    public Rectangle(double width, double height, String color) {
         this.width = width;
         this.height = height;
         this.color = color;
@@ -24,13 +24,16 @@ public class Rectangle implements Figure {
     public String getColor() {
         return color;
     }
+
     @Override
-    public double gatArea() {
+    public double getArea() {
         return width * height;
     }
+
     @Override
     public void draw() {
-        System.out.println(String.format(Locale.US, "Figure: rectangle, area: %.2f sq. units, " +
-                "width: %.1f units, height; %.1f units, color %s", gatArea(), width, height, color));
+        System.out.println(String.format(Locale.US,
+                "Figure: rectangle, area: %.2f sq. units, width: %.1f units, height: %.1f units, color: %s",
+                getArea(), width, height, color));
     }
 }
