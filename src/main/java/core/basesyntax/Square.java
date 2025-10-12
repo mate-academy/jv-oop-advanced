@@ -2,21 +2,16 @@ package core.basesyntax;
 
 import java.util.Locale;
 
-class Square implements Figure {
+class Square extends Figure {
     private final double side;
-    private final String color;
 
     public Square(double side, String color) {
+        super(color);
         this.side = side;
-        this.color = color;
     }
 
     public double getSide() {
         return side;
-    }
-
-    public String getColor() {
-        return color;
     }
 
     @Override
@@ -27,8 +22,7 @@ class Square implements Figure {
     @Override
     public void draw() {
         System.out.println(String.format(Locale.US,
-                "Figure: square, area: %.2f sq. units, side: %.1f units, "
-                        + "color: %s",
-                getArea(), side, color));
+                "Figure: square, area: %.2f sq. units, side: %.1f units, color: %s",
+                getArea(), side, getColor()));
     }
 }

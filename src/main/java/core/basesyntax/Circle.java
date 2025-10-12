@@ -2,21 +2,16 @@ package core.basesyntax;
 
 import java.util.Locale;
 
-class Circle implements Figure {
+class Circle extends Figure {
     private final double radius;
-    private final String color;
 
     public Circle(double radius, String color) {
+        super(color); // przekazujemy color do klasy nadrzędnej
         this.radius = radius;
-        this.color = color;
     }
 
     public double getRadius() {
         return radius;
-    }
-
-    public String getColor() {
-        return color;
     }
 
     @Override
@@ -28,6 +23,6 @@ class Circle implements Figure {
     public void draw() {
         System.out.println(String.format(Locale.US,
                 "Figure: circle, area: %.2f sq. units, radius: %.1f units, color: %s",
-                getArea(), radius, color));
+                getArea(), radius, getColor()));
     }
 }
