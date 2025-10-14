@@ -14,27 +14,25 @@ public class FigureSupplier {
         int type = random.nextInt(FIGURE_TYPES_COUNT);
         String color = colorSupplier.getRandomColor();
 
-        int width, height, side, firstLeg, secondLeg, base1, base2, radius, heightTrap;
-
         switch (type) {
             case 0:
-                side = MIN_RANDOM_VALUE + random.nextInt(MAX_RANDOM_VALUE);
+                int side = MIN_RANDOM_VALUE + random.nextInt(MAX_RANDOM_VALUE);
                 return new Square(color, side);
             case 1:
-                width = MIN_RANDOM_VALUE + random.nextInt(MAX_RANDOM_VALUE);
-                height = MIN_RANDOM_VALUE + random.nextInt(MAX_RANDOM_VALUE);
+                int width = MIN_RANDOM_VALUE + random.nextInt(MAX_RANDOM_VALUE);
+                int height = MIN_RANDOM_VALUE + random.nextInt(MAX_RANDOM_VALUE);
                 return new Rectangle(color, width, height);
             case 2:
-                firstLeg = MIN_RANDOM_VALUE + random.nextInt(MAX_RANDOM_VALUE);
-                secondLeg = MIN_RANDOM_VALUE + random.nextInt(MAX_RANDOM_VALUE);
+                int firstLeg = MIN_RANDOM_VALUE + random.nextInt(MAX_RANDOM_VALUE);
+                int secondLeg = MIN_RANDOM_VALUE + random.nextInt(MAX_RANDOM_VALUE);
                 return new RightTriangle(color, firstLeg, secondLeg);
             case 3:
-                radius = MIN_RANDOM_VALUE + random.nextInt(MAX_RANDOM_VALUE);
+                int radius = MIN_RANDOM_VALUE + random.nextInt(MAX_RANDOM_VALUE);
                 return new Circle(color, radius);
             case 4:
-                base1 = MIN_RANDOM_VALUE + random.nextInt(MAX_RANDOM_VALUE);
-                base2 = MIN_RANDOM_VALUE + random.nextInt(MAX_RANDOM_VALUE);
-                heightTrap = MIN_RANDOM_VALUE + random.nextInt(MAX_RANDOM_VALUE);
+                int base1 = MIN_RANDOM_VALUE + random.nextInt(MAX_RANDOM_VALUE);
+                int base2 = MIN_RANDOM_VALUE + random.nextInt(MAX_RANDOM_VALUE);
+                int heightTrap = MIN_RANDOM_VALUE + random.nextInt(MAX_RANDOM_VALUE);
                 return new IsoscelesTrapezoid(color, base1, base2, heightTrap);
             default:
                 return getDefaultFigure();
