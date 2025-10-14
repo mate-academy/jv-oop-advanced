@@ -1,9 +1,10 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
+    private static final double HALF = 0.5;
+
     private double firstLeg;
     private double secondLeg;
-    private static final double HALF = 0.5;
 
     public RightTriangle(String color, double firstLeg, double secondLeg) {
         super(color);
