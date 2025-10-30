@@ -13,9 +13,7 @@ public class Main {
             figures[i] = figureSupplier.getDefaultFigure();
         }
         for (Figure figure : figures) {
-            if (figure instanceof Drawable) {
-                ((Drawable) figure).draw();
-            }
+            ((Drawable) figure).draw();
         }
     }
 }
