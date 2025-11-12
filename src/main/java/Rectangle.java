@@ -4,17 +4,18 @@ public class Rectangle extends Figure {
     private double sideB;
     private final String name = "Rectangle";
 
-    public Rectangle(double sideA, double sideB, String color) {
-
+    public Rectangle(double sideA, double sideB) {
+        this.sideA = sideA;
+        this.sideB = sideB;
     }
 
     @Override
     public double getArea() {
-        return 0;
+        return sideA * sideB;
     }
 
     @Override
     public void draw() {
-
+        System.out.println(name + " jest koloru: " + getColor() + " jego boki wynoszą: " + sideA + "cm. " + sideB + " cm. " + "Jego pole wynosi: " + getArea());
     }
 }

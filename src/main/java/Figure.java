@@ -9,8 +9,6 @@ public abstract class Figure {
     public abstract double getArea();
     public abstract void draw();
 
-
-
     public ColorSupplier getColor() {
 
         ColorSupplier [] losowanieKolorow = ColorSupplier.values();
