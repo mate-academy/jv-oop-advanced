@@ -3,8 +3,7 @@ public class Square extends Figure {
     private double side;
     private final String name = "Square";
 
-    public Square(double side, String color){
-        super.color = color;
+    public Square(double side){
         this.side = side;
     }
 
