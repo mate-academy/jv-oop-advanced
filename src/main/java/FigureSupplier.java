@@ -1,4 +1,3 @@
-import javax.print.attribute.standard.ColorSupported;
 import java.util.Random;
 
 public class FigureSupplier {
