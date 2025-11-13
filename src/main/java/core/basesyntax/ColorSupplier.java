@@ -1,5 +1,7 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public enum ColorSupplier {
     BLUE,
     GREEN,
@@ -9,5 +11,13 @@ public enum ColorSupplier {
     WHITE,
     ORANGE,
     PURPLE,
-    GRAY
+    GRAY;
+
+    private static Random random = new Random();
+
+    public static ColorSupplier getRandomColor() {
+        ColorSupplier[] values = ColorSupplier.values();
+        return values[random.nextInt(values.length)];
+    }
+
 }

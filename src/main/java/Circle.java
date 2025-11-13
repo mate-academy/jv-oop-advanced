@@ -1,9 +1,12 @@
+import core.basesyntax.ColorSupplier;
+
 public class Circle extends Figure {
     private double radius;
     private final String name = "Circle";
 
-    public Circle(double radius) {
+    public Circle(double radius, ColorSupplier kolor) {
         this.radius = radius;
+        this.kolor = kolor;
     }
 
     @Override
@@ -13,6 +16,7 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println(name + " jest koloru: " + getColor() + " jego radius wynosi: " + radius + "cm. " + "Jego pole wynosi: " + getArea());
+        System.out.println("Figure: " + name + ", area: " + getArea()
+                + ", radius: " + radius + ", color: " + kolor);
     }
 }

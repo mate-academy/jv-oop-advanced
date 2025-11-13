@@ -1,12 +1,15 @@
+import core.basesyntax.ColorSupplier;
+
 public class Rectangle extends Figure {
 
     private double sideA;
     private double sideB;
     private final String name = "Rectangle";
 
-    public Rectangle(double sideA, double sideB) {
+    public Rectangle(double sideA, double sideB, ColorSupplier kolor) {
         this.sideA = sideA;
         this.sideB = sideB;
+        this.kolor = kolor;
     }
 
     @Override
@@ -16,6 +19,8 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println(name + " jest koloru: " + getColor() + " jego boki wynoszą: " + sideA + "cm. " + sideB + " cm. " + "Jego pole wynosi: " + getArea());
+        System.out.println("Figure: " + name + ", area " + getArea()
+                + " firstSide: " + sideA + "sq. units, " + "secondSide: "
+                + sideB + "sq.units, " + "color: " + kolor);
     }
 }

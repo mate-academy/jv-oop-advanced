@@ -1,10 +1,13 @@
+import core.basesyntax.ColorSupplier;
+
 public class Square extends Figure {
 
     private double side;
-    private final String name = "Square";
+    private final String name = "square";
 
-    public Square(double side){
+    public Square(double side, ColorSupplier kolor) {
         this.side = side;
+        this.kolor = kolor;
     }
 
     @Override
@@ -14,6 +17,7 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        System.out.println(name + " jest koloru: " + getColor() + " jego bok wynosi: " + side + "cm. " + "Jego pole wynosi: " + getArea());
+        System.out.println("Figure: " + name + ", area: " + getArea() + " sq. units, "
+                + side + "units, " + kolor);
     }
 }

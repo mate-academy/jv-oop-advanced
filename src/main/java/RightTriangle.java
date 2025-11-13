@@ -1,11 +1,14 @@
+import core.basesyntax.ColorSupplier;
+
 public class RightTriangle extends Figure {
     private double sideA;
     private double sideB;
     private final String name = "RightTriangle";
 
-    public RightTriangle(double sideA, double sideB) {
-       this.sideA = sideA;
-       this.sideB = sideB;
+    public RightTriangle(double sideA, double sideB, ColorSupplier kolor) {
+        this.sideA = sideA;
+        this.sideB = sideB;
+        this.kolor = kolor;
     }
 
     @Override
@@ -15,6 +18,8 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println(name + " jest koloru: " + getColor() + " jego boki wynoszą: " + sideA + "cm. " + sideB + " cm. " + "Jego pole wynosi: " + getArea());
+        System.out.println("Figure: " + name + ", area: " + getArea()
+                + " sq. units, " + "firstLeg: " + sideA + " units, "
+                + "secondLeg: " + sideB + " units, " + "color: " + kolor);
     }
 }
