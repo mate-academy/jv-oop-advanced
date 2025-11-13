@@ -7,7 +7,7 @@ public class Rectangle extends Figure {
     public Rectangle(double sideA, double sideB, String kolor) {
         this.sideA = sideA;
         this.sideB = sideB;
-        this.kolor = kolor.toString();
+        this.kolor = kolor;
     }
 
     @Override

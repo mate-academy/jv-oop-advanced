@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public interface AreaCalculator {
+public interface AreaCalculator {
+    double getArea();
 }

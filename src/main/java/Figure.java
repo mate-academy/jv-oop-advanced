@@ -1,8 +1,3 @@
-public abstract class Figure extends ColorSupplier {
+public abstract class Figure implements AreaCalculator, Drawable {
     protected String kolor;
-
-    public abstract double getArea();
-
-    public abstract void draw();
-
 }

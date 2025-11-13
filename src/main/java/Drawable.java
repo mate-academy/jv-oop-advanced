@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public interface Drawable {
+public interface Drawable {
+    void draw();
 }
