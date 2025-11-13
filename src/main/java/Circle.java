@@ -1,10 +1,8 @@
-import core.basesyntax.ColorSupplier;
-
 public class Circle extends Figure {
     private double radius;
     private final String name = "Circle";
 
-    public Circle(double radius, ColorSupplier kolor) {
+    public Circle(double radius, String kolor) {
         this.radius = radius;
         this.kolor = kolor;
     }

@@ -1,12 +1,10 @@
-import core.basesyntax.ColorSupplier;
-
 public class IsoscelesTrapezoid extends Figure {
     private double sideA;
     private double sideB;
     private double height;
-    private final String name = "Trapez";
+    private final String name = "IsoscelesTrapezoid";
 
-    public IsoscelesTrapezoid(double sideA, double sideB, double height, ColorSupplier kolor) {
+    public IsoscelesTrapezoid(double sideA, double sideB, double height, String kolor) {
         this.sideA = sideA;
         this.sideB = sideB;
         this.height = height;

@@ -1,17 +1,18 @@
-import core.basesyntax.ColorSupplier;
+import javax.print.attribute.standard.ColorSupported;
 import java.util.Random;
 
 public class FigureSupplier {
 
     private Random random = new Random();
-    private ColorSupplier kolor = ColorSupplier.getRandomColor();
+    private ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        int index = random.nextInt(5); // 0-4 dla 5 figur
+        int index = random.nextInt(5);
         Figure losowaFigura;
         int losowyNumer = random.nextInt(21);
         double losowyDouble = losowyNumer;
         int losowaWysokosc = random.nextInt(5);
+        String kolor = colorSupplier.getRandomColor();
 
         switch (index) {
             case 0 -> losowaFigura = new Circle(losowyDouble, kolor);
@@ -27,6 +28,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, ColorSupplier.WHITE);
+        return new Circle(10, "WHITE");
     }
 }

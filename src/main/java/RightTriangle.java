@@ -1,11 +1,9 @@
-import core.basesyntax.ColorSupplier;
-
 public class RightTriangle extends Figure {
     private double sideA;
     private double sideB;
     private final String name = "RightTriangle";
 
-    public RightTriangle(double sideA, double sideB, ColorSupplier kolor) {
+    public RightTriangle(double sideA, double sideB, String kolor) {
         this.sideA = sideA;
         this.sideB = sideB;
         this.kolor = kolor;

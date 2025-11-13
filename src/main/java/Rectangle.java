@@ -1,15 +1,13 @@
-import core.basesyntax.ColorSupplier;
-
 public class Rectangle extends Figure {
 
     private double sideA;
     private double sideB;
     private final String name = "Rectangle";
 
-    public Rectangle(double sideA, double sideB, ColorSupplier kolor) {
+    public Rectangle(double sideA, double sideB, String kolor) {
         this.sideA = sideA;
         this.sideB = sideB;
-        this.kolor = kolor;
+        this.kolor = kolor.toString();
     }
 
     @Override

@@ -1,8 +1,5 @@
-import core.basesyntax.ColorSupplier;
-
-public abstract class Figure {
-
-    protected ColorSupplier kolor = ColorSupplier.getRandomColor();
+public abstract class Figure extends ColorSupplier{
+    protected String kolor;
 
     public abstract double getArea();
 

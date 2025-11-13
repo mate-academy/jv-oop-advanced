@@ -1,11 +1,9 @@
-import core.basesyntax.ColorSupplier;
-
 public class Square extends Figure {
 
     private double side;
-    private final String name = "square";
+    private final String name = "Square";
 
-    public Square(double side, ColorSupplier kolor) {
+    public Square(double side, String kolor) {
         this.side = side;
         this.kolor = kolor;
     }
