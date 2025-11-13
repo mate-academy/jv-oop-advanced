@@ -1,3 +1,5 @@
+package core.basesyntax;
+
 public class RightTriangle extends Figure {
     private double sideA;
     private double sideB;

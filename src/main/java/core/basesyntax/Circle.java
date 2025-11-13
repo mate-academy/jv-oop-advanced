@@ -1,3 +1,5 @@
+package core.basesyntax;
+
 public class Circle extends Figure {
     private double radius;
     private final String name = "Circle";
