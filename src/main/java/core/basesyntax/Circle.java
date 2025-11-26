@@ -1,15 +1,22 @@
 package core.basesyntax;
 
-public class Circle extends AbstractFigure implements Figure{
+public class Circle extends AbstractFigure {
     private double radius;
+
+    public Circle(String color, double radius) {
+        super(color);
+        this.radius = radius;
+    }
 
     @Override
     public double getArea() {
-        return 0;
+        return Math.PI * radius * radius;
     }
 
     @Override
-    public void draw() {
-
+    protected String getParametersString() {
+        return "radius: " + String.format("%.2f", radius) + " units";
     }
+
+
 }

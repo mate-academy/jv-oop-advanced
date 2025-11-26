@@ -1,19 +1,22 @@
 package core.basesyntax;
 
-public class Square extends AbstractFigure implements Figure {
+public class Square extends AbstractFigure {
     private double side;
 
-    public Square(String color) {
-        this.color = color;
+    public Square(double side, String color) {
+        super(color);
+        this.side = side;
     }
 
     @Override
     public double getArea() {
-        return 0;
+        return side * side;
     }
 
     @Override
-    public void draw() {
-
+    protected String getParametersString() {
+        return  "side: " + String.format("%.2f", side) + " units";
     }
+
+
 }

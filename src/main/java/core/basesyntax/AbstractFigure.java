@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class  AbstractFigure {
+public abstract class  AbstractFigure implements Figure{
 
     protected String color;
 
@@ -21,5 +21,12 @@ public abstract class  AbstractFigure {
 
     public abstract double getArea();
 
-    public abstract void draw();
-}
+    public void draw() {
+        String name = this.getClass().getSimpleName().toLowerCase();
+        String areaStr = String.format("%.2f", getArea()) + " sq. units";
+        String params = getParametersString();
+        System.out.println("Figure: " + name + ", area: " + areaStr + ", " + params + ", color: " + getColor());
+    }
+
+     protected abstract String getParametersString();
+};
