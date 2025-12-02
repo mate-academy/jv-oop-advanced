@@ -14,7 +14,7 @@ public class IsoscelesTrapezoid extends AbstractFigure {
 
     @Override
     public double getArea() {
-        return ((topBase + bottomBase) / 2 ) * height;
+        return ((topBase + bottomBase) / 2) * height;
     }
 
     @Override
@@ -22,7 +22,8 @@ public class IsoscelesTrapezoid extends AbstractFigure {
         return "upper base: " + String.format("%.2f", topBase)
                 + " units, lower base: " + String.format("%.2f", bottomBase)
                 + " units, height: " + String.format("%.2f", height) + " units";
+
     }
 
-
 }
+

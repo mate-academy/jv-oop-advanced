@@ -15,8 +15,7 @@ public class Square extends AbstractFigure {
 
     @Override
     protected String getParametersString() {
-        return  "side: " + String.format("%.2f", side) + " units";
+        return "side: " + String.format("%.2f", side) + " units";
     }
-
 
 }

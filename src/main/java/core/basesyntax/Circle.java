@@ -17,6 +17,5 @@ public class Circle extends AbstractFigure {
     protected String getParametersString() {
         return "radius: " + String.format("%.2f", radius) + " units";
     }
-
-
 }
+
