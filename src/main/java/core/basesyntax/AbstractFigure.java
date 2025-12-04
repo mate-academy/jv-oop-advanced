@@ -1,10 +1,11 @@
 package core.basesyntax;
 
-public abstract class AbstractFigure implements Figure, Drawable {
+public abstract class AbstractFigure implements Figure {
 
     protected String color;
 
     protected AbstractFigure(String color) {
+        this.color = color;
     }
 
     public void setColor(String color) {
@@ -17,13 +18,7 @@ public abstract class AbstractFigure implements Figure, Drawable {
 
     public abstract double getArea();
 
-    public void draw() {
-        String name = this.getClass().getSimpleName().toLowerCase();
-        String areaStr = String.format("%.2f", getArea()) + " sq. units";
-        String params = getParametersString();
-        System.out.println("Figure: "
-                + name + ", area: " + areaStr + ", " + params + ", color: " + getColor());
-    }
+    public abstract void draw();
 
     protected abstract String getParametersString();
 }

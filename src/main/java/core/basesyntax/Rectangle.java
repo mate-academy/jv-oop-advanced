@@ -20,4 +20,11 @@ public class Rectangle extends AbstractFigure {
         return "width: " + String.format("%.2f", width)
                 + " units, height: " + String.format("%.2f", height) + " units";
     }
+    @Override
+    public void draw() {
+        String name = this.getClass().getSimpleName().toLowerCase();
+        String areaStr = String.format("%.2f", getArea()) + " sq. units";
+        String params = getParametersString();
+        System.out.println("Figure: " + name + ", area: " + areaStr + ", " + params + ", color: " + getColor());
+    }
 }

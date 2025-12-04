@@ -11,10 +11,9 @@ public class FigureSupplier {
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figure getRandomFigure() {
+    public Drawable getRandomFigure() {
         int type = random.nextInt(FIGURE_COUNT);
-        double size = randomDouble(DEFAULT_MIN,DEFAULT_MAX);
-        String color = String.valueOf(colorSupplier.getRandomColor());
+        String color = colorSupplier.getRandomColor();
 
         switch (type) {
             case 0:
@@ -44,8 +43,8 @@ public class FigureSupplier {
 
     }
 
-    public Figure getDefaultFigure() {
-        return new Circle("White", DEFAULT_RADIUS); // біле коло з радіусом 10
+    public Drawable getDefaultFigure() {
+        return new Circle("White", DEFAULT_RADIUS);
     }
 
     private double randomDouble(double min, double max) {

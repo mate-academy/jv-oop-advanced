@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends AbstractFigure {
+public class Circle extends AbstractFigure implements Drawable {
     private double radius;
 
     public Circle(String color, double radius) {
@@ -15,7 +15,7 @@ public class Circle extends AbstractFigure {
 
     @Override
     protected String getParametersString() {
-        return "radius: " + String.format("%.2f", radius) + " units";
+        return "radius: " + radius;
     }
 }
 
