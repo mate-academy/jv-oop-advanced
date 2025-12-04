@@ -32,6 +32,7 @@ public class IsoscelesTrapezoid extends AbstractFigure {
         String params = getParametersString();
         System.out.println("Figure: " + name + ", area: "
                 + areaStr + ", " + params + ", color: " + getColor());
+
     }
 }
 
