@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle extends AbstractFigure implements Drawable {
+public class Circle extends AbstractFigure {
     private double radius;
 
     public Circle(String color, double radius) {
@@ -17,5 +17,14 @@ public class Circle extends AbstractFigure implements Drawable {
     protected String getParametersString() {
         return "radius: " + radius;
     }
-}
 
+    @Override
+    public void draw() {
+        String name = this.getClass().getSimpleName().toLowerCase();
+        String areaStr = String.format("%.2f", getArea()) + " sq. units";
+        String params = getParametersString();
+        System.out.println("Figure: " + name + ", area: "
+                + areaStr + ", " + params + ", color: " + getColor());
+
+    }
+}

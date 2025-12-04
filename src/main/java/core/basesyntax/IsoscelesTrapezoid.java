@@ -24,12 +24,14 @@ public class IsoscelesTrapezoid extends AbstractFigure {
                 + " units, height: " + String.format("%.2f", height) + " units";
 
     }
+
     @Override
     public void draw() {
         String name = this.getClass().getSimpleName().toLowerCase();
         String areaStr = String.format("%.2f", getArea()) + " sq. units";
         String params = getParametersString();
-        System.out.println("Figure: " + name + ", area: " + areaStr + ", " + params + ", color: " + getColor());
+        System.out.println("Figure: " + name + ", area: "
+                + areaStr + ", " + params + ", color: " + getColor());
     }
 }
 
