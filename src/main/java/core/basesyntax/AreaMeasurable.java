@@ -1,5 +1,7 @@
 package core.basesyntax;
 
 public interface AreaMeasurable {
-    void getArea();
+    double getArea();
+
 }
+
