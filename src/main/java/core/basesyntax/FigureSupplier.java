@@ -1,9 +1,6 @@
 package core.basesyntax;
-
-public class FigureSupplier {
-    public static void main  (String[] args) {
-
-
-
+public abstract class FigureSupplier {
+    public String getRandomFigure() {
+        return null;
     }
 }
