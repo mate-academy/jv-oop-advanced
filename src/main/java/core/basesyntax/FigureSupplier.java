@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int FIGURE_TYPES_COUNT = 5;
+
     private static final int MIN_RANDOM_SIZE = 1;
     private static final int MAX_RANDOM_SIZE = 20;
 
@@ -18,22 +19,30 @@ public class FigureSupplier {
         String color = colorSupplier.getRandomColor();
 
         switch (type) {
-
-            case 0:
-                return new Circle(color, randomSize());
-
-            case 1:
-                return new Rectangle(color, randomSize(), randomSize());
-
-            case 2:
-                return new RightTriangle(color, randomSize(), randomSize());
-
-            case 3:
-                return new Square(color, randomSize());
-
-            default:
-                return new IsoscelesTrapezoid(color, randomSize(), randomSize(), randomSize());
-
+            case 0: {
+                int radius = randomSize();
+                return new Circle(color, radius);
+            }
+            case 1: {
+                int width = randomSize();
+                int height = randomSize();
+                return new Rectangle(color, width, height);
+            }
+            case 2: {
+                int firstLeg = randomSize();
+                int secondLeg = randomSize();
+                return new RightTriangle(color, firstLeg, secondLeg);
+            }
+            case 3: {
+                int side = randomSize();
+                return new Square(color, side);
+            }
+            default: {
+                int firstBase = randomSize();
+                int secondBase = randomSize();
+                int height = randomSize();
+                return new IsoscelesTrapezoid(color, firstBase, secondBase, height);
+            }
         }
     }
 
