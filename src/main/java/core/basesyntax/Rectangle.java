@@ -31,6 +31,11 @@ public class Rectangle extends Figure implements AreaCalculating {
                 + " units" + " color: " + getColor();
     }
 
-    public double getSide1() { return side1; }
-    public double getSide2() { return side2; }
+    public double getSide1() {
+        return side1;
+    }
+
+    public double getSide2() {
+        return side2;
+    }
 }

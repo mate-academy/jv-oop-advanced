@@ -17,7 +17,8 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculating {
 
     @Override
     public double getArea() {
-        double height = Math.sqrt(Math.pow(leg,2) - Math.pow(Math.abs((base1-base2)/2), 2));
+        double height = Math.sqrt(Math.pow(leg, 2)
+                - Math.pow(Math.abs((base1 - base2) / 2), 2));
         return ((base1 + base2) / 2) * height;
     }
 
@@ -36,7 +37,11 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculating {
     public double getBase1() {
         return base1;
     }
-    public double getBase2() { return base2; }
+
+    public double getBase2() {
+        return base2;
+    }
+
     public double getLeg() {
         return leg;
     }
