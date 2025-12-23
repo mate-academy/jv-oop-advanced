@@ -4,16 +4,36 @@ import java.util.Random;
 
 public class FigureSupplier{
     private final Random rand = new Random();
+    private final int MAX_VALUE = 20;
 
     public Figure getRandomFigure(String color){
-        int figureType = rand.nextInt(5) + 1;
+        int FIGURE_TYPES_COUNT = 5;
+        int figureType = rand.nextInt(FIGURE_TYPES_COUNT);
         switch (figureType){
-            case 1: return new Circle(rand.nextInt(20) + 1, color);
-            case 2: return new Square(rand.nextInt(20) + 1, color);
-            case 3: return new Rectangle(rand.nextInt(20) + 1, rand.nextInt(20) + 1, color);
-            case 4: return new RightTriangle(rand.nextInt(20) + 1, rand.nextInt(20) + 1, color);
-            case 5: return new IsoscelesTrapezoid(rand.nextInt(20) + 1, rand.nextInt(20) + 1, color);
-            default: return null;
+            case 0:
+                double radius = rand.nextDouble(MAX_VALUE) + 1;
+                return new Circle(radius, color);
+            case 1:
+                double side = rand.nextDouble(MAX_VALUE) + 1;
+                return new Square(side, color);
+            case 2:
+                double side1 = rand.nextDouble(MAX_VALUE) + 1;
+                double side2 = rand.nextDouble(MAX_VALUE) + 1;
+                return new Rectangle(side1, side2, color);
+            case 3:
+                double firstLeg = rand.nextDouble(MAX_VALUE) + 1;
+                double secondLeg = rand.nextDouble(MAX_VALUE) + 1;
+                return new RightTriangle(firstLeg, secondLeg, color);
+            case 4:
+                double base1 = rand.nextDouble(MAX_VALUE) + 1;
+                double base2 = rand.nextDouble(MAX_VALUE) + 1;
+                double leg = rand.nextDouble(MAX_VALUE) + 1;
+                return new IsoscelesTrapezoid(base1, base2, leg, color);
+            default: return getDefaulthFigure();
         }
+    }
+
+    public Figure getDefaulthFigure(){
+        return new Circle(10, "White");
     }
 }

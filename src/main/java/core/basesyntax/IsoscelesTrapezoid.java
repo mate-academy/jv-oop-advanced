@@ -1,22 +1,24 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure{
-    private final double base;
+public class IsoscelesTrapezoid extends Figure implements AreaCalculating{
+    private final double base1;
+    private final double base2;
     private final double leg;
 
-    public IsoscelesTrapezoid(double base, double leg, String Color){
-        super(Color);
-        if(base <= 0 || leg <= 0){
+    public IsoscelesTrapezoid(double base1, double base2, double leg, String color){
+        super(color);
+        if(base1 <= 0 && base2 <= 0 && leg <= 0){
             throw new IllegalArgumentException("Base and legs must be greater than 0");
         }
-        this.base = base;
+        this.base1 = base1;
+        this.base2 = base2;
         this.leg = leg;
     }
 
     @Override
     public double getArea() {
-        double height = Math.sqrt(Math.pow(leg, 2) - Math.pow(base/2, 2));
-        return 0.5 * base * height;
+        double height = Math.sqrt(Math.pow(leg,2) - Math.pow(Math.abs((base1-base2)/2), 2));
+        return ((base1 + base2) / 2) * height;
     }
 
     @Override
@@ -26,14 +28,15 @@ public class IsoscelesTrapezoid extends Figure{
 
     @Override
     public String draw() {
-        return "Isosceles trapezoid, area: " + getArea() + " sq. units" +
-                " with base: " + getBase() + " and leg: " + getLeg() + " color: " + getColor();
+        return "Figure: isosceles trapezoid, area: " + getArea() + " sq. units" +
+                " with base 1: " + getBase1() + " units, base 2: " + getBase2() +
+                " units, and leg: " + getLeg() + " units, color: " + getColor();
     }
 
-    public double getBase() {
-        return base;
+    public double getBase1() {
+        return base1;
     }
-
+    public double getBase2() { return base2; }
     public double getLeg() {
         return leg;
     }

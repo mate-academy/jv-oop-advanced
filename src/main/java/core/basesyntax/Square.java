@@ -1,11 +1,11 @@
 package core.basesyntax;
 
-public class Square extends Figure {
+public class Square extends Figure implements AreaCalculating{
     private final double side;
 
     public Square(double side, String color) {
         super(color);
-        if(side < 0) {
+        if(side <= 0) {
             throw new IllegalArgumentException("Square side must be greater than 0");
         }
         this.side = side;
@@ -13,7 +13,7 @@ public class Square extends Figure {
 
     @Override
     public double getArea() {
-        return side;
+        return Math.pow(side, 2);
     }
 
     @Override
@@ -23,8 +23,8 @@ public class Square extends Figure {
 
     @Override
     public String draw() {
-        return "Square, area: " + getArea() + " sq. units" +
-                " with side: " + getSide() + " color: " + getColor();
+        return "Figure: square, area: " + getArea() + " sq. units" +
+                " with side: " + getSide() + " units," + " color: " + getColor();
     }
 
     public double getSide() {

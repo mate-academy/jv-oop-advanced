@@ -1,12 +1,12 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure {
+public class RightTriangle extends Figure implements AreaCalculating{
     private final double firstLeg;
     private final double secondLeg;
 
     public RightTriangle(double firstLeg, double secondLeg, String color) {
         super(color);
-        if(firstLeg <= 0 || secondLeg <= 0) {
+        if(firstLeg <= 0 && secondLeg <= 0) {
             throw new IllegalArgumentException("Legs must be greater than 0");
         }
         this.firstLeg = firstLeg;
@@ -25,9 +25,8 @@ public class RightTriangle extends Figure {
 
     @Override
     public String draw() {
-        return "Right triangle, area: " + getArea() + " sq. units" +
-                " with first leg: " + getFirstLeg() + " and second leg: " + getSecondLeg()
-                + " color: " + getColor();
+        return "Figure: right triangle, area: " + getArea() + " sq. units, first leg: " + getFirstLeg() +
+                " units, second leg: " + getSecondLeg() + " units, color: " + getColor();
     }
 
     public double getFirstLeg() {

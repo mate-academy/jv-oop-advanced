@@ -1,14 +1,12 @@
 package core.basesyntax;
 
-import java.awt.*;
-
-public class Rectangle extends Figure {
+public class Rectangle extends Figure implements AreaCalculating{
     private final double side1;
     private final double side2;
 
     public Rectangle(double side1, double side2, String color) {
         super(color);
-        if(side1 <= 0 || side2 <= 0) {
+        if(side1 <= 0 && side2 <= 0) {
             throw new IllegalArgumentException("Sides rectangle must be greater than 0");
         }
         this.side1 = side1;
@@ -27,8 +25,9 @@ public class Rectangle extends Figure {
 
     @Override
     public String draw() {
-        return "Rectangle, area: " + getArea() + " sq. units" +
-                " with sides: " + getSide1() + ", " + getSide2() + " color: " + getColor();
+        return "Figure: rectangle, area: " + getArea() + " sq. units" +
+                " with side 1: " + getSide1() + " units, side 2: " + getSide2() +
+                " units" + " color: " + getColor();
     }
 
     public double getSide1(){
