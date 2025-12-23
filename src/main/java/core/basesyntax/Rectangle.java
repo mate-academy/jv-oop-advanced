@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements AreaCalculating{
+public class Rectangle extends Figure implements AreaCalculating {
     private final double side1;
     private final double side2;
 
@@ -25,12 +25,12 @@ public class Rectangle extends Figure implements AreaCalculating{
 
     @Override
     public String draw() {
-        return "Figure: rectangle, area: " + getArea() + " sq. units" +
-                " with side 1: " + getSide1() + " units, side 2: " + getSide2() +
-                " units" + " color: " + getColor();
+        return "Figure: rectangle, area: " + getArea()
+                + " sq. units" + " with side 1: " + getSide1()
+                + " units, side 2: " + getSide2()
+                + " units" + " color: " + getColor();
     }
 
     public double getSide1() { return side1; }
-
     public double getSide2() { return side2; }
 }
