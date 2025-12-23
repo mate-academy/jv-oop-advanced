@@ -14,7 +14,7 @@ public class RightTriangle extends Figure implements AreaCalculating {
     }
 
     @Override
-    public double getArea(){
+    public double getArea() {
         return 0.5 * firstLeg * secondLeg;
     }
 
@@ -34,6 +34,7 @@ public class RightTriangle extends Figure implements AreaCalculating {
     public double getFirstLeg() {
         return firstLeg;
     }
+
     public double getSecondLeg() {
         return secondLeg;
     }
