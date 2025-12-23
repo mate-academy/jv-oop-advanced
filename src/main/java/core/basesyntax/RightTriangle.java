@@ -6,7 +6,7 @@ public class RightTriangle extends Figure implements AreaCalculating{
 
     public RightTriangle(double firstLeg, double secondLeg, String color) {
         super(color);
-        if(firstLeg <= 0 && secondLeg <= 0) {
+        if (firstLeg <= 0 && secondLeg <= 0) {
             throw new IllegalArgumentException("Legs must be greater than 0");
         }
         this.firstLeg = firstLeg;
@@ -32,7 +32,6 @@ public class RightTriangle extends Figure implements AreaCalculating{
     public double getFirstLeg() {
         return firstLeg;
     }
-
     public double getSecondLeg() {
         return secondLeg;
     }

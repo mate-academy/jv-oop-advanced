@@ -5,7 +5,7 @@ public class Square extends Figure implements AreaCalculating{
 
     public Square(double side, String color) {
         super(color);
-        if(side <= 0) {
+        if (side <= 0) {
             throw new IllegalArgumentException("Square side must be greater than 0");
         }
         this.side = side;

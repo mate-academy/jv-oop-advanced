@@ -14,5 +14,4 @@ public abstract class Figure implements AreaCalculating{
     public void setColor(String color) {
         this.color = color;
     }
-
 }

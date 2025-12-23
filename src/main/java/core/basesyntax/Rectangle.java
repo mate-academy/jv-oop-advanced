@@ -6,7 +6,7 @@ public class Rectangle extends Figure implements AreaCalculating{
 
     public Rectangle(double side1, double side2, String color) {
         super(color);
-        if(side1 <= 0 && side2 <= 0) {
+        if (side1 <= 0 && side2 <= 0) {
             throw new IllegalArgumentException("Sides rectangle must be greater than 0");
         }
         this.side1 = side1;
@@ -14,8 +14,8 @@ public class Rectangle extends Figure implements AreaCalculating{
     }
 
     @Override
-    public double getArea(){
-        return side1*side2;
+    public double getArea() {
+        return side1 * side2;
     }
 
     @Override
@@ -30,11 +30,7 @@ public class Rectangle extends Figure implements AreaCalculating{
                 " units" + " color: " + getColor();
     }
 
-    public double getSide1(){
-        return side1;
-    }
+    public double getSide1() { return side1; }
 
-    public double getSide2(){
-        return side2;
-    }
+    public double getSide2() { return side2; }
 }

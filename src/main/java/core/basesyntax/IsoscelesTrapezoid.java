@@ -7,7 +7,7 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculating{
 
     public IsoscelesTrapezoid(double base1, double base2, double leg, String color){
         super(color);
-        if(base1 <= 0 && base2 <= 0 && leg <= 0){
+        if (base1 <= 0 && base2 <= 0 && leg <= 0) {
             throw new IllegalArgumentException("Base and legs must be greater than 0");
         }
         this.base1 = base1;

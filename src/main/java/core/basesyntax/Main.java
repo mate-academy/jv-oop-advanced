@@ -7,16 +7,17 @@ public class Main {
         Figure[] figures = new Figure[FIGURES_COUNT];
         FigureSupplier figureSupplier = new FigureSupplier();
 
-        for(int i = 0; i < FIGURES_COUNT / 2; i++){ //make half array random generation
+        for (int i = 0; i < FIGURES_COUNT / 2; i++) { //make half array random generation
             figures[i] = figureSupplier.getRandomFigure();
         }
 
-        for(int i = FIGURES_COUNT / 2; i < FIGURES_COUNT; i++){
+        for (int i = FIGURES_COUNT / 2; i < FIGURES_COUNT; i++) {
             figures[i] = figureSupplier.getDefaultFigure();
         }
 
-        for(Figure figure : figures){
+        for (Figure figure : figures) {
             System.out.println(figure.draw());
         }
     }
 }
+
