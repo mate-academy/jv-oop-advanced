@@ -5,10 +5,12 @@ import java.util.Random;
 public class FigureSupplier{
     private final Random rand = new Random();
     private final int MAX_VALUE = 20;
+    ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figure getRandomFigure(String color){
+    public Figure getRandomFigure(){
         int FIGURE_TYPES_COUNT = 5;
         int figureType = rand.nextInt(FIGURE_TYPES_COUNT);
+        String color = colorSupplier.getRandomColor();
         switch (figureType){
             case 0:
                 double radius = rand.nextDouble(MAX_VALUE) + 1;
@@ -29,11 +31,11 @@ public class FigureSupplier{
                 double base2 = rand.nextDouble(MAX_VALUE) + 1;
                 double leg = rand.nextDouble(MAX_VALUE) + 1;
                 return new IsoscelesTrapezoid(base1, base2, leg, color);
-            default: return getDefaulthFigure();
+            default: return getDefaultFigure();
         }
     }
 
-    public Figure getDefaulthFigure(){
+    public Figure getDefaultFigure(){
         return new Circle(10, "White");
     }
 }

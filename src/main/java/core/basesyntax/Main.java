@@ -5,15 +5,14 @@ public class Main {
 
     public static void main(String[] args) {
         Figure[] figures = new Figure[FIGURES_COUNT];
-        ColorSupplier colorSupplier = new ColorSupplier();
         FigureSupplier figureSupplier = new FigureSupplier();
 
         for(int i = 0; i < FIGURES_COUNT / 2; i++){ //make half array random generation
-            figures[i] = figureSupplier.getRandomFigure(colorSupplier.getRandomColor());
+            figures[i] = figureSupplier.getRandomFigure();
         }
 
         for(int i = FIGURES_COUNT / 2; i < FIGURES_COUNT; i++){
-            figures[i] = figureSupplier.getDefaulthFigure();
+            figures[i] = figureSupplier.getDefaultFigure();
         }
 
         for(Figure figure : figures){
