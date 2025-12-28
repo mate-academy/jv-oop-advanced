@@ -4,7 +4,7 @@ public class Rectangle extends Figure implements AreaCalculator {
     private double width;
     private double length;
 
-    public Rectangle(double width, double length, String color){
+    public Rectangle(double width, double length, String color) {
         super(color);
         this.width = width;
         this.length = length;
@@ -17,6 +17,7 @@ public class Rectangle extends Figure implements AreaCalculator {
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, width: " + width + " units, length: " + length + " units, color: " + color);
+        System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, width: " + width +
+                " units, length: " + length + " units, color: " + color);
     }
 }

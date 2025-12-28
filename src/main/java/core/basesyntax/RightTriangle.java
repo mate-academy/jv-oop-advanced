@@ -4,7 +4,7 @@ public class RightTriangle extends Figure implements AreaCalculator {
     private double firstLeg;
     private double secondLeg;
 
-    public RightTriangle(double firstLeg, double secondLeg, String color){
+    public RightTriangle(double firstLeg, double secondLeg, String color) {
         super(color);
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
@@ -17,7 +17,8 @@ public class RightTriangle extends Figure implements AreaCalculator {
 
     @Override
     public void draw() {
-        System.out.println("Figure: right triangle, area: " + getArea() + " sq. units, firstLeg: " + firstLeg + " units, secondLeg: " + secondLeg + " units, color: " + color);
+        System.out.println("Figure: right triangle, area: " + getArea() + " sq. units, firstLeg: " + firstLeg +
+                " units, secondLeg: " + secondLeg + " units, color: " + color);
 
     }
 }
