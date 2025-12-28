@@ -3,6 +3,7 @@ package core.basesyntax;
 public class RightTriangle extends Figure implements AreaCalculator {
     private double firstLeg;
     private double secondLeg;
+    private static final double DIVISOR = 2;
 
     public RightTriangle(double firstLeg, double secondLeg, String color) {
         super(color);
@@ -12,13 +13,14 @@ public class RightTriangle extends Figure implements AreaCalculator {
 
     @Override
     public double getArea() {
-        return (firstLeg * secondLeg) / 2;
+        return (firstLeg * secondLeg) / DIVISOR;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: right triangle, area: " + getArea() + " sq. units, firstLeg: " + firstLeg +
-                " units, secondLeg: " + secondLeg + " units, color: " + color);
+        System.out.println("Figure: right triangle, area: " + getArea()
+                + " sq. units, firstLeg: " + firstLeg
+                + " units, secondLeg: " + secondLeg + " units, color: " + color);
 
     }
 }

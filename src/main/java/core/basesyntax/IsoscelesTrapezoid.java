@@ -4,6 +4,7 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
     private double baseA;
     private double baseB;
     private double height;
+    private static final double DIVISOR = 2;
 
     public IsoscelesTrapezoid(double baseA, double baseB, double height, String color) {
         super(color);
@@ -14,13 +15,13 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator {
 
     @Override
     public double getArea() {
-        return (baseA + baseB) / 2 * height;
+        return (baseA + baseB) / DIVISOR * height;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: isosceles trapezoid, area: " + getArea() +
-                " sq. units, baseA: " + baseA + " units, baseB: " + baseB + " units, height: " + height +
-                " units, color: " + color);
+                " sq. units, baseA: " + baseA + " units, baseB: " + baseB + " units, height: "
+                + height + " units, color: " + color);
     }
 }

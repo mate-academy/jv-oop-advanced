@@ -17,7 +17,7 @@ public class Rectangle extends Figure implements AreaCalculator {
 
     @Override
     public void draw() {
-        System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, width: " + width +
-                " units, length: " + length + " units, color: " + color);
+        System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, width: " + width
+                + " units, length: " + length + " units, color: " + color);
     }
 }
