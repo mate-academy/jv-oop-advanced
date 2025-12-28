@@ -3,6 +3,7 @@ package core.basesyntax;
 public class Main {
     private static final int FIGURE_COUNT = 6;
     private static final int DIVISOR = 2;
+
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figures = new Figure[FIGURE_COUNT];

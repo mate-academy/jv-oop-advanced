@@ -1,9 +1,9 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure implements AreaCalculator {
+    private static final double DIVISOR = 2;
     private double firstLeg;
     private double secondLeg;
-    private static final double DIVISOR = 2;
 
     public RightTriangle(double firstLeg, double secondLeg, String color) {
         super(color);
