@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public interface Figure {
-    double getArea();
-    void draw();
+public interface Figure extends Area, Drawable {
+
 }
+
