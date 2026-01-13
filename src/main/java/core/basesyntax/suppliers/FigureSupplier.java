@@ -2,11 +2,11 @@ package core.basesyntax.suppliers;
 
 import core.basesyntax.figures.Circle;
 import core.basesyntax.figures.Figure;
-import core.basesyntax.figures.Square;
 import core.basesyntax.figures.IsoscelesTrapezoid;
 import core.basesyntax.figures.Rectangle;
 import core.basesyntax.figures.RightTriangle;
 import core.basesyntax.enums.FigureTypes;
+import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
@@ -17,7 +17,6 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final FigureTypes[] figureTypes = FigureTypes.values();
     private Figure resultFigure;
-
 
     public Figure getRandomFigure() {
         String figureName = figureTypes[random.nextInt(FIGURE_TYPES_QTY)].toString();
@@ -33,11 +32,12 @@ public class FigureSupplier {
             int leftLegLength;
             int upperBase;
             int downBase;
-            do {    rightLegLength = getRandomLength();
-                    leftLegLength = getRandomLength();
-                    upperBase = getRandomLength();
-                    downBase = getRandomLength();
-            }  while (downBase != upperBase && leftLegLength == rightLegLength);
+            do {
+                rightLegLength = getRandomLength();
+                leftLegLength = getRandomLength();
+                upperBase = getRandomLength();
+                downBase = getRandomLength();
+            } while (downBase != upperBase && leftLegLength == rightLegLength);
             resultFigure = new IsoscelesTrapezoid(rightLegLength,leftLegLength,upperBase,downBase);
         }
         if (figureName.equals("RECTANGLE")) {
@@ -50,8 +50,7 @@ public class FigureSupplier {
                 leftLegLength = getRandomLength();
                 upperBase = getRandomLength();
                 downBase = getRandomLength();
-            }
-            while (leftLegLength < 0 && downBase < 0
+            } while (leftLegLength < 0 && downBase < 0
                     && downBase != upperBase
                     && leftLegLength != rightLegLength
                     && leftLegLength == upperBase);

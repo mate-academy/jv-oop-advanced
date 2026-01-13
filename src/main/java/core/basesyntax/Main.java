@@ -13,8 +13,7 @@ public class Main {
             if (i < indexOfRandomFigures) {
                figures[i] = figureSupplier.getRandomFigure();
                System.out.println(figures[i].drawing());
-            }
-            else {
+            } else {
                 figures[i] = figureSupplier.getDefaultFigure();
                 System.out.println(figures[i].drawing());
             }

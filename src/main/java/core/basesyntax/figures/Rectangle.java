@@ -6,7 +6,7 @@ public class Rectangle extends Figure {
     private final int upperBase;
     private final int downBase;
 
-    public Rectangle (int rightLegLength, int leftLegLength, int upperBase, int downBase) {
+    public Rectangle(int rightLegLength, int leftLegLength, int upperBase, int downBase) {
         this.rightLegLength = rightLegLength;
         this.leftLegLength = leftLegLength;
         this.upperBase = upperBase;
