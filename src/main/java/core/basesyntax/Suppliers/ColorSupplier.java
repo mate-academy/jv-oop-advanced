@@ -1,4 +1,4 @@
-package core.basesyntax.Supppliers;
+package core.basesyntax.Suppliers;
 
 import core.basesyntax.enums.Color;
 

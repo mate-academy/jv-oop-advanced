@@ -1,4 +1,4 @@
-package core.basesyntax.Supppliers;
+package core.basesyntax.Suppliers;
 
 import core.basesyntax.Figures.*;
 import core.basesyntax.enums.FigureTypes;
@@ -65,8 +65,9 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        resultFigure = new Circle(getRandomLength());
-        resultFigure.setColor(colorSupplier.getColor());
+        String defaultColor = "white";
+        resultFigure = new Circle(MIN_VALUE);
+        resultFigure.setColor(defaultColor);
         return resultFigure;
     }
 

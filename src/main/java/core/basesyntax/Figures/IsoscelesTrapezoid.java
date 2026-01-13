@@ -19,7 +19,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     public double getHeight() {
         double diff = downBase - upperBase;
-        return Math.sqrt(
+        return (int) Math.sqrt(
                 rightLegLength * rightLegLength
                         - (diff / 2.0) * (diff / 2.0)
         );
