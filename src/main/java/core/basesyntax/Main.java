@@ -11,8 +11,8 @@ public class Main {
 
         for (int i = 0; i < figures.length;i++) {
             if (i < indexOfRandomFigures) {
-               figures[i] = figureSupplier.getRandomFigure();
-               System.out.println(figures[i].drawing());
+                figures[i] = figureSupplier.getRandomFigure();
+                System.out.println(figures[i].drawing());
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
                 System.out.println(figures[i].drawing());
