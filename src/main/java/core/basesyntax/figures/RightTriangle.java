@@ -1,6 +1,4 @@
-package core.basesyntax.Figures;
-
-import core.basesyntax.Interfaces.Draweble;
+package core.basesyntax.figures;
 
 public class RightTriangle extends Figure {
     private final int legA;

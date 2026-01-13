@@ -1,5 +1,5 @@
 package core.basesyntax.Interfaces;
 
-public interface Draweble {
+public interface draweble {
     String drawing();
 }

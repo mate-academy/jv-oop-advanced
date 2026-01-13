@@ -1,6 +1,4 @@
-package core.basesyntax.Figures;
-
-import core.basesyntax.Interfaces.Draweble;
+package core.basesyntax.figures;
 
 public class IsoscelesTrapezoid extends Figure {
     private final int rightLegLength;

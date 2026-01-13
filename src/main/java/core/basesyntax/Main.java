@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-import core.basesyntax.Figures.Figure;
-import core.basesyntax.Suppliers.FigureSupplier;
+import core.basesyntax.figures.Figure;
+import core.basesyntax.suppliers.FigureSupplier;
 
-public class main {
+public class Main {
     public static void main(String[] args) {
         int indexOfRandomFigures = 5;
         Figure[] figures = new Figure[10];

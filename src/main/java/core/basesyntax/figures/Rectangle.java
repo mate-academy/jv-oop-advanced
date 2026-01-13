@@ -1,6 +1,4 @@
-package core.basesyntax.Figures;
-
-import core.basesyntax.Interfaces.Draweble;
+package core.basesyntax.figures;
 
 public class Rectangle extends Figure {
     private final int rightLegLength;

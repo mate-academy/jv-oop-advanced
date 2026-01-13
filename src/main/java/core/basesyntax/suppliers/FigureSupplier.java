@@ -1,8 +1,12 @@
-package core.basesyntax.Suppliers;
+package core.basesyntax.suppliers;
 
-import core.basesyntax.Figures.*;
+import core.basesyntax.figures.Circle;
+import core.basesyntax.figures.Figure;
+import core.basesyntax.figures.Square;
+import core.basesyntax.figures.IsoscelesTrapezoid;
+import core.basesyntax.figures.Rectangle;
+import core.basesyntax.figures.RightTriangle;
 import core.basesyntax.enums.FigureTypes;
-
 import java.util.Random;
 
 public class FigureSupplier {
@@ -11,8 +15,8 @@ public class FigureSupplier {
     private static final int FIGURE_TYPES_QTY = 5;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
-    FigureTypes[] figureTypes = FigureTypes.values();
-    Figure resultFigure;
+    private final FigureTypes[] figureTypes = FigureTypes.values();
+    private Figure resultFigure;
 
 
     public Figure getRandomFigure() {
@@ -29,13 +33,11 @@ public class FigureSupplier {
             int leftLegLength;
             int upperBase;
             int downBase;
-            do {
-                rightLegLength = getRandomLength();
-                leftLegLength = getRandomLength();
-                upperBase = getRandomLength();
-                downBase = getRandomLength();
-            }
-            while (downBase != upperBase && leftLegLength == rightLegLength);
+            do {    rightLegLength = getRandomLength();
+                    leftLegLength = getRandomLength();
+                    upperBase = getRandomLength();
+                    downBase = getRandomLength();
+            }  while (downBase != upperBase && leftLegLength == rightLegLength);
             resultFigure = new IsoscelesTrapezoid(rightLegLength,leftLegLength,upperBase,downBase);
         }
         if (figureName.equals("RECTANGLE")) {
