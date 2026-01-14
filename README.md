@@ -1,35 +1,36 @@
 # jv-oop-advanced
+# Розв’яжи задачу, використовуючи принципи ООП
 
-### Solve the task using OOP principles
+# Задача:
 
-Task:
+Є кілька фігур таких типів: квадрат, прямокутник, прямокутний трикутник, коло, рівнобічна трапеція.
+Тобі потрібно створити відповідні класи для них (Square, Rectangle, RightTriangle, Circle, IsoscelesTrapezoid).
 
-There are some figures of the following types: square, rectangle, right triangle, circle, isosceles trapezoid.
-You need to create corresponding classes for them(`Square`, `Rectangle`, `RightTriangle`, `Circle`, `IsoscelesTrapezoid`)
+# Усі фігури мають:
 
-All figures have 
-- **state** - all figures have `color`, but each figure type can also have one or several unique properties (`radius` for circle, `firstLeg` and `secondLeg` for right triangle, and so on).
-- **behavior** - we can obtain the area of any figure and are able to draw it. To 'draw' means to print out all information about a figure using `System.out.println()` (you shouldn't override the toString() method for this). 
-   
-Think where you should declare these fields and methods: top-level class/interface / bottom-level classes.  
+стан — всі фігури мають color, але кожен тип фігури може також мати одне або кілька унікальних властивостей (radius для кола, firstLeg і secondLeg для прямокутного трикутника і т.д.).
 
-In the `main()` method we need to create an array of figures (the size of the array can be 3 or 6, it doesn't matter).
-**The first half** of figures in this array should be generated with random parameters. 
+поведінку — ми можемо отримати площу будь-якої фігури і намалювати її. “Намалювати” означає вивести всю інформацію про фігуру через System.out.println() (не потрібно перевизначати метод toString()).
 
-For this purpose create two more classes:
-- `ColorSupplier` with `public String getRandomColor()` method - for generating random color, 
-- and `FigureSupplier` with the `public Figure getRandomFigure()` method - for generating figures with random properties.
+Подумай, де варто оголосити ці поля та методи: у верхньому класі/інтерфейсі чи в нижніх класах.
 
-**The other half** of the figures should have the same, default parameters. 
+# У методі main() потрібно створити масив фігур (розмір масиву може бути 3 або 6 — не має значення).
+Перша половина фігур у цьому масиві повинна генеруватися з випадковими параметрами.
 
-For this purpose create a new method in the `FigureSupplier` class:
-- `public Figure getDefaultFigure()` - this method should always return a white circle with a radius of 10.
+# Для цього створи ще два класи:
 
-After generating the array, we need to display the entire list of objects that we have, for example:
+ColorSupplier з методом public String getRandomColor() — для генерації випадкового кольору,
 
-```
- Figure: square, area: 25.0 sq. units, side: 5 units, color: blue
- Figure: triangle, area: 12.5 sq. units, firstLeg: 7 units, secondLeg: 5 units, color: yellow
-```
+FigureSupplier з методом public Figure getRandomFigure() — для генерації фігур із випадковими властивостями.
 
-#### [Try to avoid these common mistakes, while solving task](./checklist.md)
+Друга половина фігур повинна мати ті ж самі, стандартні параметри.
+
+# Для цього створи новий метод у класі FigureSupplier:
+
+public Figure getDefaultFigure() — цей метод завжди має повертати біле коло з радіусом 10.
+
+## Після генерації масиву потрібно вивести всю інформацію про об’єкти, наприклад:
+
+Figure: square, area: 25.0 sq. units, side: 5 units, color: blue
+
+Figure: triangle, area: 12.5 sq. units, firstLeg: 7 units, secondLeg: 5 units, color: yellow
