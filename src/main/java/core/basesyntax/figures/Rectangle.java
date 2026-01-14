@@ -22,7 +22,7 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: "+ FigureType.RECTANGLE + ", area: "
+        System.out.println("Figure: " + FigureType.RECTANGLE + ", area: "
                 + this.getArea()
                 + " sq. units, rightLegLength: "
                 + rightLegLength

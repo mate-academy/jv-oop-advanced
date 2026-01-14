@@ -19,8 +19,6 @@ public class FigureSupplier {
     private final FigureType[] figureTypes = FigureType.values();
     private Figure resultFigure;
 
-
-
     public Figure getRandomFigure() {
         String figureName = figureTypes[random.nextInt(FIGURE_TYPES_QTY)].toString();
 
@@ -43,7 +41,8 @@ public class FigureSupplier {
                     upperBase = getRandomLength();
                     downBase = getRandomLength();
                 } while (downBase != upperBase && leftLegLength == rightLegLength);
-                resultFigure = new IsoscelesTrapezoid(rightLegLength,leftLegLength,upperBase,downBase);
+                resultFigure = new IsoscelesTrapezoid(rightLegLength,
+                        leftLegLength,upperBase,downBase);
                 break;
             case "RECTANGLE" :
                 int rightWidthLength;
@@ -59,7 +58,8 @@ public class FigureSupplier {
                         && downLength != upperLength
                         && leftWidhtLength != rightWidthLength
                         && leftWidhtLength == upperLength);
-                resultFigure = new Rectangle(rightWidthLength,leftWidhtLength,upperLength,downLength);
+                resultFigure = new Rectangle(rightWidthLength,leftWidhtLength,
+                        upperLength,downLength);
                 break;
             case "RIGHT_TRIANGLE" :
                 int leg = getRandomLength();

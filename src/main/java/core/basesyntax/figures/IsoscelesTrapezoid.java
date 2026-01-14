@@ -32,7 +32,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: "+ FigureType.ISOSCELES_TRAPEZOID + ", area: "
+        System.out.println("Figure: " + FigureType.ISOSCELES_TRAPEZOID + ", area: "
                 + this.getArea()
                 + " sq. units, leftLegLength: "
                 + leftLegLength
