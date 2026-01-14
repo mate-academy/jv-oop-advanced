@@ -22,7 +22,6 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         String figureName = figureTypes[random.nextInt(FIGURE_TYPES_QTY)].toString();
 
-
         switch (figureName) {
             case "CIRCLE" :
                 resultFigure = new Circle(getRandomLength());
