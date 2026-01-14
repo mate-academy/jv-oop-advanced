@@ -1,5 +1,7 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.enums.FigureType;
+
 public class Circle extends Figure {
     private int radius;
 
@@ -21,12 +23,12 @@ public class Circle extends Figure {
     }
 
     @Override
-    public String drawing() {
-        return "Figure: circle, area: "
+    public void draw() {
+        System.out.println("Figure: "+ FigureType.CIRCLE + ", area: "
                 + this.getArea()
                 + " sq. units, radius: "
                 + radius
                 + " units, color: "
-                + super.getColor();
+                + super.getColor());
     }
 }

@@ -1,5 +1,7 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.enums.FigureType;
+
 public class IsoscelesTrapezoid extends Figure {
     private final int rightLegLength;
     private final int leftLegLength;
@@ -29,8 +31,8 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    public String drawing() {
-        return "Figure: isosceles trapezoid, area: "
+    public void draw() {
+        System.out.println("Figure: "+ FigureType.ISOSCELES_TRAPEZOID + ", area: "
                 + this.getArea()
                 + " sq. units, leftLegLength: "
                 + leftLegLength
@@ -43,6 +45,6 @@ public class IsoscelesTrapezoid extends Figure {
                 + " units, height: "
                 + getHeight()
                 + " units, color: "
-                + super.getColor();
+                + super.getColor());
     }
 }

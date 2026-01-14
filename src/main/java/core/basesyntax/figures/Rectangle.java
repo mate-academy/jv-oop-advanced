@@ -1,5 +1,7 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.enums.FigureType;
+
 public class Rectangle extends Figure {
     private final int rightLegLength;
     private final int leftLegLength;
@@ -19,8 +21,9 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    public String drawing() {
-        return "Figure: rectangle, area: " + this.getArea()
+    public void draw() {
+        System.out.println("Figure: "+ FigureType.RECTANGLE + ", area: "
+                + this.getArea()
                 + " sq. units, rightLegLength: "
                 + rightLegLength
                 + " units, leftLegLength: "
@@ -30,6 +33,6 @@ public class Rectangle extends Figure {
                 + " units, downBase: "
                 + downBase
                 + " units, color: "
-                + super.getColor();
+                + super.getColor());
     }
 }

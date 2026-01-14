@@ -1,5 +1,7 @@
 package core.basesyntax.figures;
 
+import core.basesyntax.enums.FigureType;
+
 public class RightTriangle extends Figure {
     private final int legA;
     private final int legB;
@@ -17,8 +19,8 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public String drawing() {
-        return "Figure: right triangle, area: "
+    public void draw() {
+        System.out.println("Figure: "+ FigureType.RIGHT_TRIANGLE + ", area: "
                 + this.getArea()
                 + " sq. units, legA: "
                 + legA
@@ -27,7 +29,7 @@ public class RightTriangle extends Figure {
                 + " units, hypotenuse: "
                 + hypotenuse
                 + " units, color: "
-                + super.getColor();
+                + super.getColor());
     }
 }
 
