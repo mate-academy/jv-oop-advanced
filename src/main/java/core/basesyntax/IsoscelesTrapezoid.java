@@ -5,6 +5,12 @@ public class IsoscelesTrapezoid extends Figure implements Drowable, CalculateAre
     private double baseB;
     private double side;
 
+    public IsoscelesTrapezoid(double baseA, double baseB, double side) {
+        this.baseA = baseA;
+        this.baseB = baseB;
+        this.side = side;
+    }
+
     public double getSide() {
         return this.side;
     }

@@ -4,6 +4,11 @@ public class RightTriangle extends Figure implements Drowable, CalculateArea {
     private double firstLeg;
     private double secondLeg;
 
+    public RightTriangle(double firstLeg, double secondLeg) {
+        this.secondLeg = secondLeg;
+        this.firstLeg = firstLeg;
+    }
+
     public double getFirstLeg() {
         return this.firstLeg;
     }
