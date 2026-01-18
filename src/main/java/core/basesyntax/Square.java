@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Square extends Figure implements Drowable , CalculateArea {
+public class Square extends Figure implements Drowable, CalculateArea {
     private double side;
 
     public double getSide() {
@@ -13,7 +13,8 @@ public class Square extends Figure implements Drowable , CalculateArea {
 
     @Override
     public void draw() {
-        System.out.println("This is square with side - " + this.side + " and color - " + this.color);
+        System.out.println("This is square with side - " + this.side
+                + " and color - " + this.getColor());
     }
 
     @Override
