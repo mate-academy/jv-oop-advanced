@@ -5,7 +5,8 @@ public class IsoscelesTrapezoid extends Figure implements Drowable, CalculateAre
     private double baseB;
     private double side;
 
-    public IsoscelesTrapezoid(double baseA, double baseB, double side) {
+    public IsoscelesTrapezoid(Color color, double baseA, double baseB, double side) {
+        super(color);
         this.baseA = baseA;
         this.baseB = baseB;
         this.side = side;

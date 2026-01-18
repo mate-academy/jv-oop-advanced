@@ -3,7 +3,8 @@ package core.basesyntax;
 public class Circle extends Figure implements Drowable, CalculateArea {
     private double radius;
 
-    public Circle(double radius) {
+    public Circle(Color color, double radius) {
+        super(color);
         this.radius = radius;
     }
 
