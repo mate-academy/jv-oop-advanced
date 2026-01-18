@@ -1,7 +1,7 @@
 package core.basesyntax;
 
 public abstract class Figure {
-    Color color;
+    private Color color;
 
     public Color getColor() {
         return this.color;
