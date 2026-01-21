@@ -8,6 +8,7 @@ public class Figure {
     }
 
     public Figure() {
+
     }
 
     public double getArea() {

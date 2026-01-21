@@ -11,7 +11,14 @@ public class Rectangle extends Figure {
     }
 
     @Override
+    public double getArea() {
+        return width * height;
+    }
+
+    @Override
     public void draw() {
-        super.draw();
+        System.out.println("Rectangle: units, area: " + getArea() +
+                " sq. units, width: " + width + " sq. units, height: "
+                + height + " units, color: " + ColorSupplier.getRandomColor());
     }
 }
