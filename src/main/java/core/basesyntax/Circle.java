@@ -7,8 +7,4 @@ public class Circle extends Figure {
         super();
     }
 
-    @Override
-    public Unit[] getUnits() {
-        return new Unit[]{new Unit("radius", radius)};
-    }
 }
