@@ -2,19 +2,19 @@ package core.basesyntax;
 
 public class Square implements Behavior {
     private String color =  "color";
-    private int storona;
+    private int side;
 
-    public Square(String color,  int storona) {
+    public Square(String color,  int side) {
         this.color = color;
-        this.storona = storona;
+        this.side = side;
     }
 
     public int getArea() {
-        return storona * storona;
+        return side * side;
     }
 
     @Override
     public void draw() {
-        System.out.println("Figure: square, area: " + getArea() + " sq. units, side: " + storona + " units, color: " + color);
+        System.out.println("Figure: square, area: " + getArea() + " sq. units, side: " + side + " units, color: " + color);
     }
 }
