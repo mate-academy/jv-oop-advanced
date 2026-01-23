@@ -1,5 +1,5 @@
 package core.basesyntax;
 
 public interface Behavior {
-    public void creatFigure();
+    void draw();
 }

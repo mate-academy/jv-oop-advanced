@@ -1,19 +1,22 @@
 package core.basesyntax;
 
 public class RightTriangle implements Behavior{
-    private String state;
+    private String color;
     private int firstSide;
     private int secondSide;
 
-    public RightTriangle(String state, int firstSide, int secondSide) {
-        this.state = state;
+    public RightTriangle(String color, int firstSide, int secondSide) {
+        this.color = color;
         this.firstSide = firstSide;
         this.secondSide = secondSide;
     }
 
+    public double getArea() {
+        return 0.5 * firstSide * secondSide;
+    }
+
     @Override
-    public void creatFigure() {
-        double a = 0.5 * firstSide * secondSide;
-        System.out.println("Figure: right triangle, area: " + a + " sq. units, side1: " + firstSide + " units, side2: " + secondSide + " units, color: " + state);
+    public void draw() {
+        System.out.println("Figure: right triangle, area: " + getArea() + " sq. units, side1: " + firstSide + " units, side2: " + secondSide + " units, color: " + color);
     }
 }

@@ -2,16 +2,20 @@ package core.basesyntax;
 
 public class Circle implements Behavior {
     private double radius;
-    private String state;
+    private String color;
 
-    public Circle(String state, double radius) {
+    public Circle(String color, double radius) {
         this.radius = radius;
-        this.state = state;
+        this.color = color;
     }
-    @Override
-    public void creatFigure() {
+
+    public double getArea() {
         double a = Math.PI * (radius * radius);
-        double rounded = Math.round(a * 100.0) / 100.0;
-        System.out.println("Figure: circle, area: " + rounded + " sq. units, radius: " + radius +" units, color: " + state);
+        return Math.round(a * 100.0) / 100.0;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println("Figure: circle, area: " + getArea() + " sq. units, radius: " + radius +" units, color: " + color);
     }
 }
