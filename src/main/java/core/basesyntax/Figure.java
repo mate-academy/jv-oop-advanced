@@ -1,16 +1,33 @@
 package core.basesyntax;
 
 public abstract class Figure {
-    private String[] unitsName;
-    private int[] unitsValues;
-    private boolean isSimpleFigure;
-    private Color color;
+    protected Color color;
+    protected int unit;
+    protected String name;
 
     public Figure(Color color) {
         this.color = color;
     }
 
+    public Figure(Color color, int unit) {
+        this.color = color;
+        this.unit = unit;
+    }
+
     public Color getColor() {
         return color;
     }
+
+    public String draw() {
+        return String.format("Figure: %s, area: %.1f sq. units, %s, color: %s",
+                getName(), getArea(), getSpecificParams(), getColor());
+    }
+
+    protected String getName() {
+        return name;
+    };
+
+    protected abstract double getArea();
+
+    protected abstract String getSpecificParams();
 }
