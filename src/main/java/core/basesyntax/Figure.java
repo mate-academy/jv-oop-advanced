@@ -14,8 +14,8 @@ public abstract class Figure {
         this.unit = unit;
     }
 
-    public Color getColor() {
-        return color;
+    public String getColor() {
+        return color.name().toLowerCase();
     }
 
     public String draw() {

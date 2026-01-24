@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 public class Circle extends Figure {
-    private String unitName = "radius";
 
     public Circle(Color color, int unit) {
         super(color, unit);
@@ -11,12 +10,12 @@ public class Circle extends Figure {
 
     @Override
     protected double getArea() {
-        return 0;
+        return Math.PI * unit * unit;
     }
 
     @Override
     protected String getSpecificParams() {
-        return "";
+        return "radius: " + unit + " units";
     }
 
 }
