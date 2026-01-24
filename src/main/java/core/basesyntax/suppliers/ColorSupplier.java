@@ -4,11 +4,11 @@ import core.basesyntax.enums.Color;
 import java.util.Random;
 
 public class ColorSupplier {
-    private final int colorsQty = 9;
+    private static final int COLORS_QUANTITY = 9;
+    private final Random random = new Random();
 
     public String getColor() {
-        Random random = new Random();
         Color[] colors = Color.values();
-        return colors[random.nextInt(colorsQty)].name();
+        return colors[random.nextInt(COLORS_QUANTITY)].name();
     }
 }

@@ -11,76 +11,74 @@ import core.basesyntax.figures.Square;
 import java.util.Random;
 
 public class FigureSupplier {
-    private static final int DEFAULT_VALUE = 10;
+    private static final int DEFAULT_RADIUS = 10;
     private static final int MAX_VALUE = 20;
-    private static final int FIGURE_TYPES_QTY = 5;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final FigureType[] figureTypes = FigureType.values();
-    private Figure resultFigure;
 
     public Figure getRandomFigure() {
-        String figureName = figureTypes[random.nextInt(FIGURE_TYPES_QTY)].toString();
+        FigureType type = figureTypes[random.nextInt(figureTypes.length)];
+        Figure figure;
 
-        switch (figureName) {
-            case "CIRCLE" :
-                resultFigure = new Circle(getRandomLength());
+        switch (type) {
+            case CIRCLE:
+                figure = createRandomCircle();
                 break;
-            case "SQUARE" :
-                resultFigure = new Square(getRandomLength());
+            case SQUARE:
+                figure = createRandomSquare();
                 break;
-            case "ISOSCELES_TRAPEZOID" :
-                int rightLegLength;
-                int leftLegLength;
-                int upperBase;
-                int downBase;
-                do {
-                    rightLegLength = getRandomLength();
-                    leftLegLength = getRandomLength();
-                    upperBase = getRandomLength();
-                    downBase = getRandomLength();
-                } while (downBase != upperBase && leftLegLength == rightLegLength);
-                resultFigure = new IsoscelesTrapezoid(rightLegLength,
-                        leftLegLength,upperBase,downBase);
+            case ISOSCELES_TRAPEZOID:
+                figure = createRandomIsoscelesTrapezoid();
                 break;
-            case "RECTANGLE" :
-                int rightWidthLength;
-                int leftWidhtLength;
-                int upperLength;
-                int downLength;
-                do {
-                    rightWidthLength = getRandomLength();
-                    leftWidhtLength = getRandomLength();
-                    upperLength = getRandomLength();
-                    downLength = getRandomLength();
-                } while (leftWidhtLength < 0 && downLength < 0
-                        && downLength != upperLength
-                        && leftWidhtLength != rightWidthLength
-                        && leftWidhtLength == upperLength);
-                resultFigure = new Rectangle(rightWidthLength,leftWidhtLength,
-                        upperLength,downLength);
+            case RECTANGLE:
+                figure = createRandomRectangle();
                 break;
-            case "RIGHT_TRIANGLE" :
-                int leg = getRandomLength();
-                int hypotenuse = leg * 2;
-                resultFigure = new RightTriangle(leg, hypotenuse);
+            case RIGHT_TRIANGLE:
+                figure = createRandomRightTriangle();
                 break;
             default:
-                resultFigure = new Circle(DEFAULT_VALUE);
-                resultFigure.setColor(Color.WHITE.name());
-                break;
+                return getDefaultFigure();
         }
-        resultFigure.setColor(colorSupplier.getColor());
-        return resultFigure;
+        figure.setColor(colorSupplier.getColor());
+        return figure;
     }
 
     public Figure getDefaultFigure() {
-        resultFigure = new Circle(DEFAULT_VALUE);
-        resultFigure.setColor(Color.WHITE.name());
-        return resultFigure;
+        Figure figure = new Circle(DEFAULT_RADIUS);
+        figure.setColor(Color.WHITE.name());
+        return figure;
+    }
+
+    private Figure createRandomCircle() {
+        return new Circle(getRandomLength());
+    }
+
+    private Figure createRandomSquare() {
+        return new Square(getRandomLength());
+    }
+
+    private Figure createRandomIsoscelesTrapezoid() {
+        int rightLegLength = getRandomLength();
+        int leftLegLength = rightLegLength;
+        int upperBase = getRandomLength();
+        int downBase = upperBase + upperBase;
+        return new IsoscelesTrapezoid(rightLegLength,leftLegLength,upperBase,downBase);
+    }
+
+    private Figure createRandomRectangle() {
+        int height = getRandomLength();
+        int width = getRandomLength();
+        return new Rectangle(height,height,width,width);
+    }
+
+    private Figure createRandomRightTriangle() {
+        int leg = getRandomLength();
+        int hypotenuse = leg * 2;
+        return new RightTriangle(leg, hypotenuse);
     }
 
     private int getRandomLength() {
-        return random.nextInt(DEFAULT_VALUE, MAX_VALUE);
+        return random.nextInt(DEFAULT_RADIUS, MAX_VALUE);
     }
 }
