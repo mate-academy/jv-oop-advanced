@@ -2,7 +2,8 @@ package core.basesyntax;
 
 public abstract class Figure {
     private String color;
-    private void draw(){
 
+    public Figure(String color) {
+        this.color = color;
     }
 }
