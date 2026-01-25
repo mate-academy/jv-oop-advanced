@@ -2,20 +2,21 @@ package core.basesyntax;
 
 public class Circle extends Figure {
 
-    public Circle(Color color, int unit) {
-        super(color, unit);
+    public Circle(Color color, int radius) {
+        super(color, radius);
         this.name = "circle";
+        this.parameters = new String[]{"radius"};
     }
-
-
+    
     @Override
     protected double getArea() {
-        return Math.PI * unit * unit;
+        int radius = values[0];
+        return Math.PI * radius * radius;
     }
 
     @Override
-    protected String getSpecificParams() {
-        return "radius: " + unit + " units";
+    protected String valuesFormat() {
+        return parameters[0] + ": " + values[0] + " units";
     }
 
 }

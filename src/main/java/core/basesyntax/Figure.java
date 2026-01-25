@@ -2,16 +2,22 @@ package core.basesyntax;
 
 public abstract class Figure {
     protected Color color;
-    protected int unit;
+    protected String [] parameters;
+    protected int[] values;
     protected String name;
 
     public Figure(Color color) {
         this.color = color;
     }
 
-    public Figure(Color color, int unit) {
-        this.color = color;
-        this.unit = unit;
+    public Figure(Color color, int value) {
+        this(color);
+        values = new int[] {value};
+    }
+
+    public Figure(Color color, int value1, int value2) {
+        this(color);
+        values = new int[] {value1, value2};
     }
 
     public String getColor() {
@@ -20,7 +26,7 @@ public abstract class Figure {
 
     public String draw() {
         return String.format("Figure: %s, area: %.1f sq. units, %s, color: %s",
-                getName(), getArea(), getSpecificParams(), getColor());
+                getName(), getArea(), valuesFormat(), getColor());
     }
 
     protected String getName() {
@@ -29,5 +35,5 @@ public abstract class Figure {
 
     protected abstract double getArea();
 
-    protected abstract String getSpecificParams();
+    protected abstract String valuesFormat();
 }
