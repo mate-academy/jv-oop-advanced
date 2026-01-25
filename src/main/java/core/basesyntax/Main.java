@@ -4,6 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         Figure[] figures = {new Rectangle(Color.BLUE, 9, 12),
+                new RightTriangle(Color.GREEN, 7, 5),
                 FigureSupplier.getDefaultFigure()};
 
         for (Figure f : figures) {

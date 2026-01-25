@@ -16,6 +16,7 @@ public class FigureSupplier {
             case CIRCLE -> new Circle(ColorSupplier.getRandomColor(), a);
             case SQUARE -> new Square(ColorSupplier.getRandomColor(), a);
             case RECTANGLE -> new Rectangle(ColorSupplier.getRandomColor(), a, b);
+            case TRIANGLE -> new RightTriangle(ColorSupplier.getRandomColor(), a, b);
             default -> getDefaultFigure();
         };
 
