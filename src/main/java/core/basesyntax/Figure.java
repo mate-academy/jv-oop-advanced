@@ -32,13 +32,13 @@ public abstract class Figure {
 
     protected String getName() {
         return name;
-    };
+    }
 
     protected abstract double getArea();
 
     protected String valuesFormat(String units) {
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i <values.length; i ++){
+        for (int i = 0; i < values.length; i++) {
             sb.append(parameters[i]).append(": ")
                     .append(values[i]).append(" ").append(units)
                     .append(", ");
