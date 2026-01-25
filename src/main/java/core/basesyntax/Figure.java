@@ -1,7 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure {
-    public static final String UNITS = "units";
+public abstract class Figure implements Drawable {
     protected Color color;
     protected String [] parameters;
     protected int[] values;
