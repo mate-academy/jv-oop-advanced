@@ -25,8 +25,9 @@ public abstract class Figure {
         return color.name().toLowerCase();
     }
 
-    public String draw() {
-        return String.format("Figure: %s, area: %.1f sq. units, %scolor: %s",
+    public void draw() {
+        System.out.printf(
+                "Figure: %s, area: %.1f sq. units, %scolor: %s%n",
                 getName(), getArea(), valuesFormat(UNITS), getColor());
     }
 
