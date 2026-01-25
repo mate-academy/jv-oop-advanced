@@ -1,6 +1,7 @@
 package core.basesyntax;
 
 public abstract class Figure {
+    public static final String UNITS = "units";
     protected Color color;
     protected String [] parameters;
     protected int[] values;
@@ -25,8 +26,8 @@ public abstract class Figure {
     }
 
     public String draw() {
-        return String.format("Figure: %s, area: %.1f sq. units, %s, color: %s",
-                getName(), getArea(), valuesFormat(), getColor());
+        return String.format("Figure: %s, area: %.1f sq. units, %scolor: %s",
+                getName(), getArea(), valuesFormat(UNITS), getColor());
     }
 
     protected String getName() {
@@ -35,5 +36,13 @@ public abstract class Figure {
 
     protected abstract double getArea();
 
-    protected abstract String valuesFormat();
+    protected String valuesFormat(String units) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i <values.length; i ++){
+            sb.append(parameters[i]).append(": ")
+                    .append(values[i]).append(" ").append(units)
+                    .append(", ");
+        }
+        return sb.toString();
+    }
 }

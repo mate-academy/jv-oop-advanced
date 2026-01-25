@@ -13,10 +13,4 @@ public class Circle extends Figure {
         int radius = values[0];
         return Math.PI * radius * radius;
     }
-
-    @Override
-    protected String valuesFormat() {
-        return parameters[0] + ": " + values[0] + " units";
-    }
-
 }

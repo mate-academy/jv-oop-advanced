@@ -13,11 +13,4 @@ public class Rectangle extends Figure {
         int width = values[1];
         return height * width;
     }
-
-    @Override
-    protected String valuesFormat() {
-        return parameters[0] + ": " + values[0] + " units"
-                + ", "
-                + parameters[1] + ": " + values[1] + " units";
-    }
 }

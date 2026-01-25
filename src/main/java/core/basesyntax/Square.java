@@ -13,11 +13,5 @@ public class Square extends Figure {
         int side = values[0];
         return side * side;
     }
-
-    @Override
-    protected String valuesFormat() {
-        return parameters[0] + ": " + values[0] + " units";
-    }
-
 }
 
