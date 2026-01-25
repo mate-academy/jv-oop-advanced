@@ -11,14 +11,9 @@ public abstract class Figure {
         this.color = color;
     }
 
-    public Figure(Color color, int value) {
+    public Figure(Color color, int... values) {
         this(color);
-        values = new int[] {value};
-    }
-
-    public Figure(Color color, int value1, int value2) {
-        this(color);
-        values = new int[] {value1, value2};
+        this.values = values;
     }
 
     public String getColor() {
