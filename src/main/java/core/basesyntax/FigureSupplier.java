@@ -12,13 +12,14 @@ public class FigureSupplier {
         int a = random.nextInt(BOUND) + 1;
         int b = random.nextInt(BOUND) + 1;
         int c = random.nextInt(BOUND) + 1;
+        ColorSupplier cs = new ColorSupplier();
 
         return switch (ft) {
-            case CIRCLE -> new Circle(ColorSupplier.getRandomColor(), a);
-            case SQUARE -> new Square(ColorSupplier.getRandomColor(), a);
-            case RECTANGLE -> new Rectangle(ColorSupplier.getRandomColor(), a, b);
-            case TRIANGLE -> new RightTriangle(ColorSupplier.getRandomColor(), a, b);
-            case TRAPEZOID -> new IsoscelesTrapezoid(ColorSupplier.getRandomColor(), a, b, c);
+            case CIRCLE -> new Circle(cs.getRandomColor(), a);
+            case SQUARE -> new Square(cs.getRandomColor(), a);
+            case RECTANGLE -> new Rectangle(cs.getRandomColor(), a, b);
+            case TRIANGLE -> new RightTriangle(cs.getRandomColor(), a, b);
+            case TRAPEZOID -> new IsoscelesTrapezoid(cs.getRandomColor(), a, b, c);
             default -> getDefaultFigure();
         };
 
