@@ -9,9 +9,9 @@ public class FigureSupplier {
     public static Figure getRandomFigure() {
         FigureType ft = FigureType.values()
                 [random.nextInt(FigureType.values().length)];
-        int a = random.nextInt(BOUND);
-        int b = random.nextInt(BOUND);
-        int c = random.nextInt(BOUND);
+        int a = random.nextInt(BOUND) + 1;
+        int b = random.nextInt(BOUND) + 1;
+        int c = random.nextInt(BOUND) + 1;
 
         return switch (ft) {
             case CIRCLE -> new Circle(ColorSupplier.getRandomColor(), a);
