@@ -3,6 +3,7 @@ package core.basesyntax;
 public class Main {
 
     public static final int SIZE = 6;
+    public static final int SHIFT = 3;
 
     public static void main(String[] args) {
         FigureSupplier fs = new FigureSupplier();
@@ -13,7 +14,7 @@ public class Main {
 
         for (int i = 0; i < 3; i++) {
             allFigures[i] = fs.getRandomFigure();
-            allFigures[i + 3] = figures[i];
+            allFigures[i + SHIFT] = figures[i];
         }
 
         for (Figure f : allFigures) {
