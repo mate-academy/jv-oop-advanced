@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class IsoscelesTrapezoid extends Figure {
+public class IsoscelesTrapezoid extends AbstractFigure {
     private Random random;
     private double topBase;
     private double bottomBase;
@@ -24,10 +24,17 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("IsoscelesTrapezoid: units, area: " + getArea() +
-                " sq. units, topBase: " + topBase + " sq. units, bottomBase: "
-                + bottomBase + " sq. units, height: " + height +
-                " sq. units, leg: " + leg + " units, color: "
-                + ColorSupplier.getRandomColor());
+        System.out.println("IsoscelesTrapezoid: units, area: "
+                + getArea()
+                + " sq. units, topBase: "
+                + topBase
+                + " sq. units, bottomBase: "
+                + bottomBase
+                + " sq. units, height: "
+                + height
+                + " sq. units, leg: "
+                + leg
+                + " units, color: "
+                + getColor());
     }
 }

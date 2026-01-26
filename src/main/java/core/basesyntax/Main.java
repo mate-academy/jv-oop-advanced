@@ -1,15 +1,19 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Main {
-    private static Figure [] figures = {new Square(), new Rectangle(), new RightTriangle(),
-            new IsoscelesTrapezoid(), new Circle()};
+    private static AbstractFigure[] figures = new AbstractFigure[6];
+    private static FigureSupplier figureSupplier = new FigureSupplier();
+    private static ColorSupplier colorSupplier = new ColorSupplier();
 
     public static void main(String[] args) {
         for (int i = 0; i < figures.length; i++) {
-            figures[i].draw();
+            if (i < figures.length / 2) {
+                figures[i] = figureSupplier.getRandomFigure();
+                figures[i].setColor(colorSupplier.getRandomColor());
+                figures[i].draw();
+            } else {
+                figureSupplier.getDefaultFigure().draw();;
+            }
         }
-
     }
 }

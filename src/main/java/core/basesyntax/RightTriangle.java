@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class RightTriangle extends Figure {
+public class RightTriangle extends AbstractFigure {
     private Random random;
     private double firstLeg;
     private double secondLeg;
@@ -20,8 +20,13 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("RightTriangle: units, area: " + getArea() +
-                " sq. units, firstLeg: " + firstLeg + " sq. units, side: "
-                + secondLeg + " units, color: " + ColorSupplier.getRandomColor());
+        System.out.println("RightTriangle: units, area: "
+                + getArea()
+                + " sq. units, firstLeg: "
+                + firstLeg
+                + " sq. units, side: "
+                + secondLeg
+                + " units, color: "
+                + getColor());
     }
 }

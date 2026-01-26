@@ -2,7 +2,7 @@ package core.basesyntax;
 
 import java.util.Random;
 
-public class Square extends Figure {
+public class Square extends AbstractFigure {
     private Random random;
     private double side;
 
@@ -18,8 +18,11 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Square: units, area: " + getArea() +
-                " sq. units, side: " + side + " units, color: "
-                + ColorSupplier.getRandomColor());
+        System.out.println("Square: units, area: "
+                + getArea()
+                + " sq. units, side: "
+                + side
+                + " units, color: "
+                + getColor());
     }
 }

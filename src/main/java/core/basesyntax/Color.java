@@ -11,4 +11,5 @@ public enum Color {
     Magenta,
     LightGray,
     DarkGray,
+    White,
 }
