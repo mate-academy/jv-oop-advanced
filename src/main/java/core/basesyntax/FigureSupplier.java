@@ -6,7 +6,7 @@ public class FigureSupplier {
     private static final int DEFAULT_RADIUS = 10;
     private static final int FIGURE_COUNT = 5;
     private static final String DEFAULT_COLOR = "White";
-    private static final int MAX_SIDE_LENGTH= 10;
+    private static final int MAX_SIDE_LENGTH = 10;
     private Random random = new Random();
     private ColorSupplier colorSupplier = new ColorSupplier();
 
