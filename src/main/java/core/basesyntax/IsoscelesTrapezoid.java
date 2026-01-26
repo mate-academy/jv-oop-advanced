@@ -1,23 +1,25 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public class IsoscelesTrapezoid extends Figure {
+    private Random random;
     private double topBase;
     private double bottomBase;
     private double height;
     private double leg;
 
-    public IsoscelesTrapezoid(String color, double topBase, double bottomBase,
-                              double height, double leg) {
-        super(color);
-        this.topBase = topBase;
-        this.bottomBase = bottomBase;
-        this.height = height;
-        this.leg = leg;
+    public IsoscelesTrapezoid() {
+        this.random = new Random();
+        this.topBase = random.nextDouble(100, 1000);
+        this.bottomBase = random.nextDouble(100, 1000);
+        this.height = random.nextDouble(100, 1000);
+        this.leg = random.nextDouble(100, 1000);
     }
 
     @Override
     public double getArea() {
-        return 0;
+        return (topBase + bottomBase) / 2.0 * height;
     }
 
     @Override

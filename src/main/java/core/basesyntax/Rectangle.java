@@ -1,13 +1,16 @@
 package core.basesyntax;
 
+import java.util.Random;
+
 public class Rectangle extends Figure {
+    private Random random;
     private double width;
     private double height;
 
-    public Rectangle(String color, double width, double height) {
-        super(color);
-        this.width = width;
-        this.height = height;
+    public Rectangle() {
+        this.random = new Random();
+        this.width = random.nextDouble(100, 1000);
+        this.height = random.nextDouble(100, 1000);
     }
 
     @Override
