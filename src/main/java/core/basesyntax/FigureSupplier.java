@@ -6,7 +6,7 @@ public class FigureSupplier {
     public static final int BOUND = 100;
     private static final Random random = new Random();
 
-    public static Figure getRandomFigure() {
+    public Figure getRandomFigure() {
         FigureType ft = FigureType.values()
                 [random.nextInt(FigureType.values().length)];
         int a = random.nextInt(BOUND) + 1;
@@ -24,7 +24,7 @@ public class FigureSupplier {
 
     }
 
-    public static Figure getDefaultFigure() {
+    public Figure getDefaultFigure() {
         return new Circle(Color.WHITE, 10);
     }
 }
