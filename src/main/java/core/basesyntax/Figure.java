@@ -29,7 +29,7 @@ public abstract class Figure implements Drawable {
         return name;
     }
 
-    protected abstract double getArea();
+    public abstract double getArea();
 
     protected String valuesFormat(String units) {
         StringBuilder sb = new StringBuilder();

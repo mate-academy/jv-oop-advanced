@@ -9,7 +9,7 @@ public class IsoscelesTrapezoid extends Figure {
     }
 
     @Override
-    protected double getArea() {
+    public double getArea() {
         int base1 = values[0];
         int base2 = values[1];
         int height = values [2];

@@ -8,7 +8,7 @@ public class Rectangle extends Figure {
     }
 
     @Override
-    protected double getArea() {
+    public double getArea() {
         int height = values[0];
         int width = values[1];
         return height * width;

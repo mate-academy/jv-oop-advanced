@@ -8,7 +8,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    protected double getArea() {
+    public double getArea() {
         int firstLeg = values[0];
         int secondLeg = values[1];
         return 0.5 * firstLeg * secondLeg;
