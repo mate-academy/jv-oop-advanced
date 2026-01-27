@@ -1,14 +1,10 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Square extends AbstractFigure {
-    private Random random;
     private double side;
 
-    public Square() {
-        this.random = new Random();
-        this.side = random.nextDouble(100, 1000);
+    public Square(double side) {
+        this.side = side;
     }
 
     @Override
@@ -18,11 +14,11 @@ public class Square extends AbstractFigure {
 
     @Override
     public void draw() {
-        System.out.println("Square: units, area: "
+        System.out.println("Figure: square, area: "
                 + getArea()
-                + " sq. units, side: "
+                + ", side: "
                 + side
-                + " units, color: "
+                + ", color: "
                 + getColor());
     }
 }

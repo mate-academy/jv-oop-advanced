@@ -1,20 +1,17 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class IsoscelesTrapezoid extends AbstractFigure {
-    private Random random;
     private double topBase;
     private double bottomBase;
     private double height;
     private double leg;
 
-    public IsoscelesTrapezoid() {
-        this.random = new Random();
-        this.topBase = random.nextDouble(100, 1000);
-        this.bottomBase = random.nextDouble(100, 1000);
-        this.height = random.nextDouble(100, 1000);
-        this.leg = random.nextDouble(100, 1000);
+    public IsoscelesTrapezoid(double topBase, double bottomBase,
+                              double height, double leg) {
+        this.topBase = topBase;
+        this.bottomBase = bottomBase;
+        this.height = height;
+        this.leg = leg;
     }
 
     @Override
@@ -24,17 +21,17 @@ public class IsoscelesTrapezoid extends AbstractFigure {
 
     @Override
     public void draw() {
-        System.out.println("IsoscelesTrapezoid: units, area: "
+        System.out.println("Figure: isoscelesTrapezoid, area: "
                 + getArea()
-                + " sq. units, topBase: "
+                + ", topBase: "
                 + topBase
-                + " sq. units, bottomBase: "
+                + ", bottomBase: "
                 + bottomBase
-                + " sq. units, height: "
+                + ", height: "
                 + height
-                + " sq. units, leg: "
+                + ", leg: "
                 + leg
-                + " units, color: "
+                + ", color: "
                 + getColor());
     }
 }

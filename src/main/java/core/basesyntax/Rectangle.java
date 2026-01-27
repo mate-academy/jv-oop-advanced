@@ -1,16 +1,12 @@
 package core.basesyntax;
 
-import java.util.Random;
-
 public class Rectangle extends AbstractFigure {
-    private Random random;
     private double width;
     private double height;
 
-    public Rectangle() {
-        this.random = new Random();
-        this.width = random.nextDouble(100, 1000);
-        this.height = random.nextDouble(100, 1000);
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
     }
 
     @Override
@@ -20,13 +16,13 @@ public class Rectangle extends AbstractFigure {
 
     @Override
     public void draw() {
-        System.out.println("Rectangle: units, area: "
+        System.out.println("Figure: rectangle, area: "
                 + getArea()
-                + " sq. units, width: "
+                + ", width: "
                 + width
-                + " sq. units, height: "
+                + ", height: "
                 + height
-                + " units, color: "
+                + ", color: "
                 + getColor());
     }
 }
