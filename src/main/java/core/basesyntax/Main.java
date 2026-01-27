@@ -13,11 +13,12 @@ public class Main {
             if (i < FIGURES_COUNT / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
                 figures[i].setColor(colorSupplier.getRandomColor());
-                figures[i].draw();
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
-                figures[i].draw();
             }
+        }
+        for (AbstractFigure figure : figures) {
+            figure.draw();
         }
     }
 }

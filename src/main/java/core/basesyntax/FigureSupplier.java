@@ -18,29 +18,30 @@ public class FigureSupplier {
 
         switch (figureType) {
             case 0:
-                return new Square(random.nextDouble(MIN_SIZE, MAX_SIZE));
+                double side = random.nextDouble(MIN_SIZE, MAX_SIZE);
+                return new Square(side);
 
             case 1:
-                return new Rectangle(
-                        random.nextDouble(MIN_SIZE, MAX_SIZE),
-                        random.nextDouble(MIN_SIZE, MAX_SIZE)
-                );
+                double width = random.nextDouble(MIN_SIZE, MAX_SIZE);
+                double rectangleHeight = random.nextDouble(MIN_SIZE, MAX_SIZE);
+                return new Rectangle(width, rectangleHeight);
+
             case 2:
-                return new RightTriangle(
-                        random.nextDouble(MIN_SIZE, MAX_SIZE),
-                        random.nextDouble(MIN_SIZE, MAX_SIZE)
-                );
+                double firstLeg = random.nextDouble(MIN_SIZE, MAX_SIZE);
+                double secondLeg = random.nextDouble(MIN_SIZE, MAX_SIZE);
+                return new RightTriangle(firstLeg, secondLeg);
+
             case 3:
-                return new IsoscelesTrapezoid(
-                        random.nextDouble(MIN_SIZE, MAX_SIZE),
-                        random.nextDouble(MIN_SIZE, MAX_SIZE),
-                        random.nextDouble(MIN_SIZE, MAX_SIZE),
-                        random.nextDouble(MIN_SIZE, MAX_SIZE)
-                );
+                double topBase = random.nextDouble(MIN_SIZE, MAX_SIZE);
+                double bottomBase = random.nextDouble(MIN_SIZE, MAX_SIZE);
+                double height = random.nextDouble(MIN_SIZE, MAX_SIZE);
+                double leg = random.nextDouble(MIN_SIZE, MAX_SIZE);
+                return new IsoscelesTrapezoid(topBase, bottomBase, height, leg);
+
             case 4:
             default:
-                return new Circle(
-                        random.nextDouble(MIN_SIZE, MAX_SIZE));
+                double radius = random.nextDouble(MIN_SIZE, MAX_SIZE);
+                return new Circle(radius);
         }
     }
 

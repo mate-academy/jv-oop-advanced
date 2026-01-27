@@ -2,16 +2,16 @@ package core.basesyntax;
 
 public class Rectangle extends AbstractFigure {
     private double width;
-    private double height;
+    private double rectangleHeight;
 
     public Rectangle(double width, double height) {
         this.width = width;
-        this.height = height;
+        this.rectangleHeight = height;
     }
 
     @Override
     public double getArea() {
-        return width * height;
+        return width * rectangleHeight;
     }
 
     @Override
@@ -21,7 +21,7 @@ public class Rectangle extends AbstractFigure {
                 + ", width: "
                 + width
                 + ", height: "
-                + height
+                + rectangleHeight
                 + ", color: "
                 + getColor());
     }
