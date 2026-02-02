@@ -4,7 +4,7 @@ public class Circle extends Figure {
     private int radius;
     private Color enumColor;
 
-    public Circle(int radius,Color enumColor) {
+    public Circle(int radius, String enumColor) {
         super(enumColor.toString());
         this.radius = radius;
 
@@ -28,7 +28,8 @@ public class Circle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure:" + "Circle," + "Area:" + getArea() + ",Color: " + getColor());
+        System.out.print("Figure:" + "circle," + "area:" + getArea() + "sq. units ");
+        System.out.println("radius:" + this.radius + "units," + "Color:" + getColor());
     }
 
     @Override

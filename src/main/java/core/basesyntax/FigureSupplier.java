@@ -11,7 +11,7 @@ public class FigureSupplier {
     private Random rand = new Random();
 
     public Figure getDefaultFigure() {
-        return new Circle(DEFAULT_RADIUS, Color.WHITE);
+        return new Circle(DEFAULT_RADIUS, Color.WHITE.name());
     }
 
     public Figure getRandomFigure() {
@@ -31,28 +31,27 @@ public class FigureSupplier {
                 return createRandomIsoscelesTrapezoid(colorSupplier.getRandomColor());
 
             default:
-                System.out.println("Unknown figure type");
-                return null;
+                throw new IllegalStateException("Unexpected value: " + index);
         }
     }
 
-    public Circle createRandomCircle(Color color) {
+    public Circle createRandomCircle(String color) {
         return new Circle(random.nextInt(MAX_SIZE),color);
     }
 
-    public RightTriangle createRandomRightTriangle(Color color) {
+    public RightTriangle createRandomRightTriangle(String color) {
         return new RightTriangle(color,random.nextDouble(MAX_SIZE),random.nextDouble(MAX_SIZE));
     }
 
-    public Rectangle createRandomRectangle(Color color) {
+    public Rectangle createRandomRectangle(String color) {
         return new Rectangle(color, random.nextDouble(MAX_SIZE),random.nextDouble(MAX_SIZE));
     }
 
-    public Square createRandomSquare(Color color) {
+    public Square createRandomSquare(String color) {
         return new Square(color,random.nextDouble(MAX_SIZE));
     }
 
-    public IsoscelesTrapezoid createRandomIsoscelesTrapezoid(Color color) {
+    public IsoscelesTrapezoid createRandomIsoscelesTrapezoid(String color) {
         double base1 = random.nextDouble(MAX_SIZE);
         double base2 = random.nextDouble(MAX_SIZE);
         return new IsoscelesTrapezoid(color,random.nextDouble(MAX_SIZE),base1,base2);
