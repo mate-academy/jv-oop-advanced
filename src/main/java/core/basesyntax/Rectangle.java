@@ -16,9 +16,9 @@ public class Rectangle extends Figure {
     public void draw() {
         System.out.print("Figure:" + "Rectangle," + "Area:");
         System.out.println(getArea() + ",Color : " + getColor());
-        System.out.print("Figure:" + "rectangle," + "area:" + getArea() + "sq. units ");
-        System.out.println("width: " + this.width + "units," + "height: ");
-        System.out.println(this.heigth + "units," + "Color:" + getColor());
+        System.out.print("Figure:" + "rectangle," + "area:" + getArea() + " sq. units ");
+        System.out.println("width: " + this.width + " units," + "height: ");
+        System.out.println(this.heigth + " units," + "Color:" + getColor());
     }
 
     @Override
