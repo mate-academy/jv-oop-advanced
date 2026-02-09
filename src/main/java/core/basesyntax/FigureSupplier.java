@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 import java.util.Random;
-
 public class FigureSupplier {
     private static final int MAX_RANDOM_NUMBER = 50;
     private static final int FIGURE_LENGTH = 5;
@@ -27,35 +26,40 @@ public class FigureSupplier {
 
     public Figure getCircle() {
         double randomNumber = Math.max(MIN_RANDOM_NUMBER, random.nextInt(MAX_RANDOM_NUMBER));;
-        return new Circle(randomNumber, randomColor.getRandomColor());
+        String color = randomColor.getRandomColor();
+        return new Circle(randomNumber, color);
     }
 
     public Figure getIsoscelesTrapezoid() {
-        double firstBases = Math.max(MIN_RANDOM_NUMBER, random.nextInt(MAX_RANDOM_NUMBER));;
-        double secondBases = Math.max(MIN_RANDOM_NUMBER, random.nextInt(MAX_RANDOM_NUMBER));;
-        double height = Math.max(MIN_RANDOM_NUMBER, random.nextInt(MAX_RANDOM_NUMBER));;
+        double firstBases = Math.max(MIN_RANDOM_NUMBER, random.nextInt(MAX_RANDOM_NUMBER));
+        double secondBases = Math.max(MIN_RANDOM_NUMBER, random.nextInt(MAX_RANDOM_NUMBER));
+        double height = Math.max(MIN_RANDOM_NUMBER, random.nextInt(MAX_RANDOM_NUMBER));
+        String color = randomColor.getRandomColor();
         return new IsoscelesTrapezoid(
                 firstBases,
                 secondBases,
                 height,
-                randomColor.getRandomColor()
+                color
         );
     }
 
     public Figure getRightTriangle() {
-        double firstLeg = Math.max(MIN_RANDOM_NUMBER, random.nextInt(MAX_RANDOM_NUMBER));;
-        double secondLeg = Math.max(MIN_RANDOM_NUMBER, random.nextInt(MAX_RANDOM_NUMBER));;
-        return new RightTriangle(firstLeg, secondLeg, randomColor.getRandomColor());
+        double firstLeg = Math.max(MIN_RANDOM_NUMBER, random.nextInt(MAX_RANDOM_NUMBER));
+        double secondLeg = Math.max(MIN_RANDOM_NUMBER, random.nextInt(MAX_RANDOM_NUMBER));
+        String color = randomColor.getRandomColor();
+        return new RightTriangle(firstLeg, secondLeg, color);
     }
 
     public Figure getRectangle() {
-        double width = Math.max(MIN_RANDOM_NUMBER, random.nextInt(MAX_RANDOM_NUMBER));;
-        double height = Math.max(MIN_RANDOM_NUMBER, random.nextInt(MAX_RANDOM_NUMBER));;
-        return new Rectangle(width, height, randomColor.getRandomColor());
+        double width = Math.max(MIN_RANDOM_NUMBER, random.nextInt(MAX_RANDOM_NUMBER));
+        double height = Math.max(MIN_RANDOM_NUMBER, random.nextInt(MAX_RANDOM_NUMBER));
+        String color = randomColor.getRandomColor();
+        return new Rectangle(width, height, color);
     }
 
     public Figure getSquare() {
-        double side = Math.max(MIN_RANDOM_NUMBER, random.nextInt(MAX_RANDOM_NUMBER));;
-        return new Square(side, randomColor.getRandomColor());
+        double side = Math.max(MIN_RANDOM_NUMBER, random.nextInt(MAX_RANDOM_NUMBER));
+        String color = randomColor.getRandomColor();
+        return new Square(side, color);
     }
 }

@@ -1,5 +1,4 @@
 package core.basesyntax;
-
 public class IsoscelesTrapezoid extends Figure implements AreaCalculator, Drawable {
     private double firstBases;
     private double secondBases;
@@ -8,56 +7,23 @@ public class IsoscelesTrapezoid extends Figure implements AreaCalculator, Drawab
     public IsoscelesTrapezoid(double firstBases, double secondBases, double height, String color) {
         super(color);
         if (firstBases <= 0 || secondBases <= 0 || height <= 0) {
-            throw new IllegalArgumentException("Radius must be positive");
+            throw new IllegalArgumentException("All dimensions must be positive");
         }
         this.firstBases = firstBases;
         this.secondBases = secondBases;
-        this.height = height;
-    }
-
-    public double getFirstBases() {
-        return firstBases;
-    }
-
-    public void setFirstBases(double firstBases) {
-        if (firstBases <= 0) {
-            return;
-        }
-        this.firstBases = firstBases;
-    }
-
-    public double getSecondBases() {
-        return secondBases;
-    }
-
-    public void setSecondBases(double secondBases) {
-        if (secondBases <= 0) {
-            return;
-        }
-        this.secondBases = secondBases;
-    }
-
-    public double getHeight() {
-        return height;
-    }
-
-    public void setHeight(double height) {
-        if (height <= 0) {
-            return;
-        }
         this.height = height;
     }
 
     @Override
     public double area() {
-        return (this.getFirstBases() + this.getSecondBases()) * this.getHeight() / 2;
+        return (this.firstBases + this.secondBases) * this.height / 2;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: isosceles trapezoid, area: "
-                + this.area() + "sq. units, first bases: "
-                + this.getFirstBases() + " units, second leg: "
-                + this.getSecondBases() + " units, color: " + getColor());
+                + this.area() + " sq. units, first bases: "
+                + this.firstBases + " units, second bases: "
+                + this.secondBases + " units, color: " + getColor());
     }
 }

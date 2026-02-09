@@ -1,5 +1,4 @@
 package core.basesyntax;
-
 public class RightTriangle extends Figure implements AreaCalculator, Drawable {
     private double firstLeg;
     private double secondLeg;
@@ -7,44 +6,22 @@ public class RightTriangle extends Figure implements AreaCalculator, Drawable {
     public RightTriangle(double firstLeg, double secondLeg, String color) {
         super(color);
         if (firstLeg <= 0 || secondLeg <= 0) {
-            throw new IllegalArgumentException("Radius must be positive");
+            throw new IllegalArgumentException("All dimensions must be positive");
         }
         this.firstLeg = firstLeg;
-        this.secondLeg = secondLeg;
-    }
-
-    public double getFirstLeg() {
-        return firstLeg;
-    }
-
-    public void setFirstLeg(double firstLeg) {
-        if (firstLeg <= 0) {
-            return;
-        }
-        this.firstLeg = firstLeg;
-    }
-
-    public double getSecondLeg() {
-        return secondLeg;
-    }
-
-    public void setSecondLeg(double secondLeg) {
-        if (secondLeg <= 0) {
-            return;
-        }
         this.secondLeg = secondLeg;
     }
 
     @Override
     public double area() {
-        return this.getFirstLeg() * this.getSecondLeg() / 2;
+        return this.firstLeg * this.secondLeg / 2;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: right triangle, area: "
-                + this.area() + "sq. units, first leg: "
-                + this.getFirstLeg() + ", second leg: "
-                + this.getSecondLeg() + " ,color: " + getColor());
+                + this.area() + " sq. units, first leg: "
+                + this.firstLeg + ", second leg: "
+                + this.secondLeg + ", color: " + getColor());
     }
 }
