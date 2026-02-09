@@ -13,4 +13,6 @@ public abstract class Figure implements Drawable {
     public String getColor() {
         return color;
     }
+
+    public abstract double area();
 }
