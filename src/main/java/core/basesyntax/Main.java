@@ -1,4 +1,5 @@
 package core.basesyntax;
+
 public class Main {
     private static final int FIGURES_LENGTH = 6;
 
