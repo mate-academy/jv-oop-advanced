@@ -1,14 +1,25 @@
 package core.basesyntax;
 
-public class Square extends Figure {
+public class Square extends Figure implements AreaCalculator, Drawable {
     private double side;
 
     public Square(double side,String color) {
         super(color);
         if (side <= 0) {
+            throw new IllegalArgumentException("Radius must be positive");
+        }
+        this.side = side;
+    }
+
+    public void setSide(double side) {
+        if (side <= 0) {
             return;
         }
         this.side = side;
+    }
+
+    public double getSide() {
+        return side;
     }
 
     @Override
@@ -22,13 +33,4 @@ public class Square extends Figure {
                 + this.area() + "sq. units, side: "
                 + this.getSide() + " ,color: " + getColor());
     }
-
-    public void setSide(double side) {
-        this.side = side;
-    }
-
-    public double getSide() {
-        return side;
-    }
-
 }
