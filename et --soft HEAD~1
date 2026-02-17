@@ -1,0 +1,274 @@
+[33mcommit 6aacff78cd7216999a9588d2edf3c14a856c7034[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: VadimN637 <turnedofff@gmail.com>
+Date:   Tue Feb 17 18:48:38 2026 +0200
+
+    1
+
+[33mcommit e2ebc075e4064a9e2221a3e2e70ab8dd996e8898[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Sergii Nosachenko <54940595+sergii-nosachenko@users.noreply.github.com>
+Date:   Tue Apr 29 19:42:48 2025 +0300
+
+    Update ci.yml
+
+[33mcommit bb8359e875ec0af04fbd458a939c34c498eda394[m
+Merge: 3b03b22 ff468ae
+Author: Safarov Renat <98067127+JJJazl@users.noreply.github.com>
+Date:   Tue Apr 29 17:08:22 2025 +0300
+
+    Merge pull request #1866 from sarakhmen/update-github-actions-versions
+    
+    Update GitHub Actions versions
+
+[33mcommit ff468ae7cb886474eb5ef5d05b1d6180760f1337[m
+Author: sarakhmen <sarakhmen@users.noreply.github.com>
+Date:   Sat Apr 26 20:13:51 2025 +0300
+
+    Update GitHub Actions versions
+
+[33mcommit 3b03b22646d0b2d4d2d91112edd47ce689dc8139[m
+Author: Bohdan Chupika <boroda4436@users.noreply.github.com>
+Date:   Mon Nov 13 13:03:48 2023 +0200
+
+    remove encoding config from checkstyle plugin
+
+[33mcommit c672b598d726b64e06cec988666f713d3a84bb6a[m
+Author: Bohdan Chupika <boroda4436@users.noreply.github.com>
+Date:   Thu Oct 12 15:01:48 2023 +0300
+
+    update checklist.md reference (#1323)
+    
+    * update checklist.md reference
+    
+    * update JDK and checkstyle plugin versions
+    
+    * update checklist.md
+
+[33mcommit fe9d2a3d66aaf1baa2ce321deee9ed22cfb335b4[m
+Author: Mykyta Oleksin <32339836+nacenik@users.noreply.github.com>
+Date:   Fri May 12 10:23:51 2023 +0300
+
+    Update ci.yml to java 17
+
+[33mcommit 05fe00b4542ae676ddd4923a1550bd3be4f6c6b4[m
+Author: Kseniia <59459757+KseniiaMakarova@users.noreply.github.com>
+Date:   Mon May 1 18:22:07 2023 +0300
+
+    Create checklist.md
+
+[33mcommit fb004a093bf08ee9dc7955cde103e4b802ab67ec[m
+Merge: 35f3e96 e18e57b
+Author: Dasha <maliuk.dasha@gmail.com>
+Date:   Mon Sep 26 14:52:50 2022 +0300
+
+    Merge pull request #671 from mate-academy/CU-3b3kcup_OOP-Advanced-add-point-about-cyrillic-words-in-project-path-to-test-warning
+
+[33mcommit e18e57b0dcec455db11b0b7602e583777252cf0b[m
+Author: Dasha <maliuk.dasha@gmail.com>
+Date:   Fri Sep 23 15:29:09 2022 +0300
+
+    refactored exceptuin message
+
+[33mcommit 35f3e96f38b568a794ff5fb7ae97e66d4841d84f[m
+Merge: 75f80af 1cf1ef2
+Author: Dasha <maliuk.dasha@gmail.com>
+Date:   Tue Jul 12 13:41:48 2022 +0300
+
+    Merge pull request #553 from mate-academy/rename-test-package
+
+[33mcommit 1cf1ef27a13db9e24237fc12d643caed863f7b11[m
+Author: Dasha <maliuk.dasha@gmail.com>
+Date:   Tue Jul 12 13:37:52 2022 +0300
+
+    renamed test package
+
+[33mcommit 75f80af87e2bd1b909d73fce572e58a5930df317[m
+Merge: 84cf4c1 94d079a
+Author: Dasha <maliuk.dasha@gmail.com>
+Date:   Thu Apr 28 21:55:15 2022 +0300
+
+    Merge pull request #463 from mate-academy/remove-comments
+
+[33mcommit 94d079a5c42e1352d54e6d39b932e9f19c10a11f[m
+Author: Dasha <maliuk.dasha@gmail.com>
+Date:   Thu Apr 28 18:24:17 2022 +0300
+
+    added access modifier
+
+[33mcommit cbb55d347588edf34aceb4ed61c4b47b20cabcd5[m
+Author: Dasha <maliuk.dasha@gmail.com>
+Date:   Thu Apr 28 18:21:39 2022 +0300
+
+    removed comments over test class
+
+[33mcommit 84cf4c1aa6df845976d86460c7222c3c8ffcc3e7[m
+Merge: b130854 d4358ee
+Author: Dasha <maliuk.dasha@gmail.com>
+Date:   Thu Apr 28 13:54:25 2022 +0300
+
+    Merge pull request #456 from mate-academy/add-tests
+
+[33mcommit d4358ee27b5196377661e3acfd93e7f541299012[m
+Author: Dasha <maliuk.dasha@gmail.com>
+Date:   Tue Apr 26 10:17:25 2022 +0300
+
+    make variable local
+
+[33mcommit c94ccef28554ba41bf8f3c93f8a20dfbcc9ef41b[m
+Author: Dasha <maliuk.dasha@gmail.com>
+Date:   Fri Apr 22 12:59:15 2022 +0300
+
+    readme fix
+
+[33mcommit e7eae0b3f75466909e9c9f746964d466c8e35e90[m
+Author: Dasha <maliuk.dasha@gmail.com>
+Date:   Fri Apr 22 12:53:43 2022 +0300
+
+    add tests
+
+[33mcommit b13085419903783859e728abe20af77fb6aedeed[m
+Author: Sofia Diakonova <36365171+Sofasmile@users.noreply.github.com>
+Date:   Tue Mar 29 08:19:28 2022 +0200
+
+    added point about toString method (#427)
+
+[33mcommit 740ae28efd17aa3fa2ec63acf2009e82439ede1d[m
+Author: RomanDubovskyi <58385506+RomanDubovskyi@users.noreply.github.com>
+Date:   Fri Dec 10 13:23:42 2021 +0200
+
+    Update README.md (#320)
+
+[33mcommit 2a5a25882ec194042ec909ec3483a81a69dddd5e[m
+Author: resci <vlad.evdockimov.062@gmail.com>
+Date:   Tue Nov 23 08:36:23 2021 +0200
+
+    Update CI config
+
+[33mcommit e28dbd1342843e0c6cbbd86cdb5afea549e6e765[m
+Author: resci <vlad.evdockimov.062@gmail.com>
+Date:   Mon Nov 22 19:37:15 2021 +0200
+
+    Migrate from Travis to Github Actions
+
+[33mcommit 88a23b410b57d3be71ff4b4138df9f05acf63ab7[m
+Author: Sofia Diakonova <36365171+Sofasmile@users.noreply.github.com>
+Date:   Thu Oct 7 07:55:59 2021 +0300
+
+    changed task description (added task to create circle manually) (#247)
+    
+    * changed task description (added task to create circle manually)
+    
+    * changed description
+    
+    * fixed typo
+
+[33mcommit ce163da4b19e6a25f6e4a418b1da98e47214ecea[m
+Author: Bohdan Chupika <boroda4436@users.noreply.github.com>
+Date:   Wed Jun 16 07:33:54 2021 +0300
+
+    Update .travis.yml
+
+[33mcommit 60ff5be84bff2da47bfd04b51e31cd15f432cbce[m
+Merge: 0dc7f22 3cc6477
+Author: KseniiaMakarova <59459757+KseniiaMakarova@users.noreply.github.com>
+Date:   Mon Apr 5 10:58:03 2021 +0300
+
+    Merge pull request #111 from mate-academy/edit-task-description
+
+[33mcommit 3cc64770fc4ff661cb90cb5050df22f91aab2bd8[m
+Author: kseniia_makarova <kseniia.makarova.kyiv@gmail.com>
+Date:   Mon Apr 5 10:43:38 2021 +0300
+
+    edited README for OOP-Advanced task
+
+[33mcommit 0dc7f2296283c52356dfc4df2d9cce7044ff0934[m
+Author: RomanDubovskyi <58385506+RomanDubovskyi@users.noreply.github.com>
+Date:   Fri Dec 11 11:10:57 2020 +0200
+
+    Update README.md (#49)
+    
+    * Update README.md
+    
+    * updated readme, tried to make description more clear
+    
+    * removed redundant empty line
+    
+    * changed name producer into supplier
+
+[33mcommit 1a0e6062160eba48f289890f89b350be5071b83b[m
+Merge: 40abcbd 192c31c
+Author: Bohdan Chupika <boroda4436@users.noreply.github.com>
+Date:   Fri Dec 4 13:37:30 2020 +0200
+
+    Merge pull request #48 from mate-academy/draw-detail
+    
+    added more clarity for draw method
+
+[33mcommit 192c31c592e36b356d5ffceca62ae3267e39cc23[m
+Author: Bohdan Chupika <boroda4436@users.noreply.github.com>
+Date:   Fri Dec 4 13:31:39 2020 +0200
+
+    added more clarity for draw method
+
+[33mcommit 40abcbd3fcc670497ca1c2b9a48df3edff0b9365[m
+Author: RomanDubovskyi <58385506+RomanDubovskyi@users.noreply.github.com>
+Date:   Tue Dec 1 13:02:09 2020 +0200
+
+    Update README.md (#7)
+
+[33mcommit fb59768fe253ec151cce3fff35dc6f4e55009aca[m
+Author: Sofia Diakonova <36365171+Sofasmile@users.noreply.github.com>
+Date:   Fri Nov 27 14:19:55 2020 +0200
+
+    update travis (#4)
+    
+    * update travis
+    
+    * removed redundant version
+
+[33mcommit 17fadf3a239860df66b4640c8a1a3baca4c9dc6f[m
+Author: RomanDubovskyi <58385506+RomanDubovskyi@users.noreply.github.com>
+Date:   Wed Nov 11 10:45:54 2020 +0200
+
+    added link with common mistakes (#3)
+
+[33mcommit c5fdcd22d8f2fb070af8979057492b4a9f16848e[m
+Merge: 5508668 2609ea6
+Author: Sofia Diakonova <36365171+Sofasmile@users.noreply.github.com>
+Date:   Mon Aug 3 14:10:14 2020 +0300
+
+    Merge pull request #2 from mate-academy/fixed-description
+    
+    fixed description of oop advanced task
+
+[33mcommit 2609ea621a26bed8e0e3d6b23d616d05cffc4b03[m
+Author: Sofasmile <sofiya.dyakonova@ukr.net>
+Date:   Mon Aug 3 14:07:58 2020 +0300
+
+    fixed description of oop advanced task
+
+[33mcommit 55086689a4b6788d2fd9232bfb004b82c485ff21[m
+Merge: 1a4d44b 06a8dfd
+Author: Sofia Diakonova <36365171+Sofasmile@users.noreply.github.com>
+Date:   Mon Aug 3 13:53:02 2020 +0300
+
+    Merge pull request #1 from mate-academy/add-readme
+    
+    added readme
+
+[33mcommit 06a8dfdebd9fdc072767017f87ee8d48a5bfa70e[m
+Author: Sofasmile <sofiya.dyakonova@ukr.net>
+Date:   Mon Aug 3 13:49:23 2020 +0300
+
+    fixed description
+
+[33mcommit 86fb7fad18d7a9dd65fd58ffcdec1a880f5a1901[m
+Author: Sofasmile <sofiya.dyakonova@ukr.net>
+Date:   Mon Aug 3 13:23:14 2020 +0300
+
+    added readme
+
+[33mcommit 1a4d44bd407d0da4dc13e262a85f9f7141759e8f[m
+Author: Sofia Diakonova <36365171+Sofasmile@users.noreply.github.com>
+Date:   Mon Aug 3 13:09:45 2020 +0300
+
+    Initial commit
