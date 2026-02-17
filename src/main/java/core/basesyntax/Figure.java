@@ -1,11 +1,6 @@
 package core.basesyntax;
 
-abstract class Figure {
-    String color;
-
-    public Figure(String color) {
-        this.color = color;
-    }
+interface Figure {
 
     public abstract double getArea();
 
