@@ -9,13 +9,12 @@ public class Main {
             figures[i] = supplier.getRandomFigure();
         }
 
-        for(int i = figures.length / 2; i < figures.length; i++) {
+        for (int i = figures.length / 2; i < figures.length; i++) {
             figures[i] = supplier.getDefaultFigure();
         }
 
-        for(Figure f : figures) {
+        for (Figure f : figures) {
             f.draw();
         }
     }
 }
-

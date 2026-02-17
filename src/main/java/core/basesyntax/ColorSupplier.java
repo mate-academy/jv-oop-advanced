@@ -11,11 +11,13 @@ public class ColorSupplier {
         Yellow,
         Pink
     }
+
     private final Random random = new Random();
+
     public String getRandomColor() {
         COLORS[] colors = COLORS.values();
         int index = random.nextInt(colors.length);
-        return colors[index].name();   
+        return colors[index].name();
     }
-    
+
 }
