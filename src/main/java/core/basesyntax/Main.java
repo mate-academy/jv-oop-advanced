@@ -2,9 +2,11 @@ package core.basesyntax;
 
 public class Main {
     public static void main(String[] args) {
-        FigureSupplier supplier = new FigureSupplier();
         int n = 6;
+        FigureSupplier supplier = new FigureSupplier();
+
         Figure[] figures = new Figure[n];
+
         for (int i = 0; i < n / 2; i++) {
             figures[i] = supplier.getRandomFigure();
         }

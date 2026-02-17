@@ -7,9 +7,10 @@ public class FigureSupplier {
     private static final int MAX = 20;
     private Random random = new Random();
     private ColorSupplier randomColor = new ColorSupplier();
+    private static final int randomInt = 5;
 
     public Figure getRandomFigure () {
-        int type = random.nextInt(5);
+        int type = random.nextInt(randomInt);
         String color = String.valueOf(randomColor.getRandomColor());
         switch (type) {
             case 0:

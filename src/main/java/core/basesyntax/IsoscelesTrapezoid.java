@@ -5,6 +5,7 @@ public class IsoscelesTrapezoid implements Figure {
     private final double isoscelesTrapezoidSideB;
     private final double isoscelesTrapezoidHeight;
     private final String color;
+    private static final int DIVISOR = 2;
 
     public IsoscelesTrapezoid(double isoscelesTrapezoidSideA, double isoscelesTrapezoidSideB, double isoscelesTrapezoidHeight, String color) {
         this.isoscelesTrapezoidSideA = isoscelesTrapezoidSideA;
@@ -15,7 +16,7 @@ public class IsoscelesTrapezoid implements Figure {
 
     @Override
     public double getArea() {
-        return (isoscelesTrapezoidSideA + isoscelesTrapezoidSideB) * isoscelesTrapezoidHeight / 2;
+        return (isoscelesTrapezoidSideA + isoscelesTrapezoidSideB) * isoscelesTrapezoidHeight / DIVISOR;
     }
 
     @Override

@@ -1,23 +1,23 @@
 package core.basesyntax;
 
 public class Square implements Figure {
-    private double squeareSide;
+    private double squareSide;
     private String color;
 
-    public Square(double squeareSide, String color) {
-        this.squeareSide = squeareSide;
+    public Square(double squareSide, String color) {
+        this.squareSide = squareSide;
         this.color = color;
     }
 
     @Override
     public double getArea() {
-        return squeareSide * squeareSide;
+        return squareSide * squareSide;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: square, area: " + getArea()
-                + " sq. units, side: " + squeareSide + " units, color: " + color);
+                + " sq. units, side: " + squareSide + " units, color: " + color);
     }
 
     @Override

@@ -1,10 +1,18 @@
 package core.basesyntax;
 
-import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class ColorSupplier {
-    public Colors getRandomColor() {
-        Random random = new Random();
-        return Colors.values()[random.nextInt(Colors.values().length)];
+    public String getRandomColor() {
+        String[] colors = {
+                "white",
+                "blue",
+                "green",
+                "yellow",
+                "black",
+                "red"
+        };
+        int i = ThreadLocalRandom.current().nextInt(colors.length);
+        return colors[i];
     }
 }

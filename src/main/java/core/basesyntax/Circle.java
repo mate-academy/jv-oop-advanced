@@ -3,6 +3,7 @@ package core.basesyntax;
 public class Circle implements Figure {
     private double circleRadius;
     private String color;
+    private static final double ROUNDING_FACTOR = 10.0;
 
     public Circle(double circleRadius, String color) {
         this.circleRadius = circleRadius;
@@ -12,7 +13,7 @@ public class Circle implements Figure {
     @Override
     public double getArea() {
         double raw = Math.PI * circleRadius * circleRadius;
-        return Math.round(raw * 10.0) / 10.0;
+        return Math.round(raw * ROUNDING_FACTOR) / ROUNDING_FACTOR;
     }
 
     @Override
