@@ -1,5 +1,4 @@
 package core.basesyntax;
-
 import java.util.Random;
 
 public class FigureSupplier {
@@ -7,10 +6,11 @@ public class FigureSupplier {
     private static final int MAX = 20;
     private Random random = new Random();
     private ColorSupplier randomColor = new ColorSupplier();
-    private static final int randomInt = 5;
+    private static final int RANDOM_INT = 5;
+    private static final double DEFAULT_RADIUS = 10.0;
 
     public Figure getRandomFigure () {
-        int type = random.nextInt(randomInt);
+        int type = random.nextInt(RANDOM_INT);
         String color = String.valueOf(randomColor.getRandomColor());
         switch (type) {
             case 0:
@@ -38,6 +38,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(10, "white");
+        return new Circle(DEFAULT_RADIUS, "white");
     }
 }

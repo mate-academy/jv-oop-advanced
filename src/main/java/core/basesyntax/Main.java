@@ -2,15 +2,15 @@ package core.basesyntax;
 
 public class Main {
     public static void main(String[] args) {
-        int n = 6;
+        final int N = 6;
         FigureSupplier supplier = new FigureSupplier();
 
-        Figure[] figures = new Figure[n];
+        Figure[] figures = new Figure[N];
 
-        for (int i = 0; i < n / 2; i++) {
+        for (int i = 0; i < N / 2; i++) {
             figures[i] = supplier.getRandomFigure();
         }
-        for (int i = n / 2; i < n; i++) {
+        for (int i = N / 2; i < N; i++) {
             figures[i] = supplier.getDefaultFigure();
         }
         for (Figure f : figures) {

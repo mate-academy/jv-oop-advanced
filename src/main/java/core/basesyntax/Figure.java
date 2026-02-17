@@ -1,7 +1,6 @@
 package core.basesyntax;
 
-public interface Figure {
+public interface Figure extends FigureDraw {
     double getArea();
-    void draw();
     String getColor();
 }

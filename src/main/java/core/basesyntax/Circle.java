@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Circle implements Figure {
+public class Circle implements Figure, FigureDraw {
     private double circleRadius;
     private String color;
     private static final double ROUNDING_FACTOR = 10.0;
@@ -17,13 +17,13 @@ public class Circle implements Figure {
     }
 
     @Override
-    public void draw() {
-        System.out.println("Figure: circle, area: " + getArea()
-                + " sq. units, radius: " + circleRadius + " units, color: " + color);
+    public String getColor() {
+        return color;
     }
 
     @Override
-    public String getColor() {
-        return color;
+    public void draw() {
+        System.out.println("Figure: circle, area: " + getArea()
+                + " sq. units, radius: " + circleRadius + " units, color: " + color);
     }
 }

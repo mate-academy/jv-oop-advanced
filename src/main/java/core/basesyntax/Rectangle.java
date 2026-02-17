@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle implements Figure {
+public class Rectangle implements Figure, FigureDraw {
     private double rectangleSideA;
     private double rectangleSideB;
     private String color;
@@ -17,14 +17,14 @@ public class Rectangle implements Figure {
     }
 
     @Override
+    public String getColor() {
+        return color;
+    }
+
+    @Override
     public void draw() {
         System.out.println("Figure: rectangle, area: " + getArea()
                 + " sq. units, sideA: " + rectangleSideA + " units, sideB: " + rectangleSideB
                 + " units, color: " + color);
-    }
-
-    @Override
-    public String getColor() {
-        return color;
     }
 }
