@@ -19,10 +19,11 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("This is right triangle with first leg - "
-                + this.firstLeg + ", secondLeg - " + this.secondLeg
-                + ", hypotenuse - " + this. hypotenuse
-                + ", color - " + this.getColor()
-                + " and area - " + this.calcArea());
+        System.out.println("Figure : isosceles trapezoid, "
+                + "area: " + calcArea() + " sq. units, "
+                + "first leg :" + firstLeg + " units, "
+                + "second leg:" + secondLeg + " units, "
+                + "hypotenuse :" + hypotenuse + " units, "
+                + "color : " + getColor());
     }
 }

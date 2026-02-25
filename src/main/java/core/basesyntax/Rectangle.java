@@ -17,8 +17,10 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("This is rectangle with width - "
-                + this.width + " ,height - " + this.height + " ,color - " + this.getColor()
-                + " and area - " + this.calcArea());
+        System.out.println("Figure : isosceles trapezoid, "
+                + "area: " + calcArea() + " sq. units, "
+                + "width :" + width + " units, "
+                + "height :" + height + " units, "
+                + "color : " + getColor());
     }
 }

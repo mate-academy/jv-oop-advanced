@@ -15,8 +15,9 @@ public class Square extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("This is square with side - "
-                + this.side + " ,color - " + this.getColor()
-                + " and area - " + this.calcArea());
+        System.out.println("Figure : isosceles trapezoid, "
+                + "area: " + calcArea() + " sq. units, "
+                + "side :" + side + " units, "
+                + "color : " + getColor());
     }
 }
