@@ -6,7 +6,7 @@ public class IsoscelesTrapezoid extends Figure {
     private final double leg;
 
     public IsoscelesTrapezoid(double upperBase, double lowerBase, double leg, String color) {
-        this.color = color;
+        this.setColor(color);
         this.leg = leg;
         this.lowerBase = lowerBase;
         this.upperBase = upperBase;
@@ -24,7 +24,7 @@ public class IsoscelesTrapezoid extends Figure {
         System.out.println("This is isosceles trapezoid with upper base - "
                 + this.upperBase + ", lower base - " + this.lowerBase
                 + ", leg - " + this. leg
-                + ", color - " + this.color
+                + ", color - " + this.getColor()
                 + " and area - " + this.calcArea());
     }
 }

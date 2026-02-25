@@ -1,5 +1,13 @@
 package core.basesyntax;
 
-public abstract class Figure implements Arable, Drawable{
-    String color;
+public abstract class Figure implements Arable, Drawable {
+    private String color;
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
 }

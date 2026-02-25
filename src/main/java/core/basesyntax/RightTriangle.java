@@ -6,7 +6,7 @@ public class RightTriangle extends Figure {
     private final double hypotenuse;
 
     public RightTriangle(double firstLeg, double secondLeg, double hypotenuse, String color) {
-        this.color = color;
+        this.setColor(color);
         this.secondLeg = secondLeg;
         this.firstLeg = firstLeg;
         this.hypotenuse = hypotenuse;
@@ -14,7 +14,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public double calcArea() {
-        return (firstLeg * secondLeg)/2.0;
+        return (firstLeg * secondLeg) / 2.0;
     }
 
     @Override
@@ -22,7 +22,7 @@ public class RightTriangle extends Figure {
         System.out.println("This is right triangle with first leg - "
                 + this.firstLeg + ", secondLeg - " + this.secondLeg
                 + ", hypotenuse - " + this. hypotenuse
-                + ", color - " + this.color
+                + ", color - " + this.getColor()
                 + " and area - " + this.calcArea());
     }
 }

@@ -13,20 +13,28 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         int rndNum = RANDOM.nextInt(ORIGIN, BOUND);
         return switch (rndNum) {
-            case 1 -> new Circle(Math.round(RANDOM.nextDouble(MAX_LEN) * 100.0) / 100.0, COLOR_SUPPLIER.getRandomColor());
-            case 2 -> new IsoscelesTrapezoid(Math.round(RANDOM.nextDouble(MAX_LEN) * 100.0) / 100.0,
+            case 1 -> new Circle(Math.round(RANDOM.nextDouble(MAX_LEN) * 100.0) / 100.0,
+                    COLOR_SUPPLIER.getRandomColor());
+            case 2 -> new IsoscelesTrapezoid(
                     Math.round(RANDOM.nextDouble(MAX_LEN) * 100.0) / 100.0,
-                    Math.round(RANDOM.nextDouble(MAX_LEN) * 100.0) / 100.0, COLOR_SUPPLIER.getRandomColor());
+                    Math.round(RANDOM.nextDouble(MAX_LEN) * 100.0) / 100.0,
+                    Math.round(RANDOM.nextDouble(MAX_LEN) * 100.0) / 100.0,
+                    COLOR_SUPPLIER.getRandomColor());
             case 3 -> new Rectangle(Math.round(RANDOM.nextDouble(MAX_LEN) * 100.0) / 100.0,
                     Math.round(RANDOM.nextDouble(MAX_LEN) * 100.0) / 100.0,
                     COLOR_SUPPLIER.getRandomColor());
-            case 4 -> new RightTriangle(Math.round(RANDOM.nextDouble(MAX_LEN) * 100.0) / 100.0,
+            case 4 -> new RightTriangle(
                     Math.round(RANDOM.nextDouble(MAX_LEN) * 100.0) / 100.0,
-                    Math.round(RANDOM.nextDouble(MAX_LEN) * 100.0) / 100.0, COLOR_SUPPLIER.getRandomColor());
-            case 5 -> new Square(Math.round(RANDOM.nextDouble(MAX_LEN) * 100.0) / 100.0, COLOR_SUPPLIER.getRandomColor());
+                    Math.round(RANDOM.nextDouble(MAX_LEN) * 100.0) / 100.0,
+                    Math.round(RANDOM.nextDouble(MAX_LEN) * 100.0) / 100.0,
+                    COLOR_SUPPLIER.getRandomColor());
+            case 5 -> new Square(
+                    Math.round(RANDOM.nextDouble(MAX_LEN) * 100.0) / 100.0,
+                    COLOR_SUPPLIER.getRandomColor());
             default -> getDefaultFigure();
         };
     }
+
     public Figure getDefaultFigure() {
         return new Circle(DEFAULT_CIRCLE_RADIUS, Color.WHITE.name());
     }
