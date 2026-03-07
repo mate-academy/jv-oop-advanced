@@ -6,11 +6,13 @@ public class FigureSupplier {
     private static final Random RANDOM = new Random();
     private static final int FIGURE_TYPES = 5;
     private static final double MAX_SIZE = 100;
+    private static final double DEFAULT_RADIUS = 10;
 
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        Color color = colorSupplier.getRandomColor();
+        String colorName = colorSupplier.getRandomColor();
+        Color color = Color.valueOf(colorName);
         int type = RANDOM.nextInt(FIGURE_TYPES);
 
         switch (type) {
@@ -44,6 +46,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE, 10);
+        return new Circle(Color.WHITE, DEFAULT_RADIUS);
     }
 }
