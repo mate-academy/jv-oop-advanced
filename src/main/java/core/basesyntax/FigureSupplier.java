@@ -3,35 +3,50 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final String DEFAULT_COLOR = "white";
+    private static final int DEFAULT_RADIUS = 10;
+    private static final double DEFAULT_FIGURE_BOUND = 11;
+    private static final int FIGURES_COUNT = 5;
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final Random random = new Random();
 
     public Figure getRandomFigure() {
-        int figureType = random.nextInt(5);
-        return switch (figureType) {
-            case 0 -> new Circle(colorSupplier.getRandomColor(), random.nextDouble() * 10 + 1);
-            case 1 -> new Square(colorSupplier.getRandomColor(), random.nextDouble() * 10 + 1);
-            case 2 ->
-                    new Rectangle(
-                            colorSupplier.getRandomColor(),
-                            random.nextDouble() * 10 + 1,
-                            random.nextDouble() * 10 + 1);
-            case 3 ->
-                    new RightTriangle(
-                            colorSupplier.getRandomColor(),
-                            random.nextDouble() * 10 + 1,
-                            random.nextDouble() * 10 + 1);
-            case 4 ->
-                    new IsoscelesTrapezoid(
-                            colorSupplier.getRandomColor(),
-                            random.nextDouble() * 10 + 1,
-                            random.nextDouble() * 10 + 1,
-                            random.nextDouble() * 10 + 1);
-            default -> new Circle(colorSupplier.getRandomColor(), random.nextDouble() * 5 + 1);
-        };
+        int figureType = random.nextInt(FIGURES_COUNT);
+        String color = colorSupplier.getRandomColor();
+
+        switch (figureType) {
+            case 0: {
+                double radius = random.nextDouble(DEFAULT_FIGURE_BOUND);
+                return new Circle(color, radius);
+            }
+            case 1: {
+                double side = random.nextDouble(DEFAULT_FIGURE_BOUND);
+                return new Square(color, side);
+            }
+            case 2: {
+                double width = random.nextDouble(DEFAULT_FIGURE_BOUND);
+                double height = random.nextDouble(DEFAULT_FIGURE_BOUND);
+                return new Rectangle(color, width, height);
+            }
+            case 3: {
+                double legA = random.nextDouble(DEFAULT_FIGURE_BOUND);
+                double legB = random.nextDouble(DEFAULT_FIGURE_BOUND);
+                return new RightTriangle(color, legA, legB);
+            }
+            case 4: {
+                double base1 = random.nextDouble(DEFAULT_FIGURE_BOUND);
+                double base2 = random.nextDouble(DEFAULT_FIGURE_BOUND);
+                double height = random.nextDouble(DEFAULT_FIGURE_BOUND);
+                return new IsoscelesTrapezoid(color, base1, base2, height);
+            }
+            default: {
+                double radius = random.nextDouble(DEFAULT_FIGURE_BOUND);
+                return new Circle(color, radius);
+            }
+        }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle("white", 10);
+        return new Circle(DEFAULT_COLOR, DEFAULT_RADIUS);
     }
 }
