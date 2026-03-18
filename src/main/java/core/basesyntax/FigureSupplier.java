@@ -11,11 +11,11 @@ public class FigureSupplier {
         SQUARE
     }
 
-    private final Random randomizer = new Random();
-    private final ColorSupplier colorSupplier = new ColorSupplier();
     private static final int MAX_SIZE = 20;
     private static final int DEFAULT_SIZE = 10;
     private static final String DEFAULT_COLOR = Colors.WHITE.name();
+    private final Random randomizer = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
         int randomIndex = randomizer.nextInt(Figures.values().length);
