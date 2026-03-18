@@ -11,8 +11,8 @@ public class FigureSupplier {
         SQUARE
     }
 
-    private static final Random randomizer = new Random();
-    private static final ColorSupplier colorSupplier = new ColorSupplier();
+    private final Random randomizer = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
     private static final int MAX_SIZE = 20;
     private static final int DEFAULT_SIZE = 10;
     private static final String DEFAULT_COLOR = Colors.WHITE.name();
