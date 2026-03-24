@@ -10,11 +10,15 @@ import java.util.Random;
 
 public class FigureSupplier {
     private static final int FIGURE_COUNT = 5;
+    private static final int MAX_VALUE = 10;
+    private static final int MIN_VALUE = 1;
+    private static final String DEFAULT_COLOR = "white";
+    private static final int DEFAULT_NUMBER = 10;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getDefaultFigure() {
-        return new Circle("white", 10);
+        return new Circle(DEFAULT_COLOR, DEFAULT_NUMBER);
     }
 
     public Figure getRandomFigure() {
@@ -22,41 +26,46 @@ public class FigureSupplier {
 
         switch (type) {
             case 0: {
-                double radius = random.nextDouble() * 10 + 1;
-                return new Circle(colorSupplier.getRandomColor(), radius);
+                double radius = random.nextDouble() * MAX_VALUE + MIN_VALUE;
+                String color = colorSupplier.getRandomColor();
+                return new Circle(color, radius);
             }
             case 1: {
-                double upperBase = random.nextDouble() * 10 + 1;
-                double lowerBase = random.nextDouble() * 10 + 1;
-                double height = random.nextDouble() * 10 + 1;
+                String color = colorSupplier.getRandomColor();
+                double upperBase = random.nextDouble() * MAX_VALUE + MIN_VALUE;
+                double lowerBase = random.nextDouble() * MAX_VALUE + MIN_VALUE;
+                double height = random.nextDouble() * MAX_VALUE + MIN_VALUE;
                 return new IsoscelesTrapezoid(
-                        colorSupplier.getRandomColor(),
+                        color,
                         upperBase,
                         lowerBase,
                         height
                 );
             }
             case 2: {
-                double height = random.nextDouble() * 10 + 1;
-                double width = random.nextDouble() * 10 + 1;
+                String color = colorSupplier.getRandomColor();
+                double height = random.nextDouble() * MAX_VALUE + MIN_VALUE;
+                double width = random.nextDouble() * MAX_VALUE + MIN_VALUE;
                 return new Rectangle(
-                        colorSupplier.getRandomColor(),
+                        color,
                         height,
                         width
                 );
             }
             case 3: {
-                double firstLeg = random.nextDouble() * 10 + 1;
-                double secondLeg = random.nextDouble() * 10 + 1;
+                String color = colorSupplier.getRandomColor();
+                double firstLeg = random.nextDouble() * MAX_VALUE + MIN_VALUE;
+                double secondLeg = random.nextDouble() * MAX_VALUE + MIN_VALUE;
                 return new RightTriangle(
-                        colorSupplier.getRandomColor(),
+                        color,
                         firstLeg,
                         secondLeg
                 );
             }
             default: {
-                double side = random.nextDouble() * 10 + 1;
-                return new Square(colorSupplier.getRandomColor(), side);
+                String color = colorSupplier.getRandomColor();
+                double side = random.nextDouble() * MAX_VALUE + MIN_VALUE;
+                return new Square(color, side);
             }
         }
     }
