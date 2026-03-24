@@ -1,0 +1,30 @@
+package core.basesyntax.figures;
+
+import core.basesyntax.Figure;
+
+public class Circle extends Figure {
+    private final double radius;
+
+    public Circle(String color, double radius) {
+        super(color);
+        this.radius = radius;
+    }
+
+    public double getRadius() {
+        return radius;
+    }
+
+    @Override
+    public double getArea() {
+        return Math.PI * radius * radius;
+    }
+
+    @Override
+    public void draw() {
+        System.out.println(
+                "Figure: circle, area: " + String.format("%.1f",getArea())
+                        + " sq. units, radius: " + String.format("%.1f",radius)
+                        + " units, color: " + getColor()
+        );
+    }
+}
