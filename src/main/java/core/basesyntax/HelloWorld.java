@@ -21,5 +21,4 @@ public class HelloWorld {
             figure.draw();
         }
     }
-
 }
