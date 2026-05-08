@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public abstract class Figure implements Drawable {
     // color is String, as described in the README document
     private String color;
     private FigureType figureType;
