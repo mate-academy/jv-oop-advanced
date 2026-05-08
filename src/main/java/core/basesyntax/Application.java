@@ -1,12 +1,13 @@
 package core.basesyntax;
 
 public class Application {
-    private static final FigureSupplier figureSupplier = new FigureSupplier();
+    private static final int FIGURES_COUNT = 6;
 
     public static void main(String[] args) {
-        Figure[] figures = new Figure[6];
-        for (int i = 0; i < 6; i++) {
-            if (i < 3) {
+        FigureSupplier figureSupplier = new FigureSupplier();
+        Figure[] figures = new Figure[FIGURES_COUNT];
+        for (int i = 0; i < FIGURES_COUNT; i++) {
+            if (i < FIGURES_COUNT / 2) {
                 figures[i] = figureSupplier.getRandomFigure();
             } else {
                 figures[i] = figureSupplier.getDefaultFigure();
