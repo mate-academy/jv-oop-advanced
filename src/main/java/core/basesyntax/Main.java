@@ -2,7 +2,7 @@ package core.basesyntax;
 
 public class Main {
     public static void main(String[] args) {
-        final int size = 6;
+        final int size = 5;
         Figure[] figures = new Figure[size];
 
         FigureSupplier supplier = new FigureSupplier();
