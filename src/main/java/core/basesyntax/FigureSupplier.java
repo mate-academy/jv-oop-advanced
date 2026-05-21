@@ -11,7 +11,7 @@ public class FigureSupplier {
     public Figure getRandomFigure() {
         int figureType = random.nextInt(5);
 
-        Color color = colorSupplier.getRandomColor();
+        String color = colorSupplier.getRandomColor();
 
         switch (figureType) {
             case 0:
@@ -54,6 +54,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE, 10);
+        return new Circle("white", 10);
     }
 }
