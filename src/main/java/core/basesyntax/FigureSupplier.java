@@ -54,6 +54,6 @@ public class FigureSupplier {
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.BLUE, 10);
+        return new Circle(Color.WHITE, 10);
     }
 }
