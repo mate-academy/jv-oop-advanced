@@ -1,8 +1,8 @@
 package core.basesyntax.figures;
 
-import java.util.Map;
-
 import static java.lang.Math.pow;
+
+import java.util.Map;
 
 public class Square extends Figure {
     public Square(String color, int side) {
