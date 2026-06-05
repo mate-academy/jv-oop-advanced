@@ -3,7 +3,8 @@ package core.basesyntax;
 public class Main {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
-        Figure[] array = new Figure[6];
+        final int arraySize = 6;
+        Figure[] array = new Figure[arraySize];
         for (int i = 0; i < array.length; i++) {
             if (i < array.length / 2) {
                 System.out.println(figureSupplier.getRandomFigure().draw());

@@ -3,13 +3,14 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final String colorDefault = "white";
-    private final int radiusDefault = 10;
-    private final int maxValue = 100;
+    private static final String colorDefault = Color.WHITE.name();
+    private static final int radiusDefault = 10;
+    private static final int maxValue = 100;
     private String color = new ColorSupplier().getRandomColor();
-    private int sideX = new Random().nextInt(maxValue) + 1;
-    private int sideY = new Random().nextInt(maxValue) + 1;
-    private int sideZ = new Random().nextInt(maxValue) + 1;
+    private Random random = new Random();
+    private int sideX = random.nextInt(maxValue) + 1;
+    private int sideY = random.nextInt(maxValue) + 1;
+    private int sideZ = random.nextInt(maxValue) + 1;
 
     public Figure getRandomFigure() {
         Figure[] figure = {new Square(sideX, color),
