@@ -24,7 +24,7 @@ public class FigureSupplier {
                         color,
                         randomSize(),
                         randomSize(),
-                        randomSize() );
+                        randomSize());
             default:
                 throw new IllegalStateException("Unknown figure type");
         }
