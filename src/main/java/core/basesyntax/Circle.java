@@ -10,8 +10,8 @@ public class Circle extends Figure {
 
     @Override
     public void toDraw() {
-        System.out.println(getColor() + " Circle, radius: " + radius
-                + "\n area " + getArea());
+        System.out.println("Figure: " + "circle " + " area " + getArea()
+                + " sq. units, radius: " + radius + " units, color: " + getColor());
     }
 
     @Override
