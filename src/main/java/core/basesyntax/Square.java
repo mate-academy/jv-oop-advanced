@@ -7,10 +7,12 @@ public class Square extends Figure implements Drawnable {
         super(color);
         this.side = i;
     }
+
     @Override
     public void toDraw() {
         System.out.println("Square:" + "\n side: " + side + "\n area " + getArea());
     }
+
     @Override
     public double getArea() {
         return side * side;

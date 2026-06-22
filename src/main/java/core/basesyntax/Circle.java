@@ -7,10 +7,12 @@ public class Circle extends Figure implements Drawnable {
         super(color);
         this.radius = i;
     }
+
     @Override
     public void toDraw() {
         System.out.println("Circle, radius: " + radius + "\n area " + getArea());
     }
+
     @Override
     public double getArea() {
         return radius * radius * Math.PI;

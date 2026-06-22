@@ -13,26 +13,27 @@ public class FigureSupplier {
         switch (type) {
             case 0:
                 return new Circle(color, randomSize());
-                case 1:
+            case 1:
                 return new Square(color, randomSize());
-                case 2:
+            case 2:
                 return new Rectangle(color, randomSize(), randomSize());
-                case 3:
+            case 3:
                 return new RightTriangle(color, randomSize(), randomSize());
-                case 4:
+            case 4:
                 return new IsoscelesTrapezoid(
                         color,
-                        randomSize(), // base1
-                        randomSize(), // base2
-                        randomSize()  // height
-                );
-                default:
+                        randomSize(),
+                        randomSize(),
+                        randomSize() );
+            default:
                 throw new IllegalStateException("Unknown figure type");
         }
     }
+
     public Figure getDefaultFigure() {
         return new Circle("" + Colors.WHITE, 10);
     }
+
     private int randomSize() {
         return random.nextInt(30) + 1;
     }
