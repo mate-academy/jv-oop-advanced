@@ -2,7 +2,7 @@ package core.basesyntax;
 
 public class HelloWorld {
     public static void main(String[] args) {
-        Drawable[] figures = new Drawable[6];
+        Figure[] figures = new Figure[6];
         FigureSupplier figureSupplier = new FigureSupplier();
 
         for (int i = 0; i < figures.length / 2; i++) {
@@ -11,7 +11,7 @@ public class HelloWorld {
         for (int i = figures.length / 2; i < figures.length; i++) {
             figures[i] = figureSupplier.getDefaultFigure();
         }
-        for (Drawable figure : figures) {
+        for (Figure figure : figures) {
             figure.toDraw();
         }
     }

@@ -11,5 +11,7 @@ public abstract class Figure {
         return color;
     }
 
+    public abstract void toDraw();
+
     public abstract double getArea();
 }
