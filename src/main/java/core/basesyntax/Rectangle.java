@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class Rectangle extends Figure implements Drawnable {
+public class Rectangle extends Figure implements Drawable {
     private int width;
     private int height;
 
@@ -12,8 +12,8 @@ public class Rectangle extends Figure implements Drawnable {
 
     @Override
     public void toDraw() {
-        System.out.println("Rectangle: " + "\n width: " + width + " height: "
-                + height + "\n area " + getArea());
+        System.out.println(getColor() + " Rectangle: " + "\n width: "
+                + width + " height: " + height + "\n area " + getArea());
     }
 
     @Override

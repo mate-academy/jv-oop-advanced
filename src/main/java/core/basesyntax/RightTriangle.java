@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements Drawnable {
+public class RightTriangle extends Figure implements Drawable {
     private int firstLeg;
     private int secondLeg;
 
@@ -12,8 +12,8 @@ public class RightTriangle extends Figure implements Drawnable {
 
     @Override
     public void toDraw() {
-        System.out.println("RightTriangle: " + "\n first leg: " + firstLeg + " second leg: "
-                + secondLeg + "\n area " + getArea());
+        System.out.println(getColor() + " RightTriangle: " + "\n first leg: "
+                + firstLeg + " second leg: " + secondLeg + "\n area " + getArea());
     }
 
     @Override

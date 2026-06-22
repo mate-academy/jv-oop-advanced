@@ -6,7 +6,7 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
 
-    public Figure getRandomFigure() {
+    public Drawable getRandomFigure() {
         String color = colorSupplier.getRandomColor();
         int type = random.nextInt(5);
 
@@ -30,7 +30,7 @@ public class FigureSupplier {
         }
     }
 
-    public Figure getDefaultFigure() {
+    public Drawable getDefaultFigure() {
         return new Circle("" + Colors.WHITE, 10);
     }
 
