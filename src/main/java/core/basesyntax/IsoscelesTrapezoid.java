@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure{
+public class IsoscelesTrapezoid extends Figure {
     private double topBase;
     private double bottomBase;
     private double height;
@@ -19,9 +19,9 @@ public class IsoscelesTrapezoid extends Figure{
 
     @Override
     public void draw() {
-        System.out.println(String.format("Figure: isosceles trapezoid, area: %.1f sq. units," +
-                        " top base: %.1f units, bottom base: %.1f units, height: %.1f units" +
-                        ", color: %s"
-                , getArea(),topBase, bottomBase, height, getColor()));
+        System.out.println(String.format("Figure: isosceles trapezoid, area: %.1f sq. units,"
+                        + " top base: %.1f units, bottom base: %.1f units, height: %.1f units"
+                        + ", color: %s",
+                         getArea(),topBase, bottomBase, height, getColor()));
     }
 }
