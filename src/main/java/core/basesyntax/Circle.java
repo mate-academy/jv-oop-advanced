@@ -15,7 +15,7 @@ public class Circle extends Figure{
 
     @Override
     public void draw() {
-        System.out.println(String.format("Figure: circle, area: %.2f sq. units, radius : %.2f units, color: %s"
+        System.out.println(String.format("Figure: circle, area: %.1f sq. units, radius: %.1f units, color: %s"
                 , getArea(), radius, getColor()));
     }
 }
