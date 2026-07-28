@@ -20,6 +20,6 @@ public class Rectangle extends Figure {
         System.out.println("Figure: rectangle, area: " + getArea()
                 + ", width: " + width
                 + ", height: " + height
-                + ", color=" + getColor());
+                + ", color: " + getColor());
     }
 }
