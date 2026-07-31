@@ -8,17 +8,17 @@ public class FigureSupplier {
     private final int figuresCount;
     private final int maxBound;
 
+    public FigureSupplier() {
+        figuresCount = 5;
+        maxBound = 100;
+    }
+
     public int getFiguresCount() {
         return figuresCount;
     }
 
     public int getMaxBound() {
         return maxBound;
-    }
-
-    public FigureSupplier() {
-        figuresCount = 5;
-        maxBound = 100;
     }
 
     public Figure getRandomFigure() {
