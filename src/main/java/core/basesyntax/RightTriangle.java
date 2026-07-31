@@ -1,23 +1,23 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure {
-    private final int base;
-    private final int height;
+    private final int firstLeg;
+    private final int secondLeg;
 
-    public RightTriangle(String color, int base, int height) {
+    public RightTriangle(String color, int firstLeg, int secondLeg) {
         super(color);
-        this.base = base;
-        this.height = height;
+        this.firstLeg = firstLeg;
+        this.secondLeg = secondLeg;
     }
 
     @Override
     public double getArea() {
-        return 0.5 * base * height;
+        return 0.5 * firstLeg * secondLeg;
     }
 
     @Override
     public void draw() {
         System.out.println("Figure: right triangle, area: " + getArea() + " sq. units, "
-                + "base: " + base + " units, height: " + height + " units, color: " + color);
+                + "firstLeg: " + firstLeg + " units, secondLeg: " + secondLeg + " units, color: " + color);
     }
 }
