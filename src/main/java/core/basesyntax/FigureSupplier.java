@@ -8,28 +8,17 @@ public class FigureSupplier extends ColorSupplier {
 
     public Figure getRandomFigure() {
         int index = random.nextInt(5);
-        switch (index) {
-            case 0 -> {
-                return new Circle(getRandomColor(), random.nextDouble());
-            }
-            case 1 -> {
-                return new IsoscelesTrapezoid(getRandomColor(), random.nextDouble(),
+        return switch (index) {
+            case 0 -> new Circle(getRandomColor(), random.nextDouble());
+            case 1 -> new IsoscelesTrapezoid(getRandomColor(), random.nextDouble(),
                         random.nextDouble(),
                         random.nextDouble());
-            }
-            case 2 -> {
-                return new Rectangle(getRandomColor(), random.nextDouble(), random.nextDouble());
-            }
-            case 3 -> {
-                return new RightTriangle(getRandomColor(), random.nextDouble(),
+            case 2 -> new Rectangle(getRandomColor(), random.nextDouble(), random.nextDouble());
+            case 3 -> new RightTriangle(getRandomColor(), random.nextDouble(),
                         random.nextDouble());
-            }
-            case 4 -> {
-                return new Square(getRandomColor(), random.nextDouble());
-            }
+
             default -> new Square(getRandomColor(), random.nextDouble());
-        }
-        return null;
+        };
     }
 
     public Figure getDefaultFigure() {

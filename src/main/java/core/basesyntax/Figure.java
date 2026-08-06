@@ -19,8 +19,8 @@ public abstract class Figure implements ObtainingArea {
         Figure[] figures = {
                 fs1.getRandomFigure(),
                 fs1.getRandomFigure(),
-                fs1.getRandomFigure(),
-                fs1.getRandomFigure(),
+                fs1.getDefaultFigure(),
+                fs1.getDefaultFigure()
         };
 
         for (Figure figure : figures) {
