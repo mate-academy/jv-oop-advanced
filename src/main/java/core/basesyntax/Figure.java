@@ -12,7 +12,7 @@ public abstract class Figure implements ObtainingArea {
         return color;
     }
 
-    public abstract void print();
+    public abstract void draw();
 
     public static void main(String[] args) {
         FigureSupplier fs1 = new FigureSupplier();
@@ -24,7 +24,7 @@ public abstract class Figure implements ObtainingArea {
         };
 
         for (Figure figure : figures) {
-            figure.print();
+            figure.draw();
         }
     }
 }

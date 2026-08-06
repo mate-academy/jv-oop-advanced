@@ -27,7 +27,7 @@ public class FigureSupplier extends ColorSupplier {
             case 4 -> {
                 return new Square(getRandomColor(), random.nextDouble());
             }
-            default -> System.out.println("There's no object");
+            default -> new Square(getRandomColor(), random.nextDouble());
         }
         return null;
     }

@@ -16,7 +16,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public void print() {
+    public void draw() {
         System.out.println("Figure: RightTriangle , area: " + obtaining()
                 + " sq. units,  firstLeg: " + firstLeg
                 + " units, secondLeg: " + secondLeg
