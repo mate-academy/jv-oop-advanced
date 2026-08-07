@@ -9,7 +9,7 @@ public class FigureSupplier {
     private final ColorSupplier colorSupplier = new ColorSupplier();
     
     public Figure getRandomFigure() {
-        int figureNumber = random.nextInt(FIGURE_COUNT + 1);
+        int figureNumber = random.nextInt(FIGURE_COUNT);
         String color = colorSupplier.getRandomColor();
         
         switch (figureNumber) {
