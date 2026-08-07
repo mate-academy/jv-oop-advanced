@@ -5,6 +5,7 @@ import java.util.Random;
 public class FigureSupplier {
     public static final int RANDOM_VALUE_BOUND = 16;
     public static final int FIGURE_COUNT = 5;
+    public static final int DEFAULT_CIRCLE_RADIUS = 10;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
     
@@ -13,13 +14,13 @@ public class FigureSupplier {
         String color = colorSupplier.getRandomColor();
         
         switch (figureNumber) {
-            case 1:
+            case 0:
                 return new Circle(color, getRandomValue());
-            case 2:
+            case 1:
                 return new Rectangle(color, getRandomValue(), getRandomValue());
-            case 3:
+            case 2:
                 return new RightTriangle(color, getRandomValue(), getRandomValue());
-            case 4:
+            case 3:
                 return new IsoscelesTrapezoid(color,
                         getRandomValue(),
                         getRandomValue(),
@@ -34,6 +35,6 @@ public class FigureSupplier {
     }
     
     private double getRandomValue() {
-        return random.nextInt(1, RANDOM_VALUE_BOUND);
+        return random.nextInt(1, DEFAULT_CIRCLE_RADIUS);
     }
 }
