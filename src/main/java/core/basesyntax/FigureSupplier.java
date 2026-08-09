@@ -8,7 +8,7 @@ public class FigureSupplier {
     private static final int DEFAULT_RADIUS = 10;
 
     private final Random random = new Random();
-    private final  ColorSupplier cs = new ColorSupplier();
+    private final ColorSupplier cs = new ColorSupplier();
 
     public Figure getRandomFigure() {
         String color = cs.getRandomColor();
