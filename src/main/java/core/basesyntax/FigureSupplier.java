@@ -15,7 +15,8 @@ public class FigureSupplier {
         Figure rectangle = new Rectangle(randomColor, randomValue, randomValue);
         Figure rightTriangle = new RightTriangle(randomColor, randomValue, randomValue);
         Figure circle = new Circle(randomColor, randomValue);
-        Figure isoscelesTrapezoid = new IsoscelesTrapezoid(randomColor, randomValue, randomValue, randomValue);
+        Figure isoscelesTrapezoid = new IsoscelesTrapezoid(
+                randomColor, randomValue, randomValue, randomValue);
         Figure[] figures = {square, rectangle, rightTriangle, circle, isoscelesTrapezoid};
         int randomIndex = randomNumber.nextInt(figures.length);
         return figures[randomIndex];

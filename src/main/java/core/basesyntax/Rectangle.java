@@ -23,6 +23,7 @@ public class Rectangle extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: rectangle, area: " + getArea() + " sq. units, width = " + width + ", height = " + height + ", " + super.toString();
+        return "Figure: rectangle, area: " + getArea() + " sq. units, width = " + width
+                + ", height = " + height + ", " + super.toString();
     }
 }

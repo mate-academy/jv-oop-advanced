@@ -13,7 +13,8 @@ public class RightTriangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Draw right triangle with firstLeg = " + firstLeg + ", secondLeg = " + secondLeg);
+        System.out.println("Draw right triangle with firstLeg = " + firstLeg
+                + ", secondLeg = " + secondLeg);
     }
 
     @Override
@@ -23,6 +24,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: right triangle, area: " + getArea() + " sq. units, firstLeg = " + firstLeg + ", secondLeg = " + secondLeg + ", " + super.toString();
+        return "Figure: right triangle, area: " + getArea() + " sq. units, firstLeg = "
+                + firstLeg + ", secondLeg = " + secondLeg + ", " + super.toString();
     }
 }

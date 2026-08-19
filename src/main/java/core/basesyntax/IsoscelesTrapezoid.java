@@ -15,7 +15,8 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Draw isosceles trapezoid with baseA = " + baseA + ", baseB = " + baseB + ", height = " + height);
+        System.out.println("Draw isosceles trapezoid with baseA = " + baseA + ", baseB = " + baseB
+                + ", height = " + height);
     }
 
     @Override
@@ -25,6 +26,7 @@ public class IsoscelesTrapezoid extends Figure {
 
     @Override
     public String toString() {
-        return "Figure: isosceles trapezoid, area: " + getArea() + " sq. units, baseA = " + baseA + ", baseB = " + baseB + ", height = " + height + ", " + super.toString();
+        return "Figure: isosceles trapezoid, area: " + getArea() + " sq. units, baseA = "
+                + baseA + ", baseB = " + baseB + ", height = " + height + ", " + super.toString();
     }
 }
