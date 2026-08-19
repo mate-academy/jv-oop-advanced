@@ -10,12 +10,11 @@ public class Main {
         for (int i = 0; i < figures.length / 2; i++) {
             figures[i] = figureSupplier.getRandomFigure();
         }
-
+        for (int i = figures.length / 2; i < figures.length; i++) {
+            figures[i] = figureSupplier.getDefaultFigure();
+        }
         for (Figure figure : figures) {
-            if (figure == null) {
-                figure = figureSupplier.getDefaultFigure();
-            }
-            System.out.println(figure.toString());
+            figure.draw();
         }
     }
 }

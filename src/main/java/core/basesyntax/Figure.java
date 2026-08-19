@@ -8,13 +8,7 @@ public abstract class Figure implements Drawable, Shape {
         this.color = color;
     }
 
-    @Override
-    public String toString() {
-        return "color: " + color;
+    String getColor() {
+        return color;
     }
-
-    public abstract void draw();
-
-    @Override
-    public abstract double getArea();
 }

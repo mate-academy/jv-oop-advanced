@@ -13,17 +13,13 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Draw rectangle with width = " + width + ", height = " + height);
+        System.out.println("Figure: rectangle, area: " + getArea() + " sq. units, width = " + width
+                + ", height = " + height + ", color: " + getColor());
     }
+
 
     @Override
     public double getArea() {
         return width * height;
-    }
-
-    @Override
-    public String toString() {
-        return "Figure: rectangle, area: " + getArea() + " sq. units, width = " + width
-                + ", height = " + height + ", " + super.toString();
     }
 }
