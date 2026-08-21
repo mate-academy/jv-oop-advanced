@@ -4,14 +4,6 @@ public class Rectangle extends Figure {
     private int length;
     private int width;
 
-    public int getLength() {
-        return length;
-    }
-
-    public void setLength(int length) {
-        this.length = length;
-    }
-
     public Rectangle(String color, int length, int width) {
         super(color);
         this.length = length;

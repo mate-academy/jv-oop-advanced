@@ -5,14 +5,6 @@ public class IsoscelesTrapezoid extends Figure {
     private int secondBase;
     private int height;
 
-    public int getFirstBase() {
-        return firstBase;
-    }
-
-    public void setFirstBase(int firstBase) {
-        this.firstBase = firstBase;
-    }
-
     public IsoscelesTrapezoid(String color, int firstBase, int secondBase, int height) {
         super(color);
         this.firstBase = firstBase;

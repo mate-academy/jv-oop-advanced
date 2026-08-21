@@ -4,14 +4,6 @@ public class RightTriangle extends Figure {
     private int firstLeg;
     private int secondLeg;
 
-    public int getFirstLeg() {
-        return firstLeg;
-    }
-
-    public void setFirstLeg(int firstLeg) {
-        this.firstLeg = firstLeg;
-    }
-
     public RightTriangle(String color, int firstLeg, int secondLeg) {
         super(color);
         this.firstLeg = firstLeg;
