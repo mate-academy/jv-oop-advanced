@@ -11,10 +11,10 @@ public class Square extends Figure {
     @Override
     public void draw() {
         StringBuilder builder = new StringBuilder();
-        builder.append(" ----Figure: square----")
-                .append("\n area: " + calculateArea() + " sq. units")
-                .append("\n side: " + side + " units")
-                .append("\n color: " + getColor());
+        builder.append("Figure: square,")
+                .append(" area: " + calculateArea() + " sq. units,")
+                .append(" side: " + side + " units,")
+                .append(" color: " + getColor());
         System.out.println(builder);
     }
 

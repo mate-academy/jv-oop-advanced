@@ -8,7 +8,7 @@ public class FigureSupplier {
     private Random random = new Random();
 
     public Figure getDefaultFigure() {
-        return new Circle("WHITE", 10);
+        return new Circle(Color.WHITE.name(), 10);
     }
 
     public Figure getRandomFigure() {
