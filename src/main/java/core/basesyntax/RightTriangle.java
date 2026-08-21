@@ -6,7 +6,13 @@ public class RightTriangle extends Figure implements Drawable, AreaCalculator {
 
     @Override
     public void draw() {
-
+        StringBuilder builder = new StringBuilder();
+        builder.append(" ----Figure: right triangle----")
+                .append("\n area: " + calculateArea() + " sq. units")
+                .append("\n first leg: " + firstLeg + " units")
+                .append("\n second leg: " + secondLeg + " units")
+                .append("\n color: " + getColor());
+        System.out.println(builder);
     }
 
     @Override

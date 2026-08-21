@@ -7,7 +7,14 @@ public class IsoscelesTrapezoid extends Figure implements Drawable, AreaCalculat
 
     @Override
     public void draw() {
-
+        StringBuilder builder = new StringBuilder();
+        builder.append(" ----Figure: isosceles trapezoid----")
+                .append("\n area: " + calculateArea() + " sq. units")
+                .append("\n first base: " + firstBase + " units")
+                .append("\n second base: " + secondBase + " units")
+                .append("\n height: " + height + " units")
+                .append("\n color: " + getColor());
+        System.out.println(builder);
     }
 
     @Override
