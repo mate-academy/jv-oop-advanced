@@ -12,6 +12,12 @@ public class Rectangle extends Figure implements Drawable, AreaCalculator {
         this.length = length;
     }
 
+    public Rectangle(String color, int length, int width) {
+        super(color);
+        this.length = length;
+        this.width = width;
+    }
+
     @Override
     public void draw() {
         StringBuilder builder = new StringBuilder();

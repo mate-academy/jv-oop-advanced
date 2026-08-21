@@ -11,6 +11,11 @@ public class Square extends Figure implements Drawable, AreaCalculator {
         this.side = side;
     }
 
+    public Square(String color, int side) {
+        super(color);
+        this.side = side;
+    }
+
     @Override
     public void draw() {
         StringBuilder builder = new StringBuilder();

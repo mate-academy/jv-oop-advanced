@@ -11,6 +11,11 @@ public class Circle extends Figure implements Drawable, AreaCalculator {
         this.radius = radius;
     }
 
+    public Circle(String color, int radius) {
+        super(color);
+        this.radius = radius;
+    }
+
     @Override
     public void draw() {
         StringBuilder builder = new StringBuilder();

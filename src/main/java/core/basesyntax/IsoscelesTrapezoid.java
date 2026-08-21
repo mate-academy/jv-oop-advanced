@@ -13,6 +13,13 @@ public class IsoscelesTrapezoid extends Figure implements Drawable, AreaCalculat
         this.firstBase = firstBase;
     }
 
+    public IsoscelesTrapezoid(String color, int firstBase, int secondBase, int height) {
+        super(color);
+        this.firstBase = firstBase;
+        this.secondBase = secondBase;
+        this.height = height;
+    }
+
     @Override
     public void draw() {
         StringBuilder builder = new StringBuilder();
