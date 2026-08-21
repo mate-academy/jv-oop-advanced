@@ -10,6 +10,6 @@ public class Main {
             figures[i] = figureSupplier.getDefaultFigure();
             figures[i].draw();
         }
-
+        System.out.println(Figures.ISOSCELES_TRAPEZOID);
     }
 }
