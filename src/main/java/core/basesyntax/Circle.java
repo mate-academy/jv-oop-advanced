@@ -3,6 +3,14 @@ package core.basesyntax;
 public class Circle extends Figure implements Drawable, AreaCalculator {
     private int radius;
 
+    public int getRadius() {
+        return radius;
+    }
+
+    public void setRadius(int radius) {
+        this.radius = radius;
+    }
+
     @Override
     public void draw() {
         StringBuilder builder = new StringBuilder();

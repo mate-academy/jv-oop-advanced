@@ -5,6 +5,14 @@ public class IsoscelesTrapezoid extends Figure implements Drawable, AreaCalculat
     private int secondBase;
     private int height;
 
+    public int getFirstBase() {
+        return firstBase;
+    }
+
+    public void setFirstBase(int firstBase) {
+        this.firstBase = firstBase;
+    }
+
     @Override
     public void draw() {
         StringBuilder builder = new StringBuilder();

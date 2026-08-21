@@ -4,6 +4,14 @@ public class Rectangle extends Figure implements Drawable, AreaCalculator {
     private int length;
     private int width;
 
+    public int getLength() {
+        return length;
+    }
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
     @Override
     public void draw() {
         StringBuilder builder = new StringBuilder();

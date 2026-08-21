@@ -4,6 +4,14 @@ public class RightTriangle extends Figure implements Drawable, AreaCalculator {
     private int firstLeg;
     private int secondLeg;
 
+    public int getFirstLeg() {
+        return firstLeg;
+    }
+
+    public void setFirstLeg(int firstLeg) {
+        this.firstLeg = firstLeg;
+    }
+
     @Override
     public void draw() {
         StringBuilder builder = new StringBuilder();
