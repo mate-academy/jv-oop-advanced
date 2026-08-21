@@ -28,6 +28,6 @@ public class Square extends Figure {
 
     @Override
     public double calculateArea() {
-        return side * side;
+        return Math.floor(side * side * 10.0) / 10.0;
     }
 }

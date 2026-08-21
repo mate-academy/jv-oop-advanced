@@ -31,6 +31,6 @@ public class Rectangle extends Figure {
 
     @Override
     public double calculateArea() {
-        return length * width;
+        return Math.floor(length * width * 10.0) / 10.0;
     }
 }
