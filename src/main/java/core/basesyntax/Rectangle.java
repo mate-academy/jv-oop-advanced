@@ -13,7 +13,7 @@ public class Rectangle extends Figure {
     @Override
     public void draw() {
         StringBuilder builder = new StringBuilder();
-        builder.append("Figure: rectangle-,")
+        builder.append("Figure: rectangle,")
                 .append(" area: " + calculateArea() + " sq. units,")
                 .append(" length: " + length + " units,")
                 .append(" width: " + width + " units,")
