@@ -22,41 +22,21 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         Figures figure = figures[random.nextInt(figures.length)];
+        String color = colorSupplier.getRandomColor();
+        int randomValue = random.nextInt(MAX);
 
-        switch (figure) {
-            case CIRCLE :
-                return new Circle(
-                        colorSupplier.getRandomColor(),
-                        random.nextDouble(MAX));
+        return switch (figure) {
+            case CIRCLE -> new Circle(color, randomValue);
 
-            case ISOSCELES_TRAPEZOID:
-                return new IsoscelesTrapezoid(
-                        colorSupplier.getRandomColor(),
-                        random.nextInt(MAX),
-                        random.nextInt(MAX),
-                        random.nextInt(MAX));
+            case ISOSCELES_TRAPEZOID -> new IsoscelesTrapezoid(color, randomValue,
+                    random.nextInt(MAX), random.nextInt(MAX));
 
-            case RECTANGLE:
-                return new Rectangle(
-                        colorSupplier.getRandomColor(),
-                        random.nextInt(MAX),
-                        random.nextInt(MAX));
+            case RECTANGLE -> new Rectangle(color, randomValue, random.nextInt(MAX));
 
-            case RIGHT_TRIANGLE:
-                return new RightTriangle(
-                        colorSupplier.getRandomColor(),
-                        random.nextInt(MAX),
-                        random.nextInt(MAX));
+            case RIGHT_TRIANGLE -> new RightTriangle(color, randomValue, random.nextInt(MAX));
 
-            case SQUARE:
-                return new Square(
-                        colorSupplier.getRandomColor(),
-                        random.nextInt(MAX));
-            default:
-                System.out.println(figure + " unknown figure!");
-        }
-
-        return null;
+            case SQUARE -> new Square(color, randomValue);
+        };
     }
 
     public Figure getDefaultFigure() {
