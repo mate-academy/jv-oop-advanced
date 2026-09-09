@@ -1,23 +1,22 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.Figure;
-import core.basesyntax.enums.Colors;
 import core.basesyntax.enums.Figures;
 
 public class Square extends Figure {
     private final int side;
     private final int perimeter;
 
-    public Square(Colors color, int side) {
+    public Square(String color, int side) {
         super(Figures.SQUARE, color);
         this.side = side;
         this.perimeter = side * 4;
 
-        this.setArea(obtainArea());
+        this.setArea(getArea());
     }
 
     @Override
-    public float obtainArea() {
+    public float getArea() {
         return this.side * this.side;
     }
 
@@ -26,7 +25,10 @@ public class Square extends Figure {
         System.out.println(this.getDrawingFirstPart()
                 + ", side: "
                 + this.side
-                + ", perimeter: "
-                + this.perimeter);
+                + " units, perimeter: "
+                + this.perimeter
+                + " units."
+
+        );
     }
 }

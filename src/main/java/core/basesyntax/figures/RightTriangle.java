@@ -1,7 +1,6 @@
 package core.basesyntax.figures;
 
 import core.basesyntax.Figure;
-import core.basesyntax.enums.Colors;
 import core.basesyntax.enums.Figures;
 
 public class RightTriangle extends Figure {
@@ -9,13 +8,13 @@ public class RightTriangle extends Figure {
     private final int secondLeg;
     private final float hypotenuse;
 
-    public RightTriangle(Colors color, int firstLeg, int secondLeg) {
+    public RightTriangle(String color, int firstLeg, int secondLeg) {
         super(Figures.RIGHT_TRIANGLE, color);
 
         this.firstLeg = firstLeg;
         this.secondLeg = secondLeg;
         this.hypotenuse = obtainHypotenuse(firstLeg, secondLeg);
-        this.setArea(obtainArea());
+        this.setArea(getArea());
     }
 
     private float obtainHypotenuse(int first, int second) {
@@ -23,7 +22,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    public float obtainArea() {
+    public float getArea() {
         return (float) (this.firstLeg * this.secondLeg) / 2;
     }
 
@@ -32,10 +31,11 @@ public class RightTriangle extends Figure {
         System.out.println(this.getDrawingFirstPart()
                 + ", first leg: "
                 + this.firstLeg
-                + ", second leg: "
+                + " units, second leg: "
                 + this.secondLeg
-                + ", hypotenuse: "
+                + " units, hypotenuse: "
                 + this.hypotenuse
+                + " units."
         );
     }
 }
