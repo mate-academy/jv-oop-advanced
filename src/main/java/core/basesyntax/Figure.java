@@ -1,10 +1,10 @@
 package core.basesyntax;
 
 import core.basesyntax.enums.Figures;
-import core.basesyntax.interfaces.AreaObtainable;
+import core.basesyntax.interfaces.AreaCalculator;
 import core.basesyntax.interfaces.Drawable;
 
-public abstract class Figure implements Drawable, AreaObtainable {
+public abstract class Figure implements Drawable, AreaCalculator {
     private final Figures name;
     private final String color;
     private float area;
@@ -21,7 +21,7 @@ public abstract class Figure implements Drawable, AreaObtainable {
                 + this.color
                 + ", area: "
                 + this.area
-                + " sq.units";
+                + " sq. units";
     }
 
     public void setArea(float area) {

@@ -26,7 +26,7 @@ public class Circle extends Figure {
                 + this.radius
                 + " units, diameter: "
                 + this.diameter
-                + " units."
+                + " units"
         );
     }
 }

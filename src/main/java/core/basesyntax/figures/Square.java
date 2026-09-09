@@ -27,7 +27,7 @@ public class Square extends Figure {
                 + this.side
                 + " units, perimeter: "
                 + this.perimeter
-                + " units."
+                + " units"
 
         );
     }

@@ -35,7 +35,7 @@ public class RightTriangle extends Figure {
                 + this.secondLeg
                 + " units, hypotenuse: "
                 + this.hypotenuse
-                + " units."
+                + " units"
         );
     }
 }

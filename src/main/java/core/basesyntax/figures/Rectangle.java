@@ -29,7 +29,7 @@ public class Rectangle extends Figure {
                 + this.height
                 + " units, width: "
                 + this.width
-                + " units."
+                + " units"
         );
 
     }

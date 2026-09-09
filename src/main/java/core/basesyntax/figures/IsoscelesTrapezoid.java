@@ -31,7 +31,7 @@ public class IsoscelesTrapezoid extends Figure {
                 + this.secondBase
                 + " units, height: "
                 + this.height
-                + " units."
+                + " units"
         );
     }
 }
