@@ -2,9 +2,10 @@ package core.basesyntax;
 
 import core.basesyntax.enums.Colors;
 import core.basesyntax.enums.Figures;
+import core.basesyntax.interfaces.AreaObtainable;
 import core.basesyntax.interfaces.Drawable;
 
-public abstract class Figure implements Drawable {
+public abstract class Figure implements Drawable, AreaObtainable {
     private final Figures name;
     private final Colors color;
     private float area;
