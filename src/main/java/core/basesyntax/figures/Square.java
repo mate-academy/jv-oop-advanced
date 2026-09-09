@@ -29,5 +29,4 @@ public class Square extends Figure {
                 + ", perimeter: "
                 + this.perimeter);
     }
-
 }

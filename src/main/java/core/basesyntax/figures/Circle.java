@@ -5,19 +5,19 @@ import core.basesyntax.enums.Colors;
 import core.basesyntax.enums.Figures;
 
 public class Circle extends Figure {
-    private int radius;
-    private int diameter;
+    private final int radius;
+    private final int diameter;
 
-    public Circle (Colors color, int radius) {
+    public Circle(Colors color, int radius) {
         super(Figures.CIRCLE, color);
         this.radius = radius;
-        this.diameter= radius * 2;
+        this.diameter = radius * 2;
         this.setArea(obtainArea());
     }
 
     @Override
     public float obtainArea() {
-        return (float) Math.PI * ( this.radius * this.radius);
+        return (float) Math.PI * (this.radius * this.radius);
     }
 
     @Override

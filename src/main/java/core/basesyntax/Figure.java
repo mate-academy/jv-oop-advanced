@@ -21,7 +21,7 @@ public abstract class Figure implements Drawable {
                 + this.color
                 + ", area: "
                 + this.area
-                +" units";
+                + " units";
     }
 
     public void setArea(float area) {

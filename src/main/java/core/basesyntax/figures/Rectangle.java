@@ -20,7 +20,7 @@ public class Rectangle extends Figure {
     public float obtainArea() {
         float area = this.width * this.height;
         setArea(area);
-        return area ;
+        return area;
     }
 
     @Override

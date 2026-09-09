@@ -1,16 +1,15 @@
 package core.basesyntax.figures;
 
-
 import core.basesyntax.Figure;
 import core.basesyntax.enums.Colors;
 import core.basesyntax.enums.Figures;
 
 public class IsoscelesTrapezoid extends Figure {
-    private int firstBase;
-    private int secondBase;
-    private int height;
+    private final int firstBase;
+    private final int secondBase;
+    private final int height;
 
-    public IsoscelesTrapezoid(Colors color,int firstBase, int secondBase, int height){
+    public IsoscelesTrapezoid(Colors color, int firstBase, int secondBase, int height) {
         super(Figures.ISOSCELES_TRAPEZOID, color);
         this.firstBase = firstBase;
         this.secondBase = secondBase;
