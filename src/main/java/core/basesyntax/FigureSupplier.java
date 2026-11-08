@@ -1,34 +1,52 @@
 package core.basesyntax;
 
+import java.util.Locale;
 import java.util.Random;
 
 public class FigureSupplier {
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
 
     public Figure getRandomFigure() {
-        Random random = new Random();
-        ColorSupplier colorSupplier = new ColorSupplier();
         FigureType[] figures = FigureType.values();
         FigureType randomFigure = figures[random.nextInt(figures.length)];
 
-        return switch (randomFigure) {
-            case SQUARE -> new Square(colorSupplier.getRandomColor(), random.nextInt(10) + 1);
-            case RECTANGLE -> new Rectangle(colorSupplier.getRandomColor(),
-                    random.nextInt(10) + 1, random.nextInt(10) + 1);
-            case RIGHT_TRIANGLE -> new RightTriangle(colorSupplier.getRandomColor(),
-                    random.nextInt(10) + 1, random.nextInt(10) + 1);
-            case CIRCLE -> new Circle(colorSupplier.getRandomColor(),
-                    random.nextInt(10) + 1);
-            case ISOSCELES_TRAPEZOID -> new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
-                    random.nextInt(10) + 1,
-                    random.nextInt(10) + 1,
-                    random.nextInt(10) + 1);
-        };
-
+        switch (randomFigure) {
+            case SQUARE: {
+                int side = random.nextInt(10) + 1;
+                return new Square(colorSupplier.getRandomColor(), side);
+            }
+            case RECTANGLE: {
+                int height = random.nextInt(10) + 1;
+                int width = random.nextInt(10) + 1;
+                return new Rectangle(colorSupplier.getRandomColor(), width, height);
+            }
+            case RIGHT_TRIANGLE: {
+                int firstLeg = random.nextInt(10) + 1;
+                int secondLeg = random.nextInt(10) + 1;
+                return new RightTriangle(colorSupplier.getRandomColor(), firstLeg, secondLeg);
+            }
+            case CIRCLE: {
+                int radius = random.nextInt(10) + 1;
+                return new Circle(colorSupplier.getRandomColor(), radius);
+            }
+            case ISOSCELES_TRAPEZOID: {
+                int upperBase = random.nextInt(10) + 1;
+                int lowerBase = random.nextInt(10) + 1;
+                int height = random.nextInt(10) + 1;
+                return new IsoscelesTrapezoid(colorSupplier.getRandomColor(),
+                        upperBase, lowerBase, height);
+            }
+            default:
+                throw new IllegalStateException("Unknown figure type");
+        }
     }
 
     public Figure getDefaultFigure() {
-        return new Circle(Color.WHITE, 10);
+        return new Circle("white".toUpperCase(Locale.ROOT), 10);
 
     }
 
 }
+
+

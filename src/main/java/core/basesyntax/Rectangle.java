@@ -4,10 +4,10 @@ public class Rectangle extends Figure {
     private int width;
     private int height;
 
-    public Rectangle(Color color, int width, int height) {
-        super(color);
+    public Rectangle(String color, int width, int height) {
+        super(Color.valueOf(color));
         this.width = width;
-        this. height = height;
+        this.height = height;
     }
 
     @Override
@@ -17,13 +17,16 @@ public class Rectangle extends Figure {
 
     @Override
     public void draw() {
-        System.out.println("Figure: Rectangle, Figure width: "
+        System.out.println("Figure: rectangle, area: "
+                + getArea()
+                + " sq. units"
+                + ", width: "
                 + width
+                + " units"
                 + ", height: "
                 + height
-                + ", Area: "
-                + getArea()
-                + " Color: "
-                + getColor());
+                + " units"
+                + ", color: "
+                + getColor().name());
     }
 }
