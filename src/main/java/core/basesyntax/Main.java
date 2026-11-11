@@ -1,0 +1,20 @@
+package core.basesyntax;
+
+public class Main {
+    private static final int FIGURE_COUNT = 6;
+
+    public static void main(String[] args) {
+        FigureSupplier figureSupplier = new FigureSupplier();
+        Figure[] figures = new Figure[FIGURE_COUNT];
+        int randomFigureCount = figures.length / 2;
+        for (int i = 0; i < randomFigureCount; i++) {
+            figures[i] = figureSupplier.getRandomFigure();
+        }
+        for (int i = randomFigureCount; i < figures.length; i++) {
+            figures[i] = figureSupplier.getDefaultFigure();
+        }
+        for (Figure figure : figures) {
+            figure.draw();
+        }
+    }
+}
