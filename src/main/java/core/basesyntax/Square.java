@@ -1,6 +1,4 @@
-package core.basesyntax.enemy;
-
-import core.basesyntax.Figure;
+package core.basesyntax;
 
 public class Square extends Figure {
     private double side;
@@ -19,6 +17,7 @@ public class Square extends Figure {
     public void draw() {
         System.out.println("Side - " + side 
                             + "Color - " + color
+                            + "Area - " + getArea()
         );
     }
 }

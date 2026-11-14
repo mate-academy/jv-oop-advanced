@@ -1,6 +1,4 @@
-package core.basesyntax.enemy;
-
-import core.basesyntax.Figure;
+package core.basesyntax;
 
 public class Circle extends Figure {
     private double radius;
@@ -19,6 +17,7 @@ public class Circle extends Figure {
     public void draw() {
         System.out.println("Radius - " + radius
                             + "Color - " + color
+                            + "Area - " + getArea()
         );
     }
 }

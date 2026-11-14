@@ -1,11 +1,5 @@
-package core.basesyntax.random;
+package core.basesyntax;
 
-import core.basesyntax.Figure;
-import core.basesyntax.enemy.Circle;
-import core.basesyntax.enemy.IsoscelesTrapezoid;
-import core.basesyntax.enemy.Rectangle;
-import core.basesyntax.enemy.RightTriangle;
-import core.basesyntax.enemy.Square;
 import java.util.Random;
 
 public class FigureSupplier {

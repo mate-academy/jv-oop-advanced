@@ -1,10 +1,5 @@
 package core.basesyntax;
 
-import core.basesyntax.enemy.IsoscelesTrapezoid;
-import core.basesyntax.enemy.Rectangle;
-import core.basesyntax.enemy.Square;
-import core.basesyntax.random.FigureSupplier;
-
 public class DrawingFigure {
     private Figure[] figure = new Figure[6];
 
@@ -19,7 +14,6 @@ public class DrawingFigure {
 
         for (Figure figures : figure) {
             figures.draw();
-            System.out.println("Area - " + figures.getArea());
         }
     }
 

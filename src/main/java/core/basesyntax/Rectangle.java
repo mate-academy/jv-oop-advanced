@@ -1,6 +1,4 @@
-package core.basesyntax.enemy;
-
-import core.basesyntax.Figure;
+package core.basesyntax;
 
 public class Rectangle extends Figure {
     private double width;
@@ -22,6 +20,7 @@ public class Rectangle extends Figure {
         System.out.println("Width - " + width 
                             + "Height - " + height
                             + "Color - " + color
+                            + "Area - " + getArea()
         );
     }
 }

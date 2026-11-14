@@ -1,6 +1,4 @@
-package core.basesyntax.enemy;
-
-import core.basesyntax.Figure;
+package core.basesyntax;
 
 public class IsoscelesTrapezoid extends Figure {
     private double firstCatet;
@@ -33,6 +31,7 @@ public class IsoscelesTrapezoid extends Figure {
                             + "Diagonal - " + diagonalCatet 
                             + "Height - " + height
                             + "Color - " + color
+                            + "Area - " + getArea()
         );
     }
 }

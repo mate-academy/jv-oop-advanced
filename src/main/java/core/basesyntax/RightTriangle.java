@@ -1,6 +1,4 @@
-package core.basesyntax.enemy;
-
-import core.basesyntax.Figure;
+package core.basesyntax;
 
 public class RightTriangle extends Figure {
     private double firstCatet;
@@ -23,7 +21,8 @@ public class RightTriangle extends Figure {
         System.out.println("First catet - " + firstCatet
                             + "Second catet - " + secondCatet
                             + "Diagonal - " + getDiagonal()
-                            + "Color - " + color
+                            + "Color - " + color 
+                            + "Area - " + getArea()
         );
     }
 

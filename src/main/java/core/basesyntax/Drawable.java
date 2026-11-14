@@ -1,4 +1,4 @@
-package core.basesyntax.inter;
+package core.basesyntax;
 
 public interface Drawable {
     void draw();
