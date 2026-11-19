@@ -1,6 +1,8 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure {
+public class RightTriangle extends AbstractFigure {
+    private static final int AREA_DIVISOR = 2;
+
     private double base;
     private double height;
 
@@ -12,7 +14,7 @@ public class RightTriangle extends Figure {
 
     @Override
     public double getArea() {
-        return (base * height) / 2;
+        return (base * height) / AREA_DIVISOR;
     }
 
     @Override

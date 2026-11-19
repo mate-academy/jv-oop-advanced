@@ -1,13 +1,14 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid extends Figure {
+public class IsoscelesTrapezoid extends AbstractFigure {
     private static final int AVERAGE_BASE_DIVISOR = 2;
 
     private double firstBase;
     private double secondBase;
     private double height;
 
-    public IsoscelesTrapezoid(String color, double firstBase, double secondBase, double height) {
+    public IsoscelesTrapezoid(String color, double firstBase,
+                              double secondBase, double height) {
         super(color);
         this.firstBase = firstBase;
         this.secondBase = secondBase;
