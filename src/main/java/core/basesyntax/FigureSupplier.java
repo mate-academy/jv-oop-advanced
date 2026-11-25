@@ -3,6 +3,9 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+
     private static final int MAX_SIZE = 100;
     private static final int MIN_SIZE = 1;
     private static final int MIN_INDEX = 0;
@@ -10,9 +13,6 @@ public class FigureSupplier {
     private static final int DEFAULT_RADIUS = 10;
 
     public Figure getRandomFigure() {
-        Random random = new Random();
-        ColorSupplier colorSupplier = new ColorSupplier();
-
         String color = colorSupplier.getRandomColor();
 
         int randomValue = random.nextInt(MIN_SIZE, MAX_SIZE);
