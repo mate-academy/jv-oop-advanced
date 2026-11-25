@@ -16,10 +16,6 @@ public class Square extends Figure implements Drawable, AreaCalculator {
         return side;
     }
 
-    @Override
-    void printColor() {
-        super.printColor();
-    }
 
     @Override
     public double getArea() {

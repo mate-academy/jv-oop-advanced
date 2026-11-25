@@ -12,7 +12,5 @@ abstract class Figure implements Drawable, AreaCalculator {
         return color;
     }
 
-    void printColor() {
-        System.out.println("Колір: " + color);
-    }
+    
 }

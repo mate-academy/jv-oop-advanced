@@ -26,11 +26,6 @@ public class Rectangle extends Figure implements Drawable, AreaCalculator {
         this.width = width;
     }
 
-    @Override
-    void printColor() {
-        super.printColor();
-    }
-
 
     @Override
     public double getArea() {

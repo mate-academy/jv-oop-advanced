@@ -1,45 +1,41 @@
 package core.basesyntax;
 
 public class RightTriangle extends Figure implements Drawable, AreaCalculator {
-    private int firstLeg;
-    private int secondLeg;
+    private int base;
+    private int height;
+    private static final double HALF = 0.5;
 
-
-    RightTriangle(String color, int firstLeg, int secondLeg) {
+    RightTriangle(String color, int base, int height) {
         super(color);
-        this.firstLeg = firstLeg;
-        this.secondLeg = secondLeg;
+        this.base = base;
+        this.height = height;
     }
 
-    public void setFirstLeg(int firstLeg) {
-        this.firstLeg = firstLeg;
+    public void setBase(int base) {
+        this.base = base;
     }
 
-    public void setSecondLeg(int secondLeg) {
-        this.secondLeg = secondLeg;
+    public void setHeight(int height) {
+        this.height = height;
     }
 
-    public int getFirstLeg() {
-        return firstLeg;
+    public int getBase() {
+        return base;
     }
 
-    public int getSecondLeg() {
-        return secondLeg;
+    public int getHeight() {
+        return height;
     }
 
-    @Override
-    void printColor() {
-        super.printColor();
-    }
 
     @Override
     public double getArea() {
-        return 1 / 2 * (firstLeg * secondLeg);
+        return  HALF * base * height;
     }
 
     @Override
     public void drawable() {
         System.out.println("Figure: Right Triangle, area: " + getArea()
-                + " sq. units, firstLeg: " + firstLeg + " , secondLeg: " + secondLeg + " units, color: " + getColor());
+                + " sq. units, firstLeg: " + base + " , secondLeg: " + height + " units, color: " + getColor());
     }
 }
