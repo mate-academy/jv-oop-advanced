@@ -3,9 +3,6 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
-    private final Random random = new Random();
-    private final ColorSupplier colorSupplier = new ColorSupplier();
-
     private static final int MAX_SIZE = 100;
     private static final int MIN_SIZE = 1;
     private static final int DEFAULT_RADIUS = 10;
@@ -16,6 +13,9 @@ public class FigureSupplier {
     private static final int ISOSCELES_TRAPEZOID_INDEX = 4;
     private static final int FIGURE_COUNT = 5;
 
+    private final Random random = new Random();
+    private final ColorSupplier colorSupplier = new ColorSupplier();
+
     public Figure getRandomFigure() {
         String color = colorSupplier.getRandomColor();
 
@@ -25,20 +25,15 @@ public class FigureSupplier {
         int randomIndex = random.nextInt(FIGURE_COUNT);
         switch (randomIndex) {
             case CIRCLE_INDEX:
-                Circle circle = new Circle(color, randomValue);
-                return circle;
+                return new Circle(color, randomValue);
             case RECTANGLE_INDEX:
-                Rectangle rectangle = new Rectangle(color, randomValue, randomValue1);
-                return rectangle;
+                return new Rectangle(color, randomValue, randomValue1);
             case SQUARE_INDEX:
-                Square square = new Square(color, randomValue);
-                return square;
+                return new Square(color, randomValue);
             case RIGHT_TRIANGLE_INDEX:
-                RightTriangle rightTriangle = new RightTriangle(color, randomValue, randomValue1);
-                return rightTriangle;
+                return new RightTriangle(color, randomValue, randomValue1);
             case ISOSCELES_TRAPEZOID_INDEX:
-                IsoscelesTrapezoid isoscelesTrapezoid = new IsoscelesTrapezoid(color, randomValue, randomValue1, randomValue2);
-                return isoscelesTrapezoid;
+                return new IsoscelesTrapezoid(color, randomValue, randomValue1, randomValue2);
             default:
                 return getDefaultFigure();
         }
@@ -47,7 +42,6 @@ public class FigureSupplier {
 
     public Figure getDefaultFigure() {
         String white = Color.WHITE.name();
-        Circle circle = new Circle(white, DEFAULT_RADIUS);
-        return circle;
+        return new Circle(white, DEFAULT_RADIUS);
     }
 }

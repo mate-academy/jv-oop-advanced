@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure implements Drawable, AreaCalculator {
+public class RightTriangle extends Figure {
+    private static final double HALF = 0.5;
     private int base;
     private int height;
-    private static final double HALF = 0.5;
 
     RightTriangle(String color, int base, int height) {
         super(color);
@@ -27,15 +27,15 @@ public class RightTriangle extends Figure implements Drawable, AreaCalculator {
         return height;
     }
 
-
     @Override
     public double getArea() {
-        return  HALF * base * height;
+        return HALF * base * height;
     }
 
     @Override
-    public void drawable() {
+    public void draw() {
         System.out.println("Figure: Right Triangle, area: " + getArea()
-                + " sq. units, firstLeg: " + base + " , secondLeg: " + height + " units, color: " + getColor());
+                + " sq. units, base: " + base
+                + " , height: " + height + " units, color: " + getColor());
     }
 }
